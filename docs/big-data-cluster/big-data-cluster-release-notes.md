@@ -8,13 +8,14 @@ manager: craigg
 ms.date: 12/07/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8c9c57e641c76f78bf66565cc8e1ce8f67323b7e
-ms.sourcegitcommit: 3f19c843b38d3835d07921612f0143620eb9a0e6
+ms.openlocfilehash: 4f16ee38b09198c036941085c9d7a5a1ee35f01b
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709811"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242069"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 巨量資料叢集的版本資訊
 

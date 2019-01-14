@@ -12,12 +12,12 @@ ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a7139c51aaa960fd2806ba1d969f6057e8f95e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761530"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135918"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>發行集資訊，所有訂閱 (合併式發行集)
   **[所有訂閱]** 索引標籤會顯示所選取合併式發行集之所有訂閱的相關資訊。  
@@ -103,8 +103,7 @@ ms.locfileid: "52761530"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](monitor/start-the-replication-monitor.md)   
- [檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
+ [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [監視複寫](monitoring-replication.md)   
  [合併式複寫的 Web 同步處理](web-synchronization-for-merge-replication.md)  
   

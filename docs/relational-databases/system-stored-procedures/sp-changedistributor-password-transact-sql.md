@@ -16,12 +16,12 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d7471bb847028b0b2cab0e71bf6fe33e044c3e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8bea1a781959cb345ceae785e97766ba659cb94c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819161"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133038"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@password=**] **'***密碼***'**  
+ [  **@password=**] **'**_密碼_**'**  
  這是新密碼。 *密碼*已**sysname**，沒有預設值。 如果 「 散發者 」 已本機的密碼**distributor_admin**變更系統登入。  
   
 ## <a name="return-code-values"></a>傳回碼值  

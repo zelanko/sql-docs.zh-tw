@@ -33,12 +33,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 27eb70cb687553b11fefae423a7544609836c5c8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357026"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132610"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
@@ -75,7 +75,7 @@ ms.locfileid: "53357026"
 |系統資料表|sys.database_principal_aliases|請使用角色，而非別名。|  
 |Transact-SQL|`RAISERROR` 格式的 `RAISERROR integer 'string'` 已停止。|請使用目前的陳述式重寫**raiserror （...)** 語法。|  
 |Transact-SQL 語法|`COMPUTE / COMPUTE BY`|使用`ROLLUP`|  
-|Transact-SQL 語法|利用**\* =** 和 **=\***|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL 語法|利用**\* =** 和 **=&#42;**|使用 ANSI 聯結語法。 如需詳細資訊，請參閱 [FROM (Transact-SQL)。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|取代 database_file_size_change event，database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **其他 XEvent 變更**  

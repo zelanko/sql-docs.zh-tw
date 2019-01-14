@@ -3,7 +3,7 @@ title: 版本資訊和變更記錄
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 版本資訊
 ms.custom: seodec18
-ms.date: 11/06/2018
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22542b42aff4b6d2d37e4a7342395d154d16dc95
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: HT
+ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030342"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143658"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 最新的版本資訊和變更記錄
 
-**[下載 11 月版本 ！](download.md)**
+**[下載年 1 月版本 ！](download.md)**
+
+
+## <a name="january-2019-january-release"></a>2019 年 1 月年 （1 月發行）
+
+發行日期：2019 年 1 月 09 日  
+版本：1.3.8
+
+- 加入新的使用者安裝程式的 Windows。 不同於現有的系統安裝程式中，新的使用者安裝程式不需要系統管理員權限。 這也讓您更輕鬆的升級體驗，非系統管理員。
+- Azure Active Directory 驗證支援。
+- 宣布 Idera SQL DM 效能深入解析 （預覽）。
+- SQL Server 匯入延伸模組中的資料層應用程式精靈支援。
+- 若要更新[SQL Server 2019 Preview 延伸模組](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- SQL Server Profiler 的功能改進。
+- 針對大型查詢 （預覽） 資料流的結果。
+- Community extensions: sp_executesql to sql 和新的資料庫。
+- 判斷是否已解決[bug，以及發出](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)。
+
+如需詳細資訊，請參閱 <<c0> [ 變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，並[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="november-2018-november-release"></a>2018 年 11 月起 （11 月發行）
 
@@ -35,6 +53,7 @@ ms.locfileid: "53030342"
 - 升級至.Net Core 的 SQL 工具服務 2.2 Preview 3 （適用於最終的 AAD 支援）
 
 ### <a name="bug-fixes"></a>錯誤修正
+
 - 修正[發出 # 2933年](https://github.com/Microsoft/azuredatastudio/issues/2933):連接到 Azure SQL DB 遺失
 - 修正[發出 # 2914年](https://github.com/Microsoft/azuredatastudio/issues/2914):「 無效的引數 」 例外狀況擴充 OE 資料庫節點
 - 修正[發出 # 2935年](https://github.com/Microsoft/azuredatastudio/pull/2935):查詢結果中正確顯示多行訊息
@@ -44,8 +63,6 @@ ms.locfileid: "53030342"
 - 修正[發出 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047):新增命令列介面來連接到 SQL Server
 - 修正[發出 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031):加入查詢計劃的佈景主題支援
 - ...
-
-如需詳細資訊，請參閱 <<c0> [ 變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，並[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="october-2018-october-release"></a>2018 年 10 月起 （年 10 月發行）
 
@@ -119,7 +136,7 @@ ms.locfileid: "53030342"
 ### <a name="bug-fixes"></a>錯誤修正
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 未選取變數名稱中的。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 未選取變數名稱中的 []。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
@@ -146,7 +163,7 @@ ms.locfileid: "53030342"
 - 修正[發出 # 2129年](https://github.com/Microsoft/azuredatastudio/pull/2129):切換索引標籤時，請儲存編輯資料捲軸位置。
 - 修正[發出 # 2152年](https://github.com/Microsoft/azuredatastudio/issues/2152):結果方格資料列指標以零為起始。
 
-## <a name="known-issues"></a>已知問題
+### <a name="known-issues"></a>已知問題
 
 - [問題 2371](https://github.com/Microsoft/azuredatastudio/issues/2371)儲存為 Excel 僅將第一個資料列的資料
 - [問題 # 2150年](https://github.com/Microsoft/azuredatastudio/issues/2150):無法連接到容器中的 SQL 的 Ubuntu 16.04

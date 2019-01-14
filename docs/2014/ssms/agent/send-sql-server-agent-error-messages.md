@@ -15,12 +15,12 @@ ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c7fbe2997c84963f2ed1d420840b514fb89860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779040"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130169"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>傳送 SQL Server Agent 錯誤訊息
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，利用 Net Send 的方式傳送其錯誤訊息。  
@@ -66,7 +66,7 @@ ms.locfileid: "52779040"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 **SQL Server Agent 屬性-* * * server_name*對話方塊的 [**錯誤記錄檔**上**一般**頁面上，輸入您要傳送的使用者名稱或電腦名稱中的錯誤訊息**Net send 收件者**] 方塊中。  
+3.  在  **SQL Server Agent 屬性-**_server_name_對話方塊的 **錯誤記錄檔**上**一般**頁面上，輸入使用者名稱或中的電腦名稱，您要傳送錯誤訊息**Net send 收件者** 方塊中。  
   
 4.  按一下 [確定] 。  
   

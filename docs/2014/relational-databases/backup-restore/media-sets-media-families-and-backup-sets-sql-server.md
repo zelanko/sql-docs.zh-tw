@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197308"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129888"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的基本備份媒體詞彙，適合供初次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者閱讀。 此主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於備份媒體的格式、備份媒體與備份裝置之間的對應、備份在備份媒體上的組織，以及媒體集和媒體家族的數個考量。 此主題也描述第一次使用備份媒體，或將舊媒體集取代為新媒體集之前初始化或格式化備份媒體的步驟、如何覆寫媒體集中舊備份組的步驟，以及如何將新備份組附加至媒體集的步驟。  
   
 > [!NOTE]  
->  如需有關 SQL Server 備份至 Windows Azure Blob 儲存體服務、 查看，請[SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  如需有關將 SQL Server 備份放至 Windows Azure Blob 儲存體服務的詳細資訊，請參閱＜ [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)＞。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
@@ -106,7 +106,7 @@ ms.locfileid: "48197308"
 ### <a name="backup-sets"></a>備份組  
  成功的備份作業會將一個 *「備份組」* (Backup set) 加入至媒體集。 這個備份組是根據備份所屬的媒體集加以描述。 如果備份媒體僅由一個媒體家族組成，則該家族就包含整個備份組。 如果備份媒體由多個媒體家族組成，則備份組會分散於其中。 在每個媒體上，備份組都會包含描述該備份組的標頭。  
   
- 下列範例所示[!INCLUDE[tsql](../../includes/tsql-md.md)]建立的媒體集呼叫的陳述式`MyAdvWorks_MediaSet_1`如[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫使用三個磁帶機做為備份裝置：  
+ 以下範例顯示一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，為使用三個磁帶機做為備份裝置的 `MyAdvWorks_MediaSet_1` 資料庫，建立稱為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 媒體集。  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -140,7 +140,7 @@ WITH
   
  ![分散在 3 個媒體集磁帶上的第二個備份集](../../database-engine/media/bnr-mediaset-appendedto.gif "分散在 3 個媒體集磁帶上的第二個備份集")  
   
- 當您要還原備份時，可以使用 FILE 選項來指定所要使用的備份。 下列範例示範 FILE **=**<備份集檔案編號>** 子句在還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份時的用法，並接著示範在相同媒體集上進行差異資料庫備份。 這個媒體集使用三個備份磁帶，分別位於磁帶機 `\\.\tape0`、 `tape1`和 `tape2`。  
+ 當您要還原備份時，可以使用 FILE 選項來指定所要使用的備份。 下列範例示範 FILE **=**_backup_set_file_number_ 子句在還原 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的完整資料庫備份時的用法，並接著示範在相同媒體集上進行差異資料庫備份。 這個媒體集使用三個備份磁帶，分別位於磁帶機 `\\.\tape0`、 `tape1`和 `tape2`。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  
@@ -219,7 +219,7 @@ GO
  針對磁帶標頭，適當地保留標頭有其意義。 對於磁碟備份媒體而言，只有備份作業中指定的備份裝置所用的檔案會被覆寫，磁碟上的其他檔案則不受影響。 覆寫備份時會保留任何現有的媒體標頭，而新的備份會建立為備份裝置上的第一個備份。 如果沒有現有的媒體標頭，則會自動寫入含相關媒體名稱與媒體描述的有效媒體標頭。 如果現有的媒體標頭無效，備份作業會終止。 若為空白媒體，則會以給定的 MEDIANAME、MEDIAPASSWORD 與 MEDIADESCRIPTION (若有的話) 來產生新的媒體標頭。  
   
 > [!IMPORTANT]  
->  開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，MEDIAPASSWORD 選項已停止用於建立備份。 不過，您還是可以還原以密碼建立的備份。  
+>  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，MEDIAPASSWORD 選項無法再用於建立備份。 不過，您還是可以還原以密碼建立的備份。  
   
  若發生下列其中一種情況，就不會覆寫備份媒體：  
   

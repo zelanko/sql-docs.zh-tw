@@ -20,12 +20,12 @@ ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d600a29020a3ecc729e3e405e14b0920504ab56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115938"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133138"
 ---
 # <a name="diagnostic-records-and-fields"></a>診斷記錄和欄位
   診斷記錄與 ODBC 環境、連接、陳述式或描述項控制代碼相關聯。 當任何 ODBC 函數引發 SQL_SUCCESS 或 SQL_INVALID_HANDLE 以外的傳回碼時，該函數所呼叫的控制代碼會有包含參考用訊息或錯誤訊息的相關聯診斷記錄。 這些記錄會保留到系統使用該控制代碼呼叫另一個函數為止，屆時將捨棄這些記錄。 不論何時，可與控制代碼相關聯的診斷記錄數目沒有任何限制。  
@@ -36,7 +36,7 @@ ms.locfileid: "48115938"
   
  狀態記錄中的欄位包含有關 ODBC 驅動程式管理員、驅動程式或資料來源所傳回的特定錯誤或警告的詳細資訊，包括 SQLSTATE、原生錯誤號碼、診斷訊息、資料行號碼和資料列號碼。 只有在函數傳回 SQL_ERROR、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_NEED_DATA 或 SQL_STILL_EXECUTING 時，才會建立狀態記錄。 如需狀態記錄中欄位的完整清單，請參閱 < **SQLGetDiagField**。  
   
- **SQLGetDiagRec**擷取單一的診斷記錄，以及其 ODBC SQLSTATE、 自發性錯誤號碼和診斷訊息欄位。 這項功能是類似於 ODBC 2。*x * * * SQLError** 函式。 ODBC 3 中的簡單錯誤處理函式。*x*是重複地呼叫**SQLGetDiagRec**開頭*RecNumber*參數設定為 1，並遞增*RecNumber*直到 1**SQLGetDiagRec**傳回 sql_no_data 為止。 這是相當於 ODBC 2。*x*應用程式呼叫**SQLError**直到它傳回 SQL_NO_DATA_FOUND 為止。  
+ **SQLGetDiagRec**擷取單一的診斷記錄，以及其 ODBC SQLSTATE、 自發性錯誤號碼和診斷訊息欄位。 這項功能是類似於 ODBC 2。_x_**SQLError**函式。 ODBC 3 中的簡單錯誤處理函式。*x*是重複地呼叫**SQLGetDiagRec**開頭*RecNumber*參數設定為 1，並遞增*RecNumber*直到 1**SQLGetDiagRec**傳回 sql_no_data 為止。 這是相當於 ODBC 2。*x*應用程式呼叫**SQLError**直到它傳回 SQL_NO_DATA_FOUND 為止。  
   
  ODBC 3。*x*支援更多診斷資訊比 ODBC 2。*x*。 這項資訊會儲存在其他欄位中使用擷取的診斷記錄**SQLGetDiagField**。  
   

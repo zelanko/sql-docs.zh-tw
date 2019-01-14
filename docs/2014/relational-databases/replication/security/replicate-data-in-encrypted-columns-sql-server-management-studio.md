@@ -14,12 +14,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00bec2a06d024b4c1482b0e9865c58ea6d1e985d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766150"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127168"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>複寫加密資料行中的資料 (SQL Server Management Studio)
   複寫讓您可以發行加密的資料行資料。 若要在訂閱者端解密及使用此資料，於發行者端用來加密資料的金鑰也必須存在訂閱者端。 複寫並不會提供用於傳輸加密金鑰的安全機制。 您必須以手動方式於訂閱者端重新建立加密金鑰。 本主題示範如何於發行者端加密資料行，並確定訂閱者端可使用加密金鑰。  
@@ -86,7 +86,7 @@ ms.locfileid: "52766150"
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
 ## <a name="see-also"></a>另請參閱  
- [安全性概觀 &#40;複寫&#41;](security-overview-replication.md)   
+ [SQL Server 複寫安全性](view-and-modify-replication-security-settings.md)   
  [在兩部伺服器上建立相同的對稱金鑰](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

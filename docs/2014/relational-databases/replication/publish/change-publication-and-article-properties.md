@@ -16,12 +16,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9f106af7d3464ca1b0f2047fd86e2670389d821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822592"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135808"
 ---
 # <a name="change-publication-and-article-properties"></a>變更發行集與發行項屬性
   在建立發行集後，可以變更大多數發行集與發行項屬性，但某些屬性要求重新產生快照集和 (或) 重新初始化訂閱。 本主題提供在變更時需要執行一個或兩個動作的所有屬性之資訊。  
@@ -93,7 +93,7 @@ ms.locfileid: "52822592"
 |變更目的地資料表擁有者。|**sp_changemergearticle**|**destination_owner**|新的快照集。<br /><br /> 重新初始化訂閱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](../administration/administration-replication.md)   
+ [複寫管理常見問題集](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [建立並套用快照集](../create-and-apply-the-snapshot.md)   
  [重新初始化訂閱](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

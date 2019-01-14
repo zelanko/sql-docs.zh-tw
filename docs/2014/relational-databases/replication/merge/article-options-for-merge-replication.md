@@ -13,12 +13,12 @@ ms.assetid: 670abd41-d204-4cd7-a371-7664e603a0ce
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f58b96f2b8d95f31eeb89c9e0796b39a221b0a66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786120"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133318"
 ---
 # <a name="article-options-for-merge-replication"></a>合併式複寫的發行項選項
   合併資料表發行項有許多選項，可讓您自訂複寫行為以適應應用程式的需要。 使用合併式複寫，您可以執行下列項目：  
@@ -29,11 +29,11 @@ ms.locfileid: "52786120"
   
 -   指定複寫觸發程序和系統資料表不應追蹤對於一個或多個發行項所作的刪除。 這個選項在許多應用程式案例中可能很有用處。 這些包括使用不需要複寫之批次刪除的案例。 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](optimize-merge-replication-performance-with-conditional-delete-tracking.md)。  
   
--   指定發行項的處理順序，以確定發行項是以應用程式需要的順序進行處理。 如需詳細資訊，請參閱[指定合併發行項的處理順序](specify-the-processing-order-of-merge-articles.md)。  
+-   指定發行項的處理順序，以確定發行項是以應用程式需要的順序進行處理。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../publish/specify-merge-replication-properties.md)。  
   
 -   指定一組相關記錄應視為一個單位處理 (依預設，合併式複寫會以逐個資料列的方式處理資料表的變更)。 如需詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](group-changes-to-related-rows-with-logical-records.md)。  
   
--   對可以在拓撲的多個節點上變更相同資料之案例，使用衝突偵測和解決方案。 如需相關資訊，請參閱 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+-   對可以在拓撲的多個節點上變更相同資料之案例，使用衝突偵測和解決方案。 如需相關資訊，請參閱 [Detect and Resolve Merge Replication Conflicts](advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 -   指定結構描述選項，如條件約束和觸發程序是否複製到訂閱者。 如需詳細資訊，請參閱 [指定結構描述選項](../publish/specify-schema-options.md)。  
   

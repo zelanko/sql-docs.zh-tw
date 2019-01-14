@@ -10,12 +10,12 @@ ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13cd77270554a3c68ab07bfe8820295f9136f3dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751670"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127158"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>變更 SQL Server Agent 主要作業的排程詳細資料
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中變更作業定義的排程詳細資料。  
@@ -56,7 +56,7 @@ ms.locfileid: "52751670"
   
 4.  以滑鼠右鍵按一下您想要編輯其排程的作業，然後選取 [屬性]。  
   
-5.  在 **作業屬性-* * * job_name*對話方塊的 **選取頁面**，選取**排程**。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;排程頁面&#41;](job-properties-new-job-schedules-page.md)。  
+5.  在 **作業屬性-**_job_name_對話方塊的 **選取頁面**，選取**排程**。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性：新的工作&#40;排程頁面&#41;](job-properties-new-job-schedules-page.md)。  
   
 6.  完成後，請按一下 **[確定]**。  
   

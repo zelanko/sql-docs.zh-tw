@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b51100904cfa704f9177aab9c7a0e79974cc30b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: HT
+ms.openlocfilehash: d30dbae5ffe7a392fc846b575a44af66246c9682
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363770"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132768"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
   `dtexec`命令提示字元公用程式用來設定及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 `dtexec` 公用程式可存取所有封裝組態及執行功能，例如參數、連接、屬性、變數、記錄與進度指標。 `dtexec`公用程式可讓您從這些來源載入封裝：[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器、.ispac 專案檔案， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區和檔案系統。  
@@ -157,24 +157,24 @@ dtexec /option [value] [/option [value]]...
 -   **/Ca [llerInfo]**:   
                   選擇性。 指定封裝執行的其他資訊。 當您使用 SQL Server Agent 執行封裝時，代理程式會設定此引數以指示透過 SQL Server Agent 叫用封裝執行。 從命令列執行 `dtexec` 公用程式時，會忽略此參數。  
   
--   **/Checkf [ile]** *filespec*:   
+-   **/Checkf [ile]** _filespec_:   
                   選擇性。 設定組`CheckpointFileName`路徑和檔案設封裝上的屬性*filespec*。 當重新啟動封裝時，會使用這個檔案。 如果指定這個選項時沒有使用檔案名稱值，就會將封裝的 `CheckpointFileName` 設為空字串。 如果沒有指定這個選項，就會保留封裝中的值。  
   
--   **/Checkp [ointing]** *{on\off}*:   
+-   **/Checkp [ointing]** _{on\off}_:   
                   選擇性。 設定一個值來決定在執行封裝期間，封裝是否要使用檢查點。 **on** 值可指定重新執行失敗的封裝。 當重新執行失敗的封裝時，執行階段引擎會使用檢查點，從失敗點重新啟動封裝。  
   
      如果宣告的選項不含任何值，則預設值是 on。 如果此值設為 on，但找不到檢查點檔案，則封裝執行失敗。 如果沒有指定這個選項，就會保留封裝中所設定的值。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](restart-packages-by-using-checkpoints.md)。  
   
      **上的 /CheckPointing** dtexec 選項相當於設定`SaveCheckpoints`為 True 時，封裝的屬性和`CheckpointUsage`屬性設為 Always。  
   
--   **/Com [mandFile]** *filespec*:   
+-   **/Com [mandFile]** _filespec_:   
                   (選擇性)。 指定要與 `dtexec` 一起執行的命令選項。 *filespec* 中指定的檔案會開啟，並且讀取檔案中的選項，直到在檔案中找到 EOF 為止。 *filespec* 是文字檔。 *filespec* 引數會指定要與封裝的執行產生關聯之命令檔的檔名和路徑。  
   
--   **/Conf [igFile]** *filespec*:選擇性。 指定要擷取值的來源組態檔。 使用這個選項時，您可以設定一個執行階段組態，這個執行階段組態與封裝設計階段所指定的組態不同。 您可以將不同的組態設定儲存在 XML 組態檔中，然後在執行封裝之前，利用 **/ConfigFile** 選項載入設定。  
+-   **/Conf [igFile]** _filespec_:選擇性。 指定要擷取值的來源組態檔。 使用這個選項時，您可以設定一個執行階段組態，這個執行階段組態與封裝設計階段所指定的組態不同。 您可以將不同的組態設定儲存在 XML 組態檔中，然後在執行封裝之前，利用 **/ConfigFile** 選項載入設定。  
   
      您可以使用 **/ConfigFile** 選項在執行階段載入您未在設計階段指定的其他組態。 但您不可使用 **/ConfigFile** 選項取代您在設計階段指定過的設定值。 如需了解封裝組態套用的方式，請參閱＜ [Package Configurations](../package-configurations.md)＞。  
   
--   **/Conn [ection]** *id_or_name; connection_string [[; id_or_name; connection_string]...]*:   
+-   **/Conn [ection]** _id_or_name; connection_string [[; id_or_name; connection_string]...]_:   
                   選擇性。 指定具有指定名稱或 GUID 的連接管理員位於此封裝中，並指定連接字串。  
   
      這個選項需要同時指定這兩個參數：在 *id_or_name* 引數中必須提供連接管理員名稱或 GUID，而且在 *connection_string* 引數中必須指定有效的連接字串。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../connection-manager/integration-services-ssis-connections.md)。  
@@ -222,16 +222,16 @@ dtexec /option [value] [/option [value]]...
   
      如需範例的 **/ConsoleLog**選項，請參閱**備註**一節。  
   
--   **/D [ts]** *package_path*:   
+-   **/D [ts]** _package_path_:   
                   選擇性。 從 SSIS 封裝存放區中載入封裝。 儲存在 SSIS 封裝存放區中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 `/ISServer` 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
      *package_path* 引數指定 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的相對路徑，從 SSIS 封裝存放區的根目錄開始，並包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝的名稱。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
   
      `/DTS` 選項不可與 `/File` 或 `/SQL` 選項並用。 如果指定多個選項，`dtexec` 將會失敗。  
   
--   **/De [crypt]***密碼*:  選擇性。 設定載入含密碼加密的封裝時，所用的解密密碼。  
+-   **/De [crypt]**_密碼_:  選擇性。 設定載入含密碼加密的封裝時，所用的解密密碼。  
   
--   **/Dump** *錯誤碼*:  
+-   **/Dump** _錯誤碼_:  
                   選擇性建立偵錯傾印檔案.mdmp 和.tmp，當封裝執行時，就會發生一或多個指定的事件。 *error code* 引數會指定事件代碼的類型 (錯誤、警告或資訊)，這些事件代碼將會觸發系統建立偵錯傾印檔案。 若要指定多個事件代碼，請用分號 (;) 隔開每一個「錯誤碼」引數。 *error code* 引數中請勿包含引號。  
   
      下列範例會在 DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER 錯誤發生時，產生偵錯傾印檔案。  
@@ -274,7 +274,7 @@ dtexec /option [value] [/option [value]]...
   
      此參數是由 SQL Server Agent 所使用。  
   
--   **/F [ile]** *filespec*:   
+-   **/F [ile]** _filespec_:   
                   選擇性。 載入儲存在檔案系統中的封裝。 儲存在檔案系統中的封裝是使用舊版封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 `/ISServer` 選項。 如需封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
      *filespec* 引數指定封裝的路徑和檔案名稱。 您可以指定路徑為通用命名慣例 (UNC) 路徑或本機路徑。 如果 *filespec* 引數中指定的路徑或檔案名稱包含空格，必須將 *filespec* 引數括以引號。  
@@ -300,7 +300,7 @@ dtexec /option [value] [/option [value]]...
   
      此參數是由 SQL Server Agent 所使用。  
   
--   **/L [ogger]** *classid_orprogid; configstring*:  
+-   **/L [ogger]** _classid_orprogid; configstring_:  
                   選擇性。 建立一或多個記錄提供者與 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行作業的關聯性。 *classid_orprogid* 參數指定記錄提供者，並可指定為類別 GUID。 *configstring* 是用來設定記錄提供者的字串。  
   
      下列清單顯示可用的記錄提供者：  
@@ -335,13 +335,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M [axConcurrent]** *concurrent_executables*:  
+-   **/M [axConcurrent]** _concurrent_executables_:  
                   選擇性。 指定封裝可以同時執行的可執行檔數量。 指定的值必須是非負數的整數或 -1。 -1 值表示 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 允許同時執行的最大可執行檔數量，等於執行封裝之電腦上的處理器總數再加 2。  
   
--   **/Pack [age]** *PackageName*:  
+-   **/Pack [age]** _PackageName_:  
                   選擇性。 指定所執行的封裝。 當您從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]執行封裝時，主要會使用這個參數。  
   
--   **/P [assword]** *密碼*:  
+-   **/P [assword]** _密碼_:  
                   選擇性。 允許擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所保護的封裝。 此選項會與 **/User** 選項一起使用。 若省略 **/Password** 選項而使用 **/User** 選項，將會使用空白密碼。 *password* 值可括以引號。  
   
     > [!IMPORTANT]  
@@ -371,13 +371,13 @@ dtexec /option [value] [/option [value]]...
     /parameter CM.SourceServer.ServerName;.  
     ```  
   
--   **/Proj [ect]** *ProjectFile*:  
+-   **/Proj [ect]** _ProjectFile_:  
                   選擇性。 指定要從中擷取所執行之封裝的專案。 *ProjectFile* 引數會指定 .ispac 檔案名稱。 當您從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]執行封裝時，主要會使用這個參數。  
   
--   **/Rem** *註解*:  
+-   **/Rem** _註解_:  
                   選擇性。 在命令提示字元或命令檔中加入註解。 引數是選擇性的。 *comment* 的值是一個字串，它必須以引號括住，或不包含空格。 如果未指定引數，將會插入空白行。 命令取得階段將會捨棄*comment* 值。  
   
--   **/Rep [orting]** *層級*[*; event_guid_or_name*[*; event_guid_or_name*[...]]:選擇性。 指定要報告的訊息類型。 *level* 可用的報告選項如下：  
+-   **/Rep [orting]** _層級_[*; event_guid_or_name*[*; event_guid_or_name*[...]]:選擇性。 指定要報告的訊息類型。 *level* 可用的報告選項如下：  
   
      **N** ...無報告。  
   
@@ -434,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
      指定 `/Ser[ver]` 選項時，需要 `/ISServer` 選項。  
   
--   **/SQ [L]** *package_path*:  
+-   **/SQ [L]** _package_path_:  
                   載入儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `msdb` 資料庫中的封裝。 儲存在 `msdb` 資料庫中的封裝是使用封裝部署模型所部署。 若要使用專案部署模型，執行部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的封裝，請使用 `/ISServer` 選項。 如需有關封裝和專案部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
      *package_path* 引數指定要擷取的封裝名稱。 如果路徑包含資料夾，則其結尾應為反斜線 ("\\")。 *Package_path* 值可以加上引號。 如果 *package_path* 引數中指定的路徑或檔案名稱包含空格，必須將 *package_path* 引數括以引號。  
@@ -454,7 +454,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Su [m]**:選擇性。 顯示包含下一個元件將接收之列數的累加計數器。  
   
--   **/U [ser]** *user_name*:  
+-   **/U [ser]** _user_name_:  
                   選擇性。 允許擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證所保護的封裝。 只有在指定 `/SQL` 選項時，才會使用此選項。 *user_name* 值可以引號括住。  
   
     > [!IMPORTANT]  
@@ -463,7 +463,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Va [lidate]**:  
                   選擇性。 在驗證階段之後，停止執行封裝 (並不會實際執行封裝)。 在驗證期間使用的 **/WarnAsError**選項會使`dtexec`將警告視為錯誤，因此封裝會失敗驗證期間發生警告。  
   
--   **/Verifyb [uild]** *主要*[*; minor*[*; 建置*]]:選擇性。 根據驗證階段期間在 *major*、 *minor*及 *build* 引數指定的組建編號，來驗證封裝的組建編號。 如果發生不符的情形，將不會執行封裝。  
+-   **/Verifyb [uild]** _主要_[*; minor*[*; 建置*]]:選擇性。 根據驗證階段期間在 *major*、 *minor*及 *build* 引數指定的組建編號，來驗證封裝的組建編號。 如果發生不符的情形，將不會執行封裝。  
   
      這些值是 Long 整數。 此引數可以是下列這三種格式的其中一種，而且 *major* 的值永遠是必要的：  
   
@@ -473,7 +473,7 @@ dtexec /option [value] [/option [value]]...
   
     -   *major*; *minor*; *build*  
   
--   **/Verifyp [ackageID]** *packageID*:  
+-   **/Verifyp [ackageID]** _packageID_:  
                   選擇性。 將封裝 GUID 與 *package_id* 引數所指定的值進行比較，藉此驗證要執行之封裝的 GUID。  
   
 -   **/Verifys [igned]**:  
@@ -485,9 +485,9 @@ dtexec /option [value] [/option [value]]...
     > [!NOTE]  
     >  選擇性**BlockedSignatureStates**登錄值可指定的設定中設定的數位簽章選項更具限制性[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]或在`dtexec`命令列。 在此情況下，更具限制性的登錄設定會覆寫其他設定。  
   
--   **/Verifyv [ersionID]** *versionID*:選擇性。 在封裝驗證階段期間，將封裝的版本 GUID 與 *version_id* 引數所指定的值進行比較，藉此驗證要執行之封裝的版本 GUID。  
+-   **/Verifyv [ersionID]** _versionID_:選擇性。 在封裝驗證階段期間，將封裝的版本 GUID 與 *version_id* 引數所指定的值進行比較，藉此驗證要執行之封裝的版本 GUID。  
   
--   **/Vlog** *[Filespec]*:選擇性。 將所有 Integration Services 封裝事件寫入設計封裝時啟用的記錄提供者。 若要讓 Integration Services 啟用文字檔的記錄提供者，並將記錄事件寫入指定的文字檔，請以 *Filespec* 參數的形式包含路徑和檔案名稱。  
+-   **/Vlog** _[Filespec]_:選擇性。 將所有 Integration Services 封裝事件寫入設計封裝時啟用的記錄提供者。 若要讓 Integration Services 啟用文字檔的記錄提供者，並將記錄事件寫入指定的文字檔，請以 *Filespec* 參數的形式包含路徑和檔案名稱。  
   
      如果您未包含 *Filespec* 參數，Integration Services 將不會啟用文字檔的記錄提供者。 Integration Services 只會將記錄事件寫入設計封裝時啟用的記錄提供者。  
   

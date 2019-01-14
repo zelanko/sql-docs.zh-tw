@@ -12,12 +12,12 @@ ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7acd2c6ab698a8fafb8e89c21376973163d88c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 555aa4e49887000354e5d31ff5d039a5f0ac75eb
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758200"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129198"
 ---
 # <a name="agent-security-new-publication-wizard"></a>代理程式安全性 (新增發行集精靈)
   **[代理程式安全性]** 頁面可讓您指定執行下列代理程式的帳戶，並與複寫拓撲中的電腦建立連接。  
@@ -54,10 +54,10 @@ ms.locfileid: "52758200"
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](publish/create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](create-updatable-subscription-transactional-publication-transact-sql.md)   
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)   
  [檢視及修改發行集屬性](publish/view-and-modify-publication-properties.md)   
- [管理複寫的登入與密碼](security/manage-logins-and-passwords-in-replication.md)   
+ [管理複寫的登入與密碼](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [發行資料和資料庫物件](publish/publish-data-and-database-objects.md)   
  [複寫代理程式概觀](agents/replication-agents-overview.md)  
   

@@ -14,12 +14,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85eb91717bba1642270d0851a4a11917d8c40051
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770740"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123539"
 ---
 # <a name="validate-subscription"></a>驗證訂閱
   使用 **[驗證訂閱]** 對話方塊以指定下次執行訂閱的合併代理程式時，應驗證合併式發行集的訂閱。 驗證的結果會在複寫監視器中顯示。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  
@@ -40,6 +40,6 @@ ms.locfileid: "52770740"
  按一下以存取 **[訂閱驗證選項]** 對話方塊，其中可讓您指定是否要使用資料列計數驗證或二進位總和檢查碼驗證。  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證複寫的資料](validate-replicated-data.md)  
+ [驗證複寫的資料](validate-data-at-the-subscriber.md)  
   
   

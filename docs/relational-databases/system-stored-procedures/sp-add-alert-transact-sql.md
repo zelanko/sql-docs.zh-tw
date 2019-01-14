@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c44c565e6e867c2fde6a99d770c2b083e3d6f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203278"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127068"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@name =** ] **'***name***'**  
+ [  **@name =** ] **'**_名稱_**'**  
  警示的名稱。 這個名稱會出現在回應警示所傳送的電子郵件或呼叫器訊息中。 它必須是唯一的且可以包含百分比 (**%**) 字元。 *名稱*已**sysname**，沒有預設值。  
   
  [ **@message_id =** ] *message_id*  
@@ -78,7 +78,7 @@ sp_add_alert [ @name = ] 'name'
   
  在設定這個值之後，便有可能防止在一小段時間內重複出現警示，因而傳送不想要的電子郵件訊息之類的情況。  
   
- [ **@notification_message =** ] **'***notification_message***'**  
+ [  **@notification_message =** ] **'**_notification_message_**'**  
  這是選擇性的附加訊息的電子郵件傳送給操作員**網路傳送**，或呼叫器通知。 *notification_message*已**nvarchar(512)**，預設值是 NULL。 指定*notification_message*適合用來加入矯正程序之類的特殊附註。  
   
  [ **@include_event_description_in =** ] *include_event_description_in*  
@@ -94,16 +94,16 @@ sp_add_alert [ @name = ] 'name'
 |**2**|呼叫器|  
 |**4**|**net send**|  
   
- [ **@database_name =** ] **'***database***'**  
+ [  **@database_name =** ] **'**_資料庫_**'**  
  會因發生錯誤而引發警示的資料庫。 如果*資料庫*未提供，不論是在發生錯誤，都會引發警示。 *資料庫*已**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
- [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
+ [  **@event_description_keyword =** ] **'**_event_description_keyword_pattern_**'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤的描述必須符合的字元序列。 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 運算式模式比對字元。 *event_description_keyword_pattern*已**nvarchar(100)**，預設值是 NULL。 此參數可用於篩選的物件名稱 (例如 **%customer_table%**)。  
   
  [ **@job_id =** ] *job_id*  
  當回應這個警示時，所執行之作業的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'**_job_name_**'**  
  當回應這個警示時，所執行的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版沒有這項實作。 *raise_snmp_trap*已**tinyint**，預設值是 0。  
   
- [  **@performance_condition =** ] **'***performance_condition***'**  
+ [  **@performance_condition =** ] **'**_performance_condition_**'**  
  表示格式的值 '*itemcomparatorvalue*'。 *performance_condition*已**nvarchar(512)** 預設值是 NULL，這些元素組成。  
   
 |格式元素|描述|  
@@ -121,13 +121,13 @@ sp_add_alert [ @name = ] 'name'
 |*Comparator*|它是下列運算子之一：>、< 或 =|  
 |*值*|計數器的數值|  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'**_分類_**'**  
  警示類別目錄的名稱。 *類別目錄*已**sysname**，預設值是 NULL。  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
  要查詢事件的 WMI 命名空間。 *wmi_namespace*已**sysname**，預設值是 NULL。 只支援本機伺服器的命名空間。  
   
- [ **@wmi_query**= ] **'***wmi_query***'**  
+ [ **@wmi_query**=] **'**_wmi_query_**'**  
  指定警示之 WMI 事件的查詢。 *wmi_query*已**nvarchar(512)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
