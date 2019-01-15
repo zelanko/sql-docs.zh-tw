@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 93dad2e3a1739448e17fd8759b25f7b4dadeca66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afc794e19ecc93f7275427760df78004a0f1fb13
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610960"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211547"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下層相容性  
-如果使用 OLE DB Driver for SQL Server 編譯您的用戶端和應用程式連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])，然後**varbinary （max)** 行為將會與行為相容藉由引進[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 也就是說，傳回之資料的大小最大值受限於 2 GB。 如果結果值大於 2 GB，將會發生截斷，而且將會傳回「字串資料右邊截斷」警告。 
+如果使用 OLE DB Driver for SQL Server 編譯您的用戶端和應用程式連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])，然後**varbinary （max)** 行為將會與行為相容藉由引進[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生用戶端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 也就是說，傳回之資料的大小最大值受限於 2 GB。 如果結果值大於 2 GB，將會發生截斷，而且將會傳回「字串資料右邊截斷」警告。 
   
 當資料類型相容性設定為 80 時，用戶端行為將會與下層用戶端行為一致。  
   

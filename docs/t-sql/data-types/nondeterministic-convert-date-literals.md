@@ -13,12 +13,12 @@ ms.author: mikeray
 ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7412b6ee9ad3b551fb91200c7d3f45f3287f6780
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52255648"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783360"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>將常值日期字串轉換成 DATE 值的非決定性轉換
 
@@ -75,16 +75,16 @@ SL_Croatian
 
 若指定 **ymd**，則無法保證輸出結果為何。 '2018' 的數值對天來說太大了。
 <!--
-The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team??
+The preceding claim of "no guarantee" might be incorrect, in the minds of the SQL query engine Developer team?
 -->
 
 #### <a name="specific-countries"></a>特定國家/地區
 
-在日本和中國，會使用 **ymd** 的 DATEFORMAT。 格式部分為由大單位至小單位的合理順序。 因此，此格式的排序狀況相當良好。 此格式被視為是「國際」格式。 其為國際格式的原因是四位數年份並不明確，且目前在地球上沒有任何國家使用古老的 **ydm** 格式。
+在日本和中國，會使用 **ymd** 的 DATEFORMAT。 格式部分為由大單位至小單位的合理順序。 因此，此格式的排序狀況相當良好。 此格式被視為是「國際」格式。 其為國際格式的原因是四位數年份並不明確，且目前在地球上沒有任何國家/地區使用古老的 **ydm** 格式。
 
-在其他國家 (例如德國和法國) 中，DATEFORMAT 為 **dmy**，其表示 **'dd-mm-yyyy'**。 **dmy** 格式的排序狀況並不良好，但仍然是由小單位至大單位的合理順序。
+在其他國家/地區 (例如德國和法國) 中，DATEFORMAT 為 **dmy**，其表示 **'dd-mm-yyyy'**。 **dmy** 格式的排序狀況並不良好，但仍然是由小單位至大單位的合理順序。
 
-美國和密克羅尼西亞聯邦是使用 **mdy** 的唯二國家，此格式無法排序。 格式的混合順序符合語音上說明日期的模式。
+美國和密克羅尼西亞聯邦是使用 **mdy** 的唯二國家/地區，此格式無法排序。 格式的混合順序符合語音上說明日期的模式。
 
 #### <a name="code-example-of-set-dateformat-mdy-versus-dmy"></a>SET DATEFORMAT 的程式碼範例：*mdy* 與 *dmy*
 
@@ -124,8 +124,8 @@ YMD-Interpretation--?--NotGuaranteed
 
 我們的 CAST 和 CONVERT 文件文章會列出您可以與 CONVERT 函式「決定性地」控制日期轉換搭配使用的明確程式碼。 每個月該文章都擁有我們最高的頁面瀏覽次數。
 
-- [CAST 與 CONVERT (Transact-SQL)：日期與時間樣式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
-- [CAST 與 CONVERT (Transact-SQL)：某些日期時間轉換不具決定性](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
+- [CAST 和 CONVERT (Transact-SQL)：日期和時間樣式](../functions/cast-and-convert-transact-sql.md#date-and-time-styles)
+- [CAST 和 CONVERT (Transact-SQL)：某些日期時間轉換非決定性](../functions/cast-and-convert-transact-sql.md#certain-datetime-conversions-are-nondeterministic)
 
 
 
@@ -137,7 +137,7 @@ YMD-Interpretation--?--NotGuaranteed
 
 #### <a name="unicode"></a>Unicode
 
-<!-- The next live sentence needs an explanatory example!  N'??'.
+<!-- The next live sentence needs an explanatory example!  N'somethingHere?'.
 -->
 非 Unicode 字元資料與定序之間的轉換也被視為非決定性。
 

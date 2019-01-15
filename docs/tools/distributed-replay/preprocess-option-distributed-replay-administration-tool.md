@@ -11,12 +11,12 @@ ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb0411323de64747c4b142fc4eda1882aceae010
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502706"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129438"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>前置處理選項 (Distributed Replay 管理工具)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ dreplay preprocess [-m controller] -i input_trace_file
 ```  
   
 #### <a name="parameters"></a>參數  
- **-m** *controller*  
+ **-m** _controller_  
  指定控制器的電腦名稱。 您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。  
   
  如果未指定 **-m** 參數，則會使用本機電腦。  
   
- **-i** *input_trace_file*  
+ **-i** _input_trace_file_  
  指定控制器上輸入追蹤檔案的完整路徑，例如 `D:\Mytrace.trc`。 **-i** 是必要參數。  
   
  如果相同的目錄中存在換用檔案，系統就會自動載入並使用它們。 這些檔案必須遵循檔案換用命名慣例，例如：`Mytrace.trc`、`Mytrace_1.trc`、`Mytrace_2.trc`、`Mytrace_3.trc`... `Mytrace_n.trc`。  
@@ -48,7 +48,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 > [!NOTE]  
 >  如果您要在控制器以外的電腦上使用管理工具，就必須將輸入追蹤檔案複製到控制器，以便針對此參數使用本機路徑。  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  指定控制器上儲存中繼檔案的目錄。 **-d** 是必要參數。  
   
  下列為適用需求：  
@@ -61,14 +61,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
 -   不支援 UNC 路徑。  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  這是前置處理組態檔的完整路徑，用來指定儲存在不同位置之前置處理組態檔的位置。 此參數可以是 UNC 路徑，也可以位於您執行管理工具所在之電腦的本機。  
   
  如果不需要篩選，或您不想要修改最大閒置時間，則不需要 **-c** 參數。  
   
  如果沒有 **-c** 參數，則會使用預設前置處理組態檔 `DReplay.exe.preprocess.config`。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  指定顯示狀態訊息的頻率 (以秒為單位)。  
   
  如果未指定 **-f** ，則預設間隔為 30 秒。  

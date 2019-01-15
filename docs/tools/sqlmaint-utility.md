@@ -19,12 +19,12 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 333d51131fedac6bb87dc9dd5ba49c17ff26073e
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293084"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100433"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,31 +81,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
- **-S** *server_name*[ **\\**_instance\_name_]  
+ **-S** _server_name_[ **\\**_instance\_name_]  
  指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 _server\_name_，即可連接到該伺服器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 _server\_name_**\\**_instance\_name_，即可連線到該伺服器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。  
   
- **-P** *password*  
+ **-P** _password_  
  指定登入識別碼的密碼。 只有在同時提供 **-U** 參數時，這才有效。 如果 *password* 包含特殊字元，則必須將此引數括在雙引號內，否則可省略雙引號。  
   
 > [!IMPORTANT]  
 >  密碼不會有遮罩。 盡可能使用 Windows 驗證。  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  指定要執行維護作業的資料庫名稱。 如果 *database_name* 包含特殊字元，則必須以雙引號括住；否則可省略雙引號。  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  指定利用資料庫維護計畫精靈定義的資料庫維護計畫名稱。 **sqlmaint** 所用的計畫資訊，只有計畫中的資料庫清單。 您在其他 **sqlmaint** 參數中指定的任何維護活動，都會套用到此資料庫清單。  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  指定利用資料庫維護計畫精靈定義之資料庫維護計畫的全域唯一識別碼 (GUID)。 **sqlmaint** 所用的計畫資訊，只有計畫中的資料庫清單。 您在其他 **sqlmaint** 參數中指定的任何維護活動，都會套用到此資料庫清單。 這必須符合 msdb.dbo.sysdbmaintplans 中的 plan_id 值。  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  指定要產生報表之檔案的完整路徑和名稱。 報表也會出現在畫面中。 這份報表會在檔案名稱中附加日期來維護版本資訊。 日期的產生方式如下：在檔案名稱的尾端、英文句點的前面，格式如下：_*yyyyMMddhhmm*。 *yyyy* = 年、 *MM* = 月、 *dd* = 日、 *hh* = 時、 *mm* = 分。  
   
  如果您在 1996 年 12 月 1 日上午 10:23 執行這個公用程式，則 *text_file* 值如下：  
@@ -122,10 +122,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  當 *sqlmaint* 存取遠端伺服器時，需要 **text_file** 的完整通用命名慣例 (UNC) 檔案名稱。  
   
- **-To**  *operator_name*  
+ **-To**  _operator_name_  
  指定將接收 SQL Mail 所產生之報表的操作員。  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  指定要產生 HTML 報表之檔案的完整路徑和名稱。 **sqlmaint** 也會在檔案名稱中附加 _*yyyyMMddhhmm* 格式的字串來產生檔案名稱，就像其對 **-Rpt** 參數所做的。  
   
  當 *sqlmaint* 存取遠端伺服器時，需要 **html_file** 的完整 UNC 檔案名稱。  
@@ -133,7 +133,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  指定如果建立報表檔之後的時間間隔超出 \<*time_period*>，便刪除報表目錄中的任何 HTML 報表。 **-DelHtmlRpt** 會尋找名稱符合 *html_file* 參數所產生之模式的檔案。 如果 *html_file* 是 c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm，則 **-DelHtmlRpt** 會導致 **sqlmaint** 刪除名稱符合 C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm 模式，以及比指定的 \<*time_period*> 還舊的所有檔案。  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  指定從 **-D**指定的資料庫中移除未使用的空間。 這個選項只適用於定義成自動成長的資料庫。 *Threshold_percent* 會以 MB 為單位來指定大小，一旦資料庫到達此大小之後， **sqlmaint** 便會嘗試移除未使用的資料空間。 在資料庫大小小於 *threshold_percent*時，則不會採取任何動作。 *Free_percent* 會指定必須保留在資料庫中的未使用空間大小，指定的方式是資料庫最終大小的百分比。 例如，如果 200 MB 資料庫包含 100 MB 的資料， *free_percent* 指定 10 會使最終資料庫大小成為 110 MB。 請注意，如果資料庫小於 *free_percent* 加上資料庫中的資料量，就不會擴充資料庫。 例如，如果 108 MB 的資料庫包含 100 MB 的資料， *free_percent* 指定 10 並不會將資料庫擴充成 110 MB；它會保持 108 MB。  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -147,7 +147,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  指定在 **-D** 所指定的資料庫中，執行 DBCC CHECKCATALOG (Transact-SQL) 陳述式。 如需詳細資訊，請參閱 [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)。  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  指定在資料庫的各份資料表上，執行下列陳述式：  
   
 ```  
@@ -158,7 +158,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  如需詳細資訊，請參閱 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)所建立的資料庫維護計畫。  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  指定應該利用 *free_space* 百分比值作為填滿因數的反項，藉以重建目標資料庫中各資料表的索引。 例如，如果 *free_space* 百分比是 30，則使用的填滿因數就是 70。 如果將 *free_space* 百分比值指定為 100，則會使用原始的填滿因數值來重建索引。  
   
  如果索引位於計算資料行上，當您使用 **-RebldIdx** 時，也必須指定 **-SupportComputedColumn**引數。  
