@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 36d70b56432fee62d157bb8e6cf192d906e84bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519342"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135578"
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,9 +87,9 @@ ms.locfileid: "52519342"
   
  **若要設定 Web 同步處理的 IIS**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[設定 Web 同步處理的 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[設定 Web 同步處理的 IIS 7](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>建立 Web 處理序區  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener 支援每個執行緒有兩個並行同步處理作業。 超過這個限制可能會導致 Replication Listener 停止回應。 配置給 replisapi.dll 的執行緒數目是由應用程式集區的 [工作者處理序數上限] 屬性所決定。 根據預設，這個屬性設定為 1。  
@@ -136,7 +136,7 @@ ms.locfileid: "52519342"
   
 -   如果您要複寫大量資料，可能必須調整合併代理程式的批次大小。  
   
- 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的世代數目是使用合併代理程式的 -**DownloadGenerationsPerBatch** 和 -**UploadGenerationsPerBatch** 參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+ 合併式複寫的批次大小是以 *「層代」*(Generation) 為測量單位，而這是每個發行項的變更集合。 批次中的層代數目是使用合併代理程式的 –**DownloadGenerationsPerBatch** 和 –**UploadGenerationsPerBatch** 參數所指定。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  若為大量資料，請針對每個批次參數指定一個少量數目。 我們建議您從 10 這個值開始，然後根據需求和效能進行微調。 一般而言，這些參數都指定於代理程式設定檔中。 如需有關設定檔的詳細資訊，請參閱＜ [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52519342"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) 執行時所使用的帳戶也是在同步處理期間連接至發行者和散發者的帳戶。 這個帳戶必須對應至發行者和散發者的 SQL 登入帳戶。 如需詳細資訊，請參閱[設定 Web 同步處理的 IIS](../../relational-databases/replication/configure-iis-for-web-synchronization.md) 中的＜設定 SQL Server Replication Listener 的權限＞一節。  
   
--   您可以利用 FTP，將快照集從發行者傳遞到執行 IIS 的電腦。 快照集永遠是利用 HTTPS，從執行 IIS 的電腦傳遞到「訂閱者」。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+-   您可以利用 FTP，將快照集從發行者傳遞到執行 IIS 的電腦。 快照集永遠是利用 HTTPS，從執行 IIS 的電腦傳遞到「訂閱者」。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 -   如果複寫拓撲中的伺服器在防火牆後面，您可能需要在防火牆中開啟通訊埠，才能啟用 Web 同步處理。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "52519342"
   
     -   執行 IIS 的電腦通常會使用通訊埠 1433 連接到發行者或散發者 (預設執行個體)。 當發行者或散發者為伺服器上的具名執行個體 (此伺服器具有另一個預設執行個體) 時，通常會使用通訊埠 1500 來連接至此具名執行個體。  
   
-    -   如果您使用防火牆來隔開執行 IIS 的電腦與散發者，而且使用 FTP 共用進行快照集傳遞，則必須開啟用於 FTP 的通訊埠。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+    -   如果您使用防火牆來隔開執行 IIS 的電腦與散發者，而且使用 FTP 共用進行快照集傳遞，則必須開啟用於 FTP 的通訊埠。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 > [!IMPORTANT]  
 >  在防火牆中開啟通訊埠可能會讓您的伺服器面臨惡意攻擊的威脅。 請先確定您已了解防火牆系統，然後再開啟通訊埠。 如需詳細資訊，請參閱＜ [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)＞。  
