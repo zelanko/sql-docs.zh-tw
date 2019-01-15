@@ -29,19 +29,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 777fb26703b4582662748a15d4ac6ed6e0fdfae0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 375a20488c8f887a89538ee640e059a96da72a99
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712499"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300575"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 在 Linux 上使用 bcp，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+  > [!div class="nextstepaction"]
+  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
 
- > 如需使用 Azure SQL 資料倉儲中的 bcp 的詳細資訊，請參閱[使用 bcp 載入資料](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+> 在 Linux 上使用 bcp，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+> 
+> 如需使用 Azure SQL 資料倉儲中的 bcp 的詳細資訊，請參閱[使用 bcp 載入資料](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
   **b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
   
@@ -59,9 +62,9 @@ ms.locfileid: "52712499"
 
 **版本資訊**
 
-版本號碼：15.0 <br>
-組建編號：15.0.1000.34<br>
-發行日期： 2018 年 10 月 18 日
+版本編號：17.615.0 <br>
+組建編號:15.0.1000.34<br>
+發行日期2018 年 18 月
 
 SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉儲，以及 Always Encrypted 功能支援 Multi-factor Authentication (MFA)。
 新的 BCP 支援 Azure AD 驗證，包括 SQL Database 和 SQL 資料倉儲的 Multi-factor Authentication (MFA) 支援。
@@ -172,7 +175,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-d** _**database\_name**_<a name="d"></a>   
  指定要連接的資料庫。 根據預設，bcp.exe 會連線到使用者的預設資料庫。 如果指定 **-d** *database_name* 和三部分名稱 (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.如果指定 *database_name* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-d** 與資料庫名稱之間加上空格。  
   
- **-e**  _**err\_檔案**_<a name="e"></a>  
+ **-e** _**err\_file**_<a name="e"></a>  
  指定錯誤檔的完整路徑，該錯誤檔用來儲存 **bcp** 公用程式無法從檔案傳送至資料庫的任何資料列。 **bcp** 命令所產生的錯誤訊息，會送往使用者的工作站。 如果未使用這個選項，就不會建立錯誤檔。  
   
  如果 *err_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-e** 與 *err_file* 值之間加上空格。  
@@ -251,7 +254,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    若要啟用互動式驗證，提供使用者名稱-G 選項 (-U)，而不提供密碼。   
 
-   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例： *Azure Active Directory 使用者名稱和密碼*。  
+   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例：*Azure Active Directory 使用者名稱和密碼：*  
 
    互動模式需要密碼才可手動輸入，或進行啟用，multi-factor authentication 使用的帳戶，請完成設定的 MFA 驗證方法。 
 
@@ -312,7 +315,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
 **-K** _**application\_intent**_<a name="K"></a>   
-宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。  
+宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K** ，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱＜[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
 **-L** _**last\_row**_<a name="L"></a>  
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。 這個參數需要大於 (>) 0 但小於 (<) 或等於 (=) 最後一個資料列號碼的值。 如果沒有這個參數，預設值是檔案中的最後一個資料列。  
@@ -341,7 +344,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  可以忽略此警告。 解決這個警告的其中一種方式是使用 **-n** 取代 **-N**。  
   
- **-o** _**輸出\_檔案**_<a name="o"></a>  
+ **-o** _**output\_file**_<a name="o"></a>  
  指定接收來自命令提示字元重新導向之輸出的檔案名稱。  
   
  如果 *output_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-o** 與 *output_file* 值之間加上空格。  
@@ -365,7 +368,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  如需詳細資訊，請參閱本主題稍後的 [備註](#remarks)一節。  
   
- **-r** _**資料列\_詞彙**_<a name="r"></a>  
+ **-r** _**row\_term**_<a name="r"></a>  
  指定資料列結束字元。 預設值是 **\n** (新行字元)。 請利用這個參數來覆寫預設的資料列結束字元。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中使用十六進位表示法來指定資料列結束字元，該值將會在 0x00 處截斷。 例如，如果您指定 0x410041，將會使用 0x41。  
@@ -377,7 +380,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-S** _**server\_name**_ [\\_**instance\_name**_]<a name="S"></a> 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 如果未指定任何伺服器， **bcp** 公用程式會連接至本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 透過網路上的遠端電腦或本機具名執行個體執行 **bcp** 指令時，此選項為必要選項。 若要連接到伺服器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，只要指定 *server_name*。 若要連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體，請指定 _server\_name_**\\**_instance\_name_。  
   
- **-t** _**欄位\_詞彙**_<a name="t"></a>  
+ **-t** _**field\_term**_<a name="t"></a>  
  指定欄位結束字元。 預設值是 **\t** (定位字元)。 請利用這個參數來覆寫預設的欄位結束字元。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
   
  如果您在 bcp.exe 命令中使用十六進位表示法來指定欄位結束字元，該值將會在 0x00 處截斷。 例如，如果您指定 0x410041，將會使用 0x41。  
@@ -596,7 +599,7 @@ bcp -v
   
  此範例假設您使用的是混合模式驗證，您必須使用 **-U** 參數指定您的登入識別碼。 同時，除非您要連接到本機電腦上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，否則請使用 **-S** 參數指定系統名稱，並選擇性地指定執行個體名稱。  
 
-在命令提示字元中，輸入下列命令︰ \(系統會提示您輸入密碼。\)
+請在命令提示字元之下，輸入下列命令：\(系統會提示您輸入密碼。\)
 ```  
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  
@@ -709,6 +712,6 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
   
 ## <a name="feedback"></a>意見反應
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
