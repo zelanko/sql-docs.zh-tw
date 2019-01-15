@@ -1,7 +1,7 @@
 ---
 title: SQL Server 次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,14 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a811fdb21d6c0c1d702c067f255ece3c2b183b9c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600523"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206304"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>次要到主要複本讀取/寫入連線重新導向 (Always On 可用性群組)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 引進 Always On 可用性群組的*次要到主要複本讀取/寫入連線重新導向*。 任何作業系統平台上都可以使用讀取/寫入連線重新導向。 它允許將用戶端應用程式連線導向至主要複本，而不論連接字串中指定的目標伺服器為何。 
@@ -53,8 +54,8 @@ ms.locfileid: "51600523"
 
 在 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 中，已將 `READ_WRITE_ROUTING_URL` 新增至 `<add_replica_option>` 規格。 請參閱下列主題： 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>未設定 PRIMARY_ROLE(READ_WRITE_ROUTING_URL) (預設) 
@@ -156,7 +157,8 @@ GO
 
 如果連接字串中指定的 SQL Server 執行個體無法使用 (發生中斷)，則不論目標伺服器上的複本所扮演的角色為何，連線都會失敗。 若要避免長時間應用程式關閉，請在連接字串中設定替代 `FailoverPartner`。 應用程式必須實作重試邏輯，以容納在實際容錯移轉期間未上線的主要和次要複本。 如需連接字串的詳細資訊，請參閱 [SqlConnection.ConnectionString 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx)。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

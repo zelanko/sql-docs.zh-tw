@@ -16,12 +16,12 @@ ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5fbe0702ee25e39103c43cd689b49b563db49bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736566"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257183"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>疑難排解資料庫鏡像組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47736566"
 |[網路存取](#NetworkAccess)|說明每個伺服器執行個體要透過 TCP 來存取其他伺服器執行個體之通訊埠的需求。|  
 |[鏡像資料庫的準備工作](#MirrorDbPrep)|摘要說明準備鏡像資料庫以便開始進行鏡像作業的需求。|  
 |[失敗的檔案建立作業](#FailedCreateFileOp)|描述如何回應失敗的檔案建立作業。|  
-|[使用 Transact-SQL 啟動鏡像](#StartDbm)|描述 ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 陳述式的必要順序。|  
+|[使用 Transact-SQL 啟動鏡像](#StartDbm)|描述 ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 陳述式的必要順序。|  
 |[跨資料庫交易](#CrossDbTxns)|自動容錯移轉可能導致自動以及可能不正確地解決有疑問的交易。 因此，資料庫鏡像不支援跨資料庫交易。|  
   
 ##  <a name="Accounts"></a> 帳戶  
@@ -144,7 +144,7 @@ ms.locfileid: "47736566"
  如需詳細資訊，請參閱[移除資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)、[準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)、[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)、[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 或[使用 Windows 驗證建立資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)。  
   
 ##  <a name="StartDbm"></a> 使用 Transact-SQL 啟動鏡像  
- ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 陳述式發出的順序非常重要。  
+ ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 陳述式發出的順序非常重要。  
   
 1.  第一個陳述式必須在鏡像伺服器上執行。 發出這個陳述式時，鏡像伺服器並不會嘗試聯繫任何其他伺服器執行個體。 鏡像伺服器卻會指示其資料庫等到主體伺服器聯繫上鏡像伺服器為止。  
   

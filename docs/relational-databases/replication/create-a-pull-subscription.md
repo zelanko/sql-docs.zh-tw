@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae91aeb2cf31e7855f4f6caa7c1b916c3ef1a968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9395b0437c61bc0d680a701aae72e4df53c19cb4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503496"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129578"
 ---
 # <a name="create-a-pull-subscription"></a>建立提取訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,9 +119,9 @@ ms.locfileid: "52503496"
   
 2.  在訂閱者端，執行 [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)。 指定 **@publisher**或 Replication Management Objects (RMO)，在 **@publisher_db**或 Replication Management Objects (RMO)，在 **@publication**和下列參數：  
   
-    -   **@subscriber_type**將客訂閱指定為 **local**，並將主訂閱指定為 **global**。  
+    -   **@subscriber_type** ：將客訂閱指定為 **local** ，並將主訂閱指定為 **global** 。  
   
-    -   **@subscription_priority** - 指定訂閱的優先順序 (**0.00** 到 **99.99**)。 只需要對主訂閱執行此動作。  
+    -   **@subscription_priority** ：指定訂閱的優先權 (**0.00** 到 **99.99**)。 只需要對主訂閱執行此動作。  
   
          如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   

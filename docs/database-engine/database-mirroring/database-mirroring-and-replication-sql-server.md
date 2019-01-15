@@ -14,12 +14,12 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 029ad55778a1c4239bdb83d587ca9a1f21bcaf20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 40035d23d7414aa00f44f22411244ca7452ccafd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534439"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124868"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "52534439"
 |沒有自動容錯移轉的高安全性模式|所有經過認可的交易一定會存到鏡像的磁碟上。 「記錄讀取器代理程式」只會複寫在鏡像上強化的交易。 如果鏡像無法使用，則主體不會允許在資料庫上有進一步的活動；因此，「記錄讀取器代理程式」便沒有交易可複寫。|  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫功能及工作](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md)   
  [記錄傳送和複寫 &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

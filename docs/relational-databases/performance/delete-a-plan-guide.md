@@ -12,15 +12,15 @@ ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e3767e3b614012b9a5f770067403ac028eb84ad8
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6e01fbd98d2004566c4831db8b1ac28878095868
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328198"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143398"
 ---
 # <a name="delete-a-plan-guide"></a>刪除計畫指南
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除 (卸除) 計畫指南。 您也可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來刪除資料庫中的所有計畫指南。  
   
  **本主題內容**  

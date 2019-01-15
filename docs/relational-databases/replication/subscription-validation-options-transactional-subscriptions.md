@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc793dd6584e8aef38fe3616473aeae0b67f4c9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10d1920a4205bb1ec258c0b81303b2b61a50cb1f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740716"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123628"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>訂閱驗證選項 (交易式訂閱)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "47740716"
   
 ## <a name="see-also"></a>另請參閱  
  [驗證訂閱者端的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [驗證複寫的資料](../../relational-databases/replication/validate-replicated-data.md)  
+ [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

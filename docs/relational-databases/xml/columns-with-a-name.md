@@ -13,12 +13,12 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfdb170e28bb5fd9ab88aeda72ef0c2483e4074
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1df8cfd097e66853ab549360e1df6faf044ae80b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675947"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255843"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ FOR XML PATH, ELEMENTS XSINIL
  以下是結果：  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

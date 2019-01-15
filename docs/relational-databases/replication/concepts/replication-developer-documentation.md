@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
@@ -15,12 +15,12 @@ ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0bcb10caa86474eafab14cb8347e9e28885a137
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ce6f794df17fc67d83e8a6453b7b1a0f231db26
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815936"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299715"
 ---
 # <a name="replication-developer-documentation"></a>複寫開發人員文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,5 @@ ms.locfileid: "47815936"
  [複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  描述複寫代理程式可執行檔的使用。  
   
- [開發人員指南：使用說明主題 &#40;複寫&#41;](../../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)  
- 提供與複寫相關的如何主題清單。  
   
   

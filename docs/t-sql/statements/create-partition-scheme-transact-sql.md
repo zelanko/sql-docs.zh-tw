@@ -29,12 +29,12 @@ ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ee5082535620d05c96b505b1920b8036d92f5e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843097"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124778"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ AS PARTITION partition_function_name
  ALL  
  指定所有分割區都對應至 *file_group_name* 所提供的檔案群組，如果指定了 **[** PRIMARY **]**，便是對應至主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。  
   
- *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
+ *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
  指定用來存放 *partition_function_name* 所指定之分割區的檔案群組名稱。 *file_group_name* 必須已存在於資料庫中。  
   
- 如果指定了 **[** PRIMARY **]**，就會將分割區儲存在主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。 資料分割是從資料分割 1 開始，依照 [**,***...n*] 中列出檔案群組的順序來指派給各個檔案群組。在 [**,***...n*] 中，可以重複指定相同的 *file_group_name*。 如果 *n* 不足無法存放 *partition_function_name* 中所指定的資料分割數目，則 CREATE PARTITION SCHEME 會失敗，並會出現一則錯誤。  
+ 如果指定了 **[** PRIMARY **]**，就會將分割區儲存在主要檔案群組。 如果指定 ALL，則只能指定一個 *file_group_name*。 分割區是從分割區 1 開始，依照 [**,**_...n_] 中列出檔案群組的順序來指派給各個檔案群組。 在 [**,**_...n_] 中，可以重複指定相同的 *file_group_name*。 如果 *n* 不足無法存放 *partition_function_name* 中所指定的資料分割數目，則 CREATE PARTITION SCHEME 會失敗，並會出現一則錯誤。  
   
  如果 *partition_function_name* 產生的分割區數目比檔案群組少，第一個未指派的檔案群組會標示為 NEXT USED，且會出現一則命名 NEXT USED 檔案群組的參考訊息。 如果指定 ALL，唯一的 *file_group_name* 會維護它的 NEXT USED 屬性，以用於這個 *partition_function_name*。 如果在 ALTER PARTITION FUNCTION 陳述式中建立資料分割，NEXT USED 檔案群組便會收到其他資料分割。 若要建立其他未指派的檔案群組來存放新的資料分割，請使用 ALTER PARTITION SCHEME。  
   
- 當您指定 *file_group_name* [ 1 **,***...n*] 中的主要檔案群組時，必須依照 **[** PRIMARY**]** 中的相同方式來分隔 PRIMARY，因為它是一個關鍵字。  
+ 當您指定 *file_group_name* [ 1 **,**_...n_] 中的主要檔案群組時，必須依照 **[** PRIMARY **]** 中的相同方式來分隔 PRIMARY，因為它是一個關鍵字。  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]只支援使用 PRIMARY。 請參閱以下的範例 E。 
   

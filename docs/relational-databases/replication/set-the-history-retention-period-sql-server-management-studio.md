@@ -14,12 +14,12 @@ ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e7fda419f9d855bc4a7c89cab92dd8d15caebdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2cd74f8912d711b7cd6be93e63aca322172754c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517510"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135278"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>設定記錄保留週期 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "52517510"
   
 ### <a name="to-specify-the-history-retention-period"></a>若要指定記錄的保留期限  
   
-1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面上，按一下散發資料庫的屬性按鈕 (**...**)。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般]  頁面上，按一下散發資料庫的屬性按鈕 (**…**)。  
   
 2.  在 **[存放複寫效能記錄至少]** 方塊中輸入值。  
   

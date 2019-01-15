@@ -14,12 +14,12 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ef6f0f0a8d271780df238f9af175d4a85df7297
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db570a981038f39312d36e749fc300012aed5f7f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656460"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256003"
 ---
 # <a name="non-deterministic-content-models"></a>不具決定性的內容模型
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,12 +27,12 @@ ms.locfileid: "51656460"
   
  但是從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 開始，即使出現次數條件約束為 0、1 或未受約束，仍可接受不具決定性的內容模型。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>範例：拒絕不具決定性的內容模型  
+## <a name="example-non-deterministic-content-model-rejected"></a>範例拒絕不具決定性的內容模型  
  下列範例會嘗試建立具有不具決定性之內容模型的 XML 結構描述。 此程式碼會失敗，因為 `<root>` 元素是否應該具有兩個 `<a>` 元素的序列，或者 `<root>` 元素是否應該具有兩個序列 (每個序列含有一個 `<a>` 元素) 並不明確。  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="1" maxOccurs="2">  
@@ -61,12 +61,12 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>範例：接受不具決定性的內容模型  
+## <a name="example-non-deterministic-content-model-accepted"></a>範例接受不具決定性的內容模型  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本中，下列結構描述會遭到拒絕。  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
     <element name="root">  
         <complexType>  
             <sequence minOccurs="0" maxOccurs="unbounded">  

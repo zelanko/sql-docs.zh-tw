@@ -21,12 +21,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac4d217245516edf109c137897d5e7cee24b172b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 864edbeff7ce15e4cae3d2994ffa9ba2fd05f8ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404377"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133348"
 ---
 # <a name="filter-published-data"></a>篩選發行的資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "52404377"
   
 -   異動複寫可讓您將索引檢視複寫為檢視或資料表。 如果將檢視複寫為資料表，則無法從資料表篩選資料行。  
   
- 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 **sp_replcmds** (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (**dbo**)。 **dbo** 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)， **sp_replcmds** 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性考量，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會限制這個邏輯的執行範圍，讓惡意 **dbo** 無法劫持這個執行路徑。 例如，惡意 **dbo** 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 **sp_replcmds**的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 **dbo** 可能會提高其權限。  
+ 資料列篩選並非設計為跨資料庫運作。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會刻意將 **sp_replcmds** (在底下執行的篩選) 的執行範圍限制為資料庫擁有者 (**dbo**)。 **dbo** 沒有跨資料庫權限。 透過 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 加入的 CDC (異動資料擷取)， **sp_replcmds** 邏輯會將使用者可以傳回及查詢的資訊填入變更追蹤資料表。 基於安全性考量， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會限制這個邏輯的執行範圍，讓惡意 **dbo** 無法劫持這個執行路徑。 例如，惡意 **dbo** 可能會加入 CDC 資料表的觸發程序，然後這些觸發程序就會在呼叫 **sp_replcmds**的使用者內容底下執行 (在本例中，即為 Logreader 代理程式)。  如果用來執行代理程式的帳戶擁有更高的權限，惡意 **dbo** 可能會提高其權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

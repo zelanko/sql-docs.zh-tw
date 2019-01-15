@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86dd39734b2f2d4fd82f6845f60be588cac2c95b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: c125c4e1c413fd974ee80fd7f06c8c9f69f33b8d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812831"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257033"
 ---
 # <a name="accessing-the-soap-api"></a>存取 SOAP API
   報表伺服器 Web 服務透過 HTTP 使用簡易物件存取通訊協定 (SOAP)，並在用戶端程式與報表伺服器之間當做通訊介面。 Web 服務提供兩個端點 (一個用於報表執行，一個用於報表管理)，並且含有方法以及一組您可用以存取完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之複雜類型的物件。 若要呼叫服務，您必須參考 Reporting Services Web 服務描述語言 (WSDL)。  
@@ -55,7 +55,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|包含 XML Web 服務的資料夾。 這是在安裝期間設定的。|  
 |*\<端點名稱>.asmx*|Web 服務端點的名稱。|  
   
- 如需有關 WSDL 格式的詳細資訊，請參閱全球資訊網協會 (W3C) WSDL 規格，網址為 https://www.w3.org/TR/wsdl。  
+ 如需有關 WSDL 格式的詳細資訊，請參閱全球資訊網協會 (W3C) WSDL 規格，網址為 http://www.w3.org/TR/wsdl。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Web 服務和 .NET Framework 建置應用程式](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

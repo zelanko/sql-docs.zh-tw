@@ -5,7 +5,7 @@ ms.date: 11/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672627"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299705"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +38,19 @@ ms.locfileid: "51672627"
  [設定散發](../../../relational-databases/replication/configure-distribution.md)  
  本節中的主題示範如何使用 RMO 來設定發行與散發。  
   
- [建立、修改及刪除發行集和發行項 &#40;複寫&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  本章節中的主題示範如何使用 RMO 來建立、刪除和修改發行集與發行項。  
   
  [訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)  
  本章節中的主題示範如何使用 RMO 來建立、刪除和修改訂閱。  
   
- [保護複寫拓撲](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [保護複寫拓撲](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  本章節中的主題示範如何使用 RMO 來檢視和修改安全性設定。  
   
- [同步處理訂閱 &#40;複寫&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [同步處理訂閱 &#40;複寫&#41;](../../../relational-databases/replication/synchronize-data.md)  
  本章節中的主題示範如何同步處理訂閱。  
   
- [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  本章節中的主題示範如何以程式設計方式監視複寫拓撲。  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO 程式設計簡介  

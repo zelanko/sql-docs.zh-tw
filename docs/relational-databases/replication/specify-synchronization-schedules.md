@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b28271ae8ba64b9c07987f50891099ce46dda35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5c662d888d627b6dcce3d43161d16aee50a994ec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523307"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124848"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步處理排程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52523307"
   
 -   **若要指定同步處理排程，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -66,9 +66,9 @@ ms.locfileid: "52523307"
   
     -   **[視需要執行]**  
   
-    -   **\<定義排程...>**  
+    -   **\<定義排程…>**  
   
-2.  如果您選取 [\<定義排程...>]，請在 [作業排程屬性] 對話方塊中指定排程，然後按一下 [確定]。  
+2.  如果您選取 [\<定義排程...>]，則在 [作業排程屬性] 對話方塊中指定排程，然後按一下 [確定]。  
   
 3.  完成精靈。  
   

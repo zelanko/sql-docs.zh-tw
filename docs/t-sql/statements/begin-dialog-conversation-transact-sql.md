@@ -31,12 +31,12 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3ef067f78e6ff7e1358a89ab210ae8c701625b14
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543832"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124788"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## <a name="arguments"></a>引數  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  這是一個變數，用來儲存 BEGIN DIALOG CONVERSATION 陳述式傳回的新對話之系統產生對話控制代碼。 變數必須是 **uniqueidentifier** 類型。  
   
  FROM SERVICE *initiator_service_name*  

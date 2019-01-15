@@ -42,12 +42,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9d1acf8774331ca5e789d9c8d9c50e05a6a3b1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523067"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129008"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "52523067"
 |---------------------|--------------------------------------------------------|-----------------------|  
 |資料表|X|X|  
 |分割區資料表|X|X|  
-|預存程序 - 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|X|  
-|預存程序 - 執行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|否|  
+|預存程序 – 定義 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|X|  
+|預存程序 – 執行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 CLR)|X|否|  
 |檢視|X|X|  
 |索引檢視表|X|X|  
 |將索引檢視表做為資料表|X|否|  
@@ -71,36 +71,22 @@ ms.locfileid: "52523067"
 ## <a name="creating-publications"></a>建立發行集  
  若要建立發行集，您需提供下列資訊：  
   
--   散發者。  
-  
--   快照集檔案的位置。  
-  
--   發行集資料庫。  
-  
--   要建立之發行集的類型 (快照式、交易式、具有可更新訂閱的交易式，或合併式)。  
-  
--   發行集中的資料及資料庫物件 (發行項)。  
-  
--   所有發行集類型的靜態資料列篩選和資料行篩選，以及參數化資料列篩選器與合併式發行集的聯結篩選。  
-  
--   快照集代理程式排程。  
-  
--   將執行下列代理程式的帳戶：所有發行集的快照集代理程式；所有交易式發行集的記錄讀取器代理程式；可允許更新訂閱之交易式發行集的佇列讀取器代理程式  
-  
+-   散發者。    
+-   快照集檔案的位置。    
+-   發行集資料庫。    
+-   要建立之發行集的類型 (快照式、交易式、具有可更新訂閱的交易式，或合併式)。    
+-   發行集中的資料及資料庫物件 (發行項)。   
+-   所有發行集類型的靜態資料列篩選和資料行篩選，以及參數化資料列篩選器與合併式發行集的聯結篩選。   
+-   快照集代理程式排程。    
+-   將執行下列代理程式的帳戶：所有發行集的快照集代理程式；所有交易式發行集的記錄讀取器代理程式；可允許更新訂閱之交易式發行集的佇列讀取器代理程式    
 -   發行集的名稱及描述。  
   
- 如需有關如何使用發行集的資訊，請參閱下列主題：  
-  
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
-  
--   [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)  
-  
--   [檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
-  
--   [檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
-  
--   [刪除發行集](../../../relational-databases/replication/publish/delete-a-publication.md)  
-  
+ 如需有關如何使用發行集的資訊，請參閱下列主題：    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)    
+-   [檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
+-   [檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
+-   [刪除發行集](../../../relational-databases/replication/publish/delete-a-publication.md)    
 -   [刪除發行項](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 > [!NOTE]  
@@ -109,12 +95,9 @@ ms.locfileid: "52523067"
 ## <a name="publishing-tables"></a>發行資料表  
  最常見的已發行物件是資料表。 下列連結提供發行資料表相關方面的其他資訊：  
   
--   [篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)  
-  
--   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
-  
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
-  
+-   [篩選發行的資料](../../../relational-databases/replication/publish/filter-published-data.md)    
+-   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
+-   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [複寫識別資料行](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  在為複寫發行資料表時，您可以指定應複製到「訂閱者」的結構描述物件，例如宣告參考完整性 (主索引鍵條件約束、參考條件約束、唯一條件約束)、索引、使用者 DML 觸發程序 (無法複寫 DDL 觸發程序)、擴充屬性和定序。 只在發行者與訂閱者之間的初始同步處理中複寫擴充屬性。 如果您在初始同步處理之後加入或修改擴充屬性，就不會複寫這項變更。  
@@ -199,7 +182,7 @@ ms.locfileid: "52523067"
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 [發行項屬性 -\<發行項>]**** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 **[發行項屬性 -\<**<發行項>**>]** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>將資料發行給執行舊版 SQL Server 的訂閱者  
   

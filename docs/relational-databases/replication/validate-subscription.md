@@ -15,12 +15,12 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3aadc729667a5db3069b569df606fdd54012f2c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1983600c3eccc389bbc0a3a8995957688c173a37
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693846"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135128"
 ---
 # <a name="validate-subscription"></a>驗證訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ ms.locfileid: "47693846"
  按一下以存取 **[訂閱驗證選項]** 對話方塊，其中可讓您指定是否要使用資料列計數驗證或二進位總和檢查碼驗證。  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證複寫的資料](../../relational-databases/replication/validate-replicated-data.md)  
+ [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51485f1d1bbe120b42371c9d04a9d4576ac8d0d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391541"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254955"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ ms.locfileid: "52391541"
   
 - 存取記憶體最佳化資料表之查詢上的索引鍵集與動態資料指標。 這些資料指標會降級為靜態，且為唯讀。  
   
-- 不支援使用 **MERGE INTO** *target* (其中 *target* 是經記憶體最佳化的資料表)。
-    - 經記憶體最佳化的資料表支援 **MERGE USING** *source*。  
+- 不支援使用 **MERGE INTO** _target_ (其中 *target* 是經記憶體最佳化的資料表)。
+    - 經記憶體最佳化的資料表支援 **MERGE USING** _source_。  
   
 - 不支援 ROWVERSION (TIMESTAMP) 資料類型。 如需詳細資訊，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)。
   

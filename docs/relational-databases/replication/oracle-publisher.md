@@ -13,12 +13,12 @@ ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb364ed74b617e7ca219e4eb706a836f321db28d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a2d84adf2c077793a53f24ac37c14b77e2e0a9a
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831916"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124138"
 ---
 # <a name="oracle-publisher"></a>Oracle 發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "47831916"
   
 ## <a name="see-also"></a>另請參閱  
  [從 Oracle 資料庫建立發行集](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)   
- [屬性參考 &#40;複寫&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

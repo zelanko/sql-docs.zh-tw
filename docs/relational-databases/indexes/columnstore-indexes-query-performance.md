@@ -1,7 +1,7 @@
 ---
 title: 資料行存放區索引 - 查詢效能 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe14cc4f52fe0606fd68613736d91fd48bf87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637138"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255275"
 ---
 # <a name="columnstore-indexes---query-performance"></a>資料行存放區索引 - 查詢效能
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   針對達到資料行存放區索引設計來提供的快速查詢效能的建議。    
@@ -141,11 +142,11 @@ FROM FactResellerSalesXL_CCI
 ```    
     
 ### <a name="string-predicate-pushdown"></a>字串述詞下推    
-在設計資料倉儲結構描述時，建議的結構描述模型是使用一或多個事實資料表及多個維度資料表的星型結構描述或雪花結構描述。 [事實資料表](https://en.wikipedia.org/wiki/Fact_table) 會儲存商務測量或交易，而 [維度資料表](https://en.wikipedia.org/wiki/Dimension_table) 會儲存要分析之事實間的維度。    
+在設計資料倉儲結構描述時，建議的結構描述模型是使用一或多個事實資料表及多個維度資料表的星型結構描述或雪花結構描述。 [事實資料表](https://wikipedia.org/wiki/Fact_table) 會儲存商務測量或交易，而 [維度資料表](https://wikipedia.org/wiki/Dimension_table) 會儲存要分析之事實間的維度。    
     
 例如，事實可以是代表特定產品在特定地區之銷售的記錄，而維度則代表地區、產品等集合。 事實和維度資料表示透過主/外部索引鍵關聯性來連線。 最常使用的分析查詢會聯結一或多個維度資料表和事實資料表。    
     
-讓我們考慮維度資料表 `Products`。 一般的主索引鍵通常會是以字串資料類型表示的 `ProductCode`。 為了查詢的效能，最佳做法是建立替代索引鍵 (通常是整數資料行)，以從事實資料表來參照維度資料表中的資料列。    
+讓我們考慮維度資料表 `Products`。 一般的主索引鍵通常會是以字串資料類型表示的 `ProductCode`。 為了查詢的效能，最佳做法是建立替代索引鍵 (通常是整數資料行)，以從事實資料表來參照維度資料表中的資料列。    
     
 資料行存放區索引可以非常有效率地使用包含數字或整數型索引鍵的聯結/述詞執行分析查詢。 不過，在許多客戶工作負載中，我們發現以字串型資料行連結事實/維度資料表的用法，而包含資料行存放區索引的查詢效能結果並沒有作用。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 藉由將包含字串資料行的述詞下推至 SCAN 節點，大幅改善對字串型資料行分析查詢的效能。    
     

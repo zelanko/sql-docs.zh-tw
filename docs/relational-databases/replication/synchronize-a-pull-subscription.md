@@ -15,12 +15,12 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b23378b5340ea5aca32951cd1b35b3e08f78f05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b1b6726985643a16eef3bd5bda84a3220ba9442
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209387"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134142"
 ---
 # <a name="synchronize-a-pull-subscription"></a>同步處理提取訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53209387"
 5.  按一下 [ **關閉**]。  
   
 ##  <a name="ReplProg"></a> Replication Agents  
- 提取訂閱可透過程式設計方式加以同步處理，以及視需要從命令提示字元叫用適當的複寫代理程式可執行檔加以同步處理。 叫用的複寫代理程式可執行檔取決於提取訂閱所屬的發行集類型。 如需詳細資訊，請參閱 [Replication Agents](../../relational-databases/replication/agents/replication-agents.md)。  
+ 提取訂閱可透過程式設計方式加以同步處理，以及視需要從命令提示字元叫用適當的複寫代理程式可執行檔加以同步處理。 叫用的複寫代理程式可執行檔取決於提取訂閱所屬的發行集類型。 如需詳細資訊，請參閱 [Replication Agents](../../relational-databases/replication/agents/replication-agents-overview.md)。  
   
 > [!NOTE]  
 >  複寫代理程式會使用從命令提示字元啟動此代理程式之使用者的 Windows 驗證認證，連接到本機伺服器。 當使用「Windows 整合式驗證」連接到遠端伺服器時，也會使用這些 Windows 認證。  

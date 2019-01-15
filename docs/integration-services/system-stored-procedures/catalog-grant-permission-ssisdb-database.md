@@ -14,12 +14,12 @@ ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 856b4dfea1025e9cd9b6818a35410d9463d01e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51383126fe72627c09b00f3e55bdf5cbe82fe070
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817777"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130128"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>引數  
  [ @object_type = ] *object_type*  
- 安全性實體物件的類型。 安全物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint***。*  
+ 安全性實體物件的類型。 安全性實體物件類型包含資料夾 (`1`)、專案 (`2`)、環境 (`3`) 和作業 (`4`)。*object_type* 是 **smallint**_。_  
   
  [ @object_id = ] *object_id*  
  安全性實體物件的唯一識別碼 (ID)。 *object_id* 是 **bigint**。  

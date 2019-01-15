@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab63604cbaad009cd92825df1f252a95c1f4e0fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525634"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135898"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52525634"
   
     -   請確定空白字串尚未做為資料行值插入已發行的資料表中。  
   
-    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **-SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 (**-SkipErrors1400**)。  
+    -   如果通知「散發代理程式」記錄中的錯誤並繼續處理是可接受的，則請使用「散發代理程式」的 **–SkipErrors** 參數。 指定 Oracle 錯誤碼 1400 (**-SkipErrors1400**)。  
   
     -   修改已產生的建立資料表指令碼，同時從可能包含了與空白字串相關聯的任何字元資料行中移除 NOT NULL 屬性，並且使用 @creation_script sp_addarticle [的](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)參數為發行項提供做為自訂建立指令碼的已修改指令碼。  
   

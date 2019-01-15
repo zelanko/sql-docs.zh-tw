@@ -17,24 +17,24 @@ ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2982a8882fde670fa6a148087885116b3bfaf372
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3b6d151d2407e97f2030a083e577d9fd534b770c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677940"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256543"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>參考內建 XML 結構描述集合 (sys)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   您建立的每一個資料庫，在 **sys** 關聯式結構描述中，都有一個預先定義的 **sys** XML 結構描述集合。 此集合會保留這些預先定義的結構描述，所以從其他使用者建立的任何 XML 結構描述集合都能存取這些結構描述。 這些預先定義的結構描述中使用的前置詞在 XQuery 中是有意義的。 只有 **xml** 是保留的前置詞。  
   
 ```  
-xml = https://www.w3.org/XML/1998/namespace  
-xs = https://www.w3.org/2001/XMLSchema  
-xsi = https://www.w3.org/2001/XMLSchema-instance  
-fn = https://www.w3.org/2004/07/xpath-functions  
+xml = http://www.w3.org/XML/1998/namespace  
+xs = http://www.w3.org/2001/XMLSchema  
+xsi = http://www.w3.org/2001/XMLSchema-instance  
+fn = http://www.w3.org/2004/07/xpath-functions  
 sqltypes = https://schemas.microsoft.com/sqlserver/2004/sqltypes  
-xdt = https://www.w3.org/2004/07/xpath-datatypes  
+xdt = http://www.w3.org/2004/07/xpath-datatypes  
 (no prefix) = urn:schemas-microsoft-com:xml-sql  
 (no prefix) = https://schemas.microsoft.com/sqlserver/2004/SOAP  
 ```  
@@ -64,11 +64,11 @@ GO
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema   
-   xmlns="https://www.w3.org/2001/XMLSchema"   
+   xmlns="http://www.w3.org/2001/XMLSchema"   
    targetNamespace="myNS"  
    xmlns:ns="myNS"  
    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
-   <import namespace="https://www.w3.org/XML/1998/namespace"/>  
+   <import namespace="http://www.w3.org/XML/1998/namespace"/>  
    <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
    <element name="root">  
       <complexType>  
@@ -98,7 +98,7 @@ GO
   
     ```  
     CREATE XML SCHEMA COLLECTION SC AS '  
-    <schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    <schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace    
         ="https://schemas.microsoft.com/sqlserver/2004/sqltypes" >   
           <element name="root" type="string"/>  
@@ -123,7 +123,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+<schema xmlns="http://www.w3.org/2001/XMLSchema"   
         targetNamespace="myNS" xmlns:ns="myNS"  
         xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
    <import     

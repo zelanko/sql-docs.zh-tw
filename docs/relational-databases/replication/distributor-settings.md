@@ -15,12 +15,12 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61db31f6d7e5e91162fa2f9a0d53603f98824e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1e38d701bef745965fd8111ce3cf52322547f70
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618376"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124498"
 ---
 # <a name="distributor-settings"></a>散發者設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47618376"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce595fc0032ef8c1f498993f0953aa90117d73ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be115f4a0dad8cd7cfacca89a5ff117734087b28
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737376"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134908"
 ---
 # <a name="sort-columns"></a>排序資料行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "47737376"
  從排序的方格中移除所有資料列。 若要移除單一資料列，請選取該資料列並按下 Delete 鍵。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: replication
 ms.topic: reference
 helpviewer_keywords:
 - programming interfaces [SQL Server replication]
@@ -17,12 +17,12 @@ ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ead289095f53693a7e6a487fa2a07a7c94df6219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f02932eff39003f318d2324cce85e51e54a4a77
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791816"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299115"
 ---
 # <a name="replication-agent-executables-concepts"></a>複寫代理程式可執行檔概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47791816"
  叫用複寫代理程式時，您可以使用效能設定檔，將一組定義的參數自動傳遞到代理程式可執行檔。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示如何從命令提示字元叫用複寫代理程式。 複寫代理程式也可以透過 Replication Management Objects (RMO) 來叫用。 如需詳細資訊，請參閱[同步處理訂閱 &#40;複寫&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)。  
+ 下列範例顯示如何從命令提示字元叫用複寫代理程式。 複寫代理程式也可以透過 Replication Management Objects (RMO) 來叫用。 如需詳細資訊，請參閱[同步處理訂閱 &#40;複寫&#41;](../../../relational-databases/replication/synchronize-data.md)。  
   
 > [!NOTE]  
 >  在這些範例中加入了分行符號，以提升可讀性。 在批次檔中，必須在單一行中撰寫命令。  

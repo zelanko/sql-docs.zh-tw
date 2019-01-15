@@ -15,12 +15,12 @@ ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09f60a9bb0a550dd91a2006be408bb25d2df42a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 849bd9e2d6c76f58e38b8f854d31686cef0ccfec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686818"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134888"
 ---
 # <a name="validate-all-subscriptions"></a>驗證所有訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ ms.locfileid: "47686818"
  除了統計「發行者」與「訂閱者」上的資料列數量之外，也會使用二進位總和檢查碼演算法計算所有資料的總和檢查碼。 如果資料列計數失敗，就不會執行總和檢查碼。 這個選項對於 [!INCLUDE[ssEW](../../includes/ssew-md.md)]無效。  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證複寫的資料](../../relational-databases/replication/validate-replicated-data.md)  
+ [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

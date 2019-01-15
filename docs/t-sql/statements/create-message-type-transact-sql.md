@@ -29,12 +29,12 @@ ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 83210f76165d18b5e3e4225eccb3673edf0417b5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5c19e21af440dd7f3293b706d38498e102c76248
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700536"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257083"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ CREATE MESSAGE TYPE
 ```  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
-  <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      targetNamespace="https://Adventure-Works.com/schemas/expenseReport"  
      xmlns:expense="https://Adventure-Works.com/schemas/expenseReport"  
      elementFormDefault="qualified"  

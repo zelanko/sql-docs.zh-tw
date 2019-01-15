@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bce0be6e849dc2e374ca8af1025a5da386b27a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533578"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256023"
 ---
 # <a name="view-user-defined-functions"></a>檢視使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "52533578"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法取得函數的相關資訊：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52533578"
   
 4.  以滑鼠右鍵按一下要查看其屬性的函數，然後選取 [屬性]。  
   
-     下列屬性會出現在 [函數屬性 - *function_name*] 對話方塊中。  
+     下列屬性會出現在 [函數屬性 - _function_name_] 對話方塊中。  
   
      **[資料庫備份]**  
      包含此函數之資料庫的名稱。  
@@ -161,7 +161,7 @@ ms.locfileid: "52533578"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

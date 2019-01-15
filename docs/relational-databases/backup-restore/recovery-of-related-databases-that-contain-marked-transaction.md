@@ -23,12 +23,12 @@ ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0ad92c9bf7596bb30dce4adf912fb1a9aa468a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678216"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131698"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>復原包含標記之異動的相關資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +61,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  如需如何將標示插入跨越多個資料庫之交易的相關資訊，請參閱 [使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>復原標示的 Transact-SQL 語法  
- 針對標示的交易使用[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)陳述式時，您可以使用下列其中一個子句，以在標示上或標示當前停止：  
+ 針對標示的交易使用 [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式時，您可以使用下列其中一個子句，以在標示上或標示當前停止：  
   
--   使用 WITH STOPATMARK = **'<標示名稱>'** 子句，以指定標示的交易為復原點。  
+-   使用 WITH STOPATMARK = **'**_<mark_name>_**'** 子句，以指定標示的交易為復原點。  
   
      STOPATMARK 可向前復原標示，並將已標示的交易納入向前復原。  
   
--   使用 WITH STOPBEFOREMARK = **'<標示名稱>'** 子句，以指定標示之前的記錄檔記錄為復原點。  
+-   使用 WITH STOPBEFOREMARK = **'**_<mark_name>_**'** 子句，以指定標示之前的記錄為復原點。  
   
      STOPBEFOREMARK 可向前復原標示，並從向前復原中排除已標示的交易。  
   

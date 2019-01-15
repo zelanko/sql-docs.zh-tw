@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73ff25f7de2ce3dcaffa962025ef8d93e535e75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e0431b913366b4e4ccb34bea7a00f0cf003a82e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527052"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134428"
 ---
 # <a name="create-nonclustered-indexes"></a>建立非叢集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "52527052"
   
 8.  按一下 [ **關閉**]。  
   
-9. 在 [檔案] 功能表上，按一下 [儲存 <資料表名稱>]。  
+9. 在 [檔案] 功能表上，按一下 [儲存 _資料表名稱_]。  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>若要使用物件總管建立非叢集索引  
   
@@ -86,9 +86,9 @@ ms.locfileid: "52527052"
   
 5.  在 **[新增索引]** 對話方塊，於 **[一般]** 頁面上的 **[索引名稱]** 方塊中輸入新索引的名稱。  
   
-6.  按一下 [索引鍵資料行]底下的 [加入...]。  
+6.  按一下 [索引鍵資料行] 下的 [新增...]。  
   
-7.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至非叢集索引之一或多個資料表資料行的核取方塊。  
+7.  在 [從 _資料表名稱_ 選取資料行] 對話方塊中，選取要加入非叢集索引之一或多個資料表資料行的核取方塊。  
   
 8.  按一下 [確定] 。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52527052"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```sql  
     USE AdventureWorks2012;  

@@ -18,12 +18,12 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f018f3415d0ee99eedb3c086e308a84c61cdc058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c7be0bb2b8864fc7720753e2af8a372c57a4ec3e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542915"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124958"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52542915"
   
  ![Web 同步處理元件和資料流程](../../relational-databases/replication/media/web-sync01.gif "Web 同步處理元件和資料流程")  
   
- Web 同步處理是僅用於提取訂閱的選項；因此「合併代理程式」永遠是在訂閱者端執行。 此合併代理程式可以是標準合併代理程式、合併代理程式 ActiveX 控制項，或透過 Replication Management Objects (RMO) 提供同步處理的應用程式。 若要指定執行 IIS 之電腦的位置，請將 **-InternetUrl** 參數用於合併代理程式。  
+ Web 同步處理是僅用於提取訂閱的選項；因此「合併代理程式」永遠是在訂閱者端執行。 此合併代理程式可以是標準合併代理程式、合併代理程式 ActiveX 控制項，或透過 Replication Management Objects (RMO) 提供同步處理的應用程式。 若要指定執行 IIS 之電腦的位置，請將 **–InternetUrl** 參數用於合併代理程式。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (Replisapi.dll) 在執行 IIS 的電腦上設定，負責處理從發行者和訂閱者傳送到伺服器的訊息。 拓撲中的每個節點都利用「合併式複寫重新調整器」(Replrec.dll) 來處理 XML 資料流。  
   

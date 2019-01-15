@@ -19,12 +19,12 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3654e06666c4b8d9639cf3d6ce792cdf80e4cdd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: dc70465eac81711cfcc3fd500c45e92f682b792c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396811"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206194"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name SET
 -- Modify an external data source pointing to Azure Blob storage
 -- Applies to: SQL Server (starting with 2017)
 ALTER EXTERNAL DATA SOURCE data_source_name
-    WITH (
-        TYPE = BLOB_STORAGE,
+    SET
         LOCATION = 'https://storage_account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
+        [, CREDENTIAL = credential_name ] 
 ```  
   
 ## <a name="arguments"></a>引數  

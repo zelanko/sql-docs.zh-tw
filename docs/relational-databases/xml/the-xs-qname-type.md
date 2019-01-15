@@ -13,12 +13,12 @@ ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af3643772287abfd92edce02a180645660cc5c2f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6cfecd76a38c676b287070a3471972eb08329793
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677237"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254984"
 ---
 # <a name="the-xsqname-type"></a>xs:QName 類型
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "51677237"
   
 ```  
 CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:int xs:QName"/>  
     </xs:simpleType>  
@@ -37,7 +37,7 @@ CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'
 GO  
   
 CREATE XML SCHEMA COLLECTION QNameLimitation2 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:integer">  
    <xs:simpleType>  

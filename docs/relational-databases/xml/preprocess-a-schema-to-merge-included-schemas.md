@@ -20,12 +20,12 @@ ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5be80f23701fbe911eb96796b8dcd606e12019d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dd8e4b828e6304748ffd9a913d7508ba37adaca3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655679"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255803"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -195,7 +195,7 @@ public class XmlSchemaIncludeNormalizer
 ### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified" >  
   <xsd:element name="publisher" type="xsd:string"/>  
@@ -205,7 +205,7 @@ public class XmlSchemaIncludeNormalizer
 ### <a name="booksxsd"></a>books.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified"  
      targetNamespace="bookstore-schema">  

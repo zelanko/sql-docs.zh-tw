@@ -15,12 +15,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 397604c04c71b662a36cb5bf39f7aaa99c600a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799466"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124598"
 ---
 # <a name="replication-monitor"></a>複寫監視器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +33,6 @@ ms.locfileid: "47799466"
 -   [散發者設定](../../relational-databases/replication/distributor-settings.md)  
   
 -   [散發者資訊，發行集](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [散發者資訊，訂閱監看清單 &#40;交易式發行集，SQL Server 2005 和更新版本&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [散發者資訊，訂閱監看清單 &#40;合併式發行集，SQL Server 2005 和更新版本&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [散發者資訊，訂閱監看清單 &#40;快照式發行集，SQL Server 2005 和更新版本&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [散發者資訊，代理程式](../../relational-databases/replication/distributor-information-agents.md)  
   
 -   [發行者設定](../../relational-databases/replication/publisher-settings.md)  
   
@@ -68,8 +60,7 @@ ms.locfileid: "47799466"
   
 -   [發行集資訊，代理程式 &#40;交易式發行集&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [發行集資訊，代理程式 &#40;合併式發行集&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [發行集資訊，代理程式 &#40;合併式發行集&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [發行集資訊，代理程式 &#40;快照式發行集&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [發行集資訊、追蹤 Token &#40;交易式發行集、SQL Server 2005 和更新版本&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -81,8 +72,6 @@ ms.locfileid: "47799466"
 -   [訂閱，散發者到訂閱者記錄 &#40;交易式訂閱&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [訂閱，同步處理記錄 &#40;合併訂閱，SQL Server 2005 和更新版本&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [訂閱，同步處理記錄 &#40;合併訂閱，SQL Server 2000&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [訂閱，散發者到訂閱者記錄 &#40;快照式訂閱&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -98,7 +87,6 @@ ms.locfileid: "47799466"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [屬性參考 &#40;複寫&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

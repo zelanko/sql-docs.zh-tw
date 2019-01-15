@@ -13,12 +13,12 @@ ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea0036898d14e86e02b1625bbff494423a1b2292
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 910bd30f684459aae49b583f7e867c24b436c750
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674917"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256133"
 ---
 # <a name="mixed-type-and-simple-content"></a>混合的類型與簡單的內容
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "51674917"
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns"  
-xmlns:ns1="https://ns1">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns"  
+xmlns:ns1="http://ns1">  
   
     <complexType name="myComplexTypeA" mixed="true">  
         <sequence>  

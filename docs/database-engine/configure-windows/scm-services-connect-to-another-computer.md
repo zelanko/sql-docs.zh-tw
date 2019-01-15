@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072142"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135768"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服務 - 連接至另一台電腦
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "49072142"
   
 8.  在 [新增/移除嵌入式管理單元] 視窗中，按一下 [確定]。  
   
-9. 依序展開 [電腦管理 (\<電腦名稱>)]**** 和 [服務與應用程式]。  
+9. 依序展開 [電腦管理 (\<電腦名稱>)] 和 [服務與應用程式]。  
   
 10. 以滑鼠右鍵按一下 [SQL Server 組態管理員]，然後按一下 [從這裡新增視窗]。  
   
