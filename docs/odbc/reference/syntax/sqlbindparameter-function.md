@@ -279,7 +279,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 或 SQL_DATA_AT_EXEC|�
 4.  呼叫**SQLParamData**來擷取應用程式定義的值中指定*ParameterValuePtr*引數**SQLBindParameter**前若要處理的資料在執行參數。 **SQLParamData**會傳回 SQL_NEED_DATA。  
   
     > [!NOTE]  
-    >  雖然資料在執行中參數類似於資料在執行中資料行，所傳回的值**SQLParamData**每個不同。 資料在執行中參數已將與傳送資料的 SQL 陳述式中的參數**SQLPutData**當陳述式以**SQLExecDirect**或**SQLExecute**. 使用繫結**SQLBindParameter**。 所傳回的值**SQLParamData**指標值傳遞給**SQLBindParameter**中*ParameterValuePtr*引數。 資料在執行中資料行是資料會傳送使用資料列集中的資料行**SQLPutData**更新或加入一個資料列時**SQLBulkOperations**或更新的**SQLSetPos**. 使用繫結**SQLBindCol**。 所傳回的值**SQLParamData**是中的資料列的地址 **TargetValuePtr*緩衝區 (藉由呼叫設定**SQLBindCol**) 所處理的。  
+    >  雖然資料在執行中參數類似於資料在執行中資料行，所傳回的值 **SQLParamData** 每個不同。 資料在執行中參數已將與傳送資料的 SQL 陳述式中的參數**SQLPutData**當陳述式以**SQLExecDirect**或**SQLExecute**. 使用繫結**SQLBindParameter**。 所傳回的值**SQLParamData**指標值傳遞給**SQLBindParameter**中*ParameterValuePtr*引數。 資料在執行中資料行是資料會傳送使用資料列集中的資料行**SQLPutData**更新或加入一個資料列時**SQLBulkOperations**或更新的**SQLSetPos**. 使用繫結**SQLBindCol**。 所傳回的值**SQLParamData**是中的資料列的地址 **TargetValuePtr*緩衝區 (藉由呼叫設定 **SQLBindCol**) 所處理的。  
   
 5.  呼叫**SQLPutData**傳送參數資料的一或多次。 如果資料值是大於，多個呼叫則需要\* *ParameterValuePtr*中指定的緩衝區**SQLPutData**; 多次呼叫**SQLPutData**或傳送二進位的 C 資料行的字元、 二進位，傳送字元 C 資料行的字元、 二進位檔或資料來源特有的資料型別時，只允許相同的參數或資料來源特定的資料類型。  
   
