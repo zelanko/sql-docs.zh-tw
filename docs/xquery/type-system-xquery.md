@@ -24,21 +24,21 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8b4680532843b9f60b6cdab3c0c528aab719dbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668658"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254783"
 ---
 # <a name="type-system-xquery"></a>類型系統 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 對結構描述類型而言是一個強式類型語言，對於不具類型的資料而言是一個弱式類型語言。 XQuery 的預先定義類型包括下列各項：  
   
--   中的 XML 結構描述的內建型別**https://www.w3.org/2001/XMLSchema**命名空間。  
+-   中的 XML 結構描述的內建型別**http://www.w3.org/2001/XMLSchema**命名空間。  
   
--   中所定義的型別**https://www.w3.org/2004/07/xpath-datatypes**命名空間。  
+-   中所定義的型別**http://www.w3.org/2004/07/xpath-datatypes**命名空間。  
   
  此主題也描述下列項目：  
   
@@ -65,7 +65,7 @@ WHERE ProductModelID=7
  此類型資訊是由資料行相關聯的 XML 結構描述集合所提供。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath 資料類型命名空間中定義的類型  
- 中定義的類型**https://www.w3.org/2004/07/xpath-datatypes**命名空間包含預先定義前置詞**xdt**。 下列適用於這些類型：  
+ 中定義的類型**http://www.w3.org/2004/07/xpath-datatypes**命名空間包含預先定義前置詞**xdt**。 下列適用於這些類型：  
   
 -   當您建立 XML 結構描述集合時，不能使用這些類型。 這些類型會在 XQuery 類型系統，並且用於[XQuery 與靜態類型](../xquery/xquery-and-static-typing.md)。 您可以轉型為不可部分完成的型別，例如**xdt: untypedatomic**，請在**xdt**命名空間。  
   
@@ -110,7 +110,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="integer"/>  
 </schema>'  
 GO  

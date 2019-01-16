@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86a7c1418e59b494362a3d64da81f07caf6cab95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f0d627b294281e5022cbc2dec34de884ab658318
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674157"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256593"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 更新資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -269,7 +269,7 @@ ms.locfileid: "51674157"
  下列 XSD 對應結構描述擁有**\<客戶 >**， **\<順序 >**，以及 **\<OD >** 元素會對應到資料庫中的 Sales.Customer、 Sales.SalesOrderHeader 和 Sales.SalesOrderDetail 資料表。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -363,7 +363,7 @@ ms.locfileid: "51674157"
  下列 XSD 對應結構描述透過提供資料表的 XML 檢視**\<學生 >**， **\<課程 >**，以及**\<註冊>** 項目。 **IDREFS**對應結構描述中的屬性會指定這些項目之間的關聯性。 **StudentIDList**屬性上**\<課程 >** 項目是**IDREFS**參考 Enrollment 資料表中的 StudentID 資料行的類型屬性。 同樣地， **enrolledin 屬性**屬性上**\<學生 >** 項目是**IDREFS**參考註冊中的 CourseID 資料行的類型屬性資料表。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

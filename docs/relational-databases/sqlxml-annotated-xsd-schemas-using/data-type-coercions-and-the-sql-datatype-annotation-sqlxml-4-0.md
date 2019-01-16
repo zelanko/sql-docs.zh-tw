@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7ebacf5f60b8decf10a4030884544ba7abe776d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7deb5fc8da17c597b22cb4e2e3e689191de2533b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662709"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255913"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>資料類型強制型轉和 sql:datatype 註解 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "51662709"
   
 |SQL Server 資料類型|XSD 資料類型|  
 |--------------------------|-------------------|  
-|**bigint**|**長**|  
+|**bigint**|**long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
 |**char**|**string**|  
@@ -104,7 +104,7 @@ ms.locfileid: "51662709"
  此範例會示範如何 XSD**日期**使用指定的型別**xsd: type**結構描述中的屬性會影響產生的 XML 文件。 該結構描述在 AdventureWorks 資料庫中會提供 Sales.SalesOrderHeader 資料表的 XML 檢視。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Order" sql:relation="Sales.SalesOrderHeader">  
      <xsd:complexType>  

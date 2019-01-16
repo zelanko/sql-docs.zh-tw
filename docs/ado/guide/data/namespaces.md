@@ -13,12 +13,12 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db90ecbc083a887a9845542b73e50bae6bf61e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534739"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254543"
 ---
 # <a name="namespaces"></a>命名空間
 在 ADO 中的 XML 保存格式會使用下列四個命名空間。  
@@ -33,7 +33,7 @@ ms.locfileid: "52534739"
 |rs|參考的命名空間包含的項目和專屬 ADO 資料錄集屬性的屬性和屬性。|  
 |z|參考目前資料列集的結構描述。|  
   
- 用戶端應該將它自己的標記加入這些命名空間，如規格所定義。 比方說，用戶端應該不會定義在命名空間中的"urn: schemas-microsoft-microsoft-com:rowset"，然後撰寫出類似 「 rs: MyOwnTag。 」 若要深入了解命名空間，請參閱[W3C Namespaces in XML 建議事項](https://www.w3.org/TR/REC-xml-names/)。  
+ 用戶端應該將它自己的標記加入這些命名空間，如規格所定義。 比方說，用戶端應該不會定義在命名空間中的"urn: schemas-microsoft-microsoft-com:rowset"，然後撰寫出類似 「 rs: MyOwnTag。 」 若要深入了解命名空間，請參閱[W3C Namespaces in XML 建議事項](http://www.w3.org/TR/REC-xml-names/)。  
   
 > [!IMPORTANT]
 >  結構描述標記的識別碼必須是"RowsetSchema 」，而且用來參考目前資料列集的結構描述的命名空間必須指向 「 #RowsetSchema。 」  

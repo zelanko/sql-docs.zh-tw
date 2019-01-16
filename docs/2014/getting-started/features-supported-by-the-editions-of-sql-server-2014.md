@@ -17,17 +17,21 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcf2d5924e160f38c9b00b564a8ae94b6f8705c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358000"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300585"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各版本所支援的功能
-  本主題提供不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本所支援功能的詳細資料。  
-  
-> **注意︰** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中都會提供評估版於 180 天試用期內。 如需詳細資訊，請參閱 < [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用軟體網站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
+
+  > [!div class="nextstepaction"]
+  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
+
+  本主題提供不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本所支援功能的詳細資料。 
+
+ > **注意︰** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中都會提供評估版於 180 天試用期內。 如需詳細資訊，請參閱 < [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用軟體網站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
 > 
 > **注意：** 如需 Evaluation 和 Developer Edition 所支援的功能，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 功能集。  
   

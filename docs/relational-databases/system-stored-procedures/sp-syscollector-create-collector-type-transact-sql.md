@@ -19,12 +19,12 @@ ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24e9f4aa4cf1ab8694947411f5565250c6544d92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659107"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256233"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_syscollector_create_collector_type
  [ @collector_type_uid = ] '*collector_type_uid*'  
  這是收集器類型的 GUID。 *collector_type_uid 是否*已**uniqueidentifier**而且如果它是的 NULL，它會自動建立並當做 OUTPUT 傳回。  
   
- [ @name =] '*名稱*'  
+ [ @name = ] '*name*'  
  這是收集器類型的名稱。 *名稱*已**sysname**必須加以指定。  
   
- [ @parameter_schema =] '*parameter_schema*'  
+ [ @parameter_schema = ] '*parameter_schema*'  
  這是此收集器類型的 XML 結構描述。 *parameter_schema*已**xml**預設值是 NULL。  
   
- [ @parameter_formatter =] '*parameter_formatter*'  
+ [ @parameter_formatter = ] '*parameter_formatter*'  
  這是用來轉換 XML，以用於收集組屬性頁中的範本。 *parameter_formatter*已**xml**預設值是 NULL。  
   
  [@collection_package_id = ] *collection_package_id*  
@@ -79,7 +79,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

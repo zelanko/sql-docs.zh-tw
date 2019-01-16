@@ -11,14 +11,17 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 3c64c2ab3927c111b29f0bafa6745fbab2f7fd13
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 77e818109424b5f0d9dea3b495da4e927c506366
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160536"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299235"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入門：在雲端中執行 SQL Server
+
+  > [!div class="nextstepaction"]
+  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -29,7 +32,7 @@ ms.locfileid: "53160536"
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  使用至少 2 GB 的記憶體從 marketplace 建立 Linux AMI 
-    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Ssh 連線到與 AMI
@@ -55,7 +58,7 @@ ms.locfileid: "53160536"
     
 ## <a name="google-cloud-platform"></a>Google 雲端平台
 1.  使用至少 2 GB 的記憶體從雲端啟動程式中建立的 Linux 映像 
-    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Ssh 連線到具有的映像
@@ -65,4 +68,4 @@ ms.locfileid: "53160536"
     * [Ubuntu](quickstart-install-connect-ubuntu.md)
 1.  設定遠端連線： 
     * 移至[防火牆規則](https://console.cloud.google.com/networking/firewalls)
-    * 新增輸入的規則以允許 SQL Server 所接聽的連接埠上的流量 (預設值 tcp:預設為 1433)
+    * 新增輸入的規則以允許 SQL Server 所接聽的連接埠上的流量 (預設值 tcp:1433)

@@ -13,12 +13,12 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5eb8012190914c2b5312a89428947f670db11df4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201727"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256193"
 ---
 # <a name="schema-section"></a>結構描述區段
 需要結構描述一節。 如先前範例所示，ADO 會為了保留資料值的語意盡可能更新每個資料行的相關寫出詳細的中繼資料。 不過，若要載入在 XML 中，ADO 只需要資料行和其所屬的資料列集的名稱。 最小的結構描述的範例如下：  
@@ -99,7 +99,7 @@ ms.locfileid: "53201727"
  同樣地，因為沒有定義別名的`CompanyName`在前一個範例中，`CompanyName`必須以一致的方式使用整個文件。  
   
 ## <a name="data-types"></a>資料型別  
- 您可以套用 dt: type 屬性的資料行的資料類型。 允許的 XML 類型的最後指南，請參閱資料類型 區段中的[W3C XML 資料的規格](https://www.w3.org/TR/1998/NOTE-XML-data/)。 您可以指定資料類型有兩種： 直接在資料行定義本身上指定 dt: type 屬性，或使用 s:datatype 建構為巢狀資料行定義的項目。 例如，  
+ 您可以套用 dt: type 屬性的資料行的資料類型。 允許的 XML 類型的最後指南，請參閱資料類型 區段中的[W3C XML 資料的規格](http://www.w3.org/TR/1998/NOTE-XML-data/)。 您可以指定資料類型有兩種： 直接在資料行定義本身上指定 dt: type 屬性，或使用 s:datatype 建構為巢狀資料行定義的項目。 例如，  
   
 ```  
 <s:AttributeType name="Phone" >  

@@ -16,18 +16,18 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f619c519bd5ec6a3ebb3567fc39e73d63e8b68f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619686"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256953"
 ---
 # <a name="types-of-drivers"></a>驅動程式的類型
 ODBC 驅動程式可以分類如下：  
   
 -   **32 位元 ODBC 2。**  
-     ***x*驅動程式**的 32 位元驅動程式會：  
+     **_x_驅動程式**的 32 位元驅動程式會：  
   
     -   匯出只 ODBC 2 *.x*函式。  
   

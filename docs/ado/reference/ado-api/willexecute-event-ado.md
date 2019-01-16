@@ -17,12 +17,12 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec725dfdcfb7ad0b37c6fc1d3cbff0c56b315a46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623486"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255501"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**事件被呼叫之前暫止的命令執行的連接上。  
@@ -44,7 +44,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)所包含的鎖定類型**資料錄集**，將會開啟。 使用這個參數，您可以變更鎖定期間的任何型別的**RecordsetOpen**作業。 *LockType*將會忽略任何其他作業。  
   
- *選項*  
+ *選項。*  
  A**長**值，指出可以用來執行命令或開啟選項**資料錄集**。  
   
  *adStatus*  
@@ -65,7 +65,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute**可讓您檢查並修改暫止執行的參數。 此事件可能會傳回取消暫止命令的要求。  
   
 > [!NOTE]
->  如果原始來源**命令**是所指定的資料流[CommandStream 屬性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性，指派新字串給 **WillExecute * * * 來源*參數會變更的來源**命令**。 **CommandStream**屬性將會被清除並[CommandText 屬性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性將會更新與新的來源。 所指定的原始資料流**CommandStream**就會釋出，而且無法存取。  
+>  如果原始來源**命令**是所指定的資料流[CommandStream 屬性 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性，指派新字串給**WillExecute** _來源_參數會變更的來源**命令**。 **CommandStream**屬性將會被清除並[CommandText 屬性 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)屬性將會更新與新的來源。 所指定的原始資料流**CommandStream**就會釋出，而且無法存取。  
   
  如果在新來源字串的方言與不同的原始設定[Dialect 屬性](../../../ado/reference/ado-api/dialect-property.md)屬性 (其對應到**CommandStream**)，必須指定正確的方言，藉由設定**方言**屬性所參考的命令物件*pCommand*。  
   

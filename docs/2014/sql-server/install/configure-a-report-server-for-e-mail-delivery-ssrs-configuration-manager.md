@@ -23,14 +23,19 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f2a600f727de4aa4e23de1ccbf2b668bba4ae0ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 17e210356aadaa17394abf0b68bf9303461943d2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370140"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300335"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)
+
+  > [!div class="nextstepaction"]
+  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
+
+
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。  
   
  根據預設，系統並不會設定報表伺服器電子郵件傳遞延伸模組。 您必須使用 Reporting Services 組態管理員，以最低限度的方式設定此延伸模組。 若要設定進階屬性，則必須編輯 `RSReportServer.config` 檔案。 如果您無法將報表伺服器設定為使用此延伸模組，則可以改成將報表傳遞到共用資料夾。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)＞。  

@@ -16,12 +16,12 @@ ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78d3d96e1340bb3cd8e57a930129e2c70157e61b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512407"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255103"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>節點的相關函式 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ WHERE ProductModelID=19
 ```  
 <p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
 <p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
-  <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
+  <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
 ...  
 ```  
   

@@ -1,7 +1,7 @@
 ---
 title: 註解式 XSD 結構描述在 SQLXML 4.0 中的 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 961f4af715f8639a67ff6a6ea03cf63d52e1c086
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662307"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255633"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的註解式 XSD 結構描述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "51662307"
 ## <a name="other-resources"></a>其他資源  
  您可以在下列網站上找到有關 XML 結構描述定義語言 (XSD)、XML 路徑語言 (XPath) 和可延伸樣式表語言轉換 (XSLT) 的資訊：  
   
--   XML 結構描述第 0 部： 入門，W3C 建議事項 (https://www.w3.org/TR/xmlschema-0/)  
+-   XML 結構描述第 0 部分：入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 結構描述第 1 部分： 結構、 W3C 建議事項 (https://www.w3.org/TR/xmlschema-1/)  
+-   XML 結構描述第 1 部分：結構，W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML 結構描述第 2:Datatypes，W3C 建議事項 (https://www.w3.org/TR/xmlschema-2/)  
+-   XML 結構描述第 2:Datatypes，W3C 建議事項 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML 路徑語言 (XPath) (https://www.w3.org/TR/xpath)  
+-   XML 路徑語言 (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL 轉換 (XSLT) (https://www.w3.org/TR/xslt)  
+-   XSL 轉換 (XSLT) (http://www.w3.org/TR/xslt)  
   
   

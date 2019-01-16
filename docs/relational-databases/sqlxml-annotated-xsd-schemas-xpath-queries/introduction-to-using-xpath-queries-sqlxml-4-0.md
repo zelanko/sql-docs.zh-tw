@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3758a437a35ad3add877d04eaafca0997f7b2096
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671637"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256453"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51671637"
   
  XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組**\<客戶 >** 節點，XPath 可以選取所有**\<順序 >** 節點**日期**屬性值 **"7/14/1999"**。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   
- 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集 https://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 全球資訊網協會 (W3C) 將 XPath 語言定義成標準導覽語言。 SQLXML 4.0 會實作 W3C XPath 規格中，位於子集 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
   
  下面是 W3C XPath 實作與 SQLXML 4.0 實作之間的重要差異。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "51671637"
 |布林值述詞，包括連續和巢狀述詞||[在 XPath 查詢中指定算術運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |所有關係運算子|=, !=, <, \<=, >, >=|[在 XPath 查詢中指定關係運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |算術運算子|+、-、*、div|[在 XPath 查詢中指定算術運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|明確轉換函數|**number （)**， **string （)**， **boolean （)**|[在 XPath 查詢中指定明確的轉換函式&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|明確轉換函數|**number()**, **string()**, **Boolean()**|[在 XPath 查詢中指定明確的轉換函式&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |布林運算子|AND、OR|[在 XPath 查詢中指定布林運算子&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|布林函數|**true （)**， **false （)**， **not （)**|[在 XPath 查詢中指定布林函數&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|布林函數|**true()**, **false()**, **not()**|[在 XPath 查詢中指定布林函數&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 變數||[在 XPath 查詢中指定 XPath 變數&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>不支援的功能  

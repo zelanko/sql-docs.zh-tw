@@ -16,12 +16,12 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f611fead43166972860436e7c3bc378ee8e44f38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c108689f2b06fca884978de68c106c2c8f28f741
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670257"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254956"
 ---
 # <a name="functions-on-string-values---contains"></a>字串值的相關函式 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ where CatalogDescription.exist('
   
  `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">`  
   
  `A TRUE multi-sport bike that offers streamlined riding and`  
   

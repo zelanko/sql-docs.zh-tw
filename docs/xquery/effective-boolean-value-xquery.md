@@ -18,12 +18,12 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ffcd1f8663a8ddc302a0ce74c3bdede817baa832
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 685c5a6290f9f6b51321c8d730b60614dc0f5fa7
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670287"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256883"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布林值 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ go
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="s" type="string"/>  
       <element name="b" type="boolean"/>  
 </schema>'  

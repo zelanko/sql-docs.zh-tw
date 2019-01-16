@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31d486f24d9c06926462be856d9102a9a457bb7b
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558715"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256383"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
 在自訂檔案中的每個區段標頭包含方括號 (**[]**) 包含型別和參數。 四個區段類型會以常值字串**連接**， **sql**， **userlist**，或**記錄**。 參數是常值字串、 預設值、 使用者指定的識別項，或執行任何動作。  
@@ -55,7 +55,7 @@ identifier
   
  在下列情況下，使用特定的區段：  
   
--   A**連接**區段用在用戶端的值部分連接字串關鍵字，如果"**資料來源 = * * * 值*"，符合**連接**區段識別碼 *.*  
+-   A**連接**如果用戶端的值部分連接字串關鍵字，就會使用區段 」**資料來源 =**_值_"，符合**連接**區段識別碼 *。*  
   
 -   **Sql**如果用戶端命令字串包含符合的字串，就會使用 區段**sql**區段識別項。  
   

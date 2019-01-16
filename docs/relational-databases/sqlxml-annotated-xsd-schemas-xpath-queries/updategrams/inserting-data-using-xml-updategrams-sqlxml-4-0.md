@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 319980e5ce6b2bb1671c57c9619b635fbf130bf8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 52c93c8a30131b1e13ef177d6b76b946a1b639af
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671157"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255233"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>使用 XML Updategram 插入資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51671157"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<之前 > 區塊  
+## <a name="before-block"></a>\<before> Block  
  **\<之前 >** 區塊，則可以省略插入作業。 如果選擇性**對應結構描述**未指定屬性，則**\<項目名稱 >** ，則 updategram 會對應至資料庫資料表和子元素中指定，或屬性會對應到資料表中的資料行。  
   
 ## <a name="after-block"></a>\<之後 > 區塊  
@@ -388,7 +388,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  下列的結構描述 (CustOrderSchema.xml) 描述 **\<CustOrder >** 所組成的項目**OrderID**並**EmployeeID**屬性。 若要讓結構描述更有可看性，預設值指派給**EmployeeID**屬性。 Updategram 只會將屬性的預設值用於插入作業，而且只有在 Updategram 未指定該屬性時才會這麼做。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="CustOrder" >  
    <xsd:complexType>  
@@ -458,7 +458,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="Student" sql:relation="Students">  
   <xsd:complexType>  
@@ -489,7 +489,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
       xmlns:updg="urn:schemas-microsoft-com:xml-updategram"  
-      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   
 <updg:sync mapping-schema='StudentSchema.xml'>  
   <updg:before/>  
@@ -564,7 +564,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  下列結構描述 (XSD-ElementHavingNamespace.xml) 顯示相對應元素和屬性的宣告方式。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
      xmlns:x="https://server/xyz/schemas/"   
@@ -636,7 +636,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
         <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
               xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-              xmlns:html="https://www.w3.org/1999/xhtml"   
+              xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
      <html:p>Insert Example</html:p>  
@@ -687,7 +687,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  

@@ -20,12 +20,12 @@ ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d85f49dcb9ab5bb0e6d5dde114d5c807a5780f5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670277"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254673"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的類型轉換規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ go
   
 ```  
 create xml schema collection myCollection as N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
       <xs:element name="root">  
             <xs:complexType>  
                   <xs:sequence>  

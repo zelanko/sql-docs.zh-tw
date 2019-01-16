@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab60a5cae291c307b0717b2d90409e26b835327f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e247e2bf49c9fcf0c6eb211bd9c83b6444118f17
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675297"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256643"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>註解解譯 - sql:relationship 和索引鍵順序規則
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51675297"
  請考慮下列 XSD 結構描述，在其中之間的一對多關聯性**\<客戶 >** 並**\<順序 >** 項目 （一個客戶可以下許多訂單） 是使用指定的 **\<sql: relationship >** 項目：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"<>   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -118,7 +118,7 @@ ms.locfileid: "51675297"
     set objBL=Nothing  
     ```  
   
-     結果是，XML 大量載入將 NULL 值插入到 CustOrder 資料表的 CustomerID 外部索引鍵資料行中。 如果您修訂 XML 範例資料，讓 **\<CustomerID >** 子項目會出現在之前**\<順序 >** 子項目，您會得到預期的結果： XML 大量載入將指定的外部索引鍵值插入到資料行。  
+     結果是，XML 大量載入將 NULL 值插入到 CustOrder 資料表的 CustomerID 外部索引鍵資料行中。 如果您修訂 XML 範例資料，讓 **\<CustomerID >** 子項目會出現在之前**\<順序 >** 子項目，您會得到預期的結果：XML 大量載入會將指定的外部索引鍵值插入資料行。  
   
  這是相等的 XDR 結構描述：  
   

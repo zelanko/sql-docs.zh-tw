@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d800875c3255866463aee95ff6446f740ace03fd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 429d881953477592e6d65a601c85778dbcbbc339
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671067"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257143"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 支援 - 使用大量載入
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51671067"
  若要從 Managed 環境使用 SQLXML 大量載入 COM 物件，您需要將專案參考加入到此物件中。 這會在大量載入 COM 物件周圍產生 Managed 包裝函數介面。  
   
 > [!NOTE]  
->  Managed XML 大量載入不會使用 Managed 資料流，而且在原生資料流周圍需要使用包裝函數。 SQLXML 大量載入元件將不會在多執行緒環境 ('[MTAThread]' 屬性) 下執行。 如果您嘗試在多執行緒環境中執行大量載入元件時，您會收到 InvalidCastException 例外狀況包含下列的其他資訊: 「 介面 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失敗 」。 因應措施是對包含大量載入物件單一執行緒存取的物件 (例如，藉由使用 **[STAThread]** 屬性，如範例所示)。  
+>  Managed XML 大量載入不會使用 Managed 資料流，而且在原生資料流周圍需要使用包裝函數。 SQLXML 大量載入元件將不會在多執行緒環境 ('[MTAThread]' 屬性) 下執行。 如果您嘗試在多執行緒環境中執行大量載入元件時，您會收到 InvalidCastException 例外狀況包含下列的其他資訊：「 介面 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失敗 」。 因應措施是對包含大量載入物件單一執行緒存取的物件 (例如，藉由使用 **[STAThread]** 屬性，如範例所示)。  
   
  本主題提供 C# 工作範例應用程式，將 XML 資料大量載入到資料庫中。 若要建立工作範例，按照下列步驟進行：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51671067"
 2.  將下列結構描述儲存在檔案 (schema.xml) 中：  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
     <xsd:annotation>  
       <xsd:appinfo>  

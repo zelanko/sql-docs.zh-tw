@@ -1,7 +1,7 @@
 ---
 title: 註解式的 XSD 結構描述 (SQLXML 4.0) 簡介 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e97004dd3b8d28da571f66ba91782f408ee18ede
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04e34b343ba92fcd8602f2b296e90de2a147fbba
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674277"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255943"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>註解式 XSD 結構描述簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "51674277"
  必須包含有效的 XSD 結構描述 **\<2&gt;xsd:schema&lt;2} >** 項目定義，如下所示：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <!-- additional schema definitions here -->  
 </xsd:schema>  
 ```  
   
- **\<2&gt;xsd:schema&lt;2} >** 元素衍生自 XML 結構描述命名空間規格，在 https://www.w3.org/2001/XMLSchema 。  
+ **\<2&gt;xsd:schema&lt;2} >** 元素衍生自 XML 結構描述命名空間規格，在 http://www.w3.org/2001/XMLSchema 。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 結構描述的註解  
  您可以使用 XSD 結構描述搭配描述資料庫對應的註解、查詢資料庫，並且以 XML 文件的格式傳回結果。 提供註解的目的是要將 XSD 結構描述對應至資料庫資料表和資料行。 您可以針對 XSD 結構描述所建立的 XML 檢視指定 XPath 查詢來查詢資料庫，並以 XML 的格式取得結果。  
@@ -61,7 +61,7 @@ ms.locfileid: "51674277"
  在 XSD 結構描述中，使用命名空間指定註解**urn: schemas-microsoft-microsoft-: mapping-schema-結構描述**。 下列範例所示，指定命名空間的最簡單方式是指定它在 **\<2&gt;xsd:schema&lt;2} >** 標記。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 ...  
 </xsd:schema>  
@@ -73,7 +73,7 @@ ms.locfileid: "51674277"
  在下列範例中，XSD 結構描述組成 **\<Person.Contact >** 項目。 **\<員工 >** 項目具有**ContactID**屬性和 **\<FirstName >** 並 **\<LastName >** 子項目：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
   <xsd:element name="Contact" >  
    <xsd:complexType>  
      <xsd:sequence>  
@@ -91,7 +91,7 @@ ms.locfileid: "51674277"
  然後，將註解加入至這個 XSD 結構描述，以便將其元素和屬性對應至資料庫資料表和資料行：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  
@@ -121,15 +121,15 @@ ms.locfileid: "51674277"
 ## <a name="other-resources"></a>其他資源  
  您可以在下列網站上找到有關 XML 結構描述定義語言 (XSD)、XML 路徑語言 (XPath) 和可延伸樣式表語言轉換 (XSLT) 的資訊：  
   
--   XML 結構描述第 0 部： 入門，W3C 建議事項 (https://www.w3.org/TR/xmlschema-0/)  
+-   XML 結構描述第 0 部分：入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML 結構描述第 1 部分： 結構、 W3C 建議事項 (https://www.w3.org/TR/xmlschema-1/)  
+-   XML 結構描述第 1 部分：結構，W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML 結構描述第 2:Datatypes，W3C 建議事項 (https://www.w3.org/TR/xmlschema-2/)  
+-   XML 結構描述第 2:Datatypes，W3C 建議事項 (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML 路徑語言 (XPath) (https://www.w3.org/TR/xpath)  
+-   XML 路徑語言 (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL 轉換 (XSLT) (https://www.w3.org/TR/xslt)  
+-   XSL 轉換 (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>另請參閱  
  [註解式結構描述安全性考量&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

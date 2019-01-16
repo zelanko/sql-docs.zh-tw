@@ -20,15 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4561ff563bf04322c290571cf9df3a94f8faf5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2018d96233a1dea6f4b2d7cfa612f19df878610f
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668307"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300025"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
 
   執行可重複使用許多次或已動態建立的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次可包含內嵌參數。  
   
@@ -50,7 +53,7 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>引數  
- [ \@stmt =]*陳述式*  
+ [ \@stmt= ] *statement*  
  是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 \@陳述式必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。比方說，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上字串的大小會限制為 2 GB，最大的大小**nvarchar （max)**。  
   
 > [!NOTE]  
@@ -58,10 +61,10 @@ sp_executesql [ @stmt = ] statement
   
  包含在每個參數\@陳述式必須有對應的項目中都\@params 參數定義清單和參數值清單。  
   
- [ \@params =] N'\@*parameter_name * * data_type* [，...*n* ] '  
+ [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
  是一個字串，其中包含之所有參數的已內嵌在定義\@陳述式。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 每個指定的參數\@stmtmust 定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次都在\@陳述式不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
- [ \@param1 =] '*value1*'  
+ [ \@param1= ] '*value1*'  
  這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 必須提供每個參數中包含的參數值\@陳述式。值不是必要的時機[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次都在\@陳述式沒有任何參數。  
   
  [ OUT | OUTPUT ]  
@@ -250,7 +253,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- 如需其他範例，請參閱 < [sp_executesql (transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)。  
+ 如需其他範例，請參閱 < [sp_executesql & Amp;#40;transact-SQL&AMP;#41;](https://msdn.microsoft.com/library/ms188001.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

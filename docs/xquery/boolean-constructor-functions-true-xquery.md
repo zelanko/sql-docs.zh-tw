@@ -16,12 +16,12 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26aa64c3ea1e4371c32c80b8cb06f73b5a0100bd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667087"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257223"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ go
 DROP XML SCHEMA COLLECTION SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
 targetNamespace="QNameXSD" >  
       <element name="ROOT" type="boolean" nillable="true"/>  
 </schema>'  

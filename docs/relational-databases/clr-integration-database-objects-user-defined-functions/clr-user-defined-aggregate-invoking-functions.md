@@ -1,7 +1,7 @@
 ---
 title: 叫用 CLR 使用者定義彙總函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -18,12 +18,12 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9fa5ab2af307cb0ebdd55e4137c3c7642251f10e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 530a92b06c0b6a35bdd36089dadcb22c34028873
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723366"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317768"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 使用者定義彙總 - 叫用函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ public class Concatenate : IBinarySerialize
     /// <summary>  
     /// The variable that holds the intermediate result of the concatenation  
     /// </summary>  
-    private StringBuilder intermediateResult;  
+    public StringBuilder intermediateResult;  
   
     /// <summary>  
     /// Initialize the internal data structures  
@@ -144,7 +144,7 @@ Public Class Concatenate
     ''' <summary>  
     ''' The variable that holds the intermediate result of the concatenation  
     ''' </summary>  
-    Private intermediateResult As StringBuilder  
+    Public intermediateResult As StringBuilder  
   
     ''' <summary>  
     ''' Initialize the internal data structures  

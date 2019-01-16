@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55b81e7fff73442660ae98f4d6e6fcbfca0906df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acac24b36f5eefcc1490e016d43c4ef014fb813d
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675137"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256123"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 來指定遞迴關聯性的深度
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  若要產生這種結果，您可以使用下列 XSD 結構描述並針對它指定 XPath 查詢。 結構描述會描述 **\<Emp >** 屬於 EmployeeType，其中包含類型的項目 **\<Emp >** 相同 EmployeeType 類型的子元素。 這就是遞迴關聯性 (元素及其上階屬於相同的類型)。 此外，會使用結構描述 **\<sql: relationship >** 來描述監督者與被監督者之間的父子式關聯性。 請注意，在這 **\<sql: relationship >**，Emp 是父代和子資料表。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -191,7 +191,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  這是已修訂的結構描述：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>sql:max-depth 註解  
  在包含遞迴關聯性的結構描述中，遞迴的深度必須明確指定於結構描述中。 這是成功產生可傳回要求結果之對應 FOR XML EXPLICIT 查詢的必要條件。  
   
- 使用**sql: max-depth-深度**註解中的結構描述，以指定的遞迴深度的結構描述中所述之遞迴關聯性。 值**sql: max-depth-深度**註解是正整數 （1 到 50 個），表示遞迴的數目： 值為 1，停止遞迴**sql: max-depth-深度**註釋指定;值為 2 的停止處的項目從上一層樓遞迴**sql: max-depth-深度**指定; 等等。  
+ 使用**sql: max-depth-深度**註解中的結構描述，以指定的遞迴深度的結構描述中所述之遞迴關聯性。 值**sql: max-depth-深度**註釋是正整數 （1 到 50 個），表示遞迴的數目：值為 1，停止遞迴**sql: max-depth-深度**註解會指定; 值為 2 的停止處的項目從上一層樓遞迴**sql: max-depth-深度**指定;等等。  
   
 > [!NOTE]  
 >  在基礎實作中，針對對應結構描述所指定的 XPath 查詢會轉換成 SELECT ...FOR XML EXPLICIT 查詢。 這個查詢會要求您指定有限的遞迴深度。 您指定的值越高**sql: max-depth-深度**、 較大的 FOR XML EXPLICIT 查詢就會產生。 這可能會降低擷取速度。  
@@ -249,7 +249,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-b"></a>範例 B  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
@@ -291,7 +291,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 #### <a name="example-c"></a>範例 C  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:annotation>  
     <xsd:appinfo>  
@@ -339,7 +339,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 #### <a name="example-d"></a>範例 D  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:msdata="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:complexType name="CustomerBaseType">   

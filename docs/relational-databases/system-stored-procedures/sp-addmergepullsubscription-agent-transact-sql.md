@@ -1,7 +1,7 @@
 ---
 title: sp_addmergepullsubscription_agent & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,14 +16,15 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba75dc83e8fb4ce5a9ad31876b2b2592b22b7197
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c49ade60bdbdbdc04fe7ec5b2ec221c10037982
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791780"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256533"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   新增一項新的代理程式作業，以便用來排程合併式發行集提取訂閱的同步處理。 這個預存程序執行於訂閱資料庫的訂閱者端。  
@@ -93,79 +94,79 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@name =** ] **'***name***'**  
  這是代理程式的名稱。 *名稱*已**sysname**，預設值是 NULL。  
   
- [  **@publisher =** ] **'***發行者***'**  
+ [ **@publisher =** ] **'***publisher***'**  
  這是發行者伺服器的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db =** ] **'***publisher_db***'**  
+ [ **@publisher_db =** ] **'***publisher_db***'**  
  這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
  [ **@publication =** ] **'***publication***'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@publisher_security_mode =** ] *publisher_security_mode*  
+ [ **@publisher_security_mode =** ] *publisher_security_mode*  
  這是進行同步處理時，連接到發行者時使用的安全性模式。 *publisher_security_mode*已**int**，預設值是 1。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 如果**1**，指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login =** ] **'***publisher_login***'**  
+ [ **@publisher_login =** ] **'***publisher_login***'**  
  這是在同步處理時，用來連接發行者的登入。 *publisher_login*已**sysname**，預設值是 NULL。  
   
- [  **@publisher_password =** ] **'***publisher_password***'**  
+ [ **@publisher_password =** ] **'***publisher_password***'**  
  這是連接到發行者時所用的密碼。 *publisher_password*已**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@publisher_encrypted_password =** ]*publisher_encrypted_password*  
+ [ **@publisher_encrypted_password =** ]*publisher_encrypted_password*  
  設定*publisher_encrypted_password*不受支援。 嘗試將這個**位元**參數來**1**會導致錯誤。  
   
- [  **@subscriber =** ] **'***訂閱者***'**  
+ [ **@subscriber =** ] **'***subscriber***'**  
  這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
- [  **@subscriber_db =** ] **'***subscriber_db***'**  
+ [ **@subscriber_db =** ] **'***subscriber_db***'**  
  這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
   
- [  **@subscriber_security_mode =** ] *subscriber_security_mode*  
+ [ **@subscriber_security_mode =** ] *subscriber_security_mode*  
  這是進行同步處理時，連接到訂閱者時使用的安全性模式。 *subscriber_security_mode*已**int**，預設值是 1。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 如果**1**，指定 Windows 驗證。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 合併代理程式一律是利用 Windows 驗證來連接到本機訂閱者。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
   
- [  **@subscriber_login =** ] **'***subscriber_login***'**  
+ [ **@subscriber_login =** ] **'***subscriber_login***'**  
  這是進行同步處理時，連接到訂閱者時使用的訂閱者登入。 *subscriber_login* ，便須*subscriber_security_mode*設定為**0**。 *subscriber_login*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
   
- [  **@subscriber_password =** ] **'***subscriber_password***'**  
+ [ **@subscriber_password =** ] **'***subscriber_password***'**  
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的訂閱者密碼。 *subscriber_password* ，便須*subscriber_security_mode*設定為**0**。 *subscriber_password*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果指定了這個參數值，便會傳回警告訊息，但會忽略這個值。  
   
- [  **@distributor =** ] **'***散發者***'**  
+ [ **@distributor =** ] **'***distributor***'**  
  這是散發者的名稱。 *散發者*已**sysname**，預設值是*發行者*; 也就是說，發行者也是 「 散發者 」。  
   
- [  **@distributor_security_mode =** ] *distributor_security_mode*  
+ [ **@distributor_security_mode =** ] *distributor_security_mode*  
  這是進行同步處理時，連接到散發者時使用的安全性模式。 *distributor_security_mode*已**int**，預設值是 0。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login =** ] **'***distributor_login***'**  
+ [ **@distributor_login =** ] **'***distributor_login***'**  
  這是進行同步處理時，連接到散發者時使用的散發者登入。 *distributor_login* ，便須*distributor_security_mode*設定為**0**。 *distributor_login*已**sysname**，預設值是 NULL。  
   
- [  **@distributor_password =** ] **'***distributor_password***'**  
+ [ **@distributor_password =** ] **'***distributor_password***'**  
  這是散發者密碼。 *distributor_password* ，便須*distributor_security_mode*設定為**0**。 *distributor_password*已**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@encrypted_password =** ] *encrypted_password*  
+ [ **@encrypted_password =** ] *encrypted_password*  
  設定*encrypted_password*不受支援。 嘗試將這個**位元**參數來**1**會導致錯誤。  
   
- [  **@frequency_type =** ] *frequency_type*  
+ [ **@frequency_type =** ] *frequency_type*  
  這是排程合併代理程式所採用的頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -183,7 +184,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  指定的值是**64**會導致合併代理程式以連續模式執行。 這對應於設定 **-連續**代理程式參數。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
- [  **@frequency_interval =** ] *frequency_interval*  
+ [ **@frequency_interval =** ] *frequency_interval*  
  合併代理程式的執行日期。 *frequency_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -200,7 +201,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**10**|週末|  
 |NULL (預設值)||  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
+ [ **@frequency_relative_interval =** ] *frequency_relative_interval*  
  這是合併代理程式的日期。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -212,10 +213,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**16**|最後一個|  
 |NULL (預設值)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor&lt*  
+ [ **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
   
- [  **@frequency_subday =** ] *frequency_subday*  
+ [ **@frequency_subday =** ] *frequency_subday*  
  這是在定義的期間內，重新排程的頻率。 *frequency_subday*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
@@ -226,13 +227,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**8**|Hour|  
 |NULL (預設值)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
+ [ **@frequency_subday_interval =** ] *frequency_subday_interval*  
  間隔*frequency_subday*。 *frequency_subday_interval*已**int**，預設值是 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
+ [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  這是第一次排程合併代理程式的當日時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
+ [ **@active_end_time_of_day =** ] *active_end_time_of_day*  
  這是排程停止合併代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
  [ **@active_start_date =** ] *active_start_date*  
@@ -241,76 +242,76 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@active_end_date =** ] *active_end_date*  
  這是排程停止合併代理程式的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
- [  **@optional_command_line =** ] **'***optional_command_line***'**  
+ [ **@optional_command_line =** ] **'***optional_command_line***'**  
  這是提供給合併代理程式的選擇性命令提示字元。 *optional_command_line*已**nvarchar(255)**，預設值是 ' '。 它可用來提供其他參數給合併代理程式，例如以下範例將預設查詢逾時值增加到 `600` 秒：  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
- [  **@merge_jobid =** ] *merge_jobid*  
+ [ **@merge_jobid =** ] *merge_jobid*  
  這是作業識別碼的輸出參數。 *merge_jobid*已**二進位 （16)**，預設值是 NULL。  
   
- [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
+ [ **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
  指定是否能夠利用 Windows Synchronization Manager 來同步處理訂閱。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- [  **@ftp_address =** ] **'***ftp_address***'**  
+ [ **@ftp_address =** ] **'***ftp_address***'**  
  只是為了與舊版相容。  
   
- [  **@ftp_port =** ] *ftp_port*  
+ [ **@ftp_port =** ] *ftp_port*  
  只是為了與舊版相容。  
   
- [  **@ftp_login =** ] **'***ftp_login***'**  
+ [ **@ftp_login =** ] **'***ftp_login***'**  
  只是為了與舊版相容。  
   
- [  **@ftp_password =** ] **'***ftp_password***'**  
+ [ **@ftp_password =** ] **'***ftp_password***'**  
  只是為了與舊版相容。  
   
- [  **@alt_snapshot_folder =** ] **'***alternate_snapshot_folder***'**  
+ [ **@alt_snapshot_folder =** ] **'***alternate_snapshot_folder***'**  
  指定從中收取快照集檔案的位置。 *alternate_snapshot_folder*已**nvarchar(255)**，預設值是 NULL。 如果是 NULL，便會從發行者所指定的預設位置中，收取快照集檔案。  
   
- [  **@working_directory =** ] **'***working_directory***'**  
+ [ **@working_directory =** ] **'***working_directory***'**  
  這是在利用 FTP 來傳送快照集檔案時，用來暫時儲存發行集的資料檔和結構描述檔的工作目錄名稱。 *working_directory*已**nvarchar(255)**，預設值是 NULL。  
   
- [  **@use_ftp =** ] **'***use_ftp***'**  
+ [ **@use_ftp =** ] **'***use_ftp***'**  
  指定利用 FTP 而不是一般通訊協定來擷取快照集。 *use_ftp*已**nvarchar(5)**，預設值是 FALSE。  
   
- [  **@reserved =** ] **'***保留***'**  
+ [ **@reserved =** ] **'***reserved***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@use_interactive_resolver =** ] **'***use_interactive_resolver***'** ]  
+ [ **@use_interactive_resolver =** ] **'***use_interactive_resolver***'** ]  
  利用互動式解析程式來解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)**，預設值是 FALSE。  
   
- [  **@offloadagent =** ] **'***remote_agent_activation&lt***'**  
+ [ **@offloadagent =** ] **'***remote_agent_activation***'**  
  > [!NOTE]  
 >  遠端代理程式啟用已被取代，不再受到支援。 支援這個參數的目的，只是為了與舊版的指令碼相容。 設定*remote_agent_activation&lt*以外的值來**false**會產生錯誤。  
   
- [  **@offloadserver =** ] **'***remote_agent_server_name***'**  
+ [ **@offloadserver =** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
 >  遠端代理程式啟用已被取代，不再受到支援。 支援這個參數的目的，只是為了與舊版的指令碼相容。 設定*remote_agent_server_name*為任何非 NULL 值會產生錯誤。  
   
- [  **@job_name =** ] **'***job_name***'** ]  
+ [ **@job_name =** ] **'***job_name***'** ]  
  這是現有散發代理程式作業的名稱。 *job_name*已**sysname**，預設值是 NULL。 只有在訂閱將利用現有的作業來同步處理，而不用新建立的作業 (預設值) 時，才指定這個參數。 如果您不屬於**sysadmin**固定伺服器角色，您必須指定*job_login*並*job_password*當您指定*job_name*.  
   
- [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
+ [ **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
  如果將使用已篩選資料快照集，這便是要讀取的快照集檔案的資料夾路徑 *dynamic_snapshot_location*已**nvarchar(260)**，預設值是 NULL。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
- [  **@use_web_sync =** ] *use_web_sync&lt*  
+ [ **@use_web_sync =** ] *use_web_sync*  
  指出 Web 同步處理已啟用。 *use_web_sync&lt*已**元**，預設值是 0。 **1**指定可以在使用 HTTP 透過網際網路同步處理提取訂閱。  
   
- [  **@internet_url =** ] **'***應***'**  
- 這是複寫接聽程式 (REPLISAPI.DLL) 的 Web 同步處理位置。 *應*已**nvarchar(260)**，預設值是 NULL。 *應*是完整的 URL，格式`https://server.domain.com/directory/replisapi.dll`。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `https://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
+ [ **@internet_url =** ] **'***internet_url***'**  
+ 這是複寫接聽程式 (REPLISAPI.DLL) 的 Web 同步處理位置。 *應*已**nvarchar(260)**，預設值是 NULL。 *應*是完整的 URL，格式`http://server.domain.com/directory/replisapi.dll`。 如果將伺服器設定成來接聽通訊埠 80 以外的通訊埠，就必須用 `http://server.domain.com:portnumber/directory/replisapi.dll` 格式來提供通訊埠編號，其中 `portnumber` 代表通訊埠。  
   
- [  **@internet_login =** ] **'***internet_url***'**  
+ [ **@internet_login =** ] **'***internet_login***'**  
  這是在利用 HTTP 基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。 *internet_url*已**sysname**，預設值是 NULL。  
   
- [  **@internet_password =** ] **'***internet_login***'**  
+ [ **@internet_password =** ] **'***internet_password***'**  
  這是在利用 HTTP 基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的密碼。 *internet_login*已**nvarchar(524)**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [  **@internet_security_mode =** ] *internet_security_mode*  
+ [ **@internet_security_mode =** ] *internet_security_mode*  
  這是在利用 HTTPS 進行的 Web 同步處理期間，合併代理程式用來連接到 Web 伺服器的驗證方法。 *internet_security_mode*已**int**而且可以是下列值之一。  
   
 |值|描述|  
@@ -321,16 +322,16 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  我們建議您搭配 Web 同步處理來使用基本驗證。 若要使用 Web 同步處理，您必須建立 Web 伺服器的 SSL 連接。 如需詳細資訊，請參閱 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。  
   
- [  **@internet_timeout =** ] *internet_timeout*  
+ [ **@internet_timeout =** ] *internet_timeout*  
  這是 Web 同步處理要求到期之前的時間長度 (以秒為單位)。 *internet_timeout*已**int**，預設值是**300**秒。  
   
- [  **@hostname =** ] **'***hostname***'**  
+ [ **@hostname =** ] **'***hostname***'**  
  當在參數化篩選的 WHERE 子句中使用這個函數時，覆寫 HOST_NAME() 的值。 *主機名稱*已**sysname**，預設值是 NULL。  
   
- [  **@job_login =** ] **'***job_login***'**  
+ [ **@job_login =** ] **'***job_login***'**  
  這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 代理程式連接到訂閱者時，一律使用這個 Windows 帳戶，當利用 Windows 整合式驗證來連接到散發者和發行者時，也一律使用這個 Windows 帳戶。  
   
- [  **@job_password =** ] **'***job_password***'**  
+ [ **@job_password =** ] **'***job_password***'**  
  這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
   
 > [!IMPORTANT]  

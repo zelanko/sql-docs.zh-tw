@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90c611eff42a3cd31894e27b1a7737ca77e91bea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ebaeb1a0fce11d984f858247763c4222d4a8b27
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670403"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256923"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 資料類型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51670403"
  XPath 具備三種資料類型：**字串**，**數目**，並**布林**。 **數字**資料類型一定是 IEEE 754 雙精確度浮點數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Float(53)** 資料類型是最接近 XPath**數目**。 不過， **float(53)** 不完全是 IEEE 754。 例如，不會使用 NaN (非數字的值)，也不會使用無限。 嘗試將非數字的字串來轉換**數字**並嘗試除以零產生錯誤。  
   
 ## <a name="xpath-conversions"></a>XPath 轉換  
- 當您使用 XPath 查詢 (例如，`OrderDetail[@UnitPrice > "10.0"]`) 時，隱含和明確的資料類型轉換可能會以明顯的方式變更查詢的意義。 因此，了解如何實作 XPath 資料類型相當重要。 XPath 語言規格，XML 路徑語言 (XPath) 1.0 版，W3C 提出的建議 8 1999 年，請參閱 W3C 網站上 https://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
+ 當您使用 XPath 查詢 (例如，`OrderDetail[@UnitPrice > "10.0"]`) 時，隱含和明確的資料類型轉換可能會以明顯的方式變更查詢的意義。 因此，了解如何實作 XPath 資料類型相當重要。 XPath 語言規格，XML 路徑語言 (XPath) 1.0 版，W3C 提出的建議 8 1999 年，請參閱 W3C 網站上 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath 運算子分為四個類別：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "51670403"
 |都不是節點集。|轉換兩個運算元**數字**，然後進行比較。|將兩個運算元同時轉換為一般類型，然後進行比較。 轉換成**布林**如果任何一種**布林**，**數目**如果任何一種**數目**; 否則轉換成**字串**.|  
   
 > [!NOTE]  
->  因為 XPath 關係運算子一律轉換其運算元**數字**，**字串**不能進行比較。 若要加入日期比較，SQL Server 2000 將此變數提供給 XPath 規格： 當關係運算子比較**字串**要**字串**的節點集**字串**，或字串值節點集字串值節點集，以**字串**比較 (沒有**數目**比較) 會執行。  
+>  因為 XPath 關係運算子一律轉換其運算元**數字**，**字串**不能進行比較。 若要加入日期比較，SQL Server 2000 此變數提供給 XPath 規格：當關係運算子比較**字串**要**字串**的節點集**字串**，或字串值節點集字串值節點集， **字串**比較 (沒有**數字**比較) 會執行。  
   
 ## <a name="node-set-conversions"></a>節點集轉換  
  節點集轉換並不一定直覺式。 節點集轉換成**字串**採取集中的第一個節點的字串值。 節點集轉換成**數字**藉由將它轉換成**字串**，然後將轉換**字串**至**數目**。 節點集轉換成**布林**藉由測試它是否存在。  
@@ -90,7 +90,7 @@ ms.locfileid: "51670403"
   
 |XDR 資料類型|對等用法<br /><br /> XPath 資料類型|使用的 SQL Server 轉換|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|不適用|NoneEmployeeID|  
+|Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number、int、float、i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  

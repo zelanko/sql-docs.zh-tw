@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a91275eadeebd6b996774363ab279eddc76f0f75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540012"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254273"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema 中不允許有使用者定義函數
   Upgrade Advisor 偵測到未記載之使用者所擁有的使用者定義函數**system_function_schema**。 您無法藉由指定這個使用者建立使用者定義的系統函數。 **System_function_schema**使用者名稱不存在，而且使用者識別碼與此名稱相關聯 (UID = 4) 是保留供**sys**結構描述和限制為僅供內部使用。  
@@ -55,7 +55,7 @@ ms.locfileid: "52540012"
   
 4.  取代參考**system_function_schema**具有**dbo**中所有包含使用者定義函數 DDL 陳述式的指令碼。  
   
-5.  修改指令碼，以叫用這些函式來使用可能是兩部分名稱 dbo **。 * * * function_name*，或三部分名稱*database_name ***。** dbo。* function_name *。  
+5.  修改指令碼，以叫用這些函式來使用兩部分名稱 dbo **。**_function_name_，或三部分名稱_database_name_**。** dbo。*function_name*。  
   
  如需詳細資訊，請參閱《SQL Server 線上叢書》中的下列主題：  
   

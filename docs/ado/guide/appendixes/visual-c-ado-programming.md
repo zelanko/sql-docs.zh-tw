@@ -16,12 +16,12 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1b34c2b88c8e1906438f706143fcf6ec966026d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997590"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257043"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 程式設計
 ADO API 參考說明 ADO 應用程式開發介面 (API) 的語法類似到 Microsoft Visual Basic 的功能。 ADO 程式設計人員適用的對象是所有使用者，但採用不同的語言，例如 Visual Basic、 Visual c + + (包含或不含 **#import**指示詞)，和 Visual J + + （與 ADO/WFC 類別封裝）。  
@@ -74,6 +74,7 @@ variable = objectPtr->GetProperty;  // get property value
  例如，**命令**物件**ActiveConnection**屬性宣告的替代語法**取得**_ActiveConnection_並**PutRef**_ActiveConnection_。 **PutRef**-語法是不錯的選擇，因為在實務上，您通常想要將開啟**連線**物件 (亦即**連接**物件指標) 在此屬性。 相反地，**資料錄集**物件具有**取得**-，**放**-，以及**PutRef**_ActiveConnection_作業，但沒有替代的語法。  
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>集合、 GetItem 方法，以及項目屬性  
+
  ADO 定義數個集合，包括**欄位**，**參數**，**屬性**，以及**錯誤**。 Visual c + + **GetItem (_index_)** 方法會傳回集合的成員。 *索引*已**Variant**，其中值是在集合中，成員的數值索引或字串，包含成員的名稱。  
   
  **__Declspec(property...)** 編譯器指示詞宣告**項目**屬性，為每個集合有替代語法的基本**GetItem()** 方法。 替代語法會使用方括號，並看起來類似陣列參考。 一般情況下，兩個表單看起來如下所示：  

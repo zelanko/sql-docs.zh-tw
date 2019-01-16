@@ -11,16 +11,20 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4f8861d8d7104b536abbf14a7629218c46e577e
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143058"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298715"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
+  > [!div class="nextstepaction"]
+  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
+
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
+
 
 下載並安裝最新版本中，*年 1 月發行*:
 
@@ -190,7 +194,7 @@ ms.locfileid: "54143058"
 
 2. 以滑鼠右鍵按一下**使用者設定**索引標籤上，按一下**總管中顯示**
 
-   ![在總管中顯示](./media/download/reveal-in-explorer.png)
+   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
 
 3. 複製此資料夾中的所有檔案，並儲存成容易尋找相似的文件 資料夾的本機磁碟機上的位置。
 

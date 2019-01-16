@@ -16,12 +16,12 @@ ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ac4969b514fdcbb394ebb85334664f71e5d15e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d265f405bdebac9a44461ca3b262935eaaba25bd
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661797"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254473"
 ---
 # <a name="functions-on-string-values---lower-case"></a>字串值的相關函式 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
   
  `Performance-enhancing options include the innovative HL Frame,`  
   
@@ -111,7 +111,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
   
  `Adventure Works Cycles professional race team, it has a extremely light`  
   

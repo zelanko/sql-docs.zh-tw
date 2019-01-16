@@ -16,12 +16,12 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6715c89ff3086f5031e2554929aced39d6f135db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501898"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256893"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>與 QNames 相關的函式 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援從 xs:QName 類型轉換成任何其他類型。 基於這個原因， **expanded-qname （)** 函式不能用於 XML 建構。 例如，當您建構節點時，例如 `<e> expanded-QName(...) </e>`，該值必須為不具類型。 您將需要將 `expanded-QName()` 傳回的 xs:QName 類型值轉換成 xdt:untypedAtomic。 不過，並不支援此轉換。 本主題稍後將在範例中提供解決方案。  
   
--   您無法修改或比較現有的 QName 類型值。 例如，`/root[1]/e[1] eq expanded-QName("https://nsURI" "myNS")`比較的值之項目的 <`e`>，所傳回的 qname **expanded-qname （)** 函式。  
+-   您無法修改或比較現有的 QName 類型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`比較的值之項目的 <`e`>，所傳回的 qname **expanded-qname （)** 函式。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
@@ -70,8 +70,8 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -- go  
 -- Create XML schema collection  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
-    xmlns:xs="https://www.w3.org/2001/XMLSchema"   
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="QNameXSD"   
       xmlns:xqo="QNameXSD" elementFormDefault="qualified">  
       <element name="Root" type="xqo:rootType" />  
@@ -143,7 +143,7 @@ go
 -- DROP XML SCHEMA COLLECTION SC  
 -- go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="QName" nillable="true"/>  
 </schema>'  
 go  
@@ -162,7 +162,7 @@ FROM T
   
 ```  
 update T SET xmlCol.modify('  
-insert <root>{expanded-QName("https://ns","someLocalName")}</root> as last into / ')  
+insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into / ')  
 go  
 ```  
   
@@ -174,7 +174,7 @@ insert <root xsi:nil="true"/> as last into / ')
 go  
 -- now replace the nil value with another QName.  
 update T SET xmlCol.modify('  
-replace value of /root[last()] with expanded-QName("https://ns","someLocalName") ')  
+replace value of /root[last()] with expanded-QName("http://ns","someLocalName") ')  
 go  
  -- verify   
 SELECT * FROM T  
@@ -185,7 +185,7 @@ go
   
  `<root xmlns:a="https://someURI">a:b</root>`  
   
- `<root xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:p1="https://ns">p1:someLocalName</root>`  
+ `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
  您可以比較 QName 值，如下列查詢所示。 查詢只會傳回 <`root`> 元素的值相符之 QName 鍵入所傳回的值**expanded-qname （)** 函式。  
   
@@ -193,7 +193,7 @@ go
 SELECT xmlCol.query('  
     for $i in /root  
     return  
-       if ($i eq expanded-QName("https://ns","someLocalName") ) then  
+       if ($i eq expanded-QName("http://ns","someLocalName") ) then  
           $i  
        else  
           ()')  

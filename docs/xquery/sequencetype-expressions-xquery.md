@@ -18,12 +18,12 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 542cf5a0960e967d2bebb3889af0f03656004472
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124558"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255123"
 ---
 # <a name="sequencetype-expressions-xquery"></a>時序類型運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ where ProductModelID=19
   
 ```  
 CREATE XML SCHEMA COLLECTION MyTestSchema AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
 <simpleType name="MyUnionType">  
 <union memberTypes="integer string"/>  
 </simpleType>  
@@ -170,9 +170,9 @@ Go
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
   
-SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
+SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
   
-SELECT @var.query('declare namespace ns="https://ns"   
+SELECT @var.query('declare namespace ns="http://ns"   
    data(/ns:TestElement[1]) instance of xs:integer')  
 go  
 ```  
@@ -182,8 +182,8 @@ go
 ```  
 SET QUOTED_IDENTIFIER ON  
 DECLARE @var XML(MyTestSchema)  
-SET @var = '<TestElement xmlns="https://ns">123</TestElement>'  
-SELECT @var.query('declare namespace ns="https://ns"     
+SET @var = '<TestElement xmlns="http://ns">123</TestElement>'  
+SELECT @var.query('declare namespace ns="http://ns"     
    data(/ns:TestElement[1]) instance of xs:decimal')  
 go  
 ```  
@@ -197,7 +197,7 @@ go
 drop xml schema collection SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
 xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
       <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
@@ -243,7 +243,7 @@ go
   
 ```  
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  

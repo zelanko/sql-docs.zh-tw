@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3b36e720cc390311c851eef55d09a74cc5e5d6ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503282"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300085"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -35,6 +35,7 @@ ms.locfileid: "52503282"
     - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更新版本。
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更新版本。
     - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+    - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下載並解壓縮：
     - [DMA 報表 Power BI 範本](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)。
     - [LoadWarehouse 指令碼](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)。

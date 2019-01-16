@@ -17,12 +17,12 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 20fb2d2ec2094e87b904ffdc616942bfb449840c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9ad01fb0aa73dc34739c5584a510dbe1bc854da
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527997"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254823"
 ---
 # <a name="handling-namespaces-in-xquery"></a>處理 XQuery 中的命名空間
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ where ProductModelID=19
   
       <myNS:Result xmlns:myNS="uri:SomeNamespace">  
   <Summary xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
+   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
      Our top-of-the-line competition mountain bike. Performance-enhancing   
      options include the innovative HL Frame, super-smooth front   
      suspension, and traction for all terrain.</p1:p>  
@@ -136,7 +136,7 @@ where ProductModelID=19
   
       <Result xmlns="uri:SomeNamespace">  
   <PD:Summary xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
+   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
          Our top-of-the-line competition mountain bike. Performance-  
          enhancing options include the innovative HL Frame, super-smooth   
          front suspension, and traction for all terrain.</p1:p>  

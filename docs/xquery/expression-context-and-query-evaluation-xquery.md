@@ -19,12 +19,12 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 872b14f2b9ced766086d98af74e5ea9d1129d6df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f8092182bff23580936e17923985739525309097
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501930"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256873"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>運算式內容和查詢評估 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "52501930"
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
@@ -133,7 +133,7 @@ ms.locfileid: "52501930"
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  

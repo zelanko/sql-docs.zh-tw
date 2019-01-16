@@ -1,5 +1,5 @@
 ---
-title: xp_grantlogin (TRANSACT-SQL) |Microsoft Docs
+title: xp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a6b08e90fafccca3c64b13132b9cf9e248fdee7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663768"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255663"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@loginame =** ] **'***login***'**  
+ [ **@loginame =** ] **'**_login_**'**  
  這是您要加入的 Windows 使用者或群組名稱。 Windows 使用者或群組必須在表單中的 Windows 網域名稱限定*網域*\\*使用者*。 *登入*已**sysname**，沒有預設值。  
   
- [  **@logintype =** ] **'***logintype***'**  
+ [ **@logintype =** ] **'**_logintype_**'**  
  這是要被授與存取權之登入的安全性層級。 *logintype*已**varchar(5)**，預設值是 NULL。 只有**admin**可以指定。 如果**系統管理員**指定，則*登入*授與存取權[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並新增成員的身分**sysadmin**固定的伺服器角色。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -63,9 +63,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [一般擴充預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_enumgroups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)   
- [xp_loginconfig &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
- [xp_logininfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)   
- [sp_revokelogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)  
+ [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)   
+ [xp_loginconfig &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)  
   
   

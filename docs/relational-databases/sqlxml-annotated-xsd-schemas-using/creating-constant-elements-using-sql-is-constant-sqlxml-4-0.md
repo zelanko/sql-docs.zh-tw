@@ -1,7 +1,7 @@
 ---
 title: '建立常數項目使用 sql: is-constant&lt (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f749e5c37742ac4e52a9cf0fc9dcb417d07aede0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfc7504807754227de489b03f845ddbd2ad5d61b
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545434"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256933"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>使用 sql:is-constant 建立常數元素 (SQLXML 4.0)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   若要指定常數元素-也就是 XSD 結構描述沒有對應到任何資料庫資料表或資料行中的項目-您可以使用**sql: is-constant&lt**註釋。 此註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。 **Sql: is-constant&lt**註解，請指定沒有任何屬性的項目上。 如果該註解是在值為 True (或 1) 的元素上指定，該元素不會對應到資料庫，但是仍會出現在 XML 文件中。  
   
@@ -48,7 +49,7 @@ ms.locfileid: "52545434"
  雖然 **\<CustomerOrders >** 不會對應到任何資料庫資料表或資料行，它仍然會出現在產生的 XML，做為容器項目包含**\<順序 >** 子項目。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
