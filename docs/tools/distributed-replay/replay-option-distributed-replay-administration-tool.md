@@ -11,12 +11,12 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46285d61f38619ed8dff835faee266e5a76f591d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511162"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125938"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>重新執行選項 (Distributed Replay 管理工具)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
 ```  
   
 #### <a name="parameters"></a>參數  
- **-m** *controller*  
+ **-m** _controller_  
  指定控制器的電腦名稱。 您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。  
   
  如果未指定 **-m** 參數，則會使用本機電腦。  
   
- **-d** *controller_working_dir*  
+ **-d** _controller_working_dir_  
  指定控制器上儲存中繼檔案的目錄。 **-d** 是必要參數。  
   
  下列為適用需求：  
@@ -59,7 +59,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  未指定 **-o** 參數時，不會產生結果追蹤檔案。 主控台輸出會在重新執行結尾時傳回摘要資訊，但不會提供其他重新執行統計資料。  
   
- **-s** *target_server*  
+ **-s** _target_server_  
  指定分散式工作負載應該針對它重新執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目標執行個體。 您必須使用以下格式指定這個參數： **server_name[\instance name]**。  
   
  不可使用 "`localhost`" 或 "`.`" 當做目標伺服器。  
@@ -68,18 +68,18 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
  如果使用了 **-s** 參數，系統會忽略重新執行組態檔之 `<Server>` 區段中的 `<ReplayOptions>` 元素。  
   
- **-w** *clients*  
+ **-w** _clients_  
  此必要參數是以逗號分隔的清單 (不含空白)，會指定應該參與分散式重新執行之用戶端的電腦名稱。 不允許 IP 位址。 請注意，用戶端必須已經向控制器註冊。  
   
 > [!NOTE]  
 >  當用戶端服務啟動時，每個用戶端就會對用戶端組態檔中所指定的控制器進行註冊。  
   
- **-c** *config_file*  
+ **-c** _config_file_  
  此為重新執行組態檔的完整路徑，用以指定不同於預設位置的儲存位置。  
   
  如果要使用重新執行組態檔 **的預設值，則不需要** -c `DReplay.exe.replay.config`參數。  
   
- **-f** *status_interval*  
+ **-f** _status_interval_  
  指定顯示狀態的頻率 (以秒計)。  
   
  如果未指定 **-f** ，則預設間隔為 30 秒。  
@@ -91,7 +91,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   **-d** 參數會指定控制器上中繼檔案的位置， `c:\WorkingDir`。  
   
--   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意：組態檔中的 `<ResultTrace>` 元素，可用以指定是否應記錄資料列計數與結果集。  
+-   **-o** 參數會指定每個指定的用戶端擷取重新執行活動，並將其儲存至結果追蹤檔案。 注意：設定檔中的 `<ResultTrace>` 元素可用來指定是否要記錄資料列計數和結果集。  
   
 -   **-w** 參數會指定 `client1` 到 `client4` 的電腦，參與為分散式重新執行中的用戶端。  
   

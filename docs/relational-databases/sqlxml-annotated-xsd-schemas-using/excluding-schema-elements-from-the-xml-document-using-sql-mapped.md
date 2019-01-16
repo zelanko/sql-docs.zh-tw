@@ -24,12 +24,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0efaecb87fb9fa2876d2c5cb66f36eae48e7b974
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a93d62917efb4bb53c1d5a699109844e1d358bb6
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669297"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256033"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>使用 sql:mapped 從 XML 文件排除結構描述項目
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "51669297"
   
  此 XSD 結構描述對應至 AdventureWorks 資料庫中的 Person.Contact 資料表中**sql： 對應**上指定**HomeAddress**屬性，因為 Employees 資料表不會儲存首頁員工地址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中的相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。  **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中的相同名稱的資料行。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact">  
     <xsd:complexType>  

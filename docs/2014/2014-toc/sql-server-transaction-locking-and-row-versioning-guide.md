@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 538386a12c2f33038a3688f102140dd5fd4c1845
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd65d3335c7eb57c69f4fe6a37042376efc71bf
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375590"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300605"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 交易鎖定與資料列版本設定指南
   任何資料庫若交易管理不當，時常會導致多使用者的系統發生競爭與效能問題。 隨著存取資料的使用者數量增加，能夠有效使用交易的應用程式更形重要。 本指南描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 用以確保每筆交易實體完整性的鎖定及資料列版本設定機制，並提供有關應用程式如何能夠有效控制交易的資訊。  
@@ -152,7 +152,7 @@ GO
   
  在下列範例中，第三個 `INSERT` 陳述式會產生執行階段重複的主索引鍵錯誤。 前兩個 `INSERT` 陳述式會成功並且受到認可，因此它們在執行階段錯誤之後仍會保留。  
   
-```  
+```sql  
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
@@ -296,7 +296,7 @@ GO
 |讀取未認可|最低隔離等級，隔離交易僅能確保不會讀取已實體損毀的資料。 這種等級下允許中途讀取，所以任何交易可能看得到其他交易所做的尚未認可變更。|  
 |讀取認可|允許交易對另一筆交易先前讀取 (未修改) 的資料進行讀取，而不必等待前一筆交易完成。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持寫入鎖定 (取自於選取的資料) 直到交易結束，但讀取鎖定會在 SELECT 作業一經執行時即釋放。 這是 [!INCLUDE[ssDE](../includes/ssde-md.md)] 預設等級。|  
 |可重複讀取|[!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 直到交易結束。 不過由於範圍鎖定未受管理，便有可能發生虛設項目讀取。|  
-|可序列化|最高的等級，使交易完全與其他交易隔離。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 至交易結束予以釋放為止。 當 SELECT 作業使用界定範圍的 WHERE 子句時，就會取得範圍鎖定以特意避免虛設項目讀取。<br /><br /> **注意：** 當您要求可序列化隔離等級時，複寫資料表上的 DDL 作業和交易可能會失敗。 這是因為複寫查詢所使用的提示可能與可序列化隔離等級不相容。|  
+|可序列化|最高的等級，使交易完全與其他交易隔離。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 至交易結束予以釋放為止。 當 SELECT 作業使用界定範圍的 WHERE 子句時，就會取得範圍鎖定以特意避免虛設項目讀取。<br /><br /> **請注意：** 當您要求可序列化隔離等級時，複寫資料表上的 DDL 作業和交易可能會失敗。 這是因為複寫查詢所使用的提示可能與可序列化隔離等級不相容。|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也支援另外兩種使用資料列版本設定的交易隔離等級。 其一是讀取認可隔離的實作，而另一種交易隔離等級則是快照。  
   

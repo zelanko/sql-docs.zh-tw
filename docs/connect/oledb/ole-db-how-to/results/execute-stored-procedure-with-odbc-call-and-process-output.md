@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9603db5fff81791a931bb66a027fe280cf3509e7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c631311f427ee2f4d45ef968db9fb8e851f29a0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603928"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210638"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 及處理輸出執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "51603928"
   
  此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案首頁) 下載。  
   
- 執行第一個 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的預存程序。  
+ 執行第一個 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 程式碼清單，以建立應用程式所使用的預存程序。  
   
  使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
- 執行第三個 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的預存程序。  
+ 執行第三個 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 程式碼清單，以刪除應用程式所使用的預存程序。  
   
 ```  
 USE AdventureWorks  

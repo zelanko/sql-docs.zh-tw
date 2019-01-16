@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c36ae89563490257ccc9db78c7386642a71f0ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398424"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211818"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驅動程式對於高可用性、災害復原的支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本主題討論 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 對於高可用性、災害復原的支援 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 如需有關 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 的詳細資訊，請參閱《[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 線上叢書》。  
+  本主題討論 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 對於高可用性、災害復原的支援 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 如需有關 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 線上叢書》。  
   
- 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您可以在連接屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中已新增下列[連線屬性](../../connect/jdbc/setting-the-connection-properties.md)：  
+ 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您可以在連線屬性中指定 (高可用性、災害復原) 可用性群組 (AG) 的可用性群組接聽程式。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 應用程式連線到容錯移轉的 AlwaysOn 資料庫，原始連線會中斷，應用程式必須開啟新的連線，才能在容錯移轉後繼續工作。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中已新增下列[連線屬性](../../connect/jdbc/setting-the-connection-properties.md)：  
   
 -   **multiSubnetFailover**  
   
@@ -40,11 +40,11 @@ ms.locfileid: "52398424"
 * 如果有超過 64 個 IP 位址，則會忽略 transparentNetworkIPResolution
 * TransparentNetworkIPResolution，則為 true 時，第一次連接嘗試就會使用 500 毫秒的逾時值。 其餘的連接嘗試依照和 multiSubnetFailover 功能相同的邏輯。 
 
-> [!NOTE]  
-如果您是使用 Microsoft JDBC Driver 4.2 （或較低） for SQL Server，而且如果**multiSubnetFailover**為 false，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]嘗試連線到第一個 IP 位址。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 無法建立與第一個 IP 位址的連線，則連線會失敗。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會嘗試連線到與伺服器建立關聯的任何後續 IP 位址。 
-
-  
-> [!NOTE]  
+> [!NOTE]
+> 如果您是使用 Microsoft JDBC Driver 4.2 （或較低） for SQL Server，而且如果**multiSubnetFailover**為 false，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]嘗試連線到第一個 IP 位址。 如果 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 無法建立與第一個 IP 位址的連線，則連線會失敗。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 將不會嘗試連線到與伺服器建立關聯的任何後續 IP 位址。 
+> 
+> 
+> [!NOTE]
 >  增加連接逾時並實作連接重試邏輯可提高應用程式連接到可用性群組的機率。 此外，因為連接可能會由於可用性群組容錯移轉而失敗，所以您應該實作連接重試邏輯，並重試失敗的連接，直到重新連接為止。  
   
  
@@ -52,13 +52,13 @@ ms.locfileid: "52398424"
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接  
  在連線到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **multiSubnetFailover=true**。 對於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的所有可用性群組和容錯移轉叢集執行個體，**multiSubnetFailover** 可促進更快的容錯移轉，並大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會平行嘗試連接。 在子網路容錯移轉期間，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會積極重試 TCP 連線。  
   
- **multiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 在為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
+ **multiSubnetFailover** 連線屬性表示正在可用性群組或容錯移轉叢集執行個體中部署應用程式，而且 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 為連線指定 **MultiSubnetFailover=true** 時，用戶端會以比作業系統預設 TCP 重新傳輸間隔更快的速度，重試 TCP 連線嘗試。 這種方式可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快重新連線，且同時適用於單一和多重子網路可用性群組和容錯移轉叢集執行個體。  
   
  如需有關中連接字串關鍵字[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，請參閱 <<c2> [ 設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
  當連線到可用性群組接聽程式或容錯移轉叢集執行個體以外的某個項目時，指定 **multiSubnetFailover=true** 會導致降低效能，所以不支援此方式。  
   
- 如果未安裝安全性管理員，則 Java Virtual Machine 會在一段有限期間快取虛擬 IP 位址 (VIP)，這在預設情況下是由您的 JDK 實作以及 Java 屬性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 所定義。 如果已安裝 JDK 安全性管理員，則 Java Virtual Machine 將會快取 VIP，而且預設不會重新整理快取。 您應該針對 Java Virtual Machine 快取將「存留時間」(networkaddress.cache.ttl) 設定為一天。 如果您未將預設值變更為一天 (或一天左右)，則當加入或更新 VIP 時，將不會從 Java Virtual Machine 快取中清除舊的值。 如需有關 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的詳細資訊，請參閱 < [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
+ 如果未安裝安全性管理員，則 Java Virtual Machine 會在一段有限期間快取虛擬 IP 位址 (VIP)，這在預設情況下是由您的 JDK 實作以及 Java 屬性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 所定義。 如果已安裝 JDK 安全性管理員，則 Java Virtual Machine 將會快取 VIP，而且預設不會重新整理快取。 您應該針對 Java Virtual Machine 快取將「存留時間」(networkaddress.cache.ttl) 設定為一天。 如果您未將預設值變更為一天 (或一天左右)，則當新增或更新 VIP 時，將不會從「JAVA 虛擬機器」快取中清除舊的值。 如需有關 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的詳細資訊，請參閱 < [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
   
  請使用下列指導方針，連接到可用性群組或容錯移轉叢集執行個體中的伺服器：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52398424"
   
 -   連接到設定超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會導致連接失敗。  
   
--   根據驗證的類型，使用 **multiSubnetFailover** 連線屬性的應用程式其行為不會受到影響：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證、Kerberos 驗證或 Windows 驗證。  
+-   應用程式如果使用 **multiSubnetFailover** 連線屬性，其行為不會依據驗證類型受到影響：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication、Kerberos Authentication 或 Windows Authentication。  
   
 -   提高 **loginTimeout** 的值來配合容錯移轉時間，並減少應用程式連線重試次數。  
   

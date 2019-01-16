@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c07b0bb4659f9b1b05573bf952842486f9ec72e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420449"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125838"
 ---
 # <a name="connecting-to-sql-server"></a>連線到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52420449"
 請參閱[DSN 和連接字串關鍵字和屬性](../../../connect/odbc/dsn-connection-string-attribute.md)所有連接字串關鍵字和支援 Linux 和 Mac 上的屬性
 
 > [!IMPORTANT]  
-> 連接到使用資料庫鏡像的資料庫 (具有容錯移轉夥伴) 時，請不要在連接字串中指定資料庫名稱。 相反地，請傳送 **use** *database_name* 命令在執行查詢前先連線到資料庫。  
+> 連接到使用資料庫鏡像的資料庫 (具有容錯移轉夥伴) 時，請不要在連接字串中指定資料庫名稱。 相反地，請傳送 **use** _database_name_ 命令在執行查詢前先連線到資料庫。  
   
 傳遞給的值**驅動程式**關鍵字可以是下列其中之一：  
   
@@ -53,12 +53,12 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-您可以選擇性地指定用以連接到伺服器的通訊協定和連接埠。 例如， **Server = tcp:***servername***，12345**。 請注意，唯一支援的 Linux 和 macOS 的驅動程式的通訊是`tcp`。
+您可以選擇性地指定用以連接到伺服器的通訊協定和連接埠。 例如， **Server = tcp:**_servername_**，12345**。 請注意，唯一支援的 Linux 和 macOS 的驅動程式的通訊是`tcp`。
 
 若要在靜態連接埠上連線到具名執行個體，請使用 <b>Server=</b>伺服器名稱,**port_number**。 不支援連線到動態連接埠。  
 
 或者，您可將 DSN 資訊新增至範本檔案，並執行下列命令將其新增至 `~/.odbc.ini`：
- - **odbcinst-i-s-f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 您可以確認您的驅動程式正在使用`isql`來測試連接，或者您可以使用此命令：
  - **bcp master.INFORMATION_SCHEMA.TABLES 出 OutFile.dat-S <server> -U <name> -P <password>**  
@@ -72,12 +72,12 @@ Server = [protocol:]server[,port]
 
 無論 **Encrypt** 和 **TrustServerCertificate**的設定為何，伺服器登入認證 (使用者名稱和密碼) 一律都會加密。 下表說明 **Encrypt** 和 **TrustServerCertificate** 設定的效用。  
 
-||**TrustServerCertificate = 否**|**TrustServerCertificate = yes**|  
+||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料不會加密。|  
 |**Encrypt=yes**|會檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。<br /><br />[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 憑證中的主體一般名稱 (CN) 或主體別名 (SAN) 中的名稱 (或 IP 位址)，應完全符合連接字串中指定的伺服器名稱 (或 IP 位址)。|不檢查伺服器憑證。<br /><br />在用戶端和伺服器之間傳送的資料會加密。|  
 
-根據預設，加密的連接一律會驗證伺服器的憑證。 不過，如果您連接到已自我簽署的憑證的伺服器，也新增`TrustServerCertificate`略過檢查憑證的受信任的憑證授權單位清單進行比對的選項：  
+根據預設，加密的連線一律會驗證伺服器的憑證。 不過，如果您連接到已自我簽署的憑證的伺服器，也新增`TrustServerCertificate`略過檢查憑證的受信任的憑證授權單位清單進行比對的選項：  
 
 ```  
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  

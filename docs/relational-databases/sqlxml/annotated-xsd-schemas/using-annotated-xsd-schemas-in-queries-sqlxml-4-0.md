@@ -1,7 +1,7 @@
 ---
 title: 使用註解的查詢 (SQLXML 4.0) 中的 XSD 結構描述 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,18 +23,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48773fe5b4238f74c88bd8fb91f425ce96fd4359
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7d6fd994c25acae6a27d5c66c18f1c2a7d7b3a77
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665317"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256853"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>在查詢中使用註解式 XSD 結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以針對 XSD 結構描述指定範本中的 XPath 查詢，藉以針對註解式結構描述指定查詢來擷取資料庫中的資料。  
   
- **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用**對應結構描述**屬性 **\<sql:xpath-查詢 >** 項目。  
+  **\<Sql:xpath-查詢 >** 元素可讓您指定 XPath 查詢針對註解式結構描述所定義的 XML 檢視。 針對所要執行的 XPath 查詢的註解式結構描述由使用**對應結構描述**屬性 **\<sql:xpath-查詢 >** 項目。  
   
  範本是包含一或多個查詢的有效 XML 文件。 FOR XML 和 XPath 查詢會傳回文件片段。 範本對於文件片段就像是容器一樣；因此，範本會提供一種方式來指定單一的上層元素。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "51665317"
  例如，請考慮下列註解式結構描述：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -76,7 +76,7 @@ ms.locfileid: "51665317"
   
 ```  
 <ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema1' sql:is-mapping-schema='1'>  
   <xsd:element name='Employees' ms:relation='HumanResources.Employee'>  
@@ -89,7 +89,7 @@ ms.locfileid: "51665317"
   </xsd:element>  
 </xsd:schema>  
   
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
         xmlns:ms='urn:schemas-microsoft-com:mapping-schema'  
         id='InLineSchema2' sql:is-mapping-schema='1'>  
   <xsd:element name='Contacts' ms:relation='Person.Contact'>  

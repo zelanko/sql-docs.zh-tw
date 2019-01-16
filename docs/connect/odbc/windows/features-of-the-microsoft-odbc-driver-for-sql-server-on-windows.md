@@ -11,12 +11,12 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a06f7360460aef57c9c103474f620796cff31d2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: db5c3e2e8265e88d49025ffd65894623fc5c5f85
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536645"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202237"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows 的功能
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支�
 
 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端`-y0`選項`sqlcmd.exe`造成的輸出顯示 width 為 0,sqlcmd.exe 如果，在 1 MB 處截斷。
   
-從 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開始，在已指定 `-y0` 的情況下，單一資料行中已沒有可擷取資料量的限制。 `sqlcmd.exe` 現在會串流多達 2 GB 的資料行 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 最大資料類型)。  
+從 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開始，在已指定 `-y0` 的情況下，單一資料行中已沒有可擷取資料量的限制。 `sqlcmd.exe` 現在會串流多達 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型上限) 的資料行。  
   
 另一個差異是指定這兩者`-h`和`-y0`現在會產生錯誤報告的選項不相容。 `-h` 會指定要在欄位標題間列印的資料列數目，且從不與 `-y0` 相容，該項目雖然不會列印標題，但是遭到忽略。
   

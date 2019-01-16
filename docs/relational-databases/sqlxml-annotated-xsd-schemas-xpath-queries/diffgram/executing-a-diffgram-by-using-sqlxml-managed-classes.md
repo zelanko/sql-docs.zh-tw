@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e2d67e4958f89e908a5a5cec7f1e0a68853650d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7cc93018aab2c81d6a4fda873f3a8da04b909de2
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661631"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256763"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>使用 SQLXML Managed 類別執行 DiffGram
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51661631"
 </ROOT>  
 ```  
   
- **\<之前 >** 區塊包含**\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。 **\<DataInstance >** 區塊包含對應**\<客戶 >** 具有相同的項目**識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
+ **\<之前 >** 區塊包含**\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。  **\<DataInstance >** 區塊包含對應**\<客戶 >** 具有相同的項目**識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
   
  以下是 C# 教學課程應用程式程式碼示範如何使用 SQLXML Managed 類別來執行上述的 DiffGram，並更新兩個資料表 (Cust、 Ord) 也會建立在**tempdb**資料庫。  
   
@@ -99,7 +99,7 @@ class Test
 2.  將下列 XSD 結構描述 (DiffGramSchema.xml) 儲存在資料夾中：  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
       <xsd:documentation>  

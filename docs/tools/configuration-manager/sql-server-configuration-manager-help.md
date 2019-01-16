@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: cc654782c02536b4a03f19669f1f7e345a016b30
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34942a33e71c2d9f17f77a9f595cf873d71fbc4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657257"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204717"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 組態管理員說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51657257"
 
  本節包含關於「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中對話方塊的 F1 說明主題。  
   
-> [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法設定早於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本。  
   
 ## <a name="services"></a>服務  
@@ -56,7 +56,7 @@ ms.locfileid: "51657257"
 -   設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 網路通訊協定  
   
 > [!NOTE]  
->  如需如何設定通訊協定並連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的簡要教學課程，請參閱 [教學課程：Database Engine 使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
+>  如需有關如何設定通訊協定並連線到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的簡要教學課程，請參閱[教學課程：Database Engine 使用者入門](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)。  
   
 ## <a name="sql-server-native-client-configuration"></a>SQL Server Native Client 組態  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 網路程式庫連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您可以使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」執行與此電腦用戶端應用程式相關的下列工作：  

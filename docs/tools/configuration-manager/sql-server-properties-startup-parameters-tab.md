@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 81a0a2e9d5201943cc6b04ac4b931d1e8a9a561e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213067"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 屬性 (啟動參數索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "52540667"
  如需有關如何移動 master 資料庫的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜移動系統資料庫＞主題。  
   
 ## <a name="optional-parameters"></a>選擇性參數  
- 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#*) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需追蹤旗標的詳細資訊，請參閱《[!INCLUDE[tsql](../../includes/tsql-md.md)]線上叢書》中的＜追蹤旗標 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )＞主題。  
+ 《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動選項＞主題描述了所有支援的啟動參數。 啟動參數 -T*trace#* 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體應該使用作用中的指定追蹤旗標 (*trace#*) 來啟動。 追蹤旗標用來啟動具有非標準行為的伺服器。 如需有關追蹤旗標的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜追蹤旗標 ([!INCLUDE[tsql](../../includes/tsql-md.md)])＞主題。  
   
 > [!CAUTION]  
 >  您可能會在網際網路上看到其他未記載的啟動參數和追蹤旗標描述。 未記載的啟動參數和追蹤旗標是用來處理不常見的問題或強制執行測試所需的特定條件。 使用未記載的啟動參數可能會產生非預期的結果。 除非 Microsoft 客戶支援服務建議使用未記載的參數，否則請勿使用這些參數。  
@@ -80,6 +80,6 @@ ms.locfileid: "52540667"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的網域帳戶 (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用網域帳戶來執行的話)。  
   
 ## <a name="books-online-references"></a>線上叢書參考  
- 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動參數的其他資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定伺服器啟動選項 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
+ 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動參數的其他資訊，請參閱＜如何：設定伺服器啟動選項 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞(位於《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中)。  
   
   

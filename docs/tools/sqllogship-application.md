@@ -13,12 +13,12 @@ ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f56669ce6fdb9bdc71017afa351e0f2b31f0b9d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508054"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100753"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,25 +34,25 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 ```  
   
 ## <a name="arguments"></a>引數  
- **-server** *instance_name*  
+ **-server** _instance_name_  
  指定執行作業所在的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定的伺服器執行個體會視指定哪一項記錄傳送作業而定。 若為 **-backup**， *instance_name* 必須是記錄傳送組態中的主要伺服器名稱。 若為 **-copy** 或 **-restore**， *instance_name* 必須是記錄傳送組態中的次要伺服器名稱。  
   
- **-backup** *primary_id*  
+ **-backup** _primary_id_  
  針對主要資料庫執行備份作業，資料庫的主要識別碼是由 *primary_id*指定。 您可以從 [log_shipping_primary_databases](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md) 系統資料表選取這個識別碼，或使用 [sp_help_log_shipping_primary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md) 預存程序取得這個識別碼。  
   
  備份作業會在備份目錄中建立記錄備份。 **sqllogship** 應用程式接著會根據檔案保留期限，清除任何舊的備份檔案。 接下來，應用程式會記錄主要伺服器和監視伺服器的備份作業歷程。 最後，應用程式會執行 [sp_cleanup_log_shipping_history](../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)，根據保留期限清除舊的記錄資訊。  
   
- **-copy** *secondary_id*  
+ **-copy** _secondary_id_  
  執行複製作業，從指定的次要伺服器複製次要資料庫的備份，資料庫的次要識別碼是由 *secondary_id*指定。 您可以從 [log_shipping_secondary](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md) 系統資料表選取這個識別碼，或使用 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 預存程序取得這個識別碼。  
   
  這項作業會將備份檔從備份目錄複製到目的地目錄。 **sqllogship** 應用程式接著會記錄次要伺服器和監視伺服器的複製作業歷程。  
   
- **-restore** *secondary_id*  
+ **-restore** _secondary_id_  
  在指定的次要伺服器上對次要資料庫執行還原作業，資料庫的次要識別碼是由 *secondary_id*指定。 您可以使用 **sp_help_log_shipping_secondary_database** 預存程序取得這個識別碼。  
   
  目的地目錄中自最近還原點之後建立的任何備份檔，都會還原至次要資料庫。 **sqllogship** 應用程式接著會根據檔案保留期限，清除任何舊的備份檔案。 接下來，應用程式會記錄次要伺服器和監視伺服器的還原作業歷程。 最後，應用程式會執行 **sp_cleanup_log_shipping_history**，根據保留期限清除舊的記錄資訊。  
   
- **–verboselevel** *level*  
+ **-verboselevel** _level_  
  指定要加入記錄傳送記錄的訊息層級。 *level* 是下列其中一個整數：  
   
 |level|Description|  
@@ -63,10 +63,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |**3**|輸出參考用訊息、警告和錯誤處理訊息。 這是預設值。|  
 |4|輸出所有偵錯和追蹤訊息。|  
   
- **–logintimeout** *timeout_value*  
+ **-logintimeout** _timeout_value_  
  指定嘗試登入伺服器執行個體的逾時時間。預設為 15 秒。 *timeout_value* 是 **int**_。_  
   
- **-querytimeout** *timeout_value*  
+ **-querytimeout** _timeout_value_  
  指定啟動執行作業的嘗試逾時時間。預設沒有逾時期限。 *timeout_value* 是 **int**_。_  
   
 ## <a name="remarks"></a>Remarks  

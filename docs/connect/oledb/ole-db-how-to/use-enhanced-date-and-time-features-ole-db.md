@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 276cf9f67d83ce67fa86ea00ca594f0c176456b9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c5b7682f43e2a4f2accba55e70940b81f53709ee
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607068"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210897"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

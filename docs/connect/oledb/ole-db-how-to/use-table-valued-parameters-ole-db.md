@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fc5e4e8e8730770ccf35bad11125bf568bcae50f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9696baae9c0eaf2d4e4f918e08ea66f653e33ff8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837736"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211977"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用資料表值參數 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

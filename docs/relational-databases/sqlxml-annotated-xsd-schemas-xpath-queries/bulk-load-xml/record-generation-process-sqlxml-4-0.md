@@ -23,12 +23,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0572f9ef57b5d1ba17383cf758f612b0c6eec81f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bfd659028d02c7b37dcf31c36b587ce5f3550661
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677687"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256813"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>記錄產生處理序 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "51677687"
  例如，請考慮下列 XSD 結構描述片段：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -116,7 +116,7 @@ ms.locfileid: "51677687"
  現在，請將 XML 檢視視為是在下列註解式 XSD 結構描述中所指定。 此結構描述會使用 **\<sql: relationship >** 指定 Cust 和 CustOrder 資料表之間的關聯性。  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -221,12 +221,12 @@ ms.locfileid: "51677687"
 ## <a name="exceptions-to-the-record-generation-rule"></a>記錄產生規則的例外狀況  
  當 XML 大量載入進入範圍內時，不會產生節點記錄 (如果該節點是 IDREF 或 IDREFS 類型的話)。 您必須確定完整的記錄描述會出現在結構描述中的某個地方。 **Dt: type ="nmtokens"** 註釋會被忽略，就像 IDREFS 類型也被忽略。  
   
- 例如，請考慮下列描述的 XSD 結構描述**\<客戶 >** 並**\<順序 >** 項目。 **\<客戶 >** 項目包含**OrderList** IDREFS 類型的屬性。 **\<Sql: relationship >** 標記會指定客戶與訂單清單之間的一對多關聯性。  
+ 例如，請考慮下列描述的 XSD 結構描述**\<客戶 >** 並**\<順序 >** 項目。 **\<客戶 >** 項目包含**OrderList** IDREFS 類型的屬性。  **\<Sql: relationship >** 標記會指定客戶與訂單清單之間的一對多關聯性。  
   
  這是結構描述：  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

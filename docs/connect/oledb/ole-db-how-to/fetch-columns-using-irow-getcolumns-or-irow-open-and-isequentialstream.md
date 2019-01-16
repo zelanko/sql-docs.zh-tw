@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9fe101f790226f898b69b28d58f57a1166090bc3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602798"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213530"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

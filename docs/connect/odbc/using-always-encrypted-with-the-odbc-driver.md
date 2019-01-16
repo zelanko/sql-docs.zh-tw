@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: a0c917c6f7200db2b5a04b47185ba6b61f59ad34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506833"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226685"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 插入至資料庫資料行的值，包括加密的資料行，會傳遞為繫結參數 (請參閱 [SQLBindParameter 函式](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx))。 雖然將值傳送到未加密的資料行時，使用參數是選擇性項目 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要項目。 如果插入 SSN 或 BirthDate 資料行中的值傳遞做為內嵌在查詢陳述式中的常值，則查詢會失敗，因為驅動程式不會嘗試加密，或處理查詢中的常值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
 
-- SQL 類型的插入 SSN 資料行的參數設定為 SQL_CHAR，這會對應到**char** SQL Server 資料類型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果參數的型別設定為 SQL_WCHAR，這會對應到**nchar**，則查詢會失敗，因為永遠加密 不支援加密的 nchar 值的伺服器端轉換成加密的 char 值。 請參閱[ODBC 程式設計人員參考-附錄 d： 資料類型](https://msdn.microsoft.com/library/ms713607.aspx)如需有關資料類型對應資訊。
+- SQL 類型的插入 SSN 資料行的參數設定為 SQL_CHAR，這會對應到**char** SQL Server 資料類型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果參數的型別設定為 SQL_WCHAR，這會對應到**nchar**，則查詢會失敗，因為永遠加密 不支援加密的 nchar 值的伺服器端轉換成加密的 char 值。 請參閱[ODBC 程式設計人員參考-附錄 d:資料型別](https://msdn.microsoft.com/library/ms713607.aspx)如需有關資料類型對應資訊。
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制反覆存取以擷取查詢參數的中繼資料
 
-如果連線已啟用 Always Encrypted，此驅動程式預設會針對每個參數化查詢呼叫 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，將查詢陳述式 (不含任何參數值) 傳遞至 SQL Server。 這個預存程序會分析查詢陳述式，若要了解，如果任何參數需要加密，而且如果是的話，傳回每個參數，以允許將其加密驅動程式的加密相關資訊。 上述行為可確保高透明度，用戶端應用程式： 應用程式 （及應用程式開發人員） 不需要留意哪些查詢存取加密的資料行，只要目標為加密資料行值會傳遞至在參數中驅動程式。
+如果連線已啟用 Always Encrypted，此驅動程式預設會針對每個參數化查詢呼叫 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，將查詢陳述式 (不含任何參數值) 傳遞至 SQL Server。 這個預存程序會分析查詢陳述式，若要了解，如果任何參數需要加密，而且如果是的話，傳回每個參數，以允許將其加密驅動程式的加密相關資訊。 上述行為可對用戶端應用程式確保高透明度：只要將以加密資料行為目標的值傳遞給參數中的驅動程式，應用程式 (及應用程式開發人員) 便無須知道哪些查詢存取了加密資料行。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每個陳述式 Always Encrypted 行為
 
@@ -538,7 +538,7 @@ ODBC Driver 17 for SQL Server 加密之前使用 SQLGetData 組件中不能擷�
 
 ## <a name="bulk-copy-of-encrypted-columns"></a>大量複製加密的資料行
 
-利用[SQL 大量複製函數](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)並**bcp**公用程式使用 永遠加密自 ODBC Driver 17 for SQL Server 支援。 純文字 （插入上加密和解密上擷取） 和 （逐字傳送） 的加密文字可插入和擷取使用大量複製 （bcp_ *） 的 Api 並**bcp**公用程式。
+利用[SQL 大量複製函數](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)並**bcp**公用程式使用 永遠加密自 ODBC Driver 17 for SQL Server 支援。 純文字 （插入上加密和解密上擷取） 和 （逐字傳送） 的加密文字可插入和擷取使用大量複製 (bcp_&#42;) 的 Api 和**bcp**公用程式。
 
 - 若要擷取 varbinary （max） 格式 （例如為大量載入至不同的資料庫） 的加密文字，請連接，而不`ColumnEncryption`選項 (或將它設定為`Disabled`)，並執行 BCP OUT 作業。
 
@@ -546,7 +546,7 @@ ODBC Driver 17 for SQL Server 加密之前使用 SQLGetData 組件中不能擷�
 
 - 若要插入在 varbinary （max） 的形式 （例如擷取上方） 中的加密文字，請設定`BCPMODIFYENCRYPTED`選項設定為 TRUE，並執行 BCP IN 作業。 如果未產生資料的順序，請確定目的地資料行的 CEK 是原先取得的加密文字相同。
 
-使用時**bcp**公用程式： 控制`ColumnEncryption`設定，請使用-D 選項並指定 DSN，其中包含所要的值。 若要插入的加密文字，請確定`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`啟用使用者的設定。
+使用時**bcp**公用程式：若要控制`ColumnEncryption`設定，請使用-D 選項並指定 DSN，其中包含所要的值。 若要插入的加密文字，請確定`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`啟用使用者的設定。
 
 下表提供摘要的動作，對加密資料行運作時：
 

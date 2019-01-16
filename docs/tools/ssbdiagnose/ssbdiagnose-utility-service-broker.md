@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23985f7a9c78993e154babdcbdd9980334f0fc36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541327"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590542"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,22 +115,22 @@ ssbdiagnose
   
  預設設定為 **WARNING**。  
   
- **-IGNORE** *error_id*  
+ **-IGNORE** _error_id_  
  指定具有指定之 *error_id* 的錯誤或訊息，不要包含在報表中。 您可以多次指定 **-IGNORE** ，以隱藏多個訊息識別碼。  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  指定當特定子句中未包含連線選項時， **ssbdiagnose** 所使用的基底連線資訊。 在特定子句中提供的連接資訊，會覆寫 **baseconnectionoption** 資訊。 這會針對每項參數個別執行。 例如， **baseconnetionoptions** 中同時指定了 **-S** 和 **-d**，而 **toconnetionoptions** 中只指定了 **-d**，則 **ssbdiagnose** 會使用 **baseconnetionoptions** 的 -S 和 **toconnetionoptions**的 -d。  
   
  **CONFIGURATION**  
  要求一組 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務之間或單一服務的組態錯誤報表。  
   
- **FROM SERVICE** *service_name*  
+ **FROM SERVICE** _service_name_  
  指定起始交談的服務。  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  指定連接至保留起始端服務之資料庫所需的資訊。 如未指定 **fromconnectionoptions** ，則 **ssbdiagnose** 會使用 **baseconnectionoptions** 中的連接資訊連接至起始端資料庫。 如果指定了 **fromconnectionoptions** ，它就必須包括含有起始端服務的資料庫。 如未指定 **fromconnectionoptions** ，則 **baseconnectionoptions** 必須指定起始端資料庫。  
   
- **TO SERVICE** *service_name*[, *broker_id* ]  
+ **TO SERVICE** _service_name_[, *broker_id* ]  
  指定用於交談的服務。  
   
  *service_name*：指定目標服務的名稱。  
@@ -143,16 +143,16 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  指定連接至保存目標服務之資料庫所需的資訊。 如未指定 **toconnectionoptions** ，則 **ssbdiagnose** 會使用 **baseconnectionoptions** 中的連接資訊連接至目標資料庫。  
   
  **MIRROR**  
  指定相關聯的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務由鏡像資料庫所主控。 **ssbdiagnose** 會確認服務的路由為鏡像路由，其中 MIRROR_ADDRESS 是在 CREATE ROUTE 上指定。  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  指定連接至鏡像資料庫所需的資訊。 如未指定 **mirrorconnectionoptions** ，則 **ssbdiagnose** 會使用 **baseconnectionoptions** 中的連接資訊連接至鏡像資料庫。  
   
- **ON CONTRACT** *contract_name*  
+ **ON CONTRACT** _contract_name_  
  要求 **ssbdiagnose** 只檢查使用指定合約的組態。 如未指定 ON CONTRACT，則 **ssbdiagnose** 就會針對名為 DEFAULT 的合約進行報告。  
   
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
@@ -162,7 +162,7 @@ WHERE database_id = DB_ID();
   
  **OFF**：未設定任何對話安全性。 沒有部署任何憑證、沒有建立任何遠端服務繫結，而且起始端服務的 GRANT SEND 已指定了 **Public** 角色。  
   
- **ANONYMOUS**：已設定匿名的對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
+ **ANONYMOUS**：已設定匿名對話安全性。 已經部署了一個憑證、遠端服務繫結已指定了匿名子句，而且目標服務的 GRANT SEND 已指定了 **Public** 角色。  
   
  **RUNTIME**  
  要求導致 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談發生執行階段錯誤之問題的報表。 如未指定 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會監視連線選項中指定之所有資料庫中的所有交談。 如果指定了 **-NEW** 或 **-ID** ， **ssbdiagnose** 就會建立參數中指定的識別碼清單。  
@@ -201,10 +201,10 @@ WHERE database_id = DB_ID();
   
  **sys.conversation_endpoints** 目錄檢視的 **conversation_id** 資料行中會報告交談識別碼。  
   
- **-TIMEOUT** *timeout_interval*  
+ **-TIMEOUT** _timeout_interval_  
  指定 **RUNTIME** 報表要執行的秒數。 如未指定 **-TIMEOUT** ，執行階段報表就會無限期地執行。 **-TIMEOUT** 僅用於 **RUNTIME** 報表，不用在 **CONFIGURATION** 報表。 如果沒有指定 **ssbdiagnose** if **-TIMEOUT** 間隔到期之前結束執行階段報表，您可以使用 CTRL + C 結束**-**。 *timeout_interval* 必須是介於 1 和 2,147,483,647 之間的數字。  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  指定資料庫的連接資訊，而這些資料庫包含與受監視之交談元素相關聯的服務。 如果所有服務都位於相同的資料庫中，您就只需要指定一個 **CONNECT TO** 子句。 如果各項服務位於不同的資料庫中，您就必須針對每個資料庫提供一個 **CONNECT TO** 子句。 如未指定 **runtimeconnectionoptions** ，則 **ssbdiagnose** 會使用 **baseconnectionoptions**中的連接資訊。  
   
  **-E**  
@@ -216,14 +216,14 @@ WHERE database_id = DB_ID();
   
  如果同時使用 **-E** 選項和 **-U** 或 **-P** 選項，就會產生錯誤訊息。  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  使用指定的登入識別碼，藉以開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連線。 登入必須是**系統管理員**固定伺服器角色的成員。  
   
  如未指定 **-E** 也未指定 **-U** ， **ssbdiagnose** 就會使用 SQLCMDUSER 環境變數的值。 如果也沒有設定 SQLCMDUSER， **ssbdiagnose** 就會根據正在執行 **ssbdiagnose**的使用者 Windows 帳戶，使用 Windows 驗證模式嘗試連接。  
   
  如果同時使用 **-U** 選項和 **-E** 選項，就會產生錯誤訊息。 如果 **-U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
   
- **-P** *password*  
+ **-P** _password_  
  指定 **-U** 登入識別碼的密碼。 密碼會區分大小寫。 如果使用了 **-U** 選項，但沒有使用 **-P** 選項， **ssbdiagnose** 就會使用 SQLCMDPASSWORD 環境變數的值。 如果也沒有設定 SQLCMDPASSWORD， **ssbdiagnose** 就會提示使用者輸入密碼。  
   
 > [!IMPORTANT]  
@@ -242,15 +242,15 @@ WHERE database_id = DB_ID();
   
  如果 **-P** 選項後面有多個引數，就會產生錯誤訊息。  
   
- **baseconnetionoptions** *server_name*[\\*instance_name*]  
+ **-S** _server_name_[\\*instance_name*]  
  指定保存要分析之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體。  
   
  指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的預設執行個體。 指定 _server\_name_**\\**_instance\_name_，即可連接到該伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的具名執行個體。 如未指定 **-S** ，則 **ssbdiagnose** 會使用 SQLCMDSERVER 環境變數的值。 如果也沒有設定 SQLCMDSERVER， **ssbdiagnose** 就會連接至本機電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體。  
   
- **-S** *database_name*  
+ **-d** _database_name_  
  指定保存要分析之 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務的資料庫。 如果此資料庫不存在，就會產生錯誤訊息。 如未指定 **-d** ，預設值就是登入之預設資料庫屬性中所指定的資料庫。  
   
- **-l** *login_timeout*  
+ **-l** _login_timeout_  
  指定嘗試連接至伺服器會發生逾時之前，所經過的秒數。如未指定 **-l** ， **ssbdiagnose** 就會使用針對 SQLCMDLOGINTIMEOUT 環境變數所設定的值。 如果也沒有指定 SQLCMDLOGINTIMEOUT，預設的逾時就是三十秒。 此登入逾時必須是介於 0 和 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **ssbdiagnose** 就會產生錯誤訊息。 0 值指定逾時值無限。  
   
  **-?**  

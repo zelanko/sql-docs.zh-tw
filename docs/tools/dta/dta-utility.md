@@ -21,12 +21,12 @@ ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719e891168fcf6a0ce094d67ec8186c653d00f49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529116"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590192"
 ---
 # <a name="dta-utility"></a>dta 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ dta
  **-?**  
  顯示使用方式資訊。  
   
- **-A** *time_for_tuning_in_minutes*  
+ **-A** _time_for_tuning_in_minutes_  
  指定微調時間限制 (以分鐘為單位)。 **dta** 會利用指定的時間量來微調工作負載，以及產生含有建議的實體設計變更的指令碼。 依預設， **dta** 假設微調時間是 8 小時。 指定 0 代表微調時間無限制。 **dta** 可能會在時間限制過期之前，完成整個工作負載的微調。 不過，為了確保整個工作負載都能得到微調，我們建議您指定無限的微調時間 (-A 0)。  
   
  **-a**  
  不發出提示，直接微調工作負載並套用建議的內容。  
   
- **-B** *storage_size*  
+ **-B** _storage_size_  
  指定建議的索引和資料分割所能使用的最大空間 (以 MB 為單位)。 微調多個資料庫時，所有資料庫的建議內容都考量了空間的計算。 依預設， **dta** 會採用下列較小的儲存體大小：  
   
 -   目前的原始資料大小的三倍，其中包括資料庫中各資料表的堆積和叢集索引的總大小。  
@@ -96,13 +96,13 @@ dta
   
  預設儲存體大小不包括非叢集索引和索引檢視。  
   
- **-C** *max_columns_in_index*  
+ **-C** _max_columns_in_index_  
  指定 **dta** 所提出之索引內的資料行數目上限。 最大值為 1024。 依預設，引數設定為 16。  
   
- **-c** *max_key_columns_in_index*  
+ **-c** _max_key_columns_in_index_  
  指定 **dta** 所提出之索引內索引鍵資料行數目上限。 預設值是 16，這是允許的最大值。 **dta** 也會考慮使用內含資料行建立索引。 內含資料行的索引建議可能超出這個引數所指定的資料行數目。  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  指定要微調的每個資料庫的名稱。 第一個資料庫是預設資料庫。 您可以指定多個資料庫，以逗號分隔各個資料庫名稱，例如：  
   
 ```  
@@ -129,7 +129,7 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *database_name*  
+ **-d** _database_name_  
  指定微調工作負載時， **dta** 所連接的第一個資料庫。 這個引數只能指定一個資料庫。 例如：  
   
 ```  
@@ -145,7 +145,7 @@ dta -d AdventureWorks2012 ...
  **-E**  
  使用信任連接，不要求密碼。 必須使用指定登入識別碼的 **-E** 引數或 **-U** 引數。  
   
- **-e** *tuning_log_name*  
+ **-e** _tuning_log_name_  
  指定 **dta** 用來記錄它無法微調之事件的資料表或檔案名稱。 資料表會建立在執行微調的伺服器中。  
   
  如果使用某份資料表，請依照下列格式來指定它的名稱： *[database_name].[owner_name].table_name*。 下表顯示各個參數的預設值：  
@@ -164,8 +164,8 @@ dta -d AdventureWorks2012 ...
  **-F**  
  允許 **dta** 覆寫現有的輸出檔。 如果已存在相同名稱的輸出檔，且未指定 **-F** ， **dta**就會傳回錯誤。 您可以使用 **-F** 搭配 **-of**、 **-or**或 **-ox**。  
   
- **-fa** *physical_design_structures_to_add*  
- 指定 **dta** 應該在建議中包含的實體設計結構類型。 下表列出並說明這個引數所能指定的值。 如果未指定任何值， **dta** 將使用預設的 **-fa****IDX**。  
+ **-fa** _physical_design_structures_to_add_  
+ 指定 **dta** 應該在建議中包含的實體設計結構類型。 下表列出並說明這個引數所能指定的值。 未指定任何值時，**dta** 會使用預設的 **-fa IDX**。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -185,7 +185,7 @@ dta -d AdventureWorks2012 ...
 |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
 
   
- **-fk** *keep_existing_option*  
+ **-fk** _keep_existing_option_  
  指定 **dta** 在產生建議時，必須保留的現有實體設計結構。 下表列出並說明這個引數所能指定的值：  
   
 |ReplTest1|Description|  
@@ -196,7 +196,7 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|資料表的所有叢集索引。|  
 |IDX|資料表的所有叢集和非叢集索引。|  
   
- **-fp** *partitioning_strategy*  
+ **-fp** _partitioning_strategy_  
  指定是否應該分割 **dta** 所提出的新實體設計結構 (索引和索引檢視表) 及其分割方式。 下表列出並說明這個引數所能指定的值：  
   
 |ReplTest1|Description|  
@@ -205,12 +205,12 @@ dta -d AdventureWorks2012 ...
 |FULL|完整的資料分割 (選擇這個項目，可以增進效能)。|  
 |ALIGNED|只有對齊的資料分割 (選擇這個項目，管理會更容易)。|  
   
- ALIGNED 表示在 **dta** 所產生的建議中，每個建議的索引都會完全依照定義索引之基礎資料表的相同方式進行分割。 索引檢視表中的非叢集索引會對齊索引檢視表。 這個引數只能指定一個值。 預設值是 **-fp****NONE**。  
+ ALIGNED 表示在 **dta** 所產生的建議中，每個建議的索引都會完全依照定義索引之基礎資料表的相同方式進行分割。 索引檢視表中的非叢集索引會對齊索引檢視表。 這個引數只能指定一個值。 預設值是 **-fp NONE**。  
   
- **-fx** *drop_only_mode*  
+ **-fx** _drop_only_mode_  
  指定 **dta** 只考慮卸除現有的實體設計結構。 不考慮任何新的實體設計結構。 指定此選項時， **dta** 會評估現有實體設計結構的可用程度，並建議您卸除不常使用的結構。 這個引數沒有任何值。 它不能搭配 **-fa**、 **-fp**或 **-fk ALL** 等引數一起使用。  
   
- **-ID** *session_ID*  
+ **-ID** _session_ID_  
  指定微調工作階段的數值識別碼。 若未指定，則 **dta** 會產生一個識別碼。 您可以利用這個識別碼來檢視現有微調工作階段的資訊。 如果您沒有指定 **-ID**值，就必須利用 **-s**來指定工作階段名稱。  
   
  **-ip**  
@@ -223,11 +223,11 @@ dta -d AdventureWorks2012 ...
 |**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
      
   
- **-if** *workload_file*  
- 指定微調輸入所用的工作負載檔案之路徑與名稱。 檔案必須是下列格式之一：.trc (SQL Server Profiler 追蹤檔)、.sql (SQL 檔) 或 .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤檔)。 您必須指定一個工作負載檔案或一份工作負載資料表。  
+ **-if** _workload_file_  
+ 指定微調輸入所用的工作負載檔案之路徑與名稱。 檔案必須是下列其中一種格式：.trc (SQL Server Profiler 追蹤檔)、.sql (SQL 檔案) 或 .log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 追蹤檔)。 您必須指定一個工作負載檔案或一份工作負載資料表。  
   
- **-it** *workload_trace_table_name*  
- 指定包含微調工作負載追蹤的資料表名稱。 請使用下列格式來指定名稱：[*database_name*]**.**[*owner_name*]**.***table_name*。  
+ **-it** _workload_trace_table_name_  
+ 指定包含微調工作負載追蹤的資料表名稱。 請使用下列格式來指定名稱：[*database_name*]**.**[*owner_name*]**.**_table_name_。  
   
  下表顯示各項目的預設值：  
   
@@ -240,13 +240,13 @@ dta -d AdventureWorks2012 ...
 > [!NOTE]  
 >  *owner_name* 必須是 **dbo**。 如果指定了任何其他值， **dta** 的執行便會失敗並傳回錯誤。 另外，也請注意，您必須指定一份工作負載資料表，或指定一個工作負載檔案。  
   
- **-ix** *input_XML_file_name*  
+ **-ix** _input_XML_file_name_  
  指定包含 **dta** 輸入資訊的 XML 檔案名稱。 這必須是符合 DTASchema.xsd 的有效 XML 文件。 微調選項的命令提示字元所指定的衝突引數會覆寫這個 XML 檔案中的對應值。 XML 輸入檔中以評估模式輸入的使用者指定組態是唯一例外。 例如，如果在 XML 輸入檔的 **Configuration** 元素中輸入了某項組態， **EvaluateConfiguration** 元素也指定成一個微調選項，XML 輸入檔所指定的微調選項會覆寫在命令提示字元之下輸入的任何微調選項。  
   
- **-m** *minimum_improvement*  
+ **-m** _minimum_improvement_  
  指定建議的組態必須符合之最小改進百分比。  
   
- **-N** *online_option*  
+ **-N** _online_option_  
  指定是否在線上建立實體設計結構。 下表列出和描述這個引數所能指定的值：  
   
 |ReplTest1|Description|  
@@ -257,7 +257,7 @@ dta -d AdventureWorks2012 ...
   
  如果在線上建立索引，就會在它的物件定義上附加 ONLINE = ON。  
   
- **-n** *number_of_events*  
+ **-n** _number_of_events_  
  指定在工作負載中 **dta** 應微調的事件數目。 如果指定了此引數，且工作負載是包含持續時間資訊的追蹤檔， **dta** 就會依據持續時間的遞減順序來微調事件。 這個引數可用來比較實體設計結構的兩個組態。 若要比較兩個組態，請依照下列方式，先指定相同的微調事件數目給這兩個組態，之後，兩個組態都指定無限的微調時間：  
   
 ```  
@@ -266,7 +266,7 @@ dta -n number_of_events -A 0
   
  在這個情況下，指定無限微調時間 (`-A 0`) 非常重要。 否則，Database Engine Tuning Advisor 會預設 8 小時的微調時間。
  
- **-I** *time_window_in_hours*   
+ **-I** _time_window_in_hours_   
    指定的時間間隔 （以小時為單位） 的查詢必須有執行時，才能被視為 dta 微調時使用 **-iq**選項 （查詢存放區中的工作負載）。 
 ```  
 dta -iq -I 48  
@@ -278,28 +278,28 @@ dta -iq -I 48
 
 
   
- **-of** *output_script_file_name*  
+ **-of** _output_script_file_name_  
  指定 **dta** 將建議以 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼形式，寫入指定的檔案名稱與目的地。  
   
  您可以搭配此選項來使用 **-F**。 請確定檔案名稱沒有重複，特別是當您也正在使用 **-or** 和 **-ox**時。  
   
- **-or** *output_xml_report_file_name*  
+ **-or** _output_xml_report_file_name_  
  指定 **dta** 將建議以 XML 格式寫入輸出報表。 如果提供了檔案名稱，建議便會寫入該目的地。 否則， **dta** 將使用該工作階段名稱來產生檔案名稱，並將其寫入目前的目錄。  
   
  您可以搭配此選項來使用 **-F** 。 請確定檔案名稱沒有重複，特別是當您也正在使用 **-of** 和 **-ox**時。  
   
- **-ox** *output_XML_file_name*  
+ **-ox** _output_XML_file_name_  
  指定 **dta** 將建議以 XML 檔案格式寫入提供的檔案名稱與目的地。 請確定 Database Engine Tuning Advisor 有寫入目的地目錄的權限。  
   
  您可以搭配此選項來使用 **-F** 。 請確定檔案名稱沒有重複，特別是當您也正在使用 **-of** 和 **-or**時。  
   
- **-P** *password*  
+ **-P** _password_  
  指定登入識別碼的密碼。 若未使用此選項， **dta** 將提示您輸入密碼。  
   
  **-q**  
  設定無訊息模式。 不會將任何資訊寫入主控台中，進度和標頭資訊都包括在內。  
   
- **-rl** *analysis_report_list*  
+ **-rl** _analysis_report_list_  
  指定要產生的分析報表清單。 下表列出這個引數所能指定的值：  
   
 |ReplTest1|報表|  
@@ -327,13 +327,13 @@ dta -iq -I 48
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** *server_name*[ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  指定電腦名稱及要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 若未指定 *server_name* ， **dta** 會連接至本機電腦上的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 連接至具名的執行個體或透過網路從遠端電腦執行 **dta** 時，必須使用此選項。  
   
- **-s** *session_name*  
+ **-s** _session_name_  
  指定微調工作階段的名稱。 若未指定 **-ID** ，則必須進行此步驟。  
   
- **-Tf** *table_list_file*  
+ **-Tf** _table_list_file_  
  指定包含要微調的資料表清單之檔案名稱。 檔案中所列出的每份資料表，都應該從新的一行中開始。 資料表名稱應該採用三部分命名，例如 **AdventureWorks2012.HumanResources.Department**。 另外，如果您要叫用資料表調整功能，現有資料表的名稱後面可以接著一個指示預計資料表列數的數字。 當微調或評估工作負載中參考這些資料表的陳述式時，Database Engine Tuning Advisor 會考量預計的列數。 請注意， *number_of_rows* 計數與 *table_name*之間可能有一個或多個空格。  
   
  這是 *table_list_file*的檔案格式：  
@@ -348,12 +348,12 @@ dta -iq -I 48
   
  如果省略了 **-Tf** 和 **-Tl** 引數，則會將指定資料庫中的所有使用者資料表視為要進行微調。  
   
- **-Tl** *table_list*  
+ **-Tl** _table_list_  
  在命令提示字元之下，指定要微調的資料表清單。 請在資料表名稱之間加上逗號，將它們分開。 如果使用 **-D** 引數只指定一個資料庫，就不需要使用資料庫名稱限定資料表的名稱。 否則，每份資料表都需要完整的名稱格式： *database_name.schema_name.table_name* 。  
   
  這個引數是使用資料表清單檔案的另一種方法 (**-Tf**)。 如果同時使用 **-Tl** 和 **-Tf** ， **dta** 會失敗並傳回錯誤。  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  指定用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的登入識別碼。  
   
  **-u**  

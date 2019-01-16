@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 88160c2580b0b11e5de10e5b91e240a2355285f7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a237fcd5b03f8013e4a6514b87322695e6a0cf9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660437"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206167"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 建立有效的連接字串
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "51660437"
   
  在連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 元件會從登錄中讀取指定之別名名稱的伺服器、通訊協定與通訊埠值，並以 `tcp:<servername>[\<instancename>],<port>` 或 `tcp:<IPAddress>[\<instancename>],<port>`格式建立連接字串。  
   
-> [!NOTE]  
->  根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火牆會關閉通訊埠 1433。 由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過連接埠 1433 來進行通訊，因此如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為使用 TCP/IP 來接聽內送的用戶端連接，您就必須重新開啟該通訊埠。 如需設定防火牆的相關資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 SQL Server 存取＞，或請檢閱您的防火牆文件集。  
+> [!NOTE]
+>  根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火牆會關閉通訊埠 1433。 由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過連接埠 1433 來進行通訊，因此如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為使用 TCP/IP 來接聽內送的用戶端連接，您就必須重新開啟該通訊埠。 如需設定防火牆的相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 SQL Server 存取＞，或請檢閱您的防火牆文件集。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完整支援 Internet Protocol 第 4 版 (IPv4) 和 Internet Protocol 第 6 版 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員可以接受 IPv4 和 IPv6 格式的 IP 位址。 如需有關 IPv6 的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 IPv6 連接＞。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完整支援網際網路通訊協定第 4 版 (IPv4) 與網際網路通訊協定第 6 版 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員可以接受 IPv4 和 IPv6 格式的 IP 位址。 如需有關 IPv6 的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 IPv6 連接＞。  
   
 ## <a name="connecting-to-the-local-server"></a>連接到本機伺服器  
  連接到與用戶端在同一部電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可以使用 `(local)` 做為伺服器名稱。 但不建議這麼做，因為會造成模糊不清，但是若確實知道用戶端正在預期的電腦上執行，這就很有用。 例如，為行動式、非連接的使用者 (例如銷售人員) 建立應用程式 (亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在膝上型電腦上執行並儲存專案資料) 時，連接到 `(local)` 的用戶端一律會連接到在膝上型電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用字詞 `localhost` 或句點 (**.**) 來取代 `(local)`。  
@@ -128,7 +128,7 @@ Server             (local)
   
 ```  
   
- 使用 `localhost` 連接到本機電腦：  
+ 使用 `localhost`連接到本機電腦：  
   
 ```  
 Alias Name         <serveralias>  
@@ -169,7 +169,7 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  如需指定網路通訊協定作為 **sqlcmd** 參數的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：使用 sqlcmd.exe 連接到 Database Engine＞。  
+>  如需有關指定網路通訊協定作為 **sqlcmd** 參數的相關資訊，請參閱＜如何：使用 sqlcmd.exe 來連線到 Database Engine＞(位於《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

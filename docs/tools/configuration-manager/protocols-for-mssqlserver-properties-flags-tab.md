@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 06915278daf72828f7dd1d1ff9da23f4a01ec783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 136eade9df87a7d086af27ca0ab6d3075a3b8bd7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710466"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207457"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER 的通訊協定內容 (旗標索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47710466"
   
  如需有關加密的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書》中的＜將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連接加密＞。  
   
- 登入過程一律加密。 當 **[ForceEncryption]** 設為 **[是]** 時，所有用戶端/伺服器通訊都會加密，且連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的用戶端必須設定為信任伺服器憑證的根授權單位。 如需詳細資訊，請參閱《 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 線上叢書》中的＜如何：啟用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的加密連接 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞。  
+ 登入過程一律加密。 當 **[ForceEncryption]** 設為 **[是]** 時，所有用戶端/伺服器通訊都會加密，且連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的用戶端必須設定為信任伺服器憑證的根授權單位。 如需詳細資訊，請參閱 SQL Server 線上叢書的＜如何：啟用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的加密連接 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員)＞(位於《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中)。  
   
 ## <a name="cluster-servers"></a>叢集伺服器  
  如果您想要對容錯移轉叢集使用加密，請務必使用容錯移轉叢集中，所有節點之虛擬伺服器的完整 DNS 名稱來安裝伺服器憑證。 例如，假設您有一個雙節點的叢集，節點的名稱分別為 "test1.*\<貴公司>*.com" 和 "test2.*\<貴公司>*.com"，而且您有一個名為 "virtsql" 的虛擬伺服器，則將會需要在兩個節點上都安裝 "virtsql.*\<貴公司>*.com" 的憑證。 接著，您可以選取 **[SQL Server 組態管理員]** 中的 **[ForceEncryption]** 核取方塊，設定要執行加密的容錯移轉叢集。  
@@ -44,6 +44,6 @@ ms.locfileid: "47710466"
  **HideInstance**  
  防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務將此 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體公開給嘗試利用 **[瀏覽]** 按鈕尋找執行個體的用戶端電腦。 如果是伺服器上的具名執行個體，連接時，用戶端電腦必須指定通訊協定端點資訊。 例如，連接埠編號或具名管道名稱，如 **tcp:server,5000**。 如需詳細資訊，請參閱 [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)。  
   
- 如需詳細資訊，請參閱線上叢書中的＜如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)＞。  
+ 如需詳細資訊，請參閱 SQL Server 線上叢書的＜如何：線上叢書》中的＜如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)＞。  
   
   

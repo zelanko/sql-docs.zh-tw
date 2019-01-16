@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fdb89ebbfebe6ea8e47857347428cb27d4d41530
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293144"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128508"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,58 +81,58 @@ tablediff
  [ **-?** ]  
  傳回支援的參數清單。  
   
- **-sourceserver** *source_server_name*[**\\**_instance\_name_]  
- 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *source_server_name***\\***instance_name*。  
+ **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
+ 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _具名執行個體的_**\\**_source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
- **-sourcedatabase** *source_database*  
+ **-sourcedatabase** _source_database_  
  這是來源資料庫的名稱。  
   
- **-sourcetable** *source_table_name*  
+ **-sourcetable** _source_table_name_  
  這是所檢查的來源資料表的名稱。  
   
- **-sourceschema** *source_schema_name*  
+ **-sourceschema** _source_schema_name_  
  來源資料表的結構描述擁有者。 依預設，資料表擁有者假設為 dbo。  
   
- **-sourcepassword** *source_password*  
+ **-sourcepassword** _source_password_  
  這是用來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之來源伺服器的登入密碼。  
   
 > [!IMPORTANT]  
 >  可能的話，請在執行階段提供安全性認證。 如果您必須將認證儲存在指令碼檔案中，您應該維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- **-sourceuser** *source_login*  
+ **-sourceuser** _source_login_  
  這是用來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之來源伺服器的登入。 如果未提供 *source_login* ，在連接到來源伺服器時，會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
- **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *destination_server_name***\\***instance_name*。  
+ **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定 _具名執行個體的_**\\**_destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
- **-destinationdatabase** *subscription_database*  
+ **-destinationdatabase** _subscription_database_  
  這是目的地資料庫的名稱。  
   
- **-destinationtable** *destination_table*  
+ **-destinationtable** _destination_table_  
  這是目的地資料表的名稱。  
   
- **-destinationschema** *destination_schema_name*  
+ **-destinationschema** _destination_schema_name_  
  目的地資料表的結構描述擁有者。 依預設，資料表擁有者假設為 dbo。  
   
- **-destinationpassword** *destination_password*  
+ **-destinationpassword** _destination_password_  
  這是用來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之目的地伺服器的登入密碼。  
   
 > [!IMPORTANT]  
 >  可能的話，請在執行階段提供安全性認證。 如果您必須將認證儲存在指令碼檔案中，您應該維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- **-destinationuser** *destination_login*  
+ **-destinationuser** _destination_login_  
  這是用來連接使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證之目的地伺服器的登入。 如果未提供 *destination_login* ，在連接到伺服器時，會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-destinationlocked**  
  在比較期間，目的地資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
- **-b** *large_object_bytes*  
+ **-b** _large_object_bytes_  
  是大型物件資料類型資料行要比較的位元組數，包括︰ **text**、 **ntext**、 **image**、 **varchar(max)**、 **nvarchar(max)** 和 **varbinary(max)**。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
   
- **-bf**  *number_of_statements*  
+ **-bf**  _number_of_statements_  
  這是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 選項時要寫入目前 **指令碼檔案中的** 陳述式數目。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數目超出 *number_of_statements*時，會建立新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案。  
   
  **-c**  
@@ -141,28 +141,28 @@ tablediff
  **-dt**  
  卸除 *table_name*指定的結果資料表 (如果該資料表已存在的話)。  
   
- **-et** *table_name*  
+ **-et** _table_name_  
  指定要建立的結果資料表名稱。 如果這份資料表已經存在，就必須使用 **-DT** ，否則作業會失敗。  
   
  **-f** [ *file_name* ]  
  產生一份 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼來聚合目的地伺服器的資料表與來源伺服器的資料表。 您可以選擇性地為所產生的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案指定名稱和路徑。 如果未指定 *file_name* ， [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案會產生在執行公用程式的目錄中。  
   
- **-o** *output_file_name*  
+ **-o** _output_file_name_  
  這是輸出檔的完整名稱和路徑。  
   
  **-q**  
  執行快速比較，只比較資料列計數和結構描述。  
   
- **-rc** *number_of_retries*  
+ **-rc** _number_of_retries_  
  公用程式重試失敗作業的次數。  
   
- **-ri**  *retry_interval*  
+ **-ri**  _retry_interval_  
  兩次重試之間等待的間隔秒數。  
   
  **-strict**  
  嚴格比較來源和目的地結構描述。  
   
- **-t** *connection_timeouts*  
+ **-t** _connection_timeouts_  
  設定通往來源伺服器和目的地伺服器之連接的連接逾時期限 (以秒為單位)。  
   
 ## <a name="return-value"></a>傳回值  
@@ -174,7 +174,7 @@ tablediff
 |**2**|資料表差異|  
   
 ## <a name="remarks"></a>Remarks  
- **tablediff** 公用程式不能與非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器一起使用。  
+ **tablediff** 公用程式不能與非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器搭配使用。  
   
  不支援具有 **sql_variant** 資料類型資料行的資料表。  
   

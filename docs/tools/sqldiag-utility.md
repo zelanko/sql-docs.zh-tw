@@ -30,12 +30,12 @@ ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a20913ac99f7c4cf32ae31c55cdf027f2db360c1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292704"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100943"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,16 +86,16 @@ sqldiag
  **/?**  
  顯示使用方式資訊。  
   
- **/I** *configuration_file*  
+ **/I** _configuration_file_  
  設定 **SQLdiag** 要使用的組態檔。 依預設， **/I** 會設為 SQLDiag.Xml。  
   
- **/O** *output_folder_path*  
+ **/O** _output_folder_path_  
  將 **SQLdiag** 輸出重新導向至指定的資料夾。 如果未指定 **/O** 選項， **SQLdiag** 輸出會寫入 **SQLdiag** 啟動資料夾之下名稱為 SQLDIAG 的子資料夾中。 如果 [SQLDIAG] 資料夾不存在， **SQLdiag** 會嘗試建立它。  
   
 > [!NOTE]  
 >  輸出資料夾位置相對於可以使用 **/P**指定的支援資料夾位置。 若要為輸出資料夾設定完全不同的位置，請對 **/O**指定完整的目錄路徑。  
   
- **/P** *support_folder_path*  
+ **/P** _support_folder_path_  
  設定支援資料夾路徑。 依預設， **/P** 會設為 **SQLdiag** 可執行檔所在的資料夾。 此支援資料夾包含 **SQLdiag** 支援檔案，例如 XML 組態檔、Transact-SQL 指令碼與公用程式在診斷收集期間所使用的其他檔案。 如果您使用此選項指定替代支援檔案路徑， **SQLdiag** 會將它需要的支援檔案自動複製到指定的資料夾 (如果它們尚不存在)。  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ sqldiag
 >   
 >  **SQLDIAG /P %cd%**  
   
- **/N** *output_folder_management_option*  
+ **/N** _output_folder_management_option_  
  設定 **SQLdiag** 在啟動時，是要覆寫或重新命名輸出資料夾。 可用的選項如下：  
   
  1 = 覆寫輸出資料夾 (預設值)  
@@ -113,12 +113,12 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** 在啟動時不會將輸出附加至目前的輸出資料夾。 它只能覆寫預設輸出資料夾 (選項 1)，或重新命名資料夾 (選項 2)，然後將輸出寫入新的預設輸出資料夾 SQLDIAG 中。  
   
- **/M** *machine1* [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  覆寫組態檔中指定的電腦。 依預設，組態檔是 SQLDiag.Xml，或是以 **/I** 參數來設定。 當指定一部以上的電腦時，請用空格隔開每一個電腦名稱。  
   
  使用 *@machinelistfile* 指定要儲存在組態檔中的電腦清單檔案名稱。  
   
- **/C** *file_compression_type*  
+ **/C** _file_compression_type_  
  設定 **SQLdiag** 輸出資料夾檔案所用的檔案壓縮類型。 可用的選項如下：  
   
  0 = 無 (預設值)  
@@ -153,7 +153,7 @@ sqldiag
   
  請注意， **SQLdiag** 會使用執行公用程式之電腦的本機時間。  
   
- **/A**  *SQLdiag_application_name*  
+ **/A**  _SQLdiag_application_name_  
  使 **SQLdiag** 公用程式的多個執行個體可以針對相同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體執行。  
   
  每一個 *SQLdiag_application_name* 會識別一個不同的 **SQLdiag**執行個體。 *SQLdiag_application_name* 執行個體和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體名稱之間沒有關聯性。  
@@ -162,11 +162,11 @@ sqldiag
   
  例如：  
   
- **SQLDIAG START /A**  *SQLdiag_application_name*  
+ **SQLDIAG START /A**  _SQLdiag_application_name_  
   
  它也可以與 **/R** 選項一起使用，將 **SQLdiag** 的特定執行個體註冊為服務。 例如：  
   
- **SQLDIAG /R /A** *SQLdiag_application_name*  
+ **SQLDIAG /R /A** _SQLdiag_application_name_  
   
 > [!NOTE]  
 >  **SQLdiag** 會自動將 DIAG$ 前置於為 *SQLdiag_application_name*所指定的執行個體名稱。 其可為在您將 **SQLdiag** 註冊成服務時，提供實用的服務名稱。  
@@ -202,7 +202,7 @@ sqldiag
   
  您也可以使用 **net start** 命令來啟動服務：  
   
- **net**  **start SQLDIAG**  
+ **net  start SQLDIAG**  
   
  **/U**  
  將 **SQLdiag** 取消註冊為服務。  
@@ -229,7 +229,7 @@ sqldiag
   
  只有指定 **SQLdiag** 具名執行個體的 **/A**引數，才可以與 **START**、 **STOP**或 **STOP_ABORT** 一起使用，來控制 **SQLdiag** 服務的特定執行個體。 例如：  
   
- **SQLDIAG START /A** *SQLdiag_application_name*  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>安全性需求  
  除非 **SQLdiag** 於一般模式下執行 (藉由指定 **/G** 命令列引數)，否則執行 **SQLdiag** 的使用者必須是 Windows **Administrator** 群組的成員，及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **系統管理員** 固定伺服器角色的成員。 依預設， **SQLdiag** 會使用 Windows 驗證來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，但它也支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證。  

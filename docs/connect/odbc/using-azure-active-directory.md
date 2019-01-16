@@ -11,12 +11,12 @@ ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7273baec814905d86e431c5a6a8f13313b9743e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 98f7e0ac3667bc8546a7bf7ce2d8036341bb2650
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536654"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206597"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>搭配 ODBC 驅動程式使用 Azure Active Directory
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Microsoft ODBC Driver for SQL Server 使用 13.1 版或更新可讓 ODBC 應用�
 |attribute|類型|值|預設|Description|
 |-|-|-|-|-|
 |`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`、`SQL_AU_PASSWORD`、`SQL_AU_AD_INTEGRATED`、`SQL_AU_AD_PASSWORD`、`SQL_AU_AD_INTERACTIVE`、`SQL_AU_RESET`|(未設定)|請參閱說明`Authentication`上述的關鍵字。 `SQL_AU_NONE` 提供以明確覆寫一組`Authentication`值在 DSN 和/或連接字串中，雖然`SQL_AU_RESET`取消設定此屬性，如果它已設定，讓較高的優先順序的 DSN 或連接字串值。|
-|`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|指標`ACCESSTOKEN`或 NULL|NULL|如果不是 null，會指定 azure Ad 存取權杖來使用。 它會指定存取權杖，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`連接字串關鍵字或其對等的屬性。 <br> **注意︰** ODBC Driver 13.1 版僅支援這上_Windows_。|
+|`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|指標`ACCESSTOKEN`或 NULL|NULL|如果不是 null，會指定 azure Ad 存取權杖來使用。 它會指定存取權杖，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`連接字串關鍵字或其對等的屬性。 <br> **注意：** ODBC Driver 13.1 版僅支援這上_Windows_。|
 |`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|（請參閱描述）|控制連接的加密。 `SQL_EN_OFF` 和`SQL_EN_ON`停用和啟用加密，分別。 如果前的屬性值`Authentication`未設定_無_或`SQL_COPT_SS_ACCESS_TOKEN`設定，並`Encrypt`中未指定的 DSN 」 或 「 連接字串，預設值是`SQL_EN_ON`。 否則預設為 `SQL_EN_OFF`。 如果連接屬性`SQL_COPT_SS_AUTHENTICATION`設定為不_無_，明確地設定`SQL_COPT_SS_ENCRYPT`所要的值如果`Encrypt`DSN 或連接字串中未指定。 此屬性可控制的有效值[是否使用加密連接。](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|不支援與 Azure Active Directory，因為 AAD 主體的密碼變更，無法透過 ODBC 連接來完成。 <br><br>SQL Server 驗證的密碼逾期已在 SQL Server 2005 中推出。 `SQL_COPT_SS_OLDPWD`屬性已新增至允許用戶端提供連線的舊和新的密碼。 設定這個屬性之後，提供者將不會針對第一次連接或後續連接使用連接集區，因為連接字串將會包含已經變更的「舊密碼」。|
 |`SQL_COPT_SS_INTEGRATED_SECURITY`|`SQL_IS_INTEGER`|`SQL_IS_OFF`、`SQL_IS_ON`|`SQL_IS_OFF`|_已被取代_; 使用`SQL_COPT_SS_AUTHENTICATION`設定為`SQL_AU_AD_INTEGRATED`改。 <br><br>強制使用 Windows 驗證 (在 Linux 和 macOS 上的 Kerberos) 的伺服器登入的存取驗證。 使用 Windows 驗證時，驅動程式會忽略使用者識別碼和密碼值的一部分`SQLConnect`， `SQLDriverConnect`，或`SQLBrowseConnect`處理。|
@@ -136,7 +136,7 @@ typedef struct AccessToken
     ...
     SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
-    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+    SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
     ...
 ~~~
 下列範例將示範使用 Azure Active Directory 存取權杖驗證與連接到 SQL Server 所需的程式碼。 在此情況下，就必須修改應用程式程式碼，來處理存取權杖，並將相關聯的連接屬性。

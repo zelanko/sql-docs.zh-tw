@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9f8c045260ed923f5e5229167f9222bef187fe13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eeb91d3cebd709b96fc08fe6317c90a08bdb4c7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695178"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211967"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>使用大型 CLR UDT (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "47695178"
   
  將第一個 (C#) 程式碼清單編譯成 DLL。  然後，將此 DLL 複製到 C 磁碟機的根目錄。  
   
- 執行第二個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便將組件加入至 master 資料庫。  
+ 執行第二個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以將組件新增至 master 資料庫。  
   
  使用 ole32.lib oleaut32.lib 編譯並執行第三個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連線到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
- 執行第四個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便從 master 資料庫中刪除組件。  
+ 執行第四個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以從 master 資料庫中刪除組件。  
   
 ```  
 // compile with: /target: library  
