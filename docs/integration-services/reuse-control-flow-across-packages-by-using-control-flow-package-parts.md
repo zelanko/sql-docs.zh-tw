@@ -53,7 +53,7 @@ ms.locfileid: "52542650"
   
 -   若要重複使用屬於目前專案的組件，請從 [工具箱] 拖放組件。  
   
--   若要重複使用屬於不同專案的組件，請使用 [Add Existing Control Flow Package Part] (加入現有的控制流程封裝組件)  命令。  
+-   若要重複使用屬於不同專案的組件，請使用 [Add Existing Control Flow Package Part] \(加入現有的控制流程封裝組件) 命令。  
   
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>拖放控制流程封裝組件  
  若要重複使用專案中的組件，只要從 [工具箱] 拖放組件項目，就像拖放任何其他工作或容器一樣。 組件可以多次拖放到封裝，在封裝中的多個位置重複使用邏輯。 使用這個方法重複使用屬於目前專案的組件。  
