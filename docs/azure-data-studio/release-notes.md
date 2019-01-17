@@ -3,7 +3,7 @@ title: 版本資訊和變更記錄
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 版本資訊
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,26 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63cf17e26ce554b901a3c9cc6db1fcb18162140d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143658"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361678"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 最新的版本資訊和變更記錄
 
-**[下載年 1 月版本 ！](download.md)**
+**[下載並安裝最新版的 ！](download.md)**
 
+
+## <a name="january-hotfix-2019-january-hotfix-release"></a>年 1 月 Hotfix 2019 （年 1 月 Hotfix 版本）
+
+發行日期：2019 年 1 月 16日日  
+版本：1.3.9
+
+1.3.9 在日文版的版本已修正 1.3.8 中探索到的一些問題。 如需詳細資訊，請參閱 <<c0> [ 年 1 月 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)。
+
+如需詳細資訊，請參閱 <<c0> [ 變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，並[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="january-2019-january-release"></a>2019 年 1 月年 （1 月發行）
 
@@ -37,8 +46,6 @@ ms.locfileid: "54143658"
 - 針對大型查詢 （預覽） 資料流的結果。
 - Community extensions: sp_executesql to sql 和新的資料庫。
 - 判斷是否已解決[bug，以及發出](https://github.com/Microsoft/azuredatastudio/milestone/19?closed=1)。
-
-如需詳細資訊，請參閱 <<c0> [ 變更記錄檔](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，並[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="november-2018-november-release"></a>2018 年 11 月起 （11 月發行）
 

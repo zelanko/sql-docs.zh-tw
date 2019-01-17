@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7188ace65e31d92cc5acfdc684457b219836d2d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527796"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361568"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System 中的處理和儲存體容量
 您的業務需求決定資料縮放單位，數目以及您需要在您 Analytics Platform System (APS) 的設備中計算節點磁碟的大小。 使用這些處理和儲存體計算來引導您購買和規劃決策的容量。  
@@ -85,14 +85,14 @@ Uplift 是提升的百分比的容量增加到下一個不同的資料列資料 
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
-|HPE|3 TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
+|HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
 |DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
-|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
-|DELL|3 TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4,320 TB|  
+|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8,640 TB|   
   
 說明：  
   
--   **磁碟機大小**是 1、 2 或 3 TB 的每個硬體廠商。  
+-   **磁碟機大小**是 1、 2 或 4 TB 的每個硬體廠商。  
   
 -   **每個計算節點的實體資料存放區**= （磁碟機大小） * （每個計算節點的 16 個磁碟）。 鏡像的磁碟未包含，因為它們是以提供備援。  
   

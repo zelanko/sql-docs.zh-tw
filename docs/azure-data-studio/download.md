@@ -3,7 +3,7 @@ title: 下載並安裝
 titleSuffix: Azure Data Studio
 description: 下載並為 Windows 安裝 Azure 資料 Studio、 macOS 或 Linux
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 01/17/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e9cd2130487a0ac50d6aa55a8a2e0f9cf9e80c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298715"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361604"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -26,16 +26,18 @@ ms.locfileid: "54298715"
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
 
-下載並安裝最新版本中，*年 1 月發行*:
+下載並安裝最新版本中，*年 1 月 Hotfix 版本*:
+
+1.3.9 在日文版的版本已修正 1.3.8 中探索到的一些問題。 如需詳細資訊，請參閱 <<c0> [ 年 1 月 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)。
 
 > [!NOTE]
 > 如果您正在從 SQL Operations Studio 更新，且想要保留您的設定、 鍵盤快速鍵或程式碼片段，請參閱[移動使用者設定](#move-user-settings)。
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|視窗|[使用者安裝程式 （建議選項）](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 年 1 月 09 日 |1.3.8|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 年 1 月 09 日 |1.3.8|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 年 1 月 09 日 |1.3.8|
+|視窗|[使用者安裝程式 （建議選項）](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 年 1 月 16日日 |1.3.9|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 年 1 月 16日日 |1.3.9|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 年 1 月 16日日 |1.3.9|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 

@@ -5,16 +5,16 @@ description: 了解如何安裝以安裝和管理 SQL Server 2019 巨量資料�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/15/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb012492811383154d10358e1c3ee40c422e3813
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: aec8f030a996e5dd86c44a5a655e98d4926988ed
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241689"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361408"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>安裝 mssqlctl 來管理 SQL Server 2019 巨量資料叢集
 
@@ -49,16 +49,24 @@ ms.locfileid: "54241689"
    ```bash
    sudo apt-get update && /
    sudo apt-get install -y python3 && /
-   sudo apt-get install -y python3-pip && /
-   sudo -H pip3 install --upgrade pip
+   sudo apt-get install -y python3-pip
    ```
 
+1. 升級 pip3:
+
+   ```bash
+   sudo -H pip3 install --upgrade pip
+   ```
+   
 1. 安裝**mssqlctl**使用下列命令：
 
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
-
+   
+   > [!NOTE]
+   > `--user`參數會 mssqlctl 安裝的 Python 使用者安裝目錄。 這通常是`~/.local/bin`Linux 上。 請將此目錄新增至您的路徑或瀏覽至使用者的安裝目錄，然後執行`./mssqlctl`從該處。
+   
 ## <a name="next-steps"></a>後續步驟
 
 如需有關巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)。
