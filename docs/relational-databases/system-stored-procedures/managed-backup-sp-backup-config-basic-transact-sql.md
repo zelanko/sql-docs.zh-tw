@@ -48,7 +48,7 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> 引數  
  @enable_backup  
- 啟用或停用指定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup已**元**。 設定時為必要參數[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]第一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您要變更現有[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態，這是選擇性參數。 在此情況下，未指定任何組態值會保留其現有的值。  
+ 啟用或停用指定資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 @enable_backup已 **元**。 設定時為必要參數[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]第一個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您要變更現有[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態，這是選擇性參數。 在此情況下，未指定任何組態值會保留其現有的值。  
   
  @database_name  
  啟用特定資料庫上的受管理的備份的資料庫名稱。  
