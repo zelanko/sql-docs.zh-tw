@@ -5,17 +5,17 @@ description: 了解如何安裝 SQL Server 2019 巨量資料叢集 （預覽） 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 54ea67e8b85d4e9a1a8cdbe4b40cf1bb9c3f1062
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241599"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372634"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
@@ -38,7 +38,14 @@ ms.locfileid: "54241599"
 | **sqlcmd** | 如需一些指令碼 | 查詢 SQL Server 的傳統命令列工具 ([進一歩](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15))。 | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | 如需一些指令碼 | 使用 Url 的資料傳輸的命令列工具。 | [Windows](https://curl.haxx.se/windows/) \| Linux： 安裝 curl 的套件 |
 
-<sup>1</sup>您必須使用 kubectl 1.10 或更新版本的版本。 此外，Kubectl 的版本應該是加號或減號的 Kubernetes 叢集中的一個次要版本。 如果您想要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) （Windows 10 上使用 cmd.exe，而非 Windows PowerShell 來執行 curl）。
+<sup>1</sup>您必須使用 kubectl 1.10 或更新版本的版本。 此外，kubectl 的版本應該是加號或減號的 Kubernetes 叢集中的一個次要版本。 如果您想要安裝 kubectl 用戶端上的特定版本，請參閱[安裝 kubectl 二進位透過 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) （Windows 10 上使用 cmd.exe，而非 Windows PowerShell 來執行 curl）。 
+
+> [!TIP]
+> 若要使用 kubectl 與先前部署的叢集在 Azure Kubernetes Service (AKS) 中，您必須設定叢集內容，使用下列 Azure CLI 命令：
+>
+>    ```azurecli
+>    az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>
+>    ```
 
 <sup>2</sup>您必須使用 Azure CLI 2.0.4 版或更新版本。 執行`az --version`以尋找版本，如有需要。
 
