@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -14,12 +14,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 205d731e262514c0782cad09af6bf36d24b25bc5
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: fdebe91359fbe9d7c9ef7aaadc38ba096427f651
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254414"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395385"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -52,16 +52,16 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定，目前使用者並未擁有指定的資料表*名稱*，此程序會尋找指定的資料表*名稱*資料庫所擁有擁有者。 如果資料表存在，就會傳回它的資料行。  
   
- [ @qualifier=] '*限定詞*'  
+ [ @qualifier=] '*qualifier*'  
  這是資料表限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*qualifier.owner.name*)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @col_type=] '*col_type*'  
  這是資料行類型。 *col_type*已**char (** 1 **)**，預設值是。 類型 R 會傳回最佳資料行或資料行集合，擷取的資料行或資料行的值，是用來在指定的任何資料列唯一識別資料表。 資料行可以是專為了這個目的而設計的虛擬資料行，也可以是資料表任何唯一索引的一個或多個資料行。 類型 V 會傳回在指定的資料表中 (如果有的話)，當任何交易更新資料列中的任何值時，資料來源所自動更新的一個或多個資料行。  
   
- [ @scope=] '*範圍*'  
+ [ @scope=] '*scope*'  
  這是 ROWID 的最小必要範圍。 *領域*已**char (** 1 **)**，預設值是 t。 範圍 C 指定 ROWID 只有在位於這個資料列時，才有效。 範圍 T 指定 ROWID 只對交易有效。  
   
- [ @nullable=] '*可為 null*'  
+ [ @nullable=] '*nullable*'  
  這是指特殊資料行是否能夠接受 Null 值。 *可為 null*已**char (** 1 **)**，預設值是 u。 O 指定不允許 null 值的特殊資料行。 U 指定部分可為 Null 的資料行。  
   
  [ @ODBCVer=] '*ODBCVer*'  
