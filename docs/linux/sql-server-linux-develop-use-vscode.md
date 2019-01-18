@@ -67,7 +67,7 @@ Mssql 擴充功能可讓 mssql 命令和 T-SQL IntelliSense 程式碼編輯器�
 請遵循下列步驟來建立連線設定檔，並連接到 SQL Server。
 
 > [!TIP] 
-> 您也可以建立及編輯使用者設定檔中的連線設定檔 (*settings.json*)。 若要開啟 設定檔，請選取**檔案** > **喜好設定** > **設定**。 如需詳細資訊，請參閱 [ 管理連線設定檔]。
+> 您也可以建立及編輯使用者設定檔中的連線設定檔 (*settings.json*)。 若要開啟 設定檔，請選取**檔案** > **喜好設定** > **設定**。 如需詳細資訊，請參閱 [管理連線設定檔]。
    
 1. 按下**Ctrl**+**Shift**+**P**或**F1**以開啟**命令選擇區**. 
    
@@ -250,7 +250,7 @@ Mssql 擴充功能可讓 mssql 命令和 T-SQL IntelliSense 程式碼編輯器�
 [適用於 Visual Studio Code 的 mssql 擴充功能]:https://aka.ms/mssql-marketplace
 [下載並安裝 Visual Studio Code]:https://code.visualstudio.com/Download
 [.Net Core instructions]:https://www.microsoft.com/net/core
-[ 管理連線設定檔]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
+[管理連線設定檔]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [連線疑難排解建議]:./sql-server-linux-troubleshooting-guide.md#connection
 [自訂快速鍵]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [教學課程：撰寫 TRANSACT-SQL 陳述式]:https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements
