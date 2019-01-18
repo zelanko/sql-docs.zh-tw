@@ -1,6 +1,7 @@
 ---
-title: 自動初始化 AlwaysOn 可用性群組 | Microsoft Docs
-ms.custom: ''
+title: 使用自動植入將可用性群組初始化
+description: 使用自動植入，自動為 Always On 可用性群組中的每個資料庫建立次要複本。
+ms.custom: seodec18
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd3f0d0c7b8fe29f6ad64cb5d006d2d8917b6cce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413655"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207527"
 ---
-# <a name="automatically-initialize-always-on-availability-group"></a>自動初始化 AlwaysOn 可用性群組
+# <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2016 引進了自動植入可用性群組。 當您使用自動植入建立可用性群組時，SQL Server 會自動為群組中的每個資料庫建立次要複本。 您不必再手動備份與還原次要複本。 若要啟用自動植入，請利用 T-SQL 或使用最新版的 SQL Server Management Studio 建立可用性群組。

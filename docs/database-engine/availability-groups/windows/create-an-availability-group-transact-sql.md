@@ -1,6 +1,7 @@
 ---
-title: 建立可用性群組 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: 使用 Transact-SQL (T-SQL) 建立可用性群組
+description: '使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組的步驟。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0460c654e9403b2d607197580462186e1ae1b805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44944c4dcc4c3f4b8cc45ee6f3ba57863316b9de
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512497"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213017"
 ---
-# <a name="create-an-availability-group-transact-sql"></a>建立可用性群組 (Transact-SQL)
+# <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>使用 Transact-SQL (T-SQL) 建立 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立和設定已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
   
@@ -30,13 +31,13 @@ ms.locfileid: "52512497"
   
      [必要條件](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
      [工作和對應 Transact-SQL 陳述式的摘要](#SummaryTsqlStatements)  
   
--   **使用下列項目，建立和設定可用性群組**  [Transact-SQL](#TsqlProcedure)  
+-   **若要建立和設定可用性群組，請使用：**[Transact-SQL](#TsqlProcedure)  
   
--   **範例：**  [設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)  
+-   **範例：**[設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -73,7 +74,7 @@ ms.locfileid: "52512497"
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL 建立和設定可用性群組  
   
 > [!NOTE]  
->  如需包含每一個這類 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之程式碼範例的範例組態程序，請參閱 [範例：設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)。  
+>  如需包含每一個這類 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式之程式碼範例的範例設定程序，請參閱[範例：設定使用 Windows 驗證的可用性群組](#ExampleConfigAGWinAuth)。  
   
 1.  連接到裝載主要複本的伺服器執行個體。  
   
@@ -81,7 +82,7 @@ ms.locfileid: "52512497"
   
 3.  將新的次要複本加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
-4.  如果是可用性群組中的每個資料庫，請使用 RESTORE WITH NORECOVERY 還原主要資料庫的最近備份來建立次要資料庫。 如需詳細資訊，請參閱 [範例︰設定使用 Windows 驗證的可用性群組 (TRANSACT-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)，從還原資料庫備份的步驟開始。  
+4.  如果是可用性群組中的每個資料庫，請使用 RESTORE WITH NORECOVERY 還原主要資料庫的最近備份來建立次要資料庫。 如需詳細資訊，請參閱[範例：設定使用 Windows 驗證的可用性群組 (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)，從還原資料庫備份的步驟開始。  
   
 5.  將每一個新的次要資料庫加入可用性群組。 如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
@@ -527,17 +528,17 @@ GO
   
 -   **部落格：**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (AlwaysOn - HADRON 學習系列：資料庫啟用 HADRON 時工作者集區的使用方式)](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：具備 HADRON 功能之資料庫的工作者集區使用方式)  
   
-     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **影片：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server 代碼 "Denali" AlwaysOn 系列第一部分：新一代高可用性解決方案簡介)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 1 部分：新一代高可用性解決方案簡介)  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On (Microsoft SQL Server 代碼 "Denali" AlwaysOn 系列第二部分：使用 AlwaysOn 建立任務關鍵性高可用性解決方案)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 2 部分：使用 Always On 建置任務關鍵性高可用性解決方案)  
   
 -   **白皮書：**  
   

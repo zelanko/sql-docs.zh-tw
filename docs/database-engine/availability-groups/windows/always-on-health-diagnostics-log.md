@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性群組健康情況診斷記錄 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性群組的 SQL Server 資源 DLL 健全狀況診斷記錄
+description: 描述 SQL Server 資源 DLL 如何監視 Always On 可用性群組的健全狀況。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9a41540e9617f9eb9543677c9982b8bbb5985c3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404998"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207757"
 ---
-# <a name="always-on-availability-groups-health-diagnostics-log"></a>Always On 可用性群組健康情況診斷記錄
+# <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>可用性群組的 SQL Server 資源 DLL 健全狀況診斷記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   由 Windows Server 容錯移轉叢集 (WSFC) 叢集執行的 SQL Server 資源 DLL 會使用 SQL Server 執行個體中稱為 [sp_server_diagnostics](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 的預存程序，來監視主要可用性複本的健康情況。  
   
@@ -25,7 +26,7 @@ ms.locfileid: "52404998"
   
  **使用 SQL Server 容錯移轉叢集診斷記錄**
  
- SQL Server 資源 DLL 從 sp_server_diagnostics 接收到的所有健康情況診斷，都自動儲存到 SQL Server 執行個體的預設 [Log] 目錄中 (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log)。 這些記錄檔稱為 SQLDIAG 記錄檔，且以 XEL (擴充事件) 檔案格式儲存。 這些檔案在 SQL Server 的 [Log] 目錄中具有以下格式：\<HOSTNAME>_\<INSTANCENAME>_SQLDIAG_X_XXXXXXXXX.xel。 藉由查看 SQLDIAG 記錄檔，您或許可以判斷可用性群組資源失敗或容錯移轉事件的根本原因。  
+ SQL Server 資源 DLL 從 sp_server_diagnostics 接收到的所有健康情況診斷，都自動儲存到 SQL Server 執行個體的預設 [Log] 目錄中 (%PROGRAMFILES%\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log)。 這些記錄檔稱為 SQLDIAG 記錄檔，且以 XEL (擴充事件) 檔案格式儲存。 這些檔案在 SQL Server 的 [Log] 目錄中具有下列格式：\<主機名稱>_\<執行個體名稱>_SQLDIAG_X_XXXXXXXXX.xel。 藉由查看 SQLDIAG 記錄檔，您或許可以判斷可用性群組資源失敗或容錯移轉事件的根本原因。  
   
  若要檢視 SQLDIAG 記錄檔，請將 .xel 檔案拖曳至 SQL Server Management Studio 中。  
   

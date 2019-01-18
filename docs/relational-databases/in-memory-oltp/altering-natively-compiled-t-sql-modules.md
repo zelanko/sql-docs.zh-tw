@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42f541e52838f94a94904dc2fa42cba44bdc1c97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92ff4159d8584a6670b60dd7c0d9c0b890c8df09
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746826"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204567"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>更改原生編譯的 T-SQL 模組
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，您可以在原生編譯的預存程序和其他原生編譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (如純量 UDF 和觸發程序) 上使用 `ALTER` 陳述式，執行 `ALTER` 作業。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，您可以在原生編譯預存程序和其他原生編譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (如純量 UDF 和觸發程序) 上使用 `ALTER` 陳述式來執行 `ALTER` 作業。  
   
 在原生編譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組上執行 `ALTER` 時，該模組會使用新的定義重新編譯。 進行重新編譯時，舊版的模組仍可繼續執行。 編譯完成之後，即會清空模組執行，並安裝新版的程序。 當您改變原生編譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組時，可以修改以下選項。  
   

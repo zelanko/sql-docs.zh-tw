@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 921994834433e7a4e2e081d6b8b43ce6294f6e09
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518291"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209207"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
 
@@ -176,7 +176,7 @@ ms.locfileid: "52518291"
   
     3.  按一下 **[升級功能、服務、應用程式和方案]**，然後按一下 **[確定]** 繼續。  
   
-    4.  此時會出現下列警告：「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的活頁簿即將升級為最新版本。 您對現有活頁簿所做的任何自訂內容都將遺失。 您要繼續嗎？」  
+    4.  會出現下列警告：「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的活頁簿即將升級為最新版本。 您對現有活頁簿所做的任何自訂內容都將遺失。 您要繼續嗎？」  
   
          此警告指的是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中，針對資料重新整理活動報告的活頁簿。 如果您自訂這些活頁簿，當現有的檔案取代成較新的版本時，您對這些活頁簿所做的任何變更都會遺失。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "52518291"
   
     10. 在伺服器陣列中升級方案和功能可能需要數分鐘才能完成。 在這段期間內，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接要求將會失敗，並出現如下的錯誤：「無法重新整理資料」或「嘗試執行要求的動作時發生錯誤。 請再試一次」。 升級完成後，伺服器將會變成可以使用，而且將不再發生這些錯誤。  
   
-8.  針對伺服器陣列中的每個 SQL Server Analysis Services (**) 服務** 重複此程序[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]：1) 執行 SQL Server 安裝程式 2) 執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。  
+8.  針對伺服器陣列中的每個 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 服務**重複此程序**：1) 執行 SQL Server 安裝程式 2) 執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。  
   
 9. 透過執行升級後步驟以及檢查伺服器陣列中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器版本，來確認升級成功。 如需詳細資訊，請參閱本文的[升級後的驗證工作](#verify)和下列章節：  
   
@@ -219,7 +219,7 @@ ms.locfileid: "52518291"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  檢閱現有部署中的下列資訊： **[類型]** 是 [撤銷] 或 [部署]、 **[檔案]** 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
+    2.  檢閱現有部署的下列資訊：[類型] 是 [撤銷] 或 [部署]、[檔案] 是 powerpivotwebapp.wsp 或 powerpivotfarm.wsp。  
   
     3.  若是與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案相關的部署或撤銷，請複製 **JobId** 的 GUID 值，然後將其貼入下列命令 (使用命令介面之 [編輯] 功能表上的 [標記]、[複製] 和 [貼上] 命令來複製 GUID)：  
   

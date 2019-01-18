@@ -1,6 +1,7 @@
 ---
-title: 連接到現有的次要複本頁面 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組的 [連接到現有次要複本] 頁面
+description: 描述 SQL Server Management Studio [可用性群組精靈] 中 [連接到現有次要複本] 頁面上找到的各種選項。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2feb2d658f6d333fbe1b1762ea8483562b79db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753976"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211227"
 ---
-# <a name="connect-to-existing-secondary-replicas-page"></a>連接到現有的次要複本頁面
+# <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>連接到現有次要複本頁面 - Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本說明主題描述 [連接到現有次要複本] 頁面的選項。 本主題同時適用於 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   

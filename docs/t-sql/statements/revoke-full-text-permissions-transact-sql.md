@@ -17,12 +17,12 @@ ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc9ea383cf3ef6353e5bfe7d6b346924f13b2468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 904f4c3b82a1f58ae6456820b1fae8e98f1c28dc
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840606"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590982"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 全文檢索權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  指定正在撤銷權限的全文檢索目錄。 範圍限定詞 **::** 為必要項目。  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  指定正在撤銷權限的全文檢索停用字詞表。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  

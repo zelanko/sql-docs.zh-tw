@@ -11,12 +11,12 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18dbf43f2305e9991d6fe37615f572e1dc464fda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edf6642557510b61b19766766250ee2869bf512f
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529522"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553010"
 ---
 # <a name="lesson-1-1---creating-a-new-integration-services-project"></a>課程 1-1 - 建立新的 Integration Services 專案
 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 (資料來源、資料來源檢視和封裝)，您在資料轉換方案中會用到它們。  
@@ -26,7 +26,7 @@ ms.locfileid: "52529522"
 > [!NOTE]  
 > 這個教學課程需要 Microsoft SQL Server Data Tools。  
 >   
-> 如需有關安裝 SQL Server Data Tools 的詳細資訊，請參閱＜ [SQL Server Data Tools 下載](https://msdn.microsoft.com/data/hh297027)＞。  
+> 如需有關安裝 SQL Server Data Tools 的詳細資訊，請參閱＜ [SQL Server Data Tools 下載](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017)＞。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>若要建立新的 Integration Services 專案  
   
@@ -47,5 +47,5 @@ ms.locfileid: "52529522"
 7.  在 [ **方案總管** ] 工具列上，以滑鼠右鍵按一下 [ **Package.dtsx**]、按一下 **[重新命名]**，然後將預設封裝重新命名為 **Lesson 1.dtsx**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 2：加入和設定一般檔案連接管理員](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+[步驟 2：新增和設定一般檔案連線管理員](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

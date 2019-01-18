@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20bcd05c479debbbb17883d354390899c1a1f10c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712519"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52791750"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
 本 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教學課程將告訴您資料驅動訂閱概念，方法是逐步解說建立資料驅動訂閱的簡單範例來產生篩選過的報表輸出，並將其儲存至檔案共用。 
@@ -32,7 +32,7 @@ ms.locfileid: "52712519"
  本教學課程分成三個課程：  
  課程 | 註解
  ------- | --------------
- [第 1 課：建立範例訂閱者資料庫](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 在這一課，您將建立包含訂閱者資訊的資料表本機 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 用於篩選之訂單號碼和輸出檔案格式的資訊。
+ [第 1 課：建立範例訂閱者資料庫](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 在這一課，您將建立包含訂閱者資訊的資料表本機 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 用於篩選的訂單號碼和輸出檔案格式資訊。
 [第 2 課：設定報表資料來源屬性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |在這一課，您將設定報表資料來源，讓報表可以依據排程自動執行。 自動處理需要預存認證。 您也會將報表資料集修改為包含訂閱者資料所提供的參數。 這個參數是用來根據訂單號碼篩選報表資料。
  [第 3 課：定義資料驅動訂閱](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | 在這一課，您將建立資料驅動訂閱。 本課程會逐步引導您完成「資料驅動訂閱精靈」的每個頁面。
 

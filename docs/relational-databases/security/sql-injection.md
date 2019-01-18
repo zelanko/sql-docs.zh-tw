@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e4fad8c85b620b817439529bfabd65361ed0207
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536128"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626342"
 ---
 # <a name="sql-injection"></a>SQL 資料隱碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52536128"
   
  下列指令碼顯示簡單的 SQL 資料隱碼。 此指令碼以使用者輸入的字串將硬式編碼的字串串連在一起，來建立 SQL 查詢：  
   
-```  
+```csharp
 var Shipcity;  
 ShipCity = Request.form ("ShipCity");  
 var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";  
@@ -40,19 +40,19 @@ var sql = "select * from OrdersTable where ShipCity = '" + ShipCity + "'";
   
  系統會提示使用者輸入城市的名稱。 如果該使用者輸入 `Redmond`，則指令碼組合的查詢會如下所示：  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond'  
 ```  
   
  不過，假設使用者輸入下列命令：  
   
-```  
+```sql
 Redmond'; drop table OrdersTable--  
 ```  
   
  在此情況下，指令碼會組合下列查詢：  
   
-```  
+```sql
 SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'  
 ```  
   
@@ -101,7 +101,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 ### <a name="use-type-safe-sql-parameters"></a>使用類型安全的 SQL 參數  
  **中的** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 集合會提供類型檢查和長度驗證。 如果您使用 **Parameters** 集合，會將輸入視為常值，而不是可執行的程式碼。 使用 **Parameters** 集合的另一個優點是您可以強制執行類型和長度檢查。 超出範圍的值會觸發例外狀況。 下列程式碼片段會說明如何使用 **Parameters** 集合：  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
 myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;  
 SqlParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",  
@@ -114,7 +114,7 @@ parm.Value = Login.Text;
 ### <a name="use-parameterized-input-with-stored-procedures"></a>與預存程序搭配使用參數化輸入  
  如果預存程序使用未篩選的輸入，則預存程序很可能會受到 SQL 資料隱碼的攻擊。 例如，下列程式碼易受攻擊：  
   
-```  
+```csharp
 SqlDataAdapter myCommand =   
 new SqlDataAdapter("LoginStoredProcedure '" +   
                                Login.Text + "'", conn);  
@@ -125,7 +125,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
 ### <a name="use-the-parameters-collection-with-dynamic-sql"></a>與動態 SQL 搭配使用 Parameters 集合  
  如果無法使用預存程序，您仍然可以使用參數，如下列程式碼範例所示。  
   
-```  
+```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter(  
 "SELECT au_lname, au_fname FROM Authors WHERE au_id = @au_id", conn);  
 SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",   
@@ -136,7 +136,7 @@ Parm.Value = Login.Text;
 ### <a name="filtering-input"></a>篩選輸入  
  篩選輸入可移除逸出字元，對於保護 SQL 資料隱碼也很有幫助。 不過，因為大量字元可能會產生問題，所以這不是可靠的防線。 下列範例會搜尋字元字串分隔符號。  
   
-```  
+```csharp
 private string SafeSqlLiteral(string inputSQL)  
 {  
   return inputSQL.Replace("'", "''");  
@@ -146,7 +146,7 @@ private string SafeSqlLiteral(string inputSQL)
 ### <a name="like-clauses"></a>LIKE 子句  
  請注意，如果您使用 `LIKE` 子句，萬用字元仍必定逸出：  
   
-```  
+```csharp
 s = s.Replace("[", "[[]");  
 s = s.Replace("%", "[%]");  
 s = s.Replace("_", "[_]");  
@@ -155,7 +155,7 @@ s = s.Replace("_", "[_]");
 ## <a name="reviewing-code-for-sql-injection"></a>檢閱 SQL 資料隱碼的程式碼  
  您應該檢閱所有呼叫 `EXECUTE`、 `EXEC`或 `sp_executesql`的程式碼。 您可以使用類似以下的查詢，來幫助您識別包含這些陳述式的程序。 這個查詢會檢查 `EXECUTE` 或 `EXEC`這些字後面的 1、2、3 或 4 個空格。  
   
-```  
+```sql
 SELECT object_Name(id) FROM syscomments  
 WHERE UPPER(text) LIKE '%EXECUTE (%'  
 OR UPPER(text) LIKE '%EXECUTE  (%'  
@@ -179,12 +179,12 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
   
  當您使用這項技術時，SET 陳述式可修改如下：  
   
-```  
---Before:  
+```sql
+-- Before:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname ='''   
  + @au_lname + N'''';  
   
---After:  
+-- After:  
 SET @temp = N'SELECT * FROM authors WHERE au_lname = '''   
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
@@ -192,7 +192,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
 ### <a name="injection-enabled-by-data-truncation"></a>資料截斷啟用資料隱碼  
  任何指派給變數的動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 若大於該變數已配置的緩衝區，就會被截斷。 能夠非預期傳遞長字串給預存程序來強制執行陳述式截斷的攻擊者，就可以操作此結果。 例如，由下列指令碼建立的預存程序很容易因為截斷而啟用資料隱碼。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
 @loginname sysname,  
 @old sysname,  
@@ -222,7 +222,7 @@ GO
   
  將 154 個字元傳遞至 128 個字元的緩衝區之後，攻擊者可以在不知道舊密碼的情況下，設定 sa 的新密碼。  
   
-```  
+```sql
 EXEC sp_MySetPassword 'sa', 'dummy',   
 '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012'''''''''''''''''''''''''''''''''''''''''''''''''''   
 ```  
@@ -232,7 +232,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
 ### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>使用 QUOTENAME(@variable, '''') 和 REPLACE() 時會截斷  
  如果超過已配置的空間，QUOTENAME() 和 REPLACE() 傳回的字串會自動被截斷。 下列範例所建立的預存程序會顯示可能發生的情況。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -269,13 +269,13 @@ GO
   
  因此，下列陳述式將所有使用者的密碼都設為先前程式碼傳遞的值  
   
-```  
+```sql
 EXEC sp_MyProc '--', 'dummy', '12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678'  
 ```  
   
  您可以在使用 REPLACE() 時超出已配置的緩衝區來強制執行字串截斷。 下列範例所建立的預存程序會顯示可能發生的情況。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MySetPassword  
     @loginname sysname,  
     @old sysname,  
@@ -314,7 +314,7 @@ GO
   
  下列計算可涵蓋所有情況：  
   
-```  
+```sql
 WHILE LEN(@find_string) > 0, required buffer size =  
 ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)   
  + (LEN(@input) % LEN(@find_string))  
@@ -323,7 +323,7 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
 ### <a name="truncation-when-quotenamevariable--is-used"></a>使用 QUOTENAME(@variable, ']') 時會截斷  
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體的名稱傳遞至使用 `QUOTENAME(@variable, ']')`格式的陳述式時，會發生截斷。 以下範例說明這點。  
   
-```  
+```sql
 CREATE PROCEDURE sp_MyProc  
     @schemaname sysname,  
     @tablename sysname,  

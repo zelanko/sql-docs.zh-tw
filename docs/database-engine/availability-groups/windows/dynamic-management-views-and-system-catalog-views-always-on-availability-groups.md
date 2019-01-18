@@ -1,6 +1,7 @@
 ---
-title: 動態管理檢視與系統目錄檢視 (Always On 可用性群組 - SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性群組的動態管理檢視與系統目錄檢視
+description: 動態管理和目錄檢視集合可協助您監視並診斷 Always On 可用性群組的健全狀況。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 79318dcd39a91eb8e3b9f570425f73838a1e53a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8126cd6d7dba1f8cfab856d4e7b76288581e7f87
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417011"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209307"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>動態管理檢視與系統目錄檢視 (Always On 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

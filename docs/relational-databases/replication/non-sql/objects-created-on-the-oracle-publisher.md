@@ -13,12 +13,12 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dad91e3b387903cd170af8fc6f181fbc6a174e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b47b98a79427ed596d1ae90734e30a63f82b106
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642356"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214067"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>在 Oracle 發行者端建立的物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

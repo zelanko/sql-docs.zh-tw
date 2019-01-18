@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dbf0368c86b906a2f482010779407353f771db8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392882"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588102"
 ---
 # <a name="set-index-options"></a>設定索引選項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "52392882"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法修改索引的屬性：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52392882"
   
 7.  按一下 [ **關閉**]。  
   
-8.  在 [檔案] 功能表上，選取 [儲存 <資料表名稱>]。  
+8.  在 [檔案] 功能表上，選取 [儲存 _table_name_]。  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>在物件總管中修改索引的屬性  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52392882"
   
 7.  變更任何和所有屬性的設定，以自訂索引。  
   
-8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - *index_name*] 對話方塊中的 [一般] 頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
+8.  若要加入、移除或變更索引資料行的位置，請選取 [索引屬性 - _index_name_] 對話方塊中的 [一般] 頁面。 如需相關資訊，請參閱 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -110,7 +110,7 @@ ms.locfileid: "52392882"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  

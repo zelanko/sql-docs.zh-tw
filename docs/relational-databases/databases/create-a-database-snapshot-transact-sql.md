@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a418de7f83355fedfed135665f699f62714572dc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560315"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205937"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "51560315"
 
 - 來源資料庫不能包含 MEMORY_OPTIMIZED_DATA 檔案群組。 如需詳細資訊，請參閱 [記憶體內部 OLTP 不支援的 SQL Server 功能](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)。
 
->  [!IMPORTANT]
+> [!IMPORTANT]
 > 如需其他重要考量的資訊，請參閱 [資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)資料庫快照集的唯一方式。  
   
 ##  <a name="Recommendations"></a> 建議  
  本節討論下列最佳作法：  
   
--   [最佳作法：命名資料庫快照集](#Naming)  
+-   [最佳做法：命名資料庫快照集](#Naming)  
   
--   [最佳作法：限制資料庫快照集的數目](#Limiting_Number)  
+-   [最佳做法：限制資料庫快照集的數目](#Limiting_Number)  
   
--   [最佳作法：用戶端連接到資料庫快照集](#Client_Connections)  
+-   [最佳做法：用戶端連線到資料庫快照集](#Client_Connections)  
   
-####  <a name="Naming"></a> 最佳作法：命名資料庫快照集  
+####  <a name="Naming"></a> 最佳做法：命名資料庫快照集  
  建立快照集之前，務必先考慮如何命名快照集。 每個資料庫快照集都需要一個唯一的資料庫名稱。 為了方便管理，快照集的名稱可加入用於識別資料庫的資訊，例如：  
   
 -   來源資料庫的名稱。  
@@ -77,13 +77,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> 最佳作法：限制資料庫快照集的數目  
+#### <a name="Limiting_Number"></a> 最佳做法：限制資料庫快照集的數目  
  隨時間建立一系列的快照集，可擷取來源資料庫的循序快照集。 每個快照集都會一直保存到確實卸除該快照集為止。 因為每個快照集都會隨著原始頁面更新而不斷成長，所以您可能想要在建立新快照集之後，刪除較早的快照集，以節省磁碟空間。  
   
 
 **注意！** 若要還原為資料庫快照集，您需要刪除該資訊庫中的任何其他快照集。  
   
-####  <a name="Client_Connections"></a> 最佳作法：用戶端連接到資料庫快照集  
+####  <a name="Client_Connections"></a> 最佳做法：用戶端連接到資料庫快照集  
  若要使用資料庫快照集，用戶端需要知道去哪裡尋找。 正在建立或刪除某個資料庫快照集時，使用者仍可讀取其他快照集。 但是，當您以新的快照集取代現有的快照集時，必須將用戶端重新導向至新的快照集。 使用者可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，手動連接到資料庫快照集。 但是，若要支援實際執行環境，您應該建立程式設計方案，將撰寫報表的用戶端明確導向至資料庫最新的資料庫快照集。  
   
 

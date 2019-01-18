@@ -13,16 +13,16 @@ ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8146347d51af01bee3e84af6f29ea0eb2986e6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f4b8745432433410ed94b54ea9022fc5a8b1fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780946"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214315"
 ---
 # <a name="other-non-sql-server-subscribers"></a>其他非 SQL Server 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如需[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援的非 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]訂閱者清單，請參閱＜ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)＞。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
+  如需 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 支援的非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者清單，請參閱[非 SQL Server 訂閱者](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 本主題包含 ODBC 驅動程式和 OLE DB 提供者需求的資訊。  
   
 ## <a name="odbc-driver-requirements"></a>ODBC 驅動程式需求  
  ODBC 驅動程式：  

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3375af07fc7231321c96c2aa03d95dbbdc6709f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506407"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980004"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -152,13 +152,13 @@ LOCATION = \<location_path> **HADOOP**
 針對 HADOOP，指定適用於 Hadoop 叢集的統一資源識別項 (URI)。  
 `LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
 NameNode_URI：Hadoop 叢集 Namenode 的電腦名稱或 IP 位址。  
-連接埠：Namenode IPC 連接埠。 這是以 Hadoop 中的 fs.default.name 組態參數表示。 如果未指定值，預設將會使用 8020。  
+port：Namenode IPC 連接埠。 這是以 Hadoop 中的 fs.default.name 組態參數表示。 如果未指定值，預設將會使用 8020。  
 範例 `LOCATION = 'hdfs://10.10.10.10:8020'`
 
 針對具有 Hadoop 的 Azure Blob 儲存體，指定用於連線到 Azure Blob 儲存體的 URI。  
 `LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
 wasb[s]：指定 Azure Blob 儲存體的通訊協定。 [s] 是選用的，而且會指定安全的 SSL 連線；從 SQL Server 傳送的資料會透過 SSL 通訊協定，安全地進行加密。 強烈建議您使用 'wasbs'，而不是 'wasb'。 請注意，此位置可以使用 asv[s]，而不是 wasb[s]。 asv[s] 語法已被取代，並將在未來的版本中移除。  
-容器：指定 Azure Blob 儲存體容器的名稱。 若要指定網域儲存體帳戶的根容器，請使用網域名稱而不是容器名稱。 根容器是唯讀的，因此無法將資料寫回至容器。  
+container：指定 Azure Blob 儲存體容器的名稱。 若要指定網域儲存體帳戶的根容器，請使用網域名稱而不是容器名稱。 根容器是唯讀的，因此無法將資料寫回至容器。  
 account_name：Azure 儲存體帳戶的完整網域名稱 (FQDN)。  
 範例 `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
 
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 如需有關 RDBMS 的逐步教學課程，請參閱[跨資料庫查詢入門 (垂直資料分割)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/)。  
 
 **BLOB_STORAGE**   
-此類型僅用於大量作業，`LOCATION` 必須是 Azure Blob 儲存體和容器的有效 URL。 請不要將 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。 若 Blob 物件並非公用，則 `CREADENTIAL` 為必要項目。 例如： 
+此類型僅用於大量作業，`LOCATION` 必須是 Azure Blob 儲存體和容器的有效 URL。 請不要將 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。 若 Blob 物件並非公用，則 `CREDENTIAL` 為必要項目。 例如： 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -401,7 +401,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-azure-sql-database"></a>範例：Azure SQL Database
+## <a name="examples-azure-sql-database"></a>範例:Azure SQL Database
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. 建立分區對應管理員外部資料來源
 若要建立參考 SHARD_MAP_MANAGER 的外部資料來源，請指定在 Azure SQL Database 中裝載分區對應管理員，或在 Azure 虛擬機器上裝載 SQL Server 資料庫的邏輯伺服器名稱。
@@ -442,10 +442,10 @@ WITH (
 );
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>範例：Azure SQL 資料倉儲
+## <a name="examples-azure-sql-data-warehouse"></a>範例:Azure SQL 資料倉儲
 
 ### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. 建立參考 Azure Data Lake Store 的外部資料來源
-Azure Data Lake Store 連線能力是以您的 ADLS URI 與您的 Azure Acitve Directory 應用程式的服務主體為基礎。 說明如何建立此應用程式的文件可以在[使用 Azure Active Directory 的 Data Lake Store 驗證](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)中找到。
+Azure Data Lake Store 連線能力是以 ADLS URI 與 Azure Acitve Directory 應用程式的服務主體為基礎。 說明如何建立此應用程式的文件可以在[使用 Azure Active Directory 的 Data Lake Store 驗證](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)中找到。
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -465,7 +465,7 @@ WITH (TYPE = HADOOP,
 
 
 
-## <a name="examples-parallel-data-warehouse"></a>範例：平行處理資料倉儲
+## <a name="examples-parallel-data-warehouse"></a>範例:平行處理資料倉儲
 
 ### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. 在已啟用下推的情況下，建立參考 Hadoop 的外部資料來源
 指定 JOB_TRACKER_LOCATION 選項，以便對適用於 PolyBase 查詢的 Hadoop 啟用下推計算。 啟用之後，PolyBase 會使用以成本為基礎的決策來判斷應該將查詢計算推送到 Hadoop，還是應該移動所有資料來處理 SQL Server 中的查詢。 
@@ -491,7 +491,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 );
 ```
 
-## <a name="examples-bulk-operations"></a>範例：大量作業   
+## <a name="examples-bulk-operations"></a>範例:大量作業   
 ### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. 針對從 Azure Blob 儲存體擷取資料的大量作業，建立外部資料來源。   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。   
 針對使用 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 或 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 的大量作業，請使用下列資料來源。 使用的認證必須使用 `SHARED ACCESS SIGNATURE` 作為身分識別來建立，SAS 權杖中不應具有前置 `?`，必須至少擁有應載入檔案的讀取權限 (例如 `srt=o&sp=r`)，並且到期時間必須有效 (所有日期都必須是 UTC 時間)。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。   

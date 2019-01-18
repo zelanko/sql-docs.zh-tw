@@ -1,6 +1,7 @@
 ---
-title: 執行可用性群組之規劃的手動容錯移轉 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 執行可用性群組的已規劃手動容錯移轉
+description: 本主題描述如何執行 Always On 可用性群組的已規劃手動容錯移轉。
+ms.custom: seodec18
 ms.date: 10/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b19d83a07e083598689595120b30857eea127ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854056"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212157"
 ---
-# <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組之規劃的手動容錯移轉 (SQL Server)
+# <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>執行 Always On 可用性群組的已規劃手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在不遺失資料的情況下針對 AlwaysOn 可用性群組執行手動容錯移轉 (*「已規劃的手動容錯移轉」*(Planned Manual Failover))。 可用性群組會在可用性複本層級容錯移轉。 規劃的手動容錯移轉和任何一個 AlwaysOn 可用性群組容錯移轉一樣，會將次要複本轉為主要角色。 同時，容錯移轉也會將先前的主要複本轉成次要角色。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "47854056"
   
 ###  <a name="Security"></a> 安全性 
   
-####  <a name="Permissions"></a> 權限 
+####  <a name="Permissions"></a> Permissions 
  可用性群組需要 ALTER AVAILABILITY GROUP 權限。 同時也需要 CONTROL AVAILABILITY GROUP、ALTER ANY AVAILABILITY GROUP 或 CONTROL SERVER 權限。 
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio 

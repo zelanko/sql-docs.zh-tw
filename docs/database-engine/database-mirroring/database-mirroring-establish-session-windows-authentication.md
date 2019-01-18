@@ -14,12 +14,12 @@ ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9270b71457bdbb6e932015ddcad8118ef2f42cdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 97f3e713cc130456c40765ad84678739e7c6e6f3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529925"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204209"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>資料庫鏡像 - 建立工作階段 - Windows 驗證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "52529925"
   
  準備好鏡像資料庫之後 (請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md))，就可以建立資料庫鏡像工作階段。 主體、鏡像及見證伺服器執行個體必須是個別的伺服器執行個體，且應位於個別的主機系統上。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  我們建議您將資料庫鏡像作業排定在離峰時間執行，因為設定鏡像會影響效能。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  給定的伺服器執行個體可參與具有相同或不同夥伴的多個並行資料庫鏡像工作階段。 伺服器執行個體可以在某些工作階段中是夥伴，在其他工作階段中是見證。 鏡像伺服器執行個體必須執行與主體伺服器執行個體相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。 此外，我們強烈建議您在可比較而且可以處理相同工作負載的系統上執行這些伺服器執行個體。  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>建立資料庫鏡像工作階段  
@@ -44,7 +44,7 @@ ms.locfileid: "52529925"
      資料庫鏡像工作階段中的每個伺服器執行個體都需要一個資料庫鏡像端點。 如果端點不存在，您就必須自行建立。  
   
     > [!NOTE]  
-    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱[資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)。  
+    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 有兩種傳輸安全性可用於資料庫鏡像：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱[資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)。  
   
      確定在每個夥伴伺服器上，資料庫鏡像都有端點可供使用。 不論要支援的鏡像工作階段數有多少，伺服器執行個體只能有一個資料庫鏡像端點。 若要讓資料庫鏡像工作階段的夥伴獨佔使用此伺服器執行個體，您可以將夥伴的角色指派給端點 (ROLE**=** PARTNER)。 如果您也想讓其他資料庫鏡像工作階段的見證使用此伺服器，請將端點的角色指派為 ALL。  
   

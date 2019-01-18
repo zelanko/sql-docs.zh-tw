@@ -14,27 +14,27 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c491a67b55db4a730db2bb7fcd8977162657e516
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
+ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410905"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531073"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 這是疑難排解技術的完整清單，於無法連接到 SQL Server Database Engine 時使用。 這些步驟不是按照您最可能處理的問題順序排列。 這些步驟是從最基本到最複雜的問題順序排列。 這些步驟假設您使用 TCP/IP 通訊協定從另一部電腦連接到 SQL Server，這是最常見的狀況。 這些步驟是針對 SQL Server 和用戶端應用程式都執行 Windows 10 的 SQL Server 2016 所撰寫，不過這些步驟一般也適用於其他版本的 SQL Server 和其他作業系統，只是要略加修改。
 
-這些指示在疑難排解「**連接到伺服器**」錯誤時特別有用，它可以是錯誤號碼：11001 (或 53)，嚴重性：20，狀態：0，錯誤訊息如：
+這些指示在疑難排解「**連線到伺服器**」錯誤時特別有用，它可以是錯誤號碼：11001 (或 53)，嚴重性：20，狀態：0，錯誤訊息如：
 
 *   「建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。 找不到伺服器或是無法存取。 檢查執行個體名稱是否正確以及 SQL Server 執行個體是否設定為允許遠端連接。 " 
 
-*   「(提供者︰具名管道提供者，錯誤︰40 - 無法開啟 SQL Server 連線) (Microsoft SQL Server，錯誤︰53)」或「(提供者︰TCP 提供者，錯誤︰0 - 沒有這類主機。) (Microsoft SQL Server，錯誤︰11001)」 
+*   「(提供者：具名管道提供者，錯誤: 40 - 無法開啟 SQL Server 連線) (Microsoft SQL Server，錯誤：53)」或「(提供者：TCP 提供者，錯誤: 0 - 沒有這類主機。) (Microsoft SQL Server，錯誤：11001)」 
 
 此錯誤通常表示找不到 SQL Server 電腦，或者無法辨識 TCP 連接埠號碼、連接埠號碼不正確，或被防火牆封鎖。
 
->  [!TIP]
+> [!TIP]
 >  在 [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server) (解決 SQL Server 的連接錯誤)，從 [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] Customer Support Services 取得互動疑難排解頁面。
 
 ### <a name="not-included"></a>不包括
@@ -64,8 +64,8 @@ ms.locfileid: "52410905"
     2.  在記錄檢視器中，按一下工具列上的 [篩選] 按鈕。 在 [訊息包含文字] 方塊中輸入**伺服器正在接聽**，按一下 [套用篩選]，然後按一下 [確定]。
     3.  應該會列出類似「伺服器正在 [ 'any' \<ipv4> 1433] 上接聽」的訊息。 此訊息表示這個 SQL Server 執行個體正在接聽此電腦上的所有 IP 位址 (IP 第 4 版)，以及接聽 TCP 連接埠 1433。 (TCP 連接埠 1433 通常是 Database Engine 所使用的連接埠。 只有一個 SQL Server 執行個體可以使用連接埠，所以，如果安裝了多個 SQL Server 執行個體，有些執行個體必須使用其他的連接埠號碼)。記下您嘗試連接的 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 執行個體所使用的連接埠號碼。 
 
-    >    [!NOTE] 
-    >    可能會列出 IP 位址 127.0.0.1。 它稱為回送介面卡位址，只能從同一部電腦上的處理序連接。 它可用於疑難排解，但無法使用它從另一部電腦連線。
+    > [!NOTE] 
+    > 可能會列出 IP 位址 127.0.0.1。 它稱為回送介面卡位址，只能從同一部電腦上的處理序連接。 它可用於疑難排解，但無法使用它從另一部電腦連線。
 
 ## <a name="enable-protocols"></a>啟用通訊協定
 
@@ -98,20 +98,20 @@ ms.locfileid: "52410905"
 |預設執行個體|電腦名稱|ACCNT27|
 |具名執行個體|電腦名稱\執行個體名稱|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  當從同一部電腦上的用戶端應用程式連接到 SQL Server 時，會使用共用記憶體通訊協定。 共用記憶體是一種本機具名管道，因此有時會發生有關管道的錯誤。
 
 如果此時遇到錯誤，您必須先解決問題才能繼續。 問題的發生有很多可能的原因。 登入可能沒有連接的授權。 可能遺漏了預設資料庫。
 
->    [!NOTE] 
+> [!NOTE]
 >    某些刻意傳遞至用戶端的錯誤訊息，未提供疑難排解問題的足夠資訊。 這是為免向攻擊者提供 SQL Server 相關資訊的安全性功能。 若要檢視有關錯誤的完整資訊，請查看 SQL Server 錯誤記錄檔。 裡面會提供詳細資料。 如果您收到錯誤： **18456 使用者登入失敗**，請參閱《線上叢書》主題 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 有關於錯誤碼的其他資訊。 Aaron Bertrand 的部落格有內容豐富的錯誤碼清單，請參閱 [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)。 如果可以連接，請使用 SSMS 在物件總管的 [管理] 區段中檢視錯誤記錄檔。 否則，請使用 Windows 記事本程式來檢視錯誤記錄檔。 預設位置會隨著您的版本而不同，並且可以在安裝期間變更。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
 
 4.   如果可以使用共用記憶體連接，請使用 TCP 測試連接。 名稱前面可以指定 **tcp:** 以強制 TCP 連線。 例如：
 
 |連接到：|類型：|範例|
 |-----------------|---------------|-----------------|
-|預設執行個體|tcp: 電腦名稱|tcp:ACCNT27|
-|具名執行個體|tcp: 電腦名稱\執行個體名稱|tcp:ACCNT27\PAYROLL|
+|預設執行個體|tcp:電腦名稱|tcp:ACCNT27|
+|具名執行個體|tcp:電腦名稱/執行個體名稱|tcp:ACCNT27\PAYROLL|
   
 如果可以使用共用記憶體連接，但不能使用 TCP 連接，則必須修正 TCP 問題。 最可能的問題是未啟用 TCP。 若要啟用 TCP，請參閱前文的 **啟用通訊協定** 步驟。
 
@@ -144,7 +144,7 @@ Windows XP Service Pack 2 從多年前就開始這麼做：Windows 防火牆已�
   * 啟動 SQL Server Browser 服務。 請返回 **收集 SQL Server 執行個體的相關資訊**一節 (第 1.d 節)。
   * 防火牆正在封鎖 SQL Server Browser 服務。 在防火牆中開啟 UDP 連接埠 1434。 請返回 **在防火牆中開啟連接埠**一節。 (請確定您開啟 UDP 連接埠，而非 TCP 連接埠。 這些是不同的項目)。
   * 路由器正在封鎖 UDP 連接埠 1434 資訊。 UDP 通訊 (使用者資料包通訊協定) 不適合通過路由器。 這會防止低優先順序流量填滿網路。 您可以設定讓路由器轉送 UDP 流量，或者決定連線時一律提供連接埠號碼。
-  * 如果用戶端電腦使用的是 Windows 7 或 Windows Server 2008 (或較新的作業系統)，作業系統可能會捨棄UDP 流量，因為傳回伺服器回應的 IP 位址和被查詢的位址不同。 這是封鎖「鬆散的來源對應」的安全性功能。 如需詳細資訊，請參閱《線上叢書》主題 **疑難排解：等候時間逾時** 的 [多個伺服器 IP 位址](https://msdn.microsoft.com/library/ms190181.aspx)一節。 這是 SQL Server 2008 R2 的文章，但是原則仍然適用。 您可以設定讓用戶端使用正確的 IP 位址，或者決定連線時一律提供連接埠號碼。
+  * 如果用戶端電腦使用的是 Windows 7 或 Windows Server 2008 (或較新的作業系統)，作業系統可能會捨棄UDP 流量，因為傳回伺服器回應的 IP 位址和被查詢的位址不同。 這是封鎖「鬆散的來源對應」的安全性功能。 如需詳細資訊，請參閱下列《線上叢書》主題的**多個伺服器 IP 位址**一節：[疑難排解：等候時間逾時](https://msdn.microsoft.com/library/ms190181.aspx)。 這是 SQL Server 2008 R2 的文章，但是原則仍然適用。 您可以設定讓用戶端使用正確的 IP 位址，或者決定連線時一律提供連接埠號碼。
      
 3. 一旦可以使用 IP 位址 (或具名執行個體的 IP 位址和執行個體名稱) 連線，請嘗試使用電腦名稱 (或具名執行個體的電腦名稱和執行個體名稱) 連線。 將 `tcp:` 放在電腦名稱前面，以強制 TCP/IP 連線。 例如， `ACCNT27`電腦上的預設執行個體使用 `tcp:ACCNT27` 。該電腦上稱為 `PAYROLL`的具名執行個體使用 `tcp:ACCNT27\PAYROLL` 。如果可以使用 IP 位址連線，但不能使用電腦名稱連線，表示有名稱解析問題。 請返回 **測試 TCP/IP 連線**一節 (第 4 節)。
 

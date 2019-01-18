@@ -5,19 +5,18 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4cff9d79f6c357d419f6ef058e58ea4cc1da4e2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 36e7784eb1725505a00225d237d5016945f5f7c7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416769"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819076"
 ---
 # <a name="filter-operators-master-data-services"></a>篩選運算子 (Master Data Services)
 
@@ -40,7 +39,7 @@ ms.locfileid: "52416769"
 |**小於**|傳回小於指定準則的屬性值。 例如，若要傳回以小於 **F**之字母開頭的屬性值，請輸入 **F**。|  
 |**大於或等於**|傳回大於或等於指定準則的屬性值。 例如，若要傳回以數字 **3** 或大於 3 開頭的屬性值，請輸入 **3**。|  
 |**小於或等於**|傳回小於或等於指定準則的屬性值。 例如，若要傳回以數字 **3** 或小於 **3**開頭的屬性值，請輸入 3。|  
-|**比對**|使用模糊查閱索引來篩選結果。<br /><br /> 使用 [相似度層級] 欄位來指定屬性值必須符合所指定之篩選準則的程度 (預設為 30%)。<br /><br /> 在 [演算法] 清單方塊中選取下列其中一項：<br /><br /> **Levenshtein**：以編輯 (例如新增或刪除) 次數為基礎的距離，這是某個字串要比對另一個字串所需的距離。 這是預設值。 不需要任何額外的參數。<br /><br /> **Jaccard**：嘗試比對多個字串時最適合的指標。 此搜尋支援其他內含項目偏差的參數 (請參閱下面)。<br /><br /> **Jaro-Winkler**：最適用於尋找重複人名的距離。 此方法比其他任何方法傳回的結果還多。 不支援內含項目偏差。<br /><br /> **最長的通用子序列**：根據某個模式字母依序出現的子序列運作，但是可以分隔這些字母 (例如，"MSR" 是 "MaSteR" 的子序列)。 此搜尋支援其他內含項目偏差的參數 (請參閱下面)。<br /><br /> <br /><br /> 注意：針對 [Jaccard] 或 [最長的通用子序列] 演算法，新增 [內含項目偏差]。 這是以介於 0 和 1 之間的小數位數百分比提供的長度臨界值，預設值為 .62。 臨界值較低時，會增加傳回的可能符合項目數目。|  
+|**比對**|使用模糊查閱索引來篩選結果。<br /><br /> 使用 [相似度層級] 欄位來指定屬性值必須符合所指定之篩選準則的程度 (預設為 30%)。<br /><br /> 在 [演算法] 清單方塊中選取下列其中一項：<br /><br /> **Levenshtein**：以編輯 (例如新增或刪除) 次數為基礎的距離，這是某個字串要比對另一個字串所需的距離。 這是預設值。 不需要任何額外的參數。<br /><br /> **Jaccard**：嘗試比對多個字串時最適合的索引。 此搜尋支援其他內含項目偏差的參數 (請參閱下面)。<br /><br /> **Jaro-Winkler**：最適用於尋找重複人名的距離。 此方法比其他任何方法傳回的結果還多。 不支援內含項目偏差。<br /><br /> **最長的通用子序列**：根據某個模式字母依序出現的子序列運作，但可以分隔這些字母 (例如 "MSR" 是 "MaSteR" 的子序列)。 此搜尋支援其他內含項目偏差的參數 (請參閱下面)。<br /><br /> <br /><br /> 注意：針對 [Jaccard] 或 [最長的通用子序列] 演算法，新增 [內含項目偏差]。 這是以介於 0 和 1 之間的小數位數百分比提供的長度臨界值，預設值為 .62。 臨界值較低時，會增加傳回的可能符合項目數目。|  
 |**不符合**|使用模糊查閱索引來篩選結果。 使用 [相似度層級] 欄位來指定屬性值不可符合所指定篩選準則的程度。|  
 |**包含模式**|使用 .NET Framework 規則運算式，以指定模式篩選結果。 如需有關規則運算式的詳細資訊，請參閱 MSDN Library 中的 [規則運算式語言項目](https://go.microsoft.com/fwlink/?LinkId=164401) 。|  
 |**不包含模式**|使用 .NET Framework 規則運算式，篩選與指定之模式不相符的結果。 如需有關規則運算式的詳細資訊，請參閱 MSDN Library 中的 [規則運算式語言項目](https://go.microsoft.com/fwlink/?LinkId=164401) 。|  

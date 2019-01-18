@@ -1,6 +1,7 @@
 ---
-title: 可用性群組尚未準備進行自動容錯移轉 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組尚未就緒，無法自動容錯
+description: 找出 Always On 可用性群組尚未準備進行容錯移轉的可能原因。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dec114e42921c7d7619ad3da6252d54e534826a9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2951f586d252d058d7de542160f8b103b6a79bef
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601598"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210107"
 ---
-# <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性群組尚未就緒，無法自動容錯
+# <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 可用性群組尚未準備進行自動容錯移轉
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>簡介  

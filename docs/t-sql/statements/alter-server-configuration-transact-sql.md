@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52149ae289f0cea89ff31a501acaaf8d0c7cbd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 352cd03017b33247c66f7eb0090cd79d0d5cd532
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545617"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980094"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +196,7 @@ SQLDUMPEREDUMPFLAGS
  若要識別目的地叢集，請指定下列其中一個值：  
   
  *windows_cluster*  
- WSFC 的 netwirj 名稱。 您可以指定簡短名稱或完整網域名稱。 為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，簡短名稱可能會產生混淆，而且 DNS 可能會傳回錯誤的 IP 位址。 因此，我們建議您指定完整網域名稱。  
+ WSFC 的網路名稱。 您可以指定簡短名稱或完整網域名稱。 為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，簡短名稱可能會產生混淆，而且 DNS 可能會傳回錯誤的 IP 位址。 因此，我們建議您指定完整網域名稱。  
   
   > [!NOTE] 
   > 不再支援使用這項設定來進行跨叢集移轉。 若要執行跨叢集移轉，請使用分散式可用性群組或透過其他方法，例如，記錄傳送。 
@@ -237,10 +237,10 @@ SQLDUMPEREDUMPFLAGS
  OFF  
  停用將大型 NUMA 硬體節點分割成較小 NUMA 節點的自動軟體資料分割。 您需要重新啟動資料庫引擎，才能變更執行中的值。  
 
-> [!WARNING]  
+> [!WARNING]
 > 搭配 ALTER SERVER CONFIGURATION 陳述式使用 SQL Server Agent 與 SOFT NUMA 選項時，有個已知的行為問題。  以下是建議的作業順序：  
 > 1) 停止 SQL Server Agent 的執行個體。  
-> 2) 執行 ALTER SERVER CONFGURATION  SOFT NUMA 選項。  
+> 2) 執行 ALTER SERVER CONFIGURATION  SOFT NUMA 選項。  
 > 3) 重新啟動 SQL Server 執行個體。  
 > 4) 啟動 SQL Server Agent 的執行個體。  
   

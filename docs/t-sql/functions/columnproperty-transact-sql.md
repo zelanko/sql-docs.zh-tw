@@ -20,12 +20,12 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5acd726764c2b672287af418f088963a4a5acef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711886"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980544"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ COLUMNPROPERTY ( id , column , property )
 |**AllowsNull**|允許 Null 值|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**ColumnId**|對應於 **sys.columns.column_id** 的資料行識別碼值。|資料行識別碼<br /><br /> **注意：** 當查詢多個資料行時，資料行識別碼值順序可能會有間距。|  
 |**FullTextTypeColumn**|資料表中保存 *column* 之文件類型資訊的 TYPE COLUMN。|此函式的第二個參數所傳遞之資料行名稱運算式的全文檢索 TYPE COLUMN 識別碼。|  
-|**GeneratedAlwaysType**|是系統產生的資料行值。 對應到 **sys.columns.generated_always_type**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不一律會產生<br /><br /> 1：一律作為資料列開頭產生<br /><br /> 2：一律作為資料列結尾產生|  
+|**GeneratedAlwaysType**|是系統產生的資料行值。 對應到 **sys.columns.generated_always_type**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：一律不會產生<br /><br /> 1：一律在資料列開頭產生<br /><br /> 2：一律在資料列結尾產生|  
 |**IsColumnSet**|資料行是資料行集。 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsComputed**|資料行是一個計算資料行。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsCursorType**|程序參數的類型是 CURSOR。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsDeterministic**|資料行具有決定性。 這個屬性只適用於計算資料行和檢視資料行。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。 不是計算資料行或檢視資料行。|  
 |**IsFulltextIndexed**|資料行已完成全文檢索索引的登錄。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
-|**IsHidden**|是系統產生的資料行值。 對應至 **sys.columns.is_hidden**|**適用於**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不隱藏<br /><br /> 1：隱藏|  
+|**IsHidden**|是系統產生的資料行值。 對應至 **sys.columns.is_hidden**|**適用於**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不隱藏<br /><br /> 1：Hidden|  
 |**IsIdentity**|資料行使用 IDENTITY 屬性。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsIdNotForRepl**|資料行會檢查 IDENTITY_INSERT 設定。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
 |**IsIndexable**|資料行可以建立索引。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  

@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: dd3481d797bca1822255b1ac6cf30a1123c2e669
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: a9d14601c7fad616d4d5e2d5420adcea458b11fb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697188"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206247"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,11 +120,11 @@ PHYSICAL_ONLY
 DATA_PURITY  
  使 DBCC CHECKTABLE 檢查資料表，找出無效或超出範圍的資料行值。 例如，DBCC CHECKTABLE 偵測到資料行具有大於或小於 **datetime** 資料類型可接受範圍的日期和時間值；或者，**decimal** 或近似數值資料類型資料行具有無效的小數位數或有效位數值。  
  預設會啟用資料行值的完整性檢查，而不需要 DATA_PURITY 選項。 對於從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫，您可以使用 DBCC CHECKTABLE WITH DATA_PURITY 尋找並更正特定資料表的錯誤，不過，必須先在毫無錯誤的情況下完成對資料庫執行 DBCC CHECKDB WITH DATA_PURITY，否則依預設不對資料表啟用資料行值檢查。 此後，依預設 DBCC CHECKDB 和 DBCC CHECKTABLE 會檢查資料行值的完整性。  
- 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文件 923247：[對 SQL Server 2005 及更新版本中的 DBCC 錯誤 2570 進行疑難排解](https://support.microsoft.com/kb/923247) \(機器翻譯\)。  
+ 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文章 923247：[針對 SQL Server 2005 和更新版本中的 DBCC 錯誤 2570 進行疑難排解](https://support.microsoft.com/kb/923247)。  
  如果指定 PHYSICAL_ONLY，則不會執行資料行完整性檢查。  
     
 MAXDOP  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 開始)。  
  
  覆寫陳述式之 **sp_configure** 的 **max degree of parallelism** 設定選項。 MAXDOP 可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，資料庫引擎就會使用 ALTER WORKLOAD GROUP (Transact-SQL) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
     

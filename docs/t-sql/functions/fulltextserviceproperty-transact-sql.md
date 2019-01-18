@@ -21,12 +21,12 @@ ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c56e70fc866c3666107677338feb3285cabb38b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812176"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206157"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ FULLTEXTSERVICEPROPERTY ('property')
  *property*  
  這是一個包含全文檢索服務層級屬性名稱的運算式。 下表列出各個屬性，並提供傳回資訊的描述。  
   
-> [!NOTE]  
->  下列屬性將會在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中移除：**ConnectTimeout**、**DataTimeout** 和 **ResourceUsage**。 請避免在新的開發工作中使用這些屬性，並規劃修改目前使用任何這些屬性的應用程式。  
+> [!NOTE]
+>  後續版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將移除下列屬性：**ConnectTimeout**、**DataTimeout** 和 **ResourceUsage**。 請避免在新的開發工作中使用這些屬性，並規劃修改目前使用任何這些屬性的應用程式。  
   
 |屬性|ReplTest1|  
 |--------------|-----------|  

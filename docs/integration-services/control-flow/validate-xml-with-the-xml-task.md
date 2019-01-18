@@ -14,12 +14,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4271eb5bc3956fd58b942eb7c7076716f8f03f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2617ab51ffdde7bd8986c0a7d508067ac2686e1e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414265"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203257"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   驗證 XML 文件，並啟用 XML 工作的 **ValidationDetails** 屬性以取得詳細的錯誤輸出。  
@@ -32,8 +32,8 @@ ms.locfileid: "52414265"
   
  XML 驗證功能可針對大型 XML 文件和大量的錯誤輕鬆地進行調整。 因為輸出檔案本身是 XML 格式，所以您可以查詢和分析輸出。 例如，如果輸出包含大量錯誤，您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢將錯誤分組 (如本主題所述)。  
   
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 在 **Service Pack 2 中引進** ValidationDetails [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 屬性。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]也提供此屬性。  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2 中引進 **ValidationDetails** 屬性。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]也提供此屬性。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有效 XML 範例輸出  
  以下範例輸出檔案具有有效 XML 檔案的驗證結果。  

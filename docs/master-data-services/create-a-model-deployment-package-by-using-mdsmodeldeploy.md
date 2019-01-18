@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0bab6dc29d9bdf9fac1c29aa5faa56cf06c8cb57
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6b04bd61a01e133f331dd5f93b5b3c7e328e39d7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394341"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52761681"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 建立模型部署封裝
 
@@ -64,7 +63,7 @@ ms.locfileid: "52394341"
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>若要使用 MDSModelDeploy 建立模型部署封裝  
   
-1.  開啟系統管理員：命令提示字元。  
+1.  開啟 [系統管理員：命令提示字元]。  
   
 2.  導覽至 MDSModelDeploy.exe 的位置。  
   

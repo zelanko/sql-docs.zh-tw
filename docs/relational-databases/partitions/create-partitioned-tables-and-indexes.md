@@ -26,16 +26,16 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da4ea3844087ea5b130060b8cc37a6bfa4c355bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522269"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414183"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52522269"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法建立分割區資料表或索引：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "52522269"
   
                 -   如果您選取 **[天]**，請輸入執行作業排程的當月日期以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的 15 日執行一次作業排程，請選取 [日]，然後在第一個方塊中輸入 "15"，並在第二個方塊中輸入 "2"。 請注意，在第二個方塊中允許的最大數目是 "99"。  
   
-                -   如果您選取 **[於]**，請選取執行作業排程的當月一週中特定的星期幾，以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的最後一個工作日執行一次作業排程，請選取 [日]，然後從第一個清單中選取 [最後一個]，並從第二個清單中選取 [工作日]，然後在最後一個方塊中輸入 "2"。 您也可以在前兩個清單中選取 [第一個]、[第二個]、[第三個] 或 [第四個]，以及特定工作日 (例如星期日或星期三)。 請注意，在最後一個方塊中允許的最大數目是 "99"。  
+                -   如果您選取 **[於]**，請選取執行作業排程的當月一週中特定的星期幾，以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的最後一個工作日執行一次作業排程，請選取 [日]，然後從第一個清單中選取 [最後一個]，並從第二個清單中選取 [工作日]，然後在最後一個方塊中輸入 "2"。 您也可以在前兩個清單中選取 [第一個]、[第二個]、[第三個] 或 [第四個]，以及特定工作日 (例如：星期日或星期三)。 請注意，在最後一個方塊中允許的最大數目是 "99"。  
   
         2.  在 **[每日頻率]** 底下，指定在執行作業排程當天重複作業排程的頻率：  
   
@@ -255,7 +255,7 @@ ms.locfileid: "52522269"
      將精靈進度報表的結果複製到剪貼簿。  
   
      **[以電子郵件傳送報表]**  
-     將精靈進度報表的結果複製到電子郵件訊息。  
+     將精靈進度報表的結果複製到電子郵件。  
   
      完成後，請按一下 **[關閉]**。  
   
@@ -269,7 +269,7 @@ ms.locfileid: "52522269"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 範例會建立新的檔案群組、分割區函數和分割區配置。 新資料表是以指定為儲存位置的分割區配置建立的。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 範例會建立新的檔案群組、分割區函數和分割區配置。 新資料表是以指定為儲存位置的分割區配置建立的。  
   
     ```  
     USE AdventureWorks2012;  

@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 用戶端連接 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組的驅動程式和用戶端連線支援
+description: '本主題描述 Always On 可用性群組的用戶端連線考量，包括用戶端設定和設定的必要條件、限制和建議。 '
+ms.custom: seodec18
 ms.date: 04/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,24 +15,19 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674eddc9d7485de281f70199629cf05fdfc4e044
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1497c56bc086c9067ed8caa859353f8fd1e6eec9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603308"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201683"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 用戶端連接性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  本主題描述 AlwaysOn 可用性群組之用戶端連接的考量，包括用戶端組態和設定的必要條件、限制和建議。  
+  本主題描述 Always On 可用性群組的用戶端連線考量，包括用戶端設定和設定的必要條件、限制和建議。  
   
- **本主題內容：**  
-  
--   [用戶端連接性支援](#ClientConnSupport)  
-  
--   [相關工作](#RelatedTasks)  
-  
+ 
 ##  <a name="ClientConnSupport"></a> 用戶端連接性支援  
  底下章節提供有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援用戶端連接性的資訊。  
   
@@ -70,7 +66,7 @@ ms.locfileid: "51603308"
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/) (SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格)   
+ [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)   
  [當您從執行 Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7 或 Windows Server 2008 R2 的電腦重新連接 IPSec 連接時發生長時間延遲](https://support.microsoft.com/kb/980915)   
  [叢集服務大約需要 30 秒來容錯移轉 Windows Server 2008 R2 中的 IPv6 IP 位址](https://support.microsoft.com/kb/2578113)   
  [如果叢集與應用程式伺服器之間不存在任何路由器，就會緩慢地進行容錯移轉作業](https://support.microsoft.com/kb/2582281)  

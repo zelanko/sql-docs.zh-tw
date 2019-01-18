@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1acd4feb0c65ee61b191a62fc0849f2156d46941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2da642b1b380e45ffdde2ac48bd37764a12b2dd
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824106"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980424"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ OVER **(** [ *partition_by_clause* ] *order_by_clause*)
 **float(53)**
   
 ## <a name="remarks"></a>Remarks  
-`CUME_DIST` 傳回某一範圍的值，而且這些值大於 0 且小於或等於 1。 繫結值的計算所得一律會是相同的累計分佈值。 `CUME_DIST` 預設會包含 NULL 值，並將其視為最低值。
+`CUME_DIST` 傳回某一範圍的值，且這些值大於 0 且小於或等於 1。 繫結值的計算所得一律會是相同的累計分佈值。 `CUME_DIST` 預設會包含 NULL 值，並將其視為最低值。
   
 `CUME_DIST` 不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   

@@ -11,19 +11,19 @@ ms.assetid: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 86a56f8394dbddccf00025b750256364aa51e99d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395673"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215817"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services 的高可用性和災害復原
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-**摘要︰** 這篇文章說明 AlwaysOn 可用性群組設定上所裝載 Master Data Service (MDS) 的解決方案。 這篇文章說明如何在 SQL 2016 AlwaysOn 可用性群組 (AG) 上安裝及設定 SQL 2016 Master Data Services。 此解決方案的主要目的為提升 SQL Server 資料庫所裝載 MDS 後端資料的高可用性及災害復原。
+**摘要：** 本文描述 AlwaysOn 可用性群組設定上所裝載 Master Data Service (MDS) 的解決方案。 這篇文章說明如何在 SQL 2016 AlwaysOn 可用性群組 (AG) 上安裝及設定 SQL 2016 Master Data Services。 此解決方案的主要目的為提升 SQL Server 資料庫所裝載 MDS 後端資料的高可用性及災害復原。
 
 ## <a name="introduction"></a>簡介
 
@@ -156,8 +156,8 @@ Windows Server 作業系統安裝於所有執行個體上，並修補所有更�
 7.  在 [摘要] 頁面上，檢查是否有任何警告或錯誤訊息。
 
     錯誤必須予以修正。 不過，警告可能不會產生問題。 警告訊息表示「測試的項目可能符合需求，但您應該檢查一些事項」。 例如，圖 7 顯示「驗證磁碟存取延遲」警告，可能是因為磁碟暫時正在忙著處理其他工作，因此您可以忽略它。 您應該檢查線上文件中的每個警告和錯誤訊息，以取得詳細資料。 請參閱圖 7。
- 
-![驗證設定精靈，正在驗證頁面](media/Fig6_ValidationTests.png)
+ 
+    ![驗證組態精靈、正在驗證頁面](media/Fig6_ValidationTests.png)
 
     圖 6
 
@@ -187,7 +187,7 @@ Windows Server 作業系統安裝於所有執行個體上，並修補所有更�
 
 -   並非所有 Windows Server 版本都會提供 WSFC 功能。 請確定您的版本有這項功能。
 
--   請確定您有適當的權限可在 Active Directory 中設定 WSFC。 如果有任何問題，請參閱 [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (容錯移轉叢集逐步指南：在 Active Directory 中設定帳戶)。
+-   請確定您有適當的權限可在 Active Directory 中設定 WSFC。 如果有任何問題，請參閱 [Failover Cluster Step-by-Step Guide:Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (容錯移轉叢集逐步指南：在 Active Directory 中設定帳戶)。
 
 如需 WSFC 的詳細資訊，請參閱 [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (容錯移轉叢集)。
 
@@ -313,7 +313,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
     **自動容錯移轉**：如果選取自動容錯移轉，則在主要複本關閉時，AG 會自動容錯移轉至其次要複本。 這只能在具有同步認可的複本上啟用。
 
-    **可讀取次要**：使用者預設無法連接到任何次要複本。 這可讓使用者連接到具有唯讀存取權的次要複本。
+    **可讀取次要：** 使用者預設無法連接到任何次要複本。 這可讓使用者連接到具有唯讀存取權的次要複本。
 
 8.  在 [指定複本] 頁面上，按一下 [接聽程式] 索引標籤，然後執行下列動作。 請參閱圖 18。
 
@@ -358,7 +358,7 @@ AG 只能建立於現有資料庫上。 因此，您可以在一個節點上建�
 
 3.  按一下 [容錯移轉]，以容錯移轉至同步複本和非同步複本。 這是要確認容錯移轉正確，未發生任何問題。
 
- AlwaysOn 安裝程式已完成。
+ AlwaysOn 安裝程式已完成。
 
 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 [SQL Server 2016 AlwaysOn 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)。
 

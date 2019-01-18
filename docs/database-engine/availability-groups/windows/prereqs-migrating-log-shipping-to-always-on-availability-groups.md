@@ -1,6 +1,7 @@
 ---
-title: 將記錄傳送移轉至 AlwaysOn 可用性群組的必要條件 | Microsoft Docs
-ms.custom: ''
+title: 將記錄傳送轉換成可用性群組的必要條件
+description: 描述將記錄傳送轉換成 Always On 可用性群組的必要條件。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c246912b7e12690427bc296d3db277481eddc42f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606918"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214719"
 ---
-# <a name="prereqs-migrating-log-shipping-to-always-on-availability-groups"></a>將記錄傳送移轉至 AlwaysOn 可用性群組的必要條件
+# <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>將記錄傳送轉換成 Always On 可用性群組的必要條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題描述將記錄傳送主要資料庫與其一或多個次要資料庫轉換成 AlwaysOn 主要資料庫和次要資料庫的必要條件。  
@@ -68,7 +69,7 @@ ms.locfileid: "51606918"
   
  **如需詳細資訊：＜＞**  
   
- [Converting a logshipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (將記錄傳送組態轉換成可用性群組) (SQL Server 部落格)  
+ [Converting a log shipping configuration to Availability Group](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/09/converting-a-logshipping-configuration-to-availability-group/) (將記錄傳送設定轉換成可用性群組) (SQL Server 部落格)  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **記錄傳送**  
@@ -99,13 +100,13 @@ ms.locfileid: "51606918"
   
      [將記錄傳送主要資料庫和次要資料庫加入至現有的可用性群組](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/01/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group/)  
   
-     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮書：**  
   
-     [移轉指南：從結合資料庫鏡像與記錄傳送的先前部署移轉至 AlwaysOn 可用性群組](https://msdn.microsoft.com/library/jj635217)  
+     [Migration Guide:Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](https://msdn.microsoft.com/library/jj635217) (移轉指南：從結合資料庫鏡像與記錄傳送的先前部署移轉至 Always On 可用性群組)  
   
      [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   

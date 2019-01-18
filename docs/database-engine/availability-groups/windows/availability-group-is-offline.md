@@ -1,6 +1,7 @@
 ---
-title: 可用性群組已離線 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組為離線
+description: 識別為何 Always On 可用性群組離線的可能原因。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 343ae5ff2b5b65b26569f99ff22d51ed1860e69d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 78517d525165c7186c1ecccb2c1fc3561a7f3f45
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203737"
 ---
-# <a name="availability-group-is-offline"></a>可用性群組為離線
+# <a name="always-on-availability-group-is-offline"></a>Always On 可用性群組為離線
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>簡介  

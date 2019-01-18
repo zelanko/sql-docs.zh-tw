@@ -5,19 +5,18 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a783a386f625a6ca02c6a88dd2378963cc3cce27
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 772c32ade01fc80a867da1cbc88dc4f7a3762e79
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406585"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52779871"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>暫存預存程序 (Master Data Services)
 
@@ -39,7 +38,7 @@ ms.locfileid: "52406585"
 |參數|Description|  
 |---------------|-----------------|  
 |**VersionName**<br /><br /> 必要項|版本的名稱。 是否區分大小寫取決於您的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 集合設定。|  
-|**LogFlag**<br /><br /> 必要項|決定是否在暫存處理序期間記錄交易。 可能的值為：<br /><br /> **0**：不記錄交易。<br /><br /> **1**：記錄交易。<br /><br /> <br /><br /> 如需交易的詳細資訊，請參閱[交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)。|  
+|**LogFlag**<br /><br /> 必要項|決定是否在暫存處理序期間記錄交易。 可能的值為：<br /><br /> **0**:不記錄交易。<br /><br /> **1**:記錄交易。<br /><br /> <br /><br /> 如需交易的詳細資訊，請參閱[交易 &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)。|  
 |**BatchTag**<br /><br /> 必要項，只有 Web 服務不需要|**BatchTag** 值，依暫存資料表中所指定。|  
 |**Batch_ID**<br /><br /> 只有 Web 服務需要|**Batch_ID** 值，依暫存資料表中所指定。|  
 |**使用者名稱**|選擇性參數|  

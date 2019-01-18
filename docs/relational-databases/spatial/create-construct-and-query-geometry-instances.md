@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9115aa7ed39102557243ddcc24754b3c7f5453bc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a488bba170b9df5fd896b85c880bb26388e3d252
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521837"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980194"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52521837"
   
 -   [OGC 規格，簡單特徵存取第一部 - 常見架構](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
--   [OGC 規格，簡易功能存取第二部分 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93629)  
+-   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93629) \(英文\)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以下列結構描述定義之現有 GML 3.1 標準的子集：[https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959)。  
   
@@ -248,7 +248,7 @@ ms.locfileid: "52521837"
   
 -   **LineString** 和 **MultiLineString** 界限是由起點和終點所組成，移除發生偶數次數的點。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTILINESTRING((0 1, 0 0, 1 0, 0 1), (1 1, 1 0))');  
 SELECT @g.STBoundary().ToString();  
@@ -256,7 +256,7 @@ SELECT @g.STBoundary().ToString();
   
  **Polygon** 或 **MultiPolygon** 執行個體的界限是它的環形集合。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0), (1 1, 1 2, 2 2, 2 1, 1 1))');  
 SELECT @g.STBoundary().ToString();  
@@ -264,14 +264,12 @@ SELECT @g.STBoundary().ToString();
   
  **傳回執行個體的界限**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
-  
-  
+   
 ###  <a name="envelope"></a> 範圍  
  *geometry* 執行個體的 **「範圍」** (Envelope) (也稱為 *「週框方塊」*(Bounding Box)) 是執行個體的最小和最大座標 (X,Y) 組成的座標軸對齊矩形。  
   
  **傳回執行個體的範圍**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
-  
   
 ###  <a name="closure"></a> 封閉性  
  「封閉式」**geometry** 執行個體是起始點與結束點相同的圖形。 **Polygon** 執行個體視為封閉式。 **Point** 執行個體視為非封閉式。  
@@ -300,8 +298,8 @@ SELECT @g.STBoundary().ToString();
  **設定或傳回執行個體的 SRID**  
  [STSrid](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)  
   
- 這個屬性可以修改。  
-  
+> [!NOTE]
+> 這個屬性可以修改。  
   
 ##  <a name="rel"></a> 判斷 geometry 執行個體之間的關聯性  
  **geometry** 資料類型提供許多內建方法，您可以使用這些方法來判斷兩個 **geometry** 執行個體之間的關聯性。  
@@ -339,47 +337,48 @@ SELECT @g.STBoundary().ToString();
  **判斷兩個 geometry 內點與點之間的最短距離**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
-  
 ##  <a name="defaultsrid"></a> geometry 執行個體預設為零 SRID  
  **中** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設 SRID 是 0。 有了 **geometry** 空間資料，執行計算時並不需要空間執行個體的特定 SRID；因此，執行個體可位於未定義的平面空間內。 若要在 **geometry** 資料類型方法的計算中指示未定義的平面空間， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會使用 SRID 0。  
   
 ##  <a name="examples"></a> 範例  
- 下列兩個範例示範如何加入及查詢幾何資料。  
+下列兩個範例示範如何加入及查詢幾何資料。  
   
--   第一個範例會建立具有識別資料行及 `geometry` 資料行 `GeomCol1`的資料表。 第三個資料行會將 `geometry` 資料行轉譯成它的開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法，並使用 `STAsText()` 方法。 然後會插入兩個資料列：一個資料列包含 `LineString` 的 `geometry`執行個體，另一個資料列包含 `Polygon` 執行個體。  
+### <a name="example-a"></a>範例 A。
+此範例會建立具有識別資料行及 `geometry` 資料行 `GeomCol1` 的資料表。 第三個資料行會將 `geometry` 資料行轉譯成它的開放地理空間協會 (Open Geospatial Consortium，OGC) 已知的文字 (Well-Known Text，WKT) 表示法，並使用 `STAsText()` 方法。 然後會插入兩個資料列：一個資料列包含 `LineString` 的 `geometry`執行個體，另一個資料列包含 `Polygon` 執行個體。  
   
-    ```  
-    IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
-        DROP TABLE dbo.SpatialTable;  
-    GO  
+```sql  
+IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
+DROP TABLE dbo.SpatialTable;  
+GO  
+
+CREATE TABLE SpatialTable   
+  ( id int IDENTITY (1,1),  
+    GeomCol1 geometry,   
+    GeomCol2 AS GeomCol1.STAsText() 
+  );  
+GO  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
+
+INSERT INTO SpatialTable (GeomCol1)  
+VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
+GO  
+```  
   
-    CREATE TABLE SpatialTable   
-        ( id int IDENTITY (1,1),  
-        GeomCol1 geometry,   
-        GeomCol2 AS GeomCol1.STAsText() );  
-    GO  
+### <a name="example-b"></a>範例 B.
+此範例會使用 `STIntersection()` 方法傳回之前所插入兩個 `geometry` 執行個體相交的點。  
   
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('LINESTRING (100 100, 20 180, 180 180)', 0));  
-  
-    INSERT INTO SpatialTable (GeomCol1)  
-    VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 0));  
-    GO  
-    ```  
-  
--   第二個範例使用 `STIntersection()` 方法傳回之前插入之兩個 `geometry` 執行個體相交的點。  
-  
-    ```  
-    DECLARE @geom1 geometry;  
-    DECLARE @geom2 geometry;  
-    DECLARE @result geometry;  
-  
-    SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
-    SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
-    SELECT @result = @geom1.STIntersection(@geom2);  
-    SELECT @result.STAsText();  
-    ```  
-  
+```sql  
+DECLARE @geom1 geometry;  
+DECLARE @geom2 geometry;  
+DECLARE @result geometry;  
+
+SELECT @geom1 = GeomCol1 FROM SpatialTable WHERE id = 1;  
+SELECT @geom2 = GeomCol1 FROM SpatialTable WHERE id = 2;  
+SELECT @result = @geom1.STIntersection(@geom2);  
+SELECT @result.STAsText();  
+```  
   
 ## <a name="see-also"></a>另請參閱  
  [空間資料 &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b29291d808b643f9ac66491ae200d6169eb5232a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697324"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589632"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>引數  
- **@** *local_variable*  
+ **@** _local_variable_  
  這是除了**cursor**、**text**、**ntext**、**image** 或**table** 以外之任何類型的變數名稱。 變數名稱的開頭必須是 at 記號 (**@**)。 變數名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
  *property_name*  
@@ -86,10 +86,10 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  { **.** | **::** }  
  指定 CLR 使用者自訂類型的方法。 對於執行個體 (非靜態) 方法，請使用句點 (**.**)。 對於靜態方法，請使用兩個冒號 (**::**)。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
  這是利用一個或多個引數來修改類型執行個體狀態的使用者定義型別。 靜態方法必須是公用的。  
   
- **@** *SQLCLR_local_variable*  
+ **@** _SQLCLR_local_variable_  
  這是類型位於組件中的變數。 如需詳細資訊，請參閱 [Common Language Runtime &#40;CLR&#41; 整合程式設計概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)。  
   
  *mutator_method*  
@@ -178,7 +178,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  變數只能用在運算式中，不能用在物件名稱或關鍵字中。 若要建構動態 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，請使用 EXECUTE。  
   
- SET **@***cursor_variable* 的語法規則不包括 LOCAL 和 GLOBAL 關鍵字。 當使用 SET **@***cursor_variable* = CURSOR... 語法時，會將資料指標建立成 GLOBAL 或 LOCAL，這會隨著 [預設為本機資料指標資料庫] 選項的設定而不同。  
+ SET **@**_cursor_variable_ 的語法規則不包括 LOCAL 和 GLOBAL 關鍵字。 當使用 SET **@**_cursor_variable_ = CURSOR... 語法時，會將資料指標建立成 GLOBAL 或 LOCAL，這會視 [預設為本機資料指標資料庫] 選項的設定而不同。  
   
  資料指標變數一律是區域變數，即使它們參考了全域資料指標也是如此。 當資料指標變數參考全域資料指標時，資料指標會同時有全域和本機資料指標參考。 如需詳細資訊，請參閱「範例 C」一節。  
   
@@ -189,7 +189,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  請勿使用 SELECT 陳述式中的變數來串連值 (也就是計算彙總值)。 可能會發生非預期的查詢結果。 這是因為 SELECT 清單中的所有運算式 (包括指派) 都不保證能夠剛好針對每個輸出資料列執行一次。 如需詳細資訊，請參閱[這篇知識庫文章](https://support.microsoft.com/kb/287515)。  
   
 ## <a name="permissions"></a>[權限]  
- 需要 public 角色中的成員資格。 所有使用者都可以使用 SET **@***local_variable*。  
+ 需要 public 角色中的成員資格。 所有使用者都可以使用 SET **@**_local_variable_。  
   
 ## <a name="examples"></a>範例  
   

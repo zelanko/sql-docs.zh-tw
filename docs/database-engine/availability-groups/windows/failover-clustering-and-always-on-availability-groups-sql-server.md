@@ -1,6 +1,7 @@
 ---
-title: 容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 結合容錯移轉叢集與可用性群組
+description: 藉由結合 SQL Server 容錯移轉叢集執行個體與 Always On 可用性群組的功能，來增強您的高可用性和災害復原能力。
+ms.custom: seodec18
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e123661aa5b446c433b5e8813c58696bd5a7921
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605448"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213037"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
 
@@ -115,15 +116,15 @@ ms.locfileid: "51605448"
   
      [以有限安全性設定 SQL Server 的 Windows 容錯移轉叢集 (可用性群組或 FCI)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
   
-     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **白皮書：**  
   
-     [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原解決方案](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Always On Architecture Guide:Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://msdn.microsoft.com/library/jj215886.aspx) (Always On 架構指南：使用容錯移轉叢集執行個體和可用性群組，建置高可用性和災害復原解決方案)  
   
-     [Microsoft SQL Server AlwaysOn 高可用性和災害復原解決方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft 的 SQL Server 2012 白皮書](https://msdn.microsoft.com/library/hh403491.aspx)  
   

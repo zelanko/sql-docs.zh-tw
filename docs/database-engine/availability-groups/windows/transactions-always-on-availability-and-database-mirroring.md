@@ -1,7 +1,7 @@
 ---
 title: 交易 - AlwaysOn 可用性群組和資料庫鏡像 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad9700e9b1c86b454191e51c6a7e4ee52c393c6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: af982fa485cb9fbcc394a063e0390b795e87e0b0
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606838"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328948"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>交易 - 可用性群組和資料庫鏡像
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "51606838"
 
 SQL Server 2017 支援可用性群組中多個資料庫的分散式交易。 這項支援包含相同 SQL Server 執行個體上的資料庫或不同 SQL Server 執行個體上的資料庫。 針對資料庫鏡像所設定的資料庫不支援分散式交易。
 
->[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 和更新版本提供對於可用性群組中之分散式交易的完整支援。 
->
->在 Service Pack 2 之前的 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 版本中，不支援牽涉到可用性群組中之資料庫的跨資料庫分散式交易 (也就是使用相同 SQL Server 執行個體上之資料庫的交易)。
+> [!NOTE]
+> [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] Service Pack 2 和更新版本提供對於可用性群組中分散式交易的完整支援。 
+> 
+> 在 Service Pack 2 之前的 [!INCLUDE[SQL Server 2016](../../../includes/sssql15-md.md)] 版本中，不支援牽涉到可用性群組中資料庫的跨資料庫分散式交易 (也就是使用相同 SQL Server 執行個體上資料庫的交易)。
 
 若要設定分散式交易的可用性群組，請參閱[設定分散式交易的可用性群組](configure-availability-group-for-distributed-transactions.md)。
 
@@ -91,6 +91,6 @@ SQL Server 2016 引進此功能，以便在可用性群組中有一或多個該�
 >  不支援搭配使用資料庫鏡像或可用性群組與本文未核准的 DTC。  這並不表示不支援與 DTC 產品無關之產品的各個層面；不過，不支援不當使用分散式交易所造成的任何問題。  
   
 ## <a name="next-steps"></a>後續步驟  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

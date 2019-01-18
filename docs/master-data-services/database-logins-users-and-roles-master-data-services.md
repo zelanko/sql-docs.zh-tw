@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], database roles
@@ -19,12 +18,12 @@ ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed15741a0565cda9735b4e2d851e1b025deea224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8780bd1545793f08e51e2e0804d03d8a3e98178e
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607346"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52760168"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
 
@@ -44,7 +43,7 @@ ms.locfileid: "47607346"
 |使用者|Description|  
 |----------|-----------------|  
 |**mds_clr_user**|未使用。 對應至 mds_dlp_login。|  
-|**mds_email_user**|用於通知。<br /><br /> -對應至 mds_email_login。<br /><br /> -為 DatabaseMailUserRole 角色的成員。|  
+|**mds_email_user**|用於通知。<br /><br /> -對應至 mds_email_login。<br /><br /> -這是角色的成員：DatabaseMailUserRole。|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 資料庫使用者  
   
@@ -66,7 +65,7 @@ ms.locfileid: "47607346"
 |----------|-----------------|  
 |**mdm**|包含所有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫與 Service Broker 物件，而非 mdq 結構描述中包含的函數。|  
 |**mdq**|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫函數，這些函數與根據規則運算式或相似度篩選成員結果有關，而且可用於格式化通知電子郵件。|  
-|**stg**|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫資料表、預存程序以及與暫存處理序有關的檢視表。 請勿刪除這些物件的任何一個。 如需暫存處理序的詳細資訊，請參閱[概觀︰從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。|  
+|**stg**|包含 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫資料表、預存程序以及與暫存處理序有關的檢視表。 請勿刪除這些物件的任何一個。 如需暫存處理序的詳細資訊，請參閱[概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫物件安全性 &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  

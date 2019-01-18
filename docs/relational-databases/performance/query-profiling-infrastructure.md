@@ -5,17 +5,24 @@ ms.date: 11/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
-ms.topic: conceptual - "query plans [SQL Server]" - "execution plans [SQL Server]" - "query profiling" - "lightweight query profiling" - "lightweight profiling" - "lwp"
+ms.topic: conceptual
+helpviewer_keywords:
+- query plans [SQL Server]
+- execution plans [SQL Server]
+- query profiling
+- lightweight query profiling
+- lightweight profiling
+- lwp
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: e0ee0bc2c99d997d6a44d5ca0e9944e0ae4bfeb3
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
+ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617248"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53732025"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +83,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> 如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章[開發人員選擇：查詢進度 - 隨時隨地](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) \(英文\)。 
+> 如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章 [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)。 
 
 執行擴充事件工作階段以使用 *query_thread_profile* 事件時，接著也會使用輕量型分析填入 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV，其會使用[活動監視器](../../relational-databases/performance-monitor/activity-monitor.md)或直接查詢 DMV，針對所有工作階段啟用即時查詢統計資料。
 
@@ -107,7 +114,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>輕量型查詢執行統計資料分析基礎結構 v3
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包含最新修訂的輕量型分析版本，可收集所有執行的資料列計數資訊。 輕量型分析預設會在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 上啟用，而追蹤旗標 7412 不會有任何作用。
 
@@ -118,7 +125,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 從輕量型分析 v2 及其低額外負荷開始，尚未受限於 CPU 的任何伺服器都可**持續**執行輕量型分析，並讓資料庫專業人員可隨時點選任何執行中的執行 (例如，使用活動監視器，或直接查詢 `sys.dm_exec_query_profiles`)，並取得含執行階段統計資料的查詢計畫。
 
-如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章[開發人員選擇：查詢進度 - 隨時隨地](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) \(英文\)。 
+如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章 [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)。 
 
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -133,4 +140,4 @@ WITH (MAX_MEMORY=4096 KB,
  [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)      
- [開發人員選擇：查詢進度 - 隨時隨地](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)

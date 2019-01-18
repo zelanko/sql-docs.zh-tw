@@ -5,19 +5,18 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 61252bf85ab9862508bed327e27068add2cc0c74
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d78afd9c3206a5b2b8cd04482ac891f9aae87f0c
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403833"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52794740"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
 

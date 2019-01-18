@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b18963f7b512d2fa395d53406528a2d813b364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba65abd869322574cd2047be5066aad4b1c30767
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739696"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552950"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>設定及管理搜尋的篩選
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,10 +40,14 @@ ms.locfileid: "47739696"
 
 ## <a name="installed-filters"></a>安裝的篩選 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會安裝其自有的 XML 和 HTML 篩選。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會載入已安裝在作業系統上之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 專屬格式 (.doc、.xdoc、.ppt 等) 的篩選。 若要識別目前載入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上的篩選，請使用 [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) 預存程序，如下所示：  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> 即使有提供 .xlsx 支援的最新版 Office Filter Pack，SQL Server 還是無法支援 Strict Open XML 試算表。  SQL Server 會直接在編製任何 Strict Open XML 試算表的內容索引時失敗，而不會傳回任何錯誤。
+
 ## <a name="non-microsoft-filters"></a>非 Microsoft 篩選
 不過，您必須先手動將非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 格式的篩選載入伺服器執行個體中，才能加以使用。 如需安裝其他篩選的相關資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   

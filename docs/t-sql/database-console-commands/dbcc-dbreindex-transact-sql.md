@@ -23,12 +23,12 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 0090be5f985354d4cec29add4d008deea6cac068
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f71e53eb00f994bd68c9be92e1783f79e65470f4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698766"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215867"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

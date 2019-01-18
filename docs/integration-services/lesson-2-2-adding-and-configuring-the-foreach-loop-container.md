@@ -11,12 +11,12 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 492691c3fd6c8cd9206b591aa2302bc62a658daa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 56eaead79ddb85dc9948fabefb9956aa5516e2a9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527134"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207417"
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>課程 2-2 - 新增和設定 Foreach 迴圈容器
 在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
@@ -25,15 +25,15 @@ ms.locfileid: "52527134"
   
 目前，第 1 課的一般檔案連接管理員只連接一個特定的一般檔案。 若要反覆連接到資料夾的每個一般檔案，您必須同時設定 Foreach 迴圈容器和一般檔案連接管理員，如下所示：  
   
--   **Foreach 迴圈容器** ：您將容器的列舉值對應至使用者定義的套件變數。 然後容器會使用此使用者自訂變數，動態修改一般檔案連接管理員的 **ConnectionString** 屬性，並反覆連接到資料夾的每個一般檔案。  
+-   **Foreach 迴圈容器：** 您將容器的列舉值對應至使用者所定義套件變數。 然後容器會使用此使用者自訂變數，動態修改一般檔案連接管理員的 **ConnectionString** 屬性，並反覆連接到資料夾的每個一般檔案。  
   
--   **一般檔案連接管理員** ：您將使用使用者定義變數來擴展連接管理員的 **ConnectionString** 屬性，以修改第 1 課所建立的連接管理員。  
+-   **一般檔案連線管理員：** 您將使用使用者定義變數來擴展連線管理員的 **ConnectionString** 屬性，以修改第 1 課所建立的連線管理員。  
   
 這項工作中的程序說明如何建立和修改 Foreach 迴圈容器，以利用使用者自訂封裝變數，並且將資料流程工作加入迴圈中。 在下一項工作中，您會學到如何修改一般檔案連接管理員來使用使用者自訂變數。  
   
 對封裝做了這些修改之後，當封裝執行時，Foreach 迴圈容器將反覆進行範例資料夾內的檔案集合。 每次發現符合準則的檔案時，Foreach 迴圈容器就會在使用者自訂變數中填入檔案名稱，將使用者自訂變數對應至 [範例貨幣資料一般檔案] 連接管理員的 **ConnectionString** 屬性，然後對該檔案執行資料流程。 因此，在 Foreach 迴圈的每個反覆運算中，資料流程工作將取用不同的一般檔案。  
   
-> [!NOTE]  
+> [!NOTE]
 > 因為 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 隔開控制流程與資料流程，所以您要加入控制流程中的任何迴圈都不需要對資料流程做修改。 因此，您在第 1 課建立的資料流程不必改變。  
   
 ### <a name="to-add-a-foreach-loop-container"></a>若要加入 Foreach 迴圈容器  
@@ -90,7 +90,7 @@ ms.locfileid: "52527134"
 -   將 [擷取範例貨幣資料] 資料流程工作拖曳至 Foreach 迴圈容器，這個容器現在已重新命名為 [資料夾的 Foreach 檔案]。  
   
 ## <a name="next-lesson-task"></a>下一課的工作  
-[步驟 3：修改一般檔案連接管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[步驟 3：修改一般檔案連線管理員](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [設定 Foreach 迴圈容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  

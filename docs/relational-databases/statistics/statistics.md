@@ -20,16 +20,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7ddca2a5f33e26cb60a9e45068fcaacc10a294
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 302ad4ce50e3e1bd1b63bd734dcdc4e88cb83fdc
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506572"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380729"
 ---
 # <a name="statistics"></a>Statistics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52506572"
 
 更詳細來說，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以下列三個步驟，從已排序的資料行值集合來建立「長條圖」：
 
-- **長條圖初始化**：第一個步驟會從已排序的集合開頭處理一連串的值，並收集最多 200 個 *range_high_key*、*equal_rows*、*range_rows* 和 *distinct_range_rows* 的值 (在此步驟中，*range_rows* 和 *distinct_range_rows* 一定是零)。 當所有的輸入都已用完，或已找到 200 個值時，就會結束第一個步驟。 
+- **長條圖初始化**：第一個步驟會從已排序的集合開頭處理一連串值，並收集最多 200 個 *range_high_key*、*equal_rows*、*range_rows* 和 *distinct_range_rows* 的值 (在此步驟中，*range_rows* 和 *distinct_range_rows* 一律為零)。 當所有的輸入都已用完，或已找到 200 個值時，就會結束第一個步驟。 
 - **使用貯體合併掃描**：第二個步驟會依順序處理統計資料索引鍵之前置資料行的每一個額外值；每個後續的值可以新增到最後一個範圍，或在結束時建立新的範圍 (由於輸入的值會排序，因此這是可行的)。 建立新的範圍時，會將現有的一組相鄰範圍摺疊成單一範圍。 系統會選取這一組範圍，以將資訊遺失的機率降至最低。 此方法會使用「最大差異」演算法，讓長條圖中的步驟數減至最少，同時讓界限值之間的差異最大化。 在這整個步驟期間，範圍摺疊之後的步驟數目仍然為 200。
 - **長條圖彙總**：第三個步驟可能會摺疊更多範圍 (如果不會遺失大量資訊的話)。 長條圖步驟的數目可以少於相異值數目，即使包含了少於 200 個界限點的資料行也是如此。 因此，即使資料行具有超過 200 個唯一值，長條圖仍可能只需 200 個以下的步驟。 若資料行都是由唯一值組成，則合併的長條圖將只有最少的三個步驟。
 
@@ -200,7 +200,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>查詢會從資料子集中選取  
 當查詢最佳化工具針對單一資料行和索引建立統計資料時，它就會針對所有資料列中的值建立統計資料。 當查詢從資料列的子集中選取，而且該資料列子集具有唯一的資料分佈時，篩選的統計資料就可以改善查詢計劃。 您可以使用 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 陳述式搭配 [WHERE](../../t-sql/queries/where-transact-sql.md) 子句來定義篩選述詞運算式，藉此建立篩選統計資料。  
   
-例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 時，`Production.Product` 資料表中的每個產品都屬於 `Production.ProductCategory` 資料表的其中一個類別目錄：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
+例如，在使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 時，`Production.Product` 資料表中的每個產品都屬於 `Production.ProductCategory` 資料表的四個類別目錄之一：Bikes、Components、Clothing 及 Accessories。 其中每個類別目錄都具有不同的重量資料分佈：腳踏車 (Bikes) 的重量範圍是從 13.77 到 30.0、元件 (Components) 的重量範圍是從 2.12 到 1050.00 且有些是 NULL 值、衣服 (Clothing) 的重量全部為 NULL，配件 (Accessories) 的重量也是 NULL。  
   
 以 Bikes 為例，相較於在 Weight 資料行上具有完整資料表統計資料或不存在統計資料而言，針對所有腳踏車重量的篩選統計資料將能為查詢最佳化工具提供更精確的統計資料，而且可以改善查詢計劃品質。 雖然腳踏車重量資料行適合做為篩選的統計資料，但是不一定適合做為篩選的索引 (如果重量查閱的數目相當小的話)。 篩選索引為查閱所提供的效能提升程度可能不會超過將篩選索引加入至資料庫的額外維護和儲存成本。  
   

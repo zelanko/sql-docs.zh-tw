@@ -1,18 +1,18 @@
 ---
 title: Reporting Services (SSRS) 中的新功能 | Microsoft Docs
-ms.date: 09/06/2018
+ms.date: 12/11/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b72f5bfef28c5f434cff07b2a931519c3fefd295
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 1b6844ad30aa426d1df71727becc6e6cfa3071d5
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712399"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432471"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 
@@ -31,7 +31,7 @@ ms.locfileid: "52712399"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Preview Reporting Services
 
-[!INCLUDE[sql-server-2019]](../includes/sssqlv15-md.md)] Reporting Services 不適用於 CTP 2.1。 安裝目前的版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services 不適用於 CTP 2.2。 安裝目前的版本 [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -62,7 +62,7 @@ ms.locfileid: "52712399"
 * 下載 [SQL Server 報表產生器](https://go.microsoft.com/fwlink/?LinkId=734968)。
 * 下載 [SQL Server Data Tools - 候選版](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)。
 
-> **注意**：您只能搭配使用 DAX 的查詢設計工具與 SQL Server 2016+ 內建的 SSAS 表格式資料來源。
+> **注意**:您只能搭配使用 DAX 的查詢設計工具與 SQL Server 2016+ 內建的 SSAS 表格式資料來源。
 ::: moniker-end
  
 ## <a name="ssrs-2016"></a>SSRS 2016
@@ -124,23 +124,23 @@ Reporting Services 行動報表是針對各種外形規格最佳化的專用報�
 
 ### <a name="report-improvements"></a>報表改進
 
-**HTML 5 轉譯引擎** ：新的 HTML5 轉譯引擎以新式 Web「完整」標準模式及新式瀏覽器為目標。  新的轉譯引擎不再依賴幾種舊瀏覽器使用的 quirks 模式。
+**HTML 5 轉譯引擎：** 新的 HTML5 轉譯引擎以新式 Web「完整」標準模式及新式瀏覽器為目標。  新的轉譯引擎不再依賴幾種舊瀏覽器使用的 quirks 模式。
   
  如需瀏覽器支援的詳細資訊，請參閱 [Reporting Services 和 Power View 的瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
 
-**新式分頁報表：** 使用樣式新穎的圖表、量測計、地圖和其他資料視覺效果，設計美觀的新式分頁報表。
+**新式編頁報表：** 使用樣式新穎的圖表、量測計、地圖和其他資料視覺效果，設計美觀的新式編頁報表。
   
-**矩形式樹狀結構圖和放射環狀圖：** 使用矩形式樹狀結構圖 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 和放射環狀圖 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 增強報表，這是顯示階層資料的不錯方式。 如需詳細資訊，請參閱 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
+**矩形式樹狀結構圖和放射環狀圖：** 使用矩形式樹狀結構圖 ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") 和放射環狀圖 ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") 來增強報表，這是顯示階層資料的絶佳方式。 如需詳細資訊，請參閱 [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md)。  
 
-**報表內嵌：** 您現在可以使用 iframe 及 URL 參數，將行動和分頁報表內嵌到其他網頁和應用程式中。  
+**報表內嵌：** 您現在可以使用 iframe 及 URL 參數，將行動和編頁報表內嵌到其他網頁和應用程式中。  
 
-**將報表項目釘選到 Power BI 儀表板** ：當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以 **(1)** 選取包含您要釘選之目的地儀表板的群組， **(2)** 選取您也要釘選項目的儀表板，以及 **(3)** 選取您要在儀表板中更新磚的頻率。   ![注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。  
+**將報表項目釘選到 Power BI 儀表板：** 當您在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中檢視報表時，可以選取報表項目，並將其釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板。   可釘選的項目包括圖表、量測計面板、地圖和影像。 您可以 **(1)** 選取包含您要釘選之目的地儀表板的群組， **(2)** 選取您也要釘選項目的儀表板，以及 **(3)** 選取您要在儀表板中更新磚的頻率。   ![注意](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")：重新整理由 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂用帳戶管理，而釘選項目之後，您可以編輯訂用帳戶和設定不同的重新整理排程。  
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
  如需詳細資訊，請參閱 [Power BI 報表伺服器整合 &#40;設定管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 和[將 Reporting Services 項目釘選到 Power BI 儀表板](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。  
  
- **PowerPoint 轉譯及匯出** ：Microsoft PowerPoint (PPTX) 格式是新的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 轉譯延伸模組。 您可以使用 PPTX 格式從下列常用應用程式匯出報表：報表產生器、報表設計師 (在 SSDT 中) 和 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]。 如需範例，下圖顯示了 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]的匯出功能表。 
+ **PowerPoint 轉譯及匯出：** Microsoft PowerPoint (PPTX) 格式是新的 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 轉譯延伸模組。 您可以使用 PPTX 格式從下列常用應用程式匯出報表：報表產生器、報表設計師 (在 SSDT 中) 和 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]。 如需範例，下圖顯示了 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]的匯出功能表。 
   
  ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
   
@@ -152,7 +152,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
   
  如需詳細資訊，請參閱 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)。  
  
- **PDF 在遠端列印取代 ActiveX** ：新式 PDF 體驗已取代報表檢視器工具列 ActiveX 列印體驗，前者可跨支援的瀏覽器矩陣運作，包括 Microsoft Edge。 不再需要下載任何 ActiveX 控制項！ 根據您使用的瀏覽器以及已安裝的 PDF 檢視應用程式和服務， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會開啟 [列印] 對話方塊以列印您的報表，或提示您下載報表的 .PDF 檔案。  您身為系統管理員，仍可以從 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]停用用戶端列印。 如需詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。
+ **PDF 在遠端列印取代 ActiveX：** 新式 PDF 體驗已取代報表檢視器工具列 ActiveX 列印體驗，前者可跨支援的瀏覽器矩陣運作，包括 Microsoft Edge。 不再需要下載任何 ActiveX 控制項！ 根據您使用的瀏覽器以及已安裝的 PDF 檢視應用程式和服務， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會開啟 [列印] 對話方塊以列印您的報表，或提示您下載報表的 .PDF 檔案。  您身為系統管理員，仍可以從 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]停用用戶端列印。 如需詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -166,18 +166,18 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 |**檔案共用訂閱的共用認證**。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 檔案共用訂閱現在同時存有兩個工作流程：<br /><br /> 您的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 系統管理員可以使用此版本的新功能，設定可供一到多個訂閱使用的單一檔案共用帳戶。 檔案共用帳戶是在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式組態管理員的 [指定檔案共用帳戶] 中設定，而使用者接著要在訂閱組態頁面上選取 [使用檔案共用帳戶] 。<br /><br /> 針對目的檔案共用，使用特定認證設定個別訂閱。<br /><br /> 您也可以混用兩種方法，讓某些檔案共用訂閱使用中央檔案共用帳戶，而其他訂閱則使用特定認證。|原生模式|  
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
- SSDT 的新版本包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的專案範本：[報表伺服器專案精靈] 與 [報表伺服器專案]。 如需下載 SSDT 的相關資訊，請參閱 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)(適用於 Visual Studio 2015 的 SQL Server Data Tools)。  
+ SSDT 的新版本包括 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 的專案範本：[報表伺服器專案精靈] 與 [報表伺服器專案]。 如需下載 SSDT 的相關資訊，請參閱 [SQL Server Data Tools for Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542)(適用於 Visual Studio 2015 的 SQL Server Data Tools)。  
 
 ### <a name="report-builder-improvements"></a>報表產生器改進
 
-**新的報表產生器使用者介面** ：核心 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 使用者介面現在透過簡化的 UI 元素，具備了新式外觀及操作。  
+**新的報表產生器使用者介面：** 核心 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 使用者介面現在透過簡化的 UI 項目，具備了新式外觀及操作方式。  
   
 |||  
 |-|-|  
 |新增|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**自訂參數窗格** ：您現在可以自訂參數窗格。 使用報表產生器中的設計界面，您可以將參數拖曳到參數窗格中的特定資料行及資料列。 您可以新增及移除資料行以變更窗格配置。   如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
+**自訂參數窗格：** 您現在可以自訂參數窗格。 使用報表產生器中的設計界面，您可以將參數拖曳到參數窗格中的特定資料行及資料列。 您可以新增及移除資料行以變更窗格配置。   如需詳細資訊，請參閱 [自訂報表中的參數窗格 &#40;報表產生器&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)中建立的行動報表。  
   
  ![[報表資料] 窗格和參數窗格中的參數清單](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "[報表資料] 窗格和參數窗格中的參數清單")  
 

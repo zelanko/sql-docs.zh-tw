@@ -1,6 +1,7 @@
 ---
-title: 設定分散式的可用性群組 (Alwayson 可用性群組) | Microsoft Docs
-ms.custom: ''
+title: 設定分散式可用性群組
+description: '描述如何建立和設定分散式 Always On 可用性群組。 '
+ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6cfc2b3cbb9dedc9f2b8902229c6aea9e68226ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603994"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215364"
 ---
-# <a name="configure-distributed-availability-group"></a>設定分散式的可用性群組  
+# <a name="configure-a-distributed-always-on-availability-group"></a>設定分散式 Always On 可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 若要建立分散式的可用性群組，您必須在每個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組與接聽程式。 隨後您再將這些可用性群組合併成分散式的可用性群組。 下列步驟提供 TRANSACT-SQL 中的基本範例。 本範例未涵蓋關於建立可用性群組與接聽程式的所有詳細資料，而僅著重探討與其相關的重要需求。 

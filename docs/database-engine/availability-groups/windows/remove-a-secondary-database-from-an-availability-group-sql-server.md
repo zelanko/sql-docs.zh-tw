@@ -1,6 +1,7 @@
 ---
-title: 將次要資料庫從可用性群組移除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 將次要資料庫從可用性群組移除
+description: 使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 將次要資料庫從 Always On 可用性群組移除的步驟。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40f08d9b924f8bfd223490694de0f6160f5f9962
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632676"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213547"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>將次要資料庫從可用性群組移除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "47632676"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目移除次要資料庫：**  
   
@@ -41,7 +42,7 @@ ms.locfileid: "47632676"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **待處理：**[從可用性群組中移除次要資料庫之後](#FollowUp)  
+-   **後續操作：**[從可用性群組中移除次要資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -52,7 +53,7 @@ ms.locfileid: "47632676"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要資料庫的 ALTER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -113,7 +114,7 @@ ms.locfileid: "47632676"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：從可用性群組中移除次要資料庫之後  
+##  <a name="FollowUp"></a> 後續操作：從可用性群組中移除次要資料庫之後  
  次要資料庫已移除時，它不再聯結至可用性群組，而且可用性群組會將移除之次要資料庫的所有相關資訊捨棄。 移除的次要資料庫處於 RESTORING 狀態。  
   
 > [!TIP]  

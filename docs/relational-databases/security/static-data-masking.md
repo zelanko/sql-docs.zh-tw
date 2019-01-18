@@ -8,15 +8,15 @@ ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: egranet
-ms.author: esgranet
+ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18dd28aeb4c1678b4b6ae454c065d3d96770cb5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539109"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980454"
 ---
 # <a name="static-data-masking"></a>靜態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "52539109"
  
  ![遮罩功能下拉式清單](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 注意：大多數遮罩功能會有其他設定參數。 針對 [隨機顯示] 遮罩，靜態資料遮罩會提供預設參數。 針對 [Group Shuffle] \(群組隨機顯示\) 遮罩、[單一值] 遮罩和 [String Composite] \(字串複合\) 遮罩，使用者必須提供設定參數。 若要變更或提供設定參數，請按一下 [設定] 選項，然後在快顯對話方塊中指定參數的 (替代) 值。 [遮罩功能](#masking-functions)中提供每項遮罩功能的詳細說明。
+ 附註：大多數遮罩功能會有其他設定參數。 針對 [隨機顯示] 遮罩，靜態資料遮罩會提供預設參數。 針對 [Group Shuffle] \(群組隨機顯示\) 遮罩、[單一值] 遮罩和 [String Composite] \(字串複合\) 遮罩，使用者必須提供設定參數。 若要變更或提供設定參數，請按一下 [設定] 選項，然後在快顯對話方塊中指定參數的 (替代) 值。 [遮罩功能](#masking-functions)中提供每項遮罩功能的詳細說明。
  
  ![遮罩功能設定按鈕](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  

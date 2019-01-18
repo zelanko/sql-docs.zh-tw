@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270528218e23d230ecb8b8ea4dc5bde6baaa6440
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05d19b94f22187e699999642fe79fbcd08c2548a
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545718"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749961"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -52,7 +52,7 @@ ms.locfileid: "52545718"
 
 您可能必須下載適用於 Excel 的連線元件 (如果它們尚未安裝的話)，然後才能使用 SSIS 從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
-在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版的元件可以開啟舊版 Excel 所建立的檔案。
+在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) (Microsoft Access 資料庫引擎 2016 可轉散發套件)。 最新版的元件可以開啟舊版 Excel 所建立的檔案。
 
 ### <a name="notes-about-the-download-and-installation"></a>關於下載與安裝的注意事項
 

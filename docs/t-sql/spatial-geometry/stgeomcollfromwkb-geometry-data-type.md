@@ -18,12 +18,12 @@ ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2462be51a6464321c8c864cdeaa37f126199a391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5222f3076126f26a03d8634bff05f32ccd4b723
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760466"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979784"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR 傳回類型：**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
- `STGeomCollFromWKB()` 所傳回之 **geometry** 執行個體的 OGC 類型會根據對應的 WKB 輸入，設定為 **GeomCollection**、**MultiPolygon**、**MultiLineString** 或 **MulitPoint**。  
+ `STGeomCollFromWKB()` 所傳回之 **geometry** 執行個體的 OGC 類型會根據對應的 WKB 輸入，設定為 **GeomCollection**、**MultiPolygon**、**MultiLineString** 或 **MultiPoint**。  
   
  如果輸入的格式不正確，這個方法將會擲回 FormatException 例外狀況。  
   

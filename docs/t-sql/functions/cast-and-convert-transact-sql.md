@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 267e1c145a6a67976f1d057c0c98186f192f9247
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 513ccaf7c50b7ca08d6651d516a4b5265d86d7fe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191068"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210778"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 ## <a name="date-and-time-styles"></a>日期和時間樣式  
 針對日期或時間資料類型 *expression*，*style* 可以具有下表中所顯示的其中一個值。 其他值則當做 0 處理。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，從日期和時間類型轉換成 **datetimeoffset** 時，唯一支援的樣式為 0 或 1。 所有其他轉換樣式都會傳回錯誤 9809。
   
->  [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用科威特演算法來支援阿拉伯文樣式的日期格式。
   
 |不含世紀 (yy) (<sup>1</sup>)|含世紀 (yyyy)|Standard|輸入/輸出 (<sup>3</sup>)|  
@@ -167,9 +167,9 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 |ReplTest1|輸出|  
 |---|---|
-|**0** (預設)|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例：4235.98。|  
-|**1**|小數點左側會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例：3,510.92。|  
-|**2**|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有四位數<br /><br />範例：4235.9819。|  
+|**0** (預設)|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例4235.98。|  
+|**1**|小數點左側會每隔三位數加一個逗號，小數點右側則會有兩位數<br /><br />範例3,510.92。|  
+|**2**|小數點左側並不會每隔三位數加一個逗號，小數點右側則會有四位數<br /><br />範例4235.9819。|  
 |**126**|轉換成 char(n) 或 varchar(n) 時，相當於樣式 2|  
   
 ## <a name="xml-styles"></a>xml 樣式
@@ -177,7 +177,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 |ReplTest1|輸出|  
 |---|---|
-|**0** (預設)|使用預設剖析行為，以捨棄無意義的空白字元，而且不允許內部 DTD 子集。<br /><br />**注意：** 轉換成 **xml** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無意義空白字元的處理方式會與 XML 1.0 不同。 如需詳細資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
+|**0** (預設)|使用預設剖析行為，以捨棄無意義的空白字元，而且不允許內部 DTD 子集。<br /><br />**注意：** 轉換成  資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無意義空白字元的處理方式會與 XML 1.0 不同。 如需詳細資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
 |**1**|保留無意義的空格。 此樣式設定會設定預設 **xml:space** 處理，以符合 **xml:space="preserve"** 的行為。|  
 |**2**|啟用有限的內部 DTD 子集處理。<br /><br /> 啟用時，伺服器可以使用內部 DTD 子集所提供的下列資訊來執行非驗證的剖析作業。<br /><br />   - 已套用屬性的預設值<br />   - 已解決和展開內部實體參考<br />   - 已檢查 DTD 內容模型來確定語法正確性<br /><br /> 剖析器會忽略外部 DTD 子集。 此外，它不會評估 XML 宣告，以查看 **standalone** 屬性具有 **yes** 還是 **no** 值。 相反地，它會將 XML 執行個體剖析為獨立文件。|  
 |**3**|保留無意義的空白字元，並啟用有限的內部 DTD 子集處理。|  

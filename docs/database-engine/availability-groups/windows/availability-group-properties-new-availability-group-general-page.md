@@ -1,6 +1,8 @@
 ---
-title: 可用性群組屬性：新增可用性群組 (一般頁面) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組屬性：新增可用性群組 (一般頁面)
+titleSuffix: SQL Server
+description: 描述 SQL Server Management Studio [新增可用性群組精靈] 中 [一般] 頁面上找到的各種選項。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +14,12 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098bc8bf6746acdec41aecc9533b21bc0b49e095
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1acbcb925b2b98cdc81bf3f745ebaa9b79edbf55
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689996"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208517"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性群組屬性：新增可用性群組 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

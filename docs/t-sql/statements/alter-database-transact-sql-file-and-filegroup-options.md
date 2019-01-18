@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 檔案及檔案群組選項 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1191ae28c9683a89d06830c942a22941fccfb943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403553"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53329010"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
 
@@ -144,8 +144,8 @@ REMOVE FILE *logical_file_name*
 *logical_file_name*  
 這是在參考檔案時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的邏輯名稱。  
   
-> [!WARNING]  
-> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+> [!WARNING]
+> 移除具有與其建立關聯之 `FILE_SNAPSHOT` 備份的資料庫會成功，但將不會刪除任何相關聯的快照集，以避免使備份參考資料庫檔案不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 MODIFY FILE  
 指定應該修改的檔案。 每次只能變更一個 \<filespec> 屬性。 您必須在 \<filespec> 中指定 NAME，以識別要修改的檔案。 如果指定了 SIZE，新的大小必須大於目前檔案大小。  
@@ -341,15 +341,15 @@ READ_ONLY | READONLY
 - 不可能壓縮資料庫。  
 - 唯讀資料庫不會出現鎖定。 因此，查詢效能會比較快。  
   
-> [!NOTE]  
+> [!NOTE]
 > 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READONLY` 關鍵字。 請避免在新的開發工作中使用 `READONLY`，並規劃修改目前使用 `READONLY` 的應用程式。 請改用 `READ_ONLY` 。  
   
 READ_WRITE | READWRITE  
 將群組指定成 READ_WRITE 狀態。 檔案群組中的物件可以更新。 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。  
   
-> [!NOTE]  
+> [!NOTE]
 > 在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。  
-  
+> 
 > [!TIP]
 > 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
   
@@ -887,13 +887,13 @@ READ_ONLY | READONLY
 - 不可能壓縮資料庫。  
 - 唯讀資料庫不會出現鎖定。 因此，查詢效能會比較快。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 READONLY 關鍵字。 請避免在新的開發工作中使用 READONLY，並規劃修改目前在使用 READONLY 的應用程式。 請改用 READ_ONLY。  
   
 READ_WRITE | READWRITE  
 將群組指定成 READ_WRITE 狀態。 檔案群組中的物件可以更新。 若要變更這個狀態，您必須具有資料庫的獨佔存取權。 如需詳細資訊，請參閱 SINGLE_USER 子句。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，將移除 `READWRITE` 關鍵字。 請避免在新的開發工作中使用 `READWRITE`，並規劃修改目前在使用 `READWRITE` 的應用程式，改為使用 `READ_WRITE`。  
   
 您可以檢查 **sys.databases** 目錄檢視中的 **is_read_only** 資料行或 `DATABASEPROPERTYEX` 函數的 **Updateability** 屬性來判斷這些選項的狀態。  
@@ -1092,5 +1092,6 @@ GO
 [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
-[記憶體最佳化的檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) 
+[記憶體最佳化的檔案群組](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)
 
+::: moniker-end

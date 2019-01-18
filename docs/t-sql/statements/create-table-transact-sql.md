@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a74cdb7827351c6616a7d37ad3deb80a068a375c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394516"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980384"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -390,10 +390,10 @@ column_name <data_type>
   
  ON {*partition_scheme* | *filegroup* | **"** default **"**} 也可以在 PRIMARY KEY 或 UNIQUE 條件約束中指定。 這些條件約束會建立索引。 如果指定了 *filegroup*，索引會儲存在具名檔案群組中。 如果指定了 **"** default **"**，或完全未指定 ON，索引就會儲存在與資料表相同的檔案群組中。 如果 PRIMARY KEY 或 UNIQUE 條件約束建立叢集索引，資料表的資料頁面會儲存在索引的相同檔案群組中。 如果指定了 CLUSTERED，或常數建立了叢集索引，就會指定不同於資料表定義的 *partition_scheme* 或 *filegroup* 之 *partition_scheme* (反之亦然)，則只會遵守常數定義，其他一概予以忽略。  
   
-> [!NOTE]  
+> [!NOTE]
 >  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]**。 如果指定了 **"** default **"**，則目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  在您建立分割區資料表之後，請考慮將資料表的 LOCK_ESCALATION 選項設定為 AUTO。 如此一來可以讓鎖定從資料表擴大至分割區 (HoBT) 階層，進而改善並行作業。 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)。  
   
  TEXTIMAGE_ON { *filegroup*| **"** default **"** }  
@@ -401,12 +401,12 @@ column_name <data_type>
   
  如果資料表中沒有大數值資料行，即不可使用 TEXTIMAGE_ON。 如果指定了 *partition_scheme*，便不能指定 TEXTIMAGE_ON。 如果指定了 **"** default **"**，或完全未指定 TEXTIMAGE_ON，大數值資料行就會儲存在預設檔案群組中。 CREATE TABLE 所指定的任何大數值資料行的儲存體，無法進行後續的改變。  
 
-> [!NOTE]  
+> [!NOTE]
 > 只要記錄能夠容納值，便將Varchar(max)、 nvarchar(max)、varbinary(max)、xml 和大型 UDT 值直接儲存在資料列中，最多 8000 個位元組。 如果記錄無法容納值，便會將指標儲存在同資料列中，其餘部分會儲存在資料列外 (LOB 儲存空間中)。 預設值是 0。
-TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存在資料列時，它不會有任何的影響。 使用 sp_tableoption 的 large value types out of row 選項，以便將整個 LOB 值儲存到資料列外。 
-
-
-> [!NOTE]  
+> TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存在資料列時，它不會有任何的影響。 使用 sp_tableoption 的 large value types out of row 選項，以便將整個 LOB 值儲存到資料列外。 
+> 
+> 
+> [!NOTE]
 >  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 TEXTIMAGE_ON **"** default **"** 或 TEXTIMAGE_ON **[** default **]**。 如果指定了 **"** default **"**，則目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
@@ -706,7 +706,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  如果在 INSTEAD OF 觸發程序 ON UPDATE 已經存在已警示的資料表，則無法定義ON UPDATE CASCADE、SET NULL、或 SET DEFAULT。  
   
- 例如，在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，**ProductVendor** 資料表與 **Vendor** 資料表有參考關聯性：**ProductVendor.BusinessEntity** 外部索引鍵會參考 **Vendor.BusinessEntityID** 主索引鍵。  
+ 例如在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，**ProductVendor** 資料表與 **Vendor** 資料表有參考關聯性：**ProductVendor.BusinessEntity** 外部索引鍵會參考 **Vendor.BusinessEntityID** 主索引鍵。  
   
  如果在 **Vendor** 資料表的某資料列上執行 UPDATE 陳述式，且指定了 **ProductVendor.BusinessEntityID** 的 ON UPDATE CASCADE 動作，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 便會檢查 **ProductVendor** 資料表中一個或多個相依的資料列。 如果有任何相依的資料列存在，就會更新 **ProductVendor** 資料表中的相依資料列，以及 **Vendor** 資料表中所參考的資料列。  
   
@@ -793,13 +793,13 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  可以使用以下方式來指定 *partition_number_expression*：  
   
--   提供分割區的分割區編號，例如：ON PARTITIONS (2)。  
+-   提供資料分割的資料分割編號，例如：ON PARTITIONS (2)。  
   
 -   為數個個別分割區提供以逗號分隔的分割區編號，例如：ON PARTITIONS (1, 5)。  
   
 -   同時提供範圍和個別分割區，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
- `<range>` 可以指定為以 TO 一字分隔的資料分割編號，例如：ON PARTITIONS (6 TO 8)。  
+ `<range>` 可以指定為以 TO 一字分隔的分割區編號，例如：ON PARTITIONS (6 TO 8)。  
   
  若要為不同的分割區設定不同類型的資料壓縮，請指定 DATA_COMPRESSION 選項一次以上，例如：  
   
@@ -930,7 +930,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 Azure SQL Database 受控執行個體不支援記憶體最佳化資料表。 
   
- 值為 ON 時，會指出資料表為記憶體最佳化。 記憶體最佳化資料表是記憶體中 OLTP 功能的一部分，可用來最佳化交易處理的效能。 若要開始使用記憶體中 OLTP，請參閱[快速入門 1：可加速 Transact-SQL 效能的記憶體內 OLTP 技術](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。 如需有關經記憶體最佳化的資料表詳細資訊，請參閱：[經記憶體最佳化的資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 值為 ON 時，會指出資料表為記憶體最佳化。 記憶體最佳化資料表是記憶體中 OLTP 功能的一部分，可用來最佳化交易處理的效能。 若要開始使用記憶體內部 OLTP，請參閱[快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。 如需有關經記憶體最佳化的資料表詳細資訊，請參閱：[經記憶體最佳化的資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  預設值 OFF 表示資料表是以磁碟為基礎。  
   
@@ -957,7 +957,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
    
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 
   
-您必須指定資料行和資料表索引，作為 CREATE TABLE 陳述式的一部分。 如需加入和移除記憶體最佳化資料表上的索引詳細資料，請參閱：[改變記憶體最佳化資料](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+您必須指定資料行和資料表索引，作為 CREATE TABLE 陳述式的一部分。 如需在記憶體最佳化資料表上新增和移除索引的詳細資料，請參閱：[改變記憶體最佳化資料表](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
@@ -1217,7 +1217,7 @@ SELECT * FROM tempdb.sys.database_files
  如需資料表及其資料行的報表，請使用 **sp_help** 或 **sp_helpconstraint**。 若要重新命名資料表，請使用 **sp_rename**。 如需相依於資料表之檢視表和預存程序的報表，請使用 [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) 和 [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)。  
   
 ## <a name="nullability-rules-within-a-table-definition"></a>資料表定義內的 Null 屬性規則  
- 資料行的 Null 屬性決定了資料行的資料是否接受 NULL 值。 NULL 並不是零或空白：NULL 表示沒有任何輸入，或提供了明確的 NULL，但它通常隱含值是未知或不適用。  
+ 資料行的 Null 屬性決定了資料行的資料是否接受 NULL 值。 NULL不是零或空白：NULL 表示沒有任何輸入，或提供了明確的 NULL；但 NULL 通常隱含了值不明或不適用的意思。  
   
  當您利用 CREATE TABLE 或 ALTER TABLE 來建立或變更資料表時，資料庫和工作階段設定會影響且可能會覆寫資料行定義所用之資料類型的 Null 屬性。 我們建議您對於非計算資料行，一律將資料行明確定義為 NULL 或 NOT NULL，如果您採用使用者自訂資料類型，建議您允許資料行使用資料類型的預設 Null 屬性。 疏鬆資料行必須永遠允許 NULL。  
   
@@ -1229,7 +1229,7 @@ SELECT * FROM tempdb.sys.database_files
 |CLR 使用者定義型別 (CLR user-defined type)|Null 屬性取決於資料行定義。|  
 |系統提供的資料類型|如果系統提供的資料類型只有一個選項，將會優先使用。 **timestamp** 資料類型必須是 NOT NULL。 當利用 SET 將任何工作階段設定設為 ON 時：<br />**ANSI_NULL_DFLT_ON** = ON，指派 NULL。  <br />**ANSI_NULL_DFLT_OFF** = ON，指派 NOT NULL。<br /><br /> 當利用 ALTER DATABASE 來設定任何資料庫設定：<br />**ANSI_NULL_DEFAULT_ON** = ON，指派 NULL。  <br />**ANSI_NULL_DEFAULT_OFF** = ON，指派 NOT NULL。<br /><br /> 若要檢視 ANSI_NULL_DEFAULT 的資料庫設定，請使用 **sys.databases** 目錄檢視表|  
   
- 當工作階段並未設定任何一個 ANSI_NULL_DFLT 選項，而且資料庫設為預設值 (ANSI_NULL_DEFAULT 為 OFF) 時，會指派預設值 NOT NULL。  
+ 當工作階段並未設定任何一個 ANSI_NULL_DFLT 選項，且資料庫設為預設 (ANSI_NULL_DEFAULT 為 OFF) 時，會指派預設 NOT NULL。  
   
  如果資料行是計算資料行，它的 Null 屬性一律由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 來自動決定。 若要知道這類資料行的可 Null 性，請搭配 **AllowsNull** 屬性來使用 COLUMNPROPERTY 函數。  
   
@@ -1438,7 +1438,7 @@ CREATE TABLE dbo.mylogintable
 ```sql  
 CREATE TABLE dbo.EmployeePhoto  
     (  
-    EmployeeId int NOT NULL PRIMARY KEY,  
+     EmployeeId int NOT NULL PRIMARY KEY  
     ,Photo varbinary(max) FILESTREAM NULL  
     ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL  
         UNIQUE DEFAULT NEWID()  

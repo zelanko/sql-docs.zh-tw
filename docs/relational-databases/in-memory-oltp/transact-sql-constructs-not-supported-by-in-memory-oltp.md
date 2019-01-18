@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8023d29ccdf04ff46b995e1f698bb54a905df5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503619"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590762"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,8 +68,8 @@ ms.locfileid: "52503619"
 |作業|主索引鍵資料行的更新。|記憶體最佳化資料表中的主索引鍵資料行和資料類型無法更新。 如果主索引鍵需要更新，請刪除舊資料列，並插入包含更新之主索引鍵的新資料列。|  
 |作業|CREATE INDEX|記憶體最佳化資料表上的索引必須採用內嵌於 **CREATE TABLE** 陳述式或 **ALTER TABLE** 陳述式的方式指定。|  
 |作業|CREATE FULLTEXT INDEX|記憶體最佳化資料表中不支援全文檢索索引。|  
-|作業|結構描述變更|經記憶體最佳化的資料表和原生編譯預存程序不支援特定結構描述變更：<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起)：支援 ALTER TABLE、ALTER PROCEDURE 和 sp_rename 作業。 不支援其他結構描述變更 (例如新增擴充屬性)。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]：支援 ALTER TABLE 和 ALTER PROCEDURE 作業。 不支援其他結構描述變更 (包括 sp_rename)。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]：不支援結構描述變更。 若要變更經記憶體最佳化資料表或原生編譯預存程序的定義，請先卸除物件，然後使用所需的定義重新建立即可。| 
-|作業|TRUNCATE TABLE|記憶體最佳化資料表不支援 TRUNCATE 作業。 若要從資料表移除所有資料列，請使用 **DELETE FROM***table* 刪除所有資料列，或卸除資料表後再重新建立。|  
+|作業|結構描述變更|經記憶體最佳化的資料表和原生編譯預存程序不支援特定結構描述變更：<br/> [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起)：支援 ALTER TABLE、ALTER PROCEDURE 和 sp_rename 作業。 不支援其他結構描述變更 (例如新增擴充屬性)。<br/><br/>[!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]:支援 ALTER TABLE 和 ALTER PROCEDURE 作業。 不支援其他結構描述變更 (包括 sp_rename)。<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]：不支援結構描述變更。 若要變更經記憶體最佳化資料表或原生編譯預存程序的定義，請先卸除物件，然後使用所需的定義重新建立即可。| 
+|作業|TRUNCATE TABLE|記憶體最佳化資料表不支援 TRUNCATE 作業。 若要移除資料表中的所有資料列，請使用 **DELETE FROM**_table_ 刪除所有資料列，或卸除後再重新建立資料表。|  
 |作業|ALTER AUTHORIZATION|不支援變更現有記憶體最佳化資料表或原生編譯預存程序的擁有者。 請卸除後再重新建立資料表或程序，以變更擁有權。|  
 |作業|ALTER SCHEMA|不支援傳輸現有資料表或原生編譯預存程序的其他結構描述。 若要在結構描述之間傳輸，請卸除並重新建立物件。|  
 |作業|DBCC CHECKTABLE|經記憶體最佳化的資料表中不支援 DBCC CHECKTABLE。 若要確認磁碟檢查點檔案的完整性，請執行 MEMORY_OPTIMIZED_DATA 檔案群組的備份。|  
@@ -104,11 +104,11 @@ ms.locfileid: "52503619"
 |功能|資料指標|原生編譯預存程序上或內部不支援資料指標。<br /><br /> 從用戶端執行預存程序時，請使用 RPC，而不要使用資料指標 API。 使用 ODBC 時，避免 [!INCLUDE[tsql](../../includes/tsql-md.md)] 引數 **EXECUTE**，請改為直接指定程序的名稱。<br /><br /> 從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次或其他預存程序執行程序時，避免將資料指標與原生編譯預存程序一起使用。<br /><br /> 建立原生編譯預存程序時，請不要使用資料指標，而是使用集合為基礎的邏輯或 **WHILE** 迴圈。|  
 |功能|非常數參數的預設值|在原生編譯預存程序上使用具有參數的預設值時，值必須為常數。 請從參數宣告中移除任何萬用字元。|  
 |功能|EXTERNAL|無法對 CLR 預存程序執行原生編譯。 從 CREATE PROCEDURE 陳述式中移除 AS EXTERNAL 子句或 NATIVE_COMPILATION 選項。|  
-|功能|編號的預存程序|原生編譯預存程序不可編號。 從 **CREATE PROCEDURE** 陳述式移除 **;***number*。|  
+|功能|編號的預存程序|原生編譯預存程序不可編號。 從 **CREATE PROCEDURE**_陳述式移除_ ; **number** 。|  
 |功能|多資料列 INSERT ...VALUES 陳述式|無法使用相同的 **INSERT** 陳述式在原生編譯預存程序中插入多個資料列。 請為每個資料列建立 **INSERT** 陳述式。|  
 |功能|通用資料表運算式 (CTE)|原生編譯預存程序中不支援通用資料表運算式 (CTE)。 重寫查詢。|  
 |功能|COMPUTE|不支援 **COMPUTE** 子句。 請從查詢中將它移除。|  
-|功能|SELECT INTO|不支援 **INTO** 子句與 **SELECT** 陳述式一起使用。 請將查詢重新撰寫為 **INSERT INTO** *Table* **SELECT**。|  
+|功能|SELECT INTO|不支援 **INTO** 子句與 **SELECT** 陳述式一起使用。 請將查詢重新撰寫為 **INSERT INTO** _Table_ **SELECT**。|  
 |功能|不完整的插入資料行清單|一般而言，在 INSERT 陳述式中，必須為資料表中的所有資料行指定值。<br /><br /> 不過，我們支援記憶體最佳化資料表上的 DEFAULT 條件約束和 IDENTITY(1,1) 資料行。 INSERT 資料行清單中可以省略這些資料行，但 IDENTITY 資料行必須省略這些資料行。|  
 |功能|*函數*|原生編譯預存程序中不支援某些內建函數。 請從預存程序中移除拒絕的函數。 如需所支援內建函數的詳細資訊，請參閱<br />[原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)，或<br />[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。|  
 |功能|CASE|**適用於：**[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 起)<br/>原生編譯的預存程序不支援 **CASE** 運算式。 請為每個案例建立查詢。 如需詳細資訊，請參閱 [在原生編譯的預存程序中實作 CASE 運算式](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起) 可支援 CASE 運算式。|  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
@@ -15,12 +14,12 @@ ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b9c0b74d03de5fe8a8f37ba33e99e1ae41e20b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be5a8ecff530cfcc381ca8b6bd2d5c89bc2c46e8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645886"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52790200"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>使用精靈部署模型部署封裝
 
@@ -62,7 +61,7 @@ ms.locfileid: "47645886"
   
  **注意：**  
   
--   如果套件中的訂閱檢視與現有模型中的訂閱檢視同名，就會顯示這項警告： **部署者訂閱已重新命名**， 且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
+-   如果套件中訂閱檢視與現有模型中訂閱檢視同名，就會顯示這項警告：**部署器訂閱檢視已重新命名**。 且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
   
 -   部署程序有四個步驟：  
   

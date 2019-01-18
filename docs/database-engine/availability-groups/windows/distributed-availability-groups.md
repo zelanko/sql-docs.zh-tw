@@ -1,6 +1,7 @@
 ---
-title: 分散式可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 什麼是分散式可用性群組
+description: 分散式可用性群組是跨兩個不同可用性群組之特殊類型的可用性群組。 參與分散式可用性群組的可用性群組不需要位於相同的位置中。
+ms.custom: seodec18
 ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc3dfd0534deb313725ab646da26f770d0f99cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534456"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53381029"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,9 @@ ms.locfileid: "52534456"
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>分散式可用性群組的 SQL Server 版本需求
 
-分散式可用性群組目前只能與使用相同主要 SQL Server 版本所建立的可用性群組搭配運作。 例如，目前必須使用 SQL Server 2016 建立所有參與分散式可用性群組的可用性群組。 因為 SQL Server 2012 或 2014 中沒有分散式可用性群組功能，所以使用這些版本所建立的可用性群組不能參與分散式可用性群組。 
+SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同分散式可用性群組中的主要 SQL Server 版本。 包含讀取/寫入主要複本的 AG 版本，可以與參與分散式 AG 的其他 AG 版本相同或更低。 其他 AG 可以是相同版本或更新版本。 此案例是以升級和移轉案例為目標。 例如，如果包含讀取/寫入主要複本的 AG 為 SQL Server 2016，但您想要升級/移轉至 SQL Server 2017 或更新版本，則可以使用 SQL Server 2017 設定參與分散式 AG 的其他 AG。
+
+因為 SQL Server 2012 或 2014 中沒有分散式可用性群組功能，所以使用這些版本所建立的可用性群組不能參與分散式可用性群組。 
 
 > [!NOTE]
 > 無法使用 Standard 版本或混用 Standard 與 Enterprise 版本來設定分散式可用性群組。
@@ -85,7 +88,7 @@ ms.locfileid: "52534456"
 * 一個 WSFC 叢集會加入網域，而一個 WSFC 叢集未加入網域。
 * 兩個 WSFC 叢集都未加入網域。
 
-如果將這兩個 WSFC 叢集加入相同的網域 (非叢集網路)，則在您建立分散式可用性群組時不需要執行特殊作業。 針對未加入相同網域的可用性群組和 WSFC 叢集，使用憑證讓分散式可用性群組運作，這種方式與建立可用性群組作為網域獨立的可用性群組的方式極為相同。 若要查看如何設定分散式可用性群組的憑證，請遵循[建立網域獨立的可用性群組](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)下的步驟 3-13。
+如果將這兩個 WSFC 叢集加入相同的網域 (非叢集網路)，則在您建立分散式可用性群組時不需要執行特殊作業。 針對未加入相同網域的可用性群組和 WSFC 叢集，使用憑證讓分散式可用性群組運作，這種方式與建立可用性群組作為網域獨立的可用性群組的方式極為相同。 若要查看如何設定分散式可用性群組的憑證，請遵循[建立網域獨立的可用性群組](domain-independent-availability-groups.md)下的步驟 3-13。
 
 使用分散式可用性群組時，每個基礎可用性群組中的主要複本都必須要有對方的憑證。 如果您已經有未使用憑證的端點，請使用 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) 重新設定這些端點，以反映憑證的使用。
 

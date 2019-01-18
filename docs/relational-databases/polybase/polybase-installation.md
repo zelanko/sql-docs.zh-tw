@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f77ab925ebfba6ab1d3fd524d7d740eca58fcba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523482"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208796"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
 
@@ -34,20 +34,20 @@ ms.locfileid: "52523482"
 
 - 最小記憶體：4 GB。 
    
-- 最小硬碟空間︰2 GB。
+- 最小硬碟空間：2 GB。
   
-- 建議：至少 16 GB RAM。
+- 建議事項：至少 16 GB RAM。
    
 - 必須啟用 TCP/IP，PolyBase 才能正常運作。 預設會在 SQL Server Developer 和 Express 版本以外的所有 SQL Server 版本上啟用 TCP/IP。 若要讓 PolyBase 在 Developer 和 Express 版本上正常運作，您必須啟用 TCP/IP 連線。 請參閱[啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 
 - MSVC++ 2012。 
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 > 每部電腦只能在一個 SQL Server 執行個體上安裝 PolyBase。
-
+> 
 > [!IMPORTANT]
->
+> 
 > 若要針對 Hadoop 使用計算下推功能，目標 Hadoop 叢集必須具有 HDFS、YARN 和 MapReduce 的核心元件，並已啟用作業記錄伺服器。 PolyBase 透過 MapReduce 來提交下推查詢，並從作業記錄伺服器提取狀態。 如果沒有其中一個元件，則查詢會失敗。
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>單一節點或 PolyBase 向外延展群組
@@ -108,10 +108,10 @@ ms.locfileid: "52523482"
 |SQL Server 安裝程式控制|**必要項**<br /><br /> /FEATURES=PolyBase|選取 PolyBase 功能。|  
 |SQL Server PolyBase 引擎|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
-|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
+|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCACCOUNT|指定資料移動服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCPASSWORD|指定資料移動帳戶的密碼。|  
-|SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
+|SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |PolyBase|**選擇性**<br /><br /> /PBSCALEOUT|指定 SQL Server 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 <br />支援的值：True、False。|  
 |PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定至少具有六個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
@@ -124,10 +124,10 @@ ms.locfileid: "52523482"
 |SQL Server 安裝程式控制|**必要**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 會安裝所有 PolyBase 功能的支援，除了 Hadoop 連線能力以外。 PolyBaseJava 可啟用 Hadoop 連線能力。 PolyBase 兩種都會安裝。 |  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
-|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
+|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCACCOUNT|指定資料移動服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCPASSWORD|指定資料移動帳戶的密碼。|  
-|SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式︰Automatic (自動，預設值)、Disabled (停用) 以及 Manual (手動)。|  
+|SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCSTARTUPTYPE|指定資料移動服務的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |PolyBase|**選擇性**<br /><br /> /PBSCALEOUT|指定 SQL Server 執行個體是否會用作 PolyBase 向外延展計算群組的一部分。 <br />支援的值：True、False。|  
 |PolyBase|**選擇性**<br /><br /> /PBPORTRANGE|為 PolyBase 服務指定至少具有六個連接埠的連接埠範圍。 範例<br /><br /> `/PBPORTRANGE=16450-16460`|  
 

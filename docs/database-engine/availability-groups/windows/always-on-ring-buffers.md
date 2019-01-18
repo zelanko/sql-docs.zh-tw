@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性群組信號緩衝區 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 使用環形緩衝區取得可用性群組的健全狀況資訊
+description: 使用 SQL Server 環形緩衝區取得 Always On 可用性群組的特定診斷資訊。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bc5ccc83285ead5a5d5de55742380d0af5766b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26f6cd91a0b2af905d863d398245c672657092dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642388"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208297"
 ---
-# <a name="always-on-availability-groups-ring-buffers"></a>Always On 可用性群組信號緩衝區
+# <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>使用環形緩衝區取得 Always On 可用性群組的健全狀況資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   某些診斷的 Always On 可用性群組資訊可從 SQL Server 信號緩衝區，或是 sys.dm_os_ring_buffers 動態管理檢視 (DMV) 取得。 信號緩衝區在 SQL Server 啟動期間建立，並針對內部診斷記錄 SQL Server 系統中的警示。 系統不支援它們，但您仍然可以在針對問題進行疑難排解時，從它們擷取有用的資訊。 這些信號緩衝區在 SQL Server 當機或損毀時，提供診斷的其他資源。  
   

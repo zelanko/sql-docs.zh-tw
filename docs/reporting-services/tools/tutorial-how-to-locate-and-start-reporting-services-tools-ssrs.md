@@ -1,9 +1,11 @@
 ---
 title: 教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
+description: 本教學課程介紹設定報表伺服器、管理報表伺服器內容和作業，以及建立並發佈分頁和行動 Reporting Services 報表所使用的工具。
+ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, tutorials
@@ -18,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a720f17e43dc22c5bb554c1e7a83cc7e845b835
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2937ca969b7a277710b8040481d61c68a12e096f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711299"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206217"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
 
@@ -40,7 +42,7 @@ ms.locfileid: "52711299"
 -   管理加密金鑰。  
 -   設定自動報表處理和電子郵件報表傳遞。  
   
- **安裝** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式時，就會安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員。 如需詳細資訊，請參閱 [安裝 Reporting Services 原生模式報表伺服器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
+**安裝：** 安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式時，會同時安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 設定管理員。 如需詳細資訊，請參閱 [安裝 Reporting Services 原生模式報表伺服器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)。  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>啟動 Reporting Services 組態管理員  
   
@@ -66,12 +68,12 @@ ms.locfileid: "52711299"
   
      ![Reporting Services 組態工具](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 組態工具")  
   
- **後續步驟**︰[設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 和[Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
+ **後續步驟：**[設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 和[Reporting Services 設定管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。  
   
 ##  <a name="web-portal-native-mode"></a>入口網站 (原生模式)  
  使用 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) 來設定權限、管理訂閱與排程，以及處理報表。 您也可以使用入口網站來檢視報表。  
   
- **安裝** ︰當您安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式 ( [安裝 Reporting Services 原生模式報表伺服器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **安裝：** 安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式時，會同時安裝入口網站：[安裝 Reporting Services 原生模式報表伺服器](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  在您開啟入口網站之前，必須有足夠的權限 (一開始，只有本機管理員群組成員才有權限，可以存取入口網站功能)。 依目前使用者的指派角色而定，入口網站會提供不同的頁面和選項。 沒有權限的使用者就會看到空白頁。 有權限檢視報表的使用者會取得連結，按一下就可以開啟報表。 若要深入了解權限，請參閱[角色與權限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)。  
   
@@ -107,7 +109,7 @@ ms.locfileid: "52711299"
 5.  按一下 **[連接]**。 您可以展開根節點以設定伺服器屬性、修改角色定義，或關閉報表伺服器功能。  
   
 ##  <a name="bkmk_ssdt"></a> 含有報表設計師和報表精靈的 SQL Server 資料工具  
- 您可以選擇兩個不同的工具來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分頁報表︰報表設計師和 [報表產生器](#bkmk_report_builder)。  
+ 您可以選擇兩個不同的工具來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分頁報表︰  報表設計師與[報表產生器](#bkmk_report_builder)。  
   
  報表設計師位於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio。 報表設計師的設計介面包括：索引標籤式視窗、精靈和用來存取報表撰寫功能的功能表。 報表設計師工具會在您選擇 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]報表伺服器專案或報表伺服器精靈範本時提供使用。 若要深入了解，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。 
  
@@ -132,7 +134,9 @@ ms.locfileid: "52711299"
  若要著手建立第一份報表，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)。 若要深入了解可在報表設計師中使用的查詢設計工具，請參閱 [查詢設計工具 &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)的技巧。  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
- [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 是獨立的應用程式，可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外建立分頁報表。 不論報表是使用報表設計師還是舊版 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]所建立，您都可以自訂與更新所有現有的報表。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
+ [SQL Server 的報表產生器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 是獨立的應用程式，可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外建立分頁報表。 不論報表是使用報表設計師還是舊版 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]所建立，您都可以自訂與更新所有現有的報表。 從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。 
+
+分頁報表準備就緒時，將它發佈至報表伺服器或[將它儲存到 Power BI 服務](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service)。 
   
  從 Microsoft 下載中心[下載報表產生器](https://go.microsoft.com/fwlink/?LinkID=219138) 。  
   
@@ -151,7 +155,7 @@ ms.locfileid: "52711299"
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 隨即開啟，您可以建立或開啟分頁報表。  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- 使用 [SQL Server 行動報表發行工具](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) ，建立您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站及行動裝置 (例如 iPad 和 iPhone) 上檢視的行動報表。   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
+ 使用 [SQL Server 行動報表發行工具](../mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) ，建立您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站及行動裝置 (例如 iPad 和 iPhone) 上檢視的行動報表。   您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  
   
  從 Microsoft 下載中心[下載 SQL Server 行動報表發行工具](https://go.microsoft.com/fwlink/?LinkID=733527) 。  
   

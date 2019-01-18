@@ -18,12 +18,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba9dc3ac94a3db07bb37eac96ffdbb72911ad562
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2811871ff8d7a190eedd2ebf93fc74639f1c44b9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503570"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215877"
 ---
 # <a name="data-flow"></a>資料流程
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
@@ -179,13 +179,13 @@ ms.locfileid: "52503570"
  來源具有輸出，目的地具有輸入，而轉換既有輸入又有輸出。 此外，許多資料流程元件都可以設定為使用錯誤輸出。  
   
 ### <a name="inputs"></a>輸入  
- 目的地和轉換具有輸入。 輸入包含一或多個輸入資料行，如果資料流程元件已設定為使用外部資料行，這些輸入資料行便可以參考外部資料行。 輸入可以設定為監視和控制資料的流向：例如，您可以指定元件是否應在回應錯誤時失敗、忽略錯誤，或者將錯誤資料列重新導向至錯誤輸出。 您也可以指派輸入的描述或更新輸入名稱。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸入。 如需**進階編輯器**詳細資訊，請參閱 [Integration Services 使用者介面](../../integration-services/integration-services-user-interface.md)。  
+ 目的地和轉換具有輸入。 輸入包含一或多個輸入資料行，如果資料流程元件已設定為使用外部資料行，這些輸入資料行便可以參考外部資料行。 輸入可以設定為監視和控制資料流程：例如，您可以指定元件是否應在回應錯誤時失敗、忽略錯誤，或將錯誤資料列重新導向至錯誤輸出。 您也可以指派輸入的描述或更新輸入名稱。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸入。 如需**進階編輯器**詳細資訊，請參閱 [Integration Services 使用者介面](../../integration-services/integration-services-user-interface.md)。  
   
 ### <a name="outputs"></a>輸出  
  來源和轉換始終具有輸出。 輸出包含一或多個輸出資料行，如果資料流程元件設定為使用外部資料行，這些輸出資料行便可以參考外部資料行。 輸出可以設定為對資料之下游處理提供有用的資訊。 例如，您可以指示是否對輸出進行排序。 您也可以提供輸出的描述，或更新輸出名稱。 在 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中，可以使用 [進階編輯器] 對話方塊設定輸出。  
   
 ### <a name="error-outputs"></a>錯誤輸出  
- 來源、目的地和轉換都可以包含錯誤輸出。 您可以使用 [設定錯誤輸出] 對話方塊，指定資料流程元件如何回應每個輸入或資料行中的錯誤。 如果在執行階段發生錯誤或資料截斷，且資料流程元件設定為重新導向至資料列，則包含錯誤的資料列會被傳送至錯誤輸出。 錯誤輸出可以連接到轉換，該轉換會套用其他轉換或將資料導向不同目的地。 依預設，錯誤輸出包含輸出資料行和兩個錯誤資料行： **ErrorCode** 和 **ErrorColumn**。 輸出資料行包含來自失敗資料列的資料， **ErrorCode** 提供錯誤碼， **ErrorColumn** 識別失敗的資料行。  
+ 來源、目的地和轉換都可以包含錯誤輸出。 您可以使用 [設定錯誤輸出] 對話方塊，指定資料流程元件如何回應每個輸入或資料行中的錯誤。 如果在執行階段發生錯誤或資料截斷，且資料流程元件設定為重新導向至資料列，則包含錯誤的資料列會被傳送至錯誤輸出。 錯誤輸出可以連接到轉換，該轉換會套用其他轉換或將資料導向不同目的地。 根據預設，錯誤輸出包含輸出資料行和兩個錯誤資料行：**ErrorCode** 和 **ErrorColumn**。 輸出資料行包含來自失敗資料列的資料， **ErrorCode** 提供錯誤碼， **ErrorColumn** 識別失敗的資料行。  
   
  如需詳細資訊，請參閱 [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。  
   

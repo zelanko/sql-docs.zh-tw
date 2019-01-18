@@ -20,12 +20,12 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 712bdce381d44153e8bf9b0e6c72292cfa1cef72
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f068bbf1196f655f9afd12a5f13fe4d032a862d8
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663757"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589043"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,14 +76,14 @@ len
   
 |新的資料類型|傳回資料長度|  
 |--------------------|------------------------|  
-|**BITN**|**NULL：***len* = 0、data = IG、RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
-|**BIGVARCHAR**|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|**BIGCHAR**|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|**BIGBINARY**|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|**BIGVARBINARY**|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|NCHAR|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|NVARCHAR|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
-|**NTEXT**|**NULL：***len* = IG、data = IG、RET = 0<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = IG、data = IG、RET = 0<br /><br /> **\<255：***len* = IG、data = IG、RET = 0|  
+|**BITN**|**NULL：**_len_ = 0、data = IG、RET = 0<br /><br /> **ZERO：** 不適用<br /><br /> **>=255：** 不適用<br /><br /> **<255：** 不適用|  
+|**BIGVARCHAR**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
+|**BIGCHAR**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
+|**BIGBINARY**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
+|**BIGVARBINARY**|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
+|NCHAR|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
+|NVARCHAR|**NULL：**_len_ = 0、data = IG、RET = 1<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = max8k、data = valid、RET = 0<br /><br /> **<255：**_len_ = <8k、data = valid、RET = 1|  
+|**NTEXT**|**NULL：**_len_ = IG、data = IG、RET = 0<br /><br /> **ZERO：**_len_ = IG、data = IG、RET = 0<br /><br /> **>=255：**_len_ = IG、data = IG、RET = 0<br /><br /> **\<255：**_len_ = IG、data = IG、RET = 0|  
 |RET = srv_paramset 的傳回值||  
 |IG = 值將會被略過||  
 |valid = 資料的任何有效指標||  
@@ -98,7 +98,7 @@ len
  當遠端預存程序呼叫是用參數產生時，該參數可以依名稱或位置 (未命名) 傳遞。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 雖然仍會呼叫 SRV_RPC 處理常式，但是看起來好像沒有參數，而且 **srv_rpcparams** 會傳回 0。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://www.microsoft.com/en-us/msrc?rtc=1)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_paramsetoutput &#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md)  

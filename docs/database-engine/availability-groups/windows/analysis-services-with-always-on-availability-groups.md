@@ -1,6 +1,7 @@
 ---
-title: Analysis Services 與 AlwaysOn 可用性群組 | Microsoft Docs
-ms.custom: ''
+title: Analysis Services 與可用性群組
+description: 如果使用 Always On 可用性群組作為高可用性解決方案，則可以使用該群組中的資料庫作為 Analysis Services 表格式或多維度解決方案的資料來源。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 252353bd71cbbc5d3cdeb18ae0bcf49b7be440b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81fd6e4a9be7b27190491c6a36ef536e3c1ba669
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395451"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212487"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
 
@@ -164,7 +165,7 @@ ms.locfileid: "52395451"
 ##  <a name="bkmk_test"></a> 測試組態  
  在您設定次要複本並在 Analysis Services 中建立資料來源連接之後，即可確認處理及查詢命令是否已重新導向至次要複本。 您也可以執行規劃的手動容錯移轉，以確認這個案例的復原計劃。  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步驟 1：確認資料來源連接已重新導向至次要複本  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步驟 1：確認資料來源連線已重新導向至次要複本  
   
 1.  啟動 SQL Server Profiler 並連接至裝載次要複本的 SQL Server 執行個體。  
   
@@ -214,7 +215,7 @@ ms.locfileid: "52395451"
 ##  <a name="bkmk_whathappens"></a> 容錯移轉之後會發生什麼情況  
  在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 所有用戶端連線會終止，可用性群組接聽程式的擁有權會隨主要複本角色移至新的 SQL Server 執行個體，且接聽程式端點會繫結到新執行個體的虛擬 IP 位址和 TCP 連接埠。 如需詳細資訊，請參閱本主題稍後的 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md))。  
   
- 如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤: OLE DB 或 ODBC 錯誤: 通訊連結失敗; 08S01; TPC 提供者: 遠端主機已強制關閉一個現有連線。 ; 08S01。」  
+ 如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤：OLE DB 或 ODBC 錯誤：通訊連結失敗；08S01；TPC 提供者：遠端主機已強制關閉一個現有連線。 ; 08S01。」  
   
  如果您稍候幾分鐘再試一次，應該可以解決這個錯誤。 如果將可用性群組正確設定為可讀取的次要複本，當您重試處理時，會繼續在新的次要複本上處理。  
   
@@ -230,8 +231,8 @@ ms.locfileid: "52395451"
  若要執行這項操作，請在 Analysis Services 模型中建立其他資料來源，以支援讀寫連接。 建立其他資料來源時，請使用您在唯讀連線中指定的相同接聽程式名稱和資料庫，但不要修改 [應用程式的意圖]，保留支援 READWRITE 連線的預設值。 您現在可以將以讀寫資料來源為基礎的新事實或維度資料表新增至資料來源檢視，然後啟用新資料表的回寫功能。  
   
 ## <a name="see-also"></a>另請參閱  
- [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [建立資料來源 &#40;SSAS 多維度&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [啟用維度回寫](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

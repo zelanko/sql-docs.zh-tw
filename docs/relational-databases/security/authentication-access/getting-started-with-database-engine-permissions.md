@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00d28b0750ba599e4bc73fa2ec6586271b683545
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410855"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202657"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +175,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   您可使用 `sys.database_principals` 檢視，檢驗資料庫中的使用者與使用者定義角色。  
   
--   您可使用 `sys.server_permissions` 檢視，檢驗授與至登入以及使用者定義伺服器角色的權限。 此檢視在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 中無法使用。  
+-   您可使用 `sys.server_permissions` 檢視，檢驗授與至登入以及使用者定義伺服器角色的權限。 此檢視在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]中無法使用。  
   
 -   您可使用 `sys.database_permissions` 檢視，檢驗授與至使用者以及使用者定義固定資料庫角色的權限。  
   
@@ -203,7 +203,7 @@ JOIN sys.objects AS obj
     ON perms.major_id = obj.object_id;  
 ```  
   
- 若要傳回伺服器角色的成員 (僅[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )，請執行下列陳述式。  
+ 若要傳回伺服器角色的成員 (僅限 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])，請執行下列陳述式。  
   
 ```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
@@ -229,11 +229,11 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  如需更多關於快速入門的主題資訊，請參閱：  
   
--   [教學課程：Database Engine 使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [建立資料庫 &#40;Tutorial&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [教學課程：Database Engine 使用者入門](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [建立資料庫 &#40;教學課程&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
   
 -   [教學課程：SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [教學課程：撰寫 Transact-SQL 陳述式](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

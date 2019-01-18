@@ -1,6 +1,7 @@
 ---
-title: 遠端 BLOB 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 搭配使用遠端 Blob 存放區 (RBS) 與可用性群組
+description: '描述如何搭配使用遠端 Blob 存放區 (RBS) 與 Always On 可用性群組所屬一部分的資料庫。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6567636ce516d5ceeba6646c717acadeb504fe01
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 67d29091ddae26f40dcbea17ef50da7c3b7ae8f8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602548"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210877"
 ---
-# <a name="remote-blob-store-rbs-and-always-on-availability-groups-sql-server"></a>遠端 BLOB 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server)
+# <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>搭配使用遠端 Blob 存放區 (RBS) 與 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可以為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][遠端 BLOB 存放區 (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB 物件 (Blob) 提供高可用性和災害復原方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會透過將儲存在可用性資料庫中的任何 RBS 中繼資料和結構描述複寫到次要複本，予以保護。 這是 SharePoint 內容資料庫。 一般而言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分開儲存此 RBS 中繼資料與 BLOB。  

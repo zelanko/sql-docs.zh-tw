@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
@@ -16,12 +15,12 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 461695fdc44da3fc5767ced716b5de2d8be98d7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36c502308d7e8864e197eb875a1afaf89d0c5a8d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836086"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52796340"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重疊的模型和成員的權限 (Master Data Services)
 
@@ -50,7 +49,7 @@ ms.locfileid: "47836086"
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被指派 **[更新]** 權限。  
   
- 結果：在 **[總管]** 中，使用者擁有 Mountain Bikes 節點中所有成員之所有屬性值的 **[更新]** 權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 [總管] 中，使用者擁有 Mountain Bikes 節點中所有成員全部屬性值的 [更新] 權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -61,7 +60,7 @@ ms.locfileid: "47836086"
   
  在 [階層成員]  索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已明確獲指派 [讀取]  權限。  
   
- 結果：在 [總管] 中，使用者擁有 Mountain Bikes 節點中成員之 Subcategory 屬性值的 [讀取]  權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 [總管] 中，使用者擁有 Mountain Bikes 節點中成員 Subcategory 屬性值的 [讀取] 權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
@@ -72,7 +71,7 @@ ms.locfileid: "47836086"
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄已被明確指派 **[更新]** 權限。  
   
- 結果：在 [總管] 中，使用者擁有屬性值的 [讀取]  權限。 系統會隱藏所有其他成員和屬性。  
+ 結果：在 [總管] 中，使用者擁有屬性值的 [讀取] 權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

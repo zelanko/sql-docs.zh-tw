@@ -37,12 +37,12 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8bbde02754a5cfe9d1a164f025b7442e12167802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713366"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306265"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,6 @@ ms.locfileid: "47713366"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +126,7 @@ WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]
 但有某些例外，僅當利用 WITH 關鍵字指定提示時，FROM 子句才會支援資料表提示。 資料表提示也必須用括號來指定。  
   
 > [!IMPORTANT]  
->  省略 WITH 關鍵字是一項已被取代的功能：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> 省略 WITH 關鍵字是一項已被取代的功能：[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 不論是否有 WITH 關鍵字，都允許使用下列資料表提示：NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT 和 NOEXPAND。 在沒有 WITH 關鍵字的情況下指定這些資料表提示時，應該單獨指定這些提示。 例如：  
   
@@ -147,7 +146,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 >  用空格而不用逗號來分隔提示是一項已被取代的功能：[!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
-指定當查詢最佳化工具處理查詢時，不展開任何索引檢視表來存取基礎資料表。 查詢最佳化工具在處理檢視表時，會將它視為具有叢集索引的資料表。 NOEXPAND 只適用於索引檢視表。 如需詳細資訊，請參閱＜備註＞。  
+指定當查詢最佳化工具處理查詢時，不展開任何索引檢視表來存取基礎資料表。 查詢最佳化工具在處理檢視表時，會將它視為具有叢集索引的資料表。 NOEXPAND 只適用於索引檢視表。 如需詳細資訊，請參閱[使用 NOEXPAND](#using-noexpand)。  
   
 INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
 INDEX() 語法會指定要由查詢最佳化工具在其處理陳述式時使用之一或多個索引的名稱或識別碼。 替代的 INDEX = 語法會指定單一索引值。 每份資料表只能指定一個索引提示。  
@@ -157,7 +156,7 @@ INDEX() 語法會指定要由查詢最佳化工具在其處理陳述式時使用
  如果在單一提示清單中使用多個索引，便會忽略重複項目，且會利用其餘列出的索引來擷取資料表的資料列。 索引提示中的索引順序非常重要。 另外，多個索引提示也會強制執行索引的 AND 作業，而且查詢最佳化工具會在所存取的每個索引上盡量套用多一點的條件。 如果提示索引的集合不含此查詢所參考的所有資料行，則當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 擷取所有索引資料行之後，將會執行提取作業來擷取其餘的資料行。  
   
 > [!NOTE]  
->  當星狀聯結的事實資料表使用參考多個索引的索引提示時，最佳化工具會忽略索引提示，且會傳回一則警告訊息。 另外，指定了索引提示的資料表不接受索引的 OR 作業。  
+> 當星狀聯結的事實資料表使用參考多個索引的索引提示時，最佳化工具會忽略索引提示，且會傳回一則警告訊息。 另外，指定了索引提示的資料表不接受索引的 OR 作業。  
   
  資料表提示中的最大索引數目是 250 個非叢集索引。  
   
@@ -167,9 +166,9 @@ KEEPIDENTITY
  指定識別欄位要使用匯入之資料檔案中的一個或多個識別值。 如果未指定 KEEPIDENTITY，就會驗證這個資料行的識別值，但不會匯入它，而且查詢最佳化工具會根據建立資料表期間所指定的種子值和遞增值來自動指派唯一值。  
   
 > [!IMPORTANT]  
->  如果資料檔案中沒有資料表或檢視表中之識別欄位的值，而且識別欄位不是資料表的最後一個資料行，您就必須略過此識別欄位。 如需詳細資訊，請參閱[使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)。 如果順利跳過識別欄位，查詢最佳化工具會自動在匯入的資料表資料列中，指派識別欄位的唯一值。  
+> 如果資料檔案中沒有資料表或檢視表中之識別欄位的值，而且識別欄位不是資料表的最後一個資料行，您就必須略過此識別欄位。 如需詳細資訊，請參閱[使用格式檔案略過資料欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)。 如果順利跳過識別欄位，查詢最佳化工具會自動在匯入的資料表資料列中，指派識別欄位的唯一值。  
   
-如需在 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式中使用此提示的範例，請參閱[大量匯入資料時保留識別值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)。  
+如需在 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 陳述式中使用此提示的範例，請參閱[大量匯入資料時保留識別值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)。  
   
 如需有關檢查資料表識別值的詳細資訊，請參閱 [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)。  
   
@@ -221,7 +220,7 @@ FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))*
 -   如果是資料分割索引，即無法在 FORCESEEK 提示中指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隱含加入的資料分割資料行。  
   
 > [!CAUTION]  
-> 使用參數指定 FORCESEEK，會限制最佳化工具所能使用的計畫數目，其限制幅度將大於指定 FORCESEEK 而不指定參數時的限制。 這可能會導致在許多狀況下發生「無法產生計畫」錯誤。 在後續版本中，將會從內部修改最佳化工具，以擴大可使用的計畫範圍。  
+> 使用參數指定 FORCESEEK，會限制最佳化工具所能使用的計畫數目，其限制幅度將大於指定 FORCESEEK 而不指定參數時的限制。 這可能會導致在許多狀況下發生 `Plan cannot be generated` 錯誤。 在後續版本中，將會從內部修改查詢最佳化工具，以擴大可使用的計畫範圍。  
   
 FORCESCAN **適用於**：[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 指定查詢最佳化工具只使用索引掃描作業做為參考資料表或檢視表的存取路徑。 當最佳化工具低估受影響的資料列數，而這些查詢又選擇使用搜尋作業，而不使用掃描作業時，即可使用 FORCESCAN 提示。 發生此狀況時，將只會授與作業少量的記憶體，導致查詢效能受到影響。  
@@ -408,7 +407,7 @@ NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢�
   
  另外，NUMERIC_ROUNDABORT 選項必須設成 OFF。  
   
- 若要強制最佳化工具使用索引檢視表的索引，請指定 NOEXPAND 選項。 僅當查詢中指定了檢視的名稱時，才可使用此提示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會提供提示強制在未在 FROM 子句直接指定檢視名稱的查詢中使用特定的索引檢視，但即使查詢中未直接參考索引檢視，查詢最佳化工具仍會使用索引檢視。  
+ 若要強制最佳化工具使用索引檢視表的索引，請指定 NOEXPAND 選項。 僅當查詢中指定了檢視的名稱時，才可使用此提示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會提供提示強制在未在 FROM 子句直接指定檢視名稱的查詢中使用特定的索引檢視，但即使查詢中未直接參考索引檢視，查詢最佳化工具仍會使用索引檢視。 SQL Server 只有在使用 NOEXPAND 資料表提示時，會自動建立索引檢視表的相關統計資料。 省略此提示可能會導致遺漏統計資料的相關執行計畫警告，該警告無法透過手動建立統計資料來解決。 在查詢最佳化期間，若查詢直接參考檢視表且使用了 NOEXPAND 提示，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用自動或手動建立的檢視表統計資料。    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>將資料表提示當做查詢提示使用  
  也可以使用 OPTION (TABLE HINT) 子句將*資料表提示*指定為查詢提示。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。 如果是特定的查詢，只將這些提示指定為資料表提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  

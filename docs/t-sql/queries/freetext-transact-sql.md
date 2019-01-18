@@ -22,12 +22,12 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8638b820959174c872f731f9f418b03e241389ed
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ffd987e0b695fdc0976706e4b6689a9e60527893
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699716"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991881"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51699716"
 > [!NOTE]  
 >  如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援全文檢索搜尋形式的資訊，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。  
   
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +74,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  *freetext_string* 是 **nvarchar**。 當使用另一個字元資料類型當做輸入時，會發生隱含轉換。 不能使用大型字串資料類型 nvarchar(max) 和 varchar(max)。 在下列範例中，定義為 `@SearchWord` 的 `varchar(30)` 變數會造成 `FREETEXT` 述詞中的隱含轉換。  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -88,7 +88,7 @@ WHERE FREETEXT(Description, @SearchWord);
   
  由於「參數探測」不適用於轉換，因此請使用 **nvarchar** 來獲得更好的效能。 在此範例中，請將 `@SearchWord` 宣告為 `nvarchar(30)`。  
   
-```  
+```sql  
   
 USE AdventureWorks2012;  
 GO  
@@ -105,7 +105,7 @@ WHERE FREETEXT(Description, @SearchWord);
  LANGUAGE *language_term*  
  這是查詢利用其資源來斷詞、分析詞幹，以及移除同義字和停用字詞的語言。 這個參數是選擇性的，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有項。 如果未指定任何值，就會使用資料行全文檢索語言。  
   
- 如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢這類資料行時，指定 *LANGUAGE**language_term* 可以增加完全相符的機率。  
+ 如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢這類資料行時，指定*LANGUAGE language_term* 可以增加完全相符的機率。  
   
  當指定為字串時，*language_term* 會對應到 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 相容性檢視表中的 **alias** 資料行值。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
@@ -134,7 +134,7 @@ WHERE FREETEXT(Description, @SearchWord);
 ### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. 使用 FREETEXT 搜尋含有所指定字元值的單字  
  下列範例會搜尋包含 vital、safety 和 components 相關單字的所有文件。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Title  
@@ -146,7 +146,7 @@ GO
 ### <a name="b-using-freetext-with-variables"></a>B. 搭配變數來使用 FREETEXT  
  下列範例會利用變數來取代特定搜尋詞彙。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SearchWord nvarchar(30);  

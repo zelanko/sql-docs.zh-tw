@@ -1,6 +1,7 @@
 ---
-title: 可用性群組資料庫的登入和作業 | Microsoft Docs
-ms.custom: ''
+title: 為使用可用性群組中資料庫的作業管理登入
+description: 描述如何為使用 Always On 可用性群組中參與資料庫的作業管理登入。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37bc06c22b36022cb62b99123111871a6adf3a96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 25684c696bf55948fc5106d0e906b14e5dba0410
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545279"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208877"
 ---
-# <a name="logins-and-jobs-for-availability-group-databases"></a>可用性群組資料庫的登入和作業
+# <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>為使用 Always On 可用性群組中資料庫的作業管理登入
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您應該在每個 AlwaysOn 可用性群組的主要資料庫及其對應的次要資料庫上，固定維護一組相同的使用者登入和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理程式作業。 登入和作業必須在裝載可用性群組之可用性複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上重新產生。  
   
@@ -31,7 +32,7 @@ ms.locfileid: "52545279"
   
      裝載可用性群組之可用性複本的伺服器執行個體可能會以不同的磁帶機代號或之類的方式予以個別設定。 每個可用性複本的作業都必須允許這類差異。  
   
-     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+     請注意，備份作業可以使用 [sys.fn_hadr_is_preferred_backup_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 函數根據可用性群組備份喜好設定，識別本機複本是否為備份慣用的複本。 使用 [維護計畫精靈](../../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 建立的備份作業原本使用此函數。 至於其他備份作業，我們建議您使用此函數做為備份作業中的條件，如此備份作業就只會在慣用複本上執行。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 -   **登入**  
   

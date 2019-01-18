@@ -17,18 +17,21 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4229a8ddbd899ea8709cdc537f2d9383f9043179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ec5e67b6a2f593f2869cf72fa2983305e084f8d
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697516"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414153"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 **System.IO** 命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於 **Microsoft.SqlServer.Dts.DtsClient** 命名空間，其中包含 **System.Data** 命名空間中的 **IDbConnection**、**IDbCommand** 和 **IDbDataParameter** 介面的特殊實作。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  
-  
+
+> [!IMPORTANT]
+> 本文中所述的程序 (使用 `DtsClient` 程式庫) 僅適用於以套件部署模型 (即 `/SQL`、`/DTS` 或 `/File` 選項) 部署的套件。 此程序不適用於以伺服器部署模型 (即 `/ISServer` 選項) 部署的套件。 若要取用以伺服器部署模型 (即 `/ISServer` 選項) 部署的本機套件輸出，請使用[資料流目的地](../data-flow/data-streaming-destination.md)取代本文中所述的程序。
+
 > [!NOTE]  
->  本主題所述之程序需要將資料流程工作與任何父物件的 DelayValidation 屬性，設定成其預設值 **False**。  
+> 本主題所述之程序需要將資料流程工作與任何父物件的 DelayValidation 屬性，設定成其預設值 **False**。
   
 ## <a name="description"></a>Description  
  這個程序示範如何以 Managed 程式碼開發用戶端應用程式，這個程式碼使用 DataReader 目的地直接從記憶體載入封裝的輸出。 這裡所摘要的步驟將在接下來的程式碼範例中示範。  

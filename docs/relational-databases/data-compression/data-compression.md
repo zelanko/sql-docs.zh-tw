@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba6cc9159ac3cfc9cc45f882a916dcad3365e4e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533559"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210527"
 ---
 # <a name="data-compression"></a>資料壓縮
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "52533559"
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>使用資料行存放區和資料行存放區封存壓縮  
   
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
   
 ### <a name="basics"></a>基本概念  
  資料行存放區資料表和索引永遠都會以資料行存放區壓縮形式來儲存。 您可以進一步減少資料行存放區資料的大小，只要設定稱為封存壓縮的額外壓縮即可。  為了執行封存壓縮， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對資料執行 Microsoft XPRESS 壓縮演算法。 您可以使用下列資料壓縮類型來新增或移除封存壓縮：  
@@ -169,7 +169,7 @@ REBUILD PARTITION = ALL WITH (
      在線上卸除叢集索引將會是非常快速的作業，因為只會移除叢集索引的上層。 在線上卸除叢集索引時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須重建堆積兩次，一次在步驟 1，另一次在步驟 2。  
   
 ## <a name="how-compression-affects-replication"></a>壓縮將如何影響複寫 
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。   
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。   
 當您搭配複寫使用資料壓縮時，請注意以下考量事項：  
 -   當快照集代理程式產生最初的結構描述指令碼時，新的結構描述會將相同的壓縮設定用於資料表和它的索引。 不能只在資料表上啟用壓縮，而不在索引上啟用壓縮。  
 -   如果是異動複寫，發行項結構描述選項會判斷哪些相依的物件和屬性必須編寫指令碼。 如需詳細資訊，請參閱 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)。  
@@ -187,7 +187,7 @@ REBUILD PARTITION = ALL WITH (
 |如果所有資料分割都在發行者上壓縮，則壓縮訂閱者上的資料表，但是不複寫資料分割配置。|False|True|檢查所有資料分割是否啟用壓縮。<br /><br /> 針對資料表層級上的壓縮編寫指令碼。|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>壓縮對於其他 SQL Server 元件有何影響 
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
    
  壓縮會發生在儲存引擎中，而且資料會以非壓縮狀態呈現給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的大多數其他元件。 這樣會將壓縮對其他元件的影響限制為以下情況：  
 -   大量匯入及匯出作業  

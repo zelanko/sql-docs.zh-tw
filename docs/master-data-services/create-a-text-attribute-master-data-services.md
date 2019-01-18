@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
@@ -15,12 +14,12 @@ ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0e74d369ccc79bead39e3214fa73be5333ede070
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227c43c52fda16e8c521ecefe9771dc5ea5a41e4
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52759390"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>建立文字屬性 (Master Data Services)
 
@@ -54,11 +53,11 @@ ms.locfileid: "47854806"
   
 -   **建立者**：建立屬性的使用者名稱。  
   
--   **時間**：建立屬性的日期與時間。  
+-   **於**：建立屬性的日期和時間。  
   
 -   **更新者**：上次更新屬性的使用者名稱。  
   
--   **時間**：上次更新屬性的日期與時間。  
+-   **於**：上次更新屬性的日期和時間。  
   
 ### <a name="to-create-a-text-attribute"></a>若要建立文字屬性  
   

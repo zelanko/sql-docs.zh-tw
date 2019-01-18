@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 66a1663a0411f91dcf89c294f10f087704ec96e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418667"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212127"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "52418667"
   
  報表的建立和發行方式將會決定您可以編輯連接字串的位置：  
   
--   **原生模式：** 針對已經發行至原生模式報表伺服器的共用的資料來源和報表，請使用 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)] 。  
+-   **原生模式：** 針對已經發行至原生模式報表伺服器的共用資料來源和報表，請使用[!INCLUDE[ssRSWebPortal-Non-Markdown](../../../includes/ssrswebportal-non-markdown-md.md)]。  
   
--   **SharePoint 模式** ：您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 組態頁面。  
+-   **SharePoint 模式：** 您可以針對已經發行至 SharePoint 伺服器的報表使用文件庫中的 SharePoint 組態頁面。  
   
 -   **報表設計：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 。 如需詳細資訊，請參閱本主題的＜報表設計＞一節。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52418667"
   
 -   如需有關可用性群組接聽程式的詳細資訊，請參閱[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- **考量** ：接收來自主要複本的資料變更時，次要複本通常會發生延遲。 下列因素可能會影響主要與次要複本之間的更新延遲：  
+ **考量因素：** 接收來自主要複本的資料變更時，次要複本通常會發生延遲。 下列因素可能會影響主要與次要複本之間的更新延遲：  
   
 -   次要複本的數目。 延遲會隨著加入至組態的每個次要複本而增加。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52418667"
   
 -   **本機預覽：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 會使用 .Net Framework 4.0 並且支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 連接字串屬性。  
   
--   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
+-   **遠端或伺服器模式預覽：** 如果將報表發行至報表伺服器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中使用預覽功能之後，您看見類似下面的錯誤，就表示您正在根據報表伺服器預覽報表，而且報表伺服器尚未安裝 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 Hotfix。  
   
 > **錯誤訊息：**「不支援關鍵字 'applicationintent'」  
   
@@ -144,9 +144,9 @@ ms.locfileid: "52418667"
   
  原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為 SharePoint 設定期間所建立的「用戶端存取點」名稱。 如需使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165) (設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  SharePoint 模式報表伺服器會在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式資料庫與 SharePoint 內容資料庫之間使用同步處理程序。 請務必一起維護報表伺服器資料庫和內容資料庫。 您應該考慮將它們設定在相同的可用性群組中，以便一起容錯移轉和復原。 請考慮下列案例：  
->   
+> 
 >  -   您還原或容錯移轉至內容資料庫的複本，但是該資料庫尚未收到報表伺服器資料庫已經收到的相同近期更新。  
 > -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 同步處理程序將會偵測到內容資料庫與報表伺服器資料庫的項目清單之間存在差異。  
 > -   同步處理程序將會刪除或更新內容資料庫中的項目。  
@@ -156,11 +156,11 @@ ms.locfileid: "52418667"
   
 -   建立您的可用性群組並且設定 *「接聽程式 DNS 名稱」*(Listener DNS Name)。  
   
--   **主要複本** ：將報表伺服器資料庫設定為單一可用性群組的一部分，並且建立包含所有報表伺服器資料庫的主要複本。  
+-   **主要複本：** 將報表伺服器資料庫設定為單一可用性群組的一部分，並且建立包含所有報表伺服器資料庫的主要複本。  
   
--   **次要複本** ：建立一個或多個次要複本。 將資料庫從主要複本複製到次要複本的常見方法是使用 'RESTORE WITH NORECOVERY'，將資料庫還原至每個次要複本。 如需有關建立次要複本以及驗證資料同步處理是否運作的詳細資訊，請參閱 [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md) (於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server))。  
+-   **次要複本：** 建立一或多個次要複本。 將資料庫從主要複本複製到次要複本的常見方法是使用 'RESTORE WITH NORECOVERY'，將資料庫還原至每個次要複本。 如需有關建立次要複本以及驗證資料同步處理是否運作的詳細資訊，請參閱 [Start Data Movement on an AlwaysOn Secondary Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md) (於 AlwaysOn 次要資料庫啟動資料移動 (SQL Server))。  
   
--   **報表伺服器認證** ：您必須在次要與主要複本上建立適當的報表伺服器認證。 確切步驟主要取決於您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境中使用的驗證類型：Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務帳戶、Windows 使用者帳戶或 SQL Server 驗證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+-   **報表伺服器認證：** 您必須在次要與主要複本上建立適當的報表伺服器認證。 確切步驟主要取決於您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境中使用的驗證類型：Windows [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務帳戶、Windows 使用者帳戶或 SQL Server 驗證。 如需詳細資訊，請參閱[設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
 -   將資料庫連接更新為使用接聽程式 DNS 名稱。 若為原生模式報表伺服器，請於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中變更 [報表伺服器資料庫名稱]。 若為 SharePoint 模式，請為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式變更 [資料庫伺服器名稱]。  
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48d205f913127fa598ba3d2d2d75f2a1eb3f1303
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406685"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380880"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "52406685"
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目檢視統計資料屬性：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52406685"
      顯示儲存統計資料的資料庫物件名稱。  
   
      **INDEXstatistics_name 的統計資料**  
-     此文字方塊顯示從統計資料物件傳回的屬性。 屬性分為三個部分：統計資料標頭、密度向量和長條圖。  
+     此文字方塊顯示從統計資料物件傳回的屬性。 此屬性分為三個區段：統計資料標頭、密度向量和長條圖。  
   
      下列資訊描述結果集針對統計資料標頭所傳回的資料行。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "52406685"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -161,7 +161,7 @@ ms.locfileid: "52406685"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;   

@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c7768b97ba5fc337ab06b42e61fb1e80330bc76
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970970"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979994"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "50970970"
  *CTE_query_definition*  
  指定其結果集擴展一般資料表運算式的 SELECT 陳述式。 除了 CTE 不能定義另一個 CTE 之外，*CTE_query_definition* 的 SELECT 陳述式必須符合建立檢視表的相同需求。 如需詳細資訊，請參閱＜備註＞一節和 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
- 如果定義了多個 *CTE_query_definition*，就必須以下列其中一個設定運算子來聯結查詢定義：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
+ 如果定義了多個 *CTE_query_definition*，就必須由下列設定運算子來聯結查詢定義：UNION ALL、UNION、EXCEPT 或 INTERSECT。  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -144,7 +144,7 @@ ms.locfileid: "50970970"
   
 -   在 CTE 中，可以參考遠端伺服器的資料表。 如果在 CTE 遞迴成員參考遠端伺服器，便會為每個遠端資料表各建立一項多工緩衝處理，以便在本機重複存取資料表。 如果它是 CTE 查詢，索引多工緩衝處理/延遲多工緩衝處理會顯示在查詢計劃中，而且將會有額外的 WITH STACK 述詞。 這是確認適當遞迴的一種方式。  
   
--   CTE 遞迴部分中的分析和彙總函式會套用至目前遞迴層級的集合，而不會套用至 CTE 的集合。 ROW_NUMBER 之類的函數只會針對目前遞迴層級傳遞給它們的資料子集運作，而不會針對傳遞給 CTE 遞迴部分的整個資料集運作。 如需詳細資訊，請參閱下面的範例「K. 在遞迴 CTE 中使用分析函數」。  
+-   CTE 遞迴部分中的分析和彙總函式會套用至目前遞迴層級的集合，而不會套用至 CTE 的集合。 ROW_NUMBER 之類的函式只會針對目前遞迴層級傳遞給它們的資料子集運作，而不會針對傳遞給 CTE 遞迴部分的整個資料集運作。 如需詳細資訊，請參閱下面的範例「K. 在遞迴 CTE 中使用分析函數」。  
   
 ## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中通用資料表運算式的功能和限制  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中目前的 CTE 實作具有下列功能和限制：  

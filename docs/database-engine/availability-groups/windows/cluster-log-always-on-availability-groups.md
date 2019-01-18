@@ -1,6 +1,7 @@
 ---
-title: CLUSTER.LOG (Always On 可用性群組) (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 產生可用性群組的 CLUSTER.LOG 並進行分析
+description: '描述如何產生 Always On 可用性群組的叢集記錄檔並進行分析。 '
+ms.custom: ag-guide, seodec18
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 77ea53441472625fe419a322054eb5300a78e4c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531501"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211727"
 ---
-# <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG (Always On 可用性群組)
+# <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>產生 Always On 可用性群組的 CLUSTER.LOG 並進行分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   作為容錯移轉叢集資源，在 SQL Server、Windows Server 容錯移轉叢集服務 (WSFC) 叢集和 SQL Server 資源 DLL (hadrres.dll) 之間，存在著無法在 SQL Server 內監視的外部互動。 WSFC 記錄 (CLUSTER.LOG) 可診斷 WSFC 叢集或 SQL Server 資源 DLL 中的問題。  
   
@@ -61,9 +62,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |識別碼|來源|來自 CLUSTER.LOG 的範例|  
 |----------------|------------|------------------------------|  
-|前面加上 `[RES]` 和 `[hadrag]` 的訊息|hadrres.dll (Always On 資源 DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性群組 \<ag>: `[hadrag]` 離線要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性群組 \<ag>: `[hadrag]` 租用執行緒終止<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性群組 \<ag>: `[hadrag]` 釋出 SQL 陳述式<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性群組 \<ag>: `[hadrag]` 從 SQL Server 中斷連線|  
+|前面加上 `[RES]` 和 `[hadrag]` 的訊息|hadrres.dll (Always On 資源 DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性群組 \<ag>:`[hadrag]` 離線要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性群組 \<ag>:`[hadrag]` 租用執行緒已終止<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性群組 \<ag>:`[hadrag]` 釋出 SQL 陳述式<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性群組 \<ag>:`[hadrag]` 從 SQL Server 中斷連線|  
 |前面加上 `[RHS]` 的訊息|RHS.EXE (資源主控子系統，hadrres.dll 的主機處理序)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] 資源 ag 已經離線。 RHS 即將報告資源狀態給 RCM。|  
-|前面加上 `[RCM]` 的訊息|資源控制監視器 (叢集服務)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: 正在先將群組 'ag' 離線...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued。|  
+|前面加上 `[RCM]` 的訊息|資源控制監視器 (叢集服務)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move:正在先將群組 'ag' 離線...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued。|  
 |RcmApi/ClusAPI|API 呼叫，通常表示 SQL Server 正在要求行動|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>以隔離方式針對 Always On 資源 DLL 進行偵錯  
@@ -71,7 +72,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  若要從其他叢集資源 DLL (包括其他可用性群組) 隔離可用性群組，請執行下列動作，以在個別的 rhs.exe 處理序內執行 hadrres.dll：  
   
-1.  開啟 [登錄編輯程式] 並瀏覽至下列機碼：HKEY_LOCAL_MACHINE\Cluster\Resources。 此機碼包含所有資源的索引鍵，每個都有不同的 GUID。  
+1.  開啟 [登錄編輯程式] 並巡覽至下列機碼：HKEY_LOCAL_MACHINE\Cluster\Resources。 此機碼包含所有資源的索引鍵，每個都有不同的 GUID。  
   
 2.  尋找 [名稱] 值符合您可用性群組名稱的資源索引鍵。  
   

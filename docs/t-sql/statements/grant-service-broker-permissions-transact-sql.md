@@ -21,12 +21,12 @@ ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a5af2e9a7ad54c76d2c6fb6e5854803a652dc2ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3146d04acc0a74096af2cc2f04341eaa1b2a68fe
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799016"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589822"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +56,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  指定可以授與的 Service Broker 安全性實體權限。  如下所列。  
   
- CONTRACT **::***contract_name*  
+ CONTRACT **::**_contract_name_  
  指定正在授與權限的合約。 需要範圍限定詞 "::"。  
   
- MESSAGE TYPE **::***message_type_name*  
+ MESSAGE TYPE **::**_message_type_name_  
  指定正在授與權限的訊息類型。 需要範圍限定詞 "::"。  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  指定正在授與權限的遠端服務繫結。 需要範圍限定詞 "::"。  
   
- ROUTE **::***route_name*  
+ ROUTE **::**_route_name_  
  指定正在授與權限的路由。 需要範圍限定詞 "::"。  
   
- SERVICE **::***service_name*  
+ SERVICE **::**_服務名稱_  
  指定正在授與權限的服務。 需要範圍限定詞 "::"。  
   
  *database_principal*  

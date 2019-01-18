@@ -1,6 +1,7 @@
 ---
-title: 資料庫鏡像 - AlwaysOn 可用性群組 - PowerShell | Microsoft Docs
-ms.custom: ''
+title: 使用 PowerShell 針對可用性群組建立資料庫鏡像端點
+description: 描述如何使用 PowerShell 針對 Always On 可用性群組建立資料庫鏡像端點。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,23 +15,23 @@ ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 857fe97c4ef19456c4ce755857702bfd19ff8bd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634096"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206377"
 ---
-# <a name="database-mirroring---always-on-availability-groups--powershell"></a>資料庫鏡像 - AlwaysOn 可用性群組 - PowerShell
+# <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>使用 PowerShell 針對可用性群組建立資料庫鏡像端點
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   此主題描述如何使用 PowerShell，在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中建立 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 所用的資料庫鏡像端點。  
   
  **本主題內容**  
   
--   **開始之前**  [安全性](#Security)  
+-   **開始之前：**[安全性](#Security)  
   
--   **若要使用下列項目建立資料庫鏡像端點：**  [PowerShell](#PowerShellProcedure)  
+-   **使用下列項目建立資料庫鏡像端點：**[PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>開始之前  
   
@@ -39,8 +40,8 @@ ms.locfileid: "47634096"
 > [!IMPORTANT]  
 >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
-####  <a name="Permissions"></a> 權限  
- 需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限和 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
+####  <a name="Permissions"></a> Permissions  
+ 需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要建立資料庫鏡像端點**  

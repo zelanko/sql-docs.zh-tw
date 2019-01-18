@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d2029680262934370479ef2c4ec81792a821f1d
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700343"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53359660"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,9 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  READ COMMITTED 的行為會隨著 READ_COMMITTED_SNAPSHOT 資料庫選項的設定而不同：  
   
--   如果 READ_COMMITTED_SNAPSHOT 設為 OFF (預設值)，當目前交易正在執行讀取作業時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 共用鎖定類型會決定釋放的時機。 資料列鎖定會在處理下一個資料列之前釋放。 頁面鎖定會在讀取下一個頁面時釋放，而資料表鎖定會在陳述式完成時釋放。  
+-   如果 READ_COMMITTED_SNAPSHOT 設為 OFF (SQL Server 上的預設)，當目前交易正在執行讀取作業時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 共用鎖定類型會決定釋放的時機。 資料列鎖定會在處理下一個資料列之前釋放。 頁面鎖定會在讀取下一個頁面時釋放，而資料表鎖定會在陳述式完成時釋放。  
   
--   如果 READ_COMMITTED_SNAPSHOT 設為 ON，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。
+-   如果 READ_COMMITTED_SNAPSHOT 設為 ON (SQL Azure Database 上的預設)，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用資料列版本設定，依照資料在陳述式開始時就存在的狀態，向每個陳述式提供具有交易一致性的資料快照集。 鎖定的使用目的不是為了防止其他交易更新資料。
 
 > [!IMPORTANT]  
 > 選擇交易隔離等級並不會影響為保護資料修改所取得的鎖定。 交易永遠都會取得它所修改之資料的獨佔鎖定，並保留該鎖定直到交易完成為止，不論為該交易所設定的隔離等級為何皆同。 此外，在 READ_COMMITTED 隔離等級所做的更新會於選取的資料列上使用更新鎖定，而在 SNAPSHOT 隔離等級所做的更新使用資料列版本來選取要更新的資料列。 對於讀取作業，交易隔離等級主要是定義對於其他交易所做修改之影響的保謢等級。 如需詳細資訊，請參閱[交易鎖定與資料列版本設定指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。

@@ -1,6 +1,7 @@
 ---
-title: 讀取級別可用性群組 | Microsoft Docs
-ms.custom: ''
+title: 在可用性群組使用讀取級別
+description: '如何使用 Always On 可用性群組時以達到讀取級別的描述。 '
+ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee043206e4525f8c549f9bf6e90c2655bff0c6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622402"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203837"
 ---
-# <a name="read-scale-availability-groups"></a>讀取級別可用性群組
+# <a name="use-read-scale-with-always-on-availability-groups"></a>在 Always On 可用性群組使用讀取級別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 可用性群組是全面的解決方案，可將高可用性功能整合到 SQL Server，同時也可提供整合式調整解決方案。 在常見的資料庫應用程式中，多個用戶端會執行各種工作負載。 有時可能會因資源限制而產生瓶頸。 您可以釋出資源，讓 OLTP 工作負載達到更高的輸送量， 也可提供更高的唯讀工作負載效能和唯讀工作負載級別。 利用 SQL Server 最快的複寫技術建立一組複寫的資料庫，將報告和分析工作負載卸載至唯讀複本。

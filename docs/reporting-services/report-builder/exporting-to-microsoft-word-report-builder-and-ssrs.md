@@ -1,23 +1,25 @@
 ---
 title: 匯出至 Microsoft Word (報表產生器及 SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
+description: Word 轉譯延伸模組會將分頁報表轉譯成  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx)。 此格式為 Office Open XML。
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b315779a4e6c16bdea162ebd5d70c4b9c12ec94b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393332"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202417"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
 
-  Word 轉譯延伸模組會將分頁報表轉譯成  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 格式 (.docx)。 此格式為 Office Open XML。  
+  Word 轉譯延伸模組會將分頁報表轉譯成 Microsoft Word 格式 (.docx)。 此格式為 Office Open XML。  
   
  此轉譯器會產生 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** 內容類型的檔案，而檔案的副檔名為 .docx。  
   
@@ -70,9 +72,9 @@ ms.locfileid: "52393332"
   
  發生這種情形的原因是，Word 轉譯器剖析分頁相關之欄位 (例如 **PageNumber** 和 **TotalPages** ) 的報表時，只處理簡單參考，但不處理函數呼叫。 在此例中，運算式呼叫 **ToString** 函數。 下列兩個運算式是對等的，當您在報表產生器或報表設計師中預覽報表，或在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站或 SharePoint 文件庫中轉譯發行的報表時，這兩個運算式都會正確轉譯。 不過，Word 轉譯器只會成功剖析第二個運算式，轉譯正確的頁碼。  
   
--   **複雜運算式：**  運算式為 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **複雜運算式：** 運算式為 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **具有文字往返的運算式：** 文字 **Average Sales**、運算式  `=Avg(Fields!YTDPurchase.Value, "Sales)`、文字 **Page Number**和運算式 `=Globals!PageNumber`  
+-   **具有文字往返的運算式：** 文字 **Average Sales** 和運算式 `=Avg(Fields!YTDPurchase.Value, "Sales)`，以及文字 **Page Number** 和運算式 `=Globals!PageNumber`  
   
  為避免這個問題，當您在頁尾和頁首中使用運算式時，請使用多個文字往返來代替一個複雜運算式。 下列兩個運算式是對等的。 第一個是複雜運算式，而第二個使用文字往返。 Word 轉譯器僅成功剖析第二個運算式。  
   

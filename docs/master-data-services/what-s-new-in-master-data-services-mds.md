@@ -5,19 +5,18 @@ ms.date: 07/08/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 657308bcf378b6e35a360a2c6ad39a807c03e086
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392338"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52764600"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 的新功能
 
@@ -91,7 +90,7 @@ ms.locfileid: "52392338"
 |原先安裝了 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 的使用者具有伺服器系統管理員權限。|具有進階使用者函數權限的使用者|  
 |使用者具有模型層級的更新權限，但沒有任何模型子樹狀目錄的權限，因此暗示為模型管理員。|使用者擁有模型層級的明確系統管理員權限。|  
 |使用者擁有唯讀權限。|使用者擁有讀取存取權限。|  
-|使用者擁有更新權限。|使用者擁有所有四種存取權限︰建立、更新、刪除與讀取。|  
+|使用者擁有更新權限。|使用者擁有所有四種存取權限：建立、更新、刪除與讀取。|  
 |使用者擁有拒絕權限|使用者擁有拒絕權限|  
   
  如需有關權限的詳細資訊，請參閱[安全性 &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)。  
@@ -229,7 +228,7 @@ ms.locfileid: "52392338"
    
  **已更新模型部署封裝範例**  
   
- 為支援新的案例，已更新了封裝範例。 如需詳細資訊，請參閱 [SQL Server 範例：模型部署封裝 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
+ 為支援新的案例，已更新了封裝範例。 如需詳細資訊，請參閱 [SQL Server 範例：模型部署套件 (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  

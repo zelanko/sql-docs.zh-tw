@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b154ba3569c46d96c2e89b8fd209f51159e603a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661717"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206437"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "51661717"
 |------------|-----------------|    
 |區分大小寫 (_CS)|區分大寫和小寫字母。 如果選取此選項，小寫字母會排序在大寫字母的前面。 如果未選取此選項，定序就不會區分大小寫。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將大寫和小寫字母視為相同。 指定 _CI，就可以明確地選取不區分大小寫。|    
 |區分腔調字 (_AS)|區分有腔調和無腔調的字元。 例如，'a' 不等於 'ấ'。 如果未選取此選項，定序就不會區分腔調。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將有腔調和無腔調字母視為相同。 指定 _AI，就可以明確地選取不區分腔調字。|    
-|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名和片假名。 如果未選取此選項，定序就不會區分假名。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|    
+|區分假名 (_KS)|區分兩種類型的日文假名字元：平假名與片假名。 如果未選取此選項，定序就不會區分假名。 亦即，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將平假名和片假名視為相同。 省略此選項，是指定不區分假名的唯一方法。|    
 |區分全半形 (_WS)|區分全形與半形字元。 如果未選取此選項，在排序用途上，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將相同字元的全形和半形表示法視為相同。 省略此選項，是指定不區分全形與半形的唯一方法。|    
 |區分變化選取器 (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]中首次引進如何區分日文定序 Japanese_Bushu_Kakusu_140 和 Japanese_XJIS_140 中的各種不同表意字元變化選取器。 變化序列是由基底字元加上額外的變化選取器所組成。 如果未選取此 _VSS 選項，則定序不區分變化選取器，而且比較時不會考慮變化選取器。 換句話說，SQL Server 基於排序目的，會將建置在相同基底字元但使用不同變化選取器的字元視為相同。 另請參閱  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)。 <br/><br/> 全文檢索搜尋索引不支援區分 Variation Selector (_VSS) 定序。 全文檢索搜尋索引支援只區分腔調字 (_AS)、區分假名 (_KS) 和區分全半形 (_WS) 選項。 SQL Server XML 和 CLR 引擎不支援 (_VSS) Variation Selector。
 |UTF-8 (_UTF8)|讓 UTF-8 編碼資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果未選取此選項，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用適用資料類型的預設非 Unicode 編碼格式。| 

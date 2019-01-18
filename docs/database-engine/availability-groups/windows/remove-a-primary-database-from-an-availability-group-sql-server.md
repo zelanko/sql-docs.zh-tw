@@ -1,6 +1,7 @@
 ---
-title: 將主要資料庫從可用性群組移除 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 將主要資料庫從可用性群組移除
+description: 使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 將主要資料庫從 Always On 可用性群組移除的步驟。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae9f27f97cc49192c1398a75528d66239649df70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5fb0b24d51c383466cf91e6e691717170c290f4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700372"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201997"
 ---
-# <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>將主要資料庫從可用性群組移除 (SQL Server)
+# <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>將主要資料庫從 Always On 可用性群組移除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]PowerShell，將主要資料庫和對應的次要資料庫從 AlwaysOn 可用性群組中移除。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "47700372"
   
      [必要條件和限制](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要使用下列項目移除可用性資料庫：**  
   
@@ -42,7 +43,7 @@ ms.locfileid: "47700372"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **待處理：**[從可用性群組中移除可用性資料庫之後](#FollowUp)  
+-   **後續操作：**[從可用性群組中移除可用性資料庫之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -52,7 +53,7 @@ ms.locfileid: "47700372"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -112,7 +113,7 @@ ms.locfileid: "47700372"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：從可用性群組中移除可用性資料庫之後  
+##  <a name="FollowUp"></a> 後續操作：從可用性群組中移除可用性資料庫之後  
  從可用性群組中移除可用性資料庫，會結束先前主要資料庫和對應的次要資料庫之間的資料同步處理。 先前主要資料庫會保持上線狀態。 每個對應的次要資料庫處於 RESTORING 狀態。  
   
  此時有替代方法可處理移除的次要資料庫：  

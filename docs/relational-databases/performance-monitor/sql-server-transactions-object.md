@@ -5,21 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 31753573d5033a4310c039f016211fa023378e5b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 07b4c7d08816d84f3e1273f3fcdcf5324602cfc0
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158786"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380549"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server 的 Transactions 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "52158786"
 |**Free Space in tempdb (KB)**|**tempdb**中可用的空間量 (以 KB 為單位)。 必須有足夠的可用空間，以容納快照隔離等級版本存放區和這個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中建立的所有新暫存物件。|  
 |**Longest Transaction Running Time**|自交易啟動以來的時間長度 (以秒為單位)，此交易在其他任何目前的交易中維持最久的使用狀態。 當資料庫是在讀取認可快照隔離層級之下時，此計數器只會顯示活動。 如果資料庫是在其他任何隔離等級中，則不會記錄任何活動。|  
 |**NonSnapshot Version Transactions**|目前使用中的交易數，這些交易未使用快照隔離等級，且已修改資料而在 **tempdb** 版本存放區產生資料列版本。|  
-|**Snapshot Transactions**|目前使用快照隔離等級的使用中交易數。<br /><br /> 注意： **Snapshot Transactions** 物件計數器會在第一次進行資料存取時回應，而不是在發出 `BEGIN TRANSACTION` 陳述式時回應。|  
-|**Transactions**|目前使用中的所有類型之交易數。|  
+|**Snapshot Transactions**|目前使用快照隔離等級的使用中交易數。<br /><br /> 注意：**Snapshot Transactions** 物件計數器會在第一次進行資料存取時回應，而不是在發出 `BEGIN TRANSACTION` 陳述式時回應。|  
+|**交易**|目前使用中的所有類型之交易數。|  
 |**Update conflict ratio**|使用快照隔離等級的交易在上一秒內發生更新衝突的百分比。 快照隔離等級交易嘗試修改資料列時，如果先前有另一個交易已修改此資料列，但在快照隔離等級交易啟動時尚未認可此交易，這時就會發生更新衝突。|  
 |**Update conflict ratio base**|僅供內部使用。|
 |**Update Snapshot Transactions**|目前使用快照隔離等級且已修改資料的使用中交易數。|  

@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c82a2400020baf0d97cda595c630c2b7b55a9b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
+ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504506"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266079"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>資料庫引擎的新功能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -319,11 +319,11 @@ SQL Server 2016 新增對匯入和匯出 JSON 以及使用 JSON 字串的內建�
 - [COMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/compress-transact-sql.md) 和 [DECOMPRESS &#40;Transact-SQL&#41;](../t-sql/functions/decompress-transact-sql.md) 函數可進行值與 GZIP 演算法的雙向轉換。
 - 加入 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../t-sql/functions/datediff-big-transact-sql.md) 和 [AT TIME ZONE &#40;Transact-SQL&#41;](../t-sql/queries/at-time-zone-transact-sql.md) 函數以及 [sys.time_zone_info &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 檢視來支援日期和時間互動。
 - 現在可以在資料庫層級建立認證 (除了先前可用的伺服器層級認證以外)。 如需詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
-- [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md) 已加入 8 個新屬性：InstanceDefaultDataPath、InstanceDefaultLogPath、ProductBuild、ProductBuildType、ProductMajorVersion、ProductMinorVersion、ProductUpdateLevel 和 ProductUpdateReference。
+- [SERVERPROPERTY &#40;Transact-SQL&#41;](../t-sql/functions/serverproperty-transact-sql.md) 已新增八個新屬性：InstanceDefaultDataPath、InstanceDefaultLogPath、ProductBuild、ProductBuildType、ProductMajorVersion、ProductMinorVersion、ProductUpdateLevel 和 ProductUpdateReference。
 - 已移除 [HASHBYTES &#40;Transact-SQL&#41;](../t-sql/functions/hashbytes-transact-sql.md) 函數的 8,000 個位元組輸入長度限制。
 - 加入新的字串函數 [STRING_SPLIT &#40;Transact-SQL&#41;](../t-sql/functions/string-split-transact-sql.md) 和 [STRING_ESCAPE &#40;Transact-SQL&#41;](../t-sql/functions/string-escape-transact-sql.md)。
-- 自動成長選項︰ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 選項取代了追蹤旗標 1117，所以追蹤旗標 1117 沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 和 [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 的新 is_autogrow_all_files 資料行。
-- 混合範圍配置︰在使用者資料庫中，物件前 8 頁的預設配置將從使用混合頁面範圍變更為使用統一範圍。 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 選項取代了追蹤旗標 1118，所以追蹤旗標 1118 沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) 和 [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的新 `is_mixed_page_allocation_on` 資料行。
+- 自動成長選項：ALTER DATABASE 的 AUTOGROW_SINGLE_FILE 和 AUTOGROW_ALL_FILES 選項取代了追蹤旗標 1117，所以追蹤旗標 1117 沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 和 [sys.filegroups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) 的新 is_autogrow_all_files 資料行。
+- 混合範圍配置：在使用者資料庫中，物件前 8 頁的預設配置將從使用混合頁面範圍變更為使用統一範圍。 ALTER DATABASE 的 SET MIXED_PAGE_ALLOCATION 選項取代了追蹤旗標 1118，所以追蹤旗標 1118 沒有任何作用。 如需詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md) 和 [sys.databases &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的新 `is_mixed_page_allocation_on` 資料行。
 
 ### <a name="transact-sql-improvements-for-natively-compiled-modules"></a>原生編譯模組的 Transact-SQL 改善
 
@@ -414,7 +414,7 @@ SQL Server 2016 Standard Edition 現在支援 AlwaysOn 基本可用性群組。 
 
  支援自動容錯移轉的複本數目已從 2 增加到 3。
 
- Always On 容錯移轉叢集現在支援群組受控服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
+ AlwaysOn 容錯移轉叢集現在支援群組受管理的服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
 
  [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 在 Windows Server 2016 上支援分散式交易和 DTC。 如需詳細資訊，請參閱[分散式交易支援](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md#dtcsupport)。
 
@@ -438,10 +438,8 @@ AlwaysOn 現在支援加密的資料庫。 當您建立新的可用性群組時�
 請下載最新版的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 支援為了連接到 Microsoft Azure 而開發的 Active Directory 驗證程式庫 (ADAL)。 這會取代 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中使用的憑證式驗證。
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安裝的必要條件是安裝 .NET 4.6。 安裝程式會在安裝 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 時自動安裝.NET 4.6。
 - 新的查詢結果方格選項支援在複製或儲存結果方格中的文字時保留歸位字元/換行字元 (新行字元)。 從 [工具] / [選項] 功能表設定此選項。
 - SQL Server 管理工具已不再從主要的功能樹狀目錄中安裝。如需詳細資訊，請參閱 [使用 SSMS 安裝 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)。
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 安裝的必要條件是安裝 .NET 4.6.1。 安裝程式會在安裝 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 時自動安裝.NET 4.6.1。
 
 ### <a name="upgrade-advisor"></a>Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview 是獨立的工具，可讓舊版使用者對其 SQL Server 資料庫執行一組升級規則，以指出重大行為變更和已被取代的功能，以及協助新功能 (例如 Stretch Database) 採用。

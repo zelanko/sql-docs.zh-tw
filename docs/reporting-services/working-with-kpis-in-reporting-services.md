@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9612cb4cf45ec71bb511750bab9a84914a0e7f5
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: b1960771504184706bf21e9746a4fa3c784aad3b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712489"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212420"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -32,7 +32,7 @@ ms.locfileid: "52712489"
 ## <a name="creating-a-dataset"></a>建立資料集  
 KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的資料位於第一列。 若要建立共用資料集，您可以使用報表產生器或 SQL Server Data Tools。  
   
-> **注意**︰資料集不需要位於與 KPI 相同的資料夾。  
+> **注意**:資料集不需要位於與 KPI 相同的資料夾。  
   
 ## <a name="placement-of-kpis"></a>KPI 的位置  
   
@@ -58,9 +58,9 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
 |[狀態]|用於判斷 KPI 圖格色彩的數值。 有效值為 1 (綠色)、 0 (琥珀色) 和 -1 (紅色)。|  
 |趨勢集|用於圖表視覺效果且以逗點分隔的數值。 這也可以設定為資料集的資料行，其值代表趨勢。|  
   
-> **警告**︰雖然您可以在設計階段使用 [狀態] 欄位的文字值，但如果會重新整理資料集，您就應該使用數值。 如果您使用文字值 (而非數字) 重新整理資料集，它可能會損毀您伺服器上的 KPI。  
-  
-> **注意**：[值]、[目標] 和 [狀態] 欄位只可以從資料集結果的第一列中選擇值。 不過，[趨勢集] 欄位可以選擇哪些資料行會反映趨勢。  
+> **警告**：雖然您可以在設計階段使用 [狀態] 欄位的文字值，但如果會重新整理資料集，您就應該使用數值。 如果您使用文字值 (而非數字) 重新整理資料集，它可能會損毀您伺服器上的 KPI。  
+> 
+> **注意**:[值]、[目標] 和 [狀態] 欄位只可以從資料集結果的第一列中選擇值。 不過，[趨勢集] 欄位可以選擇哪些資料行會反映趨勢。  
   
 您可以執行下列步驟來使用共用資料集的資料。  
   
@@ -94,7 +94,7 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
-2.  選取 [刪除]。 在確認對話方塊中，再次選取 [刪除]。  
+2.  選取 **[刪除]**。 在確認對話方塊中，再次選取 [刪除]。  
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   

@@ -19,12 +19,12 @@ ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4222a9175e9c5ae1b813d87d67fcc8a34170249a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13cb528700007174c20c5c6881b64a9c4282f036
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714436"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589413"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 全文檢索權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  指定正在授與權限的全文檢索目錄。 範圍限定詞 **::** 為必要項目。  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  指定正在授與權限的全文檢索停用字詞表。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  

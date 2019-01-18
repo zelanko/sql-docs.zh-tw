@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61a876ec35e7cd11b8ac127606bb2e4e7c2c6e2c
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 16fa50a7e3dc6b6b2ee86dfcd79f0aa311d9071d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018213"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978875"
 ---
 # <a name="point"></a>點
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,21 +32,24 @@ ms.locfileid: "51018213"
  geometry 資料類型的 Point 類型代表單一位置，其中 *X* 代表正在產生之 Point 的 X 座標， *Y* 則代表正在產生之 Point 的 Y 座標。 *SRID* 表示要傳回之 **geometry** 例項的空間參考識別碼。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立代表 SRID 為 0 之 (3, 4) 點的 `geometry Point`執行個體。  
+### <a name="example-a"></a>範例 A。
+下列範例會建立代表 SRID 為 0 之 (3, 4) 點的 `geometry Point`執行個體。  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT (3 4)', 0);  
 ```  
   
- 下一個範例會建立 `geometry``Point` 執行個體，它代表 Z (高度) 值為 7 且 M (測量) 值為 2.5 的 (3, 4) 點，而且預設 SRID 為 0。  
+### <a name="example-b"></a>範例 B.
+下列範例會建立 `geometry``Point` 執行個體，它代表 Z (高度) 值為 7 且 M (量值) 值為 2.5 的 (3, 4) 點，且預設 SRID 為 0。  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- 最後一個範例會傳回 `geometry``Point` 執行個體的 X、Y、Z 和 M 值。  
+### <a name="example-c"></a>範例 C。
+下列範例會傳回 `geometry``Point` 執行個體的 X、Y、Z 和 M 值。  
   
 ```  
 SELECT @g.STX;  
@@ -55,7 +58,8 @@ SELECT @g.Z;
 SELECT @g.M;  
 ```  
   
- Z 和 M 值可明確指定為 NULL，如下列範例所示。  
+### <a name="example-d"></a>範例 D.
+Z 和 M 值可明確指定為 NULL，如下列範例所示。  
   
 ```  
 DECLARE @g geometry;  

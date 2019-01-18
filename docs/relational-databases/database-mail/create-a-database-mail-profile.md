@@ -15,22 +15,22 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0280e8039b5288186e910289eeb7c7566fdb0ae0
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558725"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980444"
 ---
 # <a name="create-a-database-mail-profile"></a>建立 Database Mail 設定檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以使用 [Database Mail 組態精靈] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，建立 Database Mail 公用和私人設定檔。 如需郵件設定檔的詳細資訊，請參閱 [Database Mail 設定檔](database-mail-configuration-objects.md)。
   
--   **開始之前** [必要條件](#Prerequisites)、 [安全性](#Security)  
+-   **開始之前：**[必要條件](#Prerequisites)、[安全性](#Security)  
   
--   **使用下列項目建立 Database Mail 私人設定檔**  [Database Mail 組態精靈](#SSMSProcedure)、 [Transact-SQL](#PrivateProfile)  
+-   **使用下列方式建立 Database Mail 私人設定檔：**[Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#PrivateProfile)  
   
--   **使用下列項目建立 Database Mail 公用設定檔**  [Database Mail 組態精靈](#SSMSProcedure)、 [Transact-SQL](#PublicProfile)  
+-   **使用下列方式建立 Database Mail 公用設定檔：**[Database Mail 設定精靈](#SSMSProcedure)、[Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -56,7 +56,7 @@ ms.locfileid: "51558725"
   
 -   在 [管理設定檔和帳戶] 頁面上，選取 [建立新設定檔] 選項，然後按一下 [下一步]。  
   
--   在 [新增設定檔] 頁面上，指定設定檔名稱、描述並加入要併入設定檔中的帳戶，然後按一下 [下一步]。  
+-   在 [新增設定檔] 頁面上，指定設定檔名稱、描述並新增要併入設定檔中的帳戶，然後按一下 [下一步]。  
   
 -   在 [完成精靈] 頁面上，檢閱要執行的動作，然後按一下 [完成] 完成新設定檔的建立。  
   

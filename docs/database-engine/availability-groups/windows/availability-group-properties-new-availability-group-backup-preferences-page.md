@@ -1,6 +1,7 @@
 ---
-title: 屬性：新增可用性群組 (備份喜好設定頁面) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
+description: 描述 SQL Server Management Studio [新增可用性群組精靈] 中 [備份喜好設定] 頁面上找到的各種選項。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d969bc1db9b38533e82fc1c2a7ca55c0b6464ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49288df6eb302dd3991e9b69b50de14a030a86b6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619022"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207335"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "47619022"
  指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
 > [!IMPORTANT]  
->  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ## <a name="replica-backup-priorities"></a>複本備份優先權  
  此方格顯示裝載可用性群組複本的每個伺服器執行個體的目前備份優先權。 您可以使用此方格變更一個或多個可用性複本的備份優先權。  
@@ -60,7 +61,7 @@ ms.locfileid: "47619022"
  決定是否絕對不要選擇這個可用性複本來執行備份。 例如，這對於您永遠不希望將備份容錯移轉到其中的遠端可用性複本十分有用。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

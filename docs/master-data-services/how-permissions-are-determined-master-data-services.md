@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
@@ -14,12 +13,12 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627823a32f630d0d243a6a2babb5e6e2a98d40be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a940035172195b86499262bef52ca319ebefd137
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834226"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747440"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何決定權限 (Master Data Services)
 

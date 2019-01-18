@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1549c672211d328a723ab8eb056e8f227f1107ca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521108"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590262"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "52521108"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```sql  
     -- Create a database master key and a certificate in the master database.  
@@ -165,7 +165,7 @@ ms.locfileid: "52521108"
      依預設，卸離作業會保留與該資料庫關聯的所有全文檢索目錄。 若要移除這些全文檢索目錄，請清除 **[保留全文檢索目錄]** 核取方塊。 只有當您從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升級資料庫時，才會出現這個選項。  
   
      **狀態**  
-     顯示下列狀態其中之一： **就緒** 或 **未就緒**。  
+     會顯示下列狀態其中之一：[就緒] 或 [未就緒]。  
   
      **訊息**  
      **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
@@ -221,7 +221,7 @@ ms.locfileid: "52521108"
     |綠色、指向右方的三角形|進行中|附加作業已啟動，但尚未完成。|  
     |綠色的核取記號|成功|已順利附加物件。|  
     |包含白色十字的紅色圓圈|錯誤|附加作業發生錯誤，且未順利完成。|  
-    |包含兩個黑色的象限 (在左方和右方) 以及兩個白色的象限 (在上方和下方)|已停止|附加作業未順利完成，因為使用者已停止作業。|  
+    |包含兩個黑色的象限 (在左方和右方) 以及兩個白色的象限 (在上方和下方)|Stopped|附加作業未順利完成，因為使用者已停止作業。|  
     |包含指向逆時針方向之彎曲箭頭的圓圈|已回復|附加作業已順利完成，但是因為在附加其他物件的期間發生了錯誤，所以已將其回復。|  
   
      **訊息**  
@@ -233,7 +233,7 @@ ms.locfileid: "52521108"
      **移除**  
      從 **[要附加的資料庫]** 方格中移除選取的檔案。  
   
-     **"** *<database_name>* **" 資料庫詳細資料**  
+     **"** _<database_name>_ **" 資料庫詳細資料**  
      顯示要附加之檔案的名稱。 若要確認或變更檔案的路徑名稱，請按一下 [瀏覽] 按鈕 (**...**)。  
   
     > [!NOTE]  
@@ -257,7 +257,7 @@ ms.locfileid: "52521108"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```sql  
     -- Detach the TDE protected database from the source server.   

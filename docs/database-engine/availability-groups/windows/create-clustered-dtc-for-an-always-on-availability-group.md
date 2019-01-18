@@ -1,6 +1,7 @@
 ---
-title: 建立 AlwaysOn 可用性群組的叢集 DTC | Microsoft Docs
-ms.custom: ''
+title: 建立可用性群組的叢集 DTC 資源
+description: 本主題將逐步引導您完成 SQL Server AlwaysOn 可用性群組之叢集 DTC 資源的組態。
+ms.custom: seodec18
 ms.date: 08/30/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ce78afa02f0a0f5acdb061e21a1311ac20f844d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396914"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069774"
 ---
-# <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>建立 AlwaysOn 可用性群組的叢集 DTC
+# <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>建立 Always On 可用性群組的叢集 DTC 資源
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -42,7 +43,7 @@ ms.locfileid: "52396914"
   - 名稱：`Cluster`
   - 網路名稱：`Cluster Network 1`
   - 節點：`SQLNODE1, SQLNODE2`
-  - 共用儲存體： `Cluster Disk 3` (屬 `SQLNODE1`所擁有)
+  - 共用儲存體：`Cluster Disk 3` (由 `SQLNODE1` 所擁有)
 - 叢集詳細資料 (即將建立)：
   - 網路名稱資源：`DTCnet1`
   - DTC 網路名稱資源：`DTC1`
@@ -320,21 +321,21 @@ GO
 ```
 
 > [!IMPORTANT]
-您無法在現有的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 上啟用 DTC。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會接受現有可用性群組的下列語法：  
->
+> 您無法在現有的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 上啟用 DTC。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會接受現有可用性群組的下列語法：  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->不過，實際上不會變更任何組態。  您可以使用下列 T-SQL 查詢確認 **dtc_support** 組態：  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->在可用性群組上啟用 DTC 支援的唯一方法是使用 Transact-SQL 來建立可用性群組。
+> SET (DTC_Support = Per_DB)  
+> 
+> 不過，實際上不會變更任何組態。  您可以使用下列 T-SQL 查詢確認 **dtc_support** 組態：  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> 在可用性群組上啟用 DTC 支援的唯一方法是使用 Transact-SQL 來建立可用性群組。
  
 ## <a name="ClusterDTC"></a>8.準備叢集資源
 
-此指令碼會準備 DTC 相依資源︰磁碟和 IP。  共用儲存體會加入 Windows 叢集。  這會建立網路資源，然後建立 DTC 並將其設為可用性群組的資源。  在 `SQLNODE1` 上執行下列 PowerShell 指令碼。
+此指令碼會準備 DTC 相依資源：磁碟和 IP。  共用儲存體會加入 Windows 叢集。  這會建立網路資源，然後建立 DTC 並將其設為可用性群組的資源。  在 `SQLNODE1` 上執行下列 PowerShell 指令碼。 感謝 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) 提供此指令碼！
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -587,4 +588,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> 您必須執行 `USE AG1` 陳述式，確保資料庫內容已設定為 `AG1`。  否則，您會收到下列錯誤訊息：「交易內容正由另一個工作階段使用」。
+> 您必須執行 `USE AG1` 陳述式，確保資料庫內容已設定為 `AG1`。  否則，您會收到下列錯誤訊息：「交易內容正由另一個工作階段使用中」。

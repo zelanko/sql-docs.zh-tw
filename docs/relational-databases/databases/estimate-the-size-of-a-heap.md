@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62f34e574559c1d8685bb254200bed93c6c0a7e5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559245"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591762"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>估計堆積的大小
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "51559245"
   
 1.  指定資料表中將會有的資料列數目：  
   
-     ***Num_Rows***  = 資料表中的資料列數目  
+     **_Num_Rows_**  = 資料表中的資料列數目  
   
 2.  指定固定長度與可變長度資料行的數目，並計算儲存這些資料行所需的空間：  
   
      計算這兩組資料行在資料列內各佔多少空間。 資料行的大小取決於資料類型和長度規格。  
   
-     ***Num_Cols***  = 資料行 (固定長度和可變長度) 總數  
+     **_Num_Cols_**  = 資料行 (固定長度和可變長度) 總數  
   
-     ***Fixed_Data_Size***  = 所有固定長度資料行的總位元組大小  
+     **_Fixed_Data_Size_**  = 所有固定長度資料行的總位元組大小  
   
-     ***Num_Variable_Cols***  = 可變長度資料行的數目  
+     **_Num_Variable_Cols_**  = 可變長度資料行的數目  
   
-     ***Max_Var_Size***  = 所有可變長度資料行的總位元組大小上限  
+     **_Max_Var_Size_**  = 所有可變長度資料行的總位元組大小上限  
   
 3.  資料列中有一部分 (稱為 Null 點陣圖) 是保留的空間，用來管理資料行的 Null 屬性。 計算它的大小：  
   
-     ***Null_Bitmap***  = 2 + ((***Num_Cols*** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      您應該僅使用這個運算式的整數部分。 請捨去任何餘數。  
   
@@ -55,36 +55,36 @@ ms.locfileid: "51559245"
   
      如果在索引中有可變長度的資料行，請決定將資料行儲存到索引列中所需的空間大小。  
   
-     ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
-     加入至 ***Max_Var_Size*** 的位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行儲存所佔空間的百分比會比較低，您可以經由調整百分比所得的 ***Max_Var_Size*** 值，取得更精確的整體資料表大小。  
+     新增到 **_Max_Var_Size_** 之位元組是用於追蹤每個可變長度的資料行。 這個公式假設所有可變長度的資料行是 100% 填滿的。 如果您預期可變長度資料行所佔儲存空間的百分比會比較低，您可以經由調整百分比所得的 **_Max_Var_Size_** 值，取得更精確的整體資料表大小估計值。  
   
     > [!NOTE]  
-    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 **varchar**、**nvarchar**、**varbinary** 或**sql_variant** 資料行。 這些資料行的每個長度必須仍然在 **varchar****nvarchar,****varbinary** 或 **sql_variant** 資料行的 8,000 個位元組限制內。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
+    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 **varchar**、 **nvarchar**、 **varbinary**或 **sql_variant** 資料行。 這些資料行的每個長度必須仍然在 **varchar**、**nvarchar、varbinary** 或 **sql_variant** 資料行的 8,000 個位元組限制內。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。  
   
-     如果沒有可變長度資料行，請將 ***Variable_Data_Size*** 設成 0。  
+     如果沒有可變長度資料行，請將 **_Variable_Data_Size_** 設為 0。  
   
 5.  計算資料列總大小：  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      公式中 4 這個值是資料列的資料列標頭負擔。  
   
 6.  計算每個分頁的資料列數目 (每個分頁包含 8096 個可用位元組)：  
   
-     ***Rows_Per_Page***  = 8096 / (***Row_Size*** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      因為資料列不能跨頁，每個分頁的資料列數目必須無條件捨去小數，而取最接近的整數資料列。 公式中的 2 這個值是給分頁位置陣列中的該資料列項目。  
   
 7.  計算儲存所有資料列所需的分頁數目：  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      估計的分頁數目應該要將小數進位到最接近的整分頁數。  
   
 8.  計算儲存堆積內的資料所需的空間 (每個頁面共有 8192 個位元組)：  
   
-     堆積大小 (位元組) = 8192 x ***Num_Pages***  
+     堆積大小 (位元組) = 8192 x **_Num_Pages_**  
   
  上述計算未考慮下列項目：  
   

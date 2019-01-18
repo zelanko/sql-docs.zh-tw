@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9e2237473024a75227ff7ec7838849618cdf54d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663457"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205116"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "51663457"
     > [!TIP]  
     >  SQL Server 會發出租用識別碼，以便在還原作業期間確立獨佔存取權。 還原租用識別碼為 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
   
-3.  **刪除 Blob：** 若要刪除擁有使用中租用的 Blob，必須先中斷租用。  
+3.  **刪除 Blob：** 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
   
 ###  <a name="Code_Example"></a> PowerShell 指令碼範例  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  如果您執行的是 PowerShell 2.0，載入 Microsoft WindowsAzure.Storage.dll 組件時可能會發生問題。 建議您升級 [PowerShell](https://docs.microsoft.com/powershell/) 以解決這項問題。 您也可以針對 PowerShell 2.0 使用下列因應措施：  
->   
+> 
 >  -   使用下列內容來建立或修改 powershell.exe.config 檔案，以便在執行階段載入 .NET 2.0 和 .NET 4.0 組件：  
->   
+> 
 >     ```  
 >     \<?xml version="1.0"?>   
 >     <configuration>   
@@ -55,7 +55,7 @@ ms.locfileid: "51663457"
 >             <supportedRuntime version="v2.0.50727"/>   
 >         </startup>   
 >     </configuration>  
->   
+> 
 >     ```  
   
  下列範例指令碼會識別擁有使用中租用的 Blob，並予以中斷。 此範例也會示範如何篩選釋放租用識別碼。  
@@ -84,7 +84,7 @@ ms.locfileid: "51663457"
   
      **中斷租用**  
   
-     **\<Blob 的 URL> 的租用不是還原租用：只有當您的 Blob 擁有仍然使用中的還原租用時，您才會看見此訊息。**  
+     **\<Blob 的 URL> 上的租用是還原租用：只有當您的 Blob 擁有仍然使用中的還原租用時，您才會看見此訊息。**  
   
      **\<Blob 的 URL> 的租用不是還原租用。正在中斷 \<Blob 的 URL> 的租用。**  
   

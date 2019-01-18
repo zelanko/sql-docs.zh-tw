@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2466e5b1cff9efb055d348a7e72729fa5208156
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661327"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213707"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "51661327"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九種固定伺服器角色。 您無法變更授與固定伺服器角色 (除了 **public** 外) 的權限。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您就可以建立使用者定義伺服器角色，並將伺服器層級權限加入至使用者定義伺服器角色。  
   
- 您可以將伺服器層級主體 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入、Windows 帳戶和 Windows 群組) 加入伺服器層級角色。 固定伺服器角色的每個成員可以對相同的角色增加其他登入。 使用者定義伺服器角色的成員無法將其他伺服器主體加入至此角色。  
->  [!NOTE]
+ 您可以將伺服器層級主體 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入、Windows 帳戶和 Windows 群組) 新增至伺服器層級角色。 固定伺服器角色的每個成員可以對相同的角色增加其他登入。 使用者定義伺服器角色的成員無法將其他伺服器主體加入至此角色。  
+> [!NOTE]
 >  在 SQL Database 或 SQL Data Warehouse 中無法使用伺服器層級權限。 如需 SQL Database 的詳細資訊，請參閱[控制和授與資料庫存取權](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)。
   
 ## <a name="fixed-server-level-roles"></a>固定伺服器層級角色  
@@ -51,7 +51,7 @@ ms.locfileid: "51661327"
 |------------------------------|-----------------|  
 |**sysadmin**|**sysadmin** 固定伺服器角色的成員可以執行伺服器中的所有活動。|  
 |**serveradmin**|**serveradmin** 固定伺服器角色的成員可以變更全伺服器組態選項及關閉伺服器。|  
-|**securityadmin**|**securityadmin** 固定伺服器角色的成員可以管理登入及其屬性。 他們可以 `GRANT` (授與)、`DENY` (拒絕) 和 `REVOKE` (撤銷) 伺服器層級權限。 如果他們擁有資料庫的存取權，也可以 `GRANT`、`DENY` 和 `REVOKE` 資料庫層級權限。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **重要事項：** 授與 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 之存取權和設定使用者權限的能力，可讓安全性管理員指派大部分的伺服器權限。 您應該將 **securityadmin** 角色視為相當於 **系統管理員** 角色。|  
+|**securityadmin**|**securityadmin** 固定伺服器角色的成員可以管理登入及其屬性。 他們可以 `GRANT` (授與)、`DENY` (拒絕) 和 `REVOKE` (撤銷) 伺服器層級權限。 如果他們擁有資料庫的存取權，也可以 `GRANT`、`DENY` 和 `REVOKE` 資料庫層級權限。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **重要：** 授與 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 之存取權和設定使用者權限的能力可讓安全性管理員指派大部分伺服器權限。 您應該將 **securityadmin** 角色視為相當於 **系統管理員** 角色。|  
 |**processadmin**|**processadmin** 固定伺服器角色的成員可以結束在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中執行的處理序。|  
 |**setupadmin**|**setupadmin** 固定伺服器角色的成員可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式加入和移除連結的伺服器 (使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 時需要 **sysadmin** 成員資格)。|  
 |**bulkadmin**|**bulkadmin** 固定伺服器角色的成員可以執行 `BULK INSERT` 陳述式。|  

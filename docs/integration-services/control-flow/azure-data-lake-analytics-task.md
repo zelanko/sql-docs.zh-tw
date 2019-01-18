@@ -6,8 +6,7 @@ ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSTASK.F1
@@ -15,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3060dd1fa3a46f64b34658a1c8ebccbc4155526c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641745"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52808460"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 工作
 
@@ -64,11 +63,11 @@ U-SQL 設定有兩個設定：**SourceType** 和根據 **SourceType** 值而定�
 ### <a name="job-configuration"></a>作業設定
 作業設定指定 U-SQL 作業提交屬性。
 
-- **AzureDataLakeAnalyticsConnection：** 指定要提交 U-SQL 指令碼的 Data Lake Analytics 帳戶。 從已定義的連接管理員清單中選擇連接。 若要建立新的連接，請選取 [<新增連接>]。 如需相關資訊，請參閱 [Azure Data Lake Analytics 連線管理員](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)。
+- **AzureDataLakeAnalyticsConnection:** 指定要提交 U-SQL 指令碼的 Data Lake Analytics 帳戶。 從已定義的連接管理員清單中選擇連接。 若要建立新的連接，請選取 [<新增連接>]。 如需相關資訊，請參閱 [Azure Data Lake Analytics 連線管理員](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)。
 
 - **JobName：** 指定 U-SQL 作業的名稱。 
 - **AnalyticsUnits：** 指定 U-SQL 作業的分析單位計數。
-- **優先順序：** 指定 U-SQL 作業的優先順序。 此值的設定範圍為從 0 至 1000。 數字愈小，優先順序愈高。
+- **Priority：** 指定 U-SQL 作業的優先順序。 此值的設定範圍為從 0 至 1000。 數字愈小，優先順序愈高。
 - **RuntimeVersion：** 指定 U-SQL 作業的 Data Lake Analytics 執行階段版本。 預設會設定為 "default"。 您通常不需要變更這個屬性。
 - **Synchronous：** 布林值，指定工作是否要等候作業執行完成。 如果值設為 true，在作業完成後，工作會標示為**成功**。 如果值設為 false，則在作業通過準備階段後，工作會標示為**成功**。
 
@@ -121,8 +120,8 @@ OUTPUT @rs1
 
 |變數名稱|參數名稱|
 |-------------|--------------|
-|User: Variable1|\@in|
-|User: Variable2|\@out| 
+|使用者：Variable1|\@in|
+|使用者：Variable2|\@out| 
 
 ## <a name="expression-page-configuration"></a>運算式頁面設定
 

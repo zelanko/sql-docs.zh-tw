@@ -11,12 +11,12 @@ ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8fe62a659dce3f672f298c55b7d4308e682c3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac71cce5f8a4fad04ea006c8ea96f0decae9c93a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814016"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215777"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>重新整理資料 (適用於 Excel 的 MDS 增益集)
 
@@ -39,7 +39,7 @@ ms.locfileid: "47814016"
   
 -   如果 MDS 儲存機制中的某個屬性值已變更，工作表中的值就會使用 MDS 儲存機制中的值來更新。 資料格色彩不會變更。  
   
-> [!WARNING]  
+> [!WARNING]
 >  -   在使用中工作表中，如果非管理的資料存在 MDS 管理之資料下方的資料列中，系統可能會覆寫非管理的資料。 當您重新整理工作表，而且加入 MDS 管理之資料的新資料列 (與非管理的資料重疊) 時，就會發生這種狀況。  
 > -   當您重新整理時，系統會刪除 MDS 管理之資料格的註解。  
   

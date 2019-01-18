@@ -1,7 +1,7 @@
 ---
 title: catalog.catalog_properties (SSISDB 資料庫) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 456ab997ac599f4525f62a5eb6267600b0767c24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0fa4d428ad10adf53118e901befcb10cede7f421
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519642"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328918"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52519642"
 |**VALIDATION_TIMEOUT**|如果驗證沒有在這個屬性指定的秒數中完成，驗證會停止。|  
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的預設自訂記錄層次。 如果您尚未建立任何自訂的記錄層次，則此屬性可能不會出現在檢視中。|
 |**SERVER_LOGGING_LEVEL**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的預設記錄層級。|
-|**SERVER_OPERATION_ENCRYPTION_LEVEL**|當值為 1 (`PER_EXECUTION`) 時，會針對每次「執行」建立用於保護機密執行參數和執行記錄的憑證和對稱金鍵。 當值為 2 (`PER_PROJECT`) 時，會為每個「專案」建立憑證和對稱金鑰一次。 如需此屬性的詳細資訊，請參閱適用於 SSIS 預存程序 [catalog.cleanup_server_log](..\system-stored-procedures\catalog-cleanup-server-log.md#remarks) 的＜備註＞。|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|當值為 1 (`PER_EXECUTION`) 時，會針對每次「執行」建立用於保護機密執行參數和執行記錄的憑證和對稱金鍵。 當值為 2 (`PER_PROJECT`) 時，會為每個「專案」建立憑證和對稱金鑰一次。 如需此屬性的詳細資訊，請參閱適用於 SSIS 預存程序 [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks) 的＜備註＞。|
 |**VERSION_CLEANUP_ENABLED**|當值為 `TRUE` 時，目錄中只會儲存 **MAX_PROJECT_VERSIONS** 數目的專案版本，並會刪除所有其他專案版本。 當值為 **FALSE** 時，所有專案版本都會儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|
 |||
   

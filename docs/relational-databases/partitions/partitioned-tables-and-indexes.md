@@ -13,16 +13,16 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], about partitioned indexes
 - index partitions
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5cac151a3c3192c03f915c95eb0ac228ad2d8c05
+ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662421"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414173"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "51662421"
 -   [使用 SQL Server 2008 的資料分割資料表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [如何實作自動滑動視窗](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
 -   [大量載入至資料分割資料表](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [專案 REAL：資料生命週期 -- 資料分割](https://technet.microsoft.com/library/cc966424.aspx)    
+-   [Project REAL:Data Lifecycle - Partitioning](https://technet.microsoft.com/library/cc966424.aspx) (專案 REAL：資料生命週期 - 資料分割)    
 -   [分割資料表和索引上的查詢處理增強功能](https://msdn.microsoft.com/library/ms345599.aspx)    
 -   [建立大規模關聯式資料倉儲的前 10 大最佳作法](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   

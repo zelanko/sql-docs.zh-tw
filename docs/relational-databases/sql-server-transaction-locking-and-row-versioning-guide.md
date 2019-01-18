@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de24fe5caaafc1475e647c84ea5a300c5221e5f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511774"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980554"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "52511774"
  自動認可模式是 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設交易管理模式。 每一個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式都會在完成時認可或回復。 陳述式如果成功地完成便被認可；若是遇到任何錯誤則被復原。 只要這個預設模式沒有被外顯交易或隱含交易覆寫，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 執行個體的連接都會在自動認可模式下操作。 自動認可模式也是 ADO、OLE DB、ODBC 與資料程式庫的預設模式。  
   
  **隱含交易**  
- 在隱含交易模式中操作連接時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的執行個體會在目前交易完成認可或回復後，自動啟動新的交易。 您不需描述交易的啟動；只要認可或復原每一筆交易即可。 隱含交易模式產生連續的交易鍊。 透過 API 函數或 [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON 陳述式，可將隱含交易模式設為開啟。  
+ 在隱含交易模式中操作連接時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的執行個體會在目前交易完成認可或回復後，自動啟動新的交易。 您不需描述交易的啟動；只要認可或復原每一筆交易即可。 隱含交易模式產生連續的交易鍊。 透過 API 函數或 [!INCLUDE[tsql](../includes/tsql-md.md)] SET IMPLICIT_TRANSACTIONS ON 陳述式，可將隱含交易模式設為開啟。  這種模式也稱為 Autocommit OFF，請參閱 [JDBC 中的 setAutoCommit 方法](../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md) 
   
  當連接的隱含交易模式設定為開啟之後， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的執行個體便會在第一次執行下列任一個陳述式時，自動啟動一筆交易：  
   
@@ -284,7 +284,7 @@ GO
 |讀取未認可|最低隔離等級，隔離交易僅能確保不會讀取已實體損毀的資料。 這種等級下允許中途讀取，所以任何交易可能看得到其他交易所做的尚未認可變更。|  
 |讀取認可|允許交易對另一筆交易先前讀取 (未修改) 的資料進行讀取，而不必等待前一筆交易完成。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將維持寫入鎖定 (取自於選取的資料) 直到交易結束，但讀取鎖定會在 SELECT 作業一經執行時即釋放。 這是 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 預設等級。|  
 |可重複讀取|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 直到交易結束。 不過由於範圍鎖定未受管理，便有可能發生虛設項目讀取。|  
-|可序列化|最高的等級，使交易完全與其他交易隔離。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 至交易結束予以釋放為止。 當 SELECT 作業使用界定範圍的 WHERE 子句時，就會取得範圍鎖定以特意避免虛設項目讀取。<br /><br /> **注意：** 要求可序列化隔離等級時，複寫資料表上的 DDL 作業和交易可能會失敗。 這是因為複寫查詢所使用的提示可能與可序列化隔離等級不相容。|  
+|可序列化|最高的等級，使交易完全與其他交易隔離。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 至交易結束予以釋放為止。 當 SELECT 作業使用界定範圍的 WHERE 子句時，就會取得範圍鎖定以特意避免虛設項目讀取。<br /><br /> **注意：** 當您要求可序列化隔離等級時，複寫資料表上的 DDL 作業和交易可能會失敗。 這是因為複寫查詢所使用的提示可能與可序列化隔離等級不相容。|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也支援另外兩種使用資料列版本設定的交易隔離等級。 其一是讀取認可隔離的實作，而另一種交易隔離等級則是快照。  
   
@@ -421,7 +421,7 @@ GO
 -   當已指定 **TABLOCK** 提示，或者使用 **sp_tableoption** 設定了 **table lock on bulk load**資料表選項。  
   
 > [!TIP]  
-> 與 BULK INSERT 陳述式 (持有較不嚴格的大量更新鎖定) 不同之處在於，具 TABLOCK 提示的 INSERT INTO…SELECT 對資料表持有獨佔 (X) 鎖定。 這代表您無法使用平行插入作業插入資料列。  
+> 與 BULK INSERT 陳述式 (持有較不嚴格的大量更新鎖定) 不同之處在於，具 TABLOCK 提示的 INSERT INTO...SELECT 對資料表持有獨佔 (X) 鎖定。 這代表您無法使用平行插入作業插入資料列。  
   
 #### <a name="key_range"></a> 索引鍵範圍鎖定  
  使用可序列化的交易隔離等級時，索引鍵範圍鎖定可保護由 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式讀取之記錄集內隱含包括的資料列範圍。 索引鍵範圍鎖定可預防虛設項目讀取。 透過保護資料列之間的索引鍵範圍，也可防止某交易存取的記錄集內的虛設項目插入或刪除。  
@@ -539,7 +539,7 @@ FROM mytable
 WHERE name = 'Bill';  
 ```  
   
- 將索引鍵範圍鎖定放在與名稱範圍從 `Ben` 到 `Bing` 對應的索引項，因為要把名稱 `Bill` 插入這兩個相鄰的索引項之間。 將 RangeS-S 模式的索引鍵範圍鎖定放在索引項 `Bing`之上。 這可預防其他交易將值 (例如 `Bill`) 插入到索引項 `Ben` 和 `Bing` 之間。  
+ 將索引鍵範圍鎖定放在與名稱範圍從 `Ben` 到 `Bing` 對應的索引項，因為要把名稱 `Bill` 插入這兩個相鄰的索引項之間。 將 RangeS-S 模式的索引鍵範圍鎖定放在索引項 `Bing`之上。 這可預防其他交易將值 (例如 `Bill`) 插入到索引項 `Ben` 和 `Bing`之間。  
   
 ##### <a name="delete-operation"></a>刪除動作  
  在交易內刪除某個值時，交易進行刪除動作期間不需鎖定該值所處之範圍。 鎖定欲刪除的索引鍵值直到交易結束，即足以維持可序列化能力。 例如，給定以下的 DELETE 陳述式：  
@@ -549,7 +549,7 @@ DELETE mytable
 WHERE name = 'Bob';  
 ```  
   
- 將獨占 (X) 鎖定放在與名稱 `Bob`對應的索引項。 其他交易可在被刪除的值 `Bob` 前後插入或刪除值。 但是，嘗試讀取、插入或是刪除 `Bob` 這個值的任何交易，在進行刪除動作的交易尚未認可或回復之前都會被封鎖。  
+ 將獨占 (X) 鎖定放在與名稱 `Bob`對應的索引項。 其他交易可在被刪除的值 `Bob`前後插入或刪除值。 但是，嘗試讀取、插入或是刪除 `Bob` 這個值的任何交易，在進行刪除動作的交易尚未認可或回復之前都會被封鎖。  
   
  可以使用三種基本鎖定模式來執行範圍刪除：資料列、分頁或資料表鎖定。 資料列、分頁或資料表的鎖定策略是由查詢最佳化工具來決定，或者亦可由使用者透過最佳化提示 (如 ROWLOCK、PAGLOCK 或 TABLOCK) 來指定。 使用 PAGLOCK 或 TABLOCK 時，如果所有資料列都會從此分頁刪除， [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會立即重新配置索引頁。 相反的，若是使用 ROWLOCK，所有已刪除的資料列則僅標示為已刪除；稍後再使用背景工作將這些資料列從索引頁中移除。  
   
@@ -1803,7 +1803,7 @@ GO
  繫結工作階段可以用來開發三層式應用程式，其中商務邏輯可加入個別程式，而這些程式可協同處理單筆商務交易。 這些程式必須予以編碼，以便能謹慎協調它們對資料庫的存取。 因為兩個工作階段共用相同的鎖定，所以這兩個程式絕不能同時嘗試修改相同的資料。 在交易過程的任何時候，只能有一個工作階段執行工作，不允許平行執行。 只有在妥善定義的產生點 (例如所有 DML 陳述式都已完成，且也已擷取結果時)，才能於工作階段之間切換交易。  
   
 ### <a name="coding-efficient-transactions"></a>撰寫有效率的交易  
- 儘可能讓交易越短越好相當重要。 開始交易時，資料庫管理系統 (DBMS) 在交易結束之前必須保存許多資源，以保護交易的不可部份完成特性、一致性、隔離和持久性 (ACID) 屬性。 如果已修改資料，必須以獨佔鎖定 (防止其他交易讀取資料列) 保護修改的資料列，並且在認可或回復交易之前必須保持獨佔鎖定。 視交易隔離等級設定而定，`SELECT` 陳述式可能會取得在認可或復原交易之前必須保持的鎖定。 尤其是在擁有許多使用者的系統上，必須盡可能讓交易越短越好，以降低鎖定競爭並行連接之間的資源。 在少數使用者的情況下，沒有效率的長時間執行交易不會造成問題，但在擁有上千個使用者的系統中則無法忍受這種交易。 自 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 起，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 開始支援延遲的持久交易。 延遲的持久交易不保證持久性。 如需詳細資訊，請參閱[交易持久性](../relational-databases/logs/control-transaction-durability.md)主題。  
+ 儘可能讓交易越短越好相當重要。 開始交易時，資料庫管理系統 (DBMS) 在交易結束之前必須保存許多資源，以保護交易的不可部份完成特性、一致性、隔離和持久性 (ACID) 屬性。 如果已修改資料，必須以獨佔鎖定 (防止其他交易讀取資料列) 保護修改的資料列，並且在認可或回復交易之前必須保持獨佔鎖定。 視交易隔離等級設定而定，`SELECT` 陳述式可能會取得在認可或復原交易之前必須保持的鎖定。 尤其是在擁有許多使用者的系統上，必須盡可能讓交易越短越好，以降低鎖定競爭並行連接之間的資源。 在少數使用者的情況下，沒有效率的長時間執行交易不會造成問題，但在擁有上千個使用者的系統中則無法忍受這種交易。 從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 即可支援延遲的持久交易。 延遲的持久交易不保證持久性。 如需詳細資訊，請參閱[交易持久性](../relational-databases/logs/control-transaction-durability.md)主題。  
   
 #### <a name="guidelines"></a> 撰寫指引  
  以下為撰寫有效交易的指引：  

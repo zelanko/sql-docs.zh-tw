@@ -10,24 +10,24 @@ helpviewer_keywords:
 - resource pools [SQL Server], create
 - Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 5f992bfd1a132b33b125abd51e9b2fe8bc054756
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93add4b3d9ed4ff71a57845443813c323861145b
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801246"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53379672"
 ---
 # <a name="create-a-resource-pool"></a>建立資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立資源集區。 若要了解資源集區的主體，請參閱 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **To create a resource pool, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **若要建立資源集區，請使用下列方式：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47801246"
   
  所有資源集區之最小 CPU 百分比和最小記憶體百分比的總和不得超過 100。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  建立資源集區需要 CONTROL SERVER 權限。  
   
 ##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立資源集區  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

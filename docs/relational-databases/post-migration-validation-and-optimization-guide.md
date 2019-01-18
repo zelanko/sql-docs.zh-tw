@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7dcb9f3efe8ffcc0e1dc2dbd0ff800f67f82d499
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506345"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213617"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52506345"
 以下是一些移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台後常發生的效能案例以及解決方法。 這些包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定案例 (舊版移轉至新版)，以及外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 ## <a name="CEUpgrade"></a>因為 CE 版本變更造成的查詢衰退
-
+ 
 **適用於：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 從舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更新版本，並升級到最新的[資料庫相容性層級](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)時，工作負載可能會有效能衰退的風險。

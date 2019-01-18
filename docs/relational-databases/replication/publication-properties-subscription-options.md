@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 92aa4b83697bd424d4e6940f3c46b96033d5ecf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847007"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213127"
 ---
 # <a name="publication-properties-subscription-options"></a>發行集屬性，訂閱選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47847007"
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否允許使用備份檔案來初始化訂閱。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
  **允許非 SQL Server 訂閱者**  
- 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 將此選項設定為 **[True]** ，就會將其他發行集屬性設定為支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 如果訂閱已存在，此選項會是唯讀的；如果 **[允許立即更新訂閱]** 、 **[允許佇列更新訂閱]** 或 **[允許點對點訂閱]** 設定為 **[True]** ，則此選項無法設定為 **[True]**。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+ 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 將此選項設定為 [True]，就會將其他發行集屬性設定為支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 如果訂閱已存在，此選項會是唯讀的；如果 **[允許立即更新訂閱]** 、 **[允許佇列更新訂閱]** 或 **[允許點對點訂閱]** 設定為 **[True]** ，則此選項無法設定為 **[True]**。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ### <a name="data-transformation"></a>資料轉換  
  **允許資料轉換**  
@@ -117,7 +117,7 @@ ms.locfileid: "47847007"
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否事先計算哪些資料列屬於哪些資料分割，來最佳化同步處理。 如果發行集符合預先計算資料分割的準則，此設定就會預設為 **[True]** 。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
  **最佳化同步處理**  
- 決定是否在每一個訂閱者端儲存其他中繼資料，來最佳化合併處理。 預先計算的資料分割已取代此最佳化方式；只有在 **[預先計算資料分割]** 設定為 **[False]** 時， **[最佳化同步處理]** 選項才適用。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 決定是否在每一個訂閱者端儲存其他中繼資料，來最佳化合併處理。 預先計算的資料分割已取代此最佳化方式；只有在 **[預先計算資料分割]** 設定為 **[False]** 時， **[最佳化同步處理]** 選項才適用。 如需詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 ### <a name="merge-processes"></a>合併處理  
  **限制並行處理**  

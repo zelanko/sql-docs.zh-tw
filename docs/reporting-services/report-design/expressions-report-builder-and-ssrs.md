@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764d853f70213c0f92b68af28f0647ba6d1a1e5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021142"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205017"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 
@@ -74,7 +74,7 @@ ms.locfileid: "50021142"
 ##  <a name="References"></a> 撰寫複雜運算式  
  運算式可以包含函數、運算子、常數、欄位、參數、內建集合的項目，以及內嵌自訂程式碼或自訂組件的參考。  
   
-> [!NOTE]  
+> [!NOTE]
 >  若要開發複雜運算式或使用自訂程式碼或自訂組件的運算式，建議您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表設計師。 如需詳細資訊，請參閱 [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  下表列出可以包含在運算式中的參考種類：  

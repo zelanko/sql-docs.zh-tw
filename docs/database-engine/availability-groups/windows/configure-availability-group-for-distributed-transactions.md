@@ -1,6 +1,7 @@
 ---
-title: 設定分散式交易的可用性群組 | Microsoft Docs
-ms.custom: ''
+title: 為可用性群組設定分散式交易
+description: '描述如何為 Always On 可用性群組中的資料庫設定分散式交易。 '
+ms.custom: seodec18
 ms.date: 05/22/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a4a035c33efa17f901e721ed23faf41c068c507
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513685"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215667"
 ---
-# <a name="configure-availability-group-for-distributed-transactions"></a>設定分散式交易的可用性群組
+# <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定分散式交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 支援可用性群組中所有的分散式交易，包括資料庫。 本文說明如何設定分散式交易的可用性群組。  
@@ -186,10 +187,10 @@ following the guideline for Troubleshooting DTC Transactions.
 
 [分散式交易](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
-[Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+[Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
 [交易 - AlwaysOn 可用性群組和資料庫鏡像](transactions-always-on-availability-and-database-mirroring.md)  
 
 [支援 XA 交易](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
-[運作方式：DTC 交易的工作階段/SPID (-2)](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+[How It Works:Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (運作方式：DTC 交易的工作階段/SPID (-2))

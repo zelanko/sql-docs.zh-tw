@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Resource Governor, workload group create
 - workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 47d64b30c14f81b96615167fd48401af45435165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ac3547e077197572f1db0c5759bb02f6f5bb01
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686836"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380709"
 ---
 # <a name="create-a-workload-group"></a>建立工作負載群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立工作負載群組。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要建立工作負載群組，請使用：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **若要建立工作負載群組，請使用下列方式：**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47686836"
   
  允許索引建立使用比一開始授與之記憶體更多的記憶體工作空間來改善效能。 資源管理員支援這種特殊的處理，不過，初始授與和任何額外的記憶體授與都受到工作負載群組和資源集區設定的限制。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  建立工作負載群組需要 CONTROL SERVER 權限。  
   
 ##  <a name="CreRPProp"></a> 使用 SQL Server Management Studio 建立工作負載群組  
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [變更工作負載群組設定](../../relational-databases/resource-governor/change-workload-group-settings.md)   

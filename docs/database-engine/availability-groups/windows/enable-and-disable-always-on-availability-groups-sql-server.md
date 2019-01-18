@@ -1,6 +1,7 @@
 ---
-title: 啟用和停用 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 啟用或停用可用性群組功能
+description: 使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 啟用或停用 Always On 可用性群組功能的步驟。
+ms.custom: seodec18
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74904fe4e7576e7400c661a1523f6d29d64425e
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 66db1468b93e2ff95073bfd7e9f065860f774a0f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120315"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202787"
 ---
-# <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>啟用和停用 AlwaysOn 可用性群組 (SQL Server)
+# <a name="enable-or-disable-always-on-availability-group-feature"></a>啟用或停用 Always On 可用性群組功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 是伺服器執行個體使用可用性群組的必要條件。 您必須在將要裝載一個或多個可用性群組之可用性複本的每個 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體上啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，才能建立及設定任何可用性群組。  
@@ -34,7 +35,7 @@ ms.locfileid: "49120315"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **如何：**  
   
@@ -178,7 +179,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
     -   [PowerShell](#PScmd3Procedure)  
   
--   **後續操作**  [停用 AlwaysOn 之後](#FollowUp)  
+-   **後續操作：**[停用 Always On 之後](#FollowUp)  
   
 > [!IMPORTANT]  
 >  一次只在一個伺服器執行個體上停用 AlwaysOn。 停用 AlwaysOn 可用性群組之後，等到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務重新啟動後才能在另一個伺服器執行個體繼續進行。  
@@ -203,7 +204,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員會儲存您的變更並重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務重新啟動時，AlwaysOn 就會停用，而且 **IsHadrEnabled** 伺服器屬性會設定為 0，表示 AlwaysOn 可用性群組已停用。  
   
-5.  建議您閱讀本主題稍後之 [後續操作：停用 AlwaysOn 之後](#FollowUp)中的資訊。  
+5.  建議您閱讀本主題稍後[後續操作：停用 Always On 之後](#FollowUp)中的資訊。  
   
 ###  <a name="PScmd3Procedure"></a> 使用 SQL Server PowerShell  
  **停用 AlwaysOn**  
@@ -227,7 +228,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="FollowUp"></a> 後續操作：停用 AlwaysOn 之後  
+###  <a name="FollowUp"></a> 後續操作：停用 Always On 之後  
  停用 AlwaysOn 可用性群組之後，必須重新啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 SQL Server 組態管理員會自動重新啟動伺服器執行個體。 但是，如果您使用 **Disable-SqlAlwaysOn** Cmdlet，則需要手動重新啟動伺服器執行個體。 如需詳細資訊，請參閱 [sqlservr Application](../../../tools/sqlservr-application.md)。  
   
  在重新啟動的伺服器執行個體：  

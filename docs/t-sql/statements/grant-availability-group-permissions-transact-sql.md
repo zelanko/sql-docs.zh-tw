@@ -18,12 +18,12 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e42e9f220c270b3e014eead20380167dde4b0dae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7345bead67e3209ed4a21a208d8583a49b36a0e7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514218"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979004"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的圖表，請參閱 [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster) (資料庫引擎權限海報)。  
   
 ## <a name="permissions"></a>[權限]  
- 需要可用性群組的 CONTROL 權限或伺服器的 ALTER ANY AVAILABILTIY GROUP 權限。  
+ 需要可用性群組的 CONTROL 權限或伺服器的 ALTER ANY AVAILABILITY GROUP 權限。  
   
 ## <a name="examples"></a>範例  
   

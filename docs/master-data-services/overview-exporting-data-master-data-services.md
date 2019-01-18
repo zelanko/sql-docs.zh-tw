@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
@@ -16,12 +15,12 @@ ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4bd0daeff5ae25dd0e1e7ff19e685b0cbc129384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 585f619e84d7a55b0bf8416bd3586d30b9da72a7
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52747861"
 ---
 # <a name="overview-exporting-data-master-data-services"></a>概觀：匯出資料 (Master Data Services)
 

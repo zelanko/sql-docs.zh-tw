@@ -16,15 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 926b099e6cadadb130717159188f2fcc87dbc218
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517667"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53351054"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -454,7 +454,7 @@ database_name.owner_name.table_name
  只包含加入索引檢視的建議。 不建議叢集與非叢集索引。  
   
  **包含篩選的索引**  
- 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，將可以使用這個選項： **[索引與索引檢視]**、 **[索引]** 或 **[非叢集索引]**。  
+ 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，即可使用這個選項：[索引與索引檢視]、[索引] 或 [非叢集索引]。  
   
  **[索引]**  
  只包含加入叢集與非叢集索引的建議。 不建議索引檢視。  

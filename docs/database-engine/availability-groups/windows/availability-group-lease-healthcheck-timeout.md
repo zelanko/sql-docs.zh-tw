@@ -1,6 +1,7 @@
 ---
-title: SQL Server 可用性群組租用健全狀況檢查逾時 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組租用健全情況檢查逾時的機制
+description: Always On 可用性群組租用、叢集和健全狀況檢查時間的機制和方針。
+ms.custom: seodec18
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +11,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25728b2c12d31d53f9638d08c952d75ae929bf9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393981"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209077"
 ---
-# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>租用、叢集和健全狀況檢查逾時的機制和方針 
+# <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性群組租用、叢集和健全狀況檢查逾時的機制和方針 
 
 硬體、軟體和叢集組態中的差異，以及執行時間和效能的不同應用程式需求，都需要特別設定租用、叢集和健全狀況檢查逾時值。 有些應用程式和工作負載需要更主動的監視，以限制永久性失敗 (Hard Failure) 之後的停機時間。 其他則需要對高資源使用量所造成的暫時性網路問題和等候有較高的容忍度，而且容錯移轉速度可以較慢。 
 
@@ -128,7 +129,7 @@ WSFC 組態中有四個值，負責決定叢集逾時值
    
 ### <a name="health-check-values"></a>健全狀況檢查值 
 
-控制 Always On 健全狀況檢查的兩個值為 FailureConditionLevel 和 HealthCheckTimeout。 FailureConditionLevel 會指出 `sp_server_diagnostics` 所回報之特定失敗狀況的容忍度，而 HealthCheckTimeout 會設定資源 DLL 未從 `sp_server_diagnostics` 收到更新可執行的時間。 `sp_server_diagnostics` 的更新間隔一律為 HealthCheckTimeout / 3。 
+控制 Always On 健全狀況檢查的兩個值：FailureConditionLevel 和 HealthCheckTimeout。 FailureConditionLevel 會指出 `sp_server_diagnostics` 所回報之特定失敗狀況的容忍度，而 HealthCheckTimeout 會設定資源 DLL 未從 `sp_server_diagnostics` 收到更新可執行的時間。 `sp_server_diagnostics` 的更新間隔一律為 HealthCheckTimeout / 3。 
 
 若要設定容錯移轉狀況層級，請使用 `CREATE` 或 `ALTER` `AVAILABILITY GROUP` 陳述式的 `FAILURE_CONDITION_LEVEL = <n>` 選項，其中 `<n>` 是介於 1 到 5 之間的整數。 下列命令會將 AG 'AG1' 的失敗狀況層級設為 1： 
 
@@ -155,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
 ## <a name="see-also"></a>另請參閱    
 
-[使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
+[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 
 [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)         
 

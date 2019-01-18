@@ -1,6 +1,7 @@
 ---
-title: 設定 SQL Server 可用性群組供 Windows 上的讀取縮放使用 | Microsoft Docs
-description: ''
+title: 設定可用性群組的讀取級別
+description: 設定 Always On 可用性群組，供 Windows 上的讀取級別工作負載使用。
+ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -9,14 +10,14 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 334b594e6ad83af65f6b6536dd8157d421767b52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4338f5fc90012fd5fb0882575032eb375c206c1d
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757096"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207727"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-windows"></a>設定 SQL Server 可用性群組供 Windows 上的讀取縮放使用
+# <a name="configure-read-scale-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的讀取級別
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

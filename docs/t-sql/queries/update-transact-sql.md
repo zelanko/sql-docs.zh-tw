@@ -39,12 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ab6a40f49ce64e4e157c4eacccb59b6135ed4ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5e69a2ebd97a554620914ffba5ea20c6a08aa21
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520850"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980324"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -327,7 +327,7 @@ GO
   
  如果 UPDATE 陳述式在更新叢集索引鍵及一個或多個 **text**、**ntext** 或 **image** 資料行時，可以變更多個資料列，則會以完整取代值的方式來執行這些資料列的部分更新。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  未來的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將會移除 **ntext**、**text** 和 **image** 資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 請改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大數值資料類型  
@@ -546,7 +546,7 @@ GO
 ```  
   
 #### <a name="e-using-the-with-commontableexpression-clause"></a>E. 使用 WITH common_table_expression 子句  
- 下列範例會更新直接或間接使用之所有組件和元件的 `PerAssemnblyQty` 值以建立 `ProductAssemblyID 800`。 通用資料表運算式會傳回一份階層式清單，其中包含直接用來建立 `ProductAssemblyID 800` 的組件、用來建立這些元件的組件等等。 只會修改通用資料表運算式所傳回的資料列。  
+ 下列範例會更新直接或間接使用之所有組件和元件的 `PerAssemblyQty` 值以建立 `ProductAssemblyID 800`。 通用資料表運算式會傳回一份階層式清單，其中包含直接用來建立 `ProductAssemblyID 800` 的組件、用來建立這些元件的組件等等。 只會修改通用資料表運算式所傳回的資料列。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -762,7 +762,7 @@ GO
  本節的範例將示範如何使用[連結的伺服器](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)或[資料列集函數](../../t-sql/functions/rowset-functions-transact-sql.md)來參考遠端資料表，藉以更新遠端目標資料表中的資料列。  
   
 #### <a name="o-updating-data-in-a-remote-table-by-using-a-linked-server"></a>O. 使用連結的伺服器來更新遠端資料表中的資料  
- 下列範例會更新遠端伺服器上的資料表。 此範例一開始會使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 建立遠端資料來源的連結。 然後會將連結的伺服器名稱 `MyLinkServer` 指定為 server.catalog.schema.object 格式之四部分物件名稱的一部分。 請注意，您必須針對 `@datasrc` 指定有效的伺服器名稱。  
+ 下列範例會更新遠端伺服器上的資料表。 此範例一開始會使用 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 建立遠端資料來源的連結。 然後會將連結的伺服器名稱 `MyLinkedServer` 指定為 server.catalog.schema.object 格式之四部分物件名稱的一部分。 請注意，您必須針對 `@datasrc` 指定有效的伺服器名稱。  
   
 ```sql  
 USE master;  
@@ -770,7 +770,7 @@ GO
 -- Create a link to the remote data source.   
 -- Specify a valid server name for @datasrc as 'server_name' or 'server_nameinstance_name'.  
   
-EXEC sp_addlinkedserver @server = N'MyLinkServer',  
+EXEC sp_addlinkedserver @server = N'MyLinkedServer',  
     @srvproduct = N' ',  
     @provider = N'SQLNCLI10',   
     @datasrc = N'<server name>',  
@@ -781,7 +781,7 @@ GO
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
-UPDATE MyLinkServer.AdventureWorks2012.HumanResources.Department  
+UPDATE MyLinkedServer.AdventureWorks2012.HumanResources.Department  
 SET GroupName = N'Public Relations'  
 WHERE DepartmentID = 4;  
 ```  
@@ -790,18 +790,18 @@ WHERE DepartmentID = 4;
  下列範例會藉由指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 資料列集函數，更新遠端資料表中的資料列。 上一個範例所建立之連結的伺服器名稱會用於這個範例。  
   
 ```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
+UPDATE OPENQUERY (MyLinkedServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
 SET GroupName = 'Sales and Marketing';  
 ```  
   
 #### <a name="q-updating-data-in-a-remote-table-by-using-the-opendatasource-function"></a>Q. 使用 OPENDATASOURCE 函數來更新遠端資料表中的資料  
- 下列範例會指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 資料列集函式，以將資料列插入至遠端資料表。 使用 *server_name* 或 *server_name\instance_name* 格式，為資料來源指定有效的伺服器名稱。 您可能必須針對特定分散式查詢設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱[特定分散式查詢伺服器設定選項](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
-  
-```sql  
-UPDATE OPENQUERY (MyLinkServer, 'SELECT GroupName FROM HumanResources.Department WHERE DepartmentID = 4')   
-SET GroupName = 'Sales and Marketing';  
-```  
-  
+ 下列範例會藉由指定 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 資料列集函式，更新遠端資料表中的資料列。 使用 *server_name* 或 *server_name\instance_name* 格式，為資料來源指定有效的伺服器名稱。 您可能必須針對特定分散式查詢設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱[特定分散式查詢伺服器設定選項](../../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md)。  
+
+```sql
+UPDATE OPENDATASOURCE('SQLNCLI', 'Data Source=<server name>;Integrated Security=SSPI').AdventureWorks2012.HumanResources.Department
+SET GroupName = 'Sales and Marketing' WHERE DepartmentID = 4;  
+```
+
 ###  <a name="LOBValues"></a> 更新大型物件資料類型  
  本節的範例將示範更新以大型物件 (LOB) 資料類型定義之資料行值的方法。  
   

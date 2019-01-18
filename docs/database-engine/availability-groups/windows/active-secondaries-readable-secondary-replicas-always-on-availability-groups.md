@@ -1,6 +1,7 @@
 ---
-title: 使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組) | Microsoft Docs
-ms.custom: ''
+title: 將唯讀工作負載卸載至可用性群組的次要複本
+description: 深入了解將唯讀查詢和報表卸載至 SQL Server 上的 Always On 可用性群組次要複本。
+ms.custom: seodec18
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604710"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206267"
 ---
-# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)
+# <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>將唯讀工作負載卸載至 Always On 可用性群組的次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對一個或多個次要複本進行唯讀存取的支援 (*「可讀取的次要複本」*(Readable Secondary Replicas))。 可讀取次要複本可以處於同步認可可用性模式或非同步認可可用性模式。 可讀取的次要複本允許對其所有次要資料庫進行唯讀存取。 但可讀取的次要資料庫並不會設定為唯讀。 這些資料庫是動態的。 隨著對應主要資料庫變更而衍生的給定次要資料庫變更，會套用至次要資料庫。 對於一般次要複本而言，次要資料庫中的資料 (包含持久記憶體最佳化資料表) 幾近即時。 此外，全文檢索索引會與次要資料庫進行同步處理。 在許多情況下，主要資料庫和對應次要資料庫之間的資料延遲只在幾秒鐘內。  
@@ -35,22 +36,6 @@ ms.locfileid: "51604710"
 >  雖然您無法將資料寫入次要資料庫，但是您可以寫入裝載次要複本的伺服器執行個體上的讀寫資料庫，包括使用者資料庫和系統資料庫 (例如 **tempdb**)。  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 也可將讀取意圖的連接要求重新路由到可讀取的次要複本 (*「唯讀路由」*(Read-Only Routing))。 如需唯讀路由的相關資訊，請參閱 [使用接聽程式連接到唯讀次要複本 (唯讀路由)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
-  
- **本主題內容：**  
-  
--   [優點](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
-  
--   [可用性群組的必要條件](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Prerequisites)  
-  
--   [限制事項](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_LimitationsRestrictions)  
-  
--   [效能考量](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Performance)  
-  
--   [容量規劃考量](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_CapacityPlanning)  
-  
--   [相關工作](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_RelatedTasks)  
-  
--   [相關內容](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#RelatedContent)  
   
 ##  <a name="bkmk_Benefits"></a> 優點  
  將唯讀連接導向至可讀取的次要複本，具有下列優點：  
@@ -93,7 +78,7 @@ ms.locfileid: "51604710"
     -   當支援唯讀路由的可用性複本為主要複本時，每一個可用性複本皆需要唯讀路由清單。 只有本機複本以主要角色執行時，給定的唯讀路由清單才會生效。 如有必要，您必須各自指定每個複本的這份清單。 一般而言，每份唯讀路由清單皆會包含每一個唯讀路由 URL，並在清單結尾提供本機複本的 URL。  
   
         > [!NOTE]  
-        >  讀取意圖連接要求的負載可在複本之間平衡。 如需詳細資訊，請參閱 [設定唯讀複本之間的負載平衡](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
+        >  讀取意圖連接要求的負載可在複本之間平衡。 如需詳細資訊，請參閱[設定唯讀複本之間的負載平衡](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。  
   
      如需詳細資訊，請參閱本主題稍後的 [設定可用性群組的唯讀路由 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md))。  
   
@@ -252,7 +237,7 @@ GO
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

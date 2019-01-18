@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89a7be267cfe6f4e60961e6d9a6610897cb5718d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542516"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591882"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ GO
 * 執行計畫經常被參考，所以它的成本永遠都不會變成零。 計畫依然在計畫快取中，而且除非有記憶體壓力且目前成本為零，否則不會移除計畫。
 * 系統會插入特定執行計畫，但在記憶體壓力存在之前，不會再次參考它。 由於特定計畫會以目前成本為零來初始化，所以當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 檢查執行計畫時，它將會看到目前成本為零，並從計畫快取中移除此計畫。 當記憶體壓力不存在時，特定執行計畫會留在計畫快取中，且目前成本為零。
 
-若要手動從快取中移除單一計畫或所有計畫，請使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。
+若要手動從快取中移除單一計畫或所有計畫，請使用 [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)。 從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 可清除範圍中之資料庫的程序 (計畫) 快取。
 
 ### <a name="recompiling-execution-plans"></a>重新編譯執行計畫
 
@@ -1025,10 +1025,10 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 |根據資料行 A 的資料表資料分割 |在每一個資料表資料分割中搜尋資料行 B |
 |----|----|
-|資料表資料分割 1: A < 10   |B=50, B=100, B=150 |
-|資料表資料分割 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
-|資料表資料分割 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
-|資料表資料分割 4: A >= 30  |B=50, B=100, B=150 |
+|資料表分割區 1：A < 10   |B=50, B=100, B=150 |
+|資料表分割區 2：A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|資料表分割區 3：A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|資料表分割區 4：A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>最佳作法
 

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting subscription views [Master Data Services]
@@ -15,12 +14,12 @@ ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 933302168f73f9e192087a24f958a7d15a2f4414
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2003a4eb896c4800bcd5c544fcb66e251058c68
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618776"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52749340"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>刪除訂閱檢視 (Master Data Services)
 

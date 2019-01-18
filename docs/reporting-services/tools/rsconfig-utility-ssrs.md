@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 967f4188168d1f322ba64c5ef9dfca5c958f3b45
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525348"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213657"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 公用程式 (SSRS)
   **rsconfig.exe** 公用程式會加密連接和帳戶值，並會將它們儲存在 RSReportServer.config 檔中。 加密的值包括自動處理報表的程序所用的報表伺服器資料庫連接資訊和帳戶值。  
@@ -92,7 +92,7 @@ rsconfig -c -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -d reportserver -a SQL -u
 ```  
   
 #### <a name="specifying-a-built-in-account"></a>指定內建帳戶  
- 這個範例會顯示在連接本機報表伺服器資料庫時，如何設定報表伺服器來使用內建帳戶。 請注意，不要使用 **-u** 。 支援的內建帳戶值範例包括本機系統的 NT AUTHORITY\SYSTEM 和網路服務的 NT AUTHORITY\NETWORKSERVICE (只適用於[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] )。  
+ 這個範例會顯示在連接本機報表伺服器資料庫時，如何設定報表伺服器來使用內建帳戶。 請注意，不要使用 **-u** 。 支援的內建帳戶值範例包括本機系統 NT AUTHORITY\SYSTEM 和網路服務的 NT AUTHORITY\NETWORKSERVICE (只適用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)])。  
   
 ```  
 rsconfig -c -s <SQLSERVERNAME> -d reportserver -a Windows "NT AUTHORITY\SYSTEM"  

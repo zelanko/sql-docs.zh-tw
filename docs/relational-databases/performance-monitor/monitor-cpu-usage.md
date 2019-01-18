@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 55a1641a6afcd31b6dcef53d01292972e15d371c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 0f398fc02392331a64fd5514e0e8d8e2d7e6deeb
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158336"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380050"
 ---
 # <a name="monitor-cpu-usage"></a>監視 CPU 使用量
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52158336"
   
      相當於處理器花費在執行使用者處理序 (如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 的時間百分比。  
   
--   **System: Processor Queue Length**  
+-   **System:Processor Queue Length**  
   
      相當於等候處理器時間的執行緒數目。 當處理序的執行緒所需的處理器循環超過可用數量時，就會形成處理器瓶頸。 如果會有許多處理序嘗試利用處理器時間，您可能必須安裝更快的處理器。 或者，如果使用多處理器系統，則可以增加一個處理器。  
   

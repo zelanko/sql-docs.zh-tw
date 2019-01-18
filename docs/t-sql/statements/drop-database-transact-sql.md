@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 884474e5fd76700805125bbf0cf2f8c8238c0878
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 150fb267cac6f8ff02ab983d6e76744354e31c9a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703216"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207537"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ DROP DATABASE database_name [;]
   
 ## <a name="arguments"></a>引數  
  *IF EXISTS*  
- **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
   
  只有在資料庫已存在時，才能有條件地將其卸除。  
   
@@ -79,7 +79,7 @@ DROP DATABASE database_name [;]
 >  卸除具有與其建立關聯之 FILE_SNAPSHOT 備份的資料庫會成功，但不會刪除具有相關聯快照集的資料庫檔案，以避免參考這些資料庫檔案的備份不正確。 檔案將會被截斷，但實體不會被刪除，以保存完整的 FILE_SNAPSHOT 備份。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 卸除資料庫快照集時，會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體刪除資料庫快照集，並刪除快照集所使用的實體 NTFS 檔案系統疏鬆檔案。 如需資料庫快照集使用疏鬆檔案的資訊，請參閱[資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)。 卸除資料庫快照集會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。  
+ 卸除資料庫快照集時，會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體刪除資料庫快照集，並刪除快照集所使用的實體 NTFS 檔案系統疏鬆檔案。 如需資料庫快照集使用疏鬆檔案的資訊，請參閱[資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)。 卸除資料庫快照集會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。  
   
 ## <a name="interoperability"></a>互通性  
   

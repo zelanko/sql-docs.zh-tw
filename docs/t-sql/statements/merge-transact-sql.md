@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 939ba409a75d332d0aba97aa972db2ba9eecaf7a
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970519"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980014"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50970519"
 
 根據與來源資料表聯結的結果，在目標資料表上執行插入、更新或刪除作業。 例如，您可以根據在另一個資料表中所找到的差異在資料表中插入、更新或刪除資料列，以同步處理兩個資料表。  
   
- **效能提示：** 當兩個資料表有複雜的比對特性時，MERGE 陳述式的條件式行為表現最佳。 例如沒有資料列時插入資料列，或資料列相符時更新資料列。 只要根據另一個資料表的資料列更新資料表，基本 INSERT、 UPDATE 及 DELETE 陳述式就能提升效能及可調適性。 例如：  
+ **效能提示：** 當兩個資料表有複雜的比對的特性時，MERGE 陳述式的條件式行為表現最佳。 例如沒有資料列時插入資料列，或資料列相符時更新資料列。 只要根據另一個資料表的資料列更新資料表，基本 INSERT、 UPDATE 及 DELETE 陳述式就能提升效能及可調適性。 例如：  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -251,7 +251,7 @@ SET
  在目標資料表上指定一個或多個索引的名稱或識別碼，以用於與來源資料表執行隱含聯結。 如需詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  \<output_clause>  
- 針對 *target_table* 中每個更新、插入或刪除的資料列傳回一個資料列 (不依特定順序)。 您可以在輸出子句中指定 **$action**。 **$action** 是 **nvarchar(10)** 類型的資料行，會針對每一個資料列傳回以下三個值的其中一個：'INSERT'、'UPDATE' 或 'DELETE' (根據該資料列上執行的動作而定)。 如需有關此子句引數的詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
+ 針對 *target_table* 中每個更新、插入或刪除的資料列傳回一個資料列 (不依特定順序)。 您可以在輸出子句中指定 **$action**。 **$action** 是一個 **nvarchar(10)** 類型的資料行，會為每個資料列傳回下列其中一個值：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。 如需有關此子句引數的詳細資訊，請參閱 [OUTPUT 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)。  
   
  OPTION ( \<query_hint> [ ,...n ] )  
  指定利用最佳化工具提示來自訂 Database Engine 處理陳述式的方式。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
@@ -317,7 +317,7 @@ SET
 ### <a name="a-using-merge-to-perform-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. 以單一陳述式使用 MERGE 在資料表上執行 INSERT 和 UPDATE 作業  
  如果符合的資料列存在，常見的狀況是在資料表中更新一個或多個資料行；如果符合的資料列不存在，則將資料當做新資料列插入。 這通常是透過將參數傳遞到包含適當 UPDATE 和 INSERT 陳述式的預存程序來完成。 您可以利用 MERGE 陳述式，在單一陳述式中同時執行兩個工作。 以下範例示範 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中同時包含 INSERT 陳述式和 UPDATE 陳述式的預存程序。 接著，程序會經過修改，以便使用單一 MERGE 陳述式來執行等同的作業。  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.InsertUnitMeasure  
     @UnitMeasureCode nchar(3),  
     @Name nvarchar(25)  
@@ -389,7 +389,7 @@ GO
 ### <a name="b-using-merge-to-perform-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. 以單一陳述式使用 MERGE 在資料表上執行 UPDATE 和 DELETE 作業  
  下列範例使用 MERGE，根據在 `ProductInventory` 資料表中處理的順序，每日更新 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `SalesOrderDetail` 資料表。 `Quantity` 資料表中的 `ProductInventory` 資料行會藉著減去 `SalesOrderDetail` 資料表中每個產品每日所下的訂單數量來進行更新。 如果產品的訂單數量使產品的存貨降為 0 或 0 以下，該產品的資料列就會從 `ProductInventory` 資料表中刪除。  
   
-```  
+```sql  
 CREATE PROCEDURE Production.usp_UpdateInventory  
     @OrderDate datetime  
 AS  
@@ -414,9 +414,9 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. 使用 MERGE 在目標資料表上透過衍生式來源資料表執行 UPDATE 和 INSERT 作業  
- 以下範例會使用 MERGE，藉由更新或插入資料列來修改 `SalesReason` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 當來源資料表中的 `NewName` 值符合目標資料表 (`Name`) 中 `SalesReason` 資料行內的值時，就會更新目標資料表中的 `ReasonType` 資料行。 當 `NewName` 的值不相符時，來源資料列會插入目標資料表中。 來源資料表是一種衍生資料表，可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式針對來源資料表指定多個資料列。 如需有關在衍生資料表中使用資料表值建構函式的詳細資訊，請參閱[資料表值建構函式 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)。 這個範例也示範如何將 OUTPUT 子句的結果儲存在資料表變數中，然後摘要列出 MERGE 陳述式的結果，其方式是執行簡單的選取作業來傳回已插入和更新的資料列計數。  
+ 以下範例會使用 MERGE，藉由更新或插入資料列來修改 `SalesReason` 資料庫中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表。 當來源資料表中的 `NewName` 值符合目標資料表 (`Name`) 中 `SalesReason` 資料行內的值時，就會更新目標資料表中的 `ReasonType` 資料行。 當 `NewName` 的值不相符時，來源資料列會插入目標資料表中。 來源資料表是一種衍生資料表，可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值建構函式針對來源資料表指定多個資料列。 如需有關在衍生資料表中使用資料表值建構函式的詳細資訊，請參閱[資料表值建構函式 &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)。 這個範例也示範如何將 OUTPUT 子句的結果儲存在資料表變數中，然後摘要列出 MERGE 陳述式的結果，其方式是執行簡單選取作業來傳回已插入和更新的資料列計數。  
   
-```  
+```sql  
 -- Create a temporary table variable to hold the output actions.  
 DECLARE @SummaryOfChanges TABLE(Change VARCHAR(20));  
   
@@ -440,7 +440,7 @@ GROUP BY Change;
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. 將 MERGE 陳述式的結果插入另一個資料表  
  下列範例將擷取從 MERGE 陳述式的 OUTPUT 子句中傳回的資料，並將該資料插入另一個資料表中。 MERGE 陳述式會根據在 `Quantity` 資料表中處理的順序，來更新 `ProductInventory` 資料庫中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料表的 `SalesOrderDetail` 資料行。 此範例會擷取已更新的資料列，並將其插入另一個資料表，該資料表是用於追蹤存貨變更。  
   
-```  
+```sql  
 CREATE TABLE Production.UpdatedInventory  
     (ProductID INT NOT NULL, LocationID int, NewQty int, PreviousQty int,  
      CONSTRAINT PK_Inventory PRIMARY KEY CLUSTERED (ProductID, LocationID));  

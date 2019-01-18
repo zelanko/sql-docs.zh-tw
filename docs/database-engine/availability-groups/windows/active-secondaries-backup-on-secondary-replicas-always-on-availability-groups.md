@@ -1,6 +1,7 @@
 ---
-title: 使用中次要：在次要複本上備份 (AlwaysOn 可用性) | Microsoft Docs
-ms.custom: ''
+title: 將支援的備份卸載至可用性群組的次要複本
+description: 了解將備份卸載至 Always On 可用性群組次要複本時的各種支援備份類型。
+ms.custom: seodec18
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7243fe3bece2241e1b6bb48e911b4952bc93c823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834456"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209437"
 ---
-# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>使用中次要：在次要複本上備份 (AlwaysOn 可用性群組)
+# <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>將支援的備份卸載至可用性群組次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對次要複本執行備份作業的支援。 備份作業可能會對 I/O 和 CPU 造成相當大的壓力 (備份壓縮已啟用時)。 將備份卸載至已同步處理或正在同步處理的次要複本，可讓裝載主要複本的伺服器執行個體上的資源用於第 1 層工作負載。  
@@ -58,7 +59,7 @@ ms.locfileid: "47834456"
   
 1.  設定可用性群組來指定您想要在哪些可用性複本執行備份。 如需詳細資訊，請參閱 *CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;* 或 *ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;* 的 [CREATE AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) 或 [ALTER AVAILABILITY GROUP &amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)狀態。  
   
-2.  在裝載可用性複本的每個伺服器執行個體，而此可用性複本是執行備份的候選複本，為每個可用性資料庫建立已編寫指令碼的備份作業。 如需詳細資訊，請參閱 [設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)狀態。  
+2.  在裝載可用性複本的每個伺服器執行個體，而此可用性複本是執行備份的候選複本，為每個可用性資料庫建立已編寫指令碼的備份作業。 如需詳細資訊，請參閱[設定可用性複本的備份 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md) 的＜後續操作：設定次要複本的備份之後＞一節。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要設定次要複本的備份**  

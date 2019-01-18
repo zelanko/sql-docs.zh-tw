@@ -15,17 +15,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1ba86a6f856a1ce35837c483d1148d9b935267
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15fbd4f0e7c731cf6d1a5e71dd98d316b1d104f6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670237"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210607"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>自主的資料庫使用者 - 使資料庫可攜
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  使用自主資料庫使用者來驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫層級的連線。 「自主資料庫」(Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體 (以及 master 資料庫) 隔離的資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者。 當使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]時，結合自主資料庫使用者與資料庫層級防火牆規則。 這個主題會檢閱使用自主資料庫模型時，相較於傳統的登入/使用者模型和 Windows 或伺服器層級防火牆規則的差異與優點。 特定的情況下，管理能力或應用程式商務邏輯可能仍然需要使用傳統的登入/使用者模型和伺服器層級防火牆規則。  
+  使用自主資料庫使用者來驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料庫層級的連線。 「自主資料庫」(Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體 (以及 master 資料庫) 隔離的資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的自主資料庫使用者。 當使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]時，結合自主資料庫使用者與資料庫層級防火牆規則。 這個主題會檢閱使用自主資料庫模型時，相較於傳統的登入/使用者模型和 Windows 或伺服器層級防火牆規則的差異與優點。 特定的情況下，管理能力或應用程式商務邏輯可能仍然需要使用傳統的登入/使用者模型和伺服器層級防火牆規則。  
   
 > [!NOTE]  
 >  做為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 發展 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服務和移往較高保證的 Sla，您可能需要切換到自主的資料庫使用者模型和資料庫範圍的防火牆規則，以便對於給定的資料庫，達到更高的可用性 SLA 和更高的最大登入速率。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您立即考慮這類變更。  

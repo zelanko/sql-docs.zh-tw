@@ -14,12 +14,12 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e85c73beea1db9b3db7032492321556bb17253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db497d157ac6b48591fccb42c0eb6fd9dc34779
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818754"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208927"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47818754"
   
     將使用者主題書籤儲存起來，以便日後方便存取。  
   
-[如何使用輔助說明] \([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 說明) 會將使用者連結到說明檢視器的相關文件集，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]。  
+[如何使用輔助說明] ([!INCLUDE[msCoName](../includes/msconame_md.md)] [文件總管] 說明) 會將使用者連結到說明檢視器的相關文件，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社群  
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的說明也提供了若干方式，供使用者連絡 Web 中的 MSDN Online 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]焦點社群，以取得相關資訊。 您可以：  

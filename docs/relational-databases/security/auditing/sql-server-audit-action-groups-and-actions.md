@@ -22,12 +22,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 864377bee6ee587e95321338d0c1a46f5c7523e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742976"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591752"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,6 +122,9 @@ ms.locfileid: "47742976"
  伺服器層級的動作群組涵蓋跨 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的動作。 例如，如果將適當的動作群組加入伺服器稽核規格，就會記錄任何資料庫中的任何結構描述物件存取檢查。 在資料庫稽核規格中，只會記錄該資料庫中的結構描述物件存取。  
   
  伺服器層級的動作不允許詳細篩選資料庫層級的動作。 必須有資料庫層級稽核 (例如 Employee 群組登入之 Customers 資料表的 SELECT 動作稽核)，才能實作詳細動作篩選。 請勿在使用者資料庫稽核規格中包含伺服器範圍的物件，例如系統檢視表。  
+
+ > [!NOTE]
+ > 由於啟用交易層級稽核所涉及的額外負荷之故，從 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 開始，除非您已啟用通用條件合規性，否則預設會停用交易層級稽核。  如果已停用通用條件合規性，您仍然可以從 TRANSACTION_GROUP 將動作新增至稽核規格，但它不會實際收集任何交易動作。  如果您想要從 TRANSACTION_GROUP 設定任何稽核動作，自 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 和更新版本開始，請務必透過啟用通用條件合規性來啟用交易層級稽核基礎結構。  請注意，還可以使用從 SP1 CU2 開始的追蹤旗標 3427 來停用 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 交易層級稽核。
   
 ## <a name="database-level-audit-action-groups"></a>資料庫層級的稽核動作群組  
  資料庫層級稽核動作群組是類似 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security Audit 事件類別的動作。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  

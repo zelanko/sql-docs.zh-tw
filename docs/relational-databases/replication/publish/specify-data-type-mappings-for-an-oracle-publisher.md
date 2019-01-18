@@ -15,12 +15,12 @@ ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4e6bfd2b9762aac697c41aa852d482cbcb2c0d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e83f1a2e61a26e54713a5dae9dd2ef7cc092479
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659116"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212357"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>指定 Oracle 發行者的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47659116"
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 您可以使用複寫預存程序以程式設計的方式指定自訂資料類型對應。 您也可以設定在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 與非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫管理系統 (DBMS) 之間對應資料類型時，所使用的預設對應。 如需詳細資訊，請參閱 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)。  
+ 您可以使用複寫預存程序以程式設計的方式指定自訂資料類型對應。 您也可以設定在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 與非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫管理系統 (DBMS) 之間對應資料類型時，所使用的預設對應。 如需詳細資訊，請參閱 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)。  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>在建立屬於 Oracle 發行集的發行項時定義自訂資料類型對應  
   

@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Resource Governor, resource pool delete
 - resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ddddbefb8ab2249e96c327392de652e8e877faad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e95c665cc96d98de6664e5af58ed90d4cf70d02
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825256"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380559"
 ---
 # <a name="delete-a-resource-pool"></a>刪除資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除資源集區。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **若要刪除資源集區，請使用：**[SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
+-   **若要刪除資源集區，請使用下列方式：**[SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果資源集區包含工作負載群組，您就無法刪除該資源集區。  
@@ -35,7 +35,7 @@ ms.locfileid: "47825256"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  您無法刪除資源管理員的預設或內部資源集區。 如果資源集區包含工作負載群組，您就無法刪除該資源集區。 如需詳細資訊，請參閱 [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  刪除資源集區需要 CONTROL SERVER 權限。  
   
 ##  <a name="DelRPSSMS"></a> 使用物件總管刪除資源集區  
@@ -68,7 +68,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor 資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [變更資源集區設定](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

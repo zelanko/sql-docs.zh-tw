@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f7b2bcac47cc24f5de6f58d712708082eb17010
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8dd7bd746704b2913ef6d88951080451741ab38
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676321"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886943"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 路徑運算式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,9 +93,9 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
 |路徑運算式|ReplTest1|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
-|$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
+|$.people[1]|{ "name":"Jane",  "surname": null, "active": true }|  
 |$.people[1].surname|null|  
-|$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
+|$|{ "people": [ { "name":"John",  "surname":"Doe" },<br />   { "name":"Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>內建函數處理重複路徑的方法  
  如果 JSON 文字包含重複的屬性 (例如相同層級上有兩個同名的索引鍵)，**JSON_VALUE** 和 **JSON_QUERY** 函數會傳回第一個符合路徑的值。 若要剖析包含重複索引鍵的 JSON 物件，請使用 **OPENJSON**，如下列範例所示。  
@@ -110,10 +110,6 @@ FROM OPENJSON(@json,'$.person.info')
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>深入了解 SQL Server 和 Azure SQL Database 中的 JSON  
   
-### <a name="microsoft-blog-posts"></a>Microsoft 部落格文章  
-  
-如需特定的解決方案、使用案例和建議，請參閱這些[部落格文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)，了解 SQL Server 和 Azure SQL Database 中的內建 JSON 支援。  
-
 ### <a name="microsoft-videos"></a>Microsoft 影片
 
 如需 SQL Server 和 Azure SQL Database 中內建 JSON 支援的觀看式簡介，請參閱下列影片：

@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 008707aee498d5c63f1ef8a2d67e7166bf7eb4f4
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.openlocfilehash: f2b1ef643fe1d19b0df1ed4efd3b4802789006eb
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818514"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206187"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>引數
 *OR ALTER*  
- **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  只有在函數已經存在時，才能有條件地更改它。 
  
@@ -345,7 +345,7 @@ RETURNS return_data_type
  ORDER (\<order_clause>) 指定從資料表值函式傳回結果的順序。 如需詳細資訊，請參閱本主題稍後的[在 CLR 資料表值函式中使用排序次序](#using-sort-order-in-clr-table-valued-functions)。  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  指定建立函式名稱時應該要參考的組件和方法。  
   
@@ -373,7 +373,7 @@ RETURNS return_data_type
  *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。 資料表一律放在主要檔案群組中。  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([某些區域為預覽版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([某些區域為預覽版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
  定義 CLR 函數的資料表資料類型。 資料表宣告只包含資料行名稱和資料類型。 資料表一律放在主要檔案群組中。  
   
@@ -397,7 +397,7 @@ RETURNS return_data_type
  指定此函數將會有下列其中一個或多個選項。  
   
  ENCRYPTION  
- **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
  指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 CREATE FUNCTION 陳述式的原始文字轉換為模糊化格式。 無法直接從任何目錄檢視中看見模糊化的輸出。 對系統資料表或資料庫檔案沒有存取權的使用者，無法擷取混亂格式的文字。 不過，可透過 [DAC 連接埠](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)存取系統資料表或直接存取資料庫檔案的具特殊權限使用者，則可使用該文字。 另外，可將偵錯工具附加至伺服器處理序的使用者，可以在執行階段從記憶體擷取原始程序。 如需如何存取系統中繼資料的詳細資訊，請參閱[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
@@ -790,7 +790,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. 建立 CLR 函數  
  此範例會建立 CLR 函式 `len_s`。 在建立這個函數之前，已在本機資料庫中註冊組件 `SurrogateStringFunction.dll`。  
   
-**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

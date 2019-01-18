@@ -13,12 +13,12 @@ ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3b590fa12fb2168a80c320068facb979702cd4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853916"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209987"
 ---
 # <a name="restore-database-options-page"></a>還原資料庫 (選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47853916"
  若要在存放區作業之後判斷資料庫的狀態，則必須選取 [復原狀態] 面板的其中一個選項。  
   
  **RESTORE WITH RECOVERY**  
- 透過還原 [[一般] 頁面](../../relational-databases/backup-restore/restore-database-general-page.md)之 [要還原的備份組] 方格中所核取的最後一個備份來復原資料庫。 這是預設的選項，而且相當於在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 陳述式 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
+ 透過還原 [[一般] 頁面](../../relational-databases/backup-restore/restore-database-general-page.md)之 [要還原的備份組] 方格中所核取的最後一個備份來復原資料庫。 這是預設選項，且相當於在 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 陳述式 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 中指定 WITH RECOVERY。  
   
 > [!NOTE]  
 >  在完整復原模式或大量記錄復原模式下時，只有在需要立即還原所有記錄檔時才選擇此選項。  

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 91709818cad0609fda4c624f9bd7585af0c9eea9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712604"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213447"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "52712604"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
-組建編號︰14.0.16156.0
+組建編號：14.0.16156.0
   
 ### <a name="whats-new"></a>新功能
 
@@ -184,7 +184,7 @@ ms.locfileid: "52712604"
 
 
 ## <a name="ssdt-for-visual-studio-2017-1551"></a>適用於 Visual Studio 2017 (15.5.1) 的 SSDT
-組建編號︰14.0.16148.0
+組建編號：14.0.16148.0
   
 ### <a name="whats-new"></a>新功能
 
@@ -196,7 +196,7 @@ Visual Studio 2017 (15.5.1) 是與 15.5.0 版相同的版本，但安裝程式�
 除了這兩個 Bug 修正之外，15.5.0 的下列詳細資料仍然會套用至 15.5.1
 
 ## <a name="ssdt-for-visual-studio-2017-1550"></a>適用於 Visual Studio 2017 (15.5.0) 的 SSDT
-組建編號︰14.0.16146.0
+組建編號：14.0.16146.0
   
 ### <a name="whats-new"></a>新功能
 
@@ -223,7 +223,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 
 ## <a name="ssdt-174-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.4
-組建編號︰14.0.61712.050
+組建編號：14.0.61712.050
 
 ### <a name="whats-new"></a>新功能
 
@@ -271,7 +271,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 
 ## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>適用於 Visual Studio 2017 (15.4.0 預覽) 的 SSDT
-組建編號︰14.0.16134.0
+組建編號：14.0.16134.0
   
 ### <a name="whats-new"></a>新功能
 
@@ -302,7 +302,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.3
-組建編號︰14.0.61709.290
+組建編號：14.0.61709.290
 
 ### <a name="whats-new"></a>新功能
 
@@ -393,7 +393,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 - 已修正在 VS 2017 中編譯和建置 RDLC 的問題
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>適用於 Visual Studio 2017 (15.3.0 預覽) 的 SSDT
-組建編號︰14.0.16121.0
+組建編號：14.0.16121.0
   
 ### <a name="whats-new"></a>新功能
 
@@ -410,7 +410,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 
 ## <a name="ssdt-172-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.2
-組建編號︰14.0.61707.300
+組建編號：14.0.61707.300
 
 ### <a name="whats-new"></a>新功能
 
@@ -458,7 +458,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 
 ## <a name="ssdt-171-for-visual-studio-2015"></a>適用於 Visual Studio 2015 的 SSDT 17.1
-組建編號︰14.0.61705.170
+組建編號：14.0.61705.170
 
 ### <a name="whats-new"></a>新功能
 **AS 專案：**
@@ -532,13 +532,13 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 - 修正 BI 專案的範本優先順序，使它們不會顯示在 VS 的 [新專案] 類別頂端
 - 修正開啟 SSIS、SSAS 或 SSRS 方案時 VS 可能會當機的罕見問題
 - 表格式：DAX 剖析和資料編輯列的各種功能增強及效能修正。
-- 表格式：如果未開啟任何 SSAS Tabular 專案，Tabular Model Explorer 就不會再顯示。
-- 多維度：修正處理對話方塊在高 DPI 機器上無法使用的問題。
+- 表格式：如果未開啟任何 SSAS 表格式專案，表格式 [模型總管] 就不會再顯示。
+- 多維度：修正處理對話方塊在高 DPI 電腦上無法使用的問題。
 - 表格式：已修正 SSDT 會在 SSMS 已開啟的情況下開啟任何 BI 專案時發生錯誤的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - 表格式：修正階層未正確儲存到 1103 模型中 BIM 檔案的問題。[Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
-- 表格式：修正即使不支援，但在 32 位元機器上仍允許整合式工作區模式的問題。
+- 表格式：修正即使不支援，但在 32 位元電腦上仍允許整合式工作區模式的問題。
 - 表格式：修正在半選取模式 (例如鍵入 DAX 運算式但按下量值) 下按一下任何項目都會造成損毀的問題。
-- 表格式：修正部署精靈會將模型的 .Name 屬性重設回 "Model" 的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 表格式：修正 [部署精靈] 會將模型的 .Name 屬性重設回 "Model" 的問題。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - 表格式：修正即使未選取圖表檢視，在 TME 中選取階層也應顯示屬性的問題。
 - 表格式：修正從特定應用程式貼入 DAX 資料編輯列時會貼上影像或其他內容，而非文字的問題。
 - 表格式：修正 1103 中有些舊模型因為具有特定定義的量值存在而無法開啟的問題。
@@ -590,7 +590,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 
 ## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 16.5 (最高支援 SQL Server 2016)
-發行日期︰2016 年 10 月 20 日
+已釋放：2016 年 10 月 20 日
 
 組建編號：14.0.61021.0
 
@@ -623,17 +623,17 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 
 ```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
-DacFx 中已加入兩個新的 API：DacServices.Publish() 和 DacServices.Script()。 這些 API 也支援在單一作業中執行發行 + 編寫指令碼 + 報告的動作。 範例使用方式︰
+DacFx 中已新增兩個新的 API：DacServices.Publish() 和 DacServices.Script()。 這些 API 也支援在單一作業中執行發行 + 編寫指令碼 + 報告的動作。 範例使用方式︰
 
 ```
 DacServices service = new DacServices(connectionString);
 using(DacPackage package = DacPackage.Load(@"C:\My\db.dacpac")) {
 var options = new PublishOptions() {
-    GenerateDeploymentScript = true, // Should a deployment script be created?
-    GenerateDeploymentReport = true, // Should an xml deploy report be created?
-    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
-    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
-    DeployOptions = new DacDeployOptions()
+    GenerateDeploymentScript = true, // Should a deployment script be created?
+    GenerateDeploymentReport = true, // Should an xml deploy report be created?
+    DatabaseScriptPath = @"C:\My\OutputScript.sql", // optional path to save script to
+    MasterDbScriptPath = @"C:\My\OutputScript_Master.sql", // optional path to save master script to
+    DeployOptions = new DacDeployOptions()
 };
 
 // Call publish and receive deployment script & report in the results
@@ -678,14 +678,14 @@ Console.WriteLine(result.DeploymentReport);
 
 **整合服務**
 
-* 已修正 Connect Bug  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks)︰移動多個整合服務套件工作
+* 已修正 Connect Bug  [1608896](https://connect.microsoft.com/SQLServer/feedback/details/1608896/move-multiple-integration-service-package-tasks)：移動多個整合服務套件工作
 
 
 
 
 
 ## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 16.4 (適用於 SQL Server 2016)
-發行日期︰2016 年 9 月 20 日
+已釋放：2016 年 9 月 20 日
 
 組建編號：14.0.60918
 
@@ -700,11 +700,11 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 **更新和修正**
 **資料庫工具︰**
 
-- [連接問題 3087775](https://connect.microsoft.com/SQLServer/feedback/details/3087775)︰Temporal tables broken in VS Data Tools July update 14.0.60629.0, "Value cannot be null. Parameter name: reportedElement" (VS 資料工具 7 月更新 14.0.60629.0 中的時態表損毀，「值不可以是 Null。參數名稱：reportedElement」)
-- [連接問題 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648)：IsPersistedNullable shows as different in SSDT Comparison (IsPersistedNullable 在 SSDT 比較中顯示為不同)
-- [連接問題 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735)︰Identity is reset when importing a BACPAC (匯入 BACPAC 時會重設識別)
-- [連接問題 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167)︰Running SSDT unit tests leaves temp files behind (執行 SSDT 單元測試留下暫存檔案)
-- [連接問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712)︰Backwards compatibility breakage - AppLocal and Nugetization (回溯相容性損毀 - AppLocal 和 Nugetization)
+- [Connect 問題 3087775](https://connect.microsoft.com/SQLServer/feedback/details/3087775)：Temporal tables broken in VS Data Tools July update 14.0.60629.0, "Value cannot be null. Parameter name: reportedElement" (VS 資料工具 7 月更新 14.0.60629.0 中的時態表損毀，「值不可以是 Null。參數名稱：reportedElement」)
+- [Connect 問題 1026648](https://connect.microsoft.com/SQLServer/feedback/details/1026648)：IsPersistedNullable shows as different in SSDT Comparison (IsPersistedNullable 在 SSDT 比較中顯示為不同)
+- [Connect 問題 2054735](https://connect.microsoft.com/SQLServer/feedback/details/2054735)：Identity is reset when importing a BACPAC (匯入 BACPAC 時會重設識別)
+- [Connect 問題 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167)：Running SSDT unit tests leaves temp files behind (執行 SSDT 單元測試留下暫存檔案)
+- [Connect 問題 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712)：Backwards compatibility breakage - AppLocal and Nugetization (回溯相容性損毀 - AppLocal 和 Nugetization)
 
 **Analysis Services 與 Reporting Services**
 
@@ -725,15 +725,15 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
 
 ## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 16.3 (適用於 SQL Server 2016)
-發行日期︰2016 年 8 月 15 日
+已釋放：2016 年 8 月 15 日
 
 組建編號：14.0.60812.0  
 
 **新功能**
 
-- **發行版本控制與編號︰** 發行版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
-- **Analysis Services - 表格式模型總管：** 表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
-- **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
+- **發行版本控制與編號：** 版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
+- **Analysis Services - 表格式 [模型總管]：** 表格式 [模型總管] 可讓您在模型中方便巡覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
+- **資料庫工具 - Always Encrypted**：此版本提供新的 [[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)] 對話方塊，可讓您輕鬆地將資料行主要金鑰或資料行加密金鑰新增至資料庫專案或 SQL Server [物件總管] 中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
     - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
 
@@ -765,14 +765,14 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
  
   
 ## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 7 月 (適用於 SQL Server 2016)  
-發行日期︰2016 年 6 月 30 日  
+已釋放：2016 年 6 月 30 日  
   
-組建編號︰14.0.60629.0  
+組建編號：14.0.60629.0  
   
 **新功能**  
-* **Always Encrypted 支援︰** 對於包含 Always Encrypted 資料行的資料庫，此版本透過我們的核心 API 和命令列工具 (SqlPackage.exe) 加入 Always Encrypted 的完整支援。 您可以利用所有完整支援的 Always Encrypted 功能，建置及發行資料庫專案。  
-* **時態表增強支援︰** 透過在改變之前取消連結時態表，然後在完成之後再重新連結來簡化體驗。 這表示時態表在支援的作業方面有其他資料表類型 (標準、記憶體內部) 的同位。 
-* **SqlPackage.exe 和安裝變更︰** 從 SQL Server 引擎隔離出 SSDT 的變更以及 SSMS 更新。 如需詳細資訊，請參閱 [SSDT 和 SqlPackage.exe 安裝和更新的變更 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)。
+* **Always Encrypted 支援：** 對於包含 Always Encrypted 資料行的資料庫，此版本透過我們的核心 API 和命令列工具 (SqlPackage.exe) 新增 Always Encrypted 的完整支援。 您可以利用所有完整支援的 Always Encrypted 功能，建置及發行資料庫專案。  
+* **時態表增強支援：** 透過在改變之前取消連結時態表，然後在完成之後再重新連結來簡化體驗。 這表示時態表在支援的作業方面有其他資料表類型 (標準、記憶體內部) 的同位。 
+* **SqlPackage.exe 和安裝變更：** 從 SQL Server 引擎隔離出 SSDT 的變更以及 SSMS 更新。 如需詳細資訊，請參閱 [SSDT 和 SqlPackage.exe 安裝和更新的變更 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)。
 
  
 
@@ -808,9 +808,9 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
     
 
 ## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>適用於 Visual Studio 2015 的 SSDT 6 月 (適用於 SQL Server 2016)  
-發行日期︰2016 年 6 月 1 日  
+已釋放：2016 年 6 月 1 日  
   
-組建編號︰14.0.60525.0 
+組建編號：14.0.60525.0 
 
 SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入 SQL Server 2016 RTM 之最新更新的支援，和各種錯誤 (bug) 修正。 如需詳細資訊，請參閱 [2016 年 6 月的 SQL Server Data Tools GA 更新 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)。
 

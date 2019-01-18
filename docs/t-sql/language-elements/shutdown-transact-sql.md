@@ -22,12 +22,12 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98a5cdb6b02cda84424cb305a4ecc63e38056bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 602c8f5d1cded1c5d19c520087ceac1b9c9124d5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797266"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591892"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
--   從預設執行個體的命令提示字元執行 **net stop mssqlserver**，或從具名執行個體的命令提示字元執行 **net stop mssql$***instancename*。  
+-   從預設執行個體的命令提示字元執行 **net stop mssqlserver**，或從具名執行個體的命令提示字元執行 **net stop mssql$**_instancename_。  
   
 -   使用 [控制台] 中的 [服務]。  
   

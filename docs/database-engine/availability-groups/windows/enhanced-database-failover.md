@@ -1,6 +1,7 @@
 ---
-title: 將增強資料庫容錯移轉新增至可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 啟用可用性群組的增強型資料庫容錯移轉
+description: 啟用增強型資料庫容錯移轉的步驟，如果 Always On 可用性群組中的資料庫無法再寫入交易，則這會觸發容錯移轉。
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: mikeray
@@ -13,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 181ebdbd2b9d14876b8990bbf8d7b4da768acf39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dee39cb437011c5e894eb54df91c7282db5fe08
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706136"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211657"
 ---
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>將增強資料庫容錯移轉新增至可用性群組 (SQL Server)
+# <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>啟用增強型資料庫容錯移轉至 Always On 可用性群組中的資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，如果參與主要複本上可用性群組的資料庫無法寫入交易，就不會觸發容錯移轉，即使同步處理並設定複本以進行自動容錯移轉也是一樣。

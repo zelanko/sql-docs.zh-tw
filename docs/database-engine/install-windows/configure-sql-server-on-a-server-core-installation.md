@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 26a4fcb38edaa490fd295b7f781a2062a7671199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409045"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209065"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 
@@ -40,7 +40,7 @@ ms.locfileid: "52409045"
   
 - [在 Server Core 伺服器 Windows Server 2012 R2 上安裝伺服器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)
   
-- [Managing a Server Core installation: Overview](https://go.microsoft.com/fwlink/?LinkId=245962)  
+- [Managing a Server Core installation:Overview](https://go.microsoft.com/fwlink/?LinkId=245962) (管理 Server Core 安裝：概觀)  
   
 - [Administering a Server Core installation](https://go.microsoft.com/fwlink/?LinkId=245963)
   
@@ -58,7 +58,7 @@ ms.locfileid: "52409045"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會整合最新產品更新與主要產品安裝，因此主要產品及其適用的更新可同時安裝。  
   
-安裝程式找到最新版本的可用更新後，會使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序將其下載並進行整合。 產品更新可以引入累計更新、Service Pack，或 Service Pack 加上累計更新。  
+安裝程式找到最新版本的可用更新後，會使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序進行下載與整合。 產品更新可以引入累計更新、Service Pack，或 Service Pack 加上累計更新。  
   
 指定 UpdateEnabled 和 UpdateSource 參數在主要產品安裝中包含最新的產品更新。 請參考以下範例，了解如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間啟用產品更新：  
   
@@ -120,7 +120,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員會儲存您的變更。 然後您必須手動重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。 這讓您可以選擇最適合您業務需求的重新啟動時間。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務重新啟動時，AlwaysOn 就會啟用，而且 IsHadrEnabled 伺服器屬性會設定為 1。  
   
-> [!NOTE]  
+> [!NOTE]
 >  -   您必須擁有適當的使用者權限，或者必須已被委派目標電腦的適當權限，才能連接該部電腦。  
 > -   您要管理的電腦名稱會出現在主控台樹狀目錄中 [電腦管理] 旁邊的括號內。  
   
@@ -226,7 +226,7 @@ $Tcp
 ##  <a name="BKMK_troubleshoot"></a> 使用疑難排解工具  
  您可以使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md) ，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視您的伺服器一段時間，或為伺服器的特定問題疑難排解。 SQLdiag 用於加速和簡化 Microsoft 客戶支援服務部門對診斷資訊的收集過程。  
   
- 您可以在 Server Core 上的系統管理員命令提示字元中，使用 [SQLdiag 公用程式](../../tools/sqldiag-utility.md)一文中指定的語法來法啟動此公用程式。  
+ 您可以在 Server Core 上的系統管理員命令提示字元中，使用下列文章中指定的語法來啟動此公用程式：[SQLdiag 公用程式](../../tools/sqldiag-utility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Server Core 上安裝 SQL Server](../../database-engine/install-windows/install-sql-server-on-server-core.md)   

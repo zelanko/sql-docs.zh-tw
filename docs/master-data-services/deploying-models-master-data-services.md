@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
@@ -15,12 +14,12 @@ ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: df83c7a4fd4e7a335a3ac51aa047ccc09429ced7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca46c6709614184c094bb7d8457f542b734d375d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52783230"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
 
@@ -36,9 +35,9 @@ ms.locfileid: "47636321"
   
 -   **MDSModelDeploy 工具**：若要建立與部署模型物件和資料，請使用 MDSModelDeploy.exe 工具。 如果您在安裝 MDS 時選取了預設路徑，此工具會位於 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
--   **模型部署精靈：** 若只要建立與部署模型結構的套件，請使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中的精靈。 您無法使用此精靈來部署資料。  
+-   **模型部署精靈**：若只要建立與部署模型結構的套件，請使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中的精靈。 您無法使用此精靈來部署資料。  
   
--   **模型套件編輯器**：若要編輯模型套件，請使用 ModelPackageEditor.exe 以啟動模型套件編輯器精靈。 您可以使用此精靈編輯 MDSModelDeploy 工具或「模型部署」精靈所建立的封裝。 如果您在安裝 MDS 時選取了預設路徑，此工具會位於 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
+-   **模型套件編輯器**：若要編輯模型套件，請使用 ModelPackageEditor.exe 以啟動 [模型套件編輯器精靈]。 您可以使用此精靈編輯 MDSModelDeploy 工具或「模型部署」精靈所建立的封裝。 如果您在安裝 MDS 時選取了預設路徑，此工具會位於 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration。  
   
 > [!IMPORTANT]  
 >  您可以使用 MDSModelDeploy 工具建立新的模型、建立模型的複製，或更新現有的模型及其資料。 如果您使用 MDSModelDeploy 工具來更新現有模型及其資料，而且封裝不包含存在目的地模型中的實體、屬性或成員，MDSModelDeploy 就不會從模型中刪除該實體、屬性或成員。  

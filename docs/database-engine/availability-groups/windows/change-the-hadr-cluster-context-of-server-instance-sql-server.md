@@ -1,6 +1,7 @@
 ---
-title: 變更伺服器執行個體的 HADR 叢集內容 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 變更哪個叢集管理可用性群組複本的中繼資料
+description: 進行跨叢集移轉時，藉由變更 SQL Server 執行個體的 HADR 叢集內容，即可變更由哪個叢集來管理 Always On 可用性群組內可用性複本的中繼資料。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 940fc70407c6a4131719818bbbc87049c93fab6b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605699"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202127"
 ---
-# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>變更伺服器執行個體的 HADR 叢集內容 (SQL Server)
+# <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>變更哪個叢集管理 Always On 可用性群組複本的中繼資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -37,7 +38,7 @@ ms.locfileid: "51605699"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **以下列方法切換可用性複本的叢集內容：**[Transact-SQL](#TsqlProcedure)  
   
@@ -168,7 +169,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 技術文件](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

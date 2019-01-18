@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ec86bf23a2fdf951da6d64f934ce8f62f6b3cb5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f1f0e5180c03a033cd854aba9f3261e5a89960f5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409895"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210428"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52409895"
   
  使用 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以及作為[內嵌資料表值函式](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)建立的述詞來實作 RLS。  
   
-**適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([立即取得](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
 > [!NOTE]
 > Azure SQL 資料倉儲僅支援篩選述詞。 Azure SQL 資料倉儲目前不支援封鎖述詞。
@@ -52,7 +52,7 @@ ms.locfileid: "52409895"
   
  定義為內嵌資料表值函數的安全性述詞，會限制資料表中資料列層級資料的存取權。 然後叫用函式並強制執行安全性原則。 針對篩選述詞，應用程式不會察覺到已從結果集篩選的資料列；若所有資料列皆經過篩選，將會傳回 null 設定。 對 Block 述詞而言，任何違反述詞的作業都將會失敗並產生錯誤。  
   
- 從基底資料表中讀取資料時會套用篩選器述詞，並且會影響所有取得作業：**SELECT**、**DELETE** (使用者無法刪除篩選的資料列)，和 **UPDATE** (使用者無法更新篩選的資料列，雖然您可以這樣更新資料列以供稍後進行篩選)。 Block 述詞會影響所有寫入作業。  
+ 從基底資料表中讀取資料時會套用篩選述詞，且會影響所有取得作業：**SELECT**、**DELETE** (使用者無法刪除篩選的資料列)，和 **UPDATE** (使用者無法更新篩選的資料列，雖然您可以這樣更新資料列以供稍後進行篩選)。 Block 述詞會影響所有寫入作業。  
   
 -   AFTER INSERT 和 AFTER UPDATE 述詞可以防止使用者將資料列更新為違反述詞的值。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52409895"
   
 -   UPDATE 的 Block 述詞會針對 BEFORE 和 AFTER 分割成個別的作業。 因此，比方說，您無法避免使用者將資料列更新為具有高於目前的值。 若需要此種邏輯，您必須搭配 DELETED 及 INSERTED 中繼資料表使用觸發程序，以同時參考舊值與新值。  
   
--   若述詞函數所使用的所有資料行皆未變更，最佳化工具便不會檢查 AFTER UPDATE Block 述詞。 例如︰Alice 應該無法將薪資變更為大於 100,000，但她應能變更薪資已超過 100,000 的員工地址 (因為已違反述詞)。  
+-   若述詞函數所使用的所有資料行皆未變更，最佳化工具便不會檢查 AFTER UPDATE Block 述詞。 例如：Alice 應該無法將薪資變更為大於 100,000，但她應能變更薪資已超過 100,000 的員工地址 (因為已違反述詞)。  
   
 -   連同 BULK INSERT 在內的大量 API 皆未變更。 這表示 Block 述詞 AFTER INSERT 會套用至大量插入作業，就如同一般的插入作業。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "52409895"
   
 -   請避免在述詞函式中使用過多的資料表聯結，將效能最大化。  
   
- 避免述詞邏輯取決於工作階段特定的 [SET 選項](../../t-sql/statements/set-statements-transact-sql.md)︰雖然不太可能會用於實際的應用程式中，但若述詞函數的邏輯取決於特定工作階段專屬的  選項且使用者能夠執行任何查詢，則可能導致資訊外漏。 例如，若述詞函數能以隱含方式將字串轉換成 **datetime** ，則可根據目前工作階段的 **SET DATEFORMAT** 選項來篩選不同的資料列。 一般情況下，述詞函數應遵守下列規則︰  
+ 避免述詞邏輯取決於工作階段特定的 [SET 選項](../../t-sql/statements/set-statements-transact-sql.md)：雖然不太可能會用於實際的應用程式中，但若述詞函式的邏輯取決於特定工作階段特定的 **SET** 選項且使用者能夠執行任何查詢，則可能導致資訊外洩。 例如，若述詞函數能以隱含方式將字串轉換成 **datetime** ，則可根據目前工作階段的 **SET DATEFORMAT** 選項來篩選不同的資料列。 一般情況下，述詞函數應遵守下列規則︰  
   
 -   述詞函數不應以隱含方式將字元字串轉換為以下格式：**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**，反之亦然，因為這些轉換會受到 [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) 和 [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) 選項影響。 請改用 **CONVERT** 函數，並明確指定樣式參數。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "52409895"
 ##  <a name="SecNote"></a> 安全性注意事項：側邊通道攻擊  
  **惡意的安全性原則管理員：** 請注意，具有足夠權限可在敏感性資料行上建立安全性原則，以及有權建立或改變內嵌資料表值函式的惡意安全性原則管理員，可以與具有資料表選取權限的其他使用者共謀，藉由惡意建立設計成使用旁路攻擊推斷資料的內嵌資料表值函式，來洩漏資料。 這類攻擊需要共謀 (或授與惡意使用者過多權限)，並可能需要反覆修改原則 (需要移除述詞權限才能中斷結構描述繫結)、修改內嵌資料表值函式，並在目標資料表上重複執行 select 陳述式。 建議您在必要時限制權限，並監視任何可疑的活動，例如經常變動的原則和內嵌資料表值函式與資料列層級安全性的相關限制。  
   
- **精巧的查詢：** 很可能透過使用精巧的查詢，導致資訊外洩。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 可讓惡意使用者知道 John Doe 薪資為 $100000。 即使有安全性述詞用來防止惡意使用者直接查詢其他人的薪資，當查詢傳回除以零的例外狀況時，使用者仍可以決定。  
+ **精巧的查詢：** 很可能會透過使用精巧的查詢，造成資訊外洩。 例如， `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 可讓惡意使用者知道 John Doe 薪資為 $100000。 即使有安全性述詞用來防止惡意使用者直接查詢其他人的薪資，當查詢傳回除以零的例外狀況時，使用者仍可以決定。  
    
   
 ##  <a name="Limitations"></a> 跨功能的相容性  
@@ -165,7 +165,7 @@ ms.locfileid: "52409895"
   
 -   **變更追蹤** 變更追蹤可能會導致洩漏資料列的主索引鍵，其中該資料列應同時使用 **SELECT** 及 **VIEW CHANGE TRACKING** 權限篩選至使用者。 實際資料值不會遭到洩漏；僅為資料列的資料行 A 已利用 B 主索引鍵進行更新/插入/刪除。 若主索引鍵包含像是身分證號碼等機密的項目，便會造成問題。 不過，在實務上，此 **CHANGETABLE** 幾乎一律會與原始資料表聯結，以取得最新的資料。  
   
--   **全文檢索搜尋**：由於引進額外聯結以套用資料列層級安全性及避免洩漏應篩選之資料列的主索引鍵，因此使用下列全文檢索搜尋及語意搜尋函數時，應會對查詢的效能造成衝擊︰**CONTAINSTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
+-   **全文檢索搜尋**：由於引進額外聯結以套用資料列層級安全性及避免洩漏應篩選之資料列的主索引鍵，因此使用下列全文檢索搜尋及語意搜尋函式時，應會對查詢的效能造成衝擊：**CONTAINSTABLE**、**FREETEXTTABLE**、semantickeyphrasetable、semanticsimilaritydetailstable、semanticsimilaritytable。  
   
 -   **資料行存放區索引** RLS 適用於叢集與非叢集資料行存放區索引。 不過，由於資料列層級安全性套用函式，因此最佳化工具可以在不使用批次模式的情況下修改查詢計劃。  
   

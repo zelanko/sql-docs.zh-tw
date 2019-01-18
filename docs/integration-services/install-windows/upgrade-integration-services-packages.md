@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3f88d384d602e5cca6872fe6e606694e227a7e29
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 02ac3c6522dd97cf0ac2e752894f0c2ba1fc91c0
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637955"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209947"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
   當您將 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行個體升級為目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本時，現有的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝並不會自動升級為目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本所使用的封裝格式。 您必須選取升級方法並手動升級您的封裝。  
@@ -43,7 +43,7 @@ ms.locfileid: "51637955"
 ## <a name="custom-applications-and-custom-components"></a>自訂應用程式和自訂元件  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 自訂元件無法搭配目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本使用。  
   
- 您可以使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本工具來執行及管理內含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] 自訂元件的封裝。 我們在下列檔案中加入四個繫結重新導向規則，協助將執行階段組件從 10.0.0.0 版 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、11.0.0.0 版 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 12.0.0.0 版 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 重新導向至 13.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ 您可以使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本工具來執行及管理內含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] 自訂元件的封裝。 我們在下列檔案中新增四個繫結重新導向規則，協助將執行階段組件從 10.0.0.0 版 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、11.0.0.0 版 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 12.0.0.0 版 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 重新導向至 13.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 -   DTExec.exe.config  
   
@@ -72,7 +72,7 @@ ms.locfileid: "51637955"
   
 |元件或功能|升級結果|  
 |--------------------------|---------------------|  
-|連接字串|對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 來升級封裝，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱 [一般] 頁面。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟封裝並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意：當連接字串儲存在組態檔或資料來源檔案中，或者運算式設定 **ConnectionString** 屬性時，您無法使用先前的程序來更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱 [資料來源](../../integration-services/connection-manager/data-sources.md)。|  
+|連接字串|對於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> 使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 來升級封裝，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱 [一般] 頁面。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟封裝並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意：當連接字串儲存在設定檔或資料來源檔案中，或者運算式設定 **ConnectionString** 屬性時，您無法使用先前的程序來更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱 [資料來源](../../integration-services/connection-manager/data-sources.md)。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>以 ADODB.dll 為基礎的指令碼  
  明確參考 ADODB.dll 的指令碼工作和指令碼元件指令碼可能無法升級，或是在未安裝 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的電腦上執行。 為了升級這些指令碼工作或指令碼元件指令碼，建議您移除 ADODB.dll 的相依性。  建議以 Ado.Net 來替代 Managed 程式碼 (例如 VB 和 C# 指令碼)。  

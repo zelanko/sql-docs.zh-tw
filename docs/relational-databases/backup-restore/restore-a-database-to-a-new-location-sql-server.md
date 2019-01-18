@@ -20,12 +20,12 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 966c4fc90b73aea4dbc2c304a047238469b79c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69099375a0c56dadef71f999e34db45b0bc64374
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791734"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590842"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47791734"
 ###  <a name="Security"></a> 安全性  
  基於安全性的理由，建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  如果還原的資料庫不存在，使用者必須有 CREATE DATABASE 權限，才能執行 RESTORE。 如果資料庫存在，則 RESTORE 權限預設為 **系統管理員** 和 **dbcreator** 固定伺服器角色的成員，以及資料庫的擁有者 (**dbo**)。  
   
  RESTORE 權限提供給伺服器隨時可以取得其成員資格資訊的角色。 由於資料庫必須是可存取且未損毀，才能夠檢查固定資料庫角色成員資格，但執行 RESTORE 時未必如此；因此， **db_owner** 固定資料庫角色的成員並沒有 RESTORE 權限。  
@@ -71,7 +71,7 @@ ms.locfileid: "47791734"
   
          從下拉式清單中選取要還原的資料庫。 此清單僅包含已根據 **msdb** 備份記錄而備份的資料庫。  
   
-    > **注意：** 如果備份是根據不同的伺服器所建立，目的地伺服器就沒有所指定資料庫的備份記錄資訊。 在此情況下，請選取 **[裝置]** ，以便手動指定要還原的檔案或裝置。  
+    > **注意：** 如果備份是根據不同的伺服器建立的，目的地伺服器就沒有指定之資料庫的備份記錄資訊。 在此情況下，請選取 **[裝置]** ，以便手動指定要還原的檔案或裝置。  
   
     1.  **[裝置]**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47791734"
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
-         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
+         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
   
          **注意** ：這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
   
@@ -140,9 +140,9 @@ ms.locfileid: "47791734"
      *backup_device* [ **,**...*n* ]  
      指定一份逗號分隔清單，其中列出要從中還原資料庫備份的 1 到 64 個備份裝置。 您可以指定實體備份裝置，也可以指定對應的邏輯備份裝置 (如果已定義的話)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：  
   
-     { DISK | TAPE } **=***physical_backup_device_name*  
+     { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。  
+     如需詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
      { **RECOVERY** | NORECOVERY }  
      如果資料庫使用完整復原模式，您可能必須在還原資料庫之後套用交易記錄備份。 在此情況下，請指定 NORECOVERY 選項。  
@@ -156,7 +156,7 @@ ms.locfileid: "47791734"
   
      如需詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的＜指定備份組＞。  
   
-     MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name***'** [ **,**...*n* ]  
+     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
      指定 *logical_file_name_in_backup* 所指定的資料或記錄檔要還原至 *operating_system_file_name*所指定的位置。 針對您想要從備份組還原到新位置的每一個邏輯檔案指定 MOVE 陳述式。  
   
     |選項|Description|  
@@ -168,7 +168,7 @@ ms.locfileid: "47791734"
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會透過還原 `MyAdvWorks` 範例資料庫的備份 (其中包括兩個檔案： [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] _Data 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log)，建立名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的新資料庫。 這個資料庫會使用簡單復原模式。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫已經存在伺服器執行個體上，因此備份中的檔案都必須還原至新的位置。 RESTORE FILELISTONLY 陳述式是用來決定資料庫中所要還原的檔案數目及名稱。 此資料庫備份是備份裝置上的第一個備份組。  
   
-> **注意：** 備份和還原交易記錄 (包括時間點還原) 的範例會使用從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立的 `MyAdvWorks_FullRM` 資料庫，就如同以下 `MyAdvWorks` 範例。 不過，您必須使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將產生的 `MyAdvWorks_FullRM` 資料庫變更為使用完整復原模式：ALTER DATABASE <database_name> SET RECOVERY FULL。  
+> **注意：** 備份和還原交易記錄 (包括時間點還原) 的範例會使用從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立的 `MyAdvWorks_FullRM` 資料庫，就如同以下 `MyAdvWorks` 範例。 不過，您必須使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將產生的 `MyAdvWorks_FullRM` 資料庫變更為使用完整復原模式：ALTER DATABASE <資料庫名稱> SET RECOVERY FULL。  
   
 ```sql  
 USE master;  
@@ -189,7 +189,7 @@ GO
   
  如需如何建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之完整資料庫備份的範例，請參閱 [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。  
   
-##  <a name="RelatedTasks"></a> 相關工作  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [建立完整資料庫備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

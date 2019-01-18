@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99f6a05b3d033a32b9a45ec305faa92f214e59e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fea754e936831833fd81ff9a50079c31b5938f6
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535821"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979604"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52535821"
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-如圖中所指示， **geometry** 和 **geography** 資料類型中，十種可具現化的類型為 **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**和 **GeometryCollection**。 geography 資料類型還有一種額外的可具現化類型： **FullGlobe**。 **geometry** 和 **geography** 類型可以辨識特定的執行個體 (只要格式正確)，即使未明確定義執行個體亦然。 例如，如果您使用 STPointFromText() 方法明確定義 **Point** 執行個體，則只要方法輸入的格式正確， **geometry** 和 **geography** 會將此執行個體辨識為 **Point**。 如果您使用 `STGeomFromText()` 方法定義相同的執行個體， **geometry** 和 **geography** 資料類型都會將此執行個體辨識為 **Point**。  
+如圖中所指示， **geometry** 和 **geography** 資料類型中，十種可具現化的類型為 **Point**、 **MultiPoint**、 **LineString**、 **CircularString**、 **MultiLineString**、 **CompoundCurve**、 **Polygon**、 **CurvePolygon**、 **MultiPolygon**和 **GeometryCollection**。 geography 資料類型還有一種額外的可具現化類型：**FullGlobe**。 **geometry** 和 **geography** 類型可以辨識特定的執行個體 (只要格式正確)，即使未明確定義執行個體亦然。 例如，如果您使用 STPointFromText() 方法明確定義 **Point** 執行個體，則只要方法輸入的格式正確， **geometry** 和 **geography** 會將此執行個體辨識為 **Point**。 如果您使用 `STGeomFromText()` 方法定義相同的執行個體， **geometry** 和 **geography** 資料類型都會將此執行個體辨識為 **Point**。  
 
 geometry 和 geography 類型的子類型可區分為簡單與集合類型。  某些方法 (例如 `STNumCurves()` ) 只能使用簡單類型。  
 
@@ -88,7 +88,7 @@ OGC 的 SQL 簡單特徵規格討論了外部環形和內部環形，但是這�
 -   [OGC 規格，簡單特徵存取第二部 - SQL 選項](https://go.microsoft.com/fwlink/?LinkId=93628) \(英文\)  
 
 ##  <a name="circular"></a> 圓弧線段  
-三種可具現化的類型可以採用圓弧線段： **CircularString**、 **CompoundCurve**和 **CurvePolygon**。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
+三種可具現化的類型可以採用圓弧線段：**CircularString**、**CompoundCurve** 和 **CurvePolygon**。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
 
 圖 A 和 B 顯示一般圓弧線段。 請注意，這三個點如何分別位於圓形的圓周上。  
 
@@ -96,10 +96,11 @@ OGC 的 SQL 簡單特徵規格討論了外部環形和內部環形，但是這�
 在圓弧線段類型上運作的方法會使用直線線段來模擬圓弧。用於模擬弧形的直線線段數目將取決於弧形的長度和曲度。您可以針對每種圓弧線段類型儲存 Z 值。不過，方法不會在計算中使用 Z 值。  
 
 > [!NOTE]  
->  如果針對圓弧線段提供了 Z 值，則圓弧線段中所有點的這些值都必須相同，系統才會接受輸入。 例如：系統可接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但無法接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。  
+> 如果針對圓弧線段提供了 Z 值，則圓弧線段中所有點的這些值都必須相同，系統才會接受輸入。 例如：系統可接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但無法接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString 和 CircularString 的比較  
 此範例會示範如何使用 **LineString** 執行個體和 **CircularString** 執行個體來儲存完全相同的等腰三角形：  
+
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -114,14 +115,16 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 請注意， **CircularString** 執行個體需要使用七個點來定義三角形，但是 **LineString** 執行個體只需要使用四個點來定義三角形。 這是因為 **CircularString** 執行個體會儲存圓弧線段而非直線線段。 因此，儲存在 **CircularString** 執行個體中的三角形側邊為 ABC、CDE 和 EFA，而儲存在 **LineString** 執行個體中的三角形側邊為 AC、CE 和 EA。  
 
-請考慮下列程式碼片段：  
+請設想下列範例：  
+
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-這個程式碼片段會產生下列結果：  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```
 LS LengthCS Length
 5.65685...6.28318...
@@ -131,15 +134,15 @@ LS LengthCS Length
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比較  
 下列程式碼範例會示範如何使用 **LineString** 和 **CompoundCurve** 執行個體來儲存相同的圖形：
+
 ```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-中的多個  
-
 在上述範例中， **LineString** 執行個體或 **CompoundCurve** 執行個體都可以儲存此圖形。  下一個範例會使用 **CompoundCurve** 來儲存圓形圖配量：  
+
 ```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
@@ -148,6 +151,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 和 CompoundCurve 的比較  
 下列程式碼範例會示範如何將圓形圖配量儲存在 **CircularString** 執行個體中：  
+
 ```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
@@ -168,7 +172,7 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon 和 CurvePolygon 的比較  
-**CurvePolygon** 執行個體可以在定義其外部與內部環形時，使用 **CircularString** 和 **CompoundCurve** 執行個體。  **Polygon** 執行個體無法使用圓弧線段類型： **CircularString** 和 **CompoundCurve**。  
+**CurvePolygon** 執行個體可以在定義其外部與內部環形時，使用 **CircularString** 和 **CompoundCurve** 執行個體。  **Polygon** 執行個體不能使用圓弧線段類型：**CircularString** 和 **CompoundCurve**。  
 
 ## <a name="see-also"></a>另請參閱  
 - [空間資料 (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 

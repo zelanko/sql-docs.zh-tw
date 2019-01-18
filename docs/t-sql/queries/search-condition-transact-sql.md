@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ef9f5377ffef172436d7e84164a20f1d92a9a325
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699796"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979514"
 ---
 # <a name="search-condition-transact-sql"></a>搜尋條件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -190,7 +190,7 @@ ms.locfileid: "51699796"
  指定根據運算式是否在清單中來搜尋運算式。 搜尋運算式可以是常數或資料行名稱，清單可能是一組常數，也可能是一個子查詢，通常是一個子查詢。 將值的清單括在括號內。 如需詳細資訊，請參閱 [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)。  
   
  *subquery*  
- 這可視為受限制的 SELECT 陳述式，類似於 SELECT 陳述式中的 \<query_expresssion>。 不允許使用 ORDER BY 子句和 INTO 關鍵字。 如需詳細資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
+ 這可視為受限制的 SELECT 陳述式，類似於 SELECT 陳述式中的 \<query_expression>。 不允許使用 ORDER BY 子句和 INTO 關鍵字。 如需詳細資訊，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
  ALL  
  用來搭配比較運算子和子查詢使用。 當為子查詢擷取的所有值都滿足比較運算時，會針對 \<predicate> 傳回 TRUE，當並非所有值都滿足比較時，或當子查詢未傳回任何資料列給外部陳述式時，則傳回 FALSE。 如需詳細資訊，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。  

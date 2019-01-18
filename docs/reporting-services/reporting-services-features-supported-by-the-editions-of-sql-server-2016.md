@@ -1,19 +1,18 @@
 ---
-title: SQL Server 版本支援的 Reporting Services 功能 | Microsoft Docs
-ms.date: 11/01/2018
+title: SQL Server 版本所支援的 Reporting Services 功能
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad0d24d2674b092d82615f8674a0a5a378fbc7a2
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.date: 11/01/2018
+ms.openlocfilehash: 37dec44c539db86f8f0d239fffe0ca28699f2799
+ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350532"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53645327"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 版本所支援的 Reporting Services 功能
 
@@ -22,11 +21,11 @@ ms.locfileid: "51350532"
 本主題提供不同 SQL Server 版本所支援 Reporting Services 功能的詳細資料。 SQL Server Evaluation Edition 提供了 180 天的試用期。  
   
  如需最新的 SQL Server 版本資訊，請參閱 [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)。 如需新功能的最新資訊，請參閱 [Reporting Services (SSRS) 的新功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
-    
+
  **試用 SQL Server 2017**    
-    
- > [![下載 SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[從 Evaluation Center 下載 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**    
-    
+
+> [![下載 SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[從 Evaluation Center 下載 SQL Server 2017](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+>
 > ![Azure 虛擬機器 (小型)](../analysis-services/media/azure-virtual-machine-small.png) **[使用已安裝的 SQL Server 2017 加速虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 如需 Evaluation 和 Developer Edition 所支援的功能，請參閱 SQL Server Enterprise Edition 資料行。
@@ -44,8 +43,8 @@ ms.locfileid: "51350532"
 |以角色為基礎的安全性|是|是|是|是|是|  
 |匯出至 Excel、PowerPoint、Word、PDF 和影像|是|是|是|是|是|  
 |增強的量測計和圖表|是|是|是|是|是|  
-|將報表項目釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]儀表板|是|是|是|是|是|  
-|自訂驗證|是|是|是|是|是|  
+|將報表項目釘選到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板|是|是|是|是|是|  
+|自訂驗證|是|是|是||是|  
 |報告成資料摘要|是|是|是|是|是|  
 |模型支援|是|是|是||是|  
 |針對以角色為基礎的安全性建立自訂角色|是|是|||是|  
@@ -63,8 +62,7 @@ ms.locfileid: "51350532"
 |警示<sup>2</sup> (SSRS 2016) |是||||是|  
 | Power View<sup>2</sup> (SSRS 2016) |是||||是| 
 |註解<sup>3</sup> |是|是|是|是|是|  
- 
-  
+
  <sup>1</sup> 如需 SQL Server Reporting Services (SSRS) 支援資料來源的詳細資訊，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
  <sup>2</sup> SharePoint 模式中需要 Reporting Services 2016。 如需詳細資訊，請參閱 [安裝 Reporting Services SharePoint 模式](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。 從 Reporting Services 2017 開始，不再提供 Reporting Services 與 SharePoint 的整合。 
@@ -74,7 +72,7 @@ ms.locfileid: "51350532"
 > [!NOTE]
 > SQL Server Express with Tools 和 SQL Server Express 不支援 SQL Server Reporting Services。
   
-## <a name="report-server-database-server-edition-requirements"></a>報表伺服器資料庫伺服器版本需求  
+## <a name="report-server-database-server-edition-requirements"></a>報表伺服器資料庫伺服器版本需求
  建立報表伺服器資料庫時，並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都可以用來主控資料庫。 下表顯示哪些 [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本可用於特定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]版本。  
   
 |對於這一版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|使用這一版的 Database Engine 執行個體來主控資料庫|  
@@ -95,9 +93,9 @@ ms.locfileid: "51350532"
 |Power BI 行動裝置應用程式 (iOS、Windows 10、Android) (.rsmobile)|是||||是|  
   
 > [!NOTE]  
-> 1.  上表識別啟用這些用戶端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；不過，這些工具可以存取任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本上裝載的資料。  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 是建立行動報表的單一點。 連接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器存取資料來源以及建立報表。 然後將它們發佈至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器，供組織中的其他人在伺服器或行動裝置上存取。 您也可以使用獨立 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 與本機資料來源  
-> 3.  無論您使用內部部署  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 、雲端 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，或兩個一起作為報表傳遞解決方案，您只需要一個行動裝置應用程式來存取行動裝置上的儀表板和行動報表。 您可從 Windows、iOS 或 Android 應用程式存放區下載 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 應用程式。  
+> 1. 上表識別啟用這些用戶端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；不過，這些工具可以存取任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本上裝載的資料。  
+> 2. [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 是建立行動報表的單一點。 連接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器存取資料來源以及建立報表。 然後將它們發佈至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 伺服器，供組織中的其他人在伺服器或行動裝置上存取。 您也可以使用獨立 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 與本機資料來源  
+> 3. 無論您使用內部部署  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 、雲端 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，或兩個一起作為報表傳遞解決方案，您只需要一個行動裝置應用程式來存取行動裝置上的儀表板和行動報表。 您可從 Windows、iOS 或 Android 應用程式存放區下載 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 應用程式。  
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 51d4b6c9e19f334946657205de6cdc8c6ce593ec
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702947"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980024"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 資料類型方法參考
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "51702947"
   
 ### <a name="one-directional-replication"></a>單向複寫
 單向複寫包括快照式複寫、異動複寫，以及不在「訂閱者」端進行變更的合併式複寫。 **hierarchyid** 資料行使用單向覆寫的方式會因「訂閱者」執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而不同。
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的「發行者」可以將 **hierarchyid** 資料行複寫至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的「訂閱者」，而不需要任何特殊考量。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的「發行者」可以將 **hierarchyid** 資料行複寫至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的「訂閱者」，而沒有任何特殊考量。  
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的「發行者」必須轉換 **hierarchyid** 資料行，才能將它們複寫至執行 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 或舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的「訂閱者」。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 和舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **hierarchyid** 資料行。 如果您正使用其中一個版本，仍然可以將資料複寫至「訂閱者」。 若要這樣做，您必須設定結構描述選項或發行集相容性層級 (用於合併式複寫)，如此資料行才能轉換成相容的資料類型。  
   
 在這兩種情況下都支援資料行篩選。 這包括篩選出 **hierarchyid** 資料行。 只要篩選不包括 **hierarchyid** 資料行，就會支援資料列篩選。

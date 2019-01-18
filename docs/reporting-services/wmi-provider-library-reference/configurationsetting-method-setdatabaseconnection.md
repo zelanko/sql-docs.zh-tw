@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 701ba6cbdcc95895d55bd7db0fcc4468089f665f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f897c935cdd4c267440ccd5393e48dd718461c15
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538098"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206007"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>ConfigurationSetting 方法 - SetDatabaseConnection
   設定特定報表伺服器資料庫的報表伺服器資料庫連接。  
@@ -78,7 +78,7 @@ public void BackupEncryptionKey(string Server,
   
  SetDatabaseConnection 方法不會檢查報表伺服器是否能夠使用指定的資料來連接至報表伺服器資料庫。  
   
- 第一次設定時，ConnectionPoolSize 屬性是根據下列處理器設定的：ConnectionPoolSize = #Processors * 75。  
+ 第一次設定時，ConnectionPoolSize 屬性是根據下列處理器設定：ConnectionPoolSize = #Processors * 75。  
   
  SetDatabaseConnection 方法不會將權限授與指定的帳戶。 您必須針對需要存取報表伺服器資料庫的每個帳戶呼叫 [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) 方法，並且執行產生的指令碼。  
   

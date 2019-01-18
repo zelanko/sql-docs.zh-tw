@@ -13,12 +13,12 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001ca15788a47a4089739b10f884ef9a81dfa2d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89e15ed8b14c9866e9ad217a973272480eb26c4
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681686"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204817"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
   如果您在 [儲存並執行套件] 頁面上指定要將設定儲存為 SQL Server Integration Services (SSIS) 套件，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [儲存 SSIS 套件]。 在此頁面上，您可以指定儲存精靈所建立套件的其他選項。  
@@ -39,7 +39,7 @@ ms.locfileid: "47681686"
  **說明**  
  提供封裝的描述。 最佳作法是描述封裝用途，使封裝可以自我記錄並易於維護。  
   
- **目標**  
+ **Target**  
  您之前為套件指定的目的地 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或檔案系統)。 如果想將封裝儲存至不同的目的地，請返回 [儲存並執行封裝]  頁面。
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>螢幕擷取畫面 - 將套件儲存在 SQL Server

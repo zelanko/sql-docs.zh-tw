@@ -11,19 +11,19 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ffaef2277d5e6e902078a75fca75df7c6400106
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51cd0ab995803c9582f91f5a9a732838736ac526
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719242"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207677"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>課程 1-1 - 建立工作資料夾與環境變數
 在這項工作中，您將建立工作資料夾 (C:\DeploymentTutorial) 和新的系統環境變數 (`DataTransfer` 與 `LoadXMLData`)，並稍後在教學課程工作中使用。  
   
 工作資料夾位於 C 磁碟的根目錄。 如果必須使用其他磁碟或位置，這是可行的。 不過必須記下這個位置，只要教學課程提到 DeploymentTutorial 工作資料夾時就會用到這個位置。  
   
-在後面的課程中，您會將儲存在檔案系統中的套件部署到 msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的 sysssispackages 資料表。 理想的狀況是將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝部署到其他電腦。 如果不可行，但透過將封裝部署到本機電腦上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，您仍可從進行本課中學到許多知識。 本機電腦和目的電腦中使用的環境變數有著相同的名稱，但儲存在變數中的值則不同。 例如，本機電腦上環境變數 `DataTransfer` 的值會參考 C:\DeploymentTutorial 資料夾，而目標電腦上環境變數 `DataTransfer` 卻會參考 C:\DeploymentTutorialInstall 資料夾。  
+在後面的課程中，您會將儲存在檔案系統中的封裝部署到 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的 sysssispackages 資料表。 理想的狀況是將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝部署到其他電腦。 如果不可行，但透過將封裝部署到本機電腦上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，您仍可從進行本課中學到許多知識。 本機電腦和目的電腦中使用的環境變數有著相同的名稱，但儲存在變數中的值則不同。 例如，本機電腦上環境變數 `DataTransfer` 的值會參考 C:\DeploymentTutorial 資料夾，而目標電腦上環境變數 `DataTransfer` 卻會參考 C:\DeploymentTutorialInstall 資料夾。  
   
 如果您打算部署到本機電腦，必須只建立一組環境變數，但在進行本機部署之前必須先將環境變數的值更新為適合的值。  
   

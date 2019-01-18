@@ -1,6 +1,7 @@
 ---
-title: 將次要複本新增至可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 將次要複本新增至可用性群組
+description: 了解如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio (SSMS) 中的 [可用性群組精靈]，將次要複本新增至 Always On 可用性群組。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,35 +14,17 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 834e84ea62e9cfa7b6398d67e2b59ba011d21979
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512335"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53213007"
 ---
-# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>將次要複本加入至可用性群組 (SQL Server)
+# <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>將次要複本新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將次要複本加入現有的 AlwaysOn 可用性群組中。  
-  
--   **開始之前：**  
-  
-     [必要條件和限制](#PrerequisitesRestrictions)  
-  
-     [Security](#Security)  
-  
--   **使用下列方法加入複本：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **待處理：**  [加入次要複本之後](#FollowUp)  
-  
-## <a name="before-you-begin"></a>開始之前  
- 我們強烈建議您先閱讀本節內容，然後再嘗試建立您的第一個可用性群組。  
+
   
 ##  <a name="PrerequisitesRestrictions"></a> 必要條件和限制  
   
@@ -122,7 +105,7 @@ ms.locfileid: "52512335"
   
 -   [SQL Server PowerShell 提供者](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 待處理：加入次要複本之後  
+##  <a name="FollowUp"></a> 後續操作：新增次要複本之後  
  若要將複本加入至現有的可用性群組，您必須執行下列步驟：  
   
 1.  連接到將要裝載新次要複本的伺服器執行個體。  

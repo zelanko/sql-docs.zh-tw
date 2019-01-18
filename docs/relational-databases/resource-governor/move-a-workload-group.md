@@ -12,23 +12,23 @@ helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 70b6c928d5df3fe6f36bfa2277899dfee4400385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c85cbe7f0c29ad9e2e6fb410ae1f3cc30ab0921c
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656331"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380359"
 ---
 # <a name="move-a-workload-group"></a>移動工作負載群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 將資源管理員工作負載群組移至不同的資源集區。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **SQL Server Management Studio**  [Transact-SQL](#MoveWGSSMS)、 [來移動工作負載群組](#MoveWGTSQL)  
+-   **若要移動工作負載群組，請使用下列方式：**[SQL Server Management Studio](#MoveWGSSMS)、[Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果有暫止的資源管理員組態作業，則無法移動工作負載群組。  
@@ -36,7 +36,7 @@ ms.locfileid: "47656331"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  如果有暫止的資源管理員組態作業，則無法移動工作負載群組。 您可以藉由查詢 [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 動態管理檢視的方式，查看目前 is_configuration_pending 的狀況，以判斷是否有暫止的組態。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  移動工作負載群組需要 CONTROL SERVER 權限。  
   
 ##  <a name="MoveWGSSMS"></a> 使用 SQL Server Management Studio 移動工作負載群組  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [建立工作負載群組](../../relational-databases/resource-governor/create-a-workload-group.md)   

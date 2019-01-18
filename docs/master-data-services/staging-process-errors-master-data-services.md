@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
@@ -14,12 +13,12 @@ ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47b9b13c5de6368b14b6767ea71d8e888da4c72
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395387"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52766130"
 ---
 # <a name="staging-process-errors-master-data-services"></a>暫存處理序錯誤 (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "52395387"
 |210041|"ROOT" 不是有效的成員代碼。|**MemberCode** 值包含 "ROOT" 這個字。|分葉<br /><br /> 合併<br /><br /> 關聯性|  
 |210042|"MDMUNUSED" 不是有效的成員代碼。|**MemberCode** 值包含 "MDMUNUSED" 這個字。|分葉<br /><br /> 合併<br /><br /> 關聯性|  
 |210052|無法停用 MemberCode，因為它是做為網域屬性值。|當 **ImportType** = **3** 或 **4**時，如果此成員當做其他成員的屬性值使用，則暫存將失敗。 使用 **ImportType5** 或 **6** 將值設為 NULL，或者在執行暫存處理序之前變更值。|分葉<br /><br /> 合併|  
-|300002|成員代碼無效。|關聯性：父或子成員代碼不存在。<br /><br /> 分葉或合併： **ImportType** = **3** 或 **4** ，而且成員代碼不存在。|分葉<br /><br /> 合併<br /><br /> 關聯性|  
+|300002|成員代碼無效。|關係：父或子成員代碼不存在。<br /><br /> 分葉或合併：**ImportType** = **3** 或 **4**，而且成員代碼不存在。|分葉<br /><br /> 合併<br /><br /> 關聯性|  
 |300004|成員代碼已經存在。|**ImportType** = **1** ，而且您使用的成員代碼已存在於實體中。|分葉<br /><br /> 合併|  
 |210011|當 **RelationshipType** 為 **1**時， **ParentCode** 不可以是分葉成員。|確定 **ParentCode** 值是合併成員的代碼。|關聯性|  
 |210015|在階層或批次的暫存資料表中，此成員代碼出現多次。|若為明確階層，則您在相同的批次中多次指定了相同成員的位置。|關聯性|  

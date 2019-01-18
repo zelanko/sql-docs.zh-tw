@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
@@ -15,12 +14,12 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ed7c2329742cea3b7fb0fbd43b33233bb846a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628636"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52777340"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
 
@@ -124,6 +123,6 @@ ms.locfileid: "47628636"
 ## <a name="see-also"></a>另請參閱  
  [設定商務規則來傳送通知 &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [變更商務規則名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
- [將多個條件新增至商務規則 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
+ [將多個條件加入至商務規則 &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  
   
   

@@ -7,27 +7,24 @@ ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd6c508700e22a7ef999e3511610093230e7b613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849889"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53327998"
 ---
 # <a name="create-a-project"></a>建立專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 您可以在現有方案內，建立一或多個專案。  
   
-### <a name="to-create-a-new-project-and-add-it-to-a-solution"></a>建立新的專案，將它加入方案中  
+## <a name="create-a-new-project-and-add-it-to-a-solution"></a>建立新的專案並將它新增至方案中  
   
 1.  在 [方案總管] 中，選取方案。  
   
@@ -96,9 +93,10 @@ ms.locfileid: "47849889"
   
 4.  按一下 [確定] 。  
   
-您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 建立，無法變更。 您可以使用 [新增專案] 對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管中，以滑鼠右鍵按一下方案，然後按一下 [新增]。 指令碼專案資料夾的預設位置是 C:\Documents and Settings\\<使用者名>\My Documents\SQL Server Management Studio\Projects\\。  
+您可以設定指令碼專案的名稱，但資料夾名稱由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 建立，無法變更。 您可以使用 [新增專案] 對話方塊，為一組常用資料夾設定磁碟和路徑規格。 在方案總管中，以滑鼠右鍵按一下方案，然後按一下 [新增]。 指令碼專案資料夾的預設位置：C:\Documents and Settings\\使用者名稱\My Documents\SQL Server Management Studio\Projects\\。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
 [方案總管](../../ssms/solution/solution-explorer.md)  
 [將現有專案加入方案中](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [將新項目加入專案](../../ssms/solution/add-new-items-to-a-project.md)  
@@ -106,4 +104,3 @@ ms.locfileid: "47849889"
 [變更專案的預設位置](../../ssms/solution/change-the-default-location-for-projects.md)  
 [移除或刪除項目或專案](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [刪除方案](../../ssms/solution/delete-a-solution.md)  
-  

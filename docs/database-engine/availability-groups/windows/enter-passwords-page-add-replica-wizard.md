@@ -1,6 +1,7 @@
 ---
-title: 輸入密碼頁面 (新增複本精靈) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組的輸入密碼頁面 (新增複本精靈)
+description: 描述 SQL Server Management Studio [新增複本精靈] 中 [輸入密碼頁面] 上找到的屬性。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11b171ef067bd5abdc29d306421b956792f1a55b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7472049d96abf98f55dcc90486012b33ba13ba66
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790576"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215039"
 ---
-# <a name="enter-passwords-page-add-replica-wizard"></a>輸入密碼頁面 (加入複本精靈)
+# <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Always On 可用性群組的輸入密碼頁面 (新增複本精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本說明主題描述 [輸入密碼] 頁面的選項。 本主題適用於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]。  
   

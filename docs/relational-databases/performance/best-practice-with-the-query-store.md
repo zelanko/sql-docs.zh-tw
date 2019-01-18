@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a727c599dc5a2b7c21d07a415f6ba9490c7e96cd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712116"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328968"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52712116"
   
  以下是設定參數值時可遵循的指導方針：  
   
- **大小上限 (MB)：** 指定查詢存放區將在您的資料庫內使用的資料空間的上限。 這是最重要的設定，它會直接影響查詢存放區的作業模式。  
+ **大小上限 (MB)：** 指定查詢存放區將在您資料庫內使用的資料空間限制。 這是最重要的設定，它會直接影響查詢存放區的作業模式。  
   
  因為查詢存放區會收集查詢、執行計劃和統計資料，它在資料庫中的大小會逐漸增加，直到達到此限制為止。 發生此情況時，查詢存放區會自動將作業模式變更為唯讀，並停止收集新的資料，這表示您的效能分析已不再正確。  
   
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **資料排清間隔：** 以秒為單位來定義頻率，將收集到的執行階段統計資料保存到磁碟 (預設值為 900 秒，即 15 分鐘)。 如果您的工作負載不會產生各種大量的查詢與計畫，或者您可以在資料庫關閉之前忍受較長的時間來保存資料，請考慮使用較高的值。 
+ **資料排清間隔：** 以秒為單位來定義頻率，將收集到的執行階段統計資料保存到磁碟 (預設為 900 秒，即 15 分鐘)。 如果您的工作負載不會產生各種大量的查詢與計畫，或者您可以在資料庫關閉之前忍受較長的時間來保存資料，請考慮使用較高的值。 
  
 > [!NOTE]
 > 使用追蹤旗標 7745，會在發生容錯移轉或關機命令時，防止將查詢存放區資料寫入到磁碟。 如需詳細資訊，請參閱[在任務關鍵性伺服器上使用追蹤旗標來改善災害復原](#Recovery)一節。
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **統計資料收集間隔：** 定義收集到之執行階段統計資料的資料粒度層級 (預設值是 60 分鐘)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，針對統計資料收集間隔設定不同的值：  
+ **統計資料收集間隔：** 定義所收集執行階段統計資料的資料粒度層級 (預設是 60 分鐘)。 如果您需要更精細的資料粒度或使用較短的時間偵測與解決問題，請考慮使用較低的值，但請注意，它會直接影響查詢存放區資料的大小。 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，針對統計資料收集間隔設定不同的值：  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **過時的查詢臨界值 (天)：** 以時間為基礎的清除原則，可控制保存的執行階段統計資料和非使用中查詢的保留期限。  
+ **過時查詢閾值 (天數)：** 以時間為基礎的清除原則，可控制保存的執行階段統計資料和非使用中查詢的保留期限。  
 根據預設，查詢存放區設定為保留資料 30 天，對您的狀況而言，這可能不必要地過長。  
   
  避免保留您沒有計畫使用的歷程記錄資料。 這會降低變更為唯讀狀態。 查詢存放區資料的大小以及偵測和解決問題的時間會更容易預測。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或下列指令碼來設定以時間為基礎的清除原則：  
@@ -99,7 +99,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
- **大小基礎的清除模式** ：指定查詢存放區的資料大小到達限制時是否自動清除資料。  
+ **大小基礎的清除模式：** 指定查詢存放區的資料大小到達限制時是否自動清除資料。  
   
  強烈建議您啟用大小基礎的清除模式，以確保查詢存放區一律以讀寫模式執行並收集最新的資料。  
   
@@ -108,7 +108,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
   
- **查詢存放區擷取模式** ：指定查詢存放區的查詢擷取模式。  
+ **查詢存放區擷取模式：** 指定查詢存放區的查詢擷取原則。  
   
 -   **All**：擷取所有查詢。 這是預設選項。  
   
@@ -159,7 +159,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |查詢等候統計資料|分析資料庫中最常使用的等候類別，以及哪些查詢最常參與所選取的等候類別。<br />使用此檢視來分析等候統計資料，並識別可能影響使用者在應用程式間之體驗的查詢。<br /><br />**適用於：** 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始|  
 |追蹤查詢|即時追蹤最重要的查詢的執行。 一般而言，當您有包含強制計畫的查詢且想要確定查詢效能是否穩定時，會使用此檢視。|
   
-> [!TIP]  
+> [!TIP]
 > 如需如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 識別熱門資源取用查詢並修正那些因為計畫選擇變更而迴歸之查詢的詳細說明，請參閱[查詢存放區@Azure 部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
  當您識別效能次佳的查詢時，您的動作取決於問題的本質。  
@@ -168,7 +168,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
-> [!NOTE]  
+> [!NOTE]
 > 上圖對於特定查詢計劃可能具有不同形狀，每個可能狀態的意義如下：<br />  
 > |形狀圖|意義|  
 > |-------------------|-------------|

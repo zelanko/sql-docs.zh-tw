@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2736c3cf0d8373b80a41277a6b80b4b12b0ecd3a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8e5c839f8c5005e3f02129e36023db53f70f4a20
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510697"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590301"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "52510697"
 ### <a name="database-mirroring-and-sql-server-audit"></a>資料庫鏡像和 SQL Server Audit  
  已定義資料庫稽核規格而且使用資料庫鏡像的資料庫將會包含資料庫稽核規格。 若要在鏡像的 SQL 執行個體上正確運作，必須設定下列項目：  
   
--   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可以使用 CREATE AUDIT WITH GUID**=***\<來源伺服器稽核的 GUID*> 命令來進行這項設定。  
+-   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可以使用 CREATE AUDIT WITH GUID**=**_\<來源 Server Audit 的 GUID_> 命令來進行這項設定。  
   
 -   如果是二進位檔案目標，鏡像伺服器服務帳戶必須具有寫入稽核記錄之位置的適當權限。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "52510697"
  [DDL 觸發程序](../../../relational-databases/triggers/ddl-triggers.md)  
  說明如何使用資料定義語言 (DDL) 觸發程序來追蹤資料庫的變更。  
   
- [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性和保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet：SQL Server TechCenter：SQL Server 2005 安全性與保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
  提供有關 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性的最新資訊。  
   
 ## <a name="see-also"></a>另請參閱  

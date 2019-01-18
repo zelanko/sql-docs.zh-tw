@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2018
+ms.date: 12/19/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efc8c7ec6408e2f6c5fe7fb2262d581e82c4b1b9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f186989b4b6edad18333bd93cc89a69c65c2a977
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712079"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590022"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 **SSMS 是免費的！**
 
-**[SSMS 18.0 公開預覽 5 現在已可供使用](#ssms-180-preview-5)，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]** 的支援！
+**[SSMS 18.0 Public Preview 6 現在已可供使用](#ssms-180-preview-6)，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援！**
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 是目前正式運作 (GA) 版本的 SSMS
 
@@ -52,14 +52,14 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 **版本資訊**
 
-- 版本編號：17.9.1<br>
+- 版本號碼：17.9.1<br>
 - 組建編號：14.0.17289.0<br>
 - 發行日期：2018 年 11 月 21 日
 
 ### <a name="available-languages-ssms-1791"></a>可用語言 (SSMS 17.9.1)
 
 > [!NOTE]
-> 非英文的 SSMS 17.x 語言版本如果安裝在 Windows 8、Windows 7、Windows Server 2012 及 Windows Server 2008 R2 上，就需要 [KB 2862966 安全性更新程式套件](https://support.microsoft.com/kb/2862966)。
+> SSMS 17.x 的非英文當地語系化版本若安裝在下列項目上，則需要 [KB 2862966 安全性更新程式套件](https://support.microsoft.com/kb/2862966)：Windows 8、Windows 7、Windows Server 2012 和 Windows Server 2008 R2。
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
@@ -76,19 +76,19 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
   * 請確定電腦上安裝了所有最新的作業系統更新。
   * 所述的動作通常只需要執行一次。 只有極少數的情況，需要在另外升級至相同主要版本的 SSMS 時重新開機。 針對次要升級，電腦上已安裝好所有 SSMS 必要條件。
 
-## <a name="ssms-180-preview-5"></a>SSMS 18.0 (Preview 5)
+## <a name="ssms-180-preview-6"></a>SSMS 18.0 (Preview 6)
 
-**SSMS 18.0 公開預覽 5 現在已可供使用，它是最新一代的 *SQL Server Management Studio*可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]** 的支援！
+**SSMS 18.0 Public Preview 6 現在已可供使用，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援！**
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.0 (Preview 5)](https://go.microsoft.com/fwlink/?linkid=2041155)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.0 (Preview 6)](https://go.microsoft.com/fwlink/?linkid=2052501)**
 
-*Preview 5* 是 SSMS 18.0 的第二個公開預覽版。 如果您先前已安裝 SSMS 18.0 預覽版，請將它解除安裝，再安裝 SSMS 18.0 Preview 5。
+*Preview 6* 是 SSMS 18.0 的最新公開預覽版。 如果您先前已安裝 SSMS 18.0 預覽版，請將它解除安裝，再安裝 SSMS 18.0 Preview 6。
 
 **版本資訊**
 
-- 版本號碼：18.0 (Preview 5)<br>
-- 組建編號：15.0.18068.0<br>
-- 發行日期：2018 年 11 月 15 日
+- 版本號碼：18.0 (Preview 6)<br>
+- 組建編號：15.0.18075.0<br>
+- 發行日期：2018 年 12 月 18 日
 
 若您有意見或建議，或是要回報問題，連絡 SSMS 小組的最佳方式是透過 [UserVoice](https://aka.ms/sqlfeedback)。
 
@@ -97,34 +97,34 @@ SSMS 18.x 安裝不會升級或取代 SSMS 17.x 版或更早版本。 SSMS 18.x 
 如果電腦包含 SSMS 並存安裝，請確認已針對您的特定需求啟動正確的版本。 最新版本會加上 *Microsoft SQL Server Management Studio 18* 標籤：
  
 
-## <a name="available-languages-ssms-180-preview-5"></a>可用語言 (SSMS 18.0 Preview 5)
+## <a name="available-languages-ssms-180-preview-6"></a>可用語言 (SSMS 18.0 Preview 6)
 
 此版 SSMS 提供下列語言版本：
 
-SQL Server Management Studio 18.0 (Preview 5)：<br>
-[簡體中文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2041155&clcid=0x40a)
+SQL Server Management Studio 18.0 (Preview 6)：<br>
+[簡體中文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2052501&clcid=0x40a)
 
 SQL Server Management Studio 18.0 升級套件 (升級到 18.0)：<br>
-目前沒有可用的升級選項。 如果您先前已安裝 SSMS 18.0 預覽版，請將它解除安裝，再安裝 SSMS 18.0 Preview 5。
+目前沒有可用的升級選項。 如果您先前已安裝 SSMS 18.0 預覽版，請將它解除安裝，再安裝 SSMS 18.0 Preview 6。
 
 > [!NOTE]
 > SQL Server PowerShell 模組為透過 PowerShell 資源庫個別安裝的模組。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
 
 
-## <a name="new-in-this-release-ssms-180-preview-5"></a>此版本 (SSMS 18.0 Preview 5) 中的新功能
+## <a name="new-in-this-release-ssms-180-preview-6"></a>此版本 (SSMS 18.0 Preview 6) 中的新功能
 
-SSMS 18.0 (Preview 5) 是 SQL Server Management Studio 的最新版本。 18.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2019 預覽版的所有功能範圍。
+SSMS 18.0 (Preview 6) 是 SQL Server Management Studio 的最新版本。 18.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2019 預覽版的所有功能範圍。
 
 如需此版本中新增功能的詳細資料，請參閱 [SSMS 變更記錄](sql-server-management-studio-changelog-ssms.md)。
 
 
-## <a name="supported-sql-offerings-ssms-180-preview-5"></a>支援的 SQL 供應項目 (SSMS 18.0 Preview 5)
+## <a name="supported-sql-offerings-ssms-180-preview-6"></a>支援的 SQL 供應項目 (SSMS 18.0 Preview 6)
 
 * 此版本的 SSMS 適用於所有[支援的 SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，並提供最高層級的支援以使用 Azure SQL Database 和 Azure SQL 資料倉儲中最新雲端功能。
 * 此外，SSMS 18.x 可以與 SSMS 17.x、SSMS 16.x 或 SQL Server 2014 SSMS 及更早的版本並存安裝。
 * SQL Server Integration Services (SSIS) - SSMS 17.x 或更新版本不支援連線至舊版 SQL Server Integration Services 服務。 若要連線至舊版 Integration Services 的舊版本，請使用與 SQL Server 版本一致的 SSMS 版本。 例如，使用 SSMS 16.x 連線至舊版 SQL Server 2016 Integration Services 服務。 SSMS 17.x 和 SSMS 16.x 可以並存安裝在相同電腦上。 自 SQL Server 2012 發行之後，建議使用 SSIS Catalog 資料庫 SSISDB 來儲存、管理、執行和監視 Integration Services 套件。 如需詳細資訊，請參閱 [SSIS 目錄](../integration-services/catalog/ssis-catalog.md)。
 
-## <a name="supported-operating-systems-ssms-180-preview-5"></a>支援的作業系統 (SSMS 18.0 Preview 5)
+## <a name="supported-operating-systems-ssms-180-preview-6"></a>支援的作業系統 (SSMS 18.0 Preview 6)
 
 搭配最新推出的服務套件使用時，這一版 SSMS 支援下列 64 位元平台：
 
@@ -142,9 +142,9 @@ SSMS 18.0 (Preview 5) 是 SQL Server Management Studio 的最新版本。 18.x �
 
 
 
-## <a name="release-notes-ssms-180-preview-5"></a>版本資訊 (SSMS 18.0 Preview 5)
+## <a name="release-notes-ssms-180-preview-6"></a>版本資訊 (SSMS 18.0 Preview 6)
 
-下列是 SSMS 18.0 Preview 5 中的已知問題：
+下列是 SSMS 18.0 Preview 6 中的已知問題：
 
 SSMS
 

@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703816"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980476"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51703816"
  
 若要了解資料表和其使用方式，請參閱 [SQL 資料倉儲中的資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/)。
 
-注意：除非另有說明，否則本文中和 SQL 資料倉儲有關的討論適用於 SQL 資料倉儲和平行處理資料倉儲。 
+附註：除非另有說明，否則本文中和 SQL 資料倉儲有關的討論適用於 SQL 資料倉儲和平行處理資料倉儲。 
  
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -484,18 +484,18 @@ WITH
  在這個範例中，資料將排序到下列資料分割中：  
   
 -   資料分割 1：col <= 10   
--   資料分割 2：10 < col <= 20   
--   資料分割 3：20 < col <= 30   
--   資料分割 4：30 < col <= 40   
--   資料分割 5：40 < col  
+-   分割區 2：10 < col <= 20   
+-   分割區 3：20 < col <= 30   
+-   分割區 4：30 < col <= 40   
+-   分割區 5：40 < col  
   
  如果這個相同的資料表分割為 RANGE RIGHT，而不是 RANGE LEFT (預設)，資料將排序到下列資料分割：  
   
 -   資料分割 1：col < 10  
--   資料分割 2：10 <= col < 20   
--   資料分割 3：20 <= col < 30    
--   資料分割 4：30 <= col < 40   
--   資料分割 5：40 <= col  
+-   分割區 2：10 <= col < 20   
+-   分割區 3：20 <= col < 30    
+-   分割區 4：30 <= col < 40   
+-   分割區 5：40 <= col  
   
 ### <a name="OnePartition"></a> I. 建立具有一個資料分割的資料分割資料表  
  以下範例會建立具有一個資料分割的資料分割資料表。 它不會指定任何界限值，結果會產生一個資料分割。  

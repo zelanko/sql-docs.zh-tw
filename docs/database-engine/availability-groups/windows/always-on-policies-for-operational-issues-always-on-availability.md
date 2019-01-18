@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 操作問題原則 - AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組操作問題的原則式管理
+description: Always On 可用性群組健全狀況模型會評估一組預先定義的原則式管理 (PBM) 原則。 您可以使用這些原則，在 SQL Server 中檢視可用性群組以及複本和資料庫的健全狀況。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,31 +14,18 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 330a9169fb1177686ffc95a530b5e068ed98e4e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601674"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214167"
 ---
-# <a name="always-on-policies-for-operational-issues---always-on-availability"></a>AlwaysOn 操作問題原則 - AlwaysOn 可用性
+# <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 可用性群組操作問題的原則式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型會評估一組預先定義的原則式管理 (PBM) 原則。 您可以使用這些原則，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中檢視可用性群組及其可用性複本和資料庫的健全狀況。  
+  Always On 可用性群組健全狀況模型會評估一組預先定義的原則式管理 (PBM) 原則。 您可以使用這些原則，在 SQL Server 中檢視可用性群組以及其複本和資料庫的健全狀況。  
   
- **本主題內容：**  
-  
--   [詞彙和定義](#TermsAndDefinitions)  
-  
--   [預先定義的原則和問題](#Always OnPBM)  
-  
--   [AlwaysOn 儀表板](#Dashboard)  
-  
--   [擴充 AlwaysOn 健全狀況模型](#ExtendHealthModel)  
-  
--   [相關工作](#RelatedTasks)  
-  
--   [相關內容](#RelatedContent)  
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
  AlwaysOn 預先定義的原則  
@@ -78,7 +66,7 @@ ms.locfileid: "51601674"
 |可用性資料庫聯結狀態|[次要資料庫並未聯結](../../../database-engine/availability-groups/windows/secondary-database-is-not-joined.md)。|警告|可用性資料庫|  
 |可用性資料庫資料同步處理狀態|[可用性資料庫的資料同步狀態健康情況不佳](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性資料庫|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **\*** 對於 AlwaysOn 原則而言，類別目錄名稱會當作識別碼使用。 變更 AlwaysOn 類別目錄的名稱會破壞其健全狀況評估功能。 因此，請勿修改 AlwaysOn 類別目錄的名稱。  
   
 ##  <a name="Dashboard"></a> AlwaysOn 儀表板  
@@ -99,7 +87,7 @@ ms.locfileid: "51601674"
 ##  <a name="ExtendHealthModel"></a> 擴充 AlwaysOn 健全狀況模型  
  擴充 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況模型就是建立您自己的使用者定義原則，並根據您所監控的物件類型將其置於某些類別目錄中。  在您改變幾個設定之後，AlwaysOn 儀表板將會自動評估您的使用者定義原則以及 AlwaysOn 預先定義的原則。  
   
- 使用者定義的原則可以使用任何可用的 PBM Facet，包括 AlwaysOn 預先定義的原則所使用的 Facet (請參閱本主題稍早的 [預先定義的原則和問題](#Always OnPBM))。 伺服器 Facet 會提供用來監視 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況的以下屬性：(**IsHadrEnabled** 和 **HadrManagerStatus**)。 伺服器 Facet 也會提供用來監控 WSFC 叢集組態的以下原則： **ClusterQuorumType**和 **ClusterQuorumState**。  
+ 使用者定義的原則可以使用任何可用的 PBM Facet，包括 AlwaysOn 預先定義的原則所使用的 Facet (請參閱本主題稍早的 [預先定義的原則和問題](#Always OnPBM))。 伺服器 Facet 會提供用來監視 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 健全狀況的下列屬性：(**IsHadrEnabled** 和 **HadrManagerStatus**)。 伺服器 Facet 也會提供用來監視 WSFC 叢集設定的下列原則：**ClusterQuorumType** 和 **ClusterQuorumState**。  
   
  如需詳細資訊，請參閱 [AlwaysOn 健全狀況模型第 2 部 -- 擴充健全狀況模型](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (SQL Server AlwaysOn 團隊部落格)。  
   

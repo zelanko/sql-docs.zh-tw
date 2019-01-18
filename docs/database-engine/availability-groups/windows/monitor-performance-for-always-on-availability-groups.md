@@ -1,6 +1,7 @@
 ---
-title: 監視 Always On 可用性群組的效能 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 監視可用性群組的效能
+description: 本文章會說明同步處理程序，示範如何計算一些關鍵計量，並提供某些常見效能疑難排解案例的連結。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601148"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203347"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "51601148"
   
  除了流程控制閘道以外，還有另外一個防止傳送記錄檔訊息的因素。 複本的同步處理可確保訊息會以記錄序號 (LSN) 的順序傳送並套用。 在傳送記錄檔訊息之前，也會針對最低認可 LSN 編號檢查其 LSN，以確定它小於其中一個閾值 (根據訊息類型而定)。 如果兩個 LSN 編號之間的間距大於閾值，則不會傳送訊息。 一旦間距再次低於閾值，則會傳送訊息。  
   
- 兩個實用的效能計數器 [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Flow Control Time (毫秒/秒)](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，會為您顯示上一秒內已啟動多少次流程控制，以及花費多少時間等候流程控制。 較高的流程控制等候時間會轉譯為較高的 RPO。 針對可能造成較高流程控制等候時間的問題，如需問題類型的詳細資訊，請參閱[疑難排解：可用性群組超過 RPO](troubleshoot-availability-group-exceeded-rpo.md).  
+ 兩個實用的效能計數器 [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Flow Control Time (毫秒/秒)](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，會為您顯示上一秒內已啟動多少次流程控制，以及花費多少時間等候流程控制。 較高的流程控制等候時間會轉譯為較高的 RPO。 針對可能造成較高流程控制等候時間的問題，如需問題類型的詳細資訊，請參閱[疑難排解：可用性群組超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)。  
   
 ##  <a name="estimating-failover-time-rto"></a>預估容錯移轉時間 (RTO)  
  您 SLA 中的 RTO 會取決於您的 Always On 實作在任何給定時間的容錯移轉時間，可以用下列公式表示：  
@@ -136,7 +137,7 @@ ms.locfileid: "51601148"
 
 - **redo_queue_size** (KB) [用於 RTO]：重做佇列大小是其 **last_received_lsn** 與 **last_redone_lsn** 之間的交易記錄大小。 **last_received_lsn** 是記錄檔區塊識別碼，可識別裝載此次要資料庫的次要複本已經接收所有記錄檔區塊到哪一點。 **last_redone_lsn** 是最後一個記錄檔記錄的記錄序號，而該記錄在次要資料庫上重做。 根據這兩個值，我們可以找出起始記錄區塊 (**last_received_lsn**) 和結尾記錄區塊 (**last_redone_lsn**) 的識別碼。 這兩個記錄區塊之間的空格接著可以代表尚未重做交易記錄區塊數目。 這是以 KB 來測量。
 -  **redo_rate** (KB/秒) [用於 RTO]：累加值，在耗用期間，代表次要資料庫上已重做的交易記錄數量 (KB) (以KB/秒為單位)。 
-- **last_commit_time** (日期時間) [用於 RPO]：針對主要資料庫，**last_commit_time** 是認可最新交易的時間。 針對次要資料庫，**last_commit_time** 是主要資料庫上已在次要資料庫上成功強化的交易最新認可時間。 因為次要複本上的這個值應該與主要複本上的相同值同步，所以這兩個值之間的任何差距就是預估資料遺失 (RPO)。  
+- **last_commit_time** (Datetime) [用於 RPO]：針對主要資料庫，**last_commit_time** 是認可最新交易的時間。 針對次要資料庫，**last_commit_time** 是主要資料庫上已在次要資料庫上成功強化的交易最新認可時間。 因為次要複本上的這個值應該與主要複本上的相同值同步，所以這兩個值之間的任何差距就是預估資料遺失 (RPO)。  
  
 ## <a name="estimate-rto-and-rpo-using-dmvs"></a>使用 DMV 預估 RTO 和 RPO
 
@@ -328,7 +329,7 @@ ms.locfileid: "51601148"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>監視 RTO 和 RPO  
- 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似 [Always On 健康情況模型，第 2 部分：擴充健康情況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)中提供的 GUI 教學課程。  
+ 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似 [Always On 健全狀況模型，第 2 部分：擴充健全狀況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)中提供的 GUI 教學課程。  
   
  [預估容錯移轉時間 (RTO)](#BKMK_RTO) 和[預估潛在資料遺失 (RPO)](#BKMK_RPO) 中容錯移轉時間和潛在資料遺失的元素，會提供為原則管理 Facet **資料庫複本狀態**中便利的效能計量 (請參閱[檢閱 SQL Server 物件的原則式管理 Facet](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md))。 您可以依排程監視這兩個計量，並在計量分別超過您的 RTO 和 RPO 時收到警示。  
   
@@ -420,7 +421,7 @@ ms.locfileid: "51601148"
   
              此設定可讓原則評估結果在 Always On 儀表板中顯示。  
   
-        -   **描述**：**目前的複本擁有已超過 10 分鐘的 RTO，假設 1 分鐘的額外負荷進行探索及容錯移轉。您應該立即調查個別的伺服器執行個體上的效能問題。**  
+        -   **描述**：**目前複本擁有已超過 10 分鐘的 RTO，假設 1 分鐘的額外負荷進行探索及容錯移轉。您應該立即調查個別的伺服器執行個體上的效能問題。**  
   
         -   **要顯示的文字**：**已超過 RTO！**  
   
@@ -457,8 +458,8 @@ ms.locfileid: "51601148"
   
 |狀況|Description|  
 |--------------|-----------------|  
-|[偵錯：可用性群組超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|在自動容錯移轉或規劃的手動容錯移轉之後若未遺失資料，容錯移轉時間會超過您的 RTO。 或者，當您評估同步認可次要複本 (例如自動容錯移轉夥伴) 的容錯移轉時間時，發現它超過您的 RTO。|  
-|[偵錯：可用性群組超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  
+|[疑難排解：可用性群組已超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|在自動容錯移轉或規劃的手動容錯移轉之後若未遺失資料，容錯移轉時間會超過您的 RTO。 或者，當您評估同步認可次要複本 (例如自動容錯移轉夥伴) 的容錯移轉時間時，發現它超過您的 RTO。|  
+|[疑難排解：可用性群組已超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  
 |[疑難排解：對主要複本的變更未反映在次要複本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|用戶端應用程式在主要複本上成功完成更新，但是查詢次要複本卻顯示未反映變更。|  
   
 ##  <a name="BKMK_XEVENTS"></a> 實用的擴充事件  

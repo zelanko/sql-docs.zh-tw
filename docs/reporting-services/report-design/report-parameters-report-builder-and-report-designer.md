@@ -1,9 +1,11 @@
 ---
 title: 報表參數 (報表產生器和報表設計師) | Microsoft Docs
-ms.date: 10/17/2016
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: 本主題描述 Reporting Services 報表參數的一般用法、您可以設定的屬性，以及其他資訊。
+ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.general.f1
@@ -15,26 +17,25 @@ f1_keywords:
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa92c44ff8410049e32ba7ddba2c90fcd07c2821
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032077"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215019"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和原生模式
+
   本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和報表設計師中建立的分頁報表中，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式和原生模式|  
-  
- 若要嘗試自行將參數加入報表，請參閱 [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)中建立的行動報表。  
+ 
+若要嘗試自行將參數新增至報表，請參閱[教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)。  
     
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> 參數的一般使用方式  
  以下提供部分最常使用參數的方式。  
   
- **控制分頁和行動報表資料**  
+**控制分頁和行動報表資料**  
   
 -   透過撰寫包含變數的資料集查詢，在資料來源篩選分頁報表資料。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "50032077"
   
 -   可讓使用者指定值，以自訂分頁報表中的資料。 例如，提供兩個參數，做為銷售資料的開始日期和結束日期。  
   
- **連接相關報表**  
+**連接相關報表**  
   
 -   使用參數，將主報表與鑽研報表、子報表和連結報表產生關聯。 當您設計一組報表時，可以將每份報表設計為可回答某些問題。 每份報表對於相關資訊都會提供不同的檢視或不同的詳細程度。 若要提供一組相關聯的報表，請針對目標報表上的相關資料建立參數。  
   
@@ -52,7 +53,7 @@ ms.locfileid: "50032077"
   
 -   為多位使用者自訂參數集。 根據報表伺服器上的銷售報表建立兩個連結的報表。 其中一個連結的報表使用銷售人員的預先定義參數值，另一個連結的報表則使用銷售經理的預先定義參數值。 這兩個報表會使用相同的報表定義。  
   
- **變更報表呈現方式**  
+**變更報表呈現方式**  
   
 -   透過 URL 要求傳送命令到報表伺服器，以自訂報表的轉譯。 如需詳細資訊，請參閱 [URL 存取 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) 和[在 URL 內傳遞報表參數](../../reporting-services/pass-a-report-parameter-within-a-url.md)。  
   
@@ -105,9 +106,9 @@ ms.locfileid: "50032077"
   
  如需詳細資訊，請參閱本主題中的＜ [資料集查詢](#bkmk_Dataset_Parameters) ＞。  
   
- **手動建立參數**  
+**手動建立參數**  
   
- 從 [報表資料] 窗格手動建立參數。 您可以設定報表參數，讓使用者能夠以互動的方式輸入值，協助自訂報表的內容或外觀。 您也可以設定報表參數，讓使用者無法變更預先設定的值。  
+從 [報表資料] 窗格手動建立參數。 您可以設定報表參數，讓使用者能夠以互動的方式輸入值，協助自訂報表的內容或外觀。 您也可以設定報表參數，讓使用者無法變更預先設定的值。  
   
 > [!NOTE]  
 >  由於參數是在伺服器上獨立管理，所以使用新的參數設定來重新發行主報表時，將不會覆寫此報表的現有參數設定。  
@@ -210,32 +211,11 @@ ms.locfileid: "50032077"
 >   
 >  如果報表參數未繫結至資料集參數，且參數值有包含在報表中，則報表使用者就可以在參數值中輸入運算式語法或 URL，並將報表轉譯為 Excel 或 HTML。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
 >   
->  若要減輕不小心執行惡意指令碼的風險，請只從信任的來源開啟轉譯的報表。 如需保護報表的詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
-  
-##  <a name="bkmk_How_To_Topics"></a> 如何主題  
- 本節列出的程序，為您逐步示範如何使用參數和篩選。  
-  
--   [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [為報表參數加入、變更或刪除可用的值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [為報表參數加入、變更或刪除預設值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [將串聯參數加入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [加入子報表和參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [自訂報表中的參數窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
+>  若要減輕不小心執行惡意指令碼的風險，請只從信任的來源開啟轉譯的報表。 如需保護報表安全的詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  
 
 ##  <a name="bkmk_Related_Topics"></a> 相關章節  
- [設定 SSRS 報表參數 (測驗)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
-  
- [教學課程：將參數加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

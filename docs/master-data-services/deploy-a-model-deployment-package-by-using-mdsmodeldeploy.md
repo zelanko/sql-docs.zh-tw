@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95ca303d9bed86f92cbd58776d4a24c4d92cce2a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 99e11038cbc7315ff485177f9270e6f0fba74142
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398198"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52823692"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
 
@@ -49,7 +48,7 @@ ms.locfileid: "52398198"
   
 1.  決定您要部署新的模型、模型的複製，還是更新之前複製的模型。 如需詳細資訊，請參閱[模型部署選項 &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)。  
   
-2.  開啟系統管理員：命令提示字元，並導覽至 MDSModelDeploy.exe。  
+2.  開啟 [系統管理員：命令提示字元]，並巡覽至 MDSModelDeploy.exe。  
   
     -   如果 MDS 已安裝在預設位置，此工具會在 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration 中。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "52398198"
   
  **注意：**  
   
--   如果套件中的訂閱檢視與現有模型中的訂閱檢視同名，就會顯示這項警告： **部署者訂閱檢視已重新命名** ，且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
+-   如果套件中訂閱檢視與現有模型中訂閱檢視同名，就會顯示這項警告：**部署者訂閱檢視已重新命名**，且會將檢視建立為 *modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
   
 -   部署程序有四個步驟：  
   

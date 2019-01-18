@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 47d911c6a05af96d042211f98b5365230dd57084
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d89d70b7aae73acd965f053a993432c62878351f
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525197"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979644"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ AND instance_name = '_Total'
     
     登錄項目名稱 = CustomerFeedback
     
-    項目類型 DWORD：0 為選擇退出，1 為選擇加入
+    項目類型 DWORD：0 為退出；1 為加入
     
     {InstanceID} 是指執行個體類型和執行個體，如下列範例所示：
 
@@ -91,18 +91,18 @@ AND instance_name = '_Total'
     
     登錄項目名稱 = CustomerFeedback
     
-    項目類型 DWORD：0 為選擇退出，1 為選擇加入
+    項目類型 DWORD：0 為退出；1 為加入
 
 > [!NOTE]
 > {Major Version} 是指 SQL Server 版本。例如，140 指的是 SQL Server 2017
 
-- 針對 SQL Server Management Studio：
+- 針對 SQL Server Management Studio 17：
   
-    子機碼 = HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\140
+    子機碼 = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
 
-    登錄項目名稱 = CustomerFeedback
+    登錄項目名稱 = UserFeedbackOptIn
 
-    項目類型 DWORD：0 為選擇退出，1 為選擇加入
+    項目類型 DWORD：0 為退出；1 為加入
 
     此外，SSMS 17.x 是以 Visual Studio 2015 Shell 為基礎，而 Visual Studio 安裝預設會啟用客戶回函。  
 
@@ -114,6 +114,13 @@ AND instance_name = '_Total'
 
     SQL Server 2017 使用量資料收集會接受這些登錄子機碼上以登錄為基礎的群組原則。
 
+- 針對 SQL Server Management Studio 18：
+    
+    子機碼 = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
+
+    登錄項目名稱 = UserFeedbackOptIn
+
+    項目類型 DWORD：0 為退出；1 為加入
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>設定損毀傾印收集的登錄子機碼
 
 類似於舊版 SQL Server 中的行為，使用 SQL Server 2017 Enterprise 的客戶可以在伺服器上設定群組原則設定，來選擇加入或退出損毀傾印收集。 這是透過設定以登錄為基礎的原則來完成。 相關的登錄子機碼與設定如下： 

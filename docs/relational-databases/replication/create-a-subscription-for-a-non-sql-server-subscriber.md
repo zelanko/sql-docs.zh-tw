@@ -15,27 +15,27 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4e6ffeeeb6c6c39b161c6957677f65843959b13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540224"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205237"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對非 SQL Server 訂閱者建立訂閱。 異動複寫與快照式複寫支援向非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者發行資料。 如需有關支援之訂閱者平台的資訊，請參閱＜ [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中針對非 SQL Server 訂閱者建立訂閱。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對非 SQL Server 訂閱者建立訂閱。 異動複寫與快照式複寫支援向非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者發佈資料。 如需有關支援之訂閱者平台的資訊，請參閱＜ [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)中針對非 SQL Server 訂閱者建立訂閱。  
   
  **本主題內容**  
   
 -   **若要針對非 SQL Server 訂閱者建立訂閱，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 若要為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立訂閱：  
+ 若要為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立訂閱：  
   
 1.  在「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 散發者」上安裝並設定適當的用戶端軟體和 OLE DB 提供者。 如需相關資訊，請參閱 [Oracle Subscribers](../../relational-databases/replication/non-sql/oracle-subscribers.md) 及 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "52540224"
  「快照集代理程式」完成產生快照集後，會顯示一個訊息，例如「[100%] 已產生了 17 個發行項的快照集」。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 您可以使用複寫預存程序，以程式設計的方式建立非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發送訂閱。  
+ 您可以使用複寫預存程序，以程式設計的方式建立非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者的發送訂閱。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  

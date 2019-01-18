@@ -1,6 +1,7 @@
 ---
-title: Always On 可用性群組擴充事件 (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 設定可用性群組的延伸事件
+description: SQL Server 定義特定於 Always On 可用性群組的延伸事件。 當您對可用性群組進行疑難排解時，可以在某個工作階段中監視這些擴充事件來協助診斷根本原因。
+ms.custom: ag-guide, seodec18
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,16 +11,16 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b33f51b741d9bb97882fb2662111833bb4937a0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207567"
 ---
-# <a name="always-on-availability-groups-extended-events"></a>Always On 可用性群組擴充事件
+# <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SQL Server 定義專屬於 Always On 可用性群組的擴充事件。 當您對可用性群組進行疑難排解時，可以在某個工作階段中監視這些擴充事件來協助診斷根本原因。 您可以使用下列查詢檢視可用性群組擴充事件：  
+  SQL Server 定義特定於 Always On 可用性群組的延伸事件。 當您對可用性群組進行疑難排解時，可以在某個工作階段中監視這些擴充事件來協助診斷根本原因。 您可以使用下列查詢檢視可用性群組擴充事件：  
   
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  

@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675127"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203037"
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51675127"
  客戶的用戶端應用程式和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 皆在其業務位置的內部部署執行。 而客戶希望聘雇外部廠商來管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 為了保護儲存於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的機密資料，客戶使用了 [永遠加密] 確保資料庫系統管理員和應用程式系統管理員之間的責任有所區隔。 客戶可將 [永遠加密] 金鑰的純文字值儲存在用戶端應用程式可以存取的信任的金鑰存放區中。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員不具備金鑰的存取權，因此無法解密儲存於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的機密資料。  
   
 ### <a name="client-on-premises-with-data-in-azure"></a>內部部署用戶端與 Azure 中的資料  
- 客戶在其業務位置擁有內部部署的用戶端應用程式。 該應用程式會處理儲存於 Azure 託管之資料庫 ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或在 Microsoft Azure 虛擬機器中執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) 中的敏感性資料。 客戶可使用 [永遠加密] 並將 Always Encrypted 金鑰儲存在內部部署託管之受信任的金鑰存放區中，以確保 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 雲端系統管理員無法存取敏感性資料。  
+ 客戶在其業務位置擁有內部部署的用戶端應用程式。 該應用程式會處理儲存於 Azure 裝載資料庫 ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 或在 Microsoft Azure 虛擬機器中執行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) 中的敏感性資料。 客戶可使用 [永遠加密] 並將 Always Encrypted 金鑰儲存在內部部署託管之受信任的金鑰存放區中，以確保 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 雲端系統管理員無法存取敏感性資料。  
   
 ### <a name="client-and-data-in-azure"></a>用戶端和 Azure 中的資料  
  客戶的用戶端應用程式由 Microsoft Azure 託管 (例如，背景工作角色或 Web 角色)，該應用程式也會處理儲存於 Azure 託管之資料庫 (SQL Database 或在 Microsoft Azure 虛擬機器中執行的 SQL Server) 中的敏感性資料。 雖然 [永遠加密] 並未讓資料與雲端系統管理員完全隔離 (亦即託管用戶端層之平台的雲端系統管理員仍可看到資料和金鑰)，客戶仍具有降低安全性攻擊面 (資料庫中一律會加密資料) 的優勢。  

@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 12/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,25 +30,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06f59cc72fef384ad68833a3729c862eaa679ea
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618086"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202558"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  將使用者加入目前資料庫中。 以下列出 11 種使用者類型與最基本的語法範例：  
+  將使用者加入目前資料庫中。 以下列出 12 種使用者類型與最基本的語法範例：  
   
-**具有 master 登入的使用者**：這是最常見的使用者類型。  
+**具有 master 登入的使用者** - 這是最常見的使用者類型。  
   
 -   具有 Windows Active Directory 帳戶登入的使用者。 `CREATE USER [Contoso\Fritz];`     
 -   依據 Windows 群組登入的使用者。 `CREATE USER [Contoso\Sales];`   
 -   依據使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入的使用者。 `CREATE USER Mary;`  
   
-**在資料庫進行驗證的使用者**：此選項有助於讓您的資料庫更具可攜性。  
+**在資料庫進行驗證的使用者** - 此選項有助於讓您的資料庫更具可攜性。  
  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 一律允許。 只有 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中的自主資料庫允許。  
   
 -   依據沒有登入之 Windows 使用者的使用者。 `CREATE USER [Contoso\Fritz];`    
@@ -63,7 +63,7 @@ ms.locfileid: "47618086"
   
 -   依據沒有登入之 Windows 群組，但可透過不同的 Windows 群組成員資格連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的使用者。 `CREATE USER [Contoso\Fritz];`  
   
-**無法驗證的使用者**：這些使用者無法登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**無法驗證的使用者** - 這些使用者無法登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 -   沒有登入的使用者。 無法登入但可獲得權限。 `CREATE USER CustomApp WITHOUT LOGIN;`    
 -   依據憑證的使用者。 無法登入，但可獲得權限而且可簽署模組。 `CREATE USER TestProcess FOR CERTIFICATE CarnationProduction50;`  
@@ -74,7 +74,7 @@ ms.locfileid: "47618086"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -84,7 +84,7 @@ CREATE USER user_name
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that authenticate at the database  
+-- Users that authenticate at the database  
 CREATE USER   
     {  
       windows_principal [ WITH <options_list> [ ,... ] ]  
@@ -95,7 +95,7 @@ CREATE USER
   
  [ ; ]  
   
---Users based on Windows principals that connect through Windows group logins  
+-- Users based on Windows principals that connect through Windows group logins  
 CREATE USER   
     {   
           windows_principal [ { FOR | FROM } LOGIN windows_principal ]  
@@ -104,7 +104,7 @@ CREATE USER
     [ WITH <limited_options_list> [ ,... ] ]   
 [ ; ]  
   
---Users that cannot authenticate   
+-- Users that cannot authenticate   
 CREATE USER user_name   
     {  
          WITHOUT LOGIN [ WITH <limited_options_list> [ ,... ] ]  
@@ -125,8 +125,23 @@ CREATE USER user_name
   
 -- SQL Database syntax when connected to a federation member  
 CREATE USER user_name  
-[;]  
-```  
+[;]
+
+-- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+CREATE USER user_name   
+    [   { FOR | FROM } LOGIN login_name  ]  
+    | FROM EXTERNAL PROVIDER
+    [ WITH <limited_options_list> [ ,... ] ]   
+[ ; ]  
+
+<limited_options_list> ::=  
+      DEFAULT_SCHEMA = schema_name 
+    | DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }   
+    | ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | OFF ] ] 
+```
+
+> [!IMPORTANT]
+> SQL Database 受控執行個體的 Azure AD 登入處於**公開預覽**狀態。
 
 ```  
 -- Syntax for Azure SQL Data Warehouse  
@@ -162,7 +177,7 @@ CREATE USER user_name
  指定在這個資料庫內用來識別使用者的名稱。 *user_name* 是一種 **sysname**。 該名稱長度最多可達 128 個字元。 當建立依據 Windows 主體的使用者時，除非指定另一個使用者名稱，否則 Windows 主體名稱會成為使用者名稱。  
   
  LOGIN *login_name*  
- 指定目前建立之資料庫使用者的登入。 *login_name* 必須是伺服器中的有效登入。 可以是依據 Windows 主體 (使用者或群組) 的登入，或是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 當這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入進入資料庫時，它會取得正在建立之資料庫使用者的名稱和識別碼。 在建立與 Windows 主體對應的登入時，請使用以下格式：**[**_\<domainName\>_**\\**_\<loginName\>_**]**。 如需範例，請參閱[語法摘要](#SyntaxSummary)。  
+ 指定目前建立之資料庫使用者的登入。 *login_name* 必須是伺服器中的有效登入。 可以是依據 Windows 主體 (使用者或群組) 的登入，或是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入。 當這個 SQL Server 登入進入資料庫時，它會取得正在建立之資料庫使用者的名稱和識別碼。 在建立與 Windows 主體對應的登入時，請使用以下格式：**[**_\<domainName\>_**\\**_\<loginName\>_**]**。 如需範例，請參閱[語法摘要](#SyntaxSummary)。  
   
  如果 CREATE USER 陳述式是 SQL 批次中的唯一陳述式，Windows Azure SQL Database 會支援 WITH LOGIN 子句。 如果 CREATE USER 陳述式不是 SQL 批次中的唯一陳述式或是在動態 SQL 中執行，則不支援 WITH LOGIN 子句。  
   
@@ -170,12 +185,12 @@ CREATE USER user_name
  指定在解析這個資料庫使用者的物件名稱時，伺服器所搜尋到的第一個結構描述。  
   
  '*windows_principal*'  
- 為正在建立的資料庫使用者指定 Windows 主體。 *windows_principal* 可以是 Windows 使用者或 Windows 群組。 即使 *windows_principal* 不具備登入，也可以建立使用者。 當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果 *windows_principal* 不具備登入，則 Windows 主體必須透過具有登入的 Windows 群組成員資格在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行驗證，或者，連接字串必須將自主資料庫指定為初始目錄。 要透過 Windows 主體建立使用者時，請使用以下格式：**[**_\<domainName\>_**\\**_\<loginName\>_**]**。 如需範例，請參閱[語法摘要](#SyntaxSummary)。 具有 Active Directory 使用者身分的使用者，其名稱僅限 21 個字元以內。    
+ 為正在建立的資料庫使用者指定 Windows 主體。 *windows_principal* 可以是 Windows 使用者或 Windows 群組。 即使 *windows_principal* 不具備登入，也可以建立使用者。 當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，如果 *windows_principal* 不具備登入，則 Windows 主體必須透過具有登入的 Windows 群組成員資格在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 進行驗證，或者，連接字串必須將自主資料庫指定為初始目錄。 要透過 Windows 主體建立使用者時，請使用以下格式：**[**_\<domainName\>_**\\**_\<loginName\>_**]**。 如需範例，請參閱[語法摘要](#SyntaxSummary)。 具有 Active Directory 使用者身分的使用者，其名稱僅限 21 個字元以內。
   
  '*Azure_Active_Directory_principal*'  
  **適用於**：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
   
- 為所要建立的資料庫使用者指定 Azure Active Directory 主體。 *Azure_Active_Directory_principal* 可以是 Azure Active Directory 使用者或 Azure Active Directory 群組  (Azure Active Directory 使用者中不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中使用 Windows 驗證登入；只有資料庫使用者可以)。連接字串必須將自主資料庫指定為初始目錄。 
+ 為所要建立的資料庫使用者指定 Azure Active Directory 主體。 *Azure_Active_Directory_principal* 可以是 Azure Active Directory 使用者、Azure Active Directory 群組或 Azure Active Directory 應用程式。 (Azure Active Directory 使用者中不能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中使用 Windows 驗證登入；只有資料庫使用者可以)。連接字串必須將自主資料庫指定為初始目錄。
 
  針對使用者，您可以使用其網域主體的完整別名。   
  
@@ -220,7 +235,7 @@ SID = *sid*
   
  僅適用於具有密碼之自主資料庫使用者 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證)。 指定新資料庫使用者的 SID。 如果未選取這個選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將自動指派 SID。 使用 SID 參數即可在多個資料庫中建立具有相同識別 (SID) 的使用者。 當您在多個資料庫中建立使用者以準備 Always On 容錯移轉時，這會很有用。 若要判斷使用者的 SID，請查詢 sys.database_principals。  
   
-ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
+ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
  **適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
  在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這會讓使用者得以在資料表或資料庫間大量複製加密資料，而無須解密資料。 預設值為 OFF。  
@@ -243,7 +258,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]
   
  WITHOUT LOGIN 子句會建立沒有對應至 SQL Server 登入的使用者。 這個使用者可以用 guest 的身分連接到其他資料庫。 可指派權限給這位沒有登入的使用者，而且在安全性內容變更為沒有登入的使用者時，原始使用者會收到沒有登入之使用者的權限。 請參閱範例 [D. 建立及使用不含登入的使用者](#withoutLogin)。  
   
- 只有對應到 Windows 主體的使用者可以包含反斜線字元 (**\\**)。  
+ 只有對應到 Windows 主體的使用者可以包含反斜線字元 (**\\**)。
   
  您不能以 CREATE USER 建立 guest 使用者，因為每一個資料庫都已經有 guest 使用者了。 您可以授與 guest 使用者 CONNECT 權限來啟用它，如下所示：  
   
@@ -252,7 +267,15 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
- 您可以在 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 目錄檢視中，看到資料庫使用者的資訊。  
+ 您可以在 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 目錄檢視中，看到資料庫使用者的資訊。
+
+新的語法延伸模組 **FROM EXTERNAL PROVIDER** 可用於在 SQL Database 受控執行個體中建立伺服器層級的 Azure AD 登入。 Azure AD 登入可以讓資料庫層級的 Azure AD 主體對應到伺服器層級的 Azure AD 登入。 若要從 Azure AD 登入建立 Azure AD 使用者，請使用下列語法：
+
+`CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
+
+在 Azure SQL Database 受控執行個體中建立使用者時，login_name 必須對應到現有的 Azure AD 登入，否則使用 **FROM EXTERNAL PROVIDER** 子句只會建立 Azure AD 使用者，而在 master 資料庫中不會建立登入。 例如，此命令會建立包含的使用者：
+
+`CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> 語法摘要  
  **具有 master 登入的使用者**  
@@ -306,7 +329,7 @@ GO
 -   `CREATE USER KEYUSER FROM ASYMMETRIC KEY SecureKey`  
   
 ## <a name="security"></a>Security  
- 建立使用者會授與資料庫存取權，但不會自動授與資料庫物件的任何存取權。 在建立使用者之後，一般動作是將使用者加入至有權存取資料庫物件的資料庫角色，或將物件權限授與使用者。 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
+ 建立使用者會授與資料庫存取權，但不會自動授與資料庫物件的任何存取權。 在建立使用者之後，一般動作是將使用者新增至有權存取資料庫物件的資料庫角色，或將物件權限授與給使用者。 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
 ### <a name="special-considerations-for-contained-databases"></a>適用於自主資料庫的特殊考量  
  當連接到自主資料庫時，如果使用者不具有 **master** 資料庫的登入，則連接字串必須包含自主資料庫名稱以作為為初始目錄。 具有密碼之自主資料庫使用者永遠需要初始目錄參數。  
@@ -325,7 +348,7 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. 依據 SQL Server 登入建立資料庫使用者  
- 下列範例會先建立一個名為 `AbolrousHazem` 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，然後在 `AbolrousHazem` 建立對應的資料庫使用者 `AdventureWorks2012`。  
+ 下列範例會先建立一個名為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `AbolrousHazem` 登入，然後在 `AbolrousHazem` 建立對應的資料庫使用者 `AdventureWorks2012`。  
   
 ```  
 CREATE LOGIN AbolrousHazem   
@@ -366,7 +389,7 @@ GO
 ```  
   
 ###  <a name="withoutLogin"></a> D. 建立及使用不含登入的使用者  
- 下列範例會建立未對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的資料庫使用者 `CustomApp`。 然後此範例會授與使用者 `adventure-works\tengiz0` 權限來模擬 `CustomApp` 使用者。  
+ 下列範例會建立未對應至 `CustomApp` 登入的資料庫使用者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 然後此範例會授與使用者 `adventure-works\tengiz0` 權限來模擬 `CustomApp` 使用者。  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -439,8 +462,44 @@ CREATE USER [Chin]
 WITH   
       DEFAULT_SCHEMA = dbo  
     , ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON ;  
-```  
-  
+```
+
+### <a name="i-create-an-azure-ad-user-from-an-azure-ad-login-in-sql-database-managed-instance"></a>I. 在 SQL Database 受控執行個體中從 Azure AD 登入建立 Azure AD 使用者
+
+ 若要從 Azure AD 登入來建立 Azure AD 使用者，請使用下列語法。
+
+ 使用授與 `sysadmin` 角色的 Azure AD 登入來登入受控執行個體。 下列範例會從登入 bob@contoso.com 來建立 Azure AD 使用者 bob@contoso.com。 此登入是在 [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 範例中建立。
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
+GO
+```
+
+> [!IMPORTANT]
+> 從 Azure AD 登入建立 **USER** 時，將 *user_name* 指定為來自 **LOGIN** 的相同 *login_name*。
+
+支援從是群組的 Azure AD 登入，將 Azure AD 使用者建立為群組。
+
+```sql
+CREATE USER [AAD group] FROM LOGIN [AAD group];
+GO
+```
+
+您也可以從是群組的 Azure AD 登入建立 Azure AD 使用者。
+
+```sql
+CREATE USER [bob@contoso.com] FROM LOGIN [AAD group];
+GO
+```
+
+### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. 建立不具資料庫之 AAD 登入的 Azure AD 使用者
+
+下列語法用來在 SQL Database 受控執行個體資料庫 (包含的使用者) 中建立 Azure AD 使用者 bob@contoso.com：
+
+```sql
+CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;
+GO
+```
 
 ## <a name="next-steps"></a>後續步驟  
 一旦建立使用者之後，請考慮使用 [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) 陳述式，將使用者新增至資料庫角色。  

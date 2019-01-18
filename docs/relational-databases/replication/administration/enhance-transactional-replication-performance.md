@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a5c17d05b00c711c311e41ac98add0e6fd549f58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535758"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207087"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52535758"
   
      將代理程式設定為連續執行來代替建立頻繁的排程 (例如每分鐘) 可提升複寫效能，因為代理程式不必啟動和停止。 當您將「散發代理程式」設定為連續執行時，變更將以低度延遲傳播到拓撲中連接的其他伺服器。 如需詳細資訊，請參閱：  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>散發代理程式和記錄讀取器代理程式參數  
 代理程式設定檔參數會經常調整，目的是要讓「記錄讀取器」和「散發代理程式」的輸送量與高流量 OLTP 系統一同增加。 
@@ -142,11 +142,11 @@ ms.locfileid: "52535758"
 
 在這段查詢逾時期間，您可能會注意到散發代理程式效能計數器有下列趨勢： 
 
-- **Dist: Delivered Cmds/sec** 效能計數器的值一直是 0。
-- **Dist: Delivered Trans/sec** 效能計數器的值一直是 0。
-- **Dist: Delivery Latency** 效能計數器回報值的增加，直到執行緒死結解決為止。
+- **Dist: Delivered Cmds/sec** 效能計數器的值一律為 0。
+- **Dist: Delivered Trans/sec** 效能計數器的值一律為 0。
+- **Dist: Delivery Latency** 效能計數器會報告值的增加，直到執行緒死結解決為止。
 
-SQL Server 線上叢書的＜複寫散發代理程式＞中，包含 *SubscriptionStreams* 參數的以下描述：「如果其中一個連線無法執行或認可，所有連線就都會中止目前的批次，而代理程式會使用單一資料流來重試失敗的批次。」
+《SQL Server 線上叢書》中的＜複寫散發代理程式＞主題包含 *SubscriptionStreams* 參數的下列描述：「如果有無法執行或認可某個連線，則所有連線都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。」
 
 散發代理程式會使用一個工作階段來重試無法套用的批次。 在散發代理程式成功套用批次之後，散發代理程式會繼續使用多個工作階段，而不會重新啟動。
 
@@ -156,7 +156,7 @@ SQL Server 線上叢書的＜複寫散發代理程式＞中，包含 *Subscripti
 認可一組交易的負擔是固定的；透過以較低頻率認可較大的交易量，負擔會分散到較大量的資料。  增加 CommitBatchSize (最多到 200) 可以改善效能，因為可提交更多的交易給訂閱者。 但是，由於套用變更的成本還受限於其他因素，例如包含記錄檔之磁碟的最大 I/O，因此增加此參數的好處不那麼明顯。 此外，還要考慮以下的權衡得失：任何導致「散發代理程式」重新啟動的失敗都必須復原，並重新套用更大的交易數。 對於不穩定的網路，當發生錯誤時，值越低導致的錯誤就越少，要復原並重新套用的交易數也越少。  
   
 
-##<a name="see-more"></a>查看更多
+## <a name="see-more"></a>查看更多
   
 [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

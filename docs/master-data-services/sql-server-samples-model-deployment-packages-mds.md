@@ -5,8 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - Master Data Services
@@ -15,12 +14,12 @@ ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5b07e836d2e1f23f89c6dc992a080b8ab0e85fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db84b03b315d9345056cad9653729415b5dcfccf
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843156"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205817"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 範例：模型部署套件 (MDS)
 
@@ -30,26 +29,26 @@ ms.locfileid: "47843156"
   
  如需如何部署範例模型套件的指示，請參閱 [部署範例模型和資料](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)。 您可以使用 [MDSModelDeploy 工具](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)來部署範例模型套件。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **範例更新 - [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
->   
+> 
 >  範例套件已經過更新，可支援下列新的功能。  
->   
+> 
 >  -   顯示多對多關聯性。  
->   
+> 
 >      如需詳細資訊，請參閱 [範例模型中的 M2M 關聯性](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md#M2MSample)。  
-
+> 
 > -   限制網域屬性允許的值。  
->   
+> 
 >      如需詳細資訊，請參閱[建立網域屬性 &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)。  
 > -   需要核准實體變更。  
->   
+> 
 >      如需詳細資訊，請參閱[需要核准 &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md)。  
 > -   在商務規則中使用 Not 和 Else 運算子  
->   
+> 
 >      如需詳細資訊，請參閱 [商務規則範例](../master-data-services/business-rule-examples-master-data-services.md)。  
 > -   實作自訂索引  
->   
+> 
 >      如需詳細資訊，請參閱[自訂索引 &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)。  
  
 

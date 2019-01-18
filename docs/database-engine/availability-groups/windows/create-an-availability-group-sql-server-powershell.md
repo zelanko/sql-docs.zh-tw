@@ -1,6 +1,7 @@
 ---
-title: 建立可用性群組 (SQL Server PowerShell) | Microsoft Docs
-ms.custom: ''
+title: 使用 PowerShell 建立可用性群組
+description: 使用 PowerShell 建立 Always On 可用性群組的步驟。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52b7ef84afca33d899cf74fafa7f6f7bd4dd34ae
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600688"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209977"
 ---
-# <a name="create-an-availability-group-sql-server-powershell"></a>建立可用性群組 (SQL Server PowerShell)
+# <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 建立 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，透過 PowerShell Cmdlet 建立及設定 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
   
@@ -30,15 +31,15 @@ ms.locfileid: "51600688"
   
      [必要條件、限制及建議](#PrerequisitesRestrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
      [工作及對應 PowerShell 指令程式的摘要](#SummaryPSStatements)  
   
      [若要設定和使用 SQL Server PowerShell 提供者](#PsProviderLinks)  
   
--   **使用下列程序建立及設定可用性群組**  [使用 PowerShell 建立和設定可用性群組](#PowerShellProcedure)  
+-   **若要建立和設定可用性群組，請使用：**[使用 PowerShell 建立和設定可用性群組](#PowerShellProcedure)  
   
--   **範例**  [使用 PowerShell 建立可用性群組](#ExampleConfigureGroup)  
+-   **範例：**[使用 PowerShell 建立可用性群組](#ExampleConfigureGroup)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -105,7 +106,7 @@ ms.locfileid: "51600688"
 > [!NOTE]  
 >  如果伺服器執行個體的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶在不同的網域使用者帳戶下執行，請在每一個伺服器執行個體上建立其他伺服器執行個體的登入，並將此登入 CONNECT 權限授與本機資料庫鏡像端點。  
   
-##  <a name="ExampleConfigureGroup"></a> 範例：使用 PowerShell 建立和設定可用性群組  
+##  <a name="ExampleConfigureGroup"></a> 範例：使用 PowerShell 建立可用性群組  
  下列 PowerShell 範例會建立及設定一個名為 `MyAG` 的簡單可用性群組，其包含兩個可用性複本和一個可用性資料庫。 範例：  
   
 1.  備份 `MyDatabase` 及其交易記錄。  
@@ -236,19 +237,19 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **部落格：**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases (AlwaysOn - HADRON 學習系列：資料庫啟用 HADRON 時工作者集區的使用方式)](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：具備 HADRON 功能之資料庫的工作者集區使用方式)  
   
      [Configuring Always On with SQL Server PowerShell (使用 SQL Server PowerShell 設定 AlwaysOn)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/configuring-alwayson-with-sql-server-powershell/)  
   
-     [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 工程師部落格](https://blogs.msdn.com/b/psssql/)  
   
 -   **影片：**  
   
-     [Microsoft SQL Server Code-Named "Denali" AlwaysOn Series,Part 1: Introducing the Next Generation High Availability Solution (Microsoft SQL Server 代碼 "Denali" AlwaysOn 系列第一部分：新一代高可用性解決方案簡介)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 1 部分：新一代高可用性解決方案簡介)  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On (Microsoft SQL Server 代碼 "Denali" AlwaysOn 系列第二部分：使用 AlwaysOn 建立任務關鍵性高可用性解決方案)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 2 部分：使用 Always On 建置任務關鍵性高可用性解決方案)  
   
 -   **白皮書：**  
   

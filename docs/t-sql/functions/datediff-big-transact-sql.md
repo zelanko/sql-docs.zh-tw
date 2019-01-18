@@ -21,12 +21,12 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a2a6dfd98cef225e8ca612d3cce758087663f75
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644846"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046548"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 傳回跨越指定 startdate 和 enddate 之指定 datepart 界限的計數 (作為帶正負號的 Bigint 值)。
 -   每個特定 *datepart* 和該 *datepart* 的縮寫會傳回相同的值。  
   
-針對超出 **bigint** 範圍 (-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807) 的傳回值，`DATEDIFF_BIG` 會傳回錯誤。 針對 **millisecond**，*enddate* 與 *startdate* 之間的最大差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年。
+針對超出 **bigint** 範圍 (-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807) 的傳回值，`DATEDIFF_BIG` 會傳回錯誤。 不同於 `DATEDIFF` 會傳回 **int**，因此可使用 **minute** 或更高的精確度進行溢位，`DATEDIFF_BIG` 只能在使用 **nanosecond** 精確度 (其中 *enddate* 和 *startdate* 之間的差距超出 292 年 3 個月 10 天 23 小時 47 分鐘又 16.8547758 秒) 時進行溢位。
   
 如果 *startdate* 和 *enddate* 都只獲指派時間值，且 *datepart* 不是時間 *datepart*，`DATEDIFF_BIG` 會傳回 0。
   
@@ -97,12 +97,12 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 針對用於 *startdate* 或 *enddate* 的 **smalldatetime** 值，`DATEDIFF_BIG` 一律會在傳回值中將秒和毫秒設定為 0，因為 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘。
   
-如果您只有將時間值指派給日期資料類型變數，`DATEDIFF_BIG` 會將遺漏日期部分的值設定為預設值：1900-01-01。 如果您只有將日期值指派給時間或日期資料類型的變數，`DATEDIFF_BIG` 會將遺漏時間部分的值設定為預設值：00:00:00。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，`DATEDIFF_BIG` 會將遺漏的時間和日期部分設定為預設值。
+如果您只有將時間值指派給日期資料類型變數，`DATEDIFF_BIG` 會將遺漏日期部分的值設定為預設值：`1900-01-01`。 如果您只有將日期值指派給時間或日期資料類型的變數，`DATEDIFF_BIG` 會將遺漏時間部分的值設定為預設值：`00:00:00`。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，`DATEDIFF_BIG` 會將遺漏的時間和日期部分設定為預設值。
   
 如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，`DATEDIFF_BIG` 會將另一個項目的遺漏部分設定為 0。
   
 ## <a name="datepart-boundaries"></a>datepart 界限
-下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近而且時間差距為 .0000001 秒。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF_BIG` 會針對 *datepart* **week** 傳回 0。
+下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近且時間差距為一微秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF_BIG` 會針對 *datepart* **week** 傳回 0。
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -118,11 +118,13 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 ```
   
 ## <a name="remarks"></a>Remarks  
-在 SELECT 中使用 `DATEDIFF_BIG` <list>、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
+您可以在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF_BIG`。
   
 `DATEDIFF_BIG` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF_BIG` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
   
-指定 SET DATEFIRST 對 `DATEDIFF_BIG` 沒有任何作用。 `DATEDIFF_BIG` 一律會使用星期天當作一週的第一天，以確保此函式以具決定性的方式運作。
+指定 `SET DATEFIRST` 對 `DATEDIFF_BIG` 沒有任何作用。 `DATEDIFF_BIG` 一律會使用星期天當作一週的第一天，以確保此函式以具決定性的方式運作。
+
+如果 *enddate* 與 *startdate* 的差距傳回超出 **bigint** 範圍的值，則 `DATEDIFF_BIG` 可使用 **nanosecond** 的精確度進行溢位。
   
 ## <a name="examples"></a>範例 
   
@@ -140,6 +142,66 @@ SELECT DATEDIFF_BIG(day, startDate, endDate) AS 'Duration'
     FROM dbo.Duration;  
 -- Returns: 1  
 ```  
+
+### <a name="finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>求得 startdate 與 enddate 的差距，並以日期部分字串表示
+
+```sql
+DECLARE @date1 DATETIME2, @date2 DATETIME2, @result VARCHAR(100)
+DECLARE @years BIGINT, @months BIGINT, @days BIGINT, @hours BIGINT, @minutes BIGINT, @seconds BIGINT, @milliseconds BIGINT
+
+SET @date1 = '0001-01-01 00:00:00.00000000'
+SET @date2 = '2018-12-12 07:08:01.12345678'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+2017 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```   
 
 請參閱 [DATEDIFF &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-transact-sql.md) 中更緊密相關的範例。
   

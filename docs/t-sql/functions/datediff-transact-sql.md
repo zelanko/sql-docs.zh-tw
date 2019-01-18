@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 12/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e1027474bc84f3e30862ee43a61b3d199e8549
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: 9af12ecd407504e4f04327260ccb446d395c7c9f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970452"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53432701"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,9 +96,9 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="return-value"></a>傳回值  
   
--   每個特定 *datepart* 和該 *datepart* 的縮寫會傳回相同的值。  
+每個特定 *datepart* 和該 *datepart* 的縮寫會傳回相同的值。  
   
-針對超出 **int** 範圍 (-2,147,483,648 到 +2,147,483,647) 的傳回值，`DATEDIFF` 會傳回錯誤。  針對 **millisecond**，*startdate* 和 *enddate* 最大的差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年。
+針對超出 **int** 範圍 (-2,147,483,648 到 +2,147,483,647) 的傳回值，`DATEDIFF` 會傳回錯誤。  針對 **millisecond**，*startdate* 和 *enddate* 最大的差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年 19 天 3 小時 14 分鐘 7 秒。
   
 如果 *startdate* 和 *enddate* 都只獲指派時間值，且 *datepart* 不是時間 *datepart*，`DATEDIFF` 會傳回 0。
   
@@ -106,12 +106,12 @@ DATEDIFF ( datepart , startdate , enddate )
   
 由於 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘，因此當 *startdate* 或 *enddate* 具有 **smalldatetime** 值時，秒和毫秒就一律會在傳回值中設定為 0。
   
-如果您只有將時間值指派給日期資料類型變數，`DATEDIFF` 會將遺漏日期部分的值設定為預設值：1900-01-01。 如果您只有將日期值指派給時間或日期資料類型的變數，`DATEDIFF` 會將遺漏時間部分的值設定為預設值：00:00:00。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，`DATEDIFF` 會將遺漏的時間和日期部分設定為預設值。
+如果您只有將時間值指派給日期資料類型變數，`DATEDIFF` 會將遺漏日期部分的值設定為預設值：`1900-01-01`。 如果您只有將日期值指派給時間或日期資料類型的變數，`DATEDIFF` 會將遺漏時間部分的值設定為預設值：`00:00:00`。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，`DATEDIFF` 會將遺漏的時間和日期部分設定為預設值。
   
 如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，`DATEDIFF` 會將另一個項目的遺漏部分設定為 0。
   
 ## <a name="datepart-boundaries"></a>datepart 界限  
-下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近而且時間差距為 .0000001 秒。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
+下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近而且時間差距為一微秒 (.0000001 秒)。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -127,11 +127,13 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Remarks  
-在 SELECT 中使用 `DATEDIFF` <list>、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
+您可以在 `SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY` 和 `ORDER BY` 子句中使用 `DATEDIFF`。
   
 `DATEDIFF` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
   
-指定 SET DATEFIRST 對 `DATEDIFF` 沒有任何作用。 `DATEDIFF` 一律會使用星期天當作一週的第一天，以確保此函式以具決定性的方式運作。
+指定 `SET DATEFIRST` 對 `DATEDIFF` 沒有任何作用。 `DATEDIFF` 一律會使用星期天當作一週的第一天，以確保此函式以具決定性的方式運作。
+
+如果 *enddate* 與 *startdate* 的差距傳回超出 **int** 範圍的值，則 `DATEDIFF` 可使用 **minute** 或更高的精確度進行溢位。
   
 ## <a name="examples"></a>範例  
 這些範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
@@ -237,11 +239,71 @@ FROM Sales.SalesOrderDetail sod
 WHERE soh.SalesOrderID IN(43659, 58918);  
 GO  
 ```  
+
+### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>I. 求得 startdate 與 enddate 的差距，並以日期部分字串表示
+
+```sql
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
+DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+
+SET @date1 = '1900-01-01 00:00:00.000'
+SET @date2 = '2018-12-12 07:08:01.123'
+
+SELECT @years = DATEDIFF(yy, @date1, @date2)
+IF DATEADD(yy, -@years, @date2) < @date1 
+SELECT @years = @years-1
+SET @date2 = DATEADD(yy, -@years, @date2)
+
+SELECT @months = DATEDIFF(mm, @date1, @date2)
+IF DATEADD(mm, -@months, @date2) < @date1 
+SELECT @months=@months-1
+SET @date2= DATEADD(mm, -@months, @date2)
+
+SELECT @days=DATEDIFF(dd, @date1, @date2)
+IF DATEADD(dd, -@days, @date2) < @date1 
+SELECT @days=@days-1
+SET @date2= DATEADD(dd, -@days, @date2)
+
+SELECT @hours=DATEDIFF(hh, @date1, @date2)
+IF DATEADD(hh, -@hours, @date2) < @date1 
+SELECT @hours=@hours-1
+SET @date2= DATEADD(hh, -@hours, @date2)
+
+SELECT @minutes=DATEDIFF(mi, @date1, @date2)
+IF DATEADD(mi, -@minutes, @date2) < @date1 
+SELECT @minutes=@minutes-1
+SET @date2= DATEADD(mi, -@minutes, @date2)
+
+SELECT @seconds=DATEDIFF(s, @date1, @date2)
+IF DATEADD(s, -@seconds, @date2) < @date1 
+SELECT @seconds=@seconds-1
+SET @date2= DATEADD(s, -@seconds, @date2)
+
+SELECT @milliseconds=DATEDIFF(ms, @date1, @date2)
+
+SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
+     + ISNULL(' ' + CAST(NULLIF(@months,0) AS VARCHAR(10)) + ' months,','')    
+     + ISNULL(' ' + CAST(NULLIF(@days,0) AS VARCHAR(10)) + ' days,','')
+     + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
+     + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
+     + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
+          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+               ELSE '' END 
+          + ' seconds','')
+
+SELECT @result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] 
+
+```
+118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 這些範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
   
-### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. 指定 startdate 和 enddate 的資料行  
+### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. 指定 startdate 和 enddate 的資料行  
 此範例會計算資料表的兩個資料行日期之間跨越界限的天數。
   
 ```sql
@@ -256,7 +318,7 @@ SELECT TOP(1) DATEDIFF(day, startDate, endDate) AS Duration
 -- Returns: 1  
 ```  
   
-### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. 指定 startdate 和 enddate 的純量子查詢和純量函數  
+### <a name="k-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>K. 指定 startdate 和 enddate 的純量子查詢和純量函數  
 此範例會使用純量子查詢和純量函數，當作 *startdate* 和 *enddate* 的引數。
   
 ```sql
@@ -268,7 +330,7 @@ FROM dbo.DimEmployee;
   
 ```  
   
-### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. 指定 startdate 和 enddate 的常數  
+### <a name="l-specifying-constants-for-startdate-and-enddate"></a>L. 指定 startdate 和 enddate 的常數  
 此範例會使用字元常數，當作 *startdate* 和 *enddate* 的引數。
   
 ```sql
@@ -279,7 +341,7 @@ SELECT TOP(1) DATEDIFF(day,
     '2007-05-08 09:53:01.0376635') FROM DimCustomer;  
 ```  
   
-### <a name="l-specifying-ranking-functions-for-startdate"></a>L. 指定 startdate 的排名函數  
+### <a name="m-specifying-ranking-functions-for-startdate"></a>M. 指定 startdate 的排名函數  
 此範例會使用次序函數，當作 *startdate* 的引數。
   
 ```sql
@@ -291,7 +353,7 @@ SELECT FirstName, LastName,
 FROM dbo.DimEmployee;  
 ```  
   
-### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. 指定 startdate 的彙總視窗函數  
+### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>N. 指定 startdate 的彙總視窗函數  
 此範例會使用彙總視窗函式，當作 *startdate* 的引數。
   
 ```sql
@@ -307,6 +369,3 @@ FROM dbo.DimEmployee
 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
-  
-
-

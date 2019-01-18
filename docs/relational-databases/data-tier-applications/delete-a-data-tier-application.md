@@ -19,20 +19,20 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d73910b856702b2785a39fc2b8ad021f1a6d9405
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519012"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591342"
 ---
 # <a name="delete-a-data-tier-application"></a>刪除資料層應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以使用 [刪除資料層應用程式精靈] 或 Windows PowerShell 指令碼來刪除資料層應用程式。 您可以指定是否要保留、卸離或卸除相關聯的資料庫。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **使用下列項目，升級 DAC**  [註冊資料層應用程式精靈](#UsingDeleteDACWizard)、 [PowerShell](#DeleteDACPowerShell)  
+-   **若要升級 DAC，請使用下列方式：**[註冊資料層應用程式精靈](#UsingDeleteDACWizard)、[PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
  當您刪除資料層應用程式 (DAC) 執行個體時，可以選擇三個選項中的一個，指定要使用與資料層應用程式相關聯之資料庫執行的動作。 所有的三個選項都會刪除 DAC 定義中繼資料。 這些選項的差異在於它們使用與資料層應用程式相關聯之資料庫執行的動作。 精靈不會刪除與 DAC 或資料庫相關聯的任何執行個體層級物件，例如登入。  

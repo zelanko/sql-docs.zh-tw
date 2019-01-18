@@ -1,26 +1,23 @@
 ---
-title: SQL Server 2016 中 SQL Server Reporting Services 已停止的功能 | Microsoft Docs
-ms.date: 07/02/2017
+title: 已中止的功能
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-helpviewer_keywords:
-- discontinued functionality [Reporting Services]
-- Reporting Services, backward compatibility
-- Rsactivate.exe
-- unsupported features [Reporting Services]
-ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f8e6f46f3a89cc26d2c683ebcf2f9a96cced17cd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028047"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53552930"
 ---
-# <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 已停止的功能
+# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中已中止的功能
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 

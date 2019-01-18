@@ -1,22 +1,22 @@
 ---
 title: 虛擬化 SQL Server 2019 CTP 2.0 中的外部資料 | Microsoft Docs
-description: ''
+description: 此頁面詳述針對關聯式資料來源使用 [建立外部資料表精靈] 的步驟
 author: Abiola
 ms.author: aboke
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f09da2ec6d40f45bfe756fcfe648fd54fd5db6fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416869"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596669"
 ---
-# <a name="use-the-data-external-table-wizard-with-external-tables"></a>搭配使用資料外部資料表精靈與外部資料表
+# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
 
 其中一個 SQL Server 2019 CTP 2.0 重要情節是可以虛擬化資料。 此程序允許將資料保留在其原始位置。 您可以在 SQL Server 執行個體中「虛擬化」資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 此程序會將 ETL 程序的需求降到最低。 此程序只要使用 PolyBase 連接器就能達成。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md)。
 

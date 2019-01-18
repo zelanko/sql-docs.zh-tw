@@ -1,6 +1,7 @@
 ---
-title: 關於可用性複本的用戶端連接存取 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組內複本的用戶端連線類型
+description: 深入了解用戶端可以對 SQL Server 內 Always On 可用性群組主要或次要複本建立的連線。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32bde72d793ac8c703c6a57fc4fe36ff5fd30d67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6c8dbd61179ab89833c96657eb6107ced45c4528
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602668"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53206487"
 ---
-# <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>關於可用性複本的用戶端連接存取 (SQL Server)
+# <a name="types-of-client-connections-to-replicas-within-an-always-on-availability-group"></a>Always On 可用性群組內複本的用戶端連線類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在 AlwaysOn 可用性群組中，您可以設定一或多個可用性複本，讓它在次要角色之下執行時 (也就是以次要複本的方式執行時)，允許唯讀連接。 以主要角色執行時 (也就是當做主要複本執行時)，您也可以設定每個可用性複本，以允許或排除唯讀連接。  
   
@@ -34,18 +35,6 @@ ms.locfileid: "51602668"
   
 > [!NOTE]  
 >  如需可用性群組接聽程式的相關資訊，處理用戶端連線要求，請參閱 [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)。  
-  
- **本主題內容：**  
-  
--   [次要角色所支援的連接存取類型](#ConnectAccessForSecondary)  
-  
--   [主要角色所支援的連接存取類型](#ConnectAccessForPrimary)  
-  
--   [連接存取組態如何影響用戶端連接](#HowConnectionAccessAffectsConnectivity)  
-  
--   [相關工作](#RelatedTasks)  
-  
--   [相關內容](#RelatedContent)  
   
 ##  <a name="ConnectAccessForSecondary"></a> 次要角色所支援的連接存取類型  
  次要角色支援用戶端連接的三種替代方式，如下所示：  
@@ -121,7 +110,7 @@ ms.locfileid: "51602668"
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -5,19 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 95bf478ba6bb44194f5713a16d0c87b067487551
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4c4ae12021930ba447c3cb01a9830907fb3153
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854622"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52822912"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>建立及執行實體同步關係 (Master Data Services)
 
@@ -112,15 +111,15 @@ ms.locfileid: "47854622"
   
  當您按一下索引時，則會顯示下列資訊。  
   
--   **上次嘗試的錯誤**︰顯示上次嘗試同步的錯誤資訊。  
+-   **上次嘗試的錯誤**：顯示上次嘗試同步的錯誤資訊。  
   
 -   **建立者**：建立同步的使用者名稱。  
   
--   **於**：建立同步的日期與時間。  
+-   **於**：建立同步的日期和時間。  
   
 -   **更新者**：上次更新同步的使用者名稱。  
   
--   **於**：上次更新同步的日期與時間。  
+-   **於**：上次更新同步的日期和時間。  
   
 ## <a name="next-steps"></a>Next Steps  
  [編輯和刪除實體同步關係 &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  

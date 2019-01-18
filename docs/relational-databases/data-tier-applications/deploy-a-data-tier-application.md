@@ -22,15 +22,15 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fa8d8009806f22153a22d63ea83b238140d431
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517445"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590972"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以使用精靈或 PowerShell 指令碼，將 DAC 封裝中的資料層應用程式 (DAC) 部署到現有的 Database Engine 或 Azure SQL Database 執行個體。 
   
  部署程序會將 DAC 定義儲存到 **msdb** 系統資料庫 ([!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中則是 **master**) 來註冊 DAC 執行個體並建立資料庫，然後使用 DAC 內定義的所有資料庫物件來擴展該資料庫。  
@@ -39,8 +39,7 @@ ms.locfileid: "52517445"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>多次部署相同的 DAC 封裝 
  您可以將相同的 DAC 封裝部署到單一 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體多次，但是一次只能執行一個部署。 針對每個部署指定的 DAC 執行個體名稱在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體中必須是唯一的。  
   
-## <a name="managed-instances"></a>受管理的執行個體  
- 如果您將 DAC 部署至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 **SQL Server 公用程式**。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
+ 如果您將 DAC 部署至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 就會合併至 **SQL Server 公用程式**。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
   
 ###  <a name="database-options-and-settings"></a>資料庫選項和設定  
  根據預設，部署期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的所有預設值，但是以下項目除外：  

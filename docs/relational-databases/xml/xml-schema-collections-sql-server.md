@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6810231163d1674893e55624f333cd023bd95c47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b0c36e72558423b91a6adb8c8ae11e942c301446
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666187"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205667"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ ms.locfileid: "51666187"
   
  如下列範例所示。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合中的 XML 命名空間  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合中的 XML 命名空間  
  針對 XML 結構描述集合 "myCollection" 來使用下列查詢：  
   
 ```  
@@ -183,7 +183,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例：列舉 XML 結構描述集合的內容  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合的內容  
  下列陳述式會列舉關聯式結構描述 dbo 中之 XML 結構描述集合 "myCollection" 的內容。  
   
 ```  
@@ -192,8 +192,8 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  您可以將目標命名空間指定為 **XML_SCHEMA_NAMESPACE()** 的第三個引數，以 **xml**資料類型執行個體的型式來取得集合中的個別 XML 結構描述。 下列範例會顯示這一點。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例：從 XML 結構描述集合輸出指定的結構描述  
- 下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "https://www.microsoft.com/books" 的 XML 結構描述。  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例從 XML 結構描述集合輸出指定的結構描述  
+ 下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "<https://www.microsoft.com/books>" 的 XML 結構描述。  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   

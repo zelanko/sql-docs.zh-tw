@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4494b91315c8d2cd155e2ac80d6b5005685ff32
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503407"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207307"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 
 透過 **memory_grant_updated_by_feedback** XEvent 將可以看到資料列模式記憶體授與意見反應活動。 
 
-從資料列模式記憶體授與意見反應開始，將會針對實際的執行後計劃，顯示兩個新的查詢計劃屬性：***IsMemoryGrantFeedbackAdjusted*** 和 ***LastRequestedMemory***，這兩個屬性會新增到 *MemoryGrantInfo* 查詢計劃 XML 元素中。 
+從資料列模式記憶體授與意見反應開始，針對實際執行後計畫將會顯示兩個新的查詢計畫屬性：***IsMemoryGrantFeedbackAdjusted*** 和 ***LastRequestedMemory***，它們會新增至 *MemoryGrantInfo* 查詢計畫 XML 元素。 
 
 *LastRequestedMemory* 會在查詢執行之前，顯示授與的記憶體 (KB)。 *IsMemoryGrantFeedbackAdjusted* 屬性可讓您針對實際查詢執行計劃內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
 
@@ -128,9 +128,9 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 |---|---|
 | 否：第一次執行 | 記憶體授與意見反應不會針對第一次編譯和相關聯的執行，調整記憶體。  |
 | 否：精確授與 | 如果沒有溢出到磁碟，而且陳述式使用至少 50% 的授與的記憶體，則不會觸發記憶體授與意見反應。 |
-| 否：意見反應遭到停用 | 如果記憶體授與意見反應持續遭到觸發，而且在記憶體增加和減少記憶體的作業之間波動，我們將會停用陳述式的記憶體授與意見反應。 |
-| 是：調整 | 已套用記憶體授與意見反應，而且可能會針對下一次執行進一步調整。 |
-| 是：穩定 | 已套用記憶體授與意見反應，而且授與的記憶體現已穩定，表示針對上次執行授與的記憶體就是針對目前執行授與的記憶體。 |
+| 否：意見反應已停用 | 如果記憶體授與意見反應持續遭到觸發，而且在記憶體增加和減少記憶體的作業之間波動，我們將會停用陳述式的記憶體授與意見反應。 |
+| Yes：調整 | 已套用記憶體授與意見反應，而且可能會針對下一次執行進一步調整。 |
+| Yes：Stable | 已套用記憶體授與意見反應，而且授與的記憶體現已穩定，表示針對上次執行授與的記憶體就是針對目前執行授與的記憶體。 |
 
 > [!NOTE]
 > 在 17.9 版與更新版本中，公開預覽版資料列模式記憶體授與意見反應計劃屬性在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖形化查詢執行計劃中是可見的。 
@@ -171,7 +171,7 @@ USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 360;
 ```
 
@@ -190,7 +190,7 @@ WHERE [fo].[Quantity] = 360;
 SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
 FROM [Fact].[Order] AS [fo]
 INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
 查詢會傳回一個資料列。 啟用我們在以下計劃中看到的即時查詢統計資料：

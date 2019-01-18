@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7098114ba6a69b65ba689f00a726bb93c93b6a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528777"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980264"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,6 +69,7 @@ ALTER AVAILABILITY GROUP group_name
   | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
   | HEALTH_CHECK_TIMEOUT = milliseconds  
   | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
   | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
   
 <server_instance> ::=   
@@ -93,7 +94,7 @@ ALTER AVAILABILITY GROUP group_name
      | PRIMARY_ROLE ( {   
             [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
         [,] [ READ_ONLY_ROUTING_LIST = { ( '<server_instance>' [ ,...n ] ) | NONE } ]  
-        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
+        [,] [ READ_WRITE_ROUTING_URL = { ( '<server_instance>' ) ] 
      } )  
      | SESSION_TIMEOUT = integer
   
@@ -189,15 +190,15 @@ ALTER AVAILABILITY GROUP group_name
 >  若要檢視現有可用性群組的自動備份喜好設定，請選取 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視的 **automated_backup_preference** 或 **automated_backup_preference_desc** 資料行。 此外，[sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) 可用來判斷慣用備份複本。  此函數永遠都會針對至少其中一個複本傳回 1，即使當 `AUTOMATED_BACKUP_PREFERENCE = NONE` 時亦然。  
   
  FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
- 指定哪一個失敗狀況將會觸發這個可用性群組的自動容錯移轉。 FAILURE_CONDITION_LEVEL 是在群組層級上設定，但只有在為同步認可可用性模式 (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。 此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，失敗狀況才可以觸發自動容錯移轉。  
+ 指定哪一個失敗狀況將會觸發這個可用性群組的自動容錯移轉。 FAILURE_CONDITION_LEVEL 是在群組層級上設定，但只有在為同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。 此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，失敗狀況才可以觸發自動容錯移轉。  
   
  只有主要複本上才支援。  
   
- 失敗狀況層級 (1–5) 的範圍從最低限制 (層級 1) 到最高限制 (層級 5)。 給定的狀況層級包含所有較少限制的層級。 因此，最嚴格的狀況層級 5 包含四個較少限制的狀況層級 (1-4)，層級 4 則包含層級 1-3，依此類推。 下表描述與每個層級對應的失敗狀況。  
+ 失敗狀況層級 (1-5) 的範圍從最低限制 (層級 1) 到最高限制 (層級 5)。 給定的狀況層級包含所有較少限制的層級。 因此，最嚴格的狀況層級 5 包含四個較少限制的狀況層級 (1-4)，層級 4 則包含層級 1-3，依此類推。 下表描述與每個層級對應的失敗狀況。  
   
 |層級|失敗狀況|  
 |-----------|-----------------------|  
-|1|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)(運作方式：SQL Server AlwaysOn 租用逾時)。|  
+|1|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務關閉。<br /><br /> 由於未從伺服器執行個體收到 ACK，所以用於連接到 WSFC 叢集的可用性群組租用已到期。 如需詳細資訊，請參閱 [How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx) (運作方式：SQL Server Always On 租用逾時)。|  
 |2|指定在發生以下任何情況時應該起始自動容錯移轉：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體未連接到叢集，而且已超出使用者指定之可用性群組的 HEALTH_CHECK_TIMEOUT 臨界值。<br /><br /> 可用性複本處於失敗狀態。|  
 |3|指定應該在嚴重 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤發生時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。<br /><br /> 這是預設行為。|  
 |4|指定應該在發生中度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部錯誤時起始自動容錯移轉，例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部資源集區中持續的記憶體不足狀況。|  
@@ -209,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
  FAILURE_CONDITION_LEVEL 和 HEALTH_CHECK_TIMEOUT 值會針對給定群組定義「彈性容錯移轉原則」。 這個具彈性的容錯移轉原則讓您能夠更精確控制哪些條件必須造成自動容錯移轉。 如需詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
  HEALTH_CHECK_TIMEOUT **=** *毫秒*  
- 指定在 WSFC 叢集假設伺服器執行個體很慢或無回應之前，[sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回伺服器健康情況資訊的等候時間 (以毫秒為單位)。 HEALTH_CHECK_TIMEOUT 是在群組層級上設定，但是只有在為具有自動容錯移轉的同步認可可用性模式 (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。  此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，健康情況檢查逾時才可以觸發自動容錯移轉。  
+ 指定在 WSFC 叢集假設伺服器執行個體很慢或無回應之前，[sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 系統預存程序傳回伺服器健康情況資訊的等候時間 (以毫秒為單位)。 HEALTH_CHECK_TIMEOUT 是在群組層級上設定，但是只有在為具有自動容錯移轉的同步認可可用性模式 (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) 設定的可用性複本上才會顯出重要性。  此外，只有當主要和次要複本已設定自動容錯移轉模式 (FAILOVER_MODE **=** AUTOMATIC) 而且次要複本目前與主要複本同步時，健康情況檢查逾時才可以觸發自動容錯移轉。  
   
  預設 HEALTH_CHECK_TIMEOUT 值為 30000 毫秒 (30 秒)。 最小值為 15000 毫秒 (15 秒)，最大值為 4294967295 毫秒。  
   
@@ -223,6 +224,11 @@ ALTER AVAILABILITY GROUP group_name
  
  如需此設定的詳細資訊，請參閱[資料庫層級健康情況偵測選項](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) 
 
+DTC_SUPPORT  **=** { PER_DB | NONE }  
+指定是否為此可用性群組啟用分散式交易。 只有從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始的可用性群組資料庫才支援分散式交易，且從 [!INCLUDE[ssSQL16](../../includes/sssql15-md.md)] SP2 開始才支援跨資料庫交易。 `PER_DB` 會建立支援這些交易的可用性群組，並會將涉及可用性群組中資料庫的跨資料庫交易自動升級為分散式交易。 `NONE` 可防止將跨資料庫交易自動升級為分散式交易，且不會向 DTC 中穩定的 RMID 註冊資料庫。 使用 `NONE` 設定時不會防止分散式交易，但資料庫容錯移轉和自動復原在某些情況下可能無法成功。 如需詳細資訊，請參閱[資料庫鏡像或 AlwaysOn 可用性群組不支援跨資料庫交易 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。 
+ 
+> [!NOTE]
+> 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 2 中引入了變更可用性群組 DTC_SUPPORT 設定的支援。 此選項不能與舊版搭配使用。 若要變更舊版 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 中的這項設定，您必須 DROP (卸除) 並再次 CREATE (建立) 可用性群組。
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  在 SQL Server 2017 中導入。 在主要認可交易之前，用來設定認可所需的同步次要複本最小數目。 保證 SQL Server 交易會等候，直到最小數目之次要複本上的交易記錄都已更新為止。 預設值為 0，所提供的行為和 SQL Server 2016 相同。 最小值為 0。 最大值是複本數目減 1。 此選項會與同步認可模式下的複本關聯。 當複本處於同步認可模式時，主要複本上的寫入會等候，直到次要同步複本上的寫入認可到複本資料庫交易記錄為止。 如果裝載次要同步複本的 SQL Server 停止回應，則裝載主要複本的 SQL Server 會將該次要複本標記為 NOT SYNCHRONIZED 並繼續進行。 當沒有回應的資料庫回到線上，會處於「未同步」狀態，而且該複本會被標記為狀況不良，直到主要複本再次使其變成同步為止。 此設定可確保在每個交易認可的複本達到最小數目之前，主要複本不會繼續進行。 如果無法使用複本的最小數目，則主要複本上的認可會失敗。 對於叢集類型 `EXTERNAL`，設定會在可用性群組被新增到叢集資源時變更。 請參閱[可用性群組設定的高可用性和資料保護](../../linux/sql-server-linux-availability-group-ha.md)。
@@ -241,7 +247,7 @@ ALTER AVAILABILITY GROUP group_name
  如需從可用性群組中移除可用性資料庫之後所建議後續操作的詳細資訊，請參閱[將主要資料庫從可用性群組移除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)。  
   
  ADD REPLICA ON  
- 指定要在可用性群組中裝載次要複本的 SQL 伺服器執行個體 (一個到八個)。  每個複本都是由後面接著 WITH (...) 子句的伺服器執行個體位址所指定。  
+ 指定要在可用性群組中裝載次要複本的 SQL 伺服器執行個體 (一個到八個)。  每個複本是由後面接著 WITH (...) 子句的伺服器執行個體位址所指定。  
   
  只有主要複本上才支援。  
   
@@ -306,7 +312,10 @@ ALTER AVAILABILITY GROUP group_name
  指定您所定義之可用性複本的容錯移轉模式。  
   
  AUTOMATIC  
- 啟用自動容錯移轉。 只有當您同時指定 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 時，才支援 AUTOMATIC。 您可以為兩個可用性複本指定 AUTOMATIC，包括主要複本在內。  
+ 啟用自動容錯移轉。 只有當您同時指定 AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 時，才支援 AUTOMATIC。 您可以為三個可用性複本指定 AUTOMATIC，包括主要複本在內。  
+  
+> [!NOTE]  
+>  在 SQL Server 2016 之前，您只能使用兩個自動容錯移轉複本，包括主要複本在內
   
 > [!NOTE]  
 >  SQL Server 容錯移轉叢集執行個體 (FCI) 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
@@ -335,7 +344,7 @@ ALTER AVAILABILITY GROUP group_name
   
 -   0 表示絕對不會選擇這個可用性複本來執行備份。 例如，這對於您永遠不希望將備份容錯移轉到其中的遠端可用性複本十分有用。  
   
- 如需詳細資訊，請參閱 [使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+ 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
  SECONDARY_ROLE **(** ... **)**  
  指定將會在此可用性複本目前擁有次要角色 (亦即，每當它是次要複本時) 時生效的角色專屬設定。 在括弧內指定任一個或兩個次要角色選項。 如果您同時指定兩個選項，則使用逗號分隔清單。  
@@ -354,7 +363,7 @@ ALTER AVAILABILITY GROUP group_name
  ALL  
  次要複本的資料庫允許所有連接進行唯讀存取。  
   
- 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。  
+ 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  指定向此可用性複本路由傳送讀取意圖連接要求所使用的 URL。 這是 SQL Server Database Engine 接聽的 URL。 SQL Server Database Engine 的預設執行個體通常會接聽 TCP 通訊埠 1433。  
@@ -453,11 +462,11 @@ ALTER AVAILABILITY GROUP group_name
  ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  為這個可用性群組定義新的可用性群組接聽程式。 只有主要複本上才支援。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在建立第一個接聽程式之前，強烈建議您閱讀[建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
->   
+> 
 >  針對給定的可用性群組建立接聽程式之後，我們強烈建議您執行以下操作：  
->   
+> 
 >  -   要求網路管理員將接聽程式的 IP 位址保留為專用。  
 > -   將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
   

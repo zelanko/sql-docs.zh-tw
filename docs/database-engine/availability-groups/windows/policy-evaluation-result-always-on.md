@@ -1,6 +1,7 @@
 ---
-title: 原則評估結果 (AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: 原則評估結果頁面 (Always On 儀表板) | Microsoft Docs
+description: 描述 SQL Server Management Studio Always On 儀表板中找到的 [原則評估結果] 頁面。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 587258b743ae65201e1f30e10fc513f361da8824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821046"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201927"
 ---
-# <a name="policy-evaluation-result-always-on"></a>原則評估結果 (AlwaysOn)
+# <a name="policy-evaluation-result-page-always-on-dashboard"></a>原則評估結果頁面 (Always On 儀表板)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   使用 AlwaysOn 儀表板的 [原則評估結果] 頁面檢視任何目前的原則問題。  

@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f5d0da7fb7b4515875b456eac380a6f5e0588e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cd332393a0d605f2ae0e519e6a449fe49bff3477
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420429"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215767"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  嘗試修復所有報告的錯誤。 這些修復可能會造成某些資料的遺失。  
-    
+    
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 選項是支援的功能，但不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 
 >
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  使 DBCC CHECKDB 取得鎖定，而不使用內部資料庫快照集。 這包括資料庫上的短期獨佔 (X) 鎖定。 TABLOCK 可讓 DBCC CHECKDB 在負載沉重的資料庫上執行得快一些，但 DBCC CHECKDB 執行時，資料庫可用的並行會降低。  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK 會限制執行的檢查；不會對資料庫執行 DBCC CHECKCATALOG，也不會驗證 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料。
     
@@ -155,11 +155,11 @@ PHYSICAL_ONLY
 DATA_PURITY  
  使 DBCC CHECKDB 檢查資料庫，找出無效或超出範圍的資料行值。 例如，DBCC CHECKDB 會偵測具有大於或小於 **datetime** 資料類型可接受範圍之日期和時間值的資料行；或是 **decimal** 或近似數值資料類型資料行具有無效的小數位數或有效位數值。  
  預設會啟用資料行值的完整性檢查，而不需要 DATA_PURITY 選項。 對於從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級的資料庫，在毫無錯誤的情況下完成對資料庫執行 DBCC CHECKDB WITH DATA_PURITY 之前，依預設不啟用資料行值的完整性檢查。 此後，依預設 DBCC CHECKDB 會檢查資料行值的完整性。 如需有關從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級資料庫可能對 CHECKDB 造成何種影響的詳細資訊，請參閱本主題稍後的「備註」一節。  
-    
+    
 > [!WARNING]
 > 如果指定 PHYSICAL_ONLY，則不會執行資料行完整性檢查。
     
- 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文件 923247：[對 SQL Server 2005 及更新版本中的 DBCC 錯誤 2570 進行疑難排解](https://support.microsoft.com/kb/923247) \(機器翻譯\)。  
+ 這個選項報告的驗證錯誤無法使用 DBCC 修復選項更正。 如需手動更正這些錯誤的相關資訊，請參閱知識庫文章 923247：[針對 SQL Server 2005 和更新版本中的 DBCC 錯誤 2570 進行疑難排解](https://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
@@ -196,7 +196,7 @@ DBCC CHECKDB 不會檢查停用的索引。 如需詳細資訊，請參閱[停�
 DBCC CHECKDB 使用內部資料庫快照集來維護執行這些檢查時所需的交易一致性。 這可以防止在執行這些命令時，發生封鎖和並行問題。 如需詳細資訊，請參閱[檢視資料庫快照集的疏鬆檔案大小 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 和 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md) 中的＜DBCC 內部資料庫快照集使用方式＞一節。 如果無法建立快照集，或指定了 TABLOCK，則 DBCC CHECKDB 會獲取鎖定來取得必要的一致性。 在這個情況下，則需要獨佔資料庫鎖定，才能執行配置檢查，而且需要共用資料表鎖定，才能執行資料表檢查。
 如果無法建立內部資料庫快照集，針對 master 執行 DBCC CHECKDB 將會失敗。
 針對 tempdb 執行 DBCC CHECKDB 並不會執行任何配置或目錄檢查，且需要取得共用資料表鎖定來執行資料表檢查。 這是因為基於效能的考量，tempdb 並無法使用資料庫快照集。 這表示無法取得必要的交易一致性。
-在 Microsoft SQL Server 2012 或舊版的 SQL Server 中，您在針對檔案位於 ReFS 格式磁碟區上的資料庫執行 DBCC CHECKDB 命令時，可能會遇到錯誤訊息。 如需詳細資訊，請參閱知識庫文章 2974455：[SQL Server 資料庫位於 ReFS 磁碟區時的 DBCC CHECKDB 行為](https://support.microsoft.com/kb/2974455) \(機器翻譯\)    
+在 Microsoft SQL Server 2012 或舊版的 SQL Server 中，您在針對檔案位於 ReFS 格式磁碟區上的資料庫執行 DBCC CHECKDB 命令時，可能會遇到錯誤訊息。 如需詳細資訊，請參閱知識庫文章 2974455：[DBCC CHECKDB behavior when the SQL Server database is located on an ReFS volume](https://support.microsoft.com/kb/2974455) (SQL Server 資料庫位於 ReFS 磁碟區時的 DBCC CHECKDB 行為)。    
     
 ## <a name="checking-and-repairing-filestream-data"></a>檢查及修復 FILESTREAM 資料    
 針對資料庫和資料表啟用 FILESTREAM 時，您可以選擇將 **varbinary(max)** 二進位大型物件 (BLOB) 儲存在檔案系統中。 當您針對將 BLOB 儲存於檔案系統中的資料庫使用 DBCC CHECKDB 時，DBCC 會檢查檔案系統與資料庫之間的連結層級一致性。

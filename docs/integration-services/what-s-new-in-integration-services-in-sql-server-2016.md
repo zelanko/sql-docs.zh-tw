@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640195"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205837"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 的新功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "51640195"
   
 -   管理物件模型 (MOM) API  
   
- 如需詳細資訊，請參閱 [部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ 如需詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ####  <a name="encrypted"></a> 支援 SSIS 目錄中的 AlwaysOn  
  SSIS 已經支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的永遠加密功能。 如需詳細資訊，請參閱下列部落格文章。  
@@ -200,7 +200,7 @@ ms.locfileid: "51640195"
  SSIS 目錄中新的 **RuntimeLineage** 記錄層次會收集在資料流程中追蹤歷程資訊所需的資料。 您可以剖析此歷程資訊，以對應工作間的歷程關聯性。 ISV 和開發人員可以使用此資訊來建置自訂歷程對應工具。 
 
 ####  <a name="CustomLogging"></a> SSIS 目錄中新的自訂記錄層級  
- 舊版 SSIS 目錄可讓您在執行封裝時，從四個內建的記錄層次進行選擇： **無、基本、效能或詳細資訊**。 SQL Server 2016 新增 **RuntimeLineage** 記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
+ 舊版 SSIS 目錄可讓您在執行套件時，從四個內建的記錄層次進行選擇：**無、基本、效能或詳細資訊**。 SQL Server 2016 新增 **RuntimeLineage** 記錄層級。 此外，您現在可以在 SSIS 目錄中建立和儲存多個自訂記錄層級，並挑選每次您執行封裝時要使用的記錄層級。 針對每個自訂記錄層級，只選取您想要擷取的統計資料和事件。 選擇性地包含事件內容，以查看變數值、連接字串和工作屬性。 如需詳細資訊，請參閱＜ [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。 
 
 ####  <a name="ErrorColumn"></a> 資料流程中適用於錯誤的資料行名稱  
  當您在資料流程中包含錯誤至錯誤輸出的資料列重新導向時，則輸出會包含錯誤發生，但不會顯示的資料行名稱的資料行的數值識別項。 現在，有數種方式可用來尋找或顯示發生錯誤的資料行名稱。  
@@ -213,7 +213,7 @@ ms.locfileid: "51640195"
   
 -   在指令碼元件或自訂資料流程元件中，呼叫 IDTSComponentMetadata100 介面的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。  
   
- 如需此改進功能的詳細資訊，請參閱下列由 SSIS 開發人員 Bo Fan 所張貼的部落格文章︰ [適用於 SSIS 資料流程的錯誤資料行改進功能](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)。  
+ 如需此改善的詳細資訊，請參閱下列由 SSIS 開發人員 Bo Fan 所張貼的部落格文章︰[Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx) (適用於 SSIS 資料流程的錯誤資料行改善)。  
   
 > [!NOTE]  
 >  (後續版本中已擴大此支援。 如需詳細資訊，請參閱 [Expanded support for error column names](#getidstring) (已擴大錯誤資料行名稱的支援) 和 [New IDTSComponentMetaData130 interface in the API](#CMD130)(API 中新的 IDTSComponentMetaData130 介面)。  
@@ -326,7 +326,7 @@ ms.locfileid: "51640195"
    
  ![專案屬性對話方塊中的 TargetServerVersion 屬性](../integration-services/media/targetserverversion2.png "專案屬性對話方塊中的 TargetServerVersion 屬性")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > 如果您正在開發 SSIS 的自訂擴充功能，請參閱 [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) (在您的自訂元件中支援多目標功能) 和 [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)(取得 SSIS 自訂延伸模組，以支援 SQL Server 2016 的 SSDT 2015 多版本支援)。  
 
 ### <a name="better-management-experience-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中更好的管理體驗

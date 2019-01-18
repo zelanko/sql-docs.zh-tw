@@ -1,6 +1,6 @@
 ---
 title: 關於異動資料擷取 (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5fc24683d4272a4e93ac7d1e30581fa202588e1e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
+ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402743"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53991871"
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   異動資料擷取會記錄套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的插入、更新和刪除活動。 這樣會以方便取用的關聯式格式提供變更的詳細資料。 系統會針對修改的資料列擷取資料行資訊以及將變更套用至目標環境所需的中繼資料，並且將它們儲存在鏡像追蹤來源資料表之資料行結構的變更資料表中。 此外，系統會提供資料表值函式，讓取用者以有系統的方式存取異動資料。  
   
  此技術之目標資料取用者的理想範例為擷取、轉換和下載 (ETL) 應用程式。 ETL 應用程式會將變更資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源資料表累加地載入資料倉儲或資料超市。 雖然在資料倉儲內的來源資料表表示法必須反映來源資料表中的變更，但是重新整理來源複本的端對端技術並不適用。 您需要的是結構化變更資料的可靠資料流，讓取用者可以將其套用到不同的資料目標表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動資料擷取提供這種技術。  
@@ -44,7 +44,7 @@ ms.locfileid: "52402743"
   
  套用到來源資料表的每個插入或刪除作業會顯示成變更資料表中的單一資料列。 插入作業所產生之資料列的資料行包含插入之後的資料行值。 刪除作業所產生之資料列的資料行包含刪除之前的資料行值。 更新作業需要一個資料列項目來識別更新之前的資料行值，和第二個資料列項目來識別更新之後的資料行值。  
   
- 變更資料表中的每個資料列也會包含其他中繼資料，以便允許解譯變更活動。 資料行 __$start_lsn 會識別指派給變更的認可記錄序號 (LSN)。 認可 LSN 會識別在相同交易中認可的變更，而且會為這些交易排序。 資料行 \_\_$seqval 可用於排序在相同交易中發生的其他變更。 資料行 \_\_$operation 會記錄與變更相關聯的作業：1 = 刪除、2 = 插入、3 = 更新 (建立資料影像前)，以及 4 = 更新 (建立資料影像後)。 資料行 \_\_$update_mask 是變數位元遮罩，其中每個擷取資料行都有一個定義的位元。 若是插入和刪除項目，更新遮罩永遠會設定所有位元。 不過，更新資料列將僅會設定對應到已變更之資料行的位元。  
+ 變更資料表中的每個資料列也會包含其他中繼資料，以便允許解譯變更活動。 資料行 __$start_lsn 會識別指派給變更的認可記錄序號 (LSN)。 認可 LSN 會識別在相同交易中認可的變更，而且會為這些交易排序。 資料行 \_\_$seqval 可用於排序在相同交易中發生的其他變更。 資料行 \_\_$operation 會記錄與變更建立關聯的作業：1 = 刪除、2 = 插入、3 = 更新 (建立映像前)，以及 4 = 更新 (建立映像後)。 資料行 \_\_$update_mask 是變數位元遮罩，其中每個擷取資料行都有一個定義的位元。 若是插入和刪除項目，更新遮罩永遠會設定所有位元。 不過，更新資料列將僅會設定對應到已變更之資料行的位元。  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>資料庫的異動資料擷取有效性間隔  
  資料庫的異動資料擷取有效性間隔就是擷取執行個體可以使用變更資料的時間範圍。 有效性間隔會在您建立資料庫資料表的第一個擷取執行個體時開始，並且繼續到目前的時間。  

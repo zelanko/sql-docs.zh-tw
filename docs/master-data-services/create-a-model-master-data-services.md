@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
@@ -15,12 +14,12 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f21bdeceed35e7eb680d5dd1c2b74863e3a29dbb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398778"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748830"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
 
@@ -57,21 +56,21 @@ ms.locfileid: "52398778"
   
  對於每個建立的模型，會將含有八個資料行的資料列加入方格中。 八個資料行如下：  
   
--   **狀態**︰模型狀態。 當您按一下 [儲存模型] 按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
+-   **狀態**：模型狀態。 當您按一下 [儲存模型] 按鈕時，會顯示![正在更新](../master-data-services/media/mds-model-status-updating.png "正在更新")影像，表示正在更新模型。 如果建立或編輯模型時發生錯誤，則會顯示![錯誤](../master-data-services/media/mds-model-status-error.png "錯誤")影像。 否則，狀態為正常並顯示 ![[確定]](../master-data-services/media/mds-model-status-ok.png "[確定]") 影像。  
   
 -   **名稱**：模型名稱。  
   
--   **描述**：模型描述。  
+-   **描述**：模型的描述。  
   
 -   **記錄保留天數**：模型記錄保留天數。  
   
 -   **建立者**：建立模型之使用者的使用者名稱。  
   
--   **建立日期和時間**：模型的建立日期和時間。  
+-   **建立日期和時間**：建立模型的日期和時間。  
   
 -   **更新者**：上次更新模型之使用者的使用者名稱。  
   
--   **更新日期和時間**：取得上次更新模型的日期和時間。  
+-   **更新日期和時間**：上次更新模型的日期和時間。  
   
 ## <a name="next-steps"></a>Next Steps  
   

@@ -14,20 +14,20 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6fd8dc38147cd3053aaf1720f9c3b30ea0ac512
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e75565d69b2a5a1ac2cf5d6a9d512fffbcf768f5
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810354"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590722"
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   使用 [解除封裝資料層應用程式] 對話方塊可從資料層應用程式 (DAC) 封裝解壓縮指令碼和檔案。 這些指令碼和檔案會放置在某個資料夾中，使用此封裝來將 DAC 部署到實際執行系統之前便可以進行檢閱。 DAC 的內容也可以與解除封裝到另一個資料夾的另一個封裝內容相比較。  
   
-1.  **開始之前**  [安全性](#Security)  
+1.  **開始之前：**[安全性](#Security)  
   
-2.  **使用下列項目，解除封裝 DAC：**[解除封裝資料層應用程式對話方塊](#UnpackDACDial)、[檢查 DAC 封裝的內容](#ExamDACPack)  
+2.  **若要解除封裝 DAC，請使用下列方式：**[解除封裝資料層應用程式對話方塊](#UnpackDACDial)、[檢查 DAC 套件的內容](#ExamDACPack)  
   
 ##  <a name="Security"></a> 安全性  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 在您使用來源不明或來源不受信任的 DAC 之前，請將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的隔離測試執行個體、解除封裝 DAC 並檢查程式碼，例如預存程序或其他使用者定義的程式碼。  

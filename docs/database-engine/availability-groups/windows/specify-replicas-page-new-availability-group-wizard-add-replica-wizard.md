@@ -14,14 +14,14 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12ad3867a465582aa1362f8607187ed9026c26ca
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9e5f746ed9aeea4356b619cff2439292d73384a7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605438"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212477"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：加入複本精靈)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：新增複本精靈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述 **[指定複本]** 頁面的選項。 此頁面適用於 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 和 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**。 使用 **[指定複本]** 頁面指定與設定要加入可用性群組的一個或多個可用性複本。 此頁面包含四個索引標籤，其說明如下表所示。 按一下表格中的索引標籤名稱即可前往對應的章節，如本主題稍後所示。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "51605438"
  指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
 > [!IMPORTANT]  
->  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱[使用中次要：在次要複本上備份 &#40;Always On 可用性群組&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ### <a name="replica-backup-priorities-grid"></a>複本備份優先權方格  
  使用 **[複本備份優先權]** 方格指定可用性群組每個複本的備份優先權。 此方格包含下列資料行：  
@@ -189,9 +189,9 @@ ms.locfileid: "51605438"
  **子網路**  
  如果您選取 [DHCP] 作為網路模式，請使用 [子網路] 下拉清單選取裝載可用性群組之可用性複本的子網路位址。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在您定義可用性群組接聽程式之後，我們強烈建議您執行以下操作：  
->   
+> 
 >  -   要求網路管理員將接聽程式的 IP 位址保留為專用。 將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
 > -   將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
   

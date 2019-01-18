@@ -21,12 +21,12 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03226910c9af65708504dc3d99865e88c9ab193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00ef0f5df65f6b472e6c439e097c745d03d86040
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605156"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215149"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>參數化篩選 - 參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47605156"
  若要定義或修改參數化資料列篩選，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
 ## <a name="how-parameterized-filters-work"></a>參數化篩選如何運作  
- 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定 SUSER_SNAME() 與 HOST_NAME() 系統函數中的其中之一或兩者，而不要在子句中指定常值 (如同對靜態資料列篩選那樣)。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
+ 參數化資料列篩選器使用 WHERE 子句選取要發行的適當資料。 您可以指定以下系統函數的其中一個或兩個，而不要在子句中指定常值 (如同對靜態資料列篩選的處理一樣)：SUSER_SNAME() 和 HOST_NAME()。 也可以使用使用者定義函數，但它們必須在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，或者評估這些系統函數的其中之一 (例如 `MyUDF(SUSER_SNAME()`)。 如果使用者定義函數在函數主體中包含 SUSER_SNAME() 或 HOST_NAME()，則您將無法將參數傳遞到該函數。  
   
  系統函數 SUSER_SNAME() 和 HOST_NAME() 並不是合併式複寫的特定函數，但是可以由合併式複寫用來進行參數化篩選：  
   
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  例如，Pamela Ansman-Wolfe 的員工識別碼已被指派為 280。 當您為此員工建立訂閱時，請將 HOST_NAME() 值指定成員工識別碼的值 (此範例中為 280)。 「合併代理程式」連接到發行者端時，它會將 HOST_NAME() 傳回的值與資料表中的值相比較，並僅下載在 **EmployeeID** 資料行中包含值 280 的資料列。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  HOST_NAME() 函數會傳回一個 **nchar** 值，因此，如果篩選子句中的資料行為數值資料類型 (如上述範例)，您必須使用 CONVERT。 基於效能的考量，建議您不要在參數化資料列篩選器子句中的資料行名稱套用函數，例如 `CONVERT(nchar,EmployeeID) = HOST_NAME()`。 反之，建議您使用範例中顯示的方法： `EmployeeID = CONVERT(int,HOST_NAME())`。 此子句可用於 **@subset_filterclause** @allow_partition_realignment [@subset_filterclause](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)參數，但通常無法在「新增發行集精靈」中使用 (此精靈會執行篩選子句來驗證它，但是因為電腦名稱不能轉換為 **int**中稱為動態篩選)。 如果您使用「新增發行集精靈」，建議在此精靈中指定 `CONVERT(nchar,EmployeeID) = HOST_NAME()` ，然後在建立發行集的快照集之前，使用 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) ，將該子句變更為 `EmployeeID = CONVERT(int,HOST_NAME())` 。  
   
  **覆寫 HOST_NAME() 值**  

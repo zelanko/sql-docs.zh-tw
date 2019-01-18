@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec96dd777f338af847602fdb4b595f9fefc76a9d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8cba297aa253fd4f4d7798342ccb4627f8008154
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404093"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53215514"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "52404093"
 > [!IMPORTANT]  
 >  如果 WSFC 叢集因為仲裁失敗而設為離線，則需要手動操作，將其恢復上線。  
 >   
->  如需詳細資訊，請參閱： [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)(Quorum Vote) 所決定。  
+>  如需詳細資訊，請參閱：[透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)。  
   
 ##  <a name="QuorumModes"></a> 仲裁模式  
  *「仲裁模式」* (Quorum Mode) 是在 WSFC 叢集層級設定，指出仲裁投票所使用的方法。  容錯移轉叢集管理員公用程式會根據叢集中的節點數來建議仲裁模式。  
@@ -88,7 +88,7 @@ ms.locfileid: "52404093"
 > [!IMPORTANT]  
 >  為了能夠使用 NodeWeight 設定，必須將以下 Hotfix 套用至 WSFC 叢集中的所有伺服器：  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：提供 Hotfix 讓您設定叢集節點，該節點在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] 中沒有仲裁投票  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建議的仲裁投票調整  
  在啟用或停用指定 WSFC 節點的投票時，請遵循下列方針：  
@@ -105,16 +105,16 @@ ms.locfileid: "52404093"
   
 -   **容錯移轉後重新評估投票指派。** 您不會希望容錯移轉至不支援狀況良好仲裁的叢集組態。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  在驗證 WSFC 仲裁投票組態時，如果下列任何一個條件成立，AlwaysOn 可用性群組精靈會顯示一則警告：  
->   
+> 
 >  -   裝載主要複本的叢集節點沒有投票權。  
 > -   次要複本有設定自動容錯移轉，而且它的叢集節點沒有投票權。  
 > -   [KB2494036](https://support.microsoft.com/kb/2494036) 不會安裝在裝載可用性複本的所有叢集節點上。 針對多網站部署中的叢集節點加入或移除投票需要這個修補程式。 不過，單一網站部署中通常不需要，而且您可以安心地忽略警告。  
-  
-> [!TIP]  
+> 
+> [!TIP]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公開數個系統動態管理檢視 (DMV)，有助於您管理設定相關的 WSFC 叢集組態和節點仲裁投票。  
->   
+> 
 >  如需詳細資訊，請參閱：  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md), [sys.dm_hadr_cluster_members](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md), [sys.dm_os_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md), [sys.dm_hadr_cluster_networks](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
@@ -129,9 +129,9 @@ ms.locfileid: "52404093"
   
 -   [AlwaysOn 可用性群組精靈中的仲裁投票組態檢查](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server 技術：容錯移轉叢集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server Technologies:Failover Clusters](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx) (Windows Server 技術：容錯移轉叢集)  
   
--   [容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Failover Cluster Step-by-Step Guide:Configuring the Quorum in a Failover Cluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx) (容錯移轉叢集逐步指南：在容錯移轉叢集中設定仲裁)  
   
 ## <a name="see-also"></a>另請參閱  
  [透過強制仲裁執行 WSFC 災害復原 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

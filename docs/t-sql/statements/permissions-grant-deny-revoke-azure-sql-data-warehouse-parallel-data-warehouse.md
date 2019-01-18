@@ -14,14 +14,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ee7b41d2c6e4584bd2dd48dec09fbe71b5150d13
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6f73b9d5160989537de72192774bbd7c0157fa29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696776"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979674"
 ---
-# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
+# <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限:GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   使用 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]的 **GRANT** 和 **DENY** 陳述式，以針對安全性主體 (登入、資料庫使用者或資料庫角色) 授與或拒絕對安全性實體 (例如資料庫、資料表、檢視等) 的權限 (例如 **UPDATE**)。 使用 **REVOKE** 來移除某個權限的授與或拒絕。  
@@ -127,7 +127,7 @@ REVOKE
  隱含權限也可以繼承自涵蓋權限或父權限。 例如，藉由擁有資料表之上層結構描述的 **UPDATE** 權限或資料表的 **CONTROL** 權限，即可繼承資料表的 **UPDATE** 權限。  
   
 ### <a name="ownership-chaining"></a>擁有權鏈結  
- 當多個資料庫物件依序存取彼此時，此順序即稱為「鏈結」。 雖然此類鏈結不會獨立存在，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 周遊鏈結中的連結時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 評估要素物件權限的方式，與單獨存取物件時不同。 擁有權鏈結對於管理安全性有很重要的影響。 如需有關擁有權鏈結的詳細資訊，請參閱[擁有權鏈結](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教學課程：擁有權鏈結和內容切換](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
+ 當多個資料庫物件依序存取彼此時，此順序即稱為「鏈結」。 雖然此類鏈結不會獨立存在，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 周遊鏈結中的連結時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 評估要素物件權限的方式，與單獨存取物件時不同。 擁有權鏈結對於管理安全性有很重要的影響。 如需擁有權鏈結的詳細資訊，請參閱[擁有權鏈結](https://msdn.microsoft.com/library/ms188676\(v=sql11\).aspx)和[教學課程：擁有權鏈結和內容切換](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
   
 ## <a name="permission-list"></a>權限清單  
   
@@ -235,7 +235,7 @@ REVOKE
   
 -   UPDATE  
   
--   REFRENCES  
+-   REFERENCES  
   
  如需了解每一種權限的定義，請參閱[權限 (資料庫引擎)](https://msdn.microsoft.com/library/ms191291.aspx)。  
   

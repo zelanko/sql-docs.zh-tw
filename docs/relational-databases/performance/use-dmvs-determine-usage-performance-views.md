@@ -2,19 +2,19 @@
 title: 使用 DMV 來判斷檢視表的使用方式統計資料和效能
 description: 使用 DMV 來判斷檢視表的使用方式統計資料和效能
 manager: craigg
-author: MashaMSFT
-ms.author: mathoma
+author: julieMSFT
+ms.author: jrasnick
 ms.date: 09/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 4181615840f62b6e4e8a7447f559f4f0c50eb206
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586311"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380659"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 來判斷檢視表的使用方式統計資料和效能
 本文涵蓋用來取得**使用檢視表的查詢效能**相關資訊的方法和指令碼。 這些指令碼的目的是提供資料庫內找到之各種檢視表的使用和效能指示器。 
@@ -194,10 +194,4 @@ GO
 ```
 
 ## <a name="see-also"></a>另請參閱
-[動態管理檢視和函數](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[DMV 以微調效能 (影片 - SQL Saturday Pordenone)](https://www.youtube.com/watch?v=9FQaFwpt3-k)  \(英文\)  
-[DMV 以微調效能 (以投影片放映示範 - SQL Saturday Pordenone)](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)  \(英文\)  
-[膠囊形式的 SQL Server 微調 (影片 - SQL Saturday Parma)](https://vimeo.com/200980883)   \(英文\)  
-[SQL Server 微調概要 (投影片和示範 - SQL Saturday Parma)](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)  \(英文\)  
-[SQL Server 動態管理檢視表的效能微調](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)  \(英文\)  
-[The Most Prominent Wait Types of your SQL Server 2016](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016) (SQL Server 2016 的最顯著等候類型)   
+[動態管理檢視和函式](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 

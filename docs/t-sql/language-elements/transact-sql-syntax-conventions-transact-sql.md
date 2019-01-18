@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd93fef0add8f773a1acac0635c13f59d8bd5cab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b85685dd15e6eb7dd2350bdeda5befb28959c281
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700966"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202797"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "51700966"
   
 |慣例|用於|  
 |----------------|--------------|  
-|UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字。|  
+|大寫|[!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字。|  
 |*斜體*|使用者提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法參數。|  
 |**粗體字**|必須完全依照顯示來輸入的資料庫名稱、資料表名稱、資料行名稱、索引名稱、預存程序、公用程式、資料類型名稱和文字。|  
 |_underline_|指出省略陳述式中包含附加底線之值的子句時，所套用的預設值。|  
 |&#124; (分隔號)|加上括號或大括號來分隔語法項目。 您只可以選擇其中一個項目。|  
-|`[ ]` (方括弧)|選擇性的語法項目。 不要鍵入方括號。|  
+|`[ ]` (方括弧)|選擇性的語法項目。 不要輸入方括號。|  
 |{ } (大括號)|必要的語法項目。 不要鍵入大括號。|  
 |[**,**...*n*]|指出先前項目可以重複 *n* 次。 以逗號分開各次出現項目。|  
 |[...*n*]|指出先前項目可以重複 *n* 次。 以空白分開各次出現項目。|  
@@ -111,9 +111,9 @@ _server\_name_
 許多程式碼範例使用字母 **N** 作為 Unicode 字元字串常數的前置詞。若沒有 **N** 前置詞，字串會被轉換為資料庫的預設字碼頁。 這個預設字碼頁可能無法辨識特定字元。  
   
 ## <a name="applies-to-references"></a>「適用於」參考  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 參考包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 的相關文章。   
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 參考包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 的相關文章。   
 
-在每個文章頂端附近，都有一個小節指出適用於該文章主旨的產品。 如果產品未被列出，表示該文章描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP** 文章指出其適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，因為它不適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+在每個文章頂端附近，都有一個小節指出適用於該文章主旨的產品。 如果產品未被列出，表示該文章描述的功能不適用於該產品。 例如，可用性群組於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE AVAILABILITY GROUP** 一文指出其適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，因為它不適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 在某些情況下，某產品可用於一般文章主旨，但所有的引數卻都無法使用。 例如自主資料庫使用者於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進。 **CREATE USER** 陳述式可以在任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品中使用，但 **WITH PASSWORD** 語法就無法在舊版中使用。 在此情況下，就會在文章本文中於適當的引數描述中插入額外的＜適用於＞小節。  
   

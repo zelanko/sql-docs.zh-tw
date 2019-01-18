@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eadf8d4512e3dd5e119dd92e9e2039e0af9dc0ce
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: a72ef38b960e00a88c7d4e1e0038e32a897a46d9
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617432"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980114"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ TRANSLATE ( inputString, characters, translations)
 
 如果 *characters* 和 *translations* 運算式的長度不同，則 `TRANSLATE` 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
 
-`TRANSLATE` 函數的行為相當於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函數。
+`TRANSLATE` 函式的行為類似於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函式。 不過，`TRANSLATE` 不會多次取代字元。 這與多個 `REPLACE` 函式不同，因為每次使用時都會取代相關的所有字元。 
+
 
 `TRANSLATE` 永遠是 SC 定序感知。
 
@@ -110,6 +111,20 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
 |點  |座標 |  
 ---------|--------- |
 (137.4  72.3) |[137.4,72.3] |
+
+
+### <a name="c-use-the-translate-function"></a>C. 使用 TRANSLATE 函式
+
+```sql
+SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
+       REPLACE(REPLACE(REPLACE('abcdef','a','b'),'b','c'),'c','d') AS Replaced;
+```
+
+結果如下：
+
+| 已轉譯 | 已取代 |  
+| ---------|--------- |
+| bcddef | ddddef |
 
 
 ## <a name="see-also"></a>另請參閱

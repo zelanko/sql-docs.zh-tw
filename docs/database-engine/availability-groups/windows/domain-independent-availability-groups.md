@@ -1,6 +1,7 @@
 ---
-title: 網域獨立的可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 建立網域獨立的可用性群組
+description: 建立使用工作群組叢集之可用性群組的步驟。 這可讓 SQL Server 2016 (和更新版本) 在 WSFC 上部署 Always On 可用性群組，WSFC 不需要 Active Directory 網域服務，因此需要每部伺服器都屬於相同的網域。
+ms.custom: seodec18
 ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,14 +13,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0024663d9d16d191338abfa2604e6c969f0d58e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c70aba3f6dc1648b70c9bc9a524052a7ba591793
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415075"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211907"
 ---
-# <a name="domain-independent-availability-groups"></a>網域獨立的可用性群組
+# <a name="create-a-domain-independent-availability-group"></a>建立網域獨立的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 AlwaysOn 可用性群組 (AG) 需要基礎 Windows Server 容錯移轉叢集 (WSFC)。 透過 Windows Server 2012 R2 部署 WSFC 時，一律需要參與 WSFC 的伺服器 (也稱為節點) 加入相同的網域。 如需 Active Directory 網域服務 (AD DS) 的詳細資訊，請參閱[這裡](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx)。

@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 679eb8412f4633af845efc7c5520c351f9749822
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518333"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980504"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -301,9 +301,12 @@ ON *partition_scheme_name* **( *column_name* )**
  ON **"** default **"**  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)]。  
   
- 在預設的檔案群組上建立指定的索引。  
+ 在與資料表或檢視相同的檔案群組或分割區結構描述上建立所指定索引。  
   
- 在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
+ 在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，如 ON **"** default **"** 或 ON **[** default **]**。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。
+ 
+> [!NOTE]  
+> "default" 並未指出 CREATE INDEX 內容中的資料庫預設檔案群組。 這不同於 CREATE TABLE，其中的 "default" 會將資料表定位在資料庫的預設檔案群組上。
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -452,7 +455,7 @@ DROP_EXISTING = { ON | **OFF** }
 ONLINE = { ON | **OFF** }  
 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ON  
@@ -533,7 +536,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
  DATA_COMPRESSION  
@@ -561,7 +564,7 @@ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* 
 -   為數個個別分割區提供以逗號分隔的分割區編號，例如：ON PARTITIONS (1, 5)。  
 -   同時提供範圍和個別分割區，例如：ON PARTITIONS (2, 4, 6 TO 8)。  
   
- \<range> 可以指定為以 TO 一字分隔的資料分割編號，例如：ON PARTITIONS (6 TO 8)。  
+ \<範圍> 可以指定為以 TO 一字分隔的分割區編號，例如：ON PARTITIONS (6 TO 8)。  
   
  若要為不同的分割區設定不同類型的資料壓縮，請指定 DATA_COMPRESSION 選項一次以上，例如：  
  
@@ -792,7 +795,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="version-notes"></a>版本資訊  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 不支援 filegroup 和 filestream 選項。  
   
-## <a name="examples-all-versions-uses-the-adventureworks-database"></a>範例：所有版本。 使用 AdventureWorks 資料庫。  
+## <a name="examples-all-versions-uses-the-adventureworks-database"></a>範例:所有版本。 使用 AdventureWorks 資料庫。  
   
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. 建立簡單的非叢集資料列存放區索引  
  下列範例會在 `Purchasing.ProductVendor` 資料表的 `VendorID` 資料行上建立非叢集索引。  
@@ -828,7 +831,7 @@ CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey, DateKey, OrganizationKey DES
 WITH ( DROP_EXISTING = ON );  
  ```  
   
-## <a name="examples-sql-server-azure-sql-database"></a>範例：SQL Server、Azure SQL Database  
+## <a name="examples-sql-server-azure-sql-database"></a>範例:SQL Server、Azure SQL Database  
   
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 建立唯一的非叢集索引  
  下列範例會在 `Name` 資料庫中 `Production.UnitMeasure` 資料表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料行上建立唯一非叢集索引。 索引會強制將資料上的唯一性插入 `Name` 資料行中。  
@@ -1049,7 +1052,7 @@ CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABL
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 
@@ -1078,7 +1081,7 @@ CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
--- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
 CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
 
 -- Pause a running resumable online index creation 

@@ -11,12 +11,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb91f7c7b570fb678e2b503ed1841c5d3b45dcae
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 23d86191b60cfe4dbcf6793b4765b51b7df66fc1
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616279"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591652"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在 Data Quality Client 中開啟 Integration Services 專案
 
@@ -51,9 +51,9 @@ ms.locfileid: "52616279"
   
 3.  在 **[開啟專案]** 畫面上，您可以依照以下其中一種方式來識別 Integration Services 專案：  
   
-    1.  **專案名稱**：Integration Services 專案會使用以下命名術語列出："Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}"。 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案]  畫面中。  
+    1.  **專案名稱**：Integration Services 專案會使用下列命名術語列出："Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}"。 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案]  畫面中。  
   
-    2.  **專案類型**：Integration Services 專案在 **[開啟專案]** 畫面上擁有 **[SSIS]** 專案類型。  
+    2.  **專案類型**：Integration Services 專案在 [開啟專案] 畫面上擁有 [SSIS] 專案類型。  
   
      選取專案，然後按 **[下一步]**。  
   

@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 418fdf1db1dfb6db58ee80b709b267338d2591d8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558225"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53204917"
 ---
 # <a name="database-file-initialization"></a>資料庫檔案初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "51558225"
 ## <a name="instant-file-initialization-ifi"></a>檔案立即初始化 (IFI)  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，資料檔可以立即初始化，以避免清空作業。 檔案立即初始化可以加快先前提到的檔案作業執行速度。 立即檔案初始化會回收使用的磁碟空間，卻不會在該空間中填入零。 而是在新資料寫入檔案時將磁碟內容覆寫為新資料。 記錄檔無法立即初始化。  
   
-> [!NOTE]  
+> [!NOTE]
 > 檔案立即初始化只在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 或 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 或更新版本中提供。  
-
+> 
 > [!IMPORTANT]
 > 只有在資料檔中才能使用檔案立即初始化。 記錄檔在建立或增加大小時，一律會將檔案清空。
   
@@ -81,7 +81,7 @@ Database Instant File Initialization: enabled. For security and performance cons
 Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
 ```
 
-**適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 開始、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 開始、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 ## <a name="security-considerations"></a>安全性考量  
 在使用檔案立即初始化 (IFI) 時，由於刪除的磁碟內容只有在新資料寫入檔案時才會被覆寫；因此，直到其他資料寫入資料檔特定區域之前，未經授權的主體可能得以存取刪除的內容。 當資料庫檔案附加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之際，檔案上的判別存取控制清單 (DACL) 可降低此一資訊洩漏風險。 此 DACL 只允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和本機系統管理員存取檔案。 但是，當檔案卸離後，沒有 *SE_MANAGE_VOLUME_NAME* 的使用者或服務便能存取該檔案。 在備份資料庫時，也會有類似的需要考量之處：如果備份檔案未使用適當的 DACL 保護，未經授權的使用者或服務便可存取刪除的內容。  

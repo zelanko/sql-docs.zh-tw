@@ -1,7 +1,7 @@
 ---
 title: ORDER BY 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 12/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7279def5a168f46a86db05be1c41b28bbfa9db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530229"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980274"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,14 @@ ORDER BY order_by_expression
   
  您可以指定多個排序資料行。 資料行名稱必須是唯一名稱。 ORDER BY 子句中的排序資料行順序用來定義排序結果集的組織。 也就是說，結果集依據第一個資料行來排序，然後該排序的清單依據第二個資料行來排序，依此類推。  
   
- ORDER BY 子句中參考的資料行名稱必須對應到選取清單中的資料行，或語意明確之 FROM 子句中指定之資料表的已定義資料行。  
+ ORDER BY 子句中所參考資料行名稱必須對應到選取清單中的資料行，或語意明確之 FROM 子句中所指定資料表的已定義資料行。 如果 ORDER BY 子句參考選取清單中的資料行別名，資料行別名必須單獨使用，而不是在 ORDER BY 子句中作為某個運算式的一部分，例如：
+ 
+```sql
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName; -- correct 
+SELECT SCHEMA_NAME(schema_id) AS SchemaName FROM sys.objects 
+ORDER BY SchemaName + ''; -- wrong
+```
   
  COLLATE *collation_name*  
  指定應依據 *collation_name* 所指定的定序執行 ORDER BY 作業，而不應根據資料表或檢視表所定義的資料行定序執行。 *collation_name* 可以是 Windows 定序名稱或 SQL 定序名稱。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。 COLLATE 只適用於下列類型的資料行：**char**、**varchar**、**nchar** 及 **nvarchar**。  
@@ -188,7 +195,7 @@ ORDER BY order_by_expression
   
  請參閱本主題稍後的＜範例＞一節中的範例＜在單一交易中執行多個查詢＞。  
   
- 如果一致的執行計畫是分頁方案的要素，請考慮為 OFFSET 和 FETCH 參數使用 OPTIMIZE FOR 查詢提示。 請參閱本主題稍後的＜範例＞一節中的＜為 OFFSET 和 FETCH 值指定運算式＞。 如需有關 OPTIMZE FOR 的詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
+ 如果一致的執行計畫是分頁方案的要素，請考慮為 OFFSET 和 FETCH 參數使用 OPTIMIZE FOR 查詢提示。 請參閱本主題稍後的＜範例＞一節中的＜為 OFFSET 和 FETCH 值指定運算式＞。 如需 OPTIMIZE FOR 的詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 ## <a name="examples"></a>範例  
   

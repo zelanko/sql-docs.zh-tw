@@ -10,23 +10,23 @@ helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ca79a8ca6510431714ccd9a2f37bb322ebb75b56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26ce42d2c28fcb991ac8127b8806cde4156fa4d6
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638856"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380409"
 ---
 # <a name="delete-a-workload-group"></a>刪除工作負載群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除工作負載群組或資源集區。  
   
--   **開始之前：**  [限制事項](#LimitationsRestrictions)、 [權限](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **使用下列方式刪除工作負載群組：**[物件總管](#DelWGObjEx)、[資源管理員屬性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
+-   **若要刪除工作負載群組，請使用下列方式：**[物件總管](#DelWGObjEx)、[Resource Governor 屬性](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果工作負載群組包含作用中工作階段，您就無法刪除該工作負載群組。  
@@ -40,7 +40,7 @@ ms.locfileid: "47638856"
   
 -   重新啟動伺服器。 重新啟動程序完成後，將不會建立已經刪除的群組，而且已經移動的群組將會使用新的資源集區指派。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  刪除工作負載群組需要 CONTROL SERVER 權限。  
   
 ##  <a name="DelWGObjEx"></a> 使用物件總管刪除工作負載群組  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [建立資源集區](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [建立工作負載群組](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [刪除資源集區](../../relational-databases/resource-governor/delete-a-resource-pool.md)   

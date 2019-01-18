@@ -15,12 +15,12 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ed2ef9899e4c0df7cb6aa3aa8f00ac62d6ffb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaae67a3d08fd899a9a73e4e853b1dbc97dba9ee
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535543"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553210"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -412,7 +412,7 @@ ms.locfileid: "52535543"
   
     ```  
   
-3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱 [如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
+3.  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [備份資料庫] 對話方塊備份 SSISDB 資料庫。 如需詳細資訊，請參閱[如何：備份資料庫 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)。  
   
 4.  執行下列動作，以產生 ##MS_SSISServerCleanupJobLogin## 的 CREATE LOGIN 指令碼。 如需詳細資訊，請參閱 [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)。  
   
@@ -436,7 +436,7 @@ ms.locfileid: "52535543"
   
 ### <a name="to-restore-the-ssis-database"></a>若要還原 SSIS 資料庫  
   
-1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行 sp_configure 預存程序，藉以啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [CLR 已啟用選項](https://go.microsoft.com/fwlink/?LinkId=231855)。  
+1.  如果您要將 SSISDB 資料庫還原至從未建立過 SSISDB 目錄的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請執行 `sp_configure` 預存程序來啟用 Common Language Runtime (CLR)。 如需詳細資訊，請參閱 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [CLR 已啟用選項](https://go.microsoft.com/fwlink/?LinkId=231855)。  
   
     ```  
     use master   
@@ -541,10 +541,10 @@ ms.locfileid: "52535543"
   
 2.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開本機伺服器，然後展開 [Integration Services 目錄] 。  
   
-3.  以滑鼠右鍵按一下 [SSISDB]，然後選取 [資料庫升級] 啟動 [SSISDB 升級精靈]。  
+3.  以滑鼠右鍵按一下 [SSISDB]，然後選取 [資料庫升級] 啟動 [SSISDB 升級精靈]。 或者，在本機伺服器上以較高的權限執行 `C:\Program Files\Microsoft SQL Server\140\DTS\Binn\ISDBUpgradeWizard.exe`，以啟動 [SSISDB 升級精靈]。
   
-     ![啟動 [SSISDB 升級精靈]](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png "啟動 [SSISDB 升級精靈]")  
-  
+     ![啟動 SSISDB 升級精靈](../../integration-services/service/media/ssisdb-upgrade-wizard-1.png)
+
 4.  在 [選取執行個體]  頁面上，選取本機伺服器上的 SQL Server 執行個體。  
   
     > [!IMPORTANT]  
@@ -589,9 +589,9 @@ ms.locfileid: "52535543"
   
 -   [步驟 1：建立 Integration Services 目錄](#Step1)  
   
--   [步驟 2：將 SSISDB 新增至 AlwaysOn 可用性群組](#Step2)  
+-   [步驟 2：將 SSISDB 新增至 Always On 可用性群組](#Step2)  
   
--   [步驟 3：啟用適用於 AlwaysOn 的 SSIS 支援](#Step3)  
+-   [步驟 3：啟用適用於 Always On 的 SSIS 支援](#Step3)  
   
 > [!IMPORTANT]  
 > -   您必須在可用性群組的 **主要節點** 上執行這些步驟。
@@ -610,16 +610,16 @@ ms.locfileid: "52535543"
   
 4.  按一下 [在 SQL Server 啟動時允許自動執行 Integration Services 預存程序]  ，讓 [catalog.startup](../system-stored-procedures/catalog-startup.md) 預存程序會在每次 SSIS 伺服器執行個體重新啟動時執行。 預存程序會執行 SSISDB 目錄之作業狀態的維護。 它會在 SSIS 伺服器執行個體效能降低時，修正任何正在執行之封裝的狀態。  
   
-5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需詳細資訊，請參閱 [備份資料庫主要金鑰](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
+5.  輸入 **密碼**，然後按一下 [確定] 。 此密碼保護用來加密目錄資料的資料庫主要金鑰。 請將密碼儲存在安全位置。 建議您同時備份資料庫主要金鑰。 如需相關資訊，請參閱 [Back Up a Database Master Key](../../relational-databases/security/encryption/back-up-a-database-master-key.md)。  
   
-####  <a name="Step2"></a> 步驟 2：將 SSISDB 新增至 AlwaysOn 可用性群組  
+####  <a name="Step2"></a> 步驟 2：將 SSISDB 新增至 Always On 可用性群組  
 將 SSISDB 資料庫加入 AlwaysOn 可用性群組，幾乎等於是將任何其他使用者資料庫加入可用性群組。 請參閱 [使用可用性群組精靈](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
 提供您在 [新增可用性群組] 精靈的 [選取資料庫]  頁面中建立 SSIS 目錄時指定的密碼。
 
 ![新增可用性群組](../../integration-services/service/media/ssis-newavailabilitygroup.png "新增可用性群組")  
   
-####  <a name="Step3"></a> 步驟 3：啟用適用於 AlwaysOn 的 SSIS 支援  
+####  <a name="Step3"></a> 步驟 3：啟用適用於 Always On 的 SSIS 支援  
  建立 Integration Services 目錄之後，以滑鼠右鍵按一下 [Integration Services 目錄] 節點，然後按一下 [啟用 Always On 支援]。 您應該會看到下列 [啟用 AlwaysOn 支援]  對話方塊。 如果這個功能表項目已停用，請確認您已安裝的所有必要條件，然後按一下 [重新整理] 。  
   
  ![啟用 Always On 支援](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
@@ -655,9 +655,9 @@ ms.locfileid: "52535543"
   
 3.  在 **主要節點**上升級 SSISDB 資料庫。 在 SQL Server Management Studio 的物件總管 中，展開 [Integration Services 目錄] 、以滑鼠右鍵按一下 [SSISDB] ，然後選取 [資料庫升級] 。 遵循 **SSISDB 升級精靈** 中的指示來升級資料庫。 在**主要節點**本機上啟動 [SSIDB 升級精靈]。  
   
-4.  依照 [步驟 2：將 SSISDB 加入 AlwaysOn 可用性群組](#Step2) 的指示，將 SSISDB 加回可用性群組。  
+4.  遵循[步驟 2：將 SSISDB 新增至 Always On 可用性群組](#Step2)中的指示，將 SSISDB 新增回可用性群組。  
   
-5.  依照 [步驟 3：啟用適用於 AlwaysOn 的 SSIS 支援](#Step3)的指示。  
+5.  遵循[步驟 3：啟用適用於 Always On 的 SSIS 支援](#Step3)中的指示進行。  
   
 ##  <a name="RelatedContent"></a> 相關內容  
   

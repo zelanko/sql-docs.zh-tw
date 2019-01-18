@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f99cba0597faad9da7250097f1ca8e866bd00e21
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560425"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591052"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "51560425"
   
      [必要條件](#Prerequisites)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **若要將資料庫還原成資料庫快照集，請使用下列方式：**[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -101,7 +101,7 @@ ms.locfileid: "51560425"
   
      還原作業需要來源資料庫上的 RESTORE DATABASE 權限。 若要還原資料庫，請使用下列 Transact-SQL 陳述式：  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *資database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      其中 *database_name* 是來源資料庫，而 *database_snapshot_name* 是要用來還原資料庫的快照集名稱。 請注意，在此陳述式中，您必須指定快照名稱，而非備份裝置。  
   

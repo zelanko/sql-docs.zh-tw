@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3be0f60c692334b577a7eb59fa25f385ef0af33c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a2a977be46826859cf286fff1750345d5346e2b9
+ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020461"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53596819"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "43020461"
   
 ##  <a name="KnownIssues"></a> 疑難排解精靈  
  **Stretch Database 精靈失敗。**  
- 如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱＜ [必要條件：在伺服器上啟用 Stretch Database 的權限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)＞。  
+ 如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱[必要條件：在伺服器上啟用 Stretch Database 的權限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)。  
   
 ## <a name="next-steps"></a>後續步驟  
  針對 Stretch Database 啟用額外資料表。 監視資料移轉以及管理已啟用 Stretch 的資料庫和資料表。  

@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 801cdcf393ebadb9c0fd287fdd97e65cad87c284
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cc82fcdd1324ae8596d83d6a8911973a98ae569
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533023"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980334"
 ---
 # <a name="date-transact-sql"></a>日期 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "52533023"
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** 代表目前語言中指定的完整月份名稱或月份縮寫。 逗號是選擇性且會忽略大小寫。<br /><br /> 若要避免模糊不清，請使用四位數年份。<br /><br /> 如果漏了日的部分，就用當月第一天。|  
   
-|ISO 8601|描述|  
+|ISO 8601|Description|  
 |--------------|----------------|  
 |YYYY-MM-DD<br /><br /> YYYYMMDD|與 SQL 標準相同。 這是定義為國際標準的唯一格式。|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52533023"
 |yyyy-mm-ddTZD|特別支援 XML / SOAP 使用方式。<br /><br /> TZD 是時區指示項 (Z 或 + hh: mm 或 -hh:mm)：<br /><br /> -   hh:mm 表示時區時差。 hh 表示時區時差中的兩位數時數，範圍介於 0 至 14 之間。<br />-   MM 是代表時區時差中額外分鐘數的兩位數，範圍介於 0 至 59 之間。<br />-   + (加號) 或 - (減號) 是時區時差的必要符號。 這會指出若要取得當地時間，則必須在國際標準時間 (UTC) 中加上或扣除時區位移。 時區位移的有效範圍介於 -14:00 至 +14:00 之間。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 和 ISO 8601 合規性  
-**date** 符合西曆的 ANSI SQL 標準定義：「附註 85 - Datetime 資料類型會允許採用西曆格式的日期以 0001-01-01 CE 到 9999-12-31 CE 的日期範圍儲存」。
+**date** 符合西曆的 ANSI SQL 標準定義：「附註 85 - Datetime 資料類型會允許採用西曆格式的日期以 0001-01-01 CE 到 9999-12-31 CE 的日期範圍儲存。」
   
 下層用戶端所使用的預設字串常值格式，會遵循 SQL 標準格式定義 YYYY-MM-DD。 此格式與 ISO 8601 所定義的 DATE 相同。
   
@@ -124,7 +124,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-當轉換成 **smalldatetime** 時，**date** 值在 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 範圍內，將會複製日期元件，而時間元件會設定為 00:00:00.000。 當 **date** 值在 **smalldatetime** 值的範圍以外時，將會引發錯誤訊息 242：「將 date 資料類型轉換成 smalldatetime 資料類型時，產生超出範圍的值」，而 **smalldatetime** 值會設定為 NULL。 下列程式碼顯示將 `date` 值轉換成 `smalldatetime` 值的結果。
+當轉換成 **smalldatetime** 時，**date** 值在 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 範圍內，將會複製日期元件，而時間元件會設定為 00:00:00.000。 當 **date** 值在 **smalldatetime** 值的範圍以外時，將會引發錯誤訊息 242：「將 date 資料類型轉換成 smalldatetime 資料類型時，產生超出範圍的值。」；而 **smalldatetime** 值會設定為 NULL。 下列程式碼顯示將 `date` 值轉換成 `smalldatetime` 值的結果。
   
 ```sql
 DECLARE @date date= '1912-10-25';  

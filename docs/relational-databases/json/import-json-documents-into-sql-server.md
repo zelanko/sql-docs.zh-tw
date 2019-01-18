@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22365cc7a483b285f583268856a979a694eeabab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b77ef114e1af3ec0d8c7a7268ae5f9b892196fe
+ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537272"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52886923"
 ---
 # <a name="import-json-documents-into-sql-server"></a>將 JSON 文件匯入 SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,8 +121,6 @@ FROM 'data/product.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
-如需詳細資訊和使用 OPENROWSET 的範例，請參閱[將檔案從 Azure Blob 儲存體載入至 Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/02/23/loading-files-from-azure-blob-storage-into-azure-sql-database/)。
-
 ## <a name="parse-json-documents-into-rows-and-columns"></a>將 JSON 文件剖析成資料列和資料行
 您可能想要剖析 JSON 檔案，並傳回檔案中的書籍以及其資料列和資料行中的屬性，而不是讀取整個 JSON 檔案作為單一值。 下列範例使用的 JSON 檔案來自[此網站](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)，其中包含書籍清單。
 
@@ -162,7 +160,7 @@ SELECT book.*
 |---|---|---|---|---|
 978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
+978-1857995879|Sophie's World :The Greek Philosophers|3.07|64|Jostein Gaarder| 
 978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 
@@ -170,10 +168,6 @@ SELECT book.*
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>深入了解 SQL Server 和 Azure SQL Database 中的 JSON  
   
-### <a name="microsoft-blog-posts"></a>Microsoft 部落格文章  
-  
-如需特定的解決方案、使用案例和建議，請參閱這些[部落格文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)，了解 SQL Server 和 Azure SQL Database 中的內建 JSON 支援。  
-
 ### <a name="microsoft-videos"></a>Microsoft 影片
 
 如需 SQL Server 和 Azure SQL Database 中內建 JSON 支援的觀看式簡介，請參閱下列影片：

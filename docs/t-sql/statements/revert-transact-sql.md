@@ -23,12 +23,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92876c7411082757cdd3ac3d06885b9a88520c89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03b1a748eaece8345a9d1c496633dd318a948692
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796246"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980404"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ EXECUTE dbo.usp_myproc;
  當 REVERT 被指定為獨立陳述式時，則會套用至批次或工作階段內定義的 EXECUTE AS 陳述式。 如果對應的 EXECUTE AS 陳述式含有 WITH NO REVERT 子句，REVERT 就沒有任何影響。 此時，在工作階段卸除之前，執行內容仍然有效。  
   
 ## <a name="using-revert-with-cookie"></a>使用 REVERT WITH COOKIE  
- 用來設定工作階段執行內容的 EXECUTE AS 陳述式，可包含選擇性子句 WITH NO REVERT COOKIE = @*varbinary_variabl*e。 當這個陳述式執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳遞給 @*varbinary_variabl*e。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含正確的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
+ 用來設定工作階段執行內容的 EXECUTE AS 陳述式，可包含選擇性子句 WITH NO REVERT COOKIE = @*varbinary_variable*。 當這個陳述式執行時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳遞給 @*varbinary_variable*。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含正確的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
   
  這項機制在使用連接共用的環境中相當有用。 連接共用是一組資料庫連接的維護，這些連接是供多位使用者的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值 (本例是指應用程式)，因此呼叫者可以保證叫用應用程式的使用者不能變更他們所建立的執行內容。 在還原執行內容之後，應用程式就可以將內容切換回另一個主體。  
   
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
- 下列範例會將工作階段的執行內容設為指定使用者，並且指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
+ 下列範例會將工作階段的執行內容設為指定使用者，並且指定 WITH NO REVERT COOKIE = @*varbinary_variable* 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
   
 ```  
 DECLARE @cookie varbinary(100);  

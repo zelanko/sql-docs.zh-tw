@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 744895bc3e2a60d8eb3edad4554f08bc1aaf6a95
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
+ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641499"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069784"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -168,7 +168,7 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 如果這個選項是 ON，或已透過 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 啟用統計資料收集，則會收集原生編譯 T-SQL 模組的陳述式層級執行統計資料。
 
-如需原生編譯 T-SQL 模組效能監控的詳細資訊，請參閱[監視原生編譯預存程序的效能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
+如需原生編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組效能監控的詳細資訊，請參閱[監視原生編譯預存程序的效能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
@@ -210,20 +210,20 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 允許設定[全域暫存資料表](create-table-transact-sql.md)的自動卸除功能。 預設值為 [ON]，表示全域暫存資料表會在沒有任何工作階段使用時自動卸除。 當設為 [OFF] 時，將需要使用 DROP TABLE 陳述式，才能明確卸除全域暫存資料表，或是等到伺服器重新啟動時再自動卸除。
 
-- 在 Azure SQL Database 邏輯伺服器中，此選項可在邏輯伺服器的個別使用者資料庫中進行設定。
-- 在 SQL Server 及 Azure SQL Database 受控執行個體中，此選項會在 `TEMPDB` 中設定，且個別使用者資料庫的設定不會有任何效果。
+- 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 邏輯伺服器中，此選項可在邏輯伺服器的個別使用者資料庫中進行設定。
+- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體中，此選項會在 `TempDB` 中設定，且個別使用者資料庫的設定不會有任何效果。
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-可讓您在資料庫或陳述式範圍啟用或停用多重陳述式資料表值函式的交錯執行，同時仍保有 140 (含) 以上的資料庫相容性層級。 交錯執行是 SQL 資料庫中自適性查詢處理的部分功能。 如需詳細資訊，請參閱[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)
+可讓您在資料庫或陳述式範圍啟用或停用多重陳述式資料表值函式的交錯執行，同時仍保有 140 (含) 以上的資料庫相容性層級。 交錯執行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自適性查詢處理的部分功能。 如需詳細資訊，請參閱[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-可讓您在資料庫或陳述式範圍啟用或停用自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 自適性聯結是 SQL Server 2017 所推出的[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)部分功能。
+可讓您在資料庫或陳述式範圍啟用或停用自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 自適性聯結是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 所推出的[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)部分功能。
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
@@ -233,66 +233,62 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ## <a name="Permissions"></a> Permissions
 
-需要資料庫上的 ALTER ANY DATABASE SCOPE CONFIGURATION。 可由在資料庫上具有 CONTROL 權限的使用者來授與此權限。
+資料庫上需要 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 可由在資料庫上具有 CONTROL 權限的使用者來授與此權限。
 
 ## <a name="general-remarks"></a>一般備註
-
 雖然您可以設定讓次要資料庫擁有與其主要資料庫不同的範圍組態設定，但所有次要資料庫都會使用相同的組態。 無法為個別次要資料庫設定不同的設定。
 
 執行此陳述式會清除目前資料庫中的程序快取，這意謂著所有查詢都必須重新編譯。
 
 針對有 3 部分名稱的查詢，會採用查詢的目前資料庫連線設定，而不會採用在目前資料庫內容中編譯 SQL 模組 (例如程序、函式及觸發程序) 的設定，因此會使用其所在資料庫的選項。
 
-ALTER_DATABASE_SCOPED_CONFIGURATION 事件會以 DDL 事件的形式新增，可用來引發 DDL 觸發程序，且是 ALTER_DATABASE_EVENTS 觸發程序群組的子觸發程序。
+`ALTER_DATABASE_SCOPED_CONFIGURATION` 事件會以 DDL 事件的形式新增，可用來引發 DDL 觸發程序，且是 `ALTER_DATABASE_EVENTS` 觸發程序群組的子觸發程序。
 
 資料庫範圍組態設定會伴隨資料庫，這表示當還原或附加特定資料庫時，會保留現有的組態設定。
 
 ## <a name="limitations-and-restrictions"></a>限制事項
 
 ### <a name="maxdop"></a>MAXDOP
-
 細微的設定可以覆寫全域設定，而資源管理員則可以設定所有其他 MAXDOP 設定的限制。 以下是 MAXDOP 設定的邏輯：
 
-- 查詢提示會覆寫 sp_configure 和資料庫範圍設定。 如果已針對工作負載群組設定資源群組 MAXDOP：
+- 查詢提示會覆寫 `sp_configure` 和資料庫範圍設定。 如果已針對工作負載群組設定資源群組 MAXDOP：
 
-  - 如果將查詢提示設定為 0，資源管理員設定就會覆寫它。
+  - 如果將查詢提示設定為零 (0)，資源管理員設定就會覆寫該提示。
 
-  - 如果查詢提示不是 0，就會以資源管理員設定作為其限制。
+  - 如果查詢提示不是零 (0)，就會以資源管理員設定作為其限制。
 
-- 除非有查詢提示，否則 DB 範圍設定 (值為 0 時除外) 會覆寫 sp_configure 設定，並以資源管理員設定作為其限制。
+- 除非有查詢提示，否則資料庫範圍設定 (值為零時除外) 會覆寫 `sp_configure` 設定，並以資源管理員設定作為其限制。
 
-- 資源管理員設定會覆寫 sp_configure 設定。
+- 資源管理員設定會覆寫 `sp_configure` 設定。
 
 ### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
-使用 QUERYTRACEON 提示來啟用舊版查詢最佳化工具或查詢最佳化工具 Hotfix 時，在查詢提示與資料庫範圍組態設定之間會是 OR 條件，也就是說，如果啟用兩者其中之一，就會套用選項。
+使用 `QUERYTRACEON` 提示來啟用 SQL Server 7.0 到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本的預設查詢最佳化工具或查詢最佳化工具 Hotfix 時，在查詢提示與資料庫範圍組態設定之間會是 OR 條件；也就是說，如果啟用兩者其中之一，就會套用資料庫範圍設定選項。
 
-### <a name="geodr"></a>GeoDR
+### <a name="geo-dr"></a>異地災害復原
 
-可讀取次要資料庫 (Always On 可用性群組和 Azure SQL Database 異地複寫資料庫)，會透過檢查資料庫的狀態來使用次要值。 儘管重新編譯並不會發生在容錯移轉時，而且就技術而言，新的主要資料庫會有使用次要設定的查詢，但主要資料庫與次要資料庫之間的設定只有在工作負載不同時會有差異，因此快取的查詢會使用最佳設定，而新查詢則會挑選適合它們的新設定。
+可讀取次要資料庫 (Always On 可用性群組和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 異地複寫資料庫)，會透過檢查資料庫的狀態來使用次要值。 儘管重新編譯並不會發生在容錯移轉時，而且就技術而言，新的主要資料庫會有使用次要設定的查詢，但主要資料庫與次要資料庫之間的設定只有在工作負載不同時會有差異，因此快取的查詢會使用最佳設定，而新查詢則會挑選適合它們的新設定。
 
 ### <a name="dacfx"></a>DacFx
 
-由於 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL Database 及從 SQL Server 2016 開始的 SQL Server 新功能，且會影響資料庫結構描述，因此無法將資料庫結構的匯出項目 (不論是否含有資料) 匯入舊版 SQL Server，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的匯出項目，將無法匯入至舊版伺服器。
+因為 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 中會影響資料庫結構描述的新功能，所以匯出的結構描述 (不論有無資料) 不能匯入至較舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的匯出項目，將無法匯入至舊版伺服器。
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
-此選項僅適用於支援 WITH(ONLINE= syntax) 的 DDL 陳述式。 不會影響 XML 索引。
+此選項僅適用於支援 `WITH (ONLINE = <syntax>)` 的 DDL 陳述式。 不會影響 XML 索引。
 
 ### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
 
-此選項僅適用於支援 WITH(RESUMABLE= syntax) 的 DDL 陳述式。 不會影響 XML 索引。
+此選項僅適用於支援 `WITH (RESUMABLE = <syntax>)` 的 DDL 陳述式。 不會影響 XML 索引。
 
 ## <a name="metadata"></a>中繼資料
 
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 系統檢視會提供有關資料庫內範圍組態的資訊。 資料庫範圍組態選項只會出現在 sys.database_scoped_configurations 中，因為它們會覆寫伺服器層級預設設定。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 系統檢視只會顯示伺服器層級設定。
 
 ## <a name="examples"></a>範例
-
 下列範例示範如何使用 ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. 授與權限
-
 此範例會將執行 ALTER DATABASE SCOPED CONFIGURATION 所需的權限授與使用者 [Joe]。
 
 ```sql
@@ -300,7 +296,6 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
 ### <a name="b-set-maxdop"></a>B. 設定 MAXDOP
-
 此範例會在異地複寫案例中，針對主要資料庫設定 MAXDOP = 1，並針對次要資料庫設定 MAXDOP = 4。
 
 ```sql
@@ -315,7 +310,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>C. 設定 LEGACY_CARDINALITY_ESTIMATION
-
 此範例會在異地複寫案例中，將次要資料庫的 LEGACY_CARDINALITY_ESTIMATION 設定為 ON。
 
 ```sql
@@ -329,7 +323,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. 設定 PARAMETER_SNIFFING
-
 此範例會在異地複寫案例中，將主要資料庫的 PARAMETER_SNIFFING 設定為 OFF。
 
 ```sql
@@ -349,7 +342,6 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. 設定 QUERY_OPTIMIZER_HOTFIXES
-
 在異地複寫案例中，將主要資料庫的 QUERY_OPTIMIZER_HOTFIXES 設定為 ON。
 
 ```sql
@@ -357,7 +349,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. 清除程序快取
-
 此範例會清除程序快取 (可能僅適用於主要資料庫)。
 
 ```sql
@@ -365,8 +356,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ```
 
 ### <a name="g-set-identitycache"></a>G. 設定 IDENTITY_CACHE
-
-**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (功能目前為公開預覽版)
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (功能目前為公開預覽版)
 
 此範例會停用識別快取。
 
@@ -375,8 +365,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. 設定 OPTIMIZE_FOR_AD_HOC_WORKLOADS
-
-**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 此範例會允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。
 
@@ -385,7 +374,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>I. 設定 ELEVATE_ONLINE
-
 **適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 且為公開預覽功能
 
 此範例會將 ELEVATE_ONLINE 設定為 FAIL_UNSUPPORTED。
@@ -395,8 +383,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. 設定 ELEVATE_RESUMABLE
-
-**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
+**適用對象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
 
 此範例會將 ELEVEATE_RESUMABLE 設定為 WHEN_SUPPORTED。
 

@@ -1,9 +1,9 @@
 ---
 title: 設定或變更伺服器定序 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/03/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,47 +13,61 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a251cfbd29cde861409e4f4e04d1dc0cd95bd37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
+ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664896"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52954392"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  對於與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體一起安裝的所有系統資料庫，以及任何新建的使用者資料庫而言，伺服器定序會當做預設定序。 伺服器定序是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  對於與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體一起安裝的所有系統資料庫，以及任何新建的使用者資料庫而言，伺服器定序會當做預設定序。 您應該仔細選擇伺服器層級定序，因為它會影響：
+ - `=`、`JOIN`、`ORDER BY` 及比較文字資料之其他運算子的排序和比較規則。
+ - 系統檢視表中 `CHAR`、`VARCHAR`、`NCHAR` 和 `NVARCHAR` 資料行以及系統函式和 TempDB (例如暫存資料表) 中物件的定序。
+ - 變數、資料指標和 `GOTO` 標籤的名稱。 如果伺服器層級定序區分大小寫，變數 @pi 和 @PI 會視為不同的變數；如果伺服器層級定序不區分大小寫，則會視為相同的變數。
   
-## <a name="changing-the-server-collation"></a>變更伺服器定序  
+## <a name="setting-the-server-collation-in-sql-server"></a>設定 SQL Server 中的伺服器定序
+
+  伺服器定序是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間指定。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序指定為伺服器層級定序。 如需詳細資訊，請參閱[伺服器組態 - 定序](/sql/sql-server/install/server-configuration-collation.md)。
+  
+## <a name="changing-the-server-collation-in-sql-server"></a>變更 SQL Server 中的伺服器定序
+
  變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的預設定序是相當複雜的作業，需要執行下列步驟：  
   
--   確定已備妥重新建立使用者資料庫以及所有內含物件所需的所有資訊或指令碼。  
+- 確定已備妥重新建立使用者資料庫以及所有內含物件所需的所有資訊或指令碼。  
   
--   使用 [bcp Utility](../../tools/bcp-utility.md)這類工具來匯出所有資料。 如需詳細資訊，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+- 使用 [bcp Utility](../../tools/bcp-utility.md)這類工具來匯出所有資料。 如需詳細資訊，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
--   卸除所有使用者資料庫。  
+- 卸除所有使用者資料庫。  
   
--   重建 master 資料庫，以使用 **setup** 命令的 SQLCOLLATION 屬性來指定新定序。 例如：  
+- 重建 master 資料庫，以使用 **setup** 命令的 SQLCOLLATION 屬性來指定新定序。 例如：  
   
-    ```  
-    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
-    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]   
+    ```sql  
+    Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
+    /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
     ```  
   
      如需詳細資訊，請參閱 [重建系統資料庫](../../relational-databases/databases/rebuild-system-databases.md)。  
   
--   建立所有資料庫以及所有內含物件。  
+- 建立所有資料庫以及所有內含物件。  
   
--   匯入所有資料。  
+- 匯入所有資料。  
   
 > [!NOTE]  
->  您可以不變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的預設定序，而是針對每個建立的新資料庫指定預設定序。  
+> 您可以不變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的預設定序，而是針對每個建立的新資料庫指定預設定序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="setting-the-server-collation-in-managed-instance"></a>設定受控執行個體中的伺服器定序
+
+建立 Azure SQL 受控執行個體 (預覽) 時 (目前只能使用 PowerShell 建立)，可指定執行個體中的伺服器定序。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序和新的 UTF-8 定序指定為伺服器層級定序。
+如需示範如何設定 Azure SQL Database 受控執行個體中伺服器層級定序的指令碼範本，請參閱[使用 Resource Manager 範本設定受控執行個體定序](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)。 如果您將資料庫從 SQL Server 移轉至受控執行個體，請使用 `SERVERPROPERTY(N'Collation')` 函式來檢查來源 SQL Server 中的伺服器定序，並建立符合您 SQL Server 定序的受控執行個體。 將資料庫從 SQL Server 移轉至伺服器層級定序不相符的受控執行個體，可能會導致查詢中出現數個未預期的錯誤。 您無法變更現有受控執行個體上的伺服器層級定序。
+
+## <a name="see-also"></a>另請參閱
+
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
  [設定或變更資料庫定序](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [設定或變更資料行定序](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [重建系統資料庫](../../relational-databases/databases/rebuild-system-databases.md)  
-  
-  
+ 

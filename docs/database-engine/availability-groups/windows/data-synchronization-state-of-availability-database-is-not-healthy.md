@@ -1,6 +1,7 @@
 ---
-title: 可用性資料庫的資料同步處理狀態不健全 | Microsoft Docs
-ms.custom: ''
+title: 可用性資料庫的資料同步處理狀態不健全
+description: 找出 Always On 可用性群組中的資料庫資料同步處理狀態不健全的可能原因。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +15,14 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 5b2e45fd29967a89bb468eae32bcb393fff07b24
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2ea871bce7c35f9b6f5341a281d066087c33519b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603418"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203387"
 ---
-# <a name="data-synchronization-state-of-availability-database-is-not-healthy"></a>可用性資料庫的資料同步處理狀態不健全
+# <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Always On 可用性群組可用性資料庫的資料同步處理狀態不健全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="introduction"></a>簡介  

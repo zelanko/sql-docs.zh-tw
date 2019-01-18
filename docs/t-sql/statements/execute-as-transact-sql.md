@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4db2249838a1032ce44e13870463fac43012dfa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512622"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979704"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "52512622"
 ## <a name="using-with-no-revert"></a>使用 WITH NO REVERT  
  當 EXECUTE AS 陳述式包括選擇性的 WITH NO REVERT 子句時，不能使用 REVERT 或藉由執行另一個 EXECUTE AS 陳述式來重設工作階段的執行內容。 陳述式設定的內容會持續有效，直到卸除工作階段為止。  
   
- 指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variabl*e。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
+ 指定 WITH NO REVERT COOKIE = @*varbinary_variable* 子句時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將 Cookie 值傳遞到 @*varbinary_variable*。 只有當呼叫的 REVERT WITH COOKIE = @*varbinary_variable* 陳述式包含相同的 *@varbinary_variable* 值時，該陳述式所設定的執行內容才能還原到先前的內容。  
   
  這個選項在使用連接共用的環境中相當有用。 連接共用是資料庫連接群組的維護，這些連接是供應用程式伺服器上的應用程式重複使用。 由於只有 EXECUTE AS 陳述式的呼叫者知道傳送到 *@varbinary_variable* 的值，因此呼叫者可以保證其所建立的執行內容不會被別人變更。  
   
@@ -185,7 +185,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. 使用 WITH COOKIE 子句  
- 下列範例會將工作階段的執行內容設為指定使用者，並且指定 WITH NO REVERT COOKIE = @*varbinary_variabl*e 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
+ 下列範例會將工作階段的執行內容設為指定使用者，且指定 WITH NO REVERT COOKIE = @*varbinary_variable* 子句。 `REVERT` 陳述式必須指定傳給 `@cookie` 陳述式中的 `EXECUTE AS` 變數值，才能順利將內容還原回呼叫端。 若要執行這個範例，則必須具備在範例 A 中建立的 `login1` 登入和 `user1` 使用者。  
   
 ```  
 DECLARE @cookie varbinary(8000);  

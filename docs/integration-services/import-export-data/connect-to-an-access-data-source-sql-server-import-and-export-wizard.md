@@ -11,12 +11,12 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c49ec9733634d0b8eb5f6523eb6fd7f416b5f408
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829466"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202637"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>連線至 Access 資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何從 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面中連線至 **Microsoft Access** 資料來源。
@@ -46,8 +46,8 @@ ms.locfileid: "47829466"
  **檔案名稱**  
 指定 Access 檔案的路徑和檔案名稱。 例如，本機電腦檔案為 **C:\\MyData.mdb**，或網路共用檔案為 **\\\\Sales\\Database\\Northwind.mdb**。 或按一下 [瀏覽]。 
 
- >   [!NOTE] 
- > 如果您按一下 [瀏覽] 找到 Access 檔案，則 [開啟] 對話方塊預設會篩選較舊 .MDB 格式和副檔名的檔案。 不過，資料提供者也可以開啟具有較新 .ACCDB 格式和副檔名的檔案。
+> [!NOTE]
+> 如果您按一下 [瀏覽] 找到 Access 檔案，則 [開啟] 對話方塊預設會篩選較舊 .MDB 格式和副檔名的檔案。 不過，資料提供者也可以開啟具有較新 .ACCDB 格式和副檔名的檔案。
   
  **瀏覽**  
  使用 [開啟] 對話方塊來找出資料庫檔案。  
@@ -70,7 +70,7 @@ ms.locfileid: "47829466"
 > 若要使用 64 位元版本的 [SQL Server 匯入和匯出精靈]，您必須安裝 SQL Server。 SQL Server Data Tools (SSDT) 和 SQL Server Management Studio (SSMS) 是 32 位元應用程式，而且只會安裝 32 位元檔案 (包含 32 位元版本的精靈)。
 
 ## <a name="officeDownloads"></a>取得連線至 Access 所需的檔案  
-您可能必須下載尚未安裝的 Microsoft Office 資料來源 (包含 Access 和 Excel) 的連線元件。 在這裡下載 Access 和 Excel 檔案的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
+您可能必須下載尚未安裝的 Microsoft Office 資料來源 (包含 Access 和 Excel) 的連線元件。 在這裡下載適用於 Access 和 Excel 檔案的連線元件最新版本：[Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) (Microsoft Access 資料庫引擎 2016 可轉散發套件)。
   
 最新版的元件可以開啟舊版 Access 所建立的檔案。
 

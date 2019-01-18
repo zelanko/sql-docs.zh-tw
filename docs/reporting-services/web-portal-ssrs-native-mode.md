@@ -1,25 +1,26 @@
 ---
-title: 入口網站 (SSRS 原生模式) | Microsoft Docs
-ms.date: 07/02/2017
+title: 報表伺服器的入口網站 (SSRS 原生模式) | Microsoft Docs
+ms.date: 12/05/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5f8405a36595b7a5ddaade9aa00952642625c65
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
+ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711219"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53010289"
 ---
-# <a name="web-portal-ssrs-native-mode"></a>入口網站 (SSRS 原生模式)
+# <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>報表伺服器的入口網站 (SSRS 原生模式)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、行動報表、KPI，以及完整瀏覽報表伺服器執行個體中的項目。 您也可以使用入口網站來管理單一報表伺服器執行個體。
+Reporting Services 報表伺服器的入口網站是一種 Web 體驗。 在入口網站中，您可以檢視報表、行動報表、KPI，以及完整巡覽報表伺服器執行個體中的項目。 您也可以使用入口網站來管理單一報表伺服器執行個體。
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png)
 
@@ -28,23 +29,14 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 您可以使用入口網站來執行下列工作：
 
 - 檢視、搜尋、列印與訂閱報表。
-
 - 建立、保護和維護資料夾階層，以組織伺服器上的項目。
-
 - 設定以角色為基礎的安全性，此安全性決定對項目與作業的存取權。
-
 - 設定報表執行屬性、報表記錄和報表參數。
-
 - 建立共用排程與共用資料來源，讓排程與資料來源連接更容易管理。
-
 - 建立資料驅動訂閱，將報表傳遞至大型收件者清單。
-
-- 建立連結報表，以不同方式重複使用現有報表並重新決定其用途。
-
+- 建立連結報表，以重複使用並以不同的方式重新決定現有報表的用途。
 - 下載常用工具，例如，報表產生器和行動報表發行工具。
-
 - [建立 KPI](../reporting-services/working-with-kpis-in-reporting-services.md)。
-
 - 傳送意見反應或功能要求。
 
 您可以使用入口網站來瀏覽報表伺服器資料夾或搜尋特定報表。 您可以檢視報表、其一般屬性，以及過去在報表記錄中擷取的報表複本。 根據您的權限，您也可以訂閱報表，以傳遞至電子郵件收件匣或檔案系統上的共用資料夾。
@@ -63,13 +55,13 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 
 ## <a name="start-and-use-the-web-portal"></a>啟動並使用入口網站
 
-入口網站是一種 Web 應用程式，您可以在瀏覽器視窗的網址列中輸入 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL 來開啟。 當您啟動 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]時，您所看到的頁面、連結和選項會依據您在報表伺服器上擁有的權限而有所不同。 若要執行工作，您必須被指派包含此工作的角色。  指派至具有完整權限之角色的使用者，可以存取用於管理報表伺服器的完整應用程式功能表與頁面。 指派至具有檢視和執行報表權限之角色的使用者，只看得到支援這些活動的功能表與頁面。 每個使用者可以有針對不同報表伺服器的不同角色指派，甚至針對儲存在單一報表伺服器上之各種報表與資料夾的不同角色指派。
+入口網站是一種 Web 應用程式，您可以在瀏覽器視窗的網址列中輸入 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] URL 來開啟。 當您啟動[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]時，您所看到的頁面、連結和選項會依據您在報表伺服器上擁有的權限而有所不同。 若要執行工作，您必須被指派包含此工作的角色。  指派至具有完整權限之角色的使用者，可以存取用於管理報表伺服器的完整應用程式功能表與頁面。 指派至具有檢視和執行報表權限之角色的使用者，只看得到支援這些活動的功能表與頁面。 每個使用者可以有針對不同報表伺服器的不同角色指派，甚至針對儲存在單一報表伺服器上之各種報表與資料夾的不同角色指派。
 
 如需角色的詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。
 
 ### <a name="start-the-web-portal"></a>啟動入口網站
 
-若要從瀏覽器中啟動入口網站，請執行下列動作：
+若要從瀏覽器啟動入口網站，請執行下列步驟：
 
 1. 開啟網頁瀏覽器。 如需支援的網頁瀏覽器清單，請參閱 [規劃 Reporting Services 瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)。
 
@@ -108,7 +100,7 @@ Reporting Services 入口網站是一種 Web 體驗，可讓您檢視報表、�
 
 ## <a name="search-for-items"></a>搜尋項目
 
-您可以輸入搜尋小組，而您將會看到可存取的所有項目。 結果會分類成 KPI、報表、資料集，以及其他項目。 您可以與結果互動，並將它們加到我的最愛。
+輸入搜尋字詞，即會看到您可以存取的所有項目。 結果會分類成 KPI、報表、資料集，以及其他項目。 您可以與結果互動，並將它們加到我的最愛。
 
 ![ssRSWebPortal-Search](../reporting-services/media/ssrswebportal-search.png)
 

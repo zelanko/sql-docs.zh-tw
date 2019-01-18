@@ -1,7 +1,7 @@
 ---
 title: 記憶體管理架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 12/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 924b347e5fa8907fa1f2b9cb9b820a63808cbc3b
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669397"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328978"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "51669397"
 > 舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以在 32 位元作業系統上執行。 在 32 位元作業系統上存取超過 4 GB 的記憶體，會需要 Address Windowing Extensions (AWE) 來管理記憶體。 若 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是在 64 位元作業系統上執行，就沒有這項需要。 如需有關 AWE 的詳細資訊，請參閱 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文件中的[處理序位址空間](https://msdn.microsoft.com/library/ms189334.aspx)以及[管理大型資料庫的記憶體](https://msdn.microsoft.com/library/ms191481.aspx)。   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對記憶體管理進行的變更
-舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，使用了五種不同的機制配置記憶體：
+在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，使用了五種不同的機制配置記憶體：
 -  **單一頁面配置器 (SPA)**，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理程中只包含少於或等於 8 KB 的記憶體配置。 [最大伺服器記憶體 (MB)] 與 [最小伺服器記憶體 (MB)] 設定選項決定了 SPA 可取用的實體記憶體上限。 緩衝集區同時是 SPA 的機制，以及單一分頁配置的最大取用者。
 -  **多頁配置器 (MPA)**，適用於要求超過 8KB 的記憶體配置。
 -  **CLR 配置器**，包括 SQL CLR 堆積，及其在 CLR 初始化期間所建立的全域配置。
@@ -103,8 +103,9 @@ ms.locfileid: "51669397"
 -  需要大型記憶體緩衝區的備份作業。
 -  需要儲存大量輸入參數的追蹤作業。
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對 "memory_to_reserve" 所進行的變更
-舊版 SQL Server 中 ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)**、**CLR 配置器**、SQL Server 處理序中**執行緒堆疊**的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
+在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)**、**CLR 配置器**、SQL Server 處理序中**執行緒堆疊**的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
 
 為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]*-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
 
@@ -313,7 +314,7 @@ FROM sys.dm_os_process_memory;
 > TORN_PAGE_DETECTION 可以使用較少資源，但所提供的 CHECKSUM 保護最少。
 
 ## <a name="understanding-non-uniform-memory-access"></a>了解非統一記憶體存取
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是非統一記憶體存取 (NUMA) 感知，不需要特殊組態就可以在 NUMA 硬體上順利執行。 隨著處理器時脈和數目的增加，要降低使用此額外處理能力所需要的記憶體延遲變得越來越困難。 為了避免這個狀況，硬體供應商提供了大型的 L3 快取，但這只是有限的解決方案。 NUMA 架構對這個問題提供了可擴充的解決方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已設計成可利用 NUMA 型電腦的優點，而不需要進行任何應用程式變更。 如需詳細資訊，請參閱 [作法：設定 SQL Server 使用軟體 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是非統一記憶體存取 (NUMA) 感知，不需要特殊組態就可以在 NUMA 硬體上順利執行。 隨著處理器時脈和數目的增加，要降低使用此額外處理能力所需要的記憶體延遲變得越來越困難。 為了避免這個狀況，硬體供應商提供了大型的 L3 快取，但這只是有限的解決方案。 NUMA 架構對這個問題提供了可擴充的解決方案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已設計成可利用 NUMA 型電腦的優點，而不需要進行任何應用程式變更。 如需詳細資訊，請參閱[如何：設定 SQL Server 使用軟體 NUMA](../database-engine/configure-windows/soft-numa-sql-server.md)。
 
 ## <a name="see-also"></a>另請參閱
 [伺服器記憶體伺服器組態選項](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

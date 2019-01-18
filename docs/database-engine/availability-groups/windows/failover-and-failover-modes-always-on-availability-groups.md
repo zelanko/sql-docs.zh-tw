@@ -1,6 +1,7 @@
 ---
-title: 容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組的容錯移轉模式
+description: 描述 Always On 可用性群組中參與資料庫可用的各種容錯移轉模式。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d66d1ccdbfbcd7f59f395b9ecf8367b7a7e16058
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523402"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207437"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "52523402"
  如果沒有次要複本與主要複本同步處理 (SYNCHRONIZED) 或主要複本未執行而且沒有任何次要複本已做好容錯移轉的準備，資料庫管理員可起始的容錯移轉。 強制容錯移轉可能造成資料遺失，建議僅限用於災害復原。 強制容錯移轉只能手動起始，因此視為一種強制手動容錯移轉。 這是在同步認可的可用性模式下唯一支援的容錯移轉形式。  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
- 在特定可用性群組內，是指使用自動容錯移轉 (如果有的話) 設定成同步認可模式的一對可用性複本 (包括目前的主要複本)。 只有在次要複本目前與主要複本 SYNCHRONIZED 時，[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]才會生效。  
+ 在特定可用性群組內，是指使用自動容錯移轉 (如果有的話) 設定成同步認可模式的一對可用性複本 (包括目前的主要複本)。 只有在次要複本目前與主要複本 SYNCHRONIZED 時，[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 才會生效。  
   
  [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  在特定可用性群組內，是指設定成同步認可模式 (如果有) 的一組兩個或三個可用性複本 (包括目前的主要複本)。 只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時， [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]才會生效。  
@@ -95,11 +96,11 @@ ms.locfileid: "52523402"
 ### <a name="failover-sets"></a>容錯移轉設定  
  由容錯移轉設定便能理解給定的可用性群組可能進行的容錯移轉形式。 容錯移轉設定是由支援給定容錯移轉形式的主要複本與次要複本所組成，如下所示：  
   
--   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (選擇性)：**  在指定可用性群組內，是指使用自動容錯移轉設定成同步認可模式 (如果有) 的一對可用性複本 (包括目前的主要複本)。 自動容錯移轉設定只有在次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
+-   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (選擇性)：** 在特定可用性群組內，是指使用自動容錯移轉 (如果有的話) 設定成同步認可模式的一對可用性複本 (包括目前的主要複本)。 自動容錯移轉設定只有在次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (選擇性)：**  在指定可用性群組內，是指設定成同步認可模式 (如果有) 的一組兩個或三個可用性複本 (包括目前的主要複本)。 同步認可容錯移轉設定只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (選擇性)：** 在特定可用性群組內，是指設定成同步認可模式 (如果有) 的一組兩個或三個可用性複本 (包括目前的主要複本)。 同步認可容錯移轉設定只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時才會生效。  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] ：**  在指定可用性群組內，是指操作狀態目前 ONLINE (不管是可用性模式還是容錯移轉模式) 的整組所有可用性複本。 完整容錯移轉設定會在次要複本目前與主要複本 SYNCHRONIZED 時變成相關。  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]：** 在給定的可用性群組中，其操作狀態目前 ONLINE (不管是可用性模式還是容錯移轉模式) 的這組全部的可用性複本。 完整容錯移轉設定會在次要複本目前與主要複本 SYNCHRONIZED 時變成相關。  
   
  當使用自動容錯移轉將可用性複本設定成同步認可時，該可用性複本會變成 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]的一部分。 不過，設定是否生效，取決於目前的主要複本。 實際上在給定時間可能進行的容錯移轉形式取決於目前生效的容錯移轉設定。  
   
@@ -109,7 +110,7 @@ ms.locfileid: "52523402"
 |-------------|--------------------------------------------------|  
 |只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時，|包含自動容錯移轉的同步認可|  
 |B|包含自動容錯移轉的同步認可|  
-|C|僅包含已規劃的手動容錯移轉的同步認可|  
+|c|僅包含已規劃的手動容錯移轉的同步認可|  
 |D|非同步認可 (僅包含強制容錯移轉)|  
   
  每個次要複本的容錯移轉行為取決於目前是主要複本的可用性複本。 基本上，若是給定的次要複本，容錯移轉行為是最嚴重的目前給定主要複本案例。 下圖說明次要複本的容錯移轉行為如何根據目前主要複本，以及它設定為非同步認可模式 (只使用強制容錯移轉) 或同步認可模式 (不論是否使用自動容錯移轉)，而有所不同。  
@@ -350,7 +351,7 @@ ms.locfileid: "52523402"
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

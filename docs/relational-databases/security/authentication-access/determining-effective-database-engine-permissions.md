@@ -15,19 +15,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d4a037898aaa022b7db5d6bf55f4a6dfb08988c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5ef89fc257782f7977efbee371a40e188893bc7
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734606"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53216057"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 本文描述如何判斷哪些使用者具有 SQL Server 資料庫引擎中各種物件的權限。 SQL Server 會實作 Database Engine 的兩個權限系統。 舊的固定角色系統具有預先設定的權限。 從 SQL Server 2005 開始，提供更具彈性且更精確的系統 (本文的資訊適用於 SQL Server 2005 以上的版本。 有些版本的 SQL Server 無法使用某些類型的權限)。
 
->  [!IMPORTANT] 
+> [!IMPORTANT]
 >  * 有效的權限是兩個權限系統的彙總。 
 >  * 拒絕權限會覆寫授與權限。 
 >  * 如果使用者是 sysadmin 固定伺服器角色成員，則不會進一步檢查權限，因此不會強制執行拒絕。 
@@ -51,24 +51,24 @@ ms.locfileid: "47734606"
 ## <a name="older-fixed-role-permission-system"></a>舊的固定角色權限系統
 
 固定伺服器角色和固定資料庫角色具有預先設定且無法變更的權限。 若要判斷哪些使用者是固定伺服器角色成員，請執行下列查詢：    
->  [!NOTE] 
+> [!NOTE]
 >  不適用於沒有伺服器層級權限的 SQL Database 或 SQL 資料倉儲。 SQL Server 2012 已新增 `sys.server_principals` 的 `is_fixed_role` 資料行。 舊版 SQL Server 則不需要。  
-```sql
-SELECT SP1.name AS ServerRoleName, 
- isnull (SP2.name, 'No members') AS LoginName   
- FROM sys.server_role_members AS SRM
- RIGHT OUTER JOIN sys.server_principals AS SP1
-   ON SRM.role_principal_id = SP1.principal_id
- LEFT OUTER JOIN sys.server_principals AS SP2
-   ON SRM.member_principal_id = SP2.principal_id
- WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
- ORDER BY SP1.name;
+> ```sql
+> SELECT SP1.name AS ServerRoleName, 
+>  isnull (SP2.name, 'No members') AS LoginName   
+>  FROM sys.server_role_members AS SRM
+>  RIGHT OUTER JOIN sys.server_principals AS SP1
+>    ON SRM.role_principal_id = SP1.principal_id
+>  LEFT OUTER JOIN sys.server_principals AS SP2
+>    ON SRM.member_principal_id = SP2.principal_id
+>  WHERE SP1.is_fixed_role = 1 -- Remove for SQL Server 2008
+>  ORDER BY SP1.name;
 ```
->  [!NOTE] 
->  * 所有登入都是 Public 角色的成員，且無法移除。 
->  * 這個查詢會檢查 master 資料庫中的資料表，但可以在內部部署產品的任何資料庫中執行。 
+> [!NOTE]
+>  * All logins are members of the public role and cannot be removed. 
+>  * This query checks tables in the master database but it can be executed in any database for the on premises product. 
 
-若要判斷誰是固定資料庫角色成員，請在每個資料庫中執行下列查詢。
+To determine who is a member of a fixed database role, execute the following query in each database.
 ```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
@@ -106,22 +106,22 @@ Windows 使用者使用根據 Windows 群組的登入進行連線時，某些活
 ### <a name="server-permissions"></a>伺服器權限
 
 下列查詢會傳回一份已在伺服器層級授與或拒絕的權限清單。 這個查詢應該在 master 資料庫中執行。   
->  [!NOTE] 
+> [!NOTE]
 >  在 SQL Database 或 SQL Data Warehouse 上，無法授與或查詢伺服器層級權限。   
-```sql
-SELECT pr.type_desc, pr.name, 
- isnull (pe.state_desc, 'No permission statements') AS state_desc, 
- isnull (pe.permission_name, 'No permission statements') AS permission_name 
- FROM sys.server_principals AS pr
- LEFT OUTER JOIN sys.server_permissions AS pe
-   ON pr.principal_id = pe.grantee_principal_id
- WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
- ORDER BY pr.name, type_desc;
+> ```sql
+> SELECT pr.type_desc, pr.name, 
+>  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
+>  isnull (pe.permission_name, 'No permission statements') AS permission_name 
+>  FROM sys.server_principals AS pr
+>  LEFT OUTER JOIN sys.server_permissions AS pe
+>    ON pr.principal_id = pe.grantee_principal_id
+>  WHERE is_fixed_role = 0 -- Remove for SQL Server 2008
+>  ORDER BY pr.name, type_desc;
 ```
 
-### <a name="database-permissions"></a>資料庫權限
+### Database Permissions
 
-下列查詢會傳回一份已在資料庫層級授與或拒絕的權限清單。 這個查詢應該在每個資料庫中執行。   
+The following query returns a list of the permissions that have been granted or denied at the database level. This query should be executed in each database.   
 ```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
@@ -156,6 +156,6 @@ REVERT;
 
 ## <a name="see-also"></a>另請參閱：
 
-[Database Engine 權限使用者入門](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[教學課程：Database Engine 使用者入門](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[資料庫引擎權限使用者入門](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
+[教學課程：資料庫引擎使用者入門](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

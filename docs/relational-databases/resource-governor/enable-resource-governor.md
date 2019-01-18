@@ -9,23 +9,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, enabling
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 1d69214acdfc469a9c74afbd1ec9c379acc02689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c44ea082390f2722bd4544e264cf5f1266e69b7
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617826"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380309"
 ---
 # <a name="enable-resource-governor"></a>啟用資源管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   預設會關閉資源管理員。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 啟用資源管理員。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   **To enable Resource Governorn, using:**  [Object Explorer](#RGOnObjEx), [Resource Governor Properties](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **若要啟用 Resource Governor，請使用下列方式：**[物件總管](#RGOnObjEx)、[Resource Governor 屬性](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  啟用資源管理員會產生下列結果：  
@@ -39,7 +39,7 @@ ms.locfileid: "47617826"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  在使用者交易中時，您無法使用 **ALTER RESOURCE GOVERNOR** 陳述式啟用資源管理員。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  啟用資源管理員需要 CONTROL SERVER 權限。  
   
 ##  <a name="RGOnObjEx"></a> 使用物件總管啟用資源管理員  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [停用資源管理員](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

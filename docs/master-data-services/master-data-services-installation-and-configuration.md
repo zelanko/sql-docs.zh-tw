@@ -5,19 +5,18 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b79bb79750d7f4696581dab86c95cf71abf02375
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526953"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205607"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -36,12 +35,12 @@ ms.locfileid: "52526953"
 如需協助您了解 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 之影片和其他訓練資源的連結，請參閱[了解 Master Data Services](../master-data-services/learn-sql-server-master-data-services.md)。 
   
 > **下載**  
->-   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**。  
->-   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
- 
+> -   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**。  
+> -   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
+> 
 > **無法建立 MDS 網站？**
->>如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。
-[無法透過 SQL Server 2016 中的低權限帳戶建立 MDS 網站](https://aka.ms/mdssupport) 
+> >如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。
+> [無法透過 SQL Server 2016 中的低權限帳戶建立 MDS 網站](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer 和 Silverlight
 - 當您在 Windows Server 2012 電腦上安裝 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 時，可能需要設定 Internet Explorer 增強式安全性，以允許 Web 應用程式網站的指令碼。 否則，瀏覽至伺服器電腦上的網站將會失敗。
@@ -119,11 +118,11 @@ ms.locfileid: "52526953"
  **使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]設定資料庫和網站**  
 
  
-> [!WARNING]  
-    >  您必須先[安裝 IIS](#InstallIIS)，再啟動 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 組態管理員。 否則，Configuration Manager 會顯示 Internet Information Services 錯誤，並且無法建立 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式。  
-    
+> [!WARNING]
+>  您必須先[安裝 IIS](#InstallIIS)，再啟動 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 組態管理員。 否則，Configuration Manager 會顯示 Internet Information Services 錯誤，並且無法建立 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式。  
+> 
 > **瀏覽器需求**
->>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式僅適用於 Internet Explorer (IE) 9 或更新版本。 不支援 IE 8 和更早版本、Microsoft Edge 和 Chrome。    
+> >[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Web 應用程式僅適用於 Internet Explorer (IE) 9 或更新版本。 不支援 IE 8 和更早版本、Microsoft Edge 和 Chrome。    
   
 1.  啟動 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]，並按一下左窗格的 [資料庫組態]。  
   
@@ -222,7 +221,7 @@ ms.locfileid: "52526953"
   
 1.  將範例模型套件複製到 *drive*\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration。  
   
-2.  執行下列命令，以開啟 [系統管理員:] 命令提示字元，並導覽至 MDSModelDeploy.exe。  
+2.  執行下列命令，以開啟 [系統管理員: 命令提示字元] ，並巡覽至 MDSModelDeploy.exe。  
   
     ```  
     cd c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration  

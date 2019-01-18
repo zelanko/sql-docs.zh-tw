@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5d262b72fec278e037c99662d1d5aecd93190cf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711070"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53370540"
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52711070"
 |**sys.query_store_query**|在查詢存放區中個別追蹤和強制執行的查詢項目。 如果單一查詢文字會在不同的內容設定下執行或在不同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組 (預存程序、觸發程序等) 內部與外部執行，則它可以產生多個查詢項目。|  
 |**sys.query_store_plan**|顯示查詢的估計計畫以及編譯時間統計資料。 預存的計畫相當於您使用 `SET SHOWPLAN_XML ON`所得到的計畫。|  
 |**sys.query_store_runtime_stats_interval**|查詢存放區會將時間細分為自動產生的時間範圍 (間隔)，並在每個執行計畫的該間隔中儲存彙總統計資料。 間隔的大小是透過組態選項 「統計資料收集間隔」 (在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中) 或使用 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 的 `INTERVAL_LENGTH_MINUTES` 來控制。|  
-|**sys.query_store_runtime_stats**|針對執行計畫彙總的執行階段統計資料。 所有擷取的計量均會以 4 個統計函數形式來表示︰平均值、最小值、最大值及標準差。|  
+|**sys.query_store_runtime_stats**|針對執行計畫彙總的執行階段統計資料。 所有擷取的計量均會以 4 個統計函式形式來表示：平均值、最小值、最大值及標準差。|  
   
  如需查詢存放區檢視的詳細資訊，請參閱[使用查詢存放區監視效能](monitoring-performance-by-using-the-query-store.md)中的**相關檢視、函數與程序**一節。  
   

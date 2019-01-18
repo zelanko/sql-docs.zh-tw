@@ -1,20 +1,21 @@
 ---
 title: 使用 Reporting Services 的 REST API 進行開發 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 05/25/2018
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4872ffea819c23ca27ec0d01e4709a231f95cf5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seodec18
+ms.date: 12/12/2018
+ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
+ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514405"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53328551"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 
@@ -35,7 +36,7 @@ REST API 要求/回應配對可分成五個元件：
     * URI 配置：表示用來傳輸要求的通訊協定。 例如，`http` 或 `https`。
     * URI 主機：指定裝載 REST 服務端點之伺服器的網域名稱或 IP 位址，例如 `myserver.contoso.com`。
     * 資源路徑：指定資源或資源集合，其中可能包含服務用來判斷這些資源選取的多個區段。 例如：`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` 可用來取得 CatalogItem 的指定屬性。
-    * 查詢字串 (選用)：提供其他簡單參數，例如 API 版本或資源選取準則。
+    * 查詢字串 (選擇性)：提供其他簡單參數，例如 API 版本或資源選取準則。
 
 * HTTP 要求訊息標頭欄位：
 

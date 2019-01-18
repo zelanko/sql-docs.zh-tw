@@ -1,6 +1,7 @@
 ---
-title: 將資料庫新增至可用性群組 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 將資料庫新增至可用性群組
+description: '使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio 將資料庫新增至 Always On 可用性群組。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,46 +15,41 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c8e63b4561c56f5d930856758afa464f85a9ab40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857123"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214659"
 ---
-# <a name="availability-group---add-a-database"></a>可用性群組 - 新增資料庫
+# <a name="add-a-database-to-an-always-on-availability-group"></a>將資料庫新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將資料庫加入 AlwaysOn 可用性群組中。  
   
 -   **開始之前：**  
   
-     [必要條件和限制](#Prerequisites)  
-  
-     [Permissions](#Permissions)  
-  
+     [必要條件和限制](#Prerequisites)    
+     [Permissions](#Permissions)    
 -   **若要使用下列項目，將資料庫加入至可用性群組：**  
   
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+     [SQL Server Management Studio](#SSMSProcedure)    
+     [Transact-SQL](#TsqlProcedure)    
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
   
-###  <a name="Prerequisites"></a> 必要條件和限制  
+## <a name="prerequisites-and-restrictions"></a>必要條件和限制  
   
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
 -   資料庫必須位於裝載主要複本的伺服器執行個體上，且符合可用性資料庫的必要條件和限制。 如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Security"></a> 安全性  
+##  <a name="Security"></a> 安全性  
   
-###  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- **若要將資料庫加入至可用性群組**  
+
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
@@ -74,10 +70,9 @@ ms.locfileid: "47857123"
          使用 **[可用性群組屬性]** 對話方塊將資料庫加入至可用性群組之後，您需要在裝載次要複本的每個伺服器執行個體上設定對應的次要資料庫。 如需詳細資訊，請參閱 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- **若要將資料庫加入至可用性群組**  
+
   
-1.  連接到裝載主要複本的伺服器執行個體。  
-  
+1.  連接到裝載主要複本的伺服器執行個體。    
 2.  使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 陳述式，如下所示：  
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
@@ -96,7 +91,7 @@ ms.locfileid: "47857123"
 3.  將資料庫加入至可用性群組之後，您需要在裝載次要複本的每個伺服器執行個體上設定對應的次要資料庫。 如需詳細資訊，請參閱 [於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
- **若要將資料庫加入至可用性群組**  
+
   
 1.  變更目錄 (**cd**) 為裝載主要複本的伺服器執行個體。  
   

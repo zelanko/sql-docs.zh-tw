@@ -9,23 +9,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: e03786f02e93b40b0b8c4e0132addbbe68395590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d4d5cadf23e70d636fc74cb0cb67a820875192
+ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627436"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53380979"
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 停用資源管理員。  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  
   
--   使用[物件總管](#RGOffObjEx)、[資源管理員屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL) **停用資源管理員**  
+-   **若要停用 Resource Governor，請使用下列方式：**[物件總管](#RGOffObjEx)、[Resource Governor 屬性](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  停用資源管理員會產生下列結果：  
@@ -47,7 +47,7 @@ ms.locfileid: "47627436"
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  在使用者交易中時，您無法使用 **ALTER RESOURCE GOVERNOR** 陳述式停用資源管理員。  
   
-###  <a name="Permissions"></a> 權限  
+###  <a name="Permissions"></a> Permissions  
  停用資源管理員需要 CONTROL SERVER 權限。  
   
 ##  <a name="RGOffObjEx"></a> 使用物件總管停用資源管理員  
@@ -80,7 +80,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [[資源管理員]](../../relational-databases/resource-governor/resource-governor.md)   
+ [資源管理員](../../relational-databases/resource-governor/resource-governor.md)   
  [啟用資源管理員](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [資源管理員資源集區](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [資源管理員工作負載群組](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

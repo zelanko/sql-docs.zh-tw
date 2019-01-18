@@ -22,18 +22,18 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35366fbbeac73a551546f2778592f03da5c7e1e7
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 230e57dbbe3b3d2ca88bd6f4fd727555b4fa38b2
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617668"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214819"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   您可以利用任何圖形化管理工具，或是從命令提示字元登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- 當您利用圖形化管理工具 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 登入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體時，必要時會提示您輸入伺服器名稱、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 若使用「Windows 驗證」登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則不需要在每次存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時提供 SQL Server 登入。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會利用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶自動將您登入。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是以混合模式驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證模式) 執行，且您選擇使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」來登入，則必須提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 盡可能使用 Windows 驗證。  
+ 當您利用圖形化管理工具 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) 登入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體時，必要時會提示您輸入伺服器名稱、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 若使用「Windows 驗證」登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則不需要在每次存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體時提供 SQL Server 登入。 相反地， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會利用您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶自動將您登入。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是以混合模式驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證模式) 執行，且您選擇使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來登入，則必須提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和密碼。 盡可能使用 Windows 驗證。  
   
 > [!NOTE]  
 >  安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時若使用區分大小寫的定序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入也會區分大小寫。  

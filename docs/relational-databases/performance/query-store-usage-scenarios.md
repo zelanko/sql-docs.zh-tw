@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c28419488adc2f0d8123c9052466659fb9fdfd9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711199"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53372480"
 ---
 # <a name="query-store-usage-scenarios"></a>查詢存放區使用案例
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "52711199"
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
- 如需此案例的詳細說明，請參閱 [查詢存放區︰適用於資料庫的飛行資料記錄器](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) 部落格。  
+ 如需此案例的詳細描述，請參閱 [Query Store:A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (查詢存放區︰適用於資料庫的飛行資料記錄器) 部落格。  
   
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>找出並調整熱門資源取用查詢  
  雖然您的工作負載可能會產生成千上萬個查詢，但通常只有其中幾個實際上最常使用系統資源，因而需要您多加注意。 在前幾大耗用資源的查詢中，您通常會發現這類查詢若不是迴歸，就是可透過其他調整來改善的查詢。  
   
- 開始探勘的最簡單方式是開啟 **中的 [熱門資源取用查詢]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 使用者介面會分成三個窗格︰代表熱門資源取用查詢的長條圖 (左)、所選取查詢的計畫摘要 (右)，以及所選取計畫的視覺化查詢計畫 (下方)。 按一下 [設定]  按鈕，來控制您想要分析的查詢數量以及感興趣的時間間隔。 此外，您可以在不同的資源耗用維度 (持續時間、CPU、記憶體、IO、執行數目) 和基準 (平均、最小值、最大值、總計、標準差) 之間進行選擇。  
+ 開始探勘的最簡單方式是開啟 **中的 [熱門資源取用查詢]**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 使用者介面分為三個窗格：代表熱門資源取用查詢的長條圖 (左)、所選取查詢的計畫摘要 (右)，以及所選取計畫的視覺化查詢計畫 (下方)。 按一下 [設定]  按鈕，來控制您想要分析的查詢數量以及感興趣的時間間隔。 此外，您可以在不同的資源耗用維度 (持續時間、CPU、記憶體、IO、執行數目) 和基準 (平均、最小值、最大值、總計、標準差) 之間進行選擇。  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   

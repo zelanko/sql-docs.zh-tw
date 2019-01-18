@@ -1,6 +1,7 @@
 ---
-title: 可用性群組 - 將資料庫新增至可用性群組精靈 | Microsoft Docs
-ms.custom: ''
+title: 使用 [可用性群組精靈] 將資料庫新增至可用性群組
+description: 使用 SQL Server Management Studio 中的 [可用性群組精靈] 將資料庫新增至 Always On 可用性群組。
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,34 +16,26 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25bea0c614d55774207692ab275917d7ecdcab2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724246"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211567"
 ---
-# <a name="availability-group---add-database-to-group-wizard"></a>可用性群組 - 將資料庫新增至可用性群組精靈
+# <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>使用 [可用性群組精靈] 將資料庫新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 [將資料庫加入至可用性群組精靈] 可將一或多個資料庫加入現有的 AlwaysOn 可用性群組。  
   
 > [!NOTE]  
 >  如需使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell 加入資料庫的相關資訊，請參閱 [將資料庫加入至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md)。  
   
- **本主題內容：**  
-  
--   **開始之前：**  
-  
-     [必要條件和限制](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **若要加入資料庫，請使用：**[將資料庫加入可用性群組精靈 (SQL Server Management Studio)](#SSMSProcedure)  
+
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果您從未將任何資料庫加入可用性群組中，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
-###  <a name="Prerequisites"></a> 必要條件、限制及建議  
+##  <a name="Prerequisites"></a> 必要條件、限制及建議  
   
 -   您必須連接到裝載目前主要複本的伺服器執行個體。  
   
@@ -54,15 +47,13 @@ ms.locfileid: "47724246"
   
     -   您必須指定網路共用，精靈才能建立及存取備份。 對於主要複本，用於啟動 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的帳戶必須具有網路共用的讀取與寫入檔案系統權限。 如果是次要複本，此帳戶必須有網路共用的讀取權限。  
   
-     如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中建立和設定 AlwaysOn 可用性群組。  
+     如果您無法使用精靈執行完整初始資料同步處理，則必須手動準備次要資料庫。 您可以在執行精靈前後進行這項作業。 如需詳細資訊，請參閱 [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)中的 PowerShell，將次要資料庫聯結至 AlwaysOn 可用性群組。  
   
-###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+##  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
-##  <a name="SSMSProcedure"></a> 使用將資料庫加入至可用性群組精靈 (SQL Server Management Studio)  
- **使用將資料庫加入至可用性群組精靈**  
+##  <a name="use-the-new-availability-group-wizard"></a>使用 [新增可用性群組精靈]
   
 1.  在 [物件總管] 中，連接到裝載可用性群組之主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
@@ -99,7 +90,7 @@ ms.locfileid: "47724246"
   
 6.  在 **[連接到現有次要複本]** 頁面上，如果裝載此可用性群組之可用性複本的所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體都是在相同使用者帳戶下以服務方式執行，請按一下 **[全部連接]**。 如果有任何伺服器執行個體是在不同的帳戶下以服務方式執行，請按一下每個伺服器執行個體名稱右邊的個別 **[連接]** 按鈕。  
   
-     如需詳細資訊，請參閱[連接到現有次要複本頁面 &#40;加入複本精靈：加入資料庫精靈&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
+     如需詳細資訊，請參閱[連接到現有次要複本頁面 &#40;新增複本精靈：新增資料庫精靈 &#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
 7.  **[驗證]** 頁面會驗證您在此精靈中指定的值是否符合 [新增可用性群組精靈] 的需求。 若要進行變更，您可以按 **[上一步]** 返回先前的精靈頁面，以變更一個或多個值。 然後按 [下一步] 返回 [驗證] 頁面，再按一下 [重新執行驗證]。  
   

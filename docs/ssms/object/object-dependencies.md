@@ -13,12 +13,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bdda5d95544df6b7cd7cc4108c3bd21dc8f50d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779156"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591532"
 ---
 # <a name="object-dependencies"></a>物件相依性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "47779156"
 在變更或刪除選取的物件之前，請使用此對話方塊來了解相依性。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
-**相依於***<selected object>*  
+**相依於** \<所選取物件> 的物件  
 按一下此按鈕會顯示已進行相依性追蹤，並相依於所選取物件的物件清單。  
   
-*<selected object>* **所相依的物件**  
+\<所選取物件> **相依的物件**  
 按一下此按鈕會顯示已進行相依性追蹤，所選取物件相依的物件清單。  
   
 **相依性**  

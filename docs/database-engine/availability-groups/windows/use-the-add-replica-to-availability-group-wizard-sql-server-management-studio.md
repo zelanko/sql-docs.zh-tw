@@ -1,6 +1,7 @@
 ---
-title: 使用將複本新增至可用性群組精靈 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 在 SSMS - SQL Server 中使用精靈將複本新增至可用性群組
+ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,14 +16,14 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d97f8773de23631a56106daba729e1b629bd0dd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152d4b274fe2e966a30ffe09ba2939ba4cafef39
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768327"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202477"
 ---
-# <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將複本加入至可用性群組] 精靈 (SQL Server Management Studio)
+# <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>在 SQL Server 管理中使用 [可用性群組精靈] 將複本新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 [將複本新增可用性群組精靈]，可協助您新增次要複本至現有的 AlwaysOn 可用性群組。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "47768327"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
  如果您想要允許 [將複本加入至可用性群組精靈] 管理資料庫鏡像端點，也需要 CONTROL ON ENDPOINT 權限。  
@@ -72,9 +73,9 @@ ms.locfileid: "47768327"
   
 3.  以滑鼠右鍵按一下您要加入次要複本的可用性群組，並選取 [加入複本] 命令。 這會啟動 [將複本加入至可用性群組] 精靈。  
   
-4.  在 **[連接到現有次要複本]** 頁面上，連接到可用性群組中的每一個次要複本。 如需詳細資訊，請參閱[連接到現有次要複本頁面 &#40;加入複本精靈/加入資料庫精靈&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
+4.  在 **[連接到現有次要複本]** 頁面上，連接到可用性群組中的每一個次要複本。 如需詳細資訊，請參閱[連接到現有次要複本頁面 &#40;新增複本精靈：新增資料庫精靈 &#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)。  
   
-5.  在 **[指定複本]** 頁面上，針對可用性群組指定並設定一個或多個新次要複本。 此頁面包含三個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：加入複本精靈&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
+5.  在 **[指定複本]** 頁面上，針對可用性群組指定並設定一個或多個新次要複本。 此頁面包含三個索引標籤。 下表將介紹這些索引標籤。 如需詳細資訊，請參閱[指定複本頁面 &#40;新增可用性群組精靈：新增複本精靈 &#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
   
     |索引標籤|簡短描述|  
     |---------|-----------------------|  
@@ -118,7 +119,7 @@ ms.locfileid: "47768327"
      當精靈完成時，按一下 **[關閉]** 以結束。  
   
 > [!IMPORTANT]  
->  加入複本之後，請參閱 [將次要複本加入至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)。  
+>  新增複本之後，請參閱[將次要複本新增至可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)中的＜後續操作：新增複本之後＞一節。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

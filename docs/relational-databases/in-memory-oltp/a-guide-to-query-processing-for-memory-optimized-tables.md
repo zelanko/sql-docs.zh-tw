@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b9d49756a4edb78fcda40f4c4d86bfbb299904d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543502"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205577"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -193,7 +193,7 @@ FROM dbo.[Order] o INNER JOIN dbo.[Customer] c
 END  
 ```  
   
- 原生編譯的預存程序會在建立時編譯，而解譯的預存程序則是在第一次執行時編譯  (編譯的一部分，尤其是指剖析和 Algebrization，會在建立時發生。 不過，對於解譯的預存程序，查詢計劃的最佳化是在第一次執行時進行)。重新編譯邏輯也很類似。 如果伺服器重新啟動，原生編譯的預存程序就會在第一次執行程序時重新編譯。 如果計畫已不在計畫快取中，解譯的預存程序就會重新編譯。 下表摘要說明原生編譯的預存程序及解譯的預存程序之編譯和重新編譯案例：  
+ 原生編譯的預存程序會在建立時編譯，而解譯的預存程序則是在第一次執行時編譯 (編譯的一部分，尤其是指剖析和 Algebrization，會在建立時發生。 不過，對於解譯的預存程序，查詢計劃的最佳化是在第一次執行時進行)。重新編譯邏輯也很類似。 如果伺服器重新啟動，原生編譯的預存程序就會在第一次執行程序時重新編譯。 如果計畫已不在計畫快取中，解譯的預存程序就會重新編譯。 下表摘要說明原生編譯的預存程序及解譯的預存程序之編譯和重新編譯案例：  
   
 ||原生編譯|對記憶體最佳化資料表進行解譯的|  
 |-|-----------------------|-----------------|  
@@ -273,7 +273,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|請注意，Hash Match 運算子不支援彙總。 因此，即使解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中相同查詢的計畫使用 Hash Match 運算子，原生編譯預存程序中的所有彙總仍會使用 Stream Aggregate 運算子。|  
   
 ## <a name="column-statistics-and-joins"></a>資料行統計資料和聯結  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 (如果您明確建立非索引之索引鍵資料行的統計資料，或者查詢最佳化工具為了回應包含述詞的查詢而建立它們，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會建立這些統計資料)。成本估計的主要標準是單一運算子所處理的資料列數  請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在索引鍵資料行中維護值的統計資料，以協助估計特定作業的成本，例如索引掃描或索引搜尋。 (如果您明確建立非索引之索引鍵資料行的統計資料，或如果查詢最佳化工具為了回應包含述詞的查詢而建立它們，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會建立這些統計資料。)成本估計的主要標準是單一運算子所處理的資料列數  請注意，對於磁碟基礎的資料表，特定運算子所存取的頁面數目在成本估計中佔有相當大的比例。 但是，由於頁面數對於記憶體最佳化資料表而言並不重要 (一律為零)，因此這裡的討論將著重在資料列計數。 估計時間是從計劃中的索引搜尋和掃描運算子開始算起，然後延伸以納入其他運算子，像是聯結運算子。 聯結運算子所要處理的估計資料列數是以基礎索引、搜尋和掃描運算子的估計為依據。 若要對記憶體最佳化資料表進行解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取，您可以觀察實際執行計畫，了解計畫中運算子的估計資料列計數和實際資料列計數之間的差異。  
   
  在圖 1 的範例中，  
   

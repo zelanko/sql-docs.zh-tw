@@ -11,12 +11,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed40a84fba304dab0d9c11c7c6bbe950f2511e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e58734bb3487e86b30f561e4e636bbe4851435e
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511838"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979954"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,14 +31,13 @@ ms.locfileid: "52511838"
   
 2.  這序列的 **CircularString** 或 **LineString** 執行個體必須是連續的。  
   
- 如果 **CompoundCurve** 包含多個 **CircularString** 和 **LineString** 執行個體的序列，每個執行個體的結束端點 (最後一個執行個體除外) 都必須是序列中下一個執行個體的開始端點。 這表示，如果序列中前一個執行個體的結束點為 (4 3 7 2)，則序列中下一個執行個體的開始點就必須是 (4 3 7 2)。 請注意，點的 Z (高度) 和 M (測量) 值也必須相同。 如果兩個點存在差異，就會擲回 `System.FormatException` 。 **CircularString** 中的點不需要具有 Z 或 M 值。 如果沒有針對前一個執行個體的結束點給定 Z 或 M 值，下一個執行個體的開始點就不得包括 Z 或 M 值。 如果前一個序列的結束點為 (4 3)，下一個序列的開始點就必須是 (4 3)，不得為 (4 3 7 2)。 **CompoundCurve** 執行個體中的所有點都必須沒有 Z 值或具有相同的 Z 值。  
+如果 **CompoundCurve** 包含多個 **CircularString** 和 **LineString** 執行個體的序列，每個執行個體的結束端點 (最後一個執行個體除外) 都必須是序列中下一個執行個體的開始端點。 這表示，如果序列中前一個執行個體的結束點為 (4 3 7 2)，則序列中下一個執行個體的開始點就必須是 (4 3 7 2)。 請注意，點的 Z (高度) 和 M (測量) 值也必須相同。 如果兩個點存在差異，就會擲回 `System.FormatException` 。 **CircularString** 中的點不需要具有 Z 或 M 值。 如果沒有針對前一個執行個體的結束點給定 Z 或 M 值，下一個執行個體的開始點就不得包括 Z 或 M 值。 如果前一個序列的結束點為 (4 3)，下一個序列的開始點就必須是 (4 3)，不得為 (4 3 7 2)。 **CompoundCurve** 執行個體中的所有點都必須沒有 Z 值或具有相同的 Z 值。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 執行個體  
- 下圖顯示有效的 **CompoundCurve** 類型。  
+下圖顯示有效的 **CompoundCurve** 類型。  
   
 ![f278742e-b861-4555-8b51-3d972b7602bf](../../relational-databases/spatial/media/f278742e-b861-4555-8b51-3d972b7602bf.gif)  
  
-  
 ### <a name="accepted-instances"></a>已接受的執行個體  
  如果**CompoundCurve** 執行個體是空的執行個體或符合下列準則，系統就會接受此執行個體。  
   
@@ -47,20 +46,20 @@ ms.locfileid: "52511838"
 2.  **CompoundCurve** 執行個體中的所有圓弧線段都已連接。 每個後續圓弧線段的第一個點都與先前圓弧線段的最後一個點相同。  
   
     > [!NOTE]  
-    >  這包括 Z 和 M 座標。 因此，X、Y、Z 和 M 這四個座標都必須相同。  
+    > 這包括 Z 和 M 座標。 因此，X、Y、Z 和 M 這四個座標都必須相同。  
   
 3.  所有包含的執行個體都不是空的執行個體。  
   
- 下列範例會顯示已接受的 **CompoundCurve** 執行個體。  
+下列範例會顯示已接受的 **CompoundCurve** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 ```  
   
- 下列範例會顯示無法接受的 **CompoundCurve** 執行個體。 這些執行個體會擲回 `System.FormatException`。  
+下列範例會顯示無法接受的 **CompoundCurve** 執行個體。 這些執行個體會擲回 `System.FormatException`。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING EMPTY)';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0))';  
 ```  
@@ -72,28 +71,27 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
   
 2.  **CompoundCurve** 執行個體所包含的所有圓弧線段執行個體都是有效的執行個體。  
   
- 下列範例會顯示已接受的 **CompoundCurve** 執行個體。  
+下列範例會顯示已接受的 **CompoundCurve** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE EMPTY';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (-1 0, 2 0))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
-  
 ```  
   
- `@g3` 有效，因為 **CircularString** 執行個體有效。 如需 **CircularString** 執行個體有效性的詳細資訊，請參閱 [CircularString](../../relational-databases/spatial/circularstring.md)。  
+`@g3` 有效，因為 **CircularString** 執行個體有效。 如需 **CircularString** 執行個體有效性的詳細資訊，請參閱 [CircularString](../../relational-databases/spatial/circularstring.md)。  
   
- 下列範例會顯示無效的 **CompoundCurve** 執行個體。  
+下列範例會顯示無效的 **CompoundCurve** 執行個體。  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 1 1, 1 1), (1 1, 3 5, 5 4, 3 5))';  
 DECLARE @g2 geometry = 'COMPOUNDCURVE((1 1, 1 1))';  
 DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` 無效，因為第二個執行個體不是有效的 LineString 執行個體。 `@g2` 無效，因為 **LineString** 執行個體無效。 `@g3` 無效，因為 **CircularString** 執行個體無效。 如需有效 **CircularString** 和 **LineString** 執行個體的詳細資訊，請參閱 [CircularString](../../relational-databases/spatial/circularstring.md) 和 [LineString](../../relational-databases/spatial/linestring.md)。  
+`@g1` 無效，因為第二個執行個體不是有效的 LineString 執行個體。 `@g2` 無效，因為 **LineString** 執行個體無效。 `@g3` 無效，因為 **CircularString** 執行個體無效。 如需有效 **CircularString** 和 **LineString** 執行個體的詳細資訊，請參閱 [CircularString](../../relational-databases/spatial/circularstring.md) 和 [LineString](../../relational-databases/spatial/linestring.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -140,7 +138,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
- 這會產生下列輸出：12.566370…，相當於 4∏。 在此範例中， `CompoundCurve` 執行個體會儲存半徑為 2 的圓形。 前兩個程式碼範例都不需要使用 `CompoundCurve`。 在第一個範例中， `LineString` 執行個體已經簡化了，而在第二個範例中， `CircularString` 執行個體也已經簡化了。 不過，下一個範例會顯示 `CompoundCurve` 提供較佳替代方式之處。  
+這會產生輸出 `12.5663706143592`，其相當於 4∏。 在此範例中， `CompoundCurve` 執行個體會儲存半徑為 2 的圓形。 前兩個程式碼範例都不需要使用 `CompoundCurve`。 在第一個範例中， `LineString` 執行個體已經簡化了，而在第二個範例中， `CircularString` 執行個體也已經簡化了。 不過，下一個範例會顯示 `CompoundCurve` 提供較佳替代方式之處。  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. 使用 CompoundCurve 來儲存半圓形  
  下列範例會使用 `CompoundCurve` 執行個體來儲存半圓形。  
@@ -179,14 +177,14 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- 輸出如下所示：  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 Circle One11.940039...  
 Circle Two12.566370...  
 ```  
   
- Circle Two 的圓周約為 4∏，這是圓周的實際值。 不過，Circle One 的圓周則明顯不精確。 Circle One 的 `CompoundCurve` 執行個體會儲存一個圓弧線段 (ABC) 和兩個直線線段 (CD, DA)。 `CompoundCurve` 執行個體必須儲存兩個圓弧線段 (ABC, CDA) 才能定義圓形。 `LineString` 執行個體會在 Circle One 的 `CompoundCurve` 執行個體中定義第二組點 (4 2, 2 4, 0 2)。 您必須在 `CircularString` 內部明確宣告 `CompoundCurve`執行個體。  
+Circle Two 的圓周約為 4∏，這是圓周的實際值。 不過，Circle One 的圓周則明顯不精確。 Circle One 的 `CompoundCurve` 執行個體會儲存一個圓弧線段 (ABC) 和兩個直線線段 (CD, DA)。 `CompoundCurve` 執行個體必須儲存兩個圓弧線段 (ABC, CDA) 才能定義圓形。 `LineString` 執行個體會在 Circle One 的 `CompoundCurve` 執行個體中定義第二組點 (4 2, 2 4, 0 2)。 您必須在 `CircularString` 內部明確宣告 `CompoundCurve`執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
  [STIsValid &#40;geometry 資料類型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

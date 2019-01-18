@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Query Store
 - Query Store, described
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e36a66564564bb468592df491e12d97a87d5dc4b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711499"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626397"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區功能為您提供關於查詢計劃選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [[ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md)] 選項可設定查詢存放區。 
   
@@ -105,7 +105,7 @@ INNER JOIN sys.query_store_query_text AS Txt
   
 ![SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 物件總管中的 SQL Server 2016 查詢存放區樹狀結構")![SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 物件總管中的 SQL Server 2017 查詢存放區樹狀結構") 
   
-選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 使用頂端的下拉式清單方塊，根據各種準則來篩選查詢：**持續時間 (毫秒)** (預設值)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的 DB 記憶體 (KB)，以及等候時間 (毫秒)。  
+選取 [迴歸查詢]  ，開啟 **中的 [迴歸查詢]**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]窗格。 [迴歸查詢] 窗格會顯示查詢存放區中的查詢與計劃。 頂端的下拉式清單方塊，可供您依據各種條件篩選查詢：**持續時間 (毫秒)** (預設)、CPU 時間 (毫秒)、邏輯讀取 (KB)、邏輯寫入 (KB)、實體讀取 (KB)、CLR 時間 (毫秒)、DOP、記憶體耗用量 (KB)、資料列計數、已使用的記錄記憶體 (KB)、已使用的暫存 DB 記憶體 (KB)，以及等候時間 (毫秒)。  
 選取計劃即可以圖形方式檢視查詢計劃。 按鈕可用來檢視來源查詢、強制執行及取消強制執行查詢計畫、在格線和圖表格式之間切換、比較所選取的計畫 (如果選取了多個)，以及重新整理顯示。  
   
 ![SSMS 物件總管中的 SQL Server 2016 迴歸查詢](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 物件總管中的 SQL Server 2016 迴歸查詢")  
@@ -239,7 +239,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
 ```  
   
  > [!NOTE]
- > `INTERVAL_LENGTH_MINUTES` 不允許任意值。 請使用下列其中一項：1、5、10、15、30、60 或 1440 分鐘。  
+ > `INTERVAL_LENGTH_MINUTES` 不允許任意值。 您可以使用下列其中一項：1、5、10、15、30、 60 或 1440 分鐘。  
   
  新的間隔值是透過 **sys.database_query_store_options** 檢視而公開。  
   

@@ -1,6 +1,7 @@
 ---
-title: 必要條件、限制和建議 - AlwaysOn 可用性群組 | Microsoft Docs
-ms.custom: ''
+title: 可用性群組的必要條件、限制和建議
+description: Always On 可用性群組必要條件、限制和建議的描述。
+ms.custom: seodec18
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -19,14 +20,14 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0343bef5bcd6ba26539bfe3f4a726ab538bb24a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516465"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202987"
 ---
-# <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>必要條件、限制和建議 - AlwaysOn 可用性群組
+# <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性群組的必要條件、限制和建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本文描述部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的考量，包括對於主機電腦、Windows Server 容錯移轉叢集 (WSFC)、伺服器執行個體和可用性群組的必要條件、限制和建議。 它也會指出這些元件的安全性考量和必要權限 (如果有的話)。  
@@ -39,7 +40,7 @@ ms.locfileid: "52516465"
   
 ||相依功能|Hotfix|連結|  
 |------|-----------------------|------------|----------|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347： [適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的支援](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 新增對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347：[適用於 .Net 3.5 SP1 的 Hotfix 新增對 Always On 功能的支援](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> 檢查清單：需求 (Windows 系統)  
@@ -58,16 +59,16 @@ ms.locfileid: "52516465"
   
 ###  <a name="ComputerRecommendations"></a> 對裝載可用性複本之電腦的建議 (Windows 系統)  
   
--   **可相比的系統**  ：對於給定的可用性群組而言，所有的可用性複本都應該在可處理相同工作負載的可相比的系統上執行。  
+-   **可比較的系統：** 對於指定的可用性群組而言，所有可用性複本都應該在可處理相同工作負載的可相比系統上執行。  
   
--   **專用的網路介面卡：**  為達最佳效能，請為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]使用專用的網路介面卡 (NIC)。  
+-   **專用的網路介面卡：** 為達最佳效能，請針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用專用的網路介面卡 (NIC)。  
   
--   **足夠的磁碟空間**  ：伺服器執行個體裝載可用性複本的每部電腦都必須擁有足夠的磁碟空間，才能容納可用性群組中的所有資料庫。 請牢記，當主要資料庫成長時，其對應的次要資料庫也會成長相同的數量。  
+-   **足夠的磁碟空間：** 伺服器執行個體裝載可用性複本的每部電腦都必須擁有足夠的磁碟空間，才能容納可用性群組中的所有資料庫。 請牢記，當主要資料庫成長時，其對應的次要資料庫也會成長相同的數量。  
   
 ###  <a name="PermissionsWindows"></a> 權限 (Windows 系統)  
  若要管理 WSFC，使用者必須是每個叢集節點上的系統管理員。  
   
- 如需有關管理叢集之帳戶的詳細資訊，請參閱 [Appendix A: Failover Cluster Requirements](https://technet.microsoft.com/library/dd197454.aspx)(附錄 A：容錯移轉叢集要求)。  
+ 如需管理叢集之帳戶的詳細資訊，請參閱[附錄 A：容錯移轉叢集需求](https://technet.microsoft.com/library/dd197454.aspx)。  
   
 ###  <a name="RelatedTasksWindows"></a> 相關工作 (Windows 系統)  
   
@@ -167,7 +168,7 @@ ms.locfileid: "52516465"
   
     -   次要複本上的備份會在備份作業的持續時間內保留主要複本上的執行緒。  
   
- 如需詳細資訊，請參閱 [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程師部落格)。  
+ 如需詳細資訊，請參閱 [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式) (CCS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程師部落格)。  
   
 ###  <a name="PermissionsSI"></a> 權限 (伺服器執行個體)  
   
@@ -186,7 +187,7 @@ ms.locfileid: "52516465"
   
 ###  <a name="RelatedContentSI"></a> 相關內容 (伺服器執行個體)  
   
--   [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
 ##  <a name="NetworkConnect"></a> 網路連線建議  
  強烈建議您針對 WSFC 節點之間的通訊及可用性複本之間的通訊使用相同的網路連結。  使用不同的網路連結時，部分連結失敗 (或甚至間歇性失敗) 可能會發生意外的行為。  
@@ -212,7 +213,7 @@ ms.locfileid: "52516465"
 > [!NOTE]  
 > 容錯移轉叢集執行個體支援叢集共用磁碟區 (CSV)。 如需有關 CSV 的詳細資訊，請參閱 [了解容錯移轉叢集的叢集共用磁碟區](https://technet.microsoft.com/library/dd759255.aspx)。  
   
--   **FCI 的叢集節點只能針對給定的可用性群組裝載一個複本**：如果您在 FCI 上新增可用性複本，則可能是 FCI 擁有者的 WSFC 節點將無法針對相同的可用性群組裝載另一個複本。  若要避免可能發生的衝突，建議為容錯移轉叢集執行個體設定可能的擁有者。 這樣可避免可能導致單一 WSFC 嘗試裝載同一個可用性群組的兩個可用性複本。
+-   **FCI 的叢集節點只能針對指定的可用性群組裝載一個複本：** 如果您在 FCI 上新增可用性複本，則可能是 FCI 擁有者的 WSFC 節點無法針對相同的可用性群組來裝載另一個複本。  若要避免可能發生的衝突，建議為容錯移轉叢集執行個體設定可能的擁有者。 這樣可避免可能導致單一 WSFC 嘗試裝載同一個可用性群組的兩個可用性複本。
   
      此外，其他每個複本都必須由相同 Windows Server 容錯移轉叢集之不同叢集節點上的 SQL Server 2016 執行個體進行裝載。 唯一的例外狀況是在移轉至另一個叢集期間，可用性群組可以暫時跨兩個叢集。 
 
@@ -220,9 +221,9 @@ ms.locfileid: "52516465"
   > 使用容錯移轉叢集管理員將裝載可用性群組的「容錯移轉叢集執行個體」移至「已」裝載相同可用性群組複本的節點時，可能會導致遺失可用性群組複本，使其無法在目標節點上線。 容錯移轉叢集的單一節點無法裝載相同可用性群組的多個複本。 如需如何發生這種情況以及如何復原的詳細資訊，請參閱部落格：[Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (在可用性群組中意外卸除複本)。 
 
   
--   **FCI 不支援依照可用性群組進行自動容錯移轉：**  FCI 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
+-   **FCI 不支援依照可用性群組自動容錯移轉：** FCI 不支援依照可用性群組進行自動容錯移轉，因此任何由 FCI 裝載的可用性複本只能設定為手動容錯移轉。  
   
--   **變更 FCI 網路名稱**  ：如果您需要對裝載可用性複本的 FCI 變更網路名稱，則需要從其可用性群組移除複本，然後將複本重新加入至可用性群組。 您無法移除主要複本，因此如果要對裝載可用性複本的 FCI 重新命名，應該容錯移轉至次要複本，然後移除先前的主要複本並重新加回。 請注意重新命名 FCI 可能改變其資料庫鏡像端點的 URL。 當您加入複本時，請務必指定目前端點的 URL。  
+-   **變更 FCI 網路名稱：** 如果您需要對裝載可用性複本的 FCI 變更網路名稱，則需要從其可用性群組移除複本，然後將複本重新新增至可用性群組。 您無法移除主要複本，因此如果要對裝載可用性複本的 FCI 重新命名，應該容錯移轉至次要複本，然後移除先前的主要複本並重新加回。 請注意重新命名 FCI 可能改變其資料庫鏡像端點的 URL。 當您加入複本時，請務必指定目前端點的 URL。  
   
 ###  <a name="PrerequisitesFCI"></a> 檢查清單：必要條件 (FCI)  
   
@@ -242,7 +243,7 @@ ms.locfileid: "52516465"
   
 -   [容錯移轉叢集和可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原解決方案](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Always On Architecture Guide:Building a High Availability and Disaster Recovery Solution by Using Failover Cluster Instances and Availability Groups](https://technet.microsoft.com/library/jj215886.aspx) (Always On 架構指南：使用容錯移轉叢集執行個體和可用性群組，建立高可用性和災害復原方案)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性群組的必要條件和限制  
  **本節內容：**  
@@ -257,16 +258,16 @@ ms.locfileid: "52516465"
   
 ###  <a name="RestrictionsAG"></a> 限制 (可用性群組)  
   
--   **可用性複本必須由一個 WSFC 中的不同節點所裝載**：對於給定的可用性群組而言，可用性複本必須由在相同 WSFC 中不同節點上執行的伺服器執行個體所裝載。 唯一的例外狀況是在移轉至另一個叢集期間，可用性群組可以暫時跨兩個叢集。  
+-   **必須由一個 WSFC 中的不同節點來裝載可用性複本：** 對於指定的可用性群組而言，可用性複本必須由在相同 WSFC 中不同節點上執行的伺服器執行個體所裝載。 唯一的例外狀況是在移轉至另一個叢集期間，可用性群組可以暫時跨兩個叢集。  
   
     > [!NOTE]  
     >  同一部實體電腦上的虛擬機器可各自裝載相同可用性群組的可用性複本，因為每部虛擬機器都會當做個別的電腦。  
   
--   **唯一的可用性群組名稱**：每個可用性群組名稱在 WSFC 上都必須是唯一的。 可用性群組名稱的最大長度為 128 個字元。  
+-   **唯一的可用性群組名稱：** 每個可用性群組名稱在 WSFC 上都必須是唯一的。 可用性群組名稱的最大長度為 128 個字元。  
   
--   **可用性複本**  ：每個可用性群組都支援一個主要複本和最多八個次要複本。 所有複本都可以在非同步認可模式下執行，或其中多達三個複本可以在同步認可模式下執行 (一個主要複本並且包含兩個同步次要複本)。  
+-   **可用性複本：** 每個可用性群組都支援一個主要複本和最多八個次要複本。 所有複本都可以在非同步認可模式下執行，或其中多達三個複本可以在同步認可模式下執行 (一個主要複本並且包含兩個同步次要複本)。  
   
--   **每部電腦的可用性群組和可用性資料庫數目上限：** 您可以放到電腦 (VM 或實體) 上的資料庫和可用性群組實際數目取決於硬體和工作負載，不過沒有強制執行的限制。 Microsoft 對每部實體電腦 10 AG 和 100 DB 進行過廣泛測試。 超載系統的徵狀包括 (但不限於)：工作者執行緒耗盡、AlwaysOn 系統檢視和 DMV 的回應時間緩慢，及/或停止的發送器系統傾印。 請確實透過類似實際執行的工作負載徹底測試您的環境，確保其能夠在應用程式 SLA 範圍內處理尖峰工作負載容量。 在考量 SLA 的情況下，務必考慮失敗情況下的負載，以及預期的回應時間。  
+-   **每一部電腦之可用性群組和可用性資料庫的最大數量：** 您可以放到電腦的資料庫和可用性群組 (VM 或實體) 的實際數量取決於硬體和工作負載，但沒有強制執行的限制。 Microsoft 對每部實體電腦 10 AG 和 100 DB 進行過廣泛測試。 超載系統的徵狀包括 (但不限於)：工作者執行緒耗盡、AlwaysOn 系統檢視和 DMV 的回應時間緩慢，及/或停止的發送器系統傾印。 請確實透過類似實際執行的工作負載徹底測試您的環境，確保其能夠在應用程式 SLA 範圍內處理尖峰工作負載容量。 在考量 SLA 的情況下，務必考慮失敗情況下的負載，以及預期的回應時間。  
   
 -   **不要使用容錯移轉叢集管理員操作可用性群組：**  
   
@@ -357,9 +358,9 @@ ms.locfileid: "52516465"
   
     -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]：** 不支援 [完整] 選項 (在[選取初始資料同步處理頁面](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md))，  
   
-    -   **RESTORE WITH MOVE**  ：若要建立次要資料庫，在裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，資料庫檔案必須是 RESTORED WITH MOVE。  
+    -   **RESTORE WITH MOVE：** 若要建立次要資料庫，在裝載次要複本的每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上，資料庫檔案必須是 RESTORED WITH MOVE。  
   
-    -   **對新增檔案作業的影響：**  在次要資料庫上，對主要複本稍後的新增檔案作業可能會失敗。 此失敗可能導致次要資料庫暫停。 而這又會導致次要複本進入 NOT SYNCHRONIZING 狀態。  
+    -   **對新增檔案作業的影響：** 在次要資料庫上，對主要複本稍後的新增檔案作業可能會失敗。 此失敗可能導致次要資料庫暫停。 而這又會導致次要複本進入 NOT SYNCHRONIZING 狀態。  
   
         > [!NOTE]  
         >  有關回應失敗之新增檔案作業的詳細資訊，請參閱[為失敗的新增檔案作業疑難排解 &#40;AlwaysOn 可用性群組&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)。  
@@ -384,9 +385,9 @@ ms.locfileid: "52516465"
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [AlwaysOn - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

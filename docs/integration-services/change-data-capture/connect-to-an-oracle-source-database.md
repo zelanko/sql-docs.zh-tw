@@ -13,12 +13,12 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e03624a7db0cc28a15a92e9cc1ffff98e9cf4514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227f488e3393352ae083576676b7934b722b0ce9
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648202"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53203717"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
   使用 [Oracle 來源] 頁面可提供連接至 Oracle 來源資料庫所需的資訊。 此 CDC 執行個體將會讀取您所連接之 Oracle 資料庫的重做記錄。  
@@ -37,11 +37,11 @@ ms.locfileid: "47648202"
   
 -   **Windows 驗證**：選取此選項可使用目前的 Windows 網域認證。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。  
   
--   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中輸入使用者的 **[使用者名稱]** 和 **[密碼]** 。  
+-   **Oracle 驗證**：如果您選取這個選項，您必須在您所連接的 Oracle 資料庫中鍵入使用者的 [使用者名稱] 和 [密碼]。  
   
-> [!NOTE]  
+> [!NOTE]
 >  使用者必須擁有 Oracle 資料庫中授與的以下權限，才能成為記錄採礦使用者。  
->   
+> 
 >  -   SELECT on \<任何擷取的資料表>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE on DBMS LOGMNR  
@@ -55,7 +55,7 @@ ms.locfileid: "47648202"
 > -   SELECT on ALL OBJECTS  
 > -   SELECT on DBA OBJECTS  
 > -   SELECT on ALL TABLES  
->   
+> 
 >  如果有任何權限不能授與給 V$xxx，則將該權限授與給 V_S$xxx。  
   
  **測試連接**  

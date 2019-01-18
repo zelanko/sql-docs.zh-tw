@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d971857a0d46ff2ed0bd54588558ac74ab5eb549
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119626"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980344"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 觸發程序函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ UPDATE ( column )
  IF UPDATE 會在 INSERT 動作中傳回 TRUE 值，因為資料行插入了明確的值或隱含的 (NULL) 值。  
   
 > [!NOTE]  
->  IF UPDATE(*colum*n) 子句的功能與 IF、IF...ELSE 或 WHILE 子句相同，可以使用 BEGIN...END 區塊。 如需詳細資訊，請參閱[流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
+>  IF UPDATE(*column*) 子句的功能與 IF、IF...ELSE 或 WHILE 子句相同，可以使用 BEGIN...END 區塊。 如需詳細資訊，請參閱[流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)。  
   
  在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 觸發程序主體內的任何位置，都可以使用 UPDATE(*column*)。  
   

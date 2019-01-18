@@ -1,6 +1,7 @@
 ---
-title: 維護 AlwaysOn 發行集資料庫 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 管理屬於可用性群組一部分的已複寫發行者資料庫
+description: '描述如何管理和維護作為 SQL 複寫發行者並同時參與 Always On 可用性群組的資料庫。 '
+ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5d6b88887e20f29c4d8e123143544f8c76d60fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600327"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208727"
 ---
-# <a name="maintaining-an-always-on-publication-database-sql-server"></a>維護 AlwaysOn 發行集資料庫 (SQL Server)
+# <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>管理屬於 Always On 可用性群組一部分的已複寫發行者資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   本主題將討論使用 AlwaysOn 可用性群組時維護發行集資料庫的特殊考量。  
@@ -121,7 +122,7 @@ ms.locfileid: "47600327"
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性群組︰互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On 可用性群組：互通性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  
   
   

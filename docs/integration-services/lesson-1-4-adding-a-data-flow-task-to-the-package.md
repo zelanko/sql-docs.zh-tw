@@ -11,17 +11,17 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5e73f8578c9ee9be1b30bd95722d9acd0a0e4ca
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e18408d3e96c6b03814beae37238bf52c5c192
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410550"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53205897"
 ---
 # <a name="lesson-1-4---adding-a-data-flow-task-to-the-package"></a>課程 1-4 - 將資料流程工作新增至套件
 在建立來源和目的地資料的連接管理員之後，下一項工作是將資料流程工作加入封裝中。 資料流程工作封裝資料流程引擎，它在來源和目的地之間移動資料，以及提供轉換、清理和修改移動中資料的功能。 資料流程工作是進行擷取、轉換和載入 (ETL) 處理序大部份工作之處。  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會將資料流程與控制流程分開。  
   
 ### <a name="to-add-a-data-flow-task"></a>若要加入資料流程工作  

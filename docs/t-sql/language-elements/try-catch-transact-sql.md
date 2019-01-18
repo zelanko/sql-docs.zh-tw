@@ -30,12 +30,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3374d7ae2f86ce27de46fad9027f78a040ca356b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68900243001edf7d9dcb39bcf10bf13e24bd0c48
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545746"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997580"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) 會傳回錯誤訊息的完整文字。 文字包括提供給任何可替代參數的值，例如，長度、物件名稱或次數。  
   
- 如果是在 CATCH 區塊範圍之外呼叫這些函數，它們會傳回 NULL。 這些函數可以從 CATCH 區塊範圍內的任何位置擷取錯誤資訊。 例如，下列指令碼顯示包含錯誤處理函數的預存程序。 在 `CATCH`建構的 `TRY...CATCH`區塊中，會呼叫預存程序，並傳回錯誤的相關資訊。  
+如果是在 CATCH 區塊範圍之外呼叫這些函數，它們會傳回 NULL。 這些函數可以從 CATCH 區塊範圍內的任何位置擷取錯誤資訊。 例如，下列指令碼顯示包含錯誤處理函數的預存程序。 在 `CATCH`建構的 `TRY...CATCH`區塊中，會呼叫預存程序，並傳回錯誤的相關資訊。  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -146,17 +146,19 @@ END CATCH;
   
 -   系統管理員利用 KILL 陳述式來結束工作階段。  
   
- 當 TRY...CATCH 建構的相同執行層級發生下列錯誤類型時，CATCH 區塊不會處理這些錯誤：  
+當 TRY...CATCH 建構的相同執行層級發生下列錯誤類型時，CATCH 區塊不會處理這些錯誤：  
   
 -   造成無法執行批次的編譯錯誤，如語法錯誤。  
   
 -   在陳述式層級重新編譯期間發生的錯誤，例如在編譯之後，因延遲的名稱解析所發生的物件名稱解析錯誤。  
+-   物件名稱解析錯誤   
+
   
- 這些錯誤會傳回執行批次、預存程序或觸發程序的層級。  
+這些錯誤會傳回執行批次、預存程序或觸發程序的層級。  
   
- 如果在 TRY 區塊內，在編譯或陳述式層級重新編譯期間，較低的執行層級發生錯誤 (例如，執行 sp_executesql 或使用者定義預存程序時)，發生錯誤的層級會低於 TRY...CATCH 建構，並由相關聯的 CATCH 區塊來處理。  
+如果在 TRY 區塊內，在編譯或陳述式層級重新編譯期間，較低的執行層級發生錯誤 (例如，執行 sp_executesql 或使用者定義預存程序時)，發生錯誤的層級會低於 TRY...CATCH 建構，並由相關聯的 CATCH 區塊來處理。  
   
- 下列範例顯示 `SELECT` 陳述式所產生的物件名稱解析錯誤，是在預存程序內執行相同的 `TRY...CATCH` 陳述式時，由 `CATCH` 區塊來擷取，而不是由 `SELECT` 建構來擷取。  
+下列範例顯示 `SELECT` 陳述式所產生的物件名稱解析錯誤，是在預存程序內執行相同的 `TRY...CATCH` 陳述式時，由 `CATCH` 區塊來擷取，而不是由 `SELECT` 建構來擷取。  
   
 ```sql  
 BEGIN TRY  

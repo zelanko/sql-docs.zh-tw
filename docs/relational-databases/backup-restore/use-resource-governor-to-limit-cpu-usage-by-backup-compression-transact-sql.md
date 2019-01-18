@@ -17,12 +17,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ea2daec0d2926588e80ade4a5e41cc602da58b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649356"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210537"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47649356"
 ##  <a name="setup_login_and_user"></a> 針對低優先權作業設定登入和使用者  
  這個主題中的狀況需要使用低優先權 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和使用者。 使用者名稱將用來分類在登入中執行的工作階段，並且將它們路由傳送至限制 CPU 使用量的資源管理員工作負載群組。  
   
- 下列程序描述的是針對此目的設定登入和使用者的步驟，後面接著 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例：「範例 A：設定登入和使用者 (Transact-SQL)」。  
+ 下列程序描述針對此目的設定登入和使用者的步驟，後面接著 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例：「範例 A：設定登入和使用者 (Transact-SQL)」。  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>設定登入和資料庫使用者以便分類工作階段  
   
@@ -186,7 +186,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>範例 B：設定資源管理員 (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>範例 B：設定 Resource Governor (Transact-SQL)  
  下列範例會在單一交易中執行下列步驟：  
   
 1.  建立 `pMAX_CPU_PERCENT_20` 資源集區。  
@@ -200,7 +200,7 @@ GO
  認可交易之後，此範例就會套用在 ALTER WORKLOAD GROUP 或 ALTER RESOURCE POOL 陳述式中要求的組態變更。  
   
 > [!IMPORTANT]  
->  下列範例會使用在＜範例 A：設定登入和使用者 (Transact-SQL)＞中建立之範例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的使用者名稱 *domain_name*`\MAX_CPU`。 請將這個名稱取代成您打算在建立低優先順序壓縮備份時使用的登入使用者名稱。  
+>  下列範例會使用在「範例 A：設定登入和使用者 (Transact-SQL)」中所建立範例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的使用者名稱：網域名稱`\MAX_CPU`。 請將這個名稱取代成您打算在建立低優先順序壓縮備份時使用的登入使用者名稱。  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -278,7 +278,7 @@ WITH
 GO  
 ```  
   
- [&#91;回到頁首&#93;](#Top)  
+ [[頁首]](#Top)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立和測試分類使用者定義函數](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   

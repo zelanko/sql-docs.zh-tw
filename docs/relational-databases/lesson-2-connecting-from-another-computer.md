@@ -1,5 +1,5 @@
 ---
-title: 第 2 課：從另一部電腦連接 | Microsoft Docs
+title: 第 2 課：從另一部電腦連線 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 675379c6c182ad72ecdeefe09423fe981cf67b41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520517"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589232"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52520517"
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，然後按一下 [*<InstanceName>* 的通訊協定]。  
+2.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，然後按一下 [_<InstanceName>_ 的通訊協定]。  
   
     預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER** 列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 會安裝成 **SQLEXPRESS**，除非您在安裝期間變更其名稱。  
   
@@ -139,6 +139,6 @@ ms.locfileid: "52520517"
 以上總結這個簡短的基本連接教學課程。  
   
 ## <a name="return-to-tutorials-portal"></a>返回教學課程入口網站  
-[教學課程：Database Engine 使用者入門](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[教學課程：資料庫引擎使用者入門](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

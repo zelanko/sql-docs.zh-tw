@@ -34,12 +34,12 @@ ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840b6e513e5a1c1cd9408134ced29ac3c22464c5
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684736"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202617"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>備份記錄與標頭資訊 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "47684736"
  如需詳細資訊，請參閱本主題後面的 [媒體標頭與備份標頭資訊的比較](#CompareMediaHeaderBackupHeader)。  
   
 ##  <a name="BackupHeader"></a> 備份標頭資訊  
- 檢視備份標頭會顯示有關媒體上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份組的資訊。 顯示的資訊包括使用的備份裝置類型、備份類型 (例如資料庫、交易、檔案或差異資料庫)，以及備份開始與停止的日期/時間資訊。 當您必須決定要還原磁帶上的哪個備份組，或包含在媒體上的備份時，這項資訊會非常有用。  
+ 檢視備份標頭會顯示有關媒體上所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份組的資訊。 顯示的資訊包括使用的備份裝置類型、備份類型 (例如資料庫、交易、檔案或差異資料庫)，以及備份開始與停止的日期/時間資訊。 當您必須決定要還原磁帶上的哪個備份組，或包含在媒體上的備份時，這項資訊會非常有用。  
   
 > [!NOTE]  
 >  對於高容量的磁帶而言，檢視備份標頭資訊可能很花時間，因為必須掃描整個媒體，才能顯示有關媒體上每個備份的資訊。  

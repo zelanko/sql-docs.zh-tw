@@ -1,24 +1,25 @@
 ---
 title: 建立入口網站品牌形象 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
+description: 在本文中，您將了解如何透過品牌套件建立符合您企業的入口網站品牌形象，藉以變更入口網站的外觀。 品牌套件設計成不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c93f13a94533c6562516ca398d76034564beb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397705"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53201038"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌套件已完成設計，因此您不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。  
+您可以在入口網站上打造您的企業品牌形象，藉以變更入口網站的外觀。 這是透過品牌封裝來完成。 品牌套件設計成不需要具備深度階層式樣式表 (CSS) 的知識，就能建立它。  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
@@ -239,5 +240,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## <a name="next-steps"></a>後續步驟
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

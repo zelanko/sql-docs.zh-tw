@@ -18,12 +18,12 @@ ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc1dd1617ff0bcdd30782b5c7890f60aa30258f1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ec055010a1769a8a5595ae17f4b3ea1d00c5d26d
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700946"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979924"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "51700946"
   
  負數緩衝會移除 **geometry** 執行個體邊界之指定距離內的所有點。  
   
- 理論與計算所得之緩衝間的誤差為 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 *tolerance* 參數的值。 如需有關範圍的詳細資訊，請參閱 [geometry 資料類型方法參考](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)。  
+ 理論與計算所得之緩衝區間的誤差為 max(tolerance, extents \* 1.E-7)，其中 tolerance 是 *tolerance* 參數的值。 如需有關範圍的詳細資訊，請參閱 [geometry 資料類型方法參考](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7)。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立 `Point` 執行個體，並使用 `BufferWithTolerance()` 來取得其周圍的約略緩衝。  

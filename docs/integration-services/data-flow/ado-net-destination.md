@@ -19,12 +19,12 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 38175416fdd47ee50f9bb3aa94b7318b8926317b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a462e54379a5a916d6b302f99ef6f44d2148399a
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640009"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209087"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
   ADO NET 目的地會將資料載入使用資料庫資料表或檢視的各種 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]相容資料庫中。 您可以選擇將這些資料載入現有的資料表或檢視中，也可以建立新的資料表並將資料載入新的資料表內。  
@@ -96,14 +96,14 @@ ms.locfileid: "51640009"
   
  如果您選取 [盡可能使用大量插入]，並將 [錯誤] 選項設定為 [重新導向資料列]，目的地重新導向至錯誤輸出的資料批次可能會包含良好的資料列。如需處理大量作業中錯誤的詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。 如需 [錯誤] 選項的詳細資訊，請參閱 [ADO NET 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md)。  
   
-> [!NOTE]  
+> [!NOTE]
 >  如果 SQL Server 或 Sybase 來源資料表包含識別欄位，您就必須使用執行 SQL 工作，在 ADO NET 目的地前後啟用及停用 IDENTITY_INSERT 陳述式。 (識別欄位屬性會指定資料行的累加值。 SET IDENTITY_INSERT 陳述式可將來源資料表中的明確值插入至目的地資料表中的識別欄位。)  
->   
+> 
 >   若要成功執行 SET IDENTITY_INSERT 陳述式並載入資料，您必須執行下列動作。  
 >       1.執行 SQL 工作和 ADO NET 目的地要使用相同的 ADO NET 連線管理員。  
 >       2.在連線管理員上，將 **RetainSameConnection** 屬性和 **MultipleActiveResultSets** 屬性設定為 True。  
 >       3.在 ADO.NET 目的地上，將 **UseBulkInsertWhenPossible** 屬性設為 False。   
->
+> 
 >  如需詳細資訊，請參閱 [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 和 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)。  
   
 ## <a name="external-resources"></a>外部資源  
@@ -154,7 +154,7 @@ ms.locfileid: "51640009"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  未使用。  

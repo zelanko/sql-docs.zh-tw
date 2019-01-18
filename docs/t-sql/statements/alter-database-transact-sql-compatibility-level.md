@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d923536f678884307be526ddebf0f825774c1093
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699666"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980074"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > 如果您想要針對整個資料庫使用資料庫相容性層級 140，但有偏好 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之**基數估計**模型 (對應至資料庫相容性層級 110) 的理由，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是其關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 >  
-> 如需有關如何評估您 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用相同的方法移至 140。
+> 如需有關如何評估您 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用相同的方法移至 140。
 
 請執行以下查詢已判斷您所連線的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本。  
   
@@ -255,7 +255,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |當此方法包含在檢視表或是內嵌資料表值函式內時，不會驗證 xQuery 方法所需的 SET 選項。|當此方法包含在檢視表或是內嵌資料表值函式內時，將會驗證 xQuery 方法所需的 SET 選項。 如果未能正確設定此方法的 SET 選項，將會引發錯誤。|低|  
 |包含行尾字元 (歸位字元和換行字元) 的 XML 屬性值不會根據 XML 標準來正規化。 也就是說，會傳回這兩個字元，而不是單一換行字元。|包含行尾字元 (歸位字元和換行字元) 的 XML 屬性值會根據 XML 標準來正規化。 也就是說，外部剖析之實體 (包括文件實體) 內的所有分行符號都會在輸入上正規化，其方式是將雙字元序列 #xD #xA 及任何緊接著 #xA 的 #xD 轉換成單一 #xA 字元。<br /><br /> 使用屬性來傳輸包含行尾字元之字串值的應用程式將不會在提交這些字元時收回這些字元。 為了避免正規化的程序，請使用 XML 數值字元實體來編碼所有行尾字元。|低|  
 |資料行屬性 `ROWGUIDCOL` 和 `IDENTITY` 可能會錯誤地命名為條件約束。 例如，陳述式 `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` 會執行，但是條件約束名稱不會保留，也無法供使用者存取。|資料行屬性 `ROWGUIDCOL` 和 `IDENTITY` 無法命名為條件約束。 傳回錯誤 156。|低|  
-|使用雙向指派來更新資料行 (例如 `UPDATE T1 SET @v = column_name = <expression>`) 會產生非預期的結果，因為陳述式執行期間可以在其他子句 (如 `WHER`E 和 `ON` 子句) 中使用變數的即時值，而不是陳述式起始值。 這會導致述詞的意義會根據每個資料列而以非預期的方式變更。<br /><br /> 只有當相容性層級設定為 90 時，才適用這個行為。|使用雙向指派來更新資料行會產生預期的結果，因為陳述式執行期間只會存取資料行的陳述式起始值。|低|  
+|使用雙向指派來更新資料行 (例如 `UPDATE T1 SET @v = column_name = <expression>`) 會產生非預期的結果，因為陳述式執行期間可以在其他子句 (如 `WHERE` 和 `ON` 子句) 中使用變數的即時值，而不是陳述式起始值。 這會導致述詞的意義會根據每個資料列而以非預期的方式變更。<br /><br /> 只有當相容性層級設定為 90 時，才適用這個行為。|使用雙向指派來更新資料行會產生預期的結果，因為陳述式執行期間只會存取資料行的陳述式起始值。|低|  
 |請參閱下方＜範例＞一節中的範例 E。|請參閱下方＜範例＞一節中的範例 F。|低|  
 |ODBC 函數 {fn CONVERT()} 會使用語言的預設日期格式。 對於某些語言來說，預設格式為 YDM，這可能會在 CONVERT() 結合其他必須是 YMD 格式的函數 (例如 `{fn CURDATE()}`) 使用時產生轉換錯誤。|當 ODBC 函數 `{fn CONVERT()}` 轉換成 ODBC 資料類型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP 時，會使用樣式 121 (與語言無關的 YMD 格式)。|低|  
 |日期時間內建 (如 DATEPART) 不會要求字串輸入值必須是有效的日期時間常值。 例如，`SELECT DATEPART (year, '2007/05-30')` 會編譯成功。|日期時間內建 (如 `DATEPART`) 會要求字串輸入值必須是有效的日期時間常值。 當使用無效的日期時間常值時會傳回錯誤 241。|低|  

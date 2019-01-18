@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16c55f72efc2cd2abe63300fc7cfaecc56776064
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 508abbeac89bb374fbfb68e368e68988218e0e91
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691137"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207389"
 ---
 # <a name="subscribers"></a>訂閱者
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  指定會接收對選取之發行集進行訂閱的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
+  指定會接收所選發行集訂閱的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
   
 ## <a name="options"></a>選項。  
- **訂閱者**  
- 選取方格中的核取方塊以啟用對應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，作為 **[發行集]** 頁面上選擇之發行集的訂閱者。 如果未列出訂閱者，請按一下 **[加入訂閱者]** 或 **[加入 SQL Server 訂閱者]**。  
+ **[發行者屬性]**  
+ 選取方格中的核取方塊以啟用對應的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源，作為 [發行集] 頁面上所選發行集的訂閱者。 如果未列出訂閱者，請按一下 **[加入訂閱者]** 或 **[加入 SQL Server 訂閱者]**。  
   
  **訂閱資料庫**  
  此資料行中顯示的資訊和可用的動作，會視 **[訂閱者]** 資料行中所列出的訂閱者類型而定：  
@@ -53,7 +53,7 @@ ms.locfileid: "47691137"
   
 -   選取之發行集的發行者是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新的版本。  
   
- 按一下 **[加入訂閱者]** 會顯示包含下列兩個選項的功能表： **[加入 SQL Server 訂閱者]** 和 **[加入非 SQL Server 訂閱者]**。 按一下 **[加入非 SQL Server 訂閱者]** ，即可加入 Oracle 或 IBM DB2 訂閱者。  
+ 按一下 [新增訂閱者] 就會顯示具有兩個選項的功能表：[新增 SQL Server 訂閱者] 和 [新增非 SQL Server 訂閱者]。 按一下 **[加入非 SQL Server 訂閱者]** ，即可加入 Oracle 或 IBM DB2 訂閱者。  
   
  **[加入 SQL Server 訂閱者]**  
  將伺服器加入可以啟用為訂閱者的伺服器清單中。 當一或多個下列條件為 True 時，會顯示此按鈕：  

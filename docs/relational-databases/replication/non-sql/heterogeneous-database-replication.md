@@ -15,12 +15,12 @@ ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5d4660cd2d3ba5fd8ba19cab9aa8e4a396240af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d66ff87e4ae7a18234a4a1a9dfc6b41e2590a1cd
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633496"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53212147"
 ---
 # <a name="heterogeneous-database-replication"></a>異質資料庫複寫  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47633496"
  如需詳細資訊，請參閱 [Oracle 發行概觀](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)。  
   
 ## <a name="publishing-data-to-non-sql-server-subscribers"></a>將資料發行至非 SQL Server 訂閱者  
- 下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫做為快照式和交易式發行集的「訂閱者」得到支援：  
+ 下列非 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫作為快照式和交易式發行集的訂閱者得到支援：  
   
 -   Oracle 支援之所有平台的 Oracle。  
   

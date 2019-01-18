@@ -1,6 +1,7 @@
 ---
-title: 可用性模式 (AlwaysOn 可用性群組) | Microsoft Docs
-ms.custom: ''
+title: 可用性群組之可用性模式間的差異
+description: Always On 可用性群組之不同可用性模式的描述。
+ms.custom: seodec18
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,14 +18,14 @@ ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2dfe969dff2f9058af9391293dd1b3aabfdfdc5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
+ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544045"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53206367"
 ---
-# <a name="availability-modes-always-on-availability-groups"></a>可用性模式 (AlwaysOn 可用性群組)
+# <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性群組之可用性模式間的差異
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，「可用性模式」為複本屬性，可判斷給定可用性複本是否可以在同步認可模式下執行。 您必須將每個可用性複本的可用性模式設定為同步認可模式、非同步認可模式或僅限設定模式。  若將主要複本設定為「非同步認可模式」，其便不會等候任何次要複本將內送交易記錄檔記錄寫入磁碟 (「強行寫入記錄」)。 若將給定次要複本設定為非同步認可模式，主要複本便不會等候次要複本強行寫入記錄。 若將主要複本與給定次要複本皆設定為「同步認可模式」，主要複本會等候次要複本確認其已強行寫入記錄 (除非次要複本在主要的「工作階段逾時期限」內無法 Ping 主要複本)。 
@@ -32,18 +33,6 @@ ms.locfileid: "52544045"
 
 > [!NOTE]  
 >  若次要複本超過主要的工作階段逾時期限，主要複本將會暫時切換為該次要複本的非同步認可模式。 當次要複本與主要複本重新連接時，即會回復成同步認可模式。  
-  
- **本主題內容：**  
-  
--   [支援的可用性模式](#SupportedAvModes)  
-  
--   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
-  
--   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
-  
--   [相關工作](#RelatedTasks)  
-  
--   [相關內容](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> 支援的可用性模式  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援三種可用性模式 - 非同步認可模式、同步認可模式和僅設定模式，如下所示：  
@@ -185,7 +174,7 @@ ms.locfileid: "52544045"
   
 -   [Microsoft SQL Server AlwaysOn 高可用性和災害復原方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [SQL Server AlwaysOn 團隊部落格：SQL Server AlwaysOn 官方團隊部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

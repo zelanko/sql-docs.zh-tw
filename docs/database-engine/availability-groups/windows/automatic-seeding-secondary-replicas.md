@@ -1,8 +1,8 @@
 ---
-title: 自動植入次要複本 (SQL Server) | Microsoft Docs
-description: 使用自動植入來初始化次要複本。
+title: 使用自動植入將可用性群組的次要複本初始化
+description: 在 SQL 2016 和更新版本中，使用自動植入將次要複本作為 Always On 可用性群組的一部分來初始化。
 services: data-lake-analytics
-ms.custom: ''
+ms.custom: seodec18
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6a8359fede2b688292fa47e59a64d5ef43d424d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
+ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506694"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306165"
 ---
-# <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
+# <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>使用自動植入將 Always On 可用性群組的次要複本初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 在 SQL Server 2012 和 2014 中，初始化 SQL Server AlwaysOn 可用性群組次要複本的唯一方式是使用備份、複製和還原。 SQL Server 2016 引進的新功能是初始化次要複本：「自動植入」。 自動植入使用記錄資料流傳輸，將使用 VDI 的備份串流到使用已設定端點的可用性群組的每個資料庫次要複本。 初始建立可用性群組期間，或將資料庫新增至某個可用性群組時，可以使用這項新功能。 所有支援 AlwaysOn 可用性群組的 SQL Server 版本都有自動植入功能，可以搭配傳統的可用性群組和[分散式可用性群組](distributed-availability-groups.md)使用。
@@ -32,7 +32,7 @@ ms.locfileid: "52506694"
 
 * [對主要複本的效能和交易記錄影響](#performance-and-transaction-log-impact-on-the-primary-replica)
 * [磁碟配置](#disklayout)
-* [Security](#security)
+* [安全性](#security)
 
 
 ### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>對主要複本的效能和交易記錄影響
@@ -207,7 +207,7 @@ GO
 例如，下列指令碼會建立擴充事件工作階段，以擷取與自動植入相關的事件。
 
 ```sql
-CREATE EVENT SESSION [AG_autoseed] ON SERVER 
+CREATE EVENT SESSION [AlwaysOn_autoseed] ON SERVER 
     ADD EVENT sqlserver.hadr_automatic_seeding_state_transition,
     ADD EVENT sqlserver.hadr_automatic_seeding_timeout,
     ADD EVENT sqlserver.hadr_db_manager_seeding_request_msg,

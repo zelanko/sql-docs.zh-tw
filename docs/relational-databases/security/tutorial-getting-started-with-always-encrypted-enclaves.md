@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90a9b797862db65187d991bb6961cdfd0bda8959
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523554"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046578"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -122,7 +122,8 @@ ms.locfileid: "52523554"
 7. 在 SQL Server 電腦上，在提升權限的 Windows PowerShell 主控台執行下列命令，以告知 SQL Server 電腦證明的位置。 請確定您指定 HGS 電腦的 IP 位址或 DNS 名稱。 
 
    ```powershell
-   Set-HgsClientConfiguration -AttestationServerUrl https://<IP address or DNS name>/Attestation -KeyProtectionServerUrl https://<IP address or DNS name>/KeyProtection/  
+   # use http, and not https
+   Set-HgsClientConfiguration -AttestationServerUrl http://<IP address or DNS name>/Attestation -KeyProtectionServerUrl http://<IP address or DNS name>/KeyProtection/  
    ```
 
 上述命令的結果應該顯示 AttestationStatus = Passed。
@@ -167,7 +168,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
    ```
 
     > [!NOTE]
-    > 在 [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 中預設已停用豐富計算。 其需要在您的 SQL Server 執行個體每次重新啟動之後，使用上述陳述式來啟用。
+    > 在 [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 中預設已停用豐富計算。 每次重新啟動 SQL Server 執行個體之後，需要使用上述陳述式予以啟用。
 
 ## <a name="step-4-create-a-sample-database"></a>步驟 4：建立範例資料庫
 在此步驟中，您將建立一個具有部分範例資料的資料庫，且稍後會加密它。
@@ -221,7 +222,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     GO
     ```
 
-## <a name="step-5-provision-enclave-enabled-keys"></a>步驟 5：佈建啟用記憶體保護區的金鑰
+## <a name="step-5-provision-enclave-enabled-keys"></a>步驟 5：佈建已啟用記憶體保護區的金鑰
 
 在此步驟中，您將建立資料行主要金鑰和允許記憶體保護區計算的資料行加密金鑰。
 
@@ -230,7 +231,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 3. 佈建已啟用記憶體保護區的新資料行主要金鑰：
     1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]，然後選取 [新增資料行主要金鑰]。
     2. 選取您的資料行主要金鑰名稱：CMK1。
-    3. 請確定您選取 [Windows 憑證存放區 (目前使用者或本機電腦)] 或 [Azure Key Vault]。
+    3. 請確定您選取 [Windows 憑證存放區 (目前的使用者或本機電腦)] 或 [Azure Key Vault]。
     4. 選取 [允許記憶體保護區運算]。
     5. 如果您已選取 Azure Key Vault，請登入 Azure，然後選取您的金鑰保存庫。 如需如何建立 Always Encrypted 金鑰保存庫的詳細資訊，請參閱 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (從 Azure 入口網站管理金鑰保存庫)。
     6. 如果金鑰已存在，請選取它，或是遵循表單上的指示來建立新金鑰。

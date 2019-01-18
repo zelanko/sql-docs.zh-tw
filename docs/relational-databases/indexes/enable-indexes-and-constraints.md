@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 61b9d5633439ee9092246c0b4ce605b2523c2358
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2b1666c57bf13b8eba0f76c717ae585ddc0ae110
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535516"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979624"
 ---
 # <a name="enable-indexes-and-constraints"></a>啟用索引與條件約束
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "52535516"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法啟用已停用的索引：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52535516"
     |DROP INDEX|此動作會成功。|此動作會成功。|  
     |CREATE INDEX WITH DROP_EXISTING|此動作會失敗。|此動作會成功。|  
 
--   重建已停用的壓縮非叢集索引時，data_compression 會預設為 'none'，表示將解壓縮索引。 原因是停用非叢集索引時，壓縮設定中繼資料遺失。 若要解決這個問題，您必須在重建陳述式中指定明確資料壓縮。
+-   重建已停用的壓縮非叢集索引時，data_compression 會預設為 'none'，表示將解壓縮索引。 原因是停用非叢集索引時，壓縮設定中繼資料遺失。 若要解決這個問題，您必須在重建陳述式中指定明確的資料壓縮。
 
 ###  <a name="Security"></a> 安全性  
   
@@ -117,7 +117,7 @@ ms.locfileid: "52535516"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -136,7 +136,7 @@ ms.locfileid: "52535516"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -157,7 +157,7 @@ ms.locfileid: "52535516"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;   
@@ -174,7 +174,7 @@ ms.locfileid: "52535516"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;  
@@ -192,7 +192,7 @@ ms.locfileid: "52535516"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE AdventureWorks2012;   

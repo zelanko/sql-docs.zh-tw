@@ -20,12 +20,12 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47986d4615a6cc9425c8547fecd9527731072d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19f3748634b86bcb4419f96a8abae36a72f20f88
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695686"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53589212"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47695686"
 ##  <a name="Authentication"></a> 驗證  
  驗證就是確認使用者即為使用者所宣稱身分的程序。 資料庫鏡像端點之間的連接必須進行驗證。 夥伴或見證 (若有的話) 所提出的連接要求，也必須進行驗證。  
   
- 伺服器執行個體用於資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的驗證類型就是資料庫鏡像端點的屬性。 資料庫鏡像端點有兩種可用的傳輸安全性類型：Windows 驗證 (安全性支援提供者介面 (SSPI)) 與憑證型驗證。  
+ 伺服器執行個體用於資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 的驗證類型就是資料庫鏡像端點的屬性。 資料庫鏡像端點有兩種可用的傳輸安全性類型：Windows 驗證 (安全性支援提供者介面 (SSPI)) 與憑證式驗證。  
   
 ### <a name="windows-authentication"></a>Windows 驗證  
  在 Windows 驗證下，每個伺服器執行個體會使用執行程序之 Windows 使用者帳戶的 Windows 認證來登入另一端。 Windows 驗證可能需要對登入帳戶進行一些手動設定，如下所示：  
@@ -52,7 +52,7 @@ ms.locfileid: "47695686"
   
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會以服務的形式在不同的網域帳戶底下執行 (在相同或受信任的網域中)，您就必須在其他每個伺服器執行個體的 **master** 中建立每個帳戶的登入，而且該登入必須被授與端點的 CONNECT 權限。  
   
--   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會以網路服務帳戶的身分執行，您就必須在每個其他伺服器的 **master** 中建立每個主機電腦帳戶的登入 (*DomainName***\\***ComputerName$* )，而且該登入必須被授與端點的 CONNECT 權限。 這是因為在 Network Service 帳戶底下執行的伺服器執行個體會使用主機電腦的網域帳戶進行驗證。  
+-   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會以網路服務帳戶的身分執行，您就必須在每個其他伺服器的_master_**\\**_中建立每個主機電腦帳戶的登入 (_ DomainName **ComputerName$** )，而且該登入必須被授與端點的 CONNECT 權限。 這是因為在 Network Service 帳戶底下執行的伺服器執行個體會使用主機電腦的網域帳戶進行驗證。  
   
 > [!NOTE]  
 >  如需使用 Windows 驗證設定資料庫鏡像工作階段的範例，請參閱[範例：使用 Windows 驗證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "47695686"
   
 |ALGORITHM 值|Description|  
 |---------------------|-----------------|  
-|RC4|指定端點必須使用 RC4 演算法。 這是預設值。<br /><br /> **\*\* 警告 \*\*** RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。|  
+|RC4|指定端點必須使用 RC4 演算法。 這是預設值。<br /><br /> <strong>\*\* 警告 \*\*</strong> RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。|  
 |AES|指定端點必須使用 AES 演算法。|  
 |AES RC4|指定這兩個端點必須與這個偏好 AES 演算法的端點針對加密演算法進行交涉。|  
 |RC4 AES|指定這兩個端點必須與這個偏好 RC4 演算法的端點針對加密演算法進行交涉。|  
@@ -108,7 +108,7 @@ ms.locfileid: "47695686"
  [資料庫鏡像端點 &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
- [為資料庫鏡像組態進行疑難排解 &#40;SQL Server&#41; &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [為 AlwaysOn 可用性群組組態進行疑難排解 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

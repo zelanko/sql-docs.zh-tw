@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2348a0ba8aa1fa0c3c01a1d59867a14abb4579f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808006"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53210967"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  必須有這個行為，才能允許基於 Windows 群組的使用者建立和擁有物件。 不過，它可能會導致意外建立結構描述和使用者。 為了避免隱含建立使用者和結構描述，請盡可能地明確建立資料庫主體並指派預設結構描述。 或者當在資料庫中建立物件時，使用二或三部份的物件名稱，明確指定現有的結構描述。  
 
->  [!NOTE]
+> [!NOTE]
 >  無法在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上隱含建立 Azure Active Directory 使用者。 由於從外部提供者建立 Azure AD 使用者必須檢查使用者在 AAD 中的狀態，因此建立使用者將會失敗，並傳回錯誤 2760：**指定的結構描述名稱 "\<user_name@domain>" 不存在或是您無權使用它。** 以及錯誤 2759：**CREATE SCHEMA 由於先前的錯誤而失敗。** 若要解決這些錯誤，請先從外部提供者建立 Azure AD 使用者，再重新執行建立物件的陳述式。
  
   

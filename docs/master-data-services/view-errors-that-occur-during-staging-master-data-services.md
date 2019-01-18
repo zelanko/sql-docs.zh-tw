@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], viewing errors
@@ -14,12 +13,12 @@ ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78857ad6fbb9bcef203af0473147cd69eed49701
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9f4e66d45a7116f20d4903da21508d0d22c6da61
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700546"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817670"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>檢視暫存期間發生的錯誤 (Master Data Services)
 

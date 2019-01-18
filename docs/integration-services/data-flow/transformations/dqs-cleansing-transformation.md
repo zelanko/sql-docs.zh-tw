@@ -17,12 +17,12 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c36cd11c60c3558e6b050de17a517d9feb968d32
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a8749700b557852b9807d28ee7cae2295504fa24
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638626"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979984"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 清理轉換
   DQS 清理轉換會使用 Data Quality Services (DQS) 來更正連接之資料來源的資料，方法是套用針對所連接資料來源或相似資料來源而建立的核准規則。 如需有關資料更正規則的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)＞。 如需有關 DQS 的詳細資訊，請參閱＜ [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)＞。  
@@ -88,7 +88,7 @@ ms.locfileid: "51638626"
  針對連接的資料來源選取現有的 DQS 知識庫。 如需有關 DQS 知識庫的詳細資訊，請參閱＜ [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)＞。  
   
  **加密連接**  
- 指定是否要加密連接，以便加密 DQS 伺服器與 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]之間的資料傳輸。  
+ 指定是否要加密連線，以便加密 DQS 伺服器與 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之間的資料傳輸。  
   
  **可用的定義域**  
  針對選取的知識庫列出可用的定義域。 定義域有二種類型：單一定義域以及包含兩個或多個單一定義域的複合定義域。  

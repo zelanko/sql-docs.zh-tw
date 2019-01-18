@@ -1,6 +1,7 @@
 ---
-title: 針對可用性群組手動準備次要資料庫 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 針對可用性群組準備次要資料庫
+description: 描述如何手動準備次要資料庫以聯結至 Always On 可用性群組。
+ms.custom: seodec18
 ms.date: 07/25/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,14 +19,14 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8422db4a4888cf217c674954588c04acad675d9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529927"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53209297"
 ---
-# <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備資料庫 (SQL Server)
+# <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>針對 Always On 可用性群組準備次要資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell，在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中準備 AlwaysOn 可用性群組的資料庫。 準備資料庫需要進行兩個步驟： 
 

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 09651f097f0ae07b41c1c38866b862f73c529486
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601929"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53208828"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "51601929"
 
 本文提供如何升級現有 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS) 安裝的資訊。 升級 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server 的過程中，您也必須升級 DQS 資料庫結構描述。  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   在升級 DQS 之前，您必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的遺失資料狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   您可以使用最新或舊版的 Data Quality Client 連線至 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server，或連線至 Integration Services 的 [DQS 清理轉換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)，執行您的資料品質工作。  
 > -   升級 Data Quality Services 和 Master Data Services 之後，所有適用於 Excel 的舊版 Master Data Services 增益集都無法再繼續運作。 您可以從 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 這裡 [下載](https://go.microsoft.com/fwlink/?LinkID=506665)版適用於 Exel 的 Master Data Services 增益集。  
@@ -61,8 +61,8 @@ ms.locfileid: "51601929"
 
       >[!NOTE]
       >將資料夾路徑中的 [nn] 替換成 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 版本號碼。
-      >- SQL Server 2016 為 13
-      >- SQL Server 2017 為 14
+      >- 針對 SQL Server 2016：13
+      >- 針對 SQL Server 2017：14
 
         ```  
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  

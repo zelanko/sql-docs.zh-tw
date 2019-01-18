@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-s.technology: performance
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 554e582d23afa6ef62b8bc1fd5ab7c8f0c704f4c
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
+ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158909"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53997570"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52158909"
 |**Backup/Restore Throughput/sec**|每秒的資料庫備份和還原作業之讀取/寫入輸送量。 例如，您可以測量同時使用更多個備份裝置或是使用了更快的裝置時，資料庫備份作業的效能改變情形。 資料庫備份或還原作業的輸送量，可讓您判斷備份和還原作業的進度和效能。|  
 |**Bulk Copy Rows/sec**|每秒大量複製 (Bulk Copy) 的資料列數。|  
 |**Bulk Copy Throughput/sec**|每秒大量複製的資料量 (以 KB 為單位)。|  
-|**Commit table entries**|資料庫認可資料表之記憶體中部分的大小。 如需詳細資訊，請參閱 [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)。|  
+|**Commit table entries**|資料庫認可資料表之記憶體內部部分的大小 (資料列計數)。 如需詳細資訊，請參閱 [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md)。|  
 |**Data File(s) Size (KB)**|資料庫內的所有資料檔案總計大小 (以 KB 為單位)，包含任何自動的成長。 監視此計數器很有用，例如可決定 **tempdb**的正確大小。|  
 |**DBCC Logical Scan Bytes/sec**|資料庫主控台命令 (DBCC) 每秒的邏輯讀取掃描位元組數。|  
 |**Group Commit Time/sec**|每秒的群組延遲時間 (百萬分之一秒)。|

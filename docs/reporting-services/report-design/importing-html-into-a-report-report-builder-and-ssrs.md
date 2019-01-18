@@ -1,19 +1,21 @@
 ---
 title: 將 HTML 匯入至報表 (報表產生器及 SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 12/06/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
+description: 了解如何使用文字方塊，將擷取自資料集中欄位的 HTML 格式文字插入至報表。
+ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ee3c9ffa00fcb76f4b167b5f535099b9f8c57ae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8279a0ea362cd6b85045f3ffe3d7ce0caf1ab013
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029727"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53214849"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
   您可以使用文字方塊來將從資料集的欄位所擷取的 HTML 格式文字插入至報表。 文字可以來自任何評估為正確格式之 HTML 的簡單或複雜運算式。 格式化的文字可以轉譯為所有受支援的輸出格式，包括 PDF 在內。  
@@ -25,10 +27,7 @@ ms.locfileid: "50029727"
 > [!NOTE]  
 >  當您匯入包含 HTML 標記的文字時，資料一定要先由文字方塊進行剖析。 因為只支援一部分的 HTML 標記，所以顯示在轉譯報表中的 HTML 可能會與原始的 HTML 不同。  
   
- 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
-  
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+ 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 ## <a name="supported-html-tags"></a>支援的 HTML 標籤  
  下列是在定義為預留位置文字時，會轉譯為 HTML 的標記完整清單：  
@@ -37,7 +36,7 @@ ms.locfileid: "50029727"
   
 -   字型：\<FONT>  
   
--   標頭、樣式和區塊項目：\<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
+-   標頭、樣式和區塊元素：\<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
   
 -   文字格式：\<B>、\<I>、\<U>、\<S>  
   
@@ -63,8 +62,6 @@ ms.locfileid: "50029727"
     -   只有以絕對 CSS 長度單位計算的有效 RDL 大小值才受到支援。 支援的單位包括：in、cm、mm、pt、pc。  
   
     -   相對 CSS 長度單位會被忽略，而且不受支援。 不支援的單位包括 em、ex、px、%、rem。  
-  
-     如需有關 CSS 單位的詳細資訊，請參閱： [CSS 值和單位參考](https://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (https://msdn.microsoft.com/library/ms531211(VS.85).aspx)。  
   
 -   色彩  
   

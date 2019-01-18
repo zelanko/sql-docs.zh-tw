@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e9a151f0336e1a411f0bde8b905608349efefb56
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cee36fff695390d770a0dc65d3cbb7b321c3de4d
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701876"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52765110"
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
 
@@ -54,7 +53,7 @@ ms.locfileid: "51701876"
 * [成員修訂歷程記錄](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部資源  
- msdn.com 上的部落格文章 [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(已取代︰明確階層和集合)。  
+ msdn.com 上的部落格文章：[已淘汰：Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373) (明確階層和集合)。  
   
 ## <a name="see-also"></a>另請參閱  
  [已停止的 Master Data Services 功能](../master-data-services/discontinued-master-data-services-features.md)  

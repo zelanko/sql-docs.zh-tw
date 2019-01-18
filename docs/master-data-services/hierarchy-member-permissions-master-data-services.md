@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
@@ -15,12 +14,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78688e6aa3053ef46f0cd46ca82a06aabe672a77
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702476"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52817913"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "51702476"
   
 |權限|Description|  
 |----------------|-----------------|  
-|**讀取**|顯示成員。<br /><br /> <br /><br /> 注意：如果您僅指派 [讀取] 權限給 [根]，[根] 底下的成員是唯讀的。但是在明確階層和集合中，使用者可以將成員移到 [根] 而且可以將新的成員加入到 [根]。|  
+|**讀取**|顯示成員。<br /><br /> <br /><br /> 注意：如果您僅指派 [讀取] 權限給 [根]，[根] 底下的成員為唯讀。但是在明確階層和集合中，使用者可以將成員移到 [根] 且可以將新成員新增至 [根]。|  
 |**建立**|階層成員的權限不足以建立權限。|  
 |**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**刪除**|顯示成員，而且使用者可加以刪除。|  

@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 148ae7bcbb2484f6a89b0ca787f8c6d8962a80dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53207787"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -84,10 +84,10 @@ FROM <backup_device>
 ## <a name="result-sets"></a>結果集  
  對於給定裝置中的每個備份，伺服器都會傳送一個含有下列資料行的標頭資訊資料列：  
   
-> [!NOTE]  
+> [!NOTE]
 >  RESTORE HEADERONLY 會查看媒體中的所有備份組。 因此，當使用高容量磁帶機時，產生這個結果集可能需要一些時間。 若要快速瀏覽媒體，而不需要取得每個備份組的相關資訊，請使用 RESTORE LABELONLY 或指定 FILE **=** *backup_set_file_number*。  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 本質的緣故，來自其他軟體程式的備份組有可能佔用與 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份組相同媒體上的空間。 RESTORE HEADERONLY 傳回的結果集會針對每個這些其他備份組，各包括一個資料列。  
   
 |資料行名稱|資料類型|SQL Server 備份組的描述|  
@@ -121,7 +121,7 @@ FROM <backup_device>
 |**SoftwareVersionMinor**|**int**|建立備份組的伺服器之次要版本號碼。|  
 |**SoftwareVersionBuild**|**int**|建立備份組的伺服器之組建編號。|  
 |**MachineName**|**nvarchar(128)**|執行備份作業的電腦名稱。|  
-|**旗標**|**int**|若設為 **1**，個別旗標位元意義如下：<br /><br /> **1** = 記錄備份包含大量記錄作業。<br /><br /> **2** = 快照集備份。<br /><br /> **4** = 備份時，資料庫是唯讀的。<br /><br /> **8** = 備份時，資料庫處於單一使用者模式。<br /><br /> **16** = 備份包含備份總和檢查碼。<br /><br /> **32** = 備份時，資料庫損毀，但要求備份作業忽略錯誤並繼續執行。<br /><br /> **64** = 結尾記錄備份。<br /><br /> **128** = 含不完整中繼資料的結尾記錄備份。<br /><br /> **256** = 使用 NORECOVERY 來進行的結尾記錄備份。<br /><br /> **重要：** 建議您不要使用 **Flags**，而是改用個別的布林值資料行 (下列從 **HasBulkLoggedData** 開始到 **IsCopyOnly** 結束的布林資料行)。|  
+|**旗標**|**int**|若設為 **1**，個別旗標位元意義如下：<br /><br /> **1** = 記錄備份包含大量記錄作業。<br /><br /> **2** = 快照集備份。<br /><br /> **4** = 備份時，資料庫是唯讀的。<br /><br /> **8** = 備份時，資料庫處於單一使用者模式。<br /><br /> **16** = 備份包含備份總和檢查碼。<br /><br /> **32** = 備份時，資料庫損毀，但要求備份作業忽略錯誤並繼續執行。<br /><br /> **64** = 結尾記錄備份。<br /><br /> **128** = 含不完整中繼資料的結尾記錄備份。<br /><br /> **256** = 使用 NORECOVERY 來進行的結尾記錄備份。<br /><br /> **重要：** 建議您不要使用 **Flags**，請改用個別的布林資料行 (下列從 **HasBulkLoggedData** 到 **IsCopyOnly** 的布林資料行)。|  
 |**BindingID**|**uniqueidentifier**|資料庫的繫結識別碼。 這會與 **sys.database_recovery_status****database_guid** 對應。 當還原資料庫時，會指派一個新值。 另請參閱 **FamilyGUID** (下方)。|  
 |**RecoveryForkID**|**uniqueidentifier**|結尾復原分岔的識別碼。 這個資料行會與 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **last_recovery_fork_guid**對應。<br /><br /> 就資料備份而言，**RecoveryForkID** 等於 **FirstRecoveryForkID**。|  
 |**定序**|**nvarchar(128)**|資料庫所用的定序。|  

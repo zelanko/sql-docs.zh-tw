@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c92dc9aad30134f0d9b8b834798a416fb610e142
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521237"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53590682"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52521237"
 2.  匯入會從匯出檔案大量複製資料。  
   
 ## <a name="sql-server-utility"></a>SQL Server 公用程式  
- 如果您將 DAC 匯入至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
+ 如果您將 DAC 匯入至資料庫引擎執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
   
 ## <a name="database-options-and-settings"></a>資料庫選項和設定  
  根據預設，匯入期間建立的資料庫將會擁有 CREATE DATABASE 陳述式中的所有預設值，但是資料庫定序和相容性層級會設定為 DAC 匯出檔案中所定義的值。 DAC 匯出檔案使用原始資料庫中的值。  
@@ -62,7 +62,7 @@ ms.locfileid: "52521237"
  為了提高安全性，SQL Server 驗證登入會儲存在 DAC 匯出檔案中，而且沒有密碼。 當您匯入檔案之後，此登入會建立為停用的登入，而且會產生密碼。 若要啟用登入，請使用具有 ALTER ANY LOGIN 權限的登入進行登入，並使用 ALTER LOGIN 來啟用登入，然後指派可以傳達給使用者的新密碼。 Windows 驗證登入不需要這項處理，因為這類登入的密碼不是由 SQL Server 所管理。  
   
 ## <a name="permissions"></a>[權限]  
- 只有 **系統管理員 (sysadmin)** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色且擁有 ALTER ANY LOGIN 權限的登入，才能匯入 DAC。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，需要 dbmanager 或 serveradmin 角色的成員資格。  
+ 只有 **系統管理員 (sysadmin)** 或 **serveradmin** 固定伺服器角色的成員，或是具有 **dbcreator** 固定伺服器角色且擁有 ALTER ANY LOGIN 權限的登入，才能匯入 DAC。 內建的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶 (名稱為 **sa** ) 也可以匯入 DAC。 將具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 loginmanager 或 serveradmin 角色的成員資格。 將不具有登入的 DAC 匯入至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ，需要 dbmanager 或 serveradmin 角色的成員資格。  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>使用匯入資料層應用程式精靈  
  **若要啟動此精靈，請使用下列步驟：**  
@@ -101,9 +101,9 @@ ms.locfileid: "52521237"
   
 -   **從本機磁碟匯入** - 按一下 [瀏覽...] 巡覽本機電腦，或在提供的空間中指定路徑。 路徑名稱必須包含檔案名稱和 .bacpac 副檔名。  
   
--   **從 Azure 匯入** - 從 Microsoft Azure 容器匯入 BACPAC 檔案。 您必須連接到 Microsoft Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
+-   **從 Azure 匯入** - 從 Microsoft Azure 容器匯入 BACPAC 檔案。 您必須連線到 Microsoft Azure 容器，才能驗證此選項。 請注意，[從 Azure 匯入] 選項也會要求您指定暫存檔案的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
-     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 請注意，您可以依照 **[名稱]**、 **[大小]** 或 **[修改日期]** 排序資料行。  
+     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 您可以依照 [名稱]、[大小] 或 [修改日期] 排序資料行。  
   
      若要繼續進行，請指定要匯入的 .bacpac 檔案，然後按一下 **[開啟]**。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52521237"
  **針對 Azure SQL Database：**  
   
  - **[匯入 BACPAC 檔案以建立新的 Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 提供使用 Azure 入口網站、PowerShell、SSMS 或 SqlPackage 的逐步指示。  
- - 請參閱 **[SQL Database 選項和效能︰了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** ，以取得不同服務層的詳細外觀。  
+ - 請參閱 **[SQL Database 選項和效能：了解每個服務層的可用項目](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)**，以取得不同服務層的詳細外觀。  
 
 ### <a name="validation-page"></a>驗證頁面  
  您可以使用此頁面檢閱造成此作業無法執行的任何問題。 若要繼續進行，請解決封鎖問題，然後按一下 **[重新執行驗證]** 確定驗證成功。  

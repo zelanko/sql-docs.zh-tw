@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409d67e60fd4d82d339ac31e96ca75b578171fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7d0e18e67720b301f97cc212f7b3b5de0d08e29
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402813"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980534"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -255,8 +255,8 @@ REJECTED_ROW_LOCATION = *Directory Location*
  請注意，建立外部資料來源的登入，必須具有讀取和寫入位於 Hadoop 或 Azure Blob 儲存體上之外部資料來源的權限。  
 
 
- > [!IMPORTANT]  
-
+> [!IMPORTANT]
+> 
 >  ALTER ANY EXTERNAL DATA SOURCE 權限可讓任何主體都能夠建立及修改任何外部資料來源物件，因此也會讓主體能夠存取資料庫上的所有資料庫範圍認證。 必須將此權限視為具高度權限，因此必須僅授與系統中受信任的主體。
 
 ## <a name="error-handling"></a>錯誤處理  

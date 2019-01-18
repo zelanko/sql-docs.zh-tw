@@ -19,30 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c4bf49266f87dcc569ca6bca52c5a8d82119bb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
+ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510857"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626265"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立結構描述。  
-  
- **本主題內容**  
-  
--   **開始之前：**  
-  
-     [限制事項](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **若要使用下列項目建立結構描述：**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -75,9 +61,12 @@ ms.locfileid: "52510857"
 5.  在 **[結構描述擁有者]** 方塊中，輸入擁有結構描述之資料庫使用者或角色的名稱。 或者，按一下 **[搜尋]** 開啟 **[搜尋角色和使用者]** 對話方塊。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+> [!NOTE]
+> 如果對 **Azure SQL Database** 或 **Azure SQL 資料倉儲**使用 SSMS 建立結構描述，則不會顯示對話方塊。 您將需要執行所產生的「建立結構描述範本 T-SQL 陳述式」。
   
 ### <a name="additional-options"></a>其他選項  
- [結構描述 - 新增] 對話方塊也在其他兩個頁面上提供選項： [權限] 和 [擴充屬性]。  
+ [結構描述 - 新增] 對話方塊也在其他兩個頁面上提供選項：[權限] 和 [延伸屬性]。  
   
 -   **[權限]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

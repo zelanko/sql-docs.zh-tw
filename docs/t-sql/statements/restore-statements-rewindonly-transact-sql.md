@@ -23,12 +23,12 @@ ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1e6db73f4acea3654e8cffe8699df08f3f8d2c7
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602286"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53980084"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 陳述式 - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ FROM <backup_device> [ ,...n ]
  這是用來還原資料庫的 **sp_addumpdevice** 所建立之備份裝置的邏輯名稱，它必須遵循識別碼的規則。 如果備份裝置名稱是以變數 (**@**_logical\_backup\_device\_name\_var_) 的方式來提供，您可以將此名稱指定為字串常數 (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- 可讓您從指定的磁碟或磁帶裝置中還原備份。 您應該用裝置的實際名稱 (如完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果備份裝置名稱是以變數 (**@**_physical\_backup\_device\_name\_var_) 的方式來提供，您可以將此名稱指定為字串常數 (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ 可讓您從指定的磁碟或磁帶裝置中還原備份。 您應該使用裝置的實際名稱 (例如，完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 或 TAPE = '\\\\.\TAPE0'。 如果裝置名稱是以變數 (**@**_physical\_backup\_device\_name\_var_) 的方式來提供，您可以將此裝置名稱指定為字串常數 (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  如果所用的網路伺服器是用 UNC 名稱 (必須包含機器名稱)，請指定磁碟裝置類型。 如需如何使用通用命名慣例 (UNC) 名稱的詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   

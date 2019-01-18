@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 22f618072cb9e8636e3fef59d4ee7513033229d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 59bca7e526dff250873cd7de2912b1b69f775bc9
+ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527497"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53369300"
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,12 +73,12 @@ Windows 會提供下列工具來監視伺服器上執行的應用程式：
 -   [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
 
 > [!IMPORTANT]
-> 已淘汰 SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。 也已淘汰包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間。 
+> SQL 追蹤和 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 已被淘汰。 包含 Microsoft SQL Server 追蹤和重新執行物件的 *Microsoft.SqlServer.Management.Trace* 命名空間也會被淘汰。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 請改用擴充事件。 如需[擴充事件](../../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+> 請改用擴充事件。 如需[延伸事件](../../relational-databases/extended-events/extended-events.md)的詳細資訊，請參閱[快速入門：SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)和 [SSMS XEvent 分析工具](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 
 > [!NOTE]
-> 「未」淘汰適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，而且將會繼續受支援。
+> 適用於 Analysis Services 工作負載的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]「未」遭淘汰，而且將會繼續受支援。
 
 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監視工具的詳細資訊，請參閱 [效能監視及微調工具](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)。  
   
@@ -100,7 +100,7 @@ Windows 會提供下列工具來監視伺服器上執行的應用程式：
   
     限制事件資料可讓系統把焦點放在監視案例相關的事件上。 例如，若您要監視慢速查詢，可以使用篩選來限制只監視應用程式對特定資料庫執行超過三十秒以上的查詢。 
     
-    如需篩選擴充事件追蹤的詳細資訊，請參閱[快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md#demo-of-ssms-integration)。 
+    如需篩選延伸事件追蹤的詳細資訊，請參閱[快速入門：SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md#demo-of-ssms-integration)。 
     
     如需篩選 SQL 追蹤的詳細資訊，請參閱[設定追蹤篩選 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) 和[篩選追蹤中的事件 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)。  
   

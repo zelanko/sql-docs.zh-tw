@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 02920786c8ee3b4fec011dd084a8fb7fc064b69d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
+ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807364"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53979385"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  WITH PRIVATE KEY  
  變更私密金鑰的保護。  
   
- ENCRYPTION BY PASSWORD **='***stongPassword***'**  
+ ENCRYPTION BY PASSWORD **='***strongPassword***'**  
  指定用來保護私密金鑰的新密碼。 *password* 必須符合執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的 Windows 密碼原則需求。 如果省略這個選項，則由資料庫主要金鑰加密此私密金鑰。  
   
  DECRYPTION BY PASSWORD **='***oldPassword***'**  

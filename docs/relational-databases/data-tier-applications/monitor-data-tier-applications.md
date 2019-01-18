@@ -13,24 +13,24 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 876e6cc23bd5b4063c977de44af05c2e43ee002d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672837"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53588942"
 ---
 # <a name="monitor-data-tier-applications"></a>監視資料層應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中的 [公用程式總管] 與 [物件總管] 以及系統檢視表和資料表中監視資料層應用程式 (DAC)。 此外，包含在 DAC 中之資料庫內的所有物件都可以使用標準資料庫與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 監視技術進行監視。  
   
 ## <a name="before-you-begin"></a>開始之前  
- 若您將 DAC 部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署 DAC 的相關資訊就會合併至 SQL Server 公用程式。 然後，您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[公用程式總管]**，檢視 DAC 的基本健全狀況資訊。  
+ 如果您將 DAC 部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署的 DAC 相關資訊就會合併至 SQL Server 公用程式。 然後，您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[公用程式總管]**，檢視 DAC 的基本健全狀況資訊。  
   
  SSMS 的 **[物件總管]** 會顯示部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之每個 DAC 的基本組態資訊，而不論是否在 SQL Server 公用程式中管理執行個體。 而且，可以使用監視任何資料庫的相同程序，來監視與部署 DAC 相關聯的資料庫。  
   
 ## <a name="using-the-sql-server-utility"></a>使用 SQL Server 公用程式  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 公用程式總管中的 [部署的資料層應用程式] 詳細資料頁面會顯示一個儀表板，這個儀表板會報告已部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之受管理執行個體的所有 DAC 資源使用情況。 詳細資料頁面的上方窗格會列出每個已部署的 DAC 以及視覺指標，顯示其 CPU 的使用量與檔案資源是否超出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所定義的原則之外。 如果您選取清單檢視中的任何 DAC，在頁面下方窗格的索引標籤中會顯示其他詳細資料。 如需詳細資料頁面上所呈現之資訊的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [公用程式總管] 中的 [部署的資料層應用程式] 詳細資料頁面會顯示一個儀表板，這個儀表板會報告已部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的所有 DAC 資源使用率。 詳細資料頁面的上方窗格會列出每個已部署的 DAC 以及視覺指標，顯示其 CPU 的使用量與檔案資源是否超出針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所定義的原則之外。 如果您選取清單檢視中的任何 DAC，在頁面下方窗格的索引標籤中會顯示其他詳細資料。 如需詳細資料頁面上所呈現之資訊的詳細資訊，請參閱[部署的資料層應用程式詳細資料 &#40;SQL Server 公用程式&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)。  
   
  使用 [部署的資料層應用程式] 詳細資料頁面快速識別使用不足或其硬體資源負荷過重的 DAC 之後，您可以做出處理所有問題的計畫。 未充分使用其目前硬體資源的多個 DAC 可以合併到單一伺服器，釋出部分伺服器做為其他用途使用。 如果 DAC 在目前伺服器上的資源負荷過重，可以將 DAC 移到更大的伺服器，或者將額外的資源加入至目前的伺服器。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "51672837"
  [部署的資料層應用程式] 詳細資料頁面中的資訊來自公用程式管理資料倉儲中的資料，此資料倉儲預設每 15 分鐘收集資料一次。 其間隔可以使用 **[公用程式管理]** 詳細資料頁面自訂。  
   
 ## <a name="using-object-explorer"></a>使用物件總管  
- SSMS 的 **[物件總管]** 會顯示有關部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之每個 DAC 的基本組態資訊。 這同時包括已經在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中註冊的受管理的執行個體，以及無法在 [公用程式總管] 中檢視的獨立執行個體。  
+ SSMS 的 **[物件總管]** 會顯示有關部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之每個 DAC 的基本組態資訊。 這同時包括已經在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中註冊的執行個體，以及無法在 [公用程式總管] 中檢視的獨立執行個體。  
   
- 若要檢視部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體之 DAC 的詳細資料：  
+ 若要檢視部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體之 DAC 的詳細資料：  
   
 1.  選取 [檢視/物件總管] 功能表。  
   

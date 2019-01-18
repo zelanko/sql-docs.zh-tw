@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef241919f29225ee7c6384a7466fc69bc9391ed
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571437"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52748480"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置�
  
 在每個配置單位鏈結中連結的 IAM 頁面擁有一個標頭，指出 IAM 頁面所對應範圍之範疇中的開始範圍。 IAM 頁面也擁有一個大型點陣圖，它裡面的每個位元都代表一個範圍。 對應中的第一個位元代表了範疇中的第一個範圍，第二個位元代表了第二個範圍，其餘依此類推。 若位元為 0，表示它所代表的範圍並未配置給擁有該 IAM 的配置單位。 若位元為 1，表示它所代表的範圍已配置給擁有該 IAM 頁面的配置單位。
 
-當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 必須插入新的資料列，但目前的頁面中沒有可用空間時，就會使用 IAM 與 PFS 頁面來尋找可配置的頁面，或針對堆積或文字/影像頁面，尋找擁有足夠空間可以保存資料列的頁面。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用 IAM 頁面來尋找配置給該配置單位的範圍。 對於每個範圍而言，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會搜尋 PFS 頁面，查看是否有可用的頁面。 每個 IAM 與 PFS 頁面都涵蓋許多資料頁，因此資料庫的 IAM 與 PFS 頁面個數很少。 這代表 IAM 與 PFS 頁面通常位於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 緩衝集區的記憶體中，因此可以快速地被搜尋到。 對於索引而言，新資料列的插入點是由索引鍵設定。 在此情況下，前述的搜尋程序並不會發生。
+當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 必須插入新的資料列，但目前的頁面中沒有可用空間時，就會使用 IAM 與 PFS 頁面來尋找可配置的頁面，或針對堆積或文字/影像頁面，尋找擁有足夠空間可以保存資料列的頁面。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將使用 IAM 頁面來尋找配置給該配置單位的範圍。 對於每個範圍而言，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會搜尋 PFS 頁面，查看是否有可用的頁面。 每個 IAM 與 PFS 頁面都涵蓋許多資料頁，因此資料庫的 IAM 與 PFS 頁面個數很少。 這代表 IAM 與 PFS 頁面通常位於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 緩衝集區的記憶體中，因此可以快速地被搜尋到。 對於索引而言，新資料列的插入點是由索引鍵設定；但需要新頁面時，就會發生上述程序。
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 只在它無法在現有的範圍中找到一個擁有足夠空間來保存插入之資料列的頁面時，才會配置新的範圍給配置單位。 
 

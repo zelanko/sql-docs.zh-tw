@@ -5,19 +5,18 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d7f7245b330e502394190db0cd227956cb005311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1a94e0677f0c9356f4fba43b7b6230759c9458
+ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686336"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819280"
 ---
 # <a name="import-statuses-master-data-services"></a>匯入狀態 (Master Data Services)
 

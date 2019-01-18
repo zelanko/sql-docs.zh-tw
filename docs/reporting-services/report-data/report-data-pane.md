@@ -1,30 +1,28 @@
 ---
-title: 報表資料窗格 | Microsoft Docs
-ms.date: 03/01/2017
+title: 報表資料窗格
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-f1_keywords:
-- "10039"
-- sql13.rtp.rptdesigner.reportdata.f1
-- "10435"
-helpviewer_keywords:
-- Report Data pane
-ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 03fb902cc4150ef9ab0eed9774a3c67fe427de6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 603229e289c7a5902a7c68b106f079136b249ea0
+ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611519"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553030"
 ---
-# <a name="report-data-pane"></a>報表資料窗格
+# <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的報表資料窗格
+
   [報表資料] 窗格可用於檢視報表中目前定義的參數、資料來源、資料集、欄位集合和影像。 [報表資料] 窗格會以階層檢視來顯示表示報表中資料的項目。 最上層節點代表內建欄位、參數、影像和資料來源參考。 請展開每個節點以檢視資料項目。 例如，當您展開資料來源節點時，為該資料來源所定義的資料集就會顯示。 在展開資料集時，其欄位集合就會顯示。 將項目拖曳到報表設計介面，以將資料連結到報表頁面的報表項目。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項。
+
  **內建欄位**  
  代表 Reporting Services 所提供的欄位，這些欄位常用於報表中，例如報表名稱或頁碼。 如需詳細資訊，請參閱[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)。  
   
@@ -40,8 +38,7 @@ ms.locfileid: "47611519"
  **資料集**  
  代表單一資料集。 資料集是由查詢所指定之欄位集合的父節點，包含任何導出欄位。 Reporting Services 支援查詢設計工具，可協助您指定查詢。 如需詳細資訊，請參閱[報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 和[查詢設計工具 &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [群組窗格](../../reporting-services/tools/grouping-pane.md)  
-  
-  
+## <a name="next-steps"></a>後續步驟
+
+ - [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)
+ - [群組窗格](../../reporting-services/tools/grouping-pane.md)

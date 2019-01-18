@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2b85546e79e426f078ff77ab11b4eb9eb076aea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
+ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519519"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53591642"
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52519519"
 [最大伺服器記憶體] 允許使用的最小記憶體數量為 128 MB。
   
 > [!IMPORTANT]  
-> 將 [最大伺服器記憶體] 的值設得太高，可能會導致裝載於相同主機上的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體爭用記憶體。 但若將此值設得太低，可能也會引起高度的記憶體壓力與效能問題。 將 [最大伺服器記憶體] 設為最小值甚至可能會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法啟動。 如果您變更此選項後無法啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 ***-f*** 啟動選項啟動它，並將 [最大伺服器記憶體] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+> 將 [最大伺服器記憶體] 的值設得太高，可能會導致裝載於相同主機上的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體爭用記憶體。 但若將此值設得太低，可能也會引起高度的記憶體壓力與效能問題。 將 [最大伺服器記憶體] 設為最小值甚至可能會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法啟動。 如果您變更此選項後無法啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 **_-f_** 啟動選項予以啟動，並將 [最大伺服器記憶體] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可動態使用記憶體。但您可手動設定記憶體選項，並限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可存取的記憶體數量。 在您設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的記憶體數量之前，要先決定適當的記憶體設定，方法是將實體記憶體總數減去 OS、不受 max_server_memory 設定所控制的記憶體配置，以及任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (以及當電腦不專用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，其他的系統用途) 所需要的記憶體。 此差額即為可指派給目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記憶體數量上限。  
  
@@ -56,7 +56,7 @@ ms.locfileid: "52519519"
   
 <a name="max_server_memory"></a> 您可使用 **max_server_memory** 確保 OS 不會遇到有害的記憶體壓力。 若要設定最大伺服器記憶體設定，請監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的整體取用量，以判斷記憶體需求。 若要為單一執行個體進行更準確的計算：
  -  從 OS 總記憶體中保留 1GB - 4GB 的記憶體給 OS 本身。
- -  然後減去等於不受 [最大伺服器記憶體] 控制的潛在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體配置，該配置的算法為堆疊大小 <sup>1</sup> * 計算得出的最大背景工作執行緒數 <sup>2</sup> + -g 啟動參數 <sup>3</sup> (若未設定 *-g*，則預設為 256MB)。 餘數即為單一執行個體安裝的 max_server_memory 設定。
+ -  然後減去等於不受 [最大伺服器記憶體] 控制的潛在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體配置，該配置的算法為**堆疊大小 <sup>1</sup> \* 計算得出的最大背景工作執行緒數 <sup>2</sup> + -g 啟動參數 <sup>3</sup>** (若未設定 *-g*，則預設為 256MB)。 餘數即為單一執行個體安裝的 max_server_memory 設定。
  
 <sup>1</sup> 如需每個架構之執行緒堆疊大小的資訊，請參閱[記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md#stacksizes)。
 
