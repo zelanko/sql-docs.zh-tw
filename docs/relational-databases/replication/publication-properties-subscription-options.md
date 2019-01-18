@@ -13,12 +13,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a0b583c66355245790004a8612afa0ace72999
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213127"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128010"
 ---
 # <a name="publication-properties-subscription-options"></a>發行集屬性，訂閱選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "53213127"
  決定是否使用與此資料庫之其他發行集無關的代理程式。 此選項是唯讀的；針對使用新增發行集精靈所建立的發行集，預設為 **[True]** ，而且在發行集建立後就無法變更。 如需詳細資訊，請參閱[複寫代理程式管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
  **[快照集永遠可使用]**  
- 決定是否每次執行快照集代理程式時都會建立快照集檔案 (需要 **[獨立散發代理程式]**)。 此選項是唯讀的；如果您在「新增發行集精靈」的 **[快照集代理程式]** 頁面上選取 **[立即建立快照集，並保留快照集為可使用狀態，以初始化訂閱]** (預設值)，此選項就會設定為 **[True]** 。 如需詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
+ 決定是否每次執行快照集代理程式時都會建立快照集檔案 (需要 **[獨立散發代理程式]**)。 此選項是唯讀的；如果您在「新增發行集精靈」的 **[快照集代理程式]** 頁面上選取 **[立即建立快照集，並保留快照集為可使用狀態，以初始化訂閱]** (預設值)，此選項就會設定為 **[True]** 。 如需詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
  **允許從備份檔案初始化。**  
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否允許使用備份檔案來初始化訂閱。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  

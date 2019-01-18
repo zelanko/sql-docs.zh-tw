@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f710a7ef79f5532cd8a58921cb8b07d350c1305
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380880"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256633"
 ---
 # <a name="view-statistics-properties"></a>檢視統計資料屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,9 +60,9 @@ ms.locfileid: "53380880"
   
 5.  以滑鼠右鍵按一下要檢視其屬性的統計資料物件，然後選取 [屬性]。  
   
-6.  在 [統計資料屬性 - *statistics_name*] 對話方塊的 [選取頁面] 窗格中，選取 [詳細資料]。  
+6.  在 [統計資料屬性 - _statistics_name_] 對話方塊的 [選取頁面] 窗格中，選取 [詳細資料]。  
   
-     下列屬性會在 [統計資料屬性 - *statistics_name*] 對話方塊的 [詳細資料] 頁面中顯示。  
+     下列屬性會在 [統計資料屬性 - _statistics_name_] 對話方塊的 [詳細資料] 頁面中顯示。  
   
      **資料表名稱**  
      顯示統計資料所描述的資料表名稱。  

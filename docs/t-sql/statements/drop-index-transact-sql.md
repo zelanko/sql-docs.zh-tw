@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb2e2dc081bce539bf2671e14993281d2415b98
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206227"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132448"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -187,7 +187,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  如果利用 MOVE TO 卸除叢集索引，便會重建基底資料表的任何非叢集索引，不過，它們會保留在原始檔案群組或資料分割結構描述中。 如果將基底資料表移到不同的檔案群組或資料分割結構描述中，則不會移動非叢集索引來符合基底資料表 (堆積) 的新位置。 因此，即使非叢集索引先前與叢集索引對齊，它們也可能不再與堆積對齊。 如需資料分割索引對齊的詳細資訊，請參閱[資料分割資料表與索引](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
- *partition_scheme_name* **(** *column_name* **)**  
+ _partition_scheme_name_ **(** _column_name_ **)**  
  **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定一個資料分割結構描述來做為結果資料表的位置。 您必須已執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 來建立資料分割結構描述。 如果未指定位置，且資料表已進行資料分割，便會將資料表併入與現有叢集索引相同的資料分割配置中。  

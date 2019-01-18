@@ -10,12 +10,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: 498432a84d523c597d7c7c52c151dce003047ba2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328551"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254693"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 
@@ -40,14 +40,14 @@ REST API 要求/回應配對可分成五個元件：
 
 * HTTP 要求訊息標頭欄位：
 
-    * 必要的 [HTTP 方法](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (也稱為作業或動詞)，這會告知服務所要求的作業類型。 Reporting Services REST API 支援 DELETE、GET、HEAD、PUT、POST 和 PATCH 方法。
+    * 必要的 [HTTP 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) (也稱為作業或動詞)，這會告知服務所要求的作業類型。 Reporting Services REST API 支援 DELETE、GET、HEAD、PUT、POST 和 PATCH 方法。
     * 指定的 URI 和 HTTP 方法所需的其他選擇性標頭欄位。
 
 * 選擇性的 HTTP **要求訊息主體**欄位，以支援 URI 和 HTTP 作業。 例如，POST 作業包含當作複雜參數傳遞的 MIME 編碼物件。 針對 POST 或 PUT 作業，也必須在 `Content-type` 要求標頭中指定主體的 MIME 編碼類型。 某些服務要求您使用特定 MIME 類型，例如 `application/json`。
 
 * HTTP **回應訊息標頭**欄位：
 
-    * [HTTP 狀態碼](https://www.w3.org/Protocols/HTTP/HTRESP.html)，範圍可介於 2xx 成功碼到 4xx 或 5xx 錯誤碼之間。 或者，可能會傳回服務定義的狀態碼，如 API 文件中所示。
+    * [HTTP 狀態碼](http://www.w3.org/Protocols/HTTP/HTRESP.html)，範圍可介於 2xx 成功碼到 4xx 或 5xx 錯誤碼之間。 或者，可能會傳回服務定義的狀態碼，如 API 文件中所示。
     * 支援要求回應所需的其他選擇性標頭欄位，例如 `Content-type` 回應標頭。
 
 * 選擇性的 HTTP **回應訊息主體**欄位：

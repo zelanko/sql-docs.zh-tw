@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2183c64e1d525e0d0add54317e2af10d0ada311b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6a66ee0be27bcc584bd3d01a7b17a1fffbc74a33
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979704"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134338"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53979704"
 > [!IMPORTANT]  
 >  如果通往資料庫使用者的內容切換在使用中，任何人想要存取資料庫以外的資源，都會導致陳述式失敗。 其中包括 USE *database* 陳述式、分散式查詢，以及參考其他使用三部分或四部分識別碼的資料庫查詢。  
   
- **'** *name* **'**  
+ **'** _name_ **'**  
  有效的使用者或登入名稱。 *name* 必須是 **sysadmin** 固定伺服器角色的成員，或是以主體形式分別存在於 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 或 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 中。  
   
  *name* 可以指定為本機變數。  
@@ -85,7 +85,7 @@ ms.locfileid: "53979704"
  COOKIE INTO **@**_varbinary_variable_  
  指定如果呼叫的 REVERT WITH COOKIE 陳述式包含正確的 **@**_varbinary_variable_ 值，則執行內容只可以還原回先前的內容。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將 Cookie 傳送至 **@**_varbinary_variable_。 **COOKIE INTO** 選項只能在特定層級使用。  
   
- **@** *varbinary_variable* 是 **varbinary(8000)**。  
+ **@** _varbinary_variable_ 是 **varbinary(8000)**。  
   
 > [!NOTE]  
 >  Cookie **OUTPUT** 參數目前記載為 **varbinary(8000)**，這是正確的長度上限。 但目前的實作會傳回 **varbinary(100)**。 應用程式應保留 **varbinary(8000)**，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。  

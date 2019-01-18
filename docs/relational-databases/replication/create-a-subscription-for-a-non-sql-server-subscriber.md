@@ -15,12 +15,12 @@ ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 854e407cce5f229883e9b4f53e6a818d4532640b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ae569fa5f7a15435fc69f84fd4254c692e1eb1d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205237"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126508"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "53205237"
   
     -   對於 IBM DB2，在 DB2 連接字串的 **初始資料目錄** 屬性中指定資料庫，可在這個處理稍後描述的 **[其他連接選項]** 欄位中輸入。  
   
-8.  在 [散發代理程式安全性] 頁面中，按一下「訂閱者」旁的屬性按鈕 ([...])，以存取 [散發代理程式安全性] 對話方塊。  
+8.  在 **[散發代理程式安全性]** 頁面中，按一下「訂閱者」旁的屬性按鈕 (**…**)，以存取 **[散發代理程式安全性]** 對話方塊。  
   
 9. 在 **[散發代理程式安全性]** 對話方塊中：  
   

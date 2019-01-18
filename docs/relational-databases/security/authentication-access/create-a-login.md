@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 290dd7ad7be98334ebd7eccf49c29df89890bc13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209097"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125578"
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "53209097"
  **[使用者對應]** 頁面列出所有可能的資料庫和這些資料庫上可套用至此登入的資料庫角色成員資格。 所選的資料庫決定可供登入使用的角色成員資格。 此頁面提供下列選項：  
   
  **已對應到此登入的使用者**  
- 選取此登入可以存取的資料庫。 選取資料庫時，[資料庫角色成員資格對象: *資料庫名稱*] 窗格會顯示有效的資料庫角色。  
+ 選取此登入可以存取的資料庫。 選取資料庫時，[資料庫角色成員資格對象: _資料庫名稱_] 窗格會顯示有效的資料庫角色。  
   
  **對應**  
  允許登入存取下列資料庫。  
@@ -149,10 +149,10 @@ ms.locfileid: "53209097"
  **預設結構描述**  
  指定使用者的預設結構描述。 使用者最初建立時，預設結構描述為 **dbo**。 可以指定不存在的預設結構描述。 您無法為使用者指定對應至 Windows 群組、憑證或非對稱金鑰的預設結構描述。  
   
- **已啟用 *資料庫名稱*的 Guest 帳戶**  
+ **已啟用 _資料庫名稱_的 Guest 帳戶**  
  唯讀屬性，表示選取的資料庫上是否啟用 Guest 帳戶。 使用 Guest 帳戶之 **[登入屬性]** 對話方塊的 **[狀態]** 頁面，啟用或停用 Guest 帳戶。  
   
- **資料庫角色成員資格對象: *資料庫名稱***  
+ **資料庫角色成員資格對象: _資料庫名稱_**  
  在指定的資料庫中選取使用者的角色。 在每一個資料庫中，所有使用者都是 **public** 角色的成員，且無法移除。 如需資料庫角色的詳細資訊，請參閱 [資料庫層級角色](../../../relational-databases/security/authentication-access/database-level-roles.md)。  
   
 ### <a name="securables"></a>[安全性實體]  

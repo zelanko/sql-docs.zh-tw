@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 48e1ef4a027c3bd62818bb85fd0218e033e620da
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203877"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242281"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -367,7 +367,7 @@ DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }
 NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 指定備份組的名稱。 名稱最多可有 128 個字元。 如果未指定 NAME，它就是空白。  
   
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }  
 指定何時可以覆寫這個備份的備份組。 如果同時使用這兩個選項，RETAINDAYS 會優先於 EXPIREDATE。  
   
 如果沒有指定任何選項，便會由 **mediaretention** 組態設定來決定到期日。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。   
@@ -518,7 +518,7 @@ RESTART
   
 **監視選項**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 每次另一個 *percentage* 完成時就會顯示一則訊息，用來量測進度。 如果省略 *percentage*，每完成 10%，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會顯示一則訊息。  
   
 STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 大約會以指定的百分比為間隔；例如，當 STATS=10，如果完成的量是 40%，這個選項可能顯示 43%。 對大型備份組而言，這不成問題，因為在已完成的 I/O 呼叫之間，百分比完成的移動非常緩慢。  
@@ -564,14 +564,14 @@ NOUNLOAD
 > [!NOTE]  
 > 如果您不想要取得記錄備份，請使用簡單復原模式。 如需詳細資訊，請參閱[復原模式 &#40;SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
-{ NORECOVERY | STANDBY **=** *undo_file_name* }  
+{ NORECOVERY | STANDBY **=** _undo_file_name_ }  
   NORECOVERY 
 
 它會備份記錄的結尾，並將資料庫保留在 RESTORING 狀態。 當進行容錯移轉，將工作交給次要資料庫時，或在 RESTORE 作業之前儲存記錄結尾時，NORECOVERY 非常有用。  
   
 若要執行略過記錄截斷的最大速率記錄備份，然後使資料庫自動進入 RESTORING 狀態，請同時使用 `NO_TRUNCATE` 和 `NORECOVERY` 選項。  
   
-STANDBY **=** *standby_file_name* 
+STANDBY **=** _standby_file_name_ 
 
 備份記錄的結尾，並將資料庫保留在唯讀和 STANDBY 狀態。 STANDBY 子句會寫入待命資料 (執行回復，但使用進一步還原的選項)。 使用 STANDBY 選項相當於使用 BACKUP LOG WITH NORECOVERY，後面接著 RESTORE WITH STANDBY。  
   
@@ -1113,7 +1113,7 @@ RESTART
   
 **監視選項**  
   
-STATS [ **=** *percentage* ]  
+STATS [ **=** _percentage_ ]  
 每次另一個 *percentage* 完成時就會顯示一則訊息，用來量測進度。 如果省略 *percentage*，每完成 10%，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會顯示一則訊息。  
   
 STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 大約會以指定的百分比為間隔；例如，當 STATS=10，如果完成的量是 40%，這個選項可能顯示 43%。 對大型備份組而言，這不成問題，因為在已完成的 I/O 呼叫之間，百分比完成的移動非常緩慢。  

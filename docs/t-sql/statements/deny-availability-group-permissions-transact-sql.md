@@ -18,12 +18,12 @@ ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 112cb38585aa83ba52aee415b793ed88549894c6
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 5b16face59c4a2271cbbf068860f2701b3d45a9b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979814"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133408"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>拒絕可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  指定可以拒絕的可用性群組權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  指定要拒絕其權限的可用性群組。 範圍限定詞 (**::**) 是必要項。  
   
  TO \<server_principal>  

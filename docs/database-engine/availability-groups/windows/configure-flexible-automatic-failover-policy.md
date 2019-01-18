@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: abfad9aeef575035f4f171a19073b97a266797ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208557"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126578"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定彈性的自動容錯移轉原則
 
@@ -113,7 +113,7 @@ ms.locfileid: "53208557"
   
 2.  將可用性複本加入可用性群組中時，請使用 **New-SqlAvailabilityGroup** Cmdlet。 修改現有的可用性複本時，請使用 **Set-SqlAvailabilityGroup** Cmdlet。  
   
-    -   若要設定容錯移轉狀況層級，請使用 **FailureConditionLevel***level* 參數，其中 *level* 是下列其中一個值：  
+    -   若要設定容錯移轉狀況層級，請使用 **FailureConditionLevel**_level_ 參數，其中 *level* 是下列其中一個值：  
   
         |ReplTest1|層級|起始自動容錯移轉的狀況|  
         |-----------|-----------|-------------------------------------------|  
@@ -125,7 +125,7 @@ ms.locfileid: "53208557"
   
          如需容錯移轉條件層級的詳細資訊，請參閱[可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)。  
   
-         例如，下列命令會將現有可用性群組 `AG1`的失敗狀況層級變更為層級一。  
+         例如，下列命令會將現有可用性群組 `AG1` 的失敗狀況層級變更為層級一。  
   
         ```  
         Set-SqlAvailabilityGroup `   
@@ -133,7 +133,7 @@ ms.locfileid: "53208557"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   若要設定健全狀況檢查逾時閾值，請使用 **HealthCheckTimeout***n* 參數，其中 *n* 是介於 15000 毫秒 (15 秒) 到 4294967295 毫秒之間的整數。 預設值為 30000 毫秒 (30 秒)。  
+    -   若要設定健全狀況檢查逾時臨界值，請使用 **HealthCheckTimeout**_n_ 參數，其中 *n* 是介於 15000 毫秒 (15 秒) 到 4294967295 毫秒之間的整數。 預設值為 30000 毫秒 (30 秒)。  
   
          例如，下列命令會將現有可用性群組 `AG1`的健全狀況檢查逾時臨界值變更為 120,000 毫秒 (兩分鐘)。  
   

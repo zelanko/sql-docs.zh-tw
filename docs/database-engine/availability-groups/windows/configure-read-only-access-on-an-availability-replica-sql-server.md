@@ -17,12 +17,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa0b0edbc46917930975cbbe7cbc9b4067579b68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212017"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135818"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>設定對 Always On 可用性群組中次要複本的唯讀存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ GO
   
 2.  將可用性複本加入可用性群組中時，請使用 **New-SqlAvailabilityReplica** Cmdlet。 修改現有的可用性複本時，請使用 **Set-SqlAvailabilityReplica** Cmdlet。 相關參數如下所示：  
   
-    -   若要設定次要角色的連線存取，請指定 **ConnectionModeInSecondaryRole***secondary_role_keyword* 參數，其中 *secondary_role_keyword* 等於下列值之一：  
+    -   若要設定次要角色的連接存取，請指定 **ConnectionModeInSecondaryRole**_secondary_role_keyword_ 參數，其中 *secondary_role_keyword* 等於下列值之一︰  
   
          **AllowNoConnections**  
          不允許直接連接次要複本的資料庫，這些資料庫也不可用於讀取存取。 這是預設值。  
@@ -170,7 +170,7 @@ GO
          **AllowAllConnections**  
          次要複本的資料庫允許所有連接進行唯讀存取。  
   
-    -   若要設定主要角色的連線存取，請指定 **ConnectionModeInPrimaryRole***primary_role_keyword* 參數，其中 *primary_role_keyword* 等於下列值之一：  
+    -   若要設定主要角色的連接存取，請指定 **ConnectionModeInPrimaryRole**_primary_role_keyword_參數，其中 *primary_role_keyword* 等於下列值之一︰  
   
          **AllowReadWriteConnections**  
          不允許 Application Intent 連接屬性設為 ReadOnly 的連接。 當 Application Intent 屬性設為 ReadWrite 或是未設定 Application Intent 連接屬性時，便會允許連接。 如需有關 Application Intent 連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
