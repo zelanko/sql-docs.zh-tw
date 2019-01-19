@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ddeefe9fb7b391fc3bc3948f5f5cbdb8296b7de
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 40e87650a36f717aea1a333c134e7722383f4ec4
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072365"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405828"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>建立及管理工作空間資料庫中的資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,6 +60,6 @@ ms.locfileid: "53072365"
   
 ## <a name="see-also"></a>另請參閱  
  [資料分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
- [在工作空間資料庫中處理資料分割](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [工作空間資料庫中處理資料分割](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

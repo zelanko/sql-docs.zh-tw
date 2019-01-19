@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7fbed76272903fb7a9b6eee037a070677411a0f5
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596419"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405728"
 ---
-# <a name="tutorial-in-database-analytics-for-data-scientists-using-r"></a>教學課程：適用於資料科學家使用 R 的資料庫內分析
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>教學課程：適用於 R 的資料科學家的 SQL 開發
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在本教學課程適用於資料科學家，了解如何建置預測模型，根據 SQL Server 2016 或 SQL Server 2017 中的 R 功能支援的端對端解決方案。 本教學課程會使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 
@@ -43,7 +43,7 @@ ms.locfileid: "53596419"
 或者，您可以同時具有的電腦上執行本逐步解說[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 R 開發環境，但我們不建議此組態的實際執行環境。 如果您需要將用戶端和伺服器放在同一部電腦上，請務必安裝適用於從 「 遠端 」 的用戶端傳送 R 指令碼的 Microsoft R 程式庫的第二組。 請勿使用安裝程式檔案的 SQL Server 執行個體中的 R 程式庫。 具體來說，如果您使用一部電腦，您會需要 RevoScaleR 程式庫中的這些位置，以支援用戶端和伺服器作業。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 <a name="add-packages"></a>
 

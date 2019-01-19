@@ -13,12 +13,12 @@ ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe732d1647acbfdf70dacaddfc4eea3eca479d8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd519c9cafb1358f21af30d2c9ea0522e47768b7
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094798"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405738"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>在工作空間資料庫中建立及管理資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 每個資料分割可以不受其他資料分割的影響，單獨處理 (重新整理) 或平行處理。 資料分割可以改善大型資料庫的可調適性和管理能力。 依預設，每個資料表都包含一個資料分割，其中包含所有資料行。 本主題中的工作說明如何使用 **中的** [資料分割管理員] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -70,7 +70,7 @@ ms.locfileid: "48094798"
 2.  在 **[資料分割]** 清單中，選取要刪除的資料分割，然後按一下 **[刪除]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)   
- [處理工作空間資料庫中的資料分割&#40;SSAS 表格式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)   
+ [處理工作空間資料庫中的資料分割&#40;SSAS 表格式&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

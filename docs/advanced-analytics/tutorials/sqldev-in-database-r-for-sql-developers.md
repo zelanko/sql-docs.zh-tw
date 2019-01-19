@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e5b0bc8633e956817e778a1d5a2d75a86df8588
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596339"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405598"
 ---
-# <a name="tutorial-in-database-analytics-for-sql-developers-using-r"></a>教學課程：適用於 SQL 開發人員使用 R 的資料庫內分析
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 R 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本教學課程中的 SQL 程式設計人員，透過建置和部署 R 為基礎的機器學習解決方案使用了解 R 整合[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 
+在本教學課程中的 SQL 程式設計人員，透過建置和部署 R 為基礎的機器學習解決方案使用了解 R 整合[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 您將使用 T-SQL、 SQL Server Management Studio，並使用 [機器學習服務] 的資料庫引擎執行個體 ([Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)和 R 語言支援
 
-本教學課程會向您介紹的資料模型化工作流程中使用的 R 函數。 步驟包括資料瀏覽、 建置及定型二元分類模型和部署模型。 您將建置此模型會預測一趟車程是否可能會造成提示，根據的時間、 歷經一段，距離和上車位置中。 在本教學課程中使用的 R 程式碼的所有包裝在您建立和在 Management Studio 中執行的預存程序。
+本教學課程會向您介紹的資料模型化工作流程中使用的 R 函數。 步驟包括資料瀏覽、 建置及定型二元分類模型和部署模型。 您將建置此模型會預測一趟車程是否可能會造成提示，根據的時間、 歷經一段，距離和上車位置中。 
+
+在本教學課程中使用的 R 程式碼的所有包裝在您建立和在 Management Studio 中執行的預存程序。
 
 ## <a name="background-for-sql-developers"></a>適用於 SQL 開發人員的背景
 

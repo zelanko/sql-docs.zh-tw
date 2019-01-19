@@ -8,19 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: be4ac6b7f7c156ebeda843e8aa987ab45ef4057d
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596679"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405618"
 ---
-# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的資料庫內 Python 分析
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 Python 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本教學課程中的 SQL 程式設計人員，透過建置和部署以 Python 為基礎的機器學習解決方案使用了解 Python 整合[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 
+在本教學課程中的 SQL 程式設計人員，透過建置和部署以 Python 為基礎的機器學習解決方案使用了解 Python 整合[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 資料庫。 您將使用 T-SQL、 SQL Server Management Studio，並使用 database engine 執行個體[Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)和 Python 語言支援。
 
-本教學課程會向您介紹的資料模型化工作流程中使用的 Python 函式。 步驟包括資料瀏覽、 建置及定型二元分類模型和部署模型。 您會使用從 New York City 計程車和 Limosine 佣金，範例資料，您將建置的模型會預測一趟車程是否可能會造成提示，根據的時間、 歷經一段，距離和上車位置中。 在本教學課程中使用的 Python 程式碼的所有包裝在您建立和在 Management Studio 中執行的預存程序。
+本教學課程會向您介紹的資料模型化工作流程中使用的 Python 函式。 步驟包括資料瀏覽、 建置及定型二元分類模型和部署模型。 您會使用從 New York City 計程車和 Limosine 佣金，範例資料，您將建置的模型會預測一趟車程是否可能會造成提示，根據的時間、 歷經一段，距離和上車位置中。 
+
+在本教學課程中使用的 Python 程式碼的所有包裝在您建立和在 Management Studio 中執行的預存程序。
 
 > [!NOTE]
 > 本教學課程適用於 R 和 Python。 R 版本，請參閱[資料庫內分析適用於 R 開發人員](sqldev-in-database-r-for-sql-developers.md)。

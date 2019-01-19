@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 36a904eeb4c7cde7d3a5356aff2029698e91f059
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645497"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405778"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課：瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "53645497"
 
 預存程序會以您明顯無法直接檢視的 varbinary 資料流形式傳回影像。 不過，您可以使用 **bcp** 公用程式來取得 varbinary 資料，並將它儲存為用戶端電腦上的影像檔。
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，執行下列陳述式：
+1. 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，執行下列陳述式：
   
     ```sql
     EXEC [dbo].[RxPlotHistogram]
@@ -114,25 +114,24 @@ ms.locfileid: "53645497"
   
     **結果**
     
-    *繪圖*
-    *0xFFD8FFE000104A4649...*
+    *plot* *0xFFD8FFE000104A4649...*
   
-2.  開啟 PowerShell 命令提示字元並執行下列命令，並提供適當的執行個體名稱、 資料庫名稱、 使用者名稱和認證做為引數。 對於使用 Windows 身分識別，您可以取代 **-U**並 **-P**具有 **-T**。
+2. 開啟 PowerShell 命令提示字元並執行下列命令，並提供適當的執行個體名稱、 資料庫名稱、 使用者名稱和認證做為引數。 對於使用 Windows 身分識別，您可以取代 **-U**並 **-P**具有 **-T**。
   
-     ```powershell
-     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
-     ```
+    ```powershell
+    bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
+    ```
 
     > [!NOTE]
     > 如果是 bcp 命令參數會區分大小寫。
   
-3.  如果連接成功，系統會提示您輸入圖形檔格式的詳細資訊。 
+3. 如果連接成功，系統會提示您輸入圖形檔格式的詳細資訊。 
 
    在每個提示字元下，按 ENTER 接受預設值，但不包括這些變更：
     
-    -   在 **prefix-length of field plot**中，輸入 0。
+   + 在 **prefix-length of field plot**中，輸入 0。
   
-    -   如果您想要儲存輸出參數以供日後重複使用，請輸入 **Y** 。
+   + 如果您想要儲存輸出參數以供日後重複使用，請輸入 **Y** 。
   
     ```powershell
     Enter the file storage type of field plot [varbinary(max)]: 

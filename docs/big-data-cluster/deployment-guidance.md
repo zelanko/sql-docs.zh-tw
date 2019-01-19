@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 12ec074501e93af586a5d495bd7984ad62f3fd88
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242139"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405818"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -248,7 +248,7 @@ kubectl get svc -n <your-cluster-name>
 
 目前，巨量資料叢集升級至新版本的唯一方式是以手動方式移除並重新建立叢集。 每個版本具有的唯一版本**mssqlctl**不與舊版相容。 此外，如果較舊的叢集，就必須下載新的節點上的影像，最新的映像可能無法相容於舊叢集上的映像。 若要升級至最新版本時，使用下列步驟：
 
-1. 然後再刪除舊的叢集，請 HDFS 和 SQL Server 的主要執行個體上備份資料。 SQL Server 的主要執行個體，您可以使用[SQL Server 備份及還原](data-ingestion-restore-databse.md)。 HDFS 中，為您[可以複製的資料與**curl**](data-ingestion-curl.md)。
+1. 然後再刪除舊的叢集，請 HDFS 和 SQL Server 的主要執行個體上備份資料。 SQL Server 的主要執行個體，您可以使用[SQL Server 備份及還原](data-ingestion-restore-database.md)。 HDFS 中，為您[可以複製的資料與**curl**](data-ingestion-curl.md)。
 
 1. 刪除舊的叢集使用`mssqlctl delete cluster`命令。
 
@@ -310,10 +310,10 @@ kubectl get svc -n <your-cluster-name>
 
    | 服務 | 描述 |
    |---|---|
-   | **端點主要集區** | 提供存取權的主要執行個體。<br/>(**EXTERNAL-IP，31433**並**SA**使用者) |
-   | **服務-mssql-控制站-l b**<br/>**服務-mssql-控制站-nodeport** | 支援工具和管理叢集的用戶端。 |
-   | **服務-proxy-l b**<br/>**服務-proxy-nodeport** | 提供存取權[叢集管理網站](cluster-admin-portal.md)。<br/>(https://**EXTERNAL-IP**: 30777/入口網站)|
-   | **服務-安全性-l b**<br/>**服務-安全性-nodeport** | 可存取 HDFS/Spark 閘道。<br/>(**EXTERNAL-IP**並**根**使用者) |
+   | **endpoint-master-pool** | 提供存取權的主要執行個體。<br/>(**EXTERNAL-IP，31433**並**SA**使用者) |
+   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | 支援工具和管理叢集的用戶端。 |
+   | **service-proxy-lb**<br/>**service-proxy-nodeport** | 提供存取權[叢集管理網站](cluster-admin-portal.md)。<br/>(https://**EXTERNAL-IP**: 30777/入口網站)|
+   | **service-security-lb**<br/>**service-security-nodeport** | 可存取 HDFS/Spark 閘道。<br/>(**EXTERNAL-IP**並**根**使用者) |
 
    > [!NOTE]
    > 根據您的 Kubernetes 環境而有所不同的服務名稱。 在部署 Azure Kubernetes Service (AKS) 上，服務名稱結尾 **-l b**。Minikube 和 kubeadm 部署的服務名稱的結尾 **-nodeport**。

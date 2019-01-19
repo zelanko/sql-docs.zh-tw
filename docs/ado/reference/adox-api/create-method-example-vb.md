@@ -15,12 +15,12 @@ ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7532cc78f05271b6a3b3db8f6e74040b9ac50535
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ecc581d8aaa3822a571d93f6c134e19a8a7b510
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601937"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405748"
 ---
 # <a name="create-method-example-vb"></a>Create 方法範例 (VB)
 下列程式碼示範如何建立新的 Microsoft Jet 資料庫與[建立](../../../ado/reference/adox-api/create-method-adox.md)方法。  
@@ -29,7 +29,7 @@ ms.locfileid: "47601937"
 Attribute VB_Name = "Create"  
 Option Explicit  
   
-' BeginCreateDatabseVB  
+' BeginCreateDatabaseVB  
 Sub CreateDatabase()  
     On Error GoTo CreateDatabaseError  
   

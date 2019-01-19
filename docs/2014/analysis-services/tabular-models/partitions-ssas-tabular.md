@@ -11,12 +11,12 @@ ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cb150e2bf076c6cef4e05d626b71eaab05d64a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197203"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405638"
 ---
 # <a name="partitions-ssas-tabular"></a>分割區 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 在模型製作期間，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [分割區] 對話方塊建立的分割區，會套用至模型工作空間資料庫。 部署模型之後，為模型工作空間資料庫定義的分割區，會複製到已部署的模型資料庫中。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [分割區] 對話方塊，為已部署的模型資料庫進一步建立及管理分割區。  此主題中提供的資訊描述在模型製作期間，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [分割區管理員] 對話方塊建立的分割區。 如需為已部署的模型建立及管理資料分割的相關資訊，請參閱[建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "48197203"
  透過進一步將資料表分成多個邏輯分割區，即可選擇性地決定每個分割區中所處理的資料，以及資料的處理時機和方式。 當您部署模型時，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [分割區] 對話方塊手動完成分割區的處理，或使用指令碼執行處理命令。  
   
 ### <a name="partitions-in-the-model-workspace-database"></a>模型工作空間資料庫中的分割區  
- 您可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 [分割區管理員] 建立新的分割區，以及編輯、合併或刪除分割區。 分割區管理員提供下列兩種模式，可為分割區選取資料表、資料列及資料行：資料表預覽模式和 SQL 查詢模式。 所有分割區會使用 SQL 查詢定義；但是，透過資料表預覽模式，您可以預覽及選取要包含在分割區中的資料。 SQL 查詢會自動為您建立及驗證。 由於資料表預覽模式是 [編輯資料表屬性] 對話方塊中的相同資料表預覽，也是 [資料表匯入精靈] 之 [資料表預覽] 頁面中的相同資料表預覽，因此預覽中的最大資料列數為 50。  
+ 您可以使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 [分割區管理員] 建立新的分割區，以及編輯、合併或刪除分割區。 資料分割管理員會提供兩種模式，以選取資料表、 資料列和資料分割的資料行：資料表預覽模式和 SQL 查詢 模式。 所有分割區會使用 SQL 查詢定義；但是，透過資料表預覽模式，您可以預覽及選取要包含在分割區中的資料。 SQL 查詢會自動為您建立及驗證。 由於資料表預覽模式是 [編輯資料表屬性] 對話方塊中的相同資料表預覽，也是 [資料表匯入精靈] 之 [資料表預覽] 頁面中的相同資料表預覽，因此預覽中的最大資料列數為 50。  
   
 ### <a name="partitions-in-a-deployed-model-database"></a>已部署模型資料庫中的分割區  
  當您部署模型時，已部署模型資料庫的分割區會顯示為 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的資料庫物件。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [分割區] 對話方塊，為已部署的模型建立、編輯、合併及刪除分割區。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中管理已部署模型的分割區超出本主題的範圍。 若要了解如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中管理資料分割，請參閱[建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
@@ -49,11 +49,11 @@ ms.locfileid: "48197203"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立及管理工作空間資料庫中的資料分割&#40;SSAS 表格式&#41;](workspace-database-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的分割區管理員，在模型工作空間資料庫中建立及管理分割區。|  
-|[處理工作空間資料庫中的資料分割&#40;SSAS 表格式&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)|描述如何在模型工作空間資料庫中處理 (重新整理) 分割區。|  
+|[在工作空間資料庫中建立及管理資料分割 &#40;SSAS 表格式&#41;](workspace-database-ssas-tabular.md)|描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的分割區管理員，在模型工作空間資料庫中建立及管理分割區。|  
+|[處理工作空間資料庫中的資料分割&#40;SSAS 表格式&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|描述如何在模型工作空間資料庫中處理 (重新整理) 分割區。|  
   
 ## <a name="see-also"></a>另請參閱  
  [DirectQuery 模式 &#40;SSAS 表格式&#41;](directquery-mode-ssas-tabular.md)   
- [處理資料&#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)  
+ [處理資料 &#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)  
   
   
