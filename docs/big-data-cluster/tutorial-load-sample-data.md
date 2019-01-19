@@ -5,17 +5,17 @@ description: 本教學課程會示範如何將範例資料載入 SQL Server 的�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 01/17/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a89b1bec266f590d6e96365436fe5339b9152f92
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 207d2d01278d96456bcec44814efe76fdae70fdf
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241472"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397507"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 2019 巨量資料叢集
 
@@ -62,11 +62,11 @@ ms.locfileid: "54241472"
 
    | 參數 | 描述 |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | 您給予您的巨量資料叢集的名稱。 |
-   | &LT; SQL_MASTER_IP &GT; | 主要執行個體的 IP 位址。 |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | 主要執行個體的 SA 密碼。 |
-   | &LT; KNOX_IP &GT; | HDFS/Spark 閘道 IP 位址。 |
-   | &LT; KNOX_PASSWORD &GT; | HDFS/Spark 閘道的密碼。 |
+   | <CLUSTER_NAMESPACE> | 您給予您的巨量資料叢集的名稱。 |
+   | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |
+   | <SQL_MASTER_SA_PASSWORD> | 主要執行個體的 SA 密碼。 |
+   | <KNOX_IP> | HDFS/Spark 閘道 IP 位址。 |
+   | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
    > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**端點主要集區**) 和 Knox (**服務-安全性-lb**或**服務-安全性-nodeport**).
@@ -98,11 +98,11 @@ ms.locfileid: "54241472"
 
    | 參數 | 描述 |
    |---|---|
-   | &LT; CLUSTER_NAMESPACE &GT; | 您給予您的巨量資料叢集的名稱。 |
-   | &LT; SQL_MASTER_IP &GT; | 主要執行個體的 IP 位址。 |
-   | &LT; SQL_MASTER_SA_PASSWORD &GT; | 主要執行個體的 SA 密碼。 |
-   | &LT; KNOX_IP &GT; | HDFS/Spark 閘道 IP 位址。 |
-   | &LT; KNOX_PASSWORD &GT; | HDFS/Spark 閘道的密碼。 |
+   | <CLUSTER_NAMESPACE> | 您給予您的巨量資料叢集的名稱。 |
+   | <SQL_MASTER_IP> | 主要執行個體的 IP 位址。 |
+   | <SQL_MASTER_SA_PASSWORD> | 主要執行個體的 SA 密碼。 |
+   | <KNOX_IP> | HDFS/Spark 閘道 IP 位址。 |
+   | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
    > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**端點主要集區**) 和 Knox (**服務-安全性-lb**或**服務-安全性-nodeport**).
@@ -110,7 +110,7 @@ ms.locfileid: "54241472"
 1. 執行啟動程序的指令碼。
 
    ```bash
-   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
 ## <a name="next-steps"></a>後續步驟

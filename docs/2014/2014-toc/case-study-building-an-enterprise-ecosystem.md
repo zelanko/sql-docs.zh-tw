@@ -9,14 +9,15 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3b7652cf67fff68b1a9e6d87e02c2776317af19
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365231"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397567"
 ---
 # <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>案例研究：建置使用 Microsoft Dynamics ERP 和 SQL Server 2014 複製的延展性和效能的企業生態系統
+
   **摘要：** 本白皮書涵蓋下列案例：  
 如何使用 SQL Server 2014 中的異動複寫，從 Dynamics AX 用戶端的交易分散到多個節點。 因為資料為跨節點進行即時維護，所以異動複寫提供資料備援來增加資料的可用性，包含可用來讓效能分析更有效率的資料。  
 如何在運用異動複寫來建置 Microsoft Dynamics ERP 中高擴充性的企業生態系統時，了解所涉及的詳細規格。 提供高效能和延展性，且不需自訂 AX 的立即可用功能。  

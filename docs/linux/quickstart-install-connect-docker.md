@@ -13,12 +13,12 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f4e6298cb1165f75dcd9a6aa6c77a1628650c0f6
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206314"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397627"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：以 Docker 執行 SQL Server 容器映像
 
@@ -98,7 +98,7 @@ any changes to one section should be duplicated in the other-->
    | 參數 | 描述 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
-   | **-e ' SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
+   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 正在容器中的 TCP 1433 上接聽，這公開給連接埠 1433，在主機上。 |
    | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
    | **mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
@@ -180,7 +180,7 @@ SELECT @@SERVERNAME,
    | 參數 | 描述 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](https://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
-   | **-e ' SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
+   | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 正在容器中的 TCP 1433 上接聽，這公開給連接埠 1433，在主機上。 |
    | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
    | **mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu** | SQL Server 2019 CTP 2.2 Linux 容器映像。 |
@@ -348,7 +348,7 @@ SELECT @@SERVERNAME,
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
-- [Azure Data Studio （預覽）](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [mssql-cli (預覽)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>移除容器

@@ -19,20 +19,22 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6b54c44c88c384b28f9966ad9c7e3888fd038aa3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353916"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397557"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 的線上叢書
+
   歡迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 線上叢書》。 《線上叢書》包含工作描述和參考文件集，描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行資料管理及商業智慧工作。  
   
  **現在就試試看：**  
  ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
   
 ## <a name="sql-server-technologies"></a>SQL Server 技術  
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包含數種資料管理和分析技術。 按下表中的連結，以尋找每項技術的功能、工作及參考文件集。  
   
 |||  
@@ -46,6 +48,7 @@ ms.locfileid: "53353916"
 |![Reporting Services 圖示](media/reportingservices.gif "Reporting Services 圖示")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services 提供了啟用 Web 的企業級報表功能，讓您可以建立從各種資料來源取得內容的報表、以各種格式發行報表，以及集中管理安全性和訂閱。|  
   
 ## <a name="sql-server-information-on-the-web"></a>網站上的 SQL Server 資訊  
+
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 在幾個網站中發行有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的其他資訊。  
   
  **SQL Server 網站**  
@@ -63,6 +66,7 @@ ms.locfileid: "53353916"
 -   [XML 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=42458)  
   
 ## <a name="see-also"></a>另請參閱  
+
  [SQL Server 組態管理員說明](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

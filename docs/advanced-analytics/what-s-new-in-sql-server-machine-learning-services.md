@@ -3,20 +3,21 @@ title: 什麼&#39;新的-s SQL Server Machine Learning 服務
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f9e98d59318c9c7d43fd6f99195da972c4eca0c9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432491"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397617"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能 
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 機器學習服務功能會新增至 SQL Server 各版本隨著我們持續展開、 擴充和強化的資料平台、 進階的分析與資料科學之間的整合。 
@@ -32,6 +33,7 @@ ms.locfileid: "53432491"
 |   | [Java 語言擴充功能](java/extension-java.md)是 Windows 和 Linux 上的 SQL Server 2019 preview 的新功能。 您可以將已編譯的 Java 程式碼提供給 SQL Server 藉由指派權限，以及設定路徑。 存取 SQL Server 的用戶端應用程式可以使用資料，並執行您的程式碼，藉由呼叫[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，相同的程序用於 SQL Server 上的 R 和 Python 整合。 | 
 |  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)導入了兩個新的參數可讓您輕鬆地從資料分割的資料產生多個模型。 進一步了解本教學課程[在 R 中建立資料分割為基礎的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
 |   | 容錯移轉叢集支援現在支援 Windows 和 Linux，假設所有節點上啟動 SQL Server Launchpad 服務。 如需詳細資訊，請參閱 < [SQL Server 容錯移轉叢集安裝](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -71,7 +73,7 @@ T-SQL 和 Python 整合透過支援[sp_execute_external_script](https://docs.mic
 
 | 封裝 | 描述 |
 |---------|-------------|
-[**revoscalepy**](python/ref-py-revoscalepy.md)| RevoScaleR 的 Python 相當。 您可以建立用於線性及羅吉斯迴歸、 決策樹、 梯度上升的樹和隨機樹系，所有可平行執行，且能夠在遠端計算內容中執行的 Python 模型。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以執行 Python 程式碼的遠端 SQL 伺服器上，瀏覽資料，或建立模型，而不移動資料。 |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| RevoScaleR 的 Python 相當。 您可以建立用於線性及羅吉斯迴歸、 決策樹、 梯度上升的樹和隨機樹系，所有可平行執行，且能夠在遠端計算內容中執行的 Python 模型。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以執行 Python 程式碼的遠端 SQL 伺服器上，瀏覽資料，或建立模型，而不移動資料。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python 相當的 MicrosoftML R 封裝。 |
 
 ### <a name="pre-trained-models"></a>預先定型的模型

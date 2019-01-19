@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_plan & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b7b4b9831fcfa04932ed05951b27bca7e4e4b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710769"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397607"
 ---
-# <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   包含與查詢相關聯的每個執行計畫的相關資訊。  
@@ -57,7 +57,14 @@ ms.locfileid: "52710769"
 |**last_execution_time**|**datetimeoffset**|上次執行時間的最後一個參考查詢/計劃的結束的時間。|  
 |**avg_compile_duration**|**float**|規劃編譯統計資料。|  
 |**last_compile_duration**|**bigint**|規劃編譯統計資料。|  
-  
+|**plan_forcing_type**|**int**|計畫強制執行型別。<br /><br />
+0：無<br /><br />
+1：MANUAL<br /><br />
+2：自動 | |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文字描述。<br /><br />
+NONE:強制執行任何計劃<br /><br />
+MANUAL:已由使用者強制的計劃<br /><br />
+自動：自動調整所強制的計劃 |
+
 ## <a name="plan-forcing-limitations"></a>計畫強制執行限制
 查詢存放區有強制查詢最佳化工具使用特定執行計劃的機制。 不過，也有避免強制執行計劃的一些限制。 
 
@@ -84,12 +91,12 @@ ms.locfileid: "52710769"
   
 ## <a name="see-also"></a>另請參閱  
  [sys.database_query_store_options &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢存放區預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

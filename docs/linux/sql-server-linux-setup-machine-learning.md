@@ -4,18 +4,18 @@ description: 這篇文章會說明如何安裝 SQL Server Machine Learning 服�
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 12/07/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 15a1a411672303fc8556927bcaf218052758744d
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553250"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397657"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安裝 SQL Server 2019 Machine Learning 在 Linux 上的服務 (R、 Python、 Java)
 
@@ -77,7 +77,7 @@ ls /opt/microsoft/mssql/bin
 
 ## <a name="prerequisites"></a>先決條件
 
-+ Linux 版本必須是[SQL Server 支援](sql-server-linux-release-notes-2019.md#supported-platforms)、 在內部部署或在 Docker 容器中執行。 支援的版本包括：
++ Linux 版本必須是[SQL Server 支援](sql-server-linux-release-notes-2019.md#supported-platforms)，但不包含 Docker 引擎。 支援的版本包括：
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -165,19 +165,19 @@ zypper update
 
 在連線網際網路的裝置，套件會下載並安裝獨立資料庫引擎的每個作業系統使用套件安裝程式。 下表描述所有可用的套件，但對 R 和 Python，您會指定提供完整的功能安裝或最小功能安裝的套件。
 
-| 封裝名稱 | 套用至 | 描述 |
+| 封裝名稱 | Applies-to | 描述 |
 |--------------|----------|-------------|
-|mssql 伺服器擴充性  | All | 用來執行 R、 Python 或 Java 程式碼的擴充性架構。 |
-|mssql server 擴充性-java | Java | 載入的 Java 執行環境的 Java 延伸模組。 沒有任何額外的程式庫或適用於 Java 的封裝。 |
-| microsoft openmpi  | Python、 R | 訊息傳遞介面 Revo * 程式庫用來在 Linux 上的平行處理。 |
+|mssql-server-extensibility  | All | 用來執行 R、 Python 或 Java 程式碼的擴充性架構。 |
+|mssql-server-extensibility-java | Java | 載入的 Java 執行環境的 Java 延伸模組。 沒有任何額外的程式庫或適用於 Java 的封裝。 |
+| microsoft-openmpi  | Python, R | 訊息傳遞介面 Revo * 程式庫用來在 Linux 上的平行處理。 |
 | mssql-mlservices-python | Python | Anaconda 和 Python 的開放原始碼散發套件。 |
-|mssql mlservices-mlm py  | Python | *完整安裝*。 提供 revoscalepy，microsoftml，預先定型的影像特徵化和文字情感分析模型。| 
-|mssql mlservices 封裝-py  | Python | *最小安裝*。 提供 revoscalepy 和 microsoftml。 <br/>排除預先定型的模型。 | 
-| [microsoft-r-開啟 *](#mro) | R | 開放原始碼 R，包含三個封裝發佈。 |
-|mssql mlservices mlm-r  | R | *完整安裝*。 提供第 sqlRUtils RevoScaleR，MicrosoftML、 olapR，預先定型的影像特徵化和文字情感分析模型。| 
-|mssql mlservices 封裝-r  | R | *最小安裝*。 提供 RevoScaleR，sqlRUtils，MicrosoftML、 olapR。 <br/>排除預先定型的模型。 | 
-|mssql mlservices-mml py  | 僅限 CTP 2.0 2.1 | 因為 Python 套件的彙總到 mssql-mslservices-python 的 CTP 2.2 已過時。 提供 revoscalepy。 預先定型的模型和 microsoftml 排除。| 
-|mssql mlservices mml-r  | 僅限 CTP 2.0 2.1 | 因為 R 套件的彙總到 mssql-mslservices-python 的 CTP 2.2 已過時。 RevoScaleR sqlRUtils、 olapR 提供。 預先定型的模型和 MicrosoftML 排除。  |
+|mssql-mlservices-mlm-py  | Python | *完整安裝*。 提供 revoscalepy，microsoftml，預先定型的影像特徵化和文字情感分析模型。| 
+|mssql-mlservices-packages-py  | Python | *最小安裝*。 提供 revoscalepy 和 microsoftml。 <br/>排除預先定型的模型。 | 
+| [microsoft-r-open*](#mro) | R | 開放原始碼 R，包含三個封裝發佈。 |
+|mssql-mlservices-mlm-r  | R | *完整安裝*。 提供第 sqlRUtils RevoScaleR，MicrosoftML、 olapR，預先定型的影像特徵化和文字情感分析模型。| 
+|mssql-mlservices-packages-r  | R | *最小安裝*。 提供 RevoScaleR，sqlRUtils，MicrosoftML、 olapR。 <br/>排除預先定型的模型。 | 
+|mssql-mlservices-mml-py  | 僅限 CTP 2.0 2.1 | 因為 Python 套件的彙總到 mssql-mslservices-python 的 CTP 2.2 已過時。 提供 revoscalepy。 預先定型的模型和 microsoftml 排除。| 
+|mssql-mlservices-mml-r  | 僅限 CTP 2.0 2.1 | 因為 R 套件的彙總到 mssql-mslservices-python 的 CTP 2.2 已過時。 RevoScaleR sqlRUtils、 olapR 提供。 預先定型的模型和 MicrosoftML 排除。  |
 
 <a name="RHEL"></a>
 
@@ -435,7 +435,7 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 |||
 |--|----|
 | mssql/mlservices 套件 | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
-| microsoft r 開啟套件 | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
+| microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 路徑
@@ -443,14 +443,14 @@ sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 |||
 |--|----|
 | mssql/mlservices 套件 | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
-| microsoft r 開啟套件 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
+| microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>SLES/12 路徑
 
 |||
 |--|----|
 | mssql/mlservices 套件 | [ https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
-| microsoft r 開啟套件 | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
+| microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>套件清單
 
