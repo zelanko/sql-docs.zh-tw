@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b57bcb42bfc48563e73b783bd7b04a9905a5e43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0e5b67288e9cc9d0491f30dc98b3edf9c01c0f1
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717836"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135718"
 ---
 # <a name="change-publication-and-article-properties"></a>變更發行集與發行項屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ ms.locfileid: "47717836"
 |變更目的地資料表擁有者。|**sp_changemergearticle**|**destination_owner**|新的快照集。<br /><br /> 重新初始化訂閱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
- [建立並套用快照集](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+ [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [建立並套用快照集](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [重新初始化訂閱](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

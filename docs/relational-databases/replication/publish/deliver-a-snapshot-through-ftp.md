@@ -1,7 +1,7 @@
 ---
 title: 透過 FTP 傳遞快照集 | Microsoft 文件
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,40 +15,28 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2dab89b5eacc0cd8c7bd639cdb2c92b1384dcea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699287"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126188"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>透過 FTP 傳遞快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過 FTP 傳遞快照集。  
+
+依預設，快照集儲存在定義為「通用命名慣例」(UNC) 共用的資料夾中。 複寫還允許您指定「檔案傳輸通訊協定」(FTP) 共用，而不是 UNC 共用。 若要使用 FTP，您必須設定 FTP 伺服器，然後設定使用 FTP 的一個發行集和一個或多個訂閱。 如需有關如何設定 FTP 伺服器的詳細資訊，請參閱 Internet Information Services (IIS) 文件集。 如果您為發行集指定 FTP 資訊，依預設，該發行集的訂閱會使用 FTP。 只有當執行 IIS 的電腦與「散發者」之間被防火牆隔開時，Web 同步處理才會使用 FTP。 在此情況下，可以使用 FTP，從散發者和執行 IIS 的電腦來傳送快照集 (快照集一定會使用 HTTPS 傳送到訂閱者)。  
   
- **本主題內容**  
+> [!IMPORTANT]  
+>  建議您使用「Microsoft Windows 驗證」和 UNC 共用，而不要使用 FTP 共用，因為系統必須儲存 FTP 密碼，而該密碼會以純文字格式從「訂閱者」或執行 IIS 的電腦 (使用 Web 同步處理時) 傳送到 FTP 伺服器。 此外，因為對快照集共用的存取由單一帳戶控制，所以無法確定已篩選的合併式發行集之「訂閱者」僅從其資料分割存取快照集檔案。  
   
--   **開始之前：**  
-  
-     [限制事項](#Restrictions)  
-  
-     [必要條件](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **若要透過 FTP 傳遞快照集，請使用：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Restrictions"></a> 限制事項  
+
+## <a name="limitations-and-restrictions"></a>限制事項  
   
 -   快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 如果使用提取訂閱，則您必須指定共用目錄為通用命名慣例 (UNC) 路徑，例如 \\\ftpserver\home\snapshots。 如需詳細資訊，請參閱[保護快照集資料夾](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-###  <a name="Prerequisites"></a> 必要條件  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   若要使用「檔案傳輸通訊協定」(FTP) 傳送快照集檔案，您必須先設定 FTP 伺服器。 如需詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 文件集。  
   
@@ -76,14 +64,12 @@ ms.locfileid: "47699287"
   
 3.  指定快照集代理程式應該將快照集檔案複製到步驟 2 中指定的目錄。 例如，若要讓快照集代理程式將快照集檔案寫入到 \\\ftpserver\home\snapshots\ftp 中，您必須在以下兩處位置的其中一處指定路徑 \\\ftpserver\home\snapshots：  
   
-    -   與此發行集相關的「散發者」的預設快照集位置。  
-  
-         如需指定預設快照集位置的詳細資訊，請參閱[指定預設快照集位置 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)。  
-  
+    -   與此發行集相關的「散發者」的預設快照集位置。    
     -   此發行集的替代快照集資料夾位置。 如果壓縮快照集，則需要替代位置。  
+
+如需有關修改快照集資料夾位置屬性的詳細資訊，請參閱[快照集選項](../snapshot-options.md)。
   
-         在 [發行集屬性 - \<發行集>] 對話方塊 [快照集] 頁面上的 [將檔案放在下列資料夾中] 文字方塊中，輸入路徑。 如需替代快照集資料夾位置的詳細資訊，請參閱＜ [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)＞。  
-  
+
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
@@ -186,7 +172,6 @@ ms.locfileid: "47699287"
   
 ## <a name="see-also"></a>另請參閱  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [透過 FTP 傳送快照集](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
  [變更發行集與發行項屬性](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [使用快照集初始化訂閱](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   

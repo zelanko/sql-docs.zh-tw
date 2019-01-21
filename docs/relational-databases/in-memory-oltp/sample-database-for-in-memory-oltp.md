@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7adb7156a6f61ef76f62d1eeff9a4689208815
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712479"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226695"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52712479"
   
 -   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
   
--    [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
+-   [安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
 -   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) - 這包含 In-Memory OLTP 範例加入 AdventureWorks 中的資料表和程序的描述，以及將部分原始 AdventureWorks 資料表移轉至記憶體最佳化資料表的考量  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52712479"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需 In-Memory OLTP 之硬體的一般方針，請參閱以下部落格文章：[SQL Server 2014 中 In-Memory OLTP 的硬體考量](blog-hardware-in-memory-oltp.md)
+-   基於效能測試考量，伺服器的規格必須與您的實際執行環境類似。 您應為此特定範例準備至少 16GB 的記憶體供 SQL Server 使用。 如需有關「記憶體內部 OLTP」硬體的一般指導方針，請參閱下列部落格文章：[SQL Server 2014 中記憶體內部 OLTP 的硬體考量](blog-hardware-in-memory-oltp.md)
 
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>安裝以 AdventureWorks 為基礎的 In-Memory OLTP 範例  
  請遵循下列步驟來安裝範例：  
@@ -148,8 +148,8 @@ ms.locfileid: "52712479"
   
 -   「計算資料行」 - 由於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 不支援在記憶體最佳化資料表中使用計算資料行，因此會省略計算資料行 SalesOrderNumber 和 TotalDue。 新檢視 Sales.vSalesOrderHeader_extended_inmem 會反映資料行 SalesOrderNumber 和 TotalDue。 因此，如果需要這些資料行，您可以使用此檢視。  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化資料表和索引支援計算資料行。
+    - **適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。  
+從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，記憶體最佳化的資料表和索引支援計算資料行。
 
   
 -   *中的記憶體最佳化資料表支援* 外部索引鍵條件約束 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，但僅限於參考的資料表也處於記憶體最佳化的情況。 參考移轉至記憶體最佳化之資料表的外部索引鍵會保留在移轉的資料表中，而其他外部索引鍵會被省略。  此外，SalesOrderHeader_inmem 是範例工作負載中的作用資料表，而外部索引鍵條件約束需要對所有 DML 作業進行額外的處理，因為它需要查閱這些條件約束中參考的其他所有資料表。 因此，此處的假設是應用程式會確保 Sales.SalesOrderHeader_inmem 資料表的參考完整性，但插入資料列時不會驗證參考完整性。  
@@ -387,7 +387,7 @@ END
  下面的指示和度量使用插入 1 千萬個銷售訂單的工作負載。 如需執行插入 1 百萬個銷售訂單之縮小工作負載的相關指示，請參閱 'In-Memory OLTP\readme.txt' 中的指示，該檔案為 SQLServer2016CTP3Samples.zip 封存的一部分。  
   
 ##### <a name="memory-optimized-tables"></a>記憶體最佳化的資料表  
- 首先執行記憶體最佳化資料表上的工作負載。 下列命令會開啟 100 個執行緒，每個執行緒執行 5,000 次反覆運算。  每次反覆運算會將 20 個銷售訂單插入個別交易。 每次反覆運算會插入 20 個訂單，以彌補使用資料庫產生要插入之資料的情況。 這樣會產生總計 20 * 5,000 \* 100 = 10,000,000 個銷售訂單的插入。  
+ 首先執行記憶體最佳化資料表上的工作負載。 下列命令會開啟 100 個執行緒，每個執行緒執行 5,000 次反覆運算。  每次反覆運算會將 20 個銷售訂單插入個別交易。 每次反覆運算會插入 20 個訂單，以彌補使用資料庫產生要插入之資料的情況。 這樣會產生總計 20 \* 5,000 \* 100 = 10,000,000 個銷售訂單的插入。  
   
  開啟 RML CMD 命令提示字元，然後執行下列命令：  
   
@@ -434,9 +434,9 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試疑難排解  
  測試結果通常會隨硬體而有所不同，也會隨測試執行中使用並行的程度而有所不同。 如果結果不如預期，可注意下列幾點：  
   
--   並行交易數目：在單一執行緒上執行工作負載時，透過記憶體內部 OLTP 提升的效能可能不到 2 倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
+-   並行交易數目：在單一執行緒上執行工作負載時，透過「記憶體內部 OLTP」提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
   
--   SQL Server 可用的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
+-   可供 SQL Server 使用的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
   
     -   徵兆：執行磁碟資料表上的工作負載時，如果 CPU 使用率很高，並不是指競爭很多，而是指缺少並行。  
   

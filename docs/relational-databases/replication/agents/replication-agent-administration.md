@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96134ede585acee4b556200e67c7301feef7713
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730896"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125682"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "47730896"
   
  **若要執行代理程式和維護作業**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和複寫監視器︰[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和「複寫監視器」：[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   複寫程式設計：[複寫代理程式可執行檔概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   複寫程式設計：[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 ## <a name="agent-profiles"></a>代理程式設定檔  
  設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 複寫為每個代理程式提供預設的設定檔，並為記錄讀取代理程式、散發代理程式及合併代理程式提供其他預先定義的設定檔。 除了提供的設定檔之外，您也可以建立適合自己的應用程式需求的設定檔。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "47730896"
   
     -   佇列讀取器代理程式  
   
-     透過 **[代理程式]** 索引標籤，存取與這些代理程式相關聯的資訊和工作。如需詳細資訊，請參閱[檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+     透過 **[代理程式]** 索引標籤，存取與這些代理程式相關聯的資訊和工作。如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   下列代理程式與複寫監視器中的訂閱相關聯：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47730896"
   
     -   [合併代理程式]  
   
-     透過下列索引標籤，存取與這些代理程式相關聯的資訊和工作： **[訂閱監看清單]** (每個發行者皆可用) 或者 **[所有訂閱]** 索引標籤 (每個發行者皆可用)。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     透過下列索引標籤，可存取與這些代理程式相關聯的資訊和工作：[訂閱監看清單] (適用於每個「發行者」) 或 [所有訂閱] 索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="independent-and-shared-agents"></a>獨立與共用的代理程式  
  獨立代理程式即服務一個訂閱的代理程式。 共用的代理程式會服務多個訂閱；如果使用相同共用代理程式的多個訂閱需要同步，依預設，它們會在佇列中等候，該共用代理程式會一次服務其中之一。 使用獨立代理程式會降低延遲，因為代理程式會在訂閱需要同步時就緒。 合併式複寫通常使用獨立代理程式，依預設，異動複寫會使用在「新增發行集精靈」中建立的發行集之獨立代理程式 (在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，依預設，異動複寫則使用共用代理程式)。  
@@ -89,14 +89,14 @@ ms.locfileid: "47730896"
   
 |清除作業|Description|預設排程|  
 |------------------|-----------------|----------------------|  
-|代理程式記錄清除：散發|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
-|散發清除：散發|從散發資料庫移除複寫的交易。 |每 10 分鐘執行|  
+|清除代理程式記錄：Distribution|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
+|清除散發：Distribution|從散發資料庫移除複寫的交易。 |每 10 分鐘執行|  
 |到期的訂閱清除|偵測並移除散發資料庫中到期的訂閱。 在散發者上，停用在最長散發保留期限內未同步處理的訂閱。|每天早上 1:00 執行| 
 |重新初始化資料驗證失敗的訂閱|偵測使資料驗證失敗的所有訂閱，並將其標示為重新初始化。 下次「合併代理程式」或「散發代理程式」執行時，將在「訂閱者」端套用新的快照集。|沒有預設排程 (依預設值未啟動)|  
 |複寫代理程式檢查|偵測並未動態記錄歷程的複寫代理程式。 如果作業步驟失敗，則其會寫入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件記錄檔。|每十分鐘執行一次。|  
 |散發的複寫監視重新整理器|重新整理「複寫監視器」使用的快取查詢。|連續執行。|  
   
 ## <a name="see-also"></a>另請參閱  
- [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
