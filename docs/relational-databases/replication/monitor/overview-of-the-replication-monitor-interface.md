@@ -14,12 +14,12 @@ ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2deb67c8fff00cc2780fc28e4a04e938db41c4a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764646"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128548"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>複寫監視器介面概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "47764646"
   
      此索引標籤會顯示有關所有複寫類型使用之代理程式和工作的詳細資訊。 您也可以用這個索引標籤來啟動和停止每個代理程式和工作。  
   
- 如需詳細資訊，請參閱[檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
+ 如需詳細資訊，請參閱[檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  「複寫監視器」也提供發行者節點的內容功能表。 以滑鼠右鍵按一下左窗格中的發行者可以：  
   
@@ -179,7 +179,7 @@ ms.locfileid: "47764646"
   
          可用的錯誤訊息提供代理程式為何不在執行中的詳細資訊，並提供與發行集相關聯的代理程式問題之疑難排解起點。  
   
- 如需詳細資訊，請參閱[檢視發行集的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md) 和[檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+ 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  「複寫監視器」也提供發行集節點的內容功能表。 以滑鼠右鍵按一下左窗格中的發行集可以：  
   
@@ -218,7 +218,7 @@ ms.locfileid: "47764646"
   
          此索引標籤提供在同步處理期間處理的每個發行項之詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間量。 這可協助找出導致速度變慢的特定資料表，且最適合在此進行合併訂閱效能問題的疑難排解。  
   
- 如需詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md) 和[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>檢視與代理程式設定檔相關的資訊並執行工作  
  「複寫監視器」包含一些管理代理程式設定檔的對話方塊。 代理程式設定檔是代理程式的參數集合，用於決定代理程式行為。 如需相關資訊，請參閱 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)。 對話方塊包括：  
@@ -236,6 +236,6 @@ ms.locfileid: "47764646"
      此對話方塊可讓您建立新設定檔，並選擇性地包含現有設定檔中的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

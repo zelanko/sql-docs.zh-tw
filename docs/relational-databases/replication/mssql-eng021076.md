@@ -13,12 +13,12 @@ ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6319f0761c29eaddf2b79de586a082287092e9f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdce747a7b23424e85b48a9e78ece236f3bf35d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648426"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133988"
 ---
 # <a name="mssqleng021076"></a>MSSQL_ENG021076
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47648426"
  如果在「快照集代理程式」完成快照集的產生之前啟動「散發代理程式」，會引發錯誤 MSSQL_ENG021076。 只有在發行集包含單一發行項時才會引發該錯誤。 如果發行集包含一個以上發行項，則會引發錯誤 MSSQL_ENG021075。 如需詳細資訊，請參閱 [MSSQL_ENG021075](../../relational-databases/replication/mssql-eng021075.md)。  
   
 ## <a name="user-action"></a>使用者動作  
- 如果在建立訂閱或上次選擇重新初始化訂閱後未啟動發行集的「快照集代理程式」，請啟動「快照集代理程式」，並讓其在啟動「散發代理程式」之前完成。 如需詳細資訊，請參閱[建立並套用快照集](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
+ 如果在建立訂閱或上次選擇重新初始化訂閱後未啟動發行集的「快照集代理程式」，請啟動「快照集代理程式」，並讓其在啟動「散發代理程式」之前完成。 如需詳細資訊，請參閱[建立並套用快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
- 若快照集代理程式未完成，請檢查快照集代理程式記錄，以便找出錯誤並加以解決。 如需如何在複寫監視器中檢視代理程式狀態和錯誤詳細資料的相關資訊，請參閱[檢視與發行集相關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
+ 若快照集代理程式未完成，請檢查快照集代理程式記錄，以便找出錯誤並加以解決。 如需有關在「複寫監視器」中檢視代理程式狀態和錯誤詳細資料的資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  若錯誤繼續發生，請增加代理程式的記錄，並指定記錄的輸出檔。 視錯誤內容的不同，可提供導致錯誤的步驟和 (或) 其他錯誤訊息。  
   

@@ -14,16 +14,16 @@ ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 791c9fc5b7a411a094d6fedc8aa16290baeea234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763346"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130328"
 ---
 # <a name="best-practices-for-replication-administration"></a>複寫管理的最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照此主題中呈現的最佳做法指導以外，請考慮閱讀常見問答集，以更加熟悉一般問題：[複寫管理員的常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)。  
+  設定複寫之後，請務必了解如何管理複寫拓撲。 這個主題提供各個範疇的基本最佳做法指導，並可透過連結方式分別取得進一步資訊。 除了依照本主題中提出的最佳做法指導以外，請考慮閱讀常見問答集主題來熟悉常見的問題：[複寫管理員的常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)。  
   
  將最佳做法指南分成兩個方面非常有用：  
   
@@ -114,16 +114,16 @@ ms.locfileid: "47763346"
 ## <a name="monitor-the-replication-topology"></a>監視複寫拓撲  
  在設定複寫拓撲且已設定臨界值及警示後，建議您定期監視複寫。 監控複寫拓撲是部署複寫時很重要的層面。 由於已散發複寫活動，因此必須跨越所有複寫相關的電腦，追蹤活動和狀態 下列工具可用來監視複寫：  
   
--   「複寫監視器」是監視複寫的最重要的工具，可讓您監視複寫拓撲的全面健全狀況。 如需詳細資訊，請參閱＜ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)＞。  
+-   「複寫監視器」是監視複寫的最重要的工具，可讓您監視複寫拓撲的全面健全狀況。 如需詳細資訊，請參閱＜ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)＞。  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 Replication Management Objects (RMO) 提供監視複寫的介面。 如需詳細資訊，請參閱＜ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)＞。  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 Replication Management Objects (RMO) 提供監視複寫的介面。 如需詳細資訊，請參閱＜ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)＞。  
   
 -   「系統監視器」也可用於監視複寫效能。 如需詳細資訊，請參閱＜ [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md)＞。  
   
 ## <a name="validate-data-periodically"></a>定期驗證資料  
  複寫並不需要進行驗證，但建議對異動複寫和合併式複寫定期執行驗證。 驗證允許您驗證「訂閱者」端的資料與「發行者」端的資料是否相符合。 成功的驗證則表示，在那個時間點，「發行者」端的所有變更都已複寫到「訂閱者」端 (同時，如果「訂閱者」端支援更新，則「訂閱者」端的所有變更也都會複寫到「發行者」端)，而且這兩個資料庫將保持同步。  
   
- 建議根據發行集資料庫的備份排程執行驗證。 例如，如果發行集資料庫每週進行一次完整備份，則驗證會在備份完成後每週執行一次。 如需詳細資訊，請參閱[驗證複寫的資料](../../../relational-databases/replication/validate-replicated-data.md)。  
+ 建議根據發行集資料庫的備份排程執行驗證。 例如，如果發行集資料庫每週進行一次完整備份，則驗證會在備份完成後每週執行一次。 如需詳細資訊，請參閱[驗證複寫的資料](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>必要時，使用代理程式設定檔變更代理程式參數  
  代理程式設定檔提供一個設定複寫代理程式參數的便利方法。 參數也可以在代理程式命令列指定，但是如果您需要變更參數值，則一般更適合使用預先定義的代理程式設定檔或者建立一個新設定檔。 例如，如果您使用合併式複寫，同時「訂閱者」從寬頻連接移到撥號連接，請考慮為「合併代理程式」使用 **慢速連結** 設定檔；此設定檔會使用一組更適合慢速通訊連結的參數。 如需詳細資訊，請參閱＜ [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)＞。  
@@ -150,6 +150,6 @@ ms.locfileid: "47763346"
  如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+ [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
   

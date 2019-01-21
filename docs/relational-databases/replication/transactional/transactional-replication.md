@@ -14,12 +14,12 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b85e937dc16ffe3e9561a6344829c9aae5af508c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1d5269b19f8bfb04321ac23e01d1f85b8c0861e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791166"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129458"
 ---
 # <a name="transactional-replication"></a>異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,5 +72,15 @@ ms.locfileid: "47791166"
   
 ##  <a name="DistributionAgent"></a> 散發代理程式  
  若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 該代理程式會將交易從散發資料庫移至訂閱者。 如果訂閱標示為驗證，則「散發代理程式」還會檢查發行者端和訂閱者端的資料是否相符。  
+
+## <a name="publication-types"></a>發行集類型 
+異動複寫提供四種發行集類型：  
+  
+|發行集類型|Description|  
+|----------------------|-----------------|  
+|標準交易式發行集|適合於「訂閱者」端的所有資料均為唯讀狀態 (異動複寫並不在「訂閱者」端強制這個屬性) 的拓撲。<br /><br /> 當使用 Transact-SQL 或 Replication Management Objects (RMO) 時，依預設，會建立標準交易式發行集。 當使用「新增發行集精靈」時，它們會透過選取 **[發行集類型]** 頁面上的 **[交易式發行集]** 來建立。<br /><br /> 如需建立發行集的詳細資訊，請參閱 [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)。|  
+|具有可更新訂閱的交易式發行集|這個發行集類型的特性為：<br /><br /> -每個位置都有相同的資料，含有一個「發行者」和一個「訂閱者」。 <br /> -您可以更新「訂閱者」端的資料列<br /> -此拓撲最適合於需要高可用性和讀取延展性的伺服器環境。<br /><br />如需詳細資訊，請參閱[可更新訂閱](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。|  
+|點對點拓撲|這個發行集類型的特性為：<br /> -每個位置都有相同的資料，並同時充當「發行者」與「訂閱者」。<br /> -若要變更同一資料行，一次只能在一個位置變更。<br /> -支援[衝突偵測](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-此拓撲最適合需要高可用性和讀取延展性的伺服器環境。<br /><br />如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
+|雙向異動複寫|這個發行集類型的特性為：<br />雙向複寫類似於點對點複寫，不過，它並不提供衝突解決。 此外，雙向複寫僅限於 2 部伺服器。 <br /><br /> 如需詳細資訊，請參閱[雙向異動複寫](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
   
   

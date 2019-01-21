@@ -15,12 +15,12 @@ ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35fbe2c739ac8dafcedf18a4873bc7235469648b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d33dc0d7103e821eaf2796630cada56f199eebd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857119"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133928"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47857119"
  此選項僅適用於儲存程序。 它決定是否要複寫預存程序 (CREATE PROCEDURE 陳述式) 或其執行的定義。 如果您複寫程序的執行，程序定義會在初始化訂閱之後複寫到訂閱者端；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大量批次作業時大幅提升效能。 如需詳細資訊，請參閱＜ [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)＞。  
   
 ## <a name="options-for-merge-publications"></a>合併式發行集的選項  
- 合併式發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[解析程式]**。  
+ 合併式發行集的 [發行項屬性] 對話方塊有兩個索引標籤：[屬性] 和 [解析程式]。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **同步處理方向**  
@@ -123,7 +123,7 @@ ms.locfileid: "47857119"
   
 ### <a name="resolver-tab"></a>解析程式索引標籤  
  **使用預設解析程式**  
- 如果您選取預設的解析程式，則會依據指派給每個訂閱者的優先權或第一個寫入發行者的變更來解決衝突，視使用的訂閱類型而定。 如需詳細資訊，請參閱[偵測及解決合併式複寫衝突](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+ 如果您選取預設的解析程式，則會依據指派給每個訂閱者的優先權或第一個寫入發行者的變更來解決衝突，視使用的訂閱類型而定。 如需詳細資訊，請參閱[偵測及解決合併式複寫衝突](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
  **使用自訂解析程式 (已在散發者註冊)**  
  如果您選擇使用發行項解析程式 (由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供或您自行撰寫)，您必須從清單方塊中選取解析程式。 如需詳細資訊，請參閱＜ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)＞。  
@@ -137,7 +137,7 @@ ms.locfileid: "47857119"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有以 COM 為基礎的解析程式都已簽署。 選取此選項即可驗證同步處理時解析程式是有效的。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 發行集的選項  
- Oracle 發行集的 **[發行項屬性]** 對話方塊有兩個索引標籤： **[屬性]** 和 **[資料對應]**。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
+ Oracle 發行集的 [發行項屬性] 對話方塊有兩個索引標籤：[屬性] 和 [資料對應]。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  

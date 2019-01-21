@@ -14,15 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 544dbc5722f1af81b3d4b858a8b6b5e4b2b7165f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9489b1ecdcaeea645b9020f14a86b8e7fc6e2a97
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517760"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300035"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。    
      
@@ -94,7 +97,7 @@ ms.locfileid: "52517760"
     
 2.  在標準列上，按一下 **[新增查詢]**。    
     
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。    
     
     ```    
     USE AdventureWorks2012;    
@@ -116,7 +119,7 @@ ms.locfileid: "52517760"
     
 2.  在標準列上，按一下 **[新增查詢]**。    
     
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。    
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。    
     
     ```    
     USE AdventureWorks2012;    

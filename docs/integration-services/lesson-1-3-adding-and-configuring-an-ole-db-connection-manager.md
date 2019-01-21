@@ -1,7 +1,7 @@
 ---
-title: 步驟 3：加入和設定 OLE DB 連線管理員 | Microsoft Docs
+title: 步驟 3：新增及設定 OLE DB 連線管理員 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,45 +11,47 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fbb4994b1f7f7416fbdbdde5dc6377b396dae9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f014affc4ce58243ab629c3bbf12b607d6b7954f
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539077"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143508"
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>課程 1-3 - 加入和設定 OLE DB 連線管理員
-在加入一般檔案連接管理員來連接到資料來源之後，下一項工作是加入 OLE DB 連接管理員來連接到目的地。 OLE DB 連接管理員可讓封裝從任何 OLE DB 相容資料來源擷取資料或載入資料至該處。 使用 OLE DB 連接管理員，您可以指定連接的伺服器、驗證方法和預設資料庫。  
+# <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>課程 1-3：新增及設定 OLE DB 連線管理員
+
+在新增「一般檔案」連線管理員來連線到資料來源之後，您需新增 OLE DB 連線管理員來連線到目的地。 OLE DB 連接管理員可讓封裝從任何 OLE DB 相容資料來源擷取資料或載入資料至該處。 使用 OLE DB 連線管理員時，您可以為連線指定伺服器、驗證方法及預設的資料庫。  
   
-在這一課，您將建立 OLE DB 連接管理員，以便使用 Windows 驗證連接到 **AdventureWorksDB2012**的本機執行個體。 您建立的 OLE DB 連接管理員，也會供您在這個教學課程後面建立的其他元件所參考，例如查閱轉換和 OLE DB 目的地。  
+在本課程中，您會建立使用「Windows 驗證」來連線到 **AdventureWorksDW2012** 本機執行個體的 OLE DB 連線管理員。 您在本教學課程中稍後建立的其他元件 (例如「查閱」轉換和 OLE DB 目的地) 也會參考此 OLE DB 連線管理員。  
   
-### <a name="add-and-configure-an-ole-db-connection-manager-to-the-ssis-package"></a>將 OLE DB 連接管理員新增至 SSIS 套件並進行設定  
+## <a name="add-and-configure-an-ole-db-connection-manager"></a>新增及設定 OLE DB 連線管理員
+
+1. 在 [方案總管] 中，於 [連線管理員] 上按一下滑鼠右鍵，然後選取 [新增連線管理員]。
+
+1. 在 [加入 SSIS 連線管理員] 對話方塊中，依序選取 [OLEDB] 和 [加入]。
+    
+2. 在 [設定 OLE DB 連線管理員] 對話方塊中，選取 [新增]。  
   
-1.  以滑鼠右鍵按一下 [連接管理員] 區域的任何位置，然後按一下 [新增 OLE DB 連接]。  
-  
-2.  在 **[設定 OLE DB 連接管理員]** 對話方塊中，按一下 **[新增]**。  
-  
-3.  對於 **[伺服器名稱]**，輸入 **localhost**。  
+3. 對於 **[伺服器名稱]**，輸入 **localhost**。  
   
     當您指定 localhost 做為伺服器名稱時，連接管理員會連接到本機電腦上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的遠端執行個體，請將 localhost 取代成您要連接的伺服器名稱。  
   
-4.  在 **[登入伺服器]** 群組中，確認已選取 **[使用 Windows 驗證]** 。  
+4. 在 **[登入伺服器]** 群組中，確認已選取 **[使用 Windows 驗證]** 。  
   
-5.  在 **[連接到資料庫]** 群組的 **[選取或輸入資料庫名稱]** 方塊中，輸入或選取 **AdventureWorksDW2012**。  
+5. 在 **[連接到資料庫]** 群組的 **[選取或輸入資料庫名稱]** 方塊中，輸入或選取 **AdventureWorksDW2012**。  
   
-6.  按一下 **[測試連接]** 以確認您指定的連接設定有效。  
+6. 選取 [測試連線] 以確認您指定的連線設定有效。  
   
-7.  按一下 [確定] 。  
+7. 選取 [確定]。  
   
-8.  按一下 [確定] 。  
+8. 選取 [確定]。  
   
-9. 在 **[設定 OLE DB 連接管理員]** 對話方塊的 **[資料連接]** 窗格中，確認已選取 **localhost.AdventureWorksDW2012** 。  
+9. 在 [連線管理員] 窗格中，確認已選取 [localhost.AdventureWorksDW2012]。  
   
-10. 按一下 [確定] 。  
-  
-## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 4：將資料流程工作新增至套件中](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+
+## <a name="go-to-next-task"></a>移至下一個工作
+[步驟 4：將資料流程工作新增至套件](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[OLE DB 連接管理員](../integration-services/connection-manager/ole-db-connection-manager.md)  
+[[無快取]](../integration-services/connection-manager/ole-db-connection-manager.md)  
   

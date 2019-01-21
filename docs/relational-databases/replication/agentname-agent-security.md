@@ -13,12 +13,12 @@ ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e1ae73378fd509f2ce10efdb5141356473e7b71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e30f7ba7674327c23ff04a8cade7107832c512e7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648676"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131868"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;AgentName&gt; 代理程式安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,29 +35,29 @@ ms.locfileid: "47648676"
  **散發者的連接**  
  這會針對交易式與快照式複寫顯示。 用於連接到散發者的內容。 本機連接一律會使用執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的內容來進行：  
   
--   對於發送訂閱，本機連接會連接到散發者，所以此欄位一律會顯示：發送訂閱的 [模擬 '\<網域>\\<登入\>'] 或是 [模擬 '\<電腦>\\<登入\>']。  
+-   就發送訂閱而言，本機連線會連線到「散發者」，因此這個欄位一律會顯示：[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>'] (針對發送訂閱)。  
   
--   對於提取訂閱，連接也可以用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容來進行。 欄位會顯示下列內容之一：[使用者登入 '\<登入>']、[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+-   就提取訂閱而言，連線也可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容下進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<登入>']、[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
  **發行者和散發者的連接**  
  這會針對合併複寫顯示。 連接到發行者與散發者所使用的內容。 本機連接一律會使用執行代理程式之 Windows 帳戶的內容進行連接：  
   
--   對於發送訂閱，本機連接會連接到發行者和散發者，所以此欄位一律會顯示：發送訂閱的 [模擬 '\<網域>\\<登入\>'] 或是 [模擬 '\<電腦>\\<登入\>']。  
+-   就發送訂閱而言，本機連線會連線到「發行者」和「散發者」，因此這個欄位一律會顯示：[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>'] (針對發送訂閱)。  
   
--   對於提取訂閱，連接也可以用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容來進行。 欄位會顯示下列內容之一：[使用者登入 '\<登入>']、[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+-   就提取訂閱而言，連線也可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容下進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<登入>']、[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
  **訂閱者的連接**  
  與訂閱者進行連接的內容。 本機連接一律會使用執行代理程式之 Windows 帳戶的內容進行連接：  
   
--   對於提取訂閱，本機連接會連接到訂閱者，所以此欄位一律會顯示：發送訂閱的 [模擬 '\<網域>\\<登入\>'] 或是 [模擬 '\<電腦>\\<登入\>']。  
+-   就發送訂閱而言，本機連線會連線到「訂閱者」，因此這個欄位一律會顯示：[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>'] (針對發送訂閱)。  
   
--   對於發送訂閱，連接也可以用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容來進行。 欄位會顯示下列內容之一：[使用者登入 '\<登入>']、[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
+-   就發送訂閱而言，連線也可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的內容下進行。 這個欄位會顯示下列其中一項資訊：[使用登入 '\<登入>']、[模擬 '\<網域>\\<登入\>'] 或 [模擬 '\<電腦>\\<登入\>']。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議使用 Windows 帳戶的內容進行所有連接。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改提取訂閱屬性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [檢視及修改發送訂閱屬性](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [管理複寫的登入與密碼](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [用於複寫的身分識別和存取控制](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [安全性與保護 &#40;複寫&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

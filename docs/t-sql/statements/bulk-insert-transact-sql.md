@@ -27,18 +27,18 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ace2295a1d8d75b9311597f25c99540c4090ce6e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8d0dd1d58614f24e33f8fd7afdda43db2114fec6
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703896"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300375"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用者指定的格式，將資料檔案匯入資料庫資料表或檢視表中  
 
@@ -93,7 +93,7 @@ BULK INSERT
  *table_name*  
  這是要大量匯入資料到其中之資料表或檢視表的名稱。 您只能使用所有資料行都參考相同基底資料表的檢視表。 如需有關將資料載入至檢視表中之限制的詳細資訊，請參閱 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)。  
   
- **'** *data_file* **'**  
+ **'** _data_file_ **'**  
  這是含有要匯入至指定的資料表或檢視表中之資料的資料檔案完整路徑。 BULK INSERT 可以從磁碟中匯入資料 (其中包括網路、磁碟片、硬碟等)。   
  
  *data_file* 必須指定執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之伺服器中的有效路徑。 如果 *data_file* 是一個遠端檔案，請指定「通用命名慣例」(UNC) 名稱。 UNC 名稱的格式為 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*。 例如：   
@@ -103,15 +103,15 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，data_file 可位於 Azure Blob 儲存體中。 在此情況下，您必須指定 **data_source_name** 選項。
 
 > [!IMPORTANT]
 > Azure SQL Database 不支援從 Windows 檔案讀取。
 
 
-**'** *data_source_name* **'**   
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**'** _data_source_name_ **'**   
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 這是具名的外部資料來源，指向將匯入之檔案的 Azure Blob 儲存體位置。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。    
  
 ```sql
@@ -120,7 +120,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=***batch_size*  
+ BATCHSIZE **=**_batch_size_  
  指定批次中的資料列數。 每個批次都會當做一筆交易複製到伺服器中。 如果失敗，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會認可或回復每個批次的交易。 依預設，指定之資料檔中的所有資料都是單一批次。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
  CHECK_CONSTRAINTS  
@@ -136,7 +136,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  MAXERRORS 選項不適用於條件約束檢查。  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
+ CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
  指定資料檔案中之資料的字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char**、**varchar** 或 **text** 資料行時，CODEPAGE 才會相關。  
 
 ```sql
@@ -156,7 +156,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |ACP|將 **char**、**varchar** 或 **text** 資料類型的資料行，從 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|  
 |OEM (預設值)|將 **char**、**varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|  
 |RAW|不進行字碼頁之間的轉換；這是最快的選項。|  
-|*code_page*|特定字碼頁編號，如 850。<br /><br /> **\*\* 重要 \*\*** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|  
+|*code_page*|特定字碼頁編號，如 850。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|  
   
  DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
  指定 BULK INSERT 利用指定的資料檔案類型值來執行匯入作業。  
@@ -168,18 +168,18 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |**widechar**|Unicode 字元。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。|  
 |**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
   
-  ERRORFILE **='***file_name***'**  
+  ERRORFILE **='**_file_name_**'**  
  指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。  
   
  當執行命令時，便會建立這個錯誤檔。 如果檔案已經存在，會發生一則錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。   
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，`error_file_path` 可以位於 Azure Blob 儲存體中。
 
 'errorfile_data_source_name'   
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 這是具名的外部資料來源，指向錯誤檔案的 Azure Blob 儲存體位置，該檔案將包含在匯入期間發現的錯誤。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
  
- FIRSTROW **=***first_row*  
+ FIRSTROW **=**_first_row_  
  指定要載入之第一個資料列的號碼。 預設值是指定之資料檔案中的第一個資料列。 FIRSTROW 是以 1 為基底。  
   
 > [!NOTE]  
@@ -191,7 +191,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
  如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。  
 
 FORMATFILE_DATASOURCE **=** 'data_source_name'   
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。   
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1。   
 這是具名的外部資料來源，指向格式檔案的 Azure Blob 儲存體位置，該檔案將定義所匯入資料的結構描述。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
   
  KEEPIDENTITY  
@@ -202,13 +202,13 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  KEEPNULLS  
  指定在大量匯入作業期間，空白資料行應該保留 Null 值，而不是插入資料行的任何預設值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
- KILOBYTES_PER_BATCH **=** *kilobytes_per_batch*  
+ KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_  
  以 *kilobytes_per_batch* 指定每一批資料的大約 KB 數。 依預設，KILOBYTES_PER_BATCH 是未知的。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
- LASTROW**=***last_row*  
+ LASTROW**=**_last_row_  
  指定要載入之最後一個資料列的號碼。 預設值是 0，表示指定之資料檔案中的最後一個資料列。  
   
- MAXERRORS **=** *max_errors*  
+ MAXERRORS **=** _max_errors_  
  指定取消大量匯入作業之前所允許的資料語法錯誤數目上限。 大量匯入作業所無法匯入的每個資料列都會被忽略，且會當做一項錯誤來計算。 如果未指定 *max_errors*，則預設值為 10。  
   
 > [!NOTE]  
@@ -220,7 +220,7 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  *n*  
  這是一個預留位置，表示可以指定多個資料行。  
   
- ROWS_PER_BATCH **=***rows_per_batch*  
+ ROWS_PER_BATCH **=**_rows_per_batch_  
  指出資料檔案中大約有多少資料列。  
   
  依預設，資料檔案中的所有資料都會當做單一交易來傳給伺服器，而且查詢最佳化工具並不知道批次中的資料列數。 如果您指定 ROWS_PER_BATCH (利用 > 0 的值)，伺服器會利用這個值來最佳化大量匯入作業。 ROWS_PER_BATCH 指定的值應該與實際的資料列數大約相同。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
@@ -234,7 +234,7 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
 ### <a name="input-file-format-options"></a>輸入檔案格式選項
   
 FORMAT **=** 'CSV'   
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 規範的逗點分隔值檔案。
 
 ```sql
@@ -244,10 +244,10 @@ WITH ( FORMAT='CSV');
 ```
 
 FIELDQUOTE **=** 'field_quote'   
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 指定將用來當作 CSV 檔案中引號字元的字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準中所定義的。
   
- FORMATFILE **='***format_file_path***'**  
+ FORMATFILE **='**_format_file_path_**'**  
  指定格式檔的完整路徑。 格式檔描述包含預存回應的資料檔案，這些預存回應是利用 **bcp** 公用程式在相同資料表或檢視表上建立的。 在下列情況下，應該使用格式檔：  
   
 -   資料檔案包含比資料表或檢視表更多或更少的資料行。  
@@ -258,13 +258,13 @@ FIELDQUOTE **=** 'field_quote'
   
 -   資料格式有其他變更。 格式檔通常是利用 **bcp** 公用程式來建立的，您可以視需要利用文字編輯器來修改它。 如需相關資訊，請參閱 [bcp Utility](../../tools/bcp-utility.md)。  
 
-**適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+**適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，format_file_path 可位於 Azure Blob 儲存體中。
 
- FIELDTERMINATOR **='***field_terminator***'**  
+ FIELDTERMINATOR **='**_field_terminator_**'**  
  指定要用於 **char** 和 **widechar** 資料檔案的欄位結束字元。 預設欄位結束字元是 \t (定位字元)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
- ROWTERMINATOR **='***row_terminator***'**  
+ ROWTERMINATOR **='**_row_terminator_**'**  
  指定要用於 **char** 和 **widechar** 資料檔案的資料列結束字元。 預設的資料列結束字元是 **\r\n** (新行字元)。  如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)。  
 
   
@@ -304,7 +304,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  ```
  <?xml version="1.0"?> 
- <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"> 
+ <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
  <RECORD> 
  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 

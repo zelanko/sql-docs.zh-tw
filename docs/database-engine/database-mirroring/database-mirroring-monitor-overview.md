@@ -15,12 +15,12 @@ ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: acd6c8da6560b0daed5eb1f029c71619b2e5d0fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502595"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126348"
 ---
 # <a name="database-mirroring-monitor-overview"></a>資料庫鏡像監視器概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "52502595"
  *<PRINCIPAL_SERVER>*  
  目前為主體伺服器執行個體的夥伴名稱。 此名稱採用下列格式：  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ <系統名稱>[**\\**<執行個體名稱>]  
   
- 其中 <系統名稱> 是伺服器執行個體所在的系統名稱。 如果是非預設的伺服器執行個體，則也會顯示執行個體名稱：<系統名稱>****\\****<執行個體名稱>。  
+ 其中 <系統名稱> 是伺服器執行個體所在的系統名稱。 如果是非預設的伺服器執行個體，則也會顯示執行個體名稱：<系統名稱>**\\**<執行個體名稱>。  
   
  *<MIRROR_SERVER>*  
  目前為鏡像伺服器執行個體的夥伴名稱。 其格式和主體伺服器相同。  
@@ -83,7 +83,7 @@ ms.locfileid: "52502595"
   
  系統管理員只要選取 [警告] 索引標籤頁面，即可檢視資料庫目前的警告組態。 系統管理員可以在這個頁面上啟動 [設定警告臨界值] 對話方塊，以啟用和設定一或多個警告臨界值。  
   
- 在索引標籤上方的橫幅中，詳細資料窗格會將監視器上次重新整理狀態資訊的時間顯示為 [上次重新整理：\<日期>\<時間>]。 「資料庫鏡像監視器」通常會在不同的時間，分別從主體伺服器執行個體和鏡像伺服器執行個體擷取狀態資訊。 所顯示的時間是這兩個重新整理時間中較早的一個。  
+ 在索引標籤上方的橫幅中，詳細資料窗格會將監視器上次重新整理狀態資訊的時間顯示為 [上次重新整理:_\<日期>\<時間>_]。 「資料庫鏡像監視器」通常會在不同的時間，分別從主體伺服器執行個體和鏡像伺服器執行個體擷取狀態資訊。 所顯示的時間是這兩個重新整理時間中較早的一個。  
   
 ## <a name="action-menu"></a>動作功能表  
  [動作] 功能表一定會包含下列命令：  

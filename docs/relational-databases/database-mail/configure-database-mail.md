@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0f86f70a4cd496c4f4f32dd0a88077337cf645
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505139"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127658"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "52505139"
  使用 [選取組態工作] 頁面可指出您每次使用精靈時，會完成哪個工作。 如果您在完成精靈之前變更了主意，請使用 [上一步] 按鈕回到此頁面，然後選取不同的工作。  
   
 > [!NOTE]  
->  如果尚未啟用 Database Mail，您就會接收到訊息：**[無法使用 Database Mail 功能。您要啟用此功能嗎?]** 回應 [是] 就相當於使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)來啟用 Database Mail。  
+>  如果尚未啟用 Database Mail，您就會收到下列訊息：**無法使用 Database Mail 功能。您要啟用此功能嗎?** 回應 [是] 就相當於使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)來啟用 Database Mail。  
   
  **執行下列工作來設定 Database Mail**  
  執行第一次設定 Database Mail 所需的所有工作。 此選項包含所有其他三個選項。  
@@ -155,7 +155,7 @@ ms.locfileid: "52505139"
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
- 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，這會使用類似 **smtp.<您的公司>.com** 的格式。 如需相關說明，請洽詢您的郵件管理員。  
+ 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，此格式類似於 **smtp.<貴公司>****.com**。 如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  
@@ -420,7 +420,7 @@ ms.locfileid: "52505139"
  [Database Mail 組態精靈](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- 透過 [從 <執行個體名稱> 傳送測試電子郵件]****** 頁面使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
+ 使用 [從 <執行個體名稱> 傳送測試電子郵件] 頁面，以使用指定的 Database Mail 設定檔傳送電子郵件訊息。 只有 **系統管理員** 固定伺服器角色的成員，才可以使用此頁面來傳送測試電子郵件。  
   
  **Database Mail 設定檔**  
  從清單中選取 Database Mail 設定檔。 這是必要的欄位。 如果未顯示任何設定檔，就表示沒有設定檔，或者您沒有設定檔的存取權限。 使用 **[Database Mail 組態精靈]** 來建立及設定設定檔。 如果未列出任何設定檔，請使用 Database Mail 組態精靈來建立供您使用的設定檔。  

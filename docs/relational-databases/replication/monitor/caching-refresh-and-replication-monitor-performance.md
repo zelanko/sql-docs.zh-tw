@@ -17,12 +17,12 @@ ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f11bd1d26e363628a80ed2cd673e4acda7476526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa70f42c2ea5602bf549a4d5596bff2c8bbff66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852846"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123878"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>快取、重新整理和複寫監視器效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "47852846"
   
  快取重新整理由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業 (即 **散發的複寫監視重新整理器**) 處理。 此作業連續執行，但快取重新整理排程需要在上一次重新整理後等候一段時間：  
   
--   如果自上次建立快取以來存在代理程式記錄變更，則最短的等候時間是 4 秒或是建立上次快取所花費的時間量。  
+-   如果自上次建立快取之後有發生代理程式記錄變更，則最短的等候時間是：4 秒；或建立先前快取所花費的時間。  
   
--   如果自上次建立快取以來沒有發生代理程式記錄的變更 (之前可能曾有過其他變更)，則最長的等候時間是 30 秒或是建立上次快取所花費的時間量。  
+-   如果自上次建立快取之後沒有發生任何代理程式記錄變更 (可能有發生其他變更)，則最長的等候時間是：30 秒；或建立先前快取所花費的時間。  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>重新整理複寫監視器使用者介面  
  「複寫監視器」使用者介面可以按下列方式重新整理：  
@@ -56,6 +56,6 @@ ms.locfileid: "47852846"
   
 ## <a name="see-also"></a>另請參閱  
  [執行複寫維護作業 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
- [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

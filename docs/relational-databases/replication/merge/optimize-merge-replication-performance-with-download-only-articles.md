@@ -15,12 +15,12 @@ ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd5c45f61329a63825eac983d21aca7e3106920d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814077"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54123798"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用僅限下載的發行項最佳化合併式複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47814077"
   
  僅限下載的發行項結合客訂閱一起使用：如果發行項被設計為僅限下載，則將無法在使用客訂閱的「訂閱者」端插入、更新或刪除這個發行項的資料列。 使用主訂閱類型的「發行者」與「訂閱者」 (一般是重新發行資料到其他「訂閱者」的「訂閱者」) 可插入、更新和刪除資料。 如需用戶端訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
- 若要指定發行項為僅限下載，請參閱＜ [將合併資料表發行項指定為僅限下載](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)＞。  
+ 若要將發行項指定為僅能下載的發行項，請參閱[指定合併式複寫屬性](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
 ## <a name="using-different-article-types-in-your-applications"></a>在應用程式中使用不同的發行項類型  
  透過了解應用程式的需求，您可以在最具彈性與最佳效能之間權衡取捨。 例如，在「發行者」端與「訂閱者」端有大量衝突與變更處理的應用程式，將使用由標準發行項組成的發行集。 某些應用程式，例如銷售人員自動化應用程式，含有一些可能發生衝突的發行項，以及另一些做為查閱資料表的發行項，可被指定為僅限下載。 資料項目應用程式 (例如銷售系統各點和現場服務自動化應用程式) 通常使用嚴格地分割資料這一方式來消除衝突，來自某個「訂閱者」的資料決不會流到其他「訂閱者」處。 在這些情況下，不重疊資料分割的組合、僅限下載的發行項和預先計算的資料分割會提供最佳的效能和延展性。 如需不重疊資料分割和預先計算資料分割的詳細資訊，請參閱＜ [参数化行过滤器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  

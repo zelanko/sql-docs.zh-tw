@@ -11,19 +11,19 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1857f503abe300127d92c26ba5591407b863ebc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527925"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226535"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：從 Team Foundation Build 執行 SQL Server 單元測試
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
   
 -   [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [如何：在建置應用程式之後設定和執行已排程的測試](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [操作說明：在建置應用程式之後設定和執行已排定的測試](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) \(機器翻譯\)  
   
 -   [建立基本組建定義](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -262,7 +262,7 @@ ms.locfileid: "52527925"
   
 9. 按一下 [確定] 。  
   
-10. 在 [基本] 群組的 [自動化測試] 中，指定您要執行的測試。 根據預設，系統將會執行方案中名為 *test\*.dll 之檔案所包含的測試。  
+10. 在 [基本] 群組的 [自動化測試] 中，指定您要執行的測試。 根據預設，系統將會執行解決方案中名為 \*test\*.dll 之檔案所包含的測試。  
   
 11. 在 [檔案] 功能表上，按一下 [儲存 *ProjectName*]。  
   

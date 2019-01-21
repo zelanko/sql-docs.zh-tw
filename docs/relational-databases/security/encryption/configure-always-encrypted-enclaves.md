@@ -1,7 +1,7 @@
 ---
 title: 設定具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 246fa155a8de930cd81d65df633d3f47bed9f56e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534766"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206404"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>設定具有安全記憶體保護區的 Always Encrypted
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [具有安全記憶體保護區的 Always Encrypted](always-encrypted-enclaves.md) 會擴充現有 [Always Encrypted](always-encrypted-database-engine.md) 功能，以啟用更豐富的敏感性資料功能，同時保持資料的機密性。
@@ -26,14 +27,14 @@ ms.locfileid: "52534766"
 若要設定具有安全記憶體保護區的 Always Encrypted，請使用下列工作流程：
 
 1. 設定主機守護者服務 (HGS) 證明。
-2. 在 SQL Server 電腦上安裝 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)]。
+2. 在 SQL Server 電腦上安裝 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]。
 3. 在用戶端/開發電腦上安裝工具。
 4. 在 SQL Server 執行個體中設定安全記憶體保護區類型。
 5. 佈建已啟用記憶體保護區的金鑰。
 6. 加密包含敏感性資料的資料行。
 
->[!NOTE]
->如需如何設定測試環境並在 SSMS 中嘗試具有安全記憶體保護區之 Always Encrypted 功能的逐步教學課程，請參閱[教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)。
+> [!NOTE]
+> 如需有關如何設定測試環境並在 SSMS 中嘗試具有安全記憶體保護區之 Always Encrypted 功能的逐步教學課程，請參閱[教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)。
 
 ## <a name="configure-your-environment"></a>設定環境
 
@@ -45,7 +46,7 @@ ms.locfileid: "52534766"
 
 *SQL Server*：
 
-- [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 或更新版本
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 或更新版本
 
 *Windows*：
 
@@ -134,7 +135,7 @@ NuGet 套件要用於 Visual Studio 專案，以使用具有安全記憶體保�
    ```
 
     > [!NOTE]
-    > 根據預設，會在 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 中停用豐富計算。 每次重新啟動 SQL Server 執行個體之後，需要使用上述陳述式予以啟用。
+    > 在 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] 中預設已停用豐富計算。 每次重新啟動 SQL Server 執行個體之後，需要使用上述陳述式予以啟用。
 
 ## <a name="provision-enclave-enabled-keys"></a>佈建已啟用記憶體保護區的金鑰
 
@@ -496,13 +497,13 @@ GO
 
 針對未啟用記憶體保護區的現有資料行，有數種方式可以啟用記憶體保護區功能。 您選擇的方法取決於許多因素：
 
-- **範圍/細微性：** 您要啟用一小部分資料行的記憶體保護區功能，還是啟用使用指定資料行主要金鑰保護之所有資料行的記憶體保護區功能？
-- **資料大小：** 包含您要設為啟用記憶體保護區之資料行的資料表大小為何？
+- **範圍/細微性：** 您是要為一小部分資料行啟用記憶體保護區功能，還是為以指定資料行主要金鑰保護的所有資料行啟用記憶體保護區功能？
+- **資料大小：** 包含您要啟用記憶體保護區功能之資料行的資料表大小為何？
 - 您也要變更資料行的加密類型嗎？ 請記住，唯一的隨機化加密支援豐富計算 (模式比對、比較運算子)。 如果您的資料行使用確定性加密所加密，則也需要使用隨機化加密來重新加密它，以解除鎖定記憶體保護區的完整功能。
 
 下列三種方法可以啟用現有資料行的記憶體保護區：
 
-#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>選項 1：輪替資料行主要金鑰以將它取代為已啟用記憶體保護區的資料行主要金鑰。
+#### <a name="option-1-rotate-the-column-master-key-to-replace-it-with-an-enclave-enabled-column-master-key"></a>選項 1：輪替資料行主要金鑰，以使用已啟用記憶體保護區功能的資料行主要金鑰來取代它。
   
 - 優點：
   - 不包含重新加密資料，因此它通常是最快的方法。 這是用於包含大量資料之資料行的建議方法，但您需要啟用豐富計算的所有資料行都已使用確定性加密，因此不需要重新予以加密。
@@ -514,7 +515,7 @@ GO
   - 引進金鑰管理額外負荷；您需要建立新的資料行主要金鑰，並讓查詢受影響資料行的應用程式可取得它。  
 
 
-#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>選項 2：此方法包含兩個步驟：1) 輪替資料行主要金鑰 (如選項 1) 以及 2) 使用隨機化加密來重新加密一小部分的確定性加密資料行，以啟用這些資料行的豐富計算。
+#### <a name="option-2-this-approach-involves-two-steps-1-rotating-the-column-master-key-as-in-option-1-and-2-re-encrypting-a-subset-of-deterministically-encrypted-columns-using-randomized-encryption-to-enable-rich-computations-for-those-columns"></a>選項 2：此方法包含兩個步驟：1) 輪替資料行主要金鑰 (如選項 1)，以及 2) 使用隨機化加密來重新加密一小部分以具決定性方式加密的資料行，以針對這些資料行啟用豐富計算。
   
 - 優點：
   - 就地重新加密資料，因此建議啟用包含大量資料之確定性加密資料行的豐富查詢。 請注意，步驟 1 使用確定性加密來解除鎖定資料行的就地加密，因此可以就地執行步驟 2。
@@ -524,7 +525,7 @@ GO
   - 不允許您選擇性地轉換與指定資料行主要金鑰建立關聯的一些資料行。
   - 它引進金鑰管理額外負荷；您需要建立新的資料行主要金鑰，並讓查詢受影響資料行的應用程式可取得它。
 
-#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>選項 3：在用戶端使用已啟用記憶體保護區的新資料行加密金鑰和隨機化加密 (需要時) 重新加密選取的資料行。
+#### <a name="option-3-re-encrypting-selected-columns-with-a-new-enclave-enabled-column-encryption-key-and-randomized-encryption-if-needed-on-the-client-side"></a>選項 3：在用戶端使用已啟用記憶體保護區功能的新資料行加密金鑰和隨機化加密 (視需要) 來重新加密選取的資料行。
   
 - 優點 - 此方法：
   - 可讓您選擇性地啟用一個資料行或一小部分資料行的記憶體保護區功能。
@@ -860,7 +861,7 @@ GO;
 如需使用 Always Encrypted 開發 .NET Framework 應用程式的詳細資料，請參閱下列文章：
 
 - [搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted：保護 SQL Database 中的敏感性資料並將加密金鑰儲存至 Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted：保護 SQL Database 中的機密資料並將加密金鑰儲存在 Azure Key Vault 中](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>範例
 

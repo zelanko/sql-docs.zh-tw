@@ -16,12 +16,12 @@ ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41346b81aa56f9ed4d83494092834535611cb905
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794536"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131558"
 ---
 # <a name="replication-security-best-practices"></a>複寫安全性最佳做法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47794536"
   
     -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
--   以不同的 Windows 帳戶執行各複寫代理程式，並針對所有複寫代理程式連接使用 Windows 驗證。 如需指定帳戶的詳細資訊，請參閱[管理複寫的登入與密碼](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)。  
+-   以不同的 Windows 帳戶執行各複寫代理程式，並針對所有複寫代理程式連接使用 Windows 驗證。 如需有關指定帳戶的詳細資訊，請參閱[用於複寫的身分識別和存取控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)。  
   
 -   僅對各代理程式授與必要的權限。 如需詳細資訊，請參閱＜ [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)＞的「代理程式所需的權限」一節。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47794536"
   
     -   確認指定的代理程式 (例如，訂閱的「散發代理程式」) 會在每部電腦上以相同的帳戶建立連接。  
   
-    -   在需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的情況下，通常無法存取 UNC 快照集共用 (例如，存取可能遭到防火牆封鎖)。 在這種情況下，您可以透過檔案傳輸通訊協定 (FTP) 將快照集傳送至「訂閱者」。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+    -   在需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證的情況下，通常無法存取 UNC 快照集共用 (例如，存取可能遭到防火牆封鎖)。 在這種情況下，您可以透過檔案傳輸通訊協定 (FTP) 將快照集傳送至「訂閱者」。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
@@ -75,6 +75,6 @@ ms.locfileid: "47794536"
  [保護訂閱者](../../../relational-databases/replication/security/secure-the-subscriber.md)   
  [保護散發者](../../../relational-databases/replication/security/secure-the-distributor.md)   
  [保護發行者](../../../relational-databases/replication/security/secure-the-publisher.md)   
- [安全性與保護 &#40;複寫&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

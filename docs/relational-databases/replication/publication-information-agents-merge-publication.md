@@ -13,12 +13,12 @@ ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbfa998a28696bc4675607f4d6d2bfd20185c91c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d267db0fe3656d860ec3cfe7063da88a069bc9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630396"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54127758"
 ---
 # <a name="publication-information-agents-merge-publication"></a>發行集資訊，代理程式 (合併式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "47630396"
 ## <a name="options"></a>選項。  
  如需快照集代理程式的詳細資訊與相關工作，請以滑鼠右鍵按一下代理程式的資料列，然後按一下快速鍵功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**：在 **[排序資料行]** 對話方塊中排序一個或多個資料行。  
+-   **排序**：在 [排序資料行] 對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及在 **[選擇資料行]** 對話方塊中顯示這些資料行所依循的順序。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行] 對話方塊中的顯示順序。  
   
--   **篩選**：根據 **[篩選設定]** 對話方塊中的資料行值，篩選方格中的資料列。  
+-   **篩選**：根據 [篩選設定] 對話方塊中的資料行值，篩選方格中的資料列。  
   
 -   **清除篩選**：清除方格的所有篩選設定。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47630396"
 -   已完成  
   
  **代理程式**  
- 快照集代理程式。 這是唯一與合併式發行集相關聯的代理程式。 合併代理程式與這個發行集的訂閱相關聯。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 快照集代理程式。 這是唯一與合併式發行集相關聯的代理程式。 合併代理程式與這個發行集的訂閱相關聯。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  **上次啟動時間**  
  代理程式上次啟動的時間。  
@@ -62,8 +62,7 @@ ms.locfileid: "47630396"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [檢視發行集的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [檢視與發行集建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
- [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。
   
   

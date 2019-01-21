@@ -13,12 +13,12 @@ ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fbef18dc28786fc6455af68e09c788a3f0e2db1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748746"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125853"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 發行者的設計考量與限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47748746"
   
  還需考慮下列問題：  
   
--   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對待 NULL 的方式不同：對於允許 NULL 值並且包含在唯一條件約束或索引中的資料行，Oracle 允許多個具有 NULL 值的資料列。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 則透過在同一資料行中只允許一個具有 NULL 值的資料列來強制其唯一性。 如果發行資料表在索引或條件約束中包含的任何資料行含有多個具有 NULL 值的資料列，則由於「訂閱者」端會發生條件約束違規，您將無法發行允許 NULL 的唯一條件約束或索引。  
+-   Oracle 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 對 NULL 的處理方式不同：對於允許 NULL 值並且包含在唯一條件約束或索引中的資料行，Oracle 允許多個資料列具有 NULL 值。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 則透過在同一資料行中只允許一個具有 NULL 值的資料列來強制其唯一性。 如果發行資料表在索引或條件約束中包含的任何資料行含有多個具有 NULL 值的資料列，則由於「訂閱者」端會發生條件約束違規，您將無法發行允許 NULL 的唯一條件約束或索引。  
   
 -   測試唯一性時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會忽略欄位的尾端空白，而 Oracle 則不會。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47748746"
   
 -   Oracle 發行集的「訂閱者」無法從備份自動初始化。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援兩種類型的驗證：二進位和資料列計數。 「Oracle 發行者」支援資料列數驗證。 如需詳細資訊，請參閱[驗證複寫的資料](../../../relational-databases/replication/validate-replicated-data.md)。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援兩種類型的驗證：二進位和資料列計數。 「Oracle 發行者」支援資料列數驗證。 如需詳細資訊，請參閱[驗證複寫的資料](../../../relational-databases/replication/validate-data-at-the-subscriber.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種快照集格式：原生 bcp 模式以及字元模式。 「Oracle 發行者」支援字元模式快照集。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "47748746"
   
     -   您無法透過 [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 或 [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 來變更 **@job_login** 參數，但可以變更密碼。  
   
- 如需複寫安全性的詳細資訊，請參閱[安全性與保護 &#40;複寫&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)。  
+ 如需有關複寫安全性的詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Oracle 發行者的管理考量](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   

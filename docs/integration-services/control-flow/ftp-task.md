@@ -17,12 +17,12 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52f86e1750858ec7fabcb8fab30dcd23b4306ace
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509436"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226635"
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -40,7 +40,7 @@ ms.locfileid: "52509436"
   
  存取本機檔案或本機目錄時，FTP 工作會使用「檔案」連接管理員或變數中儲存的路徑資訊。 但 FTP 工作存取遠端檔案或遠端目錄時則相反，是使用遠端伺服器上直接指定的路徑 (如 FTP 連接管理員中所指定)，或變數中儲存的路徑資訊。 如需詳細資訊，請參閱[檔案連接管理員](../../integration-services/connection-manager/file-connection-manager.md)和 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
   
- 這表示，FTP 工作可接收多個檔案和刪除多個遠端檔案；而如果此工作使用連接管理員，則只能傳送一個檔案且只能刪除一個本機檔案，因為「檔案」連接管理員只能存取一個檔案。 若要存取多個本機檔案，FTP 工作必須使用變數提供路徑資訊。 例如，含有 "C:\Test\\*.txt" 的變數會提供支援刪除或傳送 Test 目錄中所有副檔名為 .txt 的檔案路徑。  
+ 這表示，FTP 工作可接收多個檔案和刪除多個遠端檔案；而如果此工作使用連接管理員，則只能傳送一個檔案且只能刪除一個本機檔案，因為「檔案」連接管理員只能存取一個檔案。 若要存取多個本機檔案，FTP 工作必須使用變數提供路徑資訊。 例如，變數如果含有 "C:\Test\&#42;.txt"，其提供的路徑便可支援刪除或傳送 [Test] 目錄中所有副檔名為 .txt 的檔案。  
   
  若要傳送多個檔案及存取多個本機檔案和目錄，您也可以將 FTP 工作加入「Foreach 迴圈」中，藉此多次執行 FTP 工作。 「Foreach 迴圈」可使用 For Each File 列舉值，於目錄中跨檔案列舉。 如需詳細資訊，請參閱 [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52509436"
 |刪除遠端檔案|刪除 FTP 伺服器上的檔案。|  
   
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 工作上可用的自訂記錄項目  
- 下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表列出 FTP 工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "52509436"
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題**： [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相關主題**：[FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  指出當 FTP 作業失敗時，FTP 工作是否結束。  
@@ -147,13 +147,13 @@ ms.locfileid: "52509436"
  **[RemoteVariable]**  
  選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立使用者定義變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、加入變數  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **[RemotePath]**  
  選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
- **相關主題** [FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **相關主題：**[FTP 連線管理員](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 動態選項  
   
@@ -161,7 +161,7 @@ ms.locfileid: "52509436"
  **[LocalVariable]**  
  選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、加入變數  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、新增變數  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **[LocalPath]**  

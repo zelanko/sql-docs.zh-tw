@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc09bcca6e70d80e256cba8cd8a1ad6a477a4742
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545537"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130718"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>教學課程：設定伺服器和行動用戶端之間的複寫 (合併式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "52545537"
 > - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
   
   
-**完成本教學課程的估計時間：60 分鐘**  
+**完成這個教學課程的估計時間：60 分鐘**  
   
 ## <a name="configure-a-publisher-for-merge-replication"></a>設定合併式複寫的發行者
 在這一節中，您會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立合併式發行集，以發行 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中 **Employee**、**SalesOrderHeader** 和 **SalesOrderDetail** 資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入新增至發行集存取清單 (PAL)。  
@@ -205,7 +205,7 @@ ms.locfileid: "52545537"
 
    ![將資料庫新增至訂閱者的選項](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. 在 [合併代理程式安全性] 頁面上，選取省略符號 ([...]) 按鈕。 在 [處理帳戶] 方塊中輸入 <訂閱者電腦名稱>**\repl_merge**，並提供此帳戶的密碼。 依序選取 [確定] 和 [下一步]，然後再次選取 [下一步]。  
+8. 在 [合併代理程式安全性] 頁面上，選取省略符號 (**...**) 按鈕。 在 [處理帳戶] 方塊中輸入 <訂閱者電腦名稱>**\repl_merge**，並提供此帳戶的密碼。 依序選取 [確定] 和 [下一步]，然後再次選取 [下一步]。  
 
    ![[合併代理程式安全性] 的選項](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -251,7 +251,7 @@ ms.locfileid: "52545537"
 如需詳細資訊，請參閱：  
 - [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)  
 - [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [含參數化篩選之合併式發行集的快照集](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [含參數化篩選之合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>同步處理合併式發行集的訂閱
 

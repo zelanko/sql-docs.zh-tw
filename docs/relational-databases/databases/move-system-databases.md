@@ -28,12 +28,12 @@ ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3ae1a8437ddf73b371f317d6a9c85f200cff8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531476"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136118"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ ms.locfileid: "52531476"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  將一個或多個檔案移到新位置。  
 
-4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或伺服器。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或伺服器。 如需詳細資訊，請參閱 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 5.  執行下列查詢以驗證檔案變更。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52531476"
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     如需詳細資訊，請參閱 [启动、停止、暂停、继续、重启 SQL Server 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  對於要移動的每個檔案，使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來執行下列陳述式。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52531476"
   
 2.  在 **[SQL Server 服務]** 節點中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體 (例如 **[SQL Server (MSSQLSERVER)]**)，然後選擇 **[屬性]**。  
   
-3.  在 [SQL Server (<執行個體名稱>) 屬性]**** 對話方塊中，按一下 [啟動參數] 索引標籤。  
+3.  在 [SQL Server () 屬性] 對話方塊中，按一下 [啟動參數] 索引標籤。  
   
 4.  在 [現有參數] 方塊中，選取 -d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "52531476"
 ##  <a name="Resource"></a> 移動 Resource 資料庫  
  Resource 資料庫的位置是 \<*磁碟機*>:\Program Files\Microsoft SQL Server\MSSQL\<版本>.\<*執行個體名稱*>\MSSQL\Binn\\。 此資料庫無法移動。  
   
-##  <a name="Follow"></a> 後續工作：移動所有系統資料庫之後  
+##  <a name="Follow"></a> 後續操作：移動所有系統資料庫之後  
  如果您將所有系統資料庫移動至新的磁碟機或磁碟區，或是移動至使用不同磁碟機代號的另一部伺服器，請進行下列更新。  
   
 -   變更 SQL Server Agent 記錄路徑。 如果您未更新此路徑，SQL Server Agent 將無法啟動。  

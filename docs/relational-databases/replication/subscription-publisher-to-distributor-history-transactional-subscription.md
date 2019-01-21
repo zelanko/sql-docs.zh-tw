@@ -13,12 +13,12 @@ ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4622234e579d055635594f5dbfbd097f8943339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 793420d352b25d969c5cd618861c9b355dea8491
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675976"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131978"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>訂閱，發行者到散發者記錄 (交易式訂閱)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ ms.locfileid: "47675976"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [監視複寫](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [複寫代理程式概觀](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

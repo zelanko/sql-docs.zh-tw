@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c77e32b019f9b801daaa58e480d4825725f15e8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d1f2c1cc7c40e3992f2cd28a777b48e0f927cf87
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697258"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135848"
 ---
 # <a name="database-engine-scripting"></a>Database Engine 指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "51697258"
   
 -   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [檔案]/[開啟] 功能表，在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中開啟此檔案。  
   
--   使用 **-i***input_file* 參數搭配 **sqlcmd** 公用程式來執行此檔案。  
+-   使用 **-i**_input_file_ 參數搭配 **sqlcmd** 公用程式來執行此檔案。  
   
 -   使用 **-QueryFromFile** 參數搭配 **PowerShell 指令碼中的** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cmdlet 來執行此檔案。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "51697258"
   
 ## <a name="see-also"></a>另請參閱  
  [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)   
- [教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教學課程：撰寫 Transact-SQL 陳述式](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

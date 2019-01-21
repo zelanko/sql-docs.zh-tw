@@ -20,12 +20,12 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5cb5603b98701597847e1997c17714affa7b923
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535277"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136068"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "52535277"
   
      將「訂閱者」升級到 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新本會升級該「訂閱者」端之訂閱所使用的「合併代理程式」。 若要利用各項新功能與效能最佳化，則需要使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本的「合併代理程式」。  
   
--   如果訂閱透過快速連線進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **-ParallelUploadDownload** 參數。  
+-   如果訂閱透過快速連接進行同步處理，且變更從「發行者」和「訂閱者」端送出，請使用「合併代理程式」的 **–ParallelUploadDownload** 參數。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數：**-ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進新的「合併代理程式」參數： **–ParallelUploadDownload**。 設定此參數可讓「合併代理程式」平行處理上傳至「發行者」以及下載至「訂閱者」的變更。 這對於高網路頻寬的高容量環境非常有用。 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   
     -   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -136,16 +136,16 @@ ms.locfileid: "52535277"
   
 -   預先產生快照集及/或允許訂閱者在第一次同步處理時，要求快照集的產生與套用。  
   
-     使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)。  
+     使用上述一或兩個選項為使用參數化篩選的發行集提供快照集。 如果不指定任何選項，訂閱會使用一系列 SELECT 與 INSERT 陳述式進行初始化，而非使用 **bcp** 公用程式；此處理要慢很多。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>維護與監視考量  
   
 -   偶爾重新索引合併式複寫系統資料表。  
   
-     做為合併式複寫維護的一部份，請不時檢查與合併式複寫相關聯的系統資料表成長： **MSmerge_contents**、 **MSmerge_genhistory**、 **MSmerge_tombstone**、 **MSmerge_current_partition_mappings**和 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
+     進行合併式複寫的維護時，請偶爾檢查與合併式複寫相關的系統資料表成長情況：**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings** 及 **MSmerge_past_partition_mappings**。 定期重新整理資料表的索引。 如需詳細資訊，請參閱 [重新組織與重建索引](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
 -   使用複寫監視器內的 **[同步處理記錄]** 索引標籤監視同步處理效能。  
   
-     對於合併式複寫，「複寫監視器」會在 **[同步處理記錄]** 索引標籤中顯示同步處理期間處理之每個發行項的詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需檢視詳細統計資料的詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     對於合併式複寫，「複寫監視器」會在 **[同步處理記錄]** 索引標籤中顯示同步處理期間處理之每個發行項的詳細統計資料，包括在每個處理階段 (上傳變更、下載變更等等) 內花費的時間。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關檢視詳細統計資料的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
   

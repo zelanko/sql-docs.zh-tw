@@ -1,7 +1,7 @@
 ---
-title: 步驟 6：加入及設定查閱轉換 | Microsoft Docs
+title: 步驟 6：新增及設定查閱轉換 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,36 +11,37 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8356a7ff8ee0cdb0e55bcd313a01a8ce1fe045ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765566"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143374"
 ---
-# <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>課程 1-6 - 新增和設定查詢轉換
-在設定一般檔案來源從來源檔擷取資料之後，下一項工作是要定義所需要的查閱轉換來取得 **CurrencyKey** 和 **DateKey**的值。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在此教學課程中，查閱轉換使用 OLE DB 連接管理員來連接到資料庫，該資料庫包含的資料就是參考資料集的來源。  
+# <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>課程 1-6：新增及設定查閱轉換
+
+在設定「一般檔案」來源以從來源檔案擷取資料之後，您需定義取得 **CurrencyKey** 和 **DateKey** 值所需的「查閱」轉換。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在本教學課程中，「查閱」轉換會使用 OLE DB 連線管理員，以連線到包含參考資料集之來源資料的資料庫。  
   
 > [!NOTE]  
-> 您也可以將查閱轉換設定為連接到包含參考資料集的快取。 如需相關資訊，請參閱 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)。  
+> 您也可以將查閱轉換設定為連接到包含參考資料集的快取。 如需詳細資訊，請參閱[查閱轉換](../integration-services/data-flow/transformations/lookup-transformation.md)。  
   
-在此教學課程中，您會在封裝中加入和設定下列兩個查閱轉換元件：  
+在此工作中，您會在套件中新增及設定下列兩個「查閱」轉換元件：  
   
--   一個轉換是基於一般檔案中相符的 **CurrencyID** 資料行值，來查閱 **DimCurrency** 維度資料表之 **CurrencyKey** 資料行的值。  
+-   一個轉換會根據一般檔案中相符的 **CurrencyID** 資料行值，查閱 **DimCurrency** 維度資料表之 **CurrencyKey** 資料行的值。  
   
--   一個轉換是基於一般檔案中相符的 **CurrencyDate** 資料行值，來查閱 **DimDate** 維度資料表之 **DateKey** 資料行的值。  
+-   一個轉換會根據一般檔案中相符的 **CurrencyDate** 資料行值，查閱 **DimDate** 維度資料表之 **DateKey** 資料行的值。  
   
-在這兩種案例中，查閱轉換將利用您先前建立的 OLE DB 連接管理員。  
+在這兩種情況下，「查閱」轉換都會使用您先前建立的 OLE DB 連線管理員。  
   
-### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>若要加入及設定查閱貨幣索引鍵轉換  
+## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>新增及設定查閱貨幣索引鍵轉換  
   
-1.  在 [SSIS 工具箱] 中，展開 [通用]，然後將 [查閱] 拖曳至 [資料流程] 索引標籤的設計介面中。將 [查閱] 直接放在 [Extract Sample Currency Data (擷取範例貨幣資料)] 來源下面。  
+1.  在 [SSIS 工具箱] 中，展開 [通用]，然後將 [查閱] 拖曳至 [資料流程] 索引標籤的設計介面中。將 [查閱] 直接放在 [擷取範例貨幣資料] 來源下面。  
   
-2.  按一下 [Extract Sample Currency Data (擷取範例貨幣資料)] 一般檔案來源，將藍色箭頭拖曳至新增的 [查閱] 轉換來連接兩個元件。  
+2.  選取 [擷取範例貨幣資料] 一般檔案來源，然後將其藍色箭頭拖曳至剛新增的 [查閱] 轉換，以連接這兩個元件。  
   
-3.  在 [資料流程] 設計介面中，按一下 [查閱] 轉換中的 [查閱]，將名稱變更為 [Lookup Currency Key (查閱貨幣索引鍵)]。  
+3.  在 [資料流程] 設計介面中，於 [查閱] 轉換中選取 [查閱]，然後將名稱變更為**查閱貨幣索引鍵**。  
   
-4.  按兩下 [Lookup Currency Key (查閱貨幣索引鍵)] 轉換，即可顯示「查閱轉換編輯器」。  
+4.  按兩下 [查閱貨幣索引鍵] 轉換，以顯示 [查閱轉換編輯器]。  
   
 5.  在 [一般] 頁面上，進行下列選擇：  
   
@@ -52,7 +53,7 @@ ms.locfileid: "47765566"
   
     1.  在 [OLE DB 連接管理員] 對話方塊中，確定 [localhost.AdventureWorksDW2012] 已顯示。  
   
-    2.  選取 [使用 SQL 查詢的結果]，然後輸入或複製下列 SQL 陳述式：  
+    2.  選取 [使用 SQL 查詢的結果]，然後輸入或貼上下列 SQL 陳述式：  
   
         ```sql
         SELECT * FROM [dbo].[DimCurrency]
@@ -61,6 +62,7 @@ ms.locfileid: "47765566"
             'DEM', 'EUR', 'FRF', 'GBP', 'JPY',
             'MXN', 'SAR', 'USD', 'VEB')
         ```  
+    3.  選取 [預覽] 以確認查詢結果。
   
 7.  在 [資料行] 頁面上，進行下列選擇：  
   
@@ -68,21 +70,21 @@ ms.locfileid: "47765566"
   
     2.  在 [可用的查閱資料行] 清單中，選取 [CurrencyKey] 左邊的核取方塊。  
   
-8.  按一下 [確定]，回到 [資料流程] 設計介面。  
+8.  選取 [確定]以返回 [資料流程] 設計介面。  
   
-9. 以滑鼠右鍵按一下 [Lookup Currency Key (查閱貨幣索引鍵)] 轉換，然後按一下 [屬性]。  
+9. 在 [查閱貨幣索引鍵] 轉換上按一下滑鼠右鍵，然後選取 [屬性]。  
   
-10. 在 [屬性] 視窗中，確認 [LocaleID] 屬性是設為 [英文 (美國)]，[DefaultCodePage] 屬性是設為 [1252]。  
+10. 在 [屬性] 視窗中，確認 [LocaleID] 屬性是 [英文 (美國)]，[DefaultCodePage] 屬性是 [1252]。  
   
-### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>若要加入和設定查閱日期索引鍵轉換  
+## <a name="add-and-configure-the-lookup-date-key-transformation"></a>新增及設定查閱日期索引鍵轉換  
   
-1.  在 [SSIS 工具箱] 中，將 [查閱] 拖曳至 [資料流程] 設計介面中。 將 [查閱] 直接放在 [Lookup Currency Key (查閱貨幣索引鍵)] 轉換下面。  
+1.  在 [SSIS 工具箱] 中，將 [查閱] 拖曳至 [資料流程] 設計介面中。 將這個 [查閱] 直接放在 [查閱貨幣索引鍵] 轉換下面。  
   
-2.  按一下 [Lookup Currency Key (查閱貨幣索引鍵)] 轉換，將綠色箭頭拖曳至新增的 [查閱] 轉換來連接兩個元件。  
+2.  選取 [查閱貨幣索引鍵] 轉換，然後將其藍色箭頭拖曳至新的 [查閱] 轉換，以連接這兩個元件。  
   
-3.  在 [輸入輸出選擇] 對話方塊的 [輸出] 清單方塊中，按一下 [查閱比對輸出]，然後按一下 [確定]。  
+3.  在 [輸入輸出選擇] 對話方塊的 [輸出] 清單方塊中，選取 [查閱比對輸出]，然後選取 [確定]。  
   
-4.  在 [資料流程] 設計介面中，於新增的 [查閱] 轉換中按一下 [查閱]，將名稱變更為 [Lookup Date Key (查閱日期索引鍵)]。  
+4.  在 [資料流程] 設計介面上，於剛新增的 [查閱] 轉換中選取 [查閱] 名稱，然後將名稱變更為**查閱日期索引鍵**。  
   
 5.  按兩下 [Lookup Date Key (查閱日期索引鍵)] 轉換。  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47765566"
   
 7.  在 [連接] 頁面上，進行下列選擇：  
   
-    1.  在 [OLE DB 連接管理員] 對話方塊中，確定 [localhost.AdventureWorksDW2012] 已顯示。  
+    1.  在 [OLE DB 連線管理員] 對話方塊中，確定已顯示 **localhost.AdventureWorksDW2012**。  
   
     2.  在 [使用資料表或檢視] 方塊中，輸入或選取 **[dbo].[DimDate]**。  
   
@@ -102,17 +104,17 @@ ms.locfileid: "47765566"
   
 9. 在 [進階] 頁面上，檢閱快取選項。  
   
-10. 按一下 [確定]，回到 [資料流程] 設計介面。  
+10. 選取 [確定]以返回 [資料流程] 設計介面。  
   
-11. 以滑鼠右鍵按一下 [Lookup Date Key (查閱日期索引鍵)] 轉換，然後按一下 [屬性]。  
+11. 在 [查閱日期索引鍵] 轉換上按一下滑鼠右鍵，然後選取 [屬性]。
   
-12. 在 [屬性] 視窗中，確認 [LocaleID] 屬性是設為 [英文 (美國)]，[DefaultCodePage] 屬性是設為 [1252]。  
+12. 在 [屬性] 視窗中，確認 [LocaleID] 屬性是 [英文 (美國)]，[DefaultCodePage] 屬性是 [1252]。  
   
-## <a name="next-task-in-lesson"></a>本課程的下一項工作  
+## <a name="go-to-next-task"></a>移至下一個工作
 [步驟 7：新增及設定 OLE DB 目的地](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
+[查閱轉換](../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   
   

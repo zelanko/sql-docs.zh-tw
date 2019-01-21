@@ -18,18 +18,18 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703096"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299595"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 
 傳回以 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中指定的格式與選用文化特性格式化的值。 將 FORMAT 函數用於將日期/時間與數值視為字串的地區設定感知格式化作業。 針對一般資料類型轉換，請使用 CAST 或 CONVERT。  
@@ -76,11 +76,11 @@ FORMAT ( value, format [, culture ] )
   
 |類別目錄|類型|.NET 類型|  
 |--------------|----------|---------------|  
-|數值|bigint|Int64|  
+|數值|BIGINT|Int64|  
 |數值|ssNoversion|Int32|  
 |數值|SMALLINT|Int16|  
 |數值|TINYINT|Byte|  
-|數值|decimal|SqlDecimal|  
+|數值|Decimal|SqlDecimal|  
 |數值|NUMERIC|SqlDecimal|  
 |數值|FLOAT|Double|  
 |數值|REAL|Single|  

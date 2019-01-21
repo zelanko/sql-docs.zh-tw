@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e63f83970eaf4d96f4d4f02494716914e8ca6a9c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8f5db32be5b749ad2f9b83050c3d4edb0ae30c27
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662927"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226475"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51662927"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DUP_KEY|  
-|訊息文字|發現物件名稱 '%.*ls' 和索引名稱 '%.\*ls' 的重複索引鍵，CREATE UNIQUE INDEX 已結束。  重複的索引鍵值為 %ls。|  
+|訊息文字|發現物件名稱 '%.\*ls' 和索引名稱 '%.\*ls' 的重複索引鍵，CREATE UNIQUE INDEX 已結束。  重複的索引鍵值為 %ls。|  
   
 ## <a name="explanation"></a>說明  
 當您嘗試建立唯一索引，而且資料表中的多個資料列包含指定的重複值時，就會發生這項錯誤。 當您建立索引並指定 UNIQUE 關鍵字，或者建立 UNIQUE 條件約束時，就會建立唯一索引。 資料表無法包含在索引或條件約束中定義的資料行內具有重複值的任何資料列。  
@@ -60,7 +60,7 @@ SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstN
   
 -   當您選擇唯一索引或條件約束的資料行時，請選取已定義為 NOT NULL 的資料行。 這樣做可以排除多個資料列的索引鍵值包含 NULL 而導致違反唯一性的可能。  
   
--   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需在資料表中移除重複資料列的詳細資訊，請參閱知識庫文件 139444：[How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444)(如何在 SQL Server 中移除資料表中的重複資料列)。  
+-   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需有關移除資料表中重複資料列的資訊，請參閱知識庫文件 139444：[如何在 SQL Server 中移除資料表中的重複資料列](https://support.microsoft.com/kb/139444) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

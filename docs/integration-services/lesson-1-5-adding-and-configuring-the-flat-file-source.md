@@ -1,7 +1,7 @@
 ---
-title: 步驟 5：加入和設定一般檔案來源 | Microsoft Docs
+title: 步驟 5：新增及設定一般檔案來源 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,44 +11,44 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3417579b121d4680b18cfd896bb3ddd676eca920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a02f4e9a2d27ea827f312ee47b80d93635baa29
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600446"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143238"
 ---
-# <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>課程 1-5 - 加入和設定一般檔案來源
-在這項工作中，您會在封裝中加入和設定一般檔案來源。 一般檔案來源是一個資料流程元件，它使用一般檔案連接管理員所定義的中繼資料，來指定轉換處理序要從一般檔案擷取之資料的格式和結構。 一般檔案來源可設定為使用一般檔案連接管理員提供的檔案格式定義，從單個一般檔案擷取資料。  
+# <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>課程 1-5：新增及設定一般檔案來源
+在此工作中，您會在套件中新增及設定「一般檔案」來源。 「一般檔案」來源是一個資料流程元件，此元件會使用「一般檔案」連線管理員所定義的中繼資料。 此中繼資料會指定轉換程序要從一般檔案中擷取之資料的格式和結構。 「一般檔案」來源會使用「一般檔案」連線管理員中的格式定義，從單一一般檔案擷取資料。  
   
-在此教學課程中，您將設定一般檔案來源使用您先前建立的 **[範例一般檔案來源資料]** 連接管理員。  
+針對此工作，您需設定「一般檔案」來源，以使用您先前建立的 [範例一般檔案來源資料] 連線管理員。  
   
-### <a name="to-add-a-flat-file-source-component"></a>若要加入一般檔案來源元件  
+## <a name="add-a-flat-file-source-component"></a>新增一般檔案來源元件  
   
-1.  按兩下 [擷取範例貨幣資料] 資料流程工作，或按一下 [資料流程] 索引標籤，來開啟 [資料流程] 設計師。  
+1.  若要開啟 [資料流程] 設計工具，請按兩下 [擷取範例貨幣資料] 資料流程工作，或選取 [資料流程] 索引標籤。  
   
 2.  在 [SSIS 工具箱] 中，展開 [其他來源]，然後將 [一般檔案來源] 拖曳至 [資料流程] 索引標籤的設計介面中。  
   
-3.  在 [資料流程] 設計介面中，以滑鼠右鍵按一下新加入的 [一般檔案來源]，按一下 [重新命名]，將名稱變更為**擷取範例貨幣資料**。  
+3.  在 [資料流程] 設計介面上，於剛新增的 [一般檔案來源] 上按一下滑鼠右鍵，選取 [重新命名]，然後將名稱變更為**擷取範例貨幣資料**。  
   
-4.  按兩下一般檔案來源，來開啟 [一般檔案來源編輯器] 對話方塊。  
+4.  按兩下「一般檔案」來源以開啟 [一般檔案來源編輯器] 對話方塊。  
   
-5.  在 **[一般檔案連接管理員]** 方塊中，選取 **範例一般檔案來源資料**。  
+5.  在 **[一般檔案連線管理員]** 欄位中，選取 [範例一般檔案來源資料]。  
   
-6.  按一下 **[資料行]** 並確認資料行的名稱正確無誤。  
+6.  選取 [資料行] 並確認資料行的名稱正確無誤。  
   
-7.  按一下 [確定] 。  
+7.  選取 [確定]。  
   
-8.  以滑鼠右鍵按一下一般檔案來源，然後按一下 **[屬性]**。  
+8.  在「一般檔案」來源上按一下滑鼠右鍵，然後選取 [屬性]。  
   
-9. 在 [屬性] 視窗中，確認 **LocaleID** 屬性是設為 **[英文 (美國)]**。  
+9. 在 [屬性] 視窗中，確認 [LocaleID] 屬性是設為 [英文 (美國)]。  
   
-## <a name="next-task-in-lesson"></a>本課程的下一項工作  
+## <a name="go-to-next-task"></a>移至下一個工作
 [步驟 6：新增及設定查閱轉換](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [一般檔案來源](../integration-services/data-flow/flat-file-source.md)  
-[一般檔案連線管理員編輯器 &#40;一般頁面&#41;](../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
+[一般檔案連線管理員](../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   
   

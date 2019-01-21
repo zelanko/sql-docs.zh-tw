@@ -1,7 +1,7 @@
 ---
 title: SQL Server 複寫 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 249fedd79398097fffbffae3afc5effb275dd6c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fe7764673cb09622aa7525c6b2c27d905fdadd6f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407275"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124738"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +29,113 @@ ms.locfileid: "52407275"
 
  複寫的替代方法是使用 Microsoft Sync Framework 以同步處理資料庫。 Sync Framework 包含多個元件以及一個直覺式且彈性的 API，而此 API 可簡化 SQL Server、SQL Server Express、SQL Server Compact 和 SQL Azure 資料庫之間的同步處理。 Sync Framework 也會包含類別，您可以調整這些類別以同步處理 SQL Server 資料庫與 ADO.NET 相容的任何其他資料庫。 如需 Sync Framework 資料庫同步處理元件的詳細文件，請參閱 [同步處理資料庫](https://go.microsoft.com/fwlink/?LinkId=209079)。 如需 Sync Framework 的概觀，請參閱 [Microsoft Sync Framework 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=209078)。 如需 Sync Framework 與合併式複寫的比較，請參閱 [概觀和案例](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)。  
   
- **依區域瀏覽**  
- - [新功能](../../relational-databases/replication/what-s-new-replication.md)  
- - [回溯相容性](../../relational-databases/replication/replication-backward-compatibility.md)  
- - [複寫功能及工作](../../relational-databases/replication/replication-features-and-tasks.md)  
- - [技術參考](../../relational-databases/replication/technical-reference-replication.md)  
+
+## <a name="whats-new"></a>新功能 
+- SQL Server 2017 尚未在 SQL Server 複寫中導入重大的新功能。 
+- SQL Server 2016 尚未在 SQL Server 複寫中導入重大的新功能。 
+
+如需回溯相容性資訊，請參閱[複寫回溯相容性](replication-backward-compatibility.md) 
+
+
+ ## <a name="replication-security"></a>複寫安全性
+  
+-   [檢視及修改複寫安全性設定](security/view-and-modify-replication-security-settings.md)  
+-   [管理發行集存取清單中的登入](security/manage-logins-in-the-publication-access-list.md)  
+  
+## <a name="publishing-and-distribution"></a>發行和散發  
+  
+-   [設定發行和散發](configure-publishing-and-distribution.md)   
+-   [檢視和修改發行集屬性](publish/view-and-modify-publication-properties.md)   
+-   [停用發行和散發](disable-publishing-and-distribution.md)  
+  
+## <a name="publications-and-articles"></a>發行集和發行項 
+  
+-   [Create a Publication](publish/create-a-publication.md)    
+-   [定義發行項](publish/define-an-article.md)   
+-   [檢視和修改發行集屬性](publish/view-and-modify-publication-properties.md)   
+-   [檢視和修改發行項屬性](publish/view-and-modify-article-properties.md)    
+-   [刪除發行集](publish/delete-a-publication.md)   
+-   [刪除發行項](publish/delete-an-article.md)    
+-   [從 Oracle 資料庫建立發行集](publish/create-a-publication-from-an-oracle-database.md)   
+-   [設定訂閱的到期時間](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [指定結構描述選項](publish/specify-schema-options.md)  
+-   [複寫結構描述變更](publish/replicate-schema-changes.md)    
+-   [管理識別資料行](publish/manage-identity-columns.md)   
+-   [設定合併式發行集的相容性層級](publish/set-the-compatibility-level-for-merge-publications.md)  
+  
+### <a name="snapshot-options"></a>快照集選項  
+  
+-   [設定快照集屬性](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [透過 FTP 傳遞快照集](publish/deliver-a-snapshot-through-ftp.md) 
+  
+### <a name="filter-data"></a>篩選資料  
+  
+-   [定義及修改資料行篩選](publish/define-and-modify-a-column-filter.md)    
+-   [定義及修改靜態資料列篩選](publish/define-and-modify-a-static-row-filter.md)    
+-   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [最佳化參數化資料列篩選](publish/optimize-parameterized-row-filters.md)    
+-   [定義和修改合併發行項之間的聯結篩選](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
+  
+### <a name="transactional-replication-options"></a>異動複寫選項  
+  
+-   [設定對交易式發行項之資料變更的傳播方法](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
+-   [啟用交易式發行集的更新訂閱](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+  
+### <a name="merge-replication-options"></a>合併式複寫選項  
+  
+-   [定義合併資料表發行項之間的邏輯記錄關聯性](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [指定合併式複寫屬性](merge/specify-merge-replication-properties.md)    
+-   [指定合併發行項解析程式](publish/specify-a-merge-article-resolver.md)    
+
+  
+## <a name="manage-subscriptions"></a>管理訂閱  
+  
+-   [建立提取訂閱](create-a-pull-subscription.md)    
+-   [檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)    
+-   [刪除提取訂閱](delete-a-pull-subscription.md)    
+-   [建立發送訂閱](create-a-push-subscription.md)   
+-   [檢視及修改發送訂閱屬性](view-and-modify-push-subscription-properties.md)   
+-   [刪除發送訂閱](delete-a-push-subscription.md)   
+-   [指定同步處理排程](specify-synchronization-schedules.md)    
+-   [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [為非 SQL Server 訂閱者建立訂閱](create-a-subscription-for-a-non-sql-server-subscriber.md)  
+  
+## <a name="synchronize-subscriptions"></a>同步處理訂閱  
+  
+-   [建立和套用初始快照集](create-and-apply-the-initial-snapshot.md)   
+-   [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [從備份初始化交易式訂閱 &#40;複寫 Transact-SQL 程式設計&#41;](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [手動初始化訂閱](initialize-a-subscription-manually.md)    
+-   [同步處理提取訂閱](synchronize-a-pull-subscription.md)    
+-   [同步處理發送訂閱](synchronize-a-push-subscription.md)   
+-   [重新初始化訂閱](reinitialize-a-subscription.md)    
+-   [在同步處理期間執行指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [為合併發行項實作商務邏輯處理常式](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [偵錯商務邏輯處理常式 &#40;複寫程式設計&#41;](debug-a-business-logic-handler-replication-programming.md)    
+-   [在同步處理期間控制觸發程序和條件約束的行為 &#40;複寫 Transact-SQL 程式設計&#41;](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
+-   [為合併發行項實作自訂衝突解析程式](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+  
+## <a name="administration"></a>系統管理 
+  
+-   [處理複寫代理程式設定檔](agents/work-with-replication-agent-profiles.md)   
+-   [驗證訂閱者端的資料](validate-data-at-the-subscriber.md)    
+-   [使用參數化篩選管理合併式發行集的資料分割](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
+-   [將資料大量載入合併式發行集中的資料表 &#40;複寫 Transact-SQL 程式設計&#41;](bulk-load-data-into-tables-in-a-merge-publication.md)    
+-   [清除合併中繼資料 &#40;複寫 Transact-SQL 程式設計&#41;](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
+-   [執行合併發行項的虛擬更新 &#40;複寫 Transact-SQL 程式設計&#41;](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
+-   [在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [為異動複寫啟用協調備份 &#40;複寫 Transact-SQL 程式設計&#41;](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
+-   [停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
+-   [設定 Oracle 發行者的交易集作業 &#40;複寫 Transact-SQL 程式設計&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+-   [升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+  
+## <a name="monitor"></a>監視器
+  
+-   [允許非管理員使用複寫監視器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
+-   [以程式設計方式監視複寫](monitor/programmatically-monitor-replication.md)    
+-   [在散發資料庫中檢視複寫的命令和其他資訊 &#40;複寫 Transact-SQL 程式設計&#41;](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [檢視合併式發行集的衝突資訊 &#40;複寫 Transact-SQL 程式設計&#41;](view-conflict-information-for-merge-publications.md) 
+-   [針對異動複寫測量延遲及驗證連線](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

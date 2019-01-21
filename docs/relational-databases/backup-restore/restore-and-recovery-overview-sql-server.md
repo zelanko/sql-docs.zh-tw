@@ -18,15 +18,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], about restoring databases
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afc9d46066c435bc14f2e14fedb0a285ac3b95e3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672827"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242039"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,15 +146,15 @@ ms.locfileid: "51672827"
 ##  <a name="DRA"></a> Database Recovery Advisor (SQL Server Management Studio)  
  Database Recovery Advisor 有助於建構實作最佳化正確還原順序的還原計畫。 我們已經處理了客戶所要求的許多已知資料庫還原問題和增強功能。 Database Recovery Advisor 導入的主要增強功能包括：  
   
--   **還原計畫演算法：**  用來建構還原計畫的演算法已經大幅改善，特別是針對複雜的還原狀況。 相較於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言，可更有效率地處理許多邊緣案例 (包括時間點還原的分岔案例)。  
+-   **還原計畫演算法：** 用來建構還原計畫的演算法已經大幅改善，特別是針對複雜的還原狀況。 相較於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言，可更有效率地處理許多邊緣案例 (包括時間點還原的分岔案例)。  
   
--   **時間點還原：**  Database Recovery Advisor 大幅簡化資料庫還原到特定時間點的作業。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **時間點還原：** Database Recovery Advisor 大幅簡化了將資料庫還原到特定時間點的作業。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
  如需有關 Database Recovery Advisor 的詳細資訊，請參閱下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理能力部落格：  
   
--   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx) \(英文\)  
   
--   [Recovery Advisor：使用 SSMS 建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx) \(英文\)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
  無。  

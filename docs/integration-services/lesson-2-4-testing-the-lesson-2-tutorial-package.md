@@ -1,7 +1,7 @@
 ---
-title: 步驟 4：測試第 2 課的教學課程封裝 | Microsoft Docs
+title: 步驟 4：測試第 2 課教學課程套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,23 +11,22 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f612768d1e4cd6bff6be8204b38c0a99e1eb285
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629511"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143198"
 ---
-# <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>課程 2-4 - 測試第 2 課的教學課程封裝
-利用現在已設定的 Foreach 迴圈容器和一般檔案連接管理員，第 2 課的封裝可反覆進行範例資料夾之 14 個一般檔案的集合。 每次一找到符合指定檔案名稱準則的檔案名稱時，Foreach 迴圈容器就會以該檔案名稱擴展使用者自訂變數。 然後，這個變數會更新一般檔案連接管理員的 ConnectionString 屬性，並建立與新的一般檔案之連接。 在連接到資料夾的下一個檔案之前，Foreach 迴圈容器會對新的一般檔案中的資料執行未修改過的資料流程工作。  
-  
-請利用下列程序來測試您已加入封裝中的新迴圈功能。  
+# <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>課程 2-4：測試第 2 課教學課程套件
+
+在現已設定好「Foreach 迴圈」容器和「一般檔案」連線管理員的情況下，第 2 課套件可逐一查看「範例資料」資料夾中的 14 個一般檔案。 每當某個檔案名稱與指定的準則相符時，「Foreach 迴圈」容器就會以該檔案名稱填入使用者定義的變數。 此變數會接著更新「一般檔案」連線管理員的 ConnectionString 屬性，以連線至該一般檔案。 然後，「Foreach 迴圈」容器會對該一般檔案中的資料執行未修改過的資料流程工作。  
   
 > [!NOTE]  
-> 如果您執行了第 1 課的套件，就必須先從 AdventureWorksDW2012 的 dbo.NewFactCurrencyRate 中刪除記錄，再執行這一課的套件，否則套件會失敗並出現錯誤，指出主索引鍵違規條件約束。 如果您是透過選取 [偵錯]/[開始偵錯] (或按下 F5) 來執行封裝，也會收到相同的錯誤，因為第 1 課和第 2 課都將執行。 第 2 課會嘗試插入已經在第 1 課中插入的記錄。  
+> 如果您已執行第 1 課的套件，就必須先從 AdventureWorksDW2012 的 dbo.NewFactCurrencyRate 資料表中刪除記錄，再執行這一課的套件。 第 2 課會嘗試插入已經在第 1 課中插入的記錄，這會造成錯誤。  
   
-## <a name="checking-the-package-layout"></a>檢查封裝配置  
-在測試封裝之前，您應該確認第 2 課封裝中的控制流程和資料流程是否包含下圖所顯示的物件。 資料流程應該與第 1 課的資料流程相同。  
+## <a name="check-the-package-layout"></a>檢查套件配置  
+在測試套件之前，請確認第 2 課套件中的控制流程和資料流程包含下列圖中所示的物件。 第 2 課的資料流程與第 1 課相同。  
   
 **控制流程**  
   
@@ -37,19 +36,19 @@ ms.locfileid: "51629511"
   
 ![套件中的資料流程](../integration-services/media/task9lesson1data.gif "套件中的資料流程")  
   
-### <a name="to-test-the-lesson-2-tutorial-package"></a>若要測試第 2 課的教學課程封裝  
+## <a name="test-the-lesson-2-tutorial-package"></a>測試第 2 課教學課程套件  
   
-1.  在 **[方案總管]** 中，以滑鼠右鍵按一下 **[Lesson 2.dtsx]** ，然後按一下 **[執行封裝]**。  
+1.  在 [方案總管] 中，於 [Lesson 2.dtsx] 上按一下滑鼠右鍵，然後選取 [執行封裝]。  
   
-    此時會執行封裝。 您可以在 [輸出] 視窗中確認每一個迴圈的狀態，或按一下 **[進度]** 索引標籤來確認。例如，您會看到有 1097 行已從 Currency_VEB.txt 檔案加入目的地資料表中。  
+    隨即會執行套件。 您可以在 [輸出] 視窗中或透過選取 [進度] 索引標籤，來確認每個迴圈的狀態。例如，您會看到有 1,097 個資料列已從 Currency_VEB.txt 檔案新增到目的地資料表中。  
   
-2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
   
-## <a name="next-lesson"></a>下一課  
-[第 5 課：加入套件部署模型的 SSIS 套件組態](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+## <a name="go-to-next-lesson"></a>移至下一課  
+[第 3 課：使用 SSIS 來新增記錄功能](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[執行專案和封裝](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+[執行專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   

@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71be318c40c5776440bf427cad57ed3fb903e55a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540929"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143588"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
 在這個逐步解說中，您要建立 SQL Server 單元測試，以確認數個預存程序的行為。 您可以建立 SQL Server 單元測試，協助識別可能會導致不正確之應用程式行為的程式碼缺失。 您可以執行 SQL Server 單元測試和應用程式測試，作為自動化測試套件的一部分。  
@@ -274,7 +274,7 @@ ms.locfileid: "52540929"
   
 2.  以滑鼠右鍵按一下其中一個預存程序，然後按一下 [建立單元測試] 以顯示 [建立單元測試] 對話方塊。  
   
-3.  選取所有五個預存程序的核取方塊： **Sales.uspCancelOrder**、 **Sales.uspFillOrder**、 **Sales.uspNewCustomer**、 **Sales.uspPlaceNewOrder**及 **Sales.uspShowOrderDetails**。  
+3.  選取所有五個預存程序的核取方塊：**Sales.uspCancelOrder**、**Sales.uspFillOrder**、**Sales.uspNewCustomer**、**Sales.uspPlaceNewOrder** 及 **Sales.uspShowOrderDetails**。  
   
 4.  在 [專案] 下拉式清單中，選取 [建立新的 Visual C# 測試專案]。  
   
@@ -723,7 +723,7 @@ ms.locfileid: "52540929"
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|成功|  
     |Sales_uspShowOrderDetailsTest|成功|  
-    |Sales_uspFillOrderTest|測試失敗，發生下列錯誤：「ScalarValueCondition 條件 (scalarValueCondition2) 失敗: ResultSet 1 資料列 1 資料行 1: 值不相符，實際為 '-100'，預期為 '100'。」發生這個錯誤的原因是預存程序的定義包含次要錯誤。|  
+    |Sales_uspFillOrderTest|失敗會顯示下列錯誤：「ScalarValueCondition 條件 (scalarValueCondition2) 失敗: ResultSet 1 資料列 1 資料行 1: 值不相符，實際為 '-100'，預期為 '100'」。發生這個錯誤的原因是預存程序的定義包含次要錯誤。|  
   
     接下來，您將更正錯誤並重新執行測試。  
   
@@ -950,7 +950,7 @@ ms.locfileid: "52540929"
   
     測試失敗，而且會出現下列錯誤：  
   
-    **測試的方法 TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest 擲回例外狀況：System.Data.SqlClient.SqlException：您只能取消訂單。**  
+    **測試方法 TestProject1.SqlServerUnitTests1.Sales_uspCancelOrderTest 擲回例外狀況:System.Data.SqlClient.SqlException:您只能取消待處理訂單。**  
   
     接下來，您修改程式碼，以指出預期會發生例外狀況。  
   
@@ -968,7 +968,7 @@ ms.locfileid: "52540929"
     您指定預期會發生特定例外狀況。 您可以選擇性地指定特定的錯誤號碼。 如果您沒有加入此屬性，單元測試會失敗，而且 [測試結果] 視窗會出現訊息。  
   
     > [!IMPORTANT]  
-    > 目前 Visual Studio 2012 不支援 ExpectedSqlException 屬性。 如需解決此問題的詳細資訊，請參閱 [無法執行「預期的失敗」資料庫單元測試](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
+    > 目前 Visual Studio 2012 不支援 ExpectedSqlException 屬性。 如需解決此問題的詳細資訊，請參閱 [無法執行「預期的失敗」資料庫單元測試](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
   
 3.  在 [檔案] 功能表中，按一下 [儲存 SqlServerUnitTests1.cs]。  
   
@@ -990,6 +990,6 @@ ms.locfileid: "52540929"
 ## <a name="see-also"></a>另請參閱  
 [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [使用 SQL Server 單元測試驗證資料庫程式碼](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[如何：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[如何：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[操作說明：建立空白 SQL Server 單元測試](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[操作說明：設定 SQL Server 單元測試執行](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

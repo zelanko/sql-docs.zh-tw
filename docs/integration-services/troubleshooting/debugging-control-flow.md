@@ -20,12 +20,12 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcc1dd9aa113c53071363beefc5d9ad238144e28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef4d7e038c9c8ed4d22bbc49e0139f2408ca8afe
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796136"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134928"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含您可用於疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中之控制流程的功能及工具。  
@@ -53,7 +53,7 @@ ms.locfileid: "47796136"
 |當容器收到 **OnTaskFailed** 事件時。|由工作主機在失敗時呼叫。|  
 |當容器收到 **OnProgress** 事件時。|呼叫以更新工作執行相關的進度。|  
 |當容器收到 **OnQueryCancel** 事件時。|在可取消執行之工作處理期間的任何時間呼叫。|  
-|當容器收到 **OnVariableValueChanged** 事件時。|當變數的值變更時由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段呼叫。 變數的 RaiseChangeEvent 必須設為 [true]，方可引發此事件。<br /><br /> **\*\* 警告 \*\*** 與此中斷點相關聯的變數必須在 **容器** 範圍定義。 如果變數在封裝範圍定義，則中斷點不會出現。|  
+|當容器收到 **OnVariableValueChanged** 事件時。|當變數的值變更時由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行階段呼叫。 變數的 RaiseChangeEvent 必須設為 [true]，方可引發此事件。<br /><br /> **&#42;&#42; 警告 &#42;&#42;** 與此中斷點相關聯的變數必須在**容器**範圍定義。 如果變數在封裝範圍定義，則中斷點不會出現。|  
 |當容器收到 **OnCustomEvent** 事件時。|由工作呼叫，以引發自訂工作定義的事件。|  
   
  除可用於所有工作及容器的中斷條件之外，部份工作及容器還包含用於設定中斷點的特殊中斷條件。 例如，您可以在「For 迴圈」容器上啟用中斷條件，以設定在迴圈的每個反覆運算開始時暫停執行的中斷點。  

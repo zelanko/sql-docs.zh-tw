@@ -15,12 +15,12 @@ ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cfb463245cc649d010ce6ce97b49170ec37ac9e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 057d3f820ac0f580a6109d5b5c04ea43e8eabd9c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729596"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129708"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>驗證合併訂閱者的資料分割資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47729596"
  在「合併代理程式」驗證分割時，除了根據篩選運算式中所使用之函數傳回的值來驗證分割外，代理程式還會檢查快照集在使其無效的變更 (例如中繼資料清除作業或結構描述變更) 發生前是否已產生。 如果分割的快照集太舊，「合併代理程式」將傳回錯誤，且您必須根據目前的一般快照集為該「訂閱者」重新產生分割的快照集。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](../../relational-databases/replication/administration/administration-replication.md)   
- [複寫管理的最佳做法](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
+ [複寫管理常見問題集](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [驗證複寫的資料](../../relational-databases/replication/validate-replicated-data.md)  
+ [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

@@ -23,18 +23,18 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5deb2b29c70187bb0222e21df7193f300f7eb7b0
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: f8b1560ef694885ae0debbf06f2d61d23c5d0f66
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970539"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299395"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 教學課程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供設定、監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的圖形介面。 也讓您部署、監視以及升級應用程式所使用的資料層元件，例如資料庫。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 也提供用於編輯和偵錯指令碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 語言編輯器。  
   
@@ -47,7 +47,7 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
 以下是這些教學課程所涵蓋的內容： 
 
   
-- [教學課程：使用 SSMS 對 SQL Server 進行連線與查詢](connect-query-sql-server.md)
+- [教學課程：使用 SSMS 來連線及查詢 SQL Server](connect-query-sql-server.md)
 
     在本教學課程中，您將學習如何連線至您的 SQL Server 執行個體。 您也將學習一些基本的 Transact-SQL (T-SQL) 命令來建立和查詢新的資料庫。 
 
@@ -55,11 +55,11 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
 
     在本教學課程中，您將學習如何在 SSMS 中編寫各種物件的指令碼，包括資料庫和查詢。 
 
-- [教學課程：在 SSMS 中使用範本](templates-ssms.md)
+- [教學課程：使用 SSMS 中的範本](templates-ssms.md)
    
     在本教學課程中，您將學習如何使用在 SSMS 中預先建立的範本。 範本是鮮為人知的功能，其中存放了各種資料庫系統管理工作的大量 Transact-SQL 程式碼片段。 
 
-- [教學課程： SSMS 設定](ssms-configuration.md)
+- [教學課程：SSMS 設定](ssms-configuration.md)
 
     在本教學課程中，您將學習設定 SSMS 環境的基礎，例如變更環境配置。 本教學課程也會說明各種不同的 SSMS 元件。 
   
@@ -81,7 +81,7 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
 
   -   下載最新版的 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)。  
 
-第一節將引導您建立資料庫，但也可以在此處找到其他範例資料庫：[AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases) (AdventureWorks 範例資料庫)。 此處可以找到在 SSMS 中還原資料庫的說明：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+第一節將引導您建立資料庫，但如需其他範例資料庫，請參閱這裡：[AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases) \(英文\)。 如需有關在 SSMS 中還原資料庫的指示，請參閱這裡：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 
   

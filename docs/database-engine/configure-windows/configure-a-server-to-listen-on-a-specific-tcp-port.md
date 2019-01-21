@@ -18,12 +18,12 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0b8be637da67d9aa083fb4afbc024381c1b83a81
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605298"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132798"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>將伺服器設定為在特定 TCP 連接埠上接聽
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "51605298"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  在 [IPn 內容] 區域方塊的 [TCP 通訊埠] 方塊中，鍵入要此 IP 位址接聽的通訊埠編號，然後按一下 [確定]。 請以逗號分隔來指定多個連接埠。
+4.  在 **IP**_n_ **內容** 區域方塊的 **TCP 通訊埠** box, type the port number you want this IP address to listen on, and then click **確定**。 請以逗號分隔來指定多個連接埠。
 
     > [!NOTE] 
-    > 如果 [通訊協定] 索引標籤上的 [全部接聽] 設定設為 [是]，則只會使用 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 值，並會完整略過個別 **IP***n* 區段。 如果 [全部接聽] 設定設為 [否]，則會略過 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 設定，並改用個別 **IP***n* 區段上的 [TCP 連接埠]、[TCP 動態連接埠] 和 [啟用]。
-    > 每個 **IP***n* 區段都有 [啟用] 設定，其預設值為 [否]，這會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 略過此 IP 位址，即使已定義連接埠也一樣。  
+    > 如果 [通訊協定] 索引標籤上的 [全部接聽] 設定設為 [是]，則只會使用 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 值，而完全略過個別 **IP**_n_ 區段。 如果 [全部接聽] 設定設為 [否]，則會略過 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 設定，而改用個別 **IP**_n_ 區段上的 [TCP 連接埠]、[TCP 動態連接埠] 和 [已啟用] 設定。
+    > 每個 **IP**_n_ 區段都有一個 [已啟用] 設定，其預設值為 [否]，這會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 略過此 IP 位址，即使已定義連接埠也一樣。  
   
 5.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
   

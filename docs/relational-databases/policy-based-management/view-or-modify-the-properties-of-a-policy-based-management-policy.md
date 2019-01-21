@@ -14,12 +14,12 @@ ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e1d7799abc3a930e72a9040c537e99fe7641a641
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf3bb62c4008b870c50c230a6140fff2a6b8b802
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505905"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254507"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>檢視或修改原則式管理原則的屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52505905"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>若要檢視物件之所有原則的屬性  
   
-1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]，然後選取 [檢視]。 如需 [檢視原則 - <物件名稱>] 對話方塊可用選項的詳細資訊，請參閱[檢視原則對話方塊](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
+1.  在物件總管中，以滑鼠右鍵按一下伺服器、伺服器物件、資料庫或資料庫物件，指向 [原則]，然後選取 [檢視]。 如需有關 [檢視原則 - _物件名稱_] 對話方塊中可用選項的詳細資訊，請參閱[檢視原則對話方塊](../../relational-databases/policy-based-management/view-policies-dialog-box.md)。  
   
 2.  完成後，請按一下 **[關閉]**。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52505905"
   
 4.  按一下加號展開 **[原則]** 資料夾。  
   
-5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]。 如需 [開啟原則 - <原則名稱>] 對話方塊可用選項的詳細資訊，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
+5.  以滑鼠右鍵按一下您想要檢視或修改的原則，然後選取 [屬性]。 如需有關 [開啟原則 - _原則名稱_] 對話方塊中可用選項的詳細資訊，請參閱[建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md)和[建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)。  
   
 6.  完成後，請按一下 **[確定]**。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52505905"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
   
     ```  
     USE msdb;  

@@ -21,12 +21,12 @@ ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 8ae88c08604236c74915275c3b7edb515697d8ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5faae18ce730182218886cf46c711d16344cfd88
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652869"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125868"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 在實際伺服器上，為了防止無法預期的行為發生，我們建議您使用下列一種方法，僅在伺服器範圍啟用追蹤旗標：
 -   使用 Sqlservr.exe 的 **-T** 命令列啟動選項。 這是建議採用的最佳做法，因為它可以確定所有的陳述式在執行時，都啟用追蹤旗標。 其中包括啟動指令碼中的命令。 如需詳細資訊，請參閱 [sqlservr Application](../../tools/sqlservr-application.md)。  
--   只有當使用者或應用程式未在系統上並行執行陳述式時，才應使用 DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)**。  
+-   只有當使用者或應用程式未在系統上並行執行陳述式時，才使用 DBCC TRACEON **(**_trace#_ [**,** ...*.n*]**,-1)**。  
 
 追蹤旗標用來控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的運作方式來自訂特定性質。 追蹤旗標在啟用之後，會在伺服器中保持啟用狀態，直到您執行 DBCC TRACEOFF 陳述式停用它為止。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中有兩種類型的追蹤旗標：工作階段和全域。 工作階段追蹤旗標用於某個連接，而且只會在該連接顯示出來。 全域追蹤旗標是設在伺服器層級，只要是該伺服器上的連接，都看得到它們。 若要判定追蹤旗標的狀態，請使用 DBCC TRACESTATUS。 若要停用追蹤旗標，請使用 DBCC TRACEOFF。
   

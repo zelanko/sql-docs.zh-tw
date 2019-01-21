@@ -21,18 +21,18 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d52233102f5ebe9a812e8071556afa4aff0316f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b95da5f74481fed0053f31cde326fe271e79abc9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511706"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299215"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和時間資料類型與函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 本主題中的各節涵蓋所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式。
 -   [日期和時間資料類型](#DateandTimeDataTypes)  
@@ -99,11 +99,11 @@ ms.locfileid: "52511706"
 |函數|語法|傳回值|傳回資料類型|決定性|  
 |---|---|---|---|---|
 |[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|傳回指定之年、月、日的 **date** 值。|**date**|具決定性|  
-|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|以指定的精確度傳回指定日期與時間的 **datetime2** 值。|**datetime2(** *precision* **)**|具決定性|  
+|[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|以指定的精確度傳回指定日期與時間的 **datetime2** 值。|**datetime2(** _precision_ **)**|具決定性|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|傳回指定日期和時間的 **datetime** 值。|**datetime**|具決定性|  
-|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|以指定的時差和精確度傳回指定日期和時間的 **datetimeoffset** 值。|**datetimeoffset(** *precision* **)**|具決定性|  
+|[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|以指定的時差和精確度傳回指定日期和時間的 **datetimeoffset** 值。|**datetimeoffset(** _precision_ **)**|具決定性|  
 |[SMALLDATETIMEFROMPARTS](../../t-sql/functions/smalldatetimefromparts-transact-sql.md)|SMALLDATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute* )|傳回指定日期和時間的 **smlldatetime** 值。|**smalldatetime**|具決定性|  
-|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|以指定的精確度傳回指定時間的 **time** 值。|**time(** *precision* **)**|具決定性|  
+|[TIMEFROMPARTS](../../t-sql/functions/timefromparts-transact-sql.md)|TIMEFROMPARTS  ( *hour*, *minute*, *seconds*, *fractions*, *precision* )|以指定的精確度傳回指定時間的 **time** 值。|**time(** _precision_ **)**|具決定性|  
   
 ###  <a name="GetDateandTimeDifference"></a> 傳回日期和時間差異值的函式
   
@@ -127,10 +127,10 @@ ms.locfileid: "52511706"
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|傳回 SET DATEFIRST 之工作階段的目前值。|**tinyint**|不具決定性|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|將一週的第一天設為 1-7 其中一個數字。|不適用|不適用|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@***format_var* }|設定輸入 **datetime** 或 **smalldatetime** 資料時，日期部分 (月/日/年) 的順序。|不適用|不適用|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|設定輸入 **datetime** 或 **smalldatetime** 資料時，日期部分 (月/日/年) 的順序。|不適用|不適用|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|傳回目前使用中的語言名稱。 @@LANGUAGE 不是日期或時間函式。 不過，語言設定可能會影響日期函數的輸出。|不適用|不適用|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'***language***'** &#124; **@***language_var* }|設定工作階段和系統訊息的語言環境。 SET LANGUAGE 不是日期或時間函數。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'***language***'** ]|傳回所有支援語言之日期格式的詳細資訊。 **sp_helplanguage** 不是日期或時間預存程序。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_language_**'** &#124; **@***language_var* }|設定工作階段和系統訊息的語言環境。 SET LANGUAGE 不是日期或時間函數。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_language_**'** ]|傳回所有支援語言之日期格式的詳細資訊。 **sp_helplanguage** 不是日期或時間預存程序。 不過，語言設定會影響日期函數的輸出。|不適用|不適用|  
   
 ###  <a name="ValidateDateandTimeValues"></a> 驗證日期和時間值的函式
   

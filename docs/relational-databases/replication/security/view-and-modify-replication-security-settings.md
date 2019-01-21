@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21008fca4e8bb75b9daace2d83cd166dafc79eb9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9c15f88e1bf3e7d07d09c5d92ceff5a3face1ade
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521608"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135408"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>檢視及修改複寫安全性設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,17 +34,17 @@ ms.locfileid: "52521608"
   
      [限制事項](#Restrictions)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **若要檢視及修改複寫安全性設定，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
--   **後續操作：**[在您修改複寫安全性設定之後](#FollowUp)  
+-   **後續操作：**[修改複寫安全性設定之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -144,9 +144,9 @@ ms.locfileid: "52521608"
   
 1.  在發行者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更散發代理程式執行和連接到散發者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更「散發代理程式」執行和連接到「散發者」時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
-    -   若要變更散發代理程式連接到訂閱者所使用的內容，請按一下 [訂閱者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更「散發代理程式」連接到「訂閱者」所使用的內容，請按一下 **[訂閱者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
          若您使用佇列更新訂閱，佇列讀取器代理程式亦使用此處指定的內容，連接到訂閱者。  
   
@@ -156,11 +156,11 @@ ms.locfileid: "52521608"
   
 1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更散發代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更散發代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[散發代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
          若您使用佇列更新訂閱，佇列讀取器代理程式亦使用此處指定的內容，連接到訂閱者。  
   
-    -   若要變更散發代理程式連接到散發者所使用的內容，請按一下 [散發者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更散發代理程式連接到散發者所使用的內容，請按一下 **[散發者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -168,9 +168,9 @@ ms.locfileid: "52521608"
   
 1.  在發行者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更合併代理程式執行和連接到發行者與散發者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更合併代理程式執行和連接到發行者與散發者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
-    -   若要變更合併代理程式連接到訂閱者所使用的內容，請按一下 [訂閱者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更合併代理程式連接到訂閱者所使用的內容，請按一下 **[訂閱者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -178,15 +178,15 @@ ms.locfileid: "52521608"
   
 1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，可做下列變更：  
   
-    -   若要變更合併代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 [代理程式處理帳戶] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
+    -   若要變更合併代理程式執行和連接到訂閱者時所使用的帳戶，請按一下 **[代理程式處理帳戶]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[合併代理程式安全性]** 對話方塊中指定帳戶和密碼。  
   
-    -   若要變更合併代理程式連接到發行者與散發者所使用的內容，請按一下 [發行者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
+    -   若要變更合併代理程式連接到發行者與散發者所使用的內容，請按一下 **[發行者連接]** 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。 在 **[輸入連接資訊]** 對話方塊中指定內容。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>若要變更佇列讀取器代理程式執行時所使用的帳戶  
   
-1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面上，按一下散發資料庫旁的屬性 (**...**) 按鈕。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面上，按一下散發資料庫旁的屬性按鈕 (**…**)。  
   
 2.  在 [散發資料庫屬性 - \<資料庫>] 對話方塊中，按一下 [代理程式處理帳戶] 文字方塊旁的 [安全性設定] 按鈕。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "52521608"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>若要變更立即更新提取訂閱的安全性設定  
   
-1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，按一下 [發行者連接] 資料列，然後按一下資料列中的屬性 (**...**) 按鈕。  
+1.  在訂閱者端的 [訂閱屬性 - \<訂閱>] 對話方塊中，按一下 [發行者連接] 資料列，然後按一下資料列中的屬性按鈕 (**…**)。  
   
 2.  在 **[輸入連接資訊]** 對話方塊中，選取下列其中一個選項：  
   
@@ -568,16 +568,16 @@ ms.locfileid: "52521608"
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a> 後續操作：在您修改複寫安全性設定之後  
+##  <a name="FollowUp"></a> 後續操作：修改複寫安全性設定之後  
  變更代理程式的登入或密碼之後，您必須先停止並重新啟動代理程式，變更才會生效。  
   
 ## <a name="see-also"></a>另請參閱  
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [升級複寫指令碼 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [管理複寫的登入與密碼](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [用於複寫的身分識別和存取控制](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [複寫代理程式安全性模型](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

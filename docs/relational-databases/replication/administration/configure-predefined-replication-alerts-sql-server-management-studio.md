@@ -14,12 +14,12 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5738e4c46d7223561162d970a2ae9137df721191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b90293de93fd032f7ebc1ee77d839cc2211a7e9d
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505333"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136138"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>設定預先定義的複寫警示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "52505333"
   
 -   **複寫: 已卸除逾期的訂閱**  
   
--   **複寫: 驗證失敗後重新初始化訂閱**  
+-   **複寫：驗證失敗後重新初始化訂閱**  
   
--   **複寫: 訂閱者資料驗證失敗**  
+-   **複寫：訂閱者資料驗證失敗**  
   
--   **複寫: 訂閱者已經通過資料驗證**  
+-   **複寫：訂閱者已經通過資料驗證**  
   
 -   **複寫: 代理程式自訂關閉**  
   
- 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 如需如何存取此索引標籤的詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 在  中的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the **Warnings** tab in Replication Monitor. 如需有關存取此索引標籤的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
  除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需相關資訊，請參閱 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警示基礎結構，為其他複寫事件定義警示。 如需詳細資訊，請參閱[建立使用者定義的事件](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52505333"
   
     -   在 **[回應]** 頁面上，指定是否應傳送電子郵件及 (或) 是否應執行作業。  
   
-         如果警示為 [複寫：訂閱者的資料驗證失敗]，您可以指定複寫針對這個警示提供的回應作業：選取 [執行作業]，然後按一下瀏覽按鈕 (**...**)。在 **[尋找作業]** 對話方塊中，按一下 **[瀏覽]**。 在 **[瀏覽物件]** 對話方塊中，選取 **[重新初始化具有資料驗證失敗的訂閱]**。 在兩個開啟的對話方塊中按一下 **[確定]** 。 執行作業時，它會使用對預存程序的遠端程序呼叫 (RPC) 重新初始化訂閱。 如果「發行者」使用遠端「散發者」，則必須定義「發行者」端的遠端伺服器登入，以便建立從「散發者」到「發行者」的 RPC。  
+         如果警示為「複寫:訂閱者資料驗證失敗」，您可以指定複寫為此警示提供的回應作業：選取 [執行作業]，然後按一下瀏覽按鈕 (**…**)。 在 **[尋找作業]** 對話方塊中，按一下 **[瀏覽]**。 在 **[瀏覽物件]** 對話方塊中，選取 **[重新初始化具有資料驗證失敗的訂閱]**。 在兩個開啟的對話方塊中按一下 **[確定]** 。 執行作業時，它會使用對預存程序的遠端程序呼叫 (RPC) 重新初始化訂閱。 如果「發行者」使用遠端「散發者」，則必須定義「發行者」端的遠端伺服器登入，以便建立從「散發者」到「發行者」的 RPC。  
   
     -   在 **[選項]** 頁面上，自訂回應的文字。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52505333"
   
     -   在 **[回應]** 頁面上，指定是否應傳送電子郵件及 (或) 是否應執行作業。  
   
-         如果警示為 [複寫：訂閱者的資料驗證失敗]，您可以指定複寫針對這個警示提供的回應作業：選取 [執行作業]，然後按一下瀏覽按鈕 (**...**)。在 **[尋找作業]** 對話方塊中，按一下 **[瀏覽]**。 在 **[瀏覽物件]** 對話方塊中，選取 **[重新初始化具有資料驗證失敗的訂閱]**。 在兩個開啟的對話方塊中按一下 **[確定]** 。 執行作業時，它會使用對預存程序的遠端程序呼叫 (RPC) 重新初始化訂閱。 如果「發行者」使用遠端「散發者」，則必須定義「發行者」端的遠端伺服器登入，以便建立從「散發者」到「發行者」的 RPC。  
+         如果警示為「複寫:訂閱者資料驗證失敗」，您可以指定複寫為此警示提供的回應作業：選取 [執行作業]，然後按一下瀏覽按鈕 (**…**)。 在 **[尋找作業]** 對話方塊中，按一下 **[瀏覽]**。 在 **[瀏覽物件]** 對話方塊中，選取 **[重新初始化具有資料驗證失敗的訂閱]**。 在兩個開啟的對話方塊中按一下 **[確定]** 。 執行作業時，它會使用對預存程序的遠端程序呼叫 (RPC) 重新初始化訂閱。 如果「發行者」使用遠端「散發者」，則必須定義「發行者」端的遠端伺服器登入，以便建立從「散發者」到「發行者」的 RPC。  
   
     -   在 **[選項]** 頁面上，自訂回應的文字。  
   

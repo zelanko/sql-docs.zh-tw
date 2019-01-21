@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28bd264498c681542c9cb27e79cdd21f3cf0821c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2270917dad9f366b09fbc7cbc0d88c286fe6761c
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509939"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257093"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查詢調整小幫手來升級資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ QTA 僅以可從查詢存放區中執行的 `SELECT` 查詢為目標。 如果�
 由於[基數估計工具 (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) 版本的變更，QTA 針對可能的已知查詢回歸模式為目標。 例如，在將資料庫從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和資料庫相容性層級 110 升級到 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和資料庫相容性層級 140 時，某些查詢可能會迴歸，因為它們是專門設計來搭配 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (CE 70) 中存在的 CE 版本一起使用。 這並不表示從 CE 140 還原到 CE 70 是唯一的選項。 如果只有較新版本中的特定變更引入了迴歸，則可以提示該查詢僅使用先前 CE 版本的相關部分，該部分對特定查詢更有效，同時仍然利用較新版本之 CE 版本的所有其他改進功能。 此外，也允許未迴歸之工作負載中的其他查詢，從較新的 CE 改進功能中受益。
 
 QTA 搜尋的 CE 模式如下： 
--  **獨立性與關聯性**：如果獨立性假設為特定查詢提供了更好的估計，則查詢提示 `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` 會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在估計過濾器的 `AND` 述詞以考慮關聯性時使用最少的選擇性來產生執行計畫。 如需詳細資訊，請參閱 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
--  **簡單內含項目與基底內含項目**：如果不同的聯結內含項目為特定查詢提供了更好的估計，則查詢提示 `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` 會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用「簡單內含項目」假設而不是預設的「基底內含項目」假設產生執行計畫。 如需詳細資訊，請參閱 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
--  **多重陳述式資料表值函式 (MSTVF) 固定基數猜測**的 100 個資料列與1 個資料列：如果對於 100 個資料列的 TVF 的預設固定估計，不會導致比使用 1 個資料列的 TVF 的固定估計更有效的計劃 (對應於 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更早版本的查詢最佳化工具 CE 模型下的預設值)，則查詢提示 `QUERYTRACEON 9488` 會用來產生執行計畫。 如需有關 MSTVF 的詳細資訊，請參閱[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
+-  **獨立性與相互關聯**：如果獨立性假設可為特定查詢提供更好的估計，查詢提示 `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` 就會使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在估計過濾器的 `AND` 述詞以考慮相互關聯時，使用最少的選擇性來產生執行計畫。 如需詳細資訊，請參閱 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
+-  **簡單內含項目與基底內含項目**：如果不同的聯結內含項目可為特定查詢提供更好的估計，查詢提示 `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` 就會使得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用「簡單內含項目」假設而不是預設的「基底內含項目」假設來產生執行計畫。 如需詳細資訊，請參閱 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)和 [CE 的版本](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce)。
+-  **多重陳述式資料表值函式 (MSTVF) 固定基數猜測**的 100 個資料列與1 個資料列：如果與使用 1 個資料列之 TVF 的固定估計 (與 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 和更早版本的查詢最佳化工具 CE 模型下的預設值對應) 相比，100 個資料列之 TVF 的預設固定估計並不會產生更有效率的計畫，就會使用查詢提示 `QUERYTRACEON 9488` 來產生執行計畫。 如需有關 MSTVF 的詳細資訊，請參閱[建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)。
 
 > [!NOTE]
 > 作為最後的手段，如果窄範圍的提示沒有為符合資格的查詢模式產生足夠好的結果，那麼也可以考慮完整使用 CE 70 (藉由使用查詢提示 `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` 來產生執行計畫)。
@@ -98,10 +98,10 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
 
        ![新的資料庫升級設定視窗](../../relational-databases/performance/media/qta-new-session-settings.png "新的資料庫升級設定視窗")
 
-        > [!IMPORTANT]
-        > 建議的*大小上限*是一個適用於短時間工作負載的任意值。   
-        > 不過，請記住，對於非常大量的工作負載，可能不足以保存基準和升級後的資料庫工作負載的資訊，即可能會產生許多不同的計劃。   
-        > 如果您是預期會發生這個情況，那就輸入一個更合適的較高的值。
+       > [!IMPORTANT]
+       > 建議的*大小上限*是一個適用於短時間工作負載的任意值。   
+       > 不過，請記住，對於非常大量的工作負載，可能不足以保存基準和升級後的資料庫工作負載的資訊，即可能會產生許多不同的計劃。   
+       > 如果您是預期會發生這個情況，那就輸入一個更合適的較高的值。
 
 4.  [微調] 視窗結束工作階段設定，並指示開啟並繼續進行工作階段的後續步驟。 完成時，請按一下 [完成]。
 
@@ -120,10 +120,10 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
     
     清單包含以下資訊：
     -  **工作階段識別碼**
-    -  **工作階段名稱**：系統產生的名稱由資料庫名稱、工作階段建立的日期和時間組成。
-    -  **狀態**：工作階段的狀態 (作用中或已關閉)。
-    -  **描述**：產生的系統由使用者選取的目標資料庫相容性層級和商務週期工作負載的天數組成。
-    -  **已啟動的時間**：建立工作階段的日期和時間。
+    -  **工作階段名稱**：系統產生的名稱，由資料庫名稱、工作階段的建立日期和時間所組成。
+    -  **狀態**：工作階段的狀態 (「作用中」或「已關閉」)。
+    -  **描述**：系統所產生，由使用者選取的目標資料庫相容性層級和商務週期工作負載的天數所組成。
+    -  **開始時間**：建立工作階段時的日期和時間。
 
     ![QTA 工作階段管理頁面](../../relational-databases/performance/media/qta-session-management.png "QTA 工作階段管理頁面")
 
@@ -162,11 +162,11 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
         清單包含以下資訊：
         -  **查詢識別碼** 
         -  **查詢文字**：[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，可以透過按一下 [...] 按鈕展開。
-        -  **執行**：顯示針對整個工作負載集合，該查詢的執行次數。
-        -  **基準計量**：資料庫相容性升級之前，基準資料集合的所選計量 (持續時間或 CpuTime)，以毫秒為單位。
-        -  **觀察的計量**：資料庫相容性升級後資料收集的所選計量 (持續時間或 CpuTime)，以毫秒為單位。
-        -  **% 變更**：資料庫相容性升級前後的所選計量的變更百分比。 負數表示查詢的測量迴歸數量。
-        -  **可調整**：*True* 或 *False*，根據查詢是否適合測試。
+        -  **回合數**：顯示針對整個工作負載集合，該查詢的執行次數。
+        -  **基準計量**：針對資料庫相容性升級前的基準資料收集選取的計量 (持續時間或 CpuTime)，以毫秒為單位。
+        -  **觀察的計量**：針對資料庫相容性升級後的資料收集選取的計量 (持續時間或 CpuTime)，以毫秒為單位。
+        -  **% 變更**：所選計量在資料庫相容性升級前與升級後狀態之間的變更百分比。 負數表示查詢的測量迴歸數量。
+        -  **可調整**：*True* 或 *False*，依據查詢是否適合進行測試而定。
 
 4.  **檢視分析**允許選取要測試的查詢，並找出最佳化的機會。 **要顯示的查詢**值成為要測試的合格查詢的範圍。 檢查完所需的查詢之後，按一下 [下一步] 啟動測試。  
 
@@ -184,12 +184,12 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
     清單包含以下資訊：
     -  **查詢識別碼** 
     -  **查詢文字**：[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，可以透過按一下 [...] 按鈕展開。
-    -  **狀態**：顯示查詢目前的測試狀態。
-    -  **基準計量**：在**步驟 2 子步驟 3**中執行之查詢的所選計量 (持續時間或 CpuTime)，以毫秒為單位，表示資料庫相容性升級後的迴歸查詢。
-    -  **觀察的計量**：測試後查詢的所選計量 (持續時間或 CpuTime)，以毫秒為單位，以取得足夠好的建議最佳化。
-    -  **% 變更**：測試狀態之前和之後所選計量的變更百分比，表示使用建議最佳化之查詢的測量改進程度。
-    -  **查詢選項**：連結到改善查詢執行計量的建議提示。
-    -  **可以部署**：*True* 或 *False*，取決於是否可以將建議的查詢最佳化部署為計劃指南。
+    -  **狀態**：顯示查詢的目前測試狀態。
+    -  **基準計量**：針對**步驟 2 子步驟 3**中執行之查詢 (代表資料庫相容性升級後的迴歸查詢) 選取的計量 (持續時間或 CpuTime)，以毫秒為單位。
+    -  **觀察的計量**：針對測試後查詢選取的計量 (持續時間或 CpuTime)，以毫秒為單位，用以取得夠好的建議最佳化。
+    -  **% 變更**：所選計量在測試前與測試後狀態之間的變更百分比，代表對使用建議最佳化之查詢測量到的改進程度。
+    -  **查詢選項**：連結到可改善查詢執行計量的建議提示。
+    -  **可部署**：*True* 或 *False*，依據是否可以將建議的查詢最佳化部署成計劃指南而定。
 
     ![QTA 步驟 4](../../relational-databases/performance/media/qta-step4.png "QTA 步驟 4")
 

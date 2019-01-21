@@ -18,12 +18,12 @@ ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 47a13686f1e4938886d11df7b2ee104553d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756936"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132988"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>可更新訂閱 - 異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "47756936"
   
 ## <a name="see-also"></a>另請參閱  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [異動複寫的發行集類型](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)   
+ [異動複寫](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [發行資料和資料庫物件](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)  
   

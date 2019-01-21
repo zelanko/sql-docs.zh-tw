@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 01/09/2019
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,16 +9,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d36e43d4015d0edf2271ee86ea0d2f7a761ce8d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207777"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300175"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 SQL Server 2019 的新功能。 如需詳細資訊和已知問題，請參閱 [SQL Server 2019 版本資訊](sql-server-ver15-release-notes.md)。
 
@@ -39,7 +42,7 @@ Community Technical Preview (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes
 
 ## <a name="previous-ctps"></a>舊版 CTP
 
-更早的 CTP 版本為 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 新增或強化了下列功能。
+更早的 CTP 版本為 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 新增或強化了下列功能。
 
 - [巨量資料叢集](#bigdatacluster) 
   - 在 Kubernetes 上部署具有 SQL 和 Spark Linux 容器的巨量資料叢集 (CTP 2.0)

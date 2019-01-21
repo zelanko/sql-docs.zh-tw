@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eff18cf56e606aa8cea96bd8828a7daaca27c0f4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: cb28747cd85c007f968e5be0e980ca112638faec
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813951"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54254143"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
 
@@ -72,7 +72,7 @@ ms.locfileid: "51813951"
     ```  
     <xsd:schema   
     targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
     xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  

@@ -1,5 +1,5 @@
 ---
-title: 教學課程：設定兩個完全連線的伺服器之間的複寫 (異動) | Microsoft Docs
+title: 教學課程：設定兩個已完全連線伺服器之間的複寫 (異動) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f477276ef55689b6d79244f4493246f99aa9d34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514196"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54128348"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個完全連線的伺服器之間的複寫 (異動)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 異動複寫是處理持續連線伺服器之間移動資料問題的良好解決方案。 您可以使用 [複寫精靈]，輕鬆設定及管理複寫拓撲。 
 
@@ -59,7 +59,7 @@ ms.locfileid: "52514196"
 > - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。  
   
   
-**完成本教學課程的估計時間：60 分鐘**  
+**完成這個教學課程的估計時間：60 分鐘**  
   
 ## <a name="configure-the-publisher-for-transactional-replication"></a>為異動複寫設定發行者
 在本節中，您會使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立交易式發行集，以發行 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫中 **Product** 資料表的篩選子集。 此外，您也會將散發代理程式所使用的 SQL Server 登入新增至發行集存取清單 (PAL)。
@@ -226,7 +226,7 @@ ms.locfileid: "52514196"
   
    A. 選取 [追蹤 Token] 索引標籤。  
    B. 選取 [插入追蹤]。    
-   c. 在下列資料行中檢視追蹤 Token 的經過時間： **[發行者到散發者]**、 **[散發者到訂閱者]**、 **[延遲總計]**。 [Pending] \(暫止\) 值表示 Token 尚未到達指定點。
+   c. 在下列資料行中檢視追蹤 Token 的經過時間：[發行者到散發者]、[散發者到訂閱者]、[延遲總計]。 [Pending] \(暫止\) 值表示 Token 尚未到達指定點。
 
    ![追蹤 Token 的資訊](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
@@ -242,4 +242,4 @@ ms.locfileid: "52514196"
 下一篇文章會教導您如何設定合併式複寫：  
 
 > [!div class="nextstepaction"]
-> [教學課程：設定伺服器和行動用戶端之間的複寫 (合併)](tutorial-replicating-data-with-mobile-clients.md)
+> [教學課程：設定伺服器和行動用戶端之間的複寫 (合併式)](tutorial-replicating-data-with-mobile-clients.md)

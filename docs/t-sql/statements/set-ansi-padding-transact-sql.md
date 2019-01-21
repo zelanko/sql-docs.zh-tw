@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760336"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143288"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ SET ANSI_PADDING ON
  這項設定只會影響新資料行的定義。 建立好資料行之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據建立資料行之時的設定來儲存值。 這項設定後來的變更並不會影響現有的資料行。  
   
 > [!NOTE]  
->  我們建議您一律將 ANSI_PADDING 設為 ON。  
+> ANSI_PADDING 應該一律設定為 ON。  
   
  下表顯示當值插入含 **char**、**varchar**、**binary** 和 **varbinary** 等資料類型的資料行時，SET ANSI_PADDING 設定所造成的影響。  
   
@@ -69,34 +69,35 @@ SET ANSI_PADDING ON
 |OFF|將原始值填補到資料行的長度 (**char** 資料行使用尾端空格，**binary** 資料行使用尾端零)。|當 SET ANSI_PADDING 是 OFF 時，請遵照 **varchar** 或 **varbinary** 的相同規則。|修剪插入 **varchar** 資料行之字元值的尾端空格。 修剪插入 **varbinary** 資料行之二進位值的尾端零。|  
   
 > [!NOTE]  
->  當填補時，**char** 資料行會填補空格，**binary** 資料行會填補零。 當修剪時，**char** 資料行會修剪尾端空格，**binary** 資料行會修剪尾端零。  
+> 當填補時，**char** 資料行會填補空格，**binary** 資料行會填補零。 當修剪時，**char** 資料行會修剪尾端空格，**binary** 資料行會修剪尾端零。  
   
- 當您建立或變更計算資料行索引或索引檢視表時，SET ANSI_PADDING 也必須是 ON。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
+當您要建立或變更計算資料行索引或索引檢視表時，ANSI_PADDING 必須是 ON。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
   
- SET ANSI_PADDING 的預設值是 ON。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在連接時，都會自動將 ANSI_PADDING 設為 ON。 在連接之前，您可以在應用程式的 ODBC 資料來源、ODBC 連接屬性或 OLE DB 連接屬性集中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_PADDING 預設值為 OFF。  
+SET ANSI_PADDING 的預設值是 ON。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者在連接時，都會自動將 ANSI_PADDING 設為 ON。 在連接之前，您可以在應用程式的 ODBC 資料來源、ODBC 連接屬性或 OLE DB 連接屬性集中設定這個項目。 起始於 DB-Library 應用程式的連接之 SET ANSI_PADDING 預設值為 OFF。  
   
  SET ANSI_PADDING 設定不會影響 **nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)**、**varchar(max)** 和 **nvarchar(max)** 資料型別。 它們一律會顯示 SET ANSI_PADDING ON 行為。 這表示不會修剪尾端空格和零。  
   
- 當 SET ANSI_DEFAULTS 是 ON 時，會啟用 SET ANSI_PADDING。  
+當 ANSI_DEFAULTS 是 ON 時，會啟用 ANSI_PADDING。  
   
- SET ANSI_PADDING 的設定是在執行時間或執行階段進行設定，而不是在剖析階段進行設定。  
+ANSI_PADDING 的設定是在執行時或執行階段進行定義，而不是在剖析階段進行定義。  
   
- 若要檢視此設定的目前設定，請執行下列查詢。  
+若要檢視此設定的目前設定，請執行下列查詢。  
   
-```  
+```sql  
 DECLARE @ANSI_PADDING VARCHAR(3) = 'OFF';  
 IF ( (16 & @@OPTIONS) = 16 ) SET @ANSI_PADDING = 'ON';  
 SELECT @ANSI_PADDING AS ANSI_PADDING;  
-  
 ```  
   
 ## <a name="permissions"></a>[權限]  
- 需要 public 角色中的成員資格。  
+需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例顯示設定如何影響這些資料類型。  
-  
-```  
+下列範例顯示設定如何影響這些資料類型。  
+
+將 ANSI_PADDING 設定為 ON 並進行測試。
+
+```sql  
 PRINT 'Testing with ANSI_PADDING ON'  
 SET ANSI_PADDING ON;  
 GO  
@@ -114,7 +115,11 @@ SELECT 'CHAR' = '>' + charcol + '\<', 'VARCHAR'='>' + varcharcol + '\<',
    varbinarycol  
 FROM t1;  
 GO  
-  
+```
+
+現在，將 ANSI_PADDING 設定為 OFF 並進行測試。
+
+```sql
 PRINT 'Testing with ANSI_PADDING OFF';  
 SET ANSI_PADDING OFF;  
 GO  

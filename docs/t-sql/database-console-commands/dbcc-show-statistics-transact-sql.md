@@ -34,12 +34,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f144425f3fffa90d9c123a2c7c8013ac43babcb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234d124260e007cd43a52cc9baa8d2475d1db91a
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726967"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206334"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  抑制所有嚴重性層級在 0 到 10 的參考用訊息。  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
  如果指定其中一或多個選項，就會限制陳述式針對指定之選項所傳回的結果集。 如果沒有指定任何選項，便會傳回所有的統計資料資訊。  
   
  STATS_STREAM 是 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -113,7 +113,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |資料行名稱|Description|  
 |-----------------|-----------------|  
-|所有密度|密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。|  
+|所有密度|密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)|  
 |平均長度|平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。|  
 |[資料行]|在前置詞中顯示 All density 和 Average length 的資料行名稱。|  
   
@@ -125,7 +125,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |RANGE_ROWS|資料行值在長條圖步驟內的預估資料列數，不包括上限。|  
 |EQ_ROWS|資料行值等於長條圖步驟之上限的預估資料列數。|  
 |DISTINCT_RANGE_ROWS|在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。|  
-|AVG_RANGE_ROWS|在長條圖步驟內具有重複資料行值的平均資料列數，上限不包括在內 (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0)。| 
+|AVG_RANGE_ROWS|在長條圖步驟內具有重複資料行值的平均資料列數，不包括上限。 當 DISTINCT_RANGE_ROWS 大於 0 時，AVG_RANGE_ROWS 的計算方式為 RANGE_ROWS 除以 DISTINCT_RANGE_ROWS。 當 DISTINCT_RANGE_ROWS 為 0 時，AVG_RANGE_ROWS 會針對長條圖步驟傳回 1。| 
   
 ## <a name="Remarks"></a> 備註 
 

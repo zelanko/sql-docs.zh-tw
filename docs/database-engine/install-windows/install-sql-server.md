@@ -15,26 +15,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600888"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300365"
 ---
 # <a name="install-sql-server"></a>安裝 SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
+
  
  從 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 開始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 才可以用作 64 位元應用程式。 下列重要詳細資料說明如何取得 SQL Server 及其安裝方式。
 
 ## <a name="installation-details"></a>安裝詳細資料
   
-*  **選項**：透過安裝精靈、命令提示字元或 sysprep 安裝。
+*  **選項**：透過「安裝精靈」、命令提示字元或透過 sysprep 安裝
  
-*  **需求**︰安裝前，請先花點時間檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md) 
+*  **需求**：安裝前，請先花一些時間檢閱[規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的安裝需求、系統設定檢查及安全性考量 
 
-* **程序**︰如需安裝程序的完整指示，請參閱 [安裝 SQL Server](../../database-engine/install-windows/installation-for-sql-server-2016.md) 。
+* **程序**：如需安裝程序的完整指示，請參閱 [SQL Server 安裝](../../database-engine/install-windows/installation-for-sql-server-2016.md)
 
 * **範例資料庫與範例程式碼**： 
     * 這些範例預設不會隨著 SQL Server 安裝程式一起安裝 

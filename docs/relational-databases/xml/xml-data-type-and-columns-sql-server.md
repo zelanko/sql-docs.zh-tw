@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9bf35909dee176643cfb61513da71b61264a9488
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662498"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54256673"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "51662498"
   
 -   原生儲存為 **xml** 資料類型  
   
-     以內部表示法來儲存資料，以保存資料的 XML 內容。 這個內部表示法包括有關內含項目階層、文件順序，以及元素和屬性值的資訊。 特別是會保存 XML 資料的 InfoSet 內容。 如需 InfoSet 的詳細資訊，請前往 [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 內容可能會與文字版 XML 不同，因為沒有保留下列資訊：不重要的空格、屬性的順序、命名空間前置詞及 XML 宣告。  
+     以內部表示法來儲存資料，以保存資料的 XML 內容。 這個內部表示法包括有關內含項目階層、文件順序，以及元素和屬性值的資訊。 特別是會保存 XML 資料的 InfoSet 內容。 如需 InfoSet 的詳細資訊，請前往 [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 內容可能會與文字版 XML 不同，因為沒有保留下列資訊：不重要的空格、屬性的順序、命名空間前置詞及 XML 宣告。  
   
-     針對具類型的 **xml** 資料類型 (與 XML 結構描述繫結的 **xml** 資料類型)，後置結構描述驗證 InfoSet (PSVI) 會將類型資訊加入 InfoSet 中，而且會以內部表示法來編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 和 [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) 的「W3C XML 結構描述」規格。  
+     針對具類型的 **xml** 資料類型 (與 XML 結構描述繫結的 **xml** 資料類型)，後置結構描述驗證 InfoSet (PSVI) 會將類型資訊加入 InfoSet 中，而且會以內部表示法來編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) 的「W3C XML 結構描述」規格。  
   
 -   XML 與關聯式儲存之間的對應  
   
@@ -115,12 +115,12 @@ ms.locfileid: "51662498"
   
  當您的 XML 文件有一個結構範圍，或是您的 XML 文件符合相異或複雜的結構描述，而這些結構描述難以對應到關聯式結構時，原生 XML 儲存是很有用的。  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>範例：使用 xml 資料類型來將 XML 資料模型化  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>範例使用 xml 資料類型將 XML 資料模型化  
  假設有一個 XML 格式的產品手冊，其中每個主題各成一章，每一章中有好幾節。 每一節中還可包含小節。 因此，\<section> 就是遞迴項目。 產品手冊包含大量的混合內容、圖表和技術資料；資料是半結構化的。 使用者可能會想要在內容中搜尋感興趣的主題，例如，在有關「檢索」的那一章中搜尋有關「叢集索引」的那一節，並查詢技術數量。  
   
  您的 XML 文件所適合的儲存模式就是 **xml** 資料類型資料行。 這樣可以保持 XML 資料的 InfoSet 內容。 檢索 XML 資料行對於查詢效能是很有益的。  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>範例：保留與 XML 資料完全相同的副本  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>範例保留與 XML 資料完全相同的複本  
  舉例來說，假設政府規定您要保留與您的 XML 文件完全相同的原文副本。 例如，這些可能是簽署的文件、法律文件或股票交易訂單。 您可能會想要將您的文件儲存在 **[n]varchar(max)** 資料行中。  
   
  若要查詢，請在執行階段將資料轉換成 **xml** 資料類型，並對其執行 Xquery。 執行階段的轉換作業可能會很耗費資源，尤其是當文件很大時。 若您經常查詢，您可以另外將文件儲存在 **xml** 資料類型資料行中，當您從 **[n]varchar(max)** 資料行傳回完全相同的文件副本時，再加以檢索。  
@@ -144,7 +144,7 @@ ms.locfileid: "51662498"
   
  範例包括在資料交換及 Web 服務中公開為 XML 的關聯式資料，以及含有固定結構描述的 XML 資料。 如需詳細資訊，請參閱 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)。  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>範例：使用註解式 XML 結構描述 (AXSD) 來將資料模型化  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>範例使用註解式 XML 結構描述 (AXSD) 將資料模型化  
  舉例來說，假設您要將現有的關聯式資料 (例如：客戶、訂單及線性項目) 處理成 XML。 在關聯式資料上使用 AXSD，以定義 XML 檢視。 XML 檢視可讓您將 XML 資料大量載入至資料表中，並使用 XML 檢視來查詢及更新關聯式資料。 如果您必須在不干擾 SQL 應用程式工作的情況下，與其他應用程式交換含有 XML 標記的資料，這種模型會很有用。  
   
 ### <a name="hybrid-model"></a>混合模型  

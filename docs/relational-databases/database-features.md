@@ -12,18 +12,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30cce2024ded94131cb8c2067b65ba7d4f980663
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 784776001ea5280ace3e69f24cf450b366f9322c
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671961"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300385"
 ---
 # <a name="guidance-for-using-microsoft-sql-relational-databases"></a>使用 Microsoft SQL 關聯式資料庫的指導方針
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 本節包含與 Microsoft SQL 關聯式資料庫、資料庫物件、資料類型，以及用於處理或管理資料之機制相關的功能和工作。 這項資訊在 [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)] 的大部分版本中很常見。 個別主題可能會表示某些功能僅限於某些平台。 如需特定平台的資訊，請參閱下列連結： 
   

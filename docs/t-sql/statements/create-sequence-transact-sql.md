@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d26d4d303ffb312a2dc289e9f7426fbc6d191de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629028"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226525"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,52 +56,48 @@ CREATE SEQUENCE [schema_name . ] sequence_name
 ```  
   
 ## <a name="arguments"></a>引數  
- *sequence_name*  
- 指定資料庫中順序的唯一識別名稱。 類型是 **sysname**。  
+*sequence_name*  
+指定資料庫中順序的唯一識別名稱。 類型是 **sysname**。  
   
- [ built_in_integer_type | user-defined_integer_type  
- 順序可以定義為任何整數類型。 允許使用下列類型。  
+[ built_in_integer_type | user-defined_integer_type  
+順序可以定義為任何整數類型。 允許使用下列類型。  
   
 -   **tinyint** - 範圍為 0 到 255  
-  
 -   **smallint** - 範圍為 -32,768 到 32,767  
-  
 -   **int** - 範圍為 -2,147,483,648 到 2,147,483,647  
-  
 -   **bigint** - 範圍為 -9,223,372,036,854,775,808 到 9,223,372,036,854,775,807  
-  
 -   小數位數為 0 的 **decimal** 和 **numeric**。  
-  
 -   以其中一個允許類型為基礎的任何使用者定義的資料類型 (別名類型)。  
   
- 如果未提供資料類型，則會使用 **bigint** 資料類型作為預設值。  
+如果未提供資料類型，則會使用 **bigint** 資料類型作為預設值。  
   
- START WITH \<constant>  
- 順序物件傳回的第一個值。 **START** 值必須是小於或等於順序物件的最大值，而且大於或等於最小值。 新順序物件的預設開始值是遞增順序物件的最小值，是遞減順序物件的最大值。  
+START WITH \<constant>  
+順序物件傳回的第一個值。 **START** 值必須是小於或等於順序物件的最大值，而且大於或等於最小值。 新順序物件的預設開始值是遞增順序物件的最小值，是遞減順序物件的最大值。  
   
- INCREMENT BY \<constant>  
- 每次呼叫 **NEXT VALUE FOR** 函式時，用來遞增順序物件值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。 新順序物件的預設增量為 1。  
+INCREMENT BY \<constant>  
+每次呼叫 **NEXT VALUE FOR** 函式時，用來遞增順序物件值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。 新順序物件的預設增量為 1。  
   
- [ MINVALUE \<constant> | **NO MINVALUE** ]  
- 指定順序物件的界限。 新序列物件的預設最小值是序列物件之資料類型的最小值。 如果是 **tinyint** 資料類型，這是零，如果是所有其他資料類型，則為負數。  
+[ MINVALUE \<constant> | **NO MINVALUE** ]  
+指定順序物件的界限。 新序列物件的預設最小值是序列物件之資料類型的最小值。 如果是 **tinyint** 資料類型，這是零，如果是所有其他資料類型，則為負數。  
   
- [ MAXVALUE \<constant> | **NO MAXVALUE**  
- 指定順序物件的界限。 新序列物件的預設最大值是序列物件之資料類型的最大值。  
+[ MAXVALUE \<constant> | **NO MAXVALUE**  
+指定順序物件的界限。 新序列物件的預設最大值是序列物件之資料類型的最大值。  
   
- [ CYCLE | **NO CYCLE** ]  
- 屬性，指定當超出其最小值或最大值時，順序物件應該從最小值 (或是遞減順序物件的最大值) 重新啟動，還是擲回例外狀況。 新順序物件的預設循環選項是 NO CYCLE。  
+[ CYCLE | **NO CYCLE** ]  
+屬性，指定當超出其最小值或最大值時，順序物件應該從最小值 (或是遞減順序物件的最大值) 重新啟動，還是擲回例外狀況。 新順序物件的預設循環選項是 NO CYCLE。  
   
- 請注意，循環是從最小值或最大值重新啟動，而不是從開始值重新啟動。  
+> [!NOTE]
+> 將 SEQUENCE 循環會從最小值或最大值重新開始，而不是從開始值重新開始。  
   
- [ **CACHE** [\<constant> ] | NO CACHE ]  
- 藉由減少產生序號所需的磁碟 IO 數目，對使用順序物件的應用程式提升效能。 預設為 CACHE。  
+[ **CACHE** [\<constant> ] | NO CACHE ]  
+藉由減少產生序號所需的磁碟 IO 數目，對使用順序物件的應用程式提升效能。 預設為 CACHE。  
   
- 例如，如果所選擇的快取大小為 50，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會保留 50 個個別的快取值。 它只快取目前值和留在快取中的值數目。 這表示，儲存快取所需的記憶體數量永遠是順序物件之資料類型的兩個執行個體。  
+例如，如果所選擇的快取大小為 50，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會保留 50 個個別的快取值。 它只快取目前值和留在快取中的值數目。 這表示，儲存快取所需的記憶體數量永遠是順序物件之資料類型的兩個執行個體。  
   
 > [!NOTE]  
->  如果已啟用快取選項但未指定快取大小，Database Engine 將選取大小。 但是使用者不應該依賴此選取來取得一致的結果。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能變更計算快取大小的方法，而不另行通知。  
+> 如果已啟用快取選項但未指定快取大小，Database Engine 將選取大小。 但是使用者不應該依賴此選取來取得一致的結果。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 可能變更計算快取大小的方法，而不另行通知。  
   
- 以 **CACHE** 選項建立時，非預期關機 (例如停電) 可能會導致留在快取中的序號遺失。  
+以 **CACHE** 選項建立時，非預期關機 (例如停電) 可能會導致留在快取中的序號遺失。  
   
 ## <a name="general-remarks"></a>一般備註  
  序號是在目前交易範圍之外產生的。 無論使用序號的交易被認可或回復交易，都會耗用序號。  
@@ -167,7 +163,7 @@ CREATE SEQUENCE [schema_name . ] sequence_name
   
  下列範例會授與 AdventureWorks\Larry 使用者權限，以在 Test 結構描述中建立順序。  
   
-```  
+```sql  
 GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]  
 ```  
   
@@ -185,7 +181,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  若要建立 Test 結構描述，請執行下列陳述式。  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
 ```  
@@ -193,7 +189,7 @@ GO
 ### <a name="a-creating-a-sequence-that-increases-by-1"></a>A. 建立以 1 遞增的順序  
  在下列範例中，Thierry 會建立名為 CountBy1 的順序，此順序每次使用時遞增一。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 1  
     INCREMENT BY 1 ;  
@@ -203,7 +199,7 @@ GO
 ### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. 建立以 1 遞減的順序  
  下列範例會從 0 開始，並且每次使用時遞減一。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountByNeg1  
     START WITH 0  
     INCREMENT BY -1 ;  
@@ -213,7 +209,7 @@ GO
 ### <a name="c-creating-a-sequence-that-increases-by-5"></a>C. 建立以 5 遞增的順序  
  下列範例會建立每次使用時遞增 5 的順序。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1  
     START WITH 5  
     INCREMENT BY 5 ;  
@@ -223,7 +219,7 @@ GO
 ### <a name="d-creating-a-sequence-that-starts-with-a-designated-number"></a>D. 建立以指定數字開頭的順序  
  在匯入資料表之後，Thierry 發現使用的最高識別碼值是 24,328。 Thierry 需要產生以 24,329 為起始值的順序。 下列程式碼會建立開頭為 24,329 且遞增量為 1 的順序。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.ID_Seq  
     START WITH 24329  
     INCREMENT BY 1 ;  
@@ -233,13 +229,13 @@ GO
 ### <a name="e-creating-a-sequence-using-default-values"></a>E. 建立使用預設值的順序  
  下列範例會建立使用預設值的順序。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.TestSequence ;  
 ```  
   
  執行下列陳述式，以檢視順序的屬性。  
   
-```  
+```sql  
 SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;  
 ```  
   
@@ -258,15 +254,15 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 ### <a name="f-creating-a-sequence-with-a-specific-data-type"></a>F. 建立具有特定資料類型的順序  
  下列範例會建立使用 **smallint** 資料類型而且在 -32,768 到 32,767 範圍內的順序。  
   
-```  
-CREATE SEQUENCE SmallSeq  
+```sql  
+CREATE SEQUENCE SmallSeq 
     AS smallint ;  
 ```  
   
 ### <a name="g-creating-a-sequence-using-all-arguments"></a>G. 建立使用所有引數的順序  
  下列範例會建立使用 **decimal** 資料類型、在 0 到 255 範圍內，而且名為 DecSeq 的順序。 順序開頭為 125，而且每次產生數字時會遞增 25。 因為順序設定為循環，所以當值超過最大值 200 時，順序會從最小值 100 重新啟動。  
   
-```  
+```sql  
 CREATE SEQUENCE Test.DecSeq  
     AS decimal(3,0)   
     START WITH 125  
@@ -278,9 +274,9 @@ CREATE SEQUENCE Test.DecSeq
 ;  
 ```  
   
- 執行下列陳述式以查看第一個值，即值為 125 的 `START WITH` 選項。  
+ 執行下列陳述式以查看第一個值，即 `START WITH` 選項值 125。  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.DecSeq;  
 ```  
   
@@ -290,7 +286,7 @@ SELECT NEXT VALUE FOR Test.DecSeq;
   
  執行下列程式碼，以確認快取大小，並查看目前的值。  
   
-```  
+```sql  
 SELECT cache_size, current_value   
 FROM sys.sequences  
 WHERE name = 'DecSeq' ;  

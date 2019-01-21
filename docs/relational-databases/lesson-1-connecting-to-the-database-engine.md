@@ -1,5 +1,5 @@
 ---
-title: 第 1 課：連接到資料庫引擎 | Microsoft Docs
+title: 第 1 課：連線到資料庫引擎 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
@@ -11,15 +11,18 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ee35edcce1e72ebea42b429811b558aa61d06296
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302681"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300285"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
+# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
 
@@ -110,5 +113,5 @@ ms.locfileid: "52302681"
 > 這是讓您快速入門的基本資訊。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供多樣化的安全性環境，安全性顯然是資料庫作業的重要一環。  
 
 ## <a name="next-lesson"></a>下一課  
-[第 2 課：從另一部電腦連接](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[第 2 課：從另一部電腦連線](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

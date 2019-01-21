@@ -20,12 +20,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8f5b10cd0dce7b3d9b6e8acc5b6018eff0e85a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515449"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130578"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52515449"
   
     |非常好|好|普通|差|嚴重|  
     |---------------|----------|----------|----------|--------------|  
-    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
+    |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
 -   對於合併式複寫，效能品質與臨界值無關 (如果在 **[狀態]** 資料行中顯示的值為 **[效能嚴重不足]** ，則資料列處理臨界值將不作判斷)。 透過將個別訂閱效能與具有相同連接類型 (撥號或 LAN) 之發行集訂閱的平均記錄效能進行比較，對效能品質進行判斷。 在相同連接類型上發生過五次同步處理，且每次同步處理都具有 50 或更多個變更之後，複寫監視器才會顯示值。 如果發生 50 個 (含) 以上變更的同步處理不及五個，或者最近一次同步處理少於 50 個變更，則「複寫監視器」不會顯示值。  
   
@@ -85,21 +85,21 @@ ms.locfileid: "52515449"
   
     |非常好|好|普通|差|  
     |---------------|----------|----------|----------|  
-    |151+%|76 - 150%|26 - 75%|0 - 25%|  
+    |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- 如需檢視訂閱資訊的詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
+ 如需有關檢視訂閱資訊的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>使用追蹤 Token 判斷延遲  
  異動複寫可允許您藉由在發行集資料庫的交易記錄中插入 Token (少量資料)，並記錄到達散發者和訂閱者所需花費的時間，以測量系統中的延遲。 Token 亦可讓您識別資料是否未到達散發者或訂閱者。 如需相關資訊，請參閱 [針對異動複寫測量延遲及驗證連接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>檢視合併式複寫的詳細同步處理效能  
- 針對合併式複寫，複寫監視器於同步處理時顯示每個已處理發行項的詳細資訊，包括每個處理階段花費的時間 (上傳變更、下載變更等等)。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需檢視詳細統計資料的詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 針對合併式複寫，複寫監視器於同步處理時顯示每個已處理發行項的詳細資訊，包括每個處理階段花費的時間 (上傳變更、下載變更等等)。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需有關檢視詳細統計資料的詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>檢視異動複寫的交易和傳遞時間  
- 對於異動複寫，「複寫監視器」會顯示有關下列內容的資訊：尚未散發到「訂閱者」之散發資料庫中的交易數，以及散發這些交易的預估時間。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+ 對於異動複寫，「複寫監視器」會顯示有關下列內容的資訊：尚未散發到「訂閱者」之散發資料庫中的交易數，以及散發這些交易的預估時間。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

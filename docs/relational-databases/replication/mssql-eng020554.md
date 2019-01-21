@@ -13,12 +13,12 @@ ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 849fc7c55957fa0f404f2886b983b548282fa7a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2067c4c267cf1b010a2a72a92b402d3f02034a7e
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811006"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126615"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ ms.locfileid: "47811006"
   
 -   引發此錯誤的所有情況：  
   
-     在「複寫監視器」中檢查錯誤詳細資料，然後重新啟動代理程式 (如果它已停止)。 錯誤詳細資料可能會提供有關代理程式無法正確執行之原因的額外資訊。 如果代理程式在執行，請勿停止並重新啟動代理程式，因為這樣可能會使問題惡化。 如需有關檢視代理程式狀態以及複寫監視器中的錯誤詳細資料，請參閱下列主題：  
-  
-    -   如需了解快照集代理程式、記錄讀取器代理程式和佇列讀取器代理程式，請參閱[檢視與發行集相關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)。  
-  
-    -   如需了解散發代理程式和合併代理程式，請參閱[檢視與訂閱相關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     在「複寫監視器」中檢查錯誤詳細資料，然後重新啟動代理程式 (如果它已停止)。 錯誤詳細資料可能會提供有關代理程式無法正確執行之原因的額外資訊。 如果代理程式在執行，請勿停止並重新啟動代理程式，因為這樣可能會使問題惡化。 如需有關在「複寫監視器」中檢視代理程式狀態和錯誤詳細資料的資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。    
   
 -   如果因代理程式正忙而頻繁出現此錯誤：  
   
      您可能需要重新設計應用程式，以縮短代理程式的處理時間。  
   
-     您可以使用 **[作業屬性]** 對話方塊增加檢查代理程式狀態的間隔。 如需如何存取此對話方塊以執行複寫作業的詳細資訊，請參閱[檢視發行者的資訊並執行工作 &#40;複寫監視器&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)。  
+     您可以使用 **[作業屬性]** 對話方塊增加檢查代理程式狀態的間隔。 如需有關存取此對話方塊以執行複寫作業的資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   如果代理程式無法登入拓撲中的某台電腦：  
   
@@ -81,6 +77,6 @@ ms.locfileid: "47811006"
  [複寫記錄讀取器代理程式](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [複寫快照集代理程式](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

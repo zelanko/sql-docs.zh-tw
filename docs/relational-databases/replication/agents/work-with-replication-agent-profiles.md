@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef9738e2c6f2f2ff89f384b1c7ff46aba39b9fa2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536427"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135438"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52536427"
   
 -   **若要處理複寫代理程式設定檔，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
     -   存取代理程式設定檔對話方塊  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52536427"
   
 1.  如果 **[代理程式設定檔]** 對話方塊顯示一個以上的代理程式設定檔，請選取一個代理程式。  
   
-2.  按一下設定檔旁邊的屬性按鈕 ([...])。  
+2.  按一下設定檔旁邊的屬性按鈕 (**...**)。  
   
 3.  檢視 [\<設定檔名稱> 設定檔屬性] 對話方塊中的參數和值。  
   

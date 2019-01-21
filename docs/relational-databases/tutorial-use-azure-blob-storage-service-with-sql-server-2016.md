@@ -1,7 +1,7 @@
 ---
-title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft 文件
+title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/07/2016
+ms.date: 01/09/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,14 +15,15 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: abbccb66ca86fb80991c6f0733e1cbfa0ee8a8e8
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 1af4926f367b79c7e4cc9117042d0b21e4f47b77
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302841"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206347"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 歡迎使用在 Microsoft Azure Blob 儲存體服務教學課程中使用 SQL Server 2016。 本教學課程可協助您了解如何將 Microsoft Azure Blob 儲存體服務用於 SQL Server 資料檔案和 SQL Server 備份。  
   
@@ -30,7 +31,8 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 
 本教學課程會在多個章節中示範如何在 Microsoft Azure Blob 儲存體服務中使用 SQL Server 資料檔案。 每個章節都著重在特定工作，並且應該依序完成章節。 首先，您將學習如何使用預存存取原則和共用存取簽章在 Blob 儲存體中建立新的容器。 然後，您將學習如何建立 SQL Server 認證，以便整合 SQL Server 與 Azure Blob 儲存體。 接下來，您會將資料庫備份至 Blob 儲存體，並將它還原至 Azure 虛擬機器。 您接著將使用 SQL Server 2016 檔案快照集交易記錄備份還原至某個時間點和新的資料庫。 最後，本教學課程將示範如何使用中繼資料系統預存程序和函數，協助您了解和使用檔案快照集備份。
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites
+
 若要完成本教學課程，您必須熟悉 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 備份與還原概念以及 T-SQL 語法。 若要使用本教學課程，您需要 Azure 儲存體帳戶、SQL Server Management Studio (SSMS)、存取 SQL Server 內部部署執行個體的權限、存取執行 SQL Server 2016 Azure 虛擬機器 (VM) 的權限，以及 AdventureWorks2016 資料庫。 此外，用來發出 BACKUP 或 RESTORE 命令的帳戶，應該位於擁有**改變任何認證**權限的 **db_backupoperator** 資料庫角色中。 
 
 - 取得免費 [Azure 帳戶](https://azure.microsoft.com/offers/ms-azr-0044p/)。
@@ -42,6 +44,7 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 - 將使用者帳戶指派給 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 的角色，並授與 [ALTER ANY CREDENTIAL](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 權限。 
  
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 建立預存存取原則和共用存取儲存體
+
 在本節中，您將使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 指令碼，在 Azure Blob 容器上建立使用預存存取原則的共用存取簽章。  
   
 > [!NOTE]  
@@ -129,6 +132,7 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
 
 
 ## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2 - 使用共用存取簽章建立 SQL Server 認證
+
 在本節中，您將建立用來儲存安全性資訊的認證，這些資訊可供 SQL Server 用來寫入及讀取您在先前步驟中所建立的 Azure 容器內容。  
   
 SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。 認證會儲存儲存體容器的 URI 路徑，以及該容器的共用存取簽章金鑰值。  
@@ -169,6 +173,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 7.  如果您想要讓任何其他 SQL Server 執行個體擁有 Azure 容器的存取權，請重複步驟 5 和 6。  
 
 ## <a name="3---database-backup-to-url"></a>3 - 資料庫備份至 URL
+
 在本節中，您會將內部部署 SQL Server 2016 執行個體中的 AdventureWorks2016 資料庫備份到您在[第 1 節](#1---create-stored-access-policy-and-shared-access-storage)建立的 Azure 容器。
   
 > [!NOTE]  
@@ -200,6 +205,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 
 
 ## <a name="4----restore-database-to-virtual-machine-from-url"></a>4 - 從 URL 將資料庫還原至虛擬機器
+
 在本節中，您會將 AdventureWorks2016 資料庫還原至 Azure 虛擬機器中的 SQL Server 2016 執行個體。
   
 > [!NOTE]  
@@ -235,7 +241,8 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
   
    ![Azure 上容器內中的資料檔案](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-# <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 使用檔案快照集備份來備份資料庫
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 使用檔案快照集備份來備份資料庫
+
 在本節中，您將使用檔案快照集備份，在 Azure 虛擬機器中備份 AdventureWorks2016 資料庫，以透過 Azure 快照集執行幾乎即時的備份。 如需檔案快照集備份的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 若要使用快照集檔案備份來備份 AdventureWorks2016 資料庫，請遵循下列步驟：  
@@ -275,6 +282,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
     ![Azure 上的快照集備份](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
 ## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6 - 使用檔案快照集備份來產生活動和備份記錄
+
 在本節中，您將使用檔案快照集備份，在 AdventureWorks2016 資料庫中產生活動並定期建立交易記錄備份。 如需如何使用檔案快照集備份的詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 若要使用檔案快照集備份，在 AdventureWorks2016 資料庫中產生活動並定期建立交易記錄備份，請遵循下列步驟：  
@@ -340,6 +348,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
     ![Azure 容器中的多個快照集](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7 - 將資料庫還原至某個時間點
+
 在本節中，您會將 AdventureWorks2016 資料庫還原至兩個交易記錄備份之間的某個時間點。  
   
 使用傳統備份時，為了完成時間點還原，您必須使用完整資料庫備份 (可能是差異備份)，以及您想要還原的時間點之前及剛好超過此時間點的所有交易記錄檔。 使用檔案快照集備份時，您只需要兩個相鄰的記錄備份檔案，這兩個檔案會提供您想要還原的時間點之前時間範圍的目標張貼內容。 您只需要兩個記錄檔案快照集備份組，因為每個記錄備份都會建立每個資料庫檔案的檔案快照集 (每個資料檔案和記錄檔)。  
@@ -378,6 +387,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8 - 從記錄備份還原為新的資料庫
+
 在本節中，您會從檔案快照集交易記錄備份將 AdventureWorks2016 資料庫還原為新的資料庫。  
   
 在此情況下，您會基於商務分析和報告在不同的虛擬機器上執行還原至 SQL Server 執行個體。 還原至不同虛擬機器上的不同執行個體，會基於此目的，將工作負載卸載至專用虛擬機器並進行大小調整，方法是從交易式系統中移除其資源需求。  
@@ -411,6 +421,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
     ![Azure 容器，顯示新的資料庫資料和記錄檔](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
 ## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9 - 管理備份組和檔案快照集備份
+
 在本節中，您將會使用 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 系統預存程序來刪除備份組。 這個系統預存程序會刪除備份檔案以及與這個備份組相關聯的每個資料庫檔案上的檔案快照集。  
   
 > [!NOTE]  
@@ -440,6 +451,7 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
     ![顯示 2 個檔案快照集已刪除的 [結果] 窗格](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10 - 移除資源
+
 當您完成本教學課程後，若要節省資源，請務必刪除在本教學課程中建立的資源群組。 
 
 若要刪除資源群組，請執行下列 PowerShell 程式碼：
@@ -463,7 +475,8 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
 
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
 [Microsoft Azure 中的 SQL Server 資料檔案](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure 中資料庫檔案的檔案快照集備份](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 

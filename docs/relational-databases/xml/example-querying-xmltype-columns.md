@@ -1,5 +1,5 @@
 ---
-title: 範例：查詢 XMLType 資料行 | Microsoft Docs
+title: 範例查詢 XMLType 資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3db0636b5bbc8dddde432d73a62b2e38d6e5427b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c8556fe5f398ef72670900596fcf58053366158f
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666027"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54255143"
 ---
-# <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行
+# <a name="example-querying-xmltype-columns"></a>範例查詢 XMLType 資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下列查詢包含 **xml** 類型的資料行。 此查詢會從 `Instructions` xml **類型之** 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  
   
@@ -96,7 +96,7 @@ go
  以下是結果：  
   
 ```  
-<MyRoot xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    ...  
   <ProductModelData>  
     <ProductModelID>6</ProductModelID>  

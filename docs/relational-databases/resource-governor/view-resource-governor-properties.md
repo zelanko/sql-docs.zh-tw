@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 94ec8e822bc0b3419f772c0e7fac9a93f89dbde1
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: a1262a35450963851e3091d783aaea8bb8dface0
+ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380584"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54100423"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "53380584"
  以選取或清除核取方塊的方式，啟用或停用資源管理員。  
   
  **資源集區**  
- 使用所提供的方格，建立或變更資源集區和外部資源集區組態。 此方格會填入預先定義的內部與預設集區的資訊。 以按一下集區資料列的第一個資料行的方式，選取要進行作業的集區。 若要建立新的資源集區，按一下加上了星號 (**\***) 的資料列。  
+ 使用所提供的方格，建立或變更資源集區和外部資源集區組態。 此方格會填入預先定義的內部與預設集區的資訊。 以按一下集區資料列的第一個資料行的方式，選取要進行作業的集區。 若要建立新的資源集區，請按一下前面有星號 (**&#42;**) 的資料列。  
   
  **名稱**  
  指定資源集區的名稱。  
@@ -91,7 +91,7 @@ ms.locfileid: "53380584"
  如需詳細資訊，請參閱 [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) (建立資源集區 (Transact-SQL)) 和 [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) (建立外部資源集區 (Transact-SQL)。  
   
  **資源集區的工作負載群組**  
- 使用提供的方格，建立或變更工作負載群組的組態。 此方格會填入預先定義的內部與預設群組的資訊。 按一下集區資料列的第一個資料行，選取要進行作業的群組。 若要建立新的工作負載群組，按一下加上了星號 ((**\***) 的資料列。  
+ 使用提供的方格，建立或變更工作負載群組的組態。 此方格會填入預先定義的內部與預設群組的資訊。 按一下集區資料列的第一個資料行，選取要進行作業的群組。 若要建立新的工作負載群組，請按一下前面有星號 (**&#42;**) 的資料列。  
   
  **名稱**  
  指定工作負載群組的名稱。  

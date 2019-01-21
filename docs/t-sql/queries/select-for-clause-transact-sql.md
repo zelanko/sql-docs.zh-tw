@@ -1,7 +1,7 @@
 ---
 title: FOR 子句 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,30 +22,30 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a8f1ce1c1c5a572874b301f326a711bbcfbda8a1
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906268"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143548"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  您可以使用 FOR 子句來為查詢結果指定下列其中一個選項。  
+您可以使用 FOR 子句來為查詢結果指定下列其中一個選項。
   
 -   指定 **FOR BROWSE**，以允許在於瀏覽模式資料指標中檢視查詢結果時進行更新。  
   
 -   指定 **FOR XML**，以將查詢結果的格式設定為 XML。  
   
 -   指定 **FOR JSON**，以將查詢結果的格式設定為 JSON。  
-  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -84,20 +84,21 @@ JSON
         [ , WITHOUT_ARRAY_WRAPPER ]  
     ]  
   
-}  
-```  
+}
+```
   
-## <a name="for-browse"></a>FOR BROWSE  
+## <a name="for-browse"></a>FOR BROWSE
+
  BROWSE  
  指定允許在檢視 DB-Library 瀏覽模式資料指標中的資料時進行更新。 如果資料表包含 **timestamp** 資料行、資料表有唯一索引，且 FOR BROWSE 選項在傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 SELECT 陳述式結尾，便可以在應用程式中瀏覽資料表。  
   
-> [!NOTE]  
->  您不能在包含 FOR BROWSE 選項的 SELECT 陳述式中使用 \<lock_hint> HOLDLOCK。
+> [!NOTE]
+> 您不能在包含 FOR BROWSE 選項的 SELECT 陳述式中使用 \<lock_hint> HOLDLOCK。
   
  FOR BROWSE 不能出現在 UNION 運算子所聯集的 SELECT 陳述式中。  
   
-> [!NOTE]  
->  當資料表的唯一索引鍵資料行可設為 Null 時，資料表是在外部聯結的內側，瀏覽模式並不支援索引。  
+> [!NOTE]
+> 當資料表的唯一索引鍵資料行可設為 Null 時，資料表是在外部聯結的內側，瀏覽模式並不支援索引。  
   
  此瀏覽模式可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中掃描資料列，並且更新資料表中的資料 (一次一個資料列)。 若要以瀏覽模式在應用程式中存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，您必須使用下列兩個選項其中之一：  
   
@@ -155,8 +156,7 @@ JSON
     FROM tleft   
     RIGHT JOIN tright   
     ON tleft.c1 = tright.c1   
-    WHERE tright.c1 <> 2 ;  
-  
+    WHERE tright.c1 <> 2 ;
     ```  
   
      請在結果窗格中注意下列輸出：  
@@ -171,14 +171,15 @@ JSON
   
  在您以瀏覽模式執行 SELECT 查詢來存取資料表之後，由於右方外部聯結陳述式的定義，所以 SELECT 查詢的結果集就會針對 tleft 資料表中的 c1 資料行包含兩個 Null 值。 因此，在結果集中，您無法區別來自此資料表的 Null 值與右方外部聯結陳述式所導入的 Null 值。 如果您必須忽略結果集的 Null 值，可能會收到不正確的結果。  
   
-> [!NOTE]  
->  如果唯一索引中包含的資料行不接受 Null 值，表示結果集中的所有 Null 值都是由右方外部聯結陳述式所導入。  
+> [!NOTE]
+> 如果唯一索引中包含的資料行不接受 Null 值，表示結果集中的所有 Null 值都是由右方外部聯結陳述式所導入。  
   
-## <a name="for-xml"></a>FOR XML  
+## <a name="for-xml"></a>FOR XML
+
  XML  
- 指定查詢結果要以 XML 文件來傳回。 您必須指定下列 XML 模式之一：RAW、AUTO、EXPLICIT。 如需有關 XML 資料及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資訊，請參閱 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)。  
+ 指定查詢結果要以 XML 文件來傳回。 您必須指定下列其中一個 XML 模式：RAW、AUTO、EXPLICIT。 如需有關 XML 資料及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的詳細資訊，請參閱 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)。  
   
- RAW [ **('***ElementName***')** ]  
+ RAW [ **('**_ElementName_**')** ]  
  取得查詢結果，然後使用一般識別碼 \<row /> 作為元素標記，將結果集內的每個資料列轉換成 XML 元素。 您可以選擇性地指定資料列元素的名稱。 產生的 XML 會使用指定的 *ElementName* 作為針對每個資料列產生的資料列元素。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 RAW 模式](../../relational-databases/xml/use-raw-mode-with-for-xml.md)。
   
  AUTO  
@@ -190,10 +191,26 @@ JSON
  XMLDATA  
  傳回內嵌 XDR 結構描述，但不在結果中加入根元素。 如果指定了 XMLDATA，就會將 XDR 結構描述附加至文件中。  
   
-> [!IMPORTANT]  
->  XMLDATA 指示詞已被取代。 在 RAW 和 AUTO 模式的情況下，請使用 XSD 產生。 EXPLICIT 模式中沒有 XMLDATA 指示詞的替代項目。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
- XMLSCHEMA [ **('***TargetNameSpaceURI***')** ]  
+> [!IMPORTANT]
+> XMLDATA 指示詞**已被取代**。 在 RAW 和 AUTO 模式的情況下，請使用 XSD 產生。 EXPLICIT 模式中沒有 XMLDATA 指示詞的替代項目。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+
+_隱藏不想要的分行符號：_ 您可以使用 SQL Server Management Studio (SSMS) 來發出使用 FOR XML 子句的查詢。 有時會傳回大量 XML 並顯示在一個方格中。 XML 字串的長度可能會超過一個 SSMS 方格中單一行所能保存的長度。 在這些情況下，SSMS 可能會在整個 XML 字串的長區段之間插入分行符號字元。 這類分行符號可能出現在不應該分行的子字串中間。 您可以藉由使用 AS XMLDATA 轉換來避免分行符號。 當您使用 FOR JSON PATH 時也適用此解決方案。 此技巧在 Stack Overflow 上有相關討論，並顯示在下列 Transact-SQL 範例 SELECT 陳述式中：
+
+- [使用 SQL Server FOR XML：將結果資料類型轉換成文字/varchar/字串其中任何一個？](https://stackoverflow.com/questions/5655332/using-sql-server-for-xml-convert-result-datatype-to-text-varchar-string-whate/5658758#5658758) \(英文\)
+
+    ```sql
+    SELECT CAST(
+        (SELECT column1, column2
+            FROM my_table
+            FOR XML PATH('')
+        )
+            AS VARCHAR(MAX)
+    ) AS XMLDATA ;
+    ```
+
+<!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
+
+ XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
  傳回內嵌 XSD 結構描述。 您可以在指定這個指示詞時，選擇性地指定目標命名空間 URI，這會在結構描述中傳回指定的命名空間。 如需詳細資訊，請參閱 [產生內嵌 XSD 結構描述](../../relational-databases/xml/generate-an-inline-xsd-schema.md)。  
   
  ELEMENTS  
@@ -205,7 +222,7 @@ JSON
  ABSENT  
  指出對於 NULL 資料行值而言，不會在 XML 結果中加入對應的 XML 元素。 請只搭配 ELEMENTS 來指定這個選項。  
   
- PATH [ **('***ElementName***')** ]  
+ PATH [ **('**_ElementName_**')** ]  
  針對結果集內的每個資料列產生 \<row> 元素包裝函式。 您可以視需要為 \<row> 元素包裝函式指定元素名稱。 如果提供空字串 (例如 FOR XML PATH (**''**) )，就不會產生包裝函式元素。 使用 PATH 可能會針對利用 EXPLICIT 指示詞來撰寫的查詢提供較簡單的替代方案。 如需詳細資訊，請參閱 [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)。  
   
  BINARY BASE64  
@@ -214,7 +231,7 @@ JSON
  TYPE  
  指定查詢以 **xml** 類型的形式傳回結果。 如需詳細資訊，請參閱 [FOR XML 查詢中的 TYPE 指示詞](../../relational-databases/xml/type-directive-in-for-xml-queries.md)。  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  指定將單一最上層元素加入產生的 XML 中。 您可以選擇性地指定要產生的根元素名稱。 如果未指定選擇性的根名稱，就會新增預設的 \<root> 元素。  
   
  如需詳細資訊，請參閱 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)。  
@@ -234,7 +251,8 @@ ORDER BY LastName, FirstName
 FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;  
 ```  
   
-## <a name="for-json"></a>FOR JSON  
+## <a name="for-json"></a>FOR JSON
+
  JSON  
  指定 FOR JSON 以將查詢結果以 JSON 文字格式傳回。 您還必須指定下列其中一個 JSON 模式：AUTO 或 PATH。 如需有關 **FOR JSON** 子句的詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
@@ -249,7 +267,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  您可以藉由搭配 **FOR JSON** 子句指定 **INCLUDE_NULL_VALUES** 選項，在 JSON 輸出中包含 Null 值。 如果您未指定此選項，輸出就不會包含查詢結果中 Null 值的 JSON 屬性。 如需詳細資訊和範例，請參閱 [使用 INCLUDE_NULL_VALUES 選項在 JSON 輸出中包含 Null 值 &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)。  
   
- ROOT [ **('***RootName***')** ]  
+ ROOT [ **('**_RootName_**')** ]  
  您可以藉由搭配 **FOR JSON** 子句指定 **ROOT**選項，將一個單一最上層元素新增至 JSON 輸出中。 如果您未指定 **ROOT** 選項，則 JSON 輸出不會有根項目。 如需詳細資訊和範例，請參閱[使用 ROOT 選項將根節點新增至 JSON 輸出 &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)。  
   
  WITHOUT_ARRAY_WRAPPER  
@@ -257,7 +275,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  如需詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+ [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+

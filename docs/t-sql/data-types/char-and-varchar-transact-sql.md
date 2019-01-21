@@ -25,18 +25,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698815"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299385"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 固定長度 **char** 或變動長度 **varchar** 的字元資料型別。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，當使用支援 UTF-8 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 字元編碼。 若指定非 UTF-8 定序，則這些資料類型只會存放該定序對應之字碼頁所支援的字元子集。
   
@@ -52,7 +52,7 @@ ms.locfileid: "51698815"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的多位元組編碼包括：
 -   一些東亞語言的雙位元組字元集 (DBCS) 使用字碼頁 936 與 950 (中文)、932 (日文) 或 949 (韓文)。
--   UTF-8 (具有字碼頁 65001)。 **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始))
+-   UTF-8 (具有字碼頁 65001)。 **適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始)
 
 若您的網站支援多種語言：
 - 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，請考慮使用支援 UTF-8 的定序來支援 Unicode 並將字元轉換問題降到最低。 

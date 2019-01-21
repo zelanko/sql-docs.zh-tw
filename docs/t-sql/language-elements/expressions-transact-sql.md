@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c06ef657cc4a29926c29eef8616e22ba4025201f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511922"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124098"
 ---
 # <a name="expressions-transact-sql"></a>運算式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,8 +89,8 @@ ms.locfileid: "52511922"
 |[ _table_name_**.** ]|這是資料表的名稱或別名。|  
 |*column*|這是資料行的名稱。 運算式中只能使用資料行的名稱。|  
 |*variable*|這是變數或參數的名稱。 如需詳細資訊，請參閱 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)。|  
-|**(** *expression*  **)**|這是符合這個主題所定義的任何有效運算式。 括號是分組運算子，可確保會先評估運算式在括號內的所有運算子之後，才組合各個產生的運算式。|  
-|**(** *scalar_subquery* **)**|這是傳回單一值的子查詢。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _expression_  **)**|這是符合這個主題所定義的任何有效運算式。 括號是分組運算子，可確保會先評估運算式在括號內的所有運算子之後，才組合各個產生的運算式。|  
+|**(** _scalar_subquery_ **)**|這是傳回單一值的子查詢。 例如：<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|一元運算子只適用於會評估得出數值資料類型類別目錄之任何資料類型的運算式。 這是只有單一數值運算元的運算子：<br /><br /> + 表示正數。<br /><br /> - 表示負數。<br /><br /> ~ 表示運算元的補充運算子。|  
 |{ *binary_operator* }|這是定義組合兩個運算式來產生單一結果之方式的運算子。 *binary_operator* 可以是算術運算子、指派運算子 (=)、位元運算子、比較運算子、邏輯運算子、字串串連運算子 (+) 或一元運算子。 如需運算子的詳細資訊，請參閱[運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)。|  
 |*ranking_windowed_function*|這是任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 次序函數。 如需詳細資訊，請參閱[次序函數 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)。|  
@@ -99,7 +99,7 @@ ms.locfileid: "52511922"
 ## <a name="expression-results"></a>運算式結果  
  單一常數、變數、純量函數或資料行名稱所組成的簡單運算式：運算式的資料類型、定序、有效位數、小數位數和值，就是所參考之元素的資料類型、定序、有效位數、小數位數和值。  
   
- 當利用比較或邏輯運算子來組合兩個運算式時，產生的資料類型是布林，而值是下列項目之一：TRUE、FALSE 或 UNKNOWN。 如需布林值資料類型的詳細資訊，請參閱[比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)。  
+ 當利用比較或邏輯運算子來組合兩個運算式時，產生的資料類型為布林值類型，且值為下列其中之一：TRUE、FALSE 或 UNKNOWN。 如需布林值資料類型的詳細資訊，請參閱[比較運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)。  
   
  當利用算術、位元或字串運算子來組合兩個運算式時，運算子會決定產生的資料類型。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52511922"
   
  評估得出字元字串的任何運算式之定序，是由下列定序優先順序規則來設定的。 如需詳細資訊，請參閱[定序優先順序 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)。  
   
- 在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 之類的程式設計語言中，運算式一律會評估得出單一結果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 選取清單中的運算式會遵循這個規則的變化：此運算式會針對結果集中的每個資料列個別進行評估。 在結果集的每個資料列中，單一運算式可以有不同的值，但每個資料列只能有運算式的單一值。 例如，在下列 `SELECT` 陳述式中，選取清單中的 `ProductID` 參考和 `1+2` 一詞都是運算式：  
+ 在 C 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 之類的程式設計語言中，運算式一律會評估得出單一結果。 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 清單中的運算式會遵循這個規則的變化：會針對結果集中的每個資料列來個別評估此運算式。 在結果集的每個資料列中，單一運算式可以有不同的值，但每個資料列只能有運算式的單一值。 例如，在下列 `SELECT` 陳述式中，選取清單中的 `ProductID` 參考和 `1+2` 一詞都是運算式：  
   
 ```  
 USE AdventureWorks2012;  

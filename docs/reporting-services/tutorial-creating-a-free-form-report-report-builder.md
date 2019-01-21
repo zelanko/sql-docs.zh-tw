@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d89562ce168d8cf5662fc7af96da3d89cdafe509
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d473ba8f0a16fd161ec2c6edce2cd6de51a08f36
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021922"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143488"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
 在本教學課程中，您會建立分頁報表，作為電子報。 每個頁面會顯示靜態文字、摘要的視覺效果，以及詳細的範例銷售資料。
@@ -22,7 +22,7 @@ ms.locfileid: "50021922"
 
 此報表會依領域將資訊分組，並顯示各領域的銷售經理姓名以及詳細和摘要銷售資訊。 您一開始會使用清單資料區作為自由格式報表的基礎，然後新增含有影像的裝飾面板、插入資料的靜態文字、顯示詳細資訊的資料表，以及 (選擇性) 顯示摘要資訊的圓形圖和直條圖。  
   
-完成這個教學課程的估計時間：30 分鐘。  
+完成本教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -48,11 +48,11 @@ ms.locfileid: "50021922"
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料來源]。  
   
-2.  在 **[名稱]** 方塊中，輸入 **ListDataSource**。  
+2.  在 [名稱] 方塊中，輸入：**ListDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
-4.  確認連線類型為 Microsoft SQL Server，接著在 [連接字串] 方塊中鍵入 **Data Source = \<伺服器名稱>**  
+4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中輸入：**Data Source = \<伺服器名稱>**  
   
     **\<伺服器名稱>** (例如 Report001) 指定已安裝 SQL Server Database Engine 執行個體的電腦名稱。 由於此報表的資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫只用來剖析查詢。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "50021922"
   
 1.  在 [報表資料] 窗格中，按一下 [新增] > [資料集]。  
   
-2.  在 [名稱] 方塊中，鍵入 **ListDataset**。  
+2.  在 [名稱] 方塊中，輸入：**ListDataset**。  
   
 3.  按一下 [使用內嵌在我的報表中的資料集] ，並確認資料來源是 **ListDataSource**。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "50021922"
   
 2.  在 [插入] 索引標籤 > [文字方塊] 上。 按一下清單的左上角，在您先前新增的矩形內，並拖曳形成大約寬 3.45 英吋且高約 5 英吋的文字方塊。  
   
-3.  將滑鼠游標置於文字方塊內，然後輸入： **Newsletter for** 。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
+3.  將游標置於文字方塊內，然後輸入：**Newsletter for**。 在單字 "for" 後面加上一個空格來分隔的文字和您將在下一個步驟新增的欄位。   
   
     ![新增新聞稿標題文字](../reporting-services/media/tutorial-newsletterfor.png "新增新聞稿標題文字")  
   
@@ -215,7 +215,7 @@ ms.locfileid: "50021922"
     *  [20 pt]。
     *  [蕃茄紅]。  
   
-9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入： **Hello** ，並在這個字後加上一個空格以分隔文字和您將在下一個步驟中新增的欄位。  
+9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入：**Hello**，在單字後面加上一個空格，以分隔文字和您將在下一個步驟中新增的欄位。  
  
 10. 將 `[FullName]` 欄位從 [報表資料] 窗格中的 ListDataSet 拖曳到文字方塊，放在 "Hello " 之後，然後輸入一個逗號 (,)。  
    
@@ -244,7 +244,7 @@ ms.locfileid: "50021922"
       *  [10 pt]。
       *  **黑色**。  
  
-20. 將滑鼠游標置於文字方塊內，在無意義文字底下輸入︰ **Congratulations on your total sales of**，並在文字之後以一個空格分隔文字和您將在下一個步驟新增的欄位。 
+20. 將游標置於文字方塊內，然後在無意義的文字底下輸入：**Congratulations on your total sales of**，在單字後面加上一個空格，以分隔文字和您將在下一個步驟中新增的欄位。 
   
 21. 將 [Sales] 欄位拖曳到文字方塊中，置於您在前一個步驟輸入的文字後面，然後輸入一個驚嘆號 (!)。  
 
@@ -405,7 +405,7 @@ ms.locfileid: "50021922"
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰ **Product Quantities Sold**。  
+10. 選取圖表標題，然後輸入︰**Product Quantities Sold**。  
   
 12. 在 [主資料夾] 索引標籤 > [字型]，讓標題成為︰
     * **字型** **Segoe UI SemiBold**。
@@ -444,7 +444,7 @@ ms.locfileid: "50021922"
   
 9. 將圖表拖曳到矩形內。  
    
-10. 選取圖表標題，然後輸入︰ **Product Sales**。  
+10. 選取圖表標題，然後輸入︰**Product Sales**。  
   
 12. 在 [主資料夾] 索引標籤 > [字型]，讓標題成為︰
     * **字型** **Segoe UI SemiBold**。

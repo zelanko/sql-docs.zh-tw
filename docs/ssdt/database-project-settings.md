@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94eea6f9e8d76875c11a6e52de423812c16b255e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516021"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143578"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
 您可以使用資料庫專案設定，控制資料庫、偵錯與組建組態的各個部分。 這些設定可分類如下：  
@@ -170,8 +170,7 @@ Compiler Service 具有兩種限制分類。
   
 2.  如果以 VB 撰寫物件，您可以先在 **[語言]** 中選擇 VB，然後按一下 **[進階]** 。 VB 選項的描述可以在[進階編譯器設定對話方塊 (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx) 找到  
   
-如需詳細資訊，請參閱[組建組態屬性](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD)) \(機器翻譯\)  
-  
+
 ## <a name="bkmk_build"></a>建置  
 您可以為方案中的每一個資料庫專案選擇建置組態。 組態預設只有一個，但是您可以新增自訂組態。 例如，如果您想要使用永遠會刪除並重新建立資料庫的自訂組態，就可以選擇這樣做。 在包含不同專案類型的方案中，可以建立含有個別專案特定建置組態的自訂方案組態。  
   

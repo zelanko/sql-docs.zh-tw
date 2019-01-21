@@ -1,7 +1,7 @@
 ---
 title: 建立和套用初始快照集 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,70 +14,78 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62abe846572eff13f44658cdea33670ca2b0bf1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657547"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135608"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立及套用初始快照集。 使用參數化篩選的合併式發行集需要一個兩段式快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立及套用初始快照集。 使用參數化篩選的合併式發行集需要一個兩段式快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+  快照集在發行集建立之後由「快照代理程式」產生。 它們可以：  
   
- **本主題內容**  
+-   立即產生。 依預設，在「新增發行集精靈」中建立發行集後會立即產生合併式發行集的快照集。    
+-   在排程時間產生。 在「新增發行集精靈」的 **[快照集代理程式]** 頁面上指定排程，或在使用預存程序或 Replication Management Objects (RMO) 時指定排程。    
+-   手動。 在命令提示下或從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行「快照集代理程式」。 如需執行代理程式的詳細資訊，請參閱[複寫代理程式可執行檔概念](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)和[啟動及停止複寫代理程式 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
--   **若要建立和套用初始快照集，請使用：**  
+針對合併式複寫，每次執行快照集代理程式都會產生快照集。 針對異動複寫，是否產生快照集是依照發行集屬性 **immediate_sync**的設定而定。 若屬性設定為 TRUE (使用新增發行集精靈的預設)，每次執行快照集代理程式都會產生快照集，同時隨時可套用至訂閱者。 若屬性設定為 FALSE (使用 **sp_addpublication**時的預設)，則只有在上次執行快照集代理程式後有加入新訂閱的情況下，才會產生快照集。訂閱者必須等待快照集代理程式完成，才能同步處理。  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+依預設，快照集產生後會儲存在「散發者」上的預設快照集資料夾中。 您也可以將快照集檔案儲存於抽取式媒體，例如卸除式磁碟機、CD-ROM 或預設快照集資料夾之外的位置。 此外，您可以壓縮檔案，使它們更易儲存和傳送，還可以在快照集套用至「訂閱者」端前後執行指令碼。 如需這些選項的詳細資訊，請參閱 [Snapshot Options](../../relational-databases/replication/snapshot-options.md)。  
   
-     [Transact-SQL](#TsqlProcedure)  
+若快照集是專為使用參數化篩選的合併式發行集而產生，該快照集會使用兩部份處理建立而成。 首先建立結構描述快照集，其中包含複寫指令碼和已發行物件的結構描述，但不包含資料。 接下來每個訂閱皆以快照集初始化，該快照集中包含從結構描述快照集複製而來的指令碼和結構描述，以及屬於訂閱分割的資料。 如需詳細資訊，請參閱 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+快照集在「發行者」端建立，並儲存於預設或替代的快照集位置之後，可以傳送「訂閱者」並進行套用。 初始同步處理期間，「散發代理程式」 (用於快照式或異動複寫) 或「合併代理程式」 (用於合併式複寫) 會傳送快照集，並將結構描述和資料檔套用至「訂閱者」端的訂閱資料庫。 依預設，如果您使用「新增訂閱精靈」，初始同步處理便會在建立訂閱之後立即進行。 此行為由精靈 **[初始化訂閱]** 頁面上的 **[初始化時機]** 選項控制。 快照集在訂閱初始化之後產生時，不會套用至「訂閱者」，除非訂閱已標示為要重新初始化。 如需詳細資訊，請參閱 [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
- 依預設，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 正在執行中，則在使用「新增發行集精靈」建立發行集之後，快照集代理程式便會立即產生快照集。 隨後，「散發代理程式」(針對快照式複寫和異動複寫) 或「合併代理程式」(針對合併訂閱) 預設會為所有訂閱套用該快照集。 也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和複寫監視器來產生快照集。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+「散發代理程式」或「合併代理程式」套用初始化快照集後，代理程式會傳播後續的更新以及其他資料修改。 快照集散發並套用至「訂閱者」後，只有等待初始快照集或新快照集的「訂閱者」會受影響。 該發行集的其他「訂閱者」(收到對已發行資料之插入、更新、刪除或其他修改的「訂閱者」) 均不受影響。  
+
+若要檢視或修改預設的快照資料夾位置，請參閱  
   
-#### <a name="to-create-a-snapshot-in-management-studio"></a>若要在 Management Studio 中建立快照集  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[修改快照集選項](../../relational-databases/replication/snapshot-options.md)  
   
-1.  連接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的發行者，然後展開伺服器節點。  
+-   複寫程式設計和 RMO 程式設計：[設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)  
+
+## <a name="default-snapshot-location"></a>預設快照集位置
+
+ 在「設定散發精靈」的 **[快照集資料夾]** 頁面中指定預設快照集位置。 如需使用此精靈的詳細資訊，請參閱[設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)。 如果您在未設定為「散發者」的伺服器上建立發行集，則請在「新增發行集精靈」的 **[快照集資料夾]** 頁面中指定預設快照集位置。 如需使用此精靈的詳細資訊，請參閱[建立發行集](../../relational-databases/replication/publish/create-a-publication.md)。  
   
-2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。  
+ 在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，修改預設快照集位置。 如需詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)。 在 [發行集屬性 - \<發行集>] 對話方塊中為每個發行集設定快照集資料夾。 如需詳細資訊，請參閱 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)。  
   
-3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]**。  
+### <a name="modify-the-default-snapshot-location"></a>修改預設快照集位置  
   
-4.  在 [檢視快照集代理程式的狀態 - \<發行集>] 對話方塊中，按一下 [啟動]。  
+1.  在 [散發者屬性 - \<散發者>] 對話方塊的 [發行者] 頁面上，按一下您要變更其預設快照集位置之發行者的屬性按鈕 (**…**)。  
   
+2.  在 [發行者屬性 - \<發行者>] 對話方塊中，輸入 [預設快照集資料夾] 屬性的值。  
+  
+    > [!NOTE]  
+    >  快照集代理程式必須有您指定之目錄的寫入權限，而散發代理程式或合併代理程式則必須有讀取權限。 如果使用提取訂閱，您必須指定一個共用目錄作為通用命名慣例 (UNC) 路徑，例如 \\\computername\snapshot。 如需詳細資訊，請參閱[保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
+  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+## <a name="create-snapshot"></a>建立快照集
+根據預設，如果 SQL Server Agent 正在執行，則在使用「新增發行集精靈」建立發行集之後，「快照集代理程式」會立即產生快照集。 隨後，「散發代理程式」(針對快照式複寫和異動複寫) 或「合併代理程式」(針對合併訂閱) 預設會為所有訂閱套用該快照集。 也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和複寫監視器來產生快照集。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)。  
+
+### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio
+
+1.  連接到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的發行者，然後展開伺服器節點。    
+2.  展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。    
+3.  以滑鼠右鍵按一下您要為其建立快照集的發行集，然後按一下 **[檢視快照集代理程式的狀態]**。    
+4.  在 [檢視快照集代理程式的狀態 - \<發行集>] 對話方塊中，按一下 [啟動]。    
  快照集代理程式產生完快照集後，就會顯示一個訊息，例如「[100%] 已產生 17 個發行項的快照集」。  
   
-#### <a name="to-create-a-snapshot-in-replication-monitor"></a>若要在複寫監視器中建立快照集  
+### <a name="in-replication-monitor"></a>在複寫監視器中  
   
-1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。  
-  
-2.  以滑鼠右鍵按一下要產生快照集的發行集，然後按一下 **[產生快照集]**。  
-  
+1.  在複寫監視器的左窗格中展開發行者群組，然後展開發行者。    
+2.  以滑鼠右鍵按一下要產生快照集的發行集，然後按一下 **[產生快照集]**。    
 3.  若要檢視快照集代理程式的狀態，請按一下 **[代理程式]** 索引標籤。如需詳細資訊，請以滑鼠右鍵按一下方格中的「快照集代理程式」，然後按一下 **[檢視詳細資料]**。  
-  
-#### <a name="to-apply-a-snapshot"></a>若要套用快照集  
-  
-1.  產生快照集後，將透過「散發代理程式」或「合併代理程式」對訂閱進行同步處理來套用該快照集：  
-  
-    -   如果將代理程式設定為連續執行 (異動複寫的預設值)，快照集會在產生後自動套用。  
-  
-    -   如果將代理程式設定為按排程執行，則快照集將在該代理程式排程的下次執行時套用。  
-  
-    -   如果將代理程式設定為視需要執行，則快照集將您在下次執行該代理程式時套用。  
-  
-     如需有關同步處理訂閱的資訊，請參閱＜ [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)資料夾中可用。  
-  
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
- 可以透過程式設計方式建立初始快照集，其方式是建立及執行快照集代理程式作業，或是從批次檔執行快照集代理程式的可執行檔。 在產生初始快照集之後，此快照集會在第一次同步處理訂閱時，傳送及套用到訂閱者。 如果您從命令提示字元或批次檔執行快照集代理程式，每當現有的快照集無效時，您將需要重新執行此代理程式。  
+
+## <a name="using-transact-sql"></a>使用 Transact-SQL
+可以透過程式設計方式建立初始快照集，其方式是建立及執行快照集代理程式作業，或是從批次檔執行快照集代理程式的可執行檔。 在產生初始快照集之後，此快照集會在第一次同步處理訂閱時，傳送及套用到訂閱者。 如果您從命令提示字元或批次檔執行快照集代理程式，每當現有的快照集無效時，您將需要重新執行此代理程式。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
-  
-#### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>建立及執行快照集代理程式作業以產生初始快照集  
-  
+
 1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
 2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 指定 **@publication** 及下列參數：  
@@ -97,8 +105,19 @@ ms.locfileid: "51657547"
   
 4.  在發行集資料庫的發行者端，執行 [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)，並指定步驟 1 中的 **@publication** 值。  
   
-#### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>執行快照集代理程式來產生初始快照集  
+## <a name="apply-a-snapshot"></a>套用快照集  
+
+### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio
   
+1.  產生快照集後，將透過「散發代理程式」或「合併代理程式」對訂閱進行同步處理來套用該快照集：   
+    -   如果將代理程式設定為連續執行 (異動複寫的預設值)，快照集會在產生後自動套用。   
+    -   如果將代理程式設定為按排程執行，則快照集將在該代理程式排程的下次執行時套用。    
+    -   如果將代理程式設定為視需要執行，則快照集將您在下次執行該代理程式時套用。  
+  
+     如需有關同步處理訂閱的資訊，請參閱＜ [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md) ＞和＜ [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)資料夾中可用。  
+  
+###   <a name="use-transact-sql"></a>使用 Transact-SQL  
+ 
 1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)。  
   
 2.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../relational-databases/replication/publish/define-an-article.md)。  
@@ -106,27 +125,18 @@ ms.locfileid: "51657547"
 3.  從命令提示字元或批次檔中，執行 [snapshot.exe](../../relational-databases/replication/agents/replication-snapshot-agent.md) 來啟動 **複寫合併代理程式**，並指定下列命令列引數：  
   
     -   **-Publication**  
-  
     -   **-Publisher**  
-  
-    -   **-Distributor**  
-  
-    -   **-PublisherDB**  
-  
+    -   **-Distributor**   
+    -   **-PublisherDB**   
     -   **-ReplicationType**  
   
      無果您正在使用「SQL Server 驗證」，您也必須指定下列引數：  
   
-    -   **-DistributorLogin**  
-  
-    -   **-DistributorPassword**  
-  
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
-  
-    -   **-PublisherLogin**  
-  
-    -   **-PublisherPassword**  
-  
+    -   **-DistributorLogin**    
+    -   **-DistributorPassword**   
+    -   **-DistributorSecurityMode** = **@publisher_security_mode**    
+    -   **-PublisherLogin**    
+    -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** = **@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
@@ -249,7 +259,6 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
- [建立並套用快照集](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
  [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

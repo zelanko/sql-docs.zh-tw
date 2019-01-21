@@ -17,12 +17,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 4256efa5952870ede608d96fa2659ce9d88f35da
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668417"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124608"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
 
@@ -132,9 +132,9 @@ SQL Server 的升級路徑視部署模式而有所不同。 SQL Server 在一般
  若要確定從舊版還原複寫資料庫的備份時有保留複寫設定：還原到與建立備份的伺服器和資料庫同名的伺服器和資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理 &#40;複寫&#41;](../../relational-databases/replication/administration/administration-replication.md)   
+ [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md)  
+ [複寫管理常見問題集](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [複寫回溯相容性](../../relational-databases/replication/replication-backward-compatibility.md)   
- [新功能 &#40;複寫&#41;](../../relational-databases/replication/what-s-new-replication.md)   
  [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [升級 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
  [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) (將複寫拓撲升級至 SQL Server 2016)

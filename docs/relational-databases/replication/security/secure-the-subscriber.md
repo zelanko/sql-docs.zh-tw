@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d410a838083aeb52c090dee0f9878a8baa52cca3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504050"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131648"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "52504050"
 > [!IMPORTANT]  
 >  若要指定連接資訊，請使用 [sp_link_publication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 預存程序。 您也可以使用「新增訂閱精靈」的 **[可更新訂閱的登入]** 頁面，此頁面會呼叫 **sp_link_publication**。 在某些情況下，如果「訂閱者」執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) 或更新版本，且「發行者」執行較舊的版本，此預存程序可能會失敗。 如果在此情況下預存程序失敗，請將「發行者」升級為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] SP1 或更新版本。  
   
- 如需詳細資訊，請參閱[建立交易式發行集的可更新訂閱](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md)和[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
+ 如需詳細資訊，請參閱[建立交易式發行集的可更新訂閱](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)和[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
 > [!IMPORTANT]  
->  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_**_\<十六進位數字>_ 格式命名的檢視，您在每一個訂閱者端設定的帳戶都應該被授與這些檢視的權限。  
+>  對於複寫在發行集資料庫中建立的檢視，為連接指定的帳戶應該只被授與插入、更新及刪除資料的權限，而不應該被授與任何其他權限。 對於發行集資料庫中以 **syncobj_**\<十六進位數字>** 格式命名的檢視，您在每一個訂閱者端設定的帳戶都應該被授與這些檢視的權限。  
   
 ## <a name="queued-updating-subscriptions"></a>佇列更新訂閱  
  設定佇列更新訂閱時，請注意與安全性相關的兩方面：  
@@ -78,6 +78,6 @@ ms.locfileid: "52504050"
 ## <a name="see-also"></a>另請參閱  
  [啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [安全性與保護 &#40;複寫&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [安全性與保護 &#40;複寫&#41;](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

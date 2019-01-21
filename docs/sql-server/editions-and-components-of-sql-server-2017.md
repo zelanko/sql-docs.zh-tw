@@ -34,15 +34,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b512abcb57cc65cc3335504d706a87bf582467c7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6e3378bf754f2a67b78e986d29acf58132c4af62
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544054"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300495"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+
+
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 本主題提供各種 SQL Server 2017 版本支援的功能的詳細資料。 
 
@@ -188,7 +192,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |多個執行個體支援|50|50|50|50|50|
 |資料表和索引分割區|是|是|是|是|是|  
 |資料壓縮|是|是|是|是|是|
-|資源管理員|是|否|否|否|否|  
+|[資源管理員]|是|否|否|否|否|  
 |分割資料表平行處理原則|是|否|否|否|否|
 |多個檔案資料流容器|是|是|是|是|是|
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否|否|否|否|

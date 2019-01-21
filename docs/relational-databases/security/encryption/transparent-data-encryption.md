@@ -1,7 +1,7 @@
 ---
 title: 透明資料加密 (TDE) | Microsoft 文件
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2fda42994bb86d1087f22024205f8a521ec530d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210577"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185124"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53210577"
   
  **適用於 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的資訊**  
   
- 在搭配使用 TDE 與 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 時， [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]會自動為您建立儲存在主要資料庫中的伺服器層級憑證。 若要在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上移動 TDE 資料庫，您必須解密資料庫、移動資料庫，然後在目的地 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新啟用 TDE。 如需在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 的逐步解說，請參閱 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)＞。  
+ 搭配 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 使用 TDE 時，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 會自動為您建立儲存在主要資料庫中的伺服器層級憑證。 若要移動 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上的 TDE 資料庫，您不需要將資料解密來進行移動作業。 如需有關搭配 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 運用 TDE 的詳細資訊，請參閱[搭配 Azure SQL Database 的透明資料加密](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。  
   
  **適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資訊**  
   

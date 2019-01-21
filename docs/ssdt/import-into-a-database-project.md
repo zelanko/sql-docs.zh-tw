@@ -15,12 +15,12 @@ ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5cf17437f97aa649ee81f2fb0f71061df04fec8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400391"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143458"
 ---
 # <a name="import-into-a-database-project"></a>匯入資料庫專案中
 您可以使用 [匯入]，將即時資料庫或 .dacpac 中的新物件填入專案，或者使用指令碼中的新定義來更新專案中的現有物件。 這三種路徑之間存在一些需要注意的行為差異，下面將詳細說明。  
@@ -59,8 +59,7 @@ ms.locfileid: "52400391"
   
 「從指令碼匯入」程序不包含預先部署/部署後指令碼、SQLCMD 變數或 RefactorLog 檔案。 如果系統在匯入時偵測到上述和任何其他不支援的建構，就會將它們放入專案之 [指令碼] 資料夾中的 **ScriptsIgnoredOnImport.sql** 檔案。  
   
-如需詳細資訊，請參閱 [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads) 的 SSDT 小組論壇。  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>匯入加密的物件  
 將加密的物件匯入資料庫專案時，不一定能夠從伺服器擷取物件定義的完整主體。 因此，在處理這個類別的物件時，匯入行為可能有所不同。  
   

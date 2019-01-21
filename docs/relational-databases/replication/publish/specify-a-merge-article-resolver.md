@@ -15,32 +15,19 @@ ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef65d698db19d1ada3c9c5260f19fa39c4140e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821936"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135998"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合併發行項解析程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合併發行項解析程式。  
+
   
- **本主題內容**  
-  
--   **開始之前：**  
-  
-     [建議](#Recommendations)  
-  
--   **若要指定合併發行項解析程式，請使用：**  
-  
-     [Transact-SQL](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 開始之前  
-  
-###  <a name="Recommendations"></a> 建議  
+##  <a name="recommendations"></a>建議  
   
 -   合併式複寫允許下列類型的發行項解決器：  
   
@@ -112,7 +99,7 @@ ms.locfileid: "47821936"
     > [!NOTE]  
     >  合併代理程式可執行檔的預設安裝位置為 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM。  
   
-#### <a name="to-specify-a-custom-resolver-when-defining-a-merge-article"></a>在定義合併發行項時，指定自訂解決器  
+## <a name="specify-a-custom-resolver-when-defining-a-merge-article"></a>在定義合併發行項時，指定自訂解析程式  
   
 1.  如果您打算使用自訂衝突解決器，請使用以上的程序建立及註冊解決器。  
   
@@ -120,7 +107,7 @@ ms.locfileid: "47821936"
   
 3.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。 針對 **@article_resolver** 指定步驟 2 中的解決器名稱，並使用 **@resolver_info** 參數指定自訂解決器的任何必要輸入。 如果是以預存程序為基礎的自訂解決器， **@resolver_info** 會是預存程序的名稱。 如需 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 提供之解析程式所需輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
-#### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>針對現有的合併發行項指定或變更自訂解決器  
+## <a name="specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>針對現有的合併發行項，指定或變更自訂解析程式  
   
 1.  若要判斷是否已針對發行項定義自訂解析程式，或是要取得解析程式的名稱，請執行 [sp_helpmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)。 如果已針對發行項定義自訂解決器，它的名稱會顯示在 **article_resolver** 欄位中。 為解決器提供的任何輸入都會顯示在結果集的 **resolver_info** 欄位中。  
   
@@ -130,7 +117,7 @@ ms.locfileid: "47821936"
   
 4.  若要變更自訂解析程式的任何必要輸入，請再次執行 [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。 針對 **resolver_info** @is_dotnet_assembly **@property** 的值，並針對 **@value**中指定合併發行項解析程式。 如果是以預存程序為基礎的自訂解決器， **@resolver_info** 會是預存程序的名稱。 如需必要輸入的詳細資訊，請參閱 [Microsoft 以 COM 為基礎的解析程式](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)。  
   
-#### <a name="to-unregister-a-custom-conflict-resolver"></a>取消註冊自訂衝突解決器  
+## <a name="unregister-a-custom-conflict-resolver"></a>將自訂衝突解析程式取消註冊  
   
 1.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)，並記下結果集中 [value] 欄位內所需的自訂解析程式名稱。  
   

@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2ad52310599d178fd5bf52bab0edd08c2886f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f8e3050afe889fd1c7f7de489b7ed6d22d3a50f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714846"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133198"
 ---
 # <a name="snapshot-folder"></a>快照集資料夾
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47714846"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用網路共用作為快照集資料夾的位置。 其他電腦上的代理程式無法存取本機路徑 (以磁碟機代號開頭的路徑，例如 C:\\)。  
   
 ## <a name="see-also"></a>另請參閱  
- [替代快照集資料夾位置](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [修改快照集選項](../../relational-databases/replication/snapshot-options.md)   
  [[設定散發]](../../relational-databases/replication/configure-distribution.md)   
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

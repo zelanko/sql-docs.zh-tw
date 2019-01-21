@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c72f5294a7727b7d5a7903e0c12f8daa8c93cbf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
+ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394144"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54257053"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -46,7 +46,7 @@ ms.locfileid: "52394144"
 
 |                                   | 需要所有伺服器物件和 VNNS | 需要所有伺服器物件和 VNNS | 不需要伺服器物件/VNNS\* | 不需要伺服器物件/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| ***可用性群組？(Y/N)***                  | ***Y***                              | ***N***                                                            | ***Y***    | ***N***    |
+| **_可用性群組？(是/否)_**                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
 | **叢集只會使用 SQL FCI**         | [案例 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [案例 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [案例 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [案例 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **叢集使用獨立執行個體** | [案例 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [案例 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
 \* 排除可用性群組接聽程式名稱
@@ -242,7 +242,7 @@ ms.locfileid: "52394144"
 
 ### [!INCLUDE[sshadrc-md](../../../includes/sshadrc-md.md)]
 
--   **資料庫鏡像端點** 
+-   **資料庫鏡像端點**
 
     從 SQL 的觀點，資料庫鏡像端點將會與系統資料表一起移轉至新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在移轉之前，請確定在防火牆中套用適當的規則，而且在相同的連接埠上未接聽任何其他處理序。
 
@@ -256,17 +256,17 @@ ms.locfileid: "52394144"
 
 ### <a name="replication"></a>複寫
 
--   **遠端** **散發者、** **發行者、** **訂閱者**
+-   **遠端散發者、發行者、訂閱者**
 
     散發者與發行者之間的關聯性只是依賴裝載這兩者的電腦 VNN，而這兩者會正確地解析為新電腦。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業也會使用系統資料表正確地移轉，因此各種複寫代理程式可以如常地繼續執行。 在移轉之前，我們需要執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 本身或任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業的任何 Windows 帳戶都有目標環境中的相同權限。 發行者與訂閱者之間的通訊將會如常執行。
 
--   **快照集** **資料夾**
+-   **快照集資料夾**
 
     在移轉之前，需要目標環境中的電腦使用與原始環境相同的權限來存取任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能所使用的任何網路共用。 在移轉之前，您必須確定是這種情況。
 
 ### <a name="service-broker"></a>Service Broker
 
--   **Service** **Broker** **端點**
+-   **Service Broker 端點**
 
     從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 觀點，沒有任何端點考量。 在移轉之前，您需要確保相同的連接埠上尚未接聽任何處理序，而且沒有防火牆規則會封鎖該連接埠，或有專門允許連接埠的防火牆規則。
 
@@ -278,7 +278,7 @@ ms.locfileid: "52394144"
 
     路由取決於目標的虛擬網路名稱，而其電腦名稱和 SQL FCI 網路名稱將正確地解析為新環境中的正確電腦。 任何其他參考的 VNN 也必須重新導向至新的電腦。
 
--   **遠端服務繫結** 
+-   **遠端服務繫結**
 
     在移轉之後，遠端服務繫結將如預期般運作，因為任何使用遠端服務繫結的使用者都會適當地移轉。
 
@@ -288,7 +288,7 @@ ms.locfileid: "52394144"
 
     將適當地移轉作業與系統資料庫。 任何執行 SQL Agent 作業或 SQL Agent 本身的使用者都會有必要條件中所指定目標電腦的相同權限。
 
--   **警示和** **運算子**
+-   **警示和操作員**
 
     將適當地移轉警示和運算子與系統資料庫。
 

@@ -2,7 +2,7 @@
 title: 針對 SQL Server Integration Services (SSIS) Scale Out 進行疑難排解 | Microsoft Docs
 description: 本文描述如何針對 SSIS Scale Out 的常見問題進行疑難排解
 ms.custom: performance
-ms.date: 05/09/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 20473c4555a0f0a98484bd66ef93ce659d51a2a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732488"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206324"
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
 
@@ -38,7 +38,7 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 
     在 SSMS 中，於 [物件總管] 中的 [SSISDB] 上按一下滑鼠右鍵，然後選取 [已啟用 Scale Out 功能]。
 
-    ![已啟用 Scale Out](media\isenabled.PNG)
+    ![已啟用 Scale Out](media/isenabled.PNG)
 
     如果屬性值為 False，請呼叫 `[catalog].[enable_scaleout]` 預存程序來啟用 Scale Out。
 
@@ -62,7 +62,7 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 
 ### <a name="symptoms"></a>徵狀
 
-「System.ServiceModel.EndpointNotFoundException: 沒有任何在 https://[電腦名稱]:[連接埠]/ClusterManagement/ 上進行接聽的端點可以接受該訊息。」
+*「System.ServiceModel.EndpointNotFoundException:沒有任何在 https://*[機器名稱]:[連接埠]*/ClusterManagement/ 上進行接聽的端點可以接受該訊息。」*
 
 ### <a name="solution"></a>方案
 
@@ -77,11 +77,11 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 ## <a name="could-not-establish-trust-relationship"></a>無法建立信任關係
 
 ### <a name="symptoms"></a>徵狀
-「System.ServiceModel.Security.SecurityNegotiationException: 無法利用授權 '[電腦名稱]:[連接埠]' 為 SSL/TLS 安全通道建立信任關係。」
+*「System.ServiceModel.Security.SecurityNegotiationException:無法利用授權 '[機器名稱]:[連接埠]' 為 SSL/TLS 安全通道建立信任關係。」*
 
-「System.Net.WebException: 基礎連線已關閉: 無法為 SSL/TLS 安全通道建立信任關係。」
+*「System.Net.WebException:基礎連線已關閉:無法為 SSL/TLS 安全通道建立信任關係。」*
 
-「System.Security.Authentication.AuthenticationException: 根據驗證程序，遠端憑證無效。」
+*「System.Security.Authentication.AuthenticationException:根據驗證程序，遠端憑證無效。」*
 
 ### <a name="solution"></a>方案
 1.  將 Scale Out Master 憑證安裝至 Scale Out Worker 節點上本機電腦的根憑證存放區 (如果尚未安裝憑證)，然後重新啟動 Scale Out Worker 服務。
@@ -97,9 +97,9 @@ SSIS Scale Out 涉及 SSIS 目錄資料庫 `SSISDB`、Scale Out Master 服務與
 
 ### <a name="symptoms"></a>徵狀
 
-「System.ServiceModel.Security.SecurityNegotiationException: 無法利用授權 '[電腦名稱]:[連接埠]' 為 SSL/TLS 建立安全通道。」
+*「System.ServiceModel.Security.SecurityNegotiationException:無法以授權 '[機器名稱]:[連接埠]' 建立 SSL/TLS 的安全通道。」*
 
-「System.Net.WebException: 要求已中止: 無法建立 SSL/TLS 安全通道。」
+*「System.Net.WebException:要求已中止:無法建立 SSL/TLS 安全通道。」*
 
 ### <a name="solution"></a>方案
 執行下列命令，檢查執行 Scale Out Worker 服務的帳戶是否可以存取 Scale Out Worker 憑證：
@@ -118,9 +118,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>徵狀
 
-「System.ServiceModel.Security.MessageSecurityException: HTTP 要求被用戶端驗證配置 'Anonymous' 禁止。」
+*「System.ServiceModel.Security.MessageSecurityException:用戶端驗證配置 'Anonymous' 禁止 HTTP 要求。」*
 
-「System.Net.WebException: 遠端伺服器傳回錯誤: (403) 禁止。」
+*「System.Net.WebException:遠端伺服器傳回錯誤：(403) 禁止。」*
 
 ### <a name="solution"></a>方案
 1.  將 Scale Out Worker 憑證安裝至 Scale Out Master 節點上本機電腦的根憑證存放區 (如果尚未安裝憑證)，然後重新啟動 Scale Out Worker 服務。
@@ -154,7 +154,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 ### <a name="symptoms"></a>徵狀
 
-「System.ServiceModel.CommunicationException: 對 https://[電腦名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是因為用戶端與伺服器之間的安全性繫結不相符所造成。」
+*「System.ServiceModel.CommunicationException:對 https://[機器名稱]:[連接埠]/ClusterManagement/ 發出 HTTP 要求時發生錯誤。這可能是因為在 HTTPS 的情況下，伺服器憑證未使用 HTTP.SYS 正確設定。也可能是用戶端與伺服器之間的安全性繫結不相符所造成。」*
 
 ### <a name="solution"></a>方案
 1.  執行下列命令，檢查主要節點上 Scale Out Master 憑證是否正確地繫結至主要端點中的連接埠：
@@ -224,4 +224,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>後續步驟
 如需詳細資訊，請參閱下列有關安裝和設定 SSIS Scale Out 的文章：
 -   [在單一電腦上開始使用 Integration Services (SSIS) Scale Out](get-started-with-ssis-scale-out-onebox.md)
--   [逐步解說︰設定 Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [逐步解說：設定 Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

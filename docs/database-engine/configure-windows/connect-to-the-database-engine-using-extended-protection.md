@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f820161dcf242a06054e3f64198aad1f827ed3dd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395351"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54133208"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>使用擴充保護連接至 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52395351"
   
 1.  在 **[開始]** 功能表上，選擇 **[所有程式]**，指向 **[Microsoft SQL Server]** ，然後按一下 **[SQL Server 組態管理員]**。  
   
-2.  展開 [SQL Server 網路組態]，並以滑鼠右鍵按一下 [*\<執行個體名稱**>* 的通訊協定]，然後按一下 [屬性]。  
+2.  展開 [SQL Server 網路組態]，然後在 [_\<_執行個體名稱*>* 的通訊協定] 上按一下滑鼠右鍵，再按一下 [屬性]。  
   
 3.  針對通道繫結和服務繫結，在 **[進階]** 索引標籤上將 **[擴充保護]** 設定為適當的設定值。  
   

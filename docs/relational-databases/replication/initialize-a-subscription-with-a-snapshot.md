@@ -14,20 +14,20 @@ ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5532e7916f5713dea0dde30f5afb01634f86367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d17b39369f19736e587fc82507a82fe02f85590
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684746"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124258"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>使用快照集初始化訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   建立發行集之後，通常會建立初始快照集，並將其複製到快照集資料夾 (使用「新增發行集精靈」建立的合併式發行集預設均會發生此情況)。 然後，在訂閱的初始同步處理期間，由「散發代理程式」(針對交易式和快取式發行集) 或「合併代理程式」(針對合併式發行集) 套用至「訂閱者」。 快照集處理取決於發行集的類型：  
   
--   如果快照集用於不使用參數化篩選的快照式發行集、交易式發行集或合併式發行集，則快照集會在大量複製程式 (bcp) 檔案中包含結構描述，還會包含複寫所需的條件約束、擴充屬性、索引、觸發程序和系統資料表。 如需建立和套用快照集的詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-snapshot.md)。  
+-   如果快照集用於不使用參數化篩選的快照式發行集、交易式發行集或合併式發行集，則快照集會在大量複製程式 (bcp) 檔案中包含結構描述，還會包含複寫所需的條件約束、擴充屬性、索引、觸發程序和系統資料表。 如需建立和套用快照集的詳細資訊，請參閱[建立和套用快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。  
   
--   若快照集是專為使用參數化篩選的合併式發行集而產生，該快照集會使用兩部份處理建立而成。 首先建立結構描述快照集，其中包含複寫指令碼和已發行物件的結構描述，但不包含資料。 接下來每個訂閱皆以快照集初始化，該快照集中包含從結構描述快照集複製而來的指令碼和結構描述，以及屬於訂閱分割的資料。 如需詳細資訊，請參閱＜ [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)＞。  
+-   若快照集是專為使用參數化篩選的合併式發行集而產生，該快照集會使用兩部份處理建立而成。 首先建立結構描述快照集，其中包含複寫指令碼和已發行物件的結構描述，但不包含資料。 接下來每個訂閱皆以快照集初始化，該快照集中包含從結構描述快照集複製而來的指令碼和結構描述，以及屬於訂閱分割的資料。 如需詳細資訊，請參閱＜ [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
  依照您發行集的複寫類型和發行項不同，快照集的組成檔案會不一樣。 這些檔案會複製到設定「散發者」時指定的預設快照集資料夾，或建立發行集時指定的替代快照集資料夾。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "47684746"
 ## <a name="snapshot-options"></a>快照集選項  
  使用快照集初始化訂閱時，可以使用下列選項。 您可以：  
   
--   指定代替預設快照集資料夾位置的替代快照集資料夾位置，或同時指定這兩個位置。 如需詳細資訊，請參閱＜ [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)＞。  
+-   指定代替預設快照集資料夾位置的替代快照集資料夾位置，或同時指定這兩個位置。 如需詳細資訊，請參閱 [修改快照集選項](../../relational-databases/replication/snapshot-options.md)。  
   
--   壓縮快照集以儲存在抽取式媒體，或者透過慢速網路傳送。 如需詳細資訊，請參閱＜ [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md)＞。  
+-   壓縮快照集以儲存在抽取式媒體，或者透過慢速網路傳送。 如需詳細資訊，請參閱＜ [Compressed Snapshots](../../relational-databases/replication/snapshot-options.md#compressed-snapshots)＞。 
+
+-   在套用快照集之前及之後執行 Transact-SQL 指令碼。 如需詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)。  
   
--   在套用快照集之前及之後執行 Transact-SQL 指令碼。 如需詳細資訊，請參閱[在套用快照集之前及之後執行指令碼](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)。  
-  
--   使用檔案傳輸通訊協定 (FTP) 傳送快照集檔案。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/transfer-snapshots-through-ftp.md)。  
+-   使用檔案傳輸通訊協定 (FTP) 傳送快照集檔案。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [初始化訂閱](../../relational-databases/replication/initialize-a-subscription.md)   

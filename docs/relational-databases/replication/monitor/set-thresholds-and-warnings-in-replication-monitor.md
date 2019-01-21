@@ -18,12 +18,12 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e20f280df7054596f357c4864ef95177ca3e9cf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749616"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54135469"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47749616"
   
 2.  按一下 **[警告]** 索引標籤。若要檢視此索引標籤上選項的詳細資訊，請按一下功能表列上的 **[說明]** 。  
   
-3.  透過選取適當的核取方塊啟用警告： **[若訂閱將在臨界值內過期，就發出警告]** 或 **[若延遲超過臨界值，就發出警告]**。  
+3.  透過選取適當的核取方塊啟用警告：[若訂閱將在臨界值內過期，就發出警告] 或 [若延遲超過臨界值，就發出警告]。  
   
 4.  在 **[臨界值]** 資料行中設定警告的臨界值。 例如，如果您在步驟 3 選取 **[若延遲超過臨界值，就發出警告]** ，便可以在 **[臨界值]** 資料行中選取 **[60 秒]** 的延遲。  
   
@@ -164,6 +164,6 @@ ms.locfileid: "47749616"
 5.  按一下 [ **關閉**]。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

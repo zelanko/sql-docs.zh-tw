@@ -13,12 +13,12 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9970c01b1af46287c9438b2b731af6a1c9e1f44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c92321a8f9e0cb70a1e16a268ef1e84b17946ae
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655946"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130428"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>記錄傳送和複寫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,12 +110,12 @@ ms.locfileid: "47655946"
   
     -   如果發行集未篩選，您可以透過與最新的「訂閱者」進行同步處理，使發行集資料庫處於最新狀態。  
   
-    -   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請考慮進行資料分割的資料表，這樣可以使每個訂閱僅接收單一地區 (「北區」、「南區」、「東區」和「西區」) 客戶資料。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。 在此情況下，建議您重新初始化所有訂閱，以讓發行者端和訂閱者端的資料聚合。 如需詳細資訊，請參閱 [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)。  
+    -   如果發行集已篩選，則可能無法使發行集資料庫處於最新狀態。 請思考一下一個已進行資料分割的資料表，其中資料分割方式使得每個訂閱只會收到下列單一地區的客戶資料：北區、東區、南區及西區。 如果每個資料分割至少有一個「訂閱者」，則與每個資料分割的「訂閱者」進行同步處理就可使發行集資料庫處於最新狀態。 不過，如果在「西區」資料分割中的資料未複寫到任何「訂閱者」(舉例來說)，則「發行者」端的此資料將無法處於最新狀態。 在此情況下，建議您重新初始化所有訂閱，以讓發行者端和訂閱者端的資料聚合。 如需詳細資訊，請參閱 [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
      如果同步處理的「訂閱者」所執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本早於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則訂閱不可是匿名的，而必須是客訂閱或主訂閱 (在之前的版本中稱為本機訂閱與全域訂閱)。 如需詳細資訊，請參閱 [同步處理資料](../../relational-databases/replication/synchronize-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫功能及工作](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server 複寫](../../relational-databases/replication/sql-server-replication.md)   
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [資料庫鏡像和複寫 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   

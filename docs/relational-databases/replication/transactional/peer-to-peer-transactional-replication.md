@@ -17,12 +17,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58fa9cf55a0ef120266c0398734fc6671402634c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785246"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129308"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>點對點 - 異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47785246"
  點對點複寫包含了可在點對點拓撲之間啟用衝突偵測的選項， 這個選項可避免因為未偵測到的衝突所導致的問題，包括不一致的應用程式行為和遺失更新。 啟用這個選項時，預設會將衝突的變更視為造成散發代理程式失敗的嚴重錯誤。 在發生衝突時，此拓撲會維持不一致的狀態，直到以手動方式解決衝突並讓拓撲之間的資料變成一致為止。 如需相關資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。  
   
 > [!NOTE]  
->  若要避免潛在的資料不一致問題，請務必要避免發生點對點拓撲中的衝突，即使是啟用了衝突偵測也一樣。 若要確定只在一個節點上執行特定資料列的寫入作業，存取和變更資料的應用程式必須分割插入、更新和刪除作業。 這樣的分割可確保，從一個節點對給定資料列的修改會在其他節點修改該資料列之前，與拓撲中的所有其他節點同步處理。 如果應用程式需要複雜的衝突偵測與解決功能，請使用合併式複寫。 如需詳細資訊，請參閱[合併式複寫](../../../relational-databases/replication/merge/merge-replication.md)和[偵測及解決合併式複寫衝突](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)。  
+>  若要避免潛在的資料不一致問題，請務必要避免發生點對點拓撲中的衝突，即使是啟用了衝突偵測也一樣。 若要確定只在一個節點上執行特定資料列的寫入作業，存取和變更資料的應用程式必須分割插入、更新和刪除作業。 這樣的分割可確保，從一個節點對給定資料列的修改會在其他節點修改該資料列之前，與拓撲中的所有其他節點同步處理。 如果應用程式需要複雜的衝突偵測與解決功能，請使用合併式複寫。 如需詳細資訊，請參閱[合併式複寫](../../../relational-databases/replication/merge/merge-replication.md)和[偵測及解決合併式複寫衝突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 ## <a name="peer-to-peer-topologies"></a>點對點拓撲  
  以下案例說明點對點複寫的一般用法。  
@@ -155,11 +155,11 @@ ms.locfileid: "47785246"
 -   訂閱屬性 **@sync_type** 需要 **none** 或 **automatic**) 來提供向外延展和高可用性解決方案。  
   
 ### <a name="maintenance-considerations"></a>維護考量  
- 某些動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
+ 某些動作需要讓系統靜止。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
   
 ||僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|僅限 SQL Server 2005 對等，或 SQL Server 2005 對等與 SQL Server 2008 對等及更新版本的混合|SQL2008 對等及更新版本|SQL2008 對等及更新版本|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|將節點加入拓撲中|完整拓撲中的 2 個節點︰不需要停止。 使用 `sync_type = 'initialize with backup'`。|2 個以上的節點︰需要停止。|`sync_type = 'replication support only'`：需要停止。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：不需要停止。|  
+|將節點加入拓撲中|完整拓撲中有 2 個節點︰不需要靜止。 使用 `sync_type = 'initialize with backup'`。|超過 2 個節點：需要靜止。|`sync_type = 'replication support only'`：需要靜止。|`sync_type = 'initialize with backup'` 和 `'initialize from lsn'`：不需要靜止。|  
   
  拓撲結構描述變更 (新增或卸除發行項) 需要停止。 如需詳細資訊，請參閱[管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "47785246"
   
  使用  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 變更發行項屬性永遠不需要停止。 允許的變更 (適用於 P2P) 包括 `description`、 `ins_cmd`、 `upd_cmd`和 `del_cmd` 屬性。  
   
- 發行項結構描述變更 (新增/卸除資料行) 永遠不需要停止。  
+ 發行項結構描述變更 (新增/卸除資料行) 永遠不需要靜止。  
   
--   新增發行項︰為了將發行項加入現有的組態，我們必須停止系統、執行 CREATE TABLE 陳述式並載入拓撲中每個節點的初始資料，然後再將新的發行項加入拓撲中的每個節點。  
+-   新增發行項：若要將發行項新增至現有的設定，我們必須將系統靜止、執行 CREATE TABLE 陳述式並在拓撲中的每個節點載入初始資料，然後在拓撲中的每個節點新增新的發行項。  
   
--   卸除發行項︰如果我們想要讓所有節點保持一致的狀態，則必須停止拓撲  
+-   卸除發行項：如果我們想要讓所有節點的狀態一致，就必須將拓撲靜止  
   
  如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md) 和[管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)。  
   
@@ -182,6 +182,6 @@ ms.locfileid: "47785246"
 ## <a name="see-also"></a>另請參閱  
  [管理點對點拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [備份與還原快照式和異動複寫的策略](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
- [異動複寫的發行集類型](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
+ [異動複寫](../../../relational-databases/replication/transactional/transactional-replication.md)  
   
   

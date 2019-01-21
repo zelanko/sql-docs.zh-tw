@@ -22,12 +22,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d10759ad75dd1df48aa3f59d3c17ab9f632755d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539191"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134361"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52539191"
   
     -   對於合併式複寫而言，使用商務邏輯處理常式可能更有效。 如需詳細資訊，請參閱[在合併同步處理期間執行商務邏輯](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)。  
   
-     如果使用觸發程序來維護為合併式複寫發行之資料表中的參考完整性，請指定資料表的處理順序，以減少「合併代理程式」所需的重試次數。 如需詳細資訊，請參閱[指定合併發行項的處理順序](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)。  
+     如果使用觸發程序來維護為合併式複寫發行之資料表中的參考完整性，請指定資料表的處理順序，以減少「合併代理程式」所需的重試次數。 如需詳細資訊，請參閱[指定合併式複寫選項](../../../relational-databases/replication/merge/specify-merge-replication-properties.md)。  
   
 -   限制使用大型物件 (LOB) 資料類型。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52539191"
   
      當需要將大量的變更傳送到「訂閱者」時，請使用新的快照集來重新初始化訂閱，這可能比使用複寫來移動個別的變更還要快。 如需詳細資訊，請參閱 [重新初始化訂閱](../../../relational-databases/replication/reinitialize-subscriptions.md)。  
   
-     對於異動複寫，「複寫監視器」在 **[未散發的命令]** 索引標籤上顯示以下資訊：在散發資料庫中尚未散發到「訂閱者」的交易數量；散發這些交易的估計時間。 如需詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  
+     對於異動複寫，「複寫監視器」在 **[未散發的命令]** 索引標籤上顯示以下資訊：在散發資料庫中尚未散發到「訂閱者」的交易數量；散發這些交易的估計時間。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="snapshot-considerations"></a>快照集考量  
   
@@ -144,8 +144,7 @@ ms.locfileid: "52539191"
   
      壓縮替代快照集資料夾中的快照集檔案，可減少磁碟儲存需求，使在抽取式媒體上傳送快照集檔案更容易。  
   
-     在某些情況下，壓縮的快照集可以改善網路之間傳送快照集檔案的效能。 不過，壓縮快照集需要由快照集代理程式在產生快照集檔案時，進行其他處理動作；並於套用快照集檔案時，進行散發代理程式或合併代理程式。 如此可能會減緩快照集的產生且在某些情況下會增加套用快照集的時間。 此外，若發生網路失敗，則無法繼續壓縮快照集；因此並不適合不穩定的網路。 透過網路使用壓縮快照集時，仔細考量這些權衡問題。 如需相關資訊，請參閱 [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md) 及 [Compressed Snapshots](../../../relational-databases/replication/compressed-snapshots.md)。  
-  
+     在某些情況下，壓縮的快照集可以改善網路之間傳送快照集檔案的效能。 不過，壓縮快照集需要由快照集代理程式在產生快照集檔案時，進行其他處理動作；並於套用快照集檔案時，進行散發代理程式或合併代理程式。 如此可能會減緩快照集的產生且在某些情況下會增加套用快照集的時間。 此外，若發生網路失敗，則無法繼續壓縮快照集；因此並不適合不穩定的網路。 透過網路使用壓縮快照集時，仔細考量這些權衡問題。 如需詳細資訊，請參閱 [修改快照集選項](../../../relational-databases/replication/snapshot-options.md)。 
 -   考慮手動初始化訂閱。  
   
      在某些情況下，例如涉及大型初始資料集，最好是使用快照集之外的方法初始化訂閱。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
@@ -154,11 +153,11 @@ ms.locfileid: "52539191"
   
 -   減少複寫代理程式的詳細資訊層級，僅初始化測試、監視或偵錯時除外。  
   
-     減少散發代理程式或合併代理程式的 **-HistoryVerboseLevel** 參數和 **-OutputVerboseLevel** 參數。 如此可減少插入追蹤代理程式記錄和輸出中的新資料列數目。 反之，具有相同狀態的先前記錄訊息會更新為新的記錄資訊。 提高測試、監視及偵錯的詳細資訊層級，以便您能盡可能多地獲得代理程式活動的相關資訊。  
+     減少散發代理程式和合併代理程式的 **–HistoryVerboseLevel** 參數和 **–OutputVerboseLevel** 參數。 如此可減少插入追蹤代理程式記錄和輸出中的新資料列數目。 反之，具有相同狀態的先前記錄訊息會更新為新的記錄資訊。 提高測試、監視及偵錯的詳細資訊層級，以便您能盡可能多地獲得代理程式活動的相關資訊。  
   
--   使用快照集代理程式、合併代理程式以及散發代理程式的 **-MaxBCPThreads** 參數 (指定的執行緒數目不應超過電腦上的處理器數目)。 此參數指定在建立和套用快照集時可平行執行的大量複製作業數目。  
+-   使用快照集代理程式、合併代理程式以及散發代理程式的 **–MaxBCPThreads** 參數 (指定的執行緒數目不應超過電腦上的處理器數目)。 此參數指定在建立和套用快照集時可平行執行的大量複製作業數目。  
   
--   使用散發代理程式和合併代理程式的 **-UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
+-   使用散發代理程式和合併代理程式的 **–UseInprocLoader** 參數 (如果發行的資料表包括 XML 資料行，則不可使用此參數)。 此參數會使代理程式在套用快照集時使用 BULK INSERT 命令。  
   
  可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
   

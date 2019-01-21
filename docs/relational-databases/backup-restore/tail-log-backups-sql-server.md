@@ -15,15 +15,15 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4272379809eabde398a6b50c54d39c7139419d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 47876b387c06c1ba65e6a1a04fcbcee616097166
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535022"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54241844"
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52535022"
   
  「結尾記錄備份」(tail-log backup) 可擷取任何尚未備份的記錄檔記錄 (「記錄結尾」(tail of the log))，來防止工作遺失，並保持記錄鏈結完整。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫復原到最新時間點之前，必須備份其交易記錄的結尾。 結尾記錄備份會是資料庫之復原計畫中感興趣的最後一個備份。  
   
-> **注意** ：並不是所有的還原實例都需要結尾記錄備份。 如果復原點是包含在較早的記錄備份中，則不需要結尾記錄備份。 而且，如果您要移動或取代 (覆寫) 資料庫，而且不需要將它還原至最近備份之後的某個時間點，就不需要有結尾記錄備份。  
+> **注意：** 並不是所有的還原實例都需要結尾記錄備份。 如果復原點是包含在較早的記錄備份中，則不需要結尾記錄備份。 而且，如果您要移動或取代 (覆寫) 資料庫，而且不需要將它還原至最近備份之後的某個時間點，就不需要有結尾記錄備份。  
   
    ##  <a name="TailLogScenarios"></a> 需要結尾記錄備份的實例  
  建議您在下列實例中進行結尾記錄備份：  
@@ -48,7 +48,7 @@ ms.locfileid: "52535022"
   
 |BACKUP LOG 選項|註解|  
 |-----------------------|--------------|  
-|NORECOVERY|每當您打算在資料庫上繼續還原作業時，請使用 NORECOVERY。 NORECOVERY 會讓資料庫進入還原狀態。 這樣可以保證資料庫不會在結尾記錄備份之後變更。 除非也指定了 NO_TRUNCATE 選項或 COPY_ONLY 選項，否則將會截斷記錄。<br /><br /> **重要：** 除非資料庫受損，否則建議您避免使用 NO_TRUNCATE。|  
+|NORECOVERY|每當您打算在資料庫上繼續還原作業時，請使用 NORECOVERY。 NORECOVERY 會讓資料庫進入還原狀態。 這樣可以保證資料庫不會在結尾記錄備份之後變更。 除非也指定了 NO_TRUNCATE 選項或 COPY_ONLY 選項，否則將會截斷記錄。<br /><br /> **重要：** 除非資料庫受損，否則請避免使用 NO_TRUNCATE。|  
 |CONTINUE_AFTER_ERROR|只有在您要備份受損資料庫的結尾時，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 當您在受損資料庫上使用結尾記錄備份時，一般可在記錄備份中擷取到的某些中繼資料可能無法使用。 如需詳細資訊，請參閱本主題中的 [具有不完整備份中繼資料的結尾記錄備份](#IncompleteMetadata)。|  
   
 ##  <a name="IncompleteMetadata"></a> 具有不完整備份中繼資料的結尾記錄備份  

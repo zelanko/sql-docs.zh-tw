@@ -15,12 +15,12 @@ ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e6b91d754c477efe14ee0d47192beff5c735138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d13a0da50bc9a19728ecd4af6034ffc52849164
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784416"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54124068"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47784416"
  
 了解如何準備伺服器，以便使用最低權限執行複寫。 您必須先完成本教學課程，才能進行其他複寫教學課程。  
   
-[教學課程：設定兩個完全連線的伺服器之間的複寫 (異動)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
+[教學課程：設定兩個已完全連線伺服器之間的複寫 (異動)](../../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
 了解如何設定異動複寫，在完全連線的伺服器之間複寫資料。 本教學課程也包含一些基本的錯誤疑難排解方法。 
 
@@ -48,7 +48,7 @@ ms.locfileid: "47784416"
 了解如何設定合併式複寫，在伺服器與一或多個只是偶而連線的用戶端之間交換資料。  
   
 ## <a name="see-also"></a>另請參閱  
-[複寫的安全性與保護](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [異動複寫概觀](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

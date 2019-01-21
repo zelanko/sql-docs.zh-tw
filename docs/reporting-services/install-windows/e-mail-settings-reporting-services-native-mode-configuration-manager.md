@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab2d4208d26ca6da5188e635dda8183c545d6f3e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020392"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226565"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子郵件設定 - Reporting Services 原生模式 (組態管理員)
 Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。
@@ -109,7 +109,7 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>設定郵件收件者欄位的組態選項
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>設定郵件 [收件者:]欄位的組態選項
 如果依據 [管理個別訂閱] 工作所授與的權限建立使用者自訂訂閱，這些訂閱中便會包含以網域使用者帳戶為基礎的預設使用者名稱。 當使用者建立訂閱時，系統就會利用建立訂閱之使用者的網域使用者帳戶，自行處理 **[收件者:]** 欄位中的收件者名稱。
 
 如果使用 SMTP 伺服器或轉送器，而伺服器或轉送器所使用的電子郵件帳戶與網域使用者帳戶不同時，則 SMTP 伺服器嘗試將報表傳遞給該使用者時便會失敗。
@@ -183,7 +183,7 @@ Reporting Services 包含一個電子郵件傳遞延伸模組，讓您能夠透�
 
 3. 選取要安裝 Internet Information Server (IIS) 的伺服器，然後選取 [下一步]。
 
-4. 選取 [伺服器角色]* 頁面的 [下一步]。
+4. 在 [伺服器角色] 頁面上，選取 [下一步]。
      
 5. 選取 [功能] 頁面上的 [SMTP 伺服器]，然後選取 [下一步]。
 

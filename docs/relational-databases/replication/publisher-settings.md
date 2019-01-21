@@ -1,5 +1,5 @@
 ---
-title: 發行者設定 | Microsoft Docs
+title: SQL Server 複寫 [發行者設定] 對話方塊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bfb4b85bddf33ee4631f2fa2f1799fa8cb593cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24def3d19d38356bb48886a64a0566254aeb1aec
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827353"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54132558"
 ---
-# <a name="publisher-settings"></a>發行者設定
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 複寫 [發行者設定] 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[發行者設定]** 對話方塊，可讓您針對已加入至複寫監視器之左窗格的發行者變更設定。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "47827353"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [監視複寫](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [監視複寫](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: 使用參數化篩選建立合併式發行集的快照集 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2016
+ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,38 +15,48 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 14255fde1f8d0d165e1071f95c737f60aacf5058
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666089"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131428"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用參數化篩選建立合併式發行集的快照集。  
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用參數化篩選建立合併式發行集的快照集。  
+
+在合併發行集內使用參數化資料列篩選器時，覆寫會以兩段式的快照集來初始化每一個訂閱。 首先建立包含複寫所需之所有物件以及已發行物件之結構描述的結構描述快照集，但不含資料。 然後使用包含結構描述快照集中物件與結構描述以及訂閱之資料分割所屬資料的快照集，來初始化每個訂閱。 如果有多個訂閱收到給定的資料分割 (即收到相同的結構描述和資料)，該資料分割的快照集只會建立一次，多個訂閱均從同一快照集初始化。 如需參數化資料列篩選器的詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
- **本主題內容**  
+ 您可以使用下列三種方法之一為含參數化篩選的發行集建立快照集：  
   
--   **開始之前：**  
+-   **為每個分割區預先產生快照集。** 您可以使用此選項控制快照集的產生時間。    
+     您也可以選擇在排程時間重新整理快照集。 訂閱至已建立快照集之資料分割的新「訂閱者」，將收到最新的快照集。   
+-   **允許訂閱者在首次執行同步處理時，要求產生快照集**及要求應用程式。 使用此選項可讓新「訂閱者」執行同步處理，而無需管理員介入 (必須在「發行者」端執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，才允許產生快照集)。  
   
-     [建議](#Recommendations)  
+    > [!NOTE]  
+    >  如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 如需有關篩選選項的詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
--   **若要使用參數化篩選建立合併式發行集的快照集，請使用：**  
+-   **使用「快照集代理程式」為每個「訂閱者」手動產生快照集。** 然後，「訂閱者」必須為「合併代理程式」提供快照集位置，才能擷取和套用正確的快照集。  
   
-     [Transact-SQL](#SSMSProcedure)  
+    > [!NOTE]  
+    >  此選項支援回溯相容性，不允許 FTP 快照集共用。  
   
-     [Transact-SQL](#TsqlProcedure)  
+ 最靈活的方法是將預先產生的快照集選項和「訂閱者」要求的快照集選項組合使用：快照集會預先產生，並在排程時間重新整理 (通常在離峰時段)，但如果建立了需要新資料分割的訂閱，則「訂閱者」可以產生自己的快照集。  
   
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+ 請考慮使用 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]，此產品具有行動工作能力，可將庫存傳遞至個別商店。 每個業務員都會收到其登入帳戶的訂閱 (擷取業務員服務之商店的資料)。 管理員選擇預先產生快照集，並在每個週日重新整理這些快照集。 偶而，會有新使用者新增到系統中，並且需要無可用快照集之資料分割中的資料。 管理員也可以選擇允許「訂閱者」初始化的快照集，以避免由於快照集不可用而造成「訂閱者」無法訂閱發行集的情況。 當新的「訂閱者」首次進行連接時，會為指定的資料分割建立快照集，並套用到「訂閱者」(必須在「發行者」端執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，才允許產生快照集)。  
   
-##  <a name="BeforeYouBegin"></a> 開始之前  
+ 若要為含參數化篩選的發行集建立快照集，請參閱＜ [使用參數化篩選建立合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
-###  <a name="Recommendations"></a> 建議  
+## <a name="security-settings-for-the-snapshot-agent"></a>快照集代理程式的安全性設定  
+ 「快照集代理程式」會為每個資料分割建立快照集。 對於預先產生的快照集和「訂閱者」所需的快照集，代理程式會在建立發行集的快照集代理程式作業 (此作業由「新增發行集精靈」或 **sp_addpublication_snapshot**建立) 時指定的認證下執行並進行連接。 若要變更認證，請使用 **sp_changedynamicsnapshot_job**。 如需詳細資訊，請參閱 [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)。  
+
+  
+##  <a name="Recommendations"></a> 建議  
   
 -   在使用參數化篩選產生合併式發行集的快照集時，您必須先產生一個標準 (結構描述) 快照集，其中包含所有發行的資料以及訂閱的訂閱者中繼資料。 如需詳細資訊，請參閱 [建立和套用初始快照集](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)。 在您建立結構描述快照集之後，您可以產生包含發行資料之訂閱者特有資料分割的快照集。  
   
--   如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 如需篩選選項的詳細資訊，請參閱[含參數化篩選之合併式發行集的快照集](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)的＜設定資料分割選項＞一節。  
+-   如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  您可以在 [發行集屬性 - \<發行集>] 對話方塊的 [資料分割] 頁面上，產生資料分割的快照集。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。 您可以讓訂閱者初始化快照集產生和傳遞，並且/或者產生快照集。  
@@ -413,7 +423,6 @@ PAUSE
 ## <a name="see-also"></a>另請參閱  
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [含參數化篩選之合併式發行集的快照集](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)   
  [複寫安全性最佳作法](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

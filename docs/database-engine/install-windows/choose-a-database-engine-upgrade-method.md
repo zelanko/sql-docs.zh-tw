@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ba27a8364afc3d006341079a597cc0edcb6131fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bd388ede86a397fa83bf98deb017e294cb280752
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665607"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300155"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
   
 當您為了讓停機時間及風險減到最少，而打算從舊版 SQL Server 升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，有多種方法可以考慮。 您可以就地執行升級、遷移到新的安裝或執行輪流升級。 下圖將協助您在這些方法中做出選擇。 下方也將討論圖表中的各個方法。 為協助您了解圖表中的決策點，另請檢閱 [計劃和測試資料庫引擎升級計畫](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "51665607"
 ## <a name="migrate-to-a-new-installation"></a>遷移到新的安裝  
  透過此方法，您可以在建置新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境的同時保有目前環境，前者通常在新的硬體上，並使用新版作業系統。 在新環境中安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 後，您可以執行幾個步驟讓新環境就緒，以便將現有使用者資料庫從現有環境遷移到新環境，並盡可能縮短停機時間。 這些步驟包括遷移下列項目：  
   
--   **系統物件：** 某些應用程式相依於超出單一使用者資料庫範圍的資訊、實體和/或物件。 一般而言，應用程式相依於 master 和 msdb 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 master 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 若應用程式或資料庫維護計畫相依於 SQL Server Agent 作業，而其中繼資料儲存於 msdb 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 伺服器層級觸發程序的中繼資料也同樣儲存在 master 中。  
+-   **系統物件：** 某些應用程式會相依於超出單一使用者資料庫範圍之外的資訊、實體和/或物件。 一般而言，應用程式相依於 master 和 msdb 資料庫以及使用者資料庫。 如果有資料庫正確運作所需的任何項目儲存在使用者資料庫外部，則必須設法讓目的地伺服器執行個體也能提供。 例如，應用程式的登入在 master 資料庫中儲存為中繼資料，就必須在目的地伺服器上加以重新建立。 若應用程式或資料庫維護計畫相依於 SQL Server Agent 作業，而其中繼資料儲存於 msdb 資料庫，則必須在目的地伺服器執行個體上重新建立那些作業。 伺服器層級觸發程序的中繼資料也同樣儲存在 master 中。  
  
    當您將應用程式的資料庫移動到其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 master 和 msdb 中相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 master 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
--   **儲存於 MSDB 的 Integration Services 封裝：** 若您將封裝儲存在 MSDB 中，就必須使用 [dtutil Utility](../../integration-services/dtutil-utility.md) 編寫那些封裝的指令碼，或將其重新佈署到新的伺服器。 您必須先將封裝升級成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後才能在新的伺服器上使用封裝。 如需詳細資訊，請參閱 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
+-   **儲存在 MSDB 中的 Integration Services 套件：** 如果您將套件儲存在 MSDB 中，就必須使用 [dtutil 公用程式](../../integration-services/dtutil-utility.md)來編寫那些套件的指令碼，或是將它們重新佈署到新的伺服器。 您必須先將封裝升級成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後才能在新的伺服器上使用封裝。 如需詳細資訊，請參閱 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
 -   **Reporting Services 加密金鑰：** 在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md) 以及 [Upgrade 以及 Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
@@ -93,23 +93,23 @@ ms.locfileid: "51665607"
   
 新安裝升級的必要步驟會依據您使用連接儲存體還是 SAN 儲存體而有些微不同。  
   
--   **連接儲存體環境：** 若您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用連接儲存體，下圖及圖中連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 新安裝升級的必要步驟。  
+-   **連結的存放裝置環境：** 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用連結的存放裝置，下圖及圖內的連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之新安裝升級所需的步驟。  
   
      ![附加儲存體使用備份和還原的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "附加儲存體使用備份和還原的新安裝升級方法")  
   
--   **SAN 儲存體環境：** 若您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用 SAN 儲存體，下圖及圖中連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 新安裝升級的必要步驟。  
+-   **SAN 存放裝置環境：** 如果您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用 SAN 存放裝置，下圖及圖內的連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之新安裝升級所需的步驟。  
   
      ![SAN 儲存體使用卸離和附加的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 儲存體使用卸離和附加的新安裝升級方法")  
   
 ## <a name="rolling-upgrade"></a>輪流升級  
  當 SQL Server 解決方案環境涉及必須以特定順序升級的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便需要輪流升級，盡可能增加執行時間、減少風險並保留功能。 輪流升級基本上是有特定順序的多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的升級，會在現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體執行就地升級，或執行新的安裝升級，加速升級專案中硬體和/或作業系統的升級。 在許多案例中，您都需要使用輪流升級方法。 下列文章記載這些案例：  
   
--   Always-On 可用性群組：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級 AlwaysOn 可用性群組複本執行個體](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
--   容錯移轉叢集執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)。    
--   鏡像執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。    
--   記錄傳送執行個體：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 的記錄傳送 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)。    
--   複寫環境：如需在此環境中執行輪流升級的詳細步驟，請參閱[升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)。  
--   SQL Server Reporting Services 向外延展環境：如需在此環境中執行輪流升級的詳細步驟，請參閱 [升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
+-   Always On 可用性群組：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級 Always On 可用性群組複本執行個體](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)。    
+-   容錯移轉叢集執行個體：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 容錯移轉叢集執行個體](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)    
+-   鏡像執行個體：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級鏡像執行個體](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)。    
+-   記錄傳送執行個體：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級 SQL Server 的記錄傳送 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)。    
+-   複寫環境：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級複寫的資料庫](../../database-engine/install-windows/upgrade-replicated-databases.md)。  
+-   SQL Server Reporting Services 向外延展環境：如需了解在此環境中執行輪流升級的詳細步驟，請參閱[升級和移轉 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="next-steps"></a>後續步驟
  [計劃和測試資料庫引擎升級計劃](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   

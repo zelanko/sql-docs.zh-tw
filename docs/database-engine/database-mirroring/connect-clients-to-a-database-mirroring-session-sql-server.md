@@ -16,12 +16,12 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f35ed02444cc1fc4773eec528af73df76cde5bb5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534676"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54131848"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 屬性  
  連接字串必須包含 **Server** 屬性，以便提供初始夥伴名稱 (應該可識別目前的主體伺服器執行個體)。  
   
- 識別伺服器執行個體最簡單的方式就是指定名稱：<伺服器名稱>[**\\**<SQL Server 執行個體名稱>]**。 例如：  
+ 識別伺服器執行個體最簡單的方式就是指定名稱：*<伺服器名稱>*[**\\**<SQL Server 執行個體名稱>]。 例如：  
   
  `Server=Partner_A;`  
   
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |ODBC 驅動程式|**Failover_Partner**|  
 |ActiveX Data Objects (ADO)|**Failover Partner**|  
   
- 識別伺服器執行個體最簡單的方式就是指定其系統名稱：<伺服器名稱>[**\\***<SQL Server 執行個體名稱>]*。  
+ 識別伺服器執行個體最簡單的方式就是指定其系統名稱：<伺服器名稱>[**\\**<SQL Server 執行個體名稱>]。  
   
  此外，您可以在 **Failover Partner** 屬性中提供 IP 位址和通訊埠編號。 如果第一次連接至資料庫時，初始連接嘗試失敗，連接至容錯移轉夥伴的嘗試將不再仰賴 DNS 和 SQL Server Browser。 建立連接後，就會以容錯移轉夥伴名稱覆寫容錯移轉夥伴名稱，因此當容錯移轉發生時，重新導向的連接就會需要 DNS 和 SQL Server Browser。  
   
@@ -169,7 +169,7 @@ Server=123.34.45.56,4724;
   
  重試時間是使用下列公式計算的：  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  其中 *PreviousRetryTime* 最初是 0。  
   
@@ -177,10 +177,10 @@ Server=123.34.45.56,4724;
   
 |捨入|*RetryTime* 計算|每次嘗試的重試時間|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
-|2|1.2 **+(** 0.08 **\*** 15 **)**|2.4 秒|  
-|3|2.4 **+(** 0.08 **\*** 15 **)**|3.6 秒|  
-|4|3.6 **+(** 0.08 **\*** 15 **)**|4.8 秒|  
+|1|0 **+(** 0.08 **&#42;** 15 **)**|1.2 秒|  
+|2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4 秒|  
+|3|2.4 **+(** 0.08 **&#42;** 15 **)**|3.6 秒|  
+|4|3.6 **+(** 0.08 **&#42;** 15 **)**|4.8 秒|  
   
  下圖將說明後續連接嘗試的這些重試時間，而且每次嘗試都逾時。  
   

@@ -18,12 +18,12 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e9378663dbe37bb6e00602cc34bc42c4a5bd4e08
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fa5285bee7041b0da548a963087493f4c5cc9b21
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530491"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54134731"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) 資料庫鏡像 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  每個 SET PARTNER 子句都只能有一個 \<partner_option>。  
   
- **'** *partner_server* **'**  
+ **'** _partner_server_ **'**  
  指定要在新資料庫鏡像工作階段中，做為容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之伺服器網路位址。 每個工作階段都需要兩個夥伴：一個啟動做為主體伺服器，一個啟動做為鏡像伺服器。 我們建議您將這些夥伴放在不同電腦中。  
   
  在每個夥伴上，每個工作階段都指定一次這個選項。 起始資料庫鏡像工作階段需要兩個 ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'** 陳述式。 它們的順序很重要。 首先是連線到鏡像伺服器，將主體伺服器執行個體指定為 *partner_server* (SET PARTNER **='**_principal_server_**'**)。 其次是連線到主體伺服器，將鏡像伺服器執行個體指定為 *partner_server* (SET PARTNER **='**_mirror_server_**'**)；這會在這兩個夥伴之間，啟動一個資料庫鏡像工作階段。 如需詳細資訊，請參閱本主題稍後的 [設定資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)。  
@@ -175,7 +175,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  如需詳細資訊，請參閱 [資料庫鏡像期間可能發生的失敗](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)。  
   
  WITNESS \<witness_option>  
- 控制定義資料庫鏡像見證的資料庫屬性。 SET WITNESS 子句會影響資料庫的這兩個複本，但您只能在主體伺服器上指定 SET WITNESS。 如果設定了工作階段的見證，則不論 SAFETY 設定為何，都需要仲裁才能為資料庫提供服務；如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 控制定義資料庫鏡像見證的資料庫屬性。 SET WITNESS 子句會影響資料庫的這兩個複本，但您只能在主體伺服器上指定 SET WITNESS。 如果為工作階段設定見證，則不論 SAFETY 設定為何，都需要仲裁才能為資料庫提供服務；如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  我們建議您將見證和容錯移轉夥伴放在不同的電腦中。 如需如何加入或移除見證的資訊，請參閱[資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)。  
   
@@ -195,7 +195,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  每個 SET WITNESS 子句只能有一個 \<witness_option>。  
   
- **'** *witness_server* **'**  
+ **'** _witness_server_ **'**  
  指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體扮演資料庫鏡像工作階段見證伺服器的角色。 您只能在主體伺服器上指定 SET WITNESS。  
   
  在 **='**_witness_server_**'** 陳述式中，*witness_server* 的語法與 *partner_server* 的語法相同。  

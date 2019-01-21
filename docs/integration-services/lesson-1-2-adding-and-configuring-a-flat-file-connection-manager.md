@@ -1,7 +1,7 @@
 ---
-title: 步驟 2：新增和設定一般檔案連線管理員 | Microsoft Docs
+title: 步驟 2：新增及設定一般檔案連線管理員 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/03/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,55 +11,50 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc3bd44753305f7509a8777c48265f3f0edd2f2c
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 93a5366ca4919eac5134549ef3d254bc793c9ee2
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617658"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143568"
 ---
-# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>課程 1-2 - 新增和設定一般檔案連線管理員
+# <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>課程 1-2：新增及設定一般檔案連線管理員
+
 在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型] 對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
   
-您必須為您要使用的每一個檔案格式建立新的一般檔案連接管理員。 因為這個教學課程是從多個具有相同資料格式的一般檔案擷取資料，所以您只需要在封裝中加入和設定一個一般檔案連接管理員。  
+您必須為您要使用的每一個檔案格式建立新的「一般檔案」連線管理員。 由於本教學課程會從多個全都具有相同資料格式的一般檔案擷取資料，因此您只需針對範例套件新增及設定一個「一般檔案」連線管理員。  
   
-在此教學課程中，您將在一般檔案連接管理員中設定下列屬性：  
+在本教學課程中，您會在「一般檔案」連線管理員中設定下列屬性：  
   
--   **資料行名稱** ：因為一般檔案沒有資料行名稱，所以一般檔案連接管理員會建立預設資料行名稱。 這些預設名稱無助於識別每一個資料行所代表的內容。 若要使這些預設名稱有所幫助，您必須將預設名稱變更為符合一般檔案資料即將載入的事實資料表的名稱。  
+-   **資料行名稱：** 由於一般檔案沒有資料行名稱，因此「一般檔案」連線管理員會建立預設資料行名稱。 這些預設名稱無助於識別每一個資料行所代表的內容。 請將預設名稱變更為符合要載入一般檔案資料之事實資料表的名稱。  
   
--   **資料對應**：所有參考連接管理員的一般檔案資料來源元件，將使用您為一般檔案連接管理員指定的資料類型對應。 您可以使用一般檔案連接管理員來手動對應資料類型，或使用 [建議資料行類型] 對話方塊。 在此教學課程中，您將檢視在 [建議資料行類型] 對話方塊中建議的對應，然後在 [一般檔案連接管理員編輯器] 對話方塊中手動做一些必要的對應。  
+-   **資料對應：** 您為「一般檔案」連線管理員指定的資料類型對應，會供所有參考此連線管理員的一般檔案資料來源元件使用。 您可以使用一般檔案連接管理員來手動對應資料類型，或使用 [建議資料行類型] 對話方塊。 在此工作中，您會檢視在 [建議資料行類型] 對話方塊中建議的對應，然後在 [一般檔案連線管理員編輯器] 對話方塊中手動建立必要的對應。  
   
-一般檔案連接管理員提供有關資料檔的地區設定資訊。 如果電腦未設定為使用 [英文 (美國)] 地區選項，則您必須在 [一般檔案連接管理員編輯器] 對話方塊中設定其他屬性。  
+> [!NOTE]
+> 一般檔案連接管理員提供有關資料檔的地區設定資訊。 如果電腦未設定為使用 [英文 (美國)] 地區選項，您就必須在 [一般檔案連線管理員編輯器] 對話方塊中設定額外的屬性。  
   
-### <a name="to-add-a-flat-file-connection-manager-to-the-ssis-package"></a>若要將一般檔案連接管理員加入至 SSIS 封裝  
+## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>將一般檔案連線管理員新增至 SSIS 套件  
   
-1.  以滑鼠右鍵按一下 [連接管理員] 區域的任何位置，然後按一下 [新增一般檔案連接]。  
+1.  在 [方案總管] 窗格中，於 [連線管理員] 上按一下滑鼠右鍵，然後選取 [新增連線管理員]。
+1. 在 [加入 SSIS 連線管理員] 對話方塊中，依序選取 [FLATFILE] 和 [加入]。
   
-2.  在 [一般檔案連接管理員編輯器] 對話方塊中，對 [連接管理員名稱] 輸入 [範例一般檔案來源資料]。  
+2.  在 [一般檔案連線管理員編輯器] 對話方塊中，針對 [連線管理員名稱] 輸入**範例一般檔案來源資料**。  
   
-3.  按一下 **[瀏覽]**。  
+3.  選取 [瀏覽]。  
   
-4.  在 [開啟] 對話方塊中，尋找電腦上的 SampleCurrencyData.txt 檔案。  
-  
-    範例資料隨附在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 課程封裝中。 若要下載範例資料和課程封裝，請執行下列動作。  
-  
-    1.  導覽至 [Integration Services 產品範例](https://www.microsoft.com/download/details.aspx?id=56827)  
-  
-    2.  按一下 **[下載]** 索引標籤。  
-  
-    3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
+4.  在 [開啟] 對話方塊中，尋找電腦上的 **SampleCurrencyData.txt** 檔案。  
   
 5.  清除第一個資料列核取方塊中的資料行名稱。  
   
-### <a name="to-set-locale-sensitive-properties"></a>若要設定區分地區設定屬性  
+### <a name="set-locale-sensitive-properties"></a>選取區分地區設定的屬性  
   
-1.  在 [一般檔案連接管理員編輯器] 對話方塊中，按一下 [一般]。  
+1.  在 [一般檔案連線管理員編輯器] 對話方塊中，選取 [一般]。  
   
-2.  將 [地區設定] 設為 [英文 (美國)]，將 [字碼頁] 設為 1252。  
+2.  將 [地區設定] 設定為 [英文 (美國)]，將 [字碼頁] 設定為 [1252]。  
   
-### <a name="to-rename-columns-in-the-flat-file-connection-manager"></a>若要重新命名一般檔案連接管理員中的資料行  
+### <a name="rename-columns-in-the-flat-file-connection-manager"></a>將一般檔案連線管理員中的資料行重新命名  
   
-1.  在 [一般檔案連接管理員編輯器] 對話方塊中，按一下 [進階]。  
+1.  在 [一般檔案連線管理員編輯器] 對話方塊中，選取 [進階]。  
   
 2.  在屬性窗格中，進行下列變更：  
   
@@ -71,36 +66,35 @@ ms.locfileid: "52617658"
   
     -   將 [資料行 3] 名稱屬性變更為 **EndOfDayRate**。  
   
-    > [!NOTE]  
-    > 根據預設，所有 4 個資料行一開始是設為字串資料類型 [DT_STR]，且 **OutputColumnWidth** 為 50。  
+### <a name="remap-column-data-types"></a>重新對應資料行資料類型  
   
-### <a name="to-remap-column-data-types"></a>若要重新對應資料行資料類型  
+根據預設，所有 4 個資料行一開始是設為字串資料類型 [DT_STR]，且 **OutputColumnWidth** 為 50。  
+
+1.  在 [一般檔案連線管理員編輯器] 對話方塊中，選取 [建議類型]。  
   
-1.  在 [一般檔案連接管理員編輯器] 對話方塊中，按一下 [建議類型]。  
+    [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會依據最前面的 200 個資料列，自動建議合適的資料類型。 您也可以變更這些建議選項，以增加或減少取樣資料、指定整數或布林資料的預設資料類型，或是加入空格以填補字串資料行。  
   
-    [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會依據最前面的 200 個資料列，自動建議最適合的資料類型。 您也可以變更這些建議選項，以增加或減少取樣資料、指定整數或布林資料的預設資料類型，或是加入空格以填補字串資料行。  
+    目前，請勿對 [建議資料行類型] 對話方塊中的選項進行任何變更，然後選取 [確定]，讓 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 為資料行建議資料類型。 此動作會讓您回到 [一般檔案連線管理員編輯器] 對話方塊的 [進階] 窗格，您可以在此檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所建議的資料行資料類型。 或者，如果您選取 [取消]，系統就不會對資料行中繼資料提出任何建議，而會使用預設的字串 (DT_STR) 資料類型。  
   
-    目前請暫時不要對 [建議資料行類型] 對話方塊中的選項做任何變更，並按一下 [確定]，由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建議適合資料行的資料類型。 這時會回到 [一般檔案連接管理員編輯器] 對話方塊的 [進階] 窗格，您可以在此檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建議的資料行資料類型。 (如果按一下 [取消]，則不會對資料行中繼資料做出任何建議，而是使用預設的字串 (DT_STR) 資料類型)。  
-  
-    在這個教學課程中，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會對 SampleCurrencyData.txt 檔案的資料建議下列資料表中第二個資料行所顯示的資料類型。 不過，目的地的資料行所需要的資料類型 (將在後面的步驟中定義) 將顯示在下表的最後一個資料行。  
+    在這個教學課程中， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會對 SampleCurrencyData.txt 檔案的資料建議下列資料表中第二個資料行所顯示的資料類型。 第四個資料行提供目的地中資料行所需的資料類型，在後續步驟中將會定義。  
   
     |一般檔案資料行|建議類型|目的地資料行|目的地類型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
-    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
-    對 [CurrencyID] 資料行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為 `DimCurrency.CurrencyAlternateKey` 的資料類型是 Nchar (3)，所以 [CurrencyID] 必須從 [DT_STR] 字串變更為 [DT_WSTR] Unicode 字串。 另外，`DimDate.FullDateAlternateKey` 欄位定義為日期資料類型，因此 [CurrencyDate] 需要從日期 [DT_Date] 變更為資料庫日期 [DT_DBDATE]。  
+    對 [CurrencyID] 資料行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為 `DimCurrency.CurrencyAlternateKey` 的資料類型是 nchar(3)，所以 [CurrencyID] 必須從 [DT_STR] 字串變更為 [DT_WSTR] Unicode 字串。 另外，`DimDate.FullDateAlternateKey` 欄位是定義為 date 資料類型，因此 [CurrencyDate] 的類型必須從 [DT_Date] 日期變更為 [DT_DBDATE] 資料庫日期。  
   
-2.  在此清單中選取 [CurrencyID] 資料行，並在屬性窗格中將資料行 [CurrencyID] 的資料類型從字串 [DT_STR] 變更為 Unicode 字串 [DT_WSTR]。  
+2.  在此清單中，選取 [CurrencyID] 資料行，然後在屬性窗格中，將 [CurrencyID] 資料行的 [資料類型] 從 [DT_STR] 字串變更為 [DT_WSTR] Unicode 字串。  
   
 3.  在屬性窗格中，將資料行 [CurrencyDate] 的資料類型從日期 [DT_DATE] 變更為資料庫日期 [DT_DBDATE]。  
   
-4.  按一下 [確定] 。  
+4.  選取 [確定]。  
   
-## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 3：新增和設定 OLE DB 連線管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+## <a name="go-to-next-task"></a>移至下一個工作
+[步驟 3：新增及設定 OLE DB 連線管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [一般檔案連接管理員](../integration-services/connection-manager/flat-file-connection-manager.md)  
