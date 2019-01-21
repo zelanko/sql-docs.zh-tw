@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5723f60855952e9e14e7cdff07ac312d10e38732
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526611"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53202877"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -76,7 +76,7 @@ ms.locfileid: "52526611"
 
 如果您變更預設 SSIS 服務帳戶，則可能需要先將其他權限授與非預設服務帳戶，才能成功部署套件。 如果非預設服務帳戶沒有必要權限，您可能會看到下列錯誤訊息。
 
-*執行使用者自訂常式或彙總 "deploy_project_internal" 時，發生 .NET Framework 錯誤: System.ComponentModel.Win32Exception: 用戶端沒有這項特殊權限。*
+*執行使用者自訂常式或彙總 "deploy_project_internal" 時，發生 .NET Framework 錯誤：System.ComponentModel.Win32Exception:用戶端沒有必要的權限。*
 
 此錯誤通常是缺少 DCOM 權限的結果。 若要修正錯誤，請執行下列動作。
 
@@ -90,7 +90,7 @@ ms.locfileid: "52526611"
 8.  按兩次 [確定]，然後關閉 [元件服務] 主控台。
 
 如需本節中所述錯誤的詳細資訊，以及 SSIS 服務帳戶所需權限的詳細資訊，請參閱下列部落格文章。  
-[System.ComponentModel.Win32Exception: 部署 SSIS 專案時，用戶端沒有這項特殊權限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+[System.ComponentModel.Win32Exception:部署 SSIS 專案時，用戶端沒有這項特殊權限](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>將專案部署至 Integration Services 伺服器
   在目前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以將專案部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器可讓您管理封裝、執行封裝，以及利用環境設定封裝的執行值。  
@@ -102,7 +102,7 @@ ms.locfileid: "52526611"
   
 1.  建立 SSISDB 目錄 (如果尚未建立)。 如需詳細資訊，請參閱 [SSIS 目錄](../../integration-services/catalog/ssis-catalog.md)。  
   
-2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱底下指示： [將專案轉換為專案部署模型](#convert)  
+2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱以下指示：[將專案轉換為專案部署模型](#convert)  
   
     -   如果您在 [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 或更新版本中建立專案，則專案會根據預設使用專案部署模型。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52526611"
   
      如需封裝升級的詳細資訊，請參閱 [升級 Integration Services 封裝](../../integration-services/install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-3.  將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需詳細資訊，請參閱底下指示： [將專案部署至 Integration Services 伺服器](#deploy)。  
+3.  將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。 如需詳細資訊，請參閱以下指示：[將專案部署至 Integration Services 伺服器](#deploy)。  
   
 4.  (選擇性) 建立部署專案的環境。 
   
@@ -273,7 +273,7 @@ static void Main()
   
 2.  如果專案和所有封裝通過相容性測試，則按一下 **[確定]** 以轉換封裝。  
   
-> **注意：** 若要將專案轉換為專案部署模型，請使用 [Integration Services 專案轉換精靈]。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意：** 若要將專案轉換為專案部署模型，請使用 **[Integration Services 專案轉換精靈]**。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署精靈
   [Integration Services 部署精靈] 支援兩種部署模型：
@@ -284,7 +284,7 @@ static void Main()
  
  **套件部署模型** 可讓您將已更新的套件部署至 SSIS 目錄，而無須部署整個專案。 
  
- > **注意** ：此精靈的預設部署為專案部署模型。  
+ > **注意：** 此精靈的預設部署為專案部署模型。  
   
 ### <a name="launch-the-wizard"></a>啟動精靈
 透過下列其中一個方式來啟動精靈：
@@ -295,7 +295,7 @@ static void Main()
 
  - 在 SQL Server 安裝資料夾 (例如 C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn) 下搜尋可執行檔 **ISDeploymentWizard.exe**。 
  
- > **注意**：若顯示 [簡介] 頁面，請按一下 [下一步] 切換至 [選取來源] 頁面。 
+ > **注意：** 若顯示 [簡介]  頁面，請按一下 [下一步]  切換至 [選取來源]  頁面。 
  
  此頁面上的設定視每種部署模型而異。 根據您在此頁面中選取的模型，遵循 [Project Deployment Model](#ProjectModel) 區段或 [Package Deployment Model](#PackageModel) 區段中的步驟執行。  
   
@@ -409,13 +409,13 @@ static void Main()
   
  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 部署專案及執行封裝。 如需詳細資訊，請參閱＜ **另請參閱** ＞一節中的主題。  
   
-> [!TIP]  
+> [!TIP]
 >  您可以執行以下動作，輕鬆地針對底下程序中所列的預存程序產生 Transact-SQL 陳述式 (除了 catalog.deploy_project 以外)：  
->   
+> 
 >  1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，展開 [物件總管] 中的 **Integration Services 目錄** 節點，並導覽到您要執行的封裝。  
 > 2.  以滑鼠右鍵按一下封裝，然後按一下 [執行]。  
 > 3.  請視需要在 **[進階]** 索引標籤中設定參數值、連接管理員屬性和選項，例如記錄層次。  
->   
+> 
 >      如需有關記錄層級的詳細資訊，請參閱＜ [在 SSIS 伺服器上啟用封裝執行的記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)＞。  
 > 4.  在按一下 **[確定]** 執行封裝之前，請按一下 **[指令碼]**。 Transact-SQL 會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [查詢編輯器] 視窗中。  
   

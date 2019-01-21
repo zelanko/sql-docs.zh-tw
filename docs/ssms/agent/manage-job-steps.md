@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43fe7c85f87c0022db14cb7553d4771385017096
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
+ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699067"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53211587"
 ---
 # <a name="manage-job-steps"></a>管理作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "51699067"
   
 -   指令成功時傳回的處理序結束代碼。  
   
--   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 若為外部程式，則是指程式名稱和程式的引數，例如： **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   要執行的命令。 若要執行作業系統命令，此處是指命令本身； 若為外部程式，則是指程式名稱和程式的引數，例如：**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > 如果可執行檔不在系統路徑或執行作業步驟的使用者路徑中，您必須提供可執行檔的完整路徑。  
@@ -112,7 +112,7 @@ ms.locfileid: "51699067"
   
 ## <a name="activex-scripting-job-steps"></a>ActiveX Scripting 作業步驟  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > ActiveX Scripting 作業步驟將從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未來版本的 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。  
   
 建立 ActiveX Scripting 作業步驟時，您必須：  
@@ -163,7 +163,7 @@ Set oServer = nothing
   
 -   識別要執行作業步驟的資料庫 OLAP 伺服器。  
   
--   輸入要執行的陳述式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
+-   輸入要執行的陳述式。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]**Execute** 方法的陳述式必須是 XML。 陳述式可能不含完整的 SOAP Envelope 或 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover** 方法。 請注意，雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟則不支援。  
   
 ### <a name="analysis-services-query-job-steps"></a>SQL Server Analysis Services 查詢作業步驟  
 當您建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] 查詢作業步驟時，必須：  
