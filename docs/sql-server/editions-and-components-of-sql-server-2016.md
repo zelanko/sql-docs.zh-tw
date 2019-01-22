@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5a265f75e983ec6994114196b6890f13d94e850
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299965"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420223"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |資料庫鏡像|是|是<br /><br /> 僅限 FULL 安全性|僅限見證|僅限見證|僅限見證| 
 |備份壓縮|是|是|否|否|否| 
 |資料庫快照集|是|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|
-|AlwaysOn 容錯移轉叢集執行個體|是<br /><br /> 節點數目是作業系統最大值|是<br /><br /> 支援 2 個節點|否|否|否|  
+|AlwaysOn 容錯移轉叢集執行個體|是<br /><br /> 16|是<br /><br /> 支援 2 個節點|否|否|否|  
 |AlwaysOn 可用性群組|是<br /><br /> 最多 8 個次要複本，包括 2 個同步次要複本。|否|否|否|否|
 |基本可用性群組 <sup>2</sup>|否|是<br /><br /> 支援 2 個節點|否|否|否|
 |線上頁面和檔案還原|是|否|否|否|否|

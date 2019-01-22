@@ -1,7 +1,7 @@
 ---
 title: 設定可用性群組中的 SQL Server 散發資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b2f6defed7ad897f3464aec1b8b99391a2b9149
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126448"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372682"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>設定 Always On 可用性群組中的複寫散發資料庫
 
@@ -34,7 +34,9 @@ ms.locfileid: "54126448"
 SQL Server 2017 CU6 和 SQL Server 2016 SP2-CU3 透過下列機制引進 AG 中複寫散發資料庫的支援：
 
 - 散發資料庫 AG 需要有接聽程式。 發行者新增散發者時，會使用接聽程式名稱作為散發者名稱。
-- 所建立的複寫作業是將接聽程式名稱當成散發者名稱。
+- 所建立的複寫作業是將接聽程式名稱當成散發者名稱。 複寫快照集、 記錄讀取器與在散發伺服器上建立的散發代理程式 (推播訂用帳戶) 作業會再散發 DB 之 AG 的所有次要複本上建立。
+ >[!NOTE]
+ >推播訂用帳戶的散發代理程式作業會在訂閱者伺服器上建立而非在散發伺服器上建立。 
 - 新的作業會監視散發資料庫的狀態 (AG 中的主要或次要)，以及根據散發資料庫狀態來停用或啟用複寫作業。
 
 根據下面所述的步驟在 AG 中設定散發資料庫之後，可以在散發資料庫 AG 容錯移轉之前和之後正確地執行複寫組態和執行階段作業。

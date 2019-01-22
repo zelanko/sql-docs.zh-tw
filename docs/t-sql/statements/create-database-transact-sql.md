@@ -38,20 +38,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5642af0a47cff5ffa7c45aa910fb3101ad831df0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532562"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327880"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
-建立新資料庫。 
+建立新資料庫。
 
 按一下下列其中一個索引標籤，以查看您所使用特定 SQL 版本的語法、引數、備註、權限和範例。
 
-如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="click-a-product"></a>按一下產品！
 
@@ -72,12 +72,11 @@ ms.locfileid: "52532562"
 
 在 SQL Server 中，此陳述式會建立新的資料庫與使用的檔案及其檔案群組。 它也可以用來建立資料庫快照集，或附加資料庫檔案，以從其他資料庫中斷連結的檔案建立資料庫。 
 
-
 ## <a name="syntax"></a>語法  
 
 建立資料庫。  
 
-```  
+```
 CREATE DATABASE database_name   
 [ CONTAINMENT = { NONE | PARTIAL } ]  
 [ ON   
@@ -164,7 +163,8 @@ CREATE DATABASE database_snapshot_name
 [;]  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
  *database_name*  
  這是新資料庫的名稱。 資料庫名稱在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內必須是唯一的，且必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
@@ -455,7 +455,8 @@ CREATE DATABASE database_snapshot_name
   
  如需詳細資訊，請參閱＜備註＞一節中的「資料庫快照集」。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  每當建立、修改或卸除使用者資料庫時，都應該備份 [master 資料庫](../../relational-databases/databases/master-database.md)。  
   
  CREATE DATABASE 陳述式必須在自動認可模式 (預設交易管理模式) 下執行，而且不能用於明確或隱含的交易。  
@@ -479,14 +480,16 @@ CREATE DATABASE database_snapshot_name
 - 資料庫快照集建立
 - 記憶體最佳化資料檔案群組
    
-## <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組  
+## <a name="database-files-and-filegroups"></a>資料庫檔案與檔案群組
+
  每個資料庫都至少會有兩個檔案 (一個「主要檔案」和一個「交易記錄檔」)，以及至少一個檔案群組。 每個資料庫最多可以指定 32,767 個檔案和 32,767 個檔案群組。  
   
  當您建立資料庫時，請根據資料庫的預期最大資料量，盡可能擴大資料檔案。  
   
  建議您利用存放區域網路 (SAN)、iSCSI 型網路或本機連接的磁碟來儲存 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫檔案，因為這個組態可使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能和可靠性最佳化。  
   
-## <a name="database-snapshots"></a>資料庫快照集  
+## <a name="database-snapshots"></a>資料庫快照集
+
  您可以使用 CREATE DATABASE 陳述式來建立「來源資料庫」的唯讀靜態檢視表，即「資料庫快照集」。 資料庫快照集在交易上與來源資料庫是一致的，因為它是在快照集建立時即存在。 來源資料庫可以有多個快照集。  
   
 > [!NOTE]  
@@ -498,20 +501,24 @@ CREATE DATABASE database_snapshot_name
   
  如需詳細資訊，請參閱[資料庫快照集 &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)。  
   
-## <a name="database-options"></a>資料庫選項  
+## <a name="database-options"></a>資料庫選項
+
  每當您建立資料庫時，系統就會自動設定數個資料庫選項。 如需這些選項的清單，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
-## <a name="the-model-database-and-creating-new-databases"></a>model 資料庫和建立新資料庫  
+## <a name="the-model-database-and-creating-new-databases"></a>model 資料庫和建立新資料庫
+
  [模型資料庫](../../relational-databases/databases/model-database.md)中的所有使用者定義物件都會複製到所有新建立的資料庫中。 您可以將所有要併入新建立之資料庫中的任何物件 (如資料表、檢視表、預存程序、資料類型等) 加入至 model 資料庫。  
   
  指定 CREATE DATABASE *database_name* 而未搭配額外的大小參數時，會將主要資料檔案的大小設定為與模型資料庫中的主要檔案大小相同。  
   
  除非指定 FOR ATTACH，否則每個新資料庫都會從 model 資料庫繼承資料庫選項設定。 例如，在模型資料庫及您建立的任何新資料庫中，auto shrink 資料庫選項會設定為 **true**。 如果您在 model 資料庫中變更選項，您建立的任何新資料庫也會使用這些新的選項設定。 變更 model 資料庫中的作業不會影響現有的資料庫。 如果在 CREATE DATABASE 陳述式上指定 FOR ATTACH，新資料庫就會繼承原始資料庫的資料庫選項設定。  
   
-## <a name="viewing-database-information"></a>檢視資料庫資訊  
+## <a name="viewing-database-information"></a>檢視資料庫資訊
+
  您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>[權限]
+
  需要 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 權限。  
   
  為了維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的磁碟控制，通常只有少數登入帳戶有建立資料庫的權限。  
@@ -525,7 +532,8 @@ GRANT CREATE DATABASE TO [Fay];
 GO  
 ```  
   
-### <a name="permissions-on-data-and-log-files"></a>資料和記錄檔的權限  
+### <a name="permissions-on-data-and-log-files"></a>資料和記錄檔的權限
+
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，某些權限是針對每個資料庫的資料檔案和記錄檔所設定。 每當在資料庫上套用下列作業時，都會設定下列權限：  
   
 |||  
@@ -541,8 +549,9 @@ GO
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-creating-a-database-without-specifying-files"></a>A. 建立資料庫但不指定檔案  
- 下列範例會建立資料庫 `mytest` 並建立相對應的主要記錄檔和交易記錄檔。 因為該陳述式沒有\<filespec> 項目，所以主要資料庫檔案的大小就是模型資料庫主要檔案的大小。 交易記錄設為下列兩個值中之較大者：512KB 或主要資料檔案大小的 25%。 因為沒有指定 MAXSIZE，所以檔案會成長，直到填滿所有可用的磁碟空間為止。 此範例也會示範如何在建立 `mytest` 資料庫之前，卸除名為 `mytest` 的資料庫 (若存在)。  
+### <a name="a-creating-a-database-without-specifying-files"></a>A. 建立資料庫但不指定檔案
+
+ 下列範例會建立資料庫 `mytest` 並建立相對應的主要記錄檔和交易記錄檔。 因為該陳述式沒有\<filespec> 項目，所以主要資料庫檔案的大小就是模型資料庫主要檔案的大小。 交易記錄會設為這些值中的較大者：512KB 或主要資料檔大小的 25%。 因為沒有指定 MAXSIZE，所以檔案會成長，直到填滿所有可用的磁碟空間為止。 此範例也會示範如何在建立 `mytest` 資料庫之前，卸除名為 `mytest` 的資料庫 (若存在)。  
   
 ```sql  
 USE master;  
@@ -559,7 +568,8 @@ WHERE name = N'mytest';
 GO  
 ```  
   
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 建立指定資料檔案和交易記錄檔的資料庫  
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. 建立指定資料檔案和交易記錄檔的資料庫
+
  下列範例會建立資料庫 `Sales`。 因為未使用關鍵字 PRIMARY，所以第一個檔案 (`Sales_dat`) 會成為主要檔案。 因為 `Sales_dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales_log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
   
 ```sql  
@@ -581,7 +591,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 利用指定多個資料檔案和交易記錄檔的方式建立資料庫  
+### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. 利用指定多個資料檔案和交易記錄檔的方式建立資料庫
+
  下列範例會建立資料庫 `Archive`，這個資料庫有三個 `100-MB` 的資料檔案和兩個 `100-MB` 的交易記錄檔。 主要檔案是清單中的第一個檔案，並以關鍵字 `PRIMARY` 明確指定。 交易記錄檔是以關鍵字 `LOG ON` 指定的。 請注意 `FILENAME` 選項中之檔案的副檔名：`.mdf` 用於主要資料庫，`.ndf` 用於次要資料檔案，`.ldf` 則用於交易記錄檔。 此範例會將此資料庫放在 `D:` 磁碟機上，而不是與 `master` 資料庫放在一起。  
   
 ```sql  
@@ -619,7 +630,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="d-creating-a-database-that-has-filegroups"></a>D. 建立含有檔案群組的資料庫  
+### <a name="d-creating-a-database-that-has-filegroups"></a>D. 建立含有檔案群組的資料庫
+
  下列範例會建立含有下列檔案群組的資料庫 `Sales`：  
   
 -   含有檔案 `Spri1_dat` 和 `Spri2_dat` 的主要檔案群組。 這些檔案的 FILEGROWTH 遞增指定為 `15%`。  
@@ -676,7 +688,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="e-attaching-a-database"></a>E. 附加資料庫  
+### <a name="e-attaching-a-database"></a>E. 附加資料庫
+
  下列範例會先卸離在範例 D 中建立的資料庫 `Archive`，再利用 `FOR ATTACH` 子句附加該資料庫。 `Archive` 定義為具有多個資料檔案和記錄檔。 不過，因為檔案建立之後並未改變位置，所以在 `FOR ATTACH` 子句中只需要指定主要檔案。 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，所附加之資料庫中的任何全文檢索檔案，都會隨著資料庫而一起附加。  
   
 ```sql  
@@ -690,7 +703,8 @@ CREATE DATABASE Archive
 GO  
 ```  
   
-### <a name="f-creating-a-database-snapshot"></a>F. 建立資料庫快照集  
+### <a name="f-creating-a-database-snapshot"></a>F. 建立資料庫快照集
+
  下列範例會建立資料庫快照集 `sales_snapshot0600`。 因為資料庫快照集是唯讀的，所以不能指定記錄檔。 依照語法規定，會指定來源資料庫中的每個檔案，但不會指定檔案群組。  
   
  這個範例中的來源資料庫就是在範例 D 中建立的資料庫 `Sales`。  
@@ -709,7 +723,8 @@ AS SNAPSHOT OF Sales ;
 GO  
 ```  
   
-### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 建立資料庫並指定定序名稱和選項  
+### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. 建立資料庫並指定定序名稱和選項
+
  下列範例會建立資料庫 `MyOptionsTest`。 它指定定序名稱，並將 `TRUSTYWORTHY` 和 `DB_CHAINING` 選項設為 `ON`。  
   
 ```sql  
@@ -729,7 +744,8 @@ WHERE name = N'MyOptionsTest';
 GO  
 ```  
   
-### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移動的全文檢索目錄  
+### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. 附加已移動的全文檢索目錄
+
  下列範例會附加全文檢索目錄 `AdvWksFtCat` 以及 `AdventureWorks2012` 資料檔案和記錄檔。 在這個範例中，全文檢索目錄會從預設位置移至新的位置 `c:\myFTCatalogs`。 資料檔案和記錄檔仍保留在它們的預設位置中。  
   
 ```sql  
@@ -748,7 +764,8 @@ FOR ATTACH;
 GO  
 ```  
   
-### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. 建立可指定一個資料列檔案群組和兩個 FILESTREAM 檔案群組的資料庫  
+### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>I. 建立可指定一個資料列檔案群組和兩個 FILESTREAM 檔案群組的資料庫
+
  下列範例會建立 `FileStreamDB` 資料庫。 此資料庫是使用一個資料列檔案群組和兩個 FILESTREAM 檔案群組所建立。 每個檔案群組都包含一個檔案：  
   
 -   `FileStreamDB_data` 包含資料列資料， 它包含一個檔案 `FileStreamDB_data.mdf` (具有預設路徑)。  
@@ -806,7 +823,8 @@ LOG ON
 GO  
 ```  
   
-### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 建立包含多個檔案之 FILESTREAM 檔案群組的資料庫  
+### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>J. 建立包含多個檔案之 FILESTREAM 檔案群組的資料庫
+
  下列範例會建立 `BlobStore1` 資料庫。 此資料庫是使用一個資料列檔案群組和一個 FILESTREAM 檔案群組 `FS` 所建立。 FILESTREAM 檔案群組包含兩個檔案：`FS1` 和 `FS2`。 然後，此範例會將第三個檔案 `FS3` 加入至 FILESTREAM 檔案群組，藉以改變資料庫。  
   
 ```sql  
@@ -855,7 +873,8 @@ TO FILEGROUP [FS];
 GO  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
@@ -887,6 +906,7 @@ GO
 ## <a name="syntax"></a>語法 
 
 ### <a name="create-a-database"></a>建立資料庫
+
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 {  
@@ -966,7 +986,7 @@ MAXSIZE
 
 **邏輯伺服器上單一和集區資料庫以 DTU 為基礎的模型**
 
-|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** | 
+|**MAXSIZE**|**基本**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|
@@ -990,28 +1010,32 @@ MAXSIZE
 |1024 GB|不適用|不適用|√|√|√ (D)|
 |從 1024 GB 至最大 4096 GB (以每 256 GB 的大小遞增)* |不適用|不適用|不適用|不適用|√|√|  
   
-\* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。  P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前已提供下列區域使用：美國東部2、美國西部、美國維吉尼亞州政府、西歐、德國中部、東南亞、日本東部、澳洲東部、加拿大中部和加拿大東部。 針對以 DTU 為基礎的模型，如需資源限制的額外詳細資訊，請參閱[以 DTU 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(英文\)。  
+\* P11 和 P15 允許 MAXSIZE 最大至 4 TB，並以 1024 GB 作為預設大小。  P11 和 P15 最多可使用 4 TB 的隨附儲存體，且不另收費。 在進階層中，大於 1 TB 的 MAXSIZE 目前可用於下列區域：美國東部 2、美國西部、US Gov 維吉尼亞州、西歐、德國中部、東南亞、日本東部、澳大利亞東部、加拿大中部和加拿大東部。 針對以 DTU 為基礎的模型，如需資源限制的額外詳細資訊，請參閱[以 DTU 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(英文\)。  
 
 對於以 DTU 為基礎的模型，若指定了 MAXSIZE 值，則此值必須為上表中所示適用於所指定服務層的有效值。
  
 **邏輯伺服器上單一和集區資料庫以 vCore 為基礎的模型**
 
 **一般用途服務層 - 第 4 代計算平台**
+
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_4|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |--: |--: |--: |--:|
 |資料大小上限 (GB)|1024|1024|1536|3072|4096|4096|
 
 **一般用途服務層 - 第 5 代計算平台**
+
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_48|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |資料大小上限 (GB)|1024|1024|1536|3072|4096|4096|4096|4096|
 
 **業務關鍵服務層 - 第 4 代計算平台**
+
 |效能等級|BC_Gen4_1|BC_Gen4_2|BC_Gen4_4|BC_Gen4_8|BC_Gen4_16|
 |:--- | --: |--: |--: |--: |--: |--: |
 |資料大小上限 (GB)|1024|1024|1024|1024|1024|1024|
 
 **業務關鍵服務層 - 第 5 代計算平台**
+
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_8|BC_Gen5_16|BC_Gen5_24|BC_Gen5_32|BC_Gen5_48|BC_Gen5_80|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |資料大小上限 (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
@@ -1021,16 +1045,19 @@ MAXSIZE
 **受控執行個體中資料庫以 vCore 為基礎的模型**
 
 **一般用途服務層 - 第 4 代計算平台**
+
 |MAXSIZE|GP_Gen4_8|GP_Gen4_16|GP4_24|
 |:--- | --: |--: |
 |資料大小上限 (TB)|8|8|8|
 
 **一般用途服務層 - 第 5 代計算平台**
+
 |MAXSIZE|GP_Gen5_8|GP_Gen5_16|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|
 |資料大小上限 (TB)|8|8|8|8|8|
 
 以下規則會套用到 MAXSIZE 和 EDITION 引數：  
+
 - 如果指定了 EDITION 但是未指定 MAXSIZE，就會使用版本的預設值。 例如，如果 EDITION 設定為 Standard，且未指定 MAXSIZE，則 MAXSIZE 會自動設定為 250 MB。  
 - 如果 MAXSIZE 和 EDITION 皆未指定，則 EDITION 會設定為 Standard (S0) 而 MAXSIZE 則設定為 250 GB。  
 
@@ -1103,25 +1130,28 @@ MAXSIZE 提供了限制資料庫大小的功能。 如果資料庫的大小達�
   
  如需詳細資訊，請參閱[使用 Transact-SQL 建立 Azure SQL 資料庫的複本](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>[權限]
+
 若要建立資料庫，登入必須為下列其中一項： 
   
 - 伺服器層級主體登入  
   
 - 本機 Azure SQL Server 的 Azure AD 系統管理員  
 - `dbmanager` 資料庫角色成員的登入    
-**使用 `CREATE DATABASE ... AS COPY OF` 語法的其他要求：** 在本機伺服器上執行陳述式的登入必須至少也是來源伺服器上的 `db_owner`。 如果登入依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行，則在本機伺服器上執行陳述式的登入必須與來源 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器上的登入相符，具有相同的名稱和密碼。  
+**使用 `CREATE DATABASE ... AS COPY OF` 語法的額外需求：** 在本機伺服器上執行陳述式的登入必須至少也是來源伺服器上的 `db_owner`。 如果登入依據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證進行，則在本機伺服器上執行陳述式的登入必須與來源 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 伺服器上的登入相符，具有相同的名稱和密碼。  
   
 ## <a name="examples"></a>範例
   
-### <a name="simple-example"></a>簡單範例  
+### <a name="simple-example"></a>簡單範例
+
  建立資料庫的簡單範例。  
   
 ```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
-### <a name="simple-example-with-edition"></a>使用 Edition 的簡單範例  
+### <a name="simple-example-with-edition"></a>使用 Edition 的簡單範例
+
  建立標準資料庫的簡單範例。  
   
 ```sql  
@@ -1129,7 +1159,8 @@ CREATE DATABASE TestDB2
 ( EDITION = 'GeneralPurpose' );  
 ```  
   
-### <a name="example-with-additional-options"></a>使用額外選項的範例  
+### <a name="example-with-additional-options"></a>使用額外選項的範例
+
  使用多個選項的範例。  
   
 ```sql  
@@ -1138,7 +1169,8 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ( MAXSIZE = 500 MB, EDITION = 'GeneralPurpose', SERVICE_OBJECTIVE = 'GP_GEN4_8' ) ;  
 ```  
   
-### <a name="creating-a-copy"></a>建立複本  
+### <a name="creating-a-copy"></a>建立複本
+
  建立資料庫複本的範例。  
   
 **適用於：** 僅單一和集區資料庫。
@@ -1158,7 +1190,8 @@ AS COPY OF school;
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
-### <a name="creating-a-copy-of-a-database-on-another-server"></a>在另一個伺服器上建立資料庫的複本  
+### <a name="creating-a-copy-of-a-database-on-another-server"></a>在另一個伺服器上建立資料庫的複本
+
 下列範例會建立 db_original 資料庫的複本，在單一資料庫的 P2 效能層級中名為 db_copy。  不論 db_original 位於彈性集區或單一資料庫的效能層級中，皆是如此。  
   
 **適用於：** 僅單一和集區資料庫。
@@ -1244,7 +1277,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
    > [!TIP]
    > 因應措施為使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi)。 在 `CREATE DATABASE` 之後，以設定資料庫選項和新增檔案。  
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>[權限]
+
 若要建立資料庫，登入必須為下列其中一項： 
   
 - 伺服器層級主體登入  
@@ -1253,7 +1287,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="examples"></a>範例
   
-### <a name="simple-example"></a>簡單範例  
+### <a name="simple-example"></a>簡單範例
+
  建立資料庫的簡單範例。  
   
 ```sql  
@@ -1302,7 +1337,8 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
 *database_name*  
 新資料庫的名稱。 此名稱在 SQL Server 上必須是唯一名稱，其可同時裝載 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 資料庫和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 資料庫，且必須符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的識別碼規則。 如需詳細資訊，請參閱[識別碼](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
@@ -1328,24 +1364,27 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 SERVICE_OBJECTIVE  
 指定效能等級。 如需 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 服務目標的詳細資訊，請參閱[效能層級](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
-## <a name="general-remarks"></a>一般備註  
+## <a name="general-remarks"></a>一般備註
+
 使用 [DATABASEPROPERTYEX & #40;TRANSACT-SQL & #41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 以查看資料庫屬性。  
   
 使用 [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw) 在之後變更大小上限或服務目標值。   
 
 SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且不可變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>[權限]
+
 必要權限：  
   
 -   由佈建程序建立的伺服器層級主體登入，或  
   
 -   `dbmanager` 資料庫角色的成員。  
   
-## <a name="error-handling"></a>錯誤處理  
+## <a name="error-handling"></a>錯誤處理
 如果資料庫的大小達到 MAXSIZE，您將收到錯誤碼 40544。 若發生這種情況，您就無法插入和更新資料，或是建立新物件 (例如資料表、預存程序、檢視和函式)。 您仍然可以讀取和刪除資料、截斷資料表、卸除資料表和索引，以及重建索引。 然後您可以將 MAXSIZE 升級為大於目前資料庫大小的值，或是刪除某些資料以釋出儲存空間。 在您能夠插入新資料之前，最長可能會有十五分鐘的延遲。  
   
-## <a name="limitations-and-restrictions"></a>限制事項  
+## <a name="limitations-and-restrictions"></a>限制事項
+
 您必須連接到 master 資料庫才能建立新的資料庫。  
   
 `CREATE DATABASE` 陳述式必須是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中唯一的陳述式。
@@ -1354,7 +1393,8 @@ SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且不可變更。 如需
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
   
-### <a name="a-simple-example"></a>A. 簡單範例  
+### <a name="a-simple-example"></a>A. 簡單範例
+
 建立資料倉儲資料庫的簡單範例。 這所建立出的資料庫，其大小上限最小為 10240 GB、預設定序為 SQL_Latin1_General_CP1_CI_AS，且最小運算能力為 DW100。  
   
 ```  
@@ -1362,7 +1402,8 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');  
 ```  
   
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. 以所有選項建立資料倉儲資料庫  
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. 以所有選項建立資料倉儲資料庫
+
 使用所有選項建立 10 TB 資料倉儲的範例。  
   
 ```  
@@ -1370,7 +1411,8 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
 [ALTER DATABASE &#40;Azure SQL Data Warehouse&#40;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldw)
 [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATABASE &#40;Transact-SQL&#40;](../../t-sql/statements/drop-database-transact-sql.md) 
@@ -1440,7 +1482,8 @@ WITH (
   
  當 AUTOGROW 設為 OFF 時，如果出現會導致個別計算節點的記錄檔大小增加至超出 *log_size* 的任何動作，將會向使用者傳回錯誤。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>[權限]
+
  需要 master 資料庫中的**建立任何資料庫**權限，或**系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
  下列範例會將建立資料庫的權限提供給資料庫使用者 Fay。  
@@ -1452,10 +1495,12 @@ GRANT CREATE ANY DATABASE TO [Fay];
 GO  
 ```  
   
-## <a name="general-remarks"></a>一般備註  
+## <a name="general-remarks"></a>一般備註
+
  建立資料庫時會使用資料庫相容性層級 120 建立，這是 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的相容性層級。 這可確保資料庫將能使用 PDW 所使用的所有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 功能。  
   
-## <a name="limitations-and-restrictions"></a>限制事項  
+## <a name="limitations-and-restrictions"></a>限制事項
+
  在明確的交易中，並不允許使用 CREATE DATABASE 陳述式。 如需詳細資訊，請參閱[陳述式](../../t-sql/statements/statements.md)。  
   
  如需資料庫最小和最大條件約束的資訊，請參閱 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] 中的「最小值和最大值」。  
@@ -1468,15 +1513,18 @@ GO
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會記錄 (*log_size* / 計算節點數目) 的大小。  
   
-## <a name="locking"></a>鎖定  
+## <a name="locking"></a>鎖定
+
  在 DATABASE 物件上採取共用鎖定。  
   
-## <a name="metadata"></a>中繼資料  
+## <a name="metadata"></a>中繼資料
+
  在這項作業成功之後，[sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 和 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 中繼資料檢視中將會顯示此資料庫的項目。  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-basic-database-creation-examples"></a>A. 基本資料庫建立範例  
+### <a name="a-basic-database-creation-examples"></a>A. 基本資料庫建立範例
+
  以下範例會建立資料庫 `mytest`，其儲存區配置為每一計算節點具備 100 GB 以用於複寫資料表、每一設備 500 GB 以用於分散式資料表，以及每一設備 100 GB 以用於交易記錄。 在這個範例中，AUTOGROW 預設為關閉。  
   
 ```  
@@ -1498,7 +1546,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 100 GB);  
 ```  
   
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 建立具備部分 GB 大小的資料庫  
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. 建立具備部分 GB 大小的資料庫
+
  以下範例會建立 AUTOGROW 設為關閉的資料庫 `mytest`，其儲存區配置為每一計算節點具備 1.5 GB 以用於複寫資料表、每一設備 5.25 GB 以用於分散式資料表，以及每一設備 10 GB 以用於交易記錄，。  
   
 ```  
@@ -1509,7 +1558,8 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [ALTER DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
   
