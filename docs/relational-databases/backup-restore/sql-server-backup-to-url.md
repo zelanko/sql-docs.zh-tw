@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e59713e537f14d6b18ce6600082f9df172112b97
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8c609178c8bcb31bfba669b989ef12f2b21d6efb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980224"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327791"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -308,19 +308,19 @@ $policyName = $prefixName + 'policy' # the name of the SAS policy
 $resourceGroupName=$prefixName + 'rg'   
 
 # adds an authenticated Azure account for use in the session   
-Login-AzureRmAccount
+Connect-AzAccount
 
 # set the tenant, subscription and environment for use in the rest of   
-Set-AzureRmContext -SubscriptionName $subscriptionName   
+Set-AzContext -SubscriptionName $subscriptionName   
 
 # create a new resource group - comment out this line to use an existing resource group  
-New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+New-AzResourceGroup -Name $resourceGroupName -Location $locationName   
 
 # Create a new ARM storage account - comment out this line to use an existing ARM storage account  
-New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
 
 # Get the access keys for the ARM storage account  
-$accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+$accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
 $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 

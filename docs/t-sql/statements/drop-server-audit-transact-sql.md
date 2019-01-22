@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DROP SERVER AUDIT statement
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 47d025cac6364bab049afac7a0253a6c82a09611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e6e67c4be74332bb9faf25eeac62f811ad86526
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711466"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327409"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

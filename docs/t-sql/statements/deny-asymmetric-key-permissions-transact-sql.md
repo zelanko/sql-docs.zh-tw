@@ -17,15 +17,15 @@ helpviewer_keywords:
 - DENY statement, asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e7ad315244d6a236285abdd6784237856c3d442f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2987ac3cb84b2e36fc6e78e7ea0466b30a440f4b
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511428"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326289"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY 非對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

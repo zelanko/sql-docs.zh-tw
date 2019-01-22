@@ -19,15 +19,15 @@ helpviewer_keywords:
 - CLOSE SYMMETRIC KEY statement
 - cryptography [SQL Server], symmetric keys
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a9a2d1e8c952863ae017422acf3842b31c79da91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 999e8cc5e66e8e809b2c716c77b0c0fba8ae95ba
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695936"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361358"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

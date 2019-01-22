@@ -1,7 +1,7 @@
 ---
 title: bcp 公用程式 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -29,18 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 375a20488c8f887a89538ee640e059a96da72a99
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300575"
+ms.locfileid: "54317828"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   > [!div class="nextstepaction"]
-  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 > 在 Linux 上使用 bcp，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 > 
@@ -62,9 +62,9 @@ ms.locfileid: "54300575"
 
 **版本資訊**
 
-版本編號：17.615.0 <br>
-組建編號:15.0.1000.34<br>
-發行日期2018 年 18 月
+版本編號：15.0 <br>
+組建編號：15.0.1000.34<br>
+發行日期：2018 年 10 月 18 日
 
 SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉儲，以及 Always Encrypted 功能支援 Multi-factor Authentication (MFA)。
 新的 BCP 支援 Azure AD 驗證，包括 SQL Database 和 SQL 資料倉儲的 Multi-factor Authentication (MFA) 支援。
@@ -110,8 +110,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#w">-w</a>]
     [<a href="#x">-x</a>]
 </pre></td></tr></table>  
-  
-## <a name="arguments"></a>引數  
+
+## <a name="arguments"></a>引數
+
  _**data\_file**_<a name="data_file"></a>  
  這是資料檔案的完整路徑。 當資料大量匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時，資料檔案會包含要複製到指定資料表或檢視表的資料。 當從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]大量匯出資料時，資料檔案會包含從資料表或檢視表複製的資料。 路徑可以有 1 至 255 個字元。 資料檔案最多可以包含 2^63 - 1 個資料列。  
   
@@ -428,8 +429,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-x**<a name="x"></a>  
  與 **format** 和 **-f** *format_file* 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。 匯入或匯出資料時， **-x** 無法運作。 如果沒有與 **format** 和 **-f** *format_file*一起使用，即會產生錯誤。  
-  
+
 ## 備註<a name="remarks"></a>
+
  您可以利用 **bcp** 工具時，也會安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 用戶端。 如果同時為 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝工具，則根據 PATH 環境變數值順序的不同，您也可以使用舊版的 **bcp** 用戶端來取代 **bcp** 13.0 用戶端。 這個環境變數定義了 Windows 用來搜尋可執行檔的一組目錄。 若要確定您所使用的版本，請在 Windows 命令提示字元處執行 **bcp /v** 命令。 如需有關如何在 PATH 環境變數中設定命令路徑的詳細資訊，請參閱 Windows 說明。  
  
 Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://www.microsoft.com/download/details.aspx?id=52676) 個別下載。  選取 `ENU\x64\MsSqlCmdLnUtils.msi` 或 `ENU\x86\MsSqlCmdLnUtils.msi`。
@@ -442,16 +444,19 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
  如需準備資料進行大量匯入或匯出作業的資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
  如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱 [大量匯入採用最低限度記錄的必要條件](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
-  
-## <a name="native-data-file-support"></a>原生資料檔案支援  
+
+## <a name="native-data-file-support"></a>原生資料檔案支援
+
  在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， **bcp** 公用程式可支援與 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]相容的原生資料檔案。  
-  
-## <a name="computed-columns-and-timestamp-columns"></a>計算資料行和時間戳記資料行  
+
+## <a name="computed-columns-and-timestamp-columns"></a>計算資料行和時間戳記資料行
+
  會忽略針對計算資料行或 **timestamp** 資料行匯入之資料檔案中的值，而且 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會自動指派值。 如果資料檔案不包含資料表中計算資料行或 **timestamp** 資料行的值，請使用格式檔案指定在匯入資料時應略過資料表中的計算資料行或 **timestamp** 資料行； [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會自動指派資料行的值。  
   
  計算資料行和 **timestamp** 資料行會照常從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 大量複製到資料檔案中。  
-  
-## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>指定包含空格或引號的識別碼  
+
+## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>指定包含空格或引號的識別碼
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼可以包括內嵌空格和引號之類的字元。 您必須依照下列方式來處理這些識別碼：  
   
 -   當您在命令提示字元之下，指定包含空格或引號的識別碼或檔案名稱時，請用引號 ("") 括住識別碼。  
@@ -469,8 +474,9 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
     -   指定 **-q** 選項，或  
   
     -   在引號內，用方括號 ([]) 括住擁有者、資料表或檢視表名稱。  
-  
-## <a name="data-validation"></a>資料驗證  
+
+## <a name="data-validation"></a>資料驗證
+
  **bcp** 現在會強制進行資料驗證與資料檢查，若針對資料檔案中無效的資料執行指令碼，這些資料驗證與檢查作業可能會導致指令碼失敗。 例如， **bcp** 現在會驗證：  
   
 -   **float** 或 **real** 資料類型的原生表示法是否有效。  
@@ -478,8 +484,9 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 -   Unicode 資料的長度是否為偶數位元組。  
   
  可在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中大量匯入的無效資料形式，現在可能無法載入。不過，在舊版中，除非用戶端嘗試存取無效資料，否則不會發生作業失敗的情況。 新增的驗證會使大量載入之後的資料查詢，將出現意外的狀況減到最少。  
-  
-## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>大量匯出或匯入 SQLXML 文件  
+
+## <a name="bulk-exporting-or-importing-sqlxml-documents"></a>大量匯出或匯入 SQLXML 文件
+
  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型。  
   
 |資料類型|效果|  
@@ -487,8 +494,9 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 |SQLCHAR 或 SQLVARYCHAR|資料是使用用戶端字碼頁或定序所隱含的字碼頁所傳送。 其效果與指定 **-c** 參數但不指定格式檔案相同。|  
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式傳送這份資料。 其效果與指定 **-w** 參數但不指定格式檔案相同。|  
 |SQLBINARY 或 SQLVARYBIN|未經任何轉換即傳送這份資料。|  
-  
-## <a name="permissions"></a>[權限]  
+
+## <a name="permissions"></a>[權限]
+
  **bcp out** 作業需要來源資料表的 SELECT 權限。  
   
  **bcp in** 作業至少需要目標資料表的 SELECT/INSERT 權限。 另外，如果符合下列中的任何狀況，便需要 ALTER TABLE 權限：  
@@ -507,8 +515,9 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
   
 > [!NOTE]
 > 在 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]中，目標資料表的 ALTER TABLE 權限是一項新的需求。 如果使用者帳戶沒有目標資料表的 ALTER 資料表權限，這項新的需求可能會讓不會強制進行觸發程序和條件約束檢查的 **bcp** 指令碼失敗。
-  
-## <a name="character-mode--c-and-native-mode--n-best-practices"></a>字元模式 (-c) 與原生模式 (-n) 最佳做法  
+
+## <a name="character-mode--c-and-native-mode--n-best-practices"></a>字元模式 (-c) 與原生模式 (-n) 最佳做法
+
  本節具有字元模式 (-c) 與原生模式 (-n) 的建議事項。  
   
 -   (管理員/使用者) 盡可能使用原生格式 (-n) 來避免分隔符號問題。 您可以使用原生格式，透過 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]匯出和匯入。 如果資料將匯入非 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，請使用 -c 或 -w 選項，從[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯出資料。  
@@ -516,8 +525,9 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 -   (管理員) 使用 BCP OUT 時確認資料。 例如，當您依序使用 BCP OUT、BCP IN 和 BCP OUT 時，請確認資料正確匯出，而且結束字元值並未當做某些資料值的一部分使用。 請考慮使用隨機十六進位值來覆寫預設結束字元 (使用 -t 和 -r 選項)，避免結束字元值與資料值之間發生衝突。  
   
 -   (使用者) 使用長且唯一的結束字元 (任何位元組或字元序列)，將實際字串值發生衝突的可能性降到最低。 這可透過使用 -t 和 -r 選項完成。  
-  
-## <a name="examples"></a>範例  
+
+## <a name="examples"></a>範例
+
  本節包含下列範例：  
  
 -   A. 識別 **bcp** 公用程式版本
@@ -540,6 +550,7 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 
 
 ### <a name="example-test-conditions"></a>**範例測試條件**
+
 以下範例針對 SQL Server (從 2016 開始) 和 Azure SQL Database 利用 `WideWorldImporters` 範例資料庫。  `WideWorldImporters` 您可以從下載[ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)。  如需還原範例資料庫的語法，請參閱 [RESTORE (TRANSACT-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 。  除非另有指定，否則範例假設您使用 Windows 驗證，且有信任連接通往您在執行 **bcp** 命令的伺服器執行個體。  名為 `D:\BCP` 的目錄將用於許多範例。
 
 下面的指令碼會建立 `WideWorldImporters.Warehouse.StockItemTransactions` 資料表的空複本，然後新增主索引鍵條件約束。  在 SQL Server Management Studio (SSMS) 中執行下列 T-SQL 指令碼
@@ -694,22 +705,23 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 ```  
 bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...  
 ```  
-  
-## <a name="additional-examples"></a>其他範例  
+
+## <a name="additional-examples"></a>其他範例
+
 |下列主題包含使用 bcp 的範例： |
 |---|
-|大量匯入或大量匯出的資料格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用原生格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字元格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 原生格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字元格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定欄位與資料列結束字元 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[大量匯入期間保留 Null 或使用預設值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[大量匯入資料時保留識別值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />匯入或匯出資料的格式檔案 (SQL Server)<br />&emsp;&#9679;&emsp;[建立格式檔案 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案大量匯入資料 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料表資料行 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料欄位 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[大量匯入與匯出 XML 文件的範例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>                                                                                                                                                                                                                  </p>|
+|大量匯入或大量匯出的資料格式 (SQL Server)<br />&emsp;&#9679;&emsp;[使用原生格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用字元格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 原生格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用 Unicode 字元格式匯入或匯出資料 (SQL Server)](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)<br /><br />[指定欄位與資料列結束字元 (SQL Server)](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)<br /><br />[大量匯入期間保留 Null 或使用預設值 (SQL Server)](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)<br /><br />[大量匯入資料時保留識別值 (SQL Server)](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)<br /><br />匯入或匯出資料的格式檔案 (SQL Server)<br />&emsp;&#9679;&emsp;[建立格式檔案 (SQL Server)](../relational-databases/import-export/create-a-format-file-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案大量匯入資料 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料表資料行 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案略過資料欄位 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)<br />&emsp;&#9679;&emsp;[使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)](../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)<br /><br />[大量匯入與匯出 XML 文件的範例 (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)<br /><p>  </p>|
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
- [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
-  
-  
+ [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
+
 ## <a name="feedback"></a>意見反應
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)

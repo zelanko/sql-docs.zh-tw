@@ -1,7 +1,7 @@
 ---
 title: 重大變更到資料庫引擎功能的 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2018
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: release-landing
@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe4dc2f55b8d9b1bc9475e936341d24d16ce77a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375270"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420203"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 的重大變更
   本主題說明中的重大變更[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]和舊版的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
@@ -42,7 +42,6 @@ ms.locfileid: "53375270"
 |ALTER TABLE|ALTER TABLE 陳述式只允許兩部分 (schema.object) 資料表名稱。 現在使用下列格式的資料表名稱來指定會在編譯時期顯示錯誤 117 失敗：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在舊版中，指定 server.database.schema.table 格式會傳回錯誤 4902。 不過，指定 .database.schema.table 格式或 ..schema.table 格式會成功。 若要解決此問題，請移除 4 部分前置詞的用法。|  
 |瀏覽中繼資料|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 來查詢檢視現在會傳回檢視的中繼資料，而非基礎物件的中繼資料。 這種行為現在與其他瀏覽中繼資料的方法相符。|  
 |SOUNDEX|在資料庫相容性層級 110 下，SOUNDEX 函式會實作新的規則，這些規則可能會使此函式將值計算成不同於在舊版相容性層級下計算的值。 升級到相容性層級 110 之後，您可能需要重建使用 SOUNDEX 函數的索引、堆積或 CHECK 條件約束。 如需詳細資訊，請參閱 [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
- .|  
 |失敗之 DML 陳述式的資料列計數訊息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，當 DML 陳述式失敗時，[!INCLUDE[ssDE](../includes/ssde-md.md)] 會固定傳送 rowcount 為 0 的 TDS DONE Token 給用戶端。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，當失敗的 DML 陳述式包含在 TRY-CATCH 區塊中，而且由 [!INCLUDE[ssDE](../includes/ssde-md.md)] 自動參數化，或者 TRY-CATCH 區塊與失敗的陳述式不在相同的層級上時，系統會將錯誤的值 -1 傳送至用戶端。 例如，如果 TRY-CATCH 區塊呼叫了預存程序，而且此程序中的 DML 陳述式失敗，則用戶端將收到錯誤的 -1 值。<br /><br /> 仰賴此錯誤行為的應用程式將會失敗。|  
 |SERVERPROPERTY （' 版本'）|已安裝的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 執行個體產品版本。 請利用這個屬性值來判斷已安裝的產品所支援的功能和限制 (如最大 CPU 數目)。<br /><br /> 根據已安裝的 Enterprise edition，則會傳回 'Enterprise Edition' 或' Enterprise Edition:核心授權 '。 Enterprise 版本會根據單一 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的計算容量上限而區分。 如需有關中的計算容量限制[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，請參閱 < [SQL server 版本計算容量限制](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '`*密碼*`' HASHED`選項不能藉由建立雜湊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]7 或更早版本。|  
@@ -57,8 +56,8 @@ ms.locfileid: "53375270"
 |sys.dm_os_memory_cache_entries|資料行 pages_allocated_count&lt 資料行已重新命名的 pages_kb。|  
 |sys.dm_os_memory_clerks|已移除資料行 multi_pages_kb&lt。<br /><br /> 資料行 single_pages_kb 資料行已重新命名的 pages_kb。|  
 |sys.dm_os_memory_nodes|下列資料行已重新命名：<br /><br /> single_pages_kb 現在是： <br />                            pages_kb<br /><br /> multi_pages_kb&lt 現在是： <br />                            foreign_committed_kb|  
-|sys.dm_os_memory_objects|下列資料行已經重新命名。<br /><br /> pages_allocated_count&lt 現在是：<br />                            pages_in_bytes<br /><br /> 現已 max_pages_allocated_count: max_pages_in_bytes|  
-|sys.dm_os_sys_info|下列資料行已重新命名：<br /><br /> physical_memory_in_bytes 現在是： <br />                            physical_memory_kb<br /><br /> bpool_commit_target 現在是： <br />                            committed_target_kb&lt<br /><br /> bpool_visible 現在是： <br />                            visible_target_kb&lt<br /><br /> virtual_memory_in_bytes 現在是： <br />                            virtual_memory_kb<br /><br /> bpool_commited 現在是：<br />                            committed_kb&lt|  
+|sys.dm_os_memory_objects|下列資料行已經重新命名。<br /><br /> pages_allocated_count&lt 現在是：<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count is now: max_pages_in_bytes|  
+|sys.dm_os_sys_info|下列資料行已重新命名：<br /><br /> physical_memory_in_bytes 現在是： <br />                            physical_memory_kb<br /><br /> bpool_commit_target 現在是： <br />                            committed_target_kb<br /><br /> bpool_visible 現在是： <br />                            visible_target_kb<br /><br /> virtual_memory_in_bytes 現在是： <br />                            virtual_memory_kb<br /><br /> bpool_commited 現在是：<br />                            committed_kb|  
 |sys.dm_os_workers|地區設定資料行已經被移除。|  
   
 ### <a name="catalog-views"></a>目錄檢視  
@@ -189,9 +188,9 @@ ms.locfileid: "53375270"
   
  下列函式示範新的行為描述上方時，才預設命名空間 URI 對應至命名空間在最終建議中，亦即[ http://www.w3.org/2005/xpath-functions ](http://www.w3.org/2005/xpath-functions)。 當相容性層級為 110 或更高時，則 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 預設會將預設函數命名空間繫結至這個命名空間。 不過，不論相容性層級為何，只要使用這個命名空間，這些函數就會呈現新行為。  
   
--   **fn: string 的長度**  
+-   **fn:string-length**  
   
--   **fn: substring**  
+-   **fn:substring**  
   
 ##  <a name="KJKatmai"></a> 重大變更，在 SQL Server 2008/SQL Server 2008 r2  
  本節包含 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 中導入的重大變更。 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 並未導入任何變更。  

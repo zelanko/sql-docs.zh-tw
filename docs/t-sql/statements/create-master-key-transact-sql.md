@@ -21,16 +21,16 @@ helpviewer_keywords:
 - cryptography [SQL Server], Database Master Key
 - database master key [SQL Server], creating
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d885d5001c777eeb9a68732aa907c7e37be352c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04d4881d79996a7795435cbaad12c8dc7259fdf9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644577"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326669"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

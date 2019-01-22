@@ -25,16 +25,16 @@ helpviewer_keywords:
 - decryption [SQL Server]
 - cryptography [SQL Server], certificates
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bf65c24924d7e585131d90d01c42cf551ae4997d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798558"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327419"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

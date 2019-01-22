@@ -17,15 +17,15 @@ helpviewer_keywords:
 - encryption [SQL Server], symmetric keys
 - cryptography [SQL Server], symmetric keys
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b5999df15568a85d9e527930290542be10bb1e7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8aec17fc676ef975a1655be1b7af0e70eb5ee599
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763366"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361518"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY 對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

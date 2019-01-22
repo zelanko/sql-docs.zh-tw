@@ -15,15 +15,15 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server], permissions
 - GRANT statement, asymmetric keys
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 20bcf2732ddc71ad218f97715266cc70b77df6f2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e4e2eafc126a092a3507e49b5eb7e1ca92a25e43
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589172"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326749"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 非對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

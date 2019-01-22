@@ -1,7 +1,7 @@
 ---
 title: 關聯性表示法 （表格式） |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,17 +12,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d11d0b6a1e1be93cb3c521bb32782dcb127e822
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058898"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420153"
 ---
 # <a name="relationship-representation-tabular"></a>關聯性表示法 (表格式)
   關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。  
   
- 請參閱[Relationship Representation (Tabular)](relationship-representation-tabular.md)如需如何建立及操作關聯性表示法的詳細說明。  
+ 如需有關如何建立和操作關聯性表示法的詳細說明，請參閱＜ [Relationship Representation (Tabular)](relationship-representation-tabular.md) ＞。  
   
 ## <a name="relationship-representation"></a>關聯性表示法  
  在表格式模型中，可以在兩個資料表之間定義多個關聯性。 定義兩個資料表之間的多個關聯性時，只有一個關聯性可以定義為模型的預設關聯性，而且它會稱為作用中的關聯性；所有其他關聯性則稱為非作用中的關聯性。  
@@ -32,8 +32,7 @@ ms.locfileid: "48058898"
   
  下列程式碼片段說明如何在表格式模型內建立關聯性、如何啟用關聯性，以及如何在資料表內定義主索引鍵 (非 "RowNumber")。 若要建立作用中的關聯性，必須在關聯性的主索引鍵資料表 PKTableName (關聯性的一端) 內定義主索引鍵，這裡顯示的範例會在 PKColumnName 上建立主索引鍵 (如果此資料行中未定義任何主索引鍵)。 您可以建立作用中的關聯性，而不需要在主索引鍵資料行上擁有主索引鍵。  
   
-```  
-  
+```cs
 private Boolean createRelationship(string PKTableName, string PKColumnName, string MVTableName, string MVColumnName, AMO.Database tabularDb, string cubeName, Boolean forceActive)  
 {  
     //verify input parameters  

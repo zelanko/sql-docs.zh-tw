@@ -15,15 +15,15 @@ helpviewer_keywords:
 - revoking permissions to access tables
 - object permissions [SQL Server], revoking
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55c06191de80cf76f6ced789f2fe10ff8c1c79ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623456"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327699"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
  純量函數權限：EXECUTE、REFERENCES。  
   
- 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ 資料表值函數權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  預存程序權限：EXECUTE。  
   
  資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
- 檢視權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ 檢視表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  PRIVILEGES  
  為符合 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 而包含這個項目。 不會變更 ALL 的行為。  

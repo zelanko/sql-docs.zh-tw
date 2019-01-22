@@ -22,15 +22,15 @@ helpviewer_keywords:
 - backing up master keys [SQL Server]
 - database master key [SQL Server], exporting
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: abcf0e9c3bcd19f28b85a543e9b85fbdd3d8fe21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a7fe17ad9857d066f7db2219d33d5ab209a91bb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845046"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326609"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

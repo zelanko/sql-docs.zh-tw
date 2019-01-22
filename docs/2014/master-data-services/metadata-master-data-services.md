@@ -1,7 +1,7 @@
 ---
 title: 中繼資料 (Master Data Services) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2050e1fe428108713d4cfed8473feec592bc1daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186329f71e19f23801fb366fe2117067fbf70c6c
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185008"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419884"
 ---
 # <a name="metadata-master-data-services"></a>中繼資料 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，使用者定義的中繼資料是用來描述模型物件的資訊。 例如，您可以追蹤特定模型或實體的擁有者，或追蹤提供資料給實體的來源系統。  
@@ -33,7 +33,7 @@ ms.locfileid: "48185008"
 ## <a name="metadata-entities"></a>中繼資料實體  
  中繼資料模型包含五個實體，每個實體代表一種支援使用者定義中繼資料的主要資料模型物件類型。 例如，**模型中繼資料定義**實體都包含代表模型的成員和**屬性中繼資料定義**實體具有成員，表示所有模型中的所有屬性。  
   
- 若要定義模型物件的中繼資料，必須擴展其中一個成員的屬性。 例如，在**實體中繼資料定義**實體，您可以擴展價格成員的描述屬性，以文字：**賣給客戶的產品價格**。  
+ 若要定義模型物件的中繼資料，必須擴展其中一個成員的屬性。 例如，在**實體中繼資料定義**實體，您可以擴展價格成員的描述屬性，以文字：**產品價格賣給客戶**。  
   
  每當加入或刪除支援使用者定義中繼資料的模型物件時，中繼資料模型中的成員會自動更新。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48185008"
 |工作描述|主題|  
 |----------------------|-----------|  
 |將中繼資料加入至模型物件。|[新增中繼資料&#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## <a name="related-content"></a>相關內容  
   

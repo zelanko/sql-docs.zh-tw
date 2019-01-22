@@ -19,15 +19,15 @@ helpviewer_keywords:
 - application roles [SQL Server], removing
 - DROP APPLICATION ROLE statement
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7234f0890976878045988a3e4ba6af6357266cb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77bf5aad865c2c8a858c8a9c47fc5706d644cfb3
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619386"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361458"
 ---
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

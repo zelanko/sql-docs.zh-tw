@@ -1,7 +1,7 @@
 ---
 title: Microsoft Access 資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,19 +18,19 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11f45698a5ad8b7fd05052cbb2d23520790c425a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692976"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420173"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 資料類型
 下表顯示 Microsoft Access 資料類型、 資料類型用來建立資料表，以及 ODBC SQL 資料類型。  
   
 |Microsoft Access 資料類型|資料類型 (CREATETABLE)|ODBC SQL 資料類型|  
 |--------------------------------|-------------------------------|------------------------|  
-|BIGBINARY [1]|LONGBINARY|SQL_LONGVARBINARY|  
+|BIGBINARY[1]|LONGBINARY|SQL_LONGVARBINARY|  
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |計數器|計數器|SQL_INTEGER|  
@@ -38,17 +38,17 @@ ms.locfileid: "47692976"
 |日期/時間|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |長的二進位|LONGBINARY|SQL_LONGVARBINARY|  
-|長文字|長文字|[2] SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
-|附註|長文字|[2] SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
+|長文字|長文字|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|附註|長文字|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |數字 (欄位大小 = 單一)|單一|SQL_REAL|  
 |數字 (欄位大小 = 雙精度浮點數)|DOUBLE|SQL_DOUBLE|  
 |數字 (欄位大小 = BYTE)|不帶正負號的位元組|SQL_TINYINT|  
-|數字 (欄位大小 = INTEGER)|簡短|SQL_SMALLINT|  
+|NUMBER (FieldSize= INTEGER)|簡短|SQL_SMALLINT|  
 |數字 (欄位大小 = 長整數)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|[1] SQL_VARCHAR SQL_WVARCHAR [2]|  
-ARBINARY|VARBINARY|SQL_VARBINARY|  
+|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] 存取 4.0 應用程式。 最大長度 4000 個位元組。 LONGBINARY 類似的行為。  
   

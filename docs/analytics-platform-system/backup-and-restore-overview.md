@@ -6,28 +6,28 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01585c399d648bbc72d7d2811d24b2558b947bff
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: e95415c689fda43c2a9d118713c96d0a1d531904
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400601"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419993"
 ---
 # <a name="backup-and-restore"></a>備份與還原
+
 說明資料如何備份及還原的運作方式的 Parallel Data Warehouse (PDW)。 備份和還原作業會用於災害復原。 備份與還原也可用來將資料庫從一個應用裝置複製到另一個應用裝置。  
     
-## <a name="BackupRestoreBasics"></a>備份和還原的基本概念  
+## <a name="BackupRestoreBasics"></a>備份和還原的基本概念
+
 PDW*資料庫備份*是以格式儲存，這樣就可以使用原始的資料庫還原到設備的設備 」 資料庫的複本。  
   
 PDW 資料庫備份會透過[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md) t-sql 陳述式並用於格式化[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)陳述式，就無法使用任何其他用途。 備份只可以還原至應用裝置中，但會使用相同數目或更高的計算節點數目。  
   
 <!-- MISSING LINKS
-
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
-
 -->
   
 PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫。 若要使用備份壓縮預先設定 SQL Server 備份的選項。 您無法設定壓縮、總和檢查碼、區塊大小及緩衝區計數等備份選項。  
@@ -36,7 +36,8 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
   
 備份會在 Windows 檔案系統中，備份的伺服器上儲存為一組檔案。 PDW 資料庫備份只能還原至 PDW。 不過，您也可以使用標準 Windows 檔案備份程序來封存備份伺服器的資料庫備份到另一個位置。 如需有關備份伺服器的詳細資訊，請參閱[取得並設定備份伺服器](acquire-and-configure-backup-server.md)。  
   
-## <a name="BackupTypes"></a>資料庫備份類型  
+## <a name="BackupTypes"></a>資料庫備份類型
+
 有兩種都需要備份的資料類型： 使用者資料庫和系統資料庫 （例如，master 資料庫）。 PDW 不會備份交易記錄檔。  
   
 完整資料庫備份是完整的 PDW 資料庫的備份。 這是預設的備份類型。 使用者資料庫的完整備份包含資料庫使用者與資料庫角色。 主要的備份會包含登入。  
@@ -49,7 +50,8 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
   
 若要備份整個設備，您需要執行的所有使用者資料庫的備份與主要資料庫的備份。  
   
-## <a name="BackupProc"></a>資料庫備份程序  
+## <a name="BackupProc"></a>資料庫備份程序
+
 下圖顯示資料庫備份期間的資料流。  
   
 ![PDW 備份程序](media/backup-process.png "PDW 備份程序")  
@@ -82,14 +84,16 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
   
     -   您無法變更備份的名稱，然後再執行還原。 備份目錄的名稱必須符合備份的原始名稱的名稱。 備份的原始名稱位於 backup.xml 中檔案的備份目錄。 若要將資料庫還原至不同的名稱，您可以指定 restore 命令中的新名稱。 例如： `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`＞。  
   
-## <a name="RestoreModes"></a>資料庫還原模式  
+## <a name="RestoreModes"></a>資料庫還原模式
+
 完整資料庫還原重新建立 PDW 資料庫使用中的資料庫備份的資料。 先還原完整備份，並選擇性地還原一個差異備份執行資料庫還原。 資料庫還原包括資料庫使用者和資料庫角色。  
   
 標頭只還原會傳回資料庫的標頭資訊。 它不會還原到設備的資料。  
   
 應用裝置還原為整個應用裝置還原。 這包括還原所有使用者資料庫和 master 資料庫。  
   
-## <a name="RestoreProc"></a>還原程序  
+## <a name="RestoreProc"></a>還原程序
+
 下圖顯示在資料庫還原期間的資料流。  
   
 ![還原程序](media/restore-process.png "還原程序")  
@@ -130,7 +134,8 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
 |---------------------------|---------------|  
 |準備伺服器，做為備份伺服器。|[取得並設定備份的伺服器 ](acquire-and-configure-backup-server.md)|  
 |備份資料庫。|[備份資料庫](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|將資料庫還原。|[還原資料庫](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|將資料庫還原。|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+
 <!-- MISSING LINKS
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 

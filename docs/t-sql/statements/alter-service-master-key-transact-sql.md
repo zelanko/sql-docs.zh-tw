@@ -22,15 +22,15 @@ helpviewer_keywords:
 - encryption [SQL Server], Service Master Key
 - service master key [SQL Server], modifying
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4580926a6aff40e5c2d4b7da588cf394b6bdfcda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5fe3a72c49f04d2e9a6a6ac8300ae3732adf06d0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516170"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327719"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER SERVICE MASTER KEY
 ## <a name="remarks"></a>Remarks  
  第一次需要利用服務主要金鑰來加密連結伺服器密碼、認證或資料庫主要金鑰時，會自動產生服務主要金鑰。 服務主要金鑰是以本機電腦金鑰或 Windows 資料保護 API 加密。 這個 API 會使用衍生自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶之 Windows 認證的金鑰。  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 是使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與早期版本中使用的 3DES 相比，AES 是一種較新的加密演算法。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體升級至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之後，應該會重新產生 SMK 和 DMK，以將主要金鑰升級至 AES。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 是使用 AES 加密演算法來保護服務主要金鑰 (SMK) 及資料庫主要金鑰 (DMK)。 與舊版中使用的 3DES 相比，AES 是一種較新的加密演算法。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體升級至 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之後，應該會重新產生 SMK 和 DMK，以將主要金鑰升級至 AES。 如需重新產生 DMK 的詳細資訊，請參閱 [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
 ##  <a name="_changing"></a> 變更 SQL Server 服務帳戶  
  若要變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。 為管理服務帳戶的變更，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會儲存一個備用的服務主要金鑰，並由已將必要權限授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務群組的電腦帳戶所保護。 如果電腦經過重建，服務帳戶先前所使用的相同網域使用者可以復原服務主要金鑰。 這不適用於本機帳戶或本機系統、本機服務或網路服務帳戶。 當您要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移動到另一部電腦時，請使用備份和還原來移轉服務主要金鑰。  

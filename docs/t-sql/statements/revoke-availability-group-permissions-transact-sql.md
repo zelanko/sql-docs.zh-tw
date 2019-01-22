@@ -15,15 +15,15 @@ helpviewer_keywords:
 - revoking permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: daaaa615a778314556f9684800bdc2a56cd7a5ef
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 201e7de473a344d0d41269b259c503dc34f2a78c
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980144"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327792"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>撤銷可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - granting permissions [SQL Server], objects
 - GRANT statement, objects
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03e07f20c2e33c4ffad59d7050793cd1b52b9c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621216"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326319"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,10 +64,10 @@ GRANT <permission> [ ,...n ] ON
  授與 ALL 不會授與所有可能的權限。 授與 ALL 相當於授與適用於指定之物件的所有 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 權限。 ALL 有多種意義，如下所示：  
   
 - 純量函數權限：EXECUTE、REFERENCES。  
-- 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- 資料表值函數權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
 - 預存程序權限：EXECUTE。  
 - 資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
-- 檢視權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- 檢視表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  為符合 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 而包含這個項目。 不會變更 ALL 的行為。  

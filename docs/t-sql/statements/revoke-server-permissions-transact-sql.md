@@ -14,15 +14,15 @@ helpviewer_keywords:
 - REVOKE statement, server permissions
 - servers [SQL Server], permissions
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa458e9c4aef71e7439cb3c40a03f6a6e450f422
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 56703c5c0a2b3bb833b0e600c8dbfbca929ae75a
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51704006"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326559"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE 伺服器權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

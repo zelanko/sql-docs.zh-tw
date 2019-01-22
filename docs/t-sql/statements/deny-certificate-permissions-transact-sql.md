@@ -15,15 +15,15 @@ helpviewer_keywords:
 - DENY statement, certificates
 - denying permissions [SQL Server], certificates
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 21eb0fdce01f4c48f11f084ff3bf1ba8a1354b1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af316bd77056bb08d37551ba5cd2a812bda4ad04
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545460"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326549"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 憑證權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER CRYPTOGRAPHIC PROVIDER
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: adfd19398f5f963c09d6a792ba8bc10e0cb84229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9baa18550da37f0abe379b3842389fae7100287
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815327"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326429"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

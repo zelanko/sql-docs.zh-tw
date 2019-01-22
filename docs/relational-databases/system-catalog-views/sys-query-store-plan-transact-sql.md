@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60b9137e52b34b79fa4faddbef7b9e4da8734142
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397607"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419791"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54397607"
   包含與查詢相關聯的每個執行計畫的相關資訊。  
   
 |資料行名稱|資料類型|描述|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|主索引鍵。|  
 |**query_id**|**bigint**|外部索引鍵。 加入[sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)。|  
 |**plan_group_id**|**bigint**|計劃群組的識別碼。 資料指標查詢通常需要多個 （填入和擷取） 計劃。 填入並一起編譯的擷取方案都位於相同的群組。<br /><br /> 0 表示計畫不在群組中。|  
@@ -57,13 +57,8 @@ ms.locfileid: "54397607"
 |**last_execution_time**|**datetimeoffset**|上次執行時間的最後一個參考查詢/計劃的結束的時間。|  
 |**avg_compile_duration**|**float**|規劃編譯統計資料。|  
 |**last_compile_duration**|**bigint**|規劃編譯統計資料。|  
-|**plan_forcing_type**|**int**|計畫強制執行型別。<br /><br />
-0：無<br /><br />
-1：MANUAL<br /><br />
-2：自動 | |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文字描述。<br /><br />
-NONE:強制執行任何計劃<br /><br />
-MANUAL:已由使用者強制的計劃<br /><br />
-自動：自動調整所強制的計劃 |
+|**plan_forcing_type**|**int**|計畫強制執行型別。<br /><br />0：無<br /><br />1：MANUAL<br /><br />2：AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文字描述。<br /><br />NONE:強制執行任何計劃<br /><br />MANUAL:已由使用者強制的計劃<br /><br />自動：自動調整所強制的計劃|  
 
 ## <a name="plan-forcing-limitations"></a>計畫強制執行限制
 查詢存放區有強制查詢最佳化工具使用特定執行計劃的機制。 不過，也有避免強制執行計劃的一些限制。 

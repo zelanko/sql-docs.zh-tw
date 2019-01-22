@@ -1,7 +1,7 @@
 ---
 title: 使用 AlwaysOn 原則檢視可用性群組 (SQL Server) 的健康情況 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,12 +12,12 @@ ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ff043a40449664385360b073451b0217727a5c0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355234"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420123"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>使用 AlwaysOn 原則檢視可用性群組的健全狀況 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 AlwaysOn 原則或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，判斷 AlwaysOn 可用性群組的作業健全狀況。 如需 AlwaysOn 原則式管理資訊，請參閱[AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
@@ -61,9 +61,10 @@ ms.locfileid: "53355234"
   
      例如，下列命令會顯示伺服器執行個體 `Computer\Instance`上健全狀態為 "Error" 的所有可用性群組。  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups `   
-    | Test-SqlAvailabilityGroup | Where-Object { $_.HealthState -eq "Error" }  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups |
+        Test-SqlAvailabilityGroup |
+        Where-Object { $_.HealthState -eq "Error" }  
     ```  
   
      `Test-SqlAvailabilityReplica`  
@@ -71,7 +72,7 @@ ms.locfileid: "53355234"
   
      例如，下列命令會評估可用性群組 `MyReplica` 中名為 `MyAg` 之可用性複本的健全狀況並且輸出簡短摘要。  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityReplica `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\AvailabilityReplicas\MyReplica  
     ```  
@@ -81,9 +82,9 @@ ms.locfileid: "53355234"
   
      例如，下列命令會評估可用性群組 `MyAg` 中所有可用性資料庫的健全狀況並且輸出每個資料庫的簡短摘要。  
   
-    ```  
-    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates `   
-     | Test-SqlDatabaseReplicaState  
+    ```powershell
+    Get-ChildItem SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\DatabaseReplicaStates |
+        Test-SqlDatabaseReplicaState  
     ```  
   
      這些指令程式接受下列選項：  
@@ -98,11 +99,10 @@ ms.locfileid: "53355234"
   
      例如，下列 `Test-SqlAvailabilityGroup` 命令會指定 `-ShowPolicyDetails` 參數，針對在可用性群組 `MyAg` 上執行的每個原則式管理 (PBM) 原則，顯示此指令程式執行的每個原則評估結果。  
   
-    ```  
+    ```powershell
     Test-SqlAvailabilityGroup `   
     -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\AgName `  
     -ShowPolicyDetails  
-  
     ```  
   
     > [!NOTE]  
@@ -117,13 +117,13 @@ ms.locfileid: "53355234"
 ##  <a name="RelatedContent"></a> 相關內容  
  **SQL Server AlwaysOn 團隊部落格監視 AlwaysOn 健全狀況與 PowerShell:**  
   
--   [第 1 部分：基本 Cmdlet 概觀](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+-   [第 1 部分：Basic Cmdlet Overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) (使用 PowerShell 監視 Always On 健全狀況 - 第 1 部分：基本 Cmdlet 概觀)  
   
--   [第 2 部分：進階指令程式使用](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+-   [第 2 部分：Advanced Cmdlet Usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) (使用 PowerShell 監視 Always On 健全狀況 - 第 2 部分：進階 Cmdlet 使用方式)  
   
--   [第 3 部分：簡單的監視應用程式](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [第 3 部分：A Simple Monitoring Application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) (使用 PowerShell 監視 Always On 健全狀況 - 第 3 部分：簡單的監視應用程式)  
   
--   [第 4 部分：與 SQL Server Agent 整合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+-   [第 4 部分：Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) (使用 PowerShell 監視 Always On 健全狀況 - 第 4 部分：與 SQL Server Agent 整合)  
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

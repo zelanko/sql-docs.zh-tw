@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deleting asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d73bcc50bc0eb379c05e51b1f505997ed5c41d61
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ed0376a9facde37d5c843e10885efaefaf225577
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978954"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361321"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

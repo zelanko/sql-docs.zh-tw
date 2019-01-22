@@ -20,15 +20,15 @@ helpviewer_keywords:
 - deleting credentials
 - dropping credentials
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dcf4a0d7492e36432ecec80778a49fa5ba37a7d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba22628773ece8251c61858b1f2a24d19b4531fb
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711386"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361368"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

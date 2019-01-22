@@ -13,15 +13,15 @@ helpviewer_keywords:
 - DENY statement, objects
 - table permissions [SQL Server]
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01c2e711b68cf8bd143c19be0567bb6de8265701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662786"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326769"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 物件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ DENY <permission> [ ,...n ] ON
  拒絕 ALL 不會拒絕所有可能的權限。 拒絕 ALL 相當於拒絕所有適用於指定物件的 ANSI-92 權限。 ALL 有多種意義，如下所示：  
   
  - 純量函數權限：EXECUTE、REFERENCES。  
- - 資料表值函式權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - 資料表值函數權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
  - 預存程序權限：EXECUTE。  
  - 資料表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - 檢視權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - 檢視表權限：DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  為符合 ANSI-92 而包含這個項目。 不會變更 ALL 的行為。  

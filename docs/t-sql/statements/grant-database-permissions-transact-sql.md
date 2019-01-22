@@ -17,16 +17,16 @@ helpviewer_keywords:
 - database permissions [SQL Server], granting
 - GRANT statement, databases
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34a23cc197b1720df2e2a1dae4cbc28c4bf70554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07680455783316fd3854b9b45ba7f5077a58d3f9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682236"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327489"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 資料庫權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ permission | ALL [ PRIVILEGES ]
  指定可以授與的資料庫權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ALL  
- 這個選項不會授與所有可能的權限。 授與 ALL 相當於授與下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
+ 這個選項不會授與所有可能的權限。 授與 ALL 等同於授與下列權限：BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE 和 CREATE VIEW。  
   
  PRIVILEGES  
  為符合 ISO 而包含這個項目。 不會變更 ALL 的行為。  

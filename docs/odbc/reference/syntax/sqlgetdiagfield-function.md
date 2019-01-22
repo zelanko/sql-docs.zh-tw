@@ -1,7 +1,7 @@
 ---
 title: SQLGetDiagField 函式 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,14 +20,15 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 386b2352db8912c0af4a1571cbfc2d7e7f5384c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203977"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420163"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
+
 **合規性**  
  導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
@@ -36,8 +37,7 @@ ms.locfileid: "53203977"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```cpp
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -52,7 +52,7 @@ SQLRETURN SQLGetDiagField(
  *HandleType*  
  [輸入]描述診斷所需的控制代碼的型別控制代碼型別識別項。 必須是下列其中之一：  
   
--   利用 SQL_HANDLE_DBC  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
@@ -60,7 +60,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_ENV  
   
--   利用 SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT  
   
  只在驅動程式管理員和驅動程式會使用 SQL_HANDLE_DBC_INFO_TOKEN 控制代碼。 應用程式不應使用此控制代碼型別。 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
   
@@ -70,7 +70,7 @@ SQLRETURN SQLGetDiagField(
  *RecNumber*  
  [輸入]指出從中應用程式搜尋資訊的狀態記錄。 狀態記錄編號 1。 如果*Sqlgetdiagfield*引數會指出診斷標頭的任何欄位*RecNumber*會被忽略。 如果沒有，它應該是大於 0。  
   
- *Sqlgetdiagfield*  
+ *DiagIdentifier*  
  [輸入]表示其值是要傳回的診斷欄位。 如需詳細資訊，請參閱 「*Sqlgetdiagfield*引數 」 一節中 「 註解。 」  
   
  *DiagInfoPtr*  
@@ -160,7 +160,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="header-fields"></a>標頭欄位  
  下表所列的標頭欄位可以包含在*Sqlgetdiagfield*引數。  
   
-|Sqlgetdiagfield|傳回類型|傳回值|  
+|DiagIdentifier|傳回類型|傳回值|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|此欄位包含資料指標中的資料列的計數。 取決於其語意**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、 SQL_KEYSET_CURSOR_ATTRIBUTES2 和 SQL_STATIC_CURSOR_ATTRIBUTES2，這表示它的資訊類型資料列計數可供每個資料指標類型 （SQL_CA2_CRC_EXACT 和 SQL_CA2_CRC_APPROXIMATE 位元）。<br /><br /> 此欄位的內容會定義只適用於陳述式控制代碼，之後才**SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**已呼叫。 呼叫**SQLGetDiagField**具有*Sqlgetdiagfield* SQL_DIAG_CURSOR_ROW_COUNT 上一個陳述式以外的控制代碼將會傳回 SQL_ERROR。|  
 |SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR *|這是描述基礎的函式執行的 SQL 陳述式的字串。 （請參閱"欄位的值動態函數，「 稍後在本節中，針對特定的值）。此欄位的內容會定義只適用於陳述式控制代碼，並只有在呼叫之後**SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**。 呼叫**SQLGetDiagField**具有*Sqlgetdiagfield* SQL_DIAG_DYNAMIC_FUNCTION 上一個陳述式以外的控制代碼將會傳回 SQL_ERROR。 事件之前呼叫，這個欄位的值未定義**SQLExecute**或是**SQLExecDirect**。|  
@@ -172,7 +172,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="record-fields"></a>記錄欄位  
  下表所列的記錄欄位可以包含在*Sqlgetdiagfield*引數。  
   
-|Sqlgetdiagfield|傳回類型|傳回值|  
+|DiagIdentifier|傳回類型|傳回值|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CLASS_ORIGIN|SQLCHAR *|字串，表示文件定義此記錄的 SQLSTATE 值的類別部分。 其值為"ISO 9075"的所有 Open Group 和 ISO 呼叫層級介面所定義的 Sqlstate。 對於 ODBC 專屬 Sqlstate （所有這些的 SQLSTATE 類別是 「 IM"），其值是"ODBC 3.0"。|  
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|如果 SQL_DIAG_ROW_NUMBER 欄位是有效的資料列中的數字的資料列集或一組參數，此欄位會包含表示結果集中的資料行編號或參數中的數字的一組參數的值。 結果集資料行數字一律從 1 開始;如果此狀態記錄屬於書籤資料行，則欄位可以是零。 參數編號是從 1 開始。 如果狀態記錄的逸出序列所關聯的資料行數或參數數目，它就會有 SQL_NO_COLUMN_NUMBER 的值。 如果驅動程式無法判斷此記錄相關聯的參數數目的資料行數目，此欄位有 SQL_COLUMN_NUMBER_UNKNOWN 的值。<br /><br /> 此欄位的內容會定義只適用於陳述式控制代碼。|  
@@ -189,38 +189,59 @@ SQLRETURN SQLGetDiagField(
   
 |SQL 陳述式<br /><br /> 執行|值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|值<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*alter 網域陳述式*|「 ALTER 網域 」|SQL_DIAG_ALTER_DOMAIN|  
-|*alter table 陳述式*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*判斷提示定義*|「 建立判斷提示 」|SQL_DIAG_CREATE_ASSERTION|  
-|*字元集合定義*|「 建立字元集 」|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*定序定義*|「 建立定序 」|SQL_DIAG_CREATE_COLLATION|  
-|*建立索引陳述式*|「 建立索引 」|SQL_DIAG_CREATE_INDEX|  
-|*建立資料表陳述式*|[建立資料表]|SQL_DIAG_CREATE_TABLE|  
-|*建立檢視陳述式*|[建立檢視]|SQL_DIAG_CREATE_VIEW|  
-|*資料指標規格*|[選取資料指標]|SQL_DIAG_SELECT_CURSOR|  
-|*delete 陳述式位於*|「 動態刪除游標 」|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete 陳述式搜尋*|「 刪除的位置 」|SQL_DIAG_DELETE_WHERE|  
-n-定義 *|[建立定義域]|SQL_DIAG_CREATE_DOMAIN|  
-|*卸除判斷提示陳述式*|「 卸除判斷提示 」|SQL_DIAG_DROP_ASSERTION|  
-|*卸除字元組-stmt*|「 卸除字元集 」|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop 定序陳述式*|[卸除定序]|SQL_DIAG_DROP_COLLATION|  
-|*drop 網域陳述式*|「 卸除網域 」|SQL_DIAG_DROP_DOMAIN|  
-|*drop index 陳述式*|[卸除索引]|SQL_DIAG_DROP_INDEX|  
-|*drop schema 陳述式*|[卸除結構描述]|SQL_DIAG_DROP_SCHEMA|  
-|*drop table 陳述式*|「 卸除資料表 」|SQL_DIAG_DROP_TABLE|  
-|*drop 轉譯陳述式*|「 卸除轉譯 」|SQL_DIAG_DROP_TRANSLATION|  
-|*drop view 陳述式*|「 卸除檢視 」|SQL_DIAG_DROP_VIEW|  
--陳述式 *|「 授與 」|SQL_DIAG_GRANT|  
-|*insert 陳述式*|「 插入 」|SQL_DIAG_INSERT|  
-|*ODBC 程序延伸模組*|[撥號]|SQL_DIAG_ 呼叫|  
-|*revoke 陳述式*|[撤銷]|SQL_DIAG_REVOKE|  
-|*結構描述定義*|[建立結構描述]|SQL_DIAG_CREATE_SCHEMA|  
-|*翻譯定義*|「 建立翻譯 」|SQL_DIAG_CREATE_TRANSLATION|  
-|*update 陳述式位於*|「 動態更新游標 」|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
-|*update 陳述式搜尋*|「 更新位置 」|SQL_DIAG_UPDATE_WHERE|  
+|*alter-domain-statement*|「 ALTER 網域 」|SQL_DIAG_ALTER_DOMAIN|  
+|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*assertion-definition*|「 建立判斷提示 」|SQL_DIAG_CREATE_ASSERTION|  
+|*character-set-definition*|「 建立字元集 」|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*collation-definition*|「 建立定序 」|SQL_DIAG_CREATE_COLLATION|  
+|*domainn-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+|*create-index-statement*|「 建立索引 」|SQL_DIAG_CREATE_INDEX|  
+|*create-table-statement*|[建立資料表]|SQL_DIAG_CREATE_TABLE|  
+|*create-view-statement*|[建立檢視]|SQL_DIAG_CREATE_VIEW|  
+|*cursor-specification*|[選取資料指標]|SQL_DIAG_SELECT_CURSOR|  
+|*delete-statement-positioned*|「 動態刪除游標 」|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
+|*delete-statement-searched*|「 刪除的位置 」|SQL_DIAG_DELETE_WHERE|  
+|*drop-assertion-statement*|「 卸除判斷提示 」|SQL_DIAG_DROP_ASSERTION|  
+|*drop-character-set-stmt*|「 卸除字元集 」|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop-collation-statement*|[卸除定序]|SQL_DIAG_DROP_COLLATION|  
+|*drop-domain-statement*|「 卸除網域 」|SQL_DIAG_DROP_DOMAIN|  
+|*drop-index-statement*|[卸除索引]|SQL_DIAG_DROP_INDEX|  
+|*drop-schema-statement*|[卸除結構描述]|SQL_DIAG_DROP_SCHEMA|  
+|*drop-table-statement*|「 卸除資料表 」|SQL_DIAG_DROP_TABLE|  
+|*drop-translation-statement*|「 卸除轉譯 」|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-view-statement*|「 卸除檢視 」|SQL_DIAG_DROP_VIEW|  
+|*grantstatement*|「 授與 」|SQL_DIAG_GRANT|
+|*insert-statement*|「 插入 」|SQL_DIAG_INSERT|  
+|*ODBC-procedure-extension*|[撥號]|SQL_DIAG_ CALL|  
+|*revoke-statement*|[撤銷]|SQL_DIAG_REVOKE|  
+|*schema-definition*|[建立結構描述]|SQL_DIAG_CREATE_SCHEMA|  
+|*translation-definition*|「 建立翻譯 」|SQL_DIAG_CREATE_TRANSLATION|  
+|*update-statement-positioned*|「 動態更新游標 」|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*update-statement-searched*|「 更新位置 」|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*空字串*|SQL_DIAG_UNKNOWN_STATEMENT|  
-  
-## <a name="sequence-of-status-records"></a>狀態記錄的順序  
+
+<!--
+These two malformed table rows were fixed by educated GUESS only.
+Each pair starts with the original flawed row.
+Flawed because treated as only two cells by HTML render,
+and because missing info anyway.
+Also, these flawed rows lacked '|' as their first nonWhitespace character (although markdown technically allows this omission, unfortunately).
+Arguably the following SQL.H file shows the sequence of the flawed rows in the table was suboptimal also.
+
+ftp://www.fpc.org/fpc32/VS6Disk1/VC98/INCLUDE/SQL.H
+
+GeneMi , 2019/01/19
+- - - - - - - - - - - - - -
+
+n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+|*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
+
+-statement*|"GRANT"|SQL_DIAG_GRANT|  
+|*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+-->
+
+## <a name="sequence-of-status-records"></a>狀態記錄的順序
+
  狀態記錄定位順序，根據資料列數目和類型的診斷。 驅動程式管理員會決定最終的順序，在其中傳回它所產生的狀態記錄。 驅動器會決定最終的順序，在其中傳回它所產生的狀態記錄。  
   
  如果診斷記錄所公佈的驅動程式管理員和驅動程式，就有一個驅動程式管理員負責來排序它們。  
@@ -254,7 +275,7 @@ n-定義 *|[建立定義域]|SQL_DIAG_CREATE_DOMAIN|
   
 |如需詳細資訊|請參閱|  
 |---------------------------|---------|  
-|取得多個欄位的診斷資料結構|[SQLGetDiagRec 函式](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
+|取得多個欄位的診斷資料結構|[SQLGetDiagRec 函式](sqlgetdiagrec-function.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)   

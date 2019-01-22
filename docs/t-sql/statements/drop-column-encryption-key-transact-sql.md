@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DROP COLUMN ENCRYPTION KEY statement
 - column encryption key, drop
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3a17a32fd9b44ea8c2d5fd2de4f9a77375cf227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 981ea3dd0f9b1b73f22293043f548ba9b990b0b7
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607806"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361528"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

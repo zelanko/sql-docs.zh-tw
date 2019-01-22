@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1476efcf0060344279a1bd78a25057e25c54bb2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5eb2b34e078d6fa48b3b9bc8e0be6b1b6c367732
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519779"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361508"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  您無法「改變」將套用 BLOCK 述詞的作業，因為作業是用來唯一識別該述詞。 相反地，您必須卸除該述詞，並針對新的作業加入一個新的述詞。  
   
  WITH ( STATE = { ON | OFF } )  
- 啟用或停用強制對目標資料表執行其安全性述詞的安全性原則。 如果未指定，則會停用正在建立的安全性原則。  
+ 啟用或停用強制對目標資料表執行其安全性述詞的安全性原則。 如果未指定，則會啟用正在建立的安全性原則。  
   
  NOT FOR REPLICATION  
  表示當複寫代理程式修改目標物件時，不應執行安全性原則。 如需詳細資訊，請參閱[在同步處理期間控制觸發程序和條件約束的行為 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)。  

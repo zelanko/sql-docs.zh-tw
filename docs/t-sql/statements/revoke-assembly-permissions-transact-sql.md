@@ -13,15 +13,15 @@ helpviewer_keywords:
 - REVOKE statement, assemblies
 - assemblies [CLR integration], permissions
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef4b2cd449045508e94221b02c7616a4ccc467ba
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f10a5ac6202e635d69756fa57430109c7459e353
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589282"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326439"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE 組件權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

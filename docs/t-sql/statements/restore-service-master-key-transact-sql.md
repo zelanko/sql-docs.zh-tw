@@ -21,15 +21,15 @@ helpviewer_keywords:
 - RESTORE SERVICE MASTER KEY statement
 - transferring Service Master Keys
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dde847ead524e78c02aaad0544c0fec18ebe5c2f
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: ee122adb459586f370f2b115f161c56468f4ce7a
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169088"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327659"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

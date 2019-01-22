@@ -14,15 +14,15 @@ helpviewer_keywords:
 - schemas [SQL Server], permissions
 - permissions [SQL Server], schemas
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cb4d3aa1299a4d48b4a9f98a6e8c2ccb888b1fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a033eb0e5d4064c3289a3275763150e097a7e4a5
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673286"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327749"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE 結構描述權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

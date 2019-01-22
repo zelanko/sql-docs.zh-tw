@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cfe8b4bf09b545a5141a2896eb757254265e092
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206404"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327884"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>設定具有安全記憶體保護區的 Always Encrypted
 
@@ -224,8 +224,8 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 
 ```powershell
-Import-Module AzureRM
-Connect-AzureRmAccount
+Import-Module Az
+Connect-AzAccount
 
 # User values
 $SubscriptionId = "<Azure SubscriptionId>"
@@ -235,16 +235,16 @@ $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 
 # Set the context to the specified subscription.
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
 
 # Grant yourself permissions needed to create and use the column master key.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 
 # Create a column master key in Azure Key Vault.
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"

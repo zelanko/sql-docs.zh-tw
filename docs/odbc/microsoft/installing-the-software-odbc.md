@@ -14,18 +14,18 @@ ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0aba0eeb6d3d6450a0493a4cf06a8c58bb21d23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655996"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419733"
 ---
 # <a name="installing-the-software-odbc"></a>安裝軟體 (ODBC)
 > [!IMPORTANT]  
 >  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- ODBC Driver for Oracle 是其中一個資料存取元件。 它隨附其他 ODBC 元件，例如 ODBC 資料來源管理員 」 中，應該已經安裝。 驅動程式也可以在 [驅動程式和其他下載] 上找 Microsoft 產品支援服務線上網站在 www.microsoft.com。  
+ ODBC Driver for Oracle 是其中一個資料存取元件。 它隨附其他 ODBC 元件，例如 ODBC 資料來源管理員 」 中，應該已經安裝。 驅動程式也可以在 [驅動程式和其他下載] 上找 Microsoft 產品支援服務線上網站在[www.microsoft.com](https://www.microsoft.com)。  
   
  網路軟體必須安裝根據自己的文件。 ODBC Driver for Oracle 需要任何特殊的安裝考量，只要支援的網路軟體。  
   

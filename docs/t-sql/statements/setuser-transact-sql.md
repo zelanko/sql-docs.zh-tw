@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SETUSER statement
 - user impersonation [SQL Server]
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 98f705259eb0d05d5f82bc4e3a5873558a176ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 153d7027f0c87cf81a5958e4aaf930932fa9b5d1
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753838"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327369"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

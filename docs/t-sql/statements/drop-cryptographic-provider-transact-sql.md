@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DROP CRYPTOGRAPHIC PROVIDER statement
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ca7d2ec19c28326e7a60ea12e874fba66734781b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403cef4e8c1e3336be9a2d7df8ae8c14a06f045b
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670260"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361443"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

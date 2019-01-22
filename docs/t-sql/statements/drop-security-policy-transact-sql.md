@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - DROP SECURITY POLICY statement
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d661b146c29bd36ad96379d1034f93fe26b10cd3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6529f86c0388bae5cbea64c855a84173d43f3a0d
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204117"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361428"
 ---
 # <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

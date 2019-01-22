@@ -18,15 +18,15 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8f76bfc903eaf18978c2c77803cdd7054d384ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839526"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326759"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
  資料行主要金鑰的輪替原因如下：
 - 合規性規定可能會要求金鑰必須定期輪替。
 - 資料行主要金鑰遭到入侵，基於安全考量必須輪替。
-- 允許或禁止與伺服器端記憶體保護區一起共用資料行加密金鑰。 例如您目前的資料行主要金鑰若不支援記憶體保護區運算 (未使用 ENCLAVE_COMPUTATIONS 屬性加以定義)，而您想要對受到資料行加密金鑰保護的資料行，執行記憶體保護區運算，您必須使用設有 ENCLAVE_COMPUTATIONS 屬性的新金鑰，取代資料行主要金鑰。 如需詳細資訊，請參閱[安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
+- 允許或禁止與伺服器端記憶體保護區一起共用資料行加密金鑰。 例如您目前的資料行主要金鑰若不支援記憶體保護區運算 (未使用 ENCLAVE_COMPUTATIONS 屬性加以定義)，而您想要對受到資料行加密金鑰保護的資料行，執行記憶體保護區運算，您必須使用設有 ENCLAVE_COMPUTATIONS 屬性的新金鑰，取代資料行主要金鑰。 如需詳細資訊，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
 
 
 使用 [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) 和 [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) 來檢視資料行加密金鑰的相關資訊。  

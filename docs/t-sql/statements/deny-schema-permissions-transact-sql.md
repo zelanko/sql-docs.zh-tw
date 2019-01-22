@@ -15,15 +15,15 @@ helpviewer_keywords:
 - permissions [SQL Server], schemas
 - DENY statement, schemas
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10812df142aa71329df5d5b024d3a18d5216e250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 233a560903676736350935729d8002021f802d65
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701016"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327739"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY 結構描述權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

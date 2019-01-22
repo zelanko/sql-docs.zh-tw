@@ -15,16 +15,16 @@ helpviewer_keywords:
 - denying permissions [SQL Server], search property lists
 - search property lists [SQL Server], permissions
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18f3887d2cfa96c0a7c132cfe8396300b3143f06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 61961ff888b5de3ffa55ffb47c4986a60583b79e
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519775"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327709"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>DENY 搜尋屬性清單權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]

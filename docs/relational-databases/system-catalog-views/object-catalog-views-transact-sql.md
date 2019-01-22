@@ -1,7 +1,7 @@
 ---
 title: 物件目錄檢視 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,18 +16,19 @@ ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc012ec59e264a496892de2e296e1dfbd45a098b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: daa9064feb59ab7052077d9d67701630ee7fcef5
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658117"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420063"
 ---
 # <a name="object-catalog-views-transact-sql"></a>物件目錄檢視 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  此章節包含下列目錄檢視。  
-  
+本章節包含下列目錄檢視的連結。
+
 |||  
 |-|-|  
 |[sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)|[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
@@ -45,7 +46,7 @@ ms.locfileid: "51658117"
 |[sys.hash_indexes](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.synonyms](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)|  
 |[sys.identity_columns](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)|[sys.table_types](../../relational-databases/system-catalog-views/sys-table-types-transact-sql.md)|  
 |[sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|[sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)|
-[sys.trigger_event_types](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)|[sys.key_constraints](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)|
+|[sys.trigger_event_types](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)|[sys.key_constraints](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)|
 |[sys.trigger_events](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)|[sys.masked_columns](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)|
 |[sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|

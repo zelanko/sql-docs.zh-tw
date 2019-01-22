@@ -16,15 +16,15 @@ helpviewer_keywords:
 - REVOKE statement, users
 - application roles [SQL Server], permissions
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54f2add3bd85250d94e82d13e9e1b3ddcef61a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629176"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327399"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 從應用程式角色撤銷使用者的 IMPERSONATE 權限  
- 下列範例會從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 應用程式角色 `IMPERSONATE` 撤銷使用者 `HamithaL` 的 `AccountsPayable17` 權限。  
+ 下列範例會從 `IMPERSONATE` 應用程式角色 `HamithaL` 撤銷使用者 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 的 `AccountsPayable17` 權限。  
   
 **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
