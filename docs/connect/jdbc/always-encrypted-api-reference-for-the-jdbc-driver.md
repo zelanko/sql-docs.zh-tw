@@ -11,12 +11,12 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1605b608550446ecb31a79e6074a7e8cfa7ea916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420699"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361668"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC Driver 的 Always Encrypted API 參考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,11 +37,12 @@ ms.locfileid: "52420699"
 |新的連接字串關鍵字：<br /><br /> columnEncryptionSetting|columnEncryptionSetting=Enabled 會啟用連線的 Always Encrypted 功能，而 columnEncryptionSetting=Disabled 會予以停用。 接受的值為 Enabled/Disabled。 預設值為 Disabled。|  
 |新方法：<br /><br /> `public static void setColumnEncryptionTrustedMasterKeyPaths(Map<String, List\<String>> trustedKeyPaths)`<br /><br /> `public static void updateColumnEncryptionTrustedMasterKeyPaths(String server, List\<String> trustedKeyPaths)`<br /><br /> `public static void removeColumnEncryptionTrustedMasterKeyPaths(String server)`|可讓您為資料庫伺服器設定/更新/移除受信任的金鑰路徑清單。 如果驅動程式在處理應用程式查詢時接收到不在清單上的金鑰路徑，則查詢會失敗。 此屬性會針對受到安全性攻擊危害的 SQL Server 提供額外的保護，這類 SQL Server 會傳送假的金鑰路徑，而可能會導致遺漏金鑰存放區認證。|  
 |新方法：<br /><br /> `public static Map<String, List\<String>> getColumnEncryptionTrustedMasterKeyPaths()`|會傳回資料庫伺服器的受信任金鑰路徑清單。|  
-|新方法：<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|可讓您註冊自訂金鑰存放區提供者。 它是一個字典，會將金鑰存放區提供者名稱對應至金鑰存放區提供者實作。<br /><br /> 若要使用 JVM 金鑰存放區，您需要使用 JVM 金鑰存放區認證將 SQLServerColumnEncryptionJVMKeyStoreProvider 物件具現化，並向驅動程式註冊它。 此提供者的名稱必須為 'MSSQL_JVM_KEYSTORE'。<br /><br /> 若要使用 Azure Key Vault 存放區，您需要具現化 SQLServerColumnEncryptionAzureKeyStoreProvider 物件，並向驅動程式。 此提供者的名稱必須是 'AZURE_KEY_VAULT'。|
+|新方法：<br /><br /> `public static void registerColumnEncryptionKeyStoreProviders (Map\<String, SQLServerColumnEncryptionKeyStoreProvider> clientKeyStoreProviders)`|可讓您註冊自訂金鑰存放區提供者。 它是一個字典，會將金鑰存放區提供者名稱對應至金鑰存放區提供者實作。<br /><br /> 若要使用 JVM 金鑰存放區，您需要使用 JVM 金鑰存放區認證將 SQLServerColumnEncryptionJVMKeyStoreProvider 物件具現化，並向驅動程式註冊它。 此提供者的名稱必須是 'MSSQL_JVM_KEYSTORE'。<br /><br /> 若要使用 Azure Key Vault 存放區，您需要具現化 SQLServerColumnEncryptionAzureKeyStoreProvider 物件，並向驅動程式。 此提供者的名稱必須是 'AZURE_KEY_VAULT'。|
 |`public final boolean getSendTimeAsDatetime()`|傳回 sendTimeAsDatetime 連接屬性的設定。|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|修改 sendTimeAsDatetime 連接屬性的設定。|
 
  **SQLServerConnectionPoolProxy 類別**
+ 
 |[屬性]|Description|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | 傳回 sendTimeAsDatetime 連接屬性的設定。|
@@ -74,8 +75,8 @@ ms.locfileid: "52420699"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|將資料行加密金鑰的指定加密值解密。 加密的值必須使用具指定金鑰路徑的憑證，以及指定的演算法，進而加以加密。<br /><br /> **金鑰路徑的格式應為下列其中一項：**<br /><br /> 憑證指紋：<certificate_thumbprint><br /><br /> 別名：<certificate_alias><br /><br /> 覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) decryptColumnEncryptionKey|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|使用具指定金鑰路徑的憑證，以及指定的演算法，將資料行加密金鑰加密。<br /><br /> **金鑰路徑的格式應為下列其中一項：**<br /><br /> 憑證指紋：<certificate_thumbprint><br /><br /> 別名：<certificate_alias><br /><br /> 覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) encryptColumnEncryptionKey|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|將資料行加密金鑰的指定加密值解密。 加密的值必須使用具指定金鑰路徑的憑證，以及指定的演算法，進而加以加密。<br /><br /> **金鑰路徑的格式應為下列其中一項：**<br /><br /> 憑證指紋：<certificate_thumbprint><br /><br /> 別名：<certificate_alias><br /><br /> 覆寫 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|使用具指定金鑰路徑的憑證，以及指定的演算法，將資料行加密金鑰加密。<br /><br /> **金鑰路徑的格式應為下列其中一項：**<br /><br /> 憑證指紋：<certificate_thumbprint><br /><br /> 別名：<certificate_alias><br /><br /> 覆寫 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。)|  
 |`public void setName (String name)`|設定此金鑰存放區提供者的名稱。|
 |`public String getName ()`|取得此金鑰存放區提供者的名稱。|
   
@@ -93,8 +94,8 @@ ms.locfileid: "52420699"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes 加密資料行加密金鑰 (CEK)。 使用主要金鑰路徑所指定的非對稱金鑰的 RSA 加密演算法可完成此解密。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) decryptColumnEncryptionKey |  
-| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 加密資料行加密金鑰，讓指定的演算法指定的資料行主要金鑰。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) encryptColumnEncryptionKey |  
+| `public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)` | Decryptes 加密資料行加密金鑰 (CEK)。 使用主要金鑰路徑所指定的非對稱金鑰的 RSA 加密演算法可完成此解密。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 decryptColumnEncryptionKey(String, String, Byte[])。) |  
+| `public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)` | 加密資料行加密金鑰，讓指定的演算法指定的資料行主要金鑰。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 encryptColumnEncryptionKey(String, String, Byte[])。) |  
 |`public void setName (String name)`|設定此金鑰存放區提供者的名稱。|
 |`public String getName ()`|取得此金鑰存放區提供者的名稱。|  
   
@@ -152,6 +153,7 @@ ms.locfileid: "52420699"
 
   
 在新的型別**microsoft.sql.Types**類別
+
 |[屬性]|Description|  
 |----------|-----------------|  
 |DATETIME、 SMALLDATETIME、 MONEY、 SMALLMONEY、 GUID|用戶端傳送的參數值時，使用這些類型做為目標 SQL 型別**加密**datetime、 smalldatetime、 money、 smallmoney、 使用 uniqueidentifier 資料行將`setObject()/updateObject()`API 方法。|  
