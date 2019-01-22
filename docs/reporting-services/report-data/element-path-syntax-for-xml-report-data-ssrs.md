@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: ffa45f4eb7fdd8d989810dcdea6cfab0cd4cb4cc
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813801"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420193"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 報表資料的元素路徑語法 (SSRS)
   在「報表設計師」中，可藉由定義區分大小寫的元素路徑來指定要用於 XML 資料來源中之報表的資料。 元素路徑會指出在 XML 資料來源中周遊 XML 階層式節點及其屬性的方法。 若要使用預設的元素路徑，請將資料集查詢或 XML **ElementPath** (屬於 XML **Query** ) 保留空白。 由 XML 資料來源擷取資料時，具有文字值的元素節點以及元素節點屬性會變成結果集內的資料行。 執行查詢時，節點及屬性的值會變成資料列資料。 這些資料行會以資料集欄位集合的方式顯示在 [報表資料] 窗格中。 此主題描述元素路徑語法。  
@@ -90,14 +90,14 @@ XMLLocalName :: =
 > [!NOTE]  
 >  如果元素路徑為空時，查詢會使用預設的元素路徑：到達分葉節點集合的第一條路徑。 在第一個範例中，將元素路徑保留為空白相當於將元素路徑指定為 /Customers/Customer/Orders/Order。 路徑上的所有節點值和屬性都會傳回到結果集，而節點名稱和屬性會以資料集欄位的方式顯示。  
   
- **範例 #1**： *空白*  
+ **範例 #1**：*空的*  
   
 |單|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https\://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https\://www.adventure-works.com|  
   
  **範例 #2**： `Customers {}/Customer`  
   
@@ -185,7 +185,7 @@ XMLLocalName :: =
   
      `<XmlData>`  
   
-5.  複製 Customers.XML，然後將這些文字貼在查詢窗格中的 `<XmlData>` 之後。  
+5.  複製 Customers.XML，然後將這些文字貼在查詢窗格中的 `<XmlData>`之後。  
   
 6.  在查詢窗格中，刪除從 Customers.XML 複製的第一行程式碼： `<?xml version="1.0"?>`  
   

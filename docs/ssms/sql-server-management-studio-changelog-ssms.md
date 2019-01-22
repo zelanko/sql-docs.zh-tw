@@ -11,16 +11,19 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9dd7920f18ab6a04b6993f8398204a9425e5ffa
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c854d2e332d38443646de560a906826c419705b7
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591902"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300545"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
-
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
+
 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[舊版 SSMS](#previous-ssms-releases)。
 
 
@@ -1048,7 +1051,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - [新增資料表/檢視] 設計工具會顯示舊式登入提示，並不適用於 Azure AD 驗證。
   - [編輯前 200 個資料列] 功能不支援 Azure AD 驗證。
   - [已註冊的伺服器] 元件不支援 Azure AD 驗證。
-  - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，亦即向使用者呈現不太有用的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'...」，而非預期的「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。(DTAClient).
+  - 不支援 **Database Engine Tuning Advisor** 進行 Azure AD 驗證。 有一個已知問題，亦即向使用者呈現不太有用的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'...」，而非預期的「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。*(DTAClient)*.
 
 **Analysis Services (AS)**
 

@@ -1,7 +1,7 @@
 ---
 title: 追蹤旗標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/14/2018
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ddf60d76f41da844fe9a5187d8ce3824777716a0
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069824"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206464"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 追蹤旗標用來設定特定的伺服器特性，或變更特定行為。 例如，追蹤旗標 3226 是常用的啟動追蹤旗標，可隱藏錯誤記錄檔中的成功備份訊息。 追蹤旗標經常用來診斷效能問題，或是針對預存程序或複雜電腦系統進行偵錯，但 Microsoft 支援服務也可能會建議使用它們來解決對特定工作負載產生負面影響的行為。  按照指示使用時，生產環境完全支援所有記錄的追蹤旗標，以及 Microsoft 支援服務所提供的建議。  請注意，這份清單中的追蹤旗標可能有其特定使用方式的額外考量，因此建議您仔細檢閱此處及/或支援工程師提供的所有建議。 此外，如同 SQL Server 中的任何設定變更一樣，最好一律在部署之前於非生產環境中徹底測試旗標。
@@ -116,7 +117,7 @@ ms.locfileid: "54069824"
 |**7412**|啟用分析基礎結構的輕量型查詢執行統計資料。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3170113) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本的組建。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，此追蹤旗標沒有任何作用，因為預設會啟用輕量型分析。<br /><br />**範圍**：只限全域|
 |**7471**|同時在單一資料表上對不同的統計資料執行多個 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3156157) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 和更新版本的組建。<br /><br />**範圍**：只限全域|
 |**7745**|強制查詢存放區在資料庫關機時不排清資料到磁碟。<br /><br />**注意：** 使用這項追蹤可能會導致先前未排清至磁碟的查詢存放區資料在關機時遺失。 如果要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關機，可以使用 SHUTDOWN WITH NOWAIT 命令取代此追蹤旗標來強制立即關機。<br /><br />**範圍**：只限全域|
-|**7752**|啟用非同步載入查詢存放區。<br /><br />**注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 有大量與查詢存放區同步載入 (預設行為) 相關的 QDS_LOADDB 等待工作，請使用此追蹤旗標。<br /><br />**範圍**：只限全域|
+|**7752**|啟用非同步載入查詢存放區。<br /><br />**注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 有大量與查詢存放區同步載入 (資料庫復原期間的預設行為) 相關的 QDS_LOADDB 等待工作，請使用這個追蹤旗標。<br /><br />**範圍**：只限全域|
 |**7806**|在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]上啟用專用管理員連接 (DAC)。 依預設，[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上不會保留任何 DAC 資源。 如需詳細資訊，請參閱 [資料庫管理員的診斷連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<br /><br />**範圍**：只限全域|  
 |**8011**|停用資源監視器的信號緩衝區。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：全域和工作階段|
 |**8012**|停用排程器的信號緩衝區。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
@@ -126,7 +127,7 @@ ms.locfileid: "54069824"
 |**8020**|停用工作集監視。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
 |**8032**|將快取限制參數還原為 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RTM 設定，這項設定通常會允許使用更大的快取。 當經常重複使用的快取項目無法納入快取中，以及 [針對特定工作負載最佳化伺服器組態選項](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 無法解決計畫快取的問題時，請使用這項設定。<br /><br />**警告：** 如果大型快取為其他記憶體取用者 (例如緩衝集區) 提供較少的記憶體，追蹤旗標 8032 可能會導致效能降低。<br /><br />**範圍**：只限全域|   
 |**8048**|將 NUMA 分割記憶體物件轉換成 CPU 分割記憶體物件。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2809338) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，追蹤旗標 8048 沒有任何作用。<br /><br />**範圍**：只限全域|  
-|**8075**|收到 64 位元 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的記憶體頁面配置錯誤時，請減少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) 片段。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3074434) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 以及 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8075 沒有任何作用。<br /><br />**範圍**：只限全域|
+|**8075**|收到 64 位元 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的記憶體頁面配置錯誤時，請減少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-2012-11x-gm) 片段。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3074434) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 以及 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8075 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**8079**|允許 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 在每一 NUMA 節點回報 8 個或更多 CPU 的系統上質詢硬體配置及自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8079 沒有任何作用。<br /><br />**範圍**：只限全域| 
 |**8207**|啟用異動複寫和 CDC 的 singleton 更新。 訂閱者的更新可以複寫為 DELETE 和 INSERT 配對。 這可能不符合商務規則，例如引發 UPDATE 觸發程序。 使用追蹤旗標 8207 時，只影響一個資料列的唯一資料行更新 (單一更新) 會複寫為 UPDATE，而不是 DELETE 或 INSERT 配對。 如果更新影響存在唯一條件約束的資料行，或是更新影響多個資料列，更新仍會複寫為 DELETE 或 INSERT 配對。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/302341) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
 |**8721**|當自動更新統計資料執行時回報至錯誤記錄檔。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/195565)。<br /><br />**範圍**：只限全域|

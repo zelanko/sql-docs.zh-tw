@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67f22e0608493ba3f33144c8d97b9cb275a5c506
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e526bbe9191aa83cedd45c2115b3cb4b54a937d2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207087"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136078"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,9 +102,9 @@ ms.locfileid: "53207087"
 **-PollingInterval** 參數指定針對待複寫交易查詢已發行資料庫之交易記錄檔的頻率。 預設值是 5 秒。 如果減小此值，記錄檔輪詢將更頻繁，這會降低從發行集資料庫到散發資料庫之交易傳遞的延遲。 但是，您應在降低延遲需求和因更頻繁地輪詢而導致伺服器負載增加之間進行平衡。   
   
 #### <a name="maxcmdsintran"></a>MaxCmdsInTran
-- 若要解決意外的一次性瓶頸，請針對記錄讀取器代理程式使用 **-MaxCmdsInTran** 參數。  
+- 若要解決意外的一次性瓶頸，請針對記錄讀取器代理程式使用 **–MaxCmdsInTran** 參數。  
   
-**-MaxCmdsInTran** 參數指定當「記錄讀取器」將命令寫入散發資料庫時，分組到某交易內的最大陳述式數量。 使用此參數可讓「記錄讀取器代理程式」和「散發作業代理程式」在「訂閱者」端套用命令時，於「發行者」端將大型交易 (由許多命令組成) 分割成幾個較小的交易。 指定此參數可以降低「散發者」的競爭，並減少「發行者」和「訂閱者」之間的延遲。 因為原始交易是以較小的單位來套用，所以「訂閱者」在原始交易結束之前可以存取大量的邏輯「發行者」交易資料列，打破了嚴格的交易不可部份完成性。 預設值為 **0**，保留「發行者」的交易界限。 此參數不會套用至 Oracle 發行者。  
+**–MaxCmdsInTran** 參數指定當「記錄讀取器」將命令寫入散發資料庫時，分組到某交易內的最大陳述式數量。 使用此參數可讓「記錄讀取器代理程式」和「散發作業代理程式」在「訂閱者」端套用命令時，於「發行者」端將大型交易 (由許多命令組成) 分割成幾個較小的交易。 指定此參數可以降低「散發者」的競爭，並減少「發行者」和「訂閱者」之間的延遲。 因為原始交易是以較小的單位來套用，所以「訂閱者」在原始交易結束之前可以存取大量的邏輯「發行者」交易資料列，打破了嚴格的交易不可部份完成性。 預設值為 **0**，保留「發行者」的交易界限。 此參數不會套用至 Oracle 發行者。  
   
    > [!WARNING]  
    >  **MaxCmdsInTran** 的設計不是為了要永遠開啟。 其存在的目的是為了解決有人不小心在單一交易中執行大量 DML 作業的狀況 (使得整筆交易在散發資料庫之前延遲命令的散發、鎖定持有等等)。 如果您經常地遇到這個狀況，請檢閱您的應用程式，並找出減少交易大小的方法。  
@@ -112,9 +112,9 @@ ms.locfileid: "53207087"
 ### <a name="distribution-agent"></a>散發代理程式
 
 #### <a name="subscriptionstreams"></a>SubscriptionStreams
-- 增加「散發代理程式」的 **-SubscriptionStreams** 參數。  
+- 增加「散發代理程式」的 **–SubscriptionStreams** 參數。  
   
-**-SubscriptionStreams** 參數可大幅提升彙總複寫輸送量。 它允許至「訂閱者」的多個連接平行套用批次變更，同時在使用單一執行緒時維護現有的許多交易特性。 如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
+**–SubscriptionStreams** 參數可大幅提升彙總複寫輸送量。 它允許至「訂閱者」的多個連接平行套用批次變更，同時在使用單一執行緒時維護現有的許多交易特性。 如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
   
 此代理程式參數的值可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 **@subscriptionstreams** 來指定。  
 
@@ -142,9 +142,9 @@ ms.locfileid: "53207087"
 
 在這段查詢逾時期間，您可能會注意到散發代理程式效能計數器有下列趨勢： 
 
-- **Dist: Delivered Cmds/sec** 效能計數器的值一律為 0。
-- **Dist: Delivered Trans/sec** 效能計數器的值一律為 0。
-- **Dist: Delivery Latency** 效能計數器會報告值的增加，直到執行緒死結解決為止。
+- **Dist:Delivered Cmds/sec** 效能計數器的值一律為 0。
+- **Dist:Delivered Trans/sec** 效能計數器的值一律為 0。
+- **Dist:Delivery Latency** 效能計數器會回報值增加的情況，直到執行緒死結解決為止。
 
 《SQL Server 線上叢書》中的＜複寫散發代理程式＞主題包含 *SubscriptionStreams* 參數的下列描述：「如果有無法執行或認可某個連線，則所有連線都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。」
 

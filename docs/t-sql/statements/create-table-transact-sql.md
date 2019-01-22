@@ -47,18 +47,18 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 60938c31712e8bb6b08579cab099baaaf99bb0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980384"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300565"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中建立新的資料表。  
   
@@ -990,6 +990,8 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
   
  如果在單一預存程序或批次內，建立了多個暫存資料表，它們必須有不同的名稱。  
+ 
+ 如果您在建立或存取站存資料表時加入了 *schema_name*，系統會予以忽略。  所有暫存資料表都會建立在 dbo 結構描述中。
   
  如果本機暫存資料表建立在多位使用者可以同時執行的預存程序或應用程式中，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須能夠區分不同使用者所建立的資料表。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部將數值後置詞附加至每個本機暫存資料表名稱上，以便區分它們。 **tempdb** 內的 **sysobjects** 資料表所儲存的暫存資料表完整名稱，由 CREATE TABLE 陳述式所指定的資料表名稱和系統產生的數值後置詞組成。 為了允許後置詞，指定給本機暫存名稱的 *table_name* 不能超出 116 個字元。  
   

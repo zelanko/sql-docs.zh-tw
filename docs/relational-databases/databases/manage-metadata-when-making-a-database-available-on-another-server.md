@@ -35,12 +35,12 @@ ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8480a8b8f3889a1686d29bcd3858ee3921383cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559467"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405838"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,11 +108,11 @@ ms.locfileid: "51559467"
   
  如需此功能的詳細資訊，請參閱[認證 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
-> **注意︰**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系統資料表。  
+> **注意：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶使用認證。 若要了解 Proxy 帳戶的認證識別碼，請使用 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) 系統資料表。  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- DB_CHAINING 和 TRUSTWORTHY 資料庫選項預設是 OFF。 如果原始資料庫的其中一個選項設定為 ON，您就必須在目的地伺服器執行個體的資料庫上啟用該選項。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+ DB_CHAINING 和 TRUSTWORTHY 資料庫選項預設是 OFF。 如果原始資料庫的其中一個選項設定為 ON，您就必須在目的地伺服器執行個體的資料庫上啟用該選項。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
  附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱[跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。  
   

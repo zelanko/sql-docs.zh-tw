@@ -17,23 +17,23 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38077378d0980d351c4c65ca25b1574b7a7d7bc2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673574"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327865"
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 使用 [永遠加密精靈]  ，協助保護儲存在 SQL Server 資料庫中的機密資料。 一律加密可讓用戶端將用戶端應用程式內的機密資料進行加密，且永遠不會顯示 SQL Server 的加密金鑰。 如此一來，「永遠加密」功能即可區隔擁有資料 (且可以檢視資料) 的使用者和管理資料 (但不應具備存取權) 的使用者。  如需此功能的完整描述，請參閱 [永遠加密 &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)。  
  
- - 如需示範如何透過精靈設定 [永遠加密] 功能，並在用戶端應用程式加以運用的完整逐步解說，請參閱 [SQL Database 教學課程︰透過永遠加密來保護敏感性資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。  
+ - 如需示範如何透過精靈設定 Always Encrypted 功能，並在用戶端應用程式加以運用的完整逐步解說，請參閱 [SQL Database 教學課程：透過 Always Encrypted 來保護敏感性資料](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)。  
  
  - 如需使用精靈的影片，請參閱 [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)。 此外，請參閱 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性小組部落格的 [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps](https://blogs.msdn.com/b/sqlsecurity/archive/2015/11/01/ssms-encryption-wizard-enabling-always-encrypted-made-easy.aspx)(SSMS 加密精靈 - 幾個簡單步驟即可啟用永遠加密)。  
  
- - **權限︰** 若要使用此精靈來查詢加密資料行及選取金鑰，您必須具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 權限。 若要建立新的金鑰，您也必須具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 權限。  
+ - **權限：** 若要使用此精靈來查詢加密資料行及選取金鑰，您必須具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 權限。 若要建立新的金鑰，您也必須具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 權限。  
  
  #### <a name="to-open-the-always-encrypted-wizard"></a>若要開啟永遠加密精靈  
  
@@ -57,7 +57,7 @@ ms.locfileid: "51673574"
  
    - **將主要金鑰儲存在 Azure 金鑰保存庫** ：如需詳細資訊，請參閱 [開始使用 Azure 金鑰保存庫](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)。  
  
- - 若要在 Azure 金鑰保存庫中產生資料行主要金鑰，使用者必須擁有金鑰保存庫的 **WrapKey**、 **UnwrapKey**、 **Verify**以及 **Sign** 權限。 使用者可能也需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**以及 **Restore** 權限。 如需詳細資訊，請參閱 [什麼是 Azure 金鑰保存庫？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) 和   [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)。  
+ - 若要在 Azure 金鑰保存庫中產生資料行主要金鑰，使用者必須擁有金鑰保存庫的 **WrapKey**、 **UnwrapKey**、 **Verify**以及 **Sign** 權限。 使用者可能也需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**以及 **Restore** 權限。 如需詳細資訊，請參閱[什麼是 Azure Key Vault？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)和 [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)。  
  
  - 精靈只支援兩種選項。 您必須使用 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 來設定硬體安全模組和用戶端儲存庫。  
  

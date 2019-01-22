@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cfc88234cf7d8fea62a07969949e53b084eee17f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207787"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242241"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ FROM <backup_device>
  對於給定裝置中的每個備份，伺服器都會傳送一個含有下列資料行的標頭資訊資料列：  
   
 > [!NOTE]
->  RESTORE HEADERONLY 會查看媒體中的所有備份組。 因此，當使用高容量磁帶機時，產生這個結果集可能需要一些時間。 若要快速瀏覽媒體，而不需要取得每個備份組的相關資訊，請使用 RESTORE LABELONLY 或指定 FILE **=** *backup_set_file_number*。  
+>  RESTORE HEADERONLY 會查看媒體中的所有備份組。 因此，當使用高容量磁帶機時，產生這個結果集可能需要一些時間。 若要快速瀏覽媒體，而不需要取得每個備份組的相關資訊，請使用 RESTORE LABELONLY 或指定 FILE **=** _backup_set_file_number_。  
 > 
 > [!NOTE]
 >  由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 本質的緣故，來自其他軟體程式的備份組有可能佔用與 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份組相同媒體上的空間。 RESTORE HEADERONLY 傳回的結果集會針對每個這些其他備份組，各包括一個資料列。  
@@ -122,7 +122,7 @@ FROM <backup_device>
 |**SoftwareVersionBuild**|**int**|建立備份組的伺服器之組建編號。|  
 |**MachineName**|**nvarchar(128)**|執行備份作業的電腦名稱。|  
 |**旗標**|**int**|若設為 **1**，個別旗標位元意義如下：<br /><br /> **1** = 記錄備份包含大量記錄作業。<br /><br /> **2** = 快照集備份。<br /><br /> **4** = 備份時，資料庫是唯讀的。<br /><br /> **8** = 備份時，資料庫處於單一使用者模式。<br /><br /> **16** = 備份包含備份總和檢查碼。<br /><br /> **32** = 備份時，資料庫損毀，但要求備份作業忽略錯誤並繼續執行。<br /><br /> **64** = 結尾記錄備份。<br /><br /> **128** = 含不完整中繼資料的結尾記錄備份。<br /><br /> **256** = 使用 NORECOVERY 來進行的結尾記錄備份。<br /><br /> **重要：** 建議您不要使用 **Flags**，請改用個別的布林資料行 (下列從 **HasBulkLoggedData** 到 **IsCopyOnly** 的布林資料行)。|  
-|**BindingID**|**uniqueidentifier**|資料庫的繫結識別碼。 這會與 **sys.database_recovery_status****database_guid** 對應。 當還原資料庫時，會指派一個新值。 另請參閱 **FamilyGUID** (下方)。|  
+|**BindingID**|**uniqueidentifier**|資料庫的繫結識別碼。 這會對應到 **sys.database_recovery_status database_guid**。 當還原資料庫時，會指派一個新值。 另請參閱 **FamilyGUID** (下方)。|  
 |**RecoveryForkID**|**uniqueidentifier**|結尾復原分岔的識別碼。 這個資料行會與 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 資料表中的 **last_recovery_fork_guid**對應。<br /><br /> 就資料備份而言，**RecoveryForkID** 等於 **FirstRecoveryForkID**。|  
 |**定序**|**nvarchar(128)**|資料庫所用的定序。|  
 |**FamilyGUID**|**uniqueidentifier**|在建立之時，原始資料庫的識別碼。 當還原資料庫時，這個值會維持不變。|  
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) 至目前的版本)。<br /><br /> 使用的加密程式類型：憑證或非對稱金鑰。 備份未加密時，這個值會是 NULL。|  
   
 > [!NOTE]  
->  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設定為 '***受密碼保護\*\*\*'，所有其他資料行則為 NULL。  
+>  如果定義了備份組的密碼，RESTORE HEADERONLY 只會顯示密碼符合命令指定的 PASSWORD 選項的備份組。 另外，RESTORE HEADERONLY 也只會顯示未受保護之備份組的完整資訊。 媒體上其他受密碼保護之備份組的 **BackupName** 資料行會設為 '**_Password Protected_**'，所有其他資料行則為 NULL。  
   
 ## <a name="general-remarks"></a>一般備註  
  用戶端可以利用 RESTORE HEADERONLY 來擷取特定備份裝置上的所有備份之所有備份標頭資訊。 對於備份裝置中的每個備份，伺服器會將標頭資訊當做一個資料列來傳送。  

@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841d38d4a862582a393fba116676908572f39d38
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
+ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203037"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185024"
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

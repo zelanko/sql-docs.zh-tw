@@ -29,18 +29,18 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee63ff261df82926fd67f5014c09f894160d14e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4efa300619192caf4e07bf22de80d061d653477
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213737"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299255"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 建立 DML、DDL 或登入觸發程序。 觸發程序是一種在資料庫伺服器發生事件時，會自動執行的特殊預存程序。 當使用者試圖透過資料操作語言 (DML) 事件來修改資料時，便會執行 DML 觸發程序。 DML 事件包括資料表或檢視的 INSERT、UPDATE 或 DELETE 陳述式。 無論資料表的資料列有無受到影響，這些觸發程序皆會在引發有效的事件時引發。 如需詳細資訊，請參閱 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   

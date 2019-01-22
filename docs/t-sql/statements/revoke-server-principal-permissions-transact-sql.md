@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logins [SQL Server], revoking
 - REVOKE statement, logins
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2fbc40b5efc4bdab813e36f384fc7914b156f72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661277"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326069"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE 伺服器主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  *permission*  
  指定可以撤銷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- LOGIN **::** *SQL_Server_login*  
+ LOGIN **::***SQL_Server_login*  
  指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要項。  
   
  SERVER ROLE **::** *server_role*  

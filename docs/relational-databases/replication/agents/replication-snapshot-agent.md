@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93125f56a67d492581dbe68696156e3e95658a02
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: cc33bb52ec613d8e31cd8f61525dc7012ad01d48
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785869"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129788"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,9 +135,9 @@ snapshot [ -?]
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
 
  > [!NOTE]  
- >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
   
- 如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
+ 如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
  **-FieldDelimiter** _field_delimiter_  
  這是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大量複製資料檔案中標示欄位結尾的字元或字元序列。 預設值是 \n\<x$3>\n。  

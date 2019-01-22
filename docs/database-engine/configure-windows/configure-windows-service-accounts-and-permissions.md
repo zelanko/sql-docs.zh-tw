@@ -51,19 +51,22 @@ ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32cf3ce9d4f128003f21fa049a5bc6a2603e164b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b4a2e812c4f90b0b4df805b0620111fde5403e4b
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203817"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300515"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每項服務代表一個或一組處理序，用以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業對 Windows 的驗證。 本主題描述此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的預設服務組態，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間和安裝完成後設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務組態選項。 本主題可協助進階使用者了解服務帳戶的詳細資料。  
   
- 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來設定大多數服務及其屬性。 以下是將 Windows 安裝在 C 磁碟機時的最近四個版本路徑。  
+ 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來設定大多數服務及其屬性。 以下是 Windows 安裝在 C 磁碟機時，四個最新版本的路徑。  
   
 |||  
 |-|-|  

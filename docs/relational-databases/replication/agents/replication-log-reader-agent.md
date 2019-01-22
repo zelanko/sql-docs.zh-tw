@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a3d92e91ec16bf51566575c235271bf69bbd72a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 773d7d8b513d0f93d00782d130c796d2b04cea83
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590334"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130858"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,9 +104,9 @@ logread [-?]
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
 
  > [!NOTE]  
- >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
  
- 如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
+ 如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  指定擴充的事件 XML 組態檔的路徑和檔案名稱。 擴充的事件組態檔可讓您設定工作階段以及啟用事件追蹤。  

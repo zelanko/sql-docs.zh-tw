@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動微調、加密、查詢存放區
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 1/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a06414a9ca09ecfd02438827cbee6645ca381ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1dee3b66253935a979aa483de87c42dc4bb53e3f
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215384"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211129"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
 
@@ -704,10 +704,13 @@ ON
 啟用查詢存放區。  
   
 OFF  
-停用查詢存放區。 這是預設值。   
+停用查詢存放區。 這是預設值。
   
 CLEAR  
-移除查詢存放區的內容。  
+移除查詢存放區的內容。
+
+> [!NOTE]  
+> 若是 Azure SQL 資料倉儲，您必須從使用者資料庫執行 `ALTER DATABASE SET QUERY_STORE`。 不支援從另一個資料倉儲執行個體執行陳述式。
   
 OPERATION_MODE  
 描述查詢存放區的作業模式。 有效值為 READ_ONLY 和 READ_WRITE。 在 READ_WRITE 模式中，查詢存放區會收集並保存查詢計劃和執行階段執行統計資料資訊。 在 READ_ONLY 模式中，可以從查詢存放區讀取資訊，但不會加入新資訊。 如果查詢存放區配置的空間的最大值已用盡，查詢存放區會將操作模式變更為 READ_ONLY。  

@@ -11,17 +11,17 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 274e91c482ada16847cb2b2e704ac9d953567d7d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 99119431d65cc8780cba24fbd891a1688844a769
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328588"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300305"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教學課程：透過使用 SQL Server Management Studio 來連線至及查詢 SQL Server 執行個體
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 本教學課程將教導您如何使用 SQL Server Management Studio (SSMS) 連線到 SQL Server 執行個體，並執行一些基本的 Transact-SQL (T-SQL) 命令。 本文會示範如何執行下列操作：
 

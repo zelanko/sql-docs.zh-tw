@@ -47,18 +47,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845031e6002ef992b6f04b053bde9955896591fe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ca3d18ca29e09509c6e9d15e4064efc1efdd9960
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202897"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300485"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 資料倉儲和平行處理資料倉儲中，建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或通用語言執行平台 (CLR) 預存程序。 預存程序類似於其他程式設計語言中的程序，這些程序可以：  
   

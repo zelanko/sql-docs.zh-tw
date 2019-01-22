@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 972cd8bf1acc8a7abcf428c3bfd553e878248fde
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069784"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226595"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -103,7 +103,7 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請新增 **QUERYTRACEON** [查詢提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
-> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 **USE HINT** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用追蹤旗標。
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 **USE HINT** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不要使用追蹤旗標。
 
 PRIMARY
 
@@ -115,7 +115,7 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請參閱 **OPTIMIZE FOR UNKNOWN** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。
-> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，也可以使用 **USE HINT** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)。
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，也可以使用 **USE HINT** [查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)。
 
 PRIMARY
 
@@ -127,7 +127,7 @@ PRIMARY
 
 > [!TIP]
 > 若要在查詢層級完成此操作，請新增 **QUERYTRACEON** [查詢提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
-> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用追蹤旗標。
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT [查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)，而不要使用追蹤旗標。
 
 PRIMARY
 
@@ -189,7 +189,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-***適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (作為公開預覽功能)
+**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
 
 可讓您選取選項，讓引擎自動將支援的作業提升至可繼續。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至可繼續。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_RESUMABLE 目前的值。 這些選項僅適用於可繼續支援的作業。
 
@@ -215,19 +215,19 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
-**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 可讓您在資料庫或陳述式範圍啟用或停用多重陳述式資料表值函式的交錯執行，同時仍保有 140 (含) 以上的資料庫相容性層級。 交錯執行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自適性查詢處理的部分功能。 如需詳細資訊，請參閱[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
-**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 可讓您在資料庫或陳述式範圍啟用或停用自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 自適性聯結是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 所推出的[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)部分功能。
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
-**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
 可讓您在資料庫或陳述式範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 SQL Server 2019 所推出的[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)部分功能。
 
@@ -271,7 +271,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 ### <a name="dacfx"></a>DacFx
 
-因為 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 中會影響資料庫結構描述的新功能，所以匯出的結構描述 (不論有無資料) 不能匯入至較舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的匯出項目，將無法匯入至舊版伺服器。
+因為 `ALTER DATABASE SCOPED CONFIGURATION` 是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始) 中會影響資料庫結構描述的新功能，所以匯出的結構描述 (不論有無資料) 不能匯入至較舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的匯出項目，將無法匯入至舊版伺服器。
 
 ### <a name="elevateonline"></a>ELEVATE_ONLINE
 
@@ -289,7 +289,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 下列範例示範如何使用 ALTER DATABASE SCOPED CONFIGURATION
 
 ### <a name="a-grant-permission"></a>A. 授與權限
-此範例會將執行 ALTER DATABASE SCOPED CONFIGURATION 所需的權限授與使用者 [Joe]。
+此範例會將執行 ALTER DATABASE SCOPED CONFIGURATION 所需的權限授與使用者 Joe。
 
 ```sql
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
@@ -300,59 +300,59 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ```
 
 此範例會在異地複寫案例中，將次要資料庫及其主要資料庫的 MAXDOP 設定為相同。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
 ### <a name="c-set-legacycardinalityestimation"></a>C. 設定 LEGACY_CARDINALITY_ESTIMATION
 此範例會在異地複寫案例中，將次要資料庫的 LEGACY_CARDINALITY_ESTIMATION 設定為 ON。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = ON ;
 ```
 
 此範例會在異地複寫案例中，將次要資料庫及其主要資料庫的 LEGACY_CARDINALITY_ESTIMATION 設定為相同。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
 ### <a name="d-set-parametersniffing"></a>D. 設定 PARAMETER_SNIFFING
 此範例會在異地複寫案例中，將主要資料庫的 PARAMETER_SNIFFING 設定為 OFF。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;
+ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
 此範例會在異地複寫案例中，將主要資料庫的 PARAMETER_SNIFFING 設定為 OFF。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ```
 
 此範例會在異地複寫案例中，將次要資料庫及主要資料庫的 PARAMETER_SNIFFING 設定為相同。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
 ### <a name="e-set-queryoptimizerhotfixes"></a>E. 設定 QUERY_OPTIMIZER_HOTFIXES
 在異地複寫案例中，將主要資料庫的 QUERY_OPTIMIZER_HOTFIXES 設定為 ON。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
+ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ```
 
 ### <a name="f-clear-procedure-cache"></a>F. 清除程序快取
 此範例會清除程序快取 (可能僅適用於主要資料庫)。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
 ### <a name="g-set-identitycache"></a>G. 設定 IDENTITY_CACHE
@@ -361,7 +361,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 此範例會停用識別快取。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
+ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. 設定 OPTIMIZE_FOR_AD_HOC_WORKLOADS
@@ -374,21 +374,21 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
 ### <a name="i-set-elevateonline"></a>I. 設定 ELEVATE_ONLINE
-**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 且為公開預覽功能
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
 
 此範例會將 ELEVATE_ONLINE 設定為 FAIL_UNSUPPORTED。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
 ### <a name="j-set-elevateresumable"></a>J. 設定 ELEVATE_RESUMABLE
-**適用對象**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
 此範例會將 ELEVEATE_RESUMABLE 設定為 WHEN_SUPPORTED。
 
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ## <a name="additional-resources"></a>其他資源

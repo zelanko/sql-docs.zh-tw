@@ -1,6 +1,6 @@
 ---
 title: SQL Server 隱私權補充 | Microsoft Docs
-ms.date: 4/25/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -10,14 +10,15 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 179573dbe83167067ea2b6b4ec6ffd856dcb42e2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 06116a52b35acb2ffef584e751e2c7285ce99551
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409721"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420023"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 本文摘要說明 SQL Server 內使用之不同資料物件的行為，以及如何使用物件來傳遞個人或機密方式的資訊。 本文是整體 [Microsoft 隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=521839)的增補合約。 本文中的資料分類只適用於 SQL Server 內部部署產品的版本。 它不適用於下列項目：
@@ -43,12 +44,13 @@ ms.locfileid: "52409721"
 
 ### <a name="permitted-usage-scenarios"></a>允許的使用方式情節
 
-|狀況  |存取限制  |保留需求 |
+|狀況 |存取限制 |保留需求 |
 |---------|---------|---------|
-|透過「使用意見反應」，這些認證絕不能離開使用者電腦。     |-         |-         |
-|「損毀傾印」可能包含「存取控制資料」。     |-         |損毀傾印：最多 30 天。         |
-|透過「使用者意見反應」，這些認證絕不能離開使用者電腦，除非客戶手動予以插入    |限制為供 Microsoft 內部使用且協力廠商不可存取。         |使用者意見反應：最多 1 年         |
- |
+|透過「使用意見反應」，這些認證絕不能離開使用者電腦。 |- |- |
+|「損毀傾印」可能包含「存取控制資料」。 |- |損毀傾印：最多 30 天。 |
+|透過「使用者意見反應」，這些認證絕不能離開使用者電腦，除非客戶手動予以插入 |限制為供 Microsoft 內部使用且協力廠商不可存取。 |使用者意見反應：最多 1 年|
+|&nbsp;|&nbsp;|&nbsp;|
+
 ## <a name="customer-content"></a>客戶內容
 
 客戶內容直接或間接定義為使用者資料表內儲存的資料。 資料包括可能儲存在使用者資料表內之查詢文字內的統計資料或使用者常值。
@@ -60,6 +62,7 @@ ms.locfileid: "52409721"
 - 包含常值的查詢文字。
 
 ### <a name="permitted-usage-scenarios"></a>允許的使用方式情節
+
 |狀況  |存取限制  |保留需求 |
 |---------|---------|---------|
 |透過「使用意見反應」，這項資料不會離開使用者電腦。 |- |- |
@@ -130,15 +133,15 @@ ms.locfileid: "52409721"
 - 事件名稱和錯誤碼
 - 硬體設定和識別，例如 OEM 製造商
 
-Microsoft 會檢查其他程式使用 SQL Server 所設定的應用程式名稱值 (例如：Sharepoint 或協力廠商封裝程式，且會在使用方式資料啟用時在傳送給 Microsoft 的系統中繼資料中包含此資訊)。 客戶不應該放置個人資料 (例如，[系統中繼資料] 欄位中的終端使用者識別資訊)，或建立設計在這些欄位中儲存個人資料的應用程式。 
+Microsoft 不會檢查由其他使用 SQL Server 之程式所設定的應用程式名稱值 (範例：SharePoint 或第三方封裝程式且在啟用「使用狀況資料」之情況下在傳送給 Microsoft 的系統中繼資料中包括此資訊)。 客戶不應該放置個人資料 (例如，[系統中繼資料] 欄位中的終端使用者識別資訊)，或建立設計在這些欄位中儲存個人資料的應用程式。 
 
 ### <a name="permitted-usage-scenarios"></a>允許的使用方式情節
 
 |狀況  |存取限制  |保留需求|
 |---------|---------|---------|
 |Microsoft 可以用來改善功能及 (或) 修正目前功能中的 Bug。|限制為供 Microsoft 內部使用且協力廠商不可存取。 |最少 90 天 - 最多 3 年 |
-|可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最少 3 年 - 最多 6 年 |
-Microsoft 可以用來進行未來的產品規劃。 |Microsoft 可能會與其他硬體和軟體廠商共用這項資訊，以改善其產品如何與 Microsoft 軟體搭配執行。 |最少 90 天 - 最多 3 年|
+|可以用來對客戶提出建議。  例如，「根據所使用產品方式，請考慮使用執行效果更佳的功能 *X*。」 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |客戶資料安全性記錄：最小 3 年 - 最多 6 年 |
+|Microsoft 可以用來進行未來的產品規劃。 |Microsoft 可能會與其他硬體和軟體廠商共用這項資訊，以改善其產品如何與 Microsoft 軟體搭配執行。 |最少 90 天 - 最多 3 年|
 |Microsoft 可以用來根據發出的「使用意見反應」來提供雲端服務。 例如，客戶儀表板顯示跨組織之所有 SQL Server 安裝的功能使用方式。 |Microsoft 可以向原始客戶公開資料，例如透過儀表板。 |最少 90 天 - 最多 3 年 |
 |客戶與其同意可以傳送包含給 Microsoft 之「客戶內容」的「使用者意見反應」。 |限制為供 Microsoft 內部使用且協力廠商不可存取。 Microsoft 可以向原始客戶公開資料。 |使用者意見反應：最多 1 年 |
 |可以使用資料庫名稱和應用程式名稱將資料庫與應用程式分類為已知類別，例如執行由 Microsoft 或其他公司提供之軟體的資料庫與應用程式。|限制為供 Microsoft 內部使用且協力廠商不可存取。|最少 90 天 - 最多 3 年 |

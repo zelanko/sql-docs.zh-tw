@@ -24,18 +24,18 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f186989b4b6edad18333bd93cc89a69c65c2a977
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 685e2ca3c202a93cc290cce4342fe8eaa8151c10
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590022"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54298685"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever 到 Azure SQL Database 皆適用。 SSMS 提供工具來設定、監視和管理 SQL 執行個體。 使用 SSMS，即可部署、監視和升級應用程式所使用的資料層元件，以及建置查詢和指令碼。
 
@@ -159,7 +159,7 @@ SSMS
 
 ## <a name="feedback"></a>意見反應
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 用戶端工具論壇](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

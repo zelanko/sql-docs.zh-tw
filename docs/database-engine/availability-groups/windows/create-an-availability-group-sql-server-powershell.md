@@ -13,12 +13,12 @@ ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 58b0010f2440a95b698bb37d99e8e3bc11cce218
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 57330040f7fc5ba1fdd48278b69a46bcf7eaee46
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209977"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226545"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>使用 PowerShell 建立 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53209977"
 ###  <a name="SummaryPSStatements"></a> 工作及對應 PowerShell 指令程式的摘要  
  下表列出與設定可用性群組有關的基本工作，並指出 PowerShell 指令程式支援哪些工作。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 工作必須依照其出現在表格中的順序來執行。  
   
-|工作|PowerShell 指令程式 (如果可用) 或 Transact-SQL 陳述式|在何處執行工作**\***|  
+|工作|PowerShell 指令程式 (如果可用) 或 Transact-SQL 陳述式|在何處執行工作 **&#42;**|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
 |建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|**New-SqlHadrEndPoint**|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。<br /><br /> 注意：若要變更現有資料庫鏡像端點，請使用 **Set-SqlHadrEndpoint**。|  
 |建立可用性群組|首先，使用 **New-SqlAvailabilityReplica** Cmdlet 搭配 **-AsTemplate** 參數，針對您打算包含在可用性群組內之兩個可用性複本的每一個來建立記憶體內的可用性複本物件。<br /><br /> 然後，使用 **New-SqlAvailabilityGroup** Cmdlet 及參考可用性複本物件來建立可用性群組。|於裝載初始主要複本的伺服器執行個體上執行。|  
@@ -249,7 +249,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1:Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 1 部分：新一代高可用性解決方案簡介)  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 2 部分：使用 Always On 建置任務關鍵性高可用性解決方案)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2:Building a Mission-Critical High Availability Solution Using Always On](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404) (Microsoft SQL Server Code-Named "Denali" Always On 系列第 2 部分：使用 Always On 建立關鍵任務的高可用性解決方案)  
   
 -   **白皮書：**  
   

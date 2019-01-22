@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd046f665745ca9456acb6a2c30e28ff9a6fc082
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 9406b4afe6ed3c99bf729b0598020413b4a1c045
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626397"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361658"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "53626397"
   
 2.  在 [資料庫屬性]  對話方塊中，選取 [查詢存放區]  頁面。  
   
-3.  在 [作業模式 (要求)]  方塊中，選取 [開啟] 。  
+3.  在 [作業模式 (要求)]  方塊中，選取 [讀取寫入] 。  
   
 #### <a name="use-transact-sql-statements"></a>使用 Transact-SQL 陳述式  
   
 使用 **ALTER DATABASE** 陳述式可啟用查詢存放區。 例如：  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
+ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
 ```  
   
 如需和查詢存放區相關之語法選項的詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  

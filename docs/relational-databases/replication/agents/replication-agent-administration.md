@@ -23,12 +23,12 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca04967d4230ce6693736b53c99a21bbfd07eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cd5f5aac2f12cd20b5459f4b1f725b975b4dd1e7
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125682"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419823"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

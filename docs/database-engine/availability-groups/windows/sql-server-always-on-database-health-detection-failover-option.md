@@ -1,7 +1,7 @@
 ---
 title: 資料庫健全狀況偵測容錯移轉選項 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,12 +16,12 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04f1834ebc282044164b2e1d2b77e784b3260973
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7bb2a0c9582fcf5e0092ef23009b9270a7b0d010
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525114"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54419963"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性群組資料庫層級健全狀況偵測容錯移轉選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "52525114"
 
 例如，啟用資料庫層級健全狀況偵測選項時，如果 SQL Server 無法寫入其中一個資料庫的交易記錄檔，則該資料庫的狀態會變更以指出失敗，以及可用性群組即將容錯移轉，而且在資料庫再度上線之後，您的應用程式可以重新連接，並在最少中斷的情況下繼續處理。
 
-<a name="enabling-database-level-health-detection"></a>啟用資料庫層級健全狀況偵測
-----
+### <a name="enabling-database-level-health-detection"></a>啟用資料庫層級健全狀況偵測
+
 雖然通常會建議使用它，但是資料庫健全狀況選項**預設為關閉**，以保留與舊版預設設定的回溯相容性。
 
 有幾種簡單的方法可以啟用資料庫層級健全狀況偵測設定：
@@ -52,7 +52,7 @@ ms.locfileid: "52525114"
 
 3. **CREATE AVAILABILITY GROUP** 的 Transact-SQL 語法。 DB_FAILOVER 參數接受值 ON 或 OFF。
 
-   ```Transact-SQL
+   ```sql
    CREATE AVAILABILITY GROUP [Contoso-ag]
    WITH (DB_FAILOVER=ON)
    FOR DATABASE [AutoHa-Sample]
@@ -65,7 +65,7 @@ ms.locfileid: "52525114"
 
 4. **ALTER AVAILABILITY GROUP** 的 Transact-SQL 語法。 DB_FAILOVER 參數接受值 ON 或 OFF。
 
-   ```Transact-SQL
+   ```sql
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = ON);
 
    ALTER AVAILABILITY GROUP [Contoso-ag] SET (DB_FAILOVER = OFF);
@@ -89,40 +89,40 @@ ms.locfileid: "52525114"
 
 系統 DMV sys.availability_groups 顯示資料行 db_failover，以指出資料庫層級健全狀況偵測選項是關閉 (0) 還是開啟 (1)。
 
-```Transact-SQL
+```sql
 select name, db_failover from sys.availability_groups
 ```
 
 
 範例 dmv 輸出：
 
-NAME  |  db_failover
----------|---------
-| Contoso-ag |  1  |
+|NAME  |  db_failover|
+|---------|---------|
+| Contoso-ag | 1  |
 
 ### <a name="errorlog"></a>ErrorLog
 可用性群組已因資料庫層級健全狀況偵測檢查而容錯移轉時，SQL Server 錯誤記錄檔 (或來自 sp_readerrorlog 的文字) 會顯示錯誤訊息 41653。
 
 例如，此錯誤記錄檔摘要會顯示交易記錄寫入因磁碟問題而失敗，接著會關閉名為 AutoHa-Sample 的資料庫，以觸發資料庫層級健全狀況偵測來容錯移轉可用性群組。
 
->2016-04-25 12:20:21.08 spid1s      錯誤: 17053，嚴重性: 16，狀態: 1。
+>2016-04-25 12:20:21.08 spid1s      錯誤：17053，嚴重性：16，狀態：1.
 >
->2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter: 發現作業系統錯誤 21 (裝置尚未就緒)。
+>2016-04-25 12:20:21.08 spid1s      SQLServerLogMgr::LogWriter:遇到作業系統錯誤 21(裝置未就緒。)。
 >2016-04-25 12:20:21.08 spid1s      記錄排清期間發生寫入錯誤。
 >
->2016-04-25 12:20:21.08 spid79      錯誤: 9001，嚴重性: 21，狀態: 4。
+>2016-04-25 12:20:21.08 spid79      錯誤：9001，嚴重性：21，狀態：4.
 >
 >2016-04-25 12:20:21.08 spid79      資料庫 'AutoHa-Sample' 的記錄檔無法使用。 相關錯誤訊息請查閱事件記錄檔。 解決任何錯誤，並重新啟動資料庫。
 >
->**2016-04-25 12:20:21.15 spid79      錯誤: 41653，嚴重性: 21，狀態: 1。**
+>**2016-04-25 12:20:21.15 spid79      錯誤：41653，嚴重性：21，狀態：1.**
 >
->**2016-04-25 12:20:21.15 spid79      資料庫 'AutoHa-Sample' 發生錯誤 (錯誤類型: 2 'DB_SHUTDOWN') 導致可用性群組 'Contoso-ag' 失敗。如需發現之錯誤的資訊，請參考 SQL Server 錯誤記錄檔。如果此狀況持續發生，請連絡系統管理員。**
+>**2016-04-25 12:20:21.15 spid79      資料庫 'AutoHa-Sample' 遇到錯誤 (錯誤類型：2 'DB_SHUTDOWN') 導致可用性群組 'Contoso-ag' 失敗。如需發現之錯誤的資訊，請參考 SQL Server 錯誤記錄檔。如果此狀況持續發生，請連絡系統管理員。**
 >
->2016-04-25 12:20:21.17 spid79      資料庫 'AutoHa-Sample' 的狀態資訊 - 強化的 LSN: '(34:664:1)'    認可 LSN: '(34:656:1)'    認可時間: 'Apr 25 2016 12:19PM'
+>2016-04-25 12:20:21.17 spid79      資料庫 'AutoHa-Sample' 的狀態資訊 - Hardened Lsn：'(34:664:1)'    認可 LSN：'(34:656:1)'    認可時間：'Apr 25 2016 12:19PM'
 >
 >2016-04-25 12:20:21.19 spid15s     已終止複本識別碼為 {c4ad5ea4-8a99-41fa-893e-189154c24b49} 之可用性複本 'SQLServer-0' 上的主要資料庫 'AutoHa-Sample' 與次要資料庫的 AlwaysOn 可用性群組連接。 此為參考用訊息， 使用者不必採取任何動作。
 >
->2016-04-25 12:20:21.21 spid75      AlwaysOn: 可用性群組 'Contoso-ag' 的本機複本正在準備轉換成解析角色，以回應 Windows Server 容錯移轉叢集 (WSFC) 叢集的要求。 此為參考用訊息， 使用者不必採取任何動作。
+>2016-04-25 12:20:21.21 spid75      Always On：可用性群組 'Contoso-ag' 的本機複本正在準備轉換成解析角色，以回應 Windows Server 容錯移轉叢集 (WSFC) 叢集的要求。 此為參考用訊息， 使用者不必採取任何動作。
 >
 >2016-04-25 12:20:21.21 spid75      在可用性群組 'ag' 中，本機可用性複本的狀態已經從 'PRIMARY_NORMAL' 變更為 'RESOLVING_NORMAL'。  狀態因可用性群組即將離線而變更。  複本即將離線，因為已刪除相關聯的可用性群組，或使用者讓 Windows Server 容錯移轉叢集 (WSFC) 管理主控台中的相關聯可用性群組離線，或者可用性群組會容錯移轉至另一個 SQL Server 執行個體。  如需詳細資訊，請參閱 SQL Server 錯誤記錄檔、Windows Server 容錯移轉叢集 (WSFC) 管理主控台或 WSFC 記錄檔。
 
@@ -135,7 +135,8 @@ NAME  |  db_failover
 以下是建立可擷取此事件之 XEvent 工作階段的範例。 未指定路徑時，XEvent 輸出檔案應該位於預設 SQL Server 錯誤記錄檔路徑中。 在可用性群組的主要複本上執行這個項目：
 
 範例擴充事件工作階段指令碼
-```
+
+```sql
 CREATE EVENT SESSION [AlwaysOn_dbfault] ON SERVER
 ADD EVENT sqlserver.availability_replica_database_fault_reporting
 ADD TARGET package0.event_file(SET filename=N'dbfault.xel',max_file_size=(5),max_rollover_files=(4))
@@ -151,32 +152,32 @@ GO
 
 欄位的說明：
 
-|資料行資料    | Description
-|---------|---------
-|availability_group_id  |可用性群組的識別碼。
-|availability_group_name    |可用性群組的名稱。
-|availability_replica_id    |可用性複本的識別碼。
-|availability_replica_name  |可用性複本的名稱。
-|database_name  |報告錯誤的資料庫名稱。
-|database_replica_id    |可用性複本資料庫的識別碼。
-|failover_ready_replicas    |已同步處理的自動容錯移轉次要複本數目。
-|fault_type     | 所報告的錯誤識別碼。 可能的值如下：  <br/> 0 - 無 <br/>1 - 未知<br/>2 - 關機
-|is_critical    | 從 SQL Server 2016 開始，XEvent 的這個值應該一律傳回 True。
+|資料行資料 | Description|
+|---------|---------|
+|availability_group_id |可用性群組的識別碼。|
+|availability_group_name |可用性群組的名稱。|
+|availability_replica_id |可用性複本的識別碼。|
+|availability_replica_name |可用性複本的名稱。|
+|database_name |報告錯誤的資料庫名稱。|
+|database_replica_id |可用性複本資料庫的識別碼。|
+|failover_ready_replicas |已同步處理的自動容錯移轉次要複本數目。|
+|fault_type  | 所報告的錯誤識別碼。 可能的值如下：  <br/> 0 - 無 <br/>1 - 未知<br/>2 - 關機|
+|is_critical | 從 SQL Server 2016 開始，XEvent 的這個值應該一律傳回 True。|
 
 
 在此範例輸出中，fault_type 會因資料庫名稱 AutoHa-Sample2 而顯示可用性群組 Contoso-ag、名為 SQLSERVER-1 之複本上發生的嚴重事件，錯誤類型為「2- 關機」。
 
-|欄位  | ReplTest1
-|---------|---------
-|availability_group_id |    24E6FE58-5EE8-4C4E-9746-491CFBB208C1
-|availability_group_name |  Contoso-ag
-|availability_replica_id    | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1
-|availability_replica_name |    SQLSERVER-1
-|database_name |    AutoHa-Sample2
-|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  1
-|fault_type |   2
-|is_critical    | True
+|欄位  | ReplTest1|
+|---------|---------|
+|availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
+|availability_group_name | Contoso-ag|
+|availability_replica_id | 3EAE74D1-A22F-4D9F-8E9A-DEFF99B1F4D1|
+|availability_replica_name | SQLSERVER-1|
+|database_name | AutoHa-Sample2|
+|database_replica_id | 39971379-8161-4607-82E7-098590E5AE00|
+|failover_ready_replicas | 1|
+|fault_type | 2|
+|is_critical | True|
 
 
 ### <a name="related-references"></a>相關的參考資料

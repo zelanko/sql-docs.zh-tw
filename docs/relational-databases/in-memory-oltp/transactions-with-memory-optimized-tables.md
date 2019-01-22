@@ -12,17 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f84b4801446fd970c0d1e42054782d533b18574
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fab75b8f4550f30e8448bc427ab41a158c1656ee
+ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670717"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54395418"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  
 本文說明記憶體最佳化資料表和原生編譯預存程序特定的所有交易層面。  
   
 SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表與硬碟資料表，而基礎機制並不相同。 了解這些差異，有助於程式設計人員設計高輸送量系統。 所有案例的共同目標都是要達成交易完整性。  
@@ -30,9 +29,6 @@ SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表
 如需記憶體最佳化資料表上的交易特定錯誤狀況，請跳至 [衝突偵測和重試邏輯](#confdetretry34ni)一節。
   
 如需一般資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。  
-  
-  
-<a name="pessvoptim22ni"/>  
   
 ## <a name="pessimistic-versus-optimistic"></a>封閉式與開放式  
   
@@ -44,8 +40,6 @@ SQL Server 中的交易隔離等級會分別套用到記憶體最佳化資料表
   - 記憶體最佳化資料表不得發生錯誤 1205，也就是死結。  
   
 開放式方法的額外負荷較少，而且通常更有效率，部分原因是大多數應用程式中不常發生交易衝突。 封閉式和開放式方法的主要功能差異，是在發生衝突時，封閉式方法會讓您等待，而開放式方法則是其中一筆交易失敗，且必須由用戶端重試。 強制使用 REPEATABLE READ 隔離等級時，功能差異較大，在 SERIALIZABLE 等級則差異最大。  
-  
-<a name="txninitmodes24ni"/>  
   
 ## <a name="transaction-initiation-modes"></a>交易初始模式  
   
@@ -60,8 +54,6 @@ SQL Server 有下列交易初始模式：
 - **隱含** - 強制使用 SET IMPLICIT_TRANSACTION ON 時。 IMPLICIT_BEGIN_TRANSACTION 可能會是更適合的名稱，因為此選項的作用就只是在 0 = @@trancount 時，在每個 UPDATE 陳述式之前隱含執行明確 BEGIN TRANSACTION 的對等項目。 因此，您的 T-SQL 程式碼會決定最終要不要發出明確 COMMIT TRANSACTION。   
   
 - **ATOMIC 區塊** - ATOMIC 區塊中的所有陳述式一律執行為單一交易的一部分。 成功時將 ATOMIC 區塊的所有動作視為一個整體認可，或失敗後復原所有動作。 每個原生編譯的預存程序都需要 ATOMIC 區塊。  
-  
-<a name="codeexamexpmode25ni"/>  
   
 ### <a name="code-example-with-explicit-mode"></a>明確模式的程式碼範例  
   
@@ -87,10 +79,9 @@ BEGIN TRANSACTION;  -- Explicit transaction.
 SELECT * FROM  
            dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
       JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
-     
 COMMIT TRANSACTION;
 ```
-  
+
 透過使用資料庫選項 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`，即不需要 `WITH (SNAPSHOT)` 提示。 當此選項設為 `ON`時，較低隔離等級的記憶體最佳化資料表存取權，會自動提升為 SNAPSHOT 隔離。  
 
 ```sql
@@ -98,15 +89,11 @@ ALTER DATABASE CURRENT
     SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = ON;
 ```
 
-<a name="rowver28ni"/>  
-  
 ## <a name="row-versioning"></a>資料列版本設定  
   
 記憶體最佳化資料表即使在最嚴格的隔離等級 SERIALIZABLE，也會使用非常複雜的資料列版本設定系統，讓開放式方法有效率。 如需詳細資料，請參閱 [記憶體最佳化資料表簡介](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)。  
   
 當 READ_COMMITTED_SNAPSHOT 或 SNAPSHOT 隔離等級作用時，硬碟資料表會間接擁有資料列版本設定系統。 此系統是以 tempdb 為基礎，而記憶體最佳化的資料結構有資料列版本設定內建功能，可取得最高效率。  
-  
-<a name="confdegreeiso30ni"/>  
   
 ## <a name="isolation-levels"></a>隔離等級 
   
@@ -120,11 +107,6 @@ ALTER DATABASE CURRENT
 | REPEATABLE READ | 受到記憶體最佳化資料表支援。 REPEATABLE READ 隔離保證在認可時，不會有並行交易更新此交易讀取的任何資料列。 <br/><br/> 因為是開放式模型，所以不會阻止並行交易更新此交易讀取的資料列。 反倒是在認可時，此交易會驗證不違反 REPEATABLE READ 隔離。 如果此交易違規，則會回復且必須重試。 | 
 | SERIALIZABLE | 受到記憶體最佳化資料表支援。 <br/><br/> 命名為 *Serializable* 的原因是隔離相當嚴格，幾乎像是讓交易接續執行，而非並行執行。 | 
 
-
-
-
-<a name="txnphaslife32ni"/>  
-  
 ## <a name="transaction-phases-and-lifetime"></a>交易階段和存留期  
   
 當涉及記憶體最佳化資料表時，交易的存留期會隨階段增加，如下圖所示：
@@ -133,24 +115,22 @@ ALTER DATABASE CURRENT
   
 後面接著階段描述。  
   
-#### <a name="regular-processing-phase-1-of-3"></a>一般處理：階段 1 (之 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>正常處理：階段 1 (共 3 個)  
   
 - 這個階段是由查詢中的所有查詢和 DML 陳述式的執行所組成。  
 - 在此階段，陳述式會將記憶體最佳化資料表的版本視為交易的邏輯開始時間。  
   
-#### <a name="validation-phase-2-of-3"></a>驗證：階段 2 (之 3)  
+#### <a name="validation-phase-2-of-3"></a>驗證：階段 2 (共 3 個)  
   
 - 指定結束時間即開始驗證階段，將交易標示為邏輯方面已完成。 完成此作業可讓依賴這筆交易的其他交易看到交易的所有變更。 成功認可此交易前，不允許認可相依的交易。 此外，不允許保留這類相依性的交易將結果集傳回用戶端，以確保用戶端只會看到已成功向資料庫認可的資料。  
 - 這個階段包含可重複的讀取和可序列化的驗證。 針對可重複讀取驗證，會檢查是否有任何交易讀取的資料列在此之後更新。 針對可序列化驗證，會檢查是否已將任何資料列插入此交易掃描的任何資料範圍。 根據 [隔離等級和衝突](#confdegreeiso30ni)中的資料表，使用快照集隔離時，都會發生可重複讀取和可序列化驗證，以驗證唯一外部索引鍵條件約束的一致性。  
   
-#### <a name="commit-processing-phase-3-of-3"></a>認可處理：階段 3 (之 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>認可處理：階段 3 (共 3 個)  
   
 - 在認可階段，耐久資料表的變更會寫入記錄中，而記錄會寫入磁碟中。 控制項接著會傳回用戶端。  
 - 認可處理完成之後，所有相依的交易都會收到進行認可通知。  
   
 您應該像平常一樣，在符合資料需求的前提下，盡可能使用最少且簡潔的工作交易單位。  
-  
-<a name="confdetretry34ni"/>  
   
 ## <a name="conflict-detection-and-retry-logic"></a>衝突偵測和重試邏輯 
 
@@ -168,15 +148,12 @@ ALTER DATABASE CURRENT
 | **41301** | 相依性失敗︰相依性建立在稍後無法認可的另一個交易上。 | 這筆交易 (Tx1) 藉由讀取 Tx2 寫入的資料相依於另一筆交易 (Tx2)，而後者 (Tx2) 當時處於其驗證或認可處理階段。 接下來 Tx2 認可失敗。 Tx2 認可失敗最常見的原因是可重複讀取 (41305) 和可序列化 (41325) 驗證失敗，較不常見的原因則是記錄 IO 失敗。 |
 | **41823** 和 **41840** | 已達到使用者資料在經記憶體最佳化的資料表和資料表變數中的配額。 | 錯誤 41823 適用於 SQL Server Express/Web/Standard Edition，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的獨立資料庫。 錯誤 41840 適用於 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的彈性集區。 <br/><br/> 在大部分情況下，這些錯誤會指出已達到最大使用者資料大小，而解決此錯誤的方法是從經記憶體最佳化的資料表刪除資料。 不過，在少數情況下，這是暫時性錯誤。 因此，我們建議您在第一次發生這些錯誤時重試。<br/><br/> 與此清單中的其他錯誤一樣，錯誤 41823 和 41840 會造成使用中交易中止。 |
 | **41839** | 交易超過認可相依性的數目上限。 |**適用於：** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 較新版本的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 對於認可相依性的數目沒有限制。<br/><br/> 給定的交易 (Tx1) 能夠相依的交易數目有限制。 這些交易是連出的相依性。 此外，能夠相依於指定交易 (Tx1) 的交易數目也有限制。 這些交易是連入的相依性。 兩者的限制皆為 8。 <br/><br/> 發生此錯誤的最常見情況，是大量的讀取交易存取由單一寫入交易寫入的資料。 如果讀取交易全都執行相同資料的大型掃描，以及如果寫入交易長時間處理驗證或認可，例如寫入交易在可序列化隔離下執行大型掃描 (延長驗證階段) 或交易記錄檔位於慢速記錄 IO 裝置 (延長認可處理的時間)，觸發這個狀況的可能性就會增加。 如果讀取交易正在執行大型掃描，且應該只存取少數資料列，可能會遺漏索引。 同樣地，如果寫入交易使用可序列化隔離且正在執行大型掃描，原本只想存取少數資料列，這也是沒有指示索引所致。 <br/><br/> 使用追蹤旗標 **9926** 可以提高認可相依性的數目限制。 只有在確認未曾遺漏任何索引後，仍然發生這個錯誤狀況時，才使用此追蹤旗標，因為在前列案例中，它可能會遮罩這些問題。 另一個警告是，每筆交易都有大量連入及連出相依性且個別交易都有多層相依性的複雜相依性圖表，可能會造成系統沒有效率。  |
- 
   
 ### <a name="retry-logic"></a>重試邏輯 
 
 當交易因為上述任一情況而失敗時，就應該重試交易。
   
 您可以在用戶端或伺服器端實作重試邏輯。 一般是建議在用戶端實作重試邏輯，因為它更有效率，且可讓您在失敗發生之前處理交易傳回的結果集。  
-  
-<a name="retrytsqlcodeexam35ni"/>  
   
 #### <a name="retry-t-sql-code-example"></a>重試 T-SQL 程式碼範例  
   
@@ -238,17 +215,13 @@ GO
 --  EXECUTE usp_update_salesorder_dates;
 ```
 
-
-<a name="crossconttxn38ni"/>  
-  
 ## <a name="cross-container-transaction"></a>跨容器交易  
-  
   
 如果交易執行以下動作，即稱為跨容器交易：  
   
 - 從解譯的 Transact-SQL 存取記憶體最佳化資料表；或  
-- 在交易已經開啟時執行原生程序 (XACT_STATE() = 1)。  
-  
+- 在交易已經開啟時執行原生程序 (XACT_STATE() = 1)。 
+
 「跨容器」一詞衍生自跨兩個交易管理容器執行交易的事實，一個用於磁碟資料表，另一個用於記憶體最佳化資料表。  
   
 在單一跨容器交易內，不同的隔離等級可用於存取磁碟和記憶體最佳化資料表。 這項差異透過明確的資料表提示表示，例如 WITH (SERIALIZABLE)，或透過資料庫選項 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 表示，如果 TRANSACTION ISOLATION LEVEL 設定為 READ COMMITTED 或 READ UNCOMMITTED，則以隱含的方式將記憶體最佳化資料表的隔離等級提高到快照集。  
@@ -285,20 +258,13 @@ COMMIT TRANSACTION;
 go
 ```
 
-
-<a name="limitations40ni"/>  
-  
 ## <a name="limitations"></a>限制  
-  
   
 - 記憶體最佳化資料表不支援跨資料庫的交易。 如果交易存取記憶體最佳化資料表，該交易即無法存取其他任何資料庫，除了  
   - tempdb 資料庫。  
   - 從 master 資料庫唯讀。  
   
 - 不支援分散式交易：使用 BEGIN DISTRIBUTED TRANSACTION 時，交易無法存取記憶體最佳化資料表。  
-  
-  
-<a name="natcompstorprocs42ni"/>  
   
 ## <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序  
   
@@ -308,8 +274,6 @@ go
 - 原生程序的主體中不允許任何明確交易控制陳述式。 BEGIN TRANSACTION、ROLLBACK TRANSACTION 等均不允許。  
   
 - 如需使用 ATOMIC 區塊之交易控制的詳細資訊，請參閱 [ATOMIC 區塊](atomic-blocks-in-native-procedures.md)。  
-  
-<a name="othertxnlinks44ni"/>  
   
 ## <a name="other-transaction-links"></a>其他交易連結  
   

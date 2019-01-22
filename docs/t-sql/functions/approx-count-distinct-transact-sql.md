@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 01/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b0eb2db49a4bda6fc8be884790c3caf9cfdb7bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 718d03619165f94ae9b0820a7c2c6319549069be
+ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836722"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54372644"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ APPROX_COUNT_DISTINCT ( expression )
 
 函式實作保證在 97% 機率內最多 2% 的錯誤率。 
 
-`APPROX_COUNT_DISTINCT` 所需的記憶體比徹底的 COUNT DISTINCT 作業更少。  因為磁碟使用量較小，所以相較於精確的 COUNT DISTINCT 作業，`APPROX_COUNT_DISTINCT` 較不會將記憶體溢出到磁碟。 
+`APPROX_COUNT_DISTINCT` 所需的記憶體比徹底的 COUNT DISTINCT 作業更少。  因為磁碟使用量較小，所以相較於精確的 COUNT DISTINCT 作業，`APPROX_COUNT_DISTINCT` 較不會將記憶體溢出到磁碟。 若要深入了解用於達成此目的的演算法，請參閱 [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog) \(英文\)。
 
 > [!NOTE]
 > 對於定序區分大小寫的字串，公開預覽版的 APPROX_COUNT_DISTINCT 是使用二進位比對，且提供的結果是採用 BIN 定序而不是 BIN2。 

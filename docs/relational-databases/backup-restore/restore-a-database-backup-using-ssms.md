@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dd018941567ec56619177928d55b83681c07a039
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302901"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317808"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52302901"
   
 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項] 伺服器屬性的設定，匯入、重設或重建這些索引。 如果您將升級選項設定為 [匯入] 或 [重建]，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建將需要十倍以上的時間。     
     
-當您將升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需檢視或變更 [全文檢索升級選項] 屬性設定的資訊，請參閱[管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。    
+當您將升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。    
 
 如需從 Microsoft Azure Blob 儲存體服務還原 SQL Server 的資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。
 
@@ -71,7 +71,7 @@ ms.locfileid: "52302901"
         -   [選取備份裝置] 對話方塊  
         
             **備份媒體類型**  
-         從 [備份媒體類型] 下拉式清單中選取媒體類型。  注意：只有在電腦上有掛載磁帶機時才會出現 [磁帶] 選項，而只有在至少有一個備份裝置時才會出現 [備份裝置] 選項。
+         從 [備份媒體類型] 下拉式清單中選取媒體類型。  注意：只有在電腦上有掛載磁帶機時才會出現 **[磁帶]** 選項，而只有在至少有一個備份裝置時才會出現 **[備份裝置]** 選項。
 
             **[加入]**  
             依據您從 [備份媒體類型] 下拉式清單中選取的媒體類型，按一下 [加入] 就會開啟下列其中一個對話方塊。 (如果 [備份媒體] 清單方塊中的清單已滿，[加入] 按鈕便無法使用。)
@@ -94,7 +94,7 @@ ms.locfileid: "52302901"
     
              將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。    
     
-         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。    
+         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。    
     
          > [!NOTE]
          > 這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。    
@@ -145,7 +145,7 @@ ms.locfileid: "52302901"
 7.  在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
 
     > [!NOTE]
-    > 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 備份組包含現有的 '`Sales`' 資料庫以外的資料庫備份。 (Microsoft.SqlServer.SmoExtended)」
+    > 未選取此選項可能會導致下列錯誤訊息："System.Data.SqlClient.SqlError：備份組包含現有的 '`Sales`' 資料庫以外的資料庫備份。 (Microsoft.SqlServer.SmoExtended)」
 
 8.  在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
 
@@ -157,7 +157,7 @@ ms.locfileid: "52302901"
 9.  在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
 
     > [!NOTE]
-    > 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 無法獲得獨佔存取權，因為資料庫正在使用中。 (Microsoft.SqlServer.SmoExtended)」
+    > 未選取此選項可能會導致下列錯誤訊息："System.Data.SqlClient.SqlError：無法獲得獨佔存取權，因為資料庫正在使用中。 (Microsoft.SqlServer.SmoExtended)」
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -180,7 +180,7 @@ ms.locfileid: "52302901"
 
     > [!NOTE]
     > 若您收到下列錯誤訊息：      
-    > 「System.Data.SqlClient.SqlError：資料庫 "`Sales`" 的記錄結尾尚未備份。 若其中包含您不想遺失的內容，請使用 `BACKUP LOG WITH NORECOVERY` 備份記錄。 亦可使用 `RESTORE` 陳述式的 `WITH REPLACE` 或 `WITH STOPAT` 子句來覆寫記錄的內容。 (Microsoft.SqlServer.SmoExtended)」。      
+    > "System.Data.SqlClient.SqlError：資料庫 "`Sales`" 的記錄結尾尚未備份。 若其中包含您不想遺失的內容，請使用 `BACKUP LOG WITH NORECOVERY` 備份記錄。 亦可使用 `RESTORE` 陳述式的 `WITH REPLACE` 或 `WITH STOPAT` 子句來覆寫記錄的內容。 (Microsoft.SqlServer.SmoExtended)」。      
     > 則您可能未在上述步驟 6 中輸入新的資料庫名稱。 還原通常可以防止意外將資料庫覆寫成不同資料庫。 如果 `RESTORE` 陳述式中指定的資料庫已經存在於目前伺服器，而且所指定資料庫系列 GUID 與備份組中記錄的資料庫系列 GUID 不同，便不會還原資料庫。 這是重要的防護措施。
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  將先前的磁碟備份還原至某個時間點

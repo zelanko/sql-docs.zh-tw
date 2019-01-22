@@ -23,16 +23,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], permissions
 - TAKE OWNERSHIP
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6855f45379f113f91c54b46e3d1c77a913c853f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730706"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327539"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,7 +129,7 @@ ALTER AUTHORIZATION ON
 |OBJECT|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL 資料倉儲、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。|    
 |ASSEMBLY|**適用對象**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |ASYMMETRIC KEY|**適用對象**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
-|AVAILABILITY GROUP |**適用對象**：SQL Server 2012 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
+|AVAILABILITY GROUP |**適用於**：SQL Server 2012 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
 |CERTIFICATE|**適用對象**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|    
 |CONTRACT|**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|    
 |DATABASE|**適用對象**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 如需詳細資訊，請參閱下方的[資料庫的 ALTER AUTHORIZATION](#AlterDB) 一節。|    
@@ -171,7 +171,7 @@ ALTER AUTHORIZATION ON
  如果目標實體不是資料庫，且實體要傳送給新的擁有者，則會卸除目標的所有權限。    
     
 > [!CAUTION]    
->  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，結構描述的行為已經與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行為不同。 假設結構描述相當於資料庫使用者的程式碼可能不會傳回正確的結果。 曾經使用下列任何一個 DDL 陳述式的資料庫中不應該使用舊的目錄檢視 (包括 sysobjects)：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在曾經使用這些陳述式的任何一個資料庫中，您必須使用新的目錄檢視。 新的目錄檢視會考量 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中所導入的主體和結構描述的分隔。 如需目錄檢視的詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。    
+>  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，結構描述的行為已經與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的行為不同。 假設結構描述相當於資料庫使用者的程式碼可能不會傳回正確的結果。 不應該在曾經使用下列任何一個 DDL 陳述式的資料庫中使用舊的目錄檢視 (包括 sysobjects)：CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 在曾經使用這些陳述式的任何一個資料庫中，您必須使用新的目錄檢視。 新的目錄檢視會考量 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中所導入的主體和結構描述的分隔。 如需目錄檢視的詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。    
     
  同時應注意下列項目：    
     

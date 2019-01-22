@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3067b05783d7a83118e87dc8db4cdc6a83d40a1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2769749327f01af9548ad608a42e6d030fd3842
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515997"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300648"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 **SQL Server Data Tools** 是一款新式開發工具，可用來建置 SQL Server 關聯式資料庫、Azure SQL 資料庫、Analysis Services (AS) 資料模型、Integration Services (IS) 套件和 Reporting Services (RS) 報表。 有了 SSDT，您便可設計和部署任何 SQL Server 內容類型，就像在 Visual Studio 中開發應用程式一樣容易。
 
@@ -59,7 +59,7 @@ ms.locfileid: "52515997"
 
 **版本資訊**  
   
-版本編號：15.8.2  
+版本號碼：15.8.2  
 組建編號：14.0.16182.0  
 發行日期：2018 年 11 月 5 日  
 
@@ -109,13 +109,16 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 若要查看可用的選項，請執行 `SSDT-Setup-ENU.exe /help`
 
+> [!NOTE]
+> 如果使用 Visual Studio 2017 的完整版本，請為 SSDT 建立專用的離線資料夾，並從這個新建立的資料夾執行 `SSDT-Setup-ENU.exe` (不要將 SSDT 新增至其他 Visual Studio 2017 離線配置)。 如果您將 SSDT 配置新增至現有的 Visual Studio 離線配置，就不會在此建立必要的執行階段 (.exe) 元件。
+
 ## <a name="supported-sql-versions"></a>支援的 SQL 版本
   
 |專案範本|支援的 SQL 平台|  
 |-------------------|--------------------|  
 關聯式資料庫|  SQL Server 2005* - SQL Server 2017<br> (使用 SSDT 17.x 或適用於 Visual Studio 2017 的 SSDT 來連線至 [Linux 上的 SQL Server](../linux/sql-server-linux-overview.md))<br /><br />Azure SQL Database<br /><br />Azure SQL 資料倉儲 (僅支援查詢；尚不支援資料庫專案)<br /><br />  * SQL Server 2005 支援已被取代，<br /><br /> 請改為官方支援的 SQL 版本|
   |Analysis Services 模型<br /><br />Reporting Services 報表 | SQL Server 2008 - SQL Server 2017|
-  |Integration Services 封裝| SQL Server 2012 - SQL Server 2017    |
+  |Integration Services 封裝| SQL Server 2014 - SQL Server 2017    |
   
 ## <a name="dacfx"></a>DacFx
 SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都會使用 DacFx 17.4.1：[下載資料層應用程式架構 (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508)。
@@ -130,7 +133,7 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都會使用 DacFx 1
 安裝 SSDT 後，請逐步完成這些教學課程，了解如何使用 SSDT 建立資料庫、封裝、資料模型及報表：  
 
 - [專案導向的離線資料庫開發](project-oriented-offline-database-development.md)  
-- [SSIS 教學課程：建立簡易 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)  
+- [SSIS 教學課程：建立簡易 ETL 套件](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Analysis Services 教學課程](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [建立基本資料表報表 (SSRS 教學課程)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 

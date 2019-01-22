@@ -14,12 +14,12 @@ ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c8c674eb0e86d0b78348f07fb95259327582cc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208727"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300145"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>管理屬於 Always On 可用性群組一部分的已複寫發行者資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "53208727"
     > [!NOTE]  
     >  當您移除了具有已發行成員資料庫的可用性群組，或者從可用性群組中移除已發行的資料庫時，已發行資料庫的所有複本都將保持復原狀態。 如果進行還原，每個複本都會顯示成已發行的資料庫。 您應該只保留一個具有發行集中繼資料的複本。 若要針對已發行的資料庫複本停用複寫，請先從資料庫中移除所有訂閱和發行集。  
   
-     執行 **sp_dropsubscription** 可移除發行集訂閱。 請務必將 *@ignore_distributributor* 參數設定為 1，以便在散發者端保留使用中發行資料庫的中繼資料。  
+     執行 **sp_dropsubscription** 可移除發行集訂閱。 請務必將 *@ignore_distributor* 參數設定為 1，以便在散發者端保留使用中發行資料庫的中繼資料。  
   
     ```  
     USE MyDBName;  
@@ -115,7 +115,7 @@ ms.locfileid: "53208727"
   
 -   [複寫、變更追蹤、變更資料擷取和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [管理 &#40;複寫&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [複寫訂閱者及 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

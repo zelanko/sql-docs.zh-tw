@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f01c19b7afd63402abc5729404d73e52429722be
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 55d919cefd20ef4b139dbf30a053bbda568f6e38
+ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980074"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54242159"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -168,9 +168,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>相容性層級 140 和 150 之間的差異  
 本節描述相容性層級 150 所導入的新行為。
 
-適用於 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的資料庫相容性層級 150 目前是個人預覽版。 此資料庫相容性層級將會與下一帶的查詢處理改善相關聯，超在越資料庫相容性層級 140 中導入的功能。     
+適用於 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的資料庫相容性層級 150，目前在公開預覽階段。 此資料庫相容性層級將會與下一帶的查詢處理改善相關聯，超在越資料庫相容性層級 140 中導入的功能。     
 
-如需資料庫相容性層級 150 所提供查詢處理功能的詳細資訊，請參閱 [SQL Server 2019 中的新功能](../../sql-server/what-s-new-in-sql-server-ver15.md)。     
+如需資料庫相容性層級 150 所提供的查詢處理功能詳細資訊，請參閱 [SQL Server 2019 中的新功能](../../sql-server/what-s-new-in-sql-server-ver15.md)及 [SQL 資料庫中的智慧查詢處理](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)。
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>相容性層級 130 和 140 之間的差異  
 本節描述相容性層級 140 所導入的新行為。

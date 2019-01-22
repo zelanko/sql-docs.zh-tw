@@ -28,18 +28,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 066b202a91f646dadd4a72182193e9fb0fcee6f1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 396797a115821543a1330cedfbe10ebf63769aeb
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979994"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54299365"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 指定稱為通用資料表運算式 (CTE) 的暫存具名結果集。 這是從簡單查詢衍生而來，定義在單一 SELECT、INSERT、UPDATE 或 DELETE 陳述式的執行範圍內。 您也可以在 CREATE VIEW 陳述式中使用這個子句，作為用來定義 SELECT 陳述式的一部分。 通用資料表運算式可以包括指向本身的參考。 這稱為遞迴通用資料表運算式。  
   

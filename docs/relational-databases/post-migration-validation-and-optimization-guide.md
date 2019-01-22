@@ -1,6 +1,6 @@
 ---
 title: 移轉後驗證和最佳化指南 | Microsoft Docs
-ms.date: 5/03/2017
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,23 +13,25 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d85de6deffa9e140bc5f9bf489afd60e0dbbc948
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
+ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213617"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54206364"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉後步驟對於協調任何資料精確度和完整性，以及發現工作負載的效能問題等方面非常重要。
 
-# <a name="common-performance-scenarios"></a>常見的效能案例 
+## <a name="common-performance-scenarios"></a>常見的效能案例
+
 以下是一些移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 平台後常發生的效能案例以及解決方法。 這些包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定案例 (舊版移轉至新版)，以及外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 ## <a name="CEUpgrade"></a>因為 CE 版本變更造成的查詢衰退
- 
+
 **適用於：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
 從舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 移轉至 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 或更新版本，並升級到最新的[資料庫相容性層級](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)時，工作負載可能會有效能衰退的風險。
@@ -126,6 +128,7 @@ ms.locfileid: "53213617"
 > 因為 MSTVF (多重陳述式資料表值函數) 的輸出資料表不會在編譯時建立，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具會依賴啟發學習法，而不是實際的統計資料，來判斷資料列的估計值。 即使將索引加入基底資料表，也沒有什麼幫助。 對於 MSTVF，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用固定估計值 1 作為 MSTVF 預期傳回的資料列數目 (從 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 開始，固定估計值為 100 個資料列)。
 
 ### <a name="steps-to-resolve"></a>解決步驟
+
 1.  如果多個陳述式 TVF 只是單一陳述式，請轉換成內嵌 TVF。
 
     ```sql
@@ -142,7 +145,8 @@ ms.locfileid: "53213617"
     RETURN
     END
     ```
-    若要 
+
+    內嵌格式範例會顯示在下方。
 
     ```sql
     CREATE FUNCTION dbo.tfnGetRecentAddress_inline(@ID int)
@@ -158,7 +162,8 @@ ms.locfileid: "53213617"
 
 2.  如果更加複雜，請考慮使用記憶體最佳化資料表或暫存資料表所儲存的中繼結果。
 
-##  <a name="Additional_Reading"></a> 其他閱讀資料  
+##  <a name="Additional_Reading"></a> 其他閱讀資料
+
  [使用查詢存放區的最佳作法](../relational-databases/performance/best-practice-with-the-query-store.md)  
 [記憶體最佳化資料表](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
 [使用者定義的函式](../relational-databases/user-defined-functions/user-defined-functions.md)  

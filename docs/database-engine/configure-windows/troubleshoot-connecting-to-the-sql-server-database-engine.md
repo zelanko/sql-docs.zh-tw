@@ -14,15 +14,19 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 853f3c26f729db2256ad859174eeef16d4698453
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531073"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300465"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+
+  > [!div class="nextstepaction"]
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 這是疑難排解技術的完整清單，於無法連接到 SQL Server Database Engine 時使用。 這些步驟不是按照您最可能處理的問題順序排列。 這些步驟是從最基本到最複雜的問題順序排列。 這些步驟假設您使用 TCP/IP 通訊協定從另一部電腦連接到 SQL Server，這是最常見的狀況。 這些步驟是針對 SQL Server 和用戶端應用程式都執行 Windows 10 的 SQL Server 2016 所撰寫，不過這些步驟一般也適用於其他版本的 SQL Server 和其他作業系統，只是要略加修改。
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6d16f2c11effaeddbbe5981f5cf6055186ceb8e
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609754"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405670"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>搭配使用外部資料表精靈與 CSV 檔案
 

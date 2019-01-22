@@ -1,7 +1,7 @@
 ---
 title: 資料庫層級角色 | Microsoft 文件
 ms.custom: ''
-ms.date: 06/29/2017
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,14 +39,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f90a0ac06ed8852410874ffc2fb4a26b04ebf3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780826"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420093"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   為了輕鬆管理資料庫中的權限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了幾個 *「角色」* (Role)，這些角色是分組其他主體的安全性主體。 它們就像是 ***Windows 作業系統中的*** 群組 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 資料庫層級角色的權限範圍為整個資料庫。  
@@ -92,11 +93,11 @@ ms.locfileid: "47780826"
 
 |角色名稱|Description|  
 |--------------------|-----------------|
-**dbmanager** | 可以建立和刪除資料庫。 建立資料庫的 dbmanager 角色成員會變成該資料庫的擁有者，讓使用者能夠像 dbo 使用者一樣連接至該資料庫。 dbo 使用者具有資料庫的所有資料庫權限。 dbmanager 角色成員不一定有非其所有之資料庫的存取權限。
-**loginmanager** | 可以建立及刪除虛擬 master 資料庫的登入。  
+|**dbmanager** | 可以建立和刪除資料庫。 建立資料庫的 dbmanager 角色成員會變成該資料庫的擁有者，讓使用者能夠像 dbo 使用者一樣連接至該資料庫。 dbo 使用者具有資料庫的所有資料庫權限。 dbmanager 角色成員不一定有非其所有之資料庫的存取權限。|
+|**loginmanager** | 可以建立及刪除虛擬 master 資料庫的登入。|
 
 > [!NOTE]
-> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
+> 伺服器層級主體和 Azure Active Directory 系統管理員 (如已設定) 具有 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 的所有權限，而不必是任何角色成員。 如需詳細資訊，請參閱 [SQL Database 驗證和授權：授與存取權](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)。 
   
 ## <a name="msdb-roles"></a>msdb 角色  
  msdb 資料庫含有下表所示的特殊用途角色。  
@@ -114,7 +115,7 @@ ms.locfileid: "47780826"
 
 ## <a name="working-with-r-services"></a>使用 R 服務  
 
-**適用於：** SQL Server (從 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
+**適用於：** SQL Server (從 [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)] 開始)   
 
 安裝 R 服務時，可使用額外的資料庫角色來管理封裝。 如需詳細資訊，請參閱 [SQL Server 的 R 封裝管理](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md)。
 

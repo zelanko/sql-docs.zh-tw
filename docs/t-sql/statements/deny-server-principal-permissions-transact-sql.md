@@ -19,15 +19,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - logins [SQL Server], denying access
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6435471a8913135ecc59388c6b5de559d7ab3582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804296"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361602"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY 伺服器主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ DENY permission [ ,...n ] }
  *permission*  
  指定可以拒絕的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
- LOGIN **::** *SQL_Server_login*  
+ LOGIN **::***SQL_Server_login*  
  指定要拒絕其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要項。  
   
  SERVER ROLE **::** *server_role*  

@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4df60da8f70eaddd0aeea28d7bb498a8273e1486
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
+ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543952"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317778"
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WHERE is_masked = 1;
  新增動態資料遮罩會實作為基礎資料表上的結構描述變更，因此無法在具有相依性的資料行上執行。 若要暫時解決這項限制，您可以先移除相依性，並新增動態資料遮罩，然後重新建立相依性。 例如，如果相依性是基於相依於該資料行索引，則您可以卸除索引，並新增遮罩，然後重新建立相依索引。
  
 
-## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全性注意事項︰使用推斷或暴力破解方法略過遮罩
+## <a name="security-note-bypassing-masking-using-inference-or-brute-force-techniques"></a>安全性注意事項：使用推斷或暴力破解方法略過遮罩
 
 動態資料遮罩的設計是要藉由限制應用程式所使用之預先定義查詢集的資料曝光，簡化應用程式開發。 雖然動態資料遮罩也可以用來避免在直接存取生產資料庫時意外洩露機密資料，您必須特別注意具有特定查詢權限的無特殊權限使用者，可以套用技術以存取實際的資料。 如果需要授與這類特定存取權，應該使用稽核來監視所有的資料庫活動，並減輕這種情況。
  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - identity columns [SQL Server], IDENTITY property
 - autonumbers, identity numbers
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09422e46babcb966fdc4c86153e91439a5e46c88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507396"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326639"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (屬性)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -78,7 +78,7 @@ IDENTITY [ (seed , increment) ]
   
  每份資料表都只能建立一個識別欄位。  
   
- 在經記憶體最佳化的資料表中，種子和增量必須設為 1,1。 若將種子或增量設為 1 以外的值，會產生下列錯誤：經記憶體最佳化的資料表不支援使用 1 以外的種子和增量值。  
+ 在經記憶體最佳化的資料表中，種子和增量必須設為 1,1。 將種子或增量設定為 1 以外的值會導致發生下列錯誤：記憶體最佳化資料表不支援使用 1 以外的種子或增量值。  
   
 ## <a name="examples"></a>範例  
   

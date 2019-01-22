@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a71962ea2e0a6d40534a9884fbb026e3d90aaf1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590482"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126638"
 ---
 # <a name="replication-distribution-agent"></a>複寫散發代理程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,9 +144,9 @@ distrib [-?]
 |**2**|指定要使用 SSL，而且憑證會經過驗證。|  
  
  > [!NOTE]  
- >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 'Alias Name' 參數應為伺服器名稱，且應將 'Server' 參數設為 SQL Server 的完整名稱。
+ >  定義的 SSL 憑證必須包含 SQL Server 的完整網域名稱才會有效。 為了讓代理程式能在將 -EncryptionLevel 設定為 2 時成功連線，請在本機 SQL Server 上建立別名。 ‘Alias Name’ 參數應為伺服器名稱，且應將 ‘Server’ 參數設為 SQL Server 的完整名稱。
 
- 如需詳細資訊，請參閱[安全性概觀 &#40;複寫&#41;](../../../relational-databases/replication/security/security-overview-replication.md)。  
+ 如需詳細資訊，請參閱[檢視及修改複寫安全性設定](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)。  
   
  **-ErrorFile** _error_path_and_file_name_  
  這是由散發代理程式產生之錯誤檔的路徑和檔案名稱。 此檔案是在「訂閱者」端套用複寫交易時於發生故障處產生的；「發行者」或「散發者」端發生的錯誤將不記錄在此檔案中。 此檔案包含失敗的複寫交易和相關的錯誤訊息。 如果未指定，錯誤檔將在散發代理程式的目前目錄中產生。 錯誤檔的名稱是含有 .err 副檔名的散發代理程式名稱。 如果指定的檔案名稱存在，錯誤訊息就會附加至該檔案。 這個參數最多可以有 256 個 Unicode 字元。  
@@ -276,7 +276,7 @@ distrib [-?]
  指定散發的訂閱類型。  值為 **0** 表示發送訂閱、值為 **1** 表示提取訂閱，而值為 2 則表示匿名訂閱。  
   
  **-TransactionsPerHistory** [ **0**| **1**|...**10000**]  
- 指定記錄作業的交易間隔。 如果上一個記錄執行個體之後認可的交易數目大於這個選項，系統就會記錄記錄訊息。 預設值為 100。 **0** 值表示無限 **TransactionsPerHistory**。 請參閱前面的 **-MessageInterval** 參數。  
+ 指定記錄作業的交易間隔。 如果上一個記錄執行個體之後認可的交易數目大於這個選項，系統就會記錄記錄訊息。 預設值為 100。 **0** 值表示無限 **TransactionsPerHistory**。 See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  必須針對允許資料轉換的發行集指定為參數。  

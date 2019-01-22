@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b790bcd89f4ad22a78b6a0da43b4d86642e518c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: dc4b6f393529923c8de6b0c25754c5185e4f1bb5
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208478"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54129678"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
@@ -218,7 +218,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [複寫、變更追蹤、變更資料擷取和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [管理 &#40;複寫&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [複寫管理常見問題集](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **若要建立並設定可用性群組**  
   

@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48596269a6e87f28127a5749ff662d1b401608a9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532772"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327469"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>使用 PowerShell 設定永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "52532772"
 
 工作  |發行項  |存取純文字金鑰/金鑰存放區  |存取資料庫   
 ---------|---------|---------|---------
-步驟 1： 在金鑰存放區中建立資料行主要金鑰。<br><br>**注意︰** SqlServer PowerShell 模組不支援此步驟。 若要從命令列完成這項工作，請使用所選金鑰存放區的特有工具。 |[建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 是 | 否     
+步驟 1： 在金鑰存放區中建立資料行主要金鑰。<br><br>**注意：** SqlServer PowerShell 模組不支援此步驟。 若要從命令列完成這項工作，請使用所選金鑰存放區的特有工具。 |[建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | 是 | 否     
 步驟 2：  啟動 PowerShell 環境並匯入 SqlServer PowerShell 模組。  |   [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   |    否    | 否         
 步驟 3：  連接到您的伺服器和資料庫。     |     [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase)    |    否     | 是         
 步驟 4：  建立包含資料行主要金鑰位置相關資訊的 *SqlColumnMasterKeySettings* 物件。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 使用金鑰存放區特有的 Cmdlet。   |     [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)        |   否      | 否         
 步驟 5：  在資料庫中建立資料行主要金鑰的相關中繼資料。      |    [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意︰** 實際上，這個 Cmdlet 發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式來建立金鑰中繼資料。|    否     |    是
 步驟 6：  向 Azure 驗證，如果您的資料行主要金鑰儲存在 Azure 金鑰保存庫中。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |  是   | 否         
-步驟 7：  產生新的資料行加密金鑰，並使用資料行主要金鑰將它加密，然後在資料庫中建立資料行加密金鑰中繼資料。     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注意︰** 請使用一種可在內部產生並加密資料行加密金鑰的 Cmdlet。<br><br>**注意：** 實際上，這個 Cmdlet 會發出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式來建立金鑰中繼資料。  | 是 | 是
+步驟 7：  產生新的資料行加密金鑰，並使用資料行主要金鑰將它加密，然後在資料庫中建立資料行加密金鑰中繼資料。     |    [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注意：** 請使用一種可在內部產生並加密資料行加密金鑰的 Cmdlet。<br><br>**注意：** 實際上，這個 Cmdlet 會發出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式來建立金鑰中繼資料。  | 是 | 是
   
 
 ## <a name="windows-certificate-store-without-role-separation-example"></a>不使用角色隔離的 Windows 憑證存放區 (範例)
@@ -88,16 +88,16 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure SubscriptionId>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<datacenter location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzConteXt -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 
 # Import the SqlServer module.
@@ -191,7 +191,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 工作  |發行項  |存取純文字金鑰/金鑰存放區  |存取資料庫  
 ---------|---------|---------|---------
-步驟 1： 在金鑰存放區中建立資料行主要金鑰。<br><br>**注意︰** SqlServer 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區類型特有的工具。     | [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    是    | 否 
+步驟 1： 在金鑰存放區中建立資料行主要金鑰。<br><br>**注意：** SqlServer 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區類型特有的工具。     | [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)  |    是    | 否 
 步驟 2：  啟動 PowerShell 工作階段並匯入 SqlServer 模組。      |     [匯入 SqlServer 模組](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule)     | 否 | 否         
 步驟 3：  建立包含資料行主要金鑰位置相關資訊的 *SqlColumnMasterKeySettings* 物件。 *SqlColumnMasterKeySettings* 是存在於 PowerShell 記憶體中的物件。 使用金鑰存放區特有的 Cmdlet。 |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | 否         | 否         
 步驟 4：  向 Azure 驗證，如果您的資料行主要金鑰儲存在 Azure 金鑰保存庫中。 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |是|否         
@@ -209,7 +209,7 @@ DBA 使用接收自安全性系統管理員的資訊 (前文步驟 6)，在資�
 步驟 3：  連接到您的伺服器和資料庫。 | [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 步驟 4：  建立包含資料行主要金鑰位置相關資訊的 SqlColumnMasterKeySettings 物件。 SqlColumnMasterKeySettings 是存在於記憶體中的物件。 | New-SqlColumnMasterKeySettings | 否 | 否
 步驟 5： 在資料庫中建立資料行主要金鑰的相關中繼資料 | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br>**注意︰** 實際上，這個 Cmdlet 發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式來建立資料行主要金鑰中繼資料。 | 否 | 是
-步驟 6： 在資料庫中建立資料行加密金鑰的中繼資料。 | New-SqlColumnEncryptionKey<br>**注意︰** Dba 會利用只建立資料行加密金鑰中繼資料的 Cmdlet 變化。<br>實際上，這個 Cmdlet 會發出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式來建立資料行加密金鑰中繼資料。 | 否 | 是
+步驟 6： 在資料庫中建立資料行加密金鑰的中繼資料。 | New-SqlColumnEncryptionKey<br>**注意：** DBA 會利用只建立資料行加密金鑰中繼資料的 Cmdlet 變化。<br>實際上，這個 Cmdlet 會發出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式來建立資料行加密金鑰中繼資料。 | 否 | 是
   
 ## <a name="windows-certificate-store-with-role-separation-example"></a>使用角色隔離的 Windows 憑證存放區 (範例)
 

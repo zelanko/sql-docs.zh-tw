@@ -55,18 +55,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55f5056f65daa3c9f52809087f4cf6773d708910
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8a77956d457e70566cbebef0e92d952b0b1158d9
+ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980504"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54300505"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 > [!div class="nextstepaction"]
-> [請協助我們改善 SQL Server 文件！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 在資料表或檢視上建立關聯式索引。 也稱為資料列存放區索引，因為它是叢集或非叢集的 B 型樹狀結構索引。 您可以在資料表中含有資料之前，先建立資料列存放區索引。 特別是在查詢會從特定資料行中選取，或需要以特定順序排序值時，使用資料列存放區索引來改善查詢效能。  
   
@@ -278,7 +278,7 @@ CLUSTERED
   
  已篩選的索引不適用於 XML 索引和全文檢索索引。 如果是 UNIQUE 索引，只有選取的資料列必須有唯一的索引值。 已篩選的索引不允許 IGNORE_DUP_KEY 選項。  
   
-ON *partition_scheme_name* **( *column_name* )**  
+ON _partition_scheme_name_ **( *column_name* )**  
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定分割區配置來定義要做為分割區索引之分割區對應目標的檔案群組。 透過執行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，讓資料分割配置一定會存在於資料庫內。 *column_name* 會指定資料分割索引將進行分割的資料行。 此資料行必須符合 *partition_scheme_name* 所使用資料分割函數引數的資料類型、長度與有效位數。 *column_name* 不限定為索引定義中的資料行。 可以指定基底資料表中的任何資料行，但有個例外是，在分割 UNIQUE 索引時，必須從用來作為唯一索引鍵使用的資料行中選擇 *column_name*。 這項限制可讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 只在單一分割區內驗證索引鍵值的唯一性。  
@@ -476,7 +476,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF 索引作業不是可繼續的作業。
 
-MAX_DURATION **=** *time* [**MINUTES**] 與 **RESUMABLE = ON** (需要 **ONLINE = ON**) 搭配使用。
+MAX_DURATION **=** _time_ [**MINUTES**] 與 **RESUMABLE = ON** (需要 **ONLINE = ON**) 搭配使用。
  
 **適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
 
@@ -696,7 +696,7 @@ INSERT INTO t1 VALUES (1, 0);
   
 -   只能使用 WITH (**_option\_name_ = ON | OFF**) 來指定新的索引選項。  
 -   不能在相同的陳述式中同時利用與舊版本相容的語法和新語法來指定選項。 例如，指定 WITH (**DROP_EXISTING, ONLINE = ON**) 會造成陳述式失敗。  
--   當您建立 XML 索引時，必須搭配 WITH (***option_name*= ON | OFF**) 來指定選項。  
+-   當您建立 XML 索引時，必須搭配 WITH (**_option_name_= ON | OFF**) 來指定選項。  
   
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 子句  
  您可以利用 DROP_EXISTING 子句來重建索引、加入或卸除資料行、修改選項、修改資料行排序次序，或變更分割區配置或檔案群組。  

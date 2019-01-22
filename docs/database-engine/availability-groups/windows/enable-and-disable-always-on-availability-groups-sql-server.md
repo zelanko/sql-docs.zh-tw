@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66db1468b93e2ff95073bfd7e9f065860f774a0f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202787"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54125421"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>啟用或停用 Always On 可用性群組功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "53202787"
   
 2.  指向 [開始]  功能表上的 [所有程式] ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 [組態工具] ，再按一下 [SQL Server 組態管理員] 。  
   
-3.  在 SQL Server 設定管理員 中，按一下 SQL Server 服務，以滑鼠右鍵按一下 SQL Server (\<執行個體名稱>)****，其中 **\<執行個體名稱>** 是要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 屬性。  
+3.  在 SQL Server 組態管理員 中，按一下 SQL Server 服務，以滑鼠右鍵按一下 SQL Server (\<_instance name_>)，其中 **\<** instance name**>** 是要啟用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 屬性。  
   
 4.  選取 [AlwaysOn 高可用性] 索引標籤。  
   
@@ -198,7 +198,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
-3.  在 [SQL Server 設定管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 [SQL Server (\<執行個體名稱>)]****，其中 **\<執行個體名稱>** 是要停用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
+3.  在 [SQL Server 組態管理員] 中，按一下 [SQL Server 服務]，以滑鼠右鍵按一下 [SQL Server (\<_instance name_>)]，其中 **\<**_instance name_**>** 是要停用 AlwaysOn 可用性群組的本機伺服器執行個體名稱，然後按一下 [屬性]。  
   
 4.  在 [AlwaysOn 高可用性] 索引標籤上，取消選取 [啟用 AlwaysOn 可用性群組] 核取方塊，然後按一下 [確定]。  
   

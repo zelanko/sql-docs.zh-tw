@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a65105416da0a53327cbcd174062a92d3659529
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207407"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54126138"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的唯讀路由
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "53207407"
   
     -   若要設定次要角色的唯讀路由，請在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 SECONDARY_ROLE 選項，如下所示：  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**')**  
   
          唯讀路由 URL 的參數如下：  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53207407"
   
     -   若要設定主要角色的唯讀路由，請在 ADD REPLICA 或 MODIFY REPLICA WITH 子句中指定 PRIMARY_ROLE 選項，如下所示：  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***server***'** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('**_server_**'** [ **,**...*n* ] **))**  
   
          其中， *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。  
   
@@ -189,13 +189,13 @@ GO
   
 2.  將可用性複本加入可用性群組時，請使用 **New-SqlAvailabilityReplica** Cmdlet。 修改現有的可用性複本時，請使用 **Set-SqlAvailabilityReplica** Cmdlet。 相關參數如下所示：  
   
-    -   若要設定次要角色的唯讀路由，請指定 **ReadonlyRoutingConnectionUrl"***url***"** 參數。  
+    -   若要設定次要角色的唯讀路由，請指定 **ReadonlyRoutingConnectionUrl"**_url_**"** 參數。  
   
          其中， *url* 是路由至複本進行唯讀連接時要使用的連接性完整網域名稱 (FQDN) 和通訊埠。 例如：  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          如需詳細資訊，請參閱 [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)(計算 AlwaysOn 的 read_only_routing_url)。  
   
-    -   若要設定主要角色的連線存取，請指定 **ReadonlyRoutingList"***server***"** [ **,**...*n* ]，其中 *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   若要設定主要角色的連接存取，請指定 **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ]，其中 *server* 會識別裝載可用性群組中唯讀次要複本的伺服器執行個體。 例如：  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  您必須先設定複本的唯讀路由 URL，然後再設定其唯讀路由清單。  

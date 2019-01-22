@@ -21,16 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e0481611eb666b893395581805c923cf03921ad9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509376"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327779"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WITH IDENTITY = 'identity_name'
  SECRET **='**_secret_**'**  
  指定外寄驗證所需的秘密。  
   
- 當認證用來存取 Azure Key Vault 時，**CREATE CREDENTIAL** 的 **SECRET** 引數在 Azure Active Directory 中需要**服務主體**的 *\<Client ID>* (不含連字號) 和 *\<Secret>* 才能一起傳遞，並且之間沒有空格。 請參閱以下的範例 C。 當認證使用共用存取簽章時，**SECRET** 是共用存取簽章權杖。 請參閱下方範例 D。  如需在 Azure 容器上建立預存存取原則和共用存取簽章的相關資訊，請參閱[第 1 課︰在 Azure 容器上建立預存存取原則和共用存取簽章](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
+ 當認證用來存取 Azure Key Vault 時，**CREATE CREDENTIAL** 的 **SECRET** 引數在 Azure Active Directory 中需要**服務主體**的 *\<Client ID>* (不含連字號) 和 *\<Secret>* 才能一起傳遞，並且之間沒有空格。 請參閱以下的範例 C。 當認證使用共用存取簽章時，**SECRET** 是共用存取簽章權杖。 請參閱下方範例 D。  如需有關在 Azure 容器上建立預存存取原則與共用存取簽章的詳細資訊，請參閱[第 1 課：在 Azure 容器上建立預存存取原則和共用存取簽章](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  指定*企業金鑰管理 (EKM) 提供者*的名稱。 如需金鑰管理的詳細資訊，請參閱[可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。  
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 權杖建立認證  
  **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- 下列範例會使用 SAS 權杖來建立共用存取簽章憑證。  如需在 Azure 容器上建立預存存取原則和共用存取簽章，再使用共用存取簽章來建立認證的教學課程，請參閱[教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ 下列範例會使用 SAS 權杖來建立共用存取簽章憑證。  如需在 Azure 容器上建立預存存取原則和共用存取簽章，再使用共用存取簽章來建立認證的教學課程，請參閱[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 引數要求名稱與容器路徑相符，開頭為 https，而且不包含尾端斜線。 **IDENTITY** 引數需要名稱 *SHARED ACCESS SIGNATURE*。 **SECRET** 引數需要共用存取簽章權杖。  
@@ -167,7 +167,7 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [第 2 課︰使用共用存取簽章建立 SQL Server 認證](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [第 2 課：使用共用存取簽章建立 SQL Server 認證](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [共用存取簽章](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

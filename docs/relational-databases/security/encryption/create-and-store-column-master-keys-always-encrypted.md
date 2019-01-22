@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33faa406912e2f80d6911e9e4f94b27397e89cef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534757"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54326419"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>建立及儲存資料行主要金鑰 (永遠加密)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,16 +120,16 @@ Azure 金鑰保存庫可協助保護密碼編譯金鑰和密碼，並且是存�
 
 ```
 # Create a column master key in Azure Key Vault.
-Login-AzureRmAccount
+Connect-AzAccount
 $SubscriptionId = "<Azure subscription ID>"
 $resourceGroup = "<resource group name>"
 $azureLocation = "<key vault location>"
 $akvName = "<key vault name>"
 $akvKeyName = "<column master key name>"
-$azureCtx = Set-AzureRMContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId # Sets the context for the below cmdlets to the specified subscription.
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation # Creates a new resource group - skip, if you desire group already exists.
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation -SKU premium # Creates a new key vault - skip if your vault already exists.
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, delete, list, update, import, backup, restore, wrapKey, unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
@@ -145,7 +145,7 @@ $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destinatio
 
 #### <a name="using-powershell"></a>使用 PowerShell
 
-若要讓使用者和應用程式能存取 Azure 金鑰保存庫中的實際金鑰，您必須設定保存庫的存取原則 ([AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx))：
+若要讓使用者和應用程式能存取 Azure Key Vault 中的實際金鑰，您必須設定保存庫的存取原則 ([Set-AzKeyVaultAccessPolicy](https://docs.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy))：
 
 ```
 $vaultName = "<vault name>"
@@ -154,9 +154,9 @@ $userPrincipalName = "<user to grant access to>"
 $clientId = "<client Id>"
 
 # grant users permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
+Set-AzKeyVaultAccessPolicy -VaultName $vaultName -ResourceGroupName $resourceGroupName -PermissionsToKeys create,get,wrapKey,unwrapKey,sign,verify,list -UserPrincipalName $userPrincipalName
 # grant applications permissions to the keys:
-Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
+Set-AzKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $resourceGroupName -ServicePrincipalName $clientId -PermissionsToKeys get,wrapKey,unwrapKey,sign,verify,list
 ```
 
 ## <a name="creating-column-master-keys-in-hardware-security-modules-using-cng"></a>使用 CNG 在硬體安全性模組中建立資料行主要金鑰
@@ -207,7 +207,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 永遠加密的資料行主要金鑰可以儲存在實作密碼編譯 API (CAPI) 的金鑰存放區中。 一般而言，這類型的存放區是硬體安全性模組 (HSM)，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。 HSM 傳統上為插入卡或直接連接到電腦 (本機 HSM) 或網路伺服器的外部裝置形式。
 
-若要讓 HSM 可供指定電腦上的應用程式使用，實作 CAPI 的密碼編譯服務提供者 (CSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 CSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。 注意︰CAPI 是已被取代的舊版 API。 如果 KSP 可用於您的 HSM，您應該使用它，而不要使用 CSP/CAPI。
+若要讓 HSM 可供指定電腦上的應用程式使用，實作 CAPI 的密碼編譯服務提供者 (CSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 CSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。 注意：CAPI 是已被取代的舊版 API。 如果 KSP 可用於您的 HSM，您應該使用它，而不要使用 CSP/CAPI。
 
 CSP 必須支援 RSA 演算法才能搭配永遠加密。
 

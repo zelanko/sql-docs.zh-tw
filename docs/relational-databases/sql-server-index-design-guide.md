@@ -1,7 +1,7 @@
 ---
 title: SQL Server 索引架構和設計指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/06/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 217fe5bc510d5f25eaddfad69fa08ad4dd760c8f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: e294759588beeb5d79f4613848ca49634d8e40cf
+ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712699"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54420183"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -218,7 +218,7 @@ ON Purchasing.PurchaseOrderDetail
 |-|-|
 |[sys.indexes &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
 |[sys.partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|
-[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)|  
 |[sys.column_store_segments &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|
 |[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -824,7 +824,7 @@ HASH (Column2) WITH (BUCKET_COUNT = 64);
 
 ### <a name="in-memory-nonclustered-index-architecture"></a>記憶體內部非叢集索引架構
 
-記憶體內部非叢集索引是使用原本由 Microsoft Research 2011 規畫說明的 Bw 型樹狀結構的資料結構來實作。 Bw 型樹狀結構是鎖定且不需閂鎖的 B 型樹狀結構變化。 如需詳細資料，請參閱 [The Bw-Tree: A B-tree for New Hardware Platforms](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) (Bw 型樹狀結構：新硬體平台的 B 型樹狀結構)。 
+記憶體內部非叢集索引是使用原本由 Microsoft Research 2011 規畫說明的 Bw 型樹狀結構的資料結構來實作。 Bw 型樹狀結構是鎖定且不需閂鎖的 B 型樹狀結構變化。 如需詳細資訊，請參閱 [Bw 型樹狀結構：新硬體平台的 Bw 型樹狀結構](https://www.microsoft.com/research/publication/the-bw-tree-a-b-tree-for-new-hardware/) \(英文\)。 
 
 在極高層面，Bw 型樹狀結構可以視為依頁面識別碼 (PidMap) 組織的頁面地圖，方便配置並重複使用頁面識別碼 (PidAlloc) 和在頁面地圖中互相連結的頁面集。 這三個高層級的子元件構成 Bw 型樹狀結構的基本內部結構。
 

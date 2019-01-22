@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1c337e4a43082cef846623073054ae75513dc31
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d04f3383409e51be48498853068c93b2d1a66725
+ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209077"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54211089"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性群組租用、叢集和健全狀況檢查逾時的機制和方針 
 
@@ -46,7 +46,7 @@ Always On 資源 DLL 會監視內部 SQL Server 元件的狀態。 `sp_server_di
 
 租用機制會強制在 SQL Server 與 Windows Server 容錯移轉叢集之間同步處理。 發出容錯移轉命令時，叢集服務會對目前主要複本的資源 DLL 發出離線呼叫。 資源 DLL 會先嘗試使用預存程序將 AG 離線。 如果此預存程序失敗或逾時，則會對叢集服務回報失敗，然後發出終止命令。 此終止會再次嘗試執行相同的預存程序，但叢集這次不會等候資源 DLL 回報成功或失敗，就會將 AG 連線到新的複本。 如果第二個程序呼叫失敗，則資源主機將必須依賴租用機制將執行個體離線。 呼叫資源 DLL 將 AG 離線時，資源 DLL 會發出租用停止事件信號，並喚醒 SQL Server 租用背景工作執行緒來將 AG 離線。 即使未發出此停止事件信號，租用仍會過期，且複本會轉換成解析中狀態。 
 
-租用基本上是主要執行個體與叢集之間的同步處理機制，但它也可以建立不需要容錯移轉的失敗狀況。 例如，高 CPU、記憶體不足狀況、SQL 處理序在產生記憶體傾印時回應失敗、整個系統停止回應，或是 tempdb 壓力都可能會導致租用背景工作執行緒資源不足，導致從 SQL 執行個體更新失敗並造成容錯移轉。 
+租用基本上是主要執行個體與叢集之間的同步處理機制，但它也可以建立不需要容錯移轉的失敗狀況。 例如，高 CPU、記憶體不足狀況、SQL 處理序在產生記憶體傾印時無法回應、整個系統停止回應、叢集 (WSFC) 因為仲裁遺失而離線或是 tempdb 壓力，都可能會導致租用背景工作執行緒資源不足，導致從 SQL 執行個體更新租用失敗，並引發容錯移轉。 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>叢集逾時值方針 
 

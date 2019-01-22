@@ -16,12 +16,12 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44e11edc9608dc4c10634ea58af1c0140bba666f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207437"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226665"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +84,9 @@ ms.locfileid: "53207437"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |自動容錯移轉|否|否|是|  
 |已規劃的手動容錯移轉|否|是|是|  
-|強制容錯移轉|是|是|是**\***|  
+|強制容錯移轉|是|是|是 **&#42;**|  
   
- **\*** 如果您在已同步處理的次要複本上發出強制容錯移轉命令，次要複本的行為會與手動容錯移轉時相同。  
+ **&#42;** 如果您在已同步處理的次要複本上發出強制容錯移轉命令，次要複本的行為會與手動容錯移轉時相同。  
   
  在容錯移轉期間，資料庫無法使用的時間量將依容錯移轉的類型及其原因而定。  
   

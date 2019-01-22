@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: b7bf2dcebf6b9b453a0f5ff839b9eb627698899e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520695"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327839"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52520695"
 -   **在 PowerShell 中：** 使用不同於金鑰保存庫的現有 TDE 非對稱金鑰名稱來建立新的非對稱金鑰。  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52520695"
 * 授與 SQL Server 服務主體使用新保存庫的權限。  
 * 修改 Database Engine 所使用的 SQL Server 認證，以反映新的保存庫名稱 (如果需要)。  
   
-只要金鑰備份位於相同的地理區域或國家雲端，就可以跨 Azure 區域進行還原：美國、加拿大、日本、澳洲、印度、亞太地區 (APAC)、歐洲巴西、中國、美國政府或德國。  
+金鑰備份可以跨 Azure 區域還原，只要它們仍存在於相同的地理區域或下列國家/地區雲端內：美國、加拿大、日本、澳洲、印度、亞太地區、 歐洲巴西、中國、美國政府或德國。  
   
   
 ##  <a name="AppendixB"></a> B. 常見問題集  

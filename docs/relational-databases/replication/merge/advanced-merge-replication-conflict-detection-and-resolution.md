@@ -20,30 +20,32 @@ ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf815386b00ca70ceacbb549b9dbccd50c9a482
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
+ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206347"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54130568"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>進階合併式複寫 - 衝突偵測與解決方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   發行者與訂閱者連接並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解析程式 (在發行項加入發行集時指定)，決定要接受及傳播至其他站台的資料。  
+
+ 合併複寫提供各種不同的方法用來偵測及解決衝突。 針對大部份的應用程式，預設方法即已適用：  
+  
+-   如果是在「發行者」和「訂閱者」之間發生衝突，則會保留「發行者」變更而放棄「訂閱者」變更。   
+-   如果是在兩個使用客訂閱 (提取訂閱的預設類型) 的「訂閱者」之間發生衝突，則會保留第一個訂閱者為了與「發行者」保持同步所做的變更，而放棄第二個「訂閱者」的變更。 如需指定用戶端和伺服器訂閱的詳細資訊，請參閱[指定合併訂閱類型和衝突解決優先權 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)。   
+-   如果是在兩個使用主訂閱 (發送訂閱的預設類型) 的「訂閱者」之間發生衝突，則會保留具備最高優先權值的訂閱者的變更，而放棄另一個「訂閱者」的變更。 如果優先權的值相同，則會保留第一個「訂閱者」為了與「發行者」保持同步所做的變更。  
   
 > [!NOTE]  
 >  雖然「訂閱者」會與「發行者」同步，但是衝突通常是在不同「訂閱者」端進行更新之間發生，而不是在「訂閱者」端和「發行者」端進行更新時發生。  
   
- 衝突偵測與解決的行為取決於下列選項，這些選項會在本主題中說明：  
-  
--   您是否指定資料行層級追蹤、資料列層級追蹤或邏輯記錄層級追蹤。  
-  
+ 衝突偵測與解決的行為取決於下列選項，這些選項會在本主題中說明：    
+-   您是否指定資料行層級追蹤、資料列層級追蹤或邏輯記錄層級追蹤。    
 -   您是否指定預設的優先權式解決機制或指定發行項解析程式。 發行項解析程式可以是：  
   
-    -   以 Managed 程式碼撰寫的 *商務邏輯處理常式* 。  
-  
-    -   以 COM 為基礎的 *自訂解析程式*。  
-  
+    -   以 Managed 程式碼撰寫的 *商務邏輯處理常式* 。   
+    -   以 COM 為基礎的 *自訂解析程式*。    
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]提供之以 COM 為基礎的解析程式。  
   
      如果使用預設解析機制，則會依據所用的訂閱類型進一步決定行為：用戶端或伺服器。  
@@ -51,18 +53,32 @@ ms.locfileid: "53206347"
 ## <a name="conflict-detection"></a>衝突偵測  
  資料變更是否算是衝突取決於您為發行項所設定的衝突追蹤類型：  
   
--   當您選取資料行層級衝突追蹤時，如果在一個以上的複寫節點對相同資料列中的相同資料行進行變更，則該變更會被視為衝突。  
-  
--   當您選取資料列層級追蹤時，如果在一個以上的複寫節點對相同資料列中的任何資料行進行變更，則該變更會被視為衝突 (對應資料列中受影響的資料行不需要相同)。  
-  
+-   當您選取資料行層級衝突追蹤時，如果在一個以上的複寫節點對相同資料列中的相同資料行進行變更，則該變更會被視為衝突。    
+-   當您選取資料列層級追蹤時，如果在一個以上的複寫節點對相同資料列中的任何資料行進行變更，則該變更會被視為衝突 (對應資料列中受影響的資料行不需要相同)。    
 -   當您選取邏輯記錄層級追蹤時，如果在一個以上的複寫節點對相同邏輯記錄中的任何資料列進行變更，則該變更會被視為衝突 (對應資料列中受影響的資料行不需要相同)。  
   
  如需詳細資訊，請參閱 [偵測和解決邏輯記錄中的衝突](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
- 若要指定發行項的衝突追蹤與解決層級，請參閱＜ [指定合併發行項的衝突追蹤與解決層級](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md)＞。  
+ 若要為發行項指定衝突追蹤與解決等級，請參閱 [Specify merge replication properties](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (指定合併式複寫屬性)。  
   
 ## <a name="conflict-resolution"></a>衝突解決  
  在偵測到衝突後，「合併代理程式」會啟動選取的衝突解析程式，並使用該解析程式決定衝突成功者。 成功的資料列已套用至「發行者」與「訂閱者」，而失敗的資料列則已寫入衝突資料表。 衝突會在解析程式執行後立即解決，除非您選擇以互動方式解決衝突。  
+
+解決合併式複寫衝突 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  發行者與訂閱者連接並進行同步處理時，合併代理程式會偵測是否有任何衝突。 如果偵測到衝突，「合併代理程式」會使用衝突解決器來決定要接受並傳播到其他網站的資料。  
+  
+> [!NOTE]  
+>  雖然訂閱者會與發行者同步，不過衝突通常是在不同訂閱者端所做的更新之間發生，而不是發生在訂閱者端和發行者端的更新。  
+  
+ 合併複寫提供各種不同的方法用來偵測及解決衝突。 針對大部份的應用程式，預設方法即已適用：  
+  
+-   如果是在「發行者」和「訂閱者」之間發生衝突，則會保留「發行者」變更而放棄「訂閱者」變更。  
+  
+-   如果是在兩個使用客訂閱 (提取訂閱的預設類型) 的「訂閱者」之間發生衝突，則會保留第一個訂閱者為了與「發行者」保持同步所做的變更，而放棄第二個「訂閱者」的變更。 如需指定用戶端和伺服器訂閱的詳細資訊，請參閱[指定合併訂閱類型和衝突解決優先權 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)。  
+  
+-   如果是在兩個使用主訂閱 (發送訂閱的預設類型) 的「訂閱者」之間發生衝突，則會保留具備最高優先權值的訂閱者的變更，而放棄另一個「訂閱者」的變更。 如果優先權的值相同，則會保留第一個「訂閱者」為了與「發行者」保持同步所做的變更。  
+  
+ 如需合併複寫的衝突偵測與解決的詳細資訊，請參閱＜ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)＞。  
   
 ### <a name="resolver-types"></a>解析程式類型  
  在合併式複寫中，衝突解決會在發行項層級發生。 對於由許多發行項所組成的發行集來說，您可以使用各種不同的衝突解析程式來處理不同的發行項，也可以使用相同的解析程式來解決一個發行項、數個發行項，或者組成發行集的所有發行項。  

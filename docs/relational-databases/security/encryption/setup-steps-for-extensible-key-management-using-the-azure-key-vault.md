@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 253dd918fb3fec410e2bcf28d6fba7cd24786d04
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
+ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522916"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54327349"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 進行 SQL Server TDE 可延伸金鑰管理 - 設定步驟
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
  ![EKM 金鑰識別碼](../../../relational-databases/security/encryption/media/ekm-key-id.png "EKM 金鑰識別碼")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>第 II 部分︰建立金鑰保存庫和金鑰  
+## <a name="part-ii-create-a-key-vault-and-key"></a>第 II 部分：建立金鑰保存庫和金鑰  
  SQL Server Database Engine 將使用此處所建立的金鑰保存庫和金鑰來進行加密金鑰保護。  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
      安裝並啓動[最新的 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 或更新版本)。 使用下列命令登入您的 Azure 帳戶︰  
   
     ```powershell  
-    Login-AzureRmAccount  
+    Connect-AzAccount  
     ```  
   
      此陳述式會傳回：  
@@ -83,14 +83,14 @@ SQL Server 版本  |可轉散發套件的安裝連結
     ```  
   
     > [!NOTE]  
-    >  如果您擁有多個訂用帳戶，並想要指定特定的訂用帳戶來使用保存庫，請使用 `Get-AzureRmSubscription` 來查看訂用帳戶，並使用 `Select-AzureRmSubscription` 來選擇正確的訂用帳戶。 否則，PowerShell 預設會為您選取一個訂用帳戶。  
+    >  如果您擁有多個訂用帳戶，並想要指定特定的訂用帳戶來使用保存庫，請使用 `Get-AzSubscription` 來查看訂用帳戶，並使用 `Select-AzSubscription` 來選擇正確的訂用帳戶。 否則，PowerShell 預設會為您選取一個訂用帳戶。  
   
 2.  **建立新的資源群組**  
   
      所有透過 Azure Resource Manager 建立的 Azure 資源都必須包含在資源群組中。 建立資源群組來包含您的金鑰保存庫。 此範例會使用 `ContosoDevRG`。 請自行選擇 **唯一的** 資源群組和金鑰保存庫名稱，因為所有金鑰保存庫名稱都是全域唯一的。  
   
     ```powershell  
-    New-AzureRmResourceGroup -Name ContosoDevRG -Location 'East Asia'  
+    New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
      此陳述式會傳回：  
@@ -109,10 +109,10 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 3.  **建立金鑰保存庫**  
   
-     `New-AzureRmKeyVault` Cmdlet 需要資源群組名稱、金鑰保存庫名稱和地理位置。 例如，針對名為 `ContosoDevKeyVault`的金鑰保存庫，輸入：  
+     `New-AzKeyVault` Cmdlet 需要資源群組名稱、金鑰保存庫名稱和地理位置。 例如，針對名為 `ContosoDevKeyVault`的金鑰保存庫，輸入：  
   
     ```powershell  
-    New-AzureRmKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
@@ -152,20 +152,20 @@ SQL Server 版本  |可轉散發套件的安裝連結
     > [!IMPORTANT]  
     >  Azure Active Directory 服務主體必須至少具有金鑰保存庫 `get`、`wrapKey` 和 `unwrapKey` 的權限。  
   
-     如下所示，針對 **參數，使用第 I 部分中的** 用戶端識別碼 `ServicePrincipalName` 。 `Set-AzureRmKeyVaultAccessPolicy` 順利執行時，會以沒有輸出的無訊息模式執行。  
+     如下所示，針對 **參數，使用第 I 部分中的** 用戶端識別碼 `ServicePrincipalName` 。 `Set-AzKeyVaultAccessPolicy` 順利執行時，會以沒有輸出的無訊息模式執行。  
   
     ```powershell  
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
       -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
-     呼叫 `Get-AzureRmKeyVault` Cmdlet 來確認權限。 在 [存取原則] 的陳述式輸出中，您應該會看到您的 AAD 應用程式名稱列為有權存取此金鑰保存庫的另一個租用戶。  
+     呼叫 `Get-AzKeyVault` Cmdlet 來確認權限。 在 [存取原則] 的陳述式輸出中，您應該會看到您的 AAD 應用程式名稱列為有權存取此金鑰保存庫的另一個租用戶。  
   
        
 5.  **在金鑰保存庫中產生非對稱金鑰**  
   
-     有兩種方式可以在 Azure 金鑰保存庫中產生金鑰︰1) 匯入現有的金鑰，或 2) 建立新的金鑰。  
+     有兩種方式可以在 Azure Key Vault 中產生金鑰：1) 匯入現有的金鑰或 2) 建立新的金鑰。  
                   
       > [!NOTE]
         >  SQL Server 僅支援 2048 位元的 RSA 金鑰。
@@ -185,9 +185,9 @@ SQL Server 版本  |可轉散發套件的安裝連結
     ### <a name="types-of-keys"></a>金鑰的類型︰
     您可以在搭配 SQL Server 的 Azure Key Vault 中產生兩種類型的金鑰。 兩者都是非對稱 2048 位元 RSA 金鑰。  
   
-    -   **受軟體保護** ：在軟體中處理，並在靜止時加密。 受軟體保護金鑰上的作業發生於 Azure 虛擬機器。 建議用於未在生產環境部署中使用的金鑰。  
+    -   **受軟體保護：** 在軟體中處理，並在靜止時加密。 受軟體保護金鑰上的作業發生於 Azure 虛擬機器。 建議用於未在生產環境部署中使用的金鑰。  
   
-    -   **受 HSM 保護** ：由硬體安全模組 (HSM) 所建立和保護，以提供額外安全性。 每個金鑰版本的成本大約美金 $1 元。  
+    -   **受 HSM 保護：** 由硬體安全模組 (HSM) 所建立和保護，以提供額外安全性。 每個金鑰版本的成本大約美金 $1 元。  
   
         > [!IMPORTANT]  
         >  SQL Server 連接器需要金鑰名稱僅使用字元 "a-z"、"A-Z"、"0-9" 和 "-"，且長度限制為 26 個字元。   
@@ -242,7 +242,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
  從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=521700)下載 SQL Server 連接器。 (這應該由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所完成)。  
 
 > [!NOTE]  
->  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面之＜SQL Server 連接器的升級＞下的指示，升級為 1.0.1.0 版或更新版本。
+>  1.0.0.440 版和較舊版本皆已被取代，而且生產環境也不再支援。 請前往 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=45344)，使用 [SQL Server 連接器維護和疑難排解](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)頁面＜SQL Server 連接器升級＞下的指示，升級為 1.0.1.0 版或更新版本。
 
 > [!NOTE]  
 > 1.0.5.0 版中的憑證指紋演算法有重大變更。 您在升級至 1.0.5.0 版之後可能會遇到資料庫還原失敗。 請參閱知識庫文章 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0)。

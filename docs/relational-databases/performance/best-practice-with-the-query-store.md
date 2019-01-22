@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2203e8fe68861fd0e69dae352fef8c015e76859f
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 8b46686dfb440e9d0d9fa68fcaf23d51eea86c97
+ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328968"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54143468"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -329,17 +329,17 @@ WHERE is_forced_plan = 1;
   
 ##  <a name="Renaming"></a> 如果您有強制計劃的查詢，請避免重新命名資料庫。  
 
- 執行計劃參考使用三部分名稱 `database.schema.object` 的物件。   
+執行計劃參考使用三部分名稱 `database.schema.object` 的物件。   
 
 如果您重新命名資料庫，強制執行計畫將會失敗，而導致重新編譯所有後續查詢執行。  
 
-##  <a name="Recovery"></a> 在任務關鍵性伺服器上使用追蹤旗標來改善災害復原
+##  <a name="Recovery"></a> 在任務關鍵性伺服器使用追蹤旗標
  
-在高可用性和災害復原案例期間，全域追蹤旗標 7745 及 7752 可用於改進查詢存放區的效能。 如需詳細資訊，請參閱[追蹤旗標](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+全域追蹤旗標 7745 和 7752 可用來為使用了查詢存放區的資料庫提升可用性。 如需詳細資訊，請參閱[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
   
-追蹤旗標 7745 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠關閉前，防止查詢存放區將資料寫入磁碟中的預設行為。
+-  追蹤旗標 7745 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠關閉前，防止查詢存放區將資料寫入磁碟中的預設行為。 這表示已收集但尚未保存到磁碟的查詢存放區資料將會遺失。 
   
-追蹤旗標 7752 會啟用查詢存放區的非同步載入，並允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在完整載入查詢存放區之前執行查詢。 預設查詢存放區行為會防止在查詢存放區復原前執行查詢。
+-  追蹤旗標 7752 提供非同步載入查詢存放區的功能。 這讓資料庫能夠連線，並可在查詢存放區完全復原之前執行查詢。 預設行為是同步載入查詢存放區。 這個預設行為使得查詢無法在查詢存放區復原之前執行，但同時也防止資料收集過程遺漏任何查詢。
 
 > [!IMPORTANT]
 > 若您只針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 負載見解使用查詢存放區，請計畫儘快安裝 [KB 4340759](https://support.microsoft.com/help/4340759) 中的效能延展性修正程式。 

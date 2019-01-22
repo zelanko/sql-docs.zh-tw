@@ -14,12 +14,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6d9d780473346a446811595d850aafd4da9d5930
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
+ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214167"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226555"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 可用性群組操作問題的原則式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53214167"
 ##  <a name="Always OnPBM"></a> 預先定義的原則和問題  
  下表摘要說明預先定義的原則。  
   
-|原則名稱|問題|類別目錄**\***|Facet|  
+|原則名稱|問題|類別 **&#42;**|Facet|  
 |-----------------|-----------|--------------------|-----------|  
 |WSFC 叢集狀態|[WSFC 叢集服務離線](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|嚴重|SQL Server 的執行個體|  
 |可用性群組線上狀態|[可用性群組為離線](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|嚴重|可用性群組|  
@@ -67,7 +67,7 @@ ms.locfileid: "53214167"
 |可用性資料庫資料同步處理狀態|[可用性資料庫的資料同步狀態健康情況不佳](../../../database-engine/availability-groups/windows/data-synchronization-state-of-availability-database-is-not-healthy.md)。|警告|可用性資料庫|  
   
 > [!IMPORTANT]
->  **\*** 對於 AlwaysOn 原則而言，類別目錄名稱會當作識別碼使用。 變更 AlwaysOn 類別目錄的名稱會破壞其健全狀況評估功能。 因此，請勿修改 AlwaysOn 類別目錄的名稱。  
+>  **&#42;** 對於 AlwaysOn 原則而言，類別名稱會當作識別碼使用。 變更 AlwaysOn 類別目錄的名稱會破壞其健全狀況評估功能。 因此，請勿修改 AlwaysOn 類別目錄的名稱。  
   
 ##  <a name="Dashboard"></a> AlwaysOn 儀表板  
  AlwaysOn 儀表板會為您提供可用性群組健全狀況的摘要檢視。 AlwaysOn 儀表板包括下列功能：  

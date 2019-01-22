@@ -14,12 +14,12 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ef7392b4e41271bacd91b5e1a9244bbfe1c1139
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
+ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558635"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54405858"
 ---
 # <a name="master-database"></a>master 資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51558635"
 下表列出 SQL Server 與 Azure SQL Database 受控執行個體 **master** 資料庫中每個資料庫選項的預設值，以及是否可以修改選項值。 若要檢視這些選項目前的設定，請參閱 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。  
   
 > [!IMPORTANT]
-> 針對 Azure SQL Database 邏輯伺服器，使用者無法控制這些資料庫選項。
+> 針對 Azure SQL Database 邏輯伺服器，使用者沒有控制這些資料庫選項的權限。
 
 |資料庫選項|預設值|可以修改|  
 |---------------------|-------------------|---------------------|  

@@ -14,16 +14,16 @@ ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c383707f9dd7dcef2cb6bf5516092025a4cc18a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: db4a09177a9af1afa73fadfbf585f5b9e0f0b8ab
+ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697376"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397517"
 ---
 # <a name="add-existing-items-to-a-project"></a>將現有的項目加入至專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要使副檔名與專案類型相關聯，請參閱 [如何：使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
+請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有兩種專案類型：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要將其他副檔名關聯於某個專案類型，請參閱[如何：使副檔名與程式碼編輯器相關聯](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>將現有的查詢或其他檔案加入專案中  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51697376"
     使用此選項來篩選所顯示的檔案和資料夾。 輸入要篩選的完整或部份檔案名稱；使用星號 (`*`) 作為萬用字元。  
   
     > [!NOTE]  
-    > 在 [檔案名稱] 方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如，**https://mywebsite** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\\myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
+    > 在 [檔案名稱] 方塊中輸入 URL 或網路路徑，導覽至 Web 和網路位置。 例如，**`https://mywebsite`** 會顯示在 mywebsite Web 位置上的可用檔案，而 **\\\myserver\myshare** 則會顯示在 myserver 的 myshare 位置上的可用檔案。  
   
     **檔案類型**  
     使用此選項根據副檔名篩選檔案。 每個產品都會列出最常用之檔案類型的預設篩選。  
