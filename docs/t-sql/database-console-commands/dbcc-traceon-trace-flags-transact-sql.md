@@ -1,7 +1,7 @@
 ---
 title: 追蹤旗標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 90f27a36b455b4c0b497b43d5b302684a1a7a9ba
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: f57bd4ef770d4958c09bd54fb19718e8e8c641df
+ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206464"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361688"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -145,6 +145,7 @@ ms.locfileid: "54206464"
 |**9488**|<a name="9488"></a>使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的查詢最佳化工具基數估計模型時，將資料表值函式的固定估計設為預設值 1 (對應 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 與更舊版本的查詢最佳化工具基數估計模型下的預設值)。<br /><br />**範圍**：全域或工作階段或查詢|
 |**9495**|在 INSERT...SELECT 作業的插入期間停用平行處理原則，這項規則同時套用至使用者和暫存資料表。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3180087) \(機器翻譯\)<br /><br />**範圍**：全域或工作階段| 
 |**9567**|在自動植入期間，針對 Always On 可用性群組啟用資料流的壓縮。 在自動植入期間，壓縮可以大幅縮短傳輸時間，而且會增加處理器負載。 如需詳細資訊，請參閱[自動初始化 Always On 可用性群組](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**：全域或工作階段|
+|**9571**|停用對預設資料庫路徑進行可用性群組自動植入。 如需詳細資訊，請參閱 [磁碟配置](../../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md)。<br /><br />**範圍**：全域或工作階段| 
 |**9591**|在 Always On 可用性群組中停用記錄區塊壓縮。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的同步和非同步複本預設會使用記錄區塊壓縮。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，只有非同步複本會使用壓縮。 <br /><br />**範圍**：全域或工作階段|
 |**9592**|啟用同步可用性群組的記錄資料流壓縮。 因為壓縮會增加延遲，所以在同步可用性群組上預設會停用這項功能。 如需詳細資訊，請參閱 [微調可用性群組的壓縮](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**範圍**：全域或工作階段| 
 |**9929**|將記憶體中的檢查點檔案大小減少至各 1 MB。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3147012) \(機器翻譯\)。<br /><br />**範圍**：只限全域|  
