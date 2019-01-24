@@ -1,7 +1,7 @@
 ---
 title: sys.database_query_store_options & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cef670e97387c2eb4b9493fc1303e36a742f89bc
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ca46886ab9648142bb79863dad0818033c2ce0a1
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265922"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838105"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   傳回這個資料庫的查詢存放區選項。  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])， [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "53265922"
 |**readonly_reason**|**int**|當**desired_state_desc**是 READ_WRITE 和**actual_state_desc**是 READ_ONLY **readonly_reason**傳回位元對應來表示查詢存放區處於為何唯讀模式。<br /><br /> 1-資料庫處於唯讀模式<br /><br /> 2-資料庫處於單一使用者模式<br /><br /> 4-資料庫處於緊急模式<br /><br /> 8-資料庫是次要複本 (適用於 Always On 和 Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]異地複寫)。 這個值可以有效地觀察到只有**讀取**次要複本<br /><br /> 65536-查詢存放區已達到的 MAX_STORAGE_SIZE_MB 選項所設定的大小限制。<br /><br /> 131072 查詢存放區中不同的陳述式的-數目已達到內部記憶體限制。 建議您移除您不需要的查詢，或升級至較高的服務層，以便傳送至讀寫模式的查詢存放區。<br />只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br /> 262144 大小的記憶體等候保存在磁碟上的項目已達到內部記憶體限制。 只有在記憶體中的項目會保存在磁碟上之前，暫時查詢存放區將處於唯讀模式。 <br />只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。<br /><br />524288 資料庫已達到磁碟大小限制。 查詢存放區資料庫的一部分使用者，因此如果沒有更多可用空間的資料庫，表示查詢存放區無法進一步成長就淪陷了。<br />只適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。 <br /> <br /> 若要切換的查詢存放區作業模式後，要讀寫，請參閱**確認查詢存放區會持續收集查詢資料**一節[執行查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)。|  
 |**current_storage_size_mb**|**bigint**|查詢存放區的大小以 mb 為單位的磁碟上。|  
 |**flush_interval_seconds**|**bigint**|定義的規則排清的查詢存放區資料到磁碟的期限。 預設值為 900 （15 分鐘）。<br /><br /> 藉由變更`ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)`陳述式。|  
-|**interval_length_minutes**|**bigint**|統計資料彙總間隔。 不允許任意值。 使用下列其中一項：1、 5、 10、 15、 30、 60 和 1440年分鐘。 預設值為 60 分鐘。|  
+|**interval_length_minutes**|**bigint**|統計資料彙總間隔。 不允許任意值。 您可以使用下列其中一項：1、 5、 10、 15、 30、 60 和 1440年分鐘。 預設值為 60 分鐘。|  
 |**max_storage_size_mb**|**bigint**|查詢存放區的最大磁碟大小。 預設值為 100 MB。<br />針對 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium 版本預設值為 1Gb，而針對 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版本預設值為 10Mb。<br /><br /> 藉由變更`ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)`陳述式。|  
 |**stale_query_threshold_days**|**bigint**|查詢與任何原則設定會保留查詢存放區中的日數。 預設值為 30。 若要停用保留原則設為 0。<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 7 天。<br /><br /> 藉由變更`ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )`陳述式。|  
 |**max_plans_per_query**|**bigint**|限制預存的計劃的最大數目。 預設值為 200。 如果達到最大值時，查詢存放區會停止擷取新的計畫，該查詢。 設定為 0 會移除關於擷取之計畫的數目限制。<br /><br /> 藉由變更`ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)`陳述式。|  
@@ -60,13 +60,13 @@ ms.locfileid: "53265922"
  需要**VIEW DATABASE STATE**權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.query_context_settings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   

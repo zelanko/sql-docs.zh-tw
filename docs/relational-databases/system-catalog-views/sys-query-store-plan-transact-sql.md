@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 01/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea7c955718dbe6d2437b44b915057fc095151dc4
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 8a1b27787c1b987c4fc881c3d1e170efae937670
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419791"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838095"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -43,20 +43,20 @@ ms.locfileid: "54419791"
 |**compatibility_level**|**smallint**|在查詢中參考之資料庫的資料庫相容性層級。|  
 |**query_plan_hash**|**binary(8)**|個別的計劃的 MD5 雜湊。|  
 |**query_plan**|**nvarchar(max)**|Showplan XML 查詢計劃。|  
-|**is_online_index_plan**|**bit**|計劃的線上索引建立期間使用。|  
-|**is_trivial_plan**|**bit**|計劃是簡式的計劃 （查詢最佳化工具的階段 0 中的輸出）。|  
-|**is_parallel_plan**|**bit**|計劃是平行。|  
-|**is_forced_plan**|**bit**|計劃會標示為強制，當使用者執行預存程序**sys.sp_query_store_force_plan**。 強制執行機制*並不保證*完全此方案將用於查詢所參考**query_id**。 強制執行計劃會導致重新編譯的查詢，並通常會產生完全相同或類似的計畫所參考的計劃**plan_id**。 如果強制執行計劃不成功， **force_failure_count**會遞增並**last_force_failure_reason**會填入失敗原因。|  
-|**is_natively_compiled**|**bit**|計劃包含原生編譯的記憶體最佳化程序。 (0 = FALSE,1 = TRUE)。|  
-|**force_failure_count**|**bigint**|強制執行此計劃已失敗的次數的數目。 可以只在重新編譯查詢時，才會遞增 (*不會在每次執行*)。 它會重設為 0 每次**is_plan_forced**已從**FALSE**來**TRUE**。|  
-|**last_force_failure_reason**|**int**|強制執行計劃失敗的原因。<br /><br /> 0： 沒有失敗，否則為錯誤號碼的錯誤，導致無法強制執行<br /><br /> 8637:ONLINE_INDEX_BUILD<br /><br /> 8683:INVALID_STARJOIN<br /><br /> 8684:TIME_OUT<br /><br /> 8689:NO_DB<br /><br /> 8690:HINT_CONFLICT<br /><br /> 8691:SETOPT_CONFLICT<br /><br /> 8694:DQ_NO_FORCING_SUPPORTED<br /><br /> 8698:NO_PLAN<br /><br /> 8712:NO_INDEX<br /><br /> 8713:VIEW_COMPILE_FAILED<br /><br /> \<其他值 >:GENERAL_FAILURE|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文字描述。<br /><br /> ONLINE_INDEX_BUILD： 嘗試修改資料，而目標資料表有正在線上建立索引的查詢<br /><br /> INVALID_STARJOIN： 計劃包含無效的 StarJoin 規格<br /><br /> TIME_OUT:最佳化工具超過允許的作業，搜尋指定的強制計劃的計劃時的數字<br /><br /> NO_DB:計劃中指定的資料庫不存在<br /><br /> HINT_CONFLICT:無法編譯查詢，因為使用查詢提示相衝突的計劃<br /><br /> DQ_NO_FORCING_SUPPORTED:無法執行查詢，因為計劃的分散式的查詢或全文檢索作業使用發生衝突。<br /><br /> NO_PLAN:查詢處理器無法產生查詢計劃，因為無法驗證強制執行的計畫，有效的查詢<br /><br /> NO_INDEX:不會再計劃中指定的索引存在<br /><br /> VIEW_COMPILE_FAILED:因為計劃中參考的索引檢視表中的問題而無法強制執行查詢計劃<br /><br /> GENERAL_FAILURE： 一般的強制錯誤 （未涵蓋上述原因）|  
+|**is_online_index_plan**|**bit**|計劃的線上索引建立期間使用。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**is_trivial_plan**|**bit**|計劃是簡式的計劃 （查詢最佳化工具的階段 0 中的輸出）。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**is_parallel_plan**|**bit**|計劃是平行。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回一 (1)。|  
+|**is_forced_plan**|**bit**|計劃會標示為強制，當使用者執行預存程序**sys.sp_query_store_force_plan**。 強制執行機制*並不保證*完全此方案將用於查詢所參考**query_id**。 強制執行計劃會導致重新編譯的查詢，並通常會產生完全相同或類似的計畫所參考的計劃**plan_id**。 如果強制執行計劃不成功， **force_failure_count**會遞增並**last_force_failure_reason**會填入失敗原因。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**is_natively_compiled**|**bit**|計劃包含原生編譯的記憶體最佳化程序。 (0 = FALSE,1 = TRUE)。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**force_failure_count**|**bigint**|強制執行此計劃已失敗的次數的數目。 可以只在重新編譯查詢時，才會遞增 (*不會在每次執行*)。 它會重設為 0 每次**is_plan_forced**已從**FALSE**來**TRUE**。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**last_force_failure_reason**|**int**|強制執行計劃失敗的原因。<br /><br /> 0： 沒有失敗，否則為錯誤號碼的錯誤，導致無法強制執行<br /><br /> 8637:ONLINE_INDEX_BUILD<br /><br /> 8683:INVALID_STARJOIN<br /><br /> 8684:TIME_OUT<br /><br /> 8689:NO_DB<br /><br /> 8690:HINT_CONFLICT<br /><br /> 8691:SETOPT_CONFLICT<br /><br /> 8694:DQ_NO_FORCING_SUPPORTED<br /><br /> 8698:NO_PLAN<br /><br /> 8712:NO_INDEX<br /><br /> 8713:VIEW_COMPILE_FAILED<br /><br /> \<其他值 >:GENERAL_FAILURE <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Last_force_failure_reason_desc 的文字描述。<br /><br /> ONLINE_INDEX_BUILD： 嘗試修改資料，而目標資料表有正在線上建立索引的查詢<br /><br /> INVALID_STARJOIN： 計劃包含無效的 StarJoin 規格<br /><br /> TIME_OUT:最佳化工具超過允許的作業，搜尋指定的強制計劃的計劃時的數字<br /><br /> NO_DB:計劃中指定的資料庫不存在<br /><br /> HINT_CONFLICT:無法編譯查詢，因為使用查詢提示相衝突的計劃<br /><br /> DQ_NO_FORCING_SUPPORTED:無法執行查詢，因為計劃的分散式的查詢或全文檢索作業使用發生衝突。<br /><br /> NO_PLAN:查詢處理器無法產生查詢計劃，因為無法驗證強制執行的計畫，有效的查詢<br /><br /> NO_INDEX:不會再計劃中指定的索引存在<br /><br /> VIEW_COMPILE_FAILED:因為計劃中參考的索引檢視表中的問題而無法強制執行查詢計劃<br /><br /> GENERAL_FAILURE： 一般的強制錯誤 （未涵蓋上述原因） <br/>**注意：** Azure SQL 資料倉儲一律會傳回*NONE*。|  
 |**count_compiles**|**bigint**|規劃編譯統計資料。|  
 |**initial_compile_start_time**|**datetimeoffset**|規劃編譯統計資料。|  
 |**last_compile_start_time**|**datetimeoffset**|規劃編譯統計資料。|  
 |**last_execution_time**|**datetimeoffset**|上次執行時間的最後一個參考查詢/計劃的結束的時間。|  
-|**avg_compile_duration**|**float**|規劃編譯統計資料。|  
-|**last_compile_duration**|**bigint**|規劃編譯統計資料。|  
+|**avg_compile_duration**|**float**|規劃編譯統計資料。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
+|**last_compile_duration**|**bigint**|規劃編譯統計資料。 <br/>**注意：** Azure SQL 資料倉儲一律會傳回零 (0)。|  
 |**plan_forcing_type**|**int**|計畫強制執行型別。<br /><br />0：無<br /><br />1：MANUAL<br /><br />2：AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type 的文字描述。<br /><br />NONE:強制執行任何計劃<br /><br />MANUAL:已由使用者強制的計劃<br /><br />自動：自動調整所強制的計劃|  
 
