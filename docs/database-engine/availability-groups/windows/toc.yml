@@ -1,331 +1,321 @@
-items:
 - name: 概觀
   href: overview-of-always-on-availability-groups-sql-server.md
   items:
-  - name: 互通性
-    href: always-on-availability-groups-interoperability-sql-server.md
-  - name: 技術和功能
-    href: always-on-availability-groups-sql-server.md
+    - name: 可用性模式
+      href: availability-modes-always-on-availability-groups.md
+    - name: 技術和功能
+      href: always-on-availability-groups-sql-server.md
+    - name: 必要條件、限制及建議
+      href: prereqs-restrictions-recommendations-always-on-availability.md
 - name: 快速入門
   items:
-  - name: 使用者入門
-    href: getting-started-with-always-on-availability-groups-sql-server.md
-  - name: 必要條件、限制及建議
-    href: prereqs-restrictions-recommendations-always-on-availability.md
-  - name: 建立及設定
-    href: creation-and-configuration-of-availability-groups-sql-server.md
-    items:
-    - name: 精靈
-      href: use-the-availability-group-wizard-sql-server-management-studio.md
-    - name: 對話方塊
-      href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-    - name: Transact-SQL
-      href: create-an-availability-group-transact-sql.md
-    - name: PowerShell
-      href: create-an-availability-group-sql-server-powershell.md
-    - name: Azure 虛擬機器
-      href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
-  - name: 接聽程式
-    href: create-or-configure-an-availability-group-listener-sql-server.md
+    - name: 使用者入門
+      href: getting-started-with-always-on-availability-groups-sql-server.md
+    - name: 建立及設定
+      href: creation-and-configuration-of-availability-groups-sql-server.md
+      items:
+        - name: 精靈
+          href: use-the-availability-group-wizard-sql-server-management-studio.md
+        - name: 對話方塊
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Transact-SQL
+          href: create-an-availability-group-transact-sql.md
+        - name: PowerShell
+          href: create-an-availability-group-sql-server-powershell.md
+        - name: Azure 虛擬機器
+          href: 'https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview'
+- name: 操作方式
+  items:
+    - name: 設定可用性群組
+      items:
+        - name: 變更複本可用性
+          href: change-the-availability-mode-of-an-availability-replica-sql-server.md
+        - name: 變更複本容錯移轉模式
+          href: change-the-failover-mode-of-an-availability-replica-sql-server.md
+        - name: 設定自動植入
+          href: automatically-initialize-always-on-availability-group.md
+        - name: 設定複本的備份
+          href: configure-backup-on-availability-replicas-sql-server.md
+        - name: 設定彈性容錯移轉原則
+          href: configure-flexible-automatic-failover-policy.md
+        - name: 設定複本的備份
+          href: configure-backup-on-availability-replicas-sql-server.md
+        - name: 設定分散式可用性群組
+          href: configure-distributed-availability-groups.md
+        - name: 設定分散式交易
+          href: configure-availability-group-for-distributed-transactions.md
+        - name: 設定讀取級別可用性群組
+          href: configure-read-scale-availability-groups.md
+        - name: 設定唯讀存取複本
+          href: configure-read-only-access-on-an-availability-replica-sql-server.md
+        - name: 設定唯讀路由
+          href: configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: 移除接聽程式
+          href: remove-an-availability-group-listener-sql-server.md
+        - name: 加入次要資料庫
+          href: join-a-secondary-database-to-an-availability-group-sql-server.md
+        - name: 開始進行資料移動
+          href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
+        - name: 手動準備次要資料庫
+          href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
+        - name: 在新增或修改複本時指定端點 URL
+          href: specify-endpoint-url-adding-or-modifying-availability-replica.md
+        - name: 加入次要複本
+          href: join-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: 調整壓縮
+          href: tune-compression-for-availability-group.md
+        - name: 針對設定進行疑難排解
+          href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
+    - name: 設定執行個體
+      href: configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md
+      items:
+        - name: 啟用與停用
+          href: enable-and-disable-always-on-availability-groups-sql-server.md
+        - name: 建立資料庫鏡像端點 (PowerShell)
+          href: database-mirroring-always-on-availability-groups-powershell.md
+        - name: 建立叢集 DTC
+          href: create-clustered-dtc-for-an-always-on-availability-group.md
+    - name: 監視
+      href: monitoring-of-availability-groups-sql-server.md
+      items:
+        - name: Transact-SQL
+          href: monitor-availability-groups-transact-sql.md
+        - name: SQL Server Management Studio
+          href: use-object-explorer-details-to-monitor-availability-groups.md
+        - name: 檢視可用性群組屬性
+          href: view-availability-group-properties-sql-server.md
+        - name: 檢視複本屬性
+          href: view-availability-replica-properties-sql-server.md
+        - name: 檢視接聽程式屬性
+          href: view-availability-group-listener-properties-sql-server.md
+    - name: 作業
+      items:
+        - name: 新增資料庫
+          items:
+            - name: 對話方塊
+              href: availability-group-add-a-database.md
+            - name: 精靈
+              href: availability-group-add-database-to-group-wizard.md
+        - name: 新增複本 - 精靈
+          href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
+        - name: 新增次要複本
+          href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: 使用加入 Azure 複本精靈 (SQL Server)
+          href: use-the-add-azure-replica-wizard-sql-server.md
+        - name: 變更工作階段逾時期間
+          href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
+        - name: 變更 HADR 叢集內容
+          href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
+        - name: 容錯移轉 - 精靈
+          href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
+        - name: 強制手動容錯移轉
+          href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
+        - name: 已規劃的手動容錯移轉
+          href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
+        - name: 移除可用性群組
+          href: remove-an-availability-group-sql-server.md
+        - name: 移除主要資料庫
+          href: remove-a-primary-database-from-an-availability-group-sql-server.md
+        - name: 移除複本
+          href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
+        - name: 移除次要資料庫
+          href: remove-a-secondary-database-from-an-availability-group-sql-server.md
+        - name: 繼續可用性資料庫
+          href: resume-an-availability-database-sql-server.md
+        - name: 暫止可用性資料庫
+          href: suspend-an-availability-database-sql-server.md
+        - name: 讓可用性群組離線
+          href: take-an-availability-group-offline-sql-server.md
+        - name: 針對失敗的新增檔案作業進行疑難排解
+          href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
+        - name: 升級複本執行個體
+          href: upgrading-always-on-availability-group-replica-instances.md
+        - name: 以原則檢視健全狀況
+          href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+  href: administration-of-an-availability-group-sql-server.md
 - name: 概念
   items:
-  - name: 自動植入次要複本
-    href: automatic-seeding-secondary-replicas.md
-  - name: 可用性群組原則
-    href: always-on-policies-for-operational-issues-always-on-availability.md
-  - name: 可用性模式
-    href: availability-modes-always-on-availability-groups.md
-  - name: 在次要複本上備份
-    href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
-  - name: 基本可用性群組
-    href: basic-availability-groups-always-on-availability-groups.md
-  - name: 用戶端連線
-    href: about-client-connection-access-to-availability-replicas-sql-server.md
-  - name: 用戶端連線性
-    href: always-on-client-connectivity-sql-server.md
-  - name: 分散式可用性群組
-    href: distributed-availability-groups.md
-  - name: 網域獨立的可用性群組
-    href: domain-independent-availability-groups.md
-  - name: 增強型資料庫容錯移轉
-    href: enhanced-database-failover.md
-    items:
-    - name: 資料庫健全狀況偵測
-      href: sql-server-always-on-database-health-detection-failover-option.md
-  - name: 容錯移轉叢集與可用性群組
-    href: failover-clustering-and-always-on-availability-groups-sql-server.md
-  - name: 容錯移轉與容錯移轉模式
-    href: failover-and-failover-modes-always-on-availability-groups.md
-  - name: 自動容錯移轉的彈性容錯移轉原則
-    href: flexible-automatic-failover-policy-availability-group.md
-  - name: 租用、叢集及健全狀況檢查逾時
-    href: availability-group-lease-healthcheck-timeout.md
-  - name: 接聽程式、用戶端與容錯移轉
-    href: listeners-client-connectivity-application-failover.md
-  - name: 登入與作業
-    href: logins-and-jobs-for-availability-group-databases.md
-  - name: 工作階段期間複本之間可能發生的失敗
-    href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
-  - name: 僅供讀取級別
-    href: read-scale-availability-groups.md
-  - name: 可讀取的次要複本
-    href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
-  - name: 與其他功能的互通性
-    items:
-    - name: 複寫、CT 與 CDC
+    - name: 設定
       items:
-      - name: 設定複寫
-        href: configure-replication-for-always-on-availability-groups-sql-server.md
-      - name: 發行集資料庫
-        href: maintaining-an-always-on-publication-database-sql-server.md
-      - name: 訂閱者
-        href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-      - name: 變更追蹤和異動資料擷取
-        href: replicate-track-change-data-capture-always-on-availability.md
-    - name: 自主資料庫
-      href: contained-databases-with-always-on-availability-groups-sql-server.md
-    - name: 資料庫快照集
-      href: database-snapshots-with-always-on-availability-groups-sql-server.md
-    - name: 分散式交易
-      href: transactions-always-on-availability-and-database-mirroring.md
+        - name: 自動植入次要複本
+          href: automatic-seeding-secondary-replicas.md
+        - name: 基本可用性群組
+          href: basic-availability-groups-always-on-availability-groups.md
+        - name: 分散式可用性群組
+          href: distributed-availability-groups.md
+        - name: 網域獨立的可用性群組
+          href: domain-independent-availability-groups.md
+        - name: 容錯移轉叢集與可用性群組
+          href: failover-clustering-and-always-on-availability-groups-sql-server.md
+        - name: 容錯移轉與容錯移轉模式
+          href: failover-and-failover-modes-always-on-availability-groups.md
+        - name: 自動容錯移轉的彈性容錯移轉原則
+          href: flexible-automatic-failover-policy-availability-group.md
+        - name: 僅供讀取級別
+          href: read-scale-availability-groups.md
+    - name: 系統管理
       items:
-      - name: 叢集 DTC
-        href: cluster-dtc-for-sql-server-2016-availability-groups.md
-    - name: 加密的資料庫
-      href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-    - name: 容錯移轉叢集執行個體
-      href: analysis-services-with-always-on-availability-groups.md
-    - name: FILESTREAM 與 FileTable
-      href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-    - name: 從記錄傳送移轉
-      href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-    - name: 遠端 Blob 存放區 (RBS)
-      href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-    - name: Reporting Services
-      href: reporting-services-with-always-on-availability-groups-sql-server.md
-    - name: Service Broker
-      href: service-broker-with-always-on-availability-groups-sql-server.md
-- name: 使用說明指南
-  href: administration-of-an-availability-group-sql-server.md
-  items:
-  - name: 設定可用性群組
-    items:
-    - name: 變更複本可用性
-      href: change-the-availability-mode-of-an-availability-replica-sql-server.md
-    - name: 變更複本容錯移轉模式
-      href: change-the-failover-mode-of-an-availability-replica-sql-server.md
-    - name: 設定自動植入
-      href: automatically-initialize-always-on-availability-group.md
-    - name: 設定複本的備份
-      href: configure-backup-on-availability-replicas-sql-server.md
-    - name: 設定彈性容錯移轉原則
-      href: configure-flexible-automatic-failover-policy.md
-    - name: 設定複本的備份
-      href: configure-backup-on-availability-replicas-sql-server.md
-    - name: 設定分散式可用性群組
-      href: configure-distributed-availability-groups.md
-    - name: 設定分散式交易
-      href: configure-availability-group-for-distributed-transactions.md
-    - name: 設定讀取級別可用性群組
-      href: configure-read-scale-availability-groups.md
-    - name: 設定唯讀存取複本
-      href: configure-read-only-access-on-an-availability-replica-sql-server.md
-    - name: 設定唯讀路由
-      href: configure-read-only-routing-for-an-availability-group-sql-server.md
-    - name: 移除接聽程式
-      href: remove-an-availability-group-listener-sql-server.md
-    - name: 加入次要資料庫
-      href: join-a-secondary-database-to-an-availability-group-sql-server.md
-    - name: 開始進行資料移動
-      href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
-    - name: 手動準備次要資料庫
-      href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
-    - name: 在新增或修改複本時指定端點 URL
-      href: specify-endpoint-url-adding-or-modifying-availability-replica.md
-    - name: 加入次要複本
-      href: join-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: 調整壓縮
-      href: tune-compression-for-availability-group.md
-    - name: 針對設定進行疑難排解
-      href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
-  - name: 設定執行個體
-    href: configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md
-    items:
-    - name: 啟用與停用
-      href: enable-and-disable-always-on-availability-groups-sql-server.md
-    - name: 建立資料庫鏡像端點 (PowerShell)
-      href: database-mirroring-always-on-availability-groups-powershell.md
-    - name: 建立叢集 DTC
-      href: create-clustered-dtc-for-an-always-on-availability-group.md
-  - name: 監視
-    href: monitoring-of-availability-groups-sql-server.md
-    items:
-    - name: Transact-SQL
-      href: monitor-availability-groups-transact-sql.md
-    - name: SQL Server Management Studio
-      href: use-object-explorer-details-to-monitor-availability-groups.md
-    - name: 檢視可用性群組屬性
-      href: view-availability-group-properties-sql-server.md
-    - name: 檢視複本屬性
-      href: view-availability-replica-properties-sql-server.md
-    - name: 檢視接聽程式屬性
-      href: view-availability-group-listener-properties-sql-server.md
-  - name: 作業
-    items:
-    - name: 新增資料庫
+        - name: 在次要複本上備份
+          href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
+        - name: 可讀取的次要複本
+          href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
+        - name: 增強型資料庫容錯移轉
+          href: enhanced-database-failover.md
+        - name: 資料庫健全狀況偵測
+          href: sql-server-always-on-database-health-detection-failover-option.md
+        - name: 租用、叢集及健全狀況檢查逾時
+          href: availability-group-lease-healthcheck-timeout.md
+        - name: 登入與作業
+          href: logins-and-jobs-for-availability-group-databases.md
+        - name: 工作階段期間複本之間可能發生的失敗
+          href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
+    - name: 連接性
       items:
-      - name: 對話方塊
-        href: availability-group-add-a-database.md
-      - name: 精靈
-        href: availability-group-add-database-to-group-wizard.md
-    - name: 新增複本 - 精靈
-      href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
-    - name: 新增次要複本
-      href: add-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: 使用加入 Azure 複本精靈 (SQL Server)
-      href: use-the-add-azure-replica-wizard-sql-server.md
-    - name: 變更工作階段逾時期間
-      href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
-    - name: 變更 HADR 叢集內容
-      href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
-    - name: 容錯移轉 - 精靈
-      href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
-    - name: 強制手動容錯移轉
-      href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
-    - name: 已規劃的手動容錯移轉
-      href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
-    - name: 移除可用性群組
-      href: remove-an-availability-group-sql-server.md
-    - name: 移除主要資料庫
-      href: remove-a-primary-database-from-an-availability-group-sql-server.md
-    - name: 移除複本
-      href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
-    - name: 移除次要資料庫
-      href: remove-a-secondary-database-from-an-availability-group-sql-server.md
-    - name: 繼續可用性資料庫
-      href: resume-an-availability-database-sql-server.md
-    - name: 暫止可用性資料庫
-      href: suspend-an-availability-database-sql-server.md
-    - name: 讓可用性群組離線
-      href: take-an-availability-group-offline-sql-server.md
-    - name: 針對失敗的新增檔案作業進行疑難排解
-      href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
-    - name: 升級複本執行個體
-      href: upgrading-always-on-availability-group-replica-instances.md
-    - name: 以原則檢視健全狀況
-      href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: 用戶端連線
+          href: about-client-connection-access-to-availability-replicas-sql-server.md
+        - name: 用戶端連線性
+          href: always-on-client-connectivity-sql-server.md
+        - name: 接聽程式、用戶端與容錯移轉
+          href: listeners-client-connectivity-application-failover.md
+    - name: 與其他功能的互通性
+      items:
+        - name: 複寫、CT 與 CDC
+          href: replicate-track-change-data-capture-always-on-availability.md
+          items:
+            - name: 設定複寫
+              href: configure-replication-for-always-on-availability-groups-sql-server.md
+            - name: 發行集資料庫
+              href: maintaining-an-always-on-publication-database-sql-server.md
+            - name: 訂閱者
+              href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+        - name: 自主資料庫
+          href: contained-databases-with-always-on-availability-groups-sql-server.md
+        - name: 資料庫快照集
+          href: database-snapshots-with-always-on-availability-groups-sql-server.md
+        - name: 分散式交易
+          href: transactions-always-on-availability-and-database-mirroring.md
+          items:
+            - name: 叢集 DTC
+              href: cluster-dtc-for-sql-server-2016-availability-groups.md
+        - name: 加密的資料庫
+          href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+        - name: 容錯移轉叢集執行個體
+          href: analysis-services-with-always-on-availability-groups.md
+        - name: FILESTREAM 與 FileTable
+          href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+        - name: 從記錄傳送移轉
+          href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+        - name: 遠端 Blob 存放區 (RBS)
+          href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+        - name: Reporting Services
+          href: reporting-services-with-always-on-availability-groups-sql-server.md
+        - name: Service Broker
+          href: service-broker-with-always-on-availability-groups-sql-server.md
 - name: 參考
   items:
-  - name: PowerShell Cmdlet
-    href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-  - name: Transact-SQL
-    href: transact-sql-statements-for-always-on-availability-groups.md
-- name: 資源
-  items:
-  - name: 對話方塊和精靈
-    items:
-    - name: '[加入 IP 位址] 對話方塊'
-      href: add-ip-address-dialog-box-sql-server-management-studio.md
-    - name: 設定可用性群組的唯讀路由。
-      href: configure-read-only-routing-for-an-availability-group-sql-server.md
-    - name: 移除可用性群組接聽程式
-      href: remove-an-availability-group-listener-sql-server.md
-    - name: 指定可用性群組選項頁面 (新增可用性群組精靈/新增資料庫精靈)
-      href: specify-availability-group-name-page.md
-    - name: 選取資料庫頁面 (新增可用性群組精靈和加入資料庫精靈)
-      href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-    - name: 指定複本頁面 (新增可用性群組精靈：加入複本精靈)
-      href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-    - name: 輸入密碼頁面 (加入複本精靈)
-      href: enter-passwords-page-add-replica-wizard.md
-    - name: 選取初始資料同步頁面 (Always On 可用性群組精靈)
-      href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-    - name: 驗證頁面 (AlwaysOn 可用性群組精靈)
-      href: validation-page-always-on-availability-group-wizards.md
-    - name: 摘要頁面 (AlwaysOn 可用性群組精靈)
-      href: summary-page-always-on-availability-group-wizards.md
-    - name: 進度頁面 (AlwaysOn 可用性群組精靈)
-      href: progress-page-always-on-availability-group-wizards.md
-    - name: 結果頁面 (Always On 可用性群組精靈)
-      href: results-page-always-on-availability-group-wizards.md
-    - name: 可用性群組 - 連線到現有的次要複本頁面
-      href: connect-to-existing-secondary-replicas-page.md
-  - name: 使用 AlwaysOn 儀表板 (SQL Server Management Studio)
-    href: use-the-always-on-dashboard-sql-server-management-studio.md
-    items:
-    - name: 選項 (SQL Server AlwaysOn、儀表板頁面)
-      href: options-sql-server-always-on-dashboard-page.md
-    - name: 原則評估結果 (AlwaysOn)
-      href: policy-evaluation-result-always-on.md
-    - name: 可用性複本屬性 (一般頁面)
-      href: availability-replica-properties-general-page.md
-    - name: 可用性群組屬性：新增可用性群組 (一般頁面)
-      href: availability-group-properties-new-availability-group-general-page.md
-    - name: 可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
-      href: availability-group-properties-new-availability-group-backup-preferences-page.md
-  - name: 原則
-    items:
-    - name: 可用性資料庫已暫停
-      href: availability-database-is-suspended.md
-    - name: 可用性群組為離線
-      href: availability-group-is-offline.md
-    - name: 可用性群組尚未就緒，無法自動容錯
-      href: availability-group-is-not-ready-for-automatic-failover.md
-    - name: 可用性複本沒有健全的角色
-      href: availability-replica-does-not-have-a-healthy-role.md
-    - name: 可用性複本已中斷連接
-      href: availability-replica-is-disconnected.md
-    - name: 可用性複本未聯結
-      href: availability-replica-is-not-joined.md
-    - name: 可用性資料庫的資料同步處理狀態不健全
-      href: data-synchronization-state-of-availability-database-is-not-healthy.md
-    - name: 某些可用性資料庫的資料同步處理狀態不健全
-      href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
-    - name: 次要資料庫未加入
-      href: secondary-database-is-not-joined.md
-    - name: 部分可用性複本已中斷連接
-      href: some-availability-replicas-are-disconnected.md
-    - name: 部分可用性複本未同步處理資料
-      href: some-availability-replicas-are-not-synchronizing-data.md
-    - name: 某些可用性複本沒有狀況良好的角色
-      href: some-availability-replicas-do-not-have-a-healthy-role.md
-    - name: 未同步處理某些同步複本
-      href: some-synchronous-replicas-are-not-synchronized.md
-    - name: WSFC 叢集服務離線
-      href: wsfc-cluster-service-is-offline.md
-  - name: 疑難排解與監視指南
-    href: always-on-availability-groups-troubleshooting-and-monitoring-guide.md
-    items:
-    - name: 監視可用性群組的效能
-      href: monitor-performance-for-always-on-availability-groups.md
-    - name: 疑難排解：可用性群組超過 RPO
-      href: troubleshoot-availability-group-exceeded-rpo.md
-    - name: 疑難排解：可用性群組超過 RTO
-      href: troubleshoot-availability-group-exceeded-rto.md
-    - name: 疑難排解：對主要的變更未反映在次要複本上
-      href: troubleshoot-primary-changes-not-reflected-on-secondary.md
-    - name: 對進行疑難排解有助益的工具
-      href: useful-tools-for-troubleshooting.md
+    - name: PowerShell Cmdlet
+      href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
+    - name: Transact-SQL
+      href: transact-sql-statements-for-always-on-availability-groups.md
+    - name: 對話方塊和精靈
       items:
-      - name: 擴充事件
-        href: always-on-extended-events.md
-      - name: 健全狀況診斷記錄
-        href: always-on-health-diagnostics-log.md
-      - name: 原則
-        href: always-on-policies.md
-      - name: 信號緩衝區
-        href: always-on-ring-buffers.md
-      - name: 等候類型
-        href: always-on-wait-types.md
-      - name: CLUSTER.LOG
-        href: cluster-log-always-on-availability-groups.md
-      - name: 動態管理與系統目錄檢視
-        href: dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md
-      - name: SQL Server 錯誤記錄
-        href: sql-server-error-log-always-on-availability-groups.md
-ms.openlocfilehash: c962e839ca3ced89bd8538bfbfe5273e5b837025
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603688"
+        - name: '[加入 IP 位址] 對話方塊'
+          href: add-ip-address-dialog-box-sql-server-management-studio.md
+        - name: 設定可用性群組的唯讀路由。
+          href: configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: 移除可用性群組接聽程式
+          href: remove-an-availability-group-listener-sql-server.md
+        - name: 指定可用性群組選項頁面 (新增可用性群組精靈/新增資料庫精靈)
+          href: specify-availability-group-name-page.md
+        - name: 選取資料庫頁面 (新增可用性群組精靈和加入資料庫精靈)
+          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+        - name: 指定複本頁面 (新增可用性群組精靈：新增複本精靈)
+          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+        - name: 輸入密碼頁面 (加入複本精靈)
+          href: enter-passwords-page-add-replica-wizard.md
+        - name: 選取初始資料同步頁面 (Always On 可用性群組精靈)
+          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+        - name: 驗證頁面 (AlwaysOn 可用性群組精靈)
+          href: validation-page-always-on-availability-group-wizards.md
+        - name: 摘要頁面 (AlwaysOn 可用性群組精靈)
+          href: summary-page-always-on-availability-group-wizards.md
+        - name: 進度頁面 (AlwaysOn 可用性群組精靈)
+          href: progress-page-always-on-availability-group-wizards.md
+        - name: 結果頁面 (Always On 可用性群組精靈)
+          href: results-page-always-on-availability-group-wizards.md
+        - name: 可用性群組 - 連線到現有的次要複本頁面
+          href: connect-to-existing-secondary-replicas-page.md
+    - name: 使用 AlwaysOn 儀表板 (SQL Server Management Studio)
+      href: use-the-always-on-dashboard-sql-server-management-studio.md
+      items:
+        - name: 選項 (SQL Server AlwaysOn、儀表板頁面)
+          href: options-sql-server-always-on-dashboard-page.md
+        - name: 原則評估結果 (AlwaysOn)
+          href: policy-evaluation-result-always-on.md
+        - name: 可用性複本屬性 (一般頁面)
+          href: availability-replica-properties-general-page.md
+        - name: 可用性群組屬性：新增可用性群組 (一般頁面)
+          href: availability-group-properties-new-availability-group-general-page.md
+        - name: 可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
+          href: availability-group-properties-new-availability-group-backup-preferences-page.md
+    - name: 原則
+      href: always-on-policies-for-operational-issues-always-on-availability.md
+      items:
+        - name: 可用性資料庫已暫停
+          href: availability-database-is-suspended.md
+        - name: 可用性群組為離線
+          href: availability-group-is-offline.md
+        - name: 可用性群組尚未就緒，無法自動容錯
+          href: availability-group-is-not-ready-for-automatic-failover.md
+        - name: 可用性複本沒有健全的角色
+          href: availability-replica-does-not-have-a-healthy-role.md
+        - name: 可用性複本已中斷連接
+          href: availability-replica-is-disconnected.md
+        - name: 可用性複本未聯結
+          href: availability-replica-is-not-joined.md
+        - name: 可用性資料庫的資料同步處理狀態不健全
+          href: data-synchronization-state-of-availability-database-is-not-healthy.md
+        - name: 某些可用性資料庫的資料同步處理狀態不健全
+          href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
+        - name: 次要資料庫未加入
+          href: secondary-database-is-not-joined.md
+        - name: 部分可用性複本已中斷連接
+          href: some-availability-replicas-are-disconnected.md
+        - name: 部分可用性複本未同步處理資料
+          href: some-availability-replicas-are-not-synchronizing-data.md
+        - name: 某些可用性複本沒有狀況良好的角色
+          href: some-availability-replicas-do-not-have-a-healthy-role.md
+        - name: 未同步處理某些同步複本
+          href: some-synchronous-replicas-are-not-synchronized.md
+        - name: WSFC 叢集服務離線
+          href: wsfc-cluster-service-is-offline.md
+    - name: 疑難排解與監視指南
+      href: always-on-availability-groups-troubleshooting-and-monitoring-guide.md
+      items:
+        - name: 監視可用性群組的效能
+          href: monitor-performance-for-always-on-availability-groups.md
+        - name: 疑難排解：可用性群組已超過 RPO
+          href: troubleshoot-availability-group-exceeded-rpo.md
+        - name: 疑難排解：可用性群組已超過 RTO
+          href: troubleshoot-availability-group-exceeded-rto.md
+        - name: 疑難排解：對主要複本的變更未反映在次要複本上
+          href: troubleshoot-primary-changes-not-reflected-on-secondary.md
+        - name: 對進行疑難排解有助益的工具
+          href: useful-tools-for-troubleshooting.md
+          items:
+            - name: 擴充事件
+              href: always-on-extended-events.md
+            - name: 健全狀況診斷記錄
+              href: always-on-health-diagnostics-log.md
+            - name: 原則
+              href: always-on-policies.md
+            - name: 信號緩衝區
+              href: always-on-ring-buffers.md
+            - name: 等候類型
+              href: always-on-wait-types.md
+            - name: CLUSTER.LOG
+              href: cluster-log-always-on-availability-groups.md
+            - name: 動態管理與系統目錄檢視
+              href: dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md
+            - name: SQL Server 錯誤記錄
+              href: sql-server-error-log-always-on-availability-groups.md

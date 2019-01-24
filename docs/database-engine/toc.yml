@@ -1,4 +1,3 @@
-items:
 - name: 概觀
   href: sql-server-database-engine-overview.md
 - name: 新功能 - SQL Server 2017
@@ -7,136 +6,132 @@ items:
   href: whats-new-in-sql-server-2016.md
 - name: 版本資訊
   items:
-  - name: 回溯相容性
-    href: sql-server-database-engine-backward-compatibility.md
-  - name: SQL Server 2017 中已淘汰
-    href: deprecated-database-engine-features-in-sql-server-2017.md
-  - name: SQL Server 2016 中已淘汰
-    href: deprecated-database-engine-features-in-sql-server-2016.md
-  - name: SQL Server 2016 中已中止的功能
-    href: discontinued-database-engine-functionality-in-sql-server-2016.md
-  - name: SQL Server 2017 中的重大變更
-    href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
-  - name: SQL Server 2016 中的重大變更
-    href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
-- name: Install
-  href: ../database-engine/install-windows/installation-for-sql-server-2016.md
+    - name: 回溯相容性
+      href: sql-server-database-engine-backward-compatibility.md
+    - name: SQL Server 2017 中已淘汰
+      href: deprecated-database-engine-features-in-sql-server-2017.md
+    - name: SQL Server 2016 中已淘汰
+      href: deprecated-database-engine-features-in-sql-server-2016.md
+    - name: SQL Server 2016 中已中止的功能
+      href: discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: SQL Server 2017 中的重大變更
+      href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
+    - name: SQL Server 2016 中的重大變更
+      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+- name: 安裝
+  href: ../database-engine/install-windows/toc.yml
 - name: 設定
-  href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
-- name: 高可用性
+  href: ../database-engine/configure-windows/toc.yml
+- name: 商務持續性
   href: sql-server-business-continuity-dr.md
   items:
-  - name: 可用性群組
-    href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-  - name: 資料庫鏡像
-    href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
-  - name: 記錄傳送
-    href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    - name: 可用性群組
+      href: availability-groups/windows/toc.yml
+    - name: 容錯移轉叢集執行個體
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: 資料庫鏡像
+      href: database-mirroring/toc.yml
+    - name: 記錄傳送
+      href: log-shipping/toc.yml
 - name: 概念
   items:
-  - name: Blob
-    href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
-  - name: 定序
-    href: ../relational-databases/collations/collation-and-unicode-support.md
-  - name: 資料指標
-    href: ../relational-databases/cursors.md
-  - name: 資料收集
-    href: ../relational-databases/data-collection/data-collection.md
-  - name: 資料壓縮
-    href: ../relational-databases/data-compression/data-compression.md
-  - name: Database Mail
-    href: ../relational-databases/database-mail/database-mail.md
-  - name: 資料庫
-    href: ../relational-databases/databases/databases.md
-  - name: 錯誤和事件
-    href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
-  - name: 事件類別
-    href: ../relational-databases/event-classes/sql-server-event-class-reference.md
-  - name: 擴充事件
-    href: ../relational-databases/extended-events/extended-events.md
-  - name: 圖表
-    href: ../relational-databases/graphs/sql-graph-overview.md
-  - name: 階層式資料
-    href: ../relational-databases/hierarchical-data-sql-server.md
-  - name: 匯入和匯出
-    href: ../relational-databases/import-export/overview-import-export.md
-  - name: 記憶體內部 OLTP
-    href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-  - name: 索引
-    href: ../relational-databases/indexes/indexes.md
-  - name: JSON
-    href: ../relational-databases/json/json-data-sql-server.md
-  - name: 連結的伺服器
-    href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-  - name: 維護計畫
-    href: ../relational-databases/maintenance-plans/maintenance-plans.md
-  - name: 聯結
-    href: ../relational-databases/performance/joins.md
-  - name: 資料分割
-    href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
-  - name: 以原則為基礎的管理
-    href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
-  - name: PolyBase
-    href: ../relational-databases/polybase/polybase-guide.md
-  - name: 複寫
-    href: ../relational-databases/replication/sql-server-replication.md
-  - name: '[資源管理員]'
-    href: ../relational-databases/resource-governor/resource-governor.md
-  - name: 指令碼
-    href: ../relational-databases/scripting/database-engine-scripting.md
-  - name: 搜尋
-    href: ../relational-databases/search/full-text-search.md
-  - name: Security
-    href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
-  - name: 序號
-    href: ../relational-databases/sequence-numbers/sequence-numbers.md
-  - name: Service Broker
-    href: ../relational-databases/service-broker/event-notifications.md
-  - name: 執行程序表運算子
-    href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
-  - name: 空間
-    href: ../relational-databases/spatial/spatial-data-sql-server.md
-  - name: SQL 追蹤
-    href: ../relational-databases/sql-trace/sql-trace.md
-  - name: Statistics
-    href: ../relational-databases/statistics/statistics.md
-  - name: 預存程序
-    href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
-  - name: 子查詢
-    href: ../relational-databases/performance/subqueries.md
-  - name: 同義字
-    href: ../relational-databases/synonyms/synonyms-database-engine.md
-  - name: 系統目錄檢視
-    href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
-  - name: 系統相容性檢視
-    href: ../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md
-  - name: 系統動態管理檢視
-    href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-  - name: 系統函數
-    href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
-  - name: 系統資訊結構描述檢視
-    href: ../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
-  - name: 系統預存程序
-    href: ../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
-  - name: 系統資料表
-    href: ../relational-databases/system-tables/system-tables-transact-sql.md
-  - name: 系統檢視表
-    href: ../relational-databases/system-views/replication-views-transact-sql.md
-  - name: 資料表
-    href: ../relational-databases/tables/tables.md
-  - name: 追蹤變更
-    href: ../relational-databases/track-changes/track-data-changes-sql-server.md
-  - name: 觸發程序
-    href: ../relational-databases/triggers/logon-triggers.md
-  - name: 使用者自訂函數
-    href: ../relational-databases/user-defined-functions/user-defined-functions.md
-  - name: 檢視
-    href: ../relational-databases/views/views.md
-  - name: xml
-    href: ../relational-databases/xml/xml-data-sql-server.md
-ms.openlocfilehash: db1f978a972f560a98ef75c0fefe37584bd1a1be
-ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47217224"
+    - name: Blob +
+      href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
+    - name: 定序 +
+      href: ../relational-databases/collations/collation-and-unicode-support.md
+    - name: 資料指標 +
+      href: ../relational-databases/cursors.md
+    - name: 資料收集 +
+      href: ../relational-databases/data-collection/data-collection.md
+    - name: 資料壓縮 +
+      href: ../relational-databases/data-compression/data-compression.md
+    - name: Database Mail +
+      href: ../relational-databases/database-mail/database-mail.md
+    - name: 資料庫 +
+      href: ../relational-databases/databases/databases.md
+    - name: 錯誤和事件 +
+      href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
+    - name: 事件類別 +
+      href: ../relational-databases/event-classes/sql-server-event-class-reference.md
+    - name: 擴充事件 +
+      href: ../relational-databases/extended-events/extended-events.md
+    - name: 圖表 +
+      href: ../relational-databases/graphs/sql-graph-overview.md
+    - name: 階層式資料 +
+      href: ../relational-databases/hierarchical-data-sql-server.md
+    - name: 匯入和匯出 +
+      href: ../relational-databases/import-export/overview-import-export.md
+    - name: 記憶體內部 OLTP +
+      href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+    - name: 索引 +
+      href: ../relational-databases/indexes/indexes.md
+    - name: JSON +
+      href: ../relational-databases/json/json-data-sql-server.md
+    - name: 連結的伺服器 +
+      href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+    - name: 維護計畫 +
+      href: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - name: 聯結
+      href: ../relational-databases/performance/joins.md
+    - name: 資料分割
+      href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+    - name: 以原則為基礎的管理
+      href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+    - name: PolyBase
+      href: ../relational-databases/polybase/polybase-guide.md
+    - name: 複寫
+      href: ../relational-databases/replication/sql-server-replication.md
+    - name: 資源管理員
+      href: ../relational-databases/resource-governor/resource-governor.md
+    - name: 指令碼
+      href: ../relational-databases/scripting/database-engine-scripting.md
+    - name: 搜尋
+      href: ../relational-databases/search/full-text-search.md
+    - name: 安全性
+      href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
+    - name: 序號
+      href: ../relational-databases/sequence-numbers/sequence-numbers.md
+    - name: Service Broker
+      href: ../relational-databases/service-broker/event-notifications.md
+    - name: 執行程序表運算子
+      href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
+    - name: 空間
+      href: ../relational-databases/spatial/spatial-data-sql-server.md
+    - name: SQL 追蹤
+      href: ../relational-databases/sql-trace/sql-trace.md
+    - name: 統計資料
+      href: ../relational-databases/statistics/statistics.md
+    - name: 預存程序
+      href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+    - name: 子查詢
+      href: ../relational-databases/performance/subqueries.md
+    - name: 同義字
+      href: ../relational-databases/synonyms/synonyms-database-engine.md
+    - name: 系統目錄檢視
+      href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
+    - name: 系統相容性檢視
+      href: ../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md
+    - name: 系統動態管理檢視
+      href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+    - name: 系統函數
+      href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
+    - name: 系統資訊結構描述檢視
+      href: ../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
+    - name: 系統預存程序
+      href: ../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
+    - name: 系統資料表
+      href: ../relational-databases/system-tables/system-tables-transact-sql.md
+    - name: 系統檢視表
+      href: ../relational-databases/system-views/replication-views-transact-sql.md
+    - name: 資料表
+      href: ../relational-databases/tables/tables.md
+    - name: 追蹤變更
+      href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - name: 觸發程序
+      href: ../relational-databases/triggers/logon-triggers.md
+    - name: 使用者自訂函數
+      href: ../relational-databases/user-defined-functions/user-defined-functions.md
+    - name: 檢視
+      href: ../relational-databases/views/views.md
+    - name: xml
+      href: ../relational-databases/xml/xml-data-sql-server.md
