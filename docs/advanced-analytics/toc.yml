@@ -94,7 +94,7 @@ items:
     items:
     - name: 建立資料分割型模型
       href: tutorials/r-tutorial-create-models-per-partition.md
-    - name: 適用於 SQL 的 R 開發人員
+    - name: 適用於 SQL 開發人員的資料庫內分析
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
       - name: 1 - 資料探索
@@ -105,7 +105,7 @@ items:
         href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
       - name: 4 - 預測
         href: tutorials/sqldev-operationalize-the-model.md
-    - name: 適用於 R 的 SQL 資料科學家
+    - name: 適用於資料科學家的資料庫內分析
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       items:
       - name: 1 - 資料探索
@@ -154,7 +154,7 @@ items:
     items:
     - name: 使用 revoscalepy 建立 Python 模型
       href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: 適用於 SQL 的 Python 開發人員
+    - name: 了解資料庫內分析
       href: tutorials/sqldev-in-database-python-for-sql-developers.md
       items:
       - name: 1 - 資料探索
@@ -329,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 2f3ba355f5d2cb9a7ddcb60cfa8a59e93a1203de
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 9e76e68b7b970c64050136b3ae9cb9c486c297c2
+ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405689"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54046598"
