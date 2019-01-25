@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8e6e91836b3daf0392da082df1f4ec806e9faf94
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a5dcc1c2726eaf234056fc77979df4d21a0dea17
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241239"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898923"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes 服務
 
@@ -26,12 +26,12 @@ AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的
 這篇文章說明部署 Kubernetes AKS 使用 Azure CLI 上的步驟。 如果您沒有 Azure 訂用帳戶，請在您開始前建立免費帳戶。
 
 > [!TIP] 
-> 部署 AKS 和 SQL Server 的巨量資料叢集的範例 python 指令碼，請參閱[部署巨量資料叢集的 Azure Kubernetes Service (AKS) 上的 SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
+> 部署 AKS 和 SQL Server 的巨量資料叢集的範例 python 指令碼，請參閱[快速入門：將巨量資料叢集的 Azure Kubernetes Service (AKS) 上的 SQL Server 部署](quickstart-big-data-cluster-deploy.md)。
 
 ## <a name="prerequisites"></a>先決條件
 
 - [部署 SQL Server 2019 巨量資料的工具](deploy-big-data-tools.md):
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 延伸模組**
    - **Azure CLI**
@@ -106,6 +106,6 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
 ## <a name="next-steps"></a>後續步驟
 
-這篇文章中的步驟會設定在 AKS 中 Kubernetes 叢集。 下一個步驟是將 SQL Server 2019 巨量資料部署到叢集。
+這篇文章中的步驟會設定在 AKS 中 Kubernetes 叢集。 下一個步驟是將 SQL Server 2019 巨量資料部署到叢集。 如需有關如何部署巨量資料叢集的詳細資訊，請參閱下列文章：
 
-[快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+[如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集](deployment-guidance.md)

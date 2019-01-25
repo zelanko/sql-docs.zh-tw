@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab8633ef6741ae1d1a3a973796eec1de0cc12c37
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372634"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898954"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>安裝 SQL Server 2019 巨量資料工具
 
-這篇文章說明應安裝於管理，來建立，用戶端工具，並使用 SQL Server 2019 巨量資料叢集 （預覽）。
+這篇文章說明應安裝於管理，來建立，用戶端工具，並使用 SQL Server 2019 巨量資料叢集 （預覽）。 下一節提供工具和安裝指示的連結的清單。 在部署巨量資料叢集之前，設定標示為需要在 Windows 或 Linux 的工具。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -63,5 +63,10 @@ ms.locfileid: "54372634"
 在某些情況下只需要其餘的工具。 **Azure CLI**可用來管理與 AKS 部署相關聯的 Azure 服務。 **mssql cli**是選擇性的但很有用的工具，可讓您連接到 SQL Server 主要執行個體在叢集中，並從命令列執行查詢。 並**sqlcmd**並**curl**是必要的如果您打算使用 GitHub 的指令碼安裝範例資料。
 
 ## <a name="next-steps"></a>後續步驟
+
+之後設定工具，將 SQL Server 2019 巨量資料叢集部署到雲端或內部部署環境中的 Kubernetes。 如需詳細資訊，請參閱下列的部署文件：
+
+- [快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+- [如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集](deployment-guidance.md)
 
 如需巨量資料叢集的詳細資訊，請參閱[什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)。

@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 76e3fdca639ed576b6b0664042aea5df2b5a9f74
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405778"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898993"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課：瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
 
-在這一課，您將檢閱範例資料，並接著產生使用一些繪圖[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)從[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)及 泛型[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基底函式中已包含這些 R 函數[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。
+在此步驟中，您將檢閱範例資料，並接著產生使用一些繪圖[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)從[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)及 泛型[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基底函式中已包含這些 R 函數[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。
 
 本課程的主要目標示範如何呼叫 R 函數，從[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序，並儲存應用程式檔案格式中的結果：
 

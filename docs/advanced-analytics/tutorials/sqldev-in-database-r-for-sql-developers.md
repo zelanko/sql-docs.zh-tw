@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8d3235c585d3ea56a64776fde841ccc6d71b1a4d
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 2c9cce03a5a2255353702fd99b8efb6e3e598ad5
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405598"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898973"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 R 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,4 +65,4 @@ ms.locfileid: "54405598"
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [將 NYC 計程車資料庫設定](demo-data-nyctaxi-in-sql.md)
+> [瀏覽及視覺化資料在預存程序中使用 R 函數](../tutorials/sqldev-explore-and-visualize-the-data.md)
