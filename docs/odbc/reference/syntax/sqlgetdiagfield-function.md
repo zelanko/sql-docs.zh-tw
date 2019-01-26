@@ -20,12 +20,12 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f975b15d07bf837c0f5fe5d2649cc78b341d23c6
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 13ab95c762573be002782c06615fc6f01317499f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420163"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044295"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 
@@ -234,10 +234,13 @@ GeneMi , 2019/01/19
 - - - - - - - - - - - - - -
 
 n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|  
+
 |*domain-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 
 -statement*|"GRANT"|SQL_DIAG_GRANT|  
+
 |*grant-statement*|"GRANT"|SQL_DIAG_GRANT|
+
 -->
 
 ## <a name="sequence-of-status-records"></a>狀態記錄的順序

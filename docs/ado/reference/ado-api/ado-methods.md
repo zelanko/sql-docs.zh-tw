@@ -14,14 +14,15 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12b78faed3c45a92c1b20796ade5ce0a6844a84e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530236"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044754"
 ---
 # <a name="ado-methods"></a>ADO 方法
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|建立可更新的新記錄**資料錄集**物件。|  
@@ -70,10 +71,10 @@ ms.locfileid: "52530236"
 |[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|重新整理中目前的資料**Recordset**物件，或**欄位**的集合**記錄**物件，從基礎資料庫。|  
 |[儲存](../../../ado/reference/ado-api/save-method.md)|節省**Recordset**檔案中或**Stream**物件。|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|將儲存的二進位內容**Stream**至檔案。|  
-|[搜尋](../../../ado/reference/ado-api/seek-method.md)|搜尋的索引**資料錄集**來快速尋找符合指定的值，並變更該資料列目前的資料列位置的資料列。|  
+|[Seek](../../../ado/reference/ado-api/seek-method.md)|搜尋的索引**資料錄集**來快速尋找符合指定的值，並變更該資料列目前的資料列位置的資料列。|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|設定為資料流結尾的位置。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|讀取的文字資料流時，會略過一整行。|  
-|[統計資料](../../../ado/reference/ado-api/stat-method.md)|取得開啟的資料流相關的統計資訊。|  
+|[Stat](../../../ado/reference/ado-api/stat-method.md)|取得開啟的資料流相關的統計資訊。|  
 |[支援](../../../ado/reference/ado-api/supports-method.md)|判斷指定**資料錄集**物件支援特定類型的功能。|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|儲存您對目前資料列的任何變更**Recordset**物件，或有**欄位**的集合**記錄**物件。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|寫入磁碟中的所有暫止的批次更新。|  

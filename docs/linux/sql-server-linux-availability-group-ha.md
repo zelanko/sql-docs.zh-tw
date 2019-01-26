@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031021"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044931"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性和資料保護
 
@@ -59,12 +59,13 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 
 讀取級別、 高可用性和資料保護，可以提供具有三個同步複本的可用性群組。 下表描述可用性的行為。 
 
-| |讀取級別|高可用性 （& s) </br> 資料保護 | 資料保護
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。 
-|一個次要複本中斷  | 主要複本是 R / W 如果主要沒有自動容錯移轉會失敗。 |主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 
-<sup>*</sup> 預設值
+| |讀取級別|高可用性 （& s) </br> 資料保護 | 資料保護|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本是 R / W |自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。 |
+|一個次要複本中斷  | 主要複本是 R / W 如果主要沒有自動容錯移轉會失敗。 |主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 |
+
+<sup>\*</sup> 預設值
 
 <a name="twoSynch"></a>
 
@@ -76,15 +77,16 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 
 具有兩個同步複本的可用性群組提供讀取級別和資料保護。 下表描述可用性的行為。 
 
-| |讀取級別 |資料保護
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W| 自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。
-|一個次要複本中斷  |主要複本是 R/W，執行時暴露資料遺失。 |主要不適用於使用者交易直到次要複本復原為止。
-<sup>*</sup> 預設值
+| |讀取級別 |資料保護|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|主要複本中斷 | 手動容錯移轉。 可能會遺失資料。 新的主要複本是 R / W| 自動容錯移轉。 新的主要複本不是適用於使用者交易，直到先前的主要複本復原並聯結可用性群組做為次要。|
+|一個次要複本中斷  |主要複本是 R/W，執行時暴露資料遺失。 |主要不適用於使用者交易直到次要複本復原為止。|
 
->[!NOTE]
->先前的案例是在 SQL Server 2017 CU 1 之前的行為。 
+<sup>\*</sup> 預設值
+
+> [!NOTE]
+> 先前的案例是在 SQL Server 2017 CU 1 之前的行為。 
 
 <a name = "configOnly"></a>
 
@@ -99,38 +101,39 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 
 在可用性群組圖表中，主要複本會將組態資料推送至次要複本和僅限設定的複本。 次要複本也會收到使用者資料。 僅限設定的複本不會不會收到使用者資料。 次要複本都是同步的可用性模式。 僅限設定的複本不包含可用性群組-可用性群組的相關的中繼資料中的資料庫。 僅限設定的複本上的設定資料會以同步方式認可。
 
->[!NOTE]
->僅限設定複本 availabilility 群組是新的 SQL Server 2017 CU1。 SQL Server 可用性群組中的所有執行個體必須是 SQL Server 2017 CU1 或更新版本。 
+> [!NOTE]
+> 僅限設定複本 availabilility 群組是新的 SQL Server 2017 CU1。 SQL Server 可用性群組中的所有執行個體必須是 SQL Server 2017 CU1 或更新版本。 
 
 預設值為`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`為 0。 下表描述可用性的行為。 
 
-| |高可用性 （& s) </br> 資料保護 | 資料保護
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|主要複本中斷 | 自動容錯移轉。 新的主要複本是 R / W | 自動容錯移轉。 新的主要不適用於使用者交易。 
-|次要複本中斷 | 主要複本是 R/W，公開執行資料遺失 （如果有主要失敗，且無法復原）。 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 如果主要複本也失敗，容錯移轉至沒有複本。 
-|設定唯一的複本中斷 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 
-|同步次要 + 組態只複本中斷| 主要不適用於使用者交易。 沒有自動容錯移轉。 | 主要不適用於使用者交易。 如果容錯移轉沒有任何複本主要也會失敗。 
-<sup>*</sup> 預設值
+| |高可用性 （& s) </br> 資料保護 | 資料保護|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|主要複本中斷 | 自動容錯移轉。 新的主要複本是 R / W | 自動容錯移轉。 新的主要不適用於使用者交易。 |
+|次要複本中斷 | 主要複本是 R/W，公開執行資料遺失 （如果有主要失敗，且無法復原）。 如果主要沒有自動容錯移轉也會失敗。 | 主要不適用於使用者交易。 如果主要複本也失敗，容錯移轉至沒有複本。 |
+|設定唯一的複本中斷 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 | 主要複本是 R / W 如果主要沒有自動容錯移轉也會失敗。 |
+|同步次要 + 組態只複本中斷| 主要不適用於使用者交易。 沒有自動容錯移轉。 | 主要不適用於使用者交易。 如果容錯移轉沒有任何複本主要也會失敗。 |
 
->[!NOTE]
->裝載僅限設定複本的 SQL Server 執行個體也可以裝載其他資料庫。 它也可以做為多個可用性群組組態資料庫。 
+<sup>\*</sup> 預設值
+
+> [!NOTE]
+> 裝載僅限設定複本的 SQL Server 執行個體也可以裝載其他資料庫。 它也可以做為多個可用性群組組態資料庫。 
 
 ## <a name="requirements"></a>需求
 
-* 僅限設定複本的可用性群組中所有複本都必須都是 SQL Server 2017 CU 1 或更新版本。
-* 任何版本的 SQL Server 可以裝載僅限設定複本，包括 SQL Server Express。 
-* 可用性群組必須至少一個次要複本的詳細資訊-除了主要複本。
-* 組態的唯一複本不會計入每個 SQL Server 執行個體的複本數目上限。 SQL Server standard 版本允許最多三個複本時，SQL Server Enterprise Edition 則允許最多 9。
+- 僅限設定複本的可用性群組中所有複本都必須都是 SQL Server 2017 CU 1 或更新版本。
+- 任何版本的 SQL Server 可以裝載僅限設定複本，包括 SQL Server Express。 
+- 可用性群組必須至少一個次要複本的詳細資訊-除了主要複本。
+- 組態的唯一複本不會計入每個 SQL Server 執行個體的複本數目上限。 SQL Server standard 版本允許最多三個複本時，SQL Server Enterprise Edition 則允許最多 9。
 
 ## <a name="considerations"></a>考量
 
-* 有一個僅限設定複本的每個可用性群組。 
-* 僅限設定的複本不是主要複本。
-* 您無法修改的僅限設定複本的可用性模式。 若要從僅限設定複本變更為同步或非同步的次要複本，移除僅限設定複本，並新增所需的可用性模式的次要複本。 
-* 僅限設定的複本是同步的可用性群組中繼資料。 沒有任何使用者資料。 
-* 具有一個主要複本和一個組態時，唯一的複本，但沒有次要複本的可用性群組不是有效的。 
-* 您無法在 SQL Server Express edition 執行個體上建立可用性群組。 
+- 有一個僅限設定複本的每個可用性群組。 
+- 僅限設定的複本不是主要複本。
+- 您無法修改的僅限設定複本的可用性模式。 若要從僅限設定複本變更為同步或非同步的次要複本，移除僅限設定複本，並新增所需的可用性模式的次要複本。 
+- 僅限設定的複本是同步的可用性群組中繼資料。 沒有任何使用者資料。 
+- 具有一個主要複本和一個組態時，唯一的複本，但沒有次要複本的可用性群組不是有效的。 
+- 您無法在 SQL Server Express edition 執行個體上建立可用性群組。 
 
 <a name="pacemakerNotify"></a>
 
@@ -144,14 +147,14 @@ SQL Server 2017 引進`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資源�
 
 例如，可用性群組具有三個同步複本-一個主要複本和兩個同步次要複本。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 為 1;(3 / 2]-> [1)。
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
 
 - 複本回應預先升級動作的必要的數目為 2;(3-1 = 2)。 
 
 在此案例中，兩個複本必須回應才能觸發容錯移轉。 主要複本中斷後有成功的自動容錯移轉，這兩個次要複本必須是最新狀態，並回應預先升級通知。 如果它們是在線上而且同步，它們會有相同的序號。 可用性群組升級其中一個。 如果只有其中一個次要複本回應預先升級動作，資源代理程式無法保證回應的次要複本具有最高 sequence_number，且不會觸發容錯移轉。
 
->[!IMPORTANT]
->當 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 為 0 時，有遺失資料的風險。 主要複本在中斷期間，資源代理程式不會自動觸發容錯移轉。 您可以等候主要複本以復原，或手動容錯移轉使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
+> [!IMPORTANT]
+> 當 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 為 0 時，有遺失資料的風險。 主要複本在中斷期間，資源代理程式不會自動觸發容錯移轉。 您可以等候主要複本以復原，或手動容錯移轉使用`FORCE_FAILOVER_ALLOW_DATA_LOSS`。
 
 您可以選擇要覆寫預設行為，並避免設定可用性群組資源`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`自動。
 
@@ -167,8 +170,8 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->當您執行上述命令時，主要是暫時降級為次要，然後又升級一次。 資源更新會導致所有複本停止並重新啟動。 新值`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`只會在複本會重新啟動後，不會立即所設定。
+> [!NOTE]
+> 當您執行上述命令時，主要是暫時降級為次要，然後又升級一次。 資源更新會導致所有複本停止並重新啟動。 新值`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`只會在複本會重新啟動後，不會立即所設定。
 
 ## <a name="see-also"></a>另請參閱
 

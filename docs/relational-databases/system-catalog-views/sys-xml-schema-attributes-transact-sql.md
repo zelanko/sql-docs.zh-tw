@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_attributes (TRANSACT-SQL) |Microsoft Docs
+title: sys.xml_schema_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,17 +20,18 @@ ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a7a7075fb1710622d0681ba4c10ba8bfe696653
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac0f23e73f67c3d95744d974366ab547d50672ea
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719016"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044841"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回一個資料列，每個屬性，XML 結構描述元件**symbol_space**的**A**。  
+
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<繼承資料行 >**|--|繼承自[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)。|  

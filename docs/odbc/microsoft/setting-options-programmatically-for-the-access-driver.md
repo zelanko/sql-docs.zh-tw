@@ -16,14 +16,15 @@ ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5227985c56d5e2fd4730c86fe9182c8b16b2cb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804456"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044464"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>以程式設計方式設定 Access 驅動程式的選項
+
 |選項|描述|方法|  
 |------------|-----------------|------------|  
 |緩衝區大小|內部緩衝區大小，以 kb 為單位，Microsoft Access 所用來傳輸資料進出磁碟。 預設緩衝區大小為 2048 KB （顯示為 2048年）。 您可以輸入任何以 256 整除的整數值。|若要以動態方式設定此選項，請在呼叫中使用 MAXBUFFERSIZE 關鍵字[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)。|  

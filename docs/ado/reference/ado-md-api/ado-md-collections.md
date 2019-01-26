@@ -14,14 +14,15 @@ ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92218a21fc4047f20605ab3caff0d7700f7d7e8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2e96b05ed8d772fc86679aafda1397ac972277d
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709106"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044851"
 ---
 # <a name="ado-md-collections"></a>ADO MD 集合
+
 |||  
 |-|-|  
 |[軸](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|包含**軸**定義資料格集的物件。|  

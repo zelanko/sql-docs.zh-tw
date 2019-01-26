@@ -20,17 +20,18 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f1a2ae2d0d8f8c5eea00ed5d31ad8aadb88e5ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596106"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044994"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對系統中每個伺服器範圍組態選項值，各包含一個資料列。  
+
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|組態值的唯一識別碼。|  
@@ -40,7 +41,7 @@ ms.locfileid: "47596106"
 |**maximum**|**sql_variant**|組態選項的最大值。|  
 |**value_in_use**|**sql_variant**|這個選項目前有效的執行值。|  
 |**description**|**nvarchar(255)**|組態選項的描述。|  
-|**sys.configurations**|**bit**|1 = 在執行 RECONFIGURE 陳述式時的有效變數。|  
+|**is_dynamic**|**bit**|1 = 在執行 RECONFIGURE 陳述式時的有效變數。|  
 |**is_advanced**|**bit**|1 = 會顯示變數時，才**顯示 advancedoption**設定。|  
   
  如需所有伺服器組態選項的清單，請參閱 <<c0> [ 伺服器組態選項&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。</c0>  

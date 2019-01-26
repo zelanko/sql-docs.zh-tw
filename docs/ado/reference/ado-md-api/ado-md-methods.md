@@ -14,14 +14,15 @@ ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 669e1bdc70aa0c5bd5510db8c9fbd86e26b22b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c80535cb6482bb6e339998843a6476813430f40
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770841"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044964"
 ---
 # <a name="ado-md-methods"></a>ADO MD 方法
+
 |||  
 |-|-|  
 |[關閉](../../../ado/reference/ado-md-api/close-method-ado-md.md)|關閉開啟的資料格集。|  

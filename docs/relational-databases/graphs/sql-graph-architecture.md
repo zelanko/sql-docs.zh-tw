@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e742e1b5c8ed1b0149292aeee5a3c0e518d9783
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300185"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044544"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -135,6 +135,7 @@ ms.locfileid: "54300185"
 了解[!INCLUDE[tsql-md](../../includes/tsql-md.md)]導入 SQL Server 和 Azure SQL Database 中的擴充功能，可讓建立和查詢圖表物件。 查詢語言擴充功能會協助查詢和周遊圖形，使用 ASCII 作品語法。
  
 ### <a name="data-definition-language-ddl-statements"></a>資料定義語言 (DDL) 陳述式
+
 |工作   |相關的文章  |注意
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 現在已擴充到支援建立 AS 節點或 AS 邊緣資料表。 請注意，邊緣資料表可能會或可能沒有任何使用者定義的屬性。  |
@@ -145,6 +146,7 @@ ms.locfileid: "54300185"
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>資料操作語言 (DML) 陳述式
+
 |工作   |相關的文章  |注意
 |---  |---  |---  |
 |Insert |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|插入節點資料表並無不同於關聯式資料表中插入就行了。 值`$node_id`自動產生資料行。 嘗試插入的值`$node_id`或`$edge_id`欄將會導致錯誤。 使用者必須提供值`$from_id`和`$to_id`插入至邊緣資料表時的資料行。 `$from_id` 並`$to_id`是`$node_id`指定的邊緣相連接節點的值。  |
@@ -154,6 +156,7 @@ ms.locfileid: "54300185"
 
 
 ### <a name="query-statements"></a>查詢陳述式
+
 |工作   |相關的文章  |注意
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|節點和邊緣資料表為內部儲存，因此節點和邊緣資料表才支援大部分的 SQL Server 或 Azure SQL Database 中的資料表上支援的作業  |

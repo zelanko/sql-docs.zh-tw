@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: faaa59e8607f707bb43f31638880f771ae7ae6ab
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 26e93209e2cbd9809d607f90c7eff4da32d2cd98
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030482"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045027"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>儀表板 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -84,6 +84,7 @@ ms.locfileid: "53030482"
     },
     "value": "second_column_and_condition_check_value_column_for_summary_list_view",
 ```
+
 |屬性|型別|value|預設值|description|comment|
 |:---|:---|:---|:---|:---|:---|
 |詳細資料|json 物件|||必要的屬性，來定義其結構內了解詳細資料定義||

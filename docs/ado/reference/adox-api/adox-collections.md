@@ -14,20 +14,21 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67cc6adbb21071484a444c72baf2abb154411a33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e044c08c45bc71f51eca16a891d8920a9e42cad6
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613397"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044574"
 ---
 # <a name="adox-collections"></a>ADOX 集合
+
 |||  
 |-|-|  
 |[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)|包含所有**資料行**資料表、 索引或索引鍵的物件。|  
 |[群組](../../../ado/reference/adox-api/groups-collection-adox.md)|包含所有預存**群組**目錄或使用者的物件。|  
 |[[索引]](../../../ado/reference/adox-api/indexes-collection-adox.md)|包含所有**Index**資料表的物件。|  
-|[索引鍵](../../../ado/reference/adox-api/keys-collection-adox.md)|包含所有**金鑰**資料表的物件。|  
+|[[索引鍵]](../../../ado/reference/adox-api/keys-collection-adox.md)|包含所有**金鑰**資料表的物件。|  
 |[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)|包含所有**程序**的目錄物件。|  
 |[資料表](../../../ado/reference/adox-api/tables-collection-adox.md)|包含所有**資料表**的目錄物件。|  
 |[使用者](../../../ado/reference/adox-api/users-collection-adox.md)|包含所有預存**使用者**目錄或群組的物件。|  

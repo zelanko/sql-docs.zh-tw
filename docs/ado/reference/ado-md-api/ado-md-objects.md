@@ -14,19 +14,20 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e7f6cb865ec06e1031cd627316821ef4f666a64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b0aed3c63b1303e4d8743ea441348c351be822
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828707"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044912"
 ---
 # <a name="ado-md-objects"></a>ADO MD 物件
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|表示位置或包含一或多個維度的成員可選取的資料格集的篩選座標軸。|  
 |[目錄](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|包含多維度的結構描述特有的資訊 （也就是 cube 和基礎維度、 階層、 層級和成員） 的多維度資料提供者 (MDP)。|  
-|[資料格](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|表示軸座標為單位，包含在資料格集的交集處的資料。|  
+|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|表示軸座標為單位，包含在資料格集的交集處的資料。|  
 |[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|表示多維度查詢的結果。 它是從 cube 或其他資料格集中選取的儲存格的集合。|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|表示從多維度的結構描述，其中包含一組相關的維度的 cube。|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|代表其中一個維度的多維度 cube，其中包含一或多個階層的成員。|  

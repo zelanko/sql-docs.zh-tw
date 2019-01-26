@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e95415c689fda43c2a9d118713c96d0a1d531904
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419993"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044395"
 ---
 # <a name="backup-and-restore"></a>備份與還原
 
@@ -137,8 +137,10 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
 |將資料庫還原。|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 
 <!-- MISSING LINKS
+
 |Create a disaster recovery plan.|[Create a Disaster Recovery Plan](create-disaster-recovery-plan.md)|
 |Restore the master database.|To restore the master database, use the [Restore the master database](configuration-manager-restore-master-database.md) page in the Configuration Manager tool.| 
 |Copy a database from one appliance to another appliance.|[Copy a PDW database to another appliance](copy-pdw-database-to-another-appliance.md).|  
 |Monitor backups and restores.|[Monitor backups and restores](monitor-backup-and-restore.md)|  
+
 -->

@@ -14,14 +14,15 @@ ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7df30f8e277985e16dc0066d80906a2a3694e310
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 389c9352790dee136cf4167415206b25f6efc4c0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631336"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044584"
 ---
 # <a name="adox-methods"></a>ADOX 方法
+
 |||  
 |-|-|  
 |[附加 （資料行）](../../../ado/reference/adox-api/append-method-adox-columns.md)|加入新**資料行**物件**資料行**集合。|  

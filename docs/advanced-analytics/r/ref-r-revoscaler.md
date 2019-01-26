@@ -8,14 +8,15 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92992847e2806e18014d2d6828a5f5019ad100b3
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: c67fd63af6ed3492b8064be037ed4f8f5dff338f
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645423"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044405"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR （SQL Server 中的 R 程式庫）
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **RevoScaleR**是來自 Microsoft 的高效能的資料科學函式的程式庫。 函式支援匯入資料、 資料轉換、 摘要、 視覺化和分析。
@@ -37,7 +38,7 @@ RevoScaleR 作為分散式的資料科學平台。 比方說，您可以使用 R
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 或更新版本](https://docs.microsoft.com/machine-learning-server/)
-+ [Microsoft R 用戶端](set-up-a-data-science-client.md)
++ [Microsoft R client](set-up-a-data-science-client.md)
 
 > [!NOTE]
 > 完整的產品版本是 Windows 專屬，從 SQL Server 2017 開始。 Linux 支援**RevoScaleR**的新功能[SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md)。
@@ -55,7 +56,7 @@ SQL Server 和 R 使用不同的資料類型，在某些情況下。 如需 SQL 
 | 函數| 描述|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  建立 SQL Server 計算內容物件，將計算推送到遠端執行個體。 數個**RevoScaleR**函式會採用當做引數的計算內容。 |
-[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 取得或設定作用中的計算內容。 |
+|[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | 取得或設定作用中的計算內容。 |
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) | 建立 SQL Server 查詢或資料表為基礎的資料物件。 |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxodbcdata) | 建立 ODBC 連接為基礎的資料來源。 |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxxdfdata) | 建立本機 XDF 檔案為基礎的資料來源。 XDF 檔案通常用於記憶體中將資料卸載至磁碟。 使用更多的資料，比可以傳輸，從資料庫中一個批次或超過記憶體內可容納的資料時，XDF 檔案可以是很有用。 比方說，如果定期在資料庫的本機工作站之間移動大量資料，而不是查詢資料庫中重複的每個 R 作業，您可以使用 XDF 檔案為類型的快取來儲存在本機的資料，然後在您的 R 工作區中使用它。|
@@ -78,7 +79,7 @@ SQL Server 和 R 使用不同的資料類型，在某些情況下。 如需 SQL 
 
 | 函數 | 描述 |
 |----------|-------------|
-| [rxOpen 方法](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 檢查資料來源是否可用，請開啟或關閉資料來源、 從來源讀取資料、 將資料寫入到目標，並關閉資料來源。|
+| [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | 檢查資料來源是否可用，請開啟或關閉資料來源、 從來源讀取資料、 將資料寫入到目標，並關閉資料來源。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | 檔案儲存體或資料框架，請從資料來源移動資料。|
 | [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) | 在資料來源之間移動它時轉換資料。|
 
@@ -101,7 +102,7 @@ SQL Server 和 R 使用不同的資料類型，在某些情況下。 如需 SQL 
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |計算接近.xdf 檔案和資料框架的分位數不排序。 | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |基本的資料，包括依群組計算摘要統計資料。 群組計算.xdf 檔案不支援寫入。 | 
-|[內](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |公式是根據交叉資料表的資料。 | 
+|[rxCrossTabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) <sup>*</sup> |公式是根據交叉資料表的資料。 | 
 |[rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) <sup>*</sup> |替代公式是根據交叉資料表專為有效率的表示法傳回 cube 的結果。 寫入不支援的.xdf 檔案中的輸出。 | 
 |[rxMarginals](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxmarginals)  |跨 tabulations 的臨界摘要。 | 
 |[as.xtabs](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/as.xtabs)  |將跨表格式結果 xtabs 物件。 | 

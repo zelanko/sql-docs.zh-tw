@@ -14,23 +14,24 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d37b1a07566943038bd73b0d79eb2dcd4655fda6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522c563a113bab599481821dbb5d79422126a901
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696927"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044770"
 ---
 # <a name="ado-md-properties"></a>ADO MD 屬性
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|指出哪一個 ado**連線**物件目前的資料格集，或目前所屬的目錄。|  
-|[標題](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指出當顯示時使用的文字標題**層級**或是**成員**物件。|  
+|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|指出當顯示時使用的文字標題**層級**或是**成員**物件。|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|指出為其成員數目前**成員**物件是階層中的父系。|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|傳回的集合**成員**為其目前**成員**階層中的父系。|  
 |[計數](../../../ado/reference/ado-api/count-property-ado.md)|指出集合中的物件數目。|  
 |[深度](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|表示層級之間的數字**層級**和階層的根。|  
-|[描述](../../../ado/reference/ado-md-api/description-property-ado-md.md)|傳回目前物件的文字說明。|  
+|[說明](../../../ado/reference/ado-md-api/description-property-ado-md.md)|傳回目前物件的文字說明。|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|表示在座標軸上的維度數目。|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|表示軸上是否沒有子系緊接在此成員後面。|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|指出目前的資料格集的篩選資訊。|  
@@ -39,13 +40,13 @@ ms.locfileid: "47696927"
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|表示格式化的顯示的資料格的值。|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|表示成員之間階層的根層級數目。|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|表示層級的成員名稱。|  
-|[[名稱]](../../../ado/reference/ado-md-api/name-property-ado-md.md)|表示物件的名稱。|  
+|[名稱](../../../ado/reference/ado-md-api/name-property-ado-md.md)|表示物件的名稱。|  
 |[序數 （資料格）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|可唯一識別資料格的資料格集內的位置。|  
 |[序數 （位置）](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|可唯一識別沿著座標軸的位置。|  
 |[父系](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|指出在階層中的目前成員的父系的成員。|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|表示這個位置成員的父系是否與前一個成員的父代相同。|  
 |[Source](../../../ado/reference/ado-md-api/source-property-ado-md.md)|指出資料集中的資料格的來源。|  
-|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|表示資料格集的目前狀態。|  
+|[狀態](../../../ado/reference/ado-md-api/state-property-ado-md.md)|表示資料格集的目前狀態。|  
 |[型別](../../../ado/reference/ado-md-api/type-property-ado-md.md)|指出目前成員的型別。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|表示目前物件模稜兩可的名稱。|  
 |[值](../../../ado/reference/ado-md-api/value-property-ado-md.md)|指出目前的儲存格的值。|  
