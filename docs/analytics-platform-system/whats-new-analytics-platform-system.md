@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5467362b32733e6ef10036bf9b45d38fe3150a1e
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626352"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044705"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新 Microsoft Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
@@ -24,13 +24,14 @@ ms.locfileid: "53626352"
 ## <a name="aps-cu73"></a>APS CU7.3
 發行日期為 2018 年 12 月
 
-### <a name="common-subexpression-elimination"></a>通用子運算式刪除
+### <a name="common-subexpression-elimination"></a>共通子運算式刪除
 APS CU7.3 可改善查詢效能，使用 SQL 查詢最佳化工具中的通用子運算式刪除。 改善可改善查詢有兩種。 第一個優點是能夠識別並排除這類運算式可以協助減少 SQL 編譯時間。 第二個和更重要的好處是這些多餘的子運算式的資料移動作業會刪除因此執行時間的查詢變得更快。 您可以找到這項功能的詳細的說明[此處](common-sub-expression-elimination.md)。
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>針對 Informatica 10.2.0 發行的 APS Informatica connector
 我們已發行新版本的 Informatica 連接器搭配 Informatica 版本 10.2.0 ap。 您可以從下載新的連接器[下載網站](https://www.microsoft.com/download/details.aspx?id=57472)。
 
 #### <a name="supported-versions"></a>支援的版本
+
 | APS 版本 | Informatica powercenter 來 | 驅動程式 |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
@@ -147,13 +148,13 @@ APS AU6 支援這些 T-SQL 的相容性改進。  這些額外的語言項目，
 
 - [資料行層級 SQL 定序][]現已支援，除了 Windows 定序。
 - [在叢集資料行存放區索引上的非叢集索引][]改善叢集資料行存放區索引中的特定值搜尋的查詢效能。 
-- [選取此項目...到][] 
+- [SELECT...INTO][] 
 - [sp_spaceused()][]顯示使用的磁碟空間，或保留在資料表或資料庫中。
 - [寬型資料表][]支援是 SQL Server 2016 相同。 32k 的資料列大小先前的限制不存在。 
 
 **資料類型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[varbinary （max)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp 公用程式][]。 PolyBase 和 dwloader 目前不支援這些資料類型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]並[VARBINARY(MAX)][]。 這些 LOB 資料型別有大小上限為 2 GB。 若要將這些物件使用[bcp 公用程式][]。 PolyBase 和 dwloader 目前不支援這些資料類型。 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][]和十進位資料類型。
@@ -217,9 +218,9 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [在叢集資料行存放區索引上的非叢集索引]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY （MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[選取此項目...到]:/sql/t-sql/queries/select-into-clause-transact-sql
+[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [寬型資料表]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
