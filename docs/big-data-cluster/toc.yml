@@ -5,10 +5,28 @@ items:
     href: big-data-cluster-overview.md
   - name: 版本資訊
     href: big-data-cluster-release-notes.md
-- name: 快速入門
+- name: Install
   items:
-  - name: 部署 SQL Server 巨量資料叢集
-    href: quickstart-big-data-cluster-deploy.md
+  - name: 安裝工具
+    items:
+    - name: 安裝巨量資料工具
+      href: deploy-big-data-tools.md
+    - name: 安裝 mssqlctl
+      href: deploy-install-mssqlctl.md
+  - name: 部署指令碼
+    items:
+    - name: Azure Kubernetes Service
+      href: quickstart-big-data-cluster-deploy.md
+  - name: 部署指導
+    items:
+    - name: 部署指導
+      href: deployment-guidance.md
+    - name: Azure Kubernetes Service
+      href: deploy-on-aks.md
+    - name: Kubeadm
+      href: deploy-with-kubeadm.md
+    - name: Minikube
+      href: deploy-on-minikube.md
 - name: 教學課程
   items:
   - name: 1_載入範例資料
@@ -37,28 +55,10 @@ items:
     href: concept-compute-pool.md
   - name: 資料持續性
     href: concept-data-persistence.md
-  - name: Security
+  - name: 安全性
     href: concept-security.md
 - name: 使用說明指南
   items:
-  - name: Install
-    items:
-    - name: 部署巨量資料叢集
-      items:
-      - name: 部署指導
-        href: deployment-guidance.md
-      - name: 部署在 Minikube 上
-        href: deploy-on-minikube.md
-      - name: 部署在 AKS 上
-        href: deploy-on-aks.md
-      - name: 使用 Kubeadm 部署
-        href: deploy-with-kubeadm.md
-    - name: 安裝工具
-      items:
-      - name: 安裝巨量資料工具
-        href: deploy-big-data-tools.md
-      - name: 安裝 mssqlctl
-        href: deploy-install-mssqlctl.md
   - name: 資料虛擬化
     items:
     - name: 將關聯式資料虛擬化
@@ -89,7 +89,7 @@ items:
       href: cluster-admin-portal.md
     - name: Kubernetes 疑難排解
       href: cluster-troubleshooting-commands.md
-  - name: 筆記型電腦
+  - name: Notebooks
     items:
     - name: Notebooks 概觀
       href: notebooks-guidance.md
@@ -109,9 +109,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 要求存取巨量資料叢集
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 0878ec62a789072b9796c928aad8e7c0b6af6e65
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d9229242d1c56e36c854ef8f7ecdd94145398b87
+ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405558"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898913"
