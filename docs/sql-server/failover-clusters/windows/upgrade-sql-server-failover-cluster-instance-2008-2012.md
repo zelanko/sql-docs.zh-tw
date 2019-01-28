@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63d6e347f83e63f7f99a2e06e1122b1c93934b0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6c669932929f690a1d3f01968bbaaa482aa4d568
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257053"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044554"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
@@ -49,6 +49,7 @@ ms.locfileid: "54257053"
 | **_可用性群組？(是/否)_**                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
 | **叢集只會使用 SQL FCI**         | [案例 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [案例 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [案例 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [案例 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
 | **叢集使用獨立執行個體** | [案例 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [案例 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+
 \* 排除可用性群組接聽程式名稱
 
 ## <a name="scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis"></a>案例 1：有 SQL Server 可用性群組、沒有容錯移轉叢集執行個體 (FCI) 的 Windows 叢集

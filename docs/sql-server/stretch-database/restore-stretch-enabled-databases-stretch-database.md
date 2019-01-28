@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46cbbaa2654e18f0aef5d5a3b904f41ce5a88219
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f9ee612238f9e8208de48b6d52256141d1ed638d
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457631"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>還原已啟用 Stretch 的資料庫 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "53596579"
   如需備份的詳細資訊，請參閱 [備份已啟用延展功能的資料庫](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)。
 
 > [!TIP]
-> 備份只是完整高可用性和商務持續性解決方案的一部分。 如需高可用性的詳細資訊，請參閱 [高可用性解決方案](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。
+> 備份只是完整高可用性和商務持續性解決方案的一部分。 如需高可用性的詳細資訊，請參閱 [高可用性解決方案](../../database-engine/sql-server-business-continuity-dr.md)。
 
 ## <a name="restore-your-sql-server-data"></a>還原 SQL Server 資料
 從硬體故障或損毀復原，請從備份還原已啟用 Stretch 的 SQL Server 資料庫。 您可以繼續使用目前所用的 SQL Server 還原方法。 如需詳細資訊，請參閱 [還原和復原概觀](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。

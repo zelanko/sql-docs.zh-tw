@@ -10,22 +10,24 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 72dc0b6cd9b5cf5f5818e0f447901fcce8c17def
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416225"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044901"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開發夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 如需開發 SQL Server 資料庫解決方案的支援，您有各種領先業界的工具可以選擇。  本文章特別介紹提供 Microsoft SQL Server 開發解決方案的 Microsoft 夥伴公司。
 
 ## <a name="our-development-partners"></a>我們的開發夥伴
+
 | Partner | Description | 連結 |
 | --- | --- | --- |
 |![idera][1] |**IDERA**<br>Rapid SQL 是智慧型 SQL 整合式開發環境，讓資料庫開發人員和資料庫管理員可在所有主要的資料庫平台上 (包括來自單一介面的 SQL Server) 建立高效能的 SQL 程式碼。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube] |
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. 讓開發人員社群藉由適當的工具組，得以彈性地選擇程式設計語言、架構和服務。 開發人員可以使用 Click2Cloud 的工具組，以建立「Linux 上的 SQL」容器，並將它附加至應用程式，同時仍可啟用安全的多租用戶架構。 容器可以獨立部署於任何雲端容器平台上。|[Marketplace][click2cloud_marketplace]<br>[網站][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[影片][click2cloud_youtube] |
+
 ## <a name="next-steps"></a>後續步驟
 若要深入了解我們的其他合作夥伴，請參閱[高可用性和災害復原夥伴][hadr_partners]、[管理夥伴][management_partners]及[監視夥伴][monitor_partners]。
 

@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ed5059f50c45e3bcac5d3e17ce1fd09d2fb4fa8
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 307c1f1a526b96cfd3c01f9ba841e44189e70139
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300455"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044305"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,7 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 -->
 
 ::: moniker range="= sqlallproducts-allversions"
+
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 版本資訊](../sql-server/sql-server-ver15-release-notes.md)        |
@@ -57,12 +58,15 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 ::: moniker-end
 
 ::: moniker range="= sql-server-ver15"
+
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 版本資訊](../sql-server/sql-server-ver15-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)        |
@@ -72,9 +76,11 @@ SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫�
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
 |新功能  | 版本資訊  |
 |---------|---------|
 |[SQL Server 2016 的新功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
