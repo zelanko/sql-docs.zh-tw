@@ -2,7 +2,7 @@
 title: 設定可用性群組的複寫
 description: 設定 Always On 可用性群組的複寫。
 ms.custom: seodec18
-ms.date: 07/09/2018
+ms.date: 01/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dc4b6f393529923c8de6b0c25754c5185e4f1bb5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129678"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044315"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>設定 Always On 可用性群組的複寫
 
@@ -126,9 +126,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  如需詳細資訊，請參閱[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)。  
- 
-> [!NOTE]  
->  無法在使用 Per_DB 選項啟用 DTC_Support 的可用性群組中，於資料庫上啟用複寫。  
+
   
 ##  <a name="step3"></a> 3.確定所有次要複本主機都設定為複寫  
  在每個次要複本主機上，確認 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 已經設定為支援複寫。 您可以在每個次要複本主機上執行下列查詢，以便判斷是否已安裝複寫：  

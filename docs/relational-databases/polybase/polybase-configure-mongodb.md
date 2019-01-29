@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68fb5c69d30e9ba30f27bcd23347ed5543c7e792
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947583"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044494"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>設定 PolyBase 存取 MongoDB 中的外部資料
 
@@ -142,6 +142,7 @@ JSON 巢狀/重複資料類型會以下列方式壓平合併
 * 巢狀欄位 restaurant.address.zipcode becomes restaurant.address_zipcode
 
 陣列等級會以下列順序壓平合併：
+
 | grades_date | grades_grade  | games_score | 
 | ------------- | ------------------------- | -------------- |
 |1393804800000 |只有在次要複本設定成手動容錯移轉模式，而且至少一個次要複本目前與主要複本 SYNCHRONIZED 時， |2|

@@ -26,12 +26,12 @@ ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a4a31e52cbaa9e91219c2e67341de968d5c7e2c
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: e0c9cf64fa8e2b4304e2ba25536a298edbd306ac
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626328"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044325"
 ---
 # <a name="database-engine-service-startup-options"></a>Database Engine 服務啟動選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "53626328"
   
 ## <a name="list-of-startup-options"></a>啟動選項清單  
 ### <a name="default-startup-options"></a>預設啟動選項  
+
 |選項。|Description|  
 |-----------------------------|-----------------|  
 |**-d**  *master_file_path*|master 資料庫檔案的完整路徑 (通常是 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\master.mdf)。 如果不提供這個選項，會使用現有的登錄參數。|  
@@ -56,6 +57,7 @@ ms.locfileid: "53626328"
 |**-l**  *master_log_path*|master 資料庫記錄檔的完整路徑 (通常是 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Data\mastlog.ldf)。 如果不指定這個選項，就會使用現有的登錄參數。|  
   
 ### <a name="other-startup-options"></a>其他啟動選項   
+
 |選項。 |Description|   
 |---------------------------|-----------------|  
 |**-c**|縮短從命令提示字元啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的啟動時間。 一般而言， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會呼叫「服務控制管理員」，以服務方式啟動。 因為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 從命令提示字元啟動時不會以服務方式啟動，所以請使用 **-c** 略過這個步驟。|  

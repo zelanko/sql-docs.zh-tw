@@ -14,12 +14,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fabd4b6da2a6c7016d00e503918062f86f6ce147
-ms.sourcegitcommit: 7ea015dc8527de14e7bd4401f5c74c8402fab3d6
+ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738114"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044484"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
 
@@ -130,6 +130,7 @@ ms.locfileid: "53738114"
 ||**SecurityMemberProcessInterval**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] [使用者及群組的權限] 功能區域中，[階層成員] 索引標籤上設定之使用者和群組權限的套用頻率 (以秒為單位)。 預設值為 **3600** 秒 (60 分鐘)。|  
 
 ##  <a name="Performance"></a> 效能設定  
+
 |組態管理員設定|系統設定|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**啟用效能改善設定**|**PerformanceImprovementEnable**|我們預設為啟用這項設定 (**設為 1**)，因此載入權限相關頁面可取得相當好的效能。 但在此情況下，建立/修改實體、屬性、使用者或群組的效能則很低。 若要避免這個問題，您可以停用這項設定 (**設為 0**)。 變更這項設定之後， 您必須執行 "**EXEC [mdm].[udpPerformanceToggleSwitch];**" 命令，才能確保檢視及資料正確無誤。|  

@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4cb25fff7ac946808ecad9cb4d0e8594f32ad5a2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cbf03f09ce4d72a738fe018bd0ca0cd67af3d107
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300565"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838145"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -479,8 +479,6 @@ column_name <data_type>
   
  IDENTITY  
  指出新資料行是識別欄位。 當新資料列加入資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會提供資料行的唯一累加值。 識別欄位通常用來搭配 PRIMARY KEY 條件約束一起使用，做為資料表的唯一資料列識別碼。 可以將 IDENTITY 屬性指派給 **tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 或 **numeric(p,0)** 資料行。 每份資料表都只能建立一個識別欄位。 繫結的預設值和 DEFAULT 條件約束無法搭配識別欄位使用。 您必須同時指定種子和遞增，或同時不指定這兩者。 如果同時不指定這兩者，預設值便是 (1,1)。  
-  
- 在記憶體最佳化資料表中，*seed* 和 *increment* 唯一允許的值為 1；(1,1) 是 *seed* 和 *increment* 的預設值。  
   
  *seed*  
  這是載入資料表的第一個資料列所用的值。  

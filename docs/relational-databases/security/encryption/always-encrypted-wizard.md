@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db55b4763dc0a5956d419fd45ced58073e2affbb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805714"
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "54327865"
  
  - **權限：** 若要使用此精靈來查詢加密資料行及選取金鑰，您必須具有 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 權限。 若要建立新的金鑰，您也必須具有 `ALTER ANY COLUMN MASTER KEY` 和 `ALTER ANY COLUMN ENCRYPTION KEY` 權限。  
  
- #### <a name="to-open-the-always-encrypted-wizard"></a>若要開啟永遠加密精靈  
+ #### <a name="to-open-the-always-encrypted-wizard"></a>若要開啟永遠加密精靈
  
  1.  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的物件總管元件，連接到您的 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
    
  2.  以滑鼠右鍵按一下您的資料庫，指向 [工作]，然後按一下 [加密資料行]。  
    
- ## <a name="column-selection-page"></a>資料行選取頁面  
+ ## <a name="column-selection-page"></a>資料行選取頁面
  - 找出資料表與資料行，然後針對所選資料行選取加密類型 (確定性或隨機) 和加密金鑰。 若要解密目前加密的資料行，請選取 [純文字] 。 若要旋轉資料行加密金鑰，請選取不同的加密金鑰，精靈即會解密資料行，並以新的金鑰重新加密該資料行。 (雖然 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援加密時態表和記憶體中的資料表，但精靈無法對此進行設定。)  
  
 ## <a name="master-key-configuration-page"></a>主要金鑰設定頁面  

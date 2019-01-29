@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0bcbbd26ed97fd0df20abfb997495105fe2f726a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0b5003b20a1cfa477cde724a7ddfa32914eab9ef
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203307"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044454"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>如何叢集化 Always On 可用性群組的 DTC 服務
 
@@ -26,12 +26,14 @@ ms.locfileid: "53203307"
 本主題描述針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]叢集化 Microsoft Distributed Transaction Coordinator (DTC) 服務的需求和步驟。 如需有關分散式交易和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的其他資訊，請參閱 [AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 
  ## <a name="checklist-preliminary-requirements"></a>檢查清單：初步需求
+
 ||工作|參考|  
 |------|-----------------|----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定所有節點、服務和可用性群組皆已正確設定。|[AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定已符合可用性群組 DTC 需求。|[AlwaysOn 可用性群組和資料庫鏡像的跨資料庫交易和分散式交易 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
 ## <a name="checklist-clustered-dtc-resource-dependencies"></a>檢查清單：叢集 DTC 資源相依性
+
 ||工作|參考|  
 |------|-----------------|----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|共用存放磁碟機。|[Configuring the Shared-Storage Drive](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx)(設定共用存放磁碟機)。 請考慮使用磁碟機代號 **M**。|
@@ -43,6 +45,7 @@ ms.locfileid: "53203307"
 
 
 ## <a name="checklist-post-clustered-dtc-resource-configurations"></a>檢查清單：張貼叢集 DTC 資源設定
+
 ||工作|參考|  
 |------|-----------------|----------|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|安全地啟用叢集 DTC 資源的網路存取。|[安全地啟用 MS DTC 的網路存取](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|

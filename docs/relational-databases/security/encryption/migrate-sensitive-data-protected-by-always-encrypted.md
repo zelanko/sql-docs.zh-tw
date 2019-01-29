@@ -14,17 +14,18 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebe1af350632325d56fdf0251b790082fb443e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45a3b887688186aaedfc66423b4982629914f159
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769236"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880531"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>移轉透過永遠加密保護的機密資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- 若要在大量複製作業期間載入加密的資料而不需在伺服器上執行中繼資料檢查，請使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項來建立使用者。 此選項適用於比 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 還舊之 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本的舊版工具 (例如 bcp.exe)，或者利用無法使用「永遠加密」的協力廠商擷取-轉換-載入 (ETL) 工作流程來使用。 這可讓使用者將加密的資料從某一組資料表 (包含加密的資料行) 安全地移至另一組具有加密資料行 (位於相同或不同的資料庫) 的資料表。  
- -  
+
+若要在大量複製作業期間載入加密的資料而不需在伺服器上執行中繼資料檢查，請使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項來建立使用者。 此選項適用於比 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 還舊之 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本的舊版工具 (例如 bcp.exe)，或者利用無法使用「永遠加密」的協力廠商擷取-轉換-載入 (ETL) 工作流程來使用。 這可讓使用者將加密的資料從某一組資料表 (包含加密的資料行) 安全地移至另一組具有加密資料行 (位於相同或不同的資料庫) 的資料表。  
+
  ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項  
  [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) 和 [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) 都具有 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項。 設為 ON (預設值為 OFF) 時，此選項會在大量複製作業中抑制伺服器上的密碼編譯中繼資料檢查，讓使用者不需解密資料，就能在資料表或資料庫之間大量複製加密的資料。  
   

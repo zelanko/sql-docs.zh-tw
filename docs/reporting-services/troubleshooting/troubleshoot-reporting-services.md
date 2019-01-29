@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40f54f79c918f580d758dec342508dec96ae5b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13a85c169421f4ab794ed95f8696d32e5215f6c9
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686126"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087927"
 ---
 # <a name="troubleshoot-reporting-services"></a>針對 Reporting Services 進行疑難排解
   檢閱本節中的主題，以便識別及疑難排解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的問題。  
@@ -30,9 +30,9 @@ ms.locfileid: "47686126"
 
 +  [針對 Reporting Services 報表轉譯問題進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md)  
 
-+  [在原生模式報表伺服器上疑難排解發行或檢視報表](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
++  [針對在原生模式報表伺服器上發行或檢視報表進行疑難排解](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [針對 Reporting Services 報表的伺服器與資料庫連接問題進行疑難排解](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
  ![小型檔案資料夾圖示](../../reporting-services/troubleshooting/media/filefolder-small.png)   **錯誤和事件參考**  
  + [錯誤和事件參考 &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

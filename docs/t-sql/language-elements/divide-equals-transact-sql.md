@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97c7e8106cfc90ac4ff5e39db9ae478d1569f6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df1840c0b97dcf43703e5d5fec447923af9265c9
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708606"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046172"
 ---
 # <a name="-division-assignment-transact-sql"></a>/= (除法指派) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,6 +62,7 @@ SELECT @myVariable AS ResultVariable;
 ```
   
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+
 |ResultVariable | 
 |--- |
 |8.75 |

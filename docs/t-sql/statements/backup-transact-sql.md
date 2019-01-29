@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bb9f7368f9250bd96adb62c6af7e7711213e4fc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805774"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1132,9 +1132,9 @@ URL 的擁有權和權限問題可能會干擾備份作業。 [!INCLUDE[ssNoVers
 下列範例會為 `Sales` 執行 COPY_ONLY 備份以將它備份到 Microsoft Azure Blob 儲存體服務。  儲存體帳戶名稱為 `mystorageaccount`。  容器名稱為 `myfirstcontainer`。  已建立具有讀取、寫入、刪除和列出權限的預存存取原則。  已使用與預存存取原則相關聯的共用存取簽章來建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`。  如需將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份至 Microsoft Azure Blob 儲存體服務的資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)和 [SQL Server 備份至 URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。
 
 ```sql  
-BACKUP DATABASE Sales WITH COPY_ONLY
+BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
-WITH STATS = 5;
+WITH STATS = 5, COPY_ONLY;
 ```
 
   

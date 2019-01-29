@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 758917c8f3fd11d79162ac650cd29efd709e9dd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 1f604f75c685e1d06edf4287ea86a71020197188
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457451"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>啟用遠端錯誤 (Reporting Services)
   您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上設定伺服器屬性，以便傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。 如果錯誤訊息包含「如需有關此錯誤的詳細資料，請導覽至本機伺服器電腦上的報表伺服器，或啟用遠端錯誤」這段文字，您可以設定 **EnableRemoteErrors** 屬性來存取可幫助您排解疑難問題的其他資訊。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 報表伺服器系統屬性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
@@ -108,7 +108,7 @@ ms.locfileid: "51813122"
   
 ##  <a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 資料表 (原生模式)  
   
-1.  > [!NOTE]  
-    >  您可以編輯報表伺服器資料庫中的 **ConfigurationInfo** 資料表，將 **EnableRemoteErrors** 設為 **True**，但是如果目前正在使用報表伺服器，則應該使用 SQL Server Management Studio 或指令碼來修改設定。 如果您修改資料庫中的設定，則須先重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，變更才會生效。  
+> [!NOTE]  
+>  您可以編輯報表伺服器資料庫中的 **ConfigurationInfo** 資料表，將 **EnableRemoteErrors** 設為 **True**，但是如果目前正在使用報表伺服器，則應該使用 SQL Server Management Studio 或指令碼來修改設定。 如果您修改資料庫中的設定，則須先重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，變更才會生效。  
   
   

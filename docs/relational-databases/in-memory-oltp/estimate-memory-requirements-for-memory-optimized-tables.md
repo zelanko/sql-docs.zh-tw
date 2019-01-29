@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cdacecf1c6d6c8c08411eff57c65adc0872dd39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfe74821b37a5e658ffc9abe3ff9710d8e53f592
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531518"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087767"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,8 +78,7 @@ CREATE TABLE t_hk
   col8 char (30) NOT NULL,   
   col9 char (50) NOT NULL  
 
-  WITH (memory_optimized = on)  
-);
+)   WITH (memory_optimized = on)  ;
 GO  
 ```  
 

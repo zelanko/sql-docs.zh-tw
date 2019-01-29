@@ -36,12 +36,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eddd95772df6c7d6683949c131918605656a4b06
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9ce80e0d5936c0a09eefc8abb09b35846bf5dc13
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300405"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045017"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,6 +66,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
 |原始   |ssNoversion    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
