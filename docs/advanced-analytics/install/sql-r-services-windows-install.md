@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 69b3b9a57b2a4f6120c88552ca3100b288968b69
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645317"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147026"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,6 +27,8 @@ ms.locfileid: "53645317"
 ## <a name="pre-install-checklist"></a>預先安裝檢查清單
 
 + 需要資料庫引擎執行個體。 雖然您可以將它以累加方式加入現有的執行個體，您無法安裝只是 R。
+
++ 業務續航力[Always On 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)R Services 的支援。 您必須安裝 R Services，並設定封裝，每個節點上。
 
 + 請勿在容錯移轉叢集上安裝 R Services。 用來隔離 R 程序的安全性機制與不相容的 Windows Server 容錯移轉叢集環境。
 

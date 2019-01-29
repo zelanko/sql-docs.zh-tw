@@ -18,12 +18,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9177f154af1085a28c902e137cad0640f5702fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354891"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087897"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
@@ -193,13 +193,13 @@ ms.locfileid: "53354891"
   
  系統會忽略 NUMA 節點。 只有一個 IOProcess 執行緒集區，而且該執行緒集區中的所有執行緒都會相似化到所有邏輯處理器。 根據預設 (PerNumaNode=-1)，如果電腦的 NUMA 節點少於 4 個，這是作用的設定值。  
   
- ![Numa、 處理器和執行緒集區對應](../media/ssas-threadpool-numaex0.PNG "Numa、 處理器和執行緒集區對應")  
+ ![Numa、 處理器和執行緒集區的對應關係](../media/ssas-threadpool-numaex0.PNG "Numa、 處理器和執行緒集區對應")  
   
  **設定 PerNumaNode=1**  
   
  系統會針對每個 NUMA 節點建立 IOProcess 執行緒集區。 使用個別的執行緒集區可改善對本機資源的協調存取，例如 NUMA 節點的本機快取。  
   
- ![Numa、 處理器和執行緒集區對應](../media/ssas-threadpool-numaex1.PNG "Numa、 處理器和執行緒集區對應")  
+ ![Numa、 處理器和執行緒集區的對應關係](../media/ssas-threadpool-numaex1.PNG "Numa、 處理器和執行緒集區對應")  
   
  **設定 PerNumaNode=2**  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53354891"
   
  在下列範例中，如果系統有 4 個 NUMA 節點及 32 個邏輯處理器，設定`PerNumaNode`為 2 會產生 32 個 IOProcess 執行緒集區。 前 8 個執行緒集區中的執行緒會相似化為 NUMA 節點 0 中的所有邏輯處理器，但會將理想的處理器設為 0、1、2，最多 7。 後 8 個執行緒集區會相似化為 NUMA 節點 1 中的所有邏輯處理器，並將理想的處理器設為 8、9、10，最多 15，依此類推。  
   
- ![Numa、 處理器和執行緒集區對應](../media/ssas-threadpool-numaex2.PNG "Numa、 處理器和執行緒集區對應")  
+ ![Numa、 處理器和執行緒集區的對應關係](../media/ssas-threadpool-numaex2.PNG "Numa、 處理器和執行緒集區對應")  
   
  在此相似性層級，排程器一律會先嘗試使用偏好的 NUMA 節點中的理想邏輯處理器。 如果邏輯處理器無法使用，排程器會選擇相同節點或相同處理器群組 (如果沒有其他執行緒可用) 中的其他處理器。 如需詳細資訊和範例，請參閱 [Analysis Services 2012 Configuration settings (Wordpress Blog)](https://go.microsoft.com/fwlink/?LinkId=330387)(Analysis Services 2012 組態設定 (Wordpress 部落格))。  
   

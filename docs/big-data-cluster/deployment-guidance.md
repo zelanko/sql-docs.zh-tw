@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 900bd5fea075e304dae73a20168da952433f20be
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405818"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087857"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -256,10 +256,27 @@ kubectl get svc -n <your-cluster-name>
     mssqlctl delete cluster <old-cluster-name>
    ```
 
-1. 安裝最新版**mssqlctl**。
+1. 解除安裝任何舊版本**mssqlctl**。
+
+   ```bash
+   pip3 uninstall mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > 您不應該安裝新版**mssqlctl**沒有先解除安裝任何較舊的版本。
+
+1. 安裝最新版**mssqlctl**。 
+   
+   **Windows:**
+
+   ```powershell
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   ```
+
+   **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
    ```
 
    > [!IMPORTANT]

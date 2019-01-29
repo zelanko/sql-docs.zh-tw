@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24222ed24da0fea385e27aa13bd518efa15a32c3
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: e8f1169e430a9ab6295862a3434f08967e01f33f
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55071335"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087777"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "55071335"
 |**desired_state_desc**|**nvarchar(60)**|文字的查詢存放區的所需的作業模式的詳細描述：<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|表示查詢存放區的作業模式。 所需的狀態所需的使用者清單中，除了實際狀態可能是處於錯誤狀態。<br /> 0 = OFF <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = 錯誤|  
 |**actual_state_desc**|**nvarchar(60)**|查詢存放區的實際作業模式的文字描述。<br />OFF<br />READ_ONLY<br />READ_WRITE<br />error<br /><br /> 當實際狀態是不同於預期的狀態，則需要有情況：<br />-如果資料庫設為唯讀模式或查詢存放區大小超過設定的配額，查詢存放區可能會在唯讀模式下運作，即使使用者已指定讀寫。<br />-在極端的情況下查詢存放區可以進入錯誤狀態，因為發生內部錯誤。 如果發生這種情況，可以藉由執行復原查詢存放區`sp_query_store_consistency_check`受影響的資料庫中預存程序。|  
-|**readonly_reason**|**int**|當**desired_state_desc**是 READ_WRITE 和**actual_state_desc**是 READ_ONLY **readonly_reason**傳回位元對應來表示查詢存放區處於為何唯讀模式。<br /><br /> **1** -資料庫處於唯讀模式<br /><br /> **2** -資料庫處於單一使用者模式<br /> **4** -資料庫處於緊急模式<br /> **8** -資料庫是次要複本 (適用於 Always On 和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]異地複寫)。 這個值可以有效地觀察到只有**讀取**次要複本<br /> **65536** -查詢存放區已達到的 MAX_STORAGE_SIZE_MB 選項所設定的大小限制。<br /> **131072** -查詢存放區中的不同陳述式的數目已達到內部記憶體限制。 建議您移除您不需要的查詢，或升級至較高的服務層，以便傳送至讀寫模式的查詢存放區。<br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /> **262144** -等候保存在磁碟上的記憶體中項目的大小已達到內部記憶體限制。 只有在記憶體中的項目會保存在磁碟上之前，暫時查詢存放區將處於唯讀模式。 <br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> **524288** -資料庫已達到磁碟大小限制。 查詢存放區資料庫的一部分使用者，因此如果沒有更多可用空間的資料庫，表示查詢存放區無法進一步成長就淪陷了。<br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 <br /> <br /> 若要切換的查詢存放區作業模式後，要讀寫，請參閱**確認查詢存放區會持續收集查詢資料**一節[執行查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)。|  
+|**readonly_reason**|**int**|當**desired_state_desc**是 READ_WRITE 和**actual_state_desc**是 READ_ONLY **readonly_reason**傳回位元對應來表示查詢存放區處於為何唯讀模式。<br /><br /> **1** -資料庫處於唯讀模式<br /><br /> **2** -資料庫處於單一使用者模式<br /><br /> **4** -資料庫處於緊急模式<br /><br /> **8** -資料庫是次要複本 (適用於 Always On 和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]異地複寫)。 這個值可以有效地觀察到只有**讀取**次要複本<br /><br /> **65536** -查詢存放區已達到的 MAX_STORAGE_SIZE_MB 選項所設定的大小限制。<br /><br /> **131072** -查詢存放區中的不同陳述式的數目已達到內部記憶體限制。 建議您移除您不需要的查詢，或升級至較高的服務層，以便傳送至讀寫模式的查詢存放區。<br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> **262144** -等候保存在磁碟上的記憶體中項目的大小已達到內部記憶體限制。 只有在記憶體中的項目會保存在磁碟上之前，暫時查詢存放區將處於唯讀模式。 <br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> **524288** -資料庫已達到磁碟大小限制。 查詢存放區資料庫的一部分使用者，因此如果沒有更多可用空間的資料庫，表示查詢存放區無法進一步成長就淪陷了。<br />**適用於：** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 <br /> <br /> 若要切換的查詢存放區作業模式後，要讀寫，請參閱**確認查詢存放區會持續收集查詢資料**一節[執行查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify)。|  
 |**current_storage_size_mb**|**bigint**|查詢存放區的大小以 mb 為單位的磁碟上。|  
 |**flush_interval_seconds**|**bigint**|進行查詢的規則排清期間儲存至磁碟的資料，以秒為單位。 預設值是**900** （15 分鐘）。<br /><br /> 藉由變更`ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)`陳述式。|  
 |**interval_length_minutes**|**bigint**|統計資料的彙總間隔以分鐘為單位。 不允許任意值。 您可以使用下列其中一項：1、 5、 10、 15、 30、 60 和 1440年分鐘。 預設值是**60**分鐘的時間。|  

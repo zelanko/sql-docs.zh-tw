@@ -11,12 +11,12 @@ ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9a2172bdefebdbfd327d8d253e32cd63c254d8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419869"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087709"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理儀表板和使用量資料
   PowerPivot 管理儀表板是 SharePoint 管理中心內預先定義之報表和網頁組件的集合，可讓您管理 SQL Server PowerPivot for SharePoint 部署。 管理儀表板會提供伺服器健全狀況、活頁簿活動和資料重新整理的相關資訊。 儀表板會使用 SharePoint 使用量資料收集的資料。  
@@ -67,7 +67,7 @@ ms.locfileid: "52419869"
 ### <a name="change-the-current-service-application"></a>變更目前的服務應用程式。  
  若要在管理儀表板中變更目前的 PowerPivot 服務應用程式：  
   
-1.  在 PowerPivot 管理儀表板的頂端，記下目前服務應用程式的名稱，例如 **[預設 PowerPivot 服務應用程式]**。  
+1.  在 PowerPivot 管理儀表板的頂端，記下名稱目前的服務應用程式，例如**預設的 PowerPivot 服務應用程式**。  
   
 2.  在 **[動作]** 儀表板中，按一下 **[列示服務應用程式]**。  
   

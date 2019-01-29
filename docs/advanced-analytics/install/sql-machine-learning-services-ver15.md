@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d0b91668141b73b8ce5e4708cb403b7cc09b4ce9
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432831"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087737"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>在 SQL Server Machine Learning 服務安裝在 SQL Server 2019 的差異  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "53432831"
 
 ## <a name="symbolic-link-created-by-setup"></a>安裝程式所建立的符號連結
 
-為目前的預設值建立符號連結**R_SERVICES**並**PYTHON_SERIVCES**做為 SQL Server 安裝程式的一部分。 如果您不想要建立此連結，或者是 'all application packages' 的讀取權限授與至資料夾階層。
+為目前的預設值建立符號連結**R_SERVICES**並**PYTHON_SERVICES**做為 SQL Server 安裝程式的一部分。 如果您不想要建立此連結，或者是 'all application packages' 的讀取權限授與至資料夾階層。
 
 
 ## <a name="see-also"></a>另請參閱

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee8f8c4a222b2949f49c8be019b6e4f6724cfa04
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: d46ff8318543d4e2a4b4dc547c9f19640d463f49
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785959"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087867"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -173,13 +173,13 @@ ms.locfileid: "53785959"
   
  系統會忽略 NUMA 節點。 只有一個 IOProcess 執行緒集區，而且該執行緒集區中的所有執行緒都會相似化到所有邏輯處理器。 根據預設 (PerNumaNode=-1)，如果電腦的 NUMA 節點少於 4 個，這是作用的設定值。  
   
- ![Numa、 處理器和執行緒集區對應](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、 處理器和執行緒集區對應")  
+ ![Numa、 處理器和執行緒集區的對應關係](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa、 處理器和執行緒集區對應")  
   
  **設定 PerNumaNode=1**  
   
  系統會針對每個 NUMA 節點建立 IOProcess 執行緒集區。 使用個別的執行緒集區可改善對本機資源的協調存取，例如 NUMA 節點的本機快取。  
   
- ![Numa、 處理器和執行緒集區對應](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、 處理器和執行緒集區對應")  
+ ![Numa、 處理器和執行緒集區的對應關係](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa、 處理器和執行緒集區對應")  
   
  **設定 PerNumaNode=2**  
   
@@ -187,7 +187,7 @@ ms.locfileid: "53785959"
   
  以下範例中具有 4 個 NUMA 節點及 32 個邏輯處理器的系統上，將 **PerNumaNode** 設為 2 會產生 32 個 IOProcess 執行緒集區。 前 8 個執行緒集區中的執行緒會相似化為 NUMA 節點 0 中的所有邏輯處理器，但會將理想的處理器設為 0、1、2，最多 7。 後 8 個執行緒集區會相似化為 NUMA 節點 1 中的所有邏輯處理器，並將理想的處理器設為 8、9、10，最多 15，依此類推。  
   
- ![Numa、 處理器和執行緒集區對應](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、 處理器和執行緒集區對應")  
+ ![Numa、 處理器和執行緒集區的對應關係](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa、 處理器和執行緒集區對應")  
   
  在此相似性層級，排程器一律會先嘗試使用偏好的 NUMA 節點中的理想邏輯處理器。 如果邏輯處理器無法使用，排程器會選擇相同節點或相同處理器群組 (如果沒有其他執行緒可用) 中的其他處理器。 如需詳細資訊和範例，請參閱 [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)(Analysis Services 2012 組態設定 (Wordpress 部落格))。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f323ac135ed41ff15c1d41a17407d03138e4807
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: 6fd14582fdae0d76463b8d8739d214882b78f999
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372692"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55147006"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 
@@ -29,7 +29,9 @@ ms.locfileid: "54372692"
 
 + 需要資料庫引擎執行個體。 您無法安裝只是 R 或 Python 功能，雖然您可以將它們以累加方式加入現有的執行個體。
 
-- 安裝 Machine Learning 服務*不支援*SQL Server 2017 中的容錯移轉叢集。 不過，它*支援*與 SQL Server 2019。 
++ 業務續航力[Always On 可用性群組](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)Machine Learning 服務的支援。 您必須安裝 Machine Learning 服務，並設定套件，每個節點上。
+
++ 安裝 Machine Learning 服務*不支援*SQL Server 2017 中的容錯移轉叢集。 不過，它*支援*與 SQL Server 2019。 
  
 + 請勿在網域控制站上安裝 Machine Learning 服務。 Machine Learning 服務的部分安裝程式將會失敗。
 

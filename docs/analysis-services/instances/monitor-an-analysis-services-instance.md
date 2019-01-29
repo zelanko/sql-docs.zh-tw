@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ac0f94b7f12cdba6237b2694114580f56dc6597
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 39cc5a22165d07aafce29e4216548c4e8d226892
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540462"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087627"
 ---
 # <a name="monitoring-overview"></a>監視概觀
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-Analysis Services 有數個不同的工具，可協助您監視和微調伺服器的效能和。 要選擇的工具依據要做的監視或微調類型，以及要監視的特殊事件而定。
+Analysis Services 有數個不同的工具，可協助您監視與微調伺服器的效能。 要選擇的工具依據要做的監視或微調類型，以及要監視的特殊事件而定。
 
 如需有關如何監視 SQL Server Analysis Services 的詳細資訊，請參閱 < [SQL Server 2008 R2 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   

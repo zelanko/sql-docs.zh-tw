@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: f91ba6d5e7120f26c4ce4f8572eea779cdddebfc
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226685"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044945"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -417,6 +417,7 @@ ODBC Driver for SQL Server 也支援使用 CEKeystoreProvider 介面的自訂的
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
@@ -451,6 +452,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
@@ -477,6 +479,7 @@ unsigned int dataSize;
 char data[];
 } CEKEYSTOREDATA;
 ```
+
 | 引數 | Description |
 |:---|:---|
 |`name`|[輸入]集合，提供者的名稱時若要將資料傳送。 忽略時取得。 以 null 終止的寬字元字串。|
@@ -489,6 +492,7 @@ A`SQLSetConnectAttr`呼叫使用`SQL_COPT_SS_CEKEYSTOREDATA`屬性寫入指定�
 ```
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
+
 | 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`| [輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
@@ -508,6 +512,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ```
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
+
 | 引數 | Description |
 |:---|:---|
 |`ConnectionHandle`|[輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
