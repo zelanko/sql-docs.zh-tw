@@ -9,22 +9,25 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1dbe3213ae6b5774cd08efa6f6a24b799f74a6a7
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 426b0eed5b53760e872ebd18b11fce4de5ff22b9
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731995"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044914"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 若要監視您的 SQL Server 服務，您可以從各種領先業界的工具中選擇。 本文章特別介紹提供 Microsoft SQL Server 監視解決方案支援的 Microsoft 夥伴公司。
 
 <!--
+
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 監視夥伴
+
 | Partner | Description | 連結 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 診斷管理員是功能強大的效能監視和診斷解決方案，會主動從中央主控台警示系統管理員 SQL Server 環境內部的健康情況、效能和可用性問題。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube] | |
