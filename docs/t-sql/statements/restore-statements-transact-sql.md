@@ -319,7 +319,7 @@ RESTORE 陳述式利用 [ RECOVERY | NORECOVERY ] 選項來控制回復：
 復原資料庫時，會要求要還原的整組資料 (向前復原集) 與資料庫一致。 如果向前復原集尚未向前復原到足以與資料庫一致的範圍，且指定了 RECOVERY，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 就會發出錯誤。  
   
 ## <a name="compatibility-support"></a>相容性支援  
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法還原使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來建立的 **master****model** 及 **msdb** 備份。  
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法還原使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來建立的 **master** **model** 及 **msdb** 備份。  
   
 > [!NOTE]
 > 您無法將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份還原成比建立備份所用之版本還舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  

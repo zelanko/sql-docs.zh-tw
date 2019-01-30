@@ -43,7 +43,7 @@ ms.locfileid: "52617870"
   
 -   伺服器選項 (**-S**) 識別 **sqlcmd** 所連接的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
--   驗證選項 (**-E**、**-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：****-E** 選項是預設值，不需要予以指定。  
+-   驗證選項 (**-E**、**-U** 和 **-P**) 指定供 **sqlcmd** 用來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的認證。 **注意：** **-E** 選項是預設值，不需要予以指定。  
   
 -   輸入選項 (**-Q**、**-q** 和 **-i**) 識別 **sqlcmd** 的輸入位置。  
   

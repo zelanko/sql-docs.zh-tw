@@ -258,8 +258,8 @@ items:
       href: security/sql-server-launchpad-service-account.md
     - name: 設定防火牆
       href: security/firewall-configuration.md
-    - name: 新增 SQLRUserGroup 作為資料庫使用者
-      href: security/add-sqlrusergroup-to-database.md
+    - name: 為 SQLRUserGroup 建立登入
+      href: security/create-a-login-for-sqlrusergroup.md
   - name: 系統管理
     items:
     - name: 管理整合
@@ -329,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: 機器學習服務伺服器
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 2f3ba355f5d2cb9a7ddcb60cfa8a59e93a1203de
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 88b6b357a2abf19e587f8fffcad63e590c3e1748
+ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405689"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146996"

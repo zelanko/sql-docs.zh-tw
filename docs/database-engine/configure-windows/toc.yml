@@ -37,7 +37,7 @@ items:
     href: clr-enabled-server-configuration-option.md
   - name: CLR 嚴格安全性伺服器組態選項
     href: clr-strict-security.md
-  - name: 資料行加密記憶體保護區類型伺服器組態選項
+  - name: 資料行加密記憶體保護區類型伺服器設定選項
     href: configure-column-encryption-enclave-type.md
   - name: 通用條件符合已啟用伺服器組態選項
     href: common-criteria-compliance-enabled-server-configuration-option.md
@@ -254,6 +254,8 @@ items:
     href: determine-whether-the-database-engine-is-installed-and-started.md
   - name: 使用擴充保護連接至 Database Engine
     href: connect-to-the-database-engine-using-extended-protection.md
+  - name: 憑證管理 (SQL Server 組態管理員)
+    href: manage-certificates.md
   - name: 註冊 Kerberos 連接的服務主體名稱
     href: register-a-service-principal-name-for-kerberos-connections.md
 - name: 用戶端網路組態
@@ -283,9 +285,9 @@ items:
   href: sql-server-service-broker.md
 - name: 緩衝集區擴充
   href: buffer-pool-extension.md
-ms.openlocfilehash: e8bbcf31bb636e9ceb3ffdf83f6c01c587a514fc
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: a0d798b513376c1afc11bc6f2b253aa2ee302dde
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712560"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087697"

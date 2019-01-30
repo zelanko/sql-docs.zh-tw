@@ -68,7 +68,7 @@ SUBSTRING ( expression ,start , length )
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>Remarks  
- *start* 和 *length* 的值必須指定為字元數 (適用於 **ntext****char**或 **varchar** 資料類型) 和位元組數 (適用於 **text**’**image**、**binary**或 **varbinary** 資料類型)。  
+ *start* 和 *length* 的值必須指定為字元數 (適用於 **ntext** **char**或 **varchar** 資料類型) 和位元組數 (適用於 **text**’**image**、**binary**或 **varbinary** 資料類型)。  
   
  當 *start* 或 *length* 包含大於 2147483647 的值時，*expression* 必須是 **varchar(max)** 或 **varbinary(max)**。  
   
