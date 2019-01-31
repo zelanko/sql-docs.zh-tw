@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_operational_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8827614f494702d4e738d336e96cd96b92f949d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514309"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428655"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,26 +53,26 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>引數    
- *database_id* |NULL |0 |預設值    
+ *database_id* | NULL | 0 | DEFAULT    
  資料庫的識別碼。 *database_id*已**smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您指定 NULL *database_id*，您也必須指定，則為 NULL *object_id*， *index_id*，以及*partition_number*。    
     
  內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。    
     
- *object_id* |NULL |0 |預設值    
+ *object_id* | NULL | 0 | DEFAULT    
  索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。    
     
  有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回指定之資料庫中所有資料表和檢視表的快取資訊。 如果您指定 NULL *object_id*，您也必須指定，則為 NULL *index_id*並*partition_number*。    
     
- *index_id* | 0 |NULL |-1 |預設值    
+ *index_id* | 0 | NULL | -1 | DEFAULT    
  索引的識別碼。 *index_id*已**int**。有效輸入如下的索引，0 的 ID 編號，如果*object_id*是堆積，NULL，-1 或預設值。 預設值為 -1；NULL、-1 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回基底資料表或檢視表所有索引的快取資訊。 如果您指定 NULL *index_id*，您也必須指定，則為 NULL *partition_number*。    
     
- *partition_number* |NULL |0 |預設值    
+ *partition_number* | NULL | 0 | DEFAULT    
  物件的分割區編號。 *partition_number*已**int**。有效輸入如下*partion_number*索引或堆積中，NULL，0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回索引或堆積之所有分割區的快取資訊。    
@@ -85,9 +85,9 @@ sys.dm_db_index_operational_stats (
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|資料庫識別碼。|    
 |**object_id**|**int**|資料表或檢視表的識別碼。|    
-|**index_id**|**int**|索引或堆積的識別碼。<br /><br /> 0 = 堆積|    
-|**hobt_id**|**bigint**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 之資料堆積或 B 型樹狀目錄會追蹤資料行存放區索引的內部資料的資料列的識別碼。<br /><br /> 空值-這不是內部的資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
-|**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|    
+|**index_id**|**int**|索引或堆積的識別碼。<br /><br /> 0 = 堆積| 
+|**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。| 
+|**hobt_id**|**bigint**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 之資料堆積或 B 型樹狀目錄會追蹤資料行存放區索引的內部資料的資料列的識別碼。<br /><br /> 空值-這不是內部的資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱 < [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|分葉層級插入的累計計數。|    
 |**leaf_delete_count**|**bigint**|分葉層級刪除的累計計數。 已刪除的記錄未標示為準刪除項目第一次只會漸增 leaf_delete_count。 已刪除的記錄，建立映像第一次，如**leaf_ghost_count**會改為遞增。|    
 |**leaf_update_count**|**bigint**|分葉層級更新的累計計數。|    
@@ -156,7 +156,7 @@ sys.dm_db_index_operational_stats (
     
      這些資料行會指出索引或堆積上是否有閂鎖競爭的情形，以及競爭的嚴重程度。    
     
--   **row_lock_count**和**page_lock_count**    
+-   **row_lock_count** and **page_lock_count**    
     
      這些資料行會指出 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖取得資料列和頁面鎖定的次數。    
     
