@@ -1,7 +1,7 @@
 ---
 title: sys.dm_geo_replication_link_status (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/13/2016
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,14 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 251dcb7121b568444387a1e864294095a556b827
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94d5a2e924cfe4aa7625f6cfce40c5758eecb6a5
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396017"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421154"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   包含每個複寫連結中的異地複寫合作關係的主要和次要資料庫之間的資料列。 這包括主要和次要資料庫。 如果給定主要資料庫有一個以上的連續複寫連結，此資料表會包含一個資料列，每個關聯性。 在所有資料庫，包括邏輯主機中建立檢視。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
@@ -35,8 +36,8 @@ ms.locfileid: "52396017"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|複寫連結的唯一識別碼。|  
-|partner_server|**sysname**|包含連結的資料庫的邏輯伺服器的名稱。|  
-|partner_database|**sysname**|連結的邏輯伺服器上所連結資料庫的名稱。|  
+|partner_server|**sysname**|包含連結的資料庫的 SQL Database 伺服器的名稱。|  
+|partner_database|**sysname**|連結的 SQL Database 伺服器上所連結資料庫的名稱。|  
 |last_replication|**datetimeoffset**|由次要的主要資料庫時鐘為基礎的最後一個交易的認可時間戳記。 只有在主要資料庫上使用此值。|  
 |replication_lag_sec|**int**|時間之間的時差 last_replication 值與該交易的認可，在主要伺服器上，根據主要資料庫的時鐘的時間戳記。  只有在主要資料庫上使用此值。|  
 |replication_state|**tinyint**|此資料庫，其中的異地複寫的狀態:。<br /><br /> 1 = 植入。 異地複寫目標正在植入，但兩個資料庫都尚未同步處理。 植入完成之前，您無法連接到次要資料庫。 從主要中移除次要資料庫，將會取消植入作業。<br /><br /> 2 = 更新。 次要資料庫處於交易一致的狀態，並且與主要資料庫持續同步處理。<br /><br /> 4 = 已暫停。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  

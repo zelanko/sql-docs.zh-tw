@@ -1,7 +1,7 @@
 ---
 title: sys.bandwidth_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 01/28/2019
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,21 +22,23 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 90ad88cfaae5c82b79d9da1fa7de5baa60fe46f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 046e9e651daeb2946538ff5ae269aaad27666fd0
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403713"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421305"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注意：這只適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11。**  
+> [!NOTE]
+> 這只適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.* *  
   
- 傳回每個資料庫中所使用的網路頻寬的相關資訊 **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 邏輯伺服器**。 針對所指資料庫傳回的每一個資料列都會摘要說明在一小時內的單一使用方向和類別。  
+ 傳回每個資料庫中所使用的網路頻寬的相關資訊 **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V11 資料庫伺服器**。 針對所指資料庫傳回的每一個資料列都會摘要說明在一小時內的單一使用方向和類別。  
   
- **這已不再[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V12 邏輯伺服器。**  
+ **這已不再[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。**  
   
  **Sys.bandwidth_usage**檢視包含下列資料行。  
   
@@ -47,14 +49,16 @@ ms.locfileid: "52403713"
 |**direction**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入：移入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的資料。<br /><br /> 輸出：從 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 移出的資料。|  
 |**class**|使用的頻寬類別，下列其中一個值：<br />內部：在 Azure 平台中移動的資料。<br />外部功能：從 Azure 平台移出的資料。<br /><br /> 這個類別只會在資料庫參與區域 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) 之間的連續複製關聯性時傳回。 如果指定的資料庫未參與任何連續複製關聯性，則不會傳回"Interlink"資料列。 如需詳細資訊，請參閱本主題後面的＜備註＞一節。|  
 |**time_period**|發生使用時的時間週期是尖峰時間或離峰。 The Peak time is based on the region in which the server was created. 例如，如果伺服器是在 "US_Northwest" 區域中建立，則尖峰時間會定義為介於太平洋標準時間上午 10:00 到 和 06:00:00 執行報表， 之間。|  
-|**數量**|使用的頻寬數量，以 KB 為單位。|  
+|**quantity**|使用的頻寬數量，以 KB 為單位。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  此檢視僅供以**主要**伺服器層級主體登入的資料庫。  
   
 ## <a name="remarks"></a>備註  
   
-### <a name="external-and-internal-classes"></a>外部和內部類別  
+### <a name="external-and-internal-classes"></a>外部和內部類別
+
  每個資料庫在指定時間內，使用**sys.bandwidth_usage**檢視會傳回顯示頻寬使用量的方向與類別的資料列。 下列範例說明所指資料庫可能會公開的資料。 在這個範例中，時間是 2012-04-21 17:00:00，發生在尖峰時段。 資料庫名稱為 Db1。 在此範例中， **sys.bandwidth_usage**傳回針對 Ingress 和 Egress 方向及 External 與 Internal 類別的所有四個組合的資料列，如下所示：  
   
 |time|database_name|direction|class|time_period|quantity|  
@@ -64,10 +68,9 @@ ms.locfileid: "52403713"
 |2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|內部|Peak|3525|  
   
-### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>解譯 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 的資料方向  
- 如果是 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]，頻寬使用量資料會同時在連續複製關聯性兩端的邏輯 master 資料庫中顯示。 所以，您必須從您要查詢的邏輯伺服器的角度解譯入口和出口方向指標。 例如，請考慮從來源伺服器傳送 1MB 資料至目標伺服器的複寫資料流。 在這種情況下，1MB 在來源伺服器上會計入傳送的總資料量中，而在目標伺服器上，1MB 會記錄為接收的資料。  
+### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>解譯 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 的資料方向
+
+ 如果是 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]，頻寬使用量資料會同時在連續複製關聯性兩端的邏輯 master 資料庫中顯示。 因此，您必須解讀入口和出口方向指標，從您要查詢資料庫的角度。 例如，請考慮從來源伺服器傳送 1MB 資料至目標伺服器的複寫資料流。 在這種情況下，1MB 在來源伺服器上會計入傳送的總資料量中，而在目標伺服器上，1MB 會記錄為接收的資料。  
   
 > [!NOTE]  
->  傳送的大量資料是依照使用者資料流程的方向，從來源伺服器傳送到目標伺服器。 不過，有些資料需朝其他方向傳送。  
-  
-  
+> 傳送的大量資料是依照使用者資料流程的方向，從來源伺服器傳送到目標伺服器。 不過，有些資料需朝其他方向傳送。  
