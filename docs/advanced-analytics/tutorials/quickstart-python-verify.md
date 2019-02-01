@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7a2e9bf58839832ba29b103d2e862a845090a9f1
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046818"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513758"
 ---
-# <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入門：請確認有 SQL Server 中的 Python 
+# <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入門：驗證 Python 存在於 SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 包含內建的 SQL Server 資料的資料科學分析的 Python 語言支援。 執行指令碼是透過預存程序，使用下列其中一個方法：
