@@ -44,7 +44,7 @@ items:
     href: ../sql-server/failover-clusters/toc.yml
   - name: 資料庫鏡像
     href: database-mirroring/toc.yml
-  - name: 記錄傳送 +
+  - name: 記錄傳送
     href: log-shipping/toc.yml
 - name: Database Engine 功能及工作
   href: database-engine-features-and-tasks.md
@@ -155,9 +155,9 @@ items:
       href: ../powershell/query-expressions-and-uniform-resource-names.md
 - name: 錯誤和事件參考 +
   href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
-ms.openlocfilehash: 35bd2872a1bcb806825bf8fbff08ae35f73d3222
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: e9d7654eeed121b5d545547305b0a1a6500b8ca5
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457591"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513848"
