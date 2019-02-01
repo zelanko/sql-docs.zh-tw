@@ -13,20 +13,20 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768f9d00e1eea9b97c32d35c240befdaf555122f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e07bfa316330a24e9a7b9db5a2486ddd7cad470c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254923"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087798"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**智慧查詢處理**功能系列都包含具有廣泛影響的功能，能夠以最少的實作投入量改善現有工作負載的效能。
+**智慧查詢處理**功能系列都包含具有廣泛影響的功能，能夠以最少的實作投入量改善現有工作負載的效能。  藉由移至適用的資料庫相容性層級，即可自動受益於此功能系列。
 
-![智慧查詢處理功能](./media/3_IQPFeatureFamily2.png)
+![智慧查詢處理功能](./media/3_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>彈性查詢處理
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 13684012e1b5f7bfa17fbaf2fdf2ce5e0af4c72d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
+ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521452"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072853"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 
@@ -38,12 +38,12 @@ ms.locfileid: "52521452"
 1. 受保護的資源 (HDFS、MR2、YARN 以及作業記錄等等)
 1. 金鑰發佈中心 (在 Active Directory 中稱為網域控制站)
 
-Hadoop 的每個受保護資源皆以唯一 **服務主體名稱 (SPN)** 向 **金鑰發佈中心 (KDC)** 註冊，這屬於 Hadoop 叢集 Kerberization 程序的一部份。 目標是要讓用戶端從 KDC 中，針對想要存取的特定 SPN 取得臨時使用者票證 (稱為 **票證授權票證 (TGT)**)，以要求另一個臨時票證 (稱為 **服務票證 (ST)**)。  
+當 Hadoop 叢集上已設定 Kerberos 時，Hadoop 的每個受保護資源都會以唯一的 **服務主體名稱 (SPN)** 向 **金鑰發佈中心 (KDC)** 註冊。 目標是要讓用戶端從 KDC 中，針對想要存取的特定 SPN 取得臨時使用者票證 (稱為 **票證授權票證 (TGT)**)，以要求另一個臨時票證 (稱為 **服務票證 (ST)**)。  
 
 在 PolyBase 中，針對任何受 Kerberos 保護的資源要求驗證時，會發生下列四趟來回行程交握：
 
-1. SQL Server 連線至 KDC，並為使用者取得 TGT。 KDC 的私密金鑰會用來為 TGT 加密。
-1. SQL Server 呼叫 Hadoop 的受保護資源 (例如 HDFS)，並判斷需要 ST 的 SPN。
+1. SQL Server 連線至 KDC，並為使用者取得 TGT。 TGT 使用 KDC 私密金鑰進行加密。
+1. SQL Server 呼叫 Hadoop 的受保護資源 (HDFS)，並判斷需要 ST 的 SPN。
 1. SQL Server 回到 KDC，並傳回 TGT，然後要求 ST 以存取該特定的受保護資源。 受保護服務的私密金鑰會用來為 ST 加密。
 1. SQL Server 將 ST 轉送至 Hadoop，並完成驗證以對該服務建立工作階段。
 
@@ -53,7 +53,7 @@ Hadoop 的每個受保護資源皆以唯一 **服務主體名稱 (SPN)** 向 
 
 ## <a name="troubleshooting"></a>疑難排解
 
-PolyBase 具備多個組態 XML，這些 XML 包含 Hadoop 叢集的屬性。 亦即下列檔案：
+PolyBase 具備下列 XML 設定檔，其中包含 Hadoop 叢集的屬性：
 
 - core-site.xml
 - hdfs-site.xml
@@ -64,11 +64,11 @@ PolyBase 具備多個組態 XML，這些 XML 包含 Hadoop 叢集的屬性。 �
 
 這些檔案位於：
 
-\\[系統磁碟機\\]:{安裝路徑}\\{執行個體}\\{名稱}\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf
+`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
-例如，SQL Server 2016 的預設位置即為 "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\Binn\\PolyBase\\Hadoop\\conf"。
+例如，SQL Server 2016 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`。
 
-使用下列三個依據環境設定值的屬性，更新 PolyBase 設定檔之一的  **core-site.xml**：
+更新 **core-site.xml**，並新增下列三個屬性。 根據環境設定值：
 
 ```xml
 <property>
@@ -98,10 +98,10 @@ PolyBase 具備多個組態 XML，這些 XML 包含 Hadoop 叢集的屬性。 �
 
 | 引數 | Description|
 | --- | --- |
-| *Name Node Address* | 名稱節點的 IP 或 FQDN。 也就是 CREATE EXTERNAL DATA SOURCE T-SQL 中的 "LOCATION" 引數。|
-| *Name Node Port* | 名稱節點的連接埠。 也就是 CREATE EXTERNAL DATA SOURCE T-SQL 中的 "LOCATION" 引數。 這通常是 8020。 |
-| *Service Principal* | KDC 的管理服務主體。 這應該要與您在 CREATE DATABASE SCOPED CREDENTIAL T-SQL 的 "IDENTITY" 引數中使用的值相符。|
-| *Service Password* | 將密碼儲存在檔案中，並將檔案路徑傳遞至此處，而不在主控台鍵入密碼。 檔案內容應該要與您在 CREATE DATABASE SCOPED CREDENTIAL T-SQL 的 "SECRET" 引數中使用的值相符。 |
+| *Name Node Address* | 名稱節點的 IP 或 FQDN。 這會參考 CREATE EXTERNAL DATA SOURCE T-SQL 中的 "LOCATION" 引數。|
+| *Name Node Port* | 名稱節點的連接埠。 這會參考 CREATE EXTERNAL DATA SOURCE T-SQL 中的 "LOCATION" 引數。 例如，8020。 |
+| *Service Principal* | KDC 的管理服務主體。 這會與 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 中的 "IDENTITY" 引數相符。|
+| *Service Password* | 將密碼儲存在檔案中，並將檔案路徑傳遞至此處，而不在主控台鍵入密碼。 檔案內容應該要與您在 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL 之 "SECRET" 引數中使用的值相符。 |
 | 遠端 HDFS 檔案路徑 (選擇性)* * | 所要存取之現有檔案的路徑。 若未指定，將會使用根 "/"。 |
 
 ## <a name="example"></a>範例
@@ -116,7 +116,7 @@ java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polyb
 
 ## <a name="checkpoint-1"></a>檢查點 1
 
-應該要有 Server Principal = krbtgt/*MYREALM.COM@MYREALM.COM* 的票證十六進位傾印。 這表示 SQL Server 已成功對 KDC 進行驗證，並已收到 TGT。 如果沒有，表示問題僅發生在 SQL Server 與 KDC 之間，而非 Hadoop。
+應該要有 `Server Principal = krbtgt/MYREALM.COM@MYREALM.COM` 的票證十六進位傾印。 這表示 SQL Server 已成功對 KDC 進行驗證，並已收到 TGT。 如果沒有，表示問題僅發生在 SQL Server 與 KDC 之間，而非 Hadoop。
 
 PolyBase **不**支援 AD 與 MIT 之間的信任關係，而且必須針對 Hadoop 叢集中設定的相同 KDC 進行設定。 在這類環境中，在該 KDC 上手動建立服務帳戶，並加以執行驗證是可行的。
 
@@ -185,7 +185,7 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
 
 ## <a name="checkpoint-4"></a>檢查點 4
 
-最後，應將目標路徑的檔案內容與確認訊息一同印出。 這表示 Hadoop 已使用 ST 驗證 SQL Server，而且受保護資源的存取權已授與工作階段。
+最後，應將目標路徑的檔案內容與確認訊息一同印出。 檔案屬性會確認 Hadoop 已使用 ST 驗證 SQL Server，且已授與工作階段受保護資源的存取權。
 
 達到此檢查點即可確認：(i) 前述的三個動作項目皆能正確地進行通訊，(ii) core-site.xml 及 jaas.conf 皆正確，(iii) KDC 能夠辨識您的認證。
 
@@ -202,8 +202,8 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
 | --- | --- |
 | org.apache.hadoop.security.AccessControlException<br>未啟用簡單驗證。 可用項目：[TOKEN, KERBEROS] | 未將 core-site.xml 的 hadoop.security.authentication 屬性設定為 "KERBEROS"。|
 |javax.security.auth.login.LoginException<br>在 Kerberos 資料庫中找不到用戶端 (6) - CLIENT_NOT_FOUND |    在 core-site.xml 中指定的領域沒有提供的管理服務主體。|
-| javax.security.auth.login.LoginException<br> 總和檢查碼失敗 |    管理服務主體存在，但是密碼不正確。 |
-| 原生組態名稱：C:\Windows\krb5.ini<br>從原生組態載入 | 這不是例外狀況，但是表示 Java 的 krb5LoginModule 在您的電腦上偵測到自訂用戶端組態。 請檢查您的用戶端設定，因為這可能就是造成問題的原因。 |
+| javax.security.auth.login.LoginException<br> 總和檢查碼失敗 |管理服務主體存在，但是密碼不正確。 |
+| 原生設定名稱：C:\Windows\krb5.ini<br>從原生組態載入 | 此訊息表示 JAVA 的 krb5LoginModule 在您的電腦上偵測到自訂用戶端設定。 請檢查您的用戶端設定，因為這可能就是造成問題的原因。 |
 | javax.security.auth.login.LoginException<br>java.lang.IllegalArgumentException<br>不合法的主體名稱 admin_user@CONTOSO.COM: org.apache.hadoop.security.authentication.util.KerberosName$NoMatchingRule：未將任何規則套用至 admin_user@CONTOSO.COM | 對每個 Hadoop 叢集，依照適當規則將屬性 "hadoop.security.auth_to_local" 新增至 core-site.xml。 |
 | java.net.ConnectException<br>嘗試存取位於 URI hdfs://10.193.27.230:8020 的外部檔案系統<br>發生連線例外狀況，導致從 IAAS16981207/10.107.0.245 對 10.193.27.230:8020 呼叫失敗 | 針對 KDC 的驗證已成功，但是無法存取 Hadoop 名稱節點。 請檢查名稱節點 IP 及連接埠。 請驗證已在 Hadoop 上停用防火牆。 |
 | java.io.FileNotFoundException<br>檔案不存在：/test/data.csv |    驗證已成功，但是指定的位置不存在。 請先檢查路徑，或先以根 "/" 測試。 |
@@ -212,9 +212,9 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
 
 ### <a name="mit-kdc"></a>MIT KDC  
 
-您可以在 KDC 主機或任何已設定的 KDC 用戶端上，執行  **kadmin.local** > (管理員登入) > **listprincs** ，以檢視所有已向 KDC 註冊的 SPN (包含管理員在內)。 若已正確地將 Hadoop 叢集 Kerberos 化，叢集中為數眾多的每項服務都應該各有一個可用的 SPN (例如 nn、dn、rm、yarn、spnego 等等)根據預設，可以在  **/etc/security/keytabs** 下找到這些 SPN 的對應 keytab 檔案 (密碼替代)。 KDC 的私密金鑰會用來為其加密。  
+您可以在 KDC 主機或任何已設定的 KDC 用戶端上，執行  **kadmin.local** > (管理員登入) > **listprincs** ，以檢視所有已向 KDC 註冊的 SPN (包含管理員在內)。 如果已在 Hadoop 叢集上正確設定 Kerberos，則叢集中的每項服務都應該各有一個可用的 SPN (例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等)根據預設，可以在  **/etc/security/keytabs** 下找到這些 SPN 的對應 keytab 檔案 (密碼替代)。 這些檔案使用 KDC 私密金鑰進行加密。  
 
-此外，也請考慮使用  [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 工具在本機驗證 KDC 上的管理員認證。 範例使用方式為： *kinit identity@MYREALM.COM*。 如果出現輸入密碼的提示即表示存在身分識別。  根據預設，KDC 記錄會位在  **/var/log/krb5kdc.log** 中，其中包括為票證提出的所有要求，包括提出該要求的用戶端 IP。 應該會有兩個要求來自該工具執行所在的 SQL Server 電腦 IP：首先是驗證伺服器對 TGT 的要求 - **AS\_REQ**，其次是票證授與伺服器對 ST 的要求 - **TGS\_REQ** 。
+此外，也請考慮使用 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 在本機驗證 KDC 上的管理員認證。 使用方式範例為： `kinit identity@MYREALM.COM`。 如果出現輸入密碼的提示即表示存在身分識別。  根據預設，KDC 記錄會位在  **/var/log/krb5kdc.log** 中，其中包括為票證提出的所有要求，包括提出該要求的用戶端 IP。 應該會有兩個要求來自該工具執行所在的 SQL Server 電腦 IP：首先是驗證伺服器對 TGT 的要求 - **AS\_REQ**，其次是票證授與伺服器對 ST 的要求 - **TGS\_REQ** 。
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +224,33 @@ PolyBase 將會嘗試存取 HDFS，但因為要求未包含必要的服務票證
 
 ### <a name="active-directory"></a>Active Directory 
 
-在 Active Directory 中，您可以瀏覽至 [控制台] > [Active Directory 使用者和電腦] > *MyRealm* > *MyOrganizationalUnit*，以檢視 SPN。 若已正確地將 Hadoop 叢集 Kerberos 化，叢集中為數眾多的每項服務都應該各有一個可用的 SPN (例如 nn、dn、rm、yarn、spnego 等等)
+在 Active Directory 中，您可以瀏覽至 [控制台] > [Active Directory 使用者和電腦] > *MyRealm* > *MyOrganizationalUnit*，以檢視 SPN。 如果已在 Hadoop 叢集上正確設定 Kerberos，則每項服務各有一個可用的 SPN (例如 `nn`、`dn`、`rm`、`yarn`、`spnego` 等)
+
+### <a name="general-debugging-tips"></a>一般偵錯提示
+
+具備一些 JAVA 體驗有助您查看記錄並對 Kerberos 問題進行偵錯，這些問題與 SQL Server PolyBase 功能無關。
+
+如果您在 Kerberos 存取時仍發生問題，請遵循下列步驟進行偵錯：
+
+1. 確定您可以從 SQL Server 外部存取 Kerberos HDFS 資料。 您可以： 
+
+    - 撰寫您自己的 JAVA 程式，或
+    - 使用 PolyBase 安裝資料夾中的 `HdfsBridge` 類別。 例如：
+
+      ```java
+      -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt
+      ```
+
+     在上面範例中，`admin_user` 只會包含使用者名稱，不會包含任何網域部分。
+
+2. 如果您無法從 PolyBase 外部存取 Kerberos HDFS 資料：
+    - Kerberos 驗證有兩種類型：Active Directory Kerberos 驗證和 MIT Kerberos 驗證。
+    - 確定使用者存在於網域帳戶，並使用相同的使用者帳戶來嘗試存取 HDFS。
+
+3. 針對 Active Directory Kerberos，確定您可以在 Windows 上使用 `klist` 命令來查看快取的票證。
+    - 登入 PolyBase 電腦，並在命令提示字元中執行 `klist` 和 `klist tgt`，以查看 KDC、使用者名稱和加密類型是否正確。
+
+4.  如果 KDC 只能支援 AES256，請務必安裝 [JCE 原則檔案](http://www.oracle.com/technetwork/java/javase/downloads/index.html)。
 
 ## <a name="see-also"></a>另請參閱
 

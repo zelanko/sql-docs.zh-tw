@@ -14,12 +14,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2842966623d1f820bcb0d8df969634922da57d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d92ef10b48115ddb26307a9d89260185d8d65b4a
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669017"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044524"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,6 +51,7 @@ ms.locfileid: "51669017"
 
 ##  <a name="view"></a> 檢視全文檢索索引的屬性
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>使用 Transact-SQL 檢視全文檢索索引的屬性
+
 |目錄或動態管理檢視|Description|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|針對通往全文檢索索引參考的每個全文檢索目錄，各傳回一個資料列。|  
@@ -76,7 +77,7 @@ ms.locfileid: "51669017"
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**<br /><br />如需詳細資訊，請參閱[全文檢索索引屬性 &#40;一般頁面&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f)。|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[全文檢索索引屬性 &#40;資料行頁面&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35)。|  
-    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在您結束 [全文檢索索引屬性] 對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業 (針對 *database_name*.*table_name* 啟動 [累加資料表母體]) 相關聯。|  
+    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱[擴展全文檢索索引](../../relational-databases/search/populate-full-text-indexes.md)。<br /><br /> 注意：在您結束 [全文檢索索引屬性] 對話方塊之後，任何新建立的排程都會與 SQL Server Agent 作業 (針對 *database_name*.*table_name* 啟動累加資料表母體擴展) 建立關聯。|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性] 對話方塊。  
   

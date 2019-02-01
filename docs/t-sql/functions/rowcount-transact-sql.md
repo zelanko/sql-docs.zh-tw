@@ -22,12 +22,12 @@ ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3607ad38e58c5bc1315bc8d01bd0d188d704261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805704"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47781696"
   
 -   將 @@ROWCOUNT 重設為 0，但不將該值傳回用戶端。  
   
- 進行簡單指派的陳述式一律會將 @@ROWCOUNT 值設為 1。 它不會傳送任何資料列給用戶端。 以下是這些陳述式的範例：SET @*local_variable*、RETURN、READTEXT 以及 select without query 陳述式 (例如，SELECT GETDATE() 或 SELECT **'***Generic Text***'**。  
+ 進行簡單指派的陳述式一律會將 @@ROWCOUNT 值設為 1。 它不會傳送任何資料列給用戶端。 這些陳述式的範例如下：SET @*local_variable*、RETURN、READTEXT，以及如 SELECT GETDATE() 或 SELECT **'***一般文字***'** 等無查詢的選取陳述式。  
   
  在查詢中進行指派的陳述式，或是在查詢中使用 RETURN 的陳述式，會將 @@ROWCOUNT 值設為受到該查詢影響或讀取的資料列數，例如：SELECT @*local_variable* = c1 FROM t1。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47781696"
   
  EXECUTE 陳述式會保留前一個 @@ROWCOUNT。  
   
- 例如 USE、SET \<option>、DEALLOCATE CURSOR、CLOSE CURSOR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等陳述式，會將 ROWCOUNT 值重設為 0。  
+ USE、SET \<選項>、DEALLOCATE CURSOR、CLOSE CURSOR、PRINT、RAISERROR、BEGIN TRANSACTION 或 COMMIT TRANSACTION 等陳述式，會將 ROWCOUNT 值重設為 0。  
   
  原生編譯的預存程序會保留上一個 @@ROWCOUNT。 原生編譯預存程序中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式不會設定 @@ROWCOUNT。 如需詳細資訊，請參閱[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   

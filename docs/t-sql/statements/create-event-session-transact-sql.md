@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a87156a7987b3386f452944c49076d47fdaffa59
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457671"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) 指定要與事件工作階段搭配使用的選項。  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- 指定為了事件緩衝處理而配置給工作階段的最大記憶體數量。 預設值是 4 MB。 *size* 是整數值，可以是 KB 或 MB 值。  
+ 指定為了事件緩衝處理而配置給工作階段的最大記憶體數量。 預設值是 4 MB。 *size* 是整數值，可以是 KB 或 MB 值。 最大數量不得超過 2 GB (小於 2048 MB)。 但不建議使用以 GB 範圍為單位的記憶體值。
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  指定要用來處理事件遺失的事件保留模式。  

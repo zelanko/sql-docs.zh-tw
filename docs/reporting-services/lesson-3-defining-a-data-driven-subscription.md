@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ed9f661a49e6ad64642938672f6355a1d19d9f6
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
+ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54457651"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>第 3 課：定義資料驅動訂閱
 在這個 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 入口網站資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
   
 > [!NOTE]  
 > 開始之前，請確認 **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** 服務正在執行。 若未執行，您就無法儲存訂閱。  驗證的其中一個方法是開啟 [SQL Server 組態管理員](../relational-databases/sql-server-configuration-manager.md)。
-這一課會假設您已完成第 1 課和第 2 課，而且報表資料來源使用預存認證。  如需詳細資訊，請參閱 [第 2 課：修改報表資料來源屬性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+這一課會假設您已完成第 1 課和第 2 課，而且報表資料來源使用預存認證。  如需詳細資訊，請參閱[第 2 課：修改報表資料來源屬性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>啟動資料驅動訂閱精靈  
   
@@ -60,8 +60,9 @@ ms.locfileid: "52302552"
 1. 選取 [使用以下認證]。
 2. 選取 [Windows 使用者名稱與密碼]。
 3.  在 **[使用者名稱]** 和 **[密碼]** 中，輸入網域使用者名稱和密碼。 指定 **[使用者名稱]** 時，請同時包括網域和使用者帳戶。
-    > [!NOTE]  
-    > 用於連接至訂閱者資料來源的認證不會傳回給 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果您稍後修改了訂閱，就必須重新輸入用於連接到資料來源的密碼。
+
+> [!NOTE]  
+> 用於連接至訂閱者資料來源的認證不會傳回給 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果您稍後修改了訂閱，就必須重新輸入用於連接到資料來源的密碼。
 
 ## <a name="query"></a>查詢      
 1.  在查詢方塊中，輸入下列查詢：  

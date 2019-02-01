@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 746150438e87746c6fefc81fa7c0bff354147ed6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205327"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087667"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +28,9 @@ SQL Server 工程小組密切關注 SQL Server [User Voice](https://feedback.azu
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>我想要提供 SQL Server Management Studio 的相關建議
 SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server)因此，如果您有任何想要回報的問題或建議，User Voice 是最佳選擇。 
+
+## <a name="i-want-to-make-a-suggestion-about-azure-data-studio"></a>我想要提供 Azure Data Studio 的相關建議
+Azure Data Studio 小組會密切監視 [Azure Data Studio Github](https://github.com/microsoft/azuredatastudio/issues) 上的問題和功能要求。 請在這裡提交問題或功能要求，您會看到何時修正或新增問題/功能。
 
 ## <a name="i-want-to-access-the-sql-server-technical-documentation-offline"></a>我想要離線存取 SQL Server 技術文件
 如果您想要在離線系統上檢視 SQL Server 文件，您有兩個選項。 您可以在 SQL Server 技術文件中建立 PDF，或使用 [SQL Server 離線說明檢視器](sql-server-help-installation.md)下載離線內容。 
@@ -68,20 +71,21 @@ SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Vo
 - [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
 - [SQL Server 資料倉儲](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
 
-### <a name="developer-communities"></a>開發人員社群
-也有一些開發人員社群可以協助您解決 SQL Server 問題。 
+### <a name="social-media-and-communities"></a>社交媒體和社群
+有一些社群可以協助您解決 SQL Server 問題。 
 
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
-
-### <a name="social-media"></a>社群媒體
-有一些社群媒體也可以與 SQL 小組取得連繫。 
-
 - [Reddit](https://www.reddit.com/r/SQLServer/)
+- [在 Twitter 上使用 #sqlhelp 標籤從社群取得協助](https://twitter.com/hashtag/sqlhelp?src=hash) 
+
+### <a name="updates-via-twitter"></a>透過 Twitter 更新
+有一些 Twitter 帳戶提供 SQL Server 的相關更新。 
+
 - [SQL 文件 Twitter](https://twitter.com/sqldocs)
 - [SQL Tiger 小組 Twitter](https://twitter.com/mssqltiger)
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
-- [MikeRayMSFT Twitter](https://twitter.com/mncray)
+
 
 ## <a name="i-want-to-contribute-to-sql-server-documentation"></a>我想要參與 SQL Server 文件
 

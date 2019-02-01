@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/02/2018
+ms.date: 01/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e50b19daefc7f765a4d24850c6557af419c0a345
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
+ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226595"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54838115"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -73,6 +73,12 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
+    | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
 }
 ```
 
@@ -229,7 +235,31 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
-可讓您在資料庫或陳述式範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 SQL Server 2019 所推出的[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)部分功能。
+可讓您在資料庫範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 SQL Server 2017 所推出[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)的其中一項功能 (SQL Server 2019 和 Azure SQL Database 支援資料列模式)。
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+可讓您在資料庫範圍啟用或停用批次模式記憶體授與回饋，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式記憶體授與回饋是 SQL Server 2017 所推出[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)的其中一項功能。
+
+BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+可讓您在資料庫範圍啟用或停用批次模式自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式自適性聯結是 SQL Server 2017 所推出[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)的其中一項功能。
+
+BATCH_MODE_ON_ROWSTORE = { ON | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+
+可讓您在資料庫範圍啟用或停用資料列存放區上的批次模式，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列存放區上的批次模式是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
+
+DEFERRED_COMPILATION_TV = { ON | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+
+可讓您在資料庫範圍啟用或停用資料表變數延遲編譯，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料表變數延遲編譯是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
 
 ## <a name="Permissions"></a> Permissions
 

@@ -12,18 +12,43 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a3a9b85b0f125e2c0ceb4cf882bbb86a962619
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213447"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087887"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 這是 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) 的變更記錄。  
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
+
+
+## <a name="ssdt-for-visual-studio-2017-1590"></a>SSDT for Visual Studio 2017 (15.9.0)
+組建編號：14.0.16186.0  
+發行日期：2019 年 1 月 28 日
+
+### <a name="whats-new"></a>新功能
+**SSIS：**
+1. 新增 SSIS 2017 的 Power Query 來源 (預覽)。
+2. 新增回對 SSIS 2012 的支援。
+3. 新增 SSIS 2019 的 Oracle 來源和目的地。
+4. 修正從舊版 SSIS 移轉時無法載入指令碼工作/元件的問題。
+5. 修正資料檢視器在 Windows 7 SP1 和 Windows 8.1 上無法運作的問題。
+6. 修正在某些情況下，儲存套件會導致 Visual Studio 損毀的問題。 
+7. 修正在某些情況下，當保護層級為 EncryptSensitiveWithPassword 且目標伺服器版本為 SQL 2017 以前版本時，無法執行套件的問題。
+8. 修正預設字型的註釋無法在 SSDT 中顯示的問題。
+9. ISDeploymentWizard 支援 SQL 驗證、Azure Active Directory 整合式驗證，以及命令列模式下的 Azure Active Directory 密碼驗證。
+
+### <a name="known-issues"></a>已知問題：
+
+- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+- SSDT for Visual Studio 2017 (15.8 以上版本) 不支援設計包含 Teradata 來源/目的地的套件。 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。
+- 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援 OData v4。
+- 當 SSIS 和 SSAS 安裝在相同的 Visual Studio 執行個體時，Power Query 來源可能不支援使用 ODBC 連接到 Oracle。
+- Power Query 來源未當地語系化。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1582"></a>適用於 Visual Studio 2017 (15.8.2) 的 SSDT

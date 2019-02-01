@@ -1,6 +1,6 @@
 ---
 title: 報表定義語言 (SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.openlocfilehash: 6ab16fccf8808aca17a64d0764c84295bc56f351
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813505"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044594"
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
   報表定義語言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義的 XML 表示法。 報表定義包含報表的資料擷取和配置資訊。 RDL 是由符合針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立之 XML 文法的 XML 元素所組成。 您可以加入自訂函數，藉由存取報表定義檔案中的程式碼組件來控制報表項目值、樣式和格式。  
@@ -41,7 +41,7 @@ ms.locfileid: "51813505"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 結構描述定義  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案是藉由使用 XML 結構描述定義 (XSD) 檔案來驗證。 結構描述定義 RDL 元素可在 .rdl 檔案中何處發生的規則。 元素包括其資料類型和基數，也就是所允許的發生數目。 元素可能很簡單或很複雜。 簡單的元素沒有子元素或屬性 (Attribute)， 複雜的元素則具有子元素或屬性。  
   
- 例如，此結構描述包含 RDL 元素 **ReportParameters**，這是複雜類型 **ReportParametersType**。 依照慣例，元素的複雜類型是在元素名稱後面加上 **Type**這個字。 **ReportParameters** 元素可由 **報表** 元素 (複雜類型) 所包含，而且可以包含 **ReportParameter** 元素。 **ReportParameterType** 是簡單類型，而且只能是下列值之一︰ **Boolean**、 **DateTime**、 **Integer**、 **Float**或 **String**。 如需 XML 結構描述資料類型的詳細資訊，請參閱 [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)(XML 結構描述第 2 部分：資料類型第二版)。  
+ 例如，此結構描述包含 RDL 元素 **ReportParameters**，這是複雜類型 **ReportParametersType**。 依照慣例，元素的複雜類型是在元素名稱後面加上 **Type**這個字。 **ReportParameters** 元素可由 **報表** 元素 (複雜類型) 所包含，而且可以包含 **ReportParameter** 元素。 **ReportParameterType** 是簡單類型，只能是下列其中一個值：**Boolean**、**DateTime**、**Integer**、**Float** 或 **String**。 如需 XML 結構描述資料類型的詳細資訊，請參閱 [XML Schema Part 2:Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871) (XML 結構描述第 2 部分：資料類型第二版)。  
   
  RDL XSD 是在 ReportDefinition.xsd 檔案中提供的，這個檔案位於產品 CD-ROM 的 Extras 資料夾中， 也會透過下列 URL 提供在報表伺服器：`https://servername/reportserver/reportdefinition.xsd`。  
   

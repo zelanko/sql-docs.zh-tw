@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 742c9a63388192bc0fb09a7b91a5a727c789ed3a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712798"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087588"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>SQL Server 2014 中 In-Memory OLTP 的硬體考量
 

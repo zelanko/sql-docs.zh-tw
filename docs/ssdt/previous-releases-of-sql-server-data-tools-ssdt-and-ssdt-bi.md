@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 39f2ebeca9f19c8c00707c9e5427c797dfc09881
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5121af5edf195454ec6a27d5a586a921c2853b4c
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519764"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087637"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,10 +34,12 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 
 |SSDT 版本| Visual Studio 2017|
 |:---|:---|
+|15.8.2|[SSDT for VS2017 15.8.2](https://go.microsoft.com/fwlink/?linkid=2038031)|
 |15.8.0|[SSDT for VS2017 15.8.0](https://go.microsoft.com/fwlink/?linkid=2014060)|
 |15.7.1|[SSDT for VS2017 15.7.1](https://go.microsoft.com/fwlink/?LinkId=875613)|
 |15.7.0|[SSDT for VS2017 15.7.0](https://go.microsoft.com/fwlink/?LinkId=874716)|
 |15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
+
 <br>
 
 |SSDT 版本| Visual Studio 2015|
@@ -45,11 +47,13 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 |17.4|[適用於 VS2015 17.4 的 SSDT](https://go.microsoft.com/fwlink/?linkid=863440)|
 |17.3|[適用於 VS2015 17.3 的 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
+
 <br>
 
 |SSDT 版本| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
+
 <br>
 
 
@@ -71,7 +75,7 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
   
 Visual Studio 2013 的客戶可以下載 SSDT 的預覽版本，試用尚未包含在產品發行版本中的功能。  
   
-**SQL BI：Analysis Services、Reporting Services、Integration services**  
+**SQL BI：Analysis Services、Reporting Services、Integration Services**  
   
 BI 範本用來建立 SSAS 模型、SSRS 報表及 SSIS 套件。 BI 設計工具與特定版本的 SQL Server 一併發行。 要使用較新的 BI 功能，請安裝較新版本的設計工具。  
   

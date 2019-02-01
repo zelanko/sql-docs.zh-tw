@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
-ms.openlocfilehash: 49058b7c6ef7bc3fce9997c5492a1551b94f46dd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.date: 01/15/2019
+ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805744"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -80,6 +80,28 @@ ms.locfileid: "50021692"
 **SystemSnapshotLimit**  
 針對報表所儲存之快照集的最大數目。 有效值是 **-1** 到 **2**,**147**,**483**,**647**。 如果此值為 **-1**，表示沒有任何快照集限制。  
 
+**AccessControlAllowCredentials**  
+指出 'credentials' 旗標設為 true 時是否可以公開用戶端要求的回應。 預設值為 **false**。
+
+**AccessControlAllowHeaders** 伺服器在用戶端提出要求時允許的標題清單 (以逗號分隔)。 這個屬性可以是空字串，而指定 * 將允許所有標題。
+
+**AccessControlAllowMethods** 伺服器在用戶端提出要求時允許的 HTTP 方法清單 (以逗號分隔)。 預設值為 (GET、PUT、POST、PATCH、DELETE)，而指定 * 將允許所有方法。
+
+**AccessControlAllowOrigin** 伺服器在用戶端提出要求時允許的來源清單 (以逗號分隔)。 預設值是可防止所有要求的空白，而指定 * 將在未設定認證時允許所有來源；如果指定認證，則必須指定明確的來源清單。
+
+**AccessControlExposeHeaders** 伺服器向用戶端公開的標題清單 (以逗號分隔)。 預設值是空白。
+
+**AccessControlMaxAge** 指定可快取推斷要求結果的秒數。 預設值為 600 (10 分鐘)。
+
+**AllowedResourceExtensionsForUpload** ***(僅限 Power BI 報表伺服器)***：設定可上傳到報表伺服器的資源副檔名。 不需要包含內建檔案類型的副檔名，例如 &ast;.rdl 和 &ast;.pbix。 預設為「&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx」。 
+
+
+**EditSessionCacheLimit**  
+指定可以在報表編輯工作階段中使用的資料快取項目數目。 預設數目是 5。  
+
+**EditSessionTimeout**  
+指定報表編輯工作階段逾時之前的秒數。預設值為 7200 秒 (兩小時)。  
+
 **EnableIntegratedSecurity**  
 決定報表資料來源連線是否支援 Windows 整合式安全性。 預設值為 **True**。 有效值如下：
 
@@ -97,25 +119,6 @@ ms.locfileid: "50021692"
 
 **EnableRemoteErrors**  
 包含外部錯誤資訊 (例如，有關報表資料來源的錯誤資訊) 以及針對從遠端電腦要求報表之使用者傳回的錯誤訊息。 有效值為 **true** 和 **false**。 預設值為 **false**。 如需詳細資訊，請參閱[啟用遠端錯誤 &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
-
-**AccessControlAllowCredentials**  
-指出 'credentials' 旗標設為 true 時是否可以公開用戶端要求的回應。 預設值為 **false**。
-
-**AccessControlAllowHeaders** 伺服器在用戶端提出要求時允許的標題清單 (以逗號分隔)。 這個屬性可以是空字串，而指定 * 將允許所有標題。
-
-**AccessControlAllowMethods** 伺服器在用戶端提出要求時允許的 HTTP 方法清單 (以逗號分隔)。 預設值為 (GET、PUT、POST、PATCH、DELETE)，而指定 * 將允許所有方法。
-
-**AccessControlAllowOrigin** 伺服器在用戶端提出要求時允許的來源清單 (以逗號分隔)。 預設值是可防止所有要求的空白，而指定 * 將在未設定認證時允許所有來源；如果指定認證，則必須指定明確的來源清單。
-
-**AccessControlExposeHeaders** 伺服器向用戶端公開的標題清單 (以逗號分隔)。 預設值是空白。
-
-**AccessControlMaxAge** 指定可快取推斷要求結果的秒數。 預設值為 600 (10 分鐘)。
-
-**EditSessionCacheLimit**  
-指定可以在報表編輯工作階段中使用的資料快取項目數目。 預設數目是 5。  
-
-**EditSessionTimeout**  
-指定報表編輯工作階段逾時之前的秒數。預設值為 7200 秒 (兩小時)。  
 
 **EnableCustomVisuals** ***(僅限 Power BI 報表伺服器)*** 啟用 Power BI 自訂視覺效果的顯示。 值為 True/False。 *預設值為 True。*  
 
@@ -136,6 +139,8 @@ ms.locfileid: "50021692"
 **ScheduleRefreshTimeoutMinutes** ***(僅限 Power BI 報表伺服器)*** 設定您要排程重新整理多久逾時。*預設值為 120。*
 
 **ShowDownloadMenu** 啟用用戶端工具下載功能表。 *預設值為 true。*
+
+**SupportedHyperlinkSchemes** ***(僅限 Power BI 報表伺服器)***：設定可在超連結動作上定義以便轉譯的 URI 配置逗號分隔清單，或 “&ast;” 以便啟用所有超連結配置。 例如，設定 “http,https” 會允許 “https://www. contoso.com” 的超連結，但會移除 “mailto:bill@contoso.com” 或 “javascript:window.open(‘www.contoso.com’, ‘_blank’)” 的超連結。 預設為 “&ast;”。
 
 **TimeInitialDelaySeconds** 設定您要延遲多久的初始時間 (以秒為單位)。 *預設值為 60。*
 

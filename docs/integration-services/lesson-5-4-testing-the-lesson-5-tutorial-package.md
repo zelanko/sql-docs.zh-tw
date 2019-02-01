@@ -1,7 +1,7 @@
 ---
-title: 步驟 4：測試第 5 課的教學課程封裝 | Microsoft Docs
+title: 步驟 4：測試第 5 課套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/08/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,20 +11,21 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f23e1e6e9321d4211c53a176242c81cad6ff8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36b0fe9670eceb2520c1c792cf247a9d4da47598
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664556"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880451"
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>課程 5-4 - 測試第 5 課的教學課程封裝
-在執行階段，您的封裝將從執行階段更新的變數中取得 **Directory** 屬性的值，而不是使用您建立封裝時指定的原始目錄名稱。 變數的值會由 SSISTutorial.dtsConfig 檔案擴展。  
+# <a name="lesson-5-4-test-the-lesson-5-package"></a>第 5-4 課：測試第 5 課套件
+
+在執行階段，您的套件會從設定變數取得 **Directory** 屬性的值，而不是從建立套件時所指定的目錄名稱取得。 變數的值來自 **SSISTutorial.dtsConfig** XML 檔。  
   
-若要確認封裝在執行階段使用新值來更新 Directory 屬性，只要執行封裝即可。 因為只有 3 個範例資料檔會複製到新目錄，所以資料流程只會執行 3 次，而不是反覆執行原始資料夾的 14 個檔案。  
+若要確認套件在執行階段使用新值來更新 **Directory** 屬性，請執行套件。 因為新目錄中只有三個範例資料檔案，所以資料流程只會執行三次。  
   
 ## <a name="checking-the-package-layout"></a>檢查封裝配置  
-在測試封裝之前，您應該確認第 5 課封裝中的控制流程和資料流程是否包含下圖所顯示的物件。 其控制流程應該與第 4 課的控制流程相同。 資料流程應該與第 4 課的資料流程完全相同。  
+在測試套件之前，請確認第 5 課套件中的控制流程和資料流程類似下圖所示的物件：  
   
 **控制流程**  
   
@@ -34,11 +35,11 @@ ms.locfileid: "47664556"
   
 ![套件中的資料流程](../integration-services/media/task9lesson1data.gif "套件中的資料流程")  
   
-### <a name="to-test-the-lesson-5-tutorial-package"></a>若要測試第 5 課的教學課程封裝  
+## <a name="test-the-lesson-5-package"></a>測試第 5 課套件  
   
-1.  在 **[偵錯]** 功能表上，按一下 **[開始偵錯]**。  
+1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
   
-2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
+2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
   
 ## <a name="next-lesson"></a>下一課  
 [第 6 課：在 SSIS 中搭配專案部署模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

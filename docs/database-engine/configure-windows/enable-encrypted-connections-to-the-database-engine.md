@@ -21,12 +21,12 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 316becea16562fda0e1ba05623f09018367254af
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6fd3c164b539c8c6fc2dcce24f8ea1ad479ddee6
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589292"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087687"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>啟用資料庫引擎的加密連接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +48,9 @@ ms.locfileid: "53589292"
   
  
 ##  <a name="Provision"></a> 若要在伺服器上提供 (安裝) 憑證  
+
+>[!NOTE]
+>請參閱[憑證管理 (SQL Server 組態管理員)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) 在單一伺服器上新增憑證。
   
 1.  在 [開始]  功能表中按一下 [執行] ，然後在 [開啟]  方塊中輸入 **MMC** ，然後按一下 [確定] 。  
   
@@ -69,6 +72,10 @@ ms.locfileid: "53589292"
   
 10. 完成 **[憑證匯入精靈]** 以加入憑證至電腦中，然後關閉 MMC 主控台。 如需新增憑證至電腦的詳細資訊，請參閱 Windows 文件集。  
   
+## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>跨多部伺服器佈建 (安裝) 憑證
+
+請參閱[憑證管理 (SQL Server 組態管理員)](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates.md) 跨多部伺服器新增憑證。
+
 ##  <a name="Export"></a> 若要匯出伺服器憑證  
   
 1.  從 [憑證] 嵌入式管理單元的 [憑證] / [個人] 資料夾中找到憑證，以滑鼠右鍵按一下 [憑證]，並指向 [所有工作]，然後按一下 [匯出]。  
@@ -89,15 +96,15 @@ ms.locfileid: "53589292"
 > [!NOTE]
 > 若要確保用戶端與伺服器之間的安全連線，請設定用戶端要求加密連線。 [本文稍後](#client-request-encrypt-connect-23h)會說明其他詳細資料。
 
-
-
 ### <a name="wildcard-certificates"></a>萬用字元憑證  
 開頭為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的原生用戶端，支援萬用字元憑證。 其他用戶端可能不支援萬用字元憑證。 如需詳細資訊，請參閱用戶端文件。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 不能選取萬用字元憑證。 若要使用萬用字元憑證，您必須編輯 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 登錄機碼，在 [憑證] 值輸入不含空格的憑證指紋。  
+
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-<a name="client-request-encrypt-connect-23h"/>
-##  <a name="ConfigureClientConnections"></a> 若要設定用戶端要求加密的連接  
+<a name="client-request-encrypt-connect-23h"/></a>
+
+## <a name="ConfigureClientConnections"></a> 若要設定用戶端要求加密的連接  
   
 1.  將原始憑證或匯出的憑證檔複製到用戶端電腦。  
   
@@ -107,7 +114,7 @@ ms.locfileid: "53589292"
   
 4.  在 **[旗標]** 頁面的 **[強制通訊協定加密]** 方塊中，按一下 **[是]**。  
   
-##  <a name="EncryptConnection"></a> 若要從 SQL Server Management Studio 加密連接  
+## <a name="EncryptConnection"></a> 若要從 SQL Server Management Studio 加密連接  
   
 1.  在 [物件總管] 工具列上，按一下 **[連接]**，再按一下 **[Database Engine]**。  
   

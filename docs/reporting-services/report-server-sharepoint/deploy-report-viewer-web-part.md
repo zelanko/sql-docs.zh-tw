@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9b2d920b55e412f3b9fa119db0a7cf893659fca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
+ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54805724"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>將 SQL Server Reporting Services 報表檢視器網頁組件部署至 SharePoint 頁面
 
@@ -20,7 +20,7 @@ ms.locfileid: "52502822"
 
 報表檢視器網頁組件是自訂的網頁組件，可用於檢視 SharePoint 網站中的 SQL Server Reporting Services (原生模式) 報表。 您可以在使用網頁組件來檢視、巡覽、列印並匯出報表伺服器的報表。 報表檢視器網頁組件與 SQL Server Reporting Services 報表伺服器或 Power BI 報表伺服器所處理的報表定義 (.rdl) 檔建立關聯。 此報表檢視器網頁組件不能搭配 Power BI 報表伺服器中裝載的 Power BI 報表使用。
 
-使用下列指示手動部署解決方案套件，將報表檢視器網頁組件新增至 SharePoint Server 2013 或 SharePoint Server 2016 環境。 部署解決方案是設定網頁組件的必要步驟。
+使用下列指示手動部署方案套件，以將報表檢視器網頁組件新增至 SharePoint Server 2013、SharePoint Server 2016 或 SharePoint Server 2019 環境。 部署解決方案是設定網頁組件的必要步驟。
 
 **報表檢視器網頁組件是獨立的解決方案套件，與 SQL Server Reporting Services 的 SharePoint 整合模式未建立關聯。**
 
@@ -32,6 +32,7 @@ ms.locfileid: "52502822"
 >
 
 **支援的 SharePoint 伺服器版本：**
+* SharePoint Server 2019
 * SharePoint Server 2016
 * SharePoint Server 2013
 
@@ -67,7 +68,7 @@ Microsoft 下載中心提供報表檢視器網頁組件。
     Install-SPSolution -Identity ReportViewerWebPart.wsp -CompatibilityLevel "14,15" -GACDeployment -WebApplication {URL to web application}
     ```
 
-    **SharePoint 2016**
+    **SharePoint Server 2016 和 2019**
 
     ```
     Install-SPSolution -Identity ReportViewerWebPart.wsp -GACDeployment -WebApplication {URL to web application}

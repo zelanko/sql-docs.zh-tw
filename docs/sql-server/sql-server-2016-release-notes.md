@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7252b672eb29206bbd77cc92cdb3de68f3d6c91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c243af9bdc0963ba83e94f8e35d90b68c5874a2c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524327"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55044375"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,7 @@ ms.locfileid: "52524327"
 SQL Server 2016 SP2 安裝在安裝之後可能需要重新開機。 最佳做法是在 SQL Server 2016 SP2 安裝後規劃和執行重新開機。
 
 SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
+
 |功能|Description|詳細資訊|
 |   --- |   --- |   --- |
 |已改善散發 DB 清除程序 |   過度龐大的散發資料庫資料表會造成封鎖和死結情況。 改善的清除程序旨在排除其中一些封鎖或死結情況。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding) \(機器翻譯\)  |
@@ -53,6 +54,7 @@ SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
 |針對累加統計資料改善自動統計資料更新 |    在特定案例下，當資料表中的多個分割區發生數個資料變更，且累加統計資料的總修改計數器超過自動更新閾值，但沒有任何個別分割區超過自動更新閾值時，統計資料更新可能會延遲，直到資料表中發生更多修改為止。 此行為已在追蹤旗標 11024 下修正。   |       |
 
 SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
+
 |功能 |Description   |詳細資訊   |
 |   --- |   --- |   --- |
 |針對可用性群組中資料庫的完整 DTC 支援    |   SQL Server 2016 中目前不支援可用性群組中資料庫的跨資料庫交易。 在 SQL Server 2016 SP2 中，我們針對可用性群組資料庫的分散式交易推出完整支援。   |       |
@@ -110,12 +112,12 @@ SQL Server SP1 Standard、Web、Express 和 Local DB 版本提供下列功能 (�
 |CREATE 或 ALTER|部署預存程序、觸發程序、使用者定義的函式和檢視等物件。|[SQL Server 資料庫引擎部落格](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |支援複寫的 DROP TABLE|支援複寫的 DROP TABLE，可卸除複寫發行項。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Filestream RsFx 驅動程式簽署|Filestream RsFx 驅動程式經過 Windows 硬體開發人員中心儀表板入口網站 (Dev Portal) 簽署與認證，可確保在 Windows Server 2016/Windows 10 上安裝 SQL Server 2016 SP1 Filestream RsFx 驅動程式時不會發生任何問題。|[將 SAP 工作負載移轉至 SQL Server 的速度加快 2.5 倍](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
-|SQL 服務帳戶的 LPIM - 以程式設計方式進行識別|允許 DBA 以程式設計方式識別在記憶體中鎖定分頁 (LPIM) 的權限是否在服務啟動時生效。|[開發人員選擇：以程式設計方式識別 SQL Server 中的 LPIM 和 IFI 權限](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server)|
+|SQL 服務帳戶的 LPIM - 以程式設計方式進行識別|允許 DBA 以程式設計方式識別在記憶體中鎖定分頁 (LPIM) 的權限是否在服務啟動時生效。|[Developers Choice:Programmatically identify LPIM and IFI privileges in SQL Server](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-programmatically-identify-lpim-and-ifi-privileges-in-sql-server) (開發人員選擇：以程式設計方式識別 SQL Server 中的 LPIM 和 IFI 權限)|
 |手動變更追蹤清除|新的預存程序可視需要清除變更追蹤內部資料表。| [KB 3173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking)|
 |本機暫存資料表的平行 INSERT..SELECT 變更|INSERT..SELECT 作業的新平行 INSERT。|[SQL Server 客戶諮詢小組](https://blogs.msdn.microsoft.com/sqlcat/2016/07/21/real-world-parallel-insert-what-else-you-need-to-know/)|
 |Showplan XML|擴充診斷功能，包括針對查詢啟用授與警告和最大記憶體、啟用追蹤旗標，並會呈現其他診斷資訊。 | [KB 3190761](https://support.microsoft.com/help/3190761/update-to-improve-diagnostics-by-expose-data-type-of-the-parameters-fo)|
 |儲存類別記憶體|提升在 Windows Server 2016 中使用儲存類別記憶體的交易處理能力，進而確保能依據重要順序大幅度加速交易認可時間。|[SQL Server 資料庫引擎部落格](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/)|
-|USE HINT|使用查詢選項 `OPTION(USE HINT('<option>'))`，以改變使用支援的查詢層級提示的查詢最佳化工具行為。 與 QUERYTRACEON 不同的是，USE HINT 選項不需要系統管理員權限。|[開發人員選擇：USE HINT 查詢提示](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/)|
+|USE HINT|使用查詢選項 `OPTION(USE HINT('<option>'))`，以改變使用支援的查詢層級提示的查詢最佳化工具行為。 與 QUERYTRACEON 不同的是，USE HINT 選項不需要系統管理員權限。|[Developers Choice:USE HINT query hints](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-use-hint-query-hints/) (開發人員選擇：USE HINT 查詢提示)|
 |XEvent 新增項目|新的 XEvent 和 Perfmon 診斷功能可改善對延遲的疑難排解。|[擴充事件](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)|
 
 此外，請注意下列修正：
@@ -141,9 +143,9 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 -   [產品文件 (GA)](#bkmk_ga_docs)
  
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
-Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338)。 
+**問題和對客戶的影響：** Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](https://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338)。 
 
-**解決方式：** 請使用下列其中一種解決方案：
+**解決方案：** 使用下列其中一個解決方案：
 
 - 安裝 [KB 3138367 - Visual C++ 2013 年和 Visual C++ 的可轉散發套件的更新](https://support.microsoft.com/kb/3138367)。 此 KB 是慣用的解決方式。 您可以在安裝 SQL Server 2016 之前或之後安裝此更新。 
 
@@ -159,7 +161,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
  
     如果使用 **KB 3164398**，就可以在 SQL Server 安裝期間，透過 Microsoft Update 或從 Microsoft 下載中心安裝。 
 
-    - **在 SQL Server 2016 安裝期間︰** 如果執行 SQL Server 安裝程式的電腦可以存取網際網路，SQL Server 安裝程式會檢查更新是否為完整 SQL Server 安裝的一部分。 如果您接受更新，安裝程式會在安裝期間下載並更新二進位檔案。
+    - **在 SQL Server 2016 安裝期間：** 如果執行 SQL Server 安裝程式的電腦可以存取網際網路，則 SQL Server 安裝程式會檢查更新是否為完整 SQL Server 安裝的一部分。 如果您接受更新，安裝程式會在安裝期間下載並更新二進位檔案。
 
     - **Microsoft Update：** Microsoft Update 現提供更新作為重要的非安全性 SQL Server 2016 更新。 透過 Microsoft Update 安裝，SQL Server 2016 會在更新後要求重新啟動伺服器。 
 
@@ -170,15 +172,15 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>資料庫或資料表名稱中的特定字元問題
 
-**問題和客戶影響：** 嘗試在資料庫或資料表上啟用 Stretch Database 會失敗，並發生錯誤。 如果物件的名稱包含從小寫轉換為大寫時視為不同字元的字元，則會發生此問題。 導致此問題的字元範例是字元 "ƒ" (鍵入 ALT+159 所建立)。
+**問題和對客戶的影響：** 嘗試在資料庫或資料表上啟用 Stretch Database 會失敗，並發生錯誤。 如果物件的名稱包含從小寫轉換為大寫時視為不同字元的字元，則會發生此問題。 導致此問題的字元範例是字元 "ƒ" (鍵入 ALT+159 所建立)。
 
-**因應措施︰** 如果您想要啟用資料庫或資料表的 Stretch Database，重新命名物件並移除問題字元，是唯一的選項。
+**因應措施：** 如果您想要啟用資料庫或資料表的 Stretch Database，重新命名物件並移除問題字元是唯一的選項。
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>使用 INCLUDE 關鍵字的索引問題
 
-**問題和對客戶的影響︰** 如果資料表的索引使用 INCLUDE 關鍵字在索引中包含其他資料行，則嘗試啟用此資料表的 Stretch Database 會因發生錯誤而失敗。
+**問題和對客戶的影響：** 如果資料表的索引使用 INCLUDE 關鍵字在索引中包含其他資料行，則嘗試啟用此資料表的 Stretch Database 會因發生錯誤而失敗。
 
-**因應措施︰** 卸除使用 INCLUDE 關鍵字的索引，啟用資料表的 Stretch Database，然後重新建立索引。 如果這樣做，請務必依照貴組織的維護作法和原則，以確保對受影響資料表的使用者造成最小的影響或不受影響。
+**因應措施：** 卸除使用 INCLUDE 關鍵字的索引，啟用資料表的 Stretch Database，然後重新建立索引。 如果這樣做，請務必依照貴組織的維護作法和原則，以確保對受影響資料表的使用者造成最小的影響或不受影響。
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 
@@ -186,7 +188,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
 
  **問題和對客戶的影響：** Enterprise 和 Developer 以外版本的自動資料清除會失敗。 因此，如果不手動清除資料，查詢存放區所使用的空間會與日俱增，直到達到設定的限制。 如果不降低，此問題也會填滿為錯誤記錄檔配置的磁碟空間，因為每次嘗試執行清除都會產生傾印檔案。 啟動清除的期間長短取決於工作負載的頻率，但不超過 15 分鐘。
 
- **因應措施︰** 如果您打算在 Enterprise 和 Developer 以外的版本上使用查詢存放區，您必須明確關閉清除原則。 它可以從 SQL Server Management Studio ([資料庫屬性] 頁面)，或透過 TRANSACT-SQL 指令碼完成︰
+ **因應措施：** 如果您打算在 Enterprise 和 Developer 以外的版本上使用查詢存放區，您必須明確關閉清除原則。 它可以從 SQL Server Management Studio ([資料庫屬性] 頁面)，或透過 TRANSACT-SQL 指令碼完成︰
 
 ```ALTER DATABASE <database name> SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 0), SIZE_BASED_CLEANUP_MODE = OFF)```
 
@@ -204,7 +206,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
 
 
 ###  <a name="bkmk_ga_docs"></a> 產品文件 (GA) 
- **問題和客戶的影響：** SQL Server 2016 文件的可下載版本尚未提供。 當您嘗試使用 Help Library 管理員 **從線上安裝內容**時，您會看到 SQL Server 2012 及 SQL Server 2014 文件，但沒有 SQL Server 2016 文件的選項。    
+ **問題和對客戶的影響：** SQL Server 2016 文件的可下載版本尚未提供。 當您嘗試使用 Help Library 管理員 **從線上安裝內容**時，您會看到 SQL Server 2012 及 SQL Server 2014 文件，但沒有 SQL Server 2016 文件的選項。    
     
  **因應措施：** 使用下列其中一項因應措施：    
     
@@ -214,9 +216,9 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
     
 -   使用選項 [從線上安裝內容]  ，並下載 SQL Server 2014 內容。    
 
- **F1 說明︰** 依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按下 F1 時，瀏覽器即會顯示 F1 說明文章的線上版本。 此問題是以瀏覽器為基礎的說明，即使您已設定並安裝本機說明也是一樣。 
+ **F1 說明：** 依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按下 F1 時，瀏覽器即會顯示 F1 說明文章的線上版本。 此問題是以瀏覽器為基礎的說明，即使您已設定並安裝本機說明也是一樣。 
 
-**更新內容︰** 在 SQL Server Management Studio 和 Visual Studio 中，新增文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。    
+**更新內容：** 在 SQL Server Management Studio 和 Visual Studio 中，加入文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。    
     
 * 以 [記事本] 開啟 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings 檔案，將下列程式碼中的日期變更為未來的日期。
 

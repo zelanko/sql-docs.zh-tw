@@ -1,7 +1,7 @@
 ---
 title: 設定或變更伺服器定序 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2017
+ms.date: 01/22/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 231cc69c164e9ac4d91477710f959b073420c08e
-ms.sourcegitcommit: 4df7db58095384152195039d91a01d2bee6bd07d
+ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
+ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52954392"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443694"
 ---
 # <a name="set-or-change-the-server-collation"></a>設定或變更伺服器定序
 
@@ -61,8 +61,8 @@ ms.locfileid: "52954392"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>設定受控執行個體中的伺服器定序
 
-建立 Azure SQL 受控執行個體 (預覽) 時 (目前只能使用 PowerShell 建立)，可指定執行個體中的伺服器定序。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序和新的 UTF-8 定序指定為伺服器層級定序。
-如需示範如何設定 Azure SQL Database 受控執行個體中伺服器層級定序的指令碼範本，請參閱[使用 Resource Manager 範本設定受控執行個體定序](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)。 如果您將資料庫從 SQL Server 移轉至受控執行個體，請使用 `SERVERPROPERTY(N'Collation')` 函式來檢查來源 SQL Server 中的伺服器定序，並建立符合您 SQL Server 定序的受控執行個體。 將資料庫從 SQL Server 移轉至伺服器層級定序不相符的受控執行個體，可能會導致查詢中出現數個未預期的錯誤。 您無法變更現有受控執行個體上的伺服器層級定序。
+建立 Azure SQL 受控執行個體時，可指定執行個體中的伺服器層級定序 (預覽)，且稍後無法變更。 您可以在建立執行個體時，透過 [Azure 入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance)或 [PowerShell 和 Resource Manager 範本](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)來設定伺服器層級定序。 預設伺服器層級定序為 **SQL_Latin1_General_CP1_CI_AS**。 無法將僅限 Unicode 定序和新的 UTF-8 定序指定為伺服器層級定序。
+如果您將資料庫從 SQL Server 移轉至受控執行個體，請使用 `SERVERPROPERTY(N'Collation')` 函式來檢查來源 SQL Server 中的伺服器定序，並建立符合您 SQL Server 定序的受控執行個體。 將資料庫從 SQL Server 移轉至伺服器層級定序不相符的受控執行個體，可能會導致查詢中出現數個未預期的錯誤。 您無法變更現有受控執行個體上的伺服器層級定序。
 
 ## <a name="see-also"></a>另請參閱
 

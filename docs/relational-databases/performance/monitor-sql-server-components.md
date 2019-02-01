@@ -10,12 +10,12 @@ ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 59bca7e526dff250873cd7de2912b1b69f775bc9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bacf9a8a08008b23309d2d8c08b9310c491abf2a
+ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369300"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087677"
 ---
 # <a name="monitor-sql-server-components"></a>監視 SQL Server 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

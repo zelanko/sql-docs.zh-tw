@@ -1,7 +1,7 @@
 ---
-title: 步驟 3：部署第 6 課的封裝 | Microsoft Docs
+title: 步驟 3：測試第 6 課套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -11,37 +11,37 @@ ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5119aef360778030f076a3e186225933b4a811a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9342c312de10700e0af8224496ad526c6a930591
+ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796510"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54880471"
 ---
-# <a name="lesson-6-3---testing-the-lesson-6-package"></a>課程 6-3 - 測試第 6 課的封裝
-在執行階段，您的封裝會從 VarFolderName 參數取得目錄屬性的值。  
+# <a name="lesson-6-3-test-the-lesson-6-package"></a>第 6-3 課：測試第 6 課套件
+在執行階段，您的套件會從 **VarFolderName** 參數取得 **Directory** 屬性值。  
   
-若要確認封裝在執行階段使用新值來更新 Directory 屬性，只要執行封裝即可。 因為只有 3 個範例資料檔會複製到新目錄，所以資料流程只會執行 3 次，而不是反覆執行原始資料夾的 14 個檔案。  
+若要確認套件會更新 **Directory** 屬性，請執行套件。 因為您已將三個範例資料檔案複製到新目錄，所以資料流程會執行三次。
   
-## <a name="checking-the-package-layout"></a>檢查封裝配置  
-在測試封裝之前，您應該確認第 6 課封裝中的控制流程和資料流程是否包含下圖所顯示的物件。 其控制流程應該與第 5 課的控制流程相同。 資料流程應該與第 5 課的資料流程相同。  
+## <a name="check-the-package-layout"></a>檢查套件配置  
+在測試套件之前，請確認第 6 課套件中的控制流程和資料流程類似下圖所示物件：   
   
 **控制流程**  
   
-![控制流程](../integration-services/media/task3lesson6control.jpg "控制流程")  
+![控制流程](../integration-services/media/task4lesson2control.gif "控制流程")  
   
 **資料流程**  
   
-![資料流程](../integration-services/media/task3lesson6data.jpg "資料流程")  
+![資料流程](../integration-services/media/task5lesson5data.gif "資料流程")  
   
-### <a name="to-test-the-lesson-6-tutorial-package"></a>若要測試第 6 課的教學課程封裝  
+## <a name="test-the-lesson-6-package"></a>測試第 6 課套件  
   
-1.  在 [偵錯] 功能表上，按一下 [開始偵錯]。  
+1.  在 [偵錯] 功能表上，選取 [開始偵錯]。  
   
-2.  在封裝完成執行之後，在 [偵錯] 功能表上，按一下 [停止偵錯]。  
+2.  在套件執行完成之後，於 [偵錯] 功能表上，選取 [停止偵錯]。  
   
-## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 4：部署第 6 課的套件](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+## <a name="go-to-next-task"></a>移至下一個工作
+[步驟 4：部署第 6 課套件](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   
   

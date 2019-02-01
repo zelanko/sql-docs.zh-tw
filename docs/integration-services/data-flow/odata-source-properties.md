@@ -11,17 +11,18 @@ ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9249cac94f2e066d0502e16e40656de4e8b8bdc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b7bf852fcebd390d3659fcd2bff53fa0446d0c
+ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848316"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55045051"
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
 當您以滑鼠右鍵按一下資料流程中的 [OData 來源] 並按一下 [屬性] 時，您會看到 [OData 來源] 元件的屬性出現在 [屬性] 視窗中。  
 
 ## <a name="properties"></a>屬性 
+
 |屬性|Description|  
 |-|-|  
 |CollectionName|要從 OData 服務擷取的集合名稱。 當 **UseResourcePath** 為 False 時，便會使用 **CollectionName** 屬性。<br /><br /> 此屬性具有運算式功能，可在執行階段設定值。 不過，如果集合的中繼資料不符合存在於設計階段的中繼資料，則會發生驗證錯誤，導致資料流程執行失敗。|  
