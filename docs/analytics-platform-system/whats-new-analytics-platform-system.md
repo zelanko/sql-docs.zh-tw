@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 44ed335524d21cd4931722a20be4eb0da5681603
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044705"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652587"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新 Microsoft Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
@@ -28,14 +28,14 @@ ms.locfileid: "55044705"
 APS CU7.3 可改善查詢效能，使用 SQL 查詢最佳化工具中的通用子運算式刪除。 改善可改善查詢有兩種。 第一個優點是能夠識別並排除這類運算式可以協助減少 SQL 編譯時間。 第二個和更重要的好處是這些多餘的子運算式的資料移動作業會刪除因此執行時間的查詢變得更快。 您可以找到這項功能的詳細的說明[此處](common-sub-expression-elimination.md)。
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>針對 Informatica 10.2.0 發行的 APS Informatica connector
-我們已發行新版本的 Informatica 連接器搭配 Informatica 版本 10.2.0 ap。 您可以從下載新的連接器[下載網站](https://www.microsoft.com/download/details.aspx?id=57472)。
+我們已發行新版本的 Informatica 連接器搭配 Informatica 版 10.2.0 和 10.2.0 ap Hotfix 1。 您可以從下載新的連接器[下載網站](https://www.microsoft.com/download/details.aspx?id=57472)。
 
 #### <a name="supported-versions"></a>支援的版本
 
 | APS 版本 | Informatica powercenter 來 | 驅動程式 |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 和更新版本 | 10.2.0 | SQL Server Native Client 11.x |
+| APS 2016 和更新版本 | 10.2.0、 10.2.0 Hotfix 1 | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
