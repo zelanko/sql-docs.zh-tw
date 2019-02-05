@@ -1,7 +1,7 @@
 ---
 title: MSSQL JDBC 驅動程式的批次插入作業中使用大量複製 API |Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696558"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737099"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>使用大量複製 API 執行批次插入作業
 
@@ -65,7 +65,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 * 插入包含 INSERT SELECT 運算式的查詢 (例如`INSERT INTO TABLE SELECT * FROM TABLE2`)，不支援。
 * 插入包含多個值運算式的查詢 (例如`INSERT INTO TABLE VALUES (1, 2) (3, 4)`)，不支援。
 * 插入查詢後面的 OPTION 子句中，加入多個資料表，或後面接著另一個查詢，不支援。
-* 由於大量複製 API 的限制`DATETIME`， `SMALLDATETIME`，`GEOMETRY`，和`GEOGRAPHY`資料型別，不支援這項功能。
+* 由於大量複製 API 的限制`MONEY`， `SMALLMONEY`， `DATE`， `DATETIME`， `DATETIMEOFFSET`， `SMALLDATETIME`， `TIME`， `GEOMETRY`，和`GEOGRAPHY`資料類型，目前不支援這個功能。
 
 如果查詢失敗，因為非 「 SQL server 」 相關的錯誤，此驅動程式會以批次插入的原始邏輯記錄的錯誤訊息和後援。
 

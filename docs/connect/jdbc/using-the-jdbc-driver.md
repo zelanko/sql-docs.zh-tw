@@ -1,7 +1,7 @@
 ---
 title: 使用 JDBC 驅動程式 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e1d9d72cef09c12bb00a6cdcfd2db9b9818a93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e0f803b68f2ab9f62c3df27c6930da8e3a8a4a0
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845326"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737089"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 
@@ -27,6 +27,8 @@ ms.locfileid: "47845326"
 ## <a name="choosing-the-right-jar-file"></a>選擇正確的 JAR 檔案
 
 Microsoft JDBC Driver 會提供下使用您慣用的 Java Runtime Environment (JRE) 設定，與往來的不同 Jar:
+
+提供 SQL Server 的 Microsoft JDBC Driver 7.2 **mssql-jdbc-7.2.0.jre8.jar**，並**mssql-jdbc-7.2.0.jre11.jar**類別庫檔案。
 
 提供 SQL Server 的 Microsoft JDBC 驅動程式 7.0 **mssql-jdbc-7.0.0.jre8.jar**，並**mssql-jdbc-7.0.0.jre10.jar**類別庫檔案。
 
@@ -52,7 +54,29 @@ Microsoft JDBC 驅動程式 jar 不 Java SDK 的一部分，而且必須包含�
 
 如果使用 JDBC 驅動程式 7.0，設定 classpath 以包含**mssql-jdbc-7.0.0.jre8.jar**或是**mssql-jdbc-7.0.0.jre10.jar**。
 
+如果使用 JDBC 驅動程式 7.2，設定 classpath 以包含**mssql-jdbc-7.2.0.jre8.jar**或是**mssql-jdbc-7.2.0.jre11.jar**。
+
 如果 classpath 遺漏正確的 Jar 檔案的項目，應用程式將會擲回一般`Class not found`例外狀況。  
+
+### <a name="for-microsoft-jdbc-driver-72"></a>Microsoft JDBC driver 7.2
+
+**Mssql-jdbc-7.2.0.jre8.jar**或是**mssql-jdbc-7.2.0.jre11.jar**檔案會安裝在下列位置：
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.0.jre11.jar
+```
+
+下列程式碼片段是用於 Windows 應用程式的 CLASSPATH 陳述式範例：
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.0.jre11.jar`
+
+下列程式碼片段是用於 Unix/Linux 應用程式的 CLASSPATH 陳述式範例：
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.0.jre11.jar`
+
+請確定 CLASSPATH 陳述式包含只有一個[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，例如其中一個**mssql-jdbc-7.2.0.jre8.jar**或**mssql-jdbc-7.2.0.jre11.jar**。
   
 ### <a name="for-microsoft-jdbc-driver-70"></a>Microsoft JDBC driver 7.0
 

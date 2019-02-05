@@ -1,7 +1,7 @@
 ---
 title: 使用 SSL 加密連接 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78cdeb64cbd0bc76109c7bd3db784c2262ae80ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14f33ac9e6ab8d17954039f4ae0fca1f11e46af5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812186"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737129"
 ---
 # <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,8 +64,7 @@ String connectionUrl =
 > [!NOTE]  
 >  或者，您可以使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別所提供的適當 **setter** 方法來設定連線屬性的值。  
   
- 如果 **encrypt** 屬性設定為 **true** 且 **trustServerCertificate** 屬性設定為 **false**，而且連接字串中的伺服器名稱不符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL 憑證中的伺服器名稱，則會發出下列錯誤：此驅動程式無法使用安全通訊端層 (SSL) 加密來建立與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的安全連線。 錯誤：「java.security.cert.CertificateException：無法在安全通訊端層 (SSL) 初始化期間驗證憑證中的伺服器名稱」。  
-  
+ 如果**加密**屬性設定為 **，則為 true**並**trustServerCertificate**屬性設定為**false**如果中的伺服器名稱連接字串不符合 SSL 憑證中的伺服器名稱，會發出下列錯誤： `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`。 從 7.2 版開始，此驅動程式支援萬用字元模式比對的 SSL 憑證中的伺服器名稱的最左邊的標籤。
 ## <a name="see-also"></a>另請參閱  
  [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)   
  [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
