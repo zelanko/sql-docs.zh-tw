@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9bfeddd0aad93427a3f65c44364d3749981ccbae
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226525"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428645"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ INCREMENT BY \<constant>
   
 3.  將計算值傳回給呼叫的陳述式。  
   
- **當快取已用盡時的 CACHE 選項**  
+**當快取已用盡時的 CACHE 選項**  
   
  每次要求順序物件產生 **CACHE** 選項的下一個值時，如果快取已用盡，則會發生下列處理序：  
   
@@ -139,7 +139,7 @@ INCREMENT BY \<constant>
   
 3.  鎖定順序物件的系統資料表資料列，而且將步驟 2 中的計算值 (最後一個值) 寫入至系統資料表。 引發快取用盡 xevent，通知使用者此新持續值。  
   
- **NO CACHE 選項**  
+**NO CACHE 選項**  
   
  每次要求順序物件產生 **NO CACHE** 選項的下一個值時，都會發生下列處理序：  
   

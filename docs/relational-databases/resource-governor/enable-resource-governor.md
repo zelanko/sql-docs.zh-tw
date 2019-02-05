@@ -12,15 +12,15 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 8c44ea082390f2722bd4544e264cf5f1266e69b7
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 282316013dad44d73e165984167f9cff224c41a6
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380309"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689821"
 ---
 # <a name="enable-resource-governor"></a>啟用資源管理員
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   預設會關閉資源管理員。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 啟用資源管理員。  
   
 -   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  

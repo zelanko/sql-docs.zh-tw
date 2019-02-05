@@ -13,15 +13,15 @@ ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 26ce42d2c28fcb991ac8127b8806cde4156fa4d6
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 22fc66d9f579305a4160b2de0ee6ad047e560ea3
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380409"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689841"
 ---
 # <a name="delete-a-workload-group"></a>刪除工作負載群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除工作負載群組或資源集區。  
   
 -   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  

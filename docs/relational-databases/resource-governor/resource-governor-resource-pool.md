@@ -14,15 +14,15 @@ ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 891e3e41bab9be82145bfeb905e9243b7bf31340
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 7132cacb79266243aab94e0b71e18b4a8cdcbb0f
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044345"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689921"
 ---
 # <a name="resource-governor-resource-pool"></a>資源管理員資源集區
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的實體資源子集。 資源管理員可讓您針對內送應用程式要求可在資源集區使用的 CPU、實體 IO 和記憶體數量指定限制。 每個資源集區都會包含一個或多個工作負載群組。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的資源來執行。  
   

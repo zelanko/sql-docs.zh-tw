@@ -1,7 +1,7 @@
 ---
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 02/01/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 591d2dcbb8a14cff7e4595bdeeab93787f51c5cf
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 4f14e6d10f7793fff889dea43841556b9d43d09c
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419873"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652557"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 將第二個引數中指定的部分字元轉譯為第三個變數中指定的一組目的地字元之後，傳回提供作為第一個引數的字串。
 
@@ -145,5 +145,4 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
- [字串函數 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)   
-
+ [字串函數 (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

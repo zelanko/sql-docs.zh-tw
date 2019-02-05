@@ -15,15 +15,15 @@ ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: c85cbe7f0c29ad9e2e6fb410ae1f3cc30ab0921c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 5f9be8fb680fcc3ccb0138318c21bb3072035338
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380359"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689871"
 ---
 # <a name="move-a-workload-group"></a>移動工作負載群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 將資源管理員工作負載群組移至不同的資源集區。  
   
 -   **開始之前：**[限制事項](#LimitationsRestrictions)、[權限](#Permissions)  

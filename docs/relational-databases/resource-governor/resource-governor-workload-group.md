@@ -14,15 +14,15 @@ ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3ec802a1d2dce89549c252cb6218e0bd8084be18
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a2a900bdb72e13d2521e8da0a3b971c2b9edccb
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380479"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689881"
 ---
 # <a name="resource-governor-workload-group"></a>資源管理員工作負載群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，工作負載群組會當做有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組都位於資源集區中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的實體資源子集。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的原則以及為資源集區所定義的資源來執行。  
   
 ## <a name="workload-group-concepts"></a>工作負載群組概念  

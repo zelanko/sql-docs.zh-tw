@@ -15,15 +15,15 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 517a07d539c8ca4d775f270cf16fdeee1967361c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
+ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380569"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689791"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員分類程序會根據內送工作階段的特性，將工作階段指派給工作負載群組。 您可以透過撰寫使用者定義函數 (稱為分類函數) 來自訂分類邏輯。  
   
 ## <a name="classification"></a>分類  
