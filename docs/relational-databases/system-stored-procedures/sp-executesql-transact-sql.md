@@ -253,7 +253,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- 如需其他範例，請參閱 < [sp_executesql & Amp;#40;transact-SQL&AMP;#41;](https://msdn.microsoft.com/library/ms188001.aspx)。  
+ 如需其他範例，請參閱 < [sp_executesql (Transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
