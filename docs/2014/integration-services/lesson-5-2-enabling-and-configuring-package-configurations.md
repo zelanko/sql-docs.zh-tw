@@ -10,12 +10,12 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2895a40dbff1215f5f6b2b2d873069f41b1d315
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747960"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760071"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>步驟 2：啟用和設定封裝組態
   在此工作中，您會將專案轉換成封裝部署模型，並使用封裝組態精靈來啟用封裝組態。 您將利用這個精靈來產生 XML 組態檔，它包含 Foreach 迴圈容器的 `Directory` 屬性的組態設定。 Directory 屬性的值是由新的封裝層級變數提供，您可以在執行階段更新它。 另外，您還會擴展一個要在測試期間使用的新範例資料夾。  
@@ -43,7 +43,7 @@ ms.locfileid: "52747960"
   
 9. 在 **屬性運算式編輯器**，按一下**屬性**清單，並選取`Directory`。  
   
-10. 在 [運算式] 方塊中，按一下省略符號按鈕 **(...)**。  
+10. 在 **運算式**方塊中，按一下省略符號按鈕 **（...）**.  
   
 11. 在 [運算式產生器] 中，展開 [變數] 資料夾，將 **User::varFolderName** 變數拖曳至 [運算式] 方塊中。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "52747960"
   
 16. 按一下 [ **關閉**]。  
   
-17. 精靈會建立一個稱為 SSISTutorial.dtsConfig 的組態檔，它包含變數值 (`alue`) 的組態設定，再由這個變數設定列舉值的 `Directory` 屬性。  
+17. 精靈會建立組態檔，稱為 SSISTutorial.dtsConfig，其中包含組態設定，如`value`所設定的變數`Directory`列舉值的屬性。  
   
     > [!NOTE]  
     >  組態檔通常包含關於封裝屬性的複雜資訊，但在此教學課程中，唯一的組態資訊應該是  
     > <Configuration ConfiguredType="Property"  
     > Path="\Package.Variables[User::varFolderName]。ValueType 屬性 [Value] ="String"\>  
-    >  \<ConfiguredValue >\</ConfiguredValue >  
+    >  \<ConfiguredValue>\</ConfiguredValue>  
     > \</ 組態 >。  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>若要建立及擴展新的範例資料夾  
@@ -105,6 +105,6 @@ ms.locfileid: "52747960"
 3.  在 `New Sample Data`資料夾中，貼上複製的檔案。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 3:修改 Directory 屬性組態值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [步驟 3：修改 Directory 屬性組態值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   
