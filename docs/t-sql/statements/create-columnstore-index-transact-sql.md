@@ -132,7 +132,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 如果資料表已經有叢集資料行存放區索引，則您可以指定與現有索引相同的名稱，或您可以使用 DROP EXISTING 選項來指定新名稱。  
   
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    指定要儲存為叢集資料行存放區索引之資料表的單部分、兩部分或三部分名稱。 如果資料表是堆積或叢集索引，則該資料表會從資料列存放區轉換成資料行存放區。 如果資料表已經是資料行存放區，此陳述式會重建叢集資料行存放區索引。  
   
 #### <a name="with-options"></a>WITH 選項  
@@ -215,7 +215,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
     指定要存放的資料行。 非叢集資料行存放區索引僅限 1024 個資料行。  
    每個資料行必須是資料行存放區索引支援的資料類型。 如需支援的資料類型清單，請參閱[限制](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)。  
 
-ON [*database_name*. [*schema_name* ] . |  *schema_name* . ] *table_name*  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    指定包含索引之資料表的一部分、兩部分或三部分名稱。  
 
 #### <a name="with-options"></a>WITH 選項

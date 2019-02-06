@@ -33,7 +33,7 @@ ms.locfileid: "54254813"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   本主題說明 Updategram 中指定的對應結構描述 (XSD 或 XDR) 要如何用來處理更新。 在 updategram 中，您可以提供要用於資料表和資料行中的對應的元素和屬性在 updategram 中的註解式的對應結構描述的名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 在 updategram 中指定對應結構描述時，此 updategram 中指定的元素和屬性名稱必須對應到對應結構描述內的元素和屬性。  
   
- 若要指定對應結構描述，您使用**對應結構描述**屬性**\<同步 >** 項目。 下列範例會示範兩個 updategram：使用簡單對應結構描述的 updategram 以及使用更複雜之結構描述的 updategram。  
+ 若要指定對應結構描述，您使用 **對應結構描述** 屬性 **\<同步 >** 項目。 下列範例會示範兩個 updategram：使用簡單對應結構描述的 updategram 以及使用更複雜之結構描述的 updategram。  
   
 > [!NOTE]  
 >  本文件集假設您非常熟悉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的範本和對應結構描述支援。 如需詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0> 如需使用 XDR 的舊版應用程式，請參閱 < [Annotated XDR Schemas&#40;在 SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "54254813"
  若要建立使用下列範例的實用範例，您必須符合指定的需求[如需執行 SQLXML 範例的需求](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 使用簡單對應結構描述建立 updategram  
- 下列 XSD 結構描述 (SampleSchema.xml) 是對應的對應結構描述**\<客戶 >** 到 Sales.Customer 資料表的項目：  
+ 下列 XSD 結構描述 (SampleSchema.xml) 是對應的對應結構描述 **\<客戶 >** 到 Sales.Customer 資料表的項目：  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -116,7 +116,7 @@ ms.locfileid: "54254813"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. 使用對應結構描述內指定的父子式關聯性插入記錄  
- 結構描述元素可以產生關聯。  **\<Sql: relationship >** 項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
+ 結構描述元素可以產生關聯。 **\<Sql: relationship >** 項目會指定結構描述項目之間的父子式關聯性。 這項資訊是用來更新具有主索引鍵與外部索引鍵關聯性的對應資料表。  
   
  下列對應結構描述 (SampleSchema.xml) 包含兩個元素， **\<順序 >** 並 **\<OD >**:  
   
@@ -157,7 +157,7 @@ ms.locfileid: "54254813"
 </xsd:schema>  
 ```  
   
- 下列 updategram 會使用這個 XSD 結構描述來新增新的訂單詳細資料記錄 (  **\<OD >** 中的項目**\<之後 >** 區塊) 針對訂單 43860。 **對應結構描述**屬性用來在 updategram 中指定對應結構描述。  
+ 下列 updategram 會使用這個 XSD 結構描述來新增新的訂單詳細資料記錄 ( **\<OD >** 中的項目 **\<之後 >** 區塊) 針對訂單 43860。 **對應結構描述**屬性用來在 updategram 中指定對應結構描述。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -276,11 +276,11 @@ ms.locfileid: "54254813"
 </xsd:schema>  
 ```  
   
- 在此範例中，XSD 結構描述具有**\<客戶 >** 並**\<順序 >** 項目，而且它會指定兩個項目之間的父子式關聯性。 它會識別**\<順序 >** 父項目並**\<客戶 >** 作為子項目。  
+ 在此範例中，XSD 結構描述具有 **\<客戶 >** 並 **\<順序 >** 項目，而且它會指定兩個項目之間的父子式關聯性。 它會識別 **\<順序 >** 父項目並 **\<客戶 >** 作為子項目。  
   
  此 updategram 處理邏輯會使用有關父子式關聯性的資訊來判斷哪些記錄會插入資料表中。 在此範例中，updategram 邏輯會先嘗試將記錄插入 Ord 資料表 (因為**\<順序 >** 父系)，然後嘗試將記錄插入 Cust 資料表 (因為 **\<客戶 >** 是子系)。 但是，由於包含在資料庫資料表結構描述內之主索引鍵/外部索引鍵資訊的緣故，這項插入作業會造成資料庫中的外部索引鍵違規，而使得插入失敗。  
   
- 若要指示 updategram 邏輯在更新作業期間反轉父子式關聯性**反向**上指定註釋**\<關聯性 >** 項目。 因此，記錄會先加入到 Cust 資料表，然後再加入到 Ord 資料表，作業就會成功。  
+ 若要指示 updategram 邏輯在更新作業期間反轉父子式關聯性 **反向** 上指定註釋 **\<關聯性 >** 項目。 因此，記錄會先加入到 Cust 資料表，然後再加入到 Ord 資料表，作業就會成功。  
   
  下列 updategram 會使用指定的 XSD 結構描述，將訂單 (OrderID=2) 插入到 Ord 資料表，並將客戶 (CustomerID='AAAAA') 插入到 Cust 資料表：  
   
