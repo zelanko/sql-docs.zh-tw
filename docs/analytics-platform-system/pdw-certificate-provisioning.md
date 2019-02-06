@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4876b890067bd851167bc1e3e3c355c9701569d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405093"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742118"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>佈建 PDW 憑證-Analytics Platform System
 **佈建 PDW 憑證**Analytics Platform System 頁面**Configuration Manager**匯入或移除的 PDW 區域所使用的憑證。 使用此項目，來加密連線的憑證可以協助保護通訊安全到控制節點，透過 SQL Server 用戶端，使用 SQL Server PDW 驅動程式的工具[管理主控台](monitor-the-appliance-by-using-the-admin-console.md)，並載入 Integration Services。  
@@ -41,7 +41,10 @@ SQL Server PDW 支援使用憑證來加密連接到控制節點中;包含通往*
 使用 Analytics Platform System**Configuration Manager**新增或移除受信任的憑證。 直接使用 Microsoft Windows HTTP 服務的憑證組態工具 (**winHttpCertCfg.exe**) 來管理憑證不受支援。  
   
 ## <a name="import-or-remove-the-certificate"></a>匯入或移除憑證  
-下列指示說明如何匯入或移除應用裝置的憑證。  
+下列指示說明如何匯入或移除應用裝置的憑證。
+
+> [!WARNING]
+> 若要更新過期的憑證中，您必須移除現有的憑證匯入新之前。
   
 ### <a name="to-import-the-certificate"></a>若要匯入憑證  
   
