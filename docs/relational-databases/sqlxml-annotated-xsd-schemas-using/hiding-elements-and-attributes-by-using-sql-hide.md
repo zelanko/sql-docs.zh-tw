@@ -45,7 +45,7 @@ ms.locfileid: "54256983"
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 針對屬性指定 sql:hide  
  在此範例中的 XSD 結構描述包含 **\<Person.Contact >** 項目**ContactID**， **FirstName**，以及**LastName**屬性。  
   
-  **\<Person.Contact >** 元素屬於複雜類型，因此，會對應到相同的名稱 （預設對應） 的資料表。 所有的屬性 **\<Person.Contact >** 項目都屬於簡單類型，並將對應至 AdventureWorks 資料庫中 Person.Contacttable 中相同名稱的資料行。 在結構描述中， **sql: hide**上指定註釋**ContactID**屬性。 針對此結構描述指定 XPath 查詢**ContactID**不會傳回 XML 文件中。  
+ **\<Person.Contact >** 元素屬於複雜類型，因此，會對應到相同的名稱 （預設對應） 的資料表。 所有的屬性 **\<Person.Contact >** 項目都屬於簡單類型，並將對應至 AdventureWorks 資料庫中 Person.Contacttable 中相同名稱的資料行。 在結構描述中， **sql: hide**上指定註釋**ContactID**屬性。 針對此結構描述指定 XPath 查詢**ContactID**不會傳回 XML 文件中。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
