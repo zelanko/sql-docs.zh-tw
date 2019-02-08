@@ -13,12 +13,13 @@ ms.custom: sql-linux, seodec18
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f7c9612bac16463c1ea82d9e5a83bbad9f371700
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+zone_pivot_groups: cs1-command-shell
+ms.openlocfilehash: d6d8a20044d60ab83f9d649827397bf363dd2696
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397627"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832120"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：以 Docker 執行 SQL Server 容器映像
 
@@ -58,13 +59,17 @@ any changes to one section should be duplicated in the other-->
 
 1. 從 Microsoft Container Registry 提取 SQL Server 2017 Linux 容器映像。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!TIP]
    > 如果您想要試用 SQL Server 2019 預覽影像，請參閱[這篇文章的 SQL Server 2019 預覽版](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)。
@@ -75,17 +80,22 @@ any changes to one section should be duplicated in the other-->
 
 2. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
+   ::: zone-end
 
    > [!NOTE]
    > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼必須至少為 8 個字元，且包含下列四組的三種字元：大寫字母、 小寫字母、 10 進位數字和符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
@@ -105,13 +115,18 @@ any changes to one section should be duplicated in the other-->
 
 3. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
+
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    您應該會看到類似下列螢幕擷取畫面的結果：
 
@@ -140,13 +155,17 @@ SELECT @@SERVERNAME,
 
 1. 從 Docker Hub 提取 SQL Server 2019 預覽 Linux 容器映像。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!TIP]
    > 本快速入門使用 SQL Server 2019 預覽 Docker 映像。 如果您想要執行 SQL Server 2017 映像，請參閱[這篇文章的 SQL Server 2017 版本](quickstart-install-connect-docker.md?view=sql-server-linux-2017#pullandrun2017)。
@@ -157,17 +176,21 @@ SELECT @@SERVERNAME,
 
 2. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
    ```
+   ::: zone-end
 
    > [!NOTE]
    > 密碼應遵循 SQL Server 預設密碼原則，否則容器將無法設定 SQL Server 並停止運作。 根據預設，密碼必須至少為 8 個字元，且包含下列四組的三種字元：大寫字母、 小寫字母、 10 進位數字和符號。 執行 [docker logs](https://docs.docker.com/engine/reference/commandline/logs/) 命令即可查看錯誤記錄。
@@ -187,13 +210,17 @@ SELECT @@SERVERNAME,
 
 3. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker ps -a
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker ps -a
    ```
+   ::: zone-end
 
    您應該會看到類似下列螢幕擷取畫面的結果：
 
@@ -225,24 +252,30 @@ SELECT @@SERVERNAME,
 
 1. 使用 `docker exec -it` 命令在您執行的容器中啟動互動式 Bash 殼層。 下列範例中的 `sql1` 是您在建立容器時由 `--name` 參數指定的名稱。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sudo docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker exec -it sql1 "bash"
    ```
+   ::: zone-end
 
-1. 進入容器後，以 sqlcmd 進行本機連線。 預設路徑並不包含 sqlcmd，因此您必須指定完整路徑。
+2. 進入容器後，以 sqlcmd 進行本機連線。 預設路徑並不包含 sqlcmd，因此您必須指定完整路徑。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
    > [!TIP]
    > 您可以在命令列中省略密碼，不要在提示時輸入密碼。
 
-1. 如果成功，您應該會收到 **sqlcmd** 命令提示字元：`1>`。
+3. 如果成功，您應該會收到 **sqlcmd** 命令提示字元：`1>`。
 
 ## <a name="create-and-query-data"></a>建立及查詢資料
 
@@ -258,13 +291,13 @@ SELECT @@SERVERNAME,
    CREATE DATABASE TestDB
    ```
 
-1. 在下一行，撰寫查詢以傳回您伺服器上所有資料庫的名稱：
+2. 在下一行，撰寫查詢以傳回您伺服器上所有資料庫的名稱：
 
    ```sql
    SELECT Name from sys.Databases
    ```
 
-1. 上述兩個命令不會立即執行。 您必須在新的一行鍵入 `GO`，以執行上述命令：
+3. 上述兩個命令不會立即執行。 您必須在新的一行鍵入 `GO`，以執行上述命令：
 
    ```sql
    GO
@@ -280,19 +313,19 @@ SELECT @@SERVERNAME,
    USE TestDB
    ```
 
-1. 建立名為 `Inventory` 的新資料表：
+2. 建立名為 `Inventory` 的新資料表：
 
    ```sql
    CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT)
    ```
 
-1. 將資料插入新的資料表：
+3. 將資料插入新的資料表：
 
    ```sql
    INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
    ```
 
-1. 鍵入 `GO` 以執行上述命令：
+4. 鍵入 `GO` 以執行上述命令：
 
    ```sql
    GO
@@ -308,7 +341,7 @@ SELECT @@SERVERNAME,
    SELECT * FROM Inventory WHERE quantity > 152;
    ```
 
-1. 執行命令：
+2. 執行命令：
 
    ```sql
    GO
@@ -322,7 +355,7 @@ SELECT @@SERVERNAME,
    QUIT
    ```
 
-1. 若要結束容器中的互動式命令提示字元，請鍵入 `exit`。 結束互動式 Bash 殼層後，容器會繼續執行。
+2. 若要結束容器中的互動式命令提示字元，請鍵入 `exit`。 結束互動式 Bash 殼層後，容器會繼續執行。
 
 ## <a id="connectexternal"></a> 從容器外部連線
 
@@ -332,17 +365,21 @@ SELECT @@SERVERNAME,
 
 1. 找出裝載您容器之電腦的 IP 位址。 在 Linux 上，使用**ifconfig** 或 **ip addr**。在 Windows 上，使用 **ipconfig**。
 
-1. 執行 sqlcmd 來指定 IP 位址和容器中 1433 通訊埠所對應的連接埠。 在此範例中，這是相同的連接埠 1433，主機電腦上。 如果您在主機電腦上指定不同的對應連接埠，您會在此使用。
+2. 執行 sqlcmd 來指定 IP 位址和容器中 1433 通訊埠所對應的連接埠。 在此範例中，這是相同的連接埠 1433，主機電腦上。 如果您在主機電腦上指定不同的對應連接埠，您會在此使用。
 
+   ::: zone pivot="cs1-bash"
    ```bash
    sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
+   ::: zone-end
 
+   ::: zone pivot="cs1-powershell"
    ```PowerShell
    sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
+   ::: zone-end
 
-1. 執行 Transact-SQL 命令。 完成後，鍵入 `QUIT`。
+3. 執行 Transact-SQL 命令。 完成後，鍵入 `QUIT`。
 
 其他常用的 SQL Server 連線工具包括：
 
@@ -355,15 +392,19 @@ SELECT @@SERVERNAME,
 
 若要移除本教學課程中用到的 SQL Server 容器，請執行下列命令：
 
-```bash
+   ::: zone pivot="cs1-bash"
+   ```bash
 sudo docker stop sql1
 sudo docker rm sql1
-```
+   ```
+   ::: zone-end
 
-```PowerShell
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
 docker stop sql1
 docker rm sql1
-```
+   ```
+   ::: zone-end
 
 > [!WARNING]
 > 停止及移除容器會永久刪除容器中的所有 SQL Server 資料。 如果您要保留您的資料，請[建立備份檔案並複製至容器之外](tutorial-restore-backup-in-sql-server-container.md)，或使用[容器資料持續性技術](sql-server-linux-configure-docker.md#persist)。

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 40bd2140ba28307cca30befb7cdad8b180cc856a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 527f88ed14adc0140cbca179177e85670f72cafd
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645137"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55890009"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>使用 R 和 SQL Server （逐步解說） 建立資料特徵
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -130,7 +130,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
 
 1. 使用 SQL 函式，名為*fnCalculateDistance*。 NYCTaxi_Sample 資料庫中，應該已有此函式。 在 [物件總管] 中，確認函式存在於瀏覽此路徑：資料庫 > NYCTaxi_Sample > 可程式性 > 函式 > 純量值函式 > dbo.fnCalculateDistance。
 
-  如果函式不存在，使用 SQL Server Management Studio 來產生 NYCTaxi_Sample 資料庫中的函式。
+    如果函式不存在，使用 SQL Server Management Studio 來產生 NYCTaxi_Sample 資料庫中的函式。
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
