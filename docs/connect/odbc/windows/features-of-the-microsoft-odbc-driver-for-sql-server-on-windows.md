@@ -41,13 +41,13 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包
 -l 選項會指定在您嘗試連線到伺服器時，`bcp.exe` 登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的逾時秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp.exe` 就會產生錯誤訊息。 值為 0 會指定無限逾時。 小於 (約) 10 秒的登入逾時不可靠。  
   
 ### <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用  
-ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[可感知驅動程式的連線共用](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 如需詳細資訊，請參閱 [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)。  
+ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[可感知驅動程式的連線共用](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 如需詳細資訊，請參閱 [ODBC Driver for SQL Server 中可感知驅動程式的連接共用](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)。  
   
 ### <a name="asynchronous-execution-notification-method"></a>非同步執行 (通知方法)  
 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援[非同步執行 (通知方法)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx)。 如需使用範例，請參閱[非同步執行 &#40;通知方法&#41; 範例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)。  
   
 ### <a name="connection-resiliency"></a>連接恢復功能
-若要確保應用程式仍然連接到 Microsoft Azure SQL Database，Windows 上的 ODBC 驅動程式可以還原閒置的連接。 如需詳細資訊，請參閱 [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。  
+若要確保應用程式仍然連接到 Microsoft Azure SQL Database，Windows 上的 ODBC 驅動程式可以還原閒置的連接。 如需詳細資訊，請參閱 [Windows ODBC 驅動程式中的連接恢復功能](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。  
   
 ## <a name="behavior-changes"></a>行為變更
 
