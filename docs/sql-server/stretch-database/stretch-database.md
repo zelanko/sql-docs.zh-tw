@@ -3,20 +3,21 @@ title: Stretch Database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
+ms.technology: ''
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 614508086f0efd44833f8a3a5c6814e8b9608b30
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 49e00f126c1fa83a08a9186944be20dd903cda15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596919"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043369"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
