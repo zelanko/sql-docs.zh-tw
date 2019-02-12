@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054998"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011139"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>測試篩選過的模型 (基本資料採礦教學課程)
   既然您判斷出`TM_Decision_Tree`模型最為正確，您要自訂的模型，使其更符合需求的[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]目標郵寄促銷活動。 具體而言，行銷部門想要知道男性和女性客戶之間是否有任何差異。 資訊可協助他們決定要用於廣告使用哪些雜誌和哪些產品當做郵寄活動的特色。  
@@ -88,7 +87,7 @@ ms.locfileid: "48054998"
   
  [瀏覽決策樹模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [使用增益圖測試精確度&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>若要探索篩選過的模型  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48054998"
   
 #### <a name="to-test-the-lift-of-the-filtered-models"></a>若要測試篩選過之模型的增益  
   
-1.  切換至 **[採礦精確度圖表** 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
+1.  切換至 **[採礦精確度圖表**] 索引標籤中的資料採礦設計師中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，然後選取**輸入選擇** 索引標籤。  
   
 2.  在 **選取要用於精確度圖表的資料集**群組方塊中，選取**使用採礦結構測試案例**。  
   
@@ -130,15 +129,15 @@ ms.locfileid: "48054998"
  如需如何將篩選套用至巢狀資料表的範例，請參閱 <<c0> [ 中繼資料採礦教學課程&#40;Analysis Services-Data Mining&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)。</c0>  
   
 ## <a name="previous-task-in-lesson"></a>本課程的前一項工作  
- [使用增益圖測試精確度&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 6 課： 建立及處理預測&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [第 6 課：建立及處理預測&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [中繼資料採礦教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [採礦模型工作和使用說明](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [從採礦模型刪除篩選](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

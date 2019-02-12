@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068988"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013749"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
   本教學課程將教導您如何建立類似套印信件的 SSRS 自由格式報表。 您可以排列報表項目，以建立具有文字方塊、影像和其他資料區域的表單。  
@@ -46,7 +46,7 @@ ms.locfileid: "48068988"
   
 -   [加入摘要資料視覺效果](#Visualization)  
   
- 完成這個教學課程的估計時間：30 分鐘。  
+ 完成本教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -71,11 +71,11 @@ ms.locfileid: "48068988"
   
 1.  在 [報表資料] 窗格中，按一下 **[新增]**，然後按一下 **[資料來源]**。  
   
-2.  在 `Name`方塊中，輸入： **ListDataSource**  
+2.  在 `Name`方塊中，輸入：**ListDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
-4.  確認連線類型為 Microsoft SQL Server，接著在 [連接字串] 方塊中鍵入 **Data Source = \<伺服器名稱>**  
+4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中輸入：**Data Source = \<伺服器名稱>**  
   
      \<伺服器名稱 >，例如 Report001，指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48068988"
   
 1.  在 [報表資料] 窗格中，按一下 **[新增]**，然後按一下 **[資料集]**。  
   
-2.  在 `Name`方塊中，輸入： **listdataset。**  
+2.  在 `Name`方塊中，輸入：**在 listdataset。**  
   
 3.  按一下 [使用內嵌在我的報表中的資料集] ，並確認資料來源是 **ListDataSource**。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48068988"
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     清單中會加入一個資料行。 資料行包含儲存格 `[Territory].`  
+     清單中會加入一個資料行。 此資料行包含 `[Territory].` 資料格。  
   
 4.  以滑鼠右鍵按一下清單中的 [Territory] 資料行，再按一下 **[刪除資料行]**。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "48068988"
   
 2.  在在功能區的 [插入]  索引標籤上，按一下 [文字方塊] ，然後拖曳一個文字方塊到清單的左上角，放在您剛加入的矩形內。 將文字方塊調整成高約 3 英吋且寬約 5 英吋。  
   
-3.  將滑鼠游標置於文字方塊的上半部，然後輸入 **Newsletter for** 。  
+3.  將滑鼠游標置於文字方塊的上半部，然後輸入：**Newsletter for**。  
   
      ![新增新聞稿標題文字](../../2014/tutorials/media/tutorial-newsletterfor.png "新增新聞稿標題文字")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48068988"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入 **Hello** 。  
+9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入：**Hello** 。  
   
     > [!NOTE]  
     >  記得在單字 "Hello" 後面多加一個空格。 此空格會將本段文字和下一個步驟要加入的欄位區隔開來。  
@@ -279,7 +279,7 @@ ms.locfileid: "48068988"
   
      ![新增新聞稿文字](../../2014/tutorials/media/tutorial-newslettertext.png "新增新聞稿文字")  
   
-20. 將滑鼠游標置於您在步驟 15 貼入的文字下方，然後輸入 **Congratulations on your total sales of** 。  
+20. 將滑鼠游標置於您在步驟 15 貼入的文字下方，然後輸入：**恭喜您總銷售額的**。  
   
     > [!NOTE]  
     >  記得在單字 "of" 後面多加一個空格。 此空格會將本段文字和下一個步驟要加入的欄位區隔開來。  
@@ -329,19 +329,19 @@ ms.locfileid: "48068988"
   
 2.  在 [選擇資料集] 頁面上，按一下 **[ListDataset]**。  
   
-3.  按 [下一步] 。  
+3.  按一下 [下一步] 。  
   
 4.  在 [排列欄位] 頁面上，將 [Product] 欄位從 [可用的欄位] 拖曳至 [值]。  
   
 5.  針對 SalesDate、Quantity 和 Sales 重複步驟 4。 將 SalesDate 放到 Product 底下、Quantity 放到 SalesDate 底下、Sales 放到 Quantity 底下。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
 7.  在 [選擇配置]  頁面上，檢視資料表的配置。  
   
      這個資料表非常單純， 其中包含五個資料行，而沒有任何資料列或資料行群組。 由於沒有群組，與群組相關的配置選項無法使用。 稍後在本教學課程中，您將要手動更新資料表使其包括總計。  
   
-8.  按 [下一步] 。  
+8.  按一下 [下一步] 。  
   
 9. 在 **[選擇樣式]** 頁面的 **[樣式]** 窗格中，選取 **[石板]**。  
   
@@ -398,7 +398,7 @@ ms.locfileid: "48068988"
   
 4.  在  `Name`，將預設名稱取代**SalesInformationByTerritory**。  
   
-5.  按一下 **[儲存]**。  
+5.  按一下 [儲存] 。  
   
  報表就會儲存至報表伺服器。 您連接之報表伺服器的名稱會顯示在視窗底部的狀態列中。  
   
@@ -410,9 +410,9 @@ ms.locfileid: "48068988"
   
 3.  在  `Name`，將預設名稱取代**SalesInformationByTerritory**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
-##  <a name="Line"></a> 8。(選擇性) 加入線條以區隔報表的各區域  
+##  <a name="Line"></a> 8.(選擇性) 加入線條以區隔報表的各區域  
  加入線條以區隔報表的編輯區和詳細資料區。  
   
 #### <a name="to-add-a-line"></a>加入線條  
@@ -431,7 +431,7 @@ ms.locfileid: "48068988"
   
      ![報表中加入一行](../../2014/tutorials/media/tutorial-reportwithline.png "新增報表行")  
   
-##  <a name="Visualization"></a> 9。(選擇性) 加入摘要資料視覺效果  
+##  <a name="Visualization"></a> 9.(選擇性) 加入摘要資料視覺效果  
  矩形可以協助您控制報表的轉譯方式。 將圓形圖和直條圖放到矩形內，以確保報表轉譯為您希望的外觀。  
   
 #### <a name="to-add-a-rectangle"></a>若要加入矩形  
@@ -466,7 +466,7 @@ ms.locfileid: "48068988"
   
 10. 在圖表標題上按一下滑鼠右鍵，然後按一下 [標題屬性] 。  
   
-11. 在 **[圖表標題屬性]** 對話方塊中，為 [標題文字] 輸入 **Product Quantities Sold**。  
+11. 在 [**圖表標題屬性**對話方塊的標題文字] 輸入：**Product Quantities Sold**。  
   
 12. 按一下 **[字型]** 索引標籤，然後從 **[大小]** 清單中按一下 **[10pt]**。  
   
@@ -500,7 +500,7 @@ ms.locfileid: "48068988"
   
 10. 在圖表標題上按一下滑鼠右鍵，然後按一下 [標題屬性] 。  
   
-11. 在 **[圖表標題屬性]** 對話方塊中，為 [標題文字] 輸入 **Product Sales**。  
+11. 在 [**圖表標題屬性**對話方塊的標題文字] 輸入：**Product Sales**。  
   
 12. 按一下 [字型]  索引標籤，並在 [大小]  清單中按一下 [10pt] ，然後按一下 [確定] 。  
   
@@ -519,7 +519,7 @@ ms.locfileid: "48068988"
   
 1.  按一下您稍早在這一課中加入的矩形。  
   
-     在 [屬性] 窗格中，`Name`屬性顯示矩形的名稱。  
+     在 [屬性] 窗格中，`Name` 屬性會顯示該矩形的名稱。  
   
      ![矩形的名稱](../../2014/tutorials/media/tutorial-rectanglename.png "矩形的名稱")  
   

@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517712"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484847"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  指定外部檔案格式的名稱。
   
- FORMAT_TYPE = [PARQUET |ORC |RCFILE |PARQUET] 指定外部資料的格式。
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] 指定外部資料的格式。
   
    -   PARQUET 指定 Parquet 格式。
   
@@ -122,7 +122,7 @@ WITH (
    -   DELIMITEDTEXT 指定具有欄分隔符號的文字格式，也稱為欄位結束字元。
   
  FIELD_TERMINATOR = *field_terminator*  
-僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 ꞌ|ꞌ。 若要保證支援，我們建議使用一或多個 ASCII 字元。
+僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 |。 若要保證支援，我們建議使用一或多個 ASCII 字元。
   
   
  範例:  
@@ -131,7 +131,7 @@ WITH (
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR = ꞌ\tꞌ  
+-   FIELD_TERMINATOR = \t  
   
 -   FIELD_TERMINATOR = '~|~'  
   
@@ -147,7 +147,7 @@ WITH (
   
 -   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = ꞌ,ꞌ  
+-   STRING_DELIMITER = ,  
   
 -   STRING_DELIMITER = '0x7E0x7E' -- 兩個波狀符號 (例如 ~~)
  
@@ -171,7 +171,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
 -   DateTimeOffset：'yyyy-MM-dd HH:mm:ss'  
   
--   Time：'HH:mm:ss'  
+-   時間:'HH:mm:ss'  
   
 下表提供**範例日期格式**：
   

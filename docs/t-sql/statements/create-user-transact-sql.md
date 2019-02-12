@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3f0b40e022db23cfcd650c5f2da4a5a14082d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327579"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421215"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54327579"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database Managed Instance
+-- Syntax for SQL Server, Azure SQL Database, and Azure SQL Database managed instance
   
 -- Syntax Users based on logins in master  
 CREATE USER user_name   
@@ -127,7 +127,7 @@ CREATE USER user_name
 CREATE USER user_name  
 [;]
 
--- Syntax for users based on Azure AD logins for Azure SQL Database Managed Instance
+-- Syntax for users based on Azure AD logins for Azure SQL Database managed instance
 CREATE USER user_name   
     [   { FOR | FROM } LOGIN login_name  ]  
     | FROM EXTERNAL PROVIDER
@@ -273,7 +273,7 @@ GO
 
 `CREATE USER [AAD_principal] FROM LOGIN [Azure AD login]`
 
-在 Azure SQL Database 受控執行個體中建立使用者時，login_name 必須對應到現有的 Azure AD 登入，否則使用 **FROM EXTERNAL PROVIDER** 子句只會建立 Azure AD 使用者，而在 master 資料庫中不會建立登入。 例如，此命令會建立包含的使用者：
+在 Azure SQL Database 受控執行個體中建立使用者時，login_name 必須對應到現有的 Azure AD 登入，否則使用 **FROM EXTERNAL PROVIDER** 子句只會建立 Azure AD 使用者，而不會在 master 資料庫中建立登入。 例如，此命令會建立包含的使用者：
 
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
@@ -494,7 +494,7 @@ GO
 
 ### <a name="j-create-an-azure-ad-user-without-an-aad-login-for-the-database"></a>J. 建立不具資料庫之 AAD 登入的 Azure AD 使用者
 
-下列語法用來在 SQL Database 受控執行個體資料庫 (包含的使用者) 中建立 Azure AD 使用者 bob@contoso.com：
+下列語法可用來在 SQL Database 受控執行個體資料庫 (包含的使用者) 中建立 Azure AD 使用者 bob@contoso.com：
 
 ```sql
 CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;

@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a24215479af1aca6e1e742d5c62ba8995aaa4a8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: fca6676b5cb7532faf7bf88cf04159c28b0fa36b
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087667"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570691"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 說明與意見反應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,21 @@ ms.locfileid: "55087667"
 SQL Server 工程小組密切關注 SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server)。 如果您希望回報 SQL Server 的問題，例如當機、效能低落、未預期行為等，User Voice 是最佳選擇。 
 
 [User Voice](https://feedback.azure.com/forums/908035-sql-server) 也是能讓工程小組知道他們可以如何做得更棒的好地方！ 如果您有任何建議或功能方面的建議，也請在這裡回報給我們。 
+
+## <a name="i-want-to-give-feedback-about-sql-server-documentation"></a>我想要提供有關 SQL Server 文件的意見反應
+與 SQL Server 內容小組連絡的最佳方式是透過 Git 問題。 您將在我們的大部分頁面底部找到提交 Git 問題的選項： 
+
+![Git 問題內容意見反應](media/sql-server-get-help/git-issues.png)
+
+如果您有其他想要分享的事項 - 想法、建議、意見反應，任何事情都可以！ 您可以藉由在 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) 上提出一般 Git 問題來完成此動作。 
+
+只要選取 [New Issue] \(新增問題\) 按鈕，即可開始。 
+
+![新增 Git 問題](media/sql-server-get-help/new-git-issue.png)
+
+
+SQL Server 內容小組也會經常徵詢問卷意見反應。 請抽空在 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) 上與我們分享您的經驗。
+
 
 ## <a name="i-want-to-make-a-suggestion-about-sql-server-management-studio"></a>我想要提供 SQL Server Management Studio 的相關建議
 SQL Server Management Studio (SSMS) 小組也會密切監視 SQL Server [User Voice](https://feedback.azure.com/forums/908035-sql-server)因此，如果您有任何想要回報的問題或建議，User Voice 是最佳選擇。 
@@ -94,7 +109,5 @@ Azure Data Studio 小組會密切監視 [Azure Data Studio Github](https://githu
 
 所有的公開文章都會經過 SQL 內容小組的審查，以確保技術方面的正確性與一致性。 
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>我想要提供 SQL 文件內容的意見反應
-如果您有空閒時間，並希望分享您對 SQL Docs 體驗的一些看法，請參加我們的調查！ 可從 [https://aka.ms/SQLDocSurvey](https://aka.ms/SQLDocSurvey) 找到，大約需要 10-15 分鐘。 
 
-如果您有想與 SQL 內容小組分享的事項、想法、建議、意見反應，任何事情都可以！ 請前往 [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback)。 
+

@@ -2,7 +2,7 @@
 title: tempdb 資料庫 | Microsoft Docs
 description: 本主題提供有關在 SQL Server 和 Azure SQL Database 中設定和使用 tempdb 資料庫的詳細資料
 ms.custom: P360
-ms.date: 07/17/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,14 +18,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29682619886dc257ba2b2583f4c4d256158df797
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df57b6d99e07b107770db1a98a7a97e76c392254
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535306"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421268"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **tempdb** 系統資料庫是全域資源，適用於所有連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或 SQL Database 的使用者。 Tempdb 用以保留：  
   
@@ -39,7 +40,7 @@ ms.locfileid: "52535306"
   > 每個內部物件至少使用 9 頁、一個 IAM 頁面和一個八頁的範圍。 如需分頁與範圍的詳細資訊，請參閱[分頁與範圍](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents)。
 
   > [!IMPORTANT]
-  > Azure SQL Database 邏輯伺服器支援儲存在 tempdb 中，只限於資料庫層級的全域暫存資料表和全域暫存預存程序。 在同一 Azure SQL 資料庫中的所有使用者工作階段，會共用全域暫存資料表和全域暫存預存程序。 其他 Azure SQL 資料庫的使用者工作階段無法存取全域暫存資料表。 如需詳細資訊，請參閱[限定資料庫範圍的全域暫存資料表 (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) 與 SQL Server 支援相同的暫存物件。 針對 Azure SQL Database 邏輯伺服器，只會套用 master 資料庫和 tempdb 資料庫。 如需邏輯伺服器和邏輯 master 資料庫的概念，請參閱[什麼是 Azure SQL 邏輯伺服器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 如需 Azure SQL Database 邏輯伺服器內容中 tempdb 的討論，請參閱 [Azure SQL Database 邏輯伺服器中的 tempdb 資料庫](#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。 
+  > Azure SQL Database 單一資料庫和彈性集區支援儲存在 tempdb 中，只限於資料庫層級的全域暫存資料表和全域暫存預存程序。 在同一 Azure SQL 資料庫中的所有使用者工作階段，會共用全域暫存資料表和全域暫存預存程序。 其他 Azure SQL 資料庫的使用者工作階段無法存取全域暫存資料表。 如需詳細資訊，請參閱[限定資料庫範圍的全域暫存資料表 (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database)。 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) 與 SQL Server 支援相同的暫存物件。 針對 Azure SQL Database 單一資料庫和彈性集區，只會套用 master 資料庫和 tempdb 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 單一資料庫和彈性集區內容中 tempdb 的討論，請參閱 [Azure SQL Database 單一資料庫和彈性集區中的 tempdb 資料庫](#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。
 
 - 「版本存放區」是保存資料列的資料頁集合；這些資料列是支援使用資料列版本設定功能的必要項目。 版本存放區有兩個：一個是一般版本存放區，一個是線上索引建立版本存放區。 版本存放區包含：
   - 由資料庫中的資料修改交易所產生的資料列版本，該資料庫採用使用資料列版本設定隔離的讀取認可或快照集隔離交易。  
@@ -48,6 +49,7 @@ ms.locfileid: "52535306"
 至少會記錄 **tempdb** 內的作業，以便回復交易。 每次啟動**時都會重新建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，這樣系統永遠會以乾淨的資料庫複本啟動。 連接中斷時會自動卸除暫存資料表與預存程序，且系統關閉時所有連接都會停止。 因此， **tempdb** 中的任何資料都不會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個工作階段儲存到其他的工作階段。 **tempdb**不允許進行備份和還原作業。  
   
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 實體屬性
+
  下表列出 SQL Server 中的 **tempdb** 資料和記錄檔的初始設定值，其是以 Model 資料庫的預設值為依據。 對於不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這些檔案的大小稍有不同。  
   
 |檔案|邏輯名稱|實體名稱|初始大小|檔案成長|  
@@ -61,10 +63,12 @@ ms.locfileid: "52535306"
 > [!NOTE]
 > 資料檔案數目預設值取決於 [KB 2154845](https://support.microsoft.com/kb/2154845/)內的一般指導方針。  
   
-### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>移動 SQL Server 中的 tempdb 資料和記錄檔  
+### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>移動 SQL Server 中的 tempdb 資料和記錄檔 
+ 
  若要移動 **tempdb** 資料和記錄檔，請參閱 [移動系統資料庫](../../relational-databases/databases/move-system-databases.md)。  
   
-### <a name="database-options-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 資料庫選項  
+### <a name="database-options-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 資料庫選項 
+ 
  下表列出 **tempdb** 資料庫中每個資料庫選項的預設值，以及這些選項是否可以修改。 若要檢視這些選項目前的設定，請參閱 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。  
   
 |資料庫選項|預設值|可以修改|  

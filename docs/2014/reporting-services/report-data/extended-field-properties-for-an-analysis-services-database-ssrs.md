@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076717"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038449"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 資料庫的擴充欄位屬性 (SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 `Value` 和 `IsMissing` 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 您可以在報表中包含擴充的欄位屬性值，藉由撰寫運算式，使用內建的名稱來指定這些`Fields`集合。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充欄位屬性是除了欄位屬性 `Value` 和 `IsMissing` 之外，資料來源可用而且資料處理延伸模組支援的屬性。 在 [報表資料] 窗格中，報表資料集的欄位集合中不會顯示擴充屬性。 您可以在報表中包含擴充的欄位屬性值，藉由撰寫運算式，使用內建的名稱來指定這些`Fields`集合。  
   
- 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是屬性會對應到特定欄位屬性名稱，而且您可以透過內建的多個資料來源共通`Fields`集合按照名稱。 自訂屬性則是各個資料提供者專有的屬性，這類屬性可透過內建的 `Fields` 集合存取，但只能透過使用擴充屬性名稱做為字串的語法。  
+ 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源共通的屬性，這類屬性會對應到特定欄位屬性名稱，而且可透過內建的 `Fields` 集合按照名稱存取。 自訂屬性則是各個資料提供者專有的屬性，這類屬性可透過內建的 `Fields` 集合存取，但只能透過使用擴充屬性名稱做為字串的語法。  
   
  當您使用圖形模式的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢設計工具定義查詢時，預先定義的資料格屬性和維度屬性集合就會自動加入至 MDX 查詢中。 您只可以使用明確列在您報表的 MDX 查詢中的擴充屬性。 依報表的不同，您或許想修改預設的 MDX 命令文字，藉此包括 Cube 中定義的其他維度或自訂屬性。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源中可用之擴充欄位的詳細資訊，請參閱[建立和使用屬性值 &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md)。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>使用報表中的欄位屬性  
- 擴充欄位屬性包含預先定義的屬性和資料提供者特有的屬性。 即使欄位屬性位於針對資料集所建立的查詢中，還是不會與欄位清單一起出現在 **[報表資料]** 窗格內，因此您無法將欄位屬性拖曳到報表設計介面上。 相反地，您必須在此欄位拖曳至報表，然後變更`Value`您想要使用的屬性欄位的屬性。 例如，如果 Cube 中的資料格資料已經格式化，您可以利用以下運算式來使用 FormattedValue 欄位屬性： `=Fields!FieldName.FormattedValue`。  
+ 擴充欄位屬性包含預先定義的屬性和資料提供者特有的屬性。 即使欄位屬性位於針對資料集所建立的查詢中，還是不會與欄位清單一起出現在 **[報表資料]** 窗格內，因此您無法將欄位屬性拖曳到報表設計介面上。 不過，您必須將欄位拖曳到報表上，然後將該欄位的 `Value` 屬性變更為您要使用的屬性。 例如，如果 Cube 中的資料格資料已經格式化，您可以利用以下運算式來使用 FormattedValue 欄位屬性： `=Fields!FieldName.FormattedValue`。  
   
  若要參考未預先定義的擴充屬性，請在運算式中使用下列語法：  
   
@@ -141,7 +141,7 @@ CELL PROPERTIES
 |FONT_SIZE|(Null)|  
 |FONT_FLAGS|(Null)|  
   
- 如果用這個查詢建立報表資料集，並將資料集繫結至資料表，就可以看到欄位的預設 VALUE 屬性，例如 `=Fields!Month_of_Year!Value`。 如果您將此運算式設定為資料表的排序運算式時，您的結果會資料表依字母順序排序的月份因為 Value 欄位會使用`String`資料型別。 若要將資料表的排序順序設為依月份在當年出現的順序，一月最前，十二月最後，則請使用下列運算式：  
+ 如果用這個查詢建立報表資料集，並將資料集繫結至資料表，就可以看到欄位的預設 VALUE 屬性，例如 `=Fields!Month_of_Year!Value`。 如果將這個運算式設定為資料表的排序運算式，結果資料表將會依月份的字母順序排序，因為 Value 欄位會使用 `String` 資料類型。 若要將資料表的排序順序設為依月份在當年出現的順序，一月最前，十二月最後，則請使用下列運算式：  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -151,7 +151,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Built-in Collections in Expressions&#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
- [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [資料集 Fields 集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

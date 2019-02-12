@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dae0b33b2b3a9100aada7505e61f3e75f8bf66c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48044f9c24942079f66ee4675c1aa01bb6549532
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980476"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484857"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -289,7 +289,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="determining-the-number-of-table-partitions"></a>判斷資料表資料分割數目
 每個使用者定義的資料表都會分割成多個較小的資料表，儲存在稱為散發的個別位置。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用 60 個散發。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，散發的數目取決於計算節點的數目。
  
-每個散發都會包含所有資料表資料分割。 例如，如果有 60 個散發和 4 個資料表資料分割，就會有 320 個資料分割。 如果資料表是叢集資料行存放區索引，每個資料分割都會有一個資料行存放區索引，這表示您將會有 320 個資料行存放區索引。
+每個散發都會包含所有資料表資料分割。 例如，如果有 60 個散發和四個資料表分割區加上一個空的分割區，將會有 300 個分割區 (5 x 60 = 300)。 如果資料表是叢集資料行存放區索引，每個分割區都將有一個資料行存放區索引，這表示您將會有 300 個資料行存放區索引。
 
 我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需進一步指導方針，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和 [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 

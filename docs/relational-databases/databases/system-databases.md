@@ -1,7 +1,7 @@
 ---
 title: 系統資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,14 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64b32a4b46ac1d86d358881b99d9988b902a4a47
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4da57264ca48a53f29485bf279a4c50b3d2f0e81
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558761"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421065"
 ---
 # <a name="system-databases"></a>系統資料庫
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括下列系統資料庫。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "51558761"
 |[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)|是保存暫存物件或中繼結果集的工作空間。|  
 
 > [!IMPORTANT]
-> 針對 Azure SQL Database 邏輯伺服器，只會套用 master 資料庫和 tempdb 資料庫。 如需邏輯伺服器和邏輯 master 資料庫的概念，請參閱[什麼是 Azure SQL 邏輯伺服器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 如需 Azure SQL Database 內容中 tempdb 的討論，請參閱 [Azure SQL Database 中的 tempdb 資料庫](tempdb-database.md#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。 如需有關 Azure SQL Database 中受控執行個體的詳細資訊，請參閱[什麼是受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> 針對 Azure SQL Database 單一資料庫和彈性集區，只會套用 master 資料庫和 tempdb 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 內容中 tempdb 的討論，請參閱 [Azure SQL Database 中的 tempdb 資料庫](tempdb-database.md#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。 如需有關 Azure SQL Database 中受控執行個體的詳細資訊，請參閱[什麼是受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## <a name="modifying-system-data"></a>修改系統資料  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援使用者直接更新系統物件中的資訊，例如系統資料表、系統預存程序和目錄檢視。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 另外提供了一組完整的管理工具，讓使用者可以完全管理他們的系統，並管理資料庫中所有的使用者與物件。 這些選項包括：  

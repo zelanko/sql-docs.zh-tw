@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 01226e78c65759538406ade280d24a93f195a2bd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5b6b6c414804a6e95f4d310a86e2573ba17bb8f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391032"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019579"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
   下表列出以 HTML 格式轉譯的裝置資訊設定。  

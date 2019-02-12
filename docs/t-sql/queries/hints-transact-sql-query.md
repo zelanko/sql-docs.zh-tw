@@ -1,7 +1,7 @@
 ---
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a4eb946a9b851342b1f997f2b491b0b0708138c
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 96f34d4ececcb05f91e5fc6329a598907269501e
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306275"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736962"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -264,7 +264,9 @@ ms.locfileid: "53306275"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    停用批次模式自適性聯結。 如需詳細資訊，請參閱[批次模式自適性聯結](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   停用批次模式記憶體授與意見反應。 如需詳細資訊，請參閱[批次模式記憶體授與意見反應](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
+   停用批次模式記憶體授與意見反應。 如需詳細資訊，請參閱[批次模式記憶體授與意見反應](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。   
+* 'DISABLE_DEFERRED_COMPILATION_TV'    
+  停用資料表變數延後編譯。 如需詳細資訊，請參閱[資料表變數延遲編譯](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
    停用交錯執行多重陳述式資料表值函式。 如需詳細資訊，請參閱[交錯執行多重陳述式資料表值函式](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
@@ -292,11 +294,11 @@ ms.locfileid: "53306275"
 *  'QUERY_PLAN_PROFILE'      
  為查詢啟用輕量分析。 當包含這個新提示的查詢完成時，便會發出一個新的擴充事件 (query_plan_profile)。 此擴充事件會公開執行統計資料和與 query_post_execution_showplan 擴充事件相似的執行計畫 XML，但僅限包含新提示的查詢。 **適用於**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始)。 
 
-  > [!NOTE]
-  > 若您啟用收集 query_post_execution_showplan 擴充事件，這會將標準分析基礎結構新增至每個正在伺服器上執行的查詢，並因此影響整體伺服器效能。      
-  > 若您啟用收集 *query_thread_profile* 擴充事件以改為使用輕量分析基礎結構，這會大幅減少效能額外負荷，但仍然會影響整體伺服器效能。       
-  > 若您啟用 query_plan_profile 擴充事件，這只會為使用 QUERY_PLAN_PROFILE 執行的查詢啟用輕量分析基礎結構，因此不會影響伺服器上的其他工作負載。 使用提示分析特定查詢，而不影響伺服器工作負載的其他部分。
-  > 若要深入了解輕量型分析，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
+   > [!NOTE]
+   > 若您啟用收集 query_post_execution_showplan 擴充事件，這會將標準分析基礎結構新增至每個正在伺服器上執行的查詢，並因此影響整體伺服器效能。      
+   > 若您啟用收集 *query_thread_profile* 擴充事件以改為使用輕量分析基礎結構，這會大幅減少效能額外負荷，但仍然會影響整體伺服器效能。       
+   > 若您啟用 query_plan_profile 擴充事件，這只會為使用 QUERY_PLAN_PROFILE 執行的查詢啟用輕量分析基礎結構，因此不會影響伺服器上的其他工作負載。 使用提示分析特定查詢，而不影響伺服器工作負載的其他部分。
+   > 若要深入了解輕量型分析，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
  
 您可以使用動態管理檢視 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，來查詢所有支援的 USE HINT 名稱清單。    
 

@@ -23,19 +23,19 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 112d46b26d8b4e03e8842aa17b8f1ad54976e19a
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804486"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652527"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  刪除整個 XML 結構描述集合及其所有的元件。  
+刪除整個 XML 結構描述集合及其所有的元件。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,22 +45,22 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>引數  
- *relational_schema*  
- 識別關聯式結構描述名稱。 若未指定，則會假設使用預設的關聯式結構描述。  
+*relational_schema*  
+識別關聯式結構描述名稱。 若未指定，則會假設使用預設的關聯式結構描述。  
   
- *sql_identifier*  
- 這是您要卸除的 XML 結構描述集合名稱。  
+*sql_identifier*  
+要卸除的 XML 結構描述集合名稱。  
   
 ## <a name="remarks"></a>Remarks  
- 卸除 XML 結構描述集合是一項交易式作業。 也就是說，當您卸除交易內的 XML 結構描述集合，然後再回復該交易時，不會卸除 XML 結構描述集合。  
+卸除 XML 結構描述集合是一項交易式作業。 當您卸除交易內的 XML 結構描述集合，並於稍後復原該交易時，不會卸除 XML 結構描述集合。  
   
- 您不能卸除在使用中的 XML 結構描述集合。 也就是說，下列幾種集合不能卸除：  
+您無法卸除使用中的 XML 結構描述集合。 因此，無法在下列任一種情況中卸除集合：  
   
 -   與任何 **xml** 類型參數或資料行相關聯的集合。  
   
 -   在任何資料表條件約束中指定的集合。  
   
--   在結構描述繫結函數或預存程序中參考的集合。 例如，下列函數會鎖定 XML 結構描述集合 `MyCollection`，因為該函數會指定 `WITH SCHEMABINDING`。 如果移除它，XML SCHEMA COLLECTION 就沒有任何鎖定。  
+-   在結構描述繫結函數或預存程序中參考的集合。 例如，下列函數會鎖定 XML 結構描述集合 `MyCollection`，因為該函數會指定 `WITH SCHEMABINDING`。 如果移除它，XML SCHEMA COLLECTION 上就沒有任何鎖定。  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  
@@ -75,10 +75,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>[權限]  
- 若要卸除 XML SCHEMA COLLECTION，則需要集合的 DROP 權限。  
+若要卸除 XML SCHEMA COLLECTION，則需要集合的 DROP 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會顯示移除 XML 結構描述集合。  
+下列範例會顯示移除 XML 結構描述集合。  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

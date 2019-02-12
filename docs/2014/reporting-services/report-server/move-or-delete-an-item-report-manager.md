@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d049c93c74ebc60b708ab9c5f1b5da37b5a6d924
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03107ceb9c09cd3a48a0d547882b02b951d4d3c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020149"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
   您發行至報表伺服器的報表和報表相關項目會儲存在資料夾中。 您可以將項目移至不同的資料夾，報表伺服器會自動維護這些項目的參考。 刪除某個項目之前，請考慮是否有其他項目相依於該項目。  
@@ -38,7 +38,7 @@ ms.locfileid: "48056258"
 |![共用資料來源圖示](../media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源|  
 ||共用資料集|  
   
- 並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派中為目標項目選取下列工作時，即涵蓋移動項目的權限：「管理報表」、「管理模型」、「管理資料夾」，以及「管理資料來源」。  
+ 並非所有的項目都可以移動。 您無法移動與報表相關聯的項目，例如訂閱或報表記錄。 那些項目會隨著相關聯的報表移動。 同樣地，您無法移動存在於資料夾階層之外的項目 (例如共用排程)。 如果您沒有權限也無法移動項目。 在您的角色指派，如有問題的項目中選取下列工作時，即涵蓋移動項目權限：「 管理 reports，""管理模型 」、 「 管理資料夾 」 和 「 管理資料來源 」。  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>若要從內容頁面中移動項目  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48056258"
  或者，您可以巡覽至要移動的物件、按一下 [屬性]，然後按一下頁面頂端的 [移動]。  
   
 ## <a name="delete-an-item"></a>刪除項目  
- 刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找的項目相依項目，請參閱 [相依項目] 頁面&#40;報表管理員&#41;].../ 相依的項目-頁面-報表-manager.md）。  
+ 刪除某個項目之前，請判斷是否有其他項目使用該項目。 例如，如果您刪除了某個共用資料來源，使用該資料來源的報表和模型將無法再執行。 如果您刪除了某份報表，就會一併刪除與該報表相關聯的訂閱和報表記錄。 若要尋找的項目相依項目，請參閱 [相依項目 頁面&#40;報表管理員&#41;].../ 相依的項目-頁面-報表-manager.md）。  
   
 #### <a name="to-delete-a-report-or-item"></a>若要刪除報表或項目  
   
@@ -74,7 +74,7 @@ ms.locfileid: "48056258"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [內容] 頁面&#40;報表管理員&#41;].../ 內容頁報表-manager.md）   
+ [內容 頁面&#40;報表管理員&#41;].../ 內容頁報表-manager.md）   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

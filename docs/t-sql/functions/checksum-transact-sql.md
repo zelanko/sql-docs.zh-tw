@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6febad4b4bbb9de2dcec7d0c7fc93adb0403947e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795576"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513908"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47795576"
   
 ## <a name="syntax"></a>語法  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -60,13 +60,13 @@ CHECKSUM ( * | expression [ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM 會針對它的引數清單計算稱為總和檢查碼的雜湊值。 使用此雜湊值來建置雜湊索引。 如果 `CHECKSUM` 函式具有資料行引數，並且針對計算的 CHECKSUM 值建置索引，則會產生雜湊索引。 這可用來進行資料行的相等搜尋。
+`CHECKSUM` 會針對它的引數清單來計算稱為總和檢查碼的雜湊值。 使用此雜湊值來建置雜湊索引。 如果 `CHECKSUM` 函數具有資料行引數，而且會針對計算得來的 `CHECKSUM` 值建置索引，則將會產生雜湊索引。 這可用來進行資料行的相等搜尋。
   
-`CHECKSUM` 函式滿足雜湊函式屬性：如果兩份清單的對應項目具有相同的資料類型，而且這些對應的項目在使用等於 (=) 運算子比較時相等，則套用至任兩份運算式清單的 `CHECKSUM` 會傳回相同的值。 針對 `CHECKSUM` 函式目的，定義所指定類型的 Null 值以比較為相等。 如果運算式清單中至少有一個值變更，則清單總和檢查碼可能會變更。 不過，不保證一定會如此。 因此，若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 `CHECKSUM`。 否則，請考慮改用 [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md)。 使用指定的 MD5 雜湊演算法時，HashBytes 為兩個不同的輸入傳回相同結果的可能性比 CHECKSUM 要低很多。
+`CHECKSUM` 函式滿足雜湊函式屬性：如果兩份清單的對應項目具有相同的資料類型，而且這些對應的項目在使用等於 (=) 運算子比較時相等，則套用至任兩份運算式清單的 `CHECKSUM` 會傳回相同的值。 針對 `CHECKSUM` 函式目的，定義所指定類型的 Null 值以比較為相等。 如果運算式清單中至少有一個值變更，則清單總和檢查碼可能會變更。 不過，不保證一定會如此。 因此，若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 `CHECKSUM`。 否則，請考慮改用 `HASHBYTES`。 使用指定的 MD5 雜湊演算法，`HASHBYTES` 將為兩個不同的輸入傳回相同結果的可能性比 `CHECKSUM` 要低很多。
   
-運算式順序會影響計算的 `CHECKSUM` 值。 用於 CHECKSUM(\*) 的資料行順序，就是資料表或檢視定義中所指定的資料行順序。 計算資料行也包括在內。
+運算式順序會影響計算的 `CHECKSUM` 值。 用於 `CHECKSUM(*)` 的資料行順序，就是資料表或檢視定義中所指定的資料行順序。 計算資料行也包括在內。
   
-CHECKSUM 值取決於定序。 以不同的定序儲存相同的值，將會傳回不同的 CHECKSUM 值。
+`CHECKSUM` 值取決於定序。 以不同定序儲存的相同值，將會傳回不同的 `CHECKSUM` 值。
   
 ## <a name="examples"></a>範例  
 這些範例示範如何使用 `CHECKSUM` 建置雜湊索引。
@@ -75,6 +75,7 @@ CHECKSUM 值取決於定序。 以不同的定序儲存相同的值，將會傳�
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -91,6 +92,7 @@ GO
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  

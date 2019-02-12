@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca0c77ccf18d47f14c7f9eb286158bb8d4642ddf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617758"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513871"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,13 +58,13 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  **int**
   
 ## <a name="remarks"></a>Remarks  
-只要後續未修改資料列，對資料表任何資料列執行計算的 BINARY_CHECKSUM(*)，會傳回相同值。 BINARY_CHECKSUM 會滿足雜湊函式的屬性：如果兩份清單的對應項目有相同的類型，且使用 equals (=) 運算子來比較時相等，則套用在任兩份運算式清單上的 BINARY_CHECKSUM 會傳回相同的值。 在此定義中，假設所指定類型的 Null 值比較為相等值。 如果運算式清單中至少有一個值變更，則運算式總和檢查碼也會變更。 不過，不保證一定會如此。 因此，若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 BINARY_CHECKSUM。 否則，請考慮改用 HashBytes。 使用指定的 MD5 雜湊演算法時，HashBytes 為兩個不同的輸入傳回相同結果的可能性比 BINARY_CHECKSUM 要低很多。
+只要後續未修改資料列，對資料表任何資料列執行計算的 `BINARY_CHECKSUM(*)`，會傳回相同值。 `BINARY_CHECKSUM` 會滿足雜湊函數的屬性：套用於任兩個運算式清單時，如果這兩個清單的對應元素具有相同的類型，且在使用等於 (=) 運算子進行比較時相等，則會傳回相同的值。 在此定義中，假設所指定類型的 Null 值比較為相等值。 如果運算式清單中至少有一個值變更，則運算式總和檢查碼也會變更。 不過，不保證一定會如此。 因此，若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 `BINARY_CHECKSUM`。 否則，請考慮改用 `HASHBYTES`。 使用指定的 MD5 雜湊演算法，`HASHBYTES` 將為兩個不同的輸入傳回相同結果的可能性比 `BINARY_CHECKSUM` 要低很多。
   
-BINARY_CHECKSUM 可以對運算式清單進行操作，並傳回所指定清單的相同值。 如果兩份清單的相對應元素有相同類型和位元組表示法，則套用在任何兩份運算式清單上的 BINARY_CHECKSUM 會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為具有相同位元組表示法。
+`BINARY_CHECKSUM` 可以對運算式清單進行操作，而它會針對指定的清單傳回相同的值。 套用於任兩個運算式清單的 `BINARY_CHECKSUM`，如果這兩個清單的對應元素具有相同的類型和位元組表示法，則會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為具有相同位元組表示法。
   
-BINARY_CHECKSUM 和 CHECKSUM 是相似的函數：它們可用來計算運算式清單的總和檢查碼值，而運算式的順序會影響結果值。 用於 BINARY_CHECKSUM(*) 的資料行順序，是資料表或檢視定義所指定之資料行的順序。 計算資料行也包括在內。
+`BINARY_CHECKSUM` 和 `CHECKSUM` 為類似的函數。 它們可用來計算運算式清單的總和檢查碼值，而運算式的順序會影響結果值。 用於 `BINARY_CHECKSUM(*)` 的資料行順序，就是資料表或檢視定義中所指定的資料行順序。 計算資料行也包括在內。
   
-BINARY_CHECKSUM 和 CHECKSUM 所傳回的字串資料類型值不同，其中地區設定會造成不同表示法的字串比較為相等。 字串資料類型為  
+`BINARY_CHECKSUM` 和 `CHECKSUM` 所傳回的字串資料類型值不同，其中地區設定會造成不同表示法的字串比較為相等。 字串資料類型為  
 
 * **char**  
 * **nchar**  
@@ -75,9 +75,9 @@ BINARY_CHECKSUM 和 CHECKSUM 所傳回的字串資料類型值不同，其中地
 
 * **sql_variant** (如果 **sql_variant** 的基底類型是字串資料類型)。  
   
-例如，"McCavity" 和 "Mccavity" 字串的 BINARY_CHECKSUM 值不同。 反之，在不區分大小寫的伺服器中，CHECKSUM 對那些字串會傳回相同的總和檢查碼值。 您應該避免比較 CHECKSUM 值與 BINARY_CHECKSUM 值。
+例如，"McCavity" 和 "Mccavity" 字串的 `BINARY_CHECKSUM` 值不同。 反之，在不區分大小寫的伺服器中，`CHECKSUM` 就會針對那些字串傳回相同的總和檢查碼值。 您應該避免比較 `CHECKSUM` 值與 `BINARY_CHECKSUM` 值。
  
-BINARY_CHECKSUM 支援任意長度類型 **varbinary(max)**，針對 **nvarchar(max)** 類型則支援最多 255 個字元。
+`BINARY_CHECKSUM` 支援任意長度的類型 **varbinary(max)**，並支援最多 255 個字元的類型 **nvarchar(max)**。
   
 ## <a name="examples"></a>範例  
 此範例使用 `BINARY_CHECKSUM` 來偵測資料表資料列中的變更。
@@ -99,7 +99,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱
 [彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

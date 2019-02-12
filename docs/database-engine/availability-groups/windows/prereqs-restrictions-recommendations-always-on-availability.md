@@ -2,7 +2,7 @@
 title: 可用性群組的必要條件、限制和建議
 description: Always On 可用性群組必要條件、限制和建議的描述。
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202987"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570801"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性群組的必要條件、限制和建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202987"
     -   SQL Server 執行個體針對次要複本最多可使用 100 個平行重做執行緒。 每個資料庫最多可使用 CPU 核心總數的一半，但每個資料庫不得超過 16 個執行緒。 如果單一執行個體所需的執行緒總數超過 100，SQL Server 會針對其餘每個資料庫使用單一重做執行緒。 序列重做執行緒在處於非使用狀態 ~15 秒之後便會釋出。 
     
     > [!NOTE]
-    > 系統會根據資料庫識別碼的遞增順序，選擇要改為單一執行緒的資料庫。 因此，應針對裝載可用性群組資料庫多於可用性背景工作執行緒的 SQL Server 執行個體，考慮其資料庫建立順序。 例如，在具有 32 個或更多個 CPU 核心的系統上，從第 7 個加入可用性群組的資料庫開始的所有資料庫都會處於序列重做模式，而不論每個資料庫的實際重做工作負載。 需要平行重做的資料庫應先加入可用性群組。    
+    > 系統會根據資料庫識別碼的遞增順序，選擇要改為單一執行緒的資料庫。 因此，應針對裝載可用性群組資料庫多於可用性背景工作執行緒的 SQL Server 執行個體，考慮其資料庫建立順序。 例如，在具有 32 個以上之 CPU 核心的系統上，一或多個可用性群組中的前六個資料庫 (依資料庫識別碼排序) 將使用平行重做模式，而所有後續資料庫都將使用單一重做模式。
   
 -   此外，可用性群組也使用不共用的執行緒，如下所示：  
   

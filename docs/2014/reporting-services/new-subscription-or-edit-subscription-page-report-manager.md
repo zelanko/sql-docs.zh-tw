@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208390"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030129"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>新增訂閱或編輯訂閱頁面 (報表管理員)
   使用 [新增訂閱] 或 [編輯訂閱] 頁面，即可在報表中建立新的訂閱或修改現有的訂閱。 這個頁面的此選項隨著您的角色指派而改變。 具有進階權限的使用者可以使用額外的選項。  
   
- 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱 <<c0> [ 建立及管理原生模式報表伺服器的訂閱](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)。  
+ 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱 [建立和管理原生模式報表伺服器的訂閱](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)。  
   
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-new-subscription-or-edit-subscription-page"></a>若要開啟新增訂閱或編輯訂閱頁面  
@@ -37,7 +37,7 @@ ms.locfileid: "48208390"
   
 3.  在下拉式功能表中，執行下列其中一項步驟：  
   
-    -   按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。 然後，選取 **[訂閱]** 索引標籤。在工具列中，按一下**新的訂用帳戶**，或選取現有的訂用帳戶，然後按一下**編輯**。  
+    -   按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。 然後，選取 **[訂閱]** 索引標籤。在工具列中，按一下 **[新增訂閱]**，或選取現有訂閱，然後按一下 **[編輯]**。  
   
     -   按一下 **[訂閱]**。 這樣就會開啟該報表的 **[新增訂閱]** 頁面。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48208390"
   
 ## <a name="see-also"></a>另請參閱  
  [為電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [建立、修改和刪除共用排程](subscriptions/create-modify-and-delete-schedules.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   

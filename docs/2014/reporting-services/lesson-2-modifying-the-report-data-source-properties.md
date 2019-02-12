@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aa3dbc789b561702d21d705d1b9d362f7f3c01d7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026419"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 課：修改報表資料來源屬性
   在這一課，您將使用報表管理員來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。 在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
@@ -39,7 +39,7 @@ ms.locfileid: "52416659"
   
 2.  瀏覽到包含 **Sales Orders** 報表的資料夾，然後在報表的內容功能表中，按一下 **[管理]**。  
   
-     ![開啟 [報表] 內容功能表，然後選取 [管理]](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "開啟報表] 內容功能表，然後選取 [管理]")  
+     ![開啟 [報表] 內容功能表，然後選取 [管理]](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "開啟報表 內容功能表，然後選取 [管理]")  
   
 3.  按一下 [資料來源] 索引標籤。  
   

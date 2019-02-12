@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 28f25620cede6c626280a8a095c66457344679d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363010"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017179"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   本主題是升級和移轉選項的概觀[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的一般方式有兩種：  
@@ -113,7 +113,7 @@ ms.locfileid: "53363010"
   
 -   備份在 IIS 中對現有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 虛擬目錄所進行的任何自訂。  
   
--   移除無效的 SSL 憑證。  這包括已過期而且您不打算要在升級 Reporting Services 之前更新的憑證。  無效的憑證會導致升級失敗，並將類似下列的錯誤訊息寫入 Reporting Services 記錄檔：**Microsoft.ReportingServices.WmiProvider.WMIProviderException︰在網站上未設定安全通訊端層 (SSL) 憑證。**.  
+-   移除無效的 SSL 憑證。  這包括已過期而且您不打算要在升級 Reporting Services 之前更新的憑證。  無效的憑證會導致升級失敗，並將類似下列的錯誤訊息寫入 Reporting Services 記錄檔：**Microsoft.ReportingServices.WmiProvider.WMIProviderException:在網站上未設定安全通訊端層 (SSL) 憑證**。  
   
  在升級實際執行環境之前，請務必在與實際執行環境具有相同組態的實際執行前環境中執行測試升級。  
   

@@ -1,7 +1,7 @@
 ---
 title: 規劃在 SQL Server 中採用記憶體內部 OLTP 功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519557"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421185"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>規劃在 SQL Server 中採用記憶體內部 OLTP 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52519557"
 
 對於裝載於 Azure SQL Database 雲端服務的資料庫，您所選的服務層會影響資料庫允許使用的使用中記憶體數量。 您應該規劃使用警示來監視資料庫的記憶體使用量。 如需詳細資料，請參閱：
 
-- 檢閱您的[定價層](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)適用的記憶體內部 OLTP 儲存體限制
+- 檢閱您的[定價層](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)適用的記憶體內部 OLTP 儲存體限制
 - [監視記憶體內部 OLTP 儲存體](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
@@ -205,7 +205,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 當您第一次實作記憶體最佳化資料表時，傳統的 b 型樹狀目錄、非叢集索引經常是相當直覺且簡單的選擇。 稍後，在您看到應用程式的執行方式之後，可以考慮交換另一種索引類型。
 
-兩個特殊類型的索引需要記憶體最佳化資料表的內容討論︰雜湊索引和資料行存放區索引。
+有兩個特殊類型的索引需要在經記憶體最佳化的資料表內容中討論：雜湊索引和資料行存放區索引。
 
 如需記憶體最佳化資料表上的索引概觀，請參閱：
 
@@ -284,7 +284,7 @@ READPAST 提示在一些案例中很有幫助，例如數個工作階段全都�
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. 應用程式設計︰交易和重試邏輯
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. 應用程式設計：交易和重試邏輯
 
 牽涉到記憶體最佳化資料表的交易可能會依賴另一個牽涉到相同資料表的交易。 如果相依交易計數到達或超過允許的最大值，所有相依交易都會失敗。
 

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 53a852b5293cfc013c170723f0e031cc3800e27c
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: a82fe061c8886dc88af8b44faf4b4fb86ccda2e6
+ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087887"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55428675"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "55087887"
 
 ### <a name="whats-new"></a>新功能
 **SSIS：**
-1. 新增 SSIS 2017 的 Power Query 來源 (預覽)。
-2. 新增回對 SSIS 2012 的支援。
-3. 新增 SSIS 2019 的 Oracle 來源和目的地。
+1. 在 ADF 2017 中新增適用於 SSIS 的 Power Query 來源 (預覽)。
+2. 新增對 SQL Server 2012 的回溯支援。
+3. 新增 SQL Server 2019 的 Oracle 來源和目的地。
 4. 修正從舊版 SSIS 移轉時無法載入指令碼工作/元件的問題。
 5. 修正資料檢視器在 Windows 7 SP1 和 Windows 8.1 上無法運作的問題。
 6. 修正在某些情況下，儲存套件會導致 Visual Studio 損毀的問題。 
-7. 修正在某些情況下，當保護層級為 EncryptSensitiveWithPassword 且目標伺服器版本為 SQL 2017 以前版本時，無法執行套件的問題。
+7. 修正在某些情況下，當保護層級為 EncryptSensitiveWithPassword 且目標伺服器版本早於 SQL Server 2017 時，無法執行封裝的問題。
 8. 修正預設字型的註釋無法在 SSDT 中顯示的問題。
 9. ISDeploymentWizard 支援 SQL 驗證、Azure Active Directory 整合式驗證，以及命令列模式下的 Azure Active Directory 密碼驗證。
 

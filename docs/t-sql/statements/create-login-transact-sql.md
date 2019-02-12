@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c29c19a67e3cbbfa4131e25151e33c67fe667169
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8448d5fd564ff001d847e7af981bc34734cef727
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327899"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421405"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "54327899"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -262,11 +262,11 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />邏輯伺服器 \*_**|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
   
 ## <a name="syntax"></a>語法 
   
@@ -282,7 +282,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>引數  
 *login_name*  
-指定建立的登入名稱。 Azure SQL Database 邏輯伺服器僅支援 SQL 登入。 
+指定建立的登入名稱。 Azure SQL Database 單一資料庫/彈性集區只支援 SQL 登入。 
 
 PASSWORD **='** password**'*  
 指定要建立的 SQL 登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。 
@@ -320,7 +320,7 @@ SID = *sid*
 
 ## <a name="logins"></a>登入
 - 必須具有伺服器的 **ALTER ANY LOGIN** 權限或 **securityadmin** 固定伺服器角色的成員資格。 只有具備伺服器的 **ALTER ANY LOGIN** 權限或 securityadmin 權限之成員資格的 Azure Active Directory (Azure AD) 帳戶才能執行這個命令
-- 必須是用於 Azure SQL 邏輯伺服器之相同目錄中的 Azure AD 成員
+- 必須是用於 Azure SQL Database 伺服器之相同目錄中的 Azure AD 成員
   
 ## <a name="after-creating-a-login"></a>建立登入之後  
 建立登入之後，登入就可以連線至 SQL Database，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
@@ -378,7 +378,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -387,7 +387,7 @@ GO
 ## <a name="syntax"></a>語法 
   
 ```sql
--- Syntax for Azure SQL Database Managed Instance
+-- Syntax for Azure SQL Database managed instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
   
 <option_list> ::=
@@ -447,7 +447,7 @@ SID **=** *sid*
 - 必須是用於 Azure SQL 受控執行個體之相同目錄中的 Azure AD 成員。
 
 ## <a name="after-creating-a-login"></a>建立登入之後  
-建立登入之後，登入就可以連線至 SQL Database 受控執行個體，但是只會取得 **public** 角色的權限。 請考慮執行下列其中一些活動。 
+建立登入之後，登入就可以連線至 SQL Database 受控執行個體，但只有授與 **public** 角色的權限。 請考慮執行下列其中一些活動。 
   
 - 若要從 Azure AD 登入來建立 Azure AD 使用者，請參閱 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)。 
 - 若要將權限授與資料庫中的使用者，請使用 **ALTER SERVER ROLE** ...**ADD MEMBER** 陳述式可將使用者新增至其中一個內建的資料庫角色或自訂角色，或直接使用 [GRANT](../../t-sql/statements/grant-transact-sql.md) 陳述式將權限授與使用者。 如需詳細資訊，請參閱[非系統管理員角色](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users)、[ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 和 [GRANT](grant-transact-sql.md) 陳述式。
@@ -553,7 +553,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_**|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_**|[平行處理<br />資料倉儲](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -665,7 +665,7 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\*平行處理<br />資料倉儲\*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\*平行處理<br />資料倉儲\*_**
 
 &nbsp;
 

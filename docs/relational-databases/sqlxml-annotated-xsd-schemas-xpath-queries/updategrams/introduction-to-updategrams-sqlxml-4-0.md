@@ -20,16 +20,16 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91cb486c1b24cf213b765e42d721c4aeb0866ec8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843386"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026879"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 簡介 (SQLXML 4.0) 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "47843386"
  利用預設對應 (在 Updategram 中未指定對應結構描述時)，Updategram 元素會對應到資料表，而子元素 (如果是元素中心對應) 和屬性 (如果是屬性中心對應) 則會對應到資料行。  
   
 ### <a name="element-centric-mapping"></a>元素中心的對應  
- 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。 **\<Person.Contact >** 項目包含 **\<FirstName >** 並 **\<LastName >** 子項目。 這些子項目是屬性 **\<Person.Contact >** 項目。  
+ 在元素中心的 Updategram 中，一個元素包含表示元素屬性的多個子元素。 例如，請參閱下列 Updategram。  **\<Person.Contact >** 項目包含 **\<FirstName >** 並 **\<LastName >** 子項目。 這些子項目是屬性 **\<Person.Contact >** 項目。  
   
  這個 updategram 未指定對應結構描述，因此 updategram 會使用隱含的對應，其中 **\<Person.Contact >** 元素會對應到 Person.Contact 資料表，而其子項目對應到 FirstName 和LastName 資料行。  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64c4819bd307afe3b7e4b310949148deabb8c938
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d393b8f634290069bfe12d3b69c1917fb6ac559f
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327809"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421465"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "54327809"
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -288,15 +288,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />邏輯伺服器 \*_** &nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
 
 ## <a name="overview"></a>概觀
 
-在 Azure SQL Database 中，使用此陳述式修改邏輯伺服器上的資料庫。 使用此陳述式變更資料庫名稱、變更資料庫的版本和服務目標、新增或移除彈性集區的資料庫、設定資料庫選項、新增或移除具有地理複寫關聯性的次要資料庫，以及設定資料庫相容性層級。
+在 Azure SQL Database 中，使用此陳述式來修改單一資料庫/彈性集區上的資料庫。 使用此陳述式變更資料庫名稱、變更資料庫的版本和服務目標、新增或移除彈性集區的資料庫、設定資料庫選項、新增或移除具有地理複寫關聯性的次要資料庫，以及設定資料庫相容性層級。
 
 由於長度的關係，ALTER DATABASE 語法會分成多篇文章。  
 
@@ -653,7 +653,7 @@ ALTER DATABASE db1 FAILOVER
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_** &nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**&nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -661,7 +661,7 @@ ALTER DATABASE db1 FAILOVER
 
 ## <a name="overview"></a>概觀
 
-在 Azure SQL Database 受控執行個體中，使用此陳述式設定資料庫選項。
+在 Azure SQL Database 受控執行個體中，使用此陳述式來設定資料庫選項。
 
 由於長度的關係，ALTER DATABASE 語法會分成多篇文章。  
 
@@ -776,7 +776,7 @@ ALTER DATABASE WideWorldImporters
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -898,7 +898,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />邏輯伺服器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 平行處理<br />資料倉儲\*_** &nbsp;|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 平行處理<br />資料倉儲\*_** &nbsp;|  
 
 &nbsp;
 

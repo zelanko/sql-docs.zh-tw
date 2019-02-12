@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d1607e46888c4ea42f2e9e01fc9086a947045e2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 6bac04d2c3e60496c73f1cc91c1adb89c82b606a
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327499"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421095"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ CREATE SERVER AUDIT audit_name
  TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 會決定稽核目標的位置。 選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就無法寫入 Windows 安全性記錄檔。 如需詳細資訊，請參閱 [將 SQL Server Audit 事件寫入安全性記錄檔](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)。  
 
 > [!IMPORTANT]
-> 在 Azure SQL Database 受控執行個體中，「SQL 稽核」會在伺服器層級執行。 位置只能是 `URL` 或 `EXTERNAL_MONITOR`。
+> 在 Azure SQL Database 受控執行個體中，SQL 稽核會在伺服器層級執行。 位置只能是 `URL` 或 `EXTERNAL_MONITOR`。
   
  FILEPATH ='*os_file_path*'  
  稽核記錄檔的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  

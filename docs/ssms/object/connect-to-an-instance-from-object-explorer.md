@@ -1,7 +1,7 @@
 ---
 title: 連線至 SQL Server 或 Azure SQL Database | Microsoft Docs
 ms.custom: ''
-ms.date: 08/25/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +11,19 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e07d1bb2c38fdf5284a09d49a7b81419872720b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8770ad0e7a5d04a2a1de96c15cb709b8321a5d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847418"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421285"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>連線至 SQL Server 或 Azure SQL Database
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 若要使用伺服器或資料庫，您必須先連線至伺服器。 您可以同時連線至多部伺服器。
 
-[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 支援多種連線類型。 本文詳細說明如何連線至 SQL Server 與 Azure SQL Database (連線至 Azure SQL 邏輯伺服器)。 如需其他連線選項的詳細資訊，請參閱此頁面底部的[連結](#see-also)。
+[SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 支援多種連線類型。 本文詳細說明如何連線至 SQL Server 與 Azure SQL Database (連線至 Azure SQL 單一資料庫或彈性集區)。 如需其他連線選項的詳細資訊，請參閱此頁面底部的[連結](#see-also)。
   
 ## <a name="connecting-to-a-server"></a>連接至伺服器  
 

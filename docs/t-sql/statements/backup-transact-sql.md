@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805774"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421495"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -946,7 +946,7 @@ WITH STATS = 5;
 
 ## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
-備份置於/裝載於 Azure SQL Databae 受控執行個體的 SQL 資料庫。 SQL Database [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)具有自動備份，並可讓使用者建立完整的資料庫 `COPY_ONLY` 備份。 不支援差異、記錄和檔案快照備份。  
+備份置於/裝載於 Azure SQL Databae 受控執行個體的 SQL 資料庫。 SQL Database [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)具有自動備份，可讓使用者建立完整的資料庫 `COPY_ONLY` 備份。 不支援差異、記錄和檔案快照備份。  
 
 ## <a name="syntax"></a>語法  
   
@@ -988,9 +988,9 @@ DATABASE
 指定完整的資料庫備份。 在資料庫備份期間，受控執行個體會備份足夠的交易記錄，以便在還原備份時，產生一致的資料庫。  
 
 > [!IMPORTANT]
-> 在受控執行個體上建立的資料庫備份只能在另一個受控執行個體上還原。 它無法還原至 SQL Server 內部部署執行個體 (如同 SQL Server 2016 資料庫的備份無法還原至 SQL Server 2012 執行個體)。
+> 在受控執行個體上建立的資料庫備份，只能在其他受控執行個體上還原。 它無法還原至 SQL Server 內部部署執行個體 (如同 SQL Server 2016 資料庫的備份無法還原至 SQL Server 2012 執行個體)。
   
-當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱 [SQL Database 還原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
+當您還原 BACKUP DATABASE 所建立的備份 (「資料備份」) 時，就會還原整個備份。 若要從 Azure SQL Database 受控執行個體自動備份進行還原，請參閱 [SQL Database 還原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)。  
   
 { *database_name* | **@**_database\_name\_var_ }   
 是要備份完整資料庫的來源資料庫。 如果這個名稱是以變數 (**@**_database\_name\_var_) 的形式提供，您還可以將這個名稱指定為字串常數 (**@**_database\_name\_var_**=**_database name_)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  

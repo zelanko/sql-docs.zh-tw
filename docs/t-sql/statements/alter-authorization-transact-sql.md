@@ -1,7 +1,7 @@
 ---
 title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,14 +27,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327539"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421225"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   變更安全性實體的擁有權。    
@@ -196,6 +197,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-sql-server"></a>針對 SQL Server：  
 **新擁有者的需求：**   
 新的擁有者主體必須是下列其中一項：  
+
 -   SQL Server 驗證登入。  
 -   表示 Windows 使用者的 Windows 驗證登入 (而非群組)。  
 -   透過表示 Windows 群組之 Windows 驗證登入驗證的 Windows 使用者。  
@@ -206,6 +208,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-azure-sql-database"></a>針對 Azure SQL Database：  
 **新擁有者的需求：**   
 新的擁有者主體必須是下列其中一項：  
+
 -   SQL Server 驗證登入。  
 -   Azure AD 中存在的同盟使用者 (而非群組)。  
 -   Azure AD 中存在的受控使用者 (而非群組) 或應用程式。    
@@ -217,7 +220,8 @@ ALTER AUTHORIZATION ON
 您必須連線到目標資料庫，才能變更該資料庫的擁有者。  
 
 下列帳戶類型可變更資料庫的擁有者。 
-* 服務層級主體登入。 (建立邏輯伺服器時佈建的 SQL Azure 系統管理員。)  
+
+* 服務層級主體登入。 (建立 SQL Database 伺服器時佈建的 SQL Azure 系統管理員。)  
 * Azure SQL Server 的 Azure Active Directory 系統管理員。   
 * 資料庫目前的擁有者。   
  

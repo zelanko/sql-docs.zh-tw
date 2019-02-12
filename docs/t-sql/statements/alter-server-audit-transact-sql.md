@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cf4bb3c82b4bc7a4bbf047e3ac9457ae3ef262c3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326579"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420985"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT  (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ALTER SERVER AUDIT audit_name
  判斷稽核目標的位置。 選項有二進位檔案、Windows 應用程式記錄檔或 Windows 安全性記錄檔。  
 
 > [!IMPORTANT]
-> 在 Azure SQL Database 受控執行個體中，SQL Audit 會在伺服器層級執行並在 Azure Blob 儲存體中存放 `.xel` 檔案。
+> 在 Azure SQL Database 受控執行個體中，SQL 稽核會在伺服器層級執行，並將 `.xel` 檔案儲存於 Azure Blob 儲存體。
   
  FILEPATH **= '**_os\_file\_path_**'**  
  稽核記錄的路徑。 檔案名稱是根據稽核名稱和稽核 GUID 所產生。  

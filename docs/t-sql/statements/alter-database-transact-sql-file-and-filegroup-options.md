@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5a91f7bf27dea953cde7186262c8b28b2cd0cf7e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 3ed1de27dacbd8104a9125fe105b50689a4fd9c9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53329010"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421245"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 檔案及檔案群組選項 
 
@@ -715,7 +715,7 @@ GO
 
 ## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
-在 Azure SQL Database 受控執行個體中，搭配資料庫使用此陳述式。
+將此陳述式與 Azure SQL Database 受控執行個體中的資料庫搭配使用。
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>用於受控執行個體中資料庫的語法
 

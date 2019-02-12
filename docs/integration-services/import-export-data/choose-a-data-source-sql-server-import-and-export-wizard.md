@@ -1,7 +1,7 @@
 ---
 title: 選擇資料來源 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,20 +13,23 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8e337704f95b432c30a6451aabe8a85b4609d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a93eb928b8d9a756380879ad8cc30475ffd223e9
+ms.sourcegitcommit: 92c524119d7df5daf69ec144d532ddcb2e46abc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806013"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290418"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>選擇資料來源 (SQL Server 匯入和匯出精靈)
-  在 [歡迎使用] 頁面出現之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [選擇資料來源] 。 在此頁面上，您可以提供資料來源及其連接方式的相關資訊。
+  在 [歡迎使用] 頁面之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈會顯示 [選擇資料來源]。 在此頁面上，您可以提供資料來源及其連接方式的相關資訊。
   
 如需您可以使用之資料來源的資訊，請參閱 [我可以使用哪些資料來源和目的地？](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈會利用 SQL Server Integration Services (SSIS)。 因此，適用於 SSIS 的相同限制也適用於該精靈。  例如，預設新增的 ErrorCode 和 ErrorColumn 資料行，如[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)中所述。
+
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>[選擇資料來源] 頁面的螢幕擷取畫面 
-下列螢幕擷取畫面顯示精靈的 [選擇資料來源]  頁面中的第一個部分。 頁面的其餘部分會有不同數目的選項，視您選擇的資料來源而定。
+下圖顯示精靈中 [選擇資料來源] 頁面的第一個部分。 頁面的其餘部分會有不同數目的選項，視您選擇的資料來源而定。
 
 ![選擇來源](../../integration-services/import-export-data/media/choose-source.png)
 
@@ -66,10 +69,12 @@ ms.locfileid: "47806013"
 
 若要了解如何連線至此處未列出的資料提供者的資訊，請參閱[連接字串參考](https://www.connectionstrings.com/)。 此第三方網站包含範例連接字串，以及資料提供者及其所需連線資訊的更多資訊。
 
-## <a name="whats-next"></a>下一步  
+## <a name="whats-next"></a>下一步
  在您提供資料來源及其連接方式的相關資訊之後，下一個頁面為 [選擇目的地] 。 在此頁面上，您可以提供資料目的地及其連接方式的相關資訊。 如需詳細資訊，請參閱 [選擇目的地](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。
- 
+
 ## <a name="see-also"></a>另請參閱
 [透過匯入和匯出精靈的簡單範例開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
 
+[!INCLUDE[contribute-to-content](../../includes/paragraph-content/contribute-to-content.md)]

@@ -1,7 +1,7 @@
 ---
 title: master 資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,21 +14,23 @@ ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b14a63222721f21848518cbee5acfe99feb4d0f
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 7369d4793b803b538435267399b2deaff777ba21
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405858"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421165"
 ---
 # <a name="master-database"></a>master 資料庫
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **master** 資料庫會記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統的所有系統層級資訊。 這包括了整個執行個體範圍的中繼資料，例如登入帳戶、端點、連結的伺服器，以及系統組態設定。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系統物件不再儲存於 **master** 資料庫，而是儲存於 [Resource 資料庫](../../relational-databases/databases/resource-database.md)。 **master** 資料庫也會記錄所有其他資料庫的存在與這些資料庫檔案的所在位置，並記錄 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化資訊。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **資料庫無法使用，** 也會無法啟動。  
 
 > [!IMPORTANT]
-> 針對 Azure SQL Database 邏輯伺服器，只會套用 master 資料庫和 tempdb 資料庫。 如需邏輯伺服器和邏輯 master 資料庫的概念，請參閱[什麼是 Azure SQL 邏輯伺服器？](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server)。 如需 Azure SQL Database 內容中 tempdb 的討論，請參閱 [Azure SQL Database 中的 tempdb 資料庫](tempdb-database.md#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。 如需有關 Azure SQL Database 中受控執行個體的詳細資訊，請參閱[什麼是受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
+> 針對 Azure SQL Database 單一資料庫和彈性集區，只會套用 master 資料庫和 tempdb 資料庫。 如需詳細資訊，請參閱[什麼是 Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server)。 如需 Azure SQL Database 內容中 tempdb 的討論，請參閱 [Azure SQL Database 中的 tempdb 資料庫](tempdb-database.md#tempdb-database-in-sql-database)。 針對 Azure SQL Database 受控執行個體，則會套用所有系統資料庫。 如需有關 Azure SQL Database 中受控執行個體的詳細資訊，請參閱[什麼是受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
-## <a name="physical-properties-of-master"></a>master 的實體屬性  
+## <a name="physical-properties-of-master"></a>master 的實體屬性
+
 下表列出 SQL Server 與 Azure SQL Database 受控執行個體 **master** 資料與記錄檔的初始設定值。 對於不同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這些檔案的大小稍有不同。  
   
 |檔案|邏輯名稱|實體名稱|檔案成長|  
@@ -39,13 +41,14 @@ ms.locfileid: "54405858"
 如需如何移動 **master** 資料與記錄檔的資訊，請參閱 [移動系統資料庫](../../relational-databases/databases/move-system-databases.md)。  
 
 > [!IMPORTANT]
-> 針對 Azure SQL Database 邏輯伺服器，使用者無法控制 **master** 資料庫大小。
+> 針對 Azure SQL Database 伺服器，使用者無法控制 **master** 資料庫的大小。
   
-### <a name="database-options"></a>資料庫選項  
+### <a name="database-options"></a>資料庫選項
+
 下表列出 SQL Server 與 Azure SQL Database 受控執行個體 **master** 資料庫中每個資料庫選項的預設值，以及是否可以修改選項值。 若要檢視這些選項目前的設定，請參閱 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視。  
   
 > [!IMPORTANT]
-> 針對 Azure SQL Database 邏輯伺服器，使用者沒有控制這些資料庫選項的權限。
+> 針對 Azure SQL Database 單一資料庫和彈性集區，使用者無法控制這些資料庫選項。
 
 |資料庫選項|預設值|可以修改|  
 |---------------------|-------------------|---------------------|  
