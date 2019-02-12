@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8bddd67dca8a97d0279b002784c74e9666e5a15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a61ae676a0fb863d289532a4ce3e28c9751c8fa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076518"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041359"
 ---
 # <a name="verifying-a-report-run"></a>驗證報表執行
   若要檢視有關報表處理的狀態資訊，您可以使用記錄檔或參考報表管理員中與報表同時顯示的狀態資訊。  

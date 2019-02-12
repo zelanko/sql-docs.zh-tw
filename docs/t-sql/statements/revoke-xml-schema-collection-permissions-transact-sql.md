@@ -14,16 +14,16 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], permissions
 - schema collections [SQL Server], permissions
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 858466736667eb54d04e37cbbebb20bc5d106075
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09927ba3835b1a5e633adfec6e865600386336e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531399"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013829"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE XML 結構描述集合權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d0f17e055f4f1ddcf7f19ba58d92c5617c891a5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: 88e8dd648610d6cd83af6276fc0bb71449532737
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015690"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
   XML 轉譯延伸模組會傳回 XML 格式的報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。  

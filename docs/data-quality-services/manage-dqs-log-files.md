@@ -12,15 +12,15 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c32c76188ec7a685ecaa117ea303673bf4d3e682
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: eaf7ced1193059e9559749786f73703a4160a7a4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616928"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040259"
 ---
 # <a name="manage-dqs-log-files"></a>管理 DQS 記錄檔
 

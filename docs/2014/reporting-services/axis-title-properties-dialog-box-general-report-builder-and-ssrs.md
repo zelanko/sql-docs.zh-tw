@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3e20efdcc1d5ca2833896ae583583ed04449b996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 070b47688067e493321ce25d05f09eec6e44197e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064928"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038849"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>軸標題屬性對話方塊、一般 (報表產生器及 SSRS)
   選取 [軸標題屬性] 對話方塊上的 [一般] 來定義軸標題。 軸標題會顯示在 X 軸之下，或 Y 軸旁邊。  
@@ -44,6 +44,6 @@ ms.locfileid: "48064928"
  [指定軸間隔 &#40;報表產生器及 SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [繪製次要座標軸上的資料&#40;報表產生器及 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [軸屬性對話方塊、 軸選項&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
+ [軸屬性對話方塊，軸選項 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

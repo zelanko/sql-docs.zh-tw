@@ -1,25 +1,24 @@
 ---
-title: 第 2 課： 將採礦模型加入至購物籃採礦結構 |Microsoft Docs
+title: 第 2 課：將採礦模型加入購物籃採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461974"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041449"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>第 2 課：將採礦模型加入購物籃採礦結構中
-  在這一課，您將兩個採礦模型加入購物籃採礦結構中建立[第 1 課： 建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)。 這些採礦模型可讓您建立預測。  
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>第 2 課：將採礦模型加入購物籃採礦結構
+  在這一課，您將兩個採礦模型加入購物籃採礦結構中建立[第 1 課：建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)。 這些採礦模型可讓您建立預測。  
   
  為了預測客戶可能同時購買的產品類型，您將建立兩個採礦模型，使用[Microsoft 關聯分析演算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)和兩個不同的值，如*MINIMUM_PROBABILTY*參數。  
   

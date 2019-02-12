@@ -29,16 +29,16 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32e6ae99d44fbcf3f09a18fb899a2d14368dfd31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790906"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011430"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47790906"
  使用當做參數提供的結構描述檔案和資料檔案 (或資料流) 大量載入資料。  
   
 ## <a name="properties"></a>屬性  
- 大量載入  
+ BulkLoad  
  指定是否應該執行大量載入。 這個屬性就很有用，如果您想要產生 （請參閱遵循 SchemaGen、 SGDropTables 和 SGUseID 屬性） 的結構描述，並不會執行大量載入。 這是布林屬性。 當屬性設定為 TRUE 時，XML 大量載入會執行。 設定為 FALSE 時，XML 大量載入則不會執行。  
   
  預設值為 TRUE。  

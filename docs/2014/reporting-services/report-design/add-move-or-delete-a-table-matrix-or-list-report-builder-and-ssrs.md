@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f22f6ee3509619e1e9ad44959684eda90952c2f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb60f8152ad49b68723367cfb4f9f3941511954e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065068"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041719"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
   資料區會顯示報表資料集中的資料。 資料區包括資料表、矩陣、清單、圖表和量測計。 若要讓某個資料區以巢狀結構的方式置於另一個資料區內，請個別加入每一個資料區，然後將子資料區拖曳到父資料區。  

@@ -1,7 +1,7 @@
 ---
 title: GetRoot (資料庫引擎) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb1a053c2f221716685be31e606c69f7f43b6e05
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7f6a820b9f19d1102ed5cf16b469401acf5449d3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698626"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039589"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -2,8 +2,8 @@
 title: sys.dm_pdw_request_steps (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8543933aa102a6962846164b7267fad7df222cdd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393592"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039049"
 ---
-# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保留的撰寫指定的要求，或查詢中的所有步驟的相關資訊[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 它會列出每個查詢步驟的一個資料列。  
@@ -29,8 +29,8 @@ ms.locfileid: "52393592"
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id 和 step_index 組成此檢視的索引鍵。<br /><br /> 與要求相關聯的唯一數值識別碼。|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |step_index|**int**|request_id 和 step_index 組成此檢視的索引鍵。<br /><br /> 此步驟中的要求，以進行的步驟順序的位置。|0 到 (n-1) 代表 n 的要求。|  
-|operation_type|**nvarchar(35)**|此步驟中所代表的作業類型。|**DMS 查詢計劃作業：**'3a:onoperation、remoteoperation、returnoperation'、 'PartitionMoveOperation'、 '執行'、 'BroadcastMoveOperation'、 'ShuffleMoveOperation'、 '下列'、 'CopyOperation'、 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL 查詢計劃作業：**' 下列 '，'執行'<br /><br /> **其他的查詢計劃作業：**' MetaDataCreateOperation'，'RandomIDOperation'<br /><br /> **外部的讀取作業：**' HadoopShuffleOperation'，'HadoopRoundRobinOperation'，'HadoopBroadcastOperation'<br /><br /> **外部的 MapReduce 作業：**' HadoopJobOperation'，'HdfsDeleteOperation'<br /><br /> **外部寫入的作業：**' ExternalExportDistributedOperation'，'ExternalExportReplicatedOperation'，'ExternalExportControlOperation'<br /><br /> 如需詳細資訊，請參閱 「 了解查詢計劃 」，在[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。|  
-|distribution_type|**nvarchar(32)**|此步驟中將會進行的分佈的類型。|'AllNodes'、 'AllDistributions'、 'AllComputeNodes'、 'ComputeNode'、 'Distribution'、 'SubsetNodes'、 'SubsetDistributions'，'未指定'|  
+|operation_type|**nvarchar(35)**|此步驟中所代表的作業類型。|**DMS 查詢計劃作業：**'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL 查詢計劃作業：**' 下列 '，'執行'<br /><br /> **其他的查詢計劃作業：**'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **外部的讀取作業：**'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **外部的 MapReduce 作業：**'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **外部寫入的作業：**'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 如需詳細資訊，請參閱 「 了解查詢計劃 」，在[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。|  
+|distribution_type|**nvarchar(32)**|此步驟中將會進行的分佈的類型。|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
 |location_type|**nvarchar(32)**|步驟執行。|' Compute'、 'Control'，'DMS'|  
 |status|**nvarchar(32)**|此步驟的狀態。|暫止、 執行中、 完成、 失敗、 UndoFailed PendingCancel，已取消、 復原、 已中止|  
 |error_id|**nvarchar(36)**|如果有的話，此步驟中，與相關的錯誤的唯一識別碼。|請參閱的 error_id [sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)。 如果未不發生任何錯誤，則為 NULL。|  

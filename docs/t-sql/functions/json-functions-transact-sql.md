@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: a8ac8dc01e6a011ae737f1af8adac17cef311b38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8879dcc66e029e6de19ff3b259995006b02664f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039839"
 ---
 # <a name="json-functions-transact-sql"></a>JSON 函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

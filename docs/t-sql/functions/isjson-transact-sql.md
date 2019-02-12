@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,12 +17,12 @@ ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 6ef62fa601bfef0c2e99e6f1f1e40747a34e1b5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5db7563b6b6e26a1ffe193829ee4e15dab62689b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039849"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
