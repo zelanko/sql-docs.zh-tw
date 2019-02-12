@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 190114bb10a0caf094f3902a7a1b15e94673565c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e75931e56b62f80716d07fbdf2a7ad73ff10452d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037699"
 ---
 # <a name="set-report-server-properties-management-studio"></a>設定報表伺服器屬性 (Management Studio)
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中設定報表伺服器系統屬性，以便啟用功能或設定伺服器預設值。  
