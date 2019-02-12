@@ -1,27 +1,24 @@
 ---
-title: 工作 5： 從 Excel 建立的網域屬性 |Microsoft Docs
+title: 工作 5:從 Excel 建立網域型屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031599"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>工作 5：從 Excel 建立定義域屬性
-  在這個工作中，您將轉換**狀態**屬性**供應商**實體**網域型屬性**。 設定是以網域為基礎，並將其發行至 MDS，名為的新實體的 State 屬性之後**狀態**資料行中的所有值的 MDS 伺服器上將建立並**狀態**屬性**供應商**的值將會填入實體**狀態**實體。 現在，請**供應商**模型應該有兩個實體：**供應商**並**狀態**其中**狀態**屬性**供應商**實體是取決於網域屬性**狀態**實體。  
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>工作 5:從 Excel 建立定義域屬性
+  在這個工作中，您將轉換**狀態**屬性**供應商**實體**網域型屬性**。 設定是以網域為基礎，並將其發行至 MDS，名為的新實體的 State 屬性之後**狀態**資料行中的所有值的 MDS 伺服器上將建立並**狀態**屬性**供應商**的值將會填入實體**狀態**實體。 現在，請**供應商**模型應該有兩個實體：**供應商**並**狀態**何處**狀態**屬性**供應商**實體是取決於網域屬性**的狀態**實體。  
   
 1.  若要切換**Excel**有視窗**Cleansed and Matched Suppliers.xlsx**開啟。  
   
@@ -44,6 +41,6 @@ ms.locfileid: "48146338"
      ![Excel-下拉式清單中具有狀態](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel-下拉式清單中具有狀態")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 6：確認已使用主資料管理員建立定義域屬性](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [工作 6:確認已建立使用主資料管理員的網域型屬性](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d888ef0f3019e38e043ebe00c68e03f82e924f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6b159467fc511292ecb1ae3832a04c73dabdd251
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067240"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009640"
 ---
 # <a name="secure-shared-data-source-items"></a>保護共用資料來源項目的安全
   您可以在共用資料來源項目上設定安全性，以啟用或停用它的存取權。  
@@ -43,8 +43,8 @@ ms.locfileid: "48067240"
 ## <a name="see-also"></a>另請參閱  
  [管理報表資料來源](../report-data/manage-report-data-sources.md)   
  [保護資料夾的安全](secure-folders.md)   
- [保護報表和資源](secure-reports-and-resources.md)   
+ [保護報表和資源的安全](secure-reports-and-resources.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)   
- [在 Reporting Services 資料來源中儲存認證](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 096a0678ccb86c232d4eaca792aa143379710fea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5dce14880b54d33eee438bf6a7e9e6a2c88f108c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399331"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022290"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
   運算式可協助您建立強大而靈活的報表。 本教學課程將教您建立和實作使用一般函數和運算子的運算式。 您將使用**運算式**對話方塊，即可撰寫運算式以串連名稱值、 查閱值在不同的資料集中，顯示不同的圖片，根據欄位的值，並依此類推。  
@@ -86,11 +86,11 @@ ms.locfileid: "52399331"
   
 4.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]**。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 **[選擇與資料來源的連接]** 頁面上，選取類型為 **[SQL Server]** 的資料來源。 請從清單中選取資料來源，或者瀏覽到報表伺服器再進行選取。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "52399331"
   
 10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示 20 個資料列，並包含下列欄位：FirstName、 LastName、 StateProvince、 CountryRegionID、 Gender、 YTDPurchase 和 LastPurchase。  
   
-11. 按 [下一步] 。  
+11. 按一下 [下一步] 。  
   
 12. 在 [排列欄位] 頁面上，依指定的順序將下列欄位從 [可用的欄位] 清單拖曳至 [值] 清單。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "52399331"
   
      [加總] 不再套用至 YTDPurchase。  
   
-15. 按 [下一步] 。  
+15. 按一下 [下一步] 。  
   
 16. 在 [選擇配置] 頁面上，按 一下 [下一步]。  
   
@@ -522,7 +522,7 @@ ms.locfileid: "52399331"
   
 38. 按一下 **[執行]** 預覽報表。  
   
-##  <a name="GreenBar"></a> 8。製作 「 綠色橫條 」 報表的報表  
+##  <a name="GreenBar"></a> 8.製作 「 綠色橫條 」 報表的報表  
  使用參數指定套用至報表中交替資料列的色彩，使其變成橫條報表。  
   
 #### <a name="to-add-a-parameter"></a>若要加入參數  

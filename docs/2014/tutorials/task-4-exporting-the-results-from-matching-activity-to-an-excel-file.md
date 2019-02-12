@@ -1,26 +1,23 @@
 ---
-title: 工作 4： 將結果匯出比對活動到 Excel 檔案 |Microsoft Docs
+title: 工作 4:將結果匯出比對活動到 Excel 檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: abded209f6367308c23e548962e1d4a5362791f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127628"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020439"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>工作 4：將比對活動的結果匯出到 Excel 檔案
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>工作 4:將比對活動的結果匯出到 Excel 檔案
   在這項工作中，您會將比對活動的結果匯出到 Excel 檔案。  
   
 1.  在 **匯出**頁面上，選取**Excel 檔案**for**目的型別**。  
@@ -33,11 +30,11 @@ ms.locfileid: "48127628"
   
 5.  確認**樞紐記錄**選取**存活規則**。 當您選取此選項時，便會針對叢集的輸出挑選每個叢集的樞紐記錄。 存活規則的其他選項包括：  
   
-    1.  **最完整的記錄：** 生存者記錄是具有最大擴展欄位數目。  
+    1.  **最完整的記錄：** 生存者記錄是已填入最多欄位的記錄。  
   
-    2.  **最長的記錄：** 生存者記錄是具有最大詞彙數目的來源欄位中。  
+    2.  **最長的記錄：** 生存者記錄是在來源欄位中具有最多詞彙數目的記錄。  
   
-    3.  **最完整且最長的記錄：** 生存者記錄是最大擴展欄位數目，且擁有最大詞彙數目的每個欄位中。  
+    3.  **最完整且最長的記錄：** 生存者記錄是已填入最多欄位並且在每個欄位中具有最多詞彙的記錄。  
   
      ![匯出比對頁面結果](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "匯出比對頁面結果")  
   

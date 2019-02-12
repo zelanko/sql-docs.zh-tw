@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c1a3c4eef40d5cac7d7dabdb0a428d97afdb136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 951be7ea854bf3f4d9e10e902cfc6574e7749d51
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220428"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041809"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 查詢設計工具使用者介面
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立適用於 SAP NetWeaver® Business Intelligence 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：「設計」模式和「查詢」模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從資料來源上定義的 InfoCube、MultiProvider 或 Web 查詢中拖曳成員，從而建立 MDX 查詢，在處理報表時擷取資料。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立適用於 SAP NetWeaver® Business Intelligence 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從資料來源上定義的 InfoCube、MultiProvider 或 Web 查詢中拖曳成員，從而建立 MDX 查詢，在處理報表時擷取資料。  
   
 > [!IMPORTANT]  
 >  當使用者建立與執行查詢時，可以存取資料來源。 您應該授與資料來源的最小權限，例如唯讀權限。  
@@ -59,7 +59,7 @@ ms.locfileid: "48220428"
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 無法用於這種資料來源類型。|  
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![重新整理資料集欄位](../media/rsqdicon-refreshfields.gif "重新整理資料集欄位")|重新整理資料來源中的中繼資料。|  
-|![新增導出的成員](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "新增導出的成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。|  
 |![切換以顯示空的資料格](../../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](../../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更 (例如刪除 [資料] 窗格中的資料行) 時自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![刪除](../../analysis-services/media/rsqdicon-delete.gif "刪除")|從查詢中刪除 [資料] 窗格中選取的資料行。|  
@@ -96,16 +96,16 @@ ms.locfileid: "48220428"
   
 -   **當成文字編輯**  
   
--   **加入導出成員**(![加入導出的成員](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出的成員"))  
+-   **加入導出成員** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **顯示空的資料格** (![切換以顯示空的資料格](../../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
   
 -   **自動執行** (![自動執行查詢](../../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢"))  
   
--   **刪除**(![刪除](../../analysis-services/media/rsqdicon-delete.gif "刪除"))  
+-   **刪除** (![刪除](../../analysis-services/media/rsqdicon-delete.gif "刪除"))  
   
 ## <a name="see-also"></a>另請參閱  
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [RSReportDesigner 設定檔](../report-server/rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner 組態檔](../report-server/rsreportdesigner-configuration-file.md)  
   
   

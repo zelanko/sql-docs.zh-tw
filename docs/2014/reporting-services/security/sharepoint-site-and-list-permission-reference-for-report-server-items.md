@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a64c28884b5c656e75e172f36b2bb008a1bbfdcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2a05787e4e06c7cf178c2618e2fbfbac4de596cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077378"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035059"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>報表伺服器項目的 SharePoint 網站和清單權限參考
   本文中提供 SharePoint 權限的參考，可用來針對以 SharePoint 整合式模式執行的報表伺服器，授與報表伺服器作業的存取權。 如果您要建立自訂的權限等級，本主題可幫助您選擇適用的權限。  
@@ -74,7 +74,7 @@ ms.locfileid: "48077378"
 |開啟|開啟網站、清單或資料夾以存取該容器內的項目。|X|X|X|讀取排程和項目屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [比較 Reporting Services 與 SharePoint 群組和權限中的 角色和工作](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

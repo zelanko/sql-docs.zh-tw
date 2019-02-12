@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167218"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035129"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  
@@ -31,7 +31,7 @@ ms.locfileid: "48167218"
   
 2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]**。  
   
-3.  當您準備要將使用者和群組帳戶指派至特定角色時，請使用報表管理員。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
+3.  當您準備要將使用者和群組帳戶指派至特定角色時，請使用報表管理員。 如需這些預先定義角色的詳細資訊，請參閱 [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
   
 ##  <a name="bkmk_rolelist"></a> 預先定義的角色定義  
  預先定義的角色都由它所支援的工作定義。 您可以修改這些角色，也可以使用自訂角色來取代這些角色。  
@@ -70,7 +70,7 @@ ms.locfileid: "48167218"
 |管理報表記錄|建立、檢視和刪除報表記錄、檢視報表記錄屬性，以及檢視和修改決定快照集記錄限制與如何快取工作的設定。|  
 |管理報表|加入和刪除報表、修改報表參數、檢視和修改報表屬性、檢視和修改可提供內容至報表的資料來源、檢視和修改報表定義，以及在報表層級設定安全性原則。|  
 |管理資源|建立、檢視與刪除資源，以及檢視和修改資源屬性。|  
-|設定項目的安全性原則|定義報表、連結報表、資料夾、資源以及資料來源的安全性原則。 如需詳細資訊，請參閱 <<c0> [ 安全性實體項目](securable-items.md)。|  
+|設定項目的安全性原則|定義報表、連結報表、資料夾、資源以及資料來源的安全性原則。 如需詳細資訊，請參閱 [安全性實體項目](securable-items.md)。|  
 |檢視資料來源|檢視資料夾階層中的共用資料來源項目。|  
 |檢視報表|執行報表和檢視報表屬性。|  
 |檢視模型|檢視資料夾階層中的模型、使用模型做為報表的資料來源，以及針對模型執行查詢，以擷取資料。|  
@@ -189,7 +189,7 @@ ms.locfileid: "48167218"
 |工作|描述|  
 |----------|-----------------|  
 |執行報表定義|開始執行報表定義，但是不將定義發行到報表伺服器。|  
-|管理作業|檢視和取消執行中的作業。 如需詳細資訊，請參閱 <<c0> [ 管理執行的處理序](../subscriptions/manage-a-running-process.md)。|  
+|管理作業|檢視和取消執行中的作業。 如需詳細資訊，請參閱 [管理執行中的處理序](../subscriptions/manage-a-running-process.md)。|  
 |管理報表伺服器屬性|檢視和修改套用至報表伺服器以及報表伺服器管理之項目的屬性。<br /><br /> 此工作支援重新命名報表管理員、啟用 [我的報表]，以及設定報表記錄預設值。|  
 |管理角色|建立、檢視和修改以及刪除角色定義。<br /><br /> **系統管理員** 角色的成員，可以使用 [站台設定] 頁面來管理角色。|  
 |管理共用排程|建立、檢視、修改以及刪除用來執行或重新整理報表的共用排程。|  
@@ -214,7 +214,7 @@ ms.locfileid: "48167218"
  [建立、刪除或修改角色 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)   
  [修改或刪除角色指派 &#40;報表管理員&#41;](role-assignments-modify-or-delete.md)   
- [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [工作和權限](tasks-and-permissions.md)  
   
   

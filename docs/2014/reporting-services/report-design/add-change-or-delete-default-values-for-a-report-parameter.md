@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 294940b2ffdeab57d3cde8f7a1fe8a8b61d6532a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ef88ca9dc7870ad277640b40a02838c78b8dddce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221878"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032269"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>為報表參數加入、變更或刪除預設值 (報表產生器及 SSRS)
   當您建立報表參數以後，可以提供預設值的清單。 如果所有的參數都有有效的預設值，當您第一次檢視或預覽報表時，報表就會自動執行。  
@@ -30,7 +30,7 @@ ms.locfileid: "48221878"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 在您發行報表之後，可以在報表伺服器上設定參數屬性值，藉以覆寫您在報表撰寫工具中定義於報表的預設值。 您也可以建立連結報表來提供多組預設參數值。 如需詳細資訊，請參閱 <<c0> [ 報表參數&#40;報表產生器和報表設計師&#41;</c0>](report-parameters-report-builder-and-report-designer.md)  
+ 在您發行報表之後，可以在報表伺服器上設定參數屬性值，藉以覆寫您在報表撰寫工具中定義於報表的預設值。 您也可以建立連結報表來提供多組預設參數值。 如需詳細資訊，請參閱  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)  
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>為報表參數加入或變更預設值  
   
@@ -65,12 +65,12 @@ ms.locfileid: "48221878"
   
 ## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)   
- [將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [將串聯參數加入至報表 &#40;報表產生器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [變更報表參數的順序&#40;報表產生器及 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [加入、 變更或刪除報表參數&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

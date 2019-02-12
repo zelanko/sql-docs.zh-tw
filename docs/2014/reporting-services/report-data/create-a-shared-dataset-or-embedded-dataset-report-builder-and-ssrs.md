@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f8f2b9f8926a81c808e82f57cad13934336902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011159"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
   您可以建立內嵌資料集供單一報表使用，或建立要儲存到報表伺服器的共用資料集，以供多個報表使用。 若要建立資料集，您必須已經定義內嵌或共用資料來源。  
@@ -117,7 +117,7 @@ ms.locfileid: "48133258"
  [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)   
  [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)   
- [資料連接、 資料來源和報表產生器中的連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

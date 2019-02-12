@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 90928774eb2429430da0cbc1e8904ec5b1dc0c08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d77a978ca0d1f8f1f175871d5acd6de0aa5c6e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019119"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
@@ -44,7 +44,7 @@ ms.locfileid: "48161728"
 ### <a name="running-reports-from-snapshots"></a>從快照集執行報表  
  報表快照集是一種報表，它包含配置資訊以及在特定時間點擷取的資料。 您可以將報表以報表快照集的形式執行，以避免在任意時間 (例如，在排程備份期間) 執行報表。 報表快照集一般會按照排程建立和後續重新整理，讓您可以設定報表以及資料處理進行的正確時間。 如果報表所依據的，是要花很長時間執行的查詢，或者使用您希望在幾個小時內沒有人能存取之資料來源中之資料的查詢，您應將報表當成快照集執行。  
   
- 報表快照集會儲存在報表伺服器資料庫中，後續若有使用者或處理序 (例如訂閱) 要求報表，就會從資料庫擷取報表快照集。 報表快照集更新時，會以新的執行個體覆寫。 除非您特別設定選項，將報表快照集的舊版本加入至報表記錄，否則報表伺服器不會儲存報表快照集的舊版本。 如需詳細資訊，請參閱[建立、修改及刪除報表記錄中的快照集](create-modify-and-delete-snapshots-in-report-history.md)。  
+ 報表快照集會儲存在報表伺服器資料庫中，後續若有使用者或處理序 (例如訂閱) 要求報表，就會從資料庫擷取報表快照集。 報表快照集更新時，會以新的執行個體覆寫。 除非您特別設定選項，將報表快照集的舊版本加入至報表記錄，否則報表伺服器不會儲存報表快照集的舊版本。 如需詳細資訊，請參閱 [建立、修改及刪除報表記錄中的快照集](create-modify-and-delete-snapshots-in-report-history.md)。  
   
  並非所有的報表都能設定以快照集執行。 您無法針對會提示使用者輸入認證的報表，或者使用 Windows 整合式安全性以取得報表資料的報表，建立報表的快照集。 如果您要將參數化報表當成快照集執行，則必須指定建立快照集時使用的預設參數。 相對於視需要執行的報表，一旦報表開啟之後，您就無法再為報表快照集指定不同的參數值。 選擇其他參數值會產生新的報表處理要求，這是不允許的。  
   
@@ -57,10 +57,10 @@ ms.locfileid: "48161728"
  如果有這種情況，報表伺服器就會在下次訂閱排程執行時停用訂閱。 若要重新啟動訂閱，請開啟再儲存訂閱。 當您開啟訂閱，報表伺服器會將訂閱參數值更新為快照集所指定的值。 如需訂用帳戶的詳細資訊，請參閱[訂用帳戶與傳遞 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定處理選項&#40;Reporting Services SharePoint 整合模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [設定報表執行屬性&#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [設定報表的執行屬性 &#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [如何：將快照集新增至報表記錄](add-a-snapshot-to-report-history-report-manager.md)   
+ [操作說明：將快照集加入報表記錄](add-a-snapshot-to-report-history-report-manager.md)   
  [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

@@ -2,10 +2,8 @@
 title: sys.server_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: carlrab, edmaca
-ms.technology: ''
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -21,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 82cd70d9f1baa7741f4ecc449167d5c56e7fe954
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b8a5aaa7d0aecd992905e0eaf53ef362f24b1485
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392631"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009650"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,10 +40,10 @@ ms.locfileid: "52392631"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|指出報告 15 秒的時間間隔開始的 UTC 時間|  
 |end_time|**datetime**|表示 15 秒報告時間間隔結束的 UTC 時間|
-|resource_type|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|計量會提供的目標資源類型|
-|resource_name|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|資源的名稱。|
-|sku|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|受管理的執行個體的執行個體服務層。 以下是可能的值： <br><ul><li>一般用途</li></ul><ul><li>業務關鍵</li></ul>|
-|hardware_generation|& lt;languagekeyword>nvarchar(128)</languagekeyword&gt|硬體產生識別碼： 例如，第 4 代或第 5 代|
+|resource_type|Nvarchar(128)|計量會提供的目標資源類型|
+|resource_name|nvarchar(128)|資源的名稱。|
+|sku|nvarchar(128)|受管理的執行個體的執行個體服務層。 以下是可能的值： <br><ul><li>一般用途</li></ul><ul><li>業務關鍵</li></ul>|
+|hardware_generation|nvarchar(128)|硬體產生識別碼： 例如，第 4 代或第 5 代|
 |virtual_core_count|ssNoversion|代表每個執行個體 （8、 16 或 24 現供公開預覽） 的虛擬核心數目|
 |avg_cpu_percent|decimal(5,2)|平均計算使用量過低的執行個體所管理的執行個體服務層限制的百分比。 它是計算的執行個體中的所有資料庫的所有資源集區的 CPU 時間的總和，除以該服務層可用的 CPU 時間，以指定的間隔。|
 |reserved_storage_mb|BIGINT|保留每個執行個體的儲存體 （儲存體數量空格該客戶購買的受管理的執行個體）|

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225954"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043249"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
   逗號分隔值 (CSV) 轉譯延伸模組會將報表從多數應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。  
   
- CSV 轉譯延伸模組使用字串字元分隔符號來分隔欄位和資料列，可將此字串字元分隔符號設定為非逗號字元。 所產生的檔案可以使用試算表程式 (例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ) 開啟，或當做其他程式的匯入格式使用。 匯出的報表會變成.csv 檔案，並傳回 MIME 類型的`text/csv`。  
+ CSV 轉譯延伸模組使用字串字元分隔符號來分隔欄位和資料列，可將此字串字元分隔符號設定為非逗號字元。 所產生的檔案可以使用試算表程式 (例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ) 開啟，或當做其他程式的匯入格式使用。 匯出的報表會變成 .csv 檔案，並傳回 MIME 類型的 `text/csv`。  
   
  如果您要使用與 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]中的圖表、資料橫條、走勢圖、量測計和指標相關的資料，請將報表匯出為 CSV 檔，然後在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 中開啟檔案。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48225954"
 |項目|轉譯行為|  
 |----------|------------------------|  
 |文字方塊|轉譯文字方塊的內容。 在預設模式下，系統會根據項目的格式化屬性來設定項目的格式。 在相容模式下，格式可以依據裝置資訊設定來變更。 如需有關 CSV 轉譯模式的詳細資訊，請參閱以下。|  
-|Table|藉由展開資料表，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。 不支援鑽研報表。|  
+|資料表|藉由展開資料表，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。 不支援鑽研報表。|  
 |矩陣|藉由展開矩陣，並為每個資料列與資料行以最低層級的詳細資料建立資料列與資料行，來進行轉譯。 小計資料列和資料行沒有資料行或資料列標題。|  
 |清單|轉譯每個詳細資料列或清單中執行個體的記錄。|  
 |子報表|內容的每個執行個體都會重複父項目。|  
@@ -78,7 +78,7 @@ ms.locfileid: "48225954"
 |走勢圖|像圖表一樣轉譯。 走勢圖通常不包含階層或標籤。|  
 |量測計|轉譯為包含線性標尺的最小與最大值、範圍的開始與結束值，以及指標值的單一記錄。|  
 |指標|以作用中的狀態名稱、可用的狀態以及資料值轉譯成單一記錄。|  
-|對應|轉譯資料列，其中包含地圖圖層之每一個地圖成員的標籤和值。<br /><br /> 如果地圖有多個圖層，則資料列中的值會根據地圖圖層是使用相同或不同的地圖資料區域而有所不同。 如果多個地圖圖層使用相同的資料區域，則資料列會包含所有圖層中的資料。|  
+|地圖|轉譯資料列，其中包含地圖圖層之每一個地圖成員的標籤和值。<br /><br /> 如果地圖有多個圖層，則資料列中的值會根據地圖圖層是使用相同或不同的地圖資料區域而有所不同。 如果多個地圖圖層使用相同的資料區域，則資料列會包含所有圖層中的資料。|  
   
 ### <a name="hierarchical-and-grouped-data"></a>階層與群組資料  
  階層與群組資料必須扁平化，才能以 CSV 格式表示。  
@@ -148,7 +148,7 @@ ms.locfileid: "48225954"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

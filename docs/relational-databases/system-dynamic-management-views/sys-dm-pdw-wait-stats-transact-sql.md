@@ -2,8 +2,8 @@
 title: sys.dm_pdw_wait_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a62b88ae5c5e0589b54781c85ff43cc39babe2fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4bf4c0d15f2a27179d8f88831a940bca1ecb1aea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667807"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020489"
 ---
-# <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (transact-SQL)
+# <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保存有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]OS 狀態與不同節點上執行的執行個體相關。 如需等候的類型和其描述的清單，請參閱 < [sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)。  

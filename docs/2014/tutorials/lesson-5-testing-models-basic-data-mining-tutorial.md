@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9a7ddcf-2b01-485f-bbb5-62638b303bc6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f942b40959d5f3af1ede0ddb8dbc11161f796eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025619"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>第 5 課：測試模型 （基本資料採礦教學課程）
   現在您已經使用目標郵寄案例定型集處理過模型，所以將會針對測試集來測試模型。 驗證是資料採礦程序中的一個重要步驟。 將模型部署到實際環境之前，了解目標郵寄採礦模型對實際資料的執行效能有多好是非常重要的事情。  

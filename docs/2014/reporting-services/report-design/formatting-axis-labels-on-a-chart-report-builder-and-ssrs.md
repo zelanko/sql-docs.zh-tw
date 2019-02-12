@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185388"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023579"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
   以座標為基礎的圖表類型 (直條圖、橫條圖、區域圖、點圖、折線圖和範圍圖) 具有兩個座標軸，可用來分類及顯示資料關聯性。 每個座標軸都會套用不同類型的格式設定。  
@@ -52,7 +52,7 @@ ms.locfileid: "48185388"
   
  當您將欄位從資料集拖曳到圖表介面上時，圖表會決定這個欄位是屬於類別目錄軸或值軸。  
   
- 值軸通常是圖表的垂直軸 (或稱 Y 軸)， 用來顯示圖表所繪製的數值資料值。 拖曳到資料欄位區域中的欄位會繪製在值軸上。 類別目錄軸通常是圖表的水平軸 (或稱 X 軸)。 這些軸在橫條圖中則完全相反。 在橫條圖類型中，類別目錄軸是垂直軸，而值軸是水平軸。 如需詳細資訊，請參閱 <<c0> [ 橫條圖&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。</c0>  
+ 值軸通常是圖表的垂直軸 (或稱 Y 軸)， 用來顯示圖表所繪製的數值資料值。 拖曳到資料欄位區域中的欄位會繪製在值軸上。 類別目錄軸通常是圖表的水平軸 (或稱 X 軸)。 這些軸在橫條圖中則完全相反。 在橫條圖類型中，類別目錄軸是垂直軸，而值軸是水平軸。 如需詳細資訊，請參閱 [橫條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>圖表如何計算軸標籤間隔  
  在設定軸標籤的格式之前，您應該先了解圖表如何計算軸標籤間隔。 如此才能設定必要的屬性，以達到所要的軸標籤行為。  
@@ -92,13 +92,13 @@ ms.locfileid: "48185388"
  [名稱] 欄位會沿著類別目錄軸繪製。 圖表會計算出 4 到 6 個標籤，並計算自動調整設定，以決定如何在類別目錄軸上放置標籤而不致導致標籤衝突。 結果是某些類別目錄標籤可能會省略。 您可以個別地覆寫每個軸的自動調整選項。  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>在類別目錄軸上顯示所有標籤  
- 在值軸上，軸間隔會為圖表上的資料點提供一致的量值； 不過，在類別目錄軸上，這項功能則可能導致類別目錄無法顯示軸標籤。 通常您會想要標示所有的類別目錄。 可以將間隔數設定為 1 來顯示所有的類別目錄。  如需詳細資訊，請參閱 <<c0> [ 指定軸間隔&#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)。</c0>  
+ 在值軸上，軸間隔會為圖表上的資料點提供一致的量值； 不過，在類別目錄軸上，這項功能則可能導致類別目錄無法顯示軸標籤。 通常您會想要標示所有的類別目錄。 可以將間隔數設定為 1 來顯示所有的類別目錄。  如需詳細資訊，請參閱 [指定軸間隔 &#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  若在軸上以手動間隔來取代自動標籤功能，則圖表必須正確地重新調整所有其他元素的大小。 結果是您可能會在標籤的大小及位置，或是圖表其他元素的大小方面，遭遇未預期的結果。  
   
 ## <a name="variable-axis-intervals"></a>可變的軸間隔  
- 不論大小為何，圖表都會計算大約 5 個軸標籤。 如果圖表較寬或較高，而您只在軸上顯示 5 個標籤，則每個標籤之間可能會出現很大的間距。 這會使得根據軸來識別每個資料點的值更為困難。 若要避免在較寬或較高的圖表上發生這個問題，可以設定可變的軸間隔。 根據相對應的軸，圖表會依其寬度或高度來計算軸上可出現的最佳化標籤數。 如需詳細資訊，請參閱 <<c0> [ 指定軸間隔&#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)。</c0>  
+ 不論大小為何，圖表都會計算大約 5 個軸標籤。 如果圖表較寬或較高，而您只在軸上顯示 5 個標籤，則每個標籤之間可能會出現很大的間距。 這會使得根據軸來識別每個資料點的值更為困難。 若要避免在較寬或較高的圖表上發生這個問題，可以設定可變的軸間隔。 根據相對應的軸，圖表會依其寬度或高度來計算軸上可出現的最佳化標籤數。 如需詳細資訊，請參閱 [指定軸間隔 &#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)。  
   
 ## <a name="sorting-axis-values"></a>軸值排序  
  類別目錄會依其在結果集中的出現順序沿著 X 軸顯示。 您可以藉由在查詢中加入 SORT 命令，或使用運算式排序資料集來變更群組順序。 圖表資料區域的排序方式與所有其他資料區相同。 如需如何排序資料的詳細資訊，請參閱[在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)。  
@@ -113,18 +113,18 @@ ms.locfileid: "48185388"
 -   在 [數列屬性] 對話方塊中，針對 [類別目錄欄位] 選項選取欄位或鍵入運算式。 圖表會針對您所指定之類別目錄欄位中的所有值加入軸間隔。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>從類別目錄軸加入或移除側邊界  
- 在橫條圖、直條圖和散佈圖類型中，圖表會自動在 X 軸的端點加入側邊界。 您不可以變更邊界的大小。 在所有其他圖表類型中，圖表中都不會加入側邊界。 如需詳細資訊，請參閱 <<c0> [ 新增或移除圖表中的邊界&#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。</c0>  
+ 在橫條圖、直條圖和散佈圖類型中，圖表會自動在 X 軸的端點加入側邊界。 您不可以變更邊界的大小。 在所有其他圖表類型中，圖表中都不會加入側邊界。 如需詳細資訊，請參閱 [加入或移除圖表中的邊界 &#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [軸標籤格式化成日期或貨幣&#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [在圖表中放置標籤&#40;報表產生器及 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [在圖表中放置標籤 &#40;報表產生器及 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [指定軸間隔&#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [指定軸間隔 &#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [新增或移除圖表中的邊界&#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [加入或移除圖表中的邊界 &#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [指定對數刻度&#40;報表產生器及 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [指定對數刻度 &#40;報表產生器及 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

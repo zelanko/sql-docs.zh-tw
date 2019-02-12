@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1fd420af1a50623f6f248e4dc99426907e987c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: f643f6a3ec09b95163ddbeab7177dc8903a11734
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365687"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036779"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件的效能計數器 (原生模式)
   本主題描述 `MSRS 2014 Web Service` 和 `MSRS 2014 Windows Service` 效能物件的效能計數器。  

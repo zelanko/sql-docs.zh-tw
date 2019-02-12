@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: deac736b28aa9b50c20d3a831685f1f2be62590c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2ad59a4389e8a214e12a80eef6e81127a8958562
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167688"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012439"
 ---
 # <a name="report-server-web-service"></a>報表伺服器 Web 服務
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 透過報表伺服器 Web 服務提供報表伺服器的完整功能。 報表伺服器 Web 服務是一種具有 SOAP API 的 XML Web 服務。 它使用 SOAP over HTTP，並做為用戶端程式與報表伺服器之間的通訊介面。 Web 服務提供兩個端點 (一個用於報表執行，一個用於報表管理)，並含有可公開報表伺服器功能的方法，這些方法可讓您為任何部分的報表生命週期建立自訂工具。  
@@ -70,7 +70,7 @@ Reporting Services 可用的 Web 服務開發選項
   
 -   對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的特性與功能有深入的了解。  
   
--   對 SOAP 和 [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)] 有確實的了解。  
+-   對 SOAP 和 [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)]有確實的了解。  
   
 -   如果您計畫使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 作為開發平台，則需要有使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 等 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 相容語言的開發經驗。  
   

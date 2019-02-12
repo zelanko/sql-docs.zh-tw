@@ -1,5 +1,5 @@
 ---
-title: 第 5 課：格式化報表 (Reporting Services) | Microsoft Docs
+title: 第 5 課：格式化報表 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df56110f96364f4cecd3c9d8d25d39e3fca74392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181038"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026282"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 課：格式化報表 (Reporting Services)
   既然您已經將資料區域和某些欄位加入到銷售訂單報表，您可以格式化日期和貨幣欄位，以及資料行標頭。  
   
  本主題內容：  
@@ -93,10 +93,10 @@ ms.locfileid: "48181038"
 5.  按一下 **[檔案]** 功能表上的 **[全部儲存]** ，即可儲存報表。  
   
 ## <a name="next-steps"></a>後續步驟  
- 您已經成功格式化資料行標頭和日期以及貨幣值。 下一步，您會將群組和總計加入至報表。 請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+ 您已經成功格式化資料行標頭和日期以及貨幣值。 下一步，您會將群組和總計加入至報表。 請參閱[第 6 課：加入群組和總計&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化數字和日期&#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

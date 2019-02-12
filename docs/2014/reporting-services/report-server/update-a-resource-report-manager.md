@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5482a935a5357d4557a6ffd202feac6be07900e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 71ccf123b9c8f5dba751affaae0374c90b5a8d99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130354"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020220"
 ---
 # <a name="update-a-resource-report-manager"></a>更新資源 (報表管理員)
   您可以使用新版本來取代舊版本，以此方式更新資源。 資源是一些項目，儲存在包含您上傳之檔案中之內容的報表伺服器上。 您可以將新的或不同的檔案內容匯入現有的資源，以取代現有的資源。 更新資源提供一種方式，可以更新內容，同時保留資源的現有屬性與安全性設定。  
@@ -45,7 +45,7 @@ ms.locfileid: "48130354"
  如果您更新的資源包含在報表中所使用的影像，您就需要重新整理報表才看得到更新的影像。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容頁&#40;報表管理員&#41;](../contents-page-report-manager.md)   
+ [內容頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
  [上傳檔案頁面 &#40;報表管理員&#41;](../upload-file-page-report-manager.md)   
  [上傳檔案到資料夾](upload-files-to-a-folder.md)   
  [報表管理員 F1 說明](../report-manager-f1-help.md)  

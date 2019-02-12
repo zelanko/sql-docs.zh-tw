@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b052ccbd1b91ea66f150dc0995eeeb33994a5e53
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+manager: kfile
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439520"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012090"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的報表。 其設計介面位於視窗的中央、[功能區] 位於上方，而 [報表資料]、[群組] 和 [屬性] 窗格以及 [報表組件庫] 分別位於左側、下方和右側。 設計介面是您可以加入和組織報表項目的位置。 [功能區] 會將傳統的功能表項目組織成可讓您輕鬆地找到並使用的類別目錄。 這些窗格會協助您加入、選取並組織報表資源，以及變更報表項目屬性。  

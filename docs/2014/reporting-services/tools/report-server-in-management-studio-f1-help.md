@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4109625d2f596d095a8b691bc11b164b67506f72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6f9143c2a93bc5a5c6ffbc116745511de58755d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179218"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023999"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio F1 說明中的報表伺服器
   此章節包含有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，可用來管理報表伺服器之對話方塊的主題。  

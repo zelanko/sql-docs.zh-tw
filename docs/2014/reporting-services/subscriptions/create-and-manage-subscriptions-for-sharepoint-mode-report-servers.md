@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8439c48f7379b983b46edcaf1111606c1a3fbcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193198"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040639"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
   您可以建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，傳遞以 SharePoint 模式報表伺服器整合的 SharePoint Web 應用程式報表。 訂閱可以將報表傳遞至文件庫、檔案資料夾，或以電子郵件傳送。 本主題摘要說明建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱的需求與步驟。  
@@ -31,9 +31,9 @@ ms.locfileid: "48193198"
   
  建立訂閱時，有三種方式可以指定其傳遞：  
   
--   **文件庫**：您可以建立訂閱，以便將以原始報表為基礎的文件傳遞至與原始報表位於相同 SharePoint 網站中的程式庫。 您無法將文件傳遞至相同網站集合中另一部伺服器或另一個網站上的程式庫。 若要傳遞文件，您必須在報表要傳遞至其中的程式庫上擁有「新增項目」權限。  
+-   **文件庫**:您可以建立訂閱，以便將以原始報表為基礎的文件傳遞至與原始報表位於相同 SharePoint 網站中的文件庫。 您無法將文件傳遞至相同網站集合中另一部伺服器或另一個網站上的程式庫。 若要傳遞文件，您必須在報表要傳遞至其中的程式庫上擁有「新增項目」權限。  
   
--   **檔案資料夾：** 您可以將以原始報表為基礎的文件傳遞至檔案系統上的共用資料夾。 您必須選取可透過網路連接存取的現有資料夾。  
+-   **記錄檔資料夾：** 您可以將以原始報表為基礎的文件傳遞至檔案系統上的共用資料夾。 您必須選取可透過網路連接存取的現有資料夾。  
   
 -   **電子郵件：** 如果報表伺服器設定為使用報表伺服器電子郵件傳遞延伸模組，您就可以建立將報表或已匯出報表檔案 (以輸出格式儲存) 傳送至收件匣的訂閱。 若只要接收通知，但不接收報表或報表 URL，請清除 **[包含這個報表的連結]** 和 **[在訊息內顯示報表]** 核取方塊。  
   
@@ -158,9 +158,9 @@ ms.locfileid: "48193198"
 3.  按一下訂閱旁的核取方塊，然後按一下 **[刪除]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [訂閱與傳遞&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)   
- [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)   
+ [Reporting Services 中的檔案共用傳遞](file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的 SharePoint 文件庫傳遞](sharepoint-library-delivery-in-reporting-services.md)   
  [為電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   

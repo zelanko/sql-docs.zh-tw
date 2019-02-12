@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 37d858e465e67bfba98da5d4ad9a0c44fbf1e46b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102838"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027190"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 函數 (報表產生器及 SSRS)
   傳回運算式所指定之所有非 Null 數值的聯集 (在給定範圍中評估)。  
@@ -33,13 +33,13 @@ Union(expression, scope, recursive)
   
 #### <a name="parameters"></a>參數  
  *expression*  
- (`SqlGeometry`或`SqlGeography`) 要執行彙總運算式。  
+ (`SqlGeometry` 或 `SqlGeography`) - 要在其上執行彙總的運算式。  
   
  *範圍 (scope)*  
  (`String`) 選擇性。 包含要套用彙總函式之報表項目的資料集、群組或資料區的名稱。 如果未指定 *scope* ，則使用目前的範圍。  
   
  *遞迴*  
- (**列舉型別**) 選擇性。 `Simple` （預設值） 或`RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
+ (**列舉型別**) 選擇性。 `Simple` (預設值) 或 `RdlRecursive`。 指定是否要以遞迴方式執行彙總。  
   
 ## <a name="return"></a>傳回  
  根據運算式類型傳回空間物件 (`SqlGeometry` 或 `SqlGeography`)。 如需詳細資訊`SqlGeometry`並`SqlGeography`空間資料類型，請參閱[空間資料類型概觀](../../relational-databases/spatial/spatial-data-types-overview.md)。  
@@ -64,7 +64,7 @@ Union(expression, scope, recursive)
  如需遞迴彙總的詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 ## <a name="example"></a>範例  
- 下表顯示的範例`SqlGeometry`運算式和`Union`產生顯示空間資料的 WKT （已知文字） 格式的運算式。  
+ 下表顯示 `SqlGeometry` 運算式和 `Union` 結果運算式的範例，使用適用於空間資料的 WKT (已知文字) 格式顯示。  
   
 |具有空間資料的欄位|範例|聯集結果|  
 |-----------------------------|-------------|------------------|  
@@ -79,9 +79,9 @@ Union(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

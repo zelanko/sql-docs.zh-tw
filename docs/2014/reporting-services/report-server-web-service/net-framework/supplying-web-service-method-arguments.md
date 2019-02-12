@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 92cbee94cad189a4752a2fb3300894dcb1c4c5c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 82e389f0c09ddc75fb7bbfa09e24cb18cf154f3e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073998"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033839"
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服務方法引數
   報表伺服器 Web 服務方法會透過 HTTP 使用 SOAP 在指定的 URL 傳送要求給服務。 服務會接收要求、處理要求，然後傳回回應。 這些要求和回應是 XML 文件的形式。  

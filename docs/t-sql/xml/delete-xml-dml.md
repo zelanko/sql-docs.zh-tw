@@ -3,7 +3,6 @@ title: delete (XML DML) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - delete statement [XML DML]
 - deleting nodes
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc9422942b0f4e82444f4213aed62b2b4622894
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f6c2fd2c71c5272b8104eaf5b24fa8e7c0a9fc8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699766"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038549"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

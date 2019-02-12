@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8366781f25829b0063479c2874a56c184e73bad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355707"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036909"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 課：使用供應商知識庫清理供應商資料
   您可以在這一課中，清理 Excel 檔案中的供應商資料來使用**供應商**您在第 1 課中建立的知識庫。 DQS 中的資料清理包含**電腦輔助的程序**，以分析資料符合知識庫中的知識，以及**互動式處理序**，可讓您檢閱並修改電腦輔助的程序的結果。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 請參閱[資料清理](https://msdn.microsoft.com/library/gg524800.aspx)如需詳細資訊。  

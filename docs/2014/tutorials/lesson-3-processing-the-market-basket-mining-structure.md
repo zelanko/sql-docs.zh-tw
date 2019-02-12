@@ -1,25 +1,24 @@
 ---
-title: 第 3 課： 處理購物籃採礦結構 |Microsoft Docs
+title: 第 3 課：處理購物籃採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095a043f-cf6f-45bb-a021-ae4e1b535c65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 979738186c9af128087049e71fa248d41fd27b50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192248"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018260"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>第 3 課：處理購物籃採礦結構
-  在這一課，您將使用[插入&#40;DMX&#41; ](/sql/dmx/insert-into-dmx)陳述式的 vAssocSeqLineItems 和 vAssocSeqOrders 從[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]範例資料庫來處理採礦結構和採礦模型在中建立[第 1 課： 建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)並[第 2 課： Adding Mining Models to Market Basket Mining Structure&lt](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。  
+  在這一課，您將使用[插入&#40;DMX&#41; ](/sql/dmx/insert-into-dmx)陳述式的 vAssocSeqLineItems 和 vAssocSeqOrders 從[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]範例資料庫來處理採礦結構和採礦模型在中建立[第 1 課：建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)和[第 2 課：將採礦模型加入購物籃採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。  
   
  當您處理採礦結構時，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會讀取來源資料並建立支援採礦模型的結構。 當您處理採礦模型時，採礦結構所定義的資料會透過您選擇的資料採礦演算法來傳遞。 此演算法會搜尋趨勢和模式，然後將此資訊儲存在採礦模型中。 因此，採礦模型不包含實際來源資料，而包含演算法所發現的資訊。 如需有關處理採礦模型的詳細資訊，請參閱 <<c0> [ 處理需求和考量&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。</c0>  
   

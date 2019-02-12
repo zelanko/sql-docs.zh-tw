@@ -1,5 +1,5 @@
 ---
-title: 第 8 課：建立資料篩選 | Microsoft Docs
+title: 第 8 課：建立資料篩選 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189918"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037060"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 課：建立資料篩選
   在父報表上加入鑽研動作後，下一步是要針對您為子報表定義的資料表建立資料篩選。  
@@ -44,7 +44,7 @@ ms.locfileid: "48189918"
   
 5.  按一下 等於 (**=**) 中的運算子**運算子**下拉式清單。  
   
-6.  旁按一下 [運算式] 按鈕**值**欄位中，按一下**參數**中**分類**區域中，然後再按兩下`productid`中**值**區域。 [設定運算式對象: 值] 欄位現在應該包含類似 **=Parameters!productid.Value** 的運算式。  
+6.  旁按一下 [運算式] 按鈕**值**欄位中，按一下**參數**中**分類**區域中，然後再按兩下`productid`中**值**區域。 **設定運算式對象：值**欄位現在應該包含類似於運算式 **= 參數 ！ productid。值**。  
   
 7.  按一下 [ **[確定]** 並 **[確定]** 中再次**Tablix 屬性**] 對話方塊。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "48189918"
   
 2.  建立接受整數類型參數 `productid` 且傳回 `datatable` 物件的新函數，並執行下列操作。  
   
-    1.  建立資料集的執行個體`DataSet2`，步驟 2 中建立[第 4 課： 定義子報表的資料連接和資料表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  建立資料集的執行個體`DataSet2`，步驟 2 中建立[第 4 課：定義子報表的資料連接和資料表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
-    2.  建立與 SqlServer 資料庫的連接，以執行 **第 4 課：定義子報表的資料連接和資料表**中定義的查詢。  
+    2.  建立執行中定義的查詢與 SqlServer 資料庫的連接**第 4 課：定義資料連接和 DataTable 子報表**。  
   
     3.  查詢會傳回未篩選的資料。  
   
@@ -166,9 +166,9 @@ ms.locfileid: "48189918"
   
 2.  建立接受整數類型參數 `productid` 且傳回 `datatable` 物件的新函數，並執行下列操作。  
   
-    1.  建立資料集的執行個體`DataSet2`，步驟 2 中建立[第 4 課： 定義子報表的資料連接和資料表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
+    1.  建立資料集的執行個體`DataSet2`，步驟 2 中建立[第 4 課：定義子報表的資料連接和資料表](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)。  
   
-    2.  建立與 SqlServer 資料庫的連接，以執行 **第 4 課：定義子報表的資料連接和資料表**中定義的查詢。  
+    2.  建立 sql Server 資料庫來執行查詢所定義的連接**第 4 課：定義資料連接和 DataTable 子報表**。  
   
     3.  查詢將包含參數 `productid`，確保傳回的資料是根據父報表中選取的 `ProductID` 篩選。  
   

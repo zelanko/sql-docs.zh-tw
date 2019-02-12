@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 98dc45752779a6610d735040e16bc5783447396d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8bbbcc9ba9f1eefad4801a0e9294affea4ef39a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107054"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020581"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonType 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定報表伺服器會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服務帳戶、Windows 使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入來存取報表伺服器資料庫。 唯讀。  
@@ -54,9 +54,9 @@ public int DatabaseLogonType;
   
 -   2 代表要當做服務登入  
   
- 如果您指定 0 (Windows)，您必須在設定的值[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)屬性設為對應的有效 Windows 使用者帳戶。  
+ 如果您指定了 0 (Windows)，就必須將 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) 屬性中的值設定為對應的有效 Windows 使用者帳戶。  
   
- 如果您指定 1 (SQL Server)，請確定值[DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md)對應至有效[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
+ 如果您指定 1 (SQL Server)，請確定 [DatabaseLogonAccount](configurationsetting-property-databaselogonaccount.md) 的值對應至有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
  如果您指定了 2 (Windows 服務)，報表伺服器就會使用 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 帳戶和 Windows 服務帳戶來存取報表伺服器資料庫。 會忽略 DatabaseLogonAccount 屬性。  
   

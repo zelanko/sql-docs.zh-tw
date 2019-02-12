@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 58ab7a391134a36d305e3a1dc3a64543fbe4f673
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81e490077db54e0e373b24885ff919ae2b3dd7ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066478"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038658"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>散佈圖 (報表產生器及 SSRS)
-  散佈圖會將數列顯示成一組點。 這些值會以點在圖表上的位置來表示。 類別目錄會由圖表上不同的標記來表示。 散佈圖通常用來比較跨越類別目錄的彙總資料。 如需有關如何將資料加入至散佈圖的詳細資訊，請參閱 <<c0> [ 圖表&#40;報表產生器及 SSRS&#41;</c0>](charts-report-builder-and-ssrs.md)  
+  散佈圖會將數列顯示成一組點。 這些值會以點在圖表上的位置來表示。 類別目錄會由圖表上不同的標記來表示。 散佈圖通常用來比較跨越類別目錄的彙總資料。 如需如何將資料新增至散佈圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  下圖顯示散佈圖的範例。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48066478"
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [折線圖&#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)  
+ [將圖表 &#40;報表產生器及 SSRS&#41; 格式化](formatting-a-chart-report-builder-and-ssrs.md)   
+ [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 818400a678b16f524e79da607a25775ad756ca5d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374490"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025199"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>第 2 課：使用 xsd 工具的 RDL 結構描述產生類別
   建立 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 專案之後，下一個步驟就是擷取報表定義結構描述的本機副本，並執行 XML 結構描述定義工具 (Xsd.exe)。  

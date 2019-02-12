@@ -2,10 +2,8 @@
 title: 防火牆規則預存程序 (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2c5e717dc1754853614293dd8b9abb561ce0f21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1794f45c95095dbbfaac065eed40b4ef23cac725
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752296"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022319"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>防火牆規則預存程序 (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

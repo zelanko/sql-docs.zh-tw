@@ -1,24 +1,21 @@
 ---
-title: 工作 3： 驗證主資料管理員中的資料 |Microsoft Docs
+title: 工作 3：驗證資料在主資料管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09dfc672e446e1265ee29625a8bf3a2d1e16f77f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 230c8bbeb2736a3f9810a65dd445013d22e41f03
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022919"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>工作 3：在主資料管理員中驗證資料
   在這個工作中，您確認**供應商**上建立實體**MDS**使用**主資料管理員 Web 應用程式**。  
@@ -32,6 +29,6 @@ ms.locfileid: "48108848"
 3.  檢閱儲存在 MDS 中的資料。 如果看不到資料，確認您選取**供應商**for**模型**在首頁上，啟動之前**總管**。 您可以加入或使用刪除從供應商清單**Add Member**並**刪除成員**工具列上的按鈕。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4&#40;選擇性&#41;： 結合、 比對及發行新的資料集](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
+ [工作 4&#40;選擇性&#41;:結合、 比對及發行新的資料集](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
   
   

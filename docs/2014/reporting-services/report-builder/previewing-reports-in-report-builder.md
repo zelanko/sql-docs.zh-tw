@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 16a1f51e5dec779dc185f1f1e4012a3d26069a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081078"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041559"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
   當您建立報表時，經常預覽報表以確認報表如預期般顯示相當有協助。 若要預覽報表，按一下 **[執行]**。 報表隨即在預覽模式下呈現。  
@@ -82,6 +82,6 @@ ms.locfileid: "48081078"
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [儲存報表&#40;報表產生器&#41;](saving-reports-report-builder.md)  
+ [儲存報表 &#40;報表產生器&#41;](saving-reports-report-builder.md)  
   
   

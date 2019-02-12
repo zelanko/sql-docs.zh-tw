@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1ecface6931e73f2153e32ee9ae71ed22ca56057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136898"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027119"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>發行與重新發行報表組件 (報表產生器及 SSRS)
   您可以使用預設值在預設位置發行報表組件，或者您可以編輯報表組件中繼資料 (例如名稱和描述)，並將其儲存在報表伺服器的其他位置。 如果您有正確的權限，也可以將其儲存到與報表伺服器整合的 SharePoint 網站。  
@@ -35,7 +35,7 @@ ms.locfileid: "48136898"
   
      否則，按一下 [發行前檢閱並修改報表組件]。  
   
-3.  編輯報表組件名稱和描述：按兩下名稱可以編輯名稱，而在 [描述] 欄位中按一下則可新增描述。  
+3.  編輯報表組件名稱和描述：按兩下名稱，即可加以編輯，然後按一下**描述**欄位來新增描述。  
   
     > [!NOTE]  
     >  最好提供報表組件名稱和描述，以協助使用者在搜尋時識別它。 若是完整路徑，報表組件名稱的最大長度為 260 個字元，包括伺服器上的資料夾名稱，後面接著報表組件的實際名稱。  
@@ -58,10 +58,10 @@ ms.locfileid: "48136898"
 >  如果您將其發行為新的報表組件，它將會擁有一個新的唯一識別碼。 如果原始報表組件變更，它不會再接收更新。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [報表組件和報表產生器中的資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [報表產生器中的報表組件和資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [瀏覽報表組件及設定預設資料夾&#40;報表產生器及 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [瀏覽報表組件及設定預設資料夾 &#40;報表產生器及 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7420b28bcdf12b0e173b097396972d3cc53ef973
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6022c1fee61e16445f3ec81eff0f8113ce22ab1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176588"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031339"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>建立報表記錄 (SharePoint 整合模式的 Reporting Services)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 每個快照集都是報表的副本，因為它在報表建立時就存在了。 它包含了快照集建立時報表最新的配置和資料。 轉譯資訊不會與快照集一起儲存。 當您在報表記錄中開啟快照集時，它就會以 HTML 在報表檢視器 Web 組件中開啟。 轉譯完成之後，您可以將它匯出成其他的應用程式格式。  

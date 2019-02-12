@@ -1,5 +1,5 @@
 ---
-title: 第 4 課：將資料表新增至報表 (Reporting Services) | Microsoft Docs
+title: 第 4 課：將資料表加入至報表 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d990d18498547434a6f7774dfcee076d2986ee40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220808"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033229"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表加入至報表 (Reporting Services)
   定義資料集之後，您就可以開始設計報表。 您可以將資料區域、文字方塊、影像和您要包含在報表中的其他項目拖放至設計介面來建立報表配置。  
@@ -47,7 +47,7 @@ ms.locfileid: "48220808"
     > [!NOTE]  
     >  資料行標頭是 Line Total。 報表設計師會將 LineTotal 分割成兩個字，藉以自動建立資料行的易記名稱。  
   
-     下圖顯示已擴展這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
+     下圖顯示已填入這些欄位的資料表資料區域：日期、 訂單、 產品、 Qty 和行總計。  
   
      ![設計，具有標頭資料列和詳細資料列的資料表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "設計，資料表具有標頭資料列和詳細資料列")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48220808"
 >  按一下 **[檔案]** 功能表上的 **[全部儲存]** ，即可儲存報表。  
   
 ## <a name="next-steps"></a>後續步驟  
- 您已經成功將資料表資料區域加入到報表中、將欄位加入到資料區域中，並預覽過您的報表。 下一步，您將格式化資料行標頭和日期以及貨幣值。 請參閱[第 5 課：格式化報表 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
+ 您已經成功將資料表資料區域加入到報表中、將欄位加入到資料區域中，並預覽過您的報表。 下一步，您將格式化資料行標頭和日期以及貨幣值。 請參閱[第 5 課：格式化報表&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料表 &#40;報表產生器及 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   

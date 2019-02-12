@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7f4722a2b338b0187bdd93cb9501e626c42acf02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031219"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>連接篩選或文件網頁組件 (SharePoint 整合模式的 Reporting Services)
   如果您使用的是 SharePoint 產品，可以建立包含篩選網頁組件或文件網頁組件以及報表檢視器網頁組件的儀表板或網頁組件頁面。 支援的版本為 [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]。 另外也支援 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] 或 [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007。 藉由連接篩選網頁組件，使用者可以在篩選網頁組件中選取篩選值，並將值傳送到相同頁面上的參數化報表； 藉由連接文件網頁組件，使用者則可在文件庫中按一下報表，並在相鄰的報表檢視器網頁組件中檢視該報表。  
@@ -77,8 +77,8 @@ ms.locfileid: "48166888"
 11. 簽入變更並儲存頁面。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表檢視器 Web 組件新增至網頁&#40;Reporting Services SharePoint 整合模式&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [在 SharePoint 網站上的報表檢視器 Web 組件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [將報表檢視器 Web 組件加入網頁中 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [SharePoint 網站上的報表檢視器 Web 組件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [自訂報表檢視器 Web 組件](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   

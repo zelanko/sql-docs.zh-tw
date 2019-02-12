@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ff8e8792079fcca8ed4affa373964ec6cb39fe1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111016"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012460"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  
@@ -41,7 +41,7 @@ ms.locfileid: "48111016"
   
 #### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>如何重新建立加密金鑰 (Reporting Services 組態工具)  
   
-1.  停用報表伺服器 Web 服務和 HTTP 存取修改`IsWebServiceEnabled`rsreportserver.config 檔案中的屬性。 此步驟會讓驗證要求暫時停止送給報表伺服器，而不會完全關閉伺服器。 您必須有最少的服務，好讓您可以重新建立金鑰。  
+1.  透過在 rsreportserver.config 檔案中修改 `IsWebServiceEnabled` 屬性，停用報表伺服器 Web 服務和 HTTP 存取。 此步驟會讓驗證要求暫時停止送給報表伺服器，而不會完全關閉伺服器。 您必須有最少的服務，好讓您可以重新建立金鑰。  
   
      如果您是重新建立報表伺服器向外延展部署的加密金鑰，請針對部署中的所有執行個體停用這個屬性。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48111016"
   
     2.  開啟 rsreportserver.config 檔案。  
   
-    3.  針對`IsWebServiceEnabled`屬性，指定`False`，然後儲存您的變更。  
+    3.  針對 `IsWebServiceEnabled` 屬性，指定 `False`，然後儲存您的變更。  
   
 2.  啟動 Reporting Services 組態工具，然後連接到您要設定的報表伺服器執行個體。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48111016"
   
 4.  重新啟動報表伺服器 Windows 服務。 如果是重新建立向外延展部署的加密金鑰，請重新啟動所有執行個體上的服務。  
   
-5.  重新啟用 Web 服務和 HTTP 存取修改`IsWebServiceEnabled`rsreportserver.config 檔案中的屬性。 如果是處理向外延展部署，請為所有執行個體執行此作業。  
+5.  透過在 rsreportserver.config 檔案中修改 `IsWebServiceEnabled` 屬性，重新啟用 Web 服務和 HTTP 存取。 如果是處理向外延展部署，請為所有執行個體執行此作業。  
   
 #### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>如何重新建立加密金鑰 (rskeymgmt)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "48111016"
   
 1.  針對每個共用資料來源，您必須重新輸入連接字串。  
   
-2.  針對使用預存認證的每個報表與共用資料來源，您必須重新輸入使用者名稱與密碼，然後儲存。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+2.  針對使用預存認證的每個報表與共用資料來源，您必須重新輸入使用者名稱與密碼，然後儲存。 如需詳細資訊，請參閱《 [線上叢書》中的](../../integration-services/connection-manager/data-sources.md) 指定報表資料來源的認證和連接資訊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 3.  針對每個資料驅動訂閱，開啟每個訂閱，並重新輸入訂閱資料庫的認證。  
   
 4.  針對使用加密資料的訂閱 (這包括使用加密的檔案共用傳遞延伸模組和協力廠商傳遞延伸模組)，開啟每個訂閱並重新輸入認證。 使用報表伺服器電子郵件傳遞的訂閱並不使用加密資料，因此不受金鑰變更的影響。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [儲存加密的報表伺服器資料&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

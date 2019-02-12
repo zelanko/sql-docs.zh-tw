@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b40693cd426779f7878c1101fb57efa12ce4e6de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b6413a1cf3e25575078c2f126439cc03ca95a933
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023889"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState 方法 (WMI MSReportServer_ConfigurationSetting)
   開啟和關閉報表伺服器 Windows 與 Web 服務。  
@@ -44,13 +44,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>參數  
  *EnableWindowsService*  
- A`Boolean`值，指出 Windows 服務的狀態。 值為`true`啟動報表伺服器 Windows 服務，而值`false`停止 Windows 服務。  
+ 表示 Windows 服務狀態的 `Boolean` 值。 值為 `true` 會啟動報表伺服器 Windows 服務。值為 `false` 會停止 Windows 服務。  
   
  *EnableWebService*  
  A`Boolean`值，指出狀態的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Web 服務。 值為 `true` 會啟動報表伺服器 Web 服務。值為 `false` 會停止 Web 服務。  
   
  *EnableReportManager*  
- A`Boolean`值，指出報表管理員的所需的狀態。  
+ 表示報表管理員所需狀態的 `Boolean` 值。  
   
  *HRESULT*  
  [out] 指出呼叫成功或失敗的值。  

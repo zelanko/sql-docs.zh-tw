@@ -15,14 +15,14 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202883"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025869"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>建立、刪除或修改共用資料來源 (報表管理員)
   共用資料來源會指定資料來源的連接屬性。 如果您擁有大量報表、模型或資料驅動訂閱所使用的資料來源，請考慮建立共用資料來源，以便排除必須在多個位置維護相同連接資訊的負擔。  
@@ -40,7 +40,7 @@ ms.locfileid: "48202883"
   
 3.  按一下 **[新增資料來源]**。 [新增資料來源] 頁面隨即開啟。  
   
-4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : \@ & = +，$ / * \< > |" /.  
+4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : \@ & = + , $ / * \< > | " /.  
   
 5.  選擇性地輸入描述，以提供使用者有關連接的資訊。 此描述會出現在報表管理員的 [內容] 頁面上。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48202883"
   
 7.  針對 [連接字串]，指定報表伺服器用於連線到資料來源的連接字串。 建議您不要在連接字串中指定認證。  
   
-     下列範例說明的連接字串連接至本機[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫：  
+     下列範例將說明用以連接至本機 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -64,7 +64,7 @@ ms.locfileid: "48202883"
   
     -   如果資料來源沒有使用認證 (例如，如果資料來源是從檔案系統存取的 XML 檔)，請按一下 [不需要認證]。 只有當這種認證類型適用於資料來源時，您才應該指定此認證類型。 如果您針對需要驗證的資料來源選取此選項，連接將會失敗。 如果您選取此選項，請務必設定自動執行帳戶，以便在使用者認證無法使用時，允許報表伺服器連接至其他電腦以擷取資料或檔案。  
   
-     如需有關如何設定認證的詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+     如需設定認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 9. 按一下 [測試連線] 按鈕，驗證資料來源設定。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "48202883"
   
 ## <a name="see-also"></a>另請參閱  
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [建立、 修改及刪除共用的資料來源&#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [建立、修改和刪除共用資料來源 &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [管理報表資料來源](report-data/manage-report-data-sources.md)   
- [設定報表的資料來源屬性&#40;報表管理員&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [設定報表的資料來源屬性 &#40;報表管理員&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

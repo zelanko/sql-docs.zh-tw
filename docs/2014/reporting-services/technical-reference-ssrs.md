@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5f4904cf11ac1cb84acf9b6c0362d453d7b0fc0b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 455eaec943cb649023ecea1b9ee4964a23961191
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371140"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037739"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
   尋找工具及 PowerShell 參考文件以使用或管理 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  

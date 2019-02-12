@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181168"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043109"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>矩形和線條 (報表產生器及 SSRS)
   矩形和線條可在報表內建立視覺效果。 您可以從 [主資料夾] 索引標籤的 [框線] 區段設定這些報表項目的顯示屬性，而且可以使用 [屬性] 窗格來設定其他屬性。 您可以將背景色彩或影像、工具提示或書籤等功能加入至矩形。  
@@ -42,18 +42,18 @@ ms.locfileid: "48181168"
 
   
 ##  <a name="ReportBorder"></a> 加入報表框線  
- 您可以藉由將框線加入頁首、頁尾和報表主體本身來在報表中加入框線，而不必加入線條或矩形。 如需詳細資訊，請參閱[在報表中加入框線 &#40;報表產生器及 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)。  
+ 您可以藉由將框線加入頁首、頁尾和報表主體本身來在報表中加入框線，而不必加入線條或矩形。 如需詳細資訊，請參閱 [在報表中加入框線 &#40;報表產生器及 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)。  
   
 
   
 ##  <a name="HowTo"></a> 如何主題  
- [報表中加入框線&#40;報表產生器及 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
+ [在報表中加入框線 &#40;報表產生器及 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [加入矩形或容器&#40;報表產生器及 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [加入矩形或容器 &#40;報表產生器及 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
- [加入和修改線條&#40;報表產生器及 SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
+ [加入和修改線條 &#40;報表產生器及 SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [加入矩形或容器&#40;報表產生器及 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [加入矩形或容器 &#40;報表產生器及 SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

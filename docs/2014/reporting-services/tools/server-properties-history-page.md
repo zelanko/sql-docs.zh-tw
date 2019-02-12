@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: eaa801caa34181262c5ac8879d9b2a77ba127fdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2e6fb7ad7c50395aa40b31a98e9bd6bd8743875
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206058"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042729"
 ---
 # <a name="server-properties-history-page"></a>伺服器多個屬性 (記錄頁面)
   使用此頁面，即可設定要保留之報表記錄副本數目的預設值。 預設值會提供建立所有報表之報表記錄限制的初始設定。 您可以針對個別報表更改這些設定。  

@@ -4,21 +4,15 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-author: douglaslms
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 16356826909edbde5218ad509af6864817a856c1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399201"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037249"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>工作 3：從 Excel 檔案匯入定義域值
   在這個工作中，您匯入的值**狀態**從工作表的 Excel 檔案的網域。  

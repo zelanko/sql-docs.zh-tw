@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b5d14f94a9fdd71a628ddecdc1b91bad8e11e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2b3f2f6fc33a5722fdae20e3b3b351ab23c61f45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096680"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034129"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自訂組件物件
-  在某些情況下，您可能需要在初始化自訂組件類別時，初始化其中的屬性與欄位值。 您很可能需要使用報表全域物件集合中可用的值，來初始化自訂類別。 您可以透過覆寫報表之 **Code** 物件的 **OnInit** 方法來完成。 若要存取 **OnInit**，請使用報表定義的 **Code** 項目。 有兩個技術可初始化您計劃在報表中使用的自訂組件中類別之屬性或欄位值。您可以使用 **OnInit** 來宣告和建立類別的新執行個體，或者您可以使用 **OnInit** 來呼叫公開可用的方法。  
+  在某些情況下，您可能需要在初始化自訂組件類別時，初始化其中的屬性與欄位值。 您很可能需要使用報表全域物件集合中可用的值，來初始化自訂類別。 您可以透過覆寫報表之 **Code** 物件的 **OnInit** 方法來完成。 若要存取 **OnInit**，請使用報表定義的 **Code** 項目。 有兩個技術可初始化的屬性或欄位的值，您打算在報表中使用的自訂組件中的類別：您可以宣告並建立您的類別使用的新執行個體**OnInit**，或您可以呼叫公開可用的方法，使用**OnInit**。  
   
 ## <a name="global-object-collections-and-initialization"></a>全域物件集合與初始化  
  有幾個集合可供您初始化自訂類別變數。 您可以使用 **Globals** 和 **User** 集合。 叫用 **OnInit** 方法時，無法在報表生命週期內使用 **Parameters**、**Fields** 和 **ReportItems** 集合。 若要使用共用集合 **Globals** 或 **User**，您需要加入 **Report** 物件參考。 例如，若要根據存取報表之使用者的目前語言來初始化您的自訂類別，您的 **Code** 項目可能看起來如下所示：  

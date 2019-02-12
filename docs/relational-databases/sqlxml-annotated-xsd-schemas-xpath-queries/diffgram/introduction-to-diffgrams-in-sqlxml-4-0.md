@@ -11,16 +11,16 @@ helpviewer_keywords:
 - annotations [SQLXML]
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12746eec96373e5d5a66206081408fbe2d0d3544
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0c0213344f518139573f5f9b95e71704689a637c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255823"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016399"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>DiffGrams 的 SQLXML 4.0 簡介
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

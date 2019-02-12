@@ -1,9 +1,9 @@
 ---
-title: sys.dm_pdw_nodes (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_pdw_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b2a17f1fd57b70dbee056e66a76c0416b0a25c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a5df628a6b37c8d89843506c5b7f4c5050157158
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533566"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027390"
 ---
-# <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   保留的所有節點中的相關資訊[!INCLUDE[ssAPS](../../includes/ssaps-md.md)]。 它會列出每個設備中的節點的一個資料列。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 00dea3b8f7c13789d63700f64dcf01b698411ae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8595050b478743b7092787acf880425b24c5b1e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011290"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>跨多個形狀圖指定一致的色彩 (報表產生器及 SSRS)
   在非形狀圖上，您可以根據圖表中的數列索引，從調色盤選取新的色彩。 例如，圖表上的第一個數列將會對應到調色盤中的第一個色彩。 不過，對於形狀圖來說，這個行為是不同的。 在形狀圖上，調色盤中的每個色彩都會對應到資料集中的資料點。 例如，資料點 1 對應到調色盤中的第一個色彩，資料點 2 對應到調色盤中的第二個色彩等等。  

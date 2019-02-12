@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211938"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035299"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>探索購物籃模型 (中繼資料採礦教學課程)
   既然您已建立`Association`模型中，您可以使用瀏覽它[!INCLUDE[msCoName](../includes/msconame-md.md)]中的關聯檢視器**採礦模型檢視器**資料採礦設計師 索引標籤。 此教學課程會逐步引導您使用檢視器來探索項目之間的關聯性。 此檢視器可幫助您快速地查看哪些產品經常一起出現，並大概了解新興的模式。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)]關聯檢視器包含三個索引標籤：**規則**，**項目集**，和**相依性網路**。 因為每一個索引標籤都會呈現稍微不同的資料檢視，所以當您探索模型時，您通常會在不同的窗格之間來回切換幾次，以獲得有用的資訊。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]關聯檢視器包含三個索引標籤：**規則**，**項目集**，以及**相依性網路**。 因為每一個索引標籤都會呈現稍微不同的資料檢視，所以當您探索模型時，您通常會在不同的窗格之間來回切換幾次，以獲得有用的資訊。  
   
 -   [相依性網路 索引標籤](#bkmk_DepNet)  
   
@@ -81,11 +80,11 @@ ms.locfileid: "48211938"
 ##  <a name="bkmk_Itemsets"></a> 項目集 索引標籤  
  接下來，您將會深入了解此模型針對 Touring Tire 和 Touring Tire Tube 產品所產生的規則與項目集。 **項目集**索引標籤會顯示三個重要部分的資訊與相關項目集，[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯分析演算法會探索：  
   
--   **支援：** 發生項目集的交易數目。  
+-   **支援：** 發生在哪個項目集的交易數目。  
   
--   **大小：** 項目集內的項目數。  
+-   **大小：** 項目集內的項目數目。  
   
--   **項目：** 的每個項目中包含的項目清單。  
+-   **項目：** 每個項目集內包含之項目的清單。  
   
  演算法可能會產生許多項目集，這會因演算法參數的設定方式而不同。 檢視器中傳回的每個項目集都代表已賣出此項目的交易。 使用控制項的頂端**項目集**索引標籤上，您可以篩選檢視器顯示只有項目集包含指定的最小支援和項目集大小。  
   
@@ -138,9 +137,9 @@ ms.locfileid: "48211938"
 ##  <a name="bkmk_Rules"></a> 規則索引標籤  
  **規則**索引標籤會顯示此演算法會尋找的規則相關的下列資訊。  
   
--   **機率：** *可能性*的規則，定義為給定左邊項目右邊項目的機率。  
+-   **機率：***可能性*的規則，定義為給定左邊項目右邊項目的機率。  
   
--   **重要性：** 規則實用性的量值。 較大的值表示較好的規則。  
+-   **重要性：** 規則的實用性的量值。 較大的值表示較好的規則。  
   
      提供重要性可幫助您測量規則的實用性，因為單獨使用機率可能會產生誤導。 例如，如果每筆交易都包含一個水壺 (或許將水壺當做促銷活動的贈品自動加入到每一個客戶的購物車內)，此模型會建立一個規則來預測水壺的機率為 1。 如果這個規則只根據機率將會非常精確，但是無法提供實用的資訊。  
   
@@ -197,8 +196,8 @@ ms.locfileid: "48211938"
  [篩選採礦模型中的巢狀的資料表&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
- [第 4 課： 建立時序群集案例&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
+ [第 3 課：建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)   
+ [第 4 課：建立時序群集案例&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)   
  [Microsoft 關聯分析演算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 關聯分析演算法技術參考](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)  
   

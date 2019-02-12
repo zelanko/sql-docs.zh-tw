@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 10901f11e2466e2fff41f1898ca57d08321653b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2431e7a654b885c762f9801bafc55b842278234f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137118"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018050"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WebForms ReportViewer 控制項在 Web 應用程式中加以轉譯。  

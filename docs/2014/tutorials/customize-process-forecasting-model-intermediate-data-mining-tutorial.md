@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031679"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>自訂及處理預測模型 (中繼資料採礦教學課程)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法提供會影響模型建立方式以及時間資料分析方式的參數。 變更這些屬性會對採礦模型如何進行預測造成重大的影響。  
@@ -25,7 +24,7 @@ ms.locfileid: "48224473"
   
 1.  您要自訂您的模型處理時間週期新增的新值的方式*PERIODICITY_HINT*參數。  
   
-2.  您將學習 Microsoft 時間序列演算法的兩個其他重要參數：FORECAST_METHOD 和 PREDICTION_SMOOTHING。前者讓您控制用於預測的方法，後者則讓您自訂長期和短期預測的混合。  
+2.  您將學習 Microsoft 時間序列演算法的其他兩個重要參數：可讓您控制用於預測的方法，FORECAST_METHOD 和 PREDICTION_SMOOTHING，可讓您自訂長期和短期預測的混合。  
   
 3.  您可以選擇告知演算法要如何計算遺漏值。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224473"
 ## <a name="handling-missing-data-optional"></a>處理遺漏資料 (選擇性)  
  在許多情況下，您的銷售資料可能有填滿 Null 的間距，或可能有某分店錯過了報告期限，導致序列結尾處出現空白資料格。 在這種情況下，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會發出下列錯誤，而且不處理模型。  
   
- 「 錯誤 （資料採礦）： 時間戳記並未同步處理從數列\<數列名稱 >，採礦模型的\<模型名稱 >。 所有時間序列都必須在同一個時間標示結束，且不能有任意遺漏資料點。 將 MISSING_VALUE_SUBSTITUTION 參數設定為 Previous 或數值常數，即可在適用時自動修補遺漏的資料點。」  
+ 「 錯誤 （資料採礦）：時間戳記並未同步處理從數列\<數列名稱 >，採礦模型的\<模型名稱 >。 所有時間序列都必須在同一個時間標示結束，且不能有任意遺漏資料點。 將 MISSING_VALUE_SUBSTITUTION 參數設定為 Previous 或數值常數，即可在適用時自動修補遺漏的資料點。」  
   
  若要避免這個錯誤，您可以指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用下列任何一個方法，自動提供新值以填滿間距：  
   
@@ -107,6 +106,6 @@ ms.locfileid: "48224473"
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 時間序列演算法技術參考](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft 時間序列演算法](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [處理需求和考量&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 (資料採礦)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

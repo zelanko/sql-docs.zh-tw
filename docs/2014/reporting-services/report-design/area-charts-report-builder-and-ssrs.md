@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4d19fa1a5aca4ac67be6328646df47267218af42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f8970e77cf6ab77dc5dd4cc0544237d6a1269db2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190998"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034159"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>區域圖 (報表產生器及 SSRS)
-  區域圖會將數列顯示成一組用線條連接的點，線條下會有一個全部填滿的區域。 如需有關如何將資料新增至區域圖的詳細資訊，請參閱 <<c0> [ 圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。</c0>  
+  區域圖會將數列顯示成一組用線條連接的點，線條下會有一個全部填滿的區域。 如需如何將資料加入區域圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  下圖顯示堆疊區域圖的範例。 此資料非常適合在堆疊區域圖上顯示，因為此圖表可以顯示所有數列的總計，以及每個數列對於總計所佔據的比例。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48190998"
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
  [變更圖表類型 &#40;報表產生器及 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
- [空白和 Null 資料點在圖表中的&#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

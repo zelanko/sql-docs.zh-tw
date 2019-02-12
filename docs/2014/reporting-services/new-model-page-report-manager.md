@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138788"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010789"
 ---
 # <a name="new-model-page-report-manager"></a>新增模型頁面 (報表管理員)
   您可以使用這個頁面，從共用資料來源產生預設報表模型。 您只能從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度資料來源、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料來源和 Oracle 關聯式資料來源產生報表模型。  
   
  您在報表管理員中產生的模型是以共用資料來源的結構描述為基礎。 系統會針對資料來源中的所有資料表和資料行建立實體、資料夾和欄位。 您無法排除這些項目，也無法設定決定模型產生方式的選項。 如果您想要自訂或修改模型，就必須改用模型設計師。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-new-model-page"></a>若要開啟新增模型頁面  
@@ -42,7 +42,7 @@ ms.locfileid: "48138788"
  **名稱**  
  指定模型的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : \@ & = +，$ / * \< > |" /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **說明**  
  顯示模型的描述。 透過報表管理員檢視這個項目的使用者會在瀏覽資料夾階層時看到此描述。  

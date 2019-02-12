@@ -14,16 +14,16 @@ helpviewer_keywords:
 - mapping schema [SQLXML], queries
 - XPath queries [SQLXML], samples
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65b7e9841dcbe7c0b79ef96167a10616aa653867
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 643c8666ff1aea2d68f4a8e6ac04a4ec59ecef1c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715656"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014332"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>範例 XPath 查詢 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

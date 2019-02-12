@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220722"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010571"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>點選連結報表頁面 (報表管理員)
   當您按一下報表中包含的互動式資料時，點選連結報表就會顯示相關資料的資料表。 這些報表是報表伺服器根據您用來建立報表之模型中包含的資訊所產生的。 如果您不想要使用報表伺服器所產生的點選連結報表，可以建立自訂報表，以便將它們發行至報表伺服器並對應至模型中定義的互動式資料點。 您必須根據相同的模型在報表產生器中建立這些自訂報表，然後將它們發行至報表伺服器。 若要將自訂報表對應至模型中的項目，請使用報表管理員中的 [點選連結報表] 頁面。  
@@ -32,9 +32,9 @@ ms.locfileid: "48220722"
  雖然您可以選取任何能夠存取的報表，請只選取特別針對您正在設定之模型所建立的報表。  
   
 > [!NOTE]  
->  點選連結報表不是每個版本都可使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果您不確定您組織執行的是哪個版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
+>  並非 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的所有版本都可使用點選連結報表。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果您不確定您組織執行的是哪個版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-clickthrough-reports-page"></a>若要開啟點選連結報表頁面  

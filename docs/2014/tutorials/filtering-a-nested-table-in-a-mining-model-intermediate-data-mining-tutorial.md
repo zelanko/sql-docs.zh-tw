@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dcb1e84335100eda4155fa1f0a8a1cc9c65206e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159972"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027510"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>在採礦模型中篩選巢狀資料表 (中繼資料採礦教學課程)
   建立並探索模型之後，您決定要將焦點放在客戶資料子集上。 例如，您可能只要分析包含特定項目的購物籃，或是分析在特定期間未購買任何產品的客戶人口統計。  
@@ -111,7 +110,7 @@ ms.locfileid: "48159972"
  [預測關聯&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [模型篩選語法和範例&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [模型篩選語法和範例 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

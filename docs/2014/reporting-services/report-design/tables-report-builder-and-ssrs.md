@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: df19fffaec69eac9c3a80fe7fee1899994682a0b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7c5c384edbab7792f373b62417f7ad43832e1ff3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354544"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021425"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>資料表 (報表產生器及 SSRS)
   使用資料表顯示詳細資料、群組資料，或兩者的組合。 您可以依單一欄位、多個欄位或透過撰寫自己的運算式來分組資料。 您可以建立巢狀群組或獨立、相鄰的群組。 若要顯示群組資料的彙總值，將總計加入到群組中。 格式化資料列和資料行以反白顯示您要強調的資料。 您可以一開始隱藏詳細資料或群組資料並加入向下鑽研切換，以便讓使用者以互動方式選擇要顯示多少資料。  

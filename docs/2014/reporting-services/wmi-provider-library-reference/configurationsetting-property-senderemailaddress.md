@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d25a99bd2c46b8c724706b012f7d86f250b58b8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f22084ae3eeea3f27630ccab5a930171ae64a80
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040189"
 ---
 # <a name="senderemailaddress-property-wmi-msreportserverconfigurationsetting"></a>SenderEmailAddress 屬性 (WMI MSReportServer_ConfigurationSetting)
   取得用以從報表伺服器傳送電子郵件的位址。 唯讀。  

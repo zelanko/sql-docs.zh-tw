@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 185b7c9119dbd5a6105152aadcf1241abc6b82ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148298"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025039"
 ---
 # <a name="pdf-device-information-settings"></a>PDF 裝置資訊設定
   下表列出以 PDF 格式轉譯報表的裝置資訊設定。  
@@ -31,7 +31,7 @@ ms.locfileid: "48148298"
 |**DpiX**|輸出裝置在 x 方向的解析度。|  
 |**DpiY**|輸出裝置在 y 方向的解析度。|  
 |**EndPage**|要轉譯之報表的最後一頁。 預設值為 `StartPage` 的值。|  
-|`HumanReadablePDF`|指出是否應該壓縮 PDF，這可提高來源的可讀性。 預設值是 `false.`|  
+|`HumanReadablePDF`|指出是否應該壓縮 PDF，這可提高來源的可讀性。 預設值為 `false.`|  
 |**MarginBottom**|為報表所設定的下邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  
 |**MarginLeft**|為報表所設定的左邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  
 |**MarginRight**|為報表所設定的右邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  

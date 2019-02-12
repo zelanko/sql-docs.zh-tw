@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091138"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032319"
 ---
 # <a name="data-source-selection-page-report-manager"></a>資料來源選擇頁面 (報表管理員)
   您可以使用 [資料來源選擇] 頁面來選取要搭配報表或報表模型使用的現有共用資料來源項目。 您也可以使用此頁面來選取不同的資料來源。 若要檢視資料來源類型或連接字串，您必須導覽到共用資料來源並開啟屬性頁面。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-data-source-selection-page"></a>若要開啟資料來源選擇頁面  

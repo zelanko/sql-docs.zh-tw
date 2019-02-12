@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 146edd7519674ba83ac996a9b4aa1f7ec9a43ec2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365980"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011260"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>將多個資料區連結至相同的資料集 (報表產生器及 SSRS)
   您可以將多個資料區域加入到報表中，以便從相同的報表資料集提供資料的不同檢視。 例如，您可能想要在資料表中顯示資料，也要以視覺方式顯示在圖表中。 若要這樣做，您必須將相同的運算式和範圍用於適當的篩選運算式、排序運算式與群組運算式。  

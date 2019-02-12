@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96092da800b6df640ffa9f99b2fe851460edacc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056248"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019430"
 ---
 # <a name="contents-page-report-manager"></a>內容頁面 (報表管理員)
   使用 [內容] 頁面來檢視目前資料夾的內容、選取要檢視的項目或導覽到其他資料夾。 此頁面會在您選取資料夾時開啟。 它也是報表管理員的首頁。  
@@ -56,8 +56,8 @@ ms.locfileid: "48056248"
  按一下即可在資料夾階層內重新定位項目。 在按一下 **[移動]** 之前，請先選取您要移動之每個項目旁邊的核取方塊。 這樣做會開啟 [移動項目] 頁面，如此您就可以在其中瀏覽資料夾以選取新位置。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [報表伺服器內容管理&#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

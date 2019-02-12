@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354034"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033259"
 ---
 # <a name="preview-view"></a>預覽檢視
   使用 **[預覽]** 檢視可顯示轉譯報表。 在預覽報表時，報表設計師會在本機執行報表，然後顯示在 [預覽] 檢視中。 在預覽模式中，會完整處理報表。 如果報表中有複雜的查詢或大量的資料，則在第一次進行檢視時，可能需要幾分鐘才能完成預覽。 若要查看只會影響報表格式的後續變更，則預覽會使用快取的資料。  
@@ -64,7 +64,7 @@ ms.locfileid: "53354034"
  **[重新整理]**  
  選擇此選項可重新整理資料快取，然後再次執行報表。  
   
- **列印**  
+ **Print**  
  選擇此選項即可列印報表。  
   
  **整頁模式**  

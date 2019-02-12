@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: fce2ad94feef0a59113ce6c7cfd715405ab17a9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503507"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020519"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連接資訊 (Reporting Services)
   將報表加入教學課程專案之後，您需要定義「資料來源」，這是讓報表從關聯式資料庫、多維度資料庫或其他資源存取資料所用的連接資訊。  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c43dccbe5ee989a747110b9ffd0f6376532679df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 06a5ec6ec02544354307f426534d583b0cfe8150
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211148"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016239"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>設定 Web 服務的 URL 屬性
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式中，您隨時都可以修改目前將應用程式導向的報表伺服器 Web 服務之目標基礎 URL。 若要這樣做，請直接設定服務物件的 **Url** 屬性。 例如：  

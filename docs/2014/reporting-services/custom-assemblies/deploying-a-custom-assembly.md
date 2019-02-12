@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c4715b7b0b1cf810a2874e41d1f3ad0bed1a2f59
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 98f498ceb1f0d2d05261c08e14d7adb0b7cfd716
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356585"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020689"
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自訂組件
   若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自訂組件，請在報表設計師與報表伺服器的應用程式資料夾中放置組件。 依預設，會授與自訂組件在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 `Execution` 權限。 若要授與執行權限以外的自訂組件權限，您必須編輯報表伺服器的 rssrvpolicy.config 設定檔，以及報表設計師預覽視窗的 rspreviewpolicy.config 設定檔。 或者，您可以在全域組件快取 (GAC) 中安裝自訂組件。  

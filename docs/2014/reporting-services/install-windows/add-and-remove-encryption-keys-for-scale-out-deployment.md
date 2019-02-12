@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c91f05ef42f3840186ee758e733f73631c0d976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3e26f43f0a146466e32b51ab43a2935f898e1a0e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125048"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036381"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>加入和移除向外延展部署的加密金鑰 (SSRS 組態管理員)
   您可以設定多部報表伺服器來使用共用報表伺服器資料庫，以便在向外延展部署模型中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 向外延展部署的成員資格，會依報表伺服器是否在報表伺服器資料庫中儲存加密金鑰而定。 您可以加入和移除特定報表伺服器執行個體的加密金鑰，來控制向外延展部署成員資格。 如果您要從部署中移除節點，您可以依照任何順序來移除它們。 如果您要將節點加入部署中，您必須從已屬於部署的報表伺服器聯結任何新的執行個體。  
@@ -63,7 +63,7 @@ ms.locfileid: "48125048"
  雖然這些步驟會從向外延展部署中移除報表伺服器，但是它們不會解除安裝報表伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 在您從向外延展部署中移除報表伺服器之後，如果不再需要該伺服器上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，可以解除安裝該伺服器的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 如需相關資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》的[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定和管理加密金鑰&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [初始化報表伺服器&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [初始化報表伺服器 &#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

@@ -13,18 +13,18 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 50ac9bd023b8fb581f423a039b629015de7b423d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196398"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025489"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隱藏項目 (報表產生器及 SSRS)
   當您想要有條件地根據報表參數或是您所指定的某些其他運算式來隱藏項目時，請設定報表項目的可見性。  
   
- 您也可以設計報表來允許使用者根據按一下報表中文字方塊的動作來切換報表項目的可見性，例如針對鑽研報表。 如需詳細資訊，請參閱[將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
+ 您也可以設計報表來允許使用者根據按一下報表中文字方塊的動作來切換報表項目的可見性，例如針對鑽研報表。 如需詳細資訊，請參閱 [將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)。  
   
  下列程序描述如何根據常數或運算式，顯示或隱藏轉譯報表中的報表項目。  
   
@@ -71,8 +71,8 @@ ms.locfileid: "48196398"
 3.  在 **[資料行可見性]** 對話方塊中，遵循第一個程序中的步驟 3 和 4。  
   
 ## <a name="see-also"></a>另請參閱  
- [向下鑽研動作&#40;報表產生器及 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
- [將展開或摺疊動作新增至項目中 &#40;報表產生器及 SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [將展開或摺疊動作加入項目中 &#40;報表產生器及 SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

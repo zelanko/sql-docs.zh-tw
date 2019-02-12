@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098438"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037999"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>頁首和頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端邊緣處的頁首和頁尾。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩、背景影像和運算式。 運算式包含剛好具有一個資料集之報表的資料集欄位參考，以及包含該資料集做為範圍的彙總函式呼叫。  
@@ -125,10 +125,10 @@ ms.locfileid: "48098438"
   
  較精確的頁面計數是以關聯於列印頁面尺寸的邏輯頁面為基礎。 在 Excel 中，頁尾會自動使用邏輯頁碼。 若要將邏輯頁面計數放在頁首中，您必須將裝置資訊設定設成使用簡單頁首。 請注意，使用簡單頁首時，您會移除在頁首區域中處理複雜報表配置的功能。  
   
- 如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)中使用這項資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [將影像內嵌在報表中&#40;報表產生器及 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [矩形和線條&#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
+ [在報表中內嵌影像 &#40;報表產生器及 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

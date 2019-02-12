@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ef8697edeccd92bf34e22c96a168c19b380f6fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f10e941ef5acd180e8b279762e84535bad5689e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203308"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043219"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>圓形圖 (報表產生器及 SSRS)
   圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 圓形圖最常用於在群組之間進行比較。 圓形圖和環圈圖以及金字塔圖和漏斗圖是由一組所謂形狀圖的圖表所組成。 形狀圖沒有軸。 在形狀圖上放置數值欄位時，圖表會計算出每個值佔整體的百分比。 如需形狀圖的詳細資訊，請參閱[形狀圖 &#40;報表產生器及 SSRS &#41;](charts-report-builder-and-ssrs.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "48203308"
   
 -   圓形圖至少需要兩個值，才能在比例之間進行有效的比較。 如果您的圓形圖只包含一種色彩，請確認您已經在群組依據加入類別目錄欄位。 當圓形圖不包含類別目錄時，它會將來自您資料欄位的值彙總為一個值來顯示。  
   
--   圓形圖就像其他所有圖表類型一樣，會根據預設調色盤中所包含的色彩值，產生色彩。 當您在報表中使用多個圓形圖時，這個方法可能會使不同的圓形圖以不同的色彩顯示資料點。 如果您的報表中有數個圓形圖，您可能會想要為每個類別目錄群組手動設定色彩，才能在不同的圖表上保留相同的色彩。 如需如何在圖表上定義色彩的詳細資訊，請參閱[格式化圖表上數列色彩&#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
+-   圓形圖就像其他所有圖表類型一樣，會根據預設調色盤中所包含的色彩值，產生色彩。 當您在報表中使用多個圓形圖時，這個方法可能會使不同的圓形圖以不同的色彩顯示資料點。 如果您的報表中有數個圓形圖，您可能會想要為每個類別目錄群組手動設定色彩，才能在不同的圖表上保留相同的色彩。 如需如何在圖表上定義色彩的詳細資訊，請參閱 [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>將繪製樣式套用至圓形圖  
  您可以在圓形圖上加入特殊的繪製樣式來增加其視覺效果。 繪製樣式包括斜面 (Bevel) 和凹面效果。 這些效果僅適用平面圓形圖。 下圖顯示圓形圖的斜面和凹面繪製樣式範例。  
@@ -64,7 +64,7 @@ ms.locfileid: "48203308"
  如需詳細資訊，請參閱[將斜面、浮凸與紋理樣式加入圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>在圓形圖上顯示百分比值  
- 圓形圖就像其他形狀圖一樣，可以表示整體的比例。 因此，將圓形圖標籤的格式設定為百分比相當常見。 為與其他圖表類型保持一致，圓形圖預設不顯示百分比標籤。 如需如何以百分比在圖表上顯示值的詳細資訊，請參閱[圓形圖上顯示百分比值&#40;報表產生器及 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 如需如何在報表中將數字格式設定為百分比的詳細資訊，請參閱[格式化數字和日期 &#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
+ 圓形圖就像其他形狀圖一樣，可以表示整體的比例。 因此，將圓形圖標籤的格式設定為百分比相當常見。 為與其他圖表類型保持一致，圓形圖預設不顯示百分比標籤。 如需如何以百分比在圖表上顯示值的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)。 如需如何在報表中將數字格式設定為百分比的詳細資訊，請參閱[格式化數字和日期 &#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
  ![以資料點標籤來表示百分比的圓形圖](../media/rs-piechartpercentages.gif "以資料點標籤來表示百分比的圓形圖")  
   
@@ -75,23 +75,23 @@ ms.locfileid: "48203308"
   
 -   增加圖表的寬度和高度，讓標籤有更多的空間。  
   
--   在圖表區域外部顯示圓形圖標籤。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
+-   在圖表區域外部顯示圓形圖標籤。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
 -   將小圓形圖扇區收集成一個扇區。  
   
 ## <a name="consolidating-small-slices-on-a-pie-chart"></a>在圓形圖上合併小配量  
  當圓形圖有太多點時，資料會被遮住而且難以讀取。 如果您的資料有許多小資料點，有兩種方式可以收集多個圓形圖配量：  
   
--   將小資料配量收集成圓形圖上的一個配量。 例如，當您想要讓圓形圖擁有只收集剩餘資料的「其他」資料點時，此作法相當實用。 如需詳細資訊，請參閱[收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
+-   將小資料配量收集成圓形圖上的一個配量。 例如，當您想要讓圓形圖擁有只收集剩餘資料的「其他」資料點時，此作法相當實用。 如需詳細資訊，請參閱 [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)。  
   
 -   將小配量收集成補充的圓形圖。 第二個圓形圖不會顯示在設計工具中。 但是在報表處理期間，圖表會根據資料點的值，計算是否需要顯示另一個圓形圖。 如果需要，這些值會加入到另一個圓形圖中。  
   
 ## <a name="see-also"></a>另請參閱  
- [在圓形圖外部顯示資料點標籤&#40;報表產生器及 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [在圓形圖外部顯示資料點標籤 &#40;報表產生器及 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [收集圓形圖上的小配量 &#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
- [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [在圖表上格式化圖例&#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [教學課程：將圓形圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [在圖表上格式化圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   

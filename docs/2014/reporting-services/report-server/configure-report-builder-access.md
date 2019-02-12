@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0426c117011ed812d9c2d4e1fc9f4e76b06a989a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 421c499b5135bc6022eafbc8d7fa6bf4456ca19a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182448"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020200"
 ---
 # <a name="configure-report-builder-access"></a>設定報表產生器的存取
   報表產生器是一個隨選報表工具，它會與設定原生模式或 SharePoint 整合模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器一起安裝。  
@@ -45,13 +45,13 @@ ms.locfileid: "48182448"
  報表產生器一定會在完全信任模式中執行；您不能設定它在部分信任模式中執行。 在舊版中，報表產生器可以在部分信任模式中執行，但是在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中則不支援這個選項。  
   
 ## <a name="enabling-and-disabling-report-builder"></a>啟用及停用報表產生器  
- 預設會啟用報表產生器。 報表伺服器管理員可以選擇停用報表產生器功能，藉由設定報表伺服器系統屬性`EnableReportDesignClientDownload`至`false`。 設定這個屬性將會停用該報表伺服器的報表產生器下載功能。  
+ 預設會啟用報表產生器。 報表伺服器管理員可以選擇將報表伺服器系統屬性 `EnableReportDesignClientDownload` 設定為 `false`，以停用報表產生器功能， 設定這個屬性將會停用該報表伺服器的報表產生器下載功能。  
   
  若要設定報表伺服器系統屬性，您可以使用 Management Studio 或指令碼：  
   
 -   若要使用 Management Studio，請連接到報表伺服器，並使用 [進階伺服器屬性] 頁面將 `EnableReportDesignClientDownload` 設定為 `false`。 如需如何開啟此頁面的詳細資訊，請參閱[設定報表伺服器屬性 &#40;Management Studio&#41;](../tools/set-report-server-properties-management-studio.md)。  
   
--   若要檢視設定報表伺服器屬性的範例指令碼，請參閱[指令碼部署和管理工作](../tools/script-deployment-and-administrative-tasks.md)。  
+-   若要檢視設定報表伺服器屬性的範例指令碼，請參閱 [編寫部署和管理工作的指令碼](../tools/script-deployment-and-administrative-tasks.md)。  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>原生模式報表伺服器上授與報表產生器存取的角色指派  
  在原生模式報表伺服器上，建立使用者角色指派來包含使用報表產生器的工作。 您必須是內容管理員和系統管理員，才能建立或修改項目和網站層級的角色定義與角色指派。  
@@ -108,7 +108,7 @@ ms.locfileid: "48182448"
   
     4.  在 [描述] 中，輸入角色的描述，好讓報表管理員中的使用者知道這個角色的目的。  
   
-    5.  新增下列工作：[取用報表]、[檢視報表]、[檢視模型]、[檢視資源]、[檢視資料夾] 及 [管理個別訂閱]。  
+    5.  新增下列工作：**取用報表**，**檢視的報表**，**檢視模型**，**檢視資源**，**檢視資料夾**，以及**管理個別訂閱**s。  
   
     6.  按一下 [確定]，儲存角色。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "48182448"
 ## <a name="permissions-granting-report-builder-access-on-a-sharepoint-integrated-mode-report-server"></a>授與 SharePoint 整合模式報表伺服器之報表產生器存取的權限  
  在 SharePoint 整合模式報表伺服器上，報表產生器的存取會授與給具有「參與」或「完全控制」權限等級的 SharePoint 使用者。  
   
- 如果您要使用自訂權限等級，您必須在此權限等級中包括「加入項目」和「編輯項目」。 如需有關透過內建的權限等級存取報表產生器的詳細資訊，請參閱 <<c0> [ 報表伺服器項目的 Windows SharePoint Services 中使用內建安全性](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)。 如需有關自訂權限層級的權限需求的詳細資訊，請參閱 <<c0> [ 設定 SharePoint Web 應用程式中的報表伺服器作業的權限](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)。  
+ 如果您要使用自訂權限等級，您必須在此權限等級中包括「加入項目」和「編輯項目」。 如需透過內建權限層級存取報表產生器的詳細資訊，請參閱 [在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性](../security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)。 如需自訂權限層級的權限需求詳細資訊，請參閱 [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](../security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)。  
   
 ## <a name="authentication-considerations-and-credential-reuse"></a>驗證考量與認證重複使用  
  報表產生器會使用 ClickOnce 技術，將它的應用程式檔案下載及安裝到用戶端電腦上。 ClickOnce 技術要用於單向應用程式部署，這個部署會將程式檔案放在用戶端電腦上，並在預設使用者的識別之下以個別處理序的形式執行應用程式。 由於報表產生器必須連回報表伺服器，以取得應用程式檔案和報表伺服器資料，所以請務必了解 ClickOnce 如何設定安全性內容以及在不同狀況下對遠端電腦發出要求：  
@@ -160,14 +160,14 @@ ms.locfileid: "48182448"
 |---------------------------------------|--------------------------------------------------------------------|  
 |交涉 (預設值)<br /><br /> NTLM (預設值)|在 Windows 整合式安全性之下，如果用戶端和伺服器部署在相同的網域中、使用者使用有權存取報表產生器的網域帳戶來登入用戶端電腦，而且報表伺服器有設定 Windows 驗證時，來自 ClickOnce 和報表產生器的已驗證要求通常會成功。<br /><br /> 要求成功是因為 ClickOnce 以及與報表伺服器的瀏覽器連接具有相同的使用者識別。<br /><br /> 如果使用者使用 [執行身分] 開啟 Internet Explorer 而且指定了非預設的認證，要求將會失敗。 如果報表伺服器上的使用者工作階段是在特定的帳戶之下建立，而且 ClickOnce 會在不同的帳戶下執行，則報表伺服器將會拒絕檔案的存取。|  
 |Kerberos|使用報表產生器所需的 Internet Explorer 並不會直接支援 Kerberos。|  
-|基本驗證|ClickOnce 不支援基本驗證。 ClickOnce 將不會在驗證標頭中編寫用於指定基本驗證的要求， 也不會傳遞認證或是提示使用者提供認證。 您可以啟用報表產生器應用程式檔案的匿名存取來解決這些問題。<br /><br /> 如果您啟用報表產生器應用程式檔案的匿名存取，要求將會成功，因為報表伺服器會忽略驗證標頭。 如需如何啟用報表產生器的匿名存取的詳細資訊，請參閱[設定報表伺服器上的基本驗證](../security/configure-basic-authentication-on-the-report-server.md)。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。<br /><br /> 如果報表伺服器有設定基本驗證，而且您並未啟用報表產生器程式檔案的匿名存取，要求將會失敗。 要求失敗是因為 ClickOnce 會在它的要求中指定 Windows 整合式安全性。 如果報表伺服器有設定基本驗證，伺服器將會拒絕要求，因為它會指定無效的安全性封裝，而且它會缺少報表伺服器所預期的認證。<br /><br /> 此外，如果報表伺服器設定為使用 SharePoint 整合模式，而且 SharePoint 網站使用基本驗證，則當使用者嘗試使用 ClickOnce 在用戶端電腦上安裝報表產生器時，會出現 401 錯誤。 發生這個狀況的原因是 SharePoint 會使用 Cookie 讓使用者在工作階段期間維持驗證狀態，但是 ClickOnce 不支援 Cookie。 當使用者啟動 ClickOnce 應用程式 (例如報表產生器) 時，應用程式不會讓 Cookie 通過 SharePoint，因此 SharePoint 會拒絕存取並傳回 401 錯誤。<br /><br /> 您可以嘗試下列其中一個選項來解決這個問題：<br /><br /> 選取 **記住我的密碼**選項時提供您的使用者認證。<br /><br /> 針對 SharePoint 網站集合啟用匿名存取。<br /><br /> 設定環境，讓使用者不提供認證。 例如，在內部網路環境中，您可能會將 SharePoint 伺服器設定為屬於某個工作群組，然後在本機電腦上建立使用者帳戶。|  
+|基本驗證|ClickOnce 不支援基本驗證。 ClickOnce 將不會在驗證標頭中編寫用於指定基本驗證的要求， 也不會傳遞認證或是提示使用者提供認證。 您可以啟用報表產生器應用程式檔案的匿名存取來解決這些問題。<br /><br /> 如果您啟用報表產生器應用程式檔案的匿名存取，要求將會成功，因為報表伺服器會忽略驗證標頭。 如需如何啟用報表產生器匿名存取的詳細資訊，請參閱 [設定報表伺服器上的基本驗證](../security/configure-basic-authentication-on-the-report-server.md)。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。<br /><br /> 如果報表伺服器有設定基本驗證，而且您並未啟用報表產生器程式檔案的匿名存取，要求將會失敗。 要求失敗是因為 ClickOnce 會在它的要求中指定 Windows 整合式安全性。 如果報表伺服器有設定基本驗證，伺服器將會拒絕要求，因為它會指定無效的安全性封裝，而且它會缺少報表伺服器所預期的認證。<br /><br /> 此外，如果報表伺服器設定為使用 SharePoint 整合模式，而且 SharePoint 網站使用基本驗證，則當使用者嘗試使用 ClickOnce 在用戶端電腦上安裝報表產生器時，會出現 401 錯誤。 發生這個狀況的原因是 SharePoint 會使用 Cookie 讓使用者在工作階段期間維持驗證狀態，但是 ClickOnce 不支援 Cookie。 當使用者啟動 ClickOnce 應用程式 (例如報表產生器) 時，應用程式不會讓 Cookie 通過 SharePoint，因此 SharePoint 會拒絕存取並傳回 401 錯誤。<br /><br /> 您可以嘗試下列其中一個選項來解決這個問題：<br /><br /> 選取 **記住我的密碼**選項時提供您的使用者認證。<br /><br /> 針對 SharePoint 網站集合啟用匿名存取。<br /><br /> 設定環境，讓使用者不提供認證。 例如，在內部網路環境中，您可能會將 SharePoint 伺服器設定為屬於某個工作群組，然後在本機電腦上建立使用者帳戶。|  
 |自訂|當您設定報表伺服器使用自訂驗證時，報表伺服器上會啟用匿名存取，而且會接受要求而不執行驗證檢查。<br /><br /> 在 ClickOnce 擷取應用程式檔案之後，報表產生器會開啟與報表伺服器的個別連接。 使用者必須重新輸入認證，才能讓報表產生器連接報表伺服器。 報表產生器不會從 Internet Explorer 或 ClickOnce 收集認證。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用報表伺服器驗證](../security/authentication-with-the-report-server.md)   
  [規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [啟動報表產生器&#40;報表產生器&#41;](../report-builder/start-report-builder.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
  [連接至 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)   
  [報表伺服器系統屬性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

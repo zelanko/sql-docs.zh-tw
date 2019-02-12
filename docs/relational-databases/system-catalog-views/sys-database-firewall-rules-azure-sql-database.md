@@ -2,10 +2,8 @@
 title: sys.database_firewall_rules (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.prod: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
@@ -22,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e224bec27ba3151fb531f5ad0ce9676a4e3a8d2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59c59150136910e2d0818fe93ff4811ed3262d8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789506"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012319"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,11 +37,11 @@ ms.locfileid: "47789506"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**INTEGER**|資料庫層級防火牆設定的識別碼。|  
-|NAME|**& LT;LANGUAGEKEYWORD&GT;NVARCHAR(128)&LT;/LANGUAGEKEYWORD&GT**|您選擇用來描述和區分資料庫層級防火牆設定的名稱。|  
-|start_ip_address|**VARCHAR(50**|資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。|  
-|end_ip_address|**VARCHAR(50**|防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。<br /><br /> 注意： Windows Azure 的連線嘗試時，便允許這個欄位並**start_ip_address**欄位等於`0.0.0.0`。|  
-|create_date|**日期時間**|建立資料庫層級防火牆設定時的 UTC 日期和時間。|  
-|modify_date|**日期時間**|上次修改資料庫層級防火牆設定時的 UTC 日期和時間。|  
+|NAME|**NVARCHAR(128)**|您選擇用來描述和區分資料庫層級防火牆設定的名稱。|  
+|start_ip_address|**VARCHAR(50)**|資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。|  
+|end_ip_address|**VARCHAR(50)**|防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。<br /><br /> 注意：Windows Azure 的連線嘗試時，便允許這個欄位並**start_ip_address**欄位等於`0.0.0.0`。|  
+|create_date|**DATETIME**|建立資料庫層級防火牆設定時的 UTC 日期和時間。|  
+|modify_date|**DATETIME**|上次修改資料庫層級防火牆設定時的 UTC 日期和時間。|  
   
 ## <a name="remarks"></a>備註  
  若要移除資料庫防火牆規則，請使用[sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)。 若要設定防火牆規則的所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，請參閱 < [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)。 若要傳回的防火牆規則的現有資料庫的相關資訊，請查詢[sys.database_firewall_rules (Azure SQL Database)](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。  

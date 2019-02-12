@@ -3,6 +3,7 @@ title: 以程式設計方式變更密碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d296eb992dc9683faee721e2b825105c82f362e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c42f8bf47d90bde4f6ffdaa3bb7e22b88c238bb7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675037"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010626"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "51675037"
   
 |SQL Server 錯誤碼|錯誤訊息|  
 |---------------------------|-------------------|  
-|15113|使用者 '%.*ls' 登入失敗。原因: 密碼驗證失敗。 帳戶已經鎖定。|  
-|18463|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼此時不適用。|  
-|18464|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼太短而不符合原則需求。|  
-|18465|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼太長而不符合原則需求。|  
-|18466|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 因為密碼不夠複雜而不符合原則需求。|  
-|18467|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼不符合密碼篩選 DLL 的需求。|  
-|18468|使用者 '%.*ls' 的登入失敗。 原因: 密碼變更失敗。 密碼驗證期間發生意外的錯誤。|  
-|18487|使用者 '%.*ls' 的登入失敗。 原因: 帳戶的密碼已過期。|  
-|18488|使用者 '%.*ls' 的登入失敗。 原因: 必須變更帳戶的密碼。|  
+|15113|使用者登入失敗 ' %.* ls' 原因：密碼驗證失敗。 帳戶已經鎖定。|  
+|18463|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼此時不適用。|  
+|18464|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼太短而不符合原則需求。|  
+|18465|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼太長而不符合原則需求。|  
+|18466|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 因為密碼不夠複雜而不符合原則需求。|  
+|18467|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼不符合密碼篩選 DLL 的需求。|  
+|18468|使用者 '%.*ls' 的登入失敗。 理由：密碼變更失敗。 密碼驗證期間發生意外的錯誤。|  
+|18487|使用者 '%.*ls' 的登入失敗。 理由：帳戶的密碼已過期。|  
+|18488|使用者 '%.*ls' 的登入失敗。 理由：必須變更帳戶的密碼。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援密碼逾期，透過使用者介面和以程式設計的方式。  

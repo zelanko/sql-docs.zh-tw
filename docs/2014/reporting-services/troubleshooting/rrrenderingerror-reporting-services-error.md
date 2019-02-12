@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 853ef45f62b46bf3dab45abd2e3dcdbb6f1b88e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03c6f9954834527e90bf43c17febbf95e52ff728
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176458"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020330"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤
     

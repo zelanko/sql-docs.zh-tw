@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e629b706cec435ac027f7a90f50bf12e1cb81879
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: accae7ea31570550a77e4b73c80e2617ad27fef5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136408"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041509"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>設定報表的資料來源屬性 (報表管理員)
   當您執行報表時，報表伺服器會擷取屬性資訊來判斷如何連接至資料來源。 資料來源類型、連接字串和認證資訊都是在已發行報表的 [資料來源] 屬性頁面中指定的。 您可以設定這些屬性，讓資料來源連接資訊與建立報表時所指定的原始值不同。  
@@ -57,14 +57,14 @@ ms.locfileid: "48136408"
   
     -   如果資料來源沒有使用認證 (例如，如果資料來源是從檔案系統存取的 XML 檔)，請按一下 [不需要認證]。 只有當這種認證類型適用於資料來源時，您才應該指定此認證類型。 如果您針對需要驗證的資料來源選取此選項，連接將會失敗。 如果您選取此選項，請務必設定自動執行帳戶，以便在使用者認證無法使用時，允許報表伺服器連接至其他電腦以擷取資料或檔案。  
   
- 如需有關如何設定認證的詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 如需設定認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容頁&#40;報表管理員&#41;](../contents-page-report-manager.md)   
+ [內容頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
  [新增資料來源頁面 &#40;報表管理員&#41;](../new-data-source-page-report-manager.md)   
- [建立、 修改及刪除共用的資料來源&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [建立、修改和刪除共用資料來源 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [管理報表資料來源](manage-report-data-sources.md)   
- [建立、 刪除或修改共用的資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [資料來源屬性頁面 &#40;報表管理員&#41;](../data-sources-properties-page-report-manager.md)  
   
   

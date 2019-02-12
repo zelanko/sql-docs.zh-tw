@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b2b8979b945e6f7149f14ba11d8703221adab3a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350027"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010652"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供數種 Web 組件，可與特定版本的報表伺服器，以及在特定的部署模式下搭配使用。  

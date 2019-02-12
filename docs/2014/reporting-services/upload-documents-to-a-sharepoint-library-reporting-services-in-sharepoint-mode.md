@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5cfb22d29120f7ee27e378329045c79f57252d61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194288"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017149"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>將文件上傳到 SharePoint 文件庫 (SharePoint 模式的 Reporting Services)
   您可以將報表定義和報表模型上傳到 SharePoint 文件庫。 上傳報表伺服器項目時，您必須選取文件庫或文件庫內的資料夾； 不能將報表伺服器項目上傳到清單或頁面中。  
@@ -49,7 +49,7 @@ ms.locfileid: "48194288"
  報表可以包含參數，以便讓使用者篩選資料。 您可將參數設定成使用特定值，或變更使用者看到的參數外觀。 如需詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表發行至 SharePoint 文件庫](reports/publish-a-report-to-a-sharepoint-library.md)   
+ [將報表發行到 SharePoint 文件庫](reports/publish-a-report-to-a-sharepoint-library.md)   
  [將共用資料來源發行至 SharePoint 文件庫](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

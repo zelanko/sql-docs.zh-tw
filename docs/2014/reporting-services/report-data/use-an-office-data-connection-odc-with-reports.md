@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c40f02e86f736b96398de4bb9e3d1183de2f9c6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016589"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>搭配報表使用 Office 資料連線 (.odc) (SharePoint 整合模式的 Reporting Services)
   在少數情況下，您可以使用現有的 Office 資料連線 (.odc) 檔案來提供連接資訊給 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表。 建立共用資料來源時，您可以使用 .odc 檔案來取代 .rsds 檔案。 報表伺服器使用 .odc 檔案的方式與使用 .rsds 檔案相同。報表伺服器會讀取檔案，找出資料來源類型、連接字串和認證資訊。  
@@ -35,7 +35,7 @@ ms.locfileid: "48162858"
   
 -   .odc 檔案必須指定連接字串。  
   
--   認證可以設為`None`， `Stored`，或`Integrated`。 如果認證方法設定為`Stored`，報表伺服器將會提示使用者輸入認證，而不是使用預存的認證。 報表伺服器無法依照 .odc 檔案的定義使用預存認證。  
+-   認證可設定為 `None`、`Stored` 或 `Integrated`。 如果認證方法設定為 `Stored`，報表伺服器將會提示使用者輸入認證，而不會使用預存認證。 報表伺服器無法依照 .odc 檔案的定義使用預存認證。  
   
 -   資料來源擁有的結構描述必須與用來建立報表的結構描述相同。 如果資料結構不同，報表便無法執行。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48162858"
   
 4.  選取 [Microsoft OLE DB Provider for SQL Server]，然後按一下 [下一步]。  
   
-5.  輸入伺服器的名稱 (根據預設，此名稱為電腦的網路名稱) 以及具備有效登入和資料庫權限的使用者帳戶。 按 [下一步] 。  
+5.  輸入伺服器的名稱 (根據預設，此名稱為電腦的網路名稱) 以及具備有效登入和資料庫權限的使用者帳戶。 按一下 [下一步] 。  
   
 6.  選取資料庫，然後按一下 [確定] 關閉 [資料連結] 對話方塊。  
   
@@ -102,6 +102,6 @@ ms.locfileid: "48162858"
      如果您使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範本資料庫和範本報表嘗試執行上述步驟，請注意只有 Company Sales 報表能夠直接使用 .odc 檔案。 其他範例報表包含無法處理 OLE DB 提供者的查詢參數和功能。 不過，您可以先在「報表設計師」中進行修改，使報表能夠使用 OLE DB 提供者。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立、 修改及刪除共用的資料來源&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
+ [建立、修改和刪除共用資料來源 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

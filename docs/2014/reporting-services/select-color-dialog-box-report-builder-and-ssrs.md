@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184658"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031445"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>選取色彩對話方塊 (報表產生器及 SSRS)
   使用 **Select Color** 對話方塊，可以指定資料區或文字方塊內，單一資料格或多個資料格的背景色彩選項或圖表色彩選項。  
@@ -63,7 +63,7 @@ ms.locfileid: "48184658"
  **藍色**  
  RGB 色彩藍色部分的十進位值。 使用微調方塊來變更值，或輸入一個介於 0 和 255 之間的值。  
   
- **alpha**  
+ **Alpha**  
  色彩 α 或透明部分的十進位值。 啟用這個值時，您可以使用滑動軸參數來調整您需要的透明程度。  
   
  **色調**  
@@ -80,6 +80,6 @@ ms.locfileid: "48184658"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34547b62ecac2a41f9d59d96d8f5c9d99f79b21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 490b81e30833a8572ff7ce8bd51c72b5314c3bf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081058"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030610"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查詢設計工具使用者介面
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供圖形化查詢設計工具建置多維度運算式 (MDX) 查詢和資料採礦運算式 (DMX) 查詢[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料來源。 此主題即描述 MDX 查詢設計工具。 如需有關 DMX 查詢設計工具的詳細資訊，請參閱 < [DMX 的 Analysis Services 連接類型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源的多維度運算式 (MDX) 查詢和資料採礦運算式 (DMX) 查詢。 此主題即描述 MDX 查詢設計工具。 如需 DMX 查詢設計工具的詳細資訊，請參閱 [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)。  
   
  MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，在處理報表時擷取資料。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48081058"
 |![變更為 MDX 查詢檢視](../../analysis-services/media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|  
 |![變更為 DMX 查詢語言檢視](../media/rsqdicon-commandtypedmx.gif "變更為 DMX 查詢語言檢視")|切換到命令類型 DMX。|  
 |![重新整理結果資料](../../analysis-services/media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
-|![新增導出的成員](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "新增導出的成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。|  
 |![切換以顯示空的資料格](../../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](../../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](../../analysis-services/media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  
@@ -107,7 +107,7 @@ ms.locfileid: "48081058"
   
 -   **當成文字編輯**  
   
--   **加入導出成員**(![加入導出的成員](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出的成員"))  
+-   **加入導出成員** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **顯示空的資料格** (![切換以顯示空的資料格](../../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
   
@@ -116,10 +116,10 @@ ms.locfileid: "48081058"
 -   **顯示彙總** (![顯示彙總按鈕](../../analysis-services/media/rsqdicon-showaggregations.gif "顯示彙總按鈕"))  
   
 ## <a name="see-also"></a>另請參閱  
- [在 Analysis Services MDX 查詢設計工具中定義參數&#40;報表產生器及 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
+ [在 Analysis Services 的 MDX 查詢設計工具中定義參數 &#40;報表產生器及 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [DMX 的 analysis Services 連線類型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Analysis Services Connection Type for DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [RSReportDesigner 組態檔](../report-server/rsreportdesigner-configuration-file.md)   
- [MDX 的 Analysis Services 連接類型 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Analysis Services Connection Type for MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

@@ -3,7 +3,7 @@ title: 將根節點與根選項新增至 JSON 輸出 (SQL Server) | Microsoft Do
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfe7eb9b056dfcfb19ac6e4ab7d3f072b2bad1ad
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 0fbe3cdef207cd70851ac6fd88381dd457258793
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886913"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026849"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>將根節點與根選項加入至 JSON 輸出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

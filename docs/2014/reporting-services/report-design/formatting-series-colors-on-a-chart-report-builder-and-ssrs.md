@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166810"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016009"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>設定圖表上數列色彩的格式 (報表產生器及 SSRS)
   Reporting Services 為圖表提供數個內建的調色盤，或者您也可以定義自訂的調色盤。 根據預設，圖表會使用內建**BrightPastel**調色盤來填滿每個數列。 這些色彩也會出現在圖例中。 在圖表中加入多個序列時，圖表會以調色盤定義色彩的順序為序列指派色彩。  
@@ -46,14 +46,14 @@ ms.locfileid: "48166810"
 ## <a name="using-a-color-fill-on-each-series"></a>在每個序列上使用色彩填滿  
  您也可以針對圖表上的每個序列指定色彩，在圖表上定義自己的色彩。 若要進行這項作業，請開啟 [數列屬性] 對話方塊，然後設定 [填滿] 的 [色彩] 屬性。 這個方法會覆寫所有定義的調色盤。 一般來說，最好使用自訂調色盤來定義自己的色彩，因為可能要到處理報表之後，才會知道資料集中的序列數。  
   
- 當您想要根據運算式有條件地設定序列的色彩時，這個方法最適用。  如需詳細資訊，請參閱 <<c0> [ 格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。</c0>  
+ 當您想要根據運算式有條件地設定序列的色彩時，這個方法最適用。  如需詳細資訊，請參閱 [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [加入帶狀線來強調圖表資料&#40;報表產生器及 SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [加入帶狀線來強調圖表資料 &#40;報表產生器及 SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

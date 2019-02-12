@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12d6db8e8f9add797d640f043de8470fa7a5ed15
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392511"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017229"
 ---
 # <a name="change-domain-values"></a>變更定義域值
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中變更及增加知識庫內的中繼資料。 在您藉由知識探索產生知識、將知識匯入知識庫或定義域，或是讓知識庫根據另一個知識庫之後，您可以互動方式變更資料值。 知識庫產生不但會利用電腦輔助程序，也會提供您使用自己知識的方式，依照以下方式驗證資料值並加以變更：  

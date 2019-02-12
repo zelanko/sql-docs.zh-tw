@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180918"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028889"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>為結構指定測試資料集 (基本資料採礦教學課程)
   在資料採礦精靈的最後幾個畫面中，您會將資料分成測試集和定型集。 然後您會命名您的結構，並啟用模型上的鑽研。  
@@ -30,12 +29,12 @@ ms.locfileid: "48180918"
   
 2.  針對**的情況下，在測試資料集內的最大數目**，輸入`1000`。  
   
-3.  按 [下一步] 。  
+3.  按一下 [下一步] 。  
   
 ## <a name="specifying-drillthrough"></a>指定鑽研  
  可以在模型和結構上啟用鑽研。 此對話方塊中的核取方塊允許在具名模型上鑽研。 此模型經過處理之後，您將能夠從定型資料 中擷取用來建立模型的詳細資訊。  
   
- 如果基礎採礦結構也已經設定為允許鑽研，您就可以同時從模型案例和採礦結構中擷取詳細資訊，包括未包含在採礦模型中的資料行。 如需詳細資訊，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
+ 如果基礎採礦結構也已經設定為允許鑽研，您就可以同時從模型案例和採礦結構中擷取詳細資訊，包括未包含在採礦模型中的資料行。 如需詳細資訊，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 #### <a name="to-name-the-model-and-structure-and-specify-drillthrough"></a>若要命名模型和結構及指定鑽研  
   
@@ -53,11 +52,11 @@ ms.locfileid: "48180918"
  [指定資料類型和內容類型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 3 課：新增及處理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [第 3 課：加入及處理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [針對採礦模型啟用鑽研](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [鑽研查詢&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [鑽研查詢 &#40;資料採礦&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [指定定型資料&#40;資料採礦精靈&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

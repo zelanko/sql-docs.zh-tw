@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2541fab45a948465a4237f13f86eb4ae520594c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 00dbe62d042618fdf61ef07f2ace5ba2acb2e11e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082428"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013040"
 ---
 # <a name="system-level-tasks"></a>系統層級工作
-  系統層級工作是權限的集合，而這些權限與套用至報表伺服器站台整體的作業相關。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 亦包含套用至特定項目的項目層級工作。 如需詳細資訊，請參閱 [項目層級工作](tasks-and-permissions-item-level-tasks.md)。 如需工作和權限的一般詳細資訊，請參閱[工作和權限](tasks-and-permissions.md)。  
+  系統層級工作是權限的集合，而這些權限與套用至報表伺服器站台整體的作業相關。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 亦包含套用至特定項目的項目層級工作。 如需詳細資訊，請參閱 [項目層級工作](tasks-and-permissions-item-level-tasks.md)。 如需工作和權限的一般詳細資訊，請參閱 [工作和權限](tasks-and-permissions.md)。  
   
 > [!NOTE]  
 >  如果是藉由程式設計來使用這些工作，必須使用支援系統層級工作的方法。 如需詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ListTasks%2A> 和 <xref:ReportService2010.ReportingService2010.ListRoles%2A>。  

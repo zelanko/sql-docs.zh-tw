@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 712ae71efdf9ac4faea36dcacd6842406dff358f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043299"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 會提供多種可設定選項，便於針對報表伺服器進行使用者及用戶端應用程式的驗證。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。  
@@ -83,7 +83,7 @@ ms.locfileid: "53357108"
 ## <a name="see-also"></a>另請參閱  
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)   
  [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)   
- (建立-和-管理-角色-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [實作安全性延伸模組](../extensions/security-extension/implementing-a-security-extension.md)   
  [在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)   

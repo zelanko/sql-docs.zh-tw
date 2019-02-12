@@ -1,26 +1,25 @@
 ---
-title: 建立及查詢使用 DMX 資料採礦模型： 教學課程 (Analysis Services-資料採礦) |Microsoft Docs
+title: 建立及查詢使用 DMX 資料採礦模型：教學課程 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc23d274fc086168f580031d9dd7f44b1afd05c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176988"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012519"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 建立並查詢資料採礦模型：教學課程 (Analysis Services - 資料採礦)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>建立及查詢使用 DMX 資料採礦模型：教學課程 (Analysis Services-資料採礦)
   您已使用，以建立資料採礦方案之後[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，您可以建立查詢，針對資料採礦模型來預測趨勢、 擷取資料中的模式以及測量採礦模型的精確度。  
   
  下列清單中的逐步教學課程將協助您了解如何建置和執行資料採礦查詢使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，讓您可以充分運用您的資料。  
@@ -39,10 +38,10 @@ ms.locfileid: "48176988"
   
      這個教學課程會建立一個預測模型，用於說明 CREATE MODEL (DMX) 陳述式的使用方法。 接著您要加入相關模型，並且變更 Microsoft 時間序列演算法的參數以自訂各模型的行為。 最後，您要建立預測，然後使用新資料更新預測。 在進行預測時更新時間序列這項功能已加入至 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]。  
   
-## <a name="reference"></a>參考  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>參考資料  
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>相關章節  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48176988"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
- [資料採礦工具](../../2014/analysis-services/data-mining/data-mining-tools.md)   
+ [資料採礦工具。](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [資料採礦專案](../../2014/analysis-services/data-mining/data-mining-projects.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071288"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019329"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
   根據預設，Reporting Services 會接受可指定交涉式驗證或 NTLM 驗證的要求。 如果您的部署包含了使用基本驗證的用戶端應用程式或瀏覽器，您必須將基本驗證加入支援的類型清單中。 此外，如果您要使用報表產生器，必須啟用對報表產生器檔案的匿名存取。  
@@ -28,7 +28,7 @@ ms.locfileid: "48071288"
   
  在您啟用基本驗證之前，請確認您的安全性基礎結構有支援它。 使用基本驗證時，報表伺服器 Web 服務會將認證傳遞給本機安全性授權。 如果認證指定本機使用者帳戶，報表伺服器電腦上的本機安全性授權將會驗證這位使用者，而此使用者將會取得對於本機資源有效的安全性 Token。 網域使用者帳戶的認證會轉送給網域控制站，並由網域控制站加以驗證。 產生的票證對於網路資源而言是有效的。  
   
- 如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱[在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)。  
+ 如果您希望在認證傳給網路中的網域控制站的過程中，能夠減低認證被攔截的風險，就需要通道加密，例如安全通訊端層 (SSL)。 基本驗證本身會使用純文字格式傳輸使用者名稱，並使用 base64 編碼方式傳輸密碼。 加入通道加密會讓封包無法讀取。 如需詳細資訊，請參閱 [在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)。  
   
  當您啟用基本驗證之後，請注意在使用者設定外部資料來源的連線屬性，而此資料來源會提供資料給報表時，就無法選取 [Windows 整合式安全性] 選項。 資料來源屬性頁上的這個選項將會呈現灰色。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "48071288"
           </AuthenticationTypes>  
     ```  
   
-4.  貼上現有的項目，如 <`Authentication`>。  
+4.  將它貼到 <`Authentication`> 的現有項目上。  
   
-     如果您使用多種驗證類型，將剛才`RSWindowsBasic`項目，但不是刪除的項目`RSWindowsNegotiate`， `RSWindowsNTLM`，或`RSWindowsKerberos`。  
+     如果您使用多個驗證類型，請只加入 `RSWindowsBasic` 元素，而不要刪除 `RSWindowsNegotiate`、`RSWindowsNTLM` 或 `RSWindowsKerberos` 的項目。  
   
-     若要支援 Safari 瀏覽器，您無法設定報表伺服器使用多個驗證類型。 您只能指定`RSWindowsBasic`並刪除其他項目。  
+     若要支援 Safari 瀏覽器，您無法設定報表伺服器使用多個驗證類型。 您只能指定 `RSWindowsBasic` 並刪除其他項目。  
   
      請注意，您無法搭配其他驗證類型使用 `Custom`。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48071288"
   
 |元素|必要項|有效的值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可隨著每個 HTTP 要求傳送的驗證封裝中的登入認證保存，可讓伺服器在連接到網路中的其他伺服器時，模擬使用者。 (預設值)<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
+|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
 |Realm|選擇性|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
 |DefaultDomain|選擇性|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
   
@@ -136,17 +136,17 @@ ms.locfileid: "48071288"
     </configuration>  
     ```  
   
-     驗證模式必須設定為`Windows`如果您包含 Web.config 檔案。  
+     若您包含 Web.config 檔，則驗證模式必須設定為 `Windows`。  
   
-     `Identity impersonate` 可以是`True`或`False`。  
+     `Identity impersonate` 可以是 `True` 或 `False`。  
   
-    -   將它設定為`False`若不想讓 ASP.NET 讀取安全性權杖。 此要求將會在報表伺服器服務的安全性內容中執行。  
+    -   如果您不希望 ASP.NET 讀取安全性 Token，請將它設定為 `False`。 此要求將會在報表伺服器服務的安全性內容中執行。  
   
-    -   將它設定為`True`如果您希望 ASP.NET 從主機層級讀取安全性權杖。 如果您將它設定為 `True`，也必須指定 `userName` 和 `password` 來指派匿名帳戶。 您所指定的認證將會決定要求發出所在的安全性內容。  
+    -   如果您希望 ASP.NET 從主機層級讀取安全性 Token，請將它設定為 `True`。 如果您將它設定為 `True`，也必須指定 `userName` 和 `password` 來指派匿名帳戶。 您所指定的認證將會決定要求發出所在的安全性內容。  
   
 5.  將 Web.config 檔儲存到 ReportBuilder\bin 資料夾。  
   
-6.  開啟 RSReportServer.config 檔案，在 [服務] 區段中，尋找`IsReportManagerEnabled`並加入其下的下列設定：  
+6.  開啟 RSReportServer.config 檔案，並在 Services 區段中尋找 `IsReportManagerEnabled`，然後在它的下方加入以下設定：  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -157,7 +157,7 @@ ms.locfileid: "48071288"
 8.  重新啟動報表伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表伺服器應用程式的應用程式定義域](../report-server/application-domains-for-report-server-applications.md)   
+ [報表伺服器應用程式的應用程式網域](../report-server/application-domains-for-report-server-applications.md)   
  [Reporting Services 安全性與保護](reporting-services-security-and-protection.md)  
   
   

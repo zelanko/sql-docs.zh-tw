@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037809"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用報表設計師設計報表 (SSRS)
   使用報表設計師建立完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和報表方案。 報表設計師提供一個圖形介面，您可以在此介面中定義資料來源、資料集與查詢、資料區域與欄位的報表配置位置，以及定義互動式功能，例如搭配使用的參數和報表集。  
@@ -118,7 +118,7 @@ ms.locfileid: "48145888"
   
     -   按下 F5。  
   
-     如果您使用的專案組態，建立報表但是未部署，報表中所指定`StartItem`另一個預覽視窗中開啟的目前組態的屬性。  
+     如果您使用建立報表但是未部署報表的專案組態，則在目前組態之 `StartItem` 屬性中所指定的報表，會在另一個預覽視窗中開啟。  
   
     > [!NOTE]  
     >  若要使用偵錯模式，您必須設定啟動項目。 在 [方案總管] 中，以滑鼠右鍵按一下報表專案中，按一下**屬性**，然後在`StartItem`，選取要顯示報表的名稱。  
@@ -183,12 +183,12 @@ ms.locfileid: "48145888"
 |3|輕微的建立問題，這些問題會以可能不會注意到的次要方式變更報表配置。|  
 |4|僅用於發行警告。|  
   
- 當您嘗試預覽或部署報表，其中包含報表項目中的新[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，例如地圖和資料橫條，這些報表項目可以從報表移除。 根據預設，組態的 ErrorLevel 屬性設為 2，這會在移除對應時，使報表的建立失敗。 不過，如果您將 ErrorLevel 屬性的值變更為 0 或 1，就會卸除對應、發出警告，並繼續建立程序。  
+ 當您嘗試預覽或部署的報表包含 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中新的報表項目 (例如地圖和資料橫條) 時，可以從報表移除這些報表項目。 根據預設，組態的 ErrorLevel 屬性設為 2，這會在移除對應時，使報表的建立失敗。 不過，如果您將 ErrorLevel 屬性的值變更為 0 或 1，就會卸除對應、發出警告，並繼續建立程序。  
   
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Data Tools 中的 reporting Services &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
  [查詢設計工具，在報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
- [SQL Server 資料工具中的部署和版本支援 &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [SQL Server Data Tools 中的部署和版本支援 &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

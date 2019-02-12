@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b194714-46f7-4f0e-9632-7f89d9600762
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: daca0d1d73663ef43d5645fe8be6c239de704e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9a73e75c61fe3911919ed5112a1a6afff406adcd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219968"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016729"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>在資料區域中設定沒有資料的訊息 (報表產生器及 SSRS)
   當您想要指定要在轉譯報表中顯示的文字來取代沒有資料的資料區時，請為資料表、矩陣或清單資料區域設定 NoRowsMessage 屬性，為圖表資料區設定 NoDataMessage，並為地圖的色階設定 NoDataText。 在執行階段，報表處理器會針對報表中的每一個資料集來執行查詢，而且資料集查詢可能不會產生任何結果集。 如果是繫結至空資料集的資料區，您可以指定要顯示的文字，而不是顯示空的資料區。 執行階段時如果子報表中的資料集都沒有資料，您也可以為子報表設定 NoRowsMessage 屬性。  
@@ -59,10 +59,10 @@ ms.locfileid: "48219968"
      另外，您也可以從下拉式清單按一下 [運算式]，開啟 [運算式] 對話方塊，然後建立運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [子報表&#40;報表產生器及 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
+ [子報表 &#40;報表產生器及 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)   
- [子報表&#40;報表產生器及 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
+ [子報表 &#40;報表產生器及 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)  
   
   

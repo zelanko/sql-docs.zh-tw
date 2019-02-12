@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 148e0ece44e97bd4c559bbed9cc95aa97092dffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc9427e01f320778eafc1bac738daed0e80ce3c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171047"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013999"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls 方法 (WMI MSReportServer_Instance)
   傳回使用者可用來存取報表伺服器和報表管理員的 URL 清單。  
@@ -37,7 +37,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="parameters"></a>參數  
  *ApplicationName[]*  
- 包含已安裝之應用程式的陣列。 值為`ReportServerWebService`或`ReportManager`。  
+ 包含已安裝之應用程式的陣列。 值為 `ReportServerWebService` 或 `ReportManager`。  
   
  *URLs[]*  
  包含成功註冊之 URL 的陣列。  

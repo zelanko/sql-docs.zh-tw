@@ -1,24 +1,21 @@
 ---
-title: 工作 6： 確認已建立使用主資料管理員的網域屬性 |Microsoft Docs
+title: 工作 6：確認已建立使用主資料管理員的網域型屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 042cff6f687bb54466afb2334ad95402de319e94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037729"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>工作 6：確認已使用主資料管理員建立定義域屬性
   在這項工作中，您會透過 [主資料管理員] 來確認 **MDS** 中已建立 **State** 實體，而且 **Supplier** 實體的 **State** 屬性為相依於 **State** 實體的網域屬性。  
@@ -29,7 +26,7 @@ ms.locfileid: "48207108"
   
 3.  確定已選取 [Supplier] 模型，然後按一下 [總管]。 如果您已經開啟 [總管]，可以重新整理頁面。  
   
-4.  將滑鼠停留在功能表列的 [實體] 上方，並注意現在有兩個實體：**Supplier** 和 **State**。  
+4.  將滑鼠移**實體**功能表列並注意現在有兩個實體：**供應商**並**狀態**。  
   
      ![實體功能表使用的狀態和供應商](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "狀態與供應商實體功能表")  
   
@@ -82,6 +79,6 @@ ms.locfileid: "48207108"
      ![狀態與更新的程式碼和名稱的屬性](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "狀態與更新的程式碼和名稱的屬性")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 7：檢視在 Excel 中使用主資料管理員所做的更新](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+ [工作 7:檢視使用主資料管理員在 Excel 中進行更新](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

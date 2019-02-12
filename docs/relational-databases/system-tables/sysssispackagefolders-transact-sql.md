@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackagefolders system table
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-author: douglasl
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5166d82d0212c3974cbc7f95b071765ef25afdb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c1a5e117ee1c79b918f9785310b9b7c97671729
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025819"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "47740586"
 |-----------------|---------------|-----------------|  
 |**folderid**|**uniqueidentifier**|資料夾的 GUID。|  
 |**parentfolderid**|**uniqueidentifier**|本身是父資料夾之資料夾的 GUID。|  
-|**資料夾名稱**|**sysname**|資料夾的名稱。 這個名稱會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的資料夾階層中。|  
+|**foldername**|**sysname**|資料夾的名稱。 這個名稱會出現在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的資料夾階層中。|  
   
   

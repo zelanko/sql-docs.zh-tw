@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7b9d02b37b45d920e87f25c6f700401bf83be50b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87a6aae22985b462c65e229ffe607a33748ddad5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025992"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>在資料區中合併資料格 (報表產生器及 SSRS)
   您可以在資料區域中合併資料格來結合資料格、增進資料區域外觀，或為資料行群組與資料列群組提供橫跨的標籤。  

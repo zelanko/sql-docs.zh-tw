@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.administration.rdsconfiguration.f1
 - sql12.dqs.administration.configuration.createDirectRDS.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: da0514f10e4669d5e1e0bd20469b5922d38f2d70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c89d09d077a5b416d4afb46b195a03c5144c4108
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367250"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037239"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>設定 DQS 使用參考資料
   此主題描述如何設定 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 來使用參考資料清理您的資料。 您可以使用 Windows Azure Marketplace 所提供的參考資料，以及直接線上協力廠商參考資料提供者所提供的參考資料。  

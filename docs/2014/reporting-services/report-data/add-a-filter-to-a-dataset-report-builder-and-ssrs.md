@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a7ab54f0f2cf6d1ee4a8358df9062e125a9b496a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 38b71bc3f92a8cb6d3c514c4115395cb3bd619ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048898"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020479"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
   從外部資料來源擷取資料後，將篩選加入至資料集來限制報表中的資料。 當您將篩選加入至資料集時，所有報表組件或資料區都只會使用符合篩選條件的資料。  
@@ -75,6 +75,6 @@ ms.locfileid: "48048898"
 ## <a name="see-also"></a>另請參閱  
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [新增篩選 &#40;報表產生器及 SSRS&#41;](../report-design/add-a-filter-report-builder-and-ssrs.md)  
+ [加入篩選 &#40;報表產生器及 SSRS&#41;](../report-design/add-a-filter-report-builder-and-ssrs.md)  
   
   

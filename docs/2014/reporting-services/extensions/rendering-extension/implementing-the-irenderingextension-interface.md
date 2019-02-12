@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227268"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040039"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>實作 IRenderingExtension 介面
   轉譯延伸模組會從與實際資料結合的報表定義取得結果，並將產生的資料轉譯成可用的格式。 結合的資料與格式之轉換是利用實作 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的 Common Language Runtime (CLR) 類別來完成。 這可將物件模型轉換為檢視器、印表機或是其他輸出目標可取用的輸出格式。  
@@ -51,7 +51,7 @@ ms.locfileid: "48227268"
 -   *createAndRegisterStream* 是要呼叫的委派函式，以取得要轉譯成的資料流。  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo 參數  
- *deviceInfo* 參數包含轉譯參數，而不是報表參數。 這些轉譯參數會傳遞給轉譯延伸模組。 報表伺服器會將 *deviceInfo* 值轉換為 <xref:System.Collections.Specialized.NameValueCollection> 物件。 在 *deviceInfo* 參數中的項目會視為不區分大小寫的值。 如果轉譯要求是以 URL 存取的結果呈現，則 `rc:key=value` 格式的 URL 參數會轉換成 *deviceInfo* 字典物件中的索引鍵/值組。 瀏覽器偵測程式碼也在 *clientCapabilities* 字典中提供下列項目：EcmaScriptVersion、JavaScript、MajorVersion、MinorVersion、Win32、Type 及 AcceptLanguage。 會忽略在 *deviceInfo* 參數中轉譯延伸模組不了解的任何名稱/值組。 下列程式碼範例顯示用來擷取圖示的範例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
+ *deviceInfo* 參數包含轉譯參數，而不是報表參數。 這些轉譯參數會傳遞給轉譯延伸模組。 報表伺服器會將 *deviceInfo* 值轉換為 <xref:System.Collections.Specialized.NameValueCollection> 物件。 在 *deviceInfo* 參數中的項目會視為不區分大小寫的值。 如果轉譯要求是以 URL 存取的結果呈現，則 `rc:key=value` 格式的 URL 參數會轉換成 *deviceInfo* 字典物件中的索引鍵/值組。 瀏覽器偵測程式碼也會提供中的下列項目*clientCapabilities*字典：EcmaScriptVersion、 JavaScript、 MajorVersion、 MinorVersion、 Win32、 類型及 AcceptLanguage。 會忽略在 *deviceInfo* 參數中轉譯延伸模組不了解的任何名稱/值組。 下列程式碼範例顯示用來擷取圖示的範例 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> 方法：  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

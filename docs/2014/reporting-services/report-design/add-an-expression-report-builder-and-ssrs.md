@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1275524eabe77abb326d02b197d8e0aaebd50aa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ba7a57ed74370689b5f3a8c907f34774f9c0a846
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029239"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>加入運算式 (報表產生器及 SSRS)
   運算式會在整個報表中用來定義報表項目屬性、篩選、群組、排序次序、連接字串和參數值。 運算式是以等號 (=) 當作開頭，而且是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫。 運算式是由報表處理器在執行階段加以評估，這樣會將評估結果與報表配置元素結合。  
@@ -37,13 +37,13 @@ ms.locfileid: "48074108"
          此運算式會以 `<<Expr>>`形式出現在設計介面上。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [文字方塊&#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
- [篩選方程式範例&#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [文字方塊 &#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [篩選方程式範例 &#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式對話方塊 &#40;報表產生器&#41;](../expression-dialog-box-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [將程式碼新增至報表 &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)  
+ [將程式碼加入至報表 &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)  
   
   

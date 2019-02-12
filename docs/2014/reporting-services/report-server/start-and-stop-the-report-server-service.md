@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 65eadf33e827e0aa6018d69b86339bc8233c1ee7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 31daaf135e2a5315cea5d71ca6ef0b61e91ff9c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074305"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029179"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>啟動與停止 Report Server 服務
   報表伺服器會實作成一項 Windows 服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 如果您想要使用任何報表伺服器功能，就必須執行這項服務。 停止此服務會停止所有報表伺服器作業。  
@@ -30,7 +30,7 @@ ms.locfileid: "48074305"
   
  您可以使用各種工具來啟動或停止報表伺服器服務，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 中提供的「服務」工具。  
   
- 如果您執行的不只是啟動或停止服務，例如變更服務帳戶，則必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。 使用其他工具來變更服務帳戶可能會破壞您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝。 如需詳細資訊，請參閱[設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
+ 如果您執行的不只是啟動或停止服務，例如變更服務帳戶，則必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。 使用其他工具來變更服務帳戶可能會破壞您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝。 如需詳細資訊，請參閱《 [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)。  
   
  您無法暫停和繼續服務。 沒有啟動參數。 雖然沒有明確的相依性，但是如果您的報表伺服器支援任何訂閱或排程的報表作業，就必須執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。  
   

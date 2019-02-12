@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d441d6d6b87799ea33cd25f69027f4ea9704f20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72c49b9bb1b7d018f6650b8042e306234fd74caf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102538"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036889"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  

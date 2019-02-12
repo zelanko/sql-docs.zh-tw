@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing SQL queries
 - SQL queries [SQLXML]
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95e0e4873601eb3255b8817701b663a0763abf76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8db546afb938f28d506dce0c6d5a3fac95f48b57
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771326"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028239"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>執行 SQL 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

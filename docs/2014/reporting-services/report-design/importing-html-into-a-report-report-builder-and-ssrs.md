@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ffd9c83cb5aad8e22c98ebf1ff2472237452e1c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: 0b954f61e947a7422d518516987be6215d6263b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208368"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021510"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
   您可以使用文字方塊來將從資料集的欄位所擷取的 HTML 格式文字插入至報表。 文字可以來自任何評估為正確格式之 HTML 的簡單或複雜運算式。 格式化的文字可以轉譯為所有受支援的輸出格式，包括 PDF 在內。  
@@ -28,7 +28,7 @@ ms.locfileid: "53208368"
 > [!NOTE]  
 >  當您匯入包含 HTML 標記的文字時，資料一定要先由文字方塊進行剖析。 因為只支援一部分的 HTML 標記，所以顯示在轉譯報表中的 HTML 可能會與原始的 HTML 不同。  
   
- 若要快速開始使用，請參閱[教學課程：格式化文字&#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
+ 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

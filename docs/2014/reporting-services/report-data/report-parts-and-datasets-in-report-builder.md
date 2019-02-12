@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 00094e630c9beaf7f5093d944f267a2884c22da7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c6cb19da853387f4684c301e183276a0f4b7e96
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059340"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027669"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>報表產生器中的報表組件和資料集
   在報表產生器中，在報表內包含資料最簡單的方式，就是從報表組件庫加入報表組件。 報表組件包含相依的資料集，稱為 *「相依資料集」*(Dependent Dataset)。 相依資料集是以共用資料來源為基礎，而且可以是內嵌資料集或共用資料集。  
@@ -24,7 +24,7 @@ ms.locfileid: "48059340"
 > [!NOTE]  
 >  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 在報表內包含資料的另一個方式是使用共用資料集。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 在報表內包含資料的另一個方式是使用共用資料集。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)(Dependent Dataset)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -63,7 +63,7 @@ ms.locfileid: "48059340"
 ## <a name="see-also"></a>另請參閱  
  [報表設計檢視 &#40;報表產生器&#41;](../report-builder/report-design-view-report-builder.md)   
  [安全性 &#40;報表產生器&#41;](../report-builder/security-report-builder.md)   
- [報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [報表內嵌資料集和共用資料集 &#40;報表產生器和 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

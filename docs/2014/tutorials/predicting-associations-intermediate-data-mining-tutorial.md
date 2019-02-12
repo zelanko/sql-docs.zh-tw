@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544257"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022359"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>預測關聯 (中繼資料採礦教學課程)
   當模型經過處理之後，您可以使用與模型中儲存的關聯有關的資訊來建立預測。 在本課程的最後一個工作中，您將會學習如何針對您所建立的關聯模型來建立預測查詢。 此課程假設您已熟悉如何使用預測查詢產生器，而且想要學習如何針對關聯模型來建立預測查詢。 如需如何使用預測查詢產生器，請參閱[資料採礦查詢介面](../../2014/analysis-services/data-mining/data-mining-query-tools.md)。  
@@ -210,7 +209,7 @@ ms.locfileid: "52544257"
   
 ## <a name="see-also"></a>另請參閱  
  [關聯模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
- [[Predictassociation] &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
+ [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
  [使用預測查詢產生器來建立預測查詢](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

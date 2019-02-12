@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415276"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013179"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
   RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器之單一 Web 伺服陣列的環境中，讓您偵測及限制個別租用戶使用特定資源類型的情形。 這種情形的一個範例是裝載服務案例，在此案例中，您可能要為由多個可能分屬不同公司的租用戶所使用的報表伺服器，維護單一 Web 伺服器陣列。 您身為報表伺服器管理員，可以啟用此功能來幫助您達成下列目標：  

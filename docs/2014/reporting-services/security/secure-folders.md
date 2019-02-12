@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034819"
 ---
 # <a name="secure-folders"></a>保護資料夾的安全
   資料夾安全性是保護報表伺服器中之所有內容的基礎。 因為安全性會在整個資料夾結構繼承，所以您可以指定很多或很少區段的資料夾階層，來允許特定類型的存取。  
@@ -37,14 +37,14 @@ ms.locfileid: "48182708"
   
 |選取的工作|授與的權限|  
 |----------------------|---------------------------|  
-|檢視資料夾|檢視資料夾階層，以及指出資料夾建立與修改時間的唯讀屬性。<br /><br /> 除非指派給使用者的角色還包含了「檢視報表」、「檢視模型」、「檢視資源」及「檢視資料來源」等工作，否則使用者無法檢視資料夾內的項目。|  
+|檢視資料夾|檢視資料夾階層，以及指出資料夾建立與修改時間的唯讀屬性。<br /><br /> 使用者無法在資料夾中檢視項目，除非它們指派給角色還包含下列工作：「 檢視報表 」、 「 檢視模型 」、 「 檢視資源 」 和 「 檢視資料來源 」。|  
 |管理資料夾|檢視資料夾屬性、變更名稱或描述，或者將資料夾移到另一個位置。 此工作允許使用者建立資料夾。|  
 |管理報表|從檔案系統將報表加入至資料夾，以及從報表設計師將報表發行至報表伺服器。|  
 |管理資料來源|將新的共用資料來源項目加入至資料夾，以及變更現有的共用資料來源。|  
 |設定項目安全性|建立和修改控制資料夾之存取的角色指派。 此工作必須用於「檢視資料夾」或「管理資料夾」。 若不這麼做，使用者將無法選取項目，而不會產生任何影響。|  
   
 ## <a name="see-also"></a>另請參閱  
- [保護報表和資源](secure-reports-and-resources.md)   
+ [保護報表和資源的安全](secure-reports-and-resources.md)   
  [保護共用資料來源項目的安全](secure-shared-data-source-items.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)  
   

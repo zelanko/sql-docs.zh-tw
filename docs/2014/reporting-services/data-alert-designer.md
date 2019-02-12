@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89f395d7456eaca66d2f225fd47e4cf957186fe2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 61eaf801c3033200626c0a28294be2d3af66efb1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518007"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018070"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
   您可在 [資料警示設計工具] 中建立和編輯資料警示定義。 警示定義是中繼資料的集合，包括您感興趣的報表資料、報表資料必須符合才能建立資料警示執行個體和傳送資料警示訊息的規則、警示訊息的收件者等。  

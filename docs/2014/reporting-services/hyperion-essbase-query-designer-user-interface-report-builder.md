@@ -14,17 +14,17 @@ helpviewer_keywords:
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6559f17e1bbe28e1a30d636b196b6e8d21497041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: fc7951df4e0cb3f6bf3b03d820cdd2f78797b714
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166278"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030169"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 查詢設計工具使用者介面 (報表產生器)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供圖形化查詢設計工具，可用以建立 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：「設計」模式和「查詢」模式。 每一種模式都會提供 [中繼資料] 窗格，而且您可以透過這個窗格，從資料來源上定義的 Cube 中拖曳成員，以便建立可在處理報表時擷取資料的 MDX 查詢。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供圖形化查詢設計工具，可用以建立 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，而且您可以透過這個窗格，從資料來源上定義的 Cube 中拖曳成員，以便建立可在處理報表時擷取資料的 MDX 查詢。  
   
 > [!IMPORTANT]  
 >  當使用者建立與執行查詢時，可以存取資料來源。 您應該授與資料來源的最小權限，例如唯讀權限。  
@@ -32,7 +32,7 @@ ms.locfileid: "48166278"
  本節會針對圖形化查詢設計工具的各種模式，描述其中的工具列按鈕和查詢設計工具窗格。  
   
 ## <a name="graphical-query-designer-in-design-mode"></a>設計模式中的圖形化查詢設計工具  
- 當您編輯使用的資料集的 MDX 查詢[!INCLUDE[extEssbase](../includes/extessbase-md.md)]資料來源，以圖形化查詢設計工具會在設計模式中開啟。 下圖會標示出設計模式的窗格。  
+ 當您為資料集編輯的 MDX 查詢使用了 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 資料來源時，圖形化查詢設計工具會在設計模式下開啟。 下圖會標示出設計模式的窗格。  
   
  ![Hyperion Essbase 資料來源的查詢設計工具](media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase 資料來源的查詢設計工具")  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48166278"
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 無法用於這種資料來源類型。|  
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
 |![重新整理資料集欄位](media/rsqdicon-refreshfields.gif "重新整理資料集欄位")|重新整理資料來源中的中繼資料。|  
-|![新增導出的成員](../analysis-services/media/rsqdicon-addcalculatedmember.gif "新增導出的成員")|顯示 **[導出成員產生器]** 對話方塊。 您可以使用這個對話方塊來建立或編輯導出成員的運算式，包括設定 **[解決順序]** 屬性。|  
+|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。 您可以使用這個對話方塊來建立或編輯導出成員的運算式，包括設定 **[解決順序]** 屬性。|  
 |![切換以顯示空的資料格](../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](../analysis-services/media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更 (例如刪除 [資料] 窗格中的資料行) 時自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![刪除](../analysis-services/media/rsqdicon-delete.gif "刪除")|從查詢中刪除選取的項目。 您可以使用此按鈕來刪除 [篩選] 窗格中的選取資料列。|  
@@ -87,7 +87,7 @@ ms.locfileid: "48166278"
   
 -   **當成文字編輯**  
   
--   **加入導出成員**(![加入導出的成員](../analysis-services/media/rsqdicon-addcalculatedmember.gif "加入導出的成員"))  
+-   **加入導出成員** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **顯示空的資料格** (![切換以顯示空的資料格](../analysis-services/media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
   

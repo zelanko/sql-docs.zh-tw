@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a68fb27df3c1a00ca5b4cf615963d7d9ce4bf2d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 16233754f8e0eaca8d068ddd276b96d9ab6ad73c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357167"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023559"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -75,11 +75,11 @@ ms.locfileid: "53357167"
   
 ##  <a name="bkmk_ReportsandRelatedItemConcepts"></a> 報表及相關項目概念  
  **報表與報表定義**  
- **RDL。** 報表定義符合 XML 文法 (稱為報表定義語言 (RDL)) 的 XML 檔案。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，您可以使用報表產生器或報表設計師這類工具以建立報表定義。 它所含的元素可定義資料來源連接、用以擷取資料的查詢、運算式、參數、影像、文字方塊、資料表以及任何其他設計階段配置。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)。  
+ **RDL.** 報表定義符合 XML 文法 (稱為報表定義語言 (RDL)) 的 XML 檔案。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，您可以使用報表產生器或報表設計師這類工具以建立報表定義。 它所含的元素可定義資料來源連接、用以擷取資料的查詢、運算式、參數、影像、文字方塊、資料表以及任何其他設計階段配置。 如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)。  
   
- **RDLX。** RDLX 中的報表定義是一種 RDL 檔案，具有內部延伸模組可啟用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 視覺效果經驗。 如需詳細資訊，請參閱 [Power View 概觀](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(英文)。  
+ **RDLX.** RDLX 中的報表定義是一種 RDL 檔案，具有內部延伸模組可啟用 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 視覺效果經驗。 如需詳細資訊，請參閱 [Power View 概觀](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(英文)。  
   
- **RDLC。** Visual Studio 報表設計師會產生 XML 格式的用戶端報表定義 (.rdlc) 檔案，以與 ReportViewer 控制項搭配使用。  
+ **RDLC.** Visual Studio 報表設計師會產生 XML 格式的用戶端報表定義 (.rdlc) 檔案，以與 ReportViewer 控制項搭配使用。  
   
  **報表資料連接和資料來源**  
  查詢執行或處理報表時，報表會使用資料連接擷取報表的資料。 在報表定義中，資料連接與資料來源相同。 您可以從內建的資料連接類型清單，選擇連接到關聯式資料庫、多維度資料庫、Web 服務或其他資料來源的類型。 下列項目可在描述資料連接時使用。  
@@ -156,7 +156,7 @@ ms.locfileid: "53357167"
  **向下鑽研報表**  
  向下鑽研報表是一種配置設計，一開始會隱藏複雜度，並讓使用者條件式地切換隱藏的報表項目，以控制要顯示多詳細的資料。 向下鑽研報表必須擷取所有可能會顯示在報表上的資料。 若為使用大量資料的報表，請考慮改用鑽研報表。 如需詳細資訊，請參閱[向下鑽研動作 &#40;報表產生器及 SSRS&#41;](report-design/drilldown-action-report-builder-and-ssrs.md)。  
   
- **子報表**  
+ **Subreports**  
  子報表是以配置元素形式加入至報表的報表項目。 子報表會指向不同的報表，而且會在主報表的主體內顯示為子報表執行個體。 子報表可以使用與主報表不同的資料來源。 雖然可以使用參數在每個子報表執行個體中篩選資料，以在資料區中重複子報表，不過子報表通常是與主報表搭配使用，做為簡報書籍或是可以容納相關報表集合的容器。 每個子報表執行個體都會切換主報表與子報表之間的報表處理內容。 若為使用多個子報表執行個體的報表，請考慮改用鑽研報表。 如需詳細資訊，請參閱[子報表 &#40;報表產生器及 SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md)。  
   
  **主/詳細資料報表和鑽研報表**  

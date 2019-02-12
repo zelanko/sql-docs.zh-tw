@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 853bed4a458fd7f3e7472c563b0cd973bb3eea5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 845013f002bc0d0937ae012ef033aaea1d45cc89
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063378"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025879"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>檢查更新或關閉更新 (報表產生器及 SSRS)
   每當您開啟報表時，報表產生器都會檢查報表伺服器或與報表伺服器整合的 SharePoint 網站上是否已經更新該報表中已發行的報表組件執行個體。 它也會檢查報表組件的相依項目 (如資料集和參數) 是否有變更。 如果網站或伺服器上已經更新任何報表組件或其相依性，報表中的資訊列會顯示更新的組件數。 您可以選擇檢視並接受或拒絕更新，或是解除資訊列。  
@@ -37,7 +37,7 @@ ms.locfileid: "48063378"
 -   以滑鼠右鍵按一下報表外面，或在報表主體中，在設計介面，然後按一下 **檢查是否有更新**。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [報表組件 &#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [發行與重新發行報表組件&#40;報表產生器及 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [瀏覽報表組件及設定預設資料夾&#40;報表產生器及 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

@@ -1,25 +1,24 @@
 ---
-title: 第 5 課： 執行預測查詢 |Microsoft Docs
+title: 第 5 課：執行預測查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0037bd2f-aa2d-464b-bf86-b0210f0438b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ad048ec7efe492b604ad930450c83d3c6da666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139968"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038409"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>第 5 課：執行預測查詢
-  在這一課，您將使用[SELECT FROM\<模型 > 預測 JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 陳述式來建立兩種不同預測基礎的決策樹模型中建立[第 2 課： 將採礦模型加入關聯採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 這些預測類型定義如下。  
+  在這一課，您將使用[SELECT FROM\<模型 > 預測 JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式的 SELECT 陳述式來建立兩種不同預測基礎的決策樹模型中建立[第 2 課：將採礦模型加入關聯採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 這些預測類型定義如下。  
   
  單一查詢  
  進行預測時，使用單一查詢提供特定的值。 例如，您可以將輸入傳遞到查詢 (例如，計算距離、區域碼，或客戶的孩童數目) 來判斷單一客戶是否可能是自行車購買者。 單一查詢會根據這些輸入傳回一個值，表示該客戶購買自行車的可能性。  

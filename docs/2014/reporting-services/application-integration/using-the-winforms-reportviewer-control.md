@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 54a38a78f990ff4c2cc48c7277146dd0c2a07ee2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ff1c143f1619eee0965b3dafb5e002bb52e90bcc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354824"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019719"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WinForms ReportViewer 控制項在 Windows 應用程式中加以轉譯。  

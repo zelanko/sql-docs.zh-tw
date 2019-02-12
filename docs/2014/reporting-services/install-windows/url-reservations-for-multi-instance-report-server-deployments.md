@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c1b5dbe65105de7d5f775c6d98ba17b2d646d87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 775e7a1bced0e35d191d3e3f613b86836b9b1ddb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034779"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>多重執行個體報表伺服器部署的 URL 保留項目 (SSRS 組態管理員)
   如果您在相同電腦上安裝多個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體，您就必須考慮要如何為每一個執行個體定義 URL 保留項目。 在每一個執行個體中，報表伺服器 Web 服務和報表管理員至少每一個都必須有一個 URL 保留項目。 完整的保留項目集合在 HTTP.SYS 中必須是唯一的。  
@@ -49,7 +49,7 @@ ms.locfileid: "48138733"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基礎技術對於唯一的名稱有一些規定。 HTTP.SYS 要求它的儲存機制內的所有 URL 都必須是唯一的。 您可以讓通訊埠、主機名稱或虛擬目錄名稱不同，以建立唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求相同處理序內的應用程式識別必須是唯一的。 這項規定會影響虛擬目錄名稱， 它指定您不能在相同的報表伺服器執行個體內重複虛擬目錄名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器 Url &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

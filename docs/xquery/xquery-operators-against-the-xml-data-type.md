@@ -14,15 +14,15 @@ helpviewer_keywords:
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ba69530f6c9cb8451211a2dcec333d347062b74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671857"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038889"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- 沒有觀察上述查詢中的運作方式的另一種方法： 每個電話號碼值擷取自**AdditionalContactInfo**資料行與兩個電話號碼的集合。 如果值位於集合中，則結果中就會傳回該客戶。  
+ 還有另一種方式發現上一個查詢的運作方式：每個電話號碼值擷取自**AdditionalContactInfo**資料行與兩個電話號碼的集合。 如果值位於集合中，則結果中就會傳回該客戶。  
   
 ### <a name="b-using-a-numeric-operator"></a>B. 使用數值運算子  
  此查詢中的 + 運算子是值運算子，因為它會套用到單一項目。 例如，值 1 會加入到查詢傳回的配置大小：  

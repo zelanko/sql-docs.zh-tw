@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9abe6e26abdf0a61f4dd2934dfa67eb29d3bf65f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 872a1796bf27483ae424c2b4c026bc0e439ccac8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186981"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017359"
 ---
 # <a name="reporting-services-security-and-protection"></a>Reporting Services 安全性與保護
   您可以使用本節的資訊，了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 本節也將說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所支援的授權模型和驗證提供者。  
   
 ## <a name="extended-protection-for-authentication"></a>驗證擴充保護  
- 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，就有驗證擴充保護的支援可以使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能可支援使用通道繫結和服務繫結，以增強驗證的保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能需要搭配支援擴充保護的作業系統使用。 如需詳細資訊，請參閱 < [Reporting services 的驗證擴充保護](extended-protection-for-authentication-with-reporting-services.md)。  
+ 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，就有驗證擴充保護的支援可以使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能可支援使用通道繫結和服務繫結，以增強驗證的保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能需要搭配支援擴充保護的作業系統使用。 如需詳細資訊，請參閱 [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)。  
   
 ## <a name="authentication-and-authorization"></a>驗證與授權  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供不同的使用者驗證類型和用戶端應用程式，便於使用報表伺服器進行驗證。 為您的報表伺服器使用正確的驗證類型可讓組織獲得組織所需之適當的安全性層級。 如需詳細資訊，請參閱 [Authentication with the Report Server](authentication-with-the-report-server.md)。  
@@ -36,6 +36,6 @@ ms.locfileid: "48186981"
   
 |工作描述|連結|  
 |-----------------------|-----------|  
-|設定 Secure Socket Layer (SSL) 可保護連線至報表伺服器的用戶端。|[在原生模式報表伺服器上設定 SSL 連線](configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|設定 Secure Socket Layer (SSL) 可保護連線至報表伺服器的用戶端。|[在原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   

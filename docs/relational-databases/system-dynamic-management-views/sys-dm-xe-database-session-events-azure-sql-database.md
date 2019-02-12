@@ -2,22 +2,21 @@
 title: sys.dm_xe_database_session_events (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 869ed1a58cde0c8350bfd05a97538a5e73931548
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ba6b7613dbda16831502ad8030f1b0a0a065370
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028259"
 ---
 # <a name="sysdmxedatabasesessionevents-azure-sql-database"></a>sys.dm_xe_database_session_events (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47758726"
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及更新的版本。|  
+|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和更新的版本。|  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -43,6 +42,6 @@ ms.locfileid: "47758726"
 |來源|若要|關聯性|  
 |----------|--------|------------------|  
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|多對一|  
-|sys.dm_xe_database_session_events.event_package_guid、 sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|多對一|  
+|sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|多對一|  
   
   

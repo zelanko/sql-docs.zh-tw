@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010438"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用報表管理員建立模型
   您可以使用報表管理員，從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫或 Oracle 資料庫產生模型。 報表模型是從在報表伺服器上發行的共用資料來源產生的。 如果您還沒有共用資料來源，則必須建立一個。  
@@ -41,7 +41,7 @@ ms.locfileid: "48064848"
   
 5.  確認已經選取 **[啟用此資料來源]** 核取方塊。  
   
-6.  在 **[連接類型]** 清單中，選取您要連接的資料來源類型。 連接類型必須是下列任一個： **Oracle**、 **Microsoft SQL Server** 或 **Microsoft SQL Server Analysis Services**。  
+6.  在 **[連接類型]** 清單中，選取您要連接的資料來源類型。 連接類型必須是下列其中一項：**Oracle**， **Microsoft SQL Server**或是**Microsoft SQL Server Analysis Services**。  
   
 7.  在 **[連接字串]** 方塊中，輸入指向資料庫的連接字串。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48064848"
   
     -   Windows 驗證：如果您要作業系統驗證 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者，請選取此選項。 此選項允許 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 Windows 安全性功能 (例如密碼加密)，來驗證使用者。 強烈建議您選取此選項。  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證： 如果您想要使用的使用者，請選取此選項[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]您所建立的登入帳戶。 使用者必須提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入名稱和密碼。  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證：如果要使用者使用您建立的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入帳戶，請選取此選項。 使用者必須提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入名稱和密碼。  
   
         > [!CAUTION]  
         >  可能的話，請使用 Windows 驗證。  

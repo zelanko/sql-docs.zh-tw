@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 993e6abe1df84f712f107f994b5a824e04d89467
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33b628894376a909de5ee39b9de5a6e979a679f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153568"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036069"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>將 Reporting Services 整合到應用程式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是開放且可延伸的報表平台，用以提供開發人員一組完整的 API 以開發方案。  
@@ -50,7 +50,7 @@ ms.locfileid: "48153568"
  描述如何使用 URL 存取，將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表導覽整合到現有的商務應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [URL 存取與 SOAP 之間選擇](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [技術參考 &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [報表伺服器 Web 服務](../report-server-web-service/report-server-web-service.md)  

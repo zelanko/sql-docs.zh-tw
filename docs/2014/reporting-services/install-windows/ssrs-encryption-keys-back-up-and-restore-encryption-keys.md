@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19bdabaab24d9276386095cb8ef97b0130a13c58
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530368"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036589"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>備份與還原 Reporting Services 加密金鑰
   在報表伺服器組態中，建立用於加密機密資訊的對稱金鑰備份副本是很重要的一部分。 許多例行作業都需要金鑰的備份副本，這備份副本可以讓您在新安裝中重複使用現有的報表伺服器資料庫。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 468398a30108b79c1a9f48ce42e035f20b9199f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88ba5b5b8336bfde71356c7a5ffe81e7d2689a50
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201958"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019569"
 ---
 # <a name="security-extensions-overview"></a>安全性延伸模組概觀
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性延伸模組會啟用使用者或群組的驗證和授權；也就是說，它會讓不同的使用者登入到報表伺服器，並根據其識別執行不同的工作或作業。 依預設，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 Windows 架構的驗證延伸模組，此模組使用 Windows 帳戶通訊協定來確認宣稱在系統上具有帳戶之使用者的識別。 以 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的安全性系統來授權使用者。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以角色為基礎的安全性模型類似於其他技術以角色為基礎的安全性模型。  

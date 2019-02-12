@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 345523929eddcefc072bc7f55be49fc5e26057d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192628"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028299"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>格式化線條、色彩和影像 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 讓您能夠格式化線條、色彩、資料區、影像和其他報表項目。  
@@ -44,7 +44,7 @@ ms.locfileid: "48192628"
   
  除了標準邊框以外，還可以將其他邊框套用到圖表。 如需詳細資訊，請參閱[將邊框新增至圖表 &#40;報表產生器及 SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)。  
   
- 您也可以在報表本身加上框線。 如需詳細資訊，請參閱[在報表中加入框線 &#40;報表產生器及 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)。  
+ 您也可以在報表本身加上框線。 如需詳細資訊，請參閱 [在報表中加入框線 &#40;報表產生器及 SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)。  
   
 ## <a name="applying-background-colors"></a>套用背景色彩  
  純色可以加入至整個報表的背景、報表內的文字方塊，或是加入至資料區內的一個資料格或一組資料格。 依預設，背景色彩為白色，不過您可以從報表項目之 **[屬性]** 對話方塊的 **[填滿]** 索引標籤選取色彩。 例如，如果您想要變更文字方塊的背景色彩，請以滑鼠右鍵按一下此文字方塊，並選取 **[文字方塊屬性]**。 按一下 **[填滿]** ，然後再選取您想要的色彩。 在此對話方塊中，您可以針對選取的項目選取背景色彩，或是加入出現在背景中的影像。  
@@ -57,8 +57,8 @@ ms.locfileid: "48192628"
  您也可以將標誌之類的影像加入至報表的背景，或是加入到矩形、文字方塊、資料表、矩陣或圖表的某些部分，或者是加入到報表的主體和頁面區段。 如需詳細資訊，請參閱[影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [格式化數字和日期&#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [填滿對話方塊 &#40;報表產生器及 SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

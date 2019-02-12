@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 71ab6239172ea39a8adcee9ca017a5408079a8d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ca57a64268beb85e08a56c79184338a872bceed0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357151"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011839"
 ---
 # <a name="data-driven-subscriptions"></a>資料驅動訂閱
   資料驅動訂閱會提供一個方式來使用在執行階段擷取自外部資料來源的動態訂閱資料， 資料驅動訂閱也可以使用在定義訂閱時所指定的靜態文字和預設值； 您可以使用資料驅動訂閱來執行下列作業：  

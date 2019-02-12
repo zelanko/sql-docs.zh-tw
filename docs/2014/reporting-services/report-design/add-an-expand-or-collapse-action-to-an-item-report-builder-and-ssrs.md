@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5d3914822d937d37c0965b69c93c9e06434c044e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223804"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037775"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
   您可以讓使用者以互動方式展開或摺疊報表項目，或者針對資料表或矩陣，展開或摺疊與群組關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  
@@ -97,7 +97,7 @@ ms.locfileid: "48223804"
      ![執行含有展開的資料表的報表](../media/expandcollapse-runreport-reporttable.png "執行含有展開的資料表的報表")  
   
 ## <a name="see-also"></a>另請參閱  
- [向下鑽研動作&#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [隱藏項目 &#40;報表產生器及 SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

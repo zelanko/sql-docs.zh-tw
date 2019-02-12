@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6cefb3f87d983690c8203eba1860a1d2595e096c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7a1051b194c9ca9f5ad185d9759b85a252f6eec4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026579"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>群組運算式範例 (報表產生器及 SSRS)
   在資料區域中，您可以依據單一欄位來分組資料，或是建立較為複雜的運算式來識別分組的資料。 複雜運算式包含了多個欄位或參數、條件陳述式或自訂程式碼的參考。 當您為資料區定義群組時，您會將這些運算式加入到 **[群組]** 屬性。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
@@ -46,6 +46,6 @@ ms.locfileid: "48076528"
 ## <a name="see-also"></a>另請參閱  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [自訂程式碼及組件 References in Expressions in 報表設計工具&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
+ [報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  
   
   

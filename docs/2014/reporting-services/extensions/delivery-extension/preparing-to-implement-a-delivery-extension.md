@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5f0e9cb84a2a2052ad22b19367d13e63c259ae2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d68416588dce94f5b10acef176759228e4af00fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160717"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031819"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>準備實作傳遞延伸模組
   在您實作 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 傳遞延伸模組之前，應該定義要實作的介面。 您需要先決定將如何使用傳遞延伸模組、傳遞延伸模組將需要的設定，以及您將需要實作的特定功能以傳遞報表通知。  

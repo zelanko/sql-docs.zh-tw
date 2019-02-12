@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dcadf726623b71daa0f9bf3e699c6bd8ac3ab122
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376670"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016909"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
   在本教學課程中，您要根據範例銷售資料建立基本資料表報表，然後將走勢圖加入至資料表中的儲存格。  
@@ -82,7 +82,7 @@ ms.locfileid: "53376670"
   
 8.  在 [連接字串] 中，鍵入下列文字：  
   
-     **資料來源 =\<伺服器名稱 >**  
+     **Data Source=\<servername>**  
   
      運算式\<伺服器名稱 >，例如 Report001，指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53376670"
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. 按 [下一步] 。  
+13. 按一下 [下一步] 。  
   
 ##  <a name="Query"></a> 2.在資料表精靈中建立查詢  
  在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
@@ -151,7 +151,7 @@ ms.locfileid: "53376670"
   
      查詢隨即執行，並顯示 **SalesDate**、 **Subcategory**、 **Product**、 **Sales**和 **Quantity**欄位的結果集。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 [排列欄位] 頁面上，將 [Sales] 拖曳至 [值]。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "53376670"
   
 8.  將 [SalesDate] 拖曳至 [資料行群組]。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 10. 在 **[選擇配置]** 頁面的 **[選項]** 下方，確定已選取 **[顯示小計和總計]** 。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "53376670"
   
     3.  第三個資料列會針對資料表出現一次，以顯示總計。  
   
-11. 按 [下一步] 。  
+11. 按一下 [下一步] 。  
   
 12. 在 **[選擇樣式]** 頁面的 **[樣式]** 窗格中，選取 **[石板]**。  
   
@@ -295,7 +295,7 @@ ms.locfileid: "53376670"
   
 4.  按一下 [執行] 以預覽報表。  
   
-##  <a name="Title"></a> 8。(選擇性) 加入報表標題  
+##  <a name="Title"></a> 8.(選擇性) 加入報表標題  
  報表標題會出現在報表的頂端。 您可以將報表標題放置在報表頁首，如果報表不使用報表頁首，則可以放置在報表主體頂端的文字方塊中。 在本教學課程中，您將使用自動放置在報表主體頂端的文字方塊。  
   
  您可以將不同的字型樣式、大小和色彩套用到文字的片語和個別字元，進一步加強文字。 如需詳細資訊，請參閱[在文字方塊中將文字格式化 &#40;報表產生器及 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)。  
@@ -318,7 +318,7 @@ ms.locfileid: "53376670"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> 9。儲存報表  
+##  <a name="Save"></a> 9.儲存報表  
  將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  

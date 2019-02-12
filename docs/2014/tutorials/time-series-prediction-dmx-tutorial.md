@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a07f977a01c6107b345892f4ad623b3ca2cb941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010799"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>時間序列預測 DMX 教學課程
   在本教學課程中，您將學會如何建立時間序列採礦結構、建立三種自訂時間序列採礦模型，以及使用這些模型建立預測。  

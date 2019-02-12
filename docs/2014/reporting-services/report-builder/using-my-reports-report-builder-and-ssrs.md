@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ca96d67a219ff106d2eb3388c129f9b8af306f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30d87a1df39ad5e92cb8b29a71506825f17a2789
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356648"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034519"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用我的報表 (報表產生器及 SSRS)
   在設定為原生模式的報表伺服器上，[我的報表] 資料夾是個人的工作空間，可以用來儲存和使用您所擁有的報表。 其他報表伺服器資料夾都是公開的，通常使用者必須具備進階權限才可以加入或修改資料夾內容。 相對地，[我的報表] 資料夾是使用者自行管理的工作空間。 您可以加入或移除報表和資料夾，以及使用個人化的設定來儲存連結報表。  

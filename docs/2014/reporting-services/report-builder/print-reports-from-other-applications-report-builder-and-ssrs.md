@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b68fdf49527e83965a5c1a5c41ab185bdba0c463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 28dcf8712214e7240eb60ef3caa6b28cda31c38e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031911"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>從其他應用程式列印報表 (報表產生器及 SSRS)
-  報表產生器提供匯出選項，可以讓您輕鬆地在其他應用程式中檢視報表。 `Export`當瀏覽器或 Web 應用程式中開啟它時，在報表頂端會出現在報表工具列上的命令可用。 匯出報表會將報表顯示在不同的應用程式中 (例如，如果將報表匯出至 Excel，就會在 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]中開啟報表)。 若要列印，則建議只有當應用程式有您要使用的特定列印功能時，您才匯出報表。  
+  報表產生器提供匯出選項，可以讓您輕鬆地在其他應用程式中檢視報表。 `Export` 命令提供於報表工具列上，當您在瀏覽器或網路架構應用程式中開啟報表時，此工具列會出現在報表頂端。 匯出報表會將報表顯示在不同的應用程式中 (例如，如果將報表匯出至 Excel，就會在 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]中開啟報表)。 若要列印，則建議只有當應用程式有您要使用的特定列印功能時，您才匯出報表。  
   
  若要將報表匯出至另一個應用程式，您必須已安裝該應用程式。 例如，在匯出為 Acrobat (PDF) 格式之前，您必須在電腦中安裝 Adobe Acrobat Reader。 如果選擇將報表匯出成 TIFF 格式，報表伺服器就會將報表放入與 TIFF 檔案類型關聯的檢視應用程式中。 雖然使用的應用程式會視您的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 版本而定，但通常此工具為 Windows 圖片和傳真檢視器。 預設的解析度對應於螢幕解析度 96 DPI。 您可以將 Windows 圖片和傳真檢視器的解析度增加至 300 DPI 或 600 DPI，以符合印表機的功能。 如需有關調整解析度的詳細資訊，請參閱 Windows 產品文件集。  
   

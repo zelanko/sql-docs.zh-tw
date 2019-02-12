@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e0c9e553ebff35c865adabfeea164a56b5cffce0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 859d4ae6557300582b866d6dcd6d0cd3ed124d2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075968"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014979"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>將快照集加入報表記錄 (報表管理員)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 報表快照集是一種報表，它包含在特定時間點擷取的配置資訊和查詢結果。 報表快照集和視需要報表不同，視需要報表會在您選取報表時取得最新的查詢結果，而報表快照集是依排程處理，並儲存至報表伺服器。 您選取報表快照集以供檢視時，報表伺服器會從報表伺服器資料庫擷取儲存的報表，並顯示建立快照集當時的資料與配置。  
@@ -38,7 +38,7 @@ ms.locfileid: "48075968"
 3.  按一下 **[新增快照集]**。 **[執行時]** 資料行裡會建立一個新的快照集。  
   
     > [!NOTE]  
-    >  管理員必須將報表記錄設定為 **[允許手動建立記錄]**，才能執行此作業。 如需詳細資訊，請參閱 <<c0> [ 限制報表記錄&#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)。</c0>  
+    >  管理員必須將報表記錄設定為 **[允許手動建立記錄]**，才能執行此作業。 如需詳細資訊，請參閱 [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)。  
   
 4.  按一下 **[套用]**。  
   
@@ -73,8 +73,8 @@ ms.locfileid: "48075968"
 5.  按一下 **[套用]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表執行屬性&#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [開啟及關閉報表&#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [設定報表的執行屬性 &#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
+ [開啟及關閉報表 &#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)   
  [[排程]](../subscriptions/schedules.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)  

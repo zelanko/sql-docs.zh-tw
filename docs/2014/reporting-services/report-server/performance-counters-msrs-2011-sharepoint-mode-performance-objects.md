@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 843f0da00a9f7a496c30db9b40fb95cdb2244efe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9154d8fe244449d38eef0f220fc1215f6bbb71cf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023469"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件的效能計數器 (SharePoint 模式)
   本主題描述屬於 `MSRS 2014 Web Service SharePoint Mode` SharePoint 模式部署一部分之 `MSRS 2014 Windows Service SharePoint Mode` 和 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  

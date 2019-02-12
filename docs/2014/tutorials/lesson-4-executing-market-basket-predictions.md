@@ -1,25 +1,24 @@
 ---
-title: 第 4 課： 執行購物籃預測 |Microsoft Docs
+title: 第 4 課：執行購物籃預測 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177490"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041429"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>第 4 課：執行購物籃預測
-  在這一課，您將使用 DMX`SELECT`陳述式來建立預測，根據關聯模型中建立[第 2 課： Adding Mining Models to Market Basket Mining Structure&lt](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 預測查詢的建立方式是使用 DMX `SELECT` 陳述式並加入 `PREDICTION JOIN` 子句。 在預測聯結之語法的詳細資訊，請參閱[FROM&#60;模型&#62;預測聯結&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)。  
+  在這一課，您將使用 DMX`SELECT`陳述式來建立預測，根據關聯模型中建立[第 2 課：將採礦模型加入購物籃採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)。 預測查詢的建立方式是使用 DMX `SELECT` 陳述式並加入 `PREDICTION JOIN` 子句。 在預測聯結之語法的詳細資訊，請參閱[FROM&#60;模型&#62;預測聯結&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)。  
   
  **SELECT FROM\<模型 > PREDICTION JOIN**形式的`SELECT`陳述式包含三個部分：  
   
@@ -147,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  在工具列上，按一下**Execute**  按鈕。  
   
-     此查詢會傳回一個包含三項產品的資料表：HL Mountain Tire、Fender Set - Mountain 和 ML Mountain Tire。 此資料表會按照機率的順序列出這些傳回的產品。 最有可能與查詢中指定之三項產品加入同一個購物車的傳回產品會顯示在資料表的最上方。 後面兩項產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確性的統計資料。  
+     查詢會傳回包含三項產品的資料表：HL Mountain Tire、 Fender Set-Mountain 和 ML Mountain Tire。 此資料表會按照機率的順序列出這些傳回的產品。 最有可能與查詢中指定之三項產品加入同一個購物車的傳回產品會顯示在資料表的最上方。 後面兩項產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確性的統計資料。  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>使用具有 MINIMUM_PROBABILITY 0.01 的模型建立預測  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  在工具列上，按一下**Execute**  按鈕。  
   
-     此查詢會傳回一個包含三項產品的資料表：HL Mountain Tire、Water Bottle 和 Fender Set – Mountain。 此資料表會按照機率的順序列出這些產品。 顯示在資料表最上方的產品就是最有可能與查詢中指定之三項產品加入同一個購物車的產品。 其餘產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確度的統計資料。  
+     查詢會傳回包含三項產品的資料表：HL Mountain Tire、 Water Bottle 和 Fender Set-Mountain。 此資料表會按照機率的順序列出這些產品。 顯示在資料表最上方的產品就是最有可能與查詢中指定之三項產品加入同一個購物車的產品。 其餘產品則是後續最有可能加入購物車的產品。 此資料表也包含描述預測精確度的統計資料。  
   
      您可以看到查詢，這個結果的值*MINIMUM_PROBABILITY*參數會影響查詢所傳回的結果。  
   

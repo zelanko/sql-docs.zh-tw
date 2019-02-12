@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 707a18ee54776bee46c58fc9db843c06d14a2ff4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544612"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031729"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](specify-device-information-settings-in-a-url.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "52544612"
 |*FallbackPage*|設定在搜尋或文件引導模式選取項目失敗時所顯示頁面的頁碼。|預設值為目前頁面的頁碼。|  
 |*GetImage*|取得 HTML 檢視器使用者介面的特定圖示。||  
 |*圖示*|取得特定轉譯延伸模組的圖示。||  
-|*樣式表*|指定要套用至 HTML 檢視器的樣式表。||  
+|*Stylesheet*|指定要套用至 HTML 檢視器的樣式表。||  
 |裝置資訊設定|指定裝置資訊設定的形式`rc:tag=value`，其中*標記*的裝置資訊設定特定轉譯延伸模組目前所使用的名稱 (請參閱描述*格式化*參數)。 例如，您可以利用 IMAGE 轉譯延伸模組的 *OutputFormat* 裝置資訊設定，使用下列 URL 存取字串的參數將報表轉譯為 JPEG 影像： `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`。 如需所有延伸模組特定裝置資訊設定的詳細資訊，請參閱[轉譯延伸模組的裝置資訊設定 &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)。||  
   
 ## <a name="report-server-commands-rs"></a>報表伺服器命令 (rs:)  
@@ -63,7 +63,7 @@ ms.locfileid: "52544612"
 |*快照式*|根據報表記錄快照集來轉譯報表。 如需詳細資訊，請參閱 [使用 URL 存取轉譯報表記錄快照集](render-a-report-history-snapshot-using-url-access.md)。<br /><br /> 例如在 `Native` 模式下，擷取日期為 2003-04-07 且時間戳記為 13:40:02 的報表記錄快照集。<br /><br /> `http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02`|  
 |*PersistStreams*|轉譯單一永續性資料流中的報表。 這個參數是由影像轉譯器用來傳輸轉譯的報表，一次一個區塊。 在 URL 存取字串中使用這個參數後，以 *GetNextStream* 參數使用相同的 URL 存取字串，而不用 *PersistStreams* 參數，以取得永續性資料流中的下一個區塊。 這個 URL 命令最後會傳回 0 個位元組資料流，表示永續性資料流結尾。 預設值是 `false`。|  
 |*GetNextStream*|取得使用 *PersistStreams* 參數存取的永續性資料流中的下一個資料區塊。 如需詳細資訊，請參閱 *PersistStreams*的描述。 預設值是 `false`。|  
-|*工作階段識別碼*|指定用戶端應用程式和報表伺服器之間已建立的使用中報表工作階段。 此參數的值是設定為工作階段識別碼。<br /><br /> 您可以將工作階段識別碼指定為 Cookie 或是 URL 的一部分。 當將報表伺服器設定成不使用工作階段 Cookie 時，第一個沒有指定工作階段識別碼的要求，會導致使用某個工作階段識別碼來進行重新導向。 如需有關報表伺服器工作階段的詳細資訊，請參閱＜ [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)＞。|  
+|*SessionID*|指定用戶端應用程式和報表伺服器之間已建立的使用中報表工作階段。 此參數的值是設定為工作階段識別碼。<br /><br /> 您可以將工作階段識別碼指定為 Cookie 或是 URL 的一部分。 當將報表伺服器設定成不使用工作階段 Cookie 時，第一個沒有指定工作階段識別碼的要求，會導致使用某個工作階段識別碼來進行重新導向。 如需有關報表伺服器工作階段的詳細資訊，請參閱＜ [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)＞。|  
 |*ClearSession*|`true` 的值會指示報表伺服器從報表工作階段移除報表。 所有和已驗證的使用者相關聯的報表執行個體，都會從報表工作階段移除。 (報表執行個體定義為：使用不同的報表參數值多次執行相同的報表)。預設值是 `false`。|  
 |*ResetSession*|`true` 的值會指示報表伺服器透過移除與所有報表快照集的報表工作階段關聯，重設報表工作階段。 預設值是 `false`。|  
 |*ShowHideToggle*|切換該報表區段的顯示和隱藏狀態。 指定正整數以表示要切換的區段。|  

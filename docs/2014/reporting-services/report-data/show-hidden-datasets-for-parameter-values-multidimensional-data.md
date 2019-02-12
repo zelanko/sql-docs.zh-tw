@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0d0682e33e72686abd41e03e7936c557db740b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 649fdfce5968af63ada22f6e9a2715bdca9866ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024779"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS)
   您的報表可能包含自動產生的資料集 (也稱為隱藏的資料集)，而這些資料集預設不會顯示在 [報表資料] 窗格中。 這些資料集是以下列方式建立的：  

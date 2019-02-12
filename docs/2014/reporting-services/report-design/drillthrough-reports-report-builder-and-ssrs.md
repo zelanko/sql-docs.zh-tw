@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a042f9f28b9be59f3f72773ae745308fe160853d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369430"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027069"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>鑽研報表 (報表產生器及 SSRS)
   鑽研報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 例如，在此圖中，銷售摘要報表會列出銷售訂單和總計。 當使用者按一下摘要清單中的訂單號碼時，會開啟另一份含有訂單詳細資料的報表。  

@@ -3,23 +3,22 @@ title: sys.pdw_health_component_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 66abdb548b09d2f38d3b57274ad3ea52cee3acc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6f74c53c7b7380308ee0c620bcf07c1a8ddbc8f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717826"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010859"
 ---
-# <a name="syspdwhealthcomponentproperties-transact-sql"></a>sys.pdw_health_component_properties & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syspdwhealthcomponentproperties-transact-sql"></a>sys.pdw_health_component_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   描述裝置的存放區屬性。 某些屬性會顯示裝置狀態和某些屬性會描述裝置本身。  

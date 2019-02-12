@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210938"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021379"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 資料區的區域 (報表產生器及 SSRS)
   Tablix 資料區具有四個包含 Tablix 資料格的區域：邊角、資料列群組區域、資料行群組區域和主體。 每個區域中的資料格都有一個不同的函數。 您可以將資料格加入至 Tablix 主體區域，以便顯示詳細資料和分組資料。 當您建立群組以顯示群組執行個體值時，報表產生器和報表設計師會將資料格加入至資料列群組或資料行群組區域。 當資料列群組和資料行群組都存在時，報表產生器和報表設計師會建立 Tablix 邊角資料格。  
@@ -26,7 +26,7 @@ ms.locfileid: "48210938"
   
  在設計介面上，虛線會指出所選取之 Tablix 資料區的四個區域。 下圖顯示 Tablix 區域中，具有以類別目錄和子類別目錄為基礎的巢狀資料列群組、以地理和國家 (地區) 為基礎的巢狀資料行群組，以及以年為基礎的相鄰資料行群組的區域。  
   
- ![Tablix 資料區的區域](../media/rs-tablixareas.gif "Tablix 資料區的區域")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  下列清單具有每個區域的描述：  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48210938"
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tablix 資料區域&#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 97dce14bed313a8044486f4e7609557e2ad13057
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0d9610544543e88fd8e50e9d3ccc2fc64ecb84a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112679"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016109"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>影像屬性對話方塊、大小 (報表產生器及 SSRS)
   選取 **[影像屬性]** 對話方塊上的 **[大小]** 來格式化欄位或設計區域中顯示之影像的大小，或變更資料格或文字方塊邊緣和資料格或文字方塊內包含之圖片或值之間的額外空間量。  
@@ -34,13 +34,13 @@ ms.locfileid: "48112679"
  **依比例調整**  
  選擇此選項來調整影像大小，以便在比例上符合資料格或文字方塊的高度和寬度。  
   
- **美工圖案**  
+ **Clip**  
  選擇此選項會依照資料格或文字方塊的高度和寬度，從圖片的左上角顯示影像。 影像的框線可以縮小或擴大以符合影像。 如果影像大於資料格或文字方塊，則僅會顯示影像的一部分。  
   
- **左邊**  
+ **Left**  
  指定在資料格或文字方塊的左邊緣與資料格內顯示的值之間有多少填補或空格。  
   
- **權限**  
+ **Right**  
  指定在資料格或文字方塊的右邊緣與資料格內顯示的值之間有多少填補或空格。  
   
  **頂端**  
@@ -52,7 +52,7 @@ ms.locfileid: "48112679"
 ## <a name="see-also"></a>另請參閱  
  [影像屬性對話方塊、 一般&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [映像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [對話方塊、 窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [影像 &#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

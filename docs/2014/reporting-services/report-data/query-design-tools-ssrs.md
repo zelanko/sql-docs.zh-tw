@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 396542d6c29a463eae83442e3b3398b68cd01b11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa4be367b9f04fb8d96bb228b7d040aae0e120d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180350"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041259"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中報表設計師的查詢設計工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供各種查詢設計工具，您可以在報表設計師中利用這些工具來建立資料集查詢。 您使用的資料來源類型會決定特定查詢設計工具的可用性。 此外，某些查詢設計工具還提供替代模式，讓您能夠選擇使用視覺化模式或直接使用查詢語言。 本主題簡介每個工具，並描述每個工具支援的資料來源類型。 本主題將描述下列工具：  
@@ -59,14 +59,14 @@ ms.locfileid: "48180350"
   
  ![SQL 查詢適用的圖形化查詢設計工具](../media/rsqd-dsaw-sql.gif "SQL 查詢適用的圖形化查詢設計工具")  
   
- 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱[圖形化查詢設計工具使用者介面](graphical-query-designer-user-interface.md)。  
+ 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [圖形化查詢設計工具使用者介面](graphical-query-designer-user-interface.md)。  
   
 ##  <a name="Model"></a> 報表模型查詢設計工具  
  報表模型查詢設計工具是用於建立或修改針對已發行至報表伺服器的 SMDL 報表模型所執行的查詢。 針對模型執行的報表支援 clickthrough 資料瀏覽。 查詢會在執行階段判斷資料瀏覽的路徑。 下圖說明報表模型查詢設計工具。  
   
  ![語意模型查詢設計工具 UI](../media/rsqd-dsawmodel-smql.gif "語意模型查詢設計工具 UI")  
   
- 若要使用報表模型查詢設計工具，您必須定義指向已發行模型的資料來源。 當您定義資料來源的資料集時，您可以在報表模型查詢設計工具中開啟資料集查詢。 報表模型查詢設計工具可用於圖形化模式或以文字為基礎的模式。 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱[報表模型查詢設計工具使用者介面](report-model-query-designer-user-interface.md)。  
+ 若要使用報表模型查詢設計工具，您必須定義指向已發行模型的資料來源。 當您定義資料來源的資料集時，您可以在報表模型查詢設計工具中開啟資料集查詢。 報表模型查詢設計工具可用於圖形化模式或以文字為基礎的模式。 您可以切換工具列上的 [當成文字編輯] 按鈕，以便在圖形化查詢設計工具和以文字為基礎的查詢設計工具之間切換。 如需詳細資訊，請參閱 [報表模型查詢設計工具使用者介面](report-model-query-designer-user-interface.md)。  
   
 ##  <a name="MDX"></a> MDX 查詢設計工具  
  多維度運算式 (MDX) 查詢設計工具用於建立或修改針對包含多維度 Cube 之 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源所執行的查詢。 下圖說明定義查詢和篩選之後的 MDX 查詢設計工具。  
@@ -80,10 +80,10 @@ ms.locfileid: "48180350"
   
  ![Analysis Services DMX 查詢設計工具，設計檢視](../media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX 查詢設計工具，設計檢視")  
   
- 若要使用 DMX 查詢設計工具，您定義的資料來源必須已經包含有效的可用資料採礦模型。 當您定義資料來源的資料集時，您可以在 DMX 查詢設計工具中開啟查詢。 必要時，使用工具列上的 MDX 和 DMX 按鈕，在 MDX 與 DMX 模式之間切換。 選取模型之後，您可以建立資料採礦預測查詢，提供資料給報表。 如需詳細資訊，請參閱 [Analysis Services DMX 查詢設計工具使用者介面](analysis-services-dmx-query-designer-user-interface.md)。  
+ 若要使用 DMX 查詢設計工具，您定義的資料來源必須已經包含有效的可用資料採礦模型。 當您定義資料來源的資料集時，您可以在 DMX 查詢設計工具中開啟查詢。 必要時，使用工具列上的 MDX 和 DMX 按鈕，在 MDX 與 DMX 模式之間切換。 選取模型之後，您可以建立資料採礦預測查詢，提供資料給報表。 如需詳細資訊，請參閱 [Analysis Services MDX 查詢設計工具使用者介面](analysis-services-dmx-query-designer-user-interface.md)。  
   
 ##  <a name="SAPBW"></a> Sap NetWeaver BI 查詢設計工具  
- [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查詢設計工具用於擷取 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 資料庫中的資料。 若要使用此查詢設計工具，您必須擁有[!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)]具有至少一個 InfoCube、 MultiProvider 或 Web 查詢定義的資料來源。 下圖說明 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查詢設計工具。  
+ [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查詢設計工具用於擷取 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 資料庫中的資料。 若要使用此查詢設計工具，您所具備的 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 資料來源必須至少已經定義一個 InfoCube、MultiProvider 或 Web 查詢。 下圖說明 [!INCLUDE[SAP_DPE_BW_1](../../../includes/sap-dpe-bw-1-md.md)] 查詢設計工具。  
   
  ![在設計模式下使用 MDX 的查詢設計工具](../media/rsqd-dssapbw-mdx-designmode.gif "在設計模式下使用 MDX 的查詢設計工具")  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48180350"
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)   
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
- [Reporting Services 所支援的資料來源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [建立內嵌或共用資料來源&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+ [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [建立內嵌或共用資料來源 &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
   

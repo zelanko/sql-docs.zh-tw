@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 841bdd13dfbc1fe7ca29a4eb3f3dbe757a28c36c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0f7016d47d060fa5f6708f907da848d7329482d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224448"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024709"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器應用程式和發行的報表是透過指定 IP 位址、通訊埠和虛擬目錄的 URL 來加以存取。 如果開啟了 Windows 防火牆，則設定報表伺服器使用的通訊埠很可能已關閉。 當要求報表之後出現空白網頁，或是當您從遠端用戶端電腦嘗試開啟報表管理員時出現空白網頁，就表示某個通訊埠編號可能已關閉。  
@@ -31,9 +31,9 @@ ms.locfileid: "48224448"
  如果您要存取外部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫，或者報表伺服器資料庫位於外部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，您就必須開啟外部電腦上的通訊埠 1433 和 1434。 如需詳細資訊，請參閱《 [線上叢書》的](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) 設定用於 Database Engine 存取的 Windows 防火牆 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需預設 Windows 防火牆設定的詳細資訊，以及影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之 TCP 通訊埠的描述，請參閱《 [線上叢書》中的](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) 設定 Windows 防火牆以允許 SQL Server 存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ## <a name="prerequisites"></a>先決條件  
- 這些指示假設您已經為報表伺服器 Web 服務和報表管理員設定服務帳戶、建立報表伺服器資料庫及設定 URL。 如需詳細資訊，請參閱 <<c0> [ 管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)。  
+ 這些指示假設您已經為報表伺服器 Web 服務和報表管理員設定服務帳戶、建立報表伺服器資料庫及設定 URL。 如需詳細資訊，請參閱 [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)。  
   
- 您也應該已經確認，報表伺服器可透過本機報表伺服器執行個體的本機網頁瀏覽器連接來加以存取。 此步驟會確認您有使用中的安裝。 在您開始開啟通訊埠之前，應該先確認安裝已正確設定。 若要在 Windows Server 上完成這個步驟，您也必須已經將報表伺服器網站加入至 [信任的網站]。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+ 您也應該已經確認，報表伺服器可透過本機報表伺服器執行個體的本機網頁瀏覽器連接來加以存取。 此步驟會確認您有使用中的安裝。 在您開始開啟通訊埠之前，應該先確認安裝已正確設定。 若要在 Windows Server 上完成這個步驟，您也必須已經將報表伺服器網站加入至 [信任的網站]。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="opening-ports-in-windows-firewall"></a>在 Windows 防火牆中開啟通訊埠  
  不同版本的 Windows 防火牆有不同的指示。  
@@ -50,21 +50,21 @@ ms.locfileid: "48224448"
   
 5.  按一下 **[連接埠]** 的 **[規則類型]**。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
 7.  在 **[通訊協定及連接埠]** 頁面上，按一下 **[TCP]**。  
   
 8.  選取 **[特定本機連接埠]** ，然後輸入值： **80**。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 10. 在 **[動作]** 頁面上，按一下 **[允許該連線]**。  
   
-11. 按 [下一步] 。  
+11. 按一下 [下一步] 。  
   
 12. 在 **[設定檔]** 頁面上，按一下適用於您環境的選項。  
   
-13. 按 [下一步] 。  
+13. 按一下 [下一步] 。  
   
 14. 在 [名稱] 頁面上，輸入名稱：**ReportServer (TCP 在連接埠 80 上)**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48224448"
   
 2.  按一下 **允許程式通過 Windows 防火牆**。  
   
-3.  按一下 **[繼續]**。  
+3.  按一下 [ **繼續**]。  
   
 4.  在 [例外] 索引標籤上按一下**新增連接埠**。  
   
@@ -102,10 +102,10 @@ ms.locfileid: "48224448"
  您也可以在另一部電腦上啟動報表管理員，以確認此通訊埠已正確開啟。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器服務帳戶&#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [設定報表伺服器 Url &#40;SSRS 組態管理員&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [設定報表伺服器服務帳戶&#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)  
   
   

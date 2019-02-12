@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1a41fc472566b8838ff9fc3a771e687c03dbc072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1e33b0c3e957e13ea6178a3d7e65279a3be84794
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120585"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034719"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>將互動式排序加入至資料表或矩陣 (報表產生器及 SSRS)
   加入互動式排序按鈕，讓使用者變更資料表和矩陣中資料列和資料行的排序次序。 系統僅能以支援使用者互動的轉譯格式支援此功能，例如 HTML。  
@@ -219,7 +219,7 @@ ms.locfileid: "48120585"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [篩選、分組和排序資料 &#40;報表產生器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [互動式排序 &#40;報表產生器及 SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)   
  [在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [探索 Tablix 資料區的彈性 &#40;報表產生器及 SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  

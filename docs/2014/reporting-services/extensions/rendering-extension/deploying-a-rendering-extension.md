@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f2f0c56138572873c51de852f282edcfbae1c104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190878"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040049"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署轉譯延伸模組
   在您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表轉譯延伸模組並將其編譯成 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使其可供報表伺服器和報表設計師探索。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>組態檔轉譯延伸模組元素  
- 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 `Extension`元素包含兩個屬性： 名稱和型別。  
+ 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 `Extension` 元素包含兩個屬性：Name 與 Type。  
   
  下表描述的屬性`Extension`轉譯延伸模組的項目：  
   
@@ -34,8 +34,8 @@ ms.locfileid: "48190878"
 |---------------|-----------------|  
 |**名稱**|延伸模組的唯一名稱。 **Name** 屬性的最大長度為 255 個字元。 該名稱在組態檔之 **Extensions** 元素的所有項目中，必須是唯一的。 如果重複的名稱存在，報表伺服器會傳回錯誤。|  
 |**型別**|以逗號分隔的清單，包括完整的命名空間以及組件的名稱。|  
-|**Visible**|值若為 `false` 表示轉譯延伸模組不應該顯示在使用者介面中。 不包含屬性時，預設值是`true`。|  
-|**LogAllExecutionRequests**|值若為 `false` 表示只會針對工作階段中的第一項報表執行作業記錄項目。 不包含屬性時，預設值是`true`。<br /><br /> 例如，這項設定會決定只針對報表中轉譯的第一個頁面記錄項目 (當此值為 `false` 時)，還是針對報表中轉譯的每個頁面記錄項目 (當此值為 `true` 時)。|  
+|**Visible**|值若為 `false` 表示轉譯延伸模組不應該顯示在使用者介面中。 如果沒有包括屬性，預設值是 `true`。|  
+|**LogAllExecutionRequests**|值若為 `false` 表示只會針對工作階段中的第一項報表執行作業記錄項目。 如果沒有包括屬性，預設值是 `true`。<br /><br /> 例如，這項設定會決定只針對報表中轉譯的第一個頁面記錄項目 (當此值為 `false` 時)，還是針對報表中轉譯的每個頁面記錄項目 (當此值為 `true` 時)。|  
   
  如需詳細資訊，請參閱 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)。  
   

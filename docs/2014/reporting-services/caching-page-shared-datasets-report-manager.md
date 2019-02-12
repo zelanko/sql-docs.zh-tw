@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8d19f339b8cb8955ab33f73ea164f8bbfb2e7fce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205170"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017880"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>快取頁面、共用資料集 (報表管理員)
   使用 [快取屬性] 頁面，即可設定共用資料集的快取選項。  
@@ -24,7 +24,7 @@ ms.locfileid: "48205170"
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面中導覽至這個位置。  
   
 ### <a name="to-open-the-caching-properties-page-for-a-shared-dataset"></a>開啟共用資料集的快取屬性頁面  
@@ -57,7 +57,7 @@ ms.locfileid: "48205170"
  儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [快取共用資料集 &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)   
  [排程](subscriptions/schedules.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1e5639e83d3d0abcb9999d03ea0ce954c8824556
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 08f25381a87074720868b68c8c095dd8b2136d59
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119578"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025399"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>設定文字方塊方向 (報表產生器及 SSRS)
   文字方塊可以有不同的方向：水平、垂直 (從上到下閱讀文字)，或是旋轉 270 度 (從下到上閱讀文字)。 因為方向會設定在文字方塊而不是文字上，所以方向會套用到文字方塊中的所有文字。 您不能針對文字的各個部分指定不同的方向。 手動調整資料行寬度及資料列高度，以配合旋轉的文字大小。  
@@ -42,7 +42,7 @@ ms.locfileid: "48119578"
 5.  在清單方塊中，選取 **[Horizontal]**、 **[Vertical]** 或 **[Rotate270]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [文字方塊&#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)  
+ [文字方塊 &#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [教學課程：格式化文字&#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)  
   
   

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83818feb28dbcda5f7ae981f440fd850ea59af7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81ec8964de180ad4db9e4edd3e2c609d5ad56b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180868"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037299"
 ---
 # <a name="windows-application-log"></a>Windows 應用程式記錄檔
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將事件訊息寫入 Windows 應用程式記錄。 您可以利用寫入應用程式記錄檔的訊息資訊，來了解在本機系統上執行的報表伺服器應用程式所產生的事件。  
   
 ## <a name="viewing-report-server-events"></a>檢視報表伺服器事件  
- 您可以使用 [事件檢視器] 來檢視記錄檔及篩選所包含的訊息。 如需有關事件訊息的詳細資訊，請參閱[錯誤和事件參考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)。 如需有關 Windows 應用程式記錄或 [事件檢視器] 的詳細資訊，請參閱 Windows 產品文件集。  
+ 您可以使用 [事件檢視器] 來檢視記錄檔及篩選所包含的訊息。 如需事件訊息的詳細資訊，請參閱 [錯誤和事件參考 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)。 如需有關 Windows 應用程式記錄或 [事件檢視器] 的詳細資訊，請參閱 Windows 產品文件集。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供三個事件來源：  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48180868"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)   
- [錯誤和事件參考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [錯誤和事件參考 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

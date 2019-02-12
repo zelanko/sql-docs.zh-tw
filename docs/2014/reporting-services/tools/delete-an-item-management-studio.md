@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16ba4327d2ca82e2c85c104b1617fdea68849654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb19d703480532c66ff06de8c6885779652f8385
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165318"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013609"
 ---
 # <a name="delete-an-item-management-studio"></a>刪除項目 (Management Studio)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中連接至報表伺服器執行個體時，您可以刪除角色定義和共用排程。 但是，您無法刪除報表伺服器上的報表、模型或其他項目。 若要刪除報表伺服器內容，請改用報表管理員。 或者，如果報表伺服器是針對 SharePoint 整合模式所設定，請在包含內容的 SharePoint 文件庫中使用項目管理功能。  

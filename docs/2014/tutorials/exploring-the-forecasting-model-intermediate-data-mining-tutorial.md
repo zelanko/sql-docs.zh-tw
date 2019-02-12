@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401703"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040029"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>探索預測模型 (中繼資料採礦教學課程)
   既然您已建立預測的採礦模型，您可以使用來探索結果**採礦模型檢視器**資料採礦設計師 索引標籤。 [!INCLUDE[msCoName](../includes/msconame-md.md)]時間序列檢視器包含兩個索引標籤：**圖表**並**模型**。  

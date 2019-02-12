@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d72c7991f1ebcf36a3408af344225967c1dc498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144698"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010960"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>建立、修改及刪除報表記錄中的快照集
   報表記錄是報表快照集的集合。 您可以加入和刪除快照集，或修改影響報表記錄儲存區的屬性，來維護報表記錄。 您可以用手動方式或依據排程來建立報表記錄。  
@@ -61,10 +61,10 @@ ms.locfileid: "48144698"
  刪除報表時，報表記錄也會一併刪除。 例如，若您刪除每月銷售額報表而以較新版本加以取代，則所有和該報表關聯的報表記錄也會遭到刪除。 然而，如果您移動報表，則所有報表記錄會隨著移動。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立報表記錄&#40;Reporting Services SharePoint 整合模式&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
- [報表伺服器內容管理&#40;SSRS 原生模式&#41;](report-server-content-management-ssrs-native-mode.md)   
- [將快照集加入報表記錄&#40;報表管理員&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [建立報表記錄 &#40;SharePoint 整合模式的 Reporting Services&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [將快照集加入報表記錄 &#40;報表管理員&#41;](add-a-snapshot-to-report-history-report-manager.md)   
  [限制報表記錄 &#40;報表管理員&#41;](../reports/limit-report-history-report-manager.md)  
   
   

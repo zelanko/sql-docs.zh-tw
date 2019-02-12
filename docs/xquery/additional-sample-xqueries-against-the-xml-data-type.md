@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XQuery, samples
 - sample applications [XQuery]
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d715b22e6ea49675b407f569e33aa06b011d5696
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 276bdadfdc485c9d1fabf864b34764402de7e5b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292770"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015445"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>針對 xml 資料類型的其他範例 XQueries
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

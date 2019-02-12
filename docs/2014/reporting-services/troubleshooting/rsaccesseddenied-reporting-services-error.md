@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c27e97fa054e878ed26c28382b8e7bd875134fa8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2904623aa84a6bc6b50cf1a01458bbc52649feaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042359"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 錯誤
   當使用者沒有執行動作的權限時，會發生 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 錯誤 **rsAccessedDenied** 。 例如，他們並未擁有允許他們開啟報表的角色指派，或者他們沒有使用必要的權限開啟瀏覽器。  
@@ -46,7 +46,7 @@ ms.locfileid: "48152108"
 ## <a name="user-action"></a>使用者動作  
  存取報表伺服器內容和作業的權限是透過角色指派而授與。 在新的安裝上，只有本機管理員具有存取報表伺服器的權限。 若要授與其他使用者存取權限，本機管理員必須建立角色指派，以指定網域使用者或群組帳戶、一個或多個角色 (用來定義使用者可執行的工作)，以及範圍 (通常是報表伺服器資料夾階層的 [主資料夾] 資料夾或根節點)。 您可以使用報表管理員來建立角色指派。 如需詳細資訊，請在《SQL Server 線上叢書》中搜尋「角色指派」。  
   
- 這個錯誤是因為報表伺服器的本機管理所造成。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+ 這個錯誤是因為報表伺服器的本機管理所造成。 如需詳細資訊，請參閱 [設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [角色指派](../security/role-assignments.md)   

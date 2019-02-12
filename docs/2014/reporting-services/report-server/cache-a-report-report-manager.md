@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4064188dee8f8902712962c93715e6ebce839b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4269c5219dc52df82f46f1d495d895321fc6f276
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173178"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023589"
 ---
 # <a name="cache-a-report-report-manager"></a>快取報表 (報表管理員)
   改善效能的其中一種方式就是設定報表的快取屬性。 快取報表時，系統就會在一段短時間內儲存已轉譯報表的副本。 要求報表的第一位使用者必須等候所有處理都完成，然後才能檢視該報表。 在快取期間內要求該報表的後續使用者可以立即檢視報表，因為處理已經進行了。  
   
- 您可以快取的報表類型有所限制。 例如，如果報表輸出會因使用者識別而不同，或者資料是使用要求報表之使用者的安全性 Token 擷取的，系統就無法快取該報表。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
+ 您可以快取的報表類型有所限制。 例如，如果報表輸出會因使用者識別而不同，或者資料是使用要求報表之使用者的安全性 Token 擷取的，系統就無法快取該報表。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](caching-reports-ssrs.md)。  
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>若要排程快取報表的逾期  
   
@@ -51,6 +51,6 @@ ms.locfileid: "48173178"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](set-report-processing-properties.md)   
- [快取報表&#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [快取報表 &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

@@ -1,11 +1,10 @@
 ---
-title: sys.dm_pdw_diag_processing_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_pdw_diag_processing_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
+ms.technology: data-warehouse
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f1e2180e6d22cee81c94d880eca1debaa20c8c5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f96dd7be6de1415abb8a71425b083c58e7012d9d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837186"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023989"
 ---
-# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   顯示可能會併入診斷工作階段，系統管理員定義的所有內部診斷事件的相關資訊。 查詢此檢視來了解背後的診斷和事件處理子系統的統計資料的所有其他 Dmv 母體擴展該磁碟機。 有一群的每個節點上的每個處理序的佇列。  

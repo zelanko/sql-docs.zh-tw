@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d456e0949f38a402b4947c72a3f3f9ec029f2a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2dbd112c340662ed90632a06904c0b3bd1939a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213481"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022109"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)
   產生可用來建立報表伺服器資料庫的 SQL 指令碼。  
@@ -53,7 +53,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  指出要以原生模式或 SharePoint 模式建立資料庫。  
   
 > [!IMPORTANT]  
->  從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode* = `True`因為不支援在 SharePoint 模式中，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是 SharePoint 共用服務且不受 WMI 提供者。 您應該一律將此參數設定為`False`。  
+>  從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]， *IsSharePointMode* = `True`因為不支援在 SharePoint 模式中，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]是 SharePoint 共用服務且不受 WMI 提供者。 您應該一律將此參數設定為 `False`。  
   
  *指令碼*  
  [out] 包含所產生之 SQL 指令碼的字串。  

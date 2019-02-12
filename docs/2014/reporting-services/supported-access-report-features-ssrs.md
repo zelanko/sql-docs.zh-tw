@@ -17,14 +17,14 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180608"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012024"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支援的 Access 報表功能 (SSRS)
   當您將報表匯入報表設計師時，匯入程序會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 報表轉換成 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援多種 Access 的功能；但因為 Access 及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之間的差異，會稍微修改或不支援某些項目。 此主題描述 Access 報表功能如何轉換成 RDL。  
@@ -57,7 +57,7 @@ ms.locfileid: "48180608"
   
 |||||  
 |-|-|-|-|  
-|Image|標籤|線條|矩形|  
+|Image|ThisAddIn|線條|矩形|  
 |SubForm|SubReport<br /><br /> **請注意**當 SubReport 控制項在主報表內轉換、 子報表本身會個別轉換。|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不支援下列控制項：  
@@ -94,7 +94,7 @@ ms.locfileid: "48180608"
 |||||  
 |-|-|-|-|  
 |CanGrow (section)|CanShrink (section)|DecimalPlaces|FastLaserPrinting|  
-|篩選|FilterOn|[格式]|FormatConditions|  
+|篩選|FilterOn|格式|FormatConditions|  
 |GrpKeepTogether|KeepTogether (section)|NumeralShapes|Orientation|  
 |PaintPalette|PaletteSource|PictureAlignment|PicturePages|  
 |PictureSizeMode|PictureTiling (image)|ScrollBars|SpecialEffect|  
@@ -124,7 +124,7 @@ ms.locfileid: "48180608"
 |Asc|CBool|CByte|CCur|  
 |CDate|CDbl|CDec|Chr|  
 |Chr$|CInt|CLng|CSng|  
-|CStr|CVar|CVDate|[格式]|  
+|CStr|CVar|CVDate|格式|  
 |FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|  
 |Hex|Hex$|Nz|Oct|  
 |Oct$|Str|Str$|StrConv|  
@@ -264,7 +264,7 @@ ms.locfileid: "48180608"
 |||||  
 |-|-|-|-|  
 |Avg|Count|Max|Min|  
-|StDev|StDevP|SUM|Var|  
+|StDev|StDevP|Sum|Var|  
 |VarP||||  
   
 #### <a name="text-functions"></a>文字函數  
@@ -272,7 +272,7 @@ ms.locfileid: "48180608"
   
 |||||  
 |-|-|-|-|  
-|[格式]|Format$|InStr|InStrRev|  
+|格式|Format$|InStr|InStrRev|  
 |LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|取代|Right|Right$|  

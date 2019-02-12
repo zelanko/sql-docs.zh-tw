@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b9724139d6a89e345d1a8dd0c967f51afe5f8c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183478"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025369"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>並存安裝 Reporting Services 和 Internet Information Services (SSRS 原生模式)
   您可以在同一部電腦上安裝和執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 與 Internet Information Services (IIS)。 您所使用的 IIS 版本會決定必須處理的互通性問題。  
@@ -50,7 +50,7 @@ ms.locfileid: "48183478"
 |http://+:80|若為對應至 [全部指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
 |http://*:80|若為對應至 [全未指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
   
- 發生連接埠衝突的其中一個指標是，您將會看到下列錯誤訊息：「System.IO.FileLoadException: 由於已有另一個處理序正在使用該檔案，所以無法存取該檔案。 (來自 HRESULT 的例外狀況: 0x80070020)。」  
+ 連接埠衝突的其中一個指標是您會看到下列錯誤訊息：' System.IO.FileLoadException:此程序無法存取檔案，因為它正由另一個處理序。 (發生例外狀況於 HRESULT：0x80070020)。 '  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>IIS 6.0、7.0、8.0、8.5 與 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services 的 URL 保留項目  
  根據上一節所描述的優先順序規則，您可以開始了解針對 Reporting Services 和 IIS 所定義的 URL 保留項目如何提升互通性。 Reporting Services 會接收明確指定其應用程式之虛擬目錄名稱的要求。IIS 會接收所有其餘要求，然後您可以將這些要求導向至 IIS 處理模型內部執行的應用程式。  
@@ -74,12 +74,12 @@ ms.locfileid: "48183478"
   
  為了確保所有應用程式都會接收要求，請遵循下列指導方針：  
   
--   針對 Reporting Services 安裝，請使用 IIS 網站與 Reporting Services 在相同通訊埠上尚未使用的虛擬目錄名稱。 如果發生衝突，請以「僅限檔案」模式安裝 Reporting Services (使用「安裝」，但不要在安裝精靈中設定伺服器選項)，以便您可以在安裝完成之後設定虛擬目錄。 組態發生衝突的其中一個指標是，您將會看到下列錯誤訊息：System.IO.FileLoadException: 由於已有另一個處理序正在使用該檔案，所以無法存取該檔案。 (來自 HRESULT 的例外狀況: 0x80070020)。  
+-   針對 Reporting Services 安裝，請使用 IIS 網站與 Reporting Services 在相同通訊埠上尚未使用的虛擬目錄名稱。 如果發生衝突，請以「僅限檔案」模式安裝 Reporting Services (使用「安裝」，但不要在安裝精靈中設定伺服器選項)，以便您可以在安裝完成之後設定虛擬目錄。 您的組態有衝突的其中一個指標是您會看到錯誤訊息：System.IO.FileLoadException:此程序無法存取檔案，因為它正由另一個處理序。 (發生例外狀況於 HRESULT：0x80070020)。  
   
 -   針對手動設定的安裝，請在設定的 URL 中採用預設命名慣例。 如果您將 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 安裝成具名執行個體，請在建立虛擬目錄時加入執行個體名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器 Url &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [設定 URL &#40;SSRS 組態管理員&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [安裝 Reporting Services 原生模式報表伺服器](install-reporting-services-native-mode-report-server.md)  
   

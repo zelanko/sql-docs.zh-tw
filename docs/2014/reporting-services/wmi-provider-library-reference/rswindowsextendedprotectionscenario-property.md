@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 122ecf44095611d25065401972b8ccfefdae5fb8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 4e614c2f6cadf6633a5129a61e22cead353a5153
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394714"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013219"
 ---
 # <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserverconfigurationsetting"></a>RSWindowsExtendedProtectionScenario 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回字串值，表示報表伺服器設定為允許的擴充保護案例。  

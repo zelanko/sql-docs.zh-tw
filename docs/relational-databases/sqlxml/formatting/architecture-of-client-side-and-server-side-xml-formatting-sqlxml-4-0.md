@@ -17,16 +17,16 @@ helpviewer_keywords:
 - SQL Server Native Client, XML
 - SQLXMLOLEDB Provider, XML formatting architecture
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 629d051c9826d497cc1218dc70c57744f25af89f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44e8d02cd90000a3a473a2e864345c483e5fda9d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811146"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028939"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>用戶端和伺服器端 XML 格式的架構 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

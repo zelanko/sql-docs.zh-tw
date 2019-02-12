@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9fe0efd10d2c9c9e972aaf32214d3e799de12d92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 91222c11318ffd88a152b24b284bdf8b11ed6d7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160723"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011280"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>圖表上的多個數列 (報表產生器及 SSRS)
   當圖表上出現多個數列時，您必須決定比較數列的最好方式。 您可以使用堆疊圖表顯示每個數列的相關比例。 如果您只要比較共用共同類別目錄 (x) 軸的兩個數列，請使用副座標軸。 顯示兩個相關資料數列 (例如，價格和數量，或收入和稅額) 時，這相當實用。 如果圖表變成無法讀取，請考慮使用多個圖表區域，在每個數列之間建立更多視覺上的分隔。  
@@ -57,6 +57,6 @@ ms.locfileid: "48160723"
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [將包含多個資料範圍的數列顯示在圖表上 &#40;報表產生器及 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [圖表類型&#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

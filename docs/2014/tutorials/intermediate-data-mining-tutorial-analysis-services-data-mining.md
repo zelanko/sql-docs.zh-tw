@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8418bf91dff36a512db57c45f1d19ad18fde02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369010"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025359"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>中繼資料採礦教學課程 (Analysis Services - 資料採礦)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供一個整合式的環境來建立和使用資料採礦模型。 您可以輕易地繫結資料來源、以相同資料建立及測試多個模型，以及部署模型以供預測分析。  

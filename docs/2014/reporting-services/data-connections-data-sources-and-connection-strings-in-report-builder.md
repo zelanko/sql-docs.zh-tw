@@ -11,14 +11,14 @@ f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 682b3db94bbac8e3d77b30fed90fb33885cca465
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5821d8d747609abfc8433a3ff9ad0ecf2676be7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183488"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011010"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>報表產生器中的資料連接、資料來源及連接字串
   若要在報表中包含資料，請建立資料連接和資料集。 資料連接包括如何存取外部資料來源的相關資訊。 資料集包括查詢命令，其中指定要使用資料連接包含哪些資料。  
@@ -49,21 +49,21 @@ ms.locfileid: "48183488"
   
 |**資料來源**|**範例**|**說明**|  
 |---------------------|-----------------|---------------------|  
-|本機伺服器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫|`data source="(local)";initial catalog=AdventureWorks2012`|將資料來源類型設定為`SQL Server`。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體資料庫|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|將資料來源類型設定為`SQL Server`。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 資料庫|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|將資料來源類型設定為`SQL Server`。|  
-|本機伺服器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫|`data source=localhost;initial catalog=Adventure Works DW 2012`|將資料來源類型設定為`SQL Server Analysis Services`。|  
-|SharePoint 清單|`data source=http://MySharePointWeb/MySharePointSite/`|將資料來源類型設定為`SharePoint List`。|  
+|本機伺服器上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫|`data source="(local)";initial catalog=AdventureWorks2012`|將資料來源類型設定為 `SQL Server`。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體資料庫|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|將資料來源類型設定為 `SQL Server`。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express 資料庫|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|將資料來源類型設定為 `SQL Server`。|  
+|本機伺服器上的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫|`data source=localhost;initial catalog=Adventure Works DW 2012`|將資料來源類型設定為 `SQL Server Analysis Services`。|  
+|SharePoint 清單|`data source=http://MySharePointWeb/MySharePointSite/`|將資料來源類型設定為 `SharePoint List`。|  
 ||||  
 |報表模型|不適用。|您不需要報表模型的連接字串。 在報表產生器中，瀏覽至報表伺服器，並選取報表模型 .smdl 檔案。|  
-|Oracle 伺服器|`data source=myserver`|將資料來源類型設定為`Oracle`。 Oracle 用戶端工具必須安裝在報表產生器電腦和報表伺服器上。|  
-|SAP NetWeaver BI 資料來源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|將資料來源類型設定為`SAP NetWeaver BI`。|  
-|Hyperion Essbase 資料來源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|將資料來源類型設定為`Hyperion Essbase`。|  
-|Teradata 資料來源|`data source=` *\<NN &GT;。\<NNN &GT;。\<NNN &GT;。\<N &GT;* `;`|將資料來源類型設定為`Teradata`。 連接字串是四個欄位形式的網際網路通訊協定 (IP) 位址，其中每個欄位都可以是 1 到 3 位數。|  
+|Oracle 伺服器|`data source=myserver`|將資料來源類型設定為 `Oracle`。 Oracle 用戶端工具必須安裝在報表產生器電腦和報表伺服器上。|  
+|SAP NetWeaver BI 資料來源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|將資料來源類型設定為 `SAP NetWeaver BI`。|  
+|Hyperion Essbase 資料來源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|將資料來源類型設定為 `Hyperion Essbase`。|  
+|Teradata 資料來源|`data source=` *\<NN>.\<NNN>.\<NNN>.\<N>* `;`|將資料來源類型設定為 `Teradata`。 連接字串是四個欄位形式的網際網路通訊協定 (IP) 位址，其中每個欄位都可以是 1 到 3 位數。|  
 |Teradata 資料來源|`Database=` \<資料庫名稱> `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|與前述範例類似，將資料來源類型設定為 `Teradata`。 請只使用在 Database 標記中指定的預設資料庫，而不要自動探索資料關聯性。|  
-|XML 資料來源, Web 服務|`data source=http://adventure-works.com/results.aspx`|將資料來源類型設定為`XML`。 連接字串是支援 Web 服務定義語言 (WSDL) 之 Web 服務的 URL。|  
-|XML 資料來源、XML 文件|`http://localhost/XML/Customers.xml`|將資料來源類型設定為`XML`。 連接字串是 XML 文件的 URL。|  
-|XML 資料來源, 內嵌 XML 文件|*Empty*|將資料來源類型設定為`XML`。 XML 資料內嵌在報表定義中。|  
+|XML 資料來源, Web 服務|`data source=http://adventure-works.com/results.aspx`|將資料來源類型設定為 `XML`。 連接字串是支援 Web 服務定義語言 (WSDL) 之 Web 服務的 URL。|  
+|XML 資料來源、XML 文件|`http://localhost/XML/Customers.xml`|將資料來源類型設定為 `XML`。 連接字串是 XML 文件的 URL。|  
+|XML 資料來源, 內嵌 XML 文件|*Empty*|將資料來源類型設定為 `XML`。 XML 資料內嵌在報表定義中。|  
   
  如需有關每個連接類型的詳細資訊，請參閱 <<c0> [ 從外部資料來源加入資料&#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md)並[Reporting Services 所支援的資料來源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。</c0>  
   
@@ -81,6 +81,6 @@ ms.locfileid: "48183488"
   
 ## <a name="see-also"></a>另請參閱  
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [報表組件 &#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

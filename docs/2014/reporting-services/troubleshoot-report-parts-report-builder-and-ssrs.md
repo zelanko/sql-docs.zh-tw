@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2aa21825563ae94a46a7d9fcda6e52e966f12a9a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8d76eb115628cc4b63d9eb37494e3fa45e2f7fc2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360250"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013779"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>疑難排解報表組件 (報表產生器及 SSRS)
   這些提示可在您處理報表組件時協助您。  

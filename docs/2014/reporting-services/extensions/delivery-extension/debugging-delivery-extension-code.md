@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 890c5a8d77eaa77b903abe26870c02be7ab81715
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 30b3cdfce9d832dbacc0e77437cb32087559ffc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081620"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017859"
 ---
 # <a name="debugging-delivery-extension-code"></a>偵錯傳遞延伸模組程式碼
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析傳遞延伸模組程式碼並尋找其中的錯誤。 效果最好的工具將視您嘗試要完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  

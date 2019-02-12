@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc1a807ed81ffb0b0aa5482d2fe3a09e70eb7908
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3c60005e798e2a942970d9fb7a8746256308c795
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116178"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023669"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上傳檔案或報表 (報表管理員)
   報表管理員會提供一項上傳功能，讓您可以將報表、模型和其他檔案加入至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  
@@ -43,15 +43,15 @@ ms.locfileid: "48116178"
   
 4.  按一下 [瀏覽] 選取要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
   
-5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : \@ & = +，$ / * \< > |。  
+5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : \@ & = + , $ / * \< > |.  
   
 6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [建立、 刪除或修改共用的資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [內容頁&#40;報表管理員&#41;](../contents-page-report-manager.md)   
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [內容頁面 &#40;報表管理員&#41;](../contents-page-report-manager.md)   
  [上傳檔案頁面 &#40;報表管理員&#41;](../upload-file-page-report-manager.md)   
  [上傳檔案到資料夾](../report-server/upload-files-to-a-folder.md)  
   

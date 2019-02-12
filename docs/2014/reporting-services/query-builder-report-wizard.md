@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6bf7bfb94237b34056502d08f5cec8e4d5b80bb9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f6a7e4e8e6d4a70ecb3695819f3648c86034b4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056298"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013159"
 ---
 # <a name="query-builder-report-wizard"></a>查詢產生器 (報表精靈)
   使用查詢產生器，即可指定查詢以擷取使用於報表中的結果集。 您可以在兩種查詢產生器之間進行選擇：  
@@ -41,7 +41,7 @@ ms.locfileid: "48056298"
  **匯入**  
  開啟 [匯入查詢] 對話方塊，然後顯示任何可用報表的 .rdl 和 .sql 檔。 您可以依原狀使用匯入的查詢，也可以在查詢產生器中修改此查詢。  
   
- **\!（執行）**  
+ **\!(Run)**  
  執行查詢，如果查詢有效則傳回結果集。 請注意，如果這是一個運算式，則無法執行查詢。 若要驗證以運算式為基礎的查詢，您必須預覽報表。  
   
  **命令類型**  

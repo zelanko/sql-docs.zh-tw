@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6c1d4289f9785d6975c6bba85e8215f208a3c537
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179288"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018250"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>地圖色彩規則對話方塊、一般
   選取 **[色彩規則屬性]** 對話方塊上的 **[一般]** ，定義此圖層上地圖元素的色彩選項。 地圖元素包括多邊形、線條與點。 當您已經根據資料集欄位或空間資料來源欄位中的空間資料與分析資料建立地圖元素之間的關聯性時，可以套用色彩規則。  
@@ -44,7 +44,7 @@ ms.locfileid: "48179288"
   
  從下拉式清單中選取要使用的分析資料欄位。 根據空間資料的來源，此清單會顯示空間資料來源與報表資料集 (擁有空間資料與分析資料之間的關聯性) 中的欄位。 若要建立此種關聯性，請針對選取的地圖圖層，在 [分析資料] 頁面上設定資料選項。  
   
- **調色盤**  
+ **Palette**  
  輸入或選取色彩調色盤的名稱。  
   
  **開始色彩**  
@@ -61,6 +61,6 @@ ms.locfileid: "48179288"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [變更地圖圖例、 色階與相關的規則&#40;報表產生器及 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

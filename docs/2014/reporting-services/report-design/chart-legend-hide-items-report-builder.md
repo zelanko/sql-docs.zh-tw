@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d7df59d182c7183fb843a0eb2763bc19b1eefb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013529"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>隱藏圖表上的圖例項目 (報表產生器及 SSRS)
   根據預設，加入到非形狀圖中的任何數列都會當做圖例中的項目加入。 至於圓形圖、環圈圖、漏斗圖與金字塔圖，加入到圖表中的任何數列則會在圖例中加入個別的資料點。  
@@ -36,8 +36,8 @@ ms.locfileid: "48223338"
     >  您無法針對一個群組而不在其他群組中隱藏數列。 如果您已經將欄位加入到 **[數列群組]** 區域，將會隱藏屬於此群組的所有數列。  
   
 ## <a name="see-also"></a>另請參閱  
- [在圖表上格式化圖例&#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
- [格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的圖例 &#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [將移動平均新增至圖表 &#40;報表產生器及 SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)   
  [圖例屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQLXML Managed Classes, applying XSL transformations
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 981d8c7b92457bff5601702f95b2db07c49ac951
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ff7b05cf91351973fc7c7f0efbc9af0dfa901dea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041599"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

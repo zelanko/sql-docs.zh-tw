@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03c0dde2c3df8d8403897b660ed81ba7dbe75f43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 31c2c4392ebfcd055975078e3d92fdaf5e302d15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028589"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services 中的程式碼存取安全性
   程式碼存取安全性是以下列核心概念為主：辨識項、程式碼群組與具名使用權限集合。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，報表管理員、報表設計師和報表伺服器元件都各自具有一個原則檔，其中針對自訂組件以及資料、傳遞、轉譯和安全性延伸模組設定了程式碼存取安全性。 下列各節將提供程式碼存取安全性的概觀。 如需本節中涵蓋之主題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 文件中的＜安全性原則模型＞。  

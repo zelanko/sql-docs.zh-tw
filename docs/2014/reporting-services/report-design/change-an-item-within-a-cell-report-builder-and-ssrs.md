@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2f666a5732a49050418917084554d630faabe679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46724389392221aa1f759ee68675e9436dee752f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156960"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018939"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>變更資料格內的項目 (報表產生器及 SSRS)
   只有非容器項目 (例如文字方塊、線條或影像) 才能以新報表項目來取代。 例如，您可以將資料表拖曳到文字方塊，即可以資料表取代文字方塊。  
@@ -36,7 +36,7 @@ ms.locfileid: "48156960"
 >  當您將影像報表項目拖曳至資料格時，[影像屬性] 對話方塊即會開啟，讓您設定屬性；例如，影像新增至資料格前的影像來源。  
   
 ## <a name="see-also"></a>另請參閱  
- [影像、 文字方塊、 矩形和線條&#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

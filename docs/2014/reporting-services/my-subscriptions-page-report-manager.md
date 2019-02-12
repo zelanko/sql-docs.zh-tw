@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165958"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026899"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>我的訂閱頁面 (報表管理員)
   使用 [我的訂閱] 頁面來檢視某個位置的所有訂閱。 從這個頁面中，您可以存取與修改或刪除擁有的任何訂閱。 您只擁有您所建立的訂閱。 您不可以存取其他使用者的訂閱，也不可以存取您有權使用但並未擁有的訂閱 (例如，如果您的名稱已經加入另一位使用者所定義的現有訂閱中)。 您不可以在此頁面建立訂閱。 如需建立訂用帳戶的詳細資訊，請參閱 <<c0> [ 新的訂用帳戶或編輯訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。</c0>  
@@ -26,7 +26,7 @@ ms.locfileid: "48165958"
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-my-subscriptions-page"></a>若要開啟我的訂閱頁面  
@@ -68,7 +68,7 @@ ms.locfileid: "48165958"
  如果訂閱已經停用，則無法處理該訂閱。 若要更新訂閱並讓其運作，請開啟然後儲存訂閱。  
   
 ## <a name="see-also"></a>另請參閱  
- [訂閱與傳遞&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

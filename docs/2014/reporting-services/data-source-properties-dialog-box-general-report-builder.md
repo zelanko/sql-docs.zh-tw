@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031849"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>資料來源屬性對話方塊、一般 (報表產生器)
   選取 **[資料來源屬性]** 對話方塊上的 **[一般]** ，即可從報表伺服器中選取共用資料來源，或針對報表中內嵌的資料來源建立或修改連接資訊。  
@@ -67,8 +67,8 @@ ms.locfileid: "48138726"
 ## <a name="see-also"></a>另請參閱  
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [資料連接、 資料來源和報表產生器中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [報表產生器中的資料連接、資料來源及連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [資料來源屬性對話方塊、 認證&#40;報表產生器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [對話方塊、 窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

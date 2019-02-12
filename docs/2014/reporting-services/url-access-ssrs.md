@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5550a321e812b84c2d3e2dc8c64efd298e8eb95f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29f1c46cd926fec0a4908788da64cbb86bad8469
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022039"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
   在 SQL Server Reporting Services (SSRS) 中，報表伺服器的 URL 存取權可讓您透過 URL 要求，傳送命令至報表伺服器。 例如，您可在原生模式報表伺服器或 SharePoint 文件庫中自訂報表的轉譯。 您可能已使用特定一組報表參數值來檢視過報表，或報表中您感興趣的特定頁面。 您可以使用預先定義的 URL 存取參數，封裝 URL 中的資訊。 您還可以內嵌轉譯格式或調整報表檢視器外觀的參數，以進一步自訂報表伺服器處理報表的方式。 然後，您可以直接將此 URL 貼入電子郵件或網頁，讓其他人在瀏覽器中用相同方式存取您的報表。  
@@ -40,7 +40,7 @@ ms.locfileid: "48206338"
   
 -   管理報表工作階段  
   
- 命令和設定可透過 URL 存取的完整清單，請參閱 < [URL 存取參數參考](url-access-parameter-reference.md)。  
+ 如需透過 URL 存取可用之命令與設定的完整清單，請參閱 [URL 存取參數參考](url-access-parameter-reference.md)。  
   
 ## <a name="url-access-concepts"></a>URL 存取概念  
  報表伺服器的 URL 要求包含由報表伺服器處理的參數。 報表伺服器處理 URL 要求的方法須視 URL 中包含的參數、參數前置詞以及項目類型而定。 報表伺服器 URL 會遵循聯合全球資訊網協會 W3C/IETF 草案標準所提議的 URL 格式指導方針。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL 功能與大部分的網際網路瀏覽器或是支援標準 URL 定址的應用程式相容。  
@@ -105,22 +105,22 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  對應至要使用的參數值之 URL 文字。  
   
- **注意︰** 如需可用的 URL 存取參數的清單，請參閱 < [URL 存取參數參考](url-access-parameter-reference.md)。 如需在 URL 上傳遞報表參數的範例，請參閱[報表參數在 URL 內傳遞](pass-a-report-parameter-within-a-url.md)。  
+ **注意：** 如需可用的 URL 存取參數的清單，請參閱 < [URL 存取參數參考](url-access-parameter-reference.md)。 如需透過 URL 傳遞報表參數的範例，請參閱 [在 URL 內傳遞報表參數](pass-a-report-parameter-within-a-url.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|連結|  
 |-----------------------|-----------|  
-|存取報表伺服器項目，如報表、共用資料來源和資源。|[使用 URL 存取來存取報表伺服器項目](access-report-server-items-using-url-access.md)|  
+|存取報表伺服器項目，如報表、共用資料來源和資源。|[使用 URL 存取權存取報表伺服器項目](access-report-server-items-using-url-access.md)|  
 |將報表參數傳遞至報表。|[在 URL 內傳遞報表參數](pass-a-report-parameter-within-a-url.md)|  
-|在 URL 存取字串中設定報表參數的地區設定，以定義特定地區的日期、貨幣等轉換。|[在 URL 中設定報表參數的語言](set-the-language-for-report-parameters-in-a-url.md)|  
+|在 URL 存取字串中設定報表參數的地區設定，以定義特定地區的日期、貨幣等轉換。|[設定 URL 中報表參數的語言](set-the-language-for-report-parameters-in-a-url.md)|  
 |傳送可自訂報表轉譯方式的轉譯延伸模組特定設定。|[在 URL 中指定裝置資訊設定](specify-device-information-settings-in-a-url.md)|  
 |不在瀏覽器中檢視，而直接將報表匯出至檔案格式。|[使用 URL 存取匯出報表](export-a-report-using-url-access.md)|  
 |開啟報表，並直接導覽至字串位置。|[使用 URL 存取搜尋報表](search-a-report-using-url-access.md)|  
 |轉譯特定的報表記錄快照集。|[使用 URL 存取轉譯報表記錄快照集](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表參數在 URL 內傳遞](pass-a-report-parameter-within-a-url.md)   
+ [在 URL 內傳遞報表參數](pass-a-report-parameter-within-a-url.md)   
  [URL 存取參數參考](url-access-parameter-reference.md)   
  [使用 URL 存取整合 Reporting Services](application-integration/integrating-reporting-services-using-url-access.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137388"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010414"
 ---
 # <a name="design-view"></a>設計檢視
   使用 [設計] 檢視，即可排列報表中的報表項目。 [設計] 檢視有時稱為設計介面或配置檢視。  
@@ -36,7 +36,7 @@ ms.locfileid: "48137388"
   
  將項目從 [報表資料] 窗格拖曳至設計介面上的資料區域和文字方塊，以便將資料和影像加入到報表中。  
   
- 如需詳細資訊，請參閱 [Report Data Pane](../report-data/report-data-pane.md)。  
+ 如需相關資訊，請參閱 [Report Data Pane](../report-data/report-data-pane.md)。  
   
 ## <a name="grouping-pane"></a>群組窗格  
  群組的用途在於將報表資料組織為視覺階層以及計算總計。 使用 [群組] 窗格檢視針對資料表、矩陣或清單資料區域定義的群組。 根據預設，[群組] 窗格會將所選資料區域的所有群組顯示為扁平化清單。 [圖表] 和 [量測計] 資料區域會停用 [群組] 窗格。  
@@ -52,7 +52,7 @@ ms.locfileid: "48137388"
  使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]，為此報表項目或群組開啟對應的 [屬性] 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
- [頁首和頁尾&#40;報表產生器及 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [報表設計提示 &#40;報表產生器及 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
