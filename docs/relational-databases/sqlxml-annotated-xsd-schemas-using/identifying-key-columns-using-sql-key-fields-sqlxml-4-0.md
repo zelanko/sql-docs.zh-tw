@@ -47,11 +47,11 @@ ms.locfileid: "56040439"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 產生適當巢狀結構時\<sql: relationship > 不會提供足夠的資訊  
  此範例會示範何處**sql: key-fields 來-欄位**必須指定。  
   
- 請考慮下列結構描述。 結構描述指定的階層之間**\<順序 >** 並**\<客戶 >** 中的項目**\<順序 >** 元素是父系和**\<客戶 >** 項目是子系。  
+ 請考慮下列結構描述。 結構描述指定的階層之間 **\<順序 >** 並 **\<客戶 >** 中的項目 **\<順序 >** 元素是父系和 **\<客戶 >** 項目是子系。  
   
-  **\<Sql: relationship >** 標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >** 不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields 來-欄位**註解，產生的階層是不正確。  
+ **\<Sql: relationship >** 標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >** 不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields 來-欄位**註解，產生的階層是不正確。  
   
- 具有**sql: key-fields 來-欄位**上指定**\<順序 >**、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而且其子項目會顯示其父代。  
+ 具有 **sql: key-fields 來-欄位** 上指定 **\<順序 >**、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而且其子項目會顯示其父代。  
   
  這是結構描述：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "56040439"
   
 1.  複製上述的結構描述程式碼，並將其貼到文字檔中。 將檔案儲存為 KeyFields1.xml。  
   
-2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 在範本中的 XPath 查詢會傳回所有**\<順序 >** customerid 小於 3 的項目。  
+2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields1T.xml，並放在儲存 KeyFields1.xml 的相同目錄中。 在範本中的 XPath 查詢會傳回所有 **\<順序 >** customerid 小於 3 的項目。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

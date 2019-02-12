@@ -55,7 +55,7 @@ ms.locfileid: "56042749"
 </ROOT>  
 ```  
   
- **\<之前 >** 區塊包含**\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。  **\<DataInstance >** 區塊包含對應**\<客戶 >** 具有相同的項目**識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定**diffgr: haschanges ="modified"**。 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
+ **\<之前 >** 區塊包含 **\<客戶 >** 項目 (**diffgr: id ="Customer1"**)。 **\<DataInstance >** 區塊包含對應 **\<客戶 >** 具有相同的項目 **識別碼**。**\<客戶 >** 中的項目 **\<NewDataSet >** 也會指定 **diffgr: haschanges ="modified"**。 這表示更新作業，而且 Cust 資料表中的客戶記錄也會隨之更新。 請注意，如果**diffgr: haschanges**未指定屬性，DiffGram 處理邏輯會忽略這個項目會執行任何更新。  
   
  以下是 C# 教學課程應用程式程式碼示範如何使用 SQLXML Managed 類別來執行上述的 DiffGram，並更新兩個資料表 (Cust、 Ord) 也會建立在**tempdb**資料庫。  
   
