@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420649"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079464"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>設定 IIS 8.0 上 Analysis services 的 HTTP 存取
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52420649"
 > [!NOTE]  
 >  請記得解除封鎖 Windows 防火牆中的連接埠，以允許用戶端與 Analysis Services 遠端伺服器的連接。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a> 步驟 1:將 MSMDPUMP 檔案複製到 Web 伺服器上的資料夾  
+##  <a name="bkmk_copy"></a> 步驟 1：將 MSMDPUMP 檔案複製到 Web 伺服器上的資料夾  
  您建立的每個 HTTP 端點都必須有一組自己的 MSMDPUMP 檔案。 在此步驟中，您要將 MSMDPUMP 可執行檔、組態檔以及資源資料夾從 Analysis Services 程式資料夾，複製到您將在執行 IIS 所在電腦的檔案系統上建立的新虛擬目錄資料夾。  
   
  磁碟機必須格式化為 NTFS 檔案系統。 您所建立之資料夾的路徑不得包含任何空格。  
@@ -111,8 +111,10 @@ ms.locfileid: "52420649"
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  IIS 管理員可能無法連接到 Analysis Services，在目前的版本中，如果資料庫是從上一個備份。 這起因於 MSMDPUMP 中的變更，以及應該解決從之前的工作版本複製 msmdpump.dll 檔案。
   
-##  <a name="bkmk_appPool"></a> 步驟 2:在 IIS 中建立應用程式集區與虛擬目錄  
+##  <a name="bkmk_appPool"></a> 步驟 2：在 IIS 中建立應用程式集區與虛擬目錄  
  接下來，為幫浦建立應用程式集區和端點。  
   
 #### <a name="create-an-application-pool"></a>建立應用程式集區  
@@ -148,7 +150,7 @@ ms.locfileid: "52420649"
 > [!NOTE]  
 >  舊版的這些指示包含建立虛擬目錄的步驟。 現已不再需要該步驟。  
   
-##  <a name="bkmk_auth"></a> 步驟 3:設定 IIS 驗證並加入延伸模組  
+##  <a name="bkmk_auth"></a> 步驟 3：設定 IIS 驗證並加入延伸模組  
  在此步驟中，您會進一步設定您剛建立的 SSAS 虛擬目錄。 您將會指定驗證方法，然後加入指令碼對應。 經由 HTTP 的 Analysis Services 所支援的驗證方法包括：  
   
 -   Windows 驗證 (Kerberos 或 NTLM)  

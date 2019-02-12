@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: 2cccd8e2237b09e438ce19ff4bc2e4874e927334
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411788"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079424"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -274,7 +274,7 @@ END
 ELSE IF @ret_code = 1  
    PRINT 'ERROR: You must specify a last name for the sales person.'  
 ELSE IF @ret_code = 2   
-   PRINT 'EERROR: You must enter a valid last name for the sales person.'  
+   PRINT 'ERROR: You must enter a valid last name for the sales person.'  
 ELSE IF @ret_code = 3  
    PRINT 'ERROR: An error occurred getting sales value.'  
 ELSE IF @ret_code = 4  
