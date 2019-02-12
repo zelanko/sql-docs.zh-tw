@@ -2,19 +2,19 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 2018-06-27
+ms.date: 06/27/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 29d01a54dc8293c46c2ac71b0fd91905ff9174ec
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045068"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033600"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -196,7 +196,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新不可複寫設定。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新物件在資料分割配置上的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新資料分割配置和函式的差異。|
-|**/p:**|IgnorePermissions=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
+|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新引號識別項設定的差異。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|
@@ -413,7 +413,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新不可複寫設定。 |
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新物件在資料分割配置上的位置。|
  |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新資料分割配置和函式的差異。|
-|**/p:**|IgnorePermissions=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新權限的差異。 |
+|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新權限的差異。 |
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新引號識別項設定的差異。 |
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。 |
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異|
@@ -574,7 +574,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新不可複寫設定。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新物件在資料分割配置上的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新資料分割配置和函式的差異。|
-|**/p:**|IgnorePermissions=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
+|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新引號識別項設定的差異。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|

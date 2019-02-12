@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 2/20/2018
+ms.date: 02/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
-ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
+ms.openlocfilehash: d86628ead47e1862c1fa1a3aea0e0c32f17f7700
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55484847"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014839"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ WITH (
    -   DELIMITEDTEXT 指定具有欄分隔符號的文字格式，也稱為欄位結束字元。
   
  FIELD_TERMINATOR = *field_terminator*  
-僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 |。 若要保證支援，我們建議使用一或多個 ASCII 字元。
+僅適用於分隔符號文字檔。 欄位結束字元會指定一或多個字元，在文字分隔檔案中標記每個欄位 (欄) 的結尾。 預設值是管道字元 ꞌ|ꞌ。 若要保證支援，我們建議使用一或多個 ASCII 字元。
   
   
  範例:  
@@ -131,7 +131,7 @@ WITH (
   
 -   FIELD_TERMINATOR = ' '  
   
--   FIELD_TERMINATOR = \t  
+-   FIELD_TERMINATOR = ꞌ\tꞌ  
   
 -   FIELD_TERMINATOR = '~|~'  
   
@@ -147,7 +147,7 @@ WITH (
   
 -   STRING_DELIMITER = '*'  
   
--   STRING_DELIMITER = ,  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = '0x7E0x7E' -- 兩個波狀符號 (例如 ~~)
  

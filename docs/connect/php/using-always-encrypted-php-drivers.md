@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 531286af24740e37e125708a4b874b6aba27c3dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403423"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889999"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>搭配 PHP Drivers for SQL Server 使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ $stmt->execute();
  -   執行具有繫結參數的查詢，PHP 驅動程式除非使用者明確指定的 SQL 型別，使用 SQLSRV 驅動程式時，會自動判斷使用者的 SQL 類型。
  -   程式列印的所有值都是純文字格式，因為驅動程式會以清晰簡明方式來解密從 SSN 和 BirthDate 資料行擷取的資料。
  
-注意： 只有加密是具決定性，查詢就可以加密資料行上執行相等比較作業。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
+注意：查詢可以加密資料行上執行相等比較，只有具決定性加密。 如需詳細資訊，請參閱[選取確定性或隨機化加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
 
 SQLSRV:
 ```
@@ -255,7 +255,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 若要減少資料行主要金鑰存放區來解密資料行加密金鑰 (CEK) 的呼叫數目，此驅動程式會快取在記憶體中的純文字 Cek。 從資料庫中繼資料中接收加密的 CEK (ECEK) 之後, 的 ODBC 驅動程式會先嘗試尋找純文字 CEK 值對應的加密金鑰快取中。 驅動程式會呼叫包含 CMK，只有當快取中找不到對應的純文字 CEK 的金鑰存放區。
 
-注意： ODBC Driver for SQL Server，收回項目在快取是兩小時逾時後。 這個行為表示，針對給定的 ECEK，驅動程式會連絡一次金鑰存放區的應用程式或每隔兩小時的存留期間，兩者中較少。
+注意：ODBC Driver for SQL Server，在兩小時逾時之後收回快取中的項目。 這個行為表示，針對給定的 ECEK，驅動程式會連絡一次金鑰存放區的應用程式或每隔兩小時的存留期間，兩者中較少。
 
 ## <a name="working-with-column-master-key-stores"></a>使用資料行主要金鑰存放區
 
@@ -269,7 +269,7 @@ Microsoft driver 5.3.0 for PHP for SQL Server，只有 「 Windows 憑證存放�
 
 Windows 上的 SQL Server ODBC 驅動程式包含內建的資料行主要金鑰存放區提供者的 Windows 憑證存放區、 名為`MSSQL_CERTIFICATE_STORE`。 （此提供者無法使用。 在 macOS 或 Linux）與此提供者，CMK 會儲存在本機用戶端電腦上，並由應用程式不需要額外組態，才能使用它來搭配此驅動程式。 不過，應用程式必須存取憑證和私密金鑰存放區中。 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-### <a name="using-azure-key-vault"></a>使用 Azure Key Vault
+### <a name="using-azure-key-vault"></a>使用 Azure Key Vault 的 EKM
 
 Azure 金鑰保存庫會提供方法來儲存加密金鑰、 密碼和其他祕密，使用 Azure，而且可用來儲存 Always encrypted 的金鑰。 ODBC Driver for SQL Server （17 和更高版本） 包含 Azure Key Vault 的內建的主要金鑰存放區提供者。 下列連接選項處理 Azure Key Vault 設定： `KeyStoreAuthentication`， `KeyStorePrincipalId`，和`KeyStoreSecret`。 
  -   `KeyStoreAuthentication` 可以採用兩個可能的字串值的其中一個：`KeyVaultPassword`和`KeyVaultClientSecret`。 這些值會控制與其他兩個關鍵字搭配使用何種驗證認證。
@@ -288,23 +288,23 @@ SQLSRV:
 
 使用 Azure Active Directory 帳戶：
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreAuthentication"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 使用 Azure 應用程式用戶端識別碼和祕密：
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreAuthentication"=>$applicationClientSecret);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV： 使用 Azure Active Directory 帳戶：
+PDO_SQLSRV:使用 Azure Active Directory 帳戶：
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreAuthentication = $AADPassword;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 使用 Azure 應用程式用戶端識別碼和祕密：
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreAuthentication = $applicationClientSecret;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: 資料類型同義字 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 07/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4672b899b51f109b18f157851e479d3e9ba4755f
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 74fe3be365919d61a7b32587f910f083cc5e846d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513788"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034209"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>資料類型同義字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

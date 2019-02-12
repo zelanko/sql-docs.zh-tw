@@ -10,21 +10,44 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 69b3b5c9574578b286b882b7d2125b0bb984759b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f9fe0558b169acea58bb98a4f9a07267549aa58f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413738"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012999"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 版本資訊
 
 **[下載最新版本](sqlpackage-download.md)**
 
+## <a name="sqlpackage-181"></a>sqlpackage 18.1
+
+發行日期：2009 年 2 月 1 日  
+建置:15.0.4316.1 
+
+版本包含下列功能和修正程式：
+
+- 已新增的支援 UTF8 定序。
+- 若要使用的舊版基數估計工具進行反向工程查詢修正效能。
+- 啟用索引的檢視表上的非叢集資料行存放區索引。
+- 產生指令碼時，請修正重大結構描述比較效能問題。
+- 修正結構描述漂移偵測邏輯，忽略特定的 xevent 工作階段。
+- 固定的匯入圖形資料表的排序。
+- 已修正匯出搭配物件權限的外部資料表。
+- 移至.NET Core 2.2 
+- 使用.NET Core 上的結構描述比較支援的記憶體儲存體。
+
+此版本包含 sqlpackage 的跨平台預覽的組建的目標.NET Core 2.2，並可在 macOS 和 Linux 上執行。 此預覽版本具有下列已知的問題：
+
+- 不支援建置和部署參與者。
+- 不支援使用 json 資料序列化的舊版.dacpac 及.bacpac 檔案。
+- 由於與區分大小寫的檔案系統的問題，可能無法解析參考的.dacpacs (例如 master.dacpac)。
+  - 因應措施是改為大寫的參考檔案 (例如 MASTER。BACPAC)。
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
-發行日期： 2018 年 10 月 24 日  
-建置： 15.0.4200.1 
+發行日期：2018 年 10 月 18 日  
+建置:15.0.4200.1 
 
 版本包含下列功能和修正程式：
 
@@ -42,7 +65,7 @@ ms.locfileid: "52413738"
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
 發行日期：2018 年 6 月 22 日  
-組建：14.0.4079.2  
+建置:14.0.4079.2  
 
 版本包含下列修正：
 
@@ -53,8 +76,8 @@ ms.locfileid: "52413738"
 
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
-發行日期： 2018 年 1 月 25 日  
-組建：14.0.3917.1
+發行日期：2018 年 1 月  
+建置:14.0.3917.1
 
 版本包含下列修正：
 
@@ -66,8 +89,8 @@ ms.locfileid: "52413738"
 
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
-發行日期：2017 年 12 月 12 日  
-組建：14.0.3881.1
+發行日期：2019 年 12 月 12 日  
+建置:14.0.3881.1
 
 版本包含下列修正：
 
@@ -76,22 +99,3 @@ ms.locfileid: "52413738"
 - 新增 /DiagnosticsFile:"C:\Temp\sqlpackage.log 」 命令列參數來指定要儲存診斷資訊的檔案路徑。
 - 已新增的 /Diagnostics 命令列參數，以記錄至主控台的診斷資訊。
 
-## <a name="sqlpackage-on-macos-and-linux-net-core-preview"></a>在 macOS 和 Linux 的.NET Core （預覽） 上的 sqlpackage
-
-發行日期：2018 年 11 月 15 日  
-建置
-
-此版本包含.NET Core 2.1 中為目標的 sqlpackage 的跨平台預覽組建，並可在 macOS 和 Linux 上執行。 
-
-版本包含下列修正：
-
-- 移至.NET Core 2.1 
-- CLR UDT 類型，包括 SQL CLR UDT 類型的支援： SqlGeography，SqlGeometry，& SqlHierarchyId。
-
-此版本是早期預覽，具有下列已知問題：
-
-- /P:CommandTimeout 參數是硬式編碼為 120。
-- 不支援建置和部署參與者。
-- 不支援使用 json 資料序列化的舊版.dacpac 及.bacpac 檔案。
-- 由於與區分大小寫的檔案系統的問題，可能無法解析參考的.dacpacs (例如 master.dacpac)。
-  - 因應措施是改為大寫的參考檔案 (例如 MASTER。BACPAC)。
