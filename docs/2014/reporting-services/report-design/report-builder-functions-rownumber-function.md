@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: abf8cdd0eb4ffceb21061ea0101a42e4b84f3773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 181670ab62d31fbb7b6815518129dd5b4e8a1b1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040499"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 函數 (報表產生器及 SSRS)
   傳回指定範圍中資料列數的執行計數。  
@@ -33,7 +33,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>參數  
  *範圍 (scope)*  
- (`String`) 的資料集、 資料區域或群組或 null 名稱 (`Nothing`在[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，指定要在其中評估資料列數目的內容。 `Nothing` 指定最外層的內容，通常為報表資料集。  
+ (`String`) 資料集、資料區域或群組的名稱，或為 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)，指定要在其中評估資料列數的內容。 `Nothing` 指定最外層的內容，這通常為報表資料集。  
   
 ## <a name="remarks"></a>備註  
  `RowNumber` 傳回指定的範圍內的資料列的計數執行值，就如同[RunningValue](report-builder-functions-runningvalue-function.md)傳回彙總函式的執行中的值。 當您指定範圍時，可以指定何時要將資料列計數重設為 1。  
@@ -48,16 +48,16 @@ RowNumber(scope)
  如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) 和[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 ## <a name="code-example"></a>程式碼範例  
- 以下是您可以使用運算式`BackgroundColor`Tablix 資料區域詳細資料列以改變每個群組，永遠從白色開始的詳細資料列的色彩屬性。  
+ 下列的運算式可用於 Tablix 資料區域詳細資料列的 `BackgroundColor` 屬性，以改變每個群組的詳細資料列色彩 (永遠從白色開始)。  
   
 ```  
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

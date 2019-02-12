@@ -2,7 +2,8 @@
 title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/16/2017
-ms.prod: ''
+ms.prod: sql
+ms.technology: data-warehouse
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +13,12 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d69a9393c990c16357287ac31433780c3b7e27a4
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 88738f857ab83b4a2f7927f75a2795a4f0eb1169
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979834"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034249"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

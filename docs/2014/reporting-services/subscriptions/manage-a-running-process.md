@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc8c6adf930df4d6eaf721db4782d5d1627439c5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 84199b2bf01101a1bcc67b6e3d0870824a116860
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166268"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013589"
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會監視在報表伺服器上執行之作業的狀態。 報表伺服器會以固定間隔執行進行中作業的掃描，並將狀態資訊寫入報表伺服器資料庫或服務應用程式資料庫 (如果是 SharePoint 模式)。 如果下列任一個處理序進行中，作業就是進行中：在遠端或本機資料庫伺服器上的查詢執行、報表處理，以及報表轉譯。  
@@ -76,7 +76,7 @@ ms.locfileid: "48166268"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>如何取消報表處理或訂閱  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，連接至報表伺服器。 如需相關指示，請參閱 <<c0> [ 連接到 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，連接至報表伺服器。 如需指示，請參閱 [連接到 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)。  
   
 2.  開啟 **[作業]** 資料夾。  
   
@@ -86,20 +86,20 @@ ms.locfileid: "48166268"
   
 1.  在文字編輯器中開啟 RSReportServer.config 檔。  
   
-2.  尋找`IsNotificationService`。  
+2.  尋找 `IsNotificationService`。  
   
-3.  將它設定為`False`。  
+3.  將它設為 `False`。  
   
 4.  儲存檔案。  
   
 5.  在報表管理員中，從報表的 [訂閱] 索引標籤或 [我的訂閱] 中刪除資料驅動訂閱。  
   
-6.  刪除訂用帳戶在 RSReportServer.config 檔案中之後, 尋找`IsNotificationService`並將它設定為`True`。  
+6.  刪除訂閱之後，請在 RSReportServer.config 檔中，尋找 `IsNotificationService`，然後將它設為 `True`。  
   
 7.  儲存檔案。  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>設定擷取作業狀態的頻率設定  
- 執行中的作業會儲存在報表伺服器的暫存資料庫中。 您可以修改 RSReportServer.config 檔案中的組態設定，以控制報表伺服器掃描進行中作業的頻率，和執行中作業的狀態要等候多久才會從新的變更為執行中。 `RunningRequestsDbCycle`設定可讓您指定報表伺服器掃描執行中處理序的頻率。 依預設，每 60 秒就會記錄狀態資訊。 `RunningRequestsAge`設定指定的轉換作業的間隔執行的新手。  
+ 執行中的作業會儲存在報表伺服器的暫存資料庫中。 您可以修改 RSReportServer.config 檔案中的組態設定，以控制報表伺服器掃描進行中作業的頻率，和執行中作業的狀態要等候多久才會從新的變更為執行中。 `RunningRequestsDbCycle` 設定會指定報表伺服器掃描執行中處理序的頻率。 依預設，每 60 秒就會記錄狀態資訊。 `RunningRequestsAge` 設定會指定作業從新的轉換為執行中的間隔。  
   
 ##  <a name="bkmk_sharepoint"></a> 檢視和取消作業 (SharePoint 模式)  
  使用 SharePoint 管理中心，為每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式完成 SharePoint 模式部署中的作業管理。  
@@ -120,11 +120,11 @@ ms.locfileid: "48166268"
  您可以用程式設計方式或利用指令碼來管理作業。 如需詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ListJobs%2A>和 <xref:ReportService2010.ReportingService2010.CancelJob%2A>。  
   
 ## <a name="see-also"></a>另請參閱  
- [取消報表伺服器作業&#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [取消報表伺服器作業 &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
  [作業屬性 &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
  [修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
  [監視報表伺服器效能](../report-server/monitoring-report-server-performance.md)  
   
   

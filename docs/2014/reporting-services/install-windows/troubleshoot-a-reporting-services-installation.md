@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b017b37228702adddf3cf50a8f9fb125b28074a9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9205097462a2c9bcc08334e4d83716a224d3b786
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350260"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043329"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>疑難排解 Reporting Services 安裝
   如果您因為安裝期間發生的錯誤而無法安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請使用本主題的指示來處理最有可能造成安裝錯誤的狀況。  
@@ -194,13 +194,13 @@ ms.locfileid: "53350260"
   
 1.  刪除下列登錄機碼：  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web 服務**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service**  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows 服務**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service**  
   
 2.  開啟命令視窗，然後在命令提示字元下輸入下列命令：  
   
-    -   **執行\<**  *.NET 2.0 Framework 目錄* **> \InstallUtil.exe \<**  *報表伺服器 Bin 目錄* **> \ReportingServicesLibrary.dll**  
+    -   **run \<** *.NET 2.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  取代\< *.NET 2.0 Framework 目錄*>.NET Framework 2.0 的實體路徑與檔案，並取代\<*報表伺服器 Bin 目錄*> 的實體路徑報表伺服器 bin 檔案中。  

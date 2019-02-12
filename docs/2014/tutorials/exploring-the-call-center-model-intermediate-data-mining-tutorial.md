@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6b1995ad715ea529da548f06e0643be076abe96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518904"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037759"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>探索撥接中心模型 (中繼資料採礦教學課程)
   現在您已經建立了探勘模型，您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的下列工具深入了解您的資料。  
@@ -110,8 +109,8 @@ ms.locfileid: "52518904"
   
 |attribute|值|喜好\<0.07|喜好 >= 0.12|  
 |---------------|-----------|--------------------|----------------------|  
-|每個問題的平均時間|89.087 120.000||分數：100<br /><br /> 值 1 的機率：4.45%<br /><br /> 值 2 的機率：51.94%<br /><br /> 值 1 的增益：0.19<br /><br /> 值 2 的增益：1.94|  
-|每個問題的平均時間|44.000 70.597|分數：92.35<br /><br /> 值 1 的機率：60.06%<br /><br /> 值 2 的機率：8.30%<br /><br /> 值 1 的增益：2.61<br /><br /> 值 2 的增益：0.31||  
+|每個問題的平均時間|89.087 - 120.000||分數：100<br /><br /> 值 1 的機率：4.45 %<br /><br /> 值 2 的機率：51.94 %<br /><br /> 值 1 的增益：0.19<br /><br /> 值 2 的增益：1.94|  
+|每個問題的平均時間|44.000 - 70.597|分數：92.35<br /><br /> 值 1 的機率：60.06 %<br /><br /> 值 2 的機率：8.30 %<br /><br /> 值 1 的增益：2.61<br /><br /> 值 2 的增益：0.31||  
   
  [回到頁首](#bkmk_NNviewer)  
   

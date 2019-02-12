@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b1ee55e0ec602ee2723b9e31b5dc80c611071b8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0a2d0a723629ae1e9b7e7277ff646c63a86aec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073878"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043259"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>報表伺服器資料庫 (SSRS 原生模式)
   報表伺服器是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存中繼資料和物件定義的無狀態伺服器。 原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會使用兩個資料庫來分隔永續性資料儲存與暫時儲存需求。 兩個資料庫會一起建立，並依名稱繫結。 根據預設，資料庫名稱分別為 **ReportServer** 和 **ReportServerTempdb**。  
@@ -32,7 +32,7 @@ ms.locfileid: "48073878"
   
  資料庫可以在本機或遠端 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上執行。 如果您有足夠的系統資源或想要保留軟體授權，可以選擇本機執行個體，但在遠端電腦上執行資料庫則可提升效能。  
   
- 您可以從先前的安裝或具有其他報表伺服器執行個體的不同執行個體，報告或重複使用現有的報表伺服器資料庫。 報表伺服器資料庫的結構描述必須與報表伺服器執行個體相容。 如果資料庫的格式是舊的，系統將會提示您將其升級到目前的格式。 但是無法讓新版降級為舊版。 如果您有新版的報表伺服器資料庫，您無法將其用於舊版的報表伺服器執行個體。 如需有關如何將報表伺服器資料庫升級到新格式的詳細資訊，請參閱 <<c0> [ 升級報表伺服器資料庫](../install-windows/upgrade-a-report-server-database.md)。  
+ 您可以從先前的安裝或具有其他報表伺服器執行個體的不同執行個體，報告或重複使用現有的報表伺服器資料庫。 報表伺服器資料庫的結構描述必須與報表伺服器執行個體相容。 如果資料庫的格式是舊的，系統將會提示您將其升級到目前的格式。 但是無法讓新版降級為舊版。 如果您有新版的報表伺服器資料庫，您無法將其用於舊版的報表伺服器執行個體。 如需如何將報表伺服器資料庫升級到新格式的詳細資訊，請參閱 [升級報表伺服器資料庫](../install-windows/upgrade-a-report-server-database.md)。  
   
 > [!IMPORTANT]  
 >  資料庫的資料表結構會針對伺服器作業最佳化，而且不應該修改或微調。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 前後版次的資料表結構可能會變更。 如果您修改或擴充資料庫，可能會限制或妨礙執行未來升級或套用 Service Pack 的功能。 您也可能會導入影響報表伺服器作業的變更。 例如，如果您在 ReportServer 資料庫上開啟 READ_COMMITTED_SNAPSHOT，您會中斷互動式排序功能。  
@@ -66,11 +66,11 @@ ms.locfileid: "48073878"
  如果您備份暫存資料庫並在後續加以復原，應該要刪除其內容。 一般而言，在任何時候刪除暫存資料庫內容都是安全的。 但是，您必須在刪除內容後重新啟動報表伺服器 Windows 服務。  
   
 ## <a name="see-also"></a>另請參閱  
- [裝載 SQL Server 容錯移轉叢集中的報表伺服器資料庫](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [在 SQL Server 容錯移轉叢集中裝載報表伺服器資料庫](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Report Server](../reporting-services-report-server.md)   
  [管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)   
- [建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services 的備份與還原作業](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   
   
