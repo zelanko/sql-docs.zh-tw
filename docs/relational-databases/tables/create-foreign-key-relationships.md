@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9489b1ecdcaeea645b9020f14a86b8e7fc6e2a97
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: a8277582639ebb5ae507c320c38f9ffbe7e0da43
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300035"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019534"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -108,7 +108,8 @@ ms.locfileid: "54300035"
         REFERENCES Sales.SalesReason (SalesReasonID)     
         ON DELETE CASCADE    
         ON UPDATE CASCADE    
-    );GO    
+    );
+    GO    
     
     ```    
     

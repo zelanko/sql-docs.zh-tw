@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f92c0886bf3e1e5d5022cde96ad39671588225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222204"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019339"
 ---
 # <a name="server-properties-general-page"></a>伺服器屬性 (一般頁面)
   您可以使用這個頁面來檢視或修改在報表管理員中使用的標題、啟用或停用 [我的報表]、針對 [我的報表] 安全性選取角色定義，以及啟用或停用用戶端列印控制項。  
@@ -50,7 +50,7 @@ ms.locfileid: "48222204"
  指定要用於 [我的報表] 安全性的角色定義。 角色定義會識別每個 [我的報表] 資料夾中所支援的這組工作。  
   
  **啟用 ActiveX 用戶端列印控制項下載**  
- 設定`EnableClientPrinting`報表伺服器系統屬性。 如果您啟用了用戶端列印，則擁有本機管理員權限的使用者會有選項可下載已簽署的 ActiveX 控制項以便列印 HTML 報表。 如需詳細資訊，請參閱 <<c0> [ 啟用和停用 Client-side Printing for Reporting](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 設定 `EnableClientPrinting` 報表伺服器系統屬性。 如果您啟用了用戶端列印，則擁有本機管理員權限的使用者會有選項可下載已簽署的 ActiveX 控制項以便列印 HTML 報表。 如需詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

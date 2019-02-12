@@ -2,6 +2,7 @@
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
 ms.date: 06/17/2018
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0fc010c3b02bfbe5e2c5fabb1f8e6313144d7efa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4296a2b56f5c347a26435a4c192c6dfac7f16538
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018280"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
