@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: eb106ea00037c6c9c8fc236186c9d0882decdd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e4a12c97b476a0231e230dda16eaa667fcf0a642
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122798"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020739"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>使用強式名稱自訂組件
   強式名稱會識別組件，並且含括組件的文字名稱、四部分的版本號碼、文化特性資訊 (若有提供)、公用金鑰，以及儲存在組件資訊清單中的數位簽章。 強式名稱可唯一識別 Common Language Runtime (CLR) 並確保二進位的完整性。  

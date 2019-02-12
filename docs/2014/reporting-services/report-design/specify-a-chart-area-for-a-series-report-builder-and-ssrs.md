@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 34337c9418151e873726e5b04fd62e41f18c004c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8578b33bb47a6bcf8c38ae091c4e959085c30b06
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100320"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020724"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>為數列指定圖表區域 (報表產生器及 SSRS)
   此圖表是最上層的容器，其中包含外框、圖表標題和圖例。 依預設，圖表包含一個預設的圖表區域。 在圖表介面上看不到圖表區域，但是您可以將圖表區域視為僅包含軸標籤、軸標題，以及一或多個數列之繪圖區的容器。 下圖顯示單一圖表內圖表區域的概念。  
@@ -44,11 +44,11 @@ ms.locfileid: "48100320"
 4.  (選擇性) 垂直對齊圖表區域。 若要這樣做，以滑鼠右鍵按一下圖表，然後選取 [圖表區域屬性]。 在 **[對齊]** 中，選取您要與所選圖表區域對齊的另一個圖表區域。  
   
 ## <a name="see-also"></a>另請參閱  
- [在圖表上的多個數列&#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [圖表上的多個數列 &#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點 &#40;報表產生器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [使用調色盤定義圖表的色彩 &#40;報表產生器及 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [極座標圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [形狀圖 &#40;報表產生器及 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
- [圓形圖&#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [圓形圖 &#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

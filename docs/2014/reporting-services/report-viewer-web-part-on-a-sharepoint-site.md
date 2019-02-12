@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 80baae6ca56757c8723934102341352f34cb0709
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+manager: kfile
+ms.openlocfilehash: c71070aa63716efd9773b00d304346935c635000
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905229"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028309"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 網站上的報表檢視器 Web 組件
   報表檢視器網頁組件是由適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集所安裝的自訂網頁組件。 您可以在設定為以 SharePoint 整合模式執行的報表伺服器上，使用 Web 組件來檢視、導覽、列印與匯出報表。 報表檢視器網頁組件與 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器所處理的報表定義 (.rdl) 檔相關聯。 您無法使用該組件搭配以其他軟體產品建立的其他報表文件。  

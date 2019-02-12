@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 33a91c27f78e3bbf2dfec3aeb71f2f2230c9376d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528224"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009670"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 課：定義資料表報表 (Reporting Services) 的資料集
   當您定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」中。 資料集含有指向資料來源的指標和報表要用的查詢，以及計算的欄位和變數。  
@@ -74,6 +74,6 @@ ms.locfileid: "52528224"
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具，在報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [SQL Server 連接類型 &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [教學課程：撰寫 TRANSACT-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

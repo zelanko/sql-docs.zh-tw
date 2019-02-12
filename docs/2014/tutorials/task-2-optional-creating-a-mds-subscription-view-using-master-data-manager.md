@@ -1,24 +1,21 @@
 ---
-title: 工作 2 （選擇性）： 建立 MDS 訂閱檢視，使用主資料管理員 |Microsoft Docs
+title: 工作 2 (選擇性)：建立 MDS 訂閱檢視，使用主資料管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 09c2402b9168ac99a201afa8e0ebda971614ee4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015279"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>工作 2 (選擇性)：使用主資料管理員建立 MDS 訂閱檢視
   在這個工作中，您會建立訂閱檢視，公開**供應商**中的實體**供應商**模型到其他應用程式。 您不會在目前的教學課程版本中使用這個檢視。  
@@ -48,6 +45,6 @@ ms.locfileid: "48097591"
 10. 按一下 [**儲存**儲存訂閱檢視] 工具列上。 這個動作會建立名為 SQL Server 中的檢視**供應商**。 您可以使用 SQL Server Management Studio (SSMS) 來驗證。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 3&#40;選擇性&#41;： 檢閱訂閱檢視](task-3-optional-reviewing-the-subscription-views.md)  
+ [工作 3&#40;選擇性&#41;:檢閱訂閱檢視](task-3-optional-reviewing-the-subscription-views.md)  
   
   

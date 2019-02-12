@@ -1,7 +1,7 @@
 ---
 title: 伺服器屬性 (進階頁面) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 2016-10-18
+ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119868"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041579"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
   您可以使用這個頁面來設定報表伺服器的系統屬性。 有許多方式可設定系統屬性。 這項工具提供了圖形化使用者介面，如此您不需要撰寫程式碼就可以設定屬性。  
@@ -54,7 +54,7 @@ ms.locfileid: "49119868"
  指定預存參數可儲存的最大天數。 有效值為 `-1`、`+1` 至 `2,147,483,647`。 預設值為 `180` 天。  
   
  **StoredParametersThreshold**  
- 指定可以在報表伺服器所儲存的參數值的數目上限。 有效值為 `-1`、`+1` 至 `2,147,483,647`。 預設值是 `1500`。  
+ 指定報表伺服器可儲存的最大參數值數目。 有效值為 `-1`、`+1` 至 `2,147,483,647`。 預設值是 `1500`。  
   
  **UseSessionCookies**  
  指出報表伺服器與用戶端瀏覽器通訊時是否應該使用工作階段 Cookie。 預設值是 `true`。  

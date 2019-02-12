@@ -3,6 +3,7 @@ title: 中繼資料探索 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
@@ -10,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82f65fbc963c933289ab1de13888884ec2b3cd94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3144524e5b3fbd1c93b5483365d4931c68c987
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599685"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043209"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "47599685"
   
  您也會看見效能改進，指定中繼資料格式使用時[bcp_setbulkmode](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)。  
   
- [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)有新*eOption*控制 bcp_readfmt 行為： **BCPDELAYREADFMT**。  
+ [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)有新*eOption*控制 bcp_readfmt 行為：**BCPDELAYREADFMT**。  
   
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 已經強化了下列 ODBC 函數，以便提供改良的中繼資料探索：  
   

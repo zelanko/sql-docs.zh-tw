@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0e216aa5da4ef837da632ba83d4cf6e14edb40b1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376450"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042619"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>建立資料來源 (基本資料採礦教學課程)
   A*資料來源*的資料連接所儲存和管理您的專案並部署到您[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 資料來源包含來源資料所在的伺服器和資料庫名稱，以及任何其他必要的連接屬性。  
@@ -45,7 +44,7 @@ ms.locfileid: "53376450"
   
 7.  在 **選取或輸入資料庫名稱**清單中，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]，然後按一下**確定**。  
   
-8.  按 [下一步] 。  
+8.  按一下 [下一步] 。  
   
 9. 在上**模擬資訊**頁面上，按一下**使用的服務帳戶**，然後按一下**下一步**。  
   

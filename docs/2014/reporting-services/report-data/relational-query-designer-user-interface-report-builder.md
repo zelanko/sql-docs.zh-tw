@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 20b64e86aa63b88175b505659e78dce35b2250bb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ee69a2cd6081b83d6b4a549169cffbe86584ed31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361260"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034069"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   報表產生器同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具可協助您建立查詢，以便指定要擷取的資料[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]並[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]關聯式資料庫和[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]報表資料集。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  

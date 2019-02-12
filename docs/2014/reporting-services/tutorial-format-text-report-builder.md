@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350099"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030614"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 （報表產生器）
   在本教學課程中，您將能練習以各種不同的方式格式化文字。 使用資料來源和資料集設定空白報表之後，您可以挑選想要探索的步驟來進行。  
@@ -71,11 +71,11 @@ ms.locfileid: "53350099"
   
 1.  在 [報表資料] 窗格中，按一下 **[新增]**，然後按一下 **[資料來源]**。  
   
-2.  在 **名稱**方塊中，輸入：**TextDataSource**  
+2.  在 [名稱] 方塊中，輸入：**TextDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
-4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中輸入：**資料來源 =\<伺服器名稱 >**  
+4.  確認連接類型為 Microsoft SQL Server，然後在 [連接字串] 方塊中輸入：**Data Source = \<伺服器名稱>**  
   
     > [!NOTE]  
     >  運算式\<伺服器名稱 >，例如 Report001，指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 本教學課程無須任何特定資料，您只需要連接到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫。 如果您已有資料來源連接列於 [資料來源連接] 底下，就可以選取該連接並移至下一個程序「建立資料集」。 如需詳細資訊，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -88,7 +88,7 @@ ms.locfileid: "53350099"
   
 2.  確認資料來源為 **TextDataSource**。  
   
-3.  在 **名稱**方塊中，輸入：**TextDataset。**  
+3.  在 [名稱] 方塊中，輸入：**TextDataset。**  
   
 4.  確認已選取 **[文字]** 查詢類型，然後按一下 **[查詢設計工具]**。  
   

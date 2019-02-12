@@ -13,16 +13,16 @@ helpviewer_keywords:
 - node tests [SQLXML]
 - location path for XPath query
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2883b1645dfe1114fc40f63c576797b477ae0ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15d5389f9a16d676aa5d644b030455d4c63adf7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792016"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027400"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>在位置路徑中指定節點測試 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47792016"
 > [!NOTE]  
 >  不支援萬用字元節點測試 * (例如 `child::*`)。  
   
-## <a name="node-test-example-1"></a>節點測試： 範例 1  
+## <a name="node-test-example-1"></a>節點測試：範例 1  
  位置路徑`child::Customer`選取**\<客戶 >** 內容節點的項目子系。  
   
  在此範例中，`child` 為軸，而 `Customer` 為節點測試。 主要節點型別**子系**軸**\<項目 >**。 因此，會在節點測試為 TRUE，如果**\<客戶 >** 節點**\<項目 >** 節點。 若內容節點沒有**\<客戶 >** 子系，會傳回空的節點集。  

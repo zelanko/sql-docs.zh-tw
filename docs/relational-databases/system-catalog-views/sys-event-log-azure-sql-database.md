@@ -2,7 +2,7 @@
 title: sys.event_log (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ced951c44680133ab1e1f96843269ce998edbf08
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421125"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041529"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 

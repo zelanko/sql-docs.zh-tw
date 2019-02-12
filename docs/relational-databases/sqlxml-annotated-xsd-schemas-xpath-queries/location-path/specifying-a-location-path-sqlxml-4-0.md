@@ -14,16 +14,16 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4de99ac84f9c961a75d59c2951c61bdc6256642
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9d2ee9e659e9cae8bb93a1ea50b0f2d8e355701
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042819"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路徑 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

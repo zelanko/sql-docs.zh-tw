@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6dcc318a7bcd4bdbf8a8f4466e0a15bed155761c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0cdd72c352246c89983b560e40428c1f9f7fb7b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392245"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027949"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的資料品質方案可讓資料管理人或 IT 專業人員維護其資料的品質，並確保資料適合其商業用途。 DQS 是知識驅動方案，可同時提供電腦輔助和互動式方法來管理資料來源的完整性和品質。 DQS 可讓您探索、建立以及管理資料的相關知識。 然後您可以使用該知識執行資料清理、比對和分析。 您也可以在 DQS 資料品質專案中使用參考資料提供者的雲端式服務。  

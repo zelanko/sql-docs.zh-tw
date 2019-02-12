@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 742cfa14b1e93632910fca00312379432021246f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184330"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042929"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分頁符號、標題、資料行和資料列 (報表產生器及 SSRS)
   分頁符號可以將報表分割成不同的頁面進行檢視和列印。 當您預覽報表或將它匯出成不同的檔案格式時，分頁符號會決定內容如何納入報表頁面，以便進行最佳檢視。  
@@ -34,6 +34,6 @@ ms.locfileid: "48184330"
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [群組窗格 &#40;報表產生器&#41;](grouping-pane-report-builder.md)   
- [顯示頁首和頁尾與群組&#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

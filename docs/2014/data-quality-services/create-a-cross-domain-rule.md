@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e413c2a6057476fb44d5a7a106c8374621b9937c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415675"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012020"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域的跨定義域規則。 跨定義域規則會在複合定義域所包含的單一定義域中測試值之間的關聯性。 跨定義域規則必須在複合定義域中成立，才能讓定義域值被視為正確且符合商務需求。 跨定義域規則是用來驗證、更正並標準化定義域值。  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SqlXmlParameter object
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bd59dd23b80569d95896f320252ad8d498be569
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb7d6de3e00430e39d51dd365282e997a1e284d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707746"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036179"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 受控類別 - SqlXmlParameter 物件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

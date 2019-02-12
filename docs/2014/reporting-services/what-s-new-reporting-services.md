@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc841c842d580b9354624ae1e1672edf3ea03a1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 82ae5b3791fdd2b24ddba59be26659630b62c32f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042689"
 ---
 # <a name="what39s-new-reporting-services"></a>什麼&#39;s 新 (Reporting Services)
   

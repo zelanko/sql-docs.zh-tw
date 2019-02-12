@@ -1,5 +1,5 @@
 ---
-title: 如何：偵錯自訂組件 | Microsoft Docs
+title: 如何：偵錯自訂組件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011490"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>如何：偵錯自訂組件
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析自訂組譯碼並尋找其中的錯誤。 要使用的最佳工具將視您嘗試完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]。  

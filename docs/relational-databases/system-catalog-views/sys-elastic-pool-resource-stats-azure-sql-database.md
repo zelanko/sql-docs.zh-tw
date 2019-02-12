@@ -2,10 +2,9 @@
 title: sys.elastic_pool_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: reference
 f1_keywords:
 - sys.elastic_pool_resource_stats catalog view
@@ -19,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc5059682e3b909fee2ce730e7496333b9d4d861
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: d7fff3c65aaf6a5670be2d457440f4384f7c5fdd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421115"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011989"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
