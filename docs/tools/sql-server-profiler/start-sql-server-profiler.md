@@ -1,7 +1,7 @@
 ---
 title: 執行 SQL Server Profiler |Microsoft Docs
 ms.custom: ''
-ms.date: 7/7/2017
+ms.date: 07/07/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 303f97e5a2fb4599bde5c17fee056a3572491ad0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ef08bcecf3bf5478a8e6d076f8bed0d25e91754
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655970"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012969"
 ---
 # <a name="run-sql-server-profiler"></a>執行 SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

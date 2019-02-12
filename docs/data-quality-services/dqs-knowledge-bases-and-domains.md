@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81dba339c76674e2f8d1268c40a7762d15d7786d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 67c11167938ba2c76b668a56a879bf39e9b7801a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617468"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030209"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
 
@@ -124,7 +124,7 @@ ms.locfileid: "52617468"
  在定義域管理中，您可以針對單一定義域指定以詞彙為基礎的關聯，以便指定對單一值的變更。  
   
 ### <a name="composite-domains"></a>複合定義域  
- 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家/地區。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
+ 複合定義域是以兩個或多個單一定義域組成的結構，其中每個定義域都包含有關一般資料的知識。 複合是定義域可以處理之資料的範例為名稱欄位中的名字、中間名和姓氏，以及地址欄位中的門牌號碼和街道、城市、省/市、郵遞區號與國家。 當您將某個單一欄位對應到複合定義域時，DQS 會資料從某個欄位剖析到組成複合的多個定義域。  
   
  單一定義域有時候並不完全表示欄位資料。 在複合定義域中群組兩個或多個定義域可讓您以有效率的方式表示資料。 以下是使用複合定義域的優點：  
   
