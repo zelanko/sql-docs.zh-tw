@@ -1,22 +1,21 @@
 ---
-title: 第 5 課： 擴充時間序列模型 |Microsoft Docs
+title: 第 5 課：擴充時間序列模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138223"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028819"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>第 5 課：擴充時間序列模型
   在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise 中，您可以將新的資料加入至時間序列模型，並自動將新的資料併入此模型中。 您可以使用下列兩種方式的其中一種，將新的資料加入至時間序列採礦模型：  
@@ -156,7 +155,7 @@ PREDICTION JOIN <source query>
   
  下表顯示為 M200 Europe 所提供的新值要如何影響預測。 您並未提供 M200 產品在太平洋地區的任何新資料，但是會呈現這個數列進行比較：  
   
- **產品和地區： M200 Europe**  
+ **產品和地區：M200 Europe**  
   
 |||||  
 |-|-|-|-|  
@@ -168,7 +167,7 @@ PREDICTION JOIN <source query>
 |M200 Europe|2008 年 11 月 25 日上午 12:00:00|56|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|74|89|  
   
- **產品和地區： M200 Pacific**  
+ **產品和地區：M200 Pacific**  
   
 |||||  
 |-|-|-|-|  
@@ -219,7 +218,7 @@ WHERE [ModelRegion] = 'M200 Europe'
   
  預測結果從時間配量 3 開始，這是在您提供兩個月的新資料之後。  
   
- **產品和地區： M200 Europe**  
+ **產品和地區：M200 Europe**  
   
  具有更新資料的模型 (具有 EXTEND_MODEL_CASES 的 PredictTimeSeries)  
   
@@ -231,7 +230,7 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>使用 REPLACE_MODEL_CASES 做出預測  
- 當您想要定型一組案例上的模型，然後將該模型套用到不同的資料數列時，取代模型案例會非常實用。 此案例的詳細逐步解說所示[第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+ 當您想要定型一組案例上的模型，然後將該模型套用到不同的資料數列時，取代模型案例會非常實用。 此案例的詳細逐步解說所示[第 2 課：建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [時間序列模型查詢範例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

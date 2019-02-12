@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RDL [Reporting Services], generating
 - RDL [Reporting Services], tutorials
 - RDL [Reporting Services], serializing
 ms.assetid: 8f81d48f-7ab9-4ef8-bce0-7d16d9a47fbd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2f104892e3ee8a8c542c41bc07789a94ab8d0c4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349379"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014039"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>使用 RDL 結構描述產生的類別更新報表 (SSRS 教學課程)
   本教學課程說明如何使用 XML 結構描述定義工具 (Xsd.exe) 來產生類別，可讓您序列化和還原序列化報表定義檔案 （.rdl 和.rdlc） 搭配[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>類別。  
@@ -59,7 +58,7 @@ ms.locfileid: "53349379"
 > [!NOTE]  
 >  安裝期間不會自動安裝範例，但是您可在任何時間加以安裝。 有關範例的詳細資訊，請參閱[SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)。  
   
- **若要完成本教學課程的估計的時間：** 30 分鐘  
+ **完成這個教學課程的估計時間：** 30 分鐘  
   
 ## <a name="tasks"></a>工作  
  [第 1 課：建立 RDL 結構描述 Visual Studio 專案](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  

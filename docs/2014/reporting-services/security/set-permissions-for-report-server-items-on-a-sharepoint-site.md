@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad14d7005dc01c700b99c4a41cc8f95cac30da02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adfda7de7c700959e375678a8d45b4c522b59577
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078639"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031461"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>設定 SharePoint 網站上報表伺服器項目的權限 (SharePoint 整合模式的 Reporting Services)
   如果預設安全性設定無法提供所需的存取層級，您可以建立新的權限等級，以便提供特定報表伺服器項目或作業的存取權。 如果您想要限制特定報表的存取權，自訂安全性設定就很有用。  
@@ -73,10 +73,10 @@ ms.locfileid: "48078639"
 12. 按一下 [確定] 。 使用者一旦具有管理特定模型權限的能力，就可以開啟該模型，編輯該模型內的權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表伺服器項目的 Windows SharePoint Services 中使用內建安全性](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
+ [在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [設定 SharePoint Web 應用程式中報表伺服器作業的權限](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [比較 Reporting Services 與 SharePoint 群組和權限中的 角色和工作](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint 網站和清單權限參考報表伺服器項目](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [報表伺服器項目的 SharePoint 網站和清單權限參考](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

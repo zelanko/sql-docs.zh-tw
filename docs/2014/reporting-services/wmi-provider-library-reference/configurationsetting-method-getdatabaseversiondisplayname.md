@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 574d5520c150aa26f81ae8393872acb49b9d87bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8777faa32fd31bb31a161f8e4bcb6c297ff2c4b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013359"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>GetDatabaseVersionDisplayName 方法 (WMI)
   取得給定報表伺服器資料庫版本字串的顯示名稱。  

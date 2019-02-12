@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2665040a-1291-4064-ba01-f458637dda57
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b91be4b60c65a246b56a2d08142ce6937d80cea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162578"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034799"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>加入預測用的資料來源檢視 (中繼資料採礦教學課程)
   在這項工作中，您將新增資料來源檢視，以便用於預測狀況。 預測模型的資料，必須包含可用來識別時間序列步驟的資料行。 如果您計畫分析多個資料序列，所有序列必須在同一個日期或時間步驟結束。  
@@ -27,14 +26,14 @@ ms.locfileid: "48162578"
   
 2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料來源。 按 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料來源。 按一下 [下一步] 。  
   
     > [!NOTE]  
     >  如果您沒有此資料來源，您可以找到建立資料來源中的步驟[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../2014/tutorials/basic-data-mining-tutorial.md)。  
   
 4.  在 **選取資料表和檢視**頁面上，選取 vTimeSeries (dbo) 資料表，然後按一下向右箭號，將它新增至資料來源檢視。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 [**完成精靈]** 頁面上，依預設名稱的資料來源檢視是[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 將名稱變更為**SalesByRegion**，然後按一下**完成**。  
   

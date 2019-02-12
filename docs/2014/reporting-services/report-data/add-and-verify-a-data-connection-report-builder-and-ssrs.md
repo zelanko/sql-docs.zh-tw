@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082011"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030559"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>加入及驗證資料連接或資料來源 (報表產生器及 SSRS)
   在報表產生器中，您可以從報表伺服器加入共用資料來源，或是為您的報表建立內嵌資料來源。 在報表設計師中，您可以建立共用資料來源或內嵌資料來源，並將它部署至報表伺服器。  
@@ -59,7 +59,7 @@ ms.locfileid: "48082011"
   
     2.  使用以下其中一個替代方式來指定連接字串：  
   
-    -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例，請參閱[資料連接、 資料來源和報表產生器中的連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
+    -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例的清單，請參閱 [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
     -   按一下運算式 (**fx)** 按鈕，即可建立一個評估為連接字串的運算式。 在 **[運算式]** 對話方塊的 [運算式] 窗格內，輸入運算式。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48082011"
   
 2.  按一下 **[測試連接]**。  
   
-3.  如果連接成功，將會出現下列訊息：「成功建立連接」。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  如果連線成功，便會出現下列訊息：「 已成功建立連線。 」 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  如果連接未能成功，將會出現下列訊息：「無法連接到資料來源」。  
+4.  如果連線不成功，便會出現下列訊息：「 無法連接到資料來源。 」  
   
 5.  按一下 **[詳細資料]**，並使用該資訊來更正問題。  
   

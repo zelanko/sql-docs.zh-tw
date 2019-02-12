@@ -16,14 +16,14 @@ f1_keywords:
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 64dda9e4da8e5045466b63410c9c19788dc48fc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 55d0da172a8e543d370965ec686340c3e2c23ad8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116328"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018140"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>篩選頁面、圖表對話方塊 ((報表產生器及 SSRS)
   按一下以下對話方塊中的 **[篩選]** ：  
@@ -67,6 +67,6 @@ ms.locfileid: "48116328"
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

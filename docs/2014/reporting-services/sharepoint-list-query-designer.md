@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a68cc175ec8339fc9af0554a6b9c5c5b6f7386ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135158"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017709"
 ---
 # <a name="sharepoint-list-query-designer"></a>SharePoint 清單查詢設計工具
   報表設計師同時提供了圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，以便指定要從報表資料集之 SharePoint 網站中擷取的資料。 您可以使用圖形化查詢設計工具來瀏覽 SharePoint 清單中繼資料、以互動方式建立查詢以及檢視查詢的結果。 您可以使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢、修改查詢，或輸入查詢命令。 您也可以從檔案或報表匯入現有的查詢。  
@@ -64,7 +64,7 @@ ms.locfileid: "48135158"
  若要在這個窗格中加入或移除欄位，請在 [SharePoint 清單] 窗格中選取或清除資料表或檢視欄位的核取方塊。  
   
 ###  <a name="AppliedFilters"></a> 套用的篩選窗格  
- [套用的篩選] 窗格會顯示用來限制在執行階段擷取之資料列數目的準則。 此窗格中指定的準則會用來產生[!INCLUDE[tsql](../includes/tsql-md.md)]WHERE 子句。 當您選取參數選項時，就會自動建立報表參數。 以查詢參數為基礎的報表參數可讓使用者指定查詢的值，以便控制報表中的資料。  
+ [套用的篩選] 窗格會顯示用來限制在執行階段擷取之資料列數目的準則。 在這個窗格中指定的準則會用來產生 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE 子句。 當您選取參數選項時，就會自動建立報表參數。 以查詢參數為基礎的報表參數可讓使用者指定查詢的值，以便控制報表中的資料。  
   
  系統會顯示下列資料行：  
   

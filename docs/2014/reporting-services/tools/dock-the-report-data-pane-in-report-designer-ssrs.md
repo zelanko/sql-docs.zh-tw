@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb73ae268b088d27a96f7b24fbe8d0c7971b0c23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210368"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036609"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
-  報表設計師中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，[報表資料] 窗格會顯示報表，包括資料來源、 資料集、 欄位、 參數和映像，您可以使用資料物件的階層式檢視。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的報表設計師中，[報表資料] 窗格會顯示您可用於報表之資料物件的階層式檢視，包括資料來源、資料集、欄位、參數和影像。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  
   
 ### <a name="to-display-the-report-data-pane"></a>顯示報表資料窗格  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48210368"
      若要在最近的兩個顯示狀態之間切換，請按兩下 [報表資料] 窗格的標題列。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表資料 窗格](../report-data/report-data-pane.md)   
+ [報表資料窗格](../report-data/report-data-pane.md)   
  [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

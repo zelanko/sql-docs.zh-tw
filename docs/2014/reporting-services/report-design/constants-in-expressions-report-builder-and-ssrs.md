@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b8ae650b-0f46-4848-b62b-15f8a40751b8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 29268d5ddb85b462550da9cb0960ee2c11bfb3f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae4079f0f7be0bb854a8c77737251fdfd09ca0b6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035489"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>運算式中的常數 (報表產生器及 SSRS)
   常數是由常值文字或預先定義的文字所組成。 報表處理器可以存取預先定義的常數，讓您在運算式中納入這些常數時，在系統評估運算式之前，就會將常數以其代表的值來取代。  
@@ -42,7 +42,7 @@ ms.locfileid: "48130909"
 |BorderStyle|加入至報表的線條有效。|預設值、無、點線、虛線、實線、雙線、虛線點、虛線點點|  
   
 ## <a name="visual-basic-constants"></a>Visual Basic 常數  
- 您可以在運算式中使用以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫所定義的常數。 例如，您可以使用常數`DateInterval.Day`。 如果日期為 2008 年 1 月 10 日，則下列運算式會傳回數字 10：  
+ 您可以在運算式中使用以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫所定義的常數。 例如，您可以使用常數 `DateInterval.Day`。 如果日期為 2008 年 1 月 10 日，則下列運算式會傳回數字 10：  
   
  `=DatePart("d",Globals!ExecutionTime)`  
   

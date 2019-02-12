@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211008"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023739"
 ---
 # <a name="create-and-manage-role-assignments"></a>建立和管理角色指派
   *「角色指派」* (Role assignment) 是一種安全性原則，可決定使用者或群組是否能夠存取特定的報表伺服器項目或執行作業。 角色指派是由單一使用者或群組帳戶名稱以及一或多個角色定義所組成。  
@@ -42,7 +42,7 @@ ms.locfileid: "48211008"
   
  您必須是報表伺服器電腦上本機系統管理員群組的成員，才能建立角色指派。 您可以將其他使用者指派給 **「內容管理員」** 角色來委派該項責任。  
   
- 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
+ 如需詳細資訊，請參閱 [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)。  
   
 ## <a name="creating-a-system-level-role-assignment"></a>建立系統層級角色指派  
  若要建立或管理系統層級角色指派，請使用報表管理員，並開啟 [站台設定] 頁面。  
@@ -51,7 +51,7 @@ ms.locfileid: "48211008"
   
  系統層級角色指派包括各種不同的權限，但是不包括屬於項目層級角色指派之一部分的權限。 報表伺服器中的系統角色並不會傳遞包含完整之所有可能作業集合的中心權限，與電腦上的系統權限相反。 系統層級角色指派只是以報表伺服器站台為範圍的一組工作。 透過系統角色指派所傳遞的權限會決定使用者是否可以檢視應用程式屬性 (例如首頁的影像或標題)、檢視或管理共用排程或是使用報表產生器。  
   
- 如需詳細資訊，請參閱 <<c0> [ 使用者存取權授與報表伺服器&#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)並[預先定義的角色](role-definitions-predefined-roles.md)。</c0>  
+ 如需詳細資訊，請參閱 [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md) 和 [預先定義的角色](role-definitions-predefined-roles.md)。  
   
 ## <a name="modifying-a-role-assignment"></a>修改角色指派  
  您可以在任何時候修改角色指派。 所做的變更會在儲存角色指派時生效。 使用者工作階段不受角色指派變更的影響。 如果使用者已開啟報表，而您將角色指派修改成拒絕存取，只要工作階段為使用中，使用者就可以繼續使用報表。  
@@ -68,7 +68,7 @@ ms.locfileid: "48211008"
  [修改或刪除角色指派 &#40;報表管理員&#41;](role-assignments-modify-or-delete.md)   
  [角色指派](role-assignments.md)   
  [角色定義](role-definitions.md)   
- [預先定義的角色](role-definitions-predefined-roles.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)  
   
   

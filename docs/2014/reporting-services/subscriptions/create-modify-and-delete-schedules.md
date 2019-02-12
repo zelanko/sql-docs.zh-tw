@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81ad874c4d7e3c417058b2403c1307893300feaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 231fbf5211654d126f09ceb048501c7b2eacf0c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118778"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039579"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除排程。  
@@ -42,7 +42,7 @@ ms.locfileid: "48118778"
 -   [建立和管理共用的排程 （原生模式）](#bkmk_native)  
   
 ##  <a name="bkmk_overview"></a> 共用排程的管理的概觀  
- 若要管理原生模式的共用的排程，請使用 [在報表管理員中的 [排程] 頁面或 [共用排程] 資料夾中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
+ 若要管理原生模式的共用排程，請使用報表管理員中的 [排程] 頁面或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 [共用排程] 資料夾。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
   
  您可以檢視所有為報表伺服器定義的共用排程、暫停與繼續排程 (只能在報表管理員上進行)，以及選取要修改或刪除的排程。 [共用排程] 頁面中會有每一個排程狀態的下列摘要資訊：頻率、擁有者、到期日與狀態。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "48118778"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
- 如果您刪除了多個報表和訂閱所使用的共用排程，報表伺服器將會針對先前使用此共用排程的每個報表和訂閱建立個別的排程。 每個新的個別排程將包含共用排程中原本指定的日期、時間和循環模式。 請注意， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會提供個別排程的集中管理功能。 如果您刪除了共用排程，現在就必須針對每個個別項目維護排程資訊。 刪除共用的排程之前，請先使用[報表頁面](../tools/schedule-properties-reports-page.md)來判斷哪些報表目前正在使用共用的排程。  
+ 如果您刪除了多個報表和訂閱所使用的共用排程，報表伺服器將會針對先前使用此共用排程的每個報表和訂閱建立個別的排程。 每個新的個別排程將包含共用排程中原本指定的日期、時間和循環模式。 請注意， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會提供個別排程的集中管理功能。 如果您刪除了共用排程，現在就必須針對每個個別項目維護排程資訊。 刪除共用排程之前，請使用 [報表頁面](../tools/schedule-properties-reports-page.md) 來判斷哪些報表目前正在使用共用排程。  
   
 ## <a name="see-also"></a>另請參閱  
  [[排程]](schedules.md)   

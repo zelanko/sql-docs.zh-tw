@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 40cf4da099d5b9a9055b6fcd266c1f6169d8aaee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025829"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   針對原生模式設定的報表伺服器會當做應用程式伺服器執行，並透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件專門提供所有處理和管理能力。  
@@ -78,7 +78,7 @@ ms.locfileid: "48086908"
   
 -   藉由建立報表處理排程，並指定何者可依需求執行以及何者要從快取載入，即可平衡伺服器的報表處理負荷。  
   
- 執行管理工作的權限是透過兩個預先定義角色提供的： **系統管理員** 和 **內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。 如需這些預先定義角色的詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)。  
+ 兩個預先定義的角色提供執行管理工作的權限：**系統管理員**並**內容管理員**。 您必須被指派至這兩種角色，才能有效管理報表伺服器內容。 如需這些預先定義角色的詳細資訊，請參閱[角色與權限 &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)。  
   
  用於管理報表伺服器內容的工具包括 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或報表管理員。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可讓您設定預設值和啟用功能。 報表管理員是用來將報表伺服器項目與作業的存取權授與使用者、檢視和使用報表與其他內容類型，以及檢視和使用所有共用項目與報表散發功能。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48086908"
   
  若要將資源加入至報表伺服器，您可以上傳或發行檔案：  
   
-|作業|檔案類型|  
+|運算|檔案類型|  
 |---------------|---------------|  
 |上傳|除了報表定義 (.rdl) 和報表模型 (.smdl) 檔以外，所有檔案都會當做資源上傳。<br /><br /> 若要上傳資源，您必須使用報表管理員 (如果報表伺服器以原生模式執行的話) 或 SharePoint 網站上的應用程式頁面 (如果伺服器以 SharePoint 整合模式執行的話)。 如需詳細資訊，請參閱[上傳檔案或報表 &#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md) 或[將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)。|  
 |發行|除了 .rdl、.smdl 和 .rds 資料來源檔案以外，專案中的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
@@ -109,6 +109,6 @@ ms.locfileid: "48086908"
   
 ## <a name="see-also"></a>另請參閱  
  [設定和管理報表伺服器 &#40;SSRS 原生模式&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [針對 Reporting Services 安裝進行疑難排解](../install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [疑難排解 Reporting Services 安裝](../install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

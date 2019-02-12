@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9fbba90a3b4fef1e65560350d22e2f4af597ac97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 89fc6d86437583503b2fd962bf86c1c9ff6d75f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368580"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012309"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Min 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。  

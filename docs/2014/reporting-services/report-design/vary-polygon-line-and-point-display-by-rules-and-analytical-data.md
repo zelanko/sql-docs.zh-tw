@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d5c6ca9ae7bca2b9c6dc55f65cbbb95917fd96db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027249"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>使用規則與分析資料更改多邊形、線條與點顯示 (報表產生器及 SSRS)
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  
@@ -101,15 +101,15 @@ ms.locfileid: "48158908"
 ##  <a name="Distribution"></a> 了解分佈選項  
  若要建立值的分佈，您可以將資料分割成幾個範圍。 您可以指定分佈類型、子範圍的數目，以及最小與最大範圍值。  
   
- 在下列清單中，假設您有三個地圖元素和六個相關的分析值，其範圍為 1 到 9999，而其值分別為 1、10、200、2000、4777、8999。  
+ 在下列清單中，假設您有三個地圖元素和六個相關的分析值，其範圍為 1 到 9999，而其值分別為：1, 10, 200, 2000, 4777, 8999.  
   
--   **EqualInterval：** 建立的範圍會將資料分割成相等的範圍間隔。 針對此範例，三個範圍為 0-2999、3000-5999、6000-8999。 子範圍 1：1、10、200、500。 子範圍 2：4777。 子範圍 3：8999。 此方法不會將資料分佈的方法納入考慮。 非常大的值或非常小的值都可能會扭曲分佈結果。  
+-   **EqualInterval：** 建立的範圍會將資料分割成相等的範圍間隔。 針對此範例，三個範圍為 0-2999、3000-5999、6000-8999。 子範圍 1：1, 10, 200, 500. 子範圍 2：4777. 子範圍 3：8999. 此方法不會將資料分佈的方法納入考慮。 非常大的值或非常小的值都可能會扭曲分佈結果。  
   
--   **EqualDistribution：** 建立的範圍會分割該資料，讓每個範圍都有相等的項目數目。 針對此範例資料，三個範圍為 0-10、11-500、501-8999。 子範圍 1：1、10。 子範圍 2：200、500。 子範圍 3：4777、8999。 此方法可以建立跨越非常大範圍或非常小範圍的分佈來扭曲分佈。  
+-   **EqualDistribution：** 建立的範圍會分割該資料，讓每個範圍都有相等的項目數目。 針對此範例資料，三個範圍為 0-10、11-500、501-8999。 子範圍 1：1、 10。 子範圍 2：200, 500. 子範圍 3：4777, 8999. 此方法可以建立跨越非常大範圍或非常小範圍的分佈來扭曲分佈。  
   
 -   **最佳：** 建立會自動調整分佈的範圍來建立對稱的子範圍。 子範圍的數目取決於演算法。  
   
--   **自訂：** 指定您自己的範圍數目來控制值的分佈。 對於這些範例資料，您可以指定範圍 3 的範圍：1-2、3-8、9。  
+-   **自訂：** 指定您自己的範圍數目來控制值的分佈。 針對此範例資料，您可以指定範圍 3 的範圍：1-2, 3-8, 9.  
   
  規則會使用分佈值來更改地圖元素顯示值。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "48158908"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|顯示範圍開頭與範圍結尾的實際數值。|10 - 790|  
   
 ## <a name="see-also"></a>另請參閱  
- [變更地圖圖例、 色階與相關的規則&#40;報表產生器及 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

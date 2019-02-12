@@ -12,20 +12,20 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c3d9abd6c84d6d6abe0d30eac06d113a81ebcd0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 26fbda6dacd20b3ec02061b41a7e1de2f3b2d1ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188668"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038269"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>圖表中的 3D、浮凸和其他效果 (報表產生器及 SSRS)
   三維 (3D) 效果可用來針對圖表提供深度及增加視覺效果。 例如，若要強調分裂式圓形圖的特殊扇區，則可以旋轉及變更圖表的檢視方塊，讓使用者能首先注意該扇區。 將 3D 效果套用至圖表時，所有的漸層色彩和影線樣式都會停用。  
   
  您可以將三維效果套用至個別的圖表，也可以同時在相同報表上顯示二維和三維圖表。  
   
- 您可以針對所有的圖表類型選取 [圖表區域屬性] 對話方塊中的 [啟用 3D]，以對圖表區域新增三維效果。 如需詳細資訊，請參閱 <<c0> [ 將 3D 效果加入至圖表&#40;報表產生器及 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)。</c0>  
+ 您可以針對所有的圖表類型選取 [圖表區域屬性] 對話方塊中的 [啟用 3D]，以對圖表區域新增三維效果。 如需詳細資訊，請參閱 [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)。  
   
  另一種對圖表加入視覺效果的方式是在直條圖、橫條圖、圓形圖及環圈圖中加入按鈕形、浮凸和材質樣式。 如需詳細資訊，請參閱[將斜面、浮凸與紋理樣式加入圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "48188668"
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [將 3D 效果新增至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
+ [將 3D 效果加入至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   
   

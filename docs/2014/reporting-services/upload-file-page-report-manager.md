@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023539"
 ---
 # <a name="upload-file-page-report-manager"></a>上傳檔案頁面 (報表管理員)
   您可以使用 [上傳檔案] 頁面，將檔案從檔案系統發行至報表伺服器資料庫。 在報表伺服器資料夾階層中，上傳的檔案會以項目來表示。  
@@ -34,7 +34,7 @@ ms.locfileid: "48128258"
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-upload-file-page"></a>若要開啟上傳檔案頁面  
@@ -57,8 +57,8 @@ ms.locfileid: "48128258"
  若要以新版本取代現有的項目，請選取此核取方塊。 若要覆寫現有的版本，新項目的名稱與現有項目的名稱必須完全相符。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [上傳檔案到資料夾](report-server/upload-files-to-a-folder.md)  
   

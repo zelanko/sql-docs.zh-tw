@@ -1,26 +1,23 @@
 ---
-title: 工作 13： 加入 OLE DB 目的地，將資料寫入 MDS 暫存資料表 |Microsoft Docs
+title: 工作 13:加入將資料寫入 MDS 暫存資料表的 OLE DB 目的地 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf8a96891040a6a751e0a6e34c902d77cec9dd35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223098"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035069"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13：加入 OLE DB 目的地，以便將資料寫入 MDS 暫存資料表
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>工作 13:加入 OLE DB 目的地，以便將資料寫入 MDS 暫存資料表
   既然您已新增**ImportType**並**BatchTag**所有記錄的值，您已準備好將它們傳送至 MDS 供暫存。 在這個工作中，您可以使用 OLE DB 目的地將資料寫入至**stg.supplier_Leaf**暫存資料表。  
   
 1.  拖曳**OLE DB 目的地**從**其他目的地**一節中**SSIS 工具箱**至**資料流程**索引標籤並將它放在**加入 MDS 所需的資料行**。  
@@ -52,6 +49,6 @@ ms.locfileid: "48223098"
      ![完成資料流](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "完成資料流程")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 14：將執行 SQL 工作新增至控制流程，為 MDS 執行預存程序](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [工作 14:將執行 SQL 工作，為 MDS 執行預存程序的控制流程](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

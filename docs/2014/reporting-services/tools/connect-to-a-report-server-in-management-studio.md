@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 450ecc2a61951e0a6b0fa587002ed99a5fb59c4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099038"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041369"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>連接至 Management Studio 中的報表伺服器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供物件總管，可讓您連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何伺服器並以圖形方式瀏覽其內容。 若為 Reporting Services，您可以使用 [物件總管] 來進行下列作業：  
@@ -104,12 +104,12 @@ ms.locfileid: "48099038"
 |連接至|工作|Permissions|  
 |----------------|-----------|-----------------|  
 |原生模式報表伺服器 (當做預設或具名執行個體連接)：<br /><br /> \<伺服器名稱>\<_執行個體><br /><br /> 報表伺服器的連接是透過報表伺服器 WMI 提供者建立的。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
-|原生模式報表伺服器 (透過報表伺服器 Web 服務的端點，當做預設或具名執行個體連接)：<br /><br /> http://\<伺服器名稱 > / reportserver<br /><br /> 指定報表伺服器的 URL 會提供連接至報表伺服器的替代方式。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
-|SharePoint 整合模式報表伺服器 (透過 SharePoint 網站連接)：<br /><br /> http://\<web 伺服器 > /\<SharePointSite >|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理針對您所連接之網站定義的共用排程。<br /><br /> 檢視針對您所連接之網站定義的權限等級。|您所連接之 SharePoint 網站的完整控制權限等級。|  
+|原生模式報表伺服器 (透過報表伺服器 Web 服務的端點，當做預設或具名執行個體連接)：<br /><br /> http://\<servername>/reportserver<br /><br /> 指定報表伺服器的 URL 會提供連接至報表伺服器的替代方式。|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理共用排程。<br /><br /> 建立、修改或刪除角色定義。|指派給系統管理員角色。|  
+|SharePoint 整合模式報表伺服器 (透過 SharePoint 網站連接)：<br /><br /> http://\<webserver>/\<SharePointSite>|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。<br /><br /> 建立和管理針對您所連接之網站定義的共用排程。<br /><br /> 檢視針對您所連接之網站定義的權限等級。|您所連接之 SharePoint 網站的完整控制權限等級。|  
 |SharePoint 整合模式報表伺服器 (透過報表伺服器執行個體的名稱連接)：<br /><br /> \<伺服器名稱>\<_執行個體>|檢視和設定伺服器屬性與預設值。<br /><br /> 檢視和取消作業。|與報表伺服器整合之 SharePoint 網站的完整控制權限等級。<br /><br /> 請注意，當您連接至報表伺服器而非 SharePoint 網站時，您可以執行的工作數目會大幅減少。 這是因為報表伺服器只能傳回在報表伺服器資料庫 (而非 SharePoint 組態和內容資料庫) 中儲存或管理的應用程式資料。|  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server Management Studio 中的 Reporting Services &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

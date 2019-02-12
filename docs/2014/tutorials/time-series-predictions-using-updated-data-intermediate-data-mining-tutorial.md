@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af73681d-ce1c-4b6e-b195-6df3d2fb5275
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74bc6afe0c5c3bddd4b36ebe844ae963da8fbe28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185488"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041799"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>使用更新資料執行時間序列預測 (中繼資料採礦教學課程)
     
@@ -70,7 +69,7 @@ ms.locfileid: "48185488"
   
     4.  拖曳 [Quantity] 欄位從**採礦模型**窗格將**準則/引數**資料行。  
   
-    5.  在 **準則/引數**資料行中，欄位名稱後面輸入下列文字： **5,extend_model_cases**  
+    5.  在 [**準則/引數**] 欄中，欄位名稱後面輸入下列文字：**5,EXTEND_MODEL_CASES**  
   
          完整文字**準則/引數**文字方塊中應該如下： `[Forecasting].[Quantity],5,EXTEND_MODEL_CASES`  
   
@@ -103,6 +102,6 @@ ms.locfileid: "48185488"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 時間序列演算法技術參考](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [時間序列模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

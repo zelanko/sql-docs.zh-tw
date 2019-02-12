@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e65ae16a2297c0f54f16e31e770623c8edd80639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012539"
 ---
 # <a name="custom-report-item-class-libraries"></a>自訂報表項目類別庫
   自訂報表項目使用 `Microsoft.ReportDesigner` 命名空間中的類別。 用於實作自訂報表項目的類別可以分成兩個主要類別：設計為支援自訂報表項目基礎結構的唯一類別，以及封裝相關報表定義語言 (RDL) 元素之功能的 Managed 包裝函數類別。 如需如何使用這些類別的程式碼範例，請參閱 [SQL Server Reporting Services 產品範例](https://go.microsoft.com/fwlink/?LinkId=177889)。  

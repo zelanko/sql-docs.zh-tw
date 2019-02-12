@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171941"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035039"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>加入用於撥接中心資料的資料來源檢視 (中繼資料採礦教學課程)
   在這項工作中，您將加入資料來源檢視，用來存取撥接中心資料。 相同的資料將用於建立用來進行探索的初步類神經網路模型，以及用於提出建議的羅吉斯迴歸模型。  
@@ -33,7 +32,7 @@ ms.locfileid: "48171941"
   
 2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料來源。 如果您沒有此資料來源，請參閱[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../2014/tutorials/basic-data-mining-tutorial.md)。 按 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料來源。 如果您沒有此資料來源，請參閱[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](../../2014/tutorials/basic-data-mining-tutorial.md)。 按一下 [下一步] 。  
   
 4.  在 **選取資料表和檢視**頁面上，選取下列資料表，然後按一下向右箭號，將它新增至資料來源檢視：  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48171941"
   
     -   **DimDate**  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 [**完成精靈]** 頁面上，依預設名稱的資料來源檢視是[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 將名稱變更為**CallCenter**，然後按一下**完成**。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48171941"
 |FactCallCenterID|當資料匯入資料倉儲時建立的任意索引鍵。<br /><br /> 此資料行會識別唯一記錄，應該做為資料採礦模型的案例索引鍵。|  
 |DateKey|撥接中心作業的日期，以整數表示。 資料倉儲中通常使用整數日期索引鍵，但是如果您要依日期值進行分組，可能想要取得日期/時間格式的日期。<br /><br /> 請注意，日期不是唯一的，因為廠商會在作業的每一天，為每個排班提供一個個別的報表。|  
 |WageType|表示該日期為工作日、週末或假日。<br /><br /> 很可能已有不同的客戶服務品質的工作日與週末讓您將使用此資料行做為輸入。|  
-|Shift|表示記錄電話當時的排班。 此撥接中心將工作日分成四個排班：AM、PM1、PM2，以及 Midnight。<br /><br /> 排班可能對客戶服務品質造成影響，因此您將它做為輸入。|  
+|Shift|表示記錄電話當時的排班。 此撥接中心將工作日分成四個排班：AM、 PM1、 PM2，以及 Midnight。<br /><br /> 排班可能對客戶服務品質造成影響，因此您將它做為輸入。|  
 |LevelOneOperators|表示待命的一級操作員數目。<br /><br /> 撥接中心員工從一級開始，因此這些員工資歷較淺。|  
 |LevelTwoOperators|表示待命的二級操作員數目。<br /><br /> 員工必須記錄特定的服務時數才能限定為二級操作員。|  
 |TotalOperators|排班期間出現的操作員總數。|  

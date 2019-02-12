@@ -12,14 +12,14 @@ f1_keywords:
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 62d20c36271bd6dd1bfa591edf606c3e295d1adb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 33849743e47ad910fad44938e7537d7b4be8624a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138630"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018180"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>地圖檢視區屬性對話方塊、一般
   選取 **[地圖檢視區屬性]** 對話方塊上的 **[一般]** 來變更座標系統、投射以及界限選項。  
@@ -32,7 +32,7 @@ ms.locfileid: "48138630"
   
 -   **地理** ：當地圖資料使用經度和緯度座標 (例如城市位置) 時，選擇此選項。  
   
- **投影**  
+ **Projection**  
  指定將地理座標投射在二維度介面所使用的方法。 選擇與您要視覺化之資料相容的投射。 受到投射影響的四個空間屬性為區域、形狀、距離與方向。 若是地球檢視，良好的投射選項取決於置中檢視、地圖界限與縮放因數。  
   
  下列每個屬性都會保留其中一個或多個空間屬性：  

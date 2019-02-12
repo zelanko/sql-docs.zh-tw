@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4df8b4f17c006d51bdfc5bba6e7cb13b7cc69eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202968"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017719"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>加入或刪除指標 (報表產生器及 SSRS)
   指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 如需指標的詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](indicators-report-builder-and-ssrs.md)。  
@@ -27,11 +27,11 @@ ms.locfileid: "48202968"
   
  您可以更新指標的值和狀態。 如需詳細資訊，請參閱下列主題：  
   
--   [變更指標圖示和指標集合&#40;報表產生器及 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定度量單位&#40;報表產生器及 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [設定度量單位 &#40;報表產生器及 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [設定同步處理範圍&#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  因為指標位於量測計面板的內部，所以當您想要使用 [指標屬性] 對話方塊或 [屬性] 窗格來設定指標時，您需要選取指標，而不是此面板。 下圖顯示選取的指標如何出現在它的量測計面板中。  
   

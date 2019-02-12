@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83f12c0641768722156322e6e5a655b9e5e5a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a412f39db5b86deca61297a97d49bea6aa89f720
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220928"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035789"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數
   您可以在 RSReportServer 組態檔中指定轉譯延伸模組參數，以便覆寫在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上執行之報表的預設報表轉譯行為。 您可以修改轉譯延伸模組參數來達成下列目標：  
@@ -41,16 +41,16 @@ ms.locfileid: "48220928"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>尋找及修改 RSReportServer.config  
  報表輸出格式的組態設定會在 RSReportServer.config 檔中指定為轉譯延伸模組參數。 若要指定組態檔中的轉譯延伸模組參數，您必須了解如何定義設定轉譯參數的 XML 結構。 可進行修改的 XML 結構有兩種：  
   
--   `OverrideNames`項目會定義轉譯延伸模組的語言與顯示名稱。  
+-   `OverrideNames` 元素會定義轉譯延伸模組顯示的名稱和語言。  
   
 -   `DeviceInfo` XML 結構會定義轉譯延伸模組所使用的裝置資訊設定。 大部分的轉譯延伸模組參數會指定為裝置資訊設定。  
   
  您可以使用文字編輯器來修改 RSReportServer.config 檔案， 此檔案可以在 \Reporting Services\Report Server\Bin 資料夾中找到。 如需修改設定檔的詳細資訊，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 ## <a name="changing-the-display-name"></a>變更顯示名稱  
- 轉譯延伸模組的顯示名稱會出現在報表工具列的 [匯出] 清單中。 預設顯示名稱的範例包括網頁封存、TIFF 檔案和 Acrobat (PDF) 檔案。 您可以使用自訂值取代預設的顯示名稱，藉由指定`OverrideNames`組態檔中的項目。 此外，如果您正在定義單一轉譯延伸模組的兩個執行個體，也可以使用 `OverrideNames` 元素在 [匯出] 清單中區分每一個執行個體。  
+ 轉譯延伸模組的顯示名稱會出現在報表工具列的 [匯出] 清單中。 預設顯示名稱的範例包括網頁封存、TIFF 檔案和 Acrobat (PDF) 檔案。 藉著指定組態檔中的 `OverrideNames` 元素，您可以使用自訂的值來取代預設的顯示名稱。 此外，如果您正在定義單一轉譯延伸模組的兩個執行個體，也可以使用 `OverrideNames` 元素在 [匯出] 清單中區分每一個執行個體。  
   
- 由於顯示名稱已經當地語系化，您必須設定`Language`屬性，如果您要以自訂值取代預設的顯示名稱。 否則，任何指定的名稱都會被忽略。 您所設定的語言值，對於報表伺服器電腦必須是有效值。 例如，如果報表伺服器是在法文作業系統上執行，您應該指定「fr-FR」做為屬性值。  
+ 由於顯示名稱已經當地語系化，如果您要使用自訂的值取代預設顯示名稱，就必須設定 `Language` 屬性。 否則，任何指定的名稱都會被忽略。 您所設定的語言值，對於報表伺服器電腦必須是有效值。 例如，如果報表伺服器是在法文作業系統上執行，您應該指定「fr-FR」做為屬性值。  
   
  下列範例會說明在英文報表伺服器上提供自訂名稱的方法：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48220928"
 ```  
   
 ## <a name="changing-device-information-settings"></a>變更裝置資訊設定  
- 若要修改已經部署在您報表伺服器上之轉譯延伸模組所使用的預設裝置資訊設定，您必須在組態檔中輸入 `DeviceInfo` XML 結構。 每一個轉譯延伸模組都支援該延伸模組獨特的裝置資訊設定。 若要檢視裝置資訊設定的完整清單，請參閱[將裝置資訊設定傳遞至轉譯延伸模組](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
+ 若要修改已經部署在您報表伺服器上之轉譯延伸模組所使用的預設裝置資訊設定，您必須在組態檔中輸入 `DeviceInfo` XML 結構。 每一個轉譯延伸模組都支援該延伸模組獨特的裝置資訊設定。 若要檢視裝置資訊設定的完整清單，請參閱 [將裝置資訊設定傳遞至轉譯延伸模組](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)。  
   
  下列範例會提供 XML 結構的說明，以及修改影像轉譯延伸模組預設設定的語法：  
   
@@ -90,13 +90,13 @@ ms.locfileid: "48220928"
   
 -   指定延伸模組的唯一名稱。  
   
-     每個執行個體必須具有唯一值`Name`屬性。 下列範例會使用 "IMAGE (EMF Landscape)" 和 "IMAGE (EMF Portrait)" 的名稱來區分兩個執行個體。  
+     每個延伸模組必須具有 `Name` 屬性的唯一值。 下列範例會使用 "IMAGE (EMF Landscape)" 和 "IMAGE (EMF Portrait)" 的名稱來區分兩個執行個體。  
   
      變更已經部署之轉譯延伸模組的名稱時，要特別小心， 因為透過程式設計的方式指定轉譯延伸模組的開發人員，會使用延伸模組名稱來識別特定轉譯作業所使用的執行個體。 如果您在報表伺服器上執行自訂的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 應用程式，請確定開發人員知道您修改了現有的延伸模組名稱，或是新增了新的延伸模組名稱。  
   
 -   請指定唯一的顯示名稱，如此使用者可以了解每一個輸出格式的差異。  
   
-     如果您要設定的同一個延伸模組的多個版本，您可以為每個版本指定唯一名稱所提供的值`OverrideNames`。 否則，在報表工具列的 [匯出] 清單中，每個版本的延伸模組都會有相同的名稱。  
+     如果您為同一個延伸模組設定多個版本，則可以提供 `OverrideNames` 的值，藉此為每個版本指定一個唯一名稱。 否則，在報表工具列的 [匯出] 清單中，每個版本的延伸模組都會有相同的名稱。  
   
  下列範例說明使用預設影像轉譯延伸模組 (這會產生 TIFF 輸出) 輸出縱向模式 EMF，連同以第二個執行個體輸出橫向模式 EMF 格式報表的方法。 請注意，每個延伸模組名稱都是唯一的。 測試此範例時，請記得選擇沒有包含互動式功能 (例如顯示/隱藏選項、矩陣或鑽研連結) 的報表，因為互動式功能不能在影像轉譯延伸模組中執行：  
   

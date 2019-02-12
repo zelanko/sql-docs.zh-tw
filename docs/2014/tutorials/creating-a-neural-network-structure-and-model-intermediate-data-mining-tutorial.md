@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 144f2f754dc93be29f6be8fc786afa354a96c911
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395800"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037719"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>建立類神經網路結構和模型 (中繼資料採礦教學課程)
   若要建立資料採礦模型，您必須先使用「資料採礦精靈」，根據新的資料來源檢視建立新的採礦結構。 在這項工作中，您將利用這個精靈來建立採礦結構，並同時根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 類神經網路演算法來建立關聯的採礦模型。  
@@ -57,13 +56,13 @@ ms.locfileid: "52395800"
   
      羅吉斯迴歸模型是以類神經網路為基礎，因此，您可以重複使用相同的結構，並加入新的採礦模型。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
      **選取資料來源檢視**頁面隨即出現。  
   
 7.  底下**可用的資料來源檢視**，選取`Call Center`，然後按一下**下一步**。  
   
-8.  在 **指定資料表類型**頁面上，選取**案例**旁的核取方塊**FactCallCenter**資料表。 未選取任何項目如**DimDate**。 按 [下一步] 。  
+8.  在 **指定資料表類型**頁面上，選取**案例**旁的核取方塊**FactCallCenter**資料表。 未選取任何項目如**DimDate**。 按一下 [下一步] 。  
   
 9. 在 **指定培訓資料**頁面上，選取**金鑰**資料行旁邊**FactCallCenterID。**  
   
@@ -107,7 +106,7 @@ ms.locfileid: "52395800"
     |Shift|Discrete|文字|  
     |WageType|Discrete|文字|  
   
-13. 在 **建立測試設定**頁面上，清除該選項的文字方塊**測試資料的百分比**。 按 [下一步] 。  
+13. 在 **建立測試設定**頁面上，清除該選項的文字方塊**測試資料的百分比**。 按一下 [下一步] 。  
   
 14. 在上**完成精靈**頁面上，如**採礦結構名稱**，型別`Call Center`。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "52395800"
   
  ![服務等級值的分佈](../../2014/tutorials/media/skt-service-grade-valuesc.gif "發佈的服務等級值")  
   
- 因此，當您處理模型時，輸出結果的群組方式可能會和您預期的不同。 比方說，如果您使用叢集來識別值的最佳群組，演算法會將 ServiceGrade 值分成多個這類的範圍：類似 0.0748051948-0.09716216215 的範圍。 雖然這個群組在數學上是正確的，但是這些範圍對商務使用者而言，可能沒有很大的意義。  
+ 因此，當您處理模型時，輸出結果的群組方式可能會和您預期的不同。 比方說，如果您使用叢集來識別值的最佳群組，演算法會將 ServiceGrade 值分成多個這類的範圍：0.0748051948 - 0.09716216215. 雖然這個群組在數學上是正確的，但是這些範圍對商務使用者而言，可能沒有很大的意義。  
   
  在此步驟中，若要讓結果更直覺化，您會將數值分組以不同的方式，建立數值資料行的複本。  
   
@@ -146,20 +145,20 @@ ms.locfileid: "52395800"
   
 |Value|SUPPORT|  
 |-----------|-------------|  
-|\< 類似 0.0748051948|34|  
-|類似 0.0748051948-0.09716216215 的範圍|27|  
-|0.09716216215 的範圍-0.13297297295|39|  
-|0.13297297295-0.167499999975|10|  
-|> = 0.167499999975|10|  
+|\< 0.0748051948|34|  
+|0.0748051948 - 0.09716216215|27|  
+|0.09716216215 - 0.13297297295|39|  
+|0.13297297295 - 0.167499999975|10|  
+|>= 0.167499999975|10|  
   
  透過同等區域進行分類收納  
   
 |Value|SUPPORT|  
 |-----------|-------------|  
 |\< 0.07|26|  
-|0.07-$0.00 元|22|  
-|0.09-0.11|36|  
-|> = 0.12|36|  
+|0.07 - 0.00|22|  
+|0.09 - 0.11|36|  
+|>= 0.12|36|  
   
 > [!NOTE]  
 >  當所有資料都經過處理之後，您就可以從模型的臨界統計資料節點取得這些統計資料。 如需有關臨界統計資料節點的詳細資訊，請參閱[Mining Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
@@ -269,7 +268,7 @@ ms.locfileid: "52395800"
     |**ID**|ServiceGrade Binned|  
     |**模型旗標**||  
     |**名稱**|服務等級|  
-    |**SourceColumn 識別碼**|服務等級 1|  
+    |**SourceColumn ID**|服務等級 1|  
     |**Usage**|Predict|  
   
 5.  按一下任何地方**採礦模型** 索引標籤。  

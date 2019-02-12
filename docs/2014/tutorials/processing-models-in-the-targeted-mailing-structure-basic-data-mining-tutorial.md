@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9d8233bb-117e-4563-9302-8a5a8ad1fae2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cba5f339987c42c79c3d982d64d37879a7c3e2d6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402573"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038979"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>處理目標郵寄結構中的模型 (基本資料採礦教學課程)
   在您可以瀏覽或使用採礦模型之前，必須先部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案並處理採礦結構和採礦模型。  

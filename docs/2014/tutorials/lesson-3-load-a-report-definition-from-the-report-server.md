@@ -1,22 +1,21 @@
 ---
-title: 第 3 課： 從報表伺服器載入報表定義 |Microsoft Docs
+title: 第 3 課：從報表伺服器載入報表定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025639"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>第 3 課：從報表伺服器載入報表定義
   在您建立專案並從 RDL 結構描述產生類別之後，就可以開始從報表伺服器載入報表定義。  
@@ -98,7 +97,7 @@ ms.locfileid: "51813871"
     ```  
   
 ## <a name="next-lesson"></a>下一課  
- 在下一課，您將撰寫程式碼，更新從報表伺服器載入的報表定義。 請參閱[第 4 課： 以程式設計方式更新報表定義](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)。  
+ 在下一課，您將撰寫程式碼，更新從報表伺服器載入的報表定義。 請參閱[第 4 課：以程式設計方式更新報表定義](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

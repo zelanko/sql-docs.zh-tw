@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea05556d69c40a18494d0b5600e05399a0da632b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030389"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
   雖然瀏覽器是最常用來檢視報表的用戶端應用程式，但瀏覽器的列印功能在列印報表時並不理想。 瀏覽器的列印功能是為了列印網頁而設計的。 通常，您從瀏覽器列印的頁面會包括網頁上的所有視覺化元素，以及識別網頁或網站的頁首和頁尾資訊。 從瀏覽器列印時會列印現行視窗的內容。 若為多頁報表．瀏覽器最多只會列印第一頁，如果報表頁面延伸到列印頁面範圍之外，則列印出來的可能更少。  
   
  若要改善您在瀏覽器中檢視之報表的列印品質並列印多個頁面，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的用戶端列印功能。 用戶端列印功能提供標準的 **[列印]** 對話方塊，可以用來選取印表機、指定頁面和邊界，以及在列印之前先預覽報表。 用戶端列印功能就是要用來代替瀏覽器 **[檔案]** 功能表上的 **[列印]** 命令。 使用用戶端列印功能時，報表會像原來設計那樣列印出來，而不會有您在網頁輸出中所看到的多餘元素。  
   
- 若要使用用戶端列印功能，您必須安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項。 如需詳細資訊，請參閱 <<c0> [ 啟用和停用 Client-side Printing for Reporting](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 若要使用用戶端列印功能，您必須安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項。 如需詳細資訊，請參閱 [啟用和停用 Reporting Services 的用戶端列印](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,6 +42,6 @@ ms.locfileid: "48110728"
   
 ## <a name="see-also"></a>另請參閱  
  [列印報表 &#40;報表產生器及 SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [列印報表&#40;報表產生器及 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [列印報表 &#40;報表產生器及 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
   
   

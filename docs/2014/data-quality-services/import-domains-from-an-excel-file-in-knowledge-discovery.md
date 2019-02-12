@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dcd1529858502ca186b99152f754014999239e90
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4f2e680829f51664fc13116953298a281aae7679
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032365"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035389"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 知識探索活動中匯入 Excel 檔案中的一個或多個定義域。 此匯入程序會簡化知識產生程序，以節省時間和精力。 此程序可讓擁有 Excel 檔案或文字檔資料的人建立包含該資料的知識庫 (如需將值匯入現有知識庫定義域的詳細資訊，請參閱[將 Excel 檔案中的值匯入定義域中](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md))。匯出至 Excel 檔案不受支援。  
@@ -52,7 +52,7 @@ ms.locfileid: "51032365"
   
 8.  選取資料行，然後將現有的定義域對應至此資料行，或是建立新的定義域，方法是按一下 **[建立定義域]** 圖示、在 **[建立定義域]** 對話方塊中建立定義域，然後將此定義域對應至此資料行。 此定義域的資料類型必須符合此資料行的資料類型。 針對試算表的所有資料行重複上述步驟。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 10. 在 **[探索]** 頁面上，按一下 **[開始]** ，分析 Excel 試算表中的資料。  
   

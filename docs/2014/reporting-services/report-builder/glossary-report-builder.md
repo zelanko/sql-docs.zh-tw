@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8afbe5f3bd711aac8ac1d7a0dd3d3258a6d4305d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 414f817adbbafd0e85cf5503336965ed86567caf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522385"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013929"
 ---
 # <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   

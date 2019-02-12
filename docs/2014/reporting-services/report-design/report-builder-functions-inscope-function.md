@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e37a25432e6e701ffd97bf95799b1a567748e1df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ecb91bd2a4b570a1e625a013270e59a121e6430a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183781"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025469"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 函數 (報表產生器及 SSRS)
   指出某個項目目前的執行個體是否在指定的範圍內。  
@@ -32,17 +32,17 @@ InScope(scope)
   
 #### <a name="parameters"></a>參數  
  *範圍 (scope)*  
- (`String`) 的資料集、 資料區域中或指定範圍的群組名稱。  
+ (`String`) 指定範圍之資料集、資料區域或群組的名稱。  
   
 ## <a name="return-type"></a>傳回類型  
- 傳回`Boolean`。  
+ 傳回 `Boolean`。  
   
 ## <a name="remarks"></a>備註  
  `InScope`函式會測試成員資格的目前執行個體的報表項目範圍中所指定之範圍*範圍*參數。  
   
  *Scope* 不能是運算式。  
   
- 一般用法`InScope`函式在資料區域具有動態範圍。 比方說，`InScope`可以用在資料區域資料格中的鑽研連結，來提供不同的報表名稱和不同組的參數取決於按下哪一個儲存格。 此範例如下：  
+ `InScope` 函數一般會用於具有動態範圍的資料區域。 例如，資料區域資料格中的鑽研連結可以利用 `InScope`，根據按下的資料格來提供不同的報表名稱和不同組的參數。 此範例如下：  
   
 -   下列運算式是用做鑽研連結中的報表名稱，如果按下的資料格是在 `ProductDetail` 群組中，便會開啟 `Month` 報表，如果不是，便開啟 `ProductSummary` 報表。  
   
@@ -50,7 +50,7 @@ InScope(scope)
     =Iif(InScope("Month"), "ProductDetail", "ProductSummary")  
     ```  
   
--   下列運算式會用於`Omit`屬性的鑽研報表參數，會將參數傳遞給目標報表才按下的儲存格是在`Product`群組。  
+-   下列運算式會用於鑽研報表參數的 `Omit` 屬性，只有按下的資料格在 `Product` 群組中時，才會將參數傳給目標報表。  
   
     ```  
     =Not(InScope("Product"))  
@@ -66,9 +66,9 @@ InScope(scope)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

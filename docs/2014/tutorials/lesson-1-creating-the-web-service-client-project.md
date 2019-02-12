@@ -1,22 +1,21 @@
 ---
-title: 第 1 課： 建立 Web 服務用戶端專案 |Microsoft Docs
+title: 第 1 課：建立 Web 服務用戶端專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0070daa6-56b0-4663-83b2-44c96acafad8
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bf5a2f15aaed3c50c456eb635b34a19973a51f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080798"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025289"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>第 1 課：建立 Web 服務用戶端專案
   在這個逐步解說中，您會建立存取報表伺服器 Web 服務的簡單主控台應用程式。 這個逐步解說假設您是在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中進行開發工作。  
@@ -38,7 +37,7 @@ ms.locfileid: "48080798"
      在 [方案總管] 中，展開專案節點。 預設名稱為 Program.cs 的檔案 (如 Module1.vb [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 已新增至您的專案。  
   
 ## <a name="see-also"></a>另請參閱  
- [第 2 課： 加入 Web 參考](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [第 2 課：加入 Web 參考](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
  [存取報表伺服器 Web 服務使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教學課程&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

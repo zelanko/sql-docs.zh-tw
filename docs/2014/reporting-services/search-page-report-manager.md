@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206128"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037351"
 ---
 # <a name="search-page-report-manager"></a>搜尋頁面 (報表管理員)
   使用 [搜尋結果] 頁面可以檢視為報表、連結報表、報表模型、共用資料來源、資料夾或資源指定之搜尋作業的結果。 搜尋結果會依字母順序列出。 您可以依類型、名稱或描述來排序。  
@@ -25,7 +25,7 @@ ms.locfileid: "48206128"
   
  您無法搜尋報表或模型中的文字。 若要搜尋報表中的特定文字，請使用報表上方的工具列。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-search-results-page"></a>若要開啟搜尋結果頁面  
@@ -65,7 +65,7 @@ ms.locfileid: "48206128"
  將滑鼠停留在某個項目上，然後按一下下拉箭號，即可開啟下拉式功能表，以便從中存取和設定所選取之項目的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

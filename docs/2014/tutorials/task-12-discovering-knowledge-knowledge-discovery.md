@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf933017b77bf8f0c1980c00f8f669d92483a1c6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367180"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039629"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>工作 12:探索知識 (知識探索)
   在這個工作中，您會執行**知識探索**上的活動**Supplier ID**並**Supplier Name**網域。 在此案例中，知識探索程序主要會匯入這兩個定義域的值。  

@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將橫條圖新增至報表 (報表產生器) | Microsoft Docs
+title: 教學課程：將橫條圖加入至報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106798"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041419"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 （報表產生器）
   橫條圖會以水平方向顯示類別目錄資料。 這樣有助於：  
   
 -   讓使用者容易閱讀冗長的類別目錄名稱。  
@@ -55,7 +55,7 @@ ms.locfileid: "48106798"
 10. [儲存報表](#Save)  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、建立資料集以及選擇資料來源的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器的逐步指示，建立資料集，並選擇資料來源，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  完成本教學課程的估計時間：15 分鐘。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48106798"
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您圖表所依據的資料。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 ##  <a name="ChartType"></a> 2.選擇圖表類型  
  您可以選擇各種不同預先定義的圖表類型。  
@@ -122,15 +122,15 @@ ms.locfileid: "48106798"
   
 2.  按一下 [橫條圖]，然後按一下 [下一步]。  
   
-     在 **排列圖表欄位**頁面上，有四個欄位中的**可用的欄位**窗格： FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
+     在 **排列圖表欄位**頁面上，有四個欄位中的**可用的欄位**窗格：FirstName、 LastName、 SalesYear2009 和 SalesYear2008。  
   
 3.  將 [LastName] 拖曳至 [類別目錄] 窗格。  
   
-4.  將 [SalesYear2009] 拖曳至 [值] 窗格。 SalesYear2009 代表每位銷售人員 2009 年的銷售量。 [值] 窗格會顯示 `[Sum(SalesYear2009)]`，因為圖表會顯示每項產品的彙總。  
+4.  將 [SalesYear2009] 拖曳至 [值] 窗格。 SalesYear2009 代表每位銷售人員 2009 年的銷售量。 [值] 窗格會顯示 `[Sum(SalesYear2009)]` ，因為圖表會顯示每項產品的彙總。  
   
 5.  將 [SalesYear2008] 拖曳至 [SalesYear2009] 下的 [值] 窗格。 SalesYear2008 代表每位銷售人員 2008 年的銷售量。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
 7.  在 [**選擇樣式**] 頁面上，在 [樣式] 窗格中，選取樣式。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48106798"
   
 1.  切換到報表設計檢視。  
   
-2.  選取的詞彙**圖表標題**在上方的圖表，然後輸入下列文字： **Sales for 2008 和 2009 年**。  
+2.  選取的詞彙**圖表標題**在上方的圖表，然後輸入下列文字：**Sales for 2008 和 2009 年**。  
   
 3.  按一下文字外的任何位置。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "48106798"
   
  報表會將水平軸上的銷售量顯示為以千為單位的貨幣，且沒有小數位數。  
   
-##  <a name="Filter"></a> 8。加入篩選以顯示前五個值  
+##  <a name="Filter"></a> 8.加入篩選以顯示前五個值  
  您可以將篩選加入至圖表，以指定要在圖表中包含或排除資料集中的哪些資料。  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>加入篩選並顯示前五個值  
@@ -310,7 +310,7 @@ ms.locfileid: "48106798"
   
  此圖表就會顯示 2009 銷售資料中前五名的銷售人員名稱。  
   
-##  <a name="Title"></a> 9。加入報表標題  
+##  <a name="Title"></a> 9.加入報表標題  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
@@ -332,7 +332,7 @@ ms.locfileid: "48106798"
   
 6.  按一下 **[執行]** 預覽報表。  
   
-##  <a name="Save"></a> 10。儲存報表  
+##  <a name="Save"></a> 10.儲存報表  
   
 #### <a name="to-save-the-report"></a>若要儲存報表  
   
@@ -342,7 +342,7 @@ ms.locfileid: "48106798"
   
 3.  在 [名稱] 中，鍵入 **Sales Bar Chart**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
  您的報表就會儲存在報表伺服器上。  
   

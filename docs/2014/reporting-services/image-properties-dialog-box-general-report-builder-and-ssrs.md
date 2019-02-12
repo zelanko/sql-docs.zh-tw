@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108428"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019631"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>影像屬性對話方塊、一般 (報表產生器及 SSRS)
   選取 [影像屬性] 對話方塊上的 [一般] 來加入圖片、變更影像的預設名稱，以及加入工具提示文字。  
@@ -28,7 +28,7 @@ ms.locfileid: "48108428"
  **名稱**  
  輸入項目的名稱。 名稱在報表內必須是唯一的。 根據預設，系統會指派一個一般名稱 (例如，Image1 或 Image2)。  
   
- **工具提示**  
+ **Tooltip**  
  輸入文字或評估為工具提示的運算式。 請按一下 [運算式] (*fx*) 按鈕來編輯運算式。 使用者在 HTML 報表中將指標暫停在項目上時，[工具提示] 會顯示。  
   
  **選取影像來源**  
@@ -58,7 +58,7 @@ ms.locfileid: "48108428"
   
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [映像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [對話方塊、 窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [影像 &#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

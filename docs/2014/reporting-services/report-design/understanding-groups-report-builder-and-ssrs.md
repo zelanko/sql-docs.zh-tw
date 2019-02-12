@@ -13,20 +13,20 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 3203d7e83d234afad54649860938fef65796b799
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082978"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037395"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解群組 (報表產生器及 SSRS)
   在報表產生器中，群組是一組來自繫結至資料區域之報表資料集的具名資料。 基本上，一個群組會組織一個報表資料集的檢視。 資料區域中的所有群組會指定相同報表資料集的不同檢視。  
   
  為協助視覺化群組所代表的意義，請參閱下圖，其中顯示預覽中的 Tablix 資料區域。 在此圖中，資料列群組會依產品類型為資料集分類，而資料行群組則依地理區域和年份為資料集分類。  
   
- ![Tablix 資料區的區域](../media/rs-tablixareas.gif "Tablix 資料區的區域")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  下列章節描述各種層面的群組。  
   
@@ -37,12 +37,12 @@ ms.locfileid: "48082978"
  一個群組擁有一個您指定的名稱以及一組群組運算式。 這組群組運算式可以是單一的資料集欄位參考，也可以是多個運算式的組合。 在執行階段，群組運算式會結合 (如果群組具有多個運算式的話)，並且套用至群組中的資料。 例如，您所擁有的群組會使用日期欄位來組織資料區域中的資料。 在執行階段，資料會先依日期組織，然後顯示並加總每個日期的其他資料集值。  
   
 ## <a name="when-do-i-create-groups"></a>何時建立群組？  
- 在大部分情況下，報表產生器和報表設計師會在您設計資料區域時，自動為您建立一個群組。 若是資料表、矩陣或清單，當您將欄位放到 [群組] 窗格時，就會建立群組。 若是圖表，則當您將欄位放在圖表放置區時，建立群組。 若是量測計，您必須使用量測計屬性對話方塊。 若是資料表、矩陣或清單，您也可以手動建立群組。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 如需如何在建立資料表時新增群組的範例，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 在大部分情況下，報表產生器和報表設計師會在您設計資料區域時，自動為您建立一個群組。 若是資料表、矩陣或清單，當您將欄位放到 [群組] 窗格時，就會建立群組。 若是圖表，則當您將欄位放在圖表放置區時，建立群組。 若是量測計，您必須使用量測計屬性對話方塊。 若是資料表、矩陣或清單，您也可以手動建立群組。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 如需如何建立報表時加入群組的範例，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)或是[建立基本資料表報表&#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
 ## <a name="how-can-i-modify-a-group"></a>如何修改群組？  
- 建立群組之後，您可以設定資料區域專屬的屬性 (例如，篩選和排序運算式、分頁符號與群組變數) 來保存範圍專屬的資料。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 建立群組之後，您可以設定資料區域專屬的屬性 (例如，篩選和排序運算式、分頁符號與群組變數) 來保存範圍專屬的資料。 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
- 若要修改現有的群組，請開啟適當的群組屬性對話方塊。 您可以變更群組的名稱。 同時，您可以根據單一欄位或多個欄位，或者根據在執行階段指定值的報表參數，指定群組運算式。 您也可以根據一組運算式建立群組，例如，指定人口統計資料之年齡範圍的一組運算式。 如需詳細資訊，請參閱[群組運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
+ 若要修改現有的群組，請開啟適當的群組屬性對話方塊。 您可以變更群組的名稱。 同時，您可以根據單一欄位或多個欄位，或者根據在執行階段指定值的報表參數，指定群組運算式。 您也可以根據一組運算式建立群組，例如，指定人口統計資料之年齡範圍的一組運算式。 如需詳細資訊，請參閱 [群組運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  如果您要變更群組的名稱，必須手動更新參照群組舊名稱的所有群組運算式。  
@@ -64,7 +64,7 @@ ms.locfileid: "48082978"
 > [!NOTE]  
 >  雖然群組在不同的資料區域中有不同的名稱，但是建立與使用群組之方式背後的原則是相同的。 當您針對資料區域建立群組時，會指定一種方式，從連結到資料區域的資料集組織詳細資料。 每個資料區域都支援一個用於顯示群組資料的群組結構。  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 資料區域中的群組：詳細資料、資料列與資料行群組  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>在 Tablix 資料區中的群組：詳細資料，資料列和資料行群組  
  如本主題稍早所述，Tablix 資料區域可讓您依資料列或資料行，將資料組織到群組中。 不過，資料列和資料行群組不是 Tablix 資料區域中提供的唯一群組。 此資料區域可能有下列類型的群組：  
   
 -   **詳細資料群組** ：[詳細資料] 群組包含報表產生器或報表設計師套用資料集與資料區域篩選後，來自報表資料集的所有資料。 因此，詳細資料群組是唯一沒有群組運算式的群組。  
@@ -72,7 +72,7 @@ ms.locfileid: "48082978"
      基本上，詳細資料群組會指定您在查詢設計工具中執行資料集查詢時所看到的資料。 例如，您所擁有的查詢會從銷售訂單資料表擷取所有資料行。 因此，此詳細資料群組中的資料在資料表中包含所有資料行之每個資料列的所有值。 此詳細資料群組中的資料也包含您已建立之所有導出資料集欄位的值。  
   
     > [!NOTE]  
-    >  詳細資料群組中的資料也可以包含伺服器彙總，這些是在資料來源上導出，並在查詢中擷取的彙總。 依預設，除非您的報表包含使用彙總函式的運算式，否則報表產生器和報表設計師會將伺服器彙總視為詳細資料。 如需詳細資訊，請參閱 <<c0> [ 彙總](report-builder-functions-aggregate-function.md)。  
+    >  詳細資料群組中的資料也可以包含伺服器彙總，這些是在資料來源上導出，並在查詢中擷取的彙總。 依預設，除非您的報表包含使用彙總函式的運算式，否則報表產生器和報表設計師會將伺服器彙總視為詳細資料。 如需詳細資訊，請參閱＜ [彙總](report-builder-functions-aggregate-function.md)＞。  
   
      根據預設，當您將資料表或清單加入到報表時，報表產生器和報表設計師會為您自動建立 [詳細資料] 群組，並加入資料列來顯示詳細資料。 根據預設，當您將資料集欄位加入到此資料列中的資料格時，您會看到欄位的簡單運算式，例如 [Sales]。 當您檢視資料區域時，詳細資料列會針對結果集中的每個值重複一次。  
   
@@ -92,18 +92,18 @@ ms.locfileid: "48082978"
   
  加入群組之後，資料區域的資料列和資料行控點會變更以反映群組成員資格。 當您刪除群組時，可以選擇僅刪除群組定義，或刪除群組及其所有關聯的資料列和資料行。 如需詳細資訊，請參閱 [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
- 若要將資料限制為在詳細資料或群組資料的計算中顯示或使用，請針對群組設定篩選。 如需詳細資訊，請參閱 <<c0> [ 新增資料集篩選、 資料區域篩選和群組篩選&#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。</c0>  
+ 若要將資料限制為在詳細資料或群組資料的計算中顯示或使用，請針對群組設定篩選。 如需詳細資訊，請參閱 [加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。  
   
- 根據預設，當您建立群組時，群組的排序運算式與群組運算式相同。 若要變更排序次序，請變更排序運算式。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 根據預設，當您建立群組時，群組的排序運算式與群組運算式相同。 若要變更排序次序，請變更排序運算式。 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
 #### <a name="understanding-group-membership-for-tablix-cells"></a>了解 Tablix 資料格的群組成員資格  
  Tablix 資料區域之資料列或資料行中的資料格可以屬於多個資料列和資料行群組。 當您在資料格的文字方塊中定義使用彙總函式 (例如 `=Sum(Fields!FieldName.Value`) 的運算式時，資料格的預設群組範圍是其所屬的最內部子群組。 當資料格同時屬於資料列和資料行群組時，其範圍是兩個最內部的群組。 您也可以撰寫運算式，計算某個群組相對於另一組資料之範圍的彙總小計。 例如，您可以計算某個群組相對於資料行群組，或相對於資料區域之所有資料的百分比 (例如 `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`)。 如需詳細資訊，請參閱 [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) 和[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [加入或刪除資料區域中的群組&#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [將總計新增至群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [向下鑽研動作&#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [向下鑽研動作 &#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

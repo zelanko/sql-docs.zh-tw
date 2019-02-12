@@ -1,5 +1,5 @@
 ---
-title: 如何：將資料處理延伸模組部署到報表伺服器 | Microsoft Docs
+title: 如何：將資料處理延伸模組部署到報表伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160744"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017970"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>如何：將資料處理延伸模組部署到報表伺服器
   報表伺服器使用資料處理延伸模組來擷取和處理轉譯報表中的資料。 您應該將資料處理延伸模組組件部署到報表伺服器做為私人組件， 也需要在報表伺服器組態檔 RSReportServer.config 中建立項目。  
@@ -36,7 +36,7 @@ ms.locfileid: "48160744"
   
 2.  在複製組件檔之後，開啟 RSReportServer.config 檔。 RSReportServer.config 檔案位於 ReportServer 目錄中。 您需要在資料處理延伸模組組件檔案的組態檔中建立項目。 您可以使用 Visual Studio 或簡單的文字編輯器 (如 [記事本]) 開啟設定檔。  
   
-3.  找出`Data`RSReportServer.config 檔案中的項目。 應該針對您新建立的資料處理延伸模組，在下列位置建立項目：  
+3.  在 RSReportServer.config 檔中，找出 `Data` 元素。 應該針對您新建立的資料處理延伸模組，在下列位置建立項目：  
   
     ```  
     <Extensions>  

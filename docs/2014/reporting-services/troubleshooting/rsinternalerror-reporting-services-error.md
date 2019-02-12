@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a48d105a0b90a460459f0aaa7c282534658210e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c7aa0e00646c8fb85f75581286d080dd722f6436
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029439"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 錯誤
     
@@ -47,6 +47,6 @@ ms.locfileid: "48076498"
 ## <a name="internal-only"></a>僅供內部使用  
   
 ## <a name="see-also"></a>另請參閱  
- [啟動與停止報表伺服器服務](../report-server/start-and-stop-the-report-server-service.md)  
+ [啟動與停止 Report Server 服務](../report-server/start-and-stop-the-report-server-service.md)  
   
   

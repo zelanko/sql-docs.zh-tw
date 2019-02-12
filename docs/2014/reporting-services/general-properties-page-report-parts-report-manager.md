@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdbf9f69b3e1df0471b731363387542ce1fb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136241"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040479"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>一般屬性頁面、報表組件 (報表管理員)
   使用 [屬性] 頁面來檢視及管理報表組件的一般屬性。  
   
  您無法從報表管理員檢視或變更報表組件的外觀和功能。 若要變更設計，您必須使用撰寫工具來開啟及修改設計，然後將該設計重新發行至伺服器。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-properties-page-for-a-report-part"></a>開啟報表組件的屬性頁面  
@@ -79,9 +79,9 @@ ms.locfileid: "48136241"
   
 ## <a name="see-also"></a>另請參閱  
  [管理報表組件](report-design/managing-report-parts.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [報表組件 &#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [報表產生器中的報表組件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)  
   

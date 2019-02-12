@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 673dcead751bf5db8da326de5cfe8e3aa18288a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a18d86d6e67eb88e9ce0d63298cab86ade9a8bb2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038069"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>探索 Tablix 資料區的彈性(報表產生器及 SSRS)
   當您從功能區上的 [插入] 索引標籤加入資料表、矩陣或清單資料區域時，您會從 Tablix 資料區域的初始範本開始，但是您不會受到該範本的限制。 您可以加入或移除任何 Tablix 資料區域功能 (例如，群組、資料列和資料行)，藉以繼續開發資料顯示的方式。  
   
- 當您刪除資料列或資料行群組時，可以選擇刪除用於顯示群組值的資料列和資料行。 您也可以手動加入或移除資料列和資料行。 若要了解如何用來顯示詳細資料和群組資料的資料列和資料行，請參閱[Tablix 資料區&#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)。  
+ 當您刪除資料列或資料行群組時，可以選擇刪除用於顯示群組值的資料列和資料行。 您也可以手動加入或移除資料列和資料行。 若要了解如何使用資料列和資料行顯示詳細資料和群組資料，請參閱 [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)。  
   
- 變更 Tablix 資料區域的結構之後，您可以設定屬性來協助控制報表呈現資料區域的方式，例如，您可以在每一頁的頂端重複資料行標頭，或保留包含此群組的群組頁首。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+ 變更 Tablix 資料區域的結構之後，您可以設定屬性來協助控制報表呈現資料區域的方式，例如，您可以在每一頁的頂端重複資料行標頭，或保留包含此群組的群組頁首。 如需詳細資訊，請參閱 [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

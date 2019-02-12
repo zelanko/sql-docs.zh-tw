@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9513e66b92a97f1d546d7b33cc20849e8bff868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89d8b7165bf32d4d4d300f753b9c3821b6f23134
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161438"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041169"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>伺服器屬性 (安全性頁面) - Reporting Services
   您可以使用這個頁面來關閉可能會危害報表伺服器的功能。 雖然關閉這些功能會限制某些功能，但是也可能會透過減少特定威脅，改善報表伺服器的整體安全性。  
@@ -34,9 +34,9 @@ ms.locfileid: "48161438"
  **啟用隨選報表**  
  指定使用者是否可以從報表產生器報表執行隨選查詢，而且當使用者按一下感興趣的資料時，系統就會自動產生新的報表。  
   
- 設定這個選項會決定報表伺服器上的 `EnableLoadReportDefinition` 屬性設定為 `True` 或 `False`。 如果您清除此選項時，將屬性設定為`False`和報表伺服器將不會產生資料探勘期間建立的點選連結報表。 `LoadReportDefinition` 方法的所有呼叫都會被封鎖。  
+ 設定這個選項會決定報表伺服器上的 `EnableLoadReportDefinition` 屬性設定為 `True` 或 `False`。 如果您清除此選項，這個屬性將會設定為 `False` 而且報表伺服器將不會產生在資料瀏覽期間建立的點選連結報表。 `LoadReportDefinition` 方法的所有呼叫都會被封鎖。  
   
- 關閉此選項可減少惡意使用者所使用的報表伺服器啟動阻斷服務攻擊的威脅`LoadReportDefinition`要求。  
+ 關閉此選項可減少惡意使用者利用 `LoadReportDefinition` 要求讓報表伺服器超過負載，藉以啟動阻斷服務攻擊的威脅。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

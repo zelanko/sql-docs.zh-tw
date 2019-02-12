@@ -12,14 +12,14 @@ f1_keywords:
 - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8da7ce8a8f967a702f169ed6519f7d187f42a8e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5782db21318108e9460217c200af79ea427cc4bf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028129"
 ---
 # <a name="row-visibility-dialog-box"></a>資料列可見性對話方塊
   使用 **[資料列可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料列，或使用其他報表項目來切換資料列的可見性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48091871"
  **顯示或隱藏 依據運算式**  
  選取此選項即可使用運算式改變初始可見性。  
   
- 輸入要評估的運算式`Boolean`的值`True`隱藏項目和`False`顯示項目。 請按一下 [運算式]\(**fx**) 按鈕來編輯運算式。  
+ 輸入會評估為 `Boolean` 值的運算式，`True` 會隱藏項目，`False` 會顯示項目。 請按一下 [運算式]\(**fx**) 按鈕來編輯運算式。  
   
  **此報表項目可以切換顯示**  
  選擇這個選項可顯示一個切換影像，好讓使用者在 HTML 報表檢視器中顯示或隱藏這個報表項目。  
@@ -47,7 +47,7 @@ ms.locfileid: "48091871"
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [將展開或摺疊動作新增至項目中 &#40;報表產生器及 SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [映像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [影像 &#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [報表設計師 F1 說明](tools/report-designer-f1-help.md)  
   
   

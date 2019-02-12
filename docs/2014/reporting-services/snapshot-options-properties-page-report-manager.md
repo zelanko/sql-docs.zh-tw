@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078098"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042349"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>快照集選項屬性頁面 (報表管理員)
   使用 [快照集選項] 屬性頁面可以排程要加入至報表記錄的報表快照集，以及設定報表記錄中儲存之報表快照集的數目限制。  
@@ -24,7 +24,7 @@ ms.locfileid: "48078098"
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 額外的資料庫服務](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-snapshot-options-properties-page-for-a-report"></a>若要開啟報表的快照集選項屬性頁面  
@@ -62,9 +62,9 @@ ms.locfileid: "48078098"
  按一下即可儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [將快照集加入報表記錄&#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [建立、 修改及刪除報表記錄中的快照集](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [將快照集加入報表記錄 &#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [建立、修改及刪除報表記錄中的快照集](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6737a32eb7597f8115a7ee6797bcf1aedbd006b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be32765c6d996bcc67580949176c2265a0741eed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220778"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039009"
 ---
 # <a name="image-device-information-settings"></a>影像裝置資訊設定
   下表列出以 IMAGE 格式轉譯的裝置資訊設定。  
@@ -31,13 +31,13 @@ ms.locfileid: "48220778"
 |`DpiX`|輸出影像的水平解析度。 預設值為 **96**。 適用於`BMP`， `GIF`， `PNG`，和`TIFF`輸出格式。|  
 |`DpiY`|輸出影像的垂直解析度。 預設值為 **96**。 適用於`BMP`， `GIF`， `PNG`，和`TIFF`輸出格式。|  
 |**EndPage**|要轉譯之報表的最後一頁。 預設值為 `StartPage` 的值。|  
-|**MarginBottom**|為報表所設定的下邊界值 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `1in`)。 這個值會覆寫報表的原始設定。|  
-|**MarginLeft**|為報表所設定的左邊界值 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `1in`)。 這個值會覆寫報表的原始設定。|  
-|**MarginRight**|為報表所設定的右邊界值 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `1in`)。 這個值會覆寫報表的原始設定。|  
-|**MarginTop**|為報表所設定的上邊界值 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `1in`)。 這個值會覆寫報表的原始設定。|  
-|**OutputFormat**|其中一個[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支援的輸出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
-|**PageHeight**|為報表所設定的頁面高度 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `11in`)。 這個值會覆寫報表的原始設定。|  
-|**PageWidth**|為報表所設定的頁面寬度 (以英吋為單位)。 您必須包含後面接著"in"的十進位值的整數 (比方說， `8.5in`)。 這個值會覆寫報表的原始設定。|  
+|**MarginBottom**|為報表所設定的下邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
+|**MarginLeft**|為報表所設定的左邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
+|**MarginRight**|為報表所設定的右邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
+|**MarginTop**|為報表所設定的上邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`1in`)。 這個值會覆寫報表的原始設定。|  
+|**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 所支援的輸出格式之一：`BMP`、`EMF`、`GIF`、`JPEG`、`PNG` 或 `TIFF`。|  
+|**PageHeight**|為報表所設定的頁面高度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`11in`)。 這個值會覆寫報表的原始設定。|  
+|**PageWidth**|為報表所設定的頁面寬度 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，`8.5in`)。 這個值會覆寫報表的原始設定。|  
 |**PrintDpiX**|輸出影像的水平解析度。 預設值是 `300`。 適用於增強型中繼檔 (`EMF`) 輸出格式。|  
 |**PrintDpiY**|輸出影像的垂直解析度。 預設值是 `300`。 適用於增強型中繼檔 (`EMF`) 輸出格式。|  
 |`StartPage`|要轉譯之報表的第一頁。 `0` 的值表示轉譯所有頁面。 預設值是 `1`。|  

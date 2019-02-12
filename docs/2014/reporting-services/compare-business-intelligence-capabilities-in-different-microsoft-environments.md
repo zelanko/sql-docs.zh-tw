@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8dcd0f49e59a95396e25f9504abc37e58e6ec4b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374870"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018160"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比較不同 Microsoft 環境中的商業智慧功能
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商業智慧可以部署在許多不同的環境，包括搭配 SharePoint Server、SharePoint Online 及 Power BI for Office 365 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 本主題會比較每個環境所支援的元件及功能。  
@@ -40,9 +40,9 @@ ms.locfileid: "53374870"
 |使用量監視|是|否|是|  
 |利用資料列層級安全性的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube|是|否|否|  
   
- **<sup>1</sup>**[了解資料管理中的資料管理人角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)和[影片：  Power BI 資訊管理及資料監管中心](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
+ **<sup>1</sup>**[了解資料管理中的資料管理人角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)和[影片：Power BI 資訊管理及資料監管中心](https://www.youtube.com/watch?v=8dHOj68ts7c)。  
   
- **<sup>2</sup>**[power BI 問與答  最佳化 Power BI 活頁簿 （雲端模型）](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)。  
+ **<sup>2</sup>**[power BI 問與答最佳化 Power BI 活頁簿 （雲端模型）](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)。  
   
  **<sup>3</sup>**  [Power View for Office 365 中的新預測功能簡介](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。  
   

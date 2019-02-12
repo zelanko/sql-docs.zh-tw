@@ -1,27 +1,26 @@
 ---
-title: 第 3 課： 存取 Web 服務 |Microsoft Docs
+title: 第 3 課：存取 Web 服務 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108298"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024829"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 課：存取 Web 服務
-  將報表伺服器 Web 服務的參考加入專案後，下一步就是建立 Web 服務之 Proxy 類別的執行個體。 然後您可以藉由呼叫 Proxy 類別中的方法來存取 Web 服務的方法。 當您的應用程式呼叫這些方法時，proxy 類別所產生的程式碼[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]處理您的應用程式與 Web 服務之間的通訊。  
+  將報表伺服器 Web 服務的參考加入專案後，下一步就是建立 Web 服務之 Proxy 類別的執行個體。 然後您可以藉由呼叫 Proxy 類別中的方法來存取 Web 服務的方法。 當您的應用程式呼叫這些方法時， [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 產生的 Proxy 類別程式碼會處理應用程式與 Web 服務之間的通訊。  
   
- 首先，您會建立 Web 服務的 proxy 類別的執行個體<xref:ReportService2010.ReportingService2010>。 下一步，您要使用 Proxy 類別來呼叫 Web 服務的 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法。 您要使用此呼叫來擷取範例報表「公司銷售」的名稱和描述。  
+ 首先，您要建立 Web 服務之 Proxy 類別的執行個體 <xref:ReportService2010.ReportingService2010>。 下一步，您要使用 Proxy 類別來呼叫 Web 服務的 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法。 您要使用此呼叫來擷取範例報表「公司銷售」的名稱和描述。  
   
 > [!NOTE]  
 >  當您存取在 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上執行的 Web 服務時，必須將 "$SQLExpress" 附加至 "ReportServer" 路徑。 例如：  
@@ -114,17 +113,17 @@ ms.locfileid: "48108298"
   
 4.  儲存方案。  
   
- 逐步解說範例程式碼使用<xref:ReportService2010.ReportingService2010.GetProperties%2A>方法的 Web 服務來擷取範例報表 Company Sales 2012 的屬性。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>方法會採用兩個引數： 您要擷取屬性資訊和陣列的報表名稱**Property []** 包含您想要擷取其值的屬性名稱的物件。 方法也會傳回的陣列**Property []** 包含名稱和屬性引數中指定的屬性值的物件。  
+ 逐步解說範例程式碼會使用 Web 服務的 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法來擷取範例報表 Company Sales 2012 的屬性。 <xref:ReportService2010.ReportingService2010.GetProperties%2A>方法會採用兩個引數： 您要擷取屬性資訊和陣列的報表名稱**Property []** 包含您想要擷取其值的屬性名稱的物件。 方法也會傳回的陣列**Property []** 包含名稱和屬性引數中指定的屬性值的物件。  
   
 > [!NOTE]  
 >  如果您提供空**Property []** 陣列屬性引數，會傳回所有可用的屬性。  
   
  在先前範例中，程式碼使用 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法來傳回範例報表 Company Sales 2012 的名稱和描述。 然後程式碼會使用 `foreach` 迴圈，將屬性和值寫入主控台。  
   
- 如需有關建立和使用報表伺服器 Web 服務 proxy 類別的詳細資訊，請參閱 <<c0> [ 建立 Web 服務 Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)。  
+ 如需有關建立和使用報表伺服器 Web 服務之 Proxy 類別的詳細資訊，請參閱＜ [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [第 4 課： 執行應用程式&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [第 4 課：執行應用程式&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
  [存取報表伺服器 Web 服務使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教學課程&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

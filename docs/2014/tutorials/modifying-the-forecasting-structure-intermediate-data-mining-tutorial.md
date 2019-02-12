@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030589"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>修改預測結構 (中繼資料採礦教學課程)
   上一項工作所建立的採礦結構包含單一預測模型。 在處理和瀏覽這個模型之前，您必須先稍微變更它的結構，並修改其中一個屬性。  
   
 ## <a name="modifying-the-mining-structure"></a>修改採礦結構  
- 您可以使用來變更採礦結構**採礦結構**資料採礦設計師 索引標籤。 當您使用資料採礦精靈建立此模型時，會使用三個資料行：ReportingDate、ModelRegion 和 Quantity。 不過，**預測**資料表也包含 Amount 資料行，您可用於預測銷售金額。 藉由使用**採礦結構**索引標籤上，將此資料行從資料來源檢視加入至採礦結構。  
+ 您可以使用來變更採礦結構**採礦結構**資料採礦設計師 索引標籤。 當您使用資料採礦精靈建立此模型時，您會使用三個資料行：ReportingDate、 ModelRegion 和 Quantity。 不過，**預測**資料表也包含 Amount 資料行，您可用於預測銷售金額。 藉由使用**採礦結構**索引標籤上，將此資料行從資料來源檢視加入至採礦結構。  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>若要將 [金額] 資料行加入預測採礦結構中  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139528"
  [自訂及處理預測模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [採礦模型&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

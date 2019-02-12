@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082240"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039259"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>指定報表資料來源的認證及連接資訊
   報表伺服器使用認證以連接到外部資料來源，其中提供內容給報表或提供收件者資訊給資料驅動訂閱。 您可以指定認證來使用 Windows 驗證、資料庫驗證、無驗證或自訂驗證。 透過網路傳送連接要求時，報表伺服器會模擬使用者帳戶或自動執行帳戶。 如需安全性內容 (連接要求會在其底下進行) 的詳細資訊，請參閱本主題之後的 [資料來源組態和網路連接](#DataSourceConfigurationConnections) 。  
@@ -111,7 +111,7 @@ ms.locfileid: "48082240"
     2.  如果帳戶列於其中，請選取帳戶，然後按一下 [移除]。  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>以預存認證使用模擬  
- 您也可以使用認證來模擬其他使用者的身分。 針對 SQL Server 資料庫，使用模擬選項會設定[SETUSER](/sql/t-sql/statements/setuser-transact-sql)函式。  
+ 您也可以使用認證來模擬其他使用者的身分。 針對 SQL Server 資料庫，使用模擬選項會設定 [SETUSER](/sql/t-sql/statements/setuser-transact-sql) 函數。  
   
 > [!IMPORTANT]  
 >  針對支援訂閱的報表，或者使用排程來產生報表記錄或重新整理報表執行快照集的報表，都不要使用模擬。  
@@ -134,18 +134,18 @@ ms.locfileid: "48082240"
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |整合式安全性|模擬目前的使用者|針對所有資料來源類型，利用目前的使用者帳戶來連接。|  
 |Windows 認證|模擬指定的使用者|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模擬使用者帳戶進行連接。|  
-|資料庫認證|模擬自動執行帳戶或服務帳戶。<br /><br /> (利用服務識別傳送連接要求時，Reporting Services 會移除管理員權限)。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 將使用者名稱和密碼附加至連接字串。<br /><br /> 針對[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 使用 TCP/IP 通訊協定時，連接會成功，否則會失敗。<br /><br /> 如果是 XML：<br /><br /> 使用資料庫認證時，會使報表伺服器上的連接失敗。|  
-|None|模擬自動執行帳戶。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用連接字串中定義的認證。 如果未定義自動執行帳戶，報表伺服器上的連接會失敗。<br /><br /> 針對[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 指定無認證或定義自動執行帳戶時，永遠會使連接失敗。<br /><br /> 如果是 XML：<br /><br /> 如果已定義自動執行帳戶，則以匿名使用者連接；否則會使連接失敗。|  
+|資料庫認證|模擬自動執行帳戶或服務帳戶。<br /><br /> (利用服務識別傳送連接要求時，Reporting Services 會移除管理員權限)。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 將使用者名稱和密碼附加至連接字串。<br /><br /> 若為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：<br /><br /> 使用 TCP/IP 通訊協定時，連接會成功，否則會失敗。<br /><br /> 如果是 XML：<br /><br /> 使用資料庫認證時，會使報表伺服器上的連接失敗。|  
+|None|模擬自動執行帳戶。|若為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用連接字串中定義的認證。 如果未定義自動執行帳戶，報表伺服器上的連接會失敗。<br /><br /> 若為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]：<br /><br /> 指定無認證或定義自動執行帳戶時，永遠會使連接失敗。<br /><br /> 如果是 XML：<br /><br /> 如果已定義自動執行帳戶，則以匿名使用者連接；否則會使連接失敗。|  
   
 ## <a name="setting-credentials-programmatically"></a>以設計程式的方式設定認證  
- 您可以在您的程式碼中設定認證，來控制報表和報表伺服器的存取。 如需詳細資訊，請參閱 <<c0> [ 資料來源和連線方法](../report-server-web-service/methods/data-sources-and-connection-methods.md)。  
+ 您可以在您的程式碼中設定認證，來控制報表和報表伺服器的存取。 如需詳細資訊，請參閱 [資料來源和連接方法](../report-server-web-service/methods/data-sources-and-connection-methods.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 所支援的資料來源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [管理報表資料來源](../../integration-services/connection-manager/data-sources.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
- [建立、 刪除或修改共用的資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [設定報表的資料來源屬性&#40;報表管理員&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [設定報表的資料來源屬性 &#40;報表管理員&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

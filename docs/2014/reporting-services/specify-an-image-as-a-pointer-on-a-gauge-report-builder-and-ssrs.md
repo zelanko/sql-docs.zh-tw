@@ -9,17 +9,17 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2e2fbf2593ae5f85e12555d469ebe77b11539a20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 25524aa5c7f7223f07e019ae7b8c7d6f1e3d9f7f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178878"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027939"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>將影像指定為量測計的指標 (報表產生器及 SSRS)
-  量測計包含三個內建樣式，可用來自訂指標的外觀。 星形量測計的內建樣式如下：指針、標記和列。 線性量測計的內建樣式如下：標記、列和溫度計。 如果需要唯一的指標，使用者可以建立並指定可當做完整功能之指標使用的影像。  
+  量測計包含三個內建樣式，可用來自訂指標的外觀。 星形量測計的內建的樣式如下：指針、 標記和列。 線性量測計的內建樣式如下：標記、列和溫度計。 如果需要唯一的指標，使用者可以建立並指定可當做完整功能之指標使用的影像。  
   
  當您指定指標的影像時，影像必須具有下列規格：  
   

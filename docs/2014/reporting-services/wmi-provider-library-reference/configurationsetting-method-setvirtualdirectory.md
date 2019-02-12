@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 74c2c01ee355710afb11221c2e39e110d41e086f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f20db632f41024cc3246eeaff93a41ff2cb713ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078648"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016069"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>SetVirtualDirectory 方法 (WMI MSReportServer_ConfigurationSetting)
   針對給定的應用程式設定虛擬目錄的名稱。  

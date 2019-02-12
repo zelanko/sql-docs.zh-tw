@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5dba0a87f34c794e22fa52274591bbec0db63f86
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0a19f5fd51cf4e1b24e898ef3016c46edc152920
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358540"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022872"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 課：定義父報表的資料連接和資料表
   使用 Visual C# 的 ASP.NET 網站範本建立新的網站專案後，下一步是要建立父報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2008 資料庫。 您也可以選擇連接到 AdventureWorks2012 資料庫。  
@@ -49,7 +49,7 @@ ms.locfileid: "53358540"
   
 7.  如果您已在步驟 6 (b) 中選取 [使用 SQL Server 驗證]，請選取在字串中包含敏感性資料或在應用程式程式碼中設定資訊的選項。  
   
-8.  在 **儲存連接字串儲存到應用程式組態檔**頁面上，輸入連接字串的名稱或接受預設值**AdventureWorks2008ConnectionString**。 按 [下一步] 。  
+8.  在 **儲存連接字串儲存到應用程式組態檔**頁面上，輸入連接字串的名稱或接受預設值**AdventureWorks2008ConnectionString**。 按一下 [下一步] 。  
   
 9. 在 [**選擇命令類型**頁面上，選取**使用 SQL 陳述式**，然後按一下**下一步]**。  
   

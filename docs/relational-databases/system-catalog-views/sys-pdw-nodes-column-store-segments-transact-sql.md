@@ -1,9 +1,9 @@
 ---
-title: sys.pdw_nodes_column_store_segments (TRANSACT-SQL) |Microsoft Docs
+title: sys.pdw_nodes_column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2018
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: hirokib
 ms.author: elbutter
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c98898560d4b2f523974065831f0d316a390f7b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7bb600d4eda0f91be025baee7c6ecd35f99c9da
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682526"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028809"
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 包含資料行存放區索引中每個資料行的資料列。  
@@ -36,7 +36,7 @@ ms.locfileid: "47682526"
 | **row_count**               | **int**    | 資料列群組中的列數。                             |
 | **has_nulls**               | **int**    | 如果資料行區段具有 Null 值，則為 1。                     |
 | **base_id**                 | **bigint** | 如果正在使用編碼類型 1 的基底值識別碼。  如果未使用編碼類型 1，base_id 設為 1。 |
-| **大小**               | **float**  | 如果正在使用編碼類型 1 的範圍。  如果未使用編碼類型 1，範圍是設定為 1。 |
+| **magnitude**               | **float**  | 如果正在使用編碼類型 1 的範圍。  如果未使用編碼類型 1，範圍是設定為 1。 |
 | **primary__dictionary_id**  | **int**    | 主要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 值表示沒有本機的字典，此區段。 |
 | **secondary_dictionary_id** | **int**    | 次要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 值表示沒有本機的字典，此區段。 |
 | **min_data_id**             | **bigint** | 在 資料行區段的最小資料識別碼。                       |
@@ -83,9 +83,9 @@ ORDER BY    table_nm
 
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [建立資料行存放區索引&#40;Transact SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
+ [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 
   
 

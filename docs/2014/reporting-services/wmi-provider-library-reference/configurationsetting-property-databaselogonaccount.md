@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6f66f21b5c866688bd5c348f26788f4a869aca88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c9192e0845a5a6df9c7b848a3f91368dd15cfc60
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151948"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025059"
 ---
 # <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定連接至報表伺服器資料庫時報表伺服器所使用的登入帳戶。 唯讀。  
@@ -46,7 +46,7 @@ public string DatabaseLogonAccount;
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>備註  
- 此屬性的有效值取決於 windows 7 [DatabaseLogonType](configurationsetting-property-databaselogontype.md)屬性。  
+ 這個屬性的有效值會因 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 屬性的值而不同。  
   
  如果此屬性則會忽略[DatabaseLogonType](configurationsetting-property-databaselogontype.md)屬性設定為`2 (Service)`。  
   

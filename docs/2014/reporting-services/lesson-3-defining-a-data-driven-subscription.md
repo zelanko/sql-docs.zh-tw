@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015535"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>第 3 課：定義資料驅動訂閱
   在這個課程中，您將利用資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
   
 > [!NOTE]  
 >  開始之前，請確認 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 服務正在執行。 若未執行，您就無法儲存訂閱。  
   
- 這一課會假設您已完成第 1 課和第 2 課，而且報表資料來源使用預存認證。  如需詳細資訊，請參閱 [第 2 課：修改報表資料來源屬性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+ 這一課會假設您已完成第 1 課和第 2 課，而且報表資料來源使用預存認證。  如需詳細資訊，請參閱[第 2 課：修改報表資料來源屬性](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
  本主題內容：  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48058728"
   
 1.  針對 **[檔案名稱]**，選取 **[從資料庫取值]**。 選取 **[Order]** 欄位。  
   
-2.  針對 **[路徑]**，選取 **[指定靜態值]**。 在 設定值，輸入您擁有寫入權限之公用檔案共用的名稱 (例如`\\mycomputer\public\myreports`)。  
+2.  針對 **[路徑]**，選取 **[指定靜態值]**。 在 [設定值] 中，輸入您擁有寫入權限之公用檔案共用的名稱 (例如 `\\mycomputer\public\myreports`)。  
   
 3.  針對 **[轉譯格式]**，選取 **[從資料庫取值]**。 選取 **[格式]**。  
   
@@ -140,9 +140,9 @@ ms.locfileid: "48058728"
   
 ## <a name="see-also"></a>另請參閱  
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [訂閱與傳遞&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [資料驅動訂閱](subscriptions/data-driven-subscriptions.md)   
+ [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [建立、 修改及刪除資料驅動訂閱](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [使用外部資料來源以取得訂閱者資料&#40;資料驅動訂閱&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [使用外部資料來源以取得訂閱者資料 &#40;資料驅動訂閱&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

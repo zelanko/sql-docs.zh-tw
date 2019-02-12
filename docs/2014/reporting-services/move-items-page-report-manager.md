@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6c4d822448b452cd66cbc59beffb8fe2d6f0fb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082748"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009682"
 ---
 # <a name="move-items-page-report-manager"></a>移動項目頁面 (報表管理員)
   您可以使用 [移動項目] 頁面，將報表、資料夾或其他項目移至報表伺服器上的新位置。 您可以輸入新位置的路徑，或使用樹狀檢視以導覽到報表伺服器命名空間中的新位置。 您只能移動您有權移動並儲存在目前報表伺服器上的項目。  
@@ -28,7 +28,7 @@ ms.locfileid: "48082748"
 > [!NOTE]  
 >  並非所有項目都可以移動。 您不可以移動保留的資料夾，例如 [主資料夾]、[我的報表] 或 [使用者資料夾]。 您不可以將報表記錄或快照集移至其他位置。 記錄與快照集一律會置於所依據報表的位置，且一律需要透過該報表存取。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-move-items-page-from-the-contents-page-in-details-view"></a>若要從詳細資料檢視的內容頁面開啟移動項目頁面  
@@ -66,7 +66,7 @@ ms.locfileid: "48082748"
 4.  在項目工具列中，按一下 **[移動]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [一般屬性頁面，資料夾&#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [一般屬性頁面，報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [一般屬性頁面、 資源&#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   

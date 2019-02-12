@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053588"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020582"
 ---
 # <a name="new-folder-page-report-manager"></a>新增資料夾頁面 (報表管理員)
   使用 [新增資料夾] 頁面，即可在報表伺服器資料夾階層中建立新的資料夾。 您建立的資料夾是儲存在報表伺服器資料庫中的虛擬資料夾。 這個資料夾並不是在電腦的檔案系統中建立的。  
@@ -25,7 +25,7 @@ ms.locfileid: "48053588"
   
  在建立資料夾之後，可以透過資料夾的 [一般] 屬性頁來修改其名稱和描述。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-new-folder-page"></a>若要開啟新增資料夾頁面  
@@ -44,8 +44,8 @@ ms.locfileid: "48053588"
 ## <a name="see-also"></a>另請參閱  
  [建立、 刪除或修改資料夾&#40;報表管理員&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [一般屬性頁面，資料夾&#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [一般屬性頁面，資料夾&#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   

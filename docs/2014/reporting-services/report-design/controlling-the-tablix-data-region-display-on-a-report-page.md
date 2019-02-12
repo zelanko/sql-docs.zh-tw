@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043049"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>控制報表頁面上的 Tablix 資料區顯示 (報表產生器及 SSRS)
   本主題描述 Tablix 資料區的屬性，您可以修改這些屬性來變更您在報表中檢視時 Tablix 資料區顯示的方式。  
@@ -56,7 +56,7 @@ ms.locfileid: "48117848"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>控制 Tablix 資料列和資料行群組轉譯的方式  
  控制 Tablix 資料區群組轉譯的方式主要取決於群組結構。 Tablix 資料區可以有四個區域，如下圖所示：  
   
- ![Tablix 資料區的區域](../media/rs-tablixareas.gif "Tablix 資料區的區域")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  資料列群組區域和資料行群組區域包含群組頁首。 當 Tablix 資料區具有群組頁首時，您就可以透過在 **[Tablix 屬性]** 對話方塊的 **[一般]** 頁面上設定屬性，來控制資料列和資料行重複的方式。  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117848"
 ## <a name="see-also"></a>另請參閱  
  [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [控制分頁符號、 標題、 資料行和資料列&#40;報表產生器及 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154218"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026173"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>新增資料集篩選、資料區篩選和群組篩選 (報表產生器及 SSRS)
   在報表中，篩選屬於資料集、資料區域或資料區域群組的一部分，您可以篩選來限制報表中所要使用的資料。 如果您無法變更資料集查詢，那麼篩選便是協助您控制報表資料的好辦法，例如，如果您正在使用共用的資料集。  
@@ -70,9 +70,9 @@ ms.locfileid: "48154218"
 |**報表定義結構描述資料類型**|**CLR 類型**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
-|`DateTime`|`DateTime`, `DateTimeOffset`|  
+|`DateTime`|`DateTime`、 `DateTimeOffset`|  
 |`Integer`|`Int16`, `Int32`, `UInt16`, `Byte`, `SByte`|  
-|`Float`|`Single`、 `Double`、 `Decimal`|  
+|`Float`|`Single`, `Double`, `Decimal`|  
 |`Text`|`String`, `Char`, `GUID`, `Timespan`|  
   
  如果您必須指定資料類型，就可以在運算式的 Value 部分中指定自己的轉換。  
@@ -84,7 +84,7 @@ ms.locfileid: "48154218"
 |--------------|------------|  
 |**Equal、Like、NotEqual、GreaterThan、GreaterThanOrEqual、LessThan、LessThanOrEqual**|比較運算式與單一值。|  
 |**TopN、BottomN**|比較運算式與單一 `Integer` 值。|  
-|**TopPercent、BottomPercent**|比較運算式與單一`Integer`或`Float`值。|  
+|**TopPercent、BottomPercent**|比較運算式與單一 `Integer` 或 `Float` 值。|  
 |**介於**|測試運算式是否位於 (包含) 兩個值之間。|  
 |**In**|測試運算式是否包含在一組值之中。|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48154218"
  這個值也可以包含參數參考，以便允許使用者以互動方式選取要篩選的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

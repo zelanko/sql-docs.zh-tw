@@ -2,10 +2,8 @@
 title: sys.dm_continuous_copy_status (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -22,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9cbd0997a7d675c0c7630b730d6ba7514070ab8f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665937"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023879"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.locfileid: "51665937"
 |**partner_database**|**sysname**|連結的 SQL Database 伺服器上所連結資料庫的名稱。|  
 |**last_replication**|**datetimeoffset**|最後套用之複寫交易的時間戳記。|  
 |**replication_lag_sec**|**int**|目前時間與作用中的次要資料庫尚未認可之主要資料庫上最後一個成功認可交易的時間戳記之間的時差。|  
-|**replication_state**|**tinyint**|此資料庫的連續複製複寫狀態。 以下是可能的值和它們的描述。<br /><br /> 1： 植入。 將要植入複寫目標，且該目標處於交易不一致的狀態。 在植入完成之前，您無法連接到作用中的次要資料庫。 <br />2： 趕上進度。 作用中的次要資料庫目前正在趕上主要資料庫，並且處於交易一致的狀態。<br />3： 重新植入。 因為發生無法復原的複寫失敗，所以作用中的次要資料庫正要自動重新植入。<br />4： 暫止。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
+|**replication_state**|**tinyint**|此資料庫的連續複製複寫狀態。 以下是可能的值和它們的描述。<br /><br /> 1：植入。 將要植入複寫目標，且該目標處於交易不一致的狀態。 在植入完成之前，您無法連接到作用中的次要資料庫。 <br />2：趕上進度。 作用中的次要資料庫目前正在趕上主要資料庫，並且處於交易一致的狀態。<br />3：重新植入。 因為發生無法復原的複寫失敗，所以作用中的次要資料庫正要自動重新植入。<br />4：已暫停。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
 |**replication_state_desc**|**nvarchar(256)**|replication_state 的描述有下列幾種：<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|這個值一定會設定為 0。|  
 |**is_target_role**|**bit**|0 = 複製關聯性的來源<br /><br /> 1 = 複製關聯性的目標|  

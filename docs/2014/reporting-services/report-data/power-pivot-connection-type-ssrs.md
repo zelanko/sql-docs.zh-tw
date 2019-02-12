@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bce7d17a2edb004f662d5229ea929d89c6d66d4f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9b06b7e74a444e1d2dd29e7f86da852f0a5c0de2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350484"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030449"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint PowerPivot 圖庫中發行的 PowerPivot 活頁簿中擷取資料。  

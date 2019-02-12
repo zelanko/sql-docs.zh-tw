@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d855e911a20749b405179ebd31dfb10ac6ddc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c6150d3060861d2e485ea8e3cd5ad2a0eecc6e38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031399"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>設定 URL 中報表參數的語言
   *rs:ParameterLanguage* URL 存取參數會緩和問題，其中區分文化特性的報表參數 (例如、日期、時間、貨幣和數字) 會使用瀏覽器語言進行解譯。 透過 *rs:ParameterLanguage*，現在可以獨立於瀏覽器之外解譯 URL。 例如，如果將報表伺服器設定為德文的區域設定，但是使用者是透過使用設定為英文 (美國) 的瀏覽器之 URL 來存取報表，則傳遞到報表伺服器的參數值將會被誤解。  
@@ -43,7 +43,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  除了 URL 存取參數 **rc:Parameters** 的 **true** 和 *false*值之外，您現在可以傳遞 **Collapsed**的值。 在 URL 上使用 *rc:Parameters*=**Collapsed** 時，會摺疊 HTML 檢視器的參數提示區域使其看不到，但是使用者仍然可以切換它。 值為 **false** 時，會從 HTML 檢視器工具列移除參數提示區域，並使其無法供使用者使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [URL 存取&#40;SSRS&#41;](url-access-ssrs.md)   
+ [URL 存取 &#40;SSRS&#41;](url-access-ssrs.md)   
  [URL 存取參數參考](url-access-parameter-reference.md)  
   
   

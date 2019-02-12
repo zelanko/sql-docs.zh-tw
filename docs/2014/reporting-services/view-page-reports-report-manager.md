@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102798"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031629"
 ---
 # <a name="view-page-reports-report-manager"></a>檢視頁面，報表 (報表管理員)
   使用報表的 [檢視] 頁面來檢視報表。 當您在「報表管理員」中第一次開啟報表時，它的格式為 HTML。 HTML 報表包含報表工具列，會顯示在報表的最上方，讓您能用來導覽報表頁面、在報表內進行搜尋，或是將報表匯出成不同的格式。 下列圖表顯示報表工具列。  
@@ -39,7 +39,7 @@ ms.locfileid: "48102798"
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的所有版本都不能使用報表執行快照集和某些匯出格式。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

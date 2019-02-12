@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d3abebe357646aab1a09e3bc6a59130461d268bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027039"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>建立資料驅動訂閱頁面 (報表管理員)
   您可以使用 [建立資料驅動訂閱] 頁面來建立或修改每次訂閱執行時在訂閱者資料庫中查詢訂閱資訊的訂閱。 資料驅動訂閱會使用查詢結果來判斷訂閱者收件者、傳遞設定和報表參數值。 在執行時期，報表伺服器執行查詢來取得訂閱設定所用的值。 您可以使用 [建立資料驅動訂閱] 頁面來定義查詢並將查詢值指派至訂閱設定。 您為資料驅動訂閱指定的值和選項可分為數個頁面，類似於精靈。 全部總共有七個頁面。  
@@ -28,7 +28,7 @@ ms.locfileid: "48116851"
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-data-driven-subscription-page"></a>若要開啟資料驅動訂閱頁面  
@@ -53,7 +53,7 @@ ms.locfileid: "48116851"
   
 -   選取 **[報表伺服器檔案共用]** ，即可將報表傳遞到檔案共用。 此報表會當做靜態檔案 (與報表伺服器中斷連接) 傳遞。 如需詳細資訊，請參閱＜ [File Share Delivery in Reporting Services](subscriptions/file-share-delivery-in-reporting-services.md)＞。  
   
--   選取 **[報表伺服器電子郵件]** ，即可將報表傳遞到電子郵件收件匣。 如需詳細資訊，請參閱 [Reporting Services 中的電子郵件傳遞](subscriptions/e-mail-delivery-in-reporting-services.md)。  
+-   選取 **[報表伺服器電子郵件]** ，即可將報表傳遞到電子郵件收件匣。 如需詳細資訊，請參閱＜ [E-Mail Delivery in Reporting Services](subscriptions/e-mail-delivery-in-reporting-services.md)＞。  
   
 -   選取 **[Null 傳遞提供者]** ，即可將報表傳遞到報表伺服器資料庫。 此選項會建立報表快照集。 當您想要依特定排程預先在報表伺服器上載入使用者特定報表快照集或參數化報表快照集時，請選擇此選項。 如需詳細資訊，請參閱 [快取報表 &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)的版本中預先載入快取的唯一方法。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "48116851"
  定義以每小時間隔執行的排程。  
   
  **每日**  
- 定義在所指定日期之特定時間執行的排程。 您可以透過下列方式指定日子： 每隔*\<天 >*、 每個工作天和每*\<數目 >* 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
+ 定義在所指定日期之特定時間執行的排程。 您可以透過下列方式指定日子：每個*\<日期 >*、 每個工作天和每*\<數目 >* 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
   
  **每週**  
  定義在每週間隔的指定時間執行的排程。 此間隔可以是整週 (例如每兩週) 或是其中的日期。  
@@ -170,11 +170,11 @@ ms.locfileid: "48116851"
  當訂閱已經有足夠的資訊時，就會啟用 **[完成]** 按鈕。 按一下 **[完成]** 以完成訂閱。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [資料驅動訂閱](subscriptions/data-driven-subscriptions.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [訂閱與傳遞&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

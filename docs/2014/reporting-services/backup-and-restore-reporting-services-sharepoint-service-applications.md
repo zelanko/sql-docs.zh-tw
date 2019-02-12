@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 63511e175a98e366bfeb4d02ba3085d8e9943813
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368400"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033829"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
   本主題描述如何使用 SharePoint 管理中心或 PowerShell 備份和還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。 本主題包含：  
@@ -61,7 +61,7 @@ ms.locfileid: "53368400"
   
 2.  在 **[共用服務]** 節點底下，展開 **[共用服務應用程式]** ，然後選取您的服務應用程式。 其類型會是 **[SQL Server Reporting Services 服務應用程式]**。  
   
-3.  按 [下一步] 。  
+3.  按一下 [下一步] 。  
   
 4.  輸入 **[備份位置:]** 的路徑，然後按一下 **[開始備份]**。  
   

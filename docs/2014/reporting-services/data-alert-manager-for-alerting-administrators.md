@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 67884329476d76619399cfedabb6f84d97881bcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a788984a75a950ae822180c070200ce7cc88694d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136268"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018889"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警示系統管理員的資料警示管理員
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供 [資料警示管理員] 讓 SharePoint 警示系統管理員管理資料警示。 警示系統管理員可以檢視儲存到網站之所有警示的相關資訊，以及刪除警示。 下圖說明 [資料警示管理員] 中可供 SharePoint 警示管理員使用的功能。  
@@ -48,7 +48,7 @@ ms.locfileid: "48136268"
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|上次警示執行成功，並且已傳送警示。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|上次警示執行成功，但因為資料未變更所以未傳送警示。|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<錯誤訊息> 記錄檔包含有關錯誤的詳細資訊。 請參閱識別碼為 \<GUID> 的記錄項目。|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<錯誤訊息> 記錄檔包含有關錯誤的詳細資訊。 識別項的記錄項目，請參閱：\<GUID &GT;。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|已建立警示。|  
   
  如需詳細資訊，請參閱 [在資料警示管理員中管理 SharePoint 網站上的所有資料警示](manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)。  

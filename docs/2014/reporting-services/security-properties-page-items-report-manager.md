@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189608"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024469"
 ---
 # <a name="security-properties-page-items-report-manager"></a>安全性屬性頁面，項目 (報表管理員)
   使用安全性屬性頁面來檢視或修改安全性設定，以決定資料夾、報表、模型、資源和共用資料來源的存取權。 此頁面適用於您有權保護的項目。  
@@ -25,7 +25,7 @@ ms.locfileid: "48189608"
   
  安全性設定是由根資料夾繼承至子資料夾和那些資料夾內的項目。 除非您明確地中斷繼承的安全性，否則子資料夾和項目會繼承父項目的安全性內容。 如果您為階層中間的資料夾重新定義安全性原則，所有其子項目 (包括子資料夾) 都會採用新的安全性設定。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-security-page-for-an-item"></a>若要開啟項目的安全性頁面  
@@ -51,7 +51,7 @@ ms.locfileid: "48189608"
  選取您要刪除的群組或使用者名稱旁的核取方塊，然後按一下 **[刪除]**。 如果它是留下的唯一角色指派，或是定義報表伺服器之安全性基準的內建角色指派 (例如，「Built-in\Administrators」)，則無法將其刪除。 刪除角色指派不會刪除群組或使用者帳戶或角色定義。  
   
  **新增角色指派**  
- 按一下即可開啟 [新增角色指派] 頁面，可用來建立目前項目的其他角色指派。 如需詳細資訊，請參閱 <<c0> [ 新的角色指派： 編輯角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。</c0>  
+ 按一下即可開啟 [新增角色指派] 頁面，可用來建立目前項目的其他角色指派。 如需詳細資訊，請參閱[新增角色指派：編輯角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
   
  **還原為父安全性**  
  按一下即可將安全性設定重設為直屬父資料夾的安全性設定。 如果報表伺服器資料夾階層中都未打破繼承，則使用最上層資料夾 [首頁] 的安全性設定。  
@@ -64,7 +64,7 @@ ms.locfileid: "48189608"
   
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [預先定義的角色](security/role-definitions-predefined-roles.md)   
+ [Predefined Roles](security/role-definitions-predefined-roles.md)   
  [在原生模式報表伺服器上授與權限](security/granting-permissions-on-a-native-mode-report-server.md)   
  [角色指派](security/role-assignments.md)   
  [角色定義](security/role-definitions.md)  

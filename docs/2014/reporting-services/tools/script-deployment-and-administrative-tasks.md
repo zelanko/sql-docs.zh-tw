@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 01d506f8db09b8bc30b5587d6d98ecec793adab9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398871"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013699"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>編寫部署和管理工作的指令碼
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支援使用指令碼，以自動執行例行安裝、部署和管理工作。 部署報表伺服器是一個多步驟的程序， 您必須使用數個工具和程序來設定部署；並沒有單一程式或方法可用來自動化處理所有工作。  

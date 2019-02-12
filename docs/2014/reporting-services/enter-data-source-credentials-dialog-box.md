@@ -12,14 +12,14 @@ f1_keywords:
 - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 663fd298e9e6d3a43312047b5f0af86e5735cbd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 1ef28edadb405cfdeed464d66792513997a9a9c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162438"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041649"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>輸入資料來源認證對話方塊
   使用**輸入資料來源認證**對話方塊來提供您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認證，讓您可以從資料來源擷取資料。  

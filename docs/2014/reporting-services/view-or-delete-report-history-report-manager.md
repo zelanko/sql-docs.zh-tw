@@ -24,14 +24,14 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031388"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>檢視或刪除報表記錄 (報表管理員)
   報表記錄會與基礎報表一起保存。 任何有權檢視報表的使用者都可以檢視其記錄。  
@@ -55,10 +55,10 @@ ms.locfileid: "48117888"
 3.  選取您想要刪除此項目，然後按一下 歷程記錄快照集旁邊的核取方塊**刪除**。  
   
 ## <a name="see-also"></a>另請參閱  
- [將快照集加入報表記錄&#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [將快照集加入報表記錄 &#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [報表記錄頁面&#40;報表管理員&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [設定報表處理屬性](report-server/set-report-processing-properties.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [建立、修改及刪除報表記錄中的快照集](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

@@ -2,10 +2,8 @@
 title: sys.geo_replication_links (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_links_TSQL
@@ -20,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a74e98b3ab756ae67c02fc19eca834a95723d331
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 94ed170ea4aa99d861bea2e087310260982af4d3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420975"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031765"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
