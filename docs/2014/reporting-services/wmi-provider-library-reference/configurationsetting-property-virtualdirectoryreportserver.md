@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2e031e0e1dacc072308dbec80675a2bef8cc3350
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 42366a4163fd1a231f6a2a6db3ae092fb3dc20d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020390"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回報表伺服器應用程式的虛擬目錄。 唯讀。  
@@ -34,7 +34,7 @@ public string VirtualDirectoryReportServer;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- A`string`包含虛擬目錄。  
+ 包含虛擬目錄的 `string`。  
   
 ## <a name="example-code"></a>範例程式碼  
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  

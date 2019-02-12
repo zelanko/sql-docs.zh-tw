@@ -1,24 +1,21 @@
 ---
-title: 工作 3： 建立和執行資料品質專案進行比對 |Microsoft Docs
+title: 工作 3：建立和執行資料品質專案進行比對 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00f4c86dd09dd9b88959415459151d4cef518d57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035851"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>工作 3：建立及執行資料品質專案以進行比對
   在這項工作中，您會針對比對活動建立資料品質專案，並針對已清理的供應商資料執行比對程序，以移除資料中的任何重複項。  
@@ -33,7 +30,7 @@ ms.locfileid: "48099528"
   
      ![新增資料品質專案-比對所選](../../2014/tutorials/media/et-creatingandrunningadqpformatching.jpg "新增資料品質專案-比對所選")  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 [對應]  頁面上，針對 [資料來源]  選取 [Excel 檔案] 。  
   
@@ -50,6 +47,6 @@ ms.locfileid: "48099528"
 12. 按一下 **下一步**轉為**匯出**頁面。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 4：將比對活動的結果匯出到 Excel 檔案](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [工作 4:將結果匯出比對活動到 Excel 檔案](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

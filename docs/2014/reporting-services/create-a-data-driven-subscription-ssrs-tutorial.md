@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081681"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017910"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了資料驅動訂閱，讓您可以依據動態訂閱者資料來自訂報表的散發。 資料驅動訂閱適用於下列狀況：  
@@ -56,7 +56,7 @@ ms.locfileid: "48081681"
   
 -   SQL Server Agent 服務必須在執行中。  
   
--   包括參數的報表。 本教學課程會假設範例報表`Sales Orders`您可以建立使用本教學課程[建立基本資料表報表&#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)。  
+-   包括參數的報表。 本教學課程採用您使用 `Sales Orders` 建立基本資料表報表 &#40;SSRS 教學課程&#41; [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](create-a-basic-table-report-ssrs-tutorial.md)中的資料。  
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫，它會將資料提供給範例報表。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48081681"
  **完成這個教學課程的估計時間：** 30 分鐘。 如果您尚未完成基本報表教學課程，還需額外 30 分鐘。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料驅動訂閱](subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [建立基本資料表報表 &#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

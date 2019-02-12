@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c71fd13052c02b36c7b725e4058fd827076d6a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097a118a23bcec722710bc404e9e6452d6504b69
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058348"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032459"
 ---
 # <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器是無狀態伺服器，它會將應用程式資料、內容、屬性和工作階段資訊儲存在兩個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料庫中。 因此，若要確保的可用性，最好[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能會執行下列動作：  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器是無狀態伺服器，它會將應用程式資料、內容、屬性和工作階段資訊儲存在兩個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料庫中。 因此，確保 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能可用性的最佳方式是進行下列作業：  
   
--   使用的高可用性功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]盡可能增加報表伺服器資料庫的執行時間。 如果您設定[!INCLUDE[ssDE](../includes/ssde-md.md)]執行容錯移轉叢集執行個體，當您建立報表伺服器資料庫時，您可以選取該執行個體。  
+-   使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 的高可用性功能，盡可能增加報表伺服器資料庫的執行時間。 如果您將 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體設定為在容錯移轉叢集中執行，就可以在建立報表伺服器資料庫時選取該執行個體。  
   
 -   請盡可能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料庫和資料來源。 如需詳細資訊，請參閱 [Reporting Services 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "48058348"
   
 ## <a name="see-also"></a>另請參閱  
  [高可用性解決方案 &#40;SQL Server&#41;](../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [設定原生模式報表伺服器向外延展部署&#40;SSRS 組態管理員&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

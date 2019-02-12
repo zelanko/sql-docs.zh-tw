@@ -1,25 +1,24 @@
 ---
-title: sys.pdw_health_components (TRANSACT-SQL) |Microsoft Docs
+title: sys.pdw_health_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8f0032eab0067f845ecc4f67a7b009d0ee1b676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69e5d36db3d5ed69b0a0ecc062a0692955b84398
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731072"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011550"
 ---
-# <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   儲存所有的元件和存在於系統中的裝置相關資訊。 其中包括硬體、 存放裝置和網路裝置。  

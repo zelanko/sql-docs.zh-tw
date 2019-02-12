@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 67e1fe559e8bbb4c9c484671737223766c4a0554
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 525eccd52a0a680304533ac73bb852f4f5c4e74c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358150"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017669"
 ---
 # <a name="report-builder-ssrs"></a>報表產生器 (SSRS)
   報表產生器是一個報表撰寫環境，適合喜歡在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 環境中工作的商務使用者使用。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。  

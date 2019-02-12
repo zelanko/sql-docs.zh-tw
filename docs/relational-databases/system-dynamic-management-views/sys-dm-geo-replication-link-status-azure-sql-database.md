@@ -2,10 +2,8 @@
 title: sys.dm_geo_replication_link_status (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_link_status
@@ -20,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 94d5a2e924cfe4aa7625f6cfce40c5758eecb6a5
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2c416d0d2a39439e2b6fe79fbe755cdc62a4b8cf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421154"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021751"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 

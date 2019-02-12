@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119868"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027989"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>建立時間序列預測 (中繼資料採礦教學課程)
   在本課之前的工作中，您已經建立一個時間序列模型並瀏覽結果。 根據預設，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 一定會建立一組五個的時間數列模型預測，並將預測值顯示為預測圖表的一部分。 但是，您也可以建立資料採礦延伸模組 (DMX) 預測查詢來建立預測。  
@@ -88,41 +87,41 @@ ms.locfileid: "48119868"
   
 |$TIME|Amount|  
 |-----------|------------|  
-|2008 年 7 月 25 日|99978.00|  
-|2008 年 8 月 25 日|145575.07|  
-|2008 年 9 月 25 日|116835.19|  
-|2008 年 10 月 25 日|116537.38|  
-|2008 年 11 月 25 日|107760.55|  
+|7/25/2008|99978.00|  
+|8/25/2008|145575.07|  
+|9/25/2008|116835.19|  
+|10/25/2008|116537.38|  
+|11/25/2008|107760.55|  
   
  **M200 Europe PredictQuantity**  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
-|2008 年 7 月 25 日|52|  
-|2008 年 8 月 25 日|67|  
-|2008 年 9 月 25 日|58|  
-|2008 年 10 月 25 日|57|  
-|2008 年 11 月 25 日|54|  
+|7/25/2008|52|  
+|8/25/2008|67|  
+|9/25/2008|58|  
+|10/25/2008|57|  
+|11/25/2008|54|  
   
- **M200 North America PredictAmount**  
+ **M200 North America - PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
-|2008 年 7 月 25 日|348533.93|  
-|2008 年 8 月 25 日|340097.98|  
-|2008 年 9 月 25 日|257986.19|  
-|2008 年 10 月 25 日|374658.24|  
-|2008 年 11 月 25 日|379241.44|  
+|7/25/2008|348533.93|  
+|8/25/2008|340097.98|  
+|9/25/2008|257986.19|  
+|10/25/2008|374658.24|  
+|11/25/2008|379241.44|  
   
  **M200 North America PredictQuantity**  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
-|2008 年 7 月 25 日|272|  
-|2008 年 8 月 25 日|152|  
-|2008 年 9 月 25 日|250|  
-|2008 年 10 月 25 日|181|  
-|2008 年 11 月 25 日|290|  
+|7/25/2008|272|  
+|8/25/2008|152|  
+|9/25/2008|250|  
+|10/25/2008|181|  
+|11/25/2008|290|  
   
 > [!WARNING]  
 >  範例資料庫中使用的日期已在此版本中變更。 如果您使用的是舊版的範例資料，可能會看到不同的結果。  
@@ -173,7 +172,7 @@ ms.locfileid: "48119868"
   
 3.  在 **資料表名稱**資料行中輸入新的暫存資料表名稱，例如**Test Predictions**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
     > [!NOTE]  
     >  若要檢視您所建立的資料表，請建立與您儲存資料之執行個體的資料庫引擎之間的連接，並建立查詢。  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eb066c069d9cc1e15d442627e018818b35097e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174008"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022599"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同報表轉譯延伸模組的互動式功能 (報表產生器及 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供互動式報表功能，可讓您在執行階段使用的報表。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 您可以利用下表來了解每個互動式功能在特定格式中的運作方式。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供互動式報表功能，讓您能夠在執行階段使用報表。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 您可以利用下表來了解每個互動式功能在特定格式中的運作方式。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -75,7 +75,7 @@ ms.locfileid: "48174008"
 |-------------------|-------------------------|  
 |預覽/報表檢視器、HTML|使用者按一下連結，即可在新的瀏覽器視窗中開啟外部網頁。|  
 |PDF|PDF 轉譯延伸模組會轉譯超連結。 當使用者按下超連結時，連結的頁面會在瀏覽器中開啟。|  
-|Excel|超連結是以 Excel 轉譯。|  
+|[匯出]|超連結是以 Excel 轉譯。|  
 |Word|超連結是以 Word 轉譯。|  
 |其他|超連結不適用於 MHTML、XML、CSV 或影像。<br /><br /> 如果是 MHTML 和影像，外部影像會轉譯為靜態圖片。|  
   
@@ -114,6 +114,6 @@ ms.locfileid: "48174008"
  [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

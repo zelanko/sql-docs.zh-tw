@@ -1,5 +1,5 @@
 ---
-title: 新的排程： 編輯排程頁面 （報表管理員） |Microsoft Docs
+title: 新的排程：編輯排程頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139458"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034542"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新的排程： 編輯排程頁面 （報表管理員）
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>新的排程：編輯排程頁面 （報表管理員）
   使用 [新增排程 / 編輯排程] 頁面，即可建立報表的排程。 排程可用於訂閱、重新整理快取報表，以及建立將快照集建立成獨立項目，或建立在報表歷程記錄中。  
   
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "48139458"
   
  排程處理是以主控和處理排程之報表伺服器的本機時間為基礎。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-new-schedule-or-edit-schedule-page-from-the-execution-properties-page-of-a-report"></a>若要從報表的執行屬性頁面開啟新增排程或編輯排程頁面  
@@ -79,7 +79,7 @@ ms.locfileid: "48139458"
   
 -   **[小時]** 會定義以每小時間隔執行的排程。 使用 **[開始和結束日期]** 區段，即可指定要執行排程的日期。  
   
--   **[天]** 會定義在您所選取日子之特定時間執行的排程。 您可以透過下列方式指定日子： 每隔\<*天*>、 每個工作天和每\<*數目*> 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
+-   **[天]** 會定義在您所選取日子之特定時間執行的排程。 您可以透過下列方式指定日子：每隔\<*天*>、 每個工作天和每\<*數目*> 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
   
 -   **[週]** 會定義在每週間隔之特定時間執行的排程。 此間隔可以是整週 (例如每兩週) 或是其中的日期。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48139458"
  不會通知排程過期。 在結束日期之後，就不會再執行排程。 不會刪除過期的排程。 只能手動刪除排程。 因此，如果選擇繼續執行排程，您可以延展其結束日期。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [建立、修改和刪除共用排程](subscriptions/create-modify-and-delete-schedules.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   

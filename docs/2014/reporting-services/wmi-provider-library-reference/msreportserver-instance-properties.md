@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7fa5535d9ea44390312d9db535bbea7a7a5a7d5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 50e89bfa0ec9f8d4d792ed655eef40d9f4d47dcb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062718"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023009"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 屬性
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  
@@ -33,8 +33,8 @@ ms.locfileid: "48062718"
   
 |||  
 |-|-|  
-|[EditionID 屬性&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|傳回報表伺服器的版本。|  
-|[EditionName 屬性&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|傳回報表伺服器版本之人們可讀取的名稱。|  
+|[EditionID 屬性 &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionid.md)|傳回報表伺服器的版本。|  
+|[EditionName 屬性 &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-properties-editionname.md)|傳回報表伺服器版本之人們可讀取的名稱。|  
 |[InstanceID](msreportserver-instance-properties-instanceid.md)|此物件支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基礎結構，而且不能直接從程式碼使用。|  
 |[InstanceName](msreportserver-instance-properties-instancename.md)|在特定電腦上傳回報表伺服器執行個體的名稱。 唯讀。|  
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|指出是否為 SharePoint 整合模式設定報表伺服器。|  

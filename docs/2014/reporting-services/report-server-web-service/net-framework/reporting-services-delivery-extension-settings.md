@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce835764cc8964fdd5b6dfb5a6cb19a383ea79b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0bd8ee198a2627d9caaba340c4357bb0de0f30aa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014799"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞提供一個透過電子郵件傳送報表給個別使用者或群組的方法。 檔案共用傳遞可讓您將轉譯的報表自動傳送給網路上的共用。 您可以使用其中一個支援的傳遞延伸模組搭配標準訂閱或資料驅動訂閱來傳送。 每當您呼叫 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 和 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 方法時，會傳遞特屬傳遞延伸模組類型的傳遞設定。 若要以程式設計的方式擷取傳遞設定清單，請使用 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法。  
@@ -48,7 +48,7 @@ ms.locfileid: "48088858"
 |**ReplyTo**|出現在電子郵件訊息的 `Reply-To` 標頭之電子郵件地址。 值必須是單一電子郵件地址。 選擇性。|  
 |`IncludeReport`|指出在電子郵件傳遞中是否包括報表的值。 `true` 的值指出在電子郵件訊息的本文中所傳遞的報表。|  
 |**RenderFormat**|要用以產生轉譯報表的轉譯延伸模組名稱。 名稱必須對應至報表伺服器上安裝的其中一個可見的轉譯延伸模組。 如果將 `IncludeReport` 設定為 `true` 的值，則這個值是必要的。|  
-|**優先權**|傳送電子郵件訊息的優先權。 有效值是 `LOW`, `NORMAL` 和 `HIGH`。 預設值是 `NORMAL`。|  
+|**優先權**|傳送電子郵件訊息的優先權。 有效值為 `LOW`、`NORMAL` 及 `HIGH`。 預設值是 `NORMAL`。|  
 |**主旨**|電子郵件訊息主旨中的文字。|  
 |**註解**|文字包括在電子郵件訊息的本文中。|  
 |**IncludeLink**|指出在電子郵件本文中是否包括報表連結的值。|  
@@ -64,7 +64,7 @@ ms.locfileid: "48088858"
 |**RENDER_FORMAT**|儲存到磁碟的報表格式。|  
 |**USERNAME**|存取網路資源或磁碟所需的使用者名稱。|  
 |**PASSWORD**|存取網路資源或磁碟所需的密碼。|  
-|**WRITEMODE**|存取磁碟時使用的寫入模式。 有效值是 `None`, `Overwrite` 和 `AutoIncrement`。|  
+|**WRITEMODE**|存取磁碟時使用的寫入模式。 有效值為 `None`、`Overwrite` 及 `AutoIncrement`。|  
   
 ## <a name="see-also"></a>另請參閱  
  [技術參考 &#40;SSRS&#41;](../../technical-reference-ssrs.md)   

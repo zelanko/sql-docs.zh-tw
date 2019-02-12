@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 628a94ec8e8c79ec88f8427fd2ea41f158ae6c38
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 1b50af41b3430e921002422dfc14a5752af4b4e5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539788"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029639"
 ---
 # <a name="report-properties-dialog-box-references"></a>報表屬性對話方塊、參考
   選取 **[報表屬性]** 對話方塊上的 **[參考]** ，即可將參考加入報表定義中運算式所使用的自訂或其他外部組件以及自訂類別執行個體，或從中移除。  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba1efc734b49f62b1f7b3b3876a8ea0db2732da7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0e3248ab676386ad510639d782738915e9636193
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373350"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024459"
 ---
 # <a name="implementing-a-security-extension"></a>實作安全性延伸模組
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 驗證是保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的報表之主要系統。 不過，在某些情況下，您可能需要擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性系統，以配合企業中的自訂安全性。 您可以使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API 提供的開發平台來完成這項動作。 本節將提供 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中安全性延伸模組的概觀。  

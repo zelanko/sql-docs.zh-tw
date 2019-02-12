@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24804b6233e701ef0c27f113a294987156b6174c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363370"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028009"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 連接類型 (SSRS)
   若要在報表中包含來自 XML 資料來源的資料，您必須具有以 XML 類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 XML 資料延伸模組為基礎。 請使用此資料來源類型連接至 XML 文件、Web 服務或內嵌在查詢中的 XML，並從中擷取資料。  
@@ -110,7 +110,7 @@ ms.locfileid: "53363370"
   
  如需查詢語法的詳細資訊，請參閱 msdn.microsoft.com 上《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [線上叢書](https://go.microsoft.com/fwlink/?linkid=121312)》中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文件的 [XML 報表資料的 XML 查詢語法 &#40;SSRS&#41;](report-data-ssrs.md)。  
   
- 如需範例，請參閱[Reporting Services:使用 XML 與 Web 服務的資料來源](https://go.microsoft.com/fwlink/?LinkId=81654)。  
+ 如需範例，請參閱 [Reporting Services:Using XML and Web Service Data Sources](https://go.microsoft.com/fwlink/?LinkId=81654) (Reporting Services：使用 XML 與 Web 服務資料來源)。  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>擷取 XML Web 服務資料的需求  
  XML 資料處理延伸模組不會為您偵測結構描述。 因此，您必須有某個方式可以探索哪些 SOAP 方法將擷取您想要的資料， 您也必須了解 Web 服務用於其資料的定址配置或命名空間。  

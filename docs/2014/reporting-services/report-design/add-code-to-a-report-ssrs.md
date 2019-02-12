@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 35b3e47ea475da9e135368ca65f94dfff1943883
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f117c8ba2bc933747c725662100cf438dcd67a1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155078"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027896"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>將程式碼加入至報表 (SSRS)
   在任何運算式中，您可以呼叫自己的自訂程式碼。 您可以透過下列兩個方法來提供程式碼：  
   
--   將以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫的程式碼直接內嵌在報表中。 如果程式碼參考的是非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 或 <xref:System.Math> 的 <xref:System.Convert>，您即必須在報表中加入參考。 如需詳細資訊，請參閱 [Add an Assembly Reference to a Report &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md) (將組件參考加入至報表 (SSRS))。 如需可從程式碼建立之其他參考的詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+-   將以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 撰寫的程式碼直接內嵌在報表中。 如果程式碼參考的是非 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 或 <xref:System.Math> 的 <xref:System.Convert>，您即必須在報表中加入參考。 如需詳細資訊，請參閱 [將組件參考加入至報表 &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)。 如需可從程式碼建立之其他參考的詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 -   藉由使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]來提供自訂程式碼組件。 如果您提供自訂組件，您必須同時將它安裝在您撰寫報表的電腦上及檢視報表的報表伺服器上。 如需詳細資訊，請參閱 < [將自訂組件與報表搭配使用](../custom-assemblies/using-custom-assemblies-with-reports.md)  
   
@@ -59,8 +59,8 @@ ms.locfileid: "48155078"
      如果您將此運算式加入至顯示類別目錄值的資料表資料格，則每當 "Bike" 一字位於該資料列的資料集欄位中時，此資料表資料格值就會改為顯示 "Bicycle" 一字。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表屬性對話方塊、 程式碼](../report-properties-dialog-box-code.md)   
+ [報表屬性對話方塊、程式碼](../report-properties-dialog-box-code.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [參數集合參考&#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

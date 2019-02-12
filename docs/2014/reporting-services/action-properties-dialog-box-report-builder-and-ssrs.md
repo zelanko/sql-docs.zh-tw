@@ -31,15 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 63c9b4e601faad155d6f843b6ccef2f1cac7698a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370650"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017980"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>動作屬性對話方塊 (報表產生器及 SSRS)
   **[動作]** 對話方塊可用於啟用支援連結之圖表、量測計與地圖元素的超連結選項。 定義動作，讓使用者可以按一下報表與 URL 的連結，便連結至相同報表伺服器或與報表伺服器整合之 SharePoint 網站上的不同報表，或連結至相同報表中的不同位置。  
@@ -84,7 +84,7 @@ ms.locfileid: "53370650"
  **值**  
  在鑽研報表中，為具名參數輸入或選取要傳遞的值。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
   
- **略過**  
+ **Omit**  
  選取此選項以防止參數執行。 根據預設，不會勾選也不會啟用此核取方塊。 若要選取此核取方塊，按一下 [運算式] (*fx*) 按鈕，然後輸入 **True** 或建立一個運算式。 當您按一下 **[運算式]** 對話方塊中的 **[確定]** 時，就會選取此核取方塊。  
   
  **移至書籤**  

@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccabc5546cd61f7b685480cf2c2819d6594aee1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182669"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015978"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  
   
 > [!NOTE]  
->  雖然您無法修改報表工具列，但是您可以設定報表 URL 上的參數，以在報表中隱藏此工具列。 如需有關隱藏報表工具列的詳細資訊，請參閱 < [URL 存取參數參考](url-access-parameter-reference.md)。  
+>  雖然您無法修改報表工具列，但是您可以設定報表 URL 上的參數，以在報表中隱藏此工具列。 如需隱藏報表工具列的詳細資訊，請參閱 [URL 存取參數參考](url-access-parameter-reference.md)。  
   
 ## <a name="report-toolbar"></a>報表工具列  
  報表工具列會針對以 HTML 轉譯延伸模組轉譯的報表，提供頁面導覽、顯示比例、重新整理、搜尋、匯出、列印和資料摘要功能。  
@@ -34,7 +34,7 @@ ms.locfileid: "48182669"
   
  報表工具列會與下列圖例所顯示的工具列相似。 您看到的報表工具列可能會與此圖例有所不同，依可用的報表功能或轉譯選項而定。  
   
- ![報表工具列](media/htmlviewer-toolbar.gif "報表工具列")  
+ ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
   
  下表描述報表工具列的常用功能。 每一項功能都可以透過存取該功能的控制項來識別。  
   
