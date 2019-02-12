@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7df0a7c71dbc0298b2f9448f19287f83d34a8617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209538"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030479"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的報表產生器
-  報表產生器是一種報表撰寫環境的商務使用者想要工作[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office 環境。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在報表產生器中預覽報表，也可以將報表發行至報表伺服器或處於 SharePoint 整合模式的報表伺服器，讓其他人執行報表。  
+  報表產生器是一個報表撰寫環境，適合喜歡在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 環境中工作的商務使用者使用。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在報表產生器中預覽報表，也可以將報表發行至報表伺服器或處於 SharePoint 整合模式的報表伺服器，讓其他人執行報表。  
   
  下圖中的報表提供一個矩陣，內含資料列和資料行群組、走勢圖、指標以及位於邊角資料格的摘要圓形圖，並附有一份地圖，地圖中具有兩組以色彩和圓形大小呈現的地理資料。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48209538"
   
 -   **從資料表、矩陣或圖表精靈開始**。 您可以選擇資料來源連接、拖放欄位以建立資料集查詢、選取配置和樣式，以及自訂報表。  
   
--   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以新增[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Bing 地圖底圖背景。  
+-   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以加入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 地圖底圖背景。  
   
 
   
@@ -79,22 +79,22 @@ ms.locfileid: "48209538"
  [SQL Server 2014 報表產生器的新功能](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  描述此版本報表產生器的新功能，包括地圖。  
   
- [教學課程： 建立快速圖表報表離線](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [教學課程：建立快速圖表報表離線](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介紹報表產生器以及可協助您建立報表的精靈。 此教學課程會提供一組資料供您使用，所以您不需要連接至資料來源以便開始作業。  
   
- [規劃報表&#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md)  
+ [規劃報表 &#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md)  
  提供有關開始建立報表之前應該考量之事項的資訊。  
   
- [報表撰寫概念&#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  定義整個報表產生器文件集中使用的重要概念。  
   
- [報表設計檢視&#40;報表產生器&#41;](report-design-view-report-builder.md)  
+ [報表設計檢視 &#40;報表產生器&#41;](report-design-view-report-builder.md)  
  說明報表設計檢視的不同窗格和區域。  
   
- [共用資料集設計檢視&#40;報表產生器&#41;](shared-dataset-design-view-report-builder.md)  
+ [共用資料集設計檢視 &#40;報表產生器&#41;](shared-dataset-design-view-report-builder.md)  
  說明共用資料集設計檢視的不同窗格和區域。  
   
- [鍵盤快速鍵&#40;報表產生器&#41;](keyboard-shortcuts-report-builder.md)  
+ [鍵盤快速鍵 &#40;報表產生器&#41;](keyboard-shortcuts-report-builder.md)  
  概述報表產生器中可用於導覽及設計報表的快速鍵。  
   
  [啟動報表產生器&#40;報表產生器&#41;](start-report-builder.md)  

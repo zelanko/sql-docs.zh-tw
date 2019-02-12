@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53b67f363f076108a3b3add6950b14e37e0bd1ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373200"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011099"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1:建立知識庫和定義域
   在這個工作中，您會建立**供應商**知識庫，並建立用來清理資料和比對資料以移除重複項的網域。  

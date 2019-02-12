@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053039"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012759"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>在結構資料上使用鑽研 (基本資料採礦教學課程)
-  做為其廣告宣傳活動中，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]傳送郵件給潛在客戶在 34 到 40 歲人口統計。 行銷部門決定，他們也想購買自行車的客戶傳送郵件給[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]五年以前。 在這一課，您將會識別擁有比較舊的自行車的客戶，並擷取他們的連絡資訊。 此資訊不包括在模型中，但是會包括在結構中。 若要擷取連絡資訊，您要先確定此結構已啟用鑽研，然後您將會使用鑽研來顯示目標客戶的姓名和地址。  
+  做為其廣告宣傳活動中，一部分[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]傳送郵件給潛在客戶在 34 到 40 歲人口統計。 行銷部門決定，他們也想要傳送郵件給五年以前曾經從 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 購買自行車的客戶。 在這一課，您將會識別擁有比較舊的自行車的客戶，並擷取他們的連絡資訊。 此資訊不包括在模型中，但是會包括在結構中。 若要擷取連絡資訊，您要先確定此結構已啟用鑽研，然後您將會使用鑽研來顯示目標客戶的姓名和地址。  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>針對採礦模型啟用鑽研  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48053039"
  恭喜！您已順利完成基本資料採礦教學課程。 現在您可以輕鬆地使用資料採礦工具，我們建議您最好也完成中繼資料採礦教學課程，其中會示範如何建立模型以供預測、購物籃分析和時序群集。  
   
 ## <a name="previous-task-in-lesson"></a>本課程的前一項工作  
- [建立預測&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [建立預測 &#40;資料採礦基本教學課程&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [使用預測查詢產生器來建立預測查詢](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

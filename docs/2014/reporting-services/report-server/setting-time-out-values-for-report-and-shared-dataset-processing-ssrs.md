@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 790e512beed24295e7ca31dd471905ab814a7d1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028558"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>設定報表和共用資料集處理的逾時值 (SSRS)
   您可以指定逾時值，以便設定系統資源的使用限制。 報表伺服器支援兩種逾時值：  
@@ -35,17 +35,17 @@ ms.locfileid: "48166258"
  大部分的逾時錯誤會在查詢處理時發生。 如果您遇到逾時錯誤，請試著增加查詢逾時值。 請務必調整報表執行逾時值，使其大於查詢逾時。這個時間週期應該要足以完成查詢與報表處理。  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>設定報表中內嵌資料集的查詢逾時  
- 當您定義內嵌資料集時，可在報表撰寫期間指定查詢逾時值。 逾時值會與報表一起儲存在`Timeout`報表定義的項目。 依預設，此值設定為 30 秒。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 當您定義內嵌資料集時，可在報表撰寫期間指定查詢逾時值。 逾時值會與報表一起儲存在報表定義的 `Timeout` 元素中。 依預設，此值設定為 30 秒。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
  擁有權限修改已發行報表之屬性的使用者，可以編輯報表定義檔案，重設此值。  
   
  您也可以指定資料驅動訂閱的查詢逾時值。 查詢逾時值是在 [資料驅動訂閱] 頁面中指定的。 您指定的值會決定報表伺服器從訂閱者資料來源擷取資料時，等候查詢處理完成的時間長度。  
   
 ## <a name="setting-a-query-time-out-for-a-shared-dataset"></a>設定共用資料集的查詢逾時  
- 當您建立或管理共用資料集時，可在報表伺服器上以秒數指定查詢逾時值。 根據預設，這個值是設定為 0 秒，相當於沒有逾時值。 如需詳細資訊，請參閱 <<c0> [ 管理共用資料集](../report-data/manage-shared-datasets.md)。  
+ 當您建立或管理共用資料集時，可在報表伺服器上以秒數指定查詢逾時值。 根據預設，這個值是設定為 0 秒，相當於沒有逾時值。 如需詳細資訊，請參閱 [Manage Shared Datasets](../report-data/manage-shared-datasets.md)(管理共用資料集)。  
   
 ## <a name="setting-a-report-execution-time-out"></a>設定報表執行逾時  
- 您可以設定報表執行逾時值，來限制報表伺服器用於處理報表的時間量。 報表執行逾時值可以在報表管理員中指定。 您可以設定 [站台設定] 頁面中所有報表的預設值，然後覆寫特定報表在 [執行] 屬性頁面中的值。 依預設，此值設定為 1800 秒。 如需詳細資訊，請參閱 [設定報表處理屬性](set-report-processing-properties.md)。  
+ 您可以設定報表執行逾時值，來限制報表伺服器用於處理報表的時間量。 報表執行逾時值可以在報表管理員中指定。 您可以設定 [站台設定] 頁面中所有報表的預設值，然後覆寫特定報表在 [執行] 屬性頁面中的值。 依預設，此值設定為 1800 秒。 如需詳細資訊，請參閱 [Set Report Processing Properties](set-report-processing-properties.md)(設定報表處理屬性)。  
   
 ## <a name="how-report-execution-time-out-values-are-evaluated"></a>如何評估報表執行逾時值  
  報表伺服器會以 60 秒的間隔評估執行中的作業。 每間隔 60 秒，報表伺服器會比較實際的處理時間和報表執行逾時值。 如果報表的處理時間超過報表執行逾時值，就會停止報表的處理。  
@@ -56,9 +56,9 @@ ms.locfileid: "48166258"
 >  您可以在 RSReportServer.config 檔案中設定 `RunningRequestsDbCycle` 設定，以變更評估執行中之作業的頻率。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定處理選項&#40;Reporting Services SharePoint 整合模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](reporting-services-report-server-native-mode.md)   
- [管理執行中處理序](../subscriptions/manage-a-running-process.md)   
+ [管理執行中的處理序](../subscriptions/manage-a-running-process.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)  
   
   

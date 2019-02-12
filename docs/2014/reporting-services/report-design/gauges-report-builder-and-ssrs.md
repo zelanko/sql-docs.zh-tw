@@ -158,13 +158,13 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5c643df1d6f8849cc610d9d94a12cfeecde2836d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154168"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016089"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
   量測計資料區是一維的資料區，可顯示資料集中的單一值。 個別量測計一定會放在量測計面板內，您可在其中加入子量測計或相鄰的量測計。 您可以使用量測計面板在單一量測計面板內建立多個量測計，這些量測計會共用篩選、群組或排序等通用功能。  
@@ -181,7 +181,7 @@ ms.locfileid: "48154168"
   
  ![量測計項目圖](../media/gauge-elements-diagram.gif "量測計項目圖")  
   
- 如需使用量測計作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 如需使用量測計做為 Kpi 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表&#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將量測計當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "48154168"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 星形量測計選項：星形、星形附迷你量測計、雙標尺、右上 90 度、左上 90 度、左下 90 度、右下 90 度、上方 180 度、下方 180 度、左方 180 度、右方 180 度以及計量器。  
+ 星形量測計選項：星形、 星形附迷你量測計、 雙標尺、 右上 90 度、 左上 90 度、 左下 90 度、 右下 90 度、 上方 180 度、 下方 180 度、 180 度 West180 度和計量。  
   
  **線性量測計**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 線性量測計選項：水平、垂直、多橫條指標、雙標尺、三色範圍、對數、溫度計、華氏/攝氏溫度計以及項目符號圖表。  
+ 線性量測計選項：水平、 垂直、 多橫條指標、 雙標尺、 三色範圍、 對數、 溫度計、 溫度計華氏/攝氏溫度計和項目符號圖表。  
   
   
 ##  <a name="AddingData"></a> 將資料加入至量測計  
@@ -244,14 +244,14 @@ ms.locfileid: "48154168"
 -   以滑鼠右鍵按一下量測計指標，然後選取 **[指標屬性]**。 針對`Value`、 從下拉式清單中選取欄位，或按一下定義欄位運算式**運算式**(*fx*) 按鈕。  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>將欄位彙總為單一值  
- 當欄位加入到量測計，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]預設計算欄位的彙總。 數值資料類型會使用 SUM 函數彙總。 非數值資料類型則會以 COUNT 函數彙總，此函數會針對資料集或群組中的特定值或欄位，計算執行個體的數目。 如果值欄位的資料類型為 [字串]，即使欄位中有數字，量測計也無法顯示數值。 但是量測計會使用 COUNT 函數彙總字串欄位。 若要避免發生這個問題，請確定您使用的欄位具有數值資料類型，而不是包含格式化數字的字串。 您可以使用 Visual Basic 運算式，利用 CDbl 或 CInt 常數將 [字串] 值轉換為數值資料類型。 例如，下列運算式會將 MyField 字串欄位轉換為數值。  
+ 當欄位加入到量測計時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 預設會計算欄位的彙總。 數值資料類型會使用 SUM 函數彙總。 非數值資料類型則會以 COUNT 函數彙總，此函數會針對資料集或群組中的特定值或欄位，計算執行個體的數目。 如果值欄位的資料類型為 [字串]，即使欄位中有數字，量測計也無法顯示數值。 但是量測計會使用 COUNT 函數彙總字串欄位。 若要避免發生這個問題，請確定您使用的欄位具有數值資料類型，而不是包含格式化數字的字串。 您可以使用 Visual Basic 運算式，利用 CDbl 或 CInt 常數將 [字串] 值轉換為數值資料類型。 例如，下列運算式會將 MyField 字串欄位轉換為數值。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
  如需彙總運算式的詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="defining-a-group-on-a-gauge"></a>定義量測計上的群組  
- 將欄位加入到量測計之後，您可以加入一個資料群組。 量測計與 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的其他所有資料區域不同，前者可以在一個資料區域顯示多個群組。 當您透過在量測計上定義群組運算式來加入群組時，與您在 Tablix 資料區域上加入資料列群組時一樣。 不過，加入群組時，只有最後一個群組的值會顯示為量測值上的指標值。 例如，如果您在 Year 上加入群組運算式，指標將會指向資料集中，代表前一個年度之彙總銷售值的值。 如需群組的詳細資訊，請參閱 [了解群組 &#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)。  
+ 將欄位加入到量測計之後，您可以加入一個資料群組。 量測計與 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中的其他所有資料區域不同，前者可以在一個資料區域顯示多個群組。 當您透過在量測計上定義群組運算式來加入群組時，與您在 Tablix 資料區域上加入資料列群組時一樣。 不過，加入群組時，只有最後一個群組的值會顯示為量測值上的指標值。 例如，如果您在 Year 上加入群組運算式，指標將會指向資料集中，代表前一個年度之彙總銷售值的值。 如需群組的詳細資訊，請參閱 [了解群組 &#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)。  
   
  您可以在量測值上加入群組，例如，當您要在資料表或清單中顯示多個量測計，而且您想要顯示依群組彙總的資料時。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  
   
@@ -287,9 +287,9 @@ ms.locfileid: "48154168"
 ##  <a name="HowTo"></a> 如何主題  
  本節列出向您逐步示範如何使用報表中的量測計；如果取得資料以便在量測計中有效顯示；以及如何加入與設定量測計及其元素的程序。  
   
--   [將量測計加入至報表&#40;報表產生器及 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [將量測計加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [設定量測計的最小值或最大值&#40;報表產生器及 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [設定量測計的最小值或最大值 &#40;報表產生器及 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [設定量測軌的貼齊間隔&#40;報表產生器及 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
@@ -302,9 +302,9 @@ ms.locfileid: "48154168"
 |||  
 |-|-|  
 |詞彙|定義|  
-|[格式化量測計的標尺&#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之標尺的一般資訊，以及有關格式化星形與線性量測計上標尺之選項的詳細資訊。|  
-|[格式化量測計的指標&#40;報表產生器及 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之指標的一般資訊，以及有關格式化星形與線性量測計上可用指標樣式之選項的詳細資訊。|  
-|[格式化量測計上的範圍&#40;報表產生器及 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|  
+|[格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之標尺的一般資訊，以及有關格式化星形與線性量測計上標尺之選項的詳細資訊。|  
+|[格式化量測計上的指標 &#40;報表產生器及 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之指標的一般資訊，以及有關格式化星形與線性量測計上可用指標樣式之選項的詳細資訊。|  
+|[格式化量測計上的範圍 &#40;報表產生器及 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|  
   
   
 ## <a name="see-also"></a>另請參閱  

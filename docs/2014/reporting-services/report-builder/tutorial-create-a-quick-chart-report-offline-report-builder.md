@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 677469c2110bee76870e9f30ed470f894200d2ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035539"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：建立快速圖表報表離線 （報表產生器）
   在此教學課程中，您將使用精靈來建立圓形圖，然後稍微進行修改，以便了解可行的作業。 您可以採用兩種不同的方式進行此教學課程。 這兩種方法有相同結果的圓形圖如下圖所示：  
@@ -113,7 +113,7 @@ ms.locfileid: "52526996"
   
 11. (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您報表所依據的資料。  
   
-12. 按 [下一步] 。  
+12. 按一下 [下一步] 。  
   
 13. 在 [選擇圖表類型] 頁面中，按一下 [圓形圖]，然後按一下 [下一步]。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "52526996"
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您圖表所依據的資料。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 10. 在 [選擇圖表類型] 頁面中，按一下 [圓形圖]，然後按一下 [下一步]。  
   

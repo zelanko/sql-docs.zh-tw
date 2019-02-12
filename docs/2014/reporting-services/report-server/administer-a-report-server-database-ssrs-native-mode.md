@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 21f641d9bb33c918e8194ac7ed02af8c4c9469db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193258"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041249"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫供內部儲存之用。 根據預設，資料庫是命名為 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 是由主要報表伺服器資料庫所建立，用於儲存暫存資料、工作階段資訊和快取報表。  
@@ -36,7 +36,7 @@ ms.locfileid: "48193258"
   
 -   若要將現有的資料庫內容複製到其他報表伺服器資料庫，您可以附加報表伺服器資料庫的複本，並將這個複本與不同的報表伺服器執行個體一起使用。 或者，您也可以建立並執行使用 SOAP 呼叫的指令碼，在新的資料庫中重新建立報表伺服器內容。 您可以使用 **rs** 公用程式執行指令碼。  
   
--   若要管理報表伺服器和報表伺服器資料庫之間的連接，以及找出特定報表伺服器執行個體所使用的資料庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具中的 [資料庫安裝] 頁面。 若要深入了解報表伺服器連接到報表伺服器資料庫，請參閱[設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+-   若要管理報表伺服器和報表伺服器資料庫之間的連接，以及找出特定報表伺服器執行個體所使用的資料庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具中的 [資料庫安裝] 頁面。 若要深入了解報表伺服器資料庫的報表伺服器連接，請參閱 [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 ## <a name="sql-server-login-and-database-permissions"></a>SQL Server 登入和資料庫的權限  
  報表伺服器資料庫可供報表伺服器在內部使用。 任何一個資料庫的連接都是由報表伺服器服務所建立的。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來設定報表伺服器資料庫的報表伺服器連接。  
@@ -45,7 +45,7 @@ ms.locfileid: "48193258"
   
  系統會針對您指定的帳戶自動建立報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
- 此外，系統也會自動設定資料庫的權限。 Reporting Services 組態工具將會指派帳戶或資料庫使用者`Public`和`RSExecRole`報表伺服器資料庫的角色。 `RSExecRole`提供權限，來存取資料庫資料表及執行預存程序。 `RSExecRole`當您建立報表伺服器資料庫時，會建立 master 和 msdb 中。 `RSExecRole`隸屬`db_owner`報表伺服器資料庫，可讓報表伺服器在更新自己的結構描述，以支援自動升級程序的角色。  
+ 此外，系統也會自動設定資料庫的權限。 Reporting Services 組態工具會將帳戶或資料庫使用者指派至報表伺服器資料庫的 `Public` 和 `RSExecRole` 角色。 `RSExecRole` 提供用來存取資料庫資料表及執行預存程序的權限。 `RSExecRole`當您建立報表伺服器資料庫時，會建立 master 和 msdb 中。 `RSExecRole` 是報表伺服器資料庫之 `db_owner` 角色的成員，可讓報表伺服器在支援自動升級程序的情況下更新自己的結構描述。  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>報表伺服器資料庫的命名慣例  
  建立主要資料庫時，資料庫的名稱必須遵循為 [資料庫識別碼](../../relational-databases/databases/database-identifiers.md)指定的規則。 暫存資料庫名稱必須與主要報表伺服器資料庫的名稱相同，但要加上 Tempdb 後置詞。 您不能將暫存資料庫命名為不同的名稱。  
@@ -80,15 +80,15 @@ SET READ_COMMITTED_SNAPSHOT OFF
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 產品版本資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]表示透過檔案版本資訊出現在記錄檔中，所有的 SOAP 呼叫的標頭中，而且當您連接到報表伺服器 URL (例如，當您開啟瀏覽器並前往 http://localhost/reportserver)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Reporting Services 組態管理員&#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [建立原生模式報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [設定報表伺服器服務帳戶&#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [建立原生模式報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [建立報表伺服器資料庫 &#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services 的備份與還原作業](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
- [報表伺服器資料庫&#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)   
+ [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)   
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](reporting-services-report-server-native-mode.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [設定和管理加密金鑰&#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [設定和管理加密金鑰 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

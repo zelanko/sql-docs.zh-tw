@@ -12,14 +12,14 @@ f1_keywords:
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b202d3eadef7abc2f638cc8c084849249f8eaab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8dd12cb87bdc4c88aca9fe68455a179bcd5896c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033659"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>導出數列屬性對話方塊、一般 (報表產生器及 SSRS)
   選取 [導出數列屬性] 對話方塊上的 [公式]，加入或修改將會根據使用現有數列資料作為輸入之內建公式導出的數列。  
@@ -60,6 +60,6 @@ ms.locfileid: "48096728"
  指定所選公式的參數。  
   
 ## <a name="see-also"></a>另請參閱  
- [圖表&#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

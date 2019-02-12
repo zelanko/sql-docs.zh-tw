@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bf61e09dbb1e1a98b1af609cb092cf072821a14
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106041"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036119"
 ---
 # <a name="choose-link-page-report-manager"></a>選擇連結頁面 (報表管理員)
   使用 [選擇連結] 頁面來選擇不同的報表，作為目前已選取連結報表的基礎。 連結報表以已經發行至報表伺服器的其他報表為基礎。 連結報表會使用基底報表的配置和資料，但是具有個別的屬性頁面，可讓您自訂參數屬性、安全性設定、名稱、描述和位置。  
   
  透過 [選擇連結] 頁面，您可以選擇不同的已發行報表，以便與連結報表搭配使用。 連結報表的其他設定 (例如安全性和參數設定) 不受連結資訊的變更所影響。 由於報表伺服器將不會驗證您的選項，因此請務必選擇與您在連結報表上指定之設定具有相同參數的報表。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-choose-link-page"></a>若要開啟選擇連結頁面  

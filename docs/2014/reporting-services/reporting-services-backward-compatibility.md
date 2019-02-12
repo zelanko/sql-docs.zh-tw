@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 253b4e2178f7a3e2e20d3b1263f83ff184d3b9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050998"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010539"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services 回溯相容性
   本節將描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本之間的行為變更。 它涵蓋不能再使用或已排程在未來版本中移除的功能。 也將描述產品的基礎性變更，已知這些變更會中斷包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能的自訂應用程式。  

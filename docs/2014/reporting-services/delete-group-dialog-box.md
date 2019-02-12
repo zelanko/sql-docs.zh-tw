@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af50422d5f293b1c3bfd58a7db6472bbf81a81d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f8f319a2bbca4a274800d72b9ef027f4852fb4a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056158"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030109"
 ---
 # <a name="delete-group-dialog-box"></a>刪除群組對話方塊
   使用 **[刪除群組]** 對話方塊，即可從資料表、矩陣或清單資料區中刪除群組。 如果有與此群組相關聯的資料列或資料行，您也可以刪除這些結構。  
@@ -35,7 +35,7 @@ ms.locfileid: "48056158"
   
 ## <a name="see-also"></a>另請參閱  
  [報表設計師 F1 說明](tools/report-designer-f1-help.md)   
- [了解群組&#40;報表產生器及 SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
+ [了解群組 &#40;報表產生器及 SSRS&#41;](report-design/understanding-groups-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

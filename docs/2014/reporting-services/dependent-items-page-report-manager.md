@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197582"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030069"
 ---
 # <a name="dependent-items-page-report-manager"></a>相依項目頁面 (報表管理員)
   您可以使用 [相依項目] 頁面來檢視參考共用資料來源的報表和模型清單。 每一個項目類型的圖示表示該項目是報表或模型。 檢視這個頁面可以使用清單檢視或詳細資料檢視。 使用詳細資料檢視來顯示有關每一個項目的詳細資訊。 詳細資料檢視有其他頁面選項可用。 為了協助您管理共用資料來源，這個頁面提供了使用資料來源之報表和模型的連結、有關上次執行或修改報表或模型之時間的標準，以及 [刪除] 和 [移動] 按鈕，以便您可以輕易地移除不再使用的報表和模型，或在您判斷是否仍然需要它們時，將它們移至不同的位置。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-dependent-items-page"></a>若要開啟相依項目頁面  
@@ -64,8 +64,8 @@ ms.locfileid: "48197582"
   
 ## <a name="see-also"></a>另請參閱  
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

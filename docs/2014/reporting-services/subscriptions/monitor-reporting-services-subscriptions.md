@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4959243f633702fb0f0afd9b2444ae65666ef680
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506962"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015079"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -79,7 +79,7 @@ ms.locfileid: "52506962"
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   程式庫 ！WindowsService_7 ！ b60 ！ 05/20/2014年-22: 34:36:: i INFO:將 EnableExecutionLogging 初始化至 'True' 所指定的伺服器系統 properties.emailextension ！WindowsService_7 ！ b60 ！ 05/20/2014年-22: 34:41:: e ERROR:**傳送電子郵件時發生錯誤**。 Exception:System.Net.Mail.SmtpException:The SMTP server requires a secure connection or the client was not authenticated. The server response was:5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:將 EnableExecutionLogging 初始化至 'True' 所指定的伺服器系統 properties.emailextension ！WindowsService_7 ！ b60 ！ 05/20/2014年-22: 34:41:: e ERROR:**傳送電子郵件時發生錯誤**。 Exception:System.Net.Mail.SmtpException:The SMTP server requires a secure connection or the client was not authenticated. The server response was:5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
   

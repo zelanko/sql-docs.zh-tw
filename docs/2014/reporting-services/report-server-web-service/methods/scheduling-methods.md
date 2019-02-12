@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89736bb02158170425df2c5dae617955fd8f8f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 030eb0575b52ea6f0008b76658f94eaa03a04341
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217894"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022539"
 ---
 # <a name="scheduling-methods"></a>排程方法
   您可以使用這些方法來建立並管理執行和傳遞報表的共用排程，並快取報表伺服器所運用的重新整理計劃。  

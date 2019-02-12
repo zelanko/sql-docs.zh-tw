@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9c67f29-0c47-4a5a-862b-db0f5213c2c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 112b45f2d5797d6797903661de0376bd4d316c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030799"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>建立目標郵寄採礦模型結構 (基本資料採礦教學課程)
   建立目標郵寄狀況的第一個步驟是，利用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的資料採礦精靈來建立新的採礦結構和決策樹採礦模型。  
@@ -36,11 +35,11 @@ ms.locfileid: "48087708"
     > [!NOTE]  
     >  如果出現找不到資料採礦演算法的警告，可能無法正確設定專案屬性。 當專案嘗試從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器擷取資料採礦演算法的清單，而且找不到伺服器時，就會出現這個警告。 根據預設，[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]會使用**localhost**做為伺服器。 如果您要使用不同的執行個體或具名執行個體，您必須變更專案屬性。 如需詳細資訊，請參閱 <<c0> [ 建立 Analysis Services 專案&#40;資料採礦基本教學課程&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)。</c0>  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 **選取資料來源檢視**頁面上，於**可用的資料來源檢視**窗格中，選取**目標郵寄**。 您可以按一下**瀏覽**來檢視資料來源檢視中的資料表，然後按一下**關閉**返回精靈。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  上**指定資料表類型**頁面上，選取核取方塊**案例**資料行，以作為案例資料表，然後按一下 [vtargetmail**下一步]**。 您之後將會使用 ProspectiveBuyer 資料表進行測試，現在請先忽略。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "48087708"
   
     -   **Gender**  
   
-    -   **[Geographykey]**  
+    -   **GeographyKey**  
   
     -   **HouseOwnerFlag**  
   
@@ -103,11 +102,11 @@ ms.locfileid: "48087708"
   
     -   **FirstName**  
   
-    -   **lastName**  
+    -   **LastName**  
   
      請確定這些資料列只有在左邊的資料行中才有核取記號。 這些資料行將會加入到您的結構中，但是不會併入模型中。 但是在建立此模型之後，這些資料行將可用於鑽研和測試。 如需有關鑽研的詳細資訊，請參閱 <<c0> [ 鑽研查詢&#40;資料採礦&#41;</c0>](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. 按 [下一步] 。  
+14. 按一下 [下一步] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [指定資料類型和內容類型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  

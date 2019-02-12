@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5973d419bb87c4b53313afa3051865b4e746ef96
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: kfile
+ms.openlocfilehash: e6e98f8a1989193fba440ad7e8574d409c3a4996
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211847"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038249"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  
@@ -69,7 +69,7 @@ ms.locfileid: "53211847"
  請注意，您無法指定僅用於內部使用的輸出格式，或是以 SharePoint 整合模式執行之報表伺服器不支援的輸出格式。 這些格式包括 Null、RGDI 和 HTMLOWC。  
   
  檔案名稱與副檔名  
- 將報表的檔案名稱與副檔名指定為您要顯示在目標文件庫中的檔案名稱與副檔名。 如果您沒有指定副檔名，報表伺服器會依據報表輸出格式來建立副檔名。 這是必要的值。 檔案名稱不得包含下列字元：: \ / * ? 「 \< > |# { } %  
+ 將報表的檔案名稱與副檔名指定為您要顯示在目標文件庫中的檔案名稱與副檔名。 如果您沒有指定副檔名，報表伺服器會依據報表輸出格式來建立副檔名。 這是必要的值。 檔案名稱不得包含下列字元：: \ / * ? " \< > | # { } %  
   
  標題  
  在目標文件庫中，指定報表的選用 `Title` 屬性。 這是儲存在文件庫中之所有項目的標準屬性。 使用者可以在檢視 SharePoint 網站上的文件庫內容時，指定要顯示或隱藏此屬性。  

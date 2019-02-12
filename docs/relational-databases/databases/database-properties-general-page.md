@@ -3,9 +3,8 @@ title: 資料庫屬性 (一般頁面) | Microsoft 文件
 ms.custom: ''
 ms.date: 10/27/2015
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: configuration"
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9e043f66817b1c45b56d6c04b1a093c7435c633
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e99e5a97b9d15702c0b1040ffade4a91528cbbf8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350482"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028699"
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

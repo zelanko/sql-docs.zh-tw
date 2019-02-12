@@ -15,16 +15,16 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c19d5e43169142a8e3527fca48bb355e5f1e8f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713076"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015230"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>在位置路徑 (SQLXML 4.0) 中指定選取述詞
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47713076"
 > [!NOTE]  
 >  如需有關這個 XPath 實作的限制資訊和它與 W3C 規格之間的差異，請參閱[簡介使用 XPath 查詢&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)。  
   
-## <a name="selection-predicate-example-1"></a>選取述詞： 範例 1  
+## <a name="selection-predicate-example-1"></a>選取述詞：範例 1  
  下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<客戶 >** 具有元素子系**CustomerID** ALFKI 值的屬性：  
   
 ```  
@@ -50,7 +50,7 @@ ms.locfileid: "47713076"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>選取述詞： 範例 2  
+## <a name="selection-predicate-example-2"></a>選取述詞：範例 2  
  下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<順序 >** 孫系有**SalesOrderID**屬性具有值 1:  
   
 ```  
@@ -65,7 +65,7 @@ ms.locfileid: "47713076"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>選取述詞： 範例 3  
+## <a name="selection-predicate-example-3"></a>選取述詞：範例 3  
  下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<客戶 >** 有一個以上的子系 **\<ContactName >** 子系：  
   
 ```  
@@ -84,7 +84,7 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>選取述詞： 範例 4  
+## <a name="selection-predicate-example-4"></a>選取述詞：範例 4  
  下列 XPath 運算式選取**\<客戶 >** 項目子系內容節點沒有 **\<ContactName >** 元素子系：  
   
 ```  
@@ -101,7 +101,7 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>選取述詞： 範例 5  
+## <a name="selection-predicate-example-5"></a>選取述詞：範例 5  
  下列 XPath 運算式選取從目前內容節點所有**\<客戶 >** 具有子系**CustomerID**屬性：  
   
 ```  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030689"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>將報表檢視器 Web 組件加入至網頁 (SharePoint 整合模式的 Reporting Services)
   您可以使用報表檢視器 Web 組件來檢視在設定為以 SharePoint 整合模式執行之報表伺服器上執行的報表。 您可以使用 Web 組件顯示在報表產生器或報表設計師中建立，並且上傳至文件庫的報表定義 (.rdl) 檔案。  
@@ -57,9 +57,9 @@ ms.locfileid: "48105888"
 9. 按一下工具窗格底部的 [套用]，然後按一下 [確定] 關閉窗格。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 SharePoint 網站上的報表檢視器 Web 組件](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [SharePoint 網站上的報表檢視器 Web 組件](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [自訂報表檢視器 Web 組件](../customize-the-report-viewer-web-part.md)   
- [授與 SharePoint 網站上的報表伺服器項目的權限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授與 SharePoint 網站上報表伺服器項目的權限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [安裝或解除安裝 Reporting Services 增益集，適用於 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

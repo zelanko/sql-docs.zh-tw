@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081548"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011500"
 ---
 # <a name="cache-refresh-options-report-manager"></a>快取重新整理選項 (報表管理員)
   使用 [快取重新整理] 選項頁面來建立排程，以供預先載入含報表或共用資料集資料暫存副本的快取。 重新整理計劃包括排程和選項，可指定或覆寫參數的值。 您不能針對共用資料集，覆寫標示為唯讀的參數值。 您可以建立並使用多個重新整理計劃做為重新整理選項頁面的一部分。  
@@ -66,12 +66,12 @@ ms.locfileid: "48081548"
  **設定**  
  按一下即可開啟 [排程] 頁面，可用來指定頻率資訊。  
   
- 如需詳細資訊，請參閱 <<c0> [ 新的排程： 編輯排程頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)。</c0>  
+ 如需詳細資訊，請參閱[新的排程：編輯排程頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)。  
   
  **共用的排程**  
  選取此選項，可選取現有的排程。  
   
- 如需詳細資訊，請參閱 < [Create，Modify，and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)。  
+ 如需詳細資訊，請參閱 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)。  
   
  **@\<** *參數* **>**  
  指定參數值的其中一個組合。 此區段只有在目前的資料集或報表具有參數時才會出現。  
@@ -103,7 +103,7 @@ ms.locfileid: "48081548"
   
  如果共用資料集定義為參數指定 **[從查詢中忽略]** 選項，就不需要提供預設值。 這個旗標表示查詢中不使用該資料集參數。 例如，參數顯示在共用資料集定義中，因為該參數是只用於資料集篩選中的報表參數。  
   
- 若要檢視或變更資料集參數選項，您必須編輯共用資料集定義。 如需詳細資訊，請參閱 <<c0> [ 管理共用資料集](report-data/manage-shared-datasets.md)。  
+ 若要檢視或變更資料集參數選項，您必須編輯共用資料集定義。 如需詳細資訊，請參閱 [Manage Shared Datasets](report-data/manage-shared-datasets.md)(管理共用資料集)。  
   
 ### <a name="report-parameters"></a>報表參數  
  依報表來說，每個參數值都必須有效，才能順利建立快取重新整理計劃。 您必須為每個報表參數輸入或選取預設值。 您所設定的值會覆寫在報表伺服器上為報表參數定義的預設值。  
@@ -130,7 +130,7 @@ ms.locfileid: "48081548"
   
 ## <a name="see-also"></a>另請參閱  
  [項目層級工作](security/tasks-and-permissions-item-level-tasks.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [快取多個報表 &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [管理共用資料集](report-data/manage-shared-datasets.md)  
