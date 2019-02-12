@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 680c60a40e1c8ebfb99896d0857fddfc28174c20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ac2c57dbab3dd75ab44dc11d7e20ba363d18f059
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220028"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022549"
 ---
 # <a name="data-sources-and-connection-methods"></a>資料來源和連接方法
   您可以使用這些方法來設定和管理資料來源連接與認證。  

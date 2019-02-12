@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ce59e126ce24e30e091b4a5456d8b78c84355e88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641766"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026725"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>檢視測試案例報表 (OracleToSQL)
 測試案例報表會顯示測試驗證結果和一般測試的資訊。 如果測試失敗，也會顯示已驗證的物件中的任何不相符資料的相關資訊。  

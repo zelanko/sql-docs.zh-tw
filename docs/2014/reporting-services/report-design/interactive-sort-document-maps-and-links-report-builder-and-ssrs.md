@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 68e73b7fc2d7b1982724da4040c4912473f30d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352569"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017729"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>互動式排序、文件引導模式及連結 (報表產生器及 SSRS)
   在 Web 架構的環境中，您可以加入讓使用者與報表互動的一些功能。 您的使用者可以變更值在報表中的排序次序、顯示或隱藏報表中的項目，或者按一下跳到其他報表或網頁的連結。 您也可以加入目錄或文件引導模式。 您的報表使用者可以按一下目錄或文件引導模式中的項目，跳到報表內的各個區域。  

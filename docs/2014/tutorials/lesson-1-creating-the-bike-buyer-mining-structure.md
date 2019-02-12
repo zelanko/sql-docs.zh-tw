@@ -1,22 +1,21 @@
 ---
-title: 第 1 課： 建立自行車買主採礦結構 |Microsoft Docs
+title: 第 1 課：建立自行車買主採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025799"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>第 1 課：建立自行車買主採礦結構
   在這一課，您將建立一個可讓您預測 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的潛在客戶是否將購買自行車的採礦結構。 如果您不熟悉採礦結構和資料採礦中的其角色，請參閱[採礦結構&#40;Analysis Services-Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  
@@ -95,7 +94,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中建立新的 DMX 查詢  
   
-1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
 2.  在 [**連接到伺服器**] 對話方塊中，如**伺服器類型**，選取**Analysis Services**。 在**伺服器名稱**，型別`LocalHost`，輸入執行個體的名稱或[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要連接到這一課。 按一下 **[連接]**。  
   
@@ -215,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  在下一課，您會將採礦模型加入剛才建立的結構中。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：將採礦模型新增至自行車買主採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [第 2 課：將採礦模型加入 Bike Buyer 採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

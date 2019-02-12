@@ -17,15 +17,15 @@ helpviewer_keywords:
 - identity values [SQL Server], last-inserted
 - '@@IDENTITY function'
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 18ab9972e0a8db5a71a3a4bc89eb8655ee0c8dcc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5763042dd9fa0bb757b66727f9e04b4b81aee85c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816164"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020069"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -2,10 +2,9 @@
 title: sys.database_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - database_usage
@@ -22,17 +21,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 62942e939c1221b90b623db12c922f3dcc580c99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656737"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024899"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **注意： 這只適用於 Azure SQL Database V11。**  
+  **注意：只適用於 Azure SQL Database V11。**  
   
  列出數目、 類型和持續時間的資料庫上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]伺服器。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "51656737"
 |資料行名稱|描述|  
 |-----------------|-----------------|  
 |time|使用事件發生的日期。|  
-|sku|資料庫服務層的類型： **Web**，**商務**，**基本**，**標準**， **Premium**|  
+|sku|資料庫服務層的類型：**Web**，**商務**，**基本**，**標準**， **Premium**|  
 |quantity|當天存在之 SKU 類型資料庫的數目上限。|  
   
 ## <a name="permissions"></a>Permissions  

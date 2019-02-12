@@ -1,24 +1,21 @@
 ---
-title: 工作 2： 將供應商資料上傳至 MDS 增益集使用適用於 Excel 的 MDS |Microsoft Docs
+title: 工作 2：供應商資料上傳至 MDS 增益集使用適用於 Excel 的 MDS |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 36e50a34f708bc13da489591d73ca0521cdb5a6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101208"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025659"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>工作 2：使用適用於 Excel 的 MDS 增益集將供應商資料上傳到 MDS
   在這個工作中，您已清理和供應商將資料發佈至**MDS**使用**MDS 增益集適用於 Excel**。 建立名為實體**供應商**中**供應商**您在上一課中建立的模型。 此實體將會針對 Excel 檔案中的每個資料行具有一個屬性。 Supplier 實體的 Code 和 Name 屬性等於**SupplierID**並**Supplier Name**在 Excel 中的資料行。  
@@ -66,6 +63,6 @@ ms.locfileid: "48101208"
 15. 保持**Excel**開啟。  
   
 ## <a name="next-task"></a>下一項工作  
- [工作 3：在主資料管理員中驗證資料](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [工作 3:驗證資料在主資料管理員](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

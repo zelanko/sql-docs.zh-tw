@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 19f87ffa52dcc8cc1434afa7e6519e93bd580cb5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026889"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或刪除角色指派 (報表管理員)
   角色指派會將某個群組或使用者帳戶對應至包含可執行之工作的預先定義角色定義。 它會決定某位使用者可執行的作業類型，包括資料夾、報表、模型或其他內容類型。 若要建立、修改或刪除角色指派，您可以使用報表管理員。 針對特定使用者或群組建立角色指派之後，您之後可以透過選取不同的角色，修改此指派。 如果您想要撤銷報表伺服器的權限，可以從報表伺服器中刪除角色指派。  
@@ -64,9 +64,9 @@ ms.locfileid: "48215528"
 6.  若要刪除角色指派，請按一下使用者或群組名稱旁的核取方塊，然後按一下 [刪除]。  
   
 ## <a name="see-also"></a>另請參閱  
- (建立-和-管理-角色-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [角色指派](role-assignments.md)   
  [網站設定頁面 &#40;報表管理員&#41;](../site-settings-page-report-manager.md)   
- [新增系統角色指派：編輯系統角色指派頁面 &#40;報表管理員&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [新增系統角色指派：編輯系統角色指派頁面&#40;報表管理員&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   
