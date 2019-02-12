@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cf34475a4b2b79251284db6d36018b0c6d243d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5351b052a26b2a4f5b9bc9d91f93aa2e4cdc5357
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106058"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020280"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>報表伺服器 Windows 服務 (MSSQLServer) 107
     
@@ -51,8 +51,8 @@ ms.locfileid: "48106058"
 ## <a name="internal-only"></a>僅供內部使用  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器服務帳戶&#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Reporting Services 組態管理員&#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [啟動與停止報表伺服器服務](../report-server/start-and-stop-the-report-server-service.md)  
+ [設定報表伺服器服務帳戶 &#40;SSRS 組態管理員&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [啟動與停止 Report Server 服務](../report-server/start-and-stop-the-report-server-service.md)  
   
   

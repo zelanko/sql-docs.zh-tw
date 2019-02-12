@@ -3,7 +3,6 @@ title: replace value of (XML DML) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - updating node values
 - replace value of XML DML statement
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 770568bcf8d6a89b350b9cd04ef3ff6cb10a015f
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ee8240f506c11bec768eb6a9510871b3ff1deaa8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980364"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035289"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

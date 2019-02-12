@@ -3,7 +3,7 @@ title: 以 PATH 模式格式化巢狀的 JSON 輸出 (SQL Server) | Microsoft Do
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
@@ -11,12 +11,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aab9993cca4a0531e139237fc1729037a41f5355
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 6d90637fb98635c16029be7fb81bb384e08edd34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886903"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033179"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>以 PATH 模式格式化巢狀的 JSON 輸出 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 97320e5e5e525cfaea7c374a43ccf3abac66c98e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6c8f74713a07969ba724ccf2679d7f7bf17fb7ad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209198"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024360"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 成員
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  
@@ -44,6 +44,6 @@ ms.locfileid: "48209198"
   
 |||  
 |-|-|  
-|[GetReportServerUrls 方法&#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|列出使用者可用來存取報表伺服器和報表管理員的 URL。|  
+|[GetReportServerUrls 方法 &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|列出使用者可用來存取報表伺服器和報表管理員的 URL。|  
   
   

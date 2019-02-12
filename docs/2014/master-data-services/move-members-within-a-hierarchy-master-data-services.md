@@ -13,15 +13,15 @@ helpviewer_keywords:
 - derived hierarchies, moving members
 - members [Master Data Services], moving
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 12957de6492419811fe37dc6d412281af9883f04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96f3c1232f1124ef5f2cd9e77d89fa06607392c7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112091"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026689"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>在階層中移動成員 (Master Data Services)
   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中，移動階層中的成員來變更成員的位置或父系指派。  
@@ -58,7 +58,7 @@ ms.locfileid: "48112091"
   
 ## <a name="see-also"></a>另請參閱  
  [使用暫存處理序移動明確階層成員&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
- [衍生階層&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
- [明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+ [衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
+ [明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

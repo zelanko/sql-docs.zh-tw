@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: be7e09d5254efc35761b267655a8949e4b09173d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: f7c364708f3d574f5096210a94fc33174b3eb2c2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403606"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021546"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 錯誤
     

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133288"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019319"
 ---
 # <a name="report-manager-f1-help"></a>報表管理員 F1 說明
   下列主題將提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員的頁面層級說明。 應用程式中的每一個頁面，都會有一個主題。 並非所有頁面都是可用的。 安全性設定會決定您可以存取的頁面。 若要從報表管理員中存取這些主題，請按一下主要工具列上的 **[說明]** 。  
@@ -104,9 +104,9 @@ ms.locfileid: "48133288"
  如需有關報表管理員和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的詳細資訊，請參閱 MSDN 上的《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表伺服器內容管理&#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [功能參考 (Reporting Services)](feature-reference-reporting-services.md)   
- [報表伺服器內容管理&#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [報表管理員](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 元件概觀](tools/reporting-services-tools.md)  
   

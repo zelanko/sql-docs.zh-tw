@@ -3,7 +3,7 @@ title: 使用 SQL Server 中的 JSON | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72de8dd56909ff947b947602ef05860fd367156f
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 902134add041fec4bc2befec0d4df24312fb5b85
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299375"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033432"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

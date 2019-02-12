@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1c9a3adeb3e63c24aa7a78f5a44f1cd2692ce2b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 87904dc6e53bdf25739bd49267ddb1dc402186f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375340"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036807"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  

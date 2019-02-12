@@ -3,7 +3,7 @@ title: 搭配使用 OPENJSON 與預設結構描述 (SQL Server) | Microsoft 文�
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
-ms.reviewer: douglasl
+ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22d4d2cf034c27267612c093fa2c599da4fe7899
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.openlocfilehash: 078f198d81c0fc9de1ce5c0a6221b54c253bfa56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886813"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033412"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>搭配使用 OPENJSON 與預設結構描述 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
