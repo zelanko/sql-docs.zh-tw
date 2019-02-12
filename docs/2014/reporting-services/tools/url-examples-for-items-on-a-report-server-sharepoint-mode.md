@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157928"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026529"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 模式 (SSRS) 在報表伺服器上已發行報表項目的 URL 範例
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  
@@ -76,7 +76,7 @@ ms.locfileid: "48157928"
  報表定義可以包含當做外部檔案儲存的影像檔。 您可以設定指向影像檔的完整 URL，在報表定義中參考該檔案。 它可以儲存在 SharePoint 網站或遠端電腦上。  
   
 > [!IMPORTANT]  
->  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並以連線模式轉譯報表時，會出現不完整的影像圖示，如果您只有`View Items`權限。  
+>  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並且以連線模式轉譯報表時，如果您僅具有 `View Items` 權限，則會出現不完整的影像圖示。  
   
  不管報表伺服器的模式為何，在報表中的外部影像檔參考必須是完整的 URL。 同時，參考外部影像檔通常需要您設定自動報表處理帳戶。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48157928"
 >  為了將報表從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]發行到 SharePoint 網站，您可能需要將 SharePoint 網站加入您 Internet Explorer 瀏覽器的信任位置清單。  
   
 ### <a name="shared-data-sources"></a>共用資料來源  
- 當您從報表撰寫工具發行共用資料來源時，您可以設定專案屬性 `TargetDataSourceFolder` 目標資料來源資料夾必須是指向 SharePoint 文件庫的 URL。 不像在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式下，您無法指定相對資料夾，因為相對路徑無效。 如果在 Document Library 路徑下沒有資料夾存在，則會建立一個。  
+ `TargetDataSourceFolder`當您從報表撰寫工具發行共用資料來源時，您可以設定專案屬性  目標資料來源資料夾必須是指向 SharePoint 文件庫的 URL。 不像在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式下，您無法指定相對資料夾，因為相對路徑無效。 如果在 Document Library 路徑下沒有資料夾存在，則會建立一個。  
   
  當您將共用資料來源 (.rds) 檔發行到 SharePoint 網站時，這會將資料來源檔的副檔名變更為 .rsds。 .rsds 檔無法從 SharePoint 網站儲存到本機，也無法匯入到現有的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 專案中。 副檔名為 .rds 和 .rsds 的共用資料來源不可互換。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "48157928"
  當報表伺服器以 SharePoint 整合模式執行時，資源概念的定義則比較窄化。 報表伺服器會保留資源的概念，以儲存參考外部影像的報表。 如果報表是快照集或保留給內部使用的副本，則也適用這個概念。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表發行至 SharePoint 文件庫](../reports/publish-a-report-to-a-sharepoint-library.md)   
+ [將報表發行到 SharePoint 文件庫](../reports/publish-a-report-to-a-sharepoint-library.md)   
  [將共用資料來源發行至 SharePoint 文件庫](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [專案屬性頁對話方塊](project-property-pages-dialog-box.md)  
   

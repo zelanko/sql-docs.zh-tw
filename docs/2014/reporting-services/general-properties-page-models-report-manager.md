@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f3756fb68ba46b1ac7b34237753dbd57d0b6775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146248"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018240"
 ---
 # <a name="general-properties-page-models-report-manager"></a>一般屬性頁面，模型 (報表管理員)
   您可以使用報表模型的 [一般屬性] 頁面來重新命名、刪除、移動或取代模型定義 (.smdl) 檔案。 有關模型建立者與修改者及變更日期的詳細資料都會顯示在頁面頂端。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-general-properties-page-for-a-model"></a>若要開啟模型的一般屬性頁面  
@@ -38,13 +38,13 @@ ms.locfileid: "48146248"
  **名稱**  
  指定模型的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : \@ & = +，$ / * \< > |" /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **說明**  
  輸入模型的描述。 這項描述會顯示在有權存取此模型之使用者的 [內容] 頁面上。  
   
  **在清單檢視中隱藏**  
- 選取此核取方塊即可在清單檢視中設定資料夾時，隱藏項目。 清單檢視是檢視資料夾內容的一種模式，報表管理員中支援這種檢視模式。 您可以設定這個選項[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]來定義此項目在報表管理員中的特殊檢視。 如需有關在報表管理員中的檢視模式的詳細資訊，請參閱 <<c0> [ 內容 頁面&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)。</c0>  
+ 選取此核取方塊即可在清單檢視中設定資料夾時，隱藏項目。 清單檢視是檢視資料夾內容的一種模式，報表管理員中支援這種檢視模式。 您可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中設定這個選項，以便定義在報表管理員中檢視這個項目的方式。 如需有關在報表管理員中的檢視模式的詳細資訊，請參閱 <<c0> [ 內容 頁面&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)。</c0>  
   
  **套用**  
  按一下即可儲存您的變更。  
@@ -60,7 +60,7 @@ ms.locfileid: "48146248"
   
  您開啟的副本與初始發行至報表伺服器的原始模型定義相同。 發行模型之後在模型上設定的任何屬性 (例如資料來源屬性) 都不會反映在您開啟的檔案中。  
   
- 您可以修改模型定義並在共用資料夾中另存新檔，然後將模型定義上傳到報表伺服器當做新項目。 您對模型定義中開啟時進行的修改[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]（或另一個應用程式） 並不直接儲存到報表伺服器。 您必須上傳檔案，才能將修改的模型發行到報表伺服器。  
+ 您可以修改模型定義並在共用資料夾中另存新檔，然後將模型定義上傳到報表伺服器當做新項目。 在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (或其他應用程式) 中開啟模型定義時，您對模型定義所做的修改並不會直接儲存到報表伺服器中。 您必須上傳檔案，才能將修改的模型發行到報表伺服器。  
   
  請注意，如果您想要在模型設計師中開啟此報表模型，就應該將此模型儲存成 .smdl 檔案，然後在模型設計師中，將此 .smdl 檔案加入至專案。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48146248"
  按一下即可重新產生取代目前版本的預設模型。 這個選項會在產生模型之後顯示。 產生的模型是以共用資料來源為基礎。 您無法在它產生之前進行自訂。 不過，當您產生它之後，就可以按一下 **[編輯]** 開啟模型定義、將它儲存至檔案系統，然後在模型設計師中，將它加入至專案。 當您修改模型之後，可以將它上傳至報表伺服器當做新項目，也可以按一下這個頁面上的 **[更新]** ，使用您在模型設計師中修訂的版本來取代產生的模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表或模型繫結至共用的資料來源&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [將報表或模型繫結至共用資料來源 &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Management Studio F1 說明中的報表伺服器](tools/report-server-in-management-studio-f1-help.md)  
   
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08742a78d0992467a8fb596ecc4f267576f00701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195068"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025789"
 ---
 # <a name="model-item-security-page-report-manager"></a>模型項目安全性頁面 (報表管理員)
   您可以使用這個頁面，透過授與或撤銷特定項目的唯讀權限，保護模型的各部分。 模型項目安全性會影響執行階段的特定資料瀏覽，以及在報表產生器中建立報表時使用已發行模型之各部分的能力。 若要使用這項功能，您必須擁有「內容管理員」權限。  
@@ -48,7 +48,7 @@ ms.locfileid: "48195068"
   
  若要開始作業，請在根節點上建立角色指派，然後在實體和資料夾上建立其他角色指派。 若要清除模型項目安全性，請清除 **[獨立保護此模型的個別模型項目]** 的核取方塊。 清除此核取方塊就會還原回從模型繼承的初始權限。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-general-properties-page-for-a-report"></a>若要開啟報表的一般屬性頁面  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 785557e57defba45f23c7a4abb041d4e8ba04884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b73227ae13d9534a98e4fc68030f5447f8db9cf7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165328"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023509"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子報表 (報表產生器及 SSRS)
   子報表是一個報表項目，會在主要報表的主體內顯示另一個報表。 報表中子報表的概念類似於網頁中的框架。 它用於在報表中內嵌報表。 任何報表都可以做為子報表。 顯示為子報表的報表儲存在報表伺服器上，通常會與父報表儲存在同一個資料夾中。 您可以設計父報表來傳遞參數給子報表。 子報表可以在資料區域中重複，使用參數在每一個子報表執行個體中篩選資料。  
@@ -36,7 +36,7 @@ ms.locfileid: "48165328"
   
  在單一資料區域內從相同的資料來源中巢狀資料群組時，請使用資料區域。 在單一資料區域內從不同的資料來源中巢狀資料群組，請使用子報表，重複使用多個父報表中的子報表，或是在另一個報表中顯示獨立報表。 例如，您可以在另一個報表主體中置放多個子報表，以建立「簡報書籍」。  
   
- 資料區與子報表的功能和彈性相同，但效能更佳。 這是因為報表伺服器會將子報表的每一個執行個體，都視為獨立的報表來處理，所以可能會影響效能。 如需詳細資訊，請參閱[巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)。  
+ 資料區與子報表的功能和彈性相同，但效能更佳。 這是因為報表伺服器會將子報表的每一個執行個體，都視為獨立的報表來處理，所以可能會影響效能。 如需詳細資訊，請參閱 [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)。  
   
 ## <a name="using-parameters-in-subreports"></a>在子報表中使用參數  
  若要從父報表傳遞參數至子報表，請在做為子報表使用的報表中定義一個報表參數。 當您在父報表中放置子報表時，您可以選取報表參數，以及要從父報表中傳遞給子報表中之報表參數的值。  
@@ -56,6 +56,6 @@ ms.locfileid: "48165328"
  在報表產生器中，若要預覽主報表中的子報表，則兩個報表都必須位在相同的報表伺服器上，或者您必須指定子報表的完整路徑。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研、 向下鑽研、 子報表和巢狀的資料區域&#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209468"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026559"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>報表模型查詢中的公式 (報表產生器及 SSRS)
   公式是針對使用報表模型做為資料來源之報表中的值來執行的計算。 公式可以包含函數、運算子、常數和對欄位或實體的參考。 公式可讓您結合、彙總、篩選以及評估數值和文字資料。 您可以建立公式，並將它們另存為新的欄位，或者，您可以修改現有欄位的公式。  
@@ -43,7 +43,7 @@ ms.locfileid: "48209468"
   
  當您使用參考時，報表處理器會針對欄位中的每個值執行公式。 例如，假設欄位包含過去五年的年度銷售總額。 此欄位會包含五個值，每個值代表給定年度的銷售總額。 如果公式包含對此欄位的參考，則公式會使用每個個別值來計算新的值。  
   
-## <a name="operators"></a>運算子  
+## <a name="operators"></a>操作員  
  運算子指定要在公式的值上執行之計算的類型。 計算運算子有三種不同的類型：算術、比較和文字。 系統會使用符號 (如加號 (+))，來表示運算子。  
   
  **算術運算子。** 算術運算子會執行基本數學運算 (例如加法、減法或乘法)、結合數字，並產生數值結果。  
@@ -53,7 +53,7 @@ ms.locfileid: "48209468"
  **文字串連運算子。** 使用連字號 (&) 來聯結或串連一個或多個文字字串，以產生單一文字片段。  
   
 ##  <a name="Constants"></a> 常數  
- 常數是一個不需要計算的值，因此也不會變更。 報表產生器會使用下列常數： `True`， `False`，和`Empty`。 這些常數用於評估 [布林] 欄位。 例如，假設您有一個名為 IsDiscontinued 的欄位。 此欄位的有效值僅為 True、False 或空白 (" ")。  
+ 常數是一個不需要計算的值，因此也不會變更。 報表產生器使用下列常數：`True`、`False` 和 `Empty`。 這些常數用於評估 [布林] 欄位。 例如，假設您有一個名為 IsDiscontinued 的欄位。 此欄位的有效值僅為 True、False 或空白 (" ")。  
   
 ##  <a name="Functions"></a> 函數  
  函數是預先定義的公式，可使用依特定順序指定的特定值 (稱為 *「引數」*(Argument)) 執行計算。 引數可以是常值或欄位，或是兩者的組合。 當公式中使用欄位時，欄位名稱代表欄位的每個執行個體。 如果引數是常值，您可能需要使用特定的字元來表示引數是常值。  
@@ -69,12 +69,12 @@ ms.locfileid: "48209468"
 |||  
 |-|-|  
 |彙總函式|`AVG`, `COUNT`, `COUNTDISTINCT`, `MAX`, `MIN`, `STDEV`, `STDEVP`, `SUM`, `VAR`, `VARP`|  
-|條件式函數|`IF`、 `IN`、 `SWITCH`|  
+|條件式函數|`IF`, `IN`, `SWITCH`|  
 |轉換函數|`INT`, `DECIMAL`, `FLOAT`, `TEXT`|  
 |日期和時間函數|`DATE`, `DATEADD`, `DATEDIFF`, `DATETIME`, `DATEONLY`, `DAY`, `DAYOFWEEK`, `DAYOFYEAR`, `HOUR`, `MINUTE`, `MONTH`, `NOW`, `QUARTER`, `SECOND`, `TIMEONLY`, `TODAY`, `WEEK`, `YEAR`|  
 |資訊函數|`GETUSERCULTURE`, `GETUSERID`|  
-|邏輯函數|`AND`、 `NOT`、 `OR`|  
-|數學函數|`MOD`、 `ROUND`、 `TRUNC`|  
+|邏輯函數|`AND`, `NOT`, `OR`|  
+|數學函數|`MOD`, `ROUND`, `TRUNC`|  
 |操作員|加 (+)、除 (/)、等於 (=)、乘冪 (^)、大於 (>)、大於或等於 (>=)、小於 (<)、小於或等於 (<=)、乘 (*)、負 (-)、不等於 (<>)、減 (-)|  
 |文字函數|`CONCAT`, `FIND`, `LEFT`, `LENGTH`, `LOWER`, `LTRIM`, `REPLACE`, `RIGHT`, `RTRIM`, `SUBSTRING`, `UPPER`|  
   

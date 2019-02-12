@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068038"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016749"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>加入具有巢狀資料表的資料來源檢視 (中繼資料採礦教學課程)
   若要建立購物籃模型，您必須使用支援關聯資料的資料來源檢視。 此資料來源檢視也會用於時序群集狀況。  
@@ -48,7 +47,7 @@ ms.locfileid: "48068038"
   
 2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
   
-3.  在上**Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]您在資料採礦基本教學課程中建立的資料來源。 按 [下一步] 。  
+3.  在上**Zdroj Dat**頁面的 **關聯式資料來源**，選取[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]您在資料採礦基本教學課程中建立的資料來源。 按一下 [下一步] 。  
   
 4.  在 **選取資料表和檢視**頁面上，選取下列資料表，然後按一下向右箭號，將它們包含在新的資料來源檢視：  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48068038"
   
     -   `vAssocSeqLineItems`  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 [**完成精靈]** 頁面上，依預設名稱的資料來源檢視是[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]。 將名稱變更為`Orders`，然後按一下**完成**。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48068038"
   
 ## <a name="see-also"></a>另請參閱  
  [中繼資料採礦教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [採礦結構&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [採礦模型&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

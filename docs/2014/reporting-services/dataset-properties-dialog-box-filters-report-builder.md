@@ -11,14 +11,14 @@ f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ff8ae37c2caf34432acde8fab2235a3b83b372a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58abc975b461c6d12778c95620eadedd4e6caf8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172148"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030219"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>資料集屬性對話方塊、篩選 (報表產生器)
   選取 **[資料集屬性]** 對話方塊上的 **[篩選]** ，即可建立資料集的篩選。  
@@ -62,6 +62,6 @@ ms.locfileid: "48172148"
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [將篩選加入資料集&#40;報表產生器及 SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

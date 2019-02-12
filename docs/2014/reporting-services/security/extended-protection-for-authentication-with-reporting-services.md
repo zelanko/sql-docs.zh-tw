@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4382ecd50979efb6877d8eb19e8aff7dc340d847
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355660"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017922"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>含有 Reporting Services 的驗證擴充保護
   「擴充保護」是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統最新版本的一組增強功能。 擴充保護會增強認證與驗證受到應用程式保護的方式。 此功能本身並不會針對認證轉送之類的特定攻擊直接提供保護，但是它會為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 之類的應用程式提供基礎結構，以增強驗證擴充保護。  
@@ -166,7 +166,7 @@ ms.locfileid: "53355660"
  [使用擴充保護連接至 Database Engine](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
  [驗證擴充保護概觀](https://go.microsoft.com/fwlink/?LinkID=177943)   
  [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft 資訊安全公告：驗證擴充的保護](https://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Microsoft 資訊安全諮詢：驗證延伸保護](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [報表伺服器服務追蹤記錄](../report-server/report-server-service-trace-log.md)   
  [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)   
  [SetExtendedProtectionSettings 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13d4141b25a194a3d2536e2ebf3246eefe659f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dc06dc9c708354e863c37d6067a2355492d4cddd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112760"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024289"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>與 2008 及 2008 R2 報表伺服器的 SharePoint 整合
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本引進了一種架構，其中 SharePoint 模式現在是以 SharePoint 共用服務為基礎。 在 SharePoint 管理中心內完成新功能的管理上**管理的服務**並**管理員服務應用程式**頁面。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]仍然支援舊版的架構為 SharePoint 整合[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]適用於 SharePoint 2010 產品，因此您可以整合舊版的報表伺服器中的 SharePoint 2010 增益集。  

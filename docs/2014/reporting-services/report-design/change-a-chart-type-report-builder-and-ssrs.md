@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c0128e6e7bb5ca0020d8dbcf34858d0f5d6bf2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085702"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037179"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>變更圖表類型 (報表產生器及 SSRS)
   當您先將圖表插入報表時，**選取圖表類型**對話方塊隨即出現。 如果您取消此對話方塊，預設會加入直條圖圖表類型。  
@@ -39,7 +39,7 @@ ms.locfileid: "48085702"
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [量測計&#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [將圖表加入至報表&#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

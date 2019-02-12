@@ -2,10 +2,8 @@
 title: sp_wait_for_database_copy_sync (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: database-engine, sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
@@ -19,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78a77ce45d4ff148e42ab375341ee521eba982da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662856"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034541"
 ---
-# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>作用中異地複寫-sp_wait_for_database_copy_sync
+# <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Active Geo-Replication - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   這個程序的範圍為主要和次要資料庫之間的 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 關聯性。 呼叫**sp_wait_for_database_copy_sync**會導致應用程式等候，直到所有認可的交易都複寫及認可作用中次要資料庫。 執行**sp_wait_for_database_copy_sync**僅在主要資料庫上。  
@@ -43,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @target_server =] 'server_name'  
+ [ @target_server = ] 'server_name'  
  主控作用中的次要資料庫的 SQL Database 伺服器名稱。 server_name 是 sysname，沒有預設值。  
   
- [ @target_database =] 'database_name'  
+ [ @target_database = ] 'database_name'  
  作用中的次要資料庫名稱。 database_name 是 sysname，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  

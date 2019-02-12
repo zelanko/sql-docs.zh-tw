@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032749"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>一般屬性頁面、共用資料集 (報表管理員)
   使用 [共用資料集] 頁面，即可檢視及管理共用資料集項目的屬性。  
@@ -25,7 +25,7 @@ ms.locfileid: "48202728"
   
  您可以使用共用資料集，從報表、元件及其他使用該資料集的目錄項目，個別管理資料集的設定。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-shared-dataset-properties-page-for-a-shared-dataset"></a>開啟共用資料集的共用資料集屬性頁面  
@@ -65,12 +65,12 @@ ms.locfileid: "48202728"
  使用位於檔案系統中 .rsd 檔案的不同資料集定義，取代共用資料集定義。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [快取重新整理選項&#40;報表管理員&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [快取頁面、 共用資料集&#40;報表管理員&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [管理共用資料集](report-data/manage-shared-datasets.md)   
- [快取共用資料集&#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [快取共用資料集 &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

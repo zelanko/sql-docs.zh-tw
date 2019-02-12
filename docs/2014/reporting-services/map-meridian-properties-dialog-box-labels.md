@@ -12,14 +12,14 @@ f1_keywords:
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6b41dd0e97f8a729d2c58b7fd6b8f0d443fe9c3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115752"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015011"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>地圖經線屬性對話方塊、標籤
   使用**MapMeridian 屬性**對話方塊來變更地圖檢視區中垂直格線的標籤選項。 根據指定之檢視區的座標系統，經線表示下列值：  
@@ -31,7 +31,7 @@ ms.locfileid: "48115752"
  按一下 **[運算式]** (*fx*) 按鈕來編輯設定選項值的運算式。  
   
 ## <a name="options"></a>選項。  
- **間隔**  
+ **Interval**  
  輸入指定經線之間間隔的整數值 (以度數為單位)。 根據預設，會選取 **[自動]** 。 **[自動]** 表示此值由空間資料自動決定。  
   
  **顯示標籤**  

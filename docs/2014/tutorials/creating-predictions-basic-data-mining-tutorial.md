@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0001b04a93c1aacfbf2e7701faada815cb6316ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515450"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035259"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>建立預測 (基本資料採礦教學課程)
   您已測試好採礦模型的精確度，並決定您滿意結果之後，您可以上使用預測查詢產生器，然後產生預測**採礦模型預測**在資料採礦 索引標籤設計工具。  
@@ -133,7 +132,7 @@ ms.locfileid: "52515450"
   
      在所選該行的開頭插入左括號，或在目前該行的結尾插入右括號。  
   
--   **和 （或)**  
+-   **AND/OR**  
   
      在目前的函數或資料行的正後方插入 `AND` 運算子或 `OR` 運算子。  
   

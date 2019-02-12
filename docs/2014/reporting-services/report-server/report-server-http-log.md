@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b990f4a2dbf321b20d9d8e45ecf13b3ede47987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147868"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031369"
 ---
 # <a name="report-server-http-log"></a>報表伺服器 HTTP 記錄
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器 HTTP 記錄檔會保留報表伺服器所處理之每個 HTTP 要求與回應的記錄。 由於要求溢位和逾時錯誤不會送達報表伺服器，因此它們不會記錄在記錄檔中。  
@@ -55,7 +55,7 @@ ms.locfileid: "48147868"
 ```  
   
 ## <a name="log-file-fields"></a>記錄檔欄位  
- 下表將描述記錄中提供的欄位。 此欄位清單是可設定;您可以指定要透過包含的欄位`HTTPTraceSwitches`組態設定。 **預設**資料行可讓您指定是否欄位會包含在記錄檔自動是否您未指定`HTTPTraceSwitches`。  
+ 下表將描述記錄中提供的欄位。 此欄位清單是可設定的。您可以透過 `HTTPTraceSwitches` 組態設定，指定要包含的欄位。 **預設**資料行可讓您指定是否欄位會包含在記錄檔自動是否您未指定`HTTPTraceSwitches`。  
   
 |欄位|描述|預設|  
 |-----------|-----------------|-------------|  
@@ -82,6 +82,6 @@ ms.locfileid: "48147868"
 ## <a name="see-also"></a>另請參閱  
  [報表伺服器服務追蹤記錄](report-server-service-trace-log.md)   
  [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)   
- [錯誤和事件參考&#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [錯誤和事件參考 &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

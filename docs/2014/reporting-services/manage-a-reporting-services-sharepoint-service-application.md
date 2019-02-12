@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135140"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016259"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 從 SharePoint 管理中心進行管理服務應用程式。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式是從 SharePoint 管理中心進行管理。 [管理] 和 [屬性] 頁面可讓您更新服務應用程式的組態以及常見的管理工作。  
   
  本主題涵蓋下列資訊：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48135140"
   
 2.  在您的服務應用程式名稱附近按一下，或按一下 **[類型]** 資料行選取整個資料列，然後按一下 SharePoint 功能區中的 **[屬性]** 。  
   
- 如需有關服務應用程式屬性的詳細資訊，請參閱＜ [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)＞。  
+ 如需有關服務應用程式屬性的詳細資訊，請參閱[步驟 3:建立 Reporting Services 服務應用程式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)中的＜服務應用程式＞一節。  
   
 ##  <a name="bkmk_openpages"></a> 開啟服務應用程式管理頁面  
  若要開啟 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面，請完成下列步驟：  
@@ -91,10 +91,10 @@ ms.locfileid: "48135140"
   
 |設定|註解|  
 |-------------|--------------|  
-|啟用執行記錄|預設值是 TRUE。<br /><br /> 指定報表伺服器是否產生追蹤記錄以及這些記錄的保存天數。 . 記錄會儲存在報表伺服器電腦的下列資料夾中：\Microsoft SQL Server\MSSQL.n\ReportServer\Log。 每次服務重新啟動時，就會啟動新的記錄。 如需有關記錄檔的詳細資訊，請參閱[報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)|  
+|啟用執行記錄|預設值是 TRUE。<br /><br /> 指定報表伺服器是否產生追蹤記錄以及這些記錄的保存天數。 . 記錄會儲存在報表伺服器電腦的下列資料夾中：\Microsoft SQL Server\MSSQL.n\ReportServer\Log。 每次服務重新啟動時，就會啟動新的記錄。 如需有關記錄檔的詳細資訊，請參閱＜ [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)＞|  
 |執行記錄保留天數|預設值是 60 天。|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱[開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 全都支援 SharePoint ULS 記錄。  如需詳細資訊，請參閱 [開啟 SharePoint 追蹤記錄的 Reporting Services 事件 &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ###  <a name="bkmk_security_settings_section"></a> 安全性設定  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48135140"
   
 |頁面|描述|  
 |----------|-----------------|  
-|備份加密金鑰|1) 在 [密碼:] 與 [確認密碼:] 方塊中鍵入密碼，然後按一下 [匯出]。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應該考慮將儲存於正在執行的另一個不同的電腦上的金鑰檔[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
+|備份加密金鑰|1) 在 [密碼:] 與 [確認密碼:] 方塊中鍵入密碼，然後按一下 [匯出]。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
 |還原加密金鑰|1) 在 [檔案位置] 方塊中鍵入或瀏覽至金鑰檔。<br /><br /> 2) 在 [密碼] 方塊中，鍵入要用來備份加密檔案的密碼。<br /><br /> 3) 按一下 [確定]。|  
 |變更加密金鑰|這項作業將建立新的金鑰，並且重新加密已加密的內容。 如果您擁有許多內容，這項作業可能需要數小時才能完成。<br /><br /> 變更加密金鑰作業完成時，建議您製作新金鑰的備份。|  
 |刪除加密的內容|刪除的內容無法復原。<br /><br /> **\*\* 重要事項 \*\*** 刪除和重新建立對稱金鑰的動作無法反轉或恢復。 刪除或重新建立金鑰可能會對您目前的安裝造成重大的影響。 如果您刪除金鑰，將會一併刪除對稱金鑰所加密的任何現有資料。 刪除的資料包括外部報表資料來源的連接字串、預存連接字串和一些訂閱資訊。|  
@@ -154,7 +154,7 @@ ms.locfileid: "48135140"
 Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
 ```  
   
- 如需詳細資訊，請參閱 < [Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+ 如需詳細資訊，請參閱 [Reporting Services SharePoint 模式適用的 PowerShell Cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ### <a name="options"></a>選項。  
  **指定執行帳戶**  
@@ -192,7 +192,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
 2.  在 [服務應用程式關聯] 頁面上，將檢視切換至 **[服務應用程式]**。  
   
-3.  尋找並按一下您新的名稱[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 您也可以按一下應用程式 Proxy 群組名稱 **default** ，將 Proxy 加入至預設群組，而不要完成下列步驟。  
+3.  尋找並按一下新的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的名稱。 您也可以按一下應用程式 Proxy 群組名稱 **default** ，將 Proxy 加入至預設群組，而不要完成下列步驟。  
   
 4.  在 **[編輯下列連線群組]** 選取方塊中選取 **[自訂]**。  
   

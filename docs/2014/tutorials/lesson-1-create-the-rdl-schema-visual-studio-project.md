@@ -1,22 +1,21 @@
 ---
-title: 第 1 課： 建立 RDL 結構描述 Visual Studio 專案 |Microsoft Docs
+title: 第 1 課：建立 RDL 結構描述 Visual Studio 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fdf146743a74ff3e546072287848b033f365bc8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187328"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018909"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 課：建立 RDL 結構描述 Visual Studio 專案
   在這個教學課程中，您會建立簡單的主控台應用程式。 本教學課程假設您正在開發中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
@@ -198,7 +197,7 @@ ms.locfileid: "48187328"
     ```  
   
 ## <a name="next-lesson"></a>下一課  
- 在下一課，您將使用 XML 結構描述定義工具 (Xsd.exe)，從 RDL 結構描述產生類別，並將類別包含在專案之中。 請參閱[第 2 課： 使用 xsd 工具的 RDL 結構描述的產生類別](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
+ 在下一課，您將使用 XML 結構描述定義工具 (Xsd.exe)，從 RDL 結構描述產生類別，並將類別包含在專案之中。 請參閱[第 2 課：使用 xsd 工具的 RDL 結構描述產生類別](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

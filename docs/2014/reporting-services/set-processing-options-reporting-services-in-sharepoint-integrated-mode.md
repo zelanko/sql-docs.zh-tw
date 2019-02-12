@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f89a84f8e003063883d711f8908ac619d50e93df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: acf439342cb1f24a8356e51a1a0c3f339a3a36ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398666"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042979"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
   您可以對 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表設定處理選項，以指定資料開始處理的時間。 您還可以設定報表處理的逾時值，以及決定是否要啟用目前報表之報表記錄的選項。  

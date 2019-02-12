@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192138"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031980"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>資料來源屬性頁面 (報表管理員)
   使用 [資料來源] 屬性頁，即可定義目前的報表如何連接到外部資料來源。 您可以覆寫原先隨同報表發行的資料來源連線資訊。 如果報表使用多重資料來源，則每一個資料來源在屬性頁中各有它自己的區段。 資料來源依其報表中定義的排序來列示。  
   
  指定報表使用的資料來源時，可以使用共用資料來源，共用資料來源可與使用它的報表分開來建立和管理。 如果不要使用共用資料來源項目，您就可以定義報表使用的資料來源連接。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-data-sources-properties-page"></a>若要開啟資料來源屬性頁面  
@@ -67,17 +67,17 @@ ms.locfileid: "48192138"
  **執行報表的使用者所提供的認證**  
  每一位使用者都必須輸入使用者名稱和密碼，才可以存取資料來源。 您可以定義要求使用者認證的提示文字。 預設的文字字串是「請輸入使用者名稱和密碼以存取資料來源」。  
   
- 如果使用者提供的認證是 Windows 驗證認證，請選取 [連接到資料來源時作為 Windows 認證]  。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
+ 如果使用者提供的認證是 Windows 驗證認證，請選取 [連接到資料來源時作為 Windows 認證]  。 如果您是使用資料庫驗證 (例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證)，請勿選取此核取方塊。  
   
  **安全地儲存在報表伺服器的認證**  
  在報表伺服器資料庫中儲存加密的使用者名稱和密碼。 選取此選項即可自動執行報表 (例如，由排程或事件起始而不是由使用者的動作起始的報表)。 如果您要使用預設安全性，使用者名稱就必須是 Windows 網域帳戶。 以此格式指定帳戶：\<網域 >\\< 使用者名稱\>。 您所指定的帳戶必須在主控報表所使用之資料來源的電腦上擁有本機登入權限。  
   
- 如果認證是 Windows 驗證認證，請選取 **[連接到資料來源時作為 Windows 認證]** 。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
+ 如果認證是 Windows 驗證認證，請選取 **[連接到資料來源時作為 Windows 認證]** 。 如果您是使用資料庫驗證 (例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證)，請勿選取此核取方塊。  
   
- 請選取 **[連接到資料來源後，模擬已驗證的使用者]** 以便允許認證的委派，但是只有在資料來源支援模擬時才應該選取此選項。 針對[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，此選項會設定 SETUSER 函數。  
+ 請選取 **[連接到資料來源後，模擬已驗證的使用者]** 以便允許認證的委派，但是只有在資料來源支援模擬時才應該選取此選項。 針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，此選項會設定 SETUSER 函數。  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]只支援 Windows 帳戶認證。 選項"作為 Windows 認證連接到資料來源時"和"後，模擬已驗證的使用者已連接到資料來源 」 的同時，因此選取[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]只支援 Windows 帳戶認證。 因此，若為 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源，請選取 [連接到資料來源時作為 Windows 認證] 和 [連接到資料來源後，模擬已驗證的使用者] 這兩個選項。  
   
  **Windows 整合式的安全性**  
  使用目前使用者的 Windows 認證來存取資料來源。 當用來存取資料來源的認證與用來登入網路網域的認證相同時，請選取此選項。 在針對網域啟用 Kerberos 驗證時，或者資料來源與報表伺服器是在同一部電腦上時，此選項具有最佳的效能。 若未啟用 Kerberos，Windows 認證可以傳送至其他電腦。 如果需要其他電腦連線，您會收到錯誤而不是預期的資料。  

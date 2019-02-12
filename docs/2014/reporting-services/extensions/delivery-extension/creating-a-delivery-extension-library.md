@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77d98f92747741f80c8a0af613ecc93f7647c5af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca393776d712eabea11eab07c08fa505105363c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017169"
 ---
 # <a name="creating-a-delivery-extension-library"></a>建立傳遞延伸模組程式庫
   每個您建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 傳遞延伸模組都應該指派到唯一的命名空間，並內建於程式庫或是組件檔中。 命名空間的正確名稱並不重要，但是它必須是唯一且未與其他延伸模組共用。 您應該為公司的傳遞延伸模組建立自己的唯一命名空間。  

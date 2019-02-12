@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146738"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016809"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>瀏覽群集模型 (基本資料採礦教學課程)
   [!INCLUDE[msCoName](../includes/msconame-md.md)]群集演算法會將案例分成包含類似特性的群集。 這些群集對於瀏覽資料、識別資料的異常及建立預測很有幫助。  

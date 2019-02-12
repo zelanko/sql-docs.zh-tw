@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082828"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043269"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>頁面配置和轉譯 (報表產生器及 SSRS)
   當您撰寫報表時，最好了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 轉譯器的行為以確保經過轉譯的報表看起來是您想要的方式，包括頁面配置與分頁。 您也可能想要確認經過轉譯的報表是否符合您或組織常用的紙張大小。  
@@ -49,14 +49,14 @@ ms.locfileid: "48082828"
 ##  <a name="RenderingExtensions"></a> 轉譯器  
  Reporting Services 包含一組轉譯器 (也稱為轉譯延伸模組)，您可以使用這組轉譯器將報表匯出為不同的格式。 轉譯器有三種類型：  
   
--   **資料轉譯器** ：資料轉譯器會從報表移除所有格式與版面配置資訊，而僅顯示資料。 所產生的檔案可用於將原始報表資料匯入到其他檔案類型 (例如，Excel)、其他資料庫、XML 資料訊息，或是自訂應用程式。 可用的資料轉譯器為：CSV 和 XML。  
+-   **資料轉譯器** ：資料轉譯器會從報表移除所有格式與版面配置資訊，而僅顯示資料。 所產生的檔案可用於將原始報表資料匯入到其他檔案類型 (例如，Excel)、其他資料庫、XML 資料訊息，或是自訂應用程式。 可用的資料轉譯器是：CSV 和 XML。  
   
     > [!NOTE]  
     >  雖然它不提供直接匯出為不同格式的功能，但是 Atom 轉譯會從報表產生資料檔。  
   
--   **軟分頁轉譯器** ：軟分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合使用螢幕檢視與傳遞，例如，使用網頁。 可用的軟分頁符號轉譯器為： [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 網頁封存 (MHTML)，和 HTML。  
+-   **軟分頁轉譯器** ：軟分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合使用螢幕檢視與傳遞，例如，使用網頁。 可用的軟分頁符號轉譯器是：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、 網頁封存 (MHTML)，和 HTML。  
   
--   **手動分頁轉譯器** ：手動分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合一致的列印結果，或者以書本格式線上檢視報表。 支援的可用手動分頁轉譯器為：TIFF 和 PDF。  
+-   **手動分頁轉譯器** ：手動分頁轉譯器會維持報表的版面配置和格式。 所產生的檔案最適合一致的列印結果，或者以書本格式線上檢視報表。 可用的手動分頁符號轉譯器支援：TIFF 和 PDF。  
   
  當您在報表產生器或報表設計師中預覽報表，或在報表管理員中執行報表時，報表一定會先以 HTML 轉譯。 在執行報表後，您可以將它匯出為其他的檔案格式。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
   
@@ -95,33 +95,33 @@ ms.locfileid: "48082828"
 ##  <a name="HowTo"></a> 如何主題  
  本節列出的程序可以為您逐步示範如何在報表中使用分頁。  
   
--   [加入分頁符號&#40;報表產生器及 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [加入分頁符號 &#40;報表產生器及 SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [多個頁面上顯示資料列和資料行標頭&#40;報表產生器及 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [在多個頁面上顯示資料列和資料行標頭 &#40;報表產生器及 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [新增或移除頁首或頁尾&#40;報表產生器及 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [加入或移除頁首或頁尾 &#40;報表產生器及 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [標頭保持可見的報表中捲動時&#40;報表產生器及 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [在報表中捲動時將標頭保持可見 &#40;報表產生器及 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [顯示頁碼或其他報表屬性&#40;報表產生器及 SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [顯示頁碼或其他報表屬性 &#40;報表產生器及 SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [隱藏頁首或頁尾的第一個或最後一頁&#40;報表產生器及 SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [隱藏第一頁或最後一頁的頁首或頁尾 &#40;報表產生器及 SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
 ##  <a name="InThisSection"></a> 本節內容  
  下列主題提供有關頁面配置與轉譯的其他資訊。  
   
- [頁首和頁尾&#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  提供有關如何在報表中使用頁首與頁尾，以及如何使用頁首與頁尾控制分頁的資訊。  
   
- [控制分頁符號、 標題、 資料行和資料列&#40;報表產生器及 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [控制分頁符號、標題、資料行和資料列 &#40;報表產生器及 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  提供有關使用分頁符號的資訊。  
   
   
   
 ## <a name="see-also"></a>另請參閱  
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

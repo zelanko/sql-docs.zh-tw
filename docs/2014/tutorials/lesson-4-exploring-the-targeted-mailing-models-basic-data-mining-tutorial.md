@@ -1,24 +1,23 @@
 ---
-title: 第 4 課： 探索目標的郵寄模型 （基本資料採礦教學課程） |Microsoft Docs
+title: 第 4 課：探索目標的郵寄模型 （基本資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147310"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039899"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 課：探索目標郵寄模型 (基本資料採礦教學課程)
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 課：探索目標的郵寄模型 （基本資料採礦教學課程）
   處理完專案中的模型之後，您可以瀏覽模型來尋找值得參考的趨勢。 由於模式光看數字可能相當複雜且難以上手，SQL Server 資料採礦提供了一些視覺化工具，可協助您調查資料及了解演算法在資料內探索到的規則和關聯性。 您也可以使用各種精確度測試，在部署模型之前驗證您的資料集或找出執行能力最佳的模型。  
   
  當您使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]瀏覽模型，您所建立的每個模型中列為**採礦模型檢視器**資料採礦設計師中的索引標籤。 您可以使用檢視器瀏覽模型。 這些檢視器也可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用。  
@@ -49,10 +48,10 @@ ms.locfileid: "48147310"
  [瀏覽決策樹模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>上一課  
- [第 3 課：新增及處理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [第 3 課：加入及處理模型](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 5 課： 測試模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [第 5 課：測試模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和使用說明](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

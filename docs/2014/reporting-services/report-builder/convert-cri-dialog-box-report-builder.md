@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2a3f2ac6-667e-4498-8b73-9c40beb993f5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 871f16c520d6682de0afb384577c17c096cdf18a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 40828dd4e7767688a329b641610a65dc0f3493c1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150418"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018200"
 ---
 # <a name="convert-cri-dialog-box-report-builder"></a>轉換 CRI 對話方塊 (報表產生器)
   此報表包含自訂報表項目 (CRI) 與不支援的功能。 CRI 是報表定義語言 (RDL) 的延伸模組，支援在報表中顯示資料的自訂物件。 CRI 包括軟體協力廠商所提供的設計階段和執行階段元件。  
@@ -31,7 +31,7 @@ ms.locfileid: "48150418"
   
  某些 CRI 可以轉換成新報表定義格式的報表項目。 當您開啟報表時，系統會提示您是否要升級。 您可以使用下列資訊來決定是否要轉換此報表中的 CRI：  
   
--   **是** ：選擇 **[是]** ，在可能的情況下轉換報表中的所有 CRI。 在 CRI 中不支援的功能無法升級，而且會從報表定義檔案中移除。 不支援的功能清單，請參閱[升級報表](../install-windows/upgrade-reports.md)。 檢視報表時，您可能會看到 CRI 在報表中顯示的方式有些差異。  
+-   **是** ：選擇 **[是]** ，在可能的情況下轉換報表中的所有 CRI。 在 CRI 中不支援的功能無法升級，而且會從報表定義檔案中移除。 如需不支援的功能清單，請參閱 [升級報表](../install-windows/upgrade-reports.md)。 檢視報表時，您可能會看到 CRI 在報表中顯示的方式有些差異。  
   
 -   **否** ：當您不要轉換報表中的 CRI 時，選擇 **[否]** 。 這些 CRI 無法透過報表處理器顯示在其目前的版本中。 如果您的系統管理員打算安裝軟體協力廠商所提供，而且與新報表定義格式相容的新版 CRI，您應該選擇 **[否]**。 在新版本提供之前，CRI 會在報表中顯示為一個有紅色 X 的空文字方塊。  
   
@@ -44,6 +44,6 @@ ms.locfileid: "48150418"
  若要識別報表、報表伺服器或您報表撰寫環境的目前報表定義格式，請參閱[尋找報表定義結構描述版本 &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、 窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

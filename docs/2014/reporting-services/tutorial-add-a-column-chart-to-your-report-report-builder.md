@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將直條圖新增至報表 (報表產生器) | Microsoft Docs
+title: 教學課程：將直條圖加入至報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ee60121e4356b8b54a943ab7373fafd504e5778f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104128"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026765"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 （報表產生器）
   直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 直條圖可用於：  
   
 -   顯示一段時間的資料變更。  
@@ -53,7 +53,7 @@ ms.locfileid: "48104128"
 9. [儲存報表](#Save)  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、選擇資料來源以及建立資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器的逐步指示，選擇資料來源，並建立資料集，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  完成本教學課程的估計時間：15 分鐘。  
   
@@ -111,20 +111,20 @@ ms.locfileid: "48104128"
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您圖表所依據的資料。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 ##  <a name="ChartType"></a> 2.選擇圖表類型  
  您可以選擇各種不同預先定義的圖表類型。  
   
 #### <a name="to-add-a-column-chart"></a>加入直條圖  
   
-1.  在 [選擇圖表類型] 頁面上，直條圖是預設圖表類型。 按 [下一步] 。  
+1.  在 [選擇圖表類型] 頁面上，直條圖是預設圖表類型。 按一下 [下一步] 。  
   
 2.  在 [排列圖表欄位] 頁面上，將 [SalesDate] 欄位拖曳至 [類別目錄]。 類別目錄會顯示在水平軸上。  
   
 3.  將 [Sales] 欄位拖曳至 [值]。 [值] 方塊會顯示 [Sum(Sales)]，因為系統會針對每個日期彙總銷售總計值的總和。 值會顯示在垂直軸上。  
   
-4.  按 [下一步] 。  
+4.  按一下 [下一步] 。  
   
 5.  在 [**選擇樣式**] 頁面上，在 [樣式] 方塊中，選取樣式。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "48104128"
   
 1.  切換到報表設計檢視。  
   
-2.  選取的詞彙**圖表標題**在上方的圖表，然後輸入下列文字：**商店銷售訂單總計**。  
+2.  選取的詞彙**圖表標題**在上方的圖表，然後輸入下列文字：**儲存銷售訂單總計**。  
   
 3.  按一下 **[執行]** 預覽報表。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48104128"
   
 9. 以滑鼠右鍵按一下圖表的側邊的垂直軸標題，然後按一下 **軸標題屬性**。  
   
-10. 中的文字替換**標題文字**欄位包含下列文字：**銷售總計 （以千為單位）**。 您也可以指定各種有關如何格式化標題的選項。  
+10. 中的文字替換**標題文字**欄位包含下列文字：**（以千為單位） 的銷售總額**。 您也可以指定各種有關如何格式化標題的選項。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -267,7 +267,7 @@ ms.locfileid: "48104128"
   
  圖表會顯示一條線，代表依照日期區分之總銷售量的移動平均 (每四個日期的平均)。  
   
-##  <a name="Title"></a> 8。加入報表標題  
+##  <a name="Title"></a> 8.加入報表標題  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
   
@@ -291,7 +291,7 @@ ms.locfileid: "48104128"
   
 7.  按一下 **[執行]** 預覽報表。  
   
-##  <a name="Save"></a> 9。儲存報表  
+##  <a name="Save"></a> 9.儲存報表  
   
 #### <a name="to-save-the-report"></a>若要儲存報表  
   
@@ -301,7 +301,7 @@ ms.locfileid: "48104128"
   
 3.  在 [名稱] 中，鍵入 **Sales Order Column Chart**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
 ## <a name="next-steps"></a>後續步驟  
  您已成功完成「將直條圖加入至報表」教學課程。 若要深入了解圖表，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) 和[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)。  

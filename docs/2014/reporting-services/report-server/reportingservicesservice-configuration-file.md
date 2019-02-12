@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2029cd6fd95916b71ee673713978a1fe3a1ccd36
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 15bac4bb872e1fb3fc42fb62cf355f53358442b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082538"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014569"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 組態檔
   ReportingServicesService.exe.config 檔包括設定追蹤的設定。  
@@ -29,7 +29,7 @@ ms.locfileid: "48082538"
  此檔案位於 \Reporting Services\Report Server\Bin 資料夾中。  
   
 ## <a name="editing-guidelines"></a>編輯指導方針  
- 您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需有關追蹤記錄檔的詳細資訊，請參閱 <<c0> [ 報表伺服器服務追蹤記錄](report-server-service-trace-log.md)。  
+ 您可以修改此檔案以重新命名記錄檔，或者增加或減少追蹤層級。 請勿修改其他任何設定。 如需指示，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>範例組態  
  下列範例顯示 ReportingServicesService.exe.config 檔中的設定和預設值。  

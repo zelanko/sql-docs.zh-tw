@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2e0e54fa296c0b6dbea76b175c0b0762dddf1cb0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 13275d0a3a2070c7fd57d65a67d083af06c00af3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366660"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018130"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Avg 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的平均值 (在給定範圍中評估)。  

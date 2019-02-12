@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 792e3e8eb7e27f41aa03523d93dba02379213a17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372970"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025409"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>建立用於撥接中心模型的預測 (中繼資料採礦教學課程)
   現在您已經了解排班、操作員數目、電話，以及服務等級之間的互動關係，接著就可以準備建立一些用來進行商務分析和規劃的預測查詢。 您將先針對探勘模型建立一些預測，以測試一些假設。 接著您將使用羅吉斯迴歸模型建立大量預測。  

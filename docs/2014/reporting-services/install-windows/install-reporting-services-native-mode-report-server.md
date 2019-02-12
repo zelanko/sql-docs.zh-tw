@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f3b68f816594d275f48723865c7497f5352fbb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: f0c52d22f9592d149f25f6ae8a6de2813dfcba1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527713"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043289"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安裝 Reporting Services 原生模式報表伺服器
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式報表伺服器可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令列安裝。 在安裝精靈中，您也可以選擇 1) 安裝檔案並以預設值設定伺服器，或 2) 僅安裝檔案但不要由安裝精靈設定伺服器。 本主題檢閱 *「原生模式的預設組態」* (Default Configuration for Native Mode)，其中安裝程式會安裝及設定報表伺服器執行個體。 當安裝程式完成之後，報表伺服器會執行及備妥使用。 原生模式報表伺服器會當做獨立的應用程式伺服器來執行。 原生模式為預設伺服器模式。  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f8c3926da14f0b00c0b62b8dd8597867186d0bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51bb27870d2455e9d7c79cd15a4a26ed790cde56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206078"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027559"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>設定 GetProperties 方法的項目命名空間
   您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 <xref:ReportService2010.ItemNamespaceHeader> SOAP 標頭，根據兩個不同的項目識別碼來擷取項目屬性：項目的完整路徑或是項目的識別碼。  

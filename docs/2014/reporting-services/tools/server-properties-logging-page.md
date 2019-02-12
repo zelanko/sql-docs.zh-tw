@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 29331f12c0eeb713f36999df239069e4e56c359e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf85b6fbc2bccab8061ef227b5d0fb10de825477
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082458"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015464"
 ---
 # <a name="server-properties-logging-page"></a>伺服器屬性 (記錄頁面)
   使用此頁面，即可對報表伺服器所收集的報表執行資料設定限制。 執行資料會儲存在報表伺服器資料庫內部。 您可以針對以原生模式或 SharePoint 整合模式執行的報表伺服器追蹤報表活動。 如果報表伺服器屬於向外延展部署的一部分，報表執行記錄就會在單一記錄檔中維護整個部署之所有報表活動的記錄。  

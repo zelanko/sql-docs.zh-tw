@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 062d7c811f0d2201fd1a0954005860a95511fb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: aaeee6b11a4eac966efd18fc61fbf68ffc18df9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014529"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Building Applications Using the Web Service and the .NET Framework
   透過 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]，您可以使用熟悉的程式設計建構，例如方法、基本類型以及使用者定義的複雜類型，來使用 Web 服務。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 包含您可用以建立 Web 服務用戶端的基礎結構與工具，而這些用戶端可呼叫任何全球資訊網協會 (W3C) 符合標準的 Web 服務。  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 05ea4e197a727db6afffeedc3c26be676e358f73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101058"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040779"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端執行的頁首和頁尾。 在您加入頁首或頁尾之後，就可以選擇性地隱藏報表第一頁和最後一頁的頁首或頁尾。  
@@ -49,8 +49,8 @@ ms.locfileid: "48101058"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [頁首和頁尾&#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [頁首和頁尾 &#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [新增或移除頁首或頁尾&#40;報表產生器及 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [加入或移除頁首或頁尾 &#40;報表產生器及 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

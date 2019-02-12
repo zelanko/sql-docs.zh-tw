@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 23898fcc3ae33fa24e0cac035cca4ed177a3e8e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2cf5c9b37fbf6e5d213d35ec9837943e2dfb95ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188678"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020260"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 錯誤的原因和解決方案
   本主題包含數個與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相關之錯誤的原因和解決方案資訊。 本節中的錯誤訊息主題提供錯誤訊息的說明、可能的原因，以及您可以採取哪些動作以更正問題。  
@@ -35,10 +35,10 @@ ms.locfileid: "48188678"
 |[rsProcessingError - Reporting Services 錯誤](rsprocessingerror-reporting-services-error.md)|報表處理時發生錯誤。|  
 |[rsServerConfigurationError - Reporting Services 錯誤](rsserverconfigurationerror-reporting-services-error.md)|報表伺服器發生組態錯誤。|  
 |[rrRenderingError - Reporting Services 錯誤](rrrenderingerror-reporting-services-error.md)|轉譯報表期間發生錯誤。 (rrRenderingError) %1。|  
-|[報表伺服器 Windows 服務&#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|報表伺服器 Windows 服務 (MSSQLSERVER) 無法連接到報表伺服器資料庫。|  
+|[報表伺服器 Windows 服務 &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|報表伺服器 Windows 服務 (MSSQLSERVER) 無法連接到報表伺服器資料庫。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)   
- [錯誤和事件參考&#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
+ [錯誤和事件參考 &#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
   
   

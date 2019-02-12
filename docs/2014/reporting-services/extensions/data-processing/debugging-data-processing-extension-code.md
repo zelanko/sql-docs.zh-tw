@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ae167ee18dd7fe3c511f758493f891e5303c24fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b7418b2118e42217150605521d121123b8582a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092948"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034059"
 ---
 # <a name="debugging-data-processing-extension-code"></a>偵錯資料處理延伸模組程式碼
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供數個偵錯工具，可協助您分析資料處理延伸模組程式碼，並尋找其中的錯誤。 效果最好的工具將視您嘗試要完成的項目而定。 此範例會使用 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]。  
@@ -30,7 +30,7 @@ ms.locfileid: "48092948"
   
 1.  啟動 [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]，並開啟您的資料處理延伸模組專案。  
   
-2.  建立專案，然後將資料處理延伸模組組件與隨附的 .pdb 檔案，部署到報表設計師。 如需部署的詳細資訊，請參閱[如何：將資料處理延伸模組部署到報表設計師](deploying-a-data-processing-extension-to-report-designer.md)。  
+2.  建立專案，然後將資料處理延伸模組組件與隨附的 .pdb 檔案，部署到報表設計師。 如需有關部署的詳細資訊，請參閱[How to:將資料處理延伸模組部署到報表設計師](deploying-a-data-processing-extension-to-report-designer.md)。  
   
 3.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中開啟新的 [報表專案]，同時在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的個別視窗中，將資料處理延伸模組程式碼保持在開啟的狀態。  
   

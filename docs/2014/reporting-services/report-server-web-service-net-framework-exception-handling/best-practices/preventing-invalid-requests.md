@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d165b4137c8deb0afb232d58f0e19bb183ddf860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 85556b6ec616d16962214b1737fcc445b54d0801
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098748"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019679"
 ---
 # <a name="preventing-invalid-requests"></a>防止無效的要求
   您可以防止擲回某些類型的例外狀況，方法是分析應用程式流程，並確保傳送到報表伺服器的要求是有效的。 例如，在可讓使用者加入或更新報表名稱、資料來源或是其他報表伺服器項目的應用程式中，您應該驗證使用者可能輸入的文字。 傳送要求到報表伺服器之前，請務必檢查保留字元。 請使用 **if** 條件陳述式或程式碼中的其他邏輯建構來警示使用者，告知使用者他們未符合傳送要求到報表伺服器所需的條件。  

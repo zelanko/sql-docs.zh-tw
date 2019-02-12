@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042761"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>建立資料來源檢視 (基本資料採礦教學課程)
   資料來源檢視建立在資料來源之上，而且會定義一個資料子集，然後您可以在採礦結構中使用該資料子集。 您也可以使用資料來源檢視加入資料行、建立導出資料行與彙總，以及加入具名檢視。 您可以使用資料來源檢視，在不修改原始資料來源的情況下，選取與專案相關的資料、建立資料表之間的關聯性，以及修改資料的結構。 如需詳細資訊，請參閱 [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
@@ -27,7 +26,7 @@ ms.locfileid: "48051338"
   
 2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
   
-3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按一下 [下一步] 。  
   
     > [!NOTE]  
     >  如果您想要建立資料來源，以滑鼠右鍵按一下**資料來源**，然後按一下**新的資料來源**來啟動資料來源精靈。  
@@ -38,7 +37,7 @@ ms.locfileid: "48051338"
   
     -   **vTargetMail (dbo)** -有關過去自行車買主的歷程記錄資料檢視  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 [**完成精靈]** 頁面上，預設的資料來源檢視名為 Adventure Works DW 2012。 將名稱變更為`Targeted Mailing`，然後按一下**完成**。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "48051338"
  [建立資料來源&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課： 建立目標的郵寄結構&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [第 2 課：建立目標的郵寄結構&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [定義資料來源檢視&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [定義資料來源檢視 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
   

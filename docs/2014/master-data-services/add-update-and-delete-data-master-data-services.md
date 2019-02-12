@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: leolimsft
-ms.author: douglasl
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6751dcfca820fcd7bdcdf73ff6979e572c7159fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f20eef9609bbede00c6503f681620763216d3a15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066588"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020089"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>加入、更新及刪除資料 (Master Data Services)
   您可以將大量資料加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的模型中，也可對模型中的資料進行大量變更。  
@@ -71,7 +71,7 @@ ms.locfileid: "48066588"
   
 6.  依據商務規則驗證資料。  
   
-     在主資料管理員中，瀏覽至模型的 **Explorer** 功能區域，然後套用商務規則，以驗證資料。 如需詳細資訊，請參閱[根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 您也可以使用預存程序來驗證資料。 如需詳細資訊，請參閱[驗證預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)。  
+     在主資料管理員中，瀏覽至模型的 **Explorer** 功能區域，然後套用商務規則，以驗證資料。 如需詳細資訊，請參閱[根據商務規則驗證特定成員 &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)。 您也可以使用預存程序來驗證資料。 如需詳細資訊，請參閱 [驗證預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)。  
   
      當您從暫存資料表載入資料時，不會自動依商務規則驗證該資料。 如需何謂驗證和其發生時機的詳細資訊，請參閱[驗證 &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)。  
   

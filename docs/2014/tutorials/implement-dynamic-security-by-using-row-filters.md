@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c70d749a560ff5dcc39d36d84e8c9ff09b44894f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404193"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041049"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>使用資料列篩選器實作動態安全性
   在這個補充課程中，您將建立實作動態安全性的其他角色。 動態安全性提供以使用者目前登入的使用者名稱或登入識別碼為主的資料列層級安全性。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
@@ -86,10 +85,10 @@ ms.locfileid: "52404193"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
-    |1|3|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
-    |2|4|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
-    |3|5|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
+    |1|2|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<domain\username>|  
+    |1|3|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<domain\username>|  
+    |2|4|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<domain\username>|  
+    |3|5|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<domain\username>|  
   
 3.  在新的工作表中，將 first name、last name 和 domain\username 取代為您組織中三個使用者的姓名和登入識別碼。 在 Employee Id 1 的前兩個資料列中放入相同的使用者。 這樣表示這個使用者屬於多個銷售地區。 Employee Id 和 Sales Territory Id 欄位保持不變。  
   

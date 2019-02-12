@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057643"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020370"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>轉譯資料區 (報表產生器及 SSRS)
   除了適用於所有報表項目的一般轉譯行為之外，資料區也擁有所遵循的其他分頁與轉譯行為。 資料區域特定的轉譯規則包括如何擴展資料區域；如何轉譯特殊資料格，例如，邊角資料格或標頭資料格；以及如何轉譯由右至左讀取的資料區域。 本主題討論如何轉譯資料區的各個部分。  
@@ -42,7 +42,7 @@ ms.locfileid: "48057643"
  左上角稱為 Tablix 邊角。 Tablix 邊角可以包含其中的其他報表項目，但是，如果有將邏輯分頁符號插入到邊角中，系統在轉譯 Tablix 資料區時，則會忽略這些項目。  
   
 ### <a name="tablix-body"></a>Tablix 主體  
- Tablix 主體是由 Tablix 資料格所組成。 Tablix 主體會根據報表項目的分頁規則與轉譯行為進行轉譯。 如需詳細資訊，請參閱 <<c0> [ 轉譯報表項目&#40;報表產生器及 SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)。</c0>  
+ Tablix 主體是由 Tablix 資料格所組成。 Tablix 主體會根據報表項目的分頁規則與轉譯行為進行轉譯。 如需詳細資訊，請參閱 [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)。  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>圖表、量測計以及對應資料區域  
  當系統轉譯圖表、量測計以及對應資料區域並顯示在報表主體中時，其行為如同影像。 資料區域內的值可以擁有相關聯的動作 (例如，連結到其他報表或移至書籤)，而且，如果轉譯器有提供支援，也可以轉譯這些動作。  
@@ -50,7 +50,7 @@ ms.locfileid: "48057643"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   

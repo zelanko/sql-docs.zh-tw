@@ -15,14 +15,14 @@ helpviewer_keywords:
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2cc1725bc1cad98033fbc4c47c1611e7c8b35f32
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 89560cb29adfe83435d9b02a4b10e568a79ad352
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360230"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013399"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>在 Microsoft Surface 裝置及 Apple iOS 裝置上檢視 Reporting Services 報表
   本文將描述支援 Microsoft Surface 裝置以及具有 Apple iOS 6 與 Apple Safari 之裝置 (例如 iPad) 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能和工作流程。  

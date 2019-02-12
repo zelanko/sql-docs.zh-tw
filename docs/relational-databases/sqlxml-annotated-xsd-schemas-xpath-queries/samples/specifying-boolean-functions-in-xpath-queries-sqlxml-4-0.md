@@ -14,16 +14,16 @@ helpviewer_keywords:
 - true function
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5b0db6e7cd897117f1e6004594fd9fcad6a2a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 414a391591577d554d88b6b5b5aac901834e8509
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764726"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041639"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林函數 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

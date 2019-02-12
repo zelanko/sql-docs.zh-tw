@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將圓形圖新增至報表 (報表產生器) | Microsoft Docs
+title: 教學課程：將圓形圖加入至報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020099"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 （報表產生器）
   圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 圓形圖最常用於在群組之間進行比較。 圓形圖和環圈圖以及金字塔圖和漏斗圖會構成一組稱為形狀圖的圖表。 形狀圖沒有軸。 在形狀圖上放置數值欄位時，圖表會計算出每個值佔整體的百分比。  
   
  如果圓形圖上的資料點過多，資料點標籤可能會太擁擠而難以閱讀。 在這種狀況下，請考慮使用折線圖。 只有在您已將資料彙總成少數資料點之後，才應該考慮使用圓形圖。  
@@ -45,7 +45,7 @@ ms.locfileid: "48202528"
 7.  [儲存報表](#Save)  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併為兩個程序。 如需如何瀏覽至報表伺服器、新增資料來源以及新增資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併為兩個程序。 如需如何瀏覽至報表伺服器的逐步指示，加入資料來源，並加入資料集，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
  完成本教學課程的估計時間：10 分鐘  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48202528"
   
 8.  (選擇性) 按一下 [執行] 按鈕 (**!**) 來查看您圖表所依據的資料。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 ##  <a name="ChartType"></a> 2.選擇圖表類型  
  您可以選擇各種不同預先定義的圖表類型。  
@@ -108,7 +108,7 @@ ms.locfileid: "48202528"
   
 2.  將 [Sales] 欄位拖曳至 [值] 窗格。 Sales 代表每個子類別目錄的銷售量。 因為圖表會顯示每項產品的彙總，所以 [值] 窗格會顯示 `[Sum(Sales)]`。  
   
-3.  按 [下一步] 。  
+3.  按一下 [下一步] 。  
   
 4.  在 [**選擇樣式**] 頁面上，在 [樣式] 窗格中，選取樣式。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "48202528"
   
 3.  在 [名稱] 中，鍵入 **Sales Pie Chart**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
  您的報表就會儲存在報表伺服器上。  
   

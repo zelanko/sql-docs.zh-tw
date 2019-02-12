@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d0aed81ff4ac2daa517bb17ddb53ebaf7eacdcbe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: c04fdad5e53e9d50f6d910f16c8f86b0218f35be
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365410"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012779"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>第 4 課：定義子報表的資料連接和資料表
   設計父報表之後，下一步是要建立子報表的資料連接和資料表。 在本教學課程中，資料連接是指 AdventureWorks2008 資料庫。 您也可以選擇連接到 AdventureWorks2012 資料庫。  
@@ -47,7 +47,7 @@ ms.locfileid: "53365410"
   
 6.  如果您已在步驟 5 (b) 中選取 [使用 SQL Server 驗證]，請選取在字串中包含機密資料或在應用程式程式碼中設定資訊的選項。  
   
-7.  在 **儲存連接字串儲存到應用程式組態檔**頁面上，輸入連接字串的名稱或接受預設值**AdventureWorks2008ConnectionString**。 按 [下一步] 。  
+7.  在 **儲存連接字串儲存到應用程式組態檔**頁面上，輸入連接字串的名稱或接受預設值**AdventureWorks2008ConnectionString**。 按一下 [下一步] 。  
   
 8.  在 [**選擇命令類型**頁面上，選取**使用 SQL 陳述式**，然後按一下**下一步]**。  
   

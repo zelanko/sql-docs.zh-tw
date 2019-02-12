@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d670170a594af7346f44f236e96a724813278743
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2b771042ca00c9a9a80d7ffa035b100e2c4a6dc0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162758"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020509"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting)
   加入給定應用程式的 URL 保留項目。  
@@ -56,7 +56,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。錯誤碼則表示呼叫不成功。  
   
 ## <a name="remarks"></a>備註  
- *UrlString* 不包含虛擬目錄名稱。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md)方法針對該目的提供。  
+ *UrlString* 不包含虛擬目錄名稱。 [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) 方法是針對該目的提供的。  
   
  URL 保留項目是針對目前的 Windows 服務帳戶所建立的。 變更 Windows 服務帳戶需要手動更新所有 URL 保留項目。  
   

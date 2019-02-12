@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2757c13236b871eccc91066e064924c27cc19a93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6ead1d37c40a1d0cd2d6ee668bb99d595554006a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056808"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041479"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。 共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "48056808"
 |描述|檢視資料夾的內容時，與「報表管理員」中的項目一起顯示的描述。|  
 |連接類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。|  
 |連接字串|資料庫的連接字串。 如需詳細資訊，以及要檢視常用的資料來源的連接字串範例，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。|  
-|認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)。|  
+|認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../integration-services/connection-manager/data-sources.md)。|  
   
  共用資料來源不包含用來擷取資料的查詢資訊。 查詢永遠會保留在報表定義中。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48056808"
   
  如需有關建立共用資料來源的詳細資訊，請參閱：  
   
--   [建立內嵌或共用資料來源&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [建立內嵌或共用資料來源 &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
 -   [建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48056808"
  刪除共用資料來源時，沒有「復原」作業。 不過，如果您不小心刪除了共用資料來源，可以使用相同的屬性值來建立一個新的共用資料來源。 您必須開啟每個報表、模型和資料驅動訂閱，才能在使用它的項目中重建共用資料來源，但是，只要資料來源屬性與之前的資料來源屬性相同，報表、模型和訂閱就會如先前般運作。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立和管理共用的資料來源&#40;Reporting Services SharePoint 整合模式&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [管理報表資料來源](manage-report-data-sources.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
- [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [資料來源屬性頁面 &#40;報表管理員&#41;](../data-sources-properties-page-report-manager.md)   
- [建立、 刪除或修改共用的資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [設定報表的資料來源屬性&#40;報表管理員&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [設定報表的資料來源屬性 &#40;報表管理員&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

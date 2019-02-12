@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 627c3d071609b1b0053e7f8b79d20b9bff08c921
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505583"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019669"
 ---
 # <a name="perform-knowledge-discovery"></a>執行知識探索
   此主題描述如何透過知識探索來建立知識庫。 在探索程序中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 會透過電腦輔助的程序來分析範例資料來源中的資料，並將它所獲得的知識加入至知識庫。 您可以在知識探索活動或定義域管理活動的 **[管理定義域值]** 步驟中修改及增強這項知識。  
@@ -186,7 +186,7 @@ ms.locfileid: "52505583"
   
 11. 按一下 **[完成]** ，完成知識探索活動。 如果您尚未檢閱每一個定義域，將會顯示快顯視窗。 按一下 **[是]** 繼續檢閱，或按一下 **[否]** 繼續進行。 如果您按一下 [否]，將會顯示另一個快顯視窗，讓您執行下列動作：  
   
-    1.  **發行**:知識庫將會發行給目前的使用者或其他人使用。 知識庫不會鎖定，知識庫狀態 (在知識庫資料表中) 將會設為空白，而且定義域管理和知識探索活動可供使用。 您會返回首頁。 若要完成此程序，請按一下快顯視窗中的 **[是]** 。  
+    1.  **Publish**：知識庫將會發行給目前的使用者或其他人使用。 知識庫不會鎖定，知識庫狀態 (在知識庫資料表中) 將會設為空白，而且定義域管理和知識探索活動可供使用。 您會返回首頁。 若要完成此程序，請按一下快顯視窗中的 **[是]** 。  
   
     2.  **否**:將會儲存您的工作，知識庫會保持鎖定，而且的知識庫狀態將會設定為在工作中。 定義域管理和知識探索活動都可供使用。 您會返回首頁。  
   

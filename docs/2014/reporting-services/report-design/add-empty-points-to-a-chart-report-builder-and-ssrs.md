@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2b056119-439f-494f-83cf-ee0c05dc6487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 09b5228ff383db7700d5b8f027314e6e45feb40c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207408"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036320"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>將空白點加入圖表中 (報表產生器及 SSRS)
   Null 值會顯示在圖表上，當做數列內資料點之間的空格或間距。 空點是指可以插入由 Null 值所建立之空格內的資料點。  
@@ -54,7 +54,7 @@ ms.locfileid: "48207408"
 ## <a name="see-also"></a>另請參閱  
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [新增刻度斷層至圖表 &#40;報表產生器及 SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [將刻度斷層加入至圖表 &#40;報表產生器及 SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
+ [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

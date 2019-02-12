@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 752f31eee490cca61523e3a0bba512e687c0108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf8c70a3d1f97ce3be25833c8f0af93d693654d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102958"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021710"
 ---
 # <a name="change-a-model-name-master-data-services"></a>變更模型名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以變更模型的名稱。  
@@ -28,7 +28,7 @@ ms.locfileid: "48102958"
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
--   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
+-   您必須是模型管理員。 如需詳細資訊，請參閱 [管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)，您就可以在群組中加入及移除使用者。  
   
 ### <a name="to-change-a-model-name"></a>若要變更模型名稱  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48102958"
 6.  按一下 **[儲存模型]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立模型&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
+ [建立模型 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [刪除模型 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [模型 &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   

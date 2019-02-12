@@ -14,16 +14,16 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0783a23ed02e491b7af22b262199667718139215
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1fe2d8d88d2b12b2b0eac2e0a23644d1866dff2a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256553"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031779"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>執行 XPath 查詢 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

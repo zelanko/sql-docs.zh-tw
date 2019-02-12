@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53644d5d9cf52d1bfbe9a8d314196b3cce831af2
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 410bb163ba04d99ea8f71c262c8e671f8393c841
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031845"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039549"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>從 .dqs 檔案匯入知識庫
   此主題描述如何從 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔匯入整個知識庫。 您從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式匯出現有的知識庫來建立此資料檔 (請參閱＜ [將知識庫匯出到.dqs 檔案](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)＞)。  
@@ -64,7 +64,7 @@ ms.locfileid: "51031845"
   
 13. 在 Data Quality Services 首頁上，確認此知識庫列在 **[最近使用的知識庫]** 底下。  
   
-##  <a name="FollowUp"></a> 後續操作：從 .dqs 檔案匯入知識庫之後  
+##  <a name="FollowUp"></a> 後續操作：從.dqs 檔案匯入知識庫之後  
  當您從 .dqs 檔案匯入知識庫之後，您可以將知識加入至知識庫，或是在清理或比對專案中使用此知識庫 (根據知識庫的內容而定)。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)、[管理複合定義域](../../2014/data-quality-services/managing-a-composite-domain.md)、[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)、[資料清理](../../2014/data-quality-services/data-cleansing.md)或[資料比對](../../2014/data-quality-services/data-matching.md)。  
   
   

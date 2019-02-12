@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3853fd48c75cfeb6ec786b0d7d7518112fe07f61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a68100af72b7680ed1a9212f5d7c6c54ed07bec1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056319"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013021"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>在 Web 應用程式中使用 SOAP API
   您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 因為它是一種 Web 服務，所以可以輕易地存取 SOAP API，以提供企業報表功能給自訂商務應用程式。 您可以從 Web 應用程式存取報表伺服器 Web 服務，這與從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式存取 SOAP API 非常類似。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，您就可以產生公開報表伺服器 Web 服務的屬性與方法之 Proxy 類別，而且可讓您使用熟悉的基礎結構與工具，建置以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技術為基礎的商務應用程式。  
@@ -87,7 +87,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ## <a name="see-also"></a>另請參閱  
  [使用 Web 服務和 .NET Framework 建置應用程式](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [將 Reporting Services 整合到應用程式](../application-integration/integrating-reporting-services-into-applications.md)   
- [報表管理員&#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)   
  [在 Windows 應用程式中使用 SOAP API](integrating-reporting-services-using-soap-windows-application.md)  
   
   

@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b41d68eea7ced40f88fa505db1f8342c8c9faeb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153719"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020748"
 ---
 # <a name="parameters-properties-page-report-manager"></a>參數屬性頁面 (報表管理員)
   使用 [參數] 屬性頁面，即可檢視或修改參數化報表的參數設定。  
   
  發行報表之前，在報表定義中指定參數。 發行報表之後，您可以修改某些參數屬性值。 您可修改的值隨著報表中參數的定義方式而改變。 例如，如果定義參數為統計值清單，您可以選擇不同的統計值作為預設值，但不可在清單新增或移除數值。 同樣地，如果參數是以查詢為基礎，則在發行之前，會先在報表中定義該查詢的所有項目 (包括所使用的資料集、是否允許 Null 或空白的值，以及是否提供預設值)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-parameters-properties-page"></a>若要開啟參數屬性頁面  

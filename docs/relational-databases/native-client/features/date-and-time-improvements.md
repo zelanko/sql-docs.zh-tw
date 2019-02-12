@@ -3,6 +3,7 @@ title: 日期和時間改善 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -10,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba3c6bfb78656226745dc8267077749ca46ff3a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56df8dd8a0f8341180ad094e58868636b8d5a37d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661687"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029169"
 ---
 # <a name="date-and-time-improvements"></a>日期和時間改善
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "51661687"
   
  如需示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料程式設計範例](https://msftdpprodsamples.codeplex.com/)。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  下列章節描述使用新日期和時間類型的各種方式。  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>將 Date 當做不同的資料類型使用  
@@ -36,7 +37,7 @@ ms.locfileid: "51661687"
 ### <a name="use-time-as-a-distinct-data-type"></a>將 Time 當做不同的資料類型使用  
  OLE DB 已經有只包含時間的資料類型 DBTYPE_DBTIME，其精確度為 1 秒。 在 ODBC 中，對等的類型為 SQL_TYPE_TIME (適用於 ODBC 2.0 應用程式的 SQL_TIME)。  
   
- 新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時間資料類型的小數秒精確度為 100 奈秒。 這需要在新的型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端： DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。 為使用不含小數秒的時間而撰寫的現有應用程式可以使用 time(0) 資料行。 除非應用程式依賴中繼資料中所傳回的類型，否則現有的 OLE DB DBTYPE_TIME 和 ODBC SQL_TYPE_TIME 類型及其對應的結構應該正常運作。  
+ 新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時間資料類型的小數秒精確度為 100 奈秒。 這需要在新的型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端：DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。 為使用不含小數秒的時間而撰寫的現有應用程式可以使用 time(0) 資料行。 除非應用程式依賴中繼資料中所傳回的類型，否則現有的 OLE DB DBTYPE_TIME 和 ODBC SQL_TYPE_TIME 類型及其對應的結構應該正常運作。  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>使用包含擴充小數秒精確度的 Time 做為不同的資料類型  
  有些應用程式 (例如，處理序控制項和製造應用程式) 必須能夠處理精確度高達 100 奈秒的時間資料。 基於此目的的新類型為 DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。  

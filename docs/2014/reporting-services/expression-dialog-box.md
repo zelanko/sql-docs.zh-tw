@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a231e4fcc071338f4fcf168475bde86514470b41
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 43f27ea78bec3f7b81f49d44a6bd56274367f2b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590832"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021680"
 ---
 # <a name="expression-dialog-box"></a>運算式對話方塊
   使用**運算式**對話方塊，即可撰寫[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]運算式的報表項目屬性。 您可以使用運算式來設定許多屬性，包含色彩、字型和框線等。 在執行階段，報表處理器會評估運算式並取代屬性值的結果。  
@@ -37,7 +37,7 @@ ms.locfileid: "53590832"
 ## <a name="expression-constructs"></a>運算式建構  
  運算式是以等號 (=) 開始，可以包含常數、常值、運算子，以及內建欄位、內建集合、內建函數、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 執行階段程式庫函數、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime 類別和自訂函數的參考。 下列清單描述可加入運算式的類別目錄和值。  
   
- **設定運算式對象：**_\<屬性名稱 >_  
+ **設定運算式對象：**_\<PropertyName>_  
  為其定義運算式的屬性名稱。 您也可以在 [屬性] 窗格中依名稱設定這個屬性。  
   
  **常數**  
@@ -51,7 +51,7 @@ ms.locfileid: "53590832"
  **參數**  
  提供報表參數清單。  
   
- **欄位 (** _\<選取的資料集 >_ **)**  
+ **Fields(** _\<selected Dataset>_ **)**  
  顯示在 [資料集] 類別目錄中所選取之資料集的欄位清單。 按兩下欄位，即可將欄位複製至 [運算式] 方塊。  
   
  **資料集**  

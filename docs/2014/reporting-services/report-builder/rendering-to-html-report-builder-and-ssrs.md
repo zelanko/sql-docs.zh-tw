@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: eea42bfc7b02c4964f34ebc6fe5f4b067a33d21e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1905dbe53d5c869c25fcf6f9b07b46bf48dcaf98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084538"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013245"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
   HTML 轉譯延伸模組會轉譯 HTML 格式的報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。  
   
  HTML 轉譯延伸模組是在瀏覽器中檢視之報表的預設轉譯延伸模組，包括在報表管理員中執行時。  
   
- HTML 轉譯延伸模組是在瀏覽器中檢視之報表的預設轉譯延伸模組，包括在報表管理員中執行時。 HTML 轉譯延伸模組可以將 HTML 轉譯成片段，或完整的 HTML 文件。 如果 HTML 是片段， `HEAD`， `HTML`，和`BODY`會移除 HTML 文件的標記。 系統只會轉譯 `BODY` 標記的內容。 這很適合用於將 HTML 內嵌於其他應用程式所產生的 HTML 中。  
+ HTML 轉譯延伸模組是在瀏覽器中檢視之報表的預設轉譯延伸模組，包括在報表管理員中執行時。 HTML 轉譯延伸模組可以將 HTML 轉譯成片段，或完整的 HTML 文件。 如果 HTML 是片段，則會移除 HTML 文件的 `HEAD`、`HTML` 和 `BODY` 標記。 系統只會轉譯 `BODY` 標記的內容。 這很適合用於將 HTML 內嵌於其他應用程式所產生的 HTML 中。  
   
- 在某些情況下，當報表轉譯為 HTML 時，報表參數可能會被用來發動指令碼資料隱碼攻擊。 如需保護報表的詳細資訊，請參閱 [保護報表和資源的安全](../security/secure-reports-and-resources.md)。  
+ 在某些情況下，當報表轉譯為 HTML 時，報表參數可能會被用來發動指令碼資料隱碼攻擊。 如需保護報表安全的詳細資訊，請參閱 [保護報表和資源的安全](../security/secure-reports-and-resources.md)。  
   
  如需有關瀏覽器的詳細資訊，請參閱 <<c0> [ 規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。</c0>  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48084538"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

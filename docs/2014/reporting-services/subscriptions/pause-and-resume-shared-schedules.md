@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a35e16107d926bc9815e2e6de2d43a35172bd2e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1bc66e2d415b9f46193e1fce0b18a58bc570d34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070278"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042959"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   您可以暫停並繼續使用中的共用排程。 暫停共用排程提供暫時凍結用於觸發報表處理與訂閱排程的方法。 只有共用排程可以暫停並繼續。 您無法暫停報表特定排程。  
   
- 您不能暫停和繼續已在進行中的報表處理。 您只能暫停和繼續 SQL Server Agent 服務之排程佇列中的排程。 進行中的作業是在排程引擎的範圍之外。 如需詳細資訊，請參閱[管理執行的處理序](manage-a-running-process.md)  
+ 您不能暫停和繼續已在進行中的報表處理。 您只能暫停和繼續 SQL Server Agent 服務之排程佇列中的排程。 進行中的作業是在排程引擎的範圍之外。 如需詳細資訊，請參閱 [管理執行中的處理序](manage-a-running-process.md)  
   
  當共用排程暫停時，允許任何可能發生的作業失效。 繼續共用排程之後，報表和訂閱處理就會按照伺服器的當地時間，在下次排程的時間進行。 原生模式報表伺服器或 SharePoint 服務應用程式不會回頭處理在排程暫停期間原本應該執行的預定作業。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48070278"
 -   [暫停及繼續共用排程 (SharePoint 模式)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> 暫停及繼續共用排程 (原生模式)  
- 若要暫停和繼續共用排程，請使用報表管理員的 [排程] 頁面。 您不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，因為它並未提供暫停和繼續排程的選項。 如需詳細資訊，請參閱 < [Create，Modify，and Delete Schedules](create-modify-and-delete-schedules.md)。  
+ 若要暫停和繼續共用排程，請使用報表管理員的 [排程] 頁面。 您不能使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，因為它並未提供暫停和繼續排程的選項。 如需詳細資訊，請參閱 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>若要暫停或繼續共用排程  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48070278"
   
 ## <a name="see-also"></a>另請參閱  
  [[排程]](schedules.md)   
- [建立、修改和刪除共用排程](create-modify-and-delete-schedules.md)   
+ [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)   
  [變更報表伺服器上的時區和時鐘設定](change-time-zones-and-clock-settings-on-a-report-server.md)   
  [管理執行中的處理序](manage-a-running-process.md)  
   

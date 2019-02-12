@@ -22,16 +22,16 @@ helpviewer_keywords:
 - deleting data
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b4b35ddef4844f5c57ae77e4ee4c6d1dcbaf167
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df86cae9fe4fd132393b6c882977156bd5c0ff45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681206"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040339"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>使用 Updategram 來修改 SQLXML 4.0 中的資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

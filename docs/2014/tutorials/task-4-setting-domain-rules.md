@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c3b51408258b93f6585b46171793eb885a6d0d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349572"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035309"
 ---
 # <a name="task-4-setting-domain-rules"></a>工作 4:設定定義域規則
   在這個工作中，您建立的規則**Contact Email**網域來驗證是否電子郵件地址結尾**@adventure-works.com**。 請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)如需詳細資料頁面上的主題。  

@@ -1,9 +1,9 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (TRANSACT-SQL) |Microsoft Docs
+title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ceb8690acf691908c789cca280ecea1e9158ab97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ffa7e044b5771bcf1181ee3aa0e22dfbdd8e555
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685196"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020629"
 ---
-# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   包含每個計算節點上的實體資料庫的資料列。 若要取得資料庫的詳細的資訊的彙總的實體資料庫資訊。 若要結合的資訊，聯結`sys.pdw_nodes_pdw_physical_databases`要`sys.pdw_database_mappings`和`sys.databases`資料表。  
@@ -89,7 +89,7 @@ SELECT TOP 1 encryption_state
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.pdw_database_mappings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

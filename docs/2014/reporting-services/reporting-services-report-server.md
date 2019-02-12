@@ -24,13 +24,13 @@ helpviewer_keywords:
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e91d3e4ec882793ded89c934a598cafd1b4ca6e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352349"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019089"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   本主題概略說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器，這是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝的主要元件。 其中包含一組處理引擎，加上一組可處理驗證、資料處理、轉譯和傳遞作業的特殊用途延伸模組。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器會在兩種部署模式的其中一個模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#bkmk_featuresupport) 一節中的功能比較。  

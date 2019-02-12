@@ -3,7 +3,6 @@ title: sp_pkeys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -19,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da9b788e69decf1c209eec846fbeccc811e70374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 759d666f725eb6ebad49b3dffe2cd93bf9469eb0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589762"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022929"
 ---
 # <a name="sppkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,15 +43,15 @@ sp_pkeys [ @table_name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @table_name=] '*名稱*'  
+ [ @table_name= ] '*name*'  
  是要傳回資訊的資料表。 *名稱*已**sysname**，沒有預設值。 不支援萬用字元的模式比對。  
   
- [ @table_owner=] '*擁有者*'  
+ [ @table_owner= ] '*owner*'  
  指定已指定資料表的資料表擁有者。 *擁有者*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設資料表可見性規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定且目前使用者並未擁有指定的資料表*名稱*，此程序會尋找具有指定的資料表*名稱*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的資料行。  
   
- [ @table_qualifier=] '*限定詞*'  
+ [ @table_qualifier= ] '*qualifier*'  
  這是資料表限定詞。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  

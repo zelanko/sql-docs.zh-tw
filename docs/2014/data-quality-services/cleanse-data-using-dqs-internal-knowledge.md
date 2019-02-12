@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.dqproject.correction.f1
 - sql12.dqs.dqproject.interactivecleansing.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad4feee8fe6a47b82196f6684a9c56b663a42c71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392271"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038329"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS (內部) 知識清理資料
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用資料品質專案來清理資料。 資料清理是使用已針對高品質資料集內建在 DQS 中的知識庫，於來源資料上執行。 如需詳細資訊，請參閱 [建立知識庫](../../2014/data-quality-services/building-a-knowledge-base.md)。  

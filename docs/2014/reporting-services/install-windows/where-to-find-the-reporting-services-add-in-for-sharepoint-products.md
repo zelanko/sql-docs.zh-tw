@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e005bc36600dbbdb345d43d27aa9ea8bd1031575
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362560"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041029"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
   適用於 SharePoint 產品與技術 (rsSharePoint.msi) 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 增益集是一種 Web 下載，它提供將報表伺服器與 SharePoint 部署相整合的功能。  

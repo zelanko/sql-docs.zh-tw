@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cec49ee-20b1-40eb-a75b-0908d9c05b34
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: de33b2cdbc082e609e392d36aa53b8c5bbd2ce4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ac8b0b7a36cc3ecff37ba0d74167b99458eb5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160490"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027195"
 ---
 # <a name="reporting-services-soapexception-class"></a>Reporting Services SoapException 類別
   您應該處理可能會發生的特定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 錯誤。 例如，在您詢問使用者是否建立資料夾的應用程式中，使用者或許會嘗試建立已經存在的資料夾。 身為開發人員，您無法控制使用者在應用程式的資料夾名稱與路徑欄位中輸入的內容，但是，您卻可以控制使用者在試圖建立已經存在的項目時所得到的體驗。  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], accessing SQLXML functionality
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c13c4b05a0443db4df711f8522e8ad57e1433c2
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a04ee9ea48075635e192e2410c64fd6a357a76a2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041489"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>存取 .NET 環境中的 SQLXML 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 007a1a199bdb61efe0ce559ae2df4d5234e2e764
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: faf66ef9c84c5a2b93a7b7ec42bd3a0ccf6f2e8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206088"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043157"
 ---
 # <a name="role-assignments"></a>角色指派
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，「角色指派」會決定預存項目以及報表伺服器本身的存取權。 角色指派包含下列部份：  
@@ -59,13 +59,13 @@ ms.locfileid: "48206088"
 ## <a name="predefined-role-assignments"></a>預先定義的角色指派  
  依預設，會實作預先定義的角色指派，讓本機管理員可以管理報表伺服器。 您必須加入其他角色指派，將存取權授與其他使用者。  
   
- 如需有關提供預設安全性的預先定義的角色指派的詳細資訊，請參閱[預先定義的角色](role-definitions-predefined-roles.md)。  
+ 如需提供預設安全性之預先定義角色指派的詳細資訊，請參閱 [預先定義的角色](role-definitions-predefined-roles.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、刪除或修改角色 &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)   
  [修改或刪除角色指派 &#40;報表管理員&#41;](role-assignments-modify-or-delete.md)   
- [設定 SharePoint 網站上的報表伺服器項目的權限&#40;Reporting Services SharePoint 整合模式&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)  
   
   

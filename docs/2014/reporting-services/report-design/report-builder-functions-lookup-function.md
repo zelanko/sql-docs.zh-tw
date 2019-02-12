@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026039"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回第一個符合指定之名稱的值。  
@@ -45,12 +45,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  指定報表中資料集名稱的常數。 例如，"Products"。  
   
 ## <a name="return"></a>傳回  
- 傳回`Variant`，或`Nothing`如果沒有相符項目。  
+ 傳回 `Variant` 或在沒有相符項目時傳回 `Nothing`。  
   
 ## <a name="remarks"></a>備註  
- 使用`Lookup`擷取名稱/值組的指定資料集中的值 1 對 1 關聯性。 例如，如果是資料表中的識別碼欄位，您可以使用 `Lookup` 從未繫結至資料區的資料集中，擷取對應的名稱欄位。  
+ 使用 `Lookup` 可從具有一對一關係之名稱/值組的指定資料集中擷取值。 例如，如果是資料表中的識別碼欄位，您可以使用 `Lookup` 從未繫結至資料區的資料集中，擷取對應的名稱欄位。  
   
- `Lookup` 執行下列作業：  
+ `Lookup` 會執行下列動作：  
   
 -   評估目前範圍中的來源運算式。  
   
@@ -72,7 +72,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   `Lookup` 不能用於做為運算式的下列報表項目：  
+-   `Lookup` 不能當做下列報表項目的運算式使用：  
   
     -   資料來源的動態連接字串。  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

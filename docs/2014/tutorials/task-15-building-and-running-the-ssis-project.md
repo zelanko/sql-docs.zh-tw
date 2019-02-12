@@ -1,26 +1,20 @@
 ---
-title: 工作 15： 建置和執行 SSIS 專案 |Microsoft Docs
+title: 工作 15:建立和執行 SSIS 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
-author: douglaslms
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1b84614910a594c4496e1eba8b7c11cb2d5617d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1dc31f9b3df500e862236d4125fb1de99bc93eda
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050398"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022801"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>工作 15：建立和執行 SSIS 專案
+# <a name="task-15-building-and-running-the-ssis-project"></a>工作 15:建立和執行 SSIS 專案
   在這項工作中，您會建立及執行 SSIS 專案。 如果您有 64 位元版本的電腦上安裝 Excel 2010，您應該設定的值**Run64BitRuntime**要**False**的 Excel 來源才能運作。  
   
 1.  在 [**方案總管] 中**] 視窗中，按一下**專案**功能表，然後按一下 [ **CleanseAndCurateSuppliers 屬性**。  
@@ -46,6 +40,6 @@ ms.locfileid: "48050398"
 8.  按一下 **偵錯**功能表，然後按一下 **停止偵錯**停止偵錯工作階段。 如果封裝失敗，您應該啟用資料檢視器，並查看資料如何在元件之間流動。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 16：使用主資料管理員驗證](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
+ [工作 16:使用主資料管理員驗證](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
   
   

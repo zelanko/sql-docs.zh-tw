@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 380a257fd72ec776b92581895f85859a0a622003
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: kfile
+ms.openlocfilehash: 50ff2626108c26ca5cee3845da437b27dbfcade0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617138"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030849"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式中的 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
@@ -66,7 +66,7 @@ ms.locfileid: "52617138"
   
 5.  重新整理瀏覽器，然後按一下 **[報表伺服器整合功能]** 的 **[啟動]**。  
   
-    ![停用](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Deactivate](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2013)  
   

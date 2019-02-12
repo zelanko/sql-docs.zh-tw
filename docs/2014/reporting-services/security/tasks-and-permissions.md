@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce940bd22b9fbc5d2628cdeae3a0eea376f2bc99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165274"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010879"
 ---
 # <a name="tasks-and-permissions"></a>工作和權限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「工作」(Task) 是使用者或管理員可以執行的動作。 工作是預先定義的。 您無法建立自訂工作或修改以程式設計的方式或透過工具而提供的工作。 總共有 25 種工作。 這些工作構成以角色為基礎之安全性中，可以使用的整個作業集。 工作的範例包括「檢視報表」、「管理報表」以及「管理報表伺服器屬性」。  
@@ -46,7 +46,7 @@ ms.locfileid: "48165274"
   
 ## <a name="see-also"></a>另請參閱  
  [角色定義](role-definitions.md)   
- [預先定義的角色](role-definitions-predefined-roles.md)   
+ [Predefined Roles](role-definitions-predefined-roles.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)  
   
   

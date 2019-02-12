@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 176766f1097e2edf010fa28cae51992e291dd92b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 3eed88e178311fc47cb0feae43d63673ff5211ae
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394691"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022081"
 ---
 # <a name="rswindowsextendedprotectionlevel-property-wmi-msreportserverconfigurationsetting"></a>RSWindowsExtendedProtectionLevel 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回字串值，表示報表伺服器設定為支援的保護等級。 此屬性是唯讀的。  

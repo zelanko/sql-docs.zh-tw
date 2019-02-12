@@ -2,10 +2,9 @@
 title: sp_set_database_firewall_rule (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -22,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8530d8a2d19a5dd9f50fb437626202565435222a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800676"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025459"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,14 +44,14 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- **[@name**  =] [N]'*名稱*'  
+ **[@name** = ] [N]'*name*'  
  用來描述和區分資料庫層級防火牆設定的名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>** ，沒有預設值。 Unicode 識別碼`N`都是選擇性的[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 
   
- **[@start_ip_address**  =] '*start_ip_address*'  
+ **[@start_ip_address** =] '*start_ip_address*'  
  資料庫層級防火牆設定範圍中最低的 IP 位址。 等於或大於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最低 IP 位址為 `0.0.0.0`。 *start_ip_address*已**varchar(50** ，沒有預設值。  
   
  [**@end_ip_address** =] '*end_ip_address*'  
- 資料庫層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。 *end_ip_address*已**varchar(50** ，沒有預設值。  
+ 資料庫層級防火牆設定範圍中最高的 IP 位址。 等於或小於這個位址的 IP 位址可以嘗試連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 可能的最高 IP 位址為 `255.255.255.255`。 *end_ip_address* is **varchar(50)** with no default value.  
   
  下表示範支援的引數和選項在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
@@ -89,7 +88,7 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ## <a name="see-also"></a>另請參閱  
  [Azure SQL Database 防火牆](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [如何： 設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [操作說明：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
  [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  

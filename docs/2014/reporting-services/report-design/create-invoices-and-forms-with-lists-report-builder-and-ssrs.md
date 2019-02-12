@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7026a1fcdfa3a030761d11c2f8d763220fd436d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375220"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029679"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>清單 (報表產生器及 SSRS)
   清單資料區域會隨報表資料集中的每一個群組或資料列重複。 清單可以用於建立自由形式的報表或表單 (如發票)，也可以與其他資料區域一起使用。 您可以定義包含任何數目之報表項目的清單。 清單可以巢狀放在另一份清單內，以提供多個資料群組。  

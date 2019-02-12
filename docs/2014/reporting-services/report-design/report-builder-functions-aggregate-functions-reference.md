@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194114"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040879"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>彙總函式參考 (報表產生器及 SSRS)
   若要在報表中加入彙總值，您可以在運算式中使用內建彙總函式。 數值欄位的預設彙總函式是 SUM。 您可以編輯運算式，並使用不同的內建彙總函式或指定不同的範圍。 範圍會識別用於計算的資料集。  
@@ -45,7 +45,7 @@ ms.locfileid: "48194114"
   
 -   [測試範圍](#TestingforScope)  
   
- 若要決定函數的有效範圍，請參閱個別的函數參考主題。 如需詳細資訊和範例，請參閱[Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+ 若要決定函數的有效範圍，請參閱個別的函數參考主題。 如需詳細資訊和範例，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -60,7 +60,7 @@ ms.locfileid: "48194114"
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|傳回運算式指定的所有非 Null 相異值的計數 (在給定範圍的內容中評估)。|  
 |[Max](report-builder-functions-max-function.md)|傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。 這個函數可用來指定圖表軸的最大值以控制刻度。|  
 |[Min](report-builder-functions-min-function.md)|傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。 這個函數可用來指定圖表軸的最小值以控制刻度。|  
-|[Stdev 函數](report-builder-functions-stdev-function.md)|傳回運算式指定的所有非 Null 數值的標準差 (在給定範圍中評估)。|  
+|[StDev](report-builder-functions-stdev-function.md)|傳回運算式指定的所有非 Null 數值的標準差 (在給定範圍中評估)。|  
 |[StDevP](report-builder-functions-stdevp-function.md)|傳回運算式指定的所有非 Null 數值的母體標準差 (在給定範圍的內容中評估)。|  
 |[Sum](report-builder-functions-sum-function.md)|傳回運算式指定之所有非 Null 數值的總和 (在給定範圍中評估)。|  
 |[Union](report-builder-functions-union-function.md)|傳回運算式所指定之 `SqlGeometry` 或 `SqlGeography` 類型的所有非 Null 空間資料值聯集 (在給定的範圍中評估)。|  
@@ -122,7 +122,7 @@ ms.locfileid: "48194114"
   
 |**函數**|**說明**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|傳回指定範圍中資料列數的執行計數。 `RowNumber`函數開始重新計數為 1，不是 0。|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|傳回指定範圍中資料列數的執行計數。 `RowNumber` 函數從 1 開始重新計數，而不是 0。|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。|  
   
 ##  <a name="RetrievingRowCounts"></a> 擷取資料列計數  
@@ -138,17 +138,17 @@ ms.locfileid: "48194114"
 |**函數**|**說明**|  
 |------------------|---------------------|  
 |[Lookup 函數](report-builder-functions-lookup-function.md)|從指定之運算式的資料集傳回值。|  
-|[LookupSet 函式](report-builder-functions-lookupset-function.md)|從指定之運算式的資料集傳回一組值。|  
-|[Multilookup 函式](report-builder-functions-multilookup-function.md)|從包含名稱/值組的資料集傳回第一組符合某一組名稱的值。|  
+|[LookupSet 函數](report-builder-functions-lookupset-function.md)|從指定之運算式的資料集傳回一組值。|  
+|[Multilookup 函數](report-builder-functions-multilookup-function.md)|從包含名稱/值組的資料集傳回第一組符合某一組名稱的值。|  
   
 ##  <a name="RetrievingPostsortValues"></a> 擷取與排序相依的值  
- 下列的內建函數會傳回給定範圍內的第一個、最後一個或上一個值。 這些函數會視資料值的排序次序而定。 舉例而言，這些函數可用來尋找頁面上的第一個和最後一個值，以建立字典樣式的頁首。 使用`Previous`來比較特定範圍內的前一個資料列的值的一個資料列中的值，例如，若要尋找資料表中的年份值的百分比年。  
+ 下列的內建函數會傳回給定範圍內的第一個、最後一個或上一個值。 這些函數會視資料值的排序次序而定。 舉例而言，這些函數可用來尋找頁面上的第一個和最後一個值，以建立字典樣式的頁首。 `Previous` 可用來比較特定範圍內一個資料列的值與上一個資料列的值，以在資料表中找出年的成長百分比。  
   
 |**函數**|**說明**|  
 |------------------|---------------------|  
 |[第一個](report-builder-functions-first-function.md)|傳回所指定運算式給定範圍中的第一個值。|  
 |[最後一個](report-builder-functions-last-function.md)|傳回所指定運算式給定範圍中的最後一個值。|  
-|[[上一步]](report-builder-functions-previous-function.md)|傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。|  
+|[Previous](report-builder-functions-previous-function.md)|傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。|  
   
 ##  <a name="RetrievingServerAggregates"></a> 擷取伺服器彙總  
  下列的內建函數將從資料提供者擷取自訂彙總。 例如，您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源類型擷取在資料來源伺服器上計算的彙總，以用於群組頁首。  
@@ -165,15 +165,15 @@ ms.locfileid: "48194114"
 |[InScope](report-builder-functions-inscope-function.md)|指出目前項目的執行個體是否在指定的範圍內。|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> 擷取遞迴層級  
- 下列的內建函數會在系統處理遞迴階層時，擷取目前的層級。 使用這個函式的結果`Padding`控制遞迴群組視覺階層的縮排層級的文字方塊中的屬性。 如需詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
+ 下列的內建函數會在系統處理遞迴階層時，擷取目前的層級。 在文字方塊中以 `Padding` 屬性使用此函數的結果，即可控制遞迴群組視覺階層的縮排層級。 如需詳細資訊，請參閱[建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
 |函數|描述|  
 |--------------|-----------------|  
 |[Level](report-builder-functions-level-function.md)|傳回遞迴階層中之目前所在的層級。|  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

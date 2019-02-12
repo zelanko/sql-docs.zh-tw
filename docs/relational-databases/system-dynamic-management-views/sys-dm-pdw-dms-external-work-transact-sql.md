@@ -1,9 +1,9 @@
 ---
-title: sys.dm_pdw_dms_external_work (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c80038b344a942068f040bde040d4a9a29edcae
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e79803a1c06a78f67a37a6a669af1c5ab4683f5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419310"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021562"
 ---
-# <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 保留外部作業的所有資料移動服務 (DMS) 步驟的相關資訊的系統檢視表。  

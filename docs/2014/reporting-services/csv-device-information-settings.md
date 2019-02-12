@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2dfb27e467dc762c6591c8b820cb71302eac99fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1273eed3bc53b5f23bd51430f1fd2fbe2b712d5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018999"
 ---
 # <a name="csv-device-information-settings"></a>CSV 裝置資訊設定
   CSV 轉譯延伸模組的裝置資訊設定，允許變更分隔符號與限定詞，以及指定分行符號處理。 您也可以提交檔案的延伸模組，以及在輸出中編碼和包括標頭資料列。 因為分隔符號有可能是特殊的字元，所以如果設定是以 XML 來撰寫，您應該在 CDATA 區段中編碼它們。  
@@ -35,8 +35,8 @@ ms.locfileid: "48116908"
 |**NoHeader**|表示標頭資料列是否從輸出排除。 預設值是 `false`。|  
 |`Qualifier`|要放在結果周圍的限定詞字串，包括欄位分隔符號或是記錄分隔符號。 如果結果包含分隔符號，則會重複限定詞。 `Qualifier` 設定必須不同於 `FieldDelimiter` 與 `RecordDelimiter` 設定。 預設值是引號 (")。|  
 |`RecordDelimiter`|放在每個記錄結尾處的記錄分隔符號。 預設值為 \<cr>\<lf>。|  
-|**SuppressLineBreaks**|指出是否從輸出中所含的資料移除分行符號。 預設值是 `false`。 如果值為`true`，則`FieldDelimiter`， `RecordDelimiter`，和`Qualifier`設定不能是空格字元。|  
-|`UseFormattedValues`|指出是否將格式字串放入 CSV 輸出。 預設值是`true`時`ExcelMode`是`true`; 否則就是`false`。|  
+|**SuppressLineBreaks**|指出是否從輸出中所含的資料移除分行符號。 預設值是 `false`。 如果值是 `true`、`FieldDelimiter`、`RecordDelimiter` 和`Qualifier`，則設定不能是空白字元。|  
+|`UseFormattedValues`|指出是否將格式字串放入 CSV 輸出。 當 `true` 是 `ExcelMode` 時，預設值是 `true`，否則為 `false`。|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

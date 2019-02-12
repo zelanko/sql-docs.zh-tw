@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d03d6ebec2a3d2c40b8cd674e51dee56160bc26b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f71ac2824a1cefe7d601bbc3e21168c02a285025
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205968"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015819"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>MachineAccountIdentity 屬性 (WMI)
   取得安裝報表伺服器的電腦帳戶識別。  
@@ -34,7 +34,7 @@ public string MachineAccountIdentity;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- A`String`值，其中包含報表伺服器上所安裝之電腦的電腦帳戶識別。  
+ `String` 值，包含安裝報表伺服器的電腦帳戶識別。  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512547"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023750"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
   本教學課程將教導您如何建立兩種報表：鑽研報表與主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 下圖顯示您將建立的報表。  
@@ -98,7 +98,7 @@ ms.locfileid: "52512547"
   
 3.  在右窗格中，確認已選取 **[資料表或矩陣精靈]** 。  
   
-##  <a name="DConnection"></a> 1a。 指定資料連接  
+##  <a name="DConnection"></a> 1a. 指定資料連接  
  資料連接包含連接至外部資料來源所需的資訊，例如 Analysis Services Cube 或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。 在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
   
 #### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
@@ -142,9 +142,9 @@ ms.locfileid: "52512547"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 按 [下一步] 。  
+14. 按一下 [下一步] 。  
   
-##  <a name="DMDXQuery"></a> 1b。 建立 MDX 查詢  
+##  <a name="DMDXQuery"></a> 1b. 建立 MDX 查詢  
  在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
@@ -211,9 +211,9 @@ ms.locfileid: "52512547"
   
 6.  在查詢設計工具工具列上，按一下 **[執行 (!)]**。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
-##  <a name="DLayout"></a> 1 c。 將資料組織為群組  
+##  <a name="DLayout"></a> 1c. 將資料組織為群組  
  當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -237,9 +237,9 @@ ms.locfileid: "52512547"
   
      步驟 4 和步驟 5 指定了矩陣中要顯示的資料。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
-##  <a name="DTotals"></a> 1d。 加入小計和總計  
+##  <a name="DTotals"></a> 1d. 加入小計和總計  
  建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您也可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
 #### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
@@ -248,7 +248,7 @@ ms.locfileid: "52512547"
   
      精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  
   
-2.  按 [下一步] 。  
+2.  按一下 [下一步] 。  
   
 ##  <a name="DStyle"></a> 1e。 選擇樣式  
  樣式會指定字型樣式、色彩集和框線樣式。  
@@ -399,7 +399,7 @@ ms.locfileid: "52512547"
   
 2.  在 **[使用者入門]** 對話方塊中，確認已選取 **[新增報表]** ，然後按一下 **[資料表或矩陣精靈]**。  
   
-##  <a name="MConnection"></a> 1a。 指定資料連接  
+##  <a name="MConnection"></a> 1a. 指定資料連接  
  您會將內嵌的資料來源儲存到主報表。  
   
 #### <a name="to-create-an-embedded-data-source"></a>建立內嵌資料來源  
@@ -436,9 +436,9 @@ ms.locfileid: "52512547"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. 按 [下一步] 。  
+14. 按一下 [下一步] 。  
   
-##  <a name="MMDXQuery"></a> 1b。 建立 MDX 查詢  
+##  <a name="MMDXQuery"></a> 1b. 建立 MDX 查詢  
  接著，建立內嵌的資料集。 若要這樣做，您將使用查詢設計工具建立篩選、參數、導出成員，以及資料集本身。  
   
 #### <a name="to-create-query-filters"></a>若要建立查詢篩選  
@@ -534,9 +534,9 @@ ms.locfileid: "52512547"
   
      檢閱查詢結果集。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
-##  <a name="MLayout"></a> 1 c。 將資料組織為群組  
+##  <a name="MLayout"></a> 1c. 將資料組織為群組  
  當您選取將資料分組的欄位時，會設計包含資料列和資料行的矩陣，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -555,7 +555,7 @@ ms.locfileid: "52512547"
   
      步驟 3 和步驟 4 指定了矩陣中要顯示的資料。  
   
-##  <a name="MTotals"></a> 1d。 加入小計和總計  
+##  <a name="MTotals"></a> 1d. 加入小計和總計  
  您可以在報表中顯示小計和總計。 主報表中的資料會顯示為指標，而且您將會在完成精靈後移除總計。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>若要加入小計和總計  
@@ -564,7 +564,7 @@ ms.locfileid: "52512547"
   
      精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組，第二個資料列都包含資料行標題，第三個資料列都包含產品類別資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`)，第四個資料列包含總計。  
   
-2.  按 [下一步] 。  
+2.  按一下 [下一步] 。  
   
 ##  <a name="MStyle"></a> 1e。 選擇樣式  
  將 [石板] 樣式套用到報表。 這是鑽研報表使用的相同樣式。  
@@ -719,7 +719,7 @@ ms.locfileid: "52512547"
   
 7.  按一下 [儲存] 。  
   
-##  <a name="MRunReports"></a> 8。執行主報表和鑽研報表  
+##  <a name="MRunReports"></a> 8.執行主報表和鑽研報表  
  執行主報表，然後按一下產品類別目錄資料行中的值以執行鑽研報表。  
   
 #### <a name="to-run-the-reports"></a>若要執行報表  

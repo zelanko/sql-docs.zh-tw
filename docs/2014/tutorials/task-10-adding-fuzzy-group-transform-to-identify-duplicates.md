@@ -1,26 +1,23 @@
 ---
-title: 工作 10： 加入模糊群組轉換來識別重複項目 |Microsoft Docs
+title: 工作 10:加入模糊群組轉換來識別重複項目 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d11487c2bfbcda4c18904c77d029c91440ca8410
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211600"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026989"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10：加入模糊群組轉換來識別重複項
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10:加入模糊群組轉換來識別重複項
   在這項工作中，您會將模糊群組轉換加入至資料流程。 模糊群組轉換有助於識別來源資料中的重複項。 請參閱[Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)如需詳細資訊。  
   
 1.  拖放**模糊群組**轉換**其他轉換**上**SSIS 工具箱**至**資料流程**索引標籤下**結合正確與更正的記錄**。  
@@ -58,6 +55,6 @@ ms.locfileid: "48211600"
 15. 按一下  **確定**以關閉**模糊群組轉換編輯器**。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 11：新增條件式分割轉換來篩選重複項](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [工作 11:加入條件式分割轉換來篩選重複項目](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

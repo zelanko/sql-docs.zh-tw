@@ -29,16 +29,16 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22d521b86e1129547c925d3958af67af6003109c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 2da7e9873c2c4bb2f0f12a980159dd05fbb9cef9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256203"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031029"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 大量載入範例 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

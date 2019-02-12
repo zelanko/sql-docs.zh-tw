@@ -1,25 +1,24 @@
 ---
-title: 第 4 課： 建立使用 DMX 的時間序列預測 |Microsoft Docs
+title: 第 4 課：建立時間序列預測使用 DMX |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83aa949e71977971b69f93f0e04b0c74ff99a226
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024879"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>第 4 課：使用 DMX 建立時間序列預測
-  在這一課和下一課，您會使用資料採礦延伸模組 (DMX) 建立不同類型的 根據您在建立時間序列模型的預測[第 1 課： 建立時間序列採礦模型和採礦結構](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)並[第 2 課： 將採礦模型加入至時間序列採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)。  
+  在這一課和下一課，您會使用資料採礦延伸模組 (DMX) 建立不同類型的 根據您在建立時間序列模型的預測[第 1 課：建立時間序列採礦模型和採礦結構](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)和[第 2 課：將採礦模型加入至時間序列採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)。  
   
  有了時間序列模型，您有許多選擇可用來進行預測：  
   
@@ -44,7 +43,7 @@ ms.locfileid: "48143888"
  REPLACE_MODEL_CASES  
  使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)搭配 REPLACE_MODEL_CASES 引數，原始資料取代成新的資料數列，然後再建立 採礦模型中的模式套用至新的資料為基礎的預測系列。  
   
- 如需如何使用 REPLACE_MODEL_CASES 的範例，請參閱 <<c0> [ 第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。</c0>  
+ 如需如何使用 REPLACE_MODEL_CASES 的範例，請參閱[第 2 課：建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
   
 ## <a name="lesson-tasks"></a>課程工作  
  您將在這一課執行下列工作：  
@@ -149,8 +148,8 @@ WHERE [<criteria>]
   
 ## <a name="see-also"></a>另請參閱  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
- [延隔&#40;DMX&#41;](/sql/dmx/lag-dmx)   
+ [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
  [時間序列模型查詢範例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [第 2 課：建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139610"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043389"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>報表和群組變數集合參考 (報表產生器及 SSRS)
   當您要進行的複雜計算是在報表的運算式中使用一次以上時，建議您建立一個變數。 您可以建立報表變數或群組變數。 變數名稱在報表中必須是唯一的。  
@@ -53,7 +53,7 @@ ms.locfileid: "48139610"
     > [!NOTE]  
     >  您無法控制報表處理器初始化變數，或評估更新變數之運算式的時間。 系統未定義變數初始化的執行順序。  
   
- 如需有關工作階段的詳細資訊，請參閱[在報表產生器中預覽報表](../report-builder/previewing-reports-in-report-builder.md)。  
+ 如需有關工作階段的詳細資訊，請參閱＜ [Previewing Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md)＞。  
   
 ## <a name="group-variables"></a>群組變數  
  群組變數可用來計算一次群組範圍內的複雜運算式。 群組變數只有在群組及其子群組的範圍內有效。  
@@ -74,7 +74,7 @@ ms.locfileid: "48139610"
   
 ## <a name="see-also"></a>另請參閱  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Built-in Collections in Expressions&#40;報表產生器及 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cbc3a76c1f6e5c67297f44c312fe0497666a9b8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505637"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023119"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe 公用程式會處理您在輸入檔中所提供的指令碼。 使用此公用程式可自動化報表伺服器部署和管理工作。  
@@ -65,16 +65,16 @@ ms.locfileid: "52505637"
  **-?**  
  (選擇性) 顯示 **rs** 引數的語法。  
   
- `-i` *輸入檔案*  
+ `-i` *input_file*  
  (必要) 指定要執行的 .rss 檔案。 這個值可以是 .rss 檔案的相對路徑或完整路徑。  
   
  `-s` *serverURL*  
  (必要) 指定要對其執行檔案的 Web 伺服器名稱和報表伺服器虛擬目錄名稱。 報表伺服器 URL 的範例為 `http://examplewebserver/reportserver`。 伺服器名稱開頭的前置詞 http:// 或 https:// 是選擇性的。 如果您省略前置詞，報表伺服器 Script Host 會先嘗試使用 https，而且如果 https 無法運作，則會使用 http。  
   
- `-u` [*網域*\\]*使用者名稱*  
+ `-u` [*domain*\\]*username*  
  (選擇性) 指定用來連接到報表伺服器的使用者帳戶。 如果省略 `-u` 和 `-p`，則會使用目前的 Windows 使用者帳戶。  
   
- `-p` *密碼*  
+ `-p` *password*  
  (如果已指定 `-u` 則是必要的) 指定要與 `-u` 引數一起使用的密碼。 此值區分大小寫。  
   
  `-e`  

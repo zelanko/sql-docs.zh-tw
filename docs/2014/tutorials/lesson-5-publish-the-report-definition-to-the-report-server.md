@@ -1,22 +1,21 @@
 ---
-title: 第 5 課： 將報表定義發行到報表伺服器 |Microsoft Docs
+title: 第 5 課：將報表定義發行到報表伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 57fab70f-4a72-4413-a0ad-d0525caca3f7
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3430994f0c5cb2b4c09c47a4a8bebaa7da3eba3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163368"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033618"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>第 5 課：將報表定義發行到報表伺服器
   更新報表定義的最後步驟是將報表定義發行回到報表伺服器。  
@@ -78,7 +77,7 @@ ms.locfileid: "48163368"
     ```  
   
 ## <a name="next-lesson"></a>下一課  
- 在下一個課程中，您將會編譯並執行`SampleRDLSchema`應用程式。 請參閱[第 6 課： 執行 RDL 結構描述應用程式&#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)。  
+ 在下一個課程中，您將會編譯並執行`SampleRDLSchema`應用程式。 請參閱[第 6 課：執行 RDL 結構描述應用程式&#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

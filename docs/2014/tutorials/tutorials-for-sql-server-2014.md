@@ -4,26 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 07ff9e3ed413b3cb73a4dbfb84bac6961acb1759
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368060"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014272"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>適用於 SQL Server 2014 的教學課程
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引進了許多新技術和新功能。  

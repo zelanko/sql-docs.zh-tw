@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0112a4a9ae89dbfc2aedad38c16056a4d246964
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174708"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043059"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)
   在資料驅動訂閱中，動態訂閱資料是由從外部資料來源擷取資料的查詢或命令所提供。 訂閱資料可以從任何支援的資料來源 (符合資料驅動訂閱處理的需求) 中擷取。 查詢或命令語法必須對安裝在您報表伺服器上的資料處理延伸模組有效。  
@@ -81,7 +81,7 @@ ms.locfileid: "48174708"
   
 ## <a name="see-also"></a>另請參閱  
  [建立、 修改及刪除資料驅動訂閱](data-driven-subscriptions.md)   
- [資料驅動訂閱](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d5dba03f5e64d06d7c1d8dddd4df36b3f9326e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358120"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010669"
 ---
 # <a name="report-server-service-trace-log"></a>報表伺服器服務追蹤記錄
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器追蹤記錄為 ASCII 文字檔案，包含報表伺服器服務作業的詳細資訊，包括報表伺服器 Web 服務、報表管理員及背景處理所執行的作業。 追蹤記錄檔包括已記錄於其他記錄檔的重複資訊，加上別處所沒有的其他資訊。 如果您要偵錯包含報表伺服器的應用程式，或者調查寫入事件記錄或執行記錄的特定問題，追蹤記錄資訊可能會很有用。  

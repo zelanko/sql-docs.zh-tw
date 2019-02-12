@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 876fba07af1e7f82c38d4142914c1aded10117e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134138"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017029"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
-  您可以從報表產生符合 Atom 資料摘要，然後這類應用程式中，使用資料摘要[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]用戶端可以取用資料摘要。  
+  您可以從報表產生符合 Atom 的資料摘要，然後在可取用資料摘要的應用程式 (例如 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端) 中使用資料摘要。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從報表取得的資料摘要。 此文件至少會列出報表中每個資料區的一個資料摘要。 根據資料區的類型以及該資料區顯示的資料， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能會產生來自某個資料區的多個資料摘要。  
   
  Atom 服務文件會針對每個資料摘要包含一個唯一的識別碼，而您可以在 URL 中使用該識別碼來檢視資料摘要的內容。  
   
- 如需詳細資訊，請參閱[從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [從多個報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)中使用這項資料。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

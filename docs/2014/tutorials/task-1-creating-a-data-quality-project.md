@@ -1,26 +1,23 @@
 ---
-title: 工作 1： 建立資料品質專案 |Microsoft Docs
+title: 工作 1:建立資料品質專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 16a9636cda0a0f390decd4215c897d033b282eaf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077088"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041209"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>工作 1：建立資料品質專案
+# <a name="task-1-creating-a-data-quality-project"></a>工作 1:建立資料品質專案
   在這項工作中，您會建立資料品質專案，針對您在本教學課程稍早建立的供應商知識庫來清理 Excel 檔案中的供應商資料。  
   
 1.  在 **資料品質專案** 窗格，在主要頁面上，按一下 **新增資料品質專案**。  
@@ -36,6 +33,6 @@ ms.locfileid: "48077088"
      ![選取 新增資料品質專案頁面-清理](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "選取新資料品質專案頁面-清理")  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 2：將 Excel 資料行對應到 DQS 定義域](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
+ [工作 2:Excel 資料行對應至 DQS 定義域](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
   
   

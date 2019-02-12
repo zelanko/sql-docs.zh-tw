@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ef8e9b56158cb1edfe088b9dc1894e3439d0b9ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51db58f2760f962e47a4cb6778c39500722fdad9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095038"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016339"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>資料集屬性對話方塊、篩選
   選取 **[資料集屬性]** 對話方塊上的 **[篩選]** ，即可建立資料集的篩選。  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110596"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037029"
 ---
 # <a name="report-model-query-designer-user-interface"></a>報表模型查詢設計工具使用者介面
   報表設計師提供了兩個查詢設計工具，可協助您指定想要將「報表伺服器模型」資料來源中的哪些資料用於報表中。 圖形化查詢設計工具可用來瀏覽和選擇模型實體與實體欄位。 使用以文字為基礎的查詢設計工具可直接處理 XML 格式的語意模型定義語言 (SMDL) 規格。  
@@ -90,7 +90,7 @@ ms.locfileid: "48110596"
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具，在報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [從外部資料來源新增資料 &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
- [報表模型連線 &#40;SSRS&#41;](report-model-connection-ssrs.md)   
+ [報表模型連接 &#40;SSRS&#41;](report-model-connection-ssrs.md)   
  [RSReportDesigner 設定檔](../report-server/rsreportdesigner-configuration-file.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 59417a54-55f1-4468-ba41-368aa852c2d4
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ab324e94efdfdebea0387a2212440ed971c11aa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094438"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027578"
 ---
 # <a name="schedule-the-policies"></a>排程原則
   在這項工作中，您將會排程匯入至先前工作中的最佳作法原則。  

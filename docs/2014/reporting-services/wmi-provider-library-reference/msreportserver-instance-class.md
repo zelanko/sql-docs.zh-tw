@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 80aa9e3838440e93cf92c7efb7f93723a1bdbdef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4edf20d92883c5446a4e63472e006acc3763084d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205928"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024149"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance 類別
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  
   
- 如需此型別的所有成員的清單，請參閱[MSReportServer_Instance 成員](msreportserver-instance-members.md)  
+ 如需此類型的所有成員清單，請參閱 [MSReportServer_Instance 成員](msreportserver-instance-members.md)  
   
 ## <a name="syntax"></a>語法  
   

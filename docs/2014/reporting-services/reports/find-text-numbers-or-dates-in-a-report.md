@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6af3783ca583dfa328b32ee6cfb4eaf8cd73b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100620"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019415"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>在報表中尋找文字、數字或日期 (SharePoint 整合模式的 Reporting Services)
   您可以透過輸入想要尋找的單字或片語 (搜尋詞彙的最大值為 256 個字元)，搜尋報表中的內容。 搜尋是一項導覽技術，可尋找報表中相符的值並將焦點放在包含該值的報表內容上。  
@@ -44,6 +44,6 @@ ms.locfileid: "48100620"
 4.  若要搜尋相同值的下一個出現位置，請按 **[下一個]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表檢視器 Web 組件新增至網頁&#40;Reporting Services SharePoint 整合模式&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [將報表檢視器 Web 組件加入網頁中 &#40;SharePoint 整合模式的 Reporting Services&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

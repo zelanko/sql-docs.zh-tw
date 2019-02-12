@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 101d5ba77dce4ef384e1d9ade52e8e847828d685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532415"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029529"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用參考資料 (外部) 知識清理資料
   本主題描述如何使用參考資料提供者的知識來清理資料。 對於使用參考資料提供者的知識來清理資料而言，雖然執行清理活動的所有步驟仍與[使用 DQS &#40;內部&#41; 知識清理資料](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中所說明的步驟相同，不過本主題將針對在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用 Reference Data Service 進行資料清理提供特定資訊。  
@@ -54,7 +54,7 @@ ms.locfileid: "52532415"
   
 1.  建立資料品質專案，然後選取 **[清理]** 活動。 請參閱 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。  
   
-2.  在 **地圖**頁面上，將下列 4 定義域的資料來源中的適當資料行：**地址行**，**城市**，**狀態**，和**Zip**。 按 [下一步] 。  
+2.  在 **地圖**頁面上，將下列 4 定義域的資料來源中的適當資料行：**地址行**，**城市**，**狀態**，和**Zip**。 按一下 [下一步] 。  
   
     > [!NOTE]  
     >  因為我們已經對應了 **[地址驗證]** 複合定義域中的所有定義域，所以資料清理現在將針對複合定義域層級進行，而非針對個別定義域層級進行。  

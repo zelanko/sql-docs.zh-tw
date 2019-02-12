@@ -2,10 +2,8 @@
 title: sp_delete_firewall_rule (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_firewall_rule_TSQL
@@ -21,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a9f446d9c8645d344cf6c14b886323468e387a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 406f94ab0ab2d0ebaddf9635448e364bf90ceb8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781106"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031749"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -44,7 +42,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>引數  
  此預存程序的引數為：  
   
- [@name =] '*名稱*'  
+ [@name =] '*name*'  
  要移除的伺服器層級防火牆設定的名稱。 *名稱*已**nvarchar (128)** 沒有預設值。  
   
 ## <a name="remarks"></a>備註  
@@ -62,7 +60,7 @@ EXEC sp_delete_firewall_rule N'Example setting 1';
   
 ## <a name="see-also"></a>另請參閱  
  [Azure SQL Database 防火牆](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [如何： 設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [操作說明：設定防火牆設定 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sys.firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   

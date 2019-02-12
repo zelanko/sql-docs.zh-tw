@@ -2,10 +2,8 @@
 title: sys.bandwidth_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -22,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 046e9e651daeb2946538ff5ae269aaad27666fd0
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: e3432bbf535b329f539b9404cb0f5b5b87d38542
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421305"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035709"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 

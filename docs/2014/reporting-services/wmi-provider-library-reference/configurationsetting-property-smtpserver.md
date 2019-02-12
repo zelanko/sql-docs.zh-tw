@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 71f83aecd44de087c83a97c5d458479033dcd6a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1e2309050495316946693adc84a97315f0b597a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207030"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034789"
 ---
 # <a name="smtpserver-property-wmi-msreportserverconfigurationsetting"></a>SMTPServer 屬性 (WMI MSReportServer_ConfigurationSetting)
   從報表伺服器組態檔中取得 SMTP 伺服器屬性。 唯讀。  

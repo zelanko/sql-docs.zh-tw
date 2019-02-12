@@ -2,8 +2,7 @@
 title: sp_pdw_log_user_data_masking （SQL 資料倉儲） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630236"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022969"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47630236"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔受到**sp_pdw_log_user_data_masking**確定[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。 **sp_pdw_log_user_data_masking**不會影響資料庫交易記錄檔，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔。  
   
- **背景：** 在預設組態[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，以及在某些情況下可以包含使用者資料，包含作業**插入**， **更新**，並**選取**陳述式。 如果發生在應用裝置上的問題，這可讓分析造成問題，而不需要重現問題的原因。 若要防止使用者資料寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄，客戶可以選擇使用此預存程序開啟使用者資料遮罩。 陳述式仍會寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔，但所有可能包含使用者資料的陳述式中的常值會加上遮罩; 取代一些預先定義的常數值。  
+ **背景：** 在預設組態[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，以及在某些情況下可以包含使用者資料包含 operations**插入**， **UPDATE**，和**選取**陳述式。 如果發生在應用裝置上的問題，這可讓分析造成問題，而不需要重現問題的原因。 若要防止使用者資料寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄，客戶可以選擇使用此預存程序開啟使用者資料遮罩。 陳述式仍會寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔，但所有可能包含使用者資料的陳述式中的常值會加上遮罩; 取代一些預先定義的常數值。  
   
  在應用裝置上啟用透明資料加密時，遮罩中的使用者資料[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔會自動開啟。  
   

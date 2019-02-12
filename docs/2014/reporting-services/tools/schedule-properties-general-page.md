@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 629b4f350ed001edbe36efaa990a716935d493ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fe262291ace3828989939dd31149393808859f8b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366130"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017759"
 ---
 # <a name="schedule-properties-general-page"></a>排程屬性 (一般頁面)
   使用此頁面即可檢視或修改共用排程。 共用排程可以用來取代報表特定或訂閱特定的排程。 對排程所做的變更會在您儲存排程之後套用。 編輯排程並不會影響目前正在進行中的作業。 如果您編輯排程時，該排程正在使用中，則系統會允許根據該排程觸發的所有目前處理中報表和訂閱繼續完成。  

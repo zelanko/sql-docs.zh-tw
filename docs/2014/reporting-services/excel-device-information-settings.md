@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f9a7213b59e435f797609a7abb7fcd560c4890e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f287e26bac61f2c29b1a60d72f66f4fd32bca966
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116199"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025749"
 ---
 # <a name="excel-device-information-settings"></a>Excel 裝置資訊設定
   下表列出以 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 格式轉譯的裝置資訊設定。  
@@ -28,7 +28,7 @@ ms.locfileid: "48116199"
 |-------------|-----------|  
 |**OmitDocumentMap**|指出是否為支援它的報表省略文件引導模式。 預設值是 `false`。|  
 |**OmitFormulas**|指出是否從轉譯的報表省略公式。 預設值是 `false`。|  
-|`SimplePageHeade`rs|指出是否將報表的頁首轉譯為 Excel 頁首。 值為`false`指出頁首會轉譯為工作表的第一個資料列。 預設值是 `false`。|  
+|`SimplePageHeade`rs|指出是否將報表的頁首轉譯為 Excel 頁首。 `false` 的值指出將頁首轉譯為工作表的第一列。 預設值是 `false`。|  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

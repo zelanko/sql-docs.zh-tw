@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f768da85b70168b090bfde19058926e098cd418
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: cd878e1b2a3f7e368985fa9b5b40cbdff7833a0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356488"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017839"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>實作傳遞延伸模組的 IDeliveryExtension 介面
   您的傳遞延伸模組類別是用以根據通知的內容，將報告通知傳遞給使用者。 傳遞延伸模組類別也提供基礎結構，以驗證傳遞給傳遞延伸模組的使用者設定。 此外，您的傳遞延伸模組類別應該包含特定的屬性，讓用戶端可用以取得有關延伸模組的名稱、延伸模組支援的設定，以及可供傳遞延伸模組使用的轉譯格式。  

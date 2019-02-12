@@ -1,26 +1,23 @@
 ---
-title: 工作 9： 加入聯集全部轉換來結合正確與更正的記錄 |Microsoft Docs
+title: 工作 9:加入聯集全部轉換來結合正確與更正的記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8900b595bcb90eb7ca0712d2b6e7e3010c4a7b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022859"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>工作 9：加入聯集全部轉換來結合正確和更正的記錄
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>工作 9:加入聯集全部轉換來結合正確和更正的記錄
   在這項工作，您會將聯集全部轉換加入至資料流程。 「聯集全部」轉換會將多項輸入結合至單一輸出。 在您的案例中，它會將正確和已更正的記錄結合到一個資料流中。  
   
 1.  拖放**聯集全部**從轉換**常見**一節**SSIS 工具箱**至**資料流程**索引標籤，並將它放在**挑選正確和更正的記錄**。  
@@ -46,6 +43,6 @@ ms.locfileid: "48180908"
 7.  這**connector**標題應該為**更正**。 因為您有只有兩個條件**更正**並**更正**，和已使用一個條件，則**輸入輸出選擇**對話方塊不會顯示這段。 如果連接器重疊，請將連接器往左或往右拖曳，將其中一個往左移，將另一個往右移。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 10：新增模糊群組轉換來識別重複項](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [工作 10:加入模糊群組轉換來識別重複項目](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

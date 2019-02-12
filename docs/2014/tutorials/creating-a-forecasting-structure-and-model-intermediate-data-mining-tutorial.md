@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5f55cbf6-0db4-4cb4-a0f5-e27441873d4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f762b6c561f96f8ced9f8fe977dceb3b9208d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048518"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015249"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>建立預測結構和模型 (中繼資料採礦教學課程)
   接下來，您將使用資料採礦精靈，根據您剛建立的資料來源檢視建立新的採礦結構和採礦模型。 在這項工作中，您將指定採礦模型應使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時間序列演算法。  
@@ -33,7 +32,7 @@ ms.locfileid: "48048518"
   
 5.  在 **選取資料來源檢視**頁面的 **可用的資料來源檢視**，選取**SalesByRegion**。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
 7.  在上**指定資料表類型**頁面上，確認中的核取方塊**案例**vTimeSeries 資料表的資料行已選取，然後再按**下一步**。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48048518"
   
      ModelRegion 資料行指定為**金鑰**資料行和 ReportingDate 資料行被自動指定為**Key Time**資料行。 每一種類型的索引鍵，您只能有一個。  
   
-11. 按 [下一步] 。  
+11. 按一下 [下一步] 。  
   
 12. 在上**完成精靈**頁面上，如**採礦結構名稱**，型別`Forecasting`。  
   

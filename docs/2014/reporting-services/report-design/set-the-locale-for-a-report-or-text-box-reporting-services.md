@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1526eeef7e28ea9994aa833d8272b177852ba5fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1d2552c441a17f3d79c3db0d06a0b128618503d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067278"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027087"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>設定報表或文字方塊的地區設定 (Reporting Services)
   報表或文字方塊上的 **[Language]** 屬性包含地區設定，地區設定會決定用來顯示依語言和地區而不同之報表資料的預設格式，例如日期、貨幣或數值。 文字方塊上的 **[Language]** 屬性會覆寫報表上的 **[Language]** 屬性。 如果 **[Language]** 未指定任何值，Reporting Services 會針對發行的報表使用報表伺服器上作業系統的地區設定，或是針對報表預覽使用報表撰寫電腦的地區設定。  
   
  如果是 HTML 報表，您可以覆寫預設的 **Language** 值，並使用瀏覽器用戶端之 HTTP 標頭所指定的語言，其方式是在報表或文字方塊之 **Language** 屬性的運算式內使用內建的 User!Language 欄位。  
   
- 您也可以在 URL 中指定報表的 **[Language]** 屬性。 如需詳細資訊，請參閱 <<c0> [ 在 URL 中的報表參數設定的語言](../set-the-language-for-report-parameters-in-a-url.md)。  
+ 您也可以在 URL 中指定報表的 **[Language]** 屬性。 如需詳細資訊，請參閱 [設定 URL 中報表參數的語言言](../set-the-language-for-report-parameters-in-a-url.md)。  
   
 ### <a name="to-set-the-locale-for-a-report"></a>若要設定報表的地區設定  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48067278"
     -   針對 **[UnicodeBiDi]** 屬性，選取文字方塊中所使用之雙向內嵌的層級。  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

@@ -2,10 +2,8 @@
 title: dbo.server_quotas (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: ''
+ms.service: sql-database
 ms.reviewer: ''
-ms.prod_service: sql-database
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - dbo.server_quotas
@@ -21,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e11b4ef7224a622b22c3d7cc15d97175c73625bd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 657376be08e4cd404ce53d78114604cdd11fbda2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671328"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034439"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

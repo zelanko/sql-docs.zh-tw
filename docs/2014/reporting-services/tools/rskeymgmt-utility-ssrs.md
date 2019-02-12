@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541855"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038259"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
   擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
@@ -86,7 +86,7 @@ ms.locfileid: "52541855"
   
  若為 **rskeymgmt -a**，便會將檔案中所儲存的對稱金鑰值套用在報表伺服器執行個體上。  
   
- `-p`  *密碼*  
+ `-p`  *password*  
  (`-f` 需要這個引數) 指定用來備份或套用對稱金鑰的密碼。 這個值不能空白。  
   
  `-i`  
@@ -101,7 +101,7 @@ ms.locfileid: "52541855"
  `-u`  *useraccount*  
  指定要聯結至向外延展部署中之遠端電腦的管理員帳戶。 如果未指定帳戶，就會使用目前使用者的認證。  
   
- `-v`  *密碼*  
+ `-v`  *password*  
  (`-u` 需要這個引數) 指定要聯結至向外延展部署中之遠端電腦的管理員帳戶密碼。  
   
  **-t**  <追蹤>  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49feffa82a1ae20735a2b9b70982782c3562c9cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: fa98a53b98fe446152b335b03671619da8341d6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370090"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015799"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>使用調色盤定義圖表的色彩 (報表產生器及 SSRS)
   您可以選取預先定義的調色盤，或定義自訂調色盤來變更圖表的色彩調色盤。 自訂調色盤是報表專屬的。  

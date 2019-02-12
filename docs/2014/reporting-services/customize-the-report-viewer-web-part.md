@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1cfb1dcfb635bbd7c70babcbd5a157c919c36892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110038"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017960"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
   您可以使用報表檢視器 Web 組件來檢視在設定為 SharePoint 整合之報表伺服器上執行的報表。 可顯示的報表包括報表定義 (.rdl) 檔案和報表產生器報表。 報表會自動在新網頁中於報表檢視器 Web 組件中開啟，但如果您希望特定報表總是顯示在某現有網頁或網站上，您也可以將報表檢視器 Web 組件加入至該網頁上。  
@@ -62,7 +62,7 @@ ms.locfileid: "48110038"
 |屬性|描述|  
 |--------------|-----------------|  
 |報表|報表的完整路徑，此報表位於目前的 SharePoint 網站上，或是相同 Web 應用程式或伺服陣列內的網站上。 若要在設定其他屬性時獲得最佳結果，請在指定報表 URL 之後按一下 [套用]。|  
-|超連結目標|標準 HTML，此 HTML 會指定在目前文件內顯示連結內容的目標框架。 如果是包含外部網站超連結的報表，您可以指定目標文件會取代目前視窗內現有的報表，或是在新的瀏覽器視窗中開啟。 有效值包括`_Top`， `_Blank`，和`_Self`。 `_Top` 會使用目前的視窗、`_Blank` 會在新的瀏覽器視窗中載入文件，而 `_Self` 會在目前的框架內開啟文件。 雖然 `_Parent` 是 HTML 中目標屬性的有效值，但是請勿將它用在內嵌於頁面的報表檢視器 Web 組件中。|  
+|超連結目標|標準 HTML，此 HTML 會指定在目前文件內顯示連結內容的目標框架。 如果是包含外部網站超連結的報表，您可以指定目標文件會取代目前視窗內現有的報表，或是在新的瀏覽器視窗中開啟。 有效的值包括 `_Top`、`_Blank` 和 `_Self`。 `_Top` 會使用目前的視窗、`_Blank` 會在新的瀏覽器視窗中載入文件，而 `_Self` 會在目前的框架內開啟文件。 雖然 `_Parent` 是 HTML 中目標屬性的有效值，但是請勿將它用在內嵌於頁面的報表檢視器 Web 組件中。|  
 |自動產生 Web 組件標題|所產生的標題，其中包括報表檢視器 Web 組件的名稱加上報表的名稱，兩者以破折號分隔。 如果報表沒有標題，則會使用報表的檔案名稱。 標題可在您將網頁組件加入頁面時看見。 如果選取這個核取方塊，則標題會在每一次重新整理頁面時產生。|  
 |自動產生 Web 組件標題詳細資料連結|產生的超連結，會出現在網頁組件的上方。 您可以按一下連結，在新頁面中以整頁模式開啟報表。|  
 |顯示報表產生器功能表項目|顯示或隱藏 **[動作]** 功能表選項以開啟報表產生器。|  
@@ -75,10 +75,10 @@ ms.locfileid: "48110038"
 |顯示尋找控制項|顯示或隱藏工具列上的尋找控制項。 尋找控制項可讓使用者在轉譯的報表內搜尋文字。 此選項會變更所有尋找控制項的可見性。|  
 |顯示縮放控制項|顯示或隱藏工具列上的縮放控制項。|  
 |顯示 ATOM 摘要按鈕|顯示或隱藏工具列上的 ATOM 摘要按鈕。<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
-|工具列位置|判斷工具列在報表檢視器中的位置。 有效值包括`Top`和`Bottom`。|  
-|提示區域|有效值包括`Displayed`， `Collapsed`，和`Hidden`。 `Displayed` 顯示針對的報表，包括參數化的值，以及執行報表之前需要使用者輸入的 [參數] 區域。 使用`Hidden`如果已指定所有報表參數，而不想讓使用者看見參數區域。|  
+|工具列位置|判斷工具列在報表檢視器中的位置。 有效值包括 `Top` 和 `Bottom`。|  
+|提示區域|有效的值包括 `Displayed`、`Collapsed` 和 `Hidden`。 `Displayed` 會針對包括參數化值的報表，以及需要使用者輸入才能執行的報表顯示參數區域。 如果已指定所有報表參數，而您不想讓使用者看見參數區域，請使用 `Hidden`。|  
 |參數區域寬度|您可以選擇度量單位和值。 預設值是 200 像素。 此屬性的唯一需求為大於零。|  
-|文件引導模式|在報表中定義的報表導覽控制項，用來提供報表特定區段的單鍵存取。 此模式於 HTML 報表中提供。 文件引導模式會在報表檢視區域旁的可摺疊區域中顯示。 有效值包括`Displayed`， `Collapsed`，和`Hidden`。 如果已定義報表的文件引導模式，除非在網頁組件屬性中標記為隱藏或摺疊，否則此區域會根據預設展開。 如果文件引導模式為摺疊，則可以按一下箭號將它展開。|  
+|文件引導模式|在報表中定義的報表導覽控制項，用來提供報表特定區段的單鍵存取。 此模式於 HTML 報表中提供。 文件引導模式會在報表檢視區域旁的可摺疊區域中顯示。 有效的值包括 `Displayed`、`Collapsed` 和 `Hidden`。 如果已定義報表的文件引導模式，除非在網頁組件屬性中標記為隱藏或摺疊，否則此區域會根據預設展開。 如果文件引導模式為摺疊，則可以按一下箭號將它展開。|  
 |文件引導模式區域寬度|您可以選擇度量單位和值。 預設值是 200 像素。 此屬性的唯一需求為大於零。|  
 |載入參數|擷取報表的參數屬性。 並非所有報表都有參數。 如果報表沒有參數，則不會傳回任何值。 如果您要為剛剛上傳的報表設定屬性，則可能會收到錯誤，指出資料來源連接已刪除。 如果發生此錯誤，請重設連接，然後在指定連接之後完成設定參數屬性。 如需如何設定連線的詳細資訊，請參閱[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)。<br /><br /> 為了獲得最佳結果，在按一下 [載入參數] 之前，請先按一下 **[套用]** 。<br /><br /> 載入參數屬性之後，就可利用您在報表的參數屬性頁面中使用的方式設定屬性。 如需如何設定參數的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48110038"
  參數區域提供執行報表之前輸入值的欄位。 只有在報表定義包括參數時才會使用此區域。 當顯示參數或認證區域時，報表檢視會調整成使用 Web 組件的剩餘寬度。 您可以設定 Web 組件上的屬性，以自訂參數的寬度。 您也可以定義頁面上個別參數旁出現的標籤。 如需如何修改參數標籤的詳細資訊，請參閱[在已發行的報表上設定參數 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 SharePoint 網站上的報表檢視器 Web 組件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [將報表檢視器 Web 組件新增至網頁&#40;Reporting Services SharePoint 整合模式&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [SharePoint 網站上的報表檢視器 Web 組件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [將報表檢視器 Web 組件加入至網頁 &#40;SharePoint 整合模式的 Reporting Services&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

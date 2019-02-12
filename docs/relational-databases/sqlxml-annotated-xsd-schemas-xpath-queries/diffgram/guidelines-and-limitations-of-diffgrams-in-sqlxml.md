@@ -10,16 +10,16 @@ ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d30c7a93906f9de5fb3826ac4d8a8e1f845f1693
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce3283568cebebd81bc98b3d4ebba7ba81d46dd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779166"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041119"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>在 SQLXML 中的 DiffGrams 指導方針和限制
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035079"
 ---
 # <a name="preload-the-cache-report-manager"></a>預先載入快取 (報表管理員)
   您可以為共用資料集建立快取重新整理計劃，為共用資料集預先載入快取。  
@@ -85,7 +85,7 @@ ms.locfileid: "48209498"
     data source=<servername>; initial catalog=Subscribers  
     ```  
   
-8.  按 [下一步] 。  
+8.  按一下 [下一步] 。  
   
 9. 指定擷取訂閱者資料的查詢或命令。 選擇性地增加花較長時間處理之查詢的逾時期間。 例如：  
   
@@ -121,10 +121,10 @@ ms.locfileid: "48209498"
 18. 按一下 **[套用]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料驅動訂閱](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [建立資料驅動訂閱 &#40;SSRS 教學課程&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [效能、快照、快取 &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [設定報表處理屬性](set-report-processing-properties.md)   
- [快取報表&#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [快取報表 &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

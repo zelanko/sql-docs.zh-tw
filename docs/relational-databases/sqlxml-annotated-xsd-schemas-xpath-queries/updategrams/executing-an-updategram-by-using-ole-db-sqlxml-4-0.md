@@ -13,16 +13,16 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 215b9b134571323a3cfa40fad6691b49fbe0ec9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb4617c4fc45e8e1672d11ef755b24c9d529529d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605136"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027420"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 執行 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

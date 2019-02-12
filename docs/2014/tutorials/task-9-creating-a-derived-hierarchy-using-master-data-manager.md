@@ -1,26 +1,23 @@
 ---
-title: 工作 9： 建立衍生的階層，使用主資料管理員 |Microsoft Docs
+title: 工作 9:建立衍生階層，使用主資料管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076878"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039329"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>工作 9：使用主資料管理員建立衍生階層
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>工作 9:使用主資料管理員建立衍生階層
   在這項工作中，您會使用主資料管理員建立衍生階層。 這個衍生的階層衍生自網域屬性關聯性之間**供應商**並**狀態**實體。  
   
 1.  切換至的主頁面**主資料管理員**依序按一下**SQL Server 2012 Master Data Services**頁面的頂端。  
@@ -41,11 +38,11 @@ ms.locfileid: "48076878"
   
      ![儲存衍生階層 按鈕](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-03.jpg "儲存衍生階層 按鈕")  
   
-7.  拖曳**供應商**從**可用層級： SuppliersInState**來**目前層級： SuppliersInState**。  
+7.  拖曳**供應商**從**可用層級：SuppliersInState**至**目前層級：SuppliersInState**。  
   
      ![可用的實體和階層目前層級](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-04.jpg "可用的實體和階層目前層級")  
   
-8.  拖曳**狀態**從**可用層級： SuppliersInState**來**目前層級： SuppliersInState**。 畫面上應該有**目前的層級**如下圖所示。  
+8.  拖曳**狀態**從**可用層級：SuppliersInState**至**目前層級：SuppliersInState**。 畫面上應該有**目前的層級**如下圖所示。  
   
      ![目前的層級和衍生階層的預覽](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-05.jpg "目前層級與預覽衍生階層")  
   
@@ -64,6 +61,6 @@ ms.locfileid: "48076878"
      ![衍生階層總管 中](../../2014/tutorials/media/et-creatingaderivedhierarchyusingmdm-07.jpg "衍生階層總管 中")  
   
 ## <a name="next-step"></a>下一個步驟  
- [第 5 課：使用 SSIS 自動化清理和比對](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
+ [第 5 課：自動化清理和比對使用 SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)  
   
   

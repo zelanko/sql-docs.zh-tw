@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d4bc08bcf6e56a5f839ebe17a8907bb7ce603d78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349963"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029099"
 ---
 # <a name="new-data-source-page-report-manager"></a>新增資料來源頁面 (報表管理員)
   使用 [新增資料來源] 頁面來建立共用資料來源項目。 共用資料來源定義外部資料來源的連接。 您可以利用共用資料來源來建立和維護資料來源連接的設定，與使用該資料來源的報表、模型和資料驅動訂閱分開處理。  

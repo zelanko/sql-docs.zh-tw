@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5e9ac249f6fd3c6626084f254ad60889066c334
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8f4fbe5a3990348edc2e8b3716ca869c4166e145
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029806"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043279"
 ---
 # <a name="data-quality-projects-dqs"></a>資料品質專案 (DQS)
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料品質專案是使用知識庫改善來源資料品質的一種工具，其方式是執行 *資料清理* 和 *資料比對* 活動，然後將產生的資料匯出到 SQL Server 資料庫或 .csv 檔案。 您可以建立資料品質專案當做清理專案或比對專案，以執行各自的活動。 清理專案和比對專案可以使用相同的知識庫執行，因為用於資料清理和比對的知識可以內建到相同的知識庫中。  
@@ -38,7 +38,7 @@ ms.locfileid: "51029806"
  如需有關資料品質專案中清理活動的詳細資訊，請參閱＜ [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)＞。  
   
 ##  <a name="Matching"></a> 資料品質專案：比對活動  
- 比對資料品質專案可讓您根據知識庫中的比對原則來執行比對活動，藉由識別完全相符和大致相符來避免資料重複，藉此讓您移除重複的資料。 建議您先清理資料，然後再執行資料的比對。 若要這樣做：  
+ 比對資料品質專案可讓您根據知識庫中的比對原則來執行比對活動，藉由識別完全相符和大致相符來避免資料重複，藉此讓您移除重複的資料。 建議您先清理資料，然後再執行資料的比對。 方法如下：  
   
 1.  建立資料品質專案、選取 **[清理]** 活動、針對來源資料完成資料清理活動，然後將資料匯出到 SQL Server 資料庫中的資料表。  
   

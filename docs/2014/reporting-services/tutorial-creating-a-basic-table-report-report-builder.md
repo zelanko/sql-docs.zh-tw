@@ -1,5 +1,5 @@
 ---
-title: 教學課程：建立基本資料表報表 (報表產生器) | Microsoft Docs
+title: 教學課程：建立基本資料表報表 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 438ea8d61900a78c6522cf8897b960598d8d3976
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189108"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020429"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 （報表產生器）
   本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,7 +50,7 @@ ms.locfileid: "48189108"
   
 7.  [將報表匯出](#Export)  
   
- 完成這個教學課程的估計時間：30 分鐘。  
+ 完成本教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -71,7 +71,7 @@ ms.locfileid: "48189108"
   
 3.  在右窗格中，確認已選取 **[資料表或矩陣精靈]** 。  
   
-##  <a name="DataConnection"></a> 1a。 在資料表精靈中指定資料連接  
+##  <a name="DataConnection"></a> 1a. 在資料表精靈中指定資料連接  
  資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。 若要指定資料連接，您可以使用來自報表伺服器的共用資料來源，或是建立僅在此報表中使用的內嵌資料來源。  
   
  在本教學課程中，您將使用內嵌資料來源。 若要深入了解如何使用共用資料來源，請參閱[取得資料連線的替代方式 &#40;報表產生器&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)。  
@@ -106,9 +106,9 @@ ms.locfileid: "48189108"
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-10. 按 [下一步] 。  
+10. 按一下 [下一步] 。  
   
-##  <a name="Query"></a> 1b。 在資料表精靈中建立查詢  
+##  <a name="Query"></a> 1b. 在資料表精靈中建立查詢  
  在報表中，您可以使用擁有預先定義查詢的共用資料集，或是建立只在報表中使用的內嵌資料集。 在本教學課程中，您將建立內嵌資料集。  
   
 > [!NOTE]  
@@ -162,9 +162,9 @@ ms.locfileid: "48189108"
   
      在結果集中，欄標題是依據查詢中的名稱而定。 在資料集中，欄標題會變成欄位名稱，並且儲存在報表中。 完成精靈後，您可以使用 [報表資料] 窗格檢視資料集欄位的集合。  
   
-4.  按 [下一步] 。  
+4.  按一下 [下一步] 。  
   
-##  <a name="Groups"></a> 1 c。 在資料表精靈中將資料組織成群組  
+##  <a name="Groups"></a> 1c. 在資料表精靈中將資料組織成群組  
  選取做為群組對象的欄位時，您會設計包含資料列和資料行的資料表，以顯示詳細資料和彙總資料。  
   
 #### <a name="to-organize-data-into-groups"></a>若要將資料組織為群組  
@@ -189,9 +189,9 @@ ms.locfileid: "48189108"
   
      步驟 4 和 5 會先依日期，再依該日期的產品子類別組織欄位的值。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
-##  <a name="Subtotals"></a> 1d。 在資料表精靈中加入小計和總計資料列  
+##  <a name="Subtotals"></a> 1d. 在資料表精靈中加入小計和總計資料列  
  建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
 #### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
@@ -214,7 +214,7 @@ ms.locfileid: "48189108"
   
 3.  清除 [展開/摺疊群組] 選項。 在本教學課程中，您建立的報表不會使用向下鑽研功能，此功能可讓使用者展開父群組階層，以顯示子群組資料列和詳細資料列。  
   
-4.  按 [下一步] 。  
+4.  按一下 [下一步] 。  
   
 ##  <a name="Style"></a> 1e。 在資料表精靈中選擇樣式  
  樣式會指定字型樣式、色彩集和框線樣式。  
@@ -229,7 +229,7 @@ ms.locfileid: "48189108"
   
 3.  按一下 **[完成]**。  
   
- 資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 [資料列群組] 窗格會顯示三個資料列群組：[SalesDate]、[Subcategory] 和 [Details]。 詳細資料是資料集查詢擷取的所有資料。  
+ 資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 資料列群組 窗格會顯示三個資料列群組：Salesdate、 子類別目錄和詳細資料。 詳細資料是資料集查詢擷取的所有資料。  
   
 ##  <a name="FormatCurrency"></a> 2.將資料格式化為貨幣  
  根據預設，[Sales] 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。 切換 [預留位置樣式]，將格式化的文字方塊和預留位置文字顯示為範例值。  
@@ -354,7 +354,7 @@ ms.locfileid: "48189108"
   
 3.  將 [名稱] 中的預設名稱取代為 **Product Sales**。  
   
-4.  按一下 **[儲存]**。  
+4.  按一下 [儲存] 。  
   
 ##  <a name="Export"></a> 7.匯出報表  
  報表可匯出為不同的格式，例如 Microsoft Excel 和逗號分隔值 (CSV)。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
@@ -386,7 +386,7 @@ ms.locfileid: "48189108"
   
 5.  確認檔案類型為**Excel 活頁簿**。  
   
-6.  按一下 **[儲存]**。  
+6.  按一下 [儲存] 。  
   
 #### <a name="to-view-the-report-in-excel"></a>若要在 Excel 中檢視報表  
   

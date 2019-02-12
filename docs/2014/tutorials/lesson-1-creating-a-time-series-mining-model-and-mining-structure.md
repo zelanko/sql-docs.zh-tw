@@ -1,22 +1,21 @@
 ---
-title: 第 1 課： 建立時間序列採礦模型和採礦結構 |Microsoft Docs
+title: 第 1 課：建立時間序列採礦模型和採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174018"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014159"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>第 1 課：建立時間序列採礦模型和採礦結構
   在這一課，您將建立一個採礦模型，好讓您根據歷程記錄資料預測一段時間的值。 當您建立此模型時，基礎結構將會自動產生而且可用來當做其他採礦模型的基礎。  
@@ -80,7 +79,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中建立新的 DMX 查詢  
   
-1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
 2.  在 [**連接到伺服器**] 對話方塊中，如**伺服器類型**，選取**Analysis Services**。 在 **伺服器名稱**，型別`LocalHost`，或執行個體名稱[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要連接到這一課。 按一下 **[連接]**。  
   
@@ -196,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  在下一課中，您將採礦模型，來**Forecasting_MIXED**您剛才建立的採礦結構。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課：將採礦模型新增至時間序列採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [第 2 課：將採礦模型加入至時間序列採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [時間序列模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

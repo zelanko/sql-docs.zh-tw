@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7a3efdc60e34555aeb0cf706c7f8ab219fd64d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182568"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021576"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
   在您設計和測試完報表或報表集之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的內建部署功能，將報表發行至實際報表伺服器。 您可以發行個別的報表或報表伺服器專案。 發行報表伺服器專案是發行多份報表最簡單的方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用這個詞彙*部署*，而不是一詞*發佈*。 這兩個詞可以互換。  
@@ -41,7 +41,7 @@ ms.locfileid: "48182568"
 ## <a name="project-configurations"></a>專案組態  
  報表會在發行前建立，以確保只有有效的報表定義會發行到報表伺服器。 專案組態包括建立報表的屬性，例如，暫時儲存已建立之報表的資料夾，以及如何處理建立問題。 組態也包含您用來指定報表伺服器之位置與版本、報表伺服器上之資料夾的屬性。  
   
- 根據預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供三種專案組態： DebugLocal、 Debug 與 Release。 預設組態為 DebugLocal。 您通常可以使用 DebugLocal 組態在本機預覽視窗中檢視報表、使用 Debug 組態將報表發行至測試伺服器，以及使用 Release 組態將報表發行至實際伺服器。 在標準工具列上的方案組態下拉式清單中會顯示使用中的組態。 若要使用不同的組態，請從清單中進行選取。  
+ 根據預設，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]提供三種專案組態：DebugLocal、 Debug 與 Release。 預設組態為 DebugLocal。 您通常可以使用 DebugLocal 組態在本機預覽視窗中檢視報表、使用 Debug 組態將報表發行至測試伺服器，以及使用 Release 組態將報表發行至實際伺服器。 在標準工具列上的方案組態下拉式清單中會顯示使用中的組態。 若要使用不同的組態，請從清單中進行選取。  
   
  您的報表環境可能已安裝多部報表伺服器以及不同版本的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 您可以建立多個組態，然後根據部署狀況，使用不同的組態。 如需詳細資訊，請參閱 <<c0> [ 部署和版本支援 SQL Server Data Tools 中&#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)並[設定部署屬性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)。</c0>  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48182568"
   
 ## <a name="see-also"></a>另請參閱  
  [專案屬性頁對話方塊](../tools/project-property-pages-dialog-box.md)   
- [報表伺服器內容管理&#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
+ [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [升級報表](../install-windows/upgrade-reports.md)  
   
   

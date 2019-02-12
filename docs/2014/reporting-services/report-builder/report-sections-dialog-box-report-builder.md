@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39d3aab1e36d51df8eabf14bbd5fb4ecf6824591
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f52afcf99e1727e8de255ca62aa74c893a24273
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050549"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015029"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>報表區段對話方塊 (報表產生器)
   當您開啟報表時，報表產生器會驗證此報表只包含一個報表定義語言 (RDL) **\<Section>** 項目。 不支援開啟具有多個 **\<Section>** 項目的報表。  
@@ -30,6 +30,6 @@ ms.locfileid: "48050549"
  按一下 **[確定]** 繼續進行。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、 窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: caf0cb1f3d22c41fdc551988556a49f12ee22f36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375250"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034449"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>工作 5:設定以詞彙為主的關聯
   在這個工作中，您可以定義一些以詞彙為主的關聯，值**Supplier Name**網域。 以詞彙為主的關聯可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如， **Inc.** 可以以下列方式更正**Incorporated**。 DQS 會在知識探索、清理或比對程序中使用這些關聯。 請參閱[建立以詞彙為主的關聯](https://msdn.microsoft.com/library/hh510404.aspx)如需詳細資訊。  

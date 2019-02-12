@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 45e488f189cf9068531b927b1b28bfde621555da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353388"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033119"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 （報表產生器）
   本教學課程將教導您如何根據範例銷售資料建立基本矩陣報表。 矩陣具有巢狀資料列和資料行群組，以及一個相鄰資料行群組。 此外，您還將學習如何格式化資料行和旋轉文字。 下圖顯示報表，與您將要建立的報表相似。  
@@ -72,11 +72,11 @@ ms.locfileid: "53353388"
   
 4.  在 **[選擇資料集]** 頁面上，按一下 **[建立資料集]**。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 **選擇資料來源的連接**頁面，選取現有的資料來源或瀏覽至報表伺服器，然後再選取 資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌的資料來源的詳細資訊，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 **[設計查詢]** 頁面上，按一下 **[當成文字編輯]**。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "53353388"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity  
     ```  
   
-10. 按 [下一步] 。  
+10. 按一下 [下一步] 。  
   
 ##  <a name="Groups"></a> 2.從新增資料表或矩陣精靈組織資料、選擇配置和樣式  
  使用精靈提供起始設計來顯示資料。 精靈中的預覽窗格可協助您在完成矩陣設計之前，先視覺化群組資料的結果。  
@@ -146,7 +146,7 @@ ms.locfileid: "53353388"
   
      步驟 5 和步驟 6 指定了矩陣資料格要顯示的資料。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 [選擇配置] 頁面的 [選項] 下方，確定已選取 [顯示小計和總計]。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "53353388"
   
 10. 確定已選取 [展開/摺疊群組] 選項。  
   
-11. 按 [下一步] 。  
+11. 按一下 [下一步] 。  
   
 12. 在 [選擇樣式] 頁面的 [樣式] 窗格中選取**Slate**。  
   
@@ -325,7 +325,7 @@ ms.locfileid: "53353388"
   
  在報表中，報表頁首包含報表標題。  
   
-##  <a name="Save"></a> 8。儲存報表  
+##  <a name="Save"></a> 8.儲存報表  
  您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。  
   
  本教學課程會將報表儲存至報表伺服器。 如果您沒有報表伺服器的存取權，請將報表儲存在您的電腦上。  
@@ -356,7 +356,7 @@ ms.locfileid: "53353388"
   
 4.  按一下 [儲存] 。  
   
-##  <a name="RotateTextBox"></a> 9。(選擇性) 將文字方塊旋轉 270 度  
+##  <a name="RotateTextBox"></a> 9.(選擇性) 將文字方塊旋轉 270 度  
  含有矩陣的報表在執行時，可能會水平且垂直地展開。 如果將文字方塊旋轉 270 度 (垂直旋轉)，就比較不佔水平空間。 這樣轉譯後的報表將會變窄，且若匯出為 Microsoft Word 等格式，則大概都能容納於單一列印頁面上。  
   
  文字方塊也可以將文字顯示成水平、垂直 (由上而下) 的方向。 如需詳細資訊，請參閱[文字方塊 &#40;報表產生器及 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)。  

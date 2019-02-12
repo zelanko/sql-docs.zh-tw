@@ -12,16 +12,16 @@ helpviewer_keywords:
 - security [SQLXML], updategrams
 - updategrams [SQLXML], security
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec33af7b8b29c0f61cc28cbf4d5c5cedb5d9f779
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd2002e2d05a46cfa094fbac5c5e78991052253
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782306"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031039"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Updategram 安全性考量 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

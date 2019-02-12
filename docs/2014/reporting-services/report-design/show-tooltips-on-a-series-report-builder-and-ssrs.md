@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e5981a6f029391369d47d9eb1d70e7372ed5b9ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078195"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029649"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在數列上顯示工具提示 (報表產生器及 SSRS)
   您可以將工具提示加入到圖表數列上的每個資料點，以便在使用者將滑鼠指標停留在已轉譯之報表中的資料點時，顯示與資料點相關的資訊，例如，群組名稱、資料點的值，或相對於數列總數之資料點的百分比。  
@@ -30,12 +30,12 @@ ms.locfileid: "48078195"
   
 1.  以滑鼠右鍵按一下數列，或以滑鼠右鍵按一下 [值] 區域中的欄位，然後按一下 [數列屬性]。  
   
-2.  按一下 **[數列資料]** ，然後針對 **[工具提示]** 屬性，輸入字串或運算式。 您可以使用任何圖表專用的關鍵字來表示圖表上的其他元素。 如需詳細資訊，請參閱 <<c0> [ 格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。</c0>  
+2.  按一下 **[數列資料]** ，然後針對 **[工具提示]** 屬性，輸入字串或運算式。 您可以使用任何圖表專用的關鍵字來表示圖表上的其他元素。 如需詳細資訊，請參閱 [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [在報表上新增鑽研動作 &#40;報表產生器及 SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+ [在報表上加入鑽研動作 &#40;報表產生器及 SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9070c23997211eec25d23976a48de321611f4efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: be66209ab3b724c31fde38bad4f251db94a72765
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217748"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017339"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>建立資料處理延伸模組程式庫
   每個您建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組都應該指派到唯一的命名空間，並內建於程式庫或是組件檔中。 命名空間的正確名稱並不重要，但是它必須是唯一且未與其他延伸模組共用。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的資料處理延伸模組使用命名空間 <xref:Microsoft.ReportingServices.DataProcessing>。 您應該為公司的資料處理延伸模組建立自己的唯一命名空間。  

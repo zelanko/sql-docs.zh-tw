@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5baacbca2f7882314ac62c1ef98e22ba6eca9aa8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7b217d8bc099924e89783492991bd12a2275adb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507536"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031229"
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中開啟現有的知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  

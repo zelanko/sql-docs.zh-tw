@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d9da0718a6eee5fda00d6418a5b6a624f8380c7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109438"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033479"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>建立內嵌或共用資料來源 (SSRS)
   報表資料來源會指定名稱及連接資訊。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可支援兩種類型的資料來源：內嵌和共用。 內嵌資料來源是定義在報表定義中，而且只能供該報表使用。 共用資料來源會定義成個別的項目，而且可以供多個報表使用。 如需詳細資訊，請參閱 <<c0> [ 內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。</c0>  
@@ -87,10 +87,10 @@ ms.locfileid: "48109438"
   
 ## <a name="see-also"></a>另請參閱  
  [在 Reporting Services 資料來源中儲存認證](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [共用資料來源，從將內嵌的轉換成&#40;報表產生器及 SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
- [將報表或模型繫結至共用的資料來源&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [將報表或模型繫結至共用資料來源 &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [設定報表的資料來源屬性 &#40;報表管理員&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Reporting Services 所支援的資料來源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Reporting Services 支援的資料來源 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

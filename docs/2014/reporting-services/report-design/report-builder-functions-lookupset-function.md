@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166398"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029539"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回符合指定之名稱的值組。  
@@ -45,12 +45,12 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  指定報表中資料集名稱的常數。 例如，"ContactInformation"。  
   
 ## <a name="return"></a>傳回  
- 傳回`VariantArray`，或`Nothing`如果沒有相符項目。  
+ 傳回 `VariantArray` 或在沒有相符項目時傳回 `Nothing`。  
   
 ## <a name="remarks"></a>備註  
- 使用`LookupSet`擷取名稱/值組的指定資料集中的一組值 1 對多關聯性。 例如，在資料表中的客戶識別碼，您可以使用`LookupSet`擷取該客戶的未繫結至資料區的資料集的所有相關聯的電話號碼。  
+ 使用 `LookupSet` 可從具有一對多關係之名稱/值組的指定資料集中擷取一組值。 例如，如果是資料表中的客戶識別碼，您可以使用 `LookupSet` 從未繫結至資料區的資料集中，擷取該客戶的所有相關電話號碼。  
   
- `LookupSet` 執行下列作業：  
+ `LookupSet` 會執行下列動作：  
   
 -   評估目前範圍中的來源運算式。  
   
@@ -72,7 +72,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   `LookupSet` 不能用於做為運算式的下列報表項目：  
+-   `LookupSet` 不能當做下列報表項目的運算式使用：  
   
     -   資料來源的動態連接字串。  
   
@@ -98,9 +98,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>範例  
- 因為`LookupSet`傳回集合的物件，您無法直接在文字方塊中顯示結果運算式。 您可以將集合中每一個物件的值串連起來當做一個字串。  
+ 因為 `LookupSet` 會傳回物件的集合，所以您無法直接在文字方塊中顯示結果運算式。 您可以將集合中每一個物件的值串連起來當做一個字串。  
   
- 使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]函式`Join`從一組物件建立分隔的字串。 使用逗號當做分隔符號，在單一行中結合這些物件。 在某些轉譯器中，您可能會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 換行字元 (`vbCrLF`) 當作分隔符號，在新行中列出每一個值。  
+ 使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數 `Join` 從一組物件建立分隔的字串。 使用逗號當做分隔符號，在單一行中結合這些物件。 在某些轉譯器中，您可能會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 換行字元 (`vbCrLF`) 當作分隔符號，在新行中列出每一個值。  
   
  當它用來當做 [值] 屬性文字方塊中，下列運算式會使用`Join`來建立清單。  
   
@@ -148,9 +148,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

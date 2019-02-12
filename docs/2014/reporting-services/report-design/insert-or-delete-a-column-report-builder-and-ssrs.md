@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8bba223000110229c6df9098c263afaea30d711a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019399"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或刪除資料行 (報表產生器及 SSRS)
   您可以在 Tablix 資料區中加入或刪除資料行。 Tablix 資料區可以是資料表、矩陣或清單。 下列程序不適用於圖表和量測計資料區域。  
@@ -59,7 +59,7 @@ ms.locfileid: "48117339"
 -   在您想要刪除資料行之 Tablix 資料區的資料行群組區域中，以滑鼠右鍵按一下資料行群組資料格，然後按一下 [刪除資料行]。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解群組&#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
+ [了解群組 &#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

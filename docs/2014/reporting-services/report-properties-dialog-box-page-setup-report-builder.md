@@ -11,14 +11,14 @@ f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c42d509f3ef228b08555c26f5fdfc6ddd62a0c8d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905078"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022129"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>報表屬性對話方塊、版面設定 (報表產生器)
   選取 **版面**上**報表屬性**，來設定整個報表的分頁選項的對話方塊。  
@@ -51,10 +51,10 @@ ms.locfileid: "48905078"
  **底部**  
  設定報表底部和報表最後一行底部之間的距離。  
   
- **左邊**  
+ **Left**  
  設定報表左邊緣和報表資料列左邊緣之間的距離。  
   
- **權限**  
+ **Right**  
  設定報表右邊緣和報表資料列右邊緣之間的距離。  
   
 ## <a name="see-also"></a>另請參閱  

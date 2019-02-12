@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596789"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032949"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning 服務 （R、 Python） 在 SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ SQL Server 2017 Machine Learning 服務是 database engine 執行個體，用於
 
 如果您先前使用[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的 Machine Learning 服務是新一代的 R 支援的基底 R，RevoScaleR，MicrosoftML，更新版本和 2016年中引進的其他程式庫。 
 
-Azure SQL database [Machine Learning 服務 （使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)目前處於公開預覽狀態。
+Azure SQL database [Machine Learning 服務 （使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前處於公開預覽狀態。
 
 Machine Learning 服務的主要價值主張是其企業 R 和 Python 套件的乘冪，以提供進階的分析，在小數位數，並且能夠讓計算和處理資料的所在，不必在提取資料在網路中。
 
@@ -126,8 +126,8 @@ SQL Server 2017 Machine Learning 服務是新一代的 SQL Server 2016 R Service
 
 | 產品名稱 | 引擎版本 | 發行日期 |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning 服務 （資料庫） | R Server 9.2.1 <br/> Python 伺服器 9.2 | 2017 年 10 月 |
-| SQL Server 2017 Machine Learning 伺服器 （獨立式） | R Server 9.2.1 <br/> Python 伺服器 9.2 | 2017 年 10 月 |
+| SQL Server 2017 Machine Learning 服務 （資料庫） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
+| SQL Server 2017 Machine Learning 伺服器 （獨立式） | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
 | SQL Server 2016 R Services （資料庫） | R Server 9.1  | 2017 年 7 月  |
 | SQL Server 2016 R Server （獨立式）  |  R Server 9.1 | 2017 年 7 月 |
 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 254cd7875988103fd6dc479d66794f4d2627179d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119998"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019411"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>在資料區中排序資料 (報表產生器及 SSRS)
   若要在資料區域中變更報表第一次執行時資料的排序次序，您必須針對資料區域或群組設定排序運算式。 根據預設，群組的排序運算式會自動設定為與群組運算式相同的值。  
@@ -27,7 +27,7 @@ ms.locfileid: "48119998"
   
 -   在量測計資料區域中，您通常不需要排序資料，因為量測計會顯示一個相對於範圍的單一值。 如果您需要排序量測計中的資料，則必須先定義一個群組，然後設定該群組的排序運算式。  
   
- 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
   
  若是 Tablix 資料區域，您也可以將互動式排序按鈕加入到資料行標頭的頂端，以提供使用者變更群組或詳細資料列之排序次序的能力。 如需詳細資訊，請參閱[互動式排序 &#40;報表產生器及 SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)。  
   

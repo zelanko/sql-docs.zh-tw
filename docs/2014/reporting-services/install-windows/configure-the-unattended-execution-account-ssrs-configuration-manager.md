@@ -18,25 +18,25 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16a92441dd7e3088b6be0f8235f6719b6bc7cdb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012069"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
   
--   透過網路針對使用資料庫驗證的報表傳送連接要求，或是連接到不需要或不使用驗證的外部報表資料來源。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)SQL Server 線上叢書 》 中。  
+-   透過網路針對使用資料庫驗證的報表傳送連接要求，或是連接到不需要或不使用驗證的外部報表資料來源。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的 [指定報表資料來源的認證和連接資訊](../../integration-services/connection-manager/data-sources.md) 。  
   
 -   擷取報表中使用的外部影像檔。 如果想要使用影像檔而該檔案無法透過匿名存取來存取，則您可以設定自動報表處理帳戶，並授與該帳戶存取檔案的權限。  
   
  自動報表處理是指由事件觸發 (不論是排程驅動事件或資料重新整理事件)，而非由使用者要求觸發的任何報表執行處理。 報表伺服器使用自動報表處理帳戶，來登入主控外部資料來源的電腦。 因為報表伺服器服務帳戶的認證絕不會用來連接到其他電腦，所以需要此帳戶。  
   
 > [!IMPORTANT]  
->  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 特別是如果您讓密碼過期或者 Active Directory 中的帳戶資訊變更，則下次在處理報表時，您將遇到下列的錯誤訊息：「登入失敗 (rsLogonFailed) 登入失敗：未知的使用者名稱或密碼錯誤。」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
+>  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 特別是，如果您讓密碼過期或者 Active Directory 中的帳戶資訊變更，則下次在處理報表時，您將遇到下列的錯誤訊息：「登入失敗 (rsLogonFailed) 登入失敗：未知的使用者名稱或密碼錯誤。」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
   
 ## <a name="how-to-configure-the-account"></a>如何設定帳戶  
  您必須使用網域使用者帳戶。 為了提供原先預期的用途，此帳戶應該與用來執行報表伺服器服務的帳戶不同。 請務必使用符合下列條件的帳戶：擁有最小權限 (具有網路連接的唯讀存取權限就足夠)，而且僅擁有提供資料來源和資源給報表伺服器之電腦的有限存取權。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "48192528"
   
 1.  建立或選取網域帳戶，該帳戶擁有提供資料或服務給報表伺服器之電腦和伺服器的存取權。 您應使用擁有較小權限的帳戶 (例如唯讀權限)。  
   
-2.  開啟命令提示字元：在 [開始] 功能表上，按一下 [執行]，鍵入 **cmd**，然後按一下 [確定]。  
+2.  開啟命令提示字元：上**開始**功能表上，按一下**執行**，型別**cmd**，然後按一下 **確定**。  
   
 3.  輸入下列命令，即可在本機報表伺服器執行個體上設定帳戶：  
   

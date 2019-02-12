@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 40c66dfbb4ed728df49e3756af7baea17197b502
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034829"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
   您可以控制是否要針對跨多個頁面的 Tablix 資料區，在每個頁面上重複資料列和資料行標頭。 Tablix 資料區可以是資料表、矩陣或清單。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 276d37b97cfe0a2a4194aa8aed713834a20c8674
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522854"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014141"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>將原則匯入至單一執行個體
   在這項工作中，您將會針對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的單一執行個體，匯入您要排程到以原則為基礎之管理的最佳作法原則。  
@@ -36,7 +35,7 @@ ms.locfileid: "52522854"
   
 5.  在 **查看**清單中，瀏覽至下列資料夾，其中包含最佳作法原則：  
   
-     **C:\Program 檔案 (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+     **C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
     > [!NOTE]  
     >  檔案路徑可能會隨著您安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 程式檔案的位置、執行 32 位元或 64 位元作業系統，以及語言識別碼而有所不同。  

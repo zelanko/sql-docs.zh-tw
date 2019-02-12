@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 25fd4b521ba46e2a4e47dea9e7c2fd962d3c8895
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b708b0ee524cbba2e7f1c6c173e067024f5d54b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364130"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039739"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>資料集屬性對話方塊、選項 (報表產生器)
   選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/collations/collation-and-unicode-support.md) 》中的 [定序與 Unicode 支援](https://go.microsoft.com/fwlink/?linkid=98335)。  

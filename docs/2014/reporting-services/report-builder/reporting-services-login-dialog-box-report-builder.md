@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f593da2103d0efda0b70e5628e23249e437fedfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223208"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030419"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 登入對話方塊 (報表產生器)
   使用 **[Reporting Services 登入]** 對話方塊，即可提供發行報表至報表伺服器的認證。 如需這些認證的說明，請連絡報表伺服器管理員。  
@@ -34,6 +34,6 @@ ms.locfileid: "48223208"
  輸入密碼以登入 Web 服務。  
   
 ## <a name="see-also"></a>另請參閱  
- [對話方塊、 窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

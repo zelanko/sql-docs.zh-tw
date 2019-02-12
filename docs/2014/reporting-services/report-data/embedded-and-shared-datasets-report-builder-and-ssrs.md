@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7b62c631972aee6f56ec8f62db51b2e402000011
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 069c8900d5d9939567dd5e59f2f5f6547b0044af
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117808"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041709"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>內嵌和共用資料集 (報表產生器及 SSRS)
   在報表中，資料集代表在外部資料來源上執行查詢時所傳回的報表資料。 資料集取決於包含外部資料來源之相關資訊的資料連接。 資料本身不會包含在報表定義中。 資料集包含查詢命令、欄位集合、參數、篩選，以及包含區分大小寫和定序的資料選項。 資料集有以下兩種不同的類型：  
@@ -60,11 +60,11 @@ ms.locfileid: "48117808"
  若要建立或編輯內嵌資料集，請使用 [報表資料] 窗格。 建立資料集之後，您可以在 **[資料集屬性]** 對話方塊中設定屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [資料連接、 資料來源和報表產生器中的連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

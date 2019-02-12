@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 239ca089feac4b814600234f2b80b2de398bb989
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 835aa0c500e53ab28df491fe8209d2af27083365
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074302"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015259"
 ---
 # <a name="server-properties-execution-page"></a>伺服器屬性 (執行頁面)
   使用此頁面，即可設定報表執行的逾時值。 此值適用於由目前報表伺服器執行個體處理的所有報表。 您可以針對個別報表覆寫此值。 您所指定的值必須配合在報表伺服器上進行的所有報表處理，再加上報表伺服器擷取報表中所使用的資料時，於資料庫伺服器上執行的查詢處理。  

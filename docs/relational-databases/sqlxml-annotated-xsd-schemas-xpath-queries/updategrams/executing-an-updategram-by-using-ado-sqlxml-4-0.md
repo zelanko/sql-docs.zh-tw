@@ -12,16 +12,16 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f986f447ff3659ade6fe3211b08d0759cbac0b6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d886bde5ead026b28d0aca9fcebefec1a5ef5d50
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254733"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032019"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

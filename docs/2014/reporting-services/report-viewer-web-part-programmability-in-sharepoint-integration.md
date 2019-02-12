@@ -11,13 +11,13 @@ ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c42e12dc43febf4927ea2f559631b63c5ba4e143
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+manager: kfile
+ms.openlocfilehash: 35d0d2835b9d733a5f22b1abf1c81dbedd00f318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023699"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 整合中的報表檢視器 Web 組件可程式性
   報表檢視器 Web 組件是 `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` 伺服器控制項，這個控制項包含一組公用應用程式開發介面 (API)，可讓開發人員建立自訂 SharePoint 應用程式。 您可以建立自訂 Web 組件，利用 Web 組件連接提供報表路徑和參數給報表檢視器 Web 組件。 您也可以將 Web 組件內嵌在自訂 SharePoint Web 組件頁面中，並使用公用 API 來自訂該組件。  

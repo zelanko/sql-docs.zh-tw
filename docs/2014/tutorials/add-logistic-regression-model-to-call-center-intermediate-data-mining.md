@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 97abb77a-346c-44fa-8959-688dee1af6a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4afe3881d8e5eafaeffbd45aa7f64a514d8c70a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208200"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015509"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>將羅吉斯迴歸模型加入到撥接中心結構 (中繼資料採礦教學課程)
   除了分析可能會影響撥接中心作業的因數之外，您還必須提供有關員工如何改進服務品質的一些特定建議。 在這個工作中，您將使用和探勘模型相同的採礦結構，並加入一個採礦模型用於建立預測。  
@@ -70,6 +69,6 @@ ms.locfileid: "48208200"
  [建立用於撥接中心模型的預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [處理需求和考量&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 (資料採礦)](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

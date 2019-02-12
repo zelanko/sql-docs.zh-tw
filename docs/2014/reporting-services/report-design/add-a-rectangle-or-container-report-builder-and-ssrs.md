@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4114dc58ec310c990566d76dc090766f2a353622
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21bf1d94f179f9c48fb3b00f06d98cec105c9f27
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209048"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017209"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>加入矩形或容器 (報表產生器及 SSRS)
   當您希望使用圖形元素來區隔報表的區域、強調報表的區域或是提供一個或多個報表項目的背景時，請將矩形加入至報表中。 矩形也可當做容器使用，有助於控制資料區在報表中的轉譯方式。 您可以自訂矩形的外觀，其方式是編輯矩形屬性 (如背景色彩和框線色彩)。 如需使用矩形作為容器的詳細資訊，請參閱[矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) 和[在矩陣和圖表上顯示相同的資料 &#40;報表產生器&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "48209048"
     >  如果您將線條樣式設定為**Double**和線條的寬度為 1 1/2 pt 或更窄，線條可能不會出現雙線當您在報表產生器、 報表設計師或報表管理員中，會在執行報表時。 當您將報表匯出為其他格式時才會出現雙線，例如 Microsoft Word 及 Acrobat PDF。  
   
 ## <a name="see-also"></a>另請參閱  
- [矩形和線條&#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [矩形和線條 &#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

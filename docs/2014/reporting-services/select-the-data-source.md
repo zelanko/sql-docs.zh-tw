@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa201b447d9263e32aecf7d525e9460b8c0a8b37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166958"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011819"
 ---
 # <a name="select-the-data-source"></a>選取資料來源
   使用報表精靈的這個頁面，即可定義報表的資料來源。  
@@ -41,13 +41,13 @@ ms.locfileid: "48166958"
   
  按一下 **[編輯]** ，即可在 **[連接屬性]** 對話方塊中指定資料來源伺服器。 您可以指定本機或遠端資料來源。  
   
- 按一下 **[認證]** ，即可提供資料庫認證。 至少您指定的認證必須足以讓您基於報表設計用途，來連接到資料來源。 當報表是部署在報表伺服器上時，資料庫認證必須配合報表的所有使用者。 例如，如果您希望所有報表使用者都使用其認證來連接到資料來源，請選擇 [使用 Windows 驗證 (整合式安全性)]。 您指定的認證對於資料來源必須是有效的，所以如果您選擇 Windows 驗證，請確定資料來源會接受來自將執行報表之所有使用者帳戶的連接。 資料庫認證可以從報表中個別加以管理。 如需詳細資訊，請參閱[管理報表資料來源](report-data/manage-report-data-sources.md)。  
+ 按一下 **[認證]** ，即可提供資料庫認證。 至少您指定的認證必須足以讓您基於報表設計用途，來連接到資料來源。 當報表是部署在報表伺服器上時，資料庫認證必須配合報表的所有使用者。 例如，如果您希望所有報表使用者都使用其認證來連接到資料來源，請選擇 [使用 Windows 驗證 (整合式安全性)]。 您指定的認證對於資料來源必須是有效的，所以如果您選擇 Windows 驗證，請確定資料來源會接受來自將執行報表之所有使用者帳戶的連接。 資料庫認證可以從報表中個別加以管理。 如需詳細資訊，請參閱 [管理報表資料來源](report-data/manage-report-data-sources.md)。  
   
  **將此共用的資料來源**  
  選取此選項，即可將資料來源儲存在專案中當做共用資料來源，而不是儲存在報表中。 如此一來，您就可以將它當做專案中其他報表的資料來源使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner 組態檔](report-server/rsreportdesigner-configuration-file.md)   

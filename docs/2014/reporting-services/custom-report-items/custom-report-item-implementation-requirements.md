@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 534197a9ed148685d58c5f3ff17b6b329e9ee913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dc2898fd9bca67b0b6838e685ad0cb7e2739e3c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219468"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029809"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>自訂報表項目實作需求
   本主題將討論開發和部署自訂報表項目的必要條件。  
@@ -50,7 +50,7 @@ ms.locfileid: "48219468"
 ## <a name="see-also"></a>另請參閱  
  [建立自訂報表項目執行階段元件](creating-a-custom-report-item-run-time-component.md)   
  [建立自訂報表項目設計階段元件](creating-a-custom-report-item-design-time-component.md)   
- [如何：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)   
+ [操作說明：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)   
  [自訂報表項目類別庫](custom-report-item-class-libraries.md)  
   
   

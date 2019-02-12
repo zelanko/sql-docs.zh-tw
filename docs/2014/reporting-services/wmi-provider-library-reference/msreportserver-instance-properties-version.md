@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d88725e0392d07784be7b558dc6cd18f03e458d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 800358195b5c9d76485626cd3d4b6ca981a2de2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158358"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038559"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Version 屬性 (WMI MSReportServer_Instance)
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  
@@ -34,7 +34,7 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>屬性值  
- A`string`其中包含報表伺服器的版本。  
+ 包含報表伺服器版本的 `string`。  
   
 ## <a name="example-code"></a>範例程式碼  
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  

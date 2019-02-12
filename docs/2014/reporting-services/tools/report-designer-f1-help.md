@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9bde9b551f3a2b8308dc8d87bb9a97cc59c1c2de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d815caf1e67b1dd5b4b40838e8a0ef2dd7eb6d05
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189838"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036549"
 ---
 # <a name="report-designer-f1-help"></a>報表設計師 F1 說明
   本節提供 F1 說明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表設計師精靈、 檢視和對話方塊。 或者，您可以在使用對話方塊時，按下 F1 或按一下對話方塊中顯示的 [說明] 按鈕，來開啟 [F1 說明]。  

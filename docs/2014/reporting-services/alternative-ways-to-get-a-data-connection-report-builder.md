@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f466c403ab505a57087f7f7c217de95c4d1a33dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c59a8f89c0c06aafdc9cc618b22c0bac444fe93d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211373"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018010"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>取得資料連接的替代方式 (報表產生器)
   資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。  
@@ -38,7 +38,7 @@ ms.locfileid: "48211373"
   
 3.  若要確認您能夠連接至資料來源，請按一下 **[測試連接]**。 「成功建立連接」訊息就會出現。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  按 [下一步] 。  
+4.  按一下 [下一步] 。  
   
      如有需要，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]。 如果您未選取此選項，則會在每次執行報表時提示您提供認證  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48211373"
   
      「成功建立連接」訊息就會出現。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  如果提示您提供使用者名稱和密碼，請輸入您的認證。 若要在本機儲存認證，請選取 [儲存連接的密碼]。  
   

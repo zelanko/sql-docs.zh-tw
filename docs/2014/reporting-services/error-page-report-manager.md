@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 19d1fdd45018e436dddab95cfe01173ec63f794d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511667"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029229"
 ---
 # <a name="error-page-report-manager"></a>錯誤頁面 (報表管理員)
   使用 [錯誤] 頁面即可檢視錯誤狀況的詳細資料。 伺服器或工作階段為基礎的錯誤會出現此頁面上。 有關特定頁面控制項的驗證錯誤，則會內嵌顯示於該控制項旁。  

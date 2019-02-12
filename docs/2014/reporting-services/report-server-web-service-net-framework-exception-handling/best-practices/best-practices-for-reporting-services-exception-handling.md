@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72fecf28-f02e-4338-b50f-0b21f520302d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7dad2ba27f67423ae84d9b63c52f479a5ffca278
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 10bf93cbaa510b9cff0cf373ada287e1aa2aea6c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144528"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034809"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 例外處理的最佳作法
   當開發 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 應用程式時，您可以使用幾個方法來消除或是減少例外狀況的發生次數。 當例外狀況真的發生時，提供明確且精簡的錯誤訊息給使用者，並加入適當的例外狀況處理，以防止應用程式非預期地結束。  

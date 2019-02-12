@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d34dafd60f2165f2ae90661feca2bafac462dab7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4a02db047e17c7bacf7183a10a0db93d8ac905e9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101048"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031380"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>共用資料集選取頁面 (報表管理員)
   使用 [共用資料集選取] 頁面，即可檢閱及修改目前與報表關聯的共用資料集。  
   
  您無法使用此頁面在報表中加入更多共用資料集，或從報表移除共用資料集。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ###### <a name="to-open-the-shared-dataset-selection-page"></a>開啟共用資料集選取頁面  
@@ -50,11 +50,11 @@ ms.locfileid: "48101048"
  儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [內容頁面 &#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [管理共用資料集](report-data/manage-shared-datasets.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
- [報表組件和報表產生器中的資料集](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [報表產生器中的報表組件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)   
  [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

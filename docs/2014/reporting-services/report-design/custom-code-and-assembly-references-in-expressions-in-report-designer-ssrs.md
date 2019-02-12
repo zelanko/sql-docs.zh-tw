@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9a6f3951ac5b23a84424813b699b2512c15def9a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: beec46edc483bee002f8fc2605c22b59a63d7048
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372820"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041199"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
   您可以加入內嵌於報表之自訂程式碼的參考，或是建置並儲存至電腦以及部署至報表伺服器之自訂組件的參考。 請將內嵌程式碼用在自訂常數、複雜函數或在單一報表內重複使用的函數上。 請使用自訂程式碼組件，將程式碼維護在單一位置並共用程式碼，讓多份報表使用。 自訂程式碼可能會包含新的自訂常數、變數、函數或副程式。 您可以包含內建集合 (例如 Parameters 集合) 的唯讀參考， 但是不能將報表資料值集傳遞至自訂函數 (尤其是不支援自訂彙總)。  

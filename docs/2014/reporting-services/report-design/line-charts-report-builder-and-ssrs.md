@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e985fd7b1d18bfe33da7185bc769bb31186bdfe2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68e6ea1c31cea554944824e38926318682b163ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199948"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038159"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折線圖 (報表產生器及 SSRS)
-  折線圖會將數列顯示成一組由單一線條連接的點。 因此，折線圖用於表示發生超過一段連續時間的大量資料。 如需如何將資料新增至折線圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  折線圖會將數列顯示成一組由單一線條連接的點。 因此，折線圖用於表示發生超過一段連續時間的大量資料。 如需如何將資料加入折線圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  下圖顯示的是包含三個數列的折線圖。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48199948"
   
 -   **梯線圖**： 使用梯線而非一般線條的折線圖。 梯線圖會使用類似梯子或樓梯的階梯線條來連接每個點。  
   
--   **走勢圖**： 折線圖的變數，只在資料表或矩陣的資料格中顯示線條數列。 如需詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
+-   **走勢圖**： 折線圖的變數，只在資料表或矩陣的資料格中顯示線條數列。 如需詳細資訊，請參閱 [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
   
 ## <a name="data-considerations-for-line-charts"></a>折線圖的資料考量  
   
@@ -47,12 +47,12 @@ ms.locfileid: "48199948"
 -   繪製為線條的數列在圖表區域中將不會佔用太多空間。  因此，折線圖通常會與其他圖表類型組合，例如，直條圖。 不過，折線圖無法與橫條圖、極座標圖、圓形圖或形狀圖等圖表類型組合在一起。  
   
 ## <a name="see-also"></a>另請參閱  
- [橫條圖&#40;報表產生器及 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [橫條圖 &#40;報表產生器及 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [直條圖 &#40;報表產生器及 SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [區域圖 &#40;報表產生器及 SSRS&#41;](area-charts-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

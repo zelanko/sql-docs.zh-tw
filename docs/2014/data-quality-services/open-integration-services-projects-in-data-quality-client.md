@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5703d15cccb49575d617568fd90f2719603a0a7a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020139"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在 Data Quality Client 中開啟 Integration Services 專案
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 可讓您以批次模式執行清理專案。 但是，有時您可能會想要在 Integration Services 封裝中檢閱清理結果，類似於在 DQS 中，於資料品質專案中清理活動內的 **[管理和檢視結果]** 索引標籤中檢閱清理結果。 DQS 可讓您在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中開啟 Integration Services 專案，就像從 **[開啟專案]** 畫面開啟其他任何資料品質專案，並讓您擁有在 Integration Services 專案中清理結果的互動式清理體驗。  
@@ -48,9 +48,9 @@ ms.locfileid: "52391591"
   
 3.  在 **[開啟專案]** 畫面上，您可以依照以下其中一種方式來識別 Integration Services 專案：  
   
-    1.  **專案名稱**:Integration Services 專案使用以下命名術語列出：「 Package.DQS Cleansing_*\<日期 > * *\<時間 >*_ {GUID}。 」 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案]  畫面中。  
+    1.  **專案名稱**：Integration Services 專案會使用下列命名術語列出：「 Package.DQS Cleansing_*\<日期 > * *\<時間 >*_ {GUID}。 」 每次在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中成功執行相同的封裝時，新的專案會列在 [開啟專案]  畫面中。  
   
-    2.  **專案類型**:Integration Services 專案已**SSIS**做為專案類型中**開啟專案**螢幕。  
+    2.  **專案類型**：Integration Services 專案在 [開啟專案] 畫面上擁有 [SSIS] 專案類型。  
   
      選取專案，然後按 **[下一步]**。  
   

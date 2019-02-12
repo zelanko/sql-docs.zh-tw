@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f9dc5d0ae36feb5801f026f0fca77683004e23b3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 42df5757bab7028acebf5213bda35a7466010c40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043349"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
   如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您有尚未安裝，或將報表伺服器設定，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)並[管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md).  

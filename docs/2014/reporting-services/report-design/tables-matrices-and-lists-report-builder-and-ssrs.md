@@ -35,13 +35,13 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cf80cbb87916ccf6887f3d6508126c5770d7666c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220848"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017800"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>資料表、矩陣和清單 (報表產生器及 SSRS)
   資料表、矩陣和清單都是資料區，這些資料區會將報表資料顯示在分為資料列與資料行的資料格中。 資料格通常包含文字資料 (例如文字、日期和數字)，但也可以包含量測計、圖表或報表項目 (例如影像)。 資料表、矩陣和清單經常統稱為 Tablix 資料區。  
@@ -56,7 +56,7 @@ ms.locfileid: "48220848"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- 若要快速地開始使用資料表、矩陣和清單，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)、[教學課程：建立矩陣報表 &#40;報表產生器&#41;](../tutorial-creating-a-matrix-report-report-builder.md) 及[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速地開始使用資料表、 矩陣和清單，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)，[教學課程：建立矩陣報表&#40;報表產生器&#41;](../tutorial-creating-a-matrix-report-report-builder.md)，並[教學課程：建立自由格式報表&#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將資料表、矩陣和清單當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "48220848"
   
  ![從工具箱新增選取的新矩陣](../media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的新矩陣")  
   
- 您可以依資料列和資料行群組中的多個欄位或運算式群組資料。 當報表資料和資料區在執行階段結合時，如果為資料行群組加入資料行，並為資料列群組加入資料列，則矩陣會在頁面上以水平和垂直方式成長。 矩陣資料格會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。 例如，如果您的矩陣有一個資料列群組 (Category) 和兩個資料行群組 (Territory 和 Year) 顯示銷售量的總和，報表會針對 Category 群組中的每個值，顯示包含銷售量總和的兩個資料格。 資料格範圍的兩個交集是：Category 和 Territory，以及 Category 和 Year。 矩陣可以包含巢狀群組與相鄰的群組。 巢狀群組擁有父子式關聯性，而相鄰的群組則擁有對等關聯性。 您可以針對矩陣內的任何和所有層級的巢狀資料列和資料行群組加入小計。  
+ 您可以依資料列和資料行群組中的多個欄位或運算式群組資料。 當報表資料和資料區在執行階段結合時，如果為資料行群組加入資料行，並為資料列群組加入資料列，則矩陣會在頁面上以水平和垂直方式成長。 矩陣資料格會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。 例如，如果您的矩陣有一個資料列群組 (Category) 和兩個資料行群組 (Territory 和 Year) 顯示銷售量的總和，報表會針對 Category 群組中的每個值，顯示包含銷售量總和的兩個資料格。 資料格範圍是兩個交集是：類別目錄和國家/地區和類別目錄和年份。 矩陣可以包含巢狀群組與相鄰的群組。 巢狀群組擁有父子式關聯性，而相鄰的群組則擁有對等關聯性。 您可以針對矩陣內的任何和所有層級的巢狀資料列和資料行群組加入小計。  
   
  若要讓矩陣資料更容易讀取，並反白顯示您想要強調的資料，您可以合併資料格，或以水平和垂直方式分割，然後將格式套用至資料和群組標題。  
   
@@ -124,64 +124,64 @@ ms.locfileid: "48220848"
   
  您可以加入任何 Tablix 功能以便繼續開發資料表、矩陣或清單。 Tablix 功能包括在資料列和資料行上顯示群組資料的詳細資料或彙總。 您可以建立巢狀群組、獨立的相鄰群組或遞迴群組。 您可以在群組定義中加入多個群組運算式，藉以篩選與排序群組資料，並輕鬆地結合群組。  
   
- 您也可以加入群組的總計或資料區的總計。 您可以隱藏資料列或資料行來簡化報表，並讓使用者切換隱藏資料的顯示，如同在向下鑽研報表中一樣。 如需詳細資訊，請參閱[控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
+ 您也可以加入群組的總計或資料區的總計。 您可以隱藏資料列或資料行來簡化報表，並讓使用者切換隱藏資料的顯示，如同在向下鑽研報表中一樣。 如需詳細資訊，請參閱 [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)。  
   
 
   
 ##  <a name="HowTo"></a> 如何主題  
  本節列出向您逐步示範如何在報表中使用資料表、矩陣和清單；如何顯示資料列和資料行中的資料、加入和刪除資料行、合併資料格，以及加入資料列和資料行群組之小計的程序。  
   
--   [新增詳細資料群組&#40;報表產生器及 SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [加入詳細資料群組 &#40;報表產生器及 SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
--   [將總計加入到群組或 Tablix 資料區域&#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+-   [將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [變更資料格內的項目&#40;報表產生器及 SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [變更資料格內的項目 &#40;報表產生器及 SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
--   [變更資料列高度或資料行寬度&#40;報表產生器及 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
+-   [變更資料列高度或資料行寬度 &#40;報表產生器及 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
--   [插入或刪除資料行&#40;報表產生器及 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
+-   [插入或刪除資料行 &#40;報表產生器及 SSRS&#41;](insert-or-delete-a-column-report-builder-and-ssrs.md)  
   
--   [插入或刪除資料列&#40;報表產生器及 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
+-   [插入或刪除資料列 &#40;報表產生器及 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)  
   
--   [資料區域中合併資料格&#40;報表產生器及 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
+-   [在資料區中合併資料格 &#40;報表產生器及 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [建立遞迴階層群組&#40;報表產生器及 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
--   [加入或刪除資料區域中的群組&#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+-   [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [顯示頁首和頁尾與群組&#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+-   [與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [建立階梯狀的報表&#40;報表產生器及 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [建立階梯狀報表 &#40;報表產生器及 SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [加入、 移動或刪除資料表、 矩陣或清單&#40;報表產生器及 SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [加入、移動或刪除資料表、矩陣或清單 &#40;報表產生器及 SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="InThisSection"></a> 本節內容  
  下列主題提供有關使用 Tablix 資料區的其他資訊。  
   
- [Tablix 資料區域&#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
  說明與 Tablix 資料區相關的主要概念，例如 Tablix 的區域、詳細資料和群組資料、資料行和資料列群組，以及靜態與動態資料列和資料行。  
   
- [將資料加入至 Tablix 資料區域&#40;報表產生器及 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
+ [將資料加入至 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  提供有關將詳細資料和群組資料、小計和總計，以及標籤加入至 Tablix 資料區的詳細資訊。  
   
- [控制報表頁面上的 Tablix 資料區顯示&#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  描述 Tablix 資料區的屬性，您可以修改這些屬性來變更您在報表中檢視時 Tablix 資料區顯示的方式。  
   
- [控制資料列和資料行標題&#40;報表產生器及 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [控制資料列和資料行標題 &#40;報表產生器及 SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  描述資料表、矩陣或清單資料區以水平或垂直方式跨越多個頁面時，如何控制資料列和資料行標題。  
   
- [建立遞迴階層群組&#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [建立遞迴階層群組 &#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
  描述如何顯示父系和子系之關聯性由資料集中之欄位表示的遞迴資料。  
   
- [了解群組&#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [了解群組 &#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
  說明群組的定義和使用時機，並描述可用於不同 Tablix 資料區的群組。  
   
 
   
 ## <a name="see-also"></a>另請參閱  
- [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [加入資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

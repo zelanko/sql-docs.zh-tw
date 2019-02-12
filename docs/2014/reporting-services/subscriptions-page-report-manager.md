@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109921"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031539"
 ---
 # <a name="subscriptions-page-report-manager"></a>訂閱頁面 (報表管理員)
   使用 [訂閱] 頁面即可列出目前報表或共用資料來源的全部訂閱。 如果您擁有足夠的權限 (如同「管理所有訂閱」工作所表示)，就可以檢視所有使用者的訂閱。 否則，此頁面只會顯示您擁有的訂閱。  
@@ -31,7 +31,7 @@ ms.locfileid: "48109921"
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="navigation"></a>導覽  
+## <a name="navigation"></a>巡覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
   
 ### <a name="to-open-the-subscriptions-page-for-report"></a>若要開啟報表的訂閱頁面  
@@ -80,7 +80,7 @@ ms.locfileid: "48109921"
  如果訂閱已經停用，則無法處理該訂閱。 若要更新訂閱並讓其運作，請開啟然後儲存訂閱。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [報表管理員 &#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [建立、 修改及刪除標準訂用帳戶&#40;Reporting Services 原生模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [建立、修改和刪除共用排程](subscriptions/create-modify-and-delete-schedules.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  

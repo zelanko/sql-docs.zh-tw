@@ -1,11 +1,10 @@
 ---
-title: sys.pdw_diag_events (TRANSACT-SQL) |Microsoft Docs
+title: sys.pdw_diag_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 99e61d96d36c3eb9834f9dc10cd2158e4494e442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5cccb7bff26f662cf5a087cedfbb7d53f9c1cad
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728426"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038299"
 ---
-# <a name="syspdwdiagevents-transact-sql"></a>sys.pdw_diag_events & Amp;#40;transact-SQL&AMP;#41;
+# <a name="syspdwdiagevents-transact-sql"></a>sys.pdw_diag_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   保留事件可以包含在系統上的診斷工作階段的相關資訊。  

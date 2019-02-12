@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQLXML, samples
 - examples [SQLXML], requirements
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766425f6b0ac75699115146f5e471299bf0a8d41
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e2a1ba69fe6d38bac50e0060c7c18abcbd853d51
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664047"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020564"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>執行 SQLXML 範例的需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

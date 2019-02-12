@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 46bc4a7b3767a18ba6e7f3b5869a56dd259e1285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6207c9a80ca2a18e182d57127da1fc1133086144
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094958"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026489"
 ---
 # <a name="delete-columns-dialog-box"></a>刪除資料行對話方塊
   使用 **[刪除資料行]** 對話方塊，即可從資料表、矩陣或清單資料區域中刪除資料行。 對於與群組關聯的資料行，您也可以刪除群組定義。  

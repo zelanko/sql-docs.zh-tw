@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3b3ff687b0ac3f9319351b45a49f8f272444ce9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110018"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026049"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  
@@ -27,7 +27,7 @@ ms.locfileid: "48110018"
   
  在此圖中，邊角資料格中的圓形圖和資料列中的走勢圖都是巢狀資料區域。  
   
- 根據定義，巢狀資料區域是以相同的報表資料集為基礎。 您無法巢狀以不同資料集為基礎的資料區域。 若要顯示來自不同資料集的資料，請考慮使用鑽研報表或子報表。 如需詳細資訊，請參閱[鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
+ 根據定義，巢狀資料區域是以相同的報表資料集為基礎。 您無法巢狀以不同資料集為基礎的資料區域。 若要顯示來自不同資料集的資料，請考慮使用鑽研報表或子報表。 如需詳細資訊，請參閱 [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -87,10 +87,10 @@ ms.locfileid: "48110018"
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [量測計&#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
- [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [量測計 &#40;報表產生器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [運算式 &#40;報表產生器和 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [格式化量測計的標尺&#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [教學課程：將 KPI 加入至報表&#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

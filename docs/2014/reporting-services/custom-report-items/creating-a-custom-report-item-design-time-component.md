@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 292baa254bffc16650376dbbc30e7193b8bc367c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 03d555f967b50b503d608244bdd4a8885cede61e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358820"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025859"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
   自訂報表項目設計階段元件是可用於 Visual Studio 報表設計工具環境的控制項。 自訂報表項目設計階段元件提供啟動的設計介面，這個介面與 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器相整合，可接受拖放作業，並能夠提供自訂屬性編輯器。  
@@ -194,12 +194,12 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中的元件  
   
--   逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項  
+-   逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項  
   
 ## <a name="see-also"></a>另請參閱  
  [自訂報表項目架構](custom-report-item-architecture.md)   
  [建立自訂報表項目執行階段元件](creating-a-custom-report-item-run-time-component.md)   
  [自訂報表項目類別庫](custom-report-item-class-libraries.md)   
- [操作說明：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)  
+ [如何：部署自訂報表項目](how-to-deploy-a-custom-report-item.md)  
   
   

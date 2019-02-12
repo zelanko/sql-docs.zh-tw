@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2e6e59b2562928d22a3d9e0b74830d630d77728d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2076f53b428320f8635de98f7993232e65c2e29c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072008"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019030"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>將斜面、浮凸與紋理樣式加入至圖表 (報表產生器及 SSRS)
   使用某些圖表類型時，您可以指定繪製效果來增加圖表的視覺效果。 這些繪製效果僅適用於圖表的數列。 它們對於其他任何圖表元素沒有影響。  
@@ -25,7 +25,7 @@ ms.locfileid: "48072008"
   
  當您使用橫條圖或直條圖的任何變數時，則可以將紋理樣式 (例如，圓柱、楔形和深淺) 套用到個別的橫條圖或直條圖。  
   
- 除了這些繪製樣式之外，您也可以在許多圖表元素中加入框線和陰影，以提供深度的幻影。 如需有關其他格式化圖表方式的詳細資訊，請參閱 <<c0> [ 格式化圖表&#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)。</c0>  
+ 除了這些繪製樣式之外，您也可以在許多圖表元素中加入框線和陰影，以提供深度的幻影。 如需其他格式化圖表方式的詳細資訊，請參閱 [格式化圖表 &#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -61,9 +61,9 @@ ms.locfileid: "48072008"
  ![具有 LightToDark 繪製效果的橫條圖](../media/rs-bardrawingeffects-lighttodark.gif "具有 LightToDark 繪製效果的橫條圖")  
   
 ## <a name="see-also"></a>另請參閱  
- [橫條圖&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [橫條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [直條圖 &#40;報表產生器及 SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
- [圓形圖&#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
- [格式化圖表&#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [圓形圖 &#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)   
+ [格式化圖表 &#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

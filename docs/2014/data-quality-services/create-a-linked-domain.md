@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 114dcb05567fc58cb58ce46cae064f2514c1331e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396498"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033649"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立連結的定義域。 連結的定義域是從另一個定義域 (之前已經存在的定義域) 建立而來，而且會從它連結的定義域繼承所有值、規則和屬性，除了名稱和描述以外。 您可以將一組連結的定義域當做一個定義域來管理。 藉由連結一個定義域與另一個定義域，您所建立的定義域就會從另一個定義域繼承其內容。  

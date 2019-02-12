@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9045ee53e6e3e08222c99ddffa2935040a314b16
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cc4665cb0730b283491bffd1a3bd27c8707ffb09
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031935"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035119"
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
   您可以直接在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中建立知識庫和定義域，也可以將知識匯入知識庫或從中匯出知識。 在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中，您可以使用資料檔案進行匯入和匯出作業，或使用 Excel 檔案進行匯入作業。 使用的資料檔案是 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 所建立的加密檔案，副檔名為 .dqs。 由 Microsoft Excel 建立的檔案可以具有 .xlsx、.xls 或 .csv 的副檔名。 這些作業可讓您更有彈性地建置並共用執行資料清理和比對所用的知識。  

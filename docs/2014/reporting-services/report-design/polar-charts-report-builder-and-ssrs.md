@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 86308d04c45dfdb2bb135d1dc4d8a1da8bb957ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 46e431f85960f0fb5ce93ff80a53a3001c1b666d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023569"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標圖 (報表產生器及 SSRS)
-  極座標圖是在 360 度的圓形上，依據類別目錄群組，將數列顯示為一組點。 這些值是以點的長度 (從圓心開始測量) 表示。 從圓心到點的距離越遠，其值越大。 類別目錄標籤會顯示在圖表的周長上。 如需有關如何將資料新增至極座標圖的詳細資訊，請參閱 <<c0> [ 圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。</c0>  
+  極座標圖是在 360 度的圓形上，依據類別目錄群組，將數列顯示為一組點。 這些值是以點的長度 (從圓心開始測量) 表示。 從圓心到點的距離越遠，其值越大。 類別目錄標籤會顯示在圖表的周長上。 如需如何將資料新增至極座標圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,6 +58,6 @@ ms.locfileid: "48056338"
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [空白和 Null 資料點在圖表中的&#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

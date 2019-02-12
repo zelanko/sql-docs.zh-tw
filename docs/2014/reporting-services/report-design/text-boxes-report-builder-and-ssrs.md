@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 19c2f599a00548ed85853720c0aad86d38950c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222518"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029299"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文字方塊 (報表產生器及 SSRS)
   當您考慮文字方塊時，可能會考慮包含介面 (如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint) 文字的獨立方塊。 在報表產生器中，有些文字方塊就像那樣，而且這些文字方塊可以根據運算式，顯示標題、描述與標籤或動態文字的常值文字。 但是，資料表或矩陣 (Tablix 資料區) 中的每個資料格也都包含一個文字方塊，這個文字方塊可以使用報表中之獨立文字方塊的相同方式進行格式化。  
@@ -35,13 +35,13 @@ ms.locfileid: "48222518"
   
  文字方塊中的運算式可以包含指向資料庫欄位的常值文字，也可以計算資料。 所有運算式都會顯示為預留位置文字，讓您可以格式化數字、色彩和其他外觀屬性。 您也可以在相同的文字方塊中結合預留位置與常值文字。  
   
- 您可以在任何單一文字方塊中，使用多個字型、色彩、樣式和動作格式化文字。 如需詳細資訊，請參閱[格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)。  
+ 您可以在任何單一文字方塊中，使用多個字型、色彩、樣式和動作格式化文字。 如需詳細資訊，請參閱 [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="GrowShrinkTextBox"></a> 文字方塊的擴張和縮小  
- 根據預設，文字方塊是固定的大小。 您可以讓文字方塊根據其內容垂直縮小或擴張。 如需詳細資訊，請參閱 <<c0> [ 允許文字方塊擴張或縮小&#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)。</c0>  
+ 根據預設，文字方塊是固定的大小。 您可以讓文字方塊根據其內容垂直縮小或擴張。 如需詳細資訊，請參閱 [允許文字方塊擴張或縮小 &#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)(建立發票和表單的清單)。  
   
 ## <a name="orienting-a-text-box"></a>指定文字方塊的方向  
  指定文字方塊方向可協助您建立更容易閱讀的報表、支援特定地區設定的文字方向、在固定頁面大小的列印報表中容納更多資料行，並以更受觀迎的圖形方式建立報表。 文字方塊可以朝向不同的方向：水平、垂直，或旋轉 270 度。 垂直選項最常用於由上往下書寫的東亞洲語言。 在大部分轉譯器中，垂直選項會處理字符旋轉屬性，以便讓文字由上而下的方向書寫，但字元並不會側躺。 針對其他語言，在垂直和 270 度選項中，文字是側躺的。  
@@ -54,19 +54,19 @@ ms.locfileid: "48222518"
   
  方向是在文字方塊上設定，並套用至方塊中的所有文字。 您無法針對文字方塊的各個部分指定不同的方向。  
   
- 若要快速地開始變更文字方向，請參閱一節中有關旋轉文字[教學課程： 格式化文字&#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。 如需詳細資訊，請參閱 <<c0> [ 設定文字方塊方向&#40;報表產生器及 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)。</c0>  
+ 若要快速地開始變更文字方向，請參閱一節中有關旋轉文字[教學課程：格式化文字 &#40;報表產生器&#41;](../tutorial-format-text-report-builder.md)。 如需詳細資訊，請參閱 <<c0> [ 設定文字方塊方向&#40;報表產生器及 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)。</c0>  
   
 ##  <a name="HowTo"></a> 如何主題  
- [加入、 移動或刪除文字方塊&#40;報表產生器及 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+ [加入、移動或刪除文字方塊 &#40;報表產生器及 SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
- [格式化文字方塊中的文字&#40;報表產生器及 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [設定文字方塊方向&#40;報表產生器及 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [設定文字方塊方向 &#40;報表產生器及 SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [允許文字方塊擴張或縮小&#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [允許文字方塊擴張或縮小 &#40;報表產生器及 SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [格式化數字和日期&#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [格式化文字和預留位置 &#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [格式化數字和日期 &#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   
