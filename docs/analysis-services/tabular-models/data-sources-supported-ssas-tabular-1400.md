@@ -1,6 +1,6 @@
 ---
 title: 支援 SQL Server Analysis Services 表格式 1400年模型中的資料來源 |Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
+ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041656"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56159753"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>支援 SQL Server Analysis Services 中表格式 1400年模型的資料來源
 
@@ -29,17 +29,22 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
 
 ## <a name="cloud-data-sources"></a>雲端資料來源
 
-|Azure 的資料來源  |記憶體中  |DirectQuery  |
+|資料來源  |記憶體中  |DirectQuery  |
 |---------|---------|---------|
 |Azure SQL Database     |   是      |    是      |
 |Azure SQL 資料倉儲     |   是      |   是       |
 |Azure Blob 儲存體     |   是       |    否      |
 |Azure 資料表儲存體    |   是       |    否      |
-|Azure Cosmos DB      |  是        |  否        |
-|Azure Data Lake Store     |   是       |    否      |
-|Azure HDInsight 的 HDFS     |     是     |   否       |
-|Azure HDInsight Spark (Beta)     |   是       |   否       |
+|Azure Cosmos DB     |  是        |  否        |
+|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   是       |    否      |
+|Azure HDInsight 的 HDFS    |     是     |   否       |
+|Azure HDInsight Spark <sup> [2](#databricks)</sup>     |   是       |   否       |
 ||||
+
+<a name="gen2">1</a> -目前不支援 ADLS Gen2。   
+<a name="databricks">2</a> -azure Databricks 使用的 Spark 連接器目前不支援。   
+
+
 
 **提供者**   
 記憶體中和連線至 Azure 的資料來源的 DirectQuery 模型中使用.NET Framework Data Provider for SQL Server。
@@ -52,7 +57,7 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
 |  --- | --- | --- |
 | [SQL Server] |SQL Server Native Client 11.0，Microsoft OLE DB Provider for SQL Server、.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | SQL Server 資料倉儲 |SQL Server Native Client 11.0，Microsoft OLE DB Provider for SQL Server、.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
-| Oracle |Microsoft OLE DB Provider for Oracle，Oracle Data Provider for.NET |適用於.NET 的 oracle 資料提供者 | |
+| Oracle |Microsoft OLE DB Provider for Oracle, Oracle Data Provider for .NET |適用於.NET 的 oracle 資料提供者 | |
 | Teradata |OLE DB Provider for Teradata、 Teradata Data Provider for.NET |Teradata Data Provider for.NET | |
 | | | |
 
@@ -87,7 +92,7 @@ Azure Analysis services，請參閱[支援 Azure Analysis Services 中的資料�
 |線上服務  |  
 |---------|---------|
 |Dynamics 365      |
-|Exhange 線上     |
+|Exhange Online     |
 |Saleforce 物件    | 
 |Salesforce 報表     |
 |SharePoint Online 清單     |
