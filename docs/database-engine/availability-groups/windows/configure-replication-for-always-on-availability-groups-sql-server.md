@@ -89,7 +89,7 @@ ms.locfileid: "55044315"
   
  **在原始發行者端設定發行者**  
   
-1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 **sp_adddistributor**。 請以在散發者端執行 *@password* 來設定散發時所使用的值，指定 **@password** 的值。  
+1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行 **sp_adddistributor**。 請以在散發者端執行 *@password* 來設定散發時所使用的值，指定 **sp_adddistrbutor** 的值。  
   
     ```  
     exec sys.sp_adddistributor  
