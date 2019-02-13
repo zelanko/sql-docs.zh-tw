@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server 商務持續性
 description: 無論在何種情況下，您都可以探索不同的 SQL Server 功能來達成高可用性、災害復原並保持商務運作。
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 3aa486304568d2d572b1d1946a89c8ab5ec9753a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bcf57c58e706a8f25a1cd2f2ace671480352f5a2
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698156"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079364"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51698156"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">下載 SQL Server</span>
+                                    <span class="likeAnH3">試用 SQL Server 2019 (預覽)</span>
                                 </div>
                             </div>
                         </div>

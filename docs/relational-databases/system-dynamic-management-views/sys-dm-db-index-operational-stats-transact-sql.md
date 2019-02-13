@@ -61,7 +61,7 @@ sys.dm_db_index_operational_stats (
  內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。    
     
  *object_id* | NULL | 0 | DEFAULT    
- 索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。    
+ 索引所在之資料表或檢視表的物件識別碼。 *object_id* 是 **int**。    
     
  有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     

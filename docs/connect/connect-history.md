@@ -1,20 +1,20 @@
 ---
 title: Microsoft SQL Server 的驅動程式歷程記錄 |Microsoft Docs
 ms.custom: ''
-ms.date: 5/4/2018
+ms.date: 05/04/2018
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: genemi
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: craigg
-ms.openlocfilehash: 8862c6333673ddf69314f4a64c11c8b044484b69
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 97087715016cdefb9be5bcec708161734d6f366e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069794"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022273"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server 的驅動程式歷程記錄
 

@@ -4,20 +4,21 @@ hide_bc: true
 title: SQL Server - 安裝和升級
 description: 尋找可協助您安裝或升級 SQL Server 及相關服務的內容。
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: 729759ad9e60f5ec45845545f7b81e1cbc1bae73
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 58b303a225e004103e901fcbbf28f368d384d0b9
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402076"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079294"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "52402076"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">下載 SQL Server</span>
+                                    <span class="likeAnH3">試用 SQL Server 2019 (預覽)</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@ ms.locfileid: "52402076"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server：安裝或升級</h1>
+        <h1>SQL Server:安裝或升級</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>

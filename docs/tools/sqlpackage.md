@@ -22,7 +22,7 @@ ms.locfileid: "56033600"
   
 - [Extract](#help-for-the-extract-action)：從即時的 SQL Server 或 Azure SQL Database 建立資料庫快照集 (.dacpac) 檔案。  
   
-- [Publish](#publish-parameters-properties-and-sqlcmd-variables)：以累加方式更新資料庫結構描述，以符合來源 .dacpac 檔案的結構描述。 如果資料庫不存在伺服器上，發行作業會加以建立。 否則，會更新現有的資料庫。  
+- [Publish](#publish-parameters-properties-and-sqlcmd-variables)：累加更新資料庫結構描述以符合來源 .dacpac 檔案的結構描述。 如果資料庫不存在伺服器上，發行作業會加以建立。 否則，會更新現有的資料庫。  
   
 - [Export](#export-parameters-and-properties)：將即時資料庫 (包括資料庫結構描述和使用者資料) 從 SQL Server 或 Azure SQL Database 匯出到 BACPAC 套件 (.bacpac 檔案)。  
   

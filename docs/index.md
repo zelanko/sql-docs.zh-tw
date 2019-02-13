@@ -6,20 +6,21 @@ description: 深入了解 SQL
 author: barbkess
 ms.author: barbkess
 ms.topic: hub-page
+ms.prod: sql
 ms.technology:
 - database-engine
-ms.openlocfilehash: a30902faa8da861b41ec9a5c9f912986bd4e77a0
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 5cd23f98e7c15c8cb069b0fd75cda241f81848e9
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397547"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079404"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -29,7 +30,7 @@ ms.locfileid: "54397547"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">下載 SQL Server</span>
+                                    <span class="likeAnH3">試用 SQL Server 2019 (預覽)</span>
                                 </div>
                             </div>
                         </div>
