@@ -3,7 +3,7 @@ title: 版本資訊和變更記錄
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 版本資訊
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bd3151ae475f96b3e4df227bb4d312940c10bed0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361678"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231125"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure Data Studio 最新的版本資訊和變更記錄
 
 **[下載並安裝最新版的 ！](download.md)**
 
+## <a name="february-2019-february-release"></a>2019 年 2 月年 （年 2 月發行）
+
+發行日期：2019 年 2 月 13日日  
+版本：1.4.5
+
+- 新增**SQL Server 的管理組件**延伸模組套件，讓您更輕鬆地安裝 SQL Server 系統管理擴充功能。 這包括：
+    - [SQL Server Agent](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server 匯入](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- 新增篩選 Profiler 擴充功能中的擴充的事件支援
+- 已新增將儲存為 XML 功能，可以將 T-SQL 結果儲存為 XML
+- 加入的資料層應用程式精靈的增強功能
+    - 新增的產生的指令碼 按鈕
+    - 已新增的檢視，以在部署期間提供的資料可能會遺失的警告
+- 若要更新[SQL Server 2019 Preview 延伸模組](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 結果資料流預設啟用的長時間執行的查詢
+- 判斷是否已解決[bug，以及發出](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1)。
 
 ## <a name="january-hotfix-2019-january-hotfix-release"></a>年 1 月 Hotfix 2019 （年 1 月 Hotfix 版本）
 
@@ -143,7 +160,7 @@ ms.locfileid: "54361678"
 ### <a name="bug-fixes"></a>錯誤修正
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 未選取變數名稱中的 []。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的]。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
