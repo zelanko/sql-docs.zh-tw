@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: d6d8a20044d60ab83f9d649827397bf363dd2696
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: 5cbd3fe2058b120a77772f2ac597f993ab3f508e
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832120"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231015"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>快速入門：以 Docker 執行 SQL Server 容器映像
 
@@ -244,7 +244,29 @@ SELECT @@SERVERNAME,
 
 ## <a id="sapassword"></a> 變更 SA 密碼
 
-[!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
+<!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
+
+**SA** 帳戶是在安裝期間建立的 SQL Server 執行個體系統管理員。 建立您的 SQL Server 容器之後，在容器中執行 `echo $MSSQL_SA_PASSWORD`，即可探索您指定的 `MSSQL_SA_PASSWORD` 環境變數。 基於安全性考量，請變更您的 SA 密碼。
+
+1. 選擇要為 SA 使用者使用的強式密碼。
+
+1. 使用 `docker exec` 來執行 **sqlcmd**，以使用 Transact-SQL 變更密碼。 將 `<YourStrong!Passw0rd>` 和 `<YourNewStrong!Passw0rd>` 取代為您自己的密碼值。
+
+   ::: zone pivot="cs1-bash"
+   ```bash
+   sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
+      -S localhost -U SA -P '<YourStrong!Passw0rd>' \
+      -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-powershell"
+   ```PowerShell
+   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+   ```
+   ::: zone-end
 
 ## <a name="connect-to-sql-server"></a>連接至 SQL Server
 

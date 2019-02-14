@@ -4,23 +4,34 @@ description: 請檢查並設定 SQL Server 2019 和 Linux 上的 SQL Server 2017
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+zone_pivot_groups: ld2-linux-distribution
+ms.openlocfilehash: 2cc95a36a83307667b3f3678ccd19f7712dc54b3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269443"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230985"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定存放庫進行安裝及升級 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。
+::: zone pivot="ld2-rhel"
+本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。 在頂端，您目前的選取範圍是**Red 有 (RHEL)**。
+::: zone-end
+
+::: zone pivot="ld2-sles"
+本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。 在頂端，您目前的選取範圍是**SUSE (SLES)**。
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+本文說明如何在 Linux 上設定正確的存放庫的 SQL Server 2017 和 SQL Server 2019 的安裝和升級。 在頂端，您目前的選取範圍是**Ubuntu**。
+::: zone-end
 
 > [!TIP]
 > SQL Server 2019 預覽版已正式推出 ！ 若要試用，請使用本文來設定新**mssql server 預覽版**存放庫。 然後使用中的指示來安裝[安裝指南](sql-server-linux-setup.md)。
@@ -32,7 +43,7 @@ ms.locfileid: "51269443"
 | Repository | 名稱 | 描述 |
 |---|---|---|
 | **預覽 (2017)** | **mssql-server** | SQL Server 2017 CTP 和 RC 存放庫 （停止）。 |
-| **預覽 (2019)** | **mssql server 預覽版** | SQL Server 2019 預覽版，RC 的存放庫。 |
+| **預覽 (2019)** | **mssql-server-preview** | SQL Server 2019 預覽版，RC 的存放庫。 |
 | **CU** | **mssql-server-2017** | SQL Server 2017 累積更新 (CU) 存放庫。 |
 | **GDR** | **mssql-server-2017-gdr** | 只有重大更新的 SQL Server 2017 的 GDR 存放庫。 |
 
@@ -40,27 +51,33 @@ ms.locfileid: "51269443"
 
 請務必請注意，有兩種類型的每個散發的存放庫：
 
-- **累積更新 (CU)**: 累積更新 (CU) 存放庫包含自從該版本的基底的 SQL Server 版本，以及任何錯誤修正或改進的套件。 累計更新特有的發行版本，例如 SQL Server 2017。 在一般的步調發行。
+- **累計更新 (CU)**:累計更新 (CU) 存放庫包含自從該版本的基底的 SQL Server 版本，以及任何錯誤修正或改進的套件。 累計更新特有的發行版本，例如 SQL Server 2017。 在一般的步調發行。
 
-- **GDR**: GDR 存放庫包含自從該版本的基底的 SQL Server 版本及只有重大修正程式和安全性更新的封裝。 這些更新也會新增至下一步 的 CU 版本。
+- **GDR**:GDR 存放庫包含自從該版本的基底的 SQL Server 版本及只有重大修正程式和安全性更新的封裝。 這些更新也會新增至下一步 的 CU 版本。
 
-每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該存放庫。 從 GDR 版本更新為 CU 版本都支援變更 SQL Server 設定的儲存機制。 您也可以[降級](sql-server-linux-setup.md#rollback)您主要的版本中的任何版本 (例如： 2017年)。
+每個 CU 和 GDR 版本包含完整的 SQL Server 封裝和所有先前的更新，該存放庫。 從 GDR 版本更新為 CU 版本都支援變更 SQL Server 設定的儲存機制。 您也可以[降級](sql-server-linux-setup.md#rollback)您主要的版本中的任何版本 (例如：2017).
 
 > [!NOTE]
-> 您可以更新從 GDR 發行 CU 版本隨時藉由變更存放庫。 更新不支援從 CU GDR 發行的版本。 
+> 您可以更新從 GDR 發行 CU 版本隨時藉由變更存放庫。 更新不支援從 CU GDR 發行的版本。
 
-## <a id="configure"></a> 設定的存放庫
+## <a name="configure-repositories"></a>設定存放庫
 
-下列各節說明如何確認，然後設定下列支援的平台的存放庫：
+::: zone pivot="ld2-rhel"
+使用下列各節中的步驟，設定存放庫上 Red Hat Enterprise Server (RHEL)。
+::: zone-end
 
-- [Red Hat Enterprise Server](#rhel)
-- [Ubuntu](#ubuntu)
-- [SUSE Linux Enterprise Server](#sles)
+::: zone pivot="ld2-sles"
+使用下列各節中的步驟，設定存放庫在 SUSE Linux Enterprise Server (SLES)。
+::: zone-end
 
-## <a id="rhel"></a> 設定 RHEL 存放庫
-使用下列步驟來設定存放庫上 Red Hat Enterprise Server (RHEL)。
+::: zone pivot="ld2-ubuntu"
+使用下列各節中的步驟，在 Ubuntu 上設定存放庫。
+::: zone-end
 
-### <a name="check-for-previously-configured-repositories-rhel"></a>檢查先前設定的存放庫 (RHEL)
+## <a name="check-for-previously-configured-repositories"></a>檢查先前設定的存放庫
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
 先確認是否已註冊的 SQL Server 儲存機制。
 
 1. 檢視中的檔案 **/etc/yum.repos.d**目錄使用下列命令：
@@ -79,28 +96,10 @@ ms.locfileid: "51269443"
 
 4. **名稱**屬性是設定的儲存機制。 您可以使用中的資料表來識別它[存放庫](#repositories)一節。
 
-### <a name="remove-old-repository-rhel"></a>移除舊的存放庫 (RHEL)
-如有需要，移除舊的存放庫，使用下列命令。
+::: zone-end
 
-```bash
-sudo rm -rf /etc/yum.repos.d/mssql-server.repo
-```
-
-此命令假設，如上一節中所識別的檔案命名為**mssql server.repo**。
-
-### <a name="configure-new-repository-rhel"></a>設定新的存放庫 (RHEL)
-設定新的存放庫，若要使用 SQL Server 安裝與升級。 使用下列命令之一來設定您選擇的存放庫。
-
-| Repository | 版本 | 命令 |
-|---|---|---|
-| **預覽 (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-
-## <a id="sles"></a> 設定 SLES 儲存機制
-您可以使用下列步驟來在 SLES 上設定存放庫。
-
-### <a name="check-for-previously-configured-repositories-sles"></a>檢查先前設定的存放庫 (SLES)
+<!--SLES-->
+::: zone pivot="ld2-sles"
 先確認是否已註冊的 SQL Server 儲存機制。
 
 1. 使用**zypper 資訊**取得任何先前設定的儲存機制的資訊。
@@ -111,29 +110,10 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. **存放庫**屬性是設定的儲存機制。 您可以使用中的資料表來識別它[存放庫](#repositories)一節。
 
-### <a name="remove-old-repository-sles"></a>移除舊的存放庫 (SLES)
-如有需要，移除舊的存放庫。 使用其中一個下列的命令，根據先前設定的存放庫的類型。
+::: zone-end
 
-| Repository | 若要移除的命令 |
-|---|---|
-| **預覽 (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-| **預覽 (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
-
-### <a name="configure-new-repository-sles"></a>設定新的存放庫 (SLES)
-設定新的存放庫，若要使用 SQL Server 安裝與升級。 使用下列命令之一來設定您選擇的存放庫。
-
-| Repository | 版本 | 命令 |
-|---|---|---|
-| **預覽 (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-
-## <a id="ubuntu"></a> 設定 Ubuntu 存放庫
-您可以使用下列步驟來在 Ubuntu 上設定存放庫。
-
-### <a name="check-for-previously-configured-repositories-ubuntu"></a>檢查先前設定的存放庫 (Ubuntu)
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 先確認是否已註冊的 SQL Server 儲存機制。
 
 1. 檢視的內容 **/etc/apt/sources.list**檔案。
@@ -144,7 +124,37 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. 檢查 mssql 伺服器的封裝 URL。 您可以使用中的資料表來識別它[存放庫](#repositories)一節。
 
-### <a name="remove-old-repository-ubuntu"></a>移除舊的存放庫 (Ubuntu)
+::: zone-end
+
+## <a name="remove-old-repository"></a>移除舊的存放庫
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+如有需要，移除舊的存放庫，使用下列命令。
+
+```bash
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
+
+此命令假設，如上一節中所識別的檔案命名為**mssql server.repo**。
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+如有需要，移除舊的存放庫。 使用其中一個下列的命令，根據先前設定的存放庫的類型。
+
+| Repository | 若要移除的命令 |
+|---|---|
+| **預覽 (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **預覽 (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
+| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 如有需要，移除舊的存放庫。 使用其中一個下列的命令，根據先前設定的存放庫的類型。
 
 | Repository | 若要移除的命令 |
@@ -154,7 +164,36 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
-### <a name="configure-new-repository-ubuntu"></a>設定新的存放庫 (Ubuntu)
+::: zone-end
+
+## <a name="configure-new-repository"></a>設定新的存放庫
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+設定新的存放庫，若要使用 SQL Server 安裝與升級。 使用下列命令之一來設定您選擇的存放庫。
+
+| Repository | 版本 | 命令 |
+|---|---|---|
+| **預覽 (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+設定新的存放庫，若要使用 SQL Server 安裝與升級。 使用下列命令之一來設定您選擇的存放庫。
+
+| Repository | 版本 | 命令 |
+|---|---|---|
+| **預覽 (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 設定新的存放庫，若要使用 SQL Server 安裝與升級。
 
 1. 匯入公用存放庫 GPG 金鑰。
@@ -177,11 +216,25 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
    sudo apt-get update
    ```
 
+::: zone-end
+
 ## <a name="next-steps"></a>後續步驟
 
 您已設定正確的存放庫之後，您可以繼續進行[安裝](sql-server-linux-setup.md#platforms)或是[更新](sql-server-linux-setup.md#upgrade)SQL Server，以及任何相關封裝的新的儲存機制中。
 
+::: zone pivot="ld2-rhel"
 > [!IMPORTANT]
-> 此時，如果您選擇使用其中一個安裝的發行項，例如[快速入門](sql-server-linux-setup.md#platforms)，請記住，您已設定目標存放庫。 在教學課程中不重複該步驟。 這是特別有用，如果您設定的 GDR 存放庫，因為快速入門使用 CU 的存放庫。
+> 此時，如果您選擇使用[RHEL 快速入門](quickstart-install-connect-red-hat.md)，請記住，您已設定目標存放庫。 在教學課程中不重複該步驟。 這是特別有用，如果您設定的 GDR 存放庫，因為快速入門會使用 CU 的存放庫。
+::: zone-end
+
+::: zone pivot="ld2-sles"
+> [!IMPORTANT]
+> 此時，如果您選擇使用[SLES 快速入門](quickstart-install-connect-suse.md)，請記住，您已設定目標存放庫。 在教學課程中不重複該步驟。 這是特別有用，如果您設定的 GDR 存放庫，因為快速入門會使用 CU 的存放庫。
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+> [!IMPORTANT]
+> 此時，如果您選擇使用[Ubuntu 快速入門](quickstart-install-connect-ubuntu.md)，請記住，您已設定目標存放庫。 在教學課程中不重複該步驟。 這是特別有用，如果您設定的 GDR 存放庫，因為快速入門會使用 CU 的存放庫。
+::: zone-end
 
 如需有關如何在 Linux 上安裝 SQL Server 2017 的詳細資訊，請參閱 <<c0> [ 在 Linux 上的 SQL Server 的安裝指引](sql-server-linux-setup.md)。

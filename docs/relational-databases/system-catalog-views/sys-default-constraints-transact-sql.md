@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0c8b90f1f54df4bf6f7a253e582a12a65b49bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c52f9b211c6cb6b7df8404ba462f51e898841911
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638676"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240772"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47638676"
 |-----------------|---------------|-----------------|  
 |**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱 < [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**parent_column_id**|**int**|中的資料行的識別碼**parent_object_id**此預設值所屬。|  
-|**定義**|**nvarchar(max)**|定義這個預設值的 SQL 運算式。|  
+|**definition**|**nvarchar(max)**|定義這個預設值的 SQL 運算式。|  
 |**is_system_named**|**bit**|1 = 名稱是系統所產生。<br /><br /> 0 = 名稱是使用者所提供。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -52,7 +52,8 @@ GO
 SELECT d.definition   
 FROM sys.default_constraints AS d  
 INNER JOIN sys.columns AS c  
-ON d.parent_column_id = c.column_id  
+ON d.parent_object_id = c.object_id
+AND d.parent_column_id = c.column_id  
 WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')  
 AND c.name = 'VacationHours';  
 ```  

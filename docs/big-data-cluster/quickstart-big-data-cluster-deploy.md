@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898983"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231065"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -171,56 +171,7 @@ kubectl get svc service-proxy-lb -n <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-巨量資料叢集現在已部署在 AKS SQL Server。 您現在可以使用 Azure Data Studio 連接到 SQL Server 的主要執行個體並使用 Azure Data Studio HDFS/Spark 端點。
-
-### <a id="master"></a> 主要執行個體
-
-SQL Server 的主要執行個體是傳統的 SQL Server 執行個體，包含 SQL Server 的關聯式資料庫。 下列步驟說明如何使用 Azure Data Studio 的主要執行個體的連接。
-
-1. 從命令列中，找出 IP 主要執行個體使用下列命令：
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. 在 Azure Data Studio，按下**F1** > **新連線**。
-
-1. 在 **連線類型**，選取**Microsoft SQL Server**。
-
-1. 輸入中的 SQL Server 主要執行個體的 IP 位址**伺服器名稱**(例如：**\<IP 位址\>31433、**)。
-
-1. 輸入 SQL 登入**使用者名**(`SA`) 及**密碼**（您在部署指令碼中輸入的密碼）。
-
-1. 變更目標**資料庫名稱**其中一項關聯式資料庫。
-
-   ![連接到主要執行個體](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. 按下**Connect**，而**Server 儀表板**應該會出現。
-
-### <a id="hdfs"></a> HDFS/Spark 閘道
-
-**HDFS/Spark 閘道**可讓您連接才能使用 HDFS 儲存體集區，並執行 Spark 作業。 下列步驟說明如何使用 Azure Data Studio 來連線。
-
-1. 從命令列中，尋找您的 HDFS/Spark 閘道，使用下列命令的 IP 位址：
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. 在 Azure Data Studio，按下**F1** > **新連線**。
-
-1. 在 **連線類型**，選取**巨量資料的 SQL Server 叢集**。
-   
-   > [!TIP]
-   > 如果您看不見**巨量資料的 SQL Server 叢集**連線類型，請確定您已安裝[SQL Server 2019 延伸模組](../azure-data-studio/sql-server-2019-extension.md)和您在完成的延伸模組後重新啟動 Azure Data Studio正在安裝。
-
-1. 輸入中的巨量資料叢集的 IP 位址**伺服器名稱**（不指定連接埠）。
-
-1. 請輸入`root`for**使用者**並指定**密碼**至您在部署指令碼中所輸入的巨量資料叢集。
-
-   ![連線到 HDFS/Spark 閘道](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. 按下**Connect**，而**Server 儀表板**應該會出現。
+巨量資料叢集現在已部署在 AKS SQL Server。 您現在可以使用 Azure Data Studio 來連線到叢集。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 巨量資料叢集使用 Azure Data Studio](connect-to-big-data-cluster.md)。
 
 ## <a name="clean-up"></a>清除
 

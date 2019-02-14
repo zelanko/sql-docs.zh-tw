@@ -3,7 +3,7 @@ title: 下載並安裝
 titleSuffix: Azure Data Studio
 description: 下載並為 Windows 安裝 Azure 資料 Studio、 macOS 或 Linux
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,33 +11,31 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09e459b61350a100a64a788e0c7746d9a2ae623e
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 06aaaf90d9012d3f68c6b19c794a1d4de1ad13d9
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361604"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231115"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
   > [!div class="nextstepaction"]
-  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
+  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
 
-下載並安裝最新版本中，*年 1 月 Hotfix 版本*:
-
-1.3.9 在日文版的版本已修正 1.3.8 中探索到的一些問題。 如需詳細資訊，請參閱 <<c0> [ 年 1 月 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)。
+下載並安裝最新版本中，*年 2 月發行*:
 
 > [!NOTE]
 > 如果您正在從 SQL Operations Studio 更新，且想要保留您的設定、 鍵盤快速鍵或程式碼片段，請參閱[移動使用者設定](#move-user-settings)。
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|視窗|[使用者安裝程式 （建議選項）](https://go.microsoft.com/fwlink/?linkid=2049972)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2049975)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2050146)|2019 年 1 月 16日日 |1.3.9|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2049981)|2019 年 1 月 16日日 |1.3.9|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2050157)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)|2019 年 1 月 16日日 |1.3.9|
+|視窗|[使用者安裝程式 （建議選項）](https://go.microsoft.com/fwlink/?linkid=2072725)<br>[系統安裝程式](https://go.microsoft.com/fwlink/?linkid=2072728)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2072354)|2019 年 2 月 13日日 |1.4.5|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2072737)|2019 年 2 月 13日日 |1.4.5|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2072744)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2072741)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2072360)|2019 年 2 月 13日日 |1.4.5|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
@@ -49,25 +47,25 @@ ms.locfileid: "54361604"
 
 建議使用者安裝程式，因為它不需要系統管理員權限，可簡化安裝和升級。
 
-1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *使用者*針對 Windows installer](https://go.microsoft.com/fwlink/?linkid=2049972)。
+1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *使用者*針對 Windows installer](https://go.microsoft.com/fwlink/?linkid=2072725)。
 2. 啟動[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]應用程式。
 
 **系統安裝程式**
 
-1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *系統*針對 Windows installer](https://go.microsoft.com/fwlink/?linkid=2049975)。
+1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *系統*針對 Windows installer](https://go.microsoft.com/fwlink/?linkid=2072728)。
 2. 啟動[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]應用程式。
 
 
 **壓縮檔**
 
-1. 下載[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=2050146)。
+1. 下載[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=2072737)。
 2. 瀏覽至下載的檔案，並將它解壓縮。
 3. 執行 `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>取得適用於 macOS 的 Azure Data Studio
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 macOS](https://go.microsoft.com/fwlink/?linkid=2049981)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 macOS](https://go.microsoft.com/fwlink/?linkid=2072737)。
 2. 若要展開的 zip 的內容，請按兩下它。
 3. 若要讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]中可用*Launchpad*，拖曳*Azure 資料 Studio.app*來*應用程式*資料夾。
 
@@ -75,9 +73,9 @@ ms.locfileid: "54361604"
 ## <a name="get-azure-data-studio-for-linux"></a>取得適用於 Linux 的 Azure 資料 Studio
 
 1. 下載[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux 使用其中一種安裝程式或.tar.gz 下載封存：
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2050157)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2049989)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2049986)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2072744)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2072741)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2072360)
 1. 擷取檔案，並啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]，開啟新的終端機視窗，並輸入下列命令：
 
    **Debian 安裝：**
