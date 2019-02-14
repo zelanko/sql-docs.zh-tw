@@ -38,7 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@password=**] **'**_密碼_**'**  
+ [ **@password=**] **'**_密碼_**'**  
  這是新密碼。 *密碼*已**sysname**，沒有預設值。 如果 「 散發者 」 已本機的密碼**distributor_admin**變更系統登入。  
   
 ## <a name="return-code-values"></a>傳回碼值  
