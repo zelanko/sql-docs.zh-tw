@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a16e59709f3372a2460fa8847cdcc5c2c248bb2c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a0eab4c54be4f849a735b7da4de54a9b85cb78f3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042468"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285306"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 函數 (報表產生器及 SSRS)
   傳回遞迴階層中之目前所在的層級。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Access reports [Reporting Services]
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 84f74f51879a777ea0b9874f1b124806c109e02f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7458de1c7424bf3c5b856c263e5180e33e207f76
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022189"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286346"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>從 Microsoft Access 匯入報表 (Reporting Services)
   在報表設計師中，您可以匯入報表[!INCLUDE[msCoName](../includes/msconame-md.md)]Access 資料庫或專案。 您必須將 Access 2002 或更新版本安裝在安裝報表設計師的相同電腦上。  
