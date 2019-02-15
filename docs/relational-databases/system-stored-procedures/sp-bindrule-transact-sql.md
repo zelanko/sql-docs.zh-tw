@@ -46,10 +46,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rulename=**] **'**_規則_**'**  
+ [ **@rulename=**] **'**_規則_**'**  
  這是 CREATE RULE 陳述式所建立之規則的名稱。 *規則*已**nvarchar(776)**，沒有預設值。  
   
- [  **@objname=**] **'**_object_name_**'**  
+ [ **@objname=**] **'**_object_name_**'**  
  這是規則將繫結的資料表和資料行或別名資料類型。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
  *object_name*已**nvarchar(776)** 沒有預設值。 如果*object_name*是單部分名稱，它會解析成別名資料類型。 如果它是兩部分或三部分的名稱，就會先將它解析成資料表和資料行；如果這項解析失敗，就會將它解析成別名資料類型。 根據預設，現有的資料行別名資料類型的繼承*規則*除非規則有直接繫結資料行。  
@@ -60,7 +60,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  雖然在使用別名資料類型的運算式上建立的規則可以繫結到資料行或別名資料類型，但在參考它們時，會無法編譯它們。 請避免使用在別名資料類型上建立的規則。  
   
- [  **@futureonly=** ] **'**_futureonly_flag_**'**  
+ [ **@futureonly=** ] **'**_futureonly_flag_**'**  
  只有將規則繫結到別名資料類型時，才會使用這個項目。 *future_only_flag*已**varchar(15)** 預設值是 NULL。 當設定為此參數**futureonly**防止別名資料類型的現有資料行會繼承新規則。 如果*futureonly_flag*是 NULL，新規則繫結至任何資料行的別名資料類型，目前有任何規則，或使用現有的別名資料類型的規則。  
   
 ## <a name="return-code-values"></a>傳回碼值  
