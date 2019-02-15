@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c127f225efe1976c6607fbdc62ef90707a205584
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dc26141bc33a991116f8bdca1316b4efe529dcfa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038050"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293655"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
   走勢圖和資料橫條是簡單的小圖表，在極小空間中傳達大量資訊，通常內嵌於文字。 走勢圖和資料橫條經常用於資料表和矩陣中。 其效用在於同時檢視多個走勢圖，能夠一個跟上一個快速地進行比較，而不是單獨檢視各個圖表。 可輕鬆查看極端值，也就是執行時跟其他資料列不相同的資料列。 圖雖然很小，通常每個走勢圖都代表一段時間的多個資料點。 資料橫條可以代表多個資料點，但通常只顯示一個。 每個走勢圖通常都會呈現單一數列。 您不能將走勢圖加入資料表的詳細資料群組中。 因為走勢圖會顯示彙總的資料，必須放在與群組相關聯的儲存格中。 走勢圖和資料橫條有相同的基本圖表元素：類別、數列和值，但是沒有圖例、座標軸線、標籤或刻度標記。  

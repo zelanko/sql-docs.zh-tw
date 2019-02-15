@@ -11,15 +11,15 @@ f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 502d3636998b6bdcebd8f3ac9044bd5df14bd66e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a41bec8c2a4b8cb621eff84249253d18df2c34a7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029859"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296624"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>資料集屬性對話方塊、選項
   選取 **選項**上**資料集屬性**對話方塊來變更資料的選項，例如定序選項和小計的查詢。 如需詳細資訊，請參閱 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  

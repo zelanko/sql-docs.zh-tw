@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.runtimecredentials.f1
 - "10128"
 ms.assetid: 70258400-0c6b-49fe-a507-344427255223
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1ef28edadb405cfdeed464d66792513997a9a9c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 02fbe6cab9c47f1ea9e246aaf19ba641c098d529
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041649"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293826"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>輸入資料來源認證對話方塊
   使用**輸入資料來源認證**對話方塊來提供您[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]認證，讓您可以從資料來源擷取資料。  

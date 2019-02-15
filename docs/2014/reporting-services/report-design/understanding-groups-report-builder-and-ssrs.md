@@ -11,15 +11,15 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 97f61325c563c1c8ff22ff3e4177c74726f775cc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037395"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286536"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解群組 (報表產生器及 SSRS)
   在報表產生器中，群組是一組來自繫結至資料區域之報表資料集的具名資料。 基本上，一個群組會組織一個報表資料集的檢視。 資料區域中的所有群組會指定相同報表資料集的不同檢視。  

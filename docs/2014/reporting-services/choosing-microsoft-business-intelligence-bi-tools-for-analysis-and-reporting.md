@@ -1,5 +1,5 @@
 ---
-title: 分析和報告使用 Microsoft 商務智慧 (BI) 工具
+title: 使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 519aa33d615c244289fdf53d6cea6684a8a04dce
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 73dd4f2163169930d7766d3a287b8a5c38de0ee1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553140"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289186"
 ---
-# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>分析和報告使用 Microsoft 商務智慧 (BI) 工具
+# <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 
   下表會將資料分析與報告的工作負載對應到最適合這些工作負載的 Microsoft BI 工具。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "53553140"
 |執行自助式預測分析||||||[資料採礦適用於 Excel 的增益集](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |將資料視覺化及探索資料||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |使用自然語言查詢發問|||||[問與答](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|使用行動裝置存取報表||||[HTML 5 (支援檢視 < 10 MB 的檔案)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (支援檢視 < 250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI 行動裝置應用程式在 iOS 裝置上](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Power BI 行動裝置應用程式在 Android 裝置上](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Windows 10 的 power BI 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|使用行動裝置存取報表||||[HTML 5 (支援檢視 <10 MB 檔案)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (支援檢視 <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 裝置上的 Power BI 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 裝置上的 Power BI 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Power BI for Windows 10 行動裝置應用程式](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |共同作業和共用|||[SharePoint 網站](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint 團隊網站](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI 網站](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**公司 BI**|IT 專業人員||||||  
 |建立多維度/表格式公司模型||||||[Analysis Services](../analysis-services/analysis-services.md)|  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fb5457f94aa630bab4e005b26d1f375886004953
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 44deb9eae8d5ddc253de0b8927e6579422a3f42e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019389"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290266"
 ---
 # <a name="complete-the-report-wizard"></a>完成報表精靈
   使用此頁面，即可命名報表和檢閱要套用至報表的選項。  

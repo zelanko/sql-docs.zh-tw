@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a59d959443c2e9a021bf570147fd8dba5eb85aba
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: afde237bf423d5b59af2d94e27ada9d641557fb9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018190"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295966"
 ---
 # <a name="design-the-table-report-wizard"></a>設計資料表 (報表精靈)
   使用報表精靈的這個頁面，即可選取要放入報表的欄位。  

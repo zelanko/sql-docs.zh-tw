@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.rowvisibility.f1
 - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5782db21318108e9460217c200af79ea427cc4bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2fbe61ee783fa0c762cda3fc2a282296d8df04b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028129"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294866"
 ---
 # <a name="row-visibility-dialog-box"></a>資料列可見性對話方塊
   使用 **[資料列可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料列，或使用其他報表項目來切換資料列的可見性。  

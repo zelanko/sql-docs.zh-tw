@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017689"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297166"
 ---
 # <a name="troubleshoot-report-builder"></a>疑難排解報表產生器
   報表產生器是一個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表撰寫工具，可用來根據許多不同類型的資料來源建立報表，以及將報表發行至報表伺服器或 SharePoint 網站。 可以在報表產生器，檢視您所建立的報表，在 Web 瀏覽器，或做為一部分[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 應用程式或 SharePoint 網站。  

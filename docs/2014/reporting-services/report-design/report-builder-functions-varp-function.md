@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5370eb821ed018e451fbb3f1992ccbb3df22c834
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a5e6e447350bd89568184b92a6bea01fd26513c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022984"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295356"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>VarP 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的母體擴展變異數 (在給定範圍的內容中評估)。  

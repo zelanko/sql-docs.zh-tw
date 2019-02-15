@@ -5,16 +5,16 @@ description: 了解如何安裝以安裝和管理 SQL Server 2019 巨量資料�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/15/2018
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 54fef15869eb86c3694adfb793ed028e22aadf4d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087607"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287116"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>安裝 mssqlctl 來管理 SQL Server 2019 巨量資料叢集
 
@@ -23,7 +23,7 @@ ms.locfileid: "55087607"
 **mssqlctl**是命令列公用程式，可讓叢集系統管理員啟動及管理巨量資料叢集，透過 REST Api 以 Python 所撰寫。 最小所需的 Python 版本為 3.5 版。 您也必須擁有`pip`用來下載並安裝**mssqlctl**工具。 下列指示提供 Windows 和 Ubuntu 的範例。 如需其他平台上安裝 Python，請參閱[Python 文件](https://wiki.python.org/moin/BeginnersGuide/Download)。
 
 > [!IMPORTANT]
-> 如果您已安裝舊版**mssqlctl**，您必須刪除叢集*之前*升級**mssqlctl**並安裝新的版本。 如需詳細資訊，請參閱 <<c0> [ 升級至新版](deployment-guidance.md#upgrade)。
+> 如果您要安裝較新版的巨量資料叢集，您必須備份您的資料，並刪除舊的叢集*之前*升級**mssqlctl**並安裝新的版本。 如需詳細資訊，請參閱 <<c0> [ 升級至新版](deployment-guidance.md#upgrade)。
 
 ## <a id="windows"></a> Windows mssqlctl 安裝
 

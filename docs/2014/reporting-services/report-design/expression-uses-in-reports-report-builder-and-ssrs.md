@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e6f77a2ecf9ed5a985efa4a36f18b9f495c7091f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 19c423a2ecb7911cd25b51cbde438cf27b870d0b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033929"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289856"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>報表中的運算式用法 (報表產生器及 SSRS)
   整個報表定義中都會使用運算式來指定或計算參數、查詢、篩選、報表項目屬性、群組和排序定義、文字方塊屬性、書籤、文件引導模式、動態頁首和頁尾內容、影像及動態資料來源定義的值。 本主題提供的範例將說明您可以在許多地方使用運算式來將報表的內容或外觀差異化。 這份清單並不是完整的清單。 您可以在顯示運算式 (**fx**) 按鈕的對話方塊中或在顯示 **\<運算式...>** 的下拉式清單中，為任何屬性設定運算式。  

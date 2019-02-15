@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 11e1f02ebe6c1d8965d7f42b76dc6057824c59c5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032409"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291556"
 ---
 # <a name="tutorials-report-builder"></a>教學課程 (報表產生器)
   使用下列報表產生器教學課程，了解如何建立基本報表。  

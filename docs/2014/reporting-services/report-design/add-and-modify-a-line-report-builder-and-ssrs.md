@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 14a1c72d63381a3f93bf312cbdadde9874968d16
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037469"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291806"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>加入和修改線條 (報表產生器及 SSRS)
   當您想要使用圖形元素來區隔報表的區段時，可以在報表中加入線條。 您可以編輯線條屬性 (例如色彩或樣式) 來自訂線條的外觀。 例如，您可能要將公司的色彩納入報表中。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014439"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292581"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共用資料集設計檢視 (報表產生器)
   [共用資料集設計] 視窗可協助您建立資料集查詢來與其他人共用。 此視窗可讓您選取共用資料來源、指定共用資料集的屬性，以及在查詢設計工具中建立查詢。  

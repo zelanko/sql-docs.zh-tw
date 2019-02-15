@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5952850708057016c5f9b8144254682a7f47fd9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 68bf430f1b1bcf7a687ecaa77c883fdb5d6cce82
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029389"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289786"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>將報表儲存到您的電腦 (報表產生器)
   在報表產生器中，您可以將報表定義儲存到電腦。 但是，當您將報表定義儲存到電腦時，其他使用者將無法檢視參考共用資料來源的報表，或者外部存放區報表項目 (如影像和子報表) 可能無法執行。 建議您最好將報表儲存到報表伺服器或 SharePoint 網站。  

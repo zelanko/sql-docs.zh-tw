@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6afc3b709daf906aec429ae92da785ecff681a48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6f849d34f22fe462353c0a26692cb0a4661ce753
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011819"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290836"
 ---
 # <a name="select-the-data-source"></a>選取資料來源
   使用報表精靈的這個頁面，即可定義報表的資料來源。  

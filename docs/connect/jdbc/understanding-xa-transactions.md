@@ -1,7 +1,7 @@
 ---
 title: 了解 XA 交易 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393832"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736939"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 
@@ -45,9 +45,9 @@ ms.locfileid: "52393832"
 
 - 當您將 XA 交易與 Microsoft 分散式交易協調器 (MS DTC) 一起使用時，可能會注意到目前版本的 MS DTC 不支援緊密繫結的 XA 分支行為。 例如，MS DTC 在 XA 分支交易識別碼 (XID) 與 MS DTC 交易識別碼之間擁有一對一的對應，而且由鬆散繫結之 XA 分支所執行的工作會彼此隔離。  
   
-     在 [MSDTC 和緊密繫結的交易](https://support.microsoft.com/kb/938653)中所提供的 Hotfix 可以支援緊密繫結的 XA 分支，其中具有相同全域交易識別碼 (GTRID) 的多個 XA 分支會對應到單一 MS DTC 交易識別碼。 這個支援可讓多個緊密結合的 XA 分支查看彼此在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中的變更。  
+     [MSDTC 與緊密結合的交易](https://support.microsoft.com/kb/938653) 提供的 Hotfix，可以支援緊密結合的 XA 分支，其中多個具有相同交易識別碼 (GTRID) 的 XA 分支將會對應到同一個 MS DTC 交易識別碼。 此支援讓多個緊密結合的 XA 分支可以在資源管理員 (例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 中查看彼此的變更。
   
-- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標可讓應用程式使用 XA 分支交易識別碼 (BQUAL) 不同，但全域交易識別碼 (GTRID) 和格式識別碼 (FormatID) 相同之緊密結合的 XA 交易。 若要使用該功能，您必須設定[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的旗標參數上：  
+- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標允許應用程式使用緊密結合的 XA 交易，但這些交易的 XA 分支交易識別碼 (BQUAL) 各不相同，只有全域交易識別碼 (GTRID) 及格式識別碼 (FormatID) 相同。 若要使用該功能，您必須設定[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的旗標參數上：
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,11 +61,12 @@ ms.locfileid: "52393832"
 > JDBC 分散式交易元件會包含在 JDBC 驅動程式安裝的 xa 目錄中。 這些元件包括 xa_install.sql 及 sqljdbc_xa.dll 檔案。  
 
 > [!NOTE]  
-> 從 SQL Server 2019 公用預覽 CTP 2.0 開始，JDBC XA 分散式的交易元件包含在 SQL Server 引擎可以啟用或停用的系統預存程序。 若要啟用必要的元件，以執行使用 JDBC 驅動程式的 XA 分散式交易，請執行下列預存程序。
+> 開始使用 SQL Server 2019 公開預覽 CTP 2.0 JDBC XA 分散式的交易元件會包含在 SQL Server 引擎，並可以啟用或停用的系統預存程序。
+> 若要啟用必要的元件，以執行使用 JDBC 驅動程式的 XA 分散式交易，請執行下列預存程序。
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> 若要停用先前安裝的元件，請執行下列預存程序。 
+> 若要停用先前安裝的元件，請執行下列預存程序。
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -83,7 +84,7 @@ ms.locfileid: "52393832"
   
 4. 按一下 [本機 DTC 內容] 對話方塊中的 [安全性] 索引標籤。  
   
-5. 選取 [啟用 XA 交易] 核取方塊，然後按一下 [確定]。 這將導致 MS DTC 服務重新啟動。  
+5. 選取 [啟用 XA 交易] 核取方塊，然後按一下 [確定]。 MS DTC 服務會隨即重新啟動。
   
 6. 再按一下 [確定] 關閉 [內容] 對話方塊，然後關閉 [元件服務]。  
   
@@ -104,11 +105,11 @@ ms.locfileid: "52393832"
   
 您一次只能針對每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體設定單一 sqljdbc_xa.dll 組件版本。 應用程式可能必須使用不同的 JDBC 驅動程式版本，透過 XA 連線連線到相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在該情況下，您就必須在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上安裝隨附於最新 JDBC 驅動程式的 sqljdbc_xa.dll。  
   
-有三種方式可確認目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 sqljdbc_xa.dll 版本：  
+有三種方式可以確認目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 sqljdbc_xa.dll 版本：
   
 1. 開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 LOG 目錄。 選取並開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "ERRORLOG" 檔案。 在 "ERRORLOG" 檔案中搜尋 "Using 'SQLJDBC_XA.dll' version ..." 片語。  
   
-2. 開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 Binn 目錄。 選取 sqljdbc_xa.dll 組件。  
+2. 開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦的 Binn 目錄。 選取 sqljdbc_xa.dll 組件。
 
     - 在 Windows Vista 或更新版本上：以滑鼠右鍵按一下 sqljdbc_xa.dll，然後選取 [內容]。 然後，按一下 [詳細資料] 索引標籤。[檔案版本] 欄位就會顯示目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 sqljdbc_xa.dll 版本。  
   
@@ -128,11 +129,11 @@ ms.locfileid: "52393832"
 這些是 SQL Server 執行個體的特定設定，而且應該建立在下列登錄機碼底下：  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> 在 64 位元機器中執行的 32 位元 SQL Server，應在下列機碼底下建立登錄設定：`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> 在 64 位元機器中執行的 32 位元 SQL Server，應在下列機碼底下建立登錄設定：`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 如果逾時到期，當此設定已啟動且交易已由 SQL Server 回復時，會設定每一筆交易的逾時值。 根據這些登錄設定，並根據使用者已透過 XAResource.setTransactionTimeout() 指定的設定，來決定此逾時。 這些逾時值解譯方式的幾個範例，如下所示：  
   
@@ -146,18 +147,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     表示如果用戶端未指定任何逾時，則所有交易都會都有 30 秒逾時。 如果用戶端指定了任何逾時，則只要是少於 60 秒 (最大值)，就會使用用戶端的逾時。  
+     表示如果用戶端未指定任何逾時，則所有交易都會都有 30 秒逾時。 用戶端如有指定逾時，除非該值小於 60 秒 (最大值)，否則將會使用用戶端的逾時值。  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     表示如果用戶端未指定任何逾時，則所有交易都會都有 30 秒逾時 (最大值)。 如果用戶端指定了任何逾時，則只要是少於 30 秒 (最大值)，就會使用用戶端的逾時。  
+     表示如果用戶端未指定任何逾時，則所有交易都會都有 30 秒逾時 (最大值)。 用戶端如有指定逾時，除非該值小於 30 秒 (最大值)，否則將會使用用戶端的逾時值。  
   
 ### <a name="upgrading-sqljdbcxadll"></a>升級 sqljdbc_xa.dll
 
 當您安裝新版 JDBC 驅動程式時，也應該使用新版的 sqljdbc_xa.dll 來升級伺服器上的 sqljdbc_xa.dll。  
   
 > [!IMPORTANT]  
-> 您應該在維護時段或者沒有任何 MS DTC 交易正在進行時升級 sqljdbc_xa.dll。  
+> 您應利用維護時段，或沒有任何 MS DTC 交易正在進行時，升級 sqljdbc_xa.dll。
   
 1. 卸載使用 sqljdbc_xa.dll[!INCLUDE[tsql](../../includes/tsql-md.md)]命令**DBCC sqljdbc_xa （免費）**。  
   
@@ -167,7 +168,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<inst
   
 ### <a name="configuring-the-user-defined-roles"></a>設定使用者定義角色
 
-若要授與權限給特定使用者以使用 JDBC Driver 參與分散式交易，請將該使用者新增至 SqlJDBCXAUser 角色。 例如，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，將名為 'shelby' (SQL 標準登入使用者名稱為 'shelby') 的使用者加入至 SqlJDBCXAUser 角色：  
+若要授與權限給特定使用者以使用 JDBC Driver 參與分散式交易，請將該使用者新增至 SqlJDBCXAUser 角色。 例如，使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，將名為 'shelby' (SQL 標準登入使用者名稱為 'shelby') 的使用者新增至 SqlJDBCXAUser 角色：  
 
 ```sql
 USE master  

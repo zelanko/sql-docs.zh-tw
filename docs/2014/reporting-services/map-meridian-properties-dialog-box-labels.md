@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ecaf5c0ad58dcb3fbc60d9c6417ac969f85ca40
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015011"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296106"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>地圖經線屬性對話方塊、標籤
   使用**MapMeridian 屬性**對話方塊來變更地圖檢視區中垂直格線的標籤選項。 根據指定之檢視區的座標系統，經線表示下列值：  

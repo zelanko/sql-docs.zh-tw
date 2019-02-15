@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f3e427e0bc407167f25d679954a8506256300fc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022961"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294318"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>互動式排序 (報表產生器及 SSRS)
   您可以加入互動式排序按鈕，讓使用者在資料表中切換資料列的遞增和遞減順序，或在矩陣中切換資料列及資料行的遞增和遞減順序。 互動式排序的常見用法為，將排序按鈕加入到每個資料行標頭。 接著，使用者可以選擇排序所依據的資料行。  

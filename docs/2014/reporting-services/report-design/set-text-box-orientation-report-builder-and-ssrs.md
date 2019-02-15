@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 08f25381a87074720868b68c8c095dd8b2136d59
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3e8beb8a7aa6eec3e62a45b9c3d3a8566f93b540
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025399"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296816"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>設定文字方塊方向 (報表產生器及 SSRS)
   文字方塊可以有不同的方向：水平、垂直 (從上到下閱讀文字)，或是旋轉 270 度 (從下到上閱讀文字)。 因為方向會設定在文字方塊而不是文字上，所以方向會套用到文字方塊中的所有文字。 您不能針對文字的各個部分指定不同的方向。 手動調整資料行寬度及資料列高度，以配合旋轉的文字大小。  

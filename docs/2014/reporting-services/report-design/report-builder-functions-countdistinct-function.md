@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2a3d7c1d65ffa392caf60bab286b2496497e4ee9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021529"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297991"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>CountDistinct 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 相異值的計數 (在給定範圍的內容中評估)。  

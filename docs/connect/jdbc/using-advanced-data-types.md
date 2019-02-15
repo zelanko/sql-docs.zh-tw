@@ -1,7 +1,7 @@
 ---
 title: 使用進階的資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,31 +11,34 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b794a8c93fd7a9c83e783a04999cbeb8a9e58f48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510497"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736819"
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 JDBC 進階資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型轉換為 Java 程式語言可以理解的格式。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 JDBC 進階資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型轉換為 Java 程式設計語言可以理解的格式。  
   
 ## <a name="remarks"></a>Remarks
 
-下表列出進階 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC 和 Java 程式語言資料類型之間的預設對應。  
+下表列出進階 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC 與 Java 程式設計語言資料類型之間的預設對應。  
   
 |SQL Server 類型|JDBC 類型 (java.sql.Types)|Java 語言類型|  
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(預設值)、Blob、InputStream、String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (預設值)、Clob、InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (預設值)、Clob、NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (預設值)、InputStream、Clob、byte[]、Blob、SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (預設值)、byte[]、InputStream|  
-  
+|sqlvariant|SQLVARIANT|Object|  
+|幾何<br /><br /> 地理位置|VARBINARY|byte[]|  
+
+
 <sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支援當成二進位資料傳送和擷取 CLR UDT，但不支援操作 CLR 中繼資料。  
   
 下列各節會提供如何使用 JDBC Driver 和進階資料類型的範例。  
@@ -55,7 +58,7 @@ JDBC 驅動程式會實作 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 介�
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>從資料庫擷取大數值類型
 
-從資料庫擷取非二進位的大數值資料類型 (例如 **varchar(max)** 資料類型) 時，有種方法是將該資料當成字元資料流來讀取。 在下列範例中，[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法可用於從資料庫擷取資料，並將該資料當成結果集傳回。 而 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法可用於從結果集讀取大數值資料。  
+當您從資料庫擷取非二進位大型數值的資料類型 (例如 **varchar(max)** 資料類型) 時，方法之一就是以字元串流的形式讀取資料。 在下列範例中，[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法可用於從資料庫擷取資料，並將該資料當成結果集傳回。 而 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) 方法可用於從結果集讀取大數值資料。  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -66,7 +69,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > 這個方法也會用於**文字**， **ntext**，並**nvarchar （max)** 資料型別。  
 
-從資料庫擷取二進位的大數值資料類型 (例如 **varbinary(max)** 資料類型) 時，有數種方法可供您使用。 最有效的方法就是將資料當作二進位資料流來讀取，如下所示：  
+當您從資料庫擷取二進位大型數值的資料類型 (例如 **varbinary(max)** 資料類型) 時，有幾種方法可以使用。 最有效的方法就是將資料當作二進位資料流來讀取，如下所示：  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -162,12 +165,20 @@ JDBC 驅動程式中 **xml** 資料類型的實作提供下列項目的支援：
   
 ## <a name="user-defined-data-type"></a>使用者定義資料類型  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入使用者自訂類型 (UDT)，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件和自訂資料結構，因而擴充了 SQL 類型系統的功能。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 使用能產生可驗證程式碼並由 Microsoft .NET Common Language Runtime (CLR) 支援的任何語言，即可定義 UDT。 這包括 Microsoft Visual C# 和 Visual Basic .NET。 資料會公開為 .NET Framework 類別或結構的欄位和屬性，而行為則是由類別或結構的方法所定義。  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入使用者定義類型 (UDT)，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中儲存物件和自訂資料結構，因而擴充 SQL 類型系統的功能。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 使用能產生可驗證程式碼並由 Microsoft .NET Common Language Runtime (CLR) 支援的任何語言，即可定義 UDT。 這包括 Microsoft Visual C# 和 Visual Basic .NET。 資料會公開為 .NET Framework 類別或結構的欄位和屬性，而行為則是由類別或結構的方法所定義。  
   
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，UDT 可以用做資料表的資料行定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數或預存程序的引數。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，UDT 可以用作資料表的資料行定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式或預存程序的引數。  
   
 如需使用者定義資料類型的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用和修改使用者定義類型的執行個體＞。  
   
+## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
+
+Sql_variant 資料類型的相關資訊，請參閱[使用 Sql_variant 資料類型](../../connect/jdbc/using-sql-variant-datatype.md)。  
+
+## <a name="spatial-data-types"></a>空間資料類型
+
+如需空間資料類型的資訊，請參閱[使用的空間資料型別](../../connect/jdbc/use-spatial-datatypes.md)。  
+
 ## <a name="see-also"></a>另請參閱
 
 [了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -1,7 +1,7 @@
 ---
 title: 連接到 Azure SQL database |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602208"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736979"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 
@@ -37,7 +37,7 @@ ms.locfileid: "51602208"
   
 ## <a name="connections-dropped"></a>連接中斷
 
-連接到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，網路元件 (例如防火牆) 可能會在一段時間沒有活動之後結束閒置連接。 在此內容中，有兩種閒置連接類型：  
+連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，網路元件 (例如防火牆) 可能會在一段時間沒有活動之後結束閒置連線。 在此內容中，有兩種閒置連接類型：  
 
 - TCP 層閒置，其中任何數目的網路裝置都可能會卸除連接。  
 
@@ -47,9 +47,9 @@ ms.locfileid: "51602208"
   
 |登錄設定|建議值|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ 系統 \ CurrentControlSet \ 服務 \ Tcpip \ 參數 \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ 系統 \ CurrentControlSet \ 服務 \ Tcpip \ 參數 \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ 系統 \ CurrentControlSet \ 服務 \ Tcpip \ 參數 \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 重新啟動電腦，讓這些登錄設定生效。  
 
@@ -78,15 +78,15 @@ shutdown /r /t 1
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>將伺服器名稱附加至連接字串中的 UserId  
 
 在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版之前，連線到 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 時，您必須將伺服器名稱附加至連接字串中的 UserId。 例如， user@servername。 從 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版開始，您不再需要將 @servername 附加至連接字串中的 UserId。  
-  
+
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密需要設定 hostNameInCertificate
 
-當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該指定**hostNameInCertificate**如果您指定**加密 = true**。 (如果連接字串中的伺服器名稱是*shortName*。*domainName*，將**hostNameInCertificate**屬性設\*。*domainName*。)  
-  
-例如：  
+7.2 版之前[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該指定**hostNameInCertificate**如果您指定**加密 = true** （如果在連接中的伺服器名稱字串是*shortName*。*domainName*，將**hostNameInCertificate**屬性設\*。*domainName*。)。 這是選擇性屬性 7.2 版驅動程式。
+
+例如：
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
 ## <a name="see-also"></a>另請參閱

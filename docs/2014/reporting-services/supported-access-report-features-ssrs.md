@@ -16,15 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f50d98eaa44d3e323fb72097bc78e9969a30bad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012024"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294266"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支援的 Access 報表功能 (SSRS)
   當您將報表匯入報表設計師時，匯入程序會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 報表轉換成 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援多種 Access 的功能；但因為 Access 及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之間的差異，會稍微修改或不支援某些項目。 此主題描述 Access 報表功能如何轉換成 RDL。  

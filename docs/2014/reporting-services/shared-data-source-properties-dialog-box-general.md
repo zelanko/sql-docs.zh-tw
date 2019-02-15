@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e743eac09bc3a39899c6cc6a86674b428f369717
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: feaf57f433b0f21b4bf4bb6600e22010e68d9fef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041229"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296127"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>共用資料來源屬性對話方塊、一般
   使用 [共用資料來源屬性] 對話方塊，即可在報表中顯示和修改共用資料來源的連接資訊。  

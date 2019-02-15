@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e13fab957a95bdcddd83e22c1eae61c6a5a86425
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017719"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291780"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>加入或刪除指標 (報表產生器及 SSRS)
   指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 如需指標的詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](indicators-report-builder-and-ssrs.md)。  

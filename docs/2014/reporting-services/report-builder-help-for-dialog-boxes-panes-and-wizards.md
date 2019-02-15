@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7be737e0c8534b936d08aaf8f37fc320f831b509
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e01b814bad72c5ff8a481fd361b2409b9adbda99
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034189"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293426"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>對話方塊、窗格和精靈的報表產生器說明
   本節包含許多報表產生器精靈、檢視、窗格和對話方塊的說明。 或者，您也可以按下 F1 或按一下對話方塊中顯示的 [說明] 按鈕，以開啟說明。  

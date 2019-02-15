@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 422fcf70501d0ffea9288d33962e15ce86cb0e64
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5581144c8a852a4ee0861e71d3446ee90936926a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031429"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296396"
 ---
 # <a name="select-the-report-type"></a>選取報表類型
   使用報表精靈的這個頁面，即可選取表格式報表或矩陣報表。  

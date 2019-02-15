@@ -1,7 +1,7 @@
 ---
 title: 使用空間資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460543"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737009"
 ---
 # <a name="using-spatial-datatypes"></a>使用空間資料類型
 
@@ -90,30 +90,30 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 
 |方法|Description|
 |:------|:----------|
-|void setGeometry (int n，Geometry x)| 設定指定的參數來指定的 microsoft.sql.Geometry 類別物件。
-|void setGeography (int n，地理位置 x)| 設定指定的參數來指定的 microsoft.sql.Geography 類別物件。
+|void setGeometry(int n, Geometry x)| 設定指定的參數來指定的 microsoft.sql.Geometry 類別物件。
+|void setGeography(int n, Geography x)| 設定指定的參數來指定的 microsoft.sql.Geography 類別物件。
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
 |方法|Description|
 |:------|:----------|
-|幾何 getGeometry (int colunIndex)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geometry 物件。
+|Geometry getGeometry(int colunIndex)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geometry 物件。
 |幾何 getGeometry (字串 columnName)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geometry 物件。
-|Geography getGeography (int colunIndex)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geography 物件。
+|Geography getGeography(int colunIndex)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geography 物件。
 |Geography getGeography (字串 columnName)| 傳回這個結果集物件的目前資料列中的指定資料行的值來當做 Java 程式語言 com.microsoft.sqlserver.jdbc.Geography 物件。
 
 ### <a name="geometry"></a>幾何
 
 |方法|Description|
 |:------|:----------|
-|幾何 STGeomFromText (字串 well-known text，wkt，int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geometry 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
-|幾何 STGeomFromWKB (byte [] well-known binary，wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geometry 執行個體的建構函式。
+|Geometry STGeomFromText(String wkt, int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geometry 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
+|Geometry STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geometry 執行個體的建構函式。
 |幾何還原序列化 (byte [] well-known binary，wkb)| 從空間資料之內部 SQL Server 格式的 Geometry 執行個體的建構函式。
 |幾何剖析 (字串 well-known text，wkt)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geometry 執行個體的建構函式。 空間參考識別碼被預設為 0。
 |幾何點 （雙精度浮點數 x，雙重的 y 整數 SRID）| 表示 Point 執行個體根據其 X 和 Y 值與空間參考識別碼的 Geometry 執行個體的建構函式。
 |字串 stastext （)| 傳回 Geometry 執行個體的開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法。 此文字將不會包含此執行個體所夾帶的任何 Z (高度) 或 M (測量) 值。
-|byte [] stasbinary （)| 傳回 Geometry 執行個體的開放式地理空間協會 (OGC) Well-Known Binary (WKB) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
-|byte [] serialize()| 傳回表示 Geometry 類型之內部 SQL Server 格式的位元組。
+|byte[] STAsBinary()| 傳回 Geometry 執行個體的開放式地理空間協會 (OGC) Well-Known Binary (WKB) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
+|byte[] serialize()| 傳回表示 Geometry 類型之內部 SQL Server 格式的位元組。
 |布林 hasM()| 傳回物件是否包含 M （測量） 值。
 |布林 hasZ()| 傳回物件是否包含 Z （高度） 值。
 |Double getX()| 傳回 X 座標值。
@@ -121,10 +121,10 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |Double getM()| 傳回物件的 M （測量） 值。
 |Double getZ()| 傳回物件的 Z （高度） 值。
 |int getSrid()| 傳回的空間參考識別碼 (SRID) 的值。
-|布林 Isnull| 傳回幾何物件是否為 null。
+|boolean isNull()| 傳回幾何物件是否為 null。
 |int stnumpoints （)| 傳回幾何物件中的點數目。
-|Stgeometrytype （字串)| 傳回幾何執行個體表示的開放式地理空間協會 (Open Geospatial Consortium，OGC) 類型名稱。
-|字串 asTextZM()| 傳回幾何物件的已知文字 (well-known text，WKT) 表示。
+|String STGeometryType()| 傳回幾何執行個體表示的開放式地理空間協會 (Open Geospatial Consortium，OGC) 類型名稱。
+|String asTextZM()| 傳回幾何物件的已知文字 (well-known text，WKT) 表示。
 |字串的 tostring （)| 傳回 Geometry 物件的字串表示法。
 
 ### <a name="geography"></a>Geography
@@ -132,13 +132,13 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |方法|Description|
 |:------|:----------|
 |Geography STGeomFromText (字串 well-known text，wkt，int SRID)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式，經由此執行個體夾帶的任何 Z (高度) 值和 M (測量) 值來擴充。
-|Geography STGeomFromWKB (byte [] well-known binary，wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geography 執行個體的建構函式。
+|Geography STGeomFromWKB(byte[] wkb)| 從開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法傳回之 Geography 執行個體的建構函式。
 |地理還原序列化 (byte [] well-known binary，wkb)| 從空間資料之內部 SQL Server 格式的地理位置執行個體的建構函式。
 |Geography 剖析 (字串 well-known text，wkt)| 從開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法傳回之 Geography 執行個體的建構函式。 空間參考識別碼被預設為 0。
-|地理點 （雙 int SRID，double lon，lat）| Geography 執行個體的建構函式，其會根據 Point 執行個體的緯度和經度值與空間參考識別碼 (SRID) 來表示 Point 執行個體。
+|地理點 （雙 int SRID，double lat，lon）| 代表位置執行個體 (經緯度及空間參考識別碼) 之地理執行個體的建構函式。
 |字串 stastext （)| 傳回 Geography 執行個體的開放地理空間協會 (OGC) Well-Known Text (WKT) 表示法。 此文字將不會包含此執行個體所夾帶的任何 Z (高度) 或 M (測量) 值。
-|byte [] STAsBinary())| 傳回 Geography 執行個體的開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
-|byte [] serialize()| 傳回表示 Geography 類型之內部 SQL Server 格式的位元組。
+|byte[] STAsBinary())| 傳回 Geography 執行個體的開放地理空間協會 (OGC) Well-Known Binary (WKB) 表示法。 這個值將不會包含此執行個體所夾帶的任何 Z 或 M 值。
+|byte[] serialize()| 傳回表示 Geography 類型之內部 SQL Server 格式的位元組。
 |布林 hasM()| 傳回物件是否包含 M （測量） 值。
 |布林 hasZ()| 傳回物件是否包含 Z （高度） 值。
 |Double getLatitude()| 傳回的緯度值。
@@ -146,10 +146,10 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 |Double getM()| 傳回物件的 M （測量） 值。
 |Double getZ()| 傳回物件的 Z （高度） 值。
 |int getSrid()| 傳回的空間參考識別碼 (SRID) 的值。
-|布林 Isnull| 傳回 Geography 物件是否為 null。
+|boolean isNull()| 傳回 Geography 物件是否為 null。
 |int stnumpoints （)| 傳回 Geography 物件中的點數目。
-|字串 STGeographyType()| 傳回 Geography 執行個體表示的開放式地理空間協會 (Open Geospatial Consortium，OGC) 類型名稱。
-|字串 asTextZM()| 傳回的已知文字 (well-known text，WKT) 表示的地理物件。
+|String STGeographyType()| 傳回 Geography 執行個體表示的開放式地理空間協會 (Open Geospatial Consortium，OGC) 類型名稱。
+|String asTextZM()| 傳回的已知文字 (well-known text，WKT) 表示的地理物件。
 |字串的 tostring （)| 傳回 Geography 物件的字串表示法。
 
 ## <a name="limitations-of-spatial-datatypes"></a>空間資料類型的限制

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 26ae33e722e1da42a648248df198c23c4fc4ddf5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43668ec1da730687ea422511021ebe64deec9d30
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011030"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288886"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>選取 Cube 對話方塊 (報表產生器)
   使用 **[選取 Cube]** 對話方塊，即可選取不同的 Cube 做為報表的資料來源。 選取不同的 Cube 後，您的查詢可能會不再有效。  

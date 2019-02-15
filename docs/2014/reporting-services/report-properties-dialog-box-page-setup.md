@@ -11,15 +11,15 @@ f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d1dcf20ef0a282d28ce8c50c5935100b48fb57e6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fe4abae7db246a9d18388b1d479b6cc9d8048e5e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029419"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296866"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>報表屬性對話方塊、版面設定
   選取 **版面**上**報表屬性**，來設定整個報表的分頁選項的對話方塊。  

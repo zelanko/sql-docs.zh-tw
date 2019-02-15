@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 167abcad8787ff3bdd0591696dbd6b365037d174
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eda73eb52e99a24811e55ae89b703db1d9a2e7e9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020789"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297866"
 ---
 # <a name="choose-the-table-layout"></a>選擇資料表配置
   使用報表精靈的這個頁面，即可選取報表中的資料表配置。  
