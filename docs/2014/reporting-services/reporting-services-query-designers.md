@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b46d985a4b43fc55fdbae3fa1012e77e4c2c0316
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010809"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285626"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 查詢設計工具
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供圖形化和以文字為基礎的查詢設計工具，可協助您在報表中每個資料來源類型為建立查詢。  

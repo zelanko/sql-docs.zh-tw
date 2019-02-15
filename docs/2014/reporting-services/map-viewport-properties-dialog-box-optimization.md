@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 411dd5fdcd58b9f009ffe8fbdefa39e39c273435
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7d9d9ff8cf279ff9a88a4c46b2ddc4b97e834b49
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012879"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287157"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>地圖檢視區屬性對話方塊、最佳化
   選取 **[地圖檢視區屬性]** 對話方塊的 **[最佳化]** 協助控制在報表中檢視地圖的解析度。  
