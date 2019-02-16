@@ -5,14 +5,18 @@ title: SQL Server 安全性
 description: 探索可讓 SQL Server 保持安全的功能。
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: a8e0f1a1c9e09992ec92813903fd563d48fe7fa4
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: f1b88c2a82866c171601d5184a90fd0d6362a435
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079274"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319119"
 ---
 <div id="main" class="v2">
     <div class="container">

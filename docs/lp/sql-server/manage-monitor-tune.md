@@ -5,14 +5,18 @@ title: 管理、監視、微調 SQL Server
 description: 探索可協助您管理、監視及微調 SQL Server 的功能。
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 1ce47990045946eb2df9d3bec8385159f898510f
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 5beff15b746c26520c8d95048a9849fe2f710aca
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079394"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319289"
 ---
 <div id="main" class="v2">
     <div class="container">

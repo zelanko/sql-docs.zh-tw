@@ -5,14 +5,18 @@ title: SQL Server - 安裝和升級
 description: 尋找可協助您安裝或升級 SQL Server 及相關服務的內容。
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 58b303a225e004103e901fcbbf28f368d384d0b9
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 08d6ef5c0454c8024a70bff66934a516702df668
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079294"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319269"
 ---
 <div id="main" class="v2">
     <div class="container">

@@ -5,14 +5,18 @@ title: SQL Server 資料庫設計
 description: 探索 SQL Server 功能，協助您設計最適合您商務需求的資料庫。
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: ce9981d93ffa1d59b3966b42b0c9b63a1e1a6ba7
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 5c70902f23c4f149e42a1ee04dd515aa32aa9d2e
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079414"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319079"
 ---
 <div id="main" class="v2">
     <div class="container">

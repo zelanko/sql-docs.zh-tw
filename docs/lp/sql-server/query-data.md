@@ -5,14 +5,18 @@ title: SQL Server - 查詢資料
 description: 探索可讓您輕鬆查詢 SQL Server 資料庫資料的功能。
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: acdba293edcaad9573d93ddd07097c82f4e48261
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: fbffcdd5de49cadd3e18ab3db0a5da7ff6a042e9
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079344"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319339"
 ---
 <div id="main" class="v2">
     <div class="container">

@@ -3,18 +3,18 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL 文件 | Microsoft Docs
 description: 深入了解 SQL
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ms.topic: hub-page
 ms.prod: sql
-ms.technology:
-- database-engine
-ms.openlocfilehash: 5cd23f98e7c15c8cb069b0fd75cda241f81848e9
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.technology: release-landing
+ms.openlocfilehash: 1501784cac80fef201f833b5f16c3429b95ef7ad
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079404"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319419"
 ---
 <div id="main" class="v2">
     <div class="container">

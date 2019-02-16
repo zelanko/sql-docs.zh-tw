@@ -5,14 +5,18 @@ title: SQL Server 商務持續性
 description: 無論在何種情況下，您都可以探索不同的 SQL Server 功能來達成高可用性、災害復原並保持商務運作。
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: bcf57c58e706a8f25a1cd2f2ace671480352f5a2
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 8d0ffb00e47f24fdd8ba85b7dee03119b67c9d0f
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079364"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319089"
 ---
 <div id="main" class="v2">
     <div class="container">
