@@ -1,9 +1,7 @@
 ---
 title: 開始執行啟用資料庫的延展功能精靈 | Microsoft Docs
-ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql
-ms.technology: ''
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: quickstart
 f1_keywords:
@@ -23,12 +21,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0cc0da9786e62d4601d9f769d79c333aeb01162
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 98c9691f51036b29aa80aa34b1ca8396ab49def2
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038649"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240842"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

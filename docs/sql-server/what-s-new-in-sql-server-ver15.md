@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
 ms.date: 01/09/2019
-ms.prod: sql-server-2018
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0a5dab4eeccc5c4e31a151ec9611d7ed8367a78
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: ef507ebef690dc75e21539311e45b8932a721c3a
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300175"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319219"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 的新功能
 

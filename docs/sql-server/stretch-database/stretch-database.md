@@ -1,9 +1,7 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: ''
 ms.date: 06/27/2016
-ms.prod: sql
-ms.technology: ''
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +10,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49e00f126c1fa83a08a9186944be20dd903cda15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 622d4c47027477318e8231e9c2d7bbaea877d94f
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043369"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240832"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,21 +1,19 @@
 ---
 title: Stretch Database 的擴充事件 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql
-ms.technology: ''
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08168f4f22bfbb680ea39183fbe5fac9dcc28417
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 87199dc69a19f5328df495cc31276e6f16c8e0bd
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011580"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240782"
 ---
 # <a name="extended-events-for-stretch-database"></a>Stretch Database 的擴充事件
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

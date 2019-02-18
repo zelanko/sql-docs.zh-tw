@@ -1,9 +1,7 @@
 ---
 title: 為資料表啟用 Stretch Database | Microsoft Docs
-ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql
-ms.technology: ''
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +11,12 @@ ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a404055b721de9415c2f4d75bb21e11ebc7ac0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 390407a35d52067c41d1e2a56c1ab62806ffb4cc
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034689"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240862"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

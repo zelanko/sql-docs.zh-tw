@@ -1,9 +1,7 @@
 ---
 title: 監視及針對資料移轉進行疑難排解 (Stretch Database) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql
-ms.tecnology: ''
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +11,12 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b66379296cca3a183836a62c9d8ed93691113524
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aff3780352dbacd236e51f343999bd909d05207c
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011240"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240902"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>監視和疑難排解資料移轉 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

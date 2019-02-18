@@ -1,21 +1,19 @@
 ---
 title: 還原已啟用 Stretch 的資料庫 (Stretch Database) | Microsoft Docs
-ms.custom: ''
 ms.date: 07/06/2016
-ms.prod: sql
-ms.technology: ''
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 32ffe8e7cf7c151ecc326ecbcaf6828536262cc5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 479d632b8d5413de9517f92f604c44383012acab
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038099"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240792"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>還原已啟用 Stretch 的資料庫 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

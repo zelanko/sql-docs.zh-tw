@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087907"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319379"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -557,7 +557,7 @@ SQL 編輯器：
     
 SMO：
 
-- 已修正新增包含預設條件約束的資料行且資料表已經有資料時，Table.Alter() 會失敗的問題。 如需詳細資料，請參閱 [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625) (新增資料行至已含有資料的資料表時 SQL Server SMO 會產生內嵌預設條件約束)。
+- 已修正新增包含預設條件約束的資料行且資料表已經有資料時，Table.Alter() 會失敗的問題。 如需詳細資訊，請參閱[新增資料行至已含有資料的資料表時 sql server smo 會產生內嵌預設條件約束](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)。
     
 Always Encrypted：
 
@@ -607,7 +607,7 @@ Azure SQL 資料倉儲：
 **一般 SSMS** 
 
 維護計畫：   
-- 已修正嘗試變更現有維護計畫的排程會擲回例外狀況的問題。 如需詳細資料，請參閱 [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924) (按一下維護計畫中的排程時 SSMS 17.6 當機)。
+- 已修正嘗試變更現有維護計畫的排程會擲回例外狀況的問題。 如需詳細資料，請參閱 [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924) (按一下維護計畫中的排程時 SSMS 17.6 損毀)。
 
 一律開啟： 
 - 已修正 AlwaysOn 延遲儀表板無法搭配 SQL Server 2012 使用的問題。
@@ -834,7 +834,7 @@ XE 分析工具：
 - 已加入 database\_name 與 client\_hostname 動作至 XEvent 分析工具工作階段中適當的事件。 若要讓變更生效，您可能需要刪除伺服器上現有的 QuickSessionStandard 或 QuickSessionTSQL 工作階段執行個體 - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 命令列：
-- 新增新的命令列選項 ("-G")，可用來讓 SSMS 使用 Active Directory 驗證 (「整合式」或「密碼」)，自動連線至伺服器/資料庫。 如需詳細資料，請參閱 [SSMS 公用程式](ssms-utility.md)。
+- 新增新的命令列選項 ("-G")，可用來讓 SSMS 使用 Active Directory 驗證 (「整合式」或「密碼」)，自動連線至伺服器/資料庫。 如需詳細資訊，請參閱 [Ssms 公用程式](ssms-utility.md)。
 
 匯入一般檔案精靈：
 - 已加入在建立資料表時可以挑選結構描述名稱的方法，而不是只能使用預設值 ("dbo")。
@@ -894,7 +894,7 @@ XE 分析工具：
 ### <a name="enhancements"></a>功能增強
 
 - 新增 [匯入一般檔案精靈]，其使用智慧型架構來簡化 CSV 檔案的匯入體驗，需要最少使用者介入或專業領域知識。 如需詳細資料，請參閱[匯入一般檔案至 SQL 精靈](../relational-databases/import-export/import-flat-file-wizard.md)。
-- 已將 [XEvent Profiler] 節點新增至物件總管。 如需詳細資料，請參閱[使用 SSMS XEvent 分析工具](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
+- 已將 [XEvent Profiler] 節點新增至物件總管。 如需詳細資料，請參閱[使用 SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)。
 - 已更新效能儀表板等候歷程記錄報表中的等候篩選和分類。
 - 已新增 "Predict" 函式的語法檢查。
 - 已新增外部程式庫管理查詢的語法檢查。

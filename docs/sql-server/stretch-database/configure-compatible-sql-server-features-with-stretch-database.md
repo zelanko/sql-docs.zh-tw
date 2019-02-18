@@ -1,21 +1,19 @@
 ---
 title: 使用 Stretch Database 設定相容的 SQL Server 功能 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
-ms.technology: ''
+ms.service: sql-server-stretch-database
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 49d12c2d8b0d99420901d434e06367263b5c819b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3e9b286a114e3f748c6b87789cbbc8b171377463
+ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039659"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240752"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>使用 Stretch Database 設定相容的 SQL Server 功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
