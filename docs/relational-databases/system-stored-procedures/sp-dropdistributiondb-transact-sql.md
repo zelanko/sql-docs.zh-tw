@@ -38,7 +38,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@database=**] **'**_資料庫_**'**  
+ [ **@database=**] **'**_資料庫_**'**  
  這是要卸除的資料庫。 *資料庫*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
