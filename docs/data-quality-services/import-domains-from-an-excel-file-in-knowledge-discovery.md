@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: eafa0e4260548ed90f039bcee71daea8a5b7ac9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 08f18fb3c97bbbc5ee3ee4afcd2bb942ddbfef58
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617378"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016631"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>在知識探索中匯入 Excel 檔案中的定義域
 

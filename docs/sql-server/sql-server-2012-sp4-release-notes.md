@@ -3,7 +3,7 @@ title: SQL Server 2012 Service Pack 版本資訊 | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 2/26/2018
+ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503266"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017059"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,16 +129,16 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 如需這個 Service Pack 所修正之錯誤和已知問題的完整清單，請參閱 [這份知識庫文件](https://support.microsoft.com/kb/2674319)。   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>如果您使用相同的 IP 位址，重新安裝 SQL Server 容錯移轉叢集的執行個體會失敗  
-**問題：** 如果您在安裝 SQL Server 容錯移轉叢集執行個體期間指定不正確的 IP 位址，安裝就會失敗。 解除安裝失敗的執行個體之後，如果您嘗試使用相同的執行個體名稱和正確的 IP 位址來重新安裝 SQL Server 容錯移轉叢集執行個體，安裝仍會失敗。 發生失敗的原因是先前的安裝遺留了重複的資源群組。  
+**問題：** 若在安裝 SQL Server 容錯移轉叢集執行個體期間指定了不正確的 IP 位址，安裝就會失敗。 解除安裝失敗的執行個體之後，如果您嘗試使用相同的執行個體名稱和正確的 IP 位址來重新安裝 SQL Server 容錯移轉叢集執行個體，安裝仍會失敗。 發生失敗的原因是先前的安裝遺留了重複的資源群組。  
   
-**因應措施** ：若要解決此問題，請在重新安裝期間使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
+**因應措施：** 若要解決此問題，請在重新安裝期間使用不同的執行個體名稱，或在重新安裝之前手動刪除資源群組。 如需詳細資訊，請參閱 [在 SQL Server 容錯移轉叢集中加入或移除節點](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services 和 PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>PowerPivot 組態工具不會建立 PowerPivot 圖庫  
-**問題** ：PowerPivot 組態工具會佈建小組網站，因此不會建立 PowerPivot 圖庫。  
+**問題：** PowerPivot 組態工具會佈建小組網站，因此不會建立 PowerPivot 圖庫。  
   
-**因應措施** ：建立新的應用程式 (程式庫)。  
+**因應措施：** 建立新的應用程式 (程式庫)。  
   
 1.  確認網站集合功能 **[網站集合的 PowerPivot 功能整合]** 為 [使用中]。  
   
@@ -147,14 +147,14 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 3.  按一下 [PowerPivot 圖庫] 。  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>若要使用 PowerPivot for Excel 搭配 Excel 2013，您必須使用與 Excel 一起安裝的增益集  
-**問題**：在 Office 2010 中，PowerPivot for Excel 是可從 [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) 下載的獨立增益集。 或者，您也可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=29074)下載此增益集。 請注意，目前可供下載的 PowerPivot 增益集有兩種版本：第一種版本隨附於 SQL Server 2008 R2，而另一種版本則隨附於 SQL Server 2012。 不過，如果是 Office 2013，PowerPivot for Excel 隨附於 Office，而且會在您安裝 Excel 時一併安裝。 雖然 SQL Server 2008 R2 和 SQL Server 2012 版本的 PowerPivot for Excel 2010 與 Excel 2013 不相容，不過如果您想要讓 Excel 2010 與 Excel 2013 並存執行，仍然可以在用戶端電腦上安裝 PowerPivot for Excel 2010。 換言之，這兩種 Excel 版本可以共存，因此對應的 PowerPivot 增益集也可以。  
+**問題：** 在 Office 2010 中，PowerPivot for Excel 是可從 [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) 下載的獨立增益集。 或者，您也可以從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=29074)下載此增益集。 請注意，下載提供兩種版本的 PowerPivot 增益集：其中之一隨附於 SQL Server 2008 R2；另一個則隨附於 SQL Server 2012。 不過，如果是 Office 2013，PowerPivot for Excel 隨附於 Office，而且會在您安裝 Excel 時一併安裝。 雖然 SQL Server 2008 R2 和 SQL Server 2012 版本的 PowerPivot for Excel 2010 與 Excel 2013 不相容，不過如果您想要讓 Excel 2010 與 Excel 2013 並存執行，仍然可以在用戶端電腦上安裝 PowerPivot for Excel 2010。 換言之，這兩種 Excel 版本可以共存，因此對應的 PowerPivot 增益集也可以。  
   
-**因應措施**：若要使用 PowerPivot for Excel 2013，您必須啟用 COM 增益集。 在 Excel 2013 中，選取 [檔案] | [選項] | [增益集]。在 [管理] 下拉式方塊中，選取 [COM 增益集]，然後按一下 [執行]。 在 [COM 增益集] 中，選取 [Microsoft Office PowerPivot for Excel 2013]  ，然後按一下 [確定] 。  
+**因應措施：** 若要使用 PowerPivot for Excel 2013，必須啟用 COM 增益集。 在 Excel 2013 中，選取 [檔案] | [選項] | [增益集]。在 [管理] 下拉式方塊中，選取 [COM 增益集]，然後按一下 [執行]。 在 [COM 增益集] 中，選取 [Microsoft Office PowerPivot for Excel 2013]  ，然後按一下 [確定] 。  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>在安裝 Reporting Services 之前，安裝並設定 SharePoint Server 2013  
-**問題** ：安裝 SQL Server Reporting Services (SSRS) **之前** ，請先完成下列需求。  
+**問題：** 安裝 SQL Server Reporting Services (SSRS) **之前**，請先完成下列需求。  
   
 1.  執行 SharePoint 2013 產品準備工具。  
   
@@ -162,12 +162,12 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
   
 3.  執行 SharePoint 2013 產品設定精靈，或完成對等的設定步驟來設定 SharePoint 伺服器陣列。  
   
-**因應措施**  ：如果您在設定 SharePoint 伺服器陣列之前已安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，必要的因應措施就會取決於其他已安裝的元件而定。  
+**因應措施：** 若您在設定 SharePoint 伺服器陣列之前，即已安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式，所要採取的因應措施取決於所安裝的其他元件。  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013 中的 Power View 需要使用 Microsoft.AnalysisServices.SPClient.dll  
-**問題**：[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不會安裝必要的元件：**Microsoft.AnalysisServices.SPClient.dll**。 如果您在 SharePoint 模式下安裝 SharePoint Server 2013 Preview 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，但並未下載及安裝 PowerPivot for SharePoint 2013 安裝程式套件 **spPowerPivot.msi**，則 Power View 將無法運作且會出現下列徵兆。  
+**問題**：[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不會安裝必要的元件：**Microsoft.AnalysisServices.SPClient.dll**。 如果您在 SharePoint 模式下安裝 SharePoint Server 2013 Preview 和 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ，但並未下載及安裝 PowerPivot for SharePoint 2013 安裝程式套件 **spPowerPivot.msi** ，則 Power View 將無法運作且會出現下列徵兆。  
   
-**徵兆** ：當您嘗試建立 Power View 報表時，將會看見類似下面的錯誤訊息：  
+**徵兆：** 當您嘗試建立 Power View 報表時，會出現類似如下的錯誤訊息：  
   
 -   「無法與資料來源建立連接...」  
   
@@ -175,19 +175,19 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
   
 -   「連接字串屬性 'User Identity' 不支援值 'SharePoint Principal'。」  
   
-**因應措施** ：在 SharePoint Server 2013 上安裝 PowerPivot for SharePoint 2013 安裝程式套件 (**spPowerPivot.msi**)。 此安裝程式套件屬於 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件的一部分。 您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下載中心的 [SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)下載此功能套件。  
+**因應措施：** 在 SharePoint Server 2013 上安裝 PowerPivot for SharePoint 2013 安裝程式套件 (**spPowerPivot.msi**)。 此安裝程式套件屬於 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能套件的一部分。 您可以從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下載中心的 [SQL Server 2012 SP1 功能套件](https://go.microsoft.com/fwlink/p/?LinkID=268266)下載此功能套件。  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>執行已排定的資料重新整理之後，PowerPivot 活頁簿中的 Power View 工作表被刪除  
-**問題**：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理]  ，將會刪除所有 Power View 工作表。  
+**問題**：在 PowerPivot for SharePoint 增益集中，如果對含有 Power View 的活頁簿使用 [排定的資料重新整理]，將會刪除所有 Power View 工作表。  
   
-**因應措施**：若要搭配含有 Power View 的活頁簿使用 **Scheduled Data Refresh** ，請建立正好是資料模型的 PowerPivot 活頁簿。 建立含有 Excel 工作表及 Power View 工作表的不同活頁簿，讓這個活頁簿透過資料模型連結至 PowerPivot 活頁簿。 只要針對含有資料模型的 PowerPivot 活頁簿來排程資料重新整理即可。  
+**因應措施**：若要搭配 Power View 活頁簿使用 [排定的資料重新整理]，請建立正好是資料模型的 PowerPivot 活頁簿。 建立含有 Excel 工作表及 Power View 工作表的不同活頁簿，讓這個活頁簿透過資料模型連結至 PowerPivot 活頁簿。 只要針對含有資料模型的 PowerPivot 活頁簿來排程資料重新整理即可。  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>不正確的 SQL Server 2012 版本中提供了 DQS  
-**問題** ：在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 版本中，Enterprise、Business Intelligence 和 Developer Edition 以外的 SQL Server 版本都有提供 Data Quality Services (DQS) 功能。 安裝 SQL Server 2012 SP1 之後，除了 Enterprise、Business Intelligence 和 Developer Edition 以外，所有版本都不再提供 DQS。  
+**問題：** 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 版本中，除了 Enterprise、Business Intelligence 和 Developer Edition 之外的所有 SQL Server 版本，都會提供 Data Quality Services (DQS) 功能。 安裝 SQL Server 2012 SP1 之後，除了 Enterprise、Business Intelligence 和 Developer Edition 以外，所有版本都不再提供 DQS。  
   
-**因應措施**：如果您在不支援的版本中使用 DQS，請升級為支援的版本，或從您的應用程式中移除這項功能的相依性。  
+**因應措施**：若在不支援的版本中使用 DQS，請升級為支援的版本，或從應用程式中移除這項功能的相依性。  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -197,9 +197,9 @@ SQL Server 2012 Express Service Pack 1 (SP1) 版本包含完整版本的 SQL Ser
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Attunity 的 Oracle 異動資料擷取服務和設計工具  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>升級 CDC 服務和設計工具  
-**問題** ：在您安裝 SQL Server 2012 SP1 時，如果電腦上已安裝 Attunity Oracle Change Data Capture (CDC) 設計工具和 Change Data Capture (CDC) 服務，這些元件不會透過安裝 SP1 而升級。  
+**問題：** 安裝 SQL Server 2012 SP1 時，若電腦上已有安裝 Attunity Oracle Change Data Capture (CDC) 設計工具和 Change Data Capture (CDC) 服務，這些元件將不會因為安裝 SP1 而升級。  
   
-**因應措施** ：若要將 CDC 元件升級為最新版本：  
+**因應措施：** 若要將 CDC 元件升級為最新版本：  
   
 1.  從 [SQL Server 2012 SP1 功能套件下載頁面](https://go.microsoft.com/fwlink/p/?LinkID=268266)下載 Attunity Oracle Change Data Capture (CDC) 服務的 .msi 檔案。  
   

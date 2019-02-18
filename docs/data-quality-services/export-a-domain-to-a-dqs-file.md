@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9ead5310adef140651057ab02089a9fe6f71fbde
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1348b0a08f8e3725cc7a3e7d18e97ded02652028
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617008"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010259"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>將定義域匯出成 .dqs 檔案
 

@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732025"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889979"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 包含額外負荷最低的輕量型分析修訂版。 針對上方「適用於」中所述的版本，也可以使用[追蹤旗標 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 全域啟用輕量型分析。 已引進新的 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)，針對進行中的要求傳回查詢執行計畫。
 
-從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始，如果未全域啟用輕量型分析，則可使用新的 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引數 **QUERY_PLAN_PROFILE**，針對任何工作階段啟用查詢層級的輕量型分析。 當包含這個新提示的查詢完成時，也會輸出新的 ***query_plan_profile*** 擴充事件，以提供類似 *query_post_execution_showplan* 擴充事件的實際執行計畫 XML。 您可以設定使用此擴充事件的範例工作階段，如下列範例所示：
+從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 開始，如果未全域啟用輕量型分析，則可使用新的 [USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)引數 **QUERY_PLAN_PROFILE**，針對任何工作階段啟用查詢層級的輕量型分析。 當包含這個新提示的查詢完成時，也會輸出新的 ***query_plan_profile*** 擴充事件，以提供類似 *query_post_execution_showplan* 擴充事件的實際執行計畫 XML。 
+
+> [!NOTE]
+> 即使未使用查詢提示，*query_plan_profile* 擴充事件也會利用輕量型分析。 
+
+使用 *query_plan_profile* 擴充事件的範例工作階段可以如以下範例所示設定：
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

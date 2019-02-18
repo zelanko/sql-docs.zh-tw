@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617698"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027129"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -57,7 +57,7 @@ ms.locfileid: "52617698"
 ##  <a name="HowToCleanse"></a> 如何使用參考資料清理資料  
  使用參考資料在 DQS 中清理資料包括以下三個步驟：  
   
-1.  **在 DQS 中設定參考資料提供者詳細資料**：在您可以在 DQS 中使用參考資料之前，您必須先在 DQS 中設定參考資料服務詳細資料。  
+1.  **在 DQS 中設定參考資料提供者詳細資料**：您必須先在 DQS 中設定參考資料服務詳細資料，才能在 DQS 中使用參考資料。  
   
     1.  如果您使用服務商場，請提供有效的服務商場帳號金鑰、瀏覽至服務商場中的 [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) 資料類別目錄，並訂閱所需的提供者。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52617698"
   
      在 DQS 中設定參考資料提供者詳細資料對於特定資料提供者而言是一次性的活動。 只有 DQS 管理員可以在 DQS 中設定參考資料設定。  
   
-2.  **將知識庫中的定義域/複合定義域對應至參考資料服務**：將定義域/複合定義域對應至步驟 1 所訂閱/加入的適當參考資料服務。  
+2.  **將知識庫中的定義域/複合定義域對應至參考資料服務**：將定義域/複合定義域對應至步驟 1 所訂閱/新增的適當參考資料服務。  
   
-3.  **在資料品質專案中將對應的定義域用於清理活動**：在針對 **[清理]** 活動建立資料品質專案時，請選取包含定義域/複合定義域的知識庫 (這些定義域與步驟 2 中的參考資料服務相對應)，並執行清理活動。  
+3.  **在資料品質專案中將對應的定義域用於清理活動**：在針對 [清理] 活動建立資料品質專案時，請選取包含定義域/複合定義域的知識庫 (這些定義域與步驟 2 中的參考資料服務相對應)，並執行清理活動。  
   
 ## <a name="related-tasks"></a>相關工作  
   

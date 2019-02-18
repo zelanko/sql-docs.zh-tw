@@ -27,17 +27,17 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4f4707f6f021d7395596bd1c1ab4af8230ac50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5884c549160834cec6412e4524667a460344d66f
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595724"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807478"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  封鎖批次、預存程序或交易的執行，直到指定的時間或時間間隔到期，或直到指定的陳述式修改或傳回至少一個資料列為止。  
+  封鎖批次、預存程序或交易的執行，直到經過指定的時間或時間間隔，或直到指定的陳述式修改或傳回至少一個資料列為止。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,13 +59,13 @@ WAITFOR
  這是在繼續執行批次、預存程序或交易之前，必須經過的指定時段，最多 24 小時。  
   
  '*time_to_pass*'  
- 這是要等待的時間週期。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_pass*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。 這會格式化為 hh:mm[[:ss].mss]。
+ 這是要等待的時間週期。 您可以使用 **datetime** 資料格式來指定 *time_to_pass*，或將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_pass*會格式化為 hh:mm[[:ss].mss]。
   
  TIME  
  此時執行批次、預存程序或交易時的指定時間。  
   
  '*time_to_execute*'  
- 這是 WAITFOR 陳述式完成的時間。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。 這會格式化為 hh:mm[[:ss].mss]，而且可以選擇性的包含日期 1900-01-01。
+ 這是 WAITFOR 陳述式完成的時間。 您可以使用 **datetime** 資料格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期，因此不接受 **datetime** 值的日期部分。 *time_to_execute* 會格式化為 hh:mm[[:ss].mss]，且可以選擇性地包含日期 1900-01-01。
   
  *receive_statement*  
  這是有效的 RECEIVE 陳述式。  
@@ -88,7 +88,7 @@ WAITFOR
 ## <a name="remarks"></a>Remarks  
  當執行 WAITFOR 陳述式時，交易在執行中，在相同交易之下，不能執行其他要求。  
   
- 實際的時間延遲可能與 *time_to_pass*、*time_to_execute* 或 *timeout* 中指定的時間不同，而且會隨著伺服器的活動層級而異。 排定與 WAITFOR 陳述式相關聯的執行緒後，時間計數器便會啟動。 如果伺服器處於忙碌狀態，執行緒可能不會立即排程；因此時間延遲可能比指定的時間還長。  
+ 實際的時間延遲可能與 *time_to_pass*、*time_to_execute* 或 *timeout* 中所指定時間不同，且會隨著伺服器的活動層級而異。 為 WAITFOR 陳述式執行緒進行排程後，時間計數器便會啟動。 如果伺服器處於忙碌狀態，執行緒可能不會立即排程，因此時間延遲可能比指定的時間還長。  
   
  WAITFOR 不會變更查詢的語意。 如果查詢無法傳回任何資料列，WAITFOR 會永久等待，如果指定了 TIMEOUT，就會等到 TIMEOUT 到期。  
   
@@ -98,9 +98,9 @@ WAITFOR
   
  當查詢超出 query wait 選項時，不需要執行，就能夠完成 WAITFOR 陳述式引數。 如需組態選項的詳細資訊，請參閱[設定 query wait 伺服器組態選項](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md)。 若要查看使用中和等待中的處理序，請使用 [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)。  
   
- 每個 WAITFOR 陳述式都有一個相關聯的執行緒。 如果在相同伺服器上指定了許多 WAITFOR 陳述式，可以將許多執行緒繫結起來，以等待執行這些陳述式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會監視 WAITFOR 陳述式的相關聯執行緒數目，如果伺服器感到執行緒資源用盡，它會隨機選取某些要結束的執行緒。  
+ 每個 WAITFOR 陳述式都有一個相關聯的執行緒。 如果在相同伺服器上指定了許多 WAITFOR 陳述式，可以將許多執行緒繫結起來，以等待執行這些陳述式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會監視 WAITFOR 陳述式執行緒的數目，如果伺服器感到執行緒資源用盡，它會隨機選取某些要結束的執行緒。  
   
- 您可以在也保留了鎖定以防止 WAITFOR 陳述式試圖存取之資料列集遭到改變的交易內，搭配 WAITFOR 執行查詢來建立死結。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會識別這些狀況，並在這類死結有可能存在時，傳回空的結果集。  
+ 您可以在也保留了鎖定以防止 WAITFOR 陳述式所存取之資料列集遭到改變的交易內，搭配 WAITFOR 執行查詢來建立死結。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會識別這些狀況，並在這類死結有可能存在時，傳回空的結果集。  
   
 > [!CAUTION]  
 >  包含 WAITFOR 將會減緩 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的完成，並在應用程式內產生逾時訊息。 必要時，請在應用程式層級調整連接的逾時設定。  
@@ -132,7 +132,7 @@ GO
 ```  
   
 ### <a name="c-using-waitfor-delay-with-a-local-variable"></a>C. 搭配本機變數來使用 WAITFOR DELAY  
- 下列範例顯示如何搭配 `WAITFOR DELAY` 選項來使用本機變數。 它會建立一個預存程序來等待一個可變的時段，再將經歷的時、分、秒數資訊傳回給使用者。  
+ 下列範例顯示如何搭配 `WAITFOR DELAY` 選項來使用本機變數。 這預存程序會等待一陣可變的時段，再將經歷的時、分、秒數資訊傳回給使用者。  
   
 ```  
 IF OBJECT_ID('dbo.TimeDelay_hh_mm_ss','P') IS NOT NULL  
@@ -173,5 +173,4 @@ GO
  [流程控制語言 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
-  
   

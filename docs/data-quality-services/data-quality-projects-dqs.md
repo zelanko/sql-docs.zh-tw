@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37ef3f8bb8f1a39a9d1af06a8ee71735bf0cccbf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1c08c3ccfb637f00fef08b63bf1afc3cae8a0d34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617908"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032239"
 ---
 # <a name="data-quality-projects-dqs"></a>資料品質專案 (DQS)
 

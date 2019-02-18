@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072232"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807448"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  將 *inputdate* 轉換成目標時區中對應的 *datetimeoffset* 值。 如果提供 *inputdate* 但未提供位移資訊，此函數就會在假設目標時區中已提供 *inputdate* 值的情況下，套用時區位移。 如果提供 *inputdate* 來作為 *datetimeoffset* 值，則 **AT TIME ZONE** 子句會使用時區轉換規則來將它轉換成目標時區。  
+  將 *inputdate* 轉換成目標時區中對應的 *datetimeoffset* 值。 提供 *inputdate* 但未提供位移資訊時，此函式就會在假設 *inputdate* 位於目標時區的情況下，套用時區位移。 如果提供 *inputdate* 來作為 *datetimeoffset* 值，則 **AT TIME ZONE** 子句會使用時區轉換規則將它轉換成目標時區。  
   
  **AT TIME ZONE** 實作需倚賴 Windows 機制來跨時區轉換 **datetime** 值。  
   
@@ -46,7 +46,7 @@ inputdate AT TIME ZONE timezone
  目的地時區的名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需倚賴儲存在「Windows 登錄」中的時區。 安裝在電腦上的所有時區都儲存在下列登錄區中：**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**。 已安裝的時區清單也會透過 [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 檢視表公開。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回 **datetimeoffset** 的資料類型  
+ 傳回 **datetimeoffset** 的資料類型。  
   
 ## <a name="return-value"></a>傳回值  
  目標時區中的 **datetimeoffset** 值。  
@@ -54,7 +54,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="remarks"></a>Remarks  
  **AT TIME ZONE** 會針對 **smalldatetime**、**datetime** 及 **datetime2** 資料類型中，落在受 DST 變更影響之間隔內的輸入值，套用特定的轉換規則：  
   
--   將時鐘往前調整時，本地時間會有落差，其持續時間取決於時鐘調整的持續時間 (通常為 1 小時，但也可能是 30 或 45 分鐘，視時區而定)。 在此情況下，會使用在 DST 變更「之後」的位移來轉換屬於此落差的時間點。  
+-   將時鐘調快時，本地時間會有落差，其相當於時鐘調整的持續時間。 這段持續時間通常是 1 個小時，但也可能是 30 或 45 分鐘，視時區而定。 將會使用在 DST 變更「後」之位移來轉換位於此落差中的時間點。  
   
     ```  
     /*  
@@ -169,5 +169,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a>另請參閱  
  [日期和時間類型](../../t-sql/data-types/date-and-time-types.md)   
  [日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

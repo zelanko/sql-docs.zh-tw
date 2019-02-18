@@ -3,7 +3,6 @@ title: 使用 xml 資料類型方法的指導方針 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5639083c4e1491adeaa78ec090c660e2faaa6c39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e1471792a30cfccfe0e19f878929dc74bc8775
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643886"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022871"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>使用 xml 資料類型方法的指導方針
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 ## <a name="singleton-checks"></a>單一性檢查  
  如果編譯器無法判斷是否能在執行階段保證單一性，則需要單一性的尋找步驟、函數參數及運算子將會傳回錯誤。 這個問題經常發生在不具類型的資料上。 例如，查閱屬性時需要單一父元素。 選擇單一父節點的序數即已足夠。 評估 **node()**-**value()** 組合來擷取屬性值時，可能不需要指定序數。 下一個範例將會加以說明。  
   
-### <a name="example-known-singleton"></a>範例：已知的單一性  
+### <a name="example-known-singleton"></a>範例已知的單一性  
  在此範例中，**nodes()** 方法會針對每一個 <`book`> 元素各產生一個資料列。 在 <`book`> 節點上評估的 **value()** 方法會擷取 \@genre 的值，而且作為一個屬性，它是單一的。  
   
 ```  
@@ -80,7 +79,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
   
  在執行類型檢查時，應隨時注意 //first-name[1] 與 (//first-name)[1] 之間的差異，這是很重要的。 前者會傳回 \<first-name> 節點的序列，其中每個節點都是同層級中最左邊的 \<first-name> 節點。 後者會傳回 XML 執行個體中，文件順序中的第一個單一 \<first-name> 節點。  
   
-### <a name="example-using-value"></a>範例：使用 value()  
+### <a name="example-using-value"></a>範例使用 value()  
  下面這個在不具類型 XML 資料行上執行的查詢會導致靜態的編譯錯誤。這是因為 **value()** 預期以單一節點來作為第一個引數，而編譯器無法判斷在執行階段是否只會出現一個 \<last-name> 節點：  
   
 ```  

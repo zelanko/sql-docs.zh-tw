@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411515"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771344"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "52411515"
 ## <a name="prerequisites"></a>Prerequisites  
 在開始之前，請檢閱以下重要資訊：  
   
-- [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+- [支援的版本與版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)：確認您可從您的 Windows 作業系統版本與 SQL Server 版本升級至 SQL Server 2016。 例如，您無法直接從 SQL Server 2005 執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-- [選擇資料庫引擎升級方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)︰若要依正確順序升級，請根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據作業環境中安裝的其他元件。  
+- [選擇資料庫引擎升級方法](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)：若要依正確順序升級，請根據您檢閱的支援版本與版本升級，選取適當的升級方法和步驟，此外亦根據環境中安裝的其他元件。  
   
-- [計劃和測試資料庫引擎升級計畫](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)︰檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
+- [計劃和測試資料庫引擎升級計畫](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)：檢閱版本資訊與已知的升級問題、升級前檢查清單，並開發和測試升級計畫。  
   
 - [安裝 SQL Server 的硬體和軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)：檢閱安裝 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的軟體需求。 如果需要其他軟體，請先將其安裝在每個節點上，然後開始升級程序，以將任何停機時間降到最低。  
 
@@ -67,6 +67,11 @@ ms.locfileid: "52411515"
 -   在您升級或更新其他任何次要複本執行個體之前，請勿升級主要複本執行個體。 已升級的主要複本將無法再傳送記錄到尚未升級 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體至相同版本的次要複本。 當移至次要複本的資料移動作業暫停時，該複本無法進行自動容錯移轉，而且您的可用性資料庫很容易發生資料遺失。  
   
 -   在容錯移轉 AG 之前，請確認容錯移轉目標的同步處理狀態為 SYNCHRONIZED。  
+
+  > [!WARNING]
+  > 在已安裝較舊 SQL Server 版本的伺服器上安裝新執行個體或 SQL Server 新版本時，可能會意外**導致較舊 SQL Server 版本所裝載的任何可用性群組中斷。** 這是因為在執行個體或 SQL Server 版本的安裝期間，SQL Server 高可用性模組 (RHS.EXE) 會開始升級。 這會導致伺服器上主要角色中的現有可用性群組暫時中斷。 因此，當您在已裝載較舊 SQL Server 版本 (具有可用性群組) 的系統中安裝新版 SQL Server 時，強烈建議您執行下列其中一項：
+  > - 在維護期間安裝新版 SQL Server。 
+  > - 將可用性群組容錯移轉至次要複本，因此它在新的 SQL Server 執行個體安裝期間不是主要。 
   
 ## <a name="rolling-upgrade-process"></a>輪流升級處理程序  
  實際上，確切的程序將取決於一些因素，例如 AG 的部署拓撲和每個複本的認可模式。 但是在最簡單的案例中，輪流升級是多階段的程序，其最簡單的形式包含以下步驟：  
@@ -191,7 +196,7 @@ ms.locfileid: "52411515"
 
 >[!IMPORTANT]
 >- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
->- **建議**：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步後，請儲存各複本狀態的螢幕擷取畫面。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
+>- **建議**：在您每次驗證同步時，請同時在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步後，請儲存各複本狀態的螢幕擷取畫面。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分散式可用性群組輪流升級的圖表範例
@@ -223,7 +228,7 @@ ms.locfileid: "52411515"
 
 >[!IMPORTANT]
 >- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
->- 建議：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步處理後，請建立螢幕擷取畫面並加以儲存。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
+>- 建議：在您每次驗證同步時，請同時在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步處理後，請建立螢幕擷取畫面並加以儲存。 這有助於您掌握當下進行到哪個步驟，證明在進行下一步之前一切運作正常，並在發生任何錯誤時協助您進行疑難排解。 
 
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>異動資料擷取或複寫的特殊步驟

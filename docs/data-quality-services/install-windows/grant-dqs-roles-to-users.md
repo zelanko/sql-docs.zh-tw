@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00246af5bd0b577d7f1c7aebf4711d58a9828865
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617148"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028439"
 ---
 # <a name="grant-dqs-roles-to-users"></a>對使用者授與 DQS 角色
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617148"
   
 5.  使用者驗證完成後，按一下左窗格中的 **[使用者對應]** 頁面。  
   
-6.  根據使用者所需的存取層級，在右邊的窗格中，從 **DQS_MAIN** 資料庫的 [地圖] 資料行選取該核取方塊，然後選取 [資料庫角色成員資格對象: DQS_MAIN] 窗格中的 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 核取方塊。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../../data-quality-services/dqs-security.md)＞。  
+6.  在右窗格中，從 **DQS_MAIN** 資料庫的 [對應] 資料行底下選取該核取方塊，然後選取 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 核取方塊，這些核取方塊位於 [資料庫角色成員資格對象: DQS_MAIN] 窗格中，且根據使用者所需的存取層級來選取。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../../data-quality-services/dqs-security.md)＞。  
   
 7.  在 [登入 - 新增] 對話方塊中，按一下 [確定] 套用變更。  
   

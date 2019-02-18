@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026209"
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
 
@@ -83,11 +83,11 @@ ms.locfileid: "52616858"
   
 4.  針對 **[剖析方法]** 選取下列其中一項：  
   
-    -   **參考資料**：根據參考資料服務 (RDS) 設定資料格式的方式來剖析欄位的值。 Data Quality Services 會將複合定義域中的值傳送給 RDS，而 RDS 會根據複合定義域中的定義域來傳回更正及剖析的資料。  
+    -   **參考資料**：根據參考資料服務 (RDS) 設定資料格式的方式來剖析欄位值。 Data Quality Services 會將複合定義域中的值傳送給 RDS，而 RDS 會根據複合定義域中的定義域來傳回更正及剖析的資料。  
   
-    -   **依照順序**：根據複合定義域中的定義域順序來剖析欄位的值。 第一個值將會併入第一個定義域，第二個值將會併入第二個定義域，依此類推。  
+    -   **依照順序**：根據複合定義域中的定義域順序來剖析欄位值。 第一個值將會併入第一個定義域，第二個值將會併入第二個定義域，依此類推。  
   
-    -   **分隔符號**：根據選取 [分隔符號] 時從選項按鈕選取的分隔符號來剖析欄位的值。 這可以是 **[Tab 鍵]**、 **[分號]**、 **[逗號]**、 **[空格]** 或 **[其他]**。 如果是 **[其他]**，請輸入將會當做分隔符號的值。  
+    -   **分隔符號**：根據選取 [分隔符號] 時從所顯示選項按鈕選取的分隔符號來剖析欄位值。 這可以是 **[Tab 鍵]**、 **[分號]**、 **[逗號]**、 **[空格]** 或 **[其他]**。 如果是 **[其他]**，請輸入將會當做分隔符號的值。  
   
 5.  如果您選取 **[分隔符號]** 當做剖析方法，您也可以選取 **[使用知識庫剖析]**。 如需詳細資訊，請參閱 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   

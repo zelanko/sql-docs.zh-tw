@@ -1,7 +1,7 @@
 ---
 title: 變更資料庫相容性層級並使用查詢存放區 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2017
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405223"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807402"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>變更資料庫相容性層級並使用查詢存放區
 
@@ -47,10 +47,12 @@ ms.locfileid: "52405223"
 如需將查詢處理器程式碼升級至最新版，建議遵循以下工作流程，其說明請參閱[查詢存放區使用案例的在升級至較新 SQL Server 期間保持效能穩定性一節](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)。  
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+
+從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 開始，可以使用 [查詢調整小幫手] 引導使用者完成建議的工作流程。 如需詳細資訊，請參閱[使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)。
  
 ## <a name="see-also"></a>另請參閱  
 [檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
 [查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md)     
-[ALTER DATABASE &#40;Transact-SQL&#41; 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-    
+[ALTER DATABASE &#40;Transact-SQL&#41; 相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)     
+[使用查詢調整小幫手來升級資料庫](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)        
   

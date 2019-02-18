@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616428"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024589"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
 
@@ -44,11 +44,11 @@ ms.locfileid: "52616428"
   
 4.  在 **[登入屬性]** 對話方塊的左窗格中，按一下 **[使用者對應]** 頁面。  
   
-5.  在右窗格中，選取 **[DQS_STAGING_DATA]** 資料庫的 **[對應]** 資料行底下的核取方塊，然後在 **[資料庫角色成員資格對象 :DQS_STAGING_DATA]** 窗格中選取下列角色：  
+5.  在右窗格中，在 **DQS_STAGING_DATA** 資料庫的 [對應] 欄位下方選取核取方塊，然後在 [資料庫角色成員資格對象:DQS_STAGING_DATA]**  
   
-    -   **db_datareader**：從資料表/檢視讀取資料。  
+    -   ** 窗格中選取下列角色：**db_datareader**：從資料表/檢視讀取資料。  
   
-    -   **db_datawriter**：加入、刪除或變更資料表中的資料。  
+    -   **db_datawriter**：新增、刪除或變更資料表中的資料。  
   
     -   **db_ddladmin**：建立、修改或刪除資料表/檢視。  
   

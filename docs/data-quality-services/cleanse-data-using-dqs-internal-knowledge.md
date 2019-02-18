@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 0f4cd86a9c93d07ccf25665f3aff2d11e437d3f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617648"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011537"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS (內部) 知識清理資料
 
@@ -60,11 +60,11 @@ ms.locfileid: "52617648"
 ##  <a name="Mapping"></a> 對應階段  
  在對應階段中，您會指定要清理之來源資料的連接，以及將來源資料中的資料行對應至選取之知識庫中的適當定義域。  
   
-1.  在清理資料品質精靈的 **[對應]** 頁面上，選取要清理的來源資料： **[SQL Server]** 或 **[Excel 檔案]**：  
+1.  在清理資料品質精靈的 [對應] 頁面上，選取要清理的來源資料：**SQL Server** 或 **Excel 檔案**：  
   
-    1.  **SQL Server**：如果您已將來源資料複製到這個資料庫，請選取 **DQS_STAGING_DATA** 當做來源資料庫，然後選取包含來源資料的適當資料表/檢視表。 否則，請選取來源資料庫及適當的資料表/檢視表。 您的來源資料庫必須與 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 位於相同的 SQL Server 執行個體上，才會在 **[資料庫]** 下拉式清單中提供。  
+    1.  **SQL Server**：如果您已將來源資料複製到這個資料庫，請選取 **DQS_STAGING_DATA** 當作來源資料庫，然後選取包含來源資料的適當資料表/檢視表。 否則，請選取來源資料庫及適當的資料表/檢視表。 您的來源資料庫必須與 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 位於相同的 SQL Server 執行個體上，才會在 **[資料庫]** 下拉式清單中提供。  
   
-    2.  **Excel 檔案**：按一下 **[瀏覽]**，並選取包含要清理之資料的 Excel 檔案。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 電腦上必須安裝 Microsoft Excel，才能選取 Excel 檔案。 否則，將無法使用 **[瀏覽]** 按鈕，而且這個文字方塊下方會通知您尚未安裝 Microsoft Excel。 此外，如果 Excel 檔案的第一個資料列包含標頭資料，請繼續選取 **[使用第一個資料列做為標頭]** 核取方塊。  
+    2.  **Excel 檔案**：按一下 [瀏覽]，並選取包含要清理之資料的 Excel 檔案。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 電腦上必須安裝 Microsoft Excel，才能選取 Excel 檔案。 否則，將無法使用 **[瀏覽]** 按鈕，而且這個文字方塊下方會通知您尚未安裝 Microsoft Excel。 此外，如果 Excel 檔案的第一個資料列包含標頭資料，請繼續選取 **[使用第一個資料列做為標頭]** 核取方塊。  
   
 2.  若要在 **[對應]** 底下將來源資料中的資料行與知識庫中的適當定義域對應，請在 **[來源資料行]** 資料行的下拉式清單中選取來源資料行，然後從相同資料列的 **[定義域]** 資料行的下拉式清單中選取定義域。 重複以上步驟，將來源資料中的所有資料行對應至知識庫中的適當定義域。 您可以視需要按一下 **[加入資料行對應]** 圖示，將資料列加入至對應資料表。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "52617648"
 ##  <a name="Interactive"></a> 互動式清理階段  
  在互動式清理階段中，您可以查看 DQS 所建議的變更，然後決定是否要核准或拒絕變更來實作變更。 在 **[管理和檢視結果]** 頁面的左窗格上，DQS 會顯示您之前在對應階段所對應的所有定義域清單，以及在電腦輔助的清理階段針對每一個定義域分析之來源資料中的值數目。 在 **[管理和檢視結果]** 頁面的右窗格上，根據是否遵循定義域規則、語法錯誤規則和進階演算法，DQS 會使用 *信賴等級*將資料分類在五個索引標籤之下。 信賴等級會指示 DQS 針對更正或建議的確信程度，而且會根據以下臨界值：  
   
--   **自動更正臨界值**：DQS 會自動更正信賴等級高於此臨界值的任何值。 不過，資料監管在互動式清理程序期間可以覆寫此變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動更正臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   **自動更正閾值**：DQS 會自動更正信賴等級高於此閾值的任何值。 不過，資料監管在互動式清理程序期間可以覆寫此變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動更正臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
--   **自動建議臨界值**：針對信賴等級高於此臨界值但低於自動更正臨界值的任何值，建議取代值。 只有在資料監管核准時，DQS 才會進行變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動建議臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
+-   **自動建議閾值**：針對信賴等級高於此閾值但低於自動更正閾值的任何值，建議為取代值。 只有在資料監管核准時，DQS 才會進行變更。 您可以在 **[組態]** 畫面的 **[一般設定]** 索引標籤中，指定自動建議臨界值。 如需詳細資訊，請參閱 [設定清理和比對的臨界值](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
--   **其他**：DQS 將低於自動建議臨界值的任何值保持不變。  
+-   **其他**：DQS 將低於自動建議閾值的任何值保持不變。  
   
  根據信賴等級，這些值會顯示在下列五個索引標籤之下：  
   
@@ -142,16 +142,16 @@ ms.locfileid: "52617648"
 ##  <a name="Export"></a> 匯出階段  
  在匯出階段，您會指定用來匯出清理資料的參數：要匯出的項目和地方。  
   
-1.  在清理資料品質精靈的 **[匯出]** 頁面上，選取匯出清理資料的目的地類型： **[SQL Server]**、 **[CSV 檔案]** 或 **[Excel 檔案]**。  
+1.  在清理資料品質精靈的 [匯出] 頁面上，選取匯出清理資料的目的地類型：**SQL Server**、**CSV 檔案** 或 **Excel 檔案**。  
   
     > [!IMPORTANT]  
     >  如果您要使用 64 位元版本的 Excel，就無法將清理的資料匯出到 Excel 檔案，只能匯出到 SQL Server 資料庫或 .csv 檔案。  
   
-    1.  **SQL Server**：如果您想要在這裡匯出資料，然後指定將建立來儲存匯出之資料的資料表名稱，請選取 **DQS_STAGING_DATA** 當做目的地資料庫。 否則，如果您想要將資料匯出到另一個資料庫，請選取另一個資料庫，然後指定將建立來儲存匯出之資料的資料表名稱。 您的目的地資料庫必須與 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 位於相同的 SQL Server 執行個體上，才會在 **[資料庫]** 下拉式清單中提供。  
+    1.  **SQL Server**：如果您想要在這裡匯出資料，然後指定將建立來儲存所匯出資料的資料表名稱，請選取 **DQS_STAGING_DATA** 當作目的地資料庫。 否則，如果您想要將資料匯出到另一個資料庫，請選取另一個資料庫，然後指定將建立來儲存匯出之資料的資料表名稱。 您的目的地資料庫必須與 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 位於相同的 SQL Server 執行個體上，才會在 **[資料庫]** 下拉式清單中提供。  
   
-    2.  **CSV 檔案**：按一下 **[瀏覽]**，並指定您想要匯出清理資料之目的 .csv 檔案的名稱和位置。 您也可以輸入您想要匯出清理資料之目的 .csv 檔案的名稱，連同完整路徑。 例如，"c:\ExportedData.csv"。 此檔案會儲存在安裝 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的電腦上。  
+    2.  **CSV 檔案**：按一下 [瀏覽]，並指定您想要匯出清理資料之目的 .csv 檔案的名稱和位置。 您也可以輸入您想要匯出清理資料之目的 .csv 檔案的名稱，連同完整路徑。 例如，"c:\ExportedData.csv"。 此檔案會儲存在安裝 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的電腦上。  
   
-    3.  **Excel 檔案**：按一下 **[瀏覽]**，並指定您想要匯出清理資料之目的 Excel 檔案的名稱和位置。 您也可以輸入您想要匯出清理資料之目的 Excel 檔案的名稱，連同完整路徑。 例如，"c:\ExportedData.xlsx"。 此檔案會儲存在安裝 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的電腦上。  
+    3.  **Excel 檔案**：按一下 [瀏覽]，並指定您想要匯出清理資料之目的 Excel 檔案的名稱和位置。 您也可以輸入您想要匯出清理資料之目的 Excel 檔案的名稱，連同完整路徑。 例如，"c:\ExportedData.xlsx"。 此檔案會儲存在安裝 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 的電腦上。  
   
 2.  選取 **[標準化輸出]** 核取方塊，根據為定義域選取的輸出格式來標準化輸出。 例如，將字串值變更為大寫，或是將單字的第一個字母變成大寫。 如需有關指定定義域之輸出格式的詳細資訊，請參閱＜ **設定定義域屬性** ＞中的 [[設定輸出格式為]](../data-quality-services/set-domain-properties.md)清單。  
   
@@ -159,17 +159,17 @@ ms.locfileid: "52617648"
   
     -   **僅限資料**：按一下此選項按鈕，只匯出清理過的資料。  
   
-    -   **資料和清理資訊**：按一下此選項按鈕，匯出每一個定義域的以下資料：  
+    -   **資料和清理資訊**：按一下此選項按鈕，匯出每一個定義域的下列資料：  
   
         -   **\<定義域>_Source**：定義域中的原始值。  
   
         -   **\<定義域>_Output**：定義域中清理過的資料。  
   
-        -   **\<定義域>_Reason**：為更正此值指定的理由。  
+        -   **\<定義域>_Reason**：為更正此值所指定的理由。  
   
         -   **\<定義域>_Confidence**：已更正之所有詞彙的信賴等級。 顯示為小數值，相當於對應的百分比值。 例如，95% 的信賴等級將會顯示為 .9500000。  
   
-        -   **\<定義域>_Status**：資料清理之後網域值的狀態。 例如， **[建議]**、 **[新增]**、 **[無效]**、 **[更正]** 或 **[正確]**。  
+        -   **\<定義域>_Status**：資料清理之後定義域值的狀態。 例如， **[建議]**、 **[新增]**、 **[無效]**、 **[更正]** 或 **[正確]**。  
   
         -   **記錄狀態**：除了每個對應的定義域都有一個狀態欄位 **(\<定義域名稱>_Status**) 之外，[記錄狀態] 欄位也會顯示記錄的狀態。 如果記錄中任何定義域的狀態是 [新增] 或 [正確]，則 [記錄狀態] 會設為 [正確] 。 如果記錄中任何定義域的狀態是 [建議]、[無效] 或 [正確]，則 [記錄狀態] 會設為個別值。 例如，如果記錄中任何定義域的狀態是 [建議]，則 [記錄狀態] 會設為 [建議] 。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "52617648"
   
 -   **記錄**：已針對資料清理活動分析資料取樣中的多少筆記錄  
   
--   **正確記錄**：被發現正確的記錄數目  
+-   **正確記錄**：發現是正確的記錄數目  
   
 -   **更正的記錄**：已更正的記錄數目  
   

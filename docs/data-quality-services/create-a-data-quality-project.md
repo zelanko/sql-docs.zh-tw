@@ -13,15 +13,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c2b2adb2a1dc2c4c668bb094553f0961dc74439d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c63f6407548f3e46bb64a3b7dddffa741426d3a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616809"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036459"
 ---
 # <a name="create-a-data-quality-project"></a>建立資料品質專案
 

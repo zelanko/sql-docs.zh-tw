@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca8a9b258275c0e8b2368519d8af7ca18aad70aa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617458"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013419"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>執行 DQSInstaller.exe 完成 Data Quality Server 安裝
 
@@ -36,7 +36,7 @@ ms.locfileid: "52617458"
   
 1.  在您選擇要安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]的電腦上，使用下列任一適用的方法執行 DQSInstaller.exe 檔案：  
   
-    -   **開始畫面**：在 **[開始]** 畫面上，按一下 **[資料品質伺服器安裝程式]**  
+    -   **開始畫面**：在 [開始] 畫面上，按一下 [資料品質伺服器安裝程式]。  
   
     -   **開始功能表**：在工作列上，按一下 [開始]，並指向 [所有程式]，然後按一下 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]。 在 [[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 底下按一下 [Data Quality Services]，然後按一下 [Data Quality Server Installer]。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52617458"
   
 3.  在命令提示字元中，於使用或不使用命令列參數的情況下執行 DQSInstaller.exe：  
   
-    -   **不使用命令列參數**：輸入 `dqsinstaller.exe`，然後按 ENTER。  
+    -   **不使用命令列參數**：輸入 `dqsinstaller.exe`，然後按下 ENTER。  
   
     -   **使用命令列參數**：輸入上表中所述的必要命令，然後按 ENTER。  
   

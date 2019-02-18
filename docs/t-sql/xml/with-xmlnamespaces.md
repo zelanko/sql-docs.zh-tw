@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256173"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026599"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   XML 命名空間前置詞 `xml` 不能以命名空間 URI `'http://www.w3.org/XML/1998/namespace'` 以外的命名空間覆寫，而且這個 URI 不能被指派不同的前置詞。  
   
 -   當 ELEMENTS XSINIL 指示詞使用於查詢時，不能重新宣告 XML 命名空間前置詞 `xsi`。  
-  
+
+-   不需要宣告 'http://www.w3.org/2001/XMLSchema-instance'，即可使用 xsi 標準命名空間。 如果未指定，XML/XPATH 處理器會隱含地予以新增，且只要在 XML 文件中正確宣告 'http://www.w3.org/2001/XMLSchema-instance' 結構描述，xpath 運算式就能使用 xsi 前置詞。
+
 -   URI 字串值是根據目前資料庫定序字碼頁來編碼，在內部是轉換成 Unicode。  
   
 -   XML 命名空間 URI 是遵照用於 **xs:anyURI** 的 XSD 空白摺疊規則而摺疊的空白。 另外，請注意，在 XML 命名空間 URI 值上不執行 entitization 或 deentitization。  
-  
+
 -   將檢查 XML 命名空間 URI 是否有無效的 XML 1.0 字元，如果有找到 (例如，U+0007)，就會引發錯誤。  
   
 -   XML 命名空間 URI (在摺疊所有空白之後) 不得為長度零的字串，否則會發生「無效空白命名空間 URI」錯誤。  

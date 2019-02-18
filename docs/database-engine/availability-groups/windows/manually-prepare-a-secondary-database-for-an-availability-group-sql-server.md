@@ -19,12 +19,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209297"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832080"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>針對 Always On 可用性群組準備次要資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,36 +194,36 @@ ms.locfileid: "53209297"
         GO  
         ```  
   
-5.  還原完整備份之後，您必須在主要資料庫上建立記錄備份。 例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會將記錄備份至名為 *E:\MyDB1_log.bak*的備份檔：  
+5.  還原完整備份之後，您必須在主要資料庫上建立記錄備份。 例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會將記錄備份至名為 *E:\MyDB1_log.trn* 的備份檔：  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  您必須先套用必要的記錄備份 (以及任何後續記錄備份)，然後才能將資料庫聯結至次要複本。  
   
-     例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會從 *C:\MyDB1.bak*還原第一筆記錄：  
+     例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會從 *C:\MyDB1.trn* 還原第一筆記錄：  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  如果資料庫聯結次要複本之前執行了任何額外的記錄備份，您也必須使用 RESTORE WITH NORECOVERY，依序將這些記錄備份全部還原至裝載次要複本的伺服器執行個體。  
   
-     例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會從 *E:\MyDB1_log.bak*還原兩個額外的記錄：  
+     例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式會從 *E:\MyDB1_log.trn* 還原兩個額外的記錄：  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

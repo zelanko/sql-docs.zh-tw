@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617948"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015429"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
 
@@ -111,7 +111,7 @@ ms.locfileid: "52617948"
   
  生存是選擇性的。 您可以匯出結果而不執行生存，此時 DQS 將會使用比對分析中指定的樞紐記錄。 如果叢集中有兩筆或多筆記錄符合存活規則，則生存程序將會在衝突的記錄中選取最低的記錄識別碼，使其成為存活者。 您可以使用不同的存活規則，將存活者匯出到不同的檔案或資料表。  
   
-1.  在 **[匯出]** 頁面上，於 **[目的地類型]** 中選取您要將符合的資料匯出到哪一個目的地： **[SQL Server]**、 **[CSV 檔案]** 或 **[Excel 檔案]**。  
+1.  在 [匯出] 頁面上，於 [目的地類型] 中選取您要將符合的資料匯出到哪一個目的地：**SQL Server**、**CSV 檔案** 或 **Excel 檔案**。  
   
     > [!IMPORTANT]  
     >  如果您要使用 64 位元版本的 Excel，就無法將符合的資料匯出到 Excel 檔案，只能匯出到 SQL Server 資料庫或 .csv 檔案。  
@@ -183,23 +183,23 @@ ms.locfileid: "52617948"
   
 -   **總計值**：欄位中的值總數  
   
--   **新值**：上次執行之後所新增之值的總數以及這些值佔整體的百分比  
+-   **新值**：上次執行之後所新增值的總數，以及這些值佔整體的百分比  
   
--   **唯一值**：欄位中唯一值的總數以及這些值佔整體的百分比  
+-   **唯一值**：欄位中唯一值的總數，以及這些值佔整體的百分比  
   
--   **新的唯一值**：欄位中新增之唯一值的總數以及這些值佔整體的百分比  
+-   **新的唯一值**：欄位中所新增唯一值的總數，以及這些值佔整體的百分比  
   
  欄位統計資料包括以下項目：  
   
--   **欄位**：對應中所包含的欄位名稱  
+-   **欄位**：對應中所包含的欄位名稱。  
   
--   **定義域**：對應至欄位的定義域名稱  
+-   **定義域**：對應至欄位的定義域名稱。  
   
--   **新增**：找到之新相符項目的數目以及其總計百分比  
+-   **新增**：找到之新相符項目的數目，以及其總計百分比  
   
--   **唯一**：欄位中唯一記錄的數目以及其總計百分比  
+-   **唯一**：欄位中唯一記錄的數目，以及其總計百分比  
   
--   **完整性**：規則執行完整的百分比  
+-   **完整性**：規則執行完整的百分比。  
   
 ### <a name="matching-policy-notifications"></a>比對原則通知  
  如果是比對原則活動，以下情況會產生通知：  

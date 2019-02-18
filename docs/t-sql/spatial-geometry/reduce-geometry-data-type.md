@@ -18,17 +18,17 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3706237fdd673e4bcf42fbcc5e611e094fd1ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3177340b6944da812c93075f6b2fd5561192f33
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805616"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807418"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回在指定之 **geometry** 執行個體上執行 Douglas-Peucker 演算法延伸模組 (搭配指定的容錯) 所產生的該執行個體近似值。
+傳回指定 **geometry** 執行個體的近似值。 在執行個體上以所指定容錯執行 Douglas-Peucker 演算法的延伸模組，即可產生該近似值。
   
 ## <a name="syntax"></a>語法  
   
@@ -51,13 +51,13 @@ ms.locfileid: "47805616"
   
  此演算法不會修改 **Point** 執行個體。  
   
- 在 **LineString****CircularString**及 **CompoundCurve** 執行個體上，近似值演算法會保留此執行個體的原始起點和終點，並反覆將原始執行個體中與結果偏差最大的點加回來，直到沒有任何點的偏差超過指定的容錯為止。  
+ 在 **LineString**、**CircularString** 和 **CompoundCurve** 執行個體上，近似值演算法會保留執行個體的原始起點和終點。 此演算法接著會將原始執行個體中最偏離結果的點反覆地新增回來。 此處理序會繼續執行，直到任何點的偏差都不會超過所指定容錯為止。  
   
  `Reduce()` 會傳回 **CircularString** 執行個體的 **LineString**、**CircularString**或 **CompoundCurve** 執行個體。  `Reduce()` 會傳回 **CompoundCurve** 執行個體的 **CompoundCurve** 或 **LineString** 執行個體。  
   
  在 **Polygon** 執行個體上，近似值演算法會獨立套用到每一個環形。 如果傳回的 **Polygon** 執行個體無效，此方法將會產生 `FormatException`；例如，如果套用 `Reduce()` 來簡化執行個體中的每一個環形，而產生的環形發生重疊，就會建立無效的 **MultiPolygon** 執行個體。  在具有外環但沒有內環的 **CurvePolygon** 執行個體上，`Reduce()` 會傳回 **CurvePolygon**、**LineString** 或 **Point** 執行個體。  如果 **CurvePolygon** 具有內環，則會傳回 **CurvePolygon** 或 **MultiPoint** 執行個體。  
   
- 在遇到圓弧線段時，近似值演算法會檢查弧形是否可依據其弦在給定容錯的一半內求得近似值。  如果弦符合此準則，計算中弦會取代圓弧。 如果它不符合此準則，則會保留圓弧，而且近似值演算法會套用至剩餘的線段。  
+ 在發現圓弧線段時，近似值演算法會檢查弧形是否可依據其弦在指定容錯的一半內求得近似值。 當弦符合此準則時，在計算中弦會取代圓弧。 如果弦不符合此準則，則會保留圓弧，且近似值演算法會套用至剩餘的線段。  
   
 ## <a name="examples"></a>範例  
   
@@ -102,7 +102,7 @@ SELECT @g.Reduce(.75).ToString();
  在這個範例中，請注意，第二個 **SELECT** 陳述式會傳回 **LineString**執行個體：`LineString(0 0, 16 0)`。  
   
 ### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>示範原始起點和終點遺失的範例  
- 下列範例示範結果執行個體可能無法保留原始起點和終點的方式。 因為保留原始起點和終點會導致產生無效的 **LineString** 執行個體，所以會發生此狀況。  
+ 下列範例示範結果執行個體可能無法保留原始起點和終點的狀況。 因為保留原始起點和終點會導致產生無效的 **LineString** 執行個體，所以會發生此狀況。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(0 0, 4 0, 2 .01, 1 0)';  
@@ -114,5 +114,3 @@ SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;
 ## <a name="see-also"></a>另請參閱  
  [擴充的靜態幾何方法](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
-  
-

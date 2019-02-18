@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f7e82e8577269a206e0172f170a66e1b1250c5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60a53ba6c75c962e6dba1418b846521689143776
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674859"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807498"
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ PERCENTILE_CONT ( numeric_literal )
  要運算的百分位數。 值範圍必須介於 0.0 到 1.0 之間。  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
- 指定要用以排序及計算百分位數的數值清單。 只允許一個 *order_by_expression*。 運算式必須評估為精確數值類型 (**int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney**、**money**) 或近似數值類型 (**float**、**real**)。 不允許其他資料類型。 預設排序順序為遞增。  
+ 指定要用以排序及計算百分位數的數值清單。 只允許一個 *order_by_expression*。 此運算式求得的解必須是精確數值類型或近似數值類型，不允許其他資料類型。 精確數值類型為 **int**、**bigint**、**smallint**、**tinyint**、**numeric**、**bit**、**decimal**、**smallmoney** 和 **money**。 近似數值類型為 **float** 和 **real**。 預設排序順序為遞增。  
   
  OVER **(** \<partition_by_clause> **)**  
  將 FROM 子句所產生的結果集，分割成套用百分位數函數的分割區。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 不可在 PERCENTILE_CONT 函式中指定 OVER 語法的 \<ORDER BY 子句> 及 \<資料列或範圍子句>。  
@@ -66,7 +66,7 @@ PERCENTILE_CONT ( numeric_literal )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-basic-syntax-example"></a>A. 基本語法範例  
- 下列範例會使用 PERCENTILE_CONT 及 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 請注意，這些函數可能不會傳回相同的值。 這是因為資料集中無論有無 PERCENTILE_CONT，PERCENTILE_CONT 皆會插入適當值，而 PERCENTILE_DISC 則一律會傳回資料集中的實際值。  
+ 下列範例會使用 PERCENTILE_CONT 及 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 這些函式可能不會傳回相同的值。 PERCENTILE_CONT 會插入適當值 (資料集中不一定會有該值)，而 PERCENTILE_DISC 則一律會傳回資料集中的實際值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,7 +98,7 @@ Human Resources        17.427850    16.5865
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-basic-syntax-example"></a>B. 基本語法範例  
- 下列範例會使用 PERCENTILE_CONT 及 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 請注意，這些函數可能不會傳回相同的值。 這是因為資料集中無論有無 PERCENTILE_CONT，PERCENTILE_CONT 皆會插入適當值，而 PERCENTILE_DISC 則一律會傳回資料集中的實際值。  
+ 下列範例會使用 PERCENTILE_CONT 及 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 這些函式可能不會傳回相同的值。 PERCENTILE_CONT 會插入適當值 (資料集中不一定會有該值)，而 PERCENTILE_DISC 則一律會傳回資料集中的實際值。  
   
 ```  
 -- Uses AdventureWorks  
@@ -126,6 +126,4 @@ Shipping and Receiving 9.250000      9.0000
 ## <a name="see-also"></a>另請參閱  
  [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
-  
-
-
+ 

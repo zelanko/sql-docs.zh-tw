@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 9/12/2017
+ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013499"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ODBC 不完全支援 **sql_variant**。 因此，當您使用 Microsoft OLE DB P
 下列規則適用於 **sql_variant** 比較：
 -   當比較不同基底資料型別的 **sql_variant** 值，且基底資料型別是在不同的資料類型家族中時，資料類型家族在階層圖表中較高位置的值，會被視為兩個值中的較大者。  
 -   當比較不同基底資料型別的 **sql_variant** 值，且基底資料型別是在相同的資料類型家族中，會先將基底資料型別在階層圖表中較低位置的值隱含轉換成其他資料類型，之後再進行比較。  
--   當比較 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型的 **sql_variant** 值時，將會先根據以下準則來比較其定序：LCID、LCID 版本、比較旗標和排序識別碼。 每一個準則都會以整數值的形式來比較，而且會根據所列的順序來比較。 如果所有的準則都相同，將會根據此定序來比較實際的字串值。  
+-   當比較 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型的 **sql_variant** 值時，將會先根據下列準則來比較其定序：LCID、LCID 版本、比較旗標和排序識別碼。 每一個準則都會以整數值的形式來比較，而且會根據所列的順序來比較。 如果所有的準則都相同，將會根據此定序來比較實際的字串值。  
   
 ## <a name="converting-sqlvariant-data"></a>轉換 sql_variant 資料  
 處理 **sql_variant** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援將有其他資料類型的物件隱含轉換成 **sql_variant** 類型。 但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援從 **sql_variant** 資料隱含轉換成其他資料類型的物件。

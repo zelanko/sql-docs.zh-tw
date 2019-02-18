@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server PowerShell 模組 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/08/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40873fe63b897da52fc9a7d440a8568872431d72
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: f0f14a3cee050fff07c7fe5bc2467bcb8209a53c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851753"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037489"
 ---
 # <a name="install-sql-server-powershell-module"></a>安裝 SQL Server PowerShell 模組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,8 +29,9 @@ ms.locfileid: "48851753"
 > * **SqlServer**：此模組包含可支援最新 SQL 功能的新 Cmdlet。 此模組也包含 **SQLPS** 中 Cmdlet 的更新版本。 
 
 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 [PowerShell 資源庫](https://www.powershellgallery.com/packages/Sqlserver)安裝 **SqlServer** 模組。
-最新版 **SqlServer** 模組是 21.0.17279。 這是以 Microsoft.SQLServer.SMO v140 版為基礎。  
-如果您要尋找支援下一版 SQL Server (根據 Microsoft.SQLServer.SMO v150 版) 的模組版本，請參閱此頁面底部有關如何取得模組發行前版本的章節。 模組的最新發行前版本 21.1.18040-preview。
+最新版的 **SqlServer** 模組是 21.1.18080。 這是以 Microsoft.SQLServer.SMO v150 版為基礎，並支援 SQL Server 的下一個版本。 模組若以 Microsoft.SQLServer.SMO v140 版為基礎，則其最新版本為 21.0.17279。
+
+模組的發行前版本可能會更頻繁地提供使用：請參閱此頁面底部有關如何取得這類模組版本的章節。
 
 若要從 PowerShell 資源庫安裝 **SqlServer** 模組，請啟動 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) 工作階段並使用下列命令。 如果安裝時遇到問題，請參閱 [Install-Module 文件](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module)和 [Install-Module 參考](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)。
 
@@ -56,7 +57,7 @@ ms.locfileid: "48851753"
 
 若要使用特定版本的模組，您可以使用類似如下的特定版本號碼將它匯入：
 
-```Import-Module SqlServer -Version 21.0.17178```
+```Import-Module SqlServer -Version 21.1.18080```
 
 > [!NOTE]
 > 模組的發行前版本 (或「預覽」) 版本可在 PowerShell 資源庫取得。 它們可能使用已更新的 *Find-Module* 和 *Install-Module* Cmdlet (屬於 [PowerShellGet](https://www.powershellgallery.com/packages/PowerShellGet) 模組) 探索，方法是傳遞 *-AllowPrerelease* 切換。

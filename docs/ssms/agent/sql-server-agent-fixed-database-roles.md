@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a2e658020afaa9910c0bd988efc6f0c528e499e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce425476f44e8e806a26e0fbe0201e088f7d12bf
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697876"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760011"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server Agent 固定資料庫角色
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51697876"
 **SQLAgentUserRole** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 定資料庫角色中具備最少權限的角色。 它只對操作員、本機作業和作業排程擁有權限。 **SQLAgentUserRole** 的成員只對他們所擁有的本機作業和作業排程擁有權限。 他們無法使用多伺服器作業 (主要和目標伺服器作業)，也無法變更作業擁有權來取得他們尚未擁有之作業的存取權。 **SQLAgentUserRole** 成員只能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [作業步驟屬性] 對話方塊中檢視可用 Proxy 的清單。 **SQLAgentUserRole** 的成員在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中只能看見 [作業] 節點。  
   
 > [!IMPORTANT]  
-> 在授與「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式」資料庫角色 Proxy 存取權之前，需考慮安全性隱含意義。 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 自動為 **SQLAgentUserRole** 的成員。 這表示 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 的成員可以存取所有授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的** Agent Proxy，也可以使用這些 Proxy。  
+> 在將 Proxy 存取權授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** 的成員之前，需考慮安全性隱含意義。 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 自動為 **SQLAgentUserRole**的成員。 這表示 **SQLAgentReaderRole** 和 **SQLAgentOperatorRole** 的成員可以存取所有授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的** Agent Proxy，也可以使用這些 Proxy。  
   
 下表摘要出 **SQLAgentUserRole** 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 物件所擁有的權限。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "51697876"
 **SQLAgentReaderRole** 包括所有 **SQLAgentUserRole** 的權限，並擁有檢視可用的多伺服器作業清單、其屬性與記錄的權限。 此角色的成員也可以檢視所有可用作業的清單，和作業排程及其屬性，而非只有他們擁有的作業和作業排程。 **SQLAgentReaderRole** 成員無法變更作業擁有權來取得他們尚未擁有之作業的存取權。 **SQLAgentReaderRole** 的成員在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中只能看見 [作業] 節點。  
   
 > [!IMPORTANT]  
-> 在授與「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式」資料庫角色 Proxy 存取權之前，需考慮安全性隱含意義。 **SQLAgentReaderRole** 的成員自動為 **SQLAgentUserRole** 的成員。 這表示 **SQLAgentReaderRole** 的成員可以存取所有授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的** Agent Proxy，也可以使用這些 Proxy。  
+> 在將 Proxy 存取權授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** 的成員之前，需考慮安全性隱含意義。 **SQLAgentReaderRole** 的成員自動為 **SQLAgentUserRole**的成員。 這表示 **SQLAgentReaderRole** 的成員可以存取所有授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **的** Agent Proxy，也可以使用這些 Proxy。  
   
 下表摘要出 **SQLAgentReaderRole** 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 物件所擁有的權限。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "51697876"
 **SQLAgentOperatorRole** 的成員可以看見 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 物件總管中的 [作業]、[警示]、[操作員] 和 [Proxy] 節點。 只有 [錯誤記錄檔] 節點對此角色的成員是不可見的。  
   
 > [!IMPORTANT]  
-> 在授與「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式」資料庫角色 Proxy 存取權之前，需考慮安全性隱含意義。 **SQLAgentOperatorRole** 的成員自動為 **SQLAgentUserRole** 和 **SQLAgentReaderRole** 的成員。 這表示 **SQLAgentOperatorRole** 的成員可以存取所有授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **或** SQLAgentReaderRole **的** Agent Proxy，也可以使用這些 Proxy。  
+> 在將 Proxy 存取權授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles** 的成員之前，需考慮安全性隱含意義。 **SQLAgentOperatorRole** 的成員自動為 **SQLAgentUserRole** 和 **SQLAgentReaderRole**的成員。 這表示 **SQLAgentOperatorRole** 的成員可以存取所有授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **或** SQLAgentReaderRole **的** Agent Proxy，也可以使用這些 Proxy。  
   
 下表摘要出 **SQLAgentOperatorRole** 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 物件所擁有的權限。  
   

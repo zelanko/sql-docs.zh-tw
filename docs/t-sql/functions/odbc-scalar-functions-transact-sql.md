@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535586"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760081"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "52535586"
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>函數  
- 下表將列出不會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中重複的 ODBC 純量函數。  
+ 下表將列出不會在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中重複的 ODBC 純量函式。  
   
 ### <a name="string-functions"></a>字串函數  
   
 |函數|Description|  
 |--------------|-----------------|  
-|BIT_LENGTH( string_exp ) (ODBC 3.0)|傳回字串運算式的長度 (以位元為單位)。<br /><br /> 無法只針對字串資料類型運作。 因此，無法將 string_exp 隱含轉換成字串，但是將傳回指定之任何資料類型的 (內部) 大小。|  
+|BIT_LENGTH( string_exp ) (ODBC 3.0)|傳回字串運算式的長度 (以位元為單位)。<br /><br /> 傳回指定資料類型的內部大小，而不將 string_exp 轉換成字串。|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|傳回字元字串，表示將 string_exp2 串連至 string_exp1 的結果。 產生的字串為 DBMS 相依。 例如，如果由 string_exp1 所代表的資料行包含 NULL 值，DB2 就會傳回 NULL，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回非 NULL 字串。|  
-|OCTET_LENGTH( string_exp ) (ODBC 3.0)|傳回字串運算式的長度 (以位元組為單位)。 結果就是不小於位元數的最小整數除以 8。<br /><br /> 無法只針對字串資料類型運作。 因此，無法將 string_exp 隱含轉換成字串，但是將傳回指定之任何資料類型的 (內部) 大小。|  
+|OCTET_LENGTH( string_exp ) (ODBC 3.0)|傳回字串運算式的長度 (以位元組為單位)。 結果就是不小於位元數的最小整數除以 8。<br /><br /> 傳回指定資料類型的內部大小，而不將 string_exp 轉換成字串。|  
   
 ### <a name="numeric-function"></a>數值函數  
   
@@ -93,15 +93,15 @@ ms.locfileid: "52535586"
 |CURDATE( ) (ODBC 3.0)|傳回目前的日期。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|傳回目前的當地時間。 其中 time-precision 引數會決定傳回值的秒數有效位數。|  
 |CURTIME() (ODBC 3.0)|傳回目前的當地時間。|  
-|DAYNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的日期部分包含資料來源專用的日期名稱 (例如，若為使用英文的資料來源，則為 Sunday 到 Saturday 或 Sun. 到 Sat.； 若為使用德文的資料來源，則為 Sonntag 到 Samstag)。|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|根據 date_exp 中的月份欄位，傳回月份的日期成為整數值 (範圍介於 1-31 之間)。|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，傳回當週的日期成為整數值 (範圍介於 1-7 之間，其中 1 代表星期日)。|  
-|HOUR( time_exp ) (ODBC 1.0)|根據 time_exp 中的小時欄位，傳回小時成為整數值 (範圍介於 0-23 之間)。|  
-|MINUTE( time_exp ) (ODBC 1.0)|根據 time_exp 中的分鐘欄位，傳回分鐘成為整數值 (範圍介於 0-59 之間)。|  
-|SECOND( time_exp ) (ODBC 1.0)|根據 time_exp 中的秒數欄位，傳回秒數成為整數值 (範圍介於 0-59 之間)。|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的月份部分包含資料來源專用的月份名稱 (例如，若為使用英文的資料來源，則為 January 到 December 或 Jan. 到 Dec.；若為使用德文的資料來源，則為 Januar 到 Dezember)。|  
+|DAYNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的日期部分包含資料來源專用的日期名稱。 例如，若為使用英文的資料來源，則名稱為 Sunday 到 Saturday 或 Sun. 到 Sat. 。 若為使用德文的資料來源，則名稱為 Sonntag 到 Samstag。|
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|根據 date_exp 中的月份欄位，以整數值傳回月份的日期。 傳回值的範圍介於 1-31 之間。|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，以整數值傳回當週的日期。 傳回值的範圍介於 1-7 之間，其中 1 代表星期日。|  
+|HOUR( time_exp ) (ODBC 1.0)|根據 time_exp 中的小時欄位，以整數值 (範圍介於 0-23 之間) 傳回小時。|  
+|MINUTE( time_exp ) (ODBC 1.0)|根據 time_exp 中的分鐘欄位，以整數值 (範圍介於 0-59 之間) 傳回分鐘。|  
+|SECOND( time_exp ) (ODBC 1.0)|根據 time_exp 中的秒數欄位，以整數值 (範圍介於 0-59 之間) 傳回秒數。|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|傳回字元字串，其中針對 date_exp 的月份部分包含資料來源專用的月份名稱。 例如，若為使用英文的資料來源，則名稱為 January 到 December 或 Jan. 到 Dec.。 若為使用德文的資料來源，則名稱為 Januar 到 Dezember。|  
 |QUARTER( date_exp ) (ODBC 1.0)|傳回 date_exp 中的季度成為整數值 (範圍介於 1-4 之間，其中 1 代表 1 月 1 日到 3 月 31 日)。|  
-|WEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，傳回該年的週數成為整數值 (範圍介於 1-53 之間)。|  
+|WEEK( date_exp ) (ODBC 1.0)|根據 date_exp 中的週欄位，以整數值 (範圍介於 1-53 之間) 傳回當年的週數。|  
   
 ## <a name="examples"></a>範例  
   
@@ -252,7 +252,3 @@ SELECT {fn WEEK( @date_exp )};
 ## <a name="see-also"></a>另請參閱  
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
-  
-
-
-

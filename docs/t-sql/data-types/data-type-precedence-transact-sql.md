@@ -1,7 +1,7 @@
 ---
 title: 資料類型優先順序 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -19,17 +19,17 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6bd65fe0ef44b672e689aebd99b5f166ce562d23
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 630e2e06013c09d0597c0eefbf69a66e2824f3a9
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020302"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079334"
 ---
 # <a name="data-type-precedence-transact-sql"></a>資料類型優先順序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-當一個運算子結合兩個不同資料類型的運算式時，資料類型優先順序的規則，會指定將低優先順序的資料類型，轉換為高優先順序的資料類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤。 如果這兩個運算元運算式的資料類型相同，則作業結果就含有該資料類型。
+當一個運算子結合不同資料類型的運算式時，低優先順序資料類型會先轉換為高優先順序資料類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤。 若運算子結合的運算元運算式具有相同資料類型，則作業結果就含有該資料類型。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用下列資料類型優先順序：
   
@@ -68,5 +68,4 @@ ms.locfileid: "56020302"
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

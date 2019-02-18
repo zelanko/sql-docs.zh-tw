@@ -28,17 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519700"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759971"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  設定月份、日期與年份日期部分的順序，以解譯 **date**、**smalldatetime**、**datetime**、**datetime2** 和 **datetimeoffset** 字元字串。  
+  設定月份、日期與年份日期部分的順序，以解譯日期字元字串。 這些字串的類型為 **date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**。  
   
  如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
@@ -55,9 +55,9 @@ SET DATEFORMAT { format | @format_var }
  這是日期部分的順序。 有效的參數為 **mdy**、**dmy**、**ymd**、**ydm**、**myd** 和 **dym**。 這個引數可以是 Unicode 或轉換成 Unicode 的雙位元組字集 (DBCS)。 U.S.美國英文的預設值是 **mdy**。 如需所有支援語言的預設 DATEFORMAT，請參閱 [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)。  
   
 ## <a name="remarks"></a>Remarks  
- DATEFORMAT **ydm** 不支援 **date**、**datetime2** 和 **datetimeoffset** 資料類型。  
+ **date**、**datetime2** 和 **datetimeoffset** 資料類型不支援 DATEFORMAT **ydm**。  
   
- 相較於 **datetime** 和 **smalldatetime** 值，DATEFORMAT 設定在解譯字元字串的作用方面可能會不同於 **date**、**datetime2** 和 **datetimeoffset** 值，端視字串格式而定。 這個設定會影響字元字串轉換成日期值以便儲存在資料庫中的解譯方式。 但是，它並不會影響儲存在資料庫中之日期資料類型值的顯示或儲存格式。  
+ DATEFORMAT 設定會針對日期資料類型以不同方式解譯字元字串，視其字串格式而定。 例如，**datetime** 和 **smalldatetime** 解譯可能不符合 **date**、**datetime2** 或 **datetimeoffset**。 DATEFORMAT 會影響字元字串針對資料庫轉換成日期值的解譯方式。 但是，它並不會影響日期資料類型值的顯示，或其在資料庫中的儲存格式。  
   
  某些字元字串格式 (例如 ISO 8601) 的解譯就與 DATEFORMAT 設定無關。  
   
@@ -91,6 +91,4 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

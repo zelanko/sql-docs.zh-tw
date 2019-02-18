@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20099478d1d2dd047b1f17fe963c8fc45b1418fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670269"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760121"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ SET STATISTICS IO { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 當 STATISTICS IO 是 ON 時，會顯示統計資訊。 當它是 OFF 時，就不會顯示這項資訊。  
+ 當 STATISTICS IO 為 ON 時，會顯示統計資訊，而其為 OFF 時，則不會顯示資訊。   
   
- 在這個選項設為 ON 之後，所有後續 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都會傳回統計資訊，直到這個選項設為 OFF 為止。  
+ 在這個選項設為 ON 之後，所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式都會傳回統計資訊，直到這個選項設為 OFF 為止。  
   
  下表列出和描述輸出項目。  
   
 |輸出項目|意義|  
 |-----------------|-------------|  
 |**Table**|資料表的名稱。|  
-|**掃描計數**|為了建構輸出的最終資料集，在達到分葉層級之後朝任何方向啟動以擷取所有值的搜尋/掃描次數。<br /><br /> 如果使用的索引是主索引鍵的唯一索引或叢集索引，而且您只要搜尋一個值，掃描計數就是 0。 例如 `WHERE Primary_Key_Column = <value>`。<br /><br /> 當您要使用在非主索引鍵資料行上定義的非唯一叢集索引來搜尋一個值時，掃描計數就是 1。 進行這項作業是為了檢查您所搜尋的索引鍵值是否有重複的值。 例如 `WHERE Clustered_Index_Key_Column = <value>`。<br /><br /> 當 N 是使用索引鍵找出索引鍵值之後，朝向分葉層級左側或右側啟動的不同搜尋/掃描次數時，掃描計數就是 N。|  
+|**掃描計數**|為了建構輸出的最終資料集，在達到分葉層級之後朝任何方向啟動以擷取所有值的搜尋或掃描次數。<br /><br /> 如果使用的索引是主索引鍵的唯一索引或叢集索引，且您只要搜尋一個值，掃描計數就是 0。 例如， `WHERE Primary_Key_Column = <value>`。<br /><br /> 當您使用非主索引鍵資料行上定義的非唯一叢集索引來搜尋一個值時，掃描計數就是 1。 執行此處理序是為了檢查您所搜尋索引鍵值是否有重複的值。 例如， `WHERE Clustered_Index_Key_Column = <value>`。<br /><br /> 當 N 是使用索引鍵找出索引鍵值之後，朝向分葉層級左側或右側啟動的不同搜尋或掃描次數時，掃描計數就是 N。|  
 |**邏輯讀取**|從資料快取中讀取的頁數。|  
 |**實體讀取**|從磁碟中讀取的頁數。|  
 |**讀取前讀取**|放入查詢快取中的頁數。|  
 |**LOB 邏輯讀取**|從資料快取讀取的 **text**、**ntext**、**image** 或大數值類型 (**varchar(max)**、**nvarchar(max)**、**varbinary(max)**) 分頁的數目。|  
-|**LOB 實體讀取**|從磁碟讀取的 **text**、**ntext**、**image** 或大數值類型分頁的數目。|  
-|**LOB 讀取前讀取**|放置到快取中供查詢的 **text**、**ntext**、**image** 或大數值類型分頁的數目。|  
+|**LOB 實體讀取**|從磁碟讀取的 **text**、**ntext**、**image** 或大數值類型頁面的數目。|  
+|**LOB 讀取前讀取**|放置到快取中供查詢之 **text**、**ntext**、**image** 或大數值類型頁面的數目。|  
   
  SET STATISTICS IO 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
   

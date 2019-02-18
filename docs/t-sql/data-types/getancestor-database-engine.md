@@ -1,7 +1,7 @@
 ---
 title: GetAncestor (資料庫引擎) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89442e4d787c66ed76e6c2db3ff9539a14156782
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd3974aee87cc3a9f0549d51988d8b0e8886a1c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699246"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026219"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;
 ```  
   
 ### <a name="b-returning-the-grandchildren-of-a-parent"></a>B. 傳回父系的孫系  
-`GetAncestor(2)` 會傳回在階層中位於目前節點下面兩個層級的員工。 這些就是目前節點的孫系。 下列範例會使用 `GetAncestor(2)`。
+`GetAncestor(2)` 會傳回在階層中位於目前節點下面兩個層級的員工。 這些員工就是目前節點的孫系。 下列範例會使用 `GetAncestor(2)`。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -99,8 +99,8 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### <a name="d-returning-a-hierarchy-level-if-a-table-is-not-present"></a>D. 如果資料表不存在便傳回階層層級  
-`GetAncestor` 會傳回階層中的選取層級，即使資料表不存在也一樣。 例如，下列程式碼會指定目前的員工，並且傳回目前員工之上階的 `hierarchyid`，但是沒有資料表的參考。
+### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>D. 如果資料表不存在，便傳回階層層級  
+`GetAncestor` 會傳回階層中的選取層級，即使資料表不存在也一樣。 例如，下列程式碼會指定目前的員工，並傳回目前員工上階的 `hierarchyid`，而不是沒有資料表的參考。
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid ;  
@@ -122,5 +122,4 @@ this.GetAncestor(1)
 [Hierarchyid 資料類型方法參考](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層式資料 &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

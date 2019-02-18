@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 639c21a124a9d8bcdecd6d240616ac10f6c87e93
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e10cc69f3fe32656418a8714c852d86e631fe281
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617408"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024389"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>卸離和附加 DQS 資料庫
 
@@ -46,7 +46,7 @@ ms.locfileid: "52617408"
 -   您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能在 DQS 中終止任何執行中的活動或停止任何執行中的處理序。  
   
 ##  <a name="Detach"></a> 卸離 DQS 資料庫  
- 當您使用 SQL Server Management Studio 卸離 DQS 資料庫時，卸離的檔案仍會保留在您的電腦上，可供您將其重新附加至相同的 SQL Server 執行個體，或是移到另一部伺服器並附加至該處。 DQS 資料庫檔案通常位於 Data Quality Services 電腦上的以下位置：C:\Program Files\Microsoft SQL Server\MSSQL13.<執行個體名稱>\MSSQL\DATA。  
+ 當您使用 SQL Server Management Studio 卸離 DQS 資料庫時，卸離的檔案仍會保留在您的電腦上，可供您將其重新附加至相同的 SQL Server 執行個體，或是移到另一部伺服器並附加至該處。 DQS 資料庫檔案通常位於 Data Quality Services 電腦的下列位置：C:\Program Files\Microsoft SQL Server\MSSQL13.<執行個體名稱>\MSSQL\DATA。  
   
 1.  啟動 Microsoft SQL Server Management Studio，並連接到適當的 SQL Server 執行個體。  
   

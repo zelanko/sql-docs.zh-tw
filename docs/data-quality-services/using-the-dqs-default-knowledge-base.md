@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bd057885bbaa3aa6439079a744ac0b2d341dd638
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5767515d290ed6933af55f1405b06f735f704b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616728"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040889"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>使用 DQS 預設知識庫
 
@@ -36,9 +36,9 @@ ms.locfileid: "52616728"
   
 -   **美國 - 地點**：包含從 2010 年人口普查擷取之 50 州、哥倫比亞特區以及波多黎各的地點清單。  
   
--   **美國 - 州**：包含美國各州的傳統完整 (官方) 名稱及兩個字母的縮寫。 前置值設定為傳統的州名稱。  
+-   **美國 - 州**：包含美國各州傳統完整 (官方) 名稱及兩個字母的縮寫。 前置值設定為傳統的州名稱。  
   
--   **美國 - 州 (2 個字母的標題)**：包含美國各州的傳統完整 (官方) 名稱及兩個字母的縮寫。 前置值設定為兩個字母的州名縮寫。  
+-   **美國 - 州 (前置 2 個字母)**：包含美國各州傳統完整 (官方) 名稱及兩個字母的縮寫。 前置值設定為兩個字母的州名縮寫。  
   
 ## <a name="using-the-default-knowledge-base"></a>使用預設知識庫  
  您可以透過下列方式使用預設的 DQS 知識庫 DQS 資料：  

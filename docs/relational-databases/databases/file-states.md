@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54445a926dbb6f7d1e03720f31ee0bd9a1601cd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1831c0f3420ad89b5a3dd850e0692ddf7b56b555
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560335"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807488"
 ---
 # <a name="file-states"></a>檔案狀態
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51560335"
 |State|定義|  
 |-----------|----------------|  
 |ONLINE|檔案可供所有的作業使用。 如果資料庫本身是在線上，則主要檔案群組中的檔案將永遠在線上。 如果在主要檔案群組中的檔案不在線上，則資料庫也不會在線上且次要檔案的狀態是未定義的。|  
-|OFFLINE|檔案無法存取且可能不在磁碟上。 明確的使用者動作會使檔案變成離線，而且在採取其他使用者動作之前都是離線狀態。<br /><br /> **\*\* 注意 \*\*** 當檔案損毀時，應該只能將檔案設為離線狀態，但是它是可以還原的。 設為離線的檔案只能透過從備份還原檔案來將它設為線上。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。|  
+|OFFLINE|檔案無法存取且可能不在磁碟上。 明確的使用者動作會使檔案變成離線，而且在採取其他使用者動作之前都是離線狀態。<br /><br /> **\*\* 注意 \*\*** 當檔案損毀時，檔案狀態可設為離線狀態，但是它是可以還原的。 設為離線的檔案只能透過從備份還原檔案來將它設為線上。 如需有關還原單一檔案的詳細資訊，請參閱 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)。 <br /><br /> 當資料庫處於完整或大量記錄復原狀態且檔案已捨棄，資料庫檔案也會設定 OFFLINE。 sys.master_files 中的項目會持續保存，直到過去 drop_lsn 值截斷交易記錄為止。 如需詳細資訊，請參閱[交易記錄截斷](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation)。 |  
 |RESTORING|正在還原檔案。 檔案會輸入還原狀態，因為還原命令會影響整個檔案，而不是只有頁面還原，而且會一直保留此狀態，直到完成還原並復原檔案為止。|  
 |RECOVERY PENDING|已延遲檔案復原。 檔案會自動輸入此狀態，因為在分次還原處理序中，有未還原和未復原的檔案。 需要使用者執行其他動作以解決錯誤並允許完成復原處理。 如需詳細資訊，請參閱[分次還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)。|  
 |SUSPECT|在線上還原處理期間檔案復原失敗。 如果檔案是在主要檔案群組中，資料庫也會標示為有疑問。 否則，只有檔案是有疑問的，資料庫仍會在線上。<br /><br /> 檔案仍然會在有疑問的狀態下，直到可以使用下列其中一個方法：<br /><br /> 還原和復原<br /><br /> DBCC CHECKDB with REPAIR_ALLOW_DATA_LOSS|  
@@ -65,5 +65,3 @@ ms.locfileid: "51560335"
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)  
-  
-  

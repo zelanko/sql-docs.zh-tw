@@ -14,15 +14,15 @@ helpviewer_keywords:
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dbb09e9aa932797a975f26de15e2b466101c4026
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: fdab2d77dddf565e2d94b27b2b7b46c70aafa4f0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616308"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010559"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>設定清理和比對的臨界值
 
@@ -47,9 +47,9 @@ ms.locfileid: "52616308"
   
 4.  若要針對清理活動指定臨界值，請在 **[互動式清理]** 區域的以下方塊中指定適當的值：  
   
-    -   **建議的最低分數**：DQS 在電腦輔助的清理程序期間將用來建議某個值之取代的最低分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.75 代表 75%。 這個值應該要小於或等於 **[自動更正的最低分數]** 方塊中指定的值。 預設值為 0.7。  
+    -   **建議的最低分數**：DQS 在電腦輔助清理程序期間將用來為某個值建議取代項目的最低分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.75 代表 75%。 這個值應該要小於或等於 **[自動更正的最低分數]** 方塊中指定的值。 預設值為 0.7。  
   
-    -   **自動更正的最低分數**：DQS 在電腦輔助的清理程序期間將用來自動更正某個值的最低分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.9 表示 90%。 預設值為 0.8。  
+    -   **自動更正的最低分數**：DQS 在電腦輔助清理程序期間將用來自動更正某個值的最低分數或信賴等級。 請使用對應百分比值的十進位表示法來輸入值。 例如，輸入 0.9 表示 90%。 預設值為 0.8。  
   
 5.  若要針對比對活動指定臨界值，請在 **[比對]** 區域底下的 **[最低記錄分數]** 方塊中指定值。 這個值表示讓某筆記錄被視為符合另一筆記錄的最低分數。 預設值是 80%。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617110"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033436"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
 
@@ -52,9 +52,9 @@ ms.locfileid: "52617110"
   
  DQS 中的資料清理是根據 DQS 知識庫中的知識來完成。 DQS 中的資料清理是兩個步驟的程序：  
   
--   **電腦輔助的清理**：DQS 會使用清理專案之選取知識庫中的知識，針對資料來源中的值提出資料更正/建議。  
+-   **電腦輔助的清理**：DQS 會使用所選知識庫中用於清理專案的知識，針對資料來源中的值提出更正/建議。  
   
--   **互動式清理**：資料管理人可以執行互動式清理處理序，以便變更或增加電腦輔助資料清理處理序已經建議的資料更正。 資料管理人會使用資料清理處理序所識別的信賴等級和統計資料，或在專案中手動輸入自己的變更，藉以完成此作業。  
+-   **互動式清理**：資料負責人可以執行互動式清理程序，以便變更或增加電腦輔助資料清理程序已經建議的資料更正。 資料管理人會使用資料清理處理序所識別的信賴等級和統計資料，或在專案中手動輸入自己的變更，藉以完成此作業。  
   
  清理資料之後，資料管理人可以將已處理的資料匯出至 SQL Server 資料庫、.csv 或 Excel 檔案。 如需詳細資訊，請參閱 [Data Cleansing](../data-quality-services/data-cleansing.md)。  
   

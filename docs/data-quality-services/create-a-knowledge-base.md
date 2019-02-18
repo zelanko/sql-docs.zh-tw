@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.selectkb.f1
 - sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c4acd731faa13c10a0c32e8e99d2c557748b3d6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d247179577812aafbac84fd886f0a1ac0c9a1b67
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616338"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020115"
 ---
 # <a name="create-a-knowledge-base"></a>建立知識庫
 

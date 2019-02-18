@@ -10,50 +10,53 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00db3d0ca027a0f188831281bb2c844b5bc8462d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202447"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771334"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-您可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio (VS) 中的說明檢視器，從線上來源或磁碟下載並安裝 SQL Server 說明套件，以及進行離線檢視。 本文描述可安裝說明檢視器的工具、如何安裝離線說明內容，以及如何檢視 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和 SQL Server 2017 的說明。
+您可以使用 Microsoft Help Viewer，從線上來源或磁碟下載並安裝 SQL Server 說明套件，以及進行離線檢視。 此說明檢視器隨著 SQL Server Management Studio (SSMS) 或 Visual Studio (VS) 一起安裝。本文描述可安裝說明檢視器的工具、如何安裝離線說明內容，以及如何檢視 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]、SQL Server 2016 和 SQL Server 2017 的說明。
 
-一旦內容下載到具有網際網路存取的系統之後，您就可以接著將該內容移轉至沒有網際網路存取的系統。 
+若要下載說明檢視器內容，需要有網際網路存取。 您接著可以將內容移轉到沒有網際網路存取的電腦。
 
 > [!NOTE]
 > 結合 SQL Server 2016 和 SQL Server 2017 說明，雖然有些主題適用於特別註記的個別版本。 大部分主題都適用於兩者。
 
 ## <a name="install-the-help-viewer"></a>安裝說明檢視器
 
-說明檢視器有兩個版本：v2.x 支援 SQL Server 2016/SQL Server 2017 說明，而 v1.x 支援 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 說明。 說明檢視器不支援 Proxy 設定，且不支援 ISO 格式。 
+有兩個版本的說明檢視器。  每個版本支援不同版本的 SQL Server 內容。  離線書籍格式隨著時間而改變，較舊版本說明檢視器不支援較新版本的書籍：
+- v2.x 支援 SQL Server 2016 和 SQL Server 2017 說明。 
+- v1.x 支援 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 說明。 說明檢視器不支援 Proxy 設定或 ISO 格式。
 
-下列工具會安裝說明檢視器： 
 
-|**安裝說明檢視器的工具**|**安裝的說明檢視器版本**|
+|**工具**|**安裝說明檢視器版本**|
 |---------|---------|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)| v2.2|
-|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)| v2.2|
-|Visual Studio 2017* | v2.3|
+|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
+|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
+|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
 |Visual Studio 2015 | v2.2|
+|SQL Server 2016 | v1.x|
 |SQL Server 2014 Management Studio | v1.x|
 |舊版 Visual Studio | v1.x|
-|SQL Server 2016 | v1.x|
+| | |
 
-\* 若要使用 Visual Studio 2017 安裝說明檢視器，請在 Visual Studio 安裝程式的 [個別元件] 索引標籤上選取 [程式碼工具] 下方的 [說明檢視器]，然後按一下 [安裝]。 
+\* 若要使用 Visual Studio 2017 安裝說明檢視器，請在 Visual Studio 安裝程式的 [個別元件] 索引標籤上選取 [程式碼工具] 下方的 [說明檢視器]，然後按一下 [安裝]。
 
 >[!NOTE]
 > - SQL Server 2016 安裝說明檢視器 1.1，其不支援 SQL Server 2016 說明。 
-> - 安裝 SQL Server 2017 時不會安裝任何說明檢視器。
+> - 安裝 SQL Server 2017 時不會安裝說明檢視器。 說明檢視器不再包含於 SQL Server 安裝中。
 > - 如果您從磁碟安裝內容，則說明檢視器 v2.x 也可以支援 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 說明。
 
 ## <a name="use-help-viewer-v2x"></a>使用說明檢視器 v2.x
 
-SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Server 2016/2017 說明。 
+SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Server 2016 和 SQL Server 2017 說明。 
 
 **使用說明檢視器 v2.x 下載並安裝離線說明內容**
 
@@ -70,7 +73,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
    >[!NOTE]
    > 若要從磁碟進行安裝 (SQL Server 2014 說明)，請選擇 [安裝來源] 下的 [磁碟]，並指定磁碟位置。
    
-   [管理內容] 索引標籤上的 [本機存放區路徑] 會顯示本機電腦上安裝內容的位置。 如果您想要變更位置，請按一下 [移動]，並在 [到] 欄位中輸入不同資料夾路徑，然後按一下 [確定]。
+   [管理內容] 索引標籤上的 [本機存放區路徑] 會顯示本機電腦上安裝內容的位置。 若要變更位置，請按一下 [移動]，並在 [到] 欄位中輸入不同資料夾路徑，然後按一下 [確定]。
    如果說明安裝在變更本機存放區路徑後失敗，請關閉並重新開啟說明檢視器，並確保新的位置出現在本機存放區路徑中，然後重試安裝。
 
 3. 按一下您想要安裝的每個內容套件 (書籍) 旁邊的 [新增]。 
@@ -84,21 +87,25 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 > [!NOTE]
 > 並非 SQL Server 目錄中的所有頂端節點標題都完全符合對應可下載說明書籍的名稱。 TOC 標題對應至書籍名稱，如下所示：
 
-| 內容窗格 | SQL Server 書籍 |
-|-----|-----|
-|Analysis Services 語言參考 | Analysis Services (MDX) 語言參考|
-|Data Analysis Expressions (DAX) 參考 | Data Analysis Expressions (DAX) 參考|
-|資料採礦延伸模組 (DMX) 參考 | 資料採礦延伸模組 (DMX) 參考|
-|適用於 SQL Server 的開發人員指南 | SQL Server 開發人員參考資料|
-|下載 SQL Server Management Studio | SQL Server Management Studio|
-|開始使用 SQL Server 中的機器學習 | Microsoft Machine Learning 服務|
-|Power Query M 參考 | Power Query M 參考|
-|SQL Server 驅動程式 | SQL Server 連線驅動程式|
-|Linux 上的 SQL Server | Linux 上的 SQL Server|
-|SQL Server 技術文件 | SQL Server 技術文件 (SSIS、SSRS、資料庫引擎、設定)|
-|Azure SQL Database 的工具和公用程式 | SQL Server 工具|
-|Transact-SQL 參考 (資料庫引擎) | Transact-SQL 參考|
-|Xquery 語言參考 (SQL Server) | Xquery 語言參考 (SQL Server)|
+(*) 表示內容來自第一個正式運作版本的 SQL Server 2017 內容，以及較舊的 2016 內容。 這些書籍將遭移除，因為 SQL Server 2016 和 2017 獨立且完整的書籍包含自 2019 年 1 月起的內容編輯。  
+
+| | 內容窗格 | SQL Server 書籍 |
+|-----|-----|-----|
+|*|Analysis Services 語言參考 | Analysis Services (MDX) 語言參考|
+|*|Data Analysis Expressions (DAX) 參考 | Data Analysis Expressions (DAX) 參考|
+|*|資料採礦延伸模組 (DMX) 參考 | 資料採礦延伸模組 (DMX) 參考|
+|*|開始使用 SQL Server 中的機器學習 | Microsoft Machine Learning 服務|
+|*|Power Query M 參考 | Power Query M 參考|
+||SQL Server 2016 文件 | SQL Server 2016 文件|
+||SQL Server 2017 文件| SQL Server 2017 文件|
+|*|適用於 SQL Server 的開發人員指南 | SQL Server 開發人員參考資料|
+|*|下載 SQL Server Management Studio | SQL Server Management Studio|
+|*|Microsoft SQL Server 用戶端程式設計的首頁 | SQL Server 連線驅動程式|
+|*|Linux 上的 SQL Server | Linux 上的 SQL Server|
+|*|SQL Server 技術文件 | SQL Server 技術文件 (SSIS、SSRS、資料庫引擎、設定)|
+|*|Azure SQL Database 的工具和公用程式 | SQL Server 工具|
+|*|Transact-SQL 參考 (資料庫引擎) | Transact-SQL 參考|
+|*|Xquery 語言參考 (SQL Server) | Xquery 語言參考 (SQL Server)|
 
 > [!NOTE]
 > 如果說明檢視器在新增內容時凍結 (擱置)，請將 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 或 HlpViewer_VisualStudiox_en-US.settings 檔案中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行變更為未來的某個日期。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](/visualstudio/welcome-to-visual-studio)。
@@ -176,7 +183,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 
 **在 SSMS 17.x 中檢視 SQL Server 線上說明**
 
-- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
+- 在 [說明] 功能表中，按一下 [檢視說明]。 來自 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 的最新 SQL Server 2016/2017 文件即會在瀏覽器中顯示。 
 
    ![檢視說明](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
@@ -195,7 +202,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 3. 依序按一下 [I want to use online help]\(我要使用線上說明)、[確定] 和 [結束]。  
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
-   
+
 4. 按一下 [說明] 功能表上的 [檢視說明]，開啟說明檢視器查看內容。 
 
 ## <a name="view-f1-help"></a>檢視 F1 說明
@@ -204,28 +211,27 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 
 **檢視 F1 說明**
 
-1. 指向 [說明] 功能表上的 [設定說明喜好設定]，然後選擇 [在瀏覽器中啟動] 或 [在說明檢視器中啟動]。 
+1. 指向 [說明] 功能表上的 [設定說明喜好設定]，然後選擇 [在瀏覽器中啟動] 或 [在說明檢視器中啟動]。
 2. 按 F1 或按一下 [說明] 或 **?** (位在它們可用的對話方塊中)，以查看所選擇環境中的即時線上主題。
 
 > [!NOTE]
->  只有在您於線上時，才能使用 F1 說明。 F1 說明沒有離線來源。 
+> 只有在您於線上時，才能使用 F1 說明。 F1 說明沒有離線來源。
 
 ## <a name="systems-without-internet-access"></a>沒有網際網路存取的系統
-一旦您依照[上述步驟](#use-help-viewer-v2x)使用 SQL Server 說明檢視器將離線內容下載到具有網際網路存取的系統之後，您就可以接著將該內容移轉至沒有網際網路存取的系統。 您可以執行下列步驟來達成目的。 
+將離線書籍下載到具有網際網路存取的系統之後，您就可以使用下列步驟將該內容移轉至沒有網際網路存取的系統。
 
   >[!NOTE]
-  >離線系統上必須安裝支援說明檢視器的軟體，例如 SQL Server Management Studio。 
+  >離線系統上必須安裝支援說明檢視器的軟體，例如 SQL Server Management Studio。
 
 1. 開啟說明檢視器 (Ctrl + Alt + F1)。
-1. 選取您感興趣的文件。 例如，依 SQL 篩選並選取 SQL Server 技術文件。 
+1. 選取您感興趣的文件。 例如，依 SQL 篩選並選取 SQL Server 技術文件。
 1. 識別檔案在磁碟上的實體路徑，您可以在**本機存放區路徑**下找到這些檔案。
-1. 使用您的檔案系統總管巡覽至此位置。 
+1. 使用您的檔案系統總管巡覽至此位置。
     1.  預設位置為： `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
-1. 選取三個資料夾 **ContentStore**、**Incoming**、**IndexStore**，並將其複製到離線系統上相同的位置。 您可能需要使用臨時媒體裝置，例如 USB 或 CD。 
+1. 選取三個資料夾 **ContentStore**、**Incoming**、**IndexStore**，並將其複製到離線系統上相同的位置。 您可能需要使用臨時媒體裝置，例如 USB 或 CD。
 1. 一旦移動這些檔案之後，請在離線系統上啟動說明檢視器，如此即可使用 SQL Server 技術文件。
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
-   
 
 ## <a name="next-steps"></a>後續步驟
 [Microsoft 說明檢視器 - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  

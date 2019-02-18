@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: db618785ace138f958f1b37713cf0c96f6ffb10b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 43316ba8dad76417e48d6fdb4fefece87131041a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033139"
 ---
 # <a name="dqs-administration"></a>dqs 管理
 
@@ -55,9 +55,9 @@ ms.locfileid: "52617858"
   
 -   **參考資料**：設定參考資料服務提供者：Windows Azure Marketplace 或直接參考資料提供者。 設定參考資料服務提供者之後，您可以在知識庫中的定義域管理活動期間，對應具有參考資料的定義域/複合定義域，然後使用相同的知識庫，在資料品質專案中進行清理活動。 它也可讓您指定連接網際網路所使用的 Proxy 設定，以使用 Windows Azure Marketplace。  
   
--   **一般設定**：指定資料清理和資料比對的臨界值，以及是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中啟用分析所使用的通知。 這些臨界值是由 DQS 在資料品質專案中，於電腦輔助的清理和比對活動期間所使用。  
+-   **一般設定**：指定資料清理和資料比對的閾值，以及是否在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中啟用分析所使用的通知。 這些臨界值是由 DQS 在資料品質專案中，於電腦輔助的清理和比對活動期間所使用。  
   
--   **記錄設定**：DQS 中的記錄檔會記錄在 DQS 中執行的活動，因此在維護和疑難排解期間追蹤運作問題相當實用。 您可以篩選您要針對各種 DQS 功能 (定義域管理、知識探索、清理、比對以及 Reference Data Services) 記錄的訊息，也可以根據事件的嚴重性層級篩選 DQS 模組。  
+-   **記錄檔設定**：DQS 中記錄檔會記錄在 DQS 中執行的活動，因此在維護和疑難排解期間追蹤運作問題相當實用。 您可以篩選您要針對各種 DQS 功能 (定義域管理、知識探索、清理、比對以及 Reference Data Services) 記錄的訊息，也可以根據事件的嚴重性層級篩選 DQS 模組。  
   
 > [!NOTE]  
 >  **[組態]** 畫面僅適用於擁有 DQS_MAIN 資料庫之 dqs_administrator 角色的使用者。  
@@ -65,9 +65,9 @@ ms.locfileid: "52617858"
 ##  <a name="AdminOutsideClient"></a> Data Quality Client 外部的管理活動  
  在 Data Quality Client 外部執行的活動包括：  
   
--   **備份和還原 DQS 資料庫**：DQS 資料庫的備份和還原與任何 SQL Server 資料庫的備份和還原相同，但有專屬於 DQS 的一些考量。  
+-   **備份和還原 DQS 資料庫**：DQS 資料庫備份和還原與任何 SQL Server 資料庫備份和還原相同，但有 DQS 特定的一些考量。  
   
--   **卸離和附加 DQS 資料庫**：卸離和附加 DQS 資料庫的步驟與卸離和附加任何 SQL Server 資料庫相同，但有專屬於 DQS 的一些考量。  
+-   **卸離和附加 DQS 資料庫**：卸離和附加 DQS 資料庫的步驟與卸離和附加任何 SQL Server 資料庫相同，但有 DQS 特定的一些考量。  
   
  如需詳細資訊，請參閱＜ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)＞。  
   

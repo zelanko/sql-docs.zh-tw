@@ -6,13 +6,13 @@ manager: kfile
 ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/3/2018
-ms.openlocfilehash: f9b56ce33635d51b989801b34eea279b53bd4041
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.date: 10/03/2018
+ms.openlocfilehash: 26c8423308b07c570cf289113a00fbd07a1133aa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396131"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041769"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
 
@@ -34,7 +34,7 @@ ms.locfileid: "52396131"
 |----------|-----------------|----------------------|  
 |1|在 NLB 叢集的伺服器節點上安裝 Reporting Services 之前，請先檢查向外延展部署的需求。|《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[向外延展部署 - Reporting Services 原生模式 &#40;設定管理員&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
 |2|設定 NLB 叢集並確認它是否正常運作。<br /><br /> 請務必將主機標頭名稱對應至 NLB 叢集的虛擬伺服器 IP。 此主機標頭名稱會用於報表伺服器 URL 中，而且比 IP 位址更容易記得和輸入。|如需詳細資訊，請參閱 Windows Server 產品文件集來了解您所執行的 Windows 作業系統版本。|  
-|3|將主機標頭的 NetBIOS 和完整網域名稱 (FQDN) 加入至 Windows 登錄內儲存的 **BackConnectionHostNames** 清單。 使用 [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861) 中的**方法 2：指定主機名稱**，並進行下列調整。 KB 文章中的**步驟 7** 說「Quit Registry Editor, and then restart the IISAdmin service. (結束登錄編輯程式，然後重新啟動 IISAdmin 服務)。」 而不是將電腦重新開機以確認變更是否生效。<br /><br /> 例如，若主機標頭名稱 \<MyServer> 是 "contoso" 之 Windows 電腦名稱的虛擬名稱，您或許可以參考 FQDN 形式的 "contoso.domain.com"。 您需要將主機標頭名稱 (MyServer) 及 FQDN 名稱 (contoso.domain.com) 均加入 **BackConnectionHostNames**中的清單。|若您伺服器環境中包含本機電腦上的 NTLM 驗證，則必須執行此步驟，以建立回送連接。<br /><br /> 在此情況下，您將發現報表管理員與報表伺服器之間的要求會是失敗的 401 狀態 (未經授權)。|  
+|3|將主機標頭的 NetBIOS 和完整網域名稱 (FQDN) 加入至 Windows 登錄內儲存的 **BackConnectionHostNames** 清單。 使用 [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861) 中的**方法 2：指定主機名稱**步驟，並進行下列調整。 KB 文章中的**步驟 7** 說「Quit Registry Editor, and then restart the IISAdmin service. (結束登錄編輯程式，然後重新啟動 IISAdmin 服務)。」 而不是將電腦重新開機以確認變更是否生效。<br /><br /> 例如，若主機標頭名稱 \<MyServer> 是 "contoso" 之 Windows 電腦名稱的虛擬名稱，您或許可以參考 FQDN 形式的 "contoso.domain.com"。 您需要將主機標頭名稱 (MyServer) 及 FQDN 名稱 (contoso.domain.com) 均加入 **BackConnectionHostNames**中的清單。|若您伺服器環境中包含本機電腦上的 NTLM 驗證，則必須執行此步驟，以建立回送連接。<br /><br /> 在此情況下，您將發現報表管理員與報表伺服器之間的要求會是失敗的 401 狀態 (未經授權)。|  
 |4|在僅限檔案模式中，於已經屬於 NLB 叢集之一部分的節點上安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，並設定報表伺服器執行個體來進行向外延展部署。<br /><br /> 您所設定的向外延展可能不會回應導向虛擬伺服器 IP 的要求。 將向外延展設定為使用虛擬伺服器 IP 的作業會在您設定檢視狀態驗證之後的步驟進行。|[設定原生模式報表伺服器向外延展部署 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|設定檢視狀態驗證<br /><br /> 為了獲得最佳結果，請在您設定向外延展部署之後，而在將報表伺服器執行個體設定為使用虛擬伺服器 IP 之前，執行這個步驟。 先設定檢視狀態驗證，就可以在使用者嘗試存取互動式報表時，避免發生有關狀態驗證失敗的例外狀況。|本主題中的[如何設定檢視狀態驗證](#ViewState) 。|  
 |6|將 **Hostname** 和 **UrlRoot** 設定為使用 NLB 叢集的虛擬伺服器 IP。|本主題中的[如何設定 Hostname 和 UrlRoot](#SpecifyingVirtualServerName) 。|  

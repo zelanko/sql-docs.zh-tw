@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.cdvaluerelations.f1
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 320f57a1e80a39ae3048c8a08fd991cb643e2dcf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bcbdcae1dd42b0c97df9a3f61696811f3ca19ca3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617898"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015299"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>使用複合定義域中的值關聯
 

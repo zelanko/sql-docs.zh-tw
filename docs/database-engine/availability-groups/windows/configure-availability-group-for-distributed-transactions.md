@@ -2,7 +2,7 @@
 title: 為可用性群組設定分散式交易
 description: '描述如何為 Always On 可用性群組中的資料庫設定分散式交易。 '
 ms.custom: seodec18
-ms.date: 05/22/2018
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3953e1d6a4b9382d1607765683c990c42432f7b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f5b8e4848f42cbca03bb47c6cac2400068e54765
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215667"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832110"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>為 Always On 可用性群組設定分散式交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER AVAILABILITY GROUP MyaAG
 ```
 
 >[!NOTE]
->在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 上，您無法改變分散式交易的可用性群組。 變更設定置放，並使用 `DTC_SUPPORT = PER_DB` 設定重新建立可用性群組。 
+>從 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 開始，您可以改變分散式交易的可用性群組。 若為 Service Pack 2 之前的 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 版本，您必須卸除可用性群組並使用 `DTC_SUPPORT = PER_DB` 設定來重新建立。 
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散式交易 - 技術概念
 

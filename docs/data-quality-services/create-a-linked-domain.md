@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40757d069ce849b71f93d7f420247dddcc8d229a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 231c1111dbdb6a56419c25d5f467c2813156780a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617888"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022082"
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617888"
 ### <a name="controlling-data-flow-to-composite-domains"></a>控制與複合定義域之間的資料流程  
  連結的定義域可讓您控制欄位與複合定義域之間的資料流程。 當某個欄位的資料流向複合定義域中，以及另一個非常類似的欄位中的資料未流向此複合定義域時，您可以加以區分。 當您要這樣做時，您會指定在兩個連結的定義域中，一個定義域是複合定義域的一部分，另一個定義域則否。 從定義域的觀點來看，連結的定義域是相同的。 它們包含相同的知識。 但是從複合定義域的觀點來看，連結的定義域是不同的。 其中一個會參與複合定義域，另一個則否。  
   
- 範例是包含以下欄位的記錄：客戶名字、客戶姓氏和父親的名字。 假設您將客戶名字和父親的名字對應到「名字」定義域，並讓「名字」定義域和「姓氏」定義域成為「完整名稱」複合定義域的一部分。 問題是父親的名字將會加入至複合定義域，而且不含姓氏。 但是，如果您將兩個名字欄位中的每一個都連結到定義域，並連結這兩個定義域，然後您可以將「客戶名字」定義域加入至「完整名稱」複合定義域，而不將「父親的名字」欄位加入至複合定義域，以免「父親的名字」被加入至複合定義域。  
+ 範例是包含下列欄位的記錄：客戶名字、客戶姓氏和父親的名字。 假設您將客戶名字和父親的名字對應到「名字」定義域，並讓「名字」定義域和「姓氏」定義域成為「完整名稱」複合定義域的一部分。 問題是父親的名字將會加入至複合定義域，而且不含姓氏。 但是，如果您將兩個名字欄位中的每一個都連結到定義域，並連結這兩個定義域，然後您可以將「客戶名字」定義域加入至「完整名稱」複合定義域，而不將「父親的名字」欄位加入至複合定義域，以免「父親的名字」被加入至複合定義域。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

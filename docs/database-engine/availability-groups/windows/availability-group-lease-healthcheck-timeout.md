@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405798"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742098"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 可用性群組租用、叢集和健全狀況檢查逾時的機制和方針 
 
@@ -153,6 +153,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | 逾時設定 | 目的 | 介於 | 使用 | IsAlive 與 LooksAlive | 原因 | 結果 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | 租用逾時 </br> **預設值：20000** | 防止核心分裂 | 主要至叢集 </br> (HADR) | [Windows 事件物件](/windows/desktop/Sync/event-objects)| 用於兩者 | 作業系統停止回應、虛擬記憶體不足、正在產生傾印、限制的 CPU、WSFC 關閉 (遺失仲裁) | AG 資源離線/連線、容錯移轉 |  
+ | 工作階段逾時 </br> **預設值：10000** | 通知主要與次要之間發生通訊問題 | 次要至主要 </br> (HADR) | [TCP 通訊端 (透過 DBM 端點傳送訊息)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 不用於兩者 | 網路通訊、 </br> 次要相關問題 - 關閉、作業系統停止回應、資源爭用 | 次要 - 已中斷連線 | 
+ |健全狀況檢查逾時  </br> **預設值：30000** | 表示嘗試判斷主要複本健全狀況時逾時 | 叢集至主要 </br> (FCI 與 HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 用於兩者 | 符合失敗條件、作業系統停止回應、虛擬記憶體不足、修剪工作集、正在產生傾印、WSFC (遺失仲裁)、排程器問題 (鎖死的排程器)| AG 資源離線/連線或容錯移轉、FCI 重新啟動/容錯移轉 |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>另請參閱    
 

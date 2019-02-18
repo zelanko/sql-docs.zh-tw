@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617268"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024669"
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
 
@@ -94,14 +94,14 @@ ms.locfileid: "52617268"
   
     6.  在 **[尋找]** 文字方塊中輸入一個或多個位數，以尋找關聯資料表中的值。 系統會反白顯示此字串的相符項目。 使用上下箭頭，移到此字串在資料表中的不同出現位置。  
   
-    7.  **拼字檢查**：如果 **[值]** 或 **[更正為]** 資料行中的某個值有波浪式紅色底線，則表示拼字檢查建議此值的更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../data-quality-services/set-domain-properties.md)。  
+    7.  **拼字檢查**：如果 [值] 或 [更正為] 資料行中的某個值有波浪式紅色底線，則表示拼字檢查建議對此值進行更正。 以滑鼠右鍵按一下加上底線的值，並且選取拼字檢查建議的其中一個值。 或者，您可以按一下快速鍵功能表中的 **[加入]** ，繼續使用原始值。 如需相關資訊，請參閱 [使用 DQS 拼字檢查](../data-quality-services/use-the-dqs-speller.md) 及 [設置域屬性](../data-quality-services/set-domain-properties.md)。  
   
         > [!NOTE]  
         >  若要使用拼字檢查，您可以在 **[定義域屬性]** 頁面中啟用此功能，或者如果 **[定義域屬性]** 頁面中已停用此功能，您可以按一下 **[以詞彙為主的關聯]** 頁面上的 **[啟用/停用拼字檢查]** 圖示，在此頁面上啟用此功能。  
   
 6.  按一下 **[套用變更]** ，將以詞彙為主的關聯套用至定義域。  
   
-7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
+7.  按一下 **[完成]** ，完成定義域管理活動，如＜ [結束定義域管理活動](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)＞中所述。  
   
 ##  <a name="FollowUp"></a> 後續操作：建立以詞彙為主的關聯之後  
  在您建立以詞彙為主的關聯之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../data-quality-services/managing-a-domain.md)或[建立比對原則](../data-quality-services/create-a-matching-policy.md)。  
