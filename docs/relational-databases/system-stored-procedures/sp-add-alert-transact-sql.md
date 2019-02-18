@@ -124,10 +124,10 @@ sp_add_alert [ @name = ] 'name'
  [  **@category_name =** ] **'**_分類_**'**  
  警示類別目錄的名稱。 *類別目錄*已**sysname**，預設值是 NULL。  
   
- [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
+ [ **@wmi_namespace** =] **'**_wmi_namespace_**'**  
  要查詢事件的 WMI 命名空間。 *wmi_namespace*已**sysname**，預設值是 NULL。 只支援本機伺服器的命名空間。  
   
- [ **@wmi_query**=] **'**_wmi_query_**'**  
+ [ **@wmi_query** =] **'**_wmi_query_**'**  
  指定警示之 WMI 事件的查詢。 *wmi_query*已**nvarchar(512)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
