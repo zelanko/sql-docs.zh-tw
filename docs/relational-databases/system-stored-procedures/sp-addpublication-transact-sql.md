@@ -267,11 +267,11 @@ sp_addpublication [ @publication = ] 'publication'
  [  **\@replicate_ddl =** ] *replicate_ddl*  
  指出是否支援發行集的結構描述複寫。 *replicate_ddl*是**int**，預設值是**1**如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者和**0**針對非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 **1**表示複寫在發行者端執行的資料定義語言 (DDL) 陳述式，並**0**表示不複寫 DDL 陳述式。 *不支援 Oracle 發行者的結構描述複寫。* 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
-  *\@Replicate_ddl* DDL 陳述式將資料行時，可接受參數。  *\@Replicate_ddl*參數會被忽略，當 DDL 陳述式會改變或卸除資料行，原因如下。  
+ *\@Replicate_ddl* DDL 陳述式將資料行時，可接受參數。 *\@Replicate_ddl*參數會被忽略，當 DDL 陳述式會改變或卸除資料行，原因如下。  
   
--   置放的資料行之後，必須更新 sysarticlecolumns，以避免新的 DML 陳述式包括已卸除資料行，這會導致散發代理程式失敗。  *\@Replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
+-   置放的資料行之後，必須更新 sysarticlecolumns，以避免新的 DML 陳述式包括已卸除資料行，這會導致散發代理程式失敗。 *\@Replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
   
--   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。  *\@Replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
+-   當更改資料行時，來源資料類型或 Null 屬性可能已變更，造成 DML 陳述式包含的值可能與散發者端的資料表不相容。 這類 DML 陳述式可能會造成散發代理程式失敗。 *\@Replicate_ddl*參數會被忽略，因為複寫作業一定要複寫結構描述變更。  
   
 -   Sysarticlecolumns DDL 陳述式加入新的資料行，不包含新的資料行。 DML 陳述式不會嘗試複寫新資料行的資料。 接受此參數是因為可接受複寫或不複寫 DDL。  
   
