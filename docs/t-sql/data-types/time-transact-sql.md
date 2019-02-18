@@ -1,7 +1,7 @@
 ---
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762586"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079454"
 ---
 # <a name="time-transact-sql"></a>時間 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47762586"
 |語法|**time** [ (*毫秒小數位數*) ]|  
 |使用方式|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*毫秒小數位數*|指定秒鐘小數部分的位數。<br /><br /> 這可以是介於 0 至 7 之間的整數。 針對 Informatica，這可以是介於 0 至 3 之間的整數。<br /><br /> 預設的小數位數是 7 (100 毫秒)。|  
-|預設的字串常值格式<br /><br /> (用於下層用戶端)|Informatica 為 hh:mm:ss[.nnnnnnn])<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
+|預設的字串常值格式<br /><br /> (用於下層用戶端)|Informatica 為 hh:mm:ss[.nnnnnnn])<br /><br /> 如需詳細資訊，請參閱[下層用戶端的回溯相容性](#BackwardCompatibilityforDownlevelClients)一節。|  
 |範圍|00:00:00.0000000 到 23:59:59.9999999 (Informatica 為 00:00:00.000 到 23:59:59.999)|  
 |元素範圍|hh 是代表小時的兩位數，範圍介於 0 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 0 至 59 之間。<br /><br /> n\* 是代表毫秒的零至七位數，範圍介於 0 至 9999999 之間。 針對 Informatica，n\* 為 0 到 3 位數，範圍為 0 至 999。|  
 |字元長度|最小 8 個位置 (hh:mm:ss)，最大 16 個位置 (hh:mm:ss.nnnnnnn)。 針對 Informatica，最大值為 12 (hh:mm:ss.nnn)。|  
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- 若轉換為下列資料類型時：  
-                    **date**，則轉換會失敗，並引發錯誤訊息 206：「運算元類型衝突：date 與 time 不相容」。  
+ 如果轉換目標為 **date**，轉換會失敗，並引發錯誤訊息 206：「運算元類型衝突：date 與 time 不相容」。  
   
  當轉換成 **datetime** 時，將會複製時、分和秒的值，而且日期元件會設定為 '1900-01-01'。 如果 **time(n)** 值的毫秒精確度大於三位數，**datetime** 結果將會被截斷。 下列程式碼顯示將 `time(4)` 值轉換成 `datetime` 值的結果。  
   

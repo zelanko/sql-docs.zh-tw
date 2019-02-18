@@ -20,19 +20,19 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336a961a07b7d1f1ce9be2e1abc751f1cbc787eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711976"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079304"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回在資料表或檢視中建立識別資料行時所指定的原始初始值 (以 **numeric**(**@@** MAXPRECISION,0) 傳回)。 使用 DBCC CHECKIDENT 來變更識別欄位的目前值並不會變更這個函數所傳回的值。  
+  傳回在資料表或檢視中建立識別欄位時所指定的原始種子值 (以 **numeric**(**@@** MAXPRECISION,0) 傳回)。 使用 DBCC CHECKIDENT 來變更識別欄位的目前值並不會變更這個函數所傳回的值。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,15 +43,15 @@ IDENT_SEED ( 'table_or_view' )
   
 ## <a name="arguments"></a>引數  
  **'** *table_or_view* **'**  
- 為指定要檢查識別初始值之資料表或檢視的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *table_or_view* 可以是以引號括住的字元字串常數、變數、函式或資料行名稱。 *table_or_view* 為 **char**、**nchar**、**varchar**，或 **nvarchar**。  
+ 是[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，會指定要檢查身分識別種子值的資料表或檢視。 *table_or_view* 可以是以引號括住的字元字串常數、變數、函式或資料行名稱。 *table_or_view* 為 **char**、**nchar**、**varchar**，或 **nvarchar**。  
   
 ## <a name="return-types"></a>傳回類型  
  **numeric**  
   
 ## <a name="exceptions"></a>例外狀況  
- 當發生錯誤，或呼叫端沒有檢視物件的權限時，便會傳回 NULL。  
+ 發生錯誤或呼叫端沒有檢視物件的權限時，會傳回 NULL。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，IDENT_SEED) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或獲授與權限的安全性實體中繼資料。 這個安全性表示發出中繼資料的內建函數 (例如，IDENT_SEED) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. 傳回多個資料表的初始值  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中包含初始值之識別欄位的資料表。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中包含初始值識別欄位的資料表。  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,5 +99,4 @@ dbo                AWBuildVersion                         1
  [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
-  
   

@@ -20,19 +20,19 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 773d575a65edaca18d76ba3e2109fe81bb20f88f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819476"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079374"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 此函式使用非對稱金鑰為資料加密。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -86,7 +86,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 + 1024 位元金鑰最多可以加密 117 個位元組
 + 2048 位元金鑰最多可以加密 245 個位元組
 
-請注意，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，憑證和非對稱金鑰都可作為 RSA 金鑰上的包裝函式。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，憑證和非對稱金鑰都可作為 RSA 金鑰上的包裝函式。  
   
 ## <a name="examples"></a>範例  
 此範例會使用非對稱金鑰 `JanainaAsymKey02` 將儲存在 `@cleartext` 中的文字加密。 陳述式會將加密資料插入 `ProtectedData04` 資料表中。  
@@ -102,5 +102,4 @@ GO
  [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   
