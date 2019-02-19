@@ -9,12 +9,13 @@ manager: craigg
 ms.topic: hub-page
 ms.prod: sql
 ms.technology: release-landing
-ms.openlocfilehash: 1501784cac80fef201f833b5f16c3429b95ef7ad
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.date: 12/15/2018
+ms.openlocfilehash: 24e2c8e6c11eb3f00a413b62952846e2b3b69d55
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319419"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407618"
 ---
 <div id="main" class="v2">
     <div class="container">
