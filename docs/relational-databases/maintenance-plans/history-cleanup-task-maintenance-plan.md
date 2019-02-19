@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: supportability"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.historycleanup.f1
@@ -15,12 +15,12 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2a6919e90daf1b4778a2d85136a4797b76d85efa
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 9a3aaf6f3fe1ed3abee7d1642fb27d2ea4038ba3
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217886"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407528"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

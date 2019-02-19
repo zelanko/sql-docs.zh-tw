@@ -9,14 +9,14 @@ helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 385d8cfa69e7407aec2f31ee99962b2a1200e4aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48011d4f815df916236a60f2471c7ce45fe1f2f8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710849"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297326"
 ---
 # <a name="planning-a-report-report-builder"></a>規劃報表 (報表產生器)
   報表產生器可讓您建立許多種類的分頁報表。 例如，您可以建立顯示摘要或詳細銷售資料、行銷和銷售趨勢、營運報表或儀表板的報表。 您也可以建立利用豐富文字格式 (例如銷售訂單、產品目錄或正式書信) 的報表。 所有這些報表都是使用報表產生器中相同基本建置組塊的不同組合而建立。 若要建立有用且易於了解的報表，先進行規劃是有效的方法。 以下是開始作業前可能要考量的部分事項：  

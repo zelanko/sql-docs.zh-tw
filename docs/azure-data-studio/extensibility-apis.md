@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53029752"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407608"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 Api
 
@@ -69,7 +69,7 @@ credentials: {
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得所有作用中的物件總管 連接節點。
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 尋找所有符合指定之中繼資料的物件總管 節點。 `schema`， `database`，並`parentObjectNames`引數應`undefined`時不適用。 `parentObjectNames` 是一份非資料庫的父物件，從最高到最低的層級，在 [物件總管] 中，所需的物件正在進行中。 例如，當使用連接識別碼搜尋的資料行所屬資料表 」 schema1.table1 」 和資料庫"database1"的"column1" `connectionId`，呼叫`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另請參閱[SQL Operations Studio 支援預設之型別的清單](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)這個 API 呼叫。
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 尋找所有符合指定之中繼資料的物件總管 節點。 `schema`， `database`，並`parentObjectNames`引數應`undefined`時不適用。 `parentObjectNames` 是一份非資料庫的父物件，從最高到最低的層級，在 [物件總管] 中，所需的物件正在進行中。 例如，當使用連接識別碼搜尋的資料行所屬資料表 」 schema1.table1 」 和資料庫"database1"的"column1" `connectionId`，呼叫`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`。 另請參閱[的預設 Azure Data Studio 支援的類型清單](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)這個 API 呼叫。
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` 底下的節點有連接的識別碼

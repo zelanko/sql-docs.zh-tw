@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3609d778973a5813790378c0595b3d51b55be013
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f20b9d4ed3f6e82e613e9d42c219d464cdf282f5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770876"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293396"
 ---
 # <a name="grouping-pane"></a>群組窗格
 設計 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表時，[群組] 窗格會顯示目前所選 Tablix 資料區的資料列群組和資料行群組。 [群組] 窗格不適用於 [圖表] 或 [量測計] 資料區。 [群組] 窗格是由 [資料列群組] 窗格和 [資料行群組] 窗格所組成。 [群組] 窗格有兩種模式：預設和進階。 預設模式會針對資料列和資料行群組，顯示動態成員的階層式檢視。 進階模式則會針對資料列和資料行群組，同時顯示動態和靜態成員。 群組是來自顯示於資料區域上之報表資料集的命名集資料。 群組會組織成包含靜態和動態成員的階層。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  

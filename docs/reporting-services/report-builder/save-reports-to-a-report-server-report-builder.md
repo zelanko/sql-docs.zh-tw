@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 90a9a377391e04a97adf3d542c8493b31649141e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8a751d0c7d6438eece89d66805bcb0c7fb2c96be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590812"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298266"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>將報表儲存到報表伺服器 (報表產生器)
   在報表產生器中，您可以將報表定義儲存至報表伺服器 (也稱為發行報表)。 當報表儲存至報表伺服器時，其他使用者就可以檢視此報表。 每當您執行已發行的報表時，您將會擷取最新的資料。 若要儲存已轉譯之報表的靜態複本，請將此報表匯出到另一個檔案格式並儲存起來，或是使用報表記錄功能來儲存已轉譯的報表版本。  

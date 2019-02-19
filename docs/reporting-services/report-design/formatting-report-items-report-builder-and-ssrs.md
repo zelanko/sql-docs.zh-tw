@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 76d019a5171b64c06e346b02d1c92d610b0fe13c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 16f4adc3b2aefa00ad02f8e39f8cd17f3366e9ee
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835636"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298196"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>設定報表項目的格式 (報表產生器及 SSRS)
   對報表中的項目進行格式化，使報表更具吸引力並增強其可讀性。 當您在報表設計模式時，可以將文字方塊及文字方塊中的個別項目、影像、運算式和資料格式化。  
@@ -30,7 +30,7 @@ ms.locfileid: "47835636"
   
  您可以變更格式化選項，其方法是選取要格式化的項目，然後開啟此項目的 [屬性] 對話方塊。 例如，如果您想要格式化整個文字方塊的內容或是文字方塊內選取的字，請以滑鼠右鍵按一下此項目，然後選取 [文字方塊屬性]。 然後，您可以套用您想要的格式化樣式。  
   
- 若要快速開始使用，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
+ 若要快速開始作業，請參閱[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

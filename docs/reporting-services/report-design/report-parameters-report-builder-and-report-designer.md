@@ -15,14 +15,14 @@ f1_keywords:
 - "10073"
 - "10070"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 55104192e2a6ac738ca5b99365fd90b74d40430b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4572edcb9fc87da74b18d91e73338b6f3879cd25
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215019"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287706"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
 

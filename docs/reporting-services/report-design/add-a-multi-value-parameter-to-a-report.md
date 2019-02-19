@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b6492cc78c9cbdc23f8deed9b1a577341637c300
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba4b779d3cba79c3bed3574f5ab5d53eec6bffeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402075"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293556"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>將多值參數加入至報表
   您可以在報表中新增參數，好讓使用者可以為參數選取多個值。  

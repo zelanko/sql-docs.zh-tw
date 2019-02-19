@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
@@ -14,12 +13,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7686844144b43467c152907dfdff10a033005b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165208"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407568"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>用戶端通訊協定 - TCP 和 IP 屬性 (通訊協定索引標籤)
   在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中，您可以使用 **[TCP/IP 內容]** 對話方塊中的 **[通訊協定]** 索引標籤來檢視或指定下列選項。 若要連接到其他通訊埠，請在 **[預設通訊埠]** 方塊內輸入通訊埠編號。 如需連接字串的詳細資訊，請參閱 [使用 TCP/IP 建立有效的連接字串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
@@ -43,7 +42,7 @@ ms.locfileid: "48165208"
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [新增別名 &#40;[別名] 索引標籤&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;別名&#62;屬性&#40;別名索引標籤&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [新增別名 &#40;別名索引標籤&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
+ [&#60;Alias&#62; 屬性 &#40;別名索引標籤&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

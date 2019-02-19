@@ -23,14 +23,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 94cff6197fc4648b465881624976cbce0a03e55d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73655089cb46213ccd50c8cf78adb29df06eed6b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502686"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290196"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>圖表圖例 - 格式化 (報表產生器)
   圖表圖例包含圖表中每一個類別目錄的描述。 圖例一定會包含一或多個圖例項目，其中每一個圖例項目都是由代表數列的彩色方塊及描述此數列的文字字串所組成，如下圖所示。  

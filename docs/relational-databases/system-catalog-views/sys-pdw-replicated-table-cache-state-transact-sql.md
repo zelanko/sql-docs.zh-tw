@@ -3,7 +3,7 @@ title: sys.pdw_replicated_table_cache_state (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2017
 ms.prod: sql
-ms.technology: data-warehousee"
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 02fa0d4efa6c90c2bfc5840971d8de7f50cb9a7c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0742c252bbfcf1bb12168001cba98423d1556bd6
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016582"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407503"
 ---
 # <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

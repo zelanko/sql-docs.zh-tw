@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030602"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407578"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教學課程：建立 Azure Data Studio 擴充功能
 
@@ -37,16 +37,15 @@ Azure Data Studio 是內建為 Visual Studio Code 中，在同一架構上，因
 
 - [Node.js](https://nodejs.org)已安裝，而且可在您`$PATH`。 包含 Node.js [npm](https://www.npmjs.com/)，Node.js 套件管理員，用來安裝延伸模組產生器。
 - [Visual Studio Code](https://code.visualstudio.com)偵錯擴充功能。
-- Azure Data Studio[偵錯延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)。
-- 請確定`sqlops`是在您的路徑。 針對 Windows，請確定您選擇`Add to Path`在 setup.exe 的選項。 適用於 Mac 或 Linux，執行*安裝路徑中的 'sqlops' 命令*選項。
-- SQL Operations Studio 偵錯擴充功能 （選擇性）。 這可讓您測試您的延伸模組，而不需要封裝，然後將它安裝到 Azure Data Studio。
+- Azure Data Studio[偵錯延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)（選擇性）。 這可讓您測試您的延伸模組，而不需要封裝，然後將它安裝到 Azure Data Studio。
+- 請確定`azuredatastudio`是在您的路徑。 針對 Windows，請確定您選擇`Add to Path`在 setup.exe 的選項。 適用於 Mac 或 Linux，執行*安裝路徑中的 'azuredatastudio' 命令*選項。
 
 
 ## <a name="install-the-extension-generator"></a>安裝延伸模組產生器
 
 若要簡化建立延伸模組的程序，我們已建置[延伸模組產生器](https://code.visualstudio.com/docs/extensions/yocode)使用 Yeoman。 若要安裝它，從命令提示字元執行下列命令：
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>建立您的延伸模組
 
@@ -54,20 +53,20 @@ Azure Data Studio 是內建為 Visual Studio Code 中，在同一架構上，因
 
 1. 啟動延伸模組產生器，使用下列命令：
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. 選擇**新的快速鍵**從延伸模組類型的清單：
 
    ![延伸模組產生器](./media/tutorial-create-extension/extension-generator.png)
 
-3. 遵循步驟來填入 延伸模組名稱 (本教學課程中，使用**ssmskeymap**)，並且加入的描述。
+3. 遵循步驟來填入 延伸模組名稱 (本教學課程中，使用**ssmskeymap2**)，並且加入的描述。
 
 完成上述步驟建立新的資料夾。 開啟 Visual Studio Code 和您的資料夾已準備好建立您自己的索引鍵繫結延伸模組 ！
 
 
 ### <a name="add-a-keyboard-shortcut"></a>將鍵盤快速鍵
 
-**步驟 1:尋找要取代的快速鍵**
+**步驟 1：尋找要取代的快速鍵**
 
 既然我們已經準備好了我們延伸模組，新增一些 SSMS 鍵盤快速鍵 （或按鍵組合） 至 Azure 資料 Studio。 我使用了[Andy Mallon 速查表](https://am2.co/2018/02/updated-cheat-sheet/)和靈感 RedGate 的鍵盤快速鍵清單。
 
@@ -86,7 +85,7 @@ Azure Data Studio 是內建為 Visual Studio Code 中，在同一架構上，因
 ![keybindings.json 延伸模組](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**步驟 2:將捷徑新增至延伸模組**
+**步驟 2：將捷徑新增至延伸模組**
 
 若要加入延伸模組中的快速鍵，請開啟*package.json*檔案 （副檔名），並取代`contributes`有下列區段：
 
