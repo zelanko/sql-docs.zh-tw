@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 59de5d316bcef9fb2842d26ef2e7a1154270f5cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2310ee8969c92ac832a2426654af5b6f69841c75
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644258"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294648"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>為手機或平板電腦配置 Reporting Services 行動報表
 現在，您已 [建立 Reporting Services 行動報表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]，可以配置它的手機或平板電腦版本。  

@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e6442c6993af76c3d5b14526eb56d237963375a0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7c6fbd941f63a2d0ec6395d19747d3cec1b14988
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030707"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289520"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
 

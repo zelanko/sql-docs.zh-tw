@@ -13,15 +13,15 @@ ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3baf0d6e6b7e2519cf1a9c5d3d36477390799c9a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 91a1e59f46d99c4011fff59d0a6ff64caac4a250
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124768"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407628"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>設定 max text repl size 伺服器組態選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] max text repl size [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **max text repl size** 選項會指定在單一 INSERT、UPDATE、WRITETEXT 或 UPDATETEXT 陳述式中，可以加入複寫資料行或擷取資料行中的 **text**、 **ntext**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、 **xml**和 **image** 資料的大小上限 (以位元組為單位)。 預設值為 65536 個位元組。 值為 -1 表示沒有任何大小限制 (除了資料類型所加諸的限制以外)。  
   

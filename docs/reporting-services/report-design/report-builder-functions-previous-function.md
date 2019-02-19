@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b3cb25aee9e71724173c913fd75ad01c9227ea5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 96b6267bb5e02d3173fb931f135a8b27dac126c1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857186"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286966"
 ---
 # <a name="report-builder-functions---previous-function"></a>報表產生器函式 - Previous 函式
   傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。  

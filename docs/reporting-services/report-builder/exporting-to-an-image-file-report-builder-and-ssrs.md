@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1c46de7c1515d605dbe88d939ab9de2b161d7689
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2520444f633505bfaa74334fe977cbdccdd9e603
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747266"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294136"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>匯出至影像檔 (報表產生器及 SSRS)
   影像轉譯延伸模組會將分頁報表轉譯成點陣圖或中繼檔。 依預設，影像轉譯延伸模組會產生報表的 TIFF 檔，可在多個頁面中檢視。 當用戶端接收到影像時，可以在影像檢視器中顯示和列印影像。 本主題提供影像轉譯器的特定資訊並描述轉譯延伸模組的例外狀況。  
   
- 影像轉譯延伸模組可產生 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]支援的任何格式檔案：BMP、EMF、EMFPlus、GIF、JPEG、PNG 和 TIFF。 針對 TIFF 格式，主要資料流的檔案名稱為 *ReportName*.tif。 針對每個檔案轉譯成單一頁面的其他所有格式，檔案名稱為 *ReportName_Page.ext* ，其中 *ext* 是所選格式的副檔名。 若要以影像支援的其他格式產生檔案，請在 **OutputFormatDeviceInfo** 設定中指定以上列出的任何字串。  
+ 影像轉譯延伸模組可產生 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] 支援的所有格式之檔案：BMP、EMF、EMFPlus、GIF、JPEG、PNG 及 TIFF。 針對 TIFF 格式，主要資料流的檔案名稱為 *ReportName*.tif。 針對每個檔案轉譯成單一頁面的其他所有格式，檔案名稱為 *ReportName_Page.ext* ，其中 *ext* 是所選格式的副檔名。 若要以影像支援的其他格式產生檔案，請在 **OutputFormatDeviceInfo** 設定中指定以上列出的任何字串。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -30,8 +30,8 @@ ms.locfileid: "47747266"
 |--------------|-------------------|------------------|  
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
-|JPEG|jpeg|image/jpeg|  
-|PNG|png|image/png|  
+|JPEG|JPEG|image/jpeg|  
+|PNG|PNG|image/png|  
 |TIFF|tif|image/tiff|  
 |EMF|EMF|image/emf|  
 |EMFPlus|EMF|image/emf|  

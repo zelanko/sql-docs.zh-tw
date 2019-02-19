@@ -9,14 +9,14 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fab47f8994be4500cca49bc427aa7ec7292be2a2
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7357530ed6990c10ece43748c6ef7dd3a00c6454
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710989"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288726"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>報表撰寫概念 (報表產生器及 SSRS)
   本節將簡要定義用來描述報表產生器和報表設計師文件中之分頁報表的一些重要概念。 如需特定字詞或詞彙的定義，請參閱[詞彙 &#40;報表產生器&#41;](../../reporting-services/report-builder/glossary-report-builder.md)。  

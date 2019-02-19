@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 057b2805c611957babd3b2b6e4237dce7a1d8d49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4bee88917f0bb4e512002549b17469004cd2880
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632046"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286507"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>將資料加入至 Tablix 資料區 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，若要在資料表或矩陣中顯示報表資料集的資料，請在每個資料格中，指定要顯示之資料集欄位的名稱。 您可以顯示詳細資料或群組資料。 如果您將群組加入到資料表或矩陣，則會自動加入群組值與群組資料的資料列和資料行。 接著，您可以加入資料的小計與總計。  

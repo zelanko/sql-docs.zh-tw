@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1b6844ad30aa426d1df71727becc6e6cfa3071d5
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dbeb2a4c15327025077081abf3e166416a2fbea3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432471"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295226"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的新功能
 

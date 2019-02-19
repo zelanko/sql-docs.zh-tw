@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 075d2253f8662786952e0057042dd04351296aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a90f81948f7977d0ad2461ac794371cc57eb5d10
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632736"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287558"
 ---
 # <a name="report-builder-functions---first-function"></a>報表產生器函式 - First 函式
   傳回所指定運算式給定範圍中的第一個值。  

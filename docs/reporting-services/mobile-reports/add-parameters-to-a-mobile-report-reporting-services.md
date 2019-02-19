@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 113cb057-deec-40eb-abc8-f35d3900eaa6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 348a8c1fa8ccdb4ade5b2ee3d39d6ecacf6e5a03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b6f3960b47c647d51543344b3a8e694fec575336
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690966"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287846"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>將參數加入行動報表中 | Reporting Services
 您可以使用參數建立 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表，讓您和您報表的讀者可以篩選報表。 使用參數的報表也可以是[從來源報表鑽研](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)的目標。 

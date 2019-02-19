@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664056"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288386"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>影像、文字方塊、矩形和線條 (報表產生器及 SSRS)
   除了資料表、矩陣和圖表之類的資料區外， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表也會使用其他的報表項目 (例如影像、文字方塊和矩形) 來加入視覺趣味、反白顯示主要資訊，或提供相關的資訊。 您可以變更報表項目的格式。 例如，您可以加入框線或填補、變更初始的可見性或方向，或指定項目的精確大小及位置。  
@@ -28,7 +28,7 @@ ms.locfileid: "47664056"
  資料表或矩陣中的每個資料格都是文字方塊，可讓您以格式化獨立文字方塊的方式進行格式化。  
   
  [矩形和線條 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
- **線條**會以水平、垂直或對角線方式顯示。 線條是由起點和終點定義，且可以指定各種樣式 (例如粗細和色彩)。 線條沒有相關聯的資料。  
+ **線條** 會以水平、垂直或對角線方式顯示。 線條是由起點和終點定義，且可以指定各種樣式 (例如粗細和色彩)。 線條沒有相關聯的資料。  
   
  **矩形** 可以當做圖形元素或其他報表項目的容器使用。 當做圖形元素使用時，矩形擁有的屬性與線條相同。 當做容器使用時，矩形可以當做其中所有報表項目的父容器。 將報表項目置於父容器，有助於控制這些項目在每個報表頁面上的顯示方式。  
   

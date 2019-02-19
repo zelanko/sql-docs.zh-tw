@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ed90c887a9aeaeca9939511e215464b0b51ba226
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 68728f18f72aed6316f3764d81889f1ab5368d25
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711669"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295296"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>報表產生器撰寫環境 (SSRS)
   報表產生器 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是適合在 Visual Studio 外部建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表的獨立撰寫環境。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 入口網站或 Microsoft 下載中心進行安裝。  

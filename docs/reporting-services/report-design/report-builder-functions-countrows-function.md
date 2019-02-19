@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 918c5da975c6b9e2d47134391f14f7314cdca93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b9bb3a1c8fcfa71560d4f5973a03588948ae99fd
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611606"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292757"
 ---
 # <a name="report-builder-functions---countrows-function"></a>報表產生器函式 - CountRows 函式
   傳回指定之範圍中的資料列數目，包括具有 Null 值的資料列。  

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91aedc290389f317a04263a1bbdde2bb086226a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062658"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407538"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 屬性 (AlwaysOn 高可用性索引標籤)
-  使用**AlwaysOn 高可用性**索引標籤**SQL Server 屬性** 對話方塊中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員來啟用或停用 AlwaysOn 可用性群組功能，在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 啟用 AlwaysOn 可用性群組是的執行個體的必要條件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用可用性群組做為高可用性和災害復原方案。  
+  使用**AlwaysOn 高可用性**索引標籤**SQL Server 屬性** 對話方塊中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員來啟用或停用 AlwaysOn 可用性群組功能，在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 啟用 AlwaysOn 可用性群組是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體將可用性群組做為高可用性和災害復原方案的必要條件。  
   
 ##  <a name="Prerequisites"></a> 必要條件  
  若要啟用 AlwaysOn 可用性群組，伺服器執行個體必須符合下列必要條件：  
@@ -30,7 +29,7 @@ ms.locfileid: "48062658"
   
 -   伺服器執行個體必須執行支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]版本。  
   
--   一次只針對一個伺服器執行個體啟用 AlwaysOn 可用性群組。 啟用 AlwaysOn 可用性群組之後，等到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前啟用的下一步 的伺服器執行個體重新啟動服務。  
+-   一次只針對一個伺服器執行個體啟用 AlwaysOn 可用性群組。 啟用 AlwaysOn 可用性群組之後，等到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務重新啟動後才能為下一個伺服器執行個體啟用。  
   
 > [!NOTE]  
 >  如需功能支援的詳細資訊，以及有關 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]其他必要條件、限制和建議的詳細資訊，請參閱《 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 線上叢書》。  

@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f99654ed02b96ed2f1b0d26f7e5b4f64851d815b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f543e0c3a12b86eb82ad7cefcdb0dee8e868e218
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710929"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292016"
 ---
 # <a name="uninstall-report-builder"></a>將報表產生器解除安裝
 

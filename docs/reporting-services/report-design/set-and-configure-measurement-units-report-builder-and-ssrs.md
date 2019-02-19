@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88913856dbdc61edc980cc231f497269fb34f133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd636d02ebf64887438b952c5b32c2991f675bca
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754558"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291066"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>設定度量單位 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標使用下列兩個度量單位的其中一個︰百分比或數值。   

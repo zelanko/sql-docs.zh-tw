@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 54a2d32ea942505861074af8ec27d5dbbc59e4ac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2e16d18fd811e60b490842c309ac6260bfc5ad96
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591412"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289036"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
 

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 55d78c64367e654873950d05baabbb6d94f33882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73fe1f786148046e699509eb3000a63f20ce8f0e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608002"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290346"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>變更圖表類型 (報表產生器及 SSRS)
 當您先將圖表插入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表時，[選取圖表類型] 對話方塊隨即出現。 如果您取消此對話方塊，預設會加入直條圖圖表類型。  

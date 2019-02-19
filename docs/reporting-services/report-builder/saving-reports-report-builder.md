@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ea2e2b6ef177f4c11d7655f4a4a66c159d40961a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42817b1524bd2bc0ada10e4b49bcd511c51dc549
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029047"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289487"
 ---
 # <a name="saving-reports-report-builder"></a>儲存報表 (報表產生器)
   在報表產生器中，您可以將分頁報表儲存至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表伺服器、SharePoint 文件庫、您具有寫入權限的檔案共用或您的電腦。 

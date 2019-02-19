@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fee414cbb0e3ec81dba36b6d70262b5821a75696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 90dd863f1c948d39be6e26402bb09a992e0afd3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663226"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285166"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在數列上顯示工具提示 (報表產生器及 SSRS)
   您可以將工具提示加入圖表數列上的每個資料點，以顯示與資料點相關的資訊，例如，群組名稱、資料點的值，或相對於數列總數之資料點的百分比。 在使用者將滑鼠指標停留在已轉譯之分頁報表中的資料點時，就會看到這項資訊。  
@@ -33,6 +33,6 @@ ms.locfileid: "47663226"
  [格式化圖表上的資料點 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [在報表上新增鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+ [在報表上加入鑽研動作 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

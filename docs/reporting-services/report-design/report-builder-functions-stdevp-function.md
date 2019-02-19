@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 776860b9e10acccb9930ed90f67bfdb1f6432de0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1f70d3284864c4b8e4878cf567e80bbfb1706534
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031210"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294166"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>報表產生器函式 - StDevP 函式
   傳回運算式指定的所有非 Null 數值的母體標準差 (在給定範圍的內容中評估)。  

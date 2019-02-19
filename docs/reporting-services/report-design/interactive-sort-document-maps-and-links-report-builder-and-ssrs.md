@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6beb41ffbf94f803887f5e72bfe7e527c7f6c8b2
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 14bf75b9dcb5be2a1853751874053c9075781619
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029877"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285897"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>互動式排序、文件引導模式及連結 (報表產生器及 SSRS)
   在 Web 架構的環境中，您可以加入讓使用者與報表互動的一些功能。 您的使用者可以變更值在報表中的排序次序、顯示或隱藏報表中的項目，或者按一下跳到其他報表或網頁的連結。 您也可以加入目錄或文件引導模式。 您的報表使用者可以按一下目錄或文件引導模式中的項目，跳到報表內的各個區域。  

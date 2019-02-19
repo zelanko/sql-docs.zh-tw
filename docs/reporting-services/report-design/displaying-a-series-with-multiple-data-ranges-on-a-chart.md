@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 567a22114f04644b2a20d8d2653f859c10ae5534
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5fe2d1cb95045135c07f76744d5160f04ed039cf
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029307"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284906"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>將包含多個資料範圍的數列顯示在圖表上
 

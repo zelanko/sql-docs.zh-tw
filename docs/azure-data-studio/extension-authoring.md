@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030513"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407518"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>藉由建立 Azure Data Studio 延伸模組擴充功能
 
@@ -35,11 +35,11 @@ ms.locfileid: "53030513"
 
 若要開發延伸模組中，您在已安裝，而且可在您 $PATH 需要 Node.js 它。 Node.js 包含 npm，Node.js 套件管理員，將用於安裝延伸模組產生器。
 
-若要開始新的副檔名，您可以使用 Azure 資料 Studio 延伸模組產生器。 Yeoman[延伸模組產生器](https://www.npmjs.com/package/generator-sqlops)可以很容易就能建立簡單的延伸模組專案。 若要啟動產生器，在命令提示字元中輸入下列命令：
+若要開始新的副檔名，您可以使用 Azure 資料 Studio 延伸模組產生器。 Yeoman[延伸模組產生器](https://www.npmjs.com/package/generator-azuredatastudio)可以很容易就能建立簡單的延伸模組專案。 若要啟動產生器，在命令提示字元中輸入下列命令：
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **擴充性參考**

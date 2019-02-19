@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ccdfd03ab901d866f70a849adf44e18f0a0a44e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853394"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291976"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>保留行動報表中 Analysis Services 的日期格式
 在報表產生器中將量值加入共用資料集中，讓 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 資料來源中的日期在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]中保留其資料類型。

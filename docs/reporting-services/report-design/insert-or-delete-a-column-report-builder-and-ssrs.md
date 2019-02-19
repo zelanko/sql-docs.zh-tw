@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: dffdb905e32114b8415a6d8ffd43144f8b1adc82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c00aa822bee05e34a02957c8de2b091db1846316
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799256"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291176"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或刪除資料行 (報表產生器及 SSRS)
   您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 Tablix 資料區加入或刪除資料行。 Tablix 資料區可以是資料表、矩陣或清單。 下列程序不適用於圖表和量測計資料區域。  

@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 900ec3c13cae856dea769d6a761cf502557a4d22
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bce7e59a66701e519a4f2bc5706bfbec5f88eba2
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028971"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331468"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>將 Reporting Services 整合到應用程式
 

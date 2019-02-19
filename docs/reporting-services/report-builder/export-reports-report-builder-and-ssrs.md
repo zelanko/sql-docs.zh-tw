@@ -5,17 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-f1_keywords:
-- "10437"
-ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5be30a3d5a7461c728bdcf67b5de07a18d929704
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211250"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289026"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>匯出報表 (報表產生器及 SSRS)
 

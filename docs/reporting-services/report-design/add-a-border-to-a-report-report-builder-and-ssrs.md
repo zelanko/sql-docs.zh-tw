@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 997e4cf22cf64cb9594dbe84218f749c684be1b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d392c1242f9e075571a2ccc11a8668ad101146f0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763426"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294826"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>在報表中加入框線 (報表產生器及 SSRS)
   您可以藉由將框線加入頁首、頁尾和報表主體本身來在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中加入框線，而不必加入線條或矩形。    

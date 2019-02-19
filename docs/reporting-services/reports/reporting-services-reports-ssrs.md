@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 37a2fa01004fb3550422b44f48d83e1c79dc587b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030327"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291356"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 報表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表是一種以 XML 為基礎的報表定義，其中包括報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行分頁報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 分頁報表是由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供之伺服器架構報表平台的一部分。 您也可以 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  

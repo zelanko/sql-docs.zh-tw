@@ -1,7 +1,7 @@
 ---
 title: 下載 Microsoft JDBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82a9b15e396cfe747dc92336dd6bd76e638d52ba
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: 7577dc8b26ade71f88ba6762bd90768d6b9276df
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736719"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154603"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下載 Microsoft JDBC Driver for SQL Server
 
@@ -30,7 +30,7 @@ ms.locfileid: "55736719"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.0.jre11</version>
+    <version>7.2.1.jre11</version>
 </dependency>
 ```  
 

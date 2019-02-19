@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e34e018cbbd1ecc9dd6258111cccf7132a682e7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212077"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289066"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的自訂地圖
 SQL Server 行動報表發行工具的地理對應定義格式，稱為「ESRI 形狀檔」。  

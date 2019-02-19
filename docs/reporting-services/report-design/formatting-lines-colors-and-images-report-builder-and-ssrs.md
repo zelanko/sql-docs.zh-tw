@@ -19,14 +19,14 @@ f1_keywords:
 - "10066"
 - sql13.rtp.rptdesigner.subreportproperties.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4800b340a11f6bde2a45bfb60c3061f19c822177
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5011f6e70ae4dc938ec90d06c6b32a0f78117ff9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031672"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292165"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>格式化線條、色彩和影像 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 讓您能夠格式化線條、色彩、資料區、影像和其他報表項目。  

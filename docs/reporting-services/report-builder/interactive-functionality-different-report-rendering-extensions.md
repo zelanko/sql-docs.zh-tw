@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83398ce2bf9e12a6b16ef5495d63716d4f3b1903
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789076"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286576"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>互動式功能 - 不同報表轉譯延伸模組
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供可在執行階段與分頁報表互動的功能。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 利用下表來了解每個互動式功能在特定格式中的運作方式。  
@@ -72,7 +72,7 @@ ms.locfileid: "47789076"
 |-------------------|-------------------------|  
 |預覽/報表檢視器、HTML|使用者按一下連結，即可在新的瀏覽器視窗中開啟外部網頁。|  
 |PDF|PDF 轉譯延伸模組會轉譯超連結。 當使用者按下超連結時，連結的頁面會在瀏覽器中開啟。|  
-|Excel|超連結是以 Excel 轉譯。|  
+|[匯出]|超連結是以 Excel 轉譯。|  
 |Word|超連結是以 Word 轉譯。|  
 |其他|超連結不適用於 MHTML、XML、CSV 或影像。<br /><br /> 如果是 MHTML 和影像，外部影像會轉譯為靜態圖片。|  
   

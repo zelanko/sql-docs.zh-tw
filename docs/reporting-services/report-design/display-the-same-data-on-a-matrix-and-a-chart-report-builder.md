@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f3eafaec96e27d6e78521b0c4ef7580af103a12e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d3e1eca43d386a11955eac7974baaf4a1d7282a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792246"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292577"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩陣和圖表上顯示相同的資料 (報表產生器)
   當您想要在矩陣和圖表中顯示相同的資料時，必須針對兩個資料區設定屬性來指定相同的資料集，也必須針對篩選、群組、排序和資料設定相同的運算式。  

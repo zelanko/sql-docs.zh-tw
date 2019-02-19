@@ -9,14 +9,14 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0d51d20ae6e3ce9ff780de03a105be31a1466e74
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17718148e369e53d9b33867975ca4d3b9af1a13f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712669"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292206"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)
   當您在報表產生器中建立及編輯分頁的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表時，可以存取 Windows 環境提供之所有用於導覽的快速鍵。 您可以從許多標準鍵盤對應配置中選取。  

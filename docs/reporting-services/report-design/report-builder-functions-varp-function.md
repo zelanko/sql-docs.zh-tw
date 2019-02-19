@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7aafa77a83aa59a2db5915040a1455c09c4714d7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 062544e43b95a6e0e6143f5d44c89bda302900da
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031209"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291056"
 ---
 # <a name="report-builder-functions---varp-function"></a>報表產生器函式 - VarP 函式
   傳回運算式指定的所有非 Null 數值的母體擴展變異數 (在給定範圍的內容中評估)。  
