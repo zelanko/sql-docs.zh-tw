@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4236e660b04617aa91469052af09ae5e943e0f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b96f5e57f35f6cb150ea4837bb5bedd81d8dfad1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681736"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291029"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
   您可以協助控制靜態資料列 (例如群組頁首或頁尾) 是否會與動態資料列 (與 Tablix 資料區中的群組有關聯) 一起轉譯。  
   
- 若要在多個頁面上重複所有資料行標題或資料列標題，您可以設定 Tablix 資料區的屬性。 如需詳細資訊，請參閱[在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)。  
+ 若要在多個頁面上重複所有資料行標題或資料列標題，您可以設定 Tablix 資料區的屬性。 如需詳細資訊，請參閱 [在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)。  
   
  若要控制與巢狀群組相關聯之動態資料列和資料行的轉譯行為，或與標籤或小計相關聯之靜態資料列和資料行的轉譯行為，您必須設定 Tablix 成員的屬性。 Tablix 成員代表靜態或動態資料列或資料行。 靜態成員會重複一次。 例如，總計資料列就是靜態資料列。 動態成員會針對每個群組執行個體重複一次。 例如，與具有群組運算式 [Territory] 之群組相關聯的資料列會針對領域的每個唯一值重複一次。 如需 Tablix 成員的詳細資訊，請參閱 [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   

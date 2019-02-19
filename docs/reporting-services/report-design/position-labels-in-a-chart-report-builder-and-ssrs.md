@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ce4c6b85dacca799695f0edd0038af4550c67753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 38d643ebb10c425ee6ce66027fae13b7e75cc799
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653585"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298526"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>在圖表中放置標籤 (報表產生器及 SSRS)
   因為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 每種圖表類型都有不同的形狀，所以資料點標籤會放置於最佳位置，避免影響圖表。 標籤的預設位置會因圖表類型而不同：  

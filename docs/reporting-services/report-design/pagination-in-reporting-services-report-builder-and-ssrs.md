@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 34a916a39a152b1f62315df9db4028652fce3f97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e24d370b5f50c7b8689cab544c72f9cb245f484
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020494"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298223"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分頁 (報表產生器與 SSRS)
   分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分頁會根據您用於檢視和傳遞報表的轉譯延伸模組而有所不同。 當您在報表伺服器上執行報表時，報表會使用 HTML 轉譯器。 HTML 會遵循特定的一組分頁規則。 例如，如果您將相同的報表匯出至 PDF，系統就會使用 PDF 轉譯器，並套用另一組不同的規則，因此，報表的分頁就會不同。 若要為使用者成功設計容易閱讀的報表，並針對計畫用於傳遞報表的轉譯器最佳化該報表，您必須了解用於控制 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中之分頁的規則。  

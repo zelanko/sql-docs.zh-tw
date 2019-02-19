@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1437d9394a372ba9a0aa3510db8f903f9b737e16
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813931"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298177"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>從 Reporting Services 行動報表中的共用資料集取得資料
 除了[載入 Excel 檔案資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)，SQL Server 行動報表發行工具也可以存取幾乎所有來源的資料。 存取資料需有共用的資料來源，在 Reporting Services 入口網站設定。 深入了解 [建立共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 和 [建立共用資料集](../../reporting-services/report-data/manage-shared-datasets.md)。  

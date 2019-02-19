@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4bebbcb2efb5dc8ef9bc056cb0bb62b3ee08fee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0fc0d438272b892fc411bf1887cf1adb18dcf7f0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679126"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291846"
 ---
 # <a name="report-builder-functions---lookup-function"></a>報表產生器函式 - Lookup 函式
   從包含名稱/值組的資料集傳回第一個符合指定之名稱的值。  

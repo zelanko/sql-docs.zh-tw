@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1b566e9bda7d409e5eb9fd607d1a20ca82029101
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 19c8b6a2f5f2e6468844d9ad5a2ad11b94f16b7a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030267"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289196"
 ---
 # <a name="report-builder-functions---min-function"></a>報表產生器函式 - Min 函式
   傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。  

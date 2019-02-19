@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1828388fd3079a6a59e840143c2db25d55f4072a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021512"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291306"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>報表產生器函式 - RunningValue 函式
   傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。  
