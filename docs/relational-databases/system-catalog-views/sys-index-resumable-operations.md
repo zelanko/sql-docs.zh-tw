@@ -1,7 +1,7 @@
 ---
 title: sys.index_resumable_operations (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df53ab01ecd535de0f742129cae56c44cd2d6221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821772"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425773"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **sys.index_resumable_operations**檢視由系統監視，並檢查目前的執行狀態，可繼續索引重建。  
-**適用於**: SQL Server 2017 和 Azure SQL Database 
+**適用於**：SQL Server 2017 和 Azure SQL Database
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
@@ -43,28 +44,34 @@ ms.locfileid: "47821772"
 |**state**|**tinyint**|可繼續索引作業的狀態：<br /><br />0 = 正在執行<br /><br />1 = 暫停|
 |**state_desc**|**nvarchar(60)**|操作狀態 （執行或暫停） 的可繼續索引的描述|  
 |**start_time**|**datetime**|索引作業開始時間 (不可為 null)|
-|**last_pause_time**|**日期時間**| 索引作業 (可為 null) 的上次暫停時間。 如果作業執行，而且永遠不會暫停，則為 NULL。|
+|**last_pause_time**|**datatime**| 索引作業 (可為 null) 的上次暫停時間。 如果作業執行，而且永遠不會暫停，則為 NULL。|
 |**total_execution_time**|**int**|從以分鐘為單位 (不可為 null) 的開始時間的總執行時間|
 |**percent_complete**|**real**|索引作業的進度完成，在 %(不可為 null)。|
-|**page_count**|**bigint**|新的索引建立作業和 (不可為 null) 的對應索引配置的索引頁的總數。 
+|**page_count**|**bigint**|新的索引建立作業和 (不可為 null) 的對應索引配置的索引頁的總數。
 
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
-   
-## <a name="example"></a>範例  
- 列出所有處於暫停狀態的可繼續索引重建作業。 
-  
-```  
+## <a name="permissions"></a>Permissions
+
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+
+## <a name="example"></a>範例
+
+ 列出所有處於暫停狀態的可繼續索引重建作業。
+
+```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
-```  
-  
-## <a name="see-also"></a>另請參閱 
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [目錄檢視&#40;TRANSACT-SQL&#41; ](catalog-views-transact-sql.md) [物件目錄檢視&#40;-&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;-&#41; ](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;TRANSACT-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;-SQL&AMP;#41;&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
- [查詢 SQL Server 系統目錄常見問題集](querying-the-sql-server-system-catalog-faq.md)   
-  
+```
+
+## <a name="see-also"></a>另請參閱
+
+- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [目錄檢視](catalog-views-transact-sql.md)
+- [物件目錄檢視](object-catalog-views-transact-sql.md)
+- [sys.indexes](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns](sys-index-columns-transact-sql.md)
+- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
+- [sys.objects](sys-index-columns-transact-sql.md)
+- [sys.key_constraints](sys-key-constraints-transact-sql.md)
+- [sys.filegroups](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [查詢 SQL Server 系統目錄常見問題集](querying-the-sql-server-system-catalog-faq.md)

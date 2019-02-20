@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046458"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425783"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "54046458"
 
 | 連結 | 描述 |
 |------|-------------|
-| [快速入門：SQL Server 中的"Hello world"Python 指令碼](quickstart-r-run-using-tsql.md) | 了解如何在 T-SQL 中呼叫 Python 的基本概念。 |
+| [快速入門：SQL Server 中的"Hello world"Python 指令碼](quickstart-python-run-using-t-sql.md) | 了解如何在 T-SQL 中呼叫 Python 的基本概念。 |
 | [快速入門：建立、 定型和使用 SQL Server 中的預存程序中的 Python 模型](quickstart-python-train-score-in-tsql.md) | 說明將 Python 程式碼內嵌在預存程序，提供輸入和預存程序執行的機制。 |
 | [教學課程：使用 revoscalepy 建立模型](use-python-revoscalepy-to-create-model.md) | 示範如何從遠端 Python 終端機中，使用 SQL Server 計算內容中執行程式碼。 您應該略為熟悉 Python 工具和環境。 範例程式碼是提供來建立模型，使用**rxLinMod**，從新**revoscalepy**程式庫。 |
 | [教學課程：了解適用於 SQL 開發人員的資料庫內 Python 分析](sqldev-in-database-python-for-sql-developers.md) | 此端對端逐步解說示範如何建置完整的 Python 解決方案，使用 T-SQL 預存程序的程序。 包含所有 Python 程式碼都。|
