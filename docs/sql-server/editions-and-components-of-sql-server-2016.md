@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420223"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265395"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |[資源管理員]|是|否|否|否|否|  
 |分割資料表平行處理原則|是|否|否|否|否|
 |多個檔案資料流容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
-|NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否|否|否|否|
+|NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否 <sup>4</sup>|否|否|否|
 |緩衝集區擴充|是|是|否|否|否|
 |IO 資源管理|是|否|否|否|否|  
 |延遲持久性|是|是|是|是|是|
@@ -188,6 +188,8 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 <sup>2</sup> 適用於 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1。 
 
 <sup>3</sup> 這項功能不會納入 LocalDB 安裝選項。
+
+<sup>4</sup> Standard Edition 與 SQL Server + CAL 型授權可以限制 SQL Server Standard 可使用的處理器數目，但 SQL Server Standard 是 NUMA 感知。 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |功能|Enterprise|Standard|Web|Express|Express with Advanced Services|  
