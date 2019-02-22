@@ -1,8 +1,0 @@
-- name: BLOB 與 OLE 物件
-  href: blobs-and-ole-objects.md
-- name: 取得大型資料
-  href: getting-large-data.md
-- name: 設定大型資料
-  href: setting-large-data.md
-- name: BLOB 輸出參數的串流支援
-  href: streaming-support-for-blob-output-parameters.md

@@ -1,8 +1,0 @@
-- name: 資料指標屬性
-  href: cursor-properties.md
-- name: 資料指標並行 (ODBC)
-  href: cursor-concurrency-odbc.md
-- name: 資料指標資料列集大小
-  href: cursor-rowset-size.md
-- name: 資料指標交易隔離等級
-  href: cursor-transaction-isolation-level.md

@@ -1,8 +1,0 @@
-- name: Node.js Driver for SQL Server
-  href: node-js-driver-for-sql-server.md
-- name: 步驟 1︰設定 Node.js 開發的開發環境
-  href: step-1-configure-development-environment-for-node-js-development.md
-- name: 步驟 2︰建立 Node.js 開發的 SQL 資料庫
-  href: step-2-create-a-sql-database-for-node-js-development.md
-- name: 步驟 3︰使用 Node.js 連線到 SQL 的概念證明
-  href: step-3-proof-of-concept-connecting-to-sql-using-node-js.md

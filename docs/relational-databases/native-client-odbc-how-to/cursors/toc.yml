@@ -1,8 +1,0 @@
-- name: 使用資料指標使用說明主題 (ODBC)
-  href: using-cursors-how-to-topics-odbc.md
-- name: 提取和更新資料列集 (ODBC)
-  href: fetch-and-update-rowsets-odbc.md
-- name: 使用資料指標 (ODBC)
-  href: use-cursors-odbc.md
-- name: 使用資料列集繫結 (ODBC)
-  href: use-rowset-binding-odbc.md

@@ -1,8 +1,0 @@
-- name: 開發自訂記錄提供者
-  href: developing-a-custom-log-provider.md
-- name: 建立自訂記錄提供者
-  href: creating-a-custom-log-provider.md
-- name: 撰寫自訂記錄提供者的程式碼
-  href: coding-a-custom-log-provider.md
-- name: 開發自訂記錄提供者的使用者介面
-  href: developing-a-user-interface-for-a-custom-log-provider.md

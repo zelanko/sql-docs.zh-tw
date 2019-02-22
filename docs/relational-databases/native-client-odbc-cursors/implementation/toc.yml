@@ -1,8 +1,0 @@
-- name: 如何實作資料指標
-  href: how-cursors-are-implemented.md
-- name: ODBC 資料指標程式庫
-  href: odbc-cursor-library.md
-- name: 使用伺服器資料指標
-  href: using-server-cursors.md
-- name: 使用 QL Server 預設結果集
-  href: using-sql-server-default-result-sets.md

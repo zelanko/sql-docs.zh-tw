@@ -1,8 +1,0 @@
-- name: 資料類型 (OLE DB)
-  href: data-types-ole-db.md
-- name: ITableDefinition 中的資料類型對應
-  href: data-type-mapping-in-itabledefinition.md
-- name: 資料列集和參數中的資料類型對應
-  href: data-type-mapping-in-rowsets-and-parameters.md
-- name: SSVARIANT 結構
-  href: ssvariant-structure.md
