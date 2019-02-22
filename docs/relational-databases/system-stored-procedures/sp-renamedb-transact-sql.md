@@ -1,5 +1,5 @@
 ---
-title: sp_renamedb & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_renamedb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebe5cac5ad9dbff5d19fddcd67204f640f1c16b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658886"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590243"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   變更資料庫的名稱。  
   
@@ -43,10 +43,10 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@dbname=**] **'***old_name&lt***'**  
+ [ **@dbname=**] **'***old_name***'**  
  這是資料庫的目前名稱。 *old_name&lt*已**sysname**，沒有預設值。  
   
- [  **@newname=**] **'***new_name***'**  
+ [ **@newname=**] **'***new_name***'**  
  這是資料庫的新名稱。 *new_name*必須遵循識別碼的規則。 *new_name*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -75,7 +75,7 @@ GO
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_helpdb &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

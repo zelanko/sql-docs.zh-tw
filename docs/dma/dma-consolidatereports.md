@@ -2,7 +2,7 @@
 title: 評估企業並合併評定報告 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA，以評估企業，並合併評定報告，然後再升級 SQL Server，或移轉至 Azure SQL Database。
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464774"
+ms.locfileid: "56590343"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -186,7 +186,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 - Azure SQL MI 雲端評量
 - 在內部部署環境評量
 
-  ![DMA 報告檢視的書籤](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![DMA 報告檢視的書籤](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 若要隱藏 [篩選] 刀鋒視窗，CTRL + 按一下 [上一頁] 按鈕：
 
