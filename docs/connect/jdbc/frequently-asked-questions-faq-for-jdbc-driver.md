@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 常見問題集 (FAQ)| Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb77bd5ac3ccc2e12dd7fbf9aff956981b25bce3
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: fb6212f5088a94788c366bb8d1fc61938610ea0f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737049"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154856"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver 常見問題集 (FAQ)
 
@@ -40,8 +40,8 @@ Microsoft JDBC Driver 7.2 支援 JDBC 4.2 和 4.3 （部分） 規格，並在�
 
 | JAR                        | JDBC 規格            | JDK 版本 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.2.0.jre11.jar | JDBC 4.3 （部分），和 4.2 | JDK 11.0    |
-| mssql-jdbc-7.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.2.1.jre11.jar | JDBC 4.3 （部分），和 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
  Microsoft JDBC Driver 7.0 支援 JDBC 4.2 和 4.3 （部分） 規格，並在安裝套件包含兩個 JAR 類別庫時，也將，如下所示：
 
