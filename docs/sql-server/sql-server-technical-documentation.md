@@ -1,6 +1,6 @@
 ---
 title: SQL Server 文件集 | Microsoft Docs
-ms.date: 08/11/2018
+ms.date: 08/12/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 307c1f1a526b96cfd3c01f9ba841e44189e70139
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 8a880b2e2239978f4d8638e0749360a1ac662ece
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044305"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676066"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

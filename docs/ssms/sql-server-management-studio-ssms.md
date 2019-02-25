@@ -13,18 +13,15 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 107bbfa29c7118252bbad06d2f81829e3d9dedf0
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 779597c0907760aa7f08c384d476ac3d3bcd63a9
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299205"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800952"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用於管理任何 SQL 基礎結構的整合式環境。 使用 SSMS 來存取、設定、管理、掌管和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、Azure SQL Database 和 SQL 資料倉儲的所有元件。 SSMS 能提供單一的完整公用程式，結合了廣泛的圖形工具和豐富的指令碼編輯器，使開發人員和資料庫管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
