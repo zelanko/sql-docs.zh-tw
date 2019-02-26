@@ -1,7 +1,7 @@
 ---
 title: 載入 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606198"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744608"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>載入 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ ms.locfileid: "51606198"
 您可以下載預先建置的驅動程式，您的平台，從[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 專案頁面。 每個安裝套件包含執行緒及非執行緒變體的 SQLSRV 和 PDO_SQLSRV 驅動程式檔案。 在 Windows 中，它們也會提供 32 位元和 64 位元的變體。 請參閱[Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)如需每個封裝中包含的驅動程式檔案的清單。 PHP 版本、 架構及 PHP 環境的 threadedness，必須符合的驅動程式檔案。
 
 在 Linux 和 macOS 上，安裝驅動程式可以或者使用 PECL，在中找到[安裝教學課程](../../connect/php/installation-tutorial-linux-mac.md)。
+
+您也可以建立從來源驅動程式，建置 PHP 時或使用`phpize`。 如果您選擇建置來源的驅動程式，您可以選擇建置靜態到 PHP 而不要加上建立共用延伸模組`--enable-sqlsrv=static --with-pdo_sqlsrv=static`（在 Linux 和 macOS） 或`--enable-sqlsrv=static --with-pdo-sqlsrv=static`（在 Windows 中) 至`./configure`命令建立 PHP。 如需有關 PHP 組建系統以及`phpize`，請參閱 < [PHP 文件](http://php.net/manual/install.php)。
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>將驅動程式檔案移至您的延伸目錄中  
 驅動程式檔案必須位於為 PHP 執行階段可以找到的目錄。 它是最簡單的方式將驅動程式檔案放在預設 PHP 延伸目錄-若要尋找預設目錄，請執行`php -i | sls extension_dir`在 Windows 上或`php -i | grep extension_dir`在 Linux/macOS 上。 如果您未使用的預設延伸模組目錄，指定的目錄，在 PHP 組態檔 (php.ini) 中，使用**extension_dir**選項。 例如，在 Windows 中，如果您已將驅動程式檔案放在您`c:\php\ext`目錄中，將下面這一行加入至 php.ini:

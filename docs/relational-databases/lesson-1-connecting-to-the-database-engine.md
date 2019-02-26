@@ -11,18 +11,15 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee35edcce1e72ebea42b429811b558aa61d06296
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300285"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801682"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連線到資料庫引擎
+# <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接至 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
 

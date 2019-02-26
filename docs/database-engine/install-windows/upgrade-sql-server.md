@@ -13,18 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1fafc2c94e92f2aeb878e8b1ecf6d9e6f86387d2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 3cbb53753c9a91ee67dfcd479fa121c9b2a8586a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300125"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802344"
 ---
 # <a name="upgrade-sql-server"></a>升級 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
  
  您可以將 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 的執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式以升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之前，請先檢閱下列升級程序的相關文章和版本資訊。  
   

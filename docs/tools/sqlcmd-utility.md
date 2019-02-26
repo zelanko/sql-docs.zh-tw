@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300098"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802374"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
 
 > SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > )。
@@ -64,9 +61,9 @@ ms.locfileid: "54300098"
 
 **版本資訊**
 
-版本編號：15.0 <br>
+版本號碼：15.0 <br>
 組建編號：15.0.1000.34<br>
-發行日期：2018 年 10 月 18 日
+發行日期： 2018 年 10 月 18 日
 
 SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉儲，以及 Always Encrypted 功能支援 Multi-factor Authentication (MFA)。
 新的 BCP 支援 Azure AD 驗證，包括 SQL Database 和 SQL 資料倉儲的 Multi-factor Authentication (MFA) 支援。
@@ -80,7 +77,7 @@ SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉
 > [!NOTE]
 > 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
 
-因為預設預先安裝，您可以嘗試 sqlcmd 公用程式從 Azure Cloud Shell:[![啟動 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "啟動 Cloud Shell")](https://shell.azure.com)
+您可以嘗試 sqlcmd 公用程式從 Azure Cloud Shell，因為它會預先安裝預設： [![啟動 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "啟動 Cloud Shell")](https://shell.azure.com)
 
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
@@ -215,7 +212,7 @@ sqlcmd
 
    若要啟用互動式驗證，提供使用者名稱-G 選項 (-U)，而不提供密碼。
 
-   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例：*Azure Active Directory 使用者名稱和密碼：*  
+   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例： *Azure Active Directory 使用者名稱和密碼*。  
 
    互動模式需要密碼才可手動輸入，或進行啟用，multi-factor authentication 使用的帳戶，請完成設定的 MFA 驗證方法。
 
@@ -251,7 +248,7 @@ sqlcmd
  宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
- 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **-M**，則會關閉 **-M**。 如需詳細資訊，請參閱[接聽程式、用戶端連線能力、應用程式容錯移轉](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 及[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](https://msdn.microsoft.com/library/ff878253.aspx)。 
+ 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **-M**，則會關閉 **-M**。 如需有關 [接聽程式、用戶端連線能力、應用程式容錯移轉](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集與 Always On 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 與[使用中次要：可讀取的次要複本 (Always On 可用性群組)](https://msdn.microsoft.com/library/ff878253.aspx)。 
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
@@ -840,7 +837,7 @@ sqlcmd
 
 `GO`
 
-當您按下 ENTER 時，會列印下列參考訊息：變更 'AdventureWorks2008R2' 的資料庫內容。  
+當您按 ENTER 時，會出現下列參考用訊息：「已將資料庫內容變更為 'AdventureWorks2012'」。  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 查詢的輸出格式  
  **sqlcmd** 會先列印包含選取清單中所指定之資料行名稱的資料行標頭。 資料行名稱是以 SQLCMDCOLSEP 字元分隔。 根據預設，這是一個空格。 如果資料行名稱長度小於資料行寬度，便會在輸出中填補空格直到下一個資料行。  
