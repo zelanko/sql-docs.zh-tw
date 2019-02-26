@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510820"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828418"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>如何設定 Linux 上的 SQL Server 持續性記憶體 (PMEM)
 
@@ -80,7 +80,7 @@ ndctl list
 
   一旦裝置已設有 ndctl、 格式化和掛接，您就可以在其中放置資料庫檔案。 您也可以建立新的資料庫 
 
-1. 使用追蹤旗標 3979，以啟用 SQL Server 資料庫檔案啟蒙。 此追蹤旗標啟動追蹤旗標，並因此需要使用 mssql conf 公用程式來啟用。
+1. 由於 PMEM 裝置 O_DIRECT 安全，啟用追蹤旗標來停用強制排清機制 3979。 此追蹤旗標啟動追蹤旗標，並因此需要使用 mssql conf 公用程式來啟用。 請注意，這是伺服器範圍組態變更，而且您不應該使用此追蹤旗標，如果您有任何需要的排清的強制的機制，以確保資料完整性的 O_DIRECT 不符合規範裝置。 如需詳細資訊，請參閱＜ https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux＞。
 
 1. 重新啟動 SQL Server。
 
