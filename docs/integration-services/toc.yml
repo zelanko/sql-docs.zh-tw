@@ -1,339 +1,1801 @@
 items:
+- name: SQL Server 根目錄 +
+  href: /sql/sql-server/sql-server-technical-documentation
 - name: SQL Server Integration Services
-  href: sql-server-integration-services.md
+  href: ../integration-services/sql-server-integration-services.md
 - name: 概觀
   items:
   - name: SQL Server 2016 Integration Services 的新功能
-    href: what-s-new-in-integration-services-in-sql-server-2016.md
+    href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md
   - name: SQL Server 2017 Integration Services 的新功能
-    href: what-s-new-in-integration-services-in-sql-server-2017.md
+    href: ../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md
   - name: SQL Server 版本支援的 Integration Services 功能
-    href: integration-services-features-supported-by-the-editions-of-sql-server.md
+    href: ../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md
   - name: Integration Services 開發人員文件
-    href: integration-services-developer-documentation.md
+    href: ../integration-services/integration-services-developer-documentation.md
   - name: Integration Services 回溯相容性
-    href: integration-services-backward-compatibility.md
+    href: ../integration-services/integration-services-backward-compatibility.md
 - name: 快速入門
   items:
   - name: 部署
     items:
     - name: 使用 SSMS 部署
-      href: ./ssis-quickstart-deploy-ssms.md
+      href: ../integration-services/ssis-quickstart-deploy-ssms.md
     - name: 使用 Transact-SQL (SSMS) 部署
-      href: ./ssis-quickstart-deploy-tsql-ssms.md
+      href: ../integration-services/ssis-quickstart-deploy-tsql-ssms.md
     - name: 使用 Transact-SQL (VS Code) 部署
-      href: ssis-quickstart-deploy-tsql-vscode.md
+      href: ../integration-services/ssis-quickstart-deploy-tsql-vscode.md
     - name: 從命令提示字元部署
-      href: ./ssis-quickstart-deploy-cmdline.md
+      href: ../integration-services/ssis-quickstart-deploy-cmdline.md
     - name: 使用 PowerShell 部署
-      href: ssis-quickstart-deploy-powershell.md
+      href: ../integration-services/ssis-quickstart-deploy-powershell.md
     - name: 使用 C# 部署
-      href: ./ssis-quickstart-deploy-dotnet.md
+      href: ../integration-services/ssis-quickstart-deploy-dotnet.md
   - name: '[執行]'
     items:
     - name: 使用 SSMS 執行
-      href: ./ssis-quickstart-run-ssms.md
+      href: ../integration-services/ssis-quickstart-run-ssms.md
     - name: 使用 Transact-SQL (SSMS) 執行
-      href: ./ssis-quickstart-run-tsql-ssms.md
+      href: ../integration-services/ssis-quickstart-run-tsql-ssms.md
     - name: 使用 Transact-SQL (VS Code) 執行
-      href: ssis-quickstart-run-tsql-vscode.md
+      href: ../integration-services/ssis-quickstart-run-tsql-vscode.md
     - name: 從命令提示字元執行
-      href: ./ssis-quickstart-run-cmdline.md
+      href: ../integration-services/ssis-quickstart-run-cmdline.md
     - name: 使用 PowerShell 執行
-      href: ssis-quickstart-run-powershell.md
+      href: ../integration-services/ssis-quickstart-run-powershell.md
     - name: 使用 C# 執行
-      href: ./ssis-quickstart-run-dotnet.md
+      href: ../integration-services/ssis-quickstart-run-dotnet.md
 - name: 在 Azure 中部署和執行套件
-  href: lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
+  href: ../integration-services/lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md
   items:
   - name: 教學課程 - 在 Azure 中部署和執行套件
-    href: lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
+    href: ../integration-services/lift-shift/ssis-azure-deploy-run-monitor-tutorial.md
   - name: 使用 Windows 驗證連線到資料
-    href: lift-shift/ssis-azure-connect-with-windows-auth.md
+    href: ../integration-services/lift-shift/ssis-azure-connect-with-windows-auth.md
   - name: 儲存檔案及連線到檔案共用
-    href: lift-shift/ssis-azure-files-file-shares.md
+    href: ../integration-services/lift-shift/ssis-azure-files-file-shares.md
   - name: 連線到 Azure 中的 SSIS 目錄
-    href: lift-shift/ssis-azure-connect-to-catalog-database.md
+    href: ../integration-services/lift-shift/ssis-azure-connect-to-catalog-database.md
   - name: 驗證部署到 Azure 的套件
-    href: lift-shift/ssis-azure-validate-packages.md
+    href: ../integration-services/lift-shift/ssis-azure-validate-packages.md
   - name: 在 Azure 中執行套件
-    href: lift-shift/ssis-azure-run-packages.md
+    href: ../integration-services/lift-shift/ssis-azure-run-packages.md
   - name: 在 Azure 中排程套件
-    href: lift-shift/ssis-azure-schedule-packages.md
+    href: ../integration-services/lift-shift/ssis-azure-schedule-packages.md
   - name: 在 Azure 中以 SSMS 排程套件
-    href: lift-shift/ssis-azure-schedule-packages-ssms.md
-- name: 安裝或升級
+    href: ../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md
+- name: 安裝 Integration Services
   href: ../integration-services/install-windows/install-integration-services.md
+- name: 並存安裝 Integration Services 版本
+  href: ../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
+- name: 升級 Integration Services
+  href: ../integration-services/install-windows/upgrade-integration-services.md
+  items:
+  - name: 升級 Integration Services 封裝
+    href: ../integration-services/install-windows/upgrade-integration-services-packages.md
+  - name: 使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
+    href: ../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
 - name: 開發與管理工具
-  href: integration-services-ssis-development-and-management-tools.md
+  href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: 專案和方案
-  href: integration-services-ssis-projects-and-solutions.md
+  href: ../integration-services/integration-services-ssis-projects-and-solutions.md
 - name: 使用者介面
-  href: integration-services-user-interface.md
+  href: ../integration-services/integration-services-user-interface.md
   items:
   - name: SSIS 設計師
-    href: ssis-designer.md
+    href: ../integration-services/ssis-designer.md
   - name: 進階編輯器
-    href: advanced-editor.md
+    href: ../integration-services/advanced-editor.md
   - name: 將元件分組或取消分組
-    href: group-or-ungroup-components.md
+    href: ../integration-services/group-or-ungroup-components.md
   - name: 使用封裝中的註解
-    href: use-annotations-in-packages.md
+    href: ../integration-services/use-annotations-in-packages.md
   - name: SSIS 工具箱
-    href: ssis-toolbox.md
+    href: ../integration-services/ssis-toolbox.md
   - name: Integration Services 設計師選項的 [一般]頁面
-    href: general-page-of-integration-services-designers-options.md
+    href: ../integration-services/general-page-of-integration-services-designers-options.md
 - name: Packages
-  href: integration-services-ssis-packages.md
+  href: ../integration-services/integration-services-ssis-packages.md
   items:
   - name: 在 SQL Server 資料工具中建立封裝
-    href: create-packages-in-sql-server-data-tools.md
+    href: ../integration-services/create-packages-in-sql-server-data-tools.md
   - name: 加入現有封裝的副本
-    href: add-copy-of-existing-package.md
+    href: ../integration-services/add-copy-of-existing-package.md
   - name: 設定封裝屬性
-    href: set-package-properties.md
+    href: ../integration-services/set-package-properties.md
   - name: 檢視封裝物件
-    href: view-package-objects.md
+    href: ../integration-services/view-package-objects.md
   - name: 在 SQL Server Data Tools 中複製封裝
-    href: copy-a-package-in-sql-server-data-tools.md
+    href: ../integration-services/copy-a-package-in-sql-server-data-tools.md
   - name: 複製封裝物件
-    href: copy-package-objects.md
+    href: ../integration-services/copy-package-objects.md
   - name: 儲存封裝
-    href: save-packages.md
+    href: ../integration-services/save-packages.md
   - name: 使用控制流程封裝組件在封裝之間重複使用控制流程
-    href: reuse-control-flow-across-packages-by-using-control-flow-package-parts.md
+    href: ../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md
   - name: 重複使用封裝物件
-    href: reuse-of-package-objects.md
+    href: ../integration-services/reuse-of-package-objects.md
   - name: 刪除封裝
-    href: delete-packages.md
+    href: ../integration-services/delete-packages.md
   - name: Encrypt
-    href: dtutil-utility.md
+    href: ../integration-services/dtutil-utility.md
   - name: 套件升級精靈 F1 說明
-    href: ssis-package-upgrade-wizard-f1-help.md
+    href: ../integration-services/ssis-package-upgrade-wizard-f1-help.md
   - name: 套件和專案參數
-    href: integration-services-ssis-package-and-project-parameters.md
-- name: 連接
+    href: ../integration-services/integration-services-ssis-package-and-project-parameters.md
+- name: 概觀
   href: ../integration-services/connection-manager/integration-services-ssis-connections.md
-- name: 控制流程
+- name: 資料來源
+  href: ../integration-services/connection-manager/data-sources.md
+- name: ADO 連接管理員
+  href: ../integration-services/connection-manager/ado-connection-manager.md
+- name: ADO.NET 連接管理員
+  href: ../integration-services/connection-manager/ado-net-connection-manager.md
+- name: Analysis Services 連接管理員
+  href: ../integration-services/connection-manager/analysis-services-connection-manager.md
+  items:
+  - name: 加入 Analysis Services 連接管理員對話方塊 UI 參考
+    href: ../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: Azure Data Lake Analytics Connection Manager
+  href: ../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md
+- name: Azure Data Lake Store 連線管理員
+  href: ../integration-services/connection-manager/azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight 連線管理員
+  href: ../integration-services/connection-manager/azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager 連線管理員
+  href: ../integration-services/connection-manager/azure-resource-manager-connection-manager.md
+- name: Azure 儲存體連線管理員
+  href: ../integration-services/connection-manager/azure-storage-connection-manager.md
+- name: Azure 訂用帳戶連線管理員
+  href: ../integration-services/connection-manager/azure-subscription-connection-manager.md
+- name: Excel 連接管理員
+  href: ../integration-services/connection-manager/excel-connection-manager.md
+- name: 檔案連接管理員
+  href: ../integration-services/connection-manager/file-connection-manager.md
+  items:
+  - name: 加入檔案連接管理員對話方塊 UI 參考
+    href: ../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+  - name: 建議資料行類型對話方塊 UI 參考
+    href: ../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md
+- name: 一般檔案連接管理員
+  href: ../integration-services/connection-manager/flat-file-connection-manager.md
+- name: FTP 連接管理員
+  href: ../integration-services/connection-manager/ftp-connection-manager.md
+- name: Hadoop 連接管理員
+  href: ../integration-services/connection-manager/hadoop-connection-manager.md
+- name: HTTP 連接管理員
+  href: ../integration-services/connection-manager/http-connection-manager.md
+- name: MSMQ 連接管理員
+  href: ../integration-services/connection-manager/msmq-connection-manager.md
+- name: 多個檔案連接管理員
+  href: ../integration-services/connection-manager/multiple-files-connection-manager.md
+- name: 多個一般檔案連接管理員
+  href: ../integration-services/connection-manager/multiple-flat-files-connection-manager.md
+- name: OData 連接管理員
+  href: ../integration-services/connection-manager/odata-connection-manager.md
+- name: ODBC 連接管理員
+  href: ../integration-services/connection-manager/odbc-connection-manager.md
+- name: OLE DB 連接管理員
+  href: ../integration-services/connection-manager/ole-db-connection-manager.md
+- name: SAP BW 連接管理員
+  href: ../integration-services/connection-manager/sap-bw-connection-manager.md
+- name: SMTP 連接管理員
+  href: ../integration-services/connection-manager/smtp-connection-manager.md
+- name: SMO 連線管理員
+  href: ../integration-services/connection-manager/smo-connection-manager.md
+- name: SQL Server Compact Edition 連接管理員
+  href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
+- name: WMI 連接管理員
+  href: ../integration-services/connection-manager/wmi-connection-manager.md
+- name: 概觀
   href: ../integration-services/control-flow/control-flow.md
-- name: 設計師中
+- name: 在控制流程中加入或刪除工作或容器
+  href: ../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md
+- name: 整合服務容器
+  href: ../integration-services/control-flow/integration-services-containers.md
+  items:
+  - name: Foreach 迴圈容器
+    href: ../integration-services/control-flow/foreach-loop-container.md
+  - name: 使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
+    href: ../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+  - name: For 迴圈容器
+    href: ../integration-services/control-flow/for-loop-container.md
+  - name: 時序容器
+    href: ../integration-services/control-flow/sequence-container.md
+  - name: 工作主機容器
+    href: ../integration-services/control-flow/task-host-container.md
+- name: Integration Services 工作
+  href: ../integration-services/control-flow/integration-services-tasks.md
+  items:
+  - name: Analysis Services 執行 DDL 工作
+    href: ../integration-services/control-flow/analysis-services-execute-ddl-task.md
+  - name: Analysis Services 處理工作
+    href: ../integration-services/control-flow/analysis-services-processing-task.md
+  - name: Azure Blob 下載工作
+    href: ../integration-services/control-flow/azure-blob-download-task.md
+  - name: Azure Blob 上傳工作
+    href: ../integration-services/control-flow/azure-blob-upload-task.md
+  - name: Azure Data Lake Analytics 工作
+    href: ../integration-services/control-flow/azure-data-lake-analytics-task.md
+  - name: Azure Data Lake Store 檔案系統工作
+    href: ../integration-services/control-flow/azure-data-lake-store-file-system-task.md
+  - name: Azure HDInsight 建立叢集工作
+    href: ../integration-services/control-flow/azure-hdinsight-create-cluster-task.md
+  - name: Azure HDInsight 刪除叢集工作
+    href: ../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md
+  - name: Azure HDInsight Hive 工作
+    href: ../integration-services/control-flow/azure-hdinsight-hive-task.md
+  - name: Azure HDInsight Pig 工作
+    href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
+  - name: Azure SQL DW 上傳工作
+    href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+  - name: 備份資料庫工作
+    href: ../integration-services/control-flow/back-up-database-task.md
+  - name: 大量插入工作
+    href: ../integration-services/control-flow/bulk-insert-task.md
+  - name: CDC 控制工作
+    href: ../integration-services/control-flow/cdc-control-task.md
+    items:
+    - name: CDC 控制工作自訂屬性
+      href: ../integration-services/control-flow/cdc-control-task-custom-properties.md
+  - name: 檢查資料庫完整性工作
+    href: ../integration-services/control-flow/check-database-integrity-task.md
+  - name: 資料流程工作
+    href: ../integration-services/control-flow/data-flow-task.md
+  - name: 資料採礦查詢工作
+    href: ../integration-services/control-flow/data-mining-query-task.md
+    items:
+    - name: 資料採礦查詢
+      href: ../integration-services/control-flow/data-mining-query.md
+  - name: 資料分析工作和檢視器
+    href: ../integration-services/control-flow/data-profiling-task-and-viewer.md
+    items:
+    - name: 資料分析工作的設定
+      href: ../integration-services/control-flow/setup-of-the-data-profiling-task.md
+    - name: 資料設定檔檢視器
+      href: ../integration-services/control-flow/data-profile-viewer.md
+    - name: 資料分析工作
+      href: ../integration-services/control-flow/data-profiling-task.md
+      items:
+      - name: 單一資料表快速分析表單 (資料分析工作)
+        href: ../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md
+      - name: Data Profiling Task Editor (Profile Requests Page)
+        href: ../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md
+        items:
+        - name: 候選索引鍵設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md
+        - name: 資料行長度散發設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md
+        - name: 資料行 Null 比例設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md
+        - name: 資料行模式設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md
+        - name: 資料行統計資料設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md
+        - name: 資料行值散發設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md
+        - name: 功能相依性設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md
+        - name: 值包含設定檔要求選項 (資料分析工作)
+          href: ../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md
+      - name: 資料分析工作編輯器 (一般頁面)
+        href: ../integration-services/control-flow/data-profiling-task-editor-general-page.md
+      - name: 在封裝工作流程中納入資料分析工作
+        href: ../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md
+  - name: 執行封裝工作
+    href: ../integration-services/control-flow/execute-package-task.md
+  - name: 執行處理工作
+    href: ../integration-services/control-flow/execute-process-task.md
+  - name: 執行 SQL Server Agent 作業工作
+    href: ../integration-services/control-flow/execute-sql-server-agent-job-task.md
+  - name: 執行 SQL 工作
+    href: ../integration-services/control-flow/execute-sql-task.md
+    items:
+    - name: MERGE in Integration Services Packages
+      href: ../integration-services/control-flow/merge-in-integration-services-packages.md
+  - name: 執行 T-SQL 陳述式工作
+    href: ../integration-services/control-flow/execute-t-sql-statement-task.md
+  - name: 運算式工作
+    href: ../integration-services/control-flow/expression-task.md
+  - name: 檔案系統工作
+    href: ../integration-services/control-flow/file-system-task.md
+  - name: FTP 工作
+    href: ../integration-services/control-flow/ftp-task.md
+  - name: Hadoop 檔案系統工作
+    href: ../integration-services/control-flow/hadoop-file-system-task.md
+  - name: Hadoop Hive 工作
+    href: ../integration-services/control-flow/hadoop-hive-task.md
+  - name: Hadoop Pig 工作
+    href: ../integration-services/control-flow/hadoop-pig-task.md
+  - name: 記錄清除工作
+    href: ../integration-services/control-flow/history-cleanup-task.md
+  - name: 維護清除工作
+    href: ../integration-services/control-flow/maintenance-cleanup-task.md
+  - name: Message Queue Task
+    href: ../integration-services/control-flow/message-queue-task.md
+    items:
+    - name: 選取變數
+      href: ../integration-services/control-flow/select-variables.md
+    - name: 選取封裝
+      href: ../integration-services/control-flow/select-a-package.md
+  - name: 通知操作員工作
+    href: ../integration-services/control-flow/notify-operator-task.md
+  - name: 重建索引工作
+    href: ../integration-services/control-flow/rebuild-index-task.md
+  - name: 重新組織索引工作
+    href: ../integration-services/control-flow/reorganize-index-task.md
+  - name: 指令碼工作
+    href: ../integration-services/control-flow/script-task.md
+    items:
+    - name: 選取變數頁面
+      href: ../integration-services/control-flow/select-variables-page.md
+  - name: 傳送郵件工作
+    href: ../integration-services/control-flow/send-mail-task.md
+  - name: 壓縮資料庫工作
+    href: ../integration-services/control-flow/shrink-database-task.md
+  - name: 傳送資料庫工作
+    href: ../integration-services/control-flow/transfer-database-task.md
+  - name: 傳送錯誤訊息工作
+    href: ../integration-services/control-flow/transfer-error-messages-task.md
+  - name: 傳送作業工作
+    href: ../integration-services/control-flow/transfer-jobs-task.md
+  - name: 傳送登入工作
+    href: ../integration-services/control-flow/transfer-logins-task.md
+  - name: 傳送主要預存程序工作
+    href: ../integration-services/control-flow/transfer-master-stored-procedures-task.md
+  - name: 傳送 SQL Server 物件工作
+    href: ../integration-services/control-flow/transfer-sql-server-objects-task.md
+  - name: 選取要傳送的物件
+    href: ../integration-services/control-flow/select-objects-to-transfer.md
+  - name: 更新統計資料工作
+    href: ../integration-services/control-flow/update-statistics-task.md
+  - name: Web 服務工作
+    href: ../integration-services/control-flow/web-service-task.md
+  - name: WMI 資料讀取器工作
+    href: ../integration-services/control-flow/wmi-data-reader-task.md
+  - name: WMI 事件監看員工作
+    href: ../integration-services/control-flow/wmi-event-watcher-task.md
+  - name: XML 工作
+    href: ../integration-services/control-flow/xml-task.md
+    items:
+    - name: Validate XML with the XML Task
+      href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
+- name: 優先順序條件約束
+  href: ../integration-services/control-flow/precedence-constraints.md
+- name: 概觀
   href: ../integration-services/data-flow/data-flow.md
+- name: 資料流程中的資料
+  href: ../integration-services/data-flow/data-in-data-flows.md
+  items:
+  - name: Integration Services 資料類型
+    href: ../integration-services/data-flow/integration-services-data-types.md
+  - name: 剖析資料
+    href: ../integration-services/data-flow/parsing-data.md
+  - name: 比較字串資料
+    href: ../integration-services/data-flow/comparing-string-data.md
+- name: 在資料流程中加入或刪除元件
+  href: ../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md
+- name: 設定資料流程元件的屬性
+  href: ../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md
+- name: 連接資料流程中的元件
+  href: ../integration-services/data-flow/connect-components-in-a-data-flow.md
+- name: Integration Services 路徑
+  href: ../integration-services/data-flow/integration-services-paths.md
+- name: 解析資料行參考編輯器
+  href: ../integration-services/data-flow/resolve-column-reference-editor.md
+- name: 資料檢視器
+  href: ../integration-services/data-flow/data-viewer.md
+- name: 處理資料中的錯誤
+  href: ../integration-services/data-flow/error-handling-in-data.md
+- name: 資料流程效能的功能
+  href: ../integration-services/data-flow/data-flow-performance-features.md
+- name: Source Assistant
+  href: ../integration-services/data-flow/source-assistant.md
+- name: Destination Assistant
+  href: ../integration-services/data-flow/destination-assistant.md
+- name: ADO NET 來源
+  href: ../integration-services/data-flow/ado-net-source.md
+- name: ADO NET 目的地
+  href: ../integration-services/data-flow/ado-net-destination.md
+- name: ADO NET 自訂屬性
+  href: ../integration-services/data-flow/ado-net-custom-properties.md
+- name: Azure Blob 來源
+  href: ../integration-services/data-flow/azure-blob-source.md
+- name: Azure Blob 目的地
+  href: ../integration-services/data-flow/azure-blob-destination.md
+- name: Azure Data Lake Store 來源
+  href: ../integration-services/data-flow/azure-data-lake-store-source.md
+- name: Azure Data Lake Store 目的地
+  href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: CDC 流程元件
+  href: ../integration-services/data-flow/cdc-flow-components.md
+  items:
+  - name: CDC 來源
+    href: ../integration-services/data-flow/cdc-source.md
+    items:
+    - name: CDC 來源自訂屬性
+      href: ../integration-services/data-flow/cdc-source-custom-properties.md
+    - name: 使用 CDC 來源擷取變更資料
+      href: ../integration-services/data-flow/extract-change-data-using-the-cdc-source.md
+  - name: CDC 分隔器
+    href: ../integration-services/data-flow/cdc-splitter.md
+  - name: 依據變更類型來導向 CDC 資料流
+    href: ../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md
+  - name: 定義狀態變數
+    href: ../integration-services/data-flow/define-a-state-variable.md
+- name: 資料採礦模型定型目的地
+  href: ../integration-services/data-flow/data-mining-model-training-destination.md
+  items:
+  - name: 資料採礦模型定型目的地自訂屬性
+    href: ../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md
+- name: 資料流目的地
+  href: ../integration-services/data-flow/data-streaming-destination.md
+  items:
+  - name: 逐步解說：發行 SSIS 封裝做為 SQL 檢視
+    href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
+- name: DataReader 目的地
+  href: ../integration-services/data-flow/datareader-destination.md
+  items:
+  - name: DataReader 目的地自訂屬性
+    href: ../integration-services/data-flow/datareader-destination-custom-properties.md
+- name: 維度處理目的地
+  href: ../integration-services/data-flow/dimension-processing-destination.md
+  items:
+  - name: 維度處理目的地自訂屬性
+    href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
+- name: Excel 來源
+  href: ../integration-services/data-flow/excel-source.md
+- name: Excel 目的地
+  href: ../integration-services/data-flow/excel-destination.md
+- name: Excel 自訂屬性
+  href: ../integration-services/data-flow/excel-custom-properties.md
+- name: 一般檔案來源
+  href: ../integration-services/data-flow/flat-file-source.md
+- name: 一般檔案目的地
+  href: ../integration-services/data-flow/flat-file-destination.md
+- name: HDFS 檔案來源
+  href: ../integration-services/data-flow/hdfs-file-source.md
+- name: HDFS 檔案目的地
+  href: ../integration-services/data-flow/hdfs-file-destination.md
+- name: 一般檔案自訂屬性
+  href: ../integration-services/data-flow/flat-file-custom-properties.md
+- name: OData 來源
+  href: ../integration-services/data-flow/odata-source.md
+  items:
+  - name: 教學課程：使用 OData 來源
+    href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
+  - name: 在執行階段提供 OData 來源查詢
+    href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
+  - name: OData 來源屬性
+    href: ../integration-services/data-flow/odata-source-properties.md
+- name: ODBC 流程元件
+  href: ../integration-services/data-flow/odbc-flow-components.md
+  items:
+  - name: ODBC 目的地
+    href: ../integration-services/data-flow/odbc-destination.md
+    items:
+    - name: 使用 ODBC 目的地來載入資料
+      href: ../integration-services/data-flow/load-data-by-using-the-odbc-destination.md
+    - name: ODBC Destination Custom Properties
+      href: ../integration-services/data-flow/odbc-destination-custom-properties.md
+  - name: ODBC 來源
+    href: ../integration-services/data-flow/odbc-source.md
+    items:
+    - name: 使用 ODBC 來源來擷取資料
+      href: ../integration-services/data-flow/extract-data-by-using-the-odbc-source.md
+    - name: ODBC Source Custom Properties
+      href: ../integration-services/data-flow/odbc-source-custom-properties.md
+- name: OLE DB 來源
+  href: ../integration-services/data-flow/ole-db-source.md
+  items:
+  - name: 在資料流程元件中將查詢參數對應至變數
+    href: ../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md
+  - name: 使用 OLE DB 來源來擷取資料
+    href: ../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md
+- name: OLE DB 目的地
+  href: ../integration-services/data-flow/ole-db-destination.md
+  items:
+  - name: 使用 OLE DB 目的地來載入資料
+    href: ../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md
+- name: OLE DB 自訂屬性
+  href: ../integration-services/data-flow/ole-db-custom-properties.md
+- name: 資料分割處理目的地
+  href: ../integration-services/data-flow/partition-processing-destination.md
+  items:
+  - name: 資料分割處理目的地自訂屬性
+    href: ../integration-services/data-flow/partition-processing-destination-custom-properties.md
+- name: Power Query 來源
+  href: ../integration-services/data-flow/power-query-source.md
+- name: 原始檔案來源
+  href: ../integration-services/data-flow/raw-file-source.md
+- name: Raw File Destination
+  href: ../integration-services/data-flow/raw-file-destination.md
+- name: 原始檔案自訂屬性
+  href: ../integration-services/data-flow/raw-file-custom-properties.md
+- name: 資料錄集目的地
+  href: ../integration-services/data-flow/recordset-destination.md
+  items:
+  - name: 使用資料錄集目的地
+    href: ../integration-services/data-flow/use-a-recordset-destination.md
+  - name: 資料錄集目的地自訂屬性
+    href: ../integration-services/data-flow/recordset-destination-custom-properties.md
+- name: SAP BW 來源
+  href: ../integration-services/data-flow/sap-bw-source.md
+  items:
+  - name: SAP BW 來源編輯器 (連接管理員頁面)
+    href: ../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md
+  - name: SAP BW 來源編輯器 (資料行頁面)
+    href: ../integration-services/data-flow/sap-bw-source-editor-columns-page.md
+  - name: SAP BW 來源編輯器 (錯誤輸出頁面)
+    href: ../integration-services/data-flow/sap-bw-source-editor-error-output-page.md
+  - name: SAP BW 來源編輯器 (進階頁面)
+    href: ../integration-services/data-flow/sap-bw-source-editor-advanced-page.md
+  - name: 查閱 RFC 目的地
+    href: ../integration-services/data-flow/look-up-rfc-destination.md
+  - name: 查閱 ProcessChain
+    href: ../integration-services/data-flow/look-up-process-chain.md
+  - name: 要求記錄檔
+    href: ../integration-services/data-flow/request-log.md
+  - name: 預覽
+    href: ../integration-services/data-flow/preview.md
+- name: SAP BW 目的地
+  href: ../integration-services/data-flow/sap-bw-destination.md
+  items:
+  - name: SAP BW 目的地編輯器 (連接管理員頁面)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md
+  - name: SAP BW 目的地編輯器 (對應頁面)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md
+  - name: SAP BW 目的地編輯器 (錯誤輸出頁面)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md
+  - name: SAP BW 目的地編輯器 (進階頁面)
+    href: ../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md
+  - name: 查閱 InfoPackage
+    href: ../integration-services/data-flow/look-up-infopackage.md
+  - name: 建立新的 InfoObject
+    href: ../integration-services/data-flow/create-new-infoobject.md
+  - name: 建立交易資料的 InfoCube
+    href: ../integration-services/data-flow/create-infocube-for-transaction-data.md
+  - name: 查閱 InfoObject
+    href: ../integration-services/data-flow/look-up-infoobject.md
+  - name: 建立 InfoSource
+    href: ../integration-services/data-flow/create-infosource.md
+  - name: 建立交易資料的 InfoSource
+    href: ../integration-services/data-flow/create-infosource-for-transaction-data.md
+  - name: '[建立主要資料的 InfoSource]'
+    href: ../integration-services/data-flow/create-infosource-for-master-data.md
+  - name: 建立 InfoPackage
+    href: ../integration-services/data-flow/create-infopackage.md
+- name: SQL Server Compact Edition 目的地
+  href: ../integration-services/data-flow/sql-server-compact-edition-destination.md
+  items:
+  - name: SQL Server Compact Edition 目的地自訂屬性
+    href: ../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server 目的地
+  href: ../integration-services/data-flow/sql-server-destination.md
+  items:
+  - name: 使用 SQL Server 目的地來大量載入資料
+    href: ../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md
+  - name: SQL Server 目的地自訂屬性
+    href: ../integration-services/data-flow/sql-server-destination-custom-properties.md
+- name: 概觀
+  href: ../integration-services/data-flow/transformations/integration-services-transformations.md
+- name: 彙總轉換
+  href: ../integration-services/data-flow/transformations/aggregate-transformation.md
+  items:
+  - name: 使用彙總轉換來彙總資料集中的值
+    href: ../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: 稽核轉換
+  href: ../integration-services/data-flow/transformations/audit-transformation.md
+- name: 平衡資料分佈器轉換
+  href: ../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md
+- name: 字元對應轉換
+  href: ../integration-services/data-flow/transformations/character-map-transformation.md
+- name: 條件式分割轉換
+  href: ../integration-services/data-flow/transformations/conditional-split-transformation.md
+  items:
+  - name: 使用條件式分割轉換來分割資料集
+    href: ../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: 複製資料行轉換
+  href: ../integration-services/data-flow/transformations/copy-column-transformation.md
+- name: 資料轉換
+  href: ../integration-services/data-flow/transformations/data-conversion-transformation.md
+  items:
+  - name: 使用資料轉換將資料轉換至不同的資料類型
+    href: ../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md
+- name: 資料採礦查詢轉換
+  href: ../integration-services/data-flow/transformations/data-mining-query-transformation.md
+- name: DQS 清理轉換
+  href: ../integration-services/data-flow/transformations/dqs-cleansing-transformation.md
+  items:
+  - name: DQS 清理連接管理員
+    href: ../integration-services/data-flow/transformations/dqs-cleansing-connection-manager.md
+  - name: 將資料品質規則套用至資料來源
+    href: ../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md
+  - name: 將資料行對應到複合定義域
+    href: ../integration-services/data-flow/transformations/map-columns-to-composite-domains.md
+- name: 衍生的資料行轉換
+  href: ../integration-services/data-flow/transformations/derived-column-transformation.md
+  items:
+  - name: 使用衍生的資料行轉換來衍生資料行值
+    href: ../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md
+- name: 匯出資料行轉換
+  href: ../integration-services/data-flow/transformations/export-column-transformation.md
+- name: 模糊群組轉換
+  href: ../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md
+  items:
+  - name: 使用模糊群組轉換來識別相似的資料列
+    href: ../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: 模糊查閱轉換
+  href: ../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md
+- name: 匯入資料行轉換
+  href: ../integration-services/data-flow/transformations/import-column-transformation.md
+- name: 查閱轉換
+  href: ../integration-services/data-flow/transformations/lookup-transformation.md
+  items:
+  - name: 以沒有快取或部分快取模式實作查閱
+    href: ../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+  - name: 使用快取連線管理員以完整快取模式實作查閱轉換
+    href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md
+  - name: 使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換
+    href: ../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+  - name: 針對查閱轉換來建立及部署快取
+    href: ../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md
+  - name: 建立關聯性
+    href: ../integration-services/data-flow/transformations/create-relationships.md
+  - name: 快取轉換
+    href: ../integration-services/data-flow/transformations/cache-transform.md
+    items:
+    - name: 快取連接管理員
+      href: ../integration-services/data-flow/transformations/cache-connection-manager.md
+- name: 合併轉換
+  href: ../integration-services/data-flow/transformations/merge-transformation.md
+- name: Merge Join Transformation
+  href: ../integration-services/data-flow/transformations/merge-join-transformation.md
+  items:
+  - name: 使用合併聯結轉換來擴充資料集
+    href: ../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md
+  - name: 排序合併和合併聯結轉換的資料
+    href: ../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md
+- name: 多點傳送轉換
+  href: ../integration-services/data-flow/transformations/multicast-transformation.md
+- name: OLE DB 命令轉換
+  href: ../integration-services/data-flow/transformations/ole-db-command-transformation.md
+- name: 百分比取樣轉換
+  href: ../integration-services/data-flow/transformations/percentage-sampling-transformation.md
+- name: 樞紐轉換
+  href: ../integration-services/data-flow/transformations/pivot-transformation.md
+- name: 資料列計數轉換
+  href: ../integration-services/data-flow/transformations/row-count-transformation.md
+- name: 資料列取樣轉換
+  href: ../integration-services/data-flow/transformations/row-sampling-transformation.md
+- name: 指令碼元件
+  href: ../integration-services/data-flow/transformations/script-component.md
+- name: 緩時變維度轉換
+  href: ../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md
+  items:
+  - name: 使用緩時變維度精靈來設定輸出
+    href: ../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md
+  - name: 緩時變維度精靈 F1 說明
+    href: ../integration-services/data-flow/transformations/slowly-changing-dimension-wizard-f1-help.md
+    items:
+    - name: 歡迎使用緩時變維度精靈
+      href: ../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md
+    - name: 選取維度資料表與索引鍵 (緩時變維度精靈)
+      href: ../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+    - name: 緩時變維度資料行 (緩時變維度精靈)
+      href: ../integration-services/data-flow/transformations/slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+    - name: 固定與變更屬性選項 (緩時變維度精靈)
+      href: ../integration-services/data-flow/transformations/fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+    - name: 記錄屬性選項 (緩時變維度精靈)
+      href: ../integration-services/data-flow/transformations/historical-attribute-options-slowly-changing-dimension-wizard.md
+    - name: 推斷的維度成員 (緩時變維度精靈)
+      href: ../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md
+    - name: 完成緩時變維度精靈
+      href: ../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md
+- name: 排序轉換
+  href: ../integration-services/data-flow/transformations/sort-transformation.md
+- name: 詞彙擷取轉換
+  href: ../integration-services/data-flow/transformations/term-extraction-transformation.md
+- name: 詞彙查閱轉換
+  href: ../integration-services/data-flow/transformations/term-lookup-transformation.md
+- name: 聯集全部轉換
+  href: ../integration-services/data-flow/transformations/union-all-transformation.md
+  items:
+  - name: 使用聯集全部轉換來合併資料
+    href: ../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md
+- name: 取消樞紐轉換
+  href: ../integration-services/data-flow/transformations/unpivot-transformation.md
+- name: 使用轉換來轉換資料
+  href: ../integration-services/data-flow/transformations/transform-data-with-transformations.md
+- name: 轉換自訂屬性
+  href: ../integration-services/data-flow/transformations/transformation-custom-properties.md
+- name: XML 來源
+  href: ../integration-services/data-flow/xml-source.md
+  items:
+  - name: 使用 XML 來源來擷取資料
+    href: ../integration-services/data-flow/extract-data-by-using-the-xml-source.md
+  - name: XML 來源自訂屬性
+    href: ../integration-services/data-flow/xml-source-custom-properties.md
 - name: 變數
-  href: integration-services-ssis-variables.md
+  href: ../integration-services/integration-services-ssis-variables.md
   items:
   - name: 變數視窗
-    href: variables-window.md
+    href: ../integration-services/variables-window.md
   - name: 系統變數
-    href: system-variables.md
-- name: 運算式
+    href: ../integration-services/system-variables.md
+- name: 概觀
   href: ../integration-services/expressions/integration-services-ssis-expressions.md
+- name: 進階 Integration Services 運算式範例
+  href: ../integration-services/expressions/examples-of-advanced-integration-services-expressions.md
+- name: 在封裝中使用屬性運算式
+  href: ../integration-services/expressions/use-property-expressions-in-packages.md
+  items:
+  - name: 屬性運算式中的列舉常數
+    href: ../integration-services/expressions/enumerated-constants-in-property-expressions.md
+  - name: 加入或變更屬性運算式
+    href: ../integration-services/expressions/add-or-change-a-property-expression.md
+    items:
+    - name: 運算式頁面
+      href: ../integration-services/expressions/expressions-page.md
+    - name: 屬性運算式編輯器
+      href: ../integration-services/expressions/property-expressions-editor.md
+    - name: 運算式產生器
+      href: ../integration-services/expressions/expression-builder.md
+- name: 運算式中的 Integration Services 資料類型
+  href: ../integration-services/expressions/integration-services-data-types-in-expressions.md
+- name: 資料截斷 (SSIS)
+  href: ../integration-services/expressions/data-truncation-ssis.md
+- name: 字串填補 (SSIS)
+  href: ../integration-services/expressions/string-padding-ssis.md
+- name: 語法 (SSIS)
+  href: ../integration-services/expressions/syntax-ssis.md
+- name: 識別碼 (SSIS)
+  href: ../integration-services/expressions/identifiers-ssis.md
+- name: 常值 (SSIS)
+  href: ../integration-services/expressions/numeric-string-and-boolean-literals.md
+- name: 運算子 (SSIS 運算式)
+  href: ../integration-services/expressions/operators-ssis-expression.md
+  items:
+  - name: 運算子優先順序與關聯性
+    href: ../integration-services/expressions/operator-precedence-and-associativity.md
+  - name: Cast (SSIS 運算式)
+    href: ../integration-services/expressions/cast-ssis-expression.md
+  - name: () (括號) (SSIS 運算式)
+    href: ../integration-services/expressions/parentheses-ssis-expression.md
+  - name: + (加) (SSIS)
+    href: ../integration-services/expressions/add-ssis.md
+  - name: + (串連) (SSIS 運算式)
+    href: ../integration-services/expressions/concatenate-ssis-expression.md
+  - name: '- (減) (SSIS 運算式)'
+    href: ../integration-services/expressions/subtract-ssis-expression.md
+  - name: '- (變換正負號) (SSIS 運算式)'
+    href: ../integration-services/expressions/negate-ssis-expression.md
+  - name: '* (乘) (SSIS 運算式)'
+    href: ../integration-services/expressions/multiply-ssis-expression.md
+  - name: Divide (SSIS 運算式)
+    href: ../integration-services/expressions/divide-ssis-expression.md
+  - name: (模數) (SSIS 運算式)
+    href: ../integration-services/expressions/modulo-ssis-expression.md
+  - name: '|| (邏輯 OR) (SSIS 運算式)'
+    href: ../integration-services/expressions/logical-or-ssis-expression.md
+  - name: '&& (邏輯 AND) (SSIS 運算式)'
+    href: ../integration-services/expressions/logical-and-ssis-expression.md
+  - name: '! (邏輯 Not) (SSIS 運算式)'
+    href: ../integration-services/expressions/logical-not-ssis-expression.md
+  - name: '| (位元包含 OR) (SSIS 運算式)'
+    href: ../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md
+  - name: ^ (位元排除 OR) (SSIS 運算式)
+    href: ../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md
+  - name: '& (位元 AND) (SSIS 運算式)'
+    href: ../integration-services/expressions/bitwise-and-ssis-expression.md
+  - name: ~ (位元 Not) (SSIS 運算式)
+    href: ../integration-services/expressions/bitwise-not-ssis-expression.md
+  - name: == (等於) (SSIS 運算式)
+    href: ../integration-services/expressions/equal-ssis-expression.md
+  - name: '!= (不等於) (SSIS 運算式)'
+    href: ../integration-services/expressions/unequal-ssis-expression.md
+  - name: '> (大於) (SSIS 運算式)'
+    href: ../integration-services/expressions/greater-than-ssis-expression.md
+  - name: < (小於) (SSIS 運算式)
+    href: ../integration-services/expressions/less-than-ssis-expression.md
+  - name: '>= (大於或等於) (SSIS 運算式)'
+    href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
+  - name: <= (小於或等於) (SSIS 運算式)
+    href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
+  - name: '? 所解碼的字元：(條件) (SSIS 運算式)'
+    href: ../integration-services/expressions/conditional-ssis-expression.md
+- name: 函數 (SSIS 運算式)
+  href: ../integration-services/expressions/functions-ssis-expression.md
+  items:
+  - name: ABS (SSIS 運算式)
+    href: ../integration-services/expressions/abs-ssis-expression.md
+  - name: CEILING (SSIS 運算式)
+    href: ../integration-services/expressions/ceiling-ssis-expression.md
+  - name: CODEPOINT (SSIS 運算式)
+    href: ../integration-services/expressions/codepoint-ssis-expression.md
+  - name: DATEADD (SSIS 運算式)
+    href: ../integration-services/expressions/dateadd-ssis-expression.md
+  - name: DATEDIFF (SSIS 運算式)
+    href: ../integration-services/expressions/datediff-ssis-expression.md
+  - name: DATEPART (SSIS 運算式)
+    href: ../integration-services/expressions/datepart-ssis-expression.md
+  - name: DAY (SSIS 運算式)
+    href: ../integration-services/expressions/day-ssis-expression.md
+  - name: EXP (SSIS 運算式)
+    href: ../integration-services/expressions/exp-ssis-expression.md
+  - name: FINDSTRING (SSIS 運算式)
+    href: ../integration-services/expressions/findstring-ssis-expression.md
+  - name: FLOOR (SSIS 運算式)
+    href: ../integration-services/expressions/floor-ssis-expression.md
+  - name: GETDATE (SSIS 運算式)
+    href: ../integration-services/expressions/getdate-ssis-expression.md
+  - name: GETUTCDATE (SSIS 運算式)
+    href: ../integration-services/expressions/getutcdate-ssis-expression.md
+  - name: HEX (SSIS 運算式)
+    href: ../integration-services/expressions/hex-ssis-expression.md
+  - name: ISNULL (SSIS 運算式)
+    href: ../integration-services/expressions/isnull-ssis-expression.md
+  - name: LEFT (SSIS 運算式)
+    href: ../integration-services/expressions/left-ssis-expression.md
+  - name: LEN (SSIS 運算式)
+    href: ../integration-services/expressions/len-ssis-expression.md
+  - name: LN (SSIS 運算式)
+    href: ../integration-services/expressions/ln-ssis-expression.md
+  - name: LOG (SSIS 運算式)
+    href: ../integration-services/expressions/log-ssis-expression.md
+  - name: LOWER (SSIS 運算式)
+    href: ../integration-services/expressions/lower-ssis-expression.md
+  - name: LTRIM (SSIS 運算式)
+    href: ../integration-services/expressions/ltrim-ssis-expression.md
+  - name: MONTH (SSIS 運算式)
+    href: ../integration-services/expressions/month-ssis-expression.md
+  - name: NULL (SSIS 運算式)
+    href: ../integration-services/expressions/null-ssis-expression.md
+  - name: POWER (SSIS 運算式)
+    href: ../integration-services/expressions/power-ssis-expression.md
+  - name: REPLACE (SSIS 運算式)
+    href: ../integration-services/expressions/replace-ssis-expression.md
+  - name: REPLACENULL (SSIS 運算式)
+    href: ../integration-services/expressions/replacenull-ssis-expression.md
+  - name: REPLICATE (SSIS 運算式)
+    href: ../integration-services/expressions/replicate-ssis-expression.md
+  - name: REVERSE (SSIS 運算式)
+    href: ../integration-services/expressions/reverse-ssis-expression.md
+  - name: RIGHT (SSIS 運算式)
+    href: ../integration-services/expressions/right-ssis-expression.md
+  - name: ROUND (SSIS 運算式)
+    href: ../integration-services/expressions/round-ssis-expression.md
+  - name: RTRIM (SSIS 運算式)
+    href: ../integration-services/expressions/rtrim-ssis-expression.md
+  - name: SIGN (SSIS 運算式)
+    href: ../integration-services/expressions/sign-ssis-expression.md
+  - name: SQRT (SSIS 運算式)
+    href: ../integration-services/expressions/sqrt-ssis-expression.md
+  - name: SQUARE (SSIS 運算式)
+    href: ../integration-services/expressions/square-ssis-expression.md
+  - name: SUBSTRING (SSIS 運算式)
+    href: ../integration-services/expressions/substring-ssis-expression.md
+  - name: TOKEN (SSIS 運算式)
+    href: ../integration-services/expressions/token-ssis-expression.md
+  - name: TOKENCOUNT (SSIS 運算式)
+    href: ../integration-services/expressions/tokencount-ssis-expression.md
+  - name: TRIM (SSIS 運算式)
+    href: ../integration-services/expressions/trim-ssis-expression.md
+  - name: UPPER (SSIS 運算式)
+    href: ../integration-services/expressions/upper-ssis-expression.md
+  - name: YEAR (SSIS 運算式)
+    href: ../integration-services/expressions/year-ssis-expression.md
 - name: 事件處理常式
-  href: integration-services-ssis-event-handlers.md
+  href: ../integration-services/integration-services-ssis-event-handlers.md
 - name: 查詢
-  href: integration-services-ssis-queries.md
+  href: ../integration-services/integration-services-ssis-queries.md
 - name: 交易
-  href: integration-services-transactions.md
-- name: 部署套件
-  href: packages/deploy-integration-services-ssis-projects-and-packages.md
-- name: 執行套件
-  href: packages/run-integration-services-ssis-packages.md
-- name: 相應放大
-  href: scale-out/integration-services-ssis-scale-out.md
+  href: ../integration-services/integration-services-transactions.md
+- name: 部署 Integration Services (SSIS) 專案和封裝
+  href: ../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md
+- name: 舊版封裝部署 (SSIS)
+  href: ../integration-services/packages/legacy-package-deployment-ssis.md
+- name: 執行 Integration Services (SSIS) 封裝
+  href: ../integration-services/packages/run-integration-services-ssis-packages.md
+  items:
+  - name: 執行套件公用程式 (dtexecui)
+    href: ../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md
+  - name: dtexec 公用程式
+    href: ../integration-services/packages/dtexec-utility.md
+  - name: 使用檢查點來重新啟動封裝
+    href: ../integration-services/packages/restart-packages-by-using-checkpoints.md
+  - name: 封裝的 SQL Server Agent 作業
+    href: ../integration-services/packages/sql-server-agent-jobs-for-packages.md
+  - name: 使用 SQL Server Agent 在遠端伺服器上設定封裝負載平衡
+    href: ../integration-services/packages/load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+- name: 概觀
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
+- name: 在單一電腦上開始使用 SSIS Scale Out
+  href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
+- name: 逐步解說：設定整合服務 Scale Out
+  href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
+- name: 在相應放大中執行套件
+  href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
+- name: 使用 Scale Out Manager 加入 Scale Out Worker
+  href: ../integration-services/scale-out/add-scale-out-worker.md
+- name: Scale Out Master
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out-master.md
+- name: Scale Out Worker
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out-worker.md
+- name: Scale Out 管理員
+  href: ../integration-services/scale-out/integration-services-ssis-scale-out-manager.md
+- name: 變更 Scale Out 記錄的帳戶
+  href: ../integration-services/scale-out/change-logdb-account.md
+- name: 管理 Scale Out 的憑證
+  href: ../integration-services/scale-out/deal-with-certificates-in-ssis-scale-out.md
+- name: Scale Out 的高可用性
+  href: ../integration-services/scale-out/scale-out-support-for-high-availability.md
+- name: 透過 SQL Server 容錯移轉叢集執行個體的高可用性
+  href: ../integration-services/scale-out/scale-out-failover-cluster-instance.md
+- name: 針對 Scale Out 進行疑難排解
+  href: ../integration-services/scale-out/troubleshooting-scale-out.md
 - name: 目錄和伺服器
-  href: catalog/integration-services-ssis-server-and-catalog.md
-- name: 服務 (舊版)
+  href: ../integration-services/catalog/integration-services-ssis-server-and-catalog.md
+- name: SSIS 目錄
+  href: ../integration-services/catalog/ssis-catalog.md
+- name: 檢視 SSIS 伺服器上的套件清單
+  href: ../integration-services/catalog/view-the-list-of-packages-on-the-integration-services-server.md
+- name: SSIS 目錄 Transact-SQL 參考
+  href: ../integration-services/catalog/integration-services-ssis-catalog-transact-sql-reference.md
+- name: SSIS 目錄對話方塊
+  items:
+  - name: 瀏覽所有主體對話方塊
+    href: ../integration-services/catalog/browse-all-principals-dialog-box.md
+  - name: 設定對話方塊
+    href: ../integration-services/catalog/configure-dialog-box.md
+  - name: 資料夾屬性對話方塊
+    href: ../integration-services/catalog/folder-properties-dialog-box.md
+  - name: 封裝屬性對話方塊
+    href: ../integration-services/catalog/package-properties-dialog-box.md
+  - name: 專案屬性對話方塊
+    href: ../integration-services/catalog/project-properties-dialog-box.md
+  - name: 專案版本對話方塊
+    href: ../integration-services/catalog/project-versions-dialog-box.md
+  - name: 設定參數值對話方塊
+    href: ../integration-services/catalog/set-parameter-value-dialog-box.md
+  - name: 驗證對話方塊
+    href: ../integration-services/catalog/validate-dialog-box.md
+- name: Integration Services (SSIS) 服務
   href: ../integration-services/service/integration-services-service-ssis-service.md
-- name: Security
+- name: 封裝管理 (SSIS 服務)
+  href: ../integration-services/service/package-management-ssis-service.md
+- name: Integration Services 服務所記錄的事件
+  href: ../integration-services/service/events-logged-by-the-integration-services-service.md
+- name: 叢集中的 Integration Services (SSIS)
+  href: ../integration-services/service/integration-services-ssis-in-a-cluster.md
+- name: 概觀
   href: ../integration-services/security/security-overview-integration-services.md
-- name: 效能
+- name: 封裝中的敏感性資料存取控制
+  href: ../integration-services/security/access-control-for-sensitive-data-in-packages.md
+- name: 使用數位簽章來識別封裝的來源
+  href: ../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md
+- name: Integration Services 角色 (SSIS 服務)
+  href: ../integration-services/security/integration-services-roles-ssis-service.md
+- name: 監視執行封裝和其他作業
   href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
-- name: 疑難排解
+- name: Integration Services 封裝所記錄的事件
+  href: ../integration-services/performance/events-logged-by-an-integration-services-package.md
+- name: Integration Services (SSIS) 記錄
+  href: ../integration-services/performance/integration-services-ssis-logging.md
+- name: 效能計數器
+  href: ../integration-services/performance/performance-counters.md
+- name: 概觀
   href: ../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md
-- name: 系統檢視表
+- name: 套件開發的疑難排解和偵錯
+  items:
+  - name: 疑難排解封裝開發的工具
+    href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md
+  - name: 偵錯控制流程
+    href: ../integration-services/troubleshooting/debugging-control-flow.md
+  - name: 偵錯指令碼
+    href: ../integration-services/troubleshooting/debugging-script.md
+  - name: 偵錯資料流程
+    href: ../integration-services/troubleshooting/debugging-data-flow.md
+- name: 疑難排解封裝連接的工具
+  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: 封裝執行的疑難排解工具
+  href: ../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md
+- name: 疑難排解封裝執行的報表
+  href: ../integration-services/troubleshooting/troubleshooting-reports-for-package-execution.md
+- name: 產生封裝執行的傾印檔案
+  href: ../integration-services/troubleshooting/generating-dump-files-for-package-execution.md
+- name: 概觀
   href: ../integration-services/system-views/views-integration-services-catalog.md
-- name: 系統預存程序
+- name: catalog.catalog_properties
+  href: ../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md
+- name: catalog.effective_object_permissions
+  href: ../integration-services/system-views/catalog-effective-object-permissions-ssisdb-database.md
+- name: catalog.environment_variables
+  href: ../integration-services/system-views/catalog-environment-variables-ssisdb-database.md
+- name: catalog.environment_references
+  href: ../integration-services/system-views/catalog-environment-references-ssisdb-database.md
+- name: catalog.environments
+  href: ../integration-services/system-views/catalog-environments-ssisdb-database.md
+- name: catalog.event_message_context
+  href: ../integration-services/system-views/catalog-event-message-context.md
+- name: catalog.event_messages
+  href: ../integration-services/system-views/catalog-event-messages.md
+- name: catalog.executable_statistics
+  href: ../integration-services/system-views/catalog-executable-statistics.md
+- name: catalog.executables
+  href: ../integration-services/system-views/catalog-executables.md
+- name: catalog.execution_component_phases
+  href: ../integration-services/system-views/catalog-execution-component-phases.md
+- name: catalog.execution_data_statistics
+  href: ../integration-services/system-views/catalog-execution-data-statistics.md
+- name: catalog.execution_data_taps
+  href: ../integration-services/system-views/catalog-execution-data-taps.md
+- name: catalog.execution_parameter_values
+  href: ../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md
+- name: catalog.execution_property_override_values
+  href: ../integration-services/system-views/catalog-execution-property-override-values.md
+- name: catalog.executions
+  href: ../integration-services/system-views/catalog-executions-ssisdb-database.md
+- name: catalog.explicit_object_permissions
+  href: ../integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database.md
+- name: catalog.extended_operation_info
+  href: ../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md
+- name: catalog.folders
+  href: ../integration-services/system-views/catalog-folders-ssisdb-database.md
+- name: catalog.object_parameters
+  href: ../integration-services/system-views/catalog-object-parameters-ssisdb-database.md
+- name: catalog.object_versions
+  href: ../integration-services/system-views/catalog-object-versions-ssisdb-database.md
+- name: catalog.operation_messages
+  href: ../integration-services/system-views/catalog-operation-messages-ssisdb-database.md
+- name: catalog.operations
+  href: ../integration-services/system-views/catalog-operations-ssisdb-database.md
+- name: catalog.packages
+  href: ../integration-services/system-views/catalog-packages-ssisdb-database.md
+- name: catalog.projects
+  href: ../integration-services/system-views/catalog-projects-ssisdb-database.md
+- name: catalog.validations
+  href: ../integration-services/system-views/catalog-validations-ssisdb-database.md
+- name: catalog.master_properties
+  href: ../integration-services/system-views/catalog-master-properties-ssisdb-database.md
+- name: catalog.worker_agents
+  href: ../integration-services/system-views/catalog-worker-agents-ssisdb-database.md
+- name: 概觀
   href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
+- name: 加入
+  items:
+  - name: catalog.add_data_tap
+    href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
+  - name: catalog.add_data_tap_by_guid
+    href: ../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md
+  - name: catalog.add_execution_worker
+    href: ../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md
+- name: catalog.check_schema_version
+  href: ../integration-services/system-stored-procedures/catalog-check-schema-version.md
+- name: catalog.clear_object_parameter_value
+  href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
+- name: catalog.configure_catalog
+  href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
+- name: 建立
+  items:
+  - name: catalog.create_customized_logging_level
+    href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
+  - name: catalog.create_environment
+    href: ../integration-services/system-stored-procedures/catalog-create-environment-ssisdb-database.md
+  - name: catalog.create_environment_reference
+    href: ../integration-services/system-stored-procedures/catalog-create-environment-reference-ssisdb-database.md
+  - name: catalog.create_environment_variable
+    href: ../integration-services/system-stored-procedures/catalog-create-environment-variable-ssisdb-database.md
+  - name: catalog.create_execution
+    href: ../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md
+  - name: catalog.create_execution_dump
+    href: ../integration-services/system-stored-procedures/catalog-create-execution-dump.md
+  - name: catalog.create_folder
+    href: ../integration-services/system-stored-procedures/catalog-create-folder-ssisdb-database.md
+- name: DELETE
+  items:
+  - name: catalog.delete_customized_logging_level
+    href: ../integration-services/system-stored-procedures/catalog-delete-customized-logging-level.md
+  - name: catalog.delete_environment
+    href: ../integration-services/system-stored-procedures/catalog-delete-environment-ssisdb-database.md
+  - name: catalog.delete_environment_reference
+    href: ../integration-services/system-stored-procedures/catalog-delete-environment-reference-ssisdb-database.md
+  - name: catalog.delete_environment_variable
+    href: ../integration-services/system-stored-procedures/catalog-delete-environment-variable-ssisdb-database.md
+  - name: catalog.delete_folder
+    href: ../integration-services/system-stored-procedures/catalog-delete-folder-ssisdb-database.md
+  - name: catalog.delete_project
+    href: ../integration-services/system-stored-procedures/catalog-delete-project-ssisdb-database.md
+- name: catalog.deny_permission
+  href: ../integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database.md
+- name: 部署
+  items:
+  - name: catalog.deploy_packages
+    href: ../integration-services/system-stored-procedures/catalog-deploy-packages.md
+  - name: catalog.deploy_project
+    href: ../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md
+- name: catalog.disable_worker_agent
+  href: ../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md
+- name: catalog.enable_worker_agent
+  href: ../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md
+- name: Get
+  items:
+  - name: catalog.get_parameter_values
+    href: ../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md
+  - name: catalog.get_project
+    href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
+- name: catalog.grant_permission
+  href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
+- name: '[移動]'
+  items:
+  - name: catalog.move_environment
+    href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
+  - name: catalog.move_project
+    href: ../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md
+- name: catalog.remove_data_tap
+  href: ../integration-services/system-stored-procedures/catalog-remove-data-tap.md
+- name: Rename
+  items:
+  - name: catalog.rename_customized_logging_level
+    href: ../integration-services/system-stored-procedures/catalog-rename-customized-logging-level.md
+  - name: catalog.rename_environment
+    href: ../integration-services/system-stored-procedures/catalog-rename-environment-ssisdb-database.md
+  - name: catalog.rename_folder
+    href: ../integration-services/system-stored-procedures/catalog-rename-folder-ssisdb-database.md
+- name: catalog.restore_project
+  href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
+- name: catalog.revoke_permission
+  href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
+- name: 將
+  items:
+  - name: catalog.set_customized_logging_level_description
+    href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
+  - name: catalog.set_customized_logging_level_value
+    href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-value.md
+  - name: catalog.set_environment_property
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-property-ssisdb-database.md
+  - name: catalog.set_environment_reference_type
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-reference-type-ssisdb-database.md
+  - name: catalog.set_environment_variable_property
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-property-ssisdb-database.md
+  - name: catalog.set_environment_variable_protection
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-protection-ssisdb-database.md
+  - name: catalog.set_environment_variable_value
+    href: ../integration-services/system-stored-procedures/catalog-set-environment-variable-value-ssisdb-database.md
+  - name: catalog.set_execution_parameter_value
+    href: ../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md
+  - name: catalog.set_execution_property_override_value
+    href: ../integration-services/system-stored-procedures/catalog-set-execution-property-override-value.md
+  - name: catalog.set_folder_description
+    href: ../integration-services/system-stored-procedures/catalog-set-folder-description-ssisdb-database.md
+  - name: catalog.set_object_parameter_value
+    href: ../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md
+  - name: catalog.set_worker_agent_property
+    href: ../integration-services/system-stored-procedures/catalog-set-worker-agent-property-ssisdb-database.md
+- name: catalog.startup
+  href: ../integration-services/system-stored-procedures/catalog-startup.md
+- name: catalog.start_execution
+  href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
+- name: catalog.stop_operation
+  href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
+- name: Update
+  items:
+  - name: catalog.update_logdb_info (SSISDB 資料庫)
+    href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
+  - name: catalog.update_master_address (SSISDB 資料庫)
+    href: ../integration-services/system-stored-procedures/catalog-update-master-address.md
+- name: Validate
+  items:
+  - name: catalog.validate_package
+    href: ../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md
+  - name: catalog.validate_project
+    href: ../integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database.md
+- name: 清理
+  items:
+  - name: catalog.cleanup_server_execution_keys
+    href: ../integration-services/system-stored-procedures/catalog-cleanup-server-execution-keys.md
+  - name: catalog.cleanup_server_log
+    href: ../integration-services/system-stored-procedures/catalog-cleanup-server-log.md
 - name: 系統函數 - dm_execution_performance_counters
-  href: functions-dm-execution-performance-counters.md
+  href: ../integration-services/functions-dm-execution-performance-counters.md
 - name: 錯誤和事件參考
-  href: errors-and-events-reference-integration-services.md
+  href: ../integration-services/errors-and-events-reference-integration-services.md
   items:
   - name: Integration Services 錯誤和訊息參考
-    href: integration-services-error-and-message-reference.md
+    href: ../integration-services/integration-services-error-and-message-reference.md
 - name: 指令碼和程式設計
   items:
   - name: Integration Services 程式設計概觀
-    href: integration-services-programming-overview.md
+    href: ../integration-services/integration-services-programming-overview.md
   - name: 了解同步和非同步轉換
-    href: understanding-synchronous-and-asynchronous-transformations.md
+    href: ../integration-services/understanding-synchronous-and-asynchronous-transformations.md
   - name: 以程式設計方式使用連接管理員
-    href: working-with-connection-managers-programmatically.md
-  - name: 使用指令碼來擴充套件
+    href: ../integration-services/working-with-connection-managers-programmatically.md
+  - name: 使用指令碼擴充封裝
     href: ../integration-services/extending-packages-scripting/extending-packages-with-scripting.md
-  - name: 使用自訂物件來擴充套件
+  - name: 比較指令碼工作和指令碼元件
+    href: ../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md
+  - name: 比較指令碼方案和自訂物件
+    href: ../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md
+  - name: 參考指令碼解決方案中的其他組件
+    href: ../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md
+  - name: 在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼
+    href: ../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md
+  - name: 以指令碼工作擴充封裝
+    href: ../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md
+  - name: 在指令碼工作編輯器設定指令碼工作
+    href: ../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md
+  - name: 指令碼工作的程式碼撰寫和偵錯
+    href: ../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md
+  - name: 在指令碼工作中使用變數
+    href: ../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md
+  - name: 連接至指令碼工作中的資料來源
+    href: ../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md
+  - name: 在指令碼工作中引發事件
+    href: ../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md
+  - name: 在指令碼工作中記錄
+    href: ../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md
+  - name: 從指令碼工作中傳回結果
+    href: ../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md
+  - name: 指令碼工作範例
+    href: ../integration-services/extending-packages-scripting-task-examples/script-task-examples.md
+  - name: 以指令碼工作偵測空的一般檔案
+    href: ../integration-services/extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md
+  - name: 以指令碼工作尋找安裝的印表機
+    href: ../integration-services/extending-packages-scripting-task-examples/finding-installed-printers-with-the-script-task.md
+  - name: 以指令碼工作蒐集 ForEach 迴圈的清單
+    href: ../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md
+  - name: 以指令碼工作監視效能計數器
+    href: ../integration-services/extending-packages-scripting-task-examples/monitoring-performance-counters-with-the-script-task.md
+  - name: 以指令碼工作查詢 Active Directory
+    href: ../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md
+  - name: 使用指令碼工作傳送 HTML 郵件訊息
+    href: ../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md
+  - name: 以指令碼工作傳送至遠端私用訊息佇列
+    href: ../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md
+  - name: 以指令碼工作處理 Excel 檔案
+    href: ../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md
+  - name: 以指令碼工作處理影像
+    href: ../integration-services/extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md
+  - name: Extending the Data Flow with the Script Component
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md
+  - name: 在指令碼元件編輯器中設定指令碼元件
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md
+  - name: 指令碼元件的程式碼撰寫和偵錯
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md
+  - name: 了解指令碼元件物件模型
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md
+  - name: 在指令碼元件中使用變數
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md
+  - name: 連接到指令碼元件中的資料來源
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md
+  - name: 在指令碼元件中引發事件
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md
+  - name: 在指令碼元件中記錄
+    href: ../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md
+  - name: 開發指令碼元件的特定類型
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md
+  - name: 以指令碼元件建立來源
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md
+  - name: 使用指令碼元件建立同步轉換
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md
+  - name: 使用指令碼元件建立非同步轉換
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md
+  - name: 以指令碼元件建立目的地
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md
+  - name: 額外的指令碼元件範例
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md
+  - name: 使用指令碼元件建立 ODBC 目的地
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/creating-an-odbc-destination-with-the-script-component.md
+  - name: 使用指令碼元件增強錯誤輸出
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md
+  - name: 使用指令碼元件剖析非標準文字檔案格式
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/parsing-non-standard-text-file-formats-with-the-script-component.md
+  - name: 模擬指令碼元件的錯誤輸出
+    href: ../integration-services/extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md
+  - name: 使用自訂物件擴充封裝
     href: ../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md
-  - name: 以程式設計方式建置套件
+  - name: 開發 Integration Services 的自訂物件
+    href: ../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md
+  - name: 保存自訂物件
+    href: ../integration-services/extending-packages-custom-objects/persisting-custom-objects.md
+  - name: 建立、部署和偵錯自訂物件
+    href: ../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md
+  - name: 支援自訂元件中的多目標
+    href: ../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md
+  - name: 開發自訂工作
+    href: ../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md
+  - name: 建立自訂工作
+    href: ../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md
+  - name: 撰寫自訂工作的程式碼
+    href: ../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md
+  - name: 連接至自訂工作中的資料來源
+    href: ../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md
+  - name: 引發並在自訂工作中定義事件
+    href: ../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md
+  - name: 新增自訂工作中的偵錯支援
+    href: ../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md
+  - name: 開發自訂工作的使用者介面
+    href: ../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md
+  - name: 開發自訂連接管理員
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md
+  - name: 建立自訂連接管理員
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md
+  - name: 撰寫自訂連接管理員的程式碼
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md
+  - name: 開發自訂連接管理員的使用者介面
+    href: ../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md
+  - name: 開發自訂記錄提供者
+    href: ../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md
+  - name: 建立自訂記錄提供者
+    href: ../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md
+  - name: 撰寫自訂記錄提供者的程式碼
+    href: ../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md
+  - name: 開發自訂記錄提供者的使用者介面
+    href: ../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md
+  - name: 開發自訂 ForEach 列舉值
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md
+  - name: 建立自訂 Foreach 列舉值
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md
+  - name: 撰寫自訂 Foreach 列舉值的程式碼
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md
+  - name: 開發自訂 ForEach 列舉值的使用者介面
+    href: ../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md
+  - name: 開發自訂資料流程元件
+    href: ../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md
+  - name: 建立自訂資料流程元件
+    href: ../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md
+  - name: 資料流程元件的設計階段方法
+    href: ../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md
+  - name: 資料流程元件的執行階段方法
+    href: ../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md
+  - name: 執行計劃和緩衝區配置
+    href: ../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md
+  - name: 使用資料流程中的資料類型
+    href: ../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md
+  - name: 驗證資料流程元件
+    href: ../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md
+  - name: 實作外部中繼資料
+    href: ../integration-services/extending-packages-custom-objects/data-flow/implementing-external-metadata.md
+  - name: 在資料流程元件中引發和定義事件
+    href: ../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md
+  - name: 在資料流程元件中記錄和定義記錄項目
+    href: ../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md
+  - name: 使用資料流程元件中的錯誤輸出
+    href: ../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md
+  - name: 開發資料流程元件的使用者介面
+    href: ../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md
+  - name: 升級資料流程元件的版本
+    href: ../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md
+  - name: 發行項的子類別
+    items:
+    - name: 開發自訂目的地元件
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md
+    - name: 開發自訂來源元件
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md
+    - name: 開發具有非同步輸出的自訂轉換元件
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md
+    - name: 開發具有同步輸出的自訂轉換元件
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md
+    - name: 開發具有多個輸入的資料流程元件
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-data-flow-components-with-multiple-inputs.md
+    - name: 開發特定類型的資料流程元件
+      href: ../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md
+  - name: 以程式設計方式加入連接
     href: ../integration-services/building-packages-programmatically/adding-connections-programmatically.md
-  - name: 以程式設計方式執行及管理套件
+  - name: 以程式設計方式建立封裝
+    href: ../integration-services/building-packages-programmatically/building-packages-programmatically.md
+  - name: 以程式設計方式建立封裝
+    href: ../integration-services/building-packages-programmatically/creating-a-package-programmatically.md
+  - name: 以程式設計方式加入工作
+    href: ../integration-services/building-packages-programmatically/adding-tasks-programmatically.md
+  - name: 以程式設計方式連接工作
+    href: ../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md
+  - name: 以程式設計方式使用變數
+    href: ../integration-services/building-packages-programmatically/working-with-variables-programmatically.md
+  - name: 以程式設計方式處理事件
+    href: ../integration-services/building-packages-programmatically/handling-events-programmatically.md
+  - name: 以程式設計的方式啟用記錄
+    href: ../integration-services/building-packages-programmatically/enabling-logging-programmatically.md
+  - name: 以程式設計方式加入資料流程工作
+    href: ../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md
+  - name: 以程式設計方式探索資料流程元件
+    href: ../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md
+  - name: 以程式設計方式加入資料流程元件
+    href: ../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md
+  - name: 以程式設計的方式連接資料流程元件
+    href: ../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md
+  - name: 以程式設計方式選取輸入資料行
+    href: ../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md
+  - name: 以程式設計方式儲存封裝
+    href: ../integration-services/building-packages-programmatically/saving-a-package-programmatically.md
+  - name: 以程式設計方式執行及管理封裝
     href: ../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md
+  - name: 了解本機和遠端執行之間的差異
+    href: ../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md
+  - name: 以程式設計的方式載入和執行本機封裝
+    href: ../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md
+  - name: 以程式設計方式載入和執行遠端封裝
+    href: ../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md
+  - name: 載入本機封裝的輸出
+    href: ../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md
+  - name: 以程式設計方式列舉可用的封裝
+    href: ../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md
+  - name: 以程式設計方式管理封裝與資料夾
+    href: ../integration-services/run-manage-packages-programmatically/managing-packages-and-folders-programmatically.md
+  - name: 以程式設計方式管理執行中的封裝
+    href: ../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md
+  - name: 以程式設計方式管理封裝角色 (SSIS 服務)
+    href: ../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md
 - name: Integration Services 語言參考
-  href: integration-services-language-reference.md
+  href: ../integration-services/integration-services-language-reference.md
 - name: Azure Feature Pack for Integration Services (SSIS)
-  href: azure-feature-pack-for-integration-services-ssis.md
+  href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Integration Services (SSIS) 中的 Hadoop 和 HDFS 支援
-  href: hadoop-and-hdfs-support-in-integration-services-ssis.md
+  href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
 - name: Microsoft Connectors for Oracle and Teradata by Attunity
-  href: attunity-connectors.md
-- name: 匯入和匯出資料
+  href: ../integration-services/attunity-connectors.md
+- name: SQL Server 匯入和匯出精靈
   href: ../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+- name: 開始使用這個匯入和匯出精靈的簡單範例
+  href: ../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md
+- name: 啟動 SQL Server 匯入和匯出精靈
+  href: ../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md
+- name: 使用 SQL Server 的 [匯入及匯出精靈] 連線到資料來源
+  href: ../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md
+  items:
+  - name: 連線至 SQL Server 資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md
+  - name: 連線至 Oracle 資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md
+  - name: 連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md
+  - name: 連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md
+  - name: 連線至 Access 資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md
+  - name: 連接到 Azure Blob 儲存體 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md
+  - name: 連線至 ODBC 資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md
+  - name: 連線至 PostgreSQL 資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md
+  - name: 連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md
+- name: SQL Server 匯入和匯出精靈中的步驟
+  href: ../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md
+  items:
+  - name: 歡迎使用 SQL Server 匯入和匯出精靈
+    href: ../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md
+  - name: 選擇資料來源 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md
+  - name: 選擇目的地 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md
+  - name: 建立資料庫 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md
+  - name: 指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+  - name: 提供來源查詢 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md
+  - name: 選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md
+  - name: 設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md
+  - name: 轉換類型但不檢查轉換 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+  - name: 資料行對應 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md
+  - name: 資料類型對應 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md
+  - name: 檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md
+  - name: 資料行轉換詳細資訊對話方塊 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+  - name: 建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md
+  - name: 預覽資料對話方塊 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md
+  - name: 儲存並執行套件 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md
+  - name: 儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md
+  - name: 完成精靈 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md
+  - name: 正在執行作業 (SQL Server 匯入和匯出精靈)
+    href: ../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md
 - name: 從 Excel 匯入或匯出至 Excel
-  href: load-data-to-from-excel-with-ssis.md
+  href: ../integration-services/load-data-to-from-excel-with-ssis.md
 - name: 將資料載入 SQL Server 或 SQL Database
-  href: load-data-to-sql-database-with-ssis.md
+  href: ../integration-services/load-data-to-sql-database-with-ssis.md
 - name: 將資料載入 SQL 資料倉儲中
-  href: load-data-to-sql-data-warehouse.md
-- name: 異動資料擷取
+  href: ../integration-services/load-data-to-sql-data-warehouse.md
+- name: 概觀
   href: ../integration-services/change-data-capture/change-data-capture-ssis.md
+- name: 指定變更資料的間隔
+  href: ../integration-services/change-data-capture/specify-an-interval-of-change-data.md
+- name: 判斷變更資料是否就緒
+  href: ../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md
+- name: 準備查詢變更資料
+  href: ../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md
+- name: 建立函數以擷取變更資料
+  href: ../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md
+- name: 擷取與了解變更資料
+  href: ../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md
+- name: 處理插入、更新與刪除
+  href: ../integration-services/change-data-capture/process-inserts-updates-and-deletes.md
+- name: 將變更套用到目的地
+  href: ../integration-services/change-data-capture/apply-the-changes-to-the-destination.md
+- name: 執行多個資料表的累加式載入
+  href: ../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md
+- name: Change Data Capture for Oracle by Attunity
+  href: ../integration-services/change-data-capture/change-data-capture-for-oracle-by-attunity.md
+- name: Attunity Oracle 異動資料擷取設計工具
+  href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md
+  items:
+  - name: CDC 設計工具主控台簡介
+    href: ../integration-services/change-data-capture/the-cdc-designer-console-introduction.md
+  - name: Oracle CDC 執行個體資料類型
+    href: ../integration-services/change-data-capture/oracle-cdc-instance-data-types.md
+  - name: 錯誤處理
+    href: ../integration-services/change-data-capture/error-handling.md
+  - name: Oracle CDC 執行個體
+    href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
+  - name: Oracle CDC 資料庫
+    href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+  - name: Attunity Oracle Change Data Capture (CDC) 設計工具 F1 說明參考
+    href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
+    items:
+    - name: 存取 CDC 設計工具主控台
+      href: ../integration-services/change-data-capture/access-the-cdc-designer-console.md
+    - name: 管理 CDC 服務
+      href: ../integration-services/change-data-capture/manage-a-cdc-service.md
+    - name: 管理 CDC 執行個體
+      href: ../integration-services/change-data-capture/manage-a-cdc-instance.md
+    - name: 使用新增執行個體精靈
+      href: ../integration-services/change-data-capture/use-the-new-instance-wizard.md
+      items:
+      - name: 建立 SQL Server 變更資料庫
+        href: ../integration-services/change-data-capture/create-the-sql-server-change-database.md
+      - name: 連接到 Oracle 來源資料庫
+        href: ../integration-services/change-data-capture/connect-to-an-oracle-source-database.md
+      - name: 連接到 Oracle
+        href: ../integration-services/change-data-capture/connect-to-oracle.md
+      - name: 選取 Oracle 資料表和資料行
+        href: ../integration-services/change-data-capture/select-oracle-tables-and-columns.md
+      - name: 選取 Oracle 資料表來擷取變更
+        href: ../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md
+      - name: 變更為了擷取變更所選取的資料表
+        href: ../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md
+      - name: 產生及執行補充記錄指令碼
+        href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
+      - name: 產生鏡像資料表和 CDC 擷取執行個體
+        href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
+      - name: '[完成]'
+        href: ../integration-services/change-data-capture/finish.md
+    - name: 編輯執行個體屬性
+      href: ../integration-services/change-data-capture/edit-instance-properties.md
+      items:
+      - name: 編輯 Oracle 資料庫屬性
+        href: ../integration-services/change-data-capture/edit-the-oracle-database-properties.md
+      - name: 編輯資料表
+        href: ../integration-services/change-data-capture/edit-tables.md
+      - name: 將資料表加入至 CDC 執行個體
+        href: ../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md
+      - name: 編輯資料表屬性
+        href: ../integration-services/change-data-capture/edit-the-table-properties.md
+      - name: 檢閱及產生補充記錄指令碼
+        href: ../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md
+      - name: 編輯進階屬性
+        href: ../integration-services/change-data-capture/edit-the-advanced-properties.md
+  - name: Attunity Oracle Change Data Capture (CDC) 設計工具使用說明指南
+    href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md
+    items:
+    - name: 如何從 CDC 設計工具主控台管理 CDC 服務
+      href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
+    - name: 如何建立 SQL Server 變更資料庫執行個體
+      href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
+    - name: 如何管理 CDC 執行個體
+      href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
+    - name: 如何編輯 CDC 執行個體屬性
+      href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
+    - name: 如何檢視 CDC 執行個體屬性
+      href: ../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md
+  - name: 用來建立執行個體的 SQL Server 連接
+    href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
+  - name: 進階連接屬性
+    href: ../integration-services/change-data-capture/advanced-connection-properties.md
+  - name: 執行指令碼的 Oracle 認證
+    href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
+  - name: Oracle 補充記錄指令碼
+    href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
+  - name: CDC 執行個體部署指令碼
+    href: ../integration-services/change-data-capture/cdc-instance-deployment-script.md
+  - name: SQL Server 連接所需的 CDC 設計工具權限
+    href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md
+- name: Attunity Oracle 異動資料擷取服務
+  href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md
+  items:
+  - name: Attunity Oracle Change Data Capture (CDC) 服務系統架構
+    href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-system-architecture.md
+  - name: Oracle CDC 服務
+    href: ../integration-services/change-data-capture/the-oracle-cdc-service.md
+    items:
+    - name: 高可用性支援
+      href: ../integration-services/change-data-capture/high-availability-support.md
+    - name: SQL Server 連接所需的 CDC 服務權限
+      href: ../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md
+    - name: 使用者角色
+      href: ../integration-services/change-data-capture/user-roles.md
+    - name: 使用 Oracle CDC 服務
+      href: ../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md
+  - name: Attunity Oracle Change Data Capture (CDC) 服務 F1 說明
+    href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md
+    items:
+    - name: 連接到 SQL Server
+      href: ../integration-services/change-data-capture/connection-to-sql-server.md
+    - name: 連接到 SQL Server 進行刪除
+      href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
+    - name: 建立及編輯 Oracle CDC 服務
+      href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
+    - name: 管理 Oracle CDC 服務
+      href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
+    - name: 為 CDC 準備 SQL Server
+      href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
+    - name: 為 Oracle CDC 檢視指令碼準備 SQL Server
+      href: ../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md
+    - name: 使用 CDC 服務
+      href: ../integration-services/change-data-capture/work-with-cdc-services.md
+  - name: Attunity Oracle Change Data Capture (CDC) 服務使用說明指南
+    href: ../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md
+    items:
+    - name: 如何建立及編輯 CDC 服務
+      href: ../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md
+    - name: 如何管理本機 CDC 服務
+      href: ../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md
+    - name: 如何為 CDC 準備 SQL Server
+      href: ../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md
+    - name: 如何使用 CDC 服務命令列介面
+      href: ../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md
+    - name: 如何使用 CDC 服務
+      href: ../integration-services/change-data-capture/how-to-work-with-cdc-services.md
 - name: Microsoft Connector for SAP BW
-  href: microsoft-connector-for-sap-bw.md
+  href: ../integration-services/microsoft-connector-for-sap-bw.md
   items:
   - name: 安裝 Microsoft Connector for SAP BW
-    href: installing-the-microsoft-connector-for-sap-bw.md
+    href: ../integration-services/installing-the-microsoft-connector-for-sap-bw.md
   - name: Microsoft Connector for SAP BW 元件
-    href: microsoft-connector-for-sap-bw-components.md
+    href: ../integration-services/microsoft-connector-for-sap-bw-components.md
   - name: Microsoft Connector for SAP BW F1 說明
-    href: microsoft-connector-for-sap-bw-f1-help.md
+    href: ../integration-services/microsoft-connector-for-sap-bw-f1-help.md
   - name: SAP 認證
-    href: certification-by-sap.md
+    href: ../integration-services/certification-by-sap.md
 - name: 教學課程
-  href: integration-services-tutorials.md
+  href: ../integration-services/integration-services-tutorials.md
   items:
   - name: 建立套件
-    href: ssis-how-to-create-an-etl-package.md
+    href: ../integration-services/ssis-how-to-create-an-etl-package.md
     items:
-    - name: 課程 1：建立專案和基本套件
-      href: lesson-1-create-a-project-and-basic-package-with-ssis.md
+    - name: 第 1 課：建立專案和基本套件
+      href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
       - name: 課程 1-1 - 建立新的 Integration Services 專案
-        href: lesson-1-1-creating-a-new-integration-services-project.md
+        href: ../integration-services/lesson-1-1-creating-a-new-integration-services-project.md
       - name: 課程 1-2 - 新增和設定一般檔案連線管理員
-        href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
+        href: ../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
       - name: 課程 1-3 - 加入和設定 OLE DB 連線管理員
-        href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
+        href: ../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
       - name: 課程 1-4 - 將資料流程工作新增至套件
-        href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
+        href: ../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md
       - name: 課程 1-5 - 加入和設定一般檔案來源
-        href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
+        href: ../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md
       - name: 課程 1-6 - 新增和設定查詢轉換
-        href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
+        href: ../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md
       - name: 課程 1-7 - 新增和設定 OLE DB 目的地
-        href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
+        href: ../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md
       - name: 課程 1-8 - 使課程 1 的封裝更容易了解
-        href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
+        href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
       - name: 課程 1-9 - 測試第 1課 的教學課程套件
-        href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
-    - name: 課程 2：新增迴圈
-      href: lesson-2-adding-looping-with-ssis.md
+        href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
+    - name: 第 2 課：新增迴圈
+      href: ../integration-services/lesson-2-adding-looping-with-ssis.md
       items:
       - name: 課程 2-1 - 複製第 1 課套件
-        href: lesson-2-1-copying-the-lesson-1-package.md
+        href: ../integration-services/lesson-2-1-copying-the-lesson-1-package.md
       - name: 課程 2-2 - 新增和設定 Foreach 迴圈容器
-        href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
+        href: ../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
       - name: 課程 2-3 - 修改一般檔案連線管理員
-        href: lesson-2-3-modifying-the-flat-file-connection-manager.md
+        href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
       - name: 課程 2-4 - 測試第 2 課的教學課程封裝
-        href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
-    - name: 課程 3：新增記錄
-      href: lesson-3-add-logging-with-ssis.md
+        href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
+    - name: 第 3 課：新增記錄
+      href: ../integration-services/lesson-3-add-logging-with-ssis.md
       items:
       - name: 課程 3-1 - 複製第 2 課的封裝
-        href: lesson-3-1-copying-the-lesson-2-package.md
+        href: ../integration-services/lesson-3-1-copying-the-lesson-2-package.md
       - name: 第 3-2 課 - 新增和設定記錄
-        href: lesson-3-2-adding-and-configuring-logging.md
+        href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
       - name: 課程 3-3 - 測試第 3 課教學課程套件
-        href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
-    - name: 課程 4：新增錯誤流程重新導向
-      href: lesson-4-add-error-flow-redirection-with-ssis.md
+        href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
+    - name: 第 4 課：新增錯誤流程重新導向
+      href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
       items:
       - name: 課程 4-1 - 複製第 3 課的封裝
-        href: lesson-4-1-copying-the-lesson-3-package.md
+        href: ../integration-services/lesson-4-1-copying-the-lesson-3-package.md
       - name: 課程 4-2 - 建立損毀的檔案
-        href: lesson-4-2-creating-a-corrupted-file.md
+        href: ../integration-services/lesson-4-2-creating-a-corrupted-file.md
       - name: 課程 4-3 - 新增錯誤流程重新導向
-        href: lesson-4-3-adding-error-flow-redirection.md
+        href: ../integration-services/lesson-4-3-adding-error-flow-redirection.md
       - name: 課程 4-4 - 新增一般檔案目的地
-        href: lesson-4-4-adding-a-flat-file-destination.md
+        href: ../integration-services/lesson-4-4-adding-a-flat-file-destination.md
       - name: 第 4-5 課 - 測試課程 4 的教學課程封裝
-        href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
-    - name: 課程 5：新增套件部署模型的套件組態
-      href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
+        href: ../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md
+    - name: 第 5 課：新增套件部署模型的套件設定
+      href: ../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
       - name: 課程 5-1 - 複製第 4 課套件
-        href: lesson-5-1-copying-the-lesson-4-package.md
+        href: ../integration-services/lesson-5-1-copying-the-lesson-4-package.md
       - name: 課程 5-2 - 啟用和設定套件設定
-        href: lesson-5-2-enabling-and-configuring-package-configurations.md
+        href: ../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md
       - name: 課程 5-3 - 修改 Directory 屬性組態值
-        href: lesson-5-3-modifying-the-directory-property-configuration-value.md
+        href: ../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md
       - name: 課程 5-4 - 測試第 5 課的教學課程封裝
-        href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
+        href: ../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md
     - name: 第 6 課：搭配專案部署模型使用參數
-      href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
+      href: ../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
       - name: 課程 6-1 - 複製第 5 課套件
-        href: lesson-6-1-copying-the-lesson-5-package.md
+        href: ../integration-services/lesson-6-1-copying-the-lesson-5-package.md
       - name: 課程 6-2 - 將專案轉換成專案部署模型
-        href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
+        href: ../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md
       - name: 課程 6-3 - 測試第 6 課的封裝
-        href: lesson-6-3-testing-the-lesson-6-package.md
+        href: ../integration-services/lesson-6-3-testing-the-lesson-6-package.md
       - name: 第 6-4 課 - 部署第 6 課的套件
-        href: lesson-6-4-deploying-the-lesson-6-package.md
+        href: ../integration-services/lesson-6-4-deploying-the-lesson-6-package.md
   - name: 部署套件
-    href: deploy-packages-with-ssis.md
+    href: ../integration-services/deploy-packages-with-ssis.md
     items:
     - name: 第 1 課：準備建立部署配套
-      href: lesson-1-preparing-to-create-the-deployment-bundle.md
+      href: ../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md
       items:
       - name: 課程 1-1 - 建立工作資料夾與環境變數
-        href: lesson-1-1-creating-working-folders-and-environment-variables.md
+        href: ../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md
       - name: 課程 1-2 - 建立部署專案
-        href: lesson-1-2-creating-the-deployment-project.md
+        href: ../integration-services/lesson-1-2-creating-the-deployment-project.md
       - name: 課程 1-3 - 加入封裝和其他檔案
-        href: lesson-1-3-adding-packages-and-other-files.md
+        href: ../integration-services/lesson-1-3-adding-packages-and-other-files.md
       - name: 課程 1-4 - 新增套件設定
-        href: lesson-1-4-adding-package-configurations.md
+        href: ../integration-services/lesson-1-4-adding-package-configurations.md
       - name: 課程 1-5 - 測試更新的封裝
-        href: lesson-1-5-testing-the-updated-packages.md
-    - name: 課程 2：建立部署套件組合
-      href: lesson-2-create-the-deployment-bundle-in-ssis.md
+        href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
+    - name: 第 2 課：建立部署套件組合
+      href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
       - name: 第 2-1 課：建置部署公用程式
-        href: lesson-2-1-building-the-deployment-utility.md
+        href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
       - name: 課程 2-2 - 確認部署配套
-        href: lesson-2-2-verifying-the-deployment-bundle.md
-    - name: 課程 3：安裝套件
-      href: lesson-3-install-ssis-packages.md
+        href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
+    - name: 第 3 課：安裝封裝
+      href: ../integration-services/lesson-3-install-ssis-packages.md
       items:
       - name: 課程 3-1 - 複製部署配套
-        href: lesson-3-1-copying-the-deployment-bundle.md
+        href: ../integration-services/lesson-3-1-copying-the-deployment-bundle.md
       - name: 課程 3-2 - 執行套件安裝精靈
-        href: lesson-3-2-running-the-package-installation-wizard.md
+        href: ../integration-services/lesson-3-2-running-the-package-installation-wizard.md
       - name: 課程 3-3 - 測試已部署的套件
-        href: lesson-3-3-testing-the-deployed-packages.md
+        href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: 資源
   items:
-  - name: 在 SSIS 論壇中取得協助
-    href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices
-  - name: 在 Stack Overflow 取得協助
+  - name: 在 SSIS 論壇中取得協助 +
+    href: https://social.msdn.microsoft.com/Forums/en-US/home
+  - name: 在 Stack Overflow 取得協助 +
     href: https://stackoverflow.com/questions/tagged/ssis
-  - name: 關注 SSIS 小組部落格
+  - name: 追隨 SSIS 小組部落格 +
     href: https://blogs.msdn.microsoft.com/ssis/
-  - name: 回報問題及建議功能
+  - name: 回報問題與要求功能 +
     href: https://feedback.azure.com/forums/908035-sql-server
-  - name: 在您的電腦上取得文件
-    href: ../sql-server/sql-server-help-installation.md
-ms.openlocfilehash: c9546c0b08704f060169987bafc864dca922e011
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5820e11a6463d91c02d768544ab6465e42cbaa7a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696716"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676206"

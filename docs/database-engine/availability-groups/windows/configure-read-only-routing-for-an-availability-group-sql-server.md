@@ -2,7 +2,7 @@
 title: 設定可用性群組的唯讀路由
 description: 使用 Always On 可用性群組的唯讀路由 (透過 Transact-SQL (T-SQL) 或 PowerShell)，自動將所有唯讀流量路由至次要複本。
 ms.custom: seodec18
-ms.date: 08/14/2017
+ms.date: 02/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed04fab7d5496f71bc4c9accbcb4fd2e5579df5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 937fb97a9ed59793b532a8dcae0903fab5580678
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126138"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56827998"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>設定 Always On 可用性群組的唯讀路由
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "54126138"
   
 -   每一個要支援唯讀路由之可讀取的次要複本，皆必須指定 *「唯讀路由 URL」*(Read-Only Routing URL)。 只有在本機複本以次要角色執行時，此 URL 才會生效。 如有必要，您必須各自指定每個複本的唯讀路由 URL。 每個唯讀路由 URL 可用於將讀取意圖的連接要求路由至特定可讀取的次要複本。 一般而言，每個可讀取的次要複本都有一個指派的唯讀路由 URL。  
   
-     如需計算可用性複本之唯讀路由 URL 的相關資訊，請參閱 [Calculating read_only_routing_url for Always On](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     如需計算可用性複本之唯讀路由 URL 的相關資訊，請參閱 [Calculating read_only_routing_url for Always On](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   如果要支援唯讀路由的可用性複本為主要複本時，則必須指定 *「唯讀路由清單」*(Read-Only Routing List)。 只有本機複本以主要角色執行時，給定的唯讀路由清單才會生效。 如有必要，您必須各自指定每個複本的這份清單。 一般而言，每份唯讀路由清單皆會包含每一個唯讀路由 URL，並在清單結尾提供本機複本的 URL。  
   
