@@ -18,17 +18,14 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 4adc96042090ee1cd184eebdb9f9ca5526312dd2
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300075"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803083"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將查詢參數對應到變數
-
-  > [!div class="nextstepaction"]
-  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
 
   此主題描述如何在「執行 SQL」工作中使用參數化 SQL 陳述式，以及建立 SQL 陳述式中變數和參數之間的對應。  
   

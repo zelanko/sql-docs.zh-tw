@@ -16,18 +16,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb85ebe35b50d143f4887cba91eda08a930666a0
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b5e9346b2ea7a6e3f881d960462fbb56b4cd7000
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299005"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802682"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 參考 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 本主題說明如何尋找及使用 Microsoft Transact-SQL (T-SQL) 參考主題的基本概念。 對於使用 Microsoft SQL 產品和服務而言，T-SQL 相當重要。 所有與 SQL 資料庫通訊的工具和應用程式都透過傳送 T-SQL 命令與 SQL 資料庫通訊。  
 

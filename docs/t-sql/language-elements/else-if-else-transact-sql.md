@@ -21,18 +21,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298445"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801722"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的執行上強加條件。 如果 *Boolean_expression* 評估為 TRUE，就會執行 *Boolean_expression* 後面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (*sql_statement*)。 選擇性的 ELSE 關鍵字是在 *Boolean_expression* 評估為 FALSE 或 NULL 時，所執行的替代 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   

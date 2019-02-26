@@ -22,18 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe135d53fafa22df7d967f495a7bcfd87dbb2f7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299975"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801862"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
   變數是利用 DECLARE 陳述式宣告在批次或程序的主體中，並利用 SET 或 SELECT 陳述式來指派值。 資料指標變數可以是利用這個陳述式來宣告，且可以搭配其他與資料指標相關的陳述式來使用。 在宣告之後，所有變數都會初始化成 NULL，除非在宣告中有提供值。  
   

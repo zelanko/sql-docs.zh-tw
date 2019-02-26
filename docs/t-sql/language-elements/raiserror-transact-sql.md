@@ -30,18 +30,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0875e5013e2a5f12468d99414ff94252ac66453a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300295"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802424"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
   產生錯誤訊息並起始工作階段的錯誤處理。 RAISERROR 可以參考儲存在 sys.messages 目錄檢視表的使用者自訂訊息，或是動態建立訊息。 訊息以伺服器錯誤訊息傳回給呼叫應用程式，或傳回給 TRY...CATCH 建構的相關聯 CATCH 區塊。 新應用程式應該改用 [THROW](../../t-sql/language-elements/throw-transact-sql.md)。  
   

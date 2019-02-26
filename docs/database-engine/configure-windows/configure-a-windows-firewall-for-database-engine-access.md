@@ -15,18 +15,16 @@ ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2aa8a6ca557e4d4b358f646c73cb24cc69bdd009
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 6fb534c8715c486d3abbb04d5cb61c9ee51f43ff
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299033"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801502"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>設定用於 Database Engine 存取的 Windows 防火牆
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定用於 Database Engine 存取的 Windows 防火牆。 防火牆系統有助於預防未經授權存取電腦資源。 若要透過防火牆存取 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，您必須在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦上的防火牆設定為允許存取。  
   

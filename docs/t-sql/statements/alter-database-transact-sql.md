@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: a9a1d940d7229910c899104a19e3a710eb7eae92
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832140"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590493"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -48,16 +48,14 @@ ms.locfileid: "55832140"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="sql-server"></a>[SQL Server]
-
-## <a name="overview"></a>概觀
+## <a name="overview-sql-server"></a>概觀：[SQL Server]
 
 在 SQL Server 中，此陳述式可修改資料庫或與資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組、變更資料庫或其檔案和檔案群組的屬性、變更資料庫定序，以及設定資料庫選項。 無法修改資料庫快照集。 若要修改與複寫相關聯的資料庫選項，請使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
 
@@ -285,16 +283,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />單一資料庫/彈性集區 \*_**&nbsp;|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 單一資料庫/彈性集區
-
-## <a name="overview"></a>概觀
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>概觀：Azure SQL Database 單一資料庫/彈性集區
 
 在 Azure SQL Database 中，使用此陳述式來修改單一資料庫/彈性集區上的資料庫。 使用此陳述式變更資料庫名稱、變更資料庫的版本和服務目標、新增或移除彈性集區的資料庫、設定資料庫選項、新增或移除具有地理複寫關聯性的次要資料庫，以及設定資料庫相容性層級。
 
@@ -693,16 +689,14 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**&nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />受控執行個體 \*_**&nbsp;|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
-
-## <a name="overview"></a>概觀
+## <a name="overview-azure-sql-database-managed-instance"></a>概觀：Azure SQL Database 受控執行個體
 
 在 Azure SQL Database 受控執行個體中，使用此陳述式來設定資料庫選項。
 
@@ -722,8 +716,10 @@ ALTER DATABASE
 ```  
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
-{  
-    <file_and_filegroup_options>  
+{
+    MODIFY NAME = new_database_name   
+  | COLLATE collation_name    
+  | <file_and_filegroup_options>  
   | SET <option_spec> [ ,...n ]  
   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 }  
@@ -816,16 +812,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL 資料<br />倉儲 \*_** &nbsp;|[平行處理<br />資料倉儲](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
-
-## <a name="overview"></a>概觀
+## <a name="overview-azure-sql-data-warehouse"></a>概觀：Azure SQL 資料倉儲
 
 修改資料庫的名稱、大小上限或服務目標。
 
@@ -938,16 +932,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 平行處理<br />資料倉儲\*_** &nbsp;|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />單一資料庫/彈性集區](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />受控執行個體](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 資料<br />倉儲](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 平行處理<br />資料倉儲\*_** &nbsp;|  
+||||||
 
 &nbsp;
 
-## <a name="parallel-data-warehouse"></a>平行處理資料倉儲
-
-## <a name="overview"></a>概觀
+## <a name="overview-parallel-data-warehouse"></a>概觀：平行處理資料倉儲
 
 修改適用於平行處理資料倉儲 中的複寫資料表、分散式資料表和交易記錄的資料庫大小上限選項。 在資料庫的大小成長或壓縮時，使用此陳述式來管理它的磁碟空間配置。 本文也會描述在平行處理資料倉儲中設定資料庫選項的相關語法。
 

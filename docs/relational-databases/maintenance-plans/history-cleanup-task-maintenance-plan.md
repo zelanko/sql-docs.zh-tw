@@ -3,8 +3,6 @@ title: 記錄清除工作 (維護計畫) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
@@ -14,13 +12,14 @@ helpviewer_keywords:
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ''
 manager: craigg
-ms.openlocfilehash: 9a3aaf6f3fe1ed3abee7d1642fb27d2ea4038ba3
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.openlocfilehash: 8cb1126f851bf9499aac845a29786e6b55f73604
+ms.sourcegitcommit: 5861b7b0cd9bf6d43cefad5d0356f5821bd17d4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407528"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56411917"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>記錄清除工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

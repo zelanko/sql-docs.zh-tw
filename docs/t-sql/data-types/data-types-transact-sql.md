@@ -18,18 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec7126848048350120592a325f5a5f593b38a7f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f4d1f3ca61710f1e55d95b8942adc86fea736910
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028509"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802235"
 ---
 # <a name="data-types-transact-sql"></a>資料類型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，每個資料行、區域變數、運算式和參數都有相關的資料類型。 資料類型是指定物件所能保留之資料類型的屬性，這些資料類型包括整數資料、字元資料、貨幣資料、日期和時間資料、二進位字串等。
   

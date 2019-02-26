@@ -16,17 +16,15 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed4bb739f6ca74e5e0744af1ed40b37196995213
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8db11de67db871df75605099191a2ae0e34be0b9
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299055"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801332"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>啟動 SQL Server 匯入和匯出精靈
 
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 使用本主題中所述的其中一種方式來啟動 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈]，以從中匯入資料，並將資料匯出至任何支援的資料來源。
 

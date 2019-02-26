@@ -29,18 +29,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 805cb2e6f3b7d9138e2bdd14518632c82251242c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319349"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802572"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 使用整數資料的 Exact-number 資料類型。 若要節省資料庫中的空間，請使用能夠包含所有可能值的最小資料類型。 例如，若要儲存一個人的年齡，tinyint 便已足夠，因為沒有人的年齡會超過 255 歲。 但 tinyint 在用於建築物的屋齡上便可能不足，因為建築物的屋齡可超過 255 年。
   

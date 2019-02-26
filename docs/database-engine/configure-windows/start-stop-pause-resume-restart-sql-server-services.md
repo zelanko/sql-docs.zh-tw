@@ -41,18 +41,15 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6977a20130073326a50c522edbd47be32f8a117c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298695"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801992"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>啟動、停止、暫停、繼續、重新啟動 SQL Server 服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
   本主題說明如何啟動、停止、暫停、繼續或重新啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務，方法是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員、  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、命令提示字元中的 **net** 命令、 [!INCLUDE[tsql](../../includes/tsql-md.md)]或 PowerShell。  
   

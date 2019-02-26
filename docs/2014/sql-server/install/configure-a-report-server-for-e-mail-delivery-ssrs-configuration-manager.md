@@ -23,17 +23,14 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17e210356aadaa17394abf0b68bf9303461943d2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300335"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802444"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)
-
-  > [!div class="nextstepaction"]
-  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
 
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一個電子郵件傳遞延伸模組，讓您能夠透過電子郵件散發報表。 根據您定義電子郵件訂閱的方式而定，傳遞可能會由通知、連結、附加檔案或內嵌報表所組成。 電子郵件傳遞延伸模組可搭配現有的郵件伺服器技術一起使用。 郵件伺服器必須是 SMTP 伺服器或轉送器。 報表伺服器會透過作業系統提供的 Collaboration Data Objects (CDO) 程式庫 (cdosys.dll) 連接到 SMTP 伺服器。  

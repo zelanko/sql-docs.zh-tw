@@ -11,18 +11,14 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 77e818109424b5f0d9dea3b495da4e927c506366
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 54373ea101820a29e04501ea6848a4a85a2c893a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299235"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801152"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>快速入門：在雲端中執行 SQL Server
-
-  > [!div class="nextstepaction"]
-  > [請分享您對 SQL Docs 目錄內容的意見 ！](https://aka.ms/sqldocsurvey)
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 在本快速入門中，您將 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 或您選擇的雲端中的 Ubuntu 上安裝 SQL Server。 移至[佈建 Linux SQL Server 虛擬機器在 Azure 入口網站中](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)在 Azure 中的 Linux 上執行 SQL Server。

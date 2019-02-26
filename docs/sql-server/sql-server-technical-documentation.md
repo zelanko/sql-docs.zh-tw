@@ -21,18 +21,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a880b2e2239978f4d8638e0749360a1ac662ece
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 523b1cc852c7098f6c18828efdb789fa2fcafcdf
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676066"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801742"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文件集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server 是 Microsoft 資料平台的核心。 SQL Server 是操作資料庫管理系統 (ODBMS) 的業界領導者。 本文件可協助您在 Windows 和 Linux 上安裝、設定及使用 SQL Server。 內容包括端對端範例、程式碼範例和視訊。 如需 SQL Server 語言主題，請參閱[語言參考](../t-sql/language-reference.md)。

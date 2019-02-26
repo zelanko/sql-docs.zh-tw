@@ -2,7 +2,7 @@
 title: 評估企業並合併評定報告 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA，以評估企業，並合併評定報告，然後再升級 SQL Server，或移轉至 Azure SQL Database。
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 02/23/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4df3197ad4bb607d564c223087da62f17c74fa32
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590343"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801372"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -45,7 +45,7 @@ ms.locfileid: "56590343"
 
 若要載入的模組，請執行下列步驟：
 1. 瀏覽至 C:\Program Files\WindowsPowerShell\Modules，然後建立名為資料夾**DataMigrationAssistant**。
-2. 開啟[PowerShell 模組](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip)，然後將它們儲存到您所建立的資料夾。
+2. 開啟[PowerShell 模組](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip)，然後將它們儲存到您所建立的資料夾。
 
       ![PowerShell 模組](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

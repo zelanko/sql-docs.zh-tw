@@ -1,7 +1,7 @@
 ---
 title: 記憶體管理架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2019"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31ebb5ef9994c3c853b8163f4f2ba58e8cbe7d3b
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206444"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662922"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 

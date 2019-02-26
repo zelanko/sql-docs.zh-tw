@@ -11,19 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bd388ede86a397fa83bf98deb017e294cb280752
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 7d6aece1a3e43fd7a732dd61864349f8f3c92520
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300155"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802265"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-> [!div class="nextstepaction"]
-> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
-  
 當您為了讓停機時間及風險減到最少，而打算從舊版 SQL Server 升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，有多種方法可以考慮。 您可以就地執行升級、遷移到新的安裝或執行輪流升級。 下圖將協助您在這些方法中做出選擇。 下方也將討論圖表中的各個方法。 為協助您了解圖表中的決策點，另請檢閱 [計劃和測試資料庫引擎升級計畫](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
  ![資料庫引擎升級方法決策樹](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "資料庫引擎升級方法決策樹")  

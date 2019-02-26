@@ -15,19 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 89bb096f92bfd2ae5cc4da46ba99fb4ae41929d0
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 184654ada07be1ab7c51d32bdee9770790204647
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300365"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802632"
 ---
 # <a name="install-sql-server"></a>安裝 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
-
  
  從 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 開始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 才可以用作 64 位元應用程式。 下列重要詳細資料說明如何取得 SQL Server 及其安裝方式。
 
