@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7736d62feeba99a4af0efc08c55364e1f043a651
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419783"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852903"
 ---
 # <a name="impersonation"></a>模擬 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -85,7 +85,6 @@ ms.locfileid: "54419783"
   
 ## <a name="see-also"></a>另請參閱  
  [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [資料來源](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [表格式模型解決方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

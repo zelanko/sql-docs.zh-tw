@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439500"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852923"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 的高可用性與延展性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  本文說明提高 Analysis Services 資料庫可用性與延展性的最常用技術。 雖然您可以個別達成每個目標，但實際上這兩個目標經常相互關聯︰可針對大型查詢或處理工作負載擴充的部署通常預期要有高可用性。  
+  本文說明提高 Analysis Services 資料庫高度可用且可擴充的最常用的技術。 雖然您可以個別達成每個目標，但實際上這兩個目標經常相互關聯︰可針對大型查詢或處理工作負載擴充的部署通常預期要有高可用性。  
   
  不過反之則不一定。 當任務關鍵性但中等的查詢工作負載有嚴格的服務等級協定時，可以將不含延展性的高可用性當做唯一的目標。  
   

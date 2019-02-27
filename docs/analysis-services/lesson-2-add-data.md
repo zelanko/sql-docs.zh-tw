@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401633"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852933"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將在 SSDT 中使用 [資料表匯入精靈] 來連接到 AdventureWorksDW SQL 範例資料庫，選取資料、 預覽和篩選資料時，，然後將資料匯入您的模型工作區。  
   
-透過使用資料表匯入精靈，您可以從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 資料也可以選取使用預存程序。 若要深入了解匯入資料與不同類型的資料來源，您可以從匯入，請參閱[Zdroje dat](../analysis-services/tabular-models/data-sources-ssas-tabular.md)。  
+透過使用資料表匯入精靈，您可以從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 資料也可以選取使用預存程序。 若要深入了解匯入資料與不同類型的資料來源，您可以從匯入，請參閱[Zdroje dat](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)。  
   
 完成本課程的估計時間：**20 分鐘的時間**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52401633"
   
     這會啟動 [資料表匯入精靈]，引導您設定資料來源的連接。 如果您沒有看到 表格式模型總管 中，按兩下**Model.bim**中**方案總管 中**設計工具中開啟模型。 
     
-    ![做為表格式-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
+    ![as-tabular-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
     注意：如果您要建立模型的 1400年相容性層級，您會看到新的 [取得資料] 功能而不是 [資料表匯入精靈]。 對話方塊會出現下面的步驟稍有不同，但您仍然可以要跟著做。 
   
@@ -48,7 +48,7 @@ ms.locfileid: "52401633"
   
 5.  在 [**資料庫名稱**欄位中，選取**AdventureWorksDW**，然後按一下**下一步]**。  
   
-    ![為-表格式-lesson2-tiw-名稱](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+    ![as-tabular-lesson2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
 6.  在 [模擬資訊] 頁面中，您必須指定 Analysis Services 在匯入和處理資料時，用來連接資料來源的認證。 確認已選取 [特定的 Windows 使用者名稱和密碼]，然後在 [使用者名稱] 和 [密碼] 中輸入您的 Windows 登入認證，再按一下 [下一步]。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52401633"
   
 2.  清除下列資料行上方的核取方塊：**SpanishEducation**， **FrenchEducation**， **SpanishOccupation**， **FrenchOccupation**。 
 
-    ![為-表格式-lesson2-tiw-清除](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![as-tabular-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
     因為這些資料行的值與網際網路銷售分析無關，所以不需要匯入這些資料行。 消除不必要的資料行可讓您的模型，更小且更有效率。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52401633"
   
     請注意單字**套用的篩選**現在會顯示在**篩選詳細資料**中的資料行**DimCustomer**資料列; 如果您按一下該連結，您會看到的文字描述剛才套用的篩選。  
     
-    ![為表格式-lesson2-套用-篩選](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
+    ![as-tabular-lesson2-applied-filters](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
   
 4.  藉由清除每個資料表中下列資料行的核取方塊，篩選其餘資料表：  
@@ -147,7 +147,7 @@ ms.locfileid: "52401633"
   
     當匯入資料時，精靈會顯示已經提取的資料列數。 所有資料都匯入之後，就會顯示一則訊息，指出此作業已順利完成。  
     
-    ![為表格式-lesson2-成功](../analysis-services/media/as-tabular-lesson2-success.png) 
+    ![as-tabular-lesson2-success](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
     > 若要查看在匯入的資料表之間自動建立的關聯性，請在 [資料準備] 資料列上按一下 [詳細資料]。 

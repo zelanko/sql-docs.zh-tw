@@ -9,17 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 41c689b2dfb122b94204cfbb8d52f9f8e9a1a8fb
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 10623ea2c0dcb413bad08e1d68dfd9d5c9a9984a
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700436"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852883"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services 伺服器管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
 Azure Analysis services，請參閱[管理 Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage)。
+
+## <a name="instances"></a>執行個體
 
   Analysis Services 的伺服器執行個體是一份**msmdsrv.exe**當做作業系統服務執行的可執行檔。 每一個執行個體與相同伺服器上的其他執行個體之間完全獨立，而且擁有它自己的組態設定、權限、通訊埠、啟動帳戶、檔案儲存體和伺服器模式屬性。  
   
@@ -33,6 +35,8 @@ Azure Analysis services，請參閱[管理 Azure Analysis Services](https://docs
 >  如果已安裝多個執行個體，安裝程式也會安裝重新導向程式服務，整合了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器服務。 重新導向程式服務會負責將用戶端導向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的適當具名執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務一律會在本機服務帳戶的安全性內容中執行，本機服務帳戶是 Windows 針對不會存取本機電腦外部資源的服務所使用的受限使用者帳戶。  
   
  多重執行個體表示您可以在相同硬體上安裝多個伺服器執行個體來進行擴充。 尤其對於 Analysis Services 而言，這也表示您可以在相同伺服器上安裝多個執行個體 (每個執行個體都設定為在特定模式下執行) 來支援不同的伺服器模式。  
+
+## <a name="server-mode"></a>伺服器模式
   
  伺服器模式是一種伺服器屬性，可決定用於該執行個體的儲存體和記憶體架構。 在多維度模式下執行的伺服器會使用針對多維度 Cube 資料庫和資料採礦模型所建立的資源管理層。 相較之下，表格式伺服器模式會使用 VertiPaq 記憶體中分析引擎和資料壓縮，在要求時彙總資料。  
   
@@ -45,16 +49,6 @@ Azure Analysis services，請參閱[管理 Azure Analysis Services](https://docs
 > [!NOTE]  
 >  例外狀況是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 部署的伺服器管理一定會在 SharePoint 伺服陣列的內容中進行。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 與其他伺服器模式不同之處在於它永遠都是單一執行個體，而且一定會透過 SharePoint 管理中心或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具來管理。 雖然可在 SQL Server Management Studio 或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中連接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]for SharePoint，但是不需要這樣做。 SharePoint 伺服器陣列包含的基礎結構會同步處理伺服器狀態及監視伺服器可用性。 使用其他工具可能會干擾這些作業。 如需詳細資訊[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]伺服器的管理，請參閱 < [Powerpivot for SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)。  
   
-## <a name="common-server-management-topics"></a>常見的伺服器管理主題  
-  
-|連結|工作描述|  
-|----------|----------------------|  
-|[後續安裝組態](../../analysis-services/instances/post-install-configuration-analysis-services.md)|描述完成或修改 Analysis Services 安裝的必要工作和選擇性工作。|  
-|[連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|描述建立或清除連接時所用的連接字串屬性、用戶端程式庫、驗證方法和步驟。|  
-|[監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|描述用於監視伺服器執行個體的工具和技術，包括如何使用效能監視器和 SQL Server Profiler。|  
-|[高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|說明提高 Analysis Services 資料庫可用性與延展性的最常用技術。 |  
-|[Analysis Services 的全球化案例](../../analysis-services/globalization-scenarios-for-analysis-services.md)|說明語言和定序支援、變更這兩個屬性的步驟，以及設定和測試語言和定序行為的秘訣。|  
-|[Analysis Services 中的記錄作業](../../analysis-services/instances/log-operations-in-analysis-services.md)|描述記錄檔並說明如何設定它們。|  
   
   
 ## <a name="see-also"></a>另請參閱  

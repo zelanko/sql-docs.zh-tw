@@ -1,5 +1,5 @@
 ---
-title: sys.fn_get_audit_file & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b4eb865c8c0498e72943c128ff0106638005166
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980044"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852953"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,58 +84,60 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>傳回的資料表  
  下表描述這個函數可傳回的稽核檔案內容。  
   
-|資料行名稱|類型|描述|  
-|-----------------|----------|-----------------|  
-|event_time|**datetime2**|可稽核的動作引發時的日期和時間。 不可為 Null。|  
-|sequence_number|**int**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。 不可為 Null。|  
-|action_id|**varchar(4)**|動作的識別碼。 不可為 Null。|  
-|succeeded|**bit**|指示觸發此事件的動作是否成功。 不可為 Null。 若為登入事件以外的所有事件，這只會報告權限檢查成功或失敗，而不會報告作業成功或失敗。<br /> 1 = 成功<br /> 0 = 失敗|  
-|permission_bitmask|**varbinary(16)**|在某些動作中，這就是已授與、拒絕或撤銷的權限。|  
-|is_column_permission|**bit**|指出這是否為資料行層級權限的旗標。 不可為 Null。 當 permission_bitmask = 0 時會傳回 0。<br /> 1 = true<br /> 0 = false|  
-|session_id|**smallint**|事件發生所在之工作階段的識別碼。 不可為 Null。|  
-|server_principal_id|**int**|動作執行所在之登入環境的識別碼。 不可為 Null。|  
-|database_principal_id|**int**|動作執行所在之資料庫使用者環境的識別碼。 不可為 Null。 如果不適用則傳回 0。 例如，伺服器作業。|  
-|target_server_principal_id|**int**|GRANT/DENY/REVOKE 作業執行所在的伺服器主體。 不可為 Null。 如果不適用則傳回 0。|  
-|target_database_principal_id|**int**|GRANT/DENY/REVOKE 作業執行所在的資料庫主體。 不可為 Null。 如果不適用則傳回 0。|  
-|object_id|**int**|稽核發生所在之實體的識別碼。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 不可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 0。 例如驗證。|  
-|class_type|**varchar(2)**|稽核發生所在之可稽核的實體類型。 不可為 Null。|  
-|session_server_principal_name|**sysname**|工作階段的伺服器主體。 可為 Null。|  
-|server_principal_name|**sysname**|目前的登入。 可為 Null。|  
-|server_principal_sid|**varbinary**|目前的登入 SID。 可為 Null。|  
-|database_principal_name|**sysname**|目前的使用者。 可為 Null。 如果無法使用則傳回 NULL。|  
-|target_server_principal_name|**sysname**|動作的目標登入。 可為 Null。 如果不適用則傳回 NULL。|  
-|target_server_principal_sid|**varbinary**|目標登入的 SID。 可為 Null。 如果不適用則傳回 NULL。|  
-|target_database_principal_name|**sysname**|動作的目標使用者。 可為 Null。 如果不適用則傳回 NULL。|  
-|server_instance_name|**sysname**|稽核發生所在的伺服器執行個體名稱。 使用標準的 server\instance 格式。|  
-|database_name|**sysname**|動作發生所在的資料庫環境。 可為 Null。 發生在伺服器層級的稽核，會傳回 NULL。|  
-|schema_name|**sysname**|動作發生所在的結構描述環境。 可為 Null。 發生在結構描述外部的稽核，會傳回 NULL。|  
-|object_name|**sysname**|稽核發生所在之實體的名稱。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。|  
-|陳述式|**nvarchar(4000)**|TSQL 陳述式 (如果存在的話)。 可為 Null。 如果不適用則傳回 NULL。|  
-|additional_information|**nvarchar(4000)**|只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會剖析為逸出無效的 xml 字元，例如`'\<'`， `'>'`， `'/'`， `'_x'`。 它們會逸出為`_xHHHH\_`。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。|  
-|file_name|**varchar(260)**|記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。|  
-|audit_file_offset|**bigint**|檔案中包含稽核記錄的緩衝區位移。 不可為 Null。|  
-|user_defined_event_id|**smallint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 使用者定義的事件識別碼傳遞做為引數**sp_audit_write**。 **NULL**系統事件 （預設值） 和非零值則代表使用者定義的事件。 如需詳細資訊，請參閱 < [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
-|user_defined_information|**nvarchar(4000)**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用來記錄使用者想要記錄中的任何額外資訊 |使用稽核記錄檔**sp_audit_write**預存程序。|  
-|audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | **適用於**：僅限 SQL Server （從 2016年開始） |  
-|transaction_id |**bigint** | **適用於**：僅限 SQL Server （從 2016年開始） |  
-|client_ip |**nvarchar(128)** | **適用於**：Azure SQL DB + SQL Server （從 2017年開始） |  
-|application_name |**nvarchar(128)** | **適用於**：Azure SQL DB + SQL Server （從 2017年開始） |  
-|duration_milliseconds |**bigint** | **適用於**：只有 azure SQL DB |  
-|response_rows |**bigint** | **適用於**：只有 azure SQL DB |  
-|affected_rows |**bigint** | **適用於**：只有 azure SQL DB |  
-|connection_id |GUID | **適用於**：只有 azure SQL DB |
-|data_sensitivity_information |nvarchar(4000) | **適用於**：只有 azure SQL DB |
+| 資料行名稱 | 類型 | 描述 |  
+|-------------|------|-------------|  
+| action_id | **varchar(4)** | 動作的識別碼。 不可為 Null。 |  
+| additional_information | **nvarchar(4000)** | 只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會剖析為逸出無效的 xml 字元，例如`'\<'`， `'>'`， `'/'`， `'_x'`。 它們會逸出為`_xHHHH\_`。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。 |
+| affected_rows | **bigint** | **適用於**：只有 azure SQL DB<br /><br /> 執行陳述式所影響的資料列數目。 |  
+| application_name | **nvarchar(128)** | **適用於**：Azure SQL DB + SQL Server （從 2017年開始）<br /><br /> 執行導致稽核事件的陳述式的用戶端應用程式的名稱 |  
+| audit_file_offset | **bigint** | **會套用 Disaster 至**:僅限 SQL Server<br /><br /> 檔案中包含稽核記錄的緩衝區位移。 不可為 Null。 |  
+| audit_schema_version | **int** | 永遠為 1 |  
+| class_type | **varchar(2)** | 稽核發生所在之可稽核的實體類型。 不可為 Null。 |  
+| client_ip | **nvarchar(128)** | **適用於**：Azure SQL DB + SQL Server （從 2017年開始）<br /><br />    來源用戶端應用程式的 IP |  
+| connection_id | GUID | **適用於**：Azure SQL DB 和受管理的執行個體<br /><br /> 在伺服器中之連線識別碼 |
+| data_sensitivity_information | nvarchar(4000) | **適用於**：只有 azure SQL DB<br /><br /> 資訊類型和稽核的查詢，根據資料庫中的分類資料行所傳回的敏感度標籤。 深入了解[Azure SQL Database 的資料探索和分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
+| database_name | **sysname** | 動作發生所在的資料庫環境。 可為 Null。 發生在伺服器層級的稽核，會傳回 NULL。 |  
+| database_principal_id | **int** |動作執行所在之資料庫使用者環境的識別碼。 不可為 Null。 如果不適用則傳回 0。 例如，伺服器作業。|
+| database_principal_name | **sysname** | 目前的使用者。 可為 Null。 如果無法使用則傳回 NULL。 |  
+| duration_milliseconds | **bigint** | **適用於**：Azure SQL DB 和受管理的執行個體<br /><br /> 查詢執行時間 （毫秒） |
+| event_time | **datetime2** | 可稽核的動作引發時的日期和時間。 不可為 Null。 |  
+| file_name | **varchar(260)** | 記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。 |
+| is_column_permission | **bit** | 指出這是否為資料行層級權限的旗標。 不可為 Null。 當 permission_bitmask = 0 時會傳回 0。<br /> 1 = true<br /> 0 = false |
+| object_id | **int** | 稽核發生所在之實體的識別碼。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 不可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 0。 例如驗證。 |  
+| object_name | **sysname** | 稽核發生所在之實體的名稱。 這包括下列項目：<br /> 伺服器物件<br /> 資料庫<br /> 資料庫物件<br /> 結構描述物件<br /> 可為 Null。 如果此實體為伺服器本身或是稽核並未在物件層級上執行，則會傳回 NULL。 例如驗證。 |
+| permission_bitmask | **varbinary(16)** | 在某些動作中，這就是已授與、拒絕或撤銷的權限。 |
+| response_rows | **bigint** | **適用於**：Azure SQL DB 和受管理的執行個體<br /><br /> 在結果集中傳回的資料列數目。 |  
+| schema_name | **sysname** | 動作發生所在的結構描述環境。 可為 Null。 發生在結構描述外部的稽核，會傳回 NULL。 |  
+| sequence_group_id | **varbinary** | **適用於**：僅限 SQL Server （從 2016年開始）<br /><br />  唯一識別碼 |  
+| sequence_number | **int** | 追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。 不可為 Null。 |  
+| server_instance_name | **sysname** | 稽核發生所在的伺服器執行個體名稱。 使用標準的 server\instance 格式。 |  
+| server_principal_id | **int** | 動作執行所在之登入環境的識別碼。 不可為 Null。 |  
+| server_principal_name | **sysname** | 目前的登入。 可為 Null。 |  
+| server_principal_sid | **varbinary** | 目前的登入 SID。 可為 Null。 |  
+| session_id | **smallint** | 事件發生所在之工作階段的識別碼。 不可為 Null。 |  
+| session_server_principal_name | **sysname** | 工作階段的伺服器主體。 可為 Null。 |  
+| 陳述式 | **nvarchar(4000)** | TSQL 陳述式 (如果存在的話)。 可為 Null。 如果不適用則傳回 NULL。 |  
+| succeeded | **bit** | 指示觸發此事件的動作是否成功。 不可為 Null。 若為登入事件以外的所有事件，這只會報告權限檢查成功或失敗，而不會報告作業成功或失敗。<br /> 1 = 成功<br /> 0 = 失敗 |
+| target_database_principal_id | **int** | GRANT/DENY/REVOKE 作業執行所在的資料庫主體。 不可為 Null。 如果不適用則傳回 0。 |  
+| target_database_principal_name | **sysname** | 動作的目標使用者。 可為 Null。 如果不適用則傳回 NULL。 |  
+| target_server_principal_id | **int** | GRANT/DENY/REVOKE 作業執行所在的伺服器主體。 不可為 Null。 如果不適用則傳回 0。 |  
+| target_server_principal_name | **sysname** | 動作的目標登入。 可為 Null。 如果不適用則傳回 NULL。 |  
+| target_server_principal_sid | **varbinary** | 目標登入的 SID。 可為 Null。 如果不適用則傳回 NULL。 |  
+| transaction_id | **bigint** | **適用於**：僅限 SQL Server （從 2016年開始）<br /><br /> 若要找出一項交易中的多個稽核事件的唯一識別碼 |  
+| user_defined_event_id | **smallint** | **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Azure SQL DB 和受管理的執行個體<br /><br /> 使用者定義的事件識別碼傳遞做為引數**sp_audit_write**。 **NULL**系統事件 （預設值） 和非零值則代表使用者定義的事件。 如需詳細資訊，請參閱 < [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。 |  
+| user_defined_information | **nvarchar(4000)** | **適用於**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Azure SQL DB 和受管理的執行個體<br /><br /> 用來記錄使用者想要使用記錄在稽核記錄檔中的任何額外資訊**sp_audit_write**預存程序。 |  
+
   
 ## <a name="remarks"></a>備註  
  如果*file_pattern&lt*引數傳遞給**fn_get_audit_file**參考路徑或檔案不存在，或如果檔案不是稽核檔案， **MSG_INVALID_AUDIT_FILE**會傳回錯誤訊息。  
   
-## <a name="permissions"></a>Permissions  
- - **SQL Server**：需要 **CONTROL SERVER** 權限。  
- - **Azure SQL DB**:需要**控制資料庫**權限。     
-    - 伺服器系統管理員可以存取伺服器上的所有資料庫的稽核記錄的檔。
-    - 非伺服器系統管理員只能存取從目前資料庫的稽核記錄檔。
-    - 不符合上述準則的 blob 將會略過 （略過的 blob 清單將會顯示查詢輸出訊息中），且函式會傳回記錄檔只會從允許存取的 blob。  
+## <a name="permissions"></a>Permissions
+
+- **SQL Server**：需要 **CONTROL SERVER** 權限。  
+- **Azure SQL DB**:需要**控制資料庫**權限。     
+  - 伺服器系統管理員可以存取伺服器上的所有資料庫的稽核記錄的檔。
+  - 非伺服器系統管理員只能存取從目前資料庫的稽核記錄檔。
+  - 不符合上述準則的 blob 將會略過 （略過的 blob 清單將會顯示查詢輸出訊息中），且函式會傳回記錄檔只會從允許存取的 blob。  
   
 ## <a name="examples"></a>範例
 
