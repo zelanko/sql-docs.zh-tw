@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541800"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296471"
 ---
 # <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   
   
 |詞彙|定義|  
 |----------|----------------|  
-|.NET Framework|不可或缺的 Windows 元件，可支援建立、部署及執行下一代的應用程式和 Web 服務。 它提供了高生產力、標準化的多語言環境，可將現有的投資與下一代應用程式和服務整合，而且可以靈活應付網際網路規模的應用程式在部署和作業方面所面臨的各種挑戰。 .NET Framework 是由三個主要部分組成：Common Language Runtime、一組階層式的統一類別庫，以及組件化的 ASP 版本 (稱為 ASP.NET)。 請參閱：ASP.NET、Common Language Runtime 和 .NET Framework 類別庫。|  
+|.NET Framework|不可或缺的 Windows 元件，可支援建立、部署及執行下一代的應用程式和 Web 服務。 它提供了高生產力、標準化的多語言環境，可將現有的投資與下一代應用程式和服務整合，而且可以靈活應付網際網路規模的應用程式在部署和作業方面所面臨的各種挑戰。 .NET Framework 是由三個主要部分組成：Common Language Runtime、一組階層式的統一類別庫，以及組件化的 ASP 版本 (稱為 ASP.NET)。 另請參閱：ASP.NET、通用語言執行平台、.NET Framework 類別庫。|  
 |ActiveX Data Objects|提供資料來源之存取權的元件物件模型物件。 這個 API 會提供 OLE DB 與 Visual Basic、Visual Basic for Applications、Active Server Pages 和 Microsoft Internet Explorer Visual Basic Scripting 等程式語言之間的中介層。|  
 |特定報表 (ad hoc report)|使用報表產生器 1.0 所建立的 .rdl 報表，用來存取報表模型。|  
 |裝飾 (adornment)|指附加在窗格或視窗邊緣的控制項或狀態區，例如工具列或尺規。|  
@@ -166,7 +166,7 @@ ms.locfileid: "52541800"
 |熱門地圖 (heat map)|一種地圖表示法，其中每個多邊形的色彩濃度都會對應到相關的分析資料。 例如，範圍中較小的值會以藍色 (冷門) 顯示，而較大的值則以紅色 (熱門) 顯示。|  
 |階層 (hierarchy)|一種邏輯樹狀結構，它將維度的各個成員組織起來，使每個成員都有一個父成員及零或多個子成員。|  
 |高可用性|指大部分時間都維持運作而且可供用戶端使用的資源狀態，中斷服務的失敗百分比非常低。|  
-|HTML|請參閱其他詞彙：超文字標記語言 (HTML)|  
+|HTML|請參閱其他術語：超文字標記語言 (HTML) (Hypertext Markup Language)|  
 |HTML 檢視器 (HTML Viewer)|由報表工具列以及其他用於處理報表之導覽元素所組成的使用者介面。|  
 |超文字標記語言 (HTML) (Hypertext Markup Language)|用於建立 Web 文件的文字標記語言。 HTML 會使用各種標記和屬性來定義 Web 文件的結構和配置。|  
 |識別碼 (identifier)|資料庫中的物件名稱。|  
@@ -177,12 +177,12 @@ ms.locfileid: "52541800"
 |執行個體|1.一個在電腦中執行的 SQL Server 複本。 2. 報表項目的特定複本，例如報表組件、子報表、動態成員或群組。|  
 |integer|包括 bigint、int、smallint 和 tinyint 等資料類型的數值資料類型類別目錄。|  
 |網際網路通訊協定安全性 (Internet Protocol security)|電腦透過網際網路通訊協定 (IP) 網路，利用密碼編譯安全性服務來提供安全的私人通訊時所必須遵守的規則。|  
-|IPsec|請參閱其他詞彙：網際網路通訊協定安全性|  
+|IPsec|請參閱其他術語：網際網路通訊協定安全性 (Internet Protocol security)|  
 |ISO|負責開發國際資料通訊標準的兩個國際標準組織的其中之一。 國際標準組織 (ISO) 與國際電子電機委員會 (IEC) 密切合作，共同定義運算的標準。 它們共同發行了 SQL 的 ISO/IEC SQL-92 標準。|  
 |項目層級角色指派 (item-level role assignment)|套用至報表伺服器資料夾中之項目的安全性原則。|  
 |項目層級角色定義 (item-level role definition)|定義用於控制報表伺服器資料夾命名空間中之項目存取權或互動方式之角色的安全性範本。|  
 |關鍵效能指標 (key performance indicator)|(KPI) 反映一段時間後所測量之重要商務變數 (例如，市場佔有率) 的可量化且標準化標準。|  
-|關鍵字 (keyword)|在 SQL Server 中用於執行特定功能 (例如定義、操作或存取資料庫物件) 的保留字。 例如，SELECT、FROM 和 AND。|  
+|關鍵字 (keyword)|在 SQL Server 中用於執行特定功能 (例如定義、操作或存取資料庫物件) 的保留字。 例如：SELECT、FROM 和 AND。|  
 |KPI|請參閱其他詞彙：關鍵效能指標|  
 |標籤欄位 (label field)|一種報表資料集欄位，可識別對應之索引鍵欄位的標籤。 參數和資料區可以顯示索引鍵欄位的標籤，而非值。|  
 |latency|從一部伺服器完成資料變更，到變更出現在另一部伺服器所經歷的時間量。|  
@@ -210,7 +210,7 @@ ms.locfileid: "52541800"
 |主檔案|與舊版 SQL Server 一起安裝的檔案，可用於儲存 master、model 和 tempdb 系統資料庫與交易記錄，以及 pubs 範例資料庫與交易記錄。|  
 |比對欄位 (match fields)|一組欄位，用於建立分析資料和空間資料之間的關聯性。|  
 |矩陣資料區域 (matrix data region)|報表配置上的資料區，這個資料區所提供的功能類似於交叉資料表與樞紐分析表報表。 在執行階段，當報表資料和資料區域結合時，矩陣在頁面上會以水平和垂直方式成長。 矩陣資料格中的值會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。|  
-|MDX|請參閱其他詞彙：多維度運算式 (MDX)|  
+|MDX|請參閱其他術語：多維度運算式 (MDX)|  
 |Mercator 投射 (Mercator projection)|在地圖報表項目中，Gerardus Mercator 在 1569 年發明的圓柱地圖投射。|  
 |中繼資料|資料屬性的相關資訊，例如，資料行中的資料類型 (數值、文字等等) 或資料行的長度；檔案的相關資訊，例如，檔案標題、描述、建立日期與上次修改日期；或者資料結構相關資訊或指定物件設計的相關資訊，例如 Cube 或維度。|  
 |方法|利用 COM 物件來執行動作的函數，如在 SQL-DMO、OLE DB 和 ActiveX Data Objects (ADO) 中。|  
@@ -261,7 +261,7 @@ ms.locfileid: "52541800"
 |protocol|一組讓電腦能夠交換資訊的標準格式和程序。|  
 |提供者|1.OLE DB 提供者。 2. 用於存取資料庫的同處理序動態連結程式庫 (DLL)。|  
 |查詢參數 (query parameters)|指定於資料集查詢中的參數，例如 Transact-SQL 查詢。|  
-|RDL|請參閱其他詞彙：報表定義語言|  
+|RDL|請參閱其他術語：報表定義語言|  
 |記錄 (record)|當做一個單元來處理的資訊之相關欄位 (資料行) 群組。 在關聯式資料庫中，記錄通常稱為資料列。|  
 |矩形 (rectangle)|可當做多個報表項目之容器使用或在報表上當做圖形元素使用的報表項目。|  
 |遞迴階層 (recursive hierarchy)|1.來自單一報表資料集的資料階層，其中在階層結構中包含多個階層層級，例如組織階層內經理-員工關聯性的回報結構。 2. 在 Master Data Services 中，包含遞迴關聯性的衍生階層。 當實體有基於實體本身的網域屬性時，就會有遞迴關聯性。|  
@@ -329,12 +329,12 @@ ms.locfileid: "52541800"
 |SKU|識別某項產品不同版本的方式。亦即，庫存單位 (Stock Keeping Unit) 的縮寫 (標準商務術語)。|  
 |配量 (slice)|Cube 中的資料子集，指定方式是依維度成員來限制一個或多個維度。|  
 |智慧標籤 (smart tag)|智慧標籤會直接在設計介面上公開重要組態，以增強 Visual Studio 2005 中整體設計階段的生產力。|  
-|SMDL|請參閱其他詞彙：語意模型定義語言 (SMDL)|  
+|SMDL|請參閱其他術語：語義模型定義語言 (SMDL) (Semantic Model Definition Language (SMDL))|  
 |snapshot|請參閱其他詞彙：報表快照集|  
 |排序次序 (sort order)|定序中的一組規則，用於定義字元在比較作業中的評估方式，以及字元的排序順序。|  
 |空間資料 (spatial data)|指定平面或曲面上物件位置的資料。 空間資料可以是點、線條或多邊形。|  
 |空間資料類型 (spatial data types)|指定代表幾何 (平面) 或地理 (地理) 資訊的資料。|  
-|SQL|請參閱其他詞彙：結構化查詢語言 (SQL)|  
+|SQL|請參閱其他術語：結構化查詢語言 (SQL) (Structured Query Language (SQL))|  
 |SQL 查詢 (SQL query)|SELECT、INSERT、UPDATE、DELETE 或 CREATE TABLE 之類的 SQL 陳述式。|  
 |SQL Server 驗證|指定 SQL Server 登入識別碼和密碼來驗證連接至 SQL Server 執行個體之嘗試行為的機制。|  
 |SQL Server 登入|儲存在 SQL Server 中，允許使用者連接至 SQL Server 的帳戶。|  
@@ -363,7 +363,7 @@ ms.locfileid: "52541800"
 |Windows Management Instrumentation|在 Managed 環境中，提供物件相關資訊的介面。|  
 |WKB|知名的二進位資料表示法，由開放式地理空間協會 (OGC) 指定。|  
 |WKT|知名的文字資料表示法，以開放式地理空間協會 (OGC) 指定。|  
-|WMI|請參閱其他詞彙：Windows Management Instrumentation|  
+|WMI|請參閱其他術語：Windows Management Instrumentation|  
 |X 軸 (x-axis)|請參閱其他詞彙：類別目錄 (x) 軸|  
 |Y 軸 (y-axis)|請參閱其他詞彙：值 (y) 軸|  
   

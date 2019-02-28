@@ -21,25 +21,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c691896930fcd5ef678ce0daa08b73f9002494c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b4fddc20d2ee9adbfb0f67f88fcb75661ebc828
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679676"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154793"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set 運算子 - UNION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  將兩個或更多查詢的結果結合成單一結果集，其中包括屬於聯集中之所有查詢的所有資料列。 UNION 作業不同於利用聯結來結合兩份資料表的資料行。  
+將兩個或多個查詢的結果結合成單一結果集。 這個集合包含屬於聯集中所有查詢的所有資料列。 UNION 作業不同於利用聯結來結合兩份資料表的資料行。  
   
- 以下是利用 UNION 來組合兩項查詢的結果集之基本規則：  
+以下是利用 UNION 來組合兩項查詢的結果集之基本規則：  
   
 -   在所有查詢中，資料行的數目和順序都必須相同。  
   
 -   資料類型必須相容。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,19 +54,19 @@ ms.locfileid: "47679676"
 ## <a name="arguments"></a>引數  
 \<query_specification> | ( \<query_expression> ) 這是一個查詢規格或查詢運算式，它會傳回要與另一個查詢規格或查詢運算式之資料合併的資料。 UNION 作業中的資料行定義不必相同，但必須能夠透過隱含的轉換而相容。 當資料類型不同時，產生的資料類型取決於[資料類型優先順序](../../t-sql/data-types/data-type-precedence-transact-sql.md)的規則。 當類型相同，但有效位數、小數位數或長度不同時，結果取決於相同的運算式組合規則。 如需詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
- **xml** 資料類型的資料行必須相等。 所有資料行都必須是 XML 結構描述類型，或不具類型。 如果具備類型，它們的類型必須是相同的 XML 結構描述集合。  
+**XML** 資料類型的資料行必須相等。 所有資料行都必須是 XML 結構描述類型，或不具類型。 如果具備類型，它們的類型必須是相同的 XML 結構描述集合。  
   
- UNION  
- 指定組合多個結果集，以及當做單一結果集傳回。  
+UNION  
+指定組合多個結果集，以及當做單一結果集傳回。  
   
- ALL  
- 將所有資料列納入結果中。 其中包括複本。 若未指定，就會移除資料列複本。  
+ALL  
+將所有資料列納入結果中，包含重複的資料列。 若未指定，就會移除資料列複本。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-a-simple-union"></a>A. 使用簡單 UNION  
- 在下列範例中，結果集包括 `ProductModelID` 和 `Name` 資料表之 `ProductModel` 和 `Gloves` 資料行的內容。  
-  
+在下列範例中，結果集包括 `ProductModelID` 和 `Name` 資料表之 `ProductModel` 和 `Gloves` 資料行的內容。  
+ 
 ```  
 -- Uses AdventureWorks  
   
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="b-using-select-into-with-union"></a>B. 搭配 UNION 使用 SELECT INTO  
- 在下列範例中，第二個 `INTO` 陳述式中的 `SELECT` 子句指定利用名稱為 `ProductResults` 的資料表，保留 `ProductModel` 和 `Gloves` 資料表的指定資料行之聯集的最終結果集。 請注意，`Gloves` 資料表建立在第一個 `SELECT` 陳述式中。  
+在下列範例中，第二個 `SELECT` 陳述式中的 `INTO` 子句指定名為 `ProductResults` 的資料表，保留 `ProductModel` 和 `Gloves` 資料表所選資料行聯集的最終結果集。 `Gloves` 資料表是建立在第一個 `SELECT` 陳述式中。  
   
 ```  
 -- Uses AdventureWorks  
@@ -129,7 +129,7 @@ FROM dbo.ProductResults;
 ```  
   
 ### <a name="c-using-union-of-two-select-statements-with-order-by"></a>C. 搭配 ORDER BY 使用兩個 SELECT 陳述式的 UNION  
- 搭配 UNION 子句使用之特定參數的順序非常重要。 下列範例會顯示在兩個 `UNION` 陳述式中的輸出重新命名一個資料行時，`SELECT` 的正確和不正確用法。  
+搭配 UNION 子句使用之特定參數的順序非常重要。 下列範例會顯示在兩個 `UNION` 陳述式中的輸出重新命名一個資料行時，`SELECT` 的正確和不正確用法。  
   
 ```  
 -- Uses AdventureWorks  
@@ -171,9 +171,9 @@ GO
 ```  
   
 ### <a name="d-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>D. 利用三個 SELECT 陳述式的 UNION 來顯示 ALL 和括號的作用  
- 下列範例會利用 `UNION` 來結合有 5 個相同資料列的三份資料表的結果。 第一個範例利用 `UNION ALL` 來顯示重複的記錄，以及傳回所有的 15 個資料列。 第二個範例利用不含 `UNION` 的 `ALL` 來刪除三個 `SELECT` 陳述式之組合結果中重複的資料列，並傳回 5 個資料列。  
+下列範例會利用 `UNION` 來結合有 5 個相同資料列的三份資料表的結果。 第一個範例利用 `UNION ALL` 來顯示重複的記錄，以及傳回所有的 15 個資料列。 第二個範例利用不含 `UNION` 的 `ALL` 來刪除三個 `SELECT` 陳述式之組合結果中重複的資料列，並傳回 5 個資料列。  
   
- 第三個範例搭配第一個 `ALL` 來使用 `UNION`，用括號括住未使用 `UNION` 的第二個 `ALL`。 第二個 `UNION` 會先處理，因為它在括號中，且會傳回 5 個資料列，因為並未使用 `ALL` 選項，複本會移除。 這 5 個資料列利用 `SELECT` 關鍵字，與第一個 `UNION ALL` 的結果結合起來。 這並不會在兩組 5 個資料列之間移除複本。 最終結果有 10 個資料列。  
+第三個範例搭配第一個 `UNION` 來使用 `ALL`，並用括弧括住未使用 `ALL` 的第二個 `UNION`。 系統會先處理第二個 `UNION`，因為它在括弧中；由於未使用 `ALL` 選項，並已移除重複項目，因此會傳回 5 個資料列。 這 5 個資料列利用 `SELECT` 關鍵字，與第一個 `UNION ALL` 的結果結合起來。 此範例並不會移除這兩組 5 個資料列之間的重複項目。 最終結果有 10 個資料列。  
   
 ```  
 -- Uses AdventureWorks  
@@ -244,7 +244,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. 使用簡單 UNION  
- 在下列範例中，結果集包括 `FactInternetSales` 和 `DimCustomer` 資料表之 `CustomerKey` 資料行的內容。 因為沒有使用 ALL 關鍵字，所以重複項目會從結果中排除。  
+在下列範例中，結果集包括 `FactInternetSales` 和 `DimCustomer` 資料表之 `CustomerKey` 資料行的內容。 因為沒有使用 ALL 關鍵字，所以重複項目會從結果中排除。  
   
 ```  
 -- Uses AdventureWorks  
@@ -284,7 +284,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. 使用含 WHERE 和 ORDER BY 之 SELECT 陳述式的 UNION  
- 以下範例說明在需要 WHERE 和 ORDER BY 的兩個 `SELECT` 陳述式中，不正確的和正確的 `UNION` 用法。  
+以下範例說明在需要 WHERE 和 ORDER BY 的兩個 `SELECT` 陳述式中，不正確的和正確的 `UNION` 用法。  
   
 ```  
 -- Uses AdventureWorks  
@@ -312,11 +312,11 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. 利用三個 SELECT 陳述式的 UNION 來顯示 ALL 和括號的作用效果  
- 以下範例使用 `UNION` 來合併**同一個資料表**的結果，以示範在使用 `UNION` 時 ALL 和括號的效果。  
+下列範例使用 `UNION` 來合併**同一個資料表**的結果，以示範在使用 `UNION` 時 ALL 和括弧的效果。  
   
- 第一個範例使用 `UNION ALL` 顯示重複的記錄，並將來源資料表中的每個資料列都傳回三次。 第二個範例使用不含 `ALL` 的 `UNION`，以排除三個 `SELECT` 陳述式的結合結果中的重複資料列，並只傳回來源資料表中未重複的資料列。  
+第一個範例使用 `UNION ALL` 顯示重複的記錄，並將來源資料表中的每個資料列都傳回三次。 第二個範例使用不含 `ALL` 的 `UNION`，以排除三個 `SELECT` 陳述式的結合結果中的重複資料列，並只傳回來源資料表中未重複的資料列。  
   
- 第三個範例搭配第一個 `UNION` 來使用 `ALL`，並用括號括住未使用 `ALL` 的第二個 `UNION`。 系統會先處理第二個 `UNION`，因為它在括號中。 它只會傳回資料表中未重複的資料列，因為沒有使用 `ALL` 選項且已經移除重複項。 這些資料列利用 `UNION ALL` 關鍵字，與第一個 `SELECT` 的結果合併。 這並不會移除兩個集合之間的重複項目。  
+第三個範例搭配第一個 `UNION` 來使用 `ALL`，並用括弧括住未使用 `ALL` 的第二個 `UNION`。 系統會先處理第二個 `UNION`，因為它在括號中。 由於未使用 `ALL` 選項，並已移除重複項目，因此它只會傳回資料表中未重複的資料列。 這些資料列利用 `UNION ALL` 關鍵字，與第一個 `SELECT` 的結果合併。 此範例並不會移除這兩組之間的重複項目。  
   
 ```  
 -- Uses AdventureWorks  
@@ -352,8 +352,8 @@ FROM DimCustomer
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [SELECT 範例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+[SELECT 範例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
   
   
 

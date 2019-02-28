@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 509bce618c902ea06b3e64498b3e7445e0eaae4e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711481"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290656"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>教學課程：將直條圖新增至報表 (報表產生器)
 在本教學課程中，您將建立包含直條圖的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，而直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 
 
 直條圖可用於：  

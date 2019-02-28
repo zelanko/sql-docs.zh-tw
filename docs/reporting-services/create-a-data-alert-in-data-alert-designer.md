@@ -9,12 +9,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f58c39fb0be119da6164b62d91d3e3da8e0a5c48
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504114"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331508"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
 

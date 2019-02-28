@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085414"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291948"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>從行動報表將鑽研加入其他行動報表或 URL
 您可以從 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中的任何量測計、圖表或資料格將鑽研加入另一個行動報表或自訂 URL。 
@@ -37,7 +37,7 @@ ms.locfileid: "49085414"
 2. 在 [視覺屬性] 窗格中，選取 [鑽研目標] > [行動報表]。  
 3. 選取伺服器和目標行動報表。  
 
-   >注意︰如果目標行動報表不是與來源行動報表位在相同的伺服器上，請改用自訂 URL 來連接它 (如下節所述)。  
+   >注意：如果目標行動報表與來源行動報表位於不同的伺服器上，請改用自訂 URL 來連線它 (如下節所述)。  
  
 4. 在您選取目標行動報表之後，會看到其可用的輸入參數，包括可繫結至目標行動報表資料集上所設定的導覽器控制項和參數的屬性。  
 

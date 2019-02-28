@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bec3fb7737cd8621952dc71cbad80c0af5159151
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516977"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292918"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 課：定義資料表報表的資料集 (Reporting Services)
 當您定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」中。 資料集含有指向資料來源的指標和報表要用的查詢，以及計算的欄位和變數。  
@@ -68,12 +68,12 @@ ms.locfileid: "52516977"
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>下一項工作  
-您已順利指定一項擷取報表資料的查詢。 之後，您要建立報表配置。 請參閱[第 4 課：將資料表新增至報表 &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
+您已順利指定一項擷取報表資料的查詢。 之後，您要建立報表配置。 查看[第 4 課：將資料表新增至報表 &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [查詢設計工具 &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  
 [SQL Server 連接類型 &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)  
-[教學課程：撰寫國際性通用的 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
+[教學課程：撰寫 Transact-SQL 陳述式](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   
   

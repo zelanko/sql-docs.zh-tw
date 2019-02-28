@@ -11,14 +11,14 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381f0070a8e045aeec707c1f8dc9a6df9cd157d9
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711416"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290296"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server 的報表產生器
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是製作分頁報表的工具，適用於喜歡在獨立環境中工作的商務使用者，而非使用 Visual Studio 報表設計師。  當您設計分頁報表時，您建立的報表定義會指定資料的取得位置、要取得的資料，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中預覽報表。 然後，您可在原生模式或 SharePoint 整合模式 (2016 或更舊版本) 發佈至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器。 您也可以將編頁報表發佈至 Power BI 服務。 深入了解 [Power BI Premium 中的編頁報表](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (預覽)。

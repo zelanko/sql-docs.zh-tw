@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712709"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298646"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
@@ -27,7 +27,7 @@ ms.locfileid: "52712709"
 在本教學課程中，您將建立地圖報表，用於顯示紐約州各郡的商店位置。  
    
 > [!NOTE]  
-> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集，以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 完成本教學課程的估計時間：30 分鐘。  
   
@@ -169,13 +169,13 @@ ms.locfileid: "52712709"
 9. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。  
   
     結果集包含七個資料行，代表一組販賣消費品的紐約州商店。 以下是清單，以及對於較不明顯者的說明︰ 
-    *   **StoreKey**︰商店識別碼。  
+    *   **StoreKey**：商店識別碼。  
     *   **StoreName**。
-    *   **SellingArea**︰可用於產品展示的區域，範圍是從 455 平方英尺到 1125 平方英尺。
+    *   **SellingArea**：可用於產品展示的區域，範圍從 455 平方英尺到 1125 平方英尺。
     *   **City**。
     *   **County**。
     *   **Sales**：總銷售額。 
-    *   **SpatialLocation**︰經度和緯度位置。 
+    *   **SpatialLocation**：經度和緯度位置。 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   

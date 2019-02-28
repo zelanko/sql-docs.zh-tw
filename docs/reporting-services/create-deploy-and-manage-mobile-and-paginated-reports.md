@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712549"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297396"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>什麼是 SQL Server Reporting Services (SSRS)？
 
@@ -83,9 +83,9 @@ Reporting Services 與「傳統」分頁文件樣式報表相關聯，您擁有�
 
 您可以將自訂商標套用至您的入口網站。 而且您可以直接在入口網站中建立 KPI。 KPI 可以在瀏覽器中呈現關鍵業務指標概覽，而不必開啟報表。 
 
-新的入口網站完全是報表管理員的重寫。 現在它是單一頁面的標準式 HTML5 應用程式，並已針對下列新式瀏覽器最佳化︰Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari，以及所有主要瀏覽器。
+新的入口網站完全是報表管理員的重寫。 它現在是單頁面的標準 HTML5 型應用程式，為新式瀏覽器的最佳化對象：Edge、Internet Explorer 10 和 11、Chrome、Firefox、Safari 和所有主流瀏覽器。
 
-入口網站的內容依類型組織：Reporting Services 行動與分頁報表及 KPI、Excel 活頁簿、共用資料集和共用資料來源，以作為報表的建置組塊。 您可以在這裡用安全的方式，以傳統資料夾階層儲存並管理它們。 您可以標記 [我的最愛]，而且如果您具有相關角色，也可以管理內容。
+入口網站的內容依類型組織：Reporting Services 行動與編頁報表和 KPI、Excel 活頁簿、共用資料集以及共用資料來源，皆用作報表的建置區塊。 您可以在這裡用安全的方式，以傳統資料夾階層儲存並管理它們。 您可以標記 [我的最愛]，而且如果您具有相關角色，也可以管理內容。
 
 您仍然可以在新的入口網站中，為報表處理進行排程、視需要存取報表，以及訂閱已發行的報表。
 

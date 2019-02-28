@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce9cfd4ae9459ecdb4c2169a5fb6cb638792ab4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712439"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296160"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖加入至報表 (報表產生器)
-在本教學課程中，您會使用 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 接著新增篩選，並加強圖表。 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>教學課程：將橫條圖新增至報表 (報表產生器)
+在本教學課程中，您會使用[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]中的精靈，在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中建立橫條圖。 接著新增篩選，並加強圖表。 
 
 橫條圖會以水平方向顯示類別目錄資料。 這樣有助於：  
   
@@ -30,7 +30,7 @@ ms.locfileid: "52712439"
   
  
 > [!NOTE]  
-> 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、建立資料集以及選擇資料來源的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、建立資料集及選擇資料來源的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 完成本教學課程的估計時間：15 分鐘。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52712439"
   
 2.  按一下 [橫條圖]，然後按一下 [下一步]。  
   
-    [排列圖表欄位] 頁面上的 [可用的欄位] 窗格中有四個欄位：FirstName、LastName、SalesYear2015 和 SalesYear2014。  
+    [排列圖表欄位] 頁面上的 [可用欄位] 窗格中有四個欄位：FirstName、LastName、SalesYear2015 及 SalesYear2014。  
   
 3.  將 [LastName] 拖曳至 [類別目錄] 窗格。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52712439"
   
 1.  切換到報表設計檢視。  
   
-2.  選取圖表頂端的 [圖表標題] 這幾個字，然後鍵入：**Sales for 2014 and 2015**。  
+2.  選取圖表頂端的 [圖表標題] 這幾個字，然後鍵入：**2014 年與 2015 年的銷售額**。  
   
 3.  在 [屬性] 窗格中，於選取標題的情況下，將 [色彩] 設為 [黑色]，並將 [字型大小] 設為 [12 pt]。 
   
@@ -226,7 +226,7 @@ ms.locfileid: "52712439"
   
 7.  在 [軸標題] 方塊中，鍵入 **Sales in thousands**，然後按 Enter。  
 
-    >**注意︰** 輸入時，[軸標題] 方塊會顯示在垂直軸上。 但是，當您按 Enter 時，它會移至水平軸。
+    >**注意：** 鍵入時，[軸標題] 方塊會顯示在垂直軸上。 但是，當您按 Enter 時，它會移至水平軸。
   
 9. 按一下 **[執行]** 預覽報表。  
   

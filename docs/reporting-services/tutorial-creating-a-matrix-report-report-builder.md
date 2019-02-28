@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712369"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291676"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
 本教學課程會引導您建立 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，其中具有巢狀資料列和資料行群組的範例銷售資料矩陣。 
@@ -22,7 +22,7 @@ ms.locfileid: "52712369"
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-完成這個教學課程的估計時間：30 分鐘。  
+完成本教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱 [教學課程的必要條件](../reporting-services/prerequisites-for-tutorials-report-builder.md)。 
@@ -49,7 +49,7 @@ ms.locfileid: "52712369"
   
 5.  按 [下一步] 。  
   
-6.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌資料來源的資訊，請參閱[教學課程︰建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌資料來源的資訊，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  按 [下一步] 。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52712369"
   
 13. 按一下 **[完成]**。  
   
-    矩陣會加入至設計介面。 [資料列群組] 窗格將顯示兩個資料列群組：Territory 和 SalesDate。 [資料行群組] 窗格則顯示這兩個資料行群組：Subcategory 和 Product。 詳細資料是資料集查詢擷取的所有資料。  
+    矩陣會加入至設計介面。 [資料列群組] 窗格會顯示兩個資料列群組：Territory 和 SalesDate。 [資料行群組] 窗格會顯示兩個資料行群組：Subcategory 和 Product。 詳細資料是資料集查詢擷取的所有資料。  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -335,7 +335,7 @@ ms.locfileid: "52712369"
   
 2.  選取包含的資料格。 `[Territory].` 
 
-    >**注意**︰選取資料格，而不是文字。 WritingMode 屬性只適用於資料格。
+    >**注意**:請選取資料格，而非文字。 WritingMode 屬性只適用於資料格。
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   

@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711657"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289632"
 ---
-# <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 (報表產生器)
+# <a name="tutorial-format-text-report-builder"></a>教學課程：將文字格式化 (報表產生器)
 
 在本教學課程中，您可以在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表中練習以各種不同的方式格式化文字。 您可以實驗不同的格式。 
 
@@ -25,7 +25,7 @@ ms.locfileid: "52711657"
   
 您在某個步驟故意出錯，所以知道錯誤的原因是什麼。 接著您要更正錯誤以便達到想要的效果。  
     
-完成這個教學課程的估計時間：30 分鐘。  
+完成本教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "52711657"
 
     如果看不到 [報表資料] 窗格，請檢查 [檢視] 索引標籤上的 [報表資料]。
   
-2.  在 [名稱] 方塊中，鍵入：**TextDataSource**  
+2.  在 [名稱] 方塊中，輸入：**TextDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52711657"
   
 2.  確認資料來源為 **TextDataSource**。  
   
-3.  在 [名稱] 方塊中，鍵入：**TextDataset**。  
+3.  在 [名稱] 方塊中，輸入：**TextDataset。**  
   
 4.  確認已選取 **[文字]** 查詢類型，然後按一下 **[查詢設計工具]**。  
   

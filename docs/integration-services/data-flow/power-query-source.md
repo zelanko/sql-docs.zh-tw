@@ -1,12 +1,15 @@
 ---
 title: Power Query 來源 | Microsoft Docs
 description: 了解如何在 SQL Server Integration Services 資料流程中設定 Power Query 來源
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
+- sql13.ssis.designer.powerqueryconnmgr.f1
+- sql13.ssis.designer.powerquerysource.queries.f1
+- sql13.ssis.designer.powerquerysource.connmgrs.f1
 - sql14.ssis.designer.powerqueryconnmgr.f1
 - sql14.ssis.designer.powerquerysource.queries.f1
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
@@ -14,12 +17,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00b24bdc5da2c717f43ca30e9159aa845faf171b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570701"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319309"
 ---
 # <a name="power-query-source-preview"></a>Power Query 來源 (預覽)
 
@@ -68,9 +71,6 @@ ms.locfileid: "55570701"
 
 在這些來源 (**Oracle**、**DB2**、**MySQL**、**PostgreSQL**、**Teradata**、**Sybase**) 中，有一些需要額外安裝可從 [Power Query 必要條件](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) \(機器翻譯\) 一文取得的 ADO.NET 驅動程式。 您可以使用自訂安裝介面，在 Azure-SSIS IR 上安裝它們，請參閱[自訂 Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文。
 
-> [!NOTE]
-> 對於 **Oracle** 資料來源，Oracle ADO.NET 驅動程式目前無法安裝於 Azure-SSIS IR，因此，現在請改為安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱[自訂 AZURE-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的 **ORACLE 標準 ODBC**範例。
-
 對於**資料來源路徑**，您可以輸入不需驗證資訊，即可組成連接字串的資料來源特有屬性。 例如，適用於 **SQL** 資料來源的路徑格式為 `<Server>;<Database>`。 您可以選取 [編輯] 按鈕，以將值指派給組成路徑的資料來源特有屬性。
 
 ![PQ 來源 [連線管理員編輯器] 路徑](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -78,6 +78,12 @@ ms.locfileid: "55570701"
 最後，對於**驗證種類**，您可以從下拉式功能表中選取 [匿名]/[Windows 驗證]/[使用者名稱密碼]/[金鑰]、輸入適當的存取認證，然後選取 [測試連接] 按鈕，以確保 Power Query 來源已正確設定。
 
 ![PQ 來源 [連線管理員編輯器] 驗證](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### <a name="current-limitations"></a>目前的限制
+
+-   目前無法使用 **Oracle** 資料來源，因為 Oracle ADO.NET 驅動程式無法安裝於 Azure-SSIS IR；因此，暫時請改安裝 Oracle ODBC 驅動程式，並使用 **ODBC** 資料來源連線到 Oracle，請參閱[自訂 AZURE-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 一文中的 **ORACLE 標準 ODBC** 範例。
+
+-   目前無法以自訂安裝的狀態在 Azure-SSIS IR 上使用 **Web** 資料來源，所以暫時請以無自訂安裝的狀態在 Azure-SSIS IR 上使用它。
 
 ## <a name="next-steps"></a>後續步驟
 了解如何在 Azure-SSIS IR 中執行 SSIS 封裝以作為 ADF 管線中的第一級活動。 請參閱[執行 SSIS 封裝活動執行階段](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)一文。

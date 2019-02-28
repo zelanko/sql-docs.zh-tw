@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d21485f49b37640a24ffb74e3f3c60fd132b2ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa91003f0afd18372119864175806b4a8b9b6655
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796086"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265285"
 ---
 # <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -64,8 +64,8 @@ SET CONCAT_NULL_YIELDS_NULL ON
 >  SET CONCAT_NULL_YIELDS_NULL 與 ALTER DATABASE 的 CONCAT_NULL_YIELDS_NULL 設定相同。  
   
  SET CONCAT_NULL_YIELDS_NULL 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  
-  
- 當您建立或變更計算資料行索引或索引檢視時，SET CONCAT_NULL_YIELDS_NULL 必須是 ON。 如果 SET CONCAT_NULL_YIELDS_NULL 是 OFF，任何含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式將會失敗。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
+
+當您建立或變更索引檢視、計算資料行索引、篩選索引或空間索引時，SET CONCAT_NULL_YIELDS_NULL 必須是 **ON**。 如果 SET CONCAT_NULL_YIELDS_NULL 是 **OFF**，任何含計算資料行索引、篩選索引、空間索引或索引檢視的資料表 CREATE、UPDATE、INSERT 和 DELETE 陳述式將會失敗。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。
   
  當 CONCAT_NULL_YIELDS_NULL 設為 OFF 時，無法出現跨越伺服器界限的字串串連。  
   

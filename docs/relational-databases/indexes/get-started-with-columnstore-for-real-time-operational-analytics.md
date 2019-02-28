@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531538"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294446"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "52531538"
   
 -   [資料行存放區索引和適用於資料列群組的合併原則](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
-## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>效能秘訣 #1︰使用篩選的索引來提升查詢效能  
+## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>效能提示 #1：使用經篩選索引來改善查詢效能  
  執行即時作業分析會影響 OLTP 工作負載的效能。  這種影響應該很小。 下列範例示範如何使用篩選的索引，將交易式工作負載上的非叢集資料行存放區索引影響降到最低，同時仍能提供即時分析。  
   
  若要將維護作業工作負載上非叢集資料行存放區索引的額外負荷降到最低，您可以使用篩選的條件，僅在「暖」  或緩時變的資料上建立非叢集資料行存放區索引。 例如，在訂單管理應用程式中，您可以在已經出貨的訂單上建立非叢集資料行存放區索引。 一旦訂單已出貨之後，就很少變更，因此可視為暖資料。 透過篩選的索引，非叢集資料行存放區索引中的資料所需的更新很少，因而可降低對交易式工作負載的影響。  
@@ -120,7 +120,7 @@ ms.locfileid: "52531538"
 > [!NOTE]  
 >  只有以磁碟為基礎的資料表上才支援篩選的非叢集資料行存放區索引。 記憶體最佳化的資料表上並不支援。  
   
-### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>範例 A︰從 btree 索引存取熱資料，從資料行存放區索引存取暖資料  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>範例 A：從 btree 索引存取熱資料，從資料行存放區索引存取暖資料  
  此範例會使用篩選的條件 (accountkey > 0)，來建立將存在於資料行存放區索引中的資料列。 目標是設計篩選的條件和後續查詢，以便從 btree 索引存取經常變更的「熱」資料，以及從資料行存放區索引存取更穩定的「暖」資料。  
   
  ![組合的暖和熱資料索引](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "組合的暖和熱資料索引")  
@@ -170,10 +170,10 @@ Group By customername
   
  如需 [篩選的非叢集資料行存放區索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)的詳細資訊，請參閱此部落格。  
   
-## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>效能秘訣 #2︰將分析卸載至 AlwaysOn 可讀取次要  
+## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>效能提示 #2：將分析卸載至 Always On 可讀取次要  
  雖然您可以使用篩選的資料行存放區索引來將資料行存放區索引維護最小化，但是分析查詢仍然需要大量運算資源 (CPU、IO、記憶體)，這會影響作業工作負載效能。 針對大部分任務關鍵性工作負載，建議您使用 AlwaysOn 組態。 在此組態中，您可以免除將分析卸載至可讀取次要以執行分析的影響。  
   
-## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>效能秘訣 #3︰讓熱資料保留於差異資料列群組中來減少索引片段  
+## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>效能提示 #3：讓熱資料保留在差異資料列群組中來減少索引片段  
  如果工作負載會更新/刪除已壓縮的資料列，具有資料行存放區索引的資料表可能會產生大量的片段 (也就是刪除的資料列)。 片段的資料行存放區索引會導致記憶體/儲存體使用率的效率不佳。 除了資源使用效率不佳，它也會因為額外的 IO 以及從結果集中篩選出已刪除資料列的需要，而使分析查詢效能受到負面影響。  
   
  在您使用 REORGANIZE 命令執行索引重組，或是在整個資料表或受影響的分割區上重建資料行存放區索引之前，不會實際移除刪除的資料列。 REORGANIZE 和索引 REBUILD 都是成本很高的作業，其會取出資源，否則會將資源用於工作負載。 此外，如果資料列過早壓縮，就可能需要由於更新而多次重新壓縮，因而導致浪費了壓縮的額外負荷。  
@@ -203,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **插入/查詢工作負載︰** 如果您的工作負載主要是插入資料並加以查詢，則建議的選項是預設為 0 的 COMPRESSION_DELAY。 將 1 百萬個資料列插入單一差異資料列群組之後，即會壓縮最新插入的資料列。  
     這類工作負載的部分範例是，當您需要在 Web 應用程式中分析按一下模式時所進行的 (a) 傳統 DW 工作負載 (b) 按一下資料流分析。  
   
--   **OLTP 工作負載︰** 如果工作負載是大量的 DML (也就是大量的更新、刪除和插入混合)，您可能會看到資料行存放區索引片段，方法是檢查 DMV sys. dm_db_column_store_row_group_physical_stats。 如果您看到最近壓縮的資料列群組中有 > 10% 的資料列標示為已刪除，您可以使用 COMPRESSION_DELAY 選項，在資料列變成能夠壓縮時，新增時間延遲。 例如，針對您的工作負載，如果最新插入的資料列假設在 60 分鐘內會保持「熱」(也就是多次取得更新)，您應該選擇讓 COMPRESSION_DELAY 為 60。  
+-   **OLTP 工作負載：** 如果工作負載是大量的 DML (也就是大量更新、刪除和插入的混合)，您可以透過檢查 DMV sys 來查看資料行存放區索引片段。 dm_db_column_store_row_group_physical_stats。 如果您看到最近壓縮的資料列群組中有 > 10% 的資料列標示為已刪除，您可以使用 COMPRESSION_DELAY 選項，在資料列變成能夠壓縮時，新增時間延遲。 例如，針對您的工作負載，如果最新插入的資料列假設在 60 分鐘內會保持「熱」(也就是多次取得更新)，您應該選擇讓 COMPRESSION_DELAY 為 60。  
   
  我們預期大多數客戶不需要執行任何動作。 他們應該適用 COMPRESSION_DELAY 選項的預設值。  
 對於進階使用者，我們建議執行下列查詢，並收集過去 7 天已刪除資料列的 %。  

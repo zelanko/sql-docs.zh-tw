@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1624ff7f1ea5f480b5e28741bccc50d8746a5f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae6754923dcb22a64251b351f013069b3a681fb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747856"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291816"
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中計算整個資料列集或資料列集中特定分割區的特定排序值百分位數。 對於指定的百分位數值 *P*，PERCENTILE_DISC 會排序 ORDER BY 子句中的運算式值，然後傳回具有最小 CUME_DIST 值 (相同排序規格)，但大於或等於 *P* 的值。例如，PERCENTILE_DISC (0.5) 會計算運算式的第 50 個百分位數 (亦即中間值)。 PERCENTILE_DISC 會依據資料行值的離散分佈計算百分位數，其結果會等於資料行中的某個特定值。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中計算整個資料列集或資料列集特定資料分割的特定排序值百分位數。 針對指定的百分位數值 *P*，PERCENTILE_DISC 會在 ORDER BY 子句中排序運算式值。 接著傳回大於或等於*P* 所指定最小 CUME_DIST 值的值 (相對於相同的排序規格)。例如，PERCENTILE_DISC (0.5) 會計算運算式的第 50 個百分位數 (亦即中間值)。 PERCENTILE_DISC 會根據資料行值的離散分布計算百分位數。 結果等於某個特定的資料行值。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,11 +45,11 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  *literal*  
  要運算的百分位數。 值範圍必須介於 0.0 到 1.0 之間。  
   
- WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC)**  
  指定要用以排序及計算百分位數的值清單。 只允許一個 *order_by_expression*。 預設排序順序為遞增。 值的清單可以是任何能用於排序作業的有效資料類型。  
   
- OVER **(** \<partition_by_clause> **)**  
- 將 FROM 子句所產生的結果集，分割成套用百分位數函數的分割區。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 不可在 PERCENTILE_DISC 函式中指定 \<ORDER BY 子句> 及 \<資料列或範圍子句>。  
+ OVER **(** \<partition_by_clause>)**  
+ 將 FROM 子句的結果集分成幾個資料分割。 百分位數函式會套用到這些資料分割。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 PERCENTILE_DISC 函式中不能指定 \<ORDER BY 子句> 和 \<資料列或範圍子句>。  
   
 ## <a name="return-types"></a>傳回類型  
  傳回型別由 *order_by_expression* 類型決定。  
@@ -64,8 +64,11 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-basic-syntax-example"></a>A. 基本語法範例  
- 下列範例會使用 PERCENTILE_CONT 及 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 請注意，這些函數可能不會傳回相同的值。 這是因為資料集中無論有無 PERCENTILE_CONT，PERCENTILE_CONT 皆會插入適當值，而 PERCENTILE_DISC 則一律會傳回資料集中的實際值。  
+### <a name="basic-syntax-example"></a>基本語法範例  
+
+ 下列範例會使用 PERCENTILE_CONT 和 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 它們可能不會傳回相同的值：
+* PERCENTILE_CONT 會傳回適當的值，即使它不存在於資料集中。
+* PERCENTILE_DISC 會傳回實際的設定值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -96,8 +99,11 @@ Human Resources        17.427850    16.5865
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-basic-syntax-example"></a>B. 基本語法範例  
- 下列範例會使用 PERCENTILE_CONT 及 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 請注意，這些函數可能不會傳回相同的值。 這是因為資料集中無論有無 PERCENTILE_CONT，PERCENTILE_CONT 皆會插入適當值，而 PERCENTILE_DISC 則一律會傳回資料集中的實際值。  
+### <a name="basic-syntax-example"></a>基本語法範例  
+
+ 下列範例會使用 PERCENTILE_CONT 和 PERCENTILE_DISC 尋找各部門員工的薪資中間值。 它們可能不會傳回相同的值：
+* PERCENTILE_CONT 會傳回適當的值，即使它不存在於資料集中。 
+* PERCENTILE_DISC 會傳回實際的設定值。  
   
 ```  
 -- Uses AdventureWorks  

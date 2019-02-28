@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a4f2e6792e4523dea81b7e7ba8ac8f6ce45b5cbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 576d2fc5ba8ea023e69fe9b6136a676b188366e4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770306"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296796"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>顯示頁碼或其他報表屬性 (報表產生器及 SSRS)
   您可以輕鬆地將頁碼、報表標題、檔案名稱和其他報表屬性加入至報表的頁首或頁尾。 在 [報表資料] 窗格的 [內建欄位] 資料夾中，這些屬性會儲存成欄位：  
@@ -60,7 +60,7 @@ ms.locfileid: "47770306"
   
 1.  以滑鼠右鍵按一下包含 [&PageNumber] 的文字方塊，然後按一下 [運算式]。  
   
-     [設定運算式對象: 值] 文字方塊包含運算式 =Globals!PageNumber。  
+     [設定運算式對象：值] 文字方塊包含運算式 =Globals!PageNumber。  
   
 2.  將游標放在等號 (=) 之後，然後鍵入 **"Page " &**。  
   

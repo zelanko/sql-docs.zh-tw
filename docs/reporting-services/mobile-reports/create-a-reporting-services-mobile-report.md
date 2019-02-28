@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d3e35d889db2cbfa8eaead8f1f0e9a2015e007b5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710699"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295198"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>建立 Reporting Services 行動報表
 您可以使用 SQL Server 行動報表發行工具，在可調整格線列和格線欄且具有彈性行動報表項目的設計介面上，快速建立針對任何螢幕大小適當調整大小的 SQL Server Reporting Services 行動報表。  
@@ -42,7 +42,7 @@ ms.locfileid: "52710699"
   
 6. 選取 [本機 Excel] 或 [報表伺服器]。  
   
-   >**提示**︰若您要從 Excel 加入資料，請務必︰  
+   >**提示**：若要從 Excel 新增資料，請務必︰  
     >* [準備好 Excel 資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) 以便在行動報表中使用。  
     >* 請先關閉檔案。  
 7. 選取想要的工作表，然後選取 [匯入]。   

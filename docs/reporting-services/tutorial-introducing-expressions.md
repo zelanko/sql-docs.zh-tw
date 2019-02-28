@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410705"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292216"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
 在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您將使用含有一般函數和運算子的運算式，來建立功能強大且靈活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。 
@@ -89,7 +89,7 @@ ms.locfileid: "52410705"
     ```  
 
   
-10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示 23 個資料列，包括下列資料行：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 和 LastPurchase。  
+10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示下列資料行中的 23 列資料：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 及 LastPurchase。  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -357,7 +357,7 @@ ms.locfileid: "52410705"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>若要查閱 CountryRegion 資料集中的值  
   
-1.  按一下 [國家/地區 ID] 資料行標題，並刪除文字：**ID**，變成 [國家/地區]。  
+1.  按一下 [國家/地區識別碼] 資料行標題，並刪除文字：**識別碼**，使其顯示為 [國家/地區]。  
   
 2.  以滑鼠右鍵按一下 [國家/地區] 資料行的資料格，然後按一下 [運算式]。  
   

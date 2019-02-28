@@ -10,14 +10,14 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f1efe1e5e10905cb04b2449ba0497af2b43f7aef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5f9b418aadd50e109ef0e4763a83b28948f391f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804196"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298536"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>為報表參數加入、變更或刪除可用的值
   當您建立報表參數之後，可以指定要對使用者顯示的可用值清單。 可用值清單會將使用者可以做的選擇限制為參數的有效值。  
@@ -76,8 +76,8 @@ ms.locfileid: "47804196"
 ## <a name="see-also"></a>另請參閱  
  [變更報表參數的順序 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [加入、變更或刪除報表參數 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [將串聯參數加入至報表 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [為報表參數新增、變更或刪除預設值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [將串聯參數加入至報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [為報表參數加入、變更或刪除預設值 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

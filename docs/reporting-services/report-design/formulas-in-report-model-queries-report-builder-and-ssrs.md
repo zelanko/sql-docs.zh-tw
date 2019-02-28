@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e078205cf705c9ea96a8cccc3811e8162a643f6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607690"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298546"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>報表模型查詢中的公式 (報表產生器及 SSRS)
   公式是針對使用報表模型做為資料來源之報表中的值來執行的計算。 當您定義報表模型資料來源的查詢時，可以在報表模型查詢設計工具的 [定義公式] 對話方塊中定義公式。 公式可以包含函數、運算子、常數和對欄位或實體的參考。 公式可讓您結合、彙總、篩選以及評估數值和文字資料。 您可以建立公式，並將它們另存為新的欄位，或者，您可以修改現有欄位的公式。  
@@ -38,7 +38,7 @@ ms.locfileid: "47607690"
   
  當您使用參考時，報表處理器會針對欄位中的每個值執行公式。 例如，假設欄位包含過去五年的年度銷售總額。 此欄位會包含五個值，每個值代表給定年度的銷售總額。 如果公式包含對此欄位的參考，則公式會使用每個個別值來計算新的值。  
   
-## <a name="operators"></a>運算子  
+## <a name="operators"></a>操作員  
  運算子指定要在公式的值上執行之計算的類型。 計算運算子有三種不同的類型：算術、比較和文字。 系統會使用符號 (如加號 (+))，來表示運算子。  
   
  **算術運算子。** 算術運算子會執行基本數學運算 (例如加法、減法或乘法)、結合數字，並產生數值結果。  
@@ -48,7 +48,7 @@ ms.locfileid: "47607690"
  **文字串連運算子。** 使用連字號 (&) 來聯結或串連一個或多個文字字串，以產生單一文字片段。  
   
 ##  <a name="Constants"></a> 常數  
- 常數是一個不需要計算的值，因此也不會變更。 報表產生器使用下列常數： **True**、 **False**和 **Empty**。 這些常數用於評估 [布林] 欄位。 例如，假設您有一個名為 IsDiscontinued 的欄位。 此欄位的有效值僅為 True、False 或空白 (" ")。  
+ 常數是一個不需要計算的值，因此也不會變更。 報表產生器使用下列常數：**True**、**False**，及 **Empty**。 這些常數用於評估 [布林] 欄位。 例如，假設您有一個名為 IsDiscontinued 的欄位。 此欄位的有效值僅為 True、False 或空白 (" ")。  
   
 ##  <a name="Functions"></a> 函數  
  函數是預先定義的公式，可使用依特定順序指定的特定值 (稱為 *「引數」*(Argument)) 執行計算。 引數可以是常值或欄位，或是兩者的組合。 當公式中使用欄位時，欄位名稱代表欄位的每個執行個體。 如果引數是常值，您可能需要使用特定的字元來表示引數是常值。  

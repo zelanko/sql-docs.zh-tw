@@ -1,7 +1,7 @@
 ---
 title: 叢集與非叢集索引說明 | Microsoft 文件
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299265"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265215"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>叢集與非叢集索引說明
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299265"
  如需其他類型的特殊用途索引，請參閱 [索引](../../relational-databases/indexes/indexes.md) 。  
   
 ## <a name="indexes-and-constraints"></a>索引與條件約束  
- 在資料表的資料行上定義 PRIMARY KEY 與 UNIQUE 條件約束時，會自動建立索引。 例如，當您建立資料表和識別特定資料行做為主索引鍵時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動為該資料行建立 PRIMARY KEY 條件約束與索引。 如需相關資訊，請參閱 [建立主索引鍵](../../relational-databases/tables/create-primary-keys.md) 及 [建立唯一的條件約束](../../relational-databases/tables/create-unique-constraints.md)。  
+
+在資料表的資料行上定義 PRIMARY KEY 與 UNIQUE 條件約束時，會自動建立索引。 例如，當您建立具有 UNIQUE 條件約束的資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動建立非叢集索引。 如果您設定主索引鍵，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會自動建立叢集索引 (除非叢集索引已經存在)。 當您嘗試在現有資料表上強制執行 PRIMARY KEY 條件約束，且該資料表上已存在叢集索引時，SQL Server 會使用非叢集索引強制執行主索引鍵。
+
+如需相關資訊，請參閱 [建立主索引鍵](../../relational-databases/tables/create-primary-keys.md) 及 [建立唯一的條件約束](../../relational-databases/tables/create-unique-constraints.md)。  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>查詢最佳化工具用索引  
  設計精良的索引可以降低磁碟 I/O 作業並耗用較少的系統資源，因此可改善查詢效能。 索引對於包含 SELECT、UPDATE、DELETE 或 MERGE 陳述式的各種查詢非常有用。 請考慮在 `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` 資料庫中的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 查詢。 當執行此查詢時，查詢最佳化工具會評估每個擷取資料的可用方法，並選取最有效的方法。 該方法可以是資料表掃描，或是掃描一或多個索引 (如果存在的話)。  

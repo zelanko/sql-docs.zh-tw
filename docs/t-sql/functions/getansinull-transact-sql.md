@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753386"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287826"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回這個工作階段之資料庫的預設 Null 屬性。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>引數  
  '*database*'  
- 這是傳回的 Null 屬性資訊所針對的資料庫名稱。 *database* 可為 **char** 或 **nchar**。 若為 **char**，則 *database* 會隱含轉換成 **nchar**。  
+ 這是傳回的 Null 屬性資訊所針對的資料庫名稱。 *database 可以是 **char** 或 **nchar**。 若為 **char**，則 *database* 會隱含轉換成 **nchar**。  
   
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- 當指定之資料庫的 Null 屬性接受 Null 值，且未明確定義資料行或資料類型 Null 屬性時，GETANSINULL 會傳回 1。 這是 ANSI NULL 預設值。  
+若資料庫的可 NULL 性允許 Null 值，則 GETANSINULL 會傳回 1。 此傳回值也需要其並未明確定義資料行或資料類型可 NULL 性。 ANSI NULL 預設為 1。 
   
  若要啟用 ANSI NULL 預設行為，則必須符合下列條件之一：  
   

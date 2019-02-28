@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710729"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293637"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖新增至報表 (報表產生器)
 在本教學課程中，您會在 Reporting Services 分頁報表中建立圓形圖。 您將新增百分比，並將小配量合併為單一配量。
 
 圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 它們都沒有軸。 在圓形圖中新增數值欄位時，圖表會計算出每個值佔整體的百分比。  

@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 139b76fc90ba66ed34720be68e8c016263ea947b
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: fac8c998e48854aed1bae8f640d44c6d44d44348
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300475"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154943"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -74,7 +74,7 @@ ms.locfileid: "54300475"
 > [!div class="nextstepaction"]
 > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
-您可以利用改變、加入或卸除資料行與條件約束、重新指派和重建分割區，或是停用或啟用條件約束與觸發程序等方式來修改資料表定義。
+改變、新增或卸除資料行和條件約束來修改資料表定義。 ALTER TABLE 也會重新指派和重建資料分割，或停用和啟用條件約束和觸發程序。
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
@@ -425,19 +425,19 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 
    
 ## <a name="arguments"></a>引數  
- *database_name*  
- 這是建立資料表的資料庫名稱。  
+*database_name*  
+建立資料表的資料庫名稱。  
   
- *schema_name*  
- 這是資料表所屬的結構描述名稱。  
+*schema_name*  
+資料表所屬的結構描述名稱。  
   
- *table_name*  
- 這是要變更的資料表名稱。 如果資料表不在目前資料庫中，或未包含在目前使用者擁有的結構描述內，則必須明確指定該資料庫和結構描述。  
+*table_name*  
+要改變的資料表名稱。 如果資料表不在目前資料庫中，或未包含在目前使用者擁有的結構描述內，則您必須明確指定該資料庫和結構描述。  
   
- ALTER COLUMN  
- 指定將要變更或改變的具名資料行。  
+ALTER COLUMN  
+指定將要變更或改變的具名資料行。  
   
- 修改過的資料行不得為下列任何一項：  
+修改後的資料行不能是：  
   
 -   資料類型為 **timestamp** 的資料行。  
   
@@ -445,16 +445,16 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   計算資料行，或用於計算資料行。  
   
--   用於 CREATE STATISTICS 陳述式所產生的統計資料時，除非資料行是 **varchar**、**nvarchar** 或 **varbinary** 資料類型，否則不會變更資料類型，而且新的大小等於或大於舊的大小，或者資料行從非 Null 變為 Null。 首先，利用 DROP STATISTICS 陳述式移除統計資料。
+-   用於 CREATE STATISTICS 陳述式所產生的統計資料。 除非資料行是 **varchar**、**nvarchar** 或 **varbinary**資料類型，否則資料類型不會變更。 並且，新大小會等於或大於舊大小。 或者，如果資料行已從非 null 變為 null。 首先，利用 DROP STATISTICS 陳述式移除統計資料。
 
     > [!NOTE]
     > ALTER COLUMN 會自動卸除查詢最佳化工具自動產生的統計資料。  
   
 -   在 PRIMARY KEY 或 [FOREIGN KEY] REFERENCES 條件約束中使用。  
   
--   在 CHECK 或 UNIQUE 條件約束中使用。 不過，允許變更用於 CHECK 或 UNIQUE 條件約束的可變長度資料行的長度。  
+-   在 CHECK 或 UNIQUE 條件約束中使用。 不過，允許變更用於 CHECK 或 UNIQUE 條件約束的可變長度資料行長度。  
   
--   與預設定義相關聯。 不過，如果資料類型沒有變更，則會變更資料行的長度、有效位數或小數位數。  
+-   與預設定義相關聯。 不過，如果資料類型未變更，則會變更資料行的長度、有效位數或小數位數。  
   
 **text**、**ntext** 與 **image** 資料行的資料類型只能透過以下方式來變更：  
   
@@ -467,27 +467,27 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 某些資料類型變更可能會使資料變更。 例如，如果將 **nchar** 或 **nvarchar** 資料行變更為 **char** 或 **varchar**，則可能會轉換擴充字元。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。 減少資料行的有效位數或小數位數，可能會使資料截斷。  
   
 > [!NOTE]
-> 分割區資料表之資料行的資料類型不能變更。  
+> 資料分割資料表之資料行的資料類型不能變更。  
 >  
 > 索引中所包含之資料行的資料類型無法變更，除非資料行是 **varchar**、**nvarchar** 或 **varbinary** 資料類型，且新大小等於或大於舊大小。  
 >  
 > 主索引鍵條件約束中包含的資料行無法從 **NOT NULL** 變更為 **NULL**。  
   
-當使用 Always Encrypted (不含安全記憶體保護區) 時，若遭修改的資料行已使用 'ENCRYPTED WITH' 加密，您可以將資料類型變更為相容資料類型 (例如將 INT 變更為 BIGINT)，但您無法變更加密設定。  
+當使用 Always Encrypted (不含安全記憶體保護區) 時，若經修改的資料行已使用 'ENCRYPTED WITH' 加密，則您可以將資料類型變更為相容資料類型 (例如將 INT 變更為 BIGINT)，但您無法變更加密設定。  
 
-當使用具有安全記憶體保護區的 Always Encrypted 時，只要保護資料行的資料行加密金鑰 (以及新的資料行加密金鑰 (若您有變更金鑰)) 支援記憶體保護區計算 (已使用啟用記憶體保護區的資料行主要金鑰進行加密)，您便可以變更任何加密設定。 如需詳細資料，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
+當使用具有安全記憶體保護區的 Always Encrypted 時，如果保護資料行的資料行加密金鑰 (以及新的資料行加密金鑰 (若您有變更金鑰)) 支援記憶體保護區計算 (已使用啟用記憶體保護區的資料行主要金鑰進行加密)，您便可以變更任何加密設定。 如需詳細資料，請參閱[具有安全記憶體保護區的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
   
- *column_name*  
- 要改變、加入或卸除的資料欄名稱。 *column_name* 最多可有 128 個字元。 針對以 **timestamp** 資料類型建立的新資料行，可以省略 *column_name*。 如果沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
+*column_name*  
+要改變、新增或卸除的資料欄名稱。 *Column_name* 最多為 128 個字元。 針對以 **timestamp** 資料類型建立的新資料行，您可以省略 *column_name*。 如果您沒有為 **timestamp** 資料類型資料行指定任何 *column_name*，則會使用 **timestamp** 這個名稱。  
   
- [ _type\_schema\_name_**.** ] _type\_name_  
- 所改變之資料行的新資料類型，或是所加入之資料行的資料類型。 不可為資料分割資料表的現有資料行指定 *type_name*。 *type_name* 可以是下列其中之一：  
+[ _type\_schema\_name_**.** ] _type\_name_  
+所改變資料行的新資料類型，或是所新增資料行的資料類型。 您無法為資料分割資料表的現有資料行指定 *type_name*。 *type_name* 可以是下列類型之一：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。  
   
--   基於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型的別名資料類型。 別名資料類型是利用 CREATE TYPE 陳述式建立的，在這之後才能在資料表定義中使用它們。  
+-   基於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型的別名資料類型。 必須先以 CREATE TYPE 陳述式建立別名資料類型，之後才能在資料表定義中使用它們。  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別及其所屬的結構描述。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別必須先以 CREATE TYPE 陳述式加以建立，才可在資料表定義中使用。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別及其所屬的結構描述。 使用者定義型別是使用 CREATE TYPE 陳述式來建立，之後才能在資料表定義中使用它們。  
   
 以下是已更改之資料行的 *type_name* 準則：  
   
@@ -499,27 +499,27 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 -   SET ARITHABORT 的目前設定會被忽略。 如果 ARITHABORT 設為 ON，ALTER TABLE 就會執行作業。  
   
 > [!NOTE]  
-> 如果未指定 COLLATE 子句，變更資料行的資料類型會使資料庫的預設定序發生定序變更。  
+> 如果未指定 COLLATE 子句，則變更資料行的資料類型會使資料庫的預設定序發生定序變更。  
   
- *有效位數*  
- 這是指定之資料類型的有效位數。 如需有關有效位數值的詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
+*有效位數*  
+所指定資料類型的有效位數。 如需有關有效位數值的詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
- *scale*  
- 這是指定資料類型的小數位數。 如需有關有效小數位數值的詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
+*scale*  
+所指定資料類型的小數位數。 如需有關有效小數位數值的詳細資訊，請參閱[有效位數、小數位數和長度 &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)。  
   
- **max**  
- 只適用於 **varchar**、**nvarchar** 與 **varbinary** 資料類型，可用來儲存 2^31-1 位元組的字元、二進位資料與 Unicode 資料。  
+**max**  
+只適用於 **varchar**、**nvarchar** 與 **varbinary** 資料類型，可用來儲存 2^31-1 位元組的字元、二進位資料與 Unicode 資料。  
   
- *xml_schema_collection*  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+*xml_schema_collection*  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 只適用於 **xml** 資料類型，可用來將 XML 結構描述與該類型產生關聯。 將 **xml** 資料行輸入結構描述集合之前，必須先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)，在資料庫中建立結構描述集合。  
+只適用於 **xml** 資料類型，可用來將 XML 結構描述與該類型產生關聯。 將 **L** 資料行鍵入結構描述集合之前，您必須先使用 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) 在資料庫中建立結構描述集合。  
   
 COLLATE \< *collation_name* > 指定已改變之資料行的新定序。 若未指定，就會將資料庫的預設定序指派給資料行。 定序名稱可以是 Windows 定序名稱或 SQL 定序名稱。 如需清單和詳細資訊，請參閱 [Windows 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 和 [SQL Server 定序名稱 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)。  
   
- COLLATE 子句只能用來變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。 若要變更使用者定義之別名資料類型資料行的定序，您必須執行個別的 ALTER TABLE 陳述式，將資料行變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型，並變更它的定序，然後再將資料行改回別名資料類型。  
+COLLATE 子句會變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。 若要變更使用者定義別名資料類型資料行的定序，請使用個別的 ALTER TABLE 陳述式來將資料行變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型。 然後變更其定序，並將資料行變更回別名資料類型。  
   
-如果存在下列一個或多個條件，ALTER COLUMN 不能有定序變更：  
+如果存在下列一或多個條件，則 ALTER COLUMN 不能有定序變更：  
   
 -   如果 CHECK 條件約束、FOREIGN KEY 條件約束或計算資料行參考變更的資料行。  
 -   如果在資料行上建立任何索引、統計資料或全文檢索索引。 如果資料行定序變更了，在變更的資料行上自動建立的統計資料就會卸除。  
@@ -528,43 +528,43 @@ COLLATE \< *collation_name* > 指定已改變之資料行的新定序。 若未�
 如需詳細資訊，請參閱 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)。  
   
 NULL | NOT NULL  
- 指定資料行是否接受 Null 值。 只有在不允許 Null 值的資料行指定了預設值，或資料表是空的情況下，才能利用 ALTER TABLE 新增這些資料行。 只有在也指定了 PERSISTED 時，計算資料行才能指定 NOT NULL。 如果新資料行允許 Null 值，且未指定預設值，資料表每個資料列的新資料行都會包含 Null 值。 如果新資料行允許 Null 值，且加入了預設定義，就可以利用 WITH VALUES，將預設值儲存在資料表每個現有資料列的新資料行中。  
+指定資料行是否接受 Null 值。 只有在不允許 Null 值的資料行指定了預設值，或資料表為空白的情況下，才能使用 ALTER TABLE 新增這些資料行。 只有在您也指定了 PERSISTED 時，您才能為計算資料行指定 NOT NULL。 如果新資料行允許 Null 值，且您未指定預設值，則資料表每個資料列的新資料行都會包含 Null 值。 如果新資料行允許 Null 值，且您使用該新資料行新增預設定義，您即可以使用 WITH VALUES，將預設值儲存在資料表每個現有資料列的新資料行中。  
   
- 如果新資料行不允許 Null 值，且資料表不是空的，則必須利用新資料行新增 DEFAULT 定義，則新資料行會自動將預設值載入每個現有資料列中的新資料行。  
+如果新資料行不允許 Null 值，且資料表並非空白，則您必須使用新資料行新增 DEFAULT 定義。 而且，這個新資料行會在現有資料列的各個新資料行中自動載入預設值。  
   
- 您可以在 ALTER COLUMN 中指定 NULL，來強制 NOT NULL 資料行允許 NULL 值 (但不包括 PRIMARY KEY 條件約束中的資料行)。 只有在資料行沒有包含 Null 值的情況下，才能在 ALTER COLUMN 中指定 NOT NULL。 必須先將 Null 值更新為某些值，才能允許 ALTER COLUMN NOT NULL，例如：  
+您可以在 ALTER COLUMN 中指定 NULL，來強制 NOT NULL 資料行允許 NULL 值 (但不包括 PRIMARY KEY 條件約束中的資料行)。 只有在資料行沒有包含 Null 值的情況下，您才能在 ALTER COLUMN 中指定 NOT NULL。 必須先將 Null 值更新為某些值，才能允許 ALTER COLUMN NOT NULL，例如：  
   
 ```sql  
 UPDATE MyTable SET NullCol = N'some_value' WHERE NullCol IS NULL;  
 ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;  
 ```  
   
- 當您建立或改變一份含有 CREATE TABLE 或 ALTER TABLE 陳述式的資料表時，資料庫和工作階段設定會影響且可能會覆寫資料行定義中使用之資料類型的 Null 屬性。 我們建議您一定要針對非計算資料行，明確將資料行定義為 NULL 或 NOT NULL。  
+當您建立或改變一份含有 CREATE TABLE 或 ALTER TABLE 陳述式的資料表時，資料庫和工作階段設定會影響且可能會覆寫資料行定義中使用之資料類型的 Null 屬性。 請務必一律針對非計算資料行明確將資料行定義為 NULL 或 NOT NULL。  
   
- 如果您加入一個具有使用者定義資料類型的資料行，我們建議您最好使用與此使用者定義資料類型相同的 Null 屬性來定義此資料行，並為此資料行指定預設值。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
+如果您新增具有使用者定義資料類型的資料行，務必使用與此使用者定義資料類型相同的 Null 屬性來定義此資料行。 並且，為此資料行指定預設值。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
   
 > [!NOTE]  
 > 如果使用 ALTER COLUMN 指定 NULL 或 NOT NULL，則必須同時指定 *new_data_type* [(*有效位數* [, *小數位數* ])]。 如果資料類型、有效位數及小數位數沒有變更，請指定目前的資料行值。  
   
- [ {ADD | DROP} ROWGUIDCOL ]  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+[ {ADD | DROP} ROWGUIDCOL ]  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 指定將 ROWGUIDCOL 屬性加入至指定的資料行，或從指定的資料行卸除該屬性。 ROWGUIDCOL 指出資料行是資料列 GUID 資料行。 只能為每個資料表指定一個 **uniqueidentifier** 資料行作為 ROWGUIDCOL 資料行，且只能將 ROWGUIDCOL 屬性指派給 **uniqueidentifier** 資料行。 不能將 ROWGUIDCOL 指派給使用者定義資料類型的資料行。  
+指定將 ROWGUIDCOL 屬性新增至指定的資料行，或從指定的資料行卸除該屬性。 ROWGUIDCOL 指出資料行是資料列 GUID 資料行。 您只能將每個資料表的一個 **uniqueidentifier** 資料行設為 ROWGUIDCOL 資料行。 並且，您只能將 ROWGUIDCOL 屬性指派給 **uniqueidentifier** 資料行。 您不能將 ROWGUIDCOL 指派給使用者定義資料類型的資料行。  
   
- ROWGUIDCOL 不強制使用儲存在資料行中之值的唯一性，且不針對插入資料表中的新資料列自動產生值。 若要為每個資料行產生唯一的值，請在 INSERT 陳述式上使用 NEWID 或 NEWSEQUENTIALID 函式，或將 NEWID 或 NEWSEQUENTIALID 函式指定為資料行的預設值。  
+ROWGUIDCOL 不強制使用儲存在資料行中之值的唯一性，且不針對插入資料表中的新資料列自動產生值。 若要為每個資料行產生唯一值，請在 INSERT 陳述式上使用 NEWID 或 NEWSEQUENTIALID 函式。 或者，您也可以將 NEWID 或 NEWSEQUENTIALID 函式指定為資料行的預設值。  
   
- [ {ADD | DROP} PERSISTED ]  
- 指定將 PERSISTED 屬性加入至指定的資料行，或從指定的資料行卸除該屬性。 該資料行必須是一個利用具決定性運算式定義的計算資料行。 就指定為 PERSISTED 的資料行而言，當計算資料行相依的任何其他資料行更新時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 實際上會將計算值儲存在資料表並將值更新。 將計算資料行標示為 PERSISTED，就可以在定義於具決定性 (但不是精確) 運算式上的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
+[ {ADD | DROP} PERSISTED ]  
+指定將 PERSISTED 屬性加入至指定的資料行，或從指定的資料行卸除該屬性。 該資料行必須是使用具決定性運算式定義的計算資料行。 就指定為 PERSISTED 的資料行而言，當計算資料行相依的任何其他資料行更新時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 實際上會將計算值儲存在資料表並將值更新。 將計算資料行標示為 PERSISTED，就可以在定義於具決定性 (但不是精確) 運算式上的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。  
   
-當做分割區資料表之分割區資料行的任何計算資料行，都必須明確標示為 PERSISTED。  
+作為資料分割資料表之資料分割資料行的任何計算資料行，都必須明確標示為 PERSISTED。  
   
 DROP NOT FOR REPLICATION  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-指定當複寫代理程式執行插入作業時，識別欄位中的值會累加。 只有當 *column_name* 是識別欄位時，才能指定這個子句。  
+指定當複寫代理程式執行插入作業時，識別欄位中的值會累加。 只有在 *column_name* 是識別欄位時，您才能指定這個子句。  
   
 SPARSE  
-指出此資料行是疏鬆資料行。 疏鬆資料行的儲存體會針對 Null 值最佳化。 疏鬆資料行無法指定為 NOT NULL。 將資料行從疏鬆轉換成非疏鬆 (或相反) 會在命令執行期間疏鬆鎖定資料表。 您可能必須使用 REBUILD 子句來回收任何節省的空間。 如需有關疏鬆資料行的其他限制和詳細資訊，請參閱[使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。  
+指出此資料行是疏鬆資料行。 疏鬆資料行的儲存體會針對 Null 值最佳化。 您無法將疏鬆資料行設定為 NOT NULL。 將資料行從疏鬆轉換成非疏鬆 (或相反) 會在命令執行期間疏鬆鎖定資料表。 您可能必須使用 REBUILD 子句來回收任何節省的空間。 如需有關疏鬆資料行的其他限制和詳細資訊，請參閱[使用疏鬆資料行](../../relational-databases/tables/use-sparse-columns.md)。  
   
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -581,46 +581,46 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 WITH ( ONLINE = ON | OFF) \<適用於改變資料行>  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-資料表仍可使用時，允許執行多個改變資料行動作。 預設是 OFF。 可線上針對資料類型、資料行長度或有效位數、Null 屬性、疏鬆度和定序來改變資料行。  
+資料表仍可使用時，允許執行多個改變資料行動作。 預設是 OFF。 您可以在線上針對資料類型、資料行長度或有效位數、Null 屬性、疏鬆度和定序來改變資料行。  
   
-線上改變資料行可讓使用者建立和自動統計資料於 ALTER COLUMN 作業期間參考變更資料行。 這可讓查詢如往常般執行。 在作業結束時會卸除參考資料行的自動統計，使用者建立的統計資料亦同時失效。 作業完成之後，使用者必須手動更新使用者產生的統計資料。 如果資料行是任何統計資料或索引的篩選運算式的一部分，則您無法執行改變資料行的作業。  
+線上改變資料行可讓使用者所建立和自動統計資料於 ALTER COLUMN 作業期間參考改變的資料行，其讓查詢如往常執行。 在作業結束時會卸除參考資料行的自動統計，使用者建立的統計資料亦同時失效。 作業完成之後，使用者必須手動更新使用者產生的統計資料。 如果資料行是任何統計資料或索引的篩選運算式一部分，則您無法執行改變資料行的作業。  
   
--   雖然線上改變資料行的作業正在執行，但可能與資料行有相依性之所有作業(索引、檢視等)會因適當的錯誤訊息而封鎖或失敗。 這確保線上改變資料行不會因作業執行時導入的相依性之故而失敗。  
+-   線上改變資料行的作業正在執行時，可能與資料行相依的所有作業 (索引、檢視等) 都會因相應的錯誤而封鎖或失敗。 此行為可確保線上改變資料行不會因作業執行時導入的相依性之故而失敗。  
   
--   當非叢集索引參考資料行時，便不支援改變資料行以線上作業形式從 NOT NULL 變為 NULL。  
+-   當非叢集索引參考資料行時，便不支援改變的資料行以線上作業形式從 NOT NULL 變為 NULL。  
   
--   當檢查條件約束參考資料行，以及改變作業限制資料行的有效位數 (數值或日期時間) 時，便不支援線上改變。  
+-   當檢查條件約束參考資料行，以及改變作業限制資料行的有效位數 (數值或日期時間) 時，即不支援線上改變。  
   
--   `WAIT_AT_LOW_PRIORITY` 選項不能以線上改變資料行使用。  
+-   `WAIT_AT_LOW_PRIORITY` 選項不能與線上改變資料行搭配使用。  
   
 -   `ALTER COLUMN ... ADD/DROP PERSISTED` 不支援線上改變資料行。  
   
 -   `ALTER COLUMN ... ADD/DROP ROWGUIDCOL/NOT FOR REPLICATION` 不會受到線上改變資料行的影響。  
   
--   已啟用變更追蹤，或是屬於合併式複寫發行者之線上改變資料行不支援改變資料表。  
+-   已啟用變更追蹤，或是屬於合併式複寫發行者的線上改變資料行不支援改變資料表。  
   
 -   線上改變資料行不支援改變自或改變成 CLR 資料類型。  
   
 -   線上改變資料行不支援改變成具有不同於目前結構描述集合的 XML 資料類型。  
   
--   線上改變資料行不會減少針對何時可以更改資料行之限制。 索引及統計等之參考資料可能會導致改變失敗。  
+-   線上改變資料行不會減少針對何時可以改變資料行之限制。 索引及統計等參考資料，可能會導致改變失敗。  
   
 -   線上改變資料行不支援同時修改多個資料行。  
   
--   針對系統版本設定時態表，線上改變資料行並不會產生影響。 無論針對 ONLINE 選項指定何值，都不會以線上方式執行 ALTER 資料行。  
+-   線上改變資料行並不會對系統版本設定的時態表產生影響。 無論為 ONLINE 選項指定何值，ALTER 資料行都不會以線上方式執行。  
   
-線上改變資料行具有與線上索引重建類似的需求、限制和功能。 這包括：  
+線上改變資料行具有與線上索引重建類似的需求、限制和功能，包括：  
   
 -   當資料表包含舊版的 LOB 或 filestream 資料行或資料表具有資料行存放區索引時，不支援線上索引重建。 相同的限制適用於線上改變資料行。  
   
--   與原始資料行和新建立的隱藏資料行相比較，要改變現有的資料行需要兩倍的空間配置。  
+-   與原始資料行和新建立的隱藏資料行相比較，要改變現有資料行需要兩倍的空間配置。  
   
 -   改變資料行線上作業期間的鎖定策略是遵循用於線上索引建立相同的鎖定模式。  
   
 WITH CHECK | WITH NOCHECK  
-指定是否要依照新加入或重新啟用的 FOREIGN KEY 或 CHECK 條件約束來驗證資料表中的資料。 如果未指定，則假設 WITH CHECK 為新條件約束，並假設 WITH NOCHECK 為重新啟用的條件約束。  
+指定是否要依照剛剛新增或重新啟用的 FOREIGN KEY 或 CHECK 條件約束，來驗證資料表中的資料。 如果您未指定，則會假設 WITH CHECK 為新條件約束，並假設 WITH NOCHECK 為重新啟用的條件約束。  
   
-如果您不要依照現有的資料來確認新的 CHECK 或 FOREIGN KEY 條件約束，請使用 WITH NOCHECK。 除了極少數的狀況外，我們建議您不要這麼做。 在以後的所有資料更新中將會評估新條件約束。 新增條件約束時，如果 WITH NOCHECK 抑制任何強制違規，當未來的更新作業更新含有不符合該條件約束的資料列時，這些強制違規可能會使這些更新作業失敗。  
+如果您不希望依照現有資料來確認新的 CHECK 或 FOREIGN KEY 條件約束，請使用 WITH NOCHECK。 除了極少數的狀況外，我們建議您不要這麼做。 新條件約束會在以後的所有資料更新中評估。 WITH NOCHECK 在新增條件約束時抑制的任何條件約束違規可能會導致更新失敗，如果未來更新使用不符合該條件約束的資料來更新資料列。  
   
 > [!NOTE]
 > 查詢最佳化工具不考量定義為 WITH NOCHECK 的條件約束。 這類條件約束將予忽略，直到使用 `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL` 重新啟用為止。  
@@ -633,7 +633,7 @@ ALTER INDEX *index_name* 指定要變更或改變之 *index_name* 的貯體計�
 > 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
 
 ADD  
-指定加入一或多個資料行定義、計算資料行定義或資料表條件約束，或進行系統版本設定時，系統會用到的資料行。 可以對記憶體最佳化資料表新增索引。
+指定加入一個或多個資料行定義、計算資料行定義或資料表條件約束。 或者，會新增系統用於系統版本設定的資料行。 您可以對記憶體最佳化資料表新增索引。
 
 > [!IMPORTANT]
 > 在未使用 ALTER TABLE 陳述式的情況下，記憶體最佳化資料表上的索引就不支援 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md) 與 [PAD_INDEX](alter-table-index-option-transact-sql.md) 陳述式。
@@ -641,19 +641,19 @@ ADD
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
 **適用對象**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-指定資料行的名稱，系統會使用這個資料行來記載某一筆記錄的有效期。 您可以指定現有的資料行或建立新的資料行，作為 ADD PERIOD FOR SYSTEM_TIME 引數的一部分。 資料行的資料類型必須是 datetime2，而且必須定義為 NOT NULL。 如果某個期間資料行定義為 NULL，則會擲回錯誤。 您可以為 system_start_time 和 system_end_time 資料行定義 [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) 和/或[指定資料行的預設值](../../relational-databases/tables/specify-default-values-for-columns.md)。 請參閱[系統版本設定](#system_versioning)範例中的範例 A，此範例示範 system_end_time 資料行如何使用預設值。  
+指定資料行的名稱，系統會使用這個資料行來記載某一筆記錄的有效時間週期。 您可以指定現有的資料行或建立新的資料行，作為 ADD PERIOD FOR SYSTEM_TIME 引數的一部分。 使用 datetime2 的資料類型來設定資料行，並將其定義為 NOT NULL。 如果您將期間資料行定義為 NULL，會發生錯誤。 您可以為 system_start_time 和 system_end_time 資料行定義 [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) 和/或[指定資料行的預設值](../../relational-databases/tables/specify-default-values-for-columns.md)。 請參閱下列[系統版本設定](#system_versioning)範例中的範例 A，此範例示範 system_end_time 資料行如何使用預設值。  
   
-使用這個引數再加上 SET SYSTEM_VERSIONING 引數，在現有資料表上啟用系統版本設定。 如需詳細資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)和[開始使用 Azure SQL Database 中的時態表](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)。  
+使用這個引數與 SET SYSTEM_VERSIONING 引數，在現有資料表上啟用系統版本設定。 如需詳細資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)和[開始使用 Azure SQL Database 中的時態表](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)。  
   
-在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中，使用者可以使用 **HIDDEN** 旗標來標記一或兩個期間資料行來隱含隱藏這些資料行，使 **SELECT \* FROM \<資料表名稱>** 在查詢這些資料行時不會傳回任何值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。  
+在 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中，使用者可以使用 **HIDDEN** 旗標來標記一或兩個期間資料行來隱含隱藏這些資料行，使 **SELECT \* FROM \<table_name>** 在查詢這些資料行時不會傳回任何值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。  
   
 DROP  
-指定卸除一個或多個資料行定義、計算資料行定義或資料表條件約束，或卸除系統將用於系統版本設定的資料行。  
+指定卸除一或多個資料行定義、計算資料行定義或資料表條件約束，或卸除系統將用於系統版本設定的資料行。  
   
 CONSTRAINT *constraint_name*    
 指定從資料表中移除 *constraint_name*。 可以列出多個條件約束。  
   
-您可以查詢 **sys.check_constraint**、**sys.default_constraints**、**sys.key_constraints** 和 **sys.foreign_keys** 目錄檢視表，判斷條件約束的使用者自訂名稱或系統提供的名稱。  
+透過查詢 **sys.check_constraint**、**sys.default_constraints**、**sys.key_constraints** 和 **sys.foreign_keys** 目錄檢視表，您可以判斷條件約束的使用者定義名稱，或系統提供的名稱。  
   
 如果 XML 索引存在於資料表上，則不能卸除 PRIMARY KEY 條件約束。  
  
@@ -668,13 +668,13 @@ INDEX *index_name*
 COLUMN *column_name*  
 指定從資料表移除 *constraint_name* 或 *column_name*。 可以列出多個資料行。  
   
- 當資料行符合下列條件時，則無法將它卸除：  
+ 當資料行符合下列條件時，則無法將其卸除：  
   
 -   無論是以索引鍵資料行或以 INCLUDE 的形式，用於索引中
   
 -   用於 CHECK、FOREIGN KEY、UNIQUE 或 PRIMARY KEY 條件約束。  
   
--   與利用 DEFAULT 關鍵字定義的預設值相關聯，或者繫結到預設物件。  
+-   與使用 DEFAULT 關鍵字定義的預設值建立關聯，或者繫結到預設物件。  
   
 -   繫結至規則。  
   
@@ -710,18 +710,18 @@ MAXDOP = *max_degree_of_parallelism*
 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本都無法使用平行索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)和 [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
   
 ONLINE **=** { ON | **OFF** } \<適用於 drop_clustered_constraint_option>  
-指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。 REBUILD 可以執行為 ONLINE 作業。  
+指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。 您可以將 REBUILD 用作 ONLINE 作業執行。  
   
 ON  
-索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 這使得基礎資料表和索引的查詢或更新能夠繼續運作。 在作業開始時，只會在一段很短的時間內，保留來源物件的共用 (S) 鎖定。 在作業結束時，如果建立非叢集索引的話，便會短時間取得來源的 S (共用) 鎖定；在線上建立或卸除叢集索引時，以及重建叢集或非叢集索引時，會取得 SCH-M (結構描述修改) 鎖定。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。 只可使用單一執行緒的堆積重建作業。  
+索引作業持續期間不會保留長期資料表鎖定。 在索引作業的主要階段期間，來源資料表上只保留意圖共用 (IS) 鎖定。 此行為使得基礎資料表和索引的查詢或更新能夠繼續運作。 作業開始時，只會在短時間內保留來源物件的共用 (S) 鎖定。 作業結束時，如果正在建立非叢集索引，則會在短時間內在來源上取得 S (共用) 鎖定。 或者，在線上建立或卸除叢集索引，以及正在重建叢集索引或非叢集索引時，會取得 SCH-M (結構描述修改) 鎖定。 建立本機暫存資料表的索引時，ONLINE 不可設為 ON。 只可使用單一執行緒的堆積重建作業。  
   
 若要執行 **SWITCH** 或線上索引重建的 DDL，則特定資料表上執行的所有進行中封鎖交易都必須完成。 執行時，**SWITCH** 或重建作業會阻止新交易啟動，且可能會大幅影響工作負載輸送量並暫時延遲對基礎資料表的存取。  
   
 OFF  
-在索引作業期間會套用資料表鎖定。 建立、重建或卸除叢集索引的離線索引作業，或重建或卸除非叢集索引的離線索引作業，會取得資料表的結構描述修改 (Sch-M) 鎖定。 這可防止所有使用者在作業持續期間存取基礎資料表。 建立非叢集索引的離線索引作業會取得資料表的共用 (S) 鎖定。 這可避免對基礎資料表進行更新，但仍可執行讀取作業，如 SELECT 陳述式。 允許多執行緒的堆積重建作業。  
+在索引作業期間會套用資料表鎖定。 建立、重建或卸除叢集索引的離線索引作業，或重建或卸除非叢集索引的離線索引作業，會取得資料表的結構描述修改 (Sch-M) 鎖定。 此鎖定可防止所有使用者在作業持續期間存取基礎資料表。 建立非叢集索引的離線索引作業會取得資料表的共用 (S) 鎖定。 此鎖定可避免對基礎資料表進行更新，但仍可執行讀取作業，如 SELECT 陳述式。 允許多執行緒的堆積重建作業。  
   
 如需詳細資訊，請參閱[線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)。  
   
@@ -743,7 +743,7 @@ OFF
  指定利用 NOCHECK 選項停用所有條件約束，或利用 CHECK 選項啟用所有條件約束。  
   
 { ENABLE | DISABLE } TRIGGER  
-指定 *trigger_name* 為已啟用或已停用。 當停用觸發程序時，仍會針對資料表定義觸發程序；不過，當依照資料表執行 INSERT、UPDATE 或 DELETE 陳述式時，在重新啟用觸發程序之前，並不會執行觸發程序中的動作。  
+指定 *trigger_name* 為已啟用或已停用。 觸發程序停用時，仍然會為資料表定義。 不過，在針對資料表執行 INSERT、UPDATE 或 DELETE 陳述式時，在重新啟用觸發程序之前不會執行觸發程序中的動作。  
   
  ALL  
  指定資料表中的所有觸發程序為已啟用或已停用。  
@@ -763,7 +763,7 @@ OFF
 WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否追蹤哪些啟用變更追蹤的資料行已更新。 預設值是 OFF。  
+指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否要追蹤哪些啟用變更追蹤的資料行已更新。 預設值是 OFF。  
   
 SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -774,41 +774,41 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 -   將分割區從某一分割區資料表切換到另一分割區資料表。  
 -   將分割區資料表之一個分割區中的所有資料，重新指派給現有的非分割區資料表。  
   
-如果 *table* 是資料分割資料表，則必須指定 *source_partition_number_expression*。 如果 *target_table* 是資料分割資料表，則必須指定 *target_partition_number_expression*。 如果將做為分割區之資料表的資料重新指派給已存在的分割區資料表，或將分割區從某一分割區資料表切換到另一分割區資料表，則目標分割區必須存在，且它必須是空的。  
+如果 *table* 是資料分割資料表，您必須指定 *source_partition_number_expression*。 如果 *target_table* 已分割，您必須指定 *target_partition_number_expression*。 將作為資料分割之資料表的資料重新指派給已存在資料分割資料表，或將資料分割從某一資料分割資料表切換到另一資料分割資料表時，目標資料分割必須存在，且必須為空白。  
   
-如果重新指派一個分割區的資料來形成單一資料表，則目標資料表必須已經建立，且它必須是空的。 來源資料表或分割區和目標資料表或分割區必須位於相同的檔案群組。 相對應的索引或索引分割區區也必須位於相同的檔案群組。 切換分割區還有許多其他限制。 *table* 和 *target_table* 不可以相同。 *target_table* 可以是多部分識別碼。  
+重新指派一個資料分割的資料來形成單一資料表時，目標資料表必須已經存在，且必須為空白。 來源資料表或資料分割和目標資料表或資料分割必須位於相同檔案群組。 對應的索引或索引資料分割區也必須位於相同檔案群組。 切換分割區還有許多其他限制。 *table* 和 *target_table* 不可以相同。 *target_table* 可以是多部分識別碼。  
   
  *source_partition_number_expression* 和 *target_partition_number_expression* 是可以參考變數和函數的常數運算式。 其中包括使用者定義型別變數與使用者定義函數。 其不可參考 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式。  
   
  具備叢集資料行存放區索引的資料分割資料表，其行為類似資料分割堆積：  
   
 -   主索引鍵必須包含資料分割索引鍵。  
--   唯一索引必須包含資料分割索引鍵。  請注意，在現有唯一索引包括資料分割索引鍵 會變更唯一性。  
--   為了切換資料分割，所有非叢集索引都必須包括資料分割索引鍵。  
+-   唯一索引必須包含資料分割索引鍵。 但是，包括具有現有唯一索引資料的分割索引鍵，會變更其唯一性。  
+-   若要切換資料分割，所有非叢集索引都必須包括資料分割索引鍵。  
   
 針對使用複寫時的 **SWITCH** 限制，請參閱[複寫資料分割資料表和索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。  
   
-針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  CTP1 以及 SQL Database V12 之前版本 建立的非叢集資料行存放區索引是唯讀格式。 執行任何 PARTITION 作業之前，必須將非叢集資料行存放區索引重建成最新的格式 (可以更新的格式)。  
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  CTP1 以及 SQL Database V12 之前版本 建立的非叢集資料行存放區索引是唯讀格式。 執行任何 PARTITION 作業之前，您必須將非叢集資料行存放區索引重建成最新格式 (可以更新的格式)。  
   
 SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 不支援 `FILESTREAM`。  
   
 指定 FILESTREAM 資料存放的位置。  
   
-具有 SET FILESTREAM_ON 子句的 ALTER TABLE 只有在資料表沒有任何 FILESTREAM 資料行時才會成功。 您可以使用第二個 ALTER TABLE 陳述式來加入 FILESTREAM 資料行。  
+具有 SET FILESTREAM_ON 子句的 ALTER TABLE 只有在資料表沒有任何 FILESTREAM 資料行時才會成功。 您可以使用第二個 ALTER TABLE 陳述式來新增 FILESTREAM 資料行。  
   
-如果指定了 *partition_scheme_name*，則會套用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 的規則。 資料表應該已經針對資料列資料進行分割區，且其分割區配置所使用的分割區函數和資料行必須與 FILESTREAM 分割區配置相同。  
+如果您指定 *partition_scheme_name*，則會套用 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 的規則。 請確保資料表已針對資料列資料進行分割，且其資料分割配置所使用的資料分割函數和資料行與 FILESTREAM 資料分割配置相同。  
   
 *filestream_filegroup_name* 會指定 FILESTREAM 檔案群組的名稱。 檔案群組必須要有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。  
   
 **"** default **"** 會使用 DEFAULT 屬性集指定 FILESTREAM 檔案群組。 如果沒有任何 FILESTREAM 檔案群組，就會引發錯誤。  
   
-**"** NULL **"** 會指定將資料表的 FILESTREAM 檔案群組的所有參考移除。 首先必須卸除所有的 FILESTREAM 資料行。 您必須使用 SET FILESTREAM_ON **="** NULL **"** 來刪除與資料表相關聯的所有 FILESTREAM 資料。  
+**"** NULL **"** 會指定將資料表 FILESTREAM 檔案群組的所有參考移除。 首先必須卸除所有的 FILESTREAM 資料行。 您必須使用 SET FILESTREAM_ON **="** NULL **"** 來刪除與資料表建立關聯的所有 FILESTREAM 資料。  
   
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
-停用資料表的系統版本設定或啟用資料表的系統版本設定。 為啟用資料表的系統版本設定，系統會確認資料類型、可 Null 性條件約束、 主索引鍵條件約束是否符合系統版本設定的各需求。 如果未使用 HISTORY_TABLE 引數，系統會產生一個與目前資料表之結構描述相符的新記錄資料表，並在兩個資料表之間建立連結，然後讓系統將目前資料表中的每一筆資料記錄到記錄資料表。 此記錄資料表的名稱將會是 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果使用 HISTORY_TABLE 引數來建立連結，並使用現有的記錄資料表，則會在目前的資料表和指定的資料表之間建立連結。 建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這個資料一致性檢查可確保現有的記錄不會重疊。 預設執行資料一致性檢查。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
+停用或啟用資料表的系統版本設定。 為啟用資料表的系統版本設定，系統會確認資料類型、可 Null 性條件約束、 主索引鍵條件約束是否符合系統版本設定的各需求。 如果您未使用 HISTORY_TABLE 引數，系統會產生與目前資料表之結構描述相符的新記錄資料表，並在兩個資料表之間建立連結，然後讓系統將目前資料表中的每一筆資料記錄到記錄資料表。 此記錄資料表的名稱將會是 `MSSQL_TemporalHistoryFor<primary_table_object_id>`。 如果您使用 HISTORY_TABLE 引數來建立連結，並使用現有的記錄資料表，則系統會在目前資料表和指定資料表之間建立連結。 建立現有記錄資料表的連結時，您可以選擇執行資料一致性檢查。 這個資料一致性檢查可確保現有的記錄不會重疊。 預設會執行資料一致性檢查。 如需相關資訊，請參閱 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
   
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS | MONTH | MONTHS | YEAR | YEARS} } **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 
@@ -822,11 +822,11 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK |  WEEKS |
  AUTO  
  此選項允許 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 選取適用於資料表結構描述的鎖定擴大資料粒度。  
   
--   如果資料表是分割區資料表，將允許鎖定擴大進行分割區。 當鎖定擴大為分割區層級後，就無法進一步擴大為 TABLE 資料粒度。  
--   如果資料表不是分割區，則會對 TABLE 資料粒度執行鎖定擴大。  
+-   如果資料表已分割，則會允許鎖定擴大進行分割。 當鎖定擴大為資料分割層級後，就無法進一步擴大為 TABLE 資料粒度。  
+-   如果資料表未分割，則會對 TABLE 資料粒度執行鎖定擴大。  
   
 TABLE  
-不論資料表是否為分割區資料表，鎖定擴大將在資料表層級的資料粒度上完成。 TABLE 為預設值。  
+不論資料表是否已分割，鎖定擴大都會在資料表層級的資料粒度上完成。 TABLE 為預設值。  
   
 DISABLE  
 在大多數情況下都避免使用鎖定擴大， 但並非完全不允許資料表層級的鎖定。 例如，當您在可序列化隔離層級下掃描沒有任何叢集索引的資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 必須採用資料表鎖定以保護資料的完整性。  
@@ -844,7 +844,7 @@ PARTITION = ALL
 REBUILD WITH ( \<rebuild_option> )  
 所有選項都適用於具有叢集索引的資料表。 如果資料表沒有叢集索引，則只有其中一些選項會影響堆積結構。  
   
- 當特定壓縮設定並非使用 REBUILD 作業來指定時，就會使用分割區的目前壓縮設定。 若要傳回目前設定，請查詢 **sys.partitions** 目錄檢視表中的 **data_compression** 資料行。  
+ 當特定壓縮設定並非使用 REBUILD 作業來指定時，就會使用資料分割的目前壓縮設定。 若要傳回目前設定，請查詢 **sys.partitions** 目錄檢視表中的 **data_compression** 資料行。  
   
  如需重建選項的完整描述，請參閱 [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)。  
   
@@ -854,31 +854,31 @@ REBUILD WITH ( \<rebuild_option> )
  針對指定的資料表、分割區編號或分割區範圍指定資料壓縮選項。 選項如下：  
   
  無  
- 不壓縮資料表或指定的分割區。 這不適用於資料行存放區資料表。  
+ 不會壓縮資料表或指定的資料分割。 此選項不適用於資料行存放區資料表。  
   
  ROW  
- 使用資料列壓縮來壓縮資料表或指定的分割區。 這不適用於資料行存放區資料表。  
+ 使用資料列壓縮來壓縮資料表或指定的分割區。 此選項不適用於資料行存放區資料表。  
   
  PAGE  
- 使用頁面壓縮來壓縮資料表或指定的分割區。 這不適用於資料行存放區資料表。  
+ 使用頁面壓縮來壓縮資料表或指定的分割區。 此選項不適用於資料行存放區資料表。  
   
  COLUMNSTORE  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 只適用於資料行存放區資料表。 COLUMNSTORE 指定解壓縮之前以 COLUMNSTORE_ARCHIVE 選項壓縮的分割區。 當還原資料時，資料將會繼續以用於所有資料行存放區資料表的資料行存放區壓縮來壓縮。  
+ 只適用於資料行存放區資料表。 COLUMNSTORE 指定解壓縮之前以 COLUMNSTORE_ARCHIVE 選項壓縮的分割區。 還原資料時，資料會繼續以用於所有資料行存放區資料表的資料行存放區壓縮來壓縮。  
   
  COLUMNSTORE_ARCHIVE  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 只適用於資料行存放區資料表，這些資料表會與叢集資料行存放區索引一起儲存。 COLUMNSTORE_ARCHIVE 將進一步將指定的分割區壓縮成較小的大小。 這可用於封存，或是其他需要較少儲存體，而且可負擔更多時間來儲存和擷取的狀況  
+ 只適用於資料行存放區資料表，這些資料表會與叢集資料行存放區索引一起儲存。 COLUMNSTORE_ARCHIVE 將進一步將指定的分割區壓縮成較小的大小。 使用此選項進行封存，或是其他需要較少儲存體且可負擔更多時間來儲存和擷取的狀況。  
   
  若要同時重建多個資料分割，請參閱 [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)。 如果資料表沒有叢集索引，變更資料壓縮將會重建堆積和非叢集索引。 如需與壓縮有關的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
  ONLINE **=** { ON  | **OFF** } \<適用於 single_partition_rebuild_option>  
- 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表的單一分割區和相關聯的索引。 預設值為 OFF。 REBUILD 可以執行為 ONLINE 作業。  
+ 指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表的單一資料分割，以及相關聯的索引。 預設值為 OFF。 您可以將 REBUILD 用作 ONLINE 作業執行。  
   
  ON  
- 索引作業持續期間不會保留長期資料表鎖定。 在索引重建開始時，資料表上需要 S 鎖定，而在線上索引重建結束時，資料表上需要 Sch-M 鎖定。 雖然這兩個鎖定是短暫的中繼資料鎖定，尤其是 Sch-M 鎖定必須等候所有封鎖交易完成。 在等候期間，Sch-M 鎖定會在存取相同資料表時，封鎖等待在這個鎖定之後的所有其他交易。  
+ 索引作業持續期間不會保留長期資料表鎖定。 在索引重建開始時，需要對資料表進行 S 鎖定，而在線上索引重建結束時，需要對資料表進行 Sch-M 鎖定。 雖然這兩個鎖定是短暫的中繼資料鎖定，但 Sch-M 鎖定必須等候所有封鎖交易完成。 在等候期間，Sch-M 鎖定會在存取相同資料表時，封鎖等待在這個鎖定之後的所有其他交易。  
   
 > [!NOTE]  
 >  線上索引重建可設定本節稍後所述的 *low_priority_lock_wait* 選項。  
@@ -889,7 +889,7 @@ REBUILD WITH ( \<rebuild_option> )
  *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 這是資料行集的名稱。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 如果資料表已包含疏鬆資料行，資料行集無法加入該資料表中。 如需資料行集的詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。  
+ 資料行集的名稱。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 如果資料表已包含疏鬆資料行，資料行集無法新增至該資料表中。 如需資料行集的詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
@@ -928,29 +928,29 @@ REBUILD WITH ( \<rebuild_option> )
 -   若要針對資料表停用 Stretch，並將資料表的遠端資料從 Azure複製回 SQL Server，請執行下列命令。 無法取消此命令。  
   
     ```sql  
-ALTER TABLE \<table name>
+    ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
   
-     此作業會產生資料傳輸成本，且無法取消。 如需詳細資訊，請參閱 [資料傳輸定價詳細資料](https://azure.microsoft.com/pricing/details/data-transfers/)。  
+此作業會產生資料傳輸成本，且無法取消。 如需詳細資訊，請參閱 [資料傳輸定價詳細資料](https://azure.microsoft.com/pricing/details/data-transfers/)。  
   
-     將所有遠端資料從 Azure 複製回 SQL Server 後，即會針對資料表停用 Stretch。  
+將所有遠端資料從 Azure 複製回 SQL Server 後，即會針對資料表停用 Stretch。  
   
 -   若要針對資料表停用 Stretch 並放棄遠端資料，請執行下列命令。  
   
     ```sql  
-ALTER TABLE \<table_name>
+    ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
   
  針對資料表停用 Stretch Database 後，即會停止執行資料移轉作業，且查詢結果不再包含來自遠端資料表的結果。  
   
- 停用 Stretch 時，並不會移除遠端資料表。 若您想要刪除遠端資料表，則必須使用 Azure 管理入口網站將其卸除。  
+ 停用 Stretch 並不會移除遠端資料表。 若您想要刪除遠端資料庫，則必須使用 Azure 入口網站將其卸除。  
   
 [ FILTER_PREDICATE = { null | *predicate* } ]  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
- 您現在可以指定一個篩選述詞，以選取要從同時包含歷史資料和目前資料的資料表中移轉哪些資料列。 此述詞必須呼叫確定性內嵌資料表值函式。 如需詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 和[使用篩選函數來選取要移轉的資料列 &#40;Stretch Database&#41;](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。   
+ 您現在可以指定一個篩選述詞，以選取要從同時包含歷史資料和目前資料的資料表中移轉哪些資料列。 此述詞必須呼叫確定性內嵌資料表值函式。 如需詳細資訊，請參閱[為資料表啟用 Stretch Database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 和[使用篩選函式來選取要移轉的資料列 &#40;Stretch Database&#41;](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)。   
   
 > [!IMPORTANT]  
 >  若您提供執行狀況不佳的篩選器述詞，資料移轉也無法順利執行。 Stretch Database 使用 CROSS APPLY 運算子，將篩選器述詞套用至資料表。  
@@ -964,7 +964,7 @@ ALTER TABLE \<table_name>
   
 -   指定 `OUTBOUND` 以將資料從 SQL Server 移轉至 Azure。  
   
--   指定 `INBOUND` 以將資料表的遠端資料，從 Azure 複製回 SQL Server，然後停用資料表的 Stretch。 如需詳細資訊，請參閱 [停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。  
+-   指定 `INBOUND` 以將資料表的遠端資料，從 Azure 複製回 SQL Server，然後停用資料表的 Stretch。 如需詳細資訊，請參閱[停用 Stretch Database 並帶回遠端資料](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)。  
   
      此作業會產生資料傳輸成本，且無法取消。  
   
@@ -973,12 +973,12 @@ ALTER TABLE \<table_name>
 WAIT_AT_LOW_PRIORITY  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 線上索引重建必須等候這個資料表的封鎖作業。 **WAIT_AT_LOW_PRIORITY** 表示線上索引重建作業將會等候低優先順序鎖定，讓其他作業在線上索引建立作業等候時繼續進行。 省略 **WAIT AT LOW PRIORITY** 選項相當於 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。  
+ 線上索引重建必須等候這個資料表的封鎖作業。 **WAIT_AT_LOW_PRIORITY** 表示線上索引重建作業將會等候低優先順序鎖定，讓其他作業在線上索引建立作業等候時繼續進行。 省略 **WAIT AT LOW PRIORITY** 選項等同於 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`。  
   
  MAX_DURATION = *time* [**MINUTES** ]  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 執行 DDL 命令時， **SWITCH** 或線上索引重建鎖定將會以低優先順序等候的等候時間 (以分鐘為單位指定的整數值)。 如果作業被封鎖時間長度達到在 **MAX_DURATION** 中指定的時間，則會執行其中一個 **ABORT_AFTER_WAIT** 動作。 **MAX_DURATION** 時間一律以分鐘為單位，而且可以省略 **MINUTES** 這個字。  
+ 執行 DDL 命令時，**SWITCH** 或線上索引重建鎖定將會以低優先順序等候的等候時間 (以分鐘為單位指定的整數值)。 如果作業封鎖時間長度達到在 **MAX_DURATION** 中指定的時間，則會執行其中一個 **ABORT_AFTER_WAIT** 動作。 **MAX_DURATION** 時間一律以分鐘為單位，且您可以省略 **MINUTES** 這個字。  
   
  ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -1005,41 +1005,41 @@ IF EXISTS
  如果參考資料表的程序快取中有任何執行計畫，ALTER TABLE 會加以標示，以便在下一次執行時重新編譯。  
   
 ## <a name="changing-the-size-of-a-column"></a>變更資料行的大小  
- 您可以在 ALTER COLUMN 子句中指定資料行資料類型的新大小，以變更資料行的長度、有效位數或小數位數。 如果資料行中有資料存在，則新大小不得小於資料的最大大小。 此外，除非資料行是 **varchar**、**nvarchar** 或 **varbinary** 資料類型，且索引不是 PRIMARY KEY 條件約束的結果，否則不能在索引中定義資料行。 請參閱範例 P。  
+ 您可以指定資料行資料類型的新大小，以變更資料行的長度、有效位數或小數位數。 使用 ALTER COLUMN 子句。 如果資料行中有資料存在，則新大小不得小於資料的最大大小。 此外，除非資料行是 **varchar**、**nvarchar** 或 **varbinary** 資料類型，且索引不是 PRIMARY KEY 條件約束的結果，否則您不能在索引中定義資料行。 請參閱範例 P。  
   
 ## <a name="locks-and-alter-table"></a>鎖定和 ALTER TABLE  
- ALTER TABLE 中指定的變更會立即實作。 如果變更作業需要修改資料表中的資料列，ALTER TABLE 會更新資料列。 ALTER TABLE 會取得資料表上的結構描述修改 (SCH-M) 鎖定，以確定下列事項：在變更期間，除了在結束時需要非常短暫的 SCH-M 鎖定之線上索引作業以外，沒有其他連接會參考資料表的中繼資料。 在 `ALTER TABLE...SWITCH` 作業中，會同時在來源資料表與目標資料表上取得鎖定。 對資料表所做的修改會記錄下來，且完全可復原。 影響每份極大型資料表中之所有資料列的變更 (例如，卸除資料行或在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上加入含有預設值的 NOT NULL 資料行) 可能需要很長的時間才能完成及產生多個記錄。 執行這些 ALTER TABLE 陳述式時，要像執行任何影響多個資料列的 INSERT、UPDATE 或 DELETE 陳述式時一樣地小心。  
+ 您在 ALTER TABLE 中指定的變更會立即實作。 如果變更作業需要修改資料表中的資料列，ALTER TABLE 會更新資料列。 ALTER TABLE 會取得資料表上的結構描述修改 (SCH-M) 鎖定，以確保在變更期間沒有其他連線會參考資料表的中繼資料，除了在結束時需要短暫 SCH-M 鎖定的線上索引作業以外。 在 `ALTER TABLE...SWITCH` 作業中，會同時在來源資料表與目標資料表上取得鎖定。 對資料表所做的修改會記錄下來，且完全可復原。 影響每份大型資料表中所有資料列的變更 (例如，卸除資料行或在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上新增含有預設值的 NOT NULL 資料行) 可能需要很長時間才能完成及產生多個記錄檔記錄。 執行這些 ALTER TABLE 陳述式時，要像執行任何影響多個資料列的 INSERT、UPDATE 或 DELETE 陳述式時一樣小心。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以線上作業的方式加入 NOT NULL 資料行  
- 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 開始，當預設值是「執行階段常數」時，加入含有預設值的 NOT NULL 資料行就是線上作業。 這表示，不論資料表中的資料列數目為何，此作業幾乎會立即完成。 這是因為資料表中的現有資料列不會在作業期間更新。而是，預設值只會儲存在資料表的中繼資料內，而且存取這些資料列的查詢會視需要查閱此值。 這種行為是自動的。不需要任何額外的語法，即可實作超越 ADD COLUMN 語法的線上作業。 執行階段常數是一種運算式，它會在執行階段針對資料表中的每個資料列產生相同的值，不論其決定性為何。 例如，常數運算式 "My temporary data" 或系統函數 GETUTCDATETIME() 都是執行階段常數。 相反地，`NEWID()` 或 `NEWSEQUENTIALID()` 函數不是執行階段常數，因為系統會針對資料表中的每個資料列產生唯一值。 加入含有非執行階段常數之預設值的 NOT NULL 資料行一律以離線方式執行，而且系統會在作業期間取得獨佔 (SCH-M) 鎖定。  
+ 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 開始，當預設值是「執行階段常數」時，加入含有預設值的 NOT NULL 資料行就是線上作業。 這表示，不論資料表中的資料列數目為何，此作業幾乎會立即完成。 因為資料表中的現有資料列不會在作業期間更新。 相反地，預設值只會儲存在資料表的中繼資料內，且存取這些資料列的查詢會視需要查閱此值。 此行為是自動的。 不需要任何額外的語法，即可實作超越 ADD COLUMN 語法的線上作業。 執行階段常數是一種運算式，會在執行階段針對資料表中的每個資料列產生相同的值，不論其決定性為何。 例如，常數運算式 "My temporary data" 或系統函數 GETUTCDATETIME() 都是執行階段常數。 相反地，`NEWID()` 或 `NEWSEQUENTIALID()` 函式不是執行階段常數，因為系統會針對資料表中的每個資料列產生唯一值。 新增含有非執行階段常數之預設值的 NOT NULL 資料行一律以離線方式執行，且系統會在作業期間取得獨佔 (SCH-M) 鎖定。  
   
- 當現有的資料列參考中繼資料內儲存的值時，如果已插入任何新資料列但並未針對資料行指定另一個值，預設值就會儲存在資料列上。 當您更新資料列 (即使沒有在 UPDATE 陳述式中指定實際的資料行) 或是重建資料表或叢集索引時，中繼資料內儲存的預設值會移至現有的資料列。  
+ 當現有資料列參考中繼資料內儲存的值時，如果已插入任何新資料列但並未針對資料行指定另一個值，預設值就會儲存在資料列上。 當您更新資料列 (即使沒有在 UPDATE 陳述式中指定實際的資料行) 或是重建資料表或叢集索引時，中繼資料內儲存的預設值會移至現有資料列。  
   
- 類型為 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**, **text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography** 或 CLR UDTS 的資料行，不可以在線上作業中加入。 您無法線上加入資料行，如果這樣做，就會導致最大可能的資料列大小超過 8,060 位元組限制。 在此情況中，資料行會以離線作業的方式加入。  
+ 類型為 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**, **text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography** 或 CLR UDTS 的資料行，不可以在線上作業中新增。 您無法在線上新增資料行，如果這樣做會導致最大可能的資料列大小超過 8,060 位元組限制。 在此情況中，資料行會以離線作業的方式加入。  
   
 ## <a name="parallel-plan-execution"></a>平行計畫執行  
  在 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 和更新版本中，用來執行單一 ALTER TABLE ADD (以索引為基礎) CONSTRAINT 或 DROP (叢集索引) CONSTRAINT 陳述式的處理器數目，取決於 **max degree of parallelism** 設定選項和目前的工作負載。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵測到系統在忙碌中，則在開始執行陳述式之前，會先自動降低作業平行原則的程度。 您可以指定 MAXDOP 選項，手動設定用來執行陳述式的處理器數目。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   
 ## <a name="partitioned-tables"></a>分割區資料表  
- 除了執行涉及分割區資料表的 SWITCH 作業以外，ALTER TABLE 還可用來變更分割區資料表之資料行、條件約束及觸發程序的狀態，就像它是用於非分割區資料表一樣。 不過，這個陳述式不可用來變更資料表本身的分割區方式。 若要重新分割某個資料分割資料表，請使用 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 和 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)。 此外，您也不能變更分割區資料表的資料行資料類型。  
+ 除了執行涉及資料分割資料表的 SWITCH 作業以外，您可以使用 ALTER TABLE 來變更資料分割資料表的資料行、條件約束及觸發程序狀態，就像是用於非資料分割資料表一樣。 不過，這個陳述式不可用來變更資料表本身的資料分割方式。 若要重新分割某個資料分割資料表，請使用 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) 和 [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md)。 此外，您也不能變更資料分割資料表的資料行資料類型。  
   
 ## <a name="restrictions-on-tables-with-schema-bound-views"></a>含有結構描述繫結檢視表之資料表的限制  
  適用於含有結構描述繫結檢視之資料表上的 ALTER TABLE 陳述式的限制，跟修改含有簡式索引之資料表時目前所適用的限制一樣。 允許加入資料行。 不過，不允許移除或變更參與任何結構描述繫結檢視表的資料行。 如果 ALTER TABLE 陳述式需要變更結構描述繫結檢視中使用的資料行，ALTER TABLE 會失敗，且 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤訊息。 如需有關結構描述繫結和索引檢視表的詳細資訊，請參閱 [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)。  
   
- 建立參考資料表的結構描述繫結檢視，不會影響基底資料表上之觸發程序的新增或移除。  
+ 建立參考資料表的結構描述繫結檢視，不會影響基底資料表上觸發程序的新增或移除。  
   
 ## <a name="indexes-and-alter-table"></a>索引和 ALTER TABLE  
- 當條件約束卸除時，建立為條件約束之一部分的索引也會卸除。 必須利用 DROP INDEX 來卸除利用 CREATE INDEX 建立的索引。 ALTER INDEX 陳述式可用來重建條件約束定義中索引的部分；不必卸除條件約束，然後又利用 ALTER TABLE 新增條件約束。  
+ 當條件約束卸除時，建立為條件約束之一部分的索引也會卸除。 必須利用 DROP INDEX 來卸除利用 CREATE INDEX 建立的索引。 使用 ALTER INDEX 陳述式來重建條件約束定義的索引部分；不需使用 ALTER TABLE 來卸除條件約束並再次新增。  
   
  若要移除某資料行，必須先移除以該資料行為基礎的所有索引和條件約束。  
   
- 刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再藉由指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
+ 當您刪除建立叢集索引的條件約束時，儲存在叢集索引分葉層級中的資料列會儲存在非叢集資料表中。 您可以卸除叢集索引，再藉由指定 MOVE TO 選項，於單一交易中將結果資料表移到另一個檔案群組或分割區配置。 MOVE TO 選項有下列限制：  
   
 -   MOVE TO 對於索引檢視表或非叢集索引無效。  
 -   分割區配置或檔案群組必須已經存在。  
--   如果未指定 MOVE TO，資料表會放在針對叢集索引定義的相同分割區配置或檔案群組中。  
+-   如果未指定 MOVE TO，資料表會放在針對叢集索引定義的相同資料分割配置或檔案群組中。  
   
-當您卸除叢集索引時，您可以指定 ONLINE **=** ON 選項，使 DROP INDEX 交易不會封鎖對底層資料和相關聯之非叢集索引的查詢和修改。  
+當您卸除叢集索引時，請指定 ONLINE **=** ON 選項，使 DROP INDEX 交易不會封鎖對底層資料和相關聯非叢集索引的查詢和修改。  
   
 ONLINE **=** ON 有下列限制：  
  
@@ -1051,10 +1051,10 @@ ONLINE **=** ON 有下列限制：
 卸除叢集索引時，需要一個大小等於現有叢集索引的暫存磁碟空間。 作業完成時，會立即釋放此額外空間。  
   
 > [!NOTE]  
-> *\<drop_clustered_constraint_option>* 底下所列的選項可套用到資料表上的叢集索引，但不可套用到檢視表上的叢集索引或套用至非叢集索引。  
+> *\<drop_clustered_constraint_option>* 底下所列的選項可套用至資料表上的叢集索引，但不可套用至檢視表上的叢集索引，或套用至非叢集索引。  
   
 ## <a name="replicating-schema-changes"></a>複寫結構描述變更  
- 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 這項功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
+ 根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 這項功能具有某些限制。 您可以將其停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
   
 ## <a name="data-compression"></a>資料壓縮  
  系統資料表無法啟用壓縮。 如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
@@ -1063,18 +1063,18 @@ ONLINE **=** ON 有下列限制：
   
  下列限制適用於分割區資料表：  
   
--   您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
+-   您無法在資料表具有非對齊索引時變更單一資料分割的壓縮設定。  
 -   ALTER TABLE \<table> REBUILD PARTITION ... 語法可重建指定的資料分割。  
 -   ALTER TABLE \<table> REBUILD WITH ... 語法可重建所有資料分割。  
   
 ## <a name="dropping-ntext-columns"></a>卸除 NTEXT 資料行  
- 卸除 NTEXT 資料行時，已刪除資料的清除作業會在所有資料列上的序列化作業執行時發生。 這可能需要相當長的時間。 卸除包含大量資料列的資料表中的 NTEXT 資料行時，請先將 NTEXT 更新為 NULL 值，再卸除該資料行。 這可透過平行作業執行，而且速度加快許多。  
+ 卸除 NTEXT 資料行時，已刪除資料的清除作業會在所有資料列上的序列化作業執行時發生。 清除作業可能需要大量時間。 卸除包含大量資料列之資料表中的 NTEXT 資料行時，請先將 NTEXT 更新為 NULL 值，再卸除該資料行。 您可以透過平行作業執行此選項，使其更加快速。  
   
 ## <a name="online-index-rebuild"></a>線上索引重建  
- 為了執行線上索引重建的 DDL 陳述式，特定資料表上執行的所有使用中封鎖交易都必須完成。 當線上索引重建執行時，它會封鎖這個資料表上準備開始執行的所有新交易。 雖然線上索引重建的鎖定期間很短，但是等候特定資料表上所有未完成的交易完成並封鎖要開始的新交易，可能會大幅影響輸送量，導致工作負載速度變慢或逾時，並且大幅限制對基礎資料表的存取。 **WAIT_AT_LOW_PRIORITY** 選項可讓 DBA 管理線上索引重建所需的 S 鎖定和 Sch-M 鎖定，並允許它們選取 3 個選項的其中一個。 在這 3 個案例中，如果在等候期間 (`(MAX_DURATION =n [minutes])`) 沒有封鎖活動，線上索引重建會立即執行而不等候，並 DDL 陳述式會完成。  
+ 若要執行線上索引重建的 DDL 陳述式，特定資料表上執行的所有使用中封鎖交易都必須完成。 線上索引重建啟動時，會封鎖這個資料表上準備開始執行的所有新交易。 雖然線上索引重建的鎖定期間很短，但是等候特定資料表上所有未完成之交易完成並封鎖要開始的新交易，可能會大幅影響輸送量。 這會導致工作負載速度變慢或逾時，且大幅限制對基礎資料表的存取。 **WAIT_AT_LOW_PRIORITY** 選項可讓 DBA 管理線上索引重建所需的 S 鎖定和 Sch-M 鎖定，並允許其選取三個選項的其中一個。 在這三個案例中，如果在等候期間 (`(MAX_DURATION =n [minutes])`) 沒有封鎖活動，線上索引重建會立即執行而不等候，且 DDL 陳述式會完成。  
   
 ## <a name="compatibility-support"></a>相容性支援  
- ALTER TABLE 陳述式只允許兩部分 (schema.object) 資料表名稱。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用下列格式來指定資料表名稱會在編譯階段失敗，並顯示錯誤 117。  
+ ALTER TABLE 陳述式只支援兩段式 (schema.object) 資料表名稱。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，使用下列格式來指定資料表名稱會在編譯階段失敗，並顯示錯誤 117。  
   
 -   server.database.schema.table  
 -   .database.schema.table  
@@ -1082,7 +1082,7 @@ ONLINE **=** ON 有下列限制：
   
 在舊版中，指定 server.database.schema.table 格式會傳回錯誤 4902。 不過，指定 .database.schema.table 格式或 ..schema.table 格式會成功。  
   
-若要解決此問題，請移除 4 部分前置詞的用法。  
+若要解決此問題，請移除四部分前置詞的用法。  
   
 ## <a name="permissions"></a>[權限]
 
@@ -1090,9 +1090,9 @@ ONLINE **=** ON 有下列限制：
   
  ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料表。 所切換的任何資料，都會繼承目標資料表的安全性。  
   
- 如果將 ALTER TABLE 陳述式中的任何資料行定義為屬於 Common Language Runtime (CLR) 使用者定義類型或別名資料類型，則需要對該類型具有 REFERENCES 權限。  
+ 如果您將 ALTER TABLE 陳述式中的任何資料行定義為屬於 Common Language Runtime (CLR) 使用者定義型別或別名資料類型，則需要對該類型具有 REFERENCES 權限。  
   
- 加入會更新資料表之資料列的資料行時，需要該資料表的 **UPDATE** 權限。 例如，當資料表非空白時，加入具有預設值的 **NOT NULL** 資料行或加入識別欄位。  
+ 加入會更新資料表之資料列的資料行時，需要該資料表的 **UPDATE** 權限。 例如，當資料表非空白時，新增具有預設值的 **NOT NULL** 資料行或新增識別欄位。  
   
 ## <a name="Example_Top"></a> 範例
   
@@ -1209,7 +1209,7 @@ GO
 ```  
   
 #### <a name="f-adding-a-nullable-column-with-default-values"></a>F. 加入含有預設值並可為 Null 的資料行  
- 下列範例會加入含有 `DEFAULT` 定義且可為 Null 的資料行，並利用 `WITH VALUES` 為資料表中的每一個現有資料列提供值。 如果沒有使用 WITH VALUES，每一個資料列的新資料行中都會有 NULL 值。  
+ 下列範例會加入含有 `DEFAULT` 定義且可為 Null 的資料行，並利用 `WITH VALUES` 為資料表中的每一個現有資料列提供值。 如果沒有使用 WITH VALUES，則每一個資料列的新資料行中都會有 NULL 值。  
   
 ```sql  
 CREATE TABLE dbo.doc_exf ( column_a INT) ;  
@@ -1287,7 +1287,7 @@ GO
 ```  
   
 #### <a name="i-adding-a-column-set"></a>I. 加入資料行集  
- 下列範例示範如何將資料行加入至資料表 `T2`。 如果資料表已包含疏鬆資料行，就無法在該資料表中加入資料行集。 建立資料表 `T2` 的程式碼如下。  
+ 下列範例示範如何將資料行加入至資料表 `T2`。 如果資料表已包含疏鬆資料行，就無法在該資料表中新增資料行集。 建立資料表 `T2` 的程式碼如下。  
   
 ```sql  
 CREATE TABLE T2  
@@ -1460,7 +1460,7 @@ C4 int ) ;
 GO  
 ```  
   
- 接著，將資料行 `C2` 定序變更為 Latin1_General_BIN。 請注意，資料類型即使不會變更，但卻是必要的。  
+ 接著，將資料行 `C2` 定序變更為 Latin1_General_BIN。 即使資料類型未變更，仍為必要。  
   
 ```sql  
 ALTER TABLE T3  
@@ -1481,8 +1481,8 @@ C4 int ) ;
 GO  
 ```  
   
- 接著，資料行 'C2' 會使用名為 CEK1 的資料行加密金鑰，以及隨機加密進行加密。 請注意，若要讓以下陳述式成功執行：
-- 資料行加密金鑰必須已啟用安全記憶體保護區，表示它必須以允許記憶體保護區計算的資料行主要金鑰進行加密。
+ 接著，資料行 'C2' 會使用名為 CEK1 的資料行加密金鑰，以及隨機加密進行加密。 若要讓下列陳述式成功執行：
+- 資料行加密金鑰必須已啟用記憶體保護區。 這表示其必須以允許記憶體保護區計算的資料行主要金鑰進行加密。
 - 目標 SQL Server 執行個體必須支援具有安全記憶體保護區的 Always Encrypted。
 - 陳述式必須是透過為具有安全記憶體保護區 Always Encrypted 設定的連線發出，並使用支援的用戶端驅動程式。
 - 進行呼叫的應用程式必須具備存取資料行主要金鑰的權限，以保護 CEK1。
@@ -1529,7 +1529,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
  如需其他資料壓縮範例，請參閱[資料壓縮](../../relational-databases/data-compression/data-compression.md)。  
   
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. 修改資料行存放區資料表來變更封存壓縮  
- 下列範例藉由套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 這樣會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
+ 下列範例藉由套用其他壓縮演算法來進一步壓縮資料行存放區資料表的分割區。 此壓縮會縮小資料表，但是也會增加儲存和擷取所需的時間。 這對於封存，或是需要較少空間而且可負擔更多時間來儲存和擷取的狀況很實用。  
   
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1539,7 +1539,7 @@ REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;
 GO  
 ```  
   
-以下範例會將之前以 COLUMNSTORE_ARCHIVE 選項壓縮的資料行存放區資料表分割區解壓縮。 當還原資料時，資料將會繼續以用於所有資料行存放區資料表的資料行存放區壓縮來壓縮。  
+以下範例會將之前以 COLUMNSTORE_ARCHIVE 選項壓縮的資料行存放區資料表分割區解壓縮。 還原資料時，資料將會繼續以用於所有資料行存放區資料表的資料行存放區壓縮來壓縮。  
   
 **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1564,7 +1564,7 @@ GO
 ```  
   
 #### <a name="d-allowing-lock-escalation-on-partitioned-tables"></a>D. 允許對分割區擴大鎖定  
- 下列範例會在分割區資料表上啟用分割區層級的鎖定擴大。 如果資料表不是分割區資料表，則鎖定擴大會在 TABLE 層級設定。  
+ 下列範例會在分割區資料表上啟用分割區層級的鎖定擴大。 如果資料表未分割，則鎖定擴大會在 TABLE 層級設定。  
   
 **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
@@ -1714,7 +1714,7 @@ GO
 **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. 將系統版本設定加入現有的資料表  
- 下列範例會示範如何將系統版本設定加入現有的資料表，並建立未來的記錄資料表。 這個範例假設目前有一個稱為 `InsurancePolicy` 且已定義主索引鍵的資料表。 此範例會為系統版本設定，填入新建立的期間資料行，而且因為開始時間與結束時間不能為空值，因此會使用預設值。 此範例會使用 HIDDEN 子句，以確保不會影響到與目前資料表互動的現有應用程式。  它也會使用只有 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 才提供的 HISTORY_RETENTION_PERIOD。 
+ 下列範例會示範如何將系統版本設定加入現有的資料表，並建立未來的記錄資料表。 這個範例假設目前有一個稱為 `InsurancePolicy` 且已定義主索引鍵的資料表。 此範例會為系統版本設定填入新建立的期間資料行，且因為開始時間與結束時間不能為 Null，因此會使用預設值。 此範例會使用 HIDDEN 子句，以確保不會影響到與目前資料表互動的現有應用程式。 其也會使用只有 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 才提供的 HISTORY_RETENTION_PERIOD。 
   
 ```sql  
 --Alter non-temporal table to define periods for system versioning  
@@ -1731,7 +1731,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```  
   
 #### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. 移轉現有解決方案以使用系統版本設定  
- 下列範例會示範如何從一種使用觸發程序來模擬時態性支援的解決方案，移轉至系統版本設定。 這個範例假設有一個解決方案針對其現有解決方案使用 `ProjectTask` 資料表與 `ProjectTaskHistory` 資料表，且它的期間是使用 `Changed Date` 和 `Revised Date` 資料行，這些期間資料行不使用 `datetime2` 資料類型，且 `ProjectTask` 資料表已定義一個主索引鍵。  
+ 下列範例會示範如何從一種使用觸發程序來模擬時態性支援的解決方案，移轉至系統版本設定。 這個範例假設有一個解決方案針對其現有解決方案使用 `ProjectTask` 資料表與 `ProjectTaskHistory` 資料表，且其期間是使用 `Changed Date` 和 `Revised Date` 資料行；則這些期間資料行不使用 `datetime2` 資料類型，且 `ProjectTask` 資料表已定義主索引鍵。  
 
 ```sql  
 -- Drop existing trigger  
@@ -1754,7 +1754,7 @@ SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSIS
 ```  
   
 #### <a name="c-disabling-and-re-enabling-system-versioning-to-change-table-schema"></a>C. 停用並重新啟用系統版本設定來變更資料表結構描述  
- 這個範例示範如何停用 `Department` 資料表上的系統版本設定、 加入資料行，然後重新啟用系統版本設定。 若要修改資料表結構描述，必須停用系統版本設定。 在一次交易中執行這些步驟，只更新資料表結構描述而不更新這兩個資料表，這樣可以讓 DBA 在重新啟用系統版本設定時不執行資料一致性檢查，還能改進效能。 請注意，執行某些作業時並不需要停用系統版本設定，例如建立統計資料、 切換資料分割或者將壓縮套用到一或兩個資料表。  
+ 這個範例示範如何停用 `Department` 資料表上的系統版本設定、 加入資料行，然後重新啟用系統版本設定。 若要修改資料表結構描述，必須停用系統版本設定。 在交易中執行這些步驟，只更新資料表結構描述而不更新這兩個資料表，這樣可以讓 DBA 在重新啟用系統版本設定時不執行資料一致性檢查，還能改善效能。 執行某些作業時並不需要停用系統版本設定，例如建立統計資料、切換資料分割或者將壓縮套用到一或兩個資料表。  
   
 ```sql  
 BEGIN TRAN  
@@ -1775,7 +1775,7 @@ COMMIT
 ```  
   
 #### <a name="d-removing-system-versioning"></a>D. 移除系統版本設定  
- 這個範例示範如何從 Department 資料表徹底移除系統版本設定以及卸除 `DepartmentHistory` 資料表。 您可能也要視情況卸除系統用來記錄系統版本設定資訊的期間資料行。 請注意，當您啟用系統版本設定時，無法卸除 `Department` 或 `DepartmentHistory` 資料表。  
+ 這個範例示範如何從 Department 資料表徹底移除系統版本設定以及卸除 `DepartmentHistory` 資料表。 您可能也要視情況卸除系統用來記錄系統版本設定資訊的期間資料行。 已啟用系統版本設定時，您無法卸除 `Department` 或 `DepartmentHistory` 資料表。  
   
 ```sql  
 ALTER TABLE Department  
@@ -2005,7 +2005,7 @@ ALTER TABLE Orders MERGE RANGE ('2004-01-01');
 -   分割區 3 (有資料)：'2006-01-01'<= OrderDate < '2007-01-01'  
 -   分割區 4 (有資料)：'2007-01-01' <= OrderDate  
   
-假設又過一年，您準備好封存 2005 年。 您可以按照以下方法分割空白資料分割，以在 `OrdersHistory` 資料表為 2005 年配置一個空白資料分割：  
+假設又過了一年，您已準備好封存 2005 年。 您可以按照以下方法分割空白資料分割，以在 `OrdersHistory` 資料表為 2005 年配置一個空白資料分割：  
   
 ```sql  
 ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');  

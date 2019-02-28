@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712349"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298378"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
 本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
@@ -21,7 +21,7 @@ ms.locfileid: "52712349"
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-完成這個教學課程的估計時間：30 分鐘。  
+完成本教學課程的估計時間：20 分鐘。  
   
 ## <a name="requirements"></a>需求  
 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
@@ -184,7 +184,7 @@ ms.locfileid: "52712349"
   
 4.  按一下 [下一步] 預覽資料表，然後按一下 [完成]。  
   
-資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 [資料列群組] 窗格會顯示三個資料列群組：[SalesDate]、[Subcategory] 和 [Details]。 詳細資料是資料集查詢擷取的所有資料。  
+資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 [資料列群組] 窗格會顯示三個資料列群組：SalesDate、Subcategory 和 Details。 詳細資料是資料集查詢擷取的所有資料。  
   
 ## <a name="FormatCurrency"></a>2.將資料格式化為貨幣  
 根據預設，[Sales] 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。   

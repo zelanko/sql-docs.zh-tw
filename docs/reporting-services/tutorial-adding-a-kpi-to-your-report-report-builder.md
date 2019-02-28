@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a19d1fee2e7e9fc1fd5efd8fe2c0007548bcaf2d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712639"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290716"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 (報表產生器)
-在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 編頁報表。  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 新增至報表 (報表產生器)
+在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會將關鍵效能指標 (KPI) 新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表。  
 
 KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子類別排列的銷售摘要便是 KPI。 KPI 的目前狀態會以色彩、量測計和指標顯示。
   
@@ -25,7 +25,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+> 在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集，以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 完成本教學課程的估計時間：15 分鐘。  
   
@@ -136,7 +136,7 @@ KPI 是具有商務重要性的可測量值。 在這個案例中，依產品子
   
 11. 按一下 **[完成]**。  
   
-      資料表會加入至設計介面。 這個資料表具有五個資料行和五個資料列。 [資料列群組] 窗格會顯示三個資料列群組：[SalesDate]、[Subcategory] 和 [Details]。 詳細資料是資料集查詢擷取的所有資料。 [資料行群組] 窗格是空的。  
+      資料表會加入至設計介面。 這個資料表具有五個資料行和五個資料列。 [資料列群組] 窗格會顯示三個資料列群組：SalesDate、Subcategory 和 Details。 詳細資料是資料集查詢擷取的所有資料。 [資料行群組] 窗格是空的。  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   

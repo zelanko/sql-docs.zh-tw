@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813771"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294937"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，[地圖精靈] 與 [地圖圖層精靈] 會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -76,7 +76,7 @@ ms.locfileid: "51813771"
   
     -   選擇地圖視覺效果：點  
   
-4.  選擇資料來源的連接選擇地圖視覺效果︰點。 選擇資料來源連接，或建立一個外部資料來源的連接，其中包含要顯示在地圖上的分析資料。  
+4.  選擇資料來源的連線選擇地圖視覺效果︰點： 選擇資料來源連接，或建立一個外部資料來源的連接，其中包含要顯示在地圖上的分析資料。  
   
 5.  設計查詢。 建立指定分析資料的查詢。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "51813771"
   
  在您加入地圖或地圖圖層並預覽報表之後，可以變更您在精靈中設定的地圖和地圖圖層選項。 如需詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。 如需將地圖加入報表中的逐步指示，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md)。  
+ 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)。 如需將地圖新增至報表的逐步指示，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md)。  
   
 ##  <a name="SpatialDataSource"></a> 選擇空間資料的來源  
  在此頁面上，指定空間資料來源以及要包含的空間資料。 空間資料可能來自地圖庫、ESRI 形狀檔，或指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更新版本資料庫之 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 空間資料的資料集查詢。  
@@ -185,7 +185,7 @@ ms.locfileid: "51813771"
   
  如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](https://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
- 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱 [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 和 [規劃地圖報表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
+ 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱[針對報表進行疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 和[規劃地圖報表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   
  如需自訂圖格圖層之其他方式的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

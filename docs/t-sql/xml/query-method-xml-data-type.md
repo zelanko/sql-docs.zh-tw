@@ -15,17 +15,17 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b2028b4cd7e59e207f0045e00ef8f3e9a346b24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026609"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154763"
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對 **xml** 資料類型的執行個體指定 XQuery。 結果為 **xml** 類型。 該方法會傳回不具類型的 XML 執行個體。  
+針對 **xml** 資料類型的執行個體指定 XQuery。 結果為 **xml** 類型。 該方法會傳回不具類型的 XML 執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,16 +35,16 @@ query ('XQuery')
 ```  
   
 ## <a name="arguments"></a>引數  
- XQuery  
- 是字串類型的 XQuery 運算式，可查詢 XML 執行個體中如元素、屬性等 XML 節點。  
+XQuery  
+是字串類型的 XQuery 運算式，可查詢 XML 執行個體中的項目和屬性等 XML 節點。  
   
 ## <a name="examples"></a>範例  
- 此節提供一些使用 **xml** 資料類型的 query() 方法之範例。  
+此節提供一些使用 **xml** 資料類型的 query() 方法之範例。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. 針對 xml 類型變數使用 query() 方法  
- 下列範例可宣告 **xml** 類型的 **@myDoc** 變數並指派 XML 執行個體給它。 **query()** 方法可用以指定針對文件的 XQuery。  
+下列範例可宣告 **xml** 類型的 **@myDoc** 變數並指派 XML 執行個體給它。 **query()** 方法可用以指定針對文件的 XQuery。  
   
- 查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素：  
+查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素：  
   
 ```  
 declare @myDoc xml  
@@ -59,7 +59,7 @@ set @myDoc = '<Root>
 SELECT @myDoc.query('/Root/ProductDescription/Features')  
 ```  
   
- 以下是結果：  
+下列輸出顯示結果：  
   
 ```  
 <Features>  
@@ -69,7 +69,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. 使用針對 XML 類型資料行的 query() 方法  
- 在下列查詢中，**query()** 方法是用以指定 XQuery，以針對 **AdventureWorks** 資料庫中 **xml** 類型的 **CatalogDescription** 資料行進行查詢：  
+在下列查詢中，**query()** 方法是用以指定 XQuery，以針對 **AdventureWorks** 資料庫中 **xml** 類型的 **CatalogDescription** 資料行進行查詢：  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -83,15 +83,15 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
- 請注意下列項目是從上一個查詢而來：  
+請注意，下列項目是從上一個查詢而來：  
   
--   CatalogDescription 資料行是具類型的 **xml** 資料行。 這表示該資料行具有關聯的結構描述集合。 在 [XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)中，**namespace** 關鍵字是用以定義在查詢主體中稍後可用的前置詞。  
+-   CatalogDescription 資料行是具類型的 **xml** 資料行，這表示它有與其建立關聯的結構描述集合。 在 [XQuery 初構](../../xquery/modules-and-prologs-xquery-prolog.md)中，**namespace** 關鍵字可定義稍後要用於查詢主體的前置詞。  
   
 -   **query()** 方法會建構 XML、具有 **ProductModelID** 屬性的 <`Product`> 元素，其中 **ProductModelID** 屬性值是從資料庫擷取而來。 如需 XML 建構的詳細資訊，請參閱 [XML 建構 &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)。  
   
--   在 WHERE 子句中的 [exist() 方法 (XML 資料類型)](../../t-sql/xml/exist-method-xml-data-type.md) 可用以只尋找 XML 中包含 <`Warranty`> 元素的資料列。 **namespace** 關鍵字也是用以定義兩個命名空間的前置詞。  
+-   WHERE 子句的 [exist() 方法 (XML 資料類型)](../../t-sql/xml/exist-method-xml-data-type.md) 只會尋找 XML 中包含 <`Warranty`> 項目的資料列。 同樣地，**namespace** 關鍵字可定義兩個命名空間的前置詞。  
   
- 以下是部份結果：  
+下列輸出顯示部分結果：  
   
 ```  
 <Product ProductModelID="19"/>   
@@ -99,7 +99,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
 ...  
 ```  
   
- 注意 query() 與 exist() 方法兩個都會宣告 PD 前置詞。 在此情況下，您可以使用 WITH XMLNAMESPACES 先定義前置詞並在查詢中使用它。  
+請注意，query() 與 exist() 方法都會宣告 PD 前置詞。 在此情況下，您可以使用 WITH XMLNAMESPACES 先定義前置詞並在查詢中使用它。  
   
 ```  
 WITH XMLNAMESPACES 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711357"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286066"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
 
-  在本教學課程中，您會使用精靈在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]分頁報表中建立圓形圖。 然後您會加入百分比，然後稍微修改圓形圖。 
+  在本教學課程中，您使用精靈在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中建立圓形圖。 然後您會加入百分比，然後稍微修改圓形圖。 
   
 您可以採用兩種不同的方式進行此教學課程。 這兩種方法結果都一樣，這個示範的圓形圖會像這樣：  
   

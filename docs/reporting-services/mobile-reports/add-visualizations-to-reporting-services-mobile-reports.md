@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703336"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298416"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>將視覺效果新增至 Reporting Services 行動報表
 圖表是資料視覺效果中不可或缺的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中用來涵蓋各種案例的圖表。 
@@ -143,7 +143,7 @@ ms.locfileid: "47703336"
 
      * 在 [數值表示方式] 下，針對磚的大小選取一個數值欄位。
      * 在 [色彩表示方式] 下，針對磚的色彩選取一個數值欄位。 
-     * [選擇性] **自訂中間值**：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您只能使用 **自訂中間值** 。
+     * [選擇性] **自訂中間值**：當視覺效果類型為 HeatMapWithCustomCenterValue 時，您才可以使用 [自訂中間值]。
      
          中間值會決定方塊的色彩。 計量越符合中間值，顏色就越接近綠色。 反之則接近紅色。
      

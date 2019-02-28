@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 34f72ecac1c06752748490d60ed8d9444975f0cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3b332d8470c9a7502a168863a48b08c4d3f24e47
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689836"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285356"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>設定量測計上範圍的格式 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，量測計範圍是量測計標尺上的一個區域，表示值在量測計上的重要子區段。 您可以使用量測計範圍，以視覺化的方式表示指標值靠近特定值範圍的時間。 範圍是由開始值和結束值所定義。  

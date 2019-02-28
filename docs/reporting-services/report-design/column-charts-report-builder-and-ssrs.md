@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5e9f5a56eed71745cdabef1e528d9fdab6e71170
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ddc125d91802441f0788f4beaca0369d40b5c01
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708996"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285956"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 直條圖適合顯示一段時間的資料變更，或圖解項目之間的比較。 一般直條圖與橫條圖相當有關聯，後者會將數列顯示為一組水平橫條，而範圍直條圖則會將數列顯示為一組垂直線，其中包含各種起點與終點。 如需詳細資訊，請參閱 [橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) 和 [範圍圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)。  

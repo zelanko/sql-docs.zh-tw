@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418809"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319109"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 前兩個次子句會傳回與指定期間重疊的資料列版本 (也就是指定週期開始之前和指定週期結束之後)，而 CONTAINED IN 只傳回存在於指定期間內的那些資料列版本。  
   
 > [!IMPORTANT]  
->  如果您只搜尋非目前資料列版本，建議您使用 **CONTAINED IN** ，因為它只適用於歷程記錄資料表，且可獲得最佳查詢效能。 當您需要查詢目前和和歷程記錄資料，沒有任何限制時，請使用 **ALL** 。  
+>  如果您只搜尋非目前資料列版本，建議您直接查詢記錄資料表，因為這樣可獲得最佳查詢效能。 當您需要查詢目前和和歷程記錄資料，沒有任何限制時，請使用 **ALL** 。  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

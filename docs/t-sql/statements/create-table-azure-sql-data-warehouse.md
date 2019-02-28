@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 372ebf82b2903c8e3f6b235978d39bb578508acd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 71e394c613f40b56fee354101410aa422d918e86
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025508"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464784"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "56025508"
 
 附註：除非另有說明，否則本文中和 SQL 資料倉儲有關的討論適用於 SQL 資料倉儲和平行處理資料倉儲。 
  
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>   
 ## <a name="syntax"></a>語法  
@@ -39,7 +39,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     ( 
       { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
     )  
-    [ WITH [ <table_option> [ ,...n ] ) ]  
+    [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
    
 <column_options> ::=
@@ -116,48 +116,48 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | 引數 | 說明 |
  | -------- | ----------- |
  | *constraint_name* | 條件約束的選擇性名稱。 條件約束名稱在資料庫中是唯一的。 名稱可以在其他資料庫中重複使用。 |
- | *constant_expression* | 資料行的預設值。 運算式必須是常值或常數。 例如，允許使用這些常數運算式：`'CA'`、`4`。 不允許使用這些：`2+3`、`CURRENT_TIMESTAMP`。 |
+ | *constant_expression* | 資料行的預設值。 運算式必須是常值或常數。 例如，允許使用這些常數運算式：`'CA'`、`4`。 這些常數運算式不允許：`2+3`、`CURRENT_TIMESTAMP`。 |
   
 
 ### <a name="TableOptions"></a> 資料表結構選項
 如需選擇資料表類型的指導方針，請參閱 [Azure SQL 資料倉儲中的索引資料表](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/)。
   
  `CLUSTERED COLUMNSTORE INDEX`  
-將資料表儲存為叢集資料行存放區索引。 叢集資料行存放區索引適用於所有資料表資料。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設值。   
+將資料表儲存為叢集資料行存放區索引。 叢集資料行存放區索引適用於所有資料表資料。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設行為。   
  
  `HEAP`   
-  將資料表儲存為堆積。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設值。  
+  將資料表儲存為堆積。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。  
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
- 將資料表儲存為具有一或多個索引鍵資料行的叢集索引。 這會依資料列儲存資料。 使用 *index_column_name* 指定索引中一或多個索引鍵資料行的名稱。  如需詳細資訊，請參閱「一般備註」中的「資料列存放區資料表」。
+ 將資料表儲存為具有一或多個索引鍵資料行的叢集索引。 此行為會依資料列儲存資料。 使用 *index_column_name* 指定索引中一或多個索引鍵資料行的名稱。  如需詳細資訊，請參閱「一般備註」中的「資料列存放區資料表」。
  
  `LOCATION = USER_DB`   
- 這個選項已被取代。 它在語法上會被接受，但已不再需要且不會再影響行為。   
+ 這個選項已被取代。 在語法上仍會接受，但已不再需要且不會再影響行為。   
   
 ### <a name="TableDistributionOptions"></a> 資料表散發選項
 若要了解如何選擇最佳散發方法及如何使用分散式資料表，請參閱 [Azure SQL 資料倉儲中的分散式資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/)。
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* )   
-透過將 *distribution_column_name* 中儲存的值進行雜湊處理，將每個資料列指派給一個散發。 演算法具有確定性，這表示它一律會將相同的值進行雜湊處理至相同的散發。  散發資料行應定義為 NOT NULL，因為擁有 NULL 的所有資料列都會指派給相同的散發。
+透過將 *distribution_column_name* 中儲存的值進行雜湊處理，將每個資料列指派給一個散發。 演算法具有確定性，這表示其一律會將相同值進行雜湊處理至相同的散發。  散發資料行應定義為 NOT NULL，因為擁有 NULL 的所有資料列都會指派給相同散發。
 
 `DISTRIBUTION = ROUND_ROBIN`   
-以循環配置資源方式將資料列均勻散發到所有散發中。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設值。
+以循環配置資源方式將資料列均勻散發到所有散發中。 這是 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的預設行為。
 
 `DISTRIBUTION = REPLICATE`    
-在每個計算節點上儲存一份資料表。 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，資料表會儲存在每個計算節點的散發資料庫中。 針對 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，資料表會儲存在跨越計算節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組中。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設值。
+在每個計算節點上儲存一份資料表。 針對 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，資料表會儲存在每個計算節點的散發資料庫中。 針對 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，資料表會儲存在跨越計算節點的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案群組中。 這是 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的預設行為。
   
 ### <a name="TablePartitionOptions"></a> 資料表資料分割選項
 如需使用資料表資料分割的指導方針，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)。
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
-建立一或多個資料表資料分割。 這些是水平資料表配量，可讓您在資料列子集上執行作業，無論資料表是儲存為堆積、叢集索引，或叢集資料行存放區索引。 和散發資料行不同，資料表資料分割不會決定每個資料列儲存所在的散發。 反之，資料表資料分割會決定資料列在每個散發內的分組方式和儲存方式。  
+建立一或多個資料表資料分割。 這些資料分割是水平資料表配量，可讓您將作業套用至資料列子集，無論資料表是儲存為堆積、叢集索引，或叢集資料行存放區索引。 和散發資料行不同，資料表資料分割不會決定每個資料列儲存所在的散發。 反之，資料表資料分割會決定資料列在每個散發內的分組方式和儲存方式。  
  
 | 引數 | 說明 |
 | -------- | ----------- |
-|*partition_column_name*| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將用來分割資料列的資料行。 此資料行可以是任何資料類型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會以遞增順序排序資料分割資料行值。 從低到高順序會由 `LEFT` 到 `RIGHT` 排序，以供指定 `RANGE` 用途使用。 |  
+|*partition_column_name*| 指定 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將用來分割資料列的資料行。 此資料行可以是任何資料類型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會以遞增順序排序資料分割資料行值。 從低到高順序會以 `RANGE` 規格由 `LEFT` 到 `RIGHT` 排序。 |  
 | `RANGE LEFT` | 指定屬於左邊 (較低的值) 資料分割的界限值。 預設值為 LEFT。 |
 | `RANGE RIGHT` | 指定屬於右邊 (較高的值) 資料分割的界限值。 | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | 指定資料分割的界限值。 *boundary_value* 是常數運算式。 它不可為 NULL。 它必須符合或可以隱含轉換為 *partition_column_name* 的資料類型。 它無法在進行隱含轉換期間截斷，因此值的大小和級別不會和 *partition_column_name* 的資料類型相符<br></br><br></br>如果指定 `PARTITION` 子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將會建立包含一個資料分割的資料分割資料表。 如果適用的話，您之後可以將資料表分割成兩個資料分割。<br></br><br></br>如果您指定一個界限值，產生的資料表會有兩個資料分割，一個用於低於界限值的值，一個用於高於界限值的值。 請注意，如果將資料分割移動到非資料分割資料表中，非資料分割資料表將會接收資料，但其中繼資料中將不會有資料分割界限。| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | 指定資料分割的界限值。 *boundary_value* 是常數運算式。 不得為 NULL。 它必須符合或可以隱含轉換為 *partition_column_name* 的資料類型。 無法在進行隱含轉換期間截斷，因此值的大小和級別不會和 *partition_column_name* 的資料類型相符<br></br><br></br>如果指定 `PARTITION` 子句，但未指定界限值，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 將會建立包含一個資料分割的資料分割資料表。 如果適用，您隨後可以將資料表分割成兩個資料分割。<br></br><br></br>如果您指定一個界限值，產生的資料表會有兩個資料分割，一個用於低於界限值的值，一個用於高於界限值的值。 如果將資料分割移動到非資料分割資料表中，非資料分割資料表將會接收資料，但其中繼資料中將不會有資料分割界限。| 
  
  請參閱＜範例＞一節中的[建立資料分割資料表](#PartitionedTable)。
 
@@ -196,7 +196,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  *n* 的預設值是 `7`。  
   
  `float` [ ( *n* ) ]  
- 用來搭配浮點數值資料使用的近似數字資料類型。 浮點數資料是近似的，這表示並非資料類型範圍內的所有值都能夠精確地表示。 *n* 指定用來以科學記號標記法儲存 `float` 之尾數的位元數。 因此，*n* 規定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 `1` 與 `53` 之間。 *n* 的預設值是 `53`。  
+ 用來搭配浮點數值資料使用的近似數字資料類型。 浮點數資料是近似的，這表示並非資料類型範圍內的所有值都能夠精確地表示。 *n* 指定用來以科學記號標記法儲存 `float` 之尾數的位元數。 *n* 可決定有效位數和儲存體大小。 如果指定 *n*，則其值必須介於 `1` 與 `53` 之間。 *n* 的預設值是 `53`。  
   
 | *n* 值 | 有效位數 | 儲存體大小 |  
 | --------: | --------: | -----------: |  
@@ -217,7 +217,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  可儲存的最大十進位數總數，小數點左右兩側都包括在內。 有效位數必須是從 `1` 到最大有效位數 `38` 之間的值。 預設有效位數是 `18`。  
   
  *scale*  
- 小數點右側所能儲存的最大十進位數。 *小數位數*必須是從 `0` 到 *有效位數* 之間的值。 只有在已指定 *precision* 的情況下，您才能指定 *scale*。 預設小數位數為 `0`；因此，`0` <= *小數位數* <= *有效位數*。 最大儲存體大小會隨著有效位數而不同。  
+ 小數點右側所能儲存的最大十進位數。 *小數位數*必須是從 `0` 到 *有效位數* 之間的值。 只有在已指定 *precision* 的情況下，您才能指定 *scale*。 預設小數位數為 `0`，因此 `0` <= *scale* <= *precision*。 最大儲存體大小會隨著有效位數而不同。  
   
 | 有效位數 | 儲存體位元組  |  
 | ---------: |-------------: |  
@@ -286,18 +286,18 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 針對最小和最大限制，請參閱 [SQL 資料倉儲容量限制](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/)。 
  
 ### <a name="determining-the-number-of-table-partitions"></a>判斷資料表資料分割數目
-每個使用者定義的資料表都會分割成多個較小的資料表，儲存在稱為散發的個別位置。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用 60 個散發。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，散發的數目取決於計算節點的數目。
+每個使用者定義的資料表都會分割成多個較小資料表，儲存在稱為散發的個別位置。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 使用 60 個散發。 在 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，散發的數目取決於計算節點的數目。
  
-每個散發都會包含所有資料表資料分割。 例如，如果有 60 個散發和四個資料表分割區加上一個空的分割區，將會有 300 個分割區 (5 x 60 = 300)。 如果資料表是叢集資料行存放區索引，每個分割區都將有一個資料行存放區索引，這表示您將會有 300 個資料行存放區索引。
+每個散發都會包含所有資料表資料分割。 例如，如果有 60 個散發和四個資料表分割區加上一個空的分割區，將會有 300 個分割區 (5 x 60 = 300)。 如果資料表是叢集資料行存放區索引，每個資料分割都將有一個資料行存放區索引，這表示您將會有 300 個資料行存放區索引。
 
-我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需進一步指導方針，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和 [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
+我們建議使用較少的資料表資料分割，以確保每個資料行存放區索引都有足夠的資料列，以充分利用資料行存放區索引的優點。 如需詳細資訊，請參閱 [SQL 資料倉儲中的資料分割資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和 [SQL 資料倉儲中的索引資料表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>資料列存放區資料表 (堆積或叢集索引)  
- 資料列存放區資料表是以資料列逐列順序儲存的資料表。 它是一個堆積或叢集索引。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會建立具有頁面壓縮的所有資料列存放區資料表，使用者無法設定。   
+ 資料列存放區資料表是以資料列逐列順序儲存的資料表。 是堆積或叢集索引。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會建立具有頁面壓縮的所有資料列存放區資料表，使用者無法設定此行為。   
  
  ### <a name="columnstore-table-columnstore-index"></a>資料行存放區資料表 (資料行存放區索引)
-資料行存放區資料表是以資料行逐行順序儲存的資料表。 資料行存放區索引是資料管理技術，可管理資料行存放區資料表中儲存的資料。  叢集資料行存放區索引不會影響資料散發方式；它會影響資料在每個散發內的儲存方式。
+資料行存放區資料表是以資料行逐行順序儲存的資料表。 資料行存放區索引是資料管理技術，可管理資料行存放區資料表中儲存的資料。  叢集資料行存放區索引不會影響資料散發方式，而會影響資料在每個散發內的儲存方式。
 
 若要將資料列存放區資料表變更為資料行存放區資料表，請卸除資料表中所有現有的索引，然後建立叢集資料行存放區索引。 如需範例，請參閱 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
 
@@ -324,9 +324,9 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  本機暫存資料表具有下列限制事項：  
   
 -   只有目前的工作階段才能看見它們。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會在工作階段結束時自動將它們卸除。 若要明確地將它們卸除，請使用 DROP TABLE 陳述式。   
--   無法將它們重新命名。 
--   它們不能有資料分割或檢視。  
--   無法變更它們的權限。 `GRANT`、`DENY` 和 `REVOKE` 陳述式無法與本機暫存資料表搭配使用。   
+-   無法將其重新命名。 
+-   不能有資料分割或檢視。  
+-   無法變更其權限。 `GRANT`、`DENY` 和 `REVOKE` 陳述式無法與本機暫存資料表搭配使用。   
 -   系統會針對暫存資料表封鎖資料庫主控台命令。   
 -   如果在批次內使用超過一個本機暫存資料表，每個資料表都必須有唯一的名稱。 如果在同一批次中執行多個工作階段，並建立相同的本機暫存資料表，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 會在內部將一個數字尾碼附加到本機暫存資料表名稱，以維持每個本機暫存資料表都有唯一的名稱。  
     
@@ -369,7 +369,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ## <a name="examples-for-temporary-tables"></a>暫存資料表範例
 
 ### <a name="TemporaryTable"></a> C. 建立本機暫存資料表  
- 下列命令會建立一個名為 #myTable 的本機暫存資料表。 資料表是使用 3 個部分的名稱所指定的。 暫存資料表名稱開頭為 #。   
+ 下列範例會建立一個名為 #myTable 的本機暫存資料表。 指定的資料表使用三部分名稱，開頭為 #。   
   
 ```  
 CREATE TABLE AdventureWorks.dbo.#myTable   
@@ -443,7 +443,7 @@ WITH
 ```  
   
 ### <a name="Replicated"></a> G. 建立複寫資料表  
- 以下範例會建立和上一個範例類似的複寫資料表。 複寫資料表會完整複製到每個計算節點。 當每個計算節點上都有此複本時，就可以在查詢時減少資料移動。 此範例是使用叢集索引所建立的，可提供比堆積更好的資料壓縮，而且可能不會包含足夠的資料列以達到良好的叢集資料行存放區索引壓縮。  
+ 以下範例會建立和上一個範例類似的複寫資料表。 複寫資料表會完整複製到每個計算節點。 當每個計算節點上都有此複本時，就可以在查詢時減少資料移動。 此範例使用叢集索引建立，提供比堆積更佳的資料壓縮。 堆積可能未包含足夠的資料列以達成良好叢集資料行存放區索引壓縮。  
   
 ```  
 CREATE TABLE myTable   
@@ -497,7 +497,7 @@ WITH
 -   分割區 5：40 <= col  
   
 ### <a name="OnePartition"></a> I. 建立具有一個資料分割的資料分割資料表  
- 以下範例會建立具有一個資料分割的資料分割資料表。 它不會指定任何界限值，結果會產生一個資料分割。  
+ 以下範例會建立具有一個資料分割的資料分割資料表。 不會指定任何界限值，從而產生單一資料分割。  
   
 ```  
 CREATE TABLE myTable (  
@@ -557,5 +557,4 @@ WITH
  [CREATE TABLE AS SELECT &#40;Azure SQL 資料倉儲&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
   

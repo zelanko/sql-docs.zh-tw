@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 74f047ddc136ae1b117f533d45391ef8b2048441
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bd86e9376e8520205702460e6f3e7834b5fe7424
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031127"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289286"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
   在報表中，運算式可用於協助您控制、組織和排序報表資料。 依預設，在您建立資料集與設計報表配置時，報表項目的屬性會依據資料集欄位、參數和 [報表資料] 窗格中出現的其他項目，自動設定為運算式。 您也可以將互動式排序按鈕加入至資料表或矩陣資料格，讓使用者以互動方式變更群組或群組內資料列的資料列排序順序。  
@@ -107,7 +107,7 @@ ms.locfileid: "50031127"
   
  三種類型的排序全都可以在相同的報表中結合。 依預設，排序次序是由資料集查詢傳回資料的順序來決定。 排序運算式會套用在資料區和資料區群組中。 互動式排序則是在排序運算式之後套用。  
   
- 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：First、Last 和 Previous。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
+ 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：第一個、最後一個和上一個。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>排序資料集查詢中的資料  
  將資料集查詢中的排序次序加入到預先排序資料，然後再針對報表進行擷取。 透過排序查詢中的資料，排序工作將由資料來源而非報表處理器完成。  

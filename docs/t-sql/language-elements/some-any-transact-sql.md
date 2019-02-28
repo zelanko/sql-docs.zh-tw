@@ -22,12 +22,12 @@ ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70907736aab1cdcf628f763209b39e88f1a2bf6f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 89b8317b9782685d7486eb375045ca6988af28d0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511616"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230945"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,13 +116,13 @@ IF
     ON Sales.SalesOrderDetail.ProductID = Production.Product.ProductID   
     WHERE SalesOrderID = @OrderID  
    )  
-PRINT 'At least one item for this order cannot be manufactured in specified number of days.'  
+PRINT 'At least one item for this order can't be manufactured in specified number of days.'  
 ELSE   
 PRINT 'All items for this order can be manufactured in the specified number of days or less.' ;  
   
 ```  
   
- 若要測試這個程序，請使用 `SalesOrderID``49080` 來執行程序，其具有一個需要 `2` 天時間來製造的組件，以及兩個需要 0 天來製造的組件。 第一個陳述式符合此準則， 第二個查詢則不符合。  
+ 若要測試這個程序，請使用 `SalesOrderID``49080` 來執行程序，其具有一個需要 `2` 天時間來製造的組件，以及兩個需要 0 天來製造的組件。 第一個陳述式符合此準則， 第二項查詢則不符合。  
   
 ```  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
@@ -138,7 +138,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `At least one item for this order cannot be manufactured in specified number of days.`  
+ `At least one item for this order can't be manufactured in specified number of days.`  
   
 ## <a name="see-also"></a>另請參閱  
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   
@@ -148,5 +148,4 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711140"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298606"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
 
@@ -154,7 +154,7 @@ ms.locfileid: "52711140"
   
 14. 資料表會加入至設計介面。 該資料表具有三個資料行和三個資料列。  
   
-    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組： **Product**。 [資料行群組] 窗格會顯示一個資料行群組： **SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
+    請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組：**Product**。 [資料行群組] 窗格會顯示一個資料行群組：**SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

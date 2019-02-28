@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc046c9e6f033dc77c85401b2007321c94e803e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018150"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287177"
 ---
 # <a name="date-transact-sql"></a>日期 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "56018150"
 |語法|**date**|  
 |使用方式|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|YYYY-MM-DD<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
-|範圍|0001-01-01 到 9999-12-31 (Informatica 則為 1582-10-15 到 9999-12-31)<br /><br /> 1 年 1 月 1 日 CE 到 9999 年 12 月 31 日 CE (Informatica 則為 1582 年 10 月 15 日 CE 到 9999 年 12 月 31 日 CE)|  
+|範圍|0001-01-01 到 9999-12-31 (Informatica 則為 1582-10-15 到 9999-12-31)<br /><br /> 西元 1 年 1 月 1 日到西元 9999 年 12 月 31 日 (在計算機科學則為西元 1582 年 10 月 15 日到西元 9999 年 12 月 31 日)|  
 |元素範圍|YYYY 是代表年份的四位數，範圍介於 0001 至 9999 之間。 若是 Informatica，YYYY 限於 1582 至 9999 的範圍之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數，範圍介於 01 至 31 之間 (視月份而定)。|  
 |字元長度|10 個位置|  
 |有效位數，小數位數|10, 0|  
@@ -60,15 +60,15 @@ ms.locfileid: "56018150"
   
 |數值|Description|  
 |-------------|-----------------|  
-|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m、dd 和 [yy]yy 在字串中代表月、日和年，並且使用斜線 (/)、連字號 (-) 或句號 (.) 做為分隔符號。<br /><br /> 僅支援四或兩位數年份。 請盡可能使用四位數年份。 若要指定介於 0001 到 9999 之間的整數來代表截止年份，用於將兩位數年份解譯為四位數年份，請使用[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。<br /><br /> **注意！** 若是 Informatica，YYYY 限於 1582 至 9999 的範圍之間。<br /><br /> 兩位數年份若小於或等於截止年份的後兩位數，表示它與截止年份同一世紀。 兩位數年份若大於截止年份的後兩位數，表示它在截止年份的前一個世紀。 例如，如果兩位數年份的截止是預設值 2049，則兩位數年份 49 就會被解譯為 2049，而兩位數年份 50 則解譯為 1950。<br /><br /> 預設的日期格式由目前的語言設定決定。 您可以使用 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 陳述式來變更日期格式。<br /><br /> **ydm** 格式不支援 **date**。|  
+|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m、dd 和 [yy]yy 在字串中代表月、日和年，以斜線 (/)、連字號 (-) 或句號 (.) 為分隔符號。<br /><br /> 僅支援四或兩位數年份。 請盡可能使用四位數年份。 若要指定介於 0001 到 9999 之間的整數來代表截止年份，用於將兩位數年份解譯為四位數年份，請使用[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。<br /><br /> **注意！** 若是 Informatica，YYYY 限於 1582 至 9999 的範圍之間。<br /><br /> 兩位數年份若小於或等於截止年份的後兩位數，表示它與截止年份同一世紀。 兩位數年份若大於截止年份的後兩位數，表示它在截止年份的前一個世紀。 例如，如果兩位數年份的截止是預設值 2049，則兩位數年份 49 就會被解譯為 2049，而兩位數年份 50 則解譯為 1950。<br /><br /> 預設的日期格式由目前的語言設定決定。 您可以使用 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 和 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 陳述式來變更日期格式。<br /><br /> **date** 不支援 **ydm** 格式。|  
   
 |字母順序|Description|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** 代表目前語言中指定的完整月份名稱或月份縮寫。 逗號是選擇性且會忽略大小寫。<br /><br /> 若要避免模糊不清，請使用四位數年份。<br /><br /> 如果漏了日的部分，就用當月第一天。|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** 代表目前語言中指定的完整月份名稱或月份縮寫。 逗號是選擇性且會忽略大小寫。<br /><br /> 若要避免模糊不清，請使用四位數年份。<br /><br /> 如果漏了日的部分，就用當月第一天。|  
   
 |ISO 8601|Description|  
 |--------------|----------------|  
-|YYYY-MM-DD<br /><br /> YYYYMMDD|與 SQL 標準相同。 這是定義為國際標準的唯一格式。|  
+|YYYY-MM-DD<br /><br /> YYYYMMDD|與 SQL 標準相同。 這是唯一定義為國際標準的格式。|  
   
 |未分隔|Description|  
 |-----------------|-----------------|  
@@ -80,12 +80,12 @@ ms.locfileid: "56018150"
   
 |W3C XML 格式|Description|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|特別支援 XML / SOAP 使用方式。<br /><br /> TZD 是時區指示項 (Z 或 + hh: mm 或 -hh:mm)：<br /><br /> -   hh:mm 表示時區時差。 hh 表示時區時差中的兩位數時數，範圍介於 0 至 14 之間。<br />-   MM 是代表時區時差中額外分鐘數的兩位數，範圍介於 0 至 59 之間。<br />-   + (加號) 或 - (減號) 是時區時差的必要符號。 這會指出若要取得當地時間，則必須在國際標準時間 (UTC) 中加上或扣除時區位移。 時區位移的有效範圍介於 -14:00 至 +14:00 之間。|  
+|yyyy-mm-ddTZD|支援 XML/SOAP 使用方式。<br /><br /> TZD 是時區指示項 (Z 或 + hh: mm 或 -hh:mm)：<br /><br /> -   hh:mm 表示時區時差。 hh 表示時區時差中的兩位數時數，範圍介於 0 至 14 之間。<br />-   MM 是代表時區時差中額外分鐘數的兩位數，範圍介於 0 至 59 之間。<br />-   + (加號) 或 - (減號) 是時區時差的必要符號。 這個符號指出，若要取得當地時間，則必須在國際標準時間 (UTC) 中新增或扣除時區位移。 時區位移的有效範圍介於 -14:00 至 +14:00 之間。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 和 ISO 8601 合規性  
 **date** 符合西曆的 ANSI SQL 標準定義：「附註 85 - Datetime 資料類型會允許採用西曆格式的日期以 0001-01-01 CE 到 9999-12-31 CE 的日期範圍儲存。」
   
-下層用戶端所使用的預設字串常值格式，會遵循 SQL 標準格式定義 YYYY-MM-DD。 此格式與 ISO 8601 所定義的 DATE 相同。
+下層用戶端所使用的預設字串常值格式，遵循定義為 YYYY-MM-DD 的 SQL 標準格式。 此格式與 ISO 8601 所定義的 DATE 相同。
   
 > [!NOTE]  
 >  Informatica 的範圍限於 1582-10-15 (1582 年 10 月 15 日 CE) 至 9999-12-31 (9999 年 12 月 31 日 CE)。  
@@ -101,10 +101,11 @@ ms.locfileid: "56018150"
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR 或 SQL_VARCHAR|DBTYPE_WSTR 或 DBTYPE_STR|Java.sql.String|字串或 SqString|  
   
 ## <a name="converting-date-and-time-data"></a>轉換日期和時間資料
-當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需搭配日期和時間資料使用 CAST 及 CONVERT 函數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
+當您轉換成日期和時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需搭配日期和時間資料使用 CAST 及 CONVERT 函數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>將日期轉換成其他日期與時間類型
-下表說明當 **date** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
+
+本節描述當 **date** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
   
 當轉換成 **time(n)** 時，轉換會失敗，並引發錯誤訊息 206：「運算元類型衝突：date 與 time 不相容」。
   
@@ -124,7 +125,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-當轉換成 **smalldatetime** 時，**date** 值在 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 範圍內，將會複製日期元件，而時間元件會設定為 00:00:00.000。 當 **date** 值在 **smalldatetime** 值的範圍以外時，將會引發錯誤訊息 242：「將 date 資料類型轉換成 smalldatetime 資料類型時，產生超出範圍的值。」；而 **smalldatetime** 值會設定為 NULL。 下列程式碼顯示將 `date` 值轉換成 `smalldatetime` 值的結果。
+當轉換成 **smalldatetime** 時，**date** 值在 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 範圍內，會複製日期元件，並將時間元件設定為 00:00:00.000。 當 **date** 值在 **smalldatetime** 值的範圍以外時，將會引發錯誤訊息 242：「date 資料類型轉換成 smalldatetime 資料類型會產生超出範圍的值。」；而 **smalldatetime** 值會設為 NULL。 下列程式碼顯示將 `date` 值轉換成 `smalldatetime` 值的結果。
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -173,11 +174,11 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ```  
   
 ### <a name="converting-string-literals-to-date"></a>將字串常值轉換為日期
-如果整個字串皆是有效的格式，即可從字串常值轉換為日期與時間類型。 否則，就會引發執行階段錯誤。 從日期與時間類型轉換為字串常值的明確轉換不會指定樣式的隱含轉換，一律會採用目前工作階段的預設格式。 下表是字串常值轉換為 **date** 資料類型的規則。
+如果整個字串皆是有效的格式，即可從字串常值轉換為日期與時間類型。 否則，就會引發執行階段錯誤。 將日期與時間類型隱含或明確轉換為字串常值，在不指定樣式的情況下，一律採用目前工作階段的預設格式。 下表是字串常值轉換為 **date** 資料類型的規則。
   
 |輸入字串常值|**date**|  
 |---|---|
-|ODBC DATE|ODBC 字串常值會對應到 **datetime** 資料類型。 任何將 ODBC DATETIME 常值指派成 **date** 類型的作業，皆會根據轉換規則，執行 **datetime** 與此類型之間的隱含轉換。|  
+|ODBC DATE|ODBC 字串常值會對應到 **datetime** 資料類型。 任何將 ODBC DATETIME 常值指派成 **date** 類型的作業，皆會隱含轉換 **datetime** 與轉換規則定義的類型。|  
 |ODBC TIME|請參閱先前的 ODBC DATE 規則。|  
 |ODBC DATETIME|請參閱先前的 ODBC DATE 規則。|  
 |僅限 DATE|一般|  

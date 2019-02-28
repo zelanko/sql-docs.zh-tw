@@ -22,19 +22,19 @@ ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 013c620609b5f8d3fc603df993eda1af377c1a26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26baf53b4c5c3bddd768b2382f82583eae477605
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686784"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331578"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;(不大於) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元的值不大於右運算元，則結果為 TRUE，否則結果就是 FALSE。 與 = (等於) 比較運算子不同的是，兩個 NULL 值的 !> 比較結果，不受到 ANSI_NULLS 設定的影響。  
+  比較兩個運算式 (比較運算子)。 當您在比較非 Null 運算式時，如果左運算元的值不大於右運算元，則結果為 TRUE。 否則，結果為 FALSE。 與 = (等於) 比較運算子不同的是，兩個 NULL 值的 !> 比較結果，不受 ANSI_NULLS 設定的影響。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,5 +53,4 @@ expression !> expression
 ## <a name="see-also"></a>另請參閱  
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [運算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
-  
   

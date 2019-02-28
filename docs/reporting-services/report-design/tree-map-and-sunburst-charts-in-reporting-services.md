@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814101"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295546"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -44,7 +44,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
     * **類別目錄群組** (依下列順序)：
         1. CategoryName
         2. SubcategoryName
-    * **數列群組**：TerritoryName  
+    * **序列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -90,7 +90,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **數列群組**：TerritoryName  
+    * **序列群組**：TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -114,7 +114,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
   
 1.  **取得資料**。  
   
-     本節中的查詢是以 AdventureWorks 資料庫為基礎，該資料庫可從 GitHub：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)下載取得。  
+     本節中的查詢是以 AdventureWorks 資料庫為基礎，此資料庫可從 GitHub 下載：[AdventureWorks 2016 完整資料庫備份](https://github.com/Microsoft/sql-server-samples/releases)。  
   
   
 2.  **建立資料來源**。  
@@ -177,7 +177,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
 * [共用資料集設計檢視 &#40;報表產生器&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [教學課程：Power BI 中的樹狀圖](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [樹狀圖：適用於 Office 的 Microsoft 研究資料視覺效果應用程式](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
+* [Treemap:Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (樹狀圖：適用於 Office 之 Microsoft 研究的資料視覺效果應用程式)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

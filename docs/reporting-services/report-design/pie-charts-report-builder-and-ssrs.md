@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 977c3c0b2d0f99f18e9f236867d5492e58656101
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf4aa00539b2ffa93fae0b73129f08ef3189fc22
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599777"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297956"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>圓形圖 (報表產生器及 SSRS)
   圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 圓形圖最常用於在群組之間進行比較。 圓形圖和環圈圖以及金字塔圖和漏斗圖是由一組所謂形狀圖的圖表所組成。 形狀圖沒有軸。 在形狀圖上放置數值欄位時，圖表會計算出每個值佔整體的百分比。 如需形狀圖的詳細資訊，請參閱[形狀圖 &#40;報表產生器及 SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)。  

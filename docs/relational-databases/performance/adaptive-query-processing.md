@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Microsoft Docs
 description: 可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207307"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319259"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 本文所介紹的這些彈性查詢處理功能，可用來改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中的查詢效能：
 - 批次模式記憶體授與意見反應
+- 資料列模式記憶體授與意見反應 (公開預覽，位於資料庫相容性層級 150 之下)
 - 批次模式自適性聯結
 - 交錯執行
 
@@ -36,8 +37,6 @@ ms.locfileid: "53207307"
 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中查詢處理和執行模式的詳細資訊，請參閱[查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)。
 
 有時候查詢最佳化工具所選擇的計劃，會因種種原因而未達最佳化。 例如，預估流經查詢計劃的資料列數目可能不正確。 預估成本可協助判斷選取使用哪一個計劃執行。 如果基數估計值不正確，即使原始假設不佳，仍使用原始方案。
-
-![彈性查詢處理功能](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>如何啟用彈性查詢處理
 您可以啟用資料庫的相容性層級 140，讓工作負載自動符合使用彈性查詢處理。  您可以使用 Transact-SQL 設定此項目。 例如：  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
 
 ## <a name="see-also"></a>另請參閱
+[SQL 資料庫中的智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)   
 [SQL Server 資料庫引擎和 Azure SQL Database 的效能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [查詢處理架構指南](../../relational-databases/query-processing-architecture-guide.md)    
 [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

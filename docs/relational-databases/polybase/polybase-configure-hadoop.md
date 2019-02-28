@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a03177d0b78a6347c4438b8fe1f67a7d00c057ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38cdc41469112ed1bfab44e801e5e448b034a9c8
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522362"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265245"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>設定 PolyBase 存取 Hadoop 中的外部資料
 
@@ -125,7 +125,7 @@ ms.locfileid: "52522362"
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))
    ```
 
 4. 使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 建立外部資料表以指向 Hadoop 中儲存的資料。 在此範例中，外部資料會包含車輛感應器資料。

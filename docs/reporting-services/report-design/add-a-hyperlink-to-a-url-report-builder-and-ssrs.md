@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814141"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288946"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
 了解如何將文字方塊、影像、圖表和量測計的超連結動作加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分頁報表。 這些連結可以移至其他報表、移至報表中的書籤，或是移至靜態或動態 URL。 
@@ -26,7 +26,7 @@ ms.locfileid: "51814141"
  
  *  而且您可以 **將書籤加入同一份報表中的特定位置** 。 
   
-試試看在[教學課程：將文字格式化 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md) 中使用相同資料新增超連結。  
+嘗試在以下教學課程中使用範例資料新增超連結：[教學課程：格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)。  
   
 > [!NOTE]  
 >  繫結至資料集欄位的連結可能很容易受到惡意竄改。 如需詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  

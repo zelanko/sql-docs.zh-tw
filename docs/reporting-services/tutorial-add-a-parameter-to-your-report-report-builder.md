@@ -1,19 +1,19 @@
 ---
-title: 教學課程： 將參數加入至報表 （報表產生器） |Microsoft 文件
+title: 教學課程：將參數新增至報表 (報表產生器) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712359"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286946"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
@@ -82,7 +82,7 @@ ms.locfileid: "52712359"
   
 11. 在查詢設計工具工具列上，按一下 [執行]\(**!**) 查看資料。   
   
-    結果集包含 11 個資料列，這些資料列會顯示四間商店中每個子類別目錄所銷售的項目數量，並包含下列資料行：StoreID、Subcategory、Quantity。商店名稱並不屬於結果集的內容。 稍後在本教學課程中，您會利用個別資料集查詢對應於商店識別碼的商店名稱。  
+    結果集包含 11 個資料列，在下列資料行中顯示四家店每個子類別的銷售項目數量：StoreID、Subcategory、Quantity。結果集中沒有商店名稱。 稍後在本教學課程中，您會利用個別資料集查詢對應於商店識別碼的商店名稱。  
   
     此查詢並不包含查詢參數。 您稍後將在本教學課程中加入參數。   
   
@@ -308,7 +308,7 @@ ms.locfileid: "52712359"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    商店資料行標頭包含複雜運算式的顯示文字： **Expr**。  
+    商店的資料行標題包含複雜運算式的顯示文字：**Expr**。  
   
 8.  預覽報表。  
   

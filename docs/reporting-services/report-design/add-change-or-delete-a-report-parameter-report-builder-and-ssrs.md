@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8b8449916f31f8f4c5acec783d289d70c10fe738
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1c11541a449299f1dce55e720c7d882b3a70089
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621186"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294476"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>加入、變更或刪除報表參數 (報表產生器及 SSRS)
   報表參數可讓您選擇報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 您可以提供預設值和可用值的清單，而且使用者可以變更選取範圍。  
   
  在您發行報表之後，可以在報表伺服器上變更報表參數的預設值、可用值，以及其他屬性。 您可以建立連結報表來提供多組預設參數值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
- 本文是關於將報表參數新增至 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]或報表設計師的分頁報表。 您也可以將報表參數新增至 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中的行動報表。 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 。  
+ 本文是關於將報表參數加入至 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中分頁報表或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表設計師。 您也可以將報表參數加入至  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]中的行動報表。 如需詳細資訊，請參閱 [使用 SQL Server 行動報表發行工具建立行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 662c4b4fbd3eb754a971b0228e403c64e71b684b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 888f5e89b86d8fec157bf2f4c8c1893875ca048e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789926"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285506"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>內建集合 - 資料集 Fields 集合參考 (報表產生器)
   報表中的每一個資料集都包含一個 Fields 集合。 Fields 集合是資料集查詢所指定的欄位加上您建立之任何其他導出欄位的集合。 當您建立資料集之後，欄位集合會出現在 **[報表資料]** 窗格中。  

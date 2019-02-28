@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c16950d0848e2999e3dee3991904eddeee8a0eee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d7a744233ace7e6c31bb2d00c5bdd888a4be371f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808726"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288046"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>規劃地圖報表 (報表產生器及 SSRS)
 良好的報表會呈現具備行動力或洞察能力的資訊。 若要針對地理背景呈現分析資料 (例如銷售總計或人口統計)，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中。 一個地圖可以包含多個圖層，而每個圖層都會顯示由特定類型之空間資料所定義的地圖元素：表示位置的點、表示路線的線條，或表示區域的多邊形。 您可以讓您的分析資料與每個圖層上的地圖元素產生關聯。  
@@ -108,7 +108,7 @@ ms.locfileid: "47808726"
 |![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本地圖|多邊形|僅顯示區域的地圖，例如銷售領域。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩。 調色盤是預先定義的一組色彩。 當調色盤中的所有色彩都經過指派之後，就會指派色彩的陰影。|  
 |![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|色彩分析地圖|多邊形|透過更改色彩顯示分析資料的地圖，例如，依地區顯示的銷售資料。|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|泡泡地圖|多邊形|透過更改在區域上置中的泡泡大小來顯示分析資料的地圖，例如，依地區顯示的銷售資料。<br /><br /> 選項：根據另一個分析欄位更改區域色彩，然後指定色彩規則。|  
-|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本線條地圖|行|僅顯示線條的地圖，例如傳遞路線。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩。|  
+|![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本線條地圖|線條|僅顯示線條的地圖，例如傳遞路線。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩。|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析線條地圖|線條|更改線條色彩與寬度的地圖，例如，已傳遞的封裝數目以及依路線顯示的準時度量資訊。<br /><br /> 選項：依某個分析欄位更改線條寬度、依另一個分析欄位更改線條色彩，然後指定色彩規則。|  
 |![rs_MapType_Marker_Basic](../../reporting-services/report-design/media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本標記地圖|點|顯示每個位置之標記的地圖，例如城市。<br /><br /> 選項：依調色盤更改色彩或使用單一色彩，然後變更標記樣式。|  
 |![rs_MapType_Marker_Bubble](../../reporting-services/report-design/media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|泡泡標記地圖|點|針對每個位置顯示泡泡，並依某個分析資料欄位更改泡泡大小的地圖，例如，依城市顯示的銷售資料。<br /><br /> 選項：根據另一個分析欄位更改泡泡色彩，然後指定色彩規則。|  

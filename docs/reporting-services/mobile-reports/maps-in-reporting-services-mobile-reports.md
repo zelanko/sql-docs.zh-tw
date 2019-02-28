@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810987"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294776"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 行動報表中的地圖
 地圖是將地理資料視覺化的最佳方式。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三種不同類型的地圖視覺效果，以及針對各大洲和一些個別國家/地區內建的地圖。 您也可以 [上傳和使用自訂的地圖](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
@@ -28,7 +28,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
   
 **泡泡地圖** [值] 屬性會決定在相關區域上顯示的泡泡視覺效果的半徑。 您可以設定所有泡泡的色彩是否都一樣或完全不同。   
   
-**範圍填滿熱度圖**會顯示與目標相關的值。 [目標] 屬性會決定 [比較] 欄位和 [值] 欄位之間的差異。 產生的差異會決定要填滿地圖相關區域的色彩 (從綠色、黃色到紅色)。 您可以在 [值方向] 方塊中，設定較高或較低的值是否為綠色。  
+**範圍填滿熱度圖** 會顯示與目標相關的值。 [目標] 屬性會決定 [比較] 欄位和 [值] 欄位之間的差異。 產生的差異會決定要填滿地圖相關區域的色彩 (從綠色、黃色到紅色)。 您可以在 [值方向] 方塊中，設定較高或較低的值是否為綠色。  
   
 ## <a name="select-the-map-type-and-region"></a>選取地圖類型和區域  
   
@@ -49,7 +49,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
   
 若要在地圖中顯示實際資料，您至少需要為兩個地圖的資料屬性設定值︰   
 * [索引鍵] 屬性會將資料連接到特定的地圖區域 -- 例如，美國各州或非洲國家/地區。  
-* [值] 屬性是與所選取索引鍵欄位處於相同資料表的數值欄位。 這些值在不同的地圖中有不同的表示方式。 **漸層圖** 會使用這些值，根據值範圍，使用各種不同的網格來為每個區域上色。 **泡泡地圖**會根據值屬性，來設定每個區域中泡泡視覺效果的大小。   
+* [值] 屬性是與所選取索引鍵欄位處於相同資料表的數值欄位。 這些值在不同的地圖中有不同的表示方式。 **漸層圖** 會使用這些值，根據值範圍，使用各種不同的網格來為每個區域上色。 **泡泡地圖** 會根據值屬性，來設定每個區域中泡泡視覺效果的大小。   
 * 針對範圍填滿熱度圖，您也需要設定 [目標] 屬性。  
   
 ### <a name="set-map-data-properties"></a>設定地圖資料屬性  
@@ -58,7 +58,7 @@ SQL Server 行動報表提供三種不同類型的地圖，適用於各種不同
   
 2. 選取 [Add Dat] (新增資料)，然後選取 [本機 Excel] 或 [SSRS 伺服器]。  
   
-   > **提示**︰請確定 [資料為適用於行動報表的格式](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
+   > **提示**：請確定[資料格式適用於行動報表](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)。  
   
 3. 選取所需的工作表，然後選取 [匯入]。  
    您會在 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]中看見您的資料。  

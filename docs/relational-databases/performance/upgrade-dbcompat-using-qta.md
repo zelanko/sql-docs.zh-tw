@@ -1,7 +1,7 @@
 ---
 title: 使用查詢調整小幫手來升級資料庫 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317798"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295666"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>使用查詢調整小幫手來升級資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54317798"
 
 [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的引進，進一步改善了 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 對升級的控制，並允許自動執行上述建議的工作流程的最後一個步驟。
 
-從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 開始，新的**查詢調整小幫手 (QTA)** 功能將引導使用者完成建議的工作流程，以便在升級到較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本期間保持效能穩定性，如[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)的*在升級至更新版 SQL Server 期間保持效能的穩定性*一節所述。 
+從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 開始，新的**查詢調整小幫手 (QTA)** 功能將引導使用者完成建議的工作流程，以便在升級到較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本期間保持效能穩定性，如[查詢存放區使用案例](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)的*在升級至更新版 SQL Server 期間保持效能的穩定性*一節所述。 但是，QTA 不會像建議工作流程的最後一個步驟中所見，復原至先前已知的良好計畫。 QTA 會改為追蹤任何在[查詢存放區**迴歸查詢**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)檢視中找到的迴歸，並會逐一查看適用最佳化工具模型變化的可能排列，以產生更好的新計畫。
 
 > [!IMPORTANT]
 > QTA 不會產生使用者工作負載。 如果在您的應用程式未使用的環境中執行 QTA，請確保您仍然可以透過其他方式在目標 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 上執行代表性的測試工作負載。 
@@ -54,7 +54,7 @@ QTA 的起始點假設將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 
 如需附加資料庫的詳細資訊，請參閱[資料庫卸離與附加](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb)。
 
-請參閱下文，QTA 基本上僅使用如上所示的查詢存放區來變更建議工作流程的最後一個步驟，以升級相容性層級。 QTA 提供了針對所選迴歸查詢的特定調整選項，以建立具有調整執行計劃的新改良狀態，而不是選擇目前無效率的執行計劃和最後一個已知良好的執行計畫。
+請參閱下文，QTA 基本上僅使用如上所示的查詢存放區來變更建議工作流程的最後一個步驟，以升級相容性層級。 QTA 提供針對所選取迴歸查詢的特定調整選項，以使用調整後執行計畫建立新的改善狀態，而不是選擇目前無效率的執行計畫或最後一個已知好執行計畫。
 
 ![使用 QTA 建議的資料庫升級工作流程](../../relational-databases/performance/media/qta-usage.png "使用 QTA 建議的資料庫升級工作流程")
 
@@ -92,7 +92,7 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
        ![新的資料庫升級工作階段設定視窗](../../relational-databases/performance/media/qta-new-session-setup.png "新的資料庫升級設定視窗")  
   
     2.  在 [設定] 視窗中，兩個資料行顯示目標資料庫中查詢存放區的**目前**狀態，以及**建議**設定。 
-        -  預設情況下會選取 [建議] 設定，但按一下 [目前] 資料行上的選項按鈕可接受目前的設定，還可以微調目前的 [查詢存放區] 設定。 
+        -  根據預設，會選取 [建議] 設定，但按一下 [目前] 資料行上的圓形按鈕，即會接受目前的設定，同時允許對目前的查詢存放區設定進行微調。 
         -  提議的*過時查詢臨界值*設定是預期工作負載持續時間 (以天為單位) 的兩倍。 這是因為查詢存放區需要保存有關基準工作負載和升級後的資料庫工作負載的詳細資訊。
         完成後，請按一下 [下一步]。
 
@@ -120,9 +120,9 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
     
     清單包含以下資訊：
     -  **工作階段識別碼**
-    -  **工作階段名稱**：系統產生的名稱，由資料庫名稱、工作階段的建立日期和時間所組成。
+    -  **工作階段名稱**：系統產生的名稱，由資料庫名稱、日期和工作階段建立的時間所組成。
     -  **狀態**：工作階段的狀態 (「作用中」或「已關閉」)。
-    -  **描述**：系統所產生，由使用者選取的目標資料庫相容性層級和商務週期工作負載的天數所組成。
+    -  **描述**：系統產生，由使用者選取的目標資料庫相容性層級和商務週期工作負載的天數所組成。
     -  **開始時間**：建立工作階段時的日期和時間。
 
     ![QTA 工作階段管理頁面](../../relational-databases/performance/media/qta-session-management.png "QTA 工作階段管理頁面")
@@ -155,7 +155,7 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
 
         ![QTA 步驟 2 子步驟 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA 步驟 2 子步驟 2")
 
-    3.  **觀察到的資料收集**要求使用者重新執行代表性工作負載循環，以便查詢存放區可以收集將用來搜尋最佳化機會的比較基準。 當工作負載執行時，使用 [重新整理] 按鈕繼續更新迴歸查詢的清單 (如果有找到任何迴歸查詢)。 變更**要顯示的查詢**值以限制顯示的查詢數目。 清單的順序受**計量** (持續時間或 CpuTime) 和**彙總** (預設為平均值) 的影響。 同時選取要顯示**要顯示的查詢**數量。 完成該工作負載後，請核取 [工作負載執行已完成] 並按一下 [下一步]。
+    3.  **觀察到的資料收集**要求使用者重新執行代表性工作負載循環，以讓查詢存放區收集將用來搜尋最佳化機會的比較基準。 當工作負載執行時，使用 [重新整理] 按鈕繼續更新迴歸查詢的清單 (如果有找到任何迴歸查詢)。 變更**要顯示的查詢**值以限制顯示的查詢數目。 清單的順序受**計量** (持續時間或 CpuTime) 和**彙總** (預設為平均值) 的影響。 同時選取要顯示**要顯示的查詢**數量。 完成該工作負載後，請核取 [工作負載執行已完成] 並按一下 [下一步]。
 
         ![QTA 步驟 2 子步驟 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA 步驟 2 子步驟 3")
 
@@ -197,7 +197,7 @@ QTA 是一種以工作階段為基礎的功能，它會將工作階段狀態儲�
 
     ![QTA 步驟 5](../../relational-databases/performance/media/qta-step5.png "QTA 步驟 5")
 
-    如果以後需要回復建議的最佳化，則選取相關的查詢，然後按一下 [回復]。 移除該查詢計劃指南，並更新清單以移除已回復的查詢。 請注意，下圖中移除了查詢 8。
+    若以後需要復原建議的最佳化，請選取相關查詢，然後按一下 [復原]。 移除該查詢計劃指南，並更新清單以移除已回復的查詢。 請注意，下圖中移除了查詢 8。
 
     ![QTA 步驟 5 - 回復](../../relational-databases/performance/media/qta-step5-rollback.png "QTA 步驟 5 - 回復") 
 

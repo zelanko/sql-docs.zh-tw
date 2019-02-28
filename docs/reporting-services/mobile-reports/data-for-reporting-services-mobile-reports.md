@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9931244c938723665dffa24ac83b812cc3e4d237
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765226"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289656"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Reporting Services 行動報表資料
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 資料模型十分簡單。 資料會以資料集的集合形式匯入至 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 。 資料集之間的正式關聯性不是必要的。 只要符合索引鍵值，就會從某個資料集查閱到另一個資料集。 日期/時間彙總是由行動報表執行階段所處理，而且在不同的資料集之間會相符，即使資料集之間的日期/時間資料粒度不同也是一樣。   
@@ -22,7 +22,7 @@ ms.locfileid: "47765226"
   
 * **本機 Excel 檔案**：選取 Excel 文件，並挑選要匯入的工作表。 匯入之後，會將資料儲存在行動報表定義內。 若要重新整理原始 Excel 檔案中的資料，請使用 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] [資料] 索引標籤右上角的 [重新整理資料] 命令。深入了解[準備 SSRS 行動報表的 Excel 資料](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)。  
   
-* **SQL Server 行動報表發行工具共用資料集**：瀏覽伺服器上的已發行資料集清單，並選取要新增至行動報表的已發行資料集。 根據伺服器資料的行動報表一律會保持連接至原始伺服器資料集，並反映伺服器上資料的最新狀態。 請參閱[支援的資料來源清單](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。   
+* **SQL Server 行動報表發行工具共用資料集**：瀏覽伺服器上的已發行資料集清單，並選取要新增至行動報表的已發行資料集。 根據伺服器資料的行動報表一律會保持連接至原始伺服器資料集，並反映伺服器上資料的最新狀態。 請參閱 [支援的資料來源清單](../report-data/data-sources-supported-by-reporting-services-ssrs.md)。   
   
   深入了解 [如何在行動報表發行工具中取得共用資料集的資料](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "47765226"
   
 ## <a name="connect-mobile-report-elements-to-data"></a>將行動報表元素連接至資料 ##  
   
-每個 SQL Server 行動報表發行工具項目都包含一或多個資料設定。 例如，星形量測計元素包含兩個資料設定︰[主要值] 和 [比較值]。 所有這些設定都只會指向特定資料集中的一個欄位 (資料行)。   
+每個 SQL Server 行動報表發行工具項目都包含一或多個資料設定。 例如，星形量測計項目包含兩項資料設定︰主要值和比較值。 所有這些設定都只會指向特定資料集中的一個欄位 (資料行)。   
   
 行動報表執行階段提供量測計的彙總值 (根據使用者選取)。 請注意，相同星形量測計執行個體的比較值可以繫結至不同資料集中的欄位。   
   

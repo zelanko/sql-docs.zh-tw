@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1a49a83dca8e2de49ef279269261fa1ce7dad2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 734228b716bf03b0043352888a5dfe2438cbd581
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660046"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291576"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>運算式中的內建集合 (報表產生器)
-  在報表的運算式中，您可以包含下列內建集合的參考：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及類似報表名稱等全域資訊的內建欄位。 並不是所有的集合都會顯示在 **[運算式]** 對話方塊中。 只有報表伺服器上已發行的報表，才可以在執行階段使用 DataSets 和 DataSources 集合。 ReportItems 集合是報表區域中的文字方塊集合，例如在頁面或頁首中的文字方塊。  
+  在報表的運算式內，您可以包含對下列內建集合的參考：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及全域資訊的內建欄位 (例如報表名稱)。 並不是所有的集合都會顯示在 **[運算式]** 對話方塊中。 只有報表伺服器上已發行的報表，才可以在執行階段使用 DataSets 和 DataSources 集合。 ReportItems 集合是報表區域中的文字方塊集合，例如在頁面或頁首中的文字方塊。  
   
  如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。  
   

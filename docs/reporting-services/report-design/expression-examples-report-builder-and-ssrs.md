@@ -21,14 +21,14 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 026338642a4fe5be4480a1b83b93a809437ecfa3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393214"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289606"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>運算式範例 (報表產生器及 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中常會使用運算式來控制內容與報表的外觀。 運算式是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]所撰寫，而且可以使用內建函數、自訂程式碼、報表與群組變數，以及使用者定義的變數。 運算式以等號 (=) 當做開頭。 如需運算式編輯器以及可包含之參考類型的詳細資訊，請參閱[報表中的運算式用法 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 和[新增運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -62,7 +62,7 @@ ms.locfileid: "52393214"
   
 如需有關簡單和複雜運算式、使用運算式的地方，以及您可以包含在運算式中之參考類型的詳細資訊，請參閱 [運算式 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)。 如需評估運算式以計算彙總所使用之內容的詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
-如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用的許多函數和運算子的運算式，請參閱 [教學課程：運算式簡介](../../reporting-services/tutorial-introducing-expressions.md)。  
+如需了解如何在撰寫報表的內容中，撰寫使用本主題中運算式範例所使用許多函式和運算子的運算式，請參閱[教學課程：運算式簡介](../../reporting-services/tutorial-introducing-expressions.md)。  
 
   
 ## <a name="functions"></a>函數  

@@ -9,14 +9,14 @@ f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2ee94edec262fb9ddef64d64e90958e77cdf228
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021218"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296956"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中，資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "50021218"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在圖表上放置資料點標籤  
  針對所有圖表類型，當您以滑鼠右鍵按一下圖表，然後選取 **[顯示資料標籤]** 時，可以顯示資料點標籤。 資料點標籤的位置會根據圖表類型而指定：  
   
--   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 可能的位置有四個：Outside、Left、Center 與 Right。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
+-   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 有四個可能位置：外側、左側、中間與右側。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
   
 -   在圓形圖上，您可以使用 **PieLabelStyle** 自訂屬性重新放置資料點標籤的位置。 在圓形圖周圍放置資料點標籤時有許多考量，包括圓形圖的大小、圓形圖及其對應圖例間的可用空間以及標籤的大小。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   

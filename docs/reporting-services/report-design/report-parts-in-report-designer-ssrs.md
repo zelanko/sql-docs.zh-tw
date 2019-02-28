@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1edea2ccb742d68010700bc20f29c313dc93c2f7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba88f0735460fe0a3a1bae3cdeddbb6fef6b75e7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031447"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295866"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>報表設計師中的報表組件 (SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50031447"
   
  一般來說，報表組件在報表設計師和報表產生器中的運作方式都相同。 若要了解基本功能，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
   
- 報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器可進行共同作業式撰寫：我建立報表組件並加以發行。 您可以重複使用、修改，並重新發行。 在報表設計師中，發行作業是單向的：我可以從報表設計師發行報表組件，而且您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
+ 報表組件在報表設計師中運作的方式有基本的差異。 主要差異在於工作流程。 報表產生器允許共同作業撰寫：我建立並發佈報表組件。 您可以重複使用、修改，並重新發行。 在報表設計師中，發佈作業為單向：我可以從報表設計師發佈報表組件，而您可以重複使用它。 但是，我無法在報表設計師的報表中重複使用現有的報表組件。 本主題會先快速介紹報表組件的概觀，然後再詳細說明這些差異。  
   
 ##  <a name="ComponentWorkflow"></a> 報表組件發行的生命週期  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  

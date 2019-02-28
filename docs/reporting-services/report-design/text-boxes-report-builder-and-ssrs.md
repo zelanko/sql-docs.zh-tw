@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ccfc1e3c3c455a191d6a4a76c6e44a8df0289aee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef1eb498077cf7d2592592f9c74b5af0516dbceb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815476"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294649"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>文字方塊 (報表產生器及 SSRS)
   當您考慮文字方塊時，可能會考慮包含介面 (如在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint 內) 文字的獨立方塊。 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，有些文字方塊就像那樣，而且這些文字方塊可以根據運算式，顯示標題、描述與標籤或動態文字的靜態文字。 但是，資料表或矩陣 (Tablix 資料區) 中的每個資料格也都包含一個文字方塊，您可以使用和報表中之獨立文字方塊的相同方式進行格式化。  
@@ -51,7 +51,7 @@ ms.locfileid: "47815476"
   
  方向是在文字方塊上設定，並套用至方塊中的所有文字。 您無法針對文字方塊的各個部分指定不同的方向。  
   
- 若要開始使用，請參閱[教學課程︰格式化文字 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md) 中的旋轉文字一節，並參閱[設定文字方塊方向 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)。  
+ 若要開始，請參閱下文中關於旋轉文字的章節：[教學課程：對文字進行格式化 &#40;報表產生器&#41;](../../reporting-services/tutorial-format-text-report-builder.md)，並參閱[設定文字方塊方向 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)。  
   
 ##  <a name="HowTo"></a> 如何主題  
  [加入、移動或刪除文字方塊 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

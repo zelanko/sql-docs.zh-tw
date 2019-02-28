@@ -17,14 +17,14 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42fdd43e7e535452d01701fd7d230484ae30fcae
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74b2396d7e32e5f8b596e4dcb5abc84645e8fc84
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712159"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286036"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的編頁報表。 設計介面位於視窗中央，並且具有功能區和窗格。 設計介面是您可以加入和組織報表項目的位置。 本文所說明的窗格可用來加入、選取並組織報表資源，以及變更報表項目屬性。  
@@ -137,7 +137,7 @@ ms.locfileid: "52712159"
  根據屬性而定，您可以從下拉式清單中選取屬性值、輸入值，或按一下 `<Expression>` 來建立運算式。  
   
 ### <a name="changing-the-properties-pane-view"></a>變更屬性窗格檢視  
- 根據預設，顯示在 [屬性] 窗格中的屬性會組織成一些廣泛的類別目錄，例如 [動作]、[框線]、[填滿]、[字型] 和 [一般]。 每個類別目錄都具有一組相關聯的屬性。 例如，下列屬性列於 [字型] 類別目錄中：[Color]、[FontFamily]、[FontSize]、[FontStyle]、[FontWeight]、[LineHeight] 和 [TextDecoration]。 如果您想要，也可以依字母順序排列此窗格中所列的所有屬性。 這樣做會移除這些類別目錄並按照字母順序列出所有屬性，不論類別目錄為何。  
+ 根據預設，顯示在 [屬性] 窗格中的屬性會組織成一些廣泛的類別目錄，例如 [動作]、[框線]、[填滿]、[字型] 和 [一般]。 每個類別目錄都具有一組相關聯的屬性。 例如，下列屬性列於 [字型] 類別目錄中：Color、FontFamily、FontSize、FontStyle、FontWeight、LineHeight 和 TextDecoration。 如果您想要，也可以依字母順序排列此窗格中所列的所有屬性。 這樣做會移除這些類別目錄並按照字母順序列出所有屬性，不論類別目錄為何。  
   
  [屬性] 窗格的窗格頂端具有三個按鈕：[類別目錄]、[按字母排列] 和 [屬性頁]。 按一下 [類別目錄] 和 [按字母排列] 按鈕，即可在 [屬性] 窗格檢視之間切換。 按一下 [屬性頁] 按鈕，即可開啟選取之報表項目的 [屬性] 對話方塊。  
   

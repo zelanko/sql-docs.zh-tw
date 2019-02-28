@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420399"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230975"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>設定 max worker threads 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "52420399"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法設定 max worker threads 選項：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 max worker threads 選項之後](#FollowUp)  
+-   **後續操作：**[設定 max worker threads 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -73,7 +73,8 @@ ms.locfileid: "52420399"
     |CPU 數|32 位元電腦|64 位元電腦|  
     |------------|------------|------------| 
     |\<= 4 個處理器|256|512|
-    |\> 4 個處理器|256 + ((邏輯 CPU 數 - 4) * 8)|512 + ((邏輯 CPU 數目 - 4) * 16)| 
+    |\> 4 個處理器和 \< 64 個處理器|256 + ((邏輯 CPU 數 - 4) * 8)|512 + ((邏輯 CPU 數目 - 4) * 16)|
+    |\>64 個處理器|256 + ((邏輯 CPU 數目 - 4) * 32)|512 + ((邏輯 CPU 數目 - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不可以安裝在 32 位元作業系統上。 列出 32 位元電腦值以協助客戶執行 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更早版本。   建議在 32 位元電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的最大工作者執行緒設為 1024。  
@@ -127,7 +128,7 @@ ms.locfileid: "52420399"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max worker threads` 選項設定為 `900`。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 將 `max worker threads` 選項設定為 `900`。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -142,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 待處理：設定 max worker threads 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定 max worker threads 選項之後  
  無須重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，變更會在執行 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) 後立即生效。  
   
 ## <a name="see-also"></a>另請參閱  

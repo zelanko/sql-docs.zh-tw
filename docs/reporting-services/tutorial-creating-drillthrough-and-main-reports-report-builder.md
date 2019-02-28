@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526176"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286926"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
 本教學課程將教導您如何建立兩種 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表：鑽研報表和主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 
@@ -511,7 +511,7 @@ ms.locfileid: "52526176"
   
 1.  在 **[選擇配置]** 頁面的 **[選項]** 下方，確定已選取 **[顯示小計和總計]** 。  
   
-    精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組、第二個資料列包含資料行標題、第三個資料列包含產品類別目錄資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`，而第四個資料列包含總計。  
+    精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組，第二個資料列都包含資料行標題，第三個資料列都包含產品類別資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`)，第四個資料列包含總計。  
   
 2.  按 [下一步] 。  
   
@@ -627,7 +627,7 @@ ms.locfileid: "52526176"
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
-2.  類型 **2009 Product Category Sales:Online and Reseller Category:**。  
+2.  鍵入 **2009 年產品類別銷售額：線上及轉銷商類別：**。  
   
 3.  選取您輸入的文字。  
   

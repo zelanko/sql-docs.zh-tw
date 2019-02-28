@@ -9,14 +9,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 058263f88131261b705b306b766d97bb8f368f5d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021262"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294856"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
   走勢圖和資料橫條是簡單的小圖表，在極小空間中傳達大量資訊，通常內嵌於文字。   
@@ -25,7 +25,7 @@ ms.locfileid: "50021262"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- 若要快速地開始使用走勢圖，請參閱 [教學課程：將走勢圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) ，以及 [How to: Create a Sparkline in a Table](https://go.microsoft.com/fwlink/?LinkId=197092) (如何：在資料表中建立走勢圖) 和 [Sparklines, Bar Charts, and Indicators in Report Builder](https://technet.microsoft.com/bi/video/ff877165) (報表產生器中的走勢圖、橫條圖與指標) 影片。  
+ 若要快速開始使用走勢圖，請參閱[教學課程：將走勢圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)，以及觀賞[如何：在資料表中建立走勢圖](https://go.microsoft.com/fwlink/?LinkId=197092)和[報表產生器中的走勢圖、橫條圖與指標](https://technet.microsoft.com/bi/video/ff877165)的影片。  
   
 > [!NOTE]  
 >  走勢圖和資料橫條及其父資料表、矩陣或清單可以與報表分開發行當做報表組件。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -33,15 +33,15 @@ ms.locfileid: "50021262"
 ##  <a name="KindsofSparklines"></a> 走勢圖的類型  
  您幾乎可以建立與一般圖表一樣多的走勢圖類型。 一般而言，您無法建立 3D 走勢圖。 您可以建立這些完整圖表的走勢圖版本：  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊直條圖。  
+-   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的直條圖。  
   
 -   [折線圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)：3D 折線圖以外的所有圖表。  
   
--   [區域圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)：3D 區域圖以外的所有圖表  
+-   [區域圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)：3D 區域圖以外的所有圖表。  
   
 -   [圓形圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)：以及環圈圖 (平面和立體)，但不是漏斗圖和金字塔圖之類的其他形狀。  
   
--   [範圍圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)︰股票圖、K 線圖、誤差長條圖與盒狀圖。  
+-   [範圍圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)：股票圖、K 線圖、誤差線與盒狀圖。  
   
 ##  <a name="DataBars"></a> 資料橫條  
  資料橫條通常代表單一資料點，不過也可以代表多個資料點，就像一般的橫條圖一樣。 資料橫條通常都包含多個沒有類別的數列或數列群組。  
@@ -52,9 +52,9 @@ ms.locfileid: "50021262"
   
  您可以建立這些完整圖表的資料橫條版本：  
   
--   [橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊橫條圖。  
+-   [橫條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的橫條圖。  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)︰基本、堆疊與 100% 堆疊直條圖。 直條圖可以是走勢圖或資料橫條。  
+-   [直條圖 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的直條圖。 直條圖可以是走勢圖或資料橫條。  
   
 ##  <a name="AlignDatainTableMatrix"></a> 在資料表或矩陣中對齊走勢圖資料  
  當您將走勢圖插入資料表或矩陣時，每個走勢圖中的資料點通常最好對齊該直條圖中其他走勢圖的資料點。 否則，很難比較不同資料列中的資料。 例如，當您依月份比較公司中不同銷售人員的銷售資料時，您會希望月份能夠對齊。 如果員工四月份外出，該員工就沒有該月份的資料。 您希望看到該月份的間距，並且看到後續月份的資料對齊其他員工的資料。 您可以對齊水平軸達到這個目的。 如需詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 中關於走勢圖的章節，並參閱[在資料表或矩陣的圖表上對齊資料 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  
@@ -102,6 +102,6 @@ ms.locfileid: "50021262"
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [教學課程：將走勢圖加入至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [教學課程：將走勢圖新增至報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)   
   
   

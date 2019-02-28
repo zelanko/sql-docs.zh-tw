@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4318aeeb2f80078a71fe5924dae0364cfa380150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e1c6a8dcf60de0e1d67666788d0c026af545f90f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804096"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289634"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>內建集合 - ReportItems 集合參考 (報表產生器)
   **ReportItems** 內建集合是報表項目的文字方塊集合，例如，報表設計介面上的資料區或文字方塊列。 **ReportItems** 集合包含在頁首、頁尾或報表主體目前範圍中的文字方塊。 這個集合是在執行階段由報表處理器和報表轉譯器而決定。 隨著報表處理器連續地將報表資料和報表項目配置元素結合為報表的使用者檢視頁面，目前的範圍也會變更。 您可以使用 **ReportItems** 內建集合來產生字典樣式的頁首，以在每個頁面上顯示第一個及最後一個項目。  
@@ -22,7 +22,7 @@ ms.locfileid: "47804096"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>使用 ReportItems 值屬性  
- **ReportItems** 集合內的項目只有一個屬性：Value。 **ReportItems** 項目的值可用來顯示或計算報表中其他欄位的資料。 若要存取目前文字方塊的值，您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 內建全域 Me.Value，或是只使用 Value。 在報表函數 (例如，First 和彙總函式) 中，請使用完整的語法。  
+ **ReportItems** 集合內的項目只有一個屬性：值。 **ReportItems** 項目的值可用來顯示或計算報表中其他欄位的資料。 若要存取目前文字方塊的值，您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 內建全域 Me.Value，或是只使用 Value。 在報表函數 (例如，First 和彙總函式) 中，請使用完整的語法。  
   
  例如：  
   

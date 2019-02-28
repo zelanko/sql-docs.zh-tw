@@ -1,5 +1,5 @@
 ---
-title: 疑難排解：尋找 SQL Server 異動複寫的錯誤 | Microsoft Docs
+title: 疑難排解員：尋找 SQL Server 異動複寫的錯誤 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675897"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154883"
 ---
-# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解：尋找 SQL Server 異動複寫的錯誤 
+# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑難排解員：尋找 SQL Server 異動複寫的錯誤 
 若對異動複寫的運作方式沒有基本的了解，針對複寫錯誤進行疑難排解可能會令人感到沮喪。 建立發行集的第一個步驟是讓快照集代理程式建立快照集，並將它儲存到快照集資料夾。 接下來，散發代理程式會將快照集套用到訂閱者。 
 
 此處理序會建立發行集，並將它置於「同步處理」狀態。 同步處理將分成三個階段進行：
@@ -45,7 +45,7 @@ ms.locfileid: "51675897"
 1. 使用複寫監視器來找出複寫發生錯誤的時間點 (哪個代理程式？)：
    - 如果在**發行者到散發者**區段中發生錯誤，則問題出自記錄讀取器代理程式。 
    - 如果在**散發者到訂閱者**區段中發生錯誤，則問題出自散發代理程式。  
-2. 查看該代理程式在 [作業活動監視器] 中的作業記錄，以找出錯誤的詳細資料。 如果作業記錄未顯示足夠的詳細資料，您可以在該特定代理程式上[啟用詳細資訊記錄](#enable-verbose-logging)。
+2. 查看該代理程式在 [作業活動監視器] 中的作業記錄，以找出錯誤的詳細資料。 如果作業記錄未顯示足夠的詳細資料，您可以在該特定代理程式上[啟用詳細資訊記錄](#enable-verbose-logging-on-any-agent)。
 3. 嘗試判斷適用於該錯誤的解決方案。
 
 
@@ -86,7 +86,7 @@ ms.locfileid: "51675897"
 
     ![快顯功能表上的 [啟動複寫監視器] 命令](media/troubleshooting-tran-repl-errors/launch-repl-monitor.png)
   
-    隨即開啟複寫監視器：![複寫監視器](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
+    [複寫監視器] 隨即開啟：![複寫監視器](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
    
 2. 紅色 X 表示發行集未執行同步處理。 展開左側的 [我的發行者]，再展開相關的發行者伺服器。  
   

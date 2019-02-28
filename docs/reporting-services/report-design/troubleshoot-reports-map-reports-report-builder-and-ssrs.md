@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7688e1c082c250933054a9c510c8f8ecf7be3423
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100389"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297277"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>報表疑難排解：地圖報表 (報表產生器及 SSRS)
   當您將地圖或地圖圖層加入至報表時、自訂報表中現有的地圖或地圖圖層時、預覽報表中的地圖時，或發行包含地圖的報表時，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中可能會發生與地圖相關的問題。 您可以使用本主題來協助疑難排解這些問題。  

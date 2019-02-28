@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -27,14 +27,15 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8d0dd1d58614f24e33f8fd7afdda43db2114fec6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 34ab5673d0e74de637f0de22153b9f90cd6a407d
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300375"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407648"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
@@ -46,8 +47,7 @@ ms.locfileid: "54300375"
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```
 BULK INSERT   
    [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
       FROM 'data_file'   
@@ -84,6 +84,7 @@ BULK INSERT
 ```  
   
 ## <a name="arguments"></a>引數  
+
  *database_name*  
  這是指定的資料表或檢視表所在的資料庫名稱。 如果未指定，這就是目前的資料庫。  
   
@@ -146,7 +147,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 ```
 
 > [!IMPORTANT]
-> 在 Linux 上，CODEPAGE 不是支援的選項。
+> 針對 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]，Linux 上不支援 CODEPAGE 選項。 針對 [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)]，CODEPAGE 只允許使用 **'RAW'** 選項。
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您在[格式檔案](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中，針對每一個資料行各指定一個定序名稱。  
@@ -157,21 +158,25 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |OEM (預設值)|將 **char**、**varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|  
 |RAW|不進行字碼頁之間的轉換；這是最快的選項。|  
 |*code_page*|特定字碼頁編號，如 850。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版之前的版本不支援字碼頁 65001 (UTF-8 編碼)。|  
-  
- DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
- 指定 BULK INSERT 利用指定的資料檔案類型值來執行匯入作業。  
-  
+| &nbsp; | &nbsp; |
+
+DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+指定 BULK INSERT 利用指定的資料檔案類型值來執行匯入作業。  
+
+&nbsp;
+
 |DATAFILETYPE 值|所有資料的表示方式如下：|  
 |------------------------|------------------------------|  
 |**char** (預設值)|字元格式。<br /><br /> 如需詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。|  
 |**native**|原生 (資料庫) 資料類型。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立原生資料檔案。<br /><br /> 原生值提供了效能比 char 值更高的替代項。<br /><br /> 如需詳細資訊，請參閱[使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。|  
 |**widechar**|Unicode 字元。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。|  
 |**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
-  
-  ERRORFILE **='**_file_name_**'**  
- 指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。  
-  
- 當執行命令時，便會建立這個錯誤檔。 如果檔案已經存在，會發生一則錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。   
+| &nbsp; | &nbsp; |
+
+ERRORFILE **='**_file_name_**'**  
+指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。
+
+當執行命令時，便會建立這個錯誤檔。 如果檔案已經存在，會發生一則錯誤。 另外，還會建立一個副檔名為 .ERROR.txt 的控制檔。 這會參考錯誤檔中的每個資料列，且會提供錯誤診斷。 錯誤更正之後，就能夠載入資料。  
 **適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 開始，`error_file_path` 可以位於 Azure Blob 儲存體中。
 
@@ -179,7 +184,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 **適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
 這是具名的外部資料來源，指向錯誤檔案的 Azure Blob 儲存體位置，該檔案將包含在匯入期間發現的錯誤。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
  
- FIRSTROW **=**_first_row_  
+ FIRSTROW **=** _first_row_  
  指定要載入之第一個資料列的號碼。 預設值是指定之資料檔案中的第一個資料列。 FIRSTROW 是以 1 為基底。  
   
 > [!NOTE]  
@@ -205,8 +210,7 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_  
  以 *kilobytes_per_batch* 指定每一批資料的大約 KB 數。 依預設，KILOBYTES_PER_BATCH 是未知的。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
   
- LASTROW**=**_last_row_  
- 指定要載入之最後一個資料列的號碼。 預設值是 0，表示指定之資料檔案中的最後一個資料列。  
+LASTROW **=** _last_row_ 指定要載入之最後一個資料列的號碼。 預設值是 0，表示指定之資料檔案中的最後一個資料列。  
   
  MAXERRORS **=** _max_errors_  
  指定取消大量匯入作業之前所允許的資料語法錯誤數目上限。 大量匯入作業所無法匯入的每個資料列都會被忽略，且會當做一項錯誤來計算。 如果未指定 *max_errors*，則預設值為 10。  
@@ -220,7 +224,7 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
  *n*  
  這是一個預留位置，表示可以指定多個資料行。  
   
- ROWS_PER_BATCH **=**_rows_per_batch_  
+ ROWS_PER_BATCH **=** _rows_per_batch_  
  指出資料檔案中大約有多少資料列。  
   
  依預設，資料檔案中的所有資料都會當做單一交易來傳給伺服器，而且查詢最佳化工具並不知道批次中的資料列數。 如果您指定 ROWS_PER_BATCH (利用 > 0 的值)，伺服器會利用這個值來最佳化大量匯入作業。 ROWS_PER_BATCH 指定的值應該與實際的資料列數大約相同。 如需有關效能考量的詳細資訊，請參閱本主題稍後的「備註」。  
@@ -247,7 +251,7 @@ FIELDQUOTE **=** 'field_quote'
 **適用於：**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 指定將用來當作 CSV 檔案中引號字元的字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準中所定義的。
   
- FORMATFILE **='**_format_file_path_**'**  
+ FORMATFILE **=** '_format_file_path_'  
  指定格式檔的完整路徑。 格式檔描述包含預存回應的資料檔案，這些預存回應是利用 **bcp** 公用程式在相同資料表或檢視表上建立的。 在下列情況下，應該使用格式檔：  
   
 -   資料檔案包含比資料表或檢視表更多或更少的資料行。  
@@ -269,6 +273,7 @@ FIELDQUOTE **=** 'field_quote'
 
   
 ## <a name="compatibility"></a>相容性  
+
  對於從檔案中讀取的資料，BULK INSERT 會強制進行嚴格的資料驗證和資料檢查，而當現有的指令碼針對無效資料執行時，這些作業可能會造成指令碼失敗。 例如，BULK INSERT 會驗證：  
   
 -   **float** 或 **real** 資料類型的原生表示法是否有效。  
@@ -278,6 +283,7 @@ FIELDQUOTE **=** 'field_quote'
 ## <a name="data-types"></a>資料型別  
   
 ### <a name="string-to-decimal-data-type-conversions"></a>字串到十進位資料類型轉換  
+
  BULK INSERT 中使用的字串到十進位資料類型轉換遵守與 [!INCLUDE[tsql](../../includes/tsql-md.md)] [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 函式相同的規則，會拒絕代表使用科學記號標記法之數值的字串。 因此，BULK INSERT 會將這類字串視為無效的值，並報告轉換錯誤。  
   
  若要因應這種行為，請使用格式檔案，將科學記號標記法 **float** 資料大量匯入至十進位資料行。 在格式檔案中，請將此資料行明確描述為 **real** 或 **float** 資料。 如需有關這些資料類型的詳細資訊，請參閱 [float 和 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)。  
@@ -286,9 +292,10 @@ FIELDQUOTE **=** 'field_quote'
 >  格式檔案會以 **SQLFLT4** 資料類型來表示 **real** 資料，並以 **SQLFLT8** 資料類型來表示 **float** 資料。 如需有關非 XML 格式檔案的詳細資訊，請參閱 [使用 bcp 指定檔案儲存類型 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)。  
   
 #### <a name="example-of-importing-a-numeric-value-that-uses-scientific-notation"></a>匯入使用科學記號標記法之數值的範例  
+
  這個範例使用下列資料表：  
   
-```  
+```sql
 CREATE TABLE t_float(c1 float, c2 decimal (5,4));  
 ```  
   
@@ -302,7 +309,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  下列格式檔案使用 `SQLFLT8` 資料類型，將第二個資料欄位對應到第二個資料行：  
   
- ```
+ ```xml
  <?xml version="1.0"?> 
  <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
  <RECORD> 
@@ -314,7 +321,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  若要使用此格式檔案 (使用檔案名稱 `C:\t_floatformat-c-xml.xml`) 將測試資料匯入測試資料表，請發出下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式：  
   
-```  
+```sql
 BULK INSERT bulktest..t_float  
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
@@ -325,6 +332,7 @@ GO
   
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>大量匯出或匯入 SQLXML 文件的資料類型  
+
  若要大量匯出或匯入 SQLXML 資料，請在格式檔案中使用下列其中一種資料類型：  
   
 |資料類型|效果|  
@@ -332,8 +340,10 @@ GO
 |SQLCHAR 或 SQLVARCHAR|資料是使用用戶端字碼頁或定序所隱含的字碼頁所傳送。 這與指定 DATAFILETYPE **='char'** 而不指定格式檔案的效果一樣。|  
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式傳送這份資料。 這與指定 DATAFILETYPE **= 'widechar'** 而不指定格式檔案的效果一樣。|  
 |SQLBINARY 或 SQLVARBIN|未經任何轉換即傳送這份資料。|  
-  
+| &nbsp; | &nbsp; |
+
 ## <a name="general-remarks"></a>一般備註  
+
  如需 BULK INSERT 陳述式、INSERT ...SELECT \* FROM OPENROWSET(BULK...) 陳述式及 **bcp** 命令的比較，請參閱[資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
  如需有關準備資料以進行大量匯入的資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
@@ -343,16 +353,20 @@ GO
 ## <a name="interoperability"></a>互通性  
   
 ### <a name="importing-data-from-a-csv-file"></a>從 CSV 檔案匯入資料  
+
 從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 開始，BULK INSERT 可支援 CSV 格式。  
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入作業不支援逗號分隔值 (CSV) 檔案。 不過，在某些情況下，CSV 檔案可用來當做資料檔案，以便將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關從 CSV 資料檔案匯入資料的需求資訊，請參閱[準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
 ## <a name="logging-behavior"></a>記錄行為  
+
  如需大量匯入所執行的資料列插入作業於何時記錄到交易記錄的資訊，請參閱 [大量匯入採用最低限度記錄的必要條件](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
 ##  <a name="Limitations"></a> 限制  
+
  使用格式檔案搭配 BULK INSERT 時，最多只能指定 1024 個欄位。 這與資料表中允許的資料行數目上限相同。 如果您使用 BULK INSERT 搭配包含超過 1024 個欄位的資料檔案，則 BULK INSERT 會產生 4822 錯誤。 [bcp 公用程式](../../tools/bcp-utility.md)沒有此限制，因此，針對包含超過 1024 個欄位的資料檔案，請使用 **bcp** 命令。  
   
 ## <a name="performance-considerations"></a>效能考量  
+
  如果要在單一批次中排清的頁數超出內部臨界值，可能會發生緩衝集區的完整掃描，以識別批次認可時要排清的頁面。 這個完整掃描可能會損及大量匯入效能。 當大型緩衝集區與緩慢的 I/O 子系統結合時，可能會超出內部臨界值。 為避免大型電腦發生緩衝區溢位，請不要使用 TABLOCK 提示 (將會移除大量最佳化) 或使用較小的批次大小 (可保留大量最佳化)。  
   
  電腦會不斷變化，因此，我們建議您利用您的資料負荷量測試各種批次大小來找出最適合您的狀況。  
@@ -360,6 +374,7 @@ GO
 ## <a name="security"></a>Security  
   
 ### <a name="security-account-delegation-impersonation"></a>委派安全性帳戶 (模擬)  
+
  如果使用者是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，則會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序帳戶的安全性設定檔。 使用 SQL Server 驗證的登入無法於 Database Engine 外部進行驗證。 因此，一旦使用 SQL Server 驗證的登入起始 BULK INSERT 命令，將會使用 SQL Server 處理序帳戶 (即 SQL Server Database Engine 服務所使用的帳戶) 的安全性內容建立與資料的連接。 為了能夠成功讀取來源資料，您必須授與 SQL Server Database Engine 所使用的帳戶對來源資料的存取權。相反地，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者是使用 Windows 驗證登入，則該使用者只能讀取其使用者帳戶可存取的檔案，而與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序的安全性設定檔無關。  
   
  使用 **sqlcmd** 或 **osql** 來執行 BULK INSERT 陳述式時，如果將一部電腦的資料插入到第二部電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，然後使用 UNC 路徑指定第三部電腦上的 *data_file*時，您可能會收到 4861 錯誤。  
@@ -369,6 +384,7 @@ GO
  如需有關此安全性考量及其他使用 BULK INSERT 之安全性考量的詳細資訊，請參閱[使用 BULK INSERT 或 OPENROWSET&#40;BULK...&#41; 匯入大量資料 &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
 ### <a name="permissions"></a>[權限]  
+
  需要 INSERT 和 ADMINISTER BULK OPERATIONS 權限。 在 Azure SQL Database 中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 權限。 另外，如果以下一個或多個狀況成立，則需要 ALTER TABLE 權限：  
   
 -   有條件約束存在而且未指定 CHECK_CONSTRAINTS 選項。  
@@ -386,9 +402,10 @@ GO
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. 利用垂直線來匯入檔案資料  
+
  下列範例利用垂直線 (`AdventureWorks2012.Sales.SalesOrderDetail`) 做為欄位結束字元，並利用 `|` 做為資料列結束字元，從指定的資料檔中，將訂單詳細資訊匯入 `|\n` 資料表中。  
   
-```  
+```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
    FROM 'f:\orders\lineitem.tbl'  
    WITH   
@@ -402,9 +419,10 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > Azure SQL Database 不支援從 Windows 檔案讀取。
   
 ### <a name="b-using-the-firetriggers-argument"></a>B. 使用 FIRE_TRIGGERS 觸發程序  
+
  下列範例指定 `FIRE_TRIGGERS` 引數。  
   
-```  
+```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
    FROM 'f:\orders\lineitem.tbl'  
    WITH  
@@ -419,9 +437,10 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > Azure SQL Database 不支援從 Windows 檔案讀取。
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 利用換行字元做為資料列結束字元  
+
  下列範例利用換行字元做為資料列結束字元來匯入檔案，如 UNIX 輸出：  
   
-```  
+```sql
 DECLARE @bulk_cmd varchar(1000);  
 SET @bulk_cmd = 'BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
 FROM ''<drive>:\<path>\<filename>''   
@@ -436,9 +455,10 @@ EXEC(@bulk_cmd);
 > Azure SQL Database 不支援從 Windows 檔案讀取。
   
 ### <a name="d-specifying-a-code-page"></a>D. 指定字碼頁  
+
  下列範例說明如何指定字碼頁。  
   
-```  
+```sql
 BULK INSERT MyTable  
 FROM 'D:\data.csv'  
 WITH  
@@ -452,7 +472,9 @@ WITH
 > Azure SQL Database 不支援從 Windows 檔案讀取。
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. 從 CSV 檔案匯入資料   
+
 下列範例示範如何指定 CSV 檔案，跳過標頭 (第一個資料列)，使用 `;` 作為欄位結束字元，以及使用 `0x0a` 作為行結束字元： 
+
 ```sql
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
@@ -468,6 +490,7 @@ WITH (FORMAT = 'CSV',
 
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. 從 Azure Blob 儲存體中的檔案匯入資料   
+
 下列範例說明如何從已設定為外部資料來源之 Azure Blob 儲存體位置中的 CSV 檔案載入資料。 這需要一個使用共用存取簽章的資料庫範圍認證。    
 
 ```sql
@@ -494,6 +517,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 > Azure SQL Database 不支援從 Windows 檔案讀取。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 從 Azure Blob 儲存體中的檔案匯入資料並指定錯誤檔   
+
 下列範例說明如何在已設定為外部資料來源並指定錯誤檔的 Azure Blob 儲存體位置中，從 CSV 檔案載入資料。 這需要一個使用共用存取簽章的資料庫範圍認證。 請注意，如果在 Azure SQL Database 上執行，ERRORFILE 選項應伴隨 ERRORFILE_DATA_SOURCE，否則匯入可能會因權限錯誤而導致失敗。 ERRORFILE 中指定的檔案不應該存在容器中。
 
 ```sql
@@ -508,6 +532,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 如需包含設定認證和外部資料來源的完整 `BULK INSERT` 範例，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
   
 ### <a name="additional-examples"></a>其他範例  
+
  下列主題提供了其他 `BULK INSERT` 範例：  
   
 -   [大量匯入與匯出 XML 文件的範例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
@@ -533,6 +558,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 -   [使用格式檔案將資料表資料行對應至資料檔案欄位 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
+
  [資料的大量匯入及匯出 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [bcp 公用程式](../../tools/bcp-utility.md)   
  [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
@@ -540,5 +566,4 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [準備大量匯出或匯入的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
-  
-  
+

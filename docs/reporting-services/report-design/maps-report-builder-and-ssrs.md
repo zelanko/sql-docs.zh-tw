@@ -13,14 +13,14 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c68165a01fa4843a2467471b0db3a13386beb0a4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a5026ba1558d0796f715ea8f61e6e90ed628c2e9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814291"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290186"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>地圖 (報表產生器及 SSRS)
   若要針對地理背景將商務資料視覺化，您可以將地圖加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表。 您選取的地圖類型取決於您想要在報表中傳達的資訊而定。 您可以加入只顯示位置的地圖，或是根據某區域住家數而變動泡泡大小的泡泡地圖，或者是根據每一家商店最有利潤的產品而變動標記樣式的標記地圖，或者是顯示商店之間之路線的線路地圖。  
@@ -29,7 +29,7 @@ ms.locfileid: "51814291"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- 若要立即開始使用地圖，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md) 或[報表範例 (報表產生器和 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 若要立即開始使用地圖，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../../reporting-services/tutorial-map-report-report-builder.md) 或[報表範例 (報表產生器及 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 > [!NOTE]  
 >  您可以將地圖當做報表組件，與報表分開儲存。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  
@@ -224,7 +224,7 @@ ms.locfileid: "51814291"
   
  檢視地圖報表時，如果看不到您所要的結果，根本原因可能來自各種問題。 為了協助您區隔以及了解每一個問題，一次使用一個圖層會有協助。 使用 [地圖] 窗格選取圖層並輕鬆切換其可見性。  
   
- 如需地圖報表問題的詳細資訊，請參閱 [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ 如需地圖報表問題的詳細資訊，請參閱[針對報表進行疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> 如何主題  
  本節列出的程序可以為您逐步示範，如何在報表中使用地圖和地圖圖層。  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e7b776893c15532efc1d2dac54d16a7bc9035991
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813961"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295906"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>使用 Reporting Services 行動報表中的模擬資料
 當您將圖庫元素放在設計介面上時， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會立即產生該元素的模擬資料。 建立行動報表時，這項資料會提供數個實用的用途。   
@@ -38,7 +38,7 @@ ms.locfileid: "51813961"
   
 當所有控制項都繫結至實際資料後，行動報表中不再使用的模擬資料表就會自動移除。 您無法在設計介面上移除仍有元素參考的模擬資料表。  
   
->**注意**︰模擬資料不會加入整體行動報表的使用量中，因為它沒有和行動報表序列化，而是在執行階段動態產生的。  
+>**注意**:模擬資料不會新增到整體行動報表的使用量中，因為它沒有針對行動報表序列化，而是在執行階段動態產生。  
   
 ### <a name="see-also"></a>另請參閱  
 - [使用 SQL Server 行動報表發行工具建立與發行行動報表](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

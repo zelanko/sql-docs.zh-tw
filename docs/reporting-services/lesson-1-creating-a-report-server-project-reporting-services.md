@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383653"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292346"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "49383653"
 
 5. 按一下 [報表伺服器專案]  ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)。 
 
-   >**注意**：如果您看不到 [商業智慧] 或 [報表伺服器專案] 選項，您必須更新含有商業智慧範本的 SSDT。 請參閱 [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
+   >**注意**:如果您看不到 [商業智慧] 或 [報表伺服器專案] 選項，您必須更新含有商業智慧範本的 SSDT。 請參閱 [下載 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
   
 5.  在 [名稱] 中，輸入 **Tutorial**。  
 
@@ -55,7 +55,7 @@ ms.locfileid: "49383653"
   
 1.  在**方案總管**窗格中，以滑鼠右鍵按一下 [報表] > [新增] > [新增項目]。 
 
-    >**秘訣**：如果您沒有看到 [方案總管]  窗格，請在 [檢視]  功能表上按一下 [方案總管] 。 
+    >**提示**：如果您沒有看到 [方案總管]  窗格，請在 [檢視]  功能表上按一下 [方案總管] 。 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -67,7 +67,7 @@ ms.locfileid: "49383653"
     
     ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
   
-     報表設計師是一個在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中執行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]元件。 它有兩個檢視：[設計]  和 [預覽] 。 按一下各個索引標籤，即可變更檢視。  
+     報表設計師是一個在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中執行的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]元件。 它有兩個檢視：[設計] 和 [預覽]。 按一下各個索引標籤，即可變更檢視。  
   
     您會在 [報表資料]  窗格中定義資料， 並在 [設計]  檢視中定義報表配置。 您可以執行報表，然後在 [預覽]  檢視中查看外觀。  
   

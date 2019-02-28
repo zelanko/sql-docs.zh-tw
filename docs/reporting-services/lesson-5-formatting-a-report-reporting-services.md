@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8b04fa0c468c9e18264809f69ea42797ba83b452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1c5a41b39b5c22c05ac4b13a9e57606110b60a2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842626"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291106"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>第 5 課：格式化報表 (Reporting Services)
 既然您已經將資料區域和某些欄位加入到銷售訂單報表，您可以格式化日期和貨幣欄位，以及資料行標頭。  
   
 ## <a name="bkmk_format_date"></a>將日期格式化  

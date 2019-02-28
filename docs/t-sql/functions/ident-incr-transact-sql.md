@@ -20,19 +20,19 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac2a77f861330686d618fdd13764d11f27d12e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770917"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290986"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回在含有識別欄位的資料表或檢視中建立識別欄位期間所指定的遞增值 (以 **numeric** (**@@** MAXPRECISION,0) 傳回)。  
+  傳回建立資料表或檢視的識別欄位時，所指定的遞增值 (作為**numeric** (**@@** MAXPRECISION, 0))。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,15 +43,15 @@ IDENT_INCR ( 'table_or_view' )
   
 ## <a name="arguments"></a>引數  
  **'** *table_or_view* **'**  
- 為指定要檢查有效識別遞增值的資料表或檢視的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *table_or_view* 可以是以引號括住的字元字串常數、變數、函式或資料行名稱。 *table_or_view* 為 **char**、**nchar**、**varchar**，或 **nvarchar**。  
+ 為指定要檢查有效識別遞增值的資料表或檢視的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *table_or_view* 可以是以引號括住的字元字串常數。 它也可以是變數、函式或資料行名稱。 *table_or_view* 為 **char**、**nchar**、**varchar**，或 **nvarchar**。  
   
 ## <a name="return-types"></a>傳回類型  
  **numeric**  
   
 ## <a name="exceptions"></a>例外狀況  
- 當發生錯誤，或呼叫端沒有檢視物件的權限時，便會傳回 NULL。  
+ 在錯誤或是呼叫者沒有物件檢視權限時，傳回 NULL。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，IDENT_INCR) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視他們所擁有，或是具備權限的安全性實體中繼資料。 若沒有使用者物件權限，發出中繼資料的內建函式 (例如 IDENT_INCR) 便可能會傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. 傳回多個資料表的遞增值  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中含有遞增值之識別欄位的資料表。  
+ 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的資料表，其中包含了具備遞增值的識別欄位。  
   
 ```  
 USE AdventureWorks2012;  

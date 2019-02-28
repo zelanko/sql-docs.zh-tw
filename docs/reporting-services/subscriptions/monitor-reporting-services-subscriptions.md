@@ -12,14 +12,14 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7afbcb496179a583d40a4f194d55c872f43cb293
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dad31c0742cfa71a3a5f38659adab9bea220ee0e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535612"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289629"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -76,7 +76,7 @@ ms.locfileid: "52535612"
   
  下列是與訂閱相關的追蹤記錄檔範例錯誤訊息：  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: 將 EnableExecutionLogging 初始化至 'True'  如同 Server 系統所示 properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **傳送電子郵件時發生錯誤**。 例外狀況：System.Net.Mail.SmtpException: SMTP 伺服器需要安全的連線或是用戶端未經認證。 伺服器回應為：5.7.1 用戶端未經認證   於 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:將 EnableExecutionLogging 初始化至 'True' 如同 Server 系統中所示 Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e 錯誤:**傳送電子郵件時發生錯誤**。 Exception:System.Net.Mail.SmtpException:The SMTP server requires a secure connection or the client was not authenticated. The server response was:5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  記錄檔不包括有關報表是否開啟或實際上是否成功傳遞的資訊。 成功傳遞是指排程與傳遞處理器未產生錯誤，且報表伺服器已連接到郵件伺服器。 如果電子郵件在使用者信箱產生無法傳遞訊息錯誤，該資訊將不會包含在記錄檔中。 如需記錄檔的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "52535612"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |date|處理|區域|類別目錄|層級|Correlation|訊息|  
-|5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.net.mail.smtpexception: 信箱無法使用。 伺服器回應為：5.7.1 用戶端不具權限，無法以此寄件者傳送  於 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  於 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  於 System.Net.Mail.SmtpClient.Send(MailMessage message)  於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** Exception:System.Net.Mail.SmtpException:Mailbox unavailable. The server response was:5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  
  例如，您可以使用 PowerShell 指令碼查看原生模式或 SharePoint 模式訂閱的狀態，請參閱 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  

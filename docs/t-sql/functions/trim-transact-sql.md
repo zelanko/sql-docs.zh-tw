@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7854b2419b3644c2f3c76cd96cccc06bfae2902
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 54cc66f79a8be279543fa57d987d2a8ecbac1190
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299615"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331568"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ TRIM ( [ characters FROM ] string )
 ## <a name="arguments"></a>引數   
 
 字元   
-這是任何非 LOB 字元類型 (`nvarchar`、`varchar`、`nchar` 或 `char`) 的常值、變數或函數呼叫，其中包含應移除的字元。 不允許使用 `nvarchar(max)` 和 `varchar(max)` 類型。
+這是任何非 LOB 字元類型 (`nvarchar`、`varchar`、`nchar` 或 `char`) 的常值、變數或函數呼叫，其中包含應移除的字元。 不允許 `nvarchar(max)` 和 `varchar(max)` 類型。
 
 string   
 這是任何字元類型 (`nvarchar`、`varchar`、`nchar` 或 `char`) 的運算式，其中的字元應該加以移除。
@@ -52,7 +52,7 @@ string
 以字串引數的類型傳回字元運算式，其中空白字元 `char(32)` 或其他指定的字元會從兩端移除。 如果輸入字串為 `NULL`，傳回 `NULL`。
 
 ## <a name="remarks"></a>Remarks   
-根據預設，`TRIM` 函數會從兩端移除空白字元 `char(32)`。 這相當於 `LTRIM(RTRIM(@string))`。 具有指定字元之 `TRIM ` 函數的行為與 `REPLACE` 函數的行為相同，其中會將開頭或結尾的字元取代為空字串。
+根據預設，`TRIM` 函數會從兩端移除空白字元 `char(32)`。 此行為相當於 `LTRIM(RTRIM(@string))`。 具有指定字元之 `TRIM ` 函數的行為與 `REPLACE` 函數的行為相同，其中會將開頭或結尾的字元取代為空字串。
 
 
 ## <a name="examples"></a>範例
@@ -84,4 +84,5 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+

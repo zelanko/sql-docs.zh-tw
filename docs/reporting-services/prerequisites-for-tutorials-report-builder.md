@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee3cd480edacdaa0283c0862076a9ff20b84ecca
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9584e07c3669548418a641eae4e3e92281a397f9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813101"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296386"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教學課程的必要條件 (報表產生器)
 
@@ -35,7 +35,7 @@ ms.locfileid: "51813101"
   
 -   SQL Server 執行個體的名稱，和能夠以唯讀方式存取任何資料庫的認證。 教學課程中的資料集查詢會使用常值資料，但是每一個查詢都必須經過 SQL Server 執行個體處理，才能傳回報表資料集所需的中繼資料。 例如，下列連接字串僅指定伺服器： `data source=<servername>`。 您必須由授與您存取此伺服器之權限的系統管理員，指派具有預設資料庫的讀取存取權。 您也可以指定資料庫，如下列連接字串所示： `data source=<servername>;initial catalog=<database>`。  
   
--   針對[教學課程：地圖報表 (報表產生器)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)，報表伺服器必須設定為支援 Bing Maps 作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
+-   針對[教學課程：地圖報表 (報表產生器)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)，報表伺服器必須設定支援以 Bing 地圖服務作為背景。 如需詳細資訊，請參閱 [對應報表支援規劃](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
 
 -   [教學課程：建立鑽研及主報表 (報表產生器)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) 需要能夠存取 Contoso Sales Cube。 如需詳細資訊，請參閱教學課程。 
   

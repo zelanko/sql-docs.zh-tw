@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772631"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287236"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表加入至報表 (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表新增至報表 (Reporting Services)
 定義資料集之後，您就可以開始設計報表。 您可以將資料區域、文字方塊、影像和您要包含在報表中的其他項目拖放至設計介面來建立報表配置。  
   
 包含基礎資料集之重複資料列的項目稱為「資料區域」。 基本報表只有一個資料區域，但是您可以加入其他資料區域，例如，當您想要將圖表加入至表格式報表時。 加入資料區域之後，您可以將欄位加入到資料區域中。  
@@ -43,7 +43,7 @@ ms.locfileid: "47772631"
 7.  以相同的方式加入 LineTotal 欄位，以建立第五個資料行。 資料行標頭是 Line Total。 報表設計師會將 LineTotal 分割成兩個字，藉以自動建立資料行的易記名稱。  
   
   
-下圖顯示已擴展這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
+下圖顯示已使用這些欄位填入的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
 ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
   
 ## <a name="preview-your-report"></a>預覽報表  

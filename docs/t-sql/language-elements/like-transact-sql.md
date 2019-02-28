@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299985"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331548"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "54299985"
   > [!div class="nextstepaction"]
   > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
-  判斷特定字元字串是否符合指定的模式。 模式中可以包含一般字元及萬用字元。 在模式比對期間，一般字元必須與字元字串中所指定的字元完全相符。 不過，萬用字元可以符合任意字元字串片段。 使用萬用字元要比使用 = 與 != 字串比較運算子能讓 LIKE 運算子更有彈性。 如果有任何一個引數不是字元字串資料類型，可能的話，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將它轉換成字元字串資料類型。  
+  判斷特定字元字串是否符合指定的模式。 模式中可以包含一般字元及萬用字元。 在模式比對期間，一般字元必須與字元字串中所指定的字元完全相符。 不過，萬用字元可以符合任意字元字串片段。 使用萬用字元要比使用 = 與 != 字串比較運算子能讓 LIKE 運算子更有彈性。 如果有任何一個引數不是字元字串資料類型，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會將它轉換成字元字串資料類型 (若可能的話)。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -78,7 +78,7 @@ match_expression [ NOT ] LIKE pattern
 |[^]|不在指定範圍 ([^a-f]) 或集合 ([^abcdef]) 中的任何單一字元。|WHERE au_lname LIKE 'de[^l]%' 所有開頭是 de 且下一個字元不是 l 的作者姓氏。|  
   
  *escape_character*  
- 這是放在萬用字元前面的字元，用來指示應該將萬用字元解譯成正規字元，而不是萬用字元。 *escape_character* 是沒有預設值的字元運算式，且只能得出一個字元。  
+ 這是放在萬用字元前面的字元，指出應將萬用字元解譯成一般字元，而不是萬用字元。 *escape_character* 是沒有預設值的字元運算式，且只能得出一個字元。  
   
 ## <a name="result-types"></a>結果類型  
  **布林**  
@@ -87,9 +87,9 @@ match_expression [ NOT ] LIKE pattern
  如果 *match_expression* 符合指定的 *pattern*，LIKE 就會傳回 TRUE。  
   
 ## <a name="remarks"></a>Remarks  
- 當您利用 LIKE 來執行字串比較時，模式字串中的所有字元都很重要。 其中包括開頭或尾端空格。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面跟著一個空格) 的所有資料列，則該資料行的值是 abc (abc 後面沒有空格) 的資料列就不會被傳回。 不過，在要比對模式的運算式中，會忽略尾端空白。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面沒有空格) 的所有資料列，則開頭為 abc，不管是否有尾端空格的資料列都會被傳回。  
+ 當您使用 LIKE 執行字串比較時，模式字串中的所有字元都很重要。 重要字元會包含任何前置或後置的空格。 如果查詢中某個比較會傳回具有字串 LIKE 'abc ' (abc 後面跟著一個空格) 的所有資料列，則不會傳回該資料行之值為 abc (abc 後面沒有空格) 的資料列。 不過，在要比對模式的運算式中，會忽略尾端空白。 如果查詢中的某個比較會傳回具有字串 LIKE 'abc' (abc 後面沒有空格) 的所有資料列，則開頭為 abc，不管是否有尾端空格的資料列都會被傳回。  
   
- 使用模式包含 **char** 和 **varchar** 資料的字串比較，可能會因為資料的儲存方式而無法通過 LIKE 比較。 您應該了解每個資料類型的儲存體以及 LIKE 比較可能失敗的情況。 下列範例會將 **char** 區域變數傳遞給預存程序，然後使用模式比對來尋找姓氏開頭為一組指定字元的所有員工。  
+ 使用模式包含 **char** 和 **varchar** 資料的字串比較，可能會因為每個資料類型的資料儲存方式而無法通過 LIKE 比較。 下列範例會將區域 **char** 變數傳遞給預存程序，然後使用模式比對來尋找姓氏開頭為一組指定字元的所有員工。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -107,7 +107,7 @@ GO
   
  在 `FindEmployee` 程序中，不會傳回任何資料列，因為每當名稱包含的字元少於 20 個時，**char** 變數 (`@EmpLName`) 就會包含尾端空白。 由於 `LastName` 資料行是 **varchar**，因此，沒有尾端空白。 因為有尾端空白，這個程序才會失敗。  
   
- 不過，下列範例會成功，因為 **varchar** 變數沒有加入尾端空白。  
+ 但是，下列範例會成功，因為沒有將後置空白字元新增到 **varchar** 變數。  
   
 ```sql
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
@@ -177,9 +177,9 @@ WHERE Name LIKE 'dm%';
 GO  
 ```  
   
- 若要查看不是動態管理檢視的所有物件，請使用 `NOT LIKE 'dm%'`。 如果您一共有 32 個物件，而 LIKE 找出了 13 個模式相符的名稱，則 NOT LIKE 會找出 19 個與 LIKE 模式不符的物件。  
+ 若要查看不是動態管理檢視的所有物件，請使用 `NOT LIKE 'dm%'`。 如果您一共有 32 個物件，而 LIKE 找出了 13 個模式相符的名稱，則 NOT LIKE 會找出 19 個與 LIKE 模式不相符的物件。  
   
- 利用 `LIKE '[^d][^m]%'` 之類的模式，不一定都會找到相同名稱。 您可能只會找到 14 個名稱以及動態管理檢視名稱，而不是 19 個名稱，結果會刪除開頭是 `d` 或第二個字母是 `m` 的所有名稱。 這是因為含有負面萬用字元的相符字串會逐步評估，每次一個萬用字元。 如果評估中的任何一點比對失敗，就會刪除它。  
+ 利用 `LIKE '[^d][^m]%'` 之類的模式，不一定都會找到相同名稱。 您可能只會找到 14 個名稱以及動態管理檢視名稱，而不是 19 個名稱，結果會刪除開頭是 `d` 或第二個字母是 `m` 的所有名稱。 此行為是因為含有負面萬用字元的相符字串會逐步評估，每次一個萬用字元。 如果評估中的任何一點比對失敗，就會消除它。  
   
 ## <a name="using-wildcard-characters-as-literals"></a>使用萬用字元作為常值  
  您可以使用萬用字元模式比對字元作為常值字元。 若要使用萬用字元作為常值字元，請用括號將萬用字元括住。 下表顯示若干使用 LIKE 關鍵字及 [ ] 萬用字元的範例。  
@@ -198,9 +198,9 @@ GO
 ## <a name="pattern-matching-with-the-escape-clause"></a>含 ESCAPE 子句的模式比對  
  您可以搜尋包括一個或多個特殊萬用字元的字元字串。 例如，customers 資料庫中的 discounts 資料表可能會儲存包括百分比符號 (%) 的折扣值。 若要將百分比符號當做字元而不是萬用字元來搜尋，您必須提供 ESCAPE 關鍵字和逸出字元。 例如，包含名稱為 comment 的資料行且資料行中有 30% 這個文字的範例資料庫。 若要搜尋 comment 資料行的任何位置含有 30% 這個字串的任何資料列，請指定 WHERE 子句，例如 `WHERE comment LIKE '%30!%%' ESCAPE '!'`。 如果未指定 ESCAPE 和逸出字元，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回任何含有 30 這個字串的資料列。  
   
- 如果 LIKE 模式中逸出字元之後沒有任何字元，模式便無效，LIKE 會傳回 FALSE。 如果逸出字元之後的字元不是萬用字元，就會捨棄萬用字元，且會將模式中在逸出之後的字元當作正規字元來處理。 其中包括用一組方括號 ([ ]) 括住的百分比符號 (%)、底線 (_) 和左方括號 ([) 萬用字元。 另外，在一組方括號字元 ([ ]) 內，您可以使用逸出字元，且可以逸出脫字符號 (^)、連字號 (-) 和右方括號 (])。  
+ 如果 LIKE 模式中逸出字元之後沒有任何字元，模式便無效，且 LIKE 會傳回 FALSE。 如果逸出字元之後的字元不是萬用字元，就會捨棄萬用字元，並將之後的字元當作一般字元來處理。 這些字元包括用一組左右括弧 ([ ]) 括住的百分比符號 (%)、底線 (_) 和左括弧 ([) 萬用字元。 逸出字元也可以在左右括弧字元 ([ ]) 中使用，包括用來逸出插入號 (^)、連字號 (-) 或右括弧 (])。  
   
- 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，而且不得包含在 LIKE 中。  
+ 0x0000 (**char(0)**) 是 Windows 定序中未定義的字元，且不得包含在 LIKE 中。  
   
 ## <a name="examples"></a>範例  
   
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. 使用 NOT LIKE 搭配 % 萬用字元  
- 下列範例會在 `DimEmployee` 資料表中尋找不是以 `612` 開頭的所有電話號碼。  執行個體時提供 SQL Server 登入。  
+ 下列範例會在 `DimEmployee` 資料表中尋找所有開頭不是 `612` 的電話號碼。  執行個體時提供 SQL Server 登入。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -345,7 +345,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. 使用 LIKE 搭配 _ 萬用字元  
- 下列範例會在 `DimEmployee` 資料表中尋找區碼是以 `6` 開頭且以 `2` 結尾的所有電話號碼。 請注意，搜尋模式結尾中也包含了 % 萬用字元，因為區碼是電話號碼的第一個部分，而其他字元存在於該資料行值之後。  
+ 下列範例會在 `DimEmployee` 資料表中尋找區碼是以 `6` 開頭且以 `2` 結尾的所有電話號碼。 % 萬用字元會包含在搜尋模式的結尾，用來比對電話資料行值中的所有後續字元。  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -362,4 +362,3 @@ ORDER by LastName;
  [內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
- 

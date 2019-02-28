@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813671"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290076"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：加入群組和總計 (Reporting Services)
 在本教學課程中，您會將群組和總計新增至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表以組織和摘要資料。  
   
   
@@ -70,7 +70,7 @@ ms.locfileid: "51813671"
   
 6.  在 **[格式]** 功能表上，依序按一下 **[背景色彩]**、 **[淺灰]** 和 **[確定]**。  
   
-    ![設計檢視：具有訂單總計的基本資料表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "設計檢視：具有訂單總計的基本資料表")  
+    ![設計檢視：包含訂單總計的基本資料表](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "設計檢視：包含訂單總計的基本資料表")  
   
 ## <a name="bkmk_adddailytotal"></a>在報表中加入每日總計  
   
@@ -104,7 +104,7 @@ ms.locfileid: "51813671"
   
     最後一頁應該與下列影像類似。 在工具列中，按一下 [最後一頁] ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png)按鈕，可選取色彩。   
   
-    ![預覽：具有總計的基本資料表](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "預覽：具有總計的基本資料表")  
+    ![預覽：包含總計的基本資料表](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "預覽：包含總計的基本資料表")  
   
 ## <a name="bkmk_publishreport"></a>若要將報表發行至報表伺服器 (選擇性)  
   
@@ -125,15 +125,15 @@ ms.locfileid: "51813671"
   
     如果您在輸出視窗中看見類似下面的訊息，就表示部署成功。  
   
-    > ------ 已經開始建立: 專案: tutorial，組態: 偵錯 ------  
+    > ------ 已經開始建立:專案：教學課程，設定：偵錯 ------  
     > 正在略過 'Sales Orders.rdl'。 項目已是最新版本。  
     > 建立已完成 -- 0 個錯誤，0 個警告  
-    > ------ 已經開始部署: 專案: tutorial，組態: 偵錯 ------  
+    > ------ 已開始部署：專案：教學課程，設定：偵錯 ------  
     > 正在部署至 https://[伺服器名稱]/reportserver  
     > 正在部署報表 '/tutorial/Sales Orders'。  
     > 部署已完成 -- 0 個錯誤，0 個警告  
-    > ========== 建置: 1 個成功或最新狀態，0 個失敗，0 個略過 ==========  
-    > ========== 部署: 1 個成功，0 個失敗，0 個略過 ==========  
+    > ========== 建置：1 個成功或已是最新狀態，0 個失敗，0 個略過 ==========  
+    > ========== 部署：1 個成功，0 個失敗，0 個略過 ==========  
   
     如果您看見類似下面的錯誤訊息，請確認自己擁有報表伺服器的權限，而且已經以系統管理員權限啟動 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51813671"
 7.  以系統管理員權限瀏覽至入口網站，例如以滑鼠右鍵按一下 Internet Explorer 的圖示，然後按一下 [以系統管理員​​身分執行​​]。  
   
     瀏覽至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web入口網站 URL。   
-    **注意︰入口網站** URL 是 "Reports"，而非 "Reportserver" 的報表伺服器 URL。  例如：   
+    **注意：**「入口網站」URL 是 "Reports"，而非報表「伺服器」URL 的 "Reportserver"。  例如：   
     `https://<server name>/reports`(採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
     在報表伺服器上設計報表時可用 `https://localhost/reports`。  
   

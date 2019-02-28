@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403003"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292326"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
 
@@ -175,7 +175,7 @@ ms.locfileid: "52403003"
   
 -   **報表屬性** ：選取即可開啟 **[報表屬性]** 對話方塊。 在這個對話方塊中，您可以指派一般報表屬性，例如作者名稱和方格間距，以及指定報表配置的屬性，例如資料行數和頁面大小。 您也可以包括自訂程式碼、組件和類別的參考、資料輸出元素的名稱、資料轉換和資料結構描述。  
   
--   **檢視** ：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
+-   **檢視**：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
   
 -   **頁首** ：在報表中加入或刪除頁首。 當您刪除頁首時，就會刪除頁首中的所有項目。  
   
