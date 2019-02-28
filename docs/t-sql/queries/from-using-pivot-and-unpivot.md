@@ -25,18 +25,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84d93cc811e48d6de6b2f06ac8c30f2f10b7219d
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 0455bd8f5655a25aa55978dcfaa2dc3c3c14fabd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265324"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802073"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 您可以使用 `PIVOT` 和 `UNPIVOT` 關係運算子，將資料表值運算式變更為另一個資料表。 `PIVOT` 會藉由將來自運算式中某個資料行之唯一值轉換成輸出中的多個資料行來旋轉資料表值運算式，然後需要對最終輸出所需的任何剩餘資料行值執行彙總。 `UNPIVOT` 執行的作業與 PIVOT 相反，它會將資料表值運算式的資料行旋轉成資料行值。  
   
