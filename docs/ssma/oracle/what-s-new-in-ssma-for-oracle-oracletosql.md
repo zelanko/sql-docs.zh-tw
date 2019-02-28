@@ -2,7 +2,7 @@
 title: 什麼是 SSMA for Oracle (OracleToSQL) 新功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,44 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bc54f3046ec3163e3d480dd6feae906368fa4c12
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405995"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955959"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 中最新消息
-本文章列出 SSMA 中每個版本的 Oracle 變更。  
+本文章列出 SQL Server Migration Assistant (SSMA) 的每個版本中的 Oracle 變更。
+
+## <a name="ssma-v80"></a>SSMA v8.0
+SSMA for Oracle 8.0 版發行已經過增強，以提供目標式的修正，旨在改善品質和轉換的計量。 此版本也提供了下列新功能：
+
+* 支援**Azure SQL Database 受控執行個體**做為目標。 您現在可以建立新的專案目標 Azure SQL Database 受控執行個體：
+
+  ![SQL DB MI 專案](../media/ssma-newproject-sqldbmi.png)
+
+    > [!NOTE]
+    > SSMA for Oracle 延伸模組套件也已更新成允許在 Azure SQL Database 受控執行個體上的遠端安裝：
+    >
+    > ![SSMA for Oracle 延伸模組組件](../media/ssma-oracle-ext-pack.png)
+
+    目標為 Azure SQL Database 受控執行個體時，不支援某些功能，包括軟體測試人員和伺服器端資料移轉。 深入了解[此處](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)。
+
+*   轉換後**修正 advisor**。 深入了解[此處](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)。
+
+* 初步的資料庫/結構描述選取範圍。
+
+    連接到來源時，使用者現在可以選取感興趣的資料庫/結構描述。 選取您要移轉的結構描述，會將儲存初始連線期間的時間，並改善整體的 SSMA 效能。
+
+    ![SSMA 篩選物件](../media/ssma-filter-objects.png)
+
+* 使用官方、 受管理的網路驅動程式來連線至 Oracle 的能力。 OCI 驅動程式已不再使用 SQL Server Migration Assistant for Oracle 的必要條件。
+
+* 為 VARCHAR 對應 ROWID UROWID，預設的能力。 從 'uniqueidentifier'，以容納明確 ROWID 資料行的資料移轉變更。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 SSMA for Oracle 的 v7.10 版本包含下列變更：
@@ -115,7 +144,7 @@ SSMA for Oracle 的 v7.2 版本包含下列變更：
 - 改善的品質和轉換度量目標式修正，根據客戶意見反應。
 - 若要提供更好的資料點，來解決客戶問題，並改善 SSMA 的轉換率的遙測增強功能。
 
-## <a name="ssma-v71"></a>SSMA 7.1 版
+## <a name="ssma-v71"></a>SSMA v7.1
 7.1 版版本的 SSMA for Oracle 包含下列變更：
 - 在 Windows 和 Linux CTP1 上的 SQL Server 2017 現支援的目標平台進行移轉。 這項功能是在 technical preview 中，並允許結構描述和資料移動至目標 SQL server。
 - SSMA 現在支援自動更新，以下載最新版本的 SSMA，因為它位於。

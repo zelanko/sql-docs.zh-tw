@@ -2,7 +2,7 @@
 title: 評估企業並合併評定報告 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA，以評估企業，並合併評定報告，然後再升級 SQL Server，或移轉至 Azure SQL Database。
 ms.custom: ''
-ms.date: 02/23/2019
+ms.date: 02/27/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 4df3197ad4bb607d564c223087da62f17c74fa32
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801372"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956029"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -37,15 +37,15 @@ ms.locfileid: "56801372"
     - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
     - [Azure PowerShell 模組](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 下載並解壓縮：
-    - [DMA 報表 Power BI 範本](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip)。
-    - [LoadWarehouse 指令碼](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip)。
+    - [DMA 報表 Power BI 範本](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip)。
+    - [LoadWarehouse 指令碼](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>正在載入 PowerShell 模組
 儲存到 PowerShell 模組目錄的 PowerShell 模組，可讓您呼叫的模組，而不需要明確載入它們，才能使用。
 
 若要載入的模組，請執行下列步驟：
 1. 瀏覽至 C:\Program Files\WindowsPowerShell\Modules，然後建立名為資料夾**DataMigrationAssistant**。
-2. 開啟[PowerShell 模組](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip)，然後將它們儲存到您所建立的資料夾。
+2. 開啟[PowerShell 模組](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip)，然後將它們儲存到您所建立的資料夾。
 
       ![PowerShell 模組](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

@@ -2,7 +2,7 @@
 title: SSMA for MySQL (MySQLToSql) 中最新消息 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,33 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 16bd63c55eb46bf5e98698eb117efa15afaafc06
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531763"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955759"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 的新功能 (MySqlToSql)
-本文章列出 SSMA for MySQL 變更每個版本中。 
+本文章列出 SQL Server Migration Assistant (SSMA) 的每個版本中的 MySQL 變更。
+
+## <a name="ssma-v80"></a>SSMA v8.0
+8.0 版版的 SSMA for MySQL 已經過增強，以提供目標式的修正，旨在改善品質和轉換的計量。 此版本也提供了下列新功能：
+
+* 支援**Azure SQL Database 受控執行個體**做為目標。 您現在可以建立新的專案目標 Azure SQL Database 受控執行個體：
+
+    ![SQL DB MI 專案](../media/ssma-newproject-sqldbmi.png)
+
+*   轉換後**修正 advisor**。 深入了解[此處](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)。
+
+*   初步的資料庫/結構描述選取範圍。
+
+    連接到來源時，使用者現在可以選取感興趣的資料庫/結構描述。 選取您要移轉的結構描述，會將儲存初始連線期間的時間，並改善整體的 SSMA 效能。
+
+    ![SSMA 篩選物件](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 SSMA for MySQL v7.10 版本包含下列變更：
@@ -94,7 +112,7 @@ SSMA for MySQL v7.2 版本包含下列變更：
 - 改善的品質和轉換度量目標式修正，根據客戶意見反應。
 - 若要提供更好的資料點，來解決客戶問題，並改善 SSMA 的轉換率的遙測增強功能。
 
-## <a name="ssma-v71"></a>SSMA 7.1 版
+## <a name="ssma-v71"></a>SSMA v7.1
 SSMA for Access v7.1 版本包含下列變更：
 - 在 Windows 和 Linux CTP1 上的 SQL Server 2017 現支援的目標平台進行移轉。 這項功能是在 technical preview 中，並允許結構描述和資料移動至目標 SQL server。
 - SSMA 現在支援自動更新，以下載最新版本的 SSMA，因為它位於。
