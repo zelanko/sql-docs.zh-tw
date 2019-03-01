@@ -1,21 +1,21 @@
 ---
 title: 安裝 SQL Server Machine Learning 在 Linux 上的 服務 (R、 Python、 Java) |Microsoft Docs
-description: 這篇文章會說明如何安裝 SQL Server Machine Learning 服務 （R、 Python、 Java），在 Red Hat 和 Ubuntu 上。
+description: 了解如何安裝 SQL Server Machine Learning 服務 （R、 Python、 Java），以在 Red Hat 和 Ubuntu 上。
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: b27c2f897f3a96003eefe879aba4f1d5dba7512d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397657"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018054"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安裝 SQL Server 2019 Machine Learning 在 Linux 上的服務 (R、 Python、 Java)
 
@@ -27,7 +27,7 @@ R、 Python 和 Java 的延伸模組的封裝位置是在 SQL Server Linux 來�
 
 ## <a name="uninstall-previous-ctp"></a>解除安裝先前的 CTP
 
-套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.0 或 2.1，若要安裝 CTP 2.2 或更新版本之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
+套件清單已變更透過最後幾個 CTP 版本中，導致較少的封裝。 我們建議您解除安裝 CTP 2.x 安裝 CTP 2.3 之前先移除所有先前的封裝。 不支援多個版本的並存安裝。
 
 ### <a name="1-confirm-package-installation"></a>1.確認封裝安裝
 
@@ -61,7 +61,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-22-install"></a>3.繼續進行 CTP 2.2 安裝
+### <a name="3-proceed-with-ctp-23-install"></a>3.繼續進行 CTP 2.3 安裝
 
 在最高的封裝層級使用這篇文章中的指示，適用於您作業系統的安裝。
 
@@ -298,42 +298,50 @@ sudo zypper install mssql-server-extensibility-java
 
 1. 新增用來執行 SQL Server 服務 mssql 使用者帳戶。 如果您還沒有執行安裝程式之前，這是必要的。
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
 
 2. 接受授權合約的開放原始碼 R 和 Python。 有數種方式可以執行這項操作。 如果您先前接受 SQL Server 授權，而且現在要新增的 R 或 Python 的延伸模組，則下列命令會是貴用戶同意其條款：
 
-  ```bash
-  # Run as SUDO or root
-  # Use set + EULA 
-    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
-  ```
+   ```bash
+   # Run as SUDO or root
+   # Use set + EULA 
+   sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+   ```
 
-  替代的工作流程時，如果您還未接受授權合約的 SQL Server database engine，安裝程式偵測到 mssql mlservices 封裝並接受會提示您輸入時`mssql-conf setup`執行。 如需 「 授權合約 」 參數的詳細資訊，請參閱[mssql-conf 工具與設定 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-eula)。
+   替代的工作流程時，如果您還未接受授權合約的 SQL Server database engine，安裝程式偵測到 mssql mlservices 封裝並接受會提示您輸入時`mssql-conf setup`執行。 如需 「 授權合約 」 參數的詳細資訊，請參閱[mssql-conf 工具與設定 SQL Server](sql-server-linux-configure-mssql-conf.md#mlservices-eula)。
 
-3. 適用於 R 功能整合，將**MKL_CBWR**環境變數，以[確保一致的輸出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)從 Intel 數學核心程式庫 (MKL) 計算。
+3. 啟用輸出網路存取。 預設會停用輸出網路存取。 若要啟用輸出要求，請設定"outboundnetworkaccess 」 使用 mssql-conf 工具的布林值屬性。 如需詳細資訊，請參閱 <<c0> [ 設定 SQL Server on Linux 使用 mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)。
 
-  + 編輯或建立名為 **.bash_profile**在使用者主目錄中，將這一行加入`export MKL_CBWR="AUTO"`檔案。
+   ```bash
+   # Run as SUDO or root
+   # Enable outbound requests over the network
+   sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+   ```
 
-  + 執行此檔案輸入`source .bash_profile`bash 命令提示字元。
+4. 適用於 R 功能整合，將**MKL_CBWR**環境變數，以[確保一致的輸出](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)從 Intel 數學核心程式庫 (MKL) 計算。
 
-4. 重新啟動 SQL Server Launchpad 服務和資料庫引擎執行個體。 
+   + 編輯或建立名為 **.bash_profile**在使用者主目錄中，將這一行加入`export MKL_CBWR="AUTO"`檔案。
 
-  ```bash
-  systemctl restart mssql-launchpadd
+   + 執行此檔案輸入`source .bash_profile`bash 命令提示字元。
 
-  systemctl restart mssql-server.service
-  ```
+5. 重新啟動 SQL Server Launchpad 服務和資料庫引擎執行個體讀取 INI 檔案中的更新後的值。 重新啟動訊息會提醒您每次修改擴充性相關的設定。  
 
-5. 啟用外部指令碼執行使用 Azure Data Studio 或 SQL Server Management Studio (僅 Windows) 等其他工具執行 Transact SQL。 
+   ```bash
+   systemctl restart mssql-launchpadd
 
-  ```bash
-  EXEC sp_configure 'external scripts enabled', 1 
-  RECONFIGURE WITH OVERRIDE 
-  ```
+   systemctl restart mssql-server.service
+   ```
 
-6. 重新啟動 Launchpad 服務。
+6. 啟用外部指令碼執行使用 Azure Data Studio 或 SQL Server Management Studio (僅 Windows) 等其他工具執行 Transact SQL。 
+
+   ```bash
+   EXEC sp_configure 'external scripts enabled', 1 
+   RECONFIGURE WITH OVERRIDE 
+   ```
+
+7. 重新啟動 Launchpad 服務。
 
 ## <a name="verify-installation"></a>確認安裝
 

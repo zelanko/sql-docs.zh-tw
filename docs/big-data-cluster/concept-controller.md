@@ -5,17 +5,17 @@ description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 中的
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241279"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017864"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>什麼是 SQL Server 2019 巨量資料叢集上的控制器？
 
@@ -29,15 +29,15 @@ ms.locfileid: "54241279"
 - 若要觀察的叢集狀態的監視工具公開 （expose)
 - 公開 （expose) 來偵測並修復未預期的問題的疑難排解工具
 - 管理叢集安全性： 確保安全的叢集端點、 管理使用者和角色、 設定叢集間通訊的認證
-- 管理升級的工作流程，以便安全地實作 （不適用於 CTP 2.2）
-- （不適用於 CTP 2.2） 叢集中具狀態服務的管理高可用性和 DR
+- 管理升級的工作流程，以便安全地實作 （不適用於 CTP 2.3）
+- （不適用於 CTP 2.3） 叢集中具狀態服務的管理高可用性和 DR
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服務
 
 控制器會部署並裝載於相同的客戶，想要建置巨量資料叢集的 Kubernetes 命名空間。 此服務管理員安裝的 Kubernetes 叢集啟動程序，使用 mssqlctl 命令列公用程式期間：
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 增建工作流程會在 Kubernetes 上的版面配置功能完整的 SQL Server 巨量資料叢集，其中包含所述的所有元件[概觀](big-data-cluster-overview.md)文章。 啟動程序的工作流程首先會建立控制器服務，以及安裝和設定的主機、 計算、 資料和儲存體集區的服務一部分的其餘部分，這部署之後，將協調控制器服務。

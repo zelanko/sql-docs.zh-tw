@@ -5,17 +5,17 @@ description: 這篇文章會提供有用的 kubectl 命令，來監視和疑難�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241999"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017904"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>監視和疑難排解 SQL Server 的巨量資料叢集的 Kubectl 命令
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>在 SQL Server 的巨量資料叢集中顯示的所有 pod 的狀態
 
-使用`-n`參數來指定特定的命名空間。 請注意，在叢集啟動程序時建立的新命名空間中建立巨量資料叢集的 pod 的 SQL Server 基礎中指定的叢集名稱`mssqlctl create cluster <cluster_name>`命令。
+使用`-n`參數來指定特定的命名空間。 請注意，在叢集啟動程序時建立的新命名空間中建立巨量資料叢集的 pod 的 SQL Server 基礎中指定的叢集名稱`mssqlctl cluster create --name <cluster_name>`命令。
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>取得服務狀態
 
-執行下列命令來取得巨量資料叢集服務的詳細資料。 這些詳細資料包括其類型，並使用個別的服務和連接埠相關聯的 Ip。 請注意，在中指定的叢集名稱為基礎的叢集啟動程序時建立的新命名空間中建立 SQL Server 的巨量資料叢集服務`mssqlctl create cluster <cluster_name>`命令。
+執行下列命令來取得巨量資料叢集服務的詳細資料。 這些詳細資料包括其類型，並使用個別的服務和連接埠相關聯的 Ip。 請注意，在中指定的叢集名稱為基礎的叢集啟動程序時建立的新命名空間中建立 SQL Server 的巨量資料叢集服務`mssqlctl cluster create --name <cluster_name>`命令。
 
 ```bash
 kubectl get svc -n <namespace_name>

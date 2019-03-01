@@ -5,17 +5,17 @@ description: 了解如何使用叢集系統管理入口網站來監視 SQL Serve
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b8f50b74f733647e8a24b58b04147937be58ba98
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241569"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017854"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>如何使用叢集系統管理入口網站來監視 SQL Server 的巨量資料叢集
 
@@ -32,10 +32,10 @@ ms.locfileid: "54241569"
 
 請遵循[快速入門，來部署巨量資料叢集](quickstart-big-data-cluster-deploy.md)直到到達**叢集管理網站**一節。 一旦您有使用 mssqlctl 執行巨量資料叢集，請遵循下列指示：
 
-當控制器 pod 執行時，您可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`service-proxy-lb`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 認證為存取管理員入口網站的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的環境變數。
+當控制器 pod 執行時，您可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`endpoint-service-proxy`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 認證為存取管理員入口網站的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的環境變數。
 
 > [!NOTE]
-> CTP 2.2 沒有安全性警告時存取網頁，因為它使用自動產生的 SSL 憑證。
+> CTP 2.3 起，沒有安全性警告時存取網頁，因為它使用自動產生的 SSL 憑證。
 
 ## <a name="overview"></a>總覽
 
@@ -101,7 +101,7 @@ ms.locfileid: "54241569"
 若要深入了解每個集區：
 - [計算集區](concept-compute-pool.md)
 - [存放集區](concept-storage-pool.md)
-- [資料集區](concept-data-pool.md)
+- [data pool](concept-data-pool.md)
 
 ## <a name="about-page"></a>關於頁面
 

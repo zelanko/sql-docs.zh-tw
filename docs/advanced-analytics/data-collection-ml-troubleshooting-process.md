@@ -2,17 +2,17 @@
 title: 針對機器學習服務-SQL Server 機器學習服務的資料集合進行疑難排解
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644987"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017934"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>疑難排解適用於 machine learning 的資料收集
 
@@ -90,7 +90,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-R 主控台會在啟動時顯示的版本資訊。 例如，下列版本代表 SQL Server 2017 CTP 2.0 的預設組態：
+R 主控台會在啟動時顯示的版本資訊。 例如，下列版本代表 SQL Server 2017 的預設組態：
 
     *Microsoft R Open 3.3.3*
 
@@ -280,9 +280,9 @@ Machine Learning 服務中將需要下列網路通訊協定的擴充性元件之
 3. 若要啟用指令碼執行，請建立角色，或將使用者新增至下列角色，視：
 
    - 以外的所有*db_owner*:需要執行任何的外部指令碼。
-   - *db_datawriter*:若要從 R 或 Python 中寫入結果。
-   - *db_ddladmin*:若要建立新的物件。
-   - *db_datareader*:若要讀取資料，以供 R 或 Python 程式碼。
+   - *db_datawriter*：若要從 R 或 Python 中寫入結果。
+   - *db_ddladmin*：若要建立新的物件。
+   - *db_datareader*：若要讀取資料，以供 R 或 Python 程式碼。
 4. 請注意是否安裝 SQL Server 2016 時變更任何預設的啟動帳戶。
 5. 如果使用者需要安裝新的 R 套件或使用其他使用者所安裝的 R 套件，您可能需要執行個體上啟用封裝管理，然後將指派其他權限。 如需詳細資訊，請參閱 <<c0> [ 啟用或停用 R 封裝管理](r/r-package-how-to-enable-or-disable.md)。
 

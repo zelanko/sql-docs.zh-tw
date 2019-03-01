@@ -5,17 +5,17 @@ description: 了解如何設定多個 Ubuntu 16.04 上的 Kubernetes 或適用�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 78d2024f09e78645d8fa1c35279b296e3cda53d7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241584"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017984"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的多部電腦上的 Kubernetes
 
@@ -26,9 +26,11 @@ ms.locfileid: "54241584"
 
 ## <a name="prerequisites"></a>先決條件
 
-- 多個 Linux 實體機器或虛擬機器使用叢集
-- 建議的設定：8 個 Cpu，32 GB 的記憶體，並至少 100 GB 的每個機器的存放裝置
-- 在叢集中的三部機器的最小值
+- 最小值為 3 的 Linux 實體機器或虛擬機器
+- 建議每個機器的設定：
+   - 8 個 Cpu
+   - 32 GB 的記憶體
+   - 100 GB 的儲存體
 
 ## <a name="prepare-the-machines"></a>準備機器
 
@@ -146,4 +148,4 @@ kubectl get nodes
 
 這篇文章中的步驟設定多部 Ubuntu 電腦上的 Kubernetes 叢集。 下一個步驟是將 SQL Server 2019 巨量資料叢集部署。 如需指示，請參閱下列文章：
 
-[部署 SQL Server 2019 CTP 2.2 上 Kubernetes](deployment-guidance.md#deploy)
+[部署在 Kubernetes 上的 SQL Server](deployment-guidance.md#deploy)

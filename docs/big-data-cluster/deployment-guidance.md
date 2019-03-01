@@ -5,17 +5,17 @@ description: 了解如何部署在 Kubernetes 上的 SQL Server 2019 巨量資�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087857"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018004"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -84,10 +84,10 @@ kubectl config view
 
 | 環境變數 | 必要項 | 預設值 | 描述 |
 |---|---|---|---|
-| **ACCEPT_EULA** | 是 | N/A | 接受 SQL Server 授權合約 (例如，' Y')。  |
+| **ACCEPT_EULA** | 是 | N/A | SQL Server 授權合約 （例如，'Yes'）。  |
 | **CLUSTER_NAME** | 是 | N/A | 若要部署到叢集的巨量資料的 sql Server 的 Kubernetes 命名空間名稱。 |
 | **CLUSTER_PLATFORM** | 是 | N/A | 部署 Kubernetes 叢集平台。 可以是`aks`， `minikube`， `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | 否 | 1 | 若要建置的計算集區複本數目。在允許的 CTP 2.2 只有值為 1。 |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | 否 | 1 | 若要建置的計算集區複本數目。在允許的 CTP 2.3 只有值為 1。 |
 | **CLUSTER_DATA_POOL_REPLICAS** | 否 | 2 | 數目的資料集區來建置的複本。 |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | 否 | 2 | 若要建置的儲存體集區複本數目。 |
 | **DOCKER_REGISTRY** | 是 | TBD | 私用登錄中儲存用來部署叢集的映像。 |
@@ -189,7 +189,7 @@ export STORAGE_CLASS_NAME=standard
 建立叢集 API 用來初始化 Kubernetes 命名空間，並部署到命名空間的所有應用程式 pod。 若要部署 Kubernetes 叢集上的 SQL Server 巨量資料叢集，請執行下列命令：
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 在叢集啟動程序，用戶端的 [命令] 視窗會將輸出的部署狀態。 在部署過程中，您應該會看到一系列的訊息，它正在等候控制器 pod:
@@ -202,7 +202,7 @@ mssqlctl create cluster <your-cluster-name>
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ mssqlctl create cluster <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> 取得 SQL Server Master 執行個體和 SQL Server 巨量資料叢集 IP 位址
+## <a id="masterip"></a> 取得巨量資料叢集端點
 
-部署指令碼已順利完成之後，您可以取得使用下面所述的步驟在 SQL Server 主要執行個體的 IP 位址。 您將使用此 IP 位址和連接埠號碼 31433 連接到 SQL Server 的主要執行個體 (例如：  **\<ip 位址\>31433、**)。 同樣地，針對 SQL Server 的巨量資料叢集 IP。 所有的叢集端點所述在 叢集系統管理網站的 服務端點 索引標籤。 您可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`service-proxy-lb`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 認證為存取管理員入口網站的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的環境變數。
+部署指令碼已順利完成之後，您可以取得使用下面所述的步驟在 SQL Server 主要執行個體的 IP 位址。 您將使用此 IP 位址和連接埠號碼 31433 連接到 SQL Server 的主要執行個體 (例如：  **\<ip-address-of-endpoint-master-pool\>31433、**)。 同樣地，您可以連接到 SQL Server 與相關聯的巨量資料叢集 （HDFS/Spark 閘道） 的 IP**端點安全性**服務。
 
-### <a name="aks"></a>AKS
-
-如果您使用 AKS，Azure 會提供 Azure 負載平衡器服務。 執行下列命令：
+下列的 kubectl 命令會擷取適用於巨量資料叢集的通用端點：
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-尋求**EXTERNAL-IP**值，指派給服務。 然後，連接到 SQL Server 主要執行個體連接埠 31433 使用的 IP 位址 (例如：  **\<ip 位址\>、 31433**) 和 SQL Server 使用的外部 IP 的巨量資料叢集端點`service-security-lb`服務。 
+尋求**EXTERNAL-IP**指派給每個服務的值。
+
+所有的叢集端點也會概述於**服務端點**叢集管理入口網站中的索引標籤。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`endpoint-service-proxy`(例如： **https://\<ip-address-of-endpoint-service-proxy\>: 30777/入口網站**)。 認證為存取管理員入口網站的值`CONTROLLER_USERNAME`和`CONTROLLER_PASSWORD`上面提供的環境變數。 您也可以使用叢集系統管理入口網站來監視部署。
+
+如需有關如何連接的詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 巨量資料叢集使用 Azure Data Studio](connect-to-big-data-cluster.md)。
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ kubectl get svc -n <your-cluster-name>
 1. 刪除舊的叢集使用`mssqlctl delete cluster`命令。
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > 使用新版**mssqlctl**符合您的叢集。 請勿刪除舊的叢集中，較新版的**mssqlctl**。
 
 1. 解除安裝任何舊版本**mssqlctl**。
 
@@ -270,13 +275,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ kubectl get svc -n <your-cluster-name>
    | 服務 | 描述 |
    |---|---|
    | **endpoint-master-pool** | 提供存取權的主要執行個體。<br/>(**EXTERNAL-IP，31433**並**SA**使用者) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | 支援工具和管理叢集的用戶端。 |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | 提供存取權[叢集管理網站](cluster-admin-portal.md)。<br/>(https://**EXTERNAL-IP**: 30777/入口網站)|
-   | **service-security-lb**<br/>**service-security-nodeport** | 可存取 HDFS/Spark 閘道。<br/>(**EXTERNAL-IP**並**根**使用者) |
+   | **endpoint-controller** | 支援工具和管理叢集的用戶端。 |
+   | **endpoint-service-proxy** | 提供存取權[叢集管理網站](cluster-admin-portal.md)。<br/>(https://**EXTERNAL-IP**: 30777/入口網站)|
+   | **endpoint-security** | 可存取 HDFS/Spark 閘道。<br/>(**EXTERNAL-IP**並**根**使用者) |
 
-   > [!NOTE]
-   > 根據您的 Kubernetes 環境而有所不同的服務名稱。 在部署 Azure Kubernetes Service (AKS) 上，服務名稱結尾 **-l b**。Minikube 和 kubeadm 部署的服務名稱的結尾 **-nodeport**。
-
-1. 使用[叢集系統管理入口網站](cluster-admin-portal.md)若要監視部署上**部署** 索引標籤。您必須等到**lb-proxy 服務-** 服務存取此入口網站，讓其無法在部署開始之前啟動。
+1. 使用[叢集系統管理入口網站](cluster-admin-portal.md)若要監視部署上**部署** 索引標籤。您必須等到**端點服務 proxy**服務存取此入口網站，讓其無法在部署開始之前啟動。
 
 > [!TIP]
 > 如需有關如何疑難排解在叢集的詳細資訊，請參閱[進行監視和疑難排解 SQL Server 的巨量資料叢集的 Kubectl 命令](cluster-troubleshooting-commands.md)。

@@ -4,18 +4,18 @@ description: 本文說明如何在 Linux 上設定 SQL Server 設定時，用以
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401893"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018074"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具，設定在 Linux 上的 SQL Server
 
@@ -74,6 +74,7 @@ ms.locfileid: "52401893"
 | [記憶體限制](#memorylimit) | 設定 SQL Server 的記憶體限制。 |
 | [Microsoft 分散式交易協調器](#msdtc) | 設定及疑難排解在 Linux 上的 MSDTC。 |
 | [MLServices Eula](#mlservices-eula) | 接受 mlservices 套件的 R 和 Python Eula。 適用於 2019年僅限 SQL Server。|
+| [outboundnetworkaccess](#mlservices-outbound-access) |啟用輸出網路存取權[mlservices](sql-server-linux-setup-machine-learning.md) R、 Python 和 Java 的延伸模組。|
 | [TCP 連接埠](#tcpport) | 變更 SQL Server 接聽的連接埠。 |
 | [TLS](#tls) | 設定傳輸層級安全性。 |
 | [追蹤旗標](#traceflags) | 設定服務將使用追蹤旗標。 |
@@ -396,8 +397,8 @@ ms.locfileid: "52401893"
 
     | 類型 | 描述 |
     |-----|-----|
-    | **迷你** | 迷你是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
-    | **迷你加強** | Mini、 miniPlus 大致，但包含額外的記憶體。 它了解 SQLPAL 和主機環境中，加入傾印中的下列記憶體區域的內部項目：</br></br> -各種全域變數</br> -所有的記憶體，大於 64 TB</br> -所有名為區域中找到 **/proc/$ pid/對應**</br> -間接與執行緒堆疊的記憶體</br> 執行緒的資訊</br> -關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
+    | **mini** | 迷你是最小的傾印檔案類型。 它會使用 Linux 系統資訊來判斷執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
+    | **miniplus** | Mini、 miniPlus 大致，但包含額外的記憶體。 它了解 SQLPAL 和主機環境中，加入傾印中的下列記憶體區域的內部項目：</br></br> -各種全域變數</br> -所有的記憶體，大於 64 TB</br> -所有名為區域中找到 **/proc/$ pid/對應**</br> -間接與執行緒堆疊的記憶體</br> 執行緒的資訊</br> -關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
     | **filtered** | 減法為基礎的篩選會使用設計程序中的所有記憶體其中都包含除非特別排除。 設計了解 SQLPAL 和主機環境中，從傾印中排除特定區域的內部資訊。
     | **full** | 完整包含所有區域的完整程序傾印位於 **/proc/$ pid/對應**。 這不會受到**coredump.captureminiandfull**設定。 |
 
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> 啟用輸出網路存取
+
+R、 Python 和 Java 中的延伸模組的輸出網路存取權[SQL Server Machine Learning 服務](sql-server-linux-setup-machine-learning.md)預設會停用功能。 若要啟用輸出要求，將"outboundnetworkaccess 」 使用 mssql 設定的布林值屬性
+
+設定的屬性之後, 重新啟動 SQL Server Launchpad 服務讀取 INI 檔案中的更新後的值。 重新啟動訊息會提醒您每次修改擴充性相關的設定。
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+您也可以直接新增"outboundnetworkaccess 」 [mssql.conf 檔案](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> 變更 TCP 連接埠
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 請注意，此檔案中未顯示任何設定會使用其預設值。 下一節中提供的範例**mssql.conf**檔案。
 
 
-## <a id="mssql-conf-format"></a> mssql.conf 格式
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 下列 **/var/opt/mssql/mssql.conf**檔案提供每個設定的範例。 您可以使用這個格式來手動變更**mssql.conf**檔案所需。 如果您以手動方式變更的檔案，您必須重新啟動 SQL Server 所做的變更會套用。 若要使用**mssql.conf**檔案使用 Docker，您必須具有 Docker[保存您的資料](sql-server-linux-configure-docker.md)。 第一次新增 完整**mssql.conf**檔案到您的主應用程式目錄，然後執行容器。 在這個範例[客戶的意見反應](sql-server-linux-customer-feedback.md)。
 

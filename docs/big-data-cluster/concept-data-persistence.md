@@ -5,17 +5,17 @@ description: 深入了解資料持續性中的 SQL Server 2019 巨量資料叢�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 47fb255ea18fdf48765a1a40b1e05e06cdf7ee1e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241739"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017954"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 
@@ -26,11 +26,11 @@ ms.locfileid: "54241739"
 SQL Server 巨量資料叢集會使用這些永續性磁碟區的方式是使用[儲存類別](https://kubernetes.io/docs/concepts/storage/storage-classes/)。 您可以建立不同的儲存體類別，用於不同種類的儲存體，並在巨量資料叢集部署期間指定它們。 您可以設定的儲存體来使用類別用途 （集區）。 SQL Server 的巨量資料叢集會建立[永續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)與每個 pod，需要永續性磁碟區的指定儲存體類別名稱。 然後，它會裝載 pod 中對應的永續性磁碟區。
 
 > [!NOTE]
-> CTP 2.2，只針對`ReadWriteOnce`支援整個叢集的存取模式。
+> CTP 2.3 起，僅針對`ReadWriteOnce`支援整個叢集的存取模式。
 
 ## <a name="deployment-settings"></a>部署設定
 
-若要在部署期間使用永續性儲存體，請設定**USE_PERSISTENT_VOLUME**並**STORAGE_CLASS_NAME**環境變數，再執行`mssqlctl create cluster`命令。 **USE_PERSISTENT_VOLUME**設為`true`預設。 您可以覆寫預設值，並將它設定為`false`和巨量資料的 SQL Server 叢集在此情況下，使用 emptyDir 掛接。 
+若要在部署期間使用永續性儲存體，請設定**USE_PERSISTENT_VOLUME**並**STORAGE_CLASS_NAME**環境變數，再執行`mssqlctl cluster create`命令。 **USE_PERSISTENT_VOLUME**設為`true`預設。 您可以覆寫預設值，並將它設定為`false`和巨量資料的 SQL Server 叢集在此情況下，使用 emptyDir 掛接。 
 
 > [!WARNING]
 > 執行而永續性儲存體不能在測試環境中，但它可能會導致非功能性的叢集。 在 pod 重新啟動時，叢集中繼資料及/或使用者資料會永久遺失。
@@ -68,7 +68,7 @@ Kubeadm 並未隨附於內建的儲存體類別。 您可以選擇建立您自�
 內部叢集顯然沒有任何內建的儲存體類別，因此您必須設定[永續性磁碟區](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[佈建](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/)事先，然後使用 對應SQL Server 的巨量資料叢集部署期間的儲存體類別。
 
 ## <a name="customize-storage-size-for-each-pool"></a>自訂每個集區的儲存體大小
-根據預設，每個叢集中佈建的 pod 佈建永續性磁碟區的大小為 6 GB。 這是藉由設定環境變數可設定`STORAGE_SIZE`到不同的值。 例如，您可以執行下列命令來將值設為 10 GB，才能執行`mssqlctl create cluster command`。
+根據預設，每個叢集中佈建的 pod 佈建永續性磁碟區的大小為 6 GB。 這是藉由設定環境變數可設定`STORAGE_SIZE`到不同的值。 例如，您可以執行下列命令來將值設為 10 GB，才能執行`mssqlctl cluster create --name command`。
 
 ```bash
 export STORAGE_SIZE=10Gi
@@ -88,7 +88,7 @@ export STORAGE_POOL_STORAGE_SIZE=100Gi
 |---|---|---|
 | **USE_PERSISTENT_VOLUME** | true | `true` 若要使用 Kubernetes 永續性磁碟區宣告 pod 儲存體。 `false` 要用於 pod 儲存體中的暫時主機儲存體。 |
 | **STORAGE_CLASS_NAME** | 預設 | 如果`USE_PERSISTENT_VOLUME`是`true`這表示 Kubernetes 儲存體類別使用的名稱。 |
-| **STORAGE_SIZE** | 6 gi | 如果`USE_PERSISTENT_VOLUME`是`true`，這表示每個 pod 的永續性磁碟區大小。 |
+| **STORAGE_SIZE** | 6Gi | 如果`USE_PERSISTENT_VOLUME`是`true`，這表示每個 pod 的永續性磁碟區大小。 |
 | **DATA_POOL_USE_PERSISTENT_VOLUME** | USE_PERSISTENT_VOLUME | `true` 若要使用 Kubernetes 永續性磁碟區宣告的資料集區中的 pod。 `false` 若要使用暫時主機儲存體的資料集區的 pod。 |
 | **DATA_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | 表示要用於永續性磁碟區相關聯的資料集區的 pod Kubernetes 儲存體類別的名稱。|
 | **DATA_POOL_STORAGE_SIZE** | STORAGE_SIZE |表示資料集區中每個 pod 的永續性磁碟區大小。 |

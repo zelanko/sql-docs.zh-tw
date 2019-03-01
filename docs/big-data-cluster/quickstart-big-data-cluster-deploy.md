@@ -5,17 +5,17 @@ description: 逐步解說部署的 SQL Server 2019 巨量資料叢集 （預覽�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231065"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017874"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -108,7 +108,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -151,16 +151,16 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ### <a name="use-the-cluster-administration-portal"></a>使用叢集系統管理入口網站
 
-當控制器 pod 執行時，您也可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`service-proxy-lb`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 用來登入入口網站的認證比對的值**Controller 使用者**並**密碼**您在部署指令碼中指定。
+當控制器 pod 執行時，您也可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`endpoint-service-proxy`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 用來登入入口網站的認證比對的值**Controller 使用者**並**密碼**您在部署指令碼中指定。
 
-您可以取得的 IP 位址**lb-proxy 服務-** 服務中的 bash 或 cmd 視窗執行下列命令：
+您可以取得的 IP 位址**端點服務 proxy**服務中的 bash 或 cmd 視窗執行下列命令：
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> 在 CTP 2.2，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。 此外，在 CTP 2.2，它不會顯示 SQL Server 的主要執行個體的狀態。
+> 在 CTP 2.3 起，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。 此外，在 CTP 2.3 起，它不會顯示 SQL Server 的主要執行個體的狀態。
 
 ## <a name="connect-to-the-cluster"></a>連線到叢集
 

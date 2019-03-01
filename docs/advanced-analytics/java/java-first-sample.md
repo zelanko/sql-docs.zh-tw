@@ -3,18 +3,18 @@ title: Java 範例和教學課程中的 SQL Server 2019-SQL Server Machine Learn
 description: 若要了解 SQL Server 資料搭配使用的 Java 語言擴充功能的步驟執行的 SQL Server 2019 上執行 Java 範例程式碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069053"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018034"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server 的 Java 範例逐步解說
 
@@ -26,7 +26,7 @@ ms.locfileid: "54069053"
 
 + SQL Server Management Studio 或其他工具來執行 T-SQL。
 
-+ Java SE 開發套件 (JDK) 1.10 上 Windows 或在 Linux 上的 JDK 1.8。
++ Java SE Development Kit (JDK) 8 在 Windows 或 Linux。
 
 使用命令列編譯**javac**是本教學課程。 
 
@@ -148,7 +148,7 @@ public class Ngram {
 }
 ```
 
-## <a name="3---class-inputrowjava"></a>3-類別 InputRow.java
+## <a name="3---class-inputrowjava"></a>3 - Class InputRow.java
 
 建立第二個類別，稱為**InputRow.java**、 組成下列程式碼，並儲存到相同的位置**Ngram.java**。
 
@@ -232,7 +232,7 @@ Classpath 是編譯的程式碼的位置。 比方說，在 Linux 上，如果 c
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7-呼叫*getNgrams()*
+## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
 
 若要從 SQL Server 呼叫的程式碼，指定 Java 方法**getNgrams()** sp_execute_external_script 的"script"參數中。 這個方法屬於稱為 「 套件 」 和呼叫的類別檔案的套件**Ngram.java**。
 
@@ -240,7 +240,7 @@ Classpath 是編譯的程式碼的位置。 比方說，在 Linux 上，如果 c
 
 + 在 Linux 上，請在 SQL Server Management Studio 或其他工具，用來執行 TRANSACT-SQL 中執行下列程式碼。 
 
-+ 在 Windows，變更**@myClassPath**到 N'C:\myJavaCode\' （假設它 \pkg 的上層資料夾） 中 SQL Server Management Studio 或其他工具執行查詢之前。
++ 在 Windows，變更@myClassPathN'C:\myJavaCode 至\'（假設它 \pkg 的上層資料夾） 中 SQL Server Management Studio 或其他工具執行查詢之前。
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

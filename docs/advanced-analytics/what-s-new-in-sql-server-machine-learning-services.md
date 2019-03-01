@@ -3,20 +3,20 @@ title: 什麼&#39;新的-s SQL Server Machine Learning 服務
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 43f1f5fb9ace80da357ecca9e4abd715bd4a6048
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397617"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018044"
 ---
-# <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能 
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -29,6 +29,11 @@ ms.locfileid: "54397617"
 
 | 版本 | 功能更新 |
 |---------|----------------|
+| CTP 2.3 | 新的支援[Java 資料類型](java/java-sql-datatypes.md)。 |
+| | 只有 Windows 上的 Java 程式碼可以存取的外部程式庫使用[CREATE EXTERNAL LIBRARY & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-external-library-transact-sql.md)陳述式。 對等的功能將會在後續的 CTP 中的 Linux 上使用。 深入了解：[如何從 SQL Server 呼叫 Java](java/howto-call-java-from-sql.md)。 |
+| | 只有 Windows 上的 Python 程式碼可以存取的外部程式庫使用[CREATE EXTERNAL LIBRARY & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-external-library-transact-sql.md)陳述式。 對等的功能將會在後續的 CTP 中的 Linux 上使用。 |
+| CTP 2.2 | 無變更。 |
+| CTP 2.1 | 無變更。 |
 | CTP 2.0 | R 和 Python 機器學習服務的 Linux 平台支援。 快速入門[安裝 SQL Server Machine Learning 服務在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。 |
 |   | [Java 語言擴充功能](java/extension-java.md)是 Windows 和 Linux 上的 SQL Server 2019 preview 的新功能。 您可以將已編譯的 Java 程式碼提供給 SQL Server 藉由指派權限，以及設定路徑。 存取 SQL Server 的用戶端應用程式可以使用資料，並執行您的程式碼，藉由呼叫[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)，相同的程序用於 SQL Server 上的 R 和 Python 整合。 | 
 |  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)導入了兩個新的參數可讓您輕鬆地從資料分割的資料產生多個模型。 進一步了解本教學課程[在 R 中建立資料分割為基礎的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
@@ -100,7 +105,7 @@ T-SQL 和 Python 整合透過支援[sp_execute_external_script](https://docs.mic
 
 ## <a name="linux-support-roadmap"></a>Linux 支援藍圖
 
-當您安裝的機器學習服務與資料庫引擎執行個體的封裝時，SQL Server 2019 CTP 2.0 會新增 R、 Python 和 Java 的 Linux 支援。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server Machine Learning 服務在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。
+當您安裝的機器學習服務與資料庫引擎執行個體的封裝時，SQL Server 2019 CTP 2.3 會新增 R、 Python 和 Java 的 Linux 支援。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server Machine Learning 服務在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。
 
 在 Linux 上，SQL Server 2017 沒有 R 或 Python 整合，但您可以使用[原生評分](sql-native-scoring.md)Linux 上因為該功能是透過 T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md)，以在 Linux 上執行。 原生評分，可讓高效能評分從預先定型的模型，而不需要呼叫，或甚至需要 R 執行階段。
 

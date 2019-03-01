@@ -3,18 +3,18 @@ title: 在 SQL Server 2019-SQL Server Machine Learning 服務的 Java 語言擴�
 description: 安裝、 設定及驗證的 Java 語言擴充功能於 SQL Server 2019 適用於 Linux 和 Windows 系統。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a258573ff7506f2533c2f91edb5751cfd1121dc8
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: a18886ea4daff3fb87853a556b67ad0562c2efd3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53431712"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017834"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 的 Java 語言擴充功能 
 
@@ -24,23 +24,27 @@ ms.locfileid: "53431712"
 
 如同任何程式設計語言擴充功能，系統預存程序[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)是執行預先編譯的 Java 程式碼的介面。
 
+<a name="prerequisites"></a>
+
 ## <a name="prerequisites"></a>先決條件
 
-需要 SQL Server 2019 預覽執行個體。 較早版本不需要 Java 整合。 
+需要 SQL Server 2019 預覽執行個體。 較早版本不需要 Java 整合。
 
-Java 版本需求是根據 Windows 和 Linux 而異。 Java Runtime Environment (JRE) 是最低需求，但 Jdk 適用於您需要的 Java 編譯器或開發套件。 因為 JDK 是全部 （含），如果您安裝 JDK、 JRE 不是必要的。
+支援 Java 8。 Java Runtime Environment (JRE) 是最低需求，但 Jdk 適用於您需要的 Java 編譯器或開發套件。 因為 JDK 是全部 （含），如果您安裝 JDK、 JRE 不是必要的。
 
-| 作業系統 | Java 版本 | JRE 下載 | JDK 下載 |
-|------------------|--------------|--------------|--------------|
-| 視窗          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
-| Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
+您可以使用您慣用的 Java 8 散發套件。 以下是兩個建議的散發套件：
 
-在 Linux 上， **mssql 伺服器擴充性-java**套件會自動安裝 JRE 1.8，如果尚未安裝。 安裝指令碼也會新增至名為 JAVA_HOME 環境變數的 JVM 路徑。
+| Distribution | Java 版本 | 作業系統 | JDK | JRE |
+|-|-|-|-|-|
+| [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows 和 Linux | 是 | 是 |
+| [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows 和 Linux | 是 | 否 |
 
-在 Windows，建議您安裝的 JDK，在預設 /Program 檔案 / 資料夾的話。 否則，額外的設定，才能授與權限可執行檔。 如需詳細資訊，請參閱 <<c0> [ 授與權限 (Windows)](#perms-nonwindows)這份文件中的一節。
+在 Linux 上， **mssql 伺服器擴充性-java**套件會自動安裝 JRE 8，如果尚未安裝。 安裝指令碼也會新增至名為 JAVA_HOME 環境變數的 JVM 路徑。
+
+在 Windows，建議您安裝在預設 JDK`/Program Files/`資料夾的話。 否則，額外的設定，才能授與權限可執行檔。 如需詳細資訊，請參閱 <<c0> [ 授與權限 (Windows)](#perms-nonwindows)這份文件中的一節。
 
 > [!Note]
-> 提供 Java 是具有回溯相容性，舊版可能會運作，但資料表中列出的支援並經過測試的版本，這個早期的 CTP 版本。
+> 提供 Java 是具有回溯相容性，可更早版本，但這個早期的 CTP 版本的支援並經過測試的版本是 Java 8。 
 
 <a name="install-on-linux"></a>
 
@@ -55,11 +59,11 @@ sudo yum install mssql-server-extensibility-java
 # Ubuntu install commands
 sudo apt-get install mssql-server-extensibility-java
 
-# USE install commands
+# SUSE install commands
 sudo zypper install mssql-server-extensibility-java
 ```
 
-當您安裝**mssql 伺服器擴充性-java**，封裝會自動安裝 JRE 1.8，如果尚未安裝。 另外還會新增至名為 JAVA_HOME 環境變數的 JVM 路徑。
+當您安裝**mssql 伺服器擴充性-java**，封裝會自動安裝 JRE 8，如果尚未安裝。 另外還會新增至名為 JAVA_HOME 環境變數的 JVM 路徑。
 
 完成安裝之後下, 一個步驟是[設定外部指令碼執行](#configure-script-execution)。
 
@@ -93,31 +97,35 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ## <a name="install-on-windows"></a>在 Windows 上安裝
 
-1. [執行安裝程式](../install/sql-machine-learning-services-windows-install.md)安裝 SQL Server 2019。
+1. 確定已安裝支援的 Java 版本。 如需詳細資訊，請參閱 <<c0> [ 必要條件](#prerequisites)。
 
-2. 當您前往 特徵選取時，請選擇**Machine Learning 服務 （資料庫）**。 
+2. [執行安裝程式](../install/sql-machine-learning-services-windows-install.md)安裝 SQL Server 2019。
+
+3. 當您前往 特徵選取時，請選擇**Machine Learning 服務 （資料庫）**。 
 
    雖然 Java 整合並未隨附於機器學習程式庫，這是提供擴充性架構的安裝程式中的選項。 如果您想要您可以省略 R 和 Python。
 
-3. 完成安裝精靈，然後繼續進行下面兩個工作。
+4. 完成安裝精靈，然後繼續進行下面兩個工作。
 
 ### <a name="add-the-javahome-variable"></a>將 JAVA_HOME 變數
 
 JAVA_HOME 是環境變數，可指定 Java 解譯器的位置。 在此步驟中，為其在 Windows 上建立系統環境變數。
 
-1. 尋找並複製/JRE 的 JDK 安裝路徑 (例如，C:\Program Files\Java\jdk-10.0.2)。
+1. 尋找並複製 JDK/JRE 路徑 (例如`C:\Program Files\Java\jdk1.8.0_201`)。
 
-  在 CTP 2.0 中，將 JAVA_HOME 設定為基底的 jdk 資料夾僅適用於 Java 1.10。 
-
-  適用於 Java 1.8，擴充到您 JDK (例如，"C:\Program Files\Java\jdk1.8.0_181\bin\server"在 Windows 上的 jvm.dll 路徑。 或者，您可以指向 JRE 的基底資料夾："C:\Program Files\Java\jre1.8.0_181"。
+    根據您慣用的 Java 散發套件，您的 JRE 的 JDK 的位置可能不同於上述的範例路徑。
 
 2. 在控制台中，開啟**系統及安全性**，開啟**系統**，然後按一下**進階系統屬性**。
 
 3. 按一下 **環境變數**。
 
-4. 為 JAVA_HOME 中建立新的系統變數。
+4. 建立新的系統變數`JAVA_HOME`JDK/JRE 路徑 （在步驟 1 中找到） 的值。
 
-   ![環境變數中的 Java 首頁](../media/java/env-variable-java-home.png "設定適用於 Java")
+5. 重新啟動[Launchpad](../concepts/extensibility-framework.md#launchpad)。
+
+    1. 開啟 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。
+
+    2. 在 SQL Server 服務，以滑鼠右鍵按一下 SQL Server 啟動控制板，然後選取**重新啟動**。
 
 <a name="perms-nonwindows"></a>
 
@@ -141,13 +149,6 @@ icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
 icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 ```
 
-### <a name="add-the-jre-path-to-javahome"></a>新增的 JRE 路徑 JAVA_HOME
-您也需要新增的 jre JAVA_HOME 系統環境變數中的路徑。 如果您只需要安裝的 JRE，您可以提供 JRE 資料夾路徑。 不過，如果您有安裝 JDK，您必須在 jvm，像這樣在 JDK、 JRE 資料夾中提供的完整路徑："C:\Program Files\Java\jdk1.8.0_191\jre\bin\server"。
-
-若要建立的系統變數，使用 [控制台] > 系統及安全性 > 系統來存取**進階系統屬性**。 按一下 **環境變數**JAVA_HOME 然後建立新的系統變數。
-
-![環境變數中的 Java 首頁](../media/java/env-variable-java-home.png "設定適用於 Java")
-
 <a name="configure-script-execution"></a>
 
 ## <a name="configure-script-execution"></a>設定指令碼執行
@@ -164,17 +165,15 @@ icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 若要確認安裝是否運作正常，請建立並執行[範例應用程式](java-first-sample.md)使用您剛安裝的 JDK，將這些檔案放在您稍早設定的 classpath 中。
 
-## <a name="differences-in-ctp-20"></a>在 CTP 2.0 中的差異
+## <a name="differences-in-ctp-23"></a>CTP 2.3 的差異
 
 如果您已熟悉使用機器學習服務，擴充功能的授權和隔離模型已變更在此版本中。 如需詳細資訊，請參閱 < [SQL Server 機器 2019 Learning Services 安裝中的差異](../install/sql-machine-learning-services-ver15.md)。
 
-## <a name="limitations-in-ctp-20"></a>在 CTP 2.0 中的限制
+## <a name="limitations-in-ctp-23"></a>在 CTP 2.3 的限制
 
 * 輸入和輸出緩衝區中的值數目不能超過`MAX_INT (2^31-1)`因為這是可配置在 Java 中陣列的項目數目上限。
 
 * 輸出中的參數[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)此版本中不支援。
-
-* 在這個版本中的輸入和輸出資料集沒有 LOB 資料類型支援。 請參閱[Java 和 SQL Server 資料型別](java-sql-datatypes.md)的哪些資料類型支援此 CTP 中的詳細資料。
 
 * 使用串流 sp_execute_external_script 參數@r_rowsPerRead此 CTP 中不支援。
 
@@ -190,7 +189,7 @@ icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 jar -cf <MyJar.jar> *.class
 ```
 
-請確定路徑**jar.exe**屬於系統 path 變數。 或者，指定可以找到下 /bin JDK 資料夾中的 jar 的完整路徑： `C:\Users\MyUser\Desktop\jdk-10.0.2\bin\jar -cf <MyJar.jar> *.class`
+請確定路徑**jar.exe**屬於系統 path 變數。 或者，指定可以找到下 /bin JDK 資料夾中的 jar 的完整路徑： `C:\Users\MyUser\Desktop\jdk1.8.0_201\bin\jar -cf <MyJar.jar> *.class`
 
 ## <a name="next-steps"></a>後續步驟
 

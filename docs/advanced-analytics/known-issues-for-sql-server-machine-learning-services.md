@@ -2,17 +2,17 @@
 title: R 語言和 Python 整合-SQL Server Machine Learning 服務的已知的問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645516"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018064"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>在 Machine Learning 服務的已知的問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -204,7 +204,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 如果您遇到資源限制，請檢查目前的預設值。 如果 20%不夠時，請參閱文件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如何變更此值。
 
-**適用於：** SQL Server 2016 R 服務，Enterprise Edition
+**適用於：** SQL Server 2016 R Services, Enterprise Edition
 
 ## <a name="r-script-execution-issues"></a>R 指令碼執行問題
 
@@ -216,7 +216,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 如果 SQL Server 執行個體已安裝到非預設位置，例如外部`Program Files`資料夾中，當您嘗試執行安裝套件的指令碼時，會引發 ACCESS_DENIED 警告。 例如：
 
-> *在  `normalizePath(path.expand(path), winslash, mustWork)` ： 路徑 [2] ="~ExternalLibraries/R/8/1 」:存取遭拒*
+> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1":存取遭拒*
 
 原因是 R 函式嘗試讀取此路徑，且如果將會失敗的內建的使用者群組**SQLRUserGroup**，沒有讀取權限。 就會引發警告不會封鎖執行目前的 R 指令碼，但警告可能會重複發生，每當使用者執行任何其他的 R 指令碼。
 
@@ -252,7 +252,7 @@ R 與 SQL Server R Services 一起安裝的版本會更新在安裝 SQL Server �
 
 SQL Server 2016 Service Pack 1 已修正這個問題。 我們建議您升級至最新的服務版本。
 
-**適用於：** SQL Server 2016 R 服務 RTM 版本
+**適用於：** SQL Server 2016 R Services RTM version
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5.讀取 SQL Server 計算內容中的資料，無法變更資料行類型。
 

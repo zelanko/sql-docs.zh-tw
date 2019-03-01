@@ -5,17 +5,17 @@ description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e4ec4e6f0de497e3ec5d35293ad142696a19a46
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229029"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017994"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes 服務
 
@@ -38,36 +38,39 @@ AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的
 
 - 最小值 1.10 Kubernetes 伺服器版本。 您必須使用 AKS，`--kubernetes-version`參數來指定預設值不同的版本。
 
-- AKS 環境，以獲得最佳的體驗，同時驗證基本案例中，我們建議至少三個代理程式 Vm 具有至少 4 個 Vcpu 和 32 GB 的記憶體，每個。 Azure 基礎結構提供多個 Vm 的大小選項，請參閱 <<c0> [ 此處](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)針對您打算要部署的區域中選取項目。
+- 以驗證在 AKS 上的基本案例時獲得最佳體驗，請使用：
+   - 最小值為 3 個代理程式 Vm
+   - 4 個 Vcpu 每個 VM
+   - 32 GB 的每個 VM 的記憶體
+
+   > [!TIP]
+   > Azure 基礎結構提供多個 Vm 的大小選項，請參閱 <<c0> [ 此處](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)針對您打算要部署的區域中選取項目。
 
 ## <a name="create-a-resource-group"></a>建立資源群組
 
 Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 下列步驟登入 Azure，並建立 AKS 叢集的資源群組。
 
-> [!TIP]
-> 如果您使用的 Windows，使用 PowerShell，如接下來的步驟。
-
 1. 在命令提示字元中，執行下列命令，並遵循提示來登入您的 Azure 訂用帳戶：
 
-    ```bash
+    ```azurecli
     az login
     ```
 
 1. 如果您有多個訂用帳戶，您可以執行下列命令來檢視您所有的訂閱：
 
-   ```bash
+   ```azurecli
    az account list
    ```
 
 1. 如果您想要將變更為不同的訂用帳戶，您可以執行此命令：
 
-   ```bash
+   ```azurecli
    az account set --subscription <subscription id>
    ```
 
 1. 建立的資源群組**az 群組建立**命令。 下列範例會建立名為的資源群組`sqlbigdatagroup`在`westus2`位置。
 
-   ```bash
+   ```azurecli
    az group create --name sqlbigdatagroup --location westus2
    ```
 
@@ -75,7 +78,7 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
 1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*具有三個 Linux 代理程式節點。 請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
 
-    ```bash
+    ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
@@ -94,13 +97,13 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
 1. 若要設定 kubectl 來連線到 Kubernetes 叢集，請執行[az aks get-credentials 來取得認證](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)命令。 此步驟中下載憑證，並設定 kubectl CLI 來使用它們。
 
-   ```bash
+   ```azurecli
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
    ```
 
 1. 若要驗證您的叢集連線，請使用[kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)命令來傳回叢集節點的清單。  下列範例顯示輸出時有 1 部主機，以及 3 個代理程式節點。
 
-   ```bash
+   ```
    kubectl get nodes
    ```
 
