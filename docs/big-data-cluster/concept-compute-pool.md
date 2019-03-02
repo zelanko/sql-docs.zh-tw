@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7d5a81479e798d3d97547eb67b17e62444cd2941
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 272f10cfed8f7cd1b07633b81642323a8c74b6d7
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017574"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227130"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>在 SQL Server 2019 巨量資料叢集的計算集區有哪些？
 
@@ -24,9 +24,6 @@ ms.locfileid: "57017574"
 ## <a name="compute-pool-architecture"></a>計算集區架構
 
 計算集區由一個或多個運算在 Kubernetes 中執行的 pod。 自動的建立和管理這些 pod 由協調[SQL Server 的主要執行個體](concept-master-instance.md)。 每個 pod 包含一組基底的服務和 SQL Server database engine 執行個體。
-
-> [!NOTE]
-> CTP 2.3 僅支援每個叢集單一計算集區。
 
 ## <a name="scale-out-groups"></a>向外延展群組
 
