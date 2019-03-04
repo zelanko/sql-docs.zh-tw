@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: HT
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017944"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227210"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 巨量資料叢集的版本資訊
 
@@ -41,6 +41,7 @@ ms.locfileid: "57017944"
 - [SQL Server 的巨量資料叢集來部署應用程式的 VS Code 延伸模組](app-deployment-extension.md)。
 - 新的參數順序**mssqlctl**工具。
 - [在 SQL Server 2019 巨量資料叢集使用 Sparklyr](sparklyr-from-RStudio.md)。
+- 使用巨量資料叢集裝載外部的 HDFS 相容儲存體[HDFS 分層](hdfs-tiering.md)。
 - 新的統一的連接體驗，如[SQL Server 的主要執行個體和 HDFS/Spark 閘道](connect-to-big-data-cluster.md)。
 - 刪除與叢集**mssqlctl 叢集刪除**現在刪除僅物件命名空間中的巨量資料叢集的一部分，但保留命名空間。 先前，此命令會刪除整個命名空間。
 - 端點名稱已變更和彙總在此版本中：
@@ -74,14 +75,6 @@ ms.locfileid: "57017944"
 
 - 如果巨量資料叢集部署失敗，不會移除相關聯的命名空間。 這可能會導致失去關聯的命名空間，在叢集上。 因應措施是手動刪除命名空間，才能部署具有相同名稱的叢集。
 
-#### <a name="cluster-administration-portal"></a>叢集系統管理入口網站
-
-叢集系統管理入口網站不會顯示 SQL Server 的主要執行個體的端點。 若要尋找主要執行個體的 IP 位址和連接埠，使用下列項目**kubectl**命令：
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>外部資料表
 
 - 可以建立具有不支援的資料行類型為資料表的資料集區外部資料表。 如果您查詢外部資料表時，您收到訊息如下所示：
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - 如果您查詢儲存體集區外部資料表時，您可能會發生錯誤，如果在相同的時間基礎檔案複製到 HDFS。
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 如果您要建立外部資料表以使用字元資料類型的 Oracle，Azure Data Studio virtualization 精靈會解譯為 VARCHAR 這些資料行中的外部資料表定義。 這會導致外部資料表 DDL 失敗。 請修改使用 NVARCHAR2 類型，或以手動方式建立 EXTERNAL TABLE 陳述式，而不是使用此精靈指定 NVARCHAR 的 Oracle 結構描述。
 
 #### <a name="spark-and-notebooks"></a>Spark 和 notebook
 
