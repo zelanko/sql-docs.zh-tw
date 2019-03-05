@@ -213,7 +213,7 @@ ms.date: 12/15/2018
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>管理、監視及微調</h3>
-                                                          <p><b>維護計畫、SQL Profiler、自動調整、記憶體內部 OLTP、磁碟分割、統計資料、索引、基數估計 </b>  </p>
+                                                          <p><b>維護計劃、SQL Profiler、自動調整、記憶體內部 OLTP、分割區、統計資料、索引、基數估計</b>  </p>
                                                       </div>
                                                   </div>
                                               </div>

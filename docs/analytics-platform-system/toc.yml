@@ -1,6 +1,8 @@
 items:
-- name: SQL Server 根目錄 +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server 根目錄 ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+- name: APS 的概觀
+  href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
 - name: APS 的新功能
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
@@ -227,9 +229,9 @@ items:
     href: ../analytics-platform-system/tsql-statements.md
   - name: T-SQL 系統檢視表
     href: ../analytics-platform-system/tsql-system-views.md
-ms.openlocfilehash: 8b437c93b4fee98c1ad29b9ab10c6c97f633fceb
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: f502d0bd2384e4490fe1081e0659d33d9ae3d832
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676026"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803263"

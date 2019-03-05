@@ -1,8 +1,8 @@
 items:
-- name: SQL Server 根目錄 +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server 根目錄 ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: SQL Server ML 與程式設計延伸模組文件
-  href: ../advanced-analytics/index.md
+  href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
 - name: 機器學習延伸模組 (R、Python)
   items:
   - name: 新功能
@@ -300,8 +300,8 @@ items:
       href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: 資源
   items:
-  - name: 版本資訊
-    href: ../sql-server/sql-server-2017-release-notes.md
+  - name: 版本資訊 +
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
   - name: 疑難排解
     href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
     items:
@@ -329,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server +
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: c264182ec84140bcc048b7821ea896e6654bd828
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 5826c20a058b9b837ff077261b156c5f394d36b2
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676076"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802622"

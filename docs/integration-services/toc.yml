@@ -1,6 +1,6 @@
 items:
-- name: SQL Server 根目錄 +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server 根目錄 ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: SQL Server Integration Services
   href: ../integration-services/sql-server-integration-services.md
 - name: 概觀
@@ -1793,9 +1793,9 @@ items:
     href: https://blogs.msdn.microsoft.com/ssis/
   - name: 回報問題與要求功能 +
     href: https://feedback.azure.com/forums/908035-sql-server
-ms.openlocfilehash: 5820e11a6463d91c02d768544ab6465e42cbaa7a
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: bbf2d15e698b87778985fea0b6a77b7b3f289187
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676206"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801822"
