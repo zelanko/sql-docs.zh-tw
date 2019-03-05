@@ -1,6 +1,6 @@
 items:
-- name: SQL Server 根目錄 +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server 根目錄 ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 關於 SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md
 - name: 概觀
@@ -34,6 +34,8 @@ items:
       href: ../analysis-services/globalization-tips-and-best-practices-analysis-services.md
 - name: 教學課程
   items:
+  - name: Analysis Services 教學課程概觀
+    href: ../analysis-services/analysis-services-tutorials-ssas.md
   - name: 表格式模型 (1400 相容性層級)
     href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
     items:
@@ -1328,6 +1330,8 @@ items:
     items:
     - name: SQL Server Analysis Services 伺服器管理概觀
       href: ../analysis-services/instances/analysis-services-instance-management.md
+    - name: 高可用性與延展性
+      href: ../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md
     - name: 伺服器屬性
       items:
       - name: 伺服器屬性概觀
@@ -1381,6 +1385,16 @@ items:
       href: ../analysis-services/instances/clear-the-analysis-services-caches.md
     - name: 資料庫一致性檢查程式 (DBCC)
       href: ../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md
+    - name: SSMS 中的 Analysis Services 指令碼專案
+      href: ../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: 在 SSMS 中建立 Analysis Services 指令碼
+      href: ../analysis-services/instances/create-analysis-services-scripts-in-management-studio.md
+    - name: 使用 SQL Server Agent 排程管理工作
+      href: ../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: 在 SSMS 中使用 Analysis Services 範本
+      href: ../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md
+    - name: 使用 SSIS 將 Analysis Services 管理工作自動化
+      href: ../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md
   - name: '[連接]'
     items:
     - name: 連線至伺服器概觀
@@ -1421,10 +1435,15 @@ items:
       items:
       - name: 相容性層級 1103 及更低的表格式模型程式設計
         href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-      - name: 概念結構定義語言 (CSDL) +
-        href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-      - name: IMDEmbeddedData 介面
-        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
+      - name: 商業智慧的 CSDL 註解 (CSDLBI)
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md
+        items:
+        - name: 報表設計的 CSDLBI 屬性
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
+        - name: CSDLBI 概念
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
+        - name: 概念結構定義語言 (CSDL) 參考 +
+          href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
       - name: 表示法
         items:
         - name: 連接表示法 (表格式)
@@ -1451,58 +1470,70 @@ items:
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md
         - name: 了解 1050 到 1103 層級的表格式物件模型
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
+      - name: IMDEmbeddedData 介面
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
   - name: 多維度模型
     items:
     - name: 多維度模型程式設計
       href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
     - name: 分析管理物件 (AMO) +
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: ASSL 物件和物件特性
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: 備份、還原和同步處理資料庫 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-    - name: 取消命令 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
-    - name: 建立和改變物件 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
-    - name: 定義和識別物件 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
-    - name: 設計彙總 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
-    - name: 在 Analysis Services 中使用 XMLA 進行開發
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
-    - name: 處理錯誤和警告 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
-    - name: 插入、更新和卸除成員 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
-    - name: 鎖定和解除鎖定資料庫 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
-    - name: 管理快取 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
-    - name: 管理連接與工作階段 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
-    - name: 管理交易 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
-    - name: 合併資料分割 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
-    - name: 監視追蹤 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
-    - name: 執行批次作業 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
-    - name: 處理物件 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
-    - name: 更新資料格 (XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
-    - name: ASSL XML 慣例
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: 使用 Analysis Services 指令碼語言 (ASSL) 開發
       href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+      items:
+      - name: Analysis Services 指令碼語言 (ASSL for XMLA) 參考 +
+        href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+      - name: ASSL 物件和物件特性
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+      - name: 備份、還原和同步處理資料庫 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+      - name: 取消命令 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
+      - name: 建立和改變物件 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
+      - name: 定義和識別物件 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
+      - name: 設計彙總 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
+      - name: 在 Analysis Services 中使用 XMLA 進行開發
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
+      - name: 處理錯誤和警告 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
+      - name: 插入、更新和卸除成員 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
+      - name: 鎖定和解除鎖定資料庫 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
+      - name: 管理快取 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
+      - name: 管理連接與工作階段 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
+      - name: 管理交易 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
+      - name: 合併資料分割 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
+      - name: 監視追蹤 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
+      - name: 執行批次作業 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
+      - name: 處理物件 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
+      - name: 更新資料格 (XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
+      - name: ASSL XML 慣例
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: XML for Analysis (XMLA) +
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET +
-      href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Analysis Services 指令碼語言 (ASSL for XMLA) +
-      href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+    - name: ADOMD.NET 伺服器程式設計
+      href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+      items:
+      - name: ADOMD.NET 伺服器功能
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
+      - name: ADOMD.NET 伺服器物件架構
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
+      - name: 使用者定義函數和預存程序
+        href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
+      - name: ADOMD.NET 參考 +
+        href: /bi-reference/adomd/developing-with-adomd-net
     - name: 資料庫物件 (Analysis Services - 多維度資料)
       href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
     - name: 中，使用 [維度設計師] 的
@@ -2453,9 +2484,9 @@ items:
     href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: 追蹤事件 +
     href: /bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: a9359b578b321f76e62483f2ed08887dc73d18c8
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 9d0f4813ece4aeadb0e33733b8fed21d096650c6
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676216"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852973"
