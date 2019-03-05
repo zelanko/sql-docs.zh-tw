@@ -5,17 +5,17 @@ description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 的已
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227210"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334745"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 巨量資料叢集的版本資訊
 
@@ -39,7 +39,7 @@ ms.locfileid: "57227210"
 - [將 SQL Server 巨量資料叢集上在 IntelliJ 中的 Spark 作業提交](spark-submit-job-intellij-tool-plugin.md)。
 - [適用於應用程式部署和叢集管理的常見 CLI](big-data-cluster-create-apps.md)。
 - [SQL Server 的巨量資料叢集來部署應用程式的 VS Code 延伸模組](app-deployment-extension.md)。
-- 新的參數順序**mssqlctl**工具。
+- [若要變更**mssqlctl**工具命令使用方式](#mssqlctlctp23)。
 - [在 SQL Server 2019 巨量資料叢集使用 Sparklyr](sparklyr-from-RStudio.md)。
 - 使用巨量資料叢集裝載外部的 HDFS 相容儲存體[HDFS 分層](hdfs-tiering.md)。
 - 新的統一的連接體驗，如[SQL Server 的主要執行個體和 HDFS/Spark 閘道](connect-to-big-data-cluster.md)。
@@ -74,6 +74,18 @@ ms.locfileid: "57227210"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - 如果巨量資料叢集部署失敗，不會移除相關聯的命名空間。 這可能會導致失去關聯的命名空間，在叢集上。 因應措施是手動刪除命名空間，才能部署具有相同名稱的叢集。
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- **Mssqlctl**工具變更至名詞動詞命令的順序排序動詞-名詞 」 命令。 例如，`mssqlctl create cluster`現在`mssqlctl cluster create`。
+
+- `--name`參數現在是在建立叢集時所需`mssqlctl cluster create`。
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- 如需升級至最新版的巨量資料叢集的重要資訊和**mssqlctl**，請參閱[升級至新版](deployment-guidance.md#upgrade)。
 
 #### <a name="external-tables"></a>外部資料表
 
