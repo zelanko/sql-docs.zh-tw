@@ -18,15 +18,15 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], hints
 - DELETE statement [SQL Server], hints
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 68d93d1ab8e0c1b9f3592642763123491f9d90d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bd2692d428012e0af4ea4f41059228178810abb
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689626"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334305"
 ---
 # <a name="hints-transact-sql"></a>提示 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

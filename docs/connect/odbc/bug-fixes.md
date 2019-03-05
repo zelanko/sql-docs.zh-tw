@@ -13,16 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3c0b2b86bee4cccd9e8074529362b7e9c8ff6b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725766"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956049"
 ---
 # <a name="list-of-bugs-fixed"></a>已修正的 bug 的清單
 
 此頁面包含在每個版本中，從已修正的 bug 清單[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.3 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- 已修正的 TCP 傳送通知事件控制代碼的記憶體流失
+- 列舉 _SQL_FILESTREAM_DESIRED_ACCESS msodbcsql.h 標頭檔中的固定的重新定義問題
+- 已修正遺漏 ACCESS_TOKEN 與驗證相關 msodbcsql.h 標頭檔中適用於 Linux 的定義
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>中的錯誤修正[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驅動程式 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

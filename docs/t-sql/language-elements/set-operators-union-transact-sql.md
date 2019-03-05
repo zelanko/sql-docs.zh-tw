@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b4fddc20d2ee9adbfb0f67f88fcb75661ebc828
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 6c5d6dc066db8eb24a95172b69868237517ef7be
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154793"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852893"
 ---
 # <a name="set-operators---union-transact-sql"></a>Set 運算子 - UNION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,11 +44,10 @@ ms.locfileid: "56154793"
 ## <a name="syntax"></a>語法  
   
 ```  
-    { <query_specification> | ( <query_expression> ) }   
-  UNION [ ALL ]   
-  <query_specification | ( <query_expression> )   
- [ UNION [ ALL ] <query_specification> | ( <query_expression> )   
-    [ ...n ] ]   
+{ <query_specification> | ( <query_expression> ) }   
+{ UNION [ ALL ]   
+  { <query_specification> | ( <query_expression> ) } 
+  [ ...n ] }
 ```  
   
 ## <a name="arguments"></a>引數  

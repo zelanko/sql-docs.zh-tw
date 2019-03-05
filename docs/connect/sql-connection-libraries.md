@@ -8,18 +8,18 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7f759dbe9022cff557461d900a35b3ccc91d2c4b
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600368"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007571"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>適用於 Microsoft SQL 資料庫的連線模組
 
 本文提供連線模組下載連結或*驅動程式*用戶端程式可用來與互動[Microsoft SQL Server](../relational-databases/database-features.md)，和在雲端中與其對應項[AzureSQL Database](https://docs.microsoft.com/azure/sql-database/)。 驅動程式可供各種程式設計語言，在下列作業系統上執行：
 
-- Linux (Ubuntu)
+- Linux
 - MacOS
 - Windows
 

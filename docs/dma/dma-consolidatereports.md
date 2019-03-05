@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305356"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -71,6 +71,9 @@ ms.locfileid: "56956029"
 - SQL Server 資料表
 
 ### <a name="if-using-a-csv-file"></a>如果使用 CSV 檔案
+> [!IMPORTANT]
+> 請確定清查檔案會儲存為逗號分隔 (CSV) 檔案。
+
 當使用 csv 檔案匯入資料，請確定只有兩個資料行的資料-**執行個體名稱**並**資料庫名稱**，且資料行沒有標頭資料列。
  
  ![csv 檔案內容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 
 1. 在 Power BI Desktop 中開啟 DMA 報表 Power BI 的範本。
 2. 輸入伺服器的詳細資料，以指向您**DMAWarehouse**資料庫，然後按**負載**。
-
-    > [!IMPORTANT]
-    > 不要按 Enter 以接受的值。
-
+   
       ![載入的 DMA 報表 Power BI 範本](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    已重新整理報表中的資料之後**DMAWarehouse**資料庫中，將會看到類似下列的報表。
