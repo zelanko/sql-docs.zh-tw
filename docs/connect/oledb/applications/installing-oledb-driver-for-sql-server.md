@@ -2,7 +2,7 @@
 title: 安裝 OLE DB Driver for SQL Server | Microsoft Docs
 description: 安裝和解除安裝適用於 SQL Server 的 OLE DB 驅動程式
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602218"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744378"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>安裝 OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ OLE DB Driver for SQL Server 檔案 （msoledbsql.dll、 msoledbsqlr.rll） 會�
 > [!NOTE]  
 > 所有適當的登錄設定 OLE DB driver for SQL Server 進行安裝程序的一部分。  
 
-OLE DB Driver for SQL Server 標頭和程式庫檔案 （msoledbsql.h 和 msoledbsql.lib） 會安裝在`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`。 此外，x64 msoledbsql.msi 安裝中的相同檔案`%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`。  
+OLE DB Driver for SQL Server 標頭和程式庫檔案 （msoledbsql.h 和 msoledbsql.lib） 會安裝在`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`。 此外，x64 msoledbsql.msi 安裝中的相同檔案`%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`。  
 
 您可以透過 msoledbsql.msi 來發佈適用於 SQL Server 的 OLE DB 驅動程式。 您可能必須安裝 OLE DB Driver for SQL Server，當您部署應用程式。 使用 Chainer 和 Bootstrapper 技術是安裝多個封裝 (但對使用者卻好像是單一安裝) 的一種方法。 如需詳細資訊，請參閱[撰寫適用於 Visual Studio 2005 的自訂啟動載入器套件](https://go.microsoft.com/fwlink/?LinkId=115667)和[新增自訂的必要條件](https://go.microsoft.com/fwlink/?LinkId=115668)。  
   
@@ -52,7 +52,7 @@ X64 msoledbsql.msi 也安裝 32 位元版本的 OLE DB Driver for SQL Server。 
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
-## <a name="silent-install"></a>無訊息安裝  
+## <a name="silent-install"></a>自動安裝  
  如果您搭配 msiexec 使用 /passive、/qn、/qb 或 /qr 選項，則也必須指定 IACCEPTMSOLEDBSQLLICENSETERMS=YES，以明確指出您接受使用者授權條款。 此選項必須以全部大寫的字母指定。  
 
 ## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>安裝 OLE DB Driver for SQL Server，做為相依性  

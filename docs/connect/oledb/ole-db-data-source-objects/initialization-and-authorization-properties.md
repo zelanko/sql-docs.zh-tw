@@ -2,7 +2,7 @@
 title: 初始化和授權屬性 |Microsoft Docs
 description: 初始化和授權屬性
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 0beca8afa01c5a0b7c5b5848565990427232a6ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2477e18f1ae9aa78d195a45f28494b4b909934d
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764906"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744518"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授權屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47764906"
 
   OLE DB Driver for SQL Server OLE DB 初始化和授權會將屬性解譯如下：  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|OLE DB Driver for SQL Server 不會快取驗證資訊。<br /><br /> OLE DB Driver for SQL Server 在嘗試設定屬性值，傳回 DB_S_ERRORSOCCURRED。 DBPROP 結構的 *dwStatus* 成員表示 DBPROPSTATUS_NOTSUPPORTED。|  
 |DBPROP_AUTH_ENCRYPT_PASSWORD|OLE DB Driver for SQL Server 會使用標準[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安全性機制來隱藏密碼。<br /><br /> OLE DB Driver for SQL Server 在嘗試設定屬性值，傳回 DB_S_ERRORSOCCURRED。 DBPROP 結構的 *dwStatus* 成員表示 DBPROPSTATUS_NOTSUPPORTED。|  
@@ -57,14 +57,16 @@ ms.locfileid: "47764906"
   
  在提供者專屬的屬性集 DBPROPSET_SQLSERVERDBINIT 中，OLE DB Driver for SQL Server 會定義這些額外的初始化屬性。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
+|SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述： 用來向 Azure Active Directory 存取權杖。 <br/><br/>**注意：** 它會指定此屬性，也`UID`， `PWD`， `Trusted_Connection`，或`Authentication`連接字串關鍵字或其對應的屬性/關鍵字。|
+|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述： 指定使用的 SQL 或 Active Directory 驗證。 有效值為：<br/><ul><li>`(not set)`： 驗證模式取決於其他關鍵字。</li><li>`(empty string)`： 取消設定先前設定驗證模式。</li><li>`ActiveDirectoryPassword:` 使用登入識別碼和密碼的 active Directory 驗證。</li><li>`ActiveDirectoryIntegrated:` 使用目前登入使用者的 Windows 帳戶認證的 Active directory 的整合式的驗證。</li><br/>**注意︰** 其**建議**使用該應用程式`Integrated Security`(或`Trusted_Connection`) 驗證關鍵字或其對應的屬性設定的值`Authentication`關鍵字 （或其對應的屬性） 來`ActiveDirectoryIntegrated`若要啟用新的加密和憑證驗證行為。<br/><br/><li>`SqlPassword:` 使用登入識別碼和密碼進行驗證。</li><br/>**注意：** 其**建議**使用該應用程式`SQL Server`驗證設定的值`Authentication`關鍵字 （或其對應的屬性） 到`SqlPassword`啟用新的加密和憑證驗證行為。</ul>|
 |SSPROP_AUTH_OLD_PASSWORD|類型：VT_BSTR<br /><br /> R/W：寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：目前或過期的密碼。 如需詳細資訊，請參閱 <<c0> [ 變更密碼以程式設計方式](../../oledb/features/changing-passwords-programmatically.md)。|  
 |SSPROP_INIT_APPNAME|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：用戶端應用程式名稱。|  
 |SSPROP_INIT_AUTOTRANSLATE|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：OEM/ANSI 字元轉換。<br /><br /> VARIANT_TRUE：OLE DB Driver for SQL Server 會透過 Unicode 進行轉換來轉譯在用戶端和伺服器之間傳送的 ANSI 字元字串，以便將用戶端和伺服器之字碼頁之間的符合擴充字元問題降至最低：<br /><br /> 傳送到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**、**varchar** 或 **text** 變數、參數或資料行之執行個體的用戶端 DBTYPE_STR 資料會使用用戶端的 ANSI 字碼頁 (ACP)，從字元轉換成 Unicode，然後使用伺服器的 ACP，從 Unicode 轉換成字元。<br /><br /> 傳送到用戶端 DBTYPE_STR 變數的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**、**varchar** 或 **text** 資料會使用伺服器的 ACP，從字元轉換成 Unicode，然後使用用戶端的 ACP，從 Unicode 轉換成字元。<br /><br /> 這些轉換會執行用戶端上 OLE DB Driver for SQL Server。 但是在伺服器上使用的相同 ACP 必須也可以在用戶端上使用。<br /><br /> 這些設定對於進行下列傳輸時所發生的轉換沒有作用：<br /><br /> 傳送到伺服器之 **char**、**varchar** 或 **text** 的 Unicode DBTYPE_WSTR 用戶端資料。<br /><br /> 傳送到用戶端之 Unicode DBTYPE_WSTR 變數的 **char**、**varchar** 或 **text** 伺服器資料。<br /><br /> 傳送到伺服器之 **nchar**、**nvarchar** 或 **ntext** 的 ANSI DBTYPE_STR 用戶端資料。<br /><br /> 傳送到用戶端之 ANSI DBTYPE_STR 變數的 Unicode **char**、**varchar** 或 **text** 伺服器資料。<br /><br /> VARIANT_FALSE: OLE DB Driver for SQL Server 不會執行字元轉譯。<br /><br /> OLE DB Driver for SQL Server 不會轉譯傳送到伺服器之 **char**、**varchar** 或 **text** 變數、參數或資料行的用戶端 ANSI 字元 DBTYPE_STR 資料。 在從伺服器傳送到用戶端之 DBTYPE_STR 變數的 **char**、**varchar** 或 **text** 資料上不會執行任何轉譯。<br /><br /> 如果用戶端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體使用不同的 ACP，可能會將擴充字元解譯錯誤。|  
 |SSPROP_INIT_CURRENTLANGUAGE|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 語言名稱。 識別系統訊息選取與格式所使用的語言。 此語言必須安裝在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的電腦上，否則資料初始化會失敗。|  
 |SSPROP_INIT_DATATYPECOMPATIBILITY|類型：VT_UI2<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 ActiveX Data Object (ADO) 應用程式之間的資料類型相容性。 如果使用預設值 0，資料類型處理會預設為提供者所使用的資料類型。 如果使用值 80，資料類型處理僅會使用 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 資料類型。 如需詳細資訊，請參閱 <<c0> [ 使用的 ADO 與 OLE DB Driver for SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。|  
-|SSPROP_INIT_ENCRYPT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：若要加密通過網路的資料，SSPROP_INIT_ENCRYPT 屬性會設定為 VARIANT_TRUE。<br /><br /> 如果 [啟用通訊協定加密] 開啟，不管 SSPROP_INIT_ENCRYPT 的設定為何，永遠會進行加密。 如果關閉此設定，而且 SSPROP_INIT_ENCRYPT 設定為 VARIANT_TRUE，則會進行加密。<br /><br /> 如果關閉 [啟用通訊協定加密]，而且 SSPROP_INIT_ENCRYPT 設定為 VARIANT_FALSE，則不會進行加密。|  
+|SSPROP_INIT_ENCRYPT<a href="#table1_1"><sup>**1**</sup></a>|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：若要加密通過網路的資料，SSPROP_INIT_ENCRYPT 屬性會設定為 VARIANT_TRUE。<br /><br /> 如果 [強制通訊協定加密] 已開啟，不管 SSPROP_INIT_ENCRYPT 的設定為何，永遠會進行加密。 如果關閉此設定，而且 SSPROP_INIT_ENCRYPT 設定為 VARIANT_TRUE，則會進行加密。<br /><br /> 如果 [強制通訊協定加密] 已關閉，而且 SSPROP_INIT_ENCRYPT 設定為 VARIANT_FALSE，則不會進行加密。|  
 |SSPROP_INIT_FAILOVERPARTNER|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：指定要進行資料庫鏡像之容錯移轉夥伴的名稱。 這是初始化屬性，而且僅能在初始化之前設定。 初始化之後，它會傳回容錯移轉夥伴，如果有的話，則會由主要伺服器傳回。<br /><br /> 這可讓智慧型應用程式快取最近決定的備份伺服器，但是此類應用程式應該會注意到此資訊只會在第一次建立 (如果緩衝，則重設) 連接時更新，而且在長期連接後會變成過期。<br /><br /> 建立連接後，應用程式可以查詢此屬性來判斷容錯移轉夥伴的識別。 如果主要伺服器沒有容錯移轉夥伴，此屬性將會傳回空字串。 如需詳細資訊，請參閱[使用資料庫鏡像](../../oledb/features/using-database-mirroring.md)。|  
 |SSPROP_INIT_FILENAME|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：指定可附加資料庫的主要檔案名稱。 此資料庫會附加，而且變成連接的預設資料庫。 若要使用 SSPROP_INIT_FILENAME，您必須將資料庫的名稱指定為初始化屬性 DBPROP_INIT_CATALOG 的值。 如果資料庫名稱不存在，則會尋找在 SSPROP_INIT_FILENAME 中指定的主要檔案名稱，並以 DBPROP_INIT_CATALOG 中指定的名稱附加該資料庫。 如果該資料庫先前已附加，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它。|  
 |SSPROP_INIT_MARSCONNECTION|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：指定是否要針對連接啟用 Multiple Active Result Sets (MARS)。 在連接到資料庫之前，必須將此選項設定為 True。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)。|  
@@ -72,10 +74,13 @@ ms.locfileid: "47764906"
 |SSPROP_INIT_NETWORKLIBRARY|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體進行通訊所使用之網路程式庫 (DLL) 的名稱。 名稱不得包含路徑或 .dll 副檔名。<br /><br /> 預設值可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端組態公用程式自訂。<br /><br /> 注意：此屬性僅支援 TCP 和具名管道。 如果您搭配前置詞使用此屬性，結尾有雙前置詞時，會導致錯誤，因為此屬性用來在內部產生前置詞。|  
 |SSPROP_INIT_PACKETSIZE|類型：VT_I4<br /><br /> R/W：讀取/寫入<br /><br /> 描述：網路封包大小 (以位元組為單位)。 封包大小屬性值必須介於 512 和 32,767 之間。 預設 OLE DB Driver for SQL Server 網路封包大小是 4,096。|  
 |SSPROP_INIT_TAGCOLUMNCOLLATION|類型：BOOL<br /><br /> R/W：寫入<br /><br /> 預設值：FALSE<br /><br /> 描述：使用伺服器端資料指標時，這會在資料庫更新期間使用。 此屬性會使用從伺服器 (而非用戶端的字碼頁) 取得的定序資訊標記資料。 目前只有分散式查詢處理使用此屬性，因為它知道目的地資料的定序，而且會正確轉換該定序。|  
-|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：用於啟用或停用伺服器憑證驗證。 此屬性是讀取/寫入的，但是在建立連接後嘗試設定該屬性將會導致錯誤。<br /><br /> 如果將用戶端設定為需要憑證驗證，則會忽略此屬性。 不過，即使沒有將用戶端設定為需要加密，而且在用戶端上沒有提供任何憑證，應用程式還是可以將該屬性與 SSPROP_INIT_ENCRYPT 一起使用來確保伺服器的連接經過加密。<br /><br /> 用戶端應用程式可以在開啟連接之後查詢此屬性，以便判斷使用中的實際加密和驗證設定。<br /><br /> 注意：使用沒有憑證驗證的加密會針對封包探測提供部分保護，但是它不會防止攔截式攻擊 (man-in-the-middle attack)。 它只會允許加密傳送到伺服器的登入和資料，而不會驗證伺服器憑證。<br /><br /> 如需詳細資訊，請參閱[使用加密而不需驗證](../../oledb/features/using-encryption-without-validation.md)。|  
+|SSPROP_INIT_TRUST_SERVER_CERTIFICATE<a href="#table1_1"><sup>**1**</sup></a>|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：用於啟用或停用伺服器憑證驗證。 此屬性是讀取/寫入的，但是在建立連接後嘗試設定該屬性將會導致錯誤。<br /><br /> 如果將用戶端設定為需要憑證驗證，則會忽略此屬性。 不過，即使沒有將用戶端設定為需要加密，而且在用戶端上沒有提供任何憑證，應用程式還是可以將該屬性與 SSPROP_INIT_ENCRYPT 一起使用來確保伺服器的連接經過加密。<br /><br /> 用戶端應用程式可以在開啟連接之後查詢此屬性，以便判斷使用中的實際加密和驗證設定。<br /><br /> 注意：使用沒有憑證驗證的加密會針對封包探測提供部分保護，但是它不會防止攔截式攻擊 (man-in-the-middle attack)。 它只會允許加密傳送到伺服器的登入和資料，而不會驗證伺服器憑證。<br /><br /> 如需詳細資訊，請參閱[使用加密而不需驗證](../../oledb/features/using-encryption-without-validation.md)。|  
 |SSPROP_INIT_USEPROCFORPREP|類型：VT_I4<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 描述：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序用途。 定義 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暫存預存程序的用途來支援 **ICommandPrepare** 介面。 只有在連接到 SQL Server 6.5 時，此屬性才有意義。 更新的版本會忽略此屬性。<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF：準備命令時，不會建立暫存預存程序。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON：準備命令時，會建立暫存預存程序。 釋出工作階段時，會卸除暫存預存程序。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP：準備命令時，會建立暫存預存程序。 使用 **ICommandPrepare::Unprepare** 取消準備命令時、使用 **ICommandText::SetCommandText** 指定命令物件的新命令時，或是釋出命令的所有應用程式參考時，會卸除此程序。|  
 |SSPROP_INIT_WSID|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：識別工作站的字串。|  
   
+
+<b id="table1_1">[1]:</b>為了提高安全性，使用驗證/存取權杖的初始化屬性或其對應的連接字串關鍵字時，會修改加密和憑證驗證行為。 如需詳細資訊，請參閱 <<c0> [ 加密和憑證驗證](../features/using-azure-active-directory.md#encryption-and-certificate-validation)。
+
  在 提供者特有的屬性集 DBPROPSET_SQLSERVERDATASOURCEINFO 中，OLE DB Driver for SQL Server 會定義額外的屬性;請參閱[資料來源資訊屬性](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)如需詳細資訊。  
   
 ## <a name="the-ole-db-driver-for-sql-server-string"></a>OLE DB Driver for SQL Server 字串  

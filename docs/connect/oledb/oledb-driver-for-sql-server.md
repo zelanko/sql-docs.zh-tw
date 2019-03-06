@@ -2,7 +2,7 @@
 title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
 description: Microsoft OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687865"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744568"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ OLE db[取消](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/annou
  [OLE DB Driver for SQL Server 功能](../oledb/features/oledb-driver-for-sql-server-features.md )  
  說明 OLE DB Driver for SQL Server 支援的功能。  
   
- [利用 OLE DB Driver for SQL Server 建置](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [使用 OLE DB Driver for SQL Server 建置應用程式](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  提供 OLE DB Driver for SQL Server 開發的概觀，包括與 Windows DAC 的差異、所使用的元件，以及如何搭配 ADO 使用。  
   
  本章節也會討論 OLE DB Driver for SQL Server 安裝和部署，包括如何轉散發 OLE DB Driver for SQL Server 文件庫。  
@@ -82,12 +82,12 @@ OLE db[取消](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/annou
  [OLE DB Driver for SQL Server 程式設計](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
  提供使用 OLE DB Driver for SQL Server 的相關資訊。  
   
- [尋找詳細的 OLE DB Driver for SQL Server 資訊](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
+ [尋找更多 OLE DB Driver for SQL Server 資訊](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
  提供有關 OLE DB 驅動程式的其他資源，適用於 SQL Server，包括外部資源的連結，及取得進一步協助。  
   
   
 ## <a name="see-also"></a>另請參閱  
  [從 SQL Server 2005 Native Client 更新應用程式](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
- [OLE DB 的使用說明主題](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 使用說明主題](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -48,7 +48,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
   
 ### <a name="help-for-the-extract-action"></a>Extract 動作的說明
 
-|參數|簡短形式|ReplTest1|Description|
+|參數|簡短形式|ReplTest1|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -72,7 +72,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ### <a name="properties-specific-to-the-extract-action"></a>擷取動作特有的屬性
 
-|屬性|ReplTest1|Description|
+|屬性|ReplTest1|描述|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|DacApplicationDescription=(STRING)|定義要儲存在 DACPAC 中繼資料中的應用程式描述。|
@@ -96,7 +96,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="help-for-publish-action"></a>發行動作的說明
 
-|參數|簡短形式|ReplTest1|Description|
+|參數|簡短形式|ReplTest1|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|發行|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -135,7 +135,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="properties-specific-to-the-publish-action"></a>發行動作的特定屬性
 
-|屬性|ReplTest1|Description|
+|屬性|ReplTest1|描述|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
@@ -196,7 +196,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新不可複寫設定。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新物件在資料分割配置上的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新資料分割配置和函式的差異。|
-|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
+|**/p:**|IgnorePermissions=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新引號識別項設定的差異。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|
@@ -229,7 +229,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 下表描述可用來覆寫在發行動作期間所用 SQL 命令 (**sqlcmd**) 變數值之選項的格式。 命令列上指定的變數值會覆寫指派給變數的其他值 (例如在發行設定檔中)。  
   
-|參數|預設|Description|  
+|參數|預設|描述|  
 |-------------|-----------|---------------|  
 |**/Variables:{PropertyName}={Value}**||指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。|  
   
@@ -239,7 +239,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
   
 ### <a name="help-for-export-action"></a>匯出動作的說明
 
-|參數|簡短形式|ReplTest1|Description|
+|參數|簡短形式|ReplTest1|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|匯出|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -263,7 +263,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
 
 ### <a name="properties-specific-to-the-export-action"></a>匯出動作特有的屬性
 
-|屬性|ReplTest1|Description|
+|屬性|ReplTest1|描述|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定支援儲存體的類型，以供結構描述模型在擷取期間使用。|
@@ -277,7 +277,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-command-actions"></a>命令動作的說明
 
-|參數|簡短形式|ReplTest1|Description|
+|參數|簡短形式|ReplTest1|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|匯入|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -300,7 +300,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 
 匯入動作特有的屬性：
 
-|屬性|ReplTest1|Description|
+|屬性|ReplTest1|描述|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定義 Azure SQL Database 的版本。|
@@ -316,7 +316,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 動作的說明
 
-|參數|簡短形式|ReplTest1|Description|
+|參數|簡短形式|ReplTest1|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -352,7 +352,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport 動作特有的屬性
 
-|屬性|ReplTest1|Description|
+|屬性|ReplTest1|描述|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
@@ -413,7 +413,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新不可複寫設定。 |
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新物件在資料分割配置上的位置。|
  |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新資料分割配置和函式的差異。|
-|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新權限的差異。 |
+|**/p:**|IgnorePermissions=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新權限的差異。 |
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新引號識別項設定的差異。 |
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。 |
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異|
@@ -448,7 +448,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 動作的說明
 
-|參數|簡短形式|ReplTest1|Description|
+|參數|簡短形式|ReplTest1|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -475,7 +475,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-the-script-action"></a>指令碼動作的說明
 
-|參數|簡短形式|ReplTest1|Description|
+|參數|簡短形式|ReplTest1|描述|
 |---|---|---|---|
 |**/Action:**|**/a**|指令碼|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -513,7 +513,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 
 ### <a name="properties-specific-to-the-script-action"></a>指令碼動作特有的屬性
 
-|屬性|ReplTest1|Description|
+|屬性|ReplTest1|描述|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。
@@ -574,7 +574,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 |**/p:**|IgnoreNotForReplication=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新不可複寫設定。|
 |**/p:**|IgnoreObjectPlacementOnPartitionScheme=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新物件在資料分割配置上的位置。|
 |**/p:**|IgnorePartitionSchemes=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新資料分割配置和函式的差異。|
-|**/p:**|IgnorePermissions=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
+|**/p:**|IgnorePermissions=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新權限的差異。|
 |**/p:**|IgnoreQuotedIdentifiers=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新引號識別項設定的差異。|
 |**/p:**|IgnoreRoleMembership=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新登入之角色成員資格的差異。|
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|指定當您發行至資料庫時，應該忽略或更新 SQL Server 將路由保留在路由表中之時間長短的差異。|

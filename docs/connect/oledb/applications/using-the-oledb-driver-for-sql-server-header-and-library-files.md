@@ -1,8 +1,8 @@
 ---
-title: 使用 OLE DB Driver for SQL Server 標頭及程式庫檔案 | Microsoft Docs
+title: 使用 OLE DB Driver for SQL Server 標頭與程式庫檔案 | Microsoft Docs
 description: 使用 OLE DB Driver for SQL Server 標頭及程式庫檔案
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9cd6a50bec611b7068b3f79f3867f9e2a6242a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816036"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744418"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用 OLE DB Driver for SQL Server 標頭及程式庫檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "47816036"
   
  OLE DB Driver for SQL Server 標頭和程式庫檔案會安裝在下列位置：  
   
- *%PROGRAM FILES %* \Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
+ *%PROGRAM FILES%* \Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  OLE DB Driver for SQL Server 標頭檔 (msoledbsql.h) 可用來將 SQL Server 資料存取功能的 OLE DB 驅動程式新增至自訂應用程式。 OLE DB Driver for SQL Server 標頭檔包含使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中所導入之新功能所需的所有定義、屬性 (Attribute)、屬性 (Property) 與介面。  
   
- 除了 OLE DB Driver for SQL Server 標頭檔，另外還有 msoledbsql.lib 的程式庫檔案的匯出程式庫即為[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)功能。  
+ 除了 OLE DB Driver for SQL Server 標頭檔，另外還有 msoledbsql.lib 程式庫檔案，也就是匯出程式庫的[OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)功能。  
   
  OLE DB Driver for SQL Server 標頭檔與搭配 Microsoft Data Access Components (MDAC) 所使用的 sqloledb.h 標頭檔具回溯相容性，但是不包含適用於 SQLOLEDB 的 CLSID (MDAC 隨附的 OLE DB Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 或適用於 XML 功能的符號 (不受 OLE DB Driver for SQL Server 所支援)。    
   
- 使用 OLE DB Driver for SQL Server OLE DB 應用程式只需要參考 msoledbsql.h。 如果應用程式同時使用 MDAC (SQLOLEDB) 和 OLE DB Driver for SQL Server，則可以同時參考 sqloledb.h 和 msoledbsql.h，但是必須先參考 sqloledb.h。  
+ 使用 OLE DB Driver for SQL Server 的 OLE DB 應用程式只需要參考 msoledbsql.h。 如果應用程式同時使用 MDAC (SQLOLEDB) 和 OLE DB Driver for SQL Server，則可以同時參考 sqloledb.h 和 msoledbsql.h，但是必須先參考 sqloledb.h。  
   
 ## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>使用 OLE DB Driver for SQL Server 標頭檔案  
- 若要使用 OLE DB Driver for SQL Server 標頭檔案，您必須使用**包括**您 C/c + + 程式碼內的陳述式。 下列各節說明如何執行此 OLE DB 應用程式。  
+ 若要使用 OLE DB Driver for SQL Server 標頭檔案，您必須使用**包括**您 C/c + + 程式碼內的陳述式。 下列各節說明如何在 OLE DB 應用程式中的作業。  
   
 > [!NOTE]  
 >  OLE DB Driver for SQL Server 標頭和程式庫檔案只能是編譯使用 Visual Studio c + + 2012年或更新版本。  

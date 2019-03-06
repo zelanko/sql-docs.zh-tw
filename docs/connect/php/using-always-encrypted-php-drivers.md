@@ -269,7 +269,7 @@ Microsoft driver 5.3.0 for PHP for SQL Server，只有 「 Windows 憑證存放�
 
 Windows 上的 SQL Server ODBC 驅動程式包含內建的資料行主要金鑰存放區提供者的 Windows 憑證存放區、 名為`MSSQL_CERTIFICATE_STORE`。 （此提供者無法使用。 在 macOS 或 Linux）與此提供者，CMK 會儲存在本機用戶端電腦上，並由應用程式不需要額外組態，才能使用它來搭配此驅動程式。 不過，應用程式必須存取憑證和私密金鑰存放區中。 如需詳細資訊，請參閱 [建立及儲存資料行主要金鑰 (永遠加密)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
-### <a name="using-azure-key-vault"></a>使用 Azure Key Vault 的 EKM
+### <a name="using-azure-key-vault"></a>使用 Azure Key Vault
 
 Azure 金鑰保存庫會提供方法來儲存加密金鑰、 密碼和其他祕密，使用 Azure，而且可用來儲存 Always encrypted 的金鑰。 ODBC Driver for SQL Server （17 和更高版本） 包含 Azure Key Vault 的內建的主要金鑰存放區提供者。 下列連接選項處理 Azure Key Vault 設定： `KeyStoreAuthentication`， `KeyStorePrincipalId`，和`KeyStoreSecret`。 
  -   `KeyStoreAuthentication` 可以採用兩個可能的字串值的其中一個：`KeyVaultPassword`和`KeyVaultClientSecret`。 這些值會控制與其他兩個關鍵字搭配使用何種驗證認證。

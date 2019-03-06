@@ -2,7 +2,7 @@
 title: 使用 OLE DB Driver for SQL Server 建置應用程式 | Microsoft Docs
 description: 使用 OLE DB Driver for SQL Server 建置應用程式
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8be648639f3b345f6d6eb16c6f51c58064d9270a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691782"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744408"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>使用 OLE DB Driver for SQL Server 建置應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "47691782"
  [OLE DB Driver for SQL Server 的元件](../../oledb/applications/components-of-oledb-driver-for-sql-server.md)  
  討論組成 OLE DB Driver for SQL Server，包括文件庫、 資源、 說明和標頭檔的元件。  
 
- [利用 OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
+ [ OLE DB Driver for SQL Server 使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
  討論當透過 OLE DB Driver for SQL Server 連線到資料庫時，可以使用之各種類型的連接字串。  
 
- [為 SQL Server 標頭及程式庫檔案使用 OLE DB 驅動程式](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
+ [使用 OLE DB Driver for SQL Server 標頭與程式庫檔案](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  討論如何使用 OLE DB Driver for SQL Server 標頭和程式庫的應用程式內的檔案。  
 
  [將應用程式從 MDAC 更新為 OLE DB Driver for SQL Server](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
@@ -57,4 +57,4 @@ ms.locfileid: "47691782"
 
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
- [OLE DB 的使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [OLE DB 使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

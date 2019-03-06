@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server 功能 |Microsoft Docs
 description: OLE DB Driver for SQL Server 功能
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840906"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744458"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>OLE DB Driver for SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840906"
   
  [執行非同步作業](../../oledb/features/performing-asynchronous-operations.md)  
  討論 OLE DB Driver for SQL Server 如何支援非同步作業，這是立即傳回而不在呼叫執行緒上封鎖的功能。  
-  
+
+[使用 Azure Active Directory](using-azure-active-directory.md)  
+討論引進的新驗證方法在 OLE DB 驅動程式 18.2.1 中有更安全的預設設定，並允許連接到 Azure SQL Database 使用同盟身分識別的執行個體。
+
  [使用 Multiple Active Result Set &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  討論 OLE DB Driver for SQL Server 如何支援 multiple active result set (MARS)。 MARS 可讓您使用單一資料庫連接執行與接收多個結果集  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840906"
   
  [OLE DB Driver for SQL Server 中支援 UTF-16](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  討論 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中導入的行為變更。 如果您在繫結資料行結果或輸出參數時提供固定長度的緩衝區、**wchar** 字元在終止字元成為代理字組的高 Surrogate 字碼指標之前寫入緩衝區，而且下一個 **wchar** 字元是低 Surrogate 字碼指標，OLE DB Driver for SQL Server 就不會將高 Surrogate 字碼指標新增至緩衝區。  
+ 
+ [OLE DB Driver for SQL Server 中的 UTF-8 支援](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ 討論針對 utf-8 伺服器編碼方式和設定的預防措施時使用 utf-8 編碼資料，使用者應採取的支援。
   
  [OLE DB Driver for SQL Server 支援高可用性、災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  討論如何設定應用程式以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中新增的高可用性災害復原功能。  

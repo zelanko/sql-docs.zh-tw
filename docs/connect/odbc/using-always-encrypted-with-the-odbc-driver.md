@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044945"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662852"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>搭配使用 Always Encrypted 與 ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -96,7 +96,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 插入至資料庫資料行的值，包括加密的資料行，會傳遞為繫結參數 (請參閱 [SQLBindParameter 函式](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx))。 雖然將值傳送到未加密的資料行時，使用參數是選擇性項目 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要項目。 如果插入 SSN 或 BirthDate 資料行中的值傳遞做為內嵌在查詢陳述式中的常值，則查詢會失敗，因為驅動程式不會嘗試加密，或處理查詢中的常值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
 
-- SQL 類型的插入 SSN 資料行的參數設定為 SQL_CHAR，這會對應到**char** SQL Server 資料類型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果參數的型別設定為 SQL_WCHAR，這會對應到**nchar**，則查詢會失敗，因為永遠加密 不支援加密的 nchar 值的伺服器端轉換成加密的 char 值。 請參閱[ODBC 程式設計人員參考-附錄 d:資料型別](https://msdn.microsoft.com/library/ms713607.aspx)如需有關資料類型對應資訊。
+- SQL 類型的插入 SSN 資料行的參數設定為 SQL_CHAR，這會對應到**char** SQL Server 資料類型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果參數的型別設定為 SQL_WCHAR，這會對應到**nchar**，則查詢會失敗，因為永遠加密 不支援加密的 nchar 值的伺服器端轉換成加密的 char 值。 請參閱[ODBC 程式設計人員參考-附錄 d： 資料類型](https://msdn.microsoft.com/library/ms713607.aspx)如需有關資料類型對應資訊。
 
 ```
     SQL_DATE_STRUCT date;
@@ -286,7 +286,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>控制反覆存取以擷取查詢參數的中繼資料
 
-如果連線已啟用 Always Encrypted，此驅動程式預設會針對每個參數化查詢呼叫 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，將查詢陳述式 (不含任何參數值) 傳遞至 SQL Server。 這個預存程序會分析查詢陳述式，若要了解，如果任何參數需要加密，而且如果是的話，傳回每個參數，以允許將其加密驅動程式的加密相關資訊。 上述行為可對用戶端應用程式確保高透明度：只要將以加密資料行為目標的值傳遞給參數中的驅動程式，應用程式 (及應用程式開發人員) 便無須知道哪些查詢存取了加密資料行。
+如果連線已啟用 Always Encrypted，此驅動程式預設會針對每個參數化查詢呼叫 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)，將查詢陳述式 (不含任何參數值) 傳遞至 SQL Server。 這個預存程序會分析查詢陳述式，若要了解，如果任何參數需要加密，而且如果是的話，傳回每個參數，以允許將其加密驅動程式的加密相關資訊。 上述行為可確保高透明度，用戶端應用程式： 應用程式 （及應用程式開發人員） 不需要留意哪些查詢存取加密的資料行，只要目標為加密資料行值會傳遞至在參數中驅動程式。
 
 ### <a name="per-statement-always-encrypted-behavior"></a>每個陳述式 Always Encrypted 行為
 
@@ -294,7 +294,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 若要控制永遠加密 行為的陳述式，呼叫設定 SQLSetStmtAttr`SQL_SOPT_SS_COLUMN_ENCRYPTION`陳述式屬性，以下列值之一：
 
-|ReplTest1|Description|
+|ReplTest1|描述|
 |-|-|
 |`SQL_CE_DISABLED` (0)|永遠加密已停用陳述式|
 |`SQL_CE_RESULTSETONLY` (1)|僅解密。 系統會解密結果集和傳回值，並不會加密參數|
@@ -347,7 +347,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 ODBC Driver for SQL Server 隨附下列的內建金鑰存放區提供者：
 
-| [屬性] | Description | 提供者 （中繼資料） 名稱 |可用性|
+| [屬性] | 描述 | 提供者 （中繼資料） 名稱 |可用性|
 |:---|:---|:---|:---|
 |Azure 金鑰保存庫 |在 Azure Key Vault 中儲存 Cmk | `AZURE_KEY_VAULT` |Windows、 macOS、 Linux|
 |Windows 憑證存放區|本機儲存在 Windows 金鑰儲存區的 Cmk| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -369,6 +369,8 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 
 - 用戶端識別碼/密碼-使用此方法，認證是應用程式用戶端識別碼和應用程式祕密。
 
+- 受控服務身分識別-使用此方法時，認證會是系統指派的身分識別或指派給使用者的身分識別。 指派給使用者的身分識別，UID 設的使用者身分識別的物件識別碼。
+
 若要允許使用 AKV 中儲存的資料行加密的 Cmk 驅動程式，請使用下列的只有連接字串關鍵字：
 
 |認證類型| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
@@ -386,7 +388,7 @@ Azure 金鑰保存庫是存放和管理永遠加密資料行主要金鑰的方�
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**使用者名稱/密碼**
+**使用者名稱/密碼**：
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -418,7 +420,7 @@ ODBC Driver for SQL Server 也支援使用 CEKeystoreProvider 介面的自訂的
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引數 | Description |
+| 引數 | 描述 |
 |:---|:---|
 |`ConnectionHandle`|[輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
 |`Attribute`|[輸入]若要設定的屬性：`SQL_COPT_SS_CEKEYSTOREPROVIDER`常數。|
@@ -427,7 +429,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 驅動程式嘗試載入使用平台定義動態程式庫載入機制 ValuePtr 參數所識別的程式庫 (`dlopen()`在 Linux 和 macOS 上`LoadLibrary()`在 Windows 上)，並新增任何提供者，其中定義的清單已知的驅動程式提供者。 可能會發生下列錯誤：
 
-| 錯誤 | Description |
+| 錯誤 | 描述 |
 |:--|:--|
 |`CE203`|無法載入動態程式庫。|
 |`CE203`|文件庫中找不到"CEKeyStoreProvider"匯出符號。|
@@ -438,7 +440,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > 應用程式設計人員必須確定任何需要的查詢會透過任何連線傳送之前，會載入任何自訂提供者。 無法執行這項操作時，會導致發生錯誤：
 
-| 錯誤 | Description |
+| 錯誤 | 描述 |
 |:--|:--|
 |`CE200`|金鑰儲存區提供者 %1 找不到。 請確定已載入適當的金鑰儲存區提供者程式庫。|
 
@@ -453,7 +455,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引數 | Description |
+| 引數 | 描述 |
 |:---|:---|
 |`ConnectionHandle`|[輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
 |`Attribute`|[輸入]若要擷取的屬性：`SQL_COPT_SS_CEKEYSTOREPROVIDER`常數。|
@@ -480,7 +482,7 @@ char data[];
 } CEKEYSTOREDATA;
 ```
 
-| 引數 | Description |
+| 引數 | 描述 |
 |:---|:---|
 |`name`|[輸入]集合，提供者的名稱時若要將資料傳送。 忽略時取得。 以 null 終止的寬字元字串。|
 |`dataSize`|[輸入]下列結構的資料陣列的大小。|
@@ -493,7 +495,7 @@ A`SQLSetConnectAttr`呼叫使用`SQL_COPT_SS_CEKEYSTOREDATA`屬性寫入指定�
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 引數 | Description |
+| 引數 | 描述 |
 |:---|:---|
 |`ConnectionHandle`| [輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
 |`Attribute`|[輸入]若要設定的屬性：`SQL_COPT_SS_CEKEYSTOREDATA`常數。|
@@ -513,7 +515,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 引數 | Description |
+| 引數 | 描述 |
 |:---|:---|
 |`ConnectionHandle`|[輸入]連接控制代碼。 必須是有效的連接控制代碼，但透過一個連接控制代碼載入提供者會從相同的程序中的任何其他可存取。|
 |`Attribute`|[輸入]若要擷取的屬性：`SQL_COPT_SS_CEKEYSTOREDATA`常數。|
@@ -551,11 +553,11 @@ ODBC Driver 17 for SQL Server 加密之前使用 SQLGetData 組件中不能擷�
 
 - 若要插入在 varbinary （max） 的形式 （例如擷取上方） 中的加密文字，請設定`BCPMODIFYENCRYPTED`選項設定為 TRUE，並執行 BCP IN 作業。 如果未產生資料的順序，請確定目的地資料行的 CEK 是原先取得的加密文字相同。
 
-使用時**bcp**公用程式：若要控制`ColumnEncryption`設定，請使用-D 選項並指定 DSN，其中包含所要的值。 若要插入的加密文字，請確定`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`啟用使用者的設定。
+使用時**bcp**公用程式： 控制`ColumnEncryption`設定，請使用-D 選項並指定 DSN，其中包含所要的值。 若要插入的加密文字，請確定`ALLOW_ENCRYPTED_VALUE_MODIFICATIONS`啟用使用者的設定。
 
 下表提供摘要的動作，對加密資料行運作時：
 
-|`ColumnEncryption`|BCP 傳遞方向|Description|
+|`ColumnEncryption`|BCP 傳遞方向|描述|
 |----------------|-------------|-----------|
 |`Disabled`|OUT （以用戶端）|擷取加密文字。 觀察到的資料類型是**varbinary （max)**。|
 |`Enabled`|OUT （以用戶端）|擷取純文字。 驅動程式會解密資料行的資料。|
@@ -572,16 +574,17 @@ ODBC Driver 17 for SQL Server 加密之前使用 SQLGetData 組件中不能擷�
 
 ### <a name="connection-string-keywords"></a>連接字串關鍵字
 
-|[屬性]|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |`ColumnEncryption`|接受的值為`Enabled` / `Disabled`。<br>`Enabled` -- 啟用連線的 Always Encrypted 功能。<br>`Disabled` -- 停用連線的 Always Encrypted 功能。 <br><br>預設值為 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效的值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 當`KeyStoreAuthentication`  =  `KeyVaultPassword`，將此值設定為有效的 Azure Active Directory 使用者主體名稱。 <br>當`KeyStoreAuthetication`  =  `KeyVaultClientSecret`將此值設定為有效 Azure Active Directory 應用程式用戶端識別碼 |
-|`KeyStoreSecret` | 當`KeyStoreAuthentication`  =  `KeyVaultPassword`將此值設定為對應的使用者名稱的密碼。 <br>當`KeyStoreAuthentication`  =  `KeyVaultClientSecret`將此值設定為有效 Azure Active Directory 應用程式用戶端識別碼相關聯的應用程式祕密|
+|`KeyStoreSecret` | 當`KeyStoreAuthentication`  =  `KeyVaultPassword`將此值設定為對應的使用者名稱的密碼。 <br>當`KeyStoreAuthentication`  =  `KeyVaultClientSecret`將此值設定為有效 Azure Active Directory 應用程式用戶端識別碼相關聯的應用程式祕密 |
+
 
 ### <a name="connection-attributes"></a>連接屬性
 
-|[屬性]|類型|Description|  
+|[屬性]|類型|描述|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|連線前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)--停用 Always Encrypted <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)--啟用一律加密|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|連線後|[設定]嘗試載入 CEKeystoreProvider<br>[取得]傳回 CEKeystoreProvider 名稱|
@@ -591,19 +594,19 @@ ODBC Driver 17 for SQL Server 加密之前使用 SQLGetData 組件中不能擷�
 
 ### <a name="statement-attributes"></a>陳述式屬性
 
-|[屬性]|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)-for 陳述式會停用 always Encrypted <br>`SQL_CE_RESULTSETONLY` (1)--僅解密。 系統會解密結果集和傳回值，並不會加密參數 <br>`SQL_CE_ENABLED` (3)--永遠加密已啟用，並使用參數和結果|
 
 ### <a name="descriptor-fields"></a>描述項欄位
 
-|IPD 欄位|大小/類型|預設值|Description|
+|IPD 欄位|大小/類型|預設值|描述|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD （2 個位元組）|0|當 0 （預設值）： 決定来加密此參數由加密中繼資料的可用性。<br><br>當非零值： 如果加密中繼資料可供此參數，它會加密。 否則，要求會失敗，錯誤 [CE300] [Microsoft] [ODBC Driver 13 for SQL Server] 強制加密已指定為參數，但任何加密中繼資料由伺服器提供。|
 
 ### <a name="bcpcontrol-options"></a>bcp_control 選項
 
-|選項名稱|預設值|Description|
+|選項名稱|預設值|描述|
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|若為 TRUE，允許 varbinary （max） 值插入加密資料行。 若為 FALSE，防止插入提供正確的型別和加密中繼資料。|
 

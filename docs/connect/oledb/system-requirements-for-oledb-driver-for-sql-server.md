@@ -2,7 +2,7 @@
 title: OLE DB Driver for SQL Server 的系統需求 | Microsoft Docs
 description: OLE DB Driver for SQL Server 的需求
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a2ff38f4322209c7ed6eb46a5ba97f360ca3650b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821026"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744428"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 的系統需求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,16 @@ ms.locfileid: "47821026"
 >  在安裝此軟體之前，請確定已使用管理員權限登入。  
 
 ## <a name="operating-system-requirements"></a>作業系統需求  
- 如需支援 OLE DB Driver for SQL Server 的作業系統，請參閱[OLE DB driver for SQL Server 的支援原則](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)。  
+ 如需支援 OLE DB Driver for SQL Server 的作業系統，請參閱[支援 OLE DB Driver for SQL Server 原則](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)。  
+
+ ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 驗證需求  
+ OLE DB 驅動程式與 Azure Active Directory 驗證方法時，請確認[適用於 SQL Server 的 Active Directory Authentication Library](https://go.microsoft.com/fwlink/?LinkID=513072)已安裝。 ADAL 不需要其他驗證方法或 OLE DB 作業。
+如需詳細資訊，請參閱[使用 Azure Active Directory](features/using-azure-active-directory.md)。
 
 ## <a name="sql-server-requirements"></a>SQL Server 需求  
  若要使用 OLE DB Driver for SQL Server，來存取中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，您必須擁有的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支援來自所有 MDAC 版本、Windows Data Access Components 及所有 OLE DB Driver for SQL Server 版本的連線。 當舊版的用戶端版本與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接時，用戶端不知道的伺服器資料類型會對應至與用戶端版本相容的類型。 如需詳細資訊，請參閱本主題稍後的「用戶端版本的資料類型相容性」。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支援來自所有 MDAC 版本、Windows Data Access Components 及所有 OLE DB Driver for SQL Server 版本的連線。 當舊版的用戶端版本與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接時，用戶端不知道的伺服器資料類型會對應至與用戶端版本相容的類型。 如需詳細資訊，請參閱[用戶端版本的資料類型相容性](#data-type-compatibility-for-client-versions)。  
 
 ## <a name="cross-language-requirements"></a>跨語言需求  
  支援的作業系統的所有當地語系化版本被支援 OLE DB Driver for SQL Server 的英文語言版本。 當地語系化 OLE DB Driver for SQL Server 版本相同語言的當地語系化作業系統上支援的 OLE DB Driver for SQL Server 的當地語系化的版本。 只要有安裝相符的語言設定，受支援作業系統的英文版就會支援 OLE DB Driver for SQL Server 的當地語系化版本。  
@@ -68,12 +72,12 @@ ms.locfileid: "47821026"
 
 |資料類型|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|OLE DB Driver for SQL Server|Windows Data Access Components、MDAC 和<br /><br /> OLE DB Driver for SQL Server OLE DB 應用程式與 DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8Kb)|udt|udt|udt|Varbinary|  
+|CLR UDT (\<= 8 Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|文字|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|varbinary|udt|udt|image|  
+|CLR UDT (> 8 Kb)|varbinary|udt|udt|image|  
 |日期|varchar|日期|日期|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  

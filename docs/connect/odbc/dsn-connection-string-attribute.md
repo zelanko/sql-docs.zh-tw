@@ -1,7 +1,7 @@
 ---
 title: 資料來源名稱和連接字串關鍵字的 ODBC 驅動程式-SQL Server |Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 manager: craigg
-ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: e2db3b8df9ea63c16e0e96af9df42b7c22adaf80
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306235"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662872"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
 
@@ -23,7 +23,7 @@ ms.locfileid: "53306235"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支援/的 DSN 連接字串關鍵字和連接屬性
 
-下表列出可用的關鍵字與每個平台 （l： 屬性Linux ; M:Mac;寫入：Windows： 按一下關鍵字或屬性，如需詳細資訊。
+下表列出可用的關鍵字與每個平台 (l: Linux; 屬性M: Mac;W: Windows)。 按一下關鍵字或屬性，如需詳細資訊。
 
 | DSN/連接字串關鍵字 | 連線屬性 | 平台 |
 |-|-|-|
@@ -105,7 +105,7 @@ ms.locfileid: "53306235"
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
-| | [SQL_COPT_SS_ENLIST_IN_XA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistinxa) | W |
+| | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -119,7 +119,7 @@ ms.locfileid: "53306235"
 
 以下是一些連接字串關鍵字和連接屬性中所未記載[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)， [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)並[SQLSetConnectAttr 函數](../../odbc/reference/syntax/sqlsetconnectattr-function.md)。
 
-### <a name="description"></a>Description
+### <a name="description"></a>描述
 
 用來描述資料來源。
 
@@ -127,7 +127,7 @@ ms.locfileid: "53306235"
 
 控制 ANSI 至 OEM 轉換的資料。 
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | SQL_AO_OFF | （預設值）不會執行轉譯。 |
 | SQL_AO_ON | 會執行轉譯。 |
@@ -136,7 +136,7 @@ ms.locfileid: "53306235"
 
 控制 SQL Server 後援連線使用。 不再支援這一個。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | SQL_FB_OFF | （預設值）後援的連線已停用。 |
 | SQL_FB_ON | 會啟用後援的連接。 |
@@ -149,13 +149,14 @@ ms.locfileid: "53306235"
 
 設定要連接到 SQL Server 時使用的驗證模式。 請參閱[使用 Azure Active Directory](using-azure-active-directory.md)如需詳細資訊。
 
-| 關鍵字的值 | 屬性值 | Description |
+| 關鍵字的值 | 屬性值 | 描述 |
 |-|-|-|
 | |SQL_AU_NONE|（預設值）未設定。 其他屬性的組合，決定驗證模式。|
 |SqlPassword|SQL_AU_PASSWORD|SQL Server 驗證 (使用使用者名稱和密碼)。|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 整合式驗證。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 密碼驗證。|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 互動式驗證。|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 受控服務身分識別驗證。 指派給使用者的身分識別，UID 設的使用者身分識別的物件識別碼。 |
 | |SQL_AU_RESET|未設定。 覆寫任何 DSN 或連接字串設定。|
 
 > [!NOTE]
@@ -165,7 +166,7 @@ ms.locfileid: "53306235"
 
 控制透明的資料行加密 （永遠加密）。 請參閱[使用一律加密 (ODBC)](using-always-encrypted-with-the-odbc-driver.md)如需詳細資訊。
 
-| 關鍵字的值 | 屬性值 | Description |
+| 關鍵字的值 | 屬性值 | 描述 |
 |-|-|-|
 |已啟用|SQL_CE_ENABLED|啟用 Always Encrypted。|
 |已停用|SQL_CE_DISABLED|（預設值）停用 Always Encrypted。|
@@ -175,7 +176,7 @@ ms.locfileid: "53306235"
 
 控制項的透明網路 IP 解析功能互動 MultiSubnetFailover 以允許更快重新連線嘗試。 請參閱[使用透明網路 IP 解析](using-transparent-network-ip-resolution.md)如需詳細資訊。
 
-| 關鍵字的值 | 屬性值| Description |
+| 關鍵字的值 | 屬性值| 描述 |
 |-|-|-|
 |是|SQL_IS_ON|(預設) 啟用透明網路 IP 解析。|
 |否|SQL_IS_OFF|停用透明網路 IP 解析。|
@@ -184,7 +185,7 @@ ms.locfileid: "53306235"
 
 控制使用 SET FMTONLY 中繼資料時連線到 SQL Server 2012 及更新版本。
 
-| 關鍵字的值 | Description |
+| 關鍵字的值 | 描述 |
 |-|-|
 |否|（預設值）如果有的話，請使用 sp_describe_first_result_set 中繼資料。 |
 |是| 使用 SET FMTONLY 中繼資料。 |
@@ -193,7 +194,7 @@ ms.locfileid: "53306235"
 
 允許使用 Azure Active Directory 存取權杖進行驗證。 請參閱[使用 Azure Active Directory](using-azure-active-directory.md)如需詳細資訊。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | NULL | （預設值）會不提供任何存取權杖。 |
 | ACCESSTOKEN* | 存取語彙基元指標。 |
@@ -202,7 +203,7 @@ ms.locfileid: "53306235"
 
 載入的金鑰儲存區提供者程式庫與通訊。 請參閱控制項透明的資料行加密 （永遠加密）。 此屬性有沒有預設值。 請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)如需詳細資訊。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | CEKEYSTOREDATA * | 通訊金鑰儲存區提供者程式庫的資料結構 |
 
@@ -210,8 +211,25 @@ ms.locfileid: "53306235"
 
 Always encrypted 載入金鑰儲存區提供者程式庫，或擷取已載入的金鑰儲存區提供者程式庫名稱。 請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)如需詳細資訊。 此屬性有沒有預設值。
 
-| 屬性值 | Description |
+| 屬性值 | 描述 |
 |-|-|
 | char * | 金鑰儲存區提供者程式庫路徑 |
 
+### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
+若要啟用 XA 交易 XA 相容的交易處理器 (TP) 使用，應用程式需要呼叫**SQLSetConnectAttr** SQL_COPT_SS_ENLIST_IN_XA 與指標`XACALLPARAM`物件。 這個選項可在 Windows、 （17.3 和更新版本） 的 Linux 和 mac。
+```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
+``` 
+ 若要將 XA 交易與 ODBC 連接只產生關聯，提供 TRUE 或 FALSE SQL_COPT_SS_ENLIST_IN_XA 而不是指標呼叫時**SQLSetConnectAttr**。 這在 Windows 上才有效，並且不能指定透過用戶端應用程式的 XA 作業。 
+ ```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
+``` 
+
+|ReplTest1|描述|平台|  
+|-----------|-----------------|-----------------|  
+|XACALLPARAM 物件 *|指向 `XACALLPARAM` 物件的指標。|Windows、 Linux 和 Mac|
+|TRUE|將 XA 交易與 ODBC 連接產生關聯。 所有相關的資料庫活動都將在 XA 交易的保護底下進行。|Windows|  
+|FALSE|取消關聯的交易與 ODBC 連接。|Windows|
+
+ 請參閱[使用 XA 交易](../../connect/odbc/use-xa-with-dtc.md)的 XA 交易的詳細資訊。

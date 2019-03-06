@@ -1,17 +1,17 @@
 ---
 title: 版本資訊 (OLE DB Driver for SQL Server) | Microsoft Docs
-ms.date: 07/03/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: 01ea0242637f4dd5c813808b3b840d3a5a86df9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36dc1b7325265da6231b75e9f4db46854b0b219f
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789116"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744358"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -19,6 +19,13 @@ ms.locfileid: "47789116"
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 此頁面說明新增功能的每個版本的 Microsoft OLE DB driver for SQL Server。
+
+## <a name="whats-new-in-version-1821"></a>18.2.1 版的新功能
+
+**新增的功能：**
+
+* Utf-8 伺服器版本編碼方式的支援。 如需詳細資訊，請參閱： [OLE DB Driver for SQL Server 中的 utf-8 支援](features/utf-8-support-in-oledb-driver-for-sql-server.md)。
+* Azure Active Directory 驗證支援。 如需詳細資訊，請參閱[使用 Azure Active Directory](features/using-azure-active-directory.md)。
 
 ## <a name="whats-new-in-version-1810"></a>18.1.0 版的新功能
 

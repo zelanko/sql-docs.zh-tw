@@ -11,12 +11,12 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6ac8e52e46108e88693a96d587e3af2b79e4ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833106"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676056"
 ---
 # <a name="retrieving-data"></a>擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,12 +70,15 @@ ms.locfileid: "47833106"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[以資料流的形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概略說明如何從伺服器串流處理資料，並提供特定使用案例的連結。|  
 |[使用方向參數](../../connect/php/using-directional-parameters.md)|說明如何在呼叫預存程序時使用參數方向。|  
-|[指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|示範在使用 SQLSRV 驅動程式時，如何建立您可以用任何順序存取資料列的結果集。|  
-|[如何：使用 SQLSRV 驅動程式，以字串的形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|說明如何以字串的形式擷取日期和時間類型。|  
+|[指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|示範如何建立結果集，您可以依任何順序存取的資料列。|  
+|[如何：使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|說明如何使用 SQLSRV 驅動程式以字串形式擷取日期和時間類型。|  
+|[如何： 擷取為 PHP Datetime 物件，使用 PDO_SQLSRV 驅動程式的日期和時間類型](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|描述如何使用 PDO_SQLSRV 驅動程式的物件形式擷取日期和時間類型。|  
+|[使用 SQLSRV 驅動程式的格式化十進位字串](../../connect/php/formatting-decimals-sqlsrv-driver.md)|示範如何設定使用 SQLSRV 驅動程式的十進位或貨幣值的格式。|  
+|[使用 PDO_SQLSRV 驅動程式的格式化十進位字串](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|示範如何設定使用 PDO_SQLSRV 驅動程式的十進位或貨幣值的格式。|  
   
 ## <a name="related-sections"></a>相關章節  
 [如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)  
