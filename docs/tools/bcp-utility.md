@@ -29,18 +29,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b5198ed4dda2efc350d3ef956a1dda0e3766ca15
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317828"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955989"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 > 在 Linux 上使用 bcp，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 > 
@@ -62,14 +59,14 @@ ms.locfileid: "54317828"
 
 **版本資訊**
 
-版本編號：15.0 <br>
+版本號碼：15.0 <br>
 組建編號：15.0.1000.34<br>
-發行日期：2018 年 10 月 18 日
+發行日期： 2018 年 10 月 18 日
 
 SQLCMD 的新版本支援 Azure AD 驗證，包括 SQL Database、 SQL 資料倉儲，以及 Always Encrypted 功能支援 Multi-factor Authentication (MFA)。
 新的 BCP 支援 Azure AD 驗證，包括 SQL Database 和 SQL 資料倉儲的 Multi-factor Authentication (MFA) 支援。
 
-**系統需求**Windows 10，Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1，Windows Server 2012 中，Windows Server 2012 此 R2 元件同時需要[Windows 安裝程式4.5](https://www.microsoft.com/download/details.aspx?id=8483)並[Microsoft ODBC Driver for SQL Server 17.2](https://www.microsoft.com/download/details.aspx?id=56567)。
+**系統需求**Windows 10，Windows 7、 Windows 8、 Windows 8.1、 Windows Server 2008、 Windows Server 2008 R2、 Windows Server 2008 R2 SP1，Windows Server 2012 中，Windows Server 2012 此 R2 元件同時需要[Windows 安裝程式4.5](https://www.microsoft.com/download/details.aspx?id=8483)並[Microsoft ODBC Driver for SQL Server 17.3](https://www.microsoft.com/download/details.aspx?id=56567)。
  
 若要檢查的 BCP 版本執行`bcp /v`命令並確認該 15.0.1000.34 或更高版本中使用。
 
@@ -255,7 +252,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    若要啟用互動式驗證，提供使用者名稱-G 選項 (-U)，而不提供密碼。   
 
-   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例：*Azure Active Directory 使用者名稱和密碼：*  
+   下列範例會匯出使用表示使用者名稱的 Azure AD 互動模式，其中使用者代表的 AAD 帳戶的資料。 這是上一節中所使用的相同範例： *Azure Active Directory 使用者名稱和密碼*。  
 
    互動模式需要密碼才可手動輸入，或進行啟用，multi-factor authentication 使用的帳戶，請完成設定的 MFA 驗證方法。 
 
@@ -273,7 +270,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a> 指定將資料大量匯入資料表或檢視期間所要使用的一或多個提示。  
   
-* **ORDER**(**_column_[ASC | DESC] [**,**..._n_]**)**  
+* **ORDER**(**_column_[ASC | DESC] [**,**..._n_])**  
 資料檔案中之資料的排序順序。 如果匯入資料時是依照資料表的叢集索引來排序，將可提升大量匯入的效能。 如果不是依照叢集索引鍵的順序排序資料檔案，或是資料表沒有叢集索引，便會忽略 ORDER 子句。 提供的資料行名稱必須是目的地資料表中的有效資料行名稱。 根據預設， **bcp** 會假設資料檔案沒有排序。 為了達到最佳的大量匯入效果， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也會驗證匯入的資料是否已排序。  
   
 * **ROWS_PER_BATCH** **=** _**bb**_  
@@ -316,7 +313,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
 **-K** _**application\_intent**_<a name="K"></a>   
-宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K** ，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱＜[使用中次要：可讀取的次要複本 &#40;Always On 可用性群組&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱 [使用中次要：可讀取的次要複本 &#40;AlwaysOn 可用性群組&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)中心概念。  
   
 **-L** _**last\_row**_<a name="L"></a>  
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。 這個參數需要大於 (>) 0 但小於 (<) 或等於 (=) 最後一個資料列號碼的值。 如果沒有這個參數，預設值是檔案中的最後一個資料列。  
@@ -610,7 +607,7 @@ bcp -v
   
  此範例假設您使用的是混合模式驗證，您必須使用 **-U** 參數指定您的登入識別碼。 同時，除非您要連接到本機電腦上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體，否則請使用 **-S** 參數指定系統名稱，並選擇性地指定執行個體名稱。  
 
-請在命令提示字元之下，輸入下列命令：\(系統會提示您輸入密碼。\)
+在命令提示字元中，輸入下列命令︰ \(系統會提示您輸入密碼。\)
 ```  
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```  

@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6b9ea2618f51eb167f63232b79c61d9ecdc0e746
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: a9e02676c12cf3257ba509dbee46cf46f5e0f876
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331608"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956039"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS (在 Linux 及 macOS 上安裝 Microsoft ODBC Driver for SQL Server)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -56,7 +56,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 和 7
+### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 與 7
 ```
 sudo su
 
@@ -81,7 +81,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="suse-linux-enterprise-server-11sp4-and-12"></a>SUSE Linux Enterprise Server 11SP4 和 12
+### <a name="suse-linux-enterprise-server-11sp4-12-and-15"></a>SUSE Linux Enterprise Server 11SP4、12 與 15
 
 ```
 sudo su
@@ -94,6 +94,10 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 
 #SUSE Linux Enterprise Server 12
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
+
+#SUSE Linux Enterprise Server 15
+zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
 sudo ACCEPT_EULA=Y zypper install msodbcsql17
@@ -120,11 +124,11 @@ curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sou
 #Ubuntu 16.04
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 17.10
-curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 18.10
+curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -139,9 +143,9 @@ sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
 > - Ubuntu 18.04 支援需要驅動程式 17.2 版或更高版本。
-> - 無法使用 Ubuntu 14.04 上 unixodbc-dev 套件 2.3.1。   
+> - Ubuntu 18.10 支援需要驅動程式 17.3 版或更高版本。   
 
-### <a name="os-x-1011-el-capitan-macos-1012-sierra-and-macos-1013-high-sierra"></a>OS X 10.11 (El Capitan)、 macOS 10.12 (Sierra)，與 macOS 10.13 (High Sierra)
+### <a name="os-x-1011-el-capitan-macos-1012-sierra-macos-1013-high-sierra-and-macos-1014-mojave"></a>OS X 10.11 (El Capitan)、 macOS 10.12 (Sierra)、 macOS 10.13 (High Sierra) 和 macOS 10.14 (Mojave)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -290,7 +294,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
+brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 ```
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server

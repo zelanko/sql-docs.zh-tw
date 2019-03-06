@@ -10,15 +10,25 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d67b8bba1449cce473baa5313762c4933a72e250
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600298"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955859"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上 Microsoft ODBC Driver for SQL Server 的版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>適用於 Linux and macOS 之 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的新功能
+
+**新的散發套件支援**: SuSE 15，Ubuntu 18.10 macOS 10.14
+
+**新增功能**:
+
+- Azure Active Directory 受控服務識別 (系統和使用者指派) 驗證模式，如需詳細資訊，請參閱[使用 Azure Active Directory 與 ODBC 驅動程式](../using-azure-active-directory.md)
+- 能夠串流輸入的參數，針對 永遠加密的資料行，如需詳細資訊，請參閱[的 ODBC 驅動程式使用永遠加密時的限制](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA 分散式交易，如需詳細資訊，請參閱[使用 XA 交易](../use-xa-with-dtc.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的新功能
 
@@ -113,7 +123,7 @@ Ubuntu 現在已連同 Red Hat 和 SUSE 受到支援。 每個平台具有平台
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Linux 和 macOS 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的新功能  
 ODBC Driver on SUSE Linux (預覽) 支援 64 位元 SUSE Linux Enterprise 11 Service Pack 2。 如需詳細資訊，請參閱 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)。  
 
-ODBC Driver on Linux 支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需詳細資訊，請參閱 < [ODBC Driver on Linux 支援的高可用性、 災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+Linux 上的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需詳細資訊，請參閱 < [ODBC Driver on Linux 支援的高可用性、 災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
 ODBC Driver on Linux 支援對 Microsoft Azure SQL Database 的連接。 如需詳細資訊，請參閱 [如何：使用 ODBC 連接到 Windows Azure SQL Database](https://msdn.microsoft.com/library/hh974312.aspx)。  
 
