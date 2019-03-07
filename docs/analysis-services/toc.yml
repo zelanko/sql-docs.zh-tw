@@ -1,5 +1,5 @@
 items:
-- name: SQL Server 根目錄 ++
+- name: SQL Server ++
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 關於 SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md
@@ -2484,9 +2484,9 @@ items:
     href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: 追蹤事件 +
     href: /bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: 9d0f4813ece4aeadb0e33733b8fed21d096650c6
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 47608339c3f7bcd7cc8e5ed6672cd93d781c1926
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852973"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401910"

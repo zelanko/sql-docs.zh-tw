@@ -1,7 +1,7 @@
 ---
 title: 什麼是適用於 SAP ASE (SybaseToSQL) 的 SSMA 的新功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -10,18 +10,27 @@ ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2345fd2f5a30c8eba610a49524c058ebf1cfae5f
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 875f89a53963633a267ada1ae1563360cbebf7d8
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527091"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>什麼是適用於 SAP ASE (SybaseToSQL) 的 SSMA 的新功能
-本文章列出 SQL Server Migration Assistant (SSMA) 的每個版本中的 SAP ASE (先前稱為 SSMA for Sybase) 變更。 
+本文章列出 SQL Server Migration Assistant (SSMA) 的每個版本中的 SAP ASE (先前稱為 SSMA for Sybase) 變更。
+
+## <a name="ssma-v81"></a>SSMA v8.1
+V8.1 版的 SSMA 適用於 SAP ASE 被增強的目標式修正，專為改善品質和轉換的計量。
+
+> [!NOTE]
+> 自動更新的已知的問題可能會造成失敗的更新從 SSMA 8.0 版 v8.1。 如果您遇到這個錯誤，請下載新版本，並手動安裝它。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
 
 ## <a name="ssma-v80"></a>SSMA v8.0
-SSMA for Access 8.0 版發行已經過增強，以提供目標式的修正，旨在改善品質和轉換的計量。 此外，此版本提供了下列新功能：
+8.0 版版的 SSMA 適用於 SAP ASE 被增強的目標式修正，旨在改善品質和轉換的計量。 此外，此版本提供了下列新功能：
 
 * 支援**Azure SQL Database 受控執行個體**做為目標。 您現在可以建立新的專案目標 Azure SQL Database 受控執行個體：
 
@@ -35,14 +44,8 @@ SSMA for Access 8.0 版發行已經過增強，以提供目標式的修正，旨
 
     ![SSMA 篩選物件](../media/ssma-filter-objects.png)
 
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
-
 ## <a name="ssma-v710"></a>SSMA v7.10
-適用於 SAP ASE v7.10 版的 SSMA 的增強提供目標式修正，旨在提供額外的安全性和隱私權保護，以符合全球需求的變更。
-
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
+適用於 SAP ASE v7.10 版的 SSMA 被增強的目標式修正，旨在提供額外的安全性和隱私權保護，以符合全球需求的變更。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 適用於 SAP ASE v7.9 版的 SSMA 包含下列變更：
@@ -51,45 +54,31 @@ SSMA for Access 8.0 版發行已經過增強，以提供目標式的修正，旨
 - 支援移轉使用 SQL Server Integration Services (SSIS) 資料。 轉換結構描述之後, 就可以建立 SSIS 封裝，透過右鍵操作功能表選項。
 - SSMA 中的 [Azure SQL Database 連接] 對話方塊也已經改變指定完整的伺服器名稱。 在舊版的 SSMA，Azure SQL Database 的前置詞必須明確提及在專案設定。
 
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
-
 ## <a name="ssma-v78"></a>SSMA v7.8
 適用於 SAP ASE v7.8 版的 SSMA 包含下列變更：
-- 專案設定中的反白顯示的變更型別對應。
-- 提供可讓使用者以停用遙測。
-
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
+- 變更專案設定中反白顯示的型別對應。
+- 若要停用遙測的使用者的能力。
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 適用於 SAP ASE v7.7 版的 SSMA 包含下列變更：
 - SSMA 適用於 SAP ASE 已經過加強，以改善品質和轉換計量的目標式修正。
-- 32 位元版本的 SSMA for SAP ASE 依據熱門的需求，已經恢復。 相較於先前的實作 （在之前 v7.4)，有兩個安裝程式套件，但它們無法並存安裝。 如此一來，您必須選擇您所擁有的最適當版本的連線元件為基礎。 一律最好是使用 64 位元版本，如果可能的話。
-
-> [!IMPORTANT]
-> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
+- 32 位元版本的 SSMA for SAP ASE 依據熱門的需求，已經恢復。 相較於先前的實作 (之前要 v7.4)，有兩個安裝程式套件，但它們無法並存安裝。 如此一來，您必須選擇您所擁有的最適當版本的連線元件為基礎。 一律最好是使用 64 位元版本，如果可能的話。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 適用於 SAP ASE v7.6 版的 SSMA 包含下列變更：
-- SSMA 適用於 SAP ASE 已經過加強，改善品質和轉換計量的目標式修正與 SQL Server 2017 （公開預覽） 的支援。 在 Windows 和 Linux 上的 SQL Server 2017 支援處於公開預覽狀態，並不應該用於實際執行移轉。
-- 適用於 SAP ASE 的 SSMA 已更新以支援 Sybase 函式的轉換。
-
-> [!IMPORTANT]
-> SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件，與 32 位元版本的工具已停用。
+- 為改善品質和轉換計量的修正程式的目標 SQL Server 2017 （公開預覽） 的支援。 在 Windows 和 Linux 上的 SQL Server 2017 支援處於公開預覽狀態，並不應該用於實際執行移轉。
+- 支援 Sybase 函式的轉換。
 
 ## <a name="ssma-v75"></a>SSMA v7.5
-適用於 SAP ASE v7.5 版的 SSMA 包含下列變更：
--   增強的幾項改進，以確保更高的協助工具，方便殘障人士使用。
--   更新以支援建立或取代的語法。
-
-> [!IMPORTANT]
-> .Net 4.5.2 是安裝 SSMA v7.5 的必要條件。 此外，開頭為 v7.4，32 位元版本的 SSMA 即將中止。  
+V7.5 版的 SSMA 適用於 SAP ASE (先前稱為 SSMA for Sybase) 包含下列變更：
+-   若要確保更高的協助工具，方便殘障人士使用的幾項改良。
+-   建立或取代的語法支援。
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 SSMA for Sybase 的 v7.4 版本包含下列變更：
 - **查詢逾時**選項已經可以使用在來源和目標結構描述物件探索期間。
-![查詢逾時選項](../media/query-timeout_red.png)
+
+    ![查詢逾時選項](../media/query-timeout_red.png)
 - 品質和轉換的計量，而改善了目標式修正，根據客戶意見反應。
 
 > [!IMPORTANT]
@@ -101,7 +90,8 @@ SSMA for Sybase 的 v7.3 版本包含下列變更：
 - SSMA 擴充性架構，透過下列項目公開：
   - 匯出至 SQL Server Data Tools (SSDT) 專案的功能。
     -   您現在可以從 SSMA 匯出結構描述指令碼，SSDT 專案。 您可以使用結構描述指令碼來進行其他的結構描述變更及部署您的資料庫。
-![將儲存為 SSDT 專案命令](../media/export-schema-scripts_red.png)
+
+        ![將儲存為 SSDT 專案命令](../media/export-schema-scripts_red.png)
   - 可供執行自訂轉換的 SSMA 的程式庫。
     - 您現在可以建構自訂的語法轉換和轉換先前未處理的 SSMA 可以處理的程式碼。
       - 在此部落格文章中，可指示如何建構自訂轉換器[擴充 SQL Server Migration Assistant 的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
@@ -113,9 +103,9 @@ SSMA for Sybase 的 v7.2 版本包含下列變更：
 - 若要提供更好的資料點，來解決客戶問題，並改善 SSMA 的轉換率的遙測增強功能。
 
 ## <a name="ssma-v71"></a>SSMA v7.1
-SSMA for Access v7.1 版本包含下列變更：
+7.1 版版的 SSMA for Sybase 包含下列變更：
 - 在 Windows 和 Linux CTP1 上的 SQL Server 2017 現支援的目標平台進行移轉。 這項功能處於技術預覽狀態，並支援結構描述和資料移動至目標 SQL server。
-- SSMA 現在支援自動更新，以下載最新版本的 SSMA，因為它位於。
+- 若要下載最新版本的 SSMA，因為它位於的自動更新的支援。
 - SSMA 安裝二進位檔現在都是透過 Windows installer 套件檔案 (.msi) 提供。
 
 **資源**
@@ -136,9 +126,7 @@ SSMA for Access v7.1 版本包含下列變更：
 -  全域設定中已修正的 bug。
 
 ## <a name="march-2016"></a>2016 年 3 月  
-2016 年 3 月預覽版本的 SSMA for Sybase 包含下列變更：  
-  
--  新增的移轉至 SQL Server 2016 的支援。  
+2016 年 3 月預覽版本的 SSMA for Sybase 會將 SQL Server 2016 中的移轉支援。  
   
 ## <a name="january-2016"></a>2016 年 1 月  
 2016 年 1 月維護版的 SSMA for Sybase 包含下列變更：  
@@ -173,9 +161,7 @@ SSMA for Sybase 的 2012 年 1 月版本包含下列變更：
 -   轉換提供修正@ROWCOUNT和 @@ERROR中相同的 SET 陳述式。  
   
 ## <a name="july-2011"></a>2011 年 7 月  
-SSMA for Sybase 的 2011 年 7 月版本包含下列變更：  
-  
--   資料移轉期間報告改良的錯誤。  
+2011 年 7 月版的 SSMA for Sybase 提供改良的錯誤報告資料移轉期間。  
   
 ## <a name="april-2011"></a>2011 年 4 月  
 SSMA for Sybase 的 2011 年 4 月版本包含下列變更：  

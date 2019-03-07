@@ -1,5 +1,5 @@
 items:
-- name: SQL Server 根目錄 ++
+- name: SQL Server ++
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 什麼是 SQL Server Reporting Services (SSRS)？
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
@@ -1932,9 +1932,9 @@ items:
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 教學課程：運算式簡介
       href: ../reporting-services/tutorial-introducing-expressions.md
-ms.openlocfilehash: 687b74f42bbfc260107b58d4038a711d4d1d109f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 07d625881bacee05f8fdf6e3034857cc91d6739a
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802464"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401890"

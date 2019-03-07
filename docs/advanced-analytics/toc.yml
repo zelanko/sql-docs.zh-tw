@@ -1,5 +1,5 @@
 items:
-- name: SQL Server 根目錄 ++
+- name: SQL Server ++
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: SQL Server ML 與程式設計延伸模組文件
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
@@ -329,9 +329,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server +
       href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 5826c20a058b9b837ff077261b156c5f394d36b2
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 643bd99806e6af28c115a5de087d5719adcf152f
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802622"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401800"
