@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617620"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579578"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 資料庫目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ WideWorldImporters 用於不同的用途，例如儲存資料、 定義使用者
 |StockGroups|用於將項目 （例如 novelties、 玩具、 edible novelties 等） 的內建的分類群組|
 |StockItemStockGroups|內建的項目會在其中內建群組 （多對多）|
 |色彩|內建的項目 （選擇性） 可以有色彩|
-|Packagetypes>|內建項目的方式可以封裝 （例如，方塊、 carton makers association，平板，kg 等。|
+|PackageTypes|內建項目的方式可以封裝 （例如，方塊、 carton makers association，平板，kg 等。|
 |StockItemTransactions|涵蓋所有的移動的所有內建項目 （回條、 銷售、 write-off） 的交易|
 |VehicleTemperatures|車輛 chiller 的定期記錄的溫度|
 |ColdRoomTemperatures|定期記錄的冷聊天室 chiller 的溫度|
@@ -202,7 +202,7 @@ WideWorldImporters 會使用一小部分的結構描述，讓您可以很容易�
 |Configuration_ApplyAuditing|Adds 稽核。 伺服器稽核被適用於標準版資料庫;其他的資料庫稽核會新增適用於 enterprise edition。|
 |Configuration_ApplyColumnstoreIndexing|適用於資料行存放區索引`Sales.OrderLines`和`Sales.InvoiceLines`和重新適當地編製索引。|
 |Configuration_ApplyFullTextIndexing|適用於全文檢索索引`Application.People`， `Sales.Customers`， `Purchasing.Suppliers`，和`Warehouse.StockItems`。 會取代`Website.SearchForPeople`， `Website.SearchForSuppliers`， `Website.SearchForCustomers`， `Website.SearchForStockItems`，`Website.SearchForStockItemsByTags`搭配使用全文檢索索引的取代程序。|
-|Configuration_ApplyPartitioning|適用於資料表資料分割到`Sales.CustomerTransactions and `Purchasing.SupplierTransactions'，並重新整理的索引，以符合。|
+|Configuration_ApplyPartitioning|適用於資料表資料分割`Sales.CustomerTransactions`和`Purchasing.SupplierTransactions`，並重新排列以符合索引。|
 |Configuration_ApplyRowLevelSecurity|套用至篩選客戶的資料列層級安全性，方式是銷售領域相關的角色。|
 |Configuration_ConfigureForEnterpriseEdition|適用於資料行存放區索引、 全文檢索、 記憶體、 polybase 及資料分割。|
 |Configuration_EnableInMemory|新增記憶體最佳化檔案群組 （當不在 Azure 中運作） 時，會取代`Warehouse.ColdRoomTemperatures`，`Warehouse.VehicleTemperatures`與記憶體中對等項目，並將資料移轉，就會重新建立`Website.OrderIDList`， `Website.OrderList`， `Website.OrderLineList`，`Website.SensorDataList`資料表使用的類型記憶體最佳化對等項目、 卸除和重新建立程序`Website.InvoiceCustomerOrders`， `Website.InsertCustomerOrders`，和`Website.RecordColdRoomTemperatures`使用這些資料表類型。|

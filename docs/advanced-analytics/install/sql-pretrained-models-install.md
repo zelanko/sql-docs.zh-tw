@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fdfb322699045a46630b7aaed4b4811f20be945f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645437"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579078"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習服務模型在 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ R 和 Python 模型的安裝路徑，如下所示：
 
 + R `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ 適用於 Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
++ 適用於 Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
 模型檔案名稱如下所示：
 
@@ -78,7 +78,7 @@ R 和 Python 模型的安裝路徑，如下所示：
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
    ```
 
-**輸出**
+**Output**
 
 連線到網際網路的 SQL Server 2017 Machine Learning 預設執行個體上使用 R 和 Python，您應該會看到類似下列的訊息。
 
@@ -200,8 +200,8 @@ R 和 Python 模型的安裝路徑，如下所示：
 
 每個網路的設定根據下列的參考實作：
 
-+ ResNet 18
-+ ResNet 50
++ ResNet-18
++ ResNet-50
 + ResNet-101
 + AlexNet
 

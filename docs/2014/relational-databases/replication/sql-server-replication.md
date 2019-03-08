@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126068"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578318"
 ---
 # <a name="sql-server-replication"></a>SQL Server 複寫
   複寫是指，將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理，以維護一致性的一組技術。 使用複寫，您可以透過區域網路、廣域網路、撥號連接、無線連接及網際網路，將資料散發到不同的位置，以及散發到遠端或行動使用者。  
@@ -29,10 +29,10 @@ ms.locfileid: "54126068"
   
 
 ## <a name="whats-new"></a>新功能 
-- SQL Server 2017 到 SQL Server 複寫並未引進重要的新功能。 
-- SQL Server 2016 到 SQL Server 複寫並未引進重要的新功能。 
+- SQL Server 2017 尚未在 SQL Server 複寫中導入重大的新功能。 
+- SQL Server 2016 尚未在 SQL Server 複寫中導入重大的新功能。 
 
-針對回溯相容性資訊，請參閱[複寫回溯相容性](replication-backward-compatibility.md) 
+如需回溯相容性資訊，請參閱[複寫回溯相容性](replication-backward-compatibility.md) 
 
 
  ## <a name="replication-security"></a>複寫安全性
@@ -46,7 +46,7 @@ ms.locfileid: "54126068"
 -   [檢視和修改發行集屬性](publish/view-and-modify-publication-properties.md)   
 -   [停用發行和散發](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>發行集和文件 
+## <a name="publications-and-articles"></a>發行集和發行項 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [定義發行項](publish/define-an-article.md)   
@@ -98,7 +98,7 @@ ms.locfileid: "54126068"
 -   [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [為非 SQL Server 訂閱者建立訂閱](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
-## <a name="synchronize-subscriptions"></a>同步處理訂用帳戶  
+## <a name="synchronize-subscriptions"></a>同步處理訂閱  
   
 -   [建立和套用初始快照集](create-and-apply-the-initial-snapshot.md)   
 -   [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
@@ -126,13 +126,13 @@ ms.locfileid: "54126068"
 -   [管理對等項目-拓撲](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [停止複寫拓撲](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [設定 Oracle 發行者的交易集作業](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [升級複寫指令碼 ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [升級複寫指令碼](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>監視器
   
 -   [允許非管理員使用複寫監視器](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [以程式設計方式監視複寫](monitor/programmatically-monitor-replication.md)    
--   [檢視複寫的命令和散發資料庫中的其他資訊 ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [檢視合併式發行集的衝突資訊 ](view-conflict-information-for-merge-publications.md) 
+-   [檢視複寫的命令和散發資料庫中的其他資訊](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [檢視合併式發行集的衝突資訊](view-conflict-information-for-merge-publications.md) 
 -   [針對異動複寫測量延遲及驗證連接](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

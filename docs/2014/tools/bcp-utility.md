@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133838"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579757"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
   **Bcp**公用程式大量複製資料的執行個體之間[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和以使用者指定格式資料檔案。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
@@ -101,7 +101,7 @@ ms.locfileid: "54133838"
   
 -   **格式**建立格式檔案根據指定的選項 (**-n**， `-c`， `-w`，或 **-N**) 以及資料表或檢視分隔符號。 大量複製資料時， **bcp** 命令可以參考格式檔案，您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
   
- *擁有者*  
+ *owner*  
  這是資料表或檢視表的擁有者名稱。 如果執行該作業的使用者擁有指定的資料表或檢視表，則可選擇是否要使用*owner* 。 如果未指定 *owner*，且執行作業的使用者並不擁有指定的資料表或檢視表，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會傳回錯誤訊息，並取消作業。  
   
  **"** _query_ **"**  
@@ -143,7 +143,7 @@ ms.locfileid: "54133838"
 |RAW|不會將字碼頁轉換成另一種字碼頁。 這是最快的選項，因為不進行轉換。|  
 |*code_page*|特定字碼頁編號；如 850。<br /><br /> **&#42;&#42;重要&#42; &#42;**  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支援字碼頁 65001 （utf-8 編碼）。|  
   
- `-d` *資料庫名稱*  
+ `-d` *database_name*  
  指定要連接的資料庫。 根據預設，bcp.exe 會連線到使用者的預設資料庫。 如果`-d` *database_name*和三部分名稱 (*database_name.schema.table*，當做第一個參數傳遞給 bcp.exe) 指定，則會發生錯誤，因為您無法指定資料庫名稱兩次。如果*database_name*開頭是連字號 （-） 或斜線 （/），請勿加上空格之間`-d`和資料庫名稱。  
   
  **-e** _err_file_  
@@ -218,7 +218,7 @@ ms.locfileid: "54133838"
  指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  **-K** _application_intent_  
- 宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱[作用中次要複本：可讀取次要複本 （AlwaysOn 可用性群組）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取次要複本 （AlwaysOn 可用性群組）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **-L** _last_row_  
  指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。 這個參數需要大於 (>) 0 但小於 (\<) 或等於 （=） 最後一個資料列數目。 如果沒有這個參數，預設值是檔案中的最後一個資料列。  

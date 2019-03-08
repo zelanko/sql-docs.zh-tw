@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0932c9ebcd2d516a5bfb0e6ea5608501e4f514a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146094"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578098"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services Developer 文件
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,5 +72,5 @@ Analysis Services 提供許多方式可以自訂的解決方案，透過程式�
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)文件管理功能，再加上一般用途使用的 cmdlet **Invoke-ascmd** cmdlet 可接受任何指令碼或做為輸入的查詢。
 
 ## <a name="see-also"></a>另請參閱
-[技術參考](../analysis-services/powershell/technical-reference-ssas.md) 
+[技術參考](../analysis-services/powershell/technical-reference-ssas.md)
 [查詢及運算式語言參考&#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

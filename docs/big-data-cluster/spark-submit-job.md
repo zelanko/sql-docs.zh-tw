@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241580"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578238"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>將 SQL Server 在 Azure 資料 Studio 中的巨量資料叢集上的 Spark 作業提交
 
@@ -34,7 +34,7 @@ ms.locfileid: "54241580"
 
 + 按一下 **新的 Spark 作業**儀表板以開啟 Spark 作業提交對話方塊。
 
-    ![按一下儀表板提交功能表 ](./media/submit-spark-job/new-spark-job.png)
+    ![按一下儀表板提交功能表](./media/submit-spark-job/new-spark-job.png)
  
 + 在 [物件總管] 中的叢集上按一下滑鼠右鍵，然後選取**Submit Spark Job**從內容功能表。 此時會開啟 Spark 作業提交對話方塊。  
  

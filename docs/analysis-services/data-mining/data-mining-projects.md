@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506924"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579378"
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "52506924"
 |提供有關每一個採礦模型檢視器之資訊的連結|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |了解如何建立增益圖、收益圖或分類矩陣，或是測試採礦結構|[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |了解如何處理選項和權限|[處理資料採礦物件](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|提供有關 Analysis Services 的詳細資訊|[多維度模型資料庫](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

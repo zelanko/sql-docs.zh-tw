@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2bd9e43232b77bc77611b0c4cd5285b69c9a6261
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046821"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579688"
 ---
-# <a name="quickstart-verify-r-exists-in-sql-server"></a>快速入門：請確認存在於 SQL Server 的 R 
+# <a name="quickstart-verify-r-exists-in-sql-server"></a>快速入門：驗證 R 存在於 SQL Server 中 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 包含內建的 SQL Server 資料的資料科學分析的 R 語言支援。 您的 R 指令碼可以包含開放原始碼 R 函數，第三方的 R 程式庫或內建的 Microsoft R 程式庫這類[RevoScaleR](../r/revoscaler-overview.md)進行大規模的預測性分析。
@@ -103,4 +103,4 @@ Microsoft 提供一些預先安裝在您的 SQL Server 執行個體的 使用機
 現在您已確認您的執行個體已準備好使用 R，看看基本的 R 互動。
 
 > [!div class="nextstepaction"]
-> [快速入門：SQL Server 中的"Hello world"R 指令碼 ](quickstart-r-run-using-tsql.md)
+> [快速入門：SQL Server 中的"Hello world"R 指令碼](quickstart-r-run-using-tsql.md)

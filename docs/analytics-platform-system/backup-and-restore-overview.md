@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044395"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579178"
 ---
 # <a name="backup-and-restore"></a>備份與還原
 
@@ -132,7 +132,7 @@ PDW 會使用 SQL Server 備份技術，來備份和還原應用裝置資料庫�
   
 |備份和還原工作|描述|  
 |---------------------------|---------------|  
-|準備伺服器，做為備份伺服器。|[取得並設定備份的伺服器 ](acquire-and-configure-backup-server.md)|  
+|準備伺服器，做為備份伺服器。|[取得並設定備份伺服器](acquire-and-configure-backup-server.md)|  
 |備份資料庫。|[備份資料庫](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |將資料庫還原。|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

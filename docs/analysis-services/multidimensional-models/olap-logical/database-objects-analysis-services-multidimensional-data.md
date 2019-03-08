@@ -1,5 +1,5 @@
 ---
-title: 資料庫物件 (Analysis Services-多維度資料) |Microsoft 文件
+title: 資料庫物件 (Analysis Services-多維度資料) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 26d5f468710c63b540bb8b1d75f9e1afeca0f0d8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2c7b9bab0da5b00e77696217974dee5eb5d1d522
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025945"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578738"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>資料庫物件 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體包含資料庫物件和組件搭配線上分析處理 (OLAP) 和資料採礦。  
+  A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體包含資料庫物件和組件適用於線上分析處理 (OLAP) 和資料採礦。  
   
 -   資料庫中包含 OLAP 和資料採礦物件，例如，資料來源、資料來源檢視、Cube、量值、量值群組、維度、屬性、階層、採礦結構、採礦模型及角色。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "34025945"
 ## <a name="in-this-section"></a>本節內容  
  下列主題將描述在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，OLAP 和資料採礦功能所共用的物件。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[多維度模型中的資料來源](../../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)|描述 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的資料來源。|  
 |[多維度模型中的資料來源檢視](../../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)|描述在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中以一或多個資料來源為根據的邏輯資料模型。|  
-|[多維度模型中的 cube](../../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)|描述 Cube 和 Cube 物件，包括：量值、量值群組、維度使用方式關聯性、計算、關鍵效能指標、動作、翻譯、分割與檢視方塊。|  
+|[多維度模型中的 Cube](../../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)|描述 Cube 和 Cube 物件，包括：量值、量值群組、維度使用方式關聯性、計算、關鍵效能指標、動作、翻譯、分割與檢視方塊。|  
 |[維度 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|描述維度和維度物件，其中包括屬性、屬性關聯性、階層、層級與成員。|  
 |[採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)|描述採礦結構和採礦物件，其中包括採礦模型。|  
 |[安全性角色 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)|描述角色，也就是在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中控制存取物件權限的安全性機制。|  
@@ -61,7 +61,7 @@ ms.locfileid: "34025945"
   
 ## <a name="see-also"></a>另請參閱  
  [支援的資料來源 &#40;SSAS-多維度 &#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多維度模型方案 ](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [多維度模型方案](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [資料採礦方案](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

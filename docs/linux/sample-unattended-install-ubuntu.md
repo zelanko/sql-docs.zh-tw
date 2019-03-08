@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: c6327ae25e9e0b22310e810cd33f7176ecc1349d
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 878eda9c8816e400c873154f1c1cf3d613f8fea3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760051"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579048"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>範例：適用於 Ubuntu 的自動安裝的 SQL Server 安裝指令碼
 
@@ -176,7 +176,7 @@ echo Done!
    ```
 
 ### <a name="understanding-the-script"></a>了解指令碼
-Bash 指令碼會執行第一件事是設定一些變數。 這些可以是指令碼變數，例如此範例中或環境變數。 變數``` MSSQL_SA_PASSWORD ```已**必要**由 SQL Server 安裝，有些則是自訂建立指令碼的變數。 範例指令碼會執行下列步驟：
+Bash 指令碼會執行第一件事是設定一些變數。 這些可以是指令碼變數，例如此範例中或環境變數。 變數`MSSQL_SA_PASSWORD`已**必要**由 SQL Server 安裝，有些則是自訂建立指令碼的變數。 範例指令碼會執行下列步驟：
 
 1. 匯入公用 Microsoft GPG 金鑰。
 

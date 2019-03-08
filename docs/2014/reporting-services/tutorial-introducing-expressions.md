@@ -1,5 +1,5 @@
 ---
-title: 教學課程：運算式簡介 |Microsoft Docs
+title: 教學課程：運算式簡介 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295116"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579598"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
   運算式可協助您建立強大而靈活的報表。 本教學課程將教您建立和實作使用一般函數和運算子的運算式。 您將使用**運算式**對話方塊，即可撰寫運算式以串連名稱值、 查閱值在不同的資料集中，顯示不同的圖片，根據欄位的值，並依此類推。  
@@ -66,7 +66,7 @@ ms.locfileid: "56295116"
 >  在本教學課程中，查詢會包含資料值，因此不需要外部資料來源。 這樣會使查詢相當冗長。 在商業環境中，查詢不會包含資料。 這僅供教學之用。  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器的逐步指示，選擇資料來源，並建立資料集，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、選擇資料來源以及建立資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 #### <a name="to-create-a-new-table-report"></a>若要建立新資料表報表  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56295116"
   
      查詢會指定資料行名稱，其中包括出生日期、名字、姓氏、省份、國家/地區識別碼、性別，以及今年到目前的購買記錄。  
   
-10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示 20 個資料列，並包含下列欄位：FirstName、 LastName、 StateProvince、 CountryRegionID、 Gender、 YTDPurchase 和 LastPurchase。  
+10. 在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 結果集會顯示 20 個資料列，並包含下列欄位：FirstName、LastName、StateProvince、CountryRegionID、Gender、YTDPurchase 及 LastPurchase。  
   
 11. 按一下 [下一步] 。  
   
@@ -698,7 +698,7 @@ ms.locfileid: "56295116"
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
-2.  按一下 **桌面`, `我的文件**，或**我的電腦**，然後瀏覽至您要儲存報表的資料夾。  
+2.  按一下 **[桌面]**、 **[我的文件]** 或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
   
 3.  在 [名稱] 中，將預設名稱取代為**銷售比較摘要**。  
   

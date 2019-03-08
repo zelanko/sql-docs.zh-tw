@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77889113dd7987827426bae2357e89590754a545
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072337"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579530"
 ---
 # <a name="tabular-model-solution-deployment"></a>表格式模型方案部署 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -86,6 +86,6 @@ ms.locfileid: "53072337"
 |[同步處理 Analysis Services 資料庫](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|描述如何使用 [同步處理資料庫精靈]，同步處理任何兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式或多維度資料庫之間的中繼資料和資料。|  
   
 ## <a name="see-also"></a>另請參閱  
- [連接到表格式模型資料庫 ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [連線到表格式模型資料庫](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3984ebdd3c0f5fbfc9b97dc30a62c0b045374ddf
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ab683edafe8f31b8d829ddb1811ed0e38e267376
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044891"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578939"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>資料庫相關的動態管理檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,12 +29,12 @@ ms.locfileid: "55044891"
   
 |||  
 |-|-|  
-|[sys.dm_db_file_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)|[sys.dm_db_fts_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)|  
+|[sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)|[sys.dm_db_fts_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)|  
 |[sys.dm_db_log_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) |[sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) |  
 |[sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)|[sys.dm_db_page_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
-|[sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|[sys.dm_db_persisted_sku_features ](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|
-|[sys.dm_db_session_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|[sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|
-|[sys.dm_db_uncontained_entities ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)||
+|[sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|[sys.dm_db_persisted_sku_features](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|
+|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|[sys.dm_db_task_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|
+|[sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)||
 
 
 DMV 的 SQL Database 或 SQL 資料倉儲所獨有。   

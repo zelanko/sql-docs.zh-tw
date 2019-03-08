@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a4fdd31cddaba1c46cc14ae6dbdeeb6ad92449da
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017934"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579128"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>疑難排解適用於 machine learning 的資料收集
 
@@ -121,7 +121,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 如果 Machine Learning 服務未在執行中，您可以藉由查看 pythonlauncher.config 檔案來判斷已安裝的 Python 版本。 我們建議您製作並開啟檔案的複本，以便您不小心不要變更任何屬性。
 
-1. SQL Server 2017 的只有： `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. SQL Server 2017 的只有： `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. 取得值，如**PYTHONHOME**。
 3. 取得目前工作目錄的值。
 
@@ -209,7 +209,7 @@ SQL Server 會產生個別的記錄檔的外部指令碼語言執行階段。 �
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
 > 一模一樣的資料夾名稱有所不同的執行個體名稱。 根據您的設定，資料夾可能是不同的磁碟機上。

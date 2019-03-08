@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513758"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57577928"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>快速入門：驗證 Python 存在於 SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -146,4 +146,4 @@ Microsoft 提供的預先安裝在您的 SQL Server 執行個體的 使用機器
 現在您已確認您的執行個體已準備好使用 Python，看看基本的 Python 互動。
 
 > [!div class="nextstepaction"]
-> [快速入門：SQL Server 中的"Hello world"Python 指令碼 ](quickstart-python-run-using-t-sql.md)
+> [快速入門：SQL Server 中的"Hello world"Python 指令碼](quickstart-python-run-using-t-sql.md)

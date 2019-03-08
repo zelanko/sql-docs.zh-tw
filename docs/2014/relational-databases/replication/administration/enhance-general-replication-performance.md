@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129278"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579368"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
   透過使用本主題中所述的指導方針，您可以提升應用程式及網路上所有複寫類型的一般效能：  
@@ -76,7 +76,7 @@ ms.locfileid: "54129278"
   
     -   對於合併式複寫而言，使用商務邏輯處理常式可能更有效。 如需詳細資訊，請參閱[在合併同步處理期間執行商務邏輯](../merge/execute-business-logic-during-merge-synchronization.md)。  
   
-     如果使用觸發程序來維護為合併式複寫發行之資料表中的參考完整性，請指定資料表的處理順序，以減少「合併代理程式」所需的重試次數。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../publish/specify-merge-replication-properties.md)。  
+     如果使用觸發程序來維護為合併式複寫發行之資料表中的參考完整性，請指定資料表的處理順序，以減少「合併代理程式」所需的重試次數。 如需詳細資訊，請參閱[指定合併式複寫屬性](../publish/specify-merge-replication-properties.md)。  
   
 -   限制使用大型物件 (LOB) 資料類型。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "54129278"
   
      當需要將大量的變更傳送到「訂閱者」時，請使用新的快照集來重新初始化訂閱，這可能比使用複寫來移動個別的變更還要快。 如需詳細資訊，請參閱 [重新初始化訂閱](../reinitialize-subscriptions.md)。  
   
-     對於異動複寫，「複寫監視器」在 **[未散發的命令]** 索引標籤上顯示以下資訊：在散發資料庫中尚未散發到「訂閱者」的交易數量；散發這些交易的估計時間。 如需詳細資訊，請參閱 < [ View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     對於異動複寫，「複寫監視器」在 **[未散發的命令]** 索引標籤上顯示以下資訊：在散發資料庫中尚未散發到「訂閱者」的交易數量；散發這些交易的估計時間。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="snapshot-considerations"></a>快照集考量  
   

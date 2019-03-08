@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242019"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578108"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>訓練及建立 Spark 機器學習服務模型
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>步驟 4-分割為訓練和測試集
 
-來定型模型和 25%，以評估模型的其餘部分使用的資料列的 75%。 此外，保存定型和測試資料集，HDFS 儲存體。 步驟並非必要，但要示範顯示儲存及載入以 ORC 格式。 其他格式，例如`Parquet `也可以使用。
+來定型模型和 25%，以評估模型的其餘部分使用的資料列的 75%。 此外，保存定型和測試資料集，HDFS 儲存體。 步驟並非必要，但要示範顯示儲存及載入以 ORC 格式。 其他格式，例如`Parquet`也可以使用。
 
 張貼您應該會看到此步驟中建立具有名稱 AdultCensusIncomeTrain 和 AdultCensusIncomeTest 的兩個目錄
 

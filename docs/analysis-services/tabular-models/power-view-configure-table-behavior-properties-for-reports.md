@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072538"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579608"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-設定資料表行為屬性的報表
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

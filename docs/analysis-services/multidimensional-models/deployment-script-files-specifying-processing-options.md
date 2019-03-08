@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537356"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572771"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>部署指令碼檔-指定處理選項
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537356"
   
 -   **處理方法** 此設定控制部署之後是否處理部署的物件，以及將要執行的處理類型。 有三個處理選項：  
   
-    -   預設的處理 (預設值)  
+    -   預設處理 （預設值） 會偵測資料庫物件的處理狀態，並執行必要將尚未處理或部分處理的物件傳遞為完整處理狀態的處理。
   
-    -   完整的處理  
+    -   完整處理在處理物件和它所包含的所有物件。 對已經處理過的物件執行完整處理時，Analysis Services 會先卸除物件中的所有資料，然後再處理該物件。 
   
-    -   None  
-  
+    -   [無] 表示會執行任何處理。
+
+
 -   **回寫資料表選項** 如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中已啟用回寫，則此設定會定義如何處理回寫。 有三個回寫資料表選項：  
   
     -   依預設，如果有回寫資料表，就會使用回寫資料表。 如果沒有回寫資料表，則會建立新的回寫資料表。  
