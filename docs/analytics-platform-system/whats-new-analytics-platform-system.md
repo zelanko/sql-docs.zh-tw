@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652587"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579410"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新 Microsoft Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
@@ -120,7 +120,7 @@ APS AU7 建立，並根據預設，自動更新統計資料。 若要更新統�
 ### <a name="t-sql"></a>T-SQL
 選取@var現在支援。 如需詳細資訊，請參閱[選取本機變數](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-現在支援雜湊和訂單群組的查詢提示。 如需詳細資訊，請參閱[Hints(Transact-SQL)-查詢 ](/sql/t-sql/queries/hints-transact-sql-query)
+現在支援雜湊和訂單群組的查詢提示。 如需詳細資訊，請參閱[Hints(Transact-SQL)-查詢](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>功能參數
 APS AU7 導入了在功能切換[Configuration Manager](launch-the-configuration-manager.md)。 現在已可設定的選項，系統管理員可以變更的 AutoStatsEnabled 和 DmsProcessStopMessageTimeoutInSeconds。
