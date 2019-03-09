@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程第 4 課：建立關聯性 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394515"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685603"
 ---
 # <a name="create-relationships"></a>建立關聯性
 
@@ -41,7 +42,7 @@ ms.locfileid: "52394515"
 
     模型設計師現在會出現在圖表檢視中，以圖形格式顯示所有資料表匯入之間會線條。 資料表之間的線條表示匯入資料時自動建立的關聯性。
     
-    ![為-lesson4-圖表](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
+    ![as-lesson4-diagram](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
   
     > [!NOTE]
     > 如果您沒有看到任何資料表之間的關聯性，也可能表示這些資料表在資料來源之間沒有任何關聯性。
@@ -71,11 +72,11 @@ ms.locfileid: "52394515"
 
 在 圖表檢視，請注意箭號、 星號和數字顯示資料表之間的關聯性的線條上。
 
-![為 lesson4 列](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 箭號顯示篩選方向。 星號顯示此資料表是*許多*端中的關聯性的基數，而是會顯示此資料表是*一個*這邊的關聯性。 如果您要編輯關聯性;比方說，關聯性的篩選方向或基數變更中，按兩下關聯性線條，以開啟 [編輯關聯性] 對話方塊。
 
-![為-lesson4-編輯](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 這些功能主要用於進階資料模型化，而且已超出本教學課程的範圍。 若要進一步了解，請參閱[雙向交叉篩選中 Analysis Services 表格式模型的](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)。
 
@@ -87,7 +88,7 @@ ms.locfileid: "52394515"
 
     一條實線會出現並顯示您已建立作用中的關聯**OrderDate**中的資料行**Internet Sales**資料表，而**日期**中的資料行**日期**資料表。 
   
-      ![為-lesson4-新增](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > 在建立關聯性時，會自動選取之間主資料表] 和 [相關的查閱資料表的基數和篩選方向。  

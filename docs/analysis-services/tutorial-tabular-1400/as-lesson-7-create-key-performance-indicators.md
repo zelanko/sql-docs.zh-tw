@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程第 7 課： 建立關鍵效能指標 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教學課程第 7 課：建立關鍵效能指標 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087563"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685405"
 ---
 # <a name="create-key-performance-indicators"></a>建立關鍵效能指標
 
@@ -22,11 +23,11 @@ ms.locfileid: "43087563"
 
 在這一課，您可以建立關鍵效能指標 (Kpi)。 Kpi 用來量測計所定義之值的效能*基底*量值、 針對*目標*由量值或絕對值定義的值。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 若要進一步了解，請參閱[Kpi](../tabular-models/kpis-ssas-tabular.md)
   
-完成本課程的估計時間： **15 分鐘**  
+完成本課程的估計時間：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 6 課： 建立量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 6 課：建立量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
   
@@ -52,7 +53,7 @@ ms.locfileid: "43087563"
   
 8.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。
   
-    ![為 lesson7 kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
+    ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > 請注意可擴充**描述**可用圖示樣式下方的標籤。 您可以使用各種 KPI 元素的描述，使其更容易在用戶端應用程式。  
@@ -81,6 +82,6 @@ ms.locfileid: "43087563"
   
 ## <a name="whats-next"></a>下一步
 
-[第 8 課： 建立檢視方塊](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。
+[第 8 課：建立檢視方塊](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。
   
   

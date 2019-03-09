@@ -11,6 +11,7 @@ apiname:
 - SQLBindParameter
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBindParameter
@@ -20,12 +21,12 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f340d95cf1cd15b176069458347b2bea97055c
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420213"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683638"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 函數
 

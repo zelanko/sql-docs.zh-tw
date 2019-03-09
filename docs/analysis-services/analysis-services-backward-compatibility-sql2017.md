@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2017 Analysis Services 回溯相容性 |Microsoft Docs
-ms.date: 01/09/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 411fa78bada76c79d4a869d68c94abf752b8466a
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185074"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685735"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 回溯相容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -32,7 +33,7 @@ A*已被取代功能*將不再從產品在未來的版本中，但仍支援且�
 |多維度|資料採礦|
 |多維度|遠端連結量值群組|
 |表格式|模型 1100年和 1103年相容性層級|
-|表格式|表格式物件模型屬性：Column.TableDetailPosition，Column.IsDefaultLabel，Column.IsDefaultImage|
+|表格式|表格式物件模型屬性：Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
 |工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|Server Profiler for Trace Replay <br />取代。 沒有取代項目。|  
 |追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> -追蹤組態︰Microsoft.SqlServer.Management.XEvent<br />-追蹤讀取︰Microsoft.SqlServer.XEvent.Linq<br />-追蹤重新執行：None|  

@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程第 12 課： 在 Excel 中進行分析 |Microsoft 文件
-ms.date: 08/27/2018
+title: Analysis Services 教學課程第 12 課：在 Excel 中進行分析 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084451"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685426"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 
@@ -24,11 +25,11 @@ ms.locfileid: "43084451"
   
 若要完成這一課，Excel 必須安裝在 Visual Studio 的同一部電腦上。
   
-完成本課程的估計時間： **5 分鐘**  
+完成本課程的估計時間：**5 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 11 課： 建立角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 11 課：建立角色](../tutorial-tabular-1400/as-lesson-11-create-roles.md)。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>使用預設和網際網路銷售檢視方塊瀏覽  
 
@@ -56,7 +57,7 @@ ms.locfileid: "43084451"
     
 3.  在 Excel 中，在**樞紐分析表欄位**，注意 DimCustomer 資料表已從欄位清單中排除。  
     
-    ![為 lesson12 欄位](../tutorial-tabular-1400/media/as-lesson12-fields.png)
+    ![as-lesson12-fields](../tutorial-tabular-1400/media/as-lesson12-fields.png)
     
 4.  關閉 Excel 而不儲存活頁簿。  
   
@@ -76,7 +77,7 @@ ms.locfileid: "43084451"
   
 ## <a name="whats-next"></a>下一步
 
-移至下一個課程︰[第 13 課： 部署](../tutorial-tabular-1400/as-lesson-13-deploy.md)。
+請移至下一課：[第 13 課：部署](../tutorial-tabular-1400/as-lesson-13-deploy.md)。
 
   
   

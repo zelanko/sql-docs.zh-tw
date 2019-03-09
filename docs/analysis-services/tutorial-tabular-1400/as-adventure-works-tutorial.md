@@ -1,6 +1,6 @@
 ---
 title: Analysis Services Adventure Works 教學課程 (1400) |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7abd968db3aacbb71ed238e3f6ae6b857c8b1d99
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4fae7f55543be52342692d344f250f8e08ba877
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084711"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685485"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>表格式模型 (1400 相容性層級)
 
@@ -48,7 +49,7 @@ ms.locfileid: "43084711"
 
 -   [Azure SQL 資料倉儲](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal)具有**AdventureWorksDW 範例資料庫**，或使用內部部署 SQL Server 資料倉儲[AdventureWorksDW 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 安裝 AdventureWorksDW 資料庫到內部部署 SQL Server 資料倉儲，請使用對應的範例資料庫版本與您的伺服器版本。 
 
-    **重要事項︰** 如果您將範例資料庫安裝到內部部署 SQL Server 資料倉儲，並將模型部署到 Azure Analysis Services 伺服器，[內部部署資料閘道](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)需要。
+    **重要：** 如果您將範例資料庫安裝到內部部署 SQL Server 資料倉儲，並將模型部署到 Azure Analysis Services 伺服器，[內部部署資料閘道](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)需要。
 
 -   最新版[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。 或者，如果您已經有 Visual Studio 2017，您可以下載並安裝[Microsoft Analysis Services 專案](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)(VSIX) 封裝。 本教學課程中，SSDT 與 Visual Studio 參考的意義相同。 
 
@@ -100,7 +101,7 @@ ms.locfileid: "43084711"
   
 ## <a name="next-steps"></a>後續步驟  
 
-若要開始，請參閱[第 1 課： 建立新的表格式模型專案](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
+若要開始，請參閱[第 1 課：建立新的表格式模型專案](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
   
   
   

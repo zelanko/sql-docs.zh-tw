@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表格式模型物件層級安全性 |Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 13baecb045e9e9952b2cee43541dfb8991dfae33
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d354aa64e8b6a1e98941011c30550a056f4c01c9
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071985"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685574"
 ---
 # <a name="object-level-security"></a>物件層級安全性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

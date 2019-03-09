@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程補充課程： 不完全階層 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教學課程補充課程：不完全階層 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074828"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685395"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>補充課程 - 不完全階層
 
@@ -26,7 +27,7 @@ ms.locfileid: "43074828"
 
 在 1400年相容性層級的表格式模型具有額外**隱藏成員**階層的屬性。 **預設**設定假設任何層級沒有空白的成員。 **隱藏空白成員**設定加入至樞紐分析表或報表時，從階層中排除空白成員。  
   
-完成本課程的估計時間： **20 分鐘**  
+完成本課程的估計時間：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
 本文補充課程是表格式模型教學課程的一部分。 執行工作之前在此補充課程中，您應已完成所有先前的課程或已完成的 Adventure Works Internet Sales 範例模型專案。 
@@ -47,9 +48,9 @@ ms.locfileid: "43074828"
 
     | 表格 1           | 「資料行」       | 篩選方向   | 表格 2     | 「資料行」      | 作用中 |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | 預設            | DimDate     | date        | 是    |
-    | FactResellerSales | DueDate      | 預設            | DimDate     | date        | 否     |
-    | FactResellerSales | ShipDateKey  | 預設            | DimDate     | date        | 否     |
+    | FactResellerSales | OrderDateKey | 預設            | DimDate     | Date        | 是    |
+    | FactResellerSales | DueDate      | 預設            | DimDate     | Date        | 否     |
+    | FactResellerSales | ShipDateKey  | 預設            | DimDate     | Date        | 否     |
     | FactResellerSales | ProductKey   | 預設            | DimProduct  | ProductKey  | 是    |
     | FactResellerSales | EmployeeKey  | 這兩個資料表 | DimEmployee | EmployeeKey | 是    |
 
@@ -60,7 +61,7 @@ ms.locfileid: "43074828"
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **fullName** 
+    **FullName** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
@@ -70,7 +71,7 @@ ms.locfileid: "43074828"
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],1,1)) 
     ```
 
-    **層級 2** 
+    **Level2** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],2,1)) 
     ```
@@ -90,7 +91,7 @@ ms.locfileid: "43074828"
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],5,1)) 
     ```
 
-6.  在  **DimEmployee**資料表中，建立[階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)名為**組織**。 新增下列資料行中的順序： **Level1**， **Level2**， **Level3**， **Level4**， **Level5**。
+6.  在  **DimEmployee**資料表中，建立[階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)名為**組織**。 新增下列資料行中的順序：**Level1**， **Level2**， **Level3**， **Level4**， **Level5**。
 
 7.  在  **FactResellerSales**資料表中，建立下列[量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md):
 
@@ -121,6 +122,6 @@ ms.locfileid: "43074828"
     現在看起來好多了 ！
 
 ## <a name="see-also"></a>另請參閱   
-[課程 9：建立階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
+[第 9 課：建立階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
 [補充課程-動態安全性](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [補充課程-詳細資料列](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  

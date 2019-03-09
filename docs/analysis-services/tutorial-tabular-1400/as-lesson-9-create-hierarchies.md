@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程第 9 課： 建立階層 |Microsoft 文件
-ms.date: 08/27/2018
+title: Analysis Services 教學課程第 9 課：建立階層 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071811"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685415"
 ---
 # <a name="create-hierarchies"></a>建立階層
 
@@ -24,11 +25,11 @@ ms.locfileid: "43071811"
   
 若要建立階層，請使用 模型設計師中的*圖表檢視*。 建立及管理階層不支援在資料檢視中。  
   
-完成本課程的估計時間： **20 分鐘**  
+完成本課程的估計時間：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 8 課： 建立檢視方塊](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 8 課：建立檢視方塊](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>建立階層  
   
@@ -78,6 +79,6 @@ ms.locfileid: "43071811"
   
  ## <a name="whats-next"></a>下一步
 
-[第 10 課： 建立資料分割](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)。 
+[第 10 課：建立分割區](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)。 
   
   

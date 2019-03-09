@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程第 13 課： 部署 |Microsoft 文件
-ms.date: 08/27/2018
+title: Analysis Services 教學課程第 13 課：部署 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090430"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685305"
 ---
 # <a name="deploy"></a>部署
 
@@ -22,11 +23,11 @@ ms.locfileid: "43090430"
 
 在這一課，您可以設定部署屬性，指定要部署至的伺服器和模型的名稱。 然後，將模型部署到伺服器。 部署您的模型之後，使用者可以使用報表用戶端應用程式連線到它。 若要進一步了解，請參閱[部署至 Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)並[表格式模型方案部署](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
-完成本課程的估計時間： **5 分鐘**  
+完成本課程的估計時間：**5 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 12 課： 在 Excel 中分析](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 12 課：在 Excel 中分析](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)。  
 
 > [!IMPORTANT]  
 > 如果部署至 Azure Analysis Services，您必須擁有[系統管理員權限](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins)serever 上。  
@@ -43,7 +44,7 @@ ms.locfileid: "43090430"
   
 2.  在  **AW 網際網路銷售屬性頁**對話方塊的 **部署伺服器**，請在**Server**屬性，輸入完整伺服器名稱。 如果連接到 Azure Analysis Services，則伺服器名稱必須包括完整的 URL。
 
-    ![為 lesson13-部署-屬性](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  在 **資料庫**屬性中，輸入**Adventure Works Internet Sales**。  
   
@@ -69,9 +70,9 @@ ms.locfileid: "43090430"
 這堂課說明從 SSDT 的表格式模型部署的最常見且最簡單的方法。 進階的部署選項，例如 「 部署精靈 」，或使用 XMLA 和 AMO 自動化提供更大的彈性、 一致性和排定的部署。 若要進一步了解，請參閱[表格式模型方案部署](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。
 
 ## <a name="conclusion"></a>結論  
-恭喜！ 您完成撰寫和部署第一個 Analysis Services 表格式模型。 本教學課程已幫助您完成建立表格式模型最常執行的工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者現在也可以連接到使用 Microsoft Excel 或 Power BI 等報表用戶端應用程式模型中。  
+恭喜您！ 您完成撰寫和部署第一個 Analysis Services 表格式模型。 本教學課程已幫助您完成建立表格式模型最常執行的工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者現在也可以連接到使用 Microsoft Excel 或 Power BI 等報表用戶端應用程式模型中。  
 
-![為 lesson13 ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程第 11 課：建立角色 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: ee28eb36fcd9e14210bc2a1411460100156f4a2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544348"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685455"
 ---
 # <a name="create-roles"></a>建立角色
 
@@ -72,7 +73,7 @@ ms.locfileid: "52544348"
     ```
     
     資料列篩選公式必須解析布林 (TRUE/FALSE) 值。 使用此公式，就指定的資料列的 Country Region Code 值為"US"會顯示給使用者。  
-    ![為 lesson11-角色-篩選](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
+    ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  選擇性:按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   

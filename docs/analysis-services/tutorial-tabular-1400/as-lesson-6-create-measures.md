@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程第 6 課： 建立量值 |Microsoft 文件
-ms.date: 08/27/2018
+title: Analysis Services 教學課程第 6 課：建立量值 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093961"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685645"
 ---
 # <a name="create-measures"></a>建立量值
 
@@ -28,11 +29,11 @@ ms.locfileid: "43093961"
   
 在這一課，您會建立量值，在公式列中，輸入 DAX 公式和使用 「 自動加總 」 功能。  
   
-完成本課程的估計時間： **30 分鐘**  
+完成本課程的估計時間：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 5 課： 建立計算結果的欄](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 5 課：建立計算結果的欄](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
   
@@ -50,7 +51,7 @@ ms.locfileid: "43093961"
   
     請注意左上方資料格現在包含量值名稱**DaysCurrentQuarterToDate**，後面接著結果**92**。 結果不相關此時因為沒有使用者篩選已經套用。
     
-      ![為 lesson6 newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     不同於導出資料行，量值公式與您可以輸入量值名稱，後面接著冒號，後面接著公式運算式。
 
@@ -89,13 +90,13 @@ ms.locfileid: "43093961"
     |「資料行」|量值名稱|自動加總 (∑)|公式|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
-    |Margin|InternetTotalMargin|SUM|=SUM([Margin])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([Freight])|  
+    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
+    |Margin|InternetTotalMargin|Sum|=SUM([Margin])|  
+    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Sum|=SUM([Freight])|  
   
 2.  按一下空白儲存格在量值方格中，並使用公式列中，建立，順序中的下列自訂量值：  
   
@@ -127,6 +128,6 @@ ms.locfileid: "43093961"
   
 ## <a name="whats-next"></a>下一步
 
-[第 7 課： 建立關鍵效能指標](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
+[第 7 課：建立關鍵效能指標](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
 
   

@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211708"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683608"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函數
 **合規性**  
@@ -112,11 +113,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 引數  
  瀏覽要求的連接字串的語法如下：  
   
- *連接字串*:: =*屬性*[`;`] &#124; *屬性* `;` *連接字串*;<br>
- *屬性*:: =*屬性關鍵字*`=`*屬性值* &#124; `DRIVER=`[`{`]*屬性 / 值*[`}`]<br>
- *屬性關鍵字*:: = `DSN` &#124; `UID` &#124; `PWD` &#124; *驅動程式-定義-屬性-關鍵字*<br>
- *屬性值*:: =*字元字串*<br>
- *驅動程式-定義-屬性-關鍵字*:: =*識別碼*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
+ *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  何處*字元字串*有零個或多個字元;*識別碼*有一或多個字元;*屬性關鍵字*不區分大小寫;*屬性值*可能會區分大小寫，而**DSN**關鍵字並沒有包含單獨的空白。 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元 **[]{}(）; 嗎？\*= ！ @** 應該予以避免。 在 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。 ODBC 2。*x*驅動程式、 驅動程式關鍵字的屬性值前後需要括號。  
   
@@ -127,11 +128,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 引數  
  瀏覽結果連接字串是連接屬性的清單。 連接屬性是由屬性關鍵字和對應的屬性值所組成。 瀏覽結果連接字串的語法如下：  
   
- *連接字串*:: =*屬性*[`;`] &#124; *屬性* `;` *連接字串*<br>
- *屬性*:: = [`*`]*屬性關鍵字*`=`*屬性值*<br>
- *屬性關鍵字*:: = *ODBC 屬性關鍵字* &#124; *驅動程式-定義-屬性-關鍵字*<br>
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
  *ODBC 屬性關鍵字*= {`UID` &#124; `PWD`} [`:`*當地語系化識別碼*]*驅動程式-定義-屬性-關鍵字*:: = *識別項*[`:`*當地語系化識別碼*]*屬性值*:: = `{` *屬性值清單* `}` &#124; `?` （大括號是常值，由驅動程式）。<br>
- *屬性值清單*:: =*字元字串*[`:`*當地語系化的字元字串*] &#124; *字元字串*[`:`*當地語系化的字元字串*] `,` *屬性值清單*<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  何處*字元字串*並*當地語系化的字元字串*有零個或多個字元;*識別碼*並*當地語系化識別碼*有一或多個字元;*屬性關鍵字*不區分大小寫，並*屬性值*可能區分大小寫。 連線字串和初始設定檔案文法、 關鍵字、 當地語系化的識別項，與屬性值包含字元 **[]{}(）; 嗎？\*= ！ @** 應該予以避免。 在 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
   

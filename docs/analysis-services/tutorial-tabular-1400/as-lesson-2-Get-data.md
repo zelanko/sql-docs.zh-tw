@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程第 2 課： 取得資料 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教學課程第 2 課：取得資料 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062209"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685315"
 ---
 # <a name="get-data"></a>取得資料
 
@@ -27,11 +28,11 @@ ms.locfileid: "43062209"
 > [!NOTE]
 > 工作和映像，在本教學課程會示範連接到內部部署伺服器上的 AdventureWorksDW2014 資料庫。 在某些情況下，Azure SQL 資料倉儲上的 AdventureWorksDW 資料庫可能會顯示不同的物件;不過，它們基本上都相同。
   
-完成本課程的估計時間： **10 分鐘**  
+完成本課程的估計時間：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 1 課： 建立新的表格式模型專案](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 1 課：建立新的表格式模型專案](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>建立連接  
   
@@ -56,9 +57,9 @@ ms.locfileid: "43062209"
   
 5.  在 導覽器中，選取**AdventureWorksDW**資料庫，然後再按一下**確定**。這會建立資料庫的連接。 
   
-6.  在 導覽器中，選取下列資料表的核取方塊： **DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，以及**FactInternetSales**。  
+6.  在 導覽器中，選取下列資料表的核取方塊：**DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，並**FactInternetSales**。  
 
-    ![為-lesson2-選取-資料表](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 按一下 確定 後，會開啟 查詢編輯器。 在下一步 區段中，您可以選取只想要匯入的資料。
 
@@ -144,7 +145,7 @@ AdventureWorksDW 範例資料庫中的資料表有不需要在模型中包含的
   
 1.  檢閱您的選取項目。 如果確認無誤，請按一下**匯入**。 資料處理 對話方塊會顯示正在從您的資料來源匯入至您的工作區資料庫的資料狀態。
   
-    ![做為第 2 課成功](../tutorial-tabular-1400/media/as-lesson2-success.png) 
+    ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
 2.  按一下 [ **關閉**]。  
 
@@ -159,7 +160,7 @@ AdventureWorksDW 範例資料庫中的資料表有不需要在模型中包含的
   
 ## <a name="whats-next"></a>下一步
 
-[第 3 課： 標記為日期資料表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。
+[第 3 課：標記為日期資料表](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)。
 
   
   

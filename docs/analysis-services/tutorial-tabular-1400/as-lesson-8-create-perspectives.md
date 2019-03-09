@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程課程 8： 建立檢視方塊 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 080b20dbcf7438d26102a3bf906256343271af45
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085319"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57684935"
 ---
 # <a name="create-perspectives"></a>建立檢視方塊
 
@@ -26,11 +27,11 @@ ms.locfileid: "43085319"
   
 本課程的目的在於描述如何建立檢視方塊，以及熟悉表格式模型撰寫工具。 如果您之後展開此模型納入其他資料表，您可以建立其他檢視方塊來定義不同觀點的模型，例如，庫存與銷售。  
   
-估計的時間才能完成這一課：**五分鐘**  
+完成本課程的估計時間：**五分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 7 課： 建立關鍵效能指標](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 7 課：建立關鍵效能指標](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>建立檢視方塊  
   
@@ -50,7 +51,7 @@ ms.locfileid: "43085319"
 
 ## <a name="whats-next"></a>下一步
 
-[第 9 課： 建立階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。
+[第 9 課：建立階層](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)。
   
   
   

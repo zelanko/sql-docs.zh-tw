@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教學課程補充課程：動態安全性 |Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 4abe105c2bb083ba4479d4d23418e0e73adce5f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3fa566c26c95d84544ecd2dbb9f54c815f677e02
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398423"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685705"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補充課程 - 動態安全性
 

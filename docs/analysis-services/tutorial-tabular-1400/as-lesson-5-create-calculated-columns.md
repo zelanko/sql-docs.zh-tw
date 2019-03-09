@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 教學課程第 5 課： 建立計算結果的欄 |Microsoft Docs
-ms.date: 08/27/2018
+title: Analysis Services 教學課程第 5 課：建立計算結果的欄 |Microsoft Docs
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063857"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685555"
 ---
 # <a name="create-calculated-columns"></a>建立導出資料行
 
@@ -26,11 +27,11 @@ ms.locfileid: "43063857"
 
 這一課也是第一次使用 Data Analysis Expressions (DAX)。 DAX 是一種特殊的語言來建立高度自訂的表格式模型的公式運算式。 在本教學課程中，您可以使用 DAX 來建立導出資料行、 量值和角色篩選條件。 若要進一步了解，請參閱[表格式模型中的 DAX](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)。 
   
-完成本課程的估計時間： **15 分鐘**  
+完成本課程的估計時間：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 4 課： 建立關聯性](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)。 
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 4 課：建立關聯性](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)。 
   
 ## <a name="create-calculated-columns"></a>建立導出資料行  
   
@@ -46,7 +47,7 @@ ms.locfileid: "43063857"
   
     名為 [Calculated Column 1] 的新資料行將會插入 [日曆季] 資料行的左側。  
   
-4.  在資料表上方的公式列中輸入下列 DAX 公式： 自動完成可協助您輸入的資料行和資料表的完整格式的名稱，並列出可用的函式。  
+4.  在資料表上方的公式列中輸入下列 DAX 公式：「自動完成」可協助您輸入資料行和資料表的完整名稱，以及列出可用的函數。  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -130,7 +131,7 @@ ProductCategoryName 計算結果的欄用於在 DimProduct 資料表中，納入
   
 ## <a name="whats-next"></a>下一步
 
-[第 6 課： 建立量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。
+[第 6 課：建立量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。
   
   
   
