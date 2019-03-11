@@ -17,15 +17,15 @@ helpviewer_keywords:
 - READTEXT statement
 - reading columns
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2b7dc6e8a4a3043d2d27072afb5975c50f6ecf9a
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: f2c07b756c608e5e28de3351d887d7a7b2f051ce
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662672"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334405"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

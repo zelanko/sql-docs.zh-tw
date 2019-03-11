@@ -18,16 +18,16 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b82e7c10426f1d263a5154658d6f017de227fbb
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425803"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334645"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

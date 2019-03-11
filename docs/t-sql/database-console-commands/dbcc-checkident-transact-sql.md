@@ -29,20 +29,20 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: c59313042ca91b1cf192ab140eb372ca7a0cf5c1
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154857"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800992"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢查指定之資料表目前的識別值，必要的話，會變更識別值。 您也可以使用 DBCC CHECKIDENT，手動設定識別欄位的新目前識別值。  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢查指定資料表目前的識別值，必要的話，請變更識別值。 您也可以使用 DBCC CHECKIDENT，手動設定識別欄位的新目前識別值。  
    
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +58,7 @@ DBCC CHECKIDENT
   
 ## <a name="arguments"></a>引數  
  *table_name*  
- 這是要檢查目前識別值之資料表的名稱。 指定的資料表必須包含識別欄位。 資料表名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 兩個或三個部分的名稱必須加以分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
+ 這是要檢查目前識別值之資料表的名稱。 指定的資料表必須包含識別欄位。 資料表名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 兩個或三個部分的名稱必須加以分隔，例如 'Person.AddressType' 或 [Person.AddressType]。   
   
  NORESEED  
  指定不應變更目前的識別值。  
@@ -77,31 +77,31 @@ DBCC CHECKIDENT
   
 |DBCC CHECKIDENT 命令|進行的識別更正|  
 |-----------------------------|---------------------------------------------|  
-|DBCC CHECKIDENT ( *table_name*, NORESEED )|不重設目前的識別值。 DBCC CHECKIDENT 會傳回識別欄位目前的識別值和最大值。 如果這兩個值不同，則應該重設識別值以防止值序列中發生錯誤或間距。|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> 中的多個<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果資料表目前的識別值小於識別欄位所儲存的最大識別值，就會利用識別欄位中的最大值來重設它。 請參閱稍後的＜例外＞一節。|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|目前的識別值設為 *new_reseed_value*。 如果建立好資料表之後並未插入任何資料列，或者已經使用 TRUNCATE TABLE 陳述式來移除所有資料列，則執行 DBCC CHECKIDENT 之後所插入的第一個資料列就會使用 *new_reseed_value* 作為識別。<br /><br /> 如果資料列存在於資料表中，下一個資料列中會插入 *new_reseed_value* + [目前的遞增](../../t-sql/functions/ident-incr-transact-sql.md)值。 在版本 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和更舊版中，下一個插入的資料列使用 *new_reseed_value* 加上[目前的遞增](../../t-sql/functions/ident-incr-transact-sql.md)值。<br /><br /> 如果資料表不是空的，則將識別值設定為小於識別欄位中最大值的數字，可能會導致下列其中一種狀況：<br /><br /> -如果識別欄位有 PRIMARY KEY 或 UNIQUE 條件約束，則之後對資料表進行插入作業時會產生錯誤訊息 2627，因為所產生的識別值會與現有值相衝突。<br /><br /> -如果沒有 PRIMARY KEY 或 UNIQUE 條件約束，則之後進行的插入作業會導致重複的識別值。|  
+|DBCC CHECKIDENT ( *table_name*, NORESEED )|不重設目前的識別值。 DBCC CHECKIDENT 會傳回識別欄位目前的識別值和最大值。 如果這兩個值不同，則應該重設識別值以防止值序列中發生錯誤或出現間距。|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> 中的多個<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果資料表目前識別值小於識別欄位所儲存的最大識別值，就會使用識別欄位中的最大值來加以重設。 請參閱稍後的＜例外＞一節。|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|目前的識別值設為 *new_reseed_value*。 如果建立好資料表之後並未插入任何資料列，或已經使用 TRUNCATE TABLE 陳述式來移除所有資料列，則執行 DBCC CHECKIDENT 之後所插入的第一個資料列就會使用 *new_reseed_value* 作為識別。<br /><br /> 如果資料列存在於資料表中，下一個資料列中會插入 *new_reseed_value* + [目前的遞增](../../t-sql/functions/ident-incr-transact-sql.md)值。 在版本 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和更舊版中，下一個插入的資料列使用 *new_reseed_value* 加上[目前的遞增](../../t-sql/functions/ident-incr-transact-sql.md)值。<br /><br /> 如果資料表不是空的，則將識別值設定為小於識別欄位中最大值的數字，可能會導致下列其中一種狀況：<br /><br /> -如果識別欄位有 PRIMARY KEY 或 UNIQUE 條件約束，則之後對資料表進行插入作業時會產生錯誤訊息 2627。 此錯誤是因為所產生的識別值會與現有值相衝突。<br /><br /> -如果沒有 PRIMARY KEY 或 UNIQUE 條件約束，則之後進行的插入作業會導致重複識別值。|  
   
 ## <a name="exceptions"></a>例外狀況  
- 下表列出 DBCC CHECKIDENT 不會自動重設目前識別值的條件，並提供重設值的方法。  
+ 下表列出 DBCC CHECKIDENT 不會自動重設目前識別值的狀況，並提供重設值的方法。  
   
 |條件|重設方法|  
 |---------------|-------------------|  
-|目前的識別值大於資料表中的最大值。|執行 DBCC CHECKIDENT (*table_name*, NORESEED) 來判斷資料行中目前的最大值，然後在 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) 命令中將該值指定為 *new_reseed_value*。<br /><br /> -或-<br /><br /> 將 *new_reseed_value* 設定為非常低的值，並執行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，然後執行 DBCC CHECKIDENT (*table_name*, RESEED) 以更正此值。|  
-|資料表中的所有資料列都遭到刪除。|將 *new_reseed_value* 設定為所需的起始值，並執行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)。|  
+|目前的識別值大於資料表中的最大值。|執行 DBCC CHECKIDENT (*table_name*, NORESEED) 來判斷資料行中的目前最大值。 接下來，在 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*) 命令中將該值指定為 *new_reseed_value*。<br /><br /> -或-<br /><br /> 將 *new_reseed_value* 設定為非常低的值，並執行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，然後執行 DBCC CHECKIDENT (*table_name*, RESEED) 以更正此值。|  
+|資料表中的所有資料列都遭到刪除。|執行 DBCC CHECKIDENT (*table_name*, RESEED,*new_reseed_value*)，並將 *new_reseed_value* 設定為所需的起始值。|  
   
 ## <a name="changing-the-seed-value"></a>變更初始值  
- 初始值就是針對載入資料表中的第一個資料列插入識別欄位的值。 所有後續資料列都會包含目前的識別值加上遞增值，其中目前的識別值就是針對資料表或檢視表所產生的最後一個識別值。  
+ 初始值就是針對載入資料表的第一個資料列插入到識別欄位中的值。 所有後續資料列都會包含目前的識別值加上遞增值，其中目前的識別值就是針對資料表或檢視表所產生的最後一個識別值。  
   
  您無法使用 DBCC CHECKIDENT 來執行下列工作：  
   
--   變更建立資料表或檢視表時針對識別欄位所指定的原始初始值。  
+-   變更建立資料表或檢視時針對識別欄位所指定的原始初始值。  
   
 -   重設資料表或檢視表中現有的資料列。  
   
- 若要變更原始的初始值並重設任何現有的資料列，您必須卸除識別欄位並指定新的初始值來重建此識別欄位。 當資料表包含資料時，識別數字就會加入至含有指定初始值和遞增值的現有資料列。 但是，無法保證資料列的更新順序。  
+ 若要變更原始初始值並重設任何現有的資料列，請卸除識別欄位並指定新的初始值來重建此識別欄位。 當資料表包含資料時，識別數字就會加入至含有指定初始值和遞增值的現有資料列。 但是，無法保證資料列的更新順序。  
   
 ## <a name="result-sets"></a>結果集  
- 不論是否針對包含識別欄位的資料表指定任何選項，DBCC CHECKIDENT 都會針對所有作業傳回下列訊息 (只指定新的初始值時例外)。  
+ 不論您是否針對包含識別欄位的資料表指定任何選項，DBCC CHECKIDENT 都會針對所有作業傳回下列訊息 (只有一個例外)。 該作業會指定新的初始值。  
   
 `Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
@@ -114,8 +114,8 @@ DBCC CHECKIDENT
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-resetting-the-current-identity-value-if-it-is-needed"></a>A. 必要的話，重設目前的識別值  
- 在必要時，下列範例會重設 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中指定之資料表目前的識別值。  
+### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>A. 必要的話，重設目前的識別值  
+ 在必要時，下列範例會重設 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中指定資料表目前的識別值。  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="b-reporting-the-current-identity-value"></a>B. 報告目前的識別值  
- 下列範例會報告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中指定之資料表目前的識別值，如果識別值不正確，並不會更正它。  
+ 下列範例會報告 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中指定資料表目前的識別值，且如果識別值不正確則不會更正該值。  
   
 ```  
 USE AdventureWorks2012;   
@@ -167,5 +167,4 @@ GO
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
-  
   

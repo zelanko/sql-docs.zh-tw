@@ -1,7 +1,7 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509047"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227190"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,6 +91,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -266,7 +267,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 適用於：SQL Server 和 Azure SQL Database
 
-注意：提供此語法，只是為了回溯相容性。 未來的版本將予以移除。 請避免在新的開發工作中使用這個語法，並規劃修改目前使用這個語法的應用程式。
+附註：提供此語法，只是為了回溯相容性。 未來的版本將予以移除。 請避免在新的開發工作中使用這個語法，並規劃修改目前使用這個語法的應用程式。
 
 指定在結果中包含所有群組，不論它們是否符合 WHERE 子句中的搜尋準則。 不符合搜尋準則的群組彙總會是 NULL。 
 
@@ -275,11 +276,11 @@ GROUP BY ALL：
 - 在具有 FILESTREAM 屬性的資料行上將會失敗。
   
 ### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
-適用於：Azure SQL 資料倉儲和平行處理資料倉儲
+適用於：Azure SQL 資料倉儲與平行處理資料倉儲
 
 DISTRIBUTED_AGG 查詢提示會強制使用大量平行處理 (MPP) 系統，在執行彙總之前轉散發特定資料行上的資料表。 GROUP BY 子句中只有一個資料行可以有 DISTRIBUTED_AGG 查詢提示。 查詢完成後，轉散發的資料表就會卸除。 不會變更原始資料表。  
 
-注意：提供 DISTRIBUTED_AGG 查詢提示是為了舊版平行處理資料倉儲的回溯相容性，不會改善大部分查詢的效能。 根據預設，MPP 在需要時就已經轉散發資料，以增進彙總的效能。 
+附註：提供 DISTRIBUTED_AGG 查詢提示是為了舊版平行處理資料倉儲的回溯相容性，不會改善大部分查詢的效能。 根據預設，MPP 在需要時就已經轉散發資料，以增進彙總的效能。 
   
 ## <a name="general-remarks"></a>一般備註
 
@@ -344,7 +345,7 @@ GROUP BY 子句支援 SQL-2006 標準內包含的所有 GROUP BY 功能，但是
 |功能|SQL Server Integration Services|SQL Server 相容性層級 100 或更高層級|相容性層級 90 的 SQL Server 2008 或更新版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 彙總|不支援 WITH CUBE 或 WITH ROLLUP。|支援 WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP。|與相容性層級 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|不允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 傳回下列錯誤訊息：「關鍵字 'cube'&#124;'rollup' 附近的語法不正確」。<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 允許使用下列範例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)**<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|不允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube (**_arg1_**,**...argN **)** or **dbo.rollup(** arg1 **,**_...argN_**)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 系統會傳回下列錯誤訊息：「關鍵字 'cube'&#124;'rollup' 附近的語法不正確。」<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 允許使用下列範例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|允許在 GROUP BY 子句中使用使用者定義函式 **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)**<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|不支援|支援|支援|  
 |CUBE|不支援|支援|不支援|  
 |ROLLUP|不支援|支援|不支援|  
@@ -403,7 +404,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>範例：SQL 資料倉儲和平行處理資料倉儲  
+## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>範例:SQL 資料倉儲與平行處理資料倉儲  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 子句的基本使用  
  下列範例會尋找每天的所有銷售總額。 每天只會傳回一個包含所有銷售總和的資料列。  
