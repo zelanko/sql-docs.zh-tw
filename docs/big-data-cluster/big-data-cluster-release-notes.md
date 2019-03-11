@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 9dfb6706f27006ccb876615316533bc8e15b3101
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556230"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683628"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 巨量資料叢集的版本資訊
 
 這篇文章會提供最新版的 SQL Server 的巨量資料叢集的最新的更新和已知的問題。 下表可連結您的版本 > 一節涵蓋在本文中。
 
-| 版本 | date |
+| 版本 | Date |
 |---|---|
 | [CTP 2.3](#ctp23) | 2019 年 2 月 |
 | [CTP 2.2](#ctp22) | 2018 年 12 月 |
@@ -74,6 +74,32 @@ ms.locfileid: "57556230"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - 如果巨量資料叢集部署失敗，不會移除相關聯的命名空間。 這可能會導致失去關聯的命名空間，在叢集上。 因應措施是手動刪除命名空間，才能部署具有相同名稱的叢集。
+
+#### <a name="kubeadm-deployments"></a>kubeadm 部署
+
+如果您要部署多部電腦上的 Kubernetes 使用 kubeadm，叢集系統管理入口網站不會正確顯示連線至巨量資料叢集所需的端點。 如果您遇到這個問題，使用下列因應措施若要探索的服務端點 IP 位址：
+
+- 如果您從連接在叢集內，查詢服務 IP 端點，您想要連線到 Kubernetes。 例如，下列**kubectl**命令會顯示 SQL Server 的主要執行個體的 IP 位址：
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- 如果您從外部連線的叢集，請使用下列步驟來連接：
+
+   1. 取得執行 SQL Server 的主要執行個體的節點的 IP 位址： `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`。
+
+   1. 連接到 SQL Server 使用此 IP 位址的主要執行個體。
+
+   1. 查詢**cluster_endpoint_table**其他外部端點的 master 資料庫中。
+
+      如果失敗連接逾時，就可以在對應的節點進行防火牆處理。 在此情況下，您必須連絡您的 Kubernetes 叢集系統管理員，並要求為對外公開的節點 IP。 這可能是任何節點。 您接著可以使用該 IP 和對應的連接埠連接到叢集中執行的各種服務。 比方說，系統管理員可以執行以尋找此 IP:
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
 
 #### <a id="mssqlctlctp23"></a> mssqlctl
 
