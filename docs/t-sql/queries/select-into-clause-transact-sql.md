@@ -26,16 +26,16 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334535"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查
  *filegroup*    
  指定將作為新資料表建立位置的檔案群組名稱。 指定的檔案群組應該存在於資料庫上，否則 SQL Server 引擎會擲回錯誤。   
  
- **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
 ## <a name="data-types"></a>資料型別  
  FILESTREAM 屬性不會傳送至新的資料表。 FILESTREAM BLOB 會以 **varbinary(max)** BLOB 的形式被複製並儲存在新資料表中。 在沒有 FILESTREAM 屬性的情況下，**varbinary(max)** 資料類型會有 2 GB 的限制。 如果 FILESTREAM BLOB 超過這個值，系統就會引發錯誤 7119 並且停止此陳述式。  
@@ -82,6 +82,9 @@ SELECT...INTO 會在預設的檔案群組中建立新的資料表，然後將查
 -   識別欄位來自遠端資料來源。  
   
 如果其中任何一個狀況成立，都會將資料行建立成 NOT NULL，而不是繼承 IDENTITY 屬性。 如果新的資料表需要識別欄位，但是無法使用這種資料行，或者您想要與來源識別欄位不同的初始或遞增值，請使用 IDENTITY 函數在選取清單中定義此資料行。 請參閱下面＜範例＞一節中的＜使用 IDENTITY 函數來建立識別欄位＞。  
+
+## <a name="remarks"></a>Remarks  
+`SELECT...INTO` 陳述式會以兩個部分運作 - 建立新資料表，然後插入資料列。  這表示若插入失敗，它們會復原，但仍會保留新的 (空白) 資料表。  若您需要讓整個操作整體成功或失敗，請使用[明確交易](../language-elements/begin-transaction-transact-sql.md)。
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  您無法將資料表變數或資料表值參數指定為新的資料表。  
@@ -229,7 +232,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 將新資料表建立成另一個資料表的複本並載入至指定的檔案群組中
 下列範例示範如何將新資料表建立成另一個資料表的複本，然後載入至與使用者預設檔案群組不同的指定檔案群組中。
 
- **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

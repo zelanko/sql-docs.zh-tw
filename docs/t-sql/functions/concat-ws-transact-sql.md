@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4671d92d73335c0b2383b1f43fae1488f1ac0ad6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6148233259bd985aad2348359132cfa5cad93370
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305326"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 
 ## <a name="arguments"></a>引數   
 separator  
-屬於任何類型的運算式 (`char`'、`nchar`'、`nvarchar` 或 `varchar`)。
+任何字元類型 (`char`、`nchar`、`nvarchar` 或 `varchar`) 的運算式。
 
 引數1、引數2、引數*N*  
 任意類型的運算式。

@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150179"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663104"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
-此教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 此文章示範如何： 
+本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
 
 > [!div class="checklist"]
 > * 註解與取消註解 TRANSACT-SQL (T-SQL) 文字
@@ -38,7 +38,7 @@ ms.locfileid: "50150179"
 > * 尋找您的 SQL Server 執行個體名稱
 
 ## <a name="prerequisites"></a>Prerequisites
-若要完成此 教學課程，您需要 SQL Server Management Studio、SQL Server 存取權，以及 AdventureWorks 資料庫。 
+若要完成本教學課程，您需要 SQL Server Management Studio、SQL Server 存取權，以及 AdventureWorks 資料庫。 
 
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。

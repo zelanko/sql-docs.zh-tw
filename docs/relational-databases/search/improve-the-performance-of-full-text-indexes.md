@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532543"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590433"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ ms.locfileid: "52532543"
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 以下是編目記錄檔名稱的變動部分。
--   <**DatabaseID**> - 資料庫的識別碼。 <**dbid**> 是開頭為零的五位數數字。  
--   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 <**catid**> 是開頭為零的五位數數字。  
+-   \<**DatabaseID**> - 資料庫的識別碼。 <**dbid**> 是開頭為零的五位數數字。  
+-   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 \<**catid**> 是開頭為零的五位數數字。  
 -   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄檔數目。  
   
  例如，`SQLFT0000500008.2` 是指資料庫識別碼 = 5 而且全文檢索目錄識別碼 = 8 之資料庫的編目記錄檔。 位於檔案名稱結尾的 2 表示此資料庫/目錄組有兩個搜耙記錄檔。  
@@ -142,7 +142,7 @@ ms.locfileid: "52532543"
 2.  500 MB 是系統中其他處理序所需記憶體的估計值。 如果系統正在進行其他工作，請據此增加這個值。  
 3.  。*ism_size* 在 x64 平台假設為 8 MB。  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>範例：估計 fdhost.exe 的記憶體需求  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>範例估計 fdhost.exe 的記憶體需求  
   
  這個範例適用於具有 8GM RAM 和 4 個雙核心處理器的 64 位元電腦。 第一個計算會估計 fdhost.exe 所需的記憶體-*F*。 搜耙範圍的數目是 `8`。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52532543"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>範例：設定 max server memory  
+ #### <a name="example-setting-max-server-memory"></a>範例設定最大伺服器記憶體  
   
  此範例使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 和 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將 [最大伺服器記憶體] 設為上述範例中計算的 *M* 值，即 `7052`：  
   

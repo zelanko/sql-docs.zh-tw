@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 374a32ab01e201a093702469a4e03445045203d9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017069"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662772"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 和 varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "56017069"
 固定長度或可變長度的二進位資料類型。
   
 ## <a name="arguments"></a>引數  
-**binary** [ ( *n* ) ] 固定長度的二進位資料，其長度為 *n* 位元組，其中 *n* 是 1 到 8,000 的值。 儲存體大小是 *n* 位元組。
+**binary** [ ( _n_ ) ] 固定長度的二進位資料，其長度為 _n_ 位元組，其中 _n_ 是 1 到 8,000 的值。 儲存體大小是 _n_ 位元組。
   
-**varbinary** [ ( *n* | **max**) ] 可變長度的二進位資料。 *n* 可以是從 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 輸入的資料有可能是 0 位元組。 **varbinary** 的 ANSI SQL 同義字是 **binary varying**。
+**varbinary** [ ( _n_ | **max**) ] 可變長度的二進位資料。 _n_ 可以是從 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 輸入的資料有可能是 0 位元組。 **varbinary** 的 ANSI SQL 同義字是 **binary varying**。
   
 ## <a name="remarks"></a>Remarks  
-當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 當 *n* 不是由 CAST 函式指定時，預設長度為 30。
+當資料定義或變數宣告陳述式中未指定 _n_ 時，預設長度為 1。 當 _n_ 不是由 CAST 函式指定時，預設長度為 30。
 
 | 資料類型 | 使用時機... |
 | --- | --- |
@@ -50,11 +50,23 @@ ms.locfileid: "56017069"
 
 
 ## <a name="converting-binary-and-varbinary-data"></a>轉換 binary 與 varbinary 資料
-當資料是從字串資料類型 (**char**、**varchar**、**nchar**、**nvarchar**、**binary**、**varbinary**、**text**、**ntext** 或 **image**) 轉換成長度不同的 **binary** 或 **varbinary** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會填補或截斷位於右側的資料。 將其他資料類型轉換成 **binary** 或 **varbinary** 時，則在左側填補或截斷資料。 使用十六進位零進行填補。
+將資料從字串資料類型轉換成不等長的 **binary** 或 **varbinary** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會填補或截斷右邊的資料。 這些字串資料類型為：
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **image**
+
+將其他資料類型轉換成 **binary** 或 **varbinary** 時，則在左側填補或截斷資料。 使用十六進位零進行填補。
   
-若 **binary** 資料是搬移資料最簡易的方式，則將資料轉換成 **binary** 和 **varbinary** 資料類型會非常有幫助。 將各種資料類型的值轉換為有足夠大小的二進位值，然後將值轉換回原來的資料類型時，若兩個轉換都在相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上進行，那麼將會得到相同的值。 數值的二進位表示法可能會隨著不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而變更。
+若 **binary** 資料是搬移資料最簡易的方式，則將資料轉換成 **binary** 和 **varbinary** 資料類型會非常有幫助。 在某些時候，您可以將實值型別轉換成大小足夠大的二進位值，然後將其轉換回來。 如果這兩項轉換都在同一版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行，這項轉換一律會產生相同的值。 數值的二進位表示法可能會隨著不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而變更。
   
-您可以將 **int**、**smallint** 和 **tinyint** 轉換成 **binary** 或 **varbinary**，但如果您將 **binary** 值轉換回整數值，若有發生截斷，則此值會與原始的整數值不同。 例如，下列 SELECT 陳述式所顯示的整數值 `123456`，通常會儲存為二進位的 `0x0001e240`：
+您可以將 **int**、**smallint** 和 **tinyint** 轉換成 **binary** 或 **varbinary**。 如果您將 **binary** 值轉換回整數值，若有發生截斷，則此值會與原始的整數值不同。 例如，下列 SELECT 陳述式所顯示的整數值 `123456`，會儲存為二進位的 `0x0001e240`：
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  

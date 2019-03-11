@@ -10,12 +10,12 @@ ms.author: mathoma
 manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f2e8a96d6f9a6270cec06aaa47f33b3b830f4e5
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 3c947da650b7ba5d5e968464cc022839ca908ef0
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419743"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334655"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>版本設定和 applies-to 的 SQL Server include 檔案
 
@@ -140,3 +140,5 @@ SQL 內容作者通常需要包括 SQL Server 的產品名稱與版本。 如此
 ## <a name="next-steps"></a>後續步驟
 
 如需有關如何使用這些 include 檔案的詳細資訊，請參閱 [Applies-to include 檔案](sql-server-docs-contribute.md#applies-to-includes)。
+
+此為測試

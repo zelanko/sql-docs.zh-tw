@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 的新功能 | Microsoft Docs
-ms.date: 01/09/2019
-ms.prod: sql
+ms.date: 02/28/2019
+ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,32 +9,46 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8681ca62baf15a8663b3408a67b0094c569cf618
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 8fdc1191b5f0ef7d475e23bbcb56081821d6882b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802105"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334815"
 ---
-# <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 的新功能
+# <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 SQL Server 2019 的新功能。 如需詳細資訊和已知問題，請參閱 [SQL Server 2019 版本資訊](sql-server-ver15-release-notes.md)。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能。 如需詳細資訊和已知問題，請參閱 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
-**試用 SQL Server 2019！**
-- [![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下載 SQL Server 2019 以安裝於 Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
+**請試用 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]！**
+- [![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下載 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以安裝於 Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
 - 安裝於 Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)。
-- [在 Docker 的 SQL Server 2019 上執行](../linux/quickstart-install-connect-docker.md)。
+- [在 Docker 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 上執行](../linux/quickstart-install-connect-docker.md)。
 
-## <a name="ctp-22"></a>CTP 2.2
+**使用[最新的工具](#tools)以獲得 SQL Server 2019 的最佳體驗**。
 
-Community Technical Preview (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公開版本。 這個版本對先前的 CTP 版本做了改進，以修正 Bug，提升安全性，以及將效能最佳化。 此外，也為 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2 新增或強化了下列功能。
+## <a name="ctp-23"></a>CTP 2.3
+
+Community Technical Preview (CTP) 2.3 是 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的最新公開版本。 這個版本對先前的 CTP 版本做了改進，以修正 Bug，提升安全性，以及將效能最佳化。 此外，也為 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 新增或強化了下列功能。
 
 - [巨量資料叢集](#bigdatacluster)
-  - 對巨量資料叢集使用 Azure Data Studio 的 SparkR
+  - 在 IntelliJ 中於 SQL Server 2019 巨量資料叢集上提交 Spark 作業
+  - 各種資料相關應用程式的應用程式部署及管理體驗，包含使用 R 和 Python 的機器學習服務模型來執行 SSIS 作業等
+  - 在 SQL Server 2019 巨量資料叢集中使用 Sparklyr
+  - 將外部 HDFS 相容儲存體裝載至具備 HDFS 階層處理的巨量資料叢集
 
 - [資料庫引擎](#databaseengine)
-  - 在 SQL Server 複寫中使用 UTF-8 字元編碼。
+  - 加速資料庫復原
+  - 使用多個範圍的暫存資料表減少重新編譯工作負載
+  - 改善間接檢查點延展性
+  - 查詢存放區計畫強制支援向前快轉及靜態資料指標
+  - SQL 圖表可在刪除節點時啟用串聯刪除邊緣
+  - 外部程式庫支援 Windows 上的 Java 及 Python
+
+- [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)](#ssas)
+  - 表格式模型中計算群組可藉由重複使用計算邏輯來減少測量的數量。
 
 ## <a name="previous-ctps"></a>舊版 CTP
 
@@ -46,7 +60,8 @@ Community Technical Preview (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes
   - 使用 Spark 執行進階分析和機器學習 (CTP 2.0)
   - 使用 Spark 串流將資料串流至 SQL 資料集區 (CTP 2.0)
   - 使用 Azure Data Studio 來執行提供筆記本體驗的查詢簿 (CTP 2.0)
-  - 部署 Python 和 R 應用程式 (CTP 2.1)
+  - 在巨量資料叢集上使用來自 Azure Data Studio 的 SparkR (CTP 2.2)
+  - 部署 Python 和 R 應用程式 (CTP 2.2)
 
 - [資料庫引擎](#databaseengine)
   - UTF-8 支援 (CTP 2.0)
@@ -68,7 +83,6 @@ Community Technical Preview (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes
   - 新 `sys.dm_db_page_info` 系統函數會傳回頁面資訊 (CTP 2.0)
   - 智慧型查詢處理新增純量 UDF 內嵌 (CTP 2.1)
   - 改善截斷錯誤訊息，以包含資料表和資料行名稱，以及被截斷的值 (CTP 2.1)
-  - 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式中支援 UTF-8 定序 (CTP 2.1)
   - 在圖形比對查詢中使用衍生資料表或檢視別名 (CTP 2.1)
   - 改善統計資料封鎖的診斷資料 (CTP 2.1)
   - 混合式緩衝集區 (CTP 2.1)
@@ -91,9 +105,8 @@ Community Technical Preview (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes
   - SQL Server 組態管理員中的憑證管理 (CTP 2.0)
 
 - [工具](#tools)
-  - SQL Server Management Studio (SSMS) 18.0 (預覽) (CTP 2.0)
-  - Azure Data Studio (CTP 2.0)
-  - Azure Data Studio (CTP 2.1)
+  - Azure Data Studio
+  - SQL Server Management Studio (SSMS) 18.0 (預覽)
 
 如需這些功能的詳細資料，請繼續閱讀。
 
@@ -101,19 +114,54 @@ Community Technical Preview (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)會啟用新的案例，包括下列：
 
-- 對巨量資料叢集使用 Azure Data Studio 的 SparkR。 (CTP 2.2)
-- [部署 Python 和 R 應用程式](../big-data-cluster/big-data-cluster-create-apps.md)。 (CTP 2.1)
+- [在 IntelliJ 中於 SQL Server 2019 巨量資料叢集上提交 Spark 作業](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) (CTP 2.3)
+- [各種資料相關應用程式的應用程式部署及管理體驗](../big-data-cluster/big-data-cluster-create-apps.md)，包含使用 R 和 Python 的機器學習服務模型來執行 SSIS 作業等 (CTP 2.3)
+- [在 SQL Server 2019 巨量資料叢集中使用 Sparklyr](../big-data-cluster/sparklyr-from-RStudio.md) (CTP 2.3)
+- 將外部 HDFS 相容儲存體裝載至具備 [HDFS 階層處理](../big-data-cluster/hdfs-tiering.md)的巨量資料叢集 (CTP 2.3)
+- 在巨量資料叢集上使用來自 Azure Data Studio 的 SparkR (CTP 2.2)
+- [部署 Python 和 R 應用程式](../big-data-cluster/big-data-cluster-create-apps.md) (CTP 2.2)
 - 在 Kubernetes 上部署具有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 Spark Linux 容器的巨量資料叢集 (CTP 2.0)
 - 從 HDFS 中存取巨量資料 (CTP 2.0)
 - 使用 Spark 執行進階分析和機器學習 (CTP 2.0)
 - 使用 Spark 串流將資料串流至 SQL 資料集區 (CTP 2.0)
-- 在 [**Azure Data Studio**](../sql-operations-studio/what-is.md) 中執行可提供筆記型體驗的查詢活頁簿。 (CTP 2.0)
+- 在 [**Azure Data Studio**](../sql-operations-studio/what-is.md) 中執行提供筆記本體驗的查詢書 (CTP 2.0)
  
 [!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
 ## <a id="databaseengine"></a> 資料庫引擎
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 推出或強化了下列 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的新功能
+
+### <a name="accelerated-database-recovery-ctp-23"></a>加速資料庫復原 (CTP 2.3)
+
+[加速資料庫復原](http://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery
+)藉由重新設計 SQL Server 的資料庫引擎復原處理序來大幅提升資料庫可用性，尤其是針對長時間執行的交易。 [資料庫復原](../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)是一項 SQL Server 為了讓每個資料庫都能以交易一致 (或正常) 狀態啟動所使用的處理序。 啟用加速資料庫復原的資料庫，其在容錯移轉或其他非正常關機之後完成復原的速度會大幅加快。 自 CTP 2.3 起，可以使用下列語法為每個資料庫啟用加速資料庫復原：
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+>[!NOTE]
+>無須在 Azure SQL DB 中使用此語法也能利用這項功能，因為它預設為開啟。
+
+若您有可能進行大型交易的重要資料庫，請在預覽期間實驗這項功能。 請將意見反應提供給 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]小組](<https://aka.ms/sqlfeedback>)。
+
+### <a name="query-store-plan-forcing-support-for-fast-forward-and-static-cursors-ctp-23"></a>查詢存放區計畫強制支援向前快轉及靜態資料指標 (CTP 2.3)
+
+查詢存放區現在支援強制查詢執行計畫，以進行向前快轉及提供靜態 T-SQL 和 API 資料指標。 現在可透過 `sp_query_store_force_plan` 或透過 SQL Server Management Studio 查詢存放區報告支援強制。
+
+### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes-ctp-23"></a>使用多個範圍的暫存資料表減少重新編譯工作負載 (CTP 2.3)
+
+在此功能推出之前，使用 DML 陳述式 (`SELECT`、`INSERT`、`UPDATE`、`DELETE`) 參考暫存資料表時，若暫存資料表是由外部範圍批次建立的，便會導致在每一次執行陳述式時重新編譯 DML 陳述式。 透過這項改善，SQL Server 可執行額外的輕量檢查，避免不必要的重新編譯：
+
+- 檢查在編譯時期用於建立暫存資料表之外部範圍模組是否與用於連續執行的模組相同。 
+- 追蹤任何在初始編譯時進行的資料定義語言 (DDL) 變更，並與連續執行的 DDL 操作比較。 
+
+最終結果便是減少無關的重新編譯及 CPU 額外負荷。
+
+### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>改善的間接檢查點延展性 (CTP 2.3)
+
+在先前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，使用者可能會在資料庫產生大量中途分頁 (例如 tempdb) 時遇到無產量的排程錯誤。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進改善的間接檢查點延展性，其有助於避免在具備大量 UPDATE/INSERT 工作負載的資料庫上發生這類錯誤。
 
 ### <a name="scalar-udf-inlining-ctp-21"></a>純量 UDF 內嵌 (CTP 2.1)
 
@@ -131,7 +179,7 @@ Community Technical Preview (CTP) 2.2 是 [!INCLUDE[sql-server-2019](../includes
 
 ### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>改善統計資料封鎖的診斷資料 (CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 能針對等候同步統計資料更新作業的長時間執行查詢，提供改善的診斷資料。 動態管理檢視 `sys.dm_exec_requests` 資料行 `command` 會在 `SELECT` 正在等候同步統計資料更新作業完成以繼續查詢執行的情況下，顯示 `SELECT (STATMAN)`。  此外，新的等候類型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 會顯示在 `sys.dm_os_wait_stats` 動態管理檢視中。 它會顯示花費在同步統計資料重新整理作業上的累積執行個體層級時間。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 能針對等候同步統計資料更新作業的長時間執行查詢，提供改善的診斷資料。 動態管理檢視 `sys.dm_exec_requests` 資料行 `command` 會在 `SELECT` 正在等候同步統計資料更新作業完成以繼續查詢執行的情況下，顯示 `SELECT (STATMAN)`。 此外，新的等候類型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 會顯示在 `sys.dm_os_wait_stats` 動態管理檢視中。 它會顯示花費在同步統計資料重新整理作業上的累積執行個體層級時間。
 
 ### <a name="static-data-masking-ctp-21"></a>靜態資料遮罩 (CTP 2.1)
 
@@ -218,7 +266,7 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
 
 ### <a name="intelligent-query-processing-ctp-20"></a>智慧查詢處理 (CTP 2.0)
 
-- 藉由調整批次和資料列模式運算子的記憶體授與大小，以在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 引進的記憶體授與意見反應功能上展開**資料列模式記憶體授與意見反應**。  針對記憶體授與過多的狀況，如果授與的記憶體超過實際使用記憶體大小的兩倍，記憶體授與回饋便會重新計算記憶體授與。 連續執行接著會要求較少的記憶體。 針對記憶體授與大小不足以致磁碟溢出，記憶體授與意見反應會觸發記憶體授與的重新計算。 連續執行接著會要求更多的記憶體。 根據預設，資料庫相容性層級 150 會啟用此功能。
+- 藉由調整批次和資料列模式運算子的記憶體授與大小，以在 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 引進的記憶體授與意見反應功能上展開**資料列模式記憶體授與意見反應**。 針對記憶體授與過多的狀況，如果授與的記憶體超過實際使用記憶體大小的兩倍，記憶體授與回饋便會重新計算記憶體授與。 連續執行接著會要求較少的記憶體。 針對記憶體授與大小不足以致磁碟溢出，記憶體授與意見反應會觸發記憶體授與的重新計算。 連續執行接著會要求更多的記憶體。 根據預設，資料庫相容性層級 150 會啟用此功能。
 
 - **近似 COUNT DISTINCT** 會傳回群組中唯一非 Null 值的近似數目。 此函式設計成用於巨量資料情節。 此函式最適合用於下列所有條件都成立的查詢：
    - 存取最少數百萬個資料列的資料集。
@@ -235,7 +283,7 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
       - 會在查詢中新增太多的額外負荷。
       - 或者，不可行，因為您的應用程式相依於資料行存放區索引尚未支援的功能。
 
-- **資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。  這個精確的資料列計數資訊將用於最佳化下游計劃作業。 根據預設，資料庫相容性層級 150 會啟用此功能。
+- **資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個精確的資料列計數資訊將用於最佳化下游計劃作業。 根據預設，資料庫相容性層級 150 會啟用此功能。
 
 若要使用智慧查詢處理功能，請設定資料庫 `COMPATIBILITY_LEVEL = 150`。
 
@@ -245,11 +293,13 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
 
 ### <a id="sqlgraph"></a> SQL Graph 功能
 
-- **在圖表比對查詢中使用衍生資料表或檢視別名 (CTP 2.1)** SQL Server 2019 預覽上的圖表查詢，支援在 `MATCH` 語法中使用檢視和衍生資料表別名。 若要在 `MATCH` 中使用這些別名，檢視和衍生資料表必須是在節點集合或邊緣資料表集合上使用 `UNION ALL` 運算子建立。 節點或邊緣資料表上有可能會有，也有可能不會有篩選。 在 `MATCH` 查詢中使用衍生資料表和檢視別名的能力，對於您想要查詢圖形中兩個或多個實體之間的異質實體或異質連線的案例來說非常有用。
+- **圖表比對查詢中的使用者衍生資料表或檢視別名 (CTP 2.1)** [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Preview 上的圖表查詢支援在 `MATCH` 語法中使用檢視及衍生資料表別名。 若要在 `MATCH` 中使用這些別名，檢視和衍生資料表必須是在節點集合或邊緣資料表集合上使用 `UNION ALL` 運算子建立。 節點或邊緣資料表上有可能會有，也有可能不會有篩選。 在 `MATCH` 查詢中使用衍生資料表和檢視別名的能力，對於您想要查詢圖形中兩個或多個實體之間的異質實體或異質連線的案例來說非常有用。
 
 - **`MERGE` DML 中的比對支援 (CTP 2.0)** 可讓您在單一陳述式中指定圖形關聯性，而不必使用個別的 `INSERT`、`UPDATE` 或 `DELETE` 陳述式。 在 `MERGE` 陳述式中使用 `MATCH` 述詞，以合併節點或邊緣資料表中的目前圖形資料與新資料。 此功能會在邊緣資料表上啟用 `UPSERT` 情節。 使用者現在可以使用單一合併陳述式來插入新的邊緣或更新兩個節點之間的現有邊緣。
 
-- **邊緣條件約束 (CTP 2.0)** 是針對 SQL Graph 中的邊緣資料表所引進。 邊緣資料表可以將任何節點連線至資料庫中的任何其他節點。 引進邊緣條件約束時，您現在可以對此行為套用一些限制。 新的 `CONNECTION` 條件約束可以用來指定將允許指定邊緣資料表連線至結構描述的節點類型。
+- **邊緣條件約束 (CTP 2.0)** 是針對 SQL Graph 中的邊緣資料表所引進。 邊緣資料表可以將任何節點連線至資料庫中的任何其他節點。 引進邊緣條件約束時，您現在可以對此行為套用一些限制。 新的 `CONNECTION` 條件約束可以用來指定將允許指定邊緣資料表連線至結構描述的節點類型。 
+
+  **(CTP 2.3)** 進一步延伸這項功能，您便可以在 Edge 條件約束上定義串聯刪除動作。 您可以定義資料庫引擎在使用者刪除指定邊緣連線的節點時，所要採取的動作。
 
 ### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations--ctp-20"></a>線上和可繼續 DDL 作業的資料庫範圍預設設定 (CTP 2.0)
 
@@ -261,7 +311,7 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
   - `WHEN_SUPPPORTED` 選項允許線上或可繼續支援的作業，並離線或不可繼續執行索引的不受支援作業。
   - 除非 DDL 陳述式中明確指定，否則 `OFF` 選項允許離線和不可繼續執行所有索引作業的目前行為。
 
-若要覆寫預設設定，請在索引建立和重建命令中包含 `ONLINE` 或 `RESUMABLE` 選項。  
+若要覆寫預設設定，請在索引建立和重建命令中包含 `ONLINE` 或 `RESUMABLE` 選項。 
 
 如果沒有此功能，您必須直接在索引 DDL 陳述式中指定線上和可繼續選項 (例如索引建立和重建)。
 
@@ -269,7 +319,7 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
 
 ### <a id="ha"></a>Always On 可用性群組 - 更多同步複本 (CTP 2.0)
 
-- **最多五個同步複本**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 會將同步複本數目上限增加為 5，從 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中最多為 3。 您可以設定這個 5 個複本的群組在群組內具有自動容錯移轉。 有 1 個主要複本，再加上 4 個同步次要複本。
+- **最多五個同步複本**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 會將同步複本的數量上限，從 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 中最多為 3 的狀態增加至 5。 您可以設定這五個複本的群組，使其在群組內具備自動容錯移轉。 有一個主要複本，再加上四個同步次要複本。
 
 - **次要到主要複本連線重新導向**：可將用戶端應用程式連線導向至主要複本，而不論連接字串中指定的目標伺服器為何。 此功能允許在沒有接聽程式的情況下進行連線重新導向。 在下列情況下，使用次要到主要複本連線重新導向：
 
@@ -314,11 +364,11 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>DBCC CLONEDATABASE 中資料行存放區統計資料的支援 (CTP 2.0)
 
-`DBCC CLONEDATABASE` 會建立資料庫的僅限結構描述複本，其中包含為查詢效能問題進行疑難排解所需的所有項目，而不需要複製資料。  在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，此命令不會複製準確疑難排解資料行存放區索引查詢所需的統計資料，而且需要手動步驟才能擷取這項資訊。 現在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，`DBCC CLONEDATABASE` 會自動擷取資料行存放區索引的統計資料 blob，因此不需要任何手動步驟。
+`DBCC CLONEDATABASE` 會建立資料庫的僅限結構描述複本，其中包含為查詢效能問題進行疑難排解所需的所有項目，而不需要複製資料。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，此命令不會複製準確疑難排解資料行存放區索引查詢所需的統計資料，而且需要手動步驟才能擷取這項資訊。 現在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，`DBCC CLONEDATABASE` 會自動擷取資料行存放區索引的統計資料 blob，因此不需要任何手動步驟。
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>新增至 sp_estimate_data_compression_savings 的新選項 (CTP 2.0)
 
-`sp_estimate_data_compression_savings` 傳回所要求物件的目前大小，並針對所要求的壓縮狀態預估物件大小。  此程序目前支援三個選項：`NONE`、`ROW` 和 `PAGE`。 `COLUMNSTORE_ARCHIVE` 推出了兩個新選項：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 `COLUMNSTORE`。 如果在使用標準或封存資料行存放區壓縮的資料表上建立資料行存放區索引，則這些新選項可讓您估計節省的空間。
+`sp_estimate_data_compression_savings` 傳回所要求物件的目前大小，並針對所要求的壓縮狀態預估物件大小。 此程序目前支援三個選項：`NONE`、`ROW` 和 `PAGE`。 `COLUMNSTORE_ARCHIVE` 推出了兩個新選項：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 `COLUMNSTORE`。 如果在使用標準或封存資料行存放區壓縮的資料表上建立資料行存放區索引，則這些新選項可讓您估計節省的空間。
 
 ### <a id="ml"></a> SQL Server 機器學習服務容錯移轉叢集和磁碟分割型模型 (CTP 2.0)
 
@@ -340,7 +390,7 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
 
 ### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>新的 sys.dm_db_page_info 系統函數會傳回頁面資訊 (CTP 2.0)
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` 傳回資料庫中頁面的資訊。 此函式會傳回包含頁面中標頭資訊的資料列，包含 `object_id`、`index_id` 和 `partition_id`。 在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。  
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` 傳回資料庫中頁面的資訊。 此函式會傳回包含頁面中標頭資訊的資料列，包含 `object_id`、`index_id` 和 `partition_id`。 在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。 
 
 為了簡化頁面相關等候的疑難排解，也已將稱為 page_resource 的新資料行新增至 `sys.dm_exec_requests` 和 `sys.sysprocesses`。 這個新的資料行可讓您透過另一個新的系統函數 `sys.fn_PageResCracker` 將 `sys.dm_db_page_info` 加入這些檢視表。 請參閱下列指令碼作為範例：
 
@@ -363,26 +413,26 @@ FROM sys.dm_exec_requests AS d
 
   設定複寫 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或使用[複寫預存程序](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
-- **Microsoft Distributed Transaction Coordinator (MSDTC) 的支援 (CTP 2.0)**：Linux 上的 SQL Server 2019 支援 Microsoft Distributed Transaction Coordinator (MSDTC)。 如需詳細資料，請參閱[如何在 Linux 上設定 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
+- **支援 Microsoft Distributed Transaction Coordinator (MSDTC) (CTP 2.0)**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 Microsoft Distributed Transaction Coordinator (MSDTC)。 如需詳細資料，請參閱[如何在 Linux 上設定 MSDTC](../linux/sql-server-linux-configure-msdtc.md)。
 
 - **具有 Kubernetes 之 Docker 容器上的 Always On 可用性群組 (CTP 2.2)**：Kubernetes 可協調執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的容器，以提供一組具有 SQL Server Always On 可用性群組的高可用性資料庫。 Kubernetes 運算子會部署 StatefulSet，包括具有 **mssql-server 容器**和健康狀態監視的容器。
 
 - **協力廠商 AD 提供者的 OpenLDAP 支援 (CTP 2.0)**：Linux 上的 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 OpenLDAP，可讓協力廠商提供者加入 Active Directory。
 
-- **Linux 上的機器學習 (CTP 2.0)**：Linux 現在支援 SQL Server 2019 機器學習服務 (資料庫內)。 支援包含 `sp_execute_external_script` 預存程序。 如需如何在 Linux 上安裝機器學習服務的指示，請參閱[在 Linux 上安裝 SQL Server 2019 機器學習服務 R 和 Python 支援](../linux/sql-server-linux-setup-machine-learning.md)。
+- **Linux 上的機器學習 (CTP 2.0)**：Linux 現在支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 機器學習服務 (資料庫內)。 支援包含 `sp_execute_external_script` 預存程序。 如需如何在 Linux 上安裝機器學習服務的指示，請參閱[在 Linux 上安裝 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 機器學習服務 R 和 Python 支援](../linux/sql-server-linux-setup-machine-learning.md)。
 
 - **新容器登錄 (CTP 2.1)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像現在都位於 Microsoft 容器登錄中。 Microsoft 容器登錄是散發 Microsoft 產品容器的官方容器登錄。 此外，現在已發佈認證的 RHEL 型映像。
 
   - Microsoft 容器登錄：`mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - 認證的 RHEL 型容器映像：`mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-## <a id="mds"></a> Master Data Services (CTP 2.0) 
+## <a id="mds"></a> Master Data Services 
 
-- **Silverlight 控制項已取代為 HTML**：Master Data Services (MDS) 入口網站已不再相依於 Silverlight。 所有先前的 Silverlight 元件已取代為 HTML 控制項。
+- **Silverlight 控制項已取代為 HTML (CTP 2.0)**：Master Data Services (MDS) 入口網站已不再相依於 Silverlight。 所有先前的 Silverlight 元件已取代為 HTML 控制項。
 
-## <a id="security"></a>安全性 (CTP 2.0)
+## <a id="security"></a>安全性
 
-- **SQL Server 組態管理員中的憑證管理**：SSL/TLS 憑證普遍用來保護 SQL Server 執行個體的存取。 憑證管理現在整合至 SQL Server 組態管理員，並簡化一般工作，例如：
+- **SQL Server 組態管理員中的憑證管理 (CTP 2.0)**：SSL/TLS 憑證普遍用來保護 SQL Server 執行個體的存取。 憑證管理現在整合至 SQL Server 組態管理員，並簡化一般工作，例如：
 
   - 檢視和驗證 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體中所安裝的憑證。 
   - 檢視即將到期的憑證。
@@ -394,9 +444,15 @@ FROM sys.dm_exec_requests AS d
 
 ## <a id="tools"></a>工具
 
-- [**Azure Data Studio**](../azure-data-studio/what-is.md)：先前以 SQL Operations Studio 預覽名稱發行，Azure Data Studio 是輕量級、現代化、開放原始碼且跨平台的桌面工具，適用於資料開發和管理中的最常見工作。 使用 Azure Data Studio，您可以在 Windows、macOS 和 Linux 的內部部署上和雲端中連線至 SQL Server。 Azure Data Studio 可讓您：
+- [**Azure Data Studio**](../azure-data-studio/what-is.md)：先前以 SQL Operations Studio 預覽名稱發行，Azure Data Studio 是輕量級、現代化、開放原始碼且跨平台的桌面工具，適用於資料開發和管理中的最常見工作。 使用 Azure Data Studio 及 [SQL Server 2019 Preview 延伸模組](../azure-data-studio/sql-server-2019-extension.md)，您可以在 Windows、macOS 和 Linux 上連線到內部部署及雲端中的 SQL Server。 Azure Data Studio 可讓您：
 
-  - 更新至 [SQL Server 2019 (預覽) 延伸模組](../azure-data-studio/sql-server-2019-extension.md)。 (CTP 2.1)
+  - 現已支援 AAD。 (CTP 2.3)
+  - 筆記本檢視 UI 已移動到 Azure Data Studio 核心。 (CTP 2.3)
+  - 新增新的精靈，可從 HDFS 建立外部資料來源至 SQL Server 巨量資料叢集。 (CTP 2.3)
+  - 改善筆記本檢視器 UI。 (CTP 2.3)
+  - 新增新的筆記本 API。 (CTP 2.3)
+  - 新增「重新安裝筆記本相依性」命令，協助更新 Python 套件。 (CTP 2.3)
+  - 連線及管理 SQL Server 2019 巨量資料叢集。 (CTP 2.1)
   - 在具有快速 Intellisense、程式碼片段和原始檔控制整合的新式開發環境中編輯和執行查詢。 (CTP 2.0) 
   - 使用內建結果集圖表，將資料快速視覺化。 (CTP 2.0)
   - 使用可自訂的小工具建立伺服器和資料庫的自訂儀表板。 (CTP 2.0)  
@@ -405,28 +461,66 @@ FROM sys.dm_exec_requests AS d
   - 使用自訂佈景主題和延伸模組來增強您的體驗。(CTP 2.0)
   - 以及使用內建訂用帳戶和資源瀏覽器來探索 Azure 資源。 (CTP 2.0)
   - 支援使用 SQL Server 巨量資料叢集的案例。 (CTP 2.0)
+  
+  > [!TIP]
+  > 針對 Azure Data Studio 的最新改善，請參閱 [Azure Data Studio 版本資訊](../azure-data-studio/release-notes.md)。
 
-- [**SQL Server Management Studio (SSMS) 18.0 (預覽)**](../ssms/sql-server-management-studio-ssms.md)
+- [**SQL Server Management Studio (SSMS) 18.0 (預覽)**](../ssms/sql-server-management-studio-ssms.md)：支援 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]。
 
-  - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援。 (CTP 2.0)
+  - 從 SSMS 啟動 Azure Data Studio。 (CTP 2.3)
   - 具有安全記憶體保護區的 Always Encrypted 支援。 (CTP 2.0)
   - 較小的下載大小。 (CTP 2.0)
   - 現在根據 Visual Studio 2017 Isolated Shell。 (CTP 2.0)
   - 如需完整清單，請參閱 [SSMS 變更記錄](../ssms/sql-server-management-studio-changelog-ssms.md)。 (CTP 2.0)
 
+- [**SQL Server PowerShell 模組**](https://www.powershellgallery.com/packages/SqlServer/21.1.18080)：SqlServer PowerShell 模組允許 SQL Server 開發人員、管理員及 BI 專業人員自動化資料庫部署及伺服器管理。
+
+  - 從 21.0 升級至 21.1，以支援 SMO v150。
+  - 更新 SQL Server 提供者 (SQLRegistration)，以顯示 AS/IS/RS 群組。
+  - 修正瞄準 SQL Server 2014 時，`New-SqlAvailabilityGroup` Cmdlet 中的問題。
+  - 將 `–LoadBalancedReadOnlyRoutingList` 參數新增至 `Set-SqlAvailabilityReplica` 及 `New-SqlAvailabilityReplica`。
+  - 更新 `AnalysisService` Cmdlet，針對 Azure Analysis Services 使用來自 `Login-AzureAsAccount` 的快取登入權杖。
+
+## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
+
+### <a name="calculation-groups-in-tabular-models-ctp-23"></a>表格式模型 (CTP 2.3) 中的計算群組 
+
+計算群組解決可能擁有使用相同計算 (例如時間智慧) 測量擴散複雜模型中常見的問題。 計算群組會作為具有單一資料行的資料表，顯示在報告用戶端中。 資料行中每個值都代表可重複使用的計算或計算項目，且可以套用到任何量值。  
+
+計算群組可擁有任意數量的計算項目。 每個計算項目都由一個 DAX 運算式定義。 我們引進了三個新的 DAX 函式，可搭配計算群組使用： 
+
+- `SELECTEDMEASURE()` - 傳回目前處於內容中的量值參考。  
+
+- `SELECTEDMEASURENAME()` - 傳回包含目前處於內容中量值名稱的字串。  
+
+- `ISSELECTEDMEASURE(M1, M2, …)` - 傳回布林值，指出目前處於內容中之量值是否是其中一個指定為引數的項目。
+
+除了新的 DAX 函式外，還引進了兩個新的動態管理檢視：
+
+- `TMSCHEMA_CALCULATION_GROUPS`  
+- `TMSCHEMA_CALCULATION_ITEMS`  
+
+針對此版本，計算群組具有下列部分限制：
+
+- 尚未支援 `ALLSELECTED DAX` 函式。
+- 尚未支援計算群組資料表上定義的資料列層級安全性。
+- 尚未支援計算群組資料表上定義的物件層級安全性。
+- 尚未支援指向計算項目的 DetailsRows 運算式。
+- 尚未支援 MDX。
+
+計算群組需要模型位於 1470 相容性層級，該層級目前只在 SQL Server 2019 CTP 2.3 及更新版本中獲得支援。 目前，您可以使用表格式物件模型 (TOM) API、表格式模型指令碼語言 (TMSL) 及開放原始碼表格式編輯器工具，來建立計算群組。 未來版本中將會包含 SQL Server Data Tools (SSDT) 中的支援及文件。 Analysis Services 部落格中會提供此項目的額外資訊及其他 CTP 功能版本。
+
 ## <a name="other-services"></a>其他服務
 
-自 CTP 2.2 開始，[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 不會針對下列服務推出新功能：
+自 CTP 2.3 開始，[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 不會針對下列服務推出新功能：
 
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
 
 ## <a name="next-steps"></a>後續步驟
 
-- [SQL Server 2019 版本資訊](sql-server-ver15-release-notes.md)
+- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]版本資訊](sql-server-ver15-release-notes.md)
 
-- [Microsoft SQL Server 2019:Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />在 2018 年 9 月發佈。 適用於 Microsoft SQL Server 2019 CTP 2.0 for Windows、Linux 和 Docker 容器。
-
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]：Technical white paper](https://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />在 2018 年 9 月發佈。 適用於 Windows、Linux 及 Docker 容器的 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

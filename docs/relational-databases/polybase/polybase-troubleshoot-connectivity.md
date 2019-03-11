@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072853"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803153"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 
@@ -68,7 +68,7 @@ PolyBase 具備下列 XML 設定檔，其中包含 Hadoop 叢集的屬性：
 
 例如，SQL Server 2016 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`。
 
-更新 **core-site.xml**，並新增下列三個屬性。 根據環境設定值：
+更新 **core-site.xml**，並新增下列三個屬性。 根據環境設定值：
 
 ```xml
 <property>

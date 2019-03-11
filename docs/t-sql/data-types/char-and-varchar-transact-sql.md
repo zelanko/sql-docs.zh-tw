@@ -25,18 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299385"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801402"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
 
 固定長度 **char** 或變動長度 **varchar** 的字元資料型別。 從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始，當使用支援 UTF-8 的定序時，這些資料類型會存放完整範圍的 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字元並使用 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 字元編碼。 若指定非 UTF-8 定序，則這些資料類型只會存放該定序對應之字碼頁所支援的字元子集。
   
@@ -46,7 +43,7 @@ ms.locfileid: "54299385"
 **varchar** [ ( *n* | **max** ) ] 可變長度的字串資料。 *n* 會定義字串長度 (單位為位元組)，而且必須是 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 針對單位元組編碼字元集 (例如*拉丁字元*)，儲存大小是 *n* 位元組 + 2 位元組，而可儲存的字元數目也是 *n*。 針對多位元組編碼字元集，儲存大小仍是 *n* 位元組 + 2 位元組，但可儲存的字元數目可能小於 *n*。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。 如需有關字元集的詳細資訊，請參閱[單位元組和多位元組字元集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。
 
 ## <a name="remarks"></a>Remarks  
-當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 如果使用 CAST 和 CONVERT 函式時未指定 *n*，則預設長度為 30。
+當資料定義或變數宣告陳述式中未指定 *n* 時，預設長度為 1。 若使用 CAST 和 CONVERT 函式時未指定 *n*，則預設長度為 30。
   
 除非使用 COLLATE 子句指派特定定序；否則，使用 **char** 或 **varchar** 的物件會被指派資料庫的預設定序。 定序會控制用來儲存字元資料的字碼頁。
 
@@ -67,19 +64,19 @@ ms.locfileid: "54299385"
   
 > [!WARNING]
 > 每個非 null 的 varchar(max) 或 nvarchar(max) 資料行都需要額外 24 位元組的固定配置，而不利於排序作業期間 8,060 位元組的資料列限制。 因此可能會對資料表中可建立的非 null varchar(max) 或 nvarchar(max) 資料行數目建立隱含限制。  
-建立資料表時 (高於最大資料列大小超過允許上限 8,060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業 (如叢集索引鍵更新) 期間造成錯誤 (如錯誤 512)，或讓使用者直到執行作業前都無法預期多種完整資料行集。
+建立資料表時 (高於最大資料列大小超過允許上限 8,060 位元組所引發的一般警告) 或插入資料時，不會提供任何特殊錯誤。 如此大型的資料列可能會在某些一般作業 (如叢集索引鍵更新) 期間造成錯誤 (如錯誤 512)，或讓使用者直到執行作業前都可以預期多種完整資料行集。
   
 ##  <a name="_character"></a> 轉換字元資料  
-將字元運算式轉換成不同大小的字元資料類型時，對新資料類型而言太大的值會被截斷。 **uniqueidentifier** 類型會基於轉換字元運算式的用途，而被視為字元類型；因此會受到轉換成字元類型之截斷規則的影響。 請參閱稍後的＜範例＞一節。
+將字元運算式轉換成不同大小的字元資料類型時，對新資料類型而言太大的值會被截斷。 **uniqueidentifier** 類型因為轉換字元運算式之故，視為字元類型；因此會受到轉換成字元類型之截斷規則的影響。 請參閱稍後的＜範例＞一節。
   
 當字元運算式被轉換成不同資料類型或大小的字元運算式時，例如從 **char(5)** 轉換成 **varchar(5)**，或從 **char(20)** 轉換成 **char(15)**，輸入數值的定序會被指派至轉換的數值。 如果將非字元運算式轉換成字元資料類型，會將目前資料庫的預設定序指派給轉換的數值。 不論哪一種狀況，都可以使用 [COLLATE](../../t-sql/statements/collations.md) 子句指派特定的定序。
   
 > [!NOTE]  
 > 支援 **char** 和 **varchar** 資料類型的字碼頁轉換，但不支援 **text** 資料類型的字碼頁轉換。 舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不會報告字碼頁翻譯期間的資料遺失。  
   
-轉換成近似 **numeric** 資料類型的字元運算式可以包含選擇性的指數標記法 (小寫 e 或大寫 E 後面跟著選擇性的加號 (+) 或減號 (-)，再接著數字)。
+轉換成近似**數值**資料類型的字元運算式，可包含選擇性的指數標記法。 這個標記法是小寫 e 或大寫 E 加上選擇性的加號 (+) 或減號 (-)，再接數字。
   
-轉換成正確 **numeric** 資料類型的字元運算式必須由數字、小數點和選擇性的加號 (+) 或減號 (-) 組成。 前置的空白會被忽略。 字串不能用逗號分隔符號 (如 123,456.00 中的千位分隔符號)。
+轉換成正確 **numeric** 資料類型的字元運算式必須由數字、小數點和選擇性的加號 (+) 或減號 (-) 組成。 前置的空白會被忽略。 字串不能用逗號分隔符號，如 123,456.00 中的千位分隔符號。
   
 轉換成 **money** 或 **smallmoney** 資料類型的字元運算式也可以包含選擇性的小數點和錢幣符號 ($)。 可用逗號分隔符號 (如 $123,456.00)。
   

@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df735e98cb20643f9030c77f8e5dcc22ab126fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847456"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425813"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (萬用字元 - 相符的字元) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  符合方括號 `[ ]` 之間所指定之指定範圍或集合內的任何單一字元。 這些萬用字元可用於包含模式比對 (如 `LIKE` 和 `PATINDEX`) 的字串比較中。  
+符合方括號 `[ ]` 之間所指定之指定範圍或集合內的任何單一字元。 這些萬用字元可用於包含模式比對 (如 `LIKE` 和 `PATINDEX`) 的字串比較中。  
   
 ## <a name="examples"></a>範例  
 ### <a name="a-simple-example"></a>A：簡單範例   
-下列範例會傳回開頭為字母 `m` 的名稱。 `[n-z]` 會指定第二個字母必須是範圍從 `n` 到 `z` 中的某一個字母。 百分比萬用字元 `%` 允許開頭為字元 3 的任何字元或沒有字元。 `model` 和 `msdb` 資料庫符合此準則。 `master` 資料庫不符合且會從結果集中加以排除。
+下列範例會傳回開頭為字母 `m` 的名稱。 `[n-z]` 會指定第二個字母必須是範圍從 `n` 到 `z` 中的某一個字母。 百分比萬用字元 `%` 允許開頭為字元 3 的任何字元或沒有字元。 `model` 和 `msdb` 資料庫符合此原則。 `master` 資料庫不符合準則，並會從結果集中加以排除。
  
 ```sql
 SELECT name FROM sys.databases

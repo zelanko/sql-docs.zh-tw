@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35178456afe22fe89bd849b61a3e4e67166367be
+ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849466"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444223"
 ---
 # <a name="role-definitions"></a>角色定義
-  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，*角色**定義*是一個具名的工作集合，這些工作會定義可在報表伺服器上執行的作業。 角色定義會提供報表伺服器用來強制執行安全性的規則。 當使用者嘗試執行工作 (例如發行報表) 時，報表伺服器就會檢查使用者的角色指派，以便判斷工作是否包含在其角色定義中。 如果工作包括在角色定義中，便會提交要求。  
+  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「角色定義」是一個具名的工作集合，這些工作會定義可在報表伺服器上執行的作業。 角色定義會提供報表伺服器用來強制執行安全性的規則。 當使用者嘗試執行工作 (例如發行報表) 時，報表伺服器就會檢查使用者的角色指派，以便判斷工作是否包含在其角色定義中。 如果工作包括在角色定義中，便會提交要求。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>使用角色來授權報表伺服器的存取權  
  當角色用於角色指派時，角色才成為可以作業。 如需角色如何提供安全性的詳細資訊，請參閱 [角色指派](../../reporting-services/security/role-assignments.md)。  

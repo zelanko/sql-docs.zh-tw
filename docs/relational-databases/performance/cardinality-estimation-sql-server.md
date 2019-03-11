@@ -1,7 +1,7 @@
 ---
 title: 基數估計 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328848"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828018"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本文描述如何評估及選擇最適合您的 SQL 系統的基數估計 (CE) 組態。 大多數系統皆可從最新的 CE 中受益，因為它的精確度最高。 CE 會預測您的查詢可能傳回的資料列數目。 查詢最佳化工具使用基數預測，來產生最佳查詢計劃。 由於估計較精確，因此查詢最佳化工具通常較有機會產生較佳的查詢計劃。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢最佳化工具是以成本為基礎的查詢最佳化工具。 這表示它會選取估計處理成本最低的查詢計畫來執行。 查詢最佳化工具根據兩個主要因素來判斷執行查詢計劃的成本：
+
+- 在查詢計畫的每一個層級進行處理的資料列總數，此稱為計畫的基數。
+- 查詢中使用的運算子所指定的演算法成本模型。
+
+第一個因數 (基數) 會作為第二個因數 (成本模型) 的輸入參數。 因此，如果改善基數，便能產生更好的估計成本，進而可有更快的執行計畫。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的基數估計主要衍生自於建立索引或統計資料時，手動或自動建立的長條圖。 有時候，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也會使用條件約束資訊及查詢的邏輯重寫來判斷基數。
+
+在下列情況中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法精確地計算基數。 這會導致不精確的成本計算，使得產生並非最佳的查詢計畫。 避免在查詢中使用這些建構可以提升查詢效能。 有時也可以使用替代的查詢公式或其他方法，它們是：
+
+- 查詢的述詞，在相同資料表的不同資料行之間使用比較運算子。
+- 查詢的述詞使用運算子，且下列任一情況為真：
+  - 運算子任一邊所關聯的資料行中，沒有任何統計資料。
+  - 統計資料中的值分佈並不平均，但查詢會搜尋具有高度選擇性的值集。 如果運算子不是等號 (=) 運算子，此情況會特別明顯。
+  - 述詞使用不等於 (!=) 比較運算子或 `NOT` 邏輯運算子。
+- 查詢，其使用任一個 SQL Server 內建函式，或引數不是常數值之純量值的使用者定義函式。
+- 查詢透過算術或字串串連運算子，與聯結資料行相關聯。
+- 查詢所比較的變數，在編譯及最佳化查詢時其值不明。
+
+本文說明如何評估及選擇最適合您系統的 CE 設定。 大多數系統皆可從最新的 CE 中受益，因為它的精確度最高。 CE 會預測您的查詢可能傳回的資料列數目。 查詢最佳化工具使用基數預測，來產生最佳查詢計劃。 由於估計較精確，因此查詢最佳化工具通常較有機會產生較佳的查詢計劃。  
   
 您的應用程式系統可能有項重要的查詢，其計劃因此新的 CE 而變更為速度較慢的計劃。 這類查詢可能類似下列其中一項：  
   

@@ -25,17 +25,17 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 4656a02f268987db7375e8211aec5a275379ea00
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ce6ac47c2348f1acd082cb86e1d4756df6012a91
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209727"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662802"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-釋出所有快取中所有未使用的快取項目。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會主動在背景清除未使用的快取項目，讓記憶體存放目前的項目。 不過，您可以使用這個命令，以手動方式從所有快取或是指定的資源管理員集區快取中移除未使用的項目。
+釋出所有快取中所有未使用的快取項目。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會主動在背景清除未使用的快取項目，讓記憶體存放目前的項目。 不過，您可以使用這個命令，以手動方式從每個快取或是所指定 Resource Governor 集區快取中移除未使用的項目。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +49,18 @@ DBCC FREESYSTEMCACHE
 ```  
   
 ## <a name="arguments"></a>引數  
- ( 'ALL' [,*pool_name* ] )  
- ALL 會指定所有支援的快取。  
- *pool_name* 會指定 Resource Governor 集區快取。 只有與此集區有關的項目才會被釋放。  
+( 'ALL' [,_pool\_name_ ] )  
+ALL 會指定所有支援的快取。  
+_pool\_name_ 會指定 Resource Governor 集區快取。 只有與此集區有關的項目才會被釋放。  
   
- MARK_IN_USE_FOR_REMOVAL   
- 等目前所用的項目不用之後，分別從其對應的快取中，以非同步的方式釋出這些項目。 在 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 執行之後，於快取中建立的新項目皆不受影響。  
+MARK_IN_USE_FOR_REMOVAL   
+等目前所用的項目不用之後，分別從其對應的快取中，以非同步的方式釋出這些項目。 在 DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL 執行之後，於快取中建立的新項目皆不受影響。  
   
- NO_INFOMSGS  
- 隱藏所有參考訊息。  
+NO_INFOMSGS  
+隱藏所有參考訊息。  
   
 ## <a name="remarks"></a>Remarks  
-執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+執行 DBCC FREESYSTEMCACHE 會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有未來執行計畫，且可能會導致查詢效能突然暫時降低。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於 'DBCC FREEPROCCACHE' 或 'DBCC FREESYSTEMCACHE' 作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清。」 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 ## <a name="result-sets"></a>結果集  
 DBCC FREESYSTEMCACHE 會傳回：「DBCC 的執行已經完成。 如果 DBCC 印出錯誤訊息，請連絡您的系統管理員」。

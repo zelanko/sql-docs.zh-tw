@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403643"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017914"
 ---
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 開始支援由系統控制版本的時態表。這項資料庫功能帶來內建支援，能為任何時間點儲存於資料表中的資料提供相關資訊，而不再侷限於當下的時刻。 時態性是 ANSI SQL 2011 中引入的資料庫功能。  
+  SQL Server 2016 開始支援時態表 (又稱為由系統控制版本的時態表)。這項資料庫功能帶來內建支援，能提供任何時間點儲存於資料表中的資料相關資訊，而不再侷限於當下的時刻。 時態性是 ANSI SQL 2011 中引入的資料庫功能。  
   
  **快速入門**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403643"
   
     -   [查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **下載 Adventure Works 範例資料庫︰** 若要開始使用時態表，請下載[適用於 SQL Server 2016 CTP3 的 AdventureWorks 資料庫](https://www.microsoft.com/download/details.aspx?id=49502)與指令碼範例，然後遵循 'Temporal' 資料夾中的指示  
+    -   **下載 Adventure Works 範例資料庫：** 若要開始使用時態表，請下載[適用於 SQL Server 2016 CTP3 的 AdventureWorks 資料庫](https://www.microsoft.com/download/details.aspx?id=49502)與指令碼範例，然後遵循 'Temporal' 資料夾中的指示  
   
 -   **語法：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403643"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **視訊︰** 如需為時 20 分鐘的 Temporal 討論，請參閱 [SQL Server 2016 的 Temporal](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)。  
+-   **影片：** 如需為時 20 分鐘的時態討論，請觀看 [SQL Server 2016 中的時態](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)。  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>什麼是系統建立版本的時態表？  
  系統建立版本的時態表是一種使用者資料表，其設計目的是為了保留資料變更的完整歷程記錄，並允許簡易的時間點分析。 由於每個資料列的有效期間是由系統 (也就是資料庫引擎) 所管理，因此這種類型的時態表稱為系統設定版本的時態表。  
@@ -81,9 +81,9 @@ ms.locfileid: "52403643"
 ## <a name="how-does-temporal-work"></a>時態表如何運作？  
  資料表的系統建立版本會實作為一對資料表、目前的資料表和歷程記錄資料表。 在這些資料表中，下列兩個額外的 **datetime2** 資料行用來定義每個資料列的有效期間︰  
   
--   期間開始資料行︰系統會記錄此資料行中資料列的開始時間，通常表示為 **SysStartTime** 資料行。  
+-   期間開始資料行：系統會記錄此資料行中資料列的開始時間，通常表示為 **SysStartTime** 資料行。  
   
--   期間結束資料行︰系統會記錄此資料行中資料列的結束時間，通常表示於 **SysEndTime** 資料行。  
+-   期間結束資料行：系統會記錄此資料行中資料列的結束時間，通常表示為 **SysEndTime** 資料行。  
   
  目前資料表包含每個資料列的目前值。 歷程記錄資料表包含每個資料列各個先前的值 (如果有的話)，以及週期的有效開始時間和結束時間。  
   
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERTS：** 在 **INSERT**上，系統會根據系統時鐘將 **SysStartTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)，並將 **SysEndTime** 資料行的值指派至 9999-12-31 的最大值。 這會將資料列標示為開啟。  
+ **INSERT：** 在 **INSERT** 上，系統會根據系統時鐘將 **SysStartTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)，並將 **SysEndTime** 資料行的值指派至 9999-12-31 的最大值。 這會將資料列標示為開啟。  
   
- **UPDATES：** 在 **UPDATE**上，系統會將資料列的先前值儲存在歷程記錄資料表中，並根據系統時鐘將 **SysEndTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 這會將資料列標示為關閉，並記錄資料列有效的期間。 在目前資料表中，系統會以資料列的新值更新記錄，並根據系統時鐘將 **SysStartTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 **SysEndTime** 資料行目前資料表中更新資料列的值保持為 9999-12-31 的最大值。  
+ **UPDATE：** 在 **UPDATE** 上，系統會將資料列的先前值儲存在記錄資料表中，並根據系統時鐘將 **SysEndTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 這會將資料列標示為關閉，並記錄資料列有效的期間。 在目前資料表中，系統會以資料列的新值更新記錄，並根據系統時鐘將 **SysStartTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 **SysEndTime** 資料行目前資料表中更新資料列的值保持為 9999-12-31 的最大值。  
   
- **DELETES：** 在 **DELETE**上，系統會將資料列的先前值儲存在歷程記錄資料表中，並根據系統時鐘將 **SysEndTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 這會將資料列標示為關閉，並記錄先前資料列有效的期間。 在目前資料表中，資料列受到移除。 目前資料表的查詢不會傳回此資料列。 只有處理歷程記錄資料的查詢會傳回資料列已關閉的資料。  
+ **DELETE：** 在 **DELETE** 上，系統會將資料列的先前值儲存在記錄資料表中，並根據系統時鐘將 **SysEndTime** 資料行的值設定為目前交易的開始時間 (以 UTC 時區為準)。 這會將資料列標示為關閉，並記錄先前資料列有效的期間。 在目前資料表中，資料列受到移除。 目前資料表的查詢不會傳回此資料列。 只有處理歷程記錄資料的查詢會傳回資料列已關閉的資料。  
   
- **MERGE︰** 在 **MERGE**上，作業行為完全就像執行最多三個陳述式 ( **INSERT**、 **UPDATE**和/或 **DELETE**) 一樣，視 **MERGE** 陳述式中指定為動作的內容而定。  
+ **MERGE：** 在 **MERGE** 上，操作行為完全就像執行最多三個陳述式 (**INSERT**、**UPDATE**及/或 **DELETE**) 一樣，視 **MERGE** 陳述式中指定為動作的內容而定。  
   
 > [!IMPORTANT]  
 >  系統 datetime2 資料行中所記錄的時間是依據交易本身的開始時間。 例如，在單一交易中插入的所有資料列，在資料行中都會記錄相同的 UTC 時間，且對應到 **SYSTEM_TIME** 。  

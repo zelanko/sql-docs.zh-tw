@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的純量 UDF 內嵌 | Microsoft Docs
 description: 純量 UDF 內嵌功能可針對在 SQL Server (2018 和更新版本) 及 Azure SQL Database 中叫用純量 UDF 的查詢改善其效能。
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222084"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017924"
 ---
 # <a name="scalar-udf-inlining"></a>純量 UDF 內嵌
 
@@ -142,15 +142,16 @@ SQL Server 2017 (相容性層級 140 及更早版本) 中此查詢的執行計�
 
 - UDF 使用下列建構函式撰寫：
     - `DECLARE`、`SET`：變數宣告和指派。
-    - `SELECT`：包含單一/多個變數指派的 SQL 查詢<sup>1</sup>。
-    - `IF`/`ELSE`：使用任意巢狀層級的分支。
-    - `RETURN`：單一或多個傳回陳述式。
-    - `UDF`：巢狀/遞迴函式呼叫<sup>2</sup>。
+    - `SELECT`:包含單一/多個變數指派的 SQL 查詢<sup>1</sup>。
+    - `IF`/`ELSE`:使用任意巢狀層級的分支。
+    - `RETURN`:單一或多個傳回陳述式。
+    - `UDF`:巢狀/遞迴函式呼叫<sup>2</sup>。
     - 其他：`EXISTS`、`ISNULL` 等關聯式作業。
 - UDF 不會叫用任何與時間相依 (例如 `GETDATE()`) 或有副作用<sup>3</sup> (例如 `NEWSEQUENTIALID()`) 的內建函式。
 - UDF 會使用 `EXECUTE AS CALLER` 子句 (如果未指定 `EXECUTE AS` 子句，則為預設行為)。
 - UDF 不會參考資料表變數或資料表值參數。
 - 叫用純量 UDF 的查詢不會在其 `GROUP BY` 子句中參考純量 UDF 呼叫。
+- 在 SELECT 清單中使用 `DISTINCT` 子句叫用純量 UDF 的查詢，不會在其 `ORDER BY` 子句中參考純量 UDF 呼叫。
 - 不會以原生方式編譯 UDF (支援 Interop)。
 - UDF 不會用於計算資料行或檢查條件約束定義。
 - UDF 不會參考使用者定義型別。

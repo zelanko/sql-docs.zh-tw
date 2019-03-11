@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 492bd95f917d6973e4ff2797c170be58d16d0c40
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513871"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676086"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 傳回針對一份資料表的某個資料列或一份運算式清單，來計算的二進位總和檢查碼值。
   
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
@@ -58,11 +58,11 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  **int**
   
 ## <a name="remarks"></a>Remarks  
-只要後續未修改資料列，對資料表任何資料列執行計算的 `BINARY_CHECKSUM(*)`，會傳回相同值。 `BINARY_CHECKSUM` 會滿足雜湊函數的屬性：套用於任兩個運算式清單時，如果這兩個清單的對應元素具有相同的類型，且在使用等於 (=) 運算子進行比較時相等，則會傳回相同的值。 在此定義中，假設所指定類型的 Null 值比較為相等值。 如果運算式清單中至少有一個值變更，則運算式總和檢查碼也會變更。 不過，不保證一定會如此。 因此，若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 `BINARY_CHECKSUM`。 否則，請考慮改用 `HASHBYTES`。 使用指定的 MD5 雜湊演算法，`HASHBYTES` 將為兩個不同的輸入傳回相同結果的可能性比 `BINARY_CHECKSUM` 要低很多。
+只要稍後不修改資料列，對資料表任何資料列執行計算的 `BINARY_CHECKSUM(*)` 就會傳回相同值。 `BINARY_CHECKSUM` 會滿足雜湊函數的屬性：套用於任兩個運算式清單時，如果這兩個清單的對應元素具有相同的類型，且在使用等於 (=) 運算子進行比較時相等，則會傳回相同的值。 在此定義中，假設所指定類型的 Null 值比較為相等值。 如果運算式清單中至少有一個值變更，則運算式總和檢查碼也會變更。 不過，不一定有這項變更，因此若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 `BINARY_CHECKSUM`。 否則，請考慮改用 `HASHBYTES`。 使用指定的 MD5 雜湊演算法，`HASHBYTES` 將為兩個不同輸入傳回相同結果的可能性比 `BINARY_CHECKSUM` 要低很多。
   
 `BINARY_CHECKSUM` 可以對運算式清單進行操作，而它會針對指定的清單傳回相同的值。 套用於任兩個運算式清單的 `BINARY_CHECKSUM`，如果這兩個清單的對應元素具有相同的類型和位元組表示法，則會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為具有相同位元組表示法。
   
-`BINARY_CHECKSUM` 和 `CHECKSUM` 為類似的函數。 它們可用來計算運算式清單的總和檢查碼值，而運算式的順序會影響結果值。 用於 `BINARY_CHECKSUM(*)` 的資料行順序，就是資料表或檢視定義中所指定的資料行順序。 計算資料行也包括在內。
+`BINARY_CHECKSUM` 和 `CHECKSUM` 為類似的函數。 它們可用來計算運算式清單的總和檢查碼值，而運算式的順序會影響結果值。 用於 `BINARY_CHECKSUM(*)` 的資料行順序，就是資料表或檢視定義中所指定的資料行順序。 這項排序包含計算資料行。
   
 `BINARY_CHECKSUM` 和 `CHECKSUM` 所傳回的字串資料類型值不同，其中地區設定會造成不同表示法的字串比較為相等。 字串資料類型為  
 

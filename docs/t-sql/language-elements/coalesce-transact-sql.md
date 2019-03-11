@@ -22,22 +22,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 111d7cb0790bd0cbdb9c9bb17a6ebcb78ac3b04a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298605"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802195"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [請提供您對 SQL Docs 目錄的意見反應！](https://aka.ms/sqldocsurvey)
-
 依序評估引數，並傳回一開始未評估為 `NULL` 之第一個運算式的目前值。 例如，`SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` 會傳回第三個值，因為第三個值是第一個非 Null 的值。 
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,30 +43,30 @@ COALESCE ( expression [ ,...n ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- *expression*  
- 這是任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+_expression_  
+這是任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
 ## <a name="return-types"></a>傳回類型  
- 傳回具有最高資料類型優先順序的 *expression* 資料類型。 如果所有運算式都不可為 Null，結果的類型也是不可為 Null。  
+傳回具有最高資料類型優先順序的 _expression_ 資料類型。 如果所有運算式都不可為 Null，結果的類型也是不可為 Null。  
   
 ## <a name="remarks"></a>Remarks  
- 如果所有引數均為 `NULL`，`COALESCE` 就會傳回 `NULL`。 至少其中一個 Null 值必須是 `NULL` 類型。  
+如果所有引數均為 `NULL`，`COALESCE` 就會傳回 `NULL`。 至少其中一個 Null 值必須是 `NULL` 類型。  
   
 ## <a name="comparing-coalesce-and-case"></a>比較 COALESCE 和 CASE  
- `COALESCE` 運算式是 `CASE` 運算式的語法捷徑。  也就是說，查詢最佳化工具會將程式碼 `COALESCE`(*expression1*,*...n*) 重寫為下列 `CASE` 運算式：  
+`COALESCE` 運算式是 `CASE` 運算式的語法捷徑。  也就是說，查詢最佳化工具會將程式碼 `COALESCE`(_expression1_,_...n_) 重寫為下列 `CASE` 運算式：  
   
- ```sql  
- CASE  
- WHEN (expression1 IS NOT NULL) THEN expression1  
- WHEN (expression2 IS NOT NULL) THEN expression2  
- ...  
- ELSE expressionN  
- END  
- ```  
+```sql  
+CASE  
+WHEN (expression1 IS NOT NULL) THEN expression1  
+WHEN (expression2 IS NOT NULL) THEN expression2  
+...  
+ELSE expressionN  
+END  
+```  
   
- 這表示會多次評估輸入值 (*expression1*、*expression2*、*expressionN* 等)。 此外，為了符合 SQL 標準，包含子查詢的值運算式會視為不具決定性，且會評估子查詢兩次。 不論是哪一種情況，第一次評估和後續評估之間都可能傳回不同的結果。  
+如此，會多次評估輸入值 (_expression1_、_expression2_、_expressionN_ 等等)。 包含子查詢的值運算式會視為不具決定性，且會評估子查詢兩次。 此結果符合 SQL 標準。 不論是哪一種情況，第一次評估和後續評估之間都會傳回不同的結果。  
   
- 例如，執行程式碼 `COALESCE((subquery), 1)` 時，會評估子查詢兩次。 因此，您會根據查詢的隔離等級取得不同的結果。 例如，程式碼在多使用者環境的 `READ COMMITTED` 隔離等級下，會傳回 `NULL`。 為了確保會傳回穩定的結果，請使用 `SNAPSHOT ISOLATION` 隔離等級，或以 `ISNULL` 函數取代 `COALESCE`。 或者，您可以重寫查詢，以將子查詢推送至子選擇，如下列範例所示：  
+例如，執行程式碼 `COALESCE((subquery), 1)` 時，會評估子查詢兩次。 因此，您會根據查詢的隔離等級取得不同的結果。 例如，程式碼在多使用者環境的 `READ COMMITTED` 隔離等級下，會傳回 `NULL`。 為了確保會傳回穩定的結果，請使用 `SNAPSHOT ISOLATION` 隔離等級，或以 `ISNULL` 函數取代 `COALESCE`。 或者，您可以重寫查詢，將子查詢推送至子選擇，如下列範例所示：  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -81,13 +78,13 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
 ```  
   
 ## <a name="comparing-coalesce-and-isnull"></a>比較 COALESCE 和 ISNULL  
- `ISNULL` 函數和 `COALESCE` 運算式具有相似的目的，但運作方式可能不同。  
+`ISNULL` 函數和 `COALESCE` 運算式具有相似的目的，但運作方式可能不同。  
   
-1.  因為 `ISNULL` 是函數，所以只會評估一次。  如上所述，可能會評估多次 `COALESCE` 運算式的輸入值。  
+1.  因為 `ISNULL` 是函式，所以只會評估一次。  如上所述，可能會評估多次 `COALESCE` 運算式的輸入值。  
   
 2.  結果運算式所決定的資料類型會不同。 `ISNULL` 使用第一個參數的資料類型，而 `COALESCE` 會遵循 `CASE` 運算式規則，並傳回具有最高優先順序之值的資料類型。  
   
-3.  針對 `ISNULL` 和 `COALESCE`，結果運算式的可 NULL 性不同。 `ISNULL` 傳回值一律會被視為不可為 NULL (假設傳回值是不可為 Null 的值)，而具有非 Null 參數的 `COALESCE` 則會被視為 `NULL`。 因此，運算式 `ISNULL(NULL, 1)` 和 `COALESCE(NULL, 1)` 雖然相等，但具有不同的可 NULL 性值。 這會在當您在計算資料行中使用這些運算式、建立索引鍵條件約束，或使純量 UDF 的傳回值具確定性時產生差異，以便使用如下列範例所示的方式來編製索引：  
+3.  針對 `ISNULL` 和 `COALESCE`，結果運算式的可 NULL 性不同。 `ISNULL` 傳回值一律視為不可為 NULL (假設傳回值是不可為 Null 的值)。 相反地，具有非 Null 參數的 `COALESCE` 會被視為 `NULL`。 因此，運算式 `ISNULL(NULL, 1)` 和 `COALESCE(NULL, 1)` 雖然相等，卻有不同的可為 Null 值。 當您在計算資料行中使用這些運算式、建立索引鍵條件約束，或使純量 UDF 的傳回值具確定性時，這些值會產生差異，以便編製索引，如下列範例所示：  
   
     ```sql  
     USE tempdb;  
@@ -113,14 +110,14 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  適用於 `ISNULL` 和 `COALESCE` 的驗證也不一樣。 例如，`ISNULL` 的 `NULL` 值會被轉換為 **int**，而針對 `COALESCE`，您必須提供資料類型。  
+4.  適用於 `ISNULL` 和 `COALESCE` 的驗證也不一樣。 例如，`ISNULL` 的 `NULL` 值會轉換為 **int**；而針對 `COALESCE`，您卻必須提供資料類型。  
   
-5.  `ISNULL` 只接受兩個參數，而 `COALESCE` 會接受變動數目的參數。  
+5.  `ISNULL` 只接受兩個參數。 相較之下，`COALESCE` 接受數目不定的參數。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-running-a-simple-example"></a>A. 執行簡單範例  
- 下列範例示範  `COALESCE` 如何從具有非  Null  值的第一個資料行選取資料。 這個範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。  
+下列範例示範  `COALESCE` 如何從具有非  Null  值的第一個資料行選取資料。 這個範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。  
   
 ```sql  
 SELECT Name, Class, Color, ProductNumber,  
@@ -129,7 +126,7 @@ FROM Production.Product;
 ```  
   
 ### <a name="b-running-a-complex-example"></a>B. 執行複雜範例  
- 在下列範例中，`wages` 資料表有三個含員工年薪 (時薪、月薪加上分紅) 相關資訊的資料行。 不過，員工只會收到其中一種款項。 若要算出支付給所有員工的總金額，請使用 `COALESCE`，只接收 `hourly_wage`、`salary` 和 `commission` 中的非 Null 值。  
+在下列範例中，`wages` 資料表有三個含員工年薪 (時薪、月薪加上分紅) 相關資訊的資料行。 不過，員工只會收到其中一種款項。 若要算出支付給所有員工的總金額，請使用 `COALESCE`，只接收 `hourly_wage`、`salary` 和 `commission` 中的非 Null 值。  
   
 ```sql  
 SET NOCOUNT ON;  
@@ -172,59 +169,59 @@ ORDER BY 'Total Salary';
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00  
+```   
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00  
   
- (12 row(s) affected)
- ```  
+(12 row(s) affected)
+```  
   
 ### <a name="c-simple-example"></a>C.簡單範例  
- 下列範例示範 `COALESCE` 如何從具有非 Null 值的第一個資料行選取資料。 此範例假設 `Products` 資料表包含此資料：  
+下列範例示範 `COALESCE` 如何從具有非 Null 值的第一個資料行選取資料。 此範例假設 `Products` 資料表包含此資料：  
   
- ```  
- Name         Color      ProductNumber  
- ------------ ---------- -------------  
- Socks, Mens  NULL       PN1278  
- Socks, Mens  Blue       PN1965  
- NULL         White      PN9876
- ```  
-  
- 我們接著執行下列 COALESCE 查詢：  
+```  
+Name         Color      ProductNumber  
+------------ ---------- -------------  
+Socks, Mens  NULL       PN1278  
+Socks, Mens  Blue       PN1965  
+NULL         White      PN9876
+```  
+ 
+我們接著執行下列 COALESCE 查詢：  
   
 ```sql  
 SELECT Name, Color, ProductNumber, COALESCE(Color, ProductNumber) AS FirstNotNull   
 FROM Products ;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
- Name         Color      ProductNumber  FirstNotNull  
- ------------ ---------- -------------  ------------  
- Socks, Mens  NULL       PN1278         PN1278  
- Socks, Mens  Blue       PN1965         Blue  
- NULL         White      PN9876         White
- ```  
+```  
+Name         Color      ProductNumber  FirstNotNull  
+------------ ---------- -------------  ------------  
+Socks, Mens  NULL       PN1278         PN1278  
+Socks, Mens  Blue       PN1965         Blue  
+NULL         White      PN9876         White
+```  
   
- 請注意，在第一個資料列中，`FirstNotNull` 值是 `PN1278`，而非 `Socks, Mens`。 這是因為在範例中，未針對 `COALESCE` 將 `Name` 資料行指定為參數。  
+請注意，在第一個資料列中，`FirstNotNull` 值是 `PN1278`，而非 `Socks, Mens`。 這個值會這樣，是因為在範例中，未將 `Name` 資料行指定為 `COALESCE` 的參數。  
   
 ### <a name="d-complex-example"></a>D.複雜範例  
- 下列範例會使用 `COALESCE` 來比較三個資料行中的值，並且只傳回在資料行中找到的非 Null 值。  
+下列範例會使用 `COALESCE` 來比較三個資料行中的值，並且只傳回在資料行中找到的非 Null 值。  
   
 ```sql  
 CREATE TABLE dbo.wages  
@@ -278,27 +275,27 @@ FROM dbo.wages
 ORDER BY TotalSalary;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00
- ```  
+```
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00
+```  
   
 ## <a name="see-also"></a>另請參閱  
- [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
+[ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
+[CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

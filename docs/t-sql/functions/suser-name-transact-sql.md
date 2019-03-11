@@ -25,19 +25,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4642513fa6301ef8826562ff0141d8c13227f9c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b3de8ceac86cf0c08f1ff543c8d964a1960f615
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818436"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662632"
 ---
 # <a name="susername-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
-  傳回使用者的登入識別名稱。  
+傳回使用者的登入識別名稱。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,28 +47,28 @@ SUSER_NAME ( [ server_user_id ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- *server_user_id*  
- 這是使用者的登入識別碼。 *server_user_id* (選擇性) 為 **int**。*server_user_id* 可以是有連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之權限的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組。 若未指定 *server_user_id*，就會傳回目前使用者的登入識別名稱。 如果參數包含 NULL 一詞，就會傳回 NULL。  
+_server\_user\_id_  
+這是使用者的登入識別碼。 _server\_user\_id_ (選擇性) 為 **int**. _server\_user\_id_ 可以是有權連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組。 未指定 _server\_user\_id_ 時，就會傳回目前使用者的登入識別名稱。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，安全性識別碼 (SID) 取代了伺服器使用者識別碼 (SUID)。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中，安全性識別碼 (SID) 取代了伺服器使用者識別碼 (SUID)。  
   
- SUSER_NAME 只會傳回在 **syslogins** 系統資料表中有項目之登入的登入名稱。  
+SUSER_NAME 只會傳回在 **syslogins** 系統資料表中有項目之登入的登入名稱。  
   
- SUSER_NAME 可用在選取清單、WHERE 子句及任何允許使用運算式的位置中，且後面一律必須接著括號，即使未指定任何參數也是如此。  
+SUSER_NAME 可用於選取清單、WHERE 子句及任何允許使用運算式的位置。 請在 SUSER_NAME 之後使用括弧，即使未指定任何參數也一樣。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回登入識別碼是 `1` 之使用者的登入識別名稱。  
+下列範例會傳回登入識別碼是 `1` 之使用者的登入識別名稱。  
   
 ```  
 SELECT SUSER_NAME(1);  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
- [主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+[SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)   
+[主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

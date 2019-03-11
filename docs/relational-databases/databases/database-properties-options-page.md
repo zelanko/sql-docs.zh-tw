@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659367"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007591"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51659367"
 ## <a name="automatic"></a>Automatic  
  **自動關閉**  
  指定最後一個使用者結束後，資料庫是否正常關閉並釋出資源。 可能的值為 **True** 和 **False**。 若為 [True]，資料庫會正常關閉，並在最後一位使用者登出之後釋放其資源。  
-  
+
  **自動建立累加統計資料**  
  指定是否在每個分割區的統計資料建立時使用累加選項。 如需累加統計資料的資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659367"
  若為 [False]，初始化自動更新過期統計資料的查詢，則會等到可在查詢最佳化計畫中使用更新的統計資料。  
   
  除非 [自動更新統計資料] 也設定為 [True]，否則將這個選項設定為 [True] 時並不會有任何影響。  
+
+## <a name="azure"></a>Azure
+當連接到 Azure SQL Database 時，此區段會具有控制服務等級目標 (SLO) 的設定。 新資料庫的預設 SLO 為標準 S2。
+
+  **目前的服務等級目標** 要使用的特定 SLO。 有效值受限於選取的版本。 如果您想要的 SLO 值不在清單中，您可以鍵入值。
+
+  **版本**要使用的 Azure SQL Database 版本，例如基本或進階。 如果您需要的版本值不在清單中，您可以鍵入值，它必須符合 Azure REST API 中使用的值。
+  
+  **大小上限**資料庫的大小上限。 如果想要的大小值不在清單中，您可以鍵入值。 保留空白會使用指定版本和 SLO 的預設大小。
   
 ## <a name="containment"></a>Containment  
  在自主資料庫中，通常在伺服器層級設定的某些設定可在資料庫層級進行設定。  
@@ -123,7 +132,7 @@ ms.locfileid: "51659367"
  針對與選定資料庫相關的 FILESTREAM 資料指定目錄名稱。  
   
  **FILESTREAM 非交易存取**  
- 針對從檔案系統到 FileTable 中所儲存之 FILESTREAM 資料的非交易存取，指定下列其中一個選項： **OFF**、 **READ_ONLY**或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
+ 指定下列其中一個選項，可進行透過檔案系統到 FileTable 中所儲存 FILESTREAM 資料的非交易存取：**OFF**、**READ_ONLY** 或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>其他  
 **允許快照集隔離**  

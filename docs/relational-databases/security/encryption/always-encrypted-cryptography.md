@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401121"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007581"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52401121"
   本文件描述加密演算法和機制，以衍生在 [和](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 永遠加密 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]功能中使用的密碼編譯內容。  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>金鑰、金鑰存放區及金鑰加密演算法  
- 「永遠加密」會使用兩種類型的金鑰：資料行主要金鑰和資料行加密金鑰。  
+ Always Encrypted 使用兩種金鑰類型：資料行主要金鑰和資料行加密金鑰。  
   
  資料行主要金鑰 (CMK) 是以金鑰加密的金鑰 (也就是用來加密其他金鑰的金鑰)，其一律位於用戶端的控制項中，並儲存於外部金鑰存放區中。 已啟用「永遠加密」的用戶端驅動程式會透過 CMK 存放區提供者來與金鑰存放區互動，其可以是驅動程式庫 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/系統提供者) 的一部分或用戶端應用程式 (自訂提供者) 的一部分。 用戶端驅動程式庫目前包括適用於 [Windows 憑證存放區](/windows/desktop/SecCrypto/using-certificate-stores) 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 金鑰存放區提供者和硬體安全性模組 (HSM)   (如需目前的提供者清單，請參閱 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md))。應用程式開發人員可以針對任意存放區提供自訂提供者。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52401121"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用下列步驟，來計算指定純文字值的加密文字值。  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>步驟 1︰產生初始化向量 (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>步驟 1：產生初始化向量 (IV)  
  「永遠加密」支援 **AEAD_AES_256_CBC_HMAC_SHA_256**的兩種變化：  
   
 -   隨機化  
@@ -69,11 +69,11 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
 ```  
   
  執行 HMAC 值截斷，以符合 IV 所需的 1 個資料區塊。    
-因此，具決定性加密一律會針對指定的純文字值產生相同的加密文字，這樣就能藉由比較兩個純文字值的對應加密文字值，來推斷是否其相等。 這個有限度的資料洩漏，讓資料庫系統能夠支援已加密資料行值上的相等比較。  
+因此，具決定性加密一律會針對指定的純文字值產生相同加密文字，這樣就能藉由比較兩個純文字值的對應加密文字值，來推斷其是否相等。 這個有限度的資料洩漏，讓資料庫系統能夠支援已加密資料行值上的相等比較。  
   
  相較於替代項目，具決定性加密在隱藏模式中更具效率，例如使用預先定義的 IV 值。  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>步驟 2︰計算 AES_256_CBC 加密文字  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>步驟 2：計算 AES_256_CBC 加密文字  
  計算 IV 之後，即會產生 **AES_256_CBC** 加密文字︰  
   
 ```  
@@ -86,7 +86,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>步驟 3︰計算 MAC  
+### <a name="step-3-computing-mac"></a>步驟 3：計算 MAC  
  接著，使用下列演算法來計算 MAC︰  
   
 ```  
@@ -112,9 +112,9 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
   
 -   versionbyte：1  
   
--   MAC：32  
+-   MAC: 32  
   
--   IV：16  
+-   IV: 16  
   
 -   aes_256_cbc_ciphertext︰ `(FLOOR (DATALENGTH(cell_data)/ block_size) + 1)* block_size`，其中︰  
   

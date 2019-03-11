@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,16 +13,16 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6243f4b6fe34197e476c38dde9e2b4c717192944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686756"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017964"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -30,7 +30,48 @@ ms.locfileid: "47686756"
 
 修改現有外部套件程式庫的內容。
 
-## <a name="syntax"></a>語法
+> [!NOTE]
+> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 2.3 中，支援 R、Python 和 Windows 平台上的 Java。 預計在稍後的版本中將會支援 Linux。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 的語法
+
+```text
+ALTER EXTERNAL LIBRARY library_name
+[ AUTHORIZATION owner_name ]
+SET <file_spec>
+WITH ( LANGUAGE = <language> )
+[ ; ]
+
+<file_spec> ::=
+{
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
+}
+
+<client_library_specifier> :: =
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
+
+<library_bits> :: =
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 的語法
 
 ```text
 ALTER EXTERNAL LIBRARY library_name
@@ -41,18 +82,24 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=
 {
-(CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-[, PLATFORM = WINDOWS )
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
 }
 
 <client_library_specifier> :: =
-  '[\\computer_name\]share_name\[path\]manifest_file_name'
-| '[local_path\]manifest_file_name'
-| '<relative_path_in_external_data_source>'
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
 
 <library_bits> :: =
-{ varbinary_literal | varbinary_expression }
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>引數
 
@@ -86,9 +133,19 @@ WITH ( LANGUAGE = 'R' )
 
 指定程式庫內容的平台。 修改現有程式庫以加入不同平台時，需要此值。 Windows 是唯一支援的平台。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+指定套件的語言。 此值可以是 **R**、**Python**，或 **Java**。
+::: moniker-end
+
 ## <a name="remarks"></a>Remarks
 
 對於 R 語言，必須先針對 Windows，以具備 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 目前僅支援 Windows 平台。  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+針對 Python 語言，.whl 或 .zip 檔案套件必須以壓縮封存檔案的型式準備。 若套件已經是 .zip 檔案，它必須包含在新的 .zip 檔案中。 目前不支援直接上傳 .whl 或 .zip 檔案的套件。
+::: moniker-end
 
 `ALTER EXTERNAL LIBRARY` 陳述式只會將程式庫位元上傳至資料庫。 當使用者在 [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 中執行呼叫程式庫的程式碼時，就會安裝已修改的程式庫。
 
@@ -120,6 +177,9 @@ EXEC sp_execute_external_script
 ;
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
+::: moniker-end
 ### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. 使用位元組資料流改變現有程式庫
 
 下列範例會以十六進位常值傳遞新位元，藉以改變現有程式庫。
@@ -128,6 +188,10 @@ EXEC sp_execute_external_script
 ALTER EXTERNAL LIBRARY customLibrary 
 SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
+::: moniker-end
 
 > [!NOTE]
 > 此程式碼範例僅示範語法；`CONTENT =` 中的二進位值已被截斷以提高可讀性，且並不會建立可運作的程式庫。 二進位變數的實際內容會更長。

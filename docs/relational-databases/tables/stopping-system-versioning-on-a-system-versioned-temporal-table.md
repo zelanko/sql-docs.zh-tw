@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9ebd016ba06c24d742c099f346076111bd98751b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334515"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>停止系統版本設定時態表上的系統版本設定功能
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "52409158"
 -   為一般資料表的記錄資料表  
   
 ### <a name="important-remarks"></a>重要備註  
-  
--   當您設定  **SYSTEM_VERSIONING = OFF** 或捨棄 **SYSTEM_TIME** 週期時，不會遺失任何資料。  
+-   記錄資料表會在 **SYSTEM_VERSIONING = OFF** 的期間**停止**擷取更新。
+-   當您設定  **SYSTEM_VERSIONING = OFF** 或卸除 **SYSTEM_TIME** 期間時，**時態表**上不會遺失任何資料。
   
 -   若您設定 **SYSTEM_VERSIONING = OFF** 但沒有捨棄 **SYSTEM_TIME** 週期，系統將就會繼續為每個插入和更新作業更新週期資料行。 目前資料表上的刪除作業都是永久性的。  
   
@@ -64,7 +64,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   將 **SWITCH IN** 資料分割至歷程記錄資料表  
   
- 此範例會暫時停止 SYSTEM_VERSIONING 以讓您執行特定維護作業。 如果暫時停止版本設定是進行資料表維護的必要條件，強烈建議您在交易內執行此動作以保持資料一致性。  
+ 此範例會暫時停止 SYSTEM_VERSIONING 以讓您執行特定維護作業。 如果暫時停止版本設定是進行資料表維護的必要條件，強烈建議您在交易內執行此動作以保持資料一致性。
+ 
+> [!NOTE]  
+>  當重新開啟系統版本控制時，請不要忘記指定 HISTORY_TABLE 引數。  若沒有執行此動作，將會建立新的記錄資料表，並與目前的資料表建立關聯。  原始記錄資料表仍會作為一般的資料表存在，但不會與目前的資料表建立關聯。  
   
 ```  
 BEGIN TRAN   

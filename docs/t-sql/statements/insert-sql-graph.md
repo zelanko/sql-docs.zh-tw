@@ -18,27 +18,27 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0a22547436f8a511a5a61db35ec99a919d84e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644026"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852863"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  將一或多個資料列新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `node` 或 `edge` 資料表。 
+將一或多個資料列新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `node` 或 `edge` 資料表。 
 
 > [!NOTE]   
 >  如需標準 Transact-SQL 陳述式，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)。
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>插入節點資料表語法 
 插入節點資料表的語法與一般資料表相同。 
 
-```  
+```sql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -102,19 +102,19 @@ INSERT
   
  
 ## <a name="arguments"></a>引數  
- 本文件僅描述與 SQL Graph 有關的參數。 如需 INSERT 陳述式支援之引數的完整清單和描述，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+本文件描述與 SQL Graph 相關的參數。 如需 INSERT 陳述式支援之引數的完整清單和描述，請參閱 [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
- INTO  
- 這是一個選擇性關鍵字，您可以在 `INSERT` 和目標資料表之間使用它。  
+INTO  
+這是一個選擇性關鍵字，您可以在 `INSERT` 和目標資料表之間使用它。  
   
- *search_condition_with_match*   
- `MATCH` 子句在插入節點或邊緣資料表時，可以用於子查詢。 針對 `MATCH` 陳述式語法，請參閱 [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
+*search_condition_with_match*   
+`MATCH` 子句在插入節點或邊緣資料表時，可以用於子查詢。 針對 `MATCH` 陳述式語法，請參閱 [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
- *graph_search_pattern*   
- 提供給 `MATCH` 子句的搜尋模式，作為圖表述詞的一部分。
+*graph_search_pattern*   
+提供給 `MATCH` 子句的搜尋模式，作為圖表述詞的一部分。
 
- *edge_table_column_list*   
- 插入至邊緣時，使用者必須提供 `$from_id` 和 `$to_id` 的值。 如果未提供值或 NULL 插入這些資料行，則會傳回錯誤。 
+*edge_table_column_list*   
+插入至邊緣時，使用者必須提供 `$from_id` 和 `$to_id` 的值。 如果未提供值或 NULL 插入這些資料行，則會傳回錯誤。 
   
 
 ## <a name="remarks"></a>Remarks  
@@ -128,42 +128,42 @@ INSERT
 
   
 ### <a name="permissions"></a>[權限]  
- 需要目標資料表的 INSERT 權限。  
+需要目標資料表的 INSERT 權限。  
   
- INSERT 權限預設會授與 **sysadmin** 固定伺服器角色、**db_owner** 和 **db_datawriter** 固定資料庫角色的成員，以及資料表擁有者。 **sysadmin**、**db_owner** 和 **db_securityadmin** 角色的成員，以及資料表擁有者，可以將權限轉讓給其他使用者。  
+INSERT 權限預設會授與 **sysadmin** 固定伺服器角色、**db_owner** 和 **db_datawriter** 固定資料庫角色的成員，以及資料表擁有者。 **sysadmin**、**db_owner** 和 **db_securityadmin** 角色的成員，以及資料表擁有者，可以將權限轉讓給其他使用者。  
   
- 若要搭配使用 OPENROWSET 函式與 BULK 選項來執行 INSERT，您必須是 **sysadmin** 固定伺服器角色或 **bulkadmin** 固定伺服器角色的成員。  
+若要搭配使用 OPENROWSET 函式與 BULK 選項來執行 INSERT，您必須是 **sysadmin** 固定伺服器角色或 **bulkadmin** 固定伺服器角色的成員。  
   
 
 ## <a name="examples"></a>範例  
   
 #### <a name="a--insert-into-node-table"></a>A.  插入至節點資料表  
- 下列範例會建立 Person 節點資料表並且插入 2 個資料列。
+下列範例會建立 Person 節點資料表並插入二個資料列。
 
- ```
- -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+```sql
+-- Create person node table
+CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
  
- -- Insert records for Alice and John
- INSERT INTO dbo.Person VALUES (1, 'Alice');
- INSERT INTO dbo.Person VALUES (2,'John');
- ```
+-- Insert records for Alice and John
+INSERT INTO dbo.Person VALUES (1, 'Alice');
+INSERT INTO dbo.Person VALUES (2,'John');
+```
   
 #### <a name="b--insert-into-edge-table"></a>B.  插入至邊緣資料表  
- 下列範例會建立一個朋友邊緣資料表並將插入一個邊緣。
+下列範例會建立一個朋友邊緣資料表並將插入一個邊緣。
 
- ```
- -- Create friend edge table
- CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
+```sql
+-- Create friend edge table
+CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
- -- Create a friend edge, that connect Alice and John
- INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
+-- Create a friend edge, that connect Alice and John
+INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
- ```
+```
 
   
 ## <a name="see-also"></a>另請參閱  
- [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [圖形處理與 SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+[INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[圖形處理與 SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

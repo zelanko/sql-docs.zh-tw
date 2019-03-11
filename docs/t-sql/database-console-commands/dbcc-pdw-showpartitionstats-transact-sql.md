@@ -12,19 +12,19 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4417dcd94c3dd24e22805f713901c5ddfbf6b727
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 50f6d68034ce6575c765b80c6fb1a658baba6d0a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035019"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802962"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 顯示 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 或 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 資料庫的資料表中每個分割區的資料列大小和數目。
   
-![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![文章連結圖示](../../database-engine/configure-windows/media/topic-link.gif "文章連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>語法  
   
@@ -42,16 +42,16 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 需要 **VIEW SERVER STATE** 權限。
   
 ## <a name="result-sets"></a>結果集  
-這是 DBCC PDW_SHOWPARTITIONSTATS 命令的結果。
+此集合為 DBCC PDW_SHOWPARTITIONSTATS 命令的結果。
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |partition_number|ssNoversion|資料分割編號。|  
 |used_page_count|BIGINT|資料的使用頁數。|  
-|reserved_page_count|BIGINT|配置給分割區的頁數。|  
+|reserved_page_count|BIGINT|分割區的保留頁數。|  
 |row_count|BIGINT|分割區中的資料列數。|  
 |pdw_node_id|ssNoversion|資料的計算節點。|  
-|distribution_id|ssNoversion|資料的分佈識別碼。|  
+|distribution_id|ssNoversion|資料的散發識別碼。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS 基本語法範例  
@@ -65,4 +65,4 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ## <a name="see-also"></a>另請參閱
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
-  
+ 

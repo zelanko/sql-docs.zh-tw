@@ -1,7 +1,7 @@
 ---
 title: 查詢處理架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591882"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802404"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,6 @@ ms.locfileid: "53591882"
 處理單一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行 SQL 陳述式最基本的方法。 用於處理僅參考本機基底資料表 (非檢視表或遠端資料表) 之單一 `SELECT` 陳述式的步驟可說明這個基本程序。
 
 ### <a name="logical-operator-precedence"></a>邏輯運算子優先順序
-
 當陳述式中使用一個以上的邏輯運算子，`NOT` 會第一個計算，接下來是 `AND`，最後才是 `OR`。 先處理算術以及位元運算子，接著才處理邏輯運算子。 如需詳細資訊，請參閱[運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)。
 
 在下列範例中，色彩條件與產品型號 21 相關，但不與產品型號 20 相關，原因是 `AND` 的優先順序高於 `OR`。
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>最佳化 SELECT 陳述式
-
 `SELECT` 陳述式為非程序性，它無法敘述資料庫伺服器應用來擷取所需資料的正確步驟。 這是表示資料庫伺服器應該先分析陳述式，才能判斷出取得所需資料的最有效方式。 這稱為將 `SELECT` 陳述式最佳化。 執行此動作的元件稱為查詢最佳化工具。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計畫或只是計畫。 在本主題稍後將更詳盡地描述查詢計畫的內容。
 
 下圖說明在單一 `SELECT` 陳述式最佳化期間，查詢最佳化工具的輸入與輸出：
@@ -126,7 +124,6 @@ GO
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具非常重要，因為它可以讓資料庫伺服器隨著資料庫中的狀況變更來進行動態調整，而不需要由程式設計人員或資料庫管理員來輸入。 這樣程式設計師便不用將焦點集中在描述查詢的最後結果。 他們可以相信每次執行陳述式時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將依資料庫的狀態建立最有效率的執行計畫。
 
 ### <a name="processing-a-select-statement"></a>處理 SELECT 陳述式
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理單一 SELECT 陳述式所使用的基本步驟如下： 
 
 1. 剖析器會掃描 `SELECT` 陳述式，並將其分成數個邏輯單位，例如關鍵字、運算式、運算子和識別碼。
@@ -135,18 +132,97 @@ GO
 4. 關聯式引擎開始執行執行計畫。 當在處理需要基底資料表中資料的步驟時，關聯式引擎會要求儲存引擎，從取自關聯式引擎的資料列集中傳回資料。
 5. 關聯式引擎處理從儲存引擎傳回的資料，並將其設定成結果集所定義的格式，然後將結果集傳回給用戶端。
 
-### <a name="processing-other-statements"></a>處理其他的陳述式
+### <a name="ConstantFolding"></a> 常數摺疊和運算式評估 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在早期評估某些常數運算式，以改進查詢效能。 這個作業稱為常數摺疊 (Constant Folding)。 常數是 [!INCLUDE[tsql](../includes/tsql-md.md)] 常值，例如 3、'ABC'、'2005-12-31'、1.0e3 或 0x12345678。
 
-這裡描述來用以處理 `SELECT` 陳述式的基本步驟適用於其他 SQL 陳述式，例如 `INSERT`、 `UPDATE`及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT 陳述式，其可提供要更新或插入的資料值。
+#### <a name="foldable-expressions"></a>可摺疊運算式
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在下列運算式類型中使用常數摺疊：
+- 只包含常數的算術運算式，例如 1+1, 5/3*2。
+- 只包含常數的邏輯運算式，例如 1=1 和 1>2 AND 3>4。
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 視為可摺疊的內建函式，包括 `CAST` 和 `CONVERT`。 如果內建函數只包含其輸入，並且不含其他內容資訊 (例如 SET 選項、語言設定、資料庫選項和加密金鑰) 時，此內建函數通常是可摺疊。 非決定性函數不可摺疊。 決定性內建函數可摺疊，但有一些例外。
+
+> [!NOTE] 
+> 例外之一是大型物件類型。 如果摺疊程序的輸出類型是大型物件類型 (text、image、nvarchar(max)、varchar(max) 或 varbinary(max))，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊此運算式。
+
+#### <a name="nonfoldable-expressions"></a>不可摺疊運算式
+所有其他運算式類型都不可摺疊， 尤其是下列運算式類型不可折疊：
+- 非常數運算式，例如結果相依於資料行值的運算式。
+- 結果相依於本機變數或參數 (例如 @x) 的運算式。
+- 非決定性函數。
+- 使用者自訂函數 ([!INCLUDE[tsql](../includes/tsql-md.md)] 和 CLR 這兩者)。
+- 結果相依於語言設定的運算式。
+- 結果相依於 SET 選項的運算式。
+- 結果相依於伺服器組態選項的運算式。
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>可摺疊和不可摺疊常數運算式的範例
+請考慮以下查詢：
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+如果這個查詢的 `PARAMETERIZATION` 資料庫選項不是設為 `FORCED`，則會評估運算式 `117.00 + 1000.00` 並替換成其結果 `1117.00`，再編譯查詢。 這項常數摺疊作業的好處包含下列幾點：
+- 執行階段不必重複評估運算式。
+- 查詢最佳化工具可使用評估後的運算式值，來估計 `TotalDue > 117.00 + 1000.00` 查詢部分的結果集大小。
+
+另一方面，如果 `dbo.f` 是純量使用者定義函數，則運算式 `dbo.f(100)` 不可摺疊，因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會摺疊含有使用者定義函數的運算式，即使它們是決定性函數也是如此。 如需參數化的詳細資訊，請參閱本文後面的[強制參數化](#ForcedParam)。
+
+#### <a name="ExpressionEval"></a>運算式評估 
+此外，在最佳化期間，結果集大小 (基數) 估計工具 (此為最佳化工具的一部份) 會評估部份運算式，這些運算式不是常數摺疊，但在編譯時間其引數為已知 (不論引數是參數或常數)。
+
+特別是在編譯時間會評估下列這些內建函式和特殊運算子，如果其所有輸入皆為已知：`UPPER`、`LOWER`、`RTRIM`、`DATEPART( YY only )`、`GETDATE`、`CAST` 和 `CONVERT`。 下列運算子的所有輸入若為已知，在編譯時間也會加以評估：
+- 算術運算子：+、-、\*、/、一元減號 -
+- 邏輯運算子：`AND`、`OR`、`NOT`
+- 比較運算子：<、>、<=、>=、<>、`LIKE`、`IS NULL`、`IS NOT NULL`
+
+在基數估計期間，查詢最佳化工具不會評估任何其他函式或運算子。
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>編譯時間運算式評估的範例
+請看此段預存程序：
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+在此程序的 `SELECT` 陳述式最佳化期間，查詢最佳化工具會嘗試評估條件 `OrderDate > @d+1` 之結果集的預期基數。 運算式 `@d+1` 不是常數摺疊，因為 `@d` 是參數。 然而，在最佳化時間內，此參數的值為已知。 這可讓查詢最佳化工具正確估計結果集的大小，協助它選取良好的查詢計劃。
+
+現在看另一個類似範例，但在查詢中以本機變數 `@d2` 取代上一個範例中的 `@d+1`，並改為在 SET 陳述式 (而不是查詢) 中評估運算式。
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 最佳化 *MyProc2* 中的 `SELECT` 陳述式時，`@d2` 的值未知。 因此，查詢最佳化工具會針對 `OrderDate > @d2` 的選擇性，使用預設估計值 (本例中為 30%)。
+
+### <a name="processing-other-statements"></a>處理其他的陳述式
+這裡描述來用以處理 `SELECT` 陳述式的基本步驟適用於其他 SQL 陳述式，例如 `INSERT`、 `UPDATE`及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT` 陳述式，其可提供要更新或插入的資料值。
 
 即使資料定義語言 (DDL) 陳述式 (例如 `CREATE PROCEDURE` 或 `ALTER TABLE`) 最後會解析為系統目錄資料表上一連串的關聯式作業，但有時還是會根據資料表來解析 (例如 `ALTER TABLE ADD COLUMN`)。
 
 ### <a name="worktables"></a>工作資料表
-
 關聯式引擎在執行 SQL 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表會建立在 tempdb 中，並且在不需再使用時自動卸除。
 
 ### <a name="view-resolution"></a>檢視解析
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器對待索引及非索引檢視的方式不同： 
 
 * 索引檢視的資料列是儲存在資料表庫中，並使用與資料表相同的格式。 如果查詢最佳化工具決定使用查詢計畫中的索引檢視，將以處理基底資料表的相同方式來處理索引檢視。
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 的執行程序表功能顯示關聯式引擎為這兩個 `SELECT` 陳述式建立相同的執行計畫。
 
 ### <a name="using-hints-with-views"></a>使用檢視的提示
-
 在查詢中檢視所放置的提示可能與在擴充檢視以存取基底資料表時所發現的其他提示衝突。 當這種情況發生時，查詢會傳回錯誤： 例如，請考慮下列在其定義中包含資料表提示的檢視：
 
 ```sql
@@ -455,7 +530,7 @@ WHERE ProductSubcategoryID = 4;
 
 利用參數將 SQL 陳述式中的常數分離出來，可以幫助關聯式引擎識別重複的計畫。 您可以使用以下方式來使用參數： 
 
-* 在 Transact-SQL 中，使用 `sp_executesql`： 
+* 在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中使用 `sp_executesql`： 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ WHERE ProductSubcategoryID = 4;
      @MyIntParm
    ```
 
-   建議針對 Transact-SQL 指令碼、預存程序或動態產生 SQL 陳述式的觸發程序使用此方法。 
+   此方法適用於 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼、預存程序或動態產生 SQL 陳述式的觸發程序。 
 
 * ADO、OLE DB、和 ODBC 使用參數標記。 參數標記是取代 SQL 陳述式中常數的問號 (?)，這些標記將繫結至程式變數。 例如，您可以在 ODBC 應用程式中執行下列動作： 
 

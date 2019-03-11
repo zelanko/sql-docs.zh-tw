@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2da642b1b380e45ffdde2ac48bd37764a12b2dd
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a1bb91e4b5429e6b101d6cdb0ffa73c9953ab198
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980424"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955739"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函數會計算值群組中，某值的累加分配。 換言之，`CUME_DIST` 會計算值群組中，某一指定值的相對位置。 假設採取遞增排序，則資料列 *r* 中，某值的 `CUME_DIST` 是定義為有多少個資料列的值是小於或等於資料列 *r* 中的值，除以資料分割或查詢結果集中計算得出的資料列數。 `CUME_DIST` 類似於 `PERCENT_RANK` 函數。
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此函數會計算值群組中，某值的累加分配。 換言之，`CUME_DIST` 會計算值群組中，某一指定值的相對位置。 假設採取遞增排序，則資料列 _r_ 中，某值的 `CUME_DIST` 是定義為有多少個資料列的值是小於或等於資料列 _r_ 中的值，除以資料分割或查詢結果集中計算得出的資料列數。 `CUME_DIST` 類似於 `PERCENT_RANK` 函數。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,9 +43,9 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>引數  
-OVER **(** [ *partition_by_clause* ] *order_by_clause*)  
+OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-*partition_by_clause* 會將 FROM 子句的結果集分割成函數所要套用的資料分割。 如未指定 *partition_by_clause* 引數，則 `CUME_DIST` 會將所有查詢結果集資料列視為單一群組。 *order_by_clause* 會決定作業的執行邏輯順序。 `CUME_DIST` 需要 *order_by_clause*。 `CUME_DIST` 將不會接受 OVER 語法的 \<資料列或範圍子句>。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
+_partition\_by\_clause_ 會將 FROM 子句結果集分割成函式所要套用的資料分割。 如未指定 _partition\_by\_clause_ 引數，則 `CUME_DIST` 會將所有查詢結果集資料列視為單一群組。 _order\_by\_clause_ 會決定作業的執行邏輯順序。 `CUME_DIST` 需要 _order\_by\_clause_。 `CUME_DIST` 將不會接受 OVER 語法的 \<資料列或範圍子句>。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
   
 ## <a name="return-types"></a>傳回類型
 **float(53)**
@@ -53,10 +53,10 @@ OVER **(** [ *partition_by_clause* ] *order_by_clause*)
 ## <a name="remarks"></a>Remarks  
 `CUME_DIST` 傳回某一範圍的值，且這些值大於 0 且小於或等於 1。 繫結值的計算所得一律會是相同的累計分佈值。 `CUME_DIST` 預設會包含 NULL 值，並將其視為最低值。
   
-`CUME_DIST` 不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+`CUME_DIST` 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
-此範例使用 `CUME_DIST` 函數來計算指定部門各員工的薪資百分位數。 `CUME_DIST` 會傳回一個值，它代表有多少百分比的員工，其薪資要比同部門當前的員工要來得低或持平。 `PERCENT_RANK` 函數會計算該員工薪資在部門中的排名百分比。 為了按部門分割結果集資料列，此範例會指定 *partition_by_clause* 值。 OVER 子句中的 ORDER BY 子句會將每個資料分割中的資料列，以邏輯方式排序。 SELECT 陳述式的 ORDER BY 子句會決定結果集的顯示排序。
+此範例使用 `CUME_DIST` 函數來計算指定部門各員工的薪資百分位數。 `CUME_DIST` 會傳回一個值，它代表有多少百分比的員工，其薪資要比同部門當前的員工要來得低或持平。 `PERCENT_RANK` 函數會計算該員工薪資在部門中的排名百分比。 為了按部門分割結果集資料列，此範例會指定 _partition\_by\_clause_ 值。 OVER 子句中的 ORDER BY 子句會將每個資料分割中的資料列，以邏輯方式排序。 SELECT 陳述式的 ORDER BY 子句會決定結果集的顯示排序。
   
 ```sql
 USE AdventureWorks2012;  

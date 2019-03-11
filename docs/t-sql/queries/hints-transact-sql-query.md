@@ -1,8 +1,8 @@
 ---
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/04/2019
-ms.prod: sqll
+ms.date: 02/21/2019
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -53,15 +53,15 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1d5dc400cde1ded385d3050a6d6dc120cf430fbb
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265375"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334795"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,6 +289,12 @@ ROBUST PLAN
    此提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 平行。
 *  'DISABLE_PARAMETER_SNIFFING'      
    指示查詢最佳化工具在編譯有一或多個參數的查詢時使用平均資料分佈。 這個指令會讓查詢計畫與查詢在編譯時一開始使用的參數值無關。 此提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF 設定平行。
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  停用資料列模式記憶體授與意見反應。 如需詳細資訊，請參閱[資料列模式記憶體授與意見反應](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback)。
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  停用純量 UDF 內嵌。 如需詳細資訊，請參閱[純量 UDF 內嵌](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)。
+* 'DISALLOW_BATCH_MODE'    
+  停用批次模式執行。 如需詳細資訊，請參閱[執行模式](../../relational-databases/query-processing-architecture-guide.md#execution-modes)。
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    為需要基數估計的任何開頭索引資料行，啟用自動產生的快速統計資料 (長條圖修正)。 在查詢編譯時會調整用來預估基數的長條圖，以計算此資料行的實際最大值或最小值。 此提示名稱與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 平行。 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     

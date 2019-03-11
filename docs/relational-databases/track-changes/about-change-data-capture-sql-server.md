@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991871"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590483"
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53991871"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>了解異動資料擷取和擷取執行個體  
  您必須先針對資料庫明確啟用異動資料擷取，然後才能追蹤該資料庫內部任何個別資料表的變更。 這項作業是使用 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)預存程序完成的。 啟用資料庫之後，您就可以使用 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)預存程序，將來源資料表識別為追蹤資料表。 當某個資料表啟用異動資料擷取時，系統就會建立相關聯的擷取執行個體，以便支援來源資料表中變更資料的散播。 此擷取執行個體包含一個變更資料表以及最多兩個查詢函數。 描述擷取執行個體之組態詳細資料的中繼資料會包含在變更資料擷取中繼資料資料表 **cdc.change_tables**、 **cdc.index_columns**和 **cdc.captured_columns**中。 您可以使用 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)預存程序來擷取這項資訊。  
   
- 與擷取執行個體相關聯的所有物件都會建立在啟用資料庫的異動資料擷取結構描述中。 擷取執行個體名稱的需求包括，它必須是有效的物件名稱，而且它在資料庫擷取執行個體中必須是唯一的。 預設名稱為來源資料表的 \<結構描述名稱_資料表名稱>。 其相關聯變更資料表的命名方式是將 **_CT** 附加至擷取執行個體名稱。 用來查詢所有變更之函數的命名方式是在擷取執行個體名稱前面加上 **fn_cdc_get_all_changes_**。 如果擷取執行個體設定為支援 **net changes**，系統也會建立 **net_changes** 查詢函數，而且其命名方式是在擷取執行個體名稱前面加上 **fn_cdc_get_net_changes\_**。  
+ 與擷取執行個體相關聯的所有物件都會建立在啟用資料庫的異動資料擷取結構描述中。 擷取執行個體名稱的需求包括，它必須是有效的物件名稱，而且它在資料庫擷取執行個體中必須是唯一的。 預設名稱為來源資料表的 \<結構描述名稱\_資料表名稱>。 其相關聯變更資料表的命名方式是將 **_CT** 附加至擷取執行個體名稱。 用來查詢所有變更之函數的命名方式是在擷取執行個體名稱前面加上 **fn_cdc_get_all_changes_**。 如果擷取執行個體設定為支援 **net changes**，系統也會建立 **net_changes** 查詢函數，而且其命名方式是在擷取執行個體名稱前面加上 **fn_cdc_get_net_changes\_**。  
   
 ## <a name="change-table"></a>變更資料表  
  異動資料擷取變更資料表的前五個資料行是中繼資料行。 這些資料行會提供與已記錄之變更相關的額外資訊。 其餘資料行則會鏡像來源資料表中識別之擷取資料行的名稱，通常也會鏡像其類型。 這些資料行會保存從來源資料表中蒐集的擷取資料行資料。  

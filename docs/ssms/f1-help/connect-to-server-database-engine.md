@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202807"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828128"
 ---
 # <a name="connect-to-server-database-engine"></a>連接到伺服器 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53202807"
   
 > [!NOTE]  
 > 若要連線至 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 的使用中使用者執行個體，請使用指定管道名稱的具名管道通訊協定 (例如 `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`) 來連線。 如需詳細資訊，請參閱 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 文件。  
-  
+> [!NOTE]  
+> 連線通常會保存在「最近使用 (MRU)」歷程記錄中。 若要從 MRU 移除項目，只需按一下 [伺服器名稱] 下拉式方塊、選取要移除的伺服器名稱，然後按 **DEL** 鍵即可。  
+   
 **驗證**  
 SSMS 目前的版本提供五種驗證模式，可在連線至 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 的執行個體時使用。 如果您的 [驗證] 對話方塊與下列清單不相符，請至[下載 SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md) 下載最新版本的 SSMS。  
 

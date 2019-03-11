@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991821"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590403"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53991821"
   
 2.  在新的主體資料庫上建立擷取作業和清除作業 (之前的鏡像資料庫)。 若要建立這些作業，請使用 [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) 預存程序。  
   
- 若要檢視清除或擷取作業的目前組態，請在新的主體伺服器執行個體上使用 [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) 預存程序。 對於指定的資料庫而言，擷取作業會命名為 cdc.*database_name*_capture，而清除作業會命名為 cdc.*database_name*_cleanup，其中 *database_name* 是資料庫的名稱。  
+ 若要檢視清除或擷取作業的目前組態，請在新的主體伺服器執行個體上使用 [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) 預存程序。 對於指定的資料庫而言，擷取作業會命名為 cdc.*database\_name*\_capture，而清除作業會命名為 cdc.*database\_name*\_cleanup，其中 *database_name* 是資料庫的名稱。  
   
  若要變更作業的組態，請使用 [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) 預存程序。  
   

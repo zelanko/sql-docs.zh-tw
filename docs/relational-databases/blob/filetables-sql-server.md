@@ -16,12 +16,12 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178d926dbcbfc6e599a57207369bf61e603468a9
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598283"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828448"
 ---
 # <a name="filetables-sql-server"></a>FileTable (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +83,8 @@ ms.locfileid: "47598283"
 -   Windows API 作業的本質為非交易式，而且並未與使用者交易相關聯。 不過，系統完全支援儲存在 FileTable 中之 FILESTREAM 資料的交易式存取，就如同一般資料表中的任何 FILESTREAM 資料行。  
   
 -   FileTable 也可以透過一般 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存取進行查詢和更新。 它們也會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具和備份等功能整合。  
+
+-   您無法透過 dbmail 傳送電子郵件要求，且無法附加位於 Filestream 目錄的檔案 (也因此無法附加位於 FileTable 的檔案)。 檔案系統篩選驅動程式 RsFx0420 會檢查進入和離開 Filestream 資料夾的傳入 I/O 要求。 若要求並非來自 SQLServer 可執行檔及 Filesteam 程式碼，它們會明確遭到拒絕。
   
 ##  <a name="additional"></a> 使用 FileTable 的額外考量  
   

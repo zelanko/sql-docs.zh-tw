@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030997"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802255"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "56030997"
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|不適用|  
 |日期範圍|1900-01-01 到 2079-06-06<br /><br /> 1900 年 1 月 1 日到 2079 年 6 月 6 日|  
 |時間範圍|00:00:00 到 23:59:59<br /><br /> 2007-05-09 23:59:59 會四捨五入為<br /><br /> 2007-05-10 00:00:00|  
-|元素範圍|YYYY 是代表年份的四位數，範圍介於 1900 至 2079 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 00 至 59 之間。 29.998 秒或以下的值會向下捨入到最接近的分鐘，而 29.999 秒或以上的值會向上捨入到最接近的分鐘。|  
+|元素範圍|YYYY 是代表年份的四位數，範圍介於 1900 至 2079 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數，範圍介於 00 至 59 之間。 29.998 秒或以下值會無條件捨去到最接近的分鐘。 29.999 秒或以上值會無條件進位到最接近的分鐘。|  
 |字元長度|19 個位置上限|  
 |儲存體大小|4 個位元組 (固定)。|  
 |精確度|一分鐘|  
@@ -58,7 +58,7 @@ ms.locfileid: "56030997"
 |日光節約感知|否|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 和 ISO 8601 標準  
-**smalldatetime**不符合 ANSI 或 ISO 8601 標準。
+**smalldatetime** 不符合 ANSI 或 ISO 8601 標準。
   
 ## <a name="converting-date-and-time-data"></a>轉換日期和時間資料
 當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需搭配日期和時間資料使用 CAST 及 CONVERT 函數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
@@ -66,7 +66,7 @@ ms.locfileid: "56030997"
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>將 smalldatetime 轉換成其他日期與時間類型
 本節描述當 **smalldatetime** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
   
-當轉換成 **date** 時，年、月和日都會複製。 下列程式碼顯示將 `smalldatetime` 值轉換成 `date` 值的結果。
+如果轉換成 **date**，年、月和日都會複製。 下列程式碼顯示將 `smalldatetime` 值轉換成 `date` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -114,7 +114,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-當轉換成 **datetimeoffset(n)** 時，**smalldatetime** 值會複製到 **datetimeoffset(n)** 值。 小數秒數會設定為 0，而時區時差會設定為 +00:0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetimeoffset(4)` 值的結果。
+如果轉換成 **datetimeoffset(n)**，**smalldatetime** 值會複製到 **datetimeoffset(n)** 值。 小數秒數會設定為 0，而時區時差會設定為 +00:0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetimeoffset(4)` 值的結果。
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -191,5 +191,4 @@ SELECT
   
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

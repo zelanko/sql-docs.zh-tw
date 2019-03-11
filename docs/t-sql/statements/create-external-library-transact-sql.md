@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -15,48 +15,93 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205157"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017884"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-將 R 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員上傳 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 所支援之任何新外部語言執行階段 (目前只有 R) 和 OS 平台所需的成品。 
+將 R、Python 或 Java 套件檔案從指定的位元組資料流或檔案路徑上傳到資料庫。 此陳述式可作為一般機制，供資料庫管理員針對 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支援的任何新外部語言執行階段和 OS 平台，上傳所需的成品。 
 
-在 SQL Server 2017 和更新版本中，支援 R 語言和 Windows 平台。 預計在稍後的版本中將會支援 Python 和 Linux。
+> [!NOTE]
+> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 2.3 中，支援 R、Python 和 Windows 平台上的 Java。 預計在稍後的版本中將會支援 Linux。
 
-## <a name="syntax"></a>語法
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019 的語法
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
-    [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,...2]  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = <language> )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
+}  
+
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017 的語法
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 
 <file_spec> ::=  
 {  
-(CONTENT = { <client_library_specifier> | <library_bits> }  
-[, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
 }  
 
-<client_library_specifier> :: =  
-  '[\\computer_name\]share_name\[path\]manifest_file_name'  
-| '[local_path\]manifest_file_name'  
-| '<relative_path_in_external_data_source>'  
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
 
 <library_bits> :: =  
-{ varbinary_literal | varbinary_expression }  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>引數
 
@@ -64,7 +109,7 @@ WITH ( LANGUAGE = 'R' )
 
 程式庫會新增至使用者的資料庫範圍。 程式庫名稱在特定使用者或擁有者的內容中必須是唯一的。 例如，兩個使用者 **RUser1** 和 **RUser2** 都可以各自且分別上傳 R 程式庫 `ggplot2`。 不過，如果 **RUser1** 想要上傳 `ggplot2` 的新版本，則第二個執行個體必須有不同名稱，否則會取代現有的程式庫。 
 
-不可任意指派程式庫名稱；程式庫名稱應該與從 R 載入 程式庫時所需的名稱相同。
+不可任意指派程式庫名稱；程式庫名稱應該與在外部指令碼載入程式庫時所需的名稱相同。
 
 **owner_name**
 
@@ -72,7 +117,7 @@ WITH ( LANGUAGE = 'R' )
 
 資料庫擁有者所擁有的程式庫會被視為資料庫和執行階段的全域程式庫。 換句話說，資料庫擁有者所建立的程式庫可以包含許多使用者所共用的一組通用程式庫或套件。 當外部程式庫是由 `dbo` 使用者以外的使用者所建立時，該外部程式庫僅是該使用者的私用程式庫。
 
-當使用者 **RUser1** 執行 R 指令碼時，`libPath` 的值可能包含多個路徑。 第一個路徑一律是資料庫擁有者所建立之共用程式庫的路徑。 `libPath` 的第二個部分會指定包含 **RUser1** 個別上傳之套件的路徑。
+當使用者 **RUser1** 執行外部指令碼時，`libPath` 的值可能包含多個路徑。 第一個路徑一律是資料庫擁有者所建立之共用程式庫的路徑。 `libPath` 的第二個部分會指定包含 **RUser1** 個別上傳之套件的路徑。
 
 **file_spec**
 
@@ -94,9 +139,19 @@ WITH ( LANGUAGE = 'R' )
 
 Windows 是目前唯一支援的平台。
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+指定套件的語言。 值可以是 `R`、`Python` 或 `Java`。
+::: moniker-end
+
 ## <a name="remarks"></a>Remarks
 
 針對 R 語言，當使用檔案時，必須針對 Windows，以具有 .ZIP 副檔名的 ZIP 壓縮封存檔案形式備妥套件。 目前僅支援 Windows 平台。 
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+針對 Python 語言，.whl 或 .zip 檔案套件必須以壓縮封存檔案的型式準備。 若套件已經是 .zip 檔案，它必須包含在新的 .zip 檔案中。 目前不支援直接上傳 .whl 或 .zip 檔案的套件。
+::: moniker-end
 
 `CREATE EXTERNAL LIBRARY` 陳述式會將程式庫位元上傳至資料庫。 當使用者使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)來執行外部指令碼並呼叫套件或程式庫時，就會安裝程式庫。
 
@@ -126,6 +181,10 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
+::: moniker-end
 
 ### <a name="b-installing-packages-with-dependencies"></a>B. 安裝具有相依性的套件
 
@@ -173,9 +232,12 @@ EXEC sp_execute_external_script
     @script=N'
     # load the desired package packageA
     library(packageA)
-    print(packageVersion("packageA"))
     '
     ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 `'R'` 替換成 `'Python'` 即可正常運作。
+::: moniker-end
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. 從位元組資料流建立程式庫
 
@@ -185,6 +247,10 @@ EXEC sp_execute_external_script
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+針對 SQL Server 2019 中的 Python 語言，只需要將範例中的 **'R'** 替換成 **'Python'** 即可正常運作。
+::: moniker-end
+
 > [!NOTE]
 > 此程式碼範例僅示範語法；`CONTENT =` 中的二進位值已被截斷以提高可讀性，且並不會建立可運作的程式庫。 二進位變數的實際內容會更長。
 
@@ -193,6 +259,28 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 `ALTER EXTERNAL LIBRARY` DDL 陳述式可用來新增程式庫內容，或修改現有的程式庫內容。 若要修改現有的程式庫，需要 `ALTER ANY EXTERNAL LIBRARY` 權限。
 
 如需詳細資訊，請參閱 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)。
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="e-add-a-java-jar-file-to-a-database"></a>E. 將 Java.jar 檔案新增至資料庫  
+
+下列範例會將稱為 `customJar` 的外部 Jar 檔案新增至資料庫。
+
+```sql
+CREATE EXTERNAL LIBRARY customJar
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\customJar.jar') 
+WITH (LANGUAGE = 'Java');
+```
+
+將程式庫成功上傳至執行個體之後，使用者需執行 `sp_execute_external_script` 程序來安裝該程式庫。
+
+```sql
+EXEC sp_execute_external_script
+    @language = N'Java'
+    , @script = N'customJar.MyCLass.myMethod'
+    , @input_data_1 = N'SELECT * FROM dbo.MyTable'
+WITH RESULT SETS ((column1 int))
+```
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

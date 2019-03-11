@@ -20,12 +20,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 2e7ce811b66da3bb0ee271ea18c2aead1b53495c
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1197c9b58b1bb6830aa7d1eb4811d5b82c4e7182
+ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143478"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56893448"
 ---
 # <a name="plan-guides"></a>計畫指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,25 @@ sp_create_plan_guide
 @params = NULL,   
 @hints = N'OPTION (MAXDOP 1)';  
 ```  
-  
+另舉一例，請考慮使用 [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 提交的下列 SQL 陳述式。
+
+```sql  
+exec sp_executesql N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id', N'@so_id int', @so_id = 43662;  
+```  
+ 若要為每次執行此查詢建立唯一的計畫，請建立下列計畫指南，並在 `@hints` 參數中使用 `OPTION (RECOMPILE)` 查詢提示。 
+
+```sql  
+exec sp_create_plan_guide   
+@name = N'PlanGuide1_SalesOrders',   
+@stmt = N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id',
+@type = N'SQL',  
+@module_or_batch = NULL,   
+@params = N'@so_id int',   
+@hints = N'OPTION (recompile)';
+```
+
 > [!IMPORTANT]  
 >  針對 `@module_or_batch` 陳述式的 `@params` 與 `sp_create_plan guide` 引數所提供的值必須符合在實際查詢中所提交的對應文字。 如需詳細資訊，請參閱 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) 陳述式的 [使用 SQL Server Profiler 建立及測試計畫指南](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)中直接變更實際查詢的文字時，您可以使用計畫指南來最佳化查詢的效能。  
   

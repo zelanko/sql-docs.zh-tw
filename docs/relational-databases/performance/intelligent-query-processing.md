@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的智慧查詢處理 | Microsoft Docs
 description: 可改善 SQL Server 和 Azure SQL Database 查詢效能的智慧查詢處理功能。
 ms.custom: ''
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc47ad30edc0eb4092aa1f92fef703c95cb34593
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b92bc15079fcc85212ea3d1b51be64a3348a4b1
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305366"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 
@@ -29,13 +29,14 @@ ms.locfileid: "56291656"
 | **IQP 功能** | **Azure SQL Database 支援** | **SQL Server 支援** |
 | --- | --- | --- |
 | [自適性聯結 (批次模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|
+| [近似的相異計數](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 是，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始，公開預覽|
+| [資料列存放區上的批次模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|
 | [交錯執行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#interleaved-execution-for-multi-statement-table-valued-functions) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|
 | [記憶體授與意見反應 (批次模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 是，屬於相容性層級 140| 是，自 SQL Server 2017 開始屬於相容性層級 140|
 | [記憶體授與意見反應 (資料列模式)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|
-| [近似的相異計數](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 是，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始，公開預覽|
-| [資料表變數延後編譯](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|
-| [資料列存放區上的批次模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|
 | [純量 UDF 內嵌](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 否，但預計在未來更新 | 是，自 SQL Server 2019 CTP 2.1 開始屬於相容性層級 150，公開預覽|
+| [資料表變數延後編譯](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 是，屬於相容性層級 150，公開預覽| 是，自 SQL Server 2019 CTP 2.0 開始屬於相容性層級 150，公開預覽|
+
 
 
 ## <a name="adaptive-query-processing"></a>彈性查詢處理
@@ -101,6 +102,8 @@ ms.locfileid: "56291656"
 
 > [!NOTE]
 > 資料列存放區上的批次模式是一項公開預覽功能。  
+
+資料列存放區上的批次模式可針對分析工作負載啟用批次模式執行功能，而不需要資料行存放區索引。  這項功能支援用於磁碟上堆積和 B 型樹狀結構索引的批次模式執行和點陣圖篩選。 資料列存放區上的批次模式可支援所有現有具備批次模式功能的運算子。
 
 ### <a name="background"></a>背景
 

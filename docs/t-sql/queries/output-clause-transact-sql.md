@@ -28,15 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334735"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,10 +134,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 這是一個明確的資料行參考。 若要參考所要修改的資料表，必須依據適用情況，以 INSERTED 或 DELETED 前置詞正確地限定該參考，例如：INSERTED **.**_column\_name_。  
+ 這是一個明確的資料行參考。 任何指向修改之資料表的參考，都必須由 INSERTED 或 DELETED 前置詞來適當地加以限定，例如：INSERTED **.**_column\_name_。  
   
  $action  
- 僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定 **nvarchar(10)** 類型的資料行，此陳述式會針對每個資料列傳回下列三個值其中之一：'INSERT'、'UPDATE' 或 'DELETE' (依據在該資料列上執行的動作而定)。  
+ 僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定類型為 **navchar(10)** 的資料行，傳回每個資料列下列三個值中的其中一個：'INSERT'、'UPDATE' 或 'DELETE'，根據在該資料列執行的動作而定。  
   
 ## <a name="remarks"></a>Remarks  
  您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 子句。  

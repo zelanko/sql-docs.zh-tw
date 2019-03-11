@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/19/2018
+ms.date: 03/02/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00fc30593980e92b5f510550a4181c4f3a5b6f91
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334835"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,69 +25,89 @@ ms.locfileid: "56802922"
 
 
 
-## <a name="ssms-180-preview-6download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (Preview 6)](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-180-preview-7download-sql-server-management-studio-ssmsmd"></a>[SSMS 18.0 (Preview 7)](download-sql-server-management-studio-ssms.md)
 
-組建編號：15.0.18075.0<br>
-發行日期：2018 年 12 月 18 日
+組建編號：15.0.18092.0<br>
+發行日期：2019 年 3 月 1 日
 
-Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式運作 (GA) 版本，請[下載並安裝 SSMS 17.9.1](#ssms-1791-latest-ga-release)。
+Preview 7 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式運作 (GA) 版本，請[下載並安裝 SSMS 17.9.1](#ssms-1791-latest-ga-release)。
 
-### <a name="whats-new-in-preview-6"></a>Preview 6 的新功能
+### <a name="whats-new-in-preview-7"></a>Preview 7 的新功能
 
-本節列出 SSMS 18.0 Preview 6 的新功能。 如需 SSMS 17.9.1 以後的完整變更記錄，請參閱 [SSMS 18.0 Preview - 至 Preview 6 為止的累積變更目錄](#ssms-180-preview---cumulative-changelog-through-preview-6)。
+本節列出 SSMS 18.0 Preview 7 的新功能。 如需 SSMS 17.9.1 以後的完整變更記錄，請參閱 [SSMS 18.0 Preview - 至 Preview 7 為止的累積變更記錄](#ssms-180-preview---cumulative-changelog-through-preview-7)。
 
 - **SSMS**
-  - 在 [工具] 功能表下新增 [移轉到 Azure] - 我們已整合 [Database Migration Assistant](https://aka.ms/get-dma) 與 [Azure 資料庫移轉服務](https://aka.ms/get-dms)，可讓您快速輕鬆地存取，以協助加速移轉到 Azure。
-  - 舊版 SSMS 18.0 (< Preview 6) 具有 [可用的資料庫] 快速鍵，繫結至 **CTRL+ALT+J**。 在 Preview 6 和更新版本中，按鍵繫結關係已還原至 **CTRL+U**，如同 SSMS 17.x。
-  - 新增邏輯以提示使用者在使用 [變更連線] 時認可已開啟的交易。
+  - 新增在首次啟動 SSMS 時，從先前版本的 SSMS (17.x 或較舊的 18.0 Preview) 遷移 SSMS 使用者設定的功能。
+  - 新增 `UTF8_BIN2` 定序的支援。
+  - 新增 SMO 和 SSMS 中[邊緣條件約束](../relational-databases/tables/graph-edge-constraints.md)的支援。
+  - 新增**雲端見證**作為 SMO 和 SSMS 中的新仲裁類型及新資源類型。
+  - 新增邏輯，通知使用者一般檔案匯入可能會導致重新命名資料行。
+  - 將執行程序表支援新增至 `DW ROLLUP` 和 `CUBE` 的 LocalCube RelOp。
+  - 新增使用圖形資料表匯入/匯出資料層應用程式的支援。
+  - 變更在 Azure SQL Database 受控執行個體上執行的弱點評定規則，使弱點評定掃描結果一致為 Azure SQL DB。
+  - [SQL 弱點評定](../relational-databases/security/sql-vulnerability-assessment.md)現在支援 Azure SQL DW。
+  - 將**資料分類**功能新增至 SMO。 資料行物件公開了新的屬性：`SensitivityLabelName`、`SensitivityLabelId`、`SensitivityInformationTypeName`、`SensitivityInformationTypeId` 及 `IsClassified` (唯讀)。
+    如需詳細資訊，請參閱 https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql。
+  - 將**分類報告**功能表項目新增至**資料分類**功能表。
+  - 新增 **AAD 登入**作為 SMO 及 SSMS 中連線至 Azure SQL 受控執行個體時的新登入類型。
+  - 在 Azure Data Studio 中，在您以滑鼠右鍵按一下 [物件總管] 中的資料庫時，啟用執行查詢或建立新的筆記本。
+  - 在 XEvent 檢視器中，啟用執行程序表視窗以取得更多 XEvent。
+  - 資料遮罩：
+    - 現已支援 JSON 設定檔
+    - 變更 XML 設定檔格式，使其在向前邁進的過程中更具彈性。  現有的設定檔將需要重新建立。
+    - 包含記憶體最佳化及暫存資料表的資料庫現在可以進行遮罩。  有些限制仍會套用到記憶體最佳化及暫存資料表本身。
+    - 內部部署資料庫的資料庫複製操作現在會針對 `BACKUP DATABASE` 步驟使用 `COPY_ONLY` 選項。
+    - 已遮罩資料庫現在會在遮罩操作進行中時設為 `SIMPLE` 復原模型，以減少使用記錄，並在完成後回到其原始值。
+    - 已遮罩資料庫現在當操作進行中時會名為 `<output database name>-MaskInProgress`，並在遮罩操作成功後重新命名為 `<output database name>`。
+    - 變更設定 UI 中資料行的顯示順序，使其根據序號而非字母順序。
+    - 移除在設定 UI 中大量選取資料行的選項，避免未預期的行為。
+    - 改善針對連線及命令失敗的內部重試邏輯。
 
 - **SSIS**
-  - 當您使用 SSMS 所提供 MI 的 SQL Agent 時，您可以在 SSIS 代理程式作業步驟中設定參數和連線管理員。
-
+    - 連線到 Azure SQL DB 或 Azure SQL DB 受控執行個體時，您可以使用 `<default>` 作為初始資料庫來連線到它。
+    - 在 [Integration Services 目錄] 節點下方新增新的輸入項目 [在 Azure Data Factory 中嘗試 SSIS]，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 **Azure-SSIS Integration Runtime**。
+    - 在 [目錄建立精靈] 中新增 [建立 SSIS IR] 按鈕，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 **Azure-SSIS Integration Runtime**。
+    - `ISDeploymentWizard` 現在支援在命令列模式中進行 SQL Server 驗證、Azure Active Directory 整合式驗證，以及 Azure Active Directory 密碼驗證。
 
 ### <a name="bug-fixes"></a>錯誤修正
 
-- **SSMS 編輯器**
-  - IntelliSense 現在可識別新的 TRANSLATE 函式。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430。
-  - 已改善 FORMAT 內建函式的 IntelliSense。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676。
-  - LAG 和 LEAD 現在是內建函式。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757。
-  - 修正 IntelliSense 在使用 "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)" 時發出警告的問題
+- **SMO**
+    - 修正從外部資料表傳輸時效能降低的問題。
+    - 修正瞄準 Azure SQL DB 時`ServerConnection`執行緒安全性中造成 SMO 流失 `SqlConnection` 執行個體的問題。
+    - 修正在嘗試復原名稱中具有大括弧 `{}` 的資料庫時，造成 `StringBuilder.FormatError` 的問題。
+
+- **一般 SSMS**
+    - 修正在編輯 T-SQL 時使 SSMS 停止回應/當機的問題。
+    - 修正 `ApplicationIntent` 並未在 `Registered Servers` 內連線中一同傳遞的問題。
+    - 修正在高 DPI 監視器中並未適當轉譯**新 XEvent 工作階段精靈 UI** 表單的問題。
+    - 修正嘗試匯入 `.bacpac` 檔案時的問題。
+    - 修正嘗試顯示具有 `FILEGROWTH > 2048GB` 資料庫屬性時擲回算數溢位錯誤的問題。
+    - 修正在按兩下時 SSMS 無法開啟 .sql 檔案的問題。
 
 - **物件指令碼**
-  - 修正嘗試在 Azure SQL Database 上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 撰寫空間索引指令碼時擲回錯誤的問題。
+    - 修正即使 [物件總管] 指令碼設定已設為符合來源，仍會造成 Azure SQL Database 的資料庫指令碼一律瞄準內部部署 SQL Server 執行個體的問題。
+    - 修正嘗試針對 Azure SQL 資料倉儲資料庫中涉及叢集及非叢集索引的資料表撰寫產生不正確 T-SQL 陳述式的指令碼時，所產生的問題。
+    - 修正嘗試針對 Azure SQL 資料倉儲資料庫中具有叢集資料行存放區索引及叢集索引資料表撰寫產生不正確 T-SQL 指令碼 (重複陳述式) 時，所產生的問題。
+    - 修正沒有範圍值的資料分割資料表指令碼 (Azure SQL 資料倉儲資料庫)。
+    - 修正防止撰寫稽核或稽核規格 `SERVER_PERMISSION_CHANGE_GROUP` 指令碼的問題。
+    - 修正防止撰寫來自 Azure SQL 資料倉儲統計資料指令碼的問題。 請參閱 [Microsoft Azure 意見反應論壇](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296)。
 
-- **SMO**
-  - 修正使用 SMO 所撰寫應用程式若嘗試列舉多個執行緒上相同伺服器之資料庫時發生錯誤的問題 (即使在每個執行緒上使用個別的 SqlConnection 執行個體仍會發生錯誤)。
+- **Azure SQL Database 受控執行個體**
+    - 修正造成以滑鼠右鍵按一下資料庫，並選擇 [匯入資料層應用程式] 時失敗的問題。
+    - 修正造成以滑鼠右鍵按一下 `TempDB` 以顯示錯誤時的問題。
+    - 修正為 SMO 中的 `ALTER DB ADD FILE` 陳述式撰寫指令碼時，造成所產生 T-SQL 指令碼空白的問題。
 
-- **資料分類**
-  - 修正在資料分類窗格中儲存分類時，若其他資料庫上已開啟其他資料分類窗格的問題。
-
-- **Azure SQL Database**
-  - 在 Azure 中的 [統計資料] 功能表下啟用 [統計資料屬性] 子功能表選項，因為到目前為止已完全支援一段時間。
-
-- **查詢資料存放區**
-  - 修正可能擲回 "DocumentFrame (SQLEditors)" 例外狀況的問題。
-  - 修正嘗試在內建查詢存放區報表中設定自訂時間間隔時，使用者無法在開始/結束間隔上選取上午或下午的問題。
-
-- **複製資料庫精靈**
-  - [產生指令碼/傳輸/複製資料庫精靈] 嘗試使用記憶體內部資料表建立資料表時，不會強制開啟 ansi_padding。
-  - SQL Server 2017 和 SQL Server 2019 上已中斷 [傳輸資料庫工作/複製資料庫精靈]。
-  - 在建立相關聯的外部資料來源之前，須建立 [產生指令碼/傳輸/複製資料庫精靈] 指令碼資料表。
-
-- **分析工具**
-  - 將「彙總資料表重寫查詢」事件新增至分析工具事件。
-
-- **執行程序表**
-  - 新的記憶體授與運算子屬性在有多個執行緒時不正確地顯示。
-
+- **一般檔案精靈**
+    - 修正精靈無法從單一資料行 CSV 檔案匯入的問題。
+    - 修正匯入精靈無法處理負小數值的問題。
+    
 ### <a name="known-issues"></a>已知問題
 
-- 按兩下 .sql 檔案啟動 SSMS，但不會開啟實際指令碼。
-  - 因應措施：將 .sql 檔案拖放到 SSMS 編輯器。
+- 不適用
 
-## <a name="ssms-180-preview---cumulative-changelog-through-preview-6"></a>SSMS 18.0 Preview - 至 Preview 6 為止的累積變更目錄
+## <a name="ssms-180-preview---cumulative-changelog-through-preview-7"></a>SSMS 18.0 Preview - 至 Preview 7 為止的累積變更記錄
 
-如果沒有 *Preview 5* 或 *Preview 6* 標籤，則會指出 SSMS 18.0 的第一個公開預覽版 (也就是 SSMS 18.0 *Preview 4*) 中出現的變更。
+若沒有 *Preview 5*、*Preview 6* 或 *Preview 7* 標籤，表示變更是出現在我們的第一個 SSMS 18.0 公開預覽版中，即 SSMS 18.0 *Preview 4*。
 
 ### <a name="whats-new"></a>新功能
 
@@ -140,6 +160,7 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - [Preview 6 的新功能] 在 [工具] 功能表下新增 [移轉到 Azure] - 我們已整合 [Database Migration Assistant](https://aka.ms/get-dma) 與 [Azure 資料庫移轉服務](https://aka.ms/get-dms)，可讓您快速輕鬆地存取，以協助加速移轉到 Azure。
   - [Preview 6 的新功能] 舊版 SSMS 18.0 (< Preview 6) 具有 [可用的資料庫] 快速鍵，其繫結至 **CTRL+ALT+J**。 在 Preview 6 和更新版本中，按鍵繫結關係已還原至 **CTRL+U**，如同 SSMS 17.x。
   - [Preview 6 的新功能] 新增邏輯以提示使用者在使用 [變更連線] 時認可已開啟的交易。
+  - [Preview 7 的新功能] 新增 `UTF8_BIN2` 定序的支援。
 
 - **SMO**
   - 擴充建立可繼續索引的 SMO 支援
@@ -148,16 +169,21 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - [Preview 5 的新功能] 在伺服器物件上公開新的 ProductUpdateLevel 屬性，該屬性對應至使用中 SQL 版本的服務層級 (例如 CU12、RTM 等…)
   - [Preview 5 的新功能] 在資料庫物件上公開新的 LastGoodCheckDbTime 屬性，該屬性對應至 "lastgoodcheckdbtime" 資料庫屬性。 如果沒有這類屬性可用，則會傳回預設值 1/1/1900 12:00:00 AM。
   - [Preview 5 的新功能] 將 RegSrvr.xml 檔案 (已註冊的伺服器設定檔) 位置移至 "%AppData%\Microsoft\SQL Server Management Studio" (未進行版本控制，因此可跨不同的 SSMS 版本共用)
+  - [Preview 7 的新功能] 新增**雲端見證**作為 SMO 和 SSMS 中的新仲裁類型及新資源類型。
+  - [Preview 7 的新功能] 新增 SMO 和 SSMS 中[邊緣條件約束](../relational-databases/tables/graph-edge-constraints.md)的支援。
+
 
 - **Azure Data Studio 整合**
   - 新增功能表項目以啟動/下載 Azure Data Studio
   - [Preview 5 的新功能] 將 [啟動 Azure Data Studio] 功能表項目新增至 [物件總管]
+  - [Preview 7 的新功能] 在 Azure Data Studio 中，當您以滑鼠右鍵按一下 [物件總管] 中的資料庫時，啟用執行查詢或建立新的筆記本。
 
 - **執行程序表**
   - 在執行程序表運算子節點下新增實際經過時間、實際值與估計值的資料列 (若有)。 這會讓實際計劃看起來與即時查詢統計資料計劃一致。
   - 按一下執行程序表的 [編輯查詢] 按鈕時已修改工具提示並新增了註解，以指示使用者如果查詢超過 4000 個字元，則 SQL 引擎可能會截斷執行程序表。
   - 新增邏輯以顯示「具體化程式運算子 (外部 Select)」
   - 新增執行程序表屬性 BatchModeOnRowStoreUsed，讓您輕鬆找出正在使用「資料列存放區批次模式掃描」功能的查詢。 只要查詢在資料列存放區上執行批次模式掃描，新的屬性 (BatchModeOnRowStoreUsed="true") 就會新增至 StmtSimple 元素。
+  - [Preview 7 的新功能] 將執行程序表支援新增至 `DW ROLLUP` 和 `CUBE` 的 LocalCube RelOp。
 
 - **資料庫相容性層級升級**
   - [Preview 5 的新功能] 在 [<Database name>] -> [工作] -> [資料庫升級] 下新增選項。 這會啟動新的 Query Tuning Assistant (QTA) (查詢調整小幫手) 來引導使用者完成下列程序：
@@ -166,15 +192,24 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
     - 針對相同的工作負載，收集第二輪的效能資料。
     - 偵測工作負載迴歸，並提供經過測試的建議來提升工作負載效能。
 
-  這類似於 https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade中所述的資料庫升級程序，不同之處是在最後一個步驟中，QTA 不會依賴先前已知良好的狀態來產生建議。
+    這與[在升級到新版 SQL Server 期間保持效能穩定性](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)中所述的資料庫升級過程相似，其不同處是在最後一個步驟中，QTA 不會依賴先前已知良好的狀態來產生建議。
 
 - **查詢存放區**
   - [Preview 5 的新功能] 藉由對圖表 Y 軸上顯示的數值新增千位分隔符，改善了某些報表 (整體資源耗用量) 的可用性。
   - [Preview 5 的新功能] 新增「查詢等候統計資料」報表。
 
 - **資料遮罩**
-  - [Preview 5 的新功能，Add2018114] 新增靜態資料遮罩。 靜態資料遮罩是一項資料保護工具，可讓使用者建立其 SQL 資料庫的複本，並對複本上的敏感性資料進行遮罩。 這項功能經證實對於要與開發/測試小組或分析小組等非生產使用者共用其生產資料庫的人員很有用。 如需詳細資訊，請參閱 [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/) (適用於 Azure SQL Database 和 SQL Server 的靜態資料遮罩)。
-
+  - [Preview 5 的新功能] 新增靜態資料遮罩。 靜態資料遮罩是一項資料保護工具，可讓使用者建立其 SQL 資料庫的複本，並對複本上的敏感性資料進行遮罩。 這項功能經證實對於要與開發/測試小組或分析小組等非生產使用者共用其生產資料庫的人員很有用。 如需詳細資訊，請參閱 [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/) (適用於 Azure SQL Database 和 SQL Server 的靜態資料遮罩)。
+  - [Preview 7 的新功能] 現已支援 JSON 設定檔
+  - [Preview 7 的新功能] 變更 XML 設定檔格式，使其在向前邁進的過程中更具彈性。  現有的設定檔將需要重新建立。
+  - [Preview 7 的新功能] 包含記憶體最佳化及暫存資料表的資料庫現在可以進行遮罩。  有些限制仍會套用到記憶體最佳化及暫存資料表本身。
+  - [Preview 7 的新功能] 內部部署資料庫的資料庫複製操作現在會針對 `BACKUP DATABASE` 步驟使用 `COPY_ONLY` 選項。
+  - [Preview 7 的新功能] 已遮罩資料庫現在會在遮罩操作進行中時設為 `SIMPLE` 復原模型，以減少使用記錄，並在完成後回到其原始值。
+  - [Preview 7 的新功能] 已遮罩資料庫現在當操作進行中時會名為 `<output database name>-MaskInProgress`，並在遮罩操作成功後重新命名為 `<output database name>`。
+  - [Preview 7 的新功能] 變更設定 UI 中資料行的顯示順序，使其根據序號而非字母順序。
+  - [Preview 7 的新功能] 移除在設定 UI 中大量選取資料行的選項，避免未預期的行為。
+  - [Preview 7 的新功能] 改善針對連線及命令失敗的內部重試邏輯。
+ 
 - **Always On**
   - 重新雜湊 SSMS Always On 儀表板中的 RTO (預估復原時間) 和 RPO (估計的資料遺失)。 正在更新 https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups 上的文件
 
@@ -184,12 +219,20 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
 - **SSIS**
   - [Preview 5 的新功能] 新增支援，允許客戶對 Azure Government 雲端中 Azure-SSIS IR 上的 SSIS 套件進行排程
   - [Preview 6 的新功能] 當您使用 SSMS 所提供 MI 的 SQL Agent 時，您可以在 SSIS 代理程式作業步驟中設定參數和連線管理員。
+  - [Preview 7 的新功能] 連線到 Azure SQL DB/受控執行個體時，您可以使用 "\<default\>" 作為初始資料庫來連線到它。
+  - [Preview 7 的新功能] 在 [Integration Services 目錄] 節點下方新增新的重試項目 [在 Azure Data Factory 中嘗試 SSIS]，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 Azure-SSIS Integration Runtime。
+  - [Preview 7 的新功能] 在 [目錄建立精靈] 中新增 [建立 SSIS IR] 按鈕，該項目可用於啟動 [Integration Runtime 建立精靈]，並可快速建立 "Azure-SSIS Integration Runtime"。
+  - [Preview 7 的新功能] ISDeploymentWizard 現在支援在命令列模式中進行 SQL 驗證、Azure Active Directory 整合式驗證，以及 Azure Active Directory 密碼驗證。
 
 - **資料分類**
   - 重新組織資料分類工作功能表：新增資料庫工作功能表的子功能表，並新增選項讓您從功能表開啟報表，而不需要先開啟分類資料視窗。
+  - [Preview 7 的新功能] 將新功能「資料分類」新增至 SMO。 資料行物件公開了新的屬性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId，及 IsClassified (唯讀)。 如需詳細資訊，請參閱： https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current 
+  - [Preview 7 的新功能] 將 [分類報告] 功能表項目新增至 [資料分類] 飛出視窗。
 
 - **弱點評定**
-  - [Preview 5 的新功能] 啟用 SQL Azure DW 上的 [弱點評定] 工作功能表。
+  - [Preview 5 的新功能] 啟用 Azure SQL DW 上的 [弱點評定] 工作功能表。
+  - [Preview 7 的新功能] 變更在 Azure SQL Database 受控執行個體伺服器上執行的弱點評定規則，使「弱點評定」的掃描結果與 Azure SQL DB 中的內容一致。 
+  - [Preview 7 的新功能] 「弱點評定」現在支援 Azure SQL DW。
 
 - **永遠加密**
   - [連線至伺服器] 對話方塊之新 [Always Encrypted] 索引標籤中的 [啟用 Always Encrypted] 核取方塊現在提供簡單的方法來啟用/停用資料庫連線的 Always Encrypted。 
@@ -199,6 +242,20 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
     - [連線至伺服器] 對話方塊中用於指定記憶體保護區證明 URL 的文字欄位 (新的 [Always Encrypted] 索引標籤)。
     - [新增資料行主要金鑰] 對話方塊中用來控制新資料行主要金鑰是否允許記憶體保護區計算的新核取方塊。
     - 其他 Always Encrypted 金鑰管理對話方塊現在會公開哪些資料行主要金鑰允許記憶體保護區計算的資訊。
+
+- **一般檔案匯入精靈**
+  - [Preview 7 的新功能] 新增邏輯，通知使用者一般檔案匯入可能會導致重新命名資料行。
+
+- **資料層應用程式精靈**
+  - [Preview 7 的新功能] 新增使用圖形資料表匯入/匯出資料層應用程式的支援。
+
+- **Azure SQL 受控執行個體**
+  - [Preview 7 的新功能] 新增 **AAD 登入**作為 SMO 及 SSMS 中連線至 Azure SQL 受控執行個體時的新登入類型。
+
+- **XEvent 檢視器**
+  - [Preview 7 的新功能] 在 XEvent 檢視器中，啟用執行程序表視窗以取得更多 XEvent。
+
+
 
 
 ### <a name="bug-fixes"></a>錯誤修正
@@ -212,6 +269,7 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - [Preview 5 的新功能] 修正嘗試使用中央管理伺服器和 SQL Azure 伺服器時的 SSMS 當機問題。 如需詳細資訊，請參閱 https://feedback.azure.com/forums/908035/suggestions/33374884。 
   - [Preview 5 的新功能] 藉由最佳化 IsFullTextEnabled 屬性的擷取方式，修正了 [物件總管] 的停止回應問題
   - [Preview 5 的新功能] 藉由避免建置不必要的查詢來擷取資料庫屬性，修正了 [複製資料庫精靈] 的停止回應問題
+  - [Preview 7 的新功能] 修正編輯 T-SQL 時造成 SSMS 停止回應/當機的問題。 
 
 - **連線對話方塊**
   - 啟用按下 DEL 鍵從先前的使用者名稱清單移除使用者名稱的功能 (如需詳細資料，請參閱 https://feedback.azure.com/forums/908035/suggestions/32897632)
@@ -227,6 +285,14 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - 修正 [工具] | [選項] | [SQL Server 物件總管] | [命令] 頁面未正確調整大小的問題。
   - SSMS 現在預設會停用 XMLA 編輯器中的 DTD 自動下載功能 -- XMLA 指令碼編輯器 (使用 XML 語言服務) 現在預設會防止自動下載潛在惡意 XMLA 檔案的 DTD。  這可藉由在 [工具]->[選項]->[環境]->[文字編輯器]->[XML]->[其他] 中關閉 [自動下載 DTD 和結構描述] 設定進行控制。  
   - [Preview 5 的新功能] 將 CTRL+D 還原為舊版 SSMS 中所使用的快速鍵。 如需詳細資料，請參閱 https://feedback.azure.com/forums/908035/suggestions/35544754
+
+- **一般 SSMS**
+  - [Preview 7 的新功能] 修正編輯 T-SQL 時造成 SSMS 停止回應/當機的問題。
+  - [Preview 7 的新功能] 修正 `ApplicationIntent` 並未在 `Registered Servers` 內的連線中一同傳遞的問題。
+  - [Preview 7 的新功能] 修正在高 DPI 監視器中並未適當轉譯**新 XEvent 工作階段精靈 UI** 表單的問題。
+  - [Preview 7 的新功能] 修正嘗試匯入 `.bacpac` 檔案時的問題。
+  - [Preview 7 的新功能] 修正嘗試顯示具有 `FILEGROWTH > 2048GB` 資料庫屬性時擲回算數溢位錯誤的問題。
+  - [Preview 7 的新功能] 修正在按兩下時 SSMS 無法開啟 .sql 檔案的問題。
 
 - **SSMS 編輯器**
   - 修正在「SQL 系統資料表」中，還原預設色彩是將色彩變更為檸檬綠，而不是預設綠色，而令人難以在白色背景上進行閱讀的問題 (如需詳細資料，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)
@@ -249,7 +315,7 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - 修正當嘗試重新命名物件時，DELETE 鍵在 OE 中無法運作的長時間待處理問題。 如需詳細資料，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510
   - 顯示現有資料庫檔案的屬性時，大小會出現在 [大小 (MB)] 資料行下方，而不是 [初始大小 (MB)]，後者是建立新資料庫時所顯示的項目。 如需詳細資料，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024
   - 停用 [圖形資料表] 上的 [設計] 操作功能表項目，因為目前版本的 SSMS 並不支援這類資料表。
-  - [Preview 5 的新功能，週期內] 修正 [新增作業排程] 對話方塊無法在高 DPI 監視器上正確呈現的問題。 如需詳細資料，請參閱 https://feedback.azure.com/admin/v3/suggestions/35541262 
+  - [Preview 5 的新功能] 修正 [新增作業排程] 對話方塊無法在高 DPI 監視器上正確轉譯的問題。 如需詳細資料，請參閱 https://feedback.azure.com/admin/v3/suggestions/35541262 
   - [Preview 5 的新功能] 修正/改善資料庫大小 ([大小 (MB)]) 在 [物件總管] 詳細資料中顯示方式的問題：僅限 2 個小數位數，並使用千位分隔符格式化。 如需詳細資料，請參閱 https://feedback.azure.com/forums/908035/suggestions/34379308
   - [Preview 5 的新功能] 修正造成「空間索引」建立失敗並出現「若要完成此動作，請設定屬性 PartitionScheme」之類錯誤的問題。
   - [Preview 5 的新功能] [物件總管] 中的次要效能改善，盡可能避免發出額外的查詢。
@@ -266,6 +332,12 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - 在 SQL Server 2016 及更早版本上撰寫資料表指令碼時，省略圖形語法 "as edge" 和 "as node"。
   - 修正搭配 MFA 使用 AAD 連線到 Azure SQL Database 時，撰寫資料庫物件指令碼失敗的問題。
   - [Preview 6 的新功能] 修正嘗試在 Azure SQL Database 上使用 GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID 撰寫空間索引指令碼時擲回錯誤的問題。
+  - [Preview 7 的新功能] 修正即使 [物件總管] 指令碼設定已設為符合來源，仍會造成 Azure SQL Database 資料庫指令碼一律瞄準內部部署 SQL Server 執行個體的問題。
+- [Preview 7 的新功能] 修正嘗試針對 Azure SQL 資料倉儲資料庫中涉及叢集及非叢集索引的資料表撰寫產生不正確 T-SQL 陳述式指令碼時，所產生的問題。
+- [Preview 7 的新功能] 修正嘗試針對 Azure SQL 資料倉儲資料庫中具有叢集資料行存放區索引及叢集索引資料表撰寫產生不正確 T-SQL 的指令碼 (重複陳述式) 時，所產生的問題。
+- [Preview 7 的新功能] 修正沒有範圍值的資料分割資料表指令碼 (Azure SQL 資料倉儲資料庫)。
+- [Preview 7 的新功能] 修正防止撰寫稽核或稽核規格 `SERVER_PERMISSION_CHANGE_GROUP` 指令碼的問題。
+- [Preview 7 的新功能] 修正防止撰寫來自 Azure SQL 資料倉儲統計資料指令碼的問題。 請參閱 [Microsoft Azure 意見反應論壇](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296)。
 
 - **資料表設計工具**
   - [Preview X 的新功能，X<4] 修正「編輯 200 個資料列」的當機問題
@@ -274,7 +346,10 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
 - **SMO**
   - 修正 SMO/ServerConnection 不正確地處理 SqlCredential 連線的問題。 如需詳細資料，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941
   - [Preview 6 的新功能] 修正使用 SMO 撰寫的應用程式若嘗試列舉多個執行緒上相同伺服器的資料庫時發生錯誤的問題 (即使在每個執行緒上使用個別的 SqlConnection 執行個體仍會發生錯誤)。
-
+  - [Preview 7 的新功能] 修正從外部資料表傳輸時效能降低的問題。
+  - [Preview 7 的新功能] 修正瞄準 Azure SQL DB 時，`ServerConnection` 執行緒安全性造成 SMO 流失 `SqlConnection` 執行個體的問題。
+  - [Preview 7 的新功能] 修正在嘗試復原名稱中具有大括弧 `{}` 的資料庫時，造成 `StringBuilder.FormatError` 的問題。
+ 
 - **AS**
   - 修正已裁剪 AS Xevent UI [進階設定] 的問題
   - [Preview 5 的新功能] 修正 DAX 剖析擲回找不到檔案例外狀況的問題
@@ -292,6 +367,8 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - 修正與浮點類型處理方式不正確 (在對浮點使用不同分隔符號的地區設定上) 相關的問題
   - 修正值為 0 或 1 時，與匯入位元相關的問題。 如需詳細資料，請參閱 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535
   - 修正浮點數輸入為 Null 的問題。 
+  - [Preview 7 的新功能] 修正匯入精靈無法處理負小數值的問題。
+  - [Preview 7 的新功能] 修正精靈無法從單一資料行 CSV 檔案匯入的問題。
 
 - **HADR/AG**
   - [Preview 5 的新功能] 修正 [容錯移轉可用性群組精靈] 中的角色一律顯示為 [解析中] 的問題 
@@ -324,6 +401,9 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - [Preview 5 的新功能] 改善 SMO 檔案群組物件的指令碼撰寫。
   - [Preview 5 的新功能] 改善認證和稽核的 UI。
   - [Preview 5 的新功能] 新增邏輯複寫的支援。
+  - [Preview 7 的新功能] 修正造成以滑鼠右鍵按一下資料庫，並選擇 [匯入資料層應用程式] 時失敗的問題。
+  - [Preview 7 的新功能] 修正造成以滑鼠右鍵按一下 `TempDB` 以顯示錯誤時的問題。
+  - [Preview 7 的新功能] 修正為 SMO 中的 `ALTER DB ADD FILE` 陳述式撰寫指令碼時，造成所產生 T-SQL 指令碼空白的問題。
 
 - **Azure SQL Database**
   - 修正當連線至 Azure SQL DB 中的使用者資料庫 (而非 master) 時，Azure SQL DB 查詢視窗的資料庫清單不正確地填入資料的問題。
@@ -362,6 +442,9 @@ Preview 6 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
 - **執行程序表**
   - [Preview 6 的新功能] 新的記憶體授與運算子屬性在有多個執行緒時不正確地顯示。
 
+- **資料遮罩**
+  - [Preview 7 的新功能] 修正自動複製具有多個記錄及 Filestream 記憶體最佳化資料表檔案的內部部署資料庫時會失敗的 Bug。
+
 ### <a name="deprecated-features"></a>已被取代的功能
 
 SSMS 中不再提供下列功能：
@@ -385,8 +468,7 @@ SSMS 中不再提供下列功能：
 
 ### <a name="known-issues"></a>已知問題
 
-- 按兩下 .sql 檔案啟動 SSMS，但不會開啟實際指令碼。
-  - 因應措施：將 .sql 檔案拖放到 SSMS 編輯器。
+- 不適用
 
 
 ## <a name="ssms-1791-latest-ga-release"></a>SSMS 17.9.1 (最新的 GA 版本)
@@ -410,13 +492,6 @@ SSMS 中不再提供下列功能：
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-
-
-
-
-
-
-
 ## <a name="ssms-179"></a>SSMS 17.9
 
 ![下載](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
@@ -433,7 +508,6 @@ SSMS 中不再提供下列功能：
 ### <a name="whats-new"></a>新功能
 
 **一般 SSMS**
-
 
 執行程序表：
 

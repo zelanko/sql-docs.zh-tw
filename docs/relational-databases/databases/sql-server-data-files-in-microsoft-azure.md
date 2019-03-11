@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87bc14e323d14ddbf64daae6fb441e2977a3af14
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 402cbe79a85b1c7e9cd926922fd8f2c3abca04b6
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675697"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744488"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "51675697"
   
  本主題介紹將 SQL Server 資料檔案儲存在 Microsoft Azure 儲存體服務中的核心概念與考量。  
   
- 如需如何使用此新功能的實際操作體驗，請參閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ 如需如何使用此新功能的實際操作體驗，請參閱[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>為何要在 Microsoft Azure 中使用 SQL Server 資料檔案？ 
   
 -   **簡單快速移轉優點：** 這項功能會在內部部署的電腦之間以及內部部署與雲端環境之間一次移動一個資料庫，藉以簡化移轉程序，而且不需要變更任何應用程式。 因此，它支援累加式移轉，同時就地維護您現有的內部部署基礎結構。 此外，當應用程式需要在內部部署環境中的多個位置執行時，存取集中式資料儲存體可簡化應用程式邏輯。 在某些情況下，您可能需要快速地設定散佈於不同地理位置的電腦中心，以便蒐集許多不同來源的資料。 只要使用這項新的增強功能，您就可以將許多資料庫儲存成 Microsoft Azure Blob，然後執行 Transact-SQL 指令碼，在本機電腦或虛擬機器上建立資料庫，而不需要在不同的位置之間移動資料。  
   
--   **成本和無限制儲存體優點：** 這項功能可讓您在 Microsoft Azure 中設有無限制的異地儲存體，同時運用內部部署運算資源。 當您將 Microsoft Azure 當做儲存位置使用時，可以輕鬆地將重點放在應用程式邏輯上，而不會產生硬體管理的負擔。 如果您遺失了某個內部部署的計算節點，不需要移動任何資料，就可以設定新的節點。  
+-   **成本和無限制儲存體優點：** 這項功能可讓您在 Microsoft Azure 中擁有無限制的異地儲存體，同時運用內部部署計算資源。 當您將 Microsoft Azure 當做儲存位置使用時，可以輕鬆地將重點放在應用程式邏輯上，而不會產生硬體管理的負擔。 如果您遺失了某個內部部署的計算節點，不需要移動任何資料，就可以設定新的節點。  
   
--   **高可用性和災害復原優點：** 使用 Microsoft Azure 功能中的 SQL Server 資料檔案可簡化高可用性和災害復原方案。 例如，假設某個 Microsoft Azure 虛擬機器或 SQL Server 執行個體當機，您只要重新建立 Microsoft Azure Blob 的連結，就可以在新的 SQL Server 執行個體中重建資料庫。  
+-   **高可用性和災害復原優點：** 使用 Microsoft Azure 功能中的 SQL Server 資料檔案可簡化高可用性和災害復原解決方案。 例如，假設某個 Microsoft Azure 虛擬機器或 SQL Server 執行個體當機，您只要重新建立 Microsoft Azure Blob 的連結，就可以在新的 SQL Server 執行個體中重建資料庫。  
   
--   **安全性優點** ：這項新的增強功能可讓您分隔計算執行個體與儲存執行個體。 您可以擁有完整加密的資料庫，而且只針對計算執行個體進行解密，但不在儲存執行個體中進行解密。 換言之，使用這項新的增強功能時，您可以使用透明資料加密 (TDE) 憑證 (與資料實體分隔) 來加密公用雲端中的所有資料。 TDE 金鑰可以儲存在 master 資料庫中，而這個資料庫會儲存在實體安全的內部部署電腦本機並且進行本機備份。 您可以使用這些本機金鑰來加密位於 Microsoft Azure 儲存體中的資料。 如果您的雲端儲存體帳戶認證遭竊，您的資料仍然保持安全，因為 TDE 憑證永遠位於內部部署。  
+-   **安全性優點：** 這項新的增強功能可讓您分隔計算執行個體與儲存執行個體。 您可以擁有完整加密的資料庫，而且只針對計算執行個體進行解密，但不在儲存執行個體中進行解密。 換言之，使用這項新的增強功能時，您可以使用透明資料加密 (TDE) 憑證 (與資料實體分隔) 來加密公用雲端中的所有資料。 TDE 金鑰可以儲存在 master 資料庫中，而這個資料庫會儲存在實體安全的內部部署電腦本機並且進行本機備份。 您可以使用這些本機金鑰來加密位於 Microsoft Azure 儲存體中的資料。 如果您的雲端儲存體帳戶認證遭竊，您的資料仍然保持安全，因為 TDE 憑證永遠位於內部部署。  
   
--   **快照集備份**  ：這項功能可讓您使用 Azure 快照集，利用 Azure Blob 儲存體服務儲存的資料庫檔案，提供近乎即時的備份及更快速的還原。 這個功能可讓您簡化備份和還原原則。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
+-   **快照集備份：** 這項功能可讓您使用 Azure 快照集，針對使用 Azure Blob 儲存體服務儲存的資料庫檔案，提供近乎即時備份及更快速的還原。 這個功能可讓您簡化備份和還原原則。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ## <a name="concepts-and-requirements"></a>概念和需求  
   
@@ -79,7 +79,7 @@ ON
     FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
 ```  
   
- **重要注意事項** ：如果有任何作用中參考指向容器中的資料檔案，則嘗試刪除對應的 SQL Server 認證將會失敗。  
+ **重要事項：** 如果有任何作用中參考指向容器中的資料檔案，嘗試刪除相對應的 SQL Server 認證會失敗。  
   
 ### <a name="security"></a>Security  
  以下是將 SQL Server 資料檔案儲存在 Azure 儲存體中的安全性考量和需求。  
@@ -95,12 +95,12 @@ ON
   
 -   **SQL Server 內部部署：** SQL Server 2016 及更新版本包含這項功能。 若要了解如何下載最新版的 SQL Server，請參閱 [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)。  
   
--   在 Azure 虛擬機器中執行的 SQL Server：如果您要 [將 SQL Server 安裝在 Azure 虛擬機器上](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，請安裝 SQL Server 2016，或是更新現有的執行個體。 同樣地，您也可以使用 SQL Server 2016 平台映像，在 Azure 中建立新的虛擬機器。
+-   在 Azure 虛擬機器中執行的 SQL Server：如果您要將 [SQL Server 安裝在 Azure 虛擬機器上](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，請安裝 SQL Server 2016，或更新現有的執行個體。 同樣地，您也可以使用 SQL Server 2016 平台映像，在 Azure 中建立新的虛擬機器。
 
   
 ###  <a name="bkmk_Limitations"></a> 限制  
   
--   在目前版本的功能中，不支援將 **FileStream** 資料儲存在 Azure 儲存體中。 您可以將 **Filestream** 資料儲存在 Azure 儲存體整合的本機資料庫中，但是無法使用 Azure 儲存體，在電腦之間移動 Filestream 資料。 對於 **FileStream** 資料，我們建議您繼續使用傳統的技術，在不同的電腦之間移動與 Filestream 相關聯的檔案 (.mdf 和 .ldf)。  
+-   在目前版本的功能中，不支援將 **FileStream** 資料儲存在 Azure 儲存體中。 您可以在同時包含 Azure 儲存體所儲存資料檔案的資料庫中儲存 **FileStream** 資料，但所有的 FileStream 資料檔案都必須儲存在本機儲存體上。  由於 FileStream 資料必須位於本機儲存體上，所以它無法在使用 Azure 儲存體的機器之間移動，因此建議您繼續使用[傳統技術](../../relational-databases/blob/move-a-filestream-enabled-database.md)，在不同電腦之間移動與 FileStream 建立關聯的資料。  
   
 -   目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 **5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"**。  
   
@@ -130,7 +130,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支援  
  SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以鍵入儲存體容器的 URL 路徑，例如 https://teststorageaccnt.blob.core.windows.net/testcontainer/：
  
- 作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
+ 作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 ### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理物件 (SMO) 支援  
  使用 Azure 功能中的 SQL Server 資料檔案時，可支援所有 SQL Server 管理物件 (SMO)。 如果 SMO 物件需要檔案路徑，請使用 BLOB URL 格式而非本機檔案路徑，例如 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`。 如需 SQL Server 管理物件 (SMO) 的詳細資訊，請參閱《SQL Server 線上叢書》中的 [SQL Server 管理物件 &#40;SMO&#41; 程式設計指南](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)。  
@@ -148,28 +148,28 @@ ON
  **驗證錯誤**  
   
 -   *無法卸除認證 '%.\*ls'，因為作用中的資料庫檔案正在使用它。*   
-    解決方式：當您嘗試卸除的認證仍然由 Azure 儲存體中的作用中資料庫檔案使用時，就可能會看見此錯誤。 若要卸除認證，您必須先刪除具有此資料庫檔案的相關聯 Blob。 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
+    解決方案：當您嘗試卸除的認證仍然由 Azure 儲存體作用中資料庫檔案使用時，就可能會看見此錯誤。 若要卸除認證，您必須先刪除具有此資料庫檔案的相關聯 Blob。 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
   
 -   *尚未在容器上正確建立共用存取簽章。*   
-     解決方式：請確定您已經在容器上正確建立共用存取簽章。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫 ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)中第 2 課所提供的指示。  
+     解決方案：請確定您已經在容器上正確建立共用存取簽章。 請檢閱以下連結中第 2 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)。  
   
 -   *尚未正確建立 SQL Server 認證。*   
-    解決方式：請確定您已經針對 [識別] 欄位使用「共用存取簽章」並且正確建立密碼。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../lesson-3-database-backup-to-url.md)中第 3 課所提供的指示。  
+    解決方案：請確定您已經針對 [識別] 欄位使用「共用存取簽章」，並正確建立密碼。 請檢閱以下連結中第 3 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-3-database-backup-to-url.md)。  
   
  **租用 Blob 錯誤：**  
   
--   在另一個使用相同 Blob 檔案的執行個體已經當機之後，嘗試啟動 SQL Server 時發生錯誤。 解決方式：一般作業期間，SQL Server 會使用暫時租用來保留 Blob 進行儲存，而且每隔 45 至 60 秒就會更新每個 Blob 租用。 如果伺服器當機，而且設定為使用相同 Blob 的另一個 SQL Server 執行個體啟動，新的執行個體最多會等候 60 秒，讓現有的 Blob 租用過期。 如果您想要將資料庫附加至另一個執行個體，而且您無法等候租用在 60 秒內過期，可以明確中斷 Blob 租用，避免附加作業發生任何失敗。  
+-   在另一個使用相同 Blob 檔案的執行個體已經當機之後，嘗試啟動 SQL Server 時發生錯誤。 解決方案：一般作業期間，SQL Server 會使用暫時租用來保留 Blob 進行儲存，而且每隔 45 至 60 秒就會更新每個 Blob 租用。 如果伺服器當機，而且設定為使用相同 Blob 的另一個 SQL Server 執行個體啟動，新的執行個體最多會等候 60 秒，讓現有的 Blob 租用過期。 如果您想要將資料庫附加至另一個執行個體，而且您無法等候租用在 60 秒內過期，可以明確中斷 Blob 租用，避免附加作業發生任何失敗。  
   
  **資料庫錯誤**  
   
 1.  *建立資料庫時發生錯誤*   
-    解決方式：請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../lesson-4-restore-database-to-virtual-machine-from-url.md)中第 4 課所提供的指示。  
+    解決方案：請檢閱以下連結中第 4 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../lesson-4-restore-database-to-virtual-machine-from-url.md)。  
   
 2.  *執行 Alter 陳述式時發生錯誤*   
-    解決方式：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請檢閱 [教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)中第 7 課所提供的指示。  
+    解決方案：請務必在資料庫上線時執行 Alter Database 陳述式。 將資料檔案複製到 Azure 儲存體時，一定要建立分頁 Blob 而非區塊 Blob。 否則，ALTER Database 將會失敗。 請檢閱以下連結中第 7 課所提供的指示：[教學課程：搭配 SQL Server 2016 資料庫使用 Microsoft Azure Blob 儲存體服務](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 3.  *錯誤碼 5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*   
-    解決方式：目前，這項新的增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 *5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*。  
+    解決方案：目前，這項新增強功能不支援多個 SQL Server 執行個體同時存取 Azure 儲存體中的相同資料庫檔案。 如果 ServerA 在線上且具有作用中的資料庫檔案，而 ServerB 意外啟動，而且也有指向相同資料檔案的資料庫，則第二部伺服器將無法啟動資料庫，錯誤碼為 *5120 無法開啟實體檔案 "%.\*ls"。作業系統錯誤 %d: "%ls"*。  
   
      若要解決此問題，請先判斷您是否需要讓 ServerA 存取 Azure 儲存體中的資料庫檔案。 如果不需要，只要移除 ServerA 與 Azure 儲存體中資料庫檔案之間的任何連接即可。 若要這樣做，請遵循下列步驟：  
   

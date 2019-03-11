@@ -31,16 +31,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334785"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -230,7 +230,7 @@ FROM { <table_source> [ ,...n ] }
  指定從所指定的時態表及其連結的系統版本設定記錄資料表，傳回特定版本的資料  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 子句
-**適用對象**：SQL Server、SQL Database 
+**適用於：** SQL Server、SQL Database 
  
  指定必須從資料表傳回資料範例。 該範例可能只是近似資料。 這個子句可用於 SELECT 或 UPDATE 陳述式中的任何主要或聯結資料表。 TABLESAMPLE 不能利用檢視表來指定。  
   
@@ -256,7 +256,7 @@ FROM { <table_source> [ ,...n ] }
  這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了產生隨機數字所使用的常數整數運算式。 *repeat_seed* 是 **bigint**。 如果未指定 *repeat_seed*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會隨機指派一個值。 針對特定的 *repeat_seed*值，只要尚未對資料表套用任何變更，取樣結果一律會相同。 *repeat_seed* 運算式必須評估為大於零的整數。  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 子句
-**適用對象**：SQL 資料倉儲
+**適用於：** SQL 資料倉儲
 
  指定必須從資料表傳回資料範例。 該範例可能只是近似資料。 這個子句可用於 SELECT 或 UPDATE 陳述式中的任何主要或聯結資料表。 TABLESAMPLE 不能利用檢視表來指定。 
 

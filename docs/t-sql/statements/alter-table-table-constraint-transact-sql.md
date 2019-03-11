@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327389"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227150"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54327389"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -163,7 +163,7 @@ ms.locfileid: "54327389"
   
  可以指定給 FOREIGN KEY 條件約束和 CHECK 條件約束。 如果條件約束指定了這個子句，當複寫代理程式執行插入、更新或刪除作業時，不會強制執行這個條件約束。  
 
- CONNECTION 指定允許所指定邊緣條件約束連線的節點資料表配對。  
+ CONNECTION 指定允許所指定邊緣條件約束連線的節點資料表配對。 ON DELETE 指定當 Edge 資料表中透過邊緣連線的節點遭到刪除時，要對此 Edge 資料表中資料列採取的動作。 
  
  DEFAULT  
  指定資料行的預設值。 您可以利用 DEFAULT 定義來提供現有資料列之新資料行的值。 您不能將 DEFAULT 定義新增至含 **timestamp** 資料類型、IDENTITY 屬性、現有的 DEFAULT 定義或繫結預設值的資料行。 如果資料行有現有的預設值，就必須先卸除預設值，才能加入新預設值。 如果使用者定義的類型資料行指定了預設值，該類型應該支援將 *constant_expression* 隱含地轉換成使用者定義的類型。 若要維護與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的相容性，您可以將條件約束名稱指派給 DEFAULT。  
