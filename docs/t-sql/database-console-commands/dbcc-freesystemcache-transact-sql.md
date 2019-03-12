@@ -22,15 +22,15 @@ helpviewer_keywords:
 - freeing unused cache entries
 - cleaning unused cache entries
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a00de2fba9416b4ec64dd218fe830ad7cb4212c5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955839"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685675"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
