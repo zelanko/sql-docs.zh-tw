@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 6c41910b17744a0ff0c86e41c321fae67d59d3a1
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305356"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756713"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -103,6 +103,7 @@ ms.locfileid: "57305356"
 |參數  |描述 |
 |---------|---------|
 |**getServerListFrom** | 您的清查。 可能的值為**SqlServer**並**CSV**。<br/>如需詳細資訊，請參閱 <<c0> [ 建立的 SQL 伺服器清查](#create-inventory)。 |
+|**csvPath** | 您的 CSV 清查檔案的路徑。  使用的時才**getServerListFrom**設為**CSV**。 |
 |**serverName** | 清查時使用的 SQL Server 執行個體名稱**SqlServer**中**getServerListFrom**參數。 |
 |**databaseName** | 裝載清查資料表的資料庫。 |
 |**AssessmentName** | DMA 評估的名稱。 |

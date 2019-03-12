@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DBCC statement syntax information
 - DBCC HELP statement
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 6f12c565bfb53c5d22dcb4255482d7e1c1713838
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81523c69052a89b5a94c170c65be077ba17e56c6
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797336"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685175"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

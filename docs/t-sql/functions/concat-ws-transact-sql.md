@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6148233259bd985aad2348359132cfa5cad93370
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5a42860eeab0c406ace2c2d2715e375e76220f44
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305326"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578818"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -64,7 +64,7 @@ Null 值在串連期間會被 `CONCAT_WS` 忽略，而且不添加分隔符號�
 ## <a name="examples"></a>範例   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  使用分隔符號串連值
-此範例會從 sys.databases 資料表中串連三個資料行，並用 `- ` 隔開每個值。   
+此範例會從 sys.databases 資料表中串連三個資料行，並用 `-` 隔開每個值。   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo

@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616679"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578288"
 ---
 # <a name="sql-data-developer"></a>SQL 資料開發人員
 若要建立資料中心的解決方案，跨行動裝置和桌上型電腦的網頁伺服器、 企業伺服器及雲端使用 Microsoft SQL 資料平台。  
@@ -28,7 +28,7 @@ ms.locfileid: "52616679"
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)： 在開發期間的使用 LocalDB，撰寫和測試而不需要管理完整的伺服器執行個體的 SQL Server 的 TRANSACT-SQL 程式碼。
 
 ## <a name="sql-data-tools"></a>SQL 資料工具
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) ： 使用 SSDT 來建置關聯式資料庫、 Azure SQL database、 Integration Services 封裝、 Analysis Services 資料模型和 Reporting Services 報告。
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) ： 使用 SSDT 來建置關聯式資料庫、 Azure SQL database、 Integration Services 封裝、 Analysis Services 資料模型和 Reporting Services 報告。
 * [SQL Server 管理工具](../ssms/download-sql-server-management-studio-ssms.md)： 使用 SSMS 設定、 監視及管理 SQL Server 執行個體。
 
 ## <a name="sql-data-access"></a>SQL 資料存取

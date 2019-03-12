@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256373"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579098"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>使用格式檔案將資料表資料行對應至資料檔欄位 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 
 ```
 修改的格式檔案現在會反映：
-* `myRemap.bcp` 中的第一個資料欄位會對應到第一個資料行 ` myRemap.. PersonID`
+* `myRemap.bcp` 中的第一個資料欄位會對應到第一個資料行 `myRemap.. PersonID`
 * `myRemap.bcp` 中的第二個資料欄位會對應到第三個資料行 `myRemap.. LastName`
 * `myRemap.bcp` 中的第三個資料欄位會對應到第二個資料行 `myRemap.. FirstName`
-* `myRemap.bcp` 中的第四個資料欄位會對應到第四個資料行 ` myRemap.. Gender`
+* `myRemap.bcp` 中的第四個資料欄位會對應到第四個資料行 `myRemap.. Gender`
 
 ### 建立 XML 格式檔案 <a name="xml_format_file"></a>  
 如需詳細資訊，請參閱 [XML 格式檔案 (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 。  下列命令將使用 [bcp 公用程式](../../tools/bcp-utility.md) ，根據 `myRemap.xml`的結構描述建立 XML 格式檔案 `myRemap`。  另外還會使用限定詞 `c` 來指定字元資料，使用 `t,` 來指定逗號作為欄位結束字元，並使用 `T` 來指定使用整合式安全性的信任連接。  必須使用 `x` 限定詞來產生 XML 格式檔案。  請在命令提示字元之下，輸入下列命令：

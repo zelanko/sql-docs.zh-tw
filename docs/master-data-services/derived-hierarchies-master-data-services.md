@@ -15,12 +15,12 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2158ebe21779866fbdc3c356164eb3a17d1eed04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 126ebfadfea6b67c0627984bac34b8925d766771
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767810"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736791"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>衍生階層 (Master Data Services)
 
@@ -68,7 +68,7 @@ ms.locfileid: "52767810"
  這種類型的階層可防止您將成員移到無效的層級。 例如，您可以將某個子類別目錄 Road Bikes 中的 Road-650 自行車移到另一個子類別目錄 Mountain Bikes。 您無法像 1 {Bikes} 一樣直接移動類別目錄底下的 Road-650。 每當您在階層樹狀結構中移動成員時，該成員的網域屬性值都會隨之變更，以反映這個移動作業。  
   
 ## <a name="notes"></a>注意  
- 衍生階層樹狀結構中的所有成員都會依照代碼來排序。 您無法變更排序次序。  
+ 衍生的階層樹狀結構中的所有成員會依照 ID 都排序 您無法變更排序次序。  
   
  如果成員的網域屬性為空白，而且此屬性用於衍生階層，則該成員不會顯示在階層中。 建立商務規則來要求填入屬性。 如需詳細資訊，請參閱[要求屬性值 &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)。  
   

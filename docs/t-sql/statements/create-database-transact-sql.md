@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 建立 SQL Server、Azure SQL Database、Azure SQL 資料倉儲及 Analytics Platform System 的資料庫語法
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bcbd86b04acf394bc9909369968f552e08a0c22
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 81464ed0bdb3246b805a0c44f17baa9fdeaf59e5
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828218"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683688"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1258,7 +1258,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 - 伺服器層級主體登入
 - 本機 Azure SQL Server 的 Azure AD 系統管理員
-- `dbmanager` 資料庫角色成員的登入
+- `dbcreator` 資料庫角色成員的登入
 
 ## <a name="examples"></a>範例
 
@@ -1330,7 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 **適用於：** 針對「計算第 2 代」最佳化
 
-資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區，或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。壓縮成資料行存放區格式的資料沒有大小限制，因此不受 MAXSIZE 限制。
+資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表、資料行存放區索引的差異存放區，或叢集資料行存放區索引上非叢集索引的資料，其大小不可超過 MAXSIZE。壓縮成資料行存放區格式的資料沒有大小限制，因此不受 MAXSIZE 限制。
 
 SERVICE_OBJECTIVE 指定效能等級。 如需 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 服務目標的詳細資訊，請參閱[效能層級](https://azure.microsoft.com/documentation/articles/performance-tiers/)。
 

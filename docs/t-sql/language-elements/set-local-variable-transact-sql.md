@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c046b2c2288264062f9f837c7a2bd3b74de83c35
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425863"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572821"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 *udt_name*  
 Common Language Runtime (CLR) 使用者定義型別的名稱。  
   
-{ **.** | **::** }  
+`{ . | :: }`  
 指定 CLR 使用者自訂類型的方法。 對於執行個體 (非靜態) 方法，請使用句點 (**.**)。 對於靜態方法，請使用兩個冒號 (**::**)。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
   
 _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
@@ -91,7 +91,7 @@ _method_name_ **(** _argument_ [ **,**... *n* ] **)**
 *mutator_method*  
 組件中可以變更物件狀態的方法。 SQLMethodAttribute.IsMutator 會套用到這個方法。  
   
-{ **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+`{ += | -= | *= | /= | %= | &= | ^= | |= }`  
 複合指派運算子：  
   
  +=              加並指派  
@@ -166,7 +166,7 @@ FOR *select_statement*
 READ ONLY  
 防止利用這個資料指標來更新。 UPDATE 或 DELETE 陳述式中的 WHERE CURRENT OF 子句無法參考這個資料指標。 這個選項會覆寫要更新之資料指標的預設功能。 這個關鍵字有別於先前的 READ_ONLY，READ 和 ONLY 之間是空格，而不是底線。  
   
-UPDATE [OF *column_name*[ **,**... *n* ] ]  
+`UPDATE [OF column_name[ ,... n ] ]`  
 在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [**,**...*n*]，則只允許修改所列出的資料行。 未提供任何清單時，除非資料指標已定義為 READ_ONLY，否則可以更新所有資料行。  
   
 ## <a name="remarks"></a>Remarks  

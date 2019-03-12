@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82df9a4dc4a7abce935e87e515cf63f71af0e4b7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d3f9c16399b47af10a882e61c9f04278479748cb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256783"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579008"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>使用格式檔案略過資料欄位 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 
 修改的格式檔案現在會反映：
 * 4 個資料欄位
-* `myTestSkipField.bcp` 中的第一個資料欄位會對應到第一個資料行、 ` myTestSkipField.. PersonID`
+* `myTestSkipField.bcp` 中的第一個資料欄位會對應到第一個資料行、 `myTestSkipField.. PersonID`
 * `myTestSkipField.bcp` 中的第二個資料欄位未對應到任何資料行。
 * `myTestSkipField.bcp` 中的第三個資料欄位會對應到第二個資料行、 `myTestSkipField.. FirstName`
 * `myTestSkipField.bcp` 中的第四個資料欄位會對應到第三個資料行、 `myTestSkipField.. LastName`

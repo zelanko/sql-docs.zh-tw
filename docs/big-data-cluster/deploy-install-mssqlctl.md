@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0805eabcdeefc8827a55e2469cb4d77b26347c5
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: a355d8281acf02919f559f8ce9d4f33c923f5168
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227290"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756623"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>安裝 mssqlctl 來管理 SQL Server 2019 巨量資料叢集
 
@@ -36,10 +36,15 @@ ms.locfileid: "57227290"
 
 1. 如果您有任何舊版**mssqlctl**安裝，請務必要解除安裝**mssqlctl**第一次，然後再安裝最新版本。
 
+   如果您對應至 CTP 版本 2.2 或更低的 unisntalling mssqlctl 執行：
    ```powershell
    pip3 uninstall mssqlctl
    ```
-
+   
+   CTP2.3 或更高版本的執行：
+   ```powershell
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   ```
 1. 安裝**mssqlctl**使用下列命令：
 
    ```powershell
@@ -66,8 +71,14 @@ ms.locfileid: "57227290"
 
 1. 如果您有任何舊版**mssqlctl**安裝，請務必要解除安裝**mssqlctl**第一次，然後再安裝最新版本。
 
+   如果您對應至 CTP 版本 2.2 或更低的 unisntalling mssqlctl 執行：
    ```bash
    pip3 uninstall mssqlctl
+   ```
+   
+   CTP2.3 或更高版本的執行：
+   ```bash
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 1. 安裝**mssqlctl**使用下列命令：

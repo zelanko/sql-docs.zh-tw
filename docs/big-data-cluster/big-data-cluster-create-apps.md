@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017824"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756633"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式
 
 本文說明如何部署和管理 R 和 Python 指令碼中的 SQL Server 2019 巨量資料叢集 （預覽） 的應用程式。
- 
-## <a name="whats-new-and-improved"></a>全新和改進的功能 
+
+## <a name="whats-new-and-improved"></a>全新和改進的功能
 
 - 單一命令列公用程式來管理叢集和應用程式。
 - 簡化應用程式部署，同時提供更精確地控制透過規格的檔案。
@@ -80,13 +80,12 @@ mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 或 Minikube
 
 如果您使用 Kubeadm 或 Minikube 執行下列命令來取得登入到叢集的 IP 位址
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>建立應用程式
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 下列命令會顯示此命令可能如下所示的範例：
 
-這是假設您有稱為檔案`spec.yaml`內`addpy`資料夾。 `addpy`資料夾包含`add.py`並`spec.yaml``spec.yaml`規格檔案`add.py`應用程式。
+這是假設您有稱為檔案`spec.yaml`內`addpy`資料夾。
+`addpy`資料夾包含`add.py`並`spec.yaml``spec.yaml`規格檔案`add.py`應用程式。
 
 
-`add.py` 會建立下列的 python 應用程式： 
+`add.py` 會建立下列的 python 應用程式：
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ result=add(x,y)
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ mssqlctl app create --spec ./addpy
 mssqlctl app list
 ```
 
-如果部署未完成您應該會看到`state`顯示`WaitingforCreate`在下列範例所示： 
+如果部署未完成您應該會看到`state`顯示`WaitingforCreate`在下列範例所示：
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ mssqlctl app list
 
 部署成功之後，您應該會看到`state`變更為`Ready`狀態：
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 您應該會看到類似下列範例輸出：
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 如果執行成功，您應該會看到您的輸出，因為您在建立應用程式時指定。 以下是一個範例。
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 ## <a name="create-an-app-skeleton"></a>建立應用程式基本架構
 
-Init 命令會提供與部署應用程式需要相關成品的 scaffold。 下列範例會建立 hello，您可以藉由執行下列命令。
+Init 命令提供的 scaffold 才能部署應用程式與相關的成品。 下列範例會建立 hello，您可以藉由執行下列命令。
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-這會建立名為 hello 的資料夾。  您可以移至目錄，並檢查資料夾中產生的檔案。 spec.yaml 定義應用程式，例如名稱、 版本和原始檔的程式碼。 您可以編輯以變更名稱、 版本、 輸入和輸出的規格。
+這會建立名為 hello 的資料夾。  您可以`cd`到目錄，並檢查資料夾中產生的檔案。 spec.yaml 定義應用程式，例如名稱、 版本和原始檔的程式碼。 您可以編輯以變更名稱、 版本、 輸入和輸出的規格。
 
 以下是範例的輸出資料夾中，您會看到 init 指令
 
@@ -255,7 +255,7 @@ spec.yaml
 
 描述命令提供應用程式，包括您的叢集中的結束點的詳細的資訊。 這通常是由應用程式開發人員建置應用程式使用 swagger 的用戶端，並使用 web 服務的應用程式互動以 RESTful 方式。
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ spec.yaml
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>刪除應用程式

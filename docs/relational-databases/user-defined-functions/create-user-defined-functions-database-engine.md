@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515485"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579711"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>建立使用者定義函數 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52515485"
   
 -   使用者定義函數不能用來執行修改資料庫狀態的動作。  
   
--   使用者定義函式不得包含具有資料表當做其目標的 `OUTPUT INTO` 子句。  
+-   使用者定義函式不得包含具有資料表作為其目標的 `OUTPUT INTO` 子句。  
   
 -   使用者定義函數無法傳回多個結果集。 如果您需要傳回多個結果集，請使用預存程序。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52515485"
   
 ###  <a name="Security"></a> Permissions 
 
-需要資料庫中的 `CREATE FUNCTION` 權限，以及此函式建立所在結構描述上的 `ALTER` 權限。 如果此函式指定使用者定義型別，則需要該型別的 `EXECUTE` 權限。  
+需要資料庫中的 `CREATE FUNCTION` 權限，以及建立此函式所在結構描述上的 `ALTER` 權限。 如果此函式指定使用者定義型別，則需要該型別的 `EXECUTE` 權限。  
   
 ##  <a name="Scalar"></a> 純量函數  
  下列範例會在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中建立多重陳述式**純量函式 (純量 UDF)**。 這個函數使用了一個輸入值 `ProductID`，並傳回單一資料值，也就是指定產品的彙總存貨量。  
@@ -200,10 +200,10 @@ FROM dbo.ufn_FindReports(1);
 > [!IMPORTANT]
 > MSTVF 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始具有固定的基數估計值 100，在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中則為 1。    
 > 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，最佳化使用 MSTVF 的執行計畫可以利用交錯執行，這會導致使用實際的基數，而不是上述啟發學習法。     
-> 如需詳細資訊，請參閱[交錯執行多重陳述式資料表值函式](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
+> 如需詳細資訊，請參閱[交錯執行多重陳述式資料表值函式](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)。
 
 > [!NOTE]  
-> 在預存程序或使用者定義函數中傳遞參數，或在批次陳述式中宣告和設定變數時，不接受 ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)**，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 `INSERT` 或 `UPDATE` 陳述式會執行成功。
+> 在預存程序或使用者定義函數中傳遞參數，或在批次陳述式中宣告和設定變數時，不接受 ANSI_WARNINGS。 例如，若將變數定義為 **char(3)**，然後將其設為大於三個字元的值，資料便會被截斷成定義的大小，且 `INSERT` 或 `UPDATE` 陳述式會執行成功。
 
 ## <a name="see-also"></a>另請參閱  
  [使用者定義的函式](../../relational-databases/user-defined-functions/user-defined-functions.md)     

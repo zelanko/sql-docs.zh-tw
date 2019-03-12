@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7752dc7d83424be107190c01abfd99a787e5fba
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 7561c69a9a0e0186f9564441839816247797998b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803143"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578228"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ string
 以字串引數的類型傳回字元運算式，其中空白字元 `char(32)` 或其他指定的字元會從兩端移除。 如果輸入字串為 `NULL`，傳回 `NULL`。
 
 ## <a name="remarks"></a>Remarks   
-根據預設，`TRIM` 函數會從兩端移除空白字元 `char(32)`。 此行為相當於 `LTRIM(RTRIM(@string))`。 具有指定字元之 `TRIM ` 函數的行為與 `REPLACE` 函數的行為相同，其中會將開頭或結尾的字元取代為空字串。
+根據預設，`TRIM` 函數會從兩端移除空白字元 `char(32)`。 此行為相當於 `LTRIM(RTRIM(@string))`。 具有指定字元之 `TRIM` 函數的行為與 `REPLACE` 函數的行為相同，其中會將開頭或結尾的字元取代為空字串。
 
 
 ## <a name="examples"></a>範例

@@ -23,12 +23,12 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9bbc09590943948d27ebd989b38b6ea9f2c94559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa99cc5549d463b48b8eff8989df312abf5d4f0f
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844946"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736803"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +64,10 @@ RECONFIGURE [ WITH OVERRIDE ]
  RECONFIGURE 權限預設給 ALTER SETTINGS 權限的被授與者。 **sysadmin** 和 **serveradmin** 固定伺服器角色會隱含地持有這個權限。    
     
 ## <a name="examples"></a>範例    
- 下列範例將 `recovery interval` 組態選項的上限設為 `75` 分鐘，並利用 `RECONFIGURE WITH OVERRIDE` 來安裝它。 不建議您使用超出 60 分鐘的復原間隔，依預設，不會接受這個值。 不過，由於指定了 `WITH OVERRIDE` 選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會檢查指定的值 (`90`) 是否為 `recovery interval` 組態選項的有效值。    
+ 下列範例將 `recovery interval` 組態選項的上限設為 `75` 分鐘，並利用 `RECONFIGURE WITH OVERRIDE` 來安裝它。 不建議您使用超出 60 分鐘的復原間隔，依預設，不會接受這個值。 不過，由於指定了 `WITH OVERRIDE` 選項，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不會檢查指定的值 (`75`) 是否為 `recovery interval` 組態選項的有效值。    
     
 ```    
-EXEC sp_configure 'recovery interval', 75'    
+EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    
 ```    

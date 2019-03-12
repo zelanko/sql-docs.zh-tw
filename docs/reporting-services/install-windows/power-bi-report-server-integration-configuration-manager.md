@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029577"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556240"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50029577"
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員中的 [Power BI 整合] 頁面是用來向所需的 Azure Active Directory (AD) 受管理租用戶註冊報表伺服器，以允許報表伺服器的使用者將支援的報表項目釘選到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 儀表板。 如需您可以釘選的支援項目清單，請參閱 [將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)。
 
-##  <a name="bkmk_requirements"></a> Power BI 整合的需求
+## <a name="bkmk_requirements"></a> Power BI 整合的需求
 
 除了使用中的網際網路連線，您還可以瀏覽至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服務，以下是完成 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]整合的需求。
 
@@ -44,7 +44,7 @@ ms.locfileid: "50029577"
 
     notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
-##  <a name="bkmk_steps2integrate"></a> 整合並註冊報表伺服器
+## <a name="bkmk_steps2integrate"></a> 整合並註冊報表伺服器
 
 從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成下列步驟。 如需詳細資訊，請參閱 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
@@ -61,7 +61,7 @@ ms.locfileid: "50029577"
 
 5. 在 [結果] 視窗中選取 [複製] 按鈕，將註冊詳細資料複製到 Windows 剪貼簿，以便您加以儲存供日後參考。
 
-##  <a name="bkmk_unregister"></a> 取消註冊 Power BI
+## <a name="bkmk_unregister"></a> 取消註冊 Power BI
 
 **取消註冊︰** 從報表伺服器取消註冊 Azure Active Directory 會導致下列情形：
 
@@ -145,12 +145,16 @@ ms.locfileid: "50029577"
 
 ![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+
+## <a name="considerations-and-limitations"></a>考量與限制
+
+* 不支援病毒式和 government 租用戶。
 
 ## <a name="next-steps"></a>後續步驟
 
 [Power BI 整合的我的設定](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
-[Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[釘選到 Power BI 儀表板的 Reporting Services 項目](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[Power BI 儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
