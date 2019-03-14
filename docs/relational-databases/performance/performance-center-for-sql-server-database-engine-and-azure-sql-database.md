@@ -20,12 +20,12 @@ ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: d99971c4672413a7845c8ec3bdb4d9949a3b978f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: dcbf57bfed8a22c957487f82f4f4d0b2086cce89
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380829"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579500"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的效能中心
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53380829"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **查詢最佳化工具最佳化**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[USE HINT 查詢提示](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[統計資料](../../relational-databases/statistics/statistics.md)**|[何時更新統計資料](../statistics/statistics.md)<br />[更新統計資料](../../relational-databases/statistics/update-statistics.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[記憶體最佳化資料表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[原生編譯的預存程序](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[從原生編譯預存程序建立及存取 TempDB 中的資料表](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[針對記憶體最佳化雜湊索引常見效能問題進行疑難排解](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[示範：記憶體內部 OLTP 的效能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)**|[彈性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[智慧型查詢處理](../../relational-databases/performance/intelligent-query-processing.md)**|[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)|
   
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

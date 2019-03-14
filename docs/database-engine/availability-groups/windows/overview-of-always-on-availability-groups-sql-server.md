@@ -17,12 +17,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab315e41607d528a1d34be6e61a6344350eb240
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 69efd860fe91080960ffb12995bea675e4686878
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215255"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579660"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53215255"
  在 Windows 上針對 HA 部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，需要 Windows Server 容錯移轉叢集 (WSFC)。 給定可用性群組的每個可用性複本都必須位在相同 WSFC 的不同節點上。 唯一的例外狀況是在移轉至另一個 WSFC 叢集期間，可用性群組可以暫時跨兩個叢集。 
 
  >[!NOTE]
- >如需 Linux 上可用性群組的資訊，請參閱 [Linux 上 SQL Server 的 AlwaysOn 可用性群組](../../../linux/sql-server-linux-availability-group-overview.md)。 
+ >如需 Linux 上的可用性群組相關資訊，請參閱 [Always On availability group for SQL Server on Linux](../../../linux/sql-server-linux-availability-group-overview.md) (Linux 上 SQL Server 的 AlwaysOn 可用性群組)。 
 
  在 HA 組態中，對於您建立的每個可用性群組，系統都會建立一個叢集角色。 WSFC 叢集會監視此角色，以評估主要複本的健全狀況。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的仲裁會以 WSFC 叢集中的所有節點為基礎，而不論給定叢集節點是否裝載任何可用性複本。 相較於資料庫鏡像， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]沒有見證角色。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "53215255"
   
 -   **部落格：**  
   
-     [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：具備 HADRON 功能的資料庫工作者集區使用方式)  
+     [Always On - HADRON Learning Series:Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Always On - HADRON 學習系列：已啟用 HADRON 功能的資料庫背景工作集區使用方式)  
   
      [SQL Server Always On 小組部落格：官方 SQL Server Always On 小組部落格](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

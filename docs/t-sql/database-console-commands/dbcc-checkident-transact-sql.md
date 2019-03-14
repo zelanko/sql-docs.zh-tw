@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - identity values [SQL Server], reseeding
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c59313042ca91b1cf192ab140eb372ca7a0cf5c1
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 89545e2bb480dc038219a3724f500c43d4b01319
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800992"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736781"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -77,9 +77,9 @@ DBCC CHECKIDENT
   
 |DBCC CHECKIDENT 命令|進行的識別更正|  
 |-----------------------------|---------------------------------------------|  
-|DBCC CHECKIDENT ( *table_name*, NORESEED )|不重設目前的識別值。 DBCC CHECKIDENT 會傳回識別欄位目前的識別值和最大值。 如果這兩個值不同，則應該重設識別值以防止值序列中發生錯誤或出現間距。|  
-|DBCC CHECKIDENT ( *table_name* )<br /><br /> 中的多個<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果資料表目前識別值小於識別欄位所儲存的最大識別值，就會使用識別欄位中的最大值來加以重設。 請參閱稍後的＜例外＞一節。|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|目前的識別值設為 *new_reseed_value*。 如果建立好資料表之後並未插入任何資料列，或已經使用 TRUNCATE TABLE 陳述式來移除所有資料列，則執行 DBCC CHECKIDENT 之後所插入的第一個資料列就會使用 *new_reseed_value* 作為識別。<br /><br /> 如果資料列存在於資料表中，下一個資料列中會插入 *new_reseed_value* + [目前的遞增](../../t-sql/functions/ident-incr-transact-sql.md)值。 在版本 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和更舊版中，下一個插入的資料列使用 *new_reseed_value* 加上[目前的遞增](../../t-sql/functions/ident-incr-transact-sql.md)值。<br /><br /> 如果資料表不是空的，則將識別值設定為小於識別欄位中最大值的數字，可能會導致下列其中一種狀況：<br /><br /> -如果識別欄位有 PRIMARY KEY 或 UNIQUE 條件約束，則之後對資料表進行插入作業時會產生錯誤訊息 2627。 此錯誤是因為所產生的識別值會與現有值相衝突。<br /><br /> -如果沒有 PRIMARY KEY 或 UNIQUE 條件約束，則之後進行的插入作業會導致重複識別值。|  
+|DBCC CHECKIDENT ( *table_name*, NORESEED )|不重設目前的識別值。 DBCC CHECKIDENT 會傳回識別欄位目前的識別值和最大值。 如果這兩個值不同，則應該重設識別值以防止值序列中發生錯誤或間距。|  
+|DBCC CHECKIDENT ( *table_name* )<br /><br /> 中的多個<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|如果資料表目前的識別值小於識別欄位所儲存的最大識別值，就會利用識別欄位中的最大值來重設它。 請參閱稍後的＜例外＞一節。|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|目前的識別值設為 *new_reseed_value*。 如果建立好資料表之後並未插入任何資料列，或者已經使用 TRUNCATE TABLE 陳述式來移除所有資料列，則執行 DBCC CHECKIDENT 之後所插入的第一個資料列就會使用 *new_reseed_value* 作為識別。<br /><br /> 若資料表中有資料列，或已使用 DELETE 陳述式移除所有資料列，插入的下一列就會使用 *new_reseed_value* + [目前增量](../../t-sql/functions/ident-incr-transact-sql.md)值。<br /><br /> 如果資料表不是空的，則將識別值設定為小於識別欄位中最大值的數字，可能會導致下列其中一種狀況：<br /><br /> -如果識別欄位有 PRIMARY KEY 或 UNIQUE 條件約束，則之後對資料表進行插入作業時會產生錯誤訊息 2627，因為所產生的識別值會與現有值相衝突。<br /><br /> -如果沒有 PRIMARY KEY 或 UNIQUE 條件約束，則之後進行的插入作業會導致重複的識別值。|  
   
 ## <a name="exceptions"></a>例外狀況  
  下表列出 DBCC CHECKIDENT 不會自動重設目前識別值的狀況，並提供重設值的方法。  
@@ -136,8 +136,8 @@ GO
 ```  
   
 ### <a name="c-forcing-the-current-identity-value-to-a-new-value"></a>C. 將目前識別值強制設為新的值  
- 下列範例會強制將 `AddressTypeID` 資料表中 `AddressType` 資料行內的目前識別值設定為 10。 因為資料表目前有資料列，所以下一個插入的資料列將會使用 11 的值，也就是針對資料行值定義的目前增量值加 1。  
-  
+ 下列範例會強制將 `AddressTypeID` 資料表中 `AddressType` 資料行內的目前識別值設定為 10。 因為資料表目前有資料列，所以下一個插入的資料列會使用 11 為值，也就是為資料行定義的新目前識別值加 1 (這是資料行的增量值)。  
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -167,4 +167,5 @@ GO
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
+
   

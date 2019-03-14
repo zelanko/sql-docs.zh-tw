@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356020"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579388"
 ---
 # <a name="subqueries-sql-server"></a>子查詢 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 此陳述式不能轉換成聯結。 類似的不相等聯結則具有不同意義：它會在其他不屬於已完工自行車的部分子類別中，尋找產品名稱。      
 
 ### <a name="upsert"></a> UPDATE、DELETE 與 INSERT 陳述式中的子查詢
-子查詢可以巢狀於 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT ` 資料操作 (DML) 陳述式中。    
+子查詢可以巢狀於 `UPDATE`、`DELETE`、`INSERT` 和 `SELECT` 資料操作 (DML) 陳述式中。    
 
 下列範例將 *Production.Product*資料表中 *ListPrice* 資料行的值加倍。 `WHERE` 子句中的子查詢會參考 *Purchasing.ProductVendor* 資料表，以將在 *Product* 資料表中更新的資料列限制為由 *BusinessEntity* 1540 所供應的資料列。
 

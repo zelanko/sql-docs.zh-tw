@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605686"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756673"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>課程 1-4 - 新增套件設定
 在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
@@ -32,6 +32,8 @@ ms.locfileid: "47605686"
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 知道 DataTransferConfig.dtsConfig 和 LoadXMLData.dtsConfig 是 DataTransfer 和 LoadXMLData 封裝的相依性，因此當您在下一課中建立部署配套時，將會自動包含組態檔。  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>若要為 DataTransfer 封裝建立間接組態  
+
+請檢查專案目前的部署模型，如有需要，請將其設為 [套件部署模型]。 在 [專案] 功能表上，按一下 [轉換為套件部署模型]
   
 1.  在 [方案總管] 中，按兩下 DataTransfer.dtsx。  
   
@@ -130,7 +132,7 @@ ms.locfileid: "47605686"
 12. 在 [Package Configuration Organizer (封裝組態組合管理)] 對話方塊中，確認第一個列出的是「LoadXMLData 環境變數組態」，第二個列出的是「LoadXMLData 組態」，然後按一下 [關閉]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 5：測試更新的封裝](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+[步驟 5：測試更新的套件](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [封裝組態](../integration-services/packages/package-configurations.md)  

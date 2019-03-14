@@ -1,7 +1,7 @@
 ---
 title: 資料庫檔案立即初始化 | Microsoft 文件
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204917"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683598"
 ---
 # <a name="database-file-initialization"></a>資料庫檔案初始化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +52,17 @@ ms.locfileid: "53204917"
   
 授與帳戶「 `Perform volume maintenance tasks` 」權限：  
   
-1.  在即將建立備份檔案的電腦上，開啟 [本機安全性原則] 應用程式 (`secpol.msc`)。  
+1.  在要建立資料檔案的電腦上，開啟 [本機安全性原則] 應用程式 (`secpol.msc`)。  
   
 2.  在左窗格中，展開 [本機原則] ，然後按一下 [使用者權限指派] 。  
   
 3.  在右窗格中，按兩下 [執行磁碟區維護工作]。  
   
-4.  按一下 [新增使用者或群組]  ，新增用於備份的任何使用者帳戶。  
+4.  按一下 [新增使用者或群組] 並新增執行 SQL Server 服務的帳戶。  
   
 5.  按一下 [套用] ，然後關閉所有 [本機安全性原則]  對話方塊。  
+
+1. 重新啟動 SQL Server 服務。
 
 > [!NOTE]
 > 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此權限可在安裝期間進行安裝時授與給服務帳戶。 如果使用[命令提示字元安裝](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)，請新增 /SQLSVCINSTANTFILEINIT 引數，或在[安裝精靈](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中核取 [對 SQL Server Database Engine 服務授與「執行磁碟區維護工作」權限] 方塊。
@@ -71,15 +73,11 @@ ms.locfileid: "53204917"
 ## <a name="remarks"></a>Remarks
 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶被授與 *SE_MANAGE_VOLUME_NAME*，類似如下的告知性訊息會在啟動時記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔： 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務啟動帳戶**未**被授與 *SE_MANAGE_VOLUME_NAME*，類似如下的告知性訊息會在啟動時記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔： 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **適用於：**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 開始、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 

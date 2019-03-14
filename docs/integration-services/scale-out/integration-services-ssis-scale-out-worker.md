@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419813"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578808"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 相應放大背景工作
 
 Scale Out Worker 會執行 Scale Out Worker 服務，以從 Scale Out Master 提取執行工作。 然後，背景工作會使用 `ISServerExec.exe` 在本機執行套件。
 
 ## <a name="configure-the-scale-out-worker-service"></a>設定 Scale Out Worker 服務
-您可以使用 ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 檔案來設定 Scale Out Worker 服務。 更新設定檔之後，必須重新啟動服務。
+您可以使用 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 檔案來設定 Scale Out Worker 服務。 更新設定檔之後，必須重新啟動服務。
 
 |組態  |Description  |預設值|
 |---------|---------|---------|
@@ -36,16 +36,16 @@ Scale Out Worker 會執行 Scale Out Worker 服務，以從 Scale Out Master 提
 |StoreName|背景工作憑證所在的存放區名稱。|My|
 |AgentHeartbeatInterval|相應放大背景工作的活動訊號間隔。|00:01:00|
 |TaskHeartbeatInterval|相應放大背景工作報告工作狀態的間隔。|00:00:10|
-|HeartbeatErrorTollerance|在最後一個成功的工作活動訊號時段後，如果收到活動訊號的錯誤回應，便會終止工作。|00:10:00|
+|HeartbeatErrorTolerance|在最後一個成功的工作活動訊號時段後，如果收到活動訊號的錯誤回應，便會終止工作。|00:10:00|
 |TaskRequestMaxCPU|相應放大背景工作要求工作的 CPU 上限。|70.0|
 |TaskRequestMinMemory|相應放大背景工作要求工作的記憶體 MB 下限。|100.0|
 |MaxTaskCount|相應放大背景工作可以保留的最大工作數目。|10|
-|LeaseInternval|相應放大背景工作保留的工作租用間隔。|00:01:00|
+|LeaseInterval|相應放大背景工作保留的工作租用間隔。|00:01:00|
 |TasksRootFolder|工作記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 資料夾路徑。 [帳戶] 是執行相應放大背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|Empty|
 |TaskLogLevel|相應放大背景工作的工作記錄層級。 (詳細資訊 0x01，資訊 0x02，警告 0x04，錯誤 0x08，進度 0x10，嚴重錯誤 0x20，稽核 0x40)|126 (資訊，警告，錯誤，進度，嚴重錯誤，稽核)|
 |TaskLogSegment|工作記錄檔的時間範圍。|00:00:00|
 |TaskLogEnabled|指定是否啟用工作記錄檔。|true|
-|ExecutionLogCacheFolder|用以快取封裝執行記錄檔的資料夾。 如果值空白，則會使用 ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 資料夾路徑。 [帳戶] 是執行相應放大背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|Empty|
+|ExecutionLogCacheFolder|用以快取封裝執行記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 資料夾路徑。 [帳戶] 是執行相應放大背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|Empty|
 |ExecutionLogMaxBufferLogCount|記憶體中一個執行記錄檔緩衝的最大快取執行記錄檔數目。|10000|
 |ExecutionLogMaxInMemoryBufferCount|執行記錄檔的記憶體中的最大執行記錄檔緩衝數目。|10|
 |ExecutionLogRetryCount|執行記錄失敗時的重試次數。|3|

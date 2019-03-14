@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125421"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527121"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>啟用或停用 Always On 可用性群組功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "54125421"
 ###  <a name="SQLCM2Procedure"></a> 使用 SQL Server 組態管理員  
  **啟用 AlwaysOn 可用性群組**  
   
-1.  連接到 Windows Server 容錯移轉叢集 (WSFC) 節點，此節點裝載您要啟用 AlwaysOn 可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
+1.  連線到 Windows Server 容錯移轉叢集 (WSFC) 節點，其中裝載了您要啟用 AlwaysOn 可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
 2.  指向 [開始]  功能表上的 [所有程式] ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 [組態工具] ，再按一下 [SQL Server 組態管理員] 。  
   
@@ -194,7 +194,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="SQLCM3Procedure"></a> 使用 SQL Server 組態管理員  
  **停用 AlwaysOn**  
   
-1.  連接到 Windows Server 容錯移轉叢集 (WSFC) 節點，此節點裝載您要停用 AlwaysOn 可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
+1.  連線到 Windows Server 容錯移轉叢集 (WSFC) 節點，其中裝載了您要停用 AlwaysOn 可用性群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
 2.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
@@ -243,7 +243,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  如果您在停用 AlwaysOn 之前未移除本機可用性複本，請針對裝載可用性複本的伺服器執行個體刪除 (卸除) 每個可用性群組。 如需刪除可用性群組的相關資訊，請參閱[移除可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)。  
   
-2.  若要移除遺留的中繼資料，在做為原始 WSFC 叢集一部分的伺服器執行個體上，刪除 (卸除) 每個受影響的可用性群組。  
+2.  若要移除遺留的中繼資料，請在屬於原始 WSFC 的伺服器執行個體上，刪除 (卸除) 每個受影響的可用性群組。  
   
 3.  任何主要資料庫仍會繼續可供所有連接存取，但是主要和次要資料庫之間的資料同步處理會停止。  
   

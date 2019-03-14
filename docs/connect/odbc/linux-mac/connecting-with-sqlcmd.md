@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512543"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579258"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -C 信任伺服器憑證。  
 
-- -d *database_name*問題`USE ` *database_name*陳述式，當您啟動`sqlcmd`。  
+- -d *database_name*問題`USE` *database_name*陳述式，當您啟動`sqlcmd`。  
 
 - -D 使傳遞至 `sqlcmd` -S 選項的值解譯為資料來源名稱 (DSN)。 如需詳細資訊，請參閱本主題結尾處的＜`sqlcmd` 和 `bcp` 中的 DSN 支援＞。  
   
@@ -74,7 +74,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 - -m *error_level* 控制哪些錯誤訊息會傳送至 stdout。  
   
-- **-M**_多重\_容錯移轉_  
+- **-M**_多重子網路\_容錯移轉_  
 在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的容錯移轉偵測與連線。 如果未指定 **-M**，則會關閉 **-M**。 如需詳細資訊[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，請參閱 < [ODBC Driver on Linux 和 macOS： 高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -210,13 +210,13 @@ Linux 或 macOS 上的 DSN 支援下列項目：
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database =**_資料庫\_名稱_  
+-   **Database=**_資料庫\_名稱_  
   
 -   **驅動程式 = ODBC Driver 11 for SQL Server**或**驅動程式 = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =**_伺服器\_名稱\_或是\_IP\_位址_  
+-   **Server=**_伺服器\_名稱\_或\_IP\_位址_  
   
 -   **Trusted_Connection=yes**|**no**  
   

@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020419"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401790"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有效位數、小數位數和長度 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "56020419"
 -   兩個運算式都是 **decimal**。  
 -   一個運算式為 **decimal**，另一個運算式為優先順序低於 **decimal** 的資料類型。  
   
-運算元運算式表示成運算式 e1 (有效位數是 p1，小數位數是 s1) 和運算式 e2 (有效位數是 p2，小數位數是 s2)。 任何非 **decimal** 運算式的有效位數和小數位數，都是運算式資料類型的有效位數和小數位數。
+運算元運算式表示成運算式 e1 (有效位數是 p1，小數位數是 s1) 和運算式 e2 (有效位數是 p2，小數位數是 s2)。 任何不是 **decimal** 之運算式的有效位數和小數位數，都是定義給運算式資料類型的有效位數和小數位數。 函式 max(a,b) 的意思是：取 "a" 或 "b" 當中較大的值。 同樣地，min(a,b) 表示取 "a" 或 "b" 當中較小的值。
   
 |作業|結果有效位數|結果小數位數 *|  
 |---|---|---|

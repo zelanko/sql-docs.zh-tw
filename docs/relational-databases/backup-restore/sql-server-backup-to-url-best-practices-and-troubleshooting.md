@@ -11,12 +11,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2d0f3ffdb4c8c026ce12f2f347cbeae0548ede7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12716c1250d60cd59b9b8786c8f88dae7982473a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672777"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578518"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "51672777"
   
         若要解決此錯誤，請重新發出 **RESTORE** 陳述式並搭配指定 **BLOCKSIZE = 65536**。  
   
--   備份期間發生錯誤，因為 Blob 擁有使用中租用：失敗的備份活動可能會產生擁有使用中租用的 Blob。  
+-   含有使用中租用的 Blob 導致備份期間發生錯誤：失敗的備份活動可能會產生含有使用中租用的 Blob。  
   
      如果重新嘗試執行 Backup 陳述式，備份作業可能會失敗並出現類似以下的錯誤：  
   
@@ -152,7 +152,7 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
   
 如果您使用追蹤旗標 3051 開啟詳細資訊記錄，可能也會在記錄檔中看到下列資訊：  
   
-`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
  **預設 Proxy 設定未收取：**  
   

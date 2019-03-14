@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e7b0f75274504ce035d46e0277fc939ef74adda
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 093a70a8e9651271aa2a8df4641f6f1e568fc2a7
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334665"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756733"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安裝 SQL Server 2008 R2 的硬體和軟體需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -135,6 +135,25 @@ ms.locfileid: "57334665"
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 > 
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用於 SharePoint 產品的增益集  
+
+**Server Core 支援：**
+
+ Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016 及 Windows Server 2019 的 Server Core 安裝現在支援 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
+
+下列 Windows Server 版本支援在 Server Core 模式安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]：
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
+   | &nbsp; | &nbsp; |
+
+如需在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的詳細資訊，請參閱 [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md) (在 Server Core 上安裝 SQL Server)。  
+
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>32 位元用戶端作業系統支援的功能  
  Windows 用戶端作業系統，例如 Windows 10 和 Windows 8.1 都有 32 位元或 64 位元架構。   64 位元用戶端作業系統支援所有的 SQL Server 功能。 在支援的 32 位元用戶端作業系統上，Microsoft 支援下列功能︰  

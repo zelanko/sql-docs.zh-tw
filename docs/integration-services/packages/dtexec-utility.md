@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e213eb323de92abf048bdd94e8e2463f42f5cb3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591422"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401880"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
   **dtexec** 命令提示字元公用程式可用於設定及執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 **dtexec** 公用程式可存取所有封裝組態及執行功能，例如參數、連線、屬性、變數、記錄與進度指標。 **dtexec** 公用程式可讓您從下列來源載入封裝： [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器、.ispac 專案檔案、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。  
@@ -38,6 +38,8 @@ ms.locfileid: "53591422"
 -   [語法與規則](#syntaxRules)  
   
 -   [使用 xp_cmdshell 的 dtexec](#cmdshell)  
+
+-   [從 Bash 使用 dtexec](#bash)
   
 -   [語法](#syntax)  
   
@@ -139,7 +141,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **重要！！** 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安裝的 **xp_cmdshell** 選項預設為停用。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
-  
+
+##  <a name="bash"></a> 從 Bash 使用 dtexec
+
+**Bash** 殼層是適用於 Linux 的熱門殼層。 也可用於 Windows。 您可以從 Bash 提示執行 dtexec。 請注意，分號 (`;`) 在 Bash 中是命令分隔符號運算子。 這在使用 `/Conn[ection]`、`/Par[arameter]` 或 '`/Set` 選項將值傳入套件時特別重要，因為這些選項使用分號來分隔所提供項目的名稱與值。 下列範例顯示了如何在使用 Bash 並將值傳入套件時，適當逸出分號及其他項目：
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> 語法  
   
 ```  

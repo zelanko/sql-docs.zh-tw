@@ -15,12 +15,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1497c56bc086c9067ed8caa859353f8fd1e6eec9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 298e0639aad54384b3586e27fcbd5d6223e646de
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201683"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578428"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 用戶端連接性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53201683"
   
  **下載 ADO.NET 與 .NET Framework 3.5 SP1 的連線修補程式：[https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)。  
  
- *下載新的適用於 SQL Server 的 Microsoft OLE DB 驅動程式：[https://www.microsoft.com/download/details.aspx?id=56730 ](https://www.microsoft.com/download/details.aspx?id=56730)。  
+ *下載新的 Microsoft OLE DB Driver for SQL Server：[https://www.microsoft.com/download/details.aspx?id=56730](https://www.microsoft.com/download/details.aspx?id=56730)。  
 
 > [!IMPORTANT]  
 >  若要連接到可用性群組接聽程式，用戶端必須使用 TCP 連接字串。  

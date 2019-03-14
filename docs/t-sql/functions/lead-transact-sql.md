@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa6df6038d13ffae258a2b71baaaa9b3415ebbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695806"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572831"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,7 +49,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  從取得數值的目前資料列轉寄資料列的數目。 若未加以指定，預設為 1。 *offset* 可以是資料行、子查詢或其他運算式，能算出正整數或可以明確地轉換為 **bigint**。 *offset* 不能是負值或分析函數。  
   
  *default*  
- 當 *scalar_expression* 在 *offset* 時，傳回的值為 NULL。 如果未指定預設值，會傳回 NULL。 *default* 可以是資料行、子查詢或其他運算式，但不能是分析函數。 *default* 的類型必須與 *scalar_expression* 相容。  
+ 當 *offset* 超過資料分割範圍時會傳回的值。 如果未指定預設值，會傳回 NULL。 *default* 可以是資料行、子查詢或其他運算式，但不能是分析函數。 *default* 的類型必須與 *scalar_expression* 相容。
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* 會將 FROM 子句產生的結果集分割成函數所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 在套用函數之前，*order_by_clause* 可指定資料順序。 當指定 *partition_by_clause* 時，即決定每一個分割區的次序。 *order_by_clause* 為必要項目。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
@@ -140,7 +140,7 @@ b           c           i
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>D：比較各季之間的值  
+### <a name="d-compare-values-between-quarters"></a>D.比較各季之間的值  
  下列範例示範 LEAD 函數。 查詢會獲得指定員工在後續日曆季的銷售配額值中的差異。 請注意，因為最後一列之後沒有可用的前置值，所以會使用預設值零 (0)。  
   
 ```sql  

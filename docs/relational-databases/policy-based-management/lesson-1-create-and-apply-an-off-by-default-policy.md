@@ -11,12 +11,12 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158617"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579524"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>第 1 課：建立和套用 Off By Default 原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "52158617"
   
 6.  在 [目標詳細資料] 區域中，您將會在錯誤發生時於 [訊息] 資料行中看到其他資訊。 在 [訊息] 資料行中，按一下 [檢視] 查看報表，其中包含所檢查之每個 Facet 屬性的檢查結果。 
 
-    ![檢視原則評估的結果 ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![檢視原則評估的結果](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  原則描述會顯示在頁面底部，而且 [其他說明] 區段會顯示您已針對此原則設定的超連結。 按一下訊息超連結，即可開啟您在建立此原則時指定的網頁。   
 

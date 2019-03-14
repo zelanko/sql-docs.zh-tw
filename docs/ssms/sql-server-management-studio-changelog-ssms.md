@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334835"
+ms.locfileid: "57401930"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ Preview 7 是 SSMS 18.0 的最新公開預覽版。 如需 SSMS 的最新正式�
   - 較小的下載大小
     - 目前的套件組合大小不到 SSMS 17.x 大小的一半 (~400 MB)。 當您將 IS 元件新增回 SSMS 時，此大小最終會成長一些，但不應該像之前一樣大。
   - SSMS 是以新的 VS 2017 獨立 Shell 為基礎
-    - 這表示一個新式 Shell (我們挑選的是 VS 2107 15.6.4)。 新的 Shell 會解除鎖定所有修復 SSMS 和 Visual Studio 的協助工具修正程式。
+    - 這意味著新式的 Shell (我們挑選的是 VS 2017 15.6.4)。 新的 Shell 會解除鎖定所有修復 SSMS 和 Visual Studio 的協助工具修正程式。
   - SSMS 協助工具改善
     - 為了解決所有工具 (SSMS、DTA 和分析工具) 中的協助工具問題，我們進行了大量的工作
   - SSMS 可以安裝在自訂資料夾中

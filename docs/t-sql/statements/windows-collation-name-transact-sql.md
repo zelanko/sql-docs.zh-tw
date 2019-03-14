@@ -1,7 +1,7 @@
 ---
 title: Windows 定序名稱 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827988"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572841"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "56827988"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* 指定 Windows 定序所用的基底定序規則。 基底定序規則涵蓋下列項目：
 
-- 指定字典排序時，要套用的排序規則。 排序規則根據字母或語言而定。
-- 儲存非 Unicode 字元資料所用的字碼頁。
+- 在指定了字典排序時，會套用的排序與比較規則。 排序規則根據字母或語言而定。
+- 用於儲存 **varchar** 資料的字碼頁。
 
 部份範例如下：
 
-- Latin1_General 或 French：兩者都使用字碼頁 1252。
+- Latin1\_General 或 French：兩者都使用字碼頁 1252。
 - Turkish：使用字碼頁 1254。
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI** 指定不區分大小寫，**CS** 指定區分大小寫。
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI** 指定不區分腔調字，**AS** 指定區分腔調字。
 
-*KanatypeSensitive*
+*KanatypeSensitive*  
 **Omitted** 指定不區分假名，**KS** 指定區分假名。
 
-*WidthSensitivity*
+*WidthSensitivity*  
 **Omitted** 指定不區分全半形，**WS** 指定區分全半形。
 
-**BIN** 指定要使用回溯相容的二進位排序次序。
+*VariationSelectorSensitivity*  
+**適用於**：[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** 指定使用字碼指標比較語意的二進位排序順序。
+[省略] 會指定不區分變化選取器，[VSS] 則指定區分變化選取器。
+
+**BIN**  
+指定要用的回溯相容性二進位排序次序。
+
+**BIN2**  
+指定使用字碼指標比較語意的二進位排序順序。
 
 ## <a name="remarks"></a>Remarks
 
- 視定序的版本不同，某些字碼指標可能未定義。 例如比較：
+由於定序版本的不同，有些字碼元素可能不會有已定義的排序權重及 (或) 大寫/小寫對應。 例如，比較 `LOWER` 函式在得到相同字元，但在相同定序不同版本時的輸出：
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-若定序為 Latin1_General_CI_AS，則第一行會傳回大寫字元，因為此定序中未定義此字碼指標。
+第一個陳述式以較舊的順序顯示這個字元的大寫和小寫形式 (在處理 Unicode 資料時，定序不會影響字元的可用性)。 不過，第二個陳述式顯示當定序為 Latin1\_General\_CI\_AS 時，傳回了大寫字元，因為該定序中未定義此字碼元素的小寫對應。
 
 使用某些語言時，避免使用較舊的定序很重要。 例如，對於 Telegu 就是如此。
 
@@ -95,24 +107,24 @@ GO
 
 以下是一些 Windows 定序名稱的範例：
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  定序會使用 Latin1 General 字典排序規則，即字碼頁 1252。 不會區分大小寫，但是會區分腔調字。 定序會使用 Latin1 General 字典排序規則，而且對應至字碼頁 1252。 如果是 Windows 定序，便顯示此定序的版本號碼：_90 或 _100。 它不會區分大小寫 (CI)，但是會區分腔調字 (AS)。
+  定序會使用 Latin1 General 字典排序規則，而且對應至字碼頁 1252。 這是版本 \_100 的定序，不區分大小寫 (CI) 且區分重音符號 (AS)。
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  定序會使用 Estonian 字典排序規則，即字碼頁 1257。 會區分大小寫也會區分腔調字。
+  定序會使用 Estonian 字典排序規則，並對應到字碼頁 1257。 這是版本 \_80 的定序(從名稱中沒有版本號碼得知)，區分大小寫 (CS) 且區分重音符號 (AS)。
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  定序使用字碼頁 1252 和二進位排序規則。 Latin1 一般字典排序規則會被忽略。
+  定序使用二進位字碼元素排序規則，並對應到字碼頁 932。 這是版本 \_140 的定序，並略過 Japanese Bushu Kakusu 字典排序規則。
 
 ## <a name="windows-collations"></a>Windows 定序
 
 若要列出您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體支援的 Windows 定序，請執行下列查詢。
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 下表列出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援的所有 Windows 定序。

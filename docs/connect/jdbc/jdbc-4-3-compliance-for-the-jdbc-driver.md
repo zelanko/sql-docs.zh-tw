@@ -11,12 +11,12 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f38b700f998babd9af54c3bf8a27409a4d2b6ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc2fbb2b217880b255d522149dabd38701a8c0e4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623936"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579058"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC Driver 的 JDBC 4.3 合規性
 
@@ -31,5 +31,5 @@ ms.locfileid: "47623936"
 
 |新的 API|Description|值得注意的實作|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|驅動程式的要求，而獨立的工作單位，從這個連接上的提示。 如需詳細資訊，請參閱 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)。|儲存是透過公用 API 方法，您可以修改連接欄位的值： `databaseAutoCommitMode`， `transactionIsolationLevel`， `networkTimeout`， `holdability`， `sendTimeAsDatetime`， `statementPoolingCacheSize`， `disableStatementPooling`， `serverPreparedStatementDiscardThreshold`， `enablePrepareOnFirstPreparedStatementCall `，`catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert `.|
+|void java.sql.connection.beginRequest()|驅動程式的要求，而獨立的工作單位，從這個連接上的提示。 如需詳細資訊，請參閱 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)。|儲存是透過公用 API 方法，您可以修改連接欄位的值： `databaseAutoCommitMode`， `transactionIsolationLevel`， `networkTimeout`， `holdability`， `sendTimeAsDatetime`， `statementPoolingCacheSize`， `disableStatementPooling`， `serverPreparedStatementDiscardThreshold`， `enablePrepareOnFirstPreparedStatementCall`，`catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|驅動程式的要求，而獨立的工作單位，已完成的提示。 如需詳細資訊，請參閱 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--)。|關閉期間的工作單位所建立的陳述式，並回復任何開啟的交易。 方法也會還原以上所列的連線欄位所做的變更。|

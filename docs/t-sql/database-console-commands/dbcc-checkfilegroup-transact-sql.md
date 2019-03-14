@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f40aa64f4406c8847870f26cf25d3a059bcbc6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3c4afaa25ad5f9b722e47541d546e040f7ebbac1
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698216"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685835"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC CHECKFILEGROUP
 >  指定 PHYSICAL_ONLY 會造成 DBCC CHECKFILEGROUP 略過 FILESTREAM 資料的所有檢查。  
   
  MAXDOP  
- **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
+ **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 到[目前的版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
  覆寫陳述式之 **sp_configure** 的 **max degree of parallelism** 設定選項。 MAXDOP 可能會超過使用 sp_configure 所設定的值。 如果 MAXDOP 超過使用 Resource Governor 所設定的值，資料庫引擎就會使用 ALTER WORKLOAD GROUP (Transact-SQL) 中所描述的 Resource Governor MAXDOP 值。 當您使用 MAXDOP 查詢提示時，適用所有搭配 max degree of parallelism 組態選項使用的語意規則。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
   

@@ -14,12 +14,12 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 628ff56d53641c95e3085f3e9cb38bf2296e5bb9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f37e036444bd0302e62339275d45942b62f9b375
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687926"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756703"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>檢視或設定 backup compression default 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47687926"
   
      [建議](#Recommendations)  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
 -   **使用下列方法檢視或設定 backup compression default 選項：**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47687926"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **待處理**  [設定 backup compression default 選項之後](#FollowUp)  
+-   **後續操作：**[設定 backup compression default 選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47687926"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> 權限  
+####  <a name="Permissions"></a> Permissions  
  不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 以同時設定兩個參數的 **sp_configure** 來變更組態選項或執行 RECONFIGURE 陳述式時，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -87,7 +87,7 @@ ms.locfileid: "47687926"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會查詢 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目錄檢視以判斷 `backup compression default`的值。 值為 0 表示備份壓縮已關閉，值為 1 表示備份壓縮已啟用。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會查詢 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 目錄檢視以判斷 `backup compression default`的值。 值為 0 表示備份壓縮已關閉，值為 1 表示備份壓縮已啟用。  
   
 ```sql  
 SELECT value   
@@ -102,17 +102,17 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ，將伺服器執行個體設定為依預設會建立壓縮備份。  
+3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例示範如何使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ，將伺服器執行個體設定為依預設會建立壓縮備份。  
   
 ```sql  
 EXEC sp_configure 'backup compression default', 1 ;  
-RECONFIGURE WITH OVERRIDE ;  
+RECONFIGURE;  
 GO 
 ```  
   
- 如需詳細資訊，請參閱 [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)的所有版本中都提供備份壓縮。  
+ 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
-##  <a name="FollowUp"></a> 待處理：設定 backup compression default 選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定 backup compression default 選項之後  
  設定會立即生效，不需要重新啟動伺服器。  
   
 ## <a name="see-also"></a>另請參閱  

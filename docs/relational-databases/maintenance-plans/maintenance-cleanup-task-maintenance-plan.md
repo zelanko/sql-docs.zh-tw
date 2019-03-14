@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 46249b24fcc46980023a8a7b65890af1374ca4b4
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154743"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736755"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>維護清除工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "56154743"
  包含要刪除檔案的資料夾路徑與名稱。  
   
  **副檔名**  
- 提供要刪除的檔案副檔名。 請不要在副檔名前後包含任何其他字元 (例如，不要包括 BAK 或 TRN)。 
+ 提供要刪除的檔案副檔名。 請不要在副檔名前後包含任何其他字元 (例如，使用 BAK 或 TRN)。 
   
  **包含第一層的子資料夾**  
  從 [資料夾] 底下的第一層子資料夾中，刪除具有 [副檔名] 中所指定之副檔名的檔案。  

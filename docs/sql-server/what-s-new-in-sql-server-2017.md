@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406445"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579358"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/) 文件
 
-[![從 Evaluation Center 下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：** [下載 SQL Server 2017 版 - 2017 年 10月：](https://go.microsoft.com/fwlink/?LinkID=829477)。
+[![從評估中心下載](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **試用：**[下載 SQL Server 2017 版 - 2017 年 10 月：](https://go.microsoft.com/fwlink/?LinkID=829477)。
 
 > [!NOTE]
 > 除了下列變更，在正式發行版本之後還會定期發行累積更新。 這些累積更新提供許多改善和修正程式。 如需最新 CU 版本的資訊，請參閱 [SQL Server 2017 累積更新](https://aka.ms/sql2017cu)。
@@ -33,7 +33,7 @@ SQL Server 2017 包含許多新的 Database Engine 功能、增強功能和效�
 - **CLR 組件**現在可以新增至白名單，以解決 CTP 2.0 中所述的 `clr strict security` 問題。 新增了 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 和 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) 以支援信任組件的白名單 (RC1)。  
 - **繼續線上索引重建**可從容錯移轉至複本或磁碟空間不足等失敗後的停止處繼續線上索引重建作業，或暫停並於稍後繼續線上索引重建作業。 請參閱 [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 和[線上索引作業的指導方針](../relational-databases/indexes/guidelines-for-online-index-operations.md)。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION 的 **IDENTITY_CACHE** 選項可讓您在伺服器意外地重新啟動或容錯移轉至次要伺服器時，避免識別欄位的值出現間隙。 請參閱 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 (CTP 2.0)
-- 新一代的查詢處理功能改善會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [SQL 資料庫中的自適性查詢處理](../relational-databases/performance/adaptive-query-processing.md)。
+- 新一代的查詢處理功能改善會調整最佳化策略，使其符合您應用程式工作負載的執行階段條件。 為了這個第一版**自適性查詢處理**功能家族，我們推出了三項新的功能更新：**批次模式自適性聯結**、**批次模式記憶體授與回饋**，以及適用於多陳述式資料表值函式的**交錯執行**。  請參閱 [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md) (SQL 資料庫中的智慧查詢處理)。
 - **自動資料庫調整**可深入探索潛在的查詢效能問題、建議解決方法，而且可以自動修正找到的問題。 請參閱[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)。 (CTP 2.0)
 - 新增可模型化多對多關聯性的**圖表資料庫功能**，包括新增用於建立節點和邊緣資料表的 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 語法，以及用於查詢的關鍵字 [MATCH](../t-sql/queries/match-sql-graph.md)。 請參閱[圖形處理與 SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)。 (CTP 2.0)
 - 預設會啟用 sp_configure 選項 `clr strict security` 以增強 CLR 組件的安全性。 請參閱 [CLR 嚴格安全性](../database-engine/configure-windows/clr-strict-security.md)。 (CTP 2.0)

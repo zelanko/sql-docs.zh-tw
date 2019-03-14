@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421315"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579676"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -223,31 +223,31 @@ DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-可讓您在資料庫或陳述式範圍啟用或停用多重陳述式資料表值函式的交錯執行，同時仍保有 140 (含) 以上的資料庫相容性層級。 交錯執行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自適性查詢處理的部分功能。 如需詳細資訊，請參閱[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)
+可讓您在資料庫或陳述式範圍啟用或停用多重陳述式資料表值函式的交錯執行，同時仍保有 140 (含) 以上的資料庫相容性層級。 交錯執行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自適性查詢處理的部分功能。 如需詳細資訊，請參閱[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-可讓您在資料庫或陳述式範圍啟用或停用自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 自適性聯結是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 所推出的[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)部分功能。
+可讓您在資料庫或陳述式範圍啟用或停用自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 自適性聯結是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一部分功能。
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
-可讓您在資料庫範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 SQL Server 2017 所推出[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)的其中一項功能 (SQL Server 2019 和 Azure SQL Database 支援資料列模式)。
+可讓您在資料庫範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 SQL Server 2017 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一部分功能 (SQL Server 2019 和 Azure SQL Database 支援資料列模式)。
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-可讓您在資料庫範圍啟用或停用批次模式記憶體授與回饋，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式記憶體授與回饋是 SQL Server 2017 所推出[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)的其中一項功能。
+可讓您在資料庫範圍啟用或停用批次模式記憶體授與回饋，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式記憶體授與回饋是 SQL Server 2017 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-可讓您在資料庫範圍啟用或停用批次模式自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式自適性聯結是 SQL Server 2017 所推出[自適性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)的其中一項功能。
+可讓您在資料庫範圍啟用或停用批次模式自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式自適性聯結是 SQL Server 2017 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 
