@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801342"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973128"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 
@@ -38,11 +38,12 @@ ms.locfileid: "56801342"
 
 ## <a name="get-azure-data-studio-for-windows"></a>取得適用於 Windows 的 Azure Data Studio
 
-這一版的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包括標準 Windows 安裝程式，以及 .zip 檔案兩種安裝方式：
+這一版的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括標準的 Windows 安裝程式體驗，以及一個.zip 檔案。
+
+*使用者安裝程式*建議，因為它不需要系統管理員權限，可簡化安裝和升級。 使用者安裝程式不需要系統管理員權限，因為這個位置是 [使用者] 本機 AppData (LOCALAPPDATA) 資料夾下。 使用者安裝程式也提供順暢的背景更新體驗。 如需詳細資訊，請參閱 <<c0> [ 的 Windows 使用者設定](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)。
+
 
 **使用者安裝程式**（建議選項）
-
-建議使用者安裝程式，因為它不需要系統管理員權限，可簡化安裝和升級。
 
 1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *使用者*針對 Windows installer](https://go.microsoft.com/fwlink/?linkid=2072725)。
 2. 啟動[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]應用程式。

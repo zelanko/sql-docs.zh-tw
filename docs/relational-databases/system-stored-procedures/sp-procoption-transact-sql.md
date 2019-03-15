@@ -1,5 +1,5 @@
 ---
-title: sp_procoption & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_procoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcde4fd9439862dd88bdb1ff8c9eb40ff85ce0d4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: aee8c496db092787720ea8f778697b5a7b3fdd22
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590422"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973917"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@ProcName =** ] **'**_程序_**'**  
+ [ **@ProcName =** ] **'**_procedure_**'**  
  是用來設定選項的程序的名稱。 *程序*已**nvarchar(776)**，沒有預設值。  
   
- [  **@OptionName =** ] **'**_選項_**'**  
+ [ **@OptionName =** ] **'**_option_**'**  
  這是您要設定的選項名稱。 唯一的值* 選項*是**啟動**。  
   
- [  **@OptionValue =** ] **'**_值_**'**  
+ [ **@OptionValue =** ] **'**_value_**'**  
  這是指是否選項設為 on (**，則為 true**或**上**) 或 [關閉]  (**false**或**關閉**)。 *值*已**varchar(12)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -64,15 +64,16 @@ sp_procoption [ @ProcName = ] 'procedure'
  下列範例會設定程序自動執行。  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+EXEC sp_procoption @ProcName = N'<procedure name>'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';   
 ```  
   
  下列範例會停止程序自動執行。  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
+EXEC sp_procoption @ProcName = N'<procedure name>'      
+    , @OptionName = 'startup'
     , @OptionValue = 'off';   
 ```  
   

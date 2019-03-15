@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611381"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972767"
 ---
 # <a name="creating-a-connection-string"></a>建立連接字串
 連接字串是由以分號分隔的引數/值組 （也就是 「 參數 」） 清單所組成。 例如：  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47611381"
   
  其他引數會傳遞給提供者中名為*提供者*引數，而不進行任何處理由 ADO。  
   
- HelloData 應用程式中的[HelloData: 簡易 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)使用下列連接字串：  
+ HelloData 應用程式中的[HelloData:簡單的 ADO 應用程式](../../../ado/guide/data/hellodata-a-simple-ado-application.md)使用下列連接字串：  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -53,7 +53,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  根據 OLE DB Provider for SQL Server 文件，您可以使用 「 伺服器 」 取代為*資料來源*參數和 「 資料庫 」，如*Initial Catalog*參數。 因此，下列連接字串會產生與上面相同的結果：  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

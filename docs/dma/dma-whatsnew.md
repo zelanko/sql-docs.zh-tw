@@ -1,7 +1,7 @@
 ---
 title: 什麼是新 Data Migration Assistant (SQL Server) |Microsoft 文件
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,20 +11,20 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410405"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973207"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>資料移轉小幫手的新功能
 本文章列出新增的項目在每個版本的 Data Migration Assistant (DMA)。
 
-## <a name="dma-v41"></a>DMA 4.1 版
+## <a name="dma-v41"></a>DMA v4.1
 DMA 的 v4.1 版本引進了支援的內部部署 SQL Server 資料庫移轉至 Azure SQL Database 受控執行個體的全方位評估。
 
 評估工作流程可協助您偵測可能會影響您移轉至 Azure SQL Database 受控執行個體的下列問題：
@@ -47,7 +47,7 @@ DMA 的 v4.0 版本引進了 「 Azure SQL 資料庫 SKU 建議 」 功能，可
 
 如需詳細資料，請參閱文章[找出您的內部部署資料庫正確的 Azure SQL 資料庫 SKU](dma-sku-recommend-sql-db.md)。
 
-## <a name="dma-v36"></a>DMA 3.6 版
+## <a name="dma-v36"></a>DMA v3.6
 DMA 的 3.6 版版本導入了 「 自動修復 」 會受到最常見的移轉封鎖器的結構描述物件。
 
 此版本中提供下列移轉封鎖程式 autofix 和行為變更的問題：
@@ -66,7 +66,7 @@ DMA 的 v3.5 版本包含下列各項：
 - 能夠在結構描述和資料移轉期間略過評估，（如果您已經執行評估並解決任何重大結構描述物件，在移轉之前）。
 - 若要解決與損毀時升級舊版的 SQL Server 的內部部署至更新版本，或在 Azure Vm 上的 SQL server 備份的檔案，提供不正確的網路共用路徑時，此工具的問題修正。
 
-## <a name="dma-v34"></a>DMA 3.4 版
+## <a name="dma-v34"></a>DMA v3.4
 DMA 的 v3.4 版本包含下列各項：
 - 做為來源移轉到 Azure SQL Database 的 SQL Server 2017 的支援。
 - 穩定性、 效能及評估規則正確性增強功能。

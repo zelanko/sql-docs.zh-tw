@@ -2,7 +2,7 @@
 title: 執行 SQL Server 移轉評估 (Data Migration Assistant) |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 評估內部部署 SQL Server 移轉至另一個 SQL Server 或 Azure SQL Database 之前
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 4add4ecf664f86c6e5f74c38a712601e02f44f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2e7d75b1ef9e540802457cf63e7d2f59468941f9
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402633"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973857"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>執行 SQL Server 移轉評估，使用 Data Migration Assistant
 

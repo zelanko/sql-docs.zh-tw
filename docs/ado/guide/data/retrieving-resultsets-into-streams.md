@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734956"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973497"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>將結果集擷取為資料流
 而不是接收結果中的典型**資料錄集**物件時，ADO 可以改為擷取成資料流的查詢結果。 ADO **Stream**物件 (或其他物件，支援 COM **IStream**介面，例如 ASP**要求**並**回應**物件) 可以用來包含這些結果。 這項功能的其中一種用法是擷取 XML 格式的結果。 使用 SQL Server，比方說，XML 結果可以傳回以多種方式，例如使用 SQL SELECT 查詢中使用 FOR XML 子句，或使用 XPath 查詢。  
@@ -30,7 +30,7 @@ ms.locfileid: "47734956"
 ## <a name="for-xml-query-example"></a>FOR XML 查詢範例  
  下列範例是以 VBScript 與 Northwind 資料庫：  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -145,7 +145,7 @@ ms.locfileid: "47734956"
   
 ### <a name="for-xml-syntax"></a>如需 XML 語法  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -153,7 +153,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  SQL SELECT FOR XML 陳述式範例如下：  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -161,19 +161,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  為 XML 範本查詢，FOR XML 查詢看起來像這樣：  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  這個範例會指定 ASP**回應**物件**輸出 Stream**屬性：  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  接下來，指定**adExecuteStream**的參數**Execute**。 此範例會包裝 XML 標記來建立 XML 資料島中的資料流：  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

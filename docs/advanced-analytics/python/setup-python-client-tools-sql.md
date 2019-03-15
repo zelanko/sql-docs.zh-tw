@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 6642a91e61900847b2eeb8875d731634cc03b38e
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579557"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976308"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>設定適用於 SQL Server 機器學習服務上的 Python 開發的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Python 整合功能時包括中的 [Python] 選項啟動 SQL Server 2017 或更�
 若要驗證安裝，您可以使用內建的 Jupyter Notebook 在本文中所述或是[連結程式庫](#install-ide)PyCharm 或您通常會使用任何其他 IDE。
 
 > [!Tip]
-> 如需這些練習的影片示範，請參閱 <<c0> [ 執行的 R 和 Python，在從 Jupyter Notebook 的 SQL Server 中遠端](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
+> 如需這些練習的影片示範，請參閱 <<c0> [ 執行的 R 和 Python，在從 Jupyter Notebook 的 SQL Server 中遠端](https://youtu.be/D5erljpJDjE)。
 
 > [!Note]
 > 用戶端程式庫安裝的替代方案使用[獨立伺服器](../install/sql-machine-learning-standalone-windows-install.md)做為豐富的用戶端，有些客戶偏好的更深入的案例中工作。 在獨立伺服器完全分開的 SQL Server，但因為它有相同的 Python 程式庫，您可以使用它做為用戶端的 SQL Server 資料庫內分析。 您也可以使用它針對非 SQL 相關的工作，包括匯入，並從其他資料平台的資料模型的能力。 如果您安裝獨立伺服器，您可以找到此位置的 Python 可執行檔： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 若要驗證您的安裝，[開啟 Jupyter notebook](#python-tools)使用 Python.exe，在該位置來執行命令。

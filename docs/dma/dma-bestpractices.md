@@ -2,7 +2,7 @@
 title: Data Migration assistant (SQL Server) 的最佳做法 |Microsoft Docs
 description: 了解使用 Data Migration Assistant 移轉 SQL Server 資料庫的最佳做法
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643826"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973667"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>執行 Data Migration Assistant 的最佳做法
 本文提供安裝、 評估和移轉一些最佳作法資訊。
@@ -41,4 +41,4 @@ ms.locfileid: "49643826"
 
 - 連接到來源和目標伺服器時，啟用加密連接。 使用 SSL 加密可提高之間透過網路傳輸資料移轉小幫手和 SQL Server 執行個體，也就是有幫助，尤其是當移轉 SQL 登入的資料的安全性。 如果不使用 SSL 加密，網路遭到入侵，攻擊者所要移轉的 SQL 登入無法取得攔截及/或修改在即時由攻擊者。
 
-    但是，如果所有的存取都與安全的內部網路組態有關，則可能不需要加密。 啟用加密會降低效能，因為這是加密和解密的封包所需的額外負荷。 如需詳細資訊，請參閱[加密 SQL Server 的連接](https://go.microsoft.com/fwlink/?linkid=832513)。
+    但是，如果所有的存取都與安全的內部網路組態有關，則可能不需要加密。 啟用加密會降低效能，因為這是加密和解密的封包所需的額外負荷。 如需詳細資訊，請參閱 [加密 SQL Server 的連接](https://go.microsoft.com/fwlink/?linkid=832513)。

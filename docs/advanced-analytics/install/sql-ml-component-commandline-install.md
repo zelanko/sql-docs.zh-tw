@@ -3,17 +3,17 @@ title: 命令提示字元安裝 R 和 Python 元件-SQL Server Machine Learning
 description: 執行 SQL Server 命令列安裝，以加入 SQL Server 資料庫引擎執行個體上的 R 語言和 Python 整合。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645517"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976348"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>安裝 SQL Server machine learning R 和 Python 的元件，從命令列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,16 +48,16 @@ ms.locfileid: "53645517"
 
 | 引數 | 描述 |
 |-----------|-------------|
-| / 功能 = AdvancedAnalytics | 會安裝在資料庫版本：SQL Server 2017 Machine Learning 服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
-| / 功能 = SQL_INST_MR | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 （資料庫內） R 功能，包括 Microsoft R Open 和專屬的 R 套件。 SQL Server 2016 R Services 功能是 R 專用，因此沒有任何參數，該版本。|
-| / 功能 = SQL_INST_MPY | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 Python （資料庫） 的功能，包括 Anaconda 和專屬的 Python 套件。 |
-| / 功能 = SQL_SHARED_MR | 會安裝獨立版本的 R 功能：SQL Server 2017 Machine Learning 伺服器 （獨立式） 或 SQL Server 2016 R Server （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
-| / 功能 = SQL_SHARED_MPY | 適用於僅 SQL Server 2017。 會安裝獨立版本的 Python 功能：SQL Server 2017 Machine Learning 伺服器 （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
+| /FEATURES = AdvancedAnalytics | 會安裝在資料庫版本：SQL Server 2017 Machine Learning 服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
+| /FEATURES = SQL_INST_MR | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 （資料庫內） R 功能，包括 Microsoft R Open 和專屬的 R 套件。 SQL Server 2016 R Services 功能是 R 專用，因此沒有任何參數，該版本。|
+| /FEATURES = SQL_INST_MPY | 適用於僅 SQL Server 2017。 將它搭配 AdvancedAnalytics。 會安裝 Python （資料庫） 的功能，包括 Anaconda 和專屬的 Python 套件。 |
+| /FEATURES = SQL_SHARED_MR | 會安裝獨立版本的 R 功能：SQL Server 2017 Machine Learning 伺服器 （獨立式） 或 SQL Server 2016 R Server （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
+| /FEATURES = SQL_SHARED_MPY | 適用於僅 SQL Server 2017。 會安裝獨立版本的 Python 功能：SQL Server 2017 Machine Learning 伺服器 （獨立式）。 未繫結至資料庫引擎執行個體的 「 共用的功能 」 的獨立伺服器。|
 | /IACCEPTROPENLICENSETERMS  | 表示您接受授權條款，以使用開放原始碼 R 元件。 |
 | /IACCEPTPYTHONLICENSETERMS | 表示您接受授權條款，以使用 Python 元件。 |
 | /IACCEPTSQLSERVERLICENSETERMS | 表示您接受授權合約，以使用 SQL Server。|
 | /MRCACHEDIRECTORY | 離線安裝程式，設定包含 R 元件 CAB 檔案的資料夾。 |
-| / MPYCACHEDIRECTORY | 離線安裝程式，設定包含 Python 元件 CAB 檔案的資料夾。 |
+| / MPYCACHEDIRECTORY | 保留供日後使用。 使用 %TEMP%來儲存 Python 元件 CAB 檔案安裝在沒有網際網路連線的電腦上。 |
 
 
 ## <a name="indb"></a> 在資料庫執行個體安裝
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> 無訊息安裝
 
-無訊息安裝會抑制.cab 檔案位置的檢查。 基於這個理由，您必須指定.cab 檔來解除封裝的位置。 您可以為此的暫存目錄。
+無訊息安裝會抑制.cab 檔案位置的檢查。 基於這個理由，您必須指定.cab 檔來解除封裝的位置。 對於 Python，封包檔必須位於 %temp *。 針對 R，您可以設定資料夾使用您的路徑可以為此的暫存目錄。
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> 獨立伺服器安裝

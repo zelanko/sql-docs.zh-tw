@@ -2,7 +2,7 @@
 title: 識別您的內部部署資料庫 (Data Migration Assistant) 正確的 Azure SQL 資料庫 SKU |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant，以識別您的內部部署資料庫權限的 Azure SQL 資料庫 SKU
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226495"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973819"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>識別您的內部部署資料庫正確的 Azure SQL 資料庫 SKU
 
@@ -76,21 +76,21 @@ ms.locfileid: "54226495"
 使用下列引數執行 dmacmd.exe:
 
 - **/ 動作 = SkuRecommendation**:輸入這個引數執行 SKU 評量。
-- **/ SkuRecommendationInputDataFilePath**:上一節中所收集計數器檔案的路徑。
+- **/SkuRecommendationInputDataFilePath**:上一節中所收集計數器檔案的路徑。
 - **/ SkuRecommendationTsvOutputResultsFilePath**:要寫入以 TSV 格式的輸出結果的路徑。
 - **/ SkuRecommendationJsonOutputResultsFilePath**:若要以 JSON 格式寫入輸出結果路徑。
-- **/ SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式寫入輸出結果的路徑。
+- **/SkuRecommendationHtmlResultsFilePath**:若要以 HTML 格式寫入輸出結果的路徑。
 
 此外，您需要挑選其中一個下列的引數：
 - 防止價格重新整理
-    - **/ SkuRecommendationPreventPriceRefresh**:價格重新整理可防止發生。 如果在離線模式中執行，請使用。
+    - **/SkuRecommendationPreventPriceRefresh**:價格重新整理可防止發生。 如果在離線模式中執行，請使用。
 - 取得最新的價格 
     - **/ SkuRecommendationCurrencyCode**:要顯示的價格 （例如貨幣「 USD")。
     - **/ SkuRecommendationOfferName**:供應項目名稱 （例如："MS-AZR-0003 P")。 如需詳細資訊，請參閱 < [Microsoft Azure 優惠詳細資料](https://azure.microsoft.com/support/legal/offer-details/)頁面。
     - **/ SkuRecommendationRegionName**:區域名稱 （例如：「 美國西部 」）。
     - **/ SkuRecommendationSubscriptionId**:訂閱識別碼。
-    - **/ AzureAuthenticationTenantId**:驗證租用戶中。
-    - **/ AzureAuthenticationClientId**:用於驗證的 AAD 應用程式的用戶端識別碼。
+    - **/AzureAuthenticationTenantId**:驗證租用戶中。
+    - **/AzureAuthenticationClientId**:用於驗證的 AAD 應用程式的用戶端識別碼。
     - 其中一個下列的驗證選項：
         - 互動式
             - **AzureAuthenticationInteractiveAuthentication**:設為 true，驗證快顯視窗。

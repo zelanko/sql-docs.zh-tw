@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c6c0e07f48dee271fee61bc59b47f49683ff8832
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 2e045d061df813ae004dcb13668c31e68c3b5b5a
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432341"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976412"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>資料探索和使用 SQL Server 中 R 的預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53432341"
 
 ## <a name="whats-different-about-revoscaler"></a>什麼是 RevoScaleR 不同？
 
-**RevoScaleR** 封裝包含某些熱門 R 函數的實作，這些函數經過重新設計，而得以提供平行處理原則與規模。 如需詳細資訊，請參閱 <<c0> [ 分散式運算使用 RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing)。
+**RevoScaleR** 封裝包含某些熱門 R 函數的實作，這些函數經過重新設計，而得以提供平行處理原則與規模。 如需詳細資訊，請參閱 <<c0> [ 分散式運算使用 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)。
 
 RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這表示對於整個解決方案或一個函數，您都可以指定使用裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦資源來執行計算，而不使用您的本機工作站。 這樣做有多項優點：您可以避免不必要的資料移動，也可以運用伺服器電腦上更多的計算資源。
 
@@ -60,7 +60,7 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
   
      **RevoPemaR** 封裝可讓您使用 R 開發自己的平行外部記憶體演算法。  
   
-     如需有關這些封裝和使用方式的詳細資訊，請參閱 <<c0> [ 什麼是 RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction)並[RevoPemaR 入門](https://msdn.microsoft.com/microsoft-r/pemar-getting-started)。 
+     如需有關這些封裝和使用方式的詳細資訊，請參閱 <<c0> [ 什麼是 RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler)並[RevoPemaR 入門](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar)。 
 
 + **MicrosoftML**包含高度最佳化的機器學習演算法及 Microsoft 資料科學小組的資料轉換的集合。 許多的演算法也會在 Azure Machine Learning 中使用。 如需詳細資訊，請參閱 < [SQL Server 中的 MicrosoftML](ref-r-microsoftml.md)。
 
@@ -82,14 +82,14 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
   
      您可以在 R 程式碼中使用此函數來定義 *「資料來源」*(data source)。 資料來源物件會指定資料所在的伺服器和資料表，並管理從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]讀取資料及寫入其中的工作。
   
--   **RxInSqlServer** 可用來指定「計算內容」。  也就是說，您可以指定要在您的本機工作站還是裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上執行 R 程式碼。  如需詳細資訊，請參閱 < [RevoScaleR 函數](https://msdn.microsoft.com/microsoft-r/scaler/scaler)。
+-   **RxInSqlServer** 可用來指定「計算內容」。  也就是說，您可以指定要在您的本機工作站還是裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上執行 R 程式碼。  如需詳細資訊，請參閱 < [RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。
   
      當您設定計算內容時，只會影響到支援遠端執行內容的計算，也就是 RevoScaleR 套件及相關函數所提供的 R 作業。 一般而言，以標準 CRAN 套件為基礎的 R 方案無法在遠端計算內容中執行，但如果是由 T-SQL 啟動，則可以在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 電腦上執行。 不過，您可以使用 `rxExec` 函數來呼叫個別的 R 執行階段，然後從遠端在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 中執行它們。
 
 如需如何建立及使用資料來源與執行內容的範例，請參閱這些教學課程：
 
 + [資料科學深入探討](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [使用 Microsoft R 的資料分析](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
++  [使用 Microsoft R 的資料分析](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 
 ## <a name="deploy-r-code-to-production"></a>將 R 程式碼部署至生產環境
 
@@ -101,6 +101,6 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
 
 ## <a name="see-also"></a>另請參閱
 
-[比較基底 R 與 ScaleR 函數](https://msdn.microsoft.com/microsoft-r/scaler/compare-base-r-scaler-functions)
+[基底 R 與 RevoScaleR 函數的比較](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
 
 [SQL Server 中的 RevoScaleR 程式庫](ref-r-revoscaler.md)

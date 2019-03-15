@@ -3,17 +3,17 @@ title: 安裝 R 語言和沒有網際網路存取-SQL Server Machine Learning �
 description: 離線或已中斷連線 Machine Learning R 和 Python 安裝程式在隔離網路防火牆後方的 SQL Server 執行個體上。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 37cd555ec099b11c6dbf792ff5f4e0ac869a0792
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596989"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976318"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安裝 SQL Server machine learning 無法存取網際網路的電腦上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,8 +22,8 @@ ms.locfileid: "53596989"
 
 在資料庫內分析是由資料庫引擎執行個體，再加上對於 R 和 Python 的整合，根據 SQL Server 版本的其他元件所組成。 
 
-+ SQL Server 2017 包含 R 和 Python。 
-+ SQL Server 2016 是僅限 R。 
++ SQL Server 2017 包含 R 和 Python 
++ SQL Server 2016 是僅限 R。
 
 在獨立伺服器上，machine learning 及 R/Python 語言特有的功能會加入到封包檔。 
 
@@ -42,8 +42,8 @@ ms.locfileid: "53596989"
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python 開放     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python 伺服器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2-取得 SQL Server 2017 安裝媒體
 
@@ -55,7 +55,7 @@ Microsoft Python 伺服器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 的離線安裝
 
-SQL Server 2016 資料庫內分析是 R 僅，搭配正是其中兩個封包檔產品套件和 Microsoft 發佈的開放原始碼 R，分別。 先安裝這些版本的任何一個：RTM，SP 1，SP 2。 就地的基底安裝之後，可以在下一個步驟套用累計更新。
+SQL Server 2016 資料庫內分析是 R 僅，搭配正是其中兩個封包檔產品套件和 Microsoft 發佈的開放原始碼 R，分別。 先安裝這些版本的任何一個：RTM, SP 1, SP 2. 就地的基底安裝之後，可以在下一個步驟套用累計更新。
 
 在具有網際網路連線的電腦，下載安裝程式用來安裝 SQL Server 2016 上的資料庫內分析封包檔。 
 
@@ -75,7 +75,9 @@ SQL Server 2016 資料庫內分析是 R 僅，搭配正是其中兩個封包檔�
 
 ## <a name="transfer-files"></a>非同步傳送檔案
 
-SQL Server 安裝媒體 （.iso 或.cab） 和資料庫內分析封包檔案複製到目標電腦。 例如將封包檔和安裝媒體檔案放在目標電腦上的相同資料夾中**下載**或安裝程式使用者的 %temp * 資料夾。
+SQL Server 安裝媒體 （.iso 或.cab） 和資料庫內分析封包檔案複製到目標電腦。 將封包檔和安裝媒體檔案放在目標電腦，例如安裝程式使用者的 %temp * 資料夾上的相同資料夾中。
+
+Python 封包檔需要 %TEMP%資料夾。 針對 R，您可以使用 %TEMP%，或將 myrcachedirectory 參數設為封包的路徑。
 
 下列螢幕擷取畫面顯示 SQL Server 2017 CAB 及 ISO 檔案。 SQL Server 2016 的下載項目看起來不一樣： 較少的檔案 (沒有 Python) 和安裝媒體檔案名稱是適用於 2016年。
 
