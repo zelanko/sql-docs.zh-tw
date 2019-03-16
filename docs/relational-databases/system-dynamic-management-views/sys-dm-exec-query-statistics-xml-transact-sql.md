@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044624"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072302"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>備註
 這個系統函數可從[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。 請參閱知識庫[3190871](https://support.microsoft.com/en-us/help/3190871)
 
-這個系統函數的運作方式之下同時**標準**並**輕量級**查詢分析基礎結構的執行統計資料。  
-  
-**標準**可以藉由啟用分析基礎結構的統計資料：
-  -  [在 SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [設定上的統計資料設定檔](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  `query_post_execution_showplan`擴充的事件。  
-  
-**輕量型**分析基礎結構的統計資料可用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，可以啟用：
-  -  全域使用追蹤旗標 7412。
-  -  使用[ *query_thread_profile* ](https://support.microsoft.com/kb/3170113)擴充的事件。
-  
-> [!NOTE]
-> 一旦啟用追蹤旗標 7412、 輕量型程式碼剖析將會啟用分析基礎結構，而不是標準的分析，例如 DMV 查詢執行統計資料的任何消費者[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)。
-> 不過，標準的程式碼剖析仍然使用 SET STATISTICS XML*包含實際的計劃*中的動作[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]，和`query_post_execution_showplan`xEvent。
-
-> [!IMPORTANT]
-> TPC C 等工作負載測試，在啟用輕量型統計資料的分析基礎結構會加入到 1.5 到 2 個百分比的額外負荷。 相反地，標準的統計資料的分析基礎結構可以新增最多 90%的相同工作負載案例的額外負荷。
+這個系統函數的運作方式之下同時**標準**並**輕量級**查詢分析基礎結構的執行統計資料。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)。  
 
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 `VIEW SERVER STATE` 權限。  

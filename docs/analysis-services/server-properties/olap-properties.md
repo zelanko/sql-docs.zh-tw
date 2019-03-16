@@ -1,6 +1,6 @@
 ---
 title: Analysis Services OLAP 屬性 |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072515"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072342"
 ---
 # <a name="olap-properties"></a>OLAP 屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 OLAP 伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
@@ -266,7 +266,10 @@ ms.locfileid: "53072515"
   
  **MaxRolapOrConditions**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
-  
+ 
+ **RowsetSerializationLimit**   
+ 適用於 Azure Analysis Services。 限制資料列集傳回給用戶端的資料列數目。 預設值為-1，這表示沒有限制會套用。 適用於 DAX 和 MDX 查詢。 它可用來防止大量的資料匯出的伺服器資源。 提交給伺服器超過限制的查詢被取消，且會傳回錯誤。  
+
  **UseCalculationCacheRegistry**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   

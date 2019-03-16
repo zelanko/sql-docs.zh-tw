@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596121"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072152"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53596121"
 
 ## <a name="customer-churn"></a>客戶流失
 
-[客戶流失預測範本 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[客戶流失預測範本 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **項目：** 分析及預測客戶流失，請務必在任何產業必須管理及防止客戶流失到競爭對手： 銀行、 電信和零售，等等。 客戶流失分析的目標是為了識別哪些客戶可能流失，然後採取適當動作，以留下這類客戶並保持業務往來。
 
@@ -64,7 +64,7 @@ ms.locfileid: "53596121"
   
 ## <a name="predictive-maintenance"></a>預測性維護
 
-[預測性維護範本 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[預測性維護範本 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **項目：** 預測性維護的目標是要提高效率的維護工作，藉由擷取過去的故障，並使用該資訊來預測裝置何時或何處可能會失敗。 預測裝置過時的功能對於依賴分散式的資料或感應器的應用程式特別有用。 這個方法也無法套用到監視或預測 IoT (Internet of Things) 裝置中的錯誤。
 

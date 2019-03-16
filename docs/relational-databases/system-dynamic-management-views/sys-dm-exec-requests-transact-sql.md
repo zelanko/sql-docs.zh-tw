@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590112"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072232"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -41,10 +41,10 @@ ms.locfileid: "53590112"
 |start_time|**datetime**|要求到達時的時間戳記。 不可為 Null。|  
 |status|**nvarchar(30)**|要求的狀態。 這可以是下列項目之一：<br /><br /> 背景<br />執行中<br />可執行的<br />休眠中<br />已暫停<br /><br /> 不可為 Null。|  
 |command|**nvarchar(32)**|識別目前所處理命令的類型。 常見命令類型包括下列項目：<br /><br /> SELECT<br />Insert<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求的文字可使用 sys.dm_exec_sql_text 加上要求的對應 sql_handle 來擷取。 內部系統處理序會根據其所執行工作的類型來設定命令。 工作包括下列項目：<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> 不可為 Null。|  
-|sql_handle|**varbinary(64)**|要求之 SQL 文字的雜湊對應。 可為 Null。|  
+|sql_handle|**varbinary(64)**|語彙基元，可唯一識別批次或預存程序查詢的一部分。 可為 Null。|  
 |statement_start_offset|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即從該處開始。 可與 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 動態管理函數一起使用，來擷取該要求目前執行的陳述式。 可為 Null。|  
 |statement_end_offset|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即在該處結束。 可與 sql_handle、statement_end_offset 和 sys.dm_exec_sql_text 動態管理函數一起使用，來擷取該要求目前執行的陳述式。 可為 Null。|  
-|plan_handle|**varbinary(64)**|SQL 執行計畫的雜湊對應。 可為 Null。|  
+|plan_handle|**varbinary(64)**|是可唯一識別目前正在執行的批次的查詢執行計劃權杖。 可為 Null。|  
 |database_id|**smallint**|要求執行目標的資料庫識別碼。 不可為 Null。|  
 |user_id|**int**|提交要求之使用者的識別碼。 不可為 Null。|  
 |connection_id|**uniqueidentifier**|要求到達所用連接的識別碼。 可為 Null。|  
@@ -190,4 +190,4 @@ GO
 - [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 記憶體屬性 |Microsoft Docs
-ms.date: 01/15/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b33bf47f77d65679bc079b526d480841af71c0c4
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327859"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072292"
 ---
 # <a name="memory-properties"></a>記憶體屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,14 +58,12 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  指定記憶體閾值，超過此閥值後，執行個體會積極地終止使用中的使用者工作階段以減少記憶體的使用量。 所有終止的工作階段都會收到關於記憶體不足的壓力所取消的錯誤。 預設值零 (0)，代表 **HardMemoryLimit** 會設定為 **TotalMemoryLimit** 和系統總實體記憶體之間的中間值；若系統的實體記憶體大於處理序的虛擬位址空間，則會改用虛擬位址空間來計算 **HardMemoryLimit**。  
 
 **QueryMemoryLimit**   
-只有 azure Analysis Services。 進階的屬性，即可控制多少記憶體可供暫存結果查詢期間。 僅適用於 DAX 量值和查詢。 它並不考慮查詢所使用的一般記憶體配置。 指定以百分比為單位，預設值取決於您的計劃。 
+只有 azure Analysis Services。 進階的屬性，即可控制多少記憶體可供暫存結果查詢期間。 僅適用於 DAX 量值和查詢。 它並不考慮查詢所使用的一般記憶體配置。 指定最多 100 的百分比表示。 除此之外，它是以位元組為單位。 指定將值設定為 0 表示沒有限制。 Azure Analysis，預設值取決您計劃。 
 
 |計畫  |預設  |
 |---------|---------|
 |D1     |   80      |
-|所有其他的計劃     |    20     |
-
-可以變更這個屬性。 指定將值設定為 0 表示沒有限制。
+|所有其他的計劃     |    20     | 
 
  **VirtualMemoryLimit**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
