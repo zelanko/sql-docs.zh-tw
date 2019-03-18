@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556170"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974497"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否|否|否|否|
 |緩衝集區擴充|是|是|否|否|否|
 |IO 資源管理|是|否|否|否|否|  
+|預先讀取|是|否|否|否|否|
+|進階掃描|是|否|否|否|否|
 |延遲持久性|是|是|是|是|是|
 |自動調整|是|否|否|否|否|
 |批次模式自適性聯結|是|否|否|否|否|
@@ -407,7 +409,3 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-此為測試

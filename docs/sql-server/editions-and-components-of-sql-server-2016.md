@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78a5b1462316f859339f5922a0fa9aa098c6e854
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a5c0b2714637068f72aa9e8caf7f7213c865131f
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803283"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974477"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,9 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |多個檔案資料流容器|是|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|是 <sup>2</sup>|
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|否 <sup>4</sup>|否|否|否|
 |緩衝集區擴充|是|是|否|否|否|
-|IO 資源管理|是|否|否|否|否|  
+|IO 資源管理|是|否|否|否|否|
+|預先讀取|是|否|否|否|否|
+|進階掃描|是|否|否|否|否|
 |延遲持久性|是|是|是|是|是|
 
 <sup>1</sup> 記憶體內部 OLTP 資料大小和資料行存放區區段快取都限制為版本「縮放限制」區段指定的記憶體數量。 平行處理原則的最大程度是有限的。 索引建置的平行處理原則 (DOP) 程度限制為 2 DOP (Standard Edition) 和 1 DOP (Web Edition 和 Express Edition)。 這會參考以磁碟式資料表和記憶體最佳化資料表建立的資料行存放區索引。
@@ -192,7 +194,7 @@ Developer Edition 只持續支援 1 個 [SQL Server Distributed Replay](../tools
 |功能|Enterprise|Standard|Web|Express|Express with Advanced Services|  
 |-------------|----------------|--------------|---------|-------------|------------------------------------| 
 |資料列層級安全性|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|  
-|永遠加密|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>| 
+|Always Encrypted|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>| 
 |動態資料遮罩|是|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|   
 |基本稽核|是|是|是|是|是| 
 |細部稽核|是|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>| 
