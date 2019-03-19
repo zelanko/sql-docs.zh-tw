@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: ed1fbe8be63cd184fd49b1e76f94583bd50cf380
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645157"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161515"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server machine learning 中的 sp_rxPredict 進行即時評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53645157"
 
 ## <a name="how-real-time-scoring-works"></a>如何進行即時評分運作方式
 
-即時評分支援在 SQL Server 2017 和 SQL Server 2016[支援的模型型別](#bkmk_py_supported_algos)用於線性及羅吉斯迴歸 」 和 「 決策樹模型。 它會使用原生 c + + 程式庫產生分數，根據使用者輸入提供給 machine learning 的特殊的二進位格式儲存的模型。
+即時評分支援在 SQL Server 2017 和 SQL Server 2016 中，特定模型類型，例如根據 RevoScaleR 或 MicrosoftML functions [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 它會使用原生 c + + 程式庫產生分數，根據使用者輸入提供給 machine learning 的特殊的二進位格式儲存的模型。
 
 因為可以使用定型的模型進行評分，而不需要呼叫外部語言執行階段，則會減少多個處理序的額外負荷。 這可用於評分案例的生產環境支援更快的預測效能。 因為資料絕不會離開 SQL Server，就可以產生並插入新的資料表，而不需要任何 R 與 SQL 之間的資料轉譯結果。
 
@@ -171,7 +171,7 @@ ms.locfileid: "53645157"
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### <a name="step-3-call-sprxpredict"></a>步驟 3： 呼叫 sp_rxPredict
+### <a name="step-3-call-sprxpredict"></a>步驟 3： Call sp_rxPredict
 
 您呼叫 sp\_rxPredict 您對任何其他預存程序。 在目前的版本中，預存程序會採用只有兩個參數： _\@模型_模型，以二進位格式，和 _\@inputData_用於評分的資料定義為有效的 SQL 查詢。
 

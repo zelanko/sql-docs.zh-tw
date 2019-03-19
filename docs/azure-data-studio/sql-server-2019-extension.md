@@ -3,7 +3,7 @@ title: SQL Server 2019 擴充功能 （預覽）
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 的 SQL Server 2019 Preview 延伸模組
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231055"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161546"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 擴充功能 （預覽）
 
@@ -31,9 +30,9 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 
    |平台|下載|發行日期|版本
    |:---|:---|:---|:---|
-   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|2019 年 2 月 13日日 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|2019 年 2 月 13日日 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|2019 年 2 月 13日日 |0.10.2
+   |視窗|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|2019 年 3 月 18日日 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|2019 年 3 月 18日日 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|2019 年 3 月 18日日 |0.11.0
 
 1. 在 Azure Data Studio 選擇**VSIX 套件安裝延伸模組**從**檔案**功能表，然後選取已下載的.vsix 檔案。
 
@@ -44,6 +43,14 @@ SQL Server 2019 擴充功能 （預覽） 提供的預覽支援的新功能和�
 1. 重新載入後，擴充功能會安裝相依性。 您可以看到在 [輸出] 視窗中，進度，並可能需要幾分鐘的時間。
 
 1. 在相依性後面完成安裝，關閉再重新開啟 Azure Data Studio。 **巨量資料的 SQL Server 叢集**連接類型不可以使用，直到您重新啟動 Azure Data Studio。
+
+## <a name="release-notes-v0110"></a>版本資訊 (v0.11.0)
+  * Jupyter Notebook 支援，特別是支援的 Python3 和 Spark 核心，已移至 Azure Data Studio。 此延伸模組已不再需要為了使用 Notebook。
+  * 在外部資料精靈中的多個錯誤修正：
+    * Oracle 型別對應已更新以符合隨附於 SQL Server 2019 CTP 2.3 的變更。
+    * 已修正的問題，已遺失輸入資料表的對應控制項的新結構描述。
+    * 已修正的問題，檢查 [資料庫] 節點中的資料表對應不會造成所有的資料表和檢視表正在檢查。
+
 
 ## <a name="release-notes-v0102"></a>版本資訊 (v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 支援

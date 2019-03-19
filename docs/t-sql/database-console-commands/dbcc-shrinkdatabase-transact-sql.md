@@ -28,15 +28,16 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: e21ffeed024cb6afaa8d1057b1f6819dbe6516d4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
+ms.openlocfilehash: cb2b339314154526af1980edc97c1fdda37aac76
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685605"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161585"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 壓縮指定之資料庫中的資料和記錄檔大小。
   
@@ -151,7 +152,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   結束壓縮作業。 所有已完成的工作都會保留。  
 -   不執行任何動作，並允許壓縮作業等到封鎖交易完成。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

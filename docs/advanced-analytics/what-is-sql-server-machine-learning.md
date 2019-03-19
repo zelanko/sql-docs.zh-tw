@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032949"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161845"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning 服務 （R、 Python） 在 SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,16 @@ SQL Server 2017 Machine Learning 服務是 database engine 執行個體，用於
 
 Azure SQL database [Machine Learning 服務 （使用 R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)目前處於公開預覽狀態。
 
-Machine Learning 服務的主要價值主張是其企業 R 和 Python 套件的乘冪，以提供進階的分析，在小數位數，並且能夠讓計算和處理資料的所在，不必在提取資料在網路中。
+## <a name="bring-compute-power-to-the-data"></a>為資料帶入計算能力
+
+Machine Learning 服務的主要價值主張是其企業 R 和 Python 套件的乘冪，以提供進階的分析，在小數位數，並且能夠讓計算和處理資料的所在，不必在提取資料在網路中。 這會提供多項優點：
+
++ 資料安全性。 將 R 和 Python 執行更接近資料來源可避免浪費資源或不安全的資料移動。
++ 速度。 資料庫已針對集合型操作進行最佳化。 最新的創新，例如記憶體中資料表的資料庫中進行摘要和彙總作業如閃電般，而且與資料科學完美互補。
++ 簡化部署和整合。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 是許多其他資料管理工作和應用程式的作業中心點。 使用位於報表倉儲的資料庫中的資料，您可以確定機器學習服務解決方案所使用的資料是一致且最新狀態。 
++ 跨雲端和內部部署的效率。 而不是 R 或 Python 的工作階段中處理資料，您可以仰賴企業資料管線，包括[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]和 Azure Data Factory。 透過 Power BI 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 很容易就能報告結果或分析。
+
+資料科學家和開發人員可以使用正確的 SQL 和 R 組合，來進行不同的資料處理和分析工作，因此更有效率。
 
 <a name="components"></a>
 

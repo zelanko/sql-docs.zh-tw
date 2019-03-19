@@ -1,20 +1,21 @@
 ---
-title: 什麼&#39;新的-s SQL Server Machine Learning 服務
+title: 新功能-SQL Server 機器學習服務 |Microsoft Docs
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
-ms.prod: sql
-ms.technology: machine-learning
 ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
+ms.custom: sqlseattle
+ms.prod: sql
+ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 43f1f5fb9ace80da357ecca9e4abd715bd4a6048
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 64e98073dabd490965fb5d582102a6eb962c5a13
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018044"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161826"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能
 
@@ -60,7 +61,7 @@ SQL Server 2017 Machine Learning 服務的 R 元件是新一代的 SQL Server 20
 
 ### <a name="r-libraries"></a>R 程式庫
 
-| 封裝 | 描述 |
+| 套件 | 描述 |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | 在此版本中，MicrosoftML 包含在預設 R 安裝中，刪除在先前的 SQL Server 2016 R Services 所需的升級步驟。 MicrosoftML 提供的圖案狀態機器學習服務演算法和可調整，或在遠端計算內容中執行資料轉換。 演算法會包括可自訂的深度類神經網路、 迅速的決策樹及決策樹、 線性迴歸和羅吉斯迴歸。  |
 
@@ -76,7 +77,7 @@ T-SQL 和 Python 整合透過支援[sp_execute_external_script](https://docs.mic
 
 ### <a name="python-libraries"></a>Python 程式庫
 
-| 封裝 | 描述 |
+| 套件 | 描述 |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| RevoScaleR 的 Python 相當。 您可以建立用於線性及羅吉斯迴歸、 決策樹、 梯度上升的樹和隨機樹系，所有可平行執行，且能夠在遠端計算內容中執行的 Python 模型。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以執行 Python 程式碼的遠端 SQL 伺服器上，瀏覽資料，或建立模型，而不移動資料。 |
 |[**microsoftml**](python/ref-py-microsoftml.md) |Python 相當的 MicrosoftML R 封裝。 |

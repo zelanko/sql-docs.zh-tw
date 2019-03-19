@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d0825951bdbc0a94b0a74141d8ebee50a5f14505
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 54b92e356b1e4d28e94cdb42fa1e14b1de9a1a2d
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044797"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161855"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>下載 SQL Server 資料庫內分析的累計更新的執行個體的封包
 
@@ -91,10 +91,11 @@ SQL Server 2016 R services，基準版本是 RTM 版本或 service pack 版本�
 
 |版本  |下載連結  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU1-CU2**     |
-|Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
+|**SQL Server 2016 SP2 CU1-CU4**     |
+|Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 |**SQL Server 2016 SP1 CU4-CU10**     |
+|**SQL Server 2016 SP2**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
 |**SQL Server 2016 SP1 CU1-CU3**     |

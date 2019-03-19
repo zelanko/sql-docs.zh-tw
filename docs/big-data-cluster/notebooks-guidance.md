@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e4f1c945bd09c4d2878ebb441027e32898f24c56
-ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
+ms.openlocfilehash: 44ba203fcd7445add8fce00dd64913f85bcf4cc1
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55807468"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161655"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 預覽中使用 notebook
 
@@ -36,7 +36,7 @@ ms.locfileid: "55807468"
 ## <a name="connect-to-the-sql-server-big-data-cluster-end-point"></a>連接到 SQL Server 巨量資料叢集端點
 
 您可以連接到叢集中的不同結束點。 您可以連接到 Microsoft SQL Server 連接類型或 SQL Server 的巨量資料叢集結束點。
-在 Azure 資料 Studio （預覽），請按 f1 鍵，，然後按一下**新的連線** 就可以連接到 SQL Server 巨量資料叢集結束點。
+在 Azure Data Studio，請按 f1 鍵，然後按一下**新的連線** 就可以連接到 SQL Server 巨量資料叢集結束點。
 
 ![image1](media/notebooks-guidance/image1.png)
 

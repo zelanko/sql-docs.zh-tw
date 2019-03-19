@@ -11,12 +11,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: f7369893be3cd42dab0e0c0cd870a52c639083b5
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030772"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161605"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 
@@ -27,15 +27,15 @@ Azure Data Studio 是跨平台資料庫工具，供資料專業人員使用 Micr
 **[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
-## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>具有 IntelliSense 的 TRANSACT-SQL (T-SQL) 程式碼編輯器
+## <a name="sql-code-editor-with-intellisense"></a>具有 IntelliSense 的 SQL 程式碼編輯器
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供現代、 以鍵盤為主 T-SQL 程式碼撰寫體驗，可讓您日常的工作更容易利用內建功能，例如多個索引標籤式視窗、 豐富的 T-SQL 編輯器、 IntelliSense、 關鍵字完成、 程式碼片段、 程式碼巡覽、 和原始檔控制整合 (Git)。 執行隨 T-SQL 查詢、 檢視以及將結果儲存為文字、 JSON 或 Excel。 編輯資料、 組織您最愛的資料庫的連接，並瀏覽熟悉的物件瀏覽體驗中的資料庫物件。 若要了解如何使用 T-SQL 編輯器，請參閱[使用 T-SQL 編輯器來建立資料庫物件](tutorial-sql-editor.md)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供現代、 以鍵盤為主的 SQL 程式碼撰寫體驗，可讓您日常的工作更容易利用內建功能，例如多個索引標籤式視窗、 豐富的 SQL 編輯器、 IntelliSense、 關鍵字完成、 程式碼片段、 程式碼巡覽、 和原始檔控制整合 (Git)。 執行隨 SQL 查詢、 檢視以及將結果儲存為文字、 JSON 或 Excel。 編輯資料、 組織您最愛的資料庫的連接，並瀏覽熟悉的物件瀏覽體驗中的資料庫物件。 若要了解如何使用 SQL 編輯器，請參閱[使用 SQL 編輯器來建立資料庫物件](tutorial-sql-editor.md)。
 
-## <a name="smart-t-sql-code-snippets"></a>智慧型的 T-SQL 程式碼片段
+## <a name="smart-sql-code-snippets"></a>智慧型 SQL 程式碼片段
 
-T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料表、 檢視、 預存程序、 使用者、 登入、 角色等等，並更新現有的資料庫物件。 使用智慧程式碼片段快速建立資料庫副本以進行開發或測試，並生成和執行 CREATE 和 INSERT 指令。
+SQL 程式碼片段會產生適當的 SQL 語法來建立資料庫、 資料表、 檢視、 預存程序、 使用者、 登入、 角色等等，並更新現有的資料庫物件。 使用智慧程式碼片段快速建立資料庫副本以進行開發或測試，並生成和執行 CREATE 和 INSERT 指令。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 也提供建立自訂的 T-SQL 程式碼片段功能。 若要進一步了解，請參閱[建立和使用程式碼片段](code-snippets.md)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 也提供功能來建立自訂的 SQL 程式碼片段。 若要進一步了解，請參閱[建立和使用程式碼片段](code-snippets.md)。
 
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自訂的伺服器和資料庫儀表板
@@ -57,6 +57,108 @@ T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料
 若要了解中的擴充性[!INCLUDE[name-sos](../includes/name-sos-short.md)]，請參閱 <<c2> [ 擴充性](extensibility.md)。
 若要深入了解撰寫延伸模組，請參閱[延伸模組製作](extension-authoring.md)。
 
+## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 的功能比較
+
+**使用 Azure Data Studio，如果您：**
+- 要在 macOS 或 Linux 上執行
+- 連線到 SQL Server 2019 巨量資料叢集
+- 大部分的時間編輯或執行查詢
+- 必須要能夠快速圖表，並以視覺化方式檢視結果集
+- 可以執行大部分的系統管理工作，透過使用 sqlcmd 或 Powershell 整合式終端機
+- 精靈的使用體驗的最少需要
+- 不需要進行深入的系統管理的設定
+
+**使用 SQL Server Management Studio，如果您：**
+- 資料庫管理工作的支出最多的時間
+- 進行深度管理組態
+- 進行安全性管理，包括使用者管理、 弱點評量和組態的安全性功能
+- 使用於報告的 SQL Server 查詢存放區
+- 需要進行效能微調建議程式和儀表板的使用
+- 正在匯入/匯出的 Dacpac
+- 需要存取已註冊的伺服器和想要控制 SQL Server 在 Windows 上的服務
+
+### <a name="shell"></a>Shell
+
+|功能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Azure 登入|是|是|
+|儀表板|是||
+|延伸模組|是||
+|整合式終端機|是||
+|物件總管|是|是|
+|物件指令碼|是|是|
+|專案系統|是||
+|從資料表選取|是|是|
+|原始程式碼控制|是||
+|工作窗格|是||
+|佈景主題|是||
+|深色的模式|是||
+|Azure 資源總管|預覽||
+|產生指令碼精靈||是|
+|Import\Export DACPAC||是|
+|物件屬性||是|
+|資料表設計工具||是|
+
+
+### <a name="query-editor"></a>查詢編輯器
+
+|功能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|圖表檢視器|是||
+|將結果匯出至 CSV、 JSON、 XLSX|是||
+|IntelliSense|是|是|
+|程式碼片段|是|是|
+|顯示計畫|預覽|是|
+|用戶端統計資料||是|
+|即時查詢統計資料||是|
+|查詢選項||是|
+|將結果存檔||是|
+|以文字顯示結果||是|
+|空間的檢視器||是|
+|SQLCMD||是|
+
+### <a name="operating-system-support"></a>作業系統支援
+
+|功能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Linux|是||
+|macOS|是||
+|視窗|是|是|
+
+### <a name="data-engineering"></a>資料工程
+
+|功能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|建立外部資料表精靈|預覽||
+|HDFS 的整合|預覽||
+|筆記型電腦|預覽||
+
+### <a name="database-administration"></a>資料庫管理
+
+|功能|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|備份/還原|是|是|
+|一般檔案匯入|預覽|是|
+|SQL 代理程式|預覽|是|
+|SQL Profiler|預覽|是|
+|Always On||是|
+|永遠加密||是|
+|複製資料精靈||是|
+|Tuning Advisor 的資料||是|
+|錯誤記錄檔檢視器||是|
+|維護計畫||是|
+|多伺服器查詢||是|
+|原則式管理||是|
+|PolyBase||是|
+|查詢存放區||是|
+|已註冊的伺服器||是|
+|複寫||是|
+|安全性管理||是|
+|Service Broker||是|
+|SQL Mail||是|
+|範本總管||是|
+|弱點評量||是|
+|XEvent 管理||是|
 
 
 
