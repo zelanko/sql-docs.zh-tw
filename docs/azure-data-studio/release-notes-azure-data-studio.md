@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581667"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161625"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版的 ！](download.md)**
+
+## <a name="march-2019"></a>2019 年 3 月
+
+2019 年 3 月 18 日&nbsp;  /  &nbsp;版本：1.5.1
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 新增[PostgreSQL 擴充功能，適用於 Azure 資料 Studio](postgres-extension.md) | 支援的功能： <br/>&bull; &nbsp; 連接對話方塊 <br/>&bull; &nbsp; 物件總管 <br/>&bull; &nbsp; 查詢編輯器 <br/>&bull; &nbsp; 圖表 <br/>&bull; &nbsp; 儀表板 <br/>&bull; &nbsp; 程式碼片段 <br/>&bull; &nbsp; 編輯資料 <br/>&bull; &nbsp; Notebook |
+| 已新增的 SQL Notebook | 已新增的 SQL 核心支援的內建筆記本檢視器： <br/>&bull; &nbsp; 支援的 T-SQL <br/>&bull; &nbsp; 支援 PGSQL |
+| 新增的 PowerShell 延伸模組  | 帶來[PowerShell 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)體驗從 VS Code。  |
+| 已新增的 SQL Server dacpac 延伸模組  | 移除 SQL Server 匯入延伸模組的資料層應用程式精靈儲存成新的擴充功能。  |
+| 已新增 「 社群 」 延伸模組 QueryPlan.show | 加入以視覺化方式檢視查詢計劃的整合支援  |
+| 更新的 SQL Server 2019 Preview 擴充 | &bull; &nbsp; Jupyter Notebook 支援，特別是 Python3 和 Spark 核心，已移至核心 Azure Data Studio 工具。 <br/>&bull; &nbsp; 修正 bug 以外部資料精靈  |
+| 已解決的 bug 和問題。 | 請參閱[Bug 和問題，請在 GitHub 上的](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>已知問題
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427):按一下 儲存格之前核心上的執行為就緒的 Spark 會導致嚴重的錯誤**因應措施：** 等待核心會載入之前執行任何資料格
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493):啟動 SSMS 使用 SQL 驗證-提示使用者輸入密碼的廣告**因應措施：** 現在，使用 Windows 驗證。 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494):無法安裝 SQL notebook 功能 <br/>
+**因應措施：** 請依照下列因應措施步驟[此處](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)。 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503):Azure Data Studio 無法下載] 資料夾 (Mac) 從 [開啟直接 <br />
+**因應措施：** 解壓縮應用程式之後，重新啟動電腦。 將調查。 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):Notebook 另存新檔將會遺失連接內容 <br />
+**因應措施：** 將在下一個版本中修正。 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458):Dacpac 擷取損毀 SqlToolsService，如果使用無效的版本 <br/>
+**因應措施：** 重新啟動 Azure Data Studio，並確保使用正確的版本。
+- 新的 [Notebook] 和 [開啟 Notebook] 圖示將會遺失 <br/> 
+**因應措施：** 在舊版的連線類型已被取代。 我們建議您連接到 SQL Server 端點，並如預期般運作，您會收到所有的動作 （新的 Notebook，Spark 作業）。 
 
 ## <a name="february-2019"></a>2019 年 2 月
 
@@ -178,7 +209,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="bug-fixes-august-2018"></a>Bug 修正，2018 年 8 月
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 未選取變數名稱中的 []。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的]。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。
