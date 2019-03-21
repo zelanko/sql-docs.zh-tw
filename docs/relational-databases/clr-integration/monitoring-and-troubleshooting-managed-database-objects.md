@@ -14,12 +14,12 @@ ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5f355e7fcb46c12e34b23d332cf10da536697ac3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79e95ac14691a4e712710303542c5743f57aacf6
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663778"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305976"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>監視與疑難排解 Managed 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51663778"
   
 |事件|描述|  
 |-----------|-----------------|  
-|[Assembly Load 事件類別](https://msdn.microsoft.com/library/cfb0b69d-4ce0-4067-a3df-d82775e57886)|用於監視組件載入要求 (成功或失敗)。|  
+|[Assembly Load 事件類別](/sql/database-engine/assembly-load-event-class)|用於監視組件載入要求 (成功或失敗)。|  
 |[Sql: batchstarting 事件類別](../../relational-databases/event-classes/sql-batchstarting-event-class.md)， [sql: batchcompleted 事件類別](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|提供已啟動或已完成之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次的相關資訊。|  
 |[SP: Starting 事件類別](../../relational-databases/event-classes/sp-starting-event-class.md)， [SP: Completed 事件類別](../../relational-databases/event-classes/sp-completed-event-class.md)|用於監視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的執行。|  
 |[Sql: stmtstarting 事件類別](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)， [sql: stmtcompleted 事件類別](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|用於監視 CLR 和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 常式的執行。|  

@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027129"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305936"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -59,7 +59,7 @@ ms.locfileid: "56027129"
   
 1.  **在 DQS 中設定參考資料提供者詳細資料**：您必須先在 DQS 中設定參考資料服務詳細資料，才能在 DQS 中使用參考資料。  
   
-    1.  如果您使用服務商場，請提供有效的服務商場帳號金鑰、瀏覽至服務商場中的 [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) 資料類別目錄，並訂閱所需的提供者。  
+    1.  如果您使用服務商場，提供有效的服務商場帳號金鑰、 瀏覽至[Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services)資料分類在 Marketplace 中，並訂閱所需的提供者。  
   
     2.  如果您使用直接線上參考資料提供者，您必須先在 DQS 中加入直接參考資料提供者詳細資料，然後才可以使用它。  
   

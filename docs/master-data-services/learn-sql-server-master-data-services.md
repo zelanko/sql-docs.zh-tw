@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809440"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305836"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
 
@@ -27,8 +27,8 @@ ms.locfileid: "52809440"
   
   
 ## <a name="training"></a>訓練  
-* 若要探索 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]引進的新功能，可試用這個 [**TechNet 虛擬實驗室**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (必須使用您的 Microsoft 帳戶登入)。  
-* 若要開發 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 方案，使用適用於 Excel 的增益集和 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]來儲存和管理主要地理資料清單，請試用這個 [**TechNet 虛擬實驗室**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
+* 若要瀏覽中導入的新功能[!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]，試試看[自學實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)（使用您的 Microsoft 帳戶登入為必要）。  
+* 若要開發[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]解決方案來儲存和管理地理資料，使用適用於 Excel 的增益集的主要清單和[!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]，試試看[自學實驗室](https://www.microsoft.com/handsonlabs/selfpacedlabs)。 您將建立實體和階層，並使用 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 來擴展維度資料表。  
   
 ## <a name="videos"></a>視訊  
 * 若要了解 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]版的新功能，請 [**觀看這段影片**](https://www.youtube.com/watch?v=cKA72FpOVxI)。  

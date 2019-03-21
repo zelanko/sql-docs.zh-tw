@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214308"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305986"
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53214308"
   
 -   0x0416 或 1046，代表 [葡萄牙文 (巴西)] 。  
   
- 若要檢視較長的清單，請參閱 [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)。 如需更多背景，請參閱 [編碼方式和字碼頁](http://msdn.microsoft.com/goglobal/bb688114.aspx)。  
+ 若要檢視較長的清單，請參閱 [Microsoft 指派的地區設定識別碼](http://msdn.microsoft.com/goglobal/bb964664.aspx)。 如需更多背景，請參閱 [編碼方式和字碼頁](/globalization/encoding/encoding-overview)。  
   
 > [!NOTE]  
 >  **Language** 屬性不會決定用於傳回系統訊息的語言，也不會決定要在使用者介面中顯示的字串。 錯誤、警告和訊息會當地語系化成 Office 和 Office 365 中支援的所有語言，並且會在用戶端連接指定其中一個支援的地區設定時自動使用。  
