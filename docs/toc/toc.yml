@@ -44,12 +44,12 @@ items:
 - name: 巨量資料叢集
   href: ../toc/redirectfrom-big-data-cluster.md
   items:
-  - name: 概觀
+  - name: 巨量資料叢集概觀
     items:
     - name: 什麼是 SQL Server 巨量資料叢集？
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: 版本資訊
-      href: ../big-data-cluster/big-data-cluster-release-notes.md
+      href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: 安裝
     items:
     - name: 安裝工具
@@ -118,12 +118,14 @@ items:
         href: ../big-data-cluster/data-ingestion-curl.md
       - name: 還原資料庫
         href: ../big-data-cluster/data-ingestion-restore-database.md
-    - name: 部署應用程式
+    - name: 部署及取用應用程式
       items:
-      - name: 使用 mssqlctl
+      - name: 使用 mssqlctl 部署
         href: ../big-data-cluster/big-data-cluster-create-apps.md
-      - name: 使用 VS Code
+      - name: 使用 VS Code 部署
         href: ../big-data-cluster/app-deployment-extension.md
+      - name: 取用應用程式
+        href: ../big-data-cluster/big-data-cluster-consume-apps.md
     - name: 巨量資料/機器學習
       items:
       - name: 使用 PROSE 程式碼加速器的資料整頓
@@ -134,6 +136,8 @@ items:
         href: ../big-data-cluster/export-model-with-spark-mleap.md
       - name: 從 RStudio 使用 Sparklyr
         href: ../big-data-cluster/sparklyr-from-RStudio.md
+      - name: GPU 支援與 TensorFlow
+        href: ../big-data-cluster/spark-gpu-tensorflow.md
     - name: 管理 SQL Server 巨量資料叢集
       items:
       - name: 連線至巨量資料叢集
@@ -8022,6 +8026,8 @@ items:
         href: ../azure-data-studio/quickstart-sql-database.md
       - name: 連線與查詢 Azure SQL 資料倉儲
         href: ../azure-data-studio/quickstart-sql-dw.md
+      - name: 連線與查詢 PostgreSQL
+        href: ../azure-data-studio/quickstart-postgres.md
     - name: 教學課程
       items:
       - name: T-SQL 編輯器
@@ -8046,6 +8052,8 @@ items:
         href: ../azure-data-studio/keyboard-shortcuts.md
       - name: 探索 Azure SQL 資源
         href: ../azure-data-studio/azure-resource-explorer.md
+      - name: SQL Notebook
+        href: ../azure-data-studio/sql-notebooks.md
       - name: 伺服器群組
         href: ../azure-data-studio/server-groups.md
       - name: 原始檔控制
@@ -8059,10 +8067,14 @@ items:
     - name: 延伸模組
       href: ../azure-data-studio/extensions.md
       items:
+      - name: PostgreSQL 延伸模組 (預覽)
+        href: ../azure-data-studio/postgres-extension.md
       - name: SQL Server 2019 (預覽)
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server Agent (預覽)
         href: ../azure-data-studio/sql-server-agent-extension.md
+      - name: SQL Server dacpac 延伸模組 (預覽)
+        href: ../azure-data-studio/sql-server-dacpac-extension.md
       - name: SQL Server 匯入 (預覽)
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (預覽)
@@ -11252,6 +11264,35 @@ items:
       - name: SP:StmtStarting 事件類別
         href: ../relational-databases/event-classes/sp-stmtstarting-event-class.md
     - name: Transaction 事件類別目錄
+      href: ../relational-databases/event-classes/transactions-event-category.md
+      items:
+      - name: DTCTransaction 事件類別
+        href: ../relational-databases/event-classes/dtctransaction-event-class.md
+      - name: SQLTransaction 事件類別
+        href: ../relational-databases/event-classes/sqltransaction-event-class.md
+      - name: TM:Begin Tran Completed 事件類別
+        href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
+      - name: TM:Begin Tran Starting 事件類別
+        href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
+      - name: TM:Commit Tran Completed 事件類別
+        href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
+      - name: TM:Commit Tran Starting 事件類別
+        href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
+      - name: TM:Promote Tran Completed 事件類別
+        href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
+      - name: TM:Promote Tran Starting 事件類別
+        href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
+      - name: TM:Rollback Tran Completed 事件類別
+        href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
+      - name: TM:Rollback Tran Starting 事件類別
+        href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
+      - name: TM:Save Tran Completed 事件類別
+        href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
+      - name: TM:Save Tran Starting 事件類別
+        href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
+      - name: TransactionLog 事件類別
+        href: ../relational-databases/event-classes/transactionlog-event-class.md
+    - name: T-SQL 事件類別目錄
       href: ../relational-databases/event-classes/tsql-event-category.md
       items:
       - name: Exec Prepared SQL 事件類別
@@ -17178,9 +17219,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 處理 XQuery 中的命名空間
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 3f19b93765528f26054042199d3e33b5098d205e
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974567"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222182"

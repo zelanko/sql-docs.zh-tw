@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579238"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277303"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門：安裝 SQL Server 和 Red Hat 上建立資料庫
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579238"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-在本快速入門中，您安裝 SQL Server 2017 或 SQL Server 2019 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
+在本快速入門中，您安裝 SQL Server 2017 或 SQL Server 2019 上 Red Hat Enterprise Linux (RHEL)。 然後交流**sqlcmd**來建立您的第一個資料庫和執行查詢。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ ms.locfileid: "57579238"
 
 ## <a name="prerequisites"></a>先決條件
 
-您必須擁有 RHEL 7.3 或 7.4 的電腦，具有**至少 2 GB**的記憶體。
+您必須使用 RHEL 7.3、 7.4、 7.5 或 7.6 machine**至少 2 GB**的記憶體。
 
 若要安裝在您自己的電腦上的 Red Hat Enterprise Linux，請前往[ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 您也可以在 Azure 中建立 RHEL 虛擬機器。 請參閱[建立和使用 Azure CLI 管理 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並使用`--image RHEL`呼叫中`az vm create`。
 
