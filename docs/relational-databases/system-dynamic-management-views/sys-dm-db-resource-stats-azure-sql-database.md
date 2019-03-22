@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 03/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b05472f52bf182768740c8c01e8b60021dc898f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030149"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58325501"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56030149"
 |avg_cpu_percent|**decimal (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
 |avg_data_io_percent|**decimal (5,2)**|平均資料 I/O 使用率的服務層限制的百分比表示。|  
 |avg_log_write_percent|**decimal (5,2)**|平均寫入 I/O 輸送量使用率的服務層限制的百分比。|  
-|avg_memory_usage_percent|**decimal (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用來儲存記憶體中 OLTP 物件的記憶體。|  
+|avg_memory_usage_percent|**decimal (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用於緩衝集區分頁和儲存體的記憶體內部 OLTP 物件的記憶體。|  
 |xtp_storage_percent|**decimal (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （在報告的時間間隔結束）。 這包括用來儲存下列記憶體內部 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，會傳回 0。|  
 |max_worker_percent|**decimal (5,2)**|最大並行背景工作角色 （要求） 的資料庫的服務層限制的百分比表示。|  
 |max_session_percent|**decimal (5,2)**|最大並行工作階段的資料庫服務層限制百分比表示。|  

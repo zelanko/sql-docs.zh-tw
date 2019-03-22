@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018464"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222022"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 來部署應用程式到 SQL Server 的巨量資料叢集
 
@@ -105,7 +105,7 @@ VS Code 會提示輸入適當的端點、 使用者名稱和密碼。 如果指�
 
 ![部署應用程式按鈕](media/vs-extension/deploy_app_lightning.png)
 
-![部署應用程式 Codelens](media/vs-extension/deploy_app_codelens.png)
+![部署應用程式 CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 當應用程式已可供使用的資訊看板中的應用程式狀態為基礎，您將會收到通知：
 
@@ -127,9 +127,11 @@ VS Code 會提示輸入適當的端點、 使用者名稱和密碼。 如果指�
   - swagger
   - 詳細資料
 
-如果您按一下`Links`，您會看到您可以存取`swagger.json`的已部署的應用程式，因此，撰寫您自己的用戶端會呼叫您的應用程式：
+如果您按一下`Links`，您會看到您可以存取`swagger.json`已部署的應用程式，讓您可以撰寫您自己的用戶端會呼叫您的應用程式：
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger](media/vs-extension/swagger.png)
+
+請參閱[巨量資料叢集上的應用程式會耗用](big-data-cluster-consume-apps.md)如需詳細資訊。
 
 ### <a name="app-run"></a>應用程式執行
 
@@ -173,7 +175,7 @@ VS Code 會提示輸入適當的端點、 使用者名稱和密碼。 如果指�
 
 ## <a name="next-steps"></a>後續步驟
 
-您也可以參考其他樣本[應用程式部署範例](https://aka.ms/sql-app-deploy)嘗試擴充功能。
+探索如何整合在您的應用程式中的巨量資料叢集的 SQL Server 上部署的應用程式[巨量資料叢集上的應用程式會耗用](big-data-cluster-consume-apps.md)如需詳細資訊。 您也可以參考其他樣本[應用程式部署範例](https://aka.ms/sql-app-deploy)嘗試擴充功能。
 
 如需有關 SQL Server 的巨量資料叢集的詳細資訊，請參閱 <<c0> [ 什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)。
 

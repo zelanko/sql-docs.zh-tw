@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756633"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222054"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式
 
@@ -253,7 +253,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>描述應用程式
 
-描述命令提供應用程式，包括您的叢集中的結束點的詳細的資訊。 這通常是由應用程式開發人員建置應用程式使用 swagger 的用戶端，並使用 web 服務的應用程式互動以 RESTful 方式。
+描述命令提供應用程式，包括您的叢集中的結束點的詳細的資訊。 這通常是由應用程式開發人員建置應用程式使用 swagger 的用戶端，並使用 web 服務的應用程式互動以 RESTful 方式。 請參閱[巨量資料叢集上的應用程式會耗用](big-data-cluster-consume-apps.md)如需詳細資訊。
 
 ```json
 {
@@ -293,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>後續步驟
 
-您也可以查看其他樣本[應用程式部署範例](https://aka.ms/sql-app-deploy)。
+探索如何整合在您的應用程式中的巨量資料叢集的 SQL Server 上部署的應用程式[巨量資料叢集上的應用程式會耗用](big-data-cluster-consume-apps.md)如需詳細資訊。 您也可以查看其他樣本[應用程式部署範例](https://aka.ms/sql-app-deploy)。
 
 如需有關 SQL Server 的巨量資料叢集的詳細資訊，請參閱 <<c0> [ 什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)。
