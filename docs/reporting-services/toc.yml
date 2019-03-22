@@ -7,8 +7,8 @@ items:
   items:
   - name: Reporting Services 的新功能
     href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
-  - name: 變更記錄
-    href: ../reporting-services/change-log-sql-server-reporting-services.md
+  - name: SSRS 2017 及更新版本的版本資訊
+    href: ../reporting-services/release-notes-reporting-services.md
   - name: Reporting Services 概念 (SSRS)
     href: ../reporting-services/reporting-services-concepts-ssrs.md
   - name: Reporting Services 功能及工作
@@ -1625,8 +1625,8 @@ items:
       href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md
     - name: 報表檢視器支援
       href: ../reporting-services/application-integration/reportviewer-controls-support.md
-    - name: 報表檢視器控制項變更記錄
-      href: ../reporting-services/application-integration/changelog.md
+    - name: SSRS 報表檢視器控制項的版本資訊
+      href: ../reporting-services/application-integration/release-notes-ssrs-application-integration.md
   - name: 直接整合 Reporting Services
     items:
     - name: 在 URL 存取和 SOAP 之間選擇
@@ -1956,9 +1956,9 @@ items:
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 教學課程：運算式簡介
       href: ../reporting-services/tutorial-introducing-expressions.md
-ms.openlocfilehash: 0557511d395eaac697bcf609582dc69a8ee5cfd4
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 9810e2d55fea922b6812d5d0539e8283f4977033
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974527"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290864"

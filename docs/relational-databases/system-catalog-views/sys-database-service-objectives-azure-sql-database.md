@@ -1,7 +1,7 @@
 ---
 title: sys.database_service_objectives (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/30/2016
+ms.date: 03/21/2018
 ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a073dba8a05aa6f098bdf2b2ce1666d4cc324be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 889d8d618cf017d27e3b92ce845c8ebfee179048
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028519"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342917"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56028519"
   
  如需定價資訊，請參閱[SQL Database 選項和效能：SQL Database 定價](https://azure.microsoft.com/pricing/details/sql-database/)並[SQL 資料倉儲價格](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)。  
   
- 若要變更服務設定，請參閱[ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)並[ALTER DATABASE （Azure SQL 資料倉儲）](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)。  
+ 若要變更服務設定，請參閱[ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)並[ALTER DATABASE （Azure SQL 資料倉儲）](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)。  
   
  Sys.database_service_objectives 檢視包含下列資料行。  
   
@@ -39,14 +39,14 @@ ms.locfileid: "56028519"
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|資料庫中的 Azure SQL Database 伺服器執行個體的唯一識別碼。 可與聯結[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |版本|sysname|資料庫或資料倉儲服務層：**基本**， **Standard**， **Premium**或是**資料倉儲**。|  
-|service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，會傳回**ElasticPool**。<br /><br /> 在 **基本**層，會傳回**基本**。<br /><br /> **在標準服務層中的單一資料庫**傳回下列其中之一：S0、 S1、 S2、 S3、 S4、 S6、 S7、 S9 或 S12。<br /><br /> **進階層中的單一資料庫**傳回下列動作：P1、 P2、 P4、 P6、 P11 或 P15。<br /><br /> **SQL 資料倉儲**傳回透過 DW10000c DW100。|  
+|service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，會傳回**ElasticPool**。<br /><br /> 在 **基本**層，會傳回**基本**。<br /><br /> **在標準服務層中的單一資料庫**傳回下列其中之一：S0、 S1、 S2、 S3、 S4、 S6、 S7、 S9 或 S12。<br /><br /> **進階層中的單一資料庫**傳回下列動作：P1、 P2、 P4、 P6、 P11 或 P15。<br /><br /> **SQL 資料倉儲**傳回 DW100 到 DW30000c。|  
 |elastic_pool_name|sysname|名稱[彈性集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)所屬的資料庫。 傳回**NULL**如果資料庫是單一資料庫或資料 warehoue。|  
   
 ## <a name="permissions"></a>Permissions  
  需要**dbManager** master 資料庫的權限。  在資料庫層級中，使用者必須是建立者或擁有者。  
   
 ## <a name="examples"></a>範例  
- 可以執行此範例中，使用者資料庫或主要資料庫上。 查詢會傳回名稱、 服務和資料庫的效能層資訊。  
+ 可以執行此範例中，master 資料庫或 Azure SQL Database 使用者資料庫。 查詢會傳回名稱、 服務和資料庫的效能層資訊。  
   
 ```sql  
 SELECT  d.name,   
