@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579768"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974447"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
@@ -209,13 +209,15 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 例如，`LATIN1_GENERAL_100_CI_AS_SC` 至 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`。 UTF-8 僅適用於支援增補字元的 Windows 定序，已於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中推出。 `NCHAR` 和 `NVARCHAR` 只允許 UTF-16 編碼，並維持不變。
 
-此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有拉丁文字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)` 會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
+此功能可能會節省大量儲存空間 (視使用的字元集而定)。 例如，使用啟用 UTF-8 的定序，將具有 ASCII (拉丁文) 字串的現有資料行資料類型從 `NCHAR(10)` 變更為 `CHAR(10)`，會使儲存體需求減少 50%。 這項減少的原因是 `NCHAR(10)` 需要 20 個位元組作為儲存空間，而 `CHAR(10)` 針對相同的 Unicode 字串需要 10 個位元組。
 
 如需詳細資訊，請參閱 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。
 
-CTP 2.1 新增了在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安裝期間選取 UTF-8 定序作為預設的支援。
+**CTP 2.1** 新增在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 安裝期間選取 UTF-8 定序作為預設的支援。
 
-CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
+**CTP 2.2** 新增在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
+
+**CTP 2.3** 新增在 BIN2 定序 (UTF8_BIN2) 中使用 UTF-8 字元編碼的支援。
 
 ### <a name="resumable-online-index-create-ctp-20"></a>可繼續的線上索引建立 (CTP 2.0)
 
@@ -383,6 +385,8 @@ CTP 2.2 新增了在 SQL Server 複寫中使用 UTF-8 字元編碼的支援。
 輕量型查詢分析基礎結構 (LWP) 提供比標準分析機制更具效率的查詢效能資料。 根據預設，現在會啟用輕量型分析。 它已在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 中引進。 相較於標準查詢分析機制有最多 75% CPU 的額外負荷，輕量型查詢分析提供預期額外負荷為 2% CPU 的查詢執行統計資料收集機制。 在舊版中，根據預設，它為 OFF。 資料庫管理員可以使用[追蹤旗標 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 來啟用它。 
 
 如需輕量型分析的詳細資訊，請參閱[查詢分析基礎結構](../relational-databases/performance/query-profiling-infrastructure.md)。
+
+**CTP 2.3** 引進了新的資料庫範圍設定 `LIGHTWEIGHT_QUERY_PROFILING`，來啟用或停用輕量型查詢分析基礎結構。
 
 ### <a id="polybase"></a>新的 PolyBase 連接器
 

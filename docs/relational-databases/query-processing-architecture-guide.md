@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579728"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161685"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579728"
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可在多種資料儲存架構處理查詢，例如本機資料表、資料分割資料表及散發到多部伺服器的資料表。 下列主題涵蓋了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何處理查詢以及透過執行計畫快取最佳化查詢重複使用。
 
 ## <a name="execution-modes"></a>執行模式
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可以使用兩種不同的處理模式來處理 SQL 陳述式：
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可以使用兩種不同的處理模式來處理 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式：
 - 資料列模式執行
 - 批次模式執行
 
@@ -51,7 +51,7 @@ ms.locfileid: "57579728"
 > 批次模式執行對於資料倉儲案例非常有效率，其中會讀取及彙總大量資料。
 
 ## <a name="sql-statement-processing"></a>SQL 陳述式處理
-處理單一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行 SQL 陳述式最基本的方法。 用於處理僅參考本機基底資料表 (非檢視表或遠端資料表) 之單一 `SELECT` 陳述式的步驟可說明這個基本程序。
+處理單一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式最基本的方法。 用於處理僅參考本機基底資料表 (非檢視表或遠端資料表) 之單一 `SELECT` 陳述式的步驟可說明這個基本程序。
 
 ### <a name="logical-operator-precedence"></a>邏輯運算子優先順序
 當陳述式中使用一個以上的邏輯運算子，`NOT` 會第一個計算，接下來是 `AND`，最後才是 `OR`。 先處理算術以及位元運算子，接著才處理邏輯運算子。 如需詳細資訊，請參閱[運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)。
@@ -215,22 +215,22 @@ END;
 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 最佳化 *MyProc2* 中的 `SELECT` 陳述式時，`@d2` 的值未知。 因此，查詢最佳化工具會針對 `OrderDate > @d2` 的選擇性，使用預設估計值 (本例中為 30%)。
 
 ### <a name="processing-other-statements"></a>處理其他的陳述式
-這裡描述來用以處理 `SELECT` 陳述式的基本步驟適用於其他 SQL 陳述式，例如 `INSERT`、 `UPDATE`及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT` 陳述式，其可提供要更新或插入的資料值。
+這裡描述用來處理 `SELECT` 陳述式的基本步驟適用於其他 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，例如 `INSERT`、`UPDATE` 及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT` 陳述式，其可提供要更新或插入的資料值。
 
 即使資料定義語言 (DDL) 陳述式 (例如 `CREATE PROCEDURE` 或 `ALTER TABLE`) 最後會解析為系統目錄資料表上一連串的關聯式作業，但有時還是會根據資料表來解析 (例如 `ALTER TABLE ADD COLUMN`)。
 
 ### <a name="worktables"></a>工作資料表
-關聯式引擎在執行 SQL 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表會建立在 tempdb 中，並且在不需再使用時自動卸除。
+關聯式引擎在執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中所指定的邏輯作業前，可能需要先建立一個工作資料表。 工作資料表屬於內部資料表，可用來保存中繼結果。 工作資料表會針對特定的 `GROUP BY`、 `ORDER BY`或 `UNION` 查詢而產生。 例如，如果 `ORDER BY` 子句會參考不在任何索引範圍內的資料行，則關聯式引擎可能需要產生工作資料表，根據所要求的順序來排序結果集。 工作資料表有時候也當作多工緩衝處理使用，可暫時保存執行部份查詢計畫的結果。 工作資料表會建立在 tempdb 中，並且在不需再使用時自動卸除。
 
 ### <a name="view-resolution"></a>檢視解析
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器對待索引及非索引檢視的方式不同： 
 
 * 索引檢視的資料列是儲存在資料表庫中，並使用與資料表相同的格式。 如果查詢最佳化工具決定使用查詢計畫中的索引檢視，將以處理基底資料表的相同方式來處理索引檢視。
-* 只會儲存非索引檢視的定義，而不會儲存檢視的資料列。 查詢最佳化工具會將檢視表定義中的邏輯，合併到它為參考非索引檢視表之 SQL 陳述式所建立的執行計畫中。 
+* 只會儲存非索引檢視的定義，而不會儲存檢視的資料列。 查詢最佳化工具會將檢視定義中的邏輯，合併到它為參考非索引檢視表之 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所建立的執行計畫中。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具用來決定何時使用索引檢視表的邏輯，類似於用以決定何時使用資料表中索引的邏輯。 如果索引檢視表中的資料涵蓋了全部或部分的 SQL 陳述式，並且查詢最佳化工具判斷出檢視表中的索引是低成本的存取路徑，那麼查詢最佳化工具便會選擇該索引，而不論查詢中是否有依名稱參考此檢視表。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具用來決定何時使用索引檢視表的邏輯，類似於用以決定何時使用資料表中索引的邏輯。 如果索引檢視表中的資料涵蓋了全部或部分 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，且查詢最佳化工具判斷出檢視表中索引是低成本的存取路徑，那麼查詢最佳化工具便會選擇該索引，而不論查詢中是否會依名稱參考此檢視表。
 
-當 SQL 陳述式參考無索引的檢視時，剖析器與查詢最佳化工具會分析 SQL 陳述式和檢視的來源，然後將它們解析成單一執行計畫。 SQL 陳述式與檢視不會分屬於不同的計畫。
+當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式參考無索引檢視表時，剖析器與查詢最佳化工具會分析 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式和檢視的來源，然後將它們解析成單一執行計畫。 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與檢視不會分屬於不同的計畫。
 
 例如，請考慮下列檢視：
 
@@ -245,7 +245,7 @@ ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
-根據此檢視，這兩個 SQL 陳述式會在基底資料表上執行相同的作業，並產生相同的結果：
+根據此檢視，這兩個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式會在基底資料表上執行相同的作業，並產生相同的結果：
 
 ```sql
 /* SELECT referencing the EmployeeName view. */
@@ -371,7 +371,7 @@ WHERE TableA.ColZ = TableB.Colz;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會建立智慧型的動態計畫，以有效使用分散式查詢來存取遠端成員資料表的資料： 
 
 * 查詢處理器會先使用 OLE DB 來擷取各成員資料表中的 CHECK 條件約束定義。 這可以讓查詢處理器將索引鍵值的散發對應到每個成員資料表中。
-* The Query Processor compares the key ranges specified in an SQL statement `WHERE` 子句中指定的索引鍵範圍，與顯示成員資料表中資料列分散情況的對應做比較。 然後，查詢處理器會建立查詢執行計畫，而此計畫的分散式查詢僅會擷取那些完成 SQL 陳述式所需的遠端資料列。 執行計畫也會以系統取得所需的資訊前，對資料或中繼資料延遲遠端成員資料表存取的方法執行。
+* 查詢處理器會將 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式 `WHERE` 子句中指定的索引鍵範圍，與顯示成員資料表中資料列分散情況的對應做比較。 然後，查詢處理器會建立查詢執行計畫，而此計畫的分散式查詢僅會擷取那些完成 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所需的遠端資料列。 執行計畫也會以系統取得所需的資訊前，對資料或中繼資料延遲遠端成員資料表存取的方法執行。
 
 例如，假設系統中的客戶資料表是跨 Server1 (從 1 到 3299999 的`CustomerID` )、Server2 (從 3300000 到 6599999 的`CustomerID` )，以及 Server3 (從 6600000 到 9999999 的`CustomerID` ) 進行資料分割。
 
@@ -385,7 +385,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 這個查詢的執行計畫會擷取本機成員資料表中 `CustomerID` 索引鍵值從 3200000 到 3299999 之間的資料列，並提交分散式查詢以擷取 Server2 中索引鍵值從 3300000 到 3400000 之間的資料列。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器也可以將動態邏輯建立至 SQL 陳述式的查詢執行計畫中，但該計畫建立時索引鍵值為未知。 例如，請參考這個預存程序：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢處理器也可以將動態邏輯建置到 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的查詢執行計畫中，但該計畫建置時索引鍵值為未知。 例如，請參考這個預存程序：
 
 ```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -410,7 +410,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ## <a name="stored-procedure-and-trigger-execution"></a>預存程序與觸發程序執行
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只會儲存預存程序和觸發程序的來源。 當先執行預存程序或觸發程序時，會將來源編譯成執行計畫。 如果在執行計畫從記憶體中淘汰之前，再執行一次預存程序或觸發程序，關聯式引擎會偵測到現有的計畫並重複使用它。 如果計畫已從記憶體淘汰，就會建立新計畫。 此處理序與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 對於所有 SQL 陳述式所依循的處理序類似。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，相較於動態 SQL 的批次，預存程序與觸發程序的主要效能優點為，其 SQL 陳述式永遠都是相同的。 因此，關聯式引擎可以輕易地將這些陳述式與任何現有的執行計畫配對。 就可以輕易地重複使用預存程序及觸發程序計畫
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只會儲存預存程序和觸發程序的來源。 當先執行預存程序或觸發程序時，會將來源編譯成執行計畫。 如果在執行計畫從記憶體中淘汰之前，再執行一次預存程序或觸發程序，關聯式引擎會偵測到現有的計畫並重複使用它。 如果計畫已從記憶體淘汰，就會建立新計畫。 此處理序與 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 對於所有 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所依循的處理序類似。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，相較於動態 [!INCLUDE[tsql](../includes/tsql-md.md)] 的批次，預存程序與觸發程序的主要效能優點為，其 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式一律是相同的。 因此，關聯式引擎可以輕易地將這些陳述式與任何現有的執行計畫配對。 就可以輕易地重複使用預存程序及觸發程序計畫
 
 預存程序及觸發程序的執行計畫，將分別自呼叫預存程序，或引發觸發程序之批次的執行計畫中執行。 這可以允許更多次重複使用預存程序及觸發程序執行計畫。
 
@@ -420,16 +420,21 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行計畫具有下列主要元件： 
 
-* 查詢執行計畫：大多數的執行計畫是可重新進入的唯讀資料結構，而且可供任意數目的使用者所使用。 此稱為查詢計畫。 查詢計畫中並不會儲存任何使用者內容。 記憶體中絕不會有超過一或兩個的查詢計畫副本：一個是所有序列執行的副本，另一個則是所有平行執行的副本。 平行副本會涵蓋所有的平行執行，不論其平行處理原則的程度為何。 
-* 執行內容：目前執行查詢的每位使用者都具有資料結構，其中保存了與其執行相關的特定資料，例如參數值。 此資料結構即稱為執行內容。 而此執行內容資料結構將會重複使用。 如果使用者執行查詢，而且其中有一個結構不在使用中，則系統會根據新使用者的內容來重新初始化該結構。 
+- **查詢執行計畫**     
+  大多數的執行計畫是可重新進入的唯讀資料結構，而且可供任意數目的使用者所使用。 此稱為查詢計畫。 查詢計畫中並不會儲存任何使用者內容。 記憶體中絕不會有超過一或兩個的查詢計畫副本：一個是所有序列執行的副本，另一個則是所有平行執行的副本。 平行副本會涵蓋所有的平行執行，不論其平行處理原則的程度為何。 
+- **執行內容**     
+  目前執行查詢的每位使用者都有資料結構，其中保存了與其執行相關的特定資料，例如參數值。 此資料結構即稱為執行內容。 而此執行內容資料結構將會重複使用。 如果使用者執行查詢，而且其中有一個結構不在使用中，則系統會根據新使用者的內容來重新初始化該結構。 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行任何 SQL 陳述式時，關聯式引擎會先尋找整個計畫快取，以確認相同 SQL 陳述式的現有執行計畫是否存在。 如果 SQL 陳述式與先前執行之 SQL 陳述的快取計劃每個字元都相符合，它就符合存在的資格。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會重複使用它，如此可省下重新編譯 SQL 陳述式的負擔。 如果沒有現有的執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為查詢建立新執行計畫。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中執行任何 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式時，關聯式引擎會先尋找整個計畫快取，以確認相同 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的現有執行計畫是否存在。 如果 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前執行之 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述的快取計畫每個字元都相符，它就符合存在的資格。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 找到任何現有的計畫，就會加以重複使用，如此可減輕重新編譯 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的負擔。 如果沒有現有的執行計畫，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為查詢建立新執行計畫。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一個非常有效率的演算法，可為任何特定 SQL 陳述式尋找現有的執行計畫。 在大部分的系統中，這個掃描所使用的最少資源，比能夠重複使用現有計畫來取代編譯每個 SQL 陳述式所節省下來的資源還少。
+> [!NOTE]
+> 不會快取某些 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，例如在資料列存放區上執行的大量作業陳述式，或包含之字串常值大小大於 8 KB 的陳述式。
 
-此演算法若要能使得新的 SQL 陳述式符合快取中現有、未使用的執行計畫，所有的物件參考必須是完整的。 例如，假設對於執行以下 `Person` 陳述式的使用者，`SELECT` 是預設結構描述。 但是在此範例中，`Person` 不需要是完整的，這表示第二個陳述式與現有的計畫不相符合，但第三個是相符合的：
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有一個非常有效率的演算法，可尋找任何特定 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的現有執行計畫。 在大部分的系統中，這個掃描所使用的最少資源，比能夠重複使用現有計畫來取代編譯每個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式所節省下來的資源還少。
+
+此演算法若要能使得新 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式符合快取中現有、未使用的執行計畫，所有物件參考必須是完整的。 例如，假設對於執行以下 `Person` 陳述式的使用者，`SELECT` 是預設結構描述。 但是在此範例中，`Person` 不需要是完整的，這表示第二個陳述式與現有的計畫不相符合，但第三個是相符合的：
 
 ```sql
 SELECT * FROM Person;
@@ -499,8 +504,8 @@ GO
 
 > [!NOTE]
 > 在沒有 xEvents 可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中，可以針對報告陳述式層級重新編譯的相同目的，使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 追蹤事件。
-> 追蹤事件 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) 也會報告陳述式層級重新編譯，而且此追蹤事件也可用來追蹤及偵錯重新編譯。 SP:Recompile 只能針對預存程序及觸發程序來產生；相較之下，SQL:StmtRecompile 則可針對預存程序、觸發程序、特定批次、使用 `sp_executesql` 所執行的批次、準備查詢及動態 SQL 來產生。
-> SP:Recompile 及 SQL:StmtRecompile 的 *EventSubClass* 資料行含有一個整數碼，來指出重新編譯的原因。 程式碼的說明請參閱[這裡](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)。
+> 追蹤事件 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) 也會報告陳述式層級重新編譯，而且此追蹤事件也可用來追蹤及偵錯重新編譯。 SP:Recompile 只能針對預存程序及觸發程序來產生；相較之下，`SQL:StmtRecompile` 可針對預存程序、觸發程序、隨選批次、使用 `sp_executesql` 執行的批次、準備查詢及動態 SQL 來產生。
+> `SP:Recompile` 和 `SQL:StmtRecompile` 的 *EventSubClass* 資料行包含一個整數碼，可指出重新編譯的原因。 程式碼的說明請參閱[這裡](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)。
 
 > [!NOTE]
 > 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `ON` 時，若其目標資料表或索引檢視表的統計資料或基數明顯和上次執行不同時，就會重新編譯查詢。 此行為適用於標準使用者定義的資料表、暫存資料表，以及 DML 觸發程序所建立的插入和刪除資料表。 如果過多的重新編譯影響了查詢效能，請考慮將此設定值變更為 `OFF`。 當 `AUTO_UPDATE_STATISTICS` 資料庫選項設定為 `OFF` 時，就不會基於統計資料或基數變更發生重新編譯，但 DML `INSTEAD OF` 觸發程序所建立的插入和刪除資料表例外。 因為這些資料表是在 tempdb 中建立的，所以存取它們的查詢是否要重新編譯，取決於 tempdb 中 `AUTO_UPDATE_STATISTICS` 的設定。 請注意，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，即使此設定為 `OFF`，還是會繼續根據 DML 觸發程序之插入和刪除資料表的基數變更來重新編譯查詢。
@@ -526,9 +531,9 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-這些查詢執行計畫間的唯一差異是用來比較 `ProductSubcategoryID` 資料行所儲存的值。 雖然目標是要讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能一直意識到，陳述式基本上所產生的都是相同的計畫，並且重複使用這些計畫，但有時 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並不會在複雜的 SQL 陳述式中偵測到這種情況。
+這些查詢執行計畫間的唯一差異是用來比較 `ProductSubcategoryID` 資料行所儲存的值。 雖然目標是要讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 能一直意識到，陳述式基本上所產生的都是相同計畫，且重複使用這些計畫；但有時 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並不會在複雜的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中偵測到這種情況。
 
-利用參數將 SQL 陳述式中的常數分離出來，可以幫助關聯式引擎識別重複的計畫。 您可以使用以下方式來使用參數： 
+利用參數將 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中的常數分離出來，可以幫助關聯式引擎識別重複的計畫。 您可以使用以下方式來使用參數： 
 
 * 在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中使用 `sp_executesql`： 
 
@@ -576,12 +581,12 @@ WHERE AddressID = 1 + 2;
 
 ### <a name="SimpleParam"></a> 簡單參數化
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Transact-SQL 陳述式中使用參數或參數標記時，可以提升關聯式引擎將新的 SQL 陳述式與先前編譯之現有執行計畫配對的能力。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的 Transact-SQL 陳述式中使用參數或參數標記時，可以提升關聯式引擎將新 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前編譯之現有執行計畫配對的能力。
 
 > [!WARNING] 
 > 相較於將值串連到字串，然後使用資料存取 API 方法、 `EXECUTE` 陳述式或 `sp_executesql` 預存程序來執行該字串，比較安全的方式是使用參數或參數標記來保留使用者輸入的值。
 
-如果在不使用參數的情況下執行 SQL 陳述式，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會從內部參數化此陳述式，以增加它與現有執行計畫配對的可能性。 此處理序即稱為簡單參數化。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，此處理序就是指自動參數化。
+如果在不使用參數的情況下執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會從內部參數化此陳述式，以增加它與現有執行計畫配對的可能性。 此處理序即稱為簡單參數化。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 中，此處理序就是指自動參數化。
 
 請參考這個陳述式：
 
@@ -601,7 +606,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-在處理複雜的 SQL 陳述式時，關聯式引擎可能會無法判斷哪個運算式可以參數化。 若要提升關聯式引擎將複雜 SQL 陳述式與現有、未使用之執行計畫配對的能力，請使用 sp_executesql 或參數標記明確指定參數。 
+在處理複雜的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式時，關聯式引擎可能會難以判斷哪個運算式可以參數化。 若要提升關聯式引擎將複雜 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與現有、未使用之執行計畫配對的能力，請使用 sp_executesql 或參數標記來明確指定參數。 
 
 > [!NOTE]
 > 使用 +、-、\*、/ 或 % 等算術運算子來將 int、smallint、tinyint 或 bigint 常數值隱含或明確轉換為 float、real、decimal 或 numeric 資料類型時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會套用特定的規則來計算運算式結果的類型與有效位數。 不過，這些規則會隨著查詢是否參數化而有所不同。 因此，在某些情況下，查詢中類似的運算式可能會產生不同的結果。
@@ -620,7 +625,7 @@ WHERE ProductSubcategoryID = 4;
 * 位於預存程序、觸發程序或使用者自訂函數主體中的陳述式。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 已經會重複使用這些常式的查詢計畫。
 * 已在用戶端應用程式上完成參數化的準備陳述式。
 * 含有 XQuery 方法呼叫的陳述式，其方法會出現在引數通常已參數化的內容中，如 `WHERE` 子句。 若此方法出現在引數未參數化的內容中，則該陳述式的其他部分會進行參數化。
-* 位於 Transact-SQL 資料指標內的陳述式 (API 資料指標內的`SELECT` 陳述式會進行參數化)。
+* [!INCLUDE[tsql](../includes/tsql-md.md)] 資料指標中的陳述式。 (API 資料指標內的`SELECT` 陳述式會進行參數化)。
 * 被取代的查詢結構。
 * 將在 `ANSI_PADDING` 或 `ANSI_NULLS` 內容中執行的任何陳述式設為 `OFF`。
 * 包含超過 2,097 個可參數化之常值的陳述式。
@@ -644,7 +649,7 @@ WHERE ProductSubcategoryID = 4;
   * 運算式包含 `CASE` 子句。  
 * 查詢提示子句的引數。 這些包括 `number_of_rows` 查詢提示的 `FAST` 引數、 `number_of_processors` 查詢提示的 `MAXDOP` 引數，以及 `MAXRECURSION` 查詢提示的 number 引數。
 
-參數化會發生在個別 Transact-SQL 陳述式層級上。 換句話說，批次中的個別陳述式會進行參數化。 編譯之後，參數化查詢會在最初提交查詢的批次內容中執行。 若已快取查詢的執行計畫，即可藉由參考 sys.syscacheobjects 動態管理檢視表的 sql 資料行，來判斷查詢是否已參數化。 若查詢已參數化，則此資料行中參數的名稱與資料類型會顯示在提交批次的文字之前，如 (\@1 tinyint)。
+參數化會發生於個別 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式層級上。 換句話說，批次中的個別陳述式會進行參數化。 編譯之後，參數化查詢會在最初提交查詢的批次內容中執行。 若已快取查詢的執行計畫，即可藉由參考 sys.syscacheobjects 動態管理檢視表的 sql 資料行，來判斷查詢是否已參數化。 若查詢已參數化，則此資料行中參數的名稱與資料類型會顯示在提交批次的文字之前，如 (\@1 tinyint)。
 
 > [!NOTE]
 > 參數名稱可以是任意的名稱。 使用者或應用程式不應依賴特定的命名順序。 而且，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和 Service Pack 升級版之間可變更下列各項：參數名稱、參數化的常值選項和參數化文字的間距。
@@ -678,15 +683,15 @@ WHERE ProductSubcategoryID = 4;
 
 ### <a name="preparing-sql-statements"></a>準備 SQL 陳述式
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式引擎在執行 SQL 陳述式之前，會先導入準備陳述式的完整支援。 如果應用程式需要執行 SQL 陳述式數次，它可以使用資料庫 API 來執行下列動作： 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式引擎在執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式之前，會先引入準備陳述式的完整支援。 如果應用程式需要執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數次，它可以使用資料庫 API 來執行下列動作： 
 
-* 準備一次陳述式。 這可將 SQL 陳述式編譯成執行計畫。
-* 在每次需要執行陳述式時，執行先行編譯的執行計畫。 這樣就不必在第一次之後的每一次執行時重新編譯 SQL 陳述式。   
-  準備和執行陳述式是由 API 函數和方法所控制。 它不是 Transact-SQL 語言的一部分。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 提供者和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援執行 SQL 陳述式的準備/執行模型。 在準備要求中，提供者或驅動程式可搭配準備陳述式的要求來將陳述式傳送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會編譯執行計畫，並將該計畫的控制代碼傳回給提供者或驅動程式。 當產生執行要求時，提供者或驅動程式會將要求傳給伺服器，以執行與控制代碼相關聯的計畫。 
+* 準備一次陳述式。 這可將 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式編譯成執行計畫。
+* 在每次需要執行陳述式時，執行先行編譯的執行計畫。 這樣就不必在第一次之後的每一次執行時重新編譯 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。   
+  準備和執行陳述式是由 API 函數和方法所控制。 這並不是 [!INCLUDE[tsql](../includes/tsql-md.md)] 語言的一部分。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 提供者和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的準備/執行模型。 在準備要求中，提供者或驅動程式可搭配準備陳述式的要求來將陳述式傳送到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會編譯執行計畫，並將該計畫的控制代碼傳回給提供者或驅動程式。 當產生執行要求時，提供者或驅動程式會將要求傳給伺服器，以執行與控制代碼相關聯的計畫。 
 
 準備陳述式無法用來在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 上建立暫存物件。 準備陳述式也無法參考可建立暫存物件 (如暫存資料表) 的系統預存程序。 這些程序必須直接執行。
 
-過度使用準備/執行模型會降低效能。 如果陳述式只執行一次，則直接執行只需要一次網路往返到伺服器。 如果先準備再執行只執行一次的 SQL 陳述式，便需要多一次網路往返：一次用來準備陳述式，一次用來執行陳述式。
+過度使用準備/執行模型會降低效能。 如果陳述式只執行一次，則直接執行只需要一次網路往返到伺服器。 如果先準備再執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的作業只執行一次，便需要多一次網路往返：一次用來準備陳述式，一次用來執行陳述式。
 
 如果使用參數標記，則準備陳述式會更有效率。 例如，假設應用程式偶爾會被要求從 `AdventureWorks` 範例資料庫擷取產品資訊。 應用程式有兩種方式可以達成此目的。 
 
@@ -709,9 +714,9 @@ WHERE ProductID = 63;
 
 如果陳述式執行超過三次以上，則使用第二種方式會比較有效率。
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 重複使用執行計畫的方式，讓準備/執行模型相較於直接執行並無任何顯著的優勢。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可提供有效率的演算法，來配對目前的 SQL 陳述式以及先前產生用來執行相同 SQL 陳述式的執行計畫。 如果應用程式多次執行具有參數標記的 SQL 陳述式，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將自第一次執行之後，在第二次以及後續的執行中重複使用執行計畫 (除非計畫快取中的計畫過期)。 但準備/執行模型仍然具有以下優點： 
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，由於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 重複使用執行計畫的方式，讓準備/執行模型相較於直接執行並無任何顯著的優勢。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可提供有效率的演算法，用來配對目前 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與先前產生用來執行相同 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的執行計畫。 如果應用程式多次執行具有參數標記的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將自第一次執行之後，在第二次以及後續的執行中重複使用執行計畫 (除非計畫快取中的計畫過期)。 但準備/執行模型仍然具有以下優點： 
 
-* 利用識別代碼來尋找執行計畫，比用演算法來使 SQL 陳述式與現有執行計畫相符更具效率。
+* 透過識別控制代碼來尋找執行計畫，比用演算法來比對 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式與現有執行計畫更具效率。
 * 應用程式可以控制何時建立及重複使用執行計畫。
 * 準備/執行模型可以移至其他資料庫使用，包括舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 
@@ -908,20 +913,20 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 
 ## <a name="distributed-query-architecture"></a>分散式查詢結構
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可在 Transact-SQL 陳述式中參考異質 OLE DB 資料來源的方法：
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考異質 OLE DB 資料來源的方法：
 
 * 連結伺服器名稱  
-  系統預存程序 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 可用來將伺服器名稱指定至 OLE DB 資料來源。 您可以使用四個部分名稱，在 Transact-SQL 陳述式中參考這些連結伺服器中的物件。 例如，如果 `DeptSQLSrvr` 的連結伺服器名稱是根據 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的另一個執行個體所定義，則下列陳述式會參考該伺服器上的資料表： 
+  系統預存程序 `sp_addlinkedserver` 和 `sp_addlinkedsrvlogin` 可用來將伺服器名稱指定至 OLE DB 資料來源。 在這些連結伺服器中的物件，您可以用分成四部份的名稱，在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中參考。 例如，如果 `DeptSQLSrvr` 的連結伺服器名稱是根據 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的另一個執行個體所定義，則下列陳述式會參考該伺服器上的資料表： 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   您也可以在 `OPENQUERY` 陳述式中指定連結伺服器名稱，以開啟 OLE DB 資料來源中的資料列集。 然後您就能在 Transact-SQL 陳述式中，像參考資料表一樣參考這個資料列集。 
+   您也可以在 `OPENQUERY` 陳述式中指定連結伺服器名稱，以開啟 OLE DB 資料來源中的資料列集。 然後您便可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中，像參考資料表一樣參考這個資料列集。 
 
 * 特定連接子名稱  
-  對於資料來源的非經常性參考，需要以連接至連結伺服器所需的資訊來指定 `OPENROWSET` 或 `OPENDATASOURCE` 函數。 然後您就能在 Transact-SQL 陳述式中，使用與參考資料表一樣的方式來參考這個資料列集： 
+  對於資料來源的非經常性參考，需要以連接至連結伺服器所需的資訊來指定 `OPENROWSET` 或 `OPENDATASOURCE` 函數。 然後您便可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中，使用與參考資料表一樣的方式來參考這個資料列集： 
   
   ```sql
   SELECT *
@@ -930,19 +935,19 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援兩種可
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 OLE DB 在關聯式引擎與儲存引擎間進行通訊。 關聯式引擎會將每個 Transact-SQL 陳述式分解為簡單 OLE DB 資料列集上的一連串作業，而儲存引擎可從基底資料表加以開啟。 這是表示關聯式引擎也可以在任何 OLE DB 資料來源上，開啟簡單的 OLE DB 資料列集。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 OLE DB 在關聯式引擎與儲存引擎間進行通訊。 關聯式引擎將每個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，皆分解成一連串對 OLE DB 資料列集的簡單作業，而儲存引擎可從基底資料表開啟這個資料列集。 這是表示關聯式引擎也可以在任何 OLE DB 資料來源上，開啟簡單的 OLE DB 資料列集。  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 關聯式引擎使用 OLE DB 應用程式開發介面 (API) 來開啟連結伺服器上的資料列集、提取資料列、以及管理交易。
 
-每個以連結伺服器的方式存取的 OLE DB 資料來源，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的伺服器上必須存在 OLE DB 提供者。 這組可根據特定 OLE DB 資料來源使用的 Transact-SQL 作業，取決於 OLE DB 提供者的能力。
+每個以連結伺服器的方式存取的 OLE DB 資料來源，在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的伺服器上必須存在 OLE DB 提供者。 而這組可根據特定 OLE DB 資料來源使用的 [!INCLUDE[tsql](../includes/tsql-md.md)] 作業，需視 OLE DB 提供者的能力來執行。
 
-對於每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，`sysadmin` 固定伺服器角色的成員可藉由使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 屬性來啟用或停用 OLE DB 提供者的特定連接器名稱的使用。 當啟用特定存取時，任何登入到該執行個體的使用者都可以執行包含特定連接子名稱的 SQL 陳述式，該連接子名稱會參考可使用 OLE DB 提供者存取之網路上的任何資料來源。 若要控制資料來源的存取， `sysadmin` 角色的成員可以停用該 OLE DB 提供者的特定存取，進而限制使用者只能存取由系統管理員定義之連結伺服器名稱所參考的資料來源。 依預設，會啟用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 提供者的特定存取，並停用所有其他的 OLE DB 提供者。
+對於每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體，`sysadmin` 固定伺服器角色的成員可藉由使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 屬性來啟用或停用 OLE DB 提供者的特定連接器名稱的使用。 當啟用隨機存取時，任何登入到該執行個體的使用者都可以執行包含隨機連接子名稱的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式，該連接子名稱會參考網路上可使用 OLE DB 提供者存取的任何資料來源。 若要控制資料來源的存取， `sysadmin` 角色的成員可以停用該 OLE DB 提供者的特定存取，進而限制使用者只能存取由系統管理員定義之連結伺服器名稱所參考的資料來源。 依預設，會啟用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 提供者的特定存取，並停用所有其他的 OLE DB 提供者。
 
 分散式查詢可使用 Microsoft Windows 帳戶 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務正在其下執行) 的安全性內容，允許使用者存取其他資料來源 (例如，檔案或 Active Directory 等非關聯式資料來源等)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會適當地模擬 Windows 登入，但無法模擬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入。 這可能允許分散式查詢使用者存取他們沒有使用權限的其他資料來源，但執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服務的帳戶確實擁有權限。 使用 `sp_addlinkedsrvlogin` 來定義已經授權存取對應連結伺服器的特定登入。 ad hoc 名稱無法使用此控制，所以啟用 ad hoc 存取的 OLE DB 提供者時請特別小心。
 
 如果可能，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將關聯式作業 (例如聯結、限制、投影、排序和依作業分組) 推送至 OLE DB 資料來源。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會預設為將基底資料表掃描到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並自行執行關聯式作業。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會查詢 OLE DB 提供者以判斷它支援的 SQL 語法層級，然後根據該資訊，盡可能推送最多關聯式作業給提供者。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 為 OLE DB 提供者指定一種可傳回統計資料的機制，以指出在 OLE DB 資料來源中如何散發索引鍵值。 這讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具能根據各 SQL 陳述式的需求，分析資料來源中的資料模式，並加強查詢最佳化工具產生最佳執行計畫的能力。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 為 OLE DB 提供者指定一種可傳回統計資料的機制，以指出在 OLE DB 資料來源中如何散發索引鍵值。 這讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具能根據各 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式的需求，分析資料來源中的資料模式，並加強查詢最佳化工具產生最佳執行計畫的能力。 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>分割資料表和索引上的查詢處理增強功能
 
@@ -977,7 +982,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>在查詢執行計畫中顯示資料分割資訊
 
-資料分割資料表和索引上的查詢執行計畫可以使用 Transact-SQL `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] 來顯示執行階段計畫。 
+資料分割資料表和索引上的查詢執行計畫可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 陳述式 `SET SHOWPLAN_XML` 或 `SET STATISTICS XML`，或是使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 中的圖形化執行計畫輸出進行檢查。 例如，您可以在查詢編輯器工具列上，按一下 [顯示估計執行計畫]  來顯示編譯時間執行計畫，以及按一下 [包括實際執行計畫] 來顯示執行階段計畫。 
 
 您可以使用這些工具來確定以下資訊：
 

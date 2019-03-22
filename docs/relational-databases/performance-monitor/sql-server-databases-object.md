@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997570"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973427"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997570"
 |**Log Pool Total Active Log Size**|儲存在共用快取緩衝區管理員中的目前使用中記錄總計 (位元組)。|
 |**Log Pool Total Shared Pool Size**|共用快取緩衝區管理員的目前憶體使用量總記 (位元組)。|
 |**Log Shrinks**|這個資料庫的記錄壓縮總數。|  
-|**Log Truncations**|交易記錄檔被壓縮的次數。|  
+|**Log Truncations**|交易記錄截斷的次數 (在簡單復原模式下)。|  
 |**Percent Log Used**|使用中的記錄檔空間百分比。|  
 |**Repl.Pending Xacts**|標示成複寫、但未傳送到散發資料庫的發行集資料庫內的交易記錄檔之交易數。|  
 |**Repl.Trans.Rate**|每秒自發行集資料的交易記錄檔讀取並傳送至散發資料庫的交易數。|  

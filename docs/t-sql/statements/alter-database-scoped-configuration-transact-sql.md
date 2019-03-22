@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579676"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974387"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -45,7 +45,9 @@ ms.locfileid: "57579676"
 - 啟用或停用原生編譯 T-SQL 模組的執行統計資料收集。
 - 為支援 ONLINE= syntax 的 DDL 陳述式啟用或停用預設為連線的選項。
 - 為支援 RESUMABLE= syntax 的 DDL 陳述式啟用或停用預設可繼續的選項。
-- 啟用或停用全域暫存資料表的自動卸除功能
+- 啟用或停用全域暫存資料表的自動卸除功能。 
+- 啟用或停用[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能。
+- 啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
 
 ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,18 +69,20 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
-    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -87,6 +91,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 FOR SECONDARY
 
 指定次要資料庫的設定 (所有次要資料庫都必須具有相同的值)。
+
+CLEAR PROCEDURE_CACHE    
+
+清除資料庫的程序 (計劃) 快取，並且可在主要端和次要端上執行。  
 
 MAXDOP **=** {\<值> | PRIMARY } **\<值>**
 
@@ -139,10 +147,6 @@ PRIMARY
 
 只有在資料庫位於主要端上時，此值才會在次要端上有效，並且指定所有次要端上此設定的值將採用針對主要端設定的值。 如果主要端的組態發生變更，次要端上的值將會相應地變更，而無須明確地設定次要端值。 [PRIMARY] 是次要端的預設設定。
 
-CLEAR PROCEDURE_CACHE
-
-清除資料庫的程序 (計劃) 快取，並且可在主要端和次要端上執行。
-
 IDENTITY_CACHE **=** { **ON** | OFF }
 
 **適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -151,6 +155,76 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 > [!NOTE]
 > 只能針對 PRIMARY 設定此選項。 如需詳細資訊，請參閱[識別資料行](create-table-transact-sql-identity-property.md)。
+
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+可讓您在資料庫或陳述式範圍啟用或停用多重陳述式資料表值函式的交錯執行，同時仍保有 140 (含) 以上的資料庫相容性層級。 交錯執行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自適性查詢處理的部分功能。 如需詳細資訊，請參閱[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)。
+
+> [!NOTE]
+> 針對資料庫相容性層級 130 或更低，這個資料庫範圍設定沒有任何作用。
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+可讓您在資料庫範圍啟用或停用批次模式記憶體授與回饋，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式記憶體授與回饋是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
+
+> [!NOTE]
+> 針對資料庫相容性層級 130 或更低，這個資料庫範圍設定沒有任何作用。
+
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+可讓您在資料庫範圍啟用或停用批次模式自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式自適性聯結是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
+
+> [!NOTE]
+> 針對資料庫相容性層級 130 或更低，這個資料庫範圍設定沒有任何作用。
+
+TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+
+可讓您在資料庫範圍啟用或停用 T-SQL 純量 UDF 內嵌，同時仍保有 150 (含) 以上的資料庫相容性層級。 T-SQL 純量 UDF 內嵌是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
+
+> [!NOTE] 
+> 針對資料庫相容性層級 140 (含) 以下，這個資料庫範圍設定沒有任何作用。
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
+
+可讓您選取選項，讓引擎自動將支援的作業提升至線上。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至線上。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_ONLINE 目前的值。 這些選項將僅適用於線上支援的作業。
+
+FAIL_UNSUPPORTED
+
+此值會將所有支援的 DLL 作業提升至 ONLINE。 不支援線上執行的作業將會失敗並擲回警告。
+
+WHEN_SUPPORTED
+
+此值會提升支援 ONLINE 的作業。 不支援線上的作業將離線執行。
+
+> [!NOTE]
+> 您可以在指定 ONLINE 選項的情形下提交陳述式，進而覆寫預設設定。
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+
+可讓您選取選項，讓引擎自動將支援的作業提升至可繼續。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至可繼續。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_RESUMABLE 目前的值。 這些選項僅適用於可繼續支援的作業。
+
+FAIL_UNSUPPORTED
+
+此值會將所有支援的 DLL 作業提升至 RESUMABLE。 不支援可繼續執行的作業會失敗並擲回警告。
+
+WHEN_SUPPORTED
+
+此值會提升支援 RESUMABLE 的作業。 不支援可繼續的作業會在非可繼續的情況下執行。
+
+> [!NOTE]
+> 您可以在指定 RESUMABLE 選項的情形下提交陳述式，進而覆寫預設設定。
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
@@ -176,41 +250,34 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 如需原生編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 模組效能監控的詳細資訊，請參閱[監視原生編譯預存程序的效能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
-可讓您選取選項，讓引擎自動將支援的作業提升至線上。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至線上。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_ONLINE 目前的值。 這些選項將僅適用於線上支援的作業。
-
-FAIL_UNSUPPORTED
-
-此值會將所有支援的 DLL 作業提升至 ONLINE。 不支援線上執行的作業將會失敗並擲回警告。
-
-WHEN_SUPPORTED
-
-此值會提升支援 ONLINE 的作業。 不支援線上的作業將離線執行。
+可讓您在資料庫範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支援資料列模式)。
 
 > [!NOTE]
-> 您可以在指定 ONLINE 選項的情形下提交陳述式，進而覆寫預設設定。
+> 針對資料庫相容性層級 140 (含) 以下，這個資料庫範圍設定沒有任何作用。
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**適用對象**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 作為公開預覽功能
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
-可讓您選取選項，讓引擎自動將支援的作業提升至可繼續。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至可繼續。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_RESUMABLE 目前的值。 這些選項僅適用於可繼續支援的作業。
-
-FAIL_UNSUPPORTED
-
-此值會將所有支援的 DLL 作業提升至 RESUMABLE。 不支援可繼續執行的作業會失敗並擲回警告。
-
-WHEN_SUPPORTED
-
-此值會提升支援 RESUMABLE 的作業。 不支援可繼續的作業會在非可繼續的情況下執行。
+可讓您在資料庫範圍啟用或停用資料列存放區上的批次模式，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列存放區上的批次模式是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
 
 > [!NOTE]
-> 您可以在指定 RESUMABLE 選項的情形下提交陳述式，進而覆寫預設設定。
+> 針對資料庫相容性層級 140 (含) 以下，這個資料庫範圍設定沒有任何作用。
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+
+可讓您在資料庫範圍啟用或停用資料表變數延遲編譯，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料表變數延遲編譯是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
+
+> [!NOTE]
+> 針對資料庫相容性層級 140 (含) 以下，這個資料庫範圍設定沒有任何作用。
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
 
@@ -219,47 +286,11 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 - 使用 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 單一資料庫和彈性集區，此選項可以在 SQL Database 伺服器的個別使用者資料庫中進行設定。
 - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體中，此選項會在 `TempDB` 中設定，且個別使用者資料庫的設定不會有任何效果。
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-可讓您在資料庫或陳述式範圍啟用或停用多重陳述式資料表值函式的交錯執行，同時仍保有 140 (含) 以上的資料庫相容性層級。 交錯執行是 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中自適性查詢處理的部分功能。 如需詳細資訊，請參閱[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-可讓您在資料庫或陳述式範圍啟用或停用自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 自適性聯結是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一部分功能。
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
-
-可讓您在資料庫範圍啟用或停用資料列模式記憶體授與回饋，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列模式記憶體授與回饋是 SQL Server 2017 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一部分功能 (SQL Server 2019 和 Azure SQL Database 支援資料列模式)。
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-可讓您在資料庫範圍啟用或停用批次模式記憶體授與回饋，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式記憶體授與回饋是 SQL Server 2017 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
-
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-可讓您在資料庫範圍啟用或停用批次模式自適性聯結，同時仍保有 140 (含) 以上的資料庫相容性層級。 批次模式自適性聯結是 SQL Server 2017 推出的[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)其中一項功能。
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
-
-可讓您在資料庫範圍啟用或停用資料列存放區上的批次模式，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料列存放區上的批次模式是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
-
-可讓您在資料庫範圍啟用或停用資料表變數延遲編譯，同時仍保有 150 (含) 以上的資料庫相容性層級。 資料表變數延遲編譯是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
+可讓您啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。 輕量型查詢分析基礎結構 (LWP) 提供比標準分析機制更具效率的查詢效能資料，預設會予以啟用。
 
 ## <a name="Permissions"></a> Permissions
 

@@ -13,18 +13,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046578"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072312"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本教學課程將教導您如何開始使用[具有安全記憶體保護區的 Always Encrypted](encryption/always-encrypted-enclaves.md)。 它會顯示：
-- 如何建立簡單的環境以進行測試和評估具有安全記憶體保護區的 Always Encrypted。
+- 如何建立基本環境來測試和評估具有安全記憶體保護區的 Always Encrypted。
 - 如何就地加密資料，以及使用 SQL Server Management Studio (SSMS) 針對加密資料行發出豐富的查詢。
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -139,11 +139,11 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 在此步驟中，您將在 SQL Server 執行個體中使用記憶體保護區啟用 Always Encrypted 的功能。
 
 1. 開啟 SSMS、以系統管理員身分連線到您的 SQL Server 執行個體，並開啟新的查詢視窗。
-2. 將安全記憶體保護區類型設為 VBS。
+2. 將安全記憶體保護區類型設定為虛擬化型安全性 (VBS)。
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. 重新啟動您的 SQL Server 執行個體，先前的變更才會生效。 您可以在 SSMS 中重新啟動執行個體，方法是在 [物件總管] 中以滑鼠右鍵按一下它，然後選取 [重新啟動]。 執行個體重新啟動之後，請與它重新連線。
@@ -152,10 +152,10 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    查詢應該會傳回一個資料列，它看起來如下所示：  
+    查詢應該會傳回下列結果：  
 
     | NAME                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 5. 若要啟用對加密資料行的豐富計算，請執行下列查詢：
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 2. 建立新的資料庫，名為 ContosoHR。
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. 確定您連線的是新建立的資料庫。 建立新的資料表，名為 Employees。
@@ -190,8 +190,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. 在 Employees 資料表中新增一些員工記錄。
@@ -206,9 +205,8 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>步驟 5：佈建已啟用記憶體保護區的金鑰
@@ -238,7 +235,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     7. 選取 [確定]。
 
         ![允許記憶體保護區運算](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. 建立已啟用記憶體保護區的新資料行加密金鑰：
 
     1. 以滑鼠右鍵按一下 [Always Encrypted 金鑰]，然後選取 [新增資料行加密金鑰]。
@@ -254,40 +251,40 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     1. 在 SSMS 中，開啟新的查詢視窗。
     2. 以滑鼠右鍵按一下新查詢視窗中的任何位置。
     3. 選取 [連線]\>[變更連線]。
-    4. 選取 [選項]。 巡覽至 [Always Encrypted] 索引標籤，並選取 [啟用 Always Encrypted]，然後指定您的記憶體保護區證明 URL。
+    4. 選取 [選項]。 巡覽至 [Always Encrypted] 索引標籤，並選取 [啟用 Always Encrypted]，然後指定您的記憶體保護區證明 URL (例如，<span>http://</span>hgs.bastion.local/Attestation)。
     5. 選取 [連接]。
-2. 在 SSMS 中，設定另一個查詢視窗，並針對資料庫連線停用 Always Encrypted 。
+    6. 將資料庫內容變更為 ContosoHR 資料庫。
+1. 在 SSMS 中，設定另一個查詢視窗，並針對資料庫連線停用 Always Encrypted 。
     1. 在 SSMS 中，開啟新的查詢視窗。
     2. 以滑鼠右鍵按一下新查詢視窗中的任何位置。
     3. 選取 [連線]\>[變更連線]。
     4. 選取 [選項]。 巡覽至 [Always Encrypted] 索引標籤，並確定未選取 [啟用 Always Encrypted]。
     5. 選取 [連接]。
-3. 加密 SSN 和 Salary 資料行。 在已啟用 Always Encrypted 的查詢視窗中，貼上並執行以下陳述式：
+    6. 將資料庫內容變更為 ContosoHR 資料庫。
+1. 加密 SSN 和 Salary 資料行。 在已啟用 Always Encrypted 的查詢視窗中，貼上並執行以下指令碼：
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > 請注意上述指令碼中用來清除資料庫查詢計畫快取的 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 陳述式。 修改資料表之後，您需要清除所有批次之計畫和存取資料表的預存程序，以重新整理參數加密資訊。 
 
 4. 若要確認 SSN 和 Salary 資料行現在已加密，請在查詢視窗中貼上並執行以下陳述式，並且停用 Always Encrypted。 查詢視窗應該在 SSN 和 Salary 資料行中傳回加密的值。 使用已啟用 Always Encrypted 的查詢視窗，嘗試相同的查詢，以查看解密的資料。
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>步驟 7：針對加密的資料行執行豐富查詢
@@ -298,13 +295,13 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     1. 從 SSMS 的主功能表中，選取 [查詢]。
     2. 選取 [查詢選項]。
     3. 瀏覽至 [執行] > [進階]。
-    4. 選取或取消選取 [啟用 Always Encrypted 的參數化]。
+    4. 選取 [啟用 Always Encrypted 的參數化]。
     5. 選取 [確定]。
 2. 在已啟用 Always Encrypted 的查詢視窗中，貼上並執行以下查詢。 查詢應該會傳回純文字值和符合指定搜尋準則的資料列。
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

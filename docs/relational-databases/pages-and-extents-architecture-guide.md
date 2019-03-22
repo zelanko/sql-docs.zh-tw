@@ -1,7 +1,7 @@
 ---
 title: 分頁與範圍架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748480"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974367"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ ms.locfileid: "52748480"
 此限制對於包含 varchar、nvarchar、varbinary 或 sql_variant 資料行的資料表將會較為寬鬆。 當資料表中所有固定且可變資料行的資料列總大小超過 8,060 個位元組的限制時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會動態地將一個或多個可變長度資料行移至 ROW_OVERFLOW_DATA 配置單位中的分頁，從寬度最大的資料行開始。 
 
 只要插入或更新作業使得資料列的總大小超過 8,060 個位元組的限制時，就會執行這個動作。 當資料行移至 ROW_OVERFLOW_DATA 配置單位中的分頁時，會保留 IN_ROW_DATA 配置單位中原始頁面上的 24 個位元組指標。 若是後續作業縮小了資料列大小，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 則會動態地將資料行移回原始資料頁。 
+
+##### <a name="row-overflow-considerations"></a>資料列溢位考量 
+
+當您將 varchar、nvarchar、varbinary、sql_variant 或 CLR 使用者定義型別資料行結合在一起，因而超過每個資料列 8,060 個位元組的限制時，請考慮下列情況： 
+-  當記錄因更新作業而加長時，這些大型記錄會動態地移到另一個分頁上。 當更新作業將記錄縮短時，則會造成這些記錄移回 IN_ROW_DATA 配置單位中的原始分頁。 查詢與執行其他選取作業 (例如在包含資料列溢位資料的大型記錄上執行排序或聯結) 時，處理速度將會變慢，這是因為這些記錄會以同步而不是非同步的方式來處理。   
+   因此，當您設計具有多個 varchar、nvarchar、varbinary、sql_variant 或 CLR 使用者定義型別資料行的資料表時，請考慮可能會溢位的資料列百分比，以及可能會查詢此溢位資料的頻率。 如果可能會經常在許多資料列溢位資料的資料列上執行查詢，請考慮將資料表正規化，以便將一些資料行移到另一個資料表。 然後便可以用非同步 JOIN 作業進行查詢。 
+-  對於 varchar、nvarchar、varbinary、sql_variant 和 CLR 使用者定義型別資料行而言，個別資料行長度仍必須符合 8,000 個位元組的限制。 只有它們合起來的長度才可以超過資料表的每個資料列 8,060 個位元組的限制。
+-  其他資料類型 (包括 char 和 nchar 資料) 資料行的總和，必須符合 8,060 個位元組的資料列限制。 大型物件資料也可免除 8,060 個位元組的資料列限制。 
+-  叢集索引之索引鍵所包含的 varchar 資料行不能在 ROW_OVERFLOW_DATA 配置單位中有現有資料。 如果在 varchar 資料行上建立叢集索引，且現有的資料在 IN_ROW_DATA 配置單位中，則後續在資料行上可能將資料推送到資料列外的插入或更新動作會失敗。 如需有關配置單位的詳細資訊，請參閱＜資料表與索引組織＞。
+-  您可以納入包含資料列溢位資料的資料行，做為非叢集索引的索引鍵或非索引鍵資料行。
+-  使用疏鬆資料行之資料表的記錄大小限制為 8,018 個位元組。 當轉換的資料加上現有記錄資料超過 8,018 個位元組時，就會傳回 [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md)。 在疏鬆與非疏鬆類型之間轉換資料行時，資料庫引擎就會保留一份目前記錄資料的複本。 這樣做會暫時將記錄所需的儲存體加倍。
+-  若要取得可能包含資料列溢位資料之資料表或索引的相關資訊，請使用 [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動態管理函式。
 
 ### <a name="extents"></a>Extents 
 
@@ -177,4 +189,6 @@ DCM 分頁與 BCM 分頁之間的間隔與 GAM 和 SGAM 分頁的間隔一樣，
 
 ## <a name="see-also"></a>另請參閱
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[堆積 &#40;無叢集索引的資料表&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[堆積 &#40;無叢集索引的資料表&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[讀取分頁](../relational-databases/reading-pages.md)   
+[寫入分頁](../relational-databases/writing-pages.md)   

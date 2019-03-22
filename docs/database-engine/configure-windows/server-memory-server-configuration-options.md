@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591642"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072203"
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,26 +121,29 @@ ms.locfileid: "53591642"
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>為 SQL Server 提供最大的記憶體數量  
 在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，最多可將記憶體設定為處理虛擬位址空間的最大上限。 如需詳細資訊，請參閱 [Windows 與 Windows Server 版本的記憶體限制](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)。
-  
-## <a name="examples"></a>範例  
-  
-### <a name="example-a"></a>範例 A  
- 下列範例會將 `max server memory` 選項設定為 4 GB：  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+
+## <a name="examples"></a>範例
+
+### <a name="example-a-set-the-max-server-memory-option-to-4-gb"></a>範例 A. 將 max server memory 選項設定為 4 GB。
+ 下列範例會將 `max server memory` 選項設定為 4 GB。  請注意，雖然 `sp_configure` 將選項名稱指定為 `max server memory (MB)`，但此範例會示範省略 `(MB)`。
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+這會輸出類似下列內容的陳述式：
+
+> 設定選項 'max server memory (MB)' 已從 2147483647 變更為 4096。 請執行 RECONFIGURE 陳述式來安裝。
+
 ### <a name="example-b-determining-current-memory-allocation"></a>範例 B：決定目前的記憶體配置  
  以下查詢會傳回目前配置之記憶體的相關資訊。  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -155,6 +158,14 @@ SELECT
     process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### <a name="example-c-determining-value-for-max-server-memory-mb"></a>範例 C. 判斷 'max server memory (MB)' 的值
+下列查詢會傳回目前設定值和 SQL Server 中使用值的相關資訊。  不論 'show advanced options' 是否為 true，此查詢都會傳回結果。
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體管理架構指南](../../relational-databases/memory-management-architecture-guide.md)   

@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319399"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973807"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319399"
 |記憶體最佳化資料表之每個索引鍵的位元組數||非叢集索引為 2500 個位元組。 只要所有索引鍵都能納入資料列，雜湊索引便沒有限制。|在記憶體最佳化資料表中，非叢集索引不能有宣告大小上限超過 2500 個位元組的索引鍵資料行。 索引鍵資料行中的實際資料是否小於宣告大小上限則與此無關。<br /><br /> 雜湊索引鍵的大小沒有固定限制。<br /><br /> 記憶體最佳化資料表上的索引沒有內含資料行的概念，因為所有索引本來就涵蓋所有資料行。<br /><br /> 至於記憶體最佳化資料表，即使資料列大小為 8060 個位元組，某些可變長度資料行實際可儲存的大小超過 8060 個位元組。 不過，資料表上所有索引之所有索引鍵資料行的宣告大小上限，加上資料表中任何其他的固定長度資料行，必須符合 8060 個位元組。|  
 |每個外部索引鍵的位元組數||900||  
 |每個主索引鍵的位元組||900||  
-|每個資料列的位元組數||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援資料列溢位儲存，好讓可變長度資料行可以非資料列形式推送。 只有 24 位元組的根會儲存在從資料列發送之可變長度資料行的主要記錄中；因此，有效資料列限制高於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中的＜超過 8 KB 的資料列溢位資料＞主題。|  
+|每個資料列的位元組數||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援資料列溢位儲存，好讓可變長度資料行可以非資料列形式推送。 只有 24 位元組的根會儲存在從資料列發送之可變長度資料行的主要記錄中；因此，有效資料列限制高於舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[大型資料列支援](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)。|  
 |記憶體最佳化資料表中每個資料列的位元組數||8,060|從 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，記憶體最佳化資料表支援非資料列儲存。 如果資料表中所有資料行的大小上限超過 8060 個位元組，則會以非資料列形式推送可變長度資料行；這是編譯時期決策。 針對以非資料列形式儲存的資料行，只會以非資料列形式儲存 8 位元組參考。 如需詳細資訊，請參閱 [記憶體最佳化資料表中的資料表和資料列大小](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)。|  
 |預存程序之來源文字的位元組數||批次大小或 250 MB 當中較小者||  
 |每個 **varchar(max)**、 **varbinary(max)**、 **xml**、 **text**或 **image** 資料行的位元組數||2^31-1||  

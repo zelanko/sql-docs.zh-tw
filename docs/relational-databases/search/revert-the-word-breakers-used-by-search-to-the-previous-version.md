@@ -1,23 +1,22 @@
 ---
 title: 將搜尋所使用的斷詞工具還原為舊版 | Microsoft 文件
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5251c082e2a31493110fe63f2bfb044c6a3a2f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5714b90b0d3222c947afc3988fa88e6d478691ef
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674998"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974397"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -167,7 +166,7 @@ ms.locfileid: "51674998"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中舊版字幹分析器的檔案名稱。  
   
-7.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<執行個體根目>\MSSearch\Language\<語言機碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+7.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<>\MSSearch\Language\<語言碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 8.  將 **WBreakerClass** 機碼值更新為表格中目前斷詞工具的值。  
   
@@ -196,7 +195,7 @@ ms.locfileid: "51674998"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中目前字幹分析器的檔案名稱。  
   
-5.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<執行個體根目>\MSSearch\Language\<語言機碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+5.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<>\MSSearch\Language\<語言碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 6.  將 **WBreakerClass** 機碼值更新為表格中舊版斷詞工具的值。  
   
@@ -225,7 +224,7 @@ ms.locfileid: "51674998"
 |舊版 CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |目前 CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|目前檔案名稱|MsWb7.dll|MSWB7.dll|  
+|目前檔案名稱|MSWB7.dll|MSWB7.dll|  
   
  **日文 (jpn)，LCID 1041**  
   
@@ -243,7 +242,7 @@ ms.locfileid: "51674998"
 |舊版 CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |目前 CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|目前檔案名稱|MsWb7.dll|MSWB7.dll|  
+|目前檔案名稱|MSWB7.dll|MSWB7.dll|  
   
  **俄文 (rus)，LCID 1049**  
   
@@ -252,7 +251,7 @@ ms.locfileid: "51674998"
 |舊版 CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |舊版檔案名稱|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |目前 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|目前檔案名稱|MsWb7.dll|MSWB7.dll|  
+|目前檔案名稱|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 舊版或目前檔案名稱都不是 NaturalLanguage6.dll 的語言  
  在下表中的語言，舊版斷詞工具和字幹分析器的檔案名稱不同於新版檔案名稱。 舊版或目前檔案名稱都不是 NaturalLanguage6.dll。 您不必取代任何檔案，因為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式會將目前版本和舊版元件都複製到 Binn 資料夾。 不過，您必須變更一組登錄項目，以指定舊版或目前版本的元件。  
@@ -288,7 +287,7 @@ ms.locfileid: "51674998"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中舊版字幹分析器的檔案名稱。  
   
-4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<執行個體根目>\MSSearch\Language\<語言機碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<>\MSSearch\Language\<語言碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 5.  將 **WBreakerClass** 機碼值更新為表格中目前斷詞工具的值。  
   
@@ -312,7 +311,7 @@ ms.locfileid: "51674998"
   
     4.  如果選取的語言使用字幹分析器，則將該機碼值的 (預設值) 資料更新為表格中目前字幹分析器的檔案名稱。  
   
-4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<執行個體根目>\MSSearch\Language\<語言機碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
+4.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<>\MSSearch\Language\<語言碼>**。 *<language_key>* 代表登錄中所用語言的縮寫，例如，"fra" 代表法文，"esn" 則代表西班牙文。  
   
 5.  將 **WBreakerClass** 機碼值更新為表格中舊版斷詞工具的值。  
   

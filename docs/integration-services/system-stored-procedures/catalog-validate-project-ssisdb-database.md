@@ -11,12 +11,12 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e937a9fa9d3eba7c766192c83d69a514054f762a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819786"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973017"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  專案的名稱。 *project_name* 是 **nvarchar(128)**。  
   
  [ @validate_type = ] *validate_type*  
- 指出執行的類型驗證。 使用字元 `F` 即可執行完整驗證。 *validate_type* 是 **char(1)**。  
+ 指出執行的類型驗證。 使用字元 `F` 即可執行完整驗證。 這是選擇性參數，根據預設，將會使用字元 `F`。 *validate_type* 是 **char(1)**。  
   
  [ @validation_id = ] *validation_id*  
  傳回驗證的唯一識別碼 (ID)。 *validation_id* 是 **bigint**。  
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  指出是否要使用 32 位元執行階段，在 64 位元作業系統上執行封裝。 使用 `1` 值，即可在執行 64 位元作業系統時，使用 32 位元執行階段執行套件。 使用 `0` 值，即可在執行 64 位元作業系統時執行 64 位元執行階段。 這個參數是選擇性的。 *use32bitruntime* 是 **bit**。  
   
  [ @environment_scope = ] *environment_scope*  
- 指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。 這是選擇性參數，根據預設，將會使用字元 `D`。 *environment_scope* 是 **Char(1)**。  
+ 指出由驗證考量的環境參考。 當值為 `A` 時，驗證中會包含與專案相關的所有環境參考。 當值為 `S` 時，只會包含單一環境參考。 當值為 `D` 時，不會包含任何環境參考，而且每個參數必須為常值預設值，才能通過驗證。 這是選擇性參數，根據預設，將會使用字元 `D`。 *environment_scope* 是 **char(1)**。  
   
  [ @reference_id = ] *reference_id*  
  環境參考的唯一識別碼。 只有在驗證中包含單一環境參考，也就是在 *environment_scope* 為 `S` 時，才需要這個參數。 *reference_id* 是 **bigint**。  
@@ -63,7 +63,7 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>結果集  
  驗證步驟的輸出會當做結果集中的不同區段傳回。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
 -   專案的 READ 權限，以及 (如果適用的話) 參考環境的 READ 權限  

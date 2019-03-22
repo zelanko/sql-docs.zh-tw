@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d86628ead47e1862c1fa1a3aea0e0c32f17f7700
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014839"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161638"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -234,7 +234,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
  TRUE  
  從文字檔擷取資料時，使用外部資料表定義中對應資料行之資料類型的預設值來儲存每個遺漏值。 例如，使用下列項目來取代遺漏值：  
   
--   如果將資料行定義為數值資料行，使用 0。
+-   如果將資料行定義為數值資料行，使用 0。 不支援十進位資料行，且會出現錯誤。
   
 -   如果資料行為字串資料行，使用空字串 ""。
   
@@ -272,7 +272,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 ALTER ANY EXTERNAL FILE FORMAT 權限。
   
 ## <a name="general-remarks"></a>一般備註

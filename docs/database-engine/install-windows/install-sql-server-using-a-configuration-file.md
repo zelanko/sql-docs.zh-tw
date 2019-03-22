@@ -1,6 +1,5 @@
 ---
 title: 使用組態檔安裝 SQL Server | Microsoft Docs
-ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672256"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072208"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用組態檔安裝 SQL Server
 
@@ -24,7 +23,7 @@ ms.locfileid: "47672256"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可供您根據系統預設值與執行階段輸入，產生組態檔。 您可以使用相同的設定，於整個企業中利用組態檔部署 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 您也可以透過建立啟動 Setup.exe 的批次檔，在企業中將手動安裝標準化。 
  
-本文內容特別針對 SQL Server 2016 和 SQL Server 2017 予以更新。 若為舊版的 SQL Server，請參閱[使用組態檔安裝 SQL Server 2014](install-sql-server-2016-using-a-configuration-file.md)。
+本文是針對 SQL Server 2016 版和更新版本進行維護的。 若為舊版的 SQL Server，請參閱[使用組態檔安裝 SQL Server 2014](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。
  
 安裝程式僅支援透過命令提示字元使用組態檔。 使用組態檔時，參數的處理順序如下所述：  
   

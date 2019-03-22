@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 502403eab1376679471b6825fb6b58333947c47f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9ac78de3ea95d7cace9a32001db1fddda9bab50
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522315"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973567"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52522315"
   
 -   您可以針對具有支援全文檢索索引之任何資料類型的資料行建立語意索引。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)。  
   
--   您可以指定支援 **varbinary(max)** 資料行之全文檢索索引的任何文件類型。 如需詳細資訊，請參閱本主題的＜ [如何：決定可以進行索引的文件類型](#doctypes) ＞。  
+-   您可以指定支援 **varbinary(max)** 資料行之全文檢索索引的任何文件類型。 如需詳細資訊，請參閱本主題中的[如何：決定可以建立索引的文件類型](#doctypes)。  
   
 -   語意索引會針對您所選取的資料行建立兩種索引類型：主要片語的索引，以及文件相似度的索引。 當您啟用語意索引時，無法單獨選取其中一種索引類型。 不過，您可以個別查詢這兩個索引。 如需詳細資訊，請參閱 [使用語意搜尋找到文件中的主要片語](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 和 [使用語意搜尋尋找相似及相關的文件](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
@@ -132,7 +132,7 @@ GO
   
 -   若要將語意索引加入已啟用全文檢索索引的資料行，請使用 **ADD STATISTICAL_SEMANTICS** 選項。 在單一 **ALTER** 陳述式中，您只能將語意索引加入至一個資料行。  
   
- **範例：將語意索引加入至已經具有全文檢索索引的資料行**  
+ **範例：將語意索引新增至已經具有全文檢索索引的資料行**  
   
  下列範例會針對 AdventureWorks2012 範例資料庫中的 **Production.Document** 資料表改變現有的全文檢索索引。 此範例會針對 **Production.Document** 資料表的 **Document** 資料行 (已經具有全文檢索索引) 加入語意索引。 此範例會指定不要自動重新擴展索引。  
   
@@ -275,7 +275,7 @@ GO
   
  如果您想要索引的文件類型不在支援的類型清單中，則可能必須尋找、下載並安裝其他篩選。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳做法： 請考慮建立個別的檔案群組，全文檢索和語意索引  
+##  <a name="BestPracticeFilegroup"></a> 最佳做法：考慮針對全文檢索索引和語意索引建立個別的檔案群組  
  如果您有磁碟空間配置的顧慮，請考慮針對全文檢索和語意索引建立個別的檔案群組。 語意索引與全文檢索索引會建立在相同的檔案群組中。 完整擴展的語意索引可能會包含大量資料。  
  
 ##  <a name="IssueNoResults"></a> 問題：針對特定資料行進行搜尋時未傳回結果  

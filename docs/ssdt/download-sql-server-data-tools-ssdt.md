@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f511b2a88d40cccd0c1c54316e0bdfaec46e681
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 1c485156992dbb78157af56b7d5066ee40a92e36
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57588109"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58051805"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "57588109"
 
 > [!IMPORTANT]
 > - 如果已安裝「Analysis Services 專案」和「Reporting Services 專案」延伸模組，請先解除安裝，並關閉所有 VS 執行個體，然後再安裝 SSDT for Visual Studio 2017 (15.9.0)。
-> - SSDT for Visual Studio 2017 (從 15.8.2 開始) 不支援設計包含 Teradata 來源/目的地的封裝。 使用適用於 Visual Studio 2017 (15.8) 的 SSDT。
+> - 請將 SSDT for Visual Studio 2017 15.8.0 版或更早版本用於設計包含 Teradata 來源/目的地的 SSIS 套件。 VS 2017 (15.8.2) 無法設計包含 Teradata 來源/目的地的 SSIS 套件。 
 
 
 

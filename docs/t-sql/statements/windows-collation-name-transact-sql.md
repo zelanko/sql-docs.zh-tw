@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572841"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974347"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
 
@@ -42,8 +42,9 @@ ms.locfileid: "57572841"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ CollationDesignator_<ComparisonStyle>
 **Omitted** 指定不區分全半形，**WS** 指定區分全半形。
 
 *VariationSelectorSensitivity*  
-**適用於**：[!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 開始 
 
 [省略] 會指定不區分變化選取器，[VSS] 則指定區分變化選取器。
+
+**UTF8**  
+**適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始   
+
+指定要用於合格資料類型的 UTF-8 編碼。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 **BIN**  
 指定要用的回溯相容性二進位排序次序。
@@ -83,7 +89,6 @@ CollationDesignator_<ComparisonStyle>
 指定使用字碼指標比較語意的二進位排序順序。
 
 ## <a name="remarks"></a>Remarks
-
 由於定序版本的不同，有些字碼元素可能不會有已定義的排序權重及 (或) 大寫/小寫對應。 例如，比較 `LOWER` 函式在得到相同字元，但在相同定序不同版本時的輸出：
 
 ```sql

@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24de325c1845c73c082a0e525cc9282bd38c40dd
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: de761d6ffe58f757b933c8235a8c82d13bda1cc0
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334595"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161815"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,25 +68,25 @@ ms.locfileid: "57334595"
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>建立和使用通用資料表運算式的方針  
- 下列方針適用於非遞迴的通用資料表運算式。 如需適用於遞迴通用資料表運算式的方針，請參閱下面的「定義和使用遞迴通用資料表運算式的方針」。  
+下列方針適用於非遞迴的通用資料表運算式。 如需適用於遞迴通用資料表運算式的方針，請參閱下面的[定義和使用遞迴通用資料表運算式的方針](#guidelines-for-defining-and-using-recursive-common-table-expressions)。  
   
--   CTE 之後必須接著參考部分或所有 CTE 資料行的單一 INSERT、UPDATE 或 DELETE 陳述式。 您也可以在 CREATE VIEW 陳述式中，將 CTE 指定為用來定義檢視的 SELECT 陳述式的一部分。  
+-   CTE 之後必須接著參考部分或所有 CTE 資料行的單一 `SELECT`、`INSERT`、`UPDATE` 或 `DELETE` 陳述式。 您也可以在 `CREATE VIEW` 陳述式中，將 CTE 指定為檢視之定義 `SELECT` 陳述式的一部分。  
   
--   您可以在非遞迴的 CTE 中，定義多個 CTE 查詢定義。 這些定義必須由下列其中一個設定運算子所組合：UNION ALL、UNION、INTERSECT 或 EXCEPT。  
+-   您可以在非遞迴的 CTE 中，定義多個 CTE 查詢定義。 這些定義必須透過下列其中一個設定運算子來組合：`UNION ALL`、`UNION`、`INTERSECT` 或 `EXCEPT`。  
   
--   CTE 可以參考它本身，以及先前在相同 WITH 子句中所定義的 CTE。 不允許向前參考。  
+-   CTE 可以參考其本身，以及先前在相同 `WITH` 子句中所定義的 CTE。 不允許向前參考。  
   
 -   不允許在 CTE 中指定多個 WITH 子句。 例如，如果 *CTE_query_definition* 包含子查詢，該子查詢就不能包含定義另一個 CTE 的巢狀 WITH 子句。  
   
 -   在 *CTE_query_definition*中，不能使用下列子句：  
   
-    -   ORDER BY (除非指定了 TOP 子句)  
+    -   `ORDER BY` (除非指定了 `TOP` 子句)  
   
-    -   INTO  
+    -   `INTO`  
   
-    -   含有查詢提示的 OPTION 子句  
+    -   含有查詢提示的 `OPTION` 子句  
   
-    -   FOR BROWSE  
+    -   `FOR BROWSE`  
   
 -   當批次中的陳述式使用 CTE 時，在 CTE 之前的陳述式，後面必須接著分號。  
   
@@ -111,19 +111,19 @@ ms.locfileid: "57334595"
   
 -   遞迴成員的 *CTE_query_definition* 中不允許使用下列項目：  
   
-    -   SELECT DISTINCT  
+    -   `SELECT DISTINCT`  
   
-    -   GROUP BY  
+    -   `GROUP BY`  
   
-    -   PIVOT (當資料庫相容性層級為 110 以上時。 請參閱 [SQL Server 2016 中對於資料庫引擎的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md))。  
+    -   `PIVOT` (當資料庫相容性層級為 110 以上時。 請參閱 [SQL Server 2016 中對於資料庫引擎的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md))。  
   
-    -   HAVING  
+    -   `HAVING`  
   
     -   純量彙總  
   
-    -   頂端  
+    -   `TOP`  
   
-    -   LEFT、RIGHT、OUTER JOIN (允許 INNER JOIN)  
+    -   `LEFT`、`RIGHT`、`OUTER JOIN` (允許使用 `INNER JOIN`)  
   
     -   子查詢  
   
@@ -131,30 +131,30 @@ ms.locfileid: "57334595"
   
  下列方針適用於使用遞迴通用資料表運算式：  
   
--   遞迴 CTE 能夠傳回的所有資料行都可為 Null，不論參與的 SELECT 陳述式所傳回之資料行的 Null 屬性為何，都是如此。  
+-   遞迴 CTE 能夠傳回的所有資料行都可為 Null，不論參與的 `SELECT` 陳述式所傳回之資料行 Null 屬性為何，都是如此。  
   
--   組合不正確的遞迴 CTE 可能會造成無限迴圈。 例如，若遞迴成員查詢定義對父資料行與子資料行傳回相同的值，就會建立無限迴圈。 若要防止無限迴圈，您可以在 INSERT、UPDATE、DELETE 或 SELECT 陳述式的 OPTION 子句中使用 MAXRECURSION 提示以及 0 和 32,767 之間的值，來限制特定陳述式所能使用的遞迴層級數目。 這可讓您控制陳述式的執行，直到產生迴圈的程式碼問題解決為止。 伺服器範圍的預設值是 100。 當指定 0 時，不會套用任何限制。 每個陳述式只能指定一個 MAXRECURSION 值。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
+-   組合不正確的遞迴 CTE 可能會造成無限迴圈。 例如，若遞迴成員查詢定義對父資料行與子資料行傳回相同的值，就會建立無限迴圈。 若要防止無限迴圈，您可以在 `INSERT`、`UPDATE`、`DELETE` 或 `SELECT` 陳述式的 OPTION 子句中使用 `MAXRECURSION` 提示以及 0 與 32,767 之間的值，來限制特定陳述式所能使用的遞迴層級數目。 這可讓您控制陳述式的執行，直到產生迴圈的程式碼問題解決為止。 伺服器範圍的預設值是 100。 當指定 0 時，不會套用任何限制。 每個陳述式只能指定一個 `MAXRECURSION` 值。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
 -   您不能利用包含遞迴通用資料表運算式的檢視來更新資料。  
   
 -   資料指標可以利用 CTE 在查詢中定義。 CTE 是定義資料指標結果集的 *select_statement* 引數。 遞迴 CTE 只能使用僅限向前快轉和靜態 (快照集) 資料指標。 如果在遞迴 CTE 中指定了另一種資料指標類型，就會將資料指標類型轉換成靜態。  
   
--   在 CTE 中，可以參考遠端伺服器的資料表。 如果在 CTE 遞迴成員參考遠端伺服器，便會為每個遠端資料表各建立一項多工緩衝處理，以便在本機重複存取資料表。 如果它是 CTE 查詢，索引多工緩衝處理/延遲多工緩衝處理會顯示在查詢計劃中，而且將會有額外的 WITH STACK 述詞。 這是確認適當遞迴的一種方式。  
+-   在 CTE 中，可以參考遠端伺服器的資料表。 如果在 CTE 遞迴成員參考遠端伺服器，便會為每個遠端資料表各建立一項多工緩衝處理，以便在本機重複存取資料表。 如果它是 CTE 查詢，索引多工緩衝處理/延遲多工緩衝處理會顯示在查詢計畫中，且將會有額外的 `WITH STACK` 述詞。 這是確認適當遞迴的一種方式。  
   
--   CTE 遞迴部分中的分析和彙總函式會套用至目前遞迴層級的集合，而不會套用至 CTE 的集合。 ROW_NUMBER 之類的函式只會針對目前遞迴層級傳遞給它們的資料子集運作，而不會針對傳遞給 CTE 遞迴部分的整個資料集運作。 如需詳細資訊，請參閱下面的範例「K. 在遞迴 CTE 中使用分析函數」。  
+-   CTE 遞迴部分中的分析和彙總函式會套用至目前遞迴層級的集合，而不會套用至 CTE 的集合。 `ROW_NUMBER` 之類的函式只會針對目前遞迴層級傳遞給它們的資料子集運作，而不會針對傳遞給 CTE 遞迴部分的整個資料集運作。 如需詳細資訊，請參閱下面的範例「K. 在遞迴 CTE 中使用分析函數」。  
   
 ## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中通用資料表運算式的功能和限制  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中目前的 CTE 實作具有下列功能和限制：  
   
--   可以在 **SELECT** 陳述式中指定 CTE。  
+-   可以在 `SELECT` 陳述式中指定 CTE。  
   
--   可以在 **CREATE VIEW** 陳述式中指定 CTE。  
+-   可以在 `CREATE VIEW` 陳述式中指定 CTE。  
   
--   可以在 **CREATE TABLE AS SELECT** (CTAS) 陳述式中指定 CTE。  
+-   可以在 `CREATE TABLE AS SELECT` (CTAS) 陳述式中指定 CTE。  
   
--   可以在 **CREATE REMOTE TABLE AS SELECT** (CRTAS) 陳述式中指定 CTE。  
+-   可以在 `CREATE REMOTE TABLE AS SELECT` (CRTAS) 陳述式中指定 CTE。  
   
--   可以在 **CREATE EXTERNAL TABLE AS SELECT** (CETAS) 陳述式中指定 CTE。  
+-   可以在 `CREATE EXTERNAL TABLE AS SELECT` (CETAS) 陳述式中指定 CTE。  
   
 -   可以從 CTE 參考遠端資料表。  
   
@@ -162,25 +162,24 @@ ms.locfileid: "57334595"
   
 -   可以在 CTE 中定義多個 CTE 查詢定義。  
   
--   CTE 後面必須接著單一 **SELECT** 陳述式。 不支援 **INSERT**、**UPDATE**、**DELETE** 及 **MERGE** 陳述式。  
+-   CTE 後面必須接著單一 `SELECT` 陳述式。 不支援 `INSERT`、`UPDATE`、`DELETE` 和 `MERGE` 陳述式。  
   
 -   不支援包含自我參考的通用資料表運算式 (遞迴通用資料表運算式)。  
   
--   不允許在 CTE 中指定多個 **WITH** 子句。 例如，如果 CTE_query_definition 包含子查詢，該子查詢就不能包含定義另一個 CTE 的巢狀 **WITH** 子句。  
+-   不允許在 CTE 中指定多個 `WITH` 子句。 例如，如果 CTE 查詢定義包含子查詢，該子查詢就不能包含定義另一個 CTE 的巢狀 `WITH` 子句。  
   
--   除非已指定 **TOP** 子句，否則不能在 CTE_query_definition 中使用 **ORDER BY** 子句。  
+-   除非已指定 `TOP` 子句，否則不能在 CTE_query_definition 中使用 `ORDER BY` 子句。  
   
 -   當批次中的陳述式使用 CTE 時，在 CTE 之前的陳述式，後面必須接著分號。  
   
--   在 **sp_prepare** 所準備的陳述式中使用 CTE 時，CTE 的行為會與 PDW 中的其他 **SELECT** 陳述式相同。 不過，如果是在 **sp_prepare** 所準備的 CETAS 中使用 CTE，則由於受到針對 **sp_prepare** 實作繫結之方式的影響，CTE 的行為可能會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及其他 PDW 陳述式不同。 如果參考 CTE 的 **SELECT** 使用不存在於 CTE 中的錯誤資料行，**sp_prepare** 將會不偵測錯誤就逕行通過，但會改為在 **sp_execute** 期間擲回該錯誤。  
+-   在 `sp_prepare` 所準備的陳述式中使用 CTE 時，CTE 的行為會與 PDW 中的其他 `SELECT` 陳述式相同。 不過，如果是在 `sp_prepare` 所準備的 CETAS 中使用 CTE，則由於受到針對 `sp_prepare` 實作繫結之方式的影響，CTE 的行為可能會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 及其他 PDW 陳述式不同。 如果參考 CTE 的 `SELECT` 使用不存在於 CTE 中的錯誤資料行，`sp_prepare` 將不會偵測錯誤就逕行通過，但改為在 `sp_execute` 期間擲回該錯誤。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-creating-a-simple-common-table-expression"></a>A. 建立簡單的通用資料表運算式  
  下列範例顯示在 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 中每個業務人員每年的銷售訂單總數。  
   
-```  
-  
+```sql   
 -- Define the CTE expression name and column list.  
 WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
 AS  
@@ -195,14 +194,12 @@ SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear
 FROM Sales_CTE  
 GROUP BY SalesYear, SalesPersonID  
 ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
 ```  
   
 ### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>B. 利用通用資料表運算式來限制計數和報告平均值  
  下列範例顯示業務人員所有年度的平均銷售訂單數目。  
   
-```  
+```sql  
 WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
 AS  
 (  
@@ -213,14 +210,12 @@ AS
 )  
 SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
 FROM Sales_CTE;  
-GO  
 ```  
   
 ### <a name="c-using-multiple-cte-definitions-in-a-single-query"></a>C. 在單一查詢中使用多個 CTE 定義  
  下列範例會示範如何在單一查詢中定義一個以上的 CTE。 請注意，逗號會用來分隔 CTE 查詢的定義。 以貨幣格式顯示貨幣金額的 FORMAT 函數會在 SQL Server 2012 和更新版本中提供。  
   
-```  
-  
+```sql  
 WITH Sales_CTE (SalesPersonID, TotalSales, SalesYear)  
 AS  
 -- Define the first CTE query.  
@@ -252,29 +247,24 @@ SELECT SalesPersonID
 FROM Sales_CTE  
 JOIN Sales_Quota_CTE ON Sales_Quota_CTE.BusinessEntityID = Sales_CTE.SalesPersonID  
                     AND Sales_CTE.SalesYear = Sales_Quota_CTE.SalesQuotaYear  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
+ORDER BY SalesPersonID, SalesYear;    
 ```  
   
- 以下為部分結果集。  
+以下為部分結果集。  
   
 ```  
-  
 SalesPersonID SalesYear   TotalSales    SalesQuotaYear SalesQuota  Amt_Above_or_Below_Quota  
 ------------- ---------   -----------   -------------- ---------- ----------------------------------   
-  
 274           2005        $32,567.92    2005           $35,000.00  ($2,432.08)  
 274           2006        $406,620.07   2006           $455,000.00 ($48,379.93)  
 274           2007        $515,622.91   2007           $544,000.00 ($28,377.09)  
 274           2008        $281,123.55   2008           $271,000.00  $10,123.55  
-  
 ```  
   
 ### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>D. 利用遞迴通用資料表運算式來顯示多層級的遞迴  
  下列範例會顯示經理及向經理提出報告的員工的階層式清單。 此範例會開始建立並擴展 `dbo.MyEmployees` 資料表。  
   
-```  
+```sql  
 -- Create an Employee table.  
 CREATE TABLE dbo.MyEmployees  
 (  
@@ -299,7 +289,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
@@ -315,14 +305,13 @@ WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS
 )  
 SELECT ManagerID, EmployeeID, Title, EmployeeLevel   
 FROM DirectReports  
-ORDER BY ManagerID;  
-GO  
+ORDER BY ManagerID;   
 ```  
   
 ### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. 利用遞迴通用資料表運算式來顯示兩個層級的遞迴  
  下列範例會顯示經理及向經理提出報告的員工。 傳回的層級數目只限兩個。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
@@ -339,14 +328,12 @@ WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS
 SELECT ManagerID, EmployeeID, Title, EmployeeLevel   
 FROM DirectReports  
 WHERE EmployeeLevel <= 2 ;  
-GO  
-  
 ```  
   
 ### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. 利用遞迴通用資料表運算式來顯示階層式清單  
  下列範例是以範例 D 為基礎所建立，它加入了經理和員工的姓名及其職稱。 各個層級會進行縮排，更明顯地強調經理和員工的階層。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
@@ -371,13 +358,12 @@ AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),
 SELECT EmployeeID, Name, Title, EmployeeLevel  
 FROM DirectReports   
 ORDER BY Sort;  
-GO  
 ```  
   
 ### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. 利用 MAXRECURSION 來取消陳述式  
  您可以利用 `MAXRECURSION` 來防止形式不良的遞迴 CTE 進入無限迴圈。 下列範例會刻意建立無限迴圈，然後利用 `MAXRECURSION` 提示，將遞迴層級限制為 2。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Creates an infinite loop  
@@ -396,12 +382,11 @@ WITH cte (EmployeeID, ManagerID, Title) as
 SELECT EmployeeID, ManagerID, Title  
 FROM cte  
 OPTION (MAXRECURSION 2);  
-GO  
 ```  
   
  更正編碼錯誤之後，就不再需要 MAXRECURSION。 下列範例會顯示更正的程式碼。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH cte (EmployeeID, ManagerID, Title)  
@@ -417,13 +402,12 @@ AS
 )  
 SELECT EmployeeID, ManagerID, Title  
 FROM cte;  
-GO  
 ```  
   
 ### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. 利用通用資料表運算式，在 SELECT 陳述式中選擇性地逐步執行遞迴關聯性  
  下列範例會顯示建立 `ProductAssemblyID = 800` 的自行車時，所需要之產品組件和元件的階層。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
@@ -447,13 +431,12 @@ FROM Parts AS p
     INNER JOIN Production.Product AS pr  
     ON p.ComponentID = pr.ProductID  
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
-GO  
 ```  
   
 ### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. 在 UPDATE 陳述式中使用遞迴 CTE  
  下列範例會為用來建置產品 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`) 的所有組件更新 `PerAssemblyQty` 值。 通用資料表運算式會傳回一份階層式清單，其中包含用來建立 `ProductAssemblyID 800` 的組件、用來建立這些組件的元件等等。 只會修改通用資料表運算式所傳回的資料列。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
@@ -481,7 +464,7 @@ WHERE d.ComponentLevel = 0;
 ### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. 使用多個錨點和遞迴成員  
  下列範例會利用多個錨點和遞迴成員來傳回指定人員的所有上階。 它會建立一份資料表，且會插入值來建立遞迴 CTE 所傳回的家族族譜。  
   
-```  
+```sql  
 -- Genealogy table  
 IF OBJECT_ID('dbo.Person','U') IS NOT NULL DROP TABLE dbo.Person;  
 GO  
@@ -528,7 +511,7 @@ GO
 ###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. 在遞迴 CTE 中使用分析函數  
  下列範例顯示在 CTE 遞迴部分中使用分析或彙總函式時可能會發生的錯誤。  
   
-```  
+```sql  
 DECLARE @t1 TABLE (itmID int, itmIDComp int);  
 INSERT @t1 VALUES (1,10), (2,10);   
   
@@ -566,7 +549,7 @@ FROM r
 SELECT Lvl, N FROM r;  
 ```  
   
- 下列結果是此查詢的預期結果。  
+下列結果是此查詢的預期結果。  
   
 ```  
 Lvl  N  
@@ -580,7 +563,7 @@ Lvl  N
 2    1  
 ```  
   
- 下列結果是此查詢的實際結果。  
+下列結果是此查詢的實際結果。  
   
 ```  
 Lvl  N  
@@ -601,9 +584,9 @@ Lvl  N
 ### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. 在 CTAS 陳述式內使用通用資料表運算式  
  下列範例會建立一個新的資料表，其中包含 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 每個業務代表的每年銷售訂單總數。  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2012;  
+GO   
 CREATE TABLE SalesOrdersPerYear  
 WITH  
 (  
@@ -630,9 +613,9 @@ GO
 ### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. 在 CETAS 陳述式內使用通用資料表運算式  
  下列範例會建立一個新的外部資料表，其中包含 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 每個業務代表的每年銷售訂單總數。  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2012;  
+GO    
 CREATE EXTERNAL TABLE SalesOrdersPerYear  
 WITH  
 (  
@@ -660,7 +643,7 @@ GO
 ### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. 在陳述式中使用多個以逗號分隔的 CTE  
  下列範例示範如何在單一陳述式中包含兩個 CTE。 CTE 不能位於巢狀結構中 (不可遞迴)。  
   
-```  
+```sql  
 WITH   
  CountDate (TotalCount, TableName) AS  
     (  
@@ -683,4 +666,4 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
-  
+ 
