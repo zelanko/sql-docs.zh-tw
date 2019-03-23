@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
-ms.translationtype: MT
+ms.openlocfilehash: 40ce93e9232d0492bd693e7920b62dc9805aa7ac
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342841"
+ms.locfileid: "58356401"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>使用 SQL Server 使用 RESTful web 服務的巨量資料叢集上部署的應用程式
 
@@ -86,7 +86,7 @@ mssqlctl app describe --name addpy --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>產生的 JWT 存取權杖
 
-若要存取應用程式的 RESTful web 服務已部署您第一次產生的 JWT 存取權杖。 在您的瀏覽器中開啟下列 URL:`https://[IP]:[PORT]/api/docs/swagger.json`使用的 IP 位址和連接埠執行擷取`describe`上述命令。 您必須登入您所使用的相同認證`mssqlctl login`。
+若要存取已部署應用程式的 RESTful web 服務，您有產生的 JWT 存取權杖。 在您的瀏覽器中開啟下列 URL:`https://[IP]:[PORT]/api/docs/swagger.json`使用的 IP 位址和連接埠執行擷取`describe`上述命令。 您必須登入您所使用的相同認證`mssqlctl login`。
 
 貼上的內容`swagger.json`成[Swagger 編輯器](https://editor.swagger.io)來了解哪些方法會提供：
 
