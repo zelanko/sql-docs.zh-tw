@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815380"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385586"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   您可以使用 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面來選取並設定想要計算的設定檔。 在單一「資料分析」工作中，您可以針對多個資料表或檢視表中的多個資料行或資料行組合計算多個設定檔。  

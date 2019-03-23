@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79f2d2c03d2403042de7f1ca0aeed3db15c93efc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b363d622d82a2829e25e21bcf7d8cf21fe0962d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189138"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374816"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 連接管理員編輯器
   使用 [FTP 連線管理員編輯器] 對話方塊來指定連接到 FTP 伺服器的屬性。  
