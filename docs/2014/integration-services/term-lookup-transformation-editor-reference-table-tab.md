@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69ab9ccde1d3f14a4cf3d28c856350aef4c80b56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b74ef55a8b957a7cc8503a56601162060d0749c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071660"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378047"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>詞彙查閱轉換編輯器 (參考資料表索引標籤)
   使用 [詞彙查閱轉換編輯器] 對話方塊的 [參考資料表] 索引標籤，即可指定參考 (查閱) 資料表的連接。  
@@ -42,8 +42,8 @@ ms.locfileid: "48071660"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [詞彙查閱轉換編輯器&#40;詞彙查閱索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [詞彙查閱轉換編輯器&#40;進階索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [詞彙查閱轉換編輯器 &#40;詞彙查閱索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [詞彙查閱轉換編輯器 &#40;進階索引標籤&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [詞彙擷取轉換](data-flow/transformations/term-extraction-transformation.md)  
   
   

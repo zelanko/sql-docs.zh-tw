@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c91547692c9a703b1d989015a0b56525e3e7c40f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779070"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376766"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>加入 Analysis Services 連接管理員對話方塊 UI 參考
   使用 **[加入 Analysis Services 連接管理員]** 對話方塊來建立執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之伺服器的連接，或編輯連接屬性。  

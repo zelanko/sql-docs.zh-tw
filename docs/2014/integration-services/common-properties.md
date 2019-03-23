@@ -17,22 +17,22 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160639"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378876"
 ---
 # <a name="common-properties"></a>通用屬性
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
   
  本主題將列出及描述資料流程物件的通用屬性。  
   
--   [元件](#components)  
+-   [Components](#components)  
   
 -   [輸入](#inputs)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48160639"
 |名稱|String|資料流程元件的名稱。|  
 |PipelineVersion|Integer|專門用來執行元件的資料流程工作版本。|  
 |UsesDispositions|布林|指示元件是否有錯誤輸出。|  
-|ValidateExternalMetadata|布林|指示是否會驗證外部資料行的中繼資料。 這個屬性的預設值是`True`。|  
+|ValidateExternalMetadata|布林|指示是否會驗證外部資料行的中繼資料。 此屬性的預設值為 `True`。|  
 |版本|Integer|元件的版本。|  
   
 ##  <a name="inputs"></a> 輸入的屬性  
@@ -109,14 +109,14 @@ ms.locfileid: "48160639"
 |--------------|---------------|-----------------|  
 |描述|String|輸入的描述。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |HasSideEffects|布林|指出是否移除從資料流程的執行計畫的元件以及它將不會附加到下游元件時`RunInOptimizedMode`是`true`。|  
 |ID|Integer|可唯一識別輸入的值。|  
 |IdentificationString|String|識別輸入的字串。|  
 |IsSorted|布林|指示是否要排序輸入中的資料。|  
 |名稱|String|輸入的名稱。|  
 |SourceLocale|Integer|輸入資料的地區設定識別碼 (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 . 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 . 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
   
  目的地和某些轉換不支援錯誤輸出，而且這些元件的 ErrorRowDisposition 和 TruncationRowDisposition 屬性是唯讀的。  
   
@@ -130,14 +130,14 @@ ms.locfileid: "48160639"
 |ComparisonFlags|Integer|指定具有字元資料類型之資料行比較的一組旗標。 如需詳細資訊，請參閱 [Comparing String Data](data-flow/comparing-string-data.md)。|  
 |描述|String|描述輸入資料行。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|指派給輸入資料行之外部中繼資料行的識別碼。|  
 |ID|Integer|可唯一識別輸入資料行的值。|  
 |IdentificationString|String|識別輸入資料行的字串。|  
 |LineageID|Integer|上游資料行的識別碼。|  
 |名稱|String|輸入資料行的名稱。|  
 |SortKeyPosition|Integer|指示是否排序資料行、其排序次序以及排序多個資料行之順序的值。 值為 **0** 時，指出資料行並未排序。  如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |UpstreamComponentName|String|上游元件的名稱。|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|決定元件如何使用輸入資料行的值。|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "48160639"
 |DeleteOutputOnPathDetached|布林|決定當從路徑中卸離輸出時，資料流程引擎是否要刪除輸出的值。|  
 |描述|String|描述輸出。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
 |ExclusionGroup|Integer|識別一組互斥輸出的值。|  
 |HasSideEffects|布林|指示當元件未附加到上游元件以及當 `RunInOptimizedMode` 為 `true` 時，是否可以從資料流程的執行計畫中移除此元件的值‧|  
 |ID|Integer|可唯一識別輸出的值。|  
@@ -162,7 +162,7 @@ ms.locfileid: "48160639"
 |IsSorted|布林|指示是否要排序輸出。 預設值是 `False`。<br /><br /> **\*\* 重要\* \*** 的值設定`IsSorted`屬性設`True`不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |名稱|String|輸出的名稱。|  
 |SynchronousInputID|Integer|與輸出同步之輸入的識別碼。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。|  
   
 ###  <a name="outputcolumns"></a> 輸出資料行屬性  
  在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中，輸出包含輸出資料行的集合。 資料流程中元件的輸出資料行會實作 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 介面。  
@@ -174,7 +174,7 @@ ms.locfileid: "48160639"
 |ComparisonFlags|Integer|指定具有字元資料類型之資料行比較的一組旗標。 如需詳細資訊，請參閱 [Comparing String Data](data-flow/comparing-string-data.md)。|  
 |描述|String|描述輸出資料行。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。 預設值是 `Fail component`。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。 預設值是 `Fail component`。|  
 |ExternalMetadataColumnID|Integer|指派給輸入資料行之外部中繼資料行的識別碼。|  
 |ID|Integer|可唯一識別輸出資料行的值。|  
 |IdentificationString|String|識別輸出資料行的字串。|  
@@ -182,7 +182,7 @@ ms.locfileid: "48160639"
 |名稱|String|輸出資料行的名稱。|  
 |SortKeyPosition|Integer|指示是否排序資料行、其排序次序以及排序多個資料行之順序的值。 值為 **0** 時，指出資料行並未排序。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |SpecialFlags|Integer|包含輸出資料行之特殊旗標的值。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。 預設值是 `Fail component`。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 這些值為 `Fail component`、`Ignore failure` 和 `Redirect row`。 預設值是 `Fail component`。|  
   
  輸出資料行也包含一組資料類型屬性。  
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4de5cf0a8e932c30c0eea619b185aa37f0cf875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7797245901cd4d01f82995defcf44498fba1e1f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533331"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390026"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 工作編輯器 (檔案傳輸頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[檔案傳輸]** 頁面，來設定工作執行的 FTP 作業。  
@@ -70,13 +70,13 @@ ms.locfileid: "52533331"
  **[RemoteVariable]**  
  選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立使用者定義變數。  
   
- **相關的主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，加入變數  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、新增變數  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **[RemotePath]**  
  選取現有的 FTP 連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
- **相關的主題：**[FTP 連接管理員](connection-manager/ftp-connection-manager.md)， [FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **相關主題：**[FTP 連線管理員](connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
 ## <a name="islocalpathvariable-dynamic-options"></a>IsLocalPathVariable 動態選項  
   
@@ -84,13 +84,13 @@ ms.locfileid: "52533331"
  **[LocalVariable]**  
  選取現有的使用者定義變數，或按一下 [\<新增變數...>] 來建立變數。  
   
- **相關的主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，加入變數  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、新增變數  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **[LocalPath]**  
  選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立連線管理員。  
   
- **相關主題**:[一般檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題**：[一般檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

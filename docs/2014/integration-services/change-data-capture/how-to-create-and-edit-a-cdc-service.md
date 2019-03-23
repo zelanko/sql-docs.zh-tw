@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64204c8eb91d17a266e10f0a2b7fb938a0148397
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 525e60450e1cae635cd3a825108dc5a68f80fe42
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779910"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391376"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>如何建立及編輯 CDC 服務
   這些程序描述如何從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC 服務。  

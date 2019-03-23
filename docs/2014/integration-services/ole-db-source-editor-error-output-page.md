@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05ba0c0d3ac25a30bbc823fb23e8f09f3cdf5d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df4932604a6de27c2205ad0f619939587d02b916
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184998"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393855"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>OLE DB 來源編輯器 (錯誤輸出頁面)
   使用 [OLE DB 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48184998"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -48,14 +48,14 @@ ms.locfileid: "48184998"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **套用**  
+ **Apply**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [OLE DB 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [使用 OLE DB 來源擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)  
+ [OLE DB 來源編輯器 &#40;連接管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [使用 OLE DB 來源來擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [OLE DB 連接管理員](connection-manager/ole-db-connection-manager.md)  
   
   

@@ -13,24 +13,24 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4a571c48c0fa745d77c4d1def9a4e517376fad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e08af39df21d7a1774e1d7eed5e0f7602fd3489
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075658"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393816"
 ---
 # <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
   此程序會建立新的專案和新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 方案。  
   
 ### <a name="to-create-a-new-integration-services-project"></a>若要建立新的 Integration Services 專案  
   
-1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]  
+1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
+2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
   
 3.  在 **[新增專案]** 對話方塊的 **[範本]** 窗格中，選取 **[Integration Services 專案]** 範本。  
   

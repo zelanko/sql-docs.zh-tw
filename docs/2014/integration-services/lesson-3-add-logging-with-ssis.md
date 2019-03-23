@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 088afb5cdd4640aab550552d4fc15c25f3a852e1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375280"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390956"
 ---
 # <a name="lesson-3-adding-logging"></a>第 3 課：新增記錄
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供工作和容器事件的追蹤，包含可讓您進行疑難排解及監視套件執行的記錄功能。 記錄功能很有彈性，可在封裝層級或在封裝內的個別工作和容器上啟用。 您可以選取要記錄的事件，以及針對單一封裝建立多個記錄。  
@@ -40,13 +40,13 @@ ms.locfileid: "53375280"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1:複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [步驟 1：複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [步驟 2:加入和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
+-   [步驟 2：加入和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [步驟 3:測試第 3 課的教學課程封裝](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [步驟 3：測試第 3 課的教學課程封裝](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1:複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
+ [步驟 1：複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

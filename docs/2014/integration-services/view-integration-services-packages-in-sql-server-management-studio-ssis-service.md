@@ -11,20 +11,20 @@ helpviewer_keywords:
 - viewing packages
 - connections [Integration Services], packages
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cffcc0e48851f3d023251d03d210fb78e3d1bd09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c45b7feb32c9e85ac571f04a1c975c49b7211aee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163358"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394536"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>在 SQL Server Management Studio 中檢視 Integration Services 封裝 (SSIS 服務)
     
 > [!IMPORTANT]  
->  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
+>  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
  此程序描述如何在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中連接到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ，以及檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理的封裝清單。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48163358"
 2.  展開 [Stored Packages] 的子資料夾以顯示封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [套件管理 &#40;SSIS 服務&#41;](service/package-management-ssis-service.md)   
+ [封裝管理 &#40;SSIS 服務&#41;](service/package-management-ssis-service.md)   
  [使用 SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

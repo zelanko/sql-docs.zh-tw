@@ -10,15 +10,15 @@ helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a625a4168fd5d9e7ecfa414d21298f0df3dcb396
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 10d2eeb6991c0c75e8dbe8102f94148f60f0a361
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811500"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374806"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 運算式)
   傳回字元運算式最左邊字元的 Unicode 字碼指標。  

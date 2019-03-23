@@ -1,5 +1,5 @@
 ---
-title: 步驟 4：加入封裝組態 |Microsoft Docs
+title: 步驟 4：新增套件設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364010"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388329"
 ---
 # <a name="step-4-adding-package-configurations"></a>步驟 4：加入封裝組態
   在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
@@ -47,7 +47,7 @@ ms.locfileid: "53364010"
     > [!NOTE]  
     >  若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。 如果不想要重新啟動電腦，可以輸入環境變數的名稱。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「DataTransfer 環境變數組態」、在 [預覽] 窗格中檢閱組態內容，然後按一下 [完成]。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53364010"
   
 10. 在 [連接管理員] 內，展開 [NewCustomers]，然後選取 [連接字串] 核取方塊。  
   
-11. 按 [下一步] 。  
+11. 按一下 [下一步] 。  
   
 12. 在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「DataTransfer 組態」、檢閱組態的內容，然後按一下 [完成]。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53364010"
     > [!NOTE]  
     >  若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「LoadXMLData EV 組態」、檢閱組態的內容，然後按一下 [完成]。  
   
@@ -122,14 +122,14 @@ ms.locfileid: "53364010"
   
 9. 在 [選取要匯出的屬性] 頁面上，依序展開 [LoadXMLData]、[可執行檔]、[載入 XML 資料] 和 [屬性]，然後選取 [[XMLSource].[XMLData]] 和 [[XMLSource].[XMLSchemaDefinition]] 核取方塊。  
   
-10. 按 [下一步] 。  
+10. 按一下 [下一步] 。  
   
 11. 在 [正在完成精靈] 頁面的 [組態名稱] 方塊中，輸入「LoadXMLData 組態」、檢閱組態的內容，然後按一下 [完成]。  
   
 12. 在 [Package Configuration Organizer (封裝組態組合管理)] 對話方塊中，確認第一個列出的是「LoadXMLData 環境變數組態」，第二個列出的是「LoadXMLData 組態」，然後按一下 [關閉]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 5:測試更新的封裝](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [步驟 5：測試更新的套件](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   

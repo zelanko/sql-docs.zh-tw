@@ -12,15 +12,15 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80b97996ea7e1eacd11bafa4a6e1904e5e89cf58
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ce2b4a14d78c4e855c4af1d8b5fdd972b1d28c27
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809680"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375866"
 ---
 # <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
   運算式可能不小心造成資料遭截斷。 在下列情況下可能發生截斷：  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d553bd07dd72ec136c5ec449f67b84dea2d6c57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b83da069beee9440703b5dc0817668559c469d26
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228532"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377636"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
   使用 **[選取來源位置]** 頁面，指定升級封裝的來源。  
@@ -69,6 +69,6 @@ ms.locfileid: "48228532"
  輸入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證將用來連接伺服器的密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [升級 Integration Services 套件](install-windows/upgrade-integration-services-packages.md)  
+ [升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages.md)  
   
   

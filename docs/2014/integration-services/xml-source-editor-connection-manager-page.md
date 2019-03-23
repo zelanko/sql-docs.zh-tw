@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096048"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393886"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 來源編輯器 (連接管理員頁面)
   使用 **[XML 來源編輯器]** 的 **[連接管理員]** 頁面，來指定 XML 檔案和轉換 XML 資料的 XSD。  
@@ -34,7 +34,7 @@ ms.locfileid: "48096048"
 |值|描述|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
-|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊：**[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關的資訊**:[在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |來自變數的 XML 資料|從變數中擷取 XML 資料。|  
   
  **使用內嵌結構描述**  
@@ -68,8 +68,8 @@ ms.locfileid: "48096048"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [XML 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [XML 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
- [使用 XML 來源擷取資料](data-flow/extract-data-by-using-the-xml-source.md)  
+ [XML 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [XML 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [使用 XML 來源來擷取資料](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366570"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389496"
 ---
 # <a name="custom-messages-for-logging"></a>自訂訊息以進行記錄
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組豐富的自訂事件，可以為封裝和許多工作寫入記錄項目。 您可以使用這些項目，透過記錄預先定義事件或使用者自訂訊息，來儲存關於執行進度、結果和問題的詳細資訊，以供稍後分析。 比方說，您可以記錄大量插入開始和結束的時間，以便識別封裝執行時的效能問題。  

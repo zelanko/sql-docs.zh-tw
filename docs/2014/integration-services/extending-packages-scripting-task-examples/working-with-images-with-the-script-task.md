@@ -20,22 +20,22 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354628"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389856"
 ---
 # <a name="working-with-images-with-the-script-task"></a>以指令碼工作處理影像
   產品或是使用者的資料庫除了文字與數值資料之外經常包括影像。 Microsoft .NET Framework 中的 `System.Drawing` 命名空間提供操作影像的類別。  
   
- [範例 1:將影像轉換為 JPEG 格式](#example1)  
+ [範例 1：將影像轉換為 JPEG 格式](#example1)  
   
- [範例 2:建立和儲存縮圖影像](#example2)  
+ [範例 2：建立和儲存縮圖影像](#example2)  
   
 > [!NOTE]  
 >  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../extending-packages-custom-objects/task/developing-a-custom-task.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 4：將資料流程工作加入封裝 |Microsoft Docs
+title: 步驟 4：將資料流程工作新增至套件 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793940"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381186"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>步驟 4：將資料流程工作加入至封裝中
   在建立來源和目的地資料的連接管理員之後，下一項工作是將資料流程工作加入封裝中。 資料流程工作封裝資料流程引擎，它在來源和目的地之間移動資料，以及提供轉換、清理和修改移動中資料的功能。 資料流程工作是進行擷取、轉換和載入 (ETL) 處理序大部份工作之處。  
@@ -39,7 +39,7 @@ ms.locfileid: "52793940"
 4.  以滑鼠右鍵按一下 資料流程工作中，按一下**屬性**，然後在 屬性 視窗中，確認`LocaleID`屬性設定為**英文 （美國）**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 5:加入和設定一般檔案來源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [步驟 5：新增和設定一般檔案來源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程工作](control-flow/data-flow-task.md)  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3215f28615511f3c35fcc6cc3ea80209c7c44d41
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748260"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378816"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
   您可以使用 CDC 設計工具主控台來檢視有關您所建立之執行個體的資訊，並管理執行個體的操作。  
@@ -65,13 +65,13 @@ ms.locfileid: "52748260"
  **狀態**  
  此索引標籤會提供有關 CDC 執行個體目前狀態的資訊和統計資料。 其中包含以下資訊。  
   
--   **狀態**:指示 CDC 執行個體的目前狀態的圖示。 下面會描述這些狀態。  
+-   **狀態**：指示 CDC 執行個體的目前狀態的圖示。 下面會描述這些狀態。  
   
     |||  
     |-|-|  
     |![錯誤](../media/error.gif "錯誤")|**錯誤**： Oracle CDC 執行個體未在執行中，因為發生無法重試的錯誤。 以下是可用的子狀態：<br /><br /> **設定錯誤**:設定錯誤發生了需要手動介入。<br /><br /> **需要密碼**:為 Oracle CDC 執行個體設定任何密碼或密碼無效。<br /><br /> **非預期**： 所有其他無法復原的錯誤。|  
-    |![確定](../media/okay.gif "確定")|**執行**:CDC 執行個體正在執行，而且處理變更記錄。 以下是可用的子狀態。<br /><br /> **閒置**:已處理和在目標變更資料表中儲存所有變更記錄。 沒有其他使用中交易。<br /><br /> **處理**:有正在處理但是尚未寫入變更資料表的變更記錄。|  
-    |![停止](../media/stop.gif "停止")|**停止**:CDC 執行個體未在執行中。 已停止的狀態表示 CDC 執行個體以正常方式停止。|  
+    |![確定](../media/okay.gif "確定")|**執行中**：CDC 執行個體正在執行，而且處理變更記錄。 以下是可用的子狀態。<br /><br /> **閒置**:已處理和在目標變更資料表中儲存所有變更記錄。 沒有其他使用中交易。<br /><br /> **處理**:有正在處理但是尚未寫入變更資料表的變更記錄。|  
+    |![停止](../media/stop.gif "停止")|**已停止**：CDC 執行個體未在執行中。 已停止的狀態表示 CDC 執行個體以正常方式停止。|  
     |![已暫停](../media/paused.gif "已暫停")|**暫停**:CDC 執行個體正在執行，但因為發生可重試的錯誤所以暫停處理。 以下是可用的子狀態：<br /><br /> **已中斷連線**:無法建立與來源 Oracle 資料庫的連接。 還原連接時，處理作業便會繼續。<br /><br /> **儲存體**:儲存體已滿。 當有額外的儲存體可用時，處理作業便會繼續。<br /><br /> **記錄器**:記錄器連接到 Oracle，但無法讀取 Oracle 交易記錄，由於暫時性問題，比方說，不提供必要的交易記錄。|  
   
 -   **詳細狀態**:目前的子狀態。  

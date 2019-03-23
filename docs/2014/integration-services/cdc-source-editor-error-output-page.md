@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a43085040e3bc1fde5f01b9ccb769695ea877341
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a5a98644dc9c8f887b72cd5cc76c1d7c38ae174
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129838"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389306"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 來源編輯器 (錯誤輸出頁面)
   使用 [CDC 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項。  
@@ -53,7 +53,7 @@ ms.locfileid: "48129838"
  **將這個值設定到選取的資料格**  
  選取發生錯誤或截斷時 CDC 來源如何處理所有選取的資料格：忽略失敗、重新導向資料列，或使元件失效。  
   
- **套用**  
+ **Apply**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="error-handling-options"></a>錯誤處理選項  
@@ -69,7 +69,7 @@ ms.locfileid: "48129838"
  系統會將錯誤或截斷資料列導向至 CDC 來源的錯誤輸出。 在此情況中，就會使用 CDC 來源錯誤處理。 如需詳細資訊，請參閱 [CDC 來源](data-flow/cdc-source.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [CDC 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
+ [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

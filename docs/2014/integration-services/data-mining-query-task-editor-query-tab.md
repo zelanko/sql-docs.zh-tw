@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193058"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377226"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>資料採礦查詢工作編輯器 (查詢索引標籤)
   使用 [資料採礦查詢工作] 對話方塊的 [查詢] 索引標籤，即可依據採礦模型建立預測查詢。 在此對話方塊中，您也可以將參數和結果集繫結到變數。  
@@ -81,8 +81,8 @@ ms.locfileid: "48193058"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料採礦查詢工作編輯器&#40;採礦模型 索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [資料採礦查詢工作編輯器&#40;輸出 索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [資料採礦查詢工作編輯器 &#40;採礦模型索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [資料採礦查詢工作編輯器 &#40;輸出索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [資料採礦設計師](../analysis-services/data-mining/data-mining-designer.md)  
   
   

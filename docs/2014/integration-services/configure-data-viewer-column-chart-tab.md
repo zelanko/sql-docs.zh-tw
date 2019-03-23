@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ce4cb57a7ee3329bb3eb123a23b740ba5b156c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085828"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393956"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>設定資料檢視器 (直條圖索引標籤)
   使用 **[設定資料檢視器]** 對話方塊的 **[直條圖]** 索引標籤，即可指定要在圖表中顯示為直條的資料行。 直條的數目會顯示資料行中不連續資料的數目，而直條的高度會顯示每個值的發生次數。 圖表只會反映一個緩衝區的內容。  

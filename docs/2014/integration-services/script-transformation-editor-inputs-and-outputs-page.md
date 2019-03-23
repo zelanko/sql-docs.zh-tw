@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d015b637a2823b0551fec82fbe761e586cf1ccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d15b3979209e4dba6983a845ae1752d3e136fb7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084518"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392086"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>指令碼轉換編輯器 (輸入及輸出頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[輸入及輸出]** 頁面，即可加入、移除和設定指令碼轉換的輸入及輸出。  
@@ -52,10 +52,10 @@ ms.locfileid: "48084518"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [選取 指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
- [指令碼轉換編輯器&#40;輸入資料行頁面&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [指令碼轉換編輯器&#40;指令碼 頁面&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [指令碼轉換編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
- [其他指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [選取指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
+ [指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [額外的指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

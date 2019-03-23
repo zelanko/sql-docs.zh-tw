@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4730b52983c778fd71f778412552913d2ee6cbef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120565"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375208"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>設定 SSIS 記錄對話方塊
   使用 **[設定 SSIS 記錄]** 對話方塊定義封裝的記錄選項。  
@@ -76,7 +76,7 @@ ms.locfileid: "48120565"
  **Configuration**  
  在清單中選取現有連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
- 相關主題： [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](connection-manager/file-connection-manager.md)  
+ 相關主題：[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)總監[檔案 」 連接管理員](connection-manager/file-connection-manager.md)  
   
  **刪除**  
  選取記錄提供者，然後按一下 [刪除]。  

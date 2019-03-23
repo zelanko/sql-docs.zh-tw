@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fa8464744681984373fa2e69f7a4fc7dacee1f0b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6010c87de750c3c23fbd03564887624064286dbd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771320"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388866"
 ---
 # <a name="recordset-destination-custom-properties"></a>資料錄集目的地自訂屬性
   資料錄集目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  

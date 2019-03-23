@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785460"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379370"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>建立及編輯 Oracle CDC 服務
   您會從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC Windows 服務。  
@@ -61,7 +61,7 @@ ms.locfileid: "52785460"
  **驗證**  
  選取下列其中一項：  
   
--   **Windows 驗證**:如果您選取此選項時，Oracle CDC 服務會連接到目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用的服務帳戶身分識別。 如果正在另一部電腦上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須搭配網域帳戶使用 Windows 驗證。  
+-   **Windows 驗證**：如果您選取此選項時，Oracle CDC 服務會連接到目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用的服務帳戶身分識別。 如果正在另一部電腦上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須搭配網域帳戶使用 Windows 驗證。  
   
 -   **SQL Server 驗證**:如果您選取此選項時，您必須輸入**使用者名**並**密碼**如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您想要使用的登入。 Oracle CDC 服務會在連接到目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時使用這些認證。  
   

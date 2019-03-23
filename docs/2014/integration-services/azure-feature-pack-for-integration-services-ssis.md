@@ -10,15 +10,15 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 771b7425ca166a05eb5290f576a7fa2cad3f19be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787040"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394519"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能套件
 SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模組，可提供此頁面上所列的元件，以便讓 SSIS 連接到 Azure 服務、在 Azure 和內部部署資料來源之間轉送資料，以及處理儲存在 Azure 中的資料。
@@ -99,12 +99,12 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
 ### <a name="cloud-data-archiving"></a>雲端資料封存  
  您可以使用 SSIS 封裝中的 Azure Blob 目的地，將輸出資料寫入 Azure Blob 儲存體，或者使用 Azure Blob 來源，從 Azure Blob 儲存體讀取資料。  
   
- ![SSIS AzureConnector CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "SSIS AzureConnector CloudArchive-1")  
+ ![SSIS-AzureConnector-CloudArchive-1](media/ssis-azureconnector-cloudarchive-1.png "SSIS-AzureConnector-CloudArchive-1")  
   
- ![SSIS AzureConnector CloudArchive-2](media/ssis-azureconnector-cloudarchive-2.png "SSIS AzureConnector CloudArchive-2")  
+ ![SSIS-AzureConnector-CloudArchive-2](media/ssis-azureconnector-cloudarchive-2.png "SSIS-AzureConnector-CloudArchive-2")  
   
  此外，您還可以搭配 Azure Blob 列舉程式使用 Foreach 迴圈容器，來處理多個 Bob 檔案中的資料。  
   
- ![SSIS AzureConnector CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "SSIS AzureConnector CloudArchive-3")  
+ ![SSIS-AzureConnector-CloudArchive-3](media/ssis-azureconnector-cloudarchive-3.png "SSIS-AzureConnector-CloudArchive-3")  
   
   

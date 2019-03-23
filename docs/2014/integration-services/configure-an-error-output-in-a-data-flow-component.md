@@ -12,15 +12,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 983d83c8724db0e517175f120b20a3f2ff197487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136958"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384186"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在資料流程元件中設定錯誤輸出
   許多資料流程元件都支援錯誤輸出，因元件的不同，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會以不同的方式設定錯誤輸出。 除了設定錯誤輸出以外，您也可以設定錯誤輸出的資料行。 其中包括設定此元件所加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  
@@ -95,6 +95,6 @@ ms.locfileid: "48136958"
 8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料中的錯誤處理](data-flow/error-handling-in-data.md)  
+ [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
   
   

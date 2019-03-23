@@ -10,15 +10,15 @@ helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 587ac12e6628104613d8b1457b02088e1baf4998
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1137fa6847cf851a6cb56ffd8a0da10032decc7a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799840"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384306"
 ---
 # <a name="--negate-ssis-expression"></a>- (負) (SSIS 運算式)
   執行數值運算式的否定運算。  

@@ -38,15 +38,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 890ea72e56eb2fa8e54a06ef115a9e7e73c96dfb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750651"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387646"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
   除了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特有的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
@@ -82,14 +82,14 @@ ms.locfileid: "52750651"
 |AutoExtendFactor|Integer|介於 1 到 100 之間的值，指定記憶體於彙總期間可以擴充的百分比。 這個屬性的預設值為 **25**。|  
 |CountDistinctKeys|Integer|一個值，指定彙總可寫入之相異計數的確切數目。 如果您指定了 CountDistinctScale 值，就會優先使用 CountDistinctKeys 中的值。|  
 |CountDistinctScale|整數 (列舉)|一個值，描述彙總可以在資料行中計算之相異值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 CountDistinctScale 值。 使用 **未指定** (0) 選項可能會影響在大型資料集中的效能。|  
-|索引鍵|Integer|一個值，指定彙總寫入之群組依據索引鍵的確切數目。 如果您指定了 KeyScale 值，就會優先使用 Keys 中的值。|  
+|按鍵|Integer|一個值，指定彙總寫入之群組依據索引鍵的確切數目。 如果您指定了 KeyScale 值，就會優先使用 Keys 中的值。|  
 |KeyScale|整數 (列舉)|一個值，描述彙總可寫入之群組依據索引鍵值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值。<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值。<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 KeyScale 值。|  
   
  下表描述的是彙總轉換之輸出的自訂屬性。 所有屬性都是可讀寫的。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|索引鍵|Integer|一個值，指定彙總可寫入之群組依據索引鍵的確切數目。 如果您指定了 KeyScale 值，就會優先使用 Keys 中的值。|  
+|按鍵|Integer|一個值，指定彙總可寫入之群組依據索引鍵的確切數目。 如果您指定了 KeyScale 值，就會優先使用 Keys 中的值。|  
 |KeyScale|整數 (列舉)|一個值，描述彙總可寫入之群組依據索引鍵值的近似數目。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值，<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值，<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 KeyScale 值。|  
   
  下表描述的是彙總轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  

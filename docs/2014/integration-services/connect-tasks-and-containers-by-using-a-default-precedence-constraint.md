@@ -13,25 +13,25 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221538"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389236"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用預設的優先順序條件約束來連接工作和容器
   優先順序條件約束可以連接兩個可執行檔。 可執行檔可以是任何工作或「For 迴圈」、「Foreach 迴圈」或「時序」容器。 此程序描述如何設定優先順序條件約束的預設行為，及如何使用預設的優先順序條件約束來連接可執行檔。  
   
 ## <a name="creating-default-precedence-constraints"></a>建立預設的優先順序條件約束  
- 當您第一次使用[!INCLUDE[ssIS](../includes/ssis-md.md)]設計工具中，優先順序條件約束的預設值是`Success`。 請遵循下列步驟來設定「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」，以便使用優先順序條件約束的其他預設值。  
+ 首次使用「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」時，優先順序條件約束的預設值為 `Success`。 請遵循下列步驟來設定「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」，以便使用優先順序條件約束的其他預設值。  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>設定優先順序條件約束的預設值  
   
-1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]  
+1.  開啟 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
 2.  在 **[工具]** 功能表上，按一下 **[選項]**。  
   

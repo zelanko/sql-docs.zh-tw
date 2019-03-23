@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4369ab3606310e38a4bf6927f6abfae10fdc0ffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f1c9a636023e4dc9c5c9ffb69240921e780ed38
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187878"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389926"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 來源編輯器 (資料行頁面)
   使用 [CDC 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -45,7 +45,7 @@ ms.locfileid: "48187878"
  為每個輸出資料行輸入唯一的名稱。 預設值為選取之外部 (來源) 資料行的名稱。不過，您也可以選擇任何唯一的描述性名稱。 輸入的名稱就會顯示在 SSIS 設計師中。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [CDC 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

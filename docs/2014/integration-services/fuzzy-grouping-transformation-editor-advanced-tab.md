@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79b71caf3fa8772bd55627b5c1527eea61ac4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150824"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389018"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊群組轉換編輯器 (進階索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可指定輸入和輸出資料行、設定類似度臨界值，以及定義分隔符號。  
@@ -32,7 +32,7 @@ ms.locfileid: "48150824"
   
 ## <a name="options"></a>選項。  
  **輸入索引鍵資料行名稱**  
- 針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 `_key_in`資料行具有唯一識別每個資料列的值。  
+ 針對每個輸入資料列，指定包含資料列之唯一識別碼的輸出資料行名稱。 `_key_in` 資料行具有能唯一識別每個資料列的值。  
   
  **輸出索引鍵資料行名稱**  
  針對由一組重複資料列組成的標準資料列，指定包含標準資料列之唯一識別碼的輸出資料行名稱。 `_key_out` 資料行會對應至標準資料之資料列的 `_key_in` 值。  

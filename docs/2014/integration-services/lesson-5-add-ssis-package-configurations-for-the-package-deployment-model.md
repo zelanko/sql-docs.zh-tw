@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e2d995b06d30157ae46669696e9f8d4095a4646
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362200"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378826"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>第 5 課：加入封裝部署模型的封裝組態
   封裝組態可讓您從開發環境之外設定執行階段屬性和變數。 組態可讓您開發彈性且易於部署和散發的封裝。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會提供下列組態類型：  
@@ -38,16 +38,16 @@ ms.locfileid: "53362200"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1:複製第 4 課套件](lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步驟 1：複製第 4 課套件](lesson-5-1-copying-the-lesson-4-package.md)  
   
--   [步驟 2:啟用和設定封裝組態](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+-   [步驟 2：啟用和設定封裝組態](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [步驟 3:修改 Directory 屬性組態值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [步驟 3：修改 Directory 屬性組態值](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
--   [步驟 4:測試第 5 課的教學課程封裝](lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+-   [步驟 4：測試第 5 課的教學課程封裝](lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
   
--   [步驟 1:複製第 4 課套件](lesson-5-1-copying-the-lesson-4-package.md)  
+-   [步驟 1：複製第 4 課套件](lesson-5-1-copying-the-lesson-4-package.md)  
   
   

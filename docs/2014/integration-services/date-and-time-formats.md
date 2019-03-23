@@ -13,15 +13,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112740"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377506"
 ---
 # <a name="date-and-time-formats"></a>日期和時間格式
   快速剖析提供一組快速、簡單的常式用以剖析資料。 快速剖析可支援下列格式的日期和時間資料類型。  
@@ -33,7 +33,7 @@ ms.locfileid: "48112740"
   
 -   ISO 8601 格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |格式|描述|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|四位數年份、兩位數月份和兩位數天數的基本格式與擴充格式。 在擴充格式中，日期各部份以連字號 (-) 分隔。|  
     |YYYY-MM|降低有效位數的四位數年份和兩位數月份之基本格式與擴充格式。 在擴充格式中，日期各部份以連字號 (-) 分隔。|  
@@ -64,7 +64,7 @@ ms.locfileid: "48112740"
   
 -   ISO 8601 時間格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |格式|描述|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|四位數小時、兩位數分鐘和兩位數秒鐘的基本格式與擴充格式。 在擴充格式中，時間各部份以冒號 (:) 分隔。|  
     |HHMI<br /><br /> HH:MI|兩位數小時和兩位數分鐘之基本截斷格式與擴充截斷格式。 在擴充格式中，時間各部份以冒號 (:) 分隔。|  
@@ -73,7 +73,7 @@ ms.locfileid: "48112740"
   
 -   指定時區的時間格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |格式|描述|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|基本格式及擴充格式，指出要加入至「國際標準時間」(UTC) 以取得本地時間的小時和分鐘數。|  
     |-HH:MI<br /><br /> -HHMI|基本格式及擴充格式，指出要從 UTC 減去以取得本地時間的小時和分鐘數。|  
@@ -91,7 +91,7 @@ ms.locfileid: "48112740"
   
 -   包含小數的時間格式，如下表中所列：  
   
-    |[格式]|描述|  
+    |格式|描述|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n 是介於 0 和 9999999 之間且代表小數時數的值。 方括號表示此值是選擇性的。<br /><br /> 例如，值 12.750 表示 12:45。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n 是介於 0 和 9999999 之間且代表小數分鐘數的值。 方括號表示此值是選擇性的。<br /><br /> 例如，值 1220.500 表示 12:20:30。|  

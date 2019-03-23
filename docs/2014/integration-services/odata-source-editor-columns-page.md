@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a00e3658d64723b0d1e120d95f76ccec4d5a5f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149568"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391536"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 來源編輯器 (資料行頁面)
   使用 [OData 來源編輯器] 對話方塊的 [資料行] 頁面，選取要包含在輸出中的外部 (來源) 資料行，並將其對應到輸出資料行。  
@@ -34,9 +34,9 @@ ms.locfileid: "48149568"
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [OData 來源編輯器&#40;連接頁面&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [OData 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData 來源編輯器 (連接頁面)](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [OData 來源編輯器 (錯誤輸出頁面)](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData 來源](data-flow/odata-source.md)   
- [OData 連線管理員](connection-manager/odata-connection-manager.md)  
+ [OData 連接管理員](connection-manager/odata-connection-manager.md)  
   
   

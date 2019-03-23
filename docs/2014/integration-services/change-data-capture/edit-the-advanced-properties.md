@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 94476576eac6c466a0667af8cf1b5e166eaec941
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f6922172a21ac41e3afe003d5f7307a5424bf13
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804611"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381596"
 ---
 # <a name="edit-the-advanced-properties"></a>編輯進階屬性
   使用 **[進階]** 索引標籤，將特殊屬性加入至 CDC 執行個體。  

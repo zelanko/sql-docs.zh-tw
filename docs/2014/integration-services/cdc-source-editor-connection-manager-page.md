@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff990559adb693ac9e3db1ceb18843978fcfe0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190478"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391486"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>CDC 來源編輯器 (連接管理員頁面)
   使用 [CDC 來源編輯器] 對話方塊的 [連線管理員] 頁面，即可針對 CDC 來源從中讀取變更資料列的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫 (CDC 資料庫) 選取 ADO.NET 連線管理員。 一旦選取 CDC 資料庫之後，您就必須在資料庫中選取擷取的資料表。  
@@ -52,21 +52,21 @@ ms.locfileid: "48190478"
  **CDC 處理模式**  
  選取可有效處理處理需求的處理模式。 可能的選項包括：  
   
--   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前] 值。  
+-   **所有**:傳回不含目前 CDC 範圍中的變更**Before Update**值。  
   
--   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+-   **所有含舊值**:傳回目前 CDC 處理範圍，包括舊值中的變更 (**Before Update**)。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
--   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
+-   **Net**:傳回只有一個變更資料列，每個目前 CDC 處理範圍中修改的來源資料列。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   
--   **淨 (含更新遮罩)**：這種模式與一般的淨模式很相似，但還新增了名稱模式為 **__$\<資料行名稱>\__Changed** 的布林資料行，表示目前變更資料列中的變更資料行。  
+-   **Net 含更新遮罩**:此模式類似於一般的淨模式，但它也加入了名稱模式的布林資料行 **__ $\<資料行名稱 >\__Changed** ，表示在目前的變更資料行變更資料列。  
   
--   **淨 (含合併)**：這種模式與一般的淨模式很相似，但是插入和更新作業會合併成單一合併作業 (UPSERT)。  
+-   **Net 合併**:此模式非常類似於一般的淨模式但是 Insert 和 Update 作業會合併成單一合併作業 (UPSERT)。  
   
 > [!NOTE]  
 >  對於所有淨變更選項而言，來源資料表必須具有主索引鍵或唯一索引。 如果資料表沒有主索引鍵或唯一索引，您就必須使用 [全部] 選項。  
   
  **包含 CDC 狀態的變數**  
- 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱[定義狀態變數](data-flow/define-a-state-variable.md)。  
+ 選取針對目前 CDC 內容維護 CDC 狀態的 SSIS 字串封裝變數。 如需 CDC 狀態變數的詳細資訊，請參閱 [定義狀態變數](data-flow/define-a-state-variable.md)。  
   
  **包含重新處理指標資料行**  
  選取此核取方塊即可建立名為 **__$reprocessing**的特殊輸出資料行。  
@@ -76,7 +76,7 @@ ms.locfileid: "48190478"
  如需詳細資訊，請參閱 [CDC 來源自訂屬性](data-flow/cdc-source-custom-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
- [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [CDC 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

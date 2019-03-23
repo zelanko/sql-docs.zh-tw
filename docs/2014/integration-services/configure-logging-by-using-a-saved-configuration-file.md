@@ -11,15 +11,15 @@ helpviewer_keywords:
 - containers [Integration Services], logs
 - logs [Integration Services], containers
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3c22ca7f44844b434dc74e881830363a79475ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605e9f2635ceef0546f4c8e37f74a04a2d27ece0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146388"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374366"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>使用已儲存的組態檔來設定記錄
   此程序描述如何透過載入先前儲存的記錄組態檔，為封裝中的新容器設定記錄。  
@@ -28,7 +28,7 @@ ms.locfileid: "48146388"
   
 ### <a name="to-configure-logging-for-a-container"></a>若要設定容器的記錄  
   
-1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在 **[SSIS]** 功能表上，按一下 **[記錄]**。  
   

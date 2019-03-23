@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c2748cf548a6a5c60ceab764afb27fff111f3ea1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372360"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391576"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中建立的封裝將儲存到檔案系統。 若要將封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或封裝存放區，您必須儲存該封裝的複本。 如需詳細資訊，請參閱 [儲存封裝的複本](../../2014/integration-services/save-a-copy-of-a-package.md)。  

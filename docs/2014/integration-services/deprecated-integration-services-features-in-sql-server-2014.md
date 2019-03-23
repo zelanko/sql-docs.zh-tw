@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deprecated features [Integration Services]
 - Integration Services, backward compatibility
 ms.assetid: 7e0a28b1-324b-4a0b-862b-aabe476f06e5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cf0f08d4337a8ea8914ea340cf830cbc3b95117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 761d42ba234dceda7cd6689af89e6a3038b901eb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229368"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391096"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>SQL Server 2014 Integration Services 已被取代的功能
   本主題描述已被取代[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]目前的版本中仍然可用的功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  

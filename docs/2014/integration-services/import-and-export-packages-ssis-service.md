@@ -13,15 +13,15 @@ helpviewer_keywords:
 - importing packages
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ba210106a7a4045c3dae43db3590e69a7c2c5ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ff095819fc4bdd985ebd083eb09056aa5259322
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515794"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375296"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>匯入和匯出封裝 (SSIS 服務)
     

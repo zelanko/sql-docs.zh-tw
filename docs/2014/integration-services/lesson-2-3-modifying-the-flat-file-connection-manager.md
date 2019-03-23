@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822102"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389696"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>步驟 3：修改一般檔案連接管理員
   在這項工作中，您將會修改您在第 1 課建立及設定的一般檔案連接管理員。 一開始建立時，已設定一般檔案連接管理員來以靜態方式載入單一檔案。 若要讓一般檔案連線管理員反覆載入檔案，您必須修改連線管理員的 ConnectionString 屬性來接受使用者定義變數 `User:varFileName`，這個變數包含在執行階段要載入的檔案路徑。  
@@ -41,6 +41,6 @@ ms.locfileid: "52822102"
 8.  再按一下 **[確定]** 來關閉 **[屬性運算式編輯器]** 對話方塊。  
   
 ## <a name="next-lesson-task"></a>下一課的工作  
- [步驟 4:測試第 2 課的教學課程封裝](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [步驟 4：測試第 2 課的教學課程封裝](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

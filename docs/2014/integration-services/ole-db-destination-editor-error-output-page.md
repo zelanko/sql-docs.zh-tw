@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176838"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390076"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 目的地編輯器 (錯誤輸出頁面)
   使用 **[OLE DB 目的地編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，來指定錯誤處理選項。  
@@ -37,7 +37,7 @@ ms.locfileid: "48176838"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  未使用。  
@@ -48,13 +48,13 @@ ms.locfileid: "48176838"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **套用**  
+ **Apply**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [OLE DB 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [使用 OLE DB 目的地來載入資料](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

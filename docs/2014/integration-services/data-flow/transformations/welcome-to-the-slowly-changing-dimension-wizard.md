@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.welcome.f1
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92900c365240d2d8de7e68e848ad2e30f652aa30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805060"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392926"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>歡迎使用緩時變維度精靈
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。  

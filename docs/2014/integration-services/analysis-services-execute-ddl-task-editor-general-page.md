@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 272240e73be28bcfe29b21b86d4d7b4e59d99f46
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 1b7a01a2b49900653fb3acba85517315aa32579b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148303"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389595"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services 執行 DDL 工作編輯器 (一般頁面)
   使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [一般] 頁面，即可命名並描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行 DDL 工作。  

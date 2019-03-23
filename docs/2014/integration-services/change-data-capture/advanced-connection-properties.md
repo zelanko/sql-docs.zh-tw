@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66681c42718e2c71e89eb673f30764af670ede73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770800"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379186"
 ---
 # <a name="advanced-connection-properties"></a>進階連接屬性
   使用 **[進階連接屬性]** 對話方塊可在連接字串中加入其他連接參數。  

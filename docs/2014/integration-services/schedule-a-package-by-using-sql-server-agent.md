@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb49a9bcda16472f06611f320436b9bd918d126b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374020"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388096"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server Agent 排程封裝
   下列程序會使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟執行封裝，藉此提供自動化封裝執行的步驟。  
@@ -64,7 +64,7 @@ ms.locfileid: "53374020"
     > [!IMPORTANT]  
     >  如果封裝受到密碼保護，當您按一下 [新增作業步驟] 對話方塊的 [一般] 頁面上的任何索引標籤時 ([封裝] 索引標籤除外)，會需要在顯示的 [封裝密碼] 對話方塊中輸入密碼。 否則， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業將無法執行封裝。  
   
-     **封裝來源**:SSIS 目錄  
+     **套件來源**：SSIS 目錄  
   
     |索引標籤|選項。|  
     |---------|-------------|  
@@ -77,7 +77,7 @@ ms.locfileid: "53374020"
     ||**在錯誤時傾印**:指定在封裝執行期間發生任何錯誤時，是否產生偵錯傾印檔案。<br /><br /> 這些檔案會包含有關封裝執行的資訊，可幫助您針對問題進行疑難排解。<br /><br /> 當您選取此選項，而在執行期間發生錯誤時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會建立 .mdmp 檔 (二進位檔) 和 .tmp 檔 (文字檔)。 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會將檔案儲存在 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾中。|  
     ||**32 位元執行階段**指出是否要在 64 位元版本的 64 位元電腦上使用 32 位元版本的 dtexec 公用程式執行封裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝代理程式。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
   
-     **封裝來源**:SQL Server、SSIS 封裝存放區或檔案系統  
+     **套件來源**：SQL Server、SSIS 封裝存放區或檔案系統  
   
      您可以針對儲存在 SQL Server、SSIS 封裝存放區或檔案系統中的封裝設定的多數選項，都會對應 `dtexec` 命令提示字元公用程式的命令列選項。 如需公用程式和命令列選項的詳細資訊，請參閱 [dtexec 公用程式](packages/dtexec-utility.md)。  
   

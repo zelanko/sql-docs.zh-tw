@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d4731cbc7b6b4a761de3c5d0e3777a028c8a3c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 68aa51facd21ec09be78e6ad0996131a9ee3cc5b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777081"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392816"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>檢閱及產生補充記錄指令碼
   使用 [指令碼] 索引標籤可在設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  

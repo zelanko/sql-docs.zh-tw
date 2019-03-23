@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7117115e461d0e33a3c62100a3e914128003b96
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790350"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376646"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目的地自訂屬性
   DataReader 目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  

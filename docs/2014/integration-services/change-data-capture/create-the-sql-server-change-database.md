@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770970"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391176"
 ---
 # <a name="create-the-sql-server-change-database"></a>建立 SQL Server 變更資料庫
   當您啟動新增執行個體精靈時，隨即開啟 [建立 CDC 資料庫] 頁面。 使用 [建立 CDC 資料庫] 頁面可提供有關新的 CDC 執行個體及建立新的變更資料庫的資訊。  
@@ -37,7 +37,7 @@ ms.locfileid: "52770970"
   
 -   **名稱**：輸入新服務的名稱。 這也會是新的變更資料庫的名稱。  
   
--   **描述**:輸入新的執行個體，以協助您識別它的描述。 這是選擇性的。  
+-   **描述**：輸入新的執行個體，以協助您識別它的描述。 這是選擇性的。  
   
  **SQL Server 變更資料庫**  
  此區段是用來建立資料庫。  

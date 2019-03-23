@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a258c768f46e2310095c6aadc0c57c65cea2bac6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f13aa09f7b424da63348c5363bc6d5077ed9f2c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131138"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380736"
 ---
 # <a name="event-handlers-tab"></a>事件處理常式索引標籤
   使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [事件處理常式] 索引標籤，即可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中建立控制流程。 執行事件處理常式以回應封裝所引發的事件，或回應封裝中的工作或容器所引發生的事件。  
@@ -44,6 +44,6 @@ ms.locfileid: "48131138"
  [Integration Services &#40;SSIS&#41; 事件處理常式](integration-services-ssis-event-handlers.md)   
  [控制流程](control-flow/control-flow.md)   
  [SSIS 設計師](ssis-designer.md)   
- [Integration Services &#40;SSIS&#41;事件處理常式](integration-services-ssis-event-handlers.md)  
+ [Integration Services &#40;SSIS&#41; 事件處理常式](integration-services-ssis-event-handlers.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 887fa745a0f4fab9d7faf716fd7ad26fb3be1fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158468"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389187"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>檢視 Integration Services 服務的事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的事件：  
@@ -65,6 +65,6 @@ ms.locfileid: "48158468"
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Integration Services 服務](../../2014/integration-services/manage-the-integration-services-service.md)   
- [新增資料流程效能計數器的記錄](performance/performance-counters.md)  
+ [加入資料流程效能計數器的記錄檔](performance/performance-counters.md)  
   
   

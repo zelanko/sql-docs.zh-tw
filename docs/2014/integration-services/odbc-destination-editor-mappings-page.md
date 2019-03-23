@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e39bb53ab0333f11d916f24d7dff3a00b78a6dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4237a49fe6c49078bf2ee8f1f1558092f9747ea
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150748"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380746"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目的地編輯器 (對應頁面)
   使用 [ODBC 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  
@@ -40,7 +40,7 @@ ms.locfileid: "48150748"
  檢視所有可用的目的地資料行，包括對應和取消對應的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 目的地編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [ODBC 目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

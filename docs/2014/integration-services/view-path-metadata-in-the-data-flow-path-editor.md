@@ -11,15 +11,15 @@ helpviewer_keywords:
 - metadata [Integration Services]
 - paths [Integration Services], metadata
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b495401e95971848a864b228368c17231bee5e4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122458"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393843"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>在資料流程路徑編輯器中檢視路徑中繼資料
   路徑會連接兩個資料流程元件。 資料流程必須包含至少兩個已連接的資料流程元件，您才能檢視路徑中繼資料。 如需詳細資訊，請參閱 [在資料流程中加入或刪除元件](data-flow/add-or-delete-a-component-in-a-data-flow.md) 和 [連接資料流程中的元件](data-flow/connect-components-in-a-data-flow.md)。  

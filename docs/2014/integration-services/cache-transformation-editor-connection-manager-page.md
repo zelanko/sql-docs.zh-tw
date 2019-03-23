@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91c6b0b4e81f9535ad3aa8313dd9202da388b172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e023624402d965aed6629d42ef97204413432e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183240"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392746"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>快取轉換編輯器 (連接管理員頁面)
   使用 **[快取轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，即可選取現有的快取連接管理員或建立新的快取連接管理員。  
@@ -38,6 +38,6 @@ ms.locfileid: "48183240"
  修改現有的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [快取轉換編輯器&#40;對應頁面&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [快取轉換編輯器 &#40;對應頁面&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

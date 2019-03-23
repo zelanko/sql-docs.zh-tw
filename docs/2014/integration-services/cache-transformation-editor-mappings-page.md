@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af8dd4e4671f808f762d5044fd261047386fe2d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7d38fa3d3e6631f4284f9572f98a0dac1d05e61
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157418"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391156"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>快取轉換編輯器 (對應頁面)
   使用 **[快取轉換編輯器]** 的 **[對應]** 頁面，將 [快取轉換] 轉換中的輸入資料行對應至快取連接管理員中的目的地資料行。  
@@ -48,6 +48,6 @@ ms.locfileid: "48157418"
  檢視每個可用的目的地資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [快取轉換編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [快取轉換編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

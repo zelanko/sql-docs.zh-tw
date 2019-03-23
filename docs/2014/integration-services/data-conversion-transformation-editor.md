@@ -12,21 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129798"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376137"
 ---
 # <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
   使用 [資料轉換編輯器] 對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  
   
 > [!NOTE]  
->  `FastParse`的 「 資料轉換 」 轉換之輸出資料行的屬性不適用於**資料轉換編輯器**，但可以透過設定**進階編輯器**。 如需這個屬性的詳細資訊，請參閱[轉換自訂屬性](data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
+>  `FastParse`的 「 資料轉換 」 轉換之輸出資料行的屬性不適用於**資料轉換編輯器**，但可以透過設定**進階編輯器**。 如需這個屬性的詳細資訊，請參閱 [轉換自訂屬性](data-flow/transformations/transformation-custom-properties.md)的＜資料轉換＞一節。  
   
  若要深入了解資料轉換，請參閱 [資料轉換](data-flow/transformations/data-conversion-transformation.md)。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48129798"
  從可用的輸入資料行清單中，選取要轉換的資料行。 您的選擇會反映在上面所勾選的核取方塊中。  
   
  **輸出別名**  
- 輸入每一個新資料行的別名。 預設值是`Copy of`後面輸入資料行名稱; 不過，您可以選擇任何唯一的、 描述性的名稱。  
+ 輸入每一個新資料行的別名。 預設為 `Copy of`，後面接著輸入資料行的名稱；但是您也可以選擇任何唯一的描述性名稱。  
   
  **資料類型**  
  從清單中選取可用的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  

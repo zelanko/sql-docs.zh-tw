@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.erroroutput.f1
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d788fd54caf4bddfedb0dc8cfdf2946ba9f4a8db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c9d2417c844998547480a2f03f6dcf9409ff7656
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229428"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388086"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>查閱轉換編輯器 (錯誤輸出頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，來指定錯誤處理選項。  
@@ -43,7 +43,7 @@ ms.locfileid: "48229428"
   
  在 **[指定如何處理無相符項目的資料列]** 清單中選取 **[將資料列重新導向無相符結果輸出]** 時，無法使用此選項。 此清單位在 **[查閱轉換編輯器]** 對話方塊的 **[一般]** 頁面上。  
   
- **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定資料截斷發生時要採取的動作：  

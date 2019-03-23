@@ -10,15 +10,15 @@ helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bba57c5ab732c0b1ed4b7441fae80741701c4f7a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0304d4ba3388874fbd2c19001b12094f1df4d351
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371840"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392176"
 ---
 # <a name="saving-a-package-programmatically"></a>以程式設計方式儲存封裝
   在以程式設計方式建立新封裝或是修改現有封裝之後，通常會想要儲存變更。  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2822193b536423e29f0d838ad64dda20664c7f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b86348e6e7fa8331697c4a0aa3b23a494ae54a5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200958"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374756"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>資料分割處理目的地編輯器 (連接管理員頁面)
   使用 **[資料分割處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的連接或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之執行個體的連接。  
@@ -51,7 +51,7 @@ ms.locfileid: "48200958"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料分割處理目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [資料分割處理目的地編輯器&#40;進階頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [資料分割處理目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [資料分割處理目的地編輯器 &#40;進階頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

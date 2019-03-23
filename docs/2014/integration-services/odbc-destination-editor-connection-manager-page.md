@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c778d51d5fb8f8c0598fb8aefb747e41271c815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc651d10df7433bdb0217414f251d16ed6abdf70
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060708"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390866"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目的地編輯器 (連接管理員頁面)
   使用 **[ODBC 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可選取目的地的 ODBC 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視表。  
@@ -49,9 +49,9 @@ ms.locfileid: "48060708"
 |選項|描述|  
 |------------|-----------------|  
 |資料表名稱 - 批次|若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以使用下列選項：|  
-||**資料表或檢視的名稱**：從清單中選取可用的資料表或檢視表。<br /><br /> 此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (\*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。<br /><br /> **批次大小**：輸入大量載入的批次大小。 這是當做批次載入的資料列數目。|  
+||**資料表或檢視表的名稱**:從清單中選取可用的資料表或檢視。<br /><br /> 此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (\*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。<br /><br /> **批次大小**:輸入大量載入的批次大小。 這是當做批次載入的資料列數目。|  
 |資料表名稱 - 逐列|若要將 ODBC 目的地設定成插入每個資料列至目的地資料表 (一次一個)，請選取此選項。 當您選取此選項時，可以使用下列選項：|  
-||**資料表或檢視的名稱**：從清單的資料庫中選取可用的資料表或檢視表。<br /><br /> 此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。|  
+||**資料表或檢視表的名稱**:從清單中的資料庫中，選取可用的資料表或檢視。<br /><br /> 此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。|  
   
 ### <a name="preview"></a>預覽  
  按一下 **[預覽]** ，最多可檢視您所選取之資料表的 200 個資料列。  
@@ -59,6 +59,6 @@ ms.locfileid: "48060708"
 ## <a name="see-also"></a>另請參閱  
  [ODBC 目的地自訂屬性](data-flow/odbc-destination-custom-properties.md)   
  [ODBC 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
- [ODBC 目的地編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [ODBC 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e02452c5d0b5692040fd6c076c50704b348c769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292d872d294f81c6dac19e64af9d6a08710230b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119350"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374776"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>匯出資料行轉換編輯器 (錯誤輸出頁面)
   使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可指定如何處理錯誤。  
@@ -46,11 +46,11 @@ ms.locfileid: "48119350"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **套用**  
+ **Apply**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [匯出資料行轉換編輯器&#40;資料行頁面&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [匯出資料行轉換編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

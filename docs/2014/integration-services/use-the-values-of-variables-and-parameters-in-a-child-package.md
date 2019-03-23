@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055630"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374957"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子封裝中使用變數和參數的值
   此程序描述如何建立使用父變數組態類型的封裝組態。 此組態類型可讓從父封裝執行的子封裝存取父變數。  
@@ -90,11 +90,11 @@ ms.locfileid: "48055630"
   
     -   選取 [組態位置儲存在環境變數中]，然後在 [環境變數清單] 中選取包含變數名稱的環境變數。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 [選取目標屬性] 頁面上，依序展開 [變數] 節點及要設定之變數的 [屬性] 節點，然後按一下組態所要設定的屬性。  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 10. (選擇性) 在 [正在完成精靈] 頁面上，修改組態的預設名稱並檢閱組態資訊。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48055630"
 ## <a name="see-also"></a>另請參閱  
  [封裝組態](../../2014/integration-services/package-configurations.md)   
  [建立封裝組態](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)   
- [在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
+ [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
+ [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)  
   
   

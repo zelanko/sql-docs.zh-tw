@@ -12,15 +12,15 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069654"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379629"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>在執行 SQL 工作中將結果集對應至變數
   此主題描述如何在執行 SQL 工作中，建立結果集與變數之間的對應。 將結果集對應至變數後，封裝中的其他元素便可使用該結果集。 例如，指令碼工作中的指令碼可以讀取變數，然後使用結果集中的值，或是 XML 來源可以使用儲存在變數中的結果集。 如果結果集由父封裝產生，則可以藉由將結果集對應至父封裝中的變數，然後在子封裝中建立用來儲存父變數值的父封裝變數組態，以便讓「執行封裝」工作所呼叫的子封裝可以使用結果集。  
@@ -67,6 +67,6 @@ ms.locfileid: "48069654"
  [封裝組態](../../2014/integration-services/package-configurations.md)   
  [建立封裝組態](../../2014/integration-services/create-package-configurations.md)   
  [在子封裝中使用變數和參數的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)  
+ [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)  
   
   

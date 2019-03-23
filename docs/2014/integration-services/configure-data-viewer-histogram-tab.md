@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7db265d2f7c3e2de1c13646323f2698b7b3299a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2db75092ee2504fbd8f36a4bdf8f8e399f4841d8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087128"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392988"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>設定資料檢視器 (長條圖索引標籤)
   使用 **[設定資料檢視器]** 對話方塊的 **[長條圖]** 索引標籤，即可指定要顯示的資料行。 長條圖會將來自數值資料行的資料值顯示為數值分佈。 圖表只會反映一個緩衝區的內容。  

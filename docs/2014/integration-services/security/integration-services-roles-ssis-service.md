@@ -15,15 +15,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c6f7ef38c779b07b9cbeffc2b9300360620e350
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792867"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393026"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含三個固定的資料庫層級角色中， `db_ssisadmin`， **db_ssisltduser**，以及**db_ssisoperator**，用於控制封裝的存取權。 只能在儲存至封裝上實作角色`msdb`資料庫中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將角色指派給封裝。 角色指派會儲存到`msdb`資料庫。  

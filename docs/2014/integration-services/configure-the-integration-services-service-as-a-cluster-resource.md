@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fc6d8cfe6d77bd773317d2eae2ac98a9e200c70a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408959"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376516"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>將 Integration Services 服務設定為叢集資源
   本節針對認為將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源的優點多於缺點的客戶，提供必要的設定指示。 不過， [!INCLUDE[msCoName](../includes/msconame-md.md)] 並不建議將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源。  
@@ -79,15 +79,15 @@ ms.locfileid: "52408959"
   
 4.  在 [檔案] 功能表上，指向 [開新檔案]，然後按一下 [資源]。  
   
-5.  在 [資源精靈] 的 [新資源] 頁面上鍵入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按 [下一步] 。  
+5.  在 [資源精靈] 的 [新資源] 頁面上鍵入名稱，然後選取 [一般服務] 作為 [服務類型]。 請不要變更 [群組] 的值。 按一下 [下一步] 。  
   
-6.  在 [可能的擁有者] 頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按 [下一步] 。  
+6.  在 [可能的擁有者] 頁面中，加入或移除作為資源之可能擁有者的叢集節點。 按一下 [下一步] 。  
   
 7.  若要在 [相依性] 頁面上加入相依性，請選取 [可用的資源] 之下的資源，然後按一下 [加入]。 在容錯移轉時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和儲存 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的共用磁碟會在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連線之前重新連線。 選取相依性之後，請按一下 [下一步]。  
   
      如需詳細資訊，請參閱[加入 SQL Server 資源的相依性](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md)。  
   
-8.  在 [一般服務參數] 頁面上，輸入 **MsDtsServer** 作為服務的名稱。 按 [下一步] 。  
+8.  在 [一般服務參數] 頁面上，輸入 **MsDtsServer** 作為服務的名稱。 按一下 [下一步] 。  
   
 9. 在 [機碼複寫] 頁面上，按一下 [加入] 以加入用來識別 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務組態檔位置的登錄機碼。 此檔案必須位在與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務相同的資源群組中的共用磁碟上。  
   

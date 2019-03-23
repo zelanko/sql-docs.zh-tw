@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff63c6568f0a34a43caf6765e7e01ce8022e10f0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504522"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382256"
 ---
 # <a name="execute-package-task-editor"></a>執行封裝工作編輯器
   使用「執行封裝工作編輯器」設定「執行封裝」工作。 「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -91,7 +91,7 @@ ms.locfileid: "52504522"
  **[連接]**  
  在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連線…>] 建立新的連線管理員。  
   
- **相關的主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)，[設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相關主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)，[設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  輸入子封裝的名稱，或按一下省略符號 ([...])，然後找出該封裝。  
@@ -100,7 +100,7 @@ ms.locfileid: "52504522"
  **[連接]**  
  在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
- **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  顯示封裝名稱。  

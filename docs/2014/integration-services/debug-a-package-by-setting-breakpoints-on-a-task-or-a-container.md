@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff0f1ef3f7baff1c39b3d338f47eb5eddde286e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c78fb92078c604d881f18ea3472e23619771b49
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098178"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374616"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>針對工作或容器設定中斷點以偵錯封裝
   此程序描述如何在封裝、工作、「For 迴圈」容器、「Foreach 迴圈」容器或「時序」容器中設定中斷點。  
@@ -47,8 +47,8 @@ ms.locfileid: "48098178"
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解封裝開發的工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [在指令碼工作和指令碼元件中設定中斷點，偵錯指令碼](data-flow/transformations/script-component.md)   
- [編碼和偵錯指令碼工作](control-flow/script-task.md)   
- [編碼和偵錯指令碼元件](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
+ [在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼](data-flow/transformations/script-component.md)   
+ [指令碼工作的程式碼撰寫和偵錯](control-flow/script-task.md)   
+ [指令碼元件的程式碼撰寫和偵錯](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

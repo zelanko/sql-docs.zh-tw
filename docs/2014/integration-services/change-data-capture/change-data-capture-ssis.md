@@ -10,15 +10,15 @@ helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a65ec13f342dc890511e7b99258a41456cd989b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 391bf9204beeb6222a6e736125e5630bd5b1565e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362390"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375877"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。  
@@ -40,7 +40,7 @@ ms.locfileid: "53362390"
   
  如上圖所示，建立可執行累加式變更資料載入的封裝包含下列步驟：  
   
- **步驟 1:設計控制流程**  
+ **步驟 1：設計控制流程**  
  在封裝的控制流程中，必須定義下列工作：  
   
 -   針對您要擷取的來源資料，計算變更間隔的開始和結束 `datetime` 值。  
@@ -61,14 +61,14 @@ ms.locfileid: "53362390"
   
      **如需詳細資訊：＜＞**[準備查詢變更資料](prepare-to-query-for-the-change-data.md)  
   
- **步驟 2:設定查詢變更資料**  
+ **步驟 2：設定異動資料的查詢**  
  建立將會查詢資料的資料表值函數。  
   
  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來開發及儲存查詢。  
   
  **如需詳細資訊：＜＞**[擷取與了解變更資料](retrieve-and-understand-the-change-data.md)  
   
- **步驟 3:設計資料流程**  
+ **步驟 3：步驟 3：設計資料流程**  
  在封裝的資料流程中，必須定義下列工作：  
   
 -   從變更資料表擷取變更資料。  

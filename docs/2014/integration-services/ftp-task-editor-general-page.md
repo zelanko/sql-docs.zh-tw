@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b64b1f8511c9d079118881a9862eee11fdb636d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054198"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388736"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  
@@ -34,7 +34,7 @@ ms.locfileid: "48054198"
 > [!IMPORTANT]  
 >  FTP 連接管理員僅支援匿名驗證和基本驗證， 而不支援 Windows 驗證。  
   
- **相關主題**： [FTP 連線管理員](connection-manager/ftp-connection-manager.md)、 [FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **相關主題**：[FTP 連線管理員](connection-manager/ftp-connection-manager.md)、[FTP 連線管理員編輯器](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  指出當 FTP 作業失敗時，FTP 工作是否結束。  
@@ -50,7 +50,7 @@ ms.locfileid: "48054198"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP 工作編輯器&#40;檔案傳輸頁面&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [FTP 工作編輯器 &#40;檔案傳輸頁面&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   
   

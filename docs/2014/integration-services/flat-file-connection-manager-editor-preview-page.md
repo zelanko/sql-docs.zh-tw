@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0368fefac4c927ee1f1483ba433feb13b3c1dc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125178"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377146"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>一般檔案連接管理員編輯器 (預覽頁面)
   使用 [一般檔案連線管理員編輯器] 對話方塊的 [預覽] 節點，即可以表格式格式來檢視來源檔案的內容。  
@@ -45,8 +45,8 @@ ms.locfileid: "48125178"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案連接管理員編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
- [一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [一般檔案連線管理員編輯器 &#40;[進階] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ [一般檔案連線管理員編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [一般檔案連線管理員編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [一般檔案連線管理員編輯器 &#40;進階頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

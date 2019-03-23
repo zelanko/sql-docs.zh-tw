@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804843"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390216"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在執行階段修改 OData 來源查詢
   您可以在執行階段修改 OData 來源查詢，修改的方式是將運算式加入資料流程工作的 **[OData Source].[Query]** 屬性。  

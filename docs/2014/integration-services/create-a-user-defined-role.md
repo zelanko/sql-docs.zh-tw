@@ -8,27 +8,27 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac839255a5c065d312852de582607de4ae0c2949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 255d805d9fa7a36203f6791da3b01d93174d4268
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199184"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392157"
 ---
 # <a name="create-a-user-defined-role"></a>建立使用者定義角色
     
 ### <a name="to-create-a-user-defined-role"></a>建立使用者定義角色  
   
-1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+1.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
 2.  在 **[檢視]** 功能表上，按一下 **[物件總管]** 。  
   
 3.  在 [物件總管] 工具列上，按一下 **[連接]**，再按一下 **[Database Engine]**。  
   
-4.  在 [連接到伺服器] 對話方塊中，提供伺服器名稱並選取驗證模式。 您可以使用句號 （.）、 (local) 或`localhost`表示本機伺服器。  
+4.  在 [連接到伺服器] 對話方塊中，提供伺服器名稱並選取驗證模式。 您可以使用句號 (.)、(local) 或 `localhost` 表示本機伺服器。  
   
 5.  按一下 **[連接]**。  
   

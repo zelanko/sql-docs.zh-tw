@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203968"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390460"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 來源編輯器 (連接頁面)
   使用 **[OData 來源編輯器]** 對話方塊的 **[連接]** 頁面，選取 OData 來源的 OData 連接管理員。 此頁面也可讓您指定集合或資源路徑及任何查詢選項，以指示需要從 OData 來源擷取哪些資料。 若要深入了解 OData 來源，請參閱＜ [OData Source](data-flow/odata-source.md)＞。  
@@ -55,11 +55,11 @@ ms.locfileid: "48203968"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>使用集合或資源路徑 = 資源路徑  
  **Resource path**  
- 輸入資源路徑。 例如：員工  
+ 輸入資源路徑。 例如：Employees  
   
 ## <a name="see-also"></a>另請參閱  
- [OData 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData 連線管理員](connection-manager/odata-connection-manager.md)  
+ [OData 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

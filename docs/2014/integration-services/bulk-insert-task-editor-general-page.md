@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eff4034dfb3f7bf7120ec5976a398427d0cd207
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12f4cd15127d1b4adef4439d7d6081d8bcd15a97
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152768"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392647"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>大量插入工作編輯器 (一般頁面)
   使用 **[大量插入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述大量插入工作。  
@@ -39,8 +39,8 @@ ms.locfileid: "48152768"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [大量插入工作編輯器&#40;連接頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [大量插入工作編輯器&#40;選項頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [大量插入工作編輯器 &#40;連接頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [大量插入工作編輯器 &#40;選項頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [控制流程](control-flow/control-flow.md)  

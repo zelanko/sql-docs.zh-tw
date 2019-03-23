@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185328"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385036"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
   使用 [詞彙擷取轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
@@ -41,7 +41,7 @@ ms.locfileid: "48185328"
  指定分數是詞彙的頻率。  
   
  **TFIDF**  
- 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為︰詞彙 T 的 TFIDF = (T 的頻率) * log((輸入中的資料列數) / (具有 T 的資料列數))  
+ 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是詞彙頻率 」 和 「 反向文件頻率，定義為乘積：詞彙 T 的 TFIDF = （T 的頻率） * log ((輸入中的 #rows) / （#rows T）)  
   
  **頻率臨界值**  
  指定擷取單字或片語前，該單字或片語必須出現的次數。 預設值為 2。  
@@ -57,8 +57,8 @@ ms.locfileid: "48185328"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [詞彙擷取轉換編輯器&#40;詞彙擷取索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [詞彙擷取轉換編輯器&#40;排除索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [詞彙擷取轉換編輯器 &#40;排除索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [詞彙查閱轉換](data-flow/transformations/lookup-transformation.md)  
   
   

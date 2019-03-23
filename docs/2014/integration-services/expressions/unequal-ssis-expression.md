@@ -10,15 +10,15 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7df4340e2dc54a2c30b1c5693efeda26ecc9b3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785520"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378846"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (不等於) (SSIS 運算式)
   執行比較來決定兩個資料類型相容的運算式是否不相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  

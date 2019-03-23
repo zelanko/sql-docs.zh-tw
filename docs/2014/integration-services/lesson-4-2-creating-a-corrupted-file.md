@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366810"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393346"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀的檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
@@ -61,6 +61,6 @@ ms.locfileid: "53366810"
     >  數字 27 是元件的識別碼。 當您建立資料流程時會指派此值，您封裝中的值可能不同。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 3:加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
+ [步驟 3：加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
   
   

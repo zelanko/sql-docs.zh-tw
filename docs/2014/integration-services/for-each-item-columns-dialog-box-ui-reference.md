@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - For Each Item Columns dialog box
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 432d348d2c224d3be1f24966da5e3793e7cc5db8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6e1b3a7b0be7e158ff2594a9d629cd82aaff95e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093848"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391366"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>For Each 項目資料行對話方塊 UI 參考
   使用 [For Each 項目資料行] 對話方塊，即可定義項目中 Foreach 項目列舉值會列舉的資料行。  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54a2f38cee150a545562ca976ff83a2806b0b60a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 559347a0e092797732a4f3bffe424aac7dfe360f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084468"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377067"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>傳送登入工作編輯器 (一般頁面)
   使用 **[傳送登入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送登入工作。 如需這項工作的詳細資訊，請參閱 [傳送登入工作](control-flow/transfer-logins-task.md)。  

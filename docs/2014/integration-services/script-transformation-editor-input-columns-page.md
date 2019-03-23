@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d467606c562b0fd9b5f1176ecbe14322aa634a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b71f12c9f36f74799c47538b30a058b529fdfa6d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164888"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391706"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
   使用 [指令碼轉換編輯器] 對話方塊的 [輸入資料行] 頁面，對輸入資料行設定屬性。  
@@ -48,10 +48,10 @@ ms.locfileid: "48164888"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [選取 指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
- [指令碼轉換編輯器&#40;輸入及輸出頁面&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [指令碼轉換編輯器&#40;指令碼 頁面&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [指令碼轉換編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
- [其他指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [選取指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
+ [指令碼轉換編輯器 (輸入及輸出頁面)](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [指令碼轉換編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [額外的指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

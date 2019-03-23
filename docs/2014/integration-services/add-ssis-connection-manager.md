@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add SSIS Connection Manager
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f0e7717aeee978626718ba9c2969b5097772b95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168998"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377256"
 ---
 # <a name="add-ssis-connection-manager"></a>加入 SSIS 連接管理員
   使用 [加入 SSIS 連線管理員] 對話方塊來選取要加入封裝的連接類型。  

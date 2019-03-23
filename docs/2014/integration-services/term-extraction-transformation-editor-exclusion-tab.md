@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a96d82cf2296fa8b0775e4fac025ebb53577344
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6292fa7798c9f9d76868b4230317eb99a1f8b3d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201568"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392736"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[排除]** 索引標籤，可設定排除資料表的連接，並指定包含排除詞彙的資料行。  
@@ -48,8 +48,8 @@ ms.locfileid: "48201568"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [詞彙擷取轉換編輯器&#40;詞彙擷取索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [詞彙擷取轉換編輯器&#40;進階索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [詞彙擷取轉換編輯器 &#40;詞彙擷取索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [詞彙擷取轉換編輯器 &#40;進階索引標籤&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [詞彙查閱轉換](data-flow/transformations/lookup-transformation.md)  
   
   

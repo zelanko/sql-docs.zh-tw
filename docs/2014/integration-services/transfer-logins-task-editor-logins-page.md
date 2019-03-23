@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 877d7d8e4831a785586680ce57d21975443da645
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 131c74b2637fb0181e55838b1430fb0b33a14d3f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070048"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388536"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>傳送登入工作編輯器 (登入頁面)
   使用 [傳送登入工作編輯器] 對話方塊的 [登入] 頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。 如需這項工作的詳細資訊，請參閱[傳送登入工作](control-flow/transfer-logins-task.md)。  
@@ -67,7 +67,7 @@ ms.locfileid: "48070048"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送登入工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送登入工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [SMO 連接管理員](connection-manager/smo-connection-manager.md)   
  [增強式密碼](../relational-databases/security/strong-passwords.md)   

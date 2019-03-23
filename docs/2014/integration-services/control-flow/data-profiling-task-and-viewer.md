@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367090"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379228"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
   「資料分析」工作提供擷取、轉換和載入資料之處理內部的資料分析功能。 您可以使用「資料分析」工作來獲得下列好處：  
@@ -55,12 +55,12 @@ ms.locfileid: "53367090"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services 與資料分析  
  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料分析程序由下列步驟所組成：  
   
- **步驟 1:設定資料分析工作**  
+ **步驟 1：設定資料分析工作**  
  「資料分析」工作是一種工作，可用於設定您要計算的設定檔。 然後，您可以執行包含「資料分析」工作的封裝以計算設定檔。 此工作會將設定檔輸出以 XML 格式儲存到檔案或封裝變數。  
   
  **如需詳細資訊：＜＞**[資料分析工作的設定](data-profiling-task.md)  
   
- **步驟 2:檢閱資料分析工作計算的設定檔**  
+ **步驟 2：檢閱資料分析工作計算的設定檔**  
  若要檢視「資料分析」工作計算的資料設定檔，您可以將輸出傳送到檔案，然後使用「資料設定檔檢視器」即可。 這個檢視器是一個獨立的公用程式，可以用摘要和詳細資料格式，顯示具有選擇性向下鑽研能力的設定檔輸出。  
   
  **如需詳細資訊：＜＞**[資料設定檔檢視器](data-profile-viewer.md)  

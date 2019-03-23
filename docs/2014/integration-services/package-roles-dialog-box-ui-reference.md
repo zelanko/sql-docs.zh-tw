@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Roles dialog box
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d45ea589ee41aa5895acf0ee1c475aea19bbaeed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225208"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374576"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>封裝角色對話方塊 UI 參考
   使用 [封裝角色] 對話方塊 (可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用)，即可指定擁有封裝之讀取權限的資料庫層級角色以及擁有封裝之寫入權限的資料庫層級角色。 資料庫層級角色僅適用於儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 資料庫中的封裝。  
@@ -43,6 +43,6 @@ ms.locfileid: "48225208"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫層級角色](../relational-databases/security/authentication-access/database-level-roles.md)   
- [安全性概觀&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [安全性概觀 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

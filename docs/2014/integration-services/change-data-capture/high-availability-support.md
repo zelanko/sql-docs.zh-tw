@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6788dd8feff277dae5eefca659d48c301c71909a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d948a9edfafdbf39bd8ee5c512fb77814cb7adf7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756711"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394486"
 ---
 # <a name="high-availability-support"></a>高可用性支援
   Oracle CDC 服務是專為高可用性所設計。 以下功能會提供部分高可用性支援：  

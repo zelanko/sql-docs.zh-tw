@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377620"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381376"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
   封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
@@ -117,6 +117,6 @@ ms.locfileid: "53377620"
   
 -   [實作與 Microsoft Dynamics Mobile 搭配運作的 SQL Server Integration Services](https://msdn.microsoft.com/library/cc563950)  
   
--   [操作說明：適用於 Microsoft Dynamics AX 設定 SQL Server Integration Services 封裝](https://msdn.microsoft.com/library/bb986852)  
+-   [如何：適用於 Microsoft Dynamics AX 設定 SQL Server Integration Services 封裝](https://msdn.microsoft.com/library/bb986852)  
   
   

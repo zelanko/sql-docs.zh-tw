@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 027cea0f06d9a673c7c5216c548e907b6326544d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767451"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392256"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>步驟 3：測試第 6 課封裝
   在執行階段，您的封裝會從 VarFolderName 參數取得目錄屬性的值。  
@@ -40,6 +40,6 @@ ms.locfileid: "52767451"
 2.  在封裝完成執行之後，在 [偵錯] 功能表上，按一下 [停止偵錯]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 4:部署第 6 課封裝](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [步驟 4：部署第 6 課封裝](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

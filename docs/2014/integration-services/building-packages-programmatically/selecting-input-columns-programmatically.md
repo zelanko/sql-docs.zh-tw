@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d0a7316f78bcc26bfd8b939ab555519780af25df
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375660"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390907"
 ---
 # <a name="selecting-input-columns-programmatically"></a>以程式設計方式選取輸入資料行
   在您以程式設計方式連接元件之後，請從您要轉換或是傳遞到下游元件的上游元件中選取資料行。 如果您不為元件選取輸入資料行，元件不會從資料流程工作收到任何資料列。  

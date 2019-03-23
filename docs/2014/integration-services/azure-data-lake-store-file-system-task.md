@@ -11,15 +11,15 @@ f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSTASK.F1
 - SQL11.DTS.DESIGNER.AFPADLSTASK.F1
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1b3fc1317e4454008a628c03e189e690bfeb21d
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: aeabdcfa1fd36adf9bd4291623c56fbfecf0520e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206274"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390245"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 檔案系統工作
 

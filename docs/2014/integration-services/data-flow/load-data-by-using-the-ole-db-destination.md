@@ -11,15 +11,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 865ff640cb64fe212afa5ece8bbdaa7f0be4a14c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749503"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376716"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
   若要加入及設定 OLE DB 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  

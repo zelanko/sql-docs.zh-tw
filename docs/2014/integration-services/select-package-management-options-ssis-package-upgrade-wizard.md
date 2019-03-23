@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06cdfdf884dbe4cf63feb441ef5f7665868fc41b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1f80374c24ee4db772e30eee389124feafcc79b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138818"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382267"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>選取封裝管理選項 (SSIS 封裝升級精靈)
   使用 [選取封裝管理選項] 頁面，指定用來升級封裝的選項。  
@@ -76,6 +76,6 @@ ms.locfileid: "48138818"
  如需詳細資訊，請參閱 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [升級 Integration Services 套件](install-windows/upgrade-integration-services-packages.md)  
+ [升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages.md)  
   
   

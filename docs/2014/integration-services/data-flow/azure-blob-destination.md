@@ -10,18 +10,18 @@ f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
 - sql11.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f114f39d76a5ec764e9bab814123a668a522dbe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756860"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391728"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 目的地
-  [Azure Blob 目的地] 元件可讓 SSIS 封裝將資料寫入 Azure Blob。 支援的檔案格式如下：CSV 和 AVRO。 上面**Azure Blob 目的地**到資料流程設計師，然後按兩下以查看編輯器)。  
+  [Azure Blob 目的地] 元件可讓 SSIS 封裝將資料寫入 Azure Blob。 支援的檔案格式：CSV 和 AVRO。 上面**Azure Blob 目的地**到資料流程設計師，然後按兩下以查看編輯器)。  
   
 1.  針對 [Azure 儲存體連線管理員] 欄位，請指定現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員。  
   

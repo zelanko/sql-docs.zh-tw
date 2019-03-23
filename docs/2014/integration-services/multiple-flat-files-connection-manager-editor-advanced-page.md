@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83e6aae7d4383440f148a8de1480cb8f1658e89c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4e67507aa23e29f7a0f6d675538f254fbf41f76d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542740"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391729"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多個一般檔案連接管理員編輯器 (進階頁面)
   使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [進階] 頁面，來設定各種屬性，例如一般檔案連線管理員所連接的文字檔中，每個資料行的資料類型和分隔符號。  

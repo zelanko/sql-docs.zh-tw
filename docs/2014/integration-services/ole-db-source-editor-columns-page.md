@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 915479d218e8ecee950609a5431bdb0331242fcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c68996ab5c4aa204a8aa1139253dd946e558bba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125494"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390826"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>OLE DB 來源編輯器 (資料行頁面)
   使用 [OLE DB 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -39,9 +39,9 @@ ms.locfileid: "48125494"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [OLE DB 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [使用 OLE DB 來源擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)  
+ [OLE DB 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [使用 OLE DB 來源來擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [OLE DB 連接管理員](connection-manager/ole-db-connection-manager.md)  
   
   

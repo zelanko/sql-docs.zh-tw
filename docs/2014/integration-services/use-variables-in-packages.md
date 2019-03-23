@@ -12,21 +12,21 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145598"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388376"
 ---
 # <a name="use-variables-in-packages"></a>在封裝中使用變數
   變數是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝之有用的彈性附加項目，可提供在封裝的物件間和父子封裝之間的通訊。 變數還可用於運算式和指令碼。  
   
 ## <a name="user-defined-variables-and-system-variables"></a>使用者自訂變數和系統變數  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的系統變數，並支援使用者定義的變數。 建立新封裝時，會將容器或工作加入封裝，或建立事件處理常式， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括容器的系統變數集。 系統變數包含關於封裝、容器、工作或事件處理常式的有用資訊。 例如，在執行階段， **MachineName** 系統變數包含在其上執行封裝的電腦名稱和封裝執行開始時間 **StartTime** 。 系統變數是唯讀的。 如需詳細資訊，請參閱 [系統變數](system-variables.md)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供系統變數，並支援使用者自訂變數。 建立新封裝時，會將容器或工作加入封裝，或建立事件處理常式， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括容器的系統變數集。 系統變數包含關於封裝、容器、工作或事件處理常式的有用資訊。 例如，在執行階段， **MachineName** 系統變數包含在其上執行封裝的電腦名稱和封裝執行開始時間 **StartTime** 。 系統變數是唯讀的。 如需詳細資訊，請參閱 [系統變數](system-variables.md)。  
   
  您可以建立使用者自訂變數，然後將其用於封裝。 在 [!INCLUDE[ssIS](../includes/ssis-md.md)]中可以多種方式使用使用者自訂變數：在指令碼中、在優先順序條件約束、「For 迴圈」容器、「衍生的資料行」轉換和「條件式分割」轉換所使用的運算式中，以及在更新屬性值的屬性運算式中。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48145598"
   
  **參數和傳回碼** ：提供值給輸入參數，或儲存輸出參數和傳回碼的值。 您可以將變數對應到參數和傳回值來完成這個動作。 例如，如果您將 `varProductId` 變數設為 23 並執行 `SELECT * from Production.Product WHERE ProductID = ?`SQL 陳述式，查詢就會擷取 `ProductID` 為 23 的產品。 如需詳細資訊，請參閱 [執行 SQL 工作](control-flow/execute-sql-task.md) 和 [執行 SQL 工作中的參數和傳回碼](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)。  
   
- **For 迴圈運算式** ：提供要在「For 迴圈」的初始化、評估和指派運算式中使用的值。 例如，如果 `varCount` 變數為 2 且 `varMaxCount` 為 10，初始化運算式為 `@varCount`，評估運算式為  `@varCount < @varMaxCount`且指派運算式為 `@varCount =@varCount +1`，則迴圈就會重複 8 次。 如需詳細資訊，請參閱 [For 迴圈容器](control-flow/for-loop-container.md)。  
+ **For 迴圈運算式** ：提供要在「For 迴圈」的初始化、評估和指派運算式中使用的值。 例如，如果 `varCount` 變數為 2 且 `varMaxCount` 為 10，初始化運算式為 `@varCount`，評估運算式為  `@varCount < @varMaxCount`且指派運算式為 `@varCount =@varCount +1`，則迴圈就會重複 8 次。 如需詳細資訊，請參閱 [For 迴圈容器](control-flow/for-loop-container.md)為止。  
   
  **父封裝變數組態** ：將值從父封裝傳遞到子封裝。 子封裝可以使用父封裝變數組態存取父封裝中的變數。 例如，如果子封裝必須使用和父封裝相同的日期，子封裝就可以定義父封裝變數組態，指定由父封裝中之 GETDATE 函數設定的變數。 如需詳細資訊，請參閱 [執行封裝工作](control-flow/execute-package-task.md) 和 [封裝組態](../../2014/integration-services/package-configurations.md)。  
   

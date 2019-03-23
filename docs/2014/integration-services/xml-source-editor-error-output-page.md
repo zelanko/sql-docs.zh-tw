@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3126888e0e2d64d2091ace450c276881c408259b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8369b2cb34c6355d9957e2a41ed382b25b11f537
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111740"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389526"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 來源編輯器 (錯誤輸出頁面)
   使用 **[XML 來源編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48111740"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -48,13 +48,13 @@ ms.locfileid: "48111740"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **套用**  
+ **Apply**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [XML 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [XML 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [XML 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [XML 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [使用 XML 來源擷取資料](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

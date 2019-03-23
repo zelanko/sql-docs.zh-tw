@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62cd98e586e5bd57f846b0203aa41c6a3efd50bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 543ab9724f44e5db1f4532eeadcce79b36de52b5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530630"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374496"
 ---
 # <a name="execute-process-task-editor-process-page"></a>執行處理工作編輯器 (處理頁面)
   使用 **[執行處理工作編輯器]** 對話方塊的 **[處理]** 頁面，即可設定執行處理的選項。 這些選項包括要執行的可執行檔、其位置、命令提示字元引數，以及提供輸入和擷取輸出的變數。  
@@ -43,7 +43,7 @@ ms.locfileid: "52530630"
  **StandardInputVariable**  
  選取變數來提供處理序的輸入，或按一下 [\<新增變數...>] 建立新的變數：  
   
- **相關的主題：**[新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[新增變數](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
  選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>] 建立新的變數。  

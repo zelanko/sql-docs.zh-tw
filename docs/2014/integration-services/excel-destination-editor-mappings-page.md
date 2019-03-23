@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff6e51c15678d50b6ebb39614441419dd13ad3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39c766acdd171db17c2b3f5ba0623b57a36ca145
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047569"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387796"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Excel 目的地編輯器 (對應頁面)
   使用 **[Excel 目的地編輯器]** 對話方塊的 **[對應]** 頁面，將輸入資料行對應至目的地資料行。  
@@ -42,8 +42,8 @@ ms.locfileid: "48047569"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Excel 目的地編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Excel 目的地編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Excel 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](control-flow/foreach-loop-container.md)  
   
   

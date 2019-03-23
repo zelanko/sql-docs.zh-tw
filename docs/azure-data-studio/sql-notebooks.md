@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: ceaf172fc36ee92d15be326d4356061ea1674df1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161988"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392716"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -85,7 +85,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 |核心|描述
 |:-----|:-----
-| SQL Kernel | 撰寫針對您的 SQL Server 的 SQL 程式碼。
+| SQL Kernel | 撰寫 SQL 程式碼在您的關聯式資料庫為目標。
 |PySpark3 和 PySpark 核心| 撰寫使用從叢集的 Spark 計算的 Python 程式碼。
 |Spark 核心|撰寫使用 Spark 的計算，從叢集的 Scala 和 R 程式碼。
 |Python Kernel|撰寫適用於本機開發的 Python 程式碼。

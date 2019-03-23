@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f36c00689d372f407fd4f1d062a937be390f5f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a47ce85dbd2979fe5ff9c1a048c60d0720ae32f2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121058"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377106"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>一般檔案來源編輯器 (錯誤輸出頁面)
   使用 [一般檔案來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48121058"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -48,13 +48,13 @@ ms.locfileid: "48121058"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **套用**  
+ **Apply**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [一般檔案來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [一般檔案來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [一般檔案來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [一般檔案連線管理員](connection-manager/file-connection-manager.md)  
   
   

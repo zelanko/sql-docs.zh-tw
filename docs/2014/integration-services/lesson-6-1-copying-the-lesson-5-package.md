@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357848"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389586"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的套件
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
@@ -63,6 +63,6 @@ ms.locfileid: "53357848"
      在複製第 5 課封裝之後，如果您目前在方案中已經有之前課程的封裝，請以滑鼠右鍵按一下 1-5 課的每一個封裝，並按一下 [從專案移除]。 當您完成時，您的方案中應該只有 Lesson 6.dtsx。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2:將專案轉換為專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [步驟 2：將專案轉換為專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

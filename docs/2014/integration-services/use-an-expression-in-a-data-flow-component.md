@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a6510294daf15eac25c335ee84a73f136a57f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083459"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378067"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>在資料流程元件中使用運算式
   此程序描述如何將運算式加入「條件式分割」轉換或「衍生的資料行」轉換。 「條件式分割」轉換會使用運算式，定義將資料列導向轉換輸出的條件，而「衍生的資料行」轉換則使用運算式，定義指派給資料行的值。  
@@ -29,7 +29,7 @@ ms.locfileid: "48083459"
 -   [在控制流程中新增或刪除工作或容器](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
     
   
--   [在資料流程中新增或刪除元件](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
+-   [在資料流程中加入或刪除元件](data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
 -   [連接資料流程中的元件](data-flow/connect-components-in-a-data-flow.md)  
   
@@ -67,8 +67,8 @@ ms.locfileid: "48083459"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)   
- [條件式分割轉換](data-flow/transformations/conditional-split-transformation.md)   
- [在衍生的資料行轉換](data-flow/transformations/derived-column-transformation.md)   
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
+ [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
  [資料流程工作](control-flow/data-flow-task.md)   
  [資料流程](data-flow/data-flow.md)  
   

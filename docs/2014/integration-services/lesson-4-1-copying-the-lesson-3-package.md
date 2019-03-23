@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c4dc82149a8906159c25c620aab6842b3444959
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364050"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377496"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>步驟 1：複製第 3 課的套件
   在這項工作中，您將為第 3 課所建立的 Lesson 3.dtsx 套件建立複本。 另外，如果您並未完成第 3 課，可以將此教學課程中隨附之已完成的第 3 課封裝加入至專案中，然後建立該封裝的複本來使用。 在第 4 課的其餘課程中，您將使用這個新的複本。  
@@ -61,6 +61,6 @@ ms.locfileid: "53364050"
 5.  複製並貼上第 3 課中的套件，如上一個程序的步驟 3-8 所述。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2:建立損毀的檔案](lesson-4-2-creating-a-corrupted-file.md)  
+ [步驟 2：建立損毀的檔案](lesson-4-2-creating-a-corrupted-file.md)  
   
   

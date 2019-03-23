@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4db1c097f53f46f027e81f7b1591eafc56c9393d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804615"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379246"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取設計工具
   CDC 設計工具主控台是用來開發及維護 Oracle CDC 執行個體。 CDC 設計工具主控台是包含以下元素的 Microsoft Management Console 嵌入式管理單元：  
