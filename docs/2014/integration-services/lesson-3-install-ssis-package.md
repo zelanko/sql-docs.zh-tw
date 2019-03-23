@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9b1bc021ba009ffe00805c0479a6fa9d91416d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361790"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379067"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 課：安裝封裝
   在 [第 2 課：建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)，您建立了部署公用程式，也建立了部署配套所包含的項目，您必須在另一部電腦上安裝封裝。 此外，您也確認了部署配套中的檔案清單，並且檢查了建立部署公用程式時所建立的資訊清單檔內容。  
@@ -28,14 +28,14 @@ ms.locfileid: "53361790"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1:複製部署配套](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+-   [步驟 1：複製部署配套](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [步驟 2:執行封裝安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [步驟 2：執行封裝安裝精靈](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [步驟 3:測試部署的封裝](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [步驟 3：測試部署的封裝](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1:複製部署配套](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+ [步驟 1：複製部署配套](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
 ![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: daa62b343adca72d28da5d83469409ed476a210e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782500"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379169"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 補充記錄指令碼
   此對話方塊會顯示 Oracle 補充記錄指令碼。  

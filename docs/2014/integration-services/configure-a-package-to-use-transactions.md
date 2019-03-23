@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8594114b48f14ac9573ee06efab6b931ca334114
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcbe13bd63284cdeeba219eb0a0cbcdc4084d4b1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098978"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387356"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>設定封裝來使用交易
   將封裝設定成使用交易時，您有兩個選項：  

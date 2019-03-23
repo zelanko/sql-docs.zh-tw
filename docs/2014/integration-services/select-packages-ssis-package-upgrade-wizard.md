@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c355c5f85fe68e091bcaf8f45f8dea9856a7ab89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b22de08e60bb8305337d0c251d59e8ddf2850715
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187355"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387206"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>選取封裝 (SSIS 封裝升級精靈)
   使用 **[選取封裝]** 頁面，選取要升級的封裝。 這個頁面會列出精靈的 **[選取來源位置]** 頁面上指定之位置內所儲存的封裝。  

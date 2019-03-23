@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d449e6245b779fd281fc9c8f047a9eb352d56846
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822762"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381052"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 運算式)
   傳回包含以分隔符號分隔之 Token 的字串中的 Token 數。  
@@ -50,7 +50,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   您可以使用變數和資料行做為此運算式的引數。  
   
 ## <a name="expression-examples"></a>運算式範例  
- 在下列範例中，TOKENCOUNT 函數會傳回 3，因為此字串包含三個權杖："01"、"12"、"2011"。  
+ 在下列範例中，TOKENCOUNT 函數會傳回 3，因為此字串包含三個權杖："01", "12", "2011".  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

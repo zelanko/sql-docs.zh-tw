@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2eec4fbeb300ce2a43e1007245fad573f1c5a44
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545635"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387106"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
@@ -74,7 +74,7 @@ ms.locfileid: "52545635"
  **識別碼**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
- **相關的主題：**[選取套件](control-flow/select-a-package.md)  
+ **相關主題：**[選取套件](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **篩選**  
@@ -88,7 +88,7 @@ ms.locfileid: "52545635"
  **變數**  
  鍵入變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關的主題：**[新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[新增變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52545635"
  **識別碼**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
- **相關的主題：**[選取套件](control-flow/select-a-package.md)  
+ **相關主題：**[選取套件](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **比較**  
@@ -133,7 +133,7 @@ ms.locfileid: "52545635"
  **變數**  
  鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關的主題：**[新增變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[新增變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 102988ac347543a4d2e2110d4c8511c398be9348
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d03f6d705707683195ad58b8562d2b964955b8e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060678"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387376"
 ---
 # <a name="script-transformation-editor-script-page"></a>指令碼轉換編輯器 (指令碼頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[指令碼]** 索引標籤，來指定指令碼和相關的屬性。  
@@ -36,7 +36,7 @@ ms.locfileid: "48060678"
 |**說明**|以其用途來描述指令碼轉換。|  
 |**LocaleID**|指定地區設定以提供排序和日期和時間轉換的特定區域資訊。|  
 |**名稱**|輸入元件的描述性名稱。|  
-|**ValidateExternalMetadata**|指出指令碼轉換在設計階段是否對外部資料來源驗證資料行中繼資料。 值為`false`延遲到執行的時間才驗證。|  
+|**ValidateExternalMetadata**|指出指令碼轉換在設計階段是否對外部資料來源驗證資料行中繼資料。 `false` 的值將會延遲到執行時間才驗證。|  
 |**ReadOnlyVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行唯讀存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
 |**ReadWriteVariables**|輸入以逗號分隔的變數清單，以供指令碼轉換進行可讀寫存取。<br /><br /> 注意：變數名稱會區分大小寫。|  
 |**ScriptLanguage**|選取指令碼元件所要使用的指令碼語言。<br /><br /> 若要為指令碼元件和指令碼工作設定預設指令碼語言，請使用 **[選項]** 對話方塊上 **[一般]** 頁面上的 **[指令碼語言]** 選項。 如需相關資訊，請參閱 [General Page](general-page-of-integration-services-designers-options.md)。|  
@@ -47,10 +47,10 @@ ms.locfileid: "48060678"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [選取 指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
- [指令碼轉換編輯器&#40;輸入資料行頁面&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [指令碼轉換編輯器&#40;輸入及輸出頁面&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [指令碼轉換編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
- [其他指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+ [選取指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
+ [指令碼轉換編輯器 &#40;輸入資料行頁面&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [指令碼轉換編輯器 &#40;連接管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [額外的指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

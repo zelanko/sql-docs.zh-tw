@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.ssis.ssms.ispackagevalidate.f1
 - sql12.ssis.ssms.isprojectvalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aaa7f88cda8c2c3cbda7ca38b2531de6354e83f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819300"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385996"
 ---
 # <a name="validate-dialog-box"></a>驗證對話方塊
   使用 **[驗證]** 對話方塊檢查 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案或封裝中的常見問題。  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cb49325f8ead610840b8d14213ccbf630813daf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 722f7990076882f5f9c3db29fdeb165728f5fc48
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114388"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387336"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>資料採礦查詢工作編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢工作]** 對話方塊的 **[採礦模型]** 索引標籤，即可指定要使用的採礦結構和採礦模型。  
@@ -41,7 +41,7 @@ ms.locfileid: "48114388"
  **[連接]**  
  在清單中選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員，或按一下 [新增] 以建立新的連線管理員。  
   
- **相關主題：**[Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md) (Analysis Services 連線管理員)  
+ **相關主題：**[Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)  
   
  **新增**  
  建立新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 連線管理員。  
@@ -56,8 +56,8 @@ ms.locfileid: "48114388"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料採礦查詢工作編輯器&#40;查詢索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [資料採礦查詢工作編輯器&#40;輸出 索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [資料採礦查詢工作編輯器 &#40;查詢索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [資料採礦查詢工作編輯器 &#40;輸出索引標籤&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [資料採礦設計師](../analysis-services/data-mining/data-mining-designer.md)  
   
   

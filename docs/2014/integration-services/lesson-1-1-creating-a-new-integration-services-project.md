@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：建立新的 Integration Services 專案 |Microsoft Docs
+title: 步驟 1：建立新的 Integration Services 專案 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eff00a91c6fff1caee5e5fc41dd6d59f8635f78f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377403"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386129"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>步驟 1：建立新的 Integration Services 專案
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝的第一步就是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。 這個專案包含物件的範本 (資料來源、資料來源檢視和封裝)，您在資料轉換方案中會用到它們。  
@@ -46,6 +46,6 @@ ms.locfileid: "53377403"
 7.  在 [ **方案總管** ] 工具列上，以滑鼠右鍵按一下 [ **Package.dtsx**]、按一下 **[重新命名]**，然後將預設封裝重新命名為 **Lesson 1.dtsx**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2:加入和設定一般檔案連接管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [步驟 2：新增和設定一般檔案連線管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

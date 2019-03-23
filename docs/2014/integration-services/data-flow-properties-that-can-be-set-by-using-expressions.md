@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135198"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378596"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用運算式設定的資料流程屬性
   可使用「資料流程」工作容器上提供的屬性運算式，以指定資料流程物件的某些屬性值。  
   
  如需使用屬性運算式的資訊，請參閱 [在封裝中使用屬性運算式](expressions/use-property-expressions-in-packages.md)。  
   
- 您可以使用屬性運算式來為封裝之每個部署的執行個體自訂組態。 您也可以使用屬性運算式來指定封裝的執行階段條件約束，其方法是搭配 **dtexec** 命令提示字元公用程式使用 **/set** 選項。 例如，您可以限制`MaximumThreads`使用 「 排序 」 轉換，或`MaxMemoryUsage`「 模糊群組 」 和 「 模糊查閱 」 轉換。 如果未受到約束，這些轉換可能會在記憶體中快取大量的資料。  
+ 您可以使用屬性運算式來為封裝之每個部署的執行個體自訂組態。 您也可以使用屬性運算式來指定封裝的執行階段條件約束，其方法是搭配 **dtexec** 命令提示字元公用程式使用 **/set** 選項。 例如，您可以約束「排序」轉換所使用的 `MaximumThreads`，或是「模糊群組」和「模糊查閱」轉換所使用的 `MaxMemoryUsage`。 如果未受到約束，這些轉換可能會在記憶體中快取大量的資料。  
   
  若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性] 視窗，其方式是在設計工具的 [控制流程] 介面上選取資料流程工作，或是選取設計工具的 [資料流程] 索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式] 屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器] 對話方塊。 下拉 [屬性] 清單來選取屬性，然後在 [運算式] 文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器] 對話方塊。  
   

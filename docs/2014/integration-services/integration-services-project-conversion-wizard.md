@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e8480066485cf22c48cebbba738b2c604a50b23c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396362"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384286"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 專案轉換精靈
   [Integration Services 專案轉換精靈] 會將專案轉換為專案部署模型。  

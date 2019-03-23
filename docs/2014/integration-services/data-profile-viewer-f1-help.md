@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065138"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377516"
 ---
 # <a name="data-profile-viewer-f1-help"></a>資料設定檔檢視器 F1 說明
   您可以使用資料設定檔檢視器來檢視資料分析工作的輸出。  
@@ -55,10 +55,10 @@ ms.locfileid: "48065138"
  顯示這個資料行中值的最大長度。  
   
  **忽略開頭空白**  
- 顯示此設定檔與計算`IgnoreLeadingSpaces`True 或 False 的值。 這個屬性是在 [資料分析工作編輯器] 的 **[設定檔要求]** 頁面上設定的。  
+ 顯示這個設定檔會以 `IgnoreLeadingSpaces` 值為 True 或 False 的情況進行計算。 這個屬性是在 [資料分析工作編輯器] 的 **[設定檔要求]** 頁面上設定的。  
   
  **忽略尾端空白**  
- 顯示此設定檔與計算`IgnoreTrailingSpaces`True 或 False 的值。 這個屬性是在 [資料分析工作編輯器] 的 **[設定檔要求]** 頁面上設定的。  
+ 顯示這個設定檔會以 `IgnoreTrailingSpaces` 值為 True 或 False 的情況進行計算。 這個屬性是在 [資料分析工作編輯器] 的 **[設定檔要求]** 頁面上設定的。  
   
  **資料列計數**  
  顯示資料表或檢視表中的資料列數目。  
@@ -67,7 +67,7 @@ ms.locfileid: "48065138"
  **長度**  
  顯示在已分析資料行中找到的資料行長度。  
   
- **Count**  
+ **計數**  
  顯示已分析資料行的值具有 [長度] 資料行中所顯示之長度的資料列數目。  
   
  **百分比**  
@@ -126,7 +126,7 @@ ms.locfileid: "48065138"
  **值**  
  顯示在已分析資料行中找到的相異值。  
   
- **Count**  
+ **計數**  
  顯示已分析資料行具有 [值] 資料行中所顯示之值的資料列數目。  
   
  **百分比**  
@@ -196,7 +196,7 @@ ms.locfileid: "48065138"
  **\<資料行1>、\<資料行2> 等等。**  
  顯示子集資料行中的值，但這些值在超集資料行中找不到。  
   
- **Count**  
+ **計數**  
  顯示指定之資料行具有第一個資料行中所顯示之值的資料列數目。  
   
 ## <a name="see-also"></a>另請參閱  

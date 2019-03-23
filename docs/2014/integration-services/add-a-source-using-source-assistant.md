@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18938c295940f0de1ced479efe8772eca24c6eed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc051fc23e9efb25ae84b49697398a0b8cc1171a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093188"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387036"
 ---
 # <a name="add-a-source-using-source-assistant"></a>使用來源小幫手加入來源
   本主題提供使用來源小幫手加入新來源的步驟，也會列出可以在 [加入新來源] 對話方塊上使用的選項。當您將來源小幫手拖放至 SSIS 設計師，即會顯示此對話方塊。  

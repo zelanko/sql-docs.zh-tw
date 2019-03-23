@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7836d55463e653dcb6c1c3da2f26d969ca46bfe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158398"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377826"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>傳送作業工作編輯器 (一般頁面)
   使用 **[傳送作業工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送作業工作。 如需有關傳送作業工作的詳細資訊，請參閱＜ [Transfer Jobs Task](control-flow/transfer-jobs-task.md)＞。  
@@ -41,7 +41,7 @@ ms.locfileid: "48158398"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送作業工作編輯器&#40;作業頁面&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [傳送作業工作編輯器 &#40;作業頁面&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bdc6c232814f3d45330a1cb0982f207272f39c3f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764090"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376296"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
   使用**檢閱資料類型對應**頁面來檢閱精靈必須執行才能讓來源資料與目的地相容的資料類型轉換的詳細的資訊。 這項資訊包括視覺提示，可區別預期會成功的轉換與可能導致錯誤或截斷的轉換。 針對每個轉換，您可以決定是否要接受精靈所建議的轉換，而且可以指定如何處理發生的任何錯誤。  
@@ -51,7 +51,7 @@ ms.locfileid: "52764090"
 |**來源類型**|顯示來源資料行的資料類型。|  
 |**目的地資料行**|顯示目的地資料行的名稱。|  
 |**目的地類型**|顯示目的地資料行的資料類型。|  
-|**轉換**|指定是否應該繼續進行規劃的轉換：<br /><br /> 選取此核取方塊，即可讓精靈繼續進行規劃的轉換。<br /><br /> 清除此核取方塊，即可取消資料類型轉換。|  
+|**Convert**|指定是否應該繼續進行規劃的轉換：<br /><br /> 選取此核取方塊，即可讓精靈繼續進行規劃的轉換。<br /><br /> 清除此核取方塊，即可取消資料類型轉換。|  
 |**錯誤時**|指定精靈如何處理錯誤：<br /><br /> 使用**錯誤時 （全域）** 設定。<br /><br /> 因錯誤而失敗，並停止匯入或匯出程序。<br /><br /> 忽略錯誤。|  
 |**截斷時**|指定精靈如何處理截斷：<br /><br /> 使用**截斷時 （全域）** 設定。<br /><br /> 因錯誤而失敗，並停止匯入或匯出程序。<br /><br /> 忽略截斷。|  
   

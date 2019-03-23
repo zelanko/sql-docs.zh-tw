@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6136d3e8e574d476b8ebabcfb78ed10284ead334
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750570"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393086"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步驟 7：加入和設定 OLE DB 目的地
   現在，封裝可以從一般檔案來源中擷取資料，再將資料轉換成與目的地相容的格式。 下一項工作是要把已轉換的資料實際載入到目的地。 若要載入資料，您必須將 OLE DB 目的地加入資料流程中。 OLE DB 目的地可使用資料庫資料表、檢視或 SQL 命令，將資料載入到各種 OLE DB 相容資料庫中。  
@@ -53,7 +53,7 @@ ms.locfileid: "52750570"
 14. 在 [屬性] 視窗中，確認`LocaleID`屬性設定為**英文 （美國）** 並`DefaultCodePage`屬性設定為**1252年**。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 8:使第 1 課封裝更容易了解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [步驟 8：使第 1 課封裝更容易了解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 目的地](data-flow/ole-db-destination.md)  

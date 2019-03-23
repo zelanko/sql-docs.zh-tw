@@ -20,15 +20,15 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6de4a59d9f042e410e1560c01e253f73811c2451
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374380"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380956"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈提供最簡單的方法，可建立[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]將資料從來源複製到目的地的封裝。  

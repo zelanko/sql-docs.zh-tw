@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130828"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385046"
 ---
 # <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取參考資料集，而且可以將資料儲存至快取檔案。 資料永遠會儲存在記憶體中。  
@@ -50,7 +50,7 @@ ms.locfileid: "48130828"
  指出是否要使用快取檔案。  
   
 > [!NOTE]  
->  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱[對封裝使用之檔案的存取權](../../2014/integration-services/access-to-files-used-by-packages.md)。  
+>  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../2014/integration-services/access-to-files-used-by-packages.md)。  
   
  如果您將快取連接管理員設定為使用快取檔案，連接管理員將進行下列其中一項動作：  
   
@@ -88,18 +88,18 @@ ms.locfileid: "48130828"
  指定資料行的資料類型。  
   
  `Length`  
- 指定資料行資料類型。 如果適用於資料類型，您可以更新`Length`。  
+ 指定資料行資料類型。 如果適用於資料類型，您可以更新 `Length`。  
   
  `Precision`  
- 針對特定資料行資料類型指定有效位數。 位數 (Precision) 是指數字中總共的位數。 如果適用於資料類型，您可以更新`Precision`。  
+ 針對特定資料行資料類型指定有效位數。 位數 (Precision) 是指數字中總共的位數。 如果適用於資料類型，您可以更新 `Precision`。  
   
  `Scale`  
- 針對特定資料行資料類型指定小數位數。 小數位數 (Scale) 則是指數字中小數點右方的位數。 如果適用於資料類型，您可以更新`Scale`。  
+ 針對特定資料行資料類型指定小數位數。 小數位數 (Scale) 則是指數字中小數點右方的位數。 如果適用於資料類型，您可以更新 `Scale`。  
   
  `Code Page`  
- 指定資料行類型的字碼頁。 如果適用於資料類型，您可以更新`Code Page`。  
+ 指定資料行類型的字碼頁。 如果適用於資料類型，您可以更新 `Code Page`。  
   
 ## <a name="see-also"></a>另請參閱  
- [查閱轉換](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

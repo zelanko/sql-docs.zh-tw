@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：加入和設定 Foreach 迴圈容器 |Microsoft Docs
+title: 步驟 2：新增和設定 Foreach 迴圈容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa42ac9ab25c9765aac2afa10abdd50f2df4cb7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360111"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378856"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2：加入和設定 Foreach 迴圈容器
   在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
@@ -24,9 +24,9 @@ ms.locfileid: "53360111"
   
  目前，第 1 課的一般檔案連接管理員只連接一個特定的一般檔案。 若要反覆連接到資料夾的每個一般檔案，您必須同時設定 Foreach 迴圈容器和一般檔案連接管理員，如下所示：  
   
--   **Foreach 迴圈 」 容器：** 您會將容器的列舉的值對應至使用者定義的封裝變數。 然後容器會使用此使用者自訂變數，動態修改一般檔案連接管理員的 `ConnectionString` 屬性，並反覆連接到資料夾的每個一般檔案。  
+-   **Foreach 迴圈容器：** 您將容器的列舉值對應至使用者所定義套件變數。 然後容器會使用此使用者自訂變數，動態修改一般檔案連接管理員的 `ConnectionString` 屬性，並反覆連接到資料夾的每個一般檔案。  
   
--   **一般檔案連接管理員：** 您會修改第 1 課中，使用使用者定義變數來擴展連接管理員建立的連接管理員`ConnectionString`屬性。  
+-   **一般檔案連線管理員：** 您會修改第 1 課中，使用使用者定義變數來擴展連接管理員建立的連接管理員`ConnectionString`屬性。  
   
  這項工作中的程序說明如何建立和修改 Foreach 迴圈容器，以利用使用者自訂封裝變數，並且將資料流程工作加入迴圈中。 在下一項工作中，您會學到如何修改一般檔案連接管理員來使用使用者自訂變數。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53360111"
 -   拖曳**擷取範例貨幣資料**資料流程工作拖曳至 「 Foreach 迴圈 」 容器現在已重新命名`Foreach File in Folder`。  
   
 ## <a name="next-lesson-task"></a>下一課的工作  
- [步驟 3:修改一般檔案連接管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [步驟 3：修改一般檔案連線管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Foreach 迴圈容器](control-flow/foreach-loop-container.md)   

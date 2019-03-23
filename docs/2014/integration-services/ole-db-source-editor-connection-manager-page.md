@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172978"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384482"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 來源編輯器 (連接管理員頁面)
   使用 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -56,7 +56,7 @@ ms.locfileid: "48172978"
 |選項|描述|  
 |------------|-----------------|  
 |資料表或檢視|從 OLE DB 資料來源中的資料表或檢視擷取資料。|  
-|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊︰**[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **若需相關的資訊：**[在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL (命令)|使用 SQL 查詢從 OLE DB 資料來源中擷取資料。|  
 |來自變數的 SQL 命令|在變數中指定 SQL 查詢文字。|  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48172978"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [OLE DB 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [使用 OLE DB 來源擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)  
+ [OLE DB 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [OLE DB 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [使用 OLE DB 來源來擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [OLE DB 連接管理員](connection-manager/ole-db-connection-manager.md)  
   
   

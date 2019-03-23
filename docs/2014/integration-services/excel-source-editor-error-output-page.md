@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106408"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386236"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 來源編輯器 (錯誤輸出頁面)
   使用 [Excel 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48106408"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -48,14 +48,14 @@ ms.locfileid: "48106408"
  **將這個值設定到選取的資料格**  
  指定發生錯誤或截斷時要對所有選取之資料格採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **套用**  
+ **Apply**  
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Excel 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Excel 連線管理員](connection-manager/excel-connection-manager.md)   
+ [Excel 來源編輯器 &#40;連線管理員頁面&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Excel 來源編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Excel 連接管理員](connection-manager/excel-connection-manager.md)   
  [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](control-flow/foreach-loop-container.md)  
   
   

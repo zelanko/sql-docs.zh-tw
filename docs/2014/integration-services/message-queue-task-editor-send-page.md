@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: efaadce1425de4468056f0df5e3d7106432ca804
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e203bd95b4e3d42747614dc9aa688cc549338f19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516102"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376048"
 ---
 # <a name="message-queue-task-editor-send-page"></a>訊息佇列工作編輯器 (傳送頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[傳送]** 頁面，即可設定從 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝傳送訊息的訊息佇列工作。  
@@ -59,7 +59,7 @@ ms.locfileid: "52516102"
  **[VariableMessage]**  
  鍵入變數名稱，或按一下省略符號 **(...)**，然後選取變數。 變數以逗號分隔。  
   
- **相關的主題：** 選取變數  
+ **相關主題：** 選取變數  
   
 ### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **[StringMessage]**  

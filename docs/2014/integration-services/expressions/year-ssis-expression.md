@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f228aa02e5537ddd52a7acb0fe4c7d4fbb855d5b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767877"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379746"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 運算式)
   傳回代表日期之年份部分的整數。  

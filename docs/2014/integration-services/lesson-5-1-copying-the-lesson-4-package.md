@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aaa786680ff15a8b2efcb00d104f73f64089a55
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360850"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386276"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>步驟 1：複製第 4 課套件
   在這項工作中，您將為第 4 課所建立的 Lesson 4.dtsx 套件建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 4 課套件加入至專案中，然後改為複製該套件。 在第 5 課其餘的課程中，您將使用這個新的副本。  
@@ -61,6 +61,6 @@ ms.locfileid: "53360850"
 5.  複製並貼上第 4 課套件，如上一個程序的步驟 3-8 所述。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2:啟用和設定封裝組態](lesson-5-2-enabling-and-configuring-package-configurations.md)  
+ [步驟 2：啟用和設定封裝組態](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
   

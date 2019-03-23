@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: beee5a99f345a4f70f31bfec78b4fb6d9280ab0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761282"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375346"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
   封裝的管理包含下列工作：  

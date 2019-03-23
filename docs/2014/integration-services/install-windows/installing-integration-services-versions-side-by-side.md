@@ -10,15 +10,15 @@ helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0af7cfe8119c6ceb879c75ffee4497e62997f77f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5552780cdc4a2f4e3faf39b9111882fcf4ffdd63
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355878"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380116"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>互通性與共存性 (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 可以和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services 並存。  

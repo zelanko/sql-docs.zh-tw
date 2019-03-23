@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bcc6c331908f33df3b324ff7061b38065e36981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b4458f8fe198ba3d052bcb21bef38975738b2c23
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360882"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381226"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>步驟 1：複製第 2 課的套件
   在這項工作中，您將為第 2 課所建立的 Lesson 2.dtsx 套件建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 2 課套件加入專案，然後改為複製該套件。 在第 3 課其餘的課程中，您將使用這個新的複本。  
@@ -61,6 +61,6 @@ ms.locfileid: "53360882"
 5.  複製並貼上第 3 課中的套件，如上一個程序的步驟 3-8 所述。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2:加入和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
+ [步驟 2：加入和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
   
   

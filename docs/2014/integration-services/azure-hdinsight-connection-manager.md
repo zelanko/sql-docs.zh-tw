@@ -11,15 +11,15 @@ f1_keywords:
 - SQL12.DTS.DESIGNER.AFPHDICM.F1
 - SQL11.DTS.DESIGNER.AFPHDICM.F1
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3995c1b0f830277441e236d375c87f21f8d42f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dea61640bd155e58cef2d7c8261b2ca7733bd4d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221908"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379259"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員
 **Azure HDInsight 連線管理員**可讓 SSIS 套件連線到 Azure HDInsight 叢集。

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369930"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383887"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
@@ -54,14 +54,14 @@ ms.locfileid: "53369930"
   
  如需詳細資訊，請參閱 [使用 SQL Server Agent 排程封裝](../schedule-a-package-by-using-sql-server-agent.md)。  
   
- 如需示範如何使用的影片[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式執行封裝時，請參閱視訊的首頁上， [How to:使用 SQL Server Agent （SQL Server 視訊），讓封裝執行自動化](https://go.microsoft.com/fwlink/?LinkId=141771)，MSDN Library 中。  
+ 如需示範如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式執行套件的影片，請參閱影片首頁的[如何：使用 SQL Server Agent 自動化執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141771)，位於 MSDN Library。  
   
 ##  <a name="trouble"></a> 疑難排解  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟可能無法啟動封裝，即使封裝在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及從命令列都順利執行。 此問題有一些常見的原因，以及數個建議的解決方案。 如需詳細資訊，請參閱下列資源。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文件： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](https://support.microsoft.com/kb/918760)  
   
--   視訊[疑難排解：使用 SQL Server Agent （SQL Server 視訊） 的封裝執行](https://go.microsoft.com/fwlink/?LinkId=141772)，MSDN Library 中。  
+-   影片，[疑難排解：使用 SQL Server Agent 執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141772)，位於 MSDN Library。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟啟動封裝後，封裝執行可能失敗，也可能會成功，但產生非預期的結果。 您可以使用下列工具對這些問題進行疑難排解。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "53369930"
   
 -   [網站上的知識庫文件：](https://support.microsoft.com/kb/918760)從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   視訊[疑難排解：使用 SQL Server Agent （SQL Server 視訊） 的封裝執行](https://go.microsoft.com/fwlink/?LinkId=141772)，MSDN Library 中  
+-   影片，[疑難排解：使用 SQL Server Agent 執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141772)，位於 MSDN Library  
   
--   視訊[How to:使用 SQL Server Agent （SQL Server 視訊），讓封裝執行自動化](https://go.microsoft.com/fwlink/?LinkId=141771)，MSDN Library 中  
+-   影片，[如何：使用 SQL Server Agent 自動化執行套件 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=141771)，位於 MSDN Library  
   
 -   位於 mssqltips.com 的技術文件： [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)(使用 Windows PowerShell 檢查 SQL Server Agent 作業)  
   

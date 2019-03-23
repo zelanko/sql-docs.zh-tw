@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123398"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376676"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>設定檢查點以重新啟動失敗的封裝
   您可以藉由設定套用到檢查點的屬性，來設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝，使之從失敗點重新啟動，而不必重新執行整個封裝。  
@@ -41,12 +41,12 @@ ms.locfileid: "48123398"
   
 7.  將 CheckpointUsage 屬性設定為下列兩個值的其中一個：  
   
-    -   選取`Always`一律重新啟動封裝從檢查點。  
+    -   選取 `Always`，將永遠從檢查點重新啟動封裝。  
   
         > [!IMPORTANT]  
         >  如果檢查點檔案不可用，則會產生錯誤。  
   
-    -   選取`IfExists`只有當檢查點檔案可用時，請重新啟動封裝。  
+    -   選取 `IfExists`，只有當檢查點檔案可用時才會重新啟動封裝。  
   
 8.  設定封裝可重新啟動的工作和容器。  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48123398"
     -   FailPackageOnFailure 屬性設為`True`每個所選工作和容器。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用檢查點來重新啟動套件](packages/restart-packages-by-using-checkpoints.md)  
+ [使用檢查點來重新啟動封裝](packages/restart-packages-by-using-checkpoints.md)  
   
   

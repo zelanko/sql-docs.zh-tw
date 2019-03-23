@@ -11,15 +11,15 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52ef9134b2d745df6b6471e74a062a8f0bfd67e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 59d7eb92d79aa77da3faded36036de4b14142c93
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793850"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379536"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (SSIS 運算式)
   傳回移除開頭和尾端空白之後的字元運算式。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356341"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381196"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步驟 1：建置部署公用程式
   在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
@@ -56,12 +56,12 @@ ms.locfileid: "53356341"
   
      建立已完成 -- 0 個錯誤，0 個警告  
   
-     === 組建中：0 成功、 0 失敗、 1 最新狀態，0 個略過 ===  
+     ========== 建置：0 成功、 0 失敗、 1 最新狀態，0 個略過 ===  
   
 5.  在 **[檔案]** 功能表上按一下 **[結束]**。 如果出現對 [Deployment Tutorial (部署教學課程)] 項目儲存變更的提示，請按一下 [是]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2:確認部署配套](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [步驟 2：確認部署配套](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fc54d5b287cd71ba303d34693e815c07b9cc3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068071"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386696"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach 迴圈編輯器 (變數對應頁面)
   使用 [Foreach 迴圈編輯器] 對話方塊的 [變數對應] 頁面，即可將變數對應至集合值。 會用迴圈之每個反覆運算上的集合值來更新變數的值。  
@@ -34,7 +34,7 @@ ms.locfileid: "48068071"
 > [!NOTE]  
 >  對應變數之後，新資料列會自動加入 [變數] 清單。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題**：[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
  **Index**  
  如果使用 Foreach 項目列舉值，請指定集合值中要對應至變數的資料行索引。 針對其他列舉值類型，此索引是唯讀的。  
@@ -42,7 +42,7 @@ ms.locfileid: "48068071"
 > [!NOTE]  
 >  索引是以 0 為基底。  
   
- **相關主題**:[循環使用 Excel 檔案和使用 「 Foreach 迴圈 」 容器的資料表](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **相關主題**：[使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **刪除**  
  選取變數，然後按一下 [刪除]。  

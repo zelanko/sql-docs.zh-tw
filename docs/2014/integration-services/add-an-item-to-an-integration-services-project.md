@@ -15,15 +15,15 @@ helpviewer_keywords:
 - items [Integration Services]
 - SSIS projects, items
 ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ebce5742147bd9d312e029d041625c68fd180db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 829683a08a1611cae4bcb9ce8dca8e2e328f83f5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114268"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374289"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>將項目加入 Integration Services 專案
   此程序描述如何將新的和現有的項目加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  

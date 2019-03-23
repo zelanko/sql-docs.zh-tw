@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531375"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382270"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [一般] 頁面，即可設定「執行 SQL」工作和提供該工作執行的 SQL 陳述式。  
@@ -55,7 +55,7 @@ ms.locfileid: "52531375"
  **ConnectionType**  
  選擇用來連接到資料來源的連接管理員類型。 可用的連接類型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相關的主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)， [ODBC 連接管理員](connection-manager/odbc-connection-manager.md)， [ADO 連接管理員](connection-manager/ado-connection-manager.md)， [ADO.NET 連接管理員](connection-manager/ado-net-connection-manager.md)， [SQL ServerCompact Edition 連接管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **相關主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)， [ODBC 連接管理員](connection-manager/odbc-connection-manager.md)， [ADO 連接管理員](connection-manager/ado-connection-manager.md)， [ADO.NET 連接管理員](connection-manager/ado-net-connection-manager.md)， [SQL ServerCompact Edition 連接管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **[連接]**  
  從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]。  
@@ -65,7 +65,7 @@ ms.locfileid: "52531375"
   
  而根據執行 SQL 工作所使用的連接管理員類型，您必須在參數化 SQL 陳述式中使用特定的參數標記。  
   
- **相關的主題：** 執行參數化 SQL 命令 區段[執行 SQL 工作](control-flow/execute-sql-task.md)  
+ **相關主題：** 執行參數化 SQL 命令 區段[執行 SQL 工作](control-flow/execute-sql-task.md)  
   
  這個屬性具有下表中所列的選項。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "52531375"
  **BypassPrepare**  
  指出 SQL 陳述式是否已備妥。  `true` 會略過準備；`false` 會在執行它之前備妥 SQL 陳述式。 只有搭配支援準備的 OLE DB 連接，才能使用此選項。  
   
- **相關的主題：**[備妥的執行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **相關主題：**[備妥的執行](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **瀏覽**  
  使用 [開啟] 對話方塊，以尋找包含 SQL 陳述式的檔案。 選取要將檔案內容以 SQL 陳述式複製到 **SQLStatement** 屬性的檔案。  
@@ -98,19 +98,19 @@ ms.locfileid: "52531375"
  **SQLStatement**  
  在選項方塊中鍵入要執行的 SQL 陳述式，或者按一下瀏覽按鈕 (...) 在 [輸入 SQL 查詢] 對話方塊中鍵入 SQL 陳述式，或按一下 [建置查詢] 使用 [查詢產生器] 對話方塊來撰寫陳述式。  
   
- **相關的主題：**[查詢產生器](../../2014/integration-services/query-builder.md)  
+ **相關主題：**[查詢產生器](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 檔案連接  
  **FileConnection**  
  選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關的主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 變數  
  **SourceVariable**  
  選取現有的變數，或按一下 [\<新增變數...>] 以建立新的變數。  
   
- **相關的主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

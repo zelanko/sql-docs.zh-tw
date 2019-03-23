@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224458"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378030"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>彙總轉換編輯器 (彙總索引標籤)
   使用 [彙總轉換編輯器] 對話方塊的 [彙總] 索引標籤，即可指定彙總的資料行與彙總屬性。 您可以套用多個彙總。 此轉換不會產生錯誤輸出。  
@@ -67,25 +67,25 @@ ms.locfileid: "48224458"
  **運算**  
  使用下表作為指南，從可用的作業清單中選擇。  
   
-|作業|描述|  
+|運算|描述|  
 |---------------|-----------------|  
 |**GroupBy**|將資料集分割成群組。 具有任何資料類型的資料行可用於分組。 如需詳細資訊，請參閱 GROUP BY。|  
 |**Sum**|加總資料行中的值。 只能加總具有數值資料類型的資料行。 如需詳細資訊，請參閱 SUM。|  
 |**平均值**|傳回資料行中資料行值的平均。 只能平均具有數值資料類型的資料行。 如需詳細資訊，請參閱 AVG。|  
-|**Count**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
+|**計數**|傳回群組中的項目數。 如需詳細資訊，請參閱 COUNT。|  
 |**CountDistinct**|傳回群組中唯一非 Null 值的數目。 如需詳細資訊，請參閱 COUNT 和 Distinct。|  
 |**最小值**|傳回群組中的最小值。 限制為數值資料類型。|  
 |**最大值**|傳回群組中的最大值。 限制為數值資料類型。|  
   
  **比較旗標**  
- 如果您選擇 [群組依據]，請使用核取方塊來控制轉換執行比較的方式。 如需字串比較選項的資訊，請參閱[比較字串資料](data-flow/comparing-string-data.md)。  
+ 如果您選擇 [群組依據]，請使用核取方塊來控制轉換執行比較的方式。 如需字串比較選項的資訊，請參閱 [比較字串資料](data-flow/comparing-string-data.md)。  
   
  **Count Distinct Scale**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果兩個`CountDistinctScale`並**CountDistinctKeys**指定，則**CountDistinctKeys**會優先使用。  
   
 |值|描述|  
 |-----------|-----------------|  
-|[未指定]|`CountDistinctScale`不使用屬性。|  
+|[未指定]|不使用 `CountDistinctScale` 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  
 |中|彙總可寫入大約 5,000,000 個相異值。|  
 |高|彙總可寫入超過 25,000,000 個相異值。|  
@@ -95,7 +95,7 @@ ms.locfileid: "48224458"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [彙總轉換編輯器&#40;進階索引標籤&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [彙總轉換編輯器 &#40;進階索引標籤&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [使用彙總轉換來彙總資料集中的值](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

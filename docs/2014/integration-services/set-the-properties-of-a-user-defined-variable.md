@@ -11,22 +11,22 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075589"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385525"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>設定使用者定義變數的屬性
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中設定使用者定義變數的屬性，您可以使用下列其中一項功能：  
   
 -   [變數] 視窗。  
   
--   [屬性] 視窗。 [屬性] 視窗會列出屬性，以供您設定 [變數] 視窗中無法使用的變數：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
+-   [屬性] 視窗。 **屬性** 視窗會列出屬性設定中未提供的變數**變數**視窗：描述、 EvaluateAsExpression、 Expression、 ReadOnly、 ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供一組無法更新屬性的系統變數，但屬性 RaiseChangedEvent 除外。  
@@ -53,7 +53,7 @@ ms.locfileid: "48075589"
   
  **設定命名空間和名稱屬性**  
   
- 值`Name`和`Namespace`Unicode Standard 2.0 或底線 (_) 所定義的屬性必須以字母字元開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
+ `Name` 和 `Namespace` 屬性的值必須以 Unicode Standard 2.0 中定義的字母字元或底線 (_) 為開頭。 後續的字元可以是 Unicode Standard 2.0 中定義的字母或數字，或是底線 (\_)。  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>使用變數視窗來設定屬性  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48075589"
 8.  若要儲存已更新的封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)   
  [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)   
  [新增、刪除、變更套件中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data integration [Integration Services]
 - Data Transformation Services
 ms.assetid: c4398655-5657-4ae4-a690-a380790fe84f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61456eddaf526d7afed27c39c22820456ce8382c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 046058aa9c00cafb9a5ab9aac61b14d1d78668fc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360940"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384497"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
   

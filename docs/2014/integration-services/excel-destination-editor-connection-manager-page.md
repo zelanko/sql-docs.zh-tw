@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3538e768fafbf310850fecf9899e70409b7b2758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f790e0cc9193f2f31c7f021c4d4901e7a825fb13
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157818"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387166"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Excel 目的地編輯器 (連接管理員頁面)
   使用 **[Excel 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定資料來源資訊，以及預覽結果。 Excel 目的地會將資料載入 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 活頁簿中的工作表或具名範圍。  
@@ -43,7 +43,7 @@ ms.locfileid: "48157818"
 |選項|描述|  
 |------------|-----------------|  
 |資料表或檢視|將資料載入 Excel 資料來源中的工作表或具名範圍。|  
-|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：**[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關的資訊**:[在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL (命令)|使用 SQL 查詢將資料載入 Excel 目的地。|  
   
  **Excel 工作表的名稱**  
@@ -83,8 +83,8 @@ ms.locfileid: "48157818"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Excel 目的地編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Excel 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Excel 目的地編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](control-flow/foreach-loop-container.md)  
   
   

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408175"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386626"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>將專案部署至 Integration Services 伺服器
   在目前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，您可以將專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器可讓您管理封裝、執行封裝，以及利用環境設定封裝的執行值。  
@@ -30,7 +30,7 @@ ms.locfileid: "52408175"
   
 1.  建立 SSISDB 目錄 (如果尚未建立)。 如需詳細資訊，請參閱 [建立 SSIS 目錄](catalog/ssis-catalog.md)。  
   
-2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱下面的指示：[若要將專案轉換成專案部署模型](#convert)  
+2.  請執行 [Integration Services 專案轉換精靈] 將專案轉換為專案部署模型。 如需詳細資訊，請參閱以下指示：[將專案轉換為專案部署模型](#convert)  
   
     -   若您將專案建立在 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]中，則專案會根據預設使用專案部署模型。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52408175"
   
      如需封裝升級的詳細資訊，請參閱 [升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages.md) 和 [使用 SSIS 封裝升級精靈來升級 Integration Services 封裝](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)。  
   
-3.  將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需詳細資訊，請參閱下面的指示：[若要將專案部署至 Integration Services 伺服器](#deploy)。  
+3.  將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需詳細資訊，請參閱以下指示：[將專案部署至 Integration Services 伺服器](#deploy)。  
   
 4.  (選擇性) 建立部署專案的環境。 如需詳細資訊，請參閱 [建立和對應伺服器環境](../../2014/integration-services/create-and-map-a-server-environment.md)。  
   

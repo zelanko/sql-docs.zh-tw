@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129628"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380186"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>封裝安裝精靈 UI 參考
   使用 [封裝安裝精靈] 來部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，包括其內含的封裝和其他檔案，以及任何封裝的相依性。  
@@ -57,7 +57,7 @@ ms.locfileid: "48129628"
  **組態檔**  
  從清單中選取檔案來編輯組態檔的內容。  
   
- **相關主題：**[建立封裝組態](../../2014/integration-services/create-package-configurations.md)  
+ **相關主題：**[建立套件設定](../../2014/integration-services/create-package-configurations.md)  
   
  **路徑**  
  檢視要設定之屬性的路徑。  
@@ -152,7 +152,7 @@ ms.locfileid: "48129628"
  若要在 [SSIS 封裝] 對話方塊中選取資料夾，請按一下 [瀏覽 (...)]。不過，此對話方塊並不能用來選取預設資料夾。 如果想要使用預設資料夾，必須在文字方塊中輸入 "/"。  
   
 > [!NOTE]  
->  如果沒有輸入有效的封裝路徑，則會出現下列錯誤訊息：「有一些引數無效。」  
+>  如果未輸入有效的套件路徑，則會出現下列錯誤訊息：「一或多個引數無效。」  
   
  **依賴伺服器儲存體進行加密**  
  選取即可使用 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的安全性功能來保護封裝的安全。  

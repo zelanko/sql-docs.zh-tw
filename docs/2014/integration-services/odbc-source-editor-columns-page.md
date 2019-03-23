@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51897dbc1b7cde8707e28678d8de7f3cd7913e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e7a9fb71dca2e99bebe3f23486ff6331bd843de
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144660"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387706"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 來源編輯器 (資料行頁面)
   使用 [ODBC 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -48,7 +48,7 @@ ms.locfileid: "48144660"
  為每個輸出資料行輸入唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 輸入的名稱就會顯示在 SSIS 設計師中。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [ODBC 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
+ [ODBC 來源編輯器 &#40;連接管理員頁面&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 來源編輯器 &#40;錯誤輸出頁面&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

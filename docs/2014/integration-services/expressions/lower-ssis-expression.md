@@ -12,15 +12,15 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0acb81035013b1599c4e454d4ce268dd98efe1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3f445260e7b5c4c1ed641fdf6b9f5cb509db709
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770600"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387737"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)
   傳回將大寫字元轉換為小寫字元之後的字元運算式。  
