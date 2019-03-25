@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361760"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385296"
 ---
 # <a name="lesson-2-adding-looping"></a>第 2 課：加入迴圈
-  在 [第 1 課：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)，您所建立的封裝，從單個一般檔案來源擷取資料、 轉換資料，使用查閱轉換，和最後載入將資料載入**FactCurrency**事實資料表**AdventureWorksDW2012**範例資料庫。  
+  在[第 1 課：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)，您所建立的封裝，從單個一般檔案來源擷取資料、 轉換資料，使用查閱轉換，和最後載入將資料載入**FactCurrency**事實資料表**AdventureWorksDW2012**範例資料庫。  
   
  不過，擷取、轉換和載入 (ETL) 處理序使用單個一般檔案的情況很罕見。 典型的 ETL 處理序會從多個一般檔案來源擷取資料。 從多個來源擷取資料需要反覆的控制流程。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 最令人期待的功能之一就是可以輕易地在套件中加入反覆運算或迴圈的能力。  
   
@@ -52,16 +52,16 @@ ms.locfileid: "53361760"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1:複製第 1 課的套件](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [步驟 1：複製第 1 課的套件](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [步驟 2:加入和設定 Foreach 迴圈容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [步驟 2：加入和設定 Foreach 迴圈容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [步驟 3:修改一般檔案連接管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [步驟 3：修改一般檔案連線管理員](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [步驟 4:測試第 2 課的教學課程封裝](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [步驟 4：測試第 2 課的教學課程封裝](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1:複製第 1 課的套件](lesson-2-1-copying-the-lesson-1-package.md)  
+ [步驟 1：複製第 1 課的套件](lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [For 迴圈容器](control-flow/for-loop-container.md)  

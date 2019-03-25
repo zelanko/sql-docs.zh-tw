@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73f175bc92c49423cd58bc65ce67712f916b1ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506ed2c0f672d769d5ffb739b1f5109f7a19cf51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229418"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383981"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 目的地編輯器 (連接管理員頁面)
-  使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  
+  使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  
   
  若要深入了解 SQL Server 目的地，請參閱＜ [SQL Server Destination](data-flow/sql-server-destination.md)＞。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "48229418"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
- [SQL 目的地編輯器&#40;進階頁面&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
+ [SQL 目的地編輯器 &#40;對應頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [SQL 目的地編輯器 &#40;進階頁面&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [使用 SQL Server 目的地來大量載入資料](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

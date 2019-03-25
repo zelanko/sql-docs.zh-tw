@@ -22,15 +22,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb9f243d05b741fcc803f29f5703c1e02a6244d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d0660fba12f2c83cd7e97b80ac863d8d05eda18
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353707"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380176"
 ---
 # <a name="dtutil-utility"></a>Encrypt
    **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 `/SQL`、`/FILE` 和 `/DTS` 等選項來識別。  
@@ -112,7 +112,7 @@ dtutil /option [value] [/option [value]]...
 |/SourceP[assword] *password*|指定 *SQL* 和 *SOURCEUSER* 選項使用的密碼，以擷取儲存在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 執行個體上之資料庫中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 它會指定*SOURCEPASSWORD*不包含的命令列`SOURCEUSER`選項。<br /><br /> 注意：[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *server_instance*|指定與 `SQL` 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中所儲存之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 封裝的擷取作業。 在不含與 *SOURCESERVER* 、 *SIGN SQL*、 *COPY* *SQL*或 *MOVE* *SQL* 選項來指定封裝的位置。<br /><br /> 您可以在伺服器名稱中加入反斜線和執行個體名稱來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱。|  
 |/SourceU[ser] *username*|指定與 *SOURCESERVER* 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 驗證之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 、 *SIGN SQL*或 *COPY SQL*選項的命令列上指定 *MOVE SQL* 是錯的。<br /><br /> 注意：[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SQ[L] *package_path*|指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的位置。 這個選項指出封裝儲存在 **msdb** 資料庫中。 *package_path* 引數指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的路徑和名稱。 資料夾名稱以反斜線做為結尾。  如果在下列任何選項的相同命令列中指定 *SQL* 選項，就會傳回 DTEXEC_DTEXECERROR：<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL*。 *SQL* 選項可附帶下列選項中的零個或一個執行個體： <br />*SOURCEUSER*<br />*SOURCEPASSWORD*<br />*SOURCESERVER*<br /><br /> 如果未加入 *SOURCEUSERNAME* ，將會使用 Windows 驗證存取封裝。 只有在*SOURCEPASSWORD* 存在時，才允許使用 *SOURCEUSER* 。 如果不包含 *SOURCEPASSWORD* ，則使用空白密碼。<br /><br /> **\*\* 重要事項 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
+|/SQ[L] *package_path*|指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的位置。 這個選項指出封裝儲存在 **msdb** 資料庫中。 *package_path* 引數指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的路徑和名稱。 資料夾名稱以反斜線做為結尾。  如果在下列任何選項的相同命令列中指定 *SQL* 選項，就會傳回 DTEXEC_DTEXECERROR：<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL*. *SQL* 選項可附帶下列選項中的零個或一個執行個體： <br />*SOURCEUSER*<br />*SOURCEPASSWORD*<br />*SOURCESERVER*<br /><br /> 如果未加入 *SOURCEUSERNAME* ，將會使用 Windows 驗證存取封裝。 只有在*SOURCEPASSWORD* 存在時，才允許使用 *SOURCEUSER* 。 如果不包含 *SOURCEPASSWORD* ，則使用空白密碼。<br /><br /> **\*\* 重要事項 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
 ## <a name="dtutil-exit-codes"></a>dtutil 結束碼  
  **dtutil** 可設定結束碼，以便在偵測到語法錯誤、使用不正確的引數或指定無效的選項組合時，向您發出警告。 否則，公用程式就會報告「已成功地完成作業」。下表將列出封裝作業結束時， **dtutil** 公用程式所能設定的值。  
