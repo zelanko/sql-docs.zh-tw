@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143588"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305956"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>逐步解說：建立及執行 SQL Server 單元測試
 在這個逐步解說中，您要建立 SQL Server 單元測試，以確認數個預存程序的行為。 您可以建立 SQL Server 單元測試，協助識別可能會導致不正確之應用程式行為的程式碼缺失。 您可以執行 SQL Server 單元測試和應用程式測試，作為自動化測試套件的一部分。  
@@ -968,7 +968,7 @@ ms.locfileid: "54143588"
     您指定預期會發生特定例外狀況。 您可以選擇性地指定特定的錯誤號碼。 如果您沒有加入此屬性，單元測試會失敗，而且 [測試結果] 視窗會出現訊息。  
   
     > [!IMPORTANT]  
-    > 目前 Visual Studio 2012 不支援 ExpectedSqlException 屬性。 如需解決此問題的詳細資訊，請參閱 [無法執行「預期的失敗」資料庫單元測試](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
+    > 目前 Visual Studio 2012 不支援 ExpectedSqlException 屬性。 如需解決此問題的詳細資訊，請參閱 [無法執行「預期的失敗」資料庫單元測試](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test)。  
   
 3.  在 [檔案] 功能表中，按一下 [儲存 SqlServerUnitTests1.cs]。  
   

@@ -9,12 +9,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1849328d008a6b995d2242a1e00aa9c0040e8d05
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: ec052141483207da4f1af22e8b74d9edcccf6105
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732045"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417190"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和災害復原夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "53732045"
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/sql-safe-overview
 [azure_youtube]: https://mva.microsoft.com/en-US/training-courses/is-your-lack-of-a-disaster-recovery-site-keeping-you-up-at-night-8680?l=oF7YrFH1_7504984382
 [necec_youtube]: https://www.youtube.com/watch?v=9La3Cw1Q1Jk
-[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
+[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ
 [sios_youtube]: https://www.youtube.com/watch?v=U3M44gJNWQE
 
 <!--Twitter links-->

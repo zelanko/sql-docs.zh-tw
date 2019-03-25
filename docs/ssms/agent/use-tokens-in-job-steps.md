@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0efaf8bd3fb62aa673adbb91281e365882d283bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205387"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342876"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,10 +33,6 @@ ms.locfileid: "53205387"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可讓您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟指令碼中使用 Token。 撰寫作業步驟時使用 Token，所賦予您的彈性與撰寫軟體程式時使用的變數一樣。 在作業步驟指令碼中插入 Token 後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就會先在執行階段取代此 Token，然後再由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系統執行作業步驟。  
   
-> [!IMPORTANT]
-> 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的 Token 語法已變更。 因此，逸出巨集現在必須伴隨著作業步驟中使用的所有 Token 一起執行，否則這些作業步驟將會失敗。 下列「了解如何使用權杖」、「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 權杖和巨集」和「將作業步驟更新成使用巨集」章節中將描述如何使用逸出巨集，以及如何更新使用權杖的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。 此外，原本使用方括號來呼叫 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Agent 作業步驟 Token (例如 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ") 的`[DATE]`語法也已變更。 現在必須改用括號括住 Token 名稱，並且在 Token 語法的開頭加上錢幣符號 (`$`)。 例如：  
-> 
-> `$(ESCAPE_`*macro name*`(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>了解如何使用 Token  
   
@@ -101,10 +97,6 @@ ms.locfileid: "53205387"
 |**$(ESCAPE_NONE(**_token\_name_**))**|取代 Token，但不逸出字串中的任何字元。 提供這個巨集的目的，是為了在 Token 取代字串只能由受信任使用者提供的環境下，支援回溯相容性。 如需詳細資訊，請參閱本主題後面的「將作業步驟更新成使用巨集」。|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>將作業步驟更新成使用巨集  
-從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 開始，包含 Token 但不含逸出巨集的作業步驟將會失敗，而且會傳回一則錯誤訊息，表示作業步驟含有一或多個在執行作業之前必須使用巨集更新的 Token。  
-  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] 知識庫文件 915845 中有提供指令碼：[SQL Server Agent Job Steps That Use Tokens Fail in SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845) (使用權杖的 SQL Server Agent 作業步驟在 SQL Server 2005 Service Pack 1 中失敗)。您可以使用這個指令碼來更新搭配權杖使用 **ESCAPE_NONE** 巨集的所有作業步驟。 使用這個指令碼之後，我們建議您盡快檢閱使用 Token 的作業步驟，並且使用適用於此作業步驟內容的逸出巨集來取代 **ESCAPE_NONE** 巨集。  
-  
 下表說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 如何處理取代 Token。 若要開啟或關閉取代 Token，請以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]，並選取 [屬性]，然後在 [警示系統] 頁面上選取或清除 [取代回應警示之所有作業的 Token] 核取方塊。  
   
 |Token 語法|警示 Token 取代開啟|警示 Token 取代關閉|  

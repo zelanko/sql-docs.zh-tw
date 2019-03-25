@@ -15,16 +15,16 @@ ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f95edb2129432df62edf4db88c6d42b28e46bddd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 20ffbc7d09755d6cc849886723217a4142d47322
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701786"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306016"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>建立全文檢索搜尋查詢 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-全文檢索搜尋會使用 CONTAINS 述詞 (Predicate)，找出在指定資料行中具有指定文字的資料列。 全文檢索搜尋只適用於具有現用全文檢索索引的資料行。 如果您嘗試在未具有目前現用全文檢索索引的資料行上使用 CONTAINS 子句，您會收到錯誤訊息。 如需全文檢索索引和 CONTAINS 子句的詳細資訊，請參閱 [全文檢索搜尋 (SQL Server)](https://msdn.microsoft.com/a0ce315d-f96d-4e5d-b4eb-ff76811cab75) 和 [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84)。  
+全文檢索搜尋會使用 CONTAINS 述詞 (Predicate)，找出在指定資料行中具有指定文字的資料列。 全文檢索搜尋只適用於具有現用全文檢索索引的資料行。 如果您嘗試在未具有目前現用全文檢索索引的資料行上使用 CONTAINS 子句，您會收到錯誤訊息。 如需全文檢索索引和 CONTAINS 子句的詳細資訊，請參閱 [全文檢索搜尋 (SQL Server)](../../relational-databases/search/full-text-search.md) 和 [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84)。  
   
 ### <a name="to-create-a-full-text-search-query"></a>建立全文檢索搜尋查詢  
   

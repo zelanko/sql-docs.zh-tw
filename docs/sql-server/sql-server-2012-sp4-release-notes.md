@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1d74f0569e2add7d9c8b72a86871540bef146f5e
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cc09ccfbf23e200f8771b84d40fb5a1dd3d1dc9c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579638"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306106"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 
 ### <a name="download-pages"></a>下載頁面  
 - [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server 2012 SP1 Express](https://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server 2012 SP1 Express](https://www.microsoft.com/download/details.aspx?id=35579)
 
 
 您可以使用下表來決定要下載並安裝的檔案。 在安裝 Service Pack 之前，請先確認您擁有正確的系統需求。 系統需求會列在資料表中所連結的下載頁面。  
