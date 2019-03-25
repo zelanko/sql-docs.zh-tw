@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bf5d6f0a92b18cc41f74d068686c3c8c9589228a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523638"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377246"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大量插入工作編輯器 (連接頁面)
   使用 [大量插入工作編輯器] 對話方塊的 [連接] 頁面，即可指定大量插入作業的來源和目的地，以及要使用的格式。  
@@ -31,7 +31,7 @@ ms.locfileid: "52523638"
  **[連接]**  
  在清單中選取 OLE DB 連線管理員，或按一下 [\<新增連接…>] 建立新的連接。  
   
- **相關的主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)，[設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **相關主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)，[設定 OLE DB 連接管理員](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  輸入目的地資料表或檢視的名稱，或在清單中選取資料表或檢視。  
@@ -51,7 +51,7 @@ ms.locfileid: "52523638"
   
  如果您使用一般檔案連接管理員存取來源檔案，則大量插入工作不會使用一般檔案連接管理員中指定的格式。 而「大量插入」工作會使用格式檔案中指定的格式，或工作之 RowDelimiter 和 ColumnDelimiter 屬性的值。  
   
- **相關的主題：**[檔案連接管理員](connection-manager/file-connection-manager.md)，[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)，[一般檔案連線管理員](connection-manager/flat-file-connection-manager.md)，[一般檔案連接管理員編輯器 &#40;&#41; ](general-page-of-integration-services-designers-options.md)，[一般檔案連接管理員編輯器]&#40;資料行頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)，[一般檔案連接管理員編輯器&#40;進階頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **相關主題：**[檔案連接管理員](connection-manager/file-connection-manager.md)，[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)，[一般檔案連線管理員](connection-manager/flat-file-connection-manager.md)，[一般檔案連接管理員編輯器 &#40;&#41; ](general-page-of-integration-services-designers-options.md)，[一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)，[一般檔案連接管理員編輯器&#40;進階頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **重新整理資料表**  
  重新整理資料表和檢視的清單。  

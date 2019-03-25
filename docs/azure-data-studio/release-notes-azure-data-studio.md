@@ -3,7 +3,7 @@ title: 版本資訊
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 版本資訊
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161625"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381586"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版的 ！](download.md)**
+
+## <a name="march-2019-hotfix"></a>年 3 月 2019 (Hotfix)
+
+2019 年 3 月 22 日&nbsp;  /  &nbsp;版本：1.5.2 &nbsp;  /  &nbsp; Hotfix 版本
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 已修正 1.5.1 中探索到的一些問題。 | 請參閱[三月在 GitHub 上的 Hotfix 版本](https://github.com/Microsoft/azuredatastudio/milestone/28)。<br/> <br/>&bull; &nbsp; 已修正的使用者無法關閉 notebook 開啟儀表板中的 「 開啟筆記本 」 工作的問題 <br/>&bull; &nbsp; 已修正問題，Notebook JSON 有較多} 儲存後 <br/>&bull; &nbsp; 已修正的問題，notebook 方格所未回應佈景主題變更 <br/>&bull; &nbsp; 已修正的問題，其中顯示完整的 notebook 路徑 索引標籤標頭中。 現在會顯示檔案名稱。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>2019 年 3 月
 

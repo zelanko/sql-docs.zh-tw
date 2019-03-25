@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88ee64782479e0ffed967485372dea8eae775430
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362660"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385265"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>步驟 2：加入和設定一般檔案連接管理員
   在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型] 對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
@@ -99,7 +99,7 @@ ms.locfileid: "53362660"
 4.  按一下 [確定] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 3:加入和設定 OLE DB 連接管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [步驟 3：加入和設定 OLE DB 連接管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [一般檔案連接管理員](connection-manager/file-connection-manager.md)   

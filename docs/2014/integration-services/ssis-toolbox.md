@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec02ad946483f74b25a3b1ae514a20e1abc4523
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372010"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381846"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   安裝在本機電腦上的所有元件 (包括針對 SQL Server 2008 和 2008 R2 建立的協力廠商元件)，現在都會自動出現在新的 [SSIS 工具箱] 中。 當您安裝其他元件時，在此工具箱內按一下滑鼠右鍵，然後按一下 [重新整理工具箱] 即可加入元件。  
@@ -31,7 +31,7 @@ ms.locfileid: "53372010"
   
  在 **[SSIS 工具箱]** 中，會將控制流程和資料流程元件組織成不同的類別目錄。  您可以展開和摺疊類別目錄方便檢視，也可以根據您的喜好變更元件的組織方式。  您可以在工具箱內部按一下滑鼠右鍵，然後按一下 [還原工具箱預設值] 來還原預設組織方式。  
   
- 當您選取 **[控制流程]** 、 **[資料流程]** 和 **[事件處理常式]** 索引標籤時， **[我的最愛]** 與 **[通用]** 類別目錄會出現在工具箱中。 當您選取 **[控制流程]** 索引標籤或 **[事件處理常式]** 索引標籤時， **[其他工作]** 類別目錄會出現在工具箱中。當您選取 [資料流程]索引標籤時， **[其他轉換]**、 **[其他來源]** 和 **[其他目的地]** 類別目錄會出現在工具箱中。  
+ 當您選取 **[控制流程]** 、 **[資料流程]** 和 **[事件處理常式]** 索引標籤時， **[我的最愛]** 與 **[通用]** 類別目錄會出現在工具箱中。 當您選取 **[控制流程]** 索引標籤或 **[事件處理常式]** 索引標籤時， **[其他工作]** 類別目錄會出現在工具箱中。當您選取 **[資料流程]** 索引標籤時， **[其他轉換]**、 **[其他來源]** 和 **[其他目的地]** 類別目錄會出現在工具箱中。  
   
  建立新的 SSIS 專案或開啟現有的專案時，會自動顯示 **[SSIS 工具箱]** 。 您也可以按一下封裝設計介面右上角的工具箱按鈕，開啟此工具箱。  
   

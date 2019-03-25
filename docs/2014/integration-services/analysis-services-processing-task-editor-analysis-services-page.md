@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ead79b77838d90beddbd5317608331c3b925bbea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187628"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380896"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 處理工作編輯器 (Analysis Services 頁面)
   使用 [Analysis Services 處理工作編輯器] 對話方塊的 [Analysis Services] 頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
@@ -44,14 +44,14 @@ ms.locfileid: "48187628"
  **新增**  
  建立新的 Analysis Services 連接管理員。  
   
- **相關主題：** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md)、 [加入 Analysis Services 連接管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相關主題：**[Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)，[加入 Analysis Services 連接管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **物件清單**  
  |屬性|描述|  
 |--------------|-----------------|  
 |**Object Name**|列出指定的物件名稱。|  
 |**型別**|列出指定的物件類型。|  
-|**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題**:[多維度模型物件處理](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**處理選項**|選取清單中的處理選項。<br /><br /> **相關主題**：[多維度模型物件處理](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**設定**|列出指定物件的處理設定。|  
   
  **[加入]**  
@@ -63,7 +63,7 @@ ms.locfileid: "48187628"
  **影響分析**  
  執行選取之物件的影響分析。  
   
- **相關主題：**[影響分析對話方塊 &#40;Analysis Services - 多維度資料&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **相關主題：**[影響分析對話方塊&#40;Analysis Services-多維度資料&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批次設定摘要**  
  |屬性|描述|  
@@ -77,11 +77,11 @@ ms.locfileid: "48187628"
  **變更設定**  
  變更維度索引鍵中的處理選項和錯誤處理。  
   
- **相關主題：**[變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **相關主題：**[變更設定 對話方塊中&#40;Analysis Services-多維度資料&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 處理工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services 處理工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [Analysis Services 執行 DDL 工作](control-flow/analysis-services-execute-ddl-task.md)  
   
   
