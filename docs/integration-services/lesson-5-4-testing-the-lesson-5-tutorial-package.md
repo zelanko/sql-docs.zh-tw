@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36b0fe9670eceb2520c1c792cf247a9d4da47598
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: f97121a1916362d415eef3de717ad091fbac7958
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880451"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272285"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>第 5-4 課：測試第 5 課套件
 

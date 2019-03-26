@@ -15,15 +15,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa96f8071ba6331dbfab8b708cd023f40f8a52cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 399a5b83aff03813418f3c32e00dd11f518a1b51
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506185"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280132"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以程式設計方式加入資料流程元件
   當您建立資料流程時，可以從加入元件開始。 接著您會設定這些元件，然後將它們連接在一起以便在執行階段建立資料流程。 本章節描述將元件加入資料流程工作，建立元件的設計階段執行個體，然後設定元件。 如需如何連線元件的資訊，請參閱[以程式設計方式連線資料流程元件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  

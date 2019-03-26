@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abbb37dee6cf17af196679ed2136cf792ce49f3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 497c82ffc7a9bf0b6715a4d005145c73a19f7b78
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610296"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270865"
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ## <a name="remarks"></a>Remarks  
  若要移除資料點選，執行的執行個體必須處於已建立狀態 ([catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 檢視之 [狀態] 資料行中的值為 1)。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
 -   執行的執行個體之 MODIFY 權限  

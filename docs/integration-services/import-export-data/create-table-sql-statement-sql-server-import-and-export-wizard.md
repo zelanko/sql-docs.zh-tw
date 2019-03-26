@@ -3,22 +3,21 @@ title: 建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈) | Mic
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec571f93da2ca51aadc6a79a54090bcb0eab08d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b78d8a063b933008e420eba29ce22e3bc0f305
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601146"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222002"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
 如果您選取 [建立目的地資料表]  ，然後在 [資料行對應]  對話方塊中選取 [編輯 SQL]  ，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [建立資料表的 SQL 陳述式]  對話方塊。 在此頁面上，您可以檢閱並選擇性地自訂 **CREATE TABLE** 命令，精靈將會執行此命令來建立新的目的地資料表。

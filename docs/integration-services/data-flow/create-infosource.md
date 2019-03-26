@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc55d148beba271181a700eedd9de90f95abe549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a69f86f7eccbf7a105fa67e3572ddc46615468f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705326"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271245"
 ---
 # <a name="create-infosource"></a>建立 InfoSource
   使用 [建立 InfoSource] 對話方塊可以建立新的 InfoSource。 若要建立新的 InfoSource，您可以使用 [建立交易資料的 InfoSource] 或 [建立主要資料的 InfoSource] 對話方塊。  

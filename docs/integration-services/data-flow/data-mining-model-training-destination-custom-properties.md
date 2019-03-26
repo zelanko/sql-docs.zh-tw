@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c792827f8016fdf211b378df80fb94c7ca143e57
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ccf961ef43f1c1ca5ffc116c4e816fd2edc82ccc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641416"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277417"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>資料採礦模型定型目的地自訂屬性
   資料採礦模型定型目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  

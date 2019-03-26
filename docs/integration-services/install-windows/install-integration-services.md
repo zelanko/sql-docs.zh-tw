@@ -17,15 +17,15 @@ helpviewer_keywords:
 - installing Integration Services
 - Setup [Integration Services]
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9183daa6e11e015bf484002fcf5857adab0ec087
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801972"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271199"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
 

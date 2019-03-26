@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0afd8f494474c54eaf911f6cd7b8f74c9ec1a287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0488d886afdeaac9fe43da22d8a3e9d3c85ff8fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729556"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274751"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47729556"
 |validation_status|**char(1)**|僅供參考之用。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
 |last_validation_time|**datetimeoffset(7)**|僅供參考之用。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  若要查看這個檢視中的資料列，您必須具有下列任何一個權限：  
   
 -   專案的 READ 權限  

@@ -1,7 +1,7 @@
 ---
 title: 檢視同等於 SQL 追蹤事件類別的擴充事件 | Microsoft 文件
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,46 +16,48 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85482d1df6e27d103b97ce3e00b02baeea3a9a5f
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537596"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417180"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>檢視同等於 SQL 追蹤事件類別的擴充事件項目
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   如果您想要使用「擴充事件」來收集同等於 SQL 追蹤事件類別和資料行的事件資料，了解 SQL 追蹤事件如何對應到「擴充事件」事件和動作會非常實用。  
   
  您可以使用下列程序來檢視同等於每一個 SQL 追蹤事件及其關聯資料行的「擴充事件」事件和動作。  
   
-## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>若要使用查詢編輯器檢視相當於 SQL 追蹤事件的擴充事件  
-  
--   從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查詢編輯器執行下列查詢：  
-  
-    ```sql  
-    USE MASTER;  
-    GO  
-    SELECT DISTINCT  
-       tb.trace_event_id,  
-       te.name AS 'Event Class',  
-       em.package_name AS 'Package',  
-       em.xe_event_name AS 'XEvent Name',  
-       tb.trace_column_id,  
-       tc.name AS 'SQL Trace Column',  
-       am.xe_action_name as 'Extended Events action'  
-    FROM (sys.trace_events te LEFT OUTER JOIN sys.trace_xe_event_map em  
-       ON te.trace_event_id = em.trace_event_id) LEFT OUTER JOIN sys.trace_event_bindings tb  
-       ON em.trace_event_id = tb.trace_event_id LEFT OUTER JOIN sys.trace_columns tc  
-       ON tb.trace_column_id = tc.trace_column_id LEFT OUTER JOIN sys.trace_xe_action_map am  
-       ON tc.trace_column_id = am.trace_column_id  
-    ORDER BY te.name, tc.name  
-    ```  
-  
- 當您檢視結果時，請注意下列事項：  
-  
--   如果事件類別資料行以外的所有其他資料行都傳回 NULL，表示並未從 SQL 追蹤移轉事件類別。  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>若要使用查詢編輯器檢視相當於 SQL 追蹤事件的擴充事件
+
+- 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的查詢編輯器執行下列查詢：
+
+   ```sql
+   USE MASTER;
+   GO
+   SELECT DISTINCT
+      tb.trace_event_id,
+      te.name            AS 'Event Class',
+      em.package_name    AS 'Package',
+      em.xe_event_name   AS 'XEvent Name',
+      tb.trace_column_id,
+      tc.name            AS 'SQL Trace Column',
+      am.xe_action_name  AS 'Extended Events action'
+   FROM
+                sys.trace_events         te
+      LEFT JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+   ORDER BY te.name, tc.name
+   ```
+
+當您檢視結果時，請注意下列事項：  
+
+- 如果事件類別資料行以外的所有其他資料行都傳回 NULL，表示並未從 SQL 追蹤移轉事件類別。  
   
 -   如果只有擴充事件動作資料行中的值為 NULL，表示下列其中一個條件成立：  
   

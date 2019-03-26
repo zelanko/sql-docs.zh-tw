@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3046b281141649746c8d93496a0ddbb8ad3607c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639245"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282842"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
   此主題的程序描述如何使用「Foreach 迴圈」容器搭配適當列舉值，循環使用資料夾中的 Excel 活頁簿，或循環使用 Excel 活頁簿中的資料表。  

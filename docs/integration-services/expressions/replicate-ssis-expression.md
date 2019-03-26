@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8dc9024d0c68b4ed992215417dc40c0438877701
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3475e0b818b39a787371a11397a09dbf613be3f6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840756"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277327"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 運算式)
   傳回複寫許多次的字元運算式。 *times* 引數必須評估為整數。  

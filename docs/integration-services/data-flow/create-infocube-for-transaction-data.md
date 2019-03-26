@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2f17affc1bb3e9179a62269d9f98e9d5d1fd9d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdca90b8cdde1e9995da7ec28d29191dd2a36200
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824756"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270717"
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
   使用 [建立交易資料的 InfoCube] 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  

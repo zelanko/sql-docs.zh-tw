@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ff16205f71cdbcea36718f45d1afbc67012a035
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: b65e44de58e2aeea21485b1a2875fa7f00349dc5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880481"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271693"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>第 5-2 課：啟用和設定套件設定
 

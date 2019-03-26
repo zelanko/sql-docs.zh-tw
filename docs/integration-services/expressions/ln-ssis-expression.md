@@ -11,15 +11,15 @@ helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c5df9e40cd3a50a02ed343d1c03ba43fb23ba1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac5843b20f43d1038c5a331d6fe4222185f00120
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711056"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270441"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 運算式)
   傳回數值運算式的自然對數。  

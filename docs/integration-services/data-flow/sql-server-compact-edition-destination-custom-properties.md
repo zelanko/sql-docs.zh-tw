@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7a901a99b8b8bcb485f4db25c98fc67abc8fee6
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82c4ae27d88ddafd24d0db0a87e2ca73ff60e9cd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639265"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270361"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目的地自訂屬性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  

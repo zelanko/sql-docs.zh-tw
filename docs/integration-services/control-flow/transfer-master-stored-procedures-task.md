@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ddcdfc32fe38495779f95aae0da20bf314c34c17
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 70c36478c4dac5ad4bbdf5398acb64dc338994dc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639645"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271804"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>傳送主要預存程序工作
   「傳送主要預存程序」工作會在 **執行個體上的** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫之間，傳送一個或多個使用者自訂預存程序。 若要從 **master** 資料庫傳送預存程序，程序的擁有者必須為 dbo。  

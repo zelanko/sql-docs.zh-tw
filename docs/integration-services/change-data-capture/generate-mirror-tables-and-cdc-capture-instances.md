@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - mirTab
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8255e23ec76dc10494a2d30e2d0f24792b7aa13c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92a206c97676ff49b50565d1ac947e7046cbcf6a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698886"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281032"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>產生鏡像資料表和 CDC 擷取執行個體
   使用 [產生鏡像資料表] 頁面，針對 CDC 執行個體中包含的資料表產生鏡像資料表。  

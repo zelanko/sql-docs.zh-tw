@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43c841010b70599803c71fd6307cfb68464b7265
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 64982c47b9089bcaf878e9846714ed93b49eb7ad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210999"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275634"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>第 4 課：使用 SSIS 來新增錯誤流程重新導向
 

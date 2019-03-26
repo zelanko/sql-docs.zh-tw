@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3560a83c6e292a5e3a46e97b5e34c3bac9eac894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 776a26444181ce722651952c45ea0b6b655a41ba
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641796"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271890"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>使用資料流程中的資料類型
   在 Integration Services 中開發自訂資料流程元件時，您會不斷地處理資料類型、將資料複製到資料流程緩衝區或從其中複製資料，以及轉換值。 在本主題中的資訊可協助您選擇正確的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型，以及正確的處理方法。  

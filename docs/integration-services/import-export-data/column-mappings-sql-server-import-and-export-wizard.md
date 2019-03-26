@@ -3,22 +3,21 @@ title: 資料行對應 (SQL Server 匯入和匯出精靈) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 790542daa3cf69f5d1cd149a3356545fe69b03e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733866"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222092"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>資料行對應 (SQL Server 匯入和匯出精靈)
   選取現有資料表和檢視，以複製或檢視您所提供的查詢之後，如果您按一下 [編輯對應]， [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [資料行對應]  對話方塊。 在此頁面上，您可以指定並設定目的地資料行以接收從來源資料行中複製的資料。 您通常不需要變更此頁面上的任何項目。
