@@ -16,12 +16,12 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2792bd3a13be5ceb4ee8965065f6c6619f389d22
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a7ad65c0563598b06b88d2d3f744ade4f37a8fc8
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601229"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305946"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.sql.ResultSet getCatalogs()
  此 getCatalogs 方法由 java.sql.DatabaseMetaData 介面中的 getCatalogs 方法所指定。  
   
 > [!NOTE]  
->  在 SQL Azure，您應該連接至 master 資料庫來呼叫**SQLServerDatabaseMetaData.getCatalogs**。 SQL Azure 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**會使用 sys.databases 檢視取得目錄。 中的權限的討論，請參閱[sys.databases （SQL Azure 資料庫）](https://go.microsoft.com/fwlink/?LinkId=217396)若要了解**SQLServerDatabaseMetaData.getCatalogs** SQL Azure 上的行為。  
+>  在 SQL Azure，您應該連接至 master 資料庫來呼叫**SQLServerDatabaseMetaData.getCatalogs**。 SQL Azure 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**會使用 sys.databases 檢視取得目錄。 中的權限的討論，請參閱[sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)若要了解**SQLServerDatabaseMetaData.getCatalogs** SQL Azure 上的行為。  
   
  getCatalogs 方法所傳回的結果集將包含下列資訊：  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a5fcda8f88d1e16dc39bd4de431239a30cfd218d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658618"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282452"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
   將一個資料流程元件的輸出與另一元件的輸入連接，路徑可連接資料流程中的兩個元件。 路徑具有一個來源和一個目的地。 例如，如果路徑連接 OLE DB 來源和「排序」轉換，則 OLE DB 來源是路徑的來源，而「排序」轉換是路徑的目的地。 來源是路徑開始處的元件，而目的地是路徑結束處的元件。  
@@ -144,7 +144,7 @@ ms.locfileid: "47658618"
  按一下即可使用 [設定資料檢視器] 對話方塊，來設定選取的資料檢視器。  
  
 ## <a name="path-properties"></a>路徑屬性
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
   
  本主題將列出及描述連接資料流程物件之路徑的自訂屬性。  
   

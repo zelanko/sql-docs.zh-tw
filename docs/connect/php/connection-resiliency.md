@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527104"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305916"
 ---
 # <a name="idle-connection-resiliency"></a>閒置連線恢復功能
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[連接恢復功能](https://msdn.microsoft.com/library/dn632678.aspx)是，中斷閒置連接在重新建立，在某些條件約束的準則。 如果 Microsoft SQL Server 的連線失敗，連接恢復功能可讓用戶端嘗試自動重新建立連線。 連接恢復功能是資料來源的屬性只有 SQL Server 2014 及更新版本和 Azure SQL Database 支援連接恢復功能。
+[連接恢復功能](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)是，中斷閒置連接在重新建立，在某些條件約束的準則。 如果 Microsoft SQL Server 的連線失敗，連接恢復功能可讓用戶端嘗試自動重新建立連線。 連接恢復功能是資料來源的屬性只有 SQL Server 2014 及更新版本和 Azure SQL Database 支援連接恢復功能。
 
 連接恢復功能透過兩個連接關鍵字可加入至連接字串中實作： **ConnectRetryCount**並**ConnectRetryInterval**。
 
@@ -131,4 +131,4 @@ Statement 2 successful.
 ```
 
 ## <a name="see-also"></a>另請參閱
-[Windows ODBC 驅動程式中的連接恢復功能](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Windows ODBC 驅動程式中的連接恢復功能](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

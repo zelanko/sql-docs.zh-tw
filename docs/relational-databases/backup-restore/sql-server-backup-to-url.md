@@ -1,7 +1,7 @@
 ---
 title: SQL Server 備份至 URL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/17/2017
+ms.date: 03/25/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,15 +11,15 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c609178c8bcb31bfba669b989ef12f2b21d6efb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ef47b518c5c2d1595458d652b1fcde7065400b79
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327791"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434509"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   本主題介紹使用 Microsoft Azure Blob 儲存體服務作為備份目的地所需的概念、需求及元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 本主題包含這些差異和一些程式碼範例。  
   

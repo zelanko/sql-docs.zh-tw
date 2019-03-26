@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222054"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434429"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式
 
@@ -137,6 +137,9 @@ output: #output parameter the app expects and the type
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> `spec.yaml`檔同時指定`poolsize`和一些`replicas`。 數目`replicas`指定需要部署的服務複本數目。 `poolsize`指定您想要為每個複本建立的集區數目。 這些設定會影響部署可以平行處理的要求量。 一個給定時間的要求數目上限是等於`replicas`時間`poolsize`，也就是 如果您有 5 個複本和 2 個集區，每個複本部署可以處理以平行方式的 10 名要求。 請參閱下圖的圖形化表示法`replicas`和`poolsize`:![Poolsize 和複本](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 您可以檢查應用程式會使用 list 命令來部署：
 

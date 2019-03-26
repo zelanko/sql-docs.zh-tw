@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3893672f6d253bf3f428198dd58d63e3cac30baa
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326419"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434452"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>建立及儲存資料行主要金鑰 (永遠加密)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54326419"
 使用 [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) Cmdlet 來建立自我簽署的憑證。 下列範例示範如何產生可以作為永遠加密之資料行主要金鑰的憑證。
 
 ```
-New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
+# New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
 $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocation Cert:CurrentUser\My -KeyExportPolicy Exportable -Type DocumentEncryptionCert -KeyUsage KeyEncipherment -KeySpec KeyExchange -KeyLength 2048 
 
 # To create a certificate in the local machine certificate store location you need to run the cmdlet as an administrator.

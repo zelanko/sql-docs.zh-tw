@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86272ee2bd936b84c72e6cbc3fd9083d2d1c39bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 202ea098033914875e99510377dcfcd2db6d7506
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616486"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273565"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>威脅和弱點安全防護
   雖然 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含各種安全性機制，但是封裝以及封裝所建立或使用的檔案可能會遭到惡意使用者的利用。  
@@ -38,7 +38,7 @@ ms.locfileid: "47616486"
   
 |威脅或弱點|定義|降低|  
 |-----------------------------|----------------|----------------|  
-|封裝來源|封裝的來源是指建立此封裝的個人或組織。 執行來自未知或不受信任來源的封裝可能會有風險。|使用數位簽章來識別封裝的來源，並且只執行來自已知且信任來源的封裝。 如需詳細資訊，請參閱 [Identify the Source of Packages with Digital Signatures](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)(使用數位簽章識別封裝來源)。|  
+|封裝來源|封裝的來源是指建立此封裝的個人或組織。 執行來自未知或不受信任來源的封裝可能會有風險。|使用數位簽章來識別封裝的來源，並且只執行來自已知且信任來源的封裝。 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。|  
 |封裝內容|封裝內容包括封裝中的元素及其屬性。 這些屬性可能會包含機密資料，例如密碼或連接字串。 SQL 陳述式等封裝元素可能會顯示資料庫的結構。|進行下列步驟來控制封裝及內容的存取權：<br /><br /> 1) 若要控制封裝本身的存取權，請將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能套用至儲存在 **執行個體之** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的封裝。 對於儲存在檔案系統中的封裝，請套用檔案系統安全性功能，例如存取控制清單 (ACL)。<br /><br /> 2) 若要控制封裝內容的存取權，請設定封裝的保護等級。<br /><br /> 如需詳細資訊，請參閱[安全性概觀 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md) 和[封裝中的敏感性資料存取控制](../../integration-services/security/access-control-for-sensitive-data-in-packages.md)。|  
 |封裝輸出|當您將封裝設定成使用組態、檢查點和記錄時，此封裝就會在封裝外部儲存這項資訊。 儲存在封裝外部的資訊可能會包含機密資料。|若要保護封裝儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料表的組態和記錄，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能。<br /><br /> 若要控制檔案的存取權，請使用檔案系統所提供的存取控制清單 (ACL)。<br /><br /> 如需詳細資訊，請參閱 [Access to Files Used by Packages](#files)|  
   
@@ -123,7 +123,7 @@ ms.locfileid: "47616486"
  同樣地，如果封裝使用的檢查點檔案包含機密資訊，應使用存取控制清單 (ACL) 來保護儲存檔案之位置或資料夾的安全。 檢查點檔案儲存有關封裝進度和目前變數值的目前狀態資訊。 例如，封裝可能包括含有電話號碼的自訂變數。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 ### <a name="log-files"></a>記錄檔  
- 寫入檔案系統的記錄項目也應使用存取控制清單 (ACL) 保護其安全。 記錄項目還可以儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性進行保護。 記錄項目可能包含機密資訊，例如，如果封裝包含建構參考電話號碼之 SQL 陳述式的「執行 SQL」工作，SQL 陳述式的記錄項目便會包含電話號碼。 SQL 陳述式可能還顯示有關資料庫中資料表與資料行名稱的私用資訊。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 寫入檔案系統的記錄項目也應使用存取控制清單 (ACL) 保護其安全。 記錄項目還可以儲存於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中，由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性進行保護。 記錄項目可能包含機密資訊，例如，如果封裝包含建構參考電話號碼之 SQL 陳述式的「執行 SQL」工作，SQL 陳述式的記錄項目便會包含電話號碼。 SQL 陳述式可能還顯示有關資料庫中資料表與資料行名稱的私用資訊。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
 
 ## <a name="service"></a> 授予 Integration Services 服務的權限
   封裝保護等級可限制已獲允許編輯和執行封裝的人員。 您需要額外的保護措施來限制有誰能夠檢視目前在伺服器上執行的封裝清單，以及有誰能夠停止目前在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中執行的封裝。  

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7749ca5009a0334fe555a66dc2e06afa3278f922
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20461216a802bde79005d7539ce2d09cd032c771
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653077"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290644"
 ---
 # <a name="ftp-connection-manager"></a>FTP 連接管理員
-  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
+  FTP 連接管理員可讓封裝連接到「檔案傳輸通訊協定 (FTP)」伺服器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 FTP 工作使用此連線管理員。  
   
  當您將 FTP 連線管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立在執行階段可解析為 FTP 連接的連線管理員、設定連線管理員屬性，並將連線管理員加入封裝上的 **Connections** 集合。  
   

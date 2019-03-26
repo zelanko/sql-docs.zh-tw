@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607098"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342863"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步驟 4︰使用 ADO.NET 彈性地連線到 SQL
 
@@ -68,7 +68,7 @@ ms.locfileid: "51607098"
 注意： 伺服器名稱的連接字串專為 Azure SQL Database，因為它包含的四個字元前置詞**tcp:**。 但您可以調整伺服器字串以連線到 Microsoft SQL Server。  
   
   
-```CSharp  
+```csharp
     using System;  // C#  
     using CG = System.Collections.Generic;  
     using QC = System.Data.SqlClient;  

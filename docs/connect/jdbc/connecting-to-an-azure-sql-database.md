@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736979"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306126"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>連接到 Azure SQL Database
 
@@ -33,7 +33,7 @@ ms.locfileid: "55736979"
 ## <a name="details"></a>詳細資料
 
 當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該連接到 master 資料庫來呼叫**SQLServerDatabaseMetaData.getCatalogs**。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 檢視取得目錄。 中的權限的討論，請參閱[sys.databases （SQL Azure 資料庫）](https://go.microsoft.com/fwlink/?LinkId=217396)若要了解**SQLServerDatabaseMetaData.getCatalogs**行為[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 不支援從使用者資料庫傳回整組目錄。 **SQLServerDatabaseMetaData.getCatalogs**使用 sys.databases 檢視取得目錄。 中的權限的討論，請參閱[sys.databases & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)若要了解**SQLServerDatabaseMetaData.getCatalogs**行為[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]。  
   
 ## <a name="connections-dropped"></a>連接中斷
 
