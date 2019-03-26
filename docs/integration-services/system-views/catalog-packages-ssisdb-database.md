@@ -11,15 +11,15 @@ helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1558aeed5266d573fcf7b99ced456a4d2de09940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 608e3fd8ebf7de4e2f84357c8b7a1874c33e1230
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818956"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279614"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47818956"
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個封裝的資料列。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個檢視需要下列其中一個權限：  
   
 -   對應專案的 READ 權限  

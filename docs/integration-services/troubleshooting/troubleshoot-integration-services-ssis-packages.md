@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ce2c0b78-e1f1-409a-9f4c-f90027c70c07
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4b70fb780d4ff51bb2580bcfad415f117404cb92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f20ed8400c78d82010f46c584b16b08ee633e2d7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639636"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271017"
 ---
 # <a name="troubleshoot-integration-services-ssis-packages"></a>疑難排解 Integration Services (SSIS) 封裝
 ## <a name="in-this-section"></a>本節內容

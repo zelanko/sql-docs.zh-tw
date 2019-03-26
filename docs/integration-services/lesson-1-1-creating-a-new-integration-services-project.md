@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b5fd6b088b9affb4986b67deffb50b134e08d5c
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: f39232dd7a1471d08eb283eea0819d909d1e8fca
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143228"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281892"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>第 1-1 課：建立新的 Integration Services 專案
 

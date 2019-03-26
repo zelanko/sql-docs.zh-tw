@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 72962fd498057ccb53126f31c13f91acac96b5eb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c78c8b091751e1fd849c3490544acd492cd595c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906194"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282892"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop Hive 工作
   使用 Hadoop Hive 工作在 Hadoop 叢集上執行 Hive 指令碼。  

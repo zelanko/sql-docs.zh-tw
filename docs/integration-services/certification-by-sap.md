@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80b646eb748e73ab01a12b463e3948f261c6b9a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c53cba2770796090b47acf7f6d1d3ff374f2ea26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710352"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277717"
 ---
 # <a name="certification-by-sap"></a>SAP 認證
   Microsoft Connector 1.1 for SAP BW 已獲得 SAP 的認證，認可為能夠和 SAP NetWeaver 整合。  

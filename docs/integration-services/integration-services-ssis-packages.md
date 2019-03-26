@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e4eb0d6b5f40e3acd6b44d86dda24764de6e3bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e44feb2ee9355a5992de3063a669da5b7bb589e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671716"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272755"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
   封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
@@ -60,7 +60,7 @@ ms.locfileid: "47671716"
  在不同電腦上安裝封裝時，組態會先儲存並隨著封裝部署。 安裝封裝時，可更新組態中的值，以便於不同環境中支援封裝。 如需詳細資訊，請參閱 [建立封裝組態](../integration-services/packages/create-package-configurations.md)。  
   
 ### <a name="logging-and-log-providers"></a>記錄和記錄提供者  
- 記錄是封裝執行時所收集的封裝資訊集合。 例如，記錄可提供封裝執行的開始和結束時間。 記錄提供者會定義封裝及其容器和工作可用來記錄執行階段資訊的目的地類型與格式。 記錄與封裝相關，但封裝中的工作和容器可將資訊記錄至任何封裝記錄中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種用來記錄的內建記錄提供者。 例如， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和文字檔的記錄提供者。 您也可以建立自訂的記錄提供者，並用它們進行記錄。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)。  
+ 記錄是封裝執行時所收集的封裝資訊集合。 例如，記錄可提供封裝執行的開始和結束時間。 記錄提供者會定義封裝及其容器和工作可用來記錄執行階段資訊的目的地類型與格式。 記錄與封裝相關，但封裝中的工作和容器可將資訊記錄至任何封裝記錄中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種用來記錄的內建記錄提供者。 例如， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和文字檔的記錄提供者。 您也可以建立自訂的記錄提供者，並用它們進行記錄。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)。  
   
 ### <a name="variables"></a>變數  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援系統變數和使用者定義的變數。 系統變數提供執行階段時，有關封裝物件的實用資訊，而使用者定義的變數則支援封裝中的自訂狀況。 這兩種類型的變數都可在運算式、指令碼和組態中使用。  
@@ -83,7 +83,7 @@ ms.locfileid: "47671716"
  在封裝上設定交易屬性，可讓封裝中的工作、容器和連接聯結交易。 交易屬性能確保封裝及其元素為一個單位的成敗。 封裝還能於交易中執行其他封裝並註冊其他封裝，如此您就能以單一工作單位的方式執行多個封裝。 如需詳細資訊，請參閱 [Integration Services 交易](../integration-services/integration-services-transactions.md)。  
   
 ## <a name="custom-log-entries-available-on-the-package"></a>封裝上可用的自訂記錄項目  
- 下表列出封裝的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表列出封裝的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d3eef374c42f11b9e97da4d8b96b1abcef10d27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d82da0734ba0e3dda009b912fa9c537e77a6f39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666182"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280602"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
   傳回代表日期之日期部分的整數。  

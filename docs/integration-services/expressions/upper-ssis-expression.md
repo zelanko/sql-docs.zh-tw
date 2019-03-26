@@ -13,15 +13,15 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cd598161348d47b7c59781059fe2dbbe187e676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9269920c478b13d7e981acc619075c5017055b8e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686166"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276367"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 運算式)
   傳回小寫字元轉換為大寫字元之後的字元運算式。  

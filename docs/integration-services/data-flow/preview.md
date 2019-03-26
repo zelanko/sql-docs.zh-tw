@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed9dc1c64a11707d2222549d84598435b75ea4cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc444ff27f948ac452e6da05c6ba33113fb62f39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761926"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289914"
 ---
 # <a name="preview"></a>預覽
   使用 **[預覽]** 對話方塊可以預覽 SAP BW 來源即將擷取的資料。  

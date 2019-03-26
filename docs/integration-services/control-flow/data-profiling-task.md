@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23abd4f7ebe0cb0cc3c18053914d6aa531fcde7d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640685"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275094"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
@@ -110,7 +110,7 @@ ms.locfileid: "51640685"
 -   **[快速分析]** You can select [快速分析] to configure the task quickly. [快速分析] 會使用所有預設的設定檔和預設值，分析資料表或檢視表。  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>資料分析工作上所提供的自訂記錄訊息  
- 下表列出資料分析工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表列出資料分析工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  

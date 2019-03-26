@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a02f4e9a2d27ea827f312ee47b80d93635baa29
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143238"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280022"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>課程 1-5：新增及設定一般檔案來源
 在此工作中，您會在套件中新增及設定「一般檔案」來源。 「一般檔案」來源是一個資料流程元件，此元件會使用「一般檔案」連線管理員所定義的中繼資料。 此中繼資料會指定轉換程序要從一般檔案中擷取之資料的格式和結構。 「一般檔案」來源會使用「一般檔案」連線管理員中的格式定義，從單一一般檔案擷取資料。  

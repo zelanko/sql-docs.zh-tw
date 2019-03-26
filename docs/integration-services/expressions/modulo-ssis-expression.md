@@ -12,15 +12,15 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 343645c5fbf7e3757a255fd460ec481994b96d08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 855e96dbc95b7b6b76fce213524705b289bce42b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599641"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277537"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
   提供第一個數值運算式除以第二個數值運算式之後的整數餘數。  

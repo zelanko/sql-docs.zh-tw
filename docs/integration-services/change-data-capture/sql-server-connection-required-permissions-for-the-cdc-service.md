@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c766ff574855f4ec3ffe6828fc6ca36b775d3d95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84037e98c5ff29465e46c247421bee65c4990174
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599416"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276987"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 連接所需的 CDC 服務權限
   CDC 服務組態主控台需要與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的連接資訊，才能執行其工作。 本主題描述可以在 [連接到 SQL Server] 對話方塊中提供的資訊，以便設定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的連接。  
@@ -35,6 +35,6 @@ ms.locfileid: "47599416"
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)   
- [連接到 SQL Server 以進行刪除作業](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
+ [連接到 SQL Server 進行刪除](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
   

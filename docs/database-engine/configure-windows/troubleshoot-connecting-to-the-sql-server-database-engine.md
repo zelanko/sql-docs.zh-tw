@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802752"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305996"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "56802752"
 如果此時遇到錯誤，您必須先解決問題才能繼續。 問題的發生有很多可能的原因。 登入可能沒有連接的授權。 可能遺漏了預設資料庫。
 
 > [!NOTE]
->    某些刻意傳遞至用戶端的錯誤訊息，未提供疑難排解問題的足夠資訊。 這是為免向攻擊者提供 SQL Server 相關資訊的安全性功能。 若要檢視有關錯誤的完整資訊，請查看 SQL Server 錯誤記錄檔。 裡面會提供詳細資料。 如果您收到錯誤： **18456 使用者登入失敗**，請參閱《線上叢書》主題 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 有關於錯誤碼的其他資訊。 Aaron Bertrand 的部落格有內容豐富的錯誤碼清單，請參閱 [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)。 如果可以連接，請使用 SSMS 在物件總管的 [管理] 區段中檢視錯誤記錄檔。 否則，請使用 Windows 記事本程式來檢視錯誤記錄檔。 預設位置會隨著您的版本而不同，並且可以在安裝期間變更。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
+>    某些刻意傳遞至用戶端的錯誤訊息，未提供疑難排解問題的足夠資訊。 這是為免向攻擊者提供 SQL Server 相關資訊的安全性功能。 若要檢視有關錯誤的完整資訊，請查看 SQL Server 錯誤記錄檔。 裡面會提供詳細資料。 如果您收到錯誤： **18456 使用者登入失敗**，請參閱《線上叢書》主題 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 有關於錯誤碼的其他資訊。 Aaron Bertrand 的部落格有內容豐富的錯誤碼清單，請參閱 [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456)。 如果可以連接，請使用 SSMS 在物件總管的 [管理] 區段中檢視錯誤記錄檔。 否則，請使用 Windows 記事本程式來檢視錯誤記錄檔。 預設位置會隨著您的版本而不同，並且可以在安裝期間變更。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的預設位置為 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
 
 4.   如果可以使用共用記憶體連接，請使用 TCP 測試連接。 名稱前面可以指定 **tcp:** 以強制 TCP 連線。 例如：
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 297950943e9c36ad0e767055e8929ed095486ff6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edd31f295d1254698a186f80e0d34a82320efa7c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651956"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282402"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 教學課程
 本章節包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教學課程。  

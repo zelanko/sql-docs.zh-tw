@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6833381664fa71f61e6e021d81154afdb0945cb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 1d130177d51dc64e5eb1d0e763cc6068a61b7123
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327769"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356481"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 
@@ -147,17 +147,21 @@ SQL Server 認證是用來儲存連接到 SQL Server 外部資源所需之驗證
     指令碼看起來類似下列程式碼。  
   
     ```sql   
+    /* Example:
     USE master  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
-
+    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
+    WITH IDENTITY='SHARED ACCESS SIGNATURE'   
+    , SECRET = 'sharedaccesssignature' 
+    GO */
+    
     USE master  
-    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      -- this name must match the container path, start with https and must not contain a forward slash at the end
+    WITH IDENTITY='SHARED ACCESS SIGNATURE' 
+      -- this is a mandatory string and should not be changed   
+     , SECRET = 'sharedaccesssignature' 
+       -- this is the shared access signature key that you obtained in section 1.   
+    GO    
     ```  
   
 4.  若要查看所有可用的認證，您可以在已連接到執行個體的查詢視窗中執行下列陳述式：  

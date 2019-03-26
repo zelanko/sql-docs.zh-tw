@@ -12,15 +12,15 @@ helpviewer_keywords:
 - add operator (+)
 - adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db51309754644c99bebb06c94f8d7c0dd628289b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f51d8027bcb65b1f9e3596748778baed36759e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818286"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270950"
 ---
 # <a name="-add-ssis"></a>+ (加) (SSIS)
   加入兩個數值運算式。  

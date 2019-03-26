@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f5d292a7fa1f4097de300fc1f7e8c1a579f541a
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: f926f1c1cb9c730401c220120c04ee679d005745
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211059"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272014"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>課程 4-3：新增錯誤流程重新導向
 

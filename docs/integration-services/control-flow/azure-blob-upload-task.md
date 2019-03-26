@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afpblobuptask.f1
 - sql14.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1dfa7f7107cf2284bf06167f214a265f0cce2c71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f6f206382d74ace29bdc34e8e25426079c016f6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742346"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281922"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
 「Azure Blob 上傳工作」可讓 SSIS 封裝將檔案上傳到 Azure Blob 儲存體。

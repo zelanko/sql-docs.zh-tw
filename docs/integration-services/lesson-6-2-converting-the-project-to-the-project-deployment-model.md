@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfa218409ae82f5e59f81e110cffafb1775c6dd3
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: d2dae52f3b8729e919f9ad653c02bc1023d2ed8c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880411"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276877"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>第 6-2 課：將專案轉換為專案部署模型
 

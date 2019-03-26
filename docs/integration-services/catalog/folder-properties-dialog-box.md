@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.ssis.ssms.iscreatefolder.f1
 - sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d274d7ae201b1f83ad05d9ab177ebd0c20d7617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5ba4c8a12c194eda57379c1fa382e70142bf8b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678058"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280512"
 ---
 # <a name="folder-properties-dialog-box"></a>資料夾屬性對話方塊
   資料夾會包含 **SSISDB** 目錄中的專案和環境。 每個資料夾都會定義套用到資料夾內容的權限。 如需 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 權限的詳細資訊，請參閱 [catalog.grant_permission &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)。  

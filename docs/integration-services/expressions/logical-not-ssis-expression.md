@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70a95bee2c4d136fbbedfbf5e00afb3724a94c5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0fc2dcf29877c1c1fe0e3c0a4a75ca9b23096bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602556"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276674"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (邏輯 Not) (SSIS 運算式)
   執行布林運算元的否定運算。  
   
 > [!NOTE]  
->  ! 運算子不可搭配其他運算子使用。 例如，您不可以將 !  及 > 運算子結合至 !>。 運算子。  
+>  ! 運算子不可搭配其他運算子使用。 例如，您不可以將 ! 及 > 運算子結合至 !>。 運算子。  
   
 ## <a name="syntax"></a>語法  
   

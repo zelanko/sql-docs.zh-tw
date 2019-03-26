@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d25f5360e2582cb752dfdc5c92be928da437e06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582d0a4475ba6e6c20198ffdf50dd2e776cad480
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664486"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283092"
 ---
 # <a name="view-package-objects"></a>檢視封裝物件
   在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管] 索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  
@@ -60,7 +60,7 @@ ms.locfileid: "47664486"
  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services 容器](../integration-services/control-flow/integration-services-containers.md)   
+ [整合服務容器](../integration-services/control-flow/integration-services-containers.md)   
  [優先順序條件約束](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services &#40;SSIS&#41; 變數](../integration-services/integration-services-ssis-variables.md)   
  [Integration Services &#40;SSIS&#41; 事件處理常式](../integration-services/integration-services-ssis-event-handlers.md)   

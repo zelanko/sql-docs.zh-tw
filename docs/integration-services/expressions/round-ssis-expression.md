@@ -11,15 +11,15 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01814908d83b302f5f79ae9ac2be713f022fdb43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bb02a98330a7ad93e7784ae9ce6d08284585ff9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622346"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275945"
 ---
 # <a name="round-ssis-expression"></a>ROUND (SSIS 運算式)
   傳回已經進位到指定長度或有效位數的數值運算式。 length 參數必須評估為整數。  

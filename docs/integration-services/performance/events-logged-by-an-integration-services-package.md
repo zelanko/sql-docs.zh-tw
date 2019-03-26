@@ -11,15 +11,15 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c37ad0c1486edfcd5e2defd10bf0e9b94c1de3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812348"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281532"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Integration Services 封裝所記錄的事件
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會將各種事件訊息記錄至 Windows 應用程式事件記錄檔。 當封裝啟動、停止以及發生特定問題時，此封裝就會記錄這些訊息。  
@@ -46,7 +46,7 @@ ms.locfileid: "47812348"
  依預設，在新的安裝中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會設定為不要將與封裝執行相關的特定事件記錄至應用程式事件記錄檔。 當您使用最新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的資料收集器功能時，此設定可避免產生過多的事件記錄項目。 不會記錄的事件包括 EventID 12288「封裝已啟動」和 EventID 12289「封裝已成功完成」。 若要將這些事件記錄到應用程式事件記錄檔，請開啟登錄進行編輯。 在登錄中找出 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\SSIS 節點，然後將 LogPackageExecutionToEventLog 設定的 DWORD 值從 0 變更為 1。 不過， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在升級安裝中則是設為記錄這兩種事件。 若要停用記錄，請將 LogPackageExecutionToEventLog 設定的值從 1 設為 0。  
   
 ## <a name="messages-associated-with-package-logging"></a>與封裝記錄相關聯的訊息  
- 如果您已經針對封裝啟用記錄，應用程式事件記錄檔就是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中選擇性記錄功能所支援的其中一個目的地。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 如果您已經針對封裝啟用記錄，應用程式事件記錄檔就是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中選擇性記錄功能所支援的其中一個目的地。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
  當您已經針對封裝啟用記錄，而且記錄檔位置是應用程式事件記錄檔時，此封裝就會記錄有關下列資訊的項目：  
   

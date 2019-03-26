@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0eb2d790181b73f948e04a0e25f9d9702c6c62e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db93ad1d3f838e82c03b3512ea25c39c0dc1e2de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761886"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289224"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
   下表描述 CDC 控制工作的自訂屬性。 所有屬性都是可讀寫的。  
@@ -35,6 +35,6 @@ ms.locfileid: "47761886"
   
 ## <a name="see-also"></a>另請參閱  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC 控制工作編輯器](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
