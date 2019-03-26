@@ -12,15 +12,15 @@ helpviewer_keywords:
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25264aeca3953bb7ec4a402a705386ddfc075ca5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 771dea6d044fc797c5fe8bcc4a04e61679794ecd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757406"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290064"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (邏輯 OR) (SSIS 運算式)
   執行邏輯 OR 運算。 如果其中一項或兩項條件均為 TRUE，則運算式的評估結果為 TRUE。  

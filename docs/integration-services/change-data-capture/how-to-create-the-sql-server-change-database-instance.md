@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7283e4c894c4e68a698d803ad0c65ff6634903a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc4ef846f0ceafae295d3a7fffecdf7c42c63223
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807966"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276887"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>如何建立 SQL Server 變更資料庫執行個體
   這個程序描述如何使用 CDC 設計工具主控台來建立 CDC 執行個體。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2e09b272d8daa0f24936b0489dfe40ce58506bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b7494eb9879c8ceb5e80e28b071d4ae6817bf75
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750406"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283112"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換轉換資料類型
   若要加入及設定「資料轉換」，封裝必須已包含至少一個「資料流程」工作及一個來源。  

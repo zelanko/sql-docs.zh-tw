@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 790738d3c66d4b973d2f6934e89caa77af6ffde0
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 4dbec1a2d2fd19e26fc56e8f73db312f2994d300
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54142998"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270903"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>第 3 課：使用 SSIS 來新增記錄功能
 

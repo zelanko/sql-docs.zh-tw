@@ -19,15 +19,15 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1256ce8b9e7d68f46a34f3abdffc4cbff31ebb20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16df5bb208136b09c76d461fe7f603a06b66e567
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853326"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289724"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 轉換
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換是封裝之資料流程中的元件，用以彙總、合併、散發和修改資料。 轉換還可以執行查閱作業，並產生範例資料集。 此章節描述 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所包含的轉換，並解釋其運作方式。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9437ede8627ee8fb162995cb4e02a454d42a3a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a356826385f86f3f33735e4e8b0bba7880ce9aa8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727226"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289814"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服務
   您可以使用 CDC 設計工具主控台來檢視以 CDC 服務組態主控台建立的服務，並在 Oracle CDC 服務中管理所有執行個體。  
@@ -46,6 +46,6 @@ ms.locfileid: "47727226"
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [如何從 CDC 設計工具主控台管理 CDC 服務](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [使用 [新增執行個體精靈]](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

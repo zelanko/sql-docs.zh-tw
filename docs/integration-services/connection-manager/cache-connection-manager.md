@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837776"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289934"
 ---
 # <a name="cache-connection-manager"></a>快取連接管理員
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取資料，而且可以將資料儲存至快取檔案。 不論您是否將快取連接管理員設定為使用快取檔案，資料一定會儲存在記憶體中。  
@@ -28,7 +28,7 @@ ms.locfileid: "47837776"
  「快取轉換」轉換會將資料流程中已連接之資料來源的資料寫入快取連接管理員。 封裝中的「查閱」轉換會在資料上執行查閱。  
   
 > [!NOTE]  
->  快取連接管理員不支援二進位大型物件 (BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果參考資料集包含 BLOB 資料類型，則在您執行封裝時元件會失敗。 您可以使用 **[快取連接管理員編輯器]** 修改資料行資料類型。 如需詳細資訊，請參閱[快取連線管理員編輯器](cache-connection-manager-editor.md)。  
+>  快取連接管理員不支援二進位大型物件 (BLOB) 資料類型 DT_TEXT、DT_NTEXT 和 DT_IMAGE。 如果參考資料集包含 BLOB 資料類型，則在您執行封裝時元件會失敗。 您可以使用 **[快取連接管理員編輯器]** 修改資料行資料類型。 如需詳細資訊，請參閱 [快取連線管理員編輯器](cache-connection-manager-editor.md)。  
   
 > [!NOTE]  
 >  封裝保護等級不會套用至快取檔案。 如果快取檔案包含機密資訊，請使用存取控制清單 (ACL) 限制對其中儲存檔案的位置或資料夾的存取權。 您應該只啟用特定帳戶的存取權。 如需詳細資訊，請參閱 [對封裝使用之檔案的存取權](../../integration-services/security/security-overview-integration-services.md#files)。  
@@ -128,6 +128,6 @@ ms.locfileid: "47837776"
  指定資料行類型的字碼頁。 如果適用於資料類型，您可以更新 **Code Page**。  
   
 ## <a name="related-tasks"></a>相關工作  
- [使用快取連線管理員以完整快取模式來實作查閱轉換](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [使用快取連接管理員以完整快取模式實作查閱轉換](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

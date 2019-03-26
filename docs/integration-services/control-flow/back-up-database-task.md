@@ -16,15 +16,15 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0cac1226a04e5262ff8bc42520095936e6a13c6e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6340db7748760783b6be642a6f48c93c66622768
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640655"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282922"
 ---
 # <a name="back-up-database-task"></a>備份資料庫工作
   「備份資料庫」工作會執行不同類型的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫備份作業。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  

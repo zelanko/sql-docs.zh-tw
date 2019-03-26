@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6787b6dff349baea30c40b70af21cc9079cda6ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 098b86edd8e424e758e9df5cae2f9f9553c45864
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506440"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271468"
 ---
 # <a name="execute-process-task"></a>執行處理工作
   「執行處理」工作會隨 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程執行應用程式或批次檔。 雖然可以使用「執行處理」工作來開啟任何標準應用程式，例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 或 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]，但通常您會使用它來執行處理資料來源的商業應用程式或批次檔。 例如，您可以使用「執行處理」工作展開壓縮的文字檔。 然後封裝就可以使用文字檔做為封裝中資料流程的資料來源。 另一項範例為：您可以使用「執行處理」工作來執行產生每日銷售報表的自訂 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 應用程式。 接著，您就可將報告附加至「傳送郵件」工作，並將報告轉寄到通訊群組清單。  
@@ -30,7 +30,7 @@ ms.locfileid: "52506440"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含執行工作流程作業的其他工作，例如執行封裝。 如需詳細資訊，請參閱 [執行封裝工作](../../integration-services/control-flow/execute-package-task.md)  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>執行處理工作上可用的自訂記錄項目  
- 下表列出「執行處理」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表列出「執行處理」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  
@@ -115,7 +115,7 @@ ms.locfileid: "52506440"
  **StandardInputVariable**  
  選取變數來提供處理序的輸入，或按一下 [\<新增變數...>] 建立新的變數：  
   
- **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
  選取變數來擷取處理序的輸出，或按一下 [\<新增變數...>] 建立新的變數。  

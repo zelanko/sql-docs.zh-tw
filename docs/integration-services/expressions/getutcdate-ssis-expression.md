@@ -13,15 +13,15 @@ helpviewer_keywords:
 - UTC time
 - GETUTCDATE function
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4afe3909387669e1bfcc230744ff7cf5dbd7ae20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bac11c827ef91a84056babd81750c1f134d765b9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648176"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289694"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 運算式)
   使用 DT_DBTIMESTAMP 格式，傳回 UTC 時間格式 (世界標準時間或格林威治標準時間) 的系統目前日期。 GETUTCDATE 函數不接受引數。  

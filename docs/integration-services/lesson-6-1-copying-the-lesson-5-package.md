@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d65ea46bce68286a77ed3326f3609317144cccd
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: 566c3db45d64f0ce013ed538691bd8ce6af60f0f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880391"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275195"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>第 6-1 課：複製第 5 課套件
 

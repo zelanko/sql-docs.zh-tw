@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91460ffacc5712daecac31073434dcd6a11225a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e5d0ac61e65618527d5da8c7a8bcf2b5808b143
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753512"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290764"
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
   使用 **[建立新的 InfoObject]** 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoObject。  
@@ -157,7 +157,7 @@ ms.locfileid: "47753512"
  [建立交易資料的 InfoCube](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [建立 InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [建立交易資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
- [建立主要資料的 InfoSource](../../integration-services/data-flow/create-infosource-for-master-data.md)   
+ [[建立主要資料的 InfoSource]](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW F1 說明](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

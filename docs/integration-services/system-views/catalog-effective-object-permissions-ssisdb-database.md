@@ -11,15 +11,15 @@ helpviewer_keywords:
 - catalog.effective_object_permissions views [Integration Services]
 - effective_object_permissions view [Integration Services]
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ebf6acca8381d0443abbd00a5583284e1d889465
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e3cca42b69d32b324c0ddb749a5fb4ef8550c13
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697576"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272315"
 ---
 # <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47697576"
   
 -   主體在群組中的成員資格  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  使用者只可以看到本身和具有成員資格之角色的有效權限。  
   
   

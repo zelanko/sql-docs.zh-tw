@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6246042a70aca4edc07a36bc0dabe95be56c6d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10af58bf19696175926090a87f87551e4738c674
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657969"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271637"
 ---
 # <a name="look-up-infoobject"></a>查閱 InfoObject
   使用 [查閱 InfoObject] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoObject。 出現可用的 InfoObject 清單時，請選取您要的 InfoObject，然後 SAP BW 目的地就會將必要的值填入相關聯的選項。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - null values [Integration Services]
 - ISNULL function
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b67df5ddb8b3d1e0d450135d403d0c45eaf8a753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7cdee630de0a3827dd2a9b2ad4a1353efb2ff2d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647726"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279702"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (SSIS 運算式)
   依據運算式是否為 Null 來傳回布林結果。  

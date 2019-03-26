@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5858171e3322cfbd694059cef813527dccb1168d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 26f5f87c1df8ade01b7e2f24890990f19ee6ab52
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974197"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306206"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "57974197"
   
     -   **從現有搜尋屬性清單建立**  
   
-     如需詳細資訊，請參閱 [新增搜尋屬性清單](https://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)。  
+     如需詳細資訊，請參閱 [新增搜尋屬性清單](/sql/database-engine/new-search-property-list)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -201,7 +201,7 @@ GO
   
     2.  若要加入文件屬性，請按一下 **\*** 右邊清單底部的空白資料列，然後輸入新屬性的值。  
   
-         如需這些值的相關資訊，請參閱 [搜尋屬性清單編輯器](https://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)。 如需如何取得 Microsoft 所定義之屬性值的詳細資訊，請參閱 [尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 如需有關獨立軟體廠商 (ISV) 所定義之屬性的詳細資訊，請參閱該廠商的文件集。  
+         如需這些值的相關資訊，請參閱 [搜尋屬性清單編輯器](/sql/database-engine/search-property-list-editor)。 如需如何取得 Microsoft 所定義之屬性值的詳細資訊，請參閱 [尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)。 如需有關獨立軟體廠商 (ISV) 所定義之屬性的詳細資訊，請參閱該廠商的文件集。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

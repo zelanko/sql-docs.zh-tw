@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d576dc67c517d5ce18bf8e931bc2f833338075fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2542aeb97a3cc8c2ccd57a3e3b07445b085ed369
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601096"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290024"
 ---
 # <a name="data-truncation-ssis"></a>資料截斷 (SSIS)
   將某個資料類型的值轉換成其他類型，可能會導致值被截斷。  

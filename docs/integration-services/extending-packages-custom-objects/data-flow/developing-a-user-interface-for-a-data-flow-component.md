@@ -20,15 +20,15 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abd99051ddd130a2f3f570dc571f59320f4ae33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bad04ba6970b578c8dd0faa99f9860bd346408f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769521"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272122"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>開發資料流程元件的使用者介面
   元件開發人員可為元件提供自訂使用者介面，當編輯此元件時會在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中顯示此使用者介面。 實作自訂使用者介面會為您提供通知功能，讓您知道何時在資料流程工作中加入及刪除此元件，以及何時要求此元件的協助。  

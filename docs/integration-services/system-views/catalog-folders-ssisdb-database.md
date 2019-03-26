@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9723e705f116f84e53edded861d80b7342a3d260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57c75c1f2adca40376bc0521b0eef76b26535ec0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786206"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277157"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47786206"
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個資料夾的資料列。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個檢視需要下列其中一個權限：  
   
 -   資料夾的 READ 權限  

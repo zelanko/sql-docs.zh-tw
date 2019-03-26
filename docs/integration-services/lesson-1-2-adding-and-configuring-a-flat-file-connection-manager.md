@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 93a5366ca4919eac5134549ef3d254bc793c9ee2
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 79540566b777ecaea55f75223404eac2292cf875
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143568"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289714"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>課程 1-2：新增及設定一般檔案連線管理員
 
@@ -80,10 +80,10 @@ ms.locfileid: "54143568"
   
     |一般檔案資料行|建議類型|目的地資料行|目的地類型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
   
     對 [CurrencyID] 資料行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為 `DimCurrency.CurrencyAlternateKey` 的資料類型是 nchar(3)，所以 [CurrencyID] 必須從 [DT_STR] 字串變更為 [DT_WSTR] Unicode 字串。 另外，`DimDate.FullDateAlternateKey` 欄位是定義為 date 資料類型，因此 [CurrencyDate] 的類型必須從 [DT_Date] 日期變更為 [DT_DBDATE] 資料庫日期。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 516cd9e448ab24fad120a35b7a577a83a2cbbf81
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c6cb02319a3d0934c6bb6f3390b2fb8ea61810db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637965"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289964"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity
 Change Data Capture for Oracle by Attunity 下載包含下列 2 個元件。

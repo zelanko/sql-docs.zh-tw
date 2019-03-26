@@ -19,15 +19,15 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14b512a4ec1260c188752869d887e8e8d6ee8ff9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 169b815d9cbf09c2fc4ccf24e5585f4c2c8e5d56
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528770"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275756"
 ---
 # <a name="developing-a-custom-source-component"></a>開發自訂來源元件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供開發人員撰寫來源元件的能力，這些元件可以連線至自訂資料來源，並將那些來源的資料提供給資料流程工作中的其他元件。 當您必須連接至無法使用其中一個現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源存取的資料來源時，能夠建立自訂來源的能力是很重要的。  

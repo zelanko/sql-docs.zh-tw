@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a64bb5654b610247861e75149244c3e0a5aa288
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: 9227f1c3d7cd6e6c6aacfd58c2e3fefa7a19728f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880461"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282002"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>第 5 課：新增套件部署模型的 SSIS 套件設定
 

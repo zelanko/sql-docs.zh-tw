@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0d4295ba75c18ea6b3331317bb38a6fadf26256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7fcbe3d830374136b3414e8c9c35e9557d2f285
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811666"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290174"
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
   設計窗格包含資料採礦預測查詢產生器，您可以使用該產生器來建立資料採礦預測查詢。 您可以依據輸入資料表來設計預測查詢，或設計單一預測查詢。 切換到結果檢視以執行查詢並檢視結果。 查詢檢視會顯示預測查詢產生器所建立的資料採礦延伸模組 (DMX) 查詢。  

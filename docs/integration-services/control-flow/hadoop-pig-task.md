@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadooppigtask.f1
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea94918ce0c09033ed716d12026151c410d7d1f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805406"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271712"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 工作
   使用 Hadoop Pig 工作在 Hadoop 叢集上執行 Pig 指令碼。  

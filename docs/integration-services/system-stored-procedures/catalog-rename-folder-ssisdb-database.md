@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a51dd95b42e462c10335e00d9c3b67545d9d07fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25772e438e819032ec4742f58404a6a4beeceeee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595426"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277337"
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
 ## <a name="result-sets"></a>結果集  
  None  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
 -   **ssis_admin** 資料庫角色的成員資格  

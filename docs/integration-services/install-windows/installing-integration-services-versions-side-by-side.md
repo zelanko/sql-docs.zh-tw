@@ -11,19 +11,19 @@ helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6662176bc0a266982ec1e81dadff815e1490061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4cc990067381cacc14275b5f7948c63284b216a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645766"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275535"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>並存安裝 Integration Services 版本
   您可以並存安裝   
-      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 與舊版 SSIS 並存。 本主題說明並存安裝的一些限制。  
+      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) 與舊版 SSIS。 本主題說明並存安裝的一些限制。  
   
 ## <a name="designing-and-maintaining-packages"></a>設計和維護封裝  
  若要設計和維護目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的封裝，請使用適用於 Visual Studio 2015 的 SQL Server Data Tools (SSDT)。 若要取得 SSDT，請參閱 [下載最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  

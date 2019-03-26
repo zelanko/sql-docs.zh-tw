@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3a1012f2c7015fe537e7961d5666d7d57dec7f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82f88ed25a758ebd6b8fcbe86a8b5c1b8065a1aa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664546"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289614"
 ---
 # <a name="edit-the-advanced-properties"></a>編輯進階屬性
   使用 **[進階]** 索引標籤，將特殊屬性加入至 CDC 執行個體。  
@@ -35,7 +35,7 @@ ms.locfileid: "47664546"
  如需您可以輸入之屬性的描述，請參閱 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config)中的可用選項資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何管理 CDC 執行個體](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   

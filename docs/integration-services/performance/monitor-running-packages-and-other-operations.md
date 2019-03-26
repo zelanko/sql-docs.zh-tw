@@ -11,22 +11,22 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623676"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271213"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
   
 -   記錄檔  
   
-     如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+     如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 -   報表  
   
@@ -181,7 +181,7 @@ ms.locfileid: "47623676"
 > [!NOTE]  
 >  當您將自訂報表加入 [資料庫] 節點底下的 [SSISDB] 節點時，不需要使用 SSISDB 前置詞。  
   
- 如需如何建立和加入自訂報表的指示，請參閱[將自訂報表加入 Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)。  
+ 如需如何建立和加入自訂報表的指示，請參閱 [將自訂報表加入 Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>檢視 Integration Services 伺服器的報表
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中，於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 內提供標準報表，協助您監視已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  如需報表的詳細資訊，請參閱 [Integration Services 伺服器的報表](#reports)。  
@@ -205,5 +205,5 @@ ms.locfileid: "47623676"
     -   **所有連接**  
 
 ## <a name="see-also"></a>另請參閱  
- [執行專案和套件](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [套件執行的疑難排解報告](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [執行專案和封裝](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [疑難排解封裝執行的報表](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

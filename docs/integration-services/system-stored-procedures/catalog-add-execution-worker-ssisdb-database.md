@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 826f1df93be48bfa5a7adf92f06811fa327cedf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84d1e12e873fe85d950a4ba4644f18a79278c641
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651299"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279662"
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Scale Out Worker 的背景工作代理程式識別碼。 *workeragent_id* 是 **
 ## <a name="result-sets"></a>結果集  
  None  
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
 -   執行的執行個體之 READ 和 MODIFY 權限  

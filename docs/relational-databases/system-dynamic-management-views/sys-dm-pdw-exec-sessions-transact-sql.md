@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_sessions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 41042d1dff7a64a8a2d2fe093276f61ab254da56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fac2105011440cbabd3ed7eedebdaeb5cba37346
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039859"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417170"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "56039859"
 |app_name|**nvarchar(255)**|擷取應用程式名稱資訊 （選擇性） 設定為在連線程序的一部分。|任何有效的字串。|  
 |sql_spid|**int**|SPID id 編號。 使用`session_id`此工作階段。 使用`sql_spid`加入的資料行**sys.dm_pdw_nodes_exec_sessions**。<br /><br /> **\*\* 警告\* \*** 這個資料行包含已關閉的 Spid。||  
   
- 這份檢視所保留的最大資料列的相關資訊，請參閱中的系統檢視的最大值 」 一節[最小和最大值 (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)主題。  
+ 這份檢視所保留的最大資料列的相關資訊，請參閱中的 [中繼資料] 區段[容量限制](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題。  
   
 ## <a name="permissions"></a>Permissions  
  需要 `VIEW SERVER STATE` 權限。  

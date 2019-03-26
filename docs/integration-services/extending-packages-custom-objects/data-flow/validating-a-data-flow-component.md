@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c25471732d4be4f241689c6c2abb3d4dc4d0672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c74c19a2127daad9ab43c8a40903cbf1c5ee64f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789626"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282957"
 ---
 # <a name="validating-a-data-flow-component"></a>驗證資料流程元件
   提供 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 基底類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法，可以避免執行設定不正確的元件。 使用這個方法可確認元件具有預期的輸入和輸出物件數、此元件的自訂屬性具有可接受的值，以及指定了任何需要的連接。 使用這個方法也可確認輸入和輸出集合內的資料行具有正確的資料類型，以及每一個資料行的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> 都針對此元件適當地設定。 基底類別實作會協助驗證程序，其方式是檢查此元件的輸入資料行集合，並確保此集合中的每一個資料行都會參考上游元件之 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> 中的資料行。  

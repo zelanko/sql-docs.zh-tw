@@ -18,15 +18,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8fbc95fb105a5bfcb3eebc09a728d6487ffbf4bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54f0d5afc9893c188c79658fe6301394ac17bb2b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793727"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274218"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供特定固定資料庫層級角色來協助保護對於儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的封裝的存取。 可用的角色根據您將封裝儲存在 SSIS 目錄資料庫 (SSISDB) 或 msdb 資料庫而有所不同。  
@@ -64,7 +64,7 @@ ms.locfileid: "47793727"
   
 -   **ownersid** 資料行包含建立封裝之使用者的唯一安全性識別碼。 此資料行會定義封裝的擁有者。  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  依預設， **db_ssisadmin** 和 **db_ssisoperator** 固定資料庫層級角色的權限以及建立封裝之使用者的唯一安全性識別碼會套用至封裝的讀取者角色，而 **db_ssisadmin** 角色的權限以及建立封裝之使用者的唯一安全性識別碼則會套用至封裝的寫入者角色。 使用者必須是 **db_ssisadmin**、 **db_ssisltduser**或 **db_ssisoperator** 角色的成員，才能擁有封裝的讀取權限。 使用者必須是 **db_ssisadmin** 角色的成員，才能擁有寫入權限。  
   
 ### <a name="access-to-packages"></a>對封裝的存取權  

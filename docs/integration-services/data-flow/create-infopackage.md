@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fea75b95492aa3ee689a785155bdb6b37670ba34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eced99b566e94b6b4010b209e942e2518e33df1d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853380"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274841"
 ---
 # <a name="create-infopackage"></a>建立 InfoPackage
   使用 [建立 InfoPackage] 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoPackage。  

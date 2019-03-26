@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a97fe82fffae638cc40fceb8139ba65c080e7955
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecf3e743fc0f5f4a9af213e97fc7adbf6ce1fe8c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854706"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271041"
 ---
 # <a name="catalogstartup"></a>catalog.startup
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ catalog.startup
 ## <a name="result-sets"></a>結果集  
  None  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
 -   執行執行個體的 READ 和 MODIFY 權限、專案的 READ 和 EXECUTE 權限，以及 (如果適用的話) 參考環境的 READ 權限  

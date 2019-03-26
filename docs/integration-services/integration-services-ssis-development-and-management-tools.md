@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 58e52dcfd08a16b405a9564336d4c23404230021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6e9af4d3d2f1b3157d239c7f1bdc9ae201391f5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811416"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272545"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Integration Services (SSIS) 開發和管理工具
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含兩個可搭配封裝使用的 Studio：  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fa4d428ad10adf53118e901befcb10cede7f421
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6f64820f77d5e50b9a004e38f1d1573217938f0c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328918"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274887"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53328918"
 |**VERSION_CLEANUP_ENABLED**|當值為 `TRUE` 時，目錄中只會儲存 **MAX_PROJECT_VERSIONS** 數目的專案版本，並會刪除所有其他專案版本。 當值為 **FALSE** 時，所有專案版本都會儲存在目錄中。 注意：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作會執行作業清除。|
 |||
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個檢視需要下列其中一個權限：  
   
 -   **ssis_admin** 資料庫角色的成員資格  

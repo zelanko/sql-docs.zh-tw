@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DTS [Integration Services], about Integration Services
 - data integration [Integration Services]
 - Data Transformation Services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aec1d61a092926132ae1505ac5bf6ae4bc502560
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f11fac0a7f875c019f4371144f38c3882d4c013c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699634"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271501"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 

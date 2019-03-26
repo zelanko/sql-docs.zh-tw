@@ -19,15 +19,15 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db2feb442aceb42d24757e59245914351e5100dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638075"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275283"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
   「百分比取樣」轉換會藉由選取轉換輸入資料列的一部分來建立取樣資料集。 取樣資料集是從轉換輸出隨機選取的資料列，用來製作輸入的結果取樣代表。  

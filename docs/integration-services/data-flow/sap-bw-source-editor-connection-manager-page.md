@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12401782775be3a4bb180fc49f8d3df4db06ba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01cb2819982a452e365bcf13e0a949e1006f2c97
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775136"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280572"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 來源的 SAP BW 連接管理員。 在這個頁面上，您也可以選取執行模式以及從 SAP Netweaver BW 系統中擷取資料所用的參數。  

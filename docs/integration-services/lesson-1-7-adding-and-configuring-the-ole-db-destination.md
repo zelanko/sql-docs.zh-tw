@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f09760ea7521acb63c95f27821ba93382f8a3f2d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 47ba9be2a6ff8a03f40cc6253b0dbd0674e1ec48
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143258"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281822"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>課程 1-7：新增及設定 OLE DB 目的地
 

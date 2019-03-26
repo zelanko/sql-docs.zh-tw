@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8c8203ae3b9b9abf1b45a332ca6c5706a1156125
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638785"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277176"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48b952f3a35fa14874f4ba16a9ad16ee24bf6a5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3aa42ecf4fa8af66026301004ca0520a0d08de7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635848"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277250"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 讓開發人員能夠撰寫可連線至任何自訂資料來源並在其中儲存資料的自訂目的地元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  

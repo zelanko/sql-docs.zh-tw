@@ -11,15 +11,15 @@ helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b70f7bc5680c297572380a273ad2cff35691ffe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb9df4406312c8711c895489a09b647ebd126c9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729876"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275218"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47729876"
 ## <a name="remarks"></a>Remarks  
  這個檢視會顯示目錄中每個執行之執行個體的資料列。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個檢視需要下列其中一個權限：  
   
 -   執行的執行個體之 READ 權限  

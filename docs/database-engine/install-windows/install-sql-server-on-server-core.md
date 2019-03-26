@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533344"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306216"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
@@ -76,7 +76,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 ## <a name="upgrade"></a>UPGRADE 
  在 Server Core 安裝中，可支援從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 。  
   
-## <a name="install"></a>Install  
+## <a name="install"></a>安裝  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不支援在 Server Core 作業系統上使用 [安裝精靈] 進行安裝。 在 Server Core 上安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
  除非軟體的使用方式受到個別的合約 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 大量授權合約或與 ISV 或 OEM 簽訂的協力廠商合約) 所管制，否則不論安裝方法為何，您都必須確認以個人身分或代表實體接受軟體授權條款。  
@@ -333,7 +333,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [SQL Server 2017 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [安裝 Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [以 Sconfig.cmd 設定 Windows Server 2016 的 Server Core 安裝](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Windows PowerShell 中的容錯移轉叢集 Cmdlet](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Windows PowerShell 中的容錯移轉叢集 Cmdlet](/powershell/module/failoverclusters/)
 
   
   
