@@ -16,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810940"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493510"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_name=**] **'**_table_name_**'**  
- 這是資料表的名稱。 *table_name*已**sysname**，沒有預設值。  
+`[ @table_name = ] 'table_name'` 為資料表的名稱。 *table_name*已**sysname**，沒有預設值。  
   
- [  **@owner_name=**] **'**_owner_name_**'**  
- 這是資料表擁有者的名稱。 *owner_name*已**sysname**，預設值是 NULL。  
+`[ @owner_name = ] 'owner_name'` 為資料表的擁有者的名稱。 *owner_name*已**sysname**，預設值是 NULL。  
   
- [  **@filter_clause=** ] **'**_filter_clause_**'**  
- 指定一個篩選子句來控制哪些新載入的資料列應該加入合併追蹤資料表中。 *filter_clause*已**nvarchar(4000)**，預設值是 NULL。 如果*filter_clause*是**null**，所有的大量載入的資料列會加入。  
+`[ @filter_clause = ] 'filter_clause'` 指定一個篩選子句來控制哪些新載入的資料的資料列應該加入合併追蹤資料表。 *filter_clause*已**nvarchar(4000)**，預設值是 NULL。 如果*filter_clause*是**null**，所有的大量載入的資料列會加入。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

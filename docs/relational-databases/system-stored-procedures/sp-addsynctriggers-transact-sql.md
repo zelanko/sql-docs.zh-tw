@@ -16,12 +16,12 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89a6a997fd272985bd60d0b5d574fea07463f54d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588283"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493640"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,59 +58,41 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@sub_table=**] **'**_sub_table&lt_**'**  
- 這是訂閱者資料表的名稱。 *sub_table&lt*已**sysname**，沒有預設值。  
+`[ @sub_table = ] 'sub_table'` 為訂閱者資料表的名稱。 *sub_table&lt*已**sysname**，沒有預設值。  
   
- [  **@sub_table_owner=**] **'**_sub_table_owner_**'**  
- 這是訂閱者資料表的擁有者名稱。 *sub_table_owner*已**sysname**，沒有預設值。  
+`[ @sub_table_owner = ] 'sub_table_owner'` 是訂閱者資料表的擁有者名稱。 *sub_table_owner*已**sysname**，沒有預設值。  
   
- [  **@publisher=**] **'**_發行者_**'**  
- 這是發行者伺服器的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是發行者伺服器的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 如果是 NULL，就會使用目前的資料庫。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 如果是 NULL，就會使用目前的資料庫。  
   
- [  **@publication=**] **'**_發行集_**'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@ins_proc=**] **'**_ins_proc_**'**  
- 這是支援在發行者端之同步交易插入的預存程序名稱。 *ins_proc*已**sysname**，沒有預設值。  
+`[ @ins_proc = ] 'ins_proc'` 是支援在 「 發行者 」 同步交易插入的預存程序的名稱。 *ins_proc*已**sysname**，沒有預設值。  
   
- [  **@upd_proc=**] **'**_upd_proc_**'**  
- 這是支援在發行者端之同步交易更新的預存程序名稱。 *ins_proc*已**sysname**，沒有預設值。  
+`[ @upd_proc = ] 'upd_proc'` 是支援在 「 發行者 」 同步交易更新的預存程序的名稱。 *ins_proc*已**sysname**，沒有預設值。  
   
- [  **@del_proc=**] **'**_del_proc_**'**  
- 這是支援在發行者端之同步交易刪除的預存程序名稱。 *ins_proc*已**sysname**，沒有預設值。  
+`[ @del_proc = ] 'del_proc'` 是支援在 「 發行者 」 同步交易刪除的預存程序的名稱。 *ins_proc*已**sysname**，沒有預設值。  
   
- [  **@cftproc =** ] **'**_cftproc_**'**  
- 這是允許佇列更新的發行集所用的自動產生程序名稱。 *cftproc*已**sysname**，沒有預設值。 如果是允許立即更新的發行集，這個值便是 NULL。 這個參數適用於允許佇列更新 (佇列更新和以佇列更新進行容錯移轉的立即更新) 的發行集。  
+`[ @cftproc = ] 'cftproc'` 是允許佇列更新發行集所用的自動產生程序的名稱。 *cftproc*已**sysname**，沒有預設值。 如果是允許立即更新的發行集，這個值便是 NULL。 這個參數適用於允許佇列更新 (佇列更新和以佇列更新進行容錯移轉的立即更新) 的發行集。  
   
- [  **@proc_owner =** ] **'**_proc_owner_**'**  
- 在發行者中，指定用來建立更新發行集 (佇列和/或立即) 所有自動產生的預存程序之使用者帳戶。 *proc_owner*已**sysname**沒有預設值。  
+`[ @proc_owner = ] 'proc_owner'` 指定的使用者帳戶建立在所有發行者的自動產生預存程序更新發行集 （佇列和/或立即）。 *proc_owner*已**sysname**沒有預設值。  
   
- [  **@identity_col=**] **'**_identity_col_**'**  
- 這是在發行者端之識別欄位的名稱。 *identity_col*已**sysname**，預設值是 NULL。  
+`[ @identity_col = ] 'identity_col'` 是在發行者端之識別欄位的名稱。 *identity_col*已**sysname**，預設值是 NULL。  
   
- [  **@ts_col=**] **'**_timestamp_col_**'**  
- 是的名稱**時間戳記**在發行者端的資料行。 *timestamp_col*已**sysname**，預設值是 NULL。  
+`[ @ts_col = ] 'timestamp_col'` 是的名稱**時間戳記**在發行者端的資料行。 *timestamp_col*已**sysname**，預設值是 NULL。  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- 這是定義水平篩選的限制 (WHERE) 子句。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause*已**nvarchar(4000)**，預設值是 NULL。  
+`[ @filter_clause = ] 'filter_clause'` 是一項限制會定義水平篩選 (WHERE) 子句。 當輸入限制子句時，請省略 WHERE 關鍵字。 *filter_clause*已**nvarchar(4000)**，預設值是 NULL。  
   
- [  **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
- 這是資料表中之主索引鍵資料行的點陣圖。 *primary_key_bitmap*已**varbinary(4000)**，沒有預設值。  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 是的資料表中的主索引鍵資料行的點陣圖。 *primary_key_bitmap*已**varbinary(4000)**，沒有預設值。  
   
- [  **@identity_support =** ] *identity_support*  
- 在使用佇列更新時，啟用和停用自動識別範圍處理。 *identity_support*已**位元**，預設值是**0**。 **0**表示沒有任何身分識別範圍的支援， **1**啟用自動識別範圍處理。  
+`[ @identity_support = ] identity_support` 啟用和停用自動識別範圍處理，當使用佇列更新。 *identity_support*已**位元**，預設值是**0**。 **0**表示沒有任何身分識別範圍的支援， **1**啟用自動識別範圍處理。  
   
- [  **@independent_agent =** ] *independent_agent*  
- 指出這個發行集有單一散發代理程式 (獨立代理程式)，或每一組發行集資料庫和訂閱資料庫有一個散發代理程式 (共用代理程式)。 這個值反映發行者端所定義之發行集的 independent_agent 屬性值。 *independent_agent*是 bit，預設值是**0**。 如果**0**，代理程式會共用代理程式。 如果**1**，代理程式是獨立的代理程式。  
+`[ @independent_agent = ] independent_agent` 指出是否有單一散發代理程式 （獨立代理程式） 針對這個發行集或每個發行集資料庫和訂閱資料庫組 （共用代理程式） 的一個散發代理程式。 這個值反映發行者端所定義之發行集的 independent_agent 屬性值。 *independent_agent*是 bit，預設值是**0**。 如果**0**，代理程式會共用代理程式。 如果**1**，代理程式是獨立的代理程式。  
   
- [  **@distributor =** ] **'**_散發者_**'**  
- 這是散發者的名稱。 *散發者*已**sysname**，沒有預設值。  
+`[ @distributor = ] 'distributor'` 是散發者的名稱。 *散發者*已**sysname**，沒有預設值。  
   
- [ **@pubversion**=] *pubversion&lt*  
- 指出發行者的版本。 *pubversion&lt*已**int**，預設值是 1。 **1**表示發行者版本是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更早版本;**2**表示發行者是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 或更新版本。 *pubversion&lt*必須明確設定為**2**當發行者版本是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 或更新版本。  
+`[ @pubversion = ] pubversion` 表示發行者版本。 *pubversion&lt*已**int**，預設值是 1。 **1**表示發行者版本是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 或更早版本;**2**表示發行者是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 3 (SP3) 或更新版本。 *pubversion&lt*必須明確設定為**2**當發行者版本是[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]SP3 或更新版本。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -123,7 +105,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 ## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

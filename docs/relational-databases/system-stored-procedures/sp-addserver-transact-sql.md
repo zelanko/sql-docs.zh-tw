@@ -1,5 +1,5 @@
 ---
-title: sp_addserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_addserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d18fa2ca30559ee31ed5caeaddf361f0895986d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab5c15d15c77688c06eedec1d54e82c7b8199380
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685518"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492926"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  定義的本機執行個體的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 當電腦裝載[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是重新命名，使用**sp_addserver**通知的執行個體[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]了新的電腦名稱。 此程序必須在電腦上裝載的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上執行。 執行個體名稱[!INCLUDE[ssDE](../../includes/ssde-md.md)]無法變更。 若要變更具名執行個體的執行個體名稱，請安裝具有所需名稱的新執行個體、從舊的執行個體卸離資料庫檔案、將資料庫附加到新的執行個體，和卸除舊的執行個體。 或者，您可以在用戶端電腦上建立用戶端別名名稱，將連接重新導向至不同的伺服器和執行個體名稱或 **伺服器：連接埠** 的組合，而不需要變更伺服器電腦上的執行個體名稱。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定義  本機執行個體的名稱。 當電腦裝載[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是重新命名，使用**sp_addserver**通知的執行個體[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]了新的電腦名稱。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 此程序必須在電腦上裝載的所有  執行個體上執行。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 無法變更  的執行個體名稱。 若要變更具名執行個體的執行個體名稱，請安裝具有所需名稱的新執行個體、從舊的執行個體卸離資料庫檔案、將資料庫附加到新的執行個體，和卸除舊的執行個體。 或者，您可以在用戶端電腦上建立用戶端別名名稱，將連接重新導向至不同的伺服器和執行個體名稱或 **伺服器：連接埠** 的組合，而不需要變更伺服器電腦上的執行個體名稱。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,20 +45,17 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@server =** ] **'***server***'**  
- 這是伺服器的名稱。 伺服器名稱必須是唯一，並且遵照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 電腦名稱的規則 (但不能加空格)。 *server* 是 **sysname**，沒有預設值。  
+`[ @server = ] 'server'` 是伺服器的名稱。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 伺服器名稱必須是唯一，並且遵照  Windows 電腦名稱的規則 (但不能加空格)。 *server* 是 **sysname**，沒有預設值。  
   
- 當多個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝的電腦上，執行個體運作方式就好像它是不同的伺服器上。 藉由參考指定的具名執行個體*伺服器*作為*servername\instancename*。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當您在一部電腦安裝多個  執行個體時，每一個執行個體的運作方式，就好像分別位於不同的伺服器上。 藉由參考指定的具名執行個體*伺服器*作為*servername\instancename*。  
   
- [ **@local =** ] **'LOCAL'**  
- 將正在加入的伺服器指定為本機伺服器。 **@local** 已**varchar(10)**，預設值是 NULL。 指定**@local**作為**本機**定義**@server**原因與本機伺服器的名稱為 @@SERVERNAME傳回值的函式*server*。  
+`[ @local = ] 'LOCAL'` 指定要新增為本機伺服器的伺服器。 **@local** 已**varchar(10)**，預設值是 NULL。 指定**@local**作為**本機**定義**@server**原因與本機伺服器的名稱為 @@SERVERNAME傳回值的函式*server*。  
   
- 在安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會將這個變數設為電腦名稱。 根據預設，電腦名稱會是使用者的方式連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而不需要額外的設定。  
+ 在安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會將這個變數設為電腦名稱。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 依預設，電腦名稱是使用者在不用其他組態的情況下，連接  執行個體的方法。  
   
- 本機定義在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新啟動之後才會生效。 每個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體只能定義一部本機伺服器。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 本機定義在  重新啟動之後才會生效。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]每個  執行個體只能定義一部本機伺服器。  
   
- [ **@duplicate_ok =** ] **'duplicate_OK'**  
- 指定是否允許重複的伺服器名稱。 **@duplicate_OK** 已**varchar(13)**，預設值是 NULL。 **@duplicate_OK** 只能有值**duplicate_OK**或 NULL。 如果**duplicate_OK**指定並已新增的伺服器名稱存在，不會引發錯誤。 如果沒有使用具名的參數，就**@local**必須指定。  
+`[ @duplicate_ok = ] 'duplicate_OK'` 指定是否允許重複的伺服器名稱。 **@duplicate_OK** 已**varchar(13)**，預設值是 NULL。 **@duplicate_OK** 只能有值**duplicate_OK**或 NULL。 如果**duplicate_OK**指定並已新增的伺服器名稱存在，不會引發錯誤。 如果沒有使用具名的參數，就**@local**必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -74,7 +71,7 @@ sp_addserver [ @server = ] 'server' ,
   需要 setupadmin 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
- 下列範例會變更[!INCLUDE[ssDE](../../includes/ssde-md.md)]裝載電腦的名稱的項目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]至`ACCOUNTS`。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 下列範例將裝載 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦名稱的 `ACCOUNTS`項目變更為 。  
   
 ```  
 sp_addserver 'ACCOUNTS', 'local';  
@@ -83,7 +80,7 @@ sp_addserver 'ACCOUNTS', 'local';
 ## <a name="see-also"></a>另請參閱  
  [重新命名主控 SQL Server 的獨立執行個體的電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_dropserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  

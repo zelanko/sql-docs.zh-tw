@@ -5,17 +5,17 @@ description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9666192d667a5a2592ab32f346338d1b9963fa3d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477653"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492800"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式
 
@@ -42,7 +42,7 @@ ms.locfileid: "58477653"
 
 ## <a name="capabilities"></a>Capabilities
 
-在 SQL Server 2019 （預覽） CTP 2.3 您可以建立、 刪除、 描述、 初始化，清單會執行，並更新您的應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl**。
+在 SQL Server 2019 （預覽） CTP 2.4 您可以建立、 刪除、 描述、 初始化，清單會執行，並更新您的應用程式。 下表描述您可以搭配使用的應用程式部署命令**mssqlctl**。
 
 |命令 |描述 |
 |:---|:---|

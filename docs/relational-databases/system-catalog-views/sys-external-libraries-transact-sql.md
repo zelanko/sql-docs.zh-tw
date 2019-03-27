@@ -1,7 +1,7 @@
 ---
 title: sys.external_libraries (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a2f83d703566ae5a60fd027ff7f186205a0c404
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f0c24f7a95a7146f4d67d655ec0ed5ec58a53ace
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017534"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492362"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "57017534"
 支援與外部執行階段，例如 R、 Python 和 Java 套件程式庫的管理。
 
 > [!NOTE]
-> 在 SQL Server 2017 中，R 語言和 Windows 平台支援。 在 SQL Server 2019 CTP 2.3 中支援 R、 Python 和 Windows 平台上的 Java。 適用於 Linux 的支援已規劃更新的版本。
+> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 SQL Server 2019 CTP 2.4 支援 R、 Python 和 Java 的 Windows 和 Linux 平台上。
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 

@@ -5,17 +5,17 @@ description: 了解如何部署在 Kubernetes 上的 SQL Server 2019 巨量資�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477693"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493730"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -87,7 +87,7 @@ kubectl config view
 | **ACCEPT_EULA** | 是 | N/A | SQL Server 授權合約 （例如，'Yes'）。  |
 | **CLUSTER_NAME** | 是 | N/A | 若要部署到叢集的巨量資料的 sql Server 的 Kubernetes 命名空間名稱。 |
 | **CLUSTER_PLATFORM** | 是 | N/A | 部署 Kubernetes 叢集平台。 可以是`aks`， `minikube`， `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | 否 | 1 | 若要建置的計算集區複本數目。在允許的 CTP 2.3 只有值為 1。 |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | 否 | 1 | 若要建置的計算集區複本數目。在允許的 CTP 2.4 只有值為 1。 |
 | **CLUSTER_DATA_POOL_REPLICAS** | 否 | 2 | 數目的資料集區來建置的複本。 |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | 否 | 2 | 若要建置的儲存體集區複本數目。 |
 | **DOCKER_REGISTRY** | 是 | TBD | 私用登錄中儲存用來部署叢集的映像。 |
@@ -278,13 +278,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

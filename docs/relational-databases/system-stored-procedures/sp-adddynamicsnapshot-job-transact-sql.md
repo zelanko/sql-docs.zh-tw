@@ -1,5 +1,5 @@
 ---
-title: sp_adddynamicsnapshot_job & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_adddynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26026329ec092c769d545b4dbe99bd317b095bbe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134058"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493350"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是加入篩選之資料快照集作業的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是要加的已篩選的資料快照集作業的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- 建立訂用帳戶的已篩選的資料快照集，篩選的值時所用的值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函式，在訂閱者。 *suser_sname*已**sysname**，沒有預設值。 *suser_sname*應該是 NULL，如果此函式不用來動態篩選發行集。  
+`[ @suser_sname = ] 'suser_sname'` 建立訂用帳戶的已篩選的資料快照集，篩選的值時所用的值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函式，在訂閱者。 *suser_sname*已**sysname**，沒有預設值。 *suser_sname*應該是 NULL，如果此函式不用來動態篩選發行集。  
   
- [ **@host_name**=] **'***host_name***'**  
- 建立訂用帳戶的已篩選的資料快照集，篩選的值時所用的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式，在訂閱者。 *host_name*已**sysname**，沒有預設值。 *host_name*應該是 NULL，如果此函式不用來動態篩選發行集。  
+`[ @host_name = ] 'host_name'` 建立訂用帳戶的已篩選的資料快照集，篩選的值時所用的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式，在訂閱者。 *host_name*已**sysname**，沒有預設值。 *host_name*應該是 NULL，如果此函式不用來動態篩選發行集。  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
- 這是建立的已篩選資料快照集作業名稱。 *dynamic_snapshot_jobname*已**sysname**，預設值是 NULL，而且是選擇性的 OUTPUT 參數。 如果指定， *dynamic_snapshot_jobname*必須解析為在散發者的唯一作業。 如果未指定，就會自動產生作業名稱，而且會在結果集中傳回作業名稱，名稱的建立方式如下：  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 是建立已篩選的資料快照集作業名稱。 *dynamic_snapshot_jobname*已**sysname**，預設值是 NULL，而且是選擇性的 OUTPUT 參數。 如果指定， *dynamic_snapshot_jobname*必須解析為在散發者的唯一作業。 如果未指定，就會自動產生作業名稱，而且會在結果集中傳回作業名稱，名稱的建立方式如下：  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -76,11 +72,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  產生動態快照集作業的名稱時，您可以截斷標準快照集作業的名稱。  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
- 這是建立的已篩選資料快照集作業識別碼。 *dynamic_snapshot_jobid*已**uniqueidentifier**，預設值是 NULL，而且是選擇性的 OUTPUT 參數。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 是建立已篩選的資料快照集作業的識別碼。 *dynamic_snapshot_jobid*已**uniqueidentifier**，預設值是 NULL，而且是選擇性的 OUTPUT 參數。  
   
- [  **@frequency_type=**] *frequency_type*  
- 這是已篩選資料快照集作業的排程頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
+`[ @frequency_type = ] frequency_type` 是的排程已篩選的資料快照集作業的頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -93,8 +87,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|自動啟動|  
 |**128**|重複執行|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 這是執行已篩選資料快照集作業的週期 (以天為單位)。 *frequency_interval*已**int**，預設值為 1，而定的值*frequency_type*。  
+`[ @frequency_interval = ] frequency_interval` 是已篩選的資料快照集作業執行時的間隔 （以天為單位）。 *frequency_interval*已**int**，預設值為 1，而定的值*frequency_type*。  
   
 |值*frequency_type*|在影響*frequency_interval*|  
 |--------------------------------|-------------------------------------|  
@@ -106,8 +99,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*frequency_interval*未使用。|  
 |**128**|*frequency_interval*未使用。|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 指定的單位*frequency_subday_interval*。 *frequency_subday*已**int**，而且可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 指定的單位*frequency_subday_interval*。 *frequency_subday*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -116,11 +108,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** （預設值）|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 是的數目*frequency_subday*每次執行作業之間發生的期間。 *frequency_subday_interval*已**int**，預設值是 5。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 是的數目*frequency_subday*每次執行作業之間發生的期間。 *frequency_subday_interval*已**int**，預設值是 5。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- 這是每個月已篩選資料快照集作業的出現頻率。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 是已篩選的資料快照集作業的每個月一次。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -130,20 +120,15 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|第四個|  
 |**16**|最後一個|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor&lt*  
- 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 0。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 0。  
   
- [  **@active_start_date=**] *active_start_date*  
- 這是第一次排程已篩選資料快照集作業的日期，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
+`[ @active_start_date = ] active_start_date` 排程的日期篩選的資料快照集作業時第一，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
   
- [  **@active_end_date=**] *active_end_date*  
- 這是排程停止已篩選資料快照集作業的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
+`[ @active_end_date = ] active_end_date` 是已篩選的資料快照集作業停止的日期在排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- 這是第一次排程已篩選資料快照集作業的當日時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 是第一次排程已篩選的資料快照集作業時的時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- 這是排程停止已篩選資料快照集作業的當日時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 已篩選的資料快照集的當日作業停止正在排程時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -168,7 +153,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="see-also"></a>另請參閱  
  [使用參數化篩選的合併式發行集建立快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [sp_dropdynamicsnapshot_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
- [sp_helpdynamicsnapshot_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
+ [sp_dropdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
+ [sp_helpdynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   
   

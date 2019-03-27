@@ -1,5 +1,5 @@
 ---
-title: sp_adduser (TRANSACT-SQL) |Microsoft Docs
+title: sp_adduser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492936"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@loginame =** ] **'***login***'**  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 Windows 登入的名稱。 *登入*已**sysname**，沒有預設值。 *登入*必須是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。  
+`[ @loginame = ] 'login'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。 *登入*已**sysname**，沒有預設值。 *登入*必須是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 登入。  
   
- [  **@name_in_db =** ] **'***使用者***'**  
- 這是新資料庫使用者的名稱。 *使用者*已**sysname**，預設值是 NULL。 如果*使用者*未指定，則新的資料庫使用者名稱預設為*登入*名稱。 指定*使用者*給予新使用者名稱和伺服器層級登入名稱不同資料庫中。  
+`[ @name_in_db = ] 'user'` 是新的資料庫使用者的名稱。 *使用者*已**sysname**，預設值是 NULL。 如果*使用者*未指定，則新的資料庫使用者名稱預設為*登入*名稱。 指定*使用者*給予新使用者名稱和伺服器層級登入名稱不同資料庫中。  
   
- [  **@grpname =** ] **'***角色***'**  
- 這是新使用者成為其中成員的資料庫角色。 *角色*已**sysname**，預設值是 NULL。 *角色*必須是目前資料庫中的有效資料庫角色。  
+`[ @grpname = ] 'role'` 是的新使用者成為成員的資料庫角色。 *角色*已**sysname**，預設值是 NULL。 *角色*必須是目前資料庫中的有效資料庫角色。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

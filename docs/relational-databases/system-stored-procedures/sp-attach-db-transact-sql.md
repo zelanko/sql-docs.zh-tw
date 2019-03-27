@@ -1,5 +1,5 @@
 ---
-title: sp_attach_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588832"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494350"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@dbname=** ] **'**_dbnam_ **'**  
- 這是要附加至伺服器的資料庫名稱。 名稱必須是唯一的。 *dbname*已**sysname**，預設值是 NULL。  
+`[ @dbname = ] 'dbnam_ '` 是要連接到伺服器之資料庫的名稱。 名稱必須是唯一的。 *dbname*已**sysname**，預設值是 NULL。  
   
- [  **@filename1=** ] **'**_filename_n_**'**  
- 資料庫檔案的實體名稱，包括路徑。 *filename_n*已**nvarchar(260)**，預設值是 NULL。 您最多可以指定 16 個檔案名稱。 參數名稱開始於**@filename1**並以遞增**@filename16**。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
+`[ @filename1 = ] 'filename_n'` 是實體的名稱，包括路徑，資料庫檔案。 *filename_n*已**nvarchar(260)**，預設值是 NULL。 您最多可以指定 16 個檔案名稱。 參數名稱開始於**@filename1**並以遞增**@filename16**。 檔案名稱清單至少必須包括主要檔案。 主要檔案包含指向資料庫中其他檔案的系統資料表。 這份清單也必須包括資料庫卸離之後所移動的任何檔案。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  

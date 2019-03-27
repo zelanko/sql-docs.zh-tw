@@ -26,12 +26,12 @@ ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 51e94f1cf42b8c40b4f0023371bc7a538bdba76f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357078"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477683"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
   下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空間，並在其原生 CLR 對等用法[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
@@ -47,12 +47,12 @@ ms.locfileid: "53357078"
 |`date`|`SqlDateTime`|**日期時間，可為 Null\<日期時間 >**|  
 |`datetime`|`SqlDateTime`|**日期時間，可為 Null\<日期時間 >**|  
 |`datetime2`|None|**日期時間，可為 Null\<日期時間 >**|  
-|`DATETIMEOFFSET`|`None`|**DateTimeOffset，可為 Null\<DateTimeOffset >**|  
+|`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |`decimal`|`SqlDecimal`|**Decimal，可為 Null\<十進位 >**|  
 |`float`|`SqlDouble`|**Double，可為 Null\<雙 >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/en-us/download/details.aspx?id=53164)。|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/en-us/download/details.aspx?id=53164)。|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](https://www.microsoft.com/en-us/download/details.aspx?id=53164)。|None|  
 |`image`|None|None|  
 |`int`|`SqlInt32`|**Int32，可為 Null\<Int32 >**|  
 |`money`|`SqlMoney`|**Decimal，可為 Null\<十進位 >**|  
@@ -68,7 +68,7 @@ ms.locfileid: "53357078"
 |`sql_variant`|None|`Object`|  
 |`table`|None|None|  
 |`text`|None|None|  
-|`time`|None|**時間範圍，可為 Null\<TimeSpan >**|  
+|`time`|None|**TimeSpan, Nullable\<TimeSpan>**|  
 |`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**位元組，可為 Null\<位元組 >**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid，可為 Null\<Guid >**|  

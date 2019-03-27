@@ -3,18 +3,18 @@ title: Java 範例和教學課程中的 SQL Server 2019-SQL Server Machine Learn
 description: 若要了解 SQL Server 資料搭配使用的 Java 語言擴充功能的步驟執行的 SQL Server 2019 上執行 Java 範例程式碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018034"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493423"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server 的 Java 範例逐步解說
 
@@ -205,9 +205,22 @@ Classpath 是編譯的程式碼的位置。 比方說，在 Linux 上，如果 c
 
 如果您計劃來封裝您的類別和.jar 檔案相依性，提供在 sp_execute_external_script CLASSPATH 參數中的.jar 檔案的完整路徑。 比方說，如果 jar 檔案稱為 'ngram.jar'，將會是 CLASSPATH ' / home/myclasspath/ngram.jar' 在 Linux 上。
 
-## <a name="6---set-permissions"></a>6-設定權限
+## <a name="6---create-external-library"></a>6-建立外部程式庫
 
-如果處理序身分識別可以存取您的程式碼，指令碼執行才會成功。 
+藉由建立外部程式庫，SQL Server 會自動獲得 jar，並不需要任何特殊權限設 classpath。
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7-設定權限 （如果您執行步驟 6 略過）
+
+如果您使用外部程式庫，不需要執行此步驟。 工作的建議的方式是建立外部程式庫，從您的 jar。 
+
+如果您不想使用外部程式庫，您必須設定必要的權限。 如果處理序身分識別可以存取您的程式碼，指令碼執行才會成功。 
 
 ### <a name="on-linux"></a>在 Linux 上
 
@@ -232,7 +245,7 @@ Classpath 是編譯的程式碼的位置。 比方說，在 Linux 上，如果 c
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
 
 若要從 SQL Server 呼叫的程式碼，指定 Java 方法**getNgrams()** sp_execute_external_script 的"script"參數中。 這個方法屬於稱為 「 套件 」 和呼叫的類別檔案的套件**Ngram.java**。
 
@@ -246,8 +259,6 @@ Classpath 是編譯的程式碼的位置。 比方說，在 Linux 上，如果 c
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ GO
 
 ### <a name="if-you-get-an-error"></a>如果您收到錯誤
 
-排除 classpath 與相關的問題。 
-
-+ Classpath 應該包含父資料夾和任何子資料夾，但不是的 「 套件 」 的子資料夾。 雖然 pkg 子資料夾必須存在，它具有不應在 classpath 中所指定值的預存程序。
-
-+ 「 套件 」 的子資料夾應包含已編譯的程式碼，所有的三個類別。
++ 當您編譯您的類別時，「 套件 」 的子資料夾應包含已編譯的程式碼，所有的三個類別。
 
 + Classpath 的長度不能超過宣告的值 (`DECLARE @myClassPath nvarchar(50)`)。 若是如此，路徑會被截斷成前 50 個字元，並將不會載入編譯的程式碼。 您可以執行`SELECT @myClassPath`來檢查值。 如果沒有足夠的 50 個字元的長度增加。 
 

@@ -16,12 +16,12 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bea1a781959cb345ceae785e97766ba659cb94c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 38ef611dd7dd181b164bd0eec459d68c49c6b5df
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133038"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493301"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@password=**] **'**_密碼_**'**  
- 這是新密碼。 *密碼*已**sysname**，沒有預設值。 如果 「 散發者 」 已本機的密碼**distributor_admin**變更系統登入。  
+`[ @password = ] 'password'` 這是新的密碼。 *密碼*已**sysname**，沒有預設值。 如果 「 散發者 」 已本機的密碼**distributor_admin**變更系統登入。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -56,7 +55,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [保護散發者](../../relational-databases/replication/security/secure-the-distributor.md)   
- [sp_adddistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

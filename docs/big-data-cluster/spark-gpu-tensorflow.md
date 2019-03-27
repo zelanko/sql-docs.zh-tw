@@ -1,21 +1,21 @@
 ---
-title: GPU 支援和 TensorFlow
+title: GPU 支援與 TensorFlow
 titleSuffix: SQL Server 2019 big data clusters
 description: 部署具有 GPU 支援的巨量資料叢集，並在 Azure 資料 Studio Notebook 中使用 TensorFlow。
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161952"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494110"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow
 
@@ -196,7 +196,7 @@ ms.locfileid: "58161952"
 將適當的記事本檔案到本機電腦，然後開啟，並在 Azure 資料 Studio 中使用的 PySpark3 核心中執行它。 除非您有較舊版本的 CUDA 或 TensorFlow 的特定需求，選擇 [CUDA 9/CUDNN 7/TensorFlow 1.12.0]。 如需如何搭配使用 notebook 和巨量資料叢集的詳細資訊，請參閱[如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)。
 
 > [!NOTE]
-> 請注意，notebook 會將軟體安裝在系統位置。 這可能是因為目前執行中的 notebook，以在 CTP 2.3 中的根權限。
+> 請注意，notebook 會將軟體安裝在系統位置。 這可能是因為目前執行中的 notebook，以在 CTP 2.4 中的根權限。
 
 安裝 NVIDIA GPU 的程式庫和之後 TensorFlow 適用於 GPU，notebook 會列出可用的 GPU 裝置。 然後他們符合，並評估 TensorFlow 模型可辨識手寫數字使用 MNIST 資料集。 檢查可用磁碟空間之後, 下載的人員，並執行中的 CIFAR 10 影像分類範例[ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git)。 藉由在具有不同的 Gpu 叢集上執行 CIFAR 10 範例，您可以觀察速度提升提供 GPU 可用在 Azure 中的每個層代。
 

@@ -18,12 +18,12 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691406"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493250"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@dbname=**] **'***dbname***'**  
- 指定要驗證的資料庫。 *dbname*已**sysname**。  
+`[ @dbname = ] 'dbname'` 指定要驗證的資料庫。 *dbname*已**sysname**。  
   
- [  **@autofix=**] **'auto'**  
- 將資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸除任何使用者建立之資料庫的使用者和非預設權限。 *自動*已**nvarchar(4)**，預設值是 NULL。  
+`[ @autofix = ] 'auto'` 資料庫和所有資料庫物件的擁有權提供給系統管理員，並卸除任何使用者建立的資料庫使用者和非預設權限。 *自動*已**nvarchar(4)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -93,10 +91,10 @@ EXEC sp_certify_removable inventory, AUTO;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [資料庫卸離和附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove b n &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125106"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493263"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是發行項所在發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行項所在發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'**_文章_**'**  
- 這是要驗證的發行項名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是要驗證的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- 指定是否只傳回資料表的資料列計數。 *type_of_check_requested*已**smallint**，預設值是**1**。  
+`[ @rowcount_only = ] type_of_check_requested` 指定是否只傳回資料表的資料列計數。 *type_of_check_requested*已**smallint**，預設值是**1**。  
   
  如果**0**，執行資料列計數並[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。  
   
@@ -60,8 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  如果**2**，執行資料列計數及二進位總和檢查碼。  
   
- [  **@full_or_fast=**] *full_or_fast*  
- 這是用於計算資料列計數的方法。 *full_or_fast*已**tinyint**，而且可以是下列值之一。  
+`[ @full_or_fast = ] full_or_fast` 方法用來計算資料列計數。 *full_or_fast*已**tinyint**，而且可以是下列值之一。  
   
 |**值**|**說明**|  
 |---------------|---------------------|  
@@ -69,17 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|執行快速計數**sysindexes.rows**。 計算資料列**sysindexes**速度，比計算實際資料表中的資料列。 不過， **sysindexes**會以延遲的方式，更新和資料列計數可能不正確。|  
 |**2** (預設值)|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 NULL，且預存程序正在使用此選項，以取得此值，完整 COUNT(*) 一律會使用。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 指定在驗證完成時，是否應該立即關閉散發代理程式。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，散發代理程式不會關機。 如果**1**，散發代理程式會在驗證發行項之後關閉。  
+`[ @shutdown_agent = ] shutdown_agent` 指定是否 「 散發代理程式應該立即關閉驗證完成時。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，散發代理程式不會關機。 如果**1**，散發代理程式會在驗證發行項之後關閉。  
   
- [  **@subscription_level=**] *subscription_level*  
- 指定是否由一組訂閱者來收取驗證。 *subscription_level*已**位元**，預設值是**0**。 如果**0**，驗證會套用到所有 「 訂閱者 」。 如果**1**，驗證只會套用到訂閱者對所指定的子集**sp_marksubscriptionvalidation**中目前開啟的交易。  
+`[ @subscription_level = ] subscription_level` 指定驗證由一組訂閱者。 *subscription_level*已**位元**，預設值是**0**。 如果**0**，驗證會套用到所有 「 訂閱者 」。 如果**1**，驗證只會套用到訂閱者對所指定的子集**sp_marksubscriptionvalidation**中目前開啟的交易。  
   
- [  **@reserved=**]*保留*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'**_發行者_**'**  
- 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應該不在要求上進行驗證時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -97,9 +89,9 @@ sp_article_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [驗證複寫的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_marksubscriptionvalidation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

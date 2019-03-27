@@ -18,12 +18,12 @@ ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06198932c654bf7e8d855b4a008b3de3401dda1c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a226b17a1394cdb37982367d5c4b367f72a84ffe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131508"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492253"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'**_角色_**'**  
- 這是應用程式角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
+`[ @rolename = ] 'role'` 是應用程式角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
   
- [  **@newpwd =** ] **'**_密碼_**'**  
- 這是應用程式角色的新密碼。 *密碼*已**sysname**，沒有預設值。 *密碼*不能是 NULL。  
+`[ @newpwd = ] 'password'` 是應用程式角色的新密碼。 *密碼*已**sysname**，沒有預設值。 *密碼*不能是 NULL。  
   
 > [!IMPORTANT]  
 >  請勿使用 NULL 密碼。 請使用增強式密碼。 如需詳細資訊，請參閱 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
@@ -71,7 +69,7 @@ EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [應用程式角色](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_addapprole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b15212edcb043ed86e3d2cd18c5f33624660692
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130678"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493450"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是發行項所在的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
+`[ @publication = ] 'publication'` 是包含發行項的發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
- [  **@article=**] **'**_文章_**'**  
- 這是要變更其屬性的發行項名稱。 *發行項*已**sysname**，預設值是 NULL。  
+`[ @article = ] 'article'` 是其屬性是要變更的發行項的名稱。 *發行項*已**sysname**，預設值是 NULL。  
   
- [  **@property=**] **'**_屬性_**'**  
- 這是要變更的發行項屬性。 *屬性*已**nvarchar(100)**。  
+`[ @property = ] 'property'` 為發行項屬性變更。 *屬性*已**nvarchar(100)**。  
   
- [  **@value=**] **'**_值_**'**  
- 這是發行項屬性的新值。 *值*已**nvarchar(255)**。  
+`[ @value = ] 'value'` 是發行項屬性的新值。 *值*已**nvarchar(255)**。  
   
  下表描述發行項的屬性及這些屬性的值。  
   
@@ -67,13 +63,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||新的目的地資料表。|  
 |**destination_owner**||目的地物件的擁有者名稱。|  
 |**filter**||用於篩選資料表 (水平篩選) 的新預存程序。 預設值是 NULL。 點對點複寫發行集的這個項目不能變更。|  
-|**fire_triggers_on_snapshot**|**true**|在套用初始快照集時，執行複寫的使用者觸發程序。<br /><br /> 注意：觸發程序，受到要複寫的位元遮罩值*schema_option*必須包含值**0x100**。|  
+|**fire_triggers_on_snapshot**|**true**|在套用初始快照集時，執行複寫的使用者觸發程序。<br /><br /> 注意:觸發程序，受到要複寫的位元遮罩值*schema_option*必須包含值**0x100**。|  
 ||**false**|在套用初始快照集時，不執行複寫的使用者觸發程序。|  
 |**identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
 |**ins_cmd**||要執行的 INSERT 陳述式；否則，便從記錄檔中建構它。|  
 |**pre_creation_cmd**||可以在套用同步處理之前，卸除、刪除或截斷目的地資料表的預先建立命令。|  
-||**None**|不使用命令。|  
-||**卸除**|卸除目的地資料表。|  
+||**none**|不使用命令。|  
+||**drop**|卸除目的地資料表。|  
 ||**delete**|刪除目的地資料表。|  
 ||**truncate**|截斷目的地資料表。|  
 |**pub_identity_range**||控制在訂閱者端指派的指派識別範圍大小。 不支援點對點複寫使用這個項目。|  
@@ -94,7 +90,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|複寫資料行層級定序。|  
 ||**0x2000**|複寫與已發行之發行項來源物件相關聯的擴充屬性。|  
 ||**0x4000**|如果資料表發行項上定義了唯一索引鍵，便複寫唯一索引鍵。|  
-||**0x8000**|複寫資料表發行項的主索引鍵和唯一索引鍵，來做為使用 ALTER TABLE 陳述式的條件約束。<br /><br /> 注意：這個選項已被取代。 使用**0x80**並**0x4000**改。|  
+||**0x8000**|複寫資料表發行項的主索引鍵和唯一索引鍵，來做為使用 ALTER TABLE 陳述式的條件約束。<br /><br /> 注意:這個選項已被取代。 使用**0x80**並**0x4000**改。|  
 ||**0x10000**|將 CHECK 條件約束複寫成 NOT FOR REPLICATION，以免在同步處理期間強制執行條件約束。|  
 ||**0x20000**|將 FOREIGN KEY 條件約束複寫成 NOT FOR REPLICATION，以免在同步處理期間強制執行條件約束。|  
 ||**0x40000**|複寫資料分割資料表或索引的相關聯檔案群組。|  
@@ -128,11 +124,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**包含資料行名稱**|資料行名稱包括在複寫的 INSERT 陳述式中。|  
 ||**沒有資料行名稱**|資料行名稱不包括在複寫的 INSERT 陳述式中。|  
 ||**dts 水平資料分割**|發行項的水平資料分割並非由可轉換的訂閱來定義。|  
-||**None**|中的所有狀態選項會都清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並將標示為非作用中的發行項。|  
+||**none**|中的所有狀態選項會都清除[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並將標示為非作用中的發行項。|  
 ||**parameters**|利用參數化的命令，將變更傳播到訂閱者。 這是新發行項的預設值。|  
 ||**字串常值**|利用字串常值，將變更傳播到訂閱者。|  
 |**sync_object**||用於產生同步處理輸出檔之資料表或檢視的名稱。 預設值是 NULL。 不支援 Oracle 發行者使用這個值。|  
-|**資料表空間**||識別 Oracle 資料庫發行的發行項之記錄資料表所用的資料表空間。 如需詳細資訊，請參閱[管理 Oracle 資料表空間](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
+|**tablespace**||識別 Oracle 資料庫發行的發行項之記錄資料表所用的資料表空間。 如需詳細資訊，請參閱[管理 Oracle 資料表空間](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)。|  
 |**threshold**||用來控制散發代理程式指派新識別範圍之時機的百分比值。 不支援點對點複寫使用這個項目。|  
 |**type**||不支援 Oracle 發行者使用這個值。|  
 ||**logbased**|記錄式發行項。|  
@@ -146,8 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||要執行的 UPDATE 陳述式；否則，便從記錄檔中建構它。|  
 |NULL|NULL|傳回可變更的發行項屬性清單。|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 認可這個預存程序所採取的動作可能使現有的快照集失效。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 認可這個預存程序所採取的動作可能會使現有的快照集。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
   
  **0**指定發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
   
@@ -155,8 +150,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  請參閱＜備註＞一節，以了解在變更時需要產生新快照集的屬性。  
   
- [  **@force_reinit_subscription=]**_force_reinit_subscription_  
- 認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*已**位元**預設值是**0**。  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` 認可這個預存程序所採取的動作可能需要重新初始化現有的訂用帳戶。 *force_reinit_subscription*已**位元**預設值是**0**。  
   
  **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
   
@@ -164,8 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  請參閱＜備註＞一節，以了解在變更時需要重新初始化所有現有的訂閱之屬性。  
   
- [ **@publisher**=] **'**_發行者_**'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應該不在上變更發行項屬性時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -247,10 +240,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addarticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sp_helparticlecolumns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
+ [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

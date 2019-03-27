@@ -16,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777910"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493693"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,43 +46,34 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'**_發行集_**'**  
- 這是加入合併篩選時所在發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是在其中加入合併篩選的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=** ] **'**_文章_**'**  
- 這是加入合併篩選所在的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是加入合併篩選的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- 這是篩選的名稱。 *filtername*是必要的參數。 *filtername*已**sysname**，沒有預設值。  
+`[ @filtername = ] 'filtername'` 已篩選的名稱。 *filtername*是必要的參數。 *filtername*已**sysname**，沒有預設值。  
   
- [  **@join_articlename=** ] **'**_join_articlename_**'**  
- 所指定的子發行項的父發行*一文*，必須使用所指定的聯結子句中加入*join_filterclause*，以判斷子發行項中符合的資料列合併篩選之篩選準則。 *join_articlename*已**sysname**，沒有預設值。 發行項必須是所指定的發行集中*發行集*。  
+`[ @join_articlename = ] 'join_articlename'` 所指定的子發行項的父發行*一文*，必須使用所指定的聯結子句中加入*join_filterclause*，以判斷子發行項中符合的資料列合併篩選之篩選準則。 *join_articlename*已**sysname**，沒有預設值。 發行項必須是所指定的發行集中*發行集*。  
   
- [  **@join_filterclause=** ] *join_filterclause*  
- 是一個聯結子句，必須用來將所指定的子發行項*一文*與所指定的父發行項*join_article*，以判斷符合合併篩選的資料列。 *join_filterclause*已**nvarchar(1000)**。  
+`[ @join_filterclause = ] join_filterclause` 是一個聯結子句，必須用來將所指定的子發行項*一文*與所指定的父發行項*join_article*，以判斷符合合併篩選的資料列。 *join_filterclause*已**nvarchar(1000)**。  
   
- [  **@join_unique_key=** ] *join_unique_key*  
- 如果指定子發行項之間的聯結*一文*與父發行項*join_article*是一個為一對多、 一對一、 多對一或多對多。 *join_unique_key*已**int**，預設值是 0。 **0**表示多對一或多對多聯結。 **1**表示一對一或一對多的聯結。 這個值是**1**聯結的資料行形成唯一的索引鍵中的當*join_article*，或如果*join_filterclause*之間的外部索引鍵*文章*和中的主索引鍵*join_article*。  
+`[ @join_unique_key = ] join_unique_key` 如果指定子發行項之間的聯結*一文*與父發行項*join_article*是一個為一對多、 一對一、 多對一或多對多。 *join_unique_key*已**int**，預設值是 0。 **0**表示多對一或多對多聯結。 **1**表示一對一或一對多的聯結。 這個值是**1**聯結的資料行形成唯一的索引鍵中的當*join_article*，或如果*join_filterclause*之間的外部索引鍵*文章*和中的主索引鍵*join_article*。  
   
 > [!CAUTION]  
 >  只將此參數設定為**1**如果您有保證唯一性的父發行項之基礎資料表中的聯結資料行的條件約束。 如果*join_unique_key*設為**1**不正確時，可能會發生非聚合的資料。  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- 認可這個預存程序所採取的動作可能使現有的快照集失效。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 認可這個預存程序所採取的動作可能會使現有的快照集。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
   
  **0**指定合併發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
   
  **1**指定合併發行項的變更可能使快照集失效，如果有現有的訂閱需要新的快照集，則在標示為已棄用之現有快照集和新的快照集提供權限產生。  
   
- [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
- 認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*已**元**，預設值是 0。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 認可這個預存程序所採取的動作可能需要重新初始化現有的訂用帳戶。 *force_reinit_subscription*已**元**，預設值是 0。  
   
  **0**指定合併發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化訂閱，就會發生錯誤，且不會進行任何變更。  
   
  **1**指定合併發行項的變更會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
   
- [  **@filter_type=** ] *filter_type*  
- 指定要加入的篩選類型。 *filter_type*已**tinyint**，而且可以是下列值之一。  
+`[ @filter_type = ] filter_type` 指定要加入的篩選類型。 *filter_type*已**tinyint**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -122,7 +113,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

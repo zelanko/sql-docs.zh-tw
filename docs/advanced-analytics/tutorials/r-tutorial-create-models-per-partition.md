@@ -4,18 +4,18 @@ description: 了解如何建立模型、 定型和使用資料分割使用資料
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 550e31e0b064051cb75f0e8922c346c4e8a5e3e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: abe7dbe193cc4e5f90095e7764f35aa1dc0cd9bf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017894"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493330"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立分割區為基礎的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "57017894"
 
 + SQL Server 2019 預覽資料庫引擎執行個體，與機器學習服務和 R 的整合。
 
-檢查版本，藉由執行**`SELECT @@Version`** 為 T-SQL 查詢中的查詢工具。 輸出應該是 「 Microsoft SQL Server 2019 (CTP 2.3)-15.0.x"。
+檢查版本，藉由執行**`SELECT @@Version`** 為 T-SQL 查詢中的查詢工具。 輸出應該是 「 Microsoft SQL Server 2019 (CTP 2.4)-15.0.x"。
 
 檢查可用性的 R 套件，藉由傳回格式正確的所有目前已安裝與您的資料庫引擎執行個體的 R 封裝清單：
 

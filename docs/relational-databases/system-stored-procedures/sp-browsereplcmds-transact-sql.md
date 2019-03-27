@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802380"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493840"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@xact_seqno_start =**] **'**_xact_seqno_start&lt_**'**  
- 指定要傳回的最低值確實序號。 *xact_seqno_start&lt*已**nchar(22)**，預設值是 0x00000000000000000000。  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 指定的最低值確實序號來傳回。 *xact_seqno_start&lt*已**nchar(22)**，預設值是 0x00000000000000000000。  
   
- [  **@xact_seqno_end =**] **'**_xact_seqno_end&lt_**'**  
- 指定要傳回的最高確實序號。 *xact_seqno_end&lt*已**nchar(22)**，預設值是 0xFFFFFFFFFFFFFFFFFFFF。  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 指定的最高確實序號來傳回。 *xact_seqno_end&lt*已**nchar(22)**，預設值是 0xFFFFFFFFFFFFFFFFFFFF。  
   
- [  **@originator_id =**] **'**_originator_id_**'**  
- 指定如果具有指定的命令*originator_id*會傳回。 *originator_id*已**int**，預設值是 NULL。  
+`[ @originator_id = ] 'originator_id'` 指定如果具有指定的命令*originator_id*會傳回。 *originator_id*已**int**，預設值是 NULL。  
   
- [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
- 指定如果具有指定的命令*publisher_database_id*會傳回。 *publisher_database_id*已**int**，預設值是 NULL。  
+`[ @publisher_database_id = ] 'publisher_database_id'` 指定如果具有指定的命令*publisher_database_id*會傳回。 *publisher_database_id*已**int**，預設值是 NULL。  
   
- [  **@article_id =**] **'**_article_id_**'**  
- 指定如果具有指定的命令*article_id*會傳回。 *article_id*已**int**，預設值是 NULL。  
+`[ @article_id = ] 'article_id'` 指定如果具有指定的命令*article_id*會傳回。 *article_id*已**int**，預設值是 NULL。  
   
- [  **@command_id =**] *command_id*  
- 是中的命令的位置[MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)要解碼。 *command_id*已**int**，預設值是 NULL。 如果指定，所有其他參數也必須指定，並*xact_seqno_start&lt*必須與相同*xact_seqno_end&lt*。  
+`[ @command_id = ] command_id` 是中的命令的位置[MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)要解碼。 *command_id*已**int**，預設值是 NULL。 如果指定，所有其他參數也必須指定，並*xact_seqno_start&lt*必須與相同*xact_seqno_end&lt*。  
   
- [  **@agent_id =**] *agent_id*  
- 指定只傳回特定複寫代理程式的命令。 *agent_id*已**int**，預設值是 NULL。  
+`[ @agent_id = ] agent_id` 指定只有特定的複寫代理程式的命令會傳回。 *agent_id*已**int**，預設值是 NULL。  
   
- [  **@compatibility_level =**] *compatibility_level*  
- 是的新版[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所在*compatibility_level*是**int**，預設值是 9000000。  
+`[ @compatibility_level = ] compatibility_level` 是的新版[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所在*compatibility_level*是**int**，預設值是 9000000。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -81,7 +73,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_db**|**sysname**|引發交易的資料庫。|  
 |**article_id**|**int**|發行項的識別碼。|  
 |**type**|**int**|命令的類型。|  
-|**部分指令**|**bit**|指出這是否為部分命令。|  
+|**partial_command**|**bit**|指出這是否為部分命令。|  
 |**hashkey**|**int**|僅供內部使用。|  
 |**originator_publication_id**|**int**|引發交易的發行集識別碼。|  
 |**originator_db_version**|**int**|引發交易的資料庫版本。|  
@@ -99,7 +91,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="see-also"></a>另請參閱  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

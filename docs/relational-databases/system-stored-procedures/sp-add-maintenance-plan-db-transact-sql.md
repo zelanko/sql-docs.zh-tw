@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 007f0eea045c22ea2fb7ef2ed0d6db6e9262d060
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cce551e7523f78489c7cc587e9c3bd052d09cbe9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535806"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494150"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@plan_id =**] **'**_plan_id_**'**  
- 指定維護計畫的計畫識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
+`[ @plan_id = ] 'plan_id'` 指定維護計畫的計畫識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
- [  **@db_name =**] **'**_database_name_**'**  
- 指定要加入維護計畫的資料庫名稱。 資料庫必須先建立好或已存在，才能加入計畫中。 *database_name* 為 **sysname**。  
+`[ @db_name = ] 'database_name'` 指定要加入至 維護計畫的資料庫名稱。 資料庫必須先建立好或已存在，才能加入計畫中。 *database_name* 為 **sysname**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

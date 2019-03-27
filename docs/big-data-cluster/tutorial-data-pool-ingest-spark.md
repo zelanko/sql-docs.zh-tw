@@ -5,17 +5,17 @@ description: 本教學課程會示範如何將資料內嵌到 Spark 作業在 St
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017734"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491901"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區
 
@@ -49,7 +49,15 @@ ms.locfileid: "57017734"
 
    ![SQL Server 的主要執行個體查詢](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. 建立名為外部資料表**web_clickstreams_spark_results**資料集區中。 `SqlDataPool`資料來源是可從任何巨量資料叢集的主要執行個體的特殊的資料來源類型。
+1. 如果不存在，請建立資料集區的外部資料來源。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. 建立名為外部資料表**web_clickstreams_spark_results**資料集區中。
 
    ```sql
    USE Sales
@@ -64,7 +72,7 @@ ms.locfileid: "57017734"
       );
    ```
   
-1. 在 CTP 2.3 中建立資料集區是非同步的但沒有任何方式可判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
+1. 在 CTP 2.4，建立資料集區是非同步的但沒有任何方法來判斷當尚未完成。 等候兩分鐘，以確定資料集區建立後再繼續。
 
 ## <a name="start-a-spark-streaming-job"></a>啟動 Spark 串流作業
 

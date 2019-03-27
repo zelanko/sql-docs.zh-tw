@@ -16,12 +16,12 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819111"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493460"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@profile_id=**] *profile_id*，  
- 這是設定檔的識別碼。 *profile_id*已**int**，沒有預設值。  
+`[ @profile_id = ] profile_id,` 是設定檔的識別碼。 *profile_id*已**int**，沒有預設值。  
   
- [  **@parameter_name=**] **'***parameter_name***'**  
- 這是參數的名稱。 *parameter_name*已**sysname**，沒有預設值。 系統設定檔可以變更的參數會隨著代理程式的類型而不同。 若要找出何種代理程式這*profile_id*表示，找出*profile_id*中的資料行**Msagent_profiles**資料表，並記下*agent_type*值。  
+`[ @parameter_name = ] 'parameter_name'` 為參數的名稱。 *parameter_name*已**sysname**，沒有預設值。 系統設定檔可以變更的參數會隨著代理程式的類型而不同。 若要找出何種代理程式這*profile_id*表示，找出*profile_id*中的資料行**Msagent_profiles**資料表，並記下*agent_type*值。  
   
 > [!NOTE]  
 >  如果支援參數指定*agent_type*，但尚未定義在代理程式設定檔中，則會傳回錯誤。 若要將參數加入至您必須執行代理程式設定檔[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
@@ -61,7 +59,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **輸出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -81,7 +79,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **輸出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -117,7 +115,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **輸出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -181,7 +179,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **輸出**  
+-   **Output**  
   
 -   **OutputMessageFile**  
   
@@ -229,7 +227,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **輸出**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  若要查看已針對給定的設定檔定義哪些參數，執行**sp_help_agent_profile** ，並記下*profile_name*相關聯*profile_id*。 以適當*profile_id*，接下來執行**sp_help_agent_parameters**使用該*profile_id*查看設定檔相關聯的參數。 可以在設定檔中加入參數，藉由執行[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- 這是參數的新值。 *parameter_value*已**nvarchar(255)**，沒有預設值。  
+`[ @parameter_value = ] 'parameter_value'` 新的參數值。 *parameter_value*已**nvarchar(255)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -262,9 +259,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [複寫佇列讀取器代理程式](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

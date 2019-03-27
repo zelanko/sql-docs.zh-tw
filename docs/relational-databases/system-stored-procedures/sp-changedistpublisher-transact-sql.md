@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494021"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=** ] **'**_發行者_**'**  
- 這是發行者名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 這是發行者名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@property=** ] **'**_屬性_**'**  
- 這是要變更之給定發行者的屬性。 *屬性*已**sysname**而且可以是下列值之一。  
+`[ @property = ] 'property'` 是要變更之給定發行者的屬性。 *屬性*已**sysname**而且可以是下列值之一。  
   
- [ **@value=** ] **'**_value_**'**  
- 這是指定屬性的值。 *值*已**nvarchar(255)**，預設值是 NULL。  
+`[ @value = ] 'value'` 是指定之屬性的值。 *值*已**nvarchar(255)**，預設值是 NULL。  
   
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- 需要 SQL Database 受控執行個體，應該符合 Azure SQL Database 的存放磁碟區的存取金鑰。 
+`[ @storage_connection_string = ] 'storage_connection_string'` 需要 SQL Database 受控執行個體，應該符合 Azure SQL Database 的存放磁碟區的存取金鑰。 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,7 +56,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |屬性|值|描述|  
 |--------------|------------|-----------------|  
-|**使用中**|**true**|啟動發行者。|  
+|**active**|**true**|啟動發行者。|  
 ||**false**|停用發行者|  
 |**distribution_db**||散發資料庫的名稱。|  
 |**login**||登入名稱。|  
@@ -82,8 +78,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

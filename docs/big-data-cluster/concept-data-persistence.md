@@ -5,17 +5,17 @@ description: 深入了解資料持續性中的 SQL Server 2019 巨量資料叢�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017954"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494160"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017954"
 SQL Server 巨量資料叢集會使用這些永續性磁碟區的方式是使用[儲存類別](https://kubernetes.io/docs/concepts/storage/storage-classes/)。 您可以建立不同的儲存體類別，用於不同種類的儲存體，並在巨量資料叢集部署期間指定它們。 您可以設定的儲存體来使用類別用途 （集區）。 SQL Server 的巨量資料叢集會建立[永續性磁碟區宣告](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)與每個 pod，需要永續性磁碟區的指定儲存體類別名稱。 然後，它會裝載 pod 中對應的永續性磁碟區。
 
 > [!NOTE]
-> CTP 2.3 起，僅針對`ReadWriteOnce`支援整個叢集的存取模式。
+> CTP 2.4，只有`ReadWriteOnce`支援整個叢集的存取模式。
 
 ## <a name="deployment-settings"></a>部署設定
 

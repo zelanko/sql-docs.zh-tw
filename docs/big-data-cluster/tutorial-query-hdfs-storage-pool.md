@@ -5,17 +5,17 @@ description: 本教學課程會示範如何查詢 SQL Server 2019 巨量資料�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241669"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494400"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>教學課程：查詢 HDFS 中的 SQL Server 的巨量資料叢集
 
@@ -44,18 +44,18 @@ ms.locfileid: "54241669"
 
 1. 在 Azure Data Studio，連接到您的巨量資料叢集的 SQL Server 主要執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server 的主要執行個體](connect-to-big-data-cluster.md#master)。
 
-2. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
+1. 在連線 中按兩下**伺服器**視窗以顯示 SQL Server 的主要執行個體的伺服器儀表板。 選取 **新的查詢**。
 
    ![SQL Server 的主要執行個體查詢](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. 執行下列 TRANSACT-SQL 命令，以將內容變更為**銷售**主要執行個體中的資料庫。
+1. 執行下列 TRANSACT-SQL 命令，以將內容變更為**銷售**主要執行個體中的資料庫。
 
    ```sql
    USE Sales
    GO
    ```
 
-4. 定義要從 HDFS 讀取的 CSV 檔案格式。 按 F5 執行陳述式。
+1. 定義要從 HDFS 讀取的 CSV 檔案格式。 按 F5 執行陳述式。
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ ms.locfileid: "54241669"
    );
    ```
 
-5. 建立可讀取的外部資料表`/clickstream_data`從存放集區。 **SqlStoragePool**可從巨量資料叢集的主要執行個體存取。
+1. 如果不存在，請建立存放集區的外部資料來源。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. 建立可讀取的外部資料表`/clickstream_data`從存放集區。 **SqlStoragePool**可從巨量資料叢集的主要執行個體存取。
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

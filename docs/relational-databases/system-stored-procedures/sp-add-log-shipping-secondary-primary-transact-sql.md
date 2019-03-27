@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc2bf117e78f897102f85a7cab43295b079db12b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824736"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494330"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,32 +54,23 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@primary_server** =] '*primary_server*'  
- 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
+`[ @primary_server = ] 'primary_server'` 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
   
- [ **@primary_database** =] '*primary_database&lt*'  
- 這是主要伺服器的資料庫名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
   
- [ **@backup_source_directory** = ] '*backup_source_directory*'  
- 用於儲存主要伺服器之交易記錄備份檔的目錄。 *backup_source_directory*已**nvarchar(500)** 不能是 NULL。  
+`[ @backup_source_directory = ] 'backup_source_directory'` 儲存交易記錄備份檔案從主要伺服器的目錄。 *backup_source_directory*已**nvarchar(500)** 不能是 NULL。  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- 備份檔要複製到其中的次要伺服器目錄。 *backup_destination_directory*已**nvarchar(500)** 不能是 NULL。  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` 備份檔案複製到其中的次要伺服器上的目錄。 *backup_destination_directory*已**nvarchar(500)** 不能是 NULL。  
   
- [ **@copy_job_name** = ] '*copy_job_name*'  
- 用於將交易記錄備份複製到次要伺服器中，所建立之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業所用的名稱。 *copy_job_name*已**sysname**不能是 NULL。  
+`[ @copy_job_name = ] 'copy_job_name'` 要用於名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立用來將交易記錄備份複製到次要伺服器的代理程式作業。 *copy_job_name*已**sysname**不能是 NULL。  
   
- [ **@restore_job_name** = ] '*restore_job_name*'  
- 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將備份還原到次要資料庫的次要伺服器上的代理程式作業。 *restore_job_name&lt*已**sysname**不能是 NULL。  
+`[ @restore_job_name = ] 'restore_job_name'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將備份還原到次要資料庫的次要伺服器上的代理程式作業。 *restore_job_name&lt*已**sysname**不能是 NULL。  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- 時間，以分鐘為單位備份檔案會保留在次要伺服器中所指定的路徑長度@backup_destination_directory被刪除之前的參數。 *history_retention_period*已**int**，預設值是 NULL。 若未指定，則使用 14420。  
+`[ @file_retention_period = ] 'file_retention_period'` 時間，以分鐘為單位備份檔案會保留在次要伺服器中所指定的路徑長度@backup_destination_directory被刪除之前的參數。 *history_retention_period*已**int**，預設值是 NULL。 若未指定，則使用 14420。  
   
- [ **@monitor_server** =] '*monitor_server*'  
- 這是監視伺服器的名稱。 *Monitor_server*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @monitor_server = ] 'monitor_server'` 是監視伺服器的名稱。 *Monitor_server*已**sysname**，沒有預設值，不能是 NULL。  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode&lt*'  
- 用於連接到監視伺服器的安全性模式。  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 用來連接到監視伺服器的安全性模式。  
   
  1 = Windows 驗證。  
   
@@ -87,20 +78,15 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode&lt*已**元**不能是 NULL。  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- 這是用來存取監視伺服器之帳戶的使用者名稱。  
+`[ @monitor_server_login = ] 'monitor_server_login'` 是用來存取監視伺服器的使用者名稱。  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- 這是用於存取監視伺服器之帳戶的密碼。  
+`[ @monitor_server_password = ] 'monitor_server_password'` 這是帳戶的用來存取監視伺服器密碼。  
   
- [ **@copy_job_id** =] '*copy_job_id*' 輸出  
- 次要伺服器中之複製作業的相關識別碼。 *copy_job_id*已**uniqueidentifier**不能是 NULL。  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` 次要伺服器上之複製作業相關聯的識別碼。 *copy_job_id*已**uniqueidentifier**不能是 NULL。  
   
- [ **@restore_job_id** =] '*restore_job_id*' 輸出  
- 次要伺服器中之還原作業的相關識別碼。 *restore_job_id*已**uniqueidentifier**不能是 NULL。  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` 使用次要伺服器上的還原作業相關聯的識別碼。 *restore_job_id*已**uniqueidentifier**不能是 NULL。  
   
- [ **@secondary_id** =] '*secondary_id*' 輸出  
- 記錄傳送組態中之次要伺服器的識別碼。 *secondary_id*已**uniqueidentifier**不能是 NULL。  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` 記錄傳送組態中次要伺服器的識別碼。 *secondary_id*已**uniqueidentifier**不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

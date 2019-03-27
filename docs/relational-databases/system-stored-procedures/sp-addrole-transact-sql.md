@@ -1,5 +1,5 @@
 ---
-title: sp_addrole (TRANSACT-SQL) |Microsoft Docs
+title: sp_addrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212917"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492190"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'***角色***'**  
- 這是新資料庫角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須是有效的識別碼 (ID)，而且必須尚未存在於目前的資料庫。  
+`[ @rolename = ] 'role'` 是新的資料庫角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須是有效的識別碼 (ID)，而且必須尚未存在於目前的資料庫。  
   
- [  **@ownername =**] **'***擁有者***'**  
- 這是新資料庫角色的擁有者。 *擁有者*已**sysname**，預設值是目前正在執行的使用者。 *擁有者*必須是資料庫使用者或目前資料庫中的資料庫角色。  
+`[ @ownername = ] 'owner'` 是新的資料庫角色的擁有者。 *擁有者*已**sysname**，預設值是目前正在執行的使用者。 *擁有者*必須是資料庫使用者或目前資料庫中的資料庫角色。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

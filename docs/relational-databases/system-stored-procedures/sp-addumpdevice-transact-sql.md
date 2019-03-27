@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d43074e9cdffa27e971d32278259001ae86c005f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209447"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492870"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[最新版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至[目前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
 
 將備份裝置加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
   
@@ -48,19 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@devtype=** ] **'***device_type***'**  
- 這是備份裝置的類型。 *device_type&lt*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
+`[ @devtype = ] 'device_type'` 為備份裝置的類型。 *device_type&lt*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**disk**|做為備份裝置的硬碟檔。|  
-|**磁帶**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意:未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
   
- [ **@logicalname =** ] **'***logical_name***'**  
- 這是 BACKUP 和 RESTORE 陳述式所用之備份裝置的邏輯名稱。 *logical_name*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @logicalname = ] 'logical_name'` 是 BACKUP 和 RESTORE 陳述式所用之備份裝置的邏輯名稱。 *logical_name*已**sysname**，沒有預設值，不能是 NULL。  
   
- [ **@physicalname =** ] **'***physical_name***'**  
- 這是備份裝置的實體名稱。 實體名稱必須遵照作業系統檔案名稱或網路裝置通用命名慣例的規則，且必須包括完整路徑。 *physical_name*已**nvarchar(260)**，沒有預設值，而且不能是 NULL。  
+`[ @physicalname = ] 'physical_name'` 是實體備份裝置的名稱。 實體名稱必須遵照作業系統檔案名稱或網路裝置通用命名慣例的規則，且必須包括完整路徑。 *physical_name*已**nvarchar(260)**，沒有預設值，而且不能是 NULL。  
   
  當在遠端網路位置建立備份裝置時，請確定用來啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的名稱有遠端電腦的適當寫入功能。  
   
@@ -69,11 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  此程序將指定的實體名稱輸入目錄中。 此程序不會試著存取或建立裝置。  
   
- [ **@cntrltype =** ] **'***controller_type***'**  
- 已過時。 若指定，則會忽略此參數。 支援這個項目的目的，只是為了與舊版相容。 初次使用**sp_addumpdevice**應該省略此參數。  
+`[ @cntrltype = ] 'controller_type'` 已過時。 若指定，則會忽略此參數。 支援這個項目的目的，只是為了與舊版相容。 初次使用**sp_addumpdevice**應該省略此參數。  
   
- [ **@devstatus =** ] **'***device_status***'**  
- 已過時。 若指定，則會忽略此參數。 支援這個項目的目的，只是為了與舊版相容。 初次使用**sp_addumpdevice**應該省略此參數。  
+`[ @devstatus = ] 'device_status'` 已過時。 若指定，則會忽略此參數。 支援這個項目的目的，只是為了與舊版相容。 初次使用**sp_addumpdevice**應該省略此參數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

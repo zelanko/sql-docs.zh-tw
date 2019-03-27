@@ -16,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819062"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493950"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,27 +43,22 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是要變更的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 發行集必須已存在，且必須符合識別碼的規則。  
+`[ @publication = ] 'publication'` 是要變更的發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。 發行集必須已存在，且必須符合識別碼的規則。  
   
- [  **@subscriber=**] **'**_訂閱者_**'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
   
- [  **@property=**] **'**_屬性_**'**  
- 這是給定發行集要變更的屬性。 *屬性*已**sysname**，而且可以是下列其中一個資料表中的值。  
+`[ @property = ] 'property'` 這是要變更給定發行集屬性。 *屬性*已**sysname**，而且可以是下列其中一個資料表中的值。  
   
- [  **@value=**] **'**_值_**'**  
- 指定的新值*屬性*。 *值*已**nvarchar(255)**，而且可以是下列其中一個資料表中的值。  
+`[ @value = ] 'value'` 指定的新值*屬性*。 *值*已**nvarchar(255)**，而且可以是下列其中一個資料表中的值。  
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  
 |**description**||這個合併訂閱的描述。|  
 |**priority**||這是訂閱優先權。 在偵測到衝突時，預設解析程式會利用優先權挑選贏的一方。|  
 |**merge_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
-|**property**||用來執行代理程式之 Windows 帳戶的密碼。|  
+|**merge_job_password**||用來執行代理程式之 Windows 帳戶的密碼。|  
 |**publisher_security_mode**|**1**|當連接到發行者時，使用 Windows 驗證。|  
 ||**0**|當連接到發行者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**publisher_login**||發行者的登入名稱。|  
@@ -72,8 +67,8 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|當連接到訂閱者時，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。|  
 |**subscriber_login**||訂閱者的登入名稱。|  
 |**subscriber_password**||提供之訂閱者登入的增強式密碼。|  
-|**sync_type**|**自動**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
-||**None**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
+|**sync_type**|**automatic**|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
+||**none**|訂閱者已有發行資料表的結構描述和初始資料；一律會傳送系統資料表和資料。|  
 |**use_interactive_resolver**|**true**|可讓您以互動方式來解決接受互動式解決之所有發行項的衝突。|  
 ||**false**|衝突是利用預設解析程式或自訂解析程式加以自動解析。|  
 |NULL (預設值)|NULL (預設值)||  
@@ -90,9 +85,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changemergesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

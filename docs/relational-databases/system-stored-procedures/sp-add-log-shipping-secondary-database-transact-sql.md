@@ -18,12 +18,12 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bd51c2c2d1d9e3ed82cd06cd4a4524b9f7e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7dab148af9d8c3db8a9b1503ad33975c790120
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635906"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493220"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@secondary_database** =] '*secondary_database*'  
- 這是次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'` 是，次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
   
- [ **@primary_server** =] '*primary_server*'  
- 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
+`[ @primary_server = ] 'primary_server'` 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
   
- [ **@primary_database** =] '*primary_database&lt*'  
- 這是主要伺服器的資料庫名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
   
- [ **@restore_delay** = ] '*restore_delay*'  
- 在還原給定的備份檔之前，次要伺服器等待的時間 (以分鐘為單位)。 *restore_delay*已**int**不能是 NULL。 預設值是 0。  
+`[ @restore_delay = ] 'restore_delay'` 以分鐘為單位，次要伺服器還原指定的備份檔之前等待的時間量。 *restore_delay*已**int**不能是 NULL。 預設值為 0。  
   
- [ **@restore_all** =] '*restore_all*'  
- 如果設為 1，當執行還原作業時，次要伺服器會還原所有可用的交易記錄備份。 否則，它會在還原一個檔案之後停止。 *restore_all*已**元**不能是 NULL。  
+`[ @restore_all = ] 'restore_all'` 如果設定為 1，次要伺服器還原所有可用的交易記錄備份，當執行還原作業。 否則，它會在還原一個檔案之後停止。 *restore_all*已**元**不能是 NULL。  
   
- [ **@restore_mode** =] '*restore_mode*'  
- 次要資料庫的還原模式。  
+`[ @restore_mode = ] 'restore_mode'` 次要資料庫的還原模式。  
   
  0 = 以 NORECOVERY 來還原記錄。  
   
@@ -78,29 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *還原*已**元**不能是 NULL。  
   
- [ **@disconnect_users** =] '*disconnect_users*'  
- 如果設為 1，當執行還原作業時，會從次要資料庫中斷使用者的連接。 預設值 = 0。 *中斷*users 是**元**不能是 NULL。  
+`[ @disconnect_users = ] 'disconnect_users'` 如果設為 1，使用者會從中斷連線的次要資料庫執行還原作業時。 預設值 = 0。 *中斷*users 是**元**不能是 NULL。  
   
- [ **@block_size** =] '*block_size*'  
- 用來做為備份裝置區塊大小的大小 (以位元組為單位)。 *block_size*已**int**預設值為-1。  
+`[ @block_size = ] 'block_size'` 大小 （位元組），做為備份裝置區塊大小。 *block_size*已**int**預設值為-1。  
   
- [ **@buffer_count** =] '*buffer_count*'  
- 備份或還原作業所用的緩衝區總數。 *buffer_count*已**int**預設值為-1。  
+`[ @buffer_count = ] 'buffer_count'` 備份或還原作業所用的緩衝區總數。 *buffer_count*已**int**預設值為-1。  
   
- [ **@max_transfer_size** =] '*max_transfer_size*'  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向備份裝置發出的最大輸入或輸出要求大小 (以位元組為單位)。 *max_transfersize*已**int**而且可以是 NULL。  
+`[ @max_transfer_size = ] 'max_transfer_size'` 大小，以位元組為單位的最大輸入或輸出要求由發行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向備份裝置。 *max_transfersize*已**int**而且可以是 NULL。  
   
- [ **@restore_threshold** =] '*restore_threshold*'  
- 在產生警示之前，還原作業之間所能經歷的時間 (以分鐘為單位)。 *restore_threshold*已**int**不能是 NULL。  
+`[ @restore_threshold = ] 'restore_threshold'` 在產生警示之前，之間所能經歷的分鐘數會還原作業。 *restore_threshold*已**int**不能是 NULL。  
   
- [ **@threshold_alert** =] '*threshold_alert*'  
- 這是在超出備份臨界值時，所產生的警示。 *threshold_alert*已**int**，預設值是 14,420。  
+`[ @threshold_alert = ] 'threshold_alert'` 是，要在超出備份臨界值時產生警示。 *threshold_alert*已**int**，預設值是 14,420。  
   
- [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*'  
- 指定是否產生警示時*backup_threshold*超過。 預設值 1 表示產生警示。 *threshold_alert_enabled*已**元**。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` 指定是否產生警示時*backup_threshold*超過。 預設值 1 表示產生警示。 *threshold_alert_enabled*已**元**。  
   
- [ **@history_retention_period** =] '*history_retention_period*'  
- 這是保留記錄的時間長度 (以分鐘為單位)。 *history_retention_period*已**int**，預設值是 NULL。 若未指定，則使用 14420。  
+`[ @history_retention_period = ] 'history_retention_period'` 這是時間的以分鐘為單位中保留記錄長度。 *history_retention_period*已**int**，預設值是 NULL。 若未指定，則使用 14420。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

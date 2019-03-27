@@ -18,12 +18,12 @@ ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db37da85e4b707970436b926f6e772bd74402311
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774430"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494310"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@distributor=**] **'***散發者***'**  
- 這是散發伺服器名稱。 *散發者*已**sysname**，沒有預設值。 只有在設定遠端散發者時，才使用這個參數。 它會新增為散發者屬性中的項目**msdb...MSdistributor**資料表。  
+`[ @distributor = ] 'distributor'` 這是散發伺服器名稱。 *散發者*已**sysname**，沒有預設值。 只有在設定遠端散發者時，才使用這個參數。 它會新增為散發者屬性中的項目**msdb...MSdistributor**資料表。  
   
- [  **@heartbeat_interval=**] *heartbeat_interval*  
- 這是在未記錄進度訊息的情況下，代理程式所能執行的最大分鐘數。 *heartbeat_interval*已**int**，預設值是 10 分鐘的時間。 系統會建立一項 SQL Server Agent 作業，依這個間隔來執行，以便檢查執行中之複寫代理程式的狀態。  
+`[ @heartbeat_interval = ] heartbeat_interval` 是的而不需要記錄進度訊息，代理程式所能執行的分鐘數上限。 *heartbeat_interval*已**int**，預設值是 10 分鐘的時間。 系統會建立一項 SQL Server Agent 作業，依這個間隔來執行，以便檢查執行中之複寫代理程式的狀態。  
   
- [  **@password=**] **'***密碼***'**]  
- 是的密碼**distributor_admin**登入。 *密碼*已**sysname**，預設值是 NULL。 如果是 NULL 或空字串，就會將密碼重設為隨機值。 當加入第一個遠端散發者時，必須設定密碼。 **distributor_admin**登入並*密碼*用於連結的伺服器項目會儲存*散發者*RPC 連線，包括本機連接。 如果*散發者端*在本機，密碼**distributor_admin**設為新的值。 利用遠端散發者的發行者，相同的值為*密碼*執行時，必須指定**sp_adddistributor**發行者和散發者上。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)可用來變更散發者密碼。  
+`[ @password = ] 'password']` 是的密碼**distributor_admin**登入。 *密碼*已**sysname**，預設值是 NULL。 如果是 NULL 或空字串，就會將密碼重設為隨機值。 當加入第一個遠端散發者時，必須設定密碼。 **distributor_admin**登入並*密碼*用於連結的伺服器項目會儲存*散發者*RPC 連線，包括本機連接。 如果*散發者端*在本機，密碼**distributor_admin**設為新的值。 利用遠端散發者的發行者，相同的值為*密碼*執行時，必須指定**sp_adddistributor**發行者和散發者上。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)可用來變更散發者密碼。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@from_scripting=** ] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -72,8 +68,8 @@ sp_adddistributor [ @distributor= ] 'distributor'
   
 ## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributor_property &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
- [sp_dropdistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [設定散發](../../relational-databases/replication/configure-distribution.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_addapprole (TRANSACT-SQL) |Microsoft Docs
+title: sp_addapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 11d0115c1f8bea82385d7c69365489a93351a5c5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135868"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493130"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'**_角色_**'**  
- 這是新應用程式角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須是有效的識別項，而且不能存在於目前的資料庫。  
+`[ @rolename = ] 'role'` 是新的應用程式角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須是有效的識別項，而且不能存在於目前的資料庫。  
   
  應用程式角色名稱可包含 1 到 128 個字元，其中包括字母、符號和數字。 角色名稱不能包含反斜線 (\\) 也不能是 NULL 或空字串 （"）。  
   
- [  **@password =** ] **'**_密碼_**'**  
- 啟動應用程式角色所需的密碼。 *密碼*已**sysname**，沒有預設值。 *密碼*不能是 NULL。  
+`[ @password = ] 'password'` 這是啟動應用程式角色所需的密碼。 *密碼*已**sysname**，沒有預設值。 *密碼*不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

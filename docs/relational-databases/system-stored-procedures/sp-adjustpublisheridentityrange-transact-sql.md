@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822072"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492351"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是重新配置新識別範圍的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
+`[ @publication = ] 'publication'` 是重新配置新識別範圍的發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
- [ **@table_name=**] **'***table_name***'**  
- 這是重新配置新識別範圍的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
+`[ @table_name = ] 'table_name'` 是重新配置新識別範圍的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
   
- [ **@table_owner=**] **'***table_owner***'**  
- 這是在發行者端的資料表擁有者。 *table_owner*已**sysname**，預設值是 NULL。 如果*table_owner*未指定，會使用目前使用者的名稱。  
+`[ @table_owner = ] 'table_owner'` 是在發行者端資料表的擁有者。 *table_owner*已**sysname**，預設值是 NULL。 如果*table_owner*未指定，會使用目前使用者的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

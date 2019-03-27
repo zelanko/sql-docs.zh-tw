@@ -16,12 +16,12 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9cd00d75a8afd2fae06868fd4b44320865f239f2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126368"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493591"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,65 +54,51 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@dbname=** ] **'***dbname***'**  
- 這是依名稱指定目的地訂閱資料庫的字串。 *dbname*已**sysname**，沒有預設值。  
+`[ @dbname = ] 'dbname'` 是依名稱指定目的地訂閱資料庫的字串。 *dbname*已**sysname**，沒有預設值。  
   
- [  **@filename=** ] **'***filename***'**  
- 是主要 mdf 的實體位置與名稱 (**主要**資料檔案)。 *檔名*已**nvarchar(260)**，沒有預設值。  
+`[ @filename = ] 'filename'` 是主要 mdf 的實體位置與名稱 (**主要**資料檔案)。 *檔名*已**nvarchar(260)**，沒有預設值。  
   
- [  **@subscriber_security_mode=** ] **'***subscriber_security_mode***'**  
- 這是進行同步處理時，連接到訂閱者時使用的訂閱者安全性模式。 *subscriber_security_mode*已**int**，預設值是 NULL。  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` 是要同步處理時，連接到訂閱者時使用的訂閱者的安全性模式。 *subscriber_security_mode*已**int**，預設值是 NULL。  
   
 > [!NOTE]  
 >  必須使用 Windows 驗證。 如果*subscriber_security_mode*不是**1** （Windows 驗證），則會傳回錯誤。  
   
- [  **@subscriber_login=** ] **'***subscriber_login***'**  
- 這是進行同步處理時，連接到訂閱者時使用的訂閱者登入名稱。 *subscriber_login*已**sysname**，預設值是 NULL。  
+`[ @subscriber_login = ] 'subscriber_login'` 是同步處理時，連接到訂閱者時要使用的訂閱者登入名稱。 *subscriber_login*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果*subscriber_security_mode*不是**1**並*subscriber_login*已指定，則會傳回錯誤。  
   
- [  **@subscriber_password=** ] **'***subscriber_password***'**  
- 這是訂閱者密碼。 *subscriber_password*已**sysname**，預設值是 NULL。  
+`[ @subscriber_password = ] 'subscriber_password'` 這是訂閱者密碼。 *subscriber_password*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 如果*subscriber_security_mode*不是**1**並*subscriber_password*已指定，則會傳回錯誤。  
   
- [  **@distributor_security_mode=** ] *distributor_security_mode*  
- 這是進行同步處理時，連接到散發者時使用的安全性模式。 *distributor_security_mode*已**int**，預設值是**0**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` 是，連接到散發者時同步處理時所要使用的安全性模式。 *distributor_security_mode*已**int**，預設值是**0**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=** ] **'***distributor_login***'**  
- 這是進行同步處理時，連接到散發者時使用的散發者登入。 *distributor_login* ，便須*distributor_security_mode*設定為**0**。 *distributor_login*已**sysname**，預設值是 NULL。  
+`[ @distributor_login = ] 'distributor_login'` 是，連接到散發者時同步處理時所要使用的散發者登入。 *distributor_login* ，便須*distributor_security_mode*設定為**0**。 *distributor_login*已**sysname**，預設值是 NULL。  
   
- [  **@distributor_password=** ] **'***distributor_password***'**  
- 這是散發者密碼。 *distributor_password* ，便須*distributor_security_mode*設定為**0**。 *distributor_password*已**sysname**，預設值是 NULL。 值*distributor_password*必須小於 120 個 Unicode 字元。  
+`[ @distributor_password = ] 'distributor_password'` 這是散發者密碼。 *distributor_password* ，便須*distributor_security_mode*設定為**0**。 *distributor_password*已**sysname**，預設值是 NULL。 值*distributor_password*必須小於 120 個 Unicode 字元。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@publisher_security_mode=** ] *publisher_security_mode*  
- 這是進行同步處理時，連接到發行者時使用的安全性模式。 *publisher_security_mode*已**int**，預設值是**1**。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 如果**1**，指定 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` 是同步處理時，連接到發行者時所要使用的安全性模式。 *publisher_security_mode*已**int**，預設值是**1**。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 如果**1**，指定 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login=** ] **'***publisher_login***'**  
- 這是在同步處理時，用來連接發行者的登入。 *publisher_login*已**sysname**，預設值是 NULL。  
+`[ @publisher_login = ] 'publisher_login'` 是同步處理時，連接到發行者時所要使用的登入。 *publisher_login*已**sysname**，預設值是 NULL。  
   
- [  **@publisher_password=** ] **'***publisher_password***'**  
- 這是連接到發行者時所用的密碼。 *publisher_password*已**sysname**，預設值是 NULL。 值*publisher_password*必須小於 120 個 Unicode 字元。  
+`[ @publisher_password = ] 'publisher_password'` 這是連接到 「 發行者 」 時用的密碼。 *publisher_password*已**sysname**，預設值是 NULL。 值*publisher_password*必須小於 120 個 Unicode 字元。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@job_login=** ] **'***job_login***'**  
- 這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
+`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。  
   
- [  **@job_password=** ] **'***job_password***'**  
- 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。 值*job_password*必須小於 120 個 Unicode 字元。  
+`[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。 值*job_password*必須小於 120 個 Unicode 字元。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@db_master_key_password=** ] **'***db_master_key_password***'**  
- 這是使用者定義資料庫主要金鑰的密碼。 *db_master_key_password*已**nvarchar(524)**，預設值是 NULL。 如果*db_master_key_password*未指定，將卸除並重新建立現有的資料庫主要金鑰。  
+`[ @db_master_key_password = ] 'db_master_key_password'` 這是密碼的使用者定義資料庫主要金鑰。 *db_master_key_password*已**nvarchar(524)**，預設值是 NULL。 如果*db_master_key_password*未指定，將卸除並重新建立現有的資料庫主要金鑰。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  

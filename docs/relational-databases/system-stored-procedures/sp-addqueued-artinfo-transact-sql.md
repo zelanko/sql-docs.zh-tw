@@ -1,5 +1,5 @@
 ---
-title: sp_addqueued_artinfo (TRANSACT-SQL) |Microsoft Docs
+title: sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590893"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493181"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,29 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@artid=** ] **'**_artid&lt_**'**  
- 這是發行項識別碼的名稱。 *artid&lt*已**int**，沒有預設值  
+`[ @artid = ] 'artid'` 是發行項識別碼的名稱 *artid&lt*已**int**，沒有預設值  
   
- [  **@article=**] **'**_文章_**'**  
- 這是要編寫指令碼的發行項名稱。 *發行項*已**sysname**，沒有預設值  
+`[ @article = ] 'article'` 是要編寫指令碼的發行項的名稱。 *發行項*已**sysname**，沒有預設值  
   
- [  **@publisher=**] **'**_發行者_**'**  
- 這是發行者伺服器的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是發行者伺服器的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [  **@publication=**] **'**_發行集_**'**  
- 這是要編寫指令碼的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是要編寫指令碼的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@dest_table=** ] _' dest_table_**'**  
- 這是目的地資料表的名稱。 *dest_table*已**sysname**，沒有預設值。  
+`[ @dest_table = ] _'dest_table'` 是目的地資料表的名稱。 *dest_table*已**sysname**，沒有預設值。  
   
- [ **@owner =** ] **'**_擁有者_**'**  
+ [**@owner =** ] **'**_owner_**'**  
  這是訂閱的擁有者。 *擁有者*已**sysname**，沒有預設值。  
   
- [  **@cft_table=** ] **'**_cft_table_**'**  
- 這個發行項的佇列更新衝突資料表名稱。 *cft_table*已**sysname**，沒有預設值。  
+`[ @cft_table = ] 'cft_table'` 這篇文章的佇列更新衝突資料表名稱。 *cft_table*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -80,15 +73,15 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="remarks"></a>備註  
  **sp_addqueued_artinfo**正由 「 散發代理程式做為訂閱初始化的一部分。 使用者通常不會執行這個預存程序，但如果使用者需要手動設定訂閱，它可能很有用。  
   
- [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)而非**sp_addqueued_artinfo**。  
+ [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) instead of **sp_addqueued_artinfo**.  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addqueued_artinfo**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;Transact SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

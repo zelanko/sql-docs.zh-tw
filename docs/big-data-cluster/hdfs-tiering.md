@@ -6,20 +6,20 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 02/29/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 04f493109997d4b673a6a308de5c9ebee6eac7e4
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239123"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493771"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>設定 SQL Server 2019 巨量資料叢集上的階層處理的 HDFS
 
-HDFS 分層讓您能夠裝載外部，HDFS 中的 HDFS 相容檔案系統。 這篇文章說明如何設定 SQL Server 2019 巨量資料叢集 （預覽） 的階層處理的 HDFS。 此時，CTP 2.3 只支援連接到 Azure Data Lake 儲存體 Gen2，也就是本文的重點。
+HDFS 分層讓您能夠裝載外部，HDFS 中的 HDFS 相容檔案系統。 這篇文章說明如何設定 SQL Server 2019 巨量資料叢集 （預覽） 的階層處理的 HDFS。 此時，CTP 2.4 只支援連接到 Azure Data Lake 儲存體 Gen2，也就是本文的重點。
 
 ## <a name="hdfs-tiering-overview"></a>HDFS 分層概觀
 
@@ -78,7 +78,7 @@ HDFS 分層讓您能夠裝載外部，HDFS 中的 HDFS 相容檔案系統。 這
 1. 掛接在 Azure 中使用遠端 HDFS 儲存體**mssqlctl 儲存體掛接建立**。 將預留位置值，再執行下列命令：
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -97,7 +97,7 @@ mssqlctl storage mount status
 若要列出在 HDFS 中的特定路徑掛上的狀態，請使用下列命令：
 
 ```bash
-mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 刪除掛接
@@ -105,7 +105,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 若要刪除掛接，請使用**mssqlctl 儲存體掛接刪除**命令，並在 HDFS 中指定掛接路徑：
 
 ```bash
-mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="issues"></a> 已知的問題和限制

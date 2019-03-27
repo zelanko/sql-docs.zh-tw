@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018074"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494390"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具，設定在 Linux 上的 SQL Server
 
@@ -511,8 +511,8 @@ sudo systemctl restart mssql-server
 
 | mssql conf 設定 | 描述 |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | 設定分散式交易的安全的唯一 rpc 呼叫 |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | 分散式設定安全性的唯一的 rpc 呼叫 |交易
+| distributedtransaction.allowonlysecurerpccalls | 設定安全的唯一 RPC 呼叫的分散式交易 |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 分散式設定的唯一安全性 RPC 呼叫 |交易
 | distributedtransaction.maxlogsize | DTC 交易記錄檔大小以 mb 為單位。 預設值是 64 MB |
 | distributedtransaction.memorybuffersize | 追蹤會儲存的循環緩衝區大小。 此大小是以 mb 為單位，預設值為 10 MB |
 | distributedtransaction.servertcpport | MSDTC rpc 伺服器連接埠 |

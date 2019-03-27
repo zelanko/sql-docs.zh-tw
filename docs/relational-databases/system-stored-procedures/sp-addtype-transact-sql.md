@@ -1,5 +1,5 @@
 ---
-title: sp_addtype (TRANSACT-SQL) |Microsoft Docs
+title: sp_addtype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eefd9b73f4e249df57aa03ef0453a864eab2fd77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838846"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492840"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@typename=** ]*類型*  
- 這是別名資料型別的名稱。 別名資料型別名稱必須遵循的規則[識別碼](../../relational-databases/databases/database-identifiers.md)和每個資料庫中必須是唯一。 *型別*已**sysname**，沒有預設值。  
+`[ @typename = ] type` 是別名資料類型的名稱。 別名資料型別名稱必須遵循的規則[識別碼](../../relational-databases/databases/database-identifiers.md)和每個資料庫中必須是唯一。 *型別*已**sysname**，沒有預設值。  
   
- [  **@phystype=**] *system_data_type*  
- 是實體、 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的別名資料類型所依據的資料類型。*system_data_type*已**sysname**，沒有預設值，它可以是下列值之一：  
+`[ @phystype = ] system_data_type` 是實體、 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供的別名資料類型所依據的資料類型。*system_data_type*已**sysname**，沒有預設值，它可以是下列值之一：  
   
 ||||  
 |-|-|-|  
@@ -70,11 +68,10 @@ sp_addtype [ @typename = ] type,
  *P*  
  這是一個非負數整數，它指出可儲存的最大十進位數總數，小數點左右兩側都包括在內。 如需詳細資訊，請參閱 [decimal 和 numeric &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
- *S*  
+ *s*  
  這是一個非負數整數值，它指出小數點右側所能儲存的最大十進位數，且它必須小於或等於有效位數。 如需詳細資訊，請參閱 [decimal 和 numeric &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
- [  **@nulltype =** ] **'***null_type***'**  
- 指出別名資料型別處理 Null 值的方式。 *null_type*已**varchar (** 8 **)**，預設值是 NULL，且必須括在單引號 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未明確定義**sp_addtype**，它會設定為目前的預設 null 屬性。 您可以利用 GETANSINULL 系統函數來決定目前的預設 Null 屬性。 您可以利用 SET 陳述式或 ALTER DATABASE來調整這項作業。 Null 屬性應明確定義。 如果**@phystype**是**元**，和**@nulltype**未指定，預設值不是 NULL。  
+`[ @nulltype = ] 'null_type'` 指出別名資料型別處理 null 值的方式。 *null_type*已**varchar (** 8 **)**，預設值是 NULL，且必須括在單引號 （'NULL'、 'NOT NULL' 或 'NONULL'）。 如果*null_type*未明確定義**sp_addtype**，它會設定為目前的預設 null 屬性。 您可以利用 GETANSINULL 系統函數來決定目前的預設 Null 屬性。 您可以利用 SET 陳述式或 ALTER DATABASE來調整這項作業。 Null 屬性應明確定義。 如果**@phystype**是**元**，和**@nulltype**未指定，預設值不是 NULL。  
   
 > [!NOTE]  
 >  *Null_type*參數只會定義此資料類型的預設 null 屬性。 如果在使用別名資料型別時 (在資料表建立期間) 明確定義 Null 屬性，它的優先順序高於定義的 Null 屬性。 如需詳細資訊，請參閱 < [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)並[CREATE TABLE &#40;-&#41;](../../t-sql/statements/create-table-transact-sql.md)。  
@@ -142,9 +139,9 @@ GO
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
- [sp_droptype &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
+ [sp_droptype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [sp_unbindefault &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

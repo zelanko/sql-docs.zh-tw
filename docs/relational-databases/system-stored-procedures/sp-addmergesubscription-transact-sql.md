@@ -16,12 +16,12 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c3341c37998f61cba743c8da8a4cd772c2c73d9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133758"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493010"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,42 +62,34 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。 發行集必須已存在。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。 發行集必須已存在。  
   
- [  **@subscriber =**] **'**_訂閱者_**'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是 NULL。  
   
- [  **@subscription_type=**] **'**_subscription_type_**'**  
- 這是訂閱的類型。 *subscription_type*已**nvarchar(15)**，預設值是 PUSH。 如果**推播**新增發送訂閱，散發者端新增合併代理程式。 如果**提取**，而不會增加 「 合併代理程式在散發者端加入提取訂閱。  
+`[ @subscription_type = ] 'subscription_type'` 是訂用帳戶的類型。 *subscription_type*已**nvarchar(15)**，預設值是 PUSH。 如果**推播**新增發送訂閱，散發者端新增合併代理程式。 如果**提取**，而不會增加 「 合併代理程式在散發者端加入提取訂閱。  
   
 > [!NOTE]  
 >  匿名訂閱不需要使用這個預存程序。  
   
- [  **@subscriber_type=**] **'**_subscriber_type_**'**  
- 這是訂閱者的類型。 *subscriber_type*已**nvarchar(15)**，而且可以是下列值之一。  
+`[ @subscriber_type = ] 'subscriber_type'` 為訂閱者的類型。 *subscriber_type*已**nvarchar(15)**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**本機**（預設值）|只有發行者知道的訂閱者。|  
-|**全域**|所有伺服器都知道的訂閱者。|  
+|**global**|所有伺服器都知道的訂閱者。|  
   
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本中，本機訂閱稱為客訂閱，而全域訂閱稱為主訂閱  
   
- [  **@subscription_priority=**] *subscription_priority*  
- 這是表示訂閱優先權的數字。 *subscription_priority*已**實際**，預設值是 NULL。 如果是本機和匿名訂閱，優先權就是 0.0。 如果是全域訂閱，優先權必須小於 100.0。  
+`[ @subscription_priority = ] subscription_priority` 數字，表示訂閱優先權。 *subscription_priority*已**實際**，預設值是 NULL。 如果是本機和匿名訂閱，優先權就是 0.0。 如果是全域訂閱，優先權必須小於 100.0。  
   
- [  **@sync_type=**] **'**_sync_type_**'**  
- 這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)**，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
+`[ @sync_type = ] 'sync_type'` 這是訂閱同步處理類型。 *sync_type*已**nvarchar(15)**，預設值是**自動**。 可以是**自動**或是**無**。 如果**自動**，結構描述和發行資料表的初始資料傳送給 「 訂閱者 」 第一次。 如果**無**，便假設訂閱者端已有的結構描述和初始資料已發行資料表。 一律會傳送系統資料表和資料。  
   
 > [!NOTE]  
 >  我們建議您不要指定的值**無**。  
   
- [  **@frequency_type=**] *frequency_type*  
- 這是指出合併代理程式執行時間的值。 *frequency_type*已**int**，而且可以是下列值之一。  
+`[ @frequency_type = ] frequency_type` 指定的值，用來指出何時會執行 「 合併代理程式。 *frequency_type*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -109,8 +101,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**40**|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時|  
 |NULL (預設值)||  
   
- [  **@frequency_interval=**] *frequency_interval*  
- 合併代理程式的執行日期。 *frequency_interval*已**int**，而且可以是下列值之一。  
+`[ @frequency_interval = ] frequency_interval` 執行合併代理程式的日期或天數。 *frequency_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -126,8 +117,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**10**|週末|  
 |NULL (預設值)||  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- 這是每月排程的頻率間隔合併出現項目。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 是排程的合併一次的頻率間隔，在每個月。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -138,11 +128,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**16**|最後一個|  
 |NULL (預設值)||  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor&lt*  
- 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 單位*frequency_subday_interval*。 *frequency_subday*已**int**，而且可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 單位*frequency_subday_interval*。 *frequency_subday*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -152,47 +140,34 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**8**|Hour|  
 |NULL (預設值)||  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 是的頻率*frequency_subday*每次合併之間發生。 *frequency_subday_interval*已**int**，預設值是 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 是的頻率*frequency_subday*每次合併之間發生。 *frequency_subday_interval*已**int**，預設值是 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- 這是第一次排程合併代理程式的當日時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 「 合併代理程式時第一天的排程時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- 這是排程停止合併代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 是 「 合併代理程式停止的當日時間排程，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@active_start_date=**] *active_start_date*  
- 這是第一次排程合併代理程式的日期，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
+`[ @active_start_date = ] active_start_date` 排程的日期時第一個 「 合併代理程式，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
   
- [  **@active_end_date=**] *active_end_date*  
- 這是排程停止合併代理程式的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
+`[ @active_end_date = ] active_end_date` 是 「 合併代理程式停止的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
- [  **@optional_command_line=**] **'**_optional_command_line_**'**  
- 這是要執行的選擇性命令提示字元。 *optional_command_line*已**nvarchar(4000)**，預設值是 NULL。 這個參數用來新增擷取輸出以及將輸出儲存在檔案中的命令，或指定組態檔或屬性。  
+`[ @optional_command_line = ] 'optional_command_line'` 是選擇性的命令提示字元執行。 *optional_command_line*已**nvarchar(4000)**，預設值是 NULL。 這個參數用來新增擷取輸出以及將輸出儲存在檔案中的命令，或指定組態檔或屬性。  
   
- [  **@description=**] **'**_描述_**'**  
- 這是此項合併訂閱的簡要描述。 *描述*已**nvarchar(255)**，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
+`[ @description = ] 'description'` 是這個合併訂閱的簡要描述。 *描述*已**nvarchar(255)**，預設值是 NULL。 這個值會顯示在複寫監視器**易記名稱**資料行，可用來排序受監視發行集的訂閱。  
   
- [  **@enabled_for_syncmgr=**] **'**_enabled_for_syncmgr_**'**  
- 指定是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager 來同步處理訂閱。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 指定訂用帳戶是否可以透過同步處理[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows Synchronization Manager。 *enabled_for_syncmgr*已**nvarchar(5)**，預設值是 FALSE。 如果**false**，訂用帳戶未註冊使用 Synchronization Manager。 如果**真**，訂用帳戶使用 Synchronization Manager 註冊，並可以同步處理，而不啟動[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- [  **@offloadagent=** ] *remote_agent_activation&lt*  
- 指定是否能從遠端啟動代理程式。 *remote_agent_activation&lt*已**位元**預設值是**0**。  
+`[ @offloadagent = ] remote_agent_activation` 指定可以從遠端啟動代理程式。 *remote_agent_activation&lt*已**位元**預設值是**0**。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。  
   
- [  **@offloadserver=** ] **'**_remote_agent_server_name_**'**  
- 指定將用來啟用遠端代理程式之伺服器的網路名稱。 *remote_agent_server_name*已**sysname**，預設值是 NULL。  
+`[ @offloadserver = ] 'remote_agent_server_name'` 指定要用來啟動遠端代理程式之伺服器的網路名稱。 *remote_agent_server_name*已**sysname**，預設值是 NULL。  
   
- [  **@use_interactive_resolver=** ] **'**_use_interactive_resolver_**'**  
- 可讓您以互動方式來解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)**，預設值是 FALSE。  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` 可讓以互動方式解決接受互動式解決之所有發行項的衝突。 *use_interactive_resolver*已**nvarchar(5)**，預設值是 FALSE。  
   
- [  **@merge_job_name=** ] **'**_merge_job_name_**'**  
- *@merge_job_name*參數已被取代，而且無法設定。 *merge_job_name*已**sysname**，預設值是 NULL。  
+`[ @merge_job_name = ] 'merge_job_name'` *@merge_job_name*參數已被取代，而且無法設定。 *merge_job_name*已**sysname**，預設值是 NULL。  
   
- [ **@hostname**=] **'**_主機名稱_**'**  
- 所傳回的值會覆寫[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)參數化篩選的 WHERE 子句中使用此函式時。 *主機名稱*已**sysname**，預設值是 NULL。  
+`[ @hostname = ] 'hostname'` 所傳回的值會覆寫[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)參數化篩選的 WHERE 子句中使用此函式時。 *主機名稱*已**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  基於效能的考量，我們建議您不要在參數化資料列篩選器子句中，將函數套用至資料行名稱上，如 `LEFT([MyColumn]) = SUSER_SNAME()`。 如果您使用[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)在篩選子句和覆寫了 HOST_NAME 值中，它可能需要將使用的資料類型轉換[轉換](../../t-sql/functions/cast-and-convert-transact-sql.md)。 如需有關此案例之最佳做法的詳細資訊，請參閱主題＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞中的「覆寫 HOST_NAME() 值」一節。  
@@ -213,11 +188,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)   
  [互動式衝突解決方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_changemergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

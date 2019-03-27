@@ -1,5 +1,5 @@
 ---
-title: sp_can_tlog_be_applied (TRANSACT-SQL) |Microsoft Docs
+title: sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d21de1f416344202911f80e48afc025cd423b1e2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588597"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491982"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@backup_file_name=** ] **'**_backup_file_name_**'**  
- 這是備份檔的名稱。 *backup_file_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。  
+`[ @backup_file_name = ] 'backup_file_name'` 是備份檔案的名稱。 *backup_file_name* is **nvarchar(128)**.  
   
- [  **@database_name=** ] **'**_database_name_**'**  
- 這是資料庫的名稱。 *database_name* 為 **sysname**。  
+`[ @database_name = ] 'database_name'` 是資料庫的名稱。 *database_name* 為 **sysname**。  
   
- [  **@result=** ]_結果_**輸出**  
- 指出資料庫是否可以套用交易記錄。 *結果*已**元**。  
+`[ @result = ] _result_ OUTPUT` 指出是否可以對資料庫套用交易記錄。 *結果*已**元**。  
   
  1 = 可以套用記錄  
   
