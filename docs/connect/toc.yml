@@ -13,9 +13,9 @@ items:
   items:
   - name: Microsoft ADO.NET for SQL Server
     href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-  - name: 步驟 1：設定 ADO.NET 開發的開發環境
+  - name: 步驟 1:設定 ADO.NET 開發的開發環境
     href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-  - name: 步驟 2：建立 ADO.NET 開發的 SQL 資料庫
+  - name: 步驟 2:建立 ADO.NET 開發的 SQL 資料庫
     href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
   - name: 步驟 3：使用 ADO.NET 連線到 SQL 的概念證明
     href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
@@ -2363,9 +2363,9 @@ items:
   - name: 開始使用 JDBC Driver
     href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
     items:
-    - name: 步驟 1：設定開發環境以進行 Java 開發
+    - name: 步驟 1:設定開發環境以進行 Java 開發
       href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-    - name: 步驟 2：建立 SQL 資料庫以進行 Java 開發
+    - name: 步驟 2:建立 SQL 資料庫以進行 Java 開發
       href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
     - name: 步驟 3：使用 Java 連線到 SQL 的概念證明
       href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
@@ -2405,8 +2405,6 @@ items:
       href: ../connect/jdbc/application-security.md
     - name: 使用 SSL 加密
       href: ../connect/jdbc/using-ssl-encryption.md
-    - name: FIPS 模式
-      href: ../connect/jdbc/fips-mode.md
       items:
       - name: 了解 SSL 支援
         href: ../connect/jdbc/understanding-ssl-support.md
@@ -2414,6 +2412,8 @@ items:
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: 設定 SSL 加密的用戶端
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
+    - name: FIPS 模式
+      href: ../connect/jdbc/fips-mode.md
   - name: 增進 JDBC 驅動程式的效能與可靠性
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
@@ -2625,9 +2625,9 @@ items:
   items:
   - name: Node.js Driver for SQL Server
     href: ../connect/node-js/node-js-driver-for-sql-server.md
-  - name: 步驟 1：設定 Node.js 開發的開發環境
+  - name: 步驟 1:設定 Node.js 開發的開發環境
     href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-  - name: 步驟 2：建立 Node.js 開發的 SQL 資料庫
+  - name: 步驟 2:建立 Node.js 開發的 SQL 資料庫
     href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
   - name: 步驟 3：使用 Node.js 連線到 SQL 的概念證明
     href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
@@ -2904,9 +2904,9 @@ items:
           - name: 基本的 ODBC 應用程式步驟
             href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
             items:
-            - name: 步驟 1：連線至資料來源
+            - name: 步驟 1:連線至資料來源
               href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
-            - name: 步驟 2：將應用程式初始化
+            - name: 步驟 2:將應用程式初始化
               href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
             - name: 步驟 3：建置和執行 SQL 陳述式
               href: ../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md
@@ -5248,7 +5248,7 @@ items:
             href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
           - name: 從結果集擷取資料列
             href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-        - name: 檔案資料流
+        - name: Filestream
           href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
           items:
           - name: 使用 IBCPSession 將 FILESTREAM 資料行讀取到檔案中
@@ -5318,9 +5318,9 @@ items:
   - name: 使用者入門
     href: ../connect/php/getting-started-with-the-php-sql-driver.md
     items:
-    - name: 步驟 1：設定 PHP 開發的開發環境
+    - name: 步驟 1:設定 PHP 開發的開發環境
       href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-    - name: 步驟 2：建立 PHP 開發的 SQL 資料庫
+    - name: 步驟 2:建立 PHP 開發的 SQL 資料庫
       href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
     - name: 步驟 3：使用 PHP 連線到 SQL Server 的概念證明
       href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
@@ -5598,18 +5598,18 @@ items:
   - name: Python SQL 驅動程式 - pyodbc
     href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
     items:
-    - name: 步驟 1：設定 pyodbc Python 開發的開發環境
+    - name: 步驟 1:設定 pyodbc Python 開發的開發環境
       href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-    - name: 步驟 2：建立 pyodbc Python 開發的 SQL 資料庫
+    - name: 步驟 2:建立 pyodbc Python 開發的 SQL 資料庫
       href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
     - name: 步驟 3：使用 pyodbc 連線到 SQL 的概念證明
       href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
   - name: Python SQL 驅動程式 - pymssql
     href: ../connect/python/pymssql/python-sql-driver-pymssql.md
     items:
-    - name: 步驟 1：設定 pymssql Python 開發的開發環境
+    - name: 步驟 1:設定 pymssql Python 開發的開發環境
       href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-    - name: 步驟 2：建立 pymssql Python 開發的 SQL 資料庫
+    - name: 步驟 2:建立 pymssql Python 開發的 SQL 資料庫
       href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
     - name: 步驟 3：使用 pymssql 連線到 SQL 的概念證明
       href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
@@ -5617,9 +5617,9 @@ items:
   items:
   - name: Ruby Driver for SQL Server
     href: ../connect/ruby/ruby-driver-for-sql-server.md
-  - name: 步驟 1：設定 Ruby 開發的開發環境
+  - name: 步驟 1:設定 Ruby 開發的開發環境
     href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-  - name: 步驟 2：建立 Ruby 開發的 SQL 資料庫
+  - name: 步驟 2:建立 Ruby 開發的 SQL 資料庫
     href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
   - name: 步驟 3：使用 Ruby 連線到 SQL 的概念證明
     href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
@@ -5945,9 +5945,9 @@ items:
       - name: 網際網路發佈案例
         href: ../ado/guide/data/internet-publishing-scenario.md
         items:
-        - name: 步驟 1：設定 Visual Basic 專案
+        - name: 步驟 1:設定 Visual Basic 專案
           href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
-        - name: 步驟 2：將 [主要] 清單方塊初始化
+        - name: 步驟 2:將 [主要] 清單方塊初始化
           href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
         - name: 步驟 3：填入 [欄位] 清單方塊
           href: ../ado/guide/data/step-3-populate-the-fields-list-box.md
@@ -6008,9 +6008,9 @@ items:
   - name: RDS 教學課程
     href: ../ado/guide/remote-data-service/rds-tutorial.md
     items:
-    - name: 步驟 1：指定伺服器程式 (RDS 教學課程)
+    - name: 步驟 1:指定伺服器程式 (RDS 教學課程)
       href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
-    - name: 步驟 2：叫用伺服器程式 (RDS 教學課程)
+    - name: 步驟 2:叫用伺服器程式 (RDS 教學課程)
       href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
     - name: 步驟 3：伺服器會取得資料錄集 (RDS 教學課程)
       href: ../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md
@@ -7644,9 +7644,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 詞彙
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 235d73fea1e5e76eda65ef130568276ca92ef3fb
-ms.sourcegitcommit: 8d7442ae25acd6cb5cab2abcc5973cd60d0a6ff2
+ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57461816"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478303"

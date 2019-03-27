@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589992"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356461"
 ---
 # <a name="osql-utility"></a>osql 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  當使用 **osql**時，如果批次分隔字元 GO 出現在 SQL 指令碼檔案中， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會將其視為語法錯誤。  
   
 ## <a name="inserting-comments"></a>插入註解  
- 您可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交給**的 Transact-SQL 陳述式中併入註解。 可用的註解樣式有兩種：-- 和 /*...\*/。  
+ 您可以在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **提交給**的 Transact-SQL 陳述式中併入註解。 可用的註解樣式有兩種：`--` 與 `/*...*/`。  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>在 osql 中利用 EXIT 傳回結果  
  您可以利用 SELECT 陳述式的結果來做為 **osql**的傳回值。 如果為數值，則最後一個結果資料列的最後一個資料行會轉換成 4 位元組的整數 (long)。 MS-DOS 會將低位元組傳給父處理序或作業系統錯誤層級。 Windows 會傳遞整個 4 位元組整數。 語法如下：  

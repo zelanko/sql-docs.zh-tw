@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81bfdfb8d622096b30ea76a7632c5fd61ac833e3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514990"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306156"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52514990"
   
 ##  <a name="bkmk_backup_configuration_manager"></a> 備份加密金鑰 - Reporting Services 組態管理員 (原生模式)  
   
-1.  啟動 Reporting Services 組態管理員，然後連接到您要設定的報表伺服器執行個體。  
+1.  啟動報表伺服器組態管理員，然後連線到您要設定的報表伺服器執行個體。  
   
 2.  按一下 [加密金鑰]，然後選取 [備份]。  
   
