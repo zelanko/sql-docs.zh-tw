@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133008"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494280"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@functname =** ] **'**_程序_**'**  
- 這是在動態連結程式庫 (DLL) 內所要呼叫的函數名稱。 *程序*已**nvarchar(517)**，沒有預設值。 *程序*可以選擇性地包括擁有者名稱形式*owner.function*。  
+`[ @functname = ] 'procedure'` 是動態連結程式庫 (DLL) 內所要呼叫的函式的名稱。 *程序*已**nvarchar(517)**，沒有預設值。 *程序*可以選擇性地包括擁有者名稱形式*owner.function*。  
   
- [  **@dllname =** ] **'**_dll_**'**  
- 這是包含這個函數的 DLL 名稱。 *dll*已**varchar(255)**，沒有預設值。 建議您指定 DLL 的完整路徑。  
+`[ @dllname = ] 'dll'` 是包含此函式的 DLL 名稱。 *dll*已**varchar(255)**，沒有預設值。 建議您指定 DLL 的完整路徑。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -82,8 +80,8 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_dropextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

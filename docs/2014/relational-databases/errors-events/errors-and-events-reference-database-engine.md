@@ -14,21 +14,19 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 638570c8a2be779b11b0ec852d17ea4815960054
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356415"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493500"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>錯誤和事件參考 (Database Engine)
-  [事件和錯誤訊息中心](https://go.microsoft.com/fwlink/?LinkId=47660)在 TechNet 上是有關的錯誤訊息的主要來源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 讓客戶執行全文檢索搜尋，搜尋有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息以及其他 Microsoft 產品的資訊，並根據根據產品、版本、來源和數值或符號識別碼時，可以增進客戶的使用經驗。 此外，新介面還提供多種語言的支援。 該中心將會持續進行更新，以加入常見錯誤的最新疑難排解資訊。  
-  
- 在「事件和錯誤訊息中心」未來的增強功能中，將包括提供可下載格式的疑難排解內容，讓您可從沒有連線到網際網路的電腦存取該內容。  
+
+本節包含需要進一步解釋的所選的資料庫引擎錯誤訊息。
   
 ## <a name="in-this-section"></a>本節內容  
- [Database Engine 事件和錯誤](資料庫-引擎-事件-和-errors.md0  
- 描述 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤訊息的格式，並說明如何檢視錯誤訊息及將錯誤訊息傳回至應用程式。  
+ [資料庫引擎事件和錯誤](database-engine-events-and-errors.md)描述的格式[!INCLUDE[ssDE](../../includes/ssde-md.md)]錯誤訊息，並說明如何檢視錯誤訊息和錯誤訊息傳回給應用程式。  
   
  提供 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤訊息、可能原因以及任何可以更正問題之動作的說明。  
   

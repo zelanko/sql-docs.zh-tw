@@ -1,7 +1,7 @@
 ---
 title: 新功能-SQL Server 機器學習服務 |Microsoft Docs
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64e98073dabd490965fb5d582102a6eb962c5a13
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: be7ecb1f4a1a42c4018e6a549a7ad2ea76b04ef5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161826"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494130"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能
 
@@ -30,6 +30,8 @@ ms.locfileid: "58161826"
 
 | 版本 | 功能更新 |
 |---------|----------------|
+| CTP 2.4 | Linux 支援[CREATE EXTERNAL LIBRARY & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-external-library-transact-sql.md) R、 Python 和 Java。 |
+| | 已從指定的 Java 解譯器位置的環境變數`JAVA_HOME`至`JRE_HOME`。 |
 | CTP 2.3 | 新的支援[Java 資料類型](java/java-sql-datatypes.md)。 |
 | | 只有 Windows 上的 Java 程式碼可以存取的外部程式庫使用[CREATE EXTERNAL LIBRARY & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-external-library-transact-sql.md)陳述式。 對等的功能將會在後續的 CTP 中的 Linux 上使用。 深入了解：[如何從 SQL Server 呼叫 Java](java/howto-call-java-from-sql.md)。 |
 | | 只有 Windows 上的 Python 程式碼可以存取的外部程式庫使用[CREATE EXTERNAL LIBRARY & Amp;#40;transact-SQL&AMP;#41;](../t-sql/statements/create-external-library-transact-sql.md)陳述式。 對等的功能將會在後續的 CTP 中的 Linux 上使用。 |

@@ -3,18 +3,18 @@ title: 如何從 SQL-SQL Server Machine Learning 服務呼叫 Java
 description: 了解如何使用 Java 程式語言擴充功能在 SQL Server 2019 的 SQL Server 預存程序從呼叫 Java 類別。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 801ffe50ca83fbeda69a3172b5914d39373d643f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017754"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493000"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>如何從 SQL Server 2019 預覽呼叫 Java
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017754"
 
 1. .Class 或.jar 檔案中的放置您[Java classpath](#classpath)。 這是適用於 Windows 和 Linux。
 
-2. 上傳的.jar 檔案和資料庫使用的其他相依性中的已編譯的類別[外部程式庫](#external-library)DDL。 此選項可供 Windows 只在 CTP 2.3 中。 Linux 支援將更新的 CTP 中新增。
+2. 上傳的.jar 檔案和資料庫使用的其他相依性中的已編譯的類別[外部程式庫](#external-library)DDL。 此選項可供 Windows 和 Linux 在 CTP 2.4。
 
 > [!NOTE]
 > 一般的建議，使用.jar 檔案並不是個別.class 檔案。 這是常見的做法，在 Java 中，而且會讓整體的體驗更輕鬆。 另請參閱：[如何從類別檔案中建立的 jar 檔案](extension-java.md#create-jar)。
@@ -93,7 +93,7 @@ EXEC sp_execute_external_script
 
 ## <a name="external-library"></a>外部程式庫
 
-在 SQL Server 2019 CTP 2.3 起，您可以使用外部程式庫在 Windows 上的 Java 語言。 會在後續的 CTP 中的 Linux 上使用相同的功能。 您可以編譯您的類別到.jar 檔案，並將.jar 檔案和資料庫使用的其他相依性上傳[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL。
+在 SQL Server 2019 CTP 2.4，您可以使用外部程式庫在 Windows 和 Linux 上的 Java 語言。 會在後續的 CTP 中的 Linux 上使用相同的功能。 您可以編譯您的類別到.jar 檔案，並將.jar 檔案和資料庫使用的其他相依性上傳[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL。
 
 如何上傳的外部程式庫的.jar 檔案的範例：
 

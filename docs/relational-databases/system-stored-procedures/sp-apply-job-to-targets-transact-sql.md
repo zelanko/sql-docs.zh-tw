@@ -1,5 +1,5 @@
 ---
-title: sp_apply_job_to_targets (TRANSACT-SQL) |Microsoft Docs
+title: sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537827"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494090"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id =**] *job_id*  
- 要套用至指定目標伺服器或目標伺服器群組之作業的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 作業識別碼要套用至指定的目標伺服器或目標伺服器群組的作業。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [  **@job_name =**] **'**_job_name_**'**  
- 要套用至指定的相關目標伺服器或目標伺服器群組的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 要套用至指定的相關聯的目標伺服器或目標伺服器群組的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [  **@target_server_groups =**] **'**_target_server_groups_**'**  
- 要套用指定作業的目標伺服器群組清單 (以逗號分隔)。 *target_server_groups*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
+`[ @target_server_groups = ] 'target_server_groups'` 所要套用指定的作業的目標伺服器群組的逗號分隔清單。 *target_server_groups*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
   
- [  **@target_servers=** ] **'**_target_servers_**'**  
- 要套用指定作業的目標伺服器清單 (以逗號分隔)。 *target_servers*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
+`[ @target_servers = ] 'target_servers'` 所要套用指定的作業的目標伺服器以逗號分隔清單。 *target_servers*已 **& lt;languagekeyword>nvarchar(2048)</languagekeyword&gt**，預設值是 NULL。  
   
- [  **@operation=** ] **'**_作業_**'**  
- 這是指應該將指定的作業套用在指定的目標伺服器或目標伺服器群組上，還是應該從其中移除指定的作業。 *作業*已**varchar(7)**，預設值是 APPLY。 有效的作業**套用**並**移除**。  
+`[ @operation = ] 'operation'` 指定的工作是否應該套用至或從指定的目標伺服器或目標伺服器群組中移除。 *作業*已**varchar(7)**，預設值是 APPLY。 有效的作業**套用**並**移除**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -87,7 +82,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_remove_job_from_targets &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
+ [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

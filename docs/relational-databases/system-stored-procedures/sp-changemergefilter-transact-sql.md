@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127078"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493080"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'**_發行集_**'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=** ] **'**_文章_**'**  
- 這是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- 這是目前篩選的名稱。 *filtername*已**sysname**，沒有預設值。  
+`[ @filtername = ] 'filtername'` 是目前篩選條件的名稱。 *filtername*已**sysname**，沒有預設值。  
   
- [  **@property=** ] **'**_屬性_**'**  
- 這是要變更的屬性名稱。 *屬性*已**sysname**，沒有預設值。  
+`[ @property = ] 'property'` 是要變更名稱。 *屬性*已**sysname**，沒有預設值。  
   
- [  **@value=**] **'**_值_**'**  
- 這是指定之屬性的新值。 *值*已**nvarchar(1000)**，沒有預設值。  
+`[ @value = ] 'value'` 是指定之屬性的新值。 *值*已**nvarchar(1000)**，沒有預設值。  
   
  下表描述發行項的屬性及這些屬性的值。  
   
@@ -72,15 +67,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|聯結作用於唯一索引鍵|  
 ||**false**|聯結不作用於唯一索引鍵|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 認可這個預存程序所採取的動作可能使現有的快照集失效。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 認可這個預存程序所採取的動作可能會使現有的快照集。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
   
  **0**指定合併發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
   
  **1**表示的合併發行項的變更可能使快照集失效，而且如果有現有的訂閱需要新的快照集，提供要標示為已棄用之現有快照集產生新的快照集的權限。  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*已**位元**預設值是**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 認可這個預存程序所採取的動作可能需要重新初始化現有的訂用帳戶。 *force_reinit_subscription*已**位元**預設值是**0**。  
   
  **0**指定合併發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
   
@@ -103,7 +96,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

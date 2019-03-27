@@ -1,5 +1,5 @@
 ---
-title: sp_add_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811446"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494270"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +47,17 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 要建立的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 當*proxy_name*為 NULL 或空字串，則 proxy 會預設為名稱*user_name*提供。  
+`[ @proxy_name = ] 'proxy_name'` 若要建立 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 當*proxy_name*為 NULL 或空字串，則 proxy 會預設為名稱*user_name*提供。  
   
- [ **@enabled** = ] *is_enabled*  
- 指定是否啟用 Proxy。 *Is_enabled&lt*旗標**tinyint**，預設值是 1。 當*is_enabled&lt*是**0**，proxy 未啟用，並無法供作業步驟。  
+`[ @enabled = ] is_enabled` 指定是否啟用 proxy。 *Is_enabled&lt*旗標**tinyint**，預設值是 1。 當*is_enabled&lt*是**0**，proxy 未啟用，並無法供作業步驟。  
   
- [ **@description**=] **'***描述***'**  
- Proxy 的描述。 描述**nvarchar(512)**，預設值是 NULL。 您可以利用這項描述來建立 Proxy 的文件，但並不供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 因此，這個引數是選擇性的。  
+`[ @description = ] 'description'` Proxy 的描述。 描述**nvarchar(512)**，預設值是 NULL。 您可以利用這項描述來建立 Proxy 的文件，但並不供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用。 因此，這個引數是選擇性的。  
   
- [ **@credential_name** =] **'***credential_name***'**  
- Proxy 的認證名稱。 *Credential_name*是**sysname**，預設值是 NULL。 任一*credential_name*或是*credential_id*必須指定。  
+`[ @credential_name = ] 'credential_name'` Proxy 認證的名稱。 *Credential_name*是**sysname**，預設值是 NULL。 任一*credential_name*或是*credential_id*必須指定。  
   
- [ **@credential_id** = ] *credential_id*  
- Proxy 的認證識別碼。 *Credential_id*是**int**，預設值是 NULL。 任一*credential_name*或是*credential_id*必須指定。  
+`[ @credential_id = ] credential_id` Proxy 的認證識別碼。 *Credential_id*是**int**，預設值是 NULL。 任一*credential_name*或是*credential_id*必須指定。  
   
- [ **@proxy_id**=]*識別碼*輸出  
- 如果 Proxy 建立成功時，便指派給 Proxy 的 Proxy 識別碼。  
+`[ @proxy_id = ] id OUTPUT` 如果成功建立指派給 proxy 之 proxy 識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

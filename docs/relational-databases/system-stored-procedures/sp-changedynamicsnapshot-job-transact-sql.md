@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130198"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493140"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication =** ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- 這是要變更的快照集作業名稱。 *dynamic_snapshot_jobname*已**sysname**，預設值是 N '%'。 如果*dynamic_snapshot_jobid*指定時，您必須使用的預設值*dynamic_snapshot_jobname*。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 正在變更的快照集作業名稱。 *dynamic_snapshot_jobname*已**sysname**，預設值是 N '%'。 如果*dynamic_snapshot_jobid*指定時，您必須使用的預設值*dynamic_snapshot_jobname*。  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- 這是要變更的快照集作業識別碼。 *dynamic_snapshot_jobid*已**uniqueidentifier**，預設值是 NULL。 如果*dynamic_snapshot_jobname*指定時，您必須使用的預設值*dynamic_snapshot_jobid*。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 正在變更的快照集作業的識別碼。 *dynamic_snapshot_jobid*已**uniqueidentifier**，預設值是 NULL。 如果*dynamic_snapshot_jobname*指定時，您必須使用的預設值*dynamic_snapshot_jobid*。  
   
- [  **@frequency_type =** ] *frequency_type*  
- 這是代理程式的排程頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
+`[ @frequency_type = ] frequency_type` 是用來排程代理程式的頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|重複執行|  
 |NULL (預設值)||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 代理程式的執行天數。 *frequency_interval*已**int**，而且可以是下列值之一。  
+`[ @frequency_interval = ] frequency_interval` 代理程式執行的天數。 *frequency_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|週末|  
 |NULL (預設值)||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- 這是在定義的期間內，重新排程的頻率。 *frequency_subday*已**int**，而且可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 已定義的期間重新排程的頻率。 *frequency_subday*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hour|  
 |NULL (預設值)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- 間隔*frequency_subday*。 *frequency_subday_interval*已**int**，預設值是 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 間隔*frequency_subday*。 *frequency_subday_interval*已**int**，預設值是 NULL。  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- 這是合併代理程式的執行日期。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 這是合併代理程式執行的日期。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|最後一個|  
 |NULL (預設值)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor&lt*  
- 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
   
- [ **@active_start_date =** ] *active_start_date*  
- 這是第一次排程合併代理程式的日期，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
+`[ @active_start_date = ] active_start_date` 排程的日期時第一個 「 合併代理程式，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
   
- [ **@active_end_date =** ] *active_end_date*  
- 這是排程停止合併代理程式的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
+`[ @active_end_date = ] active_end_date` 是 「 合併代理程式停止的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- 這是第一次排程合併代理程式的當日時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 「 合併代理程式時第一天的排程時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- 這是排程停止合併代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 是 「 合併代理程式停止的當日時間排程，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@job_login=** ] **'***job_login***'**  
- 這是利用參數化資料列篩選器來產生訂閱的快照集時，用來執行快照集代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶。 *job_login*已**nvarchar(257)**，預設值是 NULL。  
+`[ @job_login = ] 'job_login'` 是[!INCLUDE[msCoName](../../includes/msconame-md.md)]快照集代理程式執行時產生快照集使用參數化資料列篩選器的訂用帳戶的 Windows 帳戶。 *job_login*已**nvarchar(257)**，預設值是 NULL。  
   
- [  **@job_password=** ] **'***job_password***'**  
- 這是利用參數化資料列篩選器來產生訂閱的快照集時，用來執行快照集代理程式的 Windows 帳戶密碼。 *job_password*已**nvarchar(257)**，預設值是 NULL。  
+`[ @job_password = ] 'job_password'` 快照集代理程式執行時產生快照集的訂用帳戶的 Windows 帳戶的密碼使用參數化資料列篩選器。 *job_password*已**nvarchar(257)**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
