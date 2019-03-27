@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c3df07da100bf0bbfc0b2238cb4154b4c3a363e3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241609"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478223"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>在 SQL Server 2019 巨量資料叢集中的資料集區有哪些？
 
@@ -33,6 +33,7 @@ ms.locfileid: "54241609"
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 SQL Server 巨量資料叢集，請參閱下列概觀：
+若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
 
 - [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
+- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
