@@ -6644,17 +6644,21 @@ items:
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
         - name: 將收集項新增至收集組 (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
-    - name: 擴充事件
+    - name: 擴充事件 (XEvents) 概觀
       href: ../relational-databases/extended-events/extended-events.md
       items:
-      - name: 快速入門：SQL Server 中的延伸事件
-        href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-      - name: 設定
+      - name: 快速入門
         items:
-        - name: 管理事件工作階段
-          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
-        - name: 進階檢視目標資料
+        - name: 快速入門：SQL Server 中的延伸事件
+          href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - name: 教學課程
+        items:
+        - name: 來自 XEvents 之目標資料的進階檢視
           href: ../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+        - name: 將 SQL 追蹤指令碼轉換為工作階段
+          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+      - name: 概念
+        items:
         - name: Packages
           href: ../relational-databases/extended-events/sql-server-extended-events-packages.md
         - name: 目標
@@ -6665,29 +6669,32 @@ items:
           href: ../relational-databases/extended-events/sql-server-extended-events-engine.md
         - name: 工作階段
           href: ../relational-databases/extended-events/sql-server-extended-events-sessions.md
+        - name: 等同於 SQL 追蹤事件類別的 XEvents
+          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+        - name: 工具
+          href: ../relational-databases/extended-events/extended-events-tools.md
+      - name: 使用說明指南
+        items:
+        - name: 管理 XEvent 工作階段
+          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
         - name: 改變工作階段
           href: ../relational-databases/extended-events/alter-an-extended-events-session.md
-        - name: 系統檢視表中的 SELECT 與 JOIN
+        - name: 來自系統檢視表的 SELECT 與 JOIN
           href: ../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
-        - name: 同等於 SQL 追蹤事件類別的擴充事件
-          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
-        - name: 將 SQL 追蹤指令碼轉換為工作階段
-          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
         - name: 判斷哪些查詢持有鎖定
           href: ../relational-databases/extended-events/determine-which-queries-are-holding-locks.md
         - name: 尋找持有鎖定的物件
           href: ../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md
         - name: 監視系統活動
           href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
-      - name: 工具
-        href: ../relational-databases/extended-events/extended-events-tools.md
-        items:
         - name: 使用 SSMS XEvent 分析工具
           href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
         - name: 使用 system_health 工作階段
           href: ../relational-databases/extended-events/use-the-system-health-session.md
-        - name: 針對擴充事件使用 PowerShell 提供者
+        - name: 針對 XEvents 使用 PowerShell 提供者
           href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
+      - name: 參考
+        href: ../relational-databases/extended-events/xevents-references-system-objects.md
     - name: SQL 追蹤
       href: ../relational-databases/sql-trace/sql-trace.md
       items:
@@ -8433,8 +8440,8 @@ items:
     items:
     - name: 下載 SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: SSDT 的變更記錄
-      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: SSDT 的版本資訊
+      href: ../ssdt/release-notes-ssdt.md
     - name: 舊版的 SSDT 與 SSDT-BI
       href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Azure Active Directory 支援
@@ -17219,9 +17226,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 處理 XQuery 中的命名空間
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bde69d4b13a3ab5bf680d3816c47364b07e093a7
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356541"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417230"
