@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017864"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478047"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>什麼是 SQL Server 2019 巨量資料叢集上的控制器？
 
@@ -67,6 +67,7 @@ Controller 服務的所有通訊是透過 REST API 都進行 HTTPS。 自我簽�
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 SQL Server 巨量資料叢集，請參閱下列概觀：
+若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
 
 - [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
+- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

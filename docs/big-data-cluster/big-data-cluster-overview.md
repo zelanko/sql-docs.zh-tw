@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072123"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477643"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什麼是 SQL Server 2019 巨量資料叢集？
 
@@ -100,6 +100,9 @@ Kubernetes 是開放原始碼容器協調者，可以調整容器部署根據的
 ### <a id="dataplane"></a> 資料平面
 
 資料平面用於資料持續性和快取。 它包含 SQL 資料集區，以及儲存體集區。  SQL 資料集區是由一或多個 pod，在 Linux 上執行 SQL Server 所組成。 它用來擷取從 SQL 查詢或 Spark 作業的資料。 SQL Server 的巨量資料叢集的資料超市會保存在資料集區。 存放集區包含 Linux、 Spark 和 HDFS 上的 SQL Server 所組成的儲存體集區 pod。 在 SQL Server 的巨量資料叢集中的所有存放裝置節點是 HDFS 叢集的成員。
+
+> [!TIP]
+> 深入了解巨量資料叢集架構和安裝，請參閱[研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)。
 
 ## <a name="next-steps"></a>後續步驟
 

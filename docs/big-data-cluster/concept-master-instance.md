@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227300"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477944"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>什麼是中的 SQL Server 2019 巨量資料叢集的主要執行個體？
 
@@ -66,6 +66,7 @@ SQL Server 2019 輕鬆加入至維度的資料通常儲存在企業資料庫中�
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 SQL Server 巨量資料叢集，請參閱下列概觀：
+若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
 
 - [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
+- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

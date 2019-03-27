@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161637"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477693"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -347,4 +347,7 @@ kubectl get svc -n <your-cluster-name>
 
 ## <a name="next-steps"></a>後續步驟
 
-試試看一些新功能，並了解[如何在 SQL Server 2019 預覽中使用 notebook](notebooks-guidance.md)。
+若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
+
+- [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
+- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

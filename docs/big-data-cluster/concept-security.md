@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241419"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477983"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 的巨量資料叢集的安全性概念
 
@@ -53,16 +53,16 @@ ms.locfileid: "54241419"
 時佈建叢集，必須使用環境變數設定的使用者密碼數目。 以下是 SQL 系統管理員 」 和 「 叢集管理員用來存取服務的密碼：
 
 控制器的使用者名稱：
- + CONTROLLER_USERNAME = < controller_username >
+ + CONTROLLER_USERNAME=<controller_username>
 
 控制站的密碼：  
- + CONTROLLER_PASSWORD = < controller_password >
+ + CONTROLLER_PASSWORD=<controller_password>
 
 SQL Master SA 密碼： 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 密碼存取 HDFS/Spark 端點：
- + KNOX_PASSWORD = < knox_password >
+ + KNOX_PASSWORD=<knox_password>
 
 ### <a name="intra-cluster-authentication"></a>叢集內驗證
 
@@ -81,7 +81,7 @@ SQL Master SA 密碼：
 
 ## <a name="next-steps"></a>後續步驟
 
-若要深入了解 SQL Server 巨量資料叢集，請參閱下列文章：
+若要深入了解 SQL Server 巨量資料叢集，請參閱下列資源：
 
 - [什麼是 SQL Server 2019 巨量資料叢集？](big-data-cluster-overview.md)
-- [快速入門：部署在 Kubernetes 上的 SQL Server 巨量資料叢集](quickstart-big-data-cluster-deploy.md)
+- [研討會：Microsoft SQL Server 的巨量資料叢集架構](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
