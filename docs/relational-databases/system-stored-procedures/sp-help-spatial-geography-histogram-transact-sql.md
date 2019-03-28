@@ -18,12 +18,12 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fa398eade8b3cac1497c1168882dbacbc6e9817
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659484"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538160"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,19 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@tabname =**] **'***tabname***'**  
- 這是已指定空間索引之資料表的限定或非限定名稱。  
+`[ @tabname = ] 'tabname'` 是已指定空間索引之資料表的完整或非完整名稱。  
   
  只有在指定限定資料表時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *tabname*已**sysname**，沒有預設值。  
   
- [  **@colname =** ] **'***columnname***'**  
- 這是所指定之空間資料行的名稱。 *columnname*已**sysname**，沒有預設值。  
+`[ @colname = ] 'columnname'` 是指定之空間資料行的名稱。 *columnname*已**sysname**，沒有預設值。  
   
- [  **@resolution =** ] **'***解析***'**  
- 這是週框方塊的解析度。 有效的值是從 10 到 5000。 *解析度*已**tinyint**，沒有預設值。  
+`[ @resolution = ] 'resolution'` 是週框方塊的解析度。 有效的值是從 10 到 5000。 *解析度*已**tinyint**，沒有預設值。  
   
- [  **@sample =** ] **'***範例***'**  
- 這是所用之資料表的百分比。 有效的值是從 0 到 100 之間。 *tablesample*已**float**。 預設值為 100。  
+`[ @sample = ] 'sample'` 為資料表所使用的百分比。 有效的值是從 0 到 100 之間。 *tablesample*已**float**。 預設值為 100。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  會傳回資料表值。 下列方格描述資料表的資料行內容。  
@@ -61,7 +57,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|代表每一個資料格的唯一識別碼，從 1 開始計數。|  
-|**資料格**|**地理位置**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
+|**cell**|**地理位置**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
 |**row_count**|**bigint**|指出觸及或包含資料格之空間物件的數目。|  
   
 ## <a name="permissions"></a>Permissions  

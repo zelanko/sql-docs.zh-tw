@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06e0e3f1f75c95924ec5d2adb52f19c7dae65735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650426"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536300"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@filename =** ] **'***name***'**  
- 這是目前資料庫中任何檔案的邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*是未指定，會傳回目前資料庫中的所有檔案的屬性。  
+`[ @filename = ] 'name'` 這是目前資料庫中的任何檔案邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*是未指定，會傳回目前資料庫中的所有檔案的屬性。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,9 +54,9 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**filename**|**nchar(260)**|實體檔案名稱。|  
 |**filegroup**|**sysname**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
 |**size**|**nvarchar(15)**|檔案大小 (以 KB 為單位)。|  
-|**大小上限**|**nvarchar(15)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
-|**成長**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
-|**使用方式**|**varchar(9)**|對於資料檔，這個值是 **'僅限資料'** 的值是記錄檔**僅限記錄'**。|  
+|**maxsize**|**nvarchar(15)**|檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**growth**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
+|**usage**|**varchar(9)**|對於資料檔，這個值是 **'僅限資料'** 的值是記錄檔**僅限記錄'**。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  

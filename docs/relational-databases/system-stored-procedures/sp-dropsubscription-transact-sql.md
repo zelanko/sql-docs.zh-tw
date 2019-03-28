@@ -16,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812963"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537140"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'**_發行集_**'**  
- 這是關聯的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 如果**所有**，針對指定的訂閱者的所有發行集的所有訂閱都會都取消。 *發行集*是必要的參數。  
+`[ @publication = ] 'publication'` 是相關聯的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 如果**所有**，針對指定的訂閱者的所有發行集的所有訂閱都會都取消。 *發行集*是必要的參數。  
   
- [  **@article=** ] **'**_文章_**'**  
- 這是發行項的名稱。 *發行項*已**sysname**，預設值是 NULL。 如果**所有**，發行集和訂閱者端卸除指定的所有發行項每個訂用帳戶。 使用**所有**針對發行集允許立即更新。  
+`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，預設值是 NULL。 如果**所有**，發行集和訂閱者端卸除指定的所有發行項每個訂用帳戶。 使用**所有**針對發行集允許立即更新。  
   
- [  **@subscriber=** ] **'**_subscribe_r **'**  
- 這是將卸除訂閱的訂閱者名稱。 *訂閱者*已**sysname**，沒有預設值。 如果**所有**，會卸除所有訂閱者的所有訂用帳戶。  
+`[ @subscriber = ] 'subscribe_r'` 是卸除其訂閱的訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。 如果**所有**，會卸除所有訂閱者的所有訂用帳戶。  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- 這是目的地資料庫的名稱。 *destination_db*已**sysname**，預設值是 NULL。 如果是 NULL，就會卸除這個訂閱者的所有訂閱。  
+`[ @destination_db = ] 'destination_db'` 是目的地資料庫的名稱。 *destination_db*已**sysname**，預設值是 NULL。 如果是 NULL，就會卸除這個訂閱者的所有訂閱。  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'**_保留_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -77,8 +71,8 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="see-also"></a>另請參閱  
  [刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_helpsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

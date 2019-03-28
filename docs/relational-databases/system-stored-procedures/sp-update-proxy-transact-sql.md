@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763516"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534460"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@proxy_id**= ] *id*  
- 要變更的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。  
+`[ @proxy_id = ] id` 若要變更 proxy 之 proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 要變更的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。  
+`[ @proxy_name = ] 'proxy_name'` 若要變更 proxy 的名稱。 *Proxy_name*是**sysname**，預設值是 NULL。  
   
- [ **@credential_name** =] **'***credential_name***'**  
- Proxy 新認證的名稱。 *Credential_name*是**sysname**，預設值是 NULL。 任一*credential_name*或是*credential_id*可能指定。  
+`[ @credential_name = ] 'credential_name'` Proxy 新認證的名稱。 *Credential_name*是**sysname**，預設值是 NULL。 任一*credential_name*或是*credential_id*可能指定。  
   
- [ **@credential_id** = ] *credential_id*  
- Proxy 新認證的識別碼。 *Credential_id*是**int**，預設值是 NULL。 任一*credential_name*或是*credential_id*可能指定。  
+`[ @credential_id = ] credential_id` Proxy 新認證的識別碼。 *Credential_id*是**int**，預設值是 NULL。 任一*credential_name*或是*credential_id*可能指定。  
   
- [ **@new_name**=] **'***new_name***'**  
- Proxy 的新名稱。 *New_name*是**sysname**，預設值是 NULL。 當未提供，程序會變更的 proxy 名稱*new_name*。 當這個引數是 NULL 時，Proxy 的名稱會維持不變。  
+`[ @new_name = ] 'new_name'` Proxy 新的名稱。 *New_name*是**sysname**，預設值是 NULL。 當未提供，程序會變更的 proxy 名稱*new_name*。 當這個引數是 NULL 時，Proxy 的名稱會維持不變。  
   
- [ **@enabled** = ] *is_enabled*  
- 這是指是否啟用 Proxy。 *Is_enabled&lt*旗標**tinyint**，預設值是 NULL。 當*is_enabled&lt*是**0**，proxy 未啟用，並無法供作業步驟。 當這個引數是 NULL 時，Proxy 的狀態會維持不變。  
+`[ @enabled = ] is_enabled` 是 proxy 是否已啟用。 *Is_enabled&lt*旗標**tinyint**，預設值是 NULL。 當*is_enabled&lt*是**0**，proxy 未啟用，並無法供作業步驟。 當這個引數是 NULL 時，Proxy 的狀態會維持不變。  
   
- [ **@description**=] **'***描述***'**  
- Proxy 的新描述。 *描述*是**nvarchar(512)**，預設值是 NULL。 當這個引數是 NULL 時，Proxy 的描述會維持不變。  
+`[ @description = ] 'description'` Proxy 新的描述。 *描述*是**nvarchar(512)**，預設值是 NULL。 當這個引數是 NULL 時，Proxy 的描述會維持不變。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -99,7 +92,7 @@ GO
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

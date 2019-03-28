@@ -1,5 +1,5 @@
 ---
-title: 範例：將產品型號資訊當作 XML 來擷取 | Microsoft Docs
+title: 範例正在擷取產品型號資訊當做 XML |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537760"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>範例：將產品型號資訊當做 XML 來擷取
+# <a name="example-retrieving-product-model-information-as-xml"></a>範例將產品型號資訊當做 XML 來擷取
   下列查詢會傳回產品型號資訊。 `RAW` 模式是在 `FOR XML` 子句中指定。  
   
 ## <a name="example"></a>範例  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- 您可以選擇性地指定`TYPE`指示詞，以將結果擷取為`xml`型別。 `TYPE` 指示詞不會變更結果的內容， 只會影響結果的資料類型。  
+ 您可以選擇性地指定 `TYPE` 指示詞，將結果擷取為 `xml` 類型。 `TYPE` 指示詞不會變更結果的內容， 只會影響結果的資料類型。  
   
 ```  
 USE AdventureWorks2012;  

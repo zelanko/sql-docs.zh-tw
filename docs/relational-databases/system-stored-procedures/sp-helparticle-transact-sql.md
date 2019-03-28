@@ -1,5 +1,5 @@
 ---
-title: sp_helparticle (TRANSACT-SQL) |Microsoft Docs
+title: sp_helparticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212500"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536145"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,31 +42,26 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =**] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'***文章***'**  
- 這是發行集的發行項名稱。 *發行項*已**sysname**，預設值是**%**。 如果*文章*是未提供，會傳回指定之發行集的所有發行項的相關資訊。  
+`[ @article = ] 'article'` 是發行集中發行項的名稱。 *發行項*已**sysname**，預設值是**%**。 如果*文章*是未提供，會傳回指定之發行集的所有發行項的相關資訊。  
   
- [  **@returnfilter=**] *returnfilter*  
- 指定是否應該傳回篩選子句。 *returnfilter*已**位元**，預設值是**1**，它會傳回篩選子句。  
+`[ @returnfilter = ] returnfilter` 指定是否應該傳回篩選子句。 *returnfilter*已**位元**，預設值是**1**，它會傳回篩選子句。  
   
- [ **@publisher**=] **'***發行者***'**  
- 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應指定當要求資訊的發行項上發佈的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
- [  **@found=** ]*找到*輸出  
- 僅供內部使用。  
+`[ @found = ] found OUTPUT` 僅供內部使用。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**文章識別碼**|**int**|發行項的識別碼。|  
+|**article id**|**int**|發行項的識別碼。|  
 |**發行項名稱**|**sysname**|發行項的名稱。|  
-|**基底物件**|**nvarchar(257)**|發行項或預存程序所代表之基礎資料表的名稱。|  
+|**base object**|**nvarchar(257)**|發行項或預存程序所代表之基礎資料表的名稱。|  
 |**目的地物件**|**sysname**|目的地 (訂閱) 資料表的名稱。|  
 |**同步處理物件**|**nvarchar(257)**|定義已發行的發行項之檢視的名稱。|  
 |**type**|**smallint**|發行項的類型：<br /><br /> **1** = 記錄檔為基礎。<br /><br /> **3** = 含有手動篩選的 記錄檔為基礎。<br /><br /> **5** = 含有手動檢視記錄檔型。<br /><br /> **7** = 含有手動篩選和手動檢視記錄檔型。<br /><br /> **8** = 預存程序執行。<br /><br /> **24** = 可序列化的預存程序執行。<br /><br /> **32** = 預存程序 （僅限結構描述）。<br /><br /> **64** = 檢視 （僅限結構描述）。<br /><br /> **96** = 彙總函式 （僅限結構描述）。<br /><br /> **128** = 函式 （僅限結構描述）。<br /><br /> **257** = 記錄式索引檢視表。<br /><br /> **超過 259** = 含有手動篩選的記錄式索引檢視表。<br /><br /> **261** = 含有手動檢視的記錄式索引的檢視。<br /><br /> **263** = 含有手動篩選記錄式索引檢視表和手動檢視。<br /><br /> **320** = 索引檢視 （僅限結構描述）。<br /><br />|  
@@ -109,7 +104,7 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addarticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

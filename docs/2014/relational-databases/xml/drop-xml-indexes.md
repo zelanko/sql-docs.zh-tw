@@ -11,23 +11,23 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194148"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535500"
 ---
 # <a name="drop-xml-indexes"></a>卸除 XML 索引
   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可用以卸除現有的主要或次要 XML 及非 XML 索引。 不過，DROP INDEX 沒有任何選項會套用至 XML 索引。 如果您卸除主要 XML 索引，也會刪除任何存在的次要索引。  
   
  具有 *TableName.IndexName* 的 DROP 語法已捨棄不用，XML 索引也不支援它。  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>範例：建立和卸除主要 XML 索引  
- 在下列範例中，建立 XML 索引上`xml`類型資料行。  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>範例建立和卸除主要 XML 索引  
+ 在下列範例中，會在 `xml` 類型資料行上建立 XML 索引。  
   
 ```  
 DROP TABLE T  
@@ -51,7 +51,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  當卸除資料表時，也會自動卸除在該資料表上的所有 XML 索引。 不過，如果在資料行上有 XML 索引，將無法從資料表卸除 XML 資料行。  
   
- 在下列範例中，建立 XML 索引上`xml`類型資料行。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../xml/compare-typed-xml-to-untyped-xml.md)。  
+ 在下列範例中，會在 `xml` 類型資料行上建立 XML 索引。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../xml/compare-typed-xml-to-untyped-xml.md)。  
   
 ```  
 CREATE TABLE TestTable(  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>範例：使用 DROP_EXISTING 索引選項建立 XML 索引  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>範例使用 DROP_EXISTING 索引選項建立 XML 索引  
  在下列範例中，會在資料行 (`XmlColx`) 上建立 XML 索引。 接著，會在不同資料行 (`XmlColy`) 上建立另一個具有相同名稱的 XML 索引。 因為指定了 `DROP_EXISTING` 選項，所以會卸除 (`XmlColx)` 上的現有 XML 索引，並在 (`XmlColy`) 上建立新 XML 索引。  
   
 ```  

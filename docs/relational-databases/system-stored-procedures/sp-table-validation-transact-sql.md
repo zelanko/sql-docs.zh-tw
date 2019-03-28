@@ -16,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211278"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537210"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table=**] **'***表格***'**  
- 這是資料表的名稱。 *表格*已**sysname**，沒有預設值。  
+`[ @table = ] 'table'` 為資料表的名稱。 *表格*已**sysname**，沒有預設值。  
   
- [  **@expected_rowcount=**] *expected_rowcount*輸出  
- 指定是否傳回資料表中的預期資料列數。 *expected_rowcount*已**int**，預設值是 NULL。 如果是 NULL，就會在輸出參數中傳回實際的資料列計數。 如果提供了值，就會針對實際資料列計數來檢查值，以識別任何差異。  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` 指定是否要在資料表中傳回預期的資料列數目。 *expected_rowcount*已**int**，預設值是 NULL。 如果是 NULL，就會在輸出參數中傳回實際的資料列計數。 如果提供了值，就會針對實際資料列計數來檢查值，以識別任何差異。  
   
- [  **@expected_checksum=**] *expected_checksum*輸出  
- 指定是否要傳回資料表中的預期總和檢查碼。 *expected_checksum*已**數值**，預設值是 NULL。 如果是 NULL，就會在輸出參數中傳回實際的總和檢查碼。 如果提供了值，就會針對實際總和檢查碼來檢查值，以識別任何差異。  
+`[ @expected_checksum = ] expected_checksumOUTPUT` 指定是否要傳回之資料表的預期總和檢查碼。 *expected_checksum*已**數值**，預設值是 NULL。 如果是 NULL，就會在輸出參數中傳回實際的總和檢查碼。 如果提供了值，就會針對實際總和檢查碼來檢查值，以識別任何差異。  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- 指定要執行的總和檢查碼或資料列計數類型。 *type_of_check_requested*已**smallint**，預設值是**1**。  
+`[ @rowcount_only = ] type_of_check_requested` 指定總和檢查碼或執行的資料列計數的類型。 *type_of_check_requested*已**smallint**，預設值是**1**。  
   
  如果**0**，執行資料列計數並[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。  
   
@@ -64,11 +60,9 @@ sp_table_validation [ @table = ] 'table'
   
  如果**2**，執行資料列計數及二進位總和檢查碼。  
   
- [  **@owner=**] **'***擁有者***'**  
- 這是資料表擁有者的名稱。 *擁有者*已**sysname**，預設值是 NULL。  
+`[ @owner = ] 'owner'` 為資料表的擁有者的名稱。 *擁有者*已**sysname**，預設值是 NULL。  
   
- [  **@full_or_fast=**] *full_or_fast*  
- 這是用於計算資料列計數的方法。 *full_or_fast*已**tinyint**，預設值是**2**，而且可以是下列值之一。  
+`[ @full_or_fast = ] full_or_fast` 方法用來計算資料列計數。 *full_or_fast*已**tinyint**，預設值是**2**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -76,14 +70,11 @@ sp_table_validation [ @table = ] 'table'
 |**1**|快速從計數**sysindexes.rows**。 計算資料列**sysindexes**比計算實際資料表中的資料列快得多。 不過，因為**sysindexes**是以延遲的方式更新，資料列計數可能不正確。|  
 |**2** (預設值)|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 NULL，且預存程序正在使用此選項，以取得此值，完整 COUNT(*) 一律會使用。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 如果 「 散發代理程式在執行**sp_table_validation**，指定是否 「 散發代理程式應該立即關閉驗證完成時。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，就會引發錯誤 20578 和複寫代理程式收到關閉信號。 會忽略這個參數時**sp_table_validation**直接由使用者執行。  
+`[ @shutdown_agent = ] shutdown_agent` 如果 「 散發代理程式在執行**sp_table_validation**，指定是否 「 散發代理程式應該立即關閉驗證完成時。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，就會引發錯誤 20578 和複寫代理程式收到關閉信號。 會忽略這個參數時**sp_table_validation**直接由使用者執行。  
   
- [  **@table_name =**] *table_name*  
- 這是輸出訊息所用之檢視的資料表名稱。 *table_name*已**sysname**，預設值是**@table**。  
+`[ @table_name = ] table_name` 是輸出訊息所用之檢視的資料表名稱。 *table_name*已**sysname**，預設值是**@table**。  
   
- [ **@column_list**=] **'***column_list***'**  
- 這是總和檢查碼函數所應使用之資料行的清單。 *column_list*已**nvarchar(4000)**，預設值是 NULL。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
+`[ @column_list = ] 'column_list'` 是應該使用總和檢查碼函式中的資料行清單。 *column_list*已**nvarchar(4000)**，預設值是 NULL。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  如果執行總和檢查碼驗證及預期的總和檢查碼等於資料表中的總和檢查碼**sp_table_validation**傳回資料表通過總和檢查碼驗證的訊息。 否則，它會傳回一則訊息來說明資料表可能不會同步處理，且會報告預期資料列數和實際資料列數的差異。  
@@ -103,10 +94,10 @@ sp_table_validation [ @table = ] 'table'
  若要執行**sp_table_validation**，您必須在驗證之資料表上的 SELECT 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [總和檢查碼&#40;Transact SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

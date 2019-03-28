@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118168"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536530"
 ---
 # <a name="collations-and-code-pages"></a>定序和字碼頁
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 對於記憶體最佳化的資料表中 (var)Char 資料行支援的字碼頁以及用於索引和原生編譯預存程序中支援的定序有一些限制。  
@@ -31,7 +31,7 @@ ms.locfileid: "48118168"
 > [!IMPORTANT]  
 >  您無法針對不使用 BIN2 定序的索引字串資料行使用排序依據或群組依據。  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   記憶體最佳化資料表中的 (var)char 資料行必須使用字碼頁 1252 定序。 這項限制並不適用於 n(var)char 資料行。 下列程式碼會擷取所有 1252 定序：  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   (n)(var)char 資料行上的索引只能使用 BIN2 定序來指定 (請參閱第一個範例)。 下列查詢會擷取所有支援的 BIN2 定序：  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   原生編譯的預存程序中不支援 UTF-16 資料截斷。 這表示該 n (var) char (*n*) 的值無法轉換成 n (var) char 類型 (*我*)，如果*我* < *n*的話定序具有 _SC 屬性。 例如，以下範例不受支援：  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  下列範例顯示 In-Memory OLTP 中定序限制的部分影響及因應措施。 此範例使用上面指定的 Employees 資料表。 此範例會列出所有員工。 請注意在 LastName 中，因為使用二進位定序，所以大寫名稱會排在小寫前面。 因此，'Thomas' 會排在 'nolan' 前面，因為大寫字母具有較低的字碼指標。 FirstName 具有不區分大小寫的定序。 因此，排序是根據英文字母，而不是字元的字碼指標。  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

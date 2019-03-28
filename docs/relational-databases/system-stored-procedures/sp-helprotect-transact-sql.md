@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591182"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534500"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@name =** ] **'**_object_statement&lt_**'**  
- 這是目前資料庫中之物件的名稱，或陳述式的名稱，其中有要報告的權限。 *object_statement&lt*已**nvarchar(776)**，預設值是 NULL，它會傳回所有物件和陳述式的權限。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以在表單中包含的擁有者限定詞_擁有者_**。**_物件_。  
+`[ @name = ] 'object_statement'` 是在目前資料庫中，或是具有報表的權限的陳述式，物件的名稱。 *object_statement&lt*已**nvarchar(776)**，預設值是 NULL，它會傳回所有物件和陳述式的權限。 如果值是物件 (資料表、檢視、預存程序或擴充預存程序)，它必須是目前資料庫中的有效物件。 物件名稱可以在表單中包含的擁有者限定詞_擁有者_**。**_物件_。  
   
  如果*object_statement&lt*是陳述式，它可以是 CREATE 陳述式。  
   
- [  **@username =** ] **'**_security_account_**'**  
- 這是傳回的權限所屬的主體名稱。 *security_account*已**sysname**，預設值是 NULL，它會傳回所有主體目前資料庫中。 *security_account*必須存在於目前的資料庫。  
+`[ @username = ] 'security_account'` 是為其傳回的權限名稱。 *security_account*已**sysname**，預設值是 NULL，它會傳回所有主體目前資料庫中。 *security_account*必須存在於目前的資料庫。  
   
- [  **@grantorname =** ] **'**_授與者_**'**  
- 這是授與權限的主體名稱。 *另外，grantor*已**sysname**，預設值是 NULL，它會傳回資料庫中任何主體授與的權限的所有資訊。  
+`[ @grantorname = ] 'grantor'` 是授與權限名稱。 *另外，grantor*已**sysname**，預設值是 NULL，它會傳回資料庫中任何主體授與的權限的所有資訊。  
   
- [  **@permissionarea =** ] **'**_型別_**'**  
- 這是字元字串，指出是否要顯示物件的權限 (字元字串**o**)，陳述式權限 (字元字串**s**)，或兩者 (**os**)。 *型別*已**varchar(10)**，預設值是**os**。 *型別*可以是任意的組合**o**並**s**，不論有無逗號或空格之間**o**並**s**。  
+`[ @permissionarea = ] 'type'` 這是字元字串，指出是否要顯示物件的權限 (字元字串**o**)，陳述式權限 (字元字串**s**)，或兩者 (**os**)。 *型別*已**varchar(10)**，預設值是**os**。 *型別*可以是任意的組合**o**並**s**，不論有無逗號或空格之間**o**並**s**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

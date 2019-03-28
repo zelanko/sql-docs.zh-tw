@@ -18,12 +18,12 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2bd1919210f08dc0323400ceddeb47f74d21cc9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836456"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536450"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@profile_id** =] *profile_id*  
- 要傳回資訊的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。  
+`[ @profile_id = ] profile_id` 要傳回資訊的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要傳回資訊的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。  
+`[ @profile_name = ] 'profile_name'` 要傳回資訊的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

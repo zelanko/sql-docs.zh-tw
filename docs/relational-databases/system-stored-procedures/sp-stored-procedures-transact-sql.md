@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588459"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535190"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@sp_name =** ] **'**_名稱_**'**  
- 這是用來傳回目錄資訊的程序名稱。 *名稱*已**nvarchar(390)**，預設值是 NULL。 支援萬用字元的模式比對。  
+`[ @sp_name = ] 'name'` 是用來傳回目錄資訊的程序的名稱。 *名稱*已**nvarchar(390)**，預設值是 NULL。 支援萬用字元的模式比對。  
   
- [  **@sp_owner =** ] **'**_結構描述_**'**  
- 這是程序所屬的結構描述名稱。 *結構描述*已**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，會套用基礎 DBMS 的預設程序可見性規則。  
+`[ @sp_owner = ] 'schema'` 是此程序所屬的結構描述名稱。 *結構描述*已**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，會套用基礎 DBMS 的預設程序可見性規則。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前結構描述含有指定名稱的程序，就會傳回該程序。 如果指定的是非限定的預存程序，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會以下列順序搜尋該程序：  
   
@@ -57,11 +55,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   目前資料庫中的 **dbo** 結構描述。  
   
- [  **@qualifier =** ] **'**_限定詞_**'**  
- 這是程序限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (_限定詞_**。**_結構描述_**。**_名稱_。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+`[ @qualifier = ] 'qualifier'` 為程序限定詞的名稱。 *限定詞*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (_限定詞_**。**_結構描述_**。**_名稱_。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
- 決定是否將底線 (_)、百分比 (%) 或方括號 ([ ]) 視為萬用字元。 *fUsePattern*已**元**，預設值是 1。  
+`[ @fUsePattern = ] 'fUsePattern'` 決定是否底線 (_)、 百分比 （%） 或方括號 []) 會解譯為萬用字元。 *fUsePattern*已**元**，預設值是 1。  
   
  **0** = 模式比對已關閉。  
   
@@ -76,11 +72,11 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|程序限定詞名稱。 這個資料行可以是 NULL。|  
 |**PROCEDURE_OWNER**|**sysname**|程序擁有者名稱。 這個資料行一律會傳回值。|  
-|**程序名稱**|**nvarchar(134)**|程序名稱。 這個資料行一律會傳回值。|  
+|**PROCEDURE_NAME**|**nvarchar(134)**|程序名稱。 這個資料行一律會傳回值。|  
 |**NUM_INPUT_PARAMS**|**int**|保留供日後使用。|  
 |**NUM_OUTPUT_PARAMS**|**int**|保留供日後使用。|  
 |**NUM_RESULT_SETS**|**int**|保留供日後使用。|  
-|**註解**|**varchar(254)**|程序的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**REMARKS**|**varchar(254)**|程序的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
 |**PROCEDURE_TYPE**|**smallint**|程序類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一定會傳回 2.0。 這個值可以是下列其中一個值：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>備註  

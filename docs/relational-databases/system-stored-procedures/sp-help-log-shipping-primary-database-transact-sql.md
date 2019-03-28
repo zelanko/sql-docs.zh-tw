@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_database (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85d45de0ec858766bea51e983e80087d93d94ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826626"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534490"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@database =** ] '*資料庫*'  
- 這是記錄傳送主要資料庫的名稱。 *資料庫*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @database = ] 'database'` 是記錄傳送主要資料庫的名稱。 *資料庫*已**sysname**，沒有預設值，不能是 NULL。  
   
- [ **@primary_id =** ] '*primary_id*'  
- 記錄傳送組態之主要資料庫的識別碼。 *primary_id*已**uniqueidentifier**不能是 NULL。  
+`[ @primary_id = ] 'primary_id'` 記錄傳送組態的主要資料庫的識別碼。 *primary_id*已**uniqueidentifier**不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

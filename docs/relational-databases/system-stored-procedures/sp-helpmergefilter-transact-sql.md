@@ -16,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779360"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534700"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'***文章***'**  
- 這是發行項的名稱。 *發行項*已**sysname**，預設值是**%**，它會傳回所有發行項的名稱。  
+`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，預設值是**%**，它會傳回所有發行項的名稱。  
   
- [  **@filtername=**] **'***filtername***'**  
- 這是要傳回資訊的篩選名稱。 *filtername*已**sysname**，預設值是**%**，傳回所有發行集的發行項上定義的篩選條件的相關資訊。  
+`[ @filtername = ] 'filtername'` 是要傳回的資訊做為篩選條件的名稱。 *filtername*已**sysname**，預設值是**%**，傳回所有發行集的發行項上定義的篩選條件的相關資訊。  
   
 ## <a name="result-sets"></a>結果集  
   

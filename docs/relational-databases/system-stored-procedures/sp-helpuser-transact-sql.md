@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791996"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535960"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@name_in_db =** ] **'***security_account***'**  
- 這是目前資料庫中之資料庫使用者或資料庫角色的名稱。 *security_account*必須存在於目前的資料庫。 *security_account*已**sysname**，預設值是 NULL。 如果*security_account*未指定，則**sp_helpuser**傳回所有的資料庫主體的相關資訊。  
+`[ @name_in_db = ] 'security_account'` 是資料庫使用者或目前資料庫中的資料庫角色的名稱。 *security_account*必須存在於目前的資料庫。 *security_account*已**sysname**，預設值是 NULL。 如果*security_account*未指定，則**sp_helpuser**傳回所有的資料庫主體的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

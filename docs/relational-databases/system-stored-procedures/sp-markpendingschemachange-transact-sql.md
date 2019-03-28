@@ -16,12 +16,12 @@ ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9320a155ca0af5750ca66cf10564227a3197d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 67377f638459a37f25fbc78b9acff395192a2f3f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818810"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537330"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,12 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publication=** ] **'***發行集***'**  
+ [**@publication=** ] **'***publication***'**  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@schemaversion=** ] *schemaversion*  
- 識別暫止結構描述變更。 *schemaversion*已**int**，預設值是**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出發行集的暫止結構描述變更。  
+`[ @schemaversion = ] schemaversion` 識別暫止結構描述變更。 *schemaversion*已**int**，預設值是**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出發行集的暫止結構描述變更。  
   
- [  **@status=** ] **'***狀態***'**  
- 這是指是否將略過暫止結構描述變更。 *狀態*已**nvarchar(10**預設值是**active**。 如果值*狀態*是**略過**，然後選取的結構描述變更不會複寫。  
+`[ @status = ] 'status'` 是是否將略過暫止結構描述變更。 *狀態*已**nvarchar(10**預設值是**active**。 如果值*狀態*是**略過**，然後選取的結構描述變更不會複寫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -62,6 +60,6 @@ sp_markpendingschemachange [@publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_markpendingschemachange**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sysmergeschemachange &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

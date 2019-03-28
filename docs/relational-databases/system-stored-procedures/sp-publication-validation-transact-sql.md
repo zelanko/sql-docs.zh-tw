@@ -1,5 +1,5 @@
 ---
-title: sp_publication_validation & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_publication_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591402"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537170"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publication=**] **'**_發行集 '_  
+ [**@publication=**] **'**_publication'_  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -50,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意：當水平篩選發行項時，會執行資料列計數作業，而不是總和檢查碼作業。|  
+|**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意:當水平篩選發行項時，會執行資料列計數作業，而不是總和檢查碼作業。|  
 |**1** (預設值)|只執行資料列計數檢查。|  
-|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意：如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版訂閱者，就只會執行資料列計數驗證。|  
+|**2**|執行資料列計數及二進位總和檢查碼。<br /><br /> 注意:如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版訂閱者，就只會執行資料列計數驗證。|  
   
  [**@full_or_fast=**] *full_or_fast*  
  這是用於計算資料列計數的方法。 *full_or_fast*已**tinyint**而且可以是下列值之一。  
@@ -63,11 +63,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|快速從計數**sysindexes.rows**。 計算資料列[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)比計算實際資料表中的資料列快得多。 不過，因為[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)是以延遲的方式更新，資料列計數可能不正確。|  
 |**2** (預設值)|先嘗試快速方法來執行條件式快速計數。 如果快速方法有不同結果，便轉換成完整方法。 如果*expected_rowcount*是 NULL，且預存程序正在使用此選項，以取得此值，完整 COUNT(*) 一律會使用。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 這是指在驗證完成時，是否應該立即關閉散發代理程式。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，複寫代理程式會在驗證最後一個發行項之後關閉。  
+`[ @shutdown_agent = ] shutdown_agent` 是是否 「 散發代理程式應該立即關閉驗證完成時。 *shutdown_agent*已**位元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，複寫代理程式會在驗證最後一個發行項之後關閉。  
   
- [ **@publisher** =] **'**_發行者_**'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應該不在要求上進行驗證時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -87,8 +85,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [驗證訂閱者端的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

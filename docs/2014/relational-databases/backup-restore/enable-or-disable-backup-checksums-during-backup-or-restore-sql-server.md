@@ -14,12 +14,12 @@ ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b72f07b6cd2e223cb0556bd1fb32d03206122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214808"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536141"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>在備份或還原期間啟用或停用備份總和檢查碼 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中備份或還原資料庫時啟用或停用備份總和檢查碼。  
@@ -69,7 +69,7 @@ ms.locfileid: "48214808"
   
 3.  若要在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式中啟用備份總和檢查碼，請指定 WITH CHECKSUM 選項。 若要停用備份總和檢查碼，請指定 WITH NO_CHECKSUM 選項。 這是預設行為，但是壓縮備份除外。 下列範例指定應執行總和檢查碼。  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -84,7 +84,7 @@ GO
   
 3.  若要在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式中啟用備份總和檢查碼，請指定 WITH CHECKSUM 選項。 這是壓縮備份的預設行為。 若要停用備份總和檢查碼，請指定 WITH NO_CHECKSUM 選項。 這是預設行為，但是壓縮備份除外。 下列範例指定應執行備份總和檢查碼。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  

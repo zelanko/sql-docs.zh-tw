@@ -18,12 +18,12 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6e7c28e628254fd33269ab4ee200fee0067870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741046"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538180"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@filegroupname =** ] **'***name***'**  
- 這是目前資料庫中任何檔案群組的邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*未指定，則列出目前資料庫中的所有檔案群組，並顯示只有第一個結果集的結果集一節所示。  
+`[ @filegroupname = ] 'name'` 這是目前資料庫中的任何檔案群組邏輯名稱。 *名稱*已**sysname**，預設值是 NULL。 如果*名稱*未指定，則列出目前資料庫中的所有檔案群組，並顯示只有第一個結果集的結果集一節所示。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -62,8 +61,8 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**fileid**|**smallint**|數值檔案識別碼。|  
 |**filename**|**nchar(260)**|檔案的實體名稱 (包含目錄路徑在內)。|  
 |**size**|**nvarchar(15)**|檔案大小 (以 KB 為單位)。|  
-|**大小上限**|**nvarchar(15)**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
-|**成長**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
+|**maxsize**|**nvarchar(15)**|檔案的大小上限。<br /><br /> 這是檔案所能成長的大小上限。 這個欄位中的 UNLIMITED 值指出，檔案將成長到磁碟已滿。|  
+|**growth**|**nvarchar(15)**|檔案的成長遞增。 這表示每次需要新空間時，檔案所增加的空間量。<br /><br /> 0 = 檔案是固定大小，不會成長。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。  

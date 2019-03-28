@@ -16,12 +16,12 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789329"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538470"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 這是發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是已發行名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication** = ] **'***publication***'**  
- 這是變更監視臨界值屬性的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是變更監視臨界值屬性的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@publication_type** =] *publication_type*  
- 若是發行集的類型。 *publication_type*已**int**，而且可以是下列值之一。  
+`[ @publication_type = ] publication_type` 如果發行集的類型。 *publication_type*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -65,8 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|合併式發行集。|  
 |NULL (預設值)|複寫試圖判斷發行集類型。|  
   
- [ **@metric_id** =] *metric_id*  
- 這是變更發行集的監視臨界值標準的識別碼。 *metric_id*已**int**，預設值是 NULL 而且可以是下列值之一。  
+`[ @metric_id = ] metric_id` 正在變更的發行集臨界值標準的識別碼。 *metric_id*已**int**，預設值是 NULL 而且可以是下列值之一。  
   
 |值|標準名稱|  
 |-----------|-----------------|  
@@ -80,17 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  您必須指定*metric_id*或是*thresholdmetricname*。 如果*thresholdmetricname*指定*metric_id*應該是 NULL。  
   
- [ **@thresholdmetricname** =] **'***thresholdmetricname***'**  
- 這是變更發行集的監視臨界值標準的名稱。 *thresholdmetricname*已**sysname**，預設值是 NULL。 您必須指定*thresholdmetricname*或是*metric_id*。 如果*metric_id*指定*thresholdmetricname*應該是 NULL。  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` 正在變更的發行集臨界值標準的名稱。 *thresholdmetricname*已**sysname**，預設值是 NULL。 您必須指定*thresholdmetricname*或是*metric_id*。 如果*metric_id*指定*thresholdmetricname*應該是 NULL。  
   
- [ **@value** =]*值*  
- 這是發行集臨界值標準的新值。 *值*已**int**，預設值是 NULL。 如果**null**，則計量的值不會更新。  
+`[ @value = ] value` 發行集臨界值標準的新值。 *值*已**int**，預設值是 NULL。 如果**null**，則計量的值不會更新。  
   
- [ **@shouldalert** =] *shouldalert*  
- 這是指當到達發行集臨界值標準時，是否產生警示。 *shouldalert*已**元**，預設值是 NULL。 值為**1**方法，會產生警示，並針對**0**表示，不會產生警示。  
+`[ @shouldalert = ] shouldalert` 是當到達發行集臨界值標準時，如果會產生警示。 *shouldalert*已**元**，預設值是 NULL。 值為**1**方法，會產生警示，並針對**0**表示，不會產生警示。  
   
- [ **@mode** =]*模式*  
- 指出發行集臨界值標準是否啟用。 *模式*已**tinyint**，預設值是**1**。 值為**1**方法，會啟用這個標準的監視，並針對**2**表示監視此計量已停用。  
+`[ @mode = ] mode` 是發行集臨界值標準是否已啟用。 *模式*已**tinyint**，預設值是**1**。 值為**1**方法，會啟用這個標準的監視，並針對**2**表示監視此計量已停用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

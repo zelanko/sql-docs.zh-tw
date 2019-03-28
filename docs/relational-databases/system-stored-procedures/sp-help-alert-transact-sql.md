@@ -1,5 +1,5 @@
 ---
-title: sp_help_alert (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728966"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538460"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@alert_name =**] **'***alert_name***'**  
- 警示名稱。 *alert_name&lt*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。 如果*alert_name&lt*是未指定，會傳回有關所有警示的資訊。  
+`[ @alert_name = ] 'alert_name'` 警示的名稱。 *alert_name* is **nvarchar(128)**. 如果*alert_name&lt*是未指定，會傳回有關所有警示的資訊。  
   
- [ **@order_by =**] **'***order_by***'**  
- 用來產生結果的排序順序。 *order_by*已**sysname**，預設值是 N '*名稱*'。  
+`[ @order_by = ] 'order_by'` 用來產生結果的排序順序。 *order_by*已**sysname**，預設值是 N '*名稱*'。  
   
- [ **@alert_id =**] *alert_id*  
- 所報告者為其相關資訊之警示的識別碼。 *alert_id*已**int**，預設值是 NULL。  
+`[ @alert_id = ] alert_id` 識別要報告的相關資訊的警示數目。 *alert_id*已**int**，預設值是 NULL。  
   
- [ **@category_name =**]  **'***category***'**  
- 警示的類別目錄。 *類別目錄*已**sysname**，預設值是 NULL。  
+`[ @category_name = ] 'category'` 警示類別目錄。 *類別目錄*已**sysname**，預設值是 NULL。  
   
- [ **@legacy_format**=] *legacy_format*  
- 這是指是否產生舊的結果集。 *legacy_format*已**位元**，預設值是**0**。 當*legacy_format*是**1**， **sp_help_alert**會傳回所傳回的結果集**sp_help_alert** Microsoft SQL Server 2000 中。  
+`[ @legacy_format = ] legacy_format` 是指是否產生舊的結果集。 *legacy_format*已**位元**，預設值是**0**。 當*legacy_format*是**1**， **sp_help_alert**會傳回所傳回的結果集**sp_help_alert** Microsoft SQL Server 2000 中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -68,7 +63,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系統指派的唯一整數識別碼。|  
-|**name**|**sysname**|警示名稱 (例如，示範： 完整**msdb**記錄)。|  
+|**name**|**sysname**|警示名稱 (例如，示範：完整**msdb**記錄)。|  
 |**event_source**|**nvarchar(100)**|事件的來源。 它一律是**MSSQLServer** for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -102,7 +97,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|系統指派的唯一整數識別碼。|  
-|**name**|**sysname**|警示名稱 (例如，示範： 完整**msdb**記錄)。|  
+|**name**|**sysname**|警示名稱 (例如，示範：完整**msdb**記錄)。|  
 |**event_source**|**nvarchar(100)**|事件的來源。 它一律是**MSSQLServer**如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 版|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -150,7 +145,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

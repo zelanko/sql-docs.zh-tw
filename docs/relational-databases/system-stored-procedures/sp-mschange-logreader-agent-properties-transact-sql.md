@@ -16,12 +16,12 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3db4c300cad5f38b46b73b2edc065a5b98ec90f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e4393f1cc0baab6fd10899b18cac763363d9af89
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130808"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535832"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,25 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** =] **'**_發行者_**'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- 這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*已**smallint**，沒有預設值。  
+`[ @publisher_security_mode = ] publisher_security_mode` 是的安全性模式，代理程式用來連接到發行者。 *publisher_security_mode*已**smallint**，沒有預設值。  
   
  **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
   
  **1**指定 Windows 驗證。  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- 這是連接到發行者時所用的登入。 *publisher_login*已**sysname**，沒有預設值。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*為 NULL 並*publisher_security_mode*是**1**，在指定的 Windows 帳戶*job_login*將使用當連接到發行者。  
+`[ @publisher_login = ] 'publisher_login'` 已連接到發行者時使用的登入。 *publisher_login*已**sysname**，沒有預設值。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*為 NULL 並*publisher_security_mode*是**1**，在指定的 Windows 帳戶*job_login*將使用當連接到發行者。  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- 這是連接到發行者時所用的密碼。 *publisher_password*已**sysname**，沒有預設值。  
+`[ @publisher_password = ] 'publisher_password'` 這是連接到 「 發行者 」 時用的密碼。 *publisher_password*已**sysname**，沒有預設值。  
   
- [ **@job_login**=] **'**_job_login_**'**  
- 這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 *無法變更為非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
+`[ @job_login = ] 'job_login'` 是執行代理程式的 Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，沒有預設值。 *無法變更為非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
   
- [ **@job_password**=] **'**_job_password_**'**  
- 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
+`[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，沒有預設值。  
   
- [ **@publisher_type**=] **'**_publisher_type_**'**  
- 指定當發行者不是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中執行時的發行者類型。 *publisher_type*已**sysname**，而且可以是下列值之一。  
+`[ @publisher_type = ] 'publisher_type'` 當 「 發行者 」 未在執行的執行個體中指定的發行者類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *publisher_type*已**sysname**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

@@ -16,12 +16,12 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e037842d6be6ae08bc35ac9827ebd6931503f89e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802020"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535330"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,24 +41,20 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**。 如果*出版物*是**%**，會傳回所有合併式發行集和目前的資料庫中的訂用帳戶的相關資訊。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**。 如果*出版物*是**%**，會傳回所有合併式發行集和目前的資料庫中的訂用帳戶的相關資訊。  
   
- [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，預設值是**%**。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是**%**。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**。  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- 指出是否要顯示提取訂閱。 *subscription_type*已**nvarchar(10**，預設值是 **'pull'**。 有效值 **'push'**， **'pull'**，或 **'both'**。  
+`[ @subscription_type = ] 'subscription_type'` 要顯示提取訂閱。 *subscription_type*已**nvarchar(10**，預設值是 **'pull'**。 有效值 **'push'**， **'pull'**，或 **'both'**。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|訂閱的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**訂閱者**|**sysname**|訂閱者的名稱。|  
@@ -75,7 +71,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher_login**|**sysname**|發行者的登入名稱。|  
 |**publisher_password**|**sysname**|發行者密碼。|  
 |**publisher_security_mode**|**int**|指定發行者的安全性模式。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
-|**散發者**|**sysname**|散發者的名稱。|  
+|**distributor**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|散發者的登入名稱。|  
 |**distributor_password**|**sysname**|散發者密碼。|  
 |**distributor_security_mode**|**int**|指定散發者的安全性模式。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
@@ -93,13 +89,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**dynamic_snapshot_location**|**nvarchar(255)**|儲存快照集檔案之資料夾的路徑。|  
 |**last_sync_status**|**int**|同步處理狀態：<br /><br /> **1** = 啟動<br /><br /> **2** = 成功<br /><br /> **3** = 進行中<br /><br /> **4** = 閒置<br /><br /> **5** = 正在重試之後上一次的失敗<br /><br /> **6** = 失敗<br /><br /> **7** = 驗證失敗<br /><br /> **8** = 驗證通過<br /><br /> **9** = 已要求關機|  
 |**last_sync_summary**|**sysname**|上次同步處理結果的描述。|  
-|**use_web_sync&lt**|**bit**|如果訂用帳戶可以同步處理，透過 HTTPS 的值**1**表示啟用這項功能。|  
-|**應**|**nvarchar(260)**|代表 Web 同步處理之複寫接聽程式位置的 URL。|  
-|**internet_url**|**nvarchar(128)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
-|**internet_login**|**nvarchar(524)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
+|**use_web_sync**|**bit**|如果訂用帳戶可以同步處理，透過 HTTPS 的值**1**表示啟用這項功能。|  
+|**internet_url**|**nvarchar(260)**|代表 Web 同步處理之複寫接聽程式位置的 URL。|  
+|**internet_login**|**nvarchar(128)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
+|**internet_password**|**nvarchar(524)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**int**|當連接到主控 Web 同步處理的 Web 伺服器時，使用驗證模式。 值為**1**表示 Windows 驗證，並針對**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
-|**主機名稱**|**nvarchar(128)**|指定的值是多載[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)參數化資料列篩選的 WHERE 子句中使用此函式時。|  
+|**hostname**|**nvarchar(128)**|指定的值是多載[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)參數化資料列篩選的 WHERE 子句中使用此函式時。|  
 |**job_login**|**nvarchar(512)**|是 Windows 帳戶在其下執行合併代理程式，這傳回的格式如下*網域*\\*username*。|  
 |**job_password**|**sysname**|基於安全性理由，值為"**\*\*\*\*\*\*\*\*\*\***」 是一律傳回。|  
   

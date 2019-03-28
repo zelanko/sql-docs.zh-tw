@@ -11,12 +11,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 46d4018e125633319ed6d235873f56720fbe6bc2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404267"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534680"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>第 6 課：在 Windows Azure 中將資料庫從內部部署來源電腦移轉至目的地電腦
   這一課假設您已有另一部 SQL Server，它可能位於 Windows Azure 中的另一部內部部署電腦或虛擬機器中。 如需如何在 Windows Azure 中建立 SQL Server 虛擬機器的詳細資訊，請參閱[佈建在 Windows Azure 上的 SQL Server 虛擬機器](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)。 在 Windows Azure 中佈建 SQL Server 虛擬機器之後，請確定您可以透過另一部電腦上的 SQL Server Management Studio 連接到這個虛擬機器中的 SQL Server 執行個體。  
@@ -53,7 +53,7 @@ ms.locfileid: "52404267"
   
         3.  將下列範例複製並貼入查詢視窗中，並視需要修改。 下列陳述式會建立 SQL Server 認證來儲存您的儲存體容器的共用存取憑證。  
   
-            ```tsql  
+            ```sql  
   
             USE master   
             GO   
@@ -66,13 +66,13 @@ ms.locfileid: "52404267"
   
         4.  若要查看所有可用的認證，可以在查詢視窗中執行下列陳述式：  
   
-            ```tsql  
+            ```sql  
             SELECT * from sys.credentials   
             ```  
   
         5.  連接到目的地伺服器時，開啟查詢視窗，並執行：  
   
-            ```tsql  
+            ```sql  
   
             -- Create a master key and a server certificate   
             USE master   
@@ -94,7 +94,7 @@ ms.locfileid: "52404267"
   
     2.  然後使用 FOR ATTACH 選項建立資料庫，其中資料和記錄檔會指向 Windows Azure 儲存體中現有的檔案。 在查詢視窗中，執行下列陳述式：  
   
-        ```tsql  
+        ```sql  
   
         --Create a database on the destination server   
         CREATE DATABASE TestDB1onDest   
@@ -113,7 +113,7 @@ ms.locfileid: "52404267"
   
     4.  接著在查詢視窗中執行下列陳述式：  
   
-        ```tsql  
+        ```sql  
   
         USE TestDB1onDest   
         SELECT * FROM Table1;   

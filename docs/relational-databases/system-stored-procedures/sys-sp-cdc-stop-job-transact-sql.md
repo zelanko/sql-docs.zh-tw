@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_stop_job (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e39a456e9d6c6479f6dab95270dcbd2d549c986
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 0d682c839b8fa51ac8671d190e9fbb5ab322aa6b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589152"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535510"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [[  **@job_type=** ] **'**_job_type&lt_']  
- 要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 預設值是**擷取**。 有效輸入如下**擷取**並**清除**。  
+`[ [ @job_type = ] 'job_type_' ]` 要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 預設值是**擷取**。 有效輸入如下**擷取**並**清除**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -68,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.cdc_jobs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_start_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

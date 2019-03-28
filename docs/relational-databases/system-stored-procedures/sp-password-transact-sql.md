@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644676"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534710"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@old=** ] **'***old_password***'**  
- 這是舊密碼。 *old_password*已**sysname**，預設值是 NULL。  
+`[ @old = ] 'old_password'` 這是舊的密碼。 *old_password*已**sysname**，預設值是 NULL。  
   
- [  **@new=** ] **'***new_password***'**  
- 這是新密碼。 *new_password*已**sysname**，沒有預設值。 *old_password*必須指定是否沒有使用具名的參數。  
+`[ @new = ] 'new_password'` 這是新的密碼。 *new_password*已**sysname**，沒有預設值。 *old_password*必須指定是否沒有使用具名的參數。  
   
 > [!IMPORTANT]  
 >  請勿使用 NULL 密碼。 請使用增強式密碼。 如需詳細資訊，請參閱 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
- [  **@loginame=** ] **'***登入***'**  
- 這是受到密碼變更影響的登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須已經存在，而且可以只指定的成員**sysadmin**或是**securityadmin**固定伺服器角色。  
+`[ @loginame = ] 'login'` 是受到密碼變更的登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須已經存在，而且可以只指定的成員**sysadmin**或是**securityadmin**固定伺服器角色。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

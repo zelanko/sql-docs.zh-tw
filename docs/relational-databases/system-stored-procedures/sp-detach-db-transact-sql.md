@@ -1,5 +1,5 @@
 ---
-title: sp_detach_db & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_detach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201907"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538220"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@dbname =** ] **'***database_name***'**  
- 這是要卸離的資料庫名稱。 *database_name*已**sysname**值，預設值是 NULL。  
+`[ @dbname = ] 'database_name'` 是要卸離資料庫的名稱。 *database_name*已**sysname**值，預設值是 NULL。  
   
- [ **@skipchecks =** ] **'***skipchecks***'**  
- 指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*已**nvarchar(10**值，預設值是 NULL。 若要跳過更新統計資料，請指定 **，則為 true**。 若要明確地執行 UPDATE STATISTICS，指定**false**。  
+`[ @skipchecks = ] 'skipchecks'` 指定是否要跳過或執行 UPDATE STATISTIC。 *skipchecks*已**nvarchar(10**值，預設值是 NULL。 若要跳過更新統計資料，請指定 **，則為 true**。 若要明確地執行 UPDATE STATISTICS，指定**false**。  
   
  根據預設，系統會執行 UPDATE STATISTICS 來更新資料表和索引之資料的相關資訊。 對於要移至唯讀媒體的資料庫而言，執行 UPDATE STATISTICS 很有用。  
   
- [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- 指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*已**nvarchar(10**值，預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料已卸除，除非資料庫為唯讀。 如果是 NULL 或 **，則為 true**，全文檢索相關中繼資料會保留。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 指定全文檢索索引相關聯的檔案與要卸離的資料庫不會捨棄在資料庫卸離作業。 *KeepFulltextIndexFile*已**nvarchar(10**值，預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的所有全文檢索索引檔案和全文檢索索引的中繼資料已卸除，除非資料庫為唯讀。 如果是 NULL 或 **，則為 true**，全文檢索相關中繼資料會保留。  
   
 > [!IMPORTANT]
 >  **@keepfulltextindexfile**的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  

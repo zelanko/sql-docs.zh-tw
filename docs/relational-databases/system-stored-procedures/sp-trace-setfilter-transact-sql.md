@@ -18,12 +18,12 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758616"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535750"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +47,26 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@traceid=** ] *trace_id*  
- 這是設定篩選的追蹤識別碼。 *trace_id*已**int**，沒有預設值。 使用者會利用這*trace_id*值來識別、 修改和控制追蹤。  
+`[ @traceid = ] trace_id` 是設定篩選的追蹤識別碼。 *trace_id*已**int**，沒有預設值。 使用者會利用這*trace_id*值來識別、 修改和控制追蹤。  
   
- [ **@columnid=** ] *column_id*  
- 這是套用篩選的資料行識別碼。 *column_id*已**int**，沒有預設值。 如果*column_id*是 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]清除所有篩選器指定的追蹤。  
+`[ @columnid = ] column_id` 是套用篩選的資料行的識別碼。 *column_id*已**int**，沒有預設值。 如果*column_id*是 NULL，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]清除所有篩選器指定的追蹤。  
   
- [ **@logical_operator** = ] *logical_operator*  
- 指定是否 AND (**0**) 或 OR (**1**) 運算子會套用。 *logical_operator*已**int**，沒有預設值。  
+`[ @logical_operator = ] logical_operator` 指定是否 AND (**0**) 或 OR (**1**) 運算子會套用。 *logical_operator*已**int**，沒有預設值。  
   
- [ **@comparison_operator=** ] *comparison_operator*  
- 指定要進行的比較類型。 *comparison_operator*已**int**，沒有預設值。 這份資料表包含比較運算子及其代表值。  
+`[ @comparison_operator = ] comparison_operator` 指定要進行的比較類型。 *comparison_operator*已**int**，沒有預設值。 這份資料表包含比較運算子及其代表值。  
   
 |值|比較運算子|  
 |-----------|-------------------------|  
 |**0**|= (等於)|  
-|**1**|<> (不等於)|  
-|**2**|> (大於)|  
-|**3**|< (小於)|  
-|**4**|>= (大於或等於)|  
-|**5**|<= (小於或等於)|  
+|**1**|<> （不等於）|  
+|**2**|> （大於）|  
+|**3**|< （小於）|  
+|**4**|> = (大於或等於)|  
+|**5**|< = （小於或等於）|  
 |**6**|LIKE|  
 |**7**|不相似|  
   
- [  **@value=** ]*值*  
- 指定要篩選的值。 資料類型*值*必須符合要篩選的資料行的資料類型。 例如，如果物件識別碼資料行上設定篩選**int**資料類型*值*必須是**int**。如果*值*是**nvarchar**或是**varbinary**，它可以有最大長度為 8000。  
+`[ @value = ] value` 指定要篩選的值。 資料類型*值*必須符合要篩選的資料行的資料類型。 例如，如果物件識別碼資料行上設定篩選**int**資料類型*值*必須是**int**。如果*值*是**nvarchar**或是**varbinary**，它可以有最大長度為 8000。  
   
  當比較運算子是 LIKE 或 NOT LIKE 時，邏輯運算子可以併入 "%" 或 LIKE 運算所適用的其他篩選。  
   

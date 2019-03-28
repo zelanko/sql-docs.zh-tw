@@ -10,12 +10,12 @@ ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ea148b3a17f11ce0993beff82dfb38701af251f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075228"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535060"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>在原生編譯預存程序中使用 Try..Catch
   您可以在原生編譯預存程序內使用 try..catch 區塊。 以下為支援的結構：  
@@ -32,7 +32,7 @@ ms.locfileid: "48075228"
   
 -   ERROR_STATE  
   
-```tsql  
+```sql  
 CREATE PROCEDURE test_try_catch  
 with native_compilation, schemabinding, execute as owner   
 as  

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e56bfe08d9279408cc7bdbc4b57a9719a04946fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857050"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536680"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id=** ] *job_id*  
- 這是要刪除的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 這是要刪除之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 這是要刪除的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 是要刪除之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定; 不能同時指定這兩者。  
   
- [ **@originating_server=** ] **'***server***'**  
- 供內部使用。  
+`[ @originating_server = ] 'server'` 供內部使用。  
   
- [  **@delete_history=** ] *delete_history*  
- 指定是否刪除作業的記錄。 *delete_history*已**位元**，預設值是**1**。 當*delete_history*是**1**，刪除作業的作業記錄。 當*delete_history*是**0**，不會刪除作業記錄。  
+`[ @delete_history = ] delete_history` 指定是否要刪除作業的記錄。 *delete_history*已**位元**，預設值是**1**。 當*delete_history*是**1**，刪除作業的作業記錄。 當*delete_history*是**0**，不會刪除作業記錄。  
   
  請注意，當刪除作業並不會刪除歷程記錄時，作業的歷程記錄資訊不會顯示於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式圖形化使用者介面工作歷程記錄，但資訊仍存留在**sysjobhistory**資料表中**msdb**資料庫。  
   
- [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
- 指定當附加至這項作業的排程並未附加至任何其他作業時，是否刪除這些排程。 *delete_unused_schedule*已**位元**，預設值是**1**。 當*delete_unused_schedule*是**1**，如果沒有其他作業參考排程，會刪除附加至這項作業的排程。 當*delete_unused_schedule*是**0**，不會刪除排程。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否刪除排程附加至這個作業不會附加至任何其他作業。 *delete_unused_schedule*已**位元**，預設值是**1**。 當*delete_unused_schedule*是**1**，如果沒有其他作業參考排程，會刪除附加至這項作業的排程。 當*delete_unused_schedule*是**0**，不會刪除排程。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -105,8 +100,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14357c7700980a1e3cc241d2e6b300e830aa4319
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818890"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535890"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +38,23 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@optname =**] **'***option_name***'**  
- 這是您要查詢的複寫選項名稱。 *option_name*已**sysname**，預設值是 NULL。  
+`[ @optname = ] 'option_name'` 是要查詢的複寫選項名稱。 *option_name*已**sysname**，預設值是 NULL。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**交易式**|如果是啟用異動複寫，則傳回結果集。|  
-|**合併式**|如果是啟用合併式複寫，則傳回結果集。|  
+|**transactional**|如果是啟用異動複寫，則傳回結果集。|  
+|**merge**|如果是啟用合併式複寫，則傳回結果集。|  
 |NULL (預設值)|不會傳回結果集。|  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|複寫選項的名稱，它可以是下列值之一：<br /><br /> **交易式**<br /><br /> **合併式**|  
+|**optname**|**sysname**|複寫選項的名稱，它可以是下列值之一：<br /><br /> **transactional**<br /><br /> **merge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**即**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**修訂**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>傳回碼值  

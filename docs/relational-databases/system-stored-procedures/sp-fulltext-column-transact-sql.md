@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0173c89273d208824bd945fa7c073ddd7940067e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782f480ad0ae9f2342180ae1f2a44e32c44b9022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615004"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537262"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,31 +48,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@tabname=** ] **'***qualified_table_name***'**  
- 這是一或兩部分的資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name&lt*已**nvarchar(517)**，沒有預設值。  
+`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name&lt*已**nvarchar(517)**，沒有預設值。  
   
- [ **@colname=** ] **'***column_name***'**  
- 中的資料行名稱*qualified_table_name&lt*。 這個資料行必須是 character **varbinary （max)** 或是**映像**資料行，不能是計算資料行。 *column_name*已**sysname**，沒有預設值。  
+`[ @colname = ] 'column_name'` 中的資料行名稱*qualified_table_name&lt*。 這個資料行必須是 character **varbinary （max)** 或是**映像**資料行，不能是計算資料行。 *column_name*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立全文檢索索引中的資料行所儲存之文字資料**varbinary （max)** 或是**映像**資料型別。 影像和圖片沒有索引。  
   
- [  **@action=** ] **'***動作***'**  
- 這是要執行的動作。 *動作*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
+`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**add**|新增*column_name*的*qualified_table_name&lt*資料表的非使用中全文檢索索引。 這個動作會啟用全文檢索索引的資料行。|  
-|**卸除**|移除*column_name*的*qualified_table_name&lt*從資料表的非使用中全文檢索索引。|  
+|**drop**|移除*column_name*的*qualified_table_name&lt*從資料表的非使用中全文檢索索引。|  
   
- [ **@language=** ] **'***language_term***'**  
- 這是資料行所儲存之資料的語言。 如需清單，包含的語言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 < [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
+`[ @language = ] 'language_term'` 是資料行所儲存之資料的語言。 如需清單，包含的語言[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 < [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  當資料行包含的資料有多種語言或不受支援的語言時，請使用「中性」語言。 [預設全文檢索語言] 組態選項指定這個預設值。  
   
- [ **@type_colname =** ] **'***type_column_name***'**  
- 中的資料行名稱*qualified_table_name&lt*之資料行文件類型的*column_name*。 此資料行必須是**char**， **nchar**， **varchar**，或**nvarchar**。 它時才會使用的資料類型*column_name*別的**varbinary （max)** 或是**映像**。 *type_column_name*已**sysname**，沒有預設值。  
+`[ @type_colname = ] 'type_column_name'` 中的資料行名稱*qualified_table_name&lt*之資料行文件類型的*column_name*。 此資料行必須是**char**， **nchar**， **varchar**，或**nvarchar**。 它時才會使用的資料類型*column_name*別的**varbinary （max)** 或是**映像**。 *type_column_name*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -120,10 +115,10 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
   
 ## <a name="see-also"></a>另請參閱  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [遇到 sp_help_fulltext_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
- [遇到 sp_help_fulltext_columns_cursor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
- [遇到 sp_help_fulltext_tables &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [遇到 sp_help_fulltext_tables_cursor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文檢索搜尋和語意搜尋預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

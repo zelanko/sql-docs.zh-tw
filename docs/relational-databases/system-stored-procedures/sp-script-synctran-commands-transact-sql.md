@@ -1,5 +1,5 @@
 ---
-title: sp_script_synctran_commands (TRANSACT-SQL) |Microsoft Docs
+title: sp_script_synctran_commands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4956a449c0b972fffba462a907e899791fadfa5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a9ee35eb4c5d67ff50f4f08c1cfa29596e27aec2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791400"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536172"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication** = ] **'***publication***'**  
- 這是要編寫指令碼的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是要編寫指令碼的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@article** =] **'***文章***'**  
- 這是要編寫指令碼的發行項名稱。 *發行項*已**sysname**，預設值是**所有**，以指定的所有發行項會編寫指令碼。  
+`[ @article = ] 'article'` 是要編寫指令碼的發行項的名稱。 *發行項*已**sysname**，預設值是**所有**，以指定的所有發行項會編寫指令碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -60,8 +58,8 @@ sp_script_synctran_commands [@publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_script_synctran_commands**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addsynctriggers &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
- [sp_addqueued_artinfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
+ [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

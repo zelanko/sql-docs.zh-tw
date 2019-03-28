@@ -18,12 +18,12 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c02660752e2b461a24eed6df8aa31416b5c4bfd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856976"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538170"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@server_name =**] **'***server***'**  
- 要重新同步處理的伺服器名稱。 *server* 是 **sysname**，沒有預設值。 如果**所有**指定，則所有目標伺服器會重新同步都處理。  
+`[ @server_name = ] 'server'` 若要重新同步處理伺服器的名稱。 *server* 是 **sysname**，沒有預設值。 如果**所有**指定，則所有目標伺服器會重新同步都處理。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -69,8 +68,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_downloadlist &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [sp_post_msx_operation &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
+ [sp_help_downloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
+ [sp_post_msx_operation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

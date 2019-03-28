@@ -16,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812030"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536700"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@dbname=**] **'***dbname***'**  
- 這是資料庫的名稱。 *dbname*已**sysname**，預設值是**%**。 如果**%**，則結果集包含在 「 發行者 」 的所有資料庫，否則為指定的資料庫上的唯一資訊會傳回。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
+`[ @dbname = ] 'dbname'` 是資料庫的名稱。 *dbname*已**sysname**，預設值是**%**。 如果**%**，則結果集包含在 「 發行者 」 的所有資料庫，否則為指定的資料庫上的唯一資訊會傳回。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
   
- [  **@type=**] **'***型別***'**  
- 限制結果集包含只有在其上的資料庫指定的複寫選項*型別*已啟用值。 *型別*已**sysname**，而且可以是下列值之一。  
+`[ @type = ] 'type'` 限制結果集包含只有在其上的資料庫指定的複寫選項*型別*已啟用值。 *型別*已**sysname**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**發行**|允許異動複寫。|  
+|**publish**|允許異動複寫。|  
 |**合併式發行**|允許合併式複寫。|  
 |**允許的複寫**（預設值）|允許交易式或合併式複寫。|  
   
- [  **@reserved=** ]*保留*  
- 指定是否傳回現有發行集和訂閱的資訊。 *保留*已**元**，預設值為 0。 如果**1**，結果集會包含有關所指定的資料庫是否有任何現有的發行集或訂用帳戶。  
+`[ @reserved = ] reserved` 指定是否傳回現有發行集和訂閱的資訊。 *保留*已**元**，預設值為 0。 如果**1**，結果集會包含有關所指定的資料庫是否有任何現有的發行集或訂用帳戶。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -78,7 +75,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  成員**sysadmin**固定的伺服器角色可以執行**sp_helpreplicationdboption**的任何資料庫。 成員**db_owner**固定的資料庫角色可以執行**sp_helpreplicationdboption**該資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_replicationdboption &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

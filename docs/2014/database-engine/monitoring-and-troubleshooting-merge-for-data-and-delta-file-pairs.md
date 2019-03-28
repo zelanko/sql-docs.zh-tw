@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5febee69483b5f1a2e8aa5b7b48fdde0a7ada2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075278"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537710"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>對資料檔案和差異檔案組的合併進行監視和疑難排解
   記憶體中 OLTP 會使用合併原則自動合併相鄰資料及差異檔案組。 您無法停用合併活動。  
@@ -31,7 +31,7 @@ ms.locfileid: "48075278"
   
  使用以下查詢擷取有關資料及差異檔案的資訊。  
   
-```tsql  
+```sql  
 select checkpoint_file_id, file_type_desc, internal_storage_slot, file_size_in_bytes, file_size_used_in_bytes,   
 inserted_row_count, deleted_row_count, lower_bound_tsn, upper_bound_tsn   
 from sys.dm_db_xtp_checkpoint_files  
@@ -41,7 +41,7 @@ order by file_type_desc, upper_bound_tsn
   
  假設您發現三個未合併的資料檔案。 您可以使用第一個資料檔案的 `lower_bound_tsn` 值和最後一個資料檔案的 `upper_bound_tsn` 以發出下列命令：  
   
-```tsql  
+```sql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  
 ```  
   

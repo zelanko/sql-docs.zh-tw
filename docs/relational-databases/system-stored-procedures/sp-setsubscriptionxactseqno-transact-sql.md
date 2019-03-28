@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817860"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534650"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,24 +44,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=** ] **'***發行者***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 針對非 SQL Server 發行者， *publisher_db*是散發資料庫的名稱。  
+`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 針對非 SQL Server 發行者， *publisher_db*是散發資料庫的名稱。  
   
- [  **@publication=** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。 當一個以上的發行集共用散發代理程式時，您必須指定 ALL 值*發行集*。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。 當一個以上的發行集共用散發代理程式時，您必須指定 ALL 值*發行集*。  
   
- [  **@xact_seqno=** ] *xact_seqno*  
- 這是訂閱者端所要套用的散發者端之下一項交易的 LSN。 *xact_seqno*已**varbinary(16)**，沒有預設值。  
+`[ @xact_seqno = ] xact_seqno` 是套用在訂閱者端的散發者端之下一項交易的 LSN。 *xact_seqno*已**varbinary(16)**，沒有預設值。  
   
 ## <a name="result-set"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**原始的 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的原始 LSN。|  
-|**已更新的 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的更新 LSN。|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的原始 LSN。|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的更新 LSN。|  
 |**訂用帳戶資料流計數**|**int**|在上一次同步處理期間所用的訂閱資料流數目。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

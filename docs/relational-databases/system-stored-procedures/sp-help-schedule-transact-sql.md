@@ -1,5 +1,5 @@
 ---
-title: sp_help_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62a8246c6d694ae002a615e803c520127ab595c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630178"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535430"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@schedule_id =** ] *id*  
- 這是要列出的排程識別碼。 *schedule_name&lt*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
+`[ @schedule_id = ] id` 要列出的排程識別碼。 *schedule_name&lt*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 這是要列出的排程名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
+`[ @schedule_name = ] 'schedule_name'` 要列出的排程名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
   
- [ **@attached_schedules_only** =] *attached_schedules_only* ]  
- 指定是否只顯示作業所連接的排程。 *attached_schedules_only*已**位元**，預設值是**0**。 當*attached_schedules_only*是**0**，會顯示所有排程。 當*attached_schedules_only*是**1**，結果集包含附加至作業的排程。  
+`[ @attached_schedules_only = ] attached_schedules_only ]` 指定是否只顯示排程作業所連接到。 *attached_schedules_only*已**位元**，預設值是**0**。 當*attached_schedules_only*是**0**，會顯示所有排程。 當*attached_schedules_only*是**1**，結果集包含附加至作業的排程。  
   
- [ **@include_description** =] *include_description*  
- 指定是否在結果集中併入說明。 *include_description*已**位元**，預設值是**0**。 當*include_description*是**0**，則*schedule_description*結果集的資料行包含預留位置。 當*include_description*是**1**，排程的描述包含在結果集中。  
+`[ @include_description = ] include_description` 指定是否要在結果集中併入說明。 *include_description*已**位元**，預設值是**0**。 當*include_description*是**0**，則*schedule_description*結果集的資料行包含預留位置。 當*include_description*是**1**，排程的描述包含在結果集中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -124,9 +120,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

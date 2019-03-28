@@ -10,12 +10,12 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2abd6a00944e862644b1d62019c24677e6c95d51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124468"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538391"
 ---
 # <a name="migrating-triggers"></a>移轉觸發程序
   本主題討論 DDL 和 DML 觸發程序以及記憶體最佳化的資料表。  
@@ -40,7 +40,7 @@ ms.locfileid: "48124468"
   
  資料庫包含下列物件，編寫成 CREATE TABLE、CREATE TRIGGER 和 CREATE PROCEDURE 陳述式：  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null primary key,  
@@ -98,7 +98,7 @@ GO
   
  下列物件的功能等同於移轉之前的狀態：  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 1048576),  

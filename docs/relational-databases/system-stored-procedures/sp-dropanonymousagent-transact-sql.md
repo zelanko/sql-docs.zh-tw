@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dc5cc9c4d7bb7ca9b2d758e33142d140bf6fc6fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818980"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537880"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,9 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@subid=**] *sub_id*  
- 這是匿名訂閱的全域識別碼。 *sub_id*已**uniqueidentifier**，沒有預設值。 此識別碼可以擷取 「 訂閱者 」 使用**sp_helppullsubscription**。 中的值**subid**傳回的結果集的欄位是這個全域識別碼。  
+`[ @subid = ] sub_id` 是匿名訂閱的全域識別碼。 *sub_id*已**uniqueidentifier**，沒有預設值。 此識別碼可以擷取 「 訂閱者 」 使用**sp_helppullsubscription**。 中的值**subid**傳回的結果集的欄位是這個全域識別碼。  
   
- [  **@type=**]*類型*  
- 這是訂閱的類型。 *型別*已**int**，沒有預設值。 有效值**1**或是**2**。 指定**1**，如果快照式複寫或異動複寫使用 「 散發代理程式。 指定**2**，如果合併式複寫使用 「 合併代理程式。  
+`[ @type = ] type` 是訂用帳戶的類型。 *型別*已**int**，沒有預設值。 有效值**1**或是**2**。 指定**1**，如果快照式複寫或異動複寫使用 「 散發代理程式。 指定**2**，如果合併式複寫使用 「 合併代理程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_histogram (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c29562bbdaeff69084547c3505fc84def3a0c668
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663229"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534290"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@tabname =**] **'***tabname***'**  
- 這是已指定空間索引之資料表的限定或非限定名稱。  
+`[ @tabname = ] 'tabname'` 是已指定空間索引之資料表的完整或非完整名稱。  
   
  只有在指定限定資料表時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *tabname*已**sysname**，沒有預設值。  
   
- [  **@colname =** ] **'***colname***'**  
- 這是所指定之空間資料行的名稱。 *colname*已**sysname**，沒有預設值。  
+`[ @colname = ] 'colname'` 是指定之空間資料行的名稱。 *colname*已**sysname**，沒有預設值。  
   
- [  **@resolution =** ] **'***解析***'**  
- 這是週框方塊的解析度。 有效的值是從 10 到 5000。 *解析度*已**tinyint**，沒有預設值。  
+`[ @resolution = ] 'resolution'` 是週框方塊的解析度。 有效的值是從 10 到 5000。 *解析度*已**tinyint**，沒有預設值。  
   
- [  **@xmin =** ] **'***xmin***'**  
- 這是 X 最小值週框方塊屬性。 *xmin*已**float**，沒有預設值。  
+`[ @xmin = ] 'xmin'` 是 X 最小值週框方塊屬性。 *xmin*已**float**，沒有預設值。  
   
- [  **@ymin =** ] **'***ymin***'**  
- 這是 Y 最小值週框方塊屬性。 *ymin*已**float**，沒有預設值。  
+`[ @ymin = ] 'ymin'` 是 Y 最小值週框方塊屬性。 *ymin*已**float**，沒有預設值。  
   
- [  **@xmax =** ] **'***xmax***'**  
- 這是 X 最大值週框方塊屬性。 *xmax*已**float**，沒有預設值。  
+`[ @xmax = ] 'xmax'` 是 X 最大值週框方塊屬性。 *xmax*已**float**，沒有預設值。  
   
- [  **@ymax =** ] **'***ymax***'**  
- 這是 Y 最大值週框方塊屬性。 *ymax*已**float**，沒有預設值。  
+`[ @ymax = ] 'ymax'` 是 Y 最大值週框方塊屬性。 *ymax*已**float**，沒有預設值。  
   
- [  **@sample =** ] **'***範例***'**  
- 這是所用之資料表的百分比。 有效的值是從 0 到 100 之間。 *範例*已**float**。 預設值為 100。  
+`[ @sample = ] 'sample'` 為資料表所使用的百分比。 有效的值是從 0 到 100 之間。 *範例*已**float**。 預設值為 100。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  會傳回資料表值。 下列方格描述資料表的資料行內容。  
@@ -77,7 +69,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|代表每一個資料格的唯一識別碼，從 1 開始計算。|  
-|**資料格**|**幾何**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
+|**cell**|**幾何**|這是表示每個資料格的矩形多邊形。 資料格形狀與空間索引所使用的資料格形狀相同。|  
 |**row_count**|**bigint**|指出觸及或包含資料格之空間物件的數目。|  
   
 ## <a name="permissions"></a>Permissions  

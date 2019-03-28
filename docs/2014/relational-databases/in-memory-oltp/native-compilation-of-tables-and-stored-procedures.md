@@ -10,17 +10,17 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5d3a9786f2971abebd96624c5214f7717c450a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154718"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536670"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>資料表和預存程序的原生編譯
   記憶體中 OLTP 導入了原生編譯的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可原生編譯用來存取記憶體最佳化資料表的預存程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以透過原生方式編譯記憶體最佳化資料表。 與解譯的 (傳統) [!INCLUDE[tsql](../../includes/tsql-md.md)]相較之下，原生編譯可提供更快速的資料存取並且更有效率地執行查詢。 資料表和預存程序的原生編譯會產生 DLL。  
   
- 另外也支援記憶體最佳化資料表類型的原生編譯。 如需詳細資訊，請參閱 <<c0> [ 記憶體最佳化資料表變數](../../database-engine/memory-optimized-table-variables.md)。  
+ 另外也支援記憶體最佳化資料表類型的原生編譯。 如需詳細資訊，請參閱 [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)。  
   
  原生編譯是指將程式設計結構轉換成原生程式碼的程序，包含處理器指令，而不需再進一步編譯或解譯。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48154718"
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>維護記憶體中 OLTP DLL  
  下列查詢顯示目前載入伺服器記憶體中的所有資料表和預存程序 DLL：  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
   
  請考慮下列範例指令碼，該指令碼會建立資料庫和記憶體最佳化資料表：  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -84,7 +84,7 @@ go
   
  請考慮下列範例預存程序，它會在上一個範例的資料表 t1 中插入資料列：  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  

@@ -19,12 +19,12 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3556cc270d3ab28e3ad9d0ec1dc6a58737db31e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069968"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535700"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中將 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫還原至新位置，並選擇性地重新命名資料庫。 您可以將資料庫移至新目錄路徑，或是在相同的伺服器執行個體或不同的伺服器執行個體上建立資料庫的複本。  
@@ -98,7 +98,7 @@ ms.locfileid: "48069968"
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
-         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
+         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
   
          **注意** ：這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
   
@@ -159,10 +159,10 @@ ms.locfileid: "48069968"
     > [!NOTE]  
     >  如果您要將資料庫還原至不同的伺服器執行個體，可以使用原始資料庫名稱而非新名稱。  
   
-     *backup_device>* [ `,`...*n* ]  
+     *backup_device* [ `,`...*n* ]  
      指定一份逗號分隔清單，其中列出要從中還原資料庫備份的 1 到 64 個備份裝置。 您可以指定實體備份裝置，也可以指定對應的邏輯備份裝置 (如果已定義的話)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：  
   
-     {磁碟 |磁帶} `=`*實體備份裝置名稱*  
+     { DISK | TAPE } `=`*physical_backup_device_name*  
   
      如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "48069968"
   
     |選項|描述|  
     |------------|-----------------|  
-    |*logical_file_name_in_backup*|指定備份組中資料或記錄檔的邏輯名稱。 備份組中資料或記錄檔的邏輯檔案名稱，會與當初建立備份組時資料庫中的邏輯名稱相符。<br /><br /> 注意：若要取得備份組中的邏輯檔清單，請使用 [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)。|  
+    |*logical_file_name_in_backup*|指定備份組中資料或記錄檔的邏輯名稱。 備份組中資料或記錄檔的邏輯檔案名稱，會與當初建立備份組時資料庫中的邏輯名稱相符。<br /><br /> 注意:若要取得備份組中的邏輯檔清單，請使用 [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)。|  
     |*operating_system_file_name*|針對 *logical_file_name_in_backup*所指定的檔案指定新的位置。 檔案將還原至這個位置。<br /><br /> (選擇性) *operating_system_file_name* 會針對還原的檔案指定新的檔案名稱。 如果您要在相同的伺服器執行個體上建立現有資料庫的副本，這就是必要選項。|  
     |*n*|這是預留位置，表示您可以指定其他 MOVE 陳述式。|  
   
@@ -191,9 +191,9 @@ ms.locfileid: "48069968"
  此範例會透過還原 `MyAdvWorks` 範例資料庫的備份 (其中包括兩個檔案： [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] _Data 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log)，建立名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的新資料庫。 這個資料庫會使用簡單復原模式。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫已經存在伺服器執行個體上，因此備份中的檔案都必須還原至新的位置。 RESTORE FILELISTONLY 陳述式是用來決定資料庫中所要還原的檔案數目及名稱。 此資料庫備份是備份裝置上的第一個備份組。  
   
 > [!NOTE]  
->  備份和還原交易記錄 (包括時間點還原) 的範例會使用從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立的 `MyAdvWorks_FullRM` 資料庫，就如同以下 `MyAdvWorks` 範例。 不過，您必須使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將產生的 `MyAdvWorks_FullRM` 資料庫變更為使用完整復原模式：ALTER DATABASE <database_name> SET RECOVERY FULL。  
+>  備份和還原交易記錄 (包括時間點還原) 的範例會使用從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立的 `MyAdvWorks_FullRM` 資料庫，就如同以下 `MyAdvWorks` 範例。 不過，您必須使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將產生的 `MyAdvWorks_FullRM` 資料庫變更為使用完整復原模式：ALTER DATABASE <資料庫名稱> SET RECOVERY FULL。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

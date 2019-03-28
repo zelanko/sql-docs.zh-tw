@@ -16,12 +16,12 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fde5daf72455af7c4c46c9ef19e4975a3f87a2dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802230"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537160"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +39,16 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication**=] **'***發行集***'**  
- 這是針對它而傳送狀態要求的點對點拓撲中的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是針對它而傳送狀態要求的對等項目-拓撲中的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@description**=] **'***描述***'**  
- 值，可用來識別個別狀態要求，可讓您篩選傳回的回應以使用者定義呼叫時所提供的資訊[b &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*已**nvarchar(4000)**，預設值是**%**。 依預設，它會傳回所有的發行集狀態要求。 這個參數用來傳回只有狀態的要求中提供之值的描述*描述*，其中使用比對字元字串[像&#40;-&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
+`[ @description = ] 'description'` 值，可用來識別個別狀態要求，可讓您篩選傳回的回應以使用者定義呼叫時所提供的資訊[b &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*已**nvarchar(4000)**，預設值是**%**。 依預設，它會傳回所有的發行集狀態要求。 這個參數用來傳回只有狀態的要求中提供之值的描述*描述*，其中使用比對字元字串[像&#40;-&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|識別要求。|  
-|**發行集**|**sysname**|發行集名稱，狀態要求就是針對它而傳送。|  
+|**publication**|**sysname**|發行集名稱，狀態要求就是針對它而傳送。|  
 |**sent_date**|**datetime**|傳送狀態要求的日期和時間。|  
 |**description**|**nvarchar(4000)**|使用者自訂的資訊，可以用來識別個別狀態要求。|  
   
@@ -66,7 +64,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helppeerrequests**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_deletepeerrequesthistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerresponses &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

@@ -10,18 +10,18 @@ ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79d986ed5f08c120113bd31ef9bb4f613cc56b66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154968"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535540"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>疑難排解記憶體最佳化雜湊索引的常見效能問題
   本主題將焦點放在疑難排解以及解決與雜湊索引相關的常見問題。  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>搜尋需要雜湊索引鍵資料行的子集  
- **問題：** 雜湊索引需要所有的值索引鍵資料行，以計算雜湊值和雜湊表中找到對應的資料列。 因此，如果查詢只包含 WHERE 子句中索引鍵子集的等號比較述詞，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法使用索引搜尋找出對應 WHERE 子句中述詞的資料列。  
+ **問題：** 雜湊索引需要所有的索引鍵資料行的值，以計算雜湊值，並在雜湊表中找出對應的資料列。 因此，如果查詢只包含 WHERE 子句中索引鍵子集的等號比較述詞，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法使用索引搜尋找出對應 WHERE 子句中述詞的資料列。  
   
  相反地，只要索引鍵資料行是索引中的前置資料行，像是磁碟非叢集索引和記憶體最佳化非叢集索引這類已排序索引就可支援在這些資料行的子集上進行索引搜尋。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48154968"
   
  請考慮下列資料表和查詢：  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[od]  
 (  
      o_id INT NOT NULL,  
@@ -56,7 +56,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
 -   加入與查詢的 WHERE 子句中資料行相符的新雜湊索引。 在此範例中，產生的資料表定義如下：  
   
-    ```tsql  
+    ```sql  
     CREATE TABLE dbo.od  
      ( o_id INT NOT NULL,  
      od_id INT NOT NULL,  
@@ -70,7 +70,7 @@ WITH (MEMORY_OPTIMIZED = ON)
      ) WITH (MEMORY_OPTIMIZED=ON)  
     ```  
   
- 請注意，如果某個索引鍵值具有大量重複的資料列，則記憶體最佳化雜湊索引不會以最佳方式執行：在範例中，如果資料行 o_id 的唯一值數目比資料表中資料列的數目少許多，則在 (o_id) 上加入索引並不是最好的方式，較佳的解決方法是將索引 PK_od 的類型從雜湊變更為非叢集。 如需詳細資訊，請參閱 <<c0> [ 判斷雜湊索引的正確貯體計數](../relational-databases/indexes/indexes.md)。  
+ 請注意，如果某個索引鍵值具有大量重複的資料列，則記憶體最佳化雜湊索引不會以最佳方式執行：在範例中，如果資料行 o_id 的唯一值數目比資料表中資料列的數目少許多，則在 (o_id) 上加入索引並不是最好的方式，較佳的解決方法是將索引 PK_od 的類型從雜湊變更為非叢集。 如需詳細資訊，請參閱＜ [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表上的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_account_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_add_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a388fb39082ec936b473afd7fc96ff99e7d92350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b41b0c0ae805923a10d0ee9c4fd066b1202fa94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830016"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537890"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,44 +52,31 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@account_name** = ] **'***account_name***'**  
- 這是要加入的帳戶名稱。 *account_name*已**sysname**，沒有預設值。  
+`[ @account_name = ] 'account_name'` 要加入的帳戶名稱。 *account_name*已**sysname**，沒有預設值。  
   
- [ **@email_address** = ] **'***email_address***'**  
- 傳送訊息的來源電子郵件地址。 這個地址必須是網際網路電子郵件地址。 *email_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。 例如，帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可能會傳送電子郵件地址**SqlAgent@Adventure-Works.com**。  
+`[ @email_address = ] 'email_address'` 將訊息從傳送電子郵件地址。 這個地址必須是網際網路電子郵件地址。 *email_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。 例如，帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可能會傳送電子郵件地址**SqlAgent@Adventure-Works.com**。  
   
- [ **@display_name** =] **'***display_name***'**  
- 這個帳戶發出的電子郵件訊息所用的顯示名稱。 *display_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 例如，帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可能會顯示名稱**SQL Server Agent Automated Mailer**於電子郵件訊息。  
+`[ @display_name = ] 'display_name'` 若要使用此帳戶的電子郵件訊息上的顯示名稱。 *display_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 例如，帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可能會顯示名稱**SQL Server Agent Automated Mailer**於電子郵件訊息。  
   
- [ **@replyto_address** =] **'***replyto_address***'**  
- 這是在回應此帳戶的訊息時，回應的傳送地址。 *replyto_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 例如，回覆給帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可能會傳送給資料庫管理員**danw@Adventure-Works.com**。  
+`[ @replyto_address = ] 'replyto_address'` 此帳戶從回應訊息傳送至的地址。 *replyto_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 例如，回覆給帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式可能會傳送給資料庫管理員**danw@Adventure-Works.com**。  
   
- [ **@description** = ] **'***description***'**  
- 這是帳戶的描述。 *描述*已**nvarchar(256)**，預設值是 NULL。  
+`[ @description = ] 'description'` 為帳戶的描述。 *描述*已**nvarchar(256)**，預設值是 NULL。  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
- 這個帳戶要用的 SMTP 郵件伺服器的名稱或 IP 位址。 執行的電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須能夠解析*server_name*為 IP 位址。 *server_name*已**sysname**，沒有預設值。  
+`[ @mailserver_name = ] 'server_name'` 名稱或 IP 位址的 SMTP 郵件伺服器，以使用此帳戶。 執行的電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須能夠解析*server_name*為 IP 位址。 *server_name*已**sysname**，沒有預設值。  
   
- [ **@mailserver_type** = ] '*server_type*'  
- 電子郵件伺服器的類型。 *server_type*已**sysname**，預設值是 **'SMTP'**...  
+`[ @mailserver_type = ] 'server_type'` 電子郵件伺服器類型。 *server_type*已**sysname**，預設值是 **'SMTP'**...  
   
- [ **@port** = ] *port_number*  
- 電子郵件伺服器的通訊埠編號。 *port_number*已**int**，預設值是 25。  
+`[ @port = ] port_number` 電子郵件伺服器連接埠號碼。 *port_number*已**int**，預設值是 25。  
   
- [ **@username** =] **'***username***'**  
- 用來登入電子郵件伺服器的使用者名稱。 *使用者名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 當這個參數是 NULL 時，Database Mail 不會在這個帳戶上使用驗證。 如果郵件伺服器不需要驗證，使用者名稱便使用 NULL。  
+`[ @username = ] 'username'` 要用來登入電子郵件伺服器的使用者名稱。 *使用者名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 當這個參數是 NULL 時，Database Mail 不會在這個帳戶上使用驗證。 如果郵件伺服器不需要驗證，使用者名稱便使用 NULL。  
   
- [ **@password** =] **'***密碼***'**  
- 用來登入電子郵件伺服器的密碼。 *密碼*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 除非指定了使用者名稱，否則，不需要提供密碼。  
+`[ @password = ] 'password'` 要用來登入電子郵件伺服器密碼。 *密碼*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 除非指定了使用者名稱，否則，不需要提供密碼。  
   
- [ **@use_default_credentials** =] use_default_credentials  
- 指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials** bit，預設值是 0。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 此參數為 0 時，Database Mail 傳送**@username**並**@password**參數如果有的話，否則會傳送不含**@username**並**@password**參數。  
+`[ @use_default_credentials = ] use_default_credentials` 指定是否要將郵件傳送至 SMTP 伺服器使用的認證[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 **use_default_credentials** bit，預設值是 0。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 此參數為 0 時，Database Mail 傳送**@username**並**@password**參數如果有的話，否則會傳送不含**@username**並**@password**參數。  
   
- [ **@enable_ssl** =] enable_ssl  
- 指定 Database Mail 是否使用安全通訊端層加密通訊。 **Enable_ssl** bit，預設值是 0。  
+`[ @enable_ssl = ] enable_ssl` 指定 Database Mail 是否加密使用安全通訊端層通訊。 **Enable_ssl** bit，預設值是 0。  
   
- [ **@account_id** =] *account_id*輸出  
- 傳回新帳戶的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。  
+`[ @account_id = ] account_id OUTPUT` 傳回新的帳戶的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -15,12 +15,12 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5586e7f4ff8ebdfbb7f2db44dc79155eca60b8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79ab28861fb4ad1eb3fb166e0cccb6b30ff89f86
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203678"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537380"
 ---
 # <a name="specify-whether-a-backup-or-restore-operation-continues-or-stops-after-encountering-an-error-sql-server"></a>指定在發生錯誤後備份或還原作業應該繼續還是停止 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，指定在 [!INCLUDE[tsql](../../includes/tsql-md.md)]發生錯誤後，備份或還原作業應該繼續還是停止。  
@@ -70,7 +70,7 @@ ms.locfileid: "48203678"
   
 3.  在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式中，指定 CONTINUE_AFTER_ERROR 選項以繼續，或指定 STOP_ON_ERROR 選項以停止。 預設行為是在發生錯誤後停止。 此範例指示備份作業儘管發生錯誤時仍繼續進行。  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -85,7 +85,7 @@ GO
   
 3.  在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式中，指定 CONTINUE_AFTER_ERROR 選項以繼續，或指定 STOP_ON_ERROR 選項以停止。 預設行為是在發生錯誤後停止。 此範例指示還原作業儘管發生錯誤時仍繼續進行。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

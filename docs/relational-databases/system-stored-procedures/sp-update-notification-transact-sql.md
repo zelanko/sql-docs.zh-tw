@@ -18,12 +18,12 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817539"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536027"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@alert_name =**] **'***警示***'**  
- 與此通知相關聯的警示名稱。 *警示*已**sysname**，沒有預設值。  
+`[ @alert_name = ] 'alert'` 此通知相關聯的警示名稱。 *警示*已**sysname**，沒有預設值。  
   
- [ **@operator_name =**]  **'***operator***'**  
- 發生警示時所要通知的操作員。 *運算子*已**sysname**，沒有預設值。  
+`[ @operator_name = ] 'operator'` 發生警示時通知操作員。 *運算子*已**sysname**，沒有預設值。  
   
- [  **@notification_method =**]*通知*  
- 用來通知操作員的方法。 *通知*已**tinyint**，沒有預設值，它可以是下列其中一個或多個這些值。  
+`[ @notification_method = ] notification` 通知操作員的方法。 *通知*已**tinyint**，沒有預設值，它可以是下列其中一個或多個這些值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -86,9 +83,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131238"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536818"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'**_發行集_**'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
- [  **@property =** ] **'**_屬性_**'**  
- 這是要變更的發行集屬性。 *屬性*已**nvarchar(255)**。  
+`[ @property = ] 'property'` 是要變更的發行集屬性。 *屬性*已**nvarchar(255)**。  
   
- [  **@value =** ] **'**_值_**'**  
- 這是新的屬性值。 *值*已**nvarchar(255)**，預設值是 NULL。  
+`[ @value = ] 'value'` 新的屬性值。 *值*已**nvarchar(255)**，預設值是 NULL。  
   
  下表描述可變更的發行集屬性及這些屬性值的限制。  
   
@@ -59,7 +56,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|不能建立給定發行集的匿名訂閱。 點對點發行集的這個項目不能變更。|  
 |**allow_initialize_from_backup**|**true**|訂閱者能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 這個屬性不能變更非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行集。|  
 ||**false**|訂閱者必須使用初始快照集。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
-|**h**|**true**|ALTER TABLE...SWITCH 陳述式可以針對已發行的資料庫來執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
+|**allow_partition_switch**|**true**|ALTER TABLE...SWITCH 陳述式可以針對已發行的資料庫來執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
 ||**false**|ALTER TABLE...SWITCH 陳述式無法對已發行的資料庫執行。|  
 |**allow_pull**|**true**|允許給定發行集的提取訂閱。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|不允許給定發行集的提取訂閱。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
@@ -79,9 +76,9 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**description**||描述發行集的選擇性項目。|  
 |**enabled_for_het_sub**|**true**|啟用發行集以支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 **enabled_for_het_sub**有發行集的訂閱時，無法變更。 您可能需要執行[複寫預存程序 & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)遵守下列需求，才能設定**enabled_for_het_sub**設為 true:<br /> - **allow_queued_tran**必須是**false**。<br /> - **allow_sync_tran**必須是**false**。<br /> 變更**enabled_for_het_sub**要 **，則為 true**可能會變更現有的發行集設定。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|發行集不支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
-|**enabled_for_internet**|**true**|啟用發行集的網際網路功能，以及可以利用檔案傳輸通訊協定 (FTP)，將快照集檔案傳送給訂閱者。 發行集的同步處理檔案會放在下列目錄：C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp。 *ftp_address*不能是 NULL。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
+|**enabled_for_internet**|**true**|啟用發行集的網際網路功能，以及可以利用檔案傳輸通訊協定 (FTP)，將快照集檔案傳送給訂閱者。 發行集的同步處理檔案會放在下列目錄：C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address*不能是 NULL。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|不啟用發行集的網際網路功能。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
-|**enabled_for_p2p**|**true**|發行集支援點對點複寫。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。<br /> 若要設定**enabled_for_p2p**要 **，則為 true**，適用下列限制：<br /> - **allow_anonymous**必須是**false**<br /> - **allow_dts**必須是**false**。<br /> - **allow_initialize_from_backup**必須是 **，則為 true**<br /> - **allow_queued_tran**必須是**false**。<br /> - **allow_sync_tran**必須是**false**。<br /> - **enabled_for_het_sub**必須是**false**。<br /> - **independent_agent**必須是 **，則為 true**。<br /> - **repl_freq**必須是**連續**。<br /> - **replicate_ddl**必須是**1**。|  
+|**enabled_for_p2p**|**true**|發行集支援點對點複寫。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。<br /> 若要設定**enabled_for_p2p**要 **，則為 true**，適用下列限制：<br /> - **allow_anonymous** must be **false**<br /> - **allow_dts**必須是**false**。<br /> - **allow_initialize_from_backup**必須是 **，則為 true**<br /> - **allow_queued_tran**必須是**false**。<br /> - **allow_sync_tran**必須是**false**。<br /> - **enabled_for_het_sub**必須是**false**。<br /> - **independent_agent**必須是 **，則為 true**。<br /> - **repl_freq**必須是**連續**。<br /> - **replicate_ddl**必須是**1**。|  
 ||**false**|發行集不支援點對點複寫。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**ftp_address**||發行集快照集檔案的 FTP 存取位置。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**ftp_login**||用來連接到 FTP 服務的使用者名稱，允許使用 ANONYMOUS 值。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
@@ -98,40 +95,38 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||指定在初始同步處理期間，套用所有其他複寫的物件指令碼和資料之前，散發代理程式所執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案的位置。|  
 |**publish_to_ActiveDirectory**|**true**|這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。|  
 ||**false**|從 Active Directory 中移除發行集資訊。|  
-|**queue_type**|**sql**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。 只有在沒有使用中的訂閱時，才能改變這個屬性。<br /><br /> 注意：已不再支援使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing。 指定的值是**msmq** for*值*會導致錯誤。|  
-|**repl_freq**|**連續**|發行所有記錄式交易的輸出。|  
-||**快照集**|只發行已排程的同步處理事件。|  
+|**queue_type**|**sql**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。 只有在沒有使用中的訂閱時，才能改變這個屬性。<br /><br /> 注意:已不再支援使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing。 指定的值是**msmq** for*值*會導致錯誤。|  
+|**repl_freq**|**continuous**|發行所有記錄式交易的輸出。|  
+||**snapshot**|只發行已排程的同步處理事件。|  
 |**replicate_ddl**|**1**|複寫在發行者端執行的資料定義語言 (DDL) 陳述式。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**0**|不複寫 DDL 陳述式。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。 使用點對點複寫時，不能停用結構描述變更的複寫。|  
 |**replicate_partition_switch**|**true**|ALTER TABLE...針對已發行的資料庫執行的 SWITCH 陳述式應該複寫到訂閱者。 這個選項才有效才*allow_partition_switch*設為 TRUE。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
 ||**false**|ALTER TABLE...SWITCH 陳述式應該不會複寫到訂閱者 」。|  
-|**保留期**||**int**表示的保留期限，以小時為單位，如訂用帳戶活動。 如果在保留期限內，訂閱不在使用中，就會移除它。|  
+|**retention**||**int**表示的保留期限，以小時為單位，如訂用帳戶活動。 如果在保留期限內，訂閱不在使用中，就會移除它。|  
 |**snapshot_in_defaultfolder**|**true**|快照集檔案儲存在預設快照集資料夾中。 如果*alt_snapshot_folder*同時指定，則快照集檔案會儲存在預設位置和替代位置。|  
 ||**false**|快照集檔案會儲存在所指定的替代位置*alt_snapshot_folder*。|  
-|**status**|**使用中**|當建立發行集時，訂閱者可以立即使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
-||**非使用中**|當建立發行集時，訂閱者無法使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
+|**status**|**active**|當建立發行集時，訂閱者可以立即使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
+||**inactive**|當建立發行集時，訂閱者無法使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
 |**sync_method**|**native**|當同步處理訂閱時，使用所有資料表的原生模式大量複製輸出。|  
 ||**character**|當同步處理訂閱時，使用所有資料表的字元模式大量複製輸出。|  
-||**並行**|使用所有資料表的原生模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
+||**concurrent**|使用所有資料表的原生模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 ||**concurrent_c**|使用所有資料表的字元模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 |**taskid**||這個屬性已被取代，不再受到支援。|  
 |**allow_drop**|**true**|可讓`DROP TABLE`DLL 支援發行項是交易式複寫的一部分。 支援的最低版本：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 或更新版本和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 或更新版本。 其他參考：[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|停用`DROP TABLE`DLL 支援屬於交易式複寫的發行項。 這是**預設**這個屬性的值。|
 |**NULL** （預設值）||傳回支援的值的清單*屬性*。|  
   
-[  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 認可這個預存程序所採取的動作可能使現有的快照集失效。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 認可這個預存程序所採取的動作可能會使現有的快照集。 *force_invalidate_snapshot*已**位元**，預設值是**0**。  
   - **0**指定發行項的變更不會使快照集失效。 如果預存程序偵測到變更需要新的快照集，就會發生錯誤，且不會進行任何變更。  
   - **1**指定發行項的變更可能使快照集失效。 如果有現有的訂閱需要新的快照集，這個值會提供要標示為已棄用之現有快照集的權限，此時會產生新的快照集。   
 請參閱＜備註＞一節，以了解在變更時需要產生新快照集的屬性。  
   
-[ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+[**@force_reinit_subscription =** ] *force_reinit_subscription*  
  認可這個預存程序所採取的動作可能需要重新初始化現有的訂閱。 *force_reinit_subscription*已**位元**預設值是**0**。  
   - **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
   - **1**指定發行項的變更會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
   
-[ **@publisher** =] **'**_發行者_**'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
   > [!NOTE]  
   >  *發行者*應該不在上變更發行項屬性時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  

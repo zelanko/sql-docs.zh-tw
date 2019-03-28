@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130738"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535550"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,31 +43,25 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'**_發行集_**'**  
- 這是發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 發行集必須已存在，且符合識別碼的規則。  
+`[ @publication = ] 'publication'` 這是發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 發行集必須已存在，且符合識別碼的規則。  
   
- [  **@subscriber=**] **'**_訂閱者_**'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
- [  **@subscriber_db=** ] **'**_subscriber_db_**'**  
- 這是訂閱資料庫的名稱。 *subscription_database*已**sysname**，預設值是 NULL。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscription_database*已**sysname**，預設值是 NULL。  
   
- [  **@subscription_type=** ] **'**_subscription_type_**'**  
- 這是訂閱的類型。 *subscription_type*已**nvarchar(15)**，而且可以是下列值之一。  
+`[ @subscription_type = ] 'subscription_type'` 是訂用帳戶的類型。 *subscription_type*已**nvarchar(15)**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**所有**|發送、提取和匿名訂閱|  
+|**all**|發送、提取和匿名訂閱|  
 |**匿名**|匿名訂閱。|  
-|**推播**|發送訂閱。|  
-|**提取**|提取訂閱。|  
+|**push**|發送訂閱。|  
+|**pull**|提取訂閱。|  
 |**兩者**（預設值）|發送和提取訂閱。|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- 指出是否在未連接到散發者的情況之下，執行這個預存程序。 *ignore_distributor*已**位元**，預設值是**0**。 這個參數可在不執行散發者清除工作的情況下，用來卸除訂閱。 如果您必須重新安裝散發者，它也很有用。  
+`[ @ignore_distributor = ] ignore_distributor` 指出是否要將此預存程序執行而不需要連線到散發者。 *ignore_distributor*已**位元**，預設值是**0**。 這個參數可在不執行散發者清除工作的情況下，用來卸除訂閱。 如果您必須重新安裝散發者，它也很有用。  
   
- [  **@reserved=** ]*保留*  
- 保留供日後使用。 *保留*已**位元**，預設值是**0**。  
+`[ @reserved = ] reserved` 是保留供日後使用。 *保留*已**位元**，預設值是**0**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -84,8 +78,8 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="see-also"></a>另請參閱  
  [刪除發送訂閱](../../relational-databases/replication/delete-a-push-subscription.md)   
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

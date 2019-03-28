@@ -18,12 +18,12 @@ ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d38c9727995b20cd23087a0f944ccbfa28bf019d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57642ccd61a13379495b934f5b52cce7f7f77404
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788086"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535560"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@name =**] **'***current_name***'**  
- 目標伺服器群組的名稱。 *current_name*已**sysname**，沒有預設值。  
+`[ @name = ] 'current_name'` 目標伺服器群組的名稱。 *current_name*已**sysname**，沒有預設值。  
   
- [ **@new_name =**] **'***new_name***'**  
- 目標伺服器群組的新名稱。 *new_name*已**sysname**，沒有預設值。  
+`[ @new_name = ] 'new_name'` 目標伺服器群組新名稱。 *new_name*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -71,9 +69,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_help_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_help_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

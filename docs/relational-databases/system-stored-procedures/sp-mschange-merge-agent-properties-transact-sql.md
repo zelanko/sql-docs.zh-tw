@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769780"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535641"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication =** ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@subscriber=** ] **'***訂閱者***'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
   
- [  **@property =** ] **'***屬性***'**  
- 這是要變更的發行集屬性。 *屬性*已**sysname**，沒有預設值。  
+`[ @property = ] 'property'` 是要變更的發行集屬性。 *屬性*已**sysname**，沒有預設值。  
   
- [  **@value =** ] **'***值***'**  
- 這是新的屬性值。 *值*已**nvarchar(524)**，預設值是 NULL。  
+`[ @value = ] 'value'` 新的屬性值。 *值*已**nvarchar(524)**，預設值是 NULL。  
   
  下表描述可變更的合併代理程式作業屬性及這些屬性值的限制。  
   
@@ -71,7 +64,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 |--------------|-----------|-----------------|  
 |**description**||訂閱的簡要描述。|  
 |**merge_job_login**||用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。|  
-|**property**||用來執行代理程式作業之 Windows 帳戶的密碼。|  
+|**merge_job_password**||用來執行代理程式作業之 Windows 帳戶的密碼。|  
 |**publisher_login**||用來連接到發行者以同步處理訂閱的登入。|  
 |**publisher_password**||發行者密碼。<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**publisher_security_mode**|**1**|Windows 驗證。<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
@@ -96,7 +89,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  只有成員**sysadmin**散發者端的固定的伺服器角色可以執行**sp_MSchange_merge_agent_properties**。  
   
 ## <a name="see-also"></a>請參閱  
- [sp_addmergepushsubscription_agent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

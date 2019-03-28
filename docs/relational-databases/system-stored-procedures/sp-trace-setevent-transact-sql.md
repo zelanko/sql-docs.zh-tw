@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266099"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538580"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@traceid=** ] *trace_id*  
- 這是要修改的追蹤識別碼。 *trace_id*已**int**，沒有預設值。 使用者會利用這*trace_id*值來識別、 修改和控制追蹤。  
+`[ @traceid = ] trace_id` 是要修改之 trace 的識別碼。 *trace_id*已**int**，沒有預設值。 使用者會利用這*trace_id*值來識別、 修改和控制追蹤。  
   
- [ **@eventid=** ] *event_id*  
- 這是要開啟的事件識別碼。 *event_id*已**int**，沒有預設值。  
+`[ @eventid = ] event_id` 是要開啟的事件識別碼。 *event_id*已**int**，沒有預設值。  
   
  這份資料表會列出能夠在追蹤中新增或移除的事件。  
   
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|指出 SQL Server 無法為包含計畫指南的查詢或批次產生執行計畫。 SQL Server 嘗試在未套用計畫指南的情況下，為這個查詢或批次產生執行計畫。 無效的計畫指南可能是造成這個問題的原因。 您可以使用 sys.fn_validate_plan_guide 系統函數驗證此計畫指南。|  
 |235|Audit Fulltext||  
   
- [ **@columnid=** ] *column_id*  
- 這是要加入之事件資料行的識別碼。 *column_id*已**int**，沒有預設值。  
+`[ @columnid = ] column_id` 是要加入之事件的資料行識別碼。 *column_id*已**int**，沒有預設值。  
   
  下表列出能夠新增的事件資料行。  
   
@@ -311,7 +308,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 **sys.dm_exec_sql_text()** ，以擷取相關聯的 SQL 文字。|  
 |64|**SessionLoginName**|引發工作階段的使用者登入名稱。 例如，如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **連接到** ，卻以 **Login2**執行陳述式，則 **SessionLoginName** 會顯示 **Login1**，而 **LoginName** 會顯示 **Login2**。 此資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|  
   
- **[ @on=]** *上*  
+ **[ @on=]** *on*  
  指定開啟 ON (1) 或關閉 OFF (0) 事件。 *在 *已**元**，沒有預設值。  
   
  如果*上*設為**1**，並*column_id* NULL，則事件會設為 ON 且已清除所有資料行。 如果*column_id*不是 null，則該事件的資料行設為 ON。  
@@ -361,9 +358,9 @@ sp_trace_setevent [ @traceid = ] trace_id
  使用者必須有 ALTER TRACE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_trace_geteventinfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [SQL Server 事件類別參考](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   

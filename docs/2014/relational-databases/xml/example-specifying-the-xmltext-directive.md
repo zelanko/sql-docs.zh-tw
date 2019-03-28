@@ -1,5 +1,5 @@
 ---
-title: 範例：指定 XMLTEXT 指示詞 | Microsoft Docs
+title: 範例指定 XMLTEXT 指示詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075818"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537350"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
-  此範例說明如何在溢位資料行中的資料定址`XMLTEXT`指示詞`SELECT`使用 EXPLICIT 模式的陳述式。  
+# <a name="example-specifying-the-xmltext-directive"></a>範例指定 XMLTEXT 指示詞
+  此範例說明如何在使用 EXPLICIT 模式的 `SELECT` 陳述式中，使用 `XMLTEXT` 指示詞將溢位資料行中的資料定址。  
   
  假設有 `Person` 資料表。 此資料表有一個 `Overflow` 資料行，可用來儲存 XML 文件的未消耗部分。  
   

@@ -18,12 +18,12 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742196"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534430"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,38 +54,27 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id=** ] *job_id*  
- 作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 作業識別碼中。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
- [ **@step_id=** ] *step_id*  
- 步驟識別碼。 *step_id*已**int**，預設值是 NULL。  
+`[ @step_id = ] step_id` 步驟識別碼。 *step_id*已**int**，預設值是 NULL。  
   
- [ **@sql_message_id=** ] *sql_message_id*  
- 當執行作業時，Microsoft SQL Server 傳回之錯誤訊息的識別碼。 *sql_message_id*已**int**，預設值是 NULL。  
+`[ @sql_message_id = ] sql_message_id` 當執行作業時，Microsoft SQL Server 所傳回的錯誤訊息的識別碼。 *sql_message_id*已**int**，預設值是 NULL。  
   
- [ **@sql_severity=** ] *sql_severity*  
- 當執行作業時，SQL Server 傳回之錯誤訊息的嚴重性層級。 *sql_severity*已**int**，預設值是 NULL。  
+`[ @sql_severity = ] sql_severity` 在執行作業時，SQL Server 所傳回的錯誤訊息嚴重性層級。 *sql_severity*已**int**，預設值是 NULL。  
   
- [ **@start_run_date=** ] *start_run_date*  
- 作業的啟動日期。 *start_run_date*已**int**，預設值是 NULL。 *start_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四個字元的年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
+`[ @start_run_date = ] start_run_date` 作業的啟動日期。 *start_run_date*已**int**，預設值是 NULL。 *start_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四個字元的年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
   
- [ **@end_run_date=** ] *end_run_date*  
- 作業的完成日期。 *end_run_date*已**int**，預設值是 NULL。 *end_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四位數年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
+`[ @end_run_date = ] end_run_date` 作業的完成日期。 *end_run_date*已**int**，預設值是 NULL。 *end_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四位數年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
   
- [ **@start_run_time=** ] *start_run_time*  
- 作業的啟動時間。 *start_run_time*已**int**，預設值是 NULL。 *start_run_time*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
+`[ @start_run_time = ] start_run_time` 作業的啟動時間。 *start_run_time*已**int**，預設值是 NULL。 *start_run_time*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
   
- [ **@end_run_time=** ] *end_run_time*  
- 作業完成執行的時間。 *end_run_time*已**int**，預設值是 NULL。 *end_run_time*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
+`[ @end_run_time = ] end_run_time` 作業完成其執行的時間。 *end_run_time*已**int**，預設值是 NULL。 *end_run_time*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
- 完成作業的最小時間長度。 *minimum_run_duration*已**int**，預設值是 NULL。 *minimum_run_duration*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
+`[ @minimum_run_duration = ] minimum_run_duration` 作業完成的時間最小長度。 *minimum_run_duration*已**int**，預設值是 NULL。 *minimum_run_duration*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
   
- [  **@run_status=** ] *run_status*  
- 作業的執行狀態。 *run_status*已**int**，預設值是 NULL，而且可以是下列值之一。  
+`[ @run_status = ] run_status` 執行作業的狀態。 *run_status*已**int**，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -96,17 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|進行中訊息|  
 |**5**|Unknown|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
- 作業應該嘗試重新執行的最小次數。 *minimum_retries*已**int**，預設值是 NULL。  
+`[ @minimum_retries = ] minimum_retries` 工作應該重試一次執行最少次數。 *minimum_retries*已**int**，預設值是 NULL。  
   
- [  **@oldest_first=** ] *oldest_first*  
- 這是指是否先提供最舊作業的輸出結果。 *oldest_first*已**int**，預設值是**0**，表示先提供最新的作業。 **1**先提供最舊的作業。  
+`[ @oldest_first = ] oldest_first` 是指是否先提供最舊作業的輸出。 *oldest_first*已**int**，預設值是**0**，表示先提供最新的作業。 **1**先提供最舊的作業。  
   
- [ **@server=** ] **'***server***'**  
- 執行作業的伺服器名稱。 *伺服器*已**nvarchar(30)**，預設值是 NULL。  
+`[ @server = ] 'server'` 執行作業的伺服器名稱。 *伺服器*已**nvarchar(30)**，預設值是 NULL。  
   
- [  **@mode=** ] **'***模式***'**  
- 是 SQL Server 是否會列印結果集中的所有資料行 (**完整**) 或資料行的摘要。 *模式*已**varchar(7)**，預設值是**摘要**。  
+`[ @mode = ] 'mode'` 是 SQL Server 是否會列印結果集中的所有資料行 (**完整**) 或資料行的摘要。 *模式*已**varchar(7)**，預設值是**摘要**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

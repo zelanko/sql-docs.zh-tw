@@ -18,12 +18,12 @@ ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5223c0d48d1baacdd8660a4fcc006d13115f1f4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732216"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536830"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id =**] *job_id*  
- 要從中移除指定目標伺服器或目標伺服器群組的作業之作業識別碼。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 要從中移除指定的目標伺服器或目標伺服器群組的作業工作識別碼。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
- 要從中移除指定目標伺服器或目標伺服器群組的作業名稱。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 要從中移除指定的目標伺服器或目標伺服器群組的作業名稱。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_name*已**sysname**，預設值是 NULL。  
   
- [ **@target_server_groups =**] **'***target_server_groups***'**  
- 要從指定作業中移除的目標伺服器群組清單 (以逗號分隔)。 *target_server_groups*已**nvarchar(1024)**，預設值是 NULL。  
+`[ @target_server_groups = ] 'target_server_groups'` 若要從指定的作業中移除的目標伺服器群組的逗號分隔清單。 *target_server_groups*已**nvarchar(1024)**，預設值是 NULL。  
   
- [ **@target_servers =**] **'***target_servers***'**  
- 要從指定作業中移除的目標伺服器清單 (以逗號分隔)。 *target_servers*已**nvarchar(1024)**，預設值是 NULL。  
+`[ @target_servers = ] 'target_servers'` 若要從指定的作業中移除的目標伺服器以逗號分隔清單。 *target_servers*已**nvarchar(1024)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -76,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_apply_job_to_targets &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108728"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536390"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在  中還原頁面。 分頁還原的目標是還原一個或多個受損頁面而毋需還原整個資料庫。 一般而言，選定要還原的頁面會標示為「有疑問」，因為存取該頁面時發生問題。 有疑問的頁面是在 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料庫的 **suspect_pages** 資料表中識別。  
@@ -62,7 +62,7 @@ ms.locfileid: "48108728"
   
     -   交易記錄  
   
-    -   配置頁面—全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
+    -   配置頁面：全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
   
     -   所有資料檔案的頁面 0 (檔案啟動頁面)  
   
@@ -133,8 +133,8 @@ ms.locfileid: "48108728"
     |標頭|值|  
     |------------|------------|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份元件：**資料庫**、**檔案**或 **\<空白>** (針對交易記錄)。|  
-    |**型別**|執行的備份類型： **[完整]**、 **[差異]** 或 **[交易記錄]**。|  
+    |**元件**|備份的元件：[資料庫]、[檔案] 或 [\<空白>] (適用於交易記錄)。|  
+    |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
     |**位置**|備份組在磁碟區中的位置。|  
@@ -204,7 +204,7 @@ ms.locfileid: "48108728"
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會以 `B` 還原檔案 `NORECOVERY`的四個損毀頁面。 接著，兩個記錄備份會套用 `NORECOVERY`，後面接著以 `RECOVERY`還原的結尾記錄備份。 這個範例會執行線上還原。 在範例中，檔案 `B` 的檔案識別碼是 `1`，而損毀頁面的頁面識別碼是 `57`、 `202`、 `916`和 `1016`。  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_table & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b234aba562c095d2861bddec5310cf321b5d331
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 40b94782cf542800922b69291654ff7d46dcfde0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591062"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537610"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,28 +55,23 @@ sys.sp_cdc_enable_table
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@source_schema =** ] **'**_source_schema&lt_**'**  
- 這是來源資料表所屬的結構描述名稱。 *source_schema&lt*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @source_schema = ] 'source_schema'` 是來源資料表所屬的結構描述名稱。 *source_schema&lt*已**sysname**，沒有預設值，不能是 NULL。  
   
- [  **@source_name =** ] **'**_source_name_**'**  
- 這是要啟用異動資料擷取的來源資料表名稱。 *source_name*已**sysname**，沒有預設值，不能是 NULL。  
+`[ @source_name = ] 'source_name'` 是要啟用來源資料表的名稱變更資料擷取。 *source_name*已**sysname**，沒有預設值，不能是 NULL。  
   
  *source_name*必須存在於目前的資料庫。 中的資料表**cdc**無法啟用異動資料擷取的結構描述。  
   
- [  **@role_name =** ] **'**_role_name_**'**  
- 這是用來控制變更資料之存取權的資料庫角色名稱。 *role_name*已**sysname**必須加以指定。 如果明確設定為 NULL，就不會使用任何控制角色來限制變更資料的存取權。  
+`[ @role_name = ] 'role_name'` 是用來限制存取權限來變更資料的資料庫角色的名稱。 *role_name*已**sysname**必須加以指定。 如果明確設定為 NULL，就不會使用任何控制角色來限制變更資料的存取權。  
   
  如果角色目前存在，就會使用此角色。 如果角色不存在，系統就會嘗試使用指定的名稱來建立資料庫角色。 嘗試建立角色之前，會先針對角色名稱修剪字串右邊的空白字元。 如果呼叫端未經授權，無法在資料庫中建立角色，預存程序作業就會失敗。  
   
- [  **@capture_instance =** ] **'**_capture_instance_**'**  
- 這是用來命名執行個體特有異動資料擷取物件的擷取執行個體名稱。 *capture_instance*已**sysname**不能是 NULL。  
+`[ @capture_instance = ] 'capture_instance'` 是用來命名執行個體特有異動資料擷取物件的擷取執行個體的名稱。 *capture_instance*已**sysname**不能是 NULL。  
   
  如果未指定，名稱會衍生自來源結構描述名稱加上來源資料表名稱的格式*schemaname_sourcename*。 *擷取執行個體*不能超過 100 個字元，而且必須是唯一的資料庫中。 指定或衍生，是否*capture_instance*修剪字串右邊的任何空白字元。  
   
  一個來源資料表最多可以有兩個擷取執行個體。 如需詳細資訊，請參閱[sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)。  
   
- [  **@supports_net_changes =** ] *supports_net_changes*  
- 指出是否要針對這個擷取執行個體來啟用查詢淨變更的支援。 *supports_net_changes*已**位元**預設值是 1，如果資料表有主索引鍵，或資料表具有唯一索引，使用經有@index_name參數。 否則，此參數的預設值是 0。  
+`[ @supports_net_changes = ] supports_net_changes` 指出是否支援此擷取執行個體啟用查詢淨變更為。 *supports_net_changes*已**位元**預設值是 1，如果資料表有主索引鍵，或資料表具有唯一索引，使用經有@index_name參數。 否則，此參數的預設值是 0。  
   
  如果為 0，就只會產生查詢所有變更的支援函數。  
   
@@ -84,11 +79,9 @@ sys.sp_cdc_enable_table
   
  如果*supports_net_changes*設定為 1， *index_name*必須指定，或來源資料表必須具有已定義的主索引鍵。  
   
- [  **@index_name =** ] **'**_index_name_'  
- 要用來唯一識別來源資料表中之資料列的唯一索引名稱。 *index_name*已**sysname**而且可以是 NULL。 如果指定， *index_name*必須是有效的唯一索引，來源資料表上。 如果*index_name*指定，已識別的索引資料行的優先順序高於任何定義的主索引鍵資料行做為資料表的唯一資料列識別碼。  
+`[ @index_name = ] 'index_name_'` 要用來唯一識別來源資料表中的資料列的唯一索引的名稱。 *index_name*已**sysname**而且可以是 NULL。 如果指定， *index_name*必須是有效的唯一索引，來源資料表上。 如果*index_name*指定，已識別的索引資料行的優先順序高於任何定義的主索引鍵資料行做為資料表的唯一資料列識別碼。  
   
- [  **@captured_column_list =** ] **'**_captured_column_list_**'**  
- 識別要包含在變更資料表中的來源資料表資料行。 *captured_column_list*已**nvarchar （max)** 而且可以是 NULL。 如果是 NULL，則所有資料行都會包含在變更資料表中。  
+`[ @captured_column_list = ] 'captured_column_list'` 識別要包含變更資料表中的來源資料表資料行。 *captured_column_list*已**nvarchar （max)** 而且可以是 NULL。 如果是 NULL，則所有資料行都會包含在變更資料表中。  
   
  資料行名稱必須是來源資料表中的有效資料行。 主索引鍵索引中定義的資料行或資料行中所參考之索引定義*index_name*必須包含。  
   
@@ -96,13 +89,11 @@ sys.sp_cdc_enable_table
   
  *captured_column_list*不能包含下列保留的資料行名稱： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__ $作業**，並 **__ $update_mask**。  
   
- [  **@filegroup_name =** ] **'**_filegroup_name_**'**  
- 這是要用於針對擷取執行個體所建立之變更資料表的檔案群組。 *filegroup_name*已**sysname**而且可以是 NULL。 如果指定， *filegroup_name*必須針對目前資料庫中定義。 如果是 NULL，就會使用預設的檔案群組。  
+`[ @filegroup_name = ] 'filegroup_name'` 是用於建立擷取執行個體之變更資料表的檔案群組。 *filegroup_name*已**sysname**而且可以是 NULL。 如果指定， *filegroup_name*必須針對目前資料庫中定義。 如果是 NULL，就會使用預設的檔案群組。  
   
  我們建議您針對異動資料擷取的變更資料表建立個別的檔案群組。  
   
- [  **@allow_partition_switch=** ] **'**_allow_partition_switch_**'**  
- 指出是否可以針對啟用異動資料擷取的資料表執行 ALTER TABLE 的 SWITCH PARTITION 命令。 *allow_partition_switch*已**元**，預設值是 1。  
+`[ @allow_partition_switch = ] 'allow_partition_switch'` 指出是否可以針對啟用異動資料擷取的資料表中執行 ALTER TABLE 的 SWITCH PARTITION 命令。 *allow_partition_switch*已**元**，預設值是 1。  
   
  若為非資料分割資料表，此切換設定一律為 1，而且會忽略實際的設定。 如果非資料分割資料表的切換明確設定為 0，就會發出警告 22857，表示已經忽略此切換設定。 如果資料分割資料表的切換設定明確設定為 0，就會發出警告 22356，表示不允許在來源資料表上進行資料分割切換作業。 最後，如果切換設定明確設定為 1 或允許預設為 1，而且啟用的資料表已進行資料分割，就會發出警告 22855，表示不會封鎖資料分割切換。 如果進行了任何資料分割切換，異動資料擷取將不會追蹤切換所造成的變更。 這會導致取用變更資料時，發生資料不一致的情況。  
   
@@ -166,10 +157,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_disable_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

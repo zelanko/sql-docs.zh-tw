@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813050"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534630"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@session_id** = ] *session_id*  
- 指定代理程式工作階段。 *session_id*已**int**沒有預設值。  
+`[ @session_id = ] session_id` 指定代理程式工作階段。 *session_id*已**int**沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -56,7 +55,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**衝突**|**int**|工作階段所發生的衝突數。|  
 |**ErrorID**|**int**|工作階段錯誤的識別碼。|  
 |**SeqNo**|**int**|結果集中的工作階段順序。|  
-|**資料列型別**|**int**|指出結果集中每個資料列所代表的資訊類型。<br /><br /> **0** = 初始化<br /><br /> **1** = 上傳摘要<br /><br /> **2** = 發行項上傳詳細資料<br /><br /> **3** = 下載摘要<br /><br /> **4** = 發行項下載詳細資料|  
+|**RowType**|**int**|指出結果集中每個資料列所代表的資訊類型。<br /><br /> **0** = 初始化<br /><br /> **1** = 上傳摘要<br /><br /> **2** = 發行項上傳詳細資料<br /><br /> **3** = 下載摘要<br /><br /> **4** = 發行項下載詳細資料|  
 |**SchemaChanges**|**int**|工作階段中的結構描述變更數。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

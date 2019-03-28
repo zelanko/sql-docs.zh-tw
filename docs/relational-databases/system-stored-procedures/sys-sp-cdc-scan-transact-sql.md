@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_scan (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_scan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763070"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536780"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@maxtrans=** ] *max_trans&lt*  
- 每個掃描循環中要處理的交易數目上限。 *max_trans&lt*已**int**預設值是 500。  
+`[ @maxtrans = ] max_trans` 每個掃描循環中處理交易的最大數目。 *max_trans&lt*已**int**預設值是 500。  
   
- [  **@maxscans=** ] *max_scans*  
- 要執行以便從記錄中擷取所有資料列的掃描循環數目上限。 *max_scans*已**int**預設值是 10。  
+`[ @maxscans = ] max_scans` 若要執行以便從記錄檔中擷取所有資料列的掃描循環的最大數目。 *max_scans*已**int**預設值是 10。  
   
- [  **@continuous=** ]*連續*  
- 指出預存程序應該結束之後執行單一掃描循環 (0)，還是連續執行時，所指定的時間暫停*polling_interval*之前重新掃描循環 (1)。 *持續*已**tinyint**預設值是 0。  
+`[ @continuous = ] continuous` 指出預存程序應該結束之後執行單一掃描循環 (0)，還是連續執行時，所指定的時間暫停*polling_interval*之前重新掃描循環 (1)。 *持續*已**tinyint**預設值是 0。  
   
- [  **@pollinginterval=** ] *polling_interval*  
- 記錄掃描循環之間的秒數。 *polling_interval*已**bigint**預設值是 0。  
+`[ @pollinginterval = ] polling_interval` 記錄掃描循環之間的秒數。 *polling_interval*已**bigint**預設值是 0。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -70,6 +66,6 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
  需要 db_owner 固定資料庫角色中的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.cdc_jobs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

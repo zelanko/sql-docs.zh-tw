@@ -16,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203097"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534530"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@subscriber=**] **'***訂閱者***'**  
- 這是要變更選項之訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 是要變更選項之訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [  **@type=**]*類型*  
- 這是訂閱者類型。 *型別*已**tinyint**，預設值是 NULL。 **0**指出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 資料來源伺服器訂閱者。  
+`[ @type = ] type` 這是訂閱者類型。 *型別*已**tinyint**，預設值是 NULL。 **0**指出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]訂閱者。 **1**指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或其他 ODBC 資料來源伺服器訂閱者。  
   
- [  **@login=**] **'***登入***'**  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
+`[ @login = ] 'login'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入識別碼。 *login* 是預設值為 NULL 的 **sysname**。  
   
- [  **@password=**] **'***密碼***'**  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼。 *密碼*已**sysname**，預設值是**%**。 **%** 表示 password 屬性沒有變更。  
+`[ @password = ] 'password'` 是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證密碼。 *密碼*已**sysname**，預設值是**%**。 **%** 表示 password 屬性沒有變更。  
   
- [  **@commit_batch_size=**] *commit_batch_size*  
- 支援這個項目的目的，只是為了與舊版相容。  
+`[ @commit_batch_size = ] commit_batch_size` 支援回溯相容性。  
   
- [  **@status_batch_size=**] *status_batch_size*  
- 支援這個項目的目的，只是為了與舊版相容。  
+`[ @status_batch_size = ] status_batch_size` 支援回溯相容性。  
   
- [  **@flush_frequency=**] *flush_frequency*  
- 支援這個項目的目的，只是為了與舊版相容。  
+`[ @flush_frequency = ] flush_frequency` 支援回溯相容性。  
   
- [  **@frequency_type=**] *frequency_type*  
- 這是散發工作的排程頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
+`[ @frequency_type = ] frequency_type` 是用來排程散發工作的頻率。 *frequency_type*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -92,11 +84,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|自動啟動|  
 |**128**|重複執行|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- 間隔*frequency_type*。 *frequency_interval*已**int**，預設值是 NULL。  
+`[ @frequency_interval = ] frequency_interval` 間隔*frequency_type*。 *frequency_interval*已**int**，預設值是 NULL。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- 這是散發工作的日期。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 這是散發工作的日期。 使用這個參數時*frequency_type*設為**32** （每月相對）。 *frequency_relative_interval*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -106,11 +96,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|第四個|  
 |**16**|最後一個|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor&lt*  
- 是散發工作應該重複期間定義的頻率*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 是散發工作應該重複期間定義的頻率*frequency_type*。 *frequency_recurrence_factor*已**int**，預設值是 NULL。  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 這是在定義的期間內，重新排程的頻率。 *frequency_subday*已**int**，而且可以是下列值之一。  
+`[ @frequency_subday = ] frequency_subday` 已定義的期間重新排程的頻率。 *frequency_subday*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -119,34 +107,26 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔*frequence_subday*。 *frequency_subday_interval*已**int**，預設值是 NULL。  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 間隔*frequence_subday*。 *frequency_subday_interval*已**int**，預設值是 NULL。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- 這是第一次排程散發工作的當日時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 當散發工作這是第一次的排程時間，格式為 HHMMSS。 *active_start_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- 這是排程停止散發工作的當日時間，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 已停止散發工作的當日時間排程，格式為 HHMMSS。 *active_end_time_of_day*已**int**，預設值是 NULL。  
   
- [  **@active_start_date=**] *active_start_date*  
- 這是第一次排程散發工作的日期，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
+`[ @active_start_date = ] active_start_date` 是散發工作時第一個排程的日期，格式為 YYYYMMDD。 *active_start_date*已**int**，預設值是 NULL。  
   
- [  **@active_end_date=**] *active_end_date*  
- 這是排程停止散發工作的日期，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
+`[ @active_end_date = ] active_end_date` 已停止散發工作的日期排程，格式為 YYYYMMDD。 *active_end_date*已**int**，預設值是 NULL。  
   
- [  **@description=**] **'***描述***'**  
- 這是選擇性的文字描述。 *描述*已**nvarchar(255)**，預設值是 NULL。  
+`[ @description = ] 'description'` 是選擇性的文字描述。 *描述*已**nvarchar(255)**，預設值是 NULL。  
   
- [  **@security_mode=**] *security_mode*  
- 這是實作的安全性模式。 *security_mode*已**int**，而且可以是下列值之一。  
+`[ @security_mode = ] security_mode` 是實作的安全性模式。 *security_mode*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證|  
 |**1**|Windows 驗證|  
   
- [ **@publisher**=] **'***發行者***'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應該不在上變更發行項屬性時才使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -161,8 +141,8 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_changesubscriber**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addsubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   

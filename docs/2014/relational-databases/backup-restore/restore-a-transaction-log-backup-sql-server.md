@@ -19,12 +19,12 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac8f9e32aac94d7e565b9166102702ba4b747a88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189258"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535030"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中還原交易記錄備份。  
@@ -100,7 +100,7 @@ ms.locfileid: "48189258"
     |------------|-----------|  
     |**Restore**|選取的核取方塊表示要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份元件：[資料庫]、[檔案]或 \<空白> (針對交易記錄)。|  
+    |**元件**|備份元件：**資料庫**，**檔案**，或\<空白 > （針對交易記錄）。|  
     |**[資料庫備份]**|執行備份所涉及的資料庫名稱。|  
     |**開始日期**|備份作業開始的日期和時間，以用戶端的區域設定表示。|  
     |**完成日期**|備份作業完成的日期和時間，以用戶端的區域設定表示。|  
@@ -132,7 +132,7 @@ ms.locfileid: "48189258"
         |------------|-----------|  
         |\<空白>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
-        |**Date**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
+        |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
         |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
         |**LSN**|標示之交易的記錄序號。|  
         |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  
@@ -237,14 +237,14 @@ ms.locfileid: "48189258"
 ###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
  根據預設， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫使用簡單復原模式。 此範例需要修改資料庫以使用完整復原模式，如下所示：  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. 套用單一交易記錄備份  
  下列範例一開始會使用名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 備份裝置上的完整資料庫備份來還原 `AdventureWorks2012_1`資料庫。 此範例接著套用名為 `AdventureWorks2012_log`備份裝置上的第一個交易記錄備份。 最後，此範例復原了資料庫。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -262,7 +262,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. 套用多個交易記錄備份  
  下列範例一開始會使用名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 備份裝置上的完整資料庫備份來還原 `AdventureWorks2012_1`資料庫。 此範例接著逐一套用名為 `AdventureWorks2012_log`備份裝置上的前三個交易記錄備份。 最後，此範例復原了資料庫。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538550"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 針對[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]並[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spaceused`必須指定具名的參數 (例如`sp_spaceused (@objname= N'Table1');`而不是依賴參數的序數位置。 
 
- [  **@objname=**] **'***objname***'** 
+`[ @objname = ] 'objname'`
    
  這是要求的空間使用方式資訊所屬之資料表、索引檢視或佇列的完整或非完整名稱。 只有在指定完整物件名稱時，才會需要引號。 如果提供完整物件名稱 (包括資料庫名稱)，資料庫名稱就必須是目前資料庫的名稱。  
 如果*objname*未指定，整個資料庫會傳回結果。  
@@ -55,11 +55,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 和[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]僅支援資料庫和資料表的物件。
   
- [ **@updateusage=**] **'***updateusage***'**  
- 指出應該執行 DBCC UPDATEUSAGE 來更新空間使用方式資訊。 當*objname*是未指定，整個資料庫上執行此陳述式; 此陳述式上的執行，否則為*objname*。 值可以是**真**或是**false**。 *updateusage*已**varchar(5)**，預設值是**false**。  
+`[ @updateusage = ] 'updateusage'` 指出應該執行 DBCC UPDATEUSAGE 來更新空間使用方式資訊。 當*objname*是未指定，整個資料庫上執行此陳述式; 此陳述式上的執行，否則為*objname*。 值可以是**真**或是**false**。 *updateusage*已**varchar(5)**，預設值是**false**。  
   
- [  **@mode=**] **'***模式***'**  
- 表示結果的範圍。 延展的資料表或資料庫，如*模式*參數可讓您包含或排除物件中的遠端的一部分。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
+`[ @mode = ] 'mode'` 表示結果的範圍。 延展的資料表或資料庫，如*模式*參數可讓您包含或排除物件中的遠端的一部分。 如需詳細資訊，請參閱 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
  *模式*引數可以是下列值：  
   
@@ -71,8 +69,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *模式*已**varchar(11)**，預設值是**N'ALL'**。  
   
- [  **@oneresultset=**] *oneresultset*  
- 指出是否要傳回單一結果集。 *Oneresultset*引數可以是下列值：  
+`[ @oneresultset = ] oneresultset` 指出是否要傳回單一結果集。 *Oneresultset*引數可以是下列值：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -81,7 +78,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *oneresultset*已**位元**，預設值是**0**。  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **適用於：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]， [!INCLUDE[sssds-md](../../includes/sssds-md.md)]。  
   
  當@oneresultset= 1，參數@include_total_xtp_storage決定單一結果集是否包含 MEMORY_OPTIMIZED_DATA 儲存體的資料行。 預設值為 0，也就是預設 （如果省略此參數） 的 XTP 資料行不包含在結果集。  
@@ -100,7 +97,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
@@ -112,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
 |**database_size**|**varchar(18)**|目前資料庫的大小 (以 MB 為單位)。 **database_size**包含資料和記錄檔。|  
 |**未配置的空間**|**varchar(18)**|資料庫中尚未保留給資料庫物件的空間。|  
-|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|  
@@ -123,7 +120,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|要求的空間使用方式資訊所屬的物件名稱。<br /><br /> 不會傳回物件的結構描述名稱。 如果需要的結構描述名稱，使用[sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)或是[sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)動態管理檢視來取得對等的大小資訊。|  
 |**rows**|**char(20)**|資料表現有的資料列數。 如果指定的物件是一個 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 佇列，這個資料行會指出佇列中的訊息數目。|  
-|**保留**|**varchar(18)**|保留空間的總量*objname*。|  
+|**reserved**|**varchar(18)**|保留空間的總量*objname*。|  
 |**data**|**varchar(18)**|中的資料所使用的空間總量*objname*。|  
 |**index_size**|**varchar(18)**|中的索引所使用的空間總量*objname*。|  
 |**未使用**|**varchar(18)**|為保留的空間總量*objname*但尚未使用。|  
@@ -140,7 +137,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
@@ -160,7 +157,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_name**|**nvarchar(128)**|目前資料庫的名稱。|  
 |**database_size**|**varchar(18)**|目前資料庫的大小 (以 MB 為單位)。 **database_size**包含資料和記錄檔。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包括檔案群組中的所有檢查點檔案的磁碟大小總計。|
 |**未配置的空間**|**varchar(18)**|資料庫中尚未保留給資料庫物件的空間。 如果資料庫具有 MEMORY_OPTIMIZED_DATA 檔案群組，這會包括檔案群組中的狀態預先建立的檢查點檔案的磁碟大小總計。|  
-|**保留**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
+|**reserved**|**varchar(18)**|資料庫中的物件所配置的空間總量。|  
 |**data**|**varchar(18)**|資料所用的空間總量。|  
 |**index_size**|**varchar(18)**|索引所用的空間總量。|  
 |**未使用**|**varchar(18)**|保留給資料庫中之物件但尚未使用的空間總量。|
@@ -251,9 +248,9 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

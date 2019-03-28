@@ -18,19 +18,19 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168848"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535630"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回指定維護計畫的相關資訊。 如果未指定計畫，這個預存程序會傳回所有維護計畫的相關資訊。  
   
-> **注意：** 此預存程序搭配資料庫維護計畫。 這項功能已被不使用這個預存程序的維護計畫所取代。 請使用這個程序來維護由舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級之安裝的資料庫維護計畫。  
+> **注意：** 這個預存程序需搭配資料庫維護計畫一起使用。 這項功能已被不使用這個預存程序的維護計畫所取代。 請使用這個程序來維護由舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級之安裝的資料庫維護計畫。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,14 +45,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@plan_id =**] **'**_計劃\_識別碼_**'**  
- 指定維護計畫的計畫識別碼。 *plan_id*已**UNIQUEIDENTIFIER**。 預設值是 NULL。  
+`[ @plan_id = ] 'plan\_id'` 指定維護計畫的計畫識別碼。 *plan_id*已**UNIQUEIDENTIFIER**。 預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
   
 ## <a name="result-sets"></a>結果集  
- 如果*plan_id*指定，則**sp_help_maintenance_plan**會傳回三個資料表： 計劃、 資料庫和作業。  
+ 如果*plan_id*指定，則**sp_help_maintenance_plan**會傳回三個資料表：計劃、 資料庫和作業。  
   
 ### <a name="plan-table"></a>計畫資料表  
   
@@ -61,7 +60,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|維護計畫識別碼。|  
 |**plan_name**|**sysname**|維護計畫名稱。|  
 |**date_created**|**datetime**|維護計畫的建立日期。|  
-|**擁有者**|**sysname**|維護計畫的擁有者。|  
+|**owner**|**sysname**|維護計畫的擁有者。|  
 |**max_history_rows**|**int**|用來將維護計畫的記錄記載到系統資料表中，所配置的最大資料列數。|  
 |**remote_history_server**|**int**|可以寫入記錄報表之遠端伺服器的名稱。|  
 |**max_remote_history_rows**|**int**|在遠端伺服器系統資料表中，可寫入記錄報表的資料列最大配置列數。|  

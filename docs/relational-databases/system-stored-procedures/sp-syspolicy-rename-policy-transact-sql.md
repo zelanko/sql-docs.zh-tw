@@ -18,12 +18,12 @@ ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 297f0040f127ae210f8507374f940e4439cdf0d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2262bf4d05e10ef20a531794cd342a5ee903fe3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855616"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536730"
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@name=** ] **'***name***'**  
- 這是您要重新命名的原則名稱。 *名稱*已**sysname**，而且必須指定如果*policy_id&lt*是 NULL。  
+`[ @name = ] 'name'` 是您想要重新命名之原則的名稱。 *名稱*已**sysname**，而且必須指定如果*policy_id&lt*是 NULL。  
   
- [  **@policy_id=** ] *policy_id&lt*  
- 這是您要重新命名的原則識別碼。 *policy_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
+`[ @policy_id = ] policy_id` 是您想要重新命名的原則識別碼。 *policy_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
   
- [ **@new_name=** ] **'***new_name***'**  
- 是原則的新名稱。 *new_name*已**sysname**，而且需要。 不得為 NULL 或空字串。  
+`[ @new_name = ] 'new_name'` 是原則的新名稱。 *new_name*已**sysname**，而且需要。 不得為 NULL 或空字串。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -63,7 +60,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
 > [!IMPORTANT]  
->  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體作業的原則執行。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
+>  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響作業的執行個體的原則執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
   
 ## <a name="examples"></a>範例  
  下列範例會將名為 'Test Policy 1' 的原則重新命名為 'Test Policy 2'。  

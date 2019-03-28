@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a66591f5cc2eefcf60a9ea9b0a584a61c215df85
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536366"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537570"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id=** ] *job_id*  
- 這是要從排程中移除之作業的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 若要從排程中移除工作作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- 這是要從排程中移除之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 要從排程中移除的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@schedule_id=** ] *schedule_id*  
- 這是要從作業中移除之排程的排程識別碼。 *schedule_id*已**int**，預設值是 NULL。  
+`[ @schedule_id = ] schedule_id` 若要從作業移除排程的排程識別碼。 *schedule_id*已**int**，預設值是 NULL。  
   
- [  **@schedule_name=** ] **'**_schedule_name&lt_**'**  
- 這是要從作業中移除之排程的名稱。 *schedule_name&lt*已**sysname**，預設值是 NULL。  
+`[ @schedule_name = ] 'schedule_name'` 若要從作業移除排程的名稱。 *schedule_name&lt*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*schedule_id*或是*schedule_name&lt*必須指定，但不可同時指定兩者。  
   
- [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
- 指定是否要刪除未使用的作業排程。 *delete_unused_schedule*已**位元**，預設值是**0**，這表示，將會保留所有排程，即使沒有作業參考它們。 如果設定為**1**，如果沒有作業參考它們，會刪除未使用的作業排程。  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 指定是否要刪除未使用的作業排程。 *delete_unused_schedule*已**位元**，預設值是**0**，這表示，將會保留所有排程，即使沒有作業參考它們。 如果設定為**1**，如果沒有作業參考它們，會刪除未使用的作業排程。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -99,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

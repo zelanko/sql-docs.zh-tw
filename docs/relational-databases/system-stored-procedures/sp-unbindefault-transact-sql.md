@@ -18,12 +18,12 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 076e38b453320db831d2d7536d587921920c3924
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758746"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534940"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@objname=** ] **'***object_name***'**  
- 這是預設值將解除繫結的資料表和資料行或別名資料類型的名稱。 *object_name*已**nvarchar(776)**，沒有預設值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會試圖先將兩部分識別碼解析成資料行名稱，再解析成別名資料類型。  
+`[ @objname = ] 'object_name'` 是的資料表和資料行或別名資料類型的預設值是將解除繫結的名稱。 *object_name*已**nvarchar(776)**，沒有預設值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會試圖先將兩部分識別碼解析成資料行名稱，再解析成別名資料類型。  
   
  當您將預設值和別名資料類型解除繫結時，也會解除繫結這個資料類型有相同預設值的任何資料行。 直接繫結預設值之資料類型的資料行不受影響。  
   
 > [!NOTE]  
 >  *object_name*可以包含方括號 **[]** 作為分隔識別碼字元。 如需詳細資訊，請參閱＜ [Database Identifiers](../../relational-databases/databases/database-identifiers.md)＞。  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- 只有解除繫結別名資料類型的預設值時，才使用這個項目。 *futureonly_flag*已**varchar(15)**，預設值是 NULL。 當*futureonly_flag*是**futureonly**，現有的資料行的資料型別不會失去指定的預設值。  
+`[ @futureonly = ] 'futureonly_flag'` 只有解除繫結預設值和別名資料類型時，才使用。 *futureonly_flag*已**varchar(15)**，預設值是 NULL。 當*futureonly_flag*是**futureonly**，現有的資料行的資料型別不會失去指定的預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

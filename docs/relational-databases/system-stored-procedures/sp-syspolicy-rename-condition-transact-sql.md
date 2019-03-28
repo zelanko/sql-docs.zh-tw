@@ -18,12 +18,12 @@ ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6b625a1992411946703afb2583109f9e74518d5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0305e7bc2daa087483fce0472d32df0887271ba3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850447"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534600"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@name=** ] **'***name***'**  
- 這是您要重新命名的條件名稱。 *名稱*已**sysname**，而且必須指定如果*condition_id&lt*是 NULL。  
+`[ @name = ] 'name'` 是您想要重新命名之條件的名稱。 *名稱*已**sysname**，而且必須指定如果*condition_id&lt*是 NULL。  
   
- [ **@condition_id=** ] *condition_id*  
- 是您想要重新命名之條件的識別碼。 *condition_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
+`[ @condition_id = ] condition_id` 是您想要重新命名之條件的識別碼。 *condition_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
   
- [ **@new_name=** ] **'***new_name***'**  
- 這是條件的新名稱。 *new_name*已**sysname**，而且需要。 不得為 NULL 或空字串。  
+`[ @new_name = ] 'new_name'` 這是條件的新名稱。 *new_name*已**sysname**，而且需要。 不得為 NULL 或空字串。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -62,7 +59,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
 > [!IMPORTANT]  
->  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體作業的原則執行。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
+>  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響作業的執行個體的原則執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
   
 ## <a name="examples"></a>範例  
  下列範例會重新命名原來名稱為 'Change Tracking Enabled' 的條件。  

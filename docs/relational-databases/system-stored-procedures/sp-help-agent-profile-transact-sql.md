@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_help_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d75fde4ff1ccabd56243e1a1ccdff8051923fefb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35e0ace5f88e15ce4afc0da797d949039398e898
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794890"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535911"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@agent_type=**] *agent_type*  
- 這是代理程式的類型。 *agent_type*已**int**，預設值是**0**，而且可以是下列值之一。  
+`[ @agent_type = ] agent_type` 是代理程式的類型。 *agent_type*已**int**，預設值是**0**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -50,8 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|[合併代理程式]|  
 |**9**|佇列讀取器代理程式|  
   
- [  **@profile_id=**] *profile_id*  
- 這是要顯示的設定檔識別碼。 *profile_id*已**int**，預設值是 **-1**，它會傳回中的所有設定檔**MSagent_profiles**資料表。  
+`[ @profile_id = ] profile_id` 是要顯示的設定檔識別碼。 *profile_id*已**int**，預設值是 **-1**，它會傳回中的所有設定檔**MSagent_profiles**資料表。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -75,8 +73,8 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="see-also"></a>另請參閱  
  [處理複寫代理程式設定檔](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

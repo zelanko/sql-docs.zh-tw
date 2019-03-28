@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077128"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538620"
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
   這個主題描述如何產生 XML 執行個體。  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  如果未使用 *style* 參數或是將其值設為 0，在轉換 xml DT 執行個體時，將不會保留不重要的空白。 如需如何使用 CONVERT 運算子以及將字串資料轉換成 xmlDT 執行個體時其 *style* 參數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例：將字串值轉換成具類型的 xml 並將它指派給資料行  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>範例將字串值轉換成具類型的 xml 並將它指派給資料行  
  下列範例會轉換為字串變數，其中包含以 XML 片段`xml`資料類型，並將其儲存在`xml`類型資料行：  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例：將字串轉換成具類型的 xml 並將它指派給變數  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>範例將字串轉換成具類型的 xml 並將它指派給變數  
  在下列範例中，字串會轉換成`xml`輸入，然後指派給變數的`xml`資料型別：  
   
 ```  
@@ -180,7 +180,7 @@ go
  如需 FOR XML 的詳細資訊，請參閱 [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `xml` 資料類型執行個體傳回用戶端，作為不同伺服器建構的結果 (例如使用 TYPE 指示詞的 FOR XML 查詢)，或者使用 `xml` 資料類型從 SQL 資料行、變數和輸出參數傳回 XML。 在用戶端應用程式程式碼，ADO.NET 提供者會要求這`xml`二進位編碼，從伺服器傳送資料型別資訊。 但若您使用的 FOR XML 不含 TYPE 指示詞，XML 資料就會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `xml` 資料類型執行個體傳回用戶端，作為不同伺服器建構的結果 (例如使用 TYPE 指示詞的 FOR XML 查詢)，或者使用 `xml` 資料類型從 SQL 資料行、變數和輸出參數傳回 XML。 在用戶端應用程式的程式碼中，ADO.NET 提供者會要求從伺服器以二進位編碼傳送這項 `xml` 資料類型資訊。 但若您使用的 FOR XML 不含 TYPE 指示詞，XML 資料就會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。  
   
 ## <a name="using-constant-assignments"></a>使用常數指派  
  執行個體，就可以使用字串常數`xml`資料型別。 這與使用 CAST 將字串隱含轉換成 XML 是相同的。 例如：  

@@ -1,5 +1,5 @@
 ---
-title: sp_link_publication & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_link_publication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210050"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537832"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,32 +50,25 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher**=] **'***發行者***'**  
- 這是要連結的發行者名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是要連結的發行者名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- 這是要連結的發行者資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是要連結至發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication**=] **'***發行集***'**  
- 這是要連結的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是要連結至發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@security_mode**=] *security_mode*  
- 這是訂閱者連接到遠端發行者來進行立即更新時所用的安全性模式。 *security_mode*已**int**，而且可以是下列值之一。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` 安全性模式可由 「 訂閱者 」 來連接到遠端發行者來進行立即更新。 *security_mode*已**int**，而且可以是下列值之一。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意：在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個選項用來指定動態遠端程序呼叫 (RPC)。|  
-|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意：這個帳戶也必須存在於發行者端，且具有足夠的權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
+|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意:在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個選項用來指定動態遠端程序呼叫 (RPC)。|  
+|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意:這個帳戶也必須存在於發行者端，且具有足夠的權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
 |**2**|使用現有使用者定義連結的伺服器登入以建立**sp_link_publication**。|  
   
- [ **@login**=] **'***登入***'**  
- 這是登入。 *login* 是預設值為 NULL 的 **sysname**。 這個參數必須是指定何時*security_mode*是**0**。  
+`[ @login = ] 'login'` 是登入。 *login* 是預設值為 NULL 的 **sysname**。 這個參數必須是指定何時*security_mode*是**0**。  
   
- [ **@password**=] **'***密碼***'**  
- 這是密碼。 *密碼*已**sysname**，預設值是 NULL。 這個參數必須是指定何時*security_mode*是**0**。  
+`[ @password = ] 'password'` 這是密碼。 *密碼*已**sysname**，預設值是 NULL。 這個參數必須是指定何時*security_mode*是**0**。  
   
- [  **@distributor=** ] **'***散發者***'**  
- 這是散發者的名稱。 *散發者*已**sysname**，預設值是 NULL。  
+`[ @distributor = ] 'distributor'` 是散發者的名稱。 *散發者*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -96,9 +89,9 @@ sp_link_publication [ @publisher = ] 'publisher'
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_link_publication**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_droppullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [sp_subscription_cleanup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

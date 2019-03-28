@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b7bf2a2e589a7e3dc69ee805f1958dad4cbecb8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591802"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538560"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,20 +56,15 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@schedule_id =** ] *schedule_id*  
- 這是要修改的排程識別碼。 *schedule_id*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*必須指定。  
+`[ @schedule_id = ] schedule_id` 若要修改的排程識別碼。 *schedule_id*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*必須指定。  
   
- [  **@name =** ] **'**_schedule_name&lt_**'**  
- 這是要修改的排程名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*必須指定。  
+`[ @name = ] 'schedule_name'` 若要修改排程的名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*必須指定。  
   
- [ **@new_name**= ] *new_name*  
- 排程的新名稱。 *new_name*已**sysname**，預設值是 NULL。 當*new_name*是 NULL，不會變更排程的名稱。  
+`[ @new_name = ] new_name` 排程的新名稱。 *new_name*已**sysname**，預設值是 NULL。 當*new_name*是 NULL，不會變更排程的名稱。  
   
- [  **@enabled =** ]*啟用*  
- 指出排程的目前狀態。 *已啟用*已**tinyint**，預設值是**1** （啟用）。 如果**0**，未啟用排程。 當未啟用排程時，不會依據這份排程來執行任何作業。  
+`[ @enabled = ] enabled` 指出排程的目前狀態。 *已啟用*已**tinyint**，預設值是**1** （啟用）。 如果**0**，未啟用排程。 當未啟用排程時，不會依據這份排程來執行任何作業。  
   
- [ **@freq_type =** ] *freq_type*  
- 指出將執行作業之時間的值。 *freq_type*已**int**，預設值是**0**，而且可以是下列值之一。  
+`[ @freq_type = ] freq_type` 值，指出作業執行時間。 *freq_type*已**int**，預設值是**0**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -81,8 +76,7 @@ sp_update_schedule
 |**64**|在 SQLServerAgent 服務啟動之時執行|  
 |**128**|在電腦閒置之時執行|  
   
- [ **@freq_interval =** ] *freq_interval*  
- 執行作業的天數。 *freq_interval*已**int**，預設值是**0**，而定的值*freq_type*。  
+`[ @freq_interval = ] freq_interval` 在執行作業的天數。 *freq_interval*已**int**，預設值是**0**，而定的值*freq_type*。  
   
 |值*freq_type*|在影響*freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -94,8 +88,7 @@ sp_update_schedule
 |**64** （當 SQLServerAgent 服務啟動時）|*freq_interval*未使用。|  
 |**128**|*freq_interval*未使用。|  
   
- [ **@freq_subday_type =** ] *freq_subday_type*  
- 指定的單位*freq_subday_interval * *。* *freq_subday_type*已**int**，預設值是**0**，而且可以是下列值之一。  
+`[ @freq_subday_type = ] freq_subday_type` 指定的單位*freq_subday_interval * *。* *freq_subday_type*已**int**，預設值是**0**，而且可以是下列值之一。  
   
 |值|描述 (單位)|  
 |-----------|--------------------------|  
@@ -104,11 +97,9 @@ sp_update_schedule
 |**0x4**|Minutes|  
 |**0x8**|小時|  
   
- [ **@freq_subday_interval =** ] *freq_subday_interval*  
- 數目*freq_subday_type*期間每次執行作業之間發生。 *freq_subday_interval*已**int**，預設值是**0**。  
+`[ @freq_subday_interval = ] freq_subday_interval` 數目*freq_subday_type*期間每次執行作業之間發生。 *freq_subday_interval*已**int**，預設值是**0**。  
   
- [ **@freq_relative_interval =** ] *freq_relative_interval*  
- 作業的次數*freq_interval*每個月中，如果*freq_interval*會**32** （每月相對）。 *freq_relative_interval*已**int**，預設值是**0**，而且可以是下列值之一。  
+`[ @freq_relative_interval = ] freq_relative_interval` 作業的次數*freq_interval*每個月中，如果*freq_interval*會**32** （每月相對）。 *freq_relative_interval*已**int**，預設值是**0**，而且可以是下列值之一。  
   
 |值|描述 (單位)|  
 |-----------|--------------------------|  
@@ -118,28 +109,21 @@ sp_update_schedule
 |**8**|第四個|  
 |**16**|最後一個|  
   
- [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- 作業的各排程執行之間的週數或月數。 *freq_type*才會使用*freq_type*是**8**， **16**，或**32**。 *freq_type*已**int**，預設值是**0**。  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` 週數或作業的排程執行之間的月數。 *freq_type*才會使用*freq_type*是**8**， **16**，或**32**。 *freq_type*已**int**，預設值是**0**。  
   
- [ **@active_start_date =** ]  *active_start_date*  
- 可以開始執行作業的日期。 *active_start_date*已**int**，預設值是 NULL，表示今天的日期。 日期格式為 YYYYMMDD。 如果*active_start_date*不是 NULL，日期必須大於或等於 19900101。  
+`[ @active_start_date = ] active_start_date` 可以開始執行作業的日期。 *active_start_date*已**int**，預設值是 NULL，表示今天的日期。 日期格式為 YYYYMMDD。 如果*active_start_date*不是 NULL，日期必須大於或等於 19900101。  
   
  建立排程之後，檢閱開始日期，並確認該日期正確。 如需詳細資訊，請參閱 「 排程開始日期 」 一節中[建立及附加排程至作業](../../ssms/agent/create-and-attach-schedules-to-jobs.md)。  
   
- [ **@active_end_date =** ] *active_end_date*  
- 可以停止執行作業的日期。 *active_end_date*已**int**，預設值是**99991231**，這表示年 12 月 31 日至 9999。 格式為 YYYYMMDD。  
+`[ @active_end_date = ] active_end_date` 可以停止執行作業的日期。 *active_end_date*已**int**，預設值是**99991231**，這表示年 12 月 31 日至 9999。 格式為 YYYYMMDD。  
   
- [ **@active_start_time =** ] *active_start_time*  
- 之間任何一天的時間*active_start_date*並*active_end_date*開始執行作業。 *active_start_time*已**int**，預設值是 000000，表示上午 12:00:00 必須用 HHMMSS 格式來輸入。  
+`[ @active_start_time = ] active_start_time` 之間任何一天的時間*active_start_date*並*active_end_date*開始執行作業。 *active_start_time*已**int**，預設值是 000000，表示上午 12:00:00 必須用 HHMMSS 格式來輸入。  
   
- [ **@active_end_time =** ] *active_end_time*  
- 之間任何一天的時間*active_start_date*並*active_end_date*結束執行作業。 *active_end_time*已**int**，預設值是**235959**，這表示下午 11:59:59 必須用 HHMMSS 格式來輸入。  
+`[ @active_end_time = ] active_end_time` 之間任何一天的時間*active_start_date*並*active_end_date*結束執行作業。 *active_end_time*已**int**，預設值是**235959**，這表示下午 11:59:59 必須用 HHMMSS 格式來輸入。  
   
- [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
- 擁有排程之伺服器主體的名稱。 *owner_login_name*已**sysname**，預設值是 NULL，表示排程建立者所擁有。  
+`[ @owner_login_name = ] 'owner_login_name']` 擁有排程之伺服器主體名稱。 *owner_login_name*已**sysname**，預設值是 NULL，表示排程建立者所擁有。  
   
- [ **@automatic_post =**] *automatic_post*  
- 已保留。  
+`[ @automatic_post = ] automatic_post` 保留。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -179,10 +163,10 @@ GO
  [排程的作業](../../ssms/agent/schedule-a-job.md)   
  [建立排程](../../ssms/agent/create-a-schedule.md)   
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobschedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
- [sp_delete_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

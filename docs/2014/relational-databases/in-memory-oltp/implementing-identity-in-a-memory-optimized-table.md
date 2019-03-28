@@ -10,19 +10,19 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c774e0b69565c21a7ba794712212e3b79bcc66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204038"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538130"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 IDENTITY
   記憶體最佳化資料表支援 IDENTITY(1, 1)。 但是，記憶體最佳化資料表不支援定義為 IDENTITY(x, y) (其中 x != 1 或 y != 1) 的識別欄位。 識別值的因應措施是使用 SEQUENCE 物件 ([序號](../sequence-numbers/sequence-numbers.md))。  
   
  首先將 IDENTITY 屬性從您要轉換成 In-Memory OLTP 的資料表中移除。 接著在資料表中為資料行定義新的 SEQUENCE 物件。 做為識別資料行的 SEQUENCE 物件需倚賴使用 NEXT VALUE FOR 語法建立資料行之 DEFAULT 值的能力取得新的識別值。 由於 In-Memory OLTP 中不支援 DEFAULT，因此您必須將新產生的 SEQUENCE 值傳遞至 INSERT 陳述式或執行插入作業的原生編譯預存程序。 下列範例示範此模式。  
   
-```tsql  
+```sql  
 -- Create a new In-Memory OLTP table to simulate IDENTITY insert  
 -- Here the column C1 was the identity column in the original table  
 --  

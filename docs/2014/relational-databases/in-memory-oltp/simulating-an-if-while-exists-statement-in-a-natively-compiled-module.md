@@ -10,17 +10,17 @@ ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6827f14702063765ccf64c8b70ba5088a8509ff1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac041e19aeb5948a644a9fcf82b3e687472b7259
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510085"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535620"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>在原生編譯預存程序中模擬 EXISTS 子句
   原生編譯預存程序不支援 `EXISTS` 子句，但是有解決方法：  
   
-```tsql  
+```sql  
 DECLARE @exists BIT = 0  
 SELECT TOP 1 @exists = 1 FROM MyTable WHERE ...  
 IF @exists = 1  

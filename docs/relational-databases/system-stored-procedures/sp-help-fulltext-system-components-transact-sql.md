@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635685"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534320"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,8 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  傳回所有全文檢索元件的資訊。  
   
- [ **@component_type=** ] *component_type*  
- 指定元件的類型。 *component_type*可以是下列其中之一：  
+`[ @component_type = ] component_type` 指定元件的型別。 *component_type*可以是下列其中之一：  
   
 -   **wordbreaker**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  如果指定的完整路徑，則*param*也必須指定完整的路徑元件 DLL，或會傳回錯誤訊息。  
   
- [ **@param=** ] *param*  
- 這是下列其中一項 (依元件類型而定)：地區設定識別碼 (LCID)、具有 "." 前置詞的副檔名、識別通訊協定處理常式的完整元件名稱，或元件 DLL 的完整路徑。  
+`[ @param = ] param` 這是下列其中一種元件類型而定： 地區設定識別碼 (LCID)、 使用的副檔名 」。 「 前置詞，通訊協定處理常式中，或元件 DLL 的完整路徑的完整元件名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -129,7 +127,7 @@ GO
  根據預設，不會安裝這個篩選，所以結果集是空的。  
   
 ### <a name="e-listing-a-specific-dll-file"></a>E. 列出特定的 .dll 檔案  
- 下列範例會列出特定的 .dll 檔 `nlhtml.dll`，預設情況下會安裝這個檔案。  
+ `nlhtml.dll`下列範例會列出特定的 .dll 檔 ，預設情況下會安裝這個檔案。  
   
 ```  
 EXEC sp_help_fulltext_system_components 'fullpath',   

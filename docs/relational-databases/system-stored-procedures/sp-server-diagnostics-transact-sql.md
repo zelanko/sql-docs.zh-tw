@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213767"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535260"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 擷取有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的診斷資料和健全狀況資訊，以偵測潛在的失敗。 此程序會以重複模式執行，並定期傳送結果。 它可以從一般或 DAC 連接來叫用。  
   
-**適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
- 表示預存程序會重複執行以傳送健全狀況資訊的時間間隔。  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 表示的預存程序會重複執行以傳送健全狀況資訊的時間間隔。  
   
  *repeat_interval_in_seconds*已**int**與預設值是 0。 有效的參數值是 0，或等於或大於 5 的任何值。 預存程序必須至少執行 5 秒，才能傳回完整資料。 預存程序以重複模式執行的最小值為 5 秒。  
   
@@ -62,9 +61,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|表示資料列建立的時間戳記。 單一資料列集的每個資料列都有相同的時間戳記。|  
 |**component_type**|**sysname**|指出資料列是否包含資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體層級元件或 Alwayson 可用性群組：<br /><br /> 執行個體<br /><br /> Alwayson: AvailabilityGroup|  
-|**元件 _ 名稱**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性群組的名稱 >*|  
+|**component_name**|**sysname**|指出元件的名稱或可用性群組的名稱：<br /><br /> 系統<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性群組的名稱 >*|  
 |**state**|**int**|指出元件的健全狀態：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0:Unknown<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
+|**state_desc**|**sysname**|描述狀態資料行。 對應至狀態資料行值的描述如下：<br /><br /> 0：Unknown<br /><br /> 1： 初始狀態<br /><br /> 2： 警告<br /><br /> 3： 錯誤|  
 |**data**|**varchar (max)**|指定元件的相關資料。|  
   
  以下是五種元件的說明：  

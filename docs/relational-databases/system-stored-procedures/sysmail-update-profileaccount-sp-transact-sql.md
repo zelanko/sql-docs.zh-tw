@@ -18,12 +18,12 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c3a8e3db9e0e66f3a3e300e972ca1d2f02f1d03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96dc0a33c15f1547088c3fe7c79824da55cd1d35
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538120"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@profile_id** =] *profile_id*  
- 要更新之設定檔的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+`[ @profile_id = ] profile_id` 若要更新之設定檔的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要更新之設定檔的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'` 若要更新的設定檔設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
   
- [ **@account_id** = ] *account_id*  
- 這是要更新的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
+`[ @account_id = ] account_id` 要更新的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 這是要更新的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
+`[ @account_name = ] 'account_name'` 要更新的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
   
- [ **@sequence_number** = ] *sequence_number*  
- 帳戶的新序號。 *sequence_number*已**int**，沒有預設值。 序號決定了帳戶在設定檔中的使用順序。  
+`[ @sequence_number = ] sequence_number` 新的序號的帳戶。 *sequence_number*已**int**，沒有預設值。 序號決定了帳戶在設定檔中的使用順序。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -17,12 +17,12 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d000f5754909a8213b501f79d13edc8c4540dabd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: db1a34a93c740aac5e24734f0a5f07c2d6719b73
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748770"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535900"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>啟用和停用變更追蹤 (SQL Server)
   此主題描述如何針對資料庫和資料表啟用及停用變更追蹤。  
@@ -30,7 +30,7 @@ ms.locfileid: "52748770"
 ## <a name="enable-change-tracking-for-a-database"></a>為資料庫啟用變更追蹤  
  在您可以使用變更追蹤之前，必須先在資料庫層級啟用變更追蹤。 下列範例將示範如何使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)來啟用變更追蹤。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -55,7 +55,7 @@ SET CHANGE_TRACKING = ON
   
  下列範例示範如何使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)，為資料表啟用變更追蹤。  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -70,14 +70,14 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  當資料庫中沒有任何資料表追蹤變更時，您可以為此資料庫停用變更追蹤。 下列範例將示範如何使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)，為資料庫停用變更追蹤。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  下列範例示範如何使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)，為資料表停用變更追蹤。  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  

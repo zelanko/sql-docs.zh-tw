@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95316400d336a13304f1da0850ecdcc9565fe5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707326"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536320"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@objname =** ] **'***name***'**  
- 這是使用者自訂、結構描述範圍物件的限定或非限定名稱。 只有在指定限定物件時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 這個物件必須在目前的資料庫中。 *名稱*已**nvarchar(776)**，沒有預設值。  
+`[ @objname = ] 'name'` 是使用者定義的結構描述範圍物件的完整或非完整名稱。 只有在指定限定物件時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 這個物件必須在目前的資料庫中。 *名稱*已**nvarchar(776)**，沒有預設值。  
   
- [  **@columnname =** ] **'***computed_column_name***'**  
- 這是要顯示定義資訊的計算資料行名稱。 包含資料行的資料表必須指定為*名稱*。 *column_name*已**sysname**，沒有預設值。  
+`[ @columnname = ] 'computed_column_name'` 是要顯示定義資訊的計算資料行的名稱。 包含資料行的資料表必須指定為*名稱*。 *column_name*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -60,7 +58,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  sp_helptext 會顯示在多個資料列中建立物件所用的定義。 每一個資料列都包含 255 個字元的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義。 這個定義位在**定義**中的資料行[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)目錄檢視。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。 系統物件定義是公開顯示的。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。  
+ 需要 **public** 角色的成員資格。 系統物件定義是公開顯示的。 凡具有下列任一權限的物件擁有者或被授與者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
 ## <a name="examples"></a>範例  
   
