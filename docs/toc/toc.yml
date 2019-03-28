@@ -1223,7 +1223,7 @@ items:
     items:
     - name: 概觀
       items:
-      - name: Filestream
+      - name: 檔案資料流
         href: ../relational-databases/blob/filestream-sql-server.md
       - name: Filetable
         href: ../relational-databases/blob/filetables-sql-server.md
@@ -1231,7 +1231,7 @@ items:
         href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: 遠端 Blob 存放區 (RBS)
         href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: Filestream
+    - name: 檔案資料流
       items:
       - name: 啟用與設定
         href: ../relational-databases/blob/enable-and-configure-filestream.md
@@ -6894,6 +6894,7 @@ items:
     - name: 使用測試伺服器的考量
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: 智慧查詢處理
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: 效能中心
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: 匿名的使用量資料
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: 安裝 sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: 版本資訊
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: sqlpackage 參考
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 處理 XQuery 中的命名空間
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417230"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538680"
