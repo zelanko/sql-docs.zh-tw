@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a06b74d65cdc33429ce694d04753863d711c5cae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202877"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290674"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -293,7 +293,7 @@ static void Main()
 
 **OR**
 
- - 在 SQL Server 安裝資料夾 (例如 C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn) 下搜尋可執行檔 **ISDeploymentWizard.exe**。 
+ - 在 SQL Server 安裝資料夾下搜尋可執行檔 **ISDeploymentWizard.exe**，例如："C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn"。 
  
  > **注意：** 若顯示 [簡介]  頁面，請按一下 [下一步]  切換至 [選取來源]  頁面。 
  

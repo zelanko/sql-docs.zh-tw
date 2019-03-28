@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 90a5d458bcb7b1e90993a51ccfb4ebe217622f34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955989"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538650"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -492,7 +492,7 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式傳送這份資料。 其效果與指定 **-w** 參數但不指定格式檔案相同。|  
 |SQLBINARY 或 SQLVARYBIN|未經任何轉換即傳送這份資料。|  
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
  **bcp out** 作業需要來源資料表的 SELECT 權限。  
   
@@ -552,7 +552,7 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 
 下面的指令碼會建立 `WideWorldImporters.Warehouse.StockItemTransactions` 資料表的空複本，然後新增主索引鍵條件約束。  在 SQL Server Management Studio (SSMS) 中執行下列 T-SQL 指令碼
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642405"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290884"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -164,7 +164,7 @@ ms.locfileid: "51642405"
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|雜湊值不是一維的位元組陣列 (錯誤: %1)。 這個問題發生在 CPackage::LoadUserCertificateByHash 中。|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|無法存取陣列中的資料 (錯誤: %1)。 每當呼叫 GetDataFromSafeArray 時，就會發生這個錯誤。|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|SSIS Managed 協助程式物件在建立時失敗，錯誤為 0x%1!8.8X! "%2"。 每當 CoCreateInstance CLSID_DTSManagedHelper 失敗時，就會發生這個問題。|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|SSIS 執行階段無法將 OLE DB 連接編列到分散式交易中，錯誤為 0x%1!8.8X! "%2".|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|SSIS 執行階段無法將 OLE DB 連接編列到分散式交易中，錯誤為 0x%1!8.8X! "%2"。|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|封裝簽章失敗，錯誤為 0x%1!8.8X! "%2"。 當 ManagedHelper.SignDocument 方法失敗時，就會發生這個問題。|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|無法在封裝 XML 中檢查 XML 簽章封套 (Envelope)，錯誤為 0x%1!8.8X! "%2"。 這個問題發生在 CPackage::LoadFromXML 中。|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|無法從 XML DOM 物件取得 XML 來源，錯誤為 0x%1!8.8X! "%2"。 當 IXMLDOMDocument::get_xml 失敗時，就會發生這個問題。|  
@@ -190,7 +190,7 @@ ms.locfileid: "51642405"
 |0xC0014044|-1073659836|DTS_E_FOLDERRENAMEFAILED|在 SQL Server 上，將資料夾 " %1\\\\%2" 重新命名為 "%1\\\\%3" 時發生錯誤。|  
 |0xC0014045|-1073659835|DTS_E_RENAMEFOLDERONSQLSERVER_OLEDB|RenameFolderOnSQLServer 方法發現 OLE DB 錯誤碼 0x%1!8.8X! (%2)。 發出的 SQL 陳述式失敗。|  
 |0xC0014046|-1073659834|DTS_E_FOLDERDELETEFAILED|刪除 SQL Server 資料夾 "%1" 時發生錯誤。|  
-|0xC0014047|-1073659833|DTS_E_REMOVEFOLDERFROMSQLSERVER_OLEDB|RemoveFolderOnSQLServer 方法發現 OLE DB 錯誤碼 0x%1!8.8X! (%2). 發出的 SQL 陳述式失敗。|  
+|0xC0014047|-1073659833|DTS_E_REMOVEFOLDERFROMSQLSERVER_OLEDB|RemoveFolderOnSQLServer 方法發現 OLE DB 錯誤碼 0x%1!8.8X! (%2)。 發出的 SQL 陳述式失敗。|  
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|指定的封裝路徑未包含封裝名稱。 當路徑未至少包含一個反斜線或一個斜線時，就會發生這個問題。|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|找不到資料夾 "%1"。|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|嘗試在 SQL 上尋找資料夾時發現 OLE DB 錯誤，錯誤碼為 0x%1!8.8X! (%2)。|  
@@ -376,7 +376,7 @@ ms.locfileid: "51642405"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|錯誤 0x%1!8.8X! 準備載入封裝時發生錯誤。 %2。|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|在工作上的 Validate 方法失敗，並傳回錯誤碼 0x%1!8.8X! (%2)。 Validate 方法必須成功，並使用 "out" 參數表示結果。|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|在工作上的 Execute 方法傳回錯誤碼 0x%1!8.8X! (%2)。 Execute 方法必須成功，並使用 "out" 參數表示結果。|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|擷取相依性時，工作 "%1"失敗：0x%2!8.8X! 。 發生錯誤時，執行階段正從工作的相依性集合擷取相依性。 工作可能未正確實作其中一個相依性介面。|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|工作 "%1"失敗：0x%2!8.8X! 。 發生錯誤時，執行階段正從工作的相依性集合擷取相依性。 工作可能未正確實作其中一個相依性介面。|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|工作驗證期間發生錯誤。|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|連接字串格式無效。 必須由一或多個 X=Y 格式的元件組成，並以分號隔開。 在資料庫連接管理員上設定不含元件的連接字串時，就會發生這個錯誤。|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|連接字串元件不能包含未加引號的分號。 如果值必須包含分號，請用引號括住整個值。 當連接字串中的值包含未加引號的分號時，例如 InitialCatalog 屬性，就會發生這個錯誤。|  
@@ -569,7 +569,7 @@ ms.locfileid: "51642405"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|指定的指令碼語言無效。|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|找不到進入點。|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|未指定指令碼語言。 請確認已指定有效的指令碼語言。|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|使用者介面初始化: 此工作是 Null。|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|使用者介面初始化：工作為 Null。|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|使用不正確的工作初始化指令碼工作使用者介面。|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|未指定收件者。|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|未指定 Simple Mail Transfer Protocol (SMTP) 伺服器。 請提供 SMTP 伺服器的有效名稱或 IP 位址。|  
@@ -789,8 +789,8 @@ ms.locfileid: "51642405"
 |0xC00292A7|-1073573209|DTS_E_TRANSFERDBTASK_NOOVERWRITEDB|目的地伺服器 "%2" 上已經有資料庫 "%1" 存在。|  
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|至少必須指定一個來源檔案。|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|在來源資料庫 "%2" 中找不到檔案 "%1"。|  
-|0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|符合 U.S. FIPS 140-2 的系統上不允許要求的作業。|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|執行查詢 "%1" 失敗，發生下列錯誤: "%2"。 可能的失敗原因: 查詢發生問題、未正確設定 "ResultSet" 屬性、未正確設定參數，或未正確建立連接。|  
+|0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|符合 U.S. 規範的系統上不允許要求的作業。FIPS 140-2.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|執行查詢 "%1" 失敗，發生下列錯誤: "%2"。 可能的失敗原因：查詢發生問題、未正確設定 "ResultSet" 屬性、未正確設定參數，或未正確建立連接。|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|從 XML 檔案讀取預存程序名稱時發生錯誤。|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|傳送預存程序工作的資料節點無效。|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|連接 "%1" 的類型不是 "SMOServer"。|  
@@ -1064,7 +1064,7 @@ ms.locfileid: "51642405"
 |0xC00470B8|-1073450824|DTS_E_EXPREVALILLEGALESCAPEINSTRINGLITERAL|字串常值 "%1" 包含不合法的逸出序列 "\\%2!c!"。 在運算式評估工具中，字串常值不支援逸出序列。 如果字串中需要反斜線，請使用雙反斜線 "\\\\"。|  
 |0xC00470B9|-1073450823|DTS_E_NOOUTPUTCOLUMNS|"%1" 未包含輸出資料行。 非同步輸出必須包含輸出資料行。|  
 |0xC00470BA|-1073450822|DTS_E_LOBDATATYPENOTSUPPORTED|"%1" 具有 Long 物件資料類型 DT_TEXT、DT_NTEXT 或 DT_IMAGE，但不受支援。|  
-|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|輸出識別碼 %1!d!  有多個錯誤輸出組態。 第一個為 %2!d! 和 %3!d!，接著為 %4!d! 和 %5!d!。|  
+|0xC00470BB|-1073450821|DTS_E_OUTPUTWITHMULTIPLEERRORS|輸出識別碼 %1!d! 有多個錯誤輸出組態。 第一個為 %2!d! 和 %3!d!，接著為 %4!d! 和 %5!d!。|  
 |0xC00470BC|-1073450820|DTS_E_FAILEDDURINGOLEDBDATATYPECONVERSIONCHECK|在 "%1" 的資料類型轉換驗證期間，OLE DB 提供者失敗。|  
 |0xC00470BD|-1073450819|DTS_E_BUFFERISEOR|這個緩衝區表示資料列集結尾，無法變更資料列計數。  在具有資料列集結尾旗標的緩衝區上，嘗試呼叫 AddRow 或 RemoveRow。|  
 |0xC00470BE|-1073450818|DTS_E_EXPREVALUNSUPPORTEDTYPE|運算式不支援資料類型 "%1"。 指定的類型不受支援或無效。|  
@@ -1114,7 +1114,7 @@ ms.locfileid: "51642405"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|值 %1!d! 未辨識為有效的存取模式 。 小數位數必須在 %3!d! 到 %4!d! 的範圍內 。 小數位數不得超出有效位數，且不得為負數。|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|值 %1!d! 未辨識為有效的存取模式 。 長度必須是正數。|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|無法指派負值給 %1。|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2" 的 "%1" 自訂屬性不能設定為 true。  資料行資料類型必須是下列其中一個: DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2 或 DT_FILETIME。|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2" 的 "%1" 自訂屬性不能設定為 true。  資料行資料類型必須是下列其中一項：DT_I1、DT_I2、DT_I4、DT_I8、DT_UI1、DT_UI2、DT_UI4、DT_UI8、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAMPOFFSET、DT_DATE、DT_DBDATE、DT_DBTIME、DT_DBTIME2 或 DT_FILETIME。|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|無法重新附加 "%1"。 請刪除路徑、加入新路徑，然後再附加。|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|函數 "%1" 需要 %2!d! 參數， 而非 %3!d! 參數。 已辨識函數名稱，但參數數目無效。|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|函數 "%1" 需要 %2!d! 參數， 而非 %3!d! 參數。 已辨識函數名稱，但參數數目無效。|  
@@ -1240,11 +1240,11 @@ ms.locfileid: "51642405"
 |0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS 錯誤碼 DTS_E_OLEDB_EXCEL_NOT_SUPPORTED：64 位元版本的 SSIS 不支援 Excel 連接管理員，因為沒有 OLE DB 提供者可用。|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|快取檔案已損毀，或該檔案不是以快取連接管理員建立的。  請提供有效的快取檔案。|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|未正確設定 SQL 命令。 請檢查 SQLCommand 屬性。|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|有 COM 錯誤物件資訊可用。  來源: "%1"  錯誤碼: 0x%2!8.8X!  描述: "%3"。|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|有 COM 錯誤物件資訊可用。  來源: "%1"  錯誤碼:0x%2!8.8X!  描述: "%3"。|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|無法存取已取得的連接。|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|資料行數目不正確。|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|在資料來源中找不到資料行 "%1"。|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|有 OLE DB 記錄可用。  來源: "%1" Hresult: 0x%2!8.8X!  描述: "%3"。|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|有 OLE DB 記錄可用。  來源: "%1"  Hresult:0x%2!8.8X!  描述: "%3"。|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS 錯誤碼 DTS_E_OLEDBERROR。  發生 OLE DB 錯誤。 錯誤碼：0x%1!8.8X!。|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|已經連接元件。 嘗試連接之前，元件必須中斷連接。|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|屬性 "%1" 的值不正確。|  
@@ -1687,7 +1687,7 @@ ms.locfileid: "51642405"
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|無法依指定來對應資料行 "%1" 的資料類型。|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|不支援已存在的比對索引 "%2" 的版本 (%1)。 需要的版本是 "%3"。 如果索引中繼資料保存的版本不符合用來建立目前程式碼的版本，就會發生這個錯誤。 請使用目前程式碼版本重建索引，修正錯誤。|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|資料表 "%1" 似乎不是有效的預先建立比對索引。 當無法從指定的預先建立索引載入中繼資料記錄時，就會發生這個錯誤。|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|無法讀取指定的預先建立比對索引 "%1"。  OLEDB 錯誤碼: 0x%2!8.8X!。|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|無法讀取指定的預先建立比對索引 "%1"。  OLEDB 錯誤碼：0x%2!8.8X!。|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|沒有具有參考資料表資料行之有效聯結的輸入資料行。  請確定至少有一個聯結是使用輸入資料行屬性 JoinToReferenceColumn 和 JoinType 所定義。|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|指定已存在的比對索引 "%1" 最初不是以資料行 "%2" 的模糊相符資訊建立。  必須重建來包含這項資訊。 當用來建立索引的資料行不是模糊聯結資料行時，就會發生這個錯誤。|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|提供給屬性 "%2" 的名稱 "%1" 不是有效的 SQL 識別碼名稱。 如果屬性的名稱不符合有效 SQL 識別碼名稱的規格時，就會發生這個錯誤。|  
@@ -2037,7 +2037,7 @@ ms.locfileid: "51642405"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|組態項目 "%1" 的格式不正確。 可能是因為遺漏分隔符號或格式化錯誤，例如無效的陣列分隔符號。|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|父變數 "%1" 的組態並未發生，因為沒有父變數集合。|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|無法匯入組態檔: "%1"。|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|父變數 "%1" 的組態並未發生，因為沒有父變數。 錯誤碼: 0x%2!8.8X!。|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|父變數 "%1" 的組態並未發生，因為沒有父變數。 錯誤碼：0x%2!8.8X!。|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|組態檔是空的，未包含組態項目。|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|組態 "%1" 的組態類型無效。 嘗試將組態物件的類型屬性設定為無效的組態類型時，就會發生這個問題。|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|在機碼 "%1" 中找不到登錄組態的組態類型。 請將名稱為 ConfigType 的值加入登錄機碼中，並給定字串值 "Variable"、"Property"、"ConnectionManager"、"LoggingProvider" 或 "ForEachEnumerator"。|  
@@ -2125,7 +2125,7 @@ ms.locfileid: "51642405"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|找不到元件 %2 的 "%1" 值。 找不到元件的 CurrentVersion 值。 如果元件未於 DTSInfo 區段中設定登錄資訊來包含 CurrentVersion 值，就會發生這個錯誤。 如果未適當地登錄元件，則在元件開發期間或在封裝中使用元件時，就會出現這個訊息。|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|緩衝區管理員無法取得暫存檔名稱。|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|緩衝區管理員無法在路徑 "%1" 上建立暫存檔。 不會再考慮使用此路徑做為暫存區。|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告: 無法開啟全域共用記憶體來與效能 DLL 通訊; 資料流程效能計數器無法使用。  若要解決問題，必須以管理員身分或在系統的主控台上執行此封裝。|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|警告：無法開啟全域共用記憶體來與效能 DLL 通訊；資料流程效能計數器無法使用。  若要解決問題，必須以管理員身分或在系統的主控台上執行此封裝。|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|檔案結尾有不完整的資料列。|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|在讀取標頭資料列時，已經到達資料檔案的結尾。 請確定標頭資料列分隔符號和要略過的標頭資料列數都正確。|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|無法從 OLE DB 提供者擷取資料行字碼頁資訊。  如果元件支援 "%1" 屬性，將使用該屬性的字碼頁。  如果目前的字串字碼頁值不正確，請變更屬性的值。  如果元件不支援屬性，將使用元件地區設定識別碼的字碼頁。|  
@@ -2237,7 +2237,7 @@ ms.locfileid: "51642405"
 |0x4004300B|1074016267|DTS_I_ROWS_WRITTEN|"%1" 寫入 %2!ld! 個資料列 資料列。|  
 |0x4004300C|1074016268|DTS_I_EXECUTIONPHASE_EXECUTE|正在開始執行階段。|  
 |0x4004800C|1074036748|DTS_I_CANTRELIEVEPRESSURE|緩衝區管理員偵測到系統虛擬記憶體偏低，但無法空出任何緩衝區。 已考量 %1!d! 個緩衝區，但 %2!d! 個已鎖定 。 可能是因為未安裝足夠記憶體，造成管線可用的記憶體不足、其他處理序正在使用記憶體或鎖定太多緩衝區。|  
-|0x4004800D|1074036749|DTS_I_CANTALLOCATEMEMORYPRESSURE|緩衝區管理員執行 %3!d! 位元組的記憶體配置呼叫失敗， 無法空出任何緩衝區來緩和記憶體不足的壓力。 已考量  %1!d! 個緩衝區，但 %2!d! 個已鎖定 。 可能是因為未安裝足夠記憶體，造成管線可用的記憶體不足、其他處理序正在使用記憶體或鎖定太多緩衝區。|  
+|0x4004800D|1074036749|DTS_I_CANTALLOCATEMEMORYPRESSURE|緩衝區管理員執行 %3!d! 位元組的記憶體配置呼叫失敗， 無法空出任何緩衝區來緩和記憶體不足的壓力。 已考量 %1!d! 個緩衝區，但 %2!d! 個已鎖定 。 可能是因為未安裝足夠記憶體，造成管線可用的記憶體不足、其他處理序正在使用記憶體或鎖定太多緩衝區。|  
 |0x4004800E|1074036750|DTS_I_ALLOCATEDDURINGMEMORYPRESSURE|緩衝區管理員已配置 %1!d! 位元組， 但是仍偵測到記憶體不足的壓力，而且反覆嘗試交換緩衝區都告失敗。|  
 |0x400490F4|1074041076|DTS_I_TXLOOKUP_CACHE_PROGRESS|%1 已快取 %2!d! 個資料列 資料列。|  
 |0x400490F5|1074041077|DTS_I_TXLOOKUP_CACHE_FINAL|%1 已快取共 %2!d! 個 資料列。|  

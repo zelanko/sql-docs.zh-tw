@@ -2,19 +2,19 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033600"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527590"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "56033600"
   
 **SqlPackage.exe** 命令列可讓您指定這些動作以及動作特有的參數和屬性。  
 
-**[下載最新版本](sqlpackage-download.md)**。 如需最新版本的詳細資訊，請參閱[版本資訊](sqlpackage-release-notes.md)。
+**[下載最新版本](sqlpackage-download.md)**。 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
   
 ## <a name="command-line-syntax"></a>命令列語法
 
@@ -48,7 +48,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
   
 ### <a name="help-for-the-extract-action"></a>Extract 動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -72,7 +72,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ### <a name="properties-specific-to-the-extract-action"></a>擷取動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|DacApplicationDescription=(STRING)|定義要儲存在 DACPAC 中繼資料中的應用程式描述。|
@@ -96,7 +96,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="help-for-publish-action"></a>發行動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|發行|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -135,7 +135,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="properties-specific-to-the-publish-action"></a>發行動作的特定屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
@@ -229,7 +229,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 下表描述可用來覆寫在發行動作期間所用 SQL 命令 (**sqlcmd**) 變數值之選項的格式。 命令列上指定的變數值會覆寫指派給變數的其他值 (例如在發行設定檔中)。  
   
-|參數|預設|描述|  
+|參數|預設|Description|  
 |-------------|-----------|---------------|  
 |**/Variables:{PropertyName}={Value}**||指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。|  
   
@@ -239,7 +239,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
   
 ### <a name="help-for-export-action"></a>匯出動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|匯出|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -263,7 +263,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
 
 ### <a name="properties-specific-to-the-export-action"></a>匯出動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|指定支援儲存體的類型，以供結構描述模型在擷取期間使用。|
@@ -277,7 +277,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-command-actions"></a>命令動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|匯入|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -300,7 +300,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 
 匯入動作特有的屬性：
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|定義 Azure SQL Database 的版本。|
@@ -316,7 +316,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -352,7 +352,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport 動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
@@ -448,7 +448,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -475,7 +475,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
   
 ### <a name="help-for-the-script-action"></a>指令碼動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|指令碼|指定要執行的動作。 |
 |**/AccessToken:**|**/at**|{string}| 根據要在連線到目標資料庫時使用的驗證存取權杖，來指定權杖。 |
@@ -513,7 +513,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表的資料，從 BACP
 
 ### <a name="properties-specific-to-the-script-action"></a>指令碼動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417910"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281432"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 連接管理員
   Hadoop 連線管理員可以使用您為屬性指定的值，讓 SQL Server Integration Services (SSIS) 套件連線至 Hadoop 叢集。  
@@ -172,7 +172,7 @@ ms.locfileid: "52417910"
 
     1. 移至 [伺服器管理員] > [群組原則管理] > [網域]。 從該處移至 [群組原則物件] > [預設值或作用中網域原則] > [編輯]。
 
-    2. 在 [群組原則管理編輯器] 快顯視窗中，移至 [電腦設定] > [原則] > [Windows 設定]。 從該處移至 [安全性設定] > [本機原則] > [安全性選項]。 設定 [網路安全性: 設定 Kerberos 允許的加密類型]。
+    2. 在 [群組原則管理編輯器] 快顯視窗中，移至 [電腦設定] > [原則] > [Windows 設定]。 從該處移至 [安全性設定] > [本機原則] > [安全性選項]。 設定[網路安全性:設定 Kerberos 允許的加密類型]。
 
     3. 選取您要用來連線到 KDC 的加密演算法。 通常您可以選取任何選項。
 
