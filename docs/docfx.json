@@ -94,7 +94,6 @@
     },
 
     "fileMetadata": {
-
       "feedback_system": {
         "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
@@ -104,7 +103,6 @@
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
       },
-
       "titleSuffix": {
         "2014/analysis-services/**/*.md": "SQL Server 2014 Analysis Services",
         "2014/database-engine/availability-groups/**/*.md": "SQL Server Always On",
@@ -112,7 +110,6 @@
         "2014/relational-database/replication/**/*.md": "SQL Server Replication",
         "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server Always On",
-    
         "analysis-services/**/*.md": "",
         "azure-data-studio/**/*.md": "Azure Data Studio",
         "database-engine/availability-groups/**/*.md": "SQL Server Always On",
@@ -121,18 +118,14 @@
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On"
       },
-
       "breadcrumb_path": {
         "**/*.md": "~/breadcrumb/toc.yml",
         "2014/**/*.md": "~/2014/breadcrumb/toc.yml"
       },
-      
       "layout":{
         "**/index.yml": "LandingPage"
       },
-      
       "monikerRange": {
-
         "ado/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "big-data-cluster/**/*.md": ">= sql-server-ver15 || >= sql-server-linux-ver15 || = sqlallproducts-allversions",
         "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
@@ -140,7 +133,6 @@
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "sql-operations-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
-
         "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "analysis-services/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
@@ -164,14 +156,93 @@
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "t-sql/**/*.md": "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
-      }
+      },
+      "open_to_public_contributors": {
+        "2014/**.md": false,
+        "ado/**.md": false,
+        "advanced-analytics/**.md": false,
+        "analysis-services/**.md": false,
+        "analytics-platform-system/**.md": false,
+        "azure-data-studio/**.md": false,
+        "big-data-cluster/**.md": false,
+        "connect/**.md": false,
+        "data-quality-services/**.md": false,
+        "dea/**.md": false,
+        "dma/**.md": false,
+        "dmx/**.md": false,
+        "integration-services/**.md": false,
+        "linux/**.md": false,
+        "master-data-services/**.md": false,
+        "mdx/**.md": false,
+        "odbc/**.md": false,
+        "reporting-services/**.md": false,
+        "samples/**.md": false,
+        "ssma/**.md": false,
+        "tools/**.md": false,
+        "xquery/**.md": false,
+        "relational-databases/automatic-tuning/**.md": false,
+        "relational-databases/clr-integration-data-access-in-process-ado-net/**.md": false,
+        "relational-databases/clr-integration-data-access-transactions/**.md": false,
+        "relational-databases/clr-integration-database-objects-types-net-framework/**.md": false,
+        "relational-databases/clr-integration-database-objects-user-defined-functions/**.md": false,
+        "relational-databases/clr-integration-database-objects-user-defined-types/**.md": false,
+        "relational-databases/clr-integration-security-host-protection-attributes/**.md": false,
+        "relational-databases/clr-integration/**.md": false,
+        "relational-databases/express-localdb-error-messages/**.md": false,
+        "relational-databases/express-localdb-instance-apis/**.md": false,
+        "relational-databases/extended-stored-procedures-programming/**.md": false,
+        "relational-databases/extended-stored-procedures-reference/**.md": false,
+        "relational-databases/graphs/**.md": false,
+        "relational-databases/media/**.md": false,
+        "relational-databases/native-client-odbc-api/**.md": false,
+        "relational-databases/native-client-odbc-bulk-copy-operations/**.md": false,
+        "relational-databases/native-client-odbc-communication/**.md": false,
+        "relational-databases/native-client-odbc-cursors/**.md": false,
+        "relational-databases/native-client-odbc-date-time/**.md": false,
+        "relational-databases/native-client-odbc-error-messages/**.md": false,
+        "relational-databases/native-client-odbc-extensions-bulk-copy-functions/**.md": false,
+        "relational-databases/native-client-odbc-how-to/**.md": false,
+        "relational-databases/native-client-odbc-queries/**.md": false,
+        "relational-databases/native-client-odbc-results/**.md": false,
+        "relational-databases/native-client-odbc-stored-procedures/**.md": false,
+        "relational-databases/native-client-odbc-table-valued-parameters/**.md": false,
+        "relational-databases/native-client-odbc-text-image-columns/**.md": false,
+        "relational-databases/native-client-ole-db-blobs/**.md": false,
+        "relational-databases/native-client-ole-db-commands/**.md": false,
+        "relational-databases/native-client-ole-db-data-source-objects/**.md": false,
+        "relational-databases/native-client-ole-db-data-types/**.md": false,
+        "relational-databases/native-client-ole-db-date-time/**.md": false,
+        "relational-databases/native-client-ole-db-errors/**.md": false,
+        "relational-databases/native-client-ole-db-how-to/**.md": false,
+        "relational-databases/native-client-ole-db-interfaces/**.md": false,
+        "relational-databases/native-client-ole-db-provider/**.md": false,
+        "relational-databases/native-client-ole-db-rowsets/**.md": false,
+        "relational-databases/native-client-ole-db-table-valued-parameters/**.md": false,
+        "relational-databases/native-client-ole-db-tables-indexes/**.md": false,
+        "relational-databases/native-client-ole-db-transactions/**.md": false,
+        "relational-databases/native-client/**.md": false,
+        "relational-databases/replication/**.md": false,
+        "relational-databases/security/**.md": false,
+        "relational-databases/server-management-objects-smo/**.md": false,
+        "relational-databases/sqlxml-annotated-xsd-schemas-using/**.md": false,
+        "relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/**.md": false,
+        "relational-databases/sqlxml/**.md": false,
+        "relational-databases/system-catalog-views/**.md": false,
+        "relational-databases/system-compatibility-views/**.md": false,
+        "relational-databases/system-dynamic-management-views/**.md": false,
+        "relational-databases/system-functions/**.md": false,
+        "relational-databases/system-information-schema-views/**.md": false,
+        "relational-databases/system-stored-procedures/**.md": false,
+        "relational-databases/system-tables/**.md": false,
+        "relational-databases/system-views/**.md": false,
+        "relational-databases/wmi-provider-configuration-classes/**.md": false,
+        "relational-databases/wmi-provider-configuration/**.md": false,
+        "relational-databases/wmi-provider-server-events/**.md": false
+        }
     },
-
     "template": [],
     "dest": "docs",
-
     "groups": {
-
       "gr-sql-2014-b": {
         "moniker_range": "= sql-server-2014",
         "dest": "temp2014b"
