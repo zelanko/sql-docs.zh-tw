@@ -1,22 +1,21 @@
 ---
 title: 步驟 6：新增及設定查閱轉換 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143374"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221954"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>課程 1-6：新增及設定查閱轉換
 
@@ -98,7 +97,7 @@ ms.locfileid: "54143374"
   
 8.  在 [資料行] 頁面上，進行下列選擇：  
   
-    1.  在 [可用的輸入資料行] 面板中，將 [CurrencyDate] 拖曳至 [可用的查閱資料行] 面板，並將它放在 [FullDateAlternateKey] 中。  
+    1.  在 [可用的輸入資料行] 面板中，將 [CurrencyDate] 拖曳至 [可用的查閱資料行] 面板，並將它放在 [FullDateAlternateKey] 中。  如果您看到指出資料類型不符的訊息，請將 CurrencyDate 的資料類型變更為 [DT_DBDATE]。
   
     2.  在 [可用的查閱資料行] 清單中，選取 [DateKey] 左邊的核取方塊。  
   
@@ -115,6 +114,3 @@ ms.locfileid: "54143374"
   
 ## <a name="see-also"></a>另請參閱  
 [查閱轉換](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

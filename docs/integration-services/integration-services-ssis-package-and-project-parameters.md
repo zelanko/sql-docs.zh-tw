@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858698"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281312"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 套件和專案參數
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
@@ -103,7 +103,7 @@ ms.locfileid: "51858698"
 ## <a name="create-parameters"></a>Create Parameters
 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來建立專案參數和封裝參數。 下列程序會提供建立封裝/專案參數的逐步指示。  
   
-> **注意**：如果要將使用舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立的專案轉換為專案部署模型，可以使用 [Integration Services 專案轉換精靈]，根據組態建立參數。 如需詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意：** 如果要將使用舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 建立的專案轉換為專案部署模型，可以使用 **[Integration Services 專案轉換精靈]** ，根據組態建立參數。 如需詳細資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
 ### <a name="create-package-parameters"></a>建立套件參數  
   
@@ -126,13 +126,13 @@ ms.locfileid: "51858698"
     |必要項|必須先指定一個值 (非設計預設值)，封裝才能執行。|  
     |Description|為方便維護，使用參數的描述。 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，於 Visual Studio 的 [屬性] 視窗中設定參數描述 (已在適用的參數視窗中選取參數)。|  
   
-    > **注意**：當您將專案部署至目錄時，會再多幾個屬性與專案相關聯。 若要查看目錄中所有參數的所有屬性，請使用 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。  
+    > **注意：** 當您將專案部署至目錄時，會再多幾個屬性與專案相關聯。 若要查看目錄中所有參數的所有屬性，請使用 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。  
   
 4.  儲存專案以儲存參數的變更。 參數值會儲存在專案檔案中。  
   
     > **警告！！** 您可以在清單中就地編輯，也可以使用 [屬性] 視窗來修改參數屬性的值。 您可以使用 [刪除] **(X)** 工具列按鈕來刪除參數。 您可以使用最後一個工具列按鈕，為僅在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中執行包時使用的參數指定值。  
   
-    > **注意**：如果您在沒有開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中專案的情況下重新開啟套件檔案，[參數] 索引標籤將會是空的，而且遭到停用。  
+    > **注意：** 如果您在沒有開啟 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中專案的情況下重新開啟封裝檔案，[參數] 索引標籤將會是空的，而且遭到停用。  
   
 ### <a name="create-project-parameters"></a>建立專案參數  
   
@@ -206,7 +206,7 @@ ms.locfileid: "51858698"
   
 3.  按一下 **[選取頁面]** 底下的 **[參數]**，以開啟參數頁面。  
   
-4.  在 **[參數]** 清單選取所需的參數。 附註： **[容器]** 資料行有助於區分專案參數與封裝參數。  
+4.  在 **[參數]** 清單選取所需的參數。 注意：[容器] 資料行有助於區分專案參數與封裝參數。  
   
 5.  在 **[值]** 資料行中，指定所需的伺服器預設參數值。  
 
@@ -214,6 +214,6 @@ ms.locfileid: "51858698"
  若要使用 Transact-SQL 設定伺服器預設值，請使用 [catalog.set_object_parameter_value &#40;SSISDB 資料庫&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) 預存程序。 若要檢視目前的伺服器預設值，請查詢 [catalog.object_parameters &#40;SSISDB 資料庫&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 檢視。 若要清除伺服器預設值，請使用 [catalog.clear_object_parameter_value &#40;SSISDB 資料庫&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) 預存程序。  
   
 ## <a name="related-content"></a>相關內容  
- mattmasson.com 上的部落格文章： [SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
+ mattmasson.com 上的部落格文章：[SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

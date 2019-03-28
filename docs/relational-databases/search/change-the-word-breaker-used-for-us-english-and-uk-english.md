@@ -1,27 +1,26 @@
 ---
 title: 變更用於美式英文與英式英文的斷詞工具 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6d1ec3aff285b91e1099187f53b904cad7368c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670868"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305456"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝適用於英文的新版 (14.0.4999.1038 版) 斷詞工具和字幹分析器，並取代這些舊版元件 (12.0.6828.0 版)。 如需新元件行為變更的詳細資訊，請參閱 [全文檢索搜尋的行為變更](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)。 本主題描述的是如何從新版元件切換成舊版，或從舊版切換回新版。 若為叢集安裝，就應該在所有主要和被動節點上進行這些變更。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 會安裝適用於英文的新版 (14.0.4999.1038 版) 斷詞工具和字幹分析器，並取代這些舊版元件 (12.0.6828.0 版)。 如需新元件行為變更的詳細資訊，請參閱 [全文檢索搜尋的行為變更](/sql/database-engine/behavior-changes-to-full-text-search)。 本主題描述的是如何從新版元件切換成舊版，或從舊版切換回新版。 若為叢集安裝，就應該在所有主要和被動節點上進行這些變更。  
   
  舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用了由美式英文 (LCID 1033) 和英式英文 (LCID 2057) 之不同 CLSID 所代表的不同斷詞工具。 在這個版本中，這兩個 LCID 都使用具有相同 CLSID 的相同元件，如下表所示：  
   
@@ -38,7 +37,7 @@ ms.locfileid: "51670868"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>若要從目前版本的美式英文斷詞工具切換成舊版  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  使用下列步驟，針對 LCID 1033 的舊版美式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -50,7 +49,7 @@ ms.locfileid: "51670868"
   
     4.  將該機碼值的 (預設) 資料更新為 **infosoft.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\enu**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{188D6CC5-CB03-4C01-912E-47D21295D77E}**。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "51670868"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>若要從目前版本的英式英文斷詞工具切換成舊版  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  使用下列步驟，針對 LCID 2057 的先前英式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -72,7 +71,7 @@ ms.locfileid: "51670868"
   
     4.  將該機碼值的 (預設) 資料更新為 **infosoft.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\eng**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "51670868"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>若要從舊版的美式英文斷詞工具切換回目前版本  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  如果下列機碼不存在，請使用下列步驟，針對 LCID 1033 的目前美式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -96,7 +95,7 @@ ms.locfileid: "51670868"
   
     4.  將該機碼值的 (預設) 資料更新為 **MsWb7.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\eng**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}**。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "51670868"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>若要從舊版的英式英文斷詞工具切換回目前版本  
   
-1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\CLSID**。  
+1.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**。  
   
 2.  如果下列機碼不存在，請使用下列步驟，針對 LCID 2057 的目前英式英文斷詞工具和字幹分析器介面加入 COM ClassID 的新機碼：  
   
@@ -118,7 +117,7 @@ ms.locfileid: "51670868"
   
     4.  將該機碼值的 (預設) 資料更新為 **MsWb7.dll**。  
   
-3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<執行個體根目錄\>\MSSearch\Language\eng**。  
+3.  在登錄中，巡覽至下列節點：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**。  
   
 4.  將 **WBreakerClass** 機碼值更新為 **{9faed859-0b30-4434-ae65-412e14a16fb8}**。  
   
@@ -128,6 +127,6 @@ ms.locfileid: "51670868"
   
 ## <a name="see-also"></a>另請參閱  
  [將搜索所使用的斷詞工具還原為舊版](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [全文檢索搜尋的行為變更](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [全文檢索搜尋的行為變更](/sql/database-engine/behavior-changes-to-full-text-search)  
   
   

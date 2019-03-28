@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 485618b3e013d1abff0c52d2625357c2ed9951ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31dd335814a54e44b7db90c26a13b4417734a384
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722532"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289644"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>處理插入、更新與刪除
   在執行累加式變更資料載入之 Integration Services 封裝的資料流程中，第二個工作是分隔插入、更新與刪除。 然後，您可以使用適當的命令，將其套用到目的地。  
@@ -68,7 +68,7 @@ select
 ## <a name="next-step"></a>下一個步驟  
  分割要處理的資料列後，下一個步驟是將變更套用到目的地。  
   
- **下一個主題︰** [將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+ **下一個主題：**[將變更套用到目的地](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [條件式分割轉換](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   

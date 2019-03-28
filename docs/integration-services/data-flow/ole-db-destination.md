@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2fceae5ca3eacd9d84faf86e034353cbc84368a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525320"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283082"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -52,7 +52,7 @@ ms.locfileid: "52525320"
 > [!NOTE]  
 >  OLE DB 目的地不支援參數。 如果需要執行參數化 INSERT 陳述式，請考慮 OLE DB 命令轉換。 如需相關資訊，請參閱 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)。  
   
- 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入] 或 [資料表名稱或檢視名稱變數 - 快速載入]。 兩個選項都可從 [OLE DB 目的地編輯器] 對話方塊使用。 程式設計 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 物件模型時，您應該將 AccessMode 屬性設為 [使用 FastLoad 的 OpenRowset]，或 [從變數使用 FastLoad OpenRowset]。  
+ 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入] 或 [資料表名稱或檢視表名稱變數 - 快速載入]。 兩個選項都可從 [OLE DB 目的地編輯器] 對話方塊使用。 程式設計 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 物件模型時，您應該將 AccessMode 屬性設為 [使用 FastLoad 的 OpenRowset]，或 [從變數使用 FastLoad OpenRowset]。  
   
 > [!NOTE]  
 >  如果使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中的 [OLE DB 目的地編輯器] 對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
@@ -141,7 +141,7 @@ ms.locfileid: "52525320"
 |------------|-----------------|  
 |資料表或檢視|將資料載入 OLE DB 目的地中的資料表或檢視。|  
 |資料表或檢視 - 快速載入|將資料載入 OLE DB 目的地中的資料表或檢視，並使用快速載入選項。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)＞。|  
-|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊**：[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |資料表名稱或檢視名稱變數 - 快速載入|在變數中指定資料表或檢視名稱，並使用快速載入選項來載入資料。 如需有關快速載入資料存取模式 (已針對大量插入進行過最佳化) 的詳細資訊，請參閱＜ [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)＞。|  
 |SQL (命令)|使用 SQL 查詢，將資料載入到 OLE DB 目的地。|  
   
@@ -283,7 +283,7 @@ ms.locfileid: "52525320"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  未使用。  

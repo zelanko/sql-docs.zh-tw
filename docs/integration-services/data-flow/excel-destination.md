@@ -16,15 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 319f9b06605ab95dca6885fc08bbab6b7d5bf9c9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ab8a7da7e45d9d623fd436ac3b6c0e8b3d945536
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638455"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289824"
 ---
 # <a name="excel-destination"></a>Excel 目的地
   Excel 目的地會將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍。  
@@ -75,7 +75,7 @@ ms.locfileid: "51638455"
 |選項|Description|  
 |------------|-----------------|  
 |資料表或檢視|將資料載入 Excel 資料來源中的工作表或具名範圍。|  
-|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊：**[在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊**：[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL (命令)|使用 SQL 查詢將資料載入 Excel 目的地。|  
   
  **Excel 工作表的名稱**  
@@ -139,7 +139,7 @@ ms.locfileid: "51638455"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

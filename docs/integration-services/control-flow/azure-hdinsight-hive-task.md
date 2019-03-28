@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afphivetask.f1
 - sql14.dts.designer.afphivetask.f1
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1956ba0bf3c676ff1ab549cc7b9d0dbce9c59dce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5401195dd0f4bbc32eee4d7a813c4293bfa5553
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856186"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279782"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive 工作
 使用 **Azure HDInsight Hive 工作**，在 Azure HDInsight 叢集上執行 Hive 指令碼。
@@ -40,8 +40,8 @@ ms.locfileid: "47856186"
   
 5.  有兩個方法可以指定要執行的 Hive 指令碼：
   
-    1.  **內嵌指令碼**：透過在 [輸入指令碼] 對話方塊中鍵入要執行的內嵌指令碼，來指定 [指令碼] 欄位。
+    1.  **內嵌指令碼**：透過在 [輸入指令碼] 對話方塊中輸入要執行的內嵌指令碼，來指定 [指令碼] 欄位。
   
-    2.  **指令檔**：將指令檔上傳至 Azure Blob 儲存體，並指定 [BlobName] 欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName] 和 [ExternalBlobContainer] 欄位。 若是外部 blob，請確定它已設定為可公開存取。  
+    2.  **指令檔**：將指令檔上傳至 Azure Blob 儲存體，並指定 **BlobName** 欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName] 和 [ExternalBlobContainer] 欄位。 若是外部 blob，請確定它已設定為可公開存取。  
   
      如果指定兩者，則會使用指令檔並忽略內嵌指令碼。

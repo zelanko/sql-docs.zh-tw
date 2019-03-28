@@ -18,15 +18,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c50b86d2d5e96951b9bdeabf6750fbb8dd7a3d30
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528448"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271475"
 ---
 # <a name="send-mail-task"></a>傳送郵件工作
   傳送郵件工作會傳送電子郵件訊息。 藉由使用傳送郵件工作，封裝即可在封裝工作流程中的工作成功或失敗時傳送訊息，或傳送回應封裝在執行階段所引發事件的訊息。 例如，工作可通知資料庫管理員「備份資料庫」工作成功或失敗。  
@@ -59,7 +59,7 @@ ms.locfileid: "52528448"
  工作會使用 SMTP 連接管理員連接到郵件伺服器。 如需相關資訊，請參閱 [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)。  
   
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>傳送郵件工作上可用的自訂記錄訊息  
- 下表列出「傳送郵件」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表列出「傳送郵件」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  
@@ -107,7 +107,7 @@ ms.locfileid: "52528448"
 > [!IMPORTANT]  
 >  SMTP 連接管理員僅支援匿名驗證和 Windows 驗證， 而不支援基本驗證。  
   
- **相關主題** [SMTP 連線管理員](../../integration-services/connection-manager/smtp-connection-manager.md)  
+ **相關主題：**[SMTP 連線管理員](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
  **來源**  
  指定寄件者的電子郵件地址。  
@@ -152,13 +152,13 @@ ms.locfileid: "52528448"
  **MessageSource**  
  在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 變數  
  **MessageSource**  
  在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   

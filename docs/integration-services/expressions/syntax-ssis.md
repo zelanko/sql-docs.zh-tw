@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aff448a0d571ecd5d0eb3ce4ffa60e5a2c5440b5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b9d56775d0754676d22717a193ea6749ae70a11f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638195"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279842"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語法與 C 和 C# 語言使用的語法類似。 運算式的元素包括識別碼 (資料行和變數)、常值、運算子以及函數。 本主題摘要說明運算式評估工具語法套用至不同運算式元素時的獨特需求。  
@@ -27,9 +27,9 @@ ms.locfileid: "51638195"
 > [!NOTE]  
 >  在舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，當運算式的評估結果具有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型 DT_WSTR 或 DT_STR 時，結果就會具有 4000 個字元的限制。 這項限制已移除。  
   
- 如需使用特定運算子及函數的範例運算式，請參閱下列主題中每個運算子及函數的相關主題：[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。  
+ 如需使用特定運算子及函數的範例運算式，請參閱下列主題中每個運算子及函數的相關主題：[運算子 &#40;SSIS 運算式&#41;](../../integration-services/expressions/operators-ssis-expression.md) 和[函式 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)。  
   
- 如需使用多個運算子、函數以及識別碼和常值的範例運算式，請參閱[進階 Integration Services 運算式範例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)。  
+ 如需使用多個運算子、函數以及識別碼和常值的範例運算式，請參閱 [進階 Integration Services 運算式範例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)。  
   
  如需屬性運算式中使用的範例運算式，請參閱 [在封裝中使用屬性運算式](../../integration-services/expressions/use-property-expressions-in-packages.md)。  
   

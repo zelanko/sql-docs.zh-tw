@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5880f74a5cb7296197e1d5ced383fa2c48aaf84a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 05aca45bdfc8a6f45ce32b4a6ac328ae5acc0ad5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400641"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280002"
 ---
 # <a name="error-handling"></a>錯誤處理
   Oracle CDC 執行個體會針對單一 Oracle 來源資料庫中的變更進行採礦處理 (Oracle RAC 叢集會視為單一資料庫)，並將認可的變更寫入目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 CDC 資料庫內的變更資料表。  
@@ -38,7 +38,7 @@ ms.locfileid: "52400641"
 |[狀態]|使用中狀態碼|錯誤狀態碼|Description|子狀態|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|Oracle CDC 執行個體未在執行中。 ABORTED 子狀態表示 Oracle CDC 執行個體為 ACTIVE 狀態然後在未預期的情況下停止。|如果 Oracle CDC 服務偵測到當 Oracle CDC 執行個體於 ACTIVE 狀態下未在執行中時，Oracle CDC 服務的主要執行個體會建立 ABORTED 子狀態。|  
-|error|0|1|Oracle CDC 執行個體未在執行中。 ERROR 狀態表示 CDC 執行個體在 ACTIVE 狀態下，然後遇到無法復原的錯誤於是將自己停用。|MISCONFIGURED：偵測到無法復原的組態錯誤。<br /><br /> PASSWORD-REQUIRED：Attunity Oracle Change Data Capture (CDC) 設計工具未設定任何密碼，或是設定的密碼無效。 這可能是因為服務的非對稱金鑰密碼發生變更。|  
+|error|0|1|Oracle CDC 執行個體未在執行中。 ERROR 狀態表示 CDC 執行個體在 ACTIVE 狀態下，然後遇到無法復原的錯誤於是將自己停用。|MISCONFIGURED：偵測到無法復原的設定錯誤。<br /><br /> PASSWORD-REQUIRED：Attunity Oracle 異動資料擷取設計工具未設定任何密碼，或是設定的密碼無效。 這可能是因為服務的非對稱金鑰密碼發生變更。|  
 |RUNNING|1|0|CDC 執行個體正在執行及處理變更記錄。|IDLE：所有變更記錄都已經處理並儲存在目標控制 (**_CT**) 資料表中。 控制資料表沒有使用中的交易。<br /><br /> PROCESSING：目前有正在處理但是尚未寫入控制 (**_CT**) 資料表的變更記錄。|  
 |STOPPED|0|0|CDC 執行個體未在執行中。|STOP 子狀態表示 CDC 執行個體為 ACTIVE 狀態然後在正確的情況下停止。|  
 |SUSPENDED|1|1|CDC 執行個體正在執行中，但是因為發生可復原的錯誤所以暫停處理。|DISCONNECTED：無法建立與來源 Oracle 資料庫的連接。 一旦還原連接時，處理作業便會繼續。<br /><br /> STORAGE：儲存體已滿。 當有儲存體可用時，處理作業便會繼續。 某些情況下可能不會出現這個狀態，因為無法更新狀態資料表。<br /><br /> LOGGER：記錄器已連接到 Oracle，但是因為暫時性問題所以無法讀取 Oracle 交易記錄。|  

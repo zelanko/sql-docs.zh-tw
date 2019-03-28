@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e52e83a630a81b87f30e2c07d954fc9bb14696d9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 21bb0bc1abe1a2a77af2d06bc6659312c0313581
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617838"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306096"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 輪替永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52617838"
 
 | 工作 | 發行項 | 存取純文字金鑰/金鑰存放區| 存取資料庫
 |:---|:---|:---|:---
-|步驟 1： 在金鑰存放區中建立新的資料行主要金鑰。<br><br>**注意︰** SqlServer PowerShell 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區特有的工具。 | [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
+|步驟 1： 在金鑰存放區中建立新的資料行主要金鑰。<br><br>**注意：** SqlServer PowerShell 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區特有的工具。 | [建立及儲存資料行主要金鑰 (永遠加密)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
 |步驟 2： 啟動 PowerShell 環境並匯入 SqlServer 模組 | [匯入 SqlServer 模組](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步驟 3： 連接到您的伺服器和資料庫。 | [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步驟 4： 建立 SqlColumnMasterKeySettings 物件，其中包含新資料行主要金鑰位置的相關資訊。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 若要建立它，您需要使用金鑰存放區特有的 Cmdlet。 |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | 否 | 否
@@ -96,10 +96,10 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 本節所描述的資料行主要金鑰輪替工作流程，能確保安全性系統管理員與資料庫管理員之間的分離。
 
 > [!IMPORTANT]
-> 執行下表中「存取純文字金鑰/金鑰存放區」=「是」的任何步驟 (存取純文字金鑰或金鑰存放區的步驟) 之前，請確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行。 如需詳細資訊，請參閱[金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
+> 執行下表中「存取純文字金鑰/金鑰存放區」=「是」的任何步驟 (存取純文字金鑰或金鑰存放區的步驟) 之前，請確定 PowerShell 環境是在不同於裝載資料庫之電腦的安全電腦上執行。 如需詳細資訊，請參閱 [金鑰管理的安全性考量](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)。
 
 
-### <a name="part-1-dba"></a>第 1 部分︰DBA
+### <a name="part-1-dba"></a>第 1 部分：DBA
 
 DBA 擷取有關要輪替之資料行主要金鑰的中繼資料，以及受影響之資料行加密金鑰 (與目前的資料行主要金鑰相關聯) 的中繼資料。 DBA 將這項資訊與安全性系統管理員分享。
 
@@ -112,26 +112,26 @@ DBA 擷取有關要輪替之資料行主要金鑰的中繼資料，以及受影�
 |步驟 4： 擷取關於資料行加密金鑰 (受到舊的資料行主要金鑰保護) 的中繼資料，包括其加密的值。 | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | 否 | 是
 |步驟 5： 提供資料行主要金鑰 (資料行主要金鑰的提供者名稱與金鑰路徑) 的位置，以及受舊資料行主要金鑰保護之對應資料行加密金鑰的加密值。| 請參閱以下的範例。 | 否 | 否
 
-### <a name="part-2-security-administrator"></a>第 2 部分︰安全性系統管理員
+### <a name="part-2-security-administrator"></a>第 2 部分：安全性系統管理員
 
 安全性系統管理員會產生新的資料行主要金鑰、用新的資料行主要金鑰將受影響的資料行加密金鑰重新加密，然後與 DBA 共用新資料行主要金鑰的相關資訊，以及受影響之資料行加密金鑰的新加密值集。
 
 | 工作 | 發行項 | 存取純文字金鑰/金鑰存放區| 存取資料庫
 |:---|:---|:---|:---
 |步驟 1： 從 DBA 取得舊資料行主要金鑰的位置和相對應之資料行加密金鑰 (使用舊的資料行主要金鑰保護) 的加密值。|不適用<br>請參閱以下的範例。|否| 否
-|步驟 2： 在金鑰存放區中建立新的資料行主要金鑰。<br><br>**注意︰** SqlServer 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區類型特有的工具。|[建立及儲存資料行主要金鑰 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
+|步驟 2： 在金鑰存放區中建立新的資料行主要金鑰。<br><br>**注意：** SqlServer 模組不支援此步驟。 若要從命令列完成這項工作，您需要使用金鑰存放區類型特有的工具。|[建立及儲存資料行主要金鑰 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 是 | 否
 |步驟 3： 啟動 PowerShell 環境並匯入 SqlServer 模組。 | [匯入 SqlServer 模組](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步驟 4： 建立 SqlColumnMasterKeySettings 物件，其中包含 **舊的** 資料行主要金鑰位置相關資訊。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 |New-SqlColumnMasterKeySettings| 否 | 否
 |步驟 5： 建立 SqlColumnMasterKeySettings 物件，其中包含 **新的** 資料行主要金鑰位置相關資訊。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 若要建立它，您需要使用金鑰存放區特有的 Cmdlet。 | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| 否 | 否
 |步驟 6： 向 Azure 驗證，若您目前的資料行主要金鑰或舊的 (目前的) 資料行主要金鑰儲存在 Azure 金鑰保存庫。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
-|步驟 7： 使用新的資料行主要金鑰將每個資料行加密金鑰值重新加密，資料行加密金鑰目前是使用舊的資料行主要金鑰保護。 | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**注意︰** 呼叫這個 Cmdlet 時，請針對舊和新的資料行主要金鑰傳遞 SqlColumnMasterKeySettings 物件，以及資料行加密金鑰的值，以便重新加密。|是|否
+|步驟 7： 使用新的資料行主要金鑰將每個資料行加密金鑰值重新加密，資料行加密金鑰目前是使用舊的資料行主要金鑰保護。 | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**注意：** 呼叫這個 Cmdlet 時，請針對舊和新的資料行主要金鑰傳遞 SqlColumnMasterKeySettings 物件，以及資料行加密金鑰的值，以便重新加密。|是|否
 |步驟 8： 將新資料行主要金鑰 (資料行主要金鑰的提供者名稱與金鑰路徑) 的位置，以及資料行加密金鑰的新加密值設定提供給您的 DBA。| 請參閱以下的範例。 | 否 | 否
 
 > [!NOTE]
 > 強烈建議您不要在輪替之後永久刪除舊的資料行主要金鑰。 而是應該將舊的資料行主要金鑰保留在其目前金鑰存放區中，或將它封存在另一個安全的地方。 如果您將資料庫從備份檔案還原到設定新資料行主要金鑰之前  的某個時間點，則需要舊的金鑰才能存取資料。
 
 
-### <a name="part-3-dba"></a>第 3 部分︰DBA
+### <a name="part-3-dba"></a>第 3 部分：DBA
 
 DBA 建立新資料行主要金鑰的中繼資料，並更新受影響之資料行加密金鑰的中繼資料，以新增新的加密值集。 在此步驟中，DBA 也會與查詢加密資料行之應用程式的系統管理員協調，系統管理員會確定應用程式可以存取新的資料行主要金鑰。 一旦所有應用程式都已設定為使用新的資料行主要金鑰，DBA 會移除舊的加密值集和舊的資料行主要金鑰中繼資料。
 
@@ -141,18 +141,18 @@ DBA 建立新資料行主要金鑰的中繼資料，並更新受影響之資料�
 |步驟 2： 啟動 PowerShell 環境並匯入 SqlServer 模組。 | [匯入 SqlServer 模組](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步驟 3： 連接到您的伺服器和資料庫。 | [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步驟 4： 建立 SqlColumnMasterKeySettings 物件，其中包含新資料行主要金鑰位置的相關資訊。 SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 |New-SqlColumnMasterKeySettings| 否| 否
-|步驟 5： 在資料庫中建立新資料行主要金鑰的相關中繼資料。|[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意︰** 實際上，這個 Cmdlet 發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式來建立金鑰中繼資料。 | 否 | 是
+|步驟 5： 在資料庫中建立新資料行主要金鑰的相關中繼資料。|[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**注意：** 實際上，這個 Cmdlet 會發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 陳述式來建立金鑰中繼資料。 | 否 | 是
 |步驟 6： 擷取關於資料行加密金鑰 (受到舊的資料行主要金鑰保護) 的中繼資料。| [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)| 否 | 是
 |步驟 7： 將新的加密值 (使用新的資料行主要金鑰所產生) 加入每個受影響之資料行加密金鑰的中繼資料。|[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)|否|是
 |步驟 8： 與在資料庫中查詢加密資料行 (且使用舊的資料行主要金鑰保護) 之所有應用程式的系統管理員協調，讓他們可以確保應用程式可以存取新的資料行主要金鑰。|[建立及儲存資料行主要金鑰 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 否|否
-|步驟 9： 從資料庫移除與舊資料行主要金鑰相關聯的加密值，完成輪替。<br><br>**注意︰** 在執行此步驟之前，請先確定查詢使用舊資料行主要金鑰保護之加密資料行的所有應用程式，已設定為使用新的資料行主要金鑰。 如果您提前執行此步驟，這些應用程式中可能有些會無法解密資料。<br><br>這個步驟會移除舊資料行主要金鑰和它所保護的資料行加密金鑰之間的關聯。 | [Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)<br><br>您也可以使用 [Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue) | 否|是
+|步驟 9： 從資料庫移除與舊資料行主要金鑰相關聯的加密值，完成輪替。<br><br>**注意：** 在執行此步驟之前，請先確定查詢使用舊資料行主要金鑰保護之加密資料行的所有應用程式，已設定為使用新的資料行主要金鑰。 如果您提前執行此步驟，這些應用程式中可能有些會無法解密資料。<br><br>這個步驟會移除舊資料行主要金鑰和它所保護的資料行加密金鑰之間的關聯。 | [Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)<br><br>您也可以使用 [Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue) | 否|是
 |步驟 10： 從資料庫移除舊的資料行主要金鑰中繼資料| [Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| 否|是
 
 ### <a name="rotating-a-column-master-key-with-role-separation-windows-certificate-example"></a>輪替資料行主要金鑰，並進行角色分離 (Windows 憑證範例)
 
 以下指令碼是端對端範例，它會產生新的資料行主要金鑰，此金鑰是 Windows 憑證存放區中的憑證，並且輪替現有 (目前) 資料行主要金鑰，將它取代成新的資料行主要金鑰。 指令碼假設目標資料庫包含名為 CMK1 (要被輪替) 的資料行主要金鑰，它會將某些資料行加密金鑰加密。
 
-第 1 部分︰DBA
+第 1 部分：DBA
 
 ```
 # Import the SqlServer module.
@@ -200,7 +200,7 @@ for($i=0; $i -lt $ceks.Length; $i++){
 ```
 
 
-第 2 部分︰安全性系統管理員
+第 2 部分：安全性系統管理員
 
 ```
 # Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, from your DBA, via a CSV file on a share drive.
@@ -242,7 +242,7 @@ $newCmkSettings.KeyStoreProviderName +", " + $newCmkSettings.KeyPath >> $newCmkD
 ```
 
 
-第 3 部分︰DBA
+第 3 部分：DBA
 
 ```
 # Obtain the location of the new column master key and the new encrypted values of the corresponding column encryption keys, from your Security Administrator, via a CSV file on a share drive.
@@ -301,17 +301,17 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 
 輪替資料行加密金鑰包括解密將使用要被輪替之金鑰加密的所有資料行中的資料，然後使用新的資料行加密金鑰重新加密資料。 此輪替工作流程需要同時存取金鑰和資料庫，因此無法在分離角色的情況下執行。 請注意，如果包含被輪替之金鑰所加密資料行的資料表很大，則輪替資料行加密金鑰可能需要很長的時間。 因此，您的組織需要非常仔細地規劃資料行加密金鑰輪替。
 
-您可以使用離線或線上方法來輪替資料行加密金鑰。 前一個方法可能比較快，但您的應用程式無法寫入至受影響的資料表。 第二種方法可能需要更長的時間，但您可以限制時間間隔，應用程式在該期間內無法使用受影響的資料表。 如需詳細資訊，請參閱 [使用 PowerShell 設定資料行加密](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) 和 [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) 。
+您可以使用離線或線上方法來輪替資料行加密金鑰。 前一個方法可能比較快，但您的應用程式無法寫入至受影響的資料表。 第二種方法可能需要更長的時間，但您可以限制時間間隔，應用程式在該期間內無法使用受影響的資料表。 如需詳細資訊，請參閱 [使用 PowerShell 設定資料行加密](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) 和 [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) 。
 
 | 工作 | 發行項 | 存取純文字金鑰/金鑰存放區| 存取資料庫
 |:---|:---|:---|:---
 |步驟 1： 啟動 PowerShell 環境並匯入 SqlServer 模組。 | [匯入 SqlServer 模組](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步驟 2： 連接到您的伺服器和資料庫。 | [連接到資料庫](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 是
 |步驟 3： 向 Azure 驗證，如果您的資料行主要金鑰 (用於保護資料行加密金鑰，且要被輪替) 儲存在 Azure 金鑰保存庫中的話。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 是 | 否
-|步驟 4： 產生新的資料行加密金鑰，並使用資料行主要金鑰將它加密，然後在資料庫中建立資料行加密金鑰中繼資料。  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注意︰** 請使用一種可在內部產生並加密資料行加密金鑰的 Cmdlet。<br>實際上，這個 Cmdlet 會發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式來建立金鑰中繼資料。 | 是 | 是
+|步驟 4： 產生新的資料行加密金鑰，並使用資料行主要金鑰將它加密，然後在資料庫中建立資料行加密金鑰中繼資料。  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**注意：** 請使用一種可在內部產生並加密資料行加密金鑰的 Cmdlet。<br>實際上，這個 Cmdlet 會發出 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式來建立金鑰中繼資料。 | 是 | 是
 |步驟 5： 尋找使用舊資料行加密金鑰加密的所有資料行。 | [SQL Server 管理物件 (SMO) 程式設計指南](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | 否 | 是
 |步驟 6： 為每個受影響的資料行建立 *SqlColumnEncryptionSettings* 物件。  SqlColumnMasterKeySettings 是存在於 PowerShell 記憶體中的物件。 它會指定資料行的目標加密配置。 在此情況下，該物件應該指定須使用新的資料行加密金鑰來加密受影響的資料行。 | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 否 | 否
-|步驟 7： 使用新的資料行加密金鑰，重新加密在步驟 5 中識別的資料行。 | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意︰** 此步驟可能需要很長的時間。 根據您選取的方法 (線上與離線) 而定，您的應用程式將無法在整個作業期間或作業的部分期間存取資料表。 | 是 | 是
+|步驟 7： 使用新的資料行加密金鑰，重新加密在步驟 5 中識別的資料行。 | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**注意：** 此步驟可能需要很長的時間。 根據您選取的方法 (線上與離線) 而定，您的應用程式將無法在整個作業期間或作業的部分期間存取資料表。 | 是 | 是
 |步驟 8： 移除舊資料行加密金鑰的中繼資料。 | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | 否 | 是
 
 ### <a name="example---rotating-a-column-encryption-key"></a>範例 - 輪替資料行加密金鑰

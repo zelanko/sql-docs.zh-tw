@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531606"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277657"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。  
@@ -126,7 +126,7 @@ ms.locfileid: "52531606"
   
  如果封裝名稱為 EmailRowCountPP，於 2005 年 3 月 4 日執行且執行持續時間為 9 秒，則運算式會評估為下列字串。  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds。  
+ PExpression-->Package:(EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds。  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>電子郵件訊息之訊息的屬性運算式  
  下列屬性運算式可用以設定傳送郵件工作的 MessageSource 屬性。 該運算式會使用字串常值、使用者定義變數和串連 (+) 運算子的組合。 使用者定義變數的名稱是 `nasdaqrawrows`、 `nyserawrows`與 `amexrawrows`。 字串 "\n" 表示換行字元。  
@@ -137,11 +137,11 @@ ms.locfileid: "52531606"
   
  處理的資料列：  
   
- NASDAQ: 7058  
+ NASDAQ:7058  
   
- NYSE: 3528  
+ NYSE:3528  
   
- AMEX: 1102  
+ AMEX:1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>執行處理工作之 Executable 屬性的屬性運算式  
  下列屬性運算式可用以設定「執行處理」工作的 Executable 屬性。 該運算式會使用字串常值、運算子和函數的組合。 該運算式會使用 DATEPART 和 GETDATE 函數，以及條件運算子。  

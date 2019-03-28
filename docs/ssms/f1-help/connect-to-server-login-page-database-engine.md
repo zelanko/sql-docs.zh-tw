@@ -13,19 +13,19 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 164c5e51d28cc09bb2161d729812c8f74fb5f08f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 75ae49d16f9b6a2cb49e7d50da36a045d43a5354
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210997"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306186"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>連接到伺服器 (登入頁面) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此索引標籤來檢視或指定連接到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]時的選項。 在大多數的情況下，您可以在 [伺服器名稱] 方塊中輸入資料庫伺服器的電腦名稱，然後按一下 [連接] 來進行連接。 如果您要連線至具名執行個體，請使用電腦名稱，後面依序加上反斜線及執行個體名稱。 例如， `mycomputer\myinstance`。 如果要連接到 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]，請使用電腦名稱並於後面加上 **\sqlexpress**。  
   
 許多因素都可能影響連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的能力。 如需說明，請參閱下列資源：  
-- [教學課程第 1 課：連線到資料庫引擎](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+- [教學課程第 1 課：連接至資料庫引擎](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 - [對 SQL Server 資料庫引擎的連線進行疑難排解](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
 - [解決 SQL Server 的連線錯誤](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server)    
   
@@ -38,7 +38,7 @@ ms.locfileid: "53210997"
   
 當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
-根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Microsoft Azure SQL Database 概觀](/azure/sql-database/sql-database-technical-overview/)。
   
 **伺服器名稱**  
 選取要連接的伺服器執行個體。 預設會顯示上次連接的伺服器執行個體。  
@@ -48,7 +48,7 @@ SSMS 目前的版本提供五種驗證模式，可在連線至 [!INCLUDE[ssDE](.
   
 當您透過 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
-根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您在連線至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您在連線至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 時指定使用者資料庫，就只會看到該資料庫及其在物件總管中的物件。 如果您連線到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Microsoft Azure SQL Database 概觀](/azure/sql-database/sql-database-technical-overview/)。  
   
 > **Windows 驗證**  
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 驗證模式允許使用者透過 Windows 使用者帳戶連接。  

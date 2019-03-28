@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072312"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417150"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -92,18 +92,19 @@ ms.locfileid: "58072312"
 >[!NOTE]
 >主機金鑰證明只建議在測試環境中使用。 針對生產環境，您應該使用 TPM 證明。
 
-1. 以系統管理員身分登入您的 SQL Server 電腦、開啟提升權限的 Windows PowerShell 主控台，並安裝受防護主機功能，這也會安裝 Hyper-V (如果尚未安裝的話)。
+1. 以系統管理員身分登入您的 SQL Server 電腦，開啟提升權限的 Windows PowerShell 主控台，然後透過存取 computername 變數來擷取您電腦的名稱。
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. 安裝「受防護主機」功能，這也會安裝 Hyper-V (若尚未安裝的話)。
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. 提示時重新啟動 SQL Server 電腦，以完成安裝 Hyper-V。
-3. 擷取以下變數的值，以判斷 SQL Server 電腦名稱。
-
-   ```powershell
-   $env:computername 
-   ```
+3. 提示時重新啟動 SQL Server 電腦，以完成安裝 Hyper-V。
 
 4. 以系統管理員身分再次登入 SQL Server 電腦、開啟提升權限的 Windows PowerShell 主控台、產生唯一的主機金鑰，並將產生的公開金鑰匯出至檔案。
 
@@ -112,14 +113,15 @@ ms.locfileid: "58072312"
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. 將上一個步驟中產生的主機金鑰檔案複製到 HGS 機器。 下列指示假設您的檔案名稱為 hostkey.cer，且您將它複製到 HGS 機器上的桌面。
+5. 將上一個步驟中產生的主機金鑰檔案手動複製到 HGS 電腦。 下列指示假設您的檔案名稱為 hostkey.cer，且您正在將它複製到 HGS 電腦上的桌面。
+
 6. 在 HGS 電腦上，開啟提升權限的 Windows PowerShell 主控台，並向 HGS 註冊 SQL Server 電腦的主機金鑰：
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. 在 SQL Server 電腦上，在提升權限的 Windows PowerShell 主控台執行下列命令，以告知 SQL Server 電腦證明的位置。 請確定您指定 HGS 電腦的 IP 位址或 DNS 名稱。 
+7. 在 SQL Server 電腦上，在提升權限的 Windows PowerShell 主控台執行下列命令，以告知 SQL Server 電腦證明的位置。 請務必同時在兩個位址位置中指定 HGS 電腦的 IP 位址或 DNS 名稱。 
 
    ```powershell
    # use http, and not https
@@ -183,6 +185,9 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
 3. 確定您連線的是新建立的資料庫。 建立新的資料表，名為 Employees。
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -305,6 +310,7 @@ UnauthorizedHost 錯誤指出公開金鑰未向 HGS 伺服器註冊 - 請重複�
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. 在未啟用 Always Encrypted 的查詢視窗中再次嘗試相同的查詢，並留意到隨即發生的失敗。
 
 ## <a name="next-steps"></a>Next Steps
 請參閱[設定具有安全記憶體保護區的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)，以獲得關於其他使用案例的想法。 您也可以嘗試下列各項：

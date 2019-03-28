@@ -27,15 +27,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542887"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277506"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -72,7 +72,7 @@ ms.locfileid: "52542887"
 |------------------|------------|-------------|--------------|  
 |文字檔|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|記錄提供者所使用的「檔案」連接管理員會指定文字檔的路徑。|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|記錄提供者所使用的「檔案」連線管理員會指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所使用之檔案的路徑。|  
-|[SQL Server]|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|記錄提供者所使用的 OLE DB 連線管理員會指定包含具有記錄項目之 sysssislog 資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
+|SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|記錄提供者所使用的 OLE DB 連線管理員會指定包含具有記錄項目之 sysssislog 資料表的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |Windows 事件記錄檔|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 事件檢視器中的應用程式記錄檔包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 記錄資訊。|  
 |XML 檔案|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|記錄提供者所使用的「檔案」連接管理員會指定 XML 檔案的路徑。|  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52542887"
 |運算子|啟動封裝之使用者的識別。|  
 |SourceName|發生記錄事件之容器或工作的名稱。|  
 |SourceID|封裝的唯一識別碼；「For 迴圈」、「Foreach 迴圈」或「時序」容器；或者發生記錄事件的工作。|  
-|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 請注意：執行單一封裝可能會建立記錄項目，其中包含不同的 ExecutionID 元素值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
+|ExecutionID|封裝執行執行個體的 GUID。<br /><br /> 注意：執行單一封裝可能會建立記錄項目，其中包含不同的 ExecutionID 元素值。 例如，當您在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中執行封裝時，驗證階段可能會建立記錄項目，其中包含了對應到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 ExecutionID 元素。 但是，執行階段可能會建立記錄項目，其中包含了對應到 dtshost.exe 的 ExecutionID 元素。 在另一個範例中，當您執行包含「執行封裝」工作的封裝時，每一個工作都會執行子封裝。 這些子封裝可能會建立記錄項目，其中包含了與父封裝建立之記錄項目不同的 ExecutionID 元素。|  
 |MessageText|與記錄項目相關聯的訊息。|  
 |DataBytes|記錄項目特定的位元組陣列。 此欄位的意義會因記錄項目的不同而不同。|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "52542887"
 |**OnVariableValueChanged**|在變數的值變更時寫入記錄項目。|  
 |**OnWarning**|發生警告時寫入記錄項目。|  
 |**PipelineComponentTime**|針對每個資料流程元件，寫入每個驗證和執行階段的記錄項目。 記錄項目會指定每個階段的處理時間。|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意︰如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息] 欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|寫入提供診斷資訊的記錄項目。<br /><br /> 例如，您可以在每次呼叫外部資料提供者前後記錄訊息。 如需詳細資訊，請參閱 [封裝執行的疑難排解工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)。<br /><br /> 當您想要在有錯誤的資料流程資料行中尋找資料行名稱時，請記錄 **DiagnosticEx** 事件。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。 如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 注意：如果使用 SQL Server 記錄提供者來記錄 **DiagnosticEx** 事件，輸出可能被截斷。 SQL Server 記錄提供者的 [訊息] 欄位類型是 nvarchar(2048)。 若要避免發生截斷，記錄 **DiagnosticEx** 事件時請使用不同的記錄提供者。|  
   
  封裝及許多工作都有可以啟用記錄功能的自訂記錄項目。 例如，[傳送郵件] 工作會提供 **SendMailTaskBegin** 自訂記錄項目，其會在 [傳送郵件] 工作開始執行時，但在工作傳送電子郵件訊息之前，記錄資訊。 如需詳細資訊，請參閱 [自訂訊息以進行記錄](#custom_messages)。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "52542887"
   
 1.  啟用封裝及其工作的記錄功能。 記錄可以發生在封裝、容器和工作層級上。 您可以為封裝、容器和工作指定不同的記錄檔。  
   
-2.  選取記錄提供者，並為封裝加入記錄。 記錄檔僅可以在封裝層級建立，且工作或容器必須使用為封裝建立的記錄檔之一。 每個記錄檔都與下列記錄提供者之一相關聯：文字檔、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 記錄檔或 XML 檔案。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](#ssdt)。  
+2.  選取記錄提供者，並為封裝加入記錄。 記錄檔僅可以在封裝層級建立，且工作或容器必須使用為封裝建立的記錄檔之一。 每個記錄檔都與下列記錄提供者之一相關聯：文字檔、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows 記錄檔或 XML 檔案。 如需詳細資訊，請參閱 [在 SQL Server Data Tools 中啟用封裝記錄功能](#ssdt)。  
   
 3.  選取事件，以及要在記錄檔中擷取之每個事件的記錄結構描述資訊。 如需詳細資訊，請參閱 [使用已儲存的組態檔來設定記錄](#saved_config)。  
   
@@ -311,7 +311,7 @@ ms.locfileid: "52542887"
  **Configuration**  
  在清單中選取現有連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。 視記錄提供者的類型而定，您可以設定 OLE DB 連接管理員或檔案連接管理員。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔的記錄提供者不需要有連接。  
   
- 相關主題： [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 、 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ 相關主題：[OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)、[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **刪除**  
  選取記錄提供者，然後按一下 [刪除]。  

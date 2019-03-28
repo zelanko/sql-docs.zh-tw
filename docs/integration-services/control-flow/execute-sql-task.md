@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504068"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273908"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -142,7 +142,7 @@ ms.locfileid: "52504068"
  **ConnectionType**  
  選擇用來連接到資料來源的連接管理員類型。 可用的連接類型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相關主題** [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)、 [ODBC 連線管理員](../../integration-services/connection-manager/odbc-connection-manager.md)、 [ADO 連線管理員](../../integration-services/connection-manager/ado-connection-manager.md)、 [ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)、 [SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **相關主題：**[OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)、[ODBC 連線管理員](../../integration-services/connection-manager/odbc-connection-manager.md)、[ADO 連線管理員](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 連線管理員](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **[連接]**  
  從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]。  
@@ -166,7 +166,7 @@ ms.locfileid: "52504068"
  **BypassPrepare**  
  指出 SQL 陳述式是否已備妥。  **true** 會略過準備； **false** 會備妥再執行 SQL 陳述式。 只有搭配支援準備的 OLE DB 連接，才能使用此選項。  
   
- **相關主題**  [備妥的執行](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **相關主題：**[備妥的執行](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **瀏覽**  
  使用 [開啟] 對話方塊，以尋找包含 SQL 陳述式的檔案。 選取要將檔案內容以 SQL 陳述式複製到 **SQLStatement** 屬性的檔案。  
@@ -183,19 +183,19 @@ ms.locfileid: "52504068"
  **SQLStatement**  
  在選項方塊中鍵入要執行的 SQL 陳述式，或者按一下瀏覽按鈕 (...) 在 [輸入 SQL 查詢] 對話方塊中鍵入 SQL 陳述式，或按一下 [建置查詢] 使用 [查詢產生器] 對話方塊來撰寫陳述式。  
   
- **相關主題**︰[查詢產生器](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **相關主題：**[查詢產生器](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 檔案連接  
  **FileConnection**  
  選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 變數  
  **SourceVariable**  
  選取現有的變數，或按一下 [\<新增變數...>] 以建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>參數對應頁面 - 執行 SQL 工作編輯器
 使用 [執行 SQL 工作編輯器] 對話方塊的 [參數對應] 頁面，即可將變數對應到 SQL 陳述式中的參數。  
@@ -286,7 +286,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連線管理員使用參數  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 和 ADO 連線管理員對於使用參數的 SQL 命令，擁有特定的需求：  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員要求 SQL 命令必須使用參數名稱做為參數標記。 這表示變數可以直接對應到參數。 例如， `@varName` 變數會對應到名為 `@parName` 的參數，並提供值給 `@parName`參數。  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員要求 SQL 命令必須使用參數名稱作為參數標記。 這表示變數可以直接對應到參數。 例如， `@varName` 變數會對應到名為 `@parName` 的參數，並提供值給 `@parName`參數。  
   
 -   ADO 連接管理員要求 SQL 命令必須使用問號 (?) 做為參數標記。 不過，您可以使用整數值之外的任何使用者自訂名稱做為參數名稱。  
   
@@ -572,7 +572,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 -   使用 ODBC 和 ADO.NET 連接管理員時，工作不會忽略發生在第一個結果集之後的結果集。 使用這些連接管理員時，如果第一個結果集之外的結果集包含錯誤，工作將會失敗。  
   
 ### <a name="custom-log-entries"></a>自訂記錄項目  
- 下表描述「執行 SQL」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表描述「執行 SQL」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  

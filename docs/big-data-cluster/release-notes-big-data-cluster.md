@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494180"
+ms.locfileid: "58510335"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -29,7 +29,7 @@ ms.locfileid: "58494180"
 
 ### <a name="whats-new"></a>新功能
 
-| 新的功能更新 | 詳細資料 |
+| 新功能或更新 | 詳細資料 |
 |:---|:---|
 | 支援執行深度學習 TensorFlow 在 Spark 中使用 GPU 的指引。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md) |
 | **SqlDataPool**並**SqlStoragePool**預設不會再建立資料來源。 | 視需要手動建立這些。 請參閱[已知問題](#externaltablesctp24)。 |
@@ -80,19 +80,44 @@ ms.locfileid: "58494180"
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
+#### <a name="delete-cluster-fails"></a>刪除叢集失敗
+
+當您嘗試刪除與叢集**mssqlctl**，它就會失敗，發生下列錯誤：
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+新的 Python Kubernetes 用戶端 （9.0.0 版） 已變更的刪除命名空間 API，這目前會中斷**mssqlctl**。 如果您已安裝較新 Kubernetes python 用戶端，這只會發生。 您可以藉由直接刪除叢集使用解決這個問題**kubectl** (`kubectl delete ns <ClusterName>`)，或者您可以安裝較舊的版本使用`sudo pip install kubernetes==8.0.1`。
+
 #### <a id="externaltablesctp24"></a> 外部資料表
 
 - 巨量資料叢集部署不會再建立**SqlDataPool**並**SqlStoragePool**外部資料來源。 您可以建立這些資料來源，以手動方式來支援資料虛擬化資料集區和儲存體集區。
 
    ```sql
-   -- Create data sources for SQL Big Data Cluster
+   -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+   -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 - 可以建立具有不支援的資料行類型為資料表的資料集區外部資料表。 如果您查詢外部資料表時，您收到訊息如下所示：
@@ -137,9 +162,9 @@ ms.locfileid: "58494180"
 
 下列各節說明的新功能與 SQL Server 2019 CTP 2.3 中的巨量資料叢集的已知的問題。
 
-### <a name="new-features"></a>新增功能
+### <a name="whats-new"></a>新功能
 
-| 新功能 | 詳細資料 |
+| 新功能或更新 | 詳細資料 |
 | :---------- | :------ |
 | 將在 IntelliJ 中的巨量資料叢集上的 Spark 作業提交。 | [將 SQL Server 在 IntelliJ 中的巨量資料叢集上的 Spark 作業提交](spark-submit-job-intellij-tool-plugin.md) |
 | 適用於應用程式部署和叢集管理的常見 CLI。 | [如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式](big-data-cluster-create-apps.md) |

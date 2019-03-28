@@ -16,15 +16,15 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf68976e003eb3466d613f7f1c41db129c70f570
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 87a757f007b2a4b30172c51971e56dd585c166f6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540870"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280654"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 物件是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 專案方案中所有其他物件的最上層容器。 做為最上層容器，封裝是第一個建立的物件，而且後續的物件會加入其中，然後在封裝的內容中執行。 封裝本身不會移動或是轉換資料。 封裝依賴它所含的工作 (Task) 以執行工作 (Work)。 工作 (Task) 會執行封裝所執行的大部分工作 (Work)，並定義封裝的功能。 只需要三行程式碼就可以建立和執行封裝，但是還需要將各種工作與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件加入，以便為您的封裝提供其他功能。 本節討論如何以程式設計方式建立封裝。 有關如何建立工作或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的詳細資訊並非在此提供， 這些內容將於後續章節說明。  
@@ -72,7 +72,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 您也可以載入儲存在磁碟上、在檔案系統或是儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有封裝以建立封裝。 其差異在於會先建立 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 物件，然後其中一個應用程式的多載方法會填入套件物件：**LoadPackage** 用於一般檔案、**LoadFromSQLServer** 用於儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的套件，或是 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用於儲存到檔案系統的套件。 下列範例會從磁碟載入現有封裝，然後檢視封裝上的數個屬性。  
+ 您也可以載入儲存在磁碟上、在檔案系統或是儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有封裝以建立封裝。 其差異在於會先建立 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 物件，然後其中一個應用程式的多載方法會填入封裝物件：**LoadPackage** 用於一般檔案、**LoadFromSQLServer** 用於儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的封裝，或是 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 用於儲存到檔案系統的封裝。 下列範例會從磁碟載入現有封裝，然後檢視封裝上的數個屬性。  
   
 ```csharp  
 using System;  
@@ -153,7 +153,7 @@ End Module
   
 -   blogs.msdn.com 上的部落格文章：[API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824) (API 範例 - OleDB 來源與 OleDB 目的地)。  
   
--   blogs.msdn.com 上的部落格文章：[EzAPI – Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
+-   blogs.msdn.com 上的部落格文章：[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式新增工作](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

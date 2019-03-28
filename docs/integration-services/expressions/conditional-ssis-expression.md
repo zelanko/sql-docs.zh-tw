@@ -1,5 +1,5 @@
 ---
-title: '? : (條件) (SSIS 運算式) | Microsoft Docs'
+title: '? 所解碼的字元：(條件) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626016"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272103"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (條件) (SSIS 運算式)
+# <a name="--conditional-ssis-expression"></a>? 所解碼的字元：(條件) (SSIS 運算式)
   依據布林運算式的評估傳回兩個運算式的其中一個。 如果布林運算式的評估結果為 TRUE，則會評估第一個運算式，且結果為運算式的結果。 如果布林運算式的評估結果為 FALSE，則會評估第二個運算式，且其結果為運算式的結果。  
   
 ## <a name="syntax"></a>語法  
@@ -58,9 +58,9 @@ boolean_expression?expression1:expression2
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)。  
   
--   **字串***expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
+-   **字串** *expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
   
--   **日期、時間或日期/時間** ： *expression1* 和 *expression2* 都必須評估為下列其中一種資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  

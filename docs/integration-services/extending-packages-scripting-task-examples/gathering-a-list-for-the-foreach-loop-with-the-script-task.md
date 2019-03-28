@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640045"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270783"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單
   Foreach from Variable 列舉值會透過以變數傳遞給它的清單中之項目來列舉，並針對每個項目執行相同的工作。 您可以在指令碼工作中使用自訂程式碼，針對此目的填入清單。 如需列舉值的詳細資訊，請參閱 [Foreach 迴圈容器](../../integration-services/control-flow/foreach-loop-container.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "51640045"
  下列範例使用 **System.IO** 命名空間的方法，蒐集電腦上的 Excel 活頁簿清單，這些活頁簿比使用者在變數中所指定的天數還要新或是還要舊。 它會在磁碟 C 上以遞迴方式搜尋目錄中有 .xls 副檔名的檔案，並檢查檔案最後修改的日期，以判斷檔案是否應歸屬於清單中。 它會將符合的檔案加入 **ArrayList**，並將 **ArrayList** 儲存到變數，以供稍後用於 Foreach 迴圈容器。 Foreach Loop 容器是設定為從 Variable 列舉值使用 Foreach。  
   
 > [!NOTE]  
->  從 Variable 列舉值與 Foreach 搭配使用的變數必須是 **Object** 類型。 您放置在變數中的物件必須實作下列其中一個介面：**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource** 或 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 經常會使用 **Array** 或 **ArrayList**。 **ArrayList** 需要參考以及 **System.Collections** 命名空間的 **Imports** 陳述式。  
+>  從 Variable 列舉值與 Foreach 搭配使用的變數必須是 **Object** 類型。 您放置在變數中的物件，必須實作下列其中一個介面：**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource** 或 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 經常會使用 **Array** 或 **ArrayList**。 **ArrayList** 需要參考以及 **System.Collections** 命名空間的 **Imports** 陳述式。  
   
  您可以透過為 `FileAge` 封裝變數使用不同的正值與負值，來試驗這項工作。 例如，您可以輸入 5 以搜尋在過去五天內建立的檔案，或是輸入 3 搜尋已建立超過三天的檔案。 這項工作可能需要花費一兩分鐘，以搜尋磁碟機上的許多資料夾。  
   

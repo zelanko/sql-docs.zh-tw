@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733656"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283055"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
   優先順序條件約束可在控制流程中，連結封裝中的可執行檔、容器和工作，並指定判斷可執行檔是否執行的條件。 可執行檔可以是「For 迴圈」容器、「Foreach 迴圈」容器、「時序」容器、工作或事件處理常式。 事件處理常式也可使用優先順序條件約束，以將其可執行檔連結至控制流程。  
@@ -111,10 +111,10 @@ ms.locfileid: "47733656"
   
 ### <a name="options"></a>選項。  
  **評估作業**  
- 指定優先順序條件約束所使用的評估作業。 這些作業有： **[條件約束]**、 **[運算式]**、 **[運算式與條件約束]**，以及 **[運算式或條件約束]**。  
+ 指定優先順序條件約束所使用的評估作業。 這些作業有：[條件約束]、[運算式]、[運算式與條件約束]，以及 [運算式或條件約束]。  
   
  **ReplTest1**  
- 指定下列條件約束值：[成功]、[失敗] 或 [完成]。  
+ 指定條件約束值：[成功]、[失敗] 或 [完成]。  
   
 > [!NOTE]  
 >  優先順序條件約束線條若是綠色代表 [成功]，反白顯示代表 [失敗]，而藍色代表 [完成]。  

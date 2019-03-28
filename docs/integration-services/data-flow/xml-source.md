@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640455"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290624"
 ---
 # <a name="xml-source"></a>XML 來源
   XML 來源會讀取 XML 資料檔案，並將資料填入來源輸出中的資料行。  
@@ -97,7 +97,7 @@ ms.locfileid: "51640455"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
-|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**︰ [在封裝中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**：[在套件中使用變數](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |來自變數的 XML 資料|從變數中擷取 XML 資料。|  
   
  **使用內嵌結構描述**  
@@ -155,7 +155,7 @@ ms.locfileid: "51640455"
  **錯誤**  
  指定錯誤發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
   
- **相關主題** [處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)  
+ **相關主題：**[資料中的錯誤處理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **截斷**  
  指定截斷發生時要採取的動作：忽略失敗、重新導向資料列，或使元件失效。  

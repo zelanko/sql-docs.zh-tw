@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797466"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273546"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支援自訂元件中的多目標
  您現在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 設計工具，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的套件。 若要取得 SSDT for Visual Studio 2015，請參閱[下載最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 

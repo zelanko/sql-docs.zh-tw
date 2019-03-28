@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f6cb8c09525b998d5e864124eff0e5bb0aa509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807376"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281232"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
   若要加入及設定 OLE DB 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -37,15 +37,15 @@ ms.locfileid: "47807376"
   
 5.  按兩下 OLE DB 目的地。  
   
-6.  在 [連接管理員] 頁面的 [OLE DB 目的地編輯器] 對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增] 以新建連接管理員。 如需詳細資訊，請參閱 [OLE DB 連線管理員](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
+6.  在 [連接管理員] 頁面的 [OLE DB 目的地編輯器] 對話方塊中，選取現有的 OLE DB 連接管理員，或按一下 [新增] 以新建連接管理員。 如需相關資訊，請參閱 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)。  
   
 7.  選取資料存取方法：  
   
-    -   **資料表或檢視**：在資料庫中選取包含資料的資料表或檢視。  
+    -   **資料表或檢視** ：在資料庫中選取包含資料的資料表或檢視。  
   
-    -   **資料表或檢視 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]、[保留 Null]、[資料表鎖定]、[檢查條件約束]、[每批次的資料列] 或 [插入認可大小上限]。  
+    -   **資料表或檢視表 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]、[保留 Null]、[資料表鎖定]、[檢查條件約束]、[每批次的資料列] 或 [插入認可大小上限]。  
   
-    -   **資料表名稱或檢視名稱變數**：選取使用者自訂變數，該變數包含資料庫中資料表或檢視的名稱。  
+    -   **資料表名稱或檢視名稱變數** ：選取使用者自訂變數，該變數包含資料庫中資料表或檢視的名稱。  
   
     -   **資料表名稱或檢視名稱變數 - 快速載入**：選取使用者自訂變數，該變數含有資料庫中包含該資料之資料表或檢視的名稱，然後設定快速載入選項。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 830118141e849c2bde507686c1339f8cc73c1e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ac9a5d6804e98685a0c16b5572848d5a575b00
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727626"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279222"
 ---
 # <a name="select-oracle-tables-and-columns"></a>選取 Oracle 資料表和資料行
   使用 [選取 Oracle 資料表和資料行] 頁面，從擷取變更的 Oracle 來源資料庫選取資料表。 此頁面具有以下元素：  
@@ -53,7 +53,7 @@ ms.locfileid: "47727626"
 ## <a name="see-also"></a>另請參閱  
  [如何建立 SQL Server 變更資料庫執行個體](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [編輯資料表](../../integration-services/change-data-capture/edit-tables.md)   
- [將資料表新增至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   
+ [將資料表加入至 CDC 執行個體](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   
  [編輯資料表屬性](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188dd47c28e0faae13e7b41ef09faca542f084bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544703"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274152"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ catalog.cleanup_server_log
 ## <a name="result-sets"></a>結果集  
  無。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  這個預存程序需要下列其中一個權限：  
   
 -   專案的 READ 與 EXECUTE 權限，以及參考環境的 READ 權限 (如果適用的話)。  
@@ -75,7 +75,7 @@ catalog.cleanup_server_log
   
      您可以指定範圍或層級 (執行/專案) 以及要刪除的金鑰數目。 刪除的預設批次大小是 1000。 如果您將層級設為 2，則只有在刪除相關的專案時，才會刪除金鑰和憑證。  
   
- 如需詳細資訊，請參閱下列知識庫文章：[FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285) (修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題)  
+ 如需詳細資訊，請參閱下列知識庫文章：[修正：當您在 SQL Server 2012 中使用 SSISDB 作為部署存放區時的效能問題](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>範例  
  下列範例會呼叫 cleanup_server_log 預存程序。  

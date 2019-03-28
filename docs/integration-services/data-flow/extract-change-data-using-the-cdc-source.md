@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c1296ab84f5cf75013b68c72aba435c77ff129a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb9b3188669883b6f1d744185c4b643dffdface
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608416"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271121"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>使用 CDC 來源擷取變更資料
   若要加入及設定 CDC 來源，封裝至少必須包含一個資料流程工作及一個 CDC 控制工作。  
@@ -47,7 +47,7 @@ ms.locfileid: "47608416"
   
     -   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前] 值。  
   
-    -   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+    -   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
     -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c7b2bf0b998edc8e3a3b1afdc679b0d9ccae9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a7f15a409168c55e18da3585042715ac4aef898
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693306"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270929"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
   此程序描述如何使用 CDC 設計工具主控台，於執行階段管理 CDC 執行個體操作。  
@@ -37,7 +37,7 @@ ms.locfileid: "47693306"
   
     -   **啟動**：開始擷取變更。  
   
-    -   **停止**：停止擷取變更。  
+    -   **停止**：停止擷取變更  
   
     -   **重設**：按一下 [重設]，將 CDC 執行個體重設為初始 (空白) 狀態。 當 CDC 執行個體停止時可以使用這個選項。 變更資料表及 CDC 執行個體內部狀態的所有變更都會遭到刪除。 之後啟動 CDC 執行個體時，異動擷取將會從該時間點開始，而且只包含 CDC 執行個體啟動之後所開始的交易。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47693306"
   
     -   **Oracle 記錄指令碼**：按一下 [Oracle 記錄指令碼] 可顯示 [Oracle 記錄指令碼] 對話方塊，其中包含 Oracle 補充記錄指令碼。 如需有關您可以在此對話方塊中執行之操作的詳細資訊，請參閱＜ [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)＞。  
   
-         **注意**：當您執行補充記錄指令碼時，將會開啟 [執行指令碼的 Oracle 認證] 對話方塊，您可以在此提供有效的 Oracle 使用者名稱和密碼。 如需有關如何提供適當之 Oracle 認證的詳細資訊，請參閱＜ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)＞。  
+         **注意**:當您執行補充記錄指令碼時，將會開啟 [執行指令碼的 Oracle 認證] 對話方塊，您可以在此提供有效的 Oracle 使用者名稱和密碼。 如需有關如何提供適當之 Oracle 認證的詳細資訊，請參閱＜ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)＞。  
   
     -   **CDC 執行個體部署**：產生 CDC 執行個體的部署指令碼。 如需有關此對話方塊的詳細資訊，請參閱＜ [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)＞。  
   

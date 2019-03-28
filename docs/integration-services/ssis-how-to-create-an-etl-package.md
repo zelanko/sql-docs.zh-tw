@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc033012e2bf0799902e1bd5bcc1a5f31471c5c2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a603dc915f05f55db4eac3c3ed0347dc2d5eaf32
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383303"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271131"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS 如何建立 ETL 封裝
 
@@ -53,19 +53,19 @@ ms.locfileid: "49383303"
     - 範例套件會假設資料檔案位於資料夾 `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`。 如果您將下載解壓縮到其他位置，則您可能需要更新範例套件中多個位置的檔案路徑。
 
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
-[第 1 課：使用 SSIS 建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+[第 1 課：使用 SSIS 來建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 在這一課，您會建立一個簡單的 ETL 套件。此套件會從單一的一般檔案擷取資料、使用查閱轉換來轉換資料，以及最後將結果載入事實資料表目的地。  
   
 [第 2 課：使用 SSIS 加入迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 在這一課，您會擴充在第 1 課建立的套件，以利用新的迴圈功能，將多個一般檔案擷取到單一資料流程處理序中。  
   
-[第 3 課︰使用 SSIS 加入記錄](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[第 3 課：使用 SSIS 來新增記錄功能](../integration-services/lesson-3-add-logging-with-ssis.md)  
 在這一課，您會擴充在第 2 課建立的套件，以利用新的記錄功能。  
   
-[第 4 課：使用 SSIS 加入錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[第 4 課：使用 SSIS 來新增錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
 在這一課，您會擴充在第 3 課建立的套件，以利用新的錯誤輸出設定。  
   
-[第 5 課：加入套件部署模型的 SSIS 套件組態](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+[第 5 課：新增套件部署模型的 SSIS 套件設定](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
 在這一課，您會擴充在第 4 課建立的套件，以利用新的套件設定選項。  
   
 [第 6 課：在 SSIS 中搭配專案部署模型使用參數](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

@@ -11,15 +11,15 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e5bf1999ef81b20d5ae318523891c9ef92326f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 458df1921c4d5327f06528d356790ed6795ac613
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642155"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280832"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack for Integration Services (SSIS)
 SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模組，可提供此頁面上所列的元件，以便讓 SSIS 連接到 Azure 服務、在 Azure 和內部部署資料來源之間轉送資料，以及處理儲存在 Azure 中的資料。
@@ -80,7 +80,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
 
 -   Azure Blob 和 Azure Data Lake Store 檔案列舉值。 請參閱 [Foreach 迴圈容器](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
-## <a name="scenario-processing-big-data"></a>狀況︰處理巨量資料
+## <a name="scenario-processing-big-data"></a>案例：處理巨量資料
  您可以使用 Azure 連接器來完成下列巨量資料處理工作：
 
 1.  使用 Azure Blob 上傳工作，將輸入資料上傳至 Azure Blob 儲存體。
@@ -95,7 +95,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
 
 ![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
-## <a name="scenario-managing-data-in-the-cloud"></a>狀況︰管理雲端中的資料
+## <a name="scenario-managing-data-in-the-cloud"></a>案例：管理雲端中的資料
  您可以使用 SSIS 封裝中的 Azure Blob 目的地，將輸出資料寫入 Azure Blob 儲存體，或者使用 Azure Blob 來源，從 Azure Blob 儲存體讀取資料。
 
 ![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)

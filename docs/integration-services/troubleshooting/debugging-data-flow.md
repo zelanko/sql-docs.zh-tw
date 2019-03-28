@@ -14,15 +14,15 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 65d62759cff20cb0c41acd7a9955ccea52a5968c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521538"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272231"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
@@ -122,7 +122,7 @@ order by source_component_name desc
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>若要使用 [設定錯誤輸出] 對話方塊設定錯誤輸出  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
@@ -260,7 +260,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ### <a name="listing-all-data-taps"></a>列出所有資料點選  
- 您也可以使用 catalog.execution_data_taps 檢視表，列出所有資料點選。 下列範例會擷取規格執行之執行個體 (識別碼：54) 的資料點選。  
+ 您也可以使用 catalog.execution_data_taps 檢視表，列出所有資料點選。 下列範例會擷取規格執行之執行個體的資料點選 (識別碼：54)。  
   
 ```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

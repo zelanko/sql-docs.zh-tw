@@ -21,15 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639655"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273296"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
@@ -131,11 +131,11 @@ ms.locfileid: "51639655"
   
 ## <a name="related-content"></a>相關內容  
   
--   位於 msdn.microsoft.com 的影片： [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)  
+-   影片，[如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031) \(位於msdn.microsoft.com\)  
   
 -   位於 blogs.msdn.com 的部落格項目： [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(使用查閱轉換快取模式的最佳做法)  
   
--   位於 blogs.msdn.com 的部落格項目： [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)(查閱模式：不區分案例)  
+-   位於 blogs.msdn.com 的部落格項目：[查閱模式：不區分大小寫](https://go.microsoft.com/fwlink/?LinkId=157782) \(英文\)  
   
 -   位於 msftisprodsamples.codeplex.com 上的範例： [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(查閱轉換)。  
   

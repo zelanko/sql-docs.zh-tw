@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6a340ece64bc69b012919bb57afd1b80690f3a59
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517214"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273053"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
   「資料分析」工作提供擷取、轉換和載入資料之處理內部的資料分析功能。 您可以使用「資料分析」工作來獲得下列好處：  
@@ -59,12 +59,12 @@ ms.locfileid: "52517214"
  **步驟 1：設定資料分析工作**  
  「資料分析」工作是一種工作，可用於設定您要計算的設定檔。 然後，您可以執行包含「資料分析」工作的封裝以計算設定檔。 此工作會將設定檔輸出以 XML 格式儲存到檔案或封裝變數。  
   
- **如需詳細資訊，請參閱**[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。  
+ **如需詳細資訊：＜＞**[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
  **步驟 2：檢閱資料分析工作計算的設定檔**  
  若要檢視「資料分析」工作計算的資料設定檔，您可以將輸出傳送到檔案，然後使用「資料設定檔檢視器」即可。 這個檢視器是一個獨立的公用程式，可以用摘要和詳細資料格式，顯示具有選擇性向下鑽研能力的設定檔輸出。  
   
- **如需詳細資訊，請參閱**[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
+ **如需詳細資訊：＜＞**[資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>將條件式邏輯加入資料分析工作流程  
  「資料分析」工作沒有內建的功能，您無法根據設定檔輸出，使用條件式邏輯將此工作連接到下游工作。 不過，您可以利用少量的程式設計，在「指令碼」工作中輕鬆加入這個邏輯。 例如，「指令碼」工作可以根據「資料分析」工作的輸出檔，執行 XPath 查詢。 此查詢可以判斷特定資料行中，null 值的百分比是否超出特定的臨界值。 如果百分比超出臨界值，您可以中斷封裝，並解決來源資料中的問題，然後再繼續。 如需詳細資訊，請參閱 [在封裝工作流程中納入資料分析工作](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  

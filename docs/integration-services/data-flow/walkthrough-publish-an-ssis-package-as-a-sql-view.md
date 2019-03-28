@@ -1,5 +1,5 @@
 ---
-title: 逐步解說︰將 SSIS 套件發佈為 SQL 檢視 | Microsoft Docs
+title: 逐步解說：將 SSIS 套件發佈為 SQL 檢視 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521234"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281862"
 ---
-# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
+# <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說：發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
   
 ## <a name="prerequisites"></a>Prerequisites  
@@ -30,7 +30,7 @@ ms.locfileid: "52521234"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步驟 1︰建置 SSIS 專案並部署至 SSIS 目錄  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>步驟 1：建置 SSIS 專案並部署至 SSIS 目錄  
  在此步驟中，您會建立 SSIS 封裝，從 SSIS 支援的資料來源 (在此範例中，我們使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫) 擷取資料，並使用資料流目的地元件輸出資料。 然後您會建置 SSIS 專案並部署至 SSIS 目錄。  
   
 1.  啟動 **SQL Server Data Tools**。 在 **[開始]** 功能表上，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Data Tools]**。  
@@ -55,7 +55,7 @@ ms.locfileid: "52521234"
   
 5.  將 **來源元件** 從工具箱拖曳至 [資料流程設計師]  ，並將它設定為從資料來源擷取資料。  
   
-    1.  基於本逐步解說的目的，建立測試資料庫︰ **TestDB** 以及資料表︰ **Employee**。 建立具有下列三個資料行的資料表： **ID**、 **FirstName** 及 **LastName**。  
+    1.  基於本逐步解說的目的，建立測試資料庫︰**TestDB** 以及資料表︰**Employee**。 建立具有下列三個資料行的資料表： **ID**、 **FirstName** 及 **LastName**。  
   
     2.  將 **ID** 設為主索引鍵。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52521234"
   
     2.  遵循精靈中的指示，將專案部署至本機資料庫伺服器中的 SSIS 目錄。 下列範例使用 **Power BI** 做為資料夾名稱，以及使用 **SSISPackagePublishing** 做為 SSIS 目錄中的專案名稱。  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>步驟 2︰使用 SSIS 資料摘要發行精靈來發行 SSIS 封裝做為 SQL 檢視  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>步驟 2：使用 SSIS 資料摘要發行精靈將 SSIS 套件發佈為 SQL 檢視  
  在此步驟中，您將使用 SQL Server Integration Services (SSIS) 資料摘要發行精靈，來發行 SSIS 封裝做為 SQL Server 資料庫中的檢視。 封裝的輸出資料可藉由查詢這個檢視來取用。  
   
  SSIS 資料摘要發行精靈會使用適用於 SSIS 的 OLE DB 提供者 (SSISOLEDB) 建立連結的伺服器，然後建立 SQL 檢視，其中包含連結伺服器上的查詢。 此查詢包括 SSIS 目錄中的資料夾名稱、專案名稱和封裝名稱。  
@@ -101,7 +101,7 @@ ms.locfileid: "52521234"
   
          ![資料摘要發行精靈 - 套件設定頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "資料摘要發行精靈 - 套件設定頁面")  
   
-    2.  按一下 [路徑] 欄位旁的 [瀏覽]、瀏覽 SSIS 目錄、選取您要發行的 SSIS 封裝 (例如︰[SSISDB]->[SSISPackagePublishing]->[Package.dtsx])，然後按一下 [確定]。  
+    2.  按一下 [路徑] 欄位旁的 [瀏覽]、瀏覽 SSIS 目錄、選取您要發行的 SSIS 套件 (例如︰[SSISDB]->[SSISPackagePublishing]->[Package.dtsx])，然後按一下 [確定]。  
   
          ![資料摘要發行精靈 - 瀏覽套件](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "資料摘要發行精靈 - 瀏覽套件")  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52521234"
   
      ![資料摘要發行精靈 - 摘要頁面](../../integration-services/data-flow/media/dsd-feedpublishingwizard-summarypage.jpg "資料摘要發行精靈 - 摘要頁面")  
   
-     您現在可以針對 TestDB 資料庫執行下列 SQL 陳述式來查詢封裝的輸出資料：SELECT * FROM [SSISPackageView]。  
+     您現在可以針對 TestDB 資料庫執行下列 SQL 陳述式來查詢套件的輸出資料：SELECT * FROM [SSISPackageView]。  
   
 9. 若要將此報表儲存為 XML 檔案，可按一下 [儲存報表] 。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "52521234"
     > [!NOTE]  
     >  不支援下列資料類型︰text、ntext、image、nvarchar(max)、varchar(max) 及 varbinary(max)。  
   
-## <a name="step-3-test-the-sql-view"></a>步驟 3︰測試 SQL 檢視  
+## <a name="step-3-test-the-sql-view"></a>步驟 3：測試 SQL 檢視  
  在此步驟中，您將執行 SSIS 資料摘要發行精靈所建立的 SQL 檢視。  
   
 1.  啟動 SQL Server Management Studio。  
@@ -167,7 +167,7 @@ ms.locfileid: "52521234"
   
 4.  確認您看到 SSIS 封裝的結果。  
   
-## <a name="step-4-verify-the-ssis-package-execution"></a>步驟 4︰確認 SSIS 封裝執行  
+## <a name="step-4-verify-the-ssis-package-execution"></a>步驟 4：確認 SSIS 封裝執行  
  在此步驟中，您將驗證已執行 SSIS 封裝。  
   
 1.  在 SQL Server Management Studio 中，依序展開 [Integration Services 目錄] 、[SSISDB] 、您 SSIS 專案所在的 **資料夾** 、[專案] 、您的專案節點，以及 [封裝] 。  

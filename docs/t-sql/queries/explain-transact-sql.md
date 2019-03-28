@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b364a92732be8e12233faf51b03d92154c2a6d28
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979494"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305906"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  **EXPLAIN** 將執行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 陳述式。 *SQL_statement* 可以是以下任何一個命令：**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE**。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要 **SHOWPLAN** 權限，以及執行 *SQL_statement* 的權限。 請參閱[權限：GRANT、DENY、REVOKE &#40;Azure SQL 資料倉儲、平行處理資料倉儲&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)。  
   
 ## <a name="return-value"></a>傳回值  
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|回應 *SQL_statement*。|  
 |\<params>|目前不使用此標記。|  
 |\<dsql_operations>|摘要說明和包含查詢步驟，並包含查詢的成本資訊。 也包含所有 `<dsql_operation>` 區塊。 此標記包含整個查詢的計數資訊：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* 是查詢執行的預估時間總計，以毫秒為單位。<br /><br /> *total_number_operations* 是查詢的作業總數。 將平行處理並在多個節點上執行的作業都會計算為單一作業。|  
-|\<dsql_operation>|描述查詢計劃內的單一作業。 \<dsql_operation> 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 是在[查詢資料 (SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中找到的其中一個值。<br /><br /> `\<dsql_operation>` 區塊中的內容取決於作業類型。<br /><br /> 請參閱下表。|  
+|\<dsql_operation>|描述查詢計劃內的單一作業。 \<dsql_operation> 標記包含做為屬性的作業類型：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* 為可在 [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) 中找到的其中一個值。<br /><br /> `\<dsql_operation>` 區塊中的內容取決於作業類型。<br /><br /> 請參閱下表。|  
   
 |作業類型|內容|範例|  
 |--------------------|-------------|-------------|  

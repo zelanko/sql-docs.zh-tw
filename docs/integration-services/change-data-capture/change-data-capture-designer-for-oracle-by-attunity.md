@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641235"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280852"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取設計工具
   CDC 設計工具主控台是用來開發及維護 Oracle CDC 執行個體。 CDC 設計工具主控台是包含以下元素的 Microsoft Management Console 嵌入式管理單元：  
   
 -   新增執行個體精靈：此精靈會建立新的 Oracle CDC 執行個體。 如需有關使用新增執行個體精靈的詳細資訊，請參閱＜ [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)＞。  
   
--   CDC 執行個體屬性檢視器：這是一種停駐的檢視，可顯示選取之 CDC 執行個體的狀態和組態。 如需屬性檢視器的資訊，請參閱 [如何管理 CDC 執行個體](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)。  
+-   CDC 執行個體屬性檢視器：這是一種停駐的檢視，可顯示選取之 CDC 執行個體的狀態和設定。 如需屬性檢視器的資訊，請參閱 [如何管理 CDC 執行個體](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)。  
   
 -   CDC 執行個體屬性編輯器：此對話方塊是用來編輯任何現有的 Oracle CDC 服務執行個體。 如需有關編輯 CDC 執行個體屬性的詳細資訊，請參閱＜ [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)＞。  
   

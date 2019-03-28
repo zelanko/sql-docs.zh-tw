@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411985"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275496"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -77,7 +77,7 @@ ms.locfileid: "52411985"
  請勿增加發生分頁至磁碟之起始點的緩衝區大小。 分頁至磁碟所妨礙的效能超過尚未經過最佳化的緩衝區大小。 若要判斷是否發生分頁，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的效能嵌入式管理單元中監視 "Buffers spooled" 效能計數器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>設定平行執行的封裝  
- 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在封裝中支援平行執行不同的工作， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性： **MaxConcurrentExecutables** 和 **EngineThreads**。  
+ 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 為了在封裝中支援平行執行不同的工作，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用兩種屬性：**MaxConcurrentExecutables** 和 **EngineThreads**。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 屬性  
  **MaxConcurrentExecutables** 屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
@@ -148,7 +148,7 @@ ms.locfileid: "52411985"
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
- 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需此方式的討論和範例，請參閱＜ [專案 REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602)＞(英文) 白皮書中的「唯一的維度狀況」一節。  
+ 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需取得此方式的討論與範例，請參閱[專案 REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
   
 ### <a name="destinations"></a>目的地  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  
@@ -171,9 +171,9 @@ ms.locfileid: "52411985"
 ## <a name="related-content"></a>相關內容  
  **文件和部落格文章**  
   
--   technet.microsoft.com 上的技術文件： [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com 上的技術文章 [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899) (英文)  
   
--   technet.microsoft.com 上的技術文件： [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com 上的技術文章 [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900) (英文)  
   
 -   sqlcat.com 上的技術文件： [將同步轉換分割為多個工作來增加管線的輸送量](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   

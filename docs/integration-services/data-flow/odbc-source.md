@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694507"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289834"
 ---
 # <a name="odbc-source"></a>ODBC 來源
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
@@ -55,7 +55,7 @@ ms.locfileid: "47694507"
 ## <a name="extract-options"></a>擷取選項  
  ODBC 來源以 [批次] 或 [逐列] 模式操作。 所用的模式是由 **FetchMethod** 屬性所決定。 下列清單描述這些模式。  
   
--   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的提取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為 [逐列] 模式。  
+-   **批次**：元件會根據所見的 ODBC 提供者功能，嘗試使用最有效率的擷取方法。 對於最新型的 ODBC 提供者，這是 SQLFetchScroll 與陣列繫結搭配使用 (陣列大小是由 **BatchSize** 屬性所決定)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
 -   **逐列**：元件會使用 SQLFetch，一次擷取一個資料列。  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527137"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290284"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>課程 3-2 - 執行套件安裝精靈
 在這項工作中，您會執行「封裝安裝精靈」，將「部署教學課程」專案中的封裝部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體上。 只有封裝可以安裝在 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫的 sysssispackages 資料表中，部署配套所包含的支援檔案則會部署到檔案系統中。  
@@ -82,11 +82,11 @@ ms.locfileid: "52527137"
   
     由於目的地電腦上的環境變數值與開發電腦上的環境變數值不同，因此 [封裝驗證] 頁面上會出現一些警告。 您應該會看到下列這四個警告：  
   
-    -   組態檔名稱 "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
+    -   設定檔："C:\DeploymentTutorial\DataTransferConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
   
     -   無法載入封裝至少其中一個組態項目。 請檢查組態項目和之前的警告，查看哪個組態失敗的描述。  
   
-    -   組態檔名稱 "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig" 無效。 請檢查組態檔名稱。  
+    -   設定檔："C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig 無效。 請檢查組態檔名稱。  
   
     -   無法載入封裝至少其中一個組態項目。 請檢查組態項目和之前的警告，查看哪個組態失敗的描述。  
   

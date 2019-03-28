@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec0f97e29154885d335f8e9073771817b710eefe
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087847"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356471"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 如需使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式設定選項的詳細資訊，請參閱 [選項管理](#OptionMgmt)。  
   
 ## <a name="Related"></a> 相關檢視、函數與程序  
- 透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序，檢視及管理查詢存放區。  
+ 透過 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或使用下列檢視與程序來檢視及管理查詢存放區。  
 
 ### <a name="query-store-functions"></a>查詢存放區函式  
  此函式可協助執行查詢存放區作業。 

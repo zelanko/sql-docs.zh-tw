@@ -1,5 +1,5 @@
 ---
-title: 步驟 3：加入封裝和其他檔案 | Microsoft Docs
+title: 步驟 3：加入套件和其他檔案 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528596"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288774"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>課程 1-3 - 加入封裝和其他檔案
 在這項工作中，您會將現有的封裝、支援個別封裝的輔助檔案以及讀我檔案，加入至前一項工作所建立的「部署教學課程」專案中。 例如，您將會加入包含封裝資料的 XML 資料檔，還會加入一個文字檔，以提供有關專案中所有封裝的讀我資訊。  
@@ -69,7 +69,7 @@ ms.locfileid: "52528596"
 4.  按一下 [檔案] 功能表上的 [全部儲存]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 4：加入封裝組態](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[步驟 4：新增套件設定](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

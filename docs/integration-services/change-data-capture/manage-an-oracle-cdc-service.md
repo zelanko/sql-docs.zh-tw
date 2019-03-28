@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39235b99879ca5d49bc05dc3aabba71c37351e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d5bf2b8247d3ee7907f5a064f090c88344c18e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738338"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275582"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   您可以使用 CDC 服務組態主控台來管理特定的 CDC 服務。  
@@ -47,7 +47,7 @@ ms.locfileid: "47738338"
   
  您也可以用滑鼠右鍵按一下您想要刪除的 CDC 服務，然後選取 [刪除]。  
   
- **注意**：如果當您刪除此服務時，它正在執行中，在刪除此服務之前會先將它停止。  
+ **注意**:如果當您刪除此服務時，它正在執行中，在刪除此服務之前會先將它停止。  
   
  若要刪除 Oracle CDC Windows 服務定義，此程式需要關聯 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中 MSXDBCDC 資料庫的更新存取權。 當您按一下 [確定] 刪除此服務時，此程式會嘗試刪除 MSXDBCDC 資料庫中的 Oracle CDC 服務登錄。 如果此程式因為沒有適當的權限所以無法刪除 Oracle CDC 服務登錄，它會提示使用者輸入具有 MSXDBCDC 資料庫之更新權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   

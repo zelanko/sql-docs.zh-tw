@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7500d510e08aae85b89d7ad83f97a85ed51cd88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a1111aa084ee4d5c9ee34b74dbc689195dee5ba
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619396"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273651"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
   CDC 分隔器會將 CDC 來源資料流程中變更資料列的單一流程分割為插入、更新和刪除作業的不同資料流程。 資料流程是根據 `__$operation` 變更資料表中的必要資料行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及其標準值分割的。  
@@ -41,7 +41,7 @@ ms.locfileid: "47619396"
   
  此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：設為 1。  
+-   **錯誤碼**：設定為 1。  
   
 -   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   

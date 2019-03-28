@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642285"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290594"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -62,7 +62,7 @@ ms.locfileid: "51642285"
   
 -   [時序容器](../../integration-services/control-flow/sequence-container.md)  
   
- 如需示範如何在完整快取模式中使用快取連線管理員實作查閱轉換的影片，請參閱 [如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 如需示範如何使用快取連接管理員在完整快取模式下實作查閱轉換的視訊，請參閱[如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>若要使用快取連接管理員和資料流程中的資料來源在單一封裝中以完整快取模式實作查閱轉換  
   

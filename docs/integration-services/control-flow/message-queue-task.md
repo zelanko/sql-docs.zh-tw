@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2c7ac89c705c8825a87cfeee381190a6becfa90
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503996"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282362"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -77,7 +77,7 @@ ms.locfileid: "52503996"
 -   如果訊息使用 **Data file message** 類型，則以不同的檔案名稱儲存訊息檔案。  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>訊息佇列工作上可用的自訂記錄訊息  
- 下表列出「訊息佇列」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
+ 下表列出「訊息佇列」工作的自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
 |記錄項目|Description|  
 |---------------|-----------------|  
@@ -119,7 +119,7 @@ ms.locfileid: "52503996"
  **MSMQConnection**  
  選取現有的 MSMQ 連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題**： [MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、 [MSMQ 連線管理員編輯器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **相關主題**：[MSMQ 連線管理員](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 連線管理員編輯器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **訊息**  
  指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]**，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]**，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]**。  
@@ -215,7 +215,7 @@ ms.locfileid: "52503996"
  **識別碼**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
- **相關主題：**[選取封裝](../../integration-services/control-flow/select-a-package.md)  
+ **相關主題：**[選取套件](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 變數訊息  
  **篩選**  
@@ -229,7 +229,7 @@ ms.locfileid: "52503996"
  **變數**  
  鍵入變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>篩選動態選項  
   
@@ -241,7 +241,7 @@ ms.locfileid: "52503996"
  **識別碼**  
  如果您選擇套用篩選，請鍵入訊息接收來源套件的唯一識別碼，或按一下省略符號按鈕 **(...)**，然後指定套件。  
   
- **相關主題：**[選取封裝](../../integration-services/control-flow/select-a-package.md)  
+ **相關主題：**[選取套件](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>MessageType = 字串訊息  
  **比較**  
@@ -274,7 +274,7 @@ ms.locfileid: "52503996"
  **變數**  
  鍵入要保存已接收訊息的變數名稱，或按一下 [\<新增變數…>]，然後設定新的變數。  
   
- **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>選取變數
   使用 [選取變數] 對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數] 清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數] 清單中的變數。  
@@ -295,7 +295,7 @@ ms.locfileid: "52503996"
  **新增變數**  
  建立新變數。  
   
- **相關主題：**[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](../../integration-services/control-flow/integration-services-tasks.md)   
  [控制流程](../../integration-services/control-flow/control-flow.md)  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b5d13647276da55fc81c7e6122b5cadf26b0b00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2ed03eb751b0b048fee4737d312f381f655b72b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669356"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273235"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>產生封裝執行的傾印檔案
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，您可以建立偵錯傾印檔案，以便提供封裝執行的資訊。 這些檔案中的資訊可協助您針對套件執行問題進行疑難排解。  
@@ -48,9 +48,9 @@ ms.locfileid: "47669356"
   
 |資訊類型|Description|範例|  
 |-------------------------|-----------------|-------------|  
-|環境|作業系統版本、記憶體使用量資料、處理序識別碼及處理序影像名稱。 環境資訊位於 .tmp 檔案的開頭。|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
-|動態連結程式庫 (DLL) 路徑和版本|在處理封裝期間，系統載入之每個 DLL 的路徑和版本號碼。|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|最近的訊息|最近系統所發出的訊息。 包括每則訊息的時間、類型、描述和執行緒識別碼。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         描述：元件遺漏、未註冊、無法升級或遺漏必要的介面。 這個元件的連絡資訊是 "__"。|  
+|環境|作業系統版本、記憶體使用量資料、處理序識別碼及處理序影像名稱。 環境資訊位於 .tmp 檔案的開頭。|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory:58% in use. Physical:845M/2044M  Paging:2404M/4095M (avail/total)|  
+|動態連結程式庫 (DLL) 路徑和版本|在處理封裝期間，系統載入之每個 DLL 的路徑和版本號碼。|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module:C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module:C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
+|最近的訊息|最近系統所發出的訊息。 包括每則訊息的時間、類型、描述和執行緒識別碼。|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp:2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID:2368           (ThreadID)<br /><br /> [E:3]         Event Name:OnError                        (EventName)<br /><br /> [E:3]         Source Name:              (SourceName)<br /><br /> [E:3]         Source ID:                      (SourceID)<br /><br /> [E:3]         Execution ID:               (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description:元件遺漏、未註冊、無法升級或遺漏必要的介面。 這個元件的連絡資訊是 "__"。|  
   
 ## <a name="related-information"></a>相關資訊  
  [執行封裝對話方塊](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  

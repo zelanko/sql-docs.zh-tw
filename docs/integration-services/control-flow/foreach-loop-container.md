@@ -28,15 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505932"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271320"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
@@ -215,7 +215,7 @@ ms.locfileid: "52505932"
  **運算式**  
  按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以新增列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)、[屬性運算式編輯器](../../integration-services/expressions/property-expressions-editor.md)、[運算式產生器](../../integration-services/expressions/expression-builder.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 運算式](../../integration-services/expressions/integration-services-ssis-expressions.md)、[屬性運算式編輯器](../../integration-services/expressions/property-expressions-editor.md)、[運算式產生器](../../integration-services/expressions/expression-builder.md)  
   
 ### <a name="enumerator-dynamic-options"></a>列舉值動態選項  
   
@@ -281,7 +281,7 @@ ms.locfileid: "52505932"
  **資料行**  
  按一下即可在項目中設定資料行的資料類型。  
   
- **相關主題** [For Each 項目資料行對話方塊 UI 參考](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **相關主題：**[For Each 項目資料行對話方塊 UI 參考](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
   
 #### <a name="enumerator--foreach-ado-enumerator"></a>列舉值 = Foreach ADO 列舉值  
  Foreach ADO 列舉值可用來列舉 ADO 或 ADO.NET 物件中的資料列或資料表，而這類物件是儲存在變數中。 例如，如果 Foreach 迴圈包括將資料集寫入變數的指令碼工作，您可以使用 Foreach ADO 列舉值來列舉該資料集中的資料列。 如果變數包含 ADO.NET 資料集，則可將列舉值設定成列舉多個資料表中的資料列，或設定成列舉資料表。  
@@ -292,7 +292,7 @@ ms.locfileid: "52505932"
 > [!NOTE]  
 >  變數必須為物件資料類型，否則會發生錯誤。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **第一個資料表的資料列**  
  選取此選項即可只列舉第一個資料表的資料列。  
@@ -312,7 +312,7 @@ ms.locfileid: "52505932"
 > [!IMPORTANT]  
 >  ADO.NET 連接管理員必須使用 OLE DB 的 .NET 提供者。 如果連接到 SQL Server，則建議使用的提供者是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，會列在 **[連接管理員]** 對話方塊的 **[OleDb 的 .Net 提供者]** 區段中。  
   
- **相關主題** [ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md)、 [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **相關主題：**[ADO 連線管理員](../../integration-services/connection-manager/ado-connection-manager.md)、[設定 ADO.NET 連線管理員](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **結構描述**  
  選取要列舉的結構描述。  
@@ -320,7 +320,7 @@ ms.locfileid: "52505932"
  **設定限制**  
  設定要套用至指定之結構描述的限制。  
   
- **相關主題** [結構描述限制對話方塊](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **相關主題：**[結構描述限制對話方塊](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>列舉值 = Foreach From Variable 列舉值  
  Foreach From Variable 列舉值可用來列舉所指定之變數中可列舉的物件。 例如，如果 Foreach 迴圈包括執行查詢並將結果儲存在變數中的「執行 SQL」工作，您可以使用 Foreach From Variable 列舉值來列舉查詢結果。  
@@ -328,7 +328,7 @@ ms.locfileid: "52505932"
  **變數**  
  在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題**︰[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="enumerator--foreach-nodelist-enumerator"></a>列舉值 = Foreach NodeList 列舉值  
  Foreach Nodelist 列舉值可用來列舉因為將 XPath 運算式套用至 XML 檔案而產生的 XML 節點集合。 例如，如果 Foreach 迴圈包括指令碼工作，則您可使用 Foreach NodeList 列舉值將符合 XPath 運算式條件的值從 XML 檔案傳送給該指令碼工作。  
@@ -351,11 +351,11 @@ ms.locfileid: "52505932"
   
  如果 [DocumentSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  如果 [DocumentSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **EnumerationType**  
  從清單中選取列舉類型。 此屬性具有下表所列的選項：  
@@ -381,11 +381,11 @@ ms.locfileid: "52505932"
   
  如果 [OuterXPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  如果 [OuterXPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **InnerElementType**  
  如果 **[EnumerationType]** 設定為 **[ElementCollection]**，請在清單中選取內部元素的類型。  
@@ -404,11 +404,11 @@ ms.locfileid: "52505932"
   
  如果 [InnerXPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- **相關主題：** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)、 [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](../../integration-services/connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  如果 [InnerXPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>列舉值 = Foreach SMO 列舉值  
  Foreach SMO 列舉值可用來列舉 SQL Server 管理物件 (SMO) 物件。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach SMO 列舉值來列舉 **AdventureWorks** 資料庫中的資料表，並執行用來計算每個資料表中資料列數目的查詢。  
@@ -416,7 +416,7 @@ ms.locfileid: "52505932"
  **[連接]**  
  選取現有的 ADO.NET 連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)＞  
+ 相關主題：[ADO.NET 連線管理員](../../integration-services/connection-manager/ado-net-connection-manager.md)、[設定 ADO.NET 連線管理員](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **列舉**  
  指定要列舉的 SMO 物件。  
@@ -424,7 +424,7 @@ ms.locfileid: "52505932"
  **瀏覽**  
  選取 SMO 列舉。  
   
- **相關主題**：[選取 SMO 列舉對話方塊](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **相關主題：**[選取 SMO 列舉對話方塊](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
 ####  <a name="ForeachHDFSFile"></a> 列舉值 = Foreach HDFS 檔案列舉值  
  [Foreach HDFS 檔案列舉值] 可讓 SSIS 封裝列舉所指定 HDFS 位置中的 HDFS 檔案。 每個 HDFS 檔案的名稱可以儲存在變數中，也可以用於 Foreach 迴圈容器內的工作中。  
@@ -501,7 +501,7 @@ ms.locfileid: "52505932"
 > [!NOTE]  
 >  對應變數之後，新資料列會自動加入 [變數] 清單。  
   
- **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Index**  
  如果使用 Foreach 項目列舉值，請指定集合值中要對應至變數的資料行索引。 針對其他列舉值類型，此索引是唯讀的。  
@@ -522,7 +522,7 @@ ms.locfileid: "52505932"
  **變數**  
  使用變數以定義限制。 在清單中選取變數，或按一下 [<新增變數>]，以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[加入變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Text**  
  提供文字以定義限制。  

@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640695"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283032"
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
@@ -42,7 +42,7 @@ ms.locfileid: "51640695"
 |作業|Description|  
 |---------------|-----------------|  
 |GetProcessingRange|此作業是在叫用使用 CDC 來源資料流程的資料流程之前使用。 叫用此作業時，它會建立 CDC 來源資料流程所讀取的 LSN 範圍。 此範圍會儲存在資料流程處理期間 CDC 來源所使用的 SSIS 封裝變數中。<br /><br /> 如需儲存之狀態的詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。|  
-|MarkProcessedRange|在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
+|MarkProcessedRange|所解碼的字元：在每個 CDC 執行之後 (CDC 資料流程順利完成之後) 執行此作業，以便記錄 CDC 執行期間完整處理的最後一個 LSN。 下次執行 GetProcessingRange 時，這個位置就是下一個處理範圍的開頭。|  
   
 ## <a name="handling-cdc-state-persistency"></a>處理 CDC 狀態持續性  
  CDC 控制工作會在啟動之間維護永續性狀態。 儲存在 CDC 狀態中的資訊用來決定及維護 CDC 封裝的處理範圍，以及用於偵測錯誤狀態。 永續性狀態儲存為字串。 如需詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。  
@@ -122,7 +122,7 @@ ms.locfileid: "51640695"
   
 -   **標記處理的範圍**：此作業是在 CDC 回合結束時 (CDC 資料流程順利完成之後) 用於變更處理封裝中，以便記錄 CDC 回合中完整處理的最後一個 LSN。 下次執行 `GetProcessingRange` 時，這個位置就會決定下一個處理範圍的開頭。  
   
--   **重設 CDC 狀態**：此作業是用來重設與目前 CDC 內容相關聯的持續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。  
+-   **重設 CDC 狀態**：此作業是用來重設與目前 CDC 內容相關聯的永續性 CDC 狀態。 執行此作業之後，LSN 時間戳記 `sys.fn_cdc_get_max_lsn` 資料表中的目前最大 LSN 就會變成下一個處理範圍的範圍開頭。 此作業需要來源資料庫的連接。  
   
      此作業使用時機的範例如下：當您只想要處理新建立的變更記錄，而忽略所有舊的變更記錄時。  
   

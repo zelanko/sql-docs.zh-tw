@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cbd69e8674d7e2672502bfafe6550b83bc4e0362
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414535"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271101"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
   「緩時變維度」轉換可在資料倉儲維度資料表中協調記錄的更新與插入。 例如，您可利用此轉換來設定轉換輸出，該轉換輸出會使用 AdventureWorks OLTP 資料庫中 Production.Products 資料表的資料，在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 資料庫的 DimProduct 資料表內插入和更新記錄。  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677656"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280892"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>第 2-1 課：建置部署公用程式
 在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
@@ -49,7 +49,7 @@ ms.locfileid: "47677656"
   
 4.  在 [輸出] 視窗中，確認以下資訊：  
   
-    已經開始建立: SQL Integration Services 專案: 累加 ...  
+    建置已開始:SQL Integration Services 專案:累加 ...  
   
     正在建立部署公用程式...  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47677656"
   
     建立已完成 -- 0 個錯誤，0 個警告  
   
-    ========== 建置: 0 成功、0 失敗、1 最新、0 略過 ==========  
+    ========== 建置：0 成功、0 失敗、1 最新、0 略過 ==========  
   
 5.  在 **[檔案]** 功能表上按一下 **[結束]**。 如果出現對 [Deployment Tutorial (部署教學課程)] 項目儲存變更的提示，請按一下 [是]。  
   

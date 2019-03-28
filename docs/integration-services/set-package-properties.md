@@ -23,15 +23,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525256"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277377"
 ---
 # <a name="set-package-properties"></a>設定封裝屬性
   當您使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 所提供的圖形介面，在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中建立封裝時，可以在 [屬性] 視窗中設定封裝物件的屬性。  
@@ -50,7 +50,7 @@ ms.locfileid: "52525256"
   
 -   [其他](#Misc)  
   
--   [Security](#Security)  
+-   [安全性](#Security)  
   
 -   [交易](#Transactions)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "52525256"
   
 |屬性|Description|  
 |--------------|-----------------|  
-|**IsolationLevel**|封裝交易的隔離等級。 可能的值為 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此屬性的預設值為 **Serializable**。<br /><br /> 注意： **IsolationLevel** 屬性的 **Snapshot** 值與封裝交易不相容。 因此，您不能使用 **IsolationLevel** 屬性將封裝交易的隔離等級設定為 **Shapshot**。 而是要改用 SQL 查詢將封裝交易設定為 **Snapshot**。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 只有當 **IsolationLevel** 屬性的值設定為 **TransactionOption** 時，系統才會將 **Required**屬性套用到封裝交易。<br /><br /> 當下列條件成立時，子容器所要求的 **IsolationLevel** 屬性值會被忽略：<br />子容器的 **TransactionOption** 屬性值為 **Supported**。<br />子容器會聯結父容器的交易。<br /><br /> 只有當容器起始新的交易時，才會接受容器所要求的 **IsolationLevel** 屬性值。 當下列條件都成立時，容器會起始新的交易：<br />容器的 **TransactionOption** 屬性值為 **Required**。<br />父容器尚未啟動交易。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
+|**IsolationLevel**|封裝交易的隔離等級。 可能的值為 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**和 **Snapshot**。 此屬性的預設值為 **Serializable**。<br /><br /> 注意：**IsolationLevel** 屬性的 **Snapshot** 值與套件交易不相容。 因此，您不能使用 **IsolationLevel** 屬性將封裝交易的隔離等級設定為 **Shapshot**。 而是要改用 SQL 查詢將封裝交易設定為 **Snapshot**。 如需詳細資訊，請參閱 [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。<br /><br /> 只有當 **IsolationLevel** 屬性的值設定為 **TransactionOption** 時，系統才會將 **Required**屬性套用到封裝交易。<br /><br /> 當下列條件成立時，子容器所要求的 **IsolationLevel** 屬性值會被忽略：<br />子容器的 **TransactionOption** 屬性值為 **Supported**。<br />子容器會聯結父容器的交易。<br /><br /> 只有當容器起始新的交易時，才會接受容器所要求的 **IsolationLevel** 屬性值。 當下列條件都成立時，容器會起始新的交易：<br />容器的 **TransactionOption** 屬性值為 **Required**。<br />父容器尚未啟動交易。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
 |**TransactionOption**|封裝的交易式參與。 可能的值為 **NotSupported**、 **Supported**、 **Required**。 此屬性的預設值為 **Supported**。 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
   
 ###  <a name="Version"></a> 版本  

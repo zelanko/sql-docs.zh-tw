@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642230"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290534"
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
@@ -49,7 +49,7 @@ ms.locfileid: "51642230"
 ## <a name="error-handling"></a>錯誤處理  
  CDC 來源有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**：值一定是 -1。  
+-   **錯誤碼**：此值一律為 -1。  
   
 -   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   
@@ -155,7 +155,7 @@ use <cdc-enabled-database-name>
   
 -   **全部**：傳回目前 CDC 範圍中的變更，不含 [更新之前] 值。  
   
--   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新之前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
+-   **全部 (含舊值)**：傳回目前 CDC 處理範圍中的變更，包括舊值 ([更新前])。 每個更新作業都有兩個資料列：一個包含更新之前的值，另一個則包含更新之後的值。  
   
 -   **淨**：只針對目前 CDC 處理範圍中修改的每個來源資料列傳回一項變更。 如果來源資料列更新了許多次，就會產生結合的變更 (例如，插入+更新會產生為單一更新，而更新+刪除則產生為單一刪除)。 在淨變更處理模式中工作時，您可以將變更分割成刪除、插入和更新輸出，並且以平行方式處理它們，因為單一來源資料列會出現在多個輸出中。  
   

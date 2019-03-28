@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518466"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274081"
 ---
 # <a name="data-flow-task"></a>資料流程工作
   資料流程工作會封裝在來源與目的地之間移動資料的資料流程引擎，並讓使用者在資料移動時轉換、清除及修改資料。 將資料流程工作加入封裝控制流程，使得封裝擷取、轉換和載入資料成為可能。  
@@ -45,7 +45,7 @@ ms.locfileid: "52518466"
  ![資料流程](../../integration-services/control-flow/media/mw-dts-09.gif "資料流程")  
   
 ## <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 也為許多工作提供自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。 資料流程工作包含下列自訂記錄項目：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 也為許多工作提供自訂記錄項目。 如需詳細資訊，請參閱 [集成服務 &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。 資料流程工作包含下列自訂記錄項目：  
   
 |記錄項目|Description|  
 |---------------|-----------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "52518466"
   
  許多記錄事件會寫入多個項目，並且有些記錄項目的訊息包含複雜的資料。 若要更容易了解和溝通複雜訊息的內容，您可以剖析訊息文字。 視記錄的位置而定，您可以使用 Transact-SQL 陳述式或指令碼元件，將複雜的文字區分成資料行或其他更有用的格式。  
   
- 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  : 1185 : OLE DB 來源輸出 : 1180 : 排序 : 1181 : 排序輸入 : 76」。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 **OnPipelineRowsSent** 事件寫入。  
+ 例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  :1185 :OLE DB 來源輸出 :1180 :排序 :1181 :排序輸入 :76"，剖析為資料行。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 **OnPipelineRowsSent** 事件寫入。  
   
 |「資料行」|Description|ReplTest1|  
 |------------|-----------------|-----------|  

@@ -1,7 +1,7 @@
 ---
 title: XML 結構描述集合 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255713"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375286"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255713"
   
  例如，請考慮下列結構描述：  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255713"
 |**blockDefault**|**block** 屬性會套用到尚未出現此屬性的所有元素宣告和類型定義上，而且其值會設定為 **blockDefault** 屬性的值。|  
 |**finalDefault**|**final** 屬性會套用到尚未出現此屬性的所有元素宣告和類型定義上，而且其值會設定為 **finalDefault** 屬性的值。|  
 |**targetNamespace**|隸屬於目標命名空間之元件的詳細資訊會儲存在中繼資料內。|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> XML 結構描述集合上的權限  
  您必須有必要權限，才能執行下列作業：  
@@ -163,7 +164,7 @@ ms.locfileid: "54255713"
 ##  <a name="info"></a> 取得有關 XML 結構描述和結構描述集合的資訊  
  XML 結構描述集合會列舉在目錄檢視 sys.xml_schema_collections 中。 XML 結構描述集合 "sys" 是由系統定義的。 其包含預先定義的命名空間，您不需要明確地將其載入，即可用在所有使用者自訂的 XML 結構描述集合中。 此清單包含 xml、xs、xsi、fn 及 xdt 的命名空間。 另外二個目錄檢視為 sys.xml_schema_namespaces：列舉出每個 XML 結構描述集合中的所有命名空間；以及 sys.xml_components：列舉出每個 XML 結構描述中的所有 XML 結構描述元件。  
   
- 內建函數 **XML_SCHEMA_NAMESPACE**( *schemaName、XmlSchemacollectionName、namespace-uri*) 會產生 **xml** 資料類型執行個體。 此執行個體包含 XML 結構描述集合中所包含之結構描述的 XML 結構描述片段 (預先定義的 XML 結構描述除外)。  
+ 內建函式 **XML_SCHEMA_NAMESPACE** (*schemaName、XmlSchemacollectionName、namespace-uri*) 會產生 **xml** 資料類型執行個體。 此執行個體包含 XML 結構描述集合中所包含之結構描述的 XML 結構描述片段 (預先定義的 XML 結構描述除外)。  
   
  您可以用下列方法來列舉 XML 結構描述集合的內容：  
   
@@ -176,7 +177,7 @@ ms.locfileid: "54255713"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合中的 XML 命名空間  
  針對 XML 結構描述集合 "myCollection" 來使用下列查詢：  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>範例列舉 XML 結構描述集合的內容  
  下列陳述式會列舉關聯式結構描述 dbo 中之 XML 結構描述集合 "myCollection" 的內容。  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  您可以將目標命名空間指定為 **XML_SCHEMA_NAMESPACE()** 的第三個引數，以 **xml**資料類型執行個體的型式來取得集合中的個別 XML 結構描述。 下列範例會顯示這一點。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例從 XML 結構描述集合輸出指定的結構描述  
- 下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "<https://www.microsoft.com/books>" 的 XML 結構描述。  
+ 下列陳述式會從關聯式結構描述 dbo 內的 XML 結構描述集合 "myCollection"，輸出含有「假設」目標命名空間 https/\/www.microsoft.com/was-books 的 XML 結構描述。  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>查詢 XML 結構描述  

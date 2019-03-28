@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a30db977b505e3482507023844259f8dd2d11150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7b7db8c28670c4ac411bb2e618f7051d9639fc1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602266"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270385"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>建立及編輯 Oracle CDC 服務
   您會從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC Windows 服務。  
@@ -64,7 +64,7 @@ ms.locfileid: "47602266"
   
 -   **Windows 驗證**：如果您選取這個選項，Oracle CDC 服務會使用服務帳戶識別連接到目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果正在另一部電腦上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須搭配網域帳戶使用 Windows 驗證。  
   
--   **SQL Server 驗證**：如果您選取這個選項，您必須針對您要使用的 **登入來輸入** [使用者名稱] **和** [密碼] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 Oracle CDC 服務會在連接到目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時使用這些認證。  
+-   **SQL Server 驗證**：如果您選取這個選項，您必須針對您要使用的 **登入來輸入**使用者名稱**和**密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 Oracle CDC 服務會在連接到目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時使用這些認證。  
   
  Oracle CDC 服務所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入只要求它必須是公用固定伺服器角色的成員，不需要其他權限。 一旦加入新的 Oracle CDC 執行個體之後，該登入會取得關聯 **CDC 資料庫的** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "47602266"
  **選項。**  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  
   
--   **連接逾時**：輸入 Oracle CDC 服務在逾時之前，等候連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的時間 (以秒數為單位)。預設值為 **15**。  
+-   **連接逾時**：輸入 Oracle CDC 服務在逾時之前等候連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的時間 (以秒數為單位)。預設值為 **15**。  
   
 -   **執行逾時**：輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
   
--   **加密連接**：針對 Oracle CDC 服務與使用加密連接之目標 **執行個體之間的通訊選取** [加密連接] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+-   **加密連接**：針對 Oracle CDC 服務與使用加密連線之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連線]。  
   
 -   **進階**：必要時輸入其他任何連接屬性。  
   

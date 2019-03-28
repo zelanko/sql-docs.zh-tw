@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: 建立 SQL Server、Azure SQL Database、Azure SQL 資料倉儲及 Analytics Platform System 的資料庫語法
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6283f95a8d3dc34964d13a21b75097ab5f51a56d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974547"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222142"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1317,7 +1317,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表、資料行存放區索引的差異存放區，或叢集資料行存放區索引上非叢集索引的資料，其大小不可超過 MAXSIZE。壓縮成資料行存放區格式的資料沒有大小限制，因此不受 MAXSIZE 限制。
 
 SERVICE_OBJECTIVE     
-指定效能等級。 如需 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 服務目標的詳細資訊，請參閱[效能層級](https://azure.microsoft.com/documentation/articles/performance-tiers/)。
+指定效能等級。 如需適用於 SQL 資料倉儲之服務目標的詳細資訊，請參閱[資料倉儲單位 (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu) \(機器翻譯\)。
 
 ## <a name="general-remarks"></a>一般備註
 使用 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 以查看資料庫屬性。

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d437fe81da2d8aefdba67f7a8501202ce79459c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694636"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273657"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>將資料表加入至 CDC 執行個體
   使用 [資料表選取範圍] 對話方塊，將 Oracle 來源中的其他資料表加入至 CDC 執行個體。 選取的資料表會加入至屬性編輯器中 **[資料表]** 索引標籤的清單。  
@@ -35,7 +35,7 @@ ms.locfileid: "47694636"
 > [!NOTE]  
 >  您可以在一個或兩個欄位中輸入準則。  
   
--   **顯示前 1000 個相符的資料表**：預設會選取這個核取方塊。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
+-   **顯示前 1000 個相符的資料表**：根據預設，此核取方塊為已選取。 它會將顯示畫面限制為前 1000 個相符的資料表。 如果您清除此核取方塊，符合準則的所有資料表都會顯示。 如果有大量的資料表，則顯示清單可能需要很長的時間。  
   
  **若要選取包含在 CDC 執行個體中的資料表**  
  按一下您想要包含之任何資料表旁邊的核取方塊，然後按一下 [加入]。 資料表隨即加入至新增執行個體精靈中 **[選取資料表和資料行]** 頁面的清單中。  
@@ -50,7 +50,7 @@ ms.locfileid: "47694636"
   
 ## <a name="see-also"></a>另請參閱  
  [如何編輯 CDC 執行個體屬性](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [如何管理 CDC 執行個體](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [選取 Oracle 資料表以擷取變更](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [選取 Oracle 資料表來擷取變更](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   
