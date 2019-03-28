@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377898"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536690"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
   您必須在建立記憶體最佳化資料表時，指定 `BUCKET_COUNT` 參數的值。 本主題將針對判斷適合 `BUCKET_COUNT` 參數的值提出建議。 如果您無法判斷正確的值區計數，請改用非叢集索引。  不正確的 `BUCKET_COUNT` 值 (尤其是過低的值) 可能會對工作負載的效能以及資料庫的復原時間造成嚴重影響。 最好是高估值區計數。  
@@ -38,7 +38,7 @@ ms.locfileid: "53377898"
 ### <a name="primary-key-and-unique-indexes"></a>主索引鍵和唯一索引  
  由於主索引鍵的索引是唯一的，因此索引鍵中的相異值數目會對應資料表中資料列的數目。 針對 AdventureWorks 資料庫的 Sales.SalesOrderDetail 資料表中 (SalesOrderID, SalesOrderDetailID) 上的主索引鍵，發出下列查詢來計算相異主索引鍵值的數目，該數目對應資料表中資料列的數目：  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>非唯一索引  
  對於其他索引，例如 (SpecialOfferID, ProductID) 上的多重資料行索引，發出下列查詢來判斷唯一索引鍵值的數目：  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>對值區計數進行疑難排解  
  若要疑難排解記憶體最佳化資料表中的值區計數問題，請使用[sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)以取得關於空白貯體和資料列鏈結的長度的統計資料。 下列查詢可用來取得目前資料庫中所有雜湊索引的相關統計資料。 如果資料庫中有大型資料表，則查詢可能需要幾分鐘才能完成。  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  以下列資料表和指令碼為例，將範例資料列插入資料表中：  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  
