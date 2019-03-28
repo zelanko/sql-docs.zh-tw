@@ -16,12 +16,12 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3228fc41c571aae60d6609131680162400a310f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527330"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +51,15 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |值|描述|  
 |-----------|-----------------|  
 |**合併式發行**|可用於合併式發行集的資料庫。|  
-|**發行**|資料庫可用於其他類型的發行集。|  
-|**訂閱**|資料庫是訂閱資料庫。|  
+|**publish**|資料庫可用於其他類型的發行集。|  
+|**subscribe**|資料庫是訂閱資料庫。|  
 |**備份與同步處理**|啟用資料庫的協調備份。 如需詳細資訊，請參閱 <<c0> [ 為異動複寫啟用協調備份&#40;Replication TRANSACT-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。</c0>|  
   
- [  **@value=**] **'***值***'**  
- 這是指要啟用或停用給定的複寫資料庫選項。 *值*是**sysname**，而且可以是 **，則為 true**或是**false**。 當這個值是**假**並*optname*是**合併式發行**，也會卸除到合併式發行資料庫的訂用帳戶。  
+`[ @value = ] 'value'` 要啟用或停用指定的複寫資料庫選項。 *值*是**sysname**，而且可以是 **，則為 true**或是**false**。 當這個值是**假**並*optname*是**合併式發行**，也會卸除到合併式發行資料庫的訂用帳戶。  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- 指出是否在未連接到散發者的情況之下，執行這個預存程序。 *ignore_distributor*已**位元**，預設值是**0**，表示散發者應該連接到並更新與發行集資料庫的新狀態。 該值**1**才應該指定 「 散發者 」 是否無法存取並**sp_replicationdboption**用來停用發行。  
+`[ @ignore_distributor = ] ignore_distributor` 指出是否要將此預存程序執行而不需要連線到散發者。 *ignore_distributor*已**位元**，預設值是**0**，表示散發者應該連接到並更新與發行集資料庫的新狀態。 該值**1**才應該指定 「 散發者 」 是否無法存取並**sp_replicationdboption**用來停用發行。  
   
- [  **@from_scripting=**] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -82,7 +79,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [刪除發行集](../../relational-databases/replication/publish/delete-a-publication.md)   
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

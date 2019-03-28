@@ -18,12 +18,12 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 98e962d5600064194ef4aff4a8f514e39a8f71a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1db15a2f8c8e1d7616065ff88aa40b08f92127a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806772"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530270"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@name_in_db =** ] **'***name***'**  
- 這是要移除的資料庫使用者名稱。 *名稱*已**sysname**沒有預設值。 *名稱*可以是伺服器登入、 Windows 登入或 Windows 群組的名稱，且必須存在於目前的資料庫。 當您指定 Windows 登入或 Windows 群組時，請指定它在資料庫中的識別名稱。  
+`[ @name_in_db = ] 'name'` 是要移除的資料庫使用者名稱。 *名稱*已**sysname**沒有預設值。 *名稱*可以是伺服器登入、 Windows 登入或 Windows 群組的名稱，且必須存在於目前的資料庫。 當您指定 Windows 登入或 Windows 群組時，請指定它在資料庫中的識別名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

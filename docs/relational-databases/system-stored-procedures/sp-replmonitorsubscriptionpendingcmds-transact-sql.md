@@ -16,12 +16,12 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175718b9d53556c5b24e65cb31e117fdf9a27418
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73494ded33f5fc67c86bc5976f16c2e3b0e8b083
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794880"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532620"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 這是發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是已發行名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication** = ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@subscriber** = ] **'***subscriber***'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [ **@subscriber_db** = ] **'***subscriber_db***'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
   
- [ **@subscription_type** =] *subscription_type*  
- 若是訂閱的類型。 *publication_type*已**int**，沒有預設值，它可以是下列值之一。  
+`[ @subscription_type = ] subscription_type` 如果訂用帳戶的類型。 *publication_type*已**int**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

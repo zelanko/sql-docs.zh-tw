@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04a3fe5351b3c7fc3a6dd711e6e2d638b079c136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601816"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533861"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@principal_id** = ] *principal_id*  
- 資料庫使用者或角色中的識別碼**msdb**要變更之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 任一*principal_id*或是*principal_name*必須指定。  
+`[ @principal_id = ] principal_id` 資料庫使用者或角色中的識別碼**msdb**要變更之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 任一*principal_id*或是*principal_name*必須指定。  
   
- [ **@principal_name** = ] **'***principal_name***'**  
- 資料庫使用者或角色的名稱**msdb**要更新之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 任一*principal_id*或是*principal_name*可能指定。  
+`[ @principal_name = ] 'principal_name'` 資料庫使用者或角色的名稱**msdb**要更新之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 任一*principal_id*或是*principal_name*可能指定。  
   
- [ **@profile_id** =] *profile_id*  
- 要變更之關聯的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_id = ] profile_id` 若要變更關聯的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 要變更之關聯的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'` 若要變更關聯的設定檔的名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
- [ **@is_default** = ] **'***is_default***'**  
- 這是指這個設定檔是否為資料庫使用者的預設設定檔。 資料庫使用者只能有一個預設設定檔。 *is_default*已**元**，沒有預設值。  
+`[ @is_default = ] 'is_default'` 為此設定檔是否為資料庫使用者的預設設定檔。 資料庫使用者只能有一個預設設定檔。 *is_default*已**元**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

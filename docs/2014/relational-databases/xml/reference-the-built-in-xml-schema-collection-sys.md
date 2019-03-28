@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b9c91e26c7c797bcde837d59c9447bc50d7d435
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376050"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533830"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>參考內建 XML 結構描述集合 (sys)
   您建立的每一個資料庫，在 **sys** 關聯式結構描述中，都有一個預先定義的 **sys** XML 結構描述集合。 此集合會保留這些預先定義的結構描述，所以從其他使用者建立的任何 XML 結構描述集合都能存取這些結構描述。 這些預先定義的結構描述中使用的前置詞在 XQuery 中是有意義的。 只有 **xml** 是保留的前置詞。  

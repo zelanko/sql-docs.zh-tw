@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822532"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530340"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
   記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 在記憶體最佳化的資料表中，資料列的長度不得超過 8,060 個位元組。 了解記憶體最佳化的資料表大小將有助於您了解電腦是否有足夠的記憶體。  
@@ -135,7 +135,7 @@ ms.locfileid: "52822532"
   
  假設 Orders 資料表具有下列定義：  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -149,7 +149,7 @@ GO
   
  請注意，此資料表具有一個雜湊索引與一個非叢集索引 (主索引鍵)。 它還有三個固定長度資料行和一個可變長度資料行，且其中一個資料行可為 NULL (OrderDescription)。 假設 Orders 資料表有 8379 個資料列，而且 OrderDescription 資料行中值的平均長度為 78 個字元。  
   
- 若要判斷資料表大小，請先判斷索引的大小。 這兩個索引的 bucket_count 都指定為 10000。 這會無條件進位到最接近 2 的乘冪：16384。 因此，Orders 資料表的索引大小總計為：  
+ 若要判斷資料表大小，請先判斷索引的大小。 這兩個索引的 bucket_count 都指定為 10000。 這會無條件進位到最接近 2 的乘冪：16384. 因此，Orders 資料表的索引大小總計為：  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -198,7 +198,7 @@ GO
   
     -   總填補為 24 - 22 = 2 個位元組。  
   
--   沒有固定長度的深層類型資料行 (固定長度深層類型資料行：0.)。  
+-   沒有固定長度的深層類型資料行 (固定長度深層類型資料行：0.).  
   
 -   深層類型資料行的實際大小為 2 * 78 = 156。 單一深層類型資料行 OrderDescription 的類型為 nvarchar。  
   
@@ -217,7 +217,7 @@ GO
   
  這個資料表及其索引實際配置和使用的記憶體可透過下列查詢取得：  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

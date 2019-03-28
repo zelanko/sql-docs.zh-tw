@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_principalprofile_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756269"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528500"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@principal_id** = ] *principal_id*  
- 資料庫使用者或角色中的識別碼**msdb**之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 任一*principal_id*或是*principal_name*必須指定。 A *principal_id*的**0**這個設定檔的公用設定檔，存取權授與資料庫中的所有主體。  
+`[ @principal_id = ] principal_id` 資料庫使用者或角色中的識別碼**msdb**之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 任一*principal_id*或是*principal_name*必須指定。 A *principal_id*的**0**這個設定檔的公用設定檔，存取權授與資料庫中的所有主體。  
   
- [ **@principal_name** = ] **'***principal_name***'**  
- 資料庫使用者或角色的名稱**msdb**之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 任一*principal_id*或是*principal_name*必須指定。 A *principal_name*的 **'public'** 這個設定檔的公用設定檔，存取權授與資料庫中的所有主體。  
+`[ @principal_name = ] 'principal_name'` 資料庫使用者或角色的名稱**msdb**之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 任一*principal_id*或是*principal_name*必須指定。 A *principal_name*的 **'public'** 這個設定檔的公用設定檔，存取權授與資料庫中的所有主體。  
   
- [ **@profile_id** =] *profile_id*  
- 這是關聯的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_id = ] profile_id` 關聯的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 這是關聯的設定檔名稱。 *profile_name*已**sysname**，沒有預設值。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'` 關聯的設定檔名稱。 *profile_name*已**sysname**，沒有預設值。 任一*profile_id*或是*profile_name*必須指定。  
   
- [ **@is_default** = ] *is_default*  
- 指定這個設定檔是否為主體的預設設定檔。 主體只能有一個預設設定檔。 *is_default*已**元**，沒有預設值。  
+`[ @is_default = ] is_default` 指定此設定檔是否為主體的預設設定檔。 主體只能有一個預設設定檔。 *is_default*已**元**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -16,12 +16,12 @@ ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84fa72ff11ffb97d736dcd5ed194064367c3a5ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 812ddd803d2a41695429902d6d8fc470ccef9576
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748331"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529211"
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 這是要監視其狀態的發行者名稱。 *發行者*已**sysname**，預設值是 NULL。 如果**null**，會傳回所有使用散發者之發行者的資訊。  
+`[ @publisher = ] 'publisher'` 是受監視的狀態 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 NULL。 如果**null**，會傳回所有使用散發者之發行者的資訊。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 這是發行的資料庫名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果是 NULL，就會傳回發行者端所有已發行資料庫的資訊。  
+`[ @publisher_db = ] 'publisher_db'` 是已發行名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果是 NULL，就會傳回發行者端所有已發行資料庫的資訊。  
   
- [ **@publication** = ] **'***publication***'**  
- 這是要監視的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
+`[ @publication = ] 'publication'` 受監視發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
- [ **@publication_type** =] *publication_type*  
- 若是發行集的類型。 *publication_type*已**int**，而且可以是下列值之一。  
+`[ @publication_type = ] publication_type` 如果發行集的類型。 *publication_type*已**int**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -61,23 +57,22 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|合併式發行集。|  
 |NULL (預設值)|複寫試圖判斷發行集類型。|  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- 僅供內部使用。  
+`[ @refreshpolicy = ] refreshpolicy` 僅供內部使用。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_db**|**sysname**|這是發行者的名稱。|  
-|**發行集**|**sysname**|這是發行集的名稱。|  
+|**publication**|**sysname**|這是發行集的名稱。|  
 |**publication_type**|**int**|這是發行集的類型，可以是下列其中一個值。<br /><br /> **0** = 交易式發行集<br /><br /> **1** = 快照式發行集<br /><br /> **2** = 合併式發行集|  
 |**status**|**int**|發行集所有相關聯之複寫代理程式的狀態最大值，可以是下列其中一個值。<br /><br /> **1** = 啟動<br /><br /> **2** = 成功<br /><br /> **3** = 進行中<br /><br /> **4** = 閒置<br /><br /> **5** = 正在重試<br /><br /> **6** = 失敗|  
-|**警告**|**int**|屬於發行集之訂閱所產生的臨界值警告最大值，可能是其中一個或多個這些值的邏輯 OR 結果。<br /><br /> **1** = 到期-交易式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **2** = latency-將交易式發行者資料複寫到訂閱者所花的時間超出臨界值，以秒為單位。<br /><br /> **4** = mergeexpiration-合併式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **8** = mergefastrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，快速網路連接。<br /><br /> **16** = mergeslowrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，慢速或撥號網路連線。<br /><br /> **32** = mergefastrunspeed-傳遞速率無法維持臨界速率，以每秒的資料列快速網路連接合併訂閱同步處理期間，資料列。<br /><br /> **64** = mergeslowrunspeed-傳遞速率的合併訂閱同步處理期間，資料列無法維持臨界速率，以每秒的資料列，透過慢速或撥號網路連線。|  
+|**warning**|**int**|屬於發行集之訂閱所產生的臨界值警告最大值，可能是其中一個或多個這些值的邏輯 OR 結果。<br /><br /> **1** = 到期-交易式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **2** = latency-將交易式發行者資料複寫到訂閱者所花的時間超出臨界值，以秒為單位。<br /><br /> **4** = mergeexpiration-合併式發行集的訂閱尚未同步保留期限臨界值內。<br /><br /> **8** = mergefastrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，快速網路連接。<br /><br /> **16** = mergeslowrunduration-完成合併訂閱的同步處理所花費的時間超出臨界值，以秒為單位，慢速或撥號網路連線。<br /><br /> **32** = mergefastrunspeed-傳遞速率無法維持臨界速率，以每秒的資料列快速網路連接合併訂閱同步處理期間，資料列。<br /><br /> **64** = mergeslowrunspeed-傳遞速率的合併訂閱同步處理期間，資料列無法維持臨界速率，以每秒的資料列，透過慢速或撥號網路連線。|  
 |**worst_latency**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的最高延遲 (以秒為單位)。|  
 |**best_latency**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的最低延遲 (以秒為單位)。|  
 |**average_latency**|**int**|交易式發行集的記錄讀取器或散發代理程式所傳播之資料變更的平均延遲 (以秒為單位)。|  
 |**last_distsync**|**datetime**|這是上次執行散發代理程式的日期時間。|  
-|**保留期**|**int**|這是發行集的保留期限。|  
+|**retention**|**int**|這是發行集的保留期限。|  
 |**latencythreshold**|**int**|這是交易式發行集所設定的延遲臨界值。|  
 |**expirationthreshold**|**int**|當發行集是合併式發行集時，所設定的期限臨界值。|  
 |**agentnotrunningthreshold**|**int**|這是代理程式尚未執行的最長時間所設定的臨界值。|  

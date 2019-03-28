@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0cfe6b67217521f829f7b4745d42283e70a411fe
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.openlocfilehash: 787b26c401f825c6c74298a803a16d59f1a37d04
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147026"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511005"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安裝 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

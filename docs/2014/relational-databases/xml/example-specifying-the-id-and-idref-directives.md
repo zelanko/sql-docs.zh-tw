@@ -1,5 +1,5 @@
 ---
-title: 範例：指定 ID 和 IDREF 指示詞 | Microsoft Docs
+title: 範例指定 ID 和 IDREF 指示詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7daf7eb63adf5b1c0978879225f161e2e00cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211372"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532020"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>範例：指定 ID 和 IDREF 指示詞
+# <a name="example-specifying-the-id-and-idref-directives"></a>範例指定 ID 和 IDREF 指示詞
   此範例幾乎與＜ [指定 ELEMENTXSINIL 指示詞](example-specifying-the-elementxsinil-directive.md) ＞範例相同。 唯一的差異在於查詢會指定 **ID** 和 **IDREF** 指示詞。 這些指示詞會覆寫 <`OrderHeader`> 和 <`OrderDetail`> 元素中的 **SalesPersonID** 屬性類型。 這會形成內部文件連結。 您需要結構描述，才能查看被覆寫的類型。 因此，查詢會在 FOR XML 子句中指定 **XMLDATA** 選項，以擷取結構描述。  
   
 ```  

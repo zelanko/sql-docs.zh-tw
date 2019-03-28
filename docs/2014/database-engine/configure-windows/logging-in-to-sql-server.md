@@ -21,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f054808a5432c7be95eeb419308012603f46069
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369310"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531720"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
   您可以利用任何圖形化管理工具，或是從命令提示字元登入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
@@ -71,7 +71,7 @@ ms.locfileid: "53369310"
 ## <a name="verifying-your-connection-protocol"></a>驗證您的連接通訊協定  
  連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時，下列查詢會傳回用於目前連接的通訊協定和驗證方法 (NTLM 或 Kerberos)，並指出是否加密連接。  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

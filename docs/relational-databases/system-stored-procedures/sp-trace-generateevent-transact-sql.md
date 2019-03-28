@@ -18,19 +18,19 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826546"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529350"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立使用者定義事件。  
   
->**注意︰** 此預存程序**不**已被取代。 所有其他與追蹤相關的預存程序都已被取代。  
+>**注意：** 這個預存程序**不**已被取代。 所有其他與追蹤相關的預存程序都已被取代。  
   
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,14 +45,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@eventid=**] *event_id*  
- 這是要開啟的事件識別碼。 *event_id*已**int**，沒有預設值。 識別碼必須是從 82 到 91，為資料集代表使用者定義事件的事件編號[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
+`[ @eventid = ] event_id` 是要開啟的事件識別碼。 *event_id*已**int**，沒有預設值。 識別碼必須是從 82 到 91，為資料集代表使用者定義事件的事件編號[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
- [ **@userinfo**=] **'***user_info***'**  
- 這是用來識別事件原因的選擇性使用者定義字串。 *user_info*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
+`[ @userinfo = ] 'user_info'` 選擇性的使用者定義字串，識別事件的原因。 *user_info*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
   
- [ **@userdata**=] *user_data*  
- 這是選擇性的使用者指定事件資料。 *user_data*已**varbinary(8000)**，預設值是 NULL。  
+`[ @userdata = ] user_data` 是事件的選擇性使用者自訂資料。 *user_data*已**varbinary(8000)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  下表描述在預存程序完成之後，使用者可能得到的代碼值。  
@@ -99,7 +96,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.fn_trace_geteventinfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)  
   

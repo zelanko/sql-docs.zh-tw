@@ -18,12 +18,12 @@ ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 89e46b81abfc50f8d793d55da850cf0ce9ee12c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06429303e70cd63e15b35d4d88181379c65bb09b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680999"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532990"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- 這是全文檢索目錄的名稱。 *fulltext_catalog_name*已**sysname**。 如果省略這個參數或它的值是 NULL，就會傳回目前資料庫所關聯的所有全文檢索目錄的相關資訊。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 是全文檢索目錄的名稱。 *fulltext_catalog_name*已**sysname**。 如果省略這個參數或它的值是 NULL，就會傳回目前資料庫所關聯的所有全文檢索目錄的相關資訊。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,7 +54,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|全文檢索目錄識別碼。|  
-|**名稱**|**sysname**|全文檢索目錄的名稱。|  
+|**NAME**|**sysname**|全文檢索目錄的名稱。|  
 |**PATH**|**nvarchar(260)**|從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，這個子句不會有任何作用。|  
 |**狀態**|**int**|目錄的全文檢索索引擴展狀態：<br /><br /> 0 = 閒置<br /><br /> 1 = 完整擴展進行中<br /><br /> 2 = 已暫停<br /><br /> 3 = 調整執行速度<br /><br /> 4 = 復原中<br /><br /> 5 = 已關閉<br /><br /> 6 = 累加擴展進行中<br /><br /> 7 = 正在建立索引<br /><br /> 8 = 磁碟已滿， 已暫停<br /><br /> 9 = 變更追蹤<br /><br /> NULL = 使用者沒有全文檢索目錄的 VIEW 權限，或資料庫未啟用全文檢索，或未安裝全文檢索元件。|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|與目錄相關聯之全文檢索索引資料表的數目。|  
@@ -75,8 +74,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_catalog &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [sp_fulltext_catalog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

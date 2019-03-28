@@ -18,12 +18,12 @@ ms.assetid: c71b21c0-ec04-4fbd-9735-01128b736935
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c74c364362e63a8ff8e5d426b9d12f0db6e682d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf86ac0ffdd26de81a277152c7091cb6dcdd352b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752806"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528842"
 ---
 # <a name="spdeletelogshippingsecondarydatabase-transact-sql"></a>sp_delete_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_delete_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@secondary_database =** ] '*secondary_database*'  
- 這是次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'` 是，次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

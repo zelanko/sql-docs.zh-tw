@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/09/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6216142708a201a1ad720ab4e1e659c507744195
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432301"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509954"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>在 Azure 虛擬機器上安裝 SQL Server 機器學習服務 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

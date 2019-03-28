@@ -18,12 +18,12 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673176"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527780"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@principal_id** = ] *principal_id*  
- 是資料庫使用者或角色中的識別碼**msdb**要刪除之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 若要讓公用設定檔進入私人設定檔，提供主體識別碼**0**或 主體名稱 **'public'**。 任一*principal_id*或是*principal_name*必須指定。  
+`[ @principal_id = ] principal_id` 是資料庫使用者或角色中的識別碼**msdb**要刪除之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 若要讓公用設定檔進入私人設定檔，提供主體識別碼**0**或 主體名稱 **'public'**。 任一*principal_id*或是*principal_name*必須指定。  
   
- [ **@principal_name** = ] **'***principal_name***'**  
- 是資料庫使用者或角色的名稱**msdb**要刪除之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 若要讓公用設定檔進入私人設定檔，提供主體識別碼**0**或 主體名稱 **'public'**。 任一*principal_id*或是*principal_name*必須指定。  
+`[ @principal_name = ] 'principal_name'` 是資料庫使用者或角色的名稱**msdb**要刪除之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 若要讓公用設定檔進入私人設定檔，提供主體識別碼**0**或 主體名稱 **'public'**。 任一*principal_id*或是*principal_name*必須指定。  
   
- [ **@profile_id** =] *profile_id*  
- 這是要刪除之關聯的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_id = ] profile_id` 是要刪除之關聯的設定檔的識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 這是要刪除之關聯的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'` 是要刪除之關聯的設定檔的名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

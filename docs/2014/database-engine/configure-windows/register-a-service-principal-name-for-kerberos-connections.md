@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130948"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529660"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
   若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 驗證，需要符合下列兩個條件：  
@@ -100,7 +100,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |-|-|  
 |MSSQLSvc/*fqdn:port*|使用 TCP 時，此為提供者產生的預設 SPN。 *port* 是 TCP 通訊埠編號。|  
 |MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。 *fqdn* 是完整網域名稱。|  
-|MSSQLSvc /*fqdn:InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。|  
+|MSSQLSvc/*fqdn:InstanceName*|使用 TCP 以外的通訊協定時，此為提供者針對具名執行個體所產生的預設 SPN。 *InstanceName* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。|  
   
 ##  <a name="Auto"></a> 自動 SPN 註冊  
  當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>:\<tcpport> 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc (根據 \<tcpport> 值來區分執行個體)。  
@@ -147,7 +147,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  若要判斷連接的驗證方法，請執行下列查詢。  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |狀況|驗證方法|  
 |--------------|---------------------------|  
-|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意：正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
-|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意：正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意:正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意:正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
 |SPN 對應到不正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|驗證失敗。|  
 |SPN 查閱失敗或是未對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶，或者不是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|本機和遠端連接都會使用 NTLM。|  
   

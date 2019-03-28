@@ -1,5 +1,5 @@
 ---
-title: sp_msx_set_account (TRANSACT-SQL) |Microsoft Docs
+title: sp_msx_set_account (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16d5c1815e42e419940223b7f25a565e04ab0508
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627932"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533250"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@credential_name=** ] **'***credential_name***'**  
- 用來登入主要伺服器的認證名稱。 提供的名稱必須是現有認證的名稱。 任一*credential_name*或是*credential_id*必須指定。  
+`[ @credential_name = ] 'credential_name'` 要用來登入主要伺服器的認證名稱。 提供的名稱必須是現有認證的名稱。 任一*credential_name*或是*credential_id*必須指定。  
   
- [ **@credential_id=** ] *credential_id*  
- 用來登入主要伺服器的認證識別碼。 識別碼必須是現有認證的識別碼。 任一*credential_name*或是*credential_id*必須指定。  
+`[ @credential_id = ] credential_id` 要用來登入主要伺服器的認證識別碼。 識別碼必須是現有認證的識別碼。 任一*credential_name*或是*credential_id*必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -74,6 +72,6 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_msx_get_account &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
+ [sp_msx_get_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-get-account-transact-sql.md)  
   
   

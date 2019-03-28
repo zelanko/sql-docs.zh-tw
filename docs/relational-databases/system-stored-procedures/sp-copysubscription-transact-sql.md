@@ -16,12 +16,12 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0580ccfaa0505e027cedb5824aca26b6dbe51574
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124308"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531000"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@filename =**] **'**_file_name_**'**  
- 這是指定用來儲存資料檔 (.mdf) 複本的完整路徑 (包括檔案名稱) 之字串。 *檔名*已**nvarchar(260)**，沒有預設值。  
+`[ @filename = ] 'file_name'` 是指定完整路徑，包括檔案名稱，來儲存資料檔案 (.mdf) 副本的字串。 *檔名*已**nvarchar(260)**，沒有預設值。  
   
- [  **@temp_dir=**] **'**_temp_dir_**'**  
- 這是包含暫存檔之目錄的名稱。 *temp_dir*已**nvarchar(260)**，預設值是 NULL。 如果是 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用預設資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
+`[ @temp_dir = ] 'temp_dir'` 是包含暫存檔名稱。 *temp_dir*已**nvarchar(260)**，預設值是 NULL。 如果是 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會使用預設資料目錄。 目錄應該有足夠的空間來存放組合了所有訂閱者資料庫檔案的檔案大小。  
   
- [  **@overwrite_existing_file=**] **'**_overwrite_existing_file_**'**  
- 是選擇性的布林值旗標，指定是否要覆寫現有的檔案中指定的相同名稱的**@filename**。 *overwrite_existing_file*已**位元**，預設值是**0**。 如果**1**，它會覆寫所指定的檔案**@filename**，如果有的話。 如果**0**，預存程序失敗時，如果檔案存在，而且不會覆寫檔案。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` 是選擇性的布林值旗標，指定是否要覆寫現有的檔案中指定的相同名稱的**@filename**。 *overwrite_existing_file*已**位元**，預設值是**0**。 如果**1**，它會覆寫所指定的檔案**@filename**，如果有的話。 如果**0**，預存程序失敗時，如果檔案存在，而且不會覆寫檔案。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -17,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 780616b452865324c3a34abcaa6dd5935123151f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203008"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531860"
 ---
 # <a name="get-information-about-dml-triggers"></a>取得關於 DML 觸發程序的詳細資訊
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 取得有關 [!INCLUDE[tsql](../../includes/tsql-md.md)]中 DML 觸發程序的資訊。 這項資訊可能包括資料表上觸發程序的類型、觸發程序的名稱、其擁有者，以及建立或修改的日期。 如果觸發程序建立時並未加密，則您會取得觸發程序的定義。 定義可幫助您了解觸發程序如何影響本身定義所在的資料表。 另外，您可以找出特定觸發程序所使用的物件。 有了這項資訊，您就可以識別影響觸發程序的物件 (如果已在資料庫中變更或刪除這些物件)。  
@@ -48,7 +48,7 @@ ms.locfileid: "48203008"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
   
  OBJECT_DEFINITION、OBJECTPROPERTY、 **sp_helptext**  
- 需要 **public** 角色中的成員資格。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
+ 需要 **public** 角色的成員資格。 凡具有下列任一權限的物件擁有者或被授與者，都看得到使用者物件的定義：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
   
  **sys.sql_expression_dependencies**  
  需要資料庫的 VIEW DEFINITION 權限和資料庫之 **sys.sql_expression_dependencies** 的 SELECT 權限。 依預設，SELECT 權限只授與 **db_owner** 固定資料庫角色的成員。 當 SELECT 和 VIEW DEFINITION 權限授與其他使用者時，被授與者就可以檢視資料庫中的所有相依性。  
@@ -89,7 +89,7 @@ ms.locfileid: "48203008"
   
 3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 每個範例都會說明如何檢視 `iuPerson` 觸發程序的定義。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT definition   
@@ -98,7 +98,7 @@ WHERE object_id = OBJECT_ID(N'Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.iuPerson')) AS ObjectDefinition;   
@@ -106,7 +106,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 EXEC sp_helptext 'Person.iuPerson'  
@@ -158,7 +158,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT  name, object_id, schema_id, parent_object_id, type_desc, create_date, modify_date, is_published  
@@ -168,7 +168,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT OBJECTPROPERTY(OBJECT_ID(N'Person.iuPerson'), 'ExecIsInsteadOfTrigger');   
@@ -184,7 +184,7 @@ GO
   
 3.  將下列其中一個範例複製並貼到查詢視窗中，然後按一下 **[執行]**。 每個範例都會說明如何檢視引發 `iuPerson` 觸發程序的事件。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT object_id, type, type_desc, is_trigger_event, event_group_type, event_group_type_desc   
@@ -193,7 +193,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GO   
 SELECT object_id, type,is_first, is_last  

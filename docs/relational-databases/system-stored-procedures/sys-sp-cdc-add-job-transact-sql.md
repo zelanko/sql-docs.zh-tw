@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_add_job & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532137"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_type=** ] **'**_作業\_類型_**'**  
- 要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 不能是 NULL。 有效輸入如下 **'capture'** 並 **'cleanup'**。  
+`[ @job_type = ] 'job\_type'` 要加入的作業類型。 *job_type&lt*已**nvarchar(20)** 不能是 NULL。 有效輸入如下 **'capture'** 並 **'cleanup'**。  
   
- [  **@start_job=** ] *start_job*  
- 旗標，指出作業是否應該在加入之後立即啟動。 *start_job*已**元**預設值是 1。  
+`[ @start_job = ] start_job` 旗標，指出作業是否應該在已加入之後立即啟動。 *start_job*已**元**預設值是 1。  
   
- [ **@maxtrans** ] = *max_trans&lt*  
- 每個掃描循環中要處理的交易數目上限。 *max_trans&lt*已**int**預設值是 500。 如果已指定，該值必須是正整數。  
+`[ @maxtrans ] = max_trans` 每個掃描循環中處理交易的最大數目。 *max_trans&lt*已**int**預設值是 500。 如果已指定，該值必須是正整數。  
   
  *max_trans&lt*只適用於擷取作業。  
   
- [ **@maxscans** ] **=** _max\_掃描_  
- 要執行以便從記錄中擷取所有資料列的掃描循環數目上限。 *max_scans*已**int**預設值是 10。  
+`[ @maxscans ] = max\_scans_` 若要執行以便從記錄檔中擷取所有資料列的掃描循環的最大數目。 *max_scans*已**int**預設值是 10。  
   
  *max_scan*只適用於擷取作業。  
   
- [ **@continuous** ] **=**_連續_  
- 指出擷取作業是連續執行 (1)，還是僅執行一次 (0)。 *持續*已**元**預設值是 1。  
+`[ @continuous ] = continuous_` 指出擷取作業是連續執行 (1)，或只執行一次 (0)。 *持續*已**元**預設值是 1。  
   
  當*連續*= 1， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作業會掃描記錄並且最多處理 (*max_trans&lt* \* *max_scans*)交易。 然後等待中指定的秒數*polling_interval*再開始下一步 的記錄檔掃描。  
   
@@ -74,18 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *連續*只適用於擷取作業。  
   
- [ **@pollinginterval** ] **=**_輪詢\_間隔_  
- 記錄掃描循環之間的秒數。 *polling_interval*已**bigint**預設值是 5。  
+`[ @pollinginterval ] = polling\_interval_` 記錄掃描循環之間的秒數。 *polling_interval*已**bigint**預設值是 5。  
   
  *polling_interval*只適用於擷取作業的時機*連續*設為 1。 若已指定，這個值不可能是負值，而且不可能超過 24 小時。 若已指定 0 值，記錄檔掃描之間不會有等待時間。  
   
- [ **@retention** ] **=**_保留_  
- 變更資料列要保留在變更資料表中的分鐘數。 *保留期*已**bigint**預設值為 4320 （72 小時）。 最大值為 52494800 (100 年)。 如果已指定，該值必須是正整數。  
+`[ @retention ] = retention_` 分鐘數，變更的資料列来保留在變更資料表中。 *保留期*已**bigint**預設值為 4320 （72 小時）。 最大值為 52494800 (100 年)。 如果已指定，該值必須是正整數。  
   
  *保留*只適用於清除作業。  
   
- [  **@threshold =** ] **'**_刪除\_閾值_**'**  
- 可以使用單一清除陳述式來刪除的最大刪除項目數。 *delete_threshold*已**bigint** 5000 筆的預設值。  
+`[ @threshold = ] 'delete\_threshold'` 刪除項目可以使用單一陳述式清除刪除的最大數目。 *delete_threshold*已**bigint** 5000 筆的預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -130,8 +122,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.cdc_jobs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

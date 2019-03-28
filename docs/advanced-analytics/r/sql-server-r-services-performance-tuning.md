@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 9e43e65fc175844c5b08dbd8c435c0854397ce3e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: e547e2cd3c50e020d1164dc2b8aaffb31f4e3cb8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432291"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510105"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server 中的 R 效能微調
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

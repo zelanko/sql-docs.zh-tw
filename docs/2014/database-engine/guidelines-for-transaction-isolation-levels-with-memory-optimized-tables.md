@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510018"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527790"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>搭配記憶體最佳化的資料表使用交易隔離等級的方針
   在許多情況下，您必須指定交易隔離等級。 記憶體最佳化資料表的交易隔離不同於磁碟基礎的資料表。  
@@ -62,7 +62,7 @@ ms.locfileid: "52510018"
   
  下列自動認可交易範例示範記憶體最佳化資料表 Customers 和正規資料表 [Order History] 之間的聯結，當做特定批次的一部分：  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  下列明確或隱含交易範例示範相同聯結，但是這次是在明確的使用者交易中。 記憶體最佳化的資料表 Customers 是在快照隔離下存取，透過資料表提示 WITH (SNAPSHOT) 所指示，而正規資料表 [Order History] 則是在讀取認可隔離下存取：  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  請注意，輪詢邏輯必須在交易範圍之外，因為它使用快照隔離來存取資料表 t1。 在交易範圍內使用輪詢邏輯，會建立長時間執行的交易，這是不良作法。  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

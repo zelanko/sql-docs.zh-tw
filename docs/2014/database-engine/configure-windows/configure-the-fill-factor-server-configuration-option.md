@@ -12,12 +12,12 @@ ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1f9398a700af30876d438b110392215b40337c91
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641309"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527120"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>設定 fill factor 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fill factor [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 提供填滿因數的用意，是為了微調索引資料的儲存與效能。 建立或重建索引時，填滿因數值會決定要在每個分葉層級頁面上填滿資料的空間百分比，進而保留剩餘百分比當做可用空間，以供未來成長使用。 如需詳細資訊，請參閱 [指定索引的填滿因素](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。  
@@ -67,9 +67,9 @@ ms.locfileid: "52641309"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `fill factor` 選項的值設定為 `100`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `fill factor` 選項的值設定為 `100`。  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  

@@ -16,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4643cfc08db68e5369cfca25d2de76d314ffb347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779370"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530670"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,39 +44,32 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**。 發行集必須已存在，且符合識別碼的規則。 如果是 NULL 或**%**，會傳回所有合併式發行集和目前的資料庫中的訂用帳戶的相關資訊。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**。 發行集必須已存在，且符合識別碼的規則。 如果是 NULL 或**%**，會傳回所有合併式發行集和目前的資料庫中的訂用帳戶的相關資訊。  
   
- [  **@subscriber=**] **'***訂閱者***'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是**%**。 如果是 NULL 或 %，就會傳回給定發行集之所有訂閱的相關資訊。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是**%**。 如果是 NULL 或 %，就會傳回給定發行集之所有訂閱的相關資訊。  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是**%**，傳回所有訂閱資料庫的相關資訊。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，預設值是**%**，傳回所有訂閱資料庫的相關資訊。  
   
- [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 發行者必須是有效伺服器。 *發行者*已**sysname**，預設值是**%**，它會傳回所有發行者的相關資訊。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 發行者必須是有效伺服器。 *發行者*已**sysname**，預設值是**%**，它會傳回所有發行者的相關資訊。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**，傳回所有發行者資料庫的相關資訊。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**，傳回所有發行者資料庫的相關資訊。  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- 這是訂閱的類型。 *subscription_type*已**nvarchar(15)**，而且可以是下列值之一。  
+`[ @subscription_type = ] 'subscription_type'` 是訂用帳戶的類型。 *subscription_type*已**nvarchar(15)**，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**推播**（預設值）|發送訂閱|  
-|**提取**|提取訂閱|  
+|**pull**|提取訂閱|  
 |**兩者**|發送訂閱和提取訂閱|  
   
- [  **@found=**] **'***找到***' 輸出**  
- 這是表示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是 NULL。 **1**表示找到發行集。 **0**指出找不到發行集。  
+`[ @found = ] 'found'OUTPUT` 是指示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是 NULL。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|訂閱的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
 |**訂閱者**|**sysname**|訂閱者的名稱。|  
@@ -92,7 +85,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|指定是否已將複寫代理程式的卸載執行設成執行於訂閱者端。 如果是 NULL，就是執行於發行者端。|  
 |**offload_server**|**sysname**|執行代理程式的伺服器名稱。|  
 |**use_interactive_resolver**|**int**|傳回是否在重新調整期間使用互動式解析程式。 如果**0**，不會使用互動式解析程式。|  
-|**主機名稱**|**sysname**|值來篩選訂閱時所提供的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式。|  
+|**hostname**|**sysname**|值來篩選訂閱時所提供的值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式。|  
 |**subscriber_security_mode**|**smallint**|這是安全性模式，在訂閱者，其中**1**表示 Windows 驗證，並**0**表示[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**subscriber_login**|**sysname**|這是在訂閱者端的登入名稱。|  
 |**subscriber_password**|**sysname**|永遠不傳回實際的訂閱者密碼。 結果會藉由遮罩 」**\*\*\*\*\*\***"字串。|  
@@ -109,9 +102,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  只有成員**sysadmin**固定伺服器角色**db_owner**固定的資料庫角色或訂閱所屬發行集之發行集存取清單能夠執行**sp_helpmergesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

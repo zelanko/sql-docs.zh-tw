@@ -14,12 +14,12 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16b9c9fde041339e10c554541dc03e2ddc315bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211160"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532630"
 ---
 # <a name="delete-a-stored-procedure"></a>刪除預存程序
     
@@ -27,7 +27,7 @@ ms.locfileid: "48211160"
   
 -   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
   
--   **使用下列項目刪除程序：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **若要刪除的程序中，使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48211160"
   
 4.  取得要從目前資料庫移除之預存程序的名稱。 在 [物件總管] 中，依序展開 **[可程式性]** 與 **[預存程序]**。 或在查詢編輯器中，執行下列陳述式。  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -83,7 +83,7 @@ ms.locfileid: "48211160"
   
 5.  將下列範例複製並貼到查詢編輯器中，然後插入要從目前資料庫中刪除的預存程序名稱。  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

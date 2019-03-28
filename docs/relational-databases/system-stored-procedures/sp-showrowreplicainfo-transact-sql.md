@@ -16,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136108"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530360"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@ownername**=] **'***ownername***'**  
- 這是資料表擁有者的名稱。 *ownername*已**sysname**，預設值是 NULL。 如果資料庫包含多份同名資料表，但每一份都有不同的擁有者，便可以利用這個參數來區分資料表。  
+`[ @ownername = ] 'ownername'` 是資料表擁有者名稱。 *ownername*已**sysname**，預設值是 NULL。 如果資料庫包含多份同名資料表，但每一份都有不同的擁有者，便可以利用這個參數來區分資料表。  
   
- [  **@tablename =**] **'***tablename***'**  
- 這是包含傳回資訊之資料列的資料表名稱。 *tablename*已**sysname**，預設值是 NULL。  
+`[ @tablename = ] 'tablename'` 是包含傳回的資訊的資料列名稱。 *tablename*已**sysname**，預設值是 NULL。  
   
- [  **@rowguid =**] *rowguid*  
- 這是資料列的唯一識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
+`[ @rowguid = ] rowguid` 是資料列的唯一識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
   
- [ **@show**=] **'***顯示***'**  
- 決定結果集所傳回的資訊量。 *顯示*已**nvarchar(20)** 兩者的預設值。 如果**資料列**，就會傳回資料列版本資訊。 如果**資料行**，就會傳回資料行版本資訊。 如果**兩者**、 資料列，並傳回資料行資訊。  
+`[ @show = ] 'show'` 決定要在結果集中傳回資料的量。 *顯示*已**nvarchar(20)** 兩者的預設值。 如果**資料列**，就會傳回資料列版本資訊。 如果**資料行**，就會傳回資料行版本資訊。 如果**兩者**、 資料列，並傳回資料行資訊。  
   
 ## <a name="result-sets-for-row-information"></a>資料列資訊的結果集  
   
@@ -63,7 +59,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**version**|**int**|項目的版本。|  
 |**current_state**|**nvarchar(9)**|傳回資料列目前狀態的相關資訊。<br /><br /> **y** -資料列的資料代表資料列的目前狀態。<br /><br /> **n** -資料列的資料不代表資料列的目前狀態。<br /><br /> **\<n/a >** -不適用。<br /><br /> **\<不明 >** -無法判定目前的狀態。|  
 |**rowversion_table**|**nchar(17)**|指出是否將資料列版本儲存在[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)資料表或[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)資料表。|  
-|**註解**|**nvarchar(255)**|這個資料列版本項目的其他相關資訊。 這個欄位通常是空的。|  
+|**comment**|**nvarchar(255)**|這個資料列版本項目的其他相關資訊。 這個欄位通常是空的。|  
   
 ## <a name="result-sets-for-column-information"></a>資料行資訊的結果集  
   
@@ -74,7 +70,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|建立這個項目的資料庫暱稱。|  
 |**version**|**int**|項目的版本。|  
 |**colname**|**sysname**|資料行版本項目所代表之發行項資料行的名稱。|  
-|**註解**|**nvarchar(255)**|這個資料行版本項目的其他相關資訊。 這個欄位通常是空的。|  
+|**comment**|**nvarchar(255)**|這個資料行版本項目的其他相關資訊。 這個欄位通常是空的。|  
   
 ## <a name="result-set-for-both"></a>這兩者的結果集  
  如果該值**兩者**為選擇*顯示*，則會傳回資料列和資料行的結果集。  

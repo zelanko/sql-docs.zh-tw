@@ -12,12 +12,12 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 543e248f19e76b0d2caca3ee595778fe430334ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018473"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531880"
 ---
 # <a name="linestring"></a>LineString
   `LineString` 是代表一連串的點及連接這些點之線段的一維度物件。  
@@ -102,7 +102,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  下列範例會示範如何建立具有兩個相同點的 `geometry LineString` 執行個體。 `IsValid` 的呼叫表示 `LineString` 執行個體無效，而 `MakeValid` 的呼叫會將 `LineString` 執行個體轉換成 `Point`。  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  

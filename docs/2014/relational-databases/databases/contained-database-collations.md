@@ -12,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789700"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526510"
 ---
 # <a name="contained-database-collations"></a>自主資料庫定序
   許多屬性會影響文字資料的排序次序和相等語意，包括區分大小寫、區分腔調字和使用的基底語言。 這些品質會透過資料的定序選擇表達至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需定序本身的更深入討論，請參閱[定序與 Unicode 支援](../collations/collation-and-unicode-support.md)。  
@@ -32,13 +32,13 @@ ms.locfileid: "52789700"
 ### <a name="example-1"></a>範例 1  
  例如，如果我們在北京工作，可能會使用中文定序：  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  現在，如果我們建立一個資料行，其預設定序就是這個中文定序，但是如果我們想要，也可以選擇另一個定序：  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -51,7 +51,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -63,7 +63,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>範例 2  
  例如，假設上述 (中文) 資料庫使用於具有 **Latin1_General** 定序的執行個體上：  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -87,7 +87,7 @@ JOIN #T2
   
  修正此問題的方法是明確地建立暫時資料表的定序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可提供 `DATABASE_DEFAULT` 子句的 `COLLATE` 關鍵字，以簡化此作業。  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -137,7 +137,7 @@ END;
   
  在先前所描述的暫存資料表範例中，我們可以看見這個定序行為排除了在大部分暫存資料表中使用明確 `COLLATE` 子句的需求。 在自主資料庫中，這段程式碼現在執行時不會發生錯誤，即使資料庫和執行個體定序不同也一樣：  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

@@ -18,12 +18,12 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaf644b6a8795e9c68e0053eaed0023c4b9299b6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 47a8665027ce251a391049aa71ba12b246c1c625
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588402"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528881"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,23 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_server =** ] **'**_table_server&lt_**'**  
- 這是傳回資料行資訊所屬的連結伺服器名稱。 *table_server&lt*已**sysname**，沒有預設值。  
+`[ @table_server = ] 'table_server'` 是要傳回的資料行資訊的連結伺服器的名稱。 *table_server&lt*已**sysname**，沒有預設值。  
   
- [  **@table_name =** ] **'**_table_name_**'**  
- 這是傳回資料行資訊所屬的資料表名稱。 *table_name*已**sysname**，預設值是 NULL。  
+`[ @table_name = ] 'table_name'` 是傳回資料行資訊所屬名稱。 *table_name*已**sysname**，預設值是 NULL。  
   
- [  **@table_schema =** ] **'**_table_schema_**'**  
- 這是傳回資料行資訊所屬之資料表的結構描述名稱。 *table_schema*已**sysname**，預設值是 NULL。  
+`[ @table_schema = ] 'table_schema'` 會傳回資料行資訊所屬之資料表的結構描述名稱。 *table_schema*已**sysname**，預設值是 NULL。  
   
- [  **@table_catalog =** ] **'**_table_catalog 排列_**'**  
- 這是傳回的資料行資訊所屬之資料表的目錄名稱。 *table_catalog 排列*已**sysname**，預設值是 NULL。  
+`[ @table_catalog = ] 'table_catalog'` 會傳回資料行資訊所屬之資料表的目錄名稱。 *table_catalog 排列*已**sysname**，預設值是 NULL。  
   
- [  **@column_name =** ] **'**_資料行_**'**  
- 這是提供的權限資訊所屬的資料庫資料行名稱。 *資料行*已**sysname**，預設值是 NULL。  
+`[ @column_name = ] 'column'` 是要為其提供資訊的資料庫資料行的名稱。 *資料行*已**sysname**，預設值是 NULL。  
   
- [  **@ODBCVer =** ] **'**_ODBCVer_**'**  
- 這是要使用之 ODBC 的版本。 *ODBCVer*已**int**，預設值是 2。 這表示 ODBC 2。 有效值是 2 或 3。 如需有關 2 和 3 版之間行為差異的詳細資訊，請參閱 ODBC SQLColumns 規格。  
+`[ @ODBCVer = ] 'ODBCVer'` 是要使用之 ODBC 的版本。 *ODBCVer*已**int**，預設值是 2。 這表示 ODBC 2。 有效值是 2 或 3。 如需有關 2 和 3 版之間行為差異的詳細資訊，請參閱 ODBC SQLColumns 規格。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -71,23 +65,23 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|資料表或檢視表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (_限定詞_**。**_擁有者_**。**_名稱_)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
-|**再依據 TABLE_SCHEM 排列**|**sysname**|資料表或檢視表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
+|**TABLE_SCHEM**|**sysname**|資料表或檢視表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表或檢視表名稱。 這個欄位一律會傳回值。|  
 |**COLUMN_NAME**|**sysname**|資料行名稱，每個資料行**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  
 |**DATA_TYPE**|**smallint**|對應於 ODBC 類型指標的整數值。 如果這是無法對應於 ODBC 類型的資料類型，這個值就是 NULL。 原生資料型別名稱都會傳入**TYPE_NAME**資料行。|  
-|**TYPE_NAME**|**varchar (** 13 **)**|代表資料類型的字串。 基礎 DBMS 提供這個資料類型名稱。|  
+|**TYPE_NAME**|**varchar(** 13 **)**|代表資料類型的字串。 基礎 DBMS 提供這個資料類型名稱。|  
 |**COLUMN_SIZE**|**int**|有效位數的數目。 傳回值**精確度**資料行是在基底為 10。|  
 |**BUFFER_LENGTH**|**int**|資料的傳送大小。1|  
 |**DECIMAL_DIGITS**|**smallint**|小數點右側的位數。|  
 |**NUM_PREC_RADIX**|**smallint**|這是數值資料類型的基礎。|  
 |**可為 NULL**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
-|**註解**|**varchar (** 254 **)**|這個欄位一律會傳回 NULL。|  
-|**COLUMN_DEF**|**varchar (** 254 **)**|資料行的預設值。|  
+|**REMARKS**|**varchar(** 254 **)**|這個欄位一律會傳回 NULL。|  
+|**COLUMN_DEF**|**varchar(** 254 **)**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 這個資料行是相同**DATA_TYPE**資料行，除了**datetime**和 SQL-92**間隔**資料型別。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|子類型代碼**datetime**和 SQL-92**間隔**資料型別。 其他資料類型的這個資料行都會傳回 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|字元或整數資料類型資料行的最大長度 (以位元組為單位)。 其他所有資料類型的這個資料行都會傳回 NULL。|  
 |**ORDINAL_POSITION**|**int**|資料行在資料表中的序數位置。 資料表中的第一個資料行是 1。 這個資料行一律會傳回值。|  
-|**IS_NULLABLE**|**varchar (** 254 **)**|資料表中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 傳回的值，這個資料行是針對傳回的值不同**NULLABLE**資料行。|  
+|**IS_NULLABLE**|**varchar(** 254 **)**|資料表中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 傳回的值，這個資料行是針對傳回的值不同**NULLABLE**資料行。|  
 |**SS_DATA_TYPE**|**tinyint**|擴充預存程序所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。|  
   
  如需詳細資訊，請參閱 Microsoft ODBC 文件集。  
@@ -115,13 +109,13 @@ EXEC sp_columns_ex 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_catalogs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_foreignkeys &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [< sp_indexes &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [idbschemarowset &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [idbschemarowset &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

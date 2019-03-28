@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50063c63ce7e541e997f23a4995620dc6d003823
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517117"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526430"
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
   您可以透過幾種方式將 XML 資料傳送到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 例如：  

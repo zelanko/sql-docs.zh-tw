@@ -14,20 +14,20 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 116fd45b97011060aab0dd79519648542ec5255c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084118"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530050"
 ---
 # <a name="create-a-stored-procedure"></a>建立預存程序
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。  
   
 ##  <a name="Top"></a>   
--   **Before you begin:**  [Permissions](#Permissions)  
+-   **開始之前：**[權限](#Permissions)  
   
--   **若要建立程序，請使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **使用以下方式建立程序：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> 權限  
  需要在資料庫中的 CREATE PROCEDURE 權限，以及在建立程序時所在的結構描述上的 ALTER 權限。  
@@ -69,7 +69,7 @@ ms.locfileid: "48084118"
   
 7.  在 **[查詢編輯器]** 中，以下列陳述式取代 SELECT 陳述式：  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  

@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125708"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531810"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@login_type** =] *login_type*  
- 這是所提供之認證的驗證類型。 *login_type*已**tinyint**，沒有預設值。  
+`[ @login_type = ] login_type` 是提供之認證類型。 *login_type*已**tinyint**，沒有預設值。  
   
  **1** = Windows 整合式的驗證  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證  
   
- [ **@login** =] **'**_登入_**'**  
- 這是您要變更的 Windows 帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的名稱。 *登入*已**nvarchar(257)**，沒有預設值  
+`[ @login = ] 'login'` 是 Windows 帳戶的名稱或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在變更的登入。 *登入*已**nvarchar(257)**，沒有預設值  
   
- [ **@password** =] **'**_密碼_**'**  
- 是新的密碼，以儲存指定之*登入*。 *密碼*已**sysname**，沒有預設值。  
+`[ @password = ] 'password'` 是新的密碼，以儲存指定之*登入*。 *密碼*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  在變更複寫密碼之後，必須停止並重新啟動使用該代理程式變更生效前所用密碼的每一個代理程式。  
   
- [ **@server** =] **'**_server_**'**  
- 這是要變更儲存密碼的伺服器連接。 *伺服器*已**sysname**，而且可以是下列其中一個值：  
+`[ @server = ] 'server'` 是要變更儲存的密碼的伺服器連接。 *伺服器*已**sysname**，而且可以是下列其中一個值：  
   
 |值|描述|  
 |-----------|-----------------|  
-|**散發者**|所有與散發者的代理程式連接。|  
+|**distributor**|所有與散發者的代理程式連接。|  
 |**發行者**|所有與發行者的代理程式連接。|  
 |**訂閱者**|所有與訂閱者的代理程式連接。|  
 |**%** （預設值）|所有與複寫拓撲中所有伺服器的代理程式連接。|  

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b6822892547b8fa4ff3ad4dced02908d10cd39ec
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 99c96c860d2862b059077326be4f4fe313491cd3
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898993"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511231"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 課：瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

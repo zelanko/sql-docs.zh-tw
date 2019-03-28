@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7bd54130ecb17241f0a5cddf4d80e186d7a8a427
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: c9195a6c2b9a2192e9d8fd04ce3e5d2592b1b23e
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645020"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510945"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>使用 R 程式碼剖析函式來改善效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b70ae7a69ce316b98c892c4dbf4059bfbc97ca4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360900"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530481"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務
   本主題描述如何啟動、 停止、 暫停、 繼續或重新啟動[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式，或有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的瀏覽器服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]， **net**在命令提示字元中，命令[!INCLUDE[tsql](../../includes/tsql-md.md)]，或 PowerShell。  
@@ -254,13 +254,13 @@ ms.locfileid: "53360900"
   
 -   若要等待目前執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和預存程序完成，然後停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請執行下列陳述式。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   若要立即停止 [!INCLUDE[ssDE](../../includes/ssde-md.md)]，請執行下列陳述式。  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 714bfb68234a10a61b8ed41651da4f9f7037320e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531850"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器  (「角色」就像是 Windows 作業系統中的「群組」)。  
@@ -62,7 +62,7 @@ ms.locfileid: "53351739"
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

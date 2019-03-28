@@ -18,12 +18,12 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851556"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528973"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@agent_id=** ] **'***agent_id***'**  
- 用來備份的主要識別碼，或用來複製或還原的次要識別碼。 *agent_id*已**uniqueidentifier**不能是 NULL。  
+`[ @agent_id = ] 'agent_id'` 備份的主要識別碼或來複製或還原的次要識別碼。 *agent_id*已**uniqueidentifier**不能是 NULL。  
   
- [ **@agent_type=** ] **'***agent_type***'**  
- 記錄傳送作業的類型。  
+`[ @agent_type = ] 'agent_type'` 記錄傳送作業的類型。  
   
  0 = 備份。  
   
@@ -58,11 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type*已**tinyint**不能是 NULL。  
   
- [  **@database=** ] **'***資料庫***'**  
- 備份或還原代理程式的記錄工作所用的主要或次要資料庫。  
+`[ @database = ] 'database'` 記錄備份或還原代理程式所使用的主要或次要資料庫。  
   
- [ **@mode** ] *n*  
- 指定要重新整理或清除監視器資料。 資料類型*m*是 tinyint，和支援的值為：  
+`[ @mode ] n` 指定是否要重新整理監視資料，或加以清除。 資料類型*m*是 tinyint，和支援的值為：  
   
  1 = 重新整理 (這是預設值。)  
   

@@ -1,5 +1,5 @@
 ---
-title: xp_logininfo & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: xp_logininfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843826"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530020"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@acctname =** ] **'***account_name***'**  
- 這是獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權之 Windows 使用者或群組的名稱。 *account_name*已**sysname**，預設值是 NULL。 如果*account_name*未指定，所有 Windows 群組和 Windows 使用者已被明確授都與登入權限會報告。 *account_name*必須是完整名稱。 例如，'ADVWKS4\macraes' 或 'BUILTIN\Administrators'。  
+`[ @acctname = ] 'account_name'` 是的 Windows 使用者或授與存取權的群組名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *account_name*已**sysname**，預設值是 NULL。 如果*account_name*未指定，所有 Windows 群組和 Windows 使用者已被明確授都與登入權限會報告。 *account_name*必須是完整名稱。 例如，'ADVWKS4\macraes' 或 'BUILTIN\Administrators'。  
   
  **'all'** | **'members'**  
  指定是要報告有關帳戶所有權限路徑的資訊，或是要報告有關 Windows 群組成員的資訊。 **@option** 已**varchar(10)**，預設值是 NULL。 除非**所有**指定，會顯示的第一個權限路徑。  
   
- [  **@privilege =** ] *variable_name*  
- 這是傳回指定 Windows 帳戶權限層級的輸出參數。 *variable_name*已**varchar(10)**，預設值是 'Not wanted'。 傳回的權限等級**使用者**， **admin**，或**null**。  
+`[ @privilege = ] variable_name` 會傳回指定的 Windows 帳戶的權限層級的輸出參數。 *variable_name*已**varchar(10)**，預設值是 'Not wanted'。 傳回的權限等級**使用者**， **admin**，或**null**。  
   
  OUTPUT  
  指定時，會將放*variable_name*輸出參數。  
@@ -61,9 +59,9 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**帳戶名稱**|**sysname**|完整的 Windows 帳戶名稱。|  
+|**account name**|**sysname**|完整的 Windows 帳戶名稱。|  
 |**type**|**char(8)**|Windows 帳戶的類型。 有效值**使用者**或是**群組**。|  
-|**權限**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。 有效值**系統管理員**，**使用者**，或**null**。|  
+|**privilege**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。 有效值**系統管理員**，**使用者**，或**null**。|  
 |**對應的登入名稱**|**sysname**|使用者帳戶，具有使用者權限，如**對應登入名稱**會顯示對應的登入名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時它前面加上這個對應的規則使用的網域名稱的帳戶登入嘗試使用。|  
 |**權限路徑**|**sysname**|允許帳戶存取權的群組成員資格。|  
   

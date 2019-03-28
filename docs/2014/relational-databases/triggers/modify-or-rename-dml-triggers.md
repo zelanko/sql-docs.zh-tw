@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084967"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530890"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重新命名 DML 觸發程序
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 修改或重新命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的 DML 觸發程序。  
@@ -36,7 +36,7 @@ ms.locfileid: "49084967"
   
 -   **使用下列方法修改或重新命名 DML 觸發程序：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "49084967"
   
 ###  <a name="Recommendations"></a> 建議  
   
--   我們建議您不要使用 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 預存程序重新命名觸發程序。 變更物件名稱的任何部分，可能破壞指令碼和預存程序。 重新命名觸發程序並不會變更 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 目錄檢視 definition 資料行中對應的物件名稱。 我們建議您卸除並重新改為建立觸發程序。  
+-   我們建議您不要使用 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 預存程序重新命名觸發程序。 變更物件名稱的任何部分，可能破壞指令碼和預存程序。 重新命名觸發程序並不會變更 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 目錄檢視 definition 資料行中對應的物件名稱。 我們建議您先卸除，再重新建立觸發程序。  
   
 -   如果您變更 DML 觸發程序所參考的物件名稱，就必須修改觸發程序以反映新的名稱。 因此，在您重新命名物件之前，請先顯示此物件的相依性，以判斷是否有任何觸發程序受到相關變更的影響。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "49084967"
   
 3.  複製下列範例並貼入查詢中。 執行第一個範例，建立當使用者嘗試在 `SalesPersonQuotaHistory` 資料表中加入或變更資料時，將使用者定義訊息列印到用戶端的 DML 觸發程序。 執行 [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) 陳述式修改觸發程式，使它只在 `INSERT` 活動上引發。 這個觸發程序很有用，因為它會提醒使用者在這份資料表中更新或插入資料列，以便同時通知 `Compensation` 部門。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
@@ -110,7 +110,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TRIGGER Sales.bonus_reminder  
@@ -129,7 +129,7 @@ GO
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會使用 [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) 和 [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) 陳述式將 `Sales.bonus_reminder` 觸發程序重新命名為 `Sales.bonus_reminder_2`。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  

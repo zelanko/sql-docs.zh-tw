@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779650"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529340"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@frompublisher=** ] *frompublisher*  
- 指定預存程序是在發行者端或散發者端呼叫。 *frompublisher* bit，預設值為 0。 **1**表示預存程序從 「 發行者 」，呼叫並**0**表示預存程序從散發者端呼叫。  
+`[ @frompublisher = ] frompublisher` 指定是否在發行者端或散發者端呼叫預存程序。 *frompublisher* bit，預設值為 0。 **1**表示預存程序從 「 發行者 」，呼叫並**0**表示預存程序從散發者端呼叫。  
   
 ## <a name="result-sets"></a>結果集  
   

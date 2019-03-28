@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03d79ee58cdaf1237581bd59fbd696325e9e3f80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700726"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527940"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -52,29 +52,21 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@sequence_name** =] **N**'*序列*'  
- 順序物件的名稱。 此結構描述是選擇性的。 *sequence_name*已**nvarchar(776)**。  
+`[ @sequence_name = ] N'sequence'` 順序物件的名稱。 此結構描述是選擇性的。 *sequence_name* is **nvarchar(776)**.  
   
- [ **@range_size** =] *range_size*  
- 要從順序擷取的值數目。 **@range_size** 已**bigint**。  
+`[ @range_size = ] range_size` 若要從順序擷取的值數目。 **@range_size** 已**bigint**。  
   
- [ **@range_first_value** = ] *range_first_value*  
- 輸出參數會傳回用以計算要求範圍的順序物件之第一個值 (最小值或最大值)。 **@range_first_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @range_first_value = ] range_first_value` 輸出參數會傳回順序物件，用來計算要求的範圍的第一個 （最小值或最大值） 值。 **@range_first_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
- [ **@range_last_value** = ] *range_last_value*  
- 選擇性輸出參數會傳回所要求的範圍的最後一個值。 **@range_last_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @range_last_value = ] range_last_value` 選擇性輸出參數傳回要求的範圍的最後一個值。 **@range_last_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
- [ **@range_cycle_count** =] range_cycle_count  
- 選擇性輸出參數會傳回順序物件循環次數，以傳回要求的範圍。 **@range_cycle_count** 已**int**。  
+`[ @range_cycle_count = ] range_cycle_count` 選擇性輸出參數傳回的順序物件循環來傳回要求的範圍的次數。 **@range_cycle_count** 已**int**。  
   
- [ **@sequence_increment** = ] *sequence_increment*  
- 選擇性輸出參數會傳回順序物件的增量，用來計算要求的範圍。 **@sequence_increment** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @sequence_increment = ] sequence_increment` 選擇性輸出參數傳回的遞增順序物件，用來計算要求的範圍。 **@sequence_increment** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
- [ **@sequence_min_value** = ] *sequence_min_value*  
- 選擇性輸出參數會傳回順序物件的最小值。 **@sequence_min_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @sequence_min_value = ] sequence_min_value` 選擇性輸出參數傳回順序物件的最小值。 **@sequence_min_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
- [ **@sequence_max_value** = ] *sequence_max_value*  
- 選擇性輸出參數會傳回順序物件的最大值。 **@sequence_max_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
+`[ @sequence_max_value = ] sequence_max_value` 選擇性輸出參數傳回順序物件的最大值。 **@sequence_max_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

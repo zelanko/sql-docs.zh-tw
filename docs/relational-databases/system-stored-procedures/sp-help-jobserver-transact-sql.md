@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18408265b75503bc73905eb561f118e4ea950fa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729896"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533290"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id=** ] *job_id*  
- 要傳回資訊的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 作業識別碼為其傳回的資訊。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 要傳回資訊的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 要傳回資訊的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@show_last_run_details=** ] *show_last_run_details*  
- 這是指上次執行的執行資訊是否包含在結果集內。 *show_last_run_details*已**tinyint**，預設值是**0**。 **0**不包含上次執行的詳細資訊，並**1**沒有。  
+`[ @show_last_run_details = ] show_last_run_details` 這是上次執行的執行資訊是否結果集的一部分。 *show_last_run_details*已**tinyint**，預設值是**0**。 **0**不包含上次執行的詳細資訊，並**1**沒有。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

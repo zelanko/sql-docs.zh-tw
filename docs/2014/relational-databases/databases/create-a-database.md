@@ -14,12 +14,12 @@ ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f527d9767a6e821d0d4d5527fcad70e37f16e3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799110"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530460"
 ---
 # <a name="create-a-database"></a>建立資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料庫。  
@@ -108,9 +108,9 @@ ms.locfileid: "52799110"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會建立 `Sales`資料庫。 因為沒有使用關鍵字 PRIMARY，所以第一個檔案 (`Sales`_`dat`) 會成為主要檔案。 因為 `Sales`\_`dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales`\_`log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會建立 `Sales`資料庫。 因為沒有使用關鍵字 PRIMARY，所以第一個檔案 (`Sales`_`dat`) 會成為主要檔案。 因為 `Sales`\_`dat` 檔的 SIZE 參數中沒有指定 MB 或 KB，所以它會使用 MB 並 MB 來配置。 每當建立、修改或卸除使用者資料庫時，都應該備份 `Sales`\_`log` 檔會以 MB 為單位配置，因為 `MB` 參數中明確陳述 `SIZE` 後置詞。  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 CREATE DATABASE Sales  

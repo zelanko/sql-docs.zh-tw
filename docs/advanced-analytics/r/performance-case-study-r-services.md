@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645467"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510755"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R services 的效能： 結果和資源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -110,9 +110,9 @@ metric time pct
 | *airlineWithIndex*    | NoCompression   | 1        | 5.6775       |
 |                       | NoCompression-平行| 4        | 5.1775       |
 | *airlineWithPageComp* | PageCompression | 1        | 6.7875       |
-|                       | PageCompression-平行 | 4        | 5.3225       |
+|                       | PageCompression - parallel | 4        | 5.3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6.1325       |
-|                       | RowCompression-平行  | 4        | 5.2375       |
+|                       | RowCompression - parallel  | 4        | 5.2375       |
 
 **結論**
 
@@ -180,7 +180,7 @@ metric time pct
 
 | 資料表名稱          | 測試名稱   | 平均時間 |
 |---------------------|-------------|--------------|
-| *航空公司*           | *FactorCol* | 10.72        |
+| *Airline*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **結論**
@@ -361,7 +361,7 @@ RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決�
 
 + [SQL Server 如何支援 NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [軟體 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>深入了解 SQL Server 最佳化
 

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/18/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2c9cce03a5a2255353702fd99b8efb6e3e598ad5
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898973"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511215"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 R 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

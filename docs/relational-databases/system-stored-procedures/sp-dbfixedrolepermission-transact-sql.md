@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126208"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533360"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'**_角色_**'**  
- 這是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定資料庫角色名稱。 *角色*已**sysname**，預設值是 NULL。 如果*角色*未指定，會顯示所有固定的資料庫角色的權限。  
+`[ @rolename = ] 'role'` 是有效的名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定的資料庫角色。 *角色*已**sysname**，預設值是 NULL。 如果*角色*未指定，會顯示所有固定的資料庫角色的權限。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -89,9 +88,9 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helpdbfixedrole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
- [sp_srvrolepermission &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
+ [sp_srvrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

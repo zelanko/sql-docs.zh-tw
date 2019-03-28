@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589942"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528430"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,47 +53,33 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@account_id** = ] *account_id*  
- 這是要更新的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 至少其中一個*account_id*或是*account_name*必須指定。 如果同時指定這兩者，程序會變更帳戶的名稱。  
+`[ @account_id = ] account_id` 要更新的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 至少其中一個*account_id*或是*account_name*必須指定。 如果同時指定這兩者，程序會變更帳戶的名稱。  
   
- [ **@account_name** =] **'**_account_name_**'**  
- 這是要更新的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 至少其中一個*account_id*或是*account_name*必須指定。 如果同時指定這兩者，程序會變更帳戶的名稱。  
+`[ @account_name = ] 'account_name'` 要更新的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 至少其中一個*account_id*或是*account_name*必須指定。 如果同時指定這兩者，程序會變更帳戶的名稱。  
   
- [ **@email_address** =] **'**_email_address_**'**  
- 這是傳送訊息的新來源電子郵件地址。 這個地址必須是網際網路電子郵件地址。 地址中的伺服器名稱是 Database Mail 用來從這個帳戶傳送郵件的伺服器。 *email_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
+`[ @email_address = ] 'email_address'` 將訊息從傳送新的電子郵件地址。 這個地址必須是網際網路電子郵件地址。 地址中的伺服器名稱是 Database Mail 用來從這個帳戶傳送郵件的伺服器。 *email_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
   
- [ **@display_name** =] **'**_display_name_**'**  
- 這個帳戶發出的電子郵件訊息所用的新顯示名稱。 *display_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
+`[ @display_name = ] 'display_name'` 若要使用此帳戶的電子郵件訊息上的新顯示名稱。 *display_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
   
- [ **@replyto_address** =] **'**_replyto_address_**'**  
- 這個帳戶發出的電子郵件訊息之 [回覆至] 標頭中所用的新地址。 *replyto_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
+`[ @replyto_address = ] 'replyto_address'` 在此帳戶的電子郵件訊息回覆至 標頭中使用新的位址。 *replyto_address*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，沒有預設值。  
   
- [ **@description** =] **'**_描述_**'**  
- 帳戶的新描述。 *描述*已**nvarchar(256)**，預設值是 NULL。  
+`[ @description = ] 'description'` 帳戶的新描述。 *描述*已**nvarchar(256)**，預設值是 NULL。  
   
- [ **@mailserver_name** =] **'**__ n a m_**'**  
- 這個帳戶要用的 SMTP 郵件伺服器的新名稱。 執行的電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須能夠解析*server_name*為 IP 位址。 *server_name*已**sysname**，沒有預設值。  
+`[ @mailserver_name = ] 'server_name'` 若要使用此帳戶的 SMTP 郵件伺服器新名稱。 執行的電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須能夠解析*server_name*為 IP 位址。 *server_name*已**sysname**，沒有預設值。  
   
- [ **@mailserver_type** =] **'**_server_type_**'**  
- 郵件伺服器的新類型。 *server_type*已**sysname**，沒有預設值。 值 **'SMTP'** 支援。  
+`[ @mailserver_type = ] 'server_type'` 郵件伺服器的新的類型。 *server_type*已**sysname**，沒有預設值。 值 **'SMTP'** 支援。  
   
- [ **@port** = ] *port_number*  
- 郵件伺服器的新通訊埠編號。 *port_number*已**int**，沒有預設值。  
+`[ @port = ] port_number` 郵件伺服器的新連接埠號碼。 *port_number*已**int**，沒有預設值。  
   
- [ **@timeout** =] **'**_逾時_**'**  
- 單一電子郵件訊息之 SmtpClient.Send 的 Timeout 參數。 *逾時*已**int** （秒)，沒有預設值。  
+`[ @timeout = ] 'timeout'` 之 SmtpClient.Send 的單一電子郵件訊息的逾時參數。 *逾時*已**int** （秒)，沒有預設值。  
   
- [ **@username** =] **'**_username_**'**  
- 用來登入郵件伺服器的新使用者名稱。 *使用者名稱*已**sysname**，沒有預設值。  
+`[ @username = ] 'username'` 新的使用者名稱，用以登入郵件伺服器。 *使用者名稱*已**sysname**，沒有預設值。  
   
- [ **@password** =] **'**_密碼_**'**  
- 用來登入郵件伺服器的新密碼。 *密碼*已**sysname**，沒有預設值。  
+`[ @password = ] 'password'` 要用來登入郵件伺服器的新密碼。 *密碼*已**sysname**，沒有預設值。  
   
- [ **@use_default_credentials** =] use_default_credentials  
- 指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials** bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 此參數為 0 時，會使用 Database Mail **@username**並**@password** SMTP 伺服器上進行驗證。 如果**@username**並**@password**是 NULL，則它會使用匿名驗證。 在指定此參數之前，請洽 SMTP 管理員。  
+`[ @use_default_credentials = ] use_default_credentials` 指定是否要將郵件傳送至 SMTP 伺服器使用的認證[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服務。 **use_default_credentials** bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 此參數為 0 時，會使用 Database Mail **@username**並**@password** SMTP 伺服器上進行驗證。 如果**@username**並**@password**是 NULL，則它會使用匿名驗證。 在指定此參數之前，請洽 SMTP 管理員。  
   
- [ **@enable_ssl** =] enable_ssl  
- 指定 Database Mail 是否使用安全通訊端層 (SSL) 加密通訊。 如果 SMTP 伺服器上需要 SSL，則使用此選項。 **enable_ssl** bit，沒有預設值。  
+`[ @enable_ssl = ] enable_ssl` 指定 Database Mail 是否加密使用 Secure Sockets Layer (SSL) 通訊。 如果 SMTP 伺服器上需要 SSL，則使用此選項。 **enable_ssl** bit，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

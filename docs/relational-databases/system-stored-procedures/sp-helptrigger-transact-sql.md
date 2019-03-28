@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828976"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528590"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@tabname=** ] **'***表格***'**  
- 這是目前資料庫中傳回觸發程序資訊的資料表名稱。 *表格*已**nvarchar(776)**，沒有預設值。  
+`[ @tabname = ] 'table'` 是要傳回觸發程序資訊的目前資料庫中資料表的名稱。 *表格*已**nvarchar(776)**，沒有預設值。  
   
- [ **@triggertype=** ] **'***type***'**  
- 這是傳回相關資訊的 DML 觸發程序類型。 *型別*已**char(6)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @triggertype = ] 'type'` 是要傳回相關資訊的 DML 觸發程序的類型。 *型別*已**char(6)**，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -69,7 +67,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsert**|**int**|1=INSERT 觸發程序<br /><br /> 0=不是 INSERT 觸發程序|  
 |**isafter**|**int**|1=AFTER 觸發程序<br /><br /> 0=不是 AFTER 觸發程序|  
 |**isinsteadof**|**int**|1=INSTEAD OF 觸發程序<br /><br /> 0=不是 INSTEAD OF 觸發程序|  
-|**了 trigger_schema，做**|**sysname**|觸發程序所屬的結構描述名稱。|  
+|**trigger_schema**|**sysname**|觸發程序所屬的結構描述名稱。|  
   
 ## <a name="permissions"></a>Permissions  
  需要[中繼資料可見性組態](../../relational-databases/security/metadata-visibility-configuration.md)資料表的權限。  

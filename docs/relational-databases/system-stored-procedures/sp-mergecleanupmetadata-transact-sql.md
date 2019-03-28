@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210957"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529000"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication =** ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**，會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**，會清除所有發行集的中繼資料。 如果明確指定的話，發行集必須已存在。  
   
- [  **@reinitialize_subscriber =** ] **'***訂閱者***'**  
- 指定是否要重新初始化訂閱者。 *訂閱者*是**nvarchar(5)**，可以是**TRUE**或**FALSE**，預設值是**TRUE**。 如果 **，則為 TRUE**，訂用帳戶會標示重新初始化。 如果**FALSE**，訂用帳戶未標示為重新初始化。  
+`[ @reinitialize_subscriber = ] 'subscriber'` 指定是否要重新初始化訂閱者。 *訂閱者*是**nvarchar(5)**，可以是**TRUE**或**FALSE**，預設值是**TRUE**。 如果 **，則為 TRUE**，訂用帳戶會標示重新初始化。 如果**FALSE**，訂用帳戶未標示為重新初始化。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -119,8 +117,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  若要使用這個預存程序，發行者必須執行 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 訂閱者必須執行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]或是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2。  
   
 ## <a name="see-also"></a>另請參閱  
- [MSmerge_genhistory &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;Transact SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

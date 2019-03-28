@@ -16,12 +16,12 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2559c69e5857bbc5796d68d19b7d760476594b87
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589192"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528350"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@source_dbms**=] **'**_source_dbms_**'**  
- 這是對應資料類型的來源 DBMS 名稱。 *source_dbms*已**sysname**，而且可以是下列值之一：  
+`[ @source_dbms = ] 'source_dbms'` 是資料類型會對應來源 DBMS 的名稱。 *source_dbms*已**sysname**，而且可以是下列值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -62,26 +61,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  您必須指定這個參數。  
   
- [  **@source_version=** ] **'**_source_version_**'**  
- 這是來源 DBMS 的版本號碼。 *source_version*已**varchar(10)**，預設值是 NULL。  
+`[ @source_version = ] 'source_version'` 是來源 DBMS 的版本號碼。 *source_version*已**varchar(10)**，預設值是 NULL。  
   
- [ **@source_type**=] **'**_source_type_**'**  
- 這是來源 DBMS 中的資料類型。 *source_type*已**sysname**，沒有預設值。  
+`[ @source_type = ] 'source_type'` 是來源 DBMS 中的資料類型。 *source_type*已**sysname**，沒有預設值。  
   
- [  **@source_length=** ] *source_length*  
- 這是來源 DBMS 的資料類型長度。 *source_length*已**bigint**，預設值是 NULL。  
+`[ @source_length = ] source_length` 是來源 DBMS 中的資料類型長度。 *source_length*已**bigint**，預設值是 NULL。  
   
- [  **@source_precision=** ] *source_precision*  
- 這是來源 DBMS 之資料類型的有效位數。 *source_precision*已**bigint**，預設值是 NULL。  
+`[ @source_precision = ] source_precision` 這是來源 DBMS 中的資料類型有效位數。 *source_precision*已**bigint**，預設值是 NULL。  
   
- [  **@source_scale=** ] *source_scale*  
- 這是來源 DBMS 中的資料類型的小數位數。 *source_scale*已**int**，預設值是 NULL。  
+`[ @source_scale = ] source_scale` 是來源 DBMS 中的資料類型的小數位數。 *source_scale*已**int**，預設值是 NULL。  
   
- [  **@source_nullable=** ] *source_nullable*  
- 這是指來源 DBMS 中的資料類型是否支援 NULL 值。 *source_nullable*已**位元**，預設值是**1**，這表示支援 NULL 值。  
+`[ @source_nullable = ] source_nullable` 這是來源 DBMS 中的資料型別是否支援 NULL 值。 *source_nullable*已**位元**，預設值是**1**，這表示支援 NULL 值。  
   
- [ **@destination_dbms** =] **'**_destination_dbms_**'**  
- 這是目的地 DBMS 的名稱。 *destination_dbms*已**sysname**，而且可以是下列值之一：  
+`[ @destination_dbms = ] 'destination_dbms'` 是目的地 DBMS 的名稱。 *destination_dbms*已**sysname**，而且可以是下列值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -92,26 +84,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  您必須指定這個參數。  
   
- [ **@destination_version**=] **'**_destination_version_**'**  
- 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)**，預設值是 NULL。  
+`[ @destination_version = ] 'destination_version'` 這是目的地 DBMS 的產品版本。 *destination_version*已**varchar(10)**，預設值是 NULL。  
   
- [ **@destination_type**=] **'**_destination_type_**'** 輸出  
- 這是目的地 DBMS 中列出的資料類型。 *destination_type*已**sysname**，預設值是 NULL。  
+`[ @destination_type = ] 'destination_type' OUTPUT` 目的地 DBMS 中列出的資料類型。 *destination_type*已**sysname**，預設值是 NULL。  
   
- [  **@destination_length=** ] *destination_length*輸出  
- 這是目的地 DBMS 的資料類型長度。 *destination_length*已**bigint**，預設值是 NULL。  
+`[ @destination_length = ] destination_length OUTPUT` 是目的地 DBMS 中的資料類型長度。 *destination_length*已**bigint**，預設值是 NULL。  
   
- [  **@destination_precision=** ] *destination_precision*輸出  
- 這是目的地 DBMS 之資料類型的有效位數。 *destination_precision*已**bigint**，預設值是 NULL。  
+`[ @destination_precision = ] destination_precision OUTPUT` 這是目的地 DBMS 中的資料類型有效位數。 *destination_precision*已**bigint**，預設值是 NULL。  
   
- [  **@destination_scale=** ] _destination_scale_**輸出**  
- 這是目的地 DBMS 之資料類型的小數位數。 *destination_scale*已**int**，預設值是 NULL。  
+`[ @destination_scale = ] _destination_scaleOUTPUT` 是目的地 DBMS 中的資料類型的小數位數。 *destination_scale*已**int**，預設值是 NULL。  
   
- [  **@destination_nullable=** ] _destination_nullable_**輸出**  
- 這是指目的地 DBMS 中的資料類型是否支援 NULL 值。 *destination_nullable*已**元**，預設值是 NULL。 **1**表示支援 NULL 值。  
+`[ @destination_nullable = ] _destination_nullableOUTPUT` 這是目的地 DBMS 中的資料類型是否支援 NULL 值。 *destination_nullable*已**元**，預設值是 NULL。 **1**表示支援 NULL 值。  
   
- [  **@dataloss=** ]_的資料遺失_**輸出**  
- 這是指對應是否可能遺失資料。 *資料遺失*已**元**，預設值是 NULL。 **1**表示會有資料遺失的可能性。  
+`[ @dataloss = ] _datalossOUTPUT` 是指對應是否可能遺失資料。 *資料遺失*已**元**，預設值是 NULL。 **1**表示會有資料遺失的可能性。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -125,8 +110,8 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_getdefaultdatatypemapping**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_helpdatatypemap &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
+ [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Oracle 訂閱者](../../relational-databases/replication/non-sql/oracle-subscribers.md)  

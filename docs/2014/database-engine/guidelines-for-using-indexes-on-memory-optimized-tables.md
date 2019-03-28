@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094360"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527950"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>使用記憶體最佳化資料表索引的方針
   索引是用來有效率地存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表中的資料。 指定正確的索引可以大幅提高查詢效能。 假設有以下的查詢範例：  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -67,7 +67,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 ### <a name="operations-on-memory-optimized-and-disk-based-indexes"></a>針對記憶體最佳化的索引以及以磁碟為基礎的索引所執行的作業。  
   
-|作業|記憶體最佳化、非叢集雜湊、索引|記憶體最佳化的非叢集索引|磁碟型索引|  
+|運算|記憶體最佳化、非叢集雜湊、索引|記憶體最佳化的非叢集索引|磁碟型索引|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引掃描，擷取所有資料表資料列。|是|是|是|  
 |等號比較述詞 (=) 的索引搜尋。|是<br /><br /> (需要完整金鑰。)|是 <sup>1</sup>|是|  
@@ -90,10 +90,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      如果資料表上的索引都經常使用，記憶體回收的效果最好。 很少使用的索引可能會造成記憶體回收系統對舊的資料列版本無法達到最佳執行效果。  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>建立記憶體最佳化索引：程式碼範例  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>建立記憶體最佳化的索引：程式碼範例  
  資料行層級雜湊索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  資料表層級雜湊索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  資料行層級主索引鍵雜湊索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  資料表層級主索引鍵雜湊索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  資料行層級非叢集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  資料表層級非叢集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  資料行層級主索引鍵非叢集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  資料表層級主索引鍵非叢集索引：  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  定義資料行之後所定義的多資料行索引：  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

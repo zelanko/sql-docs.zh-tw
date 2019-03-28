@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/18/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: f31da296bf55b7da55a4e5a8398d411bc5a5b0ea
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510315"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d19625ed56370a1619300c21e3822c0c3eeef484
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597079"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513165"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>使用 SQL 和 R （逐步解說） 建立圖形和繪圖
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

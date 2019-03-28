@@ -15,12 +15,12 @@ ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52ff2085413e3bdcf082012dd5e616b0816a99a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e272dde5ca7a3c0ff7246d42131f1e70331689
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200028"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530860"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>從裝置還原備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中從裝置還原備份。  
@@ -79,7 +79,7 @@ ms.locfileid: "48200028"
   
 3.  在 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式中，指定備份作業要用的邏輯或實體備份裝置。 這個範例會從實體名稱為 `Z:\SQLServerBackups\AdventureWorks2012.bak`的磁碟檔案還原。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ;  
   

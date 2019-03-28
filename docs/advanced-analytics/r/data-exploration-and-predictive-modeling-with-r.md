@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2e045d061df813ae004dcb13668c31e68c3b5b5a
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: de293cd7caf481c51e4195a82ac036526c477739
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57976412"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511395"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>資料探索和使用 SQL Server 中 R 的預測模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -16,12 +16,12 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e2bde09ee15af5ebf6ef48cfd52222fe030a937
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783010"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530680"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@no_checks=**] *no_checks*  
- 指出在卸除散發者之前，是否要檢查相依物件。 *no_checks*已**元**，預設值是 0。  
+`[ @no_checks = ] no_checks` 指出是否要卸除 「 散發者 」 之前檢查相依物件。 *no_checks*已**元**，預設值是 0。  
   
  如果**0**， **sp_dropdistributor**會檢查以確認除了散發者端的發行和散發物件，已卸除。  
   
  如果**1**， **sp_dropdistributor**卸除然後再解除安裝散發者端的所有發行和散發物件。  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- 指出是否在未連接到散發者的情況之下，執行這個預存程序。 *ignore_distributor*已**位元**，預設值是**0**。  
+`[ @ignore_distributor = ] ignore_distributor` 指出是否要將此預存程序執行而不需要連線到散發者。 *ignore_distributor*已**位元**，預設值是**0**。  
   
  如果**0**， **sp_dropdistributor**會連接到 「 散發者 」，並移除所有複寫物件。 如果**sp_dropdistributor**無法連接到散發者 」，則預存程序會失敗。  
   
@@ -71,8 +69,8 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
   
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_changedistributor_property &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
+ [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

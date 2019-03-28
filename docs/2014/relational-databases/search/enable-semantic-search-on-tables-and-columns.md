@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528395"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529580"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
   描述如何針對包含文件或文字的選取資料行啟用或停用統計語意索引。  
@@ -42,7 +42,7 @@ ms.locfileid: "52528395"
   
 -   您可以針對具有支援全文檢索索引之任何資料類型的資料行建立語意索引。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](create-and-manage-full-text-indexes.md)。  
   
--   您可以指定支援 `varbinary(max)` 資料行之全文檢索索引的任何文件類型。 如需詳細資訊，請參閱[How To:決定其文件類型可以進行索引](#doctypes)本主題中。  
+-   您可以指定支援 `varbinary(max)` 資料行之全文檢索索引的任何文件類型。 如需詳細資訊，請參閱本主題中的[如何：決定可以建立索引的文件類型](#doctypes)。  
   
 -   語意索引會針對您所選取的資料行建立兩種索引類型：主要片語的索引，以及文件相似度的索引。 當您啟用語意索引時，無法單獨選取其中一種索引類型。 不過，您可以個別查詢這兩個索引。 如需詳細資訊，請參閱 [使用語意搜尋找到文件中的主要片語](find-key-phrases-in-documents-with-semantic-search.md) 和 [使用語意搜尋尋找相似及相關的文件](find-similar-and-related-documents-with-semantic-search.md)。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "52528395"
  **使用 TRANSACT-SQL 建立新的語意索引**  
  您可以針對想要建立語意索引的每個資料行呼叫 **CREATE FULLTEXT INDEX** 陳述式並指定 **STATISTICAL_SEMANTICS**。 如需此陳述式之所有選項的詳細資訊，請參閱 [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)。  
   
- **範例 1:建立唯一索引、 全文檢索索引和語意索引**  
+ **範例 1：建立唯一索引、全文檢索索引及語意索引**  
   
  下列範例會建立預設全文檢索目錄 **ft**。接著，此範例會針對 AdventureWorks2012 範例資料庫中 **HumanResources.JobCandidate** 資料表的 **JobCandidateID** 資料行建立唯一索引。 這個唯一索引需要做為全文檢索索引的索引鍵資料行。 接著，此範例會針對 **Resume** 資料行建立全文檢索索引和語意索引。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -78,13 +78,13 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **範例 2:使用延遲的索引母體擴展的數個資料行上建立全文檢索和語意索引**  
+ **範例 2：針對許多資料行建立全文檢索和語意索引並延遲索引母體擴展**  
   
  下列範例會在 AdventureWorks2012 範例資料庫中建立全文檢索目錄 **documents_catalog**。 接著，此範例會建立使用這個新目錄的全文檢索索引。 全文檢索索引是針對 **Production.Document**資料表的 **Title**、 **DocumentSummary** 及 **Document** 資料行而建立，而語意索引則只針對 **Document** 資料行而建立。 這個全文檢索索引會使用新建的全文檢索目錄和現有的唯一索引鍵索引 **PK_Document_DocumentID**。 根據建議，此索引鍵是建立於整數資料行 **DocumentID**上。 此範例會指定英文的 LCID (1033)，這是這些資料行中資料的語言。  
   
  此範例也會指定關閉變更追蹤，而且不進行母體擴展。 之後在離峰時段，此範例會使用 **ALTER FULLTEXT INDEX** 陳述式，針對新的索引啟動完整母體擴展，並啟用自動變更追蹤。  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -107,7 +107,7 @@ GO
   
  之後，在離峰時段擴展索引：  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -129,11 +129,11 @@ GO
   
 -   若要將語意索引加入已啟用全文檢索索引的資料行，請使用 **ADD STATISTICAL_SEMANTICS** 選項。 在單一 **ALTER** 陳述式中，您只能將語意索引加入至一個資料行。  
   
- **範例：加入至已經具有全文檢索索引資料行的語意索引**  
+ **範例：將語意索引新增至已經具有全文檢索索引的資料行**  
   
  下列範例會針對 AdventureWorks2012 範例資料庫中的 **Production.Document** 資料表改變現有的全文檢索索引。 此範例會針對 **Production.Document** 資料表的 **Document** 資料行 (已經具有全文檢索索引) 加入語意索引。 此範例會指定不要自動重新擴展索引。  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -158,7 +158,7 @@ GO
  **使用 TRANSACT-SQL 卸除語意索引**  
  -   若只要從一或多個資料行卸除語意索引，請使用 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** 選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。 在單一 **ALTER** 陳述式中，您可以從多個資料行中卸除索引。  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -170,7 +170,7 @@ GO
   
 -   若要從某個資料行同時卸除全文檢索和語意索引，請使用 **ALTER COLUMN***column_name***DROP**選項呼叫 **ALTER FULLTEXT INDEX** 陳述式。  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -197,7 +197,7 @@ GO
   
  傳回值 1 表示已針對資料庫啟用全文檢索搜尋和語意搜尋，傳回值 0 表示未啟用這兩個搜尋。  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -219,7 +219,7 @@ GO
   
      傳回值 1 表示已針對資料行啟用語意搜尋，傳回值 0 表示未啟用此搜尋。  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -228,7 +228,7 @@ GO
   
      **statistical_semantics** 資料行中的值 1 表示指定的資料行除了啟用全文檢索索引以外，也啟用了語意索引。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -246,7 +246,7 @@ GO
   
  查詢目錄檢視 [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
@@ -271,7 +271,7 @@ GO
   
  如果您想要索引的文件類型不在支援的類型清單中，則可能必須尋找、下載並安裝其他篩選。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](view-or-change-registered-filters-and-word-breakers.md)。  
   
-##  <a name="BestPracticeFilegroup"></a> 最佳作法：考慮針對全文檢索和語意索引建立個別的檔案群組  
+##  <a name="BestPracticeFilegroup"></a> 最佳做法：考慮針對全文檢索和語意索引建立個別的檔案群組  
  如果您有磁碟空間配置的顧慮，請考慮針對全文檢索和語意索引建立個別的檔案群組。 語意索引與全文檢索索引會建立在相同的檔案群組中。 完整擴展的語意索引可能會包含大量資料。  
   
 ##  <a name="BestPracticeUnderstand"></a>   

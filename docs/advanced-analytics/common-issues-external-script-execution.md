@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644918"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509695"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Launchpad 服務與 SQL Server 中的外部指令碼執行的一般問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +178,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *STDOUT message(s) from external script:*
 
-*[1]"c:\\程式檔案\\Microsoft SQL Server\\MSSQL13。SQL2016\\R_SERVICES"*
+*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
 *[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 

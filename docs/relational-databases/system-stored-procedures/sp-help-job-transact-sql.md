@@ -1,5 +1,5 @@
 ---
-title: sp_help_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818079"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528140"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id =**] *job_id*  
- 作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 作業識別碼中。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
- 作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  若要檢視特定工作，或是*job_id*或是*job_name*必須指定。  省略兩者*job_id*並*job_name*傳回所有工作的相關資訊。
   
- [ **@job_aspect =**] **'***job_aspect***'**  
- 要顯示的作業屬性。 *job_aspect*已**varchar(9)**，預設值是 NULL，而且可以是下列值之一。  
+`[ @job_aspect = ] 'job_aspect'` 要顯示的作業屬性。 *job_aspect*已**varchar(9)**，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -73,23 +70,17 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|作業步驟資訊|  
 |**目標**|目標資訊|  
   
- [ **@job_type =**] **'***job_type***'**  
- 這是要併入報表中的作業類型。 *job_type&lt*已**varchar(12)**，預設值是 NULL。 *job_type&lt*可以是**本機**或是**MULTI-SERVER**。  
+`[ @job_type = ] 'job_type'` 要包含在報表中的作業類型。 *job_type&lt*已**varchar(12)**，預設值是 NULL。 *job_type&lt*可以是**本機**或是**MULTI-SERVER**。  
   
- [ **@owner_login_name =**] **'***login_name***'**  
- 作業擁有者的登入名稱。 *login_name*已**sysname**，預設值是 NULL。  
+`[ @owner_login_name = ] 'login_name'` 作業的擁有者的登入名稱。 *login_name*已**sysname**，預設值是 NULL。  
   
- [ **@subsystem =**] **'***subsystem***'**  
- 子系統的名稱。 *子系統*已**nvarchar(40)**，預設值是 NULL。  
+`[ @subsystem = ] 'subsystem'` 子系統的名稱。 *子系統*已**nvarchar(40)**，預設值是 NULL。  
   
- [ **@category_name =**] **'***category***'**  
- 類別目錄的名稱。 *類別目錄*已**sysname**，預設值是 NULL。  
+`[ @category_name = ] 'category'` 類別目錄的名稱。 *類別目錄*已**sysname**，預設值是 NULL。  
   
- [  **@enabled =**]*啟用*  
- 這是一個數字，指出所顯示的資訊是關於已啟用或停用之作業。 *已啟用*已**tinyint**，預設值是 NULL。 **1**表示已啟用的工作，並**0**表示已停用的作業。  
+`[ @enabled = ] enabled` 數字，指出是否要將資訊顯示為已啟用工作 」 或 「 已停用工作。 *已啟用*已**tinyint**，預設值是 NULL。 **1**表示已啟用的工作，並**0**表示已停用的作業。  
   
- [  **@execution_status =**]*狀態*  
- 作業的執行狀態。 *狀態*已**int**，預設值是 NULL，而且可以是下列值之一。  
+`[ @execution_status = ] status` 工作的執行狀態。 *狀態*已**int**，預設值是 NULL，而且可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|已暫停。|  
 |**7**|正在執行完成動作。|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
- 要在比較中使用的比較運算子*date_created*並*date_modified*。 *date_comparison*已**char(1)**，它可以 = \<，或 >。  
+`[ @date_comparator = ] 'date_comparison'` 要在比較中使用的比較運算子*date_created*並*date_modified*。 *date_comparison*已**char(1)**，它可以 = \<，或 >。  
   
- [ **@date_created =**] *date_created*  
- 作業的建立日期。 *date_created*已**datetime**，預設值是 NULL。  
+`[ @date_created = ] date_created` 作業的建立日期。 *date_created*已**datetime**，預設值是 NULL。  
   
- [ **@date_last_modified =**] *date_modified*  
- 上次修改作業的日期。 *date_modified*已**datetime**，預設值是 NULL。  
+`[ @date_last_modified = ] date_modified` 作業的上次修改日期。 *date_modified*已**datetime**，預設值是 NULL。  
   
- [ **@description =**] **'***description_pattern***'**  
- 這是作業的描述。 *description_pattern*已**nvarchar(512)**，預設值是 NULL。 *description_pattern*可以包含 SQL Server 用於萬用字元模式比對。  
+`[ @description = ] 'description_pattern'` 作業描述。 *description_pattern*已**nvarchar(512)**，預設值是 NULL。 *description_pattern*可以包含 SQL Server 用於萬用字元模式比對。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -128,7 +115,7 @@ sp_help_job { [ @job_id = ] job_id
 |**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**category**|**sysname**|作業類別目錄。|  
-|**擁有者**|**sysname**|作業擁有者。|  
+|**owner**|**sysname**|作業擁有者。|  
 |**notify_level_eventlog**|**int**|**位元遮罩**指出在哪些情況之下一個通知事件應該記錄 Microsoft Windows 應用程式記錄檔。 它可以是下列值之一：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成 （不論作業結果）|  
 |**notify_level_email**|**int**|**位元遮罩**指出在哪些情況之下電子郵件通知應該傳送作業完成時。 可能的值為相同**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|**位元遮罩**指出在哪些情況之下網路訊息應該傳送作業完成時。 可能的值為相同**notify_level_eventlog**。|  
@@ -163,7 +150,7 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|步驟的唯一 (針對這項作業) 識別碼。|  
 |**step_name**|**sysname**|步驟的名稱。|  
 |**subsystem**|**nvarchar(40)**|在其中執行步驟命令的子系統。|  
-|命令|**nvarchar(3200)**|要執行的命令。|  
+|**command**|**nvarchar(3200)**|要執行的命令。|  
 |**flags**|**nvarchar(4000)**|**位元遮罩**的控制步驟行為的值。|  
 |**cmdexec_success_code**|**int**|針對**CmdExec**步驟中，這是成功命令的處理序結束碼。|  
 |**on_success_action**|**nvarchar(4000)**|作業成功時要執行什麼動作。<br /><br /> **1** = 成功而結束。<br /><br /> **2** = 失敗而結束。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  
@@ -278,8 +265,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f521f416c7415d2a27554e7f3d91f5df89023798
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2e365c4a71c7bfdb5deece18e19c9950dd2ddf45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210407"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526360"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helptracertokens [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'***發行集***'**  
- 這是插入追蹤 Token 的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是所插入的追蹤 token 的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@publisher=** ] **'***發行者***'**  
- 發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]
 >  這個參數應該只能指定為非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果預存程序執行於發行者端，則會忽略這個參數。  
+`[ @publisher_db = ] 'publisher_db'` 發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果預存程序執行於發行者端，則會忽略這個參數。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -75,6 +72,6 @@ sp_helptracertokens [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

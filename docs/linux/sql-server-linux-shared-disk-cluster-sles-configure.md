@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 42af33d78a13961b7a85ae408a3c693edf759e75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 57fd1d8c90a9d5b24d0d4cbea6eb0491006f89da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408865"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527110"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 SLES 共用的磁碟叢集
 
@@ -53,7 +53,7 @@ ms.locfileid: "52408865"
     ```
     連接到 SQL Server master 資料庫中使用 'sa' 帳戶並執行下列命令：
 
-    ```tsql
+    ```sql
     USE [master]
     GO
     CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'

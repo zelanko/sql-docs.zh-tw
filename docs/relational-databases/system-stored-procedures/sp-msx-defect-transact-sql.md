@@ -18,12 +18,12 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16e523bc26b8469f3ee7306f3e6fd2902ef727bb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843346"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528530"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@forced_defection =**] *forced_defection*  
- 指定是否要強制脫離如果已因不可挽回地損毀而永久失去主要 SQLServerAgent **msdb**資料庫或完全不需要**msdb**資料庫備份。 *forced_defection*已**位元**，預設值是**0**，這表示，不應強制脫離。 值為**1**會強制脫離。  
+`[ @forced_defection = ] forced_defection` 指定是否要強制脫離如果已因不可挽回地損毀而永久失去主要 SQLServerAgent **msdb**資料庫或完全不需要**msdb**資料庫備份。 *forced_defection*已**位元**，預設值是**0**，這表示，不應強制脫離。 值為**1**會強制脫離。  
   
  藉由執行強制脫離之後**sp_msx_defect**，成員**sysadmin**固定的伺服器角色，在主要 SQLServerAgent 必須執行下列命令來完成脫離：  
   
@@ -65,7 +64,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  若要執行這個預存程序，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_msx_enlist &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
+ [sp_msx_enlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de6aff356e5de49802f0bc2813ff481bd45244c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2806d42e58bbd60b962f83e8ab58fbe4511e44b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803796"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526400"
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@collection_set_id =** ] *collection_set_id*  
- 這是收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**預設值是 NULL。 *collection_set_id&lt*必須有值，如果*名稱*是 NULL。  
+`[ @collection_set_id = ] collection_set_id` 是此收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**預設值是 NULL。 *collection_set_id&lt*必須有值，如果*名稱*是 NULL。  
   
- [ **@name =** ] '*name*'  
- 這是收集組的名稱。 *名稱*已**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_set_id&lt*是 NULL。  
+`[ @name = ] 'name'` 是收集組的名稱。 *名稱*已**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_set_id&lt*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

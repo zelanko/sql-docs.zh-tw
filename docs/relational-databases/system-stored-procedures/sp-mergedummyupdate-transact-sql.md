@@ -16,12 +16,12 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf771f02ec63260dcda1f8b7fa633f9fb6bf9a07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817770"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525770"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@source_object=**] **'***source_object***'**  
- 這是來源物件的名稱。 *source_object*已**nvarchar(386)**，沒有預設值。  
+`[ @source_object = ] 'source_object'` 是來源物件的名稱。 *source_object*已**nvarchar(386)**，沒有預設值。  
   
- [  **@rowguid=**] **'***rowguid***'**  
- 這是資料列識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
+`[ @rowguid = ] 'rowguid'` 是資料列識別碼。 *rowguid*已**uniqueidentifier**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

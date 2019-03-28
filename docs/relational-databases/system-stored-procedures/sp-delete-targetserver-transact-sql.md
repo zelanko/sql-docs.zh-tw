@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetserver 來 (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692240"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528910"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@server_name=** ] **'***server***'**  
- 做為可用的目標伺服器，將予以移除的伺服器名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。  
+`[ @server_name = ] 'server'` 要移除為可用的目標伺服器的伺服器名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。  
   
- [  **@clear_downloadlist=** ] *clear_downloadlist*  
- 指定是否要清除目標伺服器的下載清單。 *clear_downloadlist*是型別**位元**，預設值是**1**。 當*clear_downloadlist*是**1**，程序刪除伺服器之前，清除伺服器的下載清單。 當*clear_downloadlist*是**0**，則不會清除下載清單。  
+`[ @clear_downloadlist = ] clear_downloadlist` 指定是否要清除目標伺服器的下載清單。 *clear_downloadlist*是型別**位元**，預設值是**1**。 當*clear_downloadlist*是**1**，程序刪除伺服器之前，清除伺服器的下載清單。 當*clear_downloadlist*是**0**，則不會清除下載清單。  
   
- [  **@post_defection=** ] *post_defection&lt*  
- 指定是否要將脫離指示公佈至目標伺服器。 *post_defection&lt*是型別**元**，預設值是 1。 當*post_defection&lt*是**1**，程序將脫離指示公佈至目標伺服器之前先刪除伺服器。 當*post_defection&lt*是**0**，程序不會不脫離指示公佈至目標伺服器。  
+`[ @post_defection = ] post_defection` 指定是否要將脫離指示公佈在目標伺服器。 *post_defection&lt*是型別**元**，預設值是 1。 當*post_defection&lt*是**1**，程序將脫離指示公佈至目標伺服器之前先刪除伺服器。 當*post_defection&lt*是**0**，程序不會不脫離指示公佈至目標伺服器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -76,8 +73,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_targetserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

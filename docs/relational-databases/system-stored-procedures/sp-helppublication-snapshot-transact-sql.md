@@ -16,12 +16,12 @@ ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f1c6d0b3da4718db35f852b2d76f4e14431bdc3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0154f155c82554ba30ce71c9e7091fdc7565f587
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209257"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526620"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication =** ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@publisher =** ] **'***發行者***'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應加入至發行項時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -83,9 +81,9 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication_snapshot &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication_snapshot &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_dropmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [sp_droppublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)  
+ [sp_addpublication_snapshot &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)  
   
   

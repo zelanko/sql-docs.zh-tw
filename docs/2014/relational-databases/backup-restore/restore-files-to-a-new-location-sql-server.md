@@ -17,12 +17,12 @@ ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc0520f7c28804e5534b4334e8f440e263c4f2eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128848"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527910"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>將檔案還原到新位置 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將檔案還原到新位置。  
@@ -88,8 +88,8 @@ ms.locfileid: "48128848"
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]**、 **[記錄檔]** 或 **[檔案資料流資料]**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
-    |**型別**|執行的備份類型： **[完整]**、 **[差異]** 或 **[交易記錄]**。|  
+    |**檔案類型**|指定備份中的資料類型：**資料**，**記錄檔**，或**Filestream 資料**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
+    |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
@@ -105,7 +105,7 @@ ms.locfileid: "48128848"
     |資料行標頭|值|  
     |-----------------|------------|  
     |**原始檔案名稱**|來源備份檔案的完整路徑。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]**、 **[記錄檔]** 或 **[檔案資料流資料]**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
+    |**檔案類型**|指定備份中的資料類型：**資料**，**記錄檔**，或**Filestream 資料**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
     |**還原成**|還原資料庫檔案的完整路徑。 若要指定新的還原檔案，請按一下文字方塊並編輯建議的路徑與檔案名稱。 變更 **[還原成]** 資料行中的路徑或檔案名稱相當於使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 陳述式中的 MOVE 選項。|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
@@ -139,7 +139,7 @@ ms.locfileid: "48128848"
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會將原本位於磁碟機 C 的兩個 `MyNwind` 資料庫的檔案還原到磁碟機 D 上的新位置。此外，也會套用兩個交易記錄檔，以將資料庫還原到目前的時間。 `RESTORE FILELISTONLY` 陳述式是用來決定資料庫中所要還原的檔案數目及其邏輯與實體名稱。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

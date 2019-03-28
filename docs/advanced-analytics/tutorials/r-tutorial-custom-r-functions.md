@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 90790c2b96843ea1821b8b4ed05052a7611cdf74
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596439"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509905"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>使用 rxExec 的 SQL Server 上執行自訂的 R 函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

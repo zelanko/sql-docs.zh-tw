@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4ce2eea1638c301f85741dc22f7541af0cf7e5d6
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596619"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511725"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教學課程：使用 RevoScaleR R 函式與 SQL Server 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53596619"
 如果您需要將用戶端和伺服器放在同一部電腦上，請務必安裝適用於從 「 遠端 」 的用戶端傳送 R 指令碼的 Microsoft R 程式庫的第二組。 請勿使用安裝程式檔案的 SQL Server 執行個體中的 R 程式庫。 具體而言，如果您使用一部電腦，您需要**RevoScaleR**文件庫中的這些位置，以支援用戶端和伺服器作業。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 如需用戶端組態的指示，請參閱 <<c0> [ 設定適用於 R 開發的資料科學用戶端](../r/set-up-a-data-science-client.md)。
 

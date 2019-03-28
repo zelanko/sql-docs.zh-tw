@@ -14,12 +14,12 @@ ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cccf999eba70242cc259b7063654c56e82b28fef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f5a68f51bf501f243bd129d11051d63a6efabd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075638"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533800"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>設定備份的到期日 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定備份的到期日。  
@@ -73,7 +73,7 @@ ms.locfileid: "48075638"
   
 3.  在 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 陳述式中，指定 EXPIREDATE 或 RETAINDAYS 選項，以決定 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 何時可覆寫備份。 如果沒有指定任何選項，便會由 [media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) 伺服器組態設定來決定到期日。 此範例使用 `EXPIREDATE` 選項，指定到期日為 2015 年 6 月 30 日 (`6/30/2015`)。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  

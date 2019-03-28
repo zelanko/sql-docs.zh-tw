@@ -11,12 +11,12 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12a6d8fdaf0bf1c09c5de706d7dad811c09def2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056658"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532560"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>第 8 課： 將資料庫還原至 Windows Azure 儲存體
   在這一課，您將學習如何在本機上建立備份檔案，然後將它還原到 Windows Azure 儲存體。 請注意，您的資料庫可以位於 Windows Azure 的內部部署或虛擬機器中。 進行這一課並不需要完成第 4、5、6 和 7 課。  
@@ -39,7 +39,7 @@ ms.locfileid: "48056658"
   
 2.  連接到新建立的資料庫時，開啟查詢視窗。 執行下列陳述式：  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -53,7 +53,7 @@ ms.locfileid: "48056658"
   
 3.  接著，在 [查詢] 視窗中複製並執行下列陳述式。  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   

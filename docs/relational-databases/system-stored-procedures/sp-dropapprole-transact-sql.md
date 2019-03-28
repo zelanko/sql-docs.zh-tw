@@ -1,5 +1,5 @@
 ---
-title: sp_dropapprole (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 150fd6e01efb67281146e5b7dfff79bde27636dc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5cc9f79ab588a042894c199564820d06d9585bf1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130598"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533380"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'**_角色_**'**  
- 這是要移除的應用程式角色。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
+`[ @rolename = ] 'role'` 是要移除的應用程式角色。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -65,9 +64,9 @@ EXEC sp_dropapprole 'SalesApp';
   
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addapprole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_changeobjectowner &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
+ [sp_changeobjectowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

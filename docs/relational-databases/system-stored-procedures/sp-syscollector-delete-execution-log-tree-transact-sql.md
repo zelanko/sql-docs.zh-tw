@@ -19,12 +19,12 @@ ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b234caaa0de9f111c047cf54aeafca6d4fdce8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be3f468db321f1e8ba7af3d7b5b80c97803a0b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730426"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531240"
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@log_id =** ] *log_id*  
- 這是收集組記錄的唯一識別碼。 *g _ i d*已**int**。  
+`[ @log_id = ] log_id` 設定記錄檔集合的唯一識別碼。 *g _ i d*已**int**。  
   
- [ **@from_collection_set =** ] *from_collection_set*  
- 這是收集組的識別碼。 *from_collection_set*已**位元 = 1**。  
+`[ @from_collection_set = ] from_collection_set` 是收集組的識別碼。 *from_collection_set*已**位元 = 1**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

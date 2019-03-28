@@ -16,12 +16,12 @@ ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1dc9bdb903b6aaa7bf3ee22c1f70a36dd7b3ba5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edda5c400ebc9158fbc18e4c8ad8c9a118d9e476
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782990"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534130"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，所有的預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，所有的預設值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，所有的預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，所有的預設值。  
   
- [ **@publication** = ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，所有的預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，所有的預設值。  
   
- [ **@upload_first** =] **'***upload_first***'**  
- 這是指在訂閱重新初始化之前，是否上傳在訂閱者端的變更。 *upload_first*已**nvarchar(5)**，預設值是 FALSE。 如果 **，則為 true**，訂用帳戶重新初始化之前上傳變更。 如果**false**，不會上傳變更。  
+`[ @upload_first = ] 'upload_first'` 是，是否在訂閱者端的變更上傳之前重新初始化訂閱。 *upload_first*已**nvarchar(5)**，預設值是 FALSE。 如果 **，則為 true**，訂用帳戶重新初始化之前上傳變更。 如果**false**，不會上傳變更。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

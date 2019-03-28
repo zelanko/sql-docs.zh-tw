@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766610"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527842"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立連結的伺服器以及存取來自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料。 透過建立連結的伺服器，您可以處理多個來源的資料。 連結的伺服器不必是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的另一個執行個體，但那是常見狀況。  
@@ -199,7 +199,7 @@ ms.locfileid: "52766610"
   
 1.  在查詢編輯器中，輸入下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來連結名稱為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 `SRVR002\ACCTG`執行個體：  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766610"
   
 2.  執行下列程式碼來設定連結的伺服器使用將使用連結的伺服器之登入的網域認證。  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -226,7 +226,7 @@ ms.locfileid: "52766610"
   
 -   執行下列程式碼來測試連結之伺服器的連線。 此範例會傳回連結之伺服器上的資料庫名稱。  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766610"
   
 -   使用四部分的名稱來表示連結之伺服器上的物件。 執行下列程式碼以傳回本機伺服器上的所有登入清單，及其連結之伺服器上相符的登入。  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

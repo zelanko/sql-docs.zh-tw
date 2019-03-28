@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 886f63ad94921451ca7136064f2148b46eeaba17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729718"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531321"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id=** ] *job_id*  
- 將從中移除指定目標伺服器之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 移除指定的目標伺服器之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 將從中移除指定目標伺服器之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 移除指定的目標伺服器之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定; 不能同時指定這兩者。  
   
- [ **@server_name=** ] **'***server***'**  
- 要從指定作業中移除的目標伺服器名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。 *伺服器*可以是 **(LOCAL)** 或遠端目標伺服器的名稱。  
+`[ @server_name = ] 'server'` 若要從指定的作業中移除目標伺服器的名稱。 *伺服器*已**nvarchar(30)**，沒有預設值。 *伺服器*可以是 **(LOCAL)** 或遠端目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -80,7 +77,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_help_jobserver &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+ [sp_help_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

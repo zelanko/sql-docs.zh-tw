@@ -19,12 +19,12 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d77ec36f36260226a78136b46656b1e2e8187e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702736"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527172"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,20 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@collection_set_id =** ] *collection_set_id*  
- 這是收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**而且必須具有值，如果*名稱*是 NULL。  
+`[ @collection_set_id = ] collection_set_id` 是此收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**而且必須具有值，如果*名稱*是 NULL。  
   
- [ **@name =** ] '*name*'  
- 這是收集組的名稱。 *名稱*已**sysname**而且必須具有值，如果*collection_set_id&lt*是 NULL。  
+`[ @name = ] 'name'` 是收集組的名稱。 *名稱*已**sysname**而且必須具有值，如果*collection_set_id&lt*是 NULL。  
   
- [ **@new_name =** ] '*new_name*'  
- 這是收集組的新名稱。 *new_name*已**sysname**，而且如果，不能是空字串。 *new_name*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
+`[ @new_name = ] 'new_name'` 是此收集組的新名稱。 *new_name*已**sysname**，而且如果，不能是空字串。 *new_name*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
   
- [  **@target =** ] '*目標*'  
- 保留供日後使用。  
+`[ @target = ] 'target'` 保留供日後使用。  
   
- [ **@collection_mode =** ] *collection_mode*  
- 這是要使用的資料收集類型。 *collection_mode*已**smallint** ，而且可以有下列值之一：  
+`[ @collection_mode = ] collection_mode` 是要使用的資料集合的型別。 *collection_mode*已**smallint** ，而且可以有下列值之一：  
   
  0 - 快取模式。 資料收集和上傳會依照不同的排程。 指定連續收集的快取模式。  
   
@@ -77,27 +72,21 @@ sp_syscollector_update_collection_set
   
  如果從非快取模式變更為快取模式 (0)，您也必須指定*schedule_uid*或是*schedule_name&lt*。  
   
- [ **@days_until_expiration=** ] *days_until_expiration*  
- 這是已收集的資料儲存在管理資料倉儲中的天數。 *days_until_expiration*已**smallint**。 *days_until_expiration*必須是 0 或正整數。  
+`[ @days_until_expiration = ] days_until_expiration` 已收集的資料儲存在管理資料倉儲中的日數。 *days_until_expiration*已**smallint**。 *days_until_expiration*必須是 0 或正整數。  
   
- [ **@proxy_id =** ] *proxy_id*  
- 這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 帳戶的唯一識別碼。 *proxy_id*已**int**。  
+`[ @proxy_id = ] proxy_id` 唯一識別碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent proxy 帳戶。 *proxy_id*已**int**。  
   
- [ **@proxy_name =** ] '*proxy_name*'  
- 這是 Proxy 的名稱。 *proxy_name*已**sysname**而且可為 null。  
+`[ @proxy_name = ] 'proxy_name'` 是 proxy 的名稱。 *proxy_name*已**sysname**而且可為 null。  
   
- [ **@schedule_uid** = ] '*schedule_uid*'  
- 這是指向排程的 GUID。 *schedule_uid*已**uniqueidentifier**。  
+`[ @schedule_uid = ] 'schedule_uid'` 是指向排程的 GUID。 *schedule_uid*已**uniqueidentifier**。  
   
  若要取得*schedule_uid*，查詢 sysschedules 系統資料表。  
   
  當*collection_mode*設定為 0， *schedule_uid*或是*schedule_name&lt*必須指定。 當*collection_mode*設定為 1， *schedule_uid*或*schedule_name&lt*如果指定，會被忽略。  
   
- [  **@schedule_name =** ] '*schedule_name&lt*'  
- 這是排程的名稱。 *schedule_name&lt*已**sysname**而且可為 null。 如果指定， *schedule_uid*必須是 NULL。 若要取得*schedule_name&lt*，查詢 sysschedules 系統資料表。  
+`[ @schedule_name = ] 'schedule_name'` 已排程的名稱。 *schedule_name&lt*已**sysname**而且可為 null。 如果指定， *schedule_uid*必須是 NULL。 若要取得*schedule_name&lt*，查詢 sysschedules 系統資料表。  
   
- [ **@logging_level =** ] *logging_level*  
- 這是記錄層級。 *logging_level*已**smallint**具有下列值之一：  
+`[ @logging_level = ] logging_level` 是記錄層級。 *logging_level*已**smallint**具有下列值之一：  
   
  0 - 記錄執行資訊和追蹤的 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 事件：  
   
@@ -119,8 +108,7 @@ sp_syscollector_update_collection_set
   
  預設值*logging_level*為 1。  
   
- [  **@description =** ] '*描述*'  
- 這是收集組的描述。 *描述*已**nvarchar(4000)**。  
+`[ @description = ] 'description'` 這是收集組的描述。 *描述*已**nvarchar(4000)**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -194,7 +182,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料收集](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo.sysjobschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

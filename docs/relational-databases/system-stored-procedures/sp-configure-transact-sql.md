@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852336"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530240"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,13 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@configname=** ] **'***option_name***'**  
- 這是組態選項的名稱。 *option_name* is **varchar(35)**，預設值為 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會識別任何屬於組態名稱一部分的唯一字串。 若未指定，就會傳回完整的選項清單。  
+`[ @configname = ] 'option_name'` 是組態選項的名稱。 *option_name* is **varchar(35)**，預設值為 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會識別任何屬於組態名稱一部分的唯一字串。 若未指定，就會傳回完整的選項清單。  
   
  如需有關可用組態選項及其設定的資訊，請參閱[伺服器組態選項&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
- [ **@configvalue=** ] **'***value***'**  
- 這是新的組態設定。 *value* 是 **int**，預設值是 NULL。 最大值會隨著個別選項而不同。  
+`[ @configvalue = ] 'value'` 這新的組態設定。 *value* 是 **int**，預設值是 NULL。 最大值會隨著個別選項而不同。  
   
  若要查看每個選項的最大值，請參閱**最大**資料行**sys.configurations**目錄檢視。  
   
@@ -126,7 +124,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- 訊息如下：「組態選項 'show advanced options' 從 0 變更為 1。 請執行 RECONFIGURE 陳述式來安裝。」  
+ 以下是訊息：「 組態選項 'show advanced 的 options' 從 0 變更為 1。 請執行 RECONFIGURE 陳述式來安裝。」  
   
  執行 `RECONFIGURE` 和顯示所有組態選項：  
   

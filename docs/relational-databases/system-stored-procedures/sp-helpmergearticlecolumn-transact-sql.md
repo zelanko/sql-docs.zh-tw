@@ -16,12 +16,12 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4829928bbf1f8e13483de69a749e748bd9dd095
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2221762934011c2268a40d0162bde7e62dbcf256
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779060"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528220"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 是發行集名稱。*出版物*是**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。*出版物*是**sysname**，沒有預設值。  
   
- [  **@article=**] **'***文章***'**  
- 是資料表或檢視所要擷取相關資訊的發行項的名稱。*一文*是**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是資料表或檢視所要擷取相關資訊的發行項的名稱。*一文*是**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -51,7 +49,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|識別欄位。|  
 |**column_name**|**sysname**|這是資料表或檢視的資料行名稱。|  
-|**發行**|**bit**|指定是否已發行資料行名稱。<br /><br /> **1**指定正在發行資料行。<br /><br /> **0**表示不發行。|  
+|**published**|**bit**|指定是否已發行資料行名稱。<br /><br /> **1**指定正在發行資料行。<br /><br /> **0**表示不發行。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

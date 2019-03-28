@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/10/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596509"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510525"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,16 +54,16 @@ SQL Server 2016 只是 R。 下表說明 SQL Server 2016 中的功能。
 
 啟動安裝程式、 將二進位檔附加至您最愛的開發工具和撰寫第一個指令碼。
 
-**步驟 1:** 安裝和設定軟體。 
+**步驟 1：** 安裝和設定軟體。 
 
 + [安裝 SQL Server 2016 R Services （資料庫）](../install/sql-r-services-windows-install.md)
 
-**步驟 2:** 獲得實際操作經驗，使用這些教學課程中的其中之一：
+**步驟 2：** 獲得實際操作經驗，使用這些教學課程中的其中之一：
 
 + [教學課程：了解使用 R 的資料庫內分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [教學課程：使用 R 的端對端逐步解說](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**步驟 3:** 新增您最愛的 R 封裝，並使用它們搭配 Microsoft 所提供的套件
+**步驟 3：** 新增您最愛的 R 封裝，並使用它們搭配 Microsoft 所提供的套件
 
 + [SQL Server 的 R 封裝管理](install-additional-r-packages-on-sql-server.md)
 

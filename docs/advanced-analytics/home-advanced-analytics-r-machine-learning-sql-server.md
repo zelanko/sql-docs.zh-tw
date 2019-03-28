@@ -5,16 +5,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/10/2019
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d7d969e4ec51914e2467895b5e8b9bc2e00f06
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803449"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512225"
 ---
 # <a name="sql-server-machine-learning"></a>SQL Server 機器學習服務
 
@@ -67,7 +67,7 @@ ms.locfileid: "56803449"
 
 ## <a name="reference"></a>參考資料
 
-| 封裝 | 語言 | 描述 |
+| 套件 | 語言 | 描述 |
 |:--------|:---------|:------------|
 | [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | R | 下列 R 工作的分散式和平行處理：資料轉換、探索、視覺效果、統計和預測性分析。 |
 | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | 以 Microsoft AI 演算法為基礎的函式，適用於 R。 |

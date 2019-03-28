@@ -12,12 +12,12 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1274cf9a9e747412cc4fb212eee18a9d5d4a8f40
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639306"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534080"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>設定 index create memory 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] index create memory [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **index create memory** 選項會控制最初配置來建立索引的記憶體數量上限。 這個選項的預設值是 0 (自我設定)。 若稍後在建立索引時需要更多記憶體，且有足夠的記憶體可用，則伺服器會使用該記憶體，因而超過此選項的設定。 若沒有更多可用的記憶體，則會使用預先配置的記憶體繼續進行索引建立作業。  
@@ -81,9 +81,9 @@ ms.locfileid: "52639306"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `index create memory` 選項的值設定為 `4096`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `index create memory` 選項的值設定為 `4096`。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 EXEC sp_configure 'show advanced options', 1;  
 GO  

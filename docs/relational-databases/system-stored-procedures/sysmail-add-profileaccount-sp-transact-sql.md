@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_profileaccount_sp & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5f307fca906d138428fe9852752d3f718633181
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44dc2d5341e536179fe0bf6ef152ef7d39afe966
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729856"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532100"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@profile_id** =] *profile_id*  
- 這是要加入帳戶的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+`[ @profile_id = ] profile_id` 若要將帳戶加入設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 這是要加入帳戶的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'` 若要將帳戶加入設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
   
- [ **@account_id** = ] *account_id*  
- 這是要加入至設定檔的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
+`[ @account_id = ] account_id` 要加入設定檔的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 這是要加入至設定檔的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
+`[ @account_name = ] 'account_name'` 要加入至設定檔的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 任一*account_id*或*account_name*必須指定。  
   
- [ **@sequence_number** = ] *sequence_number*  
- 帳戶在設定檔內的序號。 *sequence_number*已**int**，沒有預設值。 序號決定了帳戶在設定檔中的使用順序。  
+`[ @sequence_number = ] sequence_number` 設定檔中的帳戶序號。 *sequence_number*已**int**，沒有預設值。 序號決定了帳戶在設定檔中的使用順序。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

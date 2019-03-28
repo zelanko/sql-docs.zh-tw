@@ -16,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779750"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533440"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是將擷取資訊之發行集的名稱。 *發行集*已**sysname**，預設值是**%**，傳回包含在目前資料庫中的所有發行集的所有合併發行項的相關資訊。  
+`[ @publication = ] 'publication'` 是要擷取其資訊之發行集的名稱。 *發行集*已**sysname**，預設值是**%**，傳回包含在目前資料庫中的所有發行集的所有合併發行項的相關資訊。  
   
- [  **@article=**] **'***文章***'**  
- 這是要傳回資訊之發行項的名稱。 *發行項*已**sysname**，預設值是**%**，傳回給定發行集中所有合併發行項的相關資訊。  
+`[ @article = ] 'article'` 是要傳回資訊的發行項的名稱。 *發行項*已**sysname**，預設值是**%**，傳回給定發行集中所有合併發行項的相關資訊。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -56,7 +54,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|定義已發行的發行項之檢視的擁有者名稱。|  
 |**sync_object**|**sysname**|用來建立資料分割初始資料之自訂物件的名稱。|  
 |**description**|**nvarchar(255)**|發行項的描述。|  
-|**status**|**tinyint**|發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 非使用中<br /><br /> **2** = 使用中<br /><br /> **5** = 資料定義語言 (DDL) 作業暫止<br /><br /> **6** = 含新產生的快照集的 DDL 作業<br /><br /> 注意：當重新初始化發行項時，值的**5**並**6**變更為**2**。|  
+|**status**|**tinyint**|發行項的狀態，它可以是下列項目之一：<br /><br /> **1** = 非使用中<br /><br /> **2** = 使用中<br /><br /> **5** = 資料定義語言 (DDL) 作業暫止<br /><br /> **6** = 含新產生的快照集的 DDL 作業<br /><br /> 注意:當重新初始化發行項時，值的**5**並**6**變更為**2**。|  
 |**creation_script**|**nvarchar(255)**|在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
 |**conflict_table**|**nvarchar(270)**|儲存插入或更新衝突的資料表名稱。|  
 |**article_resolver**|**nvarchar(255)**|自訂的發行項解析程式。|  
@@ -83,7 +81,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**delete_tracking**|**bit**|是否要刪除複寫;何處**1**表示複寫刪除，並**0**意謂著它們不是。|  
 |**compensate_for_errors**|**bit**|指出在同步處理; 期間發生錯誤時，是否採取補償動作何處**1**表示，是否採取補償動作，以及**0**表示不採取補償動作。|  
 |**partition_options**|**tinyint**|定義發行項資料進行資料分割的方式，當所有資料列只屬於單一資料分割或單一訂閱時，能夠使效能最佳化。 *partition_options*可以是下列值之一。<br /><br /> **0** = 發行項的篩選是靜態或不產生每個分割區資料的唯一子集; 也就是說，它是 「 重疊 」 的資料分割。<br /><br /> **1** = 重疊資料分割，並將訂閱者端的資料操作語言 (DML) 更新無法變更資料列所屬的資料分割。<br /><br /> **2** = 篩選發行項會產生非重疊資料分割，但多個訂閱者可以接收相同的資料分割。<br /><br /> **3** = 篩選發行項產生每個訂閱都是唯一的非重疊資料分割。|  
-|**artid&lt**|**uniqueidentifier**|唯一識別發行項的識別碼。|  
+|**artid**|**uniqueidentifier**|唯一識別發行項的識別碼。|  
 |**pubid**|**uniqueidentifier**|唯一識別發行項發行在其中之發行集的識別碼。|  
 |**stream_blob_columns**|**bit**|這是指當複寫二進位大型物件資料行時，是否使用資料流最佳化。 **1**表示要使用的最佳化，並**0**表示不使用最佳化。|  
   
@@ -101,7 +99,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addmergearticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

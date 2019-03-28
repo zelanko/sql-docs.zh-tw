@@ -16,12 +16,12 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8eb21085625c7f2f0071c18da80501774088fdc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789370"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529880"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。 必須設定伺服器的發行作業。 所有發行者都是 NULL。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 NULL。 必須設定伺服器的發行作業。 所有發行者都是 NULL。  
   
- [ **@publisherdb** =] **'***publisher_db***'** ]  
- 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 所有發行集資料庫都是 NULL。  
+`[ @publisherdb = ] 'publisher_db' ]` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 所有發行集資料庫都是 NULL。  
   
- [ **@publication** =] **'***發行集***'** ]  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。 所有發行集都是 NULL。  
+`[ @publication = ] 'publication' ]` 是發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 所有發行集都是 NULL。  
   
- [ **@tranid** =] **'***tranid***'** ]  
- 這是交易識別碼。 *tranid*已**sysname**，預設值是 NULL。 所有交易都是 NULL。  
+`[ @tranid = ] 'tranid' ]` 這是交易識別碼。 *tranid*已**sysname**，預設值是 NULL。 所有交易都是 NULL。  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
  這是儲存交易的佇列類型。 *queuetype*已**tinyint**預設值是**0**，而且可以是下列值之一。  

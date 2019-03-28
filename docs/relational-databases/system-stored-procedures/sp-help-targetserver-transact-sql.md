@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747426"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529690"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@server_name=** ] **'***server_name***'**  
- 這是要傳回資訊的伺服器名稱。 *server_name*已**nvarchar(30)**，預設值是 NULL。  
+`[ @server_name = ] 'server_name'` 要傳回資訊的伺服器名稱。 *server_name*已**nvarchar(30)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -92,11 +91,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetserver 來&#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_delete_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [dbo.sysdownloadlist &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [dbo.sysdownloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

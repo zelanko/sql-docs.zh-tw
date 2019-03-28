@@ -16,12 +16,12 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdbfcad1bb03e88d335c8acddc1ff7eb8c75b2eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791580"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528420"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@original_publisher** =] **'***original_publisher***'**  
- 當初發行資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。 *original_publisher*已**sysname**，沒有預設值。  
+`[ @original_publisher = ] 'original_publisher'` 執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]當初發行資料庫。 *original_publisher*已**sysname**，沒有預設值。  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 要發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 發行的資料庫名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- 重新導向的目標時**sp_redirect_publisher**針對原始發行者/已發行資料庫配對呼叫。 *redirected_publisher*已**sysname**，沒有預設值。  
+`[ @redirected_publisher = ] 'redirected_publisher'` 重新導向的目標時**sp_redirect_publisher**針對原始發行者/已發行資料庫配對呼叫。 *redirected_publisher*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -68,7 +65,7 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  訊息 21899、層級 11、狀態 1、程序 **sp_hadr_verify_subscribers_at_publisher**、行 109  
 >   
->  查詢重新導向的發行者 'MyReplicaHostName' 上用以判斷是否有 sysserver 項目 「 訂閱者 」，將原始發行者 'MyOriginalPublisher' 失敗，發生錯誤 '976'，錯誤訊息 ' 錯誤 976，層級為 14，狀態 1，訊息：目標資料庫 'MyPublishedDB' 正參與可用性群組中而且目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《 **線上叢書》的＜** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式＞。  
+>  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目的查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息：目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《 **線上叢書》的＜** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式＞。  
 >   
 >  複本主機 'MyReplicaHostName' 發生了一個或多個發行者驗證錯誤。  
   
@@ -77,8 +74,8 @@ sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_get_redirected_publisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
+ [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  
   
   

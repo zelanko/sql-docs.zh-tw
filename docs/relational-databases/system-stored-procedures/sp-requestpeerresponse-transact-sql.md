@@ -16,12 +16,12 @@ ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4c808b60e91faa4c08750b4c48f470ddcb6ee6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782910"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526200"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication**=] **'***發行集***'**  
- 這是點對點拓撲中驗證狀態的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是，驗證狀態的對等項目-拓撲中的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@description**=] **'***描述***'**  
- 使用者自訂的資訊，可以用來識別個別狀態要求。 *描述*已**nvarchar(4000)**，預設值是 NULL。  
+`[ @description = ] 'description'` 可用來識別個別狀態要求的使用者定義資訊。 *描述*已**nvarchar(4000)**，預設值是 NULL。  
   
- [ **@request_id** =] *request_id*  
- 傳回新要求的識別碼。 *request_id*已**int**是 OUTPUT 參數。 執行時，就可以使用此值[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)以檢視所有回應之狀態要求。  
+`[ @request_id = ] request_id` 傳回新要求的識別碼。 *request_id*已**int**是 OUTPUT 參數。 執行時，就可以使用此值[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)以檢視所有回應之狀態要求。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -63,7 +60,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_requestpeerresponse**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_deletepeerrequesthistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

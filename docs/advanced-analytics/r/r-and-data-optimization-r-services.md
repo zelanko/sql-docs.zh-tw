@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b6e25ec0c7bc1ce332514910cdaf5cdf9fdb9e07
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4fdc699437ef44d32e944d810e9e38571d20472c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432401"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510885"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -161,7 +161,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + 函式參考[rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>使用 MicrosoftML
+### <a name="use-microsoftml"></a>Use MicrosoftML
 
 我們也建議您看看新**MicrosoftML**套件，提供可調整機器學習演算法，可以使用計算內容和提供的 RevoScaleR 的轉換。
 

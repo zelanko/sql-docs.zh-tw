@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591462"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530370"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OAMethod objecttoken , methodname
  *objecttoken*  
  使用先前建立之 OLE 物件的物件 token **sp_OACreate**。  
   
- *方法名稱*  
+ *methodname*  
  這是要呼叫之 OLE 物件的方法名稱。  
   
  _returnvalue_**輸出**  
@@ -65,8 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   方法在輸出參數中傳回陣列。  
   
- [ _@parametername_ **=** ]*參數*[**輸出**]  
- 這是一個方法參數。 如果指定，*參數*必須是適當的資料類型的值。  
+`[ _@parametername = ] parameter[ OUTPUT ]` 是方法參數。 如果指定，*參數*必須是適當的資料類型的值。  
   
  若要取得輸出參數，傳回值*參數*必須是適當資料類型的本機變數並**輸出**必須指定。 如果指定常數參數，或如果**輸出**未指定，所有傳回的輸出參數的值會被忽略。  
   

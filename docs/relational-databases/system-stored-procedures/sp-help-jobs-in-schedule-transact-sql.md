@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobs_in_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b70a8327a69496438be7739e3b5eba6b24533f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0f892bf81811538eeb06b18feb725778464910b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746386"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528380"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@schedule_id =** ] *schedule_id*  
- 這是要列出資訊的排程識別碼。 *schedule_id*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
+`[ @schedule_id = ] schedule_id` 要列出資訊的排程識別碼。 *schedule_id*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 這是要列出資訊的排程名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
+`[ @schedule_name = ] 'schedule_name'` 要列出資訊的排程名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -63,7 +61,7 @@ sp_help_jobs_in_schedule
 |**description**|**nvarchar(512)**|作業的描述。|  
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**category**|**sysname**|作業類別目錄。|  
-|**擁有者**|**sysname**|作業擁有者。|  
+|**owner**|**sysname**|作業擁有者。|  
 |**notify_level_eventlog**|**int**|這是一個位元遮罩，指出在哪些情況之下，應該將通知事件記錄在 Microsoft Windows 應用程式記錄檔中。 它可以是下列值之一：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗時<br /><br /> **3** = 每當作業完成 （不論作業結果）|  
 |**notify_level_email**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送通知電子郵件。 可能的值為相同**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|這是一個位元組遮罩，指出在哪些情況之下，應該在作業完成時傳送網路訊息。 可能的值為相同**notify_level_eventlog**。|  
@@ -119,9 +117,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

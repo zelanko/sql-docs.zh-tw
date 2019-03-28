@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6527d3b3ee6a0198796688bd4028bf9159406b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649026"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529214"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -57,11 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@name=** ] **'**_模組\_名稱_**'**  
- 這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*已**nvarchar**，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。  
+`[ @name = ] 'module\_name'` 是預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*已**nvarchar**，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。  
   
- [ **，** @**命名空間**=] **'** \<類別 > **'**  
- 這是指定之模組的類別。 當*module_name* DDL 觸發程序，\<類別 > 為必要。 *\<類別 >* 已**nvarchar**(20)。 有效輸入包括：  
+`[ , @namespace = ] ' \<class> '` 為指定的模組類別。 當*module_name* DDL 觸發程序，\<類別 > 為必要。 *\<類別 >* 已**nvarchar**(20)。 有效輸入包括：  
   
 |||  
 |-|-|  

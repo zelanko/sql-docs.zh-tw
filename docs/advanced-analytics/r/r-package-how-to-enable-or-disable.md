@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5528fc63dd7b7d7382eb9aa7931dcf5f8942da19
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: ee52fd9b7a116156f794303b828a83e9b06de6ab
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645419"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509815"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>啟用或停用 SQL Server 的遠端封裝管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

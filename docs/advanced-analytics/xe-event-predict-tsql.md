@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e680da7485069e6838edff260a505461a22c472b
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432241"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510535"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>監視 PREDICT 陳述式的擴充事件
 

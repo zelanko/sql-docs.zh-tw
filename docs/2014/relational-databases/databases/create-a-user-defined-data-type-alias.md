@@ -15,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768820"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530210"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立新的使用者定義資料類型別名。  
@@ -116,9 +116,9 @@ ms.locfileid: "52768820"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例根據系統提供的 `varchar` 資料類型建立資料類型別名。 `ssn` 資料類型別名用於保留 11 位數之社會保險號碼 (999-99-9999) 的資料行。 該資料行不能是 NULL。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例根據系統提供的 `varchar` 資料類型建立資料類型別名。 `ssn` 資料類型別名用於保留 11 位數之社會保險號碼 (999-99-9999) 的資料行。 該資料行不能是 NULL。  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

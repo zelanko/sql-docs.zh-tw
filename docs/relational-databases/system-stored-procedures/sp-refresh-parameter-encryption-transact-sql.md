@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214137"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533980"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 更新指定的非結構描述繫結預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序，或目前資料庫中的伺服器層級 DDL 觸發程序參數的 Always Encrypted 中繼資料。 
@@ -47,11 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引數
 
-[  **@name =** ] **'***module_name***'**   
-這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*是`nvarchar`，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。
+`[ @name = ] 'module_name'` 是預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*是`nvarchar`，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。
 
-[  **@namespace =** ] **'** < 類別 > **'**   
-這是指定之模組的類別。 當*module_name* DDL 觸發程序，`<class>`需要。 `<class>` 為 `nvarchar(20)`。 有效輸入如下`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
+`[ @namespace = ] ' < class > '` 為指定的模組類別。 當*module_name* DDL 觸發程序，`<class>`需要。 `<class>` 為 `nvarchar(20)`。 有效輸入如下`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
 
 ## <a name="return-code-values"></a>傳回碼值  
 

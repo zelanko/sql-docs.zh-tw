@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545575"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530572"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>與巢狀 FOR XML 查詢比較的 FOR XML 查詢
   本主題會將單一層 FOR XML 查詢與巢狀 FOR XML 查詢做比較。 使用巢狀 FOR XML 查詢的其中一個好處，就是可以針對查詢結果指定屬性中心及元素中心 XML 的組合。 以下範例將提供示範。  

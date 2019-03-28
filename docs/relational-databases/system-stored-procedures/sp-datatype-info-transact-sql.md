@@ -1,5 +1,5 @@
 ---
-title: sp_datatype_info (TRANSACT-SQL) |Microsoft Docs
+title: sp_datatype_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b8d56f7989d3f0c76c3eaa46309ab029fc3d42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601126"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527930"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@data_type=** ] *data_type*  
- 這是指定之資料類型的代號。 若要取得所有資料類型的清單，請省略這個參數。 *data_type*已**int**，預設值是 0。  
+`[ @data_type = ] data_type` 為指定的資料類型的代碼。 若要取得所有資料類型的清單，請省略這個參數。 *data_type*已**int**，預設值是 0。  
   
- [ **@ODBCVer=** ] *odbc_version*  
- 這是所使用的 ODBC 版本。 *odbc_version&lt*已**tinyint**，預設值是 2。  
+`[ @ODBCVer = ] odbc_version` 是用的 ODBC 版本。 *odbc_version&lt*已**tinyint**，預設值是 2。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  

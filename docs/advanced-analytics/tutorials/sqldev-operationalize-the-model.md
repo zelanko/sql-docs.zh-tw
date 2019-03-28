@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4e74f587177c31f55c952eb06ccb8a7e8960c93a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644778"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511585"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>第 4 課：執行使用內嵌在預存程序中 R 的預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

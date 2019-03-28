@@ -18,12 +18,12 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a821d6b114b1975dd9700b5f59d1cf66ebadb76a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745266"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526940"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'** *角色* **'**  
- 這是目前資料庫中的角色名稱。 *角色*已**sysname**，預設值是 NULL。 *角色*必須存在於目前的資料庫。 如果*角色*未指定，則會傳回包含從目前資料庫的至少一個成員的所有角色。  
+`[ @rolename = ] ' role '` 是目前資料庫中名稱。 *角色*已**sysname**，預設值是 NULL。 *角色*必須存在於目前的資料庫。 如果*角色*未指定，則會傳回包含從目前資料庫的至少一個成員的所有角色。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -51,7 +50,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|目前資料庫中角色的名稱。|  
-|**成員名稱**|**sysname**|成員名稱**DbRole。**|  
+|**MemberName**|**sysname**|成員名稱**DbRole。**|  
 |**MemberSID**|**varbinary(85)**|安全性識別元**成員名稱。**|  
   
 ## <a name="remarks"></a>備註  
@@ -74,9 +73,9 @@ EXEC sp_helprolemember 'Sales';
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helpsrvrolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

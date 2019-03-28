@@ -10,22 +10,22 @@ helpviewer_keywords:
 - non-deterministic content models
 - content models [XML in SQL Server]
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df49312f86513e1860fbb3bc14cd33ca1edc845e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea86115b88c693e70faa677fdea518f8886bae0f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113755"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531270"
 ---
 # <a name="non-deterministic-content-models"></a>不具決定性的內容模型
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 (SP1) 之前， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕具有不具決定性之內容模型的 XML 結構描述。  
   
  但是從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 開始，即使出現次數條件約束為 0、1 或未受約束，仍可接受不具決定性的內容模型。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>範例：拒絕不具決定性的內容模型  
+## <a name="example-non-deterministic-content-model-rejected"></a>範例拒絕不具決定性的內容模型  
  下列範例會嘗試建立具有不具決定性之內容模型的 XML 結構描述。 此程式碼會失敗，因為 `<root>` 元素是否應該具有兩個 `<a>` 元素的序列，或者 `<root>` 元素是否應該具有兩個序列 (每個序列含有一個 `<a>` 元素) 並不明確。  
   
 ```  
@@ -59,7 +59,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>範例：接受不具決定性的內容模型  
+## <a name="example-non-deterministic-content-model-accepted"></a>範例接受不具決定性的內容模型  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 之前的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 版本中，下列結構描述會遭到拒絕。  
   
 ```  

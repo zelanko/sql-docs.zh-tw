@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproc (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e6d007688f3c86b17578231f31da4f1ff5db0d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3690d4c954ae3cde5159100280597af14a796d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529760"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@functname =**] **'***程序***'**  
- 這是要卸除的擴充預存程序名稱。 *程序*已**nvarchar(517)**，沒有預設值。  
+`[ @functname = ] 'procedure'` 是要卸除的擴充預存程序的名稱。 *程序*已**nvarchar(517)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -75,8 +74,8 @@ EXEC sp_dropextendedproc 'xp_hello';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

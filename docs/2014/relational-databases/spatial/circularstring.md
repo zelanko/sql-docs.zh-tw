@@ -10,12 +10,12 @@ ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001c489d9abf887495ea83cee00cede1463514ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8afd466b6eceffcee25346f76903d172a96d532e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376660"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532610"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` 是零個或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。  
@@ -90,7 +90,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. 使用空的 CircularString 來具現化 Geometry 執行個體  
  這個範例會示範如何建立空的 `CircularString` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
@@ -98,7 +98,7 @@ SET @g = geometry::Parse('CIRCULARSTRING EMPTY');
 ### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. 使用 CircularString 搭配一個圓弧線段來具現化 Geometry 執行個體  
  下列範例會示範如何建立具有單一圓弧線段 (半圓形) 的 `CircularString` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry:: STGeomFromText('CIRCULARSTRING(2 0, 1 1, 0 0)', 0);  
 SELECT @g.ToString();  
@@ -107,7 +107,7 @@ SELECT @g.ToString();
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. 使用 CircularString 搭配多個圓弧線段來具現化 Geometry 執行個體  
  下列範例會示範如何建立具有多個圓弧線段 (完整圓形) 的 `CircularString` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');  
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
@@ -121,7 +121,7 @@ Circumference = 6.28319
   
  當您使用 `LineString` 而非 `CircularString` 時，請比較輸出：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);  
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
@@ -138,21 +138,21 @@ Perimeter = 5.65685
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在相同的陳述式中使用 CircularString 來宣告和具現化 Geometry 執行個體  
  這個程式碼片段會示範如何在相同的陳述式中使用 `geometry` 來宣告和具現化 `CircularString` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
 ```  
   
 ### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>E. 使用 CircularString 來具現化 Geography 執行個體  
  下列範例會示範如何使用 `geography` 來宣告和具現化 `CircularString` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
 ```  
   
 ### <a name="f-instantiating-a-geometry-instance-with-a-circularstring-that-is-a-straight-line"></a>F. 使用直線的 CircularString 來具現化 Geometry 執行個體  
  下列範例會示範如何建立直線的 `CircularString` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  

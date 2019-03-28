@@ -10,15 +10,15 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc60d3491e4203db8f548dcbafd7c3b5373d266c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526560"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>分割記憶體最佳化資料表的應用程式模式
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支援的模式如下：將有限的使用中資料數量保留在記憶體最佳化資料表中，而比較不常存取的資料則在磁碟中處理。 一般而言，這會是儲存資料的案例為基礎`datetime`索引鍵。  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支援的模式如下：將有限的使用中資料數量保留在記憶體最佳化資料表中，而比較不常存取的資料則在磁碟中處理。 這種情況一般都是根據 `datetime` 索引鍵儲存資料。  
   
  您可以藉由使用通用的結構描述維護分割區資料表和記憶體最佳化資料表的方式，利用記憶體最佳化資料表模擬分割區資料表。 目前的資料會插入記憶體最佳化資料表中並進行更新，而較不常存取的資料會在傳統的分割區資料表中維護。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48123908"
   
  此範例的第一個部分會建立資料庫和必要的物件。 第二部分會示範如何將資料從記憶體最佳化的資料表，移至分割資料表。  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

@@ -16,12 +16,12 @@ ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 022a2c8df27afdd3a9766e447f4030cdede4af4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cac631425a43870395fa0adceb0bb041d70e1932
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813190"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530540"
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =**] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'***文章***'**  
- 這是發行集的發行項名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是發行集中發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
   

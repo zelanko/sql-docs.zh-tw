@@ -18,12 +18,12 @@ ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8914ce54d85e99213d923d7bebc186f61f928cf9
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100478"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526820"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@objname =** ] **'**_物件_**'**  
- 這是目前資料庫中現有資料表、檢視表、使用者定義函數或預存程序的名稱。 *物件*已**nvarchar(776)**，沒有預設值。 *物件*可以在表單中的現有物件的擁有者限定_existing_owner_**。**_物件_如果結構描述和其擁有者具有相同的名稱。  
+`[ @objname = ] 'object'` 是現有的資料表、 檢視、 使用者定義函式或目前資料庫中的預存程序的名稱。 *物件*已**nvarchar(776)**，沒有預設值。 *物件*可以在表單中的現有物件的擁有者限定_existing_owner_**。**_物件_如果結構描述和其擁有者具有相同的名稱。  
   
- [  **@newowner=**] **'**_擁有者_ **'**  
- 這是即將成為物件新擁有者的安全性帳戶名稱。 *擁有者*已**sysname**，沒有預設值。 *擁有者*必須是有效的資料庫使用者、 伺服器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入或具有目前資料庫存取權的 Windows 群組。 如果新擁有者是一個 Windows 使用者或是沒有對應資料庫層級主體的 Windows 群組，就會建立一個資料庫使用者。  
+`[ @newowner = ] 'owner_ '` 是將成為物件新擁有者的安全性帳戶的名稱。 *擁有者*已**sysname**，沒有預設值。 *擁有者*必須是有效的資料庫使用者、 伺服器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入或具有目前資料庫存取權的 Windows 群組。 如果新擁有者是一個 Windows 使用者或是沒有對應資料庫層級主體的 Windows 群組，就會建立一個資料庫使用者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

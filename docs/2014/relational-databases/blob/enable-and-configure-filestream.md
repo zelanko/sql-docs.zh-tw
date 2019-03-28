@@ -12,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc50fea28b1dbc3407b86e3af5573f64202e8f26
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132184"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526790"
 ---
 # <a name="enable-and-configure-filestream"></a>啟用及設定 FILESTREAM
   在您開始使用 FILESTREAM 之前，必須先在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用 FILESTREAM。 此主題描述如何使用 SQL Server 組態管理員來啟用 FILESTREAM。  
@@ -51,7 +51,7 @@ ms.locfileid: "48132184"
   
 11. 在 [查詢編輯器] 中，輸入下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼：  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  

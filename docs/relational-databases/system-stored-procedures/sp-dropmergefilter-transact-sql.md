@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 76d83e2d36307280249ccd886c464e8cd484c296
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128115"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533220"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'**_文章_**'**  
- 這是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [  **@filtername=**] **'**_filtername_**'**  
- 這是要卸除的篩選名稱。 *filtername*已**sysname**，沒有預設值。  
+`[ @filtername = ] 'filtername'` 是要卸除的篩選器的名稱。 *filtername*已**sysname**，沒有預設值。  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
   
  **0**指定合併發行項的變更不會使快照集失效。  
   
  **1**表示合併發行項的變更可能使快照集失效。 如果這種情況下，值為**1**提供將出現新的快照集的權限。  
   
- [ **@force_reinit_subscription**=] *force_reinit_subscription*  
- 啟用或停用將快照集標示為無效的能力。 *force_reinit_subscription*已**位元**，預設值**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 啟用或停用將標示為無效的訂用帳戶的能力。 *force_reinit_subscription*已**位元**，預設值**0**。  
   
  **0**指定合併發行項篩選的變更不會使訂閱失效。  
   
@@ -76,7 +71,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

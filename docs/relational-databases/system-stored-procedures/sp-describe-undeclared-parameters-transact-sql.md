@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679629"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532480"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **\@tsql =** ] **'**_TRANSACT-SQL\_批次_**'**  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (**_n_**)** 或是**nvarchar （max)**。  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 一或多個[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 *Transact SQL_batch*可能**nvarchar (**_n_**)** 或是**nvarchar （max)**。  
   
- [  **\@params =** ] **N'**_參數_**'**  
- \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，同樣地方式 sp_executesql 運作方式。 *參數*可能**nvarchar (**_n_**)** 或是**nvarchar （max)**。  
+`[ \@params = ] N'parameters'` \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，同樣地方式 sp_executesql 運作方式。 *參數*可能**nvarchar (**_n_**)** 或是**nvarchar （max)**。  
   
  是一個字串，其中包含已內嵌在的所有參數的定義*Transact SQL_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果 TRANSACT-SQL 陳述式或批次陳述式中的不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
@@ -275,6 +273,6 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_describe_first_result_set &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

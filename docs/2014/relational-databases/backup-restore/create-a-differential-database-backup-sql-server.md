@@ -15,15 +15,15 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74e855fbb1972abcbc9e5707ee17d334f33632c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533020"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>建立差異資料庫備份 (SQL Server)
-  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立差異資料庫備份。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立差異資料庫備份。  
   
  **本主題內容**  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48104878"
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  這個範例會建立 `MyAdvWorks` 資料庫的完整和差異資料庫備份。  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   

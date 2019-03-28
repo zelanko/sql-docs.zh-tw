@@ -18,12 +18,12 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 57c7ef9242b6c974c8043f8f6ab237b0fbe07941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2763b573eff741575c1d496efb0e861472714823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706649"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533000"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@loginame=**] **'***登入***'**  
- 這是 Windows 使用者或群組的名稱。 *登入*已**sysname**，沒有預設值。 *登入*可以是任何現有的 Windows 使用者名稱或群組形式*電腦名稱*\\*使用者或網域*\\*使用者*。  
+`[ @loginame = ] 'login'` 是 Windows 使用者或群組的名稱。 *登入*已**sysname**，沒有預設值。 *登入*可以是任何現有的 Windows 使用者名稱或群組形式*電腦名稱*\\*使用者或網域*\\*使用者*。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

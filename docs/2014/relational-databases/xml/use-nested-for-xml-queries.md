@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211138"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528468"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
   `xml`資料類型和[FOR XML 查詢中的 TYPE 指示詞](type-directive-in-for-xml-queries.md)讓 FOR XML 查詢所傳回的 XML 在伺服器上，以及在用戶端上進行處理。  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- 此外，您就可以處理在變數中，傳回的 XML `@x`，使用其中一種`xml`資料類型方法。 例如，您可以使用 `ProductModelID` value() 方法 [來擷取](/sql/t-sql/xml/value-method-xml-data-type)屬性值。  
+ 使用其中一種 `xml` 資料類型方法，您就可以再額外處理以變數 `@x` 傳回的 XML。 例如，您可以使用 `ProductModelID` value() 方法 [來擷取](/sql/t-sql/xml/value-method-xml-data-type)屬性值。  
   
 ```  
 DECLARE @i int;  
@@ -66,7 +66,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 因為結果屬於`xml`類型，您可以指定其中一個`xml`資料類型方法，直接對此 XML，如下列查詢所示。 在查詢中，會使用 [query() 方法 (xml 資料類型)](/sql/t-sql/xml/query-method-xml-data-type) 來擷取 <`myRoot`> 元素的第一個 <`row`> 元素子項。  
+ 因為結果為 `xml` 類型，所以您可以直接對此 XML 指定其中一個 `xml` 資料類型方法，如以下查詢所示。 在查詢中，會使用 [query() 方法 (xml 資料類型)](/sql/t-sql/xml/query-method-xml-data-type) 來擷取 <`myRoot`> 元素的第一個 <`row`> 元素子項。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -83,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>將內部 FOR XML 查詢結果當做 xml 類型執行個體傳回給外部查詢  
- 您可以撰寫巢狀`FOR XML`查詢的內部查詢結果傳回做為位置`xml`給外部查詢的型別。 例如：  
+ 您可以撰寫巢狀 `FOR XML` 查詢，其中的內部查詢結果會以 `xml` 類型傳回給外部查詢。 例如：  
   
 ```  
 SELECT Col1,   

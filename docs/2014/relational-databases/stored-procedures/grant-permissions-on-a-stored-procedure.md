@@ -12,12 +12,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79abbfe8d9c3fd8d88c883e5fbbdb198f9de4e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223884"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529700"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授與預存程序的權限
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中授與預存程序的權限。 權限可以授與資料庫中現有的使用者、資料庫角色或應用程式角色。  
@@ -51,7 +51,7 @@ ms.locfileid: "48223884"
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>若要授與預存程序的權限  
   
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48223884"
   
 3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。 此範例會將預存程序 `EXECUTE` 的 `HumanResources.uspUpdateEmployeeHireInfo` 權限授與名為 `Recruiting11`的應用程式角色。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  

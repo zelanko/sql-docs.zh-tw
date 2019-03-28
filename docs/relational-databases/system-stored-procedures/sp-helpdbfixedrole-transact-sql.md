@@ -1,5 +1,5 @@
 ---
-title: sp_helpdbfixedrole (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f36cac8a1a21f5e742c9fe7925684a6002f4a2b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777646"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527960"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rolename =** ] **'***角色***'**  
- 這是固定資料庫角色的名稱。 *角色*已**sysname**，預設值是 NULL。 如果*角色*已指定，只有該角色的相關資訊會傳回; 否則傳回的清單和所有固定的資料庫角色的描述。  
+`[ @rolename = ] 'role'` 是固定的資料庫角色的名稱。 *角色*已**sysname**，預設值是 NULL。 如果*角色*已指定，只有該角色的相關資訊會傳回; 否則傳回的清單和所有固定的資料庫角色的描述。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -92,10 +91,10 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_dbfixedrolepermission &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

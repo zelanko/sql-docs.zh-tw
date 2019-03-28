@@ -16,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589162"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528790"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。 比方說，如果**MSmerge_conflict_Customers**資料表中有衝突資料列**WA**並**CA**發行集，在發行集名稱中傳遞**CA**擷取相關衝突**CA**發行集。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**。 如果指定發行集的話，就會傳回發行集所限定的所有衝突。 比方說，如果**MSmerge_conflict_Customers**資料表中有衝突資料列**WA**並**CA**發行集，在發行集名稱中傳遞**CA**擷取相關衝突**CA**發行集。  
   
- [  **@conflict_table=**] **'**_conflict_table_**'**  
- 這是衝突資料表的名稱。 *conflict_table*已**sysname**，沒有預設值。 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中，衝突資料表名為使用格式名稱，搭配**MSmerge_conflict\__發行集\_文章_**，與針對每個已發行的發行項的一個資料表。  
+`[ @conflict_table = ] 'conflict_table'` 是，衝突資料表的名稱。 *conflict_table*已**sysname**，沒有預設值。 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中，衝突資料表名為使用格式名稱，搭配**MSmerge_conflict\__發行集\_文章_**，與針對每個已發行的發行項的一個資料表。  
   
- [  **@publisher=**] **'**_發行者_**'**  
- 這是發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 是發行者資料庫的名稱。*publisher_db*是**sysname**，預設值是 NULL。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。*publisher_db*是**sysname**，預設值是 NULL。  
   
- [  **@logical_record_conflicts=** ] *logical_record_conflicts&lt*  
- 指出結果集是否包含有關邏輯記錄衝突的資訊。 *logical_record_conflicts&lt*已**int**，預設值為 0。 **1**表示會傳回邏輯記錄衝突資訊。  
+`[ @logical_record_conflicts = ] logical_record_conflicts` 指出結果集是否包含有關邏輯記錄衝突的資訊。 *logical_record_conflicts&lt*已**int**，預設值為 0。 **1**表示會傳回邏輯記錄衝突資訊。  
   
 ## <a name="result-sets"></a>結果集  
  **sp_helpmergeconflictrows**傳回的結果集的基底資料表結構和這些額外的資料行所組成。  

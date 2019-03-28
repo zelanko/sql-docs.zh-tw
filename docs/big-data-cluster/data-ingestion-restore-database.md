@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 17ec268307fb2f51f5409b58a3b442c9f8d975b5
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 7b6f37f3e82b48a0c56e42cae63f898c3c1089fb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405898"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513205"
 ---
 # <a name="restore-a-database-into-the-sql-server-2019-big-data-cluster-master-instance"></a>將資料庫還原到 SQL Server 2019 巨量資料叢集主要執行個體
 
@@ -93,14 +93,22 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
 
 ```sql
 USE AdventureWorks2016CTP3
-GO 
+GO
+-- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-    CREATE EXTERNAL DATA SOURCE SqlDataPool
-    WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+  CREATE EXTERNAL DATA SOURCE SqlDataPool
+  WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+-- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+BEGIN
+  IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
     CREATE EXTERNAL DATA SOURCE SqlStoragePool
     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+  ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+END
 GO
 ```
 

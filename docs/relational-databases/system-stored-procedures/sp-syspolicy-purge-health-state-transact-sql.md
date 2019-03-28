@@ -18,12 +18,12 @@ ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3337c62cc90eb349158a804ee86eb995255936d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754716"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528210"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
- 代表您要在 [物件總管] 中清除健全狀態的節點。 *target_tree_root_with_id*已**nvarchar(400)**，預設值是 NULL。  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 表示要清除的健全狀況狀態的物件總管 中的節點。 *target_tree_root_with_id*已**nvarchar(400)**，預設值是 NULL。  
   
  您可以從 msdb.dbo.syspolicy_system_health_state 系統檢視表的 target_query_expression_with_id 資料行指定值。  
   
@@ -57,7 +56,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
 > [!IMPORTANT]  
->  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體作業的原則執行。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
+>  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響作業的執行個體的原則執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
   
 ## <a name="examples"></a>範例  
  下列範例會在 [物件總管] 內刪除特定節點的健全狀態。  

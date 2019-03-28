@@ -16,12 +16,12 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74b5ff58db964bff29e863eec39e76313220f556
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802300"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533090"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是要卸除的發行集名稱。 *發行集*已**sysname**，沒有預設值。 如果**所有**，移除所有現有的合併式發行集以及與其相關聯的快照集代理程式作業。 如果您指定特定值如*發行集*，會卸除這個發行集和其相關聯的快照集代理程式作業。  
+`[ @publication = ] 'publication'` 是要卸除的發行集的名稱。 *發行集*已**sysname**，沒有預設值。 如果**所有**，移除所有現有的合併式發行集以及與其相關聯的快照集代理程式作業。 如果您指定特定值如*發行集*，會卸除這個發行集和其相關聯的快照集代理程式作業。  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- 用來卸除發行集，且不在散發者端執行清除作業。 *ignore_distributor*已**位元**，預設值是**0**。 當重新安裝散發者時，也會使用這個參數。  
+`[ @ignore_distributor = ] ignore_distributor` 用來卸除發行集，而不在散發者端執行清除作業。 *ignore_distributor*已**位元**，預設值是**0**。 當重新安裝散發者時，也會使用這個參數。  
   
- [  **@reserved=**]*保留*  
- 保留供日後使用。 *保留*已**位元**，預設值是**0**。  
+`[ @reserved = ] reserved` 是保留供日後使用。 *保留*已**位元**，預設值是**0**。  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- 僅供內部使用。  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 僅供內部使用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -71,7 +67,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [刪除發行集](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

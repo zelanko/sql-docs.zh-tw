@@ -13,12 +13,12 @@ ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 16940816e7b3b8af8bf1b7415c6ad7df8f49c8dd
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639989"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527810"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>設定 remote query timeout 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote query timeout [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote query timeout** 選項會指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 逾時之前，遠端作業可以執行多久 (以秒為單位)。此選項的預設值是 600，這允許 10 分鐘的等待。 此值可套用到由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 啟始做為遠端查詢的傳出連接。 此值對 [!INCLUDE[ssDE](../../includes/ssde-md.md)]收到的查詢沒有影響。 若要停用逾時，請將值設定為 0。 查詢會等候，直到完成。  
@@ -72,9 +72,9 @@ ms.locfileid: "52639989"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote query timeout` 選項的值設定為 `0` ，以停用逾時。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `remote query timeout` 選項的值設定為 `0` ，以停用逾時。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'remote query timeout', 0 ;  

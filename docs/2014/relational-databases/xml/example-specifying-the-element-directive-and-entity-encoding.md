@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a90045a7a85bfc2c1397a1021125e9b413196b68
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532390"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>範例指定 ELEMENT 指示詞及實體編碼
   此範例說明 **ELEMENT** 與 **XML** 指示詞之間的相異處。 **ELEMENT** 指示詞會將資料實體化，但 **XML** 指示詞則否。 已將 \<摘要> 項目指派給查詢中的 XML `<Summary>This is summary description</Summary>`。  

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ab28dafe062d7a8d492e702aa5570881ef77f1e0
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: e036aa2a4c104eaf92e3e9aaf4513f2542bf23b4
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405618"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511685"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>教學課程：適用於 SQL 開發人員的 Python 資料分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

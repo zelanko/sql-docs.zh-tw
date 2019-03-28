@@ -16,12 +16,12 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7ebae98b83c743fa2ea111a2809b3d1a043005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774130"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526640"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher** = ] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication =** ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@subscriber=** ] **'***訂閱者***'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
   
- [  **@property =** ] **'***屬性***'**  
- 這是要變更的發行集屬性。 *屬性*已**sysname**，沒有預設值。  
+`[ @property = ] 'property'` 是要變更的發行集屬性。 *屬性*已**sysname**，沒有預設值。  
   
- [  **@value =** ] **'***值***'**  
- 這是新的屬性值。 *值*已**nvarchar(524)**，預設值是 NULL。  
+`[ @value = ] 'value'` 新的屬性值。 *值*已**nvarchar(524)**，預設值是 NULL。  
   
  下表描述可變更的散發代理程式作業屬性及這些屬性值的限制。  
   
@@ -100,7 +93,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
  只有成員**sysadmin**散發者端的固定的伺服器角色可以執行**sp_MSchange_distribution_agent_properties**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addpushsubscription_agent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_addsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
+ [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
   
   

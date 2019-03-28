@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823324"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531573"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@viewname**=] **'***view_name***'**  
- 這是要驗證的檢視名稱。 *view_name*已**sysname**，沒有預設值。  
+`[ @viewname = ] 'view_name'` 是要驗證名稱。 *view_name*已**sysname**，沒有預設值。  
   
- [ **@fhasnullcols**=] *field_has_null_columns*輸出  
- 這是一個旗標，用來指示檢視索引是否有允許 NULL 的資料行。 *view_name*已**sysname**，沒有預設值。 傳回值**1**檢視索引是否允許 NULL 的資料行。 傳回值**0**如果檢視並未包含允許 null 值的資料行。  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` 指定旗標，用來指示檢視索引是否有允許 NULL 的資料行。 *view_name*已**sysname**，沒有預設值。 傳回值**1**檢視索引是否允許 NULL 的資料行。 傳回值**0**如果檢視並未包含允許 null 值的資料行。  
   
 > [!NOTE]  
 >  如果預存程序本身會傳回傳回碼為**1**，這表示預存程序執行失敗，這個值是**0** ，應該予以忽略。  

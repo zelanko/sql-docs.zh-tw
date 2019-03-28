@@ -12,12 +12,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 65ee65f4185f9045a4ac75e4c058030d2d02fed6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6ef33d1331621b248295327a6e6fd266b8dd6242
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526880"
 ---
 # <a name="polygon"></a>多邊形
   `Polygon` 是儲存為一連串點的二維度介面，這些點可定義一個外部週框環形以及零個或多個內部環形。  
@@ -135,7 +135,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  下面是另一個將無效執行個體轉換成有效 geometry 執行個體的範例。 在下列範例中，我們已經使用三個完全相同的點來建立 `Polygon` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  

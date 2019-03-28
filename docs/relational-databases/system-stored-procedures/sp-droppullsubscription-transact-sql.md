@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134048"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527531"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=** ] **'**_發行者_**'**  
- 這是遠端伺服器的名稱。 *發行者*已**sysname**，沒有預設值。 如果**所有**，訂用帳戶會卸除所有的發行者。  
+`[ @publisher = ] 'publisher'` 這是遠端伺服器名稱。 *發行者*已**sysname**，沒有預設值。 如果**所有**，訂用帳戶會卸除所有的發行者。  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 **所有**表示所有發行者資料庫。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。 **所有**表示所有發行者資料庫。  
   
- [  **@publication=** ] **'**_發行集_**'**  
- 這是發行集名稱。 *發行集*已**sysname**，沒有預設值。 如果**所有**，所有發行集卸除訂閱。  
+`[ @publication = ] 'publication'` 這是發行集名稱。 *發行集*已**sysname**，沒有預設值。 如果**所有**，所有發行集卸除訂閱。  
   
- [  **@reserved=** ]*保留*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -69,9 +65,9 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addpullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_helppullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

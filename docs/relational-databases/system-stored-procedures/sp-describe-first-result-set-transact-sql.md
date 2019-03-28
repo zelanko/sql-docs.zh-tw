@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400631"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528160"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,16 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
+`[ \@tsql = ] 'Transact-SQL_batch'` 一或多個[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
   
- [  **\@params =** ] **N'***參數***'**  
- \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，也就是類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
+`[ \@params = ] N'parameters'` \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，也就是類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
   
  是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 陳述式中指定的每個參數必須定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
- [  **\@browse_information_mode =** ] *tinyint*  
- 指定是否會傳回其他索引鍵資料行和來源資料表資訊。 如果設定為 1，就會分析每個查詢，如同查詢上包含 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
+`[ \@browse_information_mode = ] tinyint` 指定是否傳回其他索引鍵資料行和來源資料表資訊。 如果設定為 1，就會分析每個查詢，如同查詢上包含 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
 -   如果設為 0，則不會傳回資訊。  
   
@@ -95,11 +92,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**source_schema**|**sysname**|這個結果中的資料行所傳回之原始結構描述名稱。 如果無法判別結構描述，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_table**|**sysname**|這個結果的資料行所傳回之原始資料表名稱。 如果無法判別資料表，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_column**|**sysname**|結果資料行所傳回之原始資料行名稱。 如果無法判別資料行，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
-|**is_identity_column**|**位元 NULL**|如果資料行是識別欄位，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為識別欄位，則傳回 NULL。|  
-|**is_part_of_unique_key**|**位元 NULL**|如果資料行是唯一索引 (包括唯一和主要的條件約束) 的一部分，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為唯一索引的一部分，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
-|**is_updateable**|**位元 NULL**|如果資料行是可更新的，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否可更新，則傳回 NULL。|  
-|**is_computed_column**|**位元 NULL**|如果資料行是計算資料行，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為計算資料行，則傳回 NULL。|  
-|**is_sparse_column_set**|**位元 NULL**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果它無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
+|**is_identity_column**|**bit NULL**|如果資料行是識別欄位，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為識別欄位，則傳回 NULL。|  
+|**is_part_of_unique_key**|**bit NULL**|如果資料行是唯一索引 (包括唯一和主要的條件約束) 的一部分，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為唯一索引的一部分，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
+|**is_updateable**|**bit NULL**|如果資料行是可更新的，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否可更新，則傳回 NULL。|  
+|**is_computed_column**|**bit NULL**|如果資料行是計算資料行，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為計算資料行，則傳回 NULL。|  
+|**is_sparse_column_set**|**bit NULL**|如果資料行是疏鬆資料行，則傳回 1，否則傳回 0。 如果它無法判別資料行是否為疏鬆資料行集的一部分，則傳回 NULL。|  
 |**ordinal_in_order_by_list**|**smallint NULL**|這個資料行在 ORDER BY 清單中的位置。 如果資料行不會顯示在 ORDER BY 清單中，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。|  
 |**order_by_list_length**|**smallint NULL**|ORDER BY 清單的長度。 如果沒有 ORDER BY 清單，或如果無法唯一判別 ORDER BY 清單，則傳回 NULL。 請注意，這個值會是所傳回的所有資料列相同**sp_describe_first_result_set。**|  
 |**order_by_is_descending**|**smallint NULL**|如果 ordinal_in_order_by_list 不是 NULL， **order_by_is_descending**資料行則報告此資料行的 ORDER BY 子句方向。 否則，它會回報 NULL。|  
@@ -143,15 +140,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varchar(a)** 要**varchar(a')** 其中 ' >。  
   
-    -   **varchar(a)** 至**varchar （max)**  
+    -   **varchar(a)** to **varchar(max)**  
   
     -   **nvarchar(a)** 要**nvarchar(a')** 其中 ' >。  
   
-    -   **nvarchar(a)** 至**nvarchar （max)**  
+    -   **nvarchar(a)** to **nvarchar(max)**  
   
     -   **varbinary(a)** 要**varbinary(a')** 其中 ' >。  
   
-    -   **varbinary(a)** 至**varbinary （max)**  
+    -   **varbinary(a)** to **varbinary(max)**  
   
  **sp_describe_first_result_set**不支援間接遞迴。  
   
@@ -403,7 +400,7 @@ N'
  結果： **int NULL**因為 dbo.t1.a 和 s1.t1.a 都有型別**int**和不同的 null 屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_describe_undeclared_parameters &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

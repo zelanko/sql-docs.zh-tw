@@ -16,12 +16,12 @@ ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: de81f6e7f5f375e2b71414385e4c27e2ceb8082f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88b723e47b177c6a505a0821ddd4925c7179a15b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187558"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531340"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>刪除備份裝置 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的備份裝置。  
@@ -67,9 +67,9 @@ ms.locfileid: "48187558"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  複製下列範例並貼入查詢中。 此範例示範如何使用 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 刪除備份裝置。 執行第一個範例，建立 `mybackupdisk` 備份裝置和實體名稱 `c:\backup\backup1.bak`。 執行`sp_dropdevice`刪除`mybackupdisk`備份裝置。 `delfile` 參數會刪除實體名稱。  
+3.  複製下列範例並貼入查詢中。 此範例示範如何使用 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 刪除備份裝置。 執行第一個範例，建立 `mybackupdisk` 備份裝置和實體名稱 `c:\backup\backup1.bak`。 執行 `sp_dropdevice` 刪除 `mybackupdisk` 備份裝置。 `delfile` 參數會刪除實體名稱。  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

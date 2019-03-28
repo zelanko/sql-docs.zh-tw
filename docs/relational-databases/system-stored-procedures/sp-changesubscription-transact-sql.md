@@ -18,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209837"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534040"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication**=] **'**_發行集_**'**  
- 這是要變更的發行集名稱。 *發行集*已**sysname**，沒有預設值  
+`[ @publication = ] 'publication'` 是要變更的發行集的名稱。 *發行集*已**sysname**，沒有預設值  
   
- [ **@article** =] **'**_文章_**'**  
- 這是要變更的發行項名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是要變更的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [ **@subscriber** =] **'**_訂閱者_**'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [ **@destination_db** =] **'**_destination_db_**'**  
- 這是訂閱資料庫的名稱。 *destination_db*已**sysname**，沒有預設值。  
+`[ @destination_db = ] 'destination_db'` 是訂閱資料庫的名稱。 *destination_db*已**sysname**，沒有預設值。  
   
- [  **@property=**] **'**_屬性_**'**  
- 這是給定訂閱要變更的屬性。 *屬性*已**nvarchar(30)**，而且可以是下列其中一個資料表中的值。  
+`[ @property = ] 'property'` 是要變更指定的訂用帳戶的屬性。 *屬性*已**nvarchar(30)**，而且可以是下列其中一個資料表中的值。  
   
- [  **@value=**] **'**_值_**'**  
- 指定的新值*屬性*。 *值*已**nvarchar(4000)**，而且可以是下列其中一個資料表中的值。  
+`[ @value = ] 'value'` 指定的新值*屬性*。 *值*已**nvarchar(4000)**，而且可以是下列其中一個資料表中的值。  
   
 |屬性|值|描述|  
 |--------------|-----------|-----------------|  
@@ -85,8 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB 提供者|  
 |**memory_optimized**|**bit**|指出訂用帳戶支援記憶體最佳化的資料表。 *memory_optimized*已**元**，其中 1 等於 true （訂用帳戶支援記憶體最佳化的資料表）。|  
   
- [  **@publisher =** ] **'**_發行者_**'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應指定為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -105,7 +98,7 @@ sp_changesubscription [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changesubscription**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

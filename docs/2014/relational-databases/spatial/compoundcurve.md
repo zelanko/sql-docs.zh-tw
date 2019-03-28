@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 983711f4ac679cdb12fa7c31509725f13fba8bb3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352305"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531350"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve` 是零個或多個屬於 geometry 或 geography 類型之連續 `CircularString` 或 `LineString` 執行個體的集合。  
@@ -97,7 +97,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. 使用空的 CompooundCurve 來具現化 geometry 執行個體  
  下列範例會示範如何建立空的 `CompoundCurve` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
@@ -105,21 +105,21 @@ SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>B. 在相同的陳述式中使用 CompoundCurve 來宣告和具現化 geometry 執行個體  
  下列範例會示範如何在相同的陳述式中使用 `geometry` 來宣告和初始化 `CompoundCurve`執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. 使用 CompoundCurve 來具現化 geography 執行個體  
  下列範例會示範如何使用 `CompoundCurve` 來宣告和初始化 `geography` 執行個體：  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D. 將正方形儲存在 CompoundCurve 執行個體中  
  下列範例會以兩種不同的方式使用 `CompoundCurve` 執行個體來儲存正方形。  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3), (1 3, 3 3),(3 3, 3 1), (3 1, 1 1))');  
 SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');  
@@ -131,7 +131,7 @@ SELECT @g1.STLength(), @g2.STLength();
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. 使用 CompoundCurve 搭配多個 CircularString 來具現化 geometry 執行個體  
  下列範例會示範如何使用兩個不同的 `CircularString` 執行個體來初始化 `CompoundCurve`執行個體。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARSTRING(4 2, 2 4, 0 2))');  
 SELECT @g.STLength();  
@@ -142,7 +142,7 @@ SELECT @g.STLength();
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. 使用 CompoundCurve 來儲存半圓形  
  下列範例會使用 `CompoundCurve` 執行個體來儲存半圓形。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))');  
 SELECT @g.STLength();  
@@ -151,7 +151,7 @@ SELECT @g.STLength();
 ### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>G. 將多個 CircularString 和 LineString 執行個體儲存在 CompoundCurve 中  
  下列範例會示範如何使用 `CircularString` 來儲存多個 `LineString` 和 `CompoundCurve`執行個體。  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3), (7 3, 7 5), CIRCULARSTRING(7 5, 5 7, 3 5))');  
 SELECT @g.STLength();  
@@ -160,14 +160,14 @@ SELECT @g.STLength();
 ### <a name="h-storing-instances-with-z-and-m-values"></a>H. 儲存具有 Z 和 M 值的執行個體  
  下列範例會示範如何使用 `CompoundCurve` 執行個體來儲存具有 Z 和 M 值的 `CircularString` 和 `LineString` 執行個體序列。  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
 ### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>I. 說明必須明確宣告 CircularString 執行個體的原因  
  下列範例會顯示必須明確宣告 `CircularString` 執行個體的原因。 程式設計人員正嘗試將圓形儲存在 `CompoundCurve` 執行個體中。  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;    
 DECLARE @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 2 4, 0 2))');  

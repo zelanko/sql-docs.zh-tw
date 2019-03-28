@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c70e32de4ad1c44f5d38262573a075e81417ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756536"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531670"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@language=** ] **'***語言***'**  
- 這是要顯示資訊的替代語言名稱。 *語言*已**sysname**，預設值是 NULL。 如果*語言*已指定，會傳回指定語言的相關資訊。 如果未指定語言，在 所有語言的相關資訊**sys.syslanguages**相容性檢視會傳回。  
+`[ @language = ] 'language'` 是要顯示資訊的替代語言名稱。 *語言*已**sysname**，預設值是 NULL。 如果*語言*已指定，會傳回指定語言的相關資訊。 如果未指定語言，在 所有語言的相關資訊**sys.syslanguages**相容性檢視會傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -55,12 +54,12 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**langid**|**smallint**|語言識別碼。|  
 |**dateformat**|**nchar(3)**|日期的格式。|  
 |**datefirst**|**tinyint**|每週第一天：1 代表星期一，2 代表星期二，依此類推，7 則代表星期日。|  
-|**升級**|**int**|這個語言最後升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
+|**upgrade**|**int**|這個語言最後升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。|  
 |**name**|**sysname**|語言名稱。|  
 |**alias**|**sysname**|語言的替代名稱。|  
 |**幾個月**|**nvarchar(372)**|月份名稱。|  
 |**shortmonths**|**nvarchar(132)**|簡短月份名稱。|  
-|**天**|**nvarchar(217)**|日期名稱。|  
+|**days**|**nvarchar(217)**|日期名稱。|  
 |**lcid**|**int**|語言的 Windows 地區設定識別碼。|  
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息群組識別碼。|  
   

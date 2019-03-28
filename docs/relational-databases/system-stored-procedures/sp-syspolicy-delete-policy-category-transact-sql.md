@@ -18,12 +18,12 @@ ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 944ddb3e319421a92a29f5263f018f3b812e46bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd98f116bfa471797d2e9b340561c4eef121e0a7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793346"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526160"
 ---
 # <a name="spsyspolicydeletepolicycategory-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@name=** ] **'***name***'**  
- 這是原則類別目錄的名稱。 *名稱*已**sysname**，而且必須指定如果*policy_category_id&lt*是 NULL。  
+`[ @name = ] 'name'` 為原則類別目錄的名稱。 *名稱*已**sysname**，而且必須指定如果*policy_category_id&lt*是 NULL。  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- 這是原則類別目錄的識別碼。 *policy_category_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
+`[ @policy_category_id = ] policy_category_id` 是原則類別目錄的識別碼。 *policy_category_id&lt*已**int**，而且必須指定如果*名稱*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -60,7 +58,7 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
 > [!IMPORTANT]  
->  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體作業的原則執行。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
+>  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響作業的執行個體的原則執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
   
 ## <a name="examples"></a>範例  
  下列範例會刪除名稱為 'Finance' 的原則類別目錄。  

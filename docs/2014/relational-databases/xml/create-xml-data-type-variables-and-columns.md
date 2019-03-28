@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114098"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527290"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
   `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 如同其他內建的類型，您可以使用`xml`資料類型作為資料行類型，當您建立資料表作為變數類型、 參數類型、 函式傳回類型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
@@ -53,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>指派預設值  
  在資料表中，您可以將預設的 XML 執行個體指派給 `xml` 類型的資料行。 您可以使用以下兩種方法的其中一種來提供預設的 XML：使用 XML 常數，或是明確轉換成 `xml` 類型。  
   
- 若要將預設 XML 提供為 XML 常數，請使用類似以下範例的語法。 請注意，此字串會隱含地轉換成`xml`型別。  
+ 若要將預設 XML 提供為 XML 常數，請使用類似以下範例的語法。 請注意，此字串會隱含轉換成 `xml` 類型。  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -91,7 +91,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- 使用條件約束的替代方法是建立包裝函式、 使用者定義函式來包裝`xml`資料類型方法，並在檢查條件約束中指定使用者定義函式，如下列範例所示。  
+ 有一個替代使用條件約束的方法就是建立包裝函數 (用來包裝 `xml` 資料類型方法的使用者定義函數)，並在檢查條件約束中指定使用者定義函數，如下列範例所示。  
   
  在下列範例中，在 `Col2` 上的條件約束指定儲存在此資料行中的每個 XML 執行個體都必須有包含 `<ProductDescription>` 屬性的 `ProductID` 元素。 此條件約束是由使用者定義函數所強制執行：  
   
@@ -135,9 +135,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   您想要在 `xml` 資料類型資料行上建立 XML 索引，且主資料表的主索引鍵與其叢集索引鍵相同。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](xml-indexes-sql-server.md)。  
   
- 建立`xml`如果下列條件成立的個別資料表中的資料類型資料行：  
+ 若下列情況成立，請將 `xml` 資料類型資料行建立在不同的資料表中：  
   
--   您想要建立 XML 索引`xml`資料類型資料行，但是主資料表的主索引鍵是不同於其叢集索引鍵，或主資料表沒有主索引鍵或主資料表是堆積 （沒有叢集索引鍵）。 如果主資料表已存在，就可能會有這種情形。  
+-   您想要在 `xml` 資料類型資料行上建立 XML 索引，但是主資料表的主索引鍵與其叢集索引鍵不同，或者主資料表沒有主索引鍵，或者主資料表是堆積 (沒有叢集索引鍵)。 如果主資料表已存在，就可能會有這種情形。  
   
 -   您不想因為資料表中有 XML 資料行存在，而讓資料表掃描的速度慢下來。 無論是以同資料列或資料列外的方式儲存，都會用到空間。  
   

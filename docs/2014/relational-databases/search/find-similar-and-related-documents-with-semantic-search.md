@@ -12,19 +12,19 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb5e3618c2d4770a9c4604c772ba572b1b40b961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170388"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531020"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>使用語意搜尋尋找相似及相關的文件
   描述如何在設定進行統計語意索引的資料行中尋找相似或相關的文件或文字值，以及相似或相關程度的詳細資訊。  
   
 ##  <a name="BasicsQuerySimilar"></a> 尋找相似或相關文件  
   
-###  <a name="HowToQuerySimilar"></a> 如何： 尋找相似或相關文件使用 SEMANTICSIMILARITYTABLE  
+###  <a name="HowToQuerySimilar"></a> 操作說明：尋找相似或相關文件使用 SEMANTICSIMILARITYTABLE  
  若要識別特定資料行中的相似或相關文件，請查詢 [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) 函數。  
   
  **SEMANTICSIMILARITYTABLE** 會傳回含有零個、一個或多個資料列的資料表，其中所指定資料行中的內容會與所指定文件的語意相似。 您可以在 SELECT 陳述式的 FROM 子句中參考這個資料列集函數，就像是一般資料表名稱一樣。  
@@ -36,7 +36,7 @@ ms.locfileid: "48170388"
 > [!IMPORTANT]  
 >  您設定為目標的資料行必須已啟用全文檢索和語意索引。  
   
-###  <a name="HowToIdentifySimilar"></a> 範例： 尋找與另一個文件相似的最上層文件  
+###  <a name="HowToIdentifySimilar"></a> 範例：尋找與另一個文件相似的最上層文件  
  下列範例從 AdventureWorks2012 範例資料庫的 HumanResources.JobCandidate 資料表中擷取類似於 *@CandidateID* 所指定候選人的前 10 個候選人。  
   
 ```scr  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> 尋找程度的詳細文件相似或相關的資訊  
   
-###  <a name="HowToQuerySimilarity"></a> 如何： 尋找文件相似或相關使用 SEMANTICSIMILARITYDETAILSTABLE 為何的相關資訊  
+###  <a name="HowToQuerySimilarity"></a> 操作說明：尋找資訊的文件的相似或相關使用 SEMANTICSIMILARITYDETAILSTABLE 的方式  
  若要取得讓文件相似或相關之主要片語的詳細資訊，您可以查詢 [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 函數。  
   
  **SEMANTICSIMILARITYDETAILSTABLE** 會傳回含有零個、一個或多個資料列的資料表，表示其內容為語意相似之兩份文件 (來源文件和比對文件) 之間的共同主要片語。 您可以在 SELECT 陳述式的 FROM 子句中參考這個資料列集函數，就像是一般資料表名稱一樣。  
@@ -63,10 +63,10 @@ GO
 > [!IMPORTANT]  
 >  您設定為目標的資料行必須已啟用全文檢索和語意索引。  
   
-###  <a name="HowToSimilarPhrases"></a> 範例： 尋找文件之間相似的前幾個關鍵片語  
+###  <a name="HowToSimilarPhrases"></a> 範例：尋找文件之間相似的前幾個關鍵片語  
  下列範例從 AdventureWorks2012 範例資料庫的 **HumanResources.JobCandidate** 資料表擷取所指定候選人之間相似度分數最高的 5 個主要片語。  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROM SEMANTICSIMILARITYDETAILSTABLE  
     (  

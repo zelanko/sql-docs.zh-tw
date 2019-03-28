@@ -1,5 +1,5 @@
 ---
-title: sp_msx_enlist (TRANSACT-SQL) |Microsoft Docs
+title: sp_msx_enlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 189861d10e308b79862f2485413aabf37a1b6aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ba29ca0d4522367e22273b4f07720f4e563ef6f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716336"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526579"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@msx_server_name =**] **'***msx_server***'**  
- 多伺服器管理 (主要) 伺服器的名稱。 *msx_server*已**sysname**，沒有預設值。  
+`[ @msx_server_name = ] 'msx_server'` 多伺服器管理 （主要） 伺服器的名稱。 *msx_server*已**sysname**，沒有預設值。  
   
- [  **@location =**] **'***位置***'**  
- 要加入之目標伺服器的位置。 *位置*已**nvarchar(100)**，預設值是 NULL。  
+`[ @location = ] 'location'` 要新增的目標伺服器的位置。 *位置*已**nvarchar(100)**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -72,8 +70,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_msx_defect &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [xp_cmdshell &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
+ [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

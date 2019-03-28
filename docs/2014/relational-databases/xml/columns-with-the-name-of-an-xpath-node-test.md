@@ -10,15 +10,15 @@ helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 804ca2ebe3aa307272645fa5a626ea2212367f87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783920"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530850"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>具有 XPath 節點測試名稱的資料行
   如果資料行名稱是其中一個 XPath 節點測試，將會對應內容，如下表所示。 如果資料行名稱是 XPath 節點測試，會將內容對應至對應的節點。 如果資料行的 SQL 類型是 `xml`，就會傳回錯誤。  

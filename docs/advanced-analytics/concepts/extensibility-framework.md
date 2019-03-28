@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4e48d51e45cdc9f1cd56f22228d95370b8f75711
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510625"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>在 SQL Server Machine Learning 服務的擴充性架構 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ SQL Server 已在伺服器上執行外部指令碼，例如 R 或 Python 擴充�
 
 | 受信任的啟動器 | 延伸模組 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
-| 針對 R 語言的 rlauncher.dll 初始化 | [R 擴充功能](extension-r.md) | SQL Server 2016，SQL Server 2017 |
+| 針對 R 語言的 rlauncher.dll 初始化 | [R 擴充功能](extension-r.md) | SQL Server 2016, SQL Server 2017 |
 | 適用於 Python 3.5 Pythonlauncher.dll | [Python 擴充功能](extension-python.md) | SQL Server 2017 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服務在其自有的使用者帳戶下執行。 如果您變更執行 Launchpad 的帳戶，請務必這樣做時使用 SQL Server 組態管理員，以確保變更會寫入相關檔案。

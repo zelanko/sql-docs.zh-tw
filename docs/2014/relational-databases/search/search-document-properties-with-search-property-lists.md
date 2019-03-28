@@ -18,12 +18,12 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77cb1127b7dbb7b2a49e3bafcd0b3eccc45b92ed
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ec774e4c8500df0fe9af42bf6cf48f5f691f72bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800373"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530290"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
   文件屬性的內容與文件本文的內容之間原本無法區別。 這項限制會將全文檢索查詢限制為整個文件的一般搜尋。 不過，現在您可以針對 `varbinary`、`varbinary(max)` (包括 `FILESTREAM`) 或 `image` 二進位資料行中支援的文件類型設定全文檢索索引，以便支援特定屬性 (例如 Author 和 Title) 的屬性範圍搜尋作業。 這種搜尋形式稱為「屬性搜尋」。  
@@ -169,7 +169,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> 使用 CONTAINS 查詢搜索屬性  
  屬性範圍之全文檢索查詢的基本 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 語法如下：  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

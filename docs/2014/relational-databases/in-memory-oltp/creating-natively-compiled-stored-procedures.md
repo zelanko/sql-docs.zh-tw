@@ -10,12 +10,12 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712459"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531130"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>建立原生編譯的預存程序
   原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱 <<c0> [ 原生編譯預存程序中支援的建構](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "52712459"
   
  使用 [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)建立原生編譯的預存程序。 下列範例會顯示記憶體最佳化的資料表以及用來將資料列插入資料表中的原生編譯預存程序。  
   
-```tsql  
+```sql  
 create table dbo.Ord  
 (OrdNo integer not null primary key nonclustered,   
  OrdDate datetime not null,   
@@ -98,7 +98,7 @@ go
   
      使用包裝函式 (以磁碟為基礎) 預存程序，並將該程序修改為指向 SP_Vnew。 這個方法的缺點是間接造成的效能影響。  
   
-    ```tsql  
+    ```sql  
     ALTER PROCEDURE dbo.SP p1,...,pn  
     AS  
       EXEC dbo.SP_Vnew p1,...,pn  

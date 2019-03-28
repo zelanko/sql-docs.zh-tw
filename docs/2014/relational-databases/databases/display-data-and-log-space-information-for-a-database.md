@@ -19,12 +19,12 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a0c32ad8dbbdd38ff0741e6b1f38c9cc084b27a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787120"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533230"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>顯示資料庫的資料和記錄空間資訊
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中顯示資料庫的資料和記錄檔空間資訊。  
@@ -66,9 +66,9 @@ ms.locfileid: "52787120"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 系統預存程序來報告 `Vendor` 資料表及其索引的磁碟空間資訊。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 系統預存程序來報告 `Vendor` 資料表及其索引的磁碟空間資訊。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
@@ -81,9 +81,9 @@ GO
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會查詢 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 目錄檢視，以傳回有關 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中資料和記錄檔的特定資訊。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會查詢 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 目錄檢視，以傳回有關 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中資料和記錄檔的特定資訊。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT file_id, name, type_desc, physical_name, size, max_size  

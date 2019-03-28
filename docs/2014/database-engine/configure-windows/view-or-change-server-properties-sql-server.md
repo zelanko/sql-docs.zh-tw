@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641539"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528670"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>檢視或變更伺服器屬性 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 組態管理員檢視或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]執行個體的屬性。  
@@ -77,9 +77,9 @@ ms.locfileid: "52641539"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會在 [陳述式中使用](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 內建函數傳回目前伺服器的相關資訊。 當 Windows 伺服器安裝了多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，且用戶端必須開啟另一項連接來連到目前連接所用的相同執行個體時，這個狀況非常有用。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會在 [陳述式中使用](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 內建函數傳回目前伺服器的相關資訊。 當 Windows 伺服器安裝了多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，且用戶端必須開啟另一項連接來連到目前連接所用的相同執行個體時，這個狀況非常有用。  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -90,9 +90,9 @@ ms.locfileid: "52641539"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會查詢 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 目錄檢視，以傳回目前伺服器的名稱 (`name`) 和識別碼 (`server_id`)，以及用來連接到連結之伺服器的 OLE DB 提供者名稱 (`provider`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會查詢 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 目錄檢視，以傳回目前伺服器的名稱 (`name`) 和識別碼 (`server_id`)，以及用來連接到連結之伺服器的 OLE DB 提供者名稱 (`provider`)。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -107,7 +107,7 @@ ms.locfileid: "52641539"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會查詢 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 類別目錄檢視，以傳回目前伺服器上每個伺服器組態選項的相關資訊。 此範例會傳回選項的名稱 (`name`) 和描述 (`description`)，以及選項是否為進階選項 (`is_advanced`)。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會查詢 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 類別目錄檢視，以傳回目前伺服器上每個伺服器組態選項的相關資訊。 此範例會傳回選項的名稱 (`name`) 和描述 (`description`)，以及選項是否為進階選項 (`is_advanced`)。  
   
     ```wmimof  
     USE AdventureWorks2012;   
@@ -124,9 +124,9 @@ ms.locfileid: "52641539"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 變更伺服器屬性。 此範例會將 `fill factor` 選項的值變更為 `100`。 伺服器必須重新啟動，變更才會生效。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 變更伺服器屬性。 此範例會將 `fill factor` 選項的值變更為 `100`。 伺服器必須重新啟動，變更才會生效。  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  

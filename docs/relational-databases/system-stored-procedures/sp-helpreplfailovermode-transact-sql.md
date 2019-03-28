@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796426"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529530"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher=**] **'***publisher***'**  
- 這是參與這個訂閱者更新的發行者名稱。 *發行者*已**sysname**，沒有預設值。 必須已設定發行者的發行作業。  
+`[ @publisher = ] 'publisher'` 是參與這個訂閱者更新發行者的名稱。 *發行者*已**sysname**，沒有預設值。 必須已設定發行者的發行作業。  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication=**] **'***publication***'**  
- 這是參與這個訂閱者更新的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是參與這個訂閱者更新的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***' 輸出**  
- 傳回容錯移轉模式的整數值，它是**輸出**參數。 *failover_mode_id*已**tinyint**預設值是**0**。 它會傳回**0**立即更新並**1**佇列更新。  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 傳回容錯移轉模式的整數值，它是**輸出**參數。 *failover_mode_id*已**tinyint**預設值是**0**。 它會傳回**0**立即更新並**1**佇列更新。  
   
- [**@failover_mode=**] **'***failover_mode***' 輸出**  
+ [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
  傳回在訂閱者端修改資料的模式。 *failover_mode*已**nvarchar(10**預設值是 NULL。 已**輸出**參數。  
   
 |值|描述|  
 |-----------|-----------------|  
-|**即時運算**|立即更新：利用兩段式認可通訊協定 (2PC)，將訂閱者端的更新立即傳播到發行者。|  
-|**已排入佇列**|佇列更新：將訂閱者端的更新儲存在佇列中。|  
+|**immediate**|立即更新：利用兩段式認可通訊協定 (2PC)，將訂閱者端的更新立即傳播到發行者。|  
+|**queued**|佇列更新：將訂閱者端的更新儲存在佇列中。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -72,6 +68,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helpreplfailovermode**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_setreplfailovermode &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

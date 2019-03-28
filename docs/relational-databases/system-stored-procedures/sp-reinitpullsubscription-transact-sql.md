@@ -16,12 +16,12 @@ ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e5208446cc05755c6ab486356a664710c88f6dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4187dbe3ac00830919b07920a720b89818c25d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533700"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是 all，將標示為重新初始化所有訂閱。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 all，將標示為重新初始化所有訂閱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

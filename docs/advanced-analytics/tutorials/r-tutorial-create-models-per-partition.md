@@ -6,16 +6,16 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/27/2018
 ms.topic: tutorial
-ms.author: heidist
-author: HeidiSteen
+ms.author: davidph
+author: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abe7dbe193cc4e5f90095e7764f35aa1dc0cd9bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 7ccdc67413e6714c762d165a8d087b9385a3f5a4
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493330"
+ms.locfileid: "58512165"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教學課程：在 SQL Server 上的 R 中建立分割區為基礎的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

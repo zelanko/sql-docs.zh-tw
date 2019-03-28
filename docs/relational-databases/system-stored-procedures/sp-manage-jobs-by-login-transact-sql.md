@@ -1,5 +1,5 @@
 ---
-title: sp_manage_jobs_by_login (TRANSACT-SQL) |Microsoft Docs
+title: sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742436"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530260"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@action=** ] **'***動作***'**  
- 針對指定登入所採取的動作。 *動作*已**varchar(10)**，沒有預設值。 當*動作*是**刪除**， **sp_manage_jobs_by_login**所擁有的所有作業會都刪除*current_owner_login_name*。 當*動作*是**重新指派**，所有作業都會都指派給*new_owner_login_name*。  
+`[ @action = ] 'action'` 要針對指定的登入所採取的動作。 *動作*已**varchar(10)**，沒有預設值。 當*動作*是**刪除**， **sp_manage_jobs_by_login**所擁有的所有作業會都刪除*current_owner_login_name*。 當*動作*是**重新指派**，所有作業都會都指派給*new_owner_login_name*。  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- 目前作業擁有者的登入名稱。 *current_owner_login_name*已**sysname**，沒有預設值。  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 目前作業擁有者的登入名稱。 *current_owner_login_name*已**sysname**，沒有預設值。  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- 新作業擁有者的登入名稱。 使用此參數才*動作*是**重新指派**。 *new_owner_login_name*已**sysname**，預設值是 NULL。  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 新的作業擁有者的登入名稱。 使用此參數才*動作*是**重新指派**。 *new_owner_login_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -76,7 +73,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

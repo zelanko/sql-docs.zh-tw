@@ -18,12 +18,12 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19bac76afeb56bf196b7f717596777435d813f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce38780d40347f237f3a09a6dea5376fb1cf47d9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846426"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527030"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@secondary_database =** ] '*secondary_database*'  
- 這是次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
+`[ @secondary_database = ] 'secondary_database'` 是，次要資料庫的名稱。 *secondary_database*已**sysname**，沒有預設值。  
   
- [ **@secondary_id =** ] '*secondary_id*'  
- 記錄傳送組態中之次要伺服器的識別碼。 *secondary_id*已**uniqueidentifier**不能是 NULL。  
+`[ @secondary_id = ] 'secondary_id'` 記錄傳送組態中次要伺服器的識別碼。 *secondary_id*已**uniqueidentifier**不能是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -96,7 +94,7 @@ sp_help_log_shipping_secondary_database
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_log_shipping_secondary_primary &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

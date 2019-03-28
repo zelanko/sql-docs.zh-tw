@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645169"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511245"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>訓練及儲存使用 T-SQL Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "53645169"
 
 3. 開啟資料表*nyc\_taxi_models*。 您可以看到當中已新增一個新的資料列，其 _model_資料行中包含序列化的模型。
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -185,7 +185,7 @@ ms.locfileid: "53645169"
 
 3. 開啟 *nyc_taxi_models*資料表。 您可以看到當中已新增一個新的資料列，其 _model_資料行中包含序列化的模型。
 
-    *revoscalepy_model* *0x8003637265766F7363616c...*
+    *revoscalepy_model* *0x8003637265766F7363616c....*
 
 在下一個步驟中，您可以使用定型的模型來建立預測。
 

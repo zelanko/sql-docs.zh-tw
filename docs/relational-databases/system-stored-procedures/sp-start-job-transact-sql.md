@@ -1,5 +1,5 @@
 ---
-title: sp_start_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78c6a92d11cc192e2b0643c264352adcfb30d759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715156"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526670"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +46,17 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_name=** ] **'***job_name***'**  
- 要啟動的作業名稱。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 要啟動的作業名稱。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_name*已**sysname**，預設值是 NULL。  
   
- [ **@job_id=** ] *job_id*  
- 要啟動的作業識別碼。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 要啟動的作業識別碼。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@error_flag=** ] *error_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
- 這是要在其中啟動作業的目標伺服器。 *server_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 *server_name*必須是其中一項作業目前鎖定的目標伺服器。  
+`[ @server_name = ] 'server_name'` 開始作業的目標伺服器。 *server_name*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 *server_name*必須是其中一項作業目前鎖定的目標伺服器。  
   
- [ **@step_name=** ] **'***step_name***'**  
- 作業開始執行的步驟名稱。 只適用於本機作業。 *step_name*已**sysname**，預設值是 NULL  
+`[ @step_name = ] 'step_name'` 要開始執行作業步驟的名稱。 只適用於本機作業。 *step_name*已**sysname**，預設值是 NULL  
   
- [ **@output_flag=** ] *output_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -98,10 +92,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_stop_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

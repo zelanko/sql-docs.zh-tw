@@ -1,5 +1,5 @@
 ---
-title: sp_dropdynamicsnapshot_job & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 04564b2d2830a6bd925a1c334c8026b376d0894f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126255"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526380"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是移除篩選之資料快照集作業的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是要從中移除篩選的資料快照集作業的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
- 這是移除篩選之資料快照集作業的名稱。 *dynamic_snapshot_jobname*是 sysname，以及如果不提供的預設值給任何工作名稱與相關聯*dynamic_snapshot_jobid*。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 正在移除的已篩選的資料快照集作業名稱。 *dynamic_snapshot_jobname*是 sysname，以及如果不提供的預設值給任何工作名稱與相關聯*dynamic_snapshot_jobid*。  
   
- [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
- 這是移除篩選之資料快照集作業的識別碼。 *dynamic_snapshot_jobid*已**uniqueidentifier**，預設值是 NULL。  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 正在移除的已篩選的資料快照集作業的識別碼。 *dynamic_snapshot_jobid*已**uniqueidentifier**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  只有*dynamic_snapshot_jobid*或是*dynamic_snapshot_jobname*可以指定。 如果值不會提供適用於*dynamic_snapshot_jobid*或是*dynamic_snapshot_jobname*，會移除所有發行集的動態快照集作業。  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- *ignore_distributor*已**位元**，預設值是**0**。 這個參數可在不執行散發者清除工作的情況下，用來卸除動態快照集作業。  
+`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor*已**位元**，預設值是**0**。 這個參數可在不執行散發者清除工作的情況下，用來卸除動態快照集作業。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -66,6 +62,6 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_dropdynamicsnapshot**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_adddynamicsnapshot_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
+ [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   

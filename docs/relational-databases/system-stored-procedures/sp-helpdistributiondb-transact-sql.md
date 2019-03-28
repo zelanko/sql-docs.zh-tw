@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df84387d42a0f4d2f5cd74ac6b821f8b01ddb06b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5d143889672754be353b5868e955841d9e2869bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818910"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533328"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@database=**] **'***database_name***'**  
- 這是要傳回屬性的資料庫名稱。 *database_name*已**sysname**，預設值是**%** 與散發者，並在其上相關聯的所有資料庫的使用者具有權限。  
+`[ @database = ] 'database_name'` 是為其傳回屬性的資料庫名稱。 *database_name*已**sysname**，預設值是**%** 與散發者，並在其上相關聯的所有資料庫的使用者具有權限。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -70,9 +69,9 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

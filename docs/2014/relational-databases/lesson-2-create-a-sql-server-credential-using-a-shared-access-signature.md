@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529860"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>第 3 課：建立 SQL Server 認證
   在這一課，您將會建立認證以儲存用來存取 Windows Azure 儲存體帳戶的安全性資訊。  
@@ -38,7 +38,7 @@ ms.locfileid: "52524916"
   
 4.  將下列範例複製並貼入查詢視窗中，並視需要修改。 下列陳述式會建立 SQL Server 認證來儲存您的儲存體容器的共用存取憑證。  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -52,7 +52,7 @@ ms.locfileid: "52524916"
   
 5.  若要查看所有可用的認證，可以在查詢視窗中執行下列陳述式：  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   

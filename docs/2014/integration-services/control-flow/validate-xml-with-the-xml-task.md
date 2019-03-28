@@ -13,12 +13,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b18834a7ac8c4eb45ba76001a45a7f5bbaa020c6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386216"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526330"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   驗證 XML 文件，並啟用 XML 工作的 `ValidationDetails` 屬性以取得詳細的錯誤輸出。  
@@ -80,7 +80,7 @@ ms.locfileid: "58386216"
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>使用 Transact-SQL 查詢分析 XML 驗證輸出  
  如果 XML 驗證的輸出包含大量錯誤，您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢，以載入 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的輸出。 然後，您可以使用 T-SQL 語言的所有功能 (包括 WHERE、GROUP BY、ORDER BY、JOIN 等) 來分析錯誤清單。  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

@@ -11,16 +11,16 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d4c460b272650874fd3b8b4d390879abf5a8fcc3
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 4b3d01538df675149a3cc7f555774c8d27bf4e14
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160576"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511065"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On 可用性群組的 SQL Server 容器
 
-SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可用性群組，部署 SQL Server [Kubernetes 運算子](https://coreos.com/blog/introducing-operators.html)到 Kubernetes 叢集。 運算子可協助封裝、 部署及管理叢集中的可用性群組。
+SQL Server 2019 支援可用性群組上的 Kubernetes 叢集中的容器。 針對可用性群組，部署 SQL Server [Kubernetes 運算子](https://coreos.com/blog/introducing-operators.html)到 Kubernetes 叢集。 運算子可協助封裝、 部署及管理叢集中的可用性群組。
 
 ![Kubernetes 的容器中的 AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
@@ -67,9 +67,9 @@ SQL Server 2019 支援可用性群組中針對 Kubernetes 的容器。 針對可
 
 StatfulSet 包含：
 
-* mssql server 容器
+* mssql-server container
 
-* mssql ha-監督員容器
+* mssql-ha-supervisor container
 
 運算子、 HA 監督員和 SQL Server 的程式碼封裝在 Docker 映像呼叫`mcr.microsoft.com/mssql/ha`。 此映像會包含下列二進位檔：
 

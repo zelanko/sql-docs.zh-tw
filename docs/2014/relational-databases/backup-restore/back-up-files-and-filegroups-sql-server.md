@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a30880a6fd4acc62f13954c18f0ca8883f90754
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537374"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530760"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>備份檔案和檔案群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中備份檔案與檔案群組。 當完整的資料庫備份因資料庫大小和效能需求而變得不可行時，您可以建立檔案備份來代替。 *「檔案備份」* (File Backup) 包含一或多個檔案 (或檔案群組) 中的所有資料。 如需詳細資訊，請參閱 [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md) 和 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
@@ -164,7 +164,7 @@ ms.locfileid: "52537374"
     |FILEGROUP **=**_logical_filegroup_name_|指定要包含在檔案備份中的檔案群組的邏輯名稱。 在簡單復原模式之下，只允許唯讀檔案群組使用檔案群組備份。|  
     |[ **,**...*f* ]|這是一個預留位置，表示可以指定多個檔案和檔案群組。 檔案或檔案群組的數目沒有限制。|  
     |*backup_device* [ **,**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
-    |WITH *with_options* [ **,**...*o* ]|另外，也可以指定一個或多個其他選項，如 DIFFERENTIAL。<br /><br /> 注意：差異檔案備份需要以完整檔案備份作為基底。 如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)。|  
+    |WITH *with_options* [ **,**...*o* ]|另外，也可以指定一個或多個其他選項，如 DIFFERENTIAL。<br /><br /> 注意:差異檔案備份需要以完整檔案備份作為基底。 如需詳細資訊，請參閱[建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)。|  
   
 2.  在完整復原模式下，您還必須備份交易記錄。 若要使用一組完整的完整檔案備份來還原資料庫，您還必須有足夠的記錄備份，才能從第一個檔案備份開始涵蓋所有的檔案備份。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)中準備鏡像資料庫。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "52537374"
 #### <a name="a-creating-a-file-backup-of-two-files"></a>A. 建立兩個檔案的檔案備份  
  下列範例會建立只有 `SGrp1Fi2` 檔案群組之 `SalesGroup1` 檔案及 `SGrp2Fi2` 檔案群組之 `SalesGroup2` 檔案的差異檔案備份。  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -190,7 +190,7 @@ GO
 #### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>B. 建立次要檔案群組的完整檔案備份  
  下列範例會為兩個次要檔案群組中的每個檔案建立完整檔案備份。  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -202,7 +202,7 @@ GO
 #### <a name="c-creating-a-differential-file-backup-of-the-secondary-filegroups"></a>C. 建立次要檔案群組的差異檔案備份  
  下列範例會為兩個次要檔案群組中的每個檔案建立差異檔案備份。  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  

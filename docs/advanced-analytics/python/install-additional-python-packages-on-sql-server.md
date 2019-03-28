@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432311"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510295"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 套件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "53432311"
 
   完整路徑**指令碼**資料夾在預設安裝中如下所示：
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + 如果您使用 Visual Studio 2017 或 Visual Studio 2015 使用 Python 擴充功能，您可以執行`pip install`從**Python 環境**視窗。 按一下 **封裝**，並在文字方塊中，提供的名稱或要安裝之封裝的位置。 您不需要輸入`pip install`; 它會為您自動填入。 
 

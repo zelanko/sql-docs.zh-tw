@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528250"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理變更追蹤 (SQL Server)
   本主題描述如何管理變更追蹤。 此外，本主題也會描述如何設定安全性，以及判斷使用變更追蹤對儲存和效能產生的影響。  
@@ -96,7 +96,7 @@ ms.locfileid: "52808800"
   
  如果是其他內部資料表，您可以使用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 預存程序來判斷用於變更追蹤資料表的空間。 您可以使用 [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) 目錄檢視來取得內部資料表的名稱，如下列範例所示。  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

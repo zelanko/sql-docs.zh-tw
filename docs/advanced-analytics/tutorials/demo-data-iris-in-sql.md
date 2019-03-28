@@ -1,19 +1,19 @@
 ---
 title: 如需 Python 和 R 教學課程-SQL Server Machine Learning 的鳶尾花示範資料集
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: 建立資料庫，其中包含鳶尾花資料集和儲存模型的資料表。 練習示範如何在 SQL Server 預存程序中包裝 R 語言或 Python 程式碼中使用此資料集。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046568"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510095"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>如需 SQL Server 中的 Python 和 R 教學課程的鳶尾花示範資料 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

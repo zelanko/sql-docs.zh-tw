@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370000"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530820"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
   本主題討論的優點和限制`xml`中的資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並幫助您選擇儲存 XML 資料的方式。  
@@ -113,12 +113,12 @@ ms.locfileid: "53370000"
   
  當您的 XML 文件有一個結構範圍，或是您的 XML 文件符合相異或複雜的結構描述，而這些結構描述難以對應到關聯式結構時，原生 XML 儲存是很有用的。  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>範例模型化 XML 資料使用 xml 資料類型  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>範例使用 xml 資料類型將 XML 資料模型化  
  假設有一個 XML 格式的產品手冊，其中每個主題各成一章，每一章中有好幾節。 每一節中還可包含小節。 因此，\<section> 就是遞迴項目。 產品手冊包含大量的混合內容、圖表和技術資料；資料是半結構化的。 使用者可能會想要在內容中搜尋感興趣的主題，例如，在有關「檢索」的那一章中搜尋有關「叢集索引」的那一節，並查詢技術數量。  
   
  您的 XML 文件所適合的儲存模式就是 `xml` 資料類型資料行。 這樣可以保持 XML 資料的 InfoSet 內容。 檢索 XML 資料行對於查詢效能是很有益的。  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>範例保留 XML 資料的完整的複本  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>範例保留與 XML 資料完全相同的複本  
  舉例來說，假設政府規定您要保留與您的 XML 文件完全相同的原文副本。 例如，這些可能是簽署的文件、法律文件或股票交易訂單。 您可能會想要將您的文件儲存在 `[n]varchar(max)` 資料行中。  
   
  若要查詢，請在執行階段將資料轉換成 `xml` 資料類型，並對其執行 Xquery。 執行階段的轉換作業可能會很耗費資源，尤其是當文件很大時。 若您經常查詢，您可以另外將文件儲存在 `xml` 資料類型資料行中，當您從 `[n]varchar(max)` 資料行傳回完全相同的文件副本時，再加以檢索。  
@@ -142,7 +142,7 @@ ms.locfileid: "53370000"
   
  範例包括在資料交換及 Web 服務中公開為 XML 的關聯式資料，以及含有固定結構描述的 XML 資料。 如需詳細資訊，請參閱 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)。  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>範例使用註解式的 XML 結構描述 (AXSD) 的資料模型化  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>範例使用註解式 XML 結構描述 (AXSD) 將資料模型化  
  舉例來說，假設您要將現有的關聯式資料 (例如：客戶、訂單及線性項目) 處理成 XML。 在關聯式資料上使用 AXSD，以定義 XML 檢視。 XML 檢視可讓您將 XML 資料大量載入至資料表中，並使用 XML 檢視來查詢及更新關聯式資料。 如果您必須在不干擾 SQL 應用程式工作的情況下，與其他應用程式交換含有 XML 標記的資料，這種模型會很有用。  
   
 ### <a name="hybrid-model"></a>混合模型  

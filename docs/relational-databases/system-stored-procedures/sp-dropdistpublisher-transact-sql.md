@@ -16,12 +16,12 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93124cff94bdf9df97cc1cbb0cf55c40414f1819
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127554"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526450"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,18 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=** ] **'**_發行者_**'**  
- 這是要卸除的發行者。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是要卸除 「 發行者 」。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@no_checks=** ] *no_checks*  
- 指定是否**sp_dropdistpublisher**檢查發行者已解除安裝散發者的伺服器。 *no_checks*已**位元**，預設值是**0**。  
+`[ @no_checks = ] no_checks` 指定是否**sp_dropdistpublisher**檢查發行者已解除安裝散發者的伺服器。 *no_checks*已**位元**，預設值是**0**。  
   
  如果**0**，複寫會確認遠端發行者已解除安裝本機伺服器作為散發者。 如果發行者在本機，複寫會確認本機伺服器中沒有其餘發行集或散發物件。  
   
  如果**1**，即使無法到達遠端發行者，會卸除散發發行者相關聯的所有複寫物件。 完成之後，遠端發行者必須使用解除安裝複寫[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)具有**@ignore_distributor**  =  **1**。  
   
- [  **@ignore_distributor=** ] *ignore_distributor*  
- 指定當移除發行者時，是否要將散發物件留在散發者中。 *ignore_distributor*已**元**而且可以是下列其中一個值：  
+`[ @ignore_distributor = ] ignore_distributor` 指定是否將散發物件留在散發者時移除發行者。 *ignore_distributor*已**元**而且可以是下列其中一個值：  
   
  **1** = 散發物件屬於*發行者*維持在 「 散發者 」。  
   
@@ -73,7 +70,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

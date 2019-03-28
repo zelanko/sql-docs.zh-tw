@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bdc89008b9752bcd2bb20b78eb209d9e766ed9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ab75a58c9e6181a06849e67f7a63417a2b58e89
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725886"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525990"
 ---
-# <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats & Amp;#40;transact-SQL&AMP;#41;
+# <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   清除查詢存放區特定查詢計劃的執行階段統計資料。  
@@ -44,8 +44,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@plan_id =** ] *plan_id*  
- 是要清除查詢計劃的識別碼。 *plan_id*已**bigint**，沒有預設值。  
+`[ @plan_id = ] plan_id` 是要清除查詢計劃的識別碼。 *plan_id*已**bigint**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -75,10 +74,10 @@ EXEC sp_query_store_reset_exec_stats 3;
   
 ## <a name="see-also"></a>另請參閱  
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_flush_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

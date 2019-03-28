@@ -16,12 +16,12 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2b561d83167caf1fa9c3f7a41a9490873fbc484
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f35e6acad099f1a5d68659fa20b9213ff78e0b6c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133068"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529890"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@database=**] **'**_資料庫_**'**  
- 這是要卸除的資料庫。 *資料庫*已**sysname**，沒有預設值。  
+`[ @database = ] 'database'` 是要卸除的資料庫。 *資料庫*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrole (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpsrvrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 651bab70f71726beeb9f3b28026e8ee4683c404f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c0cd34d0a10fc8809280be0abcc0761cebd72ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731966"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526230"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@srvrolename=** ] **'***角色***'**  
- 這是固定伺服器角色的名稱。 *角色*已**sysname**，預設值是 NULL。 *角色*可以是下列值之一。  
+`[ @srvrolename = ] 'role'` 是固定的伺服器角色的名稱。 *角色*已**sysname**，預設值是 NULL。 *角色*可以是下列值之一。  
   
 |固定伺服器角色|描述|  
 |-----------------------|-----------------|  
@@ -103,8 +102,8 @@ sp_helpsrvrole 'diskadmin' ;
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpsrvrolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

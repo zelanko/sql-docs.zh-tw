@@ -16,12 +16,12 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52cab6d00ad25bdc16a4acf14109ff5c74a4bcca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134198"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531300"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>還原差異資料庫備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中還原差異資料庫備份。  
@@ -90,7 +90,7 @@ ms.locfileid: "48134198"
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
-         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
+         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
   
          **注意** ：這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48134198"
   
 #### <a name="to-restore-a-differential-database-backup"></a>還原差異資料庫備份  
   
-1.  執行 RESTORE DATABASE 陳述式並指定 NORECOVERY 子句，以還原在差異資料庫備份之前的完整資料庫備份。 如需詳細資訊，請參閱＜ [如何：還原完整備份](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)＞。  
+1.  執行 RESTORE DATABASE 陳述式並指定 NORECOVERY 子句，以還原在差異資料庫備份之前的完整資料庫備份。 如需詳細資訊，請參閱[如何：還原完整備份](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)。  
   
 2.  執行 RESTORE DATABASE 陳述式以還原差異資料庫備份，請指定：  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48134198"
 #### <a name="a-restoring-a-differential-database-backup"></a>A. 還原差異資料庫備份  
  這個範例還原 `MyAdvWorks` 資料庫與差異資料庫備份。  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -174,7 +174,7 @@ GO
 #### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>B. 還原資料庫、差異資料庫及交易記錄備份  
  這個範例還原 `MyAdvWorks` 資料庫、差異資料庫及其交易記錄備份。  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  

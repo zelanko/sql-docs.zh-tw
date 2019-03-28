@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b678182b4580cfac23d6e777c492d22b8f458fba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617996"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527690"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@proxy_id** = ] *id*  
- 要列出資訊的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
+`[ @proxy_id = ] id` 要列出資訊的 proxy 之 proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
- 要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
+`[ @proxy_name = ] 'proxy_name'` 要列出資訊的 proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
   
- [ **@subsystem_name** =] '*subsystem_name*'  
- 要列出 Proxy 的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 當*subsystem_name*指定，則*名稱*也必須指定。  
+`[ @subsystem_name = ] 'subsystem_name'` 要列出 proxy 的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 當*subsystem_name*指定，則*名稱*也必須指定。  
   
  下表列出每個子系統的值。  
   
@@ -69,8 +66,7 @@ sp_help_proxy
 |Dts|SSIS 封裝執行|  
 |PowerShell|PowerShell 指令碼|  
   
- [ **@name** =] '*名稱*'  
- 要列出 Proxy 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 檔案名**nvarchar(256)**，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
+`[ @name = ] 'name'` 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要列出 proxy 的登入。 檔案名**nvarchar(256)**，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -129,6 +125,6 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

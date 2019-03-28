@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732736"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528130"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@proxy_id =** ] *id*  
- 要授與存取權的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
+`[ @proxy_id = ] id` 要授與存取權的 proxy 之 proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
   
- [ **@proxy_name =** ] **'***proxy_name***'**  
- 要授與存取權的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
+`[ @proxy_name = ] 'proxy_name'` 要授與存取權的 proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
   
- [ **@subsystem_id =** ] *id*  
- 要授與存取權的子系統識別碼。 *Syssubsystems*是**int**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
+`[ @subsystem_id = ] id` 要授與存取權的子系統識別碼。 *Syssubsystems*是**int**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -64,8 +61,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行|  
 |**12**|PowerShell 指令碼|  
   
- [ **@subsystem_name =** ] **'***subsystem_name***'**  
- 要授與存取權的子系統名稱。 **Subsystem_name**是**sysname**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
+`[ @subsystem_name = ] 'subsystem_name'` 要授與存取權的子系統名稱。 **Subsystem_name**是**sysname**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -117,9 +113,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_revoke_proxy_from_subsystem &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_update_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_update_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

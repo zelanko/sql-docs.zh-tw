@@ -18,12 +18,12 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2252fe0339a13a6d75c43a09351b95b17b7abd7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44db86eef5231fde337a9521cb76ca5e03f28db9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168758"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527500"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@oldest_date=** ] **'**_最舊\_日期_**'**  
- 這是備份和還原記錄資料表中所保留的最舊日期。 *oldest_date*已**datetime**，沒有預設值。  
+`[ @oldest_date = ] 'oldest\_date'` 會保留在備份和還原記錄資料表的最舊日期。 *oldest_date*已**datetime**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -86,7 +85,7 @@ EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_database_backuphistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+ [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [備份記錄與標頭資訊 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

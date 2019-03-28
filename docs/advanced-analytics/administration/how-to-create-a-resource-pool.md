@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0fcc673e61f2ee188b169a2d46f1da6a4ffd2df
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: f180f6223f255734f353348c0d5fef58d19b0cbd
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596859"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512085"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>如何在 SQL Server 中建立機器學習服務的資源集區
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594358"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527190"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -50,11 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@tabname=**] **'***qualified_table_name***'**  
- 這是一或兩部分的資料表名稱。 資料表必須在目前的資料庫中。 *qualified_table_name&lt*已**nvarchar(517)**，沒有預設值。  
+`[ @tabname = ] 'qualified_table_name'` 這是一或兩部分資料表名稱。 資料表必須在目前的資料庫中。 *qualified_table_name&lt*已**nvarchar(517)**，沒有預設值。  
   
- [  **@action=**] **'***動作***'**  
- 這是要執行的動作。 *動作*已**nvarchar(50)**，沒有預設值，它可以是下列值之一。  
+`[ @action = ] 'action'` 是要執行的動作。 *動作*已**nvarchar(50)**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|啟動資料表的全文檢索索引的累加擴展。|  
 |**停止**|停止完整或累加擴展。|  
   
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
- 是有效、 現有的全文檢索目錄名稱**建立**動作。 所有其他動作的這個參數都必須是 NULL。 *fulltext_catalog_name*已**sysname**，預設值是 NULL。  
+`[ @ftcat = ] 'fulltext_catalog_name'` 是有效、 現有的全文檢索目錄名稱**建立**動作。 所有其他動作的這個參數都必須是 NULL。 *fulltext_catalog_name*已**sysname**，預設值是 NULL。  
   
- [ **@keyname=**] **'***unique_index_name***'**  
- 有效的單一索引鍵資料行的唯一非 null 的索引*qualified_table_name&lt* for**建立**動作。 所有其他動作的這個參數都必須是 NULL。 *unique_index_name*已**sysname**，預設值是 NULL。  
+`[ @keyname = ] 'unique_index_name'` 有效的單一索引鍵資料行的唯一非 null 的索引*qualified_table_name&lt* for**建立**動作。 所有其他動作的這個參數都必須是 NULL。 *unique_index_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -88,7 +84,7 @@ sp_fulltext_table
   
  如果重新啟動資料表，且沒有重新擴展索引，任何其餘啟用全文檢索的非新增資料行的查詢，仍可以使用舊索引。 在指定全部全文檢索資料行搜尋的查詢中，會符合已刪除的資料行之資料。  
   
- 資料表後已定義全文檢索索引時，切換全文檢索唯一索引鍵資料行從一個資料型別到另一個，藉由變更該資料行的資料類型，或從一個資料行的全文檢索唯一索引鍵變更到另一個，而不需要完整重新擴展可能會導致失敗發生在後續的查詢，並傳回錯誤訊息:"轉換為類型*data_type*無法用於全文檢索搜尋索引鍵值*key_value*。 」 若要避免這個問題，卸除此資料表使用全文檢索定義**卸除**動作**sp_fulltext_table**重新定義它使用**sp_fulltext_table**和**sp_fulltext_column**。  
+ 在定義全文檢索索引的資料表之後，將全文檢索唯一索引鍵資料行的資料類型切換成另一個資料類型，不論是藉由變更這個資料行的資料類型，或藉著將全文檢索唯一索引鍵的資料行變更為另一個資料行，只要沒有完整重新擴展，都可能使後續查詢失敗並傳回下列錯誤訊息：「 轉換為類型*data_type*無法用於全文檢索搜尋索引鍵值*key_value*。 」 若要避免這個問題，卸除此資料表使用全文檢索定義**卸除**動作**sp_fulltext_table**重新定義它使用**sp_fulltext_table**和**sp_fulltext_column**。  
   
  全文檢索索引鍵資料行必須定義成 900 位元組或以下。 基於效能的考量，建議您索引鍵資料行的大小，愈小愈好。  
   
@@ -135,9 +131,9 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [遇到 sp_help_fulltext_tables &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [遇到 sp_help_fulltext_tables_cursor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [sp_helpindex &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文檢索搜尋和語意搜尋預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

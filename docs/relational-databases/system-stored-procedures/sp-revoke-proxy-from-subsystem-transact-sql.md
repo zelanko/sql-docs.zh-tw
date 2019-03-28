@@ -18,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812419"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527230"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@proxy_id** = ] *id*  
- 要撤銷存取權的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
+`[ @proxy_id = ] id` 要撤銷存取權的 proxy 之 proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
- 要撤銷存取權的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
+`[ @proxy_name = ] 'proxy_name'` 要撤銷存取權的 proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
   
- [ **@subsystem_id** = ] *id*  
- 要撤銷存取權的子系統識別碼。 *Syssubsystems*是**int**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
+`[ @subsystem_id = ] id` 要撤銷存取權的子系統識別碼。 *Syssubsystems*是**int**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -67,8 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝執行|  
 |**12**|PowerShell 指令碼|  
   
- [ **@subsystem_name**= ] **'***subsystem_name***'**  
- 要撤銷存取權的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
+`[ @subsystem_name = ] 'subsystem_name'` 要撤銷存取權的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -108,6 +104,6 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_grant_proxy_to_subsystem &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

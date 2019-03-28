@@ -1,5 +1,5 @@
 ---
-title: sp_replication_agent_checkup (TRANSACT-SQL) |Microsoft Docs
+title: sp_replication_agent_checkup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c35b08bf98079af5f72c48c3912613cca6ec7db0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73335322d9e4c8602e299255ebcd3b3b183aaaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789240"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529870"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- 這是在未記錄進度訊息的情況下，代理程式所能執行的最大分鐘數。 *heartbeat_interval*已**int**，預設值是 10 分鐘的時間。  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` 是的而不需要記錄進度訊息，代理程式所能執行的分鐘數上限。 *heartbeat_interval*已**int**，預設值是 10 分鐘的時間。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **sp_replication_agent_checkup**它偵測為可疑的每一個代理程式引發 14151 錯誤。 另外，它也會記錄代理程式的失敗記錄訊息。  

@@ -16,12 +16,12 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28ff96d07aa1b7e65097fbf7946b40dfb56adea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808740"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529560"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@type** =] **'***型別***'**  
- 這是要移除之自訂預存程序或指令碼的類型。 *型別*已**varchar(16)**，沒有預設值，它可以是下列值之一。  
+`[ @type = ] 'type'` 正在移除自訂預存程序或指令碼的型別。 *型別*已**varchar(16)**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  
 |**insert**|註冊的自訂預存程序或指令碼，是在複寫 INSERT 陳述式時執行。|  
-|**更新**|註冊的自訂預存程序或指令碼，是在複寫 UPDATE 陳述式時執行。|  
+|**update**|註冊的自訂預存程序或指令碼，是在複寫 UPDATE 陳述式時執行。|  
 |**delete**|註冊的自訂預存程序或指令碼，是在複寫 DELETE 陳述式時執行。|  
 |**custom_script**|註冊的自訂預存程序或指令碼，是在資料定義語言 (DDL) 觸發程序結尾執行。|  
   
- [ **@publication** = ] **'***publication***'**  
- 要移除之自訂預存程序或指令碼的發行集名稱。 *發行集*已**sysname**，預設值是 NULL。  
+`[ @publication = ] 'publication'` 要移除的自訂預存程序或指令碼的發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。  
   
- [ **@article** =] **'***文章***'**  
- 要移除之自訂預存程序或指令碼的發行項名稱。 *發行項*已**sysname**，預設值是 NULL。  
+`[ @article = ] 'article'` 正在移除的自訂預存程序或指令碼的發行項名稱。 *發行項*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -66,6 +63,6 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
  只有成員**sysadmin**固定伺服器角色**db_owner**固定資料庫角色，或有**db_ddladmin**固定的資料庫角色可以執行**sp_unregister_custom_scripting**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_register_custom_scripting &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
+ [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
   
   

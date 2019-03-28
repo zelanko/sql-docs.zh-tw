@@ -18,12 +18,12 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: dd46309ebd44bdd16da132b9aef1c903ad1f4b78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528340"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@dbname=**] **'***old_name***'**  
- 這是資料庫的目前名稱。 *old_name&lt*已**sysname**，沒有預設值。  
+`[ @dbname = ] 'old_name'` 是目前資料庫的名稱。 *old_name&lt*已**sysname**，沒有預設值。  
   
- [ **@newname=**] **'***new_name***'**  
- 這是資料庫的新名稱。 *new_name*必須遵循識別碼的規則。 *new_name*已**sysname**，沒有預設值。  
+`[ @newname = ] 'new_name'` 是新資料庫的名稱。 *new_name*必須遵循識別碼的規則。 *new_name*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  

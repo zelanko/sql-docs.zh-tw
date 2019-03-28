@@ -1,5 +1,5 @@
 ---
-title: sp_defaultdb (TRANSACT-SQL) |Microsoft Docs
+title: sp_defaultdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65b9187c5b3f0ba05301bb944ee2ddc8a78c4866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9703b4310870105d3a0961c430699449da7ff3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625046"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532980"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@loginame=**] **'***登入***'**  
- 這是登入名稱。 *登入*已**sysname**，沒有預設值。 *登入*可以是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者或群組。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中沒有 Windows 使用者或群組的登入，則會自動加入。  
+`[ @loginame = ] 'login'` 這是登入名稱。 *登入*已**sysname**，沒有預設值。 *登入*可以是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者或群組。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中沒有 Windows 使用者或群組的登入，則會自動加入。  
   
- [  **@defdb=**] **'***資料庫***'**  
- 這是新預設資料庫的名稱。 *資料庫*已**sysname**，沒有預設值。 *資料庫*必須已經存在。  
+`[ @defdb = ] 'database'` 是新的預設資料庫的名稱。 *資料庫*已**sysname**，沒有預設值。 *資料庫*必須已經存在。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

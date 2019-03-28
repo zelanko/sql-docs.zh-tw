@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobstep (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc4acac420f31735a446f3cdff3e687fa5f3efef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530573"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id =**] **'***job_id***'**  
- 要傳回作業資訊的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] 'job_id'` 作業識別碼為其傳回作業資訊。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name =**] **'***job_name***'**  
- 作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@step_id =**] *step_id*  
- 這是作業中的步驟識別碼。 如果沒有包含這個識別碼，便會包含作業中的所有步驟。 *step_id*已**int**，預設值是 NULL。  
+`[ @step_id = ] step_id` 在 作業步驟的識別碼。 如果沒有包含這個識別碼，便會包含作業中的所有步驟。 *step_id*已**int**，預設值是 NULL。  
   
- [ **@step_name =**] **'***step_name***'**  
- 這是作業中的步驟名稱。 *step_name*已**sysname**，預設值是 NULL。  
+`[ @step_name = ] 'step_name'` 在 作業步驟的名稱。 *step_name*已**sysname**，預設值是 NULL。  
   
- [ **@suffix =**] *suffix*  
- 旗標，指出是否有附加文字描述**旗標**在輸出中的資料行。 *後置詞*已**位元**，預設值是**0**。 如果*後置詞*是**1**，有附加的描述。  
+`[ @suffix = ] suffix` 旗標，指出是否有附加文字描述**旗標**在輸出中的資料行。 *後置詞*已**位元**，預設值是**0**。 如果*後置詞*是**1**，有附加的描述。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -71,7 +66,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|步驟的唯一識別碼。|  
 |**step_name**|**sysname**|作業中的步驟名稱。|  
 |**subsystem**|**nvarchar(40)**|在其中執行步驟命令的子系統。|  
-|命令|**nvarchar(max)**|在步驟中執行的命令。|  
+|**command**|**nvarchar(max)**|在步驟中執行的命令。|  
 |**flags**|**int**|這是一個位元遮罩，用來控制步驟行為的值。|  
 |**cmdexec_success_code**|**int**|針對**CmdExec**步驟中，這是成功命令的處理序結束碼。|  
 |**on_success_action**|**tinyint**|步驟成功時所採取的動作：<br /><br /> **1** = 結束作業報告成功。<br /><br /> **2** = 結束作業報告失敗。<br /><br /> **3** = 移至下一個步驟。<br /><br /> **4** = 移至步驟。|  
@@ -136,10 +131,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

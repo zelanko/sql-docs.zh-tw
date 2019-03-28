@@ -16,12 +16,12 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f98790bbf68309eef561662a6eb0be9f1da34971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5cae5cfd4c047041437180ced7bf93c4a75cce00
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526050"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=** ] **'***發行者***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，沒有預設值。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，沒有預設值。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 這是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
+`[ @publisher_db = ] 'publisher_db'` 是發行集資料庫的名稱。 *publisher_db*已**sysname**，沒有預設值。  
   
- [  **@publication=** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@subscriber=** ] **'***訂閱者***'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
+`[ @subscriber_db = ] 'subscriber_db'` 是訂閱資料庫的名稱。 *subscriber_db*已**sysname**，沒有預設值。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -82,7 +77,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helpsubscriptionerrors**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_helpsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

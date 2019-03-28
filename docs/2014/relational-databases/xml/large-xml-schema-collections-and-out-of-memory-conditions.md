@@ -10,15 +10,15 @@ helpviewer_keywords:
 - out-of-memory conditions
 - XML schema collections [SQL Server], large
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 224ec2569dd63acf41535c489211ba8f095eb8f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 513e95798062f85484b5693d5c75e6aef3efcc82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217821"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527410"
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>大型的 XML 結構描述集合與記憶體不足的情況
   在大型的 XML 結構描述集合中呼叫內建 XML_SCHEMA_NAMESPACE() 函數時，或是當您嘗試卸除大型 XML 結構描述集合時，就可能會發生記憶體不足的情況。 下列是您可用來處理此情形的解決方案：  

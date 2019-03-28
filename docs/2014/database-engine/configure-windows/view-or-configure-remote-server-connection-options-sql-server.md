@@ -14,12 +14,12 @@ ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e831941097d4614b92c3d6e9b57400f0eab8430
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641192"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531470"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>檢視或設定遠端伺服器連接選項 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或設定伺服器層級的遠端伺服器連接選項。  
@@ -36,7 +36,7 @@ ms.locfileid: "52641192"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **後續操作：**[設定遠端伺服器連接選項之後](#FollowUp)  
+-   **後續操作：**[設定遠端伺服器連線選項之後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52641192"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例使用 [sp_helpserver](/sql/relational-databases/system-stored-procedures/sp-helpserver-transact-sql) 傳回所有遠端伺服器的相關資訊。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例使用 [sp_helpserver](/sql/relational-databases/system-stored-procedures/sp-helpserver-transact-sql) 傳回所有遠端伺服器的相關資訊。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_helpserver ;  
@@ -79,14 +79,14 @@ EXEC sp_helpserver ;
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例示範如何使用 [sp_serveroption](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql) 設定遠端伺服器。 範例會將對應於另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 ( `SEATTLE3`) 的遠端伺服器，設定成定序相容於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本機執行個體。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例示範如何使用 [sp_serveroption](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql) 設定遠端伺服器。 範例會將對應於另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 ( `SEATTLE3`) 的遠端伺服器，設定成定序相容於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的本機執行個體。  
   
-```tsql  
+```sql  
 USE master;  
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a> 後續操作：設定遠端伺服器連接選項之後  
+##  <a name="FollowUp"></a> 後續操作：設定遠端伺服器連線選項之後  
  遠端伺服器必須停止並重新啟動之後，設定才能生效。  
   
 ## <a name="see-also"></a>另請參閱  

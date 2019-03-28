@@ -18,12 +18,12 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094235cd508f4265a68861de60e9e4c2d35ee4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841787"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527421"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@dbname=** ]*名稱*  
- 這是將要變更相容性層級的資料庫名稱。 資料庫名稱必須符合識別碼的規則。 *名稱*已**sysname**，預設值是 NULL。  
+`[ @dbname = ] name` 是要變更相容性層級的資料庫名稱。 資料庫名稱必須符合識別碼的規則。 *名稱*已**sysname**，預設值是 NULL。  
   
- [  **@new_cmptlevel=** ]*版本*  
- 資料庫所要相容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 *版本*已**tinyint**，預設值是 NULL。 此值必須是下列其中之一：  
+`[ @new_cmptlevel = ] version` 是的新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與資料庫所要相容。 *版本*已**tinyint**，預設值是 NULL。 此值必須是下列其中之一：  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   

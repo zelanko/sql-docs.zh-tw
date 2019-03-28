@@ -18,12 +18,12 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffd0874e60d6a9b8ab89ade6e11fc504ac166a2c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfb2671083b62034d4227f232bc062ce46138a3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530277"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526280"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@dbname=** ] **'**_資料庫_**'**  
- 這是要移除的資料庫名稱。 *資料庫*已**sysname**，預設值是 NULL。  
+`[ @dbname = ] 'database'` 是要移除之資料庫的名稱。 *資料庫*已**sysname**，預設值是 NULL。  
   
- [  **@dropdev=** ] **'**_dropdev_**'**  
- 這是專為了與舊版相容而提供的旗標，目前予以忽略。 *dropdev*具有值**dropdev**。  
+`[ @dropdev = ] 'dropdev'` 基於回溯相容性所提供的旗標，目前予以忽略。 *dropdev*具有值**dropdev**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

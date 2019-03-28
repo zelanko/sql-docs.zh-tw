@@ -16,12 +16,12 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04bd9a7d072f31fd6791e8cea7b17e14650e63c7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 268f94665641e29156c20ea55debf26db63e1142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215404"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526630"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'***發行集***'**  
- 這是追蹤 Token 插入其中之發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是插入追蹤 token 的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@tracer_id=** ] *tracer_id*  
- 中之追蹤 token 的識別碼[MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)會傳回其歷程記錄資訊的資料表。 *tracer_id*已**int**，沒有預設值。  
+`[ @tracer_id = ] tracer_id` 中之追蹤 token 的識別碼[MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)會傳回其歷程記錄資訊的資料表。 *tracer_id*已**int**，沒有預設值。  
   
- [  **@publisher=** ] **'***發行者***'**  
- 發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]
 >  這個參數應該只能指定為非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果預存程序執行於發行者端，則會忽略這個參數。  
+`[ @publisher_db = ] 'publisher_db'` 發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 如果預存程序執行於發行者端，則會忽略這個參數。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -84,6 +80,6 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

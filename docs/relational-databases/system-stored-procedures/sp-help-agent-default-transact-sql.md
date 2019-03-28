@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_default (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_agent_default (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ee9596b578396786da8562f2ecf73c3b85f0241
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 182f13347a1fdf4dc06e6d3276e481ce54f01e45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588032"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527970"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@profile_id=**] _profile_id_**輸出**  
- 這是代理程式類型的預設組態識別碼。 *profile_id*已**int**，沒有預設值。*profile_id*也是一個 OUTPUT 參數，並傳回的代理程式類型的預設組態識別碼。  
+`[ @profile_id = ] _profile_idOUTPUT` 是代理程式類型的預設組態識別碼。 *profile_id*已**int**，沒有預設值。*profile_id*也是一個 OUTPUT 參數，並傳回的代理程式類型的預設組態識別碼。  
   
- [  **@agent_type=**] **'**_agent_type_**'**  
- 這是代理程式的類型。 *agent_type*已**int**，沒有預設值，它可以是下列值之一。  
+`[ @agent_type = ] 'agent_type'` 是代理程式的類型。 *agent_type*已**int**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
 |-----------|-----------------|  

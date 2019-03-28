@@ -1,5 +1,5 @@
 ---
-title: sp_expired_subscription_cleanup (TRANSACT-SQL) |Microsoft Docs
+title: sp_expired_subscription_cleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24aa8a9018a2de742a8ed4715b87e56126326021
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c8073b4e02e1eff910654bba635819b94b5cf5b2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130888"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532510"
 ---
 # <a name="spexpiredsubscriptioncleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=** ] **'**_發行者_**'**  
- 名稱為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行集*已**sysname**，預設值是 NULL。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
+`[ @publisher = ] 'publisher'` 名稱為非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行集*已**sysname**，預設值是 NULL。 您不應該將這個參數指定給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -53,8 +52,8 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_expired_subscription_cleanup**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_mergesubscription_cleanup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
- [sp_subscription_cleanup &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
+ [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

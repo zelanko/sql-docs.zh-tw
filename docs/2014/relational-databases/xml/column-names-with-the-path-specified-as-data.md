@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4c56f14cc359bdbf325e0ee083217939d27ee75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe23dba019511137c9ad817ecdf87fae1938bbd6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108030"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532190"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>以 data() 指定路徑的資料行名稱
   如果以資料行名稱指定的路徑是 "data()"，則在產生的 XML 中會將其值視為不可部分完成值。 如果序列化的下一個項目也是不可部分完成值，就會在 XML 中加入空白字元。 當您建立清單類型的元素與屬性值時，這會非常有用。 下列查詢會擷取產品型號識別碼、名稱以及該產品型號中的產品清單。  

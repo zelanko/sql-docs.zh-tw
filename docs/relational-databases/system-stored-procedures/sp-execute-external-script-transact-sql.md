@@ -1,5 +1,5 @@
 ---
-title: sp_execute_external_script (TRANSACT-SQL) |Microsoft Docs
+title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864396"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531040"
 ---
-# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script & Amp;#40;transact-SQL&AMP;#41;
+# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-執行程序輸入引數提供的指令碼。 執行指令碼[擴充性架構](../../advanced-analytics/concepts/extensibility-framework.md)。 必須有至少一個延伸模組的資料庫引擎上支援的和已註冊的語言，撰寫指令碼： [ **R**](../../advanced-analytics/concepts/extension-r.md)， [ **Python** ](../../advanced-analytics/concepts/extension-python.md)或[ **Java** （在 SQL Server 2019 僅限預覽）](../../advanced-analytics/java/extension-java.md)。 
+執行程序輸入引數提供的指令碼。 執行指令碼[擴充性架構](../../advanced-analytics/concepts/extensibility-framework.md)。 需要至少一個延伸模組的資料庫引擎上，指令碼必須支援的和已註冊的語言，撰寫：[**R**](../../advanced-analytics/concepts/extension-r.md)， [ **Python**](../../advanced-analytics/concepts/extension-python.md)，或[ **Java** （SQL Server 2019 中僅限預覽）](../../advanced-analytics/java/extension-java.md)。 
 
 若要執行**sp_execute_external_script**，您必須先啟用外部指令碼使用陳述式， `sp_configure 'external scripts enabled', 1;`。  
   
@@ -80,35 +80,27 @@ sp_execute_external_script
   
  **@script** = N'*指令碼*' 指定為常值或變數輸入的外部語言指令碼。 *指令碼*已**nvarchar （max)**。  
 
-  [ **@input_data_1** = N'*input_data_1*']  
- 指定的表單中的外部指令碼所使用的輸入的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 資料類型*input_data_1*是**nvarchar （max)**。
+`[ @input_data_1 =  N'input_data_1' ]` 指定的表單中的外部指令碼所使用的輸入的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 資料類型*input_data_1*是**nvarchar （max)**。
 
- [ **@input_data_1_name** = N'*input_data_1_name*']  
- 指定用來代表查詢所定義的變數名稱@input_data_1。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 *input_data_1_name*已**sysname**。  預設值是*InputDataSet*。  
+`[ @input_data_1_name = N'input_data_1_name' ]` 指定用來代表查詢所定義的變數名稱@input_data_1。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 *input_data_1_name*已**sysname**。  預設值是*InputDataSet*。  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*']  
- 僅適用於 SQL Server 2019，並用來建立每個磁碟分割模型。 指定用來排序結果集資料行的名稱，例如依產品名稱。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` 僅適用於 SQL Server 2019，並用來建立每個磁碟分割模型。 指定用來排序結果集資料行的名稱，例如依產品名稱。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。
 
-  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*']  
- 僅適用於 SQL Server 2019，並用來建立每個磁碟分割模型。 指定用來分割資料，例如地理區域或日期資料行的名稱。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` 僅適用於 SQL Server 2019，並用來建立每個磁碟分割模型。 指定用來分割資料，例如地理區域或日期資料行的名稱。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 
 ::: moniker-end
 
- [ **@output_data_1_name** = N'*output_data_1_name*']  
- 包含要傳回之資料的外部指令碼中指定的變數名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序呼叫完成時。 在 外部指令碼變數的資料類型會因語言而定。 針對 R，輸出必須是資料框架。 對於 Python，輸出必須是 pandas 資料框架。 *output_data_1_name*已**sysname**。  預設值是*OutputDataSet*。  
+`[ @output_data_1_name =  N'output_data_1_name' ]` 包含要傳回之資料的外部指令碼中指定的變數名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序呼叫完成時。 在 外部指令碼變數的資料類型會因語言而定。 針對 R，輸出必須是資料框架。 對於 Python，輸出必須是 pandas 資料框架。 *output_data_1_name*已**sysname**。  預設值是*OutputDataSet*。  
 
- [ **@parallel** = 0 | 1]  
- 藉由設定啟用平行執行 R 指令碼`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。 如果`@parallel = 1`和輸出串流直接至用戶端電腦，則`WITH RESULT SETS`子句是必要的而且必須指定輸出結構描述。  
+`[ @parallel = 0 | 1 ]` 藉由設定啟用平行執行 R 指令碼`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。 如果`@parallel = 1`和輸出串流直接至用戶端電腦，則`WITH RESULT SETS`子句是必要的而且必須指定輸出結構描述。  
 
  + 針對未使用 RevoScaleR 函式，使用 R 指令碼`@parallel`參數可以是有幫助處理大型資料集，假設指令碼可透過極簡方式平行處理。 例如，當使用 R`predict`函式使用的模型，來產生新預測，請將設定`@parallel = 1`以做為查詢引擎的提示。 如果可以平行處理查詢，資料列會根據散發**MAXDOP**設定。  
   
  + 使用 RevoScaleR 函數的 R 指令碼，平行處理會自動處理，您不應指定`@parallel = 1`要**sp_execute_external_script**呼叫。  
   
-[ **@params** = N' *@parameter_name data_type* [OUT |輸出] [，......n]']  
- 外部指令碼中使用的輸入的參數宣告的清單。  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` 外部指令碼中使用的輸入的參數宣告的清單。  
   
-[ **@parameter1** = '*value1*' [OUT |輸出] [，......n]]  
- 外部指令碼所使用的輸入參數的值清單。  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 外部指令碼所使用的輸入參數的值清單。  
 
 ## <a name="remarks"></a>備註
 
@@ -132,7 +124,7 @@ sp_execute_external_script
 
  在 SQL Server 2019，，您也可以在目前在公開預覽，設定兩個額外的參數可讓資料分割的資料，其中資料分割根據一個或多個資料行提供自然地將資料集分成邏輯分割區建立及使用模型僅指令碼執行期間。 年齡、 性別、 地區、 日期或時間，包含重複值的資料行是讓資料分割的資料集的一些範例。
  
- 兩個參數**input_data_1_partition_by_columns**並**input_data_1_order_by_columns**，第二個參數用以排序結果集。 將參數傳遞做為輸入`sp_execute_external_script`外部指令碼中執行一次的每個資料分割。 如需詳細資訊和範例，請參閱 <<c0> [ 教學課程： 建立資料分割為基礎的模型](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)。
+ 兩個參數**input_data_1_partition_by_columns**並**input_data_1_order_by_columns**，第二個參數用以排序結果集。 將參數傳遞做為輸入`sp_execute_external_script`外部指令碼中執行一次的每個資料分割。 如需詳細資訊和範例，請參閱[教學課程：建立分割區為基礎的模型](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)。
 
  您可以以平行方式執行指令碼，藉由指定`@parallel=1`。 如果輸入的查詢可以平行處理，您應該設定`@parallel=1`做為您的引數的一部分`sp_execute_external_script`。 根據預設，查詢最佳化工具運作`@parallel=1`超過 256 個資料列，但如果您想要明確地處理此資料表上還會使用這個指令碼包含基於示範用途的參數。
 
@@ -288,7 +280,7 @@ GO
  [R 程式庫和 R 資料類型](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [SQL Server Machine Learning 服務的已知的問題](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [建立外部程式庫&#40;Transact SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [啟用外部指令碼伺服器設定選項](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

@@ -10,12 +10,12 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049098"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529290"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>合併 Check 和外部索引鍵條件約束
   中不支援 check 和 foreign key 條件約束[!INCLUDE[hek_2](../includes/hek-2-md.md)]在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 這些建構通常用來強制執行結構描述中的邏輯資料完整性，而且可以是重要維護功能的應用程式的正確性。  
@@ -40,7 +40,7 @@ ms.locfileid: "48049098"
 ## <a name="table-definition-for-the-workarounds"></a>因應措施的資料表定義  
  之前轉換成記憶體最佳化的資料表，[Sales] 的定義。[SalesOrderDetail] 如下所示：  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  請注意，rowguid 不再 ROWGUIDCOL 因為它不支援[!INCLUDE[hek_2](../includes/hek-2-md.md)]。 已移除資料行。 此外，LineTotal 是計算資料行，而且超出本文的討論範圍，因此它也已移除。  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -127,7 +127,7 @@ GO
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>檢查條件約束的插入、 更新或刪除作業之後  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -185,7 +185,7 @@ END
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>強制執行條件約束之前插入、 更新或刪除作業  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

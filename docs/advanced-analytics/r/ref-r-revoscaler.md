@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c67fd63af6ed3492b8064be037ed4f8f5dff338f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 3745c6cd8c340ce4ad89cac84c5b6286126e3f89
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044405"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511298"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR （SQL Server 中的 R 程式庫）
 

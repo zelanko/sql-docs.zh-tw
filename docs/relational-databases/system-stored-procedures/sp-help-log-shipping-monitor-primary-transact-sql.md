@@ -18,12 +18,12 @@ ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 04e1fb52d74366893ff43deb9fabad9cac7135cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2952023dac4833ade3f67e3a59026a5865352c5e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843889"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531010"
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_log_shipping_monitor_primary
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@primary_server =** ] '*primary_server*'  
- 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
+`[ @primary_server = ] 'primary_server'` 主要執行個體名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*已**sysname**不能是 NULL。  
   
- [  **@primary_database =** ] '*primary_database&lt*'  
- 這是主要伺服器的資料庫名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
+`[ @primary_database = ] 'primary_database'` 是主要伺服器上名稱。 *primary_database&lt*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

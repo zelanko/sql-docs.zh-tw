@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666597"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528810"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間索引預存程序-引數和屬性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ ms.locfileid: "51666597"
 -   [sp_help_spatial_geography_index_xml &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>引數  
- [  **@tabname =**] **'***tabname***'**  
- 這是已指定空間索引之資料表的限定或非限定名稱。  
+`[ @tabname = ] 'tabname'` 是已指定空間索引之資料表的完整或非完整名稱。  
   
  只有在指定限定資料表時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *tabname*已**nvarchar**(776)，沒有預設值。  
   
- [  **@indexname =** ] **'***indexname***'**  
- 這是所指定空間索引的名稱。 *indexname*已**sysname**沒有預設值。  
+`[ @indexname = ] 'indexname'` 是指定空間索引的名稱。 *indexname*已**sysname**沒有預設值。  
   
- [  **@verboseoutput =** ] **'***verboseoutput***'**  
- 這是要傳回之屬性名稱和值的範圍。  
+`[ @verboseoutput = ] 'verboseoutput'` 是要傳回屬性名稱和值的範圍。  
   
  0 = 核心屬性  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666597"
   
  *verboseoutput*已**tinyint**沒有預設值。  
   
- [  **@query_sample =** ] **'***query_sample***'**  
- 這是可用來測試索引有用性的代表查詢範例。 可能是代表物件或查詢視窗。 *query_sample*已**幾何**沒有預設值。  
+`[ @query_sample = ] 'query_sample'` 是可用來測試索引有用性的代表查詢範例。 可能是代表物件或查詢視窗。 *query_sample*已**幾何**沒有預設值。  
   
- [  **@xml_output =** ] **'***xml_output***'**  
- 這是以 XML 片段傳回結果集的輸出參數。 *xml_output*已**xml**沒有預設值。  
+`[ @xml_output = ] 'xml_output'` 集是以 XML 片段傳回結果的輸出參數。 *xml_output*已**xml**沒有預設值。  
   
 ## <a name="properties"></a>屬性  
  設定**@verboseoutput** = 0 以傳回核心屬性，如表; 中所示**@verboseoutput** > 0，以傳回空間索引的所有屬性。  

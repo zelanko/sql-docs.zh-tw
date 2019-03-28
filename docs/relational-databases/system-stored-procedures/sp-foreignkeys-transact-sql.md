@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589941"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533820"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_server =** ] **'**_table_server&lt_**'**  
- 這是傳回資料表資訊所屬的連結伺服器名稱。 *table_server&lt*已**sysname**，沒有預設值。  
+`[ @table_server = ] 'table_server'` 是傳回資料表資訊所屬的連結伺服器名稱。 *table_server&lt*已**sysname**，沒有預設值。  
   
- [  **@pktab_name =** ] **'**_pktab_name_**'**  
- 這是含主索引鍵的資料表名稱。 *pktab_name*已**sysname**，預設值是 NULL。  
+`[ @pktab_name = ] 'pktab_name'` 是含主索引鍵之資料表的名稱。 *pktab_name*已**sysname**，預設值是 NULL。  
   
- [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
- 這是含主索引鍵的結構描述名稱。 *pktab_schema*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含擁有者名稱。  
+`[ @pktab_schema = ] 'pktab_schema'` 是含主索引鍵的結構描述名稱。 *pktab_schema*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含擁有者名稱。  
   
- [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
- 這是含主索引鍵的目錄名稱。 *pktab_catalog*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含資料庫名稱。  
+`[ @pktab_catalog = ] 'pktab_catalog'` 是含主索引鍵的目錄名稱。 *pktab_catalog*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這包含資料庫名稱。  
   
- [  **@fktab_name =** ] **'**_fktab_name_**'**  
- 這是含外部索引鍵的資料表名稱。 *fktab_name*已**sysname**，預設值是 NULL。  
+`[ @fktab_name = ] 'fktab_name'` 是含外部索引鍵之資料表的名稱。 *fktab_name*已**sysname**，預設值是 NULL。  
   
- [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
- 這是含外部索引鍵的結構描述名稱。 *fktab_schema*已**sysname**，預設值是 NULL。  
+`[ @fktab_schema = ] 'fktab_schema'` 是含外部索引鍵的結構描述名稱。 *fktab_schema*已**sysname**，預設值是 NULL。  
   
- [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
- 這是含外部索引鍵的目錄名稱。 *fktab_catalog*已**sysname**，預設值是 NULL。  
+`[ @fktab_catalog = ] 'fktab_catalog'` 是含外部索引鍵的目錄名稱。 *fktab_catalog*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -77,18 +70,18 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|主索引鍵所在之資料表的目錄。|  
 |**PKTABLE_SCHEM**|**sysname**|主索引鍵所在之資料表的結構描述。|  
-|**PKTABLE_NAME&AMP;LT**|**sysname**|資料表 (含主索引鍵) 的名稱。 這個欄位一律會傳回值。|  
+|**PKTABLE_NAME**|**sysname**|資料表 (含主索引鍵) 的名稱。 這個欄位一律會傳回值。|  
 |**PKCOLUMN_NAME**|**sysname**|每個資料行的主索引鍵資料行或資料行名稱**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  
 |**FKTABLE_CAT**|**sysname**|外部索引鍵所在之資料表的目錄。|  
 |**FKTABLE_SCHEM**|**sysname**|外部索引鍵所在之資料表的結構描述。|  
 |**FKTABLE_NAME**|**sysname**|資料表 (含外部索引鍵) 的名稱。 這個欄位一律會傳回值。|  
 |**FKCOLUMN_NAME**|**sysname**|針對傳回之 TABLE_NAME 的每個資料行而言，這是外部索引鍵資料行的名稱。 這個欄位一律會傳回值。|  
-|**KEY_SEQ 來排序**|**smallint**|資料行在多重資料行主索引鍵中的序號。 這個欄位一律會傳回值。|  
+|**KEY_SEQ**|**smallint**|資料行在多重資料行主索引鍵中的序號。 這個欄位一律會傳回值。|  
 |**UPDATE_RULE**|**smallint**|當 SQL 作業是更新時，外部索引鍵所套用的動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對這些資料行傳回 0、1 或 2：<br /><br /> 0=外部索引鍵的 CASCADE 變更。<br /><br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br /><br /> 2=SET_NULL；將外部索引鍵設為 NULL。|  
 |**DELETE_RULE**|**smallint**|當 SQL 作業是刪除時，外部索引鍵所套用的動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對這些資料行傳回 0、1 或 2：<br /><br /> 0=外部索引鍵的 CASCADE 變更。<br /><br /> 1=如果外部索引鍵存在，則是 NO ACTION 變更。<br /><br /> 2=SET_NULL；將外部索引鍵設為 NULL。|  
 |**FK_NAME**|**sysname**|外部索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 FOREIGN KEY 條件約束名稱。|  
 |**PK_NAME**|**sysname**|主索引鍵識別碼。 如果不適用於資料來源的話，它便是 NULL。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 PRIMARY KEY 條件約束名稱。|  
-|**延遲性**|**smallint**|指出條件約束檢查是否可以延後。|  
+|**DEFERRABILITY**|**smallint**|指出條件約束檢查是否可以延後。|  
   
  在結果集中，FK_NAME 和 PK_NAME 資料行一律傳回 NULL。  
   
@@ -108,13 +101,13 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_catalogs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [< sp_indexes &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
  [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [idbschemarowset &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [idbschemarowset &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

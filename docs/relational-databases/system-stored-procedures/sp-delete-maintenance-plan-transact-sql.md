@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7efdd66d1e9087e14faa33a6ca16ccde8a0a40ba
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 9952e41f51e20f2dffa037bc98b5007b111d32c9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168729"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528270"
 ---
 # <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@plan_id =**] **'**_計劃\_識別碼_**'**  
- 指定要刪除之維護計畫的識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
+`[ @plan_id = ] 'plan\_id'` 指定要刪除之維護計畫的識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

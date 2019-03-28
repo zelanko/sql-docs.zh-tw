@@ -10,12 +10,12 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124098"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532843"
 ---
 # <a name="atomic-blocks"></a>不可部分完成的區塊
   `BEGIN ATOMIC` 是 ANSI SQL 標準的一部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有在最上層原生編譯預存程序才支援不可部分完成的區塊。  
@@ -29,13 +29,13 @@ ms.locfileid: "48124098"
 ## <a name="transactions-and-error-handling"></a>交易和錯誤處理  
  如果交易已經存在於工作階段 (因為執行 `BEGIN TRANSACTION` 陳述式的批次和交易依然使用中)，則啟動不可部分完成的區塊將會在交易中建立儲存點。 如果區塊結束而沒有發生例外狀況，則會認可針對區塊建立的儲存點，但在工作階段層級的交易認可之前不會認可交易。 如果區塊擲回例外狀況，則會回復區塊的作用，但是工作階段層級的交易將會繼續，除非例外狀況讓交易毀滅。 例如，寫入衝突將會毀滅交易，但類型轉換錯誤則不會。  
   
- 如果工作階段上沒有使用中交易，`BEGIN ATOMIC` 將會開始新的交易。 如果區塊範圍之外未擲回任何例外狀況，此交易將會在區塊結尾認可。 如果區塊擲回例外狀況 (也就是說，未在區塊內捕捉及處理例外狀況)，交易將會回復。 如果交易橫跨單一 atomic 區塊 （單一原生編譯預存程序），您不需要撰寫明確`BEGIN TRANSACTION`並`COMMIT`或`ROLLBACK`陳述式。  
+ 如果工作階段上沒有使用中交易，`BEGIN ATOMIC` 將會開始新的交易。 如果區塊範圍之外未擲回任何例外狀況，此交易將會在區塊結尾認可。 如果區塊擲回例外狀況 (也就是說，未在區塊內捕捉及處理例外狀況)，交易將會回復。 如果交易橫跨單一不可部分完成的區塊 (單一原生編譯的預存程序)，您就不需要撰寫明確的 `BEGIN TRANSACTION` 和 `COMMIT` 或 `ROLLBACK` 陳述式。  
   
- 原生編譯預存程序支援`TRY`， `CATCH`，和`THROW`建構用於錯誤處理。 `RAISERROR` 不支援。  
+ 原生編譯的預存程序支援 `TRY`、`CATCH` 和 `THROW` 建構用於錯誤處理。 不支援 `RAISERROR`。  
   
  下列範例說明使用不可部分完成的區塊和原生編譯預存程序處理錯誤的行為：  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -123,23 +123,23 @@ ORDER BY c1
 GO  
 ```  
   
- 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果發生在不可部分完成的區塊範圍內，將會造成交易中止：10772、41301、41302、41305、41325、41332 和 41333。  
+ 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果它們發生在不可部分完成的區塊範圍內，將造成交易中止：10772、41301、41302、41305、41325、41332 及 41333。  
   
 ## <a name="session-settings"></a>工作階段設定  
- 當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 您可以使用指定的某些設定`BEGIN ATOMIC`而其他設定則一律固定為相同的值。  
+ 當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 某些設定可以使用 `BEGIN ATOMIC` 來指定，而其他設定則一律固定為相同的值。  
   
  `BEGIN ATOMIC` 需要以下選項：  
   
 |必要設定|描述|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|支援的值為`SNAPSHOT`， `REPEATABLEREAD`，和`SERIALIZABLE`。|  
+|`TRANSACTION ISOLATION LEVEL`|支援的值為 `SNAPSHOT`、`REPEATABLEREAD` 和 `SERIALIZABLE`。|  
 |`LANGUAGE`|判斷日期和時間格式及系統訊息。 [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 中的所有語言和別名都受到支援。|  
   
  以下是選擇性設定：  
   
 |選擇性設定|描述|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 指定時，`DATEFORMAT`覆寫預設的日期格式相關聯`LANGUAGE`。|  
+|`DATEFORMAT`|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 當指定時，`DATEFORMAT` 會覆寫與 `LANGUAGE` 相關聯的預設日期格式。|  
 |`DATEFIRST`|當指定時，`DATEFIRST` 會覆寫與 `LANGUAGE` 相關聯的預設值。|  
 |`DELAYED_DURABILITY`|支援的值為`OFF`和`ON`。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久、預設值或延遲的持久。如需詳細資訊，請參閱[控制交易持久性](../logs/control-transaction-durability.md)。|  
   

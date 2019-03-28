@@ -1,5 +1,5 @@
 ---
-title: sp_testlinkedserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_testlinkedserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f92be41bc657b562ad64da7e1093e64d1e6077a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 619f6d44f1918220b1e6d5a7227f7ea29818c5a9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625616"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526390"
 ---
 # <a name="sptestlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@servername =** ]*servername*  
- 這是連結伺服器的名稱。 *servername*已**sysname**，沒有預設值。  
+`[ @servername = ]servername` 是連結名稱。 *servername*已**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
  None  

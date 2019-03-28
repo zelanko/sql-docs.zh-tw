@@ -1,5 +1,5 @@
 ---
-title: 範例指定 HIDE 指示詞 |Microsoft Docs
+title: 範例指定 HIDE 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357098"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531800"
 ---
 # <a name="example-specifying-the-hide-directive"></a>範例指定 HIDE 指示詞
   此範例說明 **HIDE** 指示詞的用法。 當您希望查詢可以傳回由查詢傳回的通用資料表中，用以排序資料列的屬性，但又不希望在最後的結果 XML 文件中看見該屬性時，此指示詞就相當有用。  

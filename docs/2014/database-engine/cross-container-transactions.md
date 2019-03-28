@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538587"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528293"
 ---
 # <a name="cross-container-transactions"></a>跨容器交易
   跨容器交易是隱含或明確的使用者交易，其包含對原生編譯的預存程序或記憶體最佳化的資料表作業的呼叫。  
@@ -32,7 +32,7 @@ ms.locfileid: "52538587"
 ### <a name="specifying-the-isolation-level-of-individual-operations"></a>指定個別作業的隔離等級  
  若要為交易中的一組陳述式設定不同的隔離等級，您可以使用 `SET TRANSACTION ISOLATION LEVEL`。 以下的交易範例會使用 serializable 的隔離等級當做預設值。 位於 t3、t2 和 t1 的插入和選取作業會在 repeatable read 的隔離之下執行。  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
@@ -49,7 +49,7 @@ commit
   
  若要為個別讀取作業設定不同於交易預設值的隔離等級，您可以使用資料表提示 (例如，可序列化)。 每個選取都會對應到讀取作業，而每個更新和每個刪除都會對應到讀取，因為在可以更新和刪除資料列之前永遠都必須先讀取它。 插入作業沒有隔離等級，因為寫入在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中永遠都是隔離的。 在下列範例中，交易的預設隔離等級為 read committed，不過，資料表 t1 會在 serializable 隔離之下存取，而 t2 會在 snapshot 隔離之下存取。  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -103,7 +103,7 @@ commit
   
  以下列交易為例：  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -149,7 +149,7 @@ commit
   
  交易的記憶體最佳化那一端可以到達兩個等級的其中一個：如果 condition1 為 true，它會到達可序列化隔離，而如果為 false，則記憶體最佳化那一端只會到達快照集隔離。  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   

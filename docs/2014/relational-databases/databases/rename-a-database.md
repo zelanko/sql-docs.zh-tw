@@ -13,12 +13,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8226ca15ed39dd6cc24c7235f54a047d2af86508
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783620"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531422"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新命名使用者定義資料庫。 資料庫的名稱可以包含任何依照識別碼規則的字元。  
@@ -70,9 +70,9 @@ ms.locfileid: "52783620"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會將 `AdventureWorks2012` 資料庫的名稱變更為 `Northwind`。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會將 `AdventureWorks2012` 資料庫的名稱變更為 `Northwind`。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

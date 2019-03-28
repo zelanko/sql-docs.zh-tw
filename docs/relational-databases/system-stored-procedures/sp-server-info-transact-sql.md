@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (TRANSACT-SQL) |Microsoft Docs
+title: sp_server_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ee0f3e2f7858959b04394e4e809df3ab71dcc83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846636"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529300"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@attribute_id =** ] **'***attribute_id***'**  
- 這是屬性的整數識別碼。 *attribute_id*已**int**，預設值是 NULL。  
+`[ @attribute_id = ] 'attribute_id'` 是屬性的整數識別碼。 *attribute_id*已**int**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  None  
@@ -51,8 +50,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|屬性的識別碼。|  
-|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|屬性名稱。|  
-|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|屬性目前的設定。|  
+|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|屬性名稱。|  
+|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|屬性目前的設定。|  
   
  下表列出各個屬性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 用戶端程式庫目前使用的屬性**1**， **2**， **18**， **22**，以及**500**在連線時間。  
   

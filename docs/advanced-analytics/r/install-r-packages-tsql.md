@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6e910f1c3b29522b11f1faa83db890d399bf3680
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: b59f15ace1dc96af537486336e76a209f1c85da7
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645047"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510269"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>SQL Server 上安裝 R 封裝中使用 T-SQL （建立外部程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

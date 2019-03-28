@@ -1,5 +1,5 @@
 ---
-title: sp_helppublication & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_helppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205207"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532970"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication =** ] **'***publication***'**  
- 這是要檢視的發行集名稱。 *發行集*是 sysname，預設值是**%**，傳回所有發行集的相關資訊。  
+`[ @publication = ] 'publication'` 是要檢視的發行集的名稱。 *發行集*是 sysname，預設值是**%**，傳回所有發行集的相關資訊。  
   
- [  **@found =** ] **'***找到***'** 輸出  
- 這是表示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是**23456**。 **1**表示找到發行集。 **0**指出找不到發行集。  
+`[ @found = ] 'found' OUTPUT` 是指示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是**23456**。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
- [ **@publisher** = ] **'***publisher***'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是 sysname，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是 sysname，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*應要求從發行集資訊時未指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -91,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|指定是否將衝突記錄儲存在發行者端：<br /><br /> **0** = 將衝突記錄儲存在發行者端和造成衝突的訂閱者端。<br /><br /> **1** = 將衝突記錄儲存在 「 發行者 」。|  
 |conflict_retention|**int**|指定衝突保留週期 (以天為單位)。|  
 |conflict_policy|**int**|指定使用佇列更新訂閱者選項時，所遵照的衝突解決原則。 它可以是下列值之一：<br /><br /> **1** = 造訪發行者為優先的衝突。<br /><br /> **2** = 訂閱者優先衝突。<br /><br /> **3** = 重新初始化訂閱。|  
-|queue_type||指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 注意：已不再支援使用 Message Queuing。|  
+|queue_type||指定所用的佇列類型。 它可以是下列值之一：<br /><br /> **msmq** = 使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 來儲存交易。<br /><br /> **sql** = 使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來儲存交易。<br /><br /> 注意:已不再支援使用 Message Queuing。|  
 |backward_comp_level||資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|指定是否要將發行集發行在[!INCLUDE[msCoName](../../includes/msconame-md.md)]Active Directory 篇。 值為**1**表示，會將它發佈，並針對**0**表示不發行。|  
 |allow_initialize_from_backup|**bit**|指出訂閱者是否能夠從備份中，而不是從初始快照集中，對這個發行集的訂閱進行初始化。 **1**表示，從備份初始化訂閱並**0**表示無法。 如需詳細資訊，請參閱 <<c0> [ 初始化 Transactional Subscription Without a Snapshot&lt](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)不使用快照集的交易式訂閱者。|  

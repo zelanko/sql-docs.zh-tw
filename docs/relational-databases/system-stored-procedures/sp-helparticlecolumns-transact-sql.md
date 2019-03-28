@@ -16,12 +16,12 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ff0ca57ba2e6e77854bab011fa83dc2001337a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205925"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527050"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =**] **'***發行集***'**  
- 這是發行項所在的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是包含發行項的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'***文章***'**  
- 這是傳回具有資料行的發行項名稱。 *發行項*已**sysname**，沒有預設值。  
+`[ @article = ] 'article'` 是傳回具有資料行的發行項的名稱。 *發行項*已**sysname**，沒有預設值。  
   
- [ **@publisher**=] **'***發行者***'**  
- 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應指定當要求的發行項由發佈[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
@@ -61,7 +58,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**資料行識別碼**|**int**|資料行的識別碼。|  
 |**column**|**sysname**|資料行的名稱。|  
-|**發行**|**bit**|資料行是否已發行：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
+|**published**|**bit**|資料行是否已發行：<br /><br /> **0** = 否<br /><br /> **1** = 是|  
 |**發行者類型**|**sysname**|在發行者端之資料行的資料類型。|  
 |**訂閱者類型**|**sysname**|在訂閱者端之資料行的資料類型。|  
   
@@ -75,7 +72,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [定義及修改資料行篩選](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [sp_addarticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

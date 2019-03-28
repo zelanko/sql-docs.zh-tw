@@ -10,12 +10,12 @@ ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ccf8ea4fc15be567d0e95a66b2e5320fae7dbbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205158"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528520"
 ---
 # <a name="cross-database-queries"></a>跨資料庫查詢
   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，記憶體最佳化資料表不支援跨資料庫的交易。 您無法在同時存取記憶體最佳化資料表的相同交易或相同查詢中存取另一個資料庫。 您無法輕鬆地從某一個資料庫的資料表中，將資料複製到另一個資料庫中的記憶體最佳化資料表。  
@@ -24,7 +24,7 @@ ms.locfileid: "48205158"
   
  例如，若要複製的資料列中，資料庫 db1 中資料表 t1 到 db2 中的資料表 t2 使用變數@v1的型別 dbo.tt1，您可以使用類似：  
   
-```tsql  
+```sql  
 USE db2   
 GO   
 DECLARE @v1 dbo.tt1   

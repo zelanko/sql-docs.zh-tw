@@ -16,12 +16,12 @@ ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b28b574dcbe26796b6fc561b209425f023f0178f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108158"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531450"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
   根據預設，使用壓縮來備份會大幅增加 CPU 使用量，而且壓縮程序所耗用的額外 CPU 可能會對並行作業造成不良的影響。 因此，如果發生 CPU 爭用的情況，您可能會想要在[資源管理員](../resource-governor/resource-governor.md) 限制 CPU 使用量的工作階段中，建立低優先權的壓縮備份。 這個主題所展示的狀況會將特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的工作階段對應至在這類情況中限制 CPU 使用量的資源管理員工作負載群組，藉以分類這些工作階段。  
@@ -42,7 +42,7 @@ ms.locfileid: "48108158"
 ##  <a name="setup_login_and_user"></a> 針對低優先權作業設定登入和使用者  
  這個主題中的狀況需要使用低優先權 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入和使用者。 使用者名稱將用來分類在登入中執行的工作階段，並且將它們路由傳送至限制 CPU 使用量的資源管理員工作負載群組。  
   
- 下列程序描述的是針對此目的設定登入和使用者的步驟，後面接著 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例：「範例 A：設定登入和使用者 (Transact-SQL)」。  
+ 下列程序描述針對此目的設定登入和使用者的步驟，後面接著 [!INCLUDE[tsql](../../includes/tsql-md.md)] 範例：「範例 A：設定登入和使用者 (Transact-SQL)」。  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>設定登入和資料庫使用者以便分類工作階段  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48108158"
   
  這個範例會針對 *domain_name*`\MAX_CPU` Windows 帳戶建立登入，然後將 VIEW SERVER STATE 權限授與此登入。 這個權限可讓您確認登入工作階段的資源管理員分類。 然後，此範例會針對 *domain_name*`\MAX_CPU` 建立使用者並將它加入至 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫的 db_backupoperator 固定資料庫角色。 資源管理員分類函數將會使用這個使用者名稱。  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -124,7 +124,7 @@ GO
   
  **設定資源管理員 (SQL Server Management Studio)**  
   
--   [使用範本設定資源管理員](../resource-governor/configure-resource-governor-using-a-template.md)  
+-   [使用範本來設定資源管理員](../resource-governor/configure-resource-governor-using-a-template.md)  
   
 -   [建立資源集區](../resource-governor/create-a-resource-pool.md)  
   
@@ -183,7 +183,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>範例 B：設定資源管理員 (Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>範例 B：設定 Resource Governor (Transact-SQL)  
  下列範例會在單一交易中執行下列步驟：  
   
 1.  建立 `pMAX_CPU_PERCENT_20` 資源集區。  
@@ -197,9 +197,9 @@ GO
  認可交易之後，此範例就會套用在 ALTER WORKLOAD GROUP 或 ALTER RESOURCE POOL 陳述式中要求的組態變更。  
   
 > [!IMPORTANT]  
->  下列範例會使用在＜範例 A：設定登入和使用者 (Transact-SQL)＞中建立之範例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的使用者名稱 *domain_name*`\MAX_CPU`。 請將這個名稱取代成您打算在建立低優先順序壓縮備份時使用的登入使用者名稱。  
+>  下列範例會使用在「範例 A：設定登入和使用者 (Transact-SQL)」中所建立範例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的使用者名稱：網域名稱`\MAX_CPU`。 請將這個名稱取代成您打算在建立低優先順序壓縮備份時使用的登入使用者名稱。  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -241,7 +241,7 @@ GO
 ##  <a name="verifying"></a> 確認目前工作階段的分類 (Transact-SQL)  
  (選擇性) 以您在分類函數中指定之使用者的身分登入，然後在 [物件總管] 中發出下列 [SELECT](/sql/t-sql/queries/select-transact-sql) 陳述式，藉以確認工作階段分類：  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -264,7 +264,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>範例 C：建立壓縮備份 (Transact-SQL)  
  下列 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 範例會在最近格式化的備份檔案 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 中建立 `Z:\SQLServerBackups\AdvWorksData.bak`資料庫的完整壓縮備份。  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
@@ -275,7 +275,7 @@ WITH
 GO  
 ```  
   
- [&#91;回到頁首&#93;](#Top)  
+ [[頁首]](#Top)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立和測試分類使用者定義函數](../resource-governor/create-and-test-a-classifier-user-defined-function.md)   

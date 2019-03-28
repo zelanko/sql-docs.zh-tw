@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sp_setapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168809"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533530"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -46,11 +46,9 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>引數
 
- [  **@rolename =** ] **'***角色***'**  
- 目前資料庫所定義之應用程式角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
+`[ @rolename = ] 'role'` 是目前資料庫中定義的應用程式角色的名稱。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
   
- [  **@password =** ] **{加密 N'***密碼***'}**  
- 啟動應用程式角色所需的密碼。 *密碼*已**sysname**，沒有預設值。 *密碼*可以使用 ODBC 來模糊化**加密**函式。 當您使用**加密**函式，密碼必須轉換成 Unicode 字串，加上**N**第一個引號之前。  
+`[ @password = ] { encrypt N'password' }` 這是啟動應用程式角色所需的密碼。 *密碼*已**sysname**，沒有預設值。 *密碼*可以使用 ODBC 來模糊化**加密**函式。 當您使用**加密**函式，密碼必須轉換成 Unicode 字串，加上**N**第一個引號之前。  
   
  使用的連接不支援加密選項**SqlClient**。  
   
@@ -63,11 +61,9 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt= 'odbc'**  
  指定 ODBC 將模糊化密碼，使用 ODBC**加密**函式之前密碼傳送至[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 只有在使用 ODBC 用戶端或 SQL Server 的 OLE DB Provider 時才可以作這項指定。  
   
- [  **@fCreateCookie =** ] **true** | **false**  
- 指定是否要建立 Cookie。 **true**會隱含地轉換為 1。 **false**會隱含地轉換為 0。  
+`[ @fCreateCookie = ] true | false` 指定是否要建立 cookie。 **true**會隱含地轉換為 1。 **false**會隱含地轉換為 0。  
   
- [  **@cookie =** ]  **@cookie輸出**  
- 指定輸出參數要包含該 Cookie。 只有當，會產生 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` 指定輸出參數必須包含的 cookie。 只有當，會產生 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)**。 應用程式應繼續保留**varbinary(8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加在未來的版本。

@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591622"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527460"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@principal_id=** ] *principal_id*  
- 是資料庫使用者或角色中的識別碼**msdb**要列出之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 任一*principal_id*或是*principal_name*可能指定。  
+`[ @principal_id = ] principal_id` 是資料庫使用者或角色中的識別碼**msdb**要列出之關聯的資料庫。 *principal_id*已**int**，預設值是 NULL。 任一*principal_id*或是*principal_name*可能指定。  
   
- [  **@principal_name=** ] **'**_principal_name_**'**  
- 是資料庫使用者或角色的名稱**msdb**要列出之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 任一*principal_id*或是*principal_name*可能指定。  
+`[ @principal_name = ] 'principal_name'` 是資料庫使用者或角色的名稱**msdb**要列出之關聯的資料庫。 *principal_name*已**sysname**，預設值是 NULL。 任一*principal_id*或是*principal_name*可能指定。  
   
- [  **@profile_id=** ] *profile_id*  
- 這是要列出之關聯的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*可能指定。  
+`[ @profile_id = ] profile_id` 是要列出之關聯的設定檔的識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*可能指定。  
   
- [  **@profile_name=** ] **'**_profile_name_**'**  
- 這是要列出之關聯的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*可能指定。  
+`[ @profile_name = ] 'profile_name'` 是要列出之關聯的設定檔的名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*可能指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

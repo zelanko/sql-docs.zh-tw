@@ -16,12 +16,12 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588932"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527880"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,27 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'**_發行集_**'**  
- 這是關聯的發行集名稱。 *發行集*已**sysname**，預設值是**%**，它會傳回此伺服器的所有訂用帳戶資訊。  
+`[ @publication = ] 'publication'` 是相關聯的發行集名稱。 *發行集*已**sysname**，預設值是**%**，它會傳回此伺服器的所有訂用帳戶資訊。  
   
- [  **@article=** ] **'**_文章_**'**  
- 這是發行項的名稱。 *發行項*已**sysname**，預設值是**%**，它會傳回與選定發行集和訂閱者的所有訂用帳戶資訊。 如果**所有**，只有一個項目時，會傳回完整的訂用帳戶上，發行集。  
+`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，預設值是**%**，它會傳回與選定發行集和訂閱者的所有訂用帳戶資訊。 如果**所有**，只有一個項目時，會傳回完整的訂用帳戶上，發行集。  
   
- [  **@subscriber=** ] **'**_訂閱者_**'**  
- 這是取得訂閱資訊的相關訂閱者名稱。 *訂閱者*是**sysname**，預設值是**%**，它會傳回與所選取的發行集和發行項的所有訂用帳戶資訊。  
+`[ @subscriber = ] 'subscriber'` 是要取得訂用帳戶資訊之訂閱者的名稱。 *訂閱者*是**sysname**，預設值是**%**，它會傳回與所選取的發行集和發行項的所有訂用帳戶資訊。  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- 這是目的地資料庫的名稱。 *destination_db*已**sysname**，預設值是**%**。  
+`[ @destination_db = ] 'destination_db'` 是目的地資料庫的名稱。 *destination_db*已**sysname**，預設值是**%**。  
   
- [  **@found=** ] **'**_找到_**'** 輸出  
- 這是表示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是 23456。  
+`[ @found = ] 'found'OUTPUT` 是指示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是 23456。  
   
  **1**表示找到發行集。  
   
  **0**指出找不到發行集。  
   
- [ **@publisher**=] **'**_發行者_**'**  
- 這是發行者的名稱。 *發行者*已**sysname**，而且預設為目前的伺服器名稱。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，而且預設為目前的伺服器名稱。  
   
 > [!NOTE]  
 >  *發行者*不應指定，除非它是 「 Oracle 發行者 」。  
@@ -73,7 +67,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**訂閱者**|**sysname**|訂閱者的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**article**|**sysname**|發行項的名稱。|  
 |**目的地資料庫**|**sysname**|複寫的資料放在其中的目的地資料庫名稱。|  
 |**訂用帳戶狀態**|**tinyint**|訂閱狀態：<br /><br /> **0** = 非使用中<br /><br /> **1** = 訂閱<br /><br /> **2** = 作用中|  
@@ -111,9 +105,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  執行權限預設為**公開**角色。 使用者是使用者所建立之訂閱的唯一傳回資訊。 成員會傳回所有訂用帳戶相關資訊**sysadmin**固定的伺服器角色，在發行者端的成員**db_owner**發行集資料庫的固定的資料庫角色。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

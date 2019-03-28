@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category (TRANSACT-SQL) |Microsoft Docs
+title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff44121317827976f65db8ebb49bc2eda37d42bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b223f8429d010382e444dd2e57a6fa7735200151
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779886"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526090"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@name=** ] **'***name***'**  
- 這是原則類別目錄的名稱。 *名稱*已**sysname**，而且需要。 *名稱*不可為 NULL 或空字串。  
+`[ @name = ] 'name'` 為原則類別目錄的名稱。 *名稱*已**sysname**，而且需要。 *名稱*不可為 NULL 或空字串。  
   
- [ **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- 判斷是否針對原則類別目錄託管資料庫訂閱。 *mandate_database_subscriptions*已**元**值，預設值是 1 （已啟用）。  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` 決定是否針對原則類別目錄託管資料庫訂閱。 *mandate_database_subscriptions*已**元**值，預設值是 1 （已啟用）。  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- 這是原則類別目錄的識別碼。 *policy_category_id&lt*已**int**，而且會當做 OUTPUT 傳回。  
+`[ @policy_category_id = ] policy_category_id` 是原則類別目錄的識別碼。 *policy_category_id&lt*已**int**，而且會當做 OUTPUT 傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -61,7 +58,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  需要 PolicyAdministratorRole 固定資料庫角色中的成員資格。  
   
 > [!IMPORTANT]  
->  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體作業的原則執行。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
+>  可能會提高認證：PolicyAdministratorRole 角色中的使用者可以建立伺服器觸發程序以及排程可能會影響作業的執行個體的原則執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]。 例如，PolicyAdministratorRole 角色中的使用者可以建立防止在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中建立大部分物件的原則。 由於可能會提高認證，因此 PolicyAdministratorRole 角色應該只授與可控制 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 組態的受信任使用者。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立不託管類別目錄訂閱的原則類別目錄。 這表示可以設定個別資料庫來參加或退出此類別目錄中的原則。  
@@ -79,7 +76,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

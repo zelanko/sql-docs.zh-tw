@@ -18,12 +18,12 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700747"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527200"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@profile_id** =] *profile_id*  
- 這是要列出之設定檔的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_id = ] profile_id` 是清單的設定檔的設定檔識別碼。 *profile_id*已**int**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 這是要列出之設定檔的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
+`[ @profile_name = ] 'profile_name'` 是清單的設定檔的設定檔名稱。 *profile_name*已**sysname**，預設值是 NULL。 任一*profile_id*或是*profile_name*必須指定。  
   
- [ **@account_id** = ] *account_id*  
- 這是要列出的帳戶識別碼。 *account_id*已**int**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
+`[ @account_id = ] account_id` 這是帳戶識別碼清單。 *account_id*已**int**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
   
- [ **@account_name** = ] **'***account_name***'**  
- 這是要列出的帳戶名稱。 *account_name*已**sysname**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
+`[ @account_name = ] 'account_name'` 是要列出名稱。 *account_name*已**sysname**，預設值是 NULL。 當*account_id*並*account_name*都是 NULL，會列出設定檔中的所有帳戶。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

@@ -15,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202107"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533010"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>啟用和停用異動資料擷取 (SQL Server)
   此主題描述如何針對資料庫和資料表啟用及停用異動資料擷取。  
@@ -37,7 +37,7 @@ ms.locfileid: "53202107"
 > [!IMPORTANT]  
 >  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找出範本，請移至 **[檢視]**、按一下 **[範本總管]**，然後選取 **[SQL Server 範本]**。 **[異動資料擷取]** 是子資料夾。 在這個資料夾底下，您將會找到這個主題所參考的所有範本。 **工具列上也有一個** [範本總管] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖示。  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -57,7 +57,7 @@ GO
 > [!IMPORTANT]  
 >  若要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中找出範本，請移至 **[檢視]**、按一下 **[範本總管]**，然後按一下 **[SQL Server 範本]**。 **[異動資料擷取]** 是子資料夾，而且您將會在其中找到這個主題所參考的所有範本。 **工具列上也有一個** [範本總管] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 圖示。  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -80,7 +80,7 @@ GO
   
  根據預設，變更資料表位於資料庫的預設檔案群組中。 想要控制個別變更資料表位置的資料庫擁有者可以使用 *@filegroup_name* 參數，指定與擷取執行個體相關聯之變更資料表的特定檔案群組。 此指定的檔案群組必須已存在。 一般而言，我們建議您將變更資料表放在與來源資料表不同的檔案群組中。 請參閱`Enable a Table Specifying Filegroup Option`如需示範使用範例範本*@filegroup_name*參數。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -102,7 +102,7 @@ GO
   
  如果您不想要使用控制角色，請將 *@role_name* 參數明確設定為 NULL。 如需在不使用控制角色的情況下啟用資料表的範例，請參閱「`Enable a Table Without Using a Gating Role`」範本。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -127,7 +127,7 @@ GO
   
  如需示範建立含有兩個查詢函數之擷取執行個體的範例，請參閱「`Enable a Table for All and Net Changes Queries`」範本。  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -151,7 +151,7 @@ GO
   
  如需停用資料表的範例，請參閱「停用資料表的擷取執行個體」範本。  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

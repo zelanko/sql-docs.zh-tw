@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150950"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530180"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>授與 XML 結構描述集合的權限
   您可以授與建立 XML 結構描述集合的權限，也可以授與 XML 結構描述集合物件的權限。  
@@ -57,11 +57,11 @@ ms.locfileid: "48150950"
   
 -   TAKE OWNERSHIP 權限需要從某個主體傳送 XML 結構描述集合的擁有權至另一個主體。  
   
--   REFERENCES 權限可授權主體使用 XML 結構描述集合，以便輸入約束`xml`類型資料行，資料表和檢視表和參數中。 當 XML 結構描述集合參考另一個權限時，也需要 REFERENCES 權限。  
+-   REFERENCES 權限可授權主體使用 XML 結構描述集合，以便約束資料表、檢視表和參數中的 `xml` 類型資料行並設定其類型。 當 XML 結構描述集合參考另一個權限時，也需要 REFERENCES 權限。  
   
 -   假設此主體擁有集合上的任一個 ALTER、REFERENCES 或 CONTROL 權限，VIEW DEFINITION 權限就可透過 XML_SCHEMA_NAMESPACE 或透過目錄檢視，讓主體查詢 XML 結構描述集合的內容。  
   
--   EXECUTE 權限，才能驗證對 XML 結構描述集合所約束的主體所插入或更新的值`xml`輸入資料行、 變數和參數。 當您查詢儲存在這些資料行和變數的 XML 時，您也需要此權限。  
+-   針對約束 `xml` 類型資料行、變數和參數並設定其類型的 XML 結構描述集合來驗證主體所插入或更新的值時，將需要 EXECUTE 權限。 當您查詢儲存在這些資料行和變數的 XML 時，您也需要此權限。  
   
 ## <a name="examples"></a>範例  
  下列範例中的狀況說明 XML 結構描述權限如何運作。 每個範例都會建立所需的測試資料庫、關聯式結構描述和登入。 將會授與這些登入必要的 XML 結構描述集合權限。 每個範例都會在結束時執行必要的清除。  

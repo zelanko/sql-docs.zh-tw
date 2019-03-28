@@ -21,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791710"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527450"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@filtered_table**=] **'***filtered_table***'**  
- 這是篩選的資料表名稱。 *filtered_table*已**nvarchar(400)**，沒有預設值。  
+`[ @filtered_table = ] 'filtered_table'` 是已篩選名稱。 *filtered_table*已**nvarchar(400)**，沒有預設值。  
   
- [ **@subset_filterclause** =] **'***subset_filterclause***'**  
- 這是正在測試的篩選子句。 *subset_filterclause*已**nvarchar(1000)**，沒有預設值。  
+`[ @subset_filterclause = ] 'subset_filterclause'` 正在測試的篩選子句。 *subset_filterclause*已**nvarchar(1000)**，沒有預設值。  
   
- [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- 這是指篩選子句是否為參數化資料列篩選器。 *has_dynamic_filters*已**元**，預設值是 NULL，這是輸出參數。 傳回值**1**當篩選子句是參數化資料列篩選器。  
+`[ @has_dynamic_filters = ] has_dynamic_filters` 是的篩選子句是否參數化資料列篩選器。 *has_dynamic_filters*已**元**，預設值是 NULL，這是輸出參數。 傳回值**1**當篩選子句是參數化資料列篩選器。  
   
 ## <a name="result-sets"></a>結果集  
   

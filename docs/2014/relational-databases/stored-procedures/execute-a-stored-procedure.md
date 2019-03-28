@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057485"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532890"
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。  
@@ -53,7 +53,7 @@ ms.locfileid: "48057485"
   
 -   比對系統程序名稱時，會使用呼叫資料庫定序。 因此，您務必在程序呼叫中使用大小寫完全相符的系統程序名稱。 例如，如果此程式碼是在有區分大小寫定序的資料庫內容中執行，就會失敗：  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057485"
   
      系統程序會以 **sp_** 前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者和系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48057485"
   
      下列範例示範執行使用者定義程序的建議方法。 您會發現程序接受一個輸入參數。 如需指定輸入和輸出參數的相關資訊，請參閱 [指定參數](specify-parameters.md)。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -85,7 +85,7 @@ ms.locfileid: "48057485"
   
      -或-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -164,7 +164,7 @@ ms.locfileid: "48057485"
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何執行需要一個參數的預存程序。 此範例會執行 `uspGetEmployeeManagers` 預存程序，並指定值  `6` 做為 `@EmployeeID` 參數。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -179,7 +179,7 @@ GO
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 設定自動執行程序。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -195,7 +195,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 設定停止自動執行程序。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

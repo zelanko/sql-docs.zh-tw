@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b3beca0f9e9a8c714e60bde7a2e7ff067e2265e
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 0b1820e15975ca027af7b51e809ba920af3ffc82
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405728"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511297"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>教學課程：適用於 R 的資料科學家的 SQL 開發
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

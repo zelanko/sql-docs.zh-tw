@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobstep (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b1e2840240d0d02a3193ecc592a13331719c7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628537"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527820"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_id=** ] *job_id*  
- 將從中移除步驟之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
+`[ @job_id = ] job_id` 將從中移除步驟之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
- [ **@job_name=** ] **'***job_name***'**  
- 將從中移除步驟之作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
+`[ @job_name = ] 'job_name'` 將從中移除步驟之作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
-> **注意：** 任一*job_id*或是*job_name*必須指定; 不可同時指定兩者。  
+> **注意：** 任一*job_id*或是*job_name*必須指定; 不能同時指定這兩者。  
   
- [ **@step_id=** ] *step_id*  
- 這是要移除的步驟識別碼。 *step_id*已**int**，沒有預設值。  
+`[ @step_id = ] step_id` 要移除的步驟識別碼。 *step_id*已**int**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -64,7 +61,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  如需有關相關聯的特定作業步驟的詳細資訊，請執行**sp_help_jobstep**。  
   
-> **注意︰** 呼叫**sp_delete_jobstep**具有*step_id*值為零會刪除作業的所有作業步驟。  
+> **注意：** 呼叫**sp_delete_jobstep**具有*step_id*值為零會刪除作業的所有作業步驟。  
   
  Microsoft SQL Server Management Studio 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
@@ -96,9 +93,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [檢視或修改作業](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_add_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

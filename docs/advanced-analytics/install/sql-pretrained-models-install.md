@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/18/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fdfb322699045a46630b7aaed4b4811f20be945f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 168898c08fb24af655ff5429e2a7fa028ea37405
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579078"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512295"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習服務模型在 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -10,15 +10,15 @@ ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065788"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530740"
 ---
 # <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
-  此外，（提供有效率的資料存取） 的記憶體最佳化資料表和原生編譯預存程序 （提供高效率的查詢處理和商務邏輯執行）[!INCLUDE[hek_2](../includes/hek-2-md.md)]導入了第三種物件： 記憶體最佳化資料表類型。 使用記憶體最佳化資料表類型建立的資料表變數，就是記憶體最佳化資料表變數。  
+  除了記憶體最佳化資料表 (提供高效率的資料存取) 和原生編譯預存程序 (提供高效率的查詢處理和商務邏輯執行) 之外，[!INCLUDE[hek_2](../includes/hek-2-md.md)] 還導入了第三種物件：記憶體最佳化資料表類型。 使用記憶體最佳化資料表類型建立的資料表變數，就是記憶體最佳化資料表變數。  
   
  與磁碟資料表變數相較之下，記憶體最佳化資料表變數提供了下列幾項優點：  
   
@@ -36,11 +36,11 @@ ms.locfileid: "48065788"
   
 -   資料表變數可用來模擬以原生方式編譯之預存程序中的資料指標，這樣可協助您在以原生方式編譯的預存程序中避開介面區限制。  
   
- 就像記憶體最佳化的資料表，一樣[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]會產生每個記憶體最佳化資料表類型的 DLL。 (編譯作業會在記憶體最佳化資料表類型建立時叫用，而不會在用來建立記憶體最佳化資料表變數時叫用)。此 DLL 包括存取索引以及從資料表變數擷取資料的函數。 根據資料表類型宣告記憶體最佳化資料表變數時，會在使用者工作階段中建立對應至資料表類型之資料表和索引結構的執行個體。 接著就可以透過與磁碟資料表變數相同的方式使用資料表變數。 您可以在資料表變數中插入、更新及刪除資料列，也可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢中使用變數。 您也可以將變數當做資料表值參數 (TVP) 傳遞至以原生方式編譯和解譯的預存程序中。  
+ 就像記憶體最佳化資料表一樣， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會為每個記憶體最佳化資料表類型產生 DLL (編譯作業會在記憶體最佳化資料表類型建立時叫用，而不會在用來建立記憶體最佳化資料表變數時叫用)。此 DLL 包括存取索引以及從資料表變數擷取資料的函數。 根據資料表類型宣告記憶體最佳化資料表變數時，會在使用者工作階段中建立對應至資料表類型之資料表和索引結構的執行個體。 接著就可以透過與磁碟資料表變數相同的方式使用資料表變數。 您可以在資料表變數中插入、更新及刪除資料列，也可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢中使用變數。 您也可以將變數當做資料表值參數 (TVP) 傳遞至以原生方式編譯和解譯的預存程序中。  
   
  下列範例將示範 AdventureWorks 為基礎的記憶體內部 OLTP 範例記憶體最佳化資料表類型 ([SQL Server 2014 記憶體中 OLTP 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
   
-```tsql
+```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
    AS TABLE
 (
@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   類型必須至少有一個索引。 就像在記憶體最佳化資料表中，您可以使用雜湊和非叢集索引。  
   
-     若是雜湊索引，值區計數應該約為預期的唯一索引鍵數目的一倍到兩倍。 如需詳細資訊，請參閱 <<c0> [ 判斷雜湊索引的正確貯體計數](../relational-databases/indexes/indexes.md)。  
+     若是雜湊索引，值區計數應該約為預期的唯一索引鍵數目的一倍到兩倍。 如需詳細資訊，請參閱＜ [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)＞。  
   
 -   對於記憶體最佳化資料表的資料類型和條件約束限制也適用於記憶體最佳化資料表類型。 例如，[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 支援預設條件約束，但是不支援檢查條件約束。  
   
@@ -81,7 +81,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
 ## <a name="table-valued-parameters"></a>資料表值參數  
  下列範例指令碼示範如何將資料表變數宣告為記憶體最佳化資料表類型 `Sales.SalesOrderDetailType_inmem`、將三個資料列插入變數中，以及將變數當做 TVP 傳遞至 `Sales.usp_InsertSalesOrder_inmem` 中。  
   
-```tsql  
+```sql  
 DECLARE @od Sales.SalesOrderDetailType_inmem,  
   @SalesOrderID uniqueidentifier,  
   @DueDate datetime2 = SYSDATETIME()  
@@ -103,7 +103,7 @@ EXEC Sales.usp_InsertSalesOrder_inmem
 ## <a name="temp-table-replacement"></a>取代 #temp 資料表  
  下列範例將示範記憶體最佳化資料表類型和資料表變數，做為預存程序之本機 #temp 資料表的替代方式。  
   
-```tsql  
+```sql  
 -- Using SQL procedure and temp table  
 CREATE TABLE #tempTable (c INT NOT NULL PRIMARY KEY NONCLUSTERED)  
   
@@ -139,7 +139,7 @@ GO
 ## <a name="creating-a-single-result-set"></a>建立單一結果集  
  下列範例將示範如何根據原生編譯預存程序中的多個查詢儲存中繼結果並建立單一結果集。 此範例將計算聯集 `SELECT c1 FROM dbo.t1 UNION SELECT c1 FROM dbo.t2`。  
   
-```tsql  
+```sql  
 CREATE DATABASE hk  
 GO  
 ALTER DATABASE hk ADD FILEGROUP hk_mod CONTAINS MEMORY_OPTIMIZED_DATA  

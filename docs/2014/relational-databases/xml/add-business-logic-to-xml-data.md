@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078491"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529120"
 ---
 # <a name="add-business-logic-to-xml-data"></a>將商務邏輯加入至 XML 資料
   將商務邏輯加入至 XML 資料的方法有好幾種：  
@@ -30,7 +30,7 @@ ms.locfileid: "48078491"
   
 -   您可以撰寫 Transact-SQL 預存程序及函數，以針對您的商業需求開始處理 XML 資料行。  
   
-## <a name="example-applying-xsl-transformation"></a>範例：套用 XSL 轉換  
+## <a name="example-applying-xsl-transformation"></a>範例套用 XSL 轉換  
  CLR 函數，請考慮**transformxml （)** 它會接受`xml`資料類型執行個體和儲存在檔案中的 XSL 轉換，將轉換套用至 XML 資料，和結果中傳回已轉換的 XML。 以下是用 C# 來撰寫的基本架構函數：  
   
 ```  

@@ -16,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b9d03099ae48bf463df82d1392e97d4729ec518a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207328"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528780"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，所有的預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，所有的預設值。  
   
- [  **@article=**] **'***文章***'**  
- 這是發行項的名稱。 *發行項*已**sysname**，所有的預設值。 針對立即更新發行集*發行項*必須**所有**; 否則預存程序會略過發行集，並回報錯誤。  
+`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，所有的預設值。 針對立即更新發行集*發行項*必須**所有**; 否則預存程序會略過發行集，並回報錯誤。  
   
- [  **@subscriber=**] **'***訂閱者***'**  
- 這是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
+`[ @subscriber = ] 'subscriber'` 是訂閱者的名稱。 *訂閱者*已**sysname**，沒有預設值。  
   
- [  **@destination_db=**] **'***destination_db***'**  
- 這是目的地資料庫的名稱。 *destination_db*已**sysname**，所有的預設值。  
+`[ @destination_db = ] 'destination_db'` 是目的地資料庫的名稱。 *destination_db*已**sysname**，所有的預設值。  
   
- [  **@for_schema_change=**] **'***for_schema_change***'**  
- 指出是否因發行集資料庫的結構描述變更而重新初始化。 *for_schema_change*已**元**，預設值是 0。 如果**0**，只要重新初始化整個發行集，而不只是某些發行項，就會重新啟動允許立即更新的發行集的作用中訂用帳戶。 這表示會因結構描述變更而重新初始化。 如果**1**，作用中訂用帳戶不會重新啟動快照集代理程式執行之前。  
+`[ @for_schema_change = ] 'for_schema_change'` 指出是否要重新初始化發生在發行集資料庫的結構描述變更。 *for_schema_change*已**元**，預設值是 0。 如果**0**，只要重新初始化整個發行集，而不只是某些發行項，就會重新啟動允許立即更新的發行集的作用中訂用帳戶。 這表示會因結構描述變更而重新初始化。 如果**1**，作用中訂用帳戶不會重新啟動快照集代理程式執行之前。  
   
- [  **@publisher=** ] **'***發行者***'**  
- 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
+`[ @publisher = ] 'publisher'` 指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不會用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
- [  **@ignore_distributor_failure=** ] *ignore_distributor_failure&lt*  
- 即使散發者不存在或已離線，也可以進行重新初始化。 *ignore_distributor_failure&lt*已**元**，預設值是 0。 如果**0**，如果 「 散發者 」 不存在或離線，重新初始化就會失敗。  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` 即使散發者不存在或已離線，則可以進行重新初始化。 *ignore_distributor_failure&lt*已**元**，預設值是 0。 如果**0**，如果 「 散發者 」 不存在或離線，重新初始化就會失敗。  
   
- [  **@invalidate_snapshot=** ] *invalidate_snapshot&lt*  
- 現有的發行集快照集失效。 *invalidate_snapshot&lt*已**元**，預設值是 0。 如果**1**，發行集產生新的快照集。  
+`[ @invalidate_snapshot = ] invalidate_snapshot` 會使現有的發行集快照集失效。 *invalidate_snapshot&lt*已**元**，預設值是 0。 如果**1**，發行集產生新的快照集。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

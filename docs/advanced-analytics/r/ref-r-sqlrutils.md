@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6bcf721158aec7c7aaddd36d0965349582e155bd
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7ccc3ad494658fc7a8f9c67472aecb1c4cddb7da
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596869"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512235"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils （SQL Server 中的 R 程式庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,16 +43,16 @@ ms.locfileid: "53596869"
 
 |函數 | 描述 |
 |------|-------------|
-|[ExecuteStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 執行 SQL 預存程序。|
+|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| 執行 SQL 預存程序。|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 取得預存程序的輸入參數的清單。| 
-|[輸入資料](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| 定義 SQL Server 中將用於 R 資料框架的資料來源。 您可以指定用來儲存輸入資料的 data.frame 名稱，以及取得資料的查詢，或預設值。 只支援簡單 SELECT 查詢。 | 
+|[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| 定義 SQL Server 中將用於 R 資料框架的資料來源。 您可以指定用來儲存輸入資料的 data.frame 名稱，以及取得資料的查詢，或預設值。 只支援簡單 SELECT 查詢。 | 
 |[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| 定義將內嵌在 T-SQL 指令碼中的單一輸入參數。 您必須提供參數的名稱和其 R 資料類型。| 
 |[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| 產生在 R 函式傳回包含 data.frame 的清單時所需的中繼資料物件。 *OutputData* 物件用來儲存取自清單的單一 data.frame 名稱。| 
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | 產生在 R 函式傳回清單時所需的中繼資料物件。 *OutputParameter* 物件會儲存清單單一成員的名稱和資料類型，並假設該成員 **不** 是資料框架。 |
 |[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | 向資料庫註冊預存程序。|
 |[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| 將查詢指派給輸入的資料參數的預存程序。| 
 |[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| 指派值給輸入參數的預存程序。| 
-|[預存程序](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 預存程序物件。|
+|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 預存程序物件。|
 
 
 ## <a name="how-to-use-sqlrutils"></a>如何使用 sqlrutils

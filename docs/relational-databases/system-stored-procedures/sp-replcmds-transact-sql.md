@@ -16,12 +16,12 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823422"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529710"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +41,14 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@maxtrans=**] *maxtrans*  
- 這是傳回相關資訊的交易數目。 *maxtrans*已**int**，預設值是**1**，指定下一個等待散發的交易。  
+`[ @maxtrans = ] maxtrans` 是要傳回相關資訊的交易數目。 *maxtrans*已**int**，預設值是**1**，指定下一個等待散發的交易。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**文章識別碼**|**int**|發行項的識別碼。|  
-|**部分指令**|**bit**|指出這是否為部分命令。|  
+|**article id**|**int**|發行項的識別碼。|  
+|**partial_command**|**bit**|指出這是否為部分命令。|  
 |**command**|**varbinary(1024)**|命令值。|  
 |**xactid**|**binary(10)**|交易識別碼。|  
 |**xact_seqno**|**varbinary(16)**|交易序號。|  
@@ -82,9 +81,9 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤訊息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

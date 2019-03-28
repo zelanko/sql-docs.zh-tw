@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 63739faaa9cf254e754c9020502ee6b589435c1d
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53431825"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510065"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理並整合 SQL Server 上的機器學習工作負載
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d058a399d25d7049dc376b0590c65f27c9d8dc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530470"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT 查詢會將結果以資料列集的形式傳回。 在查詢中指定 FOR XML 子句，您就可選擇以 XML 格式擷取 SQL 查詢的正式結果。 FOR XML 子句可以使用在最上層的查詢與子查詢中。 最上層的 FOR XML 子句只能用在 SELECT 陳述式中。 在子查詢中，FOR XML 可以在 INSERT、UPDATE 與 DELETE 陳述式中使用。 它也可用在指派陳述式中。  

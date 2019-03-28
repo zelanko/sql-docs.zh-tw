@@ -18,12 +18,12 @@ ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f88ec7714528e8ce6e019be25ca4d83e49592096
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060868"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527173"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>以覆蓋現有檔案的方式還原檔案與檔案群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中以覆蓋現有檔案的方式還原檔案與檔案群組。  
@@ -89,8 +89,8 @@ ms.locfileid: "48060868"
     |-----------------|------------|  
     |**Restore**|選取的核取方塊會指出要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
-    |**檔案類型**|指定備份中的資料類型： **[資料]**、 **[記錄檔]** 或 **[檔案資料流資料]**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
-    |**型別**|執行的備份類型： **[完整]**、 **[差異]** 或 **[交易記錄]**。|  
+    |**檔案類型**|指定備份中的資料類型：**資料**，**記錄檔**，或**Filestream 資料**。 資料表中所包含的資料位於 **[資料]** 檔案中。 交易記錄資料位於 **[記錄檔]** 中。 儲存在檔案系統上的二進位大型物件 (BLOB) 資料位於 [Filestream 資料] 檔案中。|  
+    |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
     |**Server**|執行備份作業的 Database Engine 執行個體名稱。|  
     |**檔案邏輯名稱**|檔案的邏輯名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
@@ -139,7 +139,7 @@ ms.locfileid: "48060868"
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例還原 `MyNwind` 資料庫的檔案和檔案群組，並取代任何相同名稱的現有檔案。 同時還套用了兩份交易記錄，以便將資料庫還原到目前的時間。  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyNwind.  

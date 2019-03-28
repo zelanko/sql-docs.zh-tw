@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc32145fab5305a19298c4bc9043a7a68a7f2566
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353708"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531740"
 ---
 # <a name="columns-with-a-name"></a>有名稱的資料行
   以下是具有名稱的資料列集資料行，以區分大小寫的方式對應至產生之 XML 的特定條件：  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f386c1b913efb9aa84bb96518670b96236bc5325
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067570"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530924"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>標準格式與模式限制
   XSD 模式 Facet 允許簡單類型的語彙空間限制。 當在有一個以上的可能語彙表示法之類型上設置模式限制時，有些值可能會在驗證時造成非預期的行為。  
@@ -27,7 +27,7 @@ ms.locfileid: "48067570"
   
  為了避免此情形， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會拒絕包含無法重新插入的值之 XML 文件，因為違反了其標準格式的模式限制。 例如，值 "33.000" 將不會針對具有 "33 **.0+" 模式限制之** xs:decimal\\所衍生的類型驗證。 雖然 "33.000" 符合此模式，但是標準格式 "33" 卻不符合。  
   
- 因此，您應該要特別小心當您將模式 facet 套用到衍生自下列基本類型： `boolean`， `decimal`， `float`， `double`， `dateTime`， `time`， `date`， `hexBinary`與`base64Binary`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會發出警告。  
+ 因此，當您將模式 Facet 套用到衍生自下列基本類型的類型時，應該要特別小心：`boolean`、`decimal`、`float`、`double`、`dateTime`、`time`、`date`、`hexBinary` 和 `base64Binary`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會發出警告。  
   
  不精確的浮點值序列化具有類似的問題。 由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用浮點序列化演算法，類似的值有可以共用相同的標準格式。 當序列化和重新插入浮點值時，它有可能變更其值。 在極少數的情況下，這可能會在重新插入時，產生違反下列任何 Facet 類型的值： **enumeration**、 **minInclusive**、 **minExclusive**、 **maxInclusive**或 **maxExclusive**。 為了避免此情形， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕從無法序列化和重新插入的 `xs:float` 或 `xs:double` 所衍生的任何類型值。  
   

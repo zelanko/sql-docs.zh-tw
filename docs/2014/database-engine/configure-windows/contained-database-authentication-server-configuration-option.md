@@ -16,12 +16,12 @@ ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 60b0cca44cae7e71e538fe87d5912a044209d06d
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d4efcddfb4c8cb53603614f3ffbdc3cb088990ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641379"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531620"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>自主資料庫驗證伺服器組態選項
   使用  [自主資料庫驗證] 選項，可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  
@@ -42,7 +42,7 @@ ms.locfileid: "52641379"
 ## <a name="examples"></a>範例  
  下列範例會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體上啟用自主資料庫。  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE;  

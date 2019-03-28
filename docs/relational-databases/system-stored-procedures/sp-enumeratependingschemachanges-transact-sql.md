@@ -16,12 +16,12 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 027e2f2f423024a374533decd6f35bb9bf7ccb3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760220"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530810"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=** ] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@starting_schemaversion=** ] *starting_schemaversion*  
- 這是要加入結果集當中的結構描述變更數下限。  
+`[ @starting_schemaversion = ] starting_schemaversion` 是的最低數字的結構描述變更来包含在結果集。  
   
 ## <a name="result-set"></a>結果集  
   
@@ -69,6 +67,6 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

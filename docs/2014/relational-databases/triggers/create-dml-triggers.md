@@ -19,12 +19,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4f4e9c799e7c2554807bf43083dece0f1899896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fa03aae36fd7de30f8efd88742b1e3a73907a0f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194298"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530770"
 ---
 # <a name="create-dml-triggers"></a>建立 DML 觸發程序
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 以及使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 觸發程序。  
@@ -70,7 +70,7 @@ ms.locfileid: "48194298"
   
 7.  在 [查詢編輯器] 中，將 `-- Insert statements for trigger here` 註解取代為下列陳述式：  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  

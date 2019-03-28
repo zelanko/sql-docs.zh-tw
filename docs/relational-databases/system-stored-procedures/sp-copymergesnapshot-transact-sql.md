@@ -16,12 +16,12 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f308f86de68c672a64f78da0a6b1bd54cde82a2b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133798"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526240"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是要複製快照集內容的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是快照集內容是要複製的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@destination_folder=**] **'**_destination_folder_**'**  
- 這是要複製發行集快照集內容的資料夾名稱。 *destination_folder*已**nvarchar(255)**，沒有預設值。 *Destination_folder*可以是替代位置例如另一部伺服器、 網路磁碟機或抽取式媒體 （如 Cd-rom 或抽取式磁碟）。  
+`[ @destination_folder = ] 'destination_folder'` 是要複製發行集快照集內容名稱。 *destination_folder*已**nvarchar(255)**，沒有預設值。 *Destination_folder*可以是替代位置例如另一部伺服器、 網路磁碟機或抽取式媒體 （如 Cd-rom 或抽取式磁碟）。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

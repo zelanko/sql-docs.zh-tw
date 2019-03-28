@@ -16,12 +16,12 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18ccbda41c5b7683c33bc0258a05738ab227ec69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813313"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526610"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@maxtrans** =] *maxtrans*  
- 這是傳回相關資訊的交易數目。 *maxtrans*已**int**，預設值是**1**，其中指定的暫止複寫的交易數目上限**sp_replshowcmds**傳回的資訊。  
+`[ @maxtrans = ] maxtrans` 是要傳回資訊的相關的交易數目。 *maxtrans*已**int**，預設值是**1**，其中指定的暫止複寫的交易數目上限**sp_replshowcmds**傳回的資訊。  
   
 ## <a name="result-sets"></a>結果集  
  **sp_replshowcmds**是診斷的程序會傳回它執行時所在發行集資料庫的相關資訊。  
@@ -71,9 +70,9 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="see-also"></a>另請參閱  
  [錯誤訊息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_repldone &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

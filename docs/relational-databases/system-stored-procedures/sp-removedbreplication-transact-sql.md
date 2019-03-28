@@ -16,12 +16,12 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0965c656c5c6b0cef690bb3fbaa7bbc2a7965104
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b9f9c6c8c39355ec2c381c7fa4efa340da3addf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747690"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528660"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,14 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@dbname=**] **'***dbname***'**  
- 這是資料庫的名稱。 *dbname* 是 **sysname**，預設值為 NULL。 如果是 NULL，則會使用目前資料庫。  
+`[ @dbname = ] 'dbname'` 是資料庫的名稱。 *dbname* 是 **sysname**，預設值為 NULL。 如果是 NULL，則會使用目前資料庫。  
   
- [ **@type** =]*類型*  
- 這是要移除資料庫物件的複寫類型。 *型別*已**nvarchar(5)** 而且可以是下列值之一。  
+`[ @type = ] type` 是哪一個資料庫移除物件類型。 *型別*已**nvarchar(5)** 而且可以是下列值之一。  
   
 |||  
 |-|-|  
 |**tran**|移除異動複寫發行物件。|  
-|**合併式**|移除合併式複寫發行物件。|  
+|**merge**|移除合併式複寫發行物件。|  
 |**兩者**（預設值）|移除所有的複寫發行物件。|  
   
 ## <a name="return-code-values"></a>傳回碼值  

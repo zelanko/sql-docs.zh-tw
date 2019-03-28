@@ -16,12 +16,12 @@ ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 477b61320413f83be28b9cc5e87d2c8eb26b4105
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639506"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528580"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>設定 user connections 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user connections [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **user connections** 選項會指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上可同時連接的使用者數目上限。 實際允許的使用者連接數也取決於您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，以及應用程式的限制或應用程式和硬體的限制而定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最多允許 32,767 個使用者連接。 因為 **user connections** 是動態的 (自我設定的) 選項，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會視需要自動調整最大使用者連接數，最多調整到允許的最大值。 例如，如果只有 10 個使用者登入，就配置 10 個使用者連線物件。 在大部分情況下，不需要變更這個選項的值。 預設值為 0，表示允許最大量 (32,767) 的使用者連接數。  
@@ -80,9 +80,9 @@ ms.locfileid: "52639506"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 以將 `user connections` 選項的值設定為 `325` 位使用者。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 以將 `user connections` 選項的值設定為 `325` 位使用者。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

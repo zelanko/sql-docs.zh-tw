@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362780"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533710"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 結構描述集合 (SQL Server)
   主題中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供原生的 XML 資料，透過儲存`xml`資料類型。 您可以選擇性地關聯的 XSD 結構描述的變數或資料行`xml`透過 XML 結構描述集合的型別。 XML 結構描述集合會儲存匯入的 XML 結構描述，然後用來執行下列作業：  
@@ -190,7 +190,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  在集合內的個別 XML 結構描述可以做為取得`xml`資料類型執行個體所做的第三個引數中指定的目標命名空間**xml_schema_namespace （)**。 下列範例會顯示這一點。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例輸出指定的結構描述，從 XML 結構描述集合  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>範例從 XML 結構描述集合輸出指定的結構描述  
  下列陳述式會從關聯式結構描述 dbo 中的 XML 結構描述集合 "myCollection"，輸出含有目標命名空間 "<https://www.microsoft.com/books>" 的 XML 結構描述。  
   
 ```  

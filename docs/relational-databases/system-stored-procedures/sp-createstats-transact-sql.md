@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 374fab9dca601e7cc933143643bcc5055f47bda7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803916"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534004"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,17 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@indexonly=** ] **'indexonly'**  
- 僅針對位於現有索引中而且不是任何索引定義中第一個資料行的資料行建立統計資料。 **indexonly**已**char(9)**。 預設值是 NO。  
+`[ @indexonly = ] 'indexonly'` 只有位於現有索引並不是任何索引定義中的第一個資料行的資料行建立統計資料。 **indexonly**已**char(9)**。 預設值是 NO。  
   
- [  **@fullscan=** ] **'fullscan'**  
- 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**FULLSCAN**選項。 **fullscan**已**char(9)**。  預設值是 NO。  
+`[ @fullscan = ] 'fullscan'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**FULLSCAN**選項。 **fullscan**已**char(9)**。  預設值是 NO。  
   
- [  **@norecompute=** ] **'norecompute'**  
- 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**NORECOMPUTE**選項。 **norecompute**已**char(12)**。  預設值是 NO。  
+`[ @norecompute = ] 'norecompute'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**NORECOMPUTE**選項。 **norecompute**已**char(12)**。  預設值是 NO。  
   
- [  **@incremental=** ] **「 累加 」**  
- 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**INCREMENTAL = ON**選項。 **累加**已**char(12)**。  預設值是 NO。  
+`[ @incremental = ] 'incremental'` 會使用[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)陳述式搭配**INCREMENTAL = ON**選項。 **累加**已**char(12)**。  預設值是 NO。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226400"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530230"
 ---
 # <a name="xml-data-sql-server"></a>XML 資料 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了功能強大的平台，可針對半結構化的資料管理來開發豐富的應用程式。 支援將 XML 整合至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的所有元件，並包含下列項目：  
   
--   `xml`資料型別。 XML 值可用原生方式儲存在 `xml` 資料類型資料行中，依照 XML 結構描述的集合來設定類型，或維持不具類型。 您可以對 XML 資料行建立索引。  
+-   `xml` 資料類型。 XML 值可用原生方式儲存在 `xml` 資料類型資料行中，依照 XML 結構描述的集合來設定類型，或維持不具類型。 您可以對 XML 資料行建立索引。  
   
 -   可以針對儲存在 `xml` 類型之資料行與變數中的 XML 資料，指定 XQuery 查詢。  
   

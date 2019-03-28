@@ -14,12 +14,12 @@ ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f073c73568a5ef9a48c9157dcb41b46430a5ab84
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641481"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532760"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>設定 media retention 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **media retention** 選項指定每個備份組的保留時間。 此選項協助保護備份，在指定的天數經過之前不被覆寫。 在設定 **media retention** 選項之後，每次執行備份時不需指定保留系統備份的時間長度。 預設值是 0 天，最大值是 365 天。  
@@ -77,9 +77,9 @@ ms.locfileid: "52641481"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `media retention` 選項的值設定為 `60` 天。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例示範如何使用 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 將 `media retention` 選項的值設定為 `60` 天。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

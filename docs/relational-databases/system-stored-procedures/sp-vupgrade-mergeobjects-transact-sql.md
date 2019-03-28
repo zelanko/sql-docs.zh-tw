@@ -16,12 +16,12 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97b527ef6d3b0363874d770e950106a7127c5483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 293c00f0112dd35de9a546d8c34f237a8561ec40
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819250"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532160"
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@login=**] **'***登入***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果這個參數不需要*security_mode*設為**1**，也就是 Windows 驗證。  
+`[ @login = ] 'login'` 是散發資料庫中建立新的系統物件時要使用系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果這個參數不需要*security_mode*設為**1**，也就是 Windows 驗證。  
   
- [  **@password=**] **'***密碼***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的系統管理員密碼。 *密碼*已**sysname**，預設值是 **'** （空字串）。 如果這個參數不需要*security_mode*設為**1**，也就是 Windows 驗證。  
+`[ @password = ] 'password'` 這是散發資料庫中建立新的系統物件時，使用系統管理員密碼。 *密碼*已**sysname**，預設值是 **'** （空字串）。 如果這個參數不需要*security_mode*設為**1**，也就是 Windows 驗證。  
   
- [  **@security_mode=**] **'***security_mode***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的登入安全性模式。 *security_mode*已**位元**預設值是**1**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將用於驗證。 如果**1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` 這是散發資料庫中建立新的系統物件時，使用登入安全性模式。 *security_mode*已**位元**預設值是**1**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]將用於驗證。 如果**1**，則會使用 Windows 驗證。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

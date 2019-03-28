@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509233"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533469"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
   無論您要建立新[!INCLUDE[hek_2](../../includes/hek-2-md.md)]記憶體最佳化的資料表或將現有磁碟型資料表移轉至記憶體最佳化資料表中，務必要有適當地估計的每個資料表的記憶體需求，因此您可以佈建的伺服器具有足夠記憶體。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
@@ -39,7 +39,7 @@ ms.locfileid: "52509233"
 ##  <a name="bkmk_ExampleTable"></a> 記憶體最佳化資料表範例  
  請考慮下列記憶體最佳化資料表結構描述：  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  雜湊索引的等式查閱速度很快，例如：  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  非叢集索引的範圍查閱更快，例如：  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  如果您想移轉磁碟資料表，您可以使用下列程式碼來判斷 index t1c2_index 的唯一值數目。  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  非叢集索引最適合用於範圍查閱，如下列查詢所示：  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

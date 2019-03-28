@@ -16,12 +16,12 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 151e990e6a6f353b6b35eb669300f305fd562f2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812990"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526500"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是 NULL。 此參數為必要。 指定的值為**所有**可移除所有發行集的訂閱  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是 NULL。 此參數為必要。 指定的值為**所有**可移除所有發行集的訂閱  
   
- [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。 此參數為必要。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是 NULL。 此參數為必要。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 此參數為必要。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。 此參數為必要。  
   
- [  **@reserved=**] **'***保留***'**  
- 保留供日後使用。 *保留*已**位元**，預設值是**0**。  
+`[ @reserved = ] 'reserved'` 是保留供日後使用。 *保留*已**位元**，預設值是**0**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -71,7 +67,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
  [刪除提取訂閱](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
   
   

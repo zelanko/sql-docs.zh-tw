@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355329"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534070"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>第 7 課：將資料檔案移至 Windows Azure 儲存體
   在這一課，您將學習如何將資料檔案移至 Windows Azure 儲存體 (而不是您的 SQL Server 執行個體)。 進行這一課並不需要完成第 4、5 和 6 課。  
@@ -37,7 +37,7 @@ ms.locfileid: "53355329"
   
 1.  首先，在來源電腦中建立測試資料庫，並在其中加入一些資料。  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -53,7 +53,7 @@ ms.locfileid: "53355329"
   
 2.  請執行下列程式碼：  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
     -- the new location of the file in Windows Azure Storage container.   
@@ -68,7 +68,7 @@ ms.locfileid: "53355329"
   
 4.  然後將資料庫設為離線。  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
@@ -81,7 +81,7 @@ ms.locfileid: "53355329"
   
 6.  然後將資料庫設為線上。  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f1ec180247a3df15af58f95e041a0c426a35cdb4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362793"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532810"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>以萬用字元 (*) 指定名稱的資料行
   如果以萬用字元 (\*) 指定資料行名稱，則插入該資料行內容的方式，就像是沒有指定資料行名稱一樣。 如果此資料行是非 `xml` 類型的資料行，則會以文字節點插入資料行內容，如下列範例所示：  

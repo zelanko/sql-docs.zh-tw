@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bafe35efbcc1f5dae7cea0775464deac3c8ed7f8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351080"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531110"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援[xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql)可讓您選擇性地要求的 FOR XML 查詢結果傳回為`xml`藉由指定 TYPE 指示詞的資料類型。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、 將結果指派給`xml`類型變數或撰寫[巢狀 FOR XML 查詢](use-nested-for-xml-queries.md)。  

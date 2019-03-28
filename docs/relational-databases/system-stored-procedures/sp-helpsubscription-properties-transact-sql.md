@@ -16,12 +16,12 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81f2878c5573174b7f50f15f2ef2adf9329021a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808280"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527470"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher=**] **'***publisher***'**  
- 這是發行者的名稱。 *發行者*已**sysname**，預設值是**%**，傳回所有發行者的資訊。  
+`[ @publisher = ] 'publisher'` 是 「 發行者 」 的名稱。 *發行者*已**sysname**，預設值是**%**，傳回所有發行者的資訊。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**，表示傳回所有發行者資料庫的相關資訊。  
+`[ @publisher_db = ] 'publisher_db'` 是發行者資料庫的名稱。 *publisher_db*已**sysname**，預設值是**%**，表示傳回所有發行者資料庫的相關資訊。  
   
- [ **@publication=**] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是**%**，表示傳回所有發行集的相關資訊。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**%**，表示傳回所有發行集的相關資訊。  
   
- [  **@publication_type=**] *publication_type*  
- 是發行集的類型。*publication_type*是**int**，預設值是 NULL。 如果提供， *publication_type*必須是下列值之一：  
+`[ @publication_type = ] publication_type` 是發行集的類型。*publication_type*是**int**，預設值是 NULL。 如果提供， *publication_type*必須是下列值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -65,12 +61,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**publication_type**|**int**|發行集的類型：<br /><br /> **0** = 交易式<br /><br /> **1** = 快照集<br /><br /> **2** = 合併式|  
 |**publisher_login**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**publisher_password**|**nvarchar(524)**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證 (加密) 的密碼。|  
 |**publisher_security_mode**|**int**|發行者端所用的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
-|**散發者**|**sysname**|散發者的名稱。|  
+|**distributor**|**sysname**|散發者的名稱。|  
 |**distributor_login**|**sysname**|散發者登入。|  
 |**distributor_password**|**nvarchar(524)**|散發者密碼 (加密)。|  
 |**distributor_security_mode**|**int**|散發者端所用的安全性模式：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1** = Windows 驗證|  
@@ -87,13 +83,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**offload_agent**|**bit**|指定是否能從遠端啟動代理程式。 如果**0**，無法從遠端啟動代理程式。|  
 |**offload_server**|**sysname**|指定遠端啟用所用之伺服器的網路名稱。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定儲存快照集檔案的資料夾路徑。|  
-|**use_web_sync&lt**|**bit**|如果訂用帳戶可以同步處理，透過 HTTPS 的值**1**表示啟用這項功能。|  
-|**應**|**nvarchar(260)**|代表 Web 同步處理之複寫接聽程式位置的 URL。|  
-|**internet_url**|**nvarchar(128)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
-|**internet_login**|**nvarchar(524)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
+|**use_web_sync**|**bit**|如果訂用帳戶可以同步處理，透過 HTTPS 的值**1**表示啟用這項功能。|  
+|**internet_url**|**nvarchar(260)**|代表 Web 同步處理之複寫接聽程式位置的 URL。|  
+|**internet_login**|**nvarchar(128)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
+|**internet_password**|**nvarchar(524)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**int**|連接到主控 Web 同步處理，值為 Web 伺服器時使用的驗證模式**1**表示 Windows 驗證，並針對**0**表示基本驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
-|**主機名稱**|**nvarchar(128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
+|**hostname**|**nvarchar(128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

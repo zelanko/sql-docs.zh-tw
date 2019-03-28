@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125367"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531890"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'**_發行集_**'**  
- 這是要缷除發行項的發行集名稱。 *發行集*已**sysname**，沒有預設值。  
+`[ @publication = ] 'publication'` 是要卸除發行項的發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [  **@article=**] **'**_文章_**'**  
- 這是給定發行集所要卸除的發行項名稱。 *發行項*已**sysname**，沒有預設值。 如果**所有**，移除指定的合併式發行集的所有現有發行項。 即使*一文*是**所有**，發行集仍必須先卸除個別發行項。  
+`[ @article = ] 'article'` 是要從給定的發行集卸除的發行項的名稱。 *發行項*已**sysname**，沒有預設值。 如果**所有**，移除指定的合併式發行集的所有現有發行項。 即使*一文*是**所有**，發行集仍必須先卸除個別發行項。  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- 指出是否在未連接到散發者的情況之下，執行這個預存程序。 *ignore_distributor*已**位元**，預設值是**0**。  
+`[ @ignore_distributor = ] ignore_distributor` 指出是否要將此預存程序執行而不需要連線到散發者。 *ignore_distributor*已**位元**，預設值是**0**。  
   
- [  **@reserved=**]*保留*  
- 保留供日後使用。 *保留*已**nvarchar(20)**，預設值是 NULL。  
+`[ @reserved = ] reserved` 是保留供日後使用。 *保留*已**nvarchar(20)**，預設值是 NULL。  
   
- [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 啟用或停用使快照集失效的能力。 *force_invalidate_snapshot*已**位元**，預設值**0**。  
   
  **0**指定合併發行項的變更不會使快照集失效。  
   
  **1**表示合併發行項的變更可能使快照集失效，如果這種情況下，值為**1**提供將出現新的快照集的權限。  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 認可卸除發行項需要重新初始化現有的訂閱。 *force_reinit_subscription*已**位元**，預設值是**0**。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 認可卸除發行項需要重新初始化現有的訂用帳戶。 *force_reinit_subscription*已**位元**，預設值是**0**。  
   
  **0**指定卸除發行項不會不會使訂閱重新初始化。  
   
  **1**表示卸除發行項會使現有的訂閱重新初始化，並提供發生之訂閱重新初始化的權限。  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- 僅供內部使用。  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 僅供內部使用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -165,7 +158,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [刪除發行項](../../relational-databases/replication/publish/delete-an-article.md)   
  [在現有發行集中加入和卸除發行項](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

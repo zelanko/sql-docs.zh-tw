@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650773"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531760"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@sent_before=** ] **'***sent_before***'**  
- 刪除 以前的日期和時間做為提供的電子郵件*sent_before*引數。 *sent_before*已**datetime**但為預設值是 NULL。 NULL 表示所有日期。  
+`[ @sent_before = ] 'sent_before'` 刪除 以前的日期和時間做為提供的電子郵件*sent_before*引數。 *sent_before*已**datetime**但為預設值是 NULL。 NULL 表示所有日期。  
   
- [ **@sent_status=** ] **'***sent_status***'**  
- 刪除所指定之類型的電子郵件*sent_status*。 *sent_status*已**varchar(8)** 沒有預設值。 有效的項目是**傳送**，**未傳送**，**重試**，以及**失敗**。 NULL 表示所有狀態。  
+`[ @sent_status = ] 'sent_status'` 刪除所指定之類型的電子郵件*sent_status*。 *sent_status*已**varchar(8)** 沒有預設值。 有效的項目是**傳送**，**未傳送**，**重試**，以及**失敗**。 NULL 表示所有狀態。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -89,9 +87,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sysmail_allitems &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

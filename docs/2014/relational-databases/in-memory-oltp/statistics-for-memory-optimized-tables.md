@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136068"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530830"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
   查詢最佳化工具會使用有關資料行的統計資料來建立可改善查詢效能的查詢計劃。 統計資料是從資料庫中的資料表收集，並且儲存在資料庫中繼資料內。  
@@ -41,7 +41,7 @@ ms.locfileid: "48136068"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>部署記憶體最佳化資料表時統計資料的方針  
  為確保查詢最佳化工具建立查詢計劃時擁有最新的統計資料，請利用下列五個步驟部署記憶體最佳化資料表：  
   
-1.  建立資料表及索引。 索引是在以內嵌方式指定`CREATE TABLE`陳述式。  
+1.  建立資料表及索引。 索引是在 `CREATE TABLE` 陳述式中以內嵌方式指定。  
   
 2.  將資料載入資料表中。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136068"
   
 4.  建立存取資料表的預存程序。  
   
-5.  執行工作負載，可以包含混合的原生編譯和解譯[!INCLUDE[tsql](../../../includes/tsql-md.md)]預存程序，以及隨選批次。  
+5.  執行工作負載，其中包含混合原生編譯和解譯的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序以及特定批次。  
   
  在您載入資料並更新統計資料後建立原生編譯預存程序，可確保最佳化工具能夠提供統計資料給記憶體最佳化資料表。 這樣將可確保編譯程序時，查詢計劃能夠保持效率。  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  若要更新目前資料庫中所有記憶體最佳化資料表的統計資料，請執行下列指令碼：  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  下列範例會報告記憶體最佳化資料表的統計資料上次更新時間。 這項資訊可協助您決定是否需要更新統計資料。  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

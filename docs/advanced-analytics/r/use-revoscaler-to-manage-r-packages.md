@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645357"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510785"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數來尋找或 SQL Server 上的安裝 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -114,7 +114,7 @@ print(sqlPackagePaths)
 
 **結果**
 
-"C: / Program Files/Microsoft SQL Server/MSSQL14。MSSQLSERVER/R_SERVICES/程式庫/RevoScaleR"
+"C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
 
 > [!TIP]
 > 如果您已啟用這個選項可以看出 SQL 主控台輸出，您可能會收到狀態訊息之前的函式從`print`陳述式。 完成測試您的程式碼之後，設定`consoleOutput`來計算內容建構函式，若要排除的訊息，則為 FALSE。

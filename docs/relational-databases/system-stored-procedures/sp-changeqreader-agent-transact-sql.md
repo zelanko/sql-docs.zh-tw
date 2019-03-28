@@ -16,12 +16,12 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21da0ca61d2d9075fe7c962156443fd85f3ebefd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 994ec0ee8fa6cd5424f808d884eb3355ffdc22ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135121"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526120"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@job_login**=] **'**_job_login_**'**  
- 這是用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的登入。 *job_login*已**nvarchar(257)**，預設值是 NULL。  
+`[ @job_login = ] 'job_login'` 登入[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 帳戶下執行的代理程式。 *job_login*已**nvarchar(257)**，預設值是 NULL。  
   
- [ **@job_password**=] **'**_job_password_**'**  
- 這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*已**sysname**，預設值是 NULL。  
+`[ @job_password = ] 'job_password'` 這是代理程式所執行的 Windows 帳戶的密碼。 *job_password*已**sysname**，預設值是 NULL。  
   
- [  **@frompublisher=** ] *frompublisher*  
- 指出程序是否正在發行者端執行。 *frompublisher* bit，預設值是**0**。 值為**1**表示，從發行集資料庫的發行者上執行此程序。  
+`[ @frompublisher = ] frompublisher` 是在 「 發行者 」，正在執行的程序。 *frompublisher* bit，預設值是**0**。 值為**1**表示，從發行集資料庫的發行者上執行此程序。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

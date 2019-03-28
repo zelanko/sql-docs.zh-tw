@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369560"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529330"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
   在 FOR XML 子句中，您可以要求您的查詢將內嵌結構描述連同查詢結果一起傳回。 如果您要的是 XDR 結構描述，請在 FOR XML 子句中使用 XMLDATA 關鍵字。 而如果您要的是 XSD 結構描述，則請使用 XMLSCHEMA 關鍵字。  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>元素名稱衝突  
  在 FOR XML 中，可以使用相同的名稱來表示兩個子元素。 例如，下列查詢會擷取產品的 ListPrice 和 DealerPrice 值，但此查詢對這兩個資料行指定相同的別名：Price。 因此，產生的資料列集將具有兩個相同名稱的資料行。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>案例 1:兩個子元素都是相同類型的非索引鍵資料行，而且可以是 NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>案例 1：兩個子元素都是非索引鍵資料行且類型相同，並且可以是 NULL  
  在下列查詢中，兩個子元素都是相同類型的非索引鍵之索引資料行，而且可以是 NULL。  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>案例 2:一個索引鍵和一個型別相同的非索引鍵資料行  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>案例 2：一個索引鍵資料行和一個非索引鍵資料行且類型相同  
  下列查詢說明類型相同的索引鍵資料行和非索引鍵之索引資料行。  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  請注意，在內嵌 XSD 結構描述中，對應於 Col2 的 <`Col`> 元素，其 minOccurs 是設為 0。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>案例 3:這兩個不同的類型和對應的資料行元素可以是 NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>案例 3：兩個不同類型的元素，且對應的資料行可以是 NULL  
  下列查詢是針對案例 2 所顯示的範例資料表而指定：  
   
 ```  

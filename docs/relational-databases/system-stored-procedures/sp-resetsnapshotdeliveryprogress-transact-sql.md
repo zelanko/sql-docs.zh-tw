@@ -16,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773710"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530190"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@verbose_level**=] *verbose_level*  
- 指定傳回的資訊量。 *verbose_level*已**int**，預設值是**1**。 值**1**表示錯誤是傳回如果無法取得必要的鎖定上**MSsnapshotdeliveryprogress**資料表，並**0**表示會傳回任何錯誤。  
+`[ @verbose_level = ] verbose_level` 指定傳回的資訊量。 *verbose_level*已**int**，預設值是**1**。 值**1**表示錯誤是傳回如果無法取得必要的鎖定上**MSsnapshotdeliveryprogress**資料表，並**0**表示會傳回任何錯誤。  
   
- [ **@drop_table**=] **'***drop_table***'**  
- 要卸除或截斷資料表包含有關進度的快照集。*drop_table*是**nvarchar(5)**，預設值是**FALSE**。 False 表示截斷資料表，而 True 表示卸除資料表。  
+`[ @drop_table = ] 'drop_table'` 要卸除或截斷資料表包含有關進度的快照集。*drop_table*是**nvarchar(5)**，預設值是**FALSE**。 False 表示截斷資料表，而 True 表示卸除資料表。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

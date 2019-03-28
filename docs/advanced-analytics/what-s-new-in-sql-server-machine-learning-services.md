@@ -3,19 +3,19 @@ title: 新功能-SQL Server 機器學習服務 |Microsoft Docs
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
 ms.date: 03/27/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be7ecb1f4a1a42c4018e6a549a7ad2ea76b04ef5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494130"
+ms.locfileid: "58509825"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能
 

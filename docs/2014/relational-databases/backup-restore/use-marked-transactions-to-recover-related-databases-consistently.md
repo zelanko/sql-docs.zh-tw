@@ -20,12 +20,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073128"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532580"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>使用標示的異動以一致的方式復原相關資料庫 (完整復原模式)
   本主題只與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
@@ -89,7 +89,7 @@ ms.locfileid: "48073128"
 ### <a name="examples"></a>範例  
  下列範例會將交易記錄還原到名為 `ListPriceUpdate`的標示交易中之標示。  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  例如，假設有一個資料分割資料庫存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的多個執行個體上。 每一個執行個體上都有一個名為 `coyote`的資料庫。 首先，在每個資料庫中建立預存程序，例如 `sp_SetMark`。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  接下來，建立包含交易的預存程序 `sp_MarkAll` ，它會在每一個資料庫中放入標示。 `sp_MarkAll` 可以從任何執行個體來執行。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  
@@ -180,6 +180,6 @@ GO
  [套用交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [完整資料庫備份 &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [復原包含標示之交易的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
+ [復原包含標記之異動的相關資料庫](recovery-of-related-databases-that-contain-marked-transaction.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358700"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530430"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
   交易效能報告工具 (請參閱[判斷是否將資料表或預存程序應該移植至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 會通知您，哪些解譯的預存程序，在您的資料庫中會有匯出使用原生編譯。 識別您要匯出使用原生編譯的預存程序之後，即可使用原生編譯 Advisor 協助您將解譯的預存程序移轉到原生編譯。 如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](natively-compiled-stored-procedures.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "53358700"
 ## <a name="code-sample"></a>程式碼範例  
  下列範例顯示解譯的預存程序及原生編譯的對等預存程序。 該範例假設目錄名為 c:\data。  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

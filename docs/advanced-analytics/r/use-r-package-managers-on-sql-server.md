@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7ef1d63394da8bf084fabb93382ee565208e137
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432881"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510385"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>使用 SQL Server 上安裝 R 套件的 R 套件管理員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

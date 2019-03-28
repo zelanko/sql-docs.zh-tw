@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/19/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 54b92e356b1e4d28e94cdb42fa1e14b1de9a1a2d
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 22304bb9ec142e8f0c61797ed6907c0aa78c34f8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161855"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511375"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>下載 SQL Server 資料庫內分析的累計更新的執行個體的封包
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49978eaceed27e2cfd363cc6a4654d581a91e4c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372690"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530070"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢組成 XML
   以下範例會查詢 `Production.Product` 資料表，以擷取特定產品的 `ListPrice` 及 `StandardCost` 值。 兩個價格都會以 <`Price`> 元素傳回，而且每個 <`Price`> 元素都有一個 `PriceType` 屬性，使查詢值得關注。  

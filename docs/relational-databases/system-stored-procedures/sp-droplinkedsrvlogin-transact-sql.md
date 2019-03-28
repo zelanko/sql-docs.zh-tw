@@ -1,5 +1,5 @@
 ---
-title: sp_droplinkedsrvlogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d5d2dbded8a1dff8a0445dbafd64b017640357f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 505e75dfab9ea4e2ba44d8ef12f0ba5c7eecbde2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843176"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533510"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@rmtsrvname =** ] **'***rmtsrvname&lt***'**  
- 連結的伺服器名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應所套用。 *rmtsrvname&lt*已**sysname**，沒有預設值。 *rmtsrvname&lt*必須已經存在。  
+`[ @rmtsrvname = ] 'rmtsrvname'` 連結的伺服器名稱，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應所套用。 *rmtsrvname&lt*已**sysname**，沒有預設值。 *rmtsrvname&lt*必須已經存在。  
   
- [  **@locallogin =** ] **'***locallogin***'**  
- 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是對應至連結伺服器的本機伺服器登入*rmtsrvname&lt*。 *locallogin*已**sysname**，沒有預設值。 對應*locallogin*要*rmtsrvname&lt*必須已經存在。 如果是 NULL，所建立的預設對應**sp_addlinkedserver**，它會對應至登入連結的伺服器上的本機伺服器上的所有登入已刪除。  
+`[ @locallogin = ] 'locallogin'` 已[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是對應至連結伺服器的本機伺服器登入*rmtsrvname&lt*。 *locallogin*已**sysname**，沒有預設值。 對應*locallogin*要*rmtsrvname&lt*必須已經存在。 如果是 NULL，所建立的預設對應**sp_addlinkedserver**，它會對應至登入連結的伺服器上的本機伺服器上的所有登入已刪除。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -78,7 +76,7 @@ EXEC sp_droplinkedsrvlogin 'Accounts', NULL;
   
 ## <a name="see-also"></a>另請參閱  
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

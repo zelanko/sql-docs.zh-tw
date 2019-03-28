@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358580"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533240"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>使用中次要：可讀取的次要複本 (Always On 可用性群組）
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用中次要功能包含對一個或多個次要複本進行唯讀存取的支援 (*「可讀取的次要複本」*(Readable Secondary Replicas))。 可讀取的次要複本允許對其所有次要資料庫進行唯讀存取。 但可讀取的次要資料庫並不會設定為唯讀。 這些資料庫是動態的。 隨著對應主要資料庫變更而衍生的給定次要資料庫變更，會套用至次要資料庫。 對於一般次要複本而言，次要資料庫中的資料 (包含持久記憶體最佳化資料表) 幾近即時。 此外，全文檢索索引會與次要資料庫進行同步處理。 在許多情況下，主要資料庫和對應次要資料庫之間的資料延遲只在幾秒鐘內。  
@@ -210,7 +210,7 @@ GO
   
 -   對於只在記憶體最佳化資料表上執行的查詢，支援的隔離等級只有快照集、可重複讀取和可序列化。 除非您在資料庫層級啟用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 選項，否則所有具有讀取未認可或讀取認可隔離等級的查詢都會傳回錯誤。  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -228,7 +228,7 @@ GO
   
 -   記憶體最佳化資料表不支援任何鎖定提示。 例如，下列所有查詢都會失敗並出現錯誤。 僅允許 NOLOCK 提示，而搭配記憶體最佳化資料表使用時，則為 NOOP。  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -240,7 +240,7 @@ GO
   
 -   跨容器交易的工作階段隔離等級的交易 「 快照集 」 不支援記憶體最佳化資料表的存取。 例如，  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

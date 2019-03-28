@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab482a70374c9a11256719811db02dd4eb1586e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f97a1f480b360270d803c502dd40a6e1653b3935
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663236"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526440"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
- 這是全文檢索目錄的名稱。 每個資料庫的目錄名稱都必須是唯一的。 *fulltext_catalog_name*已**sysname**。  
+`[ @ftcat = ] 'fulltext_catalog_name'` 是全文檢索目錄的名稱。 每個資料庫的目錄名稱都必須是唯一的。 *fulltext_catalog_name*已**sysname**。  
   
- [  **@action=**] **'***動作***'**  
- 這是要執行的動作。 *動作*已**varchar （20)**，而且可以是下列值之一。  
+`[ @action = ] 'action'` 是要執行的動作。 *動作*已**varchar （20)**，而且可以是下列值之一。  
   
 > [!NOTE]  
 >  您可以依照需要來建立、卸除和修改全文檢索目錄。 不過，請避免同時變更多個目錄的結構描述。 可以使用執行這些動作**sp_fulltext_table**預存程序，這是建議的方式。  
@@ -64,8 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**停止**|停止的索引母體擴展*fulltext_catalog_name*。 如果目錄不存在，就會出現錯誤。 如果母體擴展已停止，便不會顯示任何警告。|  
 |**Rebuild**|重建*fulltext_catalog_name*。 重建目錄時，會刪除現有的目錄，並就地建立新的目錄。 具有全文檢索索引參考的所有資料表都會與新目錄產生關聯。 重建會重設資料庫系統資料表中的全文檢索中繼資料。<br /><br /> 如果變更追蹤為 OFF，重建並不會重新擴展新建的全文檢索目錄。 在此情況下，若要重新擴展，請執行**sp_fulltext_catalog**具有**start_incremental**或是**start_incremental**動作。|  
   
- [ **@path=**] **'***root_directory***'**  
- 為根目錄 （不是完整實體路徑）**建立**動作。 *root_directory*已**nvarchar(100)** 且具有預設值是 NULL，表示將在安裝期間指定的預設位置。 這是在 Mssql 目錄; 的 Ftdata 子目錄例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData。 指定的根目錄必須在相同電腦的磁碟機中，它不只是磁碟機代號，也不能是相對路徑。 網路磁碟機、卸除式磁碟機、磁碟片及 UNC 路徑都不在支援範圍內。 全文檢索目錄必須建立在與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的本機硬碟中。  
+`[ @path = ] 'root_directory'` 為根目錄 （不是完整實體路徑）**建立**動作。 *root_directory*已**nvarchar(100)** 且具有預設值是 NULL，表示將在安裝期間指定的預設位置。 這是在 Mssql 目錄; 的 Ftdata 子目錄例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\FTData。 指定的根目錄必須在相同電腦的磁碟機中，它不只是磁碟機代號，也不能是相對路徑。 網路磁碟機、卸除式磁碟機、磁碟片及 UNC 路徑都不在支援範圍內。 全文檢索目錄必須建立在與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相關聯的本機硬碟中。  
   
  **@path** 時才有效*動作*是**建立**。 針對動作以外**建立**(**停止**，**重建**等等)， **@path**必須是 NULL 或省略。  
   
@@ -139,9 +136,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)  
   

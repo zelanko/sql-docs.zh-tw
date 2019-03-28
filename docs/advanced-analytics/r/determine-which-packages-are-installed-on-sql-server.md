@@ -6,15 +6,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/08/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 47badb15b5f5a2d0eabc63b8fd1be3e83a0caffb
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3e7dd580cd7d03235be704a7c46e5171a6526ae8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645367"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512995"
 ---
 #  <a name="get-r-and-python-package-information"></a>取得 R 和 Python 套件資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

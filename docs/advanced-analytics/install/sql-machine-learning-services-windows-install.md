@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 00cc9989730825136ac1ce98f1250063c37144fb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4cd076ae79db7537235aa2a57fe4992ac0993473
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017974"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510805"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安裝 SQL Server Machine Learning 在 Windows 上的服務
 

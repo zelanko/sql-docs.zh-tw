@@ -1,5 +1,5 @@
 ---
-title: 範例：指定 ID 和 IDREFS 指示詞 | Microsoft Docs
+title: 範例指定 ID 和 IDREFS 指示詞 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27c4cd38ee8995e9d60bf2f80297c1140e53f5d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056268"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531250"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>範例：指定 ID 和 IDREFS 指示詞
-  元素屬性可以指定為`ID`型別屬性，而`IDREFS`屬性然後可以用來參考它。 這會啟用內部文件連結，而且與關聯式資料庫中的主索引鍵及外部索引鍵關聯性類似。  
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>範例指定 ID 和 IDREFS 指示詞
+  元素屬性可以指定為 `ID` 類型屬性，然後可以使用 `IDREFS` 屬性來參考它。 這會啟用內部文件連結，而且與關聯式資料庫中的主索引鍵及外部索引鍵關聯性類似。  
   
  此範例說明如何使用 `ID` 及 `IDREFS` 指示詞，建立 `ID` 及 `IDREFS` 類型的屬性。 因為 ID 不能是整數值，所以此範例中的 ID 值會經過轉換。 換句話說，會經過類型轉換。 ID 值會使用前置詞。  
   

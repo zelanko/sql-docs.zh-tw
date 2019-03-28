@@ -16,12 +16,12 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88cf393ac488f6e6f4c078b9bd346a3e6cb53204
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0576f180809a4432af022d278867d847c8087dd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823052"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526210"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publication** = ] **'***publication***'**  
- 這是發行集的名稱。 *發行集*已**sysname**，預設值是**所有**。 當指定時，只有該發行集的識別範圍才會還原。  
+`[ @publication = ] 'publication'` 是發行集名稱。 *發行集*已**sysname**，預設值是**所有**。 當指定時，只有該發行集的識別範圍才會還原。  
   
- [ **@article** =] **'***文章***'**  
- 這是發行項的名稱。 *發行項*已**sysname**，預設值是**所有**。 當指定時，只有該發行項的識別範圍才會還原。  
+`[ @article = ] 'article'` 是發行項的名稱。 *發行項*已**sysname**，預設值是**所有**。 當指定時，只有該發行項的識別範圍才會還原。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -57,7 +55,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_restoremergeidentityrange**。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addmergearticle &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   

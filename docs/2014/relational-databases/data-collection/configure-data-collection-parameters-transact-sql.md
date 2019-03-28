@@ -12,12 +12,12 @@ ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51e0b8360c0b5aa6662fb317a62d7ce52bf4fc41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b9cdabe3a74570c44eba952137d6b9efb856a731
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748900"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530950"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>設定資料收集參數 (Transact-SQL)
   在您建立自訂收集組之前，必須先設定資料收集參數。 您可以使用資料收集器所提供的預存程序來完成此作業。 完成這項工作需要在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用查詢編輯器來進行以下程序。  
@@ -31,7 +31,7 @@ ms.locfileid: "52748900"
   
 2.  在查詢編輯器中，發出下列陳述式。  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     EXEC sp_syscollector_set_warehouse_instance_name N'INSTANCE_NAME';-- where instance name is the name of the SQL Server instance  
     EXEC sp_syscollector_set_warehouse_database_name N'MDW';  
