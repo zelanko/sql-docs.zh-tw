@@ -2,7 +2,7 @@
 title: 下載並安裝 sqlpackage |Microsoft Docs
 description: 下載並安裝適用於 Windows、 macOS 或 Linux 的 sqlpackage
 ms.custom: tools|sos
-ms.date: 06/18/2018
+ms.date: 06/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7620050a28029010a4e0f0fd2e125a17a84721a0
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737139"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527210"
 ---
 # <a name="download-and-install-sqlpackage"></a>下載並安裝 sqlpackage
 
@@ -29,7 +29,7 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
 |macOS 的.NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2069126)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
 |Linux 的.NET Core （預覽）|[壓縮檔](https://go.microsoft.com/fwlink/?linkid=2069122)|2019 年 2 月 1 日 | 18.1 |15.0.4316.1|
 
-如需最新版本的詳細資訊，請參閱[版本資訊](sqlpackage-release-notes.md)。
+如需最新版本的詳細資訊，請參閱[版本資訊](release-notes-sqlpackage.md)。
 
 ## <a name="get-sqlpackage-for-windows"></a>取得 Windows sqlpackage
 
@@ -75,20 +75,20 @@ Windows、 macOS 和 Linux 上，執行 sqlpackage。
    > [!NOTE]
    > 在 Debian、 Redhat 和 Ubuntu 上，您可能有遺失相依性。 若要安裝這些相依性，視您的 Linux 版本而定，使用下列命令：
 
-   **Debian:**
+   **Debian：**
 
    ```bash
    sudo apt-get install libunwind8
    ```
 
-   **Redhat:**
+   **Redhat：**
 
    ```bash
    yum install libunwind
    yum install libicu
    ```
 
-   **Ubuntu:**
+   **Ubuntu：**
 
    ```bash
    sudo apt-get install libunwind8
