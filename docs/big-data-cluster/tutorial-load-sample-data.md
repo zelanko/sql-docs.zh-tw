@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017844"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566517"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 2019 巨量資料叢集
 
@@ -115,4 +115,18 @@ ms.locfileid: "57017844"
 
 ## <a name="next-steps"></a>後續步驟
 
-啟動程序的指令碼執行之後，您的巨量資料叢集具有 HDFS 資料與範例資料庫。 若要開始探索此資料與巨量資料叢集，請參閱[教學課程](tutorial-query-hdfs-storage-pool.md)這一節。
+啟動程序的指令碼執行之後，您的巨量資料叢集具有 HDFS 資料與範例資料庫。 下列教學課程使用範例資料來示範巨量資料叢集功能：
+
+資料虛擬化：
+
+- [教學課程：查詢 HDFS 中的 SQL Server 的巨量資料叢集](tutorial-query-hdfs-storage-pool.md)
+- [教學課程：從 SQL Server 的巨量資料叢集查詢 Oracle](tutorial-query-oracle.md)
+
+資料擷取：
+
+- [教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)
+- [教學課程：將資料內嵌到 Spark 作業的 SQL Server 資料集區](tutorial-data-pool-ingest-spark.md)
+
+Notebook:
+
+- [教學課程：SQL Server 2019 巨量資料叢集上執行 notebook 範例](tutorial-notebook-spark.md)

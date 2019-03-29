@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392716"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566377"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>如何在 Azure Data Studio 中使用 notebook
 
@@ -45,9 +45,9 @@ ms.locfileid: "58392716"
 
 ## <a name="supported-kernels-and-attach-to-context"></a>支援的核心，並將附加至內容
 
-在 Azure Data Studio Notebook 安裝原生支援 SQL 核心。 如果您是 SQL 開發人員並且想要使用 Notebook 則此項將為您選擇的核心。 
+在 Azure Data Studio Notebook 安裝原生支援 SQL 核心。 如果您是 SQL 開發人員並且想要使用 Notebook，則此項將為您選擇的核心。 
 
-SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是 PostgreSQL 開發人員，而且想要連線到 PostgreSQL 伺服器然後下載[ **PostgreSQL 擴充功能**](postgres-extension.md) Azure Data Studio 擴充功能 marketplace 中。
+SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是 PostgreSQL 開發人員，並想要連線到 PostgreSQL 伺服器，然後下載[ **PostgreSQL 擴充功能**](postgres-extension.md) Azure Data Studio 擴充功能 marketplace 中。
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -116,7 +116,7 @@ SQL 核心也可用來連線到 PostgreSQL 伺服器執行個體。 如果您是
 
 在 Azure Data Studio 中開啟 notebook 是在預設**信任**。
 
-如果您從其他來源開啟 Notebook 會以開啟它**非信任**模式，然後您可以讓**信任**。
+如果您開啟 Notebook 來自其他來源時，它將會開啟**非信任**模式，然後您可以讓**信任**。
 
 ### <a name="save"></a>儲存 
 
