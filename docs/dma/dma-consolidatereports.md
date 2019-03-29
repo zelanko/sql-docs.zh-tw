@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198197"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618175"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -72,7 +72,11 @@ ms.locfileid: "58198197"
 
 ### <a name="if-using-a-csv-file"></a>如果使用 CSV 檔案
 > [!IMPORTANT]
+>
 > 請確定清查檔案會儲存為逗號分隔 (CSV) 檔案。
+>
+> 針對預設執行個體，設定執行個體名稱為 MSSQLServer。
+>
 
 當使用 csv 檔案匯入資料，請確定只有兩個資料行的資料-**執行個體名稱**並**資料庫名稱**，且資料行沒有標頭資料列。
  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617871"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618295"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,26 +56,26 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>引數  
- *database_id* |NULL |0 |預設值  
+ *database_id* | NULL | 0 | DEFAULT  
  資料庫的識別碼。 *database_id*已**smallint**。 有效的輸入為資料庫的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。 如果您指定 NULL *database_id*，您也必須指定，則為 NULL *object_id*， *index_id*，以及*partition_number*。  
   
  內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 在不指定資料庫名稱的情況下使用 DB_ID 時，目前資料庫的相容性層級必須是 90 或 90 以上。  
   
- *object_id* |NULL |0 |預設值  
- 這是索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。  
+ *object_id* | NULL | 0 | DEFAULT  
+ 這是索引所在之資料表或檢視表的物件識別碼。 *object_id* 是 **int**。  
   
  有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。 自[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，有效的輸入，也包含的 service broker 佇列名稱或佇列內部資料表名稱。 套用預設參數的時間 （也就是所有物件，所有索引等），結果集中包含的所有佇列的片段資訊。  
   
  請指定 NULL 來傳回指定之資料庫中的所有資料表和檢視表的資訊。 如果您指定 NULL *object_id*，您也必須指定，則為 NULL *index_id*並*partition_number*。  
   
- *index_id* | 0 |NULL |-1 |預設值  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  這是索引的識別碼。 *index_id*已**int**。有效輸入如下的索引，0 的 ID 編號，如果*object_id*是堆積，NULL，-1 或預設值。 預設值為-1。 NULL，-1，且預設會在此內容中的對等值。  
   
  請指定 NULL 來傳回基底資料表或檢視表的所有索引資訊。 如果您指定 NULL *index_id*，您也必須指定，則為 NULL *partition_number*。  
   
- *partition_number* |NULL |0 |預設值  
+ *partition_number* | NULL | 0 | DEFAULT  
  這是物件的分割區編號。 *partition_number*已**int**。有效輸入如下*partion_number*索引或堆積中，NULL，0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。  
   
  請指定 NULL 來傳回主控物件之所有分割區的相關資訊。  
@@ -197,7 +197,7 @@ GO
   
 -   以 ALTER INDEX REBUILD 代替 DBCC DBREINDEX，以線上或離線方式重建索引。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
- 單獨片段的這個理由，不足以重新組織或重建索引。 片段的主要影響是降低掃描索引時的頁面預先讀取的輸送量。 這樣會使得回應時間更慢。 如果片段化的資料表或索引上的查詢工作負載不含掃描在內 (因為工作負載主要是單一查閱)，移除片段不會有任何影響。 如需詳細資訊，請參閱此[Microsoft 寍鯚](https://go.microsoft.com/fwlink/?linkid=31012)。  
+ 單獨片段的這個理由，不足以重新組織或重建索引。 片段的主要影響是降低掃描索引時的頁面預先讀取的輸送量。 這樣會使得回應時間更慢。 如果片段化的資料表或索引上的查詢工作負載不含掃描在內 (因為工作負載主要是單一查閱)，移除片段不會有任何影響。
   
 > [!NOTE]  
 >  如果在壓縮作業時，部分或完全移動索引，則執行 DBCC SHRINKFILE 或 DBCC SHRINKDATABASE 可能會導入片段。 因此，即使一定要執行壓縮作業，應該在移除片段之前執行。  

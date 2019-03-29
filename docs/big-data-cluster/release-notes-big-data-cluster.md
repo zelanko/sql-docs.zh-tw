@@ -5,17 +5,17 @@ description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 的已
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510335"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618305"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
 
@@ -31,8 +31,11 @@ ms.locfileid: "58510335"
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
-| 支援執行深度學習 TensorFlow 在 Spark 中使用 GPU 的指引。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md) |
+| 支援執行深度學習 TensorFlow 在 Spark 中使用 GPU 的指引。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md)。 |
 | **SqlDataPool**並**SqlStoragePool**預設不會再建立資料來源。 | 視需要手動建立這些。 請參閱[已知問題](#externaltablesctp24)。 |
+| `INSERT INTO SELECT` 支援的資料集區。 | 如需範例，請參閱[教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)。 |
+| `FORCE SCALEOUTEXECUTION` 和`DISABLE SCALEOUTEXECUTION`選項。 | 強制或停用外部資料表上的查詢集區的計算使用。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
+| 已更新的 AKS 部署建議。 | 在 AKS 上的巨量資料叢集時，我們現在建議使用單一節點的大小**Standard_L8s**。 |
 | Spark 2.4 的 Spark 執行階段升級。 | |
 
 ### <a name="known-issues"></a>已知問題

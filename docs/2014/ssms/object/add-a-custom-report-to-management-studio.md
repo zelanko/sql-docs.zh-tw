@@ -12,23 +12,22 @@ ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12108fb9d52081b70b87929bacb6882b3463a4a8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357175"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618125"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
   本主題描述如何建立儲存為 .rdl 檔案的簡單 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表，然後將該 rdl 檔案加入至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 做為自訂報表。 [!INCLUDE[ssRS](../../includes/ssrs.md)] 可以建立多種精密報表。 若要使用本主題來建立報表，您必須先在電腦上安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。 您不需要在 [!INCLUDE[ssRS](../../includes/ssrs.md)] 上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]執行自訂報表。  
   
- [報表範例](https://go.microsoft.com/fwlink/?LinkId=81792)(其中包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)]所建立的標準報表) 可供您下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
   
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>建立儲存成 .rdl 檔的簡單報表  
   
 1.  按一下 [開始]、依序指向 [程式集] 和 [Microsoft SQL Server]，然後按一下 [SQL Server Data Tools]。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
+2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
   
 3.  在 **[專案類型]** 清單中，按一下 **[商業智慧專案]**。  
   

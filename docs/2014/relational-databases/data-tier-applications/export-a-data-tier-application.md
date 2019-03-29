@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85e3268bcca9f4800bd59fa5be541dc6f9502ef5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 40ecf3d032aaece172f7b3c456a9eef6c6cf1b30
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368700"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618135"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
   匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的另一個執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC、建立邏輯備份或建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署資料庫的內部部署複本。  
@@ -43,8 +43,7 @@ ms.locfileid: "53368700"
   
  匯出程序會將 DAC 版本設定為 1.0.0.0，而將匯出檔中的 DAC 描述設定為空字串。 如果已從 DAC 部署資料庫，則匯出檔中的 DAC 定義會包含指定給原始 DAC 的名稱，否則，DAC 名稱會設定為資料庫名稱。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs 中有範例應用程式可用來測試 DAC 和資料庫的匯出與匯入。 如需有關如何下載和使用範例的指示，請參閱 [Windows Azure SQL 資料庫的資料庫匯入和匯出](https://go.microsoft.com/fwlink/?LinkId=219404)。  
-  
+ 
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 或資料庫只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中匯出。  
   

@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374400"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618225"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>使用自訂報表搭配物件總管節點屬性
   如果自訂報表參考選定 [物件總管] 節點的報表參數，自訂報表就可以在該節點的內容中執行。 這可讓自訂報表使用目前的內容 (例如目前的資料庫) 或資料庫或伺服器物件。  
   
-## <a name="report-samples"></a>報表範例  
- 備有[報表範例](https://go.microsoft.com/fwlink/?LinkId=81792)(包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)]建立的標準報表) 供您下載。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來修改這些範例。  
   
 ## <a name="object-explorer-node-report-parameters"></a>物件總管節點報表參數  
   

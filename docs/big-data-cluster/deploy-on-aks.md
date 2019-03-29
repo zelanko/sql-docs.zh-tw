@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017994"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618235"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署的 Azure Kubernetes 服務
 
@@ -39,9 +39,9 @@ AKS 可讓您更輕鬆地建立、 設定及管理預先設定的虛擬機器的
 - 最小值 1.10 Kubernetes 伺服器版本。 您必須使用 AKS，`--kubernetes-version`參數來指定預設值不同的版本。
 
 - 以驗證在 AKS 上的基本案例時獲得最佳體驗，請使用：
-   - 最小值為 3 個代理程式 Vm
-   - 4 個 Vcpu 每個 VM
+   - 所有節點間的 8 個 Vcpu
    - 32 GB 的每個 VM 的記憶體
+   - 在所有節點之間的 24 或更多連接磁碟
 
    > [!TIP]
    > Azure 基礎結構提供多個 Vm 的大小選項，請參閱 <<c0> [ 此處](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)針對您打算要部署的區域中選取項目。
@@ -76,18 +76,18 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
 
 ## <a name="create-a-kubernetes-cluster"></a>建立 Kubernetes 叢集
 
-1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*具有三個 Linux 代理程式節點。 請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
+1. 在與 AKS 建立 Kubernetes 叢集[az aks 建立](https://docs.microsoft.com/cli/azure/aks)命令。 下列範例會建立名為 Kubernetes 叢集*kubcluster*使用一個 Linux 代理程式節點大小**Standard_L8s**。 請確定您在先前各節中使用的相同資源群組中建立 AKS 叢集。
 
     ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
+    --node-vm-size Standard_L8s \
+    --node-count 1 \
     --kubernetes-version 1.10.9
     ```
 
-   您可以增加或減少的 Kubernetes 代理程式節點數目，藉由變更`--node-count <n>`其中`<n>`是您想要使用的代理程式節點數目。 這不包括 master 的 Kubernetes 節點，其在幕後受 AKS。 因此在上述範例中，有**3**大小的 Vm **Standard_L4s**用於 AKS 叢集中的代理程式節點。
+   您可以增加或減少的 Kubernetes 代理程式節點數目，藉由變更`--node-count <n>`其中`<n>`是您想要使用的代理程式節點數目。 這不包括 master 的 Kubernetes 節點，其在幕後受 AKS。 先前的範例只會使用針對評估用途的單一節點。
 
    幾分鐘之後，此命令會完成，並傳回 JSON 格式化叢集的相關資訊。
 

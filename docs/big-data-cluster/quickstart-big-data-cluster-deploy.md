@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493551"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618145"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -78,14 +78,14 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Docker 使用者名稱** | Docker 使用者名稱提供給有限的公開預覽的一部分。 |
    | **Docker 的密碼** | Docker 密碼提供給有限的公開預覽的一部分。 |
    | **Azure 區域** | 新的 AKS 叢集的 Azure 區域 (預設值**westus**)。 |
-   | **機器大小** | [機器大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)用於 AKS 叢集中的節點 (預設**Standard_L4s**)。 |
-   | **背景工作角色節點** | 在 AKS 叢集中的背景工作節點數目 (預設值**3**)。 |
+   | **機器大小** | [機器大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)用於 AKS 叢集中的節點 (預設**Standard_L8s**)。 |
+   | **背景工作角色節點** | 在 AKS 叢集中的背景工作節點數目 (預設值**1**)。 |
    | **叢集名稱** | AKS 叢集與巨量資料叢集的名稱。 只有大小寫英數字元，而且沒有空格，必須是叢集的名稱。 (預設值**sqlbigdata**)。 |
    | **密碼** | 控制器、 HDFS/Spark 閘道和主要執行個體的密碼 (預設值**MySQLBigData2019**)。 |
    | **控制器的使用者** | 控制器的使用者的使用者名稱 (預設值： **admin**)。 |
 
    > [!IMPORTANT]
-   > 預設值**Standard_L4s**機器大小可能無法使用每個 Azure 區域中。 如果您選取不同的機器大小，請確定磁碟可連接到叢集中的節點總數大於或等於 24。 在叢集中的每個永續性磁碟區宣告需要連接的磁碟。 目前，巨量資料叢集需要 24 的永續性磁碟區宣告。 例如， [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)機器大小支援 16 個附加的磁碟，所以三個節點表示，可連結 48 的磁碟。
+   > 預設值**Standard_L8s**機器大小可能無法使用每個 Azure 區域中。 如果您選取不同的機器大小，請確定磁碟可連接到叢集中的節點總數大於或等於 24。 在叢集中的每個永續性磁碟區宣告需要連接的磁碟。 目前，巨量資料叢集需要 24 的永續性磁碟區宣告。 例如， [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)機器大小支援 32 個附加的磁碟，因此您能夠評估此機器大小的單一節點的巨量資料叢集。
 
    > [!NOTE]
    > `sa`帳戶是在安裝期間建立的 SQL Server 主要執行個體上的系統管理員。 建立部署之後,`MSSQL_SA_PASSWORD`環境變數是可探索執行`echo $MSSQL_SA_PASSWORD`主要執行個體的容器中。 基於安全考量，變更您`sa`在部署後的主要執行個體上的密碼。 如需詳細資訊，請參閱 <<c0> [ 變更 SA 密碼](../linux/quickstart-install-connect-docker.md#sapassword)。

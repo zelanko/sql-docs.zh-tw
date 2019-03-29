@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5b13d9d2095df5d464b7102e1527c21c36c4f5c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376180"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618165"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
   匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資料的複本，或將該檔案匯入 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
@@ -43,8 +43,7 @@ ms.locfileid: "53376180"
   
 2.  匯入會從匯出檔案大量複製資料。  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Labs 中有範例應用程式可用來測試 DAC 和資料庫的匯出與匯入。 如需有關如何下載和使用範例的指示，請參閱 [Windows Azure SQL 資料庫的資料庫匯入和匯出](https://go.microsoft.com/fwlink/?LinkId=219404)。  
-  
+ 
 ## <a name="sql-server-utility"></a>SQL Server 公用程式  
  如果您將 DAC 匯入至 Database Engine 的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，匯入的 DAC 就會合併至 SQL Server 公用程式。 然後 DAC 會出現在  [公用程式總管] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[部署的資料層應用程式]** 節點中，並在  詳細資料頁面中報告。  
   
