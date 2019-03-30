@@ -11,12 +11,12 @@ ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0f12d893aa1f37ffa3c35f5e295a991502ed9d85
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040509"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658212"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>將資料加入至報表 (報表產生器及 SSRS)
   若要將資料加入至報表中，您要建立資料集。 每個資料集都表示從資料來源執行查詢命令而得到的結果集。 結果集中的資料行為欄位集合。 結果集中的資料列則為資料。 資料集不包含實際資料。 資料集包含從資料來源擷取一組特定資料所需的資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "56040509"
   
  您也可以透過加入包含相依資料集的報表組件，將資料集加入至報表中。 [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- 若要了解如何建立顯示資料的報表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)。 若要建立的報表，包括它自己的資料，請參閱[教學課程：建立快速圖表報表離線&#40;報表產生器&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 若要了解如何建立顯示資料的報表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)。 若要建立的報表，包括它自己的資料，請參閱[教學課程：離線建立快速圖表報表 &#40;報表產生器&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -77,9 +77,7 @@ ms.locfileid: "56040509"
 -   [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
 -   [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="QuickStart"></a> 加入包含報表組件的資料  
  報表組件包含它們所相依的資料集。 這些資料集是在報表伺服器上提供的共用資料來源上建立的。 在報表產生器中，當您將報表組件加入至報表時，相依的資料集也會加入到報表中，就像您手動加入它們一樣。 例如，預先定義的圖表包含資料集。 若要查看資料，請預覽報表。  
   
@@ -89,9 +87,7 @@ ms.locfileid: "56040509"
  報表組件、共用資料來源與共用資料集是事先定義的，並儲存在報表伺服器中。 若要存取它們，您必須在伺服器模式下，連接到報表伺服器以開啟報表產生器。 如果您有伺服器的寫入權限，可以使用這些項目來建立您自己的新版本。  
   
 -   如需詳細資訊，請參閱[報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md) 和[報表設計師中的報表組件 &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Queries"></a> 查詢和查詢設計工具  
  若要指定資料來源中所需的資料，您要建立一個查詢命令。 每種資料來源類型都會提供一個相關的 *「查詢設計工具」* (Query Designer) 來協助您建立查詢。 查詢設計工具可以是圖形化或以文字為基礎。 在圖形化查詢設計工具中，您可以檢視代表外部資料來源之資料的中繼資料，並將欄位或項目拖曳到查詢設計介面，以互動方式建立查詢。 在以文字為基礎的查詢設計工具中，您可以使用外部資料來源支援的查詢語法撰寫或匯入查詢。  
   
@@ -100,9 +96,7 @@ ms.locfileid: "56040509"
  若要執行查詢，您必須要有設計階段的認證。 如需詳細資訊，請參閱 <<c0> [ 在報表產生器中指定認證](../specify-credentials-in-report-builder.md)並[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
  資料延伸模組和外部資料來源之間的通訊是由資料提供者處理。 查詢命令語法、查詢參數，以及結果集中之值資料類型的支援取決於每個資料提供者。 如需詳細資訊，請參閱特定資料延伸模組類型的主題和[查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 如何主題  
  [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -121,9 +115,7 @@ ms.locfileid: "56040509"
  [將查詢參數與報表參數產生關聯 &#40;報表產生器及 SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
  [在 Analysis Services 的 MDX 查詢設計工具中定義參數 &#40;報表產生器及 SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Section"></a> 本節內容  
  [報表產生器中的報表組件和資料集](report-parts-and-datasets-in-report-builder.md)  
   
@@ -134,11 +126,7 @@ ms.locfileid: "56040509"
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [報表設計檢視 &#40;報表產生器&#41;](../report-builder/report-design-view-report-builder.md)   
  [報表撰寫概念 &#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  

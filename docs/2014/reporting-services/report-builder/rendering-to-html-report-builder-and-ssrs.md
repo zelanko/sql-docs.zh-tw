@@ -11,12 +11,12 @@ ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 83485916e0dcfeb02555e3068931415801691692
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 473ff59f217662ea01f8e24335f3723bf26d40ec
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296846"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658022"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
   HTML 轉譯延伸模組會轉譯 HTML 格式的報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。  
@@ -35,8 +35,6 @@ ms.locfileid: "56296846"
 ##  <a name="RenderingMHTML"></a> 在 MHTML 中轉譯  
  HTML 轉譯延伸模組也可以在 MHTML (彙總 HTML 文件的 MIME 封裝) 中轉譯報表。 MHTML 擴充了 HTML，可以在 HTML 文件中內嵌編碼的物件，例如影像。 使用 MHTML 轉譯延伸模組時，您可以利用 MIME 結構，將影像、文件或其他二進位檔案等資源內嵌在單一檔案的報表 HTML 中。 MHTML 報表也適合用於內嵌在電子郵件訊息中，因為所有的資源都包含在報表中。 雖然實際上是 HTML 轉譯延伸模組轉譯 MHTML，此功能也可視為 MHTML 轉譯延伸模組。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
 ##  <a name="BrowserSupport"></a> 瀏覽器支援  
  此轉譯延伸模組支援下列瀏覽器版本：  
   
@@ -47,8 +45,6 @@ ms.locfileid: "56296846"
 -   Safari 3.0 及更新版本  
   
  由於跨瀏覽器的考量，轉譯的報表在不同的瀏覽器中可能略有不同。 例如，文字方塊包含稱為 WritingMode 的屬性。 Firefox 中不支援此屬性。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="HTMLSpecificRenderingRules"></a> HTML 特定的轉譯規則  
  下列 HTML 特定規則會在轉譯時套用：  
@@ -66,8 +62,6 @@ ms.locfileid: "56296846"
 -   其他所有資料列和資料行都可以根據每個報表項目的大小成長。  
   
 -   所有座標和報表項目大小都會轉換為公釐。 包括樣式屬性在內的其他所有大小則會保留其原始單位。 大小和位置的差異小於 .2 公釐時，則會視為 0 公釐。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="Interactivity"></a> 互動性  
  HTML 中支援某些互動元素。 下列是特定行為的描述。  
@@ -92,18 +86,12 @@ ms.locfileid: "56296846"
   
  其他搜尋和尋找功能是由 ReportViewer Web 表單控制項提供。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
 ##  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，包括要在哪個模式下轉譯，方法是，變更裝置資訊設定。 如需相關資訊，請參閱 [HTML Device Information Settings](../html-device-information-settings.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

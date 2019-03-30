@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a894da9840b82dd861d6cb3b0e858663248f98e5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f174d2ba00211459d8ef7d7c0d61a0affa0b38ae
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290406"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657691"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
@@ -67,22 +67,18 @@ ms.locfileid: "56290406"
 -   從功能區中，按一下 [插入] 功能表上的 [地圖]，然後按一下 [地圖精靈]。 此精靈可讓您將圖層加入至現有的地圖。 地圖精靈與地圖圖層精靈的大部分精靈頁面都相同。  
   
      如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="ChangeLayer"></a> 使用地圖圖層精靈來變更圖層的選項  
   
 -   執行地圖圖層精靈。 這個精靈可讓您變更您使用地圖圖層精靈所建立的圖層選項。 在 [地圖] 窗格中，以滑鼠右鍵按一下此圖層，然後在工具列上按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
   
      如需詳細資訊，請參閱 [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="AddVectorLayer"></a> 從 [圖層] 窗格工具列加入點、線條或多邊形圖層  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
   
-2.  在工具列上，按一下**加入圖層**按鈕，然後從下拉式清單中，按一下您想要新增的圖層類型：**點**，**線條**，或**多邊形**。  
+2.  在工具列上，按一下 [新增圖層] 按鈕，然後從下拉式清單中按一下您要新增的圖層類型：[點]、[線條] 或 [多邊形]。  
   
     > [!NOTE]  
     >  雖然您可以手動加入地圖圖層並加以設定，我們建議您最好使用地圖圖層精靈來新增圖層。 若要在 [地圖] 窗格工具列啟動精露，請以滑鼠右鍵按一下圖層精靈按鈕 (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -106,9 +102,7 @@ ms.locfileid: "56290406"
      如需連結空間和分析資料的詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="FilterAnalyticalData"></a> 篩選圖層的分析資料  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -118,9 +112,7 @@ ms.locfileid: "56290406"
 3.  按一下 **[篩選]**。  
   
 4.  定義篩選方程式，以限制用於地圖顯示的分析資料。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及&#41;](filter-equation-examples-report-builder-and-ssrs.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="PointProperties"></a> 控制點圖層或多邊形中心點的點屬性  
   
 1.  選取 [地圖點屬性] 對話方塊上的 [一般] 來變更下列地圖元素的標籤、工具提示和標記類型選項：  
@@ -128,9 +120,7 @@ ms.locfileid: "56290406"
     -   點圖層上的所有動態或內嵌的點。 點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定內嵌點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](../map-embedded-point-properties-dialog-box-marker.md) 頁面。  
   
     -   在多邊形圖層上，所有動態或內嵌之多邊形的中心點。 中心點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定中心點的選項，請使用 [地圖內嵌點屬性對話方塊、標記](../map-embedded-point-properties-dialog-box-marker.md) 頁面。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Embedded"></a> 將內嵌資料指定為空間資料的來源  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -147,9 +137,7 @@ ms.locfileid: "56290406"
     >  如果您不知道欄位的名稱，而且您已經瀏覽到 ESRI 形狀檔，請使用 [連結到 ESRI 形狀檔 (.shp)] 選項來代替此選項。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="ESRI"></a> 將 ESRI 形狀檔指定為空間資料的來源  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -164,9 +152,7 @@ ms.locfileid: "56290406"
     >  如果此形狀檔在您的本機電腦上，空間資料會內嵌在報表定義中。 若要在處理報表時動態擷取資料，您必須將 ESRI .shp 檔及其支援檔案 .dbf 上傳至報表伺服器。 如需詳細資訊，請參閱 「 如何：上傳檔案或報表 （報表管理員） 」 中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="DatasetField"></a> 將報表資料集欄位指定為空間資料的來源  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -180,9 +166,7 @@ ms.locfileid: "56290406"
 5.  在 [空間欄位名稱] 中，按一下資料集內包含空間資料的欄位名稱。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="TileLayer"></a> 若要加入圖格圖層  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -198,9 +182,7 @@ ms.locfileid: "56290406"
   
     > [!NOTE]  
     >  當您在「地圖精靈」或「地圖圖層精靈」中加入多邊形、線條或點圖層時，也可以加入影像分割圖層。 在 [選擇空間資料及地圖檢視選項] 頁面上，選取 [Add a Bing Maps background for this map view (加入此地圖檢視的 Bing Maps 背景)] 選項。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="DrawingOrder"></a> 變更圖層的繪圖順序  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -208,9 +190,7 @@ ms.locfileid: "56290406"
 2.  按一下 [圖層] 窗格中的圖層，即可選取它。  
   
 3.  在 [圖層] 窗格工具列上，按一下向上鍵或向下鍵來變更每個圖層的繪圖順序。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Transparency"></a> 變更多邊形、線條或點圖層的透明度  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -222,9 +202,7 @@ ms.locfileid: "56290406"
 4.  在 [透明度選項] 中，輸入表示透明度百分比的值，例如 **40**。 透明度百分比為零 (0) 表示圖層是不透明的。 透明度百分比為 100，則表示您在報表中看不到圖層。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="TileTransparency"></a> 變更圖格圖層的透明度  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -236,9 +214,7 @@ ms.locfileid: "56290406"
 4.  在 [透明度選項] 中，輸入表示透明度百分比的值，例如 **40**。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Secure"></a> 為圖格圖層指定安全連接  
   
 1.  按一下地圖，直到 [圖層] 窗格出現為止。  
@@ -248,9 +224,7 @@ ms.locfileid: "56290406"
 3.  在 [屬性] 窗格中，將 UseSecureConnection 設定為 **True**。  
   
  Bing Maps Web 服務的連接將會使用 HTTP SSL (安全通訊端層) 服務來擷取這個圖層的 Bing 地圖底圖。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Language"></a> 為圖格標籤指定語言  
   
 1.  根據預設，如果是顯示標籤的圖格樣式，語言是由報表產生器的預設地區設定所決定。 您可以透過以下方式來自訂圖格標籤的語言設定。  
@@ -260,9 +234,7 @@ ms.locfileid: "56290406"
     -   按一下報表背景，即可選取報表。 在 [屬性] 窗格中，針對 Language 屬性從下拉式清單中選取文化特性值。  
   
      設定圖格標籤語言的優先順序如下：報表屬性 Language、報表產生器的預設地區設定，以及地圖屬性 TileLanguage。  
-  
-2.  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="ConditionalHide"></a> 根據檢視區縮放層級，有條件地隱藏圖層  
   
 1.  設定`Visibility`選項來控制地圖圖層顯示。  
@@ -278,11 +250,7 @@ ms.locfileid: "56290406"
     -   選擇性。 輸入透明度的值。  
   
      您也可以有條件地隱藏圖層。 如需詳細資訊，請參閱[隱藏項目 &#40;報表產生器及 SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)。  
-  
-2.  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
-  
+ [報表疑難排解：地圖報表 &#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  

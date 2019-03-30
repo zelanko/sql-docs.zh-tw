@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295888"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658032"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
   XML 轉譯延伸模組會傳回 XML 格式的報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。  
@@ -54,8 +54,6 @@ ms.locfileid: "56295888"
   
 -   `Images, lines, and custom report items` 都會忽略。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> 資料型別  
  文字方塊元素或屬性會根據文字方塊所顯示的值，指派 XSD 資料類型。  
   
@@ -70,8 +68,6 @@ ms.locfileid: "56295888"
 |`Boolean`|**xsd:boolean**|  
 |`String`、 `Char`|**xsd:string**|  
 |其他|**xsd:string**|  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> XML 特定的轉譯規則  
  下列幾節描述 XML 轉譯延伸模組如何解譯報表中的項目。  
@@ -116,8 +112,6 @@ ms.locfileid: "56295888"
 ### <a name="lines"></a>線條  
  不會轉譯線條。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
 ### <a name="tables-matrices-and-lists"></a>資料表、矩陣和清單  
  資料表、矩陣和清單會轉譯成元素。 元素的名稱來自於 Tablix DataElementName RDL 屬性。  
   
@@ -155,17 +149,11 @@ ms.locfileid: "56295888"
   
  如果 DataElementOutput 屬性值等於「輸出」，重複項目的標頭就會轉譯為詳細資料元素的子系。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> 自訂格式和 XSL 轉換  
  使用 XSL 轉換 (XSLT)，幾乎可以將 XML 轉譯延伸模組所產生的 XML 檔案轉換成任何格式。 此功能可用來產生現有的轉譯延伸模組已不支援的資料格式。 在嘗試建立您自己的轉譯延伸模組之前，請考慮使用 XML 轉譯延伸模組和 XSLT。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> 重複的名稱  
  如果在相同的範圍內有重複的資料元素名稱，轉譯器會顯示一個錯誤訊息。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT 轉換  
  XML 轉譯器可以將伺服器端的 XSLT 轉換套用到原始 XML 資料。 套用 XSLT 時，轉譯器會輸出轉換的內容，而非輸出 XML 原始資料。 轉換會在伺服器上，而非用戶端上進行。  
@@ -173,8 +161,6 @@ ms.locfileid: "56295888"
  系統會在報表定義檔案中，以報表的 DataTransform 屬性或以 XSLT *DeviceInfo* 參數，定義要套用到輸出的 XSLT。 如果設定其中一個值，就會在每次使用 XML 轉換器時進行轉換。 使用訂閱時，必須在 RDL DataTransform 屬性中定義 XSLT。  
   
  如果有同時透過 DataTransform 定義屬性和裝置資訊設定指定 XSLT 檔案，會先出現在 DataTransform 中指定的 XSLT，接著出現由裝置資訊設定所設定的 XSLT。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> 裝置資訊設定  
  您可以變更此轉譯器的某些預設值，方法是，變更裝置資訊設定，包括：  
@@ -195,13 +181,9 @@ ms.locfileid: "56295888"
   
  如需詳細資訊，請參閱＜ [XML Device Information Settings](../xml-device-information-settings.md)＞。  
   
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [不同報表轉譯延伸模組的互動式功能 &#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

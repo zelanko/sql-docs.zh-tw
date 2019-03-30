@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542929"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658362"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
   本主題描述資料庫鏡像工作階段的同步與非同步作業模式。  
@@ -80,7 +80,7 @@ ms.locfileid: "52542929"
 -   若失去主體伺服器，則要強制將服務轉到鏡像伺服器，需要鏡像伺服器連接到見證。  
   
 > [!NOTE]  
->  如需有關仲裁類型的資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+>  如需有關仲裁類型的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ###  <a name="WhenPrincipalFails"></a> 回應主體的失敗  
  當主體失敗時，資料庫擁有者有下列幾項選擇：  
@@ -146,7 +146,7 @@ ms.locfileid: "52542929"
   
  與兩位夥伴不同的是，見證並不是為資料庫服務。 見證只是藉由確認主體伺服器是否已啟動而且可以正常運作，來支援自動容錯移轉。 只有當鏡像和見證與主體伺服器中斷連接後仍然保持相互連接時，鏡像伺服器才會開始進行自動容錯移轉。  
   
- 當見證設定完成後，工作階段就會要求「仲裁」(它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱 <<c0> [ 資料庫鏡像見證](database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 當見證設定完成後，工作階段就會要求「仲裁」(它是至少兩個伺服器執行個體之間的關聯性，以便讓資料庫可供使用)。 如需詳細資訊，請參閱 <<c0> [ 資料庫鏡像見證](database-mirroring-witness.md)和[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  自動容錯移轉必須符合下列條件：  
   
@@ -193,7 +193,7 @@ ms.locfileid: "52542929"
   
 -   SAFETY OFF  
   
-     關閉交易安全性會使工作階段在高效能模式中以非同步方式運作。 如果將 SAFETY 屬性設定為 OFF，則 WITNESS 屬性也應該設定為 OFF (預設值)。 如需見證在高效能模式中之影響的資訊，請參閱本主題稍後的 [見證的狀態](#WitnessState)。 如需關閉交易安全性執行的詳細資訊，請參閱本主題稍早的 [非同步資料庫鏡像 (高效能模式)](#Async)。  
+     關閉交易安全性會使工作階段在高效能模式中以非同步方式運作。 如果將 SAFETY 屬性設定為 OFF，則 WITNESS 屬性也應該設定為 OFF (預設值)。 如需見證在高效能模式中之影響的資訊，請參閱本主題稍後的 [見證的狀態](#WitnessState)。 如需關閉交易安全性執行的詳細資訊，請參閱本主題稍早的 [非同步資料庫鏡像 (高效能模式)](#VisualElement)。  
   
  資料庫的交易安全性設定會記錄在每個夥伴之 **mirroring_safety_level** 和 **mirroring_safety_level_desc** 資料行的 **sys.database_mirroring** 目錄檢視中。 如需詳細資訊，請參閱 [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "52542929"
   
 -   見證存在但未連接到夥伴時，與該夥伴相關的見證會處於 UNKOWN 或 DISCONNECTED 狀態。 在此情況下，見證會缺少該夥伴的仲裁，而如果夥伴未彼此連接，資料庫會變成無法使用。  
   
- 如需仲裁的資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ 如需仲裁的資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
  伺服器執行個體上每個見證的狀態，都會記錄在 **mirroring_witness_state** 和 **mirroring_witness_state_desc** 資料行的 **sys.database_mirroring** 目錄檢視中。 如需詳細資訊，請參閱 [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "52542929"
   
  <sup>1</sup>如果見證中斷連接，我們建議您設定 WITNESS OFF，直到見證伺服器執行個體可用為止。  
   
- <sup>2</sup>如果在高效能模式中有見證，見證並不會參與工作階段。 不過，若要讓資料庫可供使用，必須至少有兩個伺服器執行個體保持連接。 因此，建議您讓 WITNESS 屬性在高效能模式工作階段中保持設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ <sup>2</sup>如果在高效能模式中有見證，見證並不會參與工作階段。 不過，若要讓資料庫可供使用，必須至少有兩個伺服器執行個體保持連接。 因此，建議您讓 WITNESS 屬性在高效能模式工作階段中保持設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ###  <a name="ViewWitness"></a> 檢視安全性設定和見證狀態  
  若要檢視資料庫的安全性設定和見證狀態，請使用 **sys.database_mirroring** 目錄檢視。 相關的資料行如下：  
@@ -266,5 +266,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>另請參閱  
  [監視資料庫鏡像 &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
  [資料庫鏡像見證](database-mirroring-witness.md)  
-  
-  

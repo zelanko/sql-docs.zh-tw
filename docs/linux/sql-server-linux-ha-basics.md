@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533075"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658403"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
@@ -58,7 +58,7 @@ ms.locfileid: "52533075"
 將檔案從一部伺服器複製到另一個是一項工作都能使用[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]應該能夠執行在 Linux 上。 這項工作是非常重要的 AG 組態。
 
 Linux 及 Windows 為基礎的安裝，可以存在權限問題等項目。 不過，熟悉如何在 Windows 上，將複製伺服器對伺服器可能不熟悉如何在 Linux 上進行。 常見的方法是使用命令列公用程式`scp`，這代表 「 安全複製。 在幕後`scp`使用 OpenSSH。 SSH 代表安全殼層。 根據 Linux 散發套件可能不會安裝 OpenSSH 本身。 如果不存在，就必須先安裝 OpenSSH。 如需有關設定 OpenSSH 的詳細資訊，請參閱下列連結以取得每個散發的資訊：
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -86,7 +86,7 @@ Samba，也就是伺服器訊息區 (SMB) 的 Linux 變體，也可用來建立�
 
 | 通訊埠編號 | 類型     | 描述                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | （如果使用） samba-結束點對應程式                                                                                          |
 | 137         | UDP      | （如果使用） samba-NetBIOS 名稱服務                                                                                      |
 | 138         | UDP      | （如果使用） samba-NetBIOS 資料包                                                                                          |
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **防火牆文件：**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>安裝[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]套件的可用性
@@ -200,7 +200,7 @@ Wsfc 會監視參與節點的狀態，並發生問題時，請處理它們。 �
 #### <a name="cluster-log-location"></a>叢集記錄檔位置
 Pacemaker 叢集的記錄檔位置是根據散發而有所不同。
 -   RHEL 與 SLES- `/var/log/cluster/corosync.log`
--   Ubuntu- `/var/log/corosync/corosync.log`
+-   Ubuntu - `/var/log/corosync/corosync.log`
 
 若要變更預設的記錄位置，請修改`corosync.conf`。
 

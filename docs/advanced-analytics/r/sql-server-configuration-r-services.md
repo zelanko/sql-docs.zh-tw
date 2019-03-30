@@ -2,17 +2,17 @@
 title: SQL Server 組態 （R 服務）-SQL Server Machine Learning 服務
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5dd6ee267b7bac933e40f90282d1bf74aa57b62
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511845"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645540"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>搭配 R 的 SQL Server 組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -165,10 +165,6 @@ SQL Server 啟用 NUMA 時，會自動管理您; 節點不過，若要最佳化�
 + [SQL Server 中的軟體 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     如何將軟體 NUMA 節點對應到 Cpu
-
-+ [自動軟體式 NUMA:它只會執行更快 (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   描述歷程記錄以及實作詳細資料，在較新的多核心伺服器上的效能。
 
 ## <a name="task-specific-optimizations"></a>工作特定的最佳化
 

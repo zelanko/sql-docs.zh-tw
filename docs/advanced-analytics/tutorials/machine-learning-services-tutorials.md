@@ -3,17 +3,17 @@ title: SQL Server R 和 Python 教學課程-SQL Server Machine Learning
 description: 範例和教學課程對 R 和 Python 中 SQL Server 機器學習服務指令碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b30daadd23cbea244576c461ec783e67b2189cf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511045"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645400"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R 和 Python 中的 SQL Server 機器學習服務教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,6 @@ SQL Server 上支援與其他 Microsoft 產品中的對等的語言支援的 R �
 | [執行客戶使用 Python 和 SQL Server 叢集](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | 了解如何使用 Kmeans 演算法來執行非監督式叢集的客戶。 此範例會使用 Python 語言中的資料庫。| SQL Server 2017 |
 | [使用 R 和 SQL Server 的預測性模型](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | 了解如何使用 ski 租賃業務的機器學習服務預測未來，它可以幫助商務計劃和人員滿足未來需求。 此範例會使用的 Microsoft 演算法來建置羅吉斯迴歸 」 和 「 決策樹模型。 | 
 | [使用 Python 和 SQL Server 的預測性模型](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 建置使用 Python，來協助您規劃的未來需求 ski 出租分析應用程式。 這個範例會使用新的 Python 程式庫， **revoscalepy**，以建立線性迴歸模型。 | 
-| [如何使用 SQL Server Machine Learning 服務的 Tableau](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | 分析社交媒體和建立使用 SQL Server 和 r 的 Tableau 圖形 | 
 
 <a name="bkmk_solutions"></a>
 
@@ -86,6 +85,4 @@ Microsoft 資料科學小組提供可自訂的解決方案範本，可用來快�
 + [自訂變換預測](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [預測性維護](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
 + [預測醫院](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
-
-如需詳細資訊，請參閱 [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/) (SQL Server 2016 R 服務的機器學習範本)。
 

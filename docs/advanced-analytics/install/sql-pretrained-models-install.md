@@ -3,22 +3,22 @@ title: 安裝預先定型的機器學習服務模型-SQL Server Machine Learning
 description: 加入 SQL Server 2017 Machine Learning 服務 （R 或 Python） 或 SQL Server 2016 R Services 的預先定型的情感分析和影像特徵化的模型。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/18/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 168898c08fb24af655ff5429e2a7fa028ea37405
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512295"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645570"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習服務模型在 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章說明如何使用 Powershell 來新增可用預先定型的機器學習服務模型*情感分析*並*影像特徵化*擁有 R 或 Python 的 SQL Server 資料庫引擎執行個體整合。 Microsoft 和已準備好上手，不會建立預先定型的模型加入至資料庫引擎執行個體做為後續安裝工作。 如需有關這些模型的詳細資訊，請參閱 <<c0> [ 資源](#bkmk_resources)一節。
+這篇文章說明如何使用 Powershell 來新增可用預先定型的機器學習服務模型*情感分析*並*影像特徵化*擁有 R 或 Python 整合 SQL Server 執行個體。 預先定型的模型所建立的 Microsoft 和可使用已準備好加入做為後續安裝工作的執行個體。 如需有關這些模型的詳細資訊，請參閱 <<c0> [ 資源](#bkmk_resources)一節。
 
 安裝之後，預先定型的模型會被視為電源的 MicrosoftML (R) 和 microsoftml (Python) 程式庫中的特定函式的實作詳細資料。 您不應該 （而且也無法） 檢視、 自訂或重新定型模型，也可以您將它們視為獨立的資源，在自訂程式碼或配對的其他函式。 
 
@@ -26,8 +26,8 @@ ms.locfileid: "58512295"
 
 | R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用量 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 您可以產生正負面情感分數對文字輸入。 [了解更多](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)。|
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 從映像檔案輸入擷取文字資訊。 [了解更多](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)。 |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 您可以產生正負面情感分數對文字輸入。 |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 從映像檔案輸入擷取文字資訊。 |
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -182,13 +182,7 @@ R 和 Python 模型的安裝路徑，如下所示：
 
 ## <a name="examples-using-pre-trained-models"></a>使用預先定型的模型範例
 
-以下連結包括叫用預先定型的模型中的逐步解說和範例程式碼。
-
-+ [在 SQL Server Machine Learning 服務中使用 Python 的情感分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
-
-+ [使用預先定型的深度類神經網路模型的影像特徵化](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)
-
-  預先定型的模型，針對映像支援您所提供的映像的功能。 若要使用模型，請呼叫**featurizeImage**轉換。 載入影像時，調整大小，並使用定型模型。 DNN featurizer 的輸出則用於定型影像分類的線性模型。 若要使用此模型中，所有映像必須調整大小以符合需求的定型模型。 例如，如果您使用的 AlexNet 模型時，映像應該能調整 227 x 227 像素。
+下列連結包含範例程式碼叫用預先定型的模型。
 
 + [程式碼範例：使用文字 Featurizer 情感分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

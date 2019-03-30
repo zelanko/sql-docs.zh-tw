@@ -3,17 +3,17 @@ title: 設定適用於 R 開發-SQL Server Machine Learning 服務的資料科�
 description: 在 遠端連線到 SQL Server 的開發工作站上安裝本機的 R 程式庫和工具。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/17/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510435"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645530"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>設定 SQL Server 上的 R 開發工具的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,6 @@ ms.locfileid: "58510435"
 ![用戶端-伺服器元件](media/sqlmls-r-client-revo.png "本機和遠端 R 工作階段和程式庫")
 
 若要驗證安裝，您可以使用內建**RGUI**工具在本文中所述或是[連結程式庫](#install-ide)RStudio 或您通常會使用任何其他 IDE。
-
-> [!Tip]
-> 如需這些練習的影片示範，請參閱 <<c0> [ 執行的 R 和 Python，在從 Jupyter Notebook 的 SQL Server 中遠端](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
 > 用戶端程式庫安裝的替代方案使用[獨立伺服器](../install/sql-machine-learning-standalone-windows-install.md)做為豐富的用戶端，有些客戶偏好的更深入的案例中工作。 在獨立伺服器完全分開的 SQL Server，但因為它有相同的 R 程式庫，您可以使用它做為用戶端的 SQL Server 資料庫內分析。 您也可以使用它針對非 SQL 相關的工作，包括匯入，並從其他資料平台的資料模型的能力。 如果您安裝獨立伺服器，您可以找到此位置的 R 可執行檔： `C:\Program Files\Microsoft SQL Server\140\R_SERVER`。 若要驗證您的安裝，[開啟 R 主控台應用程式](#R-tools)使用 R.exe 該位置來執行命令。

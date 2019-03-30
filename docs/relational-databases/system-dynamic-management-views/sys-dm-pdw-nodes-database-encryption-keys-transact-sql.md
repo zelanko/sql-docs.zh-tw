@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d31e3cdd8d4035840f1529a64317d17ba2571d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34de2634c0aa1dd6a0b55ef281dba4c7d8579afd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036049"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657064"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 **sys.dm_pdw_nodes_database_encryption_keys**提供這項資訊的每個節點。 如需有關資料庫加密的詳細資訊，請參閱 <<c0> [ 透明資料加密 (SQL Server PDW)](https://msdn.microsoft.com/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)。  
+  傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 **sys.dm_pdw_nodes_database_encryption_keys**提供這項資訊的每個節點。 如需有關資料庫加密的詳細資訊，請參閱 <<c0> [ 透明資料加密 (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

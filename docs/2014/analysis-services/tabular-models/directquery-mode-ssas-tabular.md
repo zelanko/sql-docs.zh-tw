@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511525"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657972"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式 (SSAS 表格式)
   Analysis Services 可讓您擷取資料，並從表格式模型中建立報表，藉由擷取資料和彙總，直接從關聯式資料庫系統，使用*DirectQuery 模式*。 此主題介紹僅存在於記憶體中的標準表格式模型和可查詢關聯式資料來源的表格式模型之間的差異，並且說明如何撰寫和部署要在 DirectQuery 模式下使用的模型。  
@@ -29,7 +29,7 @@ ms.locfileid: "52511525"
   
 -   [撰寫要用於 DirectQuery 模式的模型](#bkmk_Design)  
   
-    -   [DirectQuery 模型的資料來源](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [DirectQuery 模型的資料來源](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [驗證和 DirectQuery 模式的設計限制](#bkmk_Validation)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511525"
   
  在您執行此作業時，模型設計師會自動將工作空間資料庫設定為以混合模式執行，讓您可以繼續使用快取資料。 模型設計師也會通知您模型中與 DirectQuery 模式不相容的任何功能。 下列清單摘要說明應牢記的主要需求：  
   
--   **資料來源：** DirectQuery 模型只能使用來自單一 SQL Server 資料來源的資料。 如果已經為模型啟用 DirectQuery 模式，您將無法在模型設計師中使用任何其他資料類型，包括複製-貼上作業所加入的資料表。 所有其他匯入選項都已停用。 查詢中包含的任何資料表都必須是 SQL Server 資料來源的一部分。 請參閱[DirectQuery 模型的資料來源](directquery-mode-ssas-tabular.md#bkmk_datasources)如需詳細資訊。  
+-   **資料來源：** DirectQuery 模型只能使用來自單一 SQL Server 資料來源的資料。 如果已經為模型啟用 DirectQuery 模式，您將無法在模型設計師中使用任何其他資料類型，包括複製-貼上作業所加入的資料表。 所有其他匯入選項都已停用。 查詢中包含的任何資料表都必須是 SQL Server 資料來源的一部分。 請參閱[DirectQuery 模型的資料來源](directquery-mode-ssas-tabular.md#bkmk_DataSources)如需詳細資訊。  
   
 -   **導出資料行的支援：** DirectQuery 模型不支援導出資料行。 但是，您可以建立量值和 KPI，以操作資料集。 請參閱 〈[驗證](#bkmk_Validation)如需詳細資訊。  
   
@@ -182,5 +182,3 @@ ms.locfileid: "52511525"
  [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)   
  [表格式模型專案 &#40;SSAS 表格式&#41;](tabular-model-projects-ssas-tabular.md)   
  [在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

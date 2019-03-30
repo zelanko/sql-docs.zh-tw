@@ -2,17 +2,17 @@
 title: SQL Server R Services-「 結果 」 和 「 資源 」-SQL Server Machine Learning 服務的效能
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510755"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645550"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R services 的效能： 結果和資源
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ RevoScaleR 和 MicrosoftML 套件用來訓練預測模型中複雜的 R 解決�
 
 基於這些理由，沒有單一解決方案來降低此初始載入期間，因為工作而大幅有所不同的效能影響。 例如，快取執行的單一資料列批次; 中的評分因此，後續的計分作業更快而且模型和 R 執行階段都不會重新載入。 您也可以使用[原生評分](../sql-native-scoring.md)以避免完全載入的 R 執行階段。
 
-對於訓練大型模型，或以大型批次評分，額外負荷可能微小的提升，避免資料移動或串流處理和平行處理。 請參閱這些新的部落格和其他的效能指引的範例：
+對於訓練大型模型，或以大型批次評分，額外負荷可能微小的提升，避免資料移動或串流處理和平行處理。 請參閱此部落格文章的其他效能指導方針：
 
-+ [使用 SQL Server 2016 R Services 的貸款分類](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [早期的客戶體驗和 R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [使用 R 來偵測詐騙在 1 百萬個每秒交易數](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>資源

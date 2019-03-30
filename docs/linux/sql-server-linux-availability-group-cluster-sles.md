@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160626"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658092"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
@@ -221,7 +221,7 @@ Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢�
 
 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點和它的 Pacemaker 實作稱為 STONITH （這代表 「 限定標頭中的另一個節點 」）。 Pacemaker 支援很棒的各種不同的隔離裝置，例如伺服器不斷電供應器或管理的介面卡。
 
-如需詳細資訊，請參閱 < [Pacemaker 叢集從頭](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔離和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)和[SUSE HA 文件：隔離和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
+如需詳細資訊，請參閱 < [Pacemaker 叢集從頭](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)，[隔離和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)和[SUSE HA 文件：隔離和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
 
 在叢集的初始設定時，如果偵測不到任何設定時，會停用 STONITH。 它可稍後再執行下列命令：
 

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ca750b483aee088a6997f9f0b1beac6d15b0d9df
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509865"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657743"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "58509865"
 |resource_class|**nvarchar(20)**|此要求的資源類別。 請參閱相關**concurrency_slots_used**中[sys.dm_pdw_resource_waits &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)。  如需有關資源類別的詳細資訊，請參閱[資源類別與工作負載管理](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |靜態資源類別</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>靜態資源類別</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |重要性 （針對 SQL DW Gen2 預覽）|**nvarchar(32)**|已提交設定要求的重要性。 以較低重要性的要求會保留在佇列中暫止狀態，如果較高的重要性要求提交。  以高重要性的要求將會執行較早提交的較低重要性要求之前。  如需有關重要性的詳細資訊，請參閱[工作負載重要性](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)。  |NULL</br>low</br>below_normal</br>標準 （預設值）</br>above_normal</br>high|
   
- 這份檢視所保留的最大資料列的相關資訊，請參閱中的 [中繼資料] 區段[容量限制](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題。   
+ 這份檢視所保留的最大資料列的相關資訊，請參閱中的 [中繼資料] 區段[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題。   
   
 ## <a name="permissions"></a>Permissions
 

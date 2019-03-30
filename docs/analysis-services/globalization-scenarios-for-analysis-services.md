@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202247"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658322"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化案例
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53202247"
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 中的翻譯支援](../analysis-services/translation-support-in-analysis-services.md)   
  [Windows 應用程式的國際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Go Global 開發人員中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [全球化](/globalization/)   
  [使用以地區設定為基礎的自動調整設計撰寫 Windows 市集應用程式](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [使用 C# 和 XAML 開發通用 Windows 應用程式](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

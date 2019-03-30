@@ -11,12 +11,12 @@ ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6b50d6757c4ea635da35e881219dd63871dc0967
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b0806dc4001331523c1ee5aa400d0198f3799238
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039309"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657633"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 連接類型 (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 是可擴充的資料倉儲應用裝置，透過大量平行處理提供效能和擴充性。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 資料庫來進行分散式處理和資料存放。  
@@ -54,9 +54,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 -   不需要認證。 若要使用這個選項，您先前必須在報表伺服器上設定自動執行帳戶。 如需詳細資訊，請參閱 msdn.microsoft.com 上 [Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)中的[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
  如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或是[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Query"></a> 查詢  
  查詢會指定要為報表資料集擷取的資料。  
   
@@ -107,9 +105,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
  `WHERE HumanResources.Employee.JobTitle = (@JobTitle)`  
   
  當您執行查詢時，會自動建立與查詢參數對應的報表參數。 如需詳細資訊，請參閱本主題稍後的 [查詢參數](#Parameters) 。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Parameters"></a> 參數  
  當查詢文字包含具有輸入參數的查詢變數或預存程序時，會自動產生資料集的對應查詢參數和報表的報表參數。 查詢文字的查詢變數不能包含 DECLARE 陳述式。  
   
@@ -122,16 +118,12 @@ WHERE EmployeeID = (@EmpID)
 ```  
   
  根據預設，每個報表參數的資料類型為 Text，並具有自動建立的資料集，以提供可用值的下拉式清單。 建立報表參數後，您可能必須變更預設值。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Remarks"></a> 備註  
   
 ###### <a name="platform-and-version-information"></a>平台和版本資訊  
  如需平台和版本支援的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ 線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
@@ -140,9 +132,7 @@ WHERE EmployeeID = (@EmpID)
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [將篩選加入資料集中 &#40;報表產生器及 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
@@ -160,12 +150,8 @@ WHERE EmployeeID = (@EmpID)
   
  《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [線上叢書》](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 文件的 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
  提供支援每一個資料延伸模組之平台與版本的深入資訊。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
-  
-  

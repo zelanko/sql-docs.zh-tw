@@ -2,17 +2,17 @@
 title: 資料科學案例和解決方案範本]-[SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c40d5d60d43739ccfa6fa326ba0ca1c2688543a6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509844"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645490"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和解決方案範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +24,6 @@ ms.locfileid: "58509844"
 > [!TIP]
 > 
 > 大部分的範本有多個版本支援這兩個內部部署和雲端平台，適用於 machine learning。 比方說，您可以使用建置解決方案只有 SQL Server，或您可以建置在 Microsoft R Server 中，或在 Azure Machine Learning 中的解決方案。
-
-+ 如需詳細資訊和更新，請參閱本公告：[在 Azure ML 中令人興奮的新範本](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + 如需下載和安裝指示，請參閱[如何使用範本](#bkmk_HowTo)。
 
@@ -67,8 +65,6 @@ ms.locfileid: "58509844"
 [預測性維護範本 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **項目：** 預測性維護的目標是要提高效率的維護工作，藉由擷取過去的故障，並使用該資訊來預測裝置何時或何處可能會失敗。 預測裝置過時的功能對於依賴分散式的資料或感應器的應用程式特別有用。 這個方法也無法套用到監視或預測 IoT (Internet of Things) 裝置中的錯誤。
-
-此公告，以取得詳細資訊，請參閱：[新的預測性維護範本](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **如何：** 此解決方案的焦點在於回答問題，「 當將運行中的電腦故障嗎？ 」 輸入資料代表飛機引擎的模擬感應器度量。 取自監視引擎的目前作業狀況，例如目前的工作循環、 設定和感應器測量的資料用來建立預測模型的三種類型：
 

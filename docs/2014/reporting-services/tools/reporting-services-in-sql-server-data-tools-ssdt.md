@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3411efb39bf6d944c1646704185ef9038aba1db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289326"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658335"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 已[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]與商業智慧方案專用增強功能的環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 隨附於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -31,9 +31,7 @@ ms.locfileid: "56289326"
   
 ##  <a name="bkmk_SolutionsandProjects"></a> 方案與專案  
  報表專案是做為報表定義與資源的容器。 部署專案時，報表專案中的每一個檔案都會發行至報表伺服器。 當您第一次建立專案時，同時也會建立該專案的方案，以做為專案的容器。 您可以將多個專案加入單一方案。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_Configurations"></a> 組態  
  若要針對不同部署建立多組專案屬性，例如企業測試和實際報表伺服器，請使用組態管理員。 如需詳細資訊，請參閱 [SQL Server 資料工具中的部署和版本支援 &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)之中。  
   
@@ -45,11 +43,9 @@ ms.locfileid: "56289326"
 -   **報表伺服器專案精靈。** 當您選取報表伺服器精靈專案時，就會自動建立報表伺服器專案，而且報表精靈會開啟。 在此精靈中，您可以遵循每一頁的指示來建立報表，以便建立與資料來源的連接字串、設定資料來源認證、設計查詢、加入資料表或矩陣資料區、指定報表資料和群組、挑選字型和色彩樣式、將報表發行到報表伺服器，以及在本機預覽報表。 當您使用精靈建立報表之後，您可以在報表伺服器專案中使用報表設計師來變更報表資料和報表設計師。  
   
  ![SSDT 中的新專案範本](../../analysis-services/media/ssdt-biprojects.png "SSDT 中的新專案範本")  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 報表設計師視窗和窗格  
- 報表設計師支援兩種檢視：**設計**來定義報表資料和報表配置，並**預覽**來顯示報表的轉譯的檢視。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
+ 報表設計師支援兩種檢視：[設計] (可定義報表資料和報表配置) 和 [預覽] (可顯示報表的轉譯檢視)。 在每個檢視中，您可以顯示多個視窗來協助設計或檢視轉譯的報表。  
   
 ###  <a name="bkmk_ReportDataPane"></a> 報表資料窗格  
  [報表資料] 窗格顯示內建欄位、資料來源、資料集、欄位集合、報表參數和影像。  
@@ -72,9 +68,7 @@ ms.locfileid: "56289326"
   
 > [!NOTE]  
 >  如果您看不到 [報表資料] 窗格，請按一下 **[檢視]** 功能表上的 **[報表資料]**。 如果 [報表資料] 窗格是浮動窗格，您可以錨定它。 如需詳細資訊，請參閱[停駐報表設計師中的報表資料窗格 &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_GroupingPane"></a> 群組窗格  
  使用 [群組] 窗格，即可定義 Tablix 資料區的群組。 您可以定義資料表的資料列群組和詳細資料群組，以及矩陣的資料列和資料行群組。 您無法使用 [群組] 窗格定義 [圖表] 或其他資料區的群組。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
@@ -90,9 +84,7 @@ ms.locfileid: "56289326"
 >  若要切換 **[預設值]** 與 **[進階]** 模式，請以滑鼠右鍵按一下 **[資料行群組]** 圖示右邊的向下箭頭。  
   
  如需詳細資訊，請參閱＜ [Grouping Pane](grouping-pane.md)＞。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_Toolbox"></a> 工具箱  
  [工具箱] 包含可讓您拖曳至設計介面的報表項目。 資料區是指您用於在報表上組織資料的報表項目。 [資料表]、[矩陣]、[清單]、[圖表]、[量測計]、[資料橫條]、[走勢圖] 和 [指示器] 都是資料區。 其他報表項目包含 [地圖]、[文字方塊]、[矩形]、[線條]、[影像] 和 [子報表]。 如果您的系統管理員已經安裝並註冊自訂報表項目，這些項目可能也會顯示在此清單上。  
   
@@ -108,9 +100,7 @@ ms.locfileid: "56289326"
 -   設定 [群組] 窗格中目前所選取群組成員的屬性。 群組成員屬性可協助控制每個群組執行個體之靜態群組頁首及頁尾資料列的重複方式。 如需詳細資訊，請參閱[與群組一起顯示頁首和頁尾 &#40;報表產生器及 SSRS&#41;](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)。  
   
  若要顯示 [屬性] 窗格，請在 **[檢視]** 功能表中，按一下 **[屬性視窗]**。 您可以取消停駐此窗格並將它移至 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]視窗的其他區域，或將它顯示成設計介面上的索引標籤式檢視。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_SolutionExplorer"></a> 方案總管  
  [方案總管] 是標準的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 元件，它會顯示專案中的所有項目。 若為報表伺服器專案，這包含用於組織共用資料來源、共用資料集、報表及資源的資料夾。 開啟方案檔時，會自動依字母順序來排列資料夾項目。 若要檢視 [屬性] 窗格中的項目屬性，請選取項目。  
   
@@ -118,9 +108,7 @@ ms.locfileid: "56289326"
  當您預覽報表時，[輸出] 視窗就會顯示處理錯誤，而當您部署報表或共用資料來源時，則會顯示發行錯誤。  
   
  使用 [輸出] 及 [文件大綱] 視窗，即可協助偵錯運算式中的錯誤。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_DocumentOutline"></a> 文件大綱  
  [文件大綱] 視窗會顯示報表定義中所有報表項目的階層式清單。 若要開啟 [文件大綱] 窗格，請在 **[檢視]** 功能表中，指向 **[其他視窗]** ，然後按一下 **[文件視窗]**。  
   
@@ -128,9 +116,7 @@ ms.locfileid: "56289326"
   
 ###  <a name="bkmk_TaskList"></a> 工作清單  
  當您從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access 等其他應用程式匯入報表時，[工作清單] 視窗就會顯示不支援功能的建立錯誤。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerDesignView"></a> 報表設計師設計檢視  
  當您建立報表伺服器專案時，預設會以 [設計檢視] 開啟 [報表設計師]，並顯示設計介面。 設計介面預設會顯示報表主體及報表背景。  
   
@@ -139,9 +125,7 @@ ms.locfileid: "56289326"
  您可以使用顯示比例控制項來增加或減少報表的縮放比例。  
   
  若要設計報表，請將報表項目從 [工具箱] 拖曳至設計介面，然後設定其屬性，並改變它們在報表上的排列方式。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerPreview"></a> 報表設計師預覽  
  使用 [預覽]，即可執行報表並在報表檢視器中檢視轉譯的報表。 [預覽] 會在本機快取報表資料。 您也可以將組態屬性設定成使用瀏覽器並在偵錯檢視中執行報表。  
   
@@ -154,9 +138,7 @@ ms.locfileid: "56289326"
 -   **使用 [組態管理員] 和 [偵錯] 來預覽報表。** 在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中，專案屬性會定義您想要如何部署和偵錯報表。 這些屬性會套用至專案中的所有報表和共用資料來源。 若要設定專案屬性，請在 **[專案]** 功能表中，按一下 **[屬性]**。 您可以使用這些設定來測試專案，並將它們發行至報表伺服器。  
   
 -   **監視 [輸出] 窗格是否有錯誤訊息。** 當您預覽報表，而且報表處理器偵測到問題時，它就會將錯誤訊息寫入 [輸出] 窗格。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerMenus"></a> 報表設計師的功能表  
  當報表設計師專案在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中作用時，下列工具列就會加入至主要工具列。 報表設計師的功能表只會在 [設計] 檢視中顯示。  
   
@@ -188,7 +170,7 @@ ms.locfileid: "56289326"
   
 -   **報表屬性** ：選取即可開啟 **[報表屬性]** 對話方塊。 在這個對話方塊中，您可以指派一般報表屬性，例如作者名稱和方格間距，以及指定報表配置的屬性，例如資料行數和頁面大小。 您也可以包括自訂程式碼、組件和類別的參考、資料輸出元素的名稱、資料轉換和資料結構描述。  
   
--   **檢視**兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
+-   **檢視**：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
   
 -   **頁首** ：在報表中加入或刪除頁首。 當您刪除頁首時，就會刪除頁首中的所有項目。  
   
@@ -231,9 +213,7 @@ ms.locfileid: "56289326"
 -   **重新整理專案工具箱項目** ：當您在專案中安裝新的自訂報表項目時，重新整理工具箱快取。  
   
 -   **屬性** ：開啟這個專案的 **[屬性頁]** 對話方塊。 如需詳細資訊，請參閱 [專案屬性頁對話方塊](project-property-pages-dialog-box.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerToolbars"></a> 報表設計師的工具列  
  報表設計師會提供下列可在設計報表時使用的專用工具列：  
   
@@ -248,9 +228,7 @@ ms.locfileid: "56289326"
 -   **標準** ：開啟或儲存專案、顯示視窗，以及選取偵錯組態。  
   
  您可以使用 **[檢視]** 功能表來控制是否要顯示這些工具列。 如果其他 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 工具列的功能不適用於報表設計師功能，這些工具列的功能可能會停用。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_SourceControl"></a> 原始檔控制  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
@@ -258,9 +236,7 @@ ms.locfileid: "56289326"
  若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 根據預設，此資料夾位於\<磁碟機 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
   
  您也可以將自訂樣式加入報表精靈。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server 資料工具的命令列支援  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 根據[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 以及基礎 devenv.exe 應用程式。 您必須先為下列兩個項目設定有效的值，才能使用這些選項：  
   
@@ -289,9 +265,7 @@ ms.locfileid: "56289326"
     ```  
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2010\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_KeyboardShortcuts"></a> Reporting Services 中的鍵盤快速鍵  
  您可以使用鍵盤快速鍵以：  
   
@@ -320,9 +294,7 @@ ms.locfileid: "56289326"
     |在文字方塊中，選取從目前游標位置到運算式開頭的文字|CTRL+SHIFT+HOME|  
     |在文字方塊中，選取從目前游標位置到運算式結尾的文字|CTRL+SHIFT+END|  
     |開啟選定報表項目的快速鍵功能表|較新鍵盤上的 SHIFT+F10+屬性鍵|  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#bkmk_Top)  
-  
+
 ## <a name="see-also"></a>另請參閱  
  [方案總管](../../ssms/solution/solution-explorer.md)   
  [Reporting Services 報表 &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   

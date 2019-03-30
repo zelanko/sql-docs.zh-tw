@@ -2,17 +2,17 @@
 title: 機器學習服務生命週期和小組程序-SQL Server 機器學習服務
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511285"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645430"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>機器學習服務生命週期和角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "58511285"
 
 > [!TIP]
 > 
-> 您開始使用 machine learning 專案之前，我們建議您檢閱的工具與所提供的最佳做法[Microsoft Team Data Science Process](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/)，或 TDSP。 此程序已建立的機器學習合併計劃和反覆進行機器學習服務專案的最佳作法的 microsoft 的顧問。 TDSP 的根源在於 CRISP-DM，等業界標準，但包含最近的作法，例如 DevOps 和視覺效果。
+> 您開始使用 machine learning 專案之前，我們建議您檢閱的工具與所提供的最佳做法[Microsoft Team Data Science Process](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview)，或 TDSP。 此程序已建立的機器學習合併計劃和反覆進行機器學習服務專案的最佳作法的 microsoft 的顧問。 TDSP 的根源在於 CRISP-DM，等業界標準，但包含最近的作法，例如 DevOps 和視覺效果。
 
 ## <a name="machine-learning-life-cycle"></a>機器學習服務生命週期
 

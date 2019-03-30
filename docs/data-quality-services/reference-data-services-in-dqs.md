@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305936"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658202"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
 
@@ -35,7 +35,7 @@ ms.locfileid: "58305936"
 -   支援使用 Windows Azure Marketplace 所提供的參考資料，以及直接從協力廠商參考資料提供者所提供的參考資料。  
   
 ##  <a name="Marketplace"></a> 使用 Windows Azure Marketplace 所提供的參考資料  
- DQS 支援使用 Windows Azure Marketplace 所提供的參考資料，好讓內容提供者透過服務商場提供參考資料服務。 服務商場是 Microsoft 的服務，可針對高品質資料和應用程式提供單一服務商場和傳遞通道，並提供雲端服務。 如需市集的詳細資訊，請參閱[深入了解 Windows Azure Marketplace ](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291)。  
+ DQS 支援使用 Windows Azure Marketplace 所提供的參考資料，好讓內容提供者透過服務商場提供參考資料服務。 服務商場是 Microsoft 的服務，可針對高品質資料和應用程式提供單一服務商場和傳遞通道，並提供雲端服務。 如需有關服務商場的詳細資訊，請參閱 <<c0> [ 深入了解 Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about)。
   
  服務商場與 DQS 之間的順暢整合會簡化與探索、瀏覽及取得 DQS 內的資料品質專案資訊相關的步驟。 這些資料是從 DQS 取用，而且有助於 DQS 使用者以創新方式將 DQS、服務商場和參考資料服務提供者結合在一起，以達成高資料品質。  
   

@@ -3,17 +3,17 @@ title: 進行即時評分使用 sp_rxPredict 預存程序-SQL Server Machine Lea
 description: 產生使用 sp_rxPredict，評分資料輸入，針對預先定型的模型，以 R 撰寫 SQL Server 上的預測。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509625"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645470"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server machine learning 中的 sp_rxPredict 進行即時評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ ms.locfileid: "58509625"
 2. 您載入預先定型的模型，以二進位格式。
 3. 您提供新的輸入的資料評分，表格式或單一資料列，做為模型的輸入。
 4. 若要產生分數，請呼叫[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)預存程序。
-
-> [!TIP]
-> 如需範例的作用中的即時評分，請參閱[端對端貸款壞帳預測建置使用 Azure HDInsight Spark 叢集和 SQL Server 2016 R 服務](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 若要停用即時評分的功能，請開啟提升權限的命令提示字元，並執行下列命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>後續步驟
-
-如需如何使用 rxPredict，用於評分的範例，請參閱[端對端貸款壞帳預測建置使用 Azure HDInsight Spark 叢集和 SQL Server 2016 R 服務](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)。
 
 如需有關 SQL Server 中的評分的詳細背景，請參閱[如何在 SQL Server machine learning 產生預測](r/how-to-do-realtime-scoring.md)。

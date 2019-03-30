@@ -10,12 +10,12 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 716aea984073d557e45dc30c1972b2151173fd58
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377116"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658392"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -73,7 +73,7 @@ ms.locfileid: "58377116"
   
 -   [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions)  
   
-###  <a name="BKMK_Change_Tables_CT"></a> 變更資料表 (_CT)  
+###  <a name="bkmk_change_tables_ct"></a> 變更資料表 (_CT)  
  變更資料表是從鏡像資料表建立而來。 其中包含擷取自 Oracle 資料庫的變更資料。 這些資料表是根據以下慣例所命名：  
   
  **[cdc].[\<capture-instance>_CT]**  
@@ -82,14 +82,14 @@ ms.locfileid: "58377116"
   
  擷取資料表是由 Oracle CDC 執行個體寫入。 當建立擷取執行個體時，便會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的特殊資料表值函式讀取這些資料表。 例如， `fn_cdc_get_all_changes_HR_EMPLOYEES`。 如需這些 CDC 函數的詳細資訊，請參閱 [異動資料擷取函數 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=231152)。  
   
-###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="bkmk_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 資料表是由 SQL Server CDC 元件所產生。 它在 Oracle CDC 中的使用情況與一般使用情況不同。  
   
  如果是 Oracle CDC，這個資料表中儲存的 LSN 值是根據與變更相關聯的 Oracle 系統變更編號 (SCN) 值。 LSN 值的前 6 個位元組是原始 Oracle SCN 編號。  
   
  此外在使用 Oracle CDC 時，時間資料行 (`tran_begin_time` 和 `tran_end_time`) 會儲存變更的 UTC 時間，而不是當地時間，就像在一般 SQL Server CDC 中一樣。 如此可確保日光節約時間變更不會影響 lsn_time_mapping 中所儲存的資料。  
   
-###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="bkmk_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  此資料表包含 Oracle CDC 執行個體的組態資料。 它是使用 CDC 設計工具主控台來更新。 此資料表只有一個資料列。  
   
  下表描述 **cdc.xdbcdc_config** 資料表資料行。  
@@ -98,7 +98,7 @@ ms.locfileid: "58377116"
 |----------|-----------------|  
 |version|這會追蹤 CDC 執行個體組態的版本。 每當更新資料表以及加入新的擷取執行個體或是移除現有的擷取執行個體時，都會更新此項目。|  
 |connect_string|Oracle 連接字串。 基本範例如下：<br /><br /> `<server>:<port>/<instance>` (例如 `erp.contoso.com:1521/orcl`)。<br /><br /> 連接字串還可以指定 Oracle Net 連接描述項，例如， `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目錄伺服器或 tnsnames，則連接字串可以是連接的名稱。<br /><br /> 如需 Oracle 連接字串的詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)，以取得 Oracle CDC 服務所使用之 Oracle Instant Client 的 Oracle 資料庫連接字串詳細資訊。|  
-|use_windows_authentication|下列其中一個值的布林值：<br /><br /> **0**:提供的 Oracle 使用者名稱和密碼進行驗證 （預設值）<br /><br /> **1**:Windows 驗證來連接到 Oracle 資料庫。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。|  
+|use_windows_authentication|下列其中一個值的布林值：<br /><br /> **0**:提供 Oracle 使用者名稱和密碼進行驗證 (預設)<br /><br /> **1**:使用 Windows 驗證連接到 Oracle 資料庫。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。|  
 |username|記錄採礦之 Oracle 資料庫使用者的名稱。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  
 |密碼|記錄採礦之 Oracle 資料庫使用者的密碼。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  
 |transaction_staging_timeout|未認可的 Oracle 交易在寫入 **cdc.xdbcdc_staged_transactions** 資料表之前保留在記憶體中的時間 (以秒數為單位)。 預設值是 120 秒。|  
@@ -132,7 +132,7 @@ ms.locfileid: "58377116"
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|布林值。 **True** 表示在偵測到重大結構描述變更時停止。<br /><br /> **False** 表示卸除鏡像資料表和擷取執行個體。|  
 |source_oracle_home||-|-|False|可設定為特定的 Oracle Home 路徑，或是 CDC 執行個體將用來連接到 Oracle 的 Oracle Home 名稱。|  
   
-###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="bkmk_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  此資料表包含有關 Oracle CDC 執行個體之已保存狀態的資訊。 擷取狀態會用於復原和容錯移轉情況，也可用於監控健全狀態。  
   
  下表描述 **cdc.xdbcdc_state** 資料表資料行。  
@@ -141,8 +141,8 @@ ms.locfileid: "58377116"
 |----------|-----------------|  
 |status|目前 Oracle CDC 執行個體的目前狀態碼。 此狀態會描述 CDC 的目前狀態。|  
 |sub_status|提供有關目前狀態之其他資訊的第二層狀態。|  
-|active|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體程序不在使用中。<br /><br /> **1**:Oracle CDC 執行個體程序為作用中。|  
-|error|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體程序不是處於錯誤狀態。<br /><br /> **1**:Oracle CDC 執行個體處於錯誤狀態。|  
+|active|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體處理序不在使用中。<br /><br /> **1**:Oracle CDC 執行個體處理序為使用中。|  
+|error|下列其中一個值的布林值：<br /><br /> **0**:Oracle CDC 執行個體處理序不在錯誤狀態中。<br /><br /> **1**:Oracle CDC 執行個體在錯誤狀態中。|  
 |status_message|提供錯誤或狀態描述的字串。|  
 |TIMESTAMP|包含上次更新擷取狀態之時間 (UTC) 的時間戳記。|  
 |active_capture_node|目前正在執行 Oracle CDC 服務和 Oracle CDC 執行個體 (它正在處理 Oracle 交易記錄) 的主機名稱 (此主機可以是叢集上的節點)。|  
@@ -157,7 +157,7 @@ ms.locfileid: "58377116"
 |read_changes|從來源 Oracle 交易記錄讀取的變更記錄數目。|  
 |staged_transactions|目前暫存於 **cdc.xdbcdc_staged_transactions** 資料表中的使用中交易數目。|  
   
-###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="bkmk_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  此資料表包含有關 CDC 執行個體操作的資訊。 儲存在此資料表中的資訊包括錯誤記錄、顯著的狀態變更及追蹤記錄。 錯誤資訊也會寫入 Windows 事件記錄檔，以確保當 **cdc.xcbcdc_trace** 資料表無法使用時可以使用該資訊。  
   
  下表描述 cdc.xdbcdc_trace 資料表資料行。  
@@ -172,7 +172,7 @@ ms.locfileid: "58377116"
 |status_message|狀態資料表使用的狀態訊息。|  
 |data|當錯誤或追蹤記錄包含裝載時的其他資料 (例如，損毀的記錄檔記錄)。|  
   
-###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  此資料表會儲存大型交易或長時間執行之交易的變更記錄，直到擷取交易認可或回復事件為止。 Oracle CDC 服務會依據交易認可時間，然後依據每一筆交易的時間順序來排序擷取的記錄檔記錄。 相同交易的記錄檔記錄會儲存在記憶體中，直到交易結束然後寫入目標變更資料表或遭到捨棄為止 (如果進行回復作業的話)。 因為可用記憶體數量有限，所以大型交易會寫入 **cdc.xdbcdc_staged_transactions** 資料表中，直到交易完成為止。 當交易長時間執行時，也會寫入暫存資料表。 因此在重新啟動 Oracle CDC 執行個體時，不需要從 Oracle 交易記錄重新讀取舊的變更。  
   
  下表描述 **cdc.xdbcdc_staged_transactions** 資料表資料行。  
@@ -187,5 +187,3 @@ ms.locfileid: "58377116"
   
 ## <a name="see-also"></a>另請參閱  
  [Attunity Oracle 異動資料擷取設計工具](change-data-capture-designer-for-oracle-by-attunity.md)  
-  
-  

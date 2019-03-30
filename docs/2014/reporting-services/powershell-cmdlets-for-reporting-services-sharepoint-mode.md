@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c010d299448bbecd7f527b349cf3ca719809493
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013519"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658262"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
   當您安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式時，系統就會安裝 PowerShell 指令程式以支援 SharePoint 模式的報表伺服器。 這些指令程式涵蓋三個功能類別。  
@@ -56,7 +56,7 @@ ms.locfileid: "56013519"
     -   [變更並列出訂用帳戶擁有者](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> 指令程式摘要  
- 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 < [Windows Server 上啟動 Windows PowerShell](https://technet.microsoft.com/library/hh847814.aspx) (https://technet.microsoft.com/library/hh847814.aspx)。 在下列 cmdlet 摘要中，服務應用程式 「 資料庫 」 參考的所有資料庫建立及使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 其中包括組態、警示和暫時資料庫。  
+ 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在下列 cmdlet 摘要中，服務應用程式 「 資料庫 」 參考的所有資料庫建立及使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 其中包括組態、警示和暫時資料庫。  
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   

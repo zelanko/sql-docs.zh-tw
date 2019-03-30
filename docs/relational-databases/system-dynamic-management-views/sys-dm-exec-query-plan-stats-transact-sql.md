@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0dd8b138c425adb47f0bb228848ca39361ffa87e
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0bef01ab6b4ecf1a9f05b1c7b40e2767aaae0db3
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618601"
+ms.locfileid: "58645350"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -80,7 +80,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
     **AND**    
 -   查詢相當簡單，通常分類為 OLTP 工作負載的一部分。
 
-<sup>1</sup>這是指 Showplan 只包含根節點運算子 （選取）。 
+<sup>1</sup>這是指 Showplan 只包含根節點運算子 （選取）。 針對[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4 只這是指做為可透過 sys.dm_exec_cached_plans 快取的計畫。
 
 在下列情況中，**會傳回任何輸出**從**sys.dm_exec_query_plan_stats**:
 
@@ -135,5 +135,5 @@ GO
 ## <a name="see-also"></a>另請參閱
   [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [執行相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

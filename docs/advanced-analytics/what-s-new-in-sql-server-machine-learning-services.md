@@ -1,7 +1,7 @@
 ---
 title: 新功能-SQL Server 機器學習服務 |Microsoft Docs
 description: 新功能通知每個版本的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 Machine Learning 服務。
-ms.date: 03/27/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509825"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645520"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什麼是 SQL Server Machine Learning 服務的新功能
 
@@ -47,7 +47,7 @@ ms.locfileid: "58509825"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 的新功能
 
-此版本新增了[的 Python 支援和領先業界的機器學習服務演算法](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)。 重新命名以反映新的範圍，SQL Server 2017 標示了[SQL Server Machine Learning 服務 （資料庫）](what-is-sql-server-machine-learning.md)，使用 Python 和 r 語言支援 
+此版本新增了[的 Python 支援和領先業界的機器學習服務演算法](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)。 重新命名以反映新的範圍，SQL Server 2017 標示了[SQL Server Machine Learning 服務 （資料庫）](what-is-sql-server-machine-learning.md)，使用 Python 和 r 語言支援 
 
 功能通知所有總，請參閱[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)。
 

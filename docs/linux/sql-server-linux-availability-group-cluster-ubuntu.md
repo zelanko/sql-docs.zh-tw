@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: b174f21cc0fa15404587f63019b5bcda2eb72534
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160616"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658102"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>設定 Ubuntu 叢集和可用性群組資源
 
@@ -135,7 +135,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>設定隔離 (STONITH)
 
-Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢集安裝程式。 當叢集資源管理員無法判斷狀態的節點或節點上的資源時，隔離會用於再一次將叢集設為已知狀態。 資源層級隔離主要是確保所設定的資源會發生中斷時的任何資料損毀。 您可以使用資源層級的隔離，比方說，使用 DRBD （分散式複寫區塊裝置） 將標示為已過期時的節點上的磁碟通訊連結中斷。 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點和它的 Pacemaker 實作稱為 STONITH （這代表 「 限定標頭中的另一個節點 」）。 Pacemaker 支援許多隔離裝置，例如不斷電供應系統或管理介面卡的伺服器。 如需詳細資訊，請參閱 < [Pacemaker 叢集從頭](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)和[隔離和 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢集安裝程式。 當叢集資源管理員無法判斷狀態的節點或節點上的資源時，隔離會用於再一次將叢集設為已知狀態。 資源層級隔離主要是確保所設定的資源會發生中斷時的任何資料損毀。 您可以使用資源層級的隔離，比方說，使用 DRBD （分散式複寫區塊裝置） 將標示為已過期時的節點上的磁碟通訊連結中斷。 節點層級隔離可確保節點不會執行任何資源。 這是藉由重設節點和它的 Pacemaker 實作稱為 STONITH （這代表 「 限定標頭中的另一個節點 」）。 Pacemaker 支援許多隔離裝置，例如不斷電供應系統或管理介面卡的伺服器。 如需詳細資訊，請參閱 < [Pacemaker 叢集從頭](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)和[隔離和 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
 因為節點層級的隔離設定大量取決於您環境中，我們停用它 （它可以設定時間較晚） 在此教學課程。 在主要節點上執行下列指令碼： 
 

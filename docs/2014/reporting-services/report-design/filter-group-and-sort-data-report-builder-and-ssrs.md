@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294686"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658352"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
   在報表中，運算式可用於協助您控制、組織和排序報表資料。 依預設，在您建立資料集與設計報表配置時，報表項目的屬性會依據資料集欄位、參數和 [報表資料] 窗格中出現的其他項目，自動設定為運算式。 您也可以將互動式排序按鈕加入至資料表或矩陣資料格，讓使用者以互動方式變更群組或群組內資料列的資料列排序順序。  
@@ -66,10 +66,8 @@ ms.locfileid: "56294686"
   
  您可以在篩選運算式中包含參數，讓使用者協助控制報表中的資料。 如需詳細資訊，請參閱[參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)。  
   
- 若要自訂每個使用者的檢視，您可以在篩選中包含內建欄位 UserID 的參考。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+ 若要自訂每個使用者的檢視，您可以在篩選中包含內建欄位 UserID 的參考。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)。
+
 ##  <a name="Grouping"></a> 群組報表中的資料  
  群組可組織報表中的資料以供顯示或計算彙總值。 了解如何定義群組以及使用群組功能可協助您設計更精確的報表。  
   
@@ -104,15 +102,13 @@ ms.locfileid: "56294686"
  您可以為每個資料區指定相同的群組運算式，以提供相同資料集內資料的多個檢視。 例如，您可以顯示分類資料，以在資料表中顯示所有詳細資料，並在圖形圖中顯示彙總，同時協助您以相對於整個資料集的方式視覺化每個類別目錄。 如需詳細資訊，請參閱 [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
   
  當您在資料表、矩陣或清單的資料格中建立巢狀資料區時，您會自動將資料的範圍設定成該資料格的最內層群組成員資格。 例如，假設您將圖表加入到同時位於資料列群組和資料行群組的資料格中。 可用於該圖表的資料範圍在執行階段便為最內層的資料列群組執行個體與最內層的資料行群組執行個體。 如需詳細資訊，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="Sorting"></a> 排序報表中的資料  
  若要控制報表中資料的排序次序，您可以在資料集查詢中排序資料，或針對資料區或群組定義排序運算式。 您也可以將互動式排序按鈕加入到資料表和矩陣，讓使用者變更資料列的排序次序。  
   
  三種類型的排序全都可以在相同的報表中結合。 依預設，排序次序是由資料集查詢傳回資料的順序來決定。 排序運算式會套用在資料區和資料區群組中。 互動式排序則是在排序運算式之後套用。  
   
- 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 傳回值，如下列的彙總函式會受排序次序::第一個、 最後一個，和前一個。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。  
+ 對於包含彙總函式的運算式，大部分的結果都不會受排序次序影響。 下列彙總函式的傳回值會受排序次序影響：第一個、最後一個和上一個。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>排序資料集查詢中的資料  
  將資料集查詢中的排序次序加入到預先排序資料，然後再針對報表進行擷取。 透過排序查詢中的資料，排序工作將由資料來源而非報表處理器完成。  
@@ -168,9 +164,7 @@ FROM Production.Product
  您可以將互動式排序按鈕加入到資料行標頭和群組首，讓使用者變更資料表或矩陣中報表資料的排序次序。 使用者可以按一下按鈕來切換排序次序。 系統以可讓使用者互動的轉譯格式支援互動式排序，例如 HTML。  
   
  您可以將互動式排序按鈕加入到 Tablix 資料區資料格裡的文字方塊中。 依預設，每個資料格都包含一個文字方塊。 在文字方塊屬性中，您可以指定要排序資料表或矩陣資料區的哪個部分 (父群組值、子群組值或詳細資料列)、排序的依據，以及是否要將排序運算式套用到具有對等關聯性的其他報表項目。 例如，如果在相同資料集中提供檢視的資料表和圖表都包含在矩形中，它們就是對等資料區域。 當使用者在資料表中切換排序次序時，圖表的排序次序也會切換。 如需詳細資訊，請參閱[互動式排序 &#40;報表產生器及 SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)。  
-  
- ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 如何主題  
  [在報表中捲動時將標頭保持可見 &#40;報表產生器及 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
@@ -218,5 +212,3 @@ FROM Production.Product
  [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [指標 &#40;報表產生器及 SSRS&#41;](indicators-report-builder-and-ssrs.md)  
-  
-  

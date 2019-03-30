@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9e79803a1c06a78f67a37a6a669af1c5ab4683f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021562"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658115"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "56021562"
 |end_time|**datetime**|在執行結束、 失敗或已取消的時間。|進行中或已排入佇列的背景工作角色為 NULL。 否則，大於 start_time。|  
 |total_elapsed_time|**int**|在執行中，以毫秒為單位所花費的總時間。|大於或等於 0。<br /><br /> 如果 total_elapsed_time 超過整數的最大值，total_elapsed_time 仍是最大值。 這種情況會產生警告 」 的最大值已超過 」。<br /><br /> 以毫秒為單位的最大值相當於 24.8 天。|  
   
- 這份檢視所保留的最大資料列的相關資訊，請參閱[系統檢視的最大值](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)。  
+ 這份檢視所保留的最大資料列的相關資訊，請參閱中的 [中繼資料] 區段[容量限制](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)主題。
   
 ## <a name="see-also"></a>另請參閱  
  [系統檢視表&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

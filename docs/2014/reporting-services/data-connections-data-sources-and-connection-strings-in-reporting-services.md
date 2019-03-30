@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291767"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658114"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表中包括資料，您必須先建立「資料來源」  與「資料集」 。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -86,7 +86,7 @@ ms.locfileid: "56291767"
   
 -   **資料來源類型**連接類型，例如[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 請從連接類型的下拉式清單中選擇此值。  
   
--   **連接資訊** 連接資訊包括資料來源的名稱與位置，以及每個資料提供者專屬的連接屬性。 *「連接字串」* (Connection String) 是連接資訊的文字表示。 例如，如果資料來源是 SQL Server 資料庫，您就可以指定資料庫的名稱。 若是內嵌的資料來源，您也可以撰寫以運算式為基礎的連接字串，在執行階段接受評估。 如需詳細資訊，請參閱本主題稍後的 [以運算式為基礎的連接字串](#Expressions) 。  
+-   **連接資訊** 連接資訊包括資料來源的名稱與位置，以及每個資料提供者專屬的連接屬性。 *「連接字串」* (Connection String) 是連接資訊的文字表示。 例如，如果資料來源是 SQL Server 資料庫，您就可以指定資料庫的名稱。 若是內嵌的資料來源，您也可以撰寫以運算式為基礎的連接字串，在執行階段接受評估。 如需詳細資訊，請參閱本主題稍後的 [以運算式為基礎的連接字串](#bkmk_Expressions_in_connection_strings) 。  
   
 -   **認證** 您可以提供存取資料所需的認證。 資料來源擁有者必須已經授與您適當的權限，您才能同時存取資料來源及資料來源上的特定資料。 例如，若要連接到網路伺服器上所安裝的 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 範例資料庫，您必須擁有連接伺服器的權限，以及存取資料庫的唯讀權限。  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291767"
  [設定部署屬性 &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

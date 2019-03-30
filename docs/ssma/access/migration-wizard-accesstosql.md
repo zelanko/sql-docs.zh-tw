@@ -19,12 +19,12 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664817"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657012"
 ---
 # <a name="migration-wizard-accesstosql"></a>移轉精靈 」 (AccessToSQL)
 移轉精靈引導您完成移轉的一個或多個資料庫存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 使用精靈，您會建立專案、 將資料庫新增至專案，請選取要移轉，並連接到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您也會轉換、 載入和存取結構描述和資料移轉。 （選擇性） 您可以在此連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表。  
@@ -76,7 +76,7 @@ ms.locfileid: "51664817"
 如需篩選的詳細資訊，請參閱 [選項] 區段的[進階物件選取項目 （SSMA 常見）](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)。  
   
 ## <a name="connect-to-sql-server-page"></a>連接到 SQL Server 頁面  
-在 [連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]] 頁面上，您指定連接屬性，然後連線至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[連接到 SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+在 [連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]] 頁面上，您指定連接屬性，然後連線至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server](connect-to-sql-server-accesstosql.md)。
   
 > [!IMPORTANT]  
 > 一旦連線成功，您將會遇到**連結資料表**頁面，您必須在連結資料表的選項。 按一下 [**下一步]** 並啟動移轉。  
