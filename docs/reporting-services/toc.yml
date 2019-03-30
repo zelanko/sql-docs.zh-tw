@@ -118,7 +118,7 @@ items:
     href: ../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md
 - name: 在命令提示字元安裝 Reporting Services
   href: ../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
-- name: Install Report Builder
+- name: 安裝報表產生器
   href: ../reporting-services/install-windows/install-report-builder.md
 - name: 將報表產生器解除安裝
   href: ../reporting-services/install-windows/uninstall-report-builder.md
@@ -1407,8 +1407,6 @@ items:
     href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
   - name: 刪除準則設定檔
     href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
-  - name: WMI 提供者錯誤 0x8007052f
-    href: ../relational-databases/wmi-provider-error-0x8007052f.md
 - name: WMI 提供者程式庫參考概觀
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
 - name: MSReportServer_Instance 類別
@@ -1956,9 +1954,9 @@ items:
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 教學課程：運算式簡介
       href: ../reporting-services/tutorial-introducing-expressions.md
-ms.openlocfilehash: 9810e2d55fea922b6812d5d0539e8283f4977033
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6e56b37d3364d39890fe7d4211881e936e6aa02f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290864"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645580"
