@@ -79,7 +79,7 @@ ms.locfileid: "56662922"
 -  **單一頁面配置器 (SPA)**，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理程中只包含少於或等於 8 KB 的記憶體配置。 [最大伺服器記憶體 (MB)] 與 [最小伺服器記憶體 (MB)] 設定選項決定了 SPA 可取用的實體記憶體上限。 緩衝集區同時是 SPA 的機制，以及單一分頁配置的最大取用者。
 -  **多頁配置器 (MPA)**，適用於要求超過 8KB 的記憶體配置。
 -  **CLR 配置器**，包括 SQL CLR 堆積，及其在 CLR 初始化期間所建立的全域配置。
--  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中**[執行緒堆疊](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的記憶體配置。
+-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理序中 **[執行緒堆疊](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 的記憶體配置。
 -  **直接 Windows 配置 (DWA)**，適用於直接向 Windows 提出的記憶體配置要求。 這些包括使用 Windows 堆積，以及載入至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理之模組所做的直接虛擬配置。 這類的記憶體配置要求範例，包括擴充預存程序 DLL 的配置、使用「自動」處理序 (sp_OA 呼叫) 所建立的物件，以及連結伺服器提供者的配置。
 
 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始，單頁配置、多頁配置及 CLR 配置皆一併整合為 **「任何大小」分頁配置器**，且包含在 [最大伺服器記憶體 (MB)] 及 [最小伺服器記憶體 (MB)] 設定選項所控制的記憶體限制之中。 這些變更為經由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員的所有記憶體需求，提供了更準確的調整大小功能。 
@@ -109,7 +109,7 @@ ms.locfileid: "56662922"
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 開始對 "memory_to_reserve" 所進行的變更
-在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)**、**CLR 配置器**、SQL Server 處理序中**執行緒堆疊**的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
+在舊版 SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 及 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) 中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體管理員保留了一部分處理序虛擬位址空間 (VAS)，供**多頁配置器 (MPA)**、**CLR 配置器**、SQL Server 處理序中 **執行緒堆疊** 的記憶體配置，以及**直接 Windows 配置 (DWA)** 使用。 這部分的虛擬位址空間又稱為「假釋記憶體」(Mem-To-Leave) 或「非緩衝集區」區域。
 
 為這些配置保留的虛擬位址空間會依 _**memory\_to\_reserve**_ 設定選項而定。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用的預設值為 256 MB。 若要覆寫預設值，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]*-g* 啟動參數。 如需 [-g](../database-engine/configure-windows/database-engine-service-startup-options.md) 啟動參數的詳細資訊，請參閱*資料庫引擎服務啟動選項*的文件頁面。
 
