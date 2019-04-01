@@ -24,12 +24,12 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee122adb459586f370f2b115f161c56468f4ce7a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ccc802650dd4ba57074d760d2e9b7af176121e8e
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327659"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645420"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  重新產生加密階層是一項需要大量資源的作業。 您應該將這項作業安排在低需求時進行。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  需要伺服器的 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  
@@ -83,6 +83,4 @@ GO
  [服務主要金鑰](../../relational-databases/security/encryption/service-master-key.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+ [加密階層](../../relational-databases/security/encryption/encryption-hierarchy.md)

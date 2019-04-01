@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 586a8623e202674cdab644ac882be3ed45adc62a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293987"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658072"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>使用 Microsoft 商業智慧 (BI) 工具進行分析和報告
 
@@ -22,7 +22,7 @@ ms.locfileid: "56293987"
 
 下表會將資料分析與報告的工作負載對應到最適合這些工作負載的 Microsoft BI 工具。 如需有關產品的詳細資訊，請按一下表格中的產品連結。  
   
- 如需這些工具的簡短概觀，以協助您決定適合您的工具，請參閱 [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx)(Microsoft Business Intelligence (BI) 工具簡介)。  
+ 如需這些工具的簡短概觀，以協助您決定適合您的工具，請參閱 [Introducing Microsoft Business Intelligence (BI) Tools](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx)(Microsoft Business Intelligence (BI) 工具簡介)。
   
 |工作負載|使用者|||BI 工具|||  
 |---------------|----------|-|-|--------------|-|-|  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b584c7fc3ffee49bf2d63fd95c8a8e23f0b09013
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504293"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657682"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
 
@@ -34,7 +34,7 @@ ms.locfileid: "52504293"
 
 ## <a name="cmdlet-summary"></a>指令程式摘要
 
- 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx)。 在下列 Cmdlet 摘要中，服務應用程式「資料庫」參考是指 Reporting Services 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
+ 若要執行指令程式，您需要開啟 SharePoint 管理命令介面。 您也可以使用 Microsoft Windows 隨附的圖形化使用者介面編輯器 **Windows PowerShell 整合式指令碼環境 (ISE)**。 如需詳細資訊，請參閱 [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)。 在下列 Cmdlet 摘要中，服務應用程式「資料庫」參考是指 Reporting Services 服務應用程式建立和使用的所有資料庫。 其中包括組態、警示和暫時資料庫。  
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52504293"
 |Mount-SPRSDatabase|掛載 Reporting Services 服務應用程式的資料庫。|  
 |New-SPRSDatabase|為指定的 Reporting Services 服務應用程式建立新的服務應用程式資料庫。|  
 |Get-SPRSDatabaseCreationScript|針對 Reporting Services 服務應用程式將資料庫建立指令碼輸出到畫面。 然後您就可以在 SQL Server Management Studio 中執行指令碼。|  
-|Get-SPRSDatabase|取得一個或多個 Reporting Services 服務應用程式資料庫。 使用命令來取得服務應用程式資料庫的識別碼，以便使用 Set-SPRSDatabase Cmdlet 來修改屬性，例如 `querytimeout`。 請參閱本主題中的範例， [取得並設定 Reporting Services 應用程式資料庫的屬性](#bkmk_example_db_properties)。|  
+|Get-SPRSDatabase|取得一個或多個 Reporting Services 服務應用程式資料庫。 使用命令來取得服務應用程式資料庫的識別碼，以便使用 Set-SPRSDatabase Cmdlet 來修改屬性，例如 `querytimeout`。 請參閱本主題中的範例， [取得並設定 Reporting Services 應用程式資料庫的屬性](#get-and-set-properties-of-the-reporting-service-application-database)。|  
 |Get-SPRSDatabaseRightsScript|針對 Reporting Services 服務應用程式將資料庫權限指令碼輸出到畫面。 它會提示您提供所需的使用者和資料庫，然後傳回您可執行以修改權限的 Transact SQL。 然後您就可以在 SQL Server Management Studio 中執行這個指令碼。|  
 |Get-SPRSDatabaseUpgradeScript|將資料庫升級指令碼輸出至畫面。 指令碼會將 Reporting Services 服務應用程式資料庫升級至目前 Reporting Services 安裝的資料庫版本。|  
   

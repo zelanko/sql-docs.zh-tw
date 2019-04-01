@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3335e474819d43854bc3cf59158d04a78649c130
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 083eda191d51ec7043f24511d03c90beff9bfe84
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974357"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657733"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver 的版本資訊
 
@@ -26,7 +26,7 @@ ms.locfileid: "57974357"
 
 ## <a name="721"></a>7.2.1
 
-### <a name="compliance"></a>合規性
+### <a name="compliance"></a>遵循
 
 2019 年 2 月 11 日
 
@@ -213,7 +213,7 @@ Microsoft JDBC Driver 6.2 for SQL Server 是完全符合 JDBC 規格 4.1 和 4.2
 >
 > 另一項改進升級 Azure Key Vault 相依程式庫版本為 1.0.0，而新的 jar （版本 6.2.2） 已於 2017 年 10 月 19 日發行。
 >
-> 下載最新的更新從 JDBC Driver 6.2 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)，並[Maven 中央](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 請更新您的專案，以使用 6.2.2 發行的 jar。 如需詳細資訊，請檢視版本資訊[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)並[6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)。
+> 下載最新的更新從 JDBC Driver 6.2 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)，並[Maven 中央](https://search.maven.org/search?q=g:com.microsoft.sqlserver)。 請更新您的專案，以使用 6.2.2 發行的 jar。 如需詳細資訊，請檢視版本資訊[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)並[6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)。
 
 ### <a name="azure-ad-support-for-linux"></a>適用於 Linux 的 azure AD 支援
 

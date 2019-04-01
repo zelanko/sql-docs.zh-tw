@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9341694ac0a7ed377598c1ebb72774c954861ddb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1cbd78870aee49d86511a0e4731009374a3b379
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726516"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512425"
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47726516"
   
 -   如果指定了 ALTER INDEX ALL，它會同時套用至非 XML 與 XML 索引。 索引選項可以指定為對於兩種索引類型都無效。 在此情況下，整個陳述式都會失敗。  
   
-## <a name="example-modifying-an-xml-index"></a>範例：修改 XML 索引  
+## <a name="example-modifying-an-xml-index"></a>範例修改 XML 索引  
  下列範例會建立 XML 索引，然後將 `ALLOW_ROW_LOCKS` 選項設定為 `OFF`來加以修改。 當 `ALLOW_ROW_LOCKS` 為 `OFF`時，將不會鎖定資料列，並可使用頁面與資料表層級鎖定來取得指定索引的存取權。  
   
 ```  
@@ -52,7 +52,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>範例：停用和啟用 XML 索引  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>範例停用和啟用 XML 索引  
  依預設，XML 索引為已啟用。 如果停用了 XML 索引，針對 XML 資料行執行的查詢將不會使用 XML 索引。 若要啟用 XML 索引，請使用 `ALTER INDEX` 搭配 `REBUILD` 選項。  
   
 ```  

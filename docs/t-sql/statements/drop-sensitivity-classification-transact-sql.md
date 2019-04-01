@@ -1,6 +1,6 @@
 ---
 title: DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 82bd6847bd50d8ba43795f56deab4a6f08cc29cc
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980104"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493090"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 卸除來自至一或多個資料庫資料行的敏感度分類中繼資料。
 
@@ -62,7 +62,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 - 多個物件分類可使用單一 'DROP SENSITIVITY CLASSIFICATION' 陳述式來卸除。
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 
 需要 ALTER ANY SENSITIVITY CLASSIFICATION 權限。 ALTER ANY SENSITIVITY CLASSIFICATION 是由資料庫權限 ALTER，或由伺服器權限 CONTROL SERVER 所隱含。
 

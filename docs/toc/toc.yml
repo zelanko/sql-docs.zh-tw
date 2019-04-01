@@ -217,7 +217,7 @@ items:
           href: ../relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
         - name: 刪除備份部落格檔案
           href: ../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
-        - name: 還原
+        - name: Restore
           href: ../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
         - name: 受控備份
           items:
@@ -243,7 +243,7 @@ items:
           href: ../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
         - name: 至鏡像媒體集
           href: ../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-      - name: 還原
+      - name: Restore
         items:
         - name: 使用 SQL Server Management Studio (SSMS)
           href: ../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -905,6 +905,8 @@ items:
           href: ../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md
         - name: 暫停或繼續
           href: ../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md
+        - name: 建立工作階段
+          href: ../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md
         - name: 連線用戶端
           href: ../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md
         - name: 效能的警告閾值
@@ -1388,7 +1390,7 @@ items:
   - name: 空間資料
     href: ../relational-databases/spatial/spatial-data-sql-server.md
     items:
-    - name: 資料類型
+    - name: 資料型別
       href: ../relational-databases/spatial/spatial-data-types-overview.md
     - name: 點
       href: ../relational-databases/spatial/point.md
@@ -1435,7 +1437,7 @@ items:
       href: ../relational-databases/stored-procedures/execute-a-stored-procedure.md
     - name: 指定參數
       href: ../relational-databases/stored-procedures/specify-parameters.md
-    - name: 授與權限
+    - name: '[授與權限]'
       href: ../relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
     - name: 參數
       href: ../relational-databases/stored-procedures/parameters.md
@@ -1674,7 +1676,7 @@ items:
         href: ../relational-databases/triggers/get-information-about-dml-triggers.md
       - name: 刪除或停用 DML 觸發程序
         href: ../relational-databases/triggers/delete-or-disable-dml-triggers.md
-  - name: 使用者定義的函式
+  - name: 使用者自訂函數
     href: ../relational-databases/user-defined-functions/user-defined-functions.md
     items:
     - name: 決定性與非決定性函式
@@ -2140,7 +2142,7 @@ items:
     - name: 參考
       href: ../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
       items:
-      - name: 資料類型
+      - name: 資料型別
         href: ../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md
       - name: srv_* 擴充預存程序 API
         items:
@@ -2569,7 +2571,7 @@ items:
         href: ../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-table.md
       - name: 移除資料行
         href: ../relational-databases/native-client-ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md
-    - name: 資料類型
+    - name: 資料型別
       href: ../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md
       items:
       - name: ITableDefinition 中的對應
@@ -4123,6 +4125,8 @@ items:
       href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
     - name: 啟用鎖定記憶體分頁選項
       href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+    - name: 混合式緩衝集區
+      href: ../database-engine/configure-windows/hybrid-buffer-pool.md
     - name: 變更伺服器驗證模式
       href: ../database-engine/configure-windows/change-server-authentication-mode.md
     - name: SQL 寫入器服務
@@ -4580,7 +4584,7 @@ items:
     - name: 概觀
       href: ../relational-databases/replication/sql-server-replication.md
       items:
-      - name: 回溯相容性
+      - name: Backward Compatibility
         href: ../relational-databases/replication/replication-backward-compatibility.md
       - name: 已被取代的功能
         href: ../relational-databases/replication/deprecated-features-in-sql-server-replication.md
@@ -4601,7 +4605,7 @@ items:
             href: ../relational-databases/replication/configure-publishing-and-distribution.md
           - name: 設定 AG 中的散發
             href: ../relational-databases/replication/configure-distribution-availability-group.md
-          - name: 檢視及修改屬性
+          - name: 檢視與修改屬性
             href: ../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md
           - name: 停用發行與散發
             href: ../relational-databases/replication/disable-publishing-and-distribution.md
@@ -4617,7 +4621,7 @@ items:
           items:
           - name: 建立發行集
             href: ../relational-databases/replication/publish/create-a-publication.md
-          - name: 檢視及修改屬性
+          - name: 檢視 & 修改屬性
             href: ../relational-databases/replication/publish/view-and-modify-publication-properties.md
           - name: 設定快照集屬性
             href: ../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
@@ -4651,7 +4655,7 @@ items:
             href: ../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md
           - name: 新增或卸除發行項
             href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
-          - name: 檢視及修改屬性
+          - name: 檢視 & 修改屬性
             href: ../relational-databases/replication/publish/view-and-modify-article-properties.md
           - name: 對現有發行集新增或卸除發行項
             href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
@@ -4664,9 +4668,9 @@ items:
             href: ../relational-databases/replication/create-a-pull-subscription.md
           - name: 建立發送訂閱
             href: ../relational-databases/replication/create-a-push-subscription.md
-          - name: 檢視及修改提取訂閱屬性
+          - name: 檢視與修改提取訂閱屬性
             href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
-          - name: 檢視及修改發送訂閱屬性
+          - name: 檢視與修改發送訂閱屬性
             href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
           - name: 將訂閱重新初始化
             href: ../relational-databases/replication/reinitialize-a-subscription.md
@@ -6978,6 +6982,8 @@ items:
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: 記憶體內部 OLTP 的範例資料庫
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: 記憶體內部 OLTP 的硬體
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: 記憶體最佳化的資料表
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:
@@ -7067,7 +7073,7 @@ items:
         - name: T-SQL 支援
           href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
           items:
-          - name: 資料類型
+          - name: 資料型別
             href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
           - name: 使用解譯的 T-SQL 存取經記憶體最佳化的資料表
             href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
@@ -7950,6 +7956,8 @@ items:
         href: ../relational-databases/security/strong-passwords.md
       - name: 資料列層級安全性
         href: ../relational-databases/security/row-level-security.md
+      - name: 動態資料遮罩
+        href: ../relational-databases/security/dynamic-data-masking.md
       - name: 靜態資料遮罩
         href: ../relational-databases/security/static-data-masking.md
       - name: 憑證與非對稱金鑰
@@ -8874,11 +8882,11 @@ items:
           href: ../ssms/agent/disable-or-reactivate-an-alert.md
       - name: 編輯
         items:
-        - name: 編輯警示
+        - name: Edit an Alert
           href: ../ssms/agent/edit-an-alert.md
         - name: 編輯操作員
           href: ../ssms/agent/edit-an-operator.md
-      - name: 設定
+      - name: 將
         items:
         - name: SQL Server Agent 服務的別名
           href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
@@ -11781,7 +11789,7 @@ items:
         href: ../relational-databases/system-catalog-views/syspolicy-policy-category-subscriptions-transact-sql.md
       - name: syspolicy_system_health_state
         href: ../relational-databases/system-catalog-views/syspolicy-system-health-state-transact-sql.md
-    - name: 資源管理員
+    - name: '[資源管理員]'
       href: ../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md
       items:
       - name: sys.resource_governor_configuration
@@ -12174,7 +12182,7 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md
       - name: sys.dm_clr_tasks
         href: ../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md
-    - name: 資料庫
+    - name: '[資料庫]'
       href: ../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_db_file_space_usage
@@ -12477,7 +12485,7 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-repl-tranhash-transact-sql.md
       - name: sys.dm_repl_traninfo
         href: ../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md
-    - name: 資源管理員
+    - name: '[資源管理員]'
       href: ../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md
       items:
       - name: sys.dm_resource_governor_configuration
@@ -12884,7 +12892,7 @@ items:
       href: ../relational-databases/system-information-schema-views/domains-transact-sql.md
     - name: KEY_COLUMN_USAGE
       href: ../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md
-    - name: 參數
+    - name: PARAMETERS
       href: ../relational-databases/system-information-schema-views/parameters-transact-sql.md
     - name: REFERENTIAL_CONSTRAINTS
       href: ../relational-databases/system-information-schema-views/referential-constraints-transact-sql.md
@@ -12898,13 +12906,13 @@ items:
       href: ../relational-databases/system-information-schema-views/table-constraints-transact-sql.md
     - name: TABLE_PRIVILEGES
       href: ../relational-databases/system-information-schema-views/table-privileges-transact-sql.md
-    - name: 資料表
+    - name: TABLES
       href: ../relational-databases/system-information-schema-views/tables-transact-sql.md
     - name: VIEW_COLUMN_USAGE
       href: ../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md
     - name: VIEW_TABLE_USAGE
       href: ../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md
-    - name: 檢視
+    - name: VIEWS
       href: ../relational-databases/system-information-schema-views/views-transact-sql.md
   - name: 系統預存程序
     href: ../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
@@ -14837,7 +14845,7 @@ items:
     - name: 日期與時間
       href: ../t-sql/data-types/date-and-time-types.md
       items:
-      - name: date
+      - name: 日期
         href: ../t-sql/data-types/date-transact-sql.md
       - name: DATETIME
         href: ../t-sql/data-types/datetime-transact-sql.md
@@ -15281,6 +15289,8 @@ items:
         href: ../t-sql/data-types/constants-transact-sql.md
       - name: 轉換
         href: ../t-sql/data-types/data-type-conversion-database-engine.md
+      - name: 不具決定性的轉換
+        href: ../t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: 優先順序
         href: ../t-sql/data-types/data-type-precedence-transact-sql.md
       - name: 同義字
@@ -15507,7 +15517,7 @@ items:
         items:
         - name: CAST 與 CONVERT
           href: ../t-sql/functions/cast-and-convert-transact-sql.md
-        - name: 剖析
+        - name: PARSE
           href: ../t-sql/functions/parse-transact-sql.md
         - name: TRY_CAST
           href: ../t-sql/functions/try-cast-transact-sql.md
@@ -15849,7 +15859,7 @@ items:
           href: ../t-sql/functions/loginproperty-transact-sql.md
         - name: ORIGINAL_LOGIN
           href: ../t-sql/functions/original-login-transact-sql.md
-        - name: 權限
+        - name: PERMISSIONS
           href: ../t-sql/functions/permissions-transact-sql.md
         - name: PWDENCRYPT
           href: ../t-sql/functions/pwdencrypt-transact-sql.md
@@ -16056,7 +16066,7 @@ items:
       items:
       - name: 一般
         items:
-        - name: EXECUTE
+        - name: 執行 CREATE 陳述式之前，請先執行
           href: ../t-sql/language-elements/execute-transact-sql.md
         - name: PRINT
           href: ../t-sql/language-elements/print-transact-sql.md
@@ -16555,6 +16565,8 @@ items:
           href: ../t-sql/statements/restore-statements-labelonly-transact-sql.md
         - name: RESTORE MASTER KEY
           href: ../t-sql/statements/restore-master-key-transact-sql.md
+        - name: RESTORE SERVICE MASTER KEY
+          href: ../t-sql/statements/restore-service-master-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: ../t-sql/statements/restore-statements-rewindonly-transact-sql.md
         - name: RESTORE VERIFYONLY
@@ -17245,9 +17257,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 處理 XQuery 中的命名空間
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0683d445dc2cdfd5df37354a7922774433bab8b0
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618325"
+ms.locfileid: "58658492"

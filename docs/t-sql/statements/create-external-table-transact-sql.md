@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06fc940fad53ee37f4e97a6883a99666722a05bf
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 99f23b651bad438154f1c38117ea1a3f9f3d9a5c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852913"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658372"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -239,7 +239,7 @@ OBJECT_NAME 子句能讓您將外部資料表定義對應至位於遠端資料�
 DISTRIBUTION  
 選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需要這個引數。 這個引數能控制資料表是否會被視為分區資料表或複寫資料表。 針對 **SHARDED** (<資料行名稱>) 資料表，來自不同資料表的資料不會彼此重疊。 **REPLICATED** 指定資料表在每個分區上都有相同的資料。 **ROUND_ROBIN** 指出系統會使用應用程式特定的方法來散發資料。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要下列使用者權限：  
   
 -   **CREATE TABLE**  
@@ -283,7 +283,7 @@ CTP2 中尚不支援匯出功能，例如將 SQL 資料永久儲存至外部資�
 -   CREATE TABLE 和 DROP TABLE  
   
 -   CREATE STATISTICS 和 DROP STATISTICS  
-注意：Azure SQL Database 不支援在外部資料表上使用 CREATE 和 DROP STATISTICS。 
+注意:Azure SQL Database 不支援在外部資料表上使用 CREATE 和 DROP STATISTICS。 
   
 -   CREATE VIEW 和 DROP VIEW  
   
@@ -555,7 +555,6 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[常見的中繼資料查詢範例 (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

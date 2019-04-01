@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434452"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657952"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>建立及儲存資料行主要金鑰 (永遠加密)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "58434452"
 
 ### <a name="create-a-self-signed-certificate-using-powershell"></a>使用 PowerShell 建立自我簽署憑證
 
-使用 [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) Cmdlet 來建立自我簽署的憑證。 下列範例示範如何產生可以作為永遠加密之資料行主要金鑰的憑證。
+使用 [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Cmdlet 來建立自我簽署的憑證。 下列範例示範如何產生可以作為永遠加密之資料行主要金鑰的憑證。
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -94,7 +94,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 如果您的資料行主要金鑰是儲存在「目前使用者」憑證存放區位置的憑證，您需要使用私密金鑰匯出憑證，並針對執行預期要加密或解密儲存在加密資料行中之資料的應用程式，或是執行用於設定永遠加密及管理永遠加密金鑰之工具的所有使用者帳戶，將它匯入到目前使用者憑證存放區位置。 登入電腦之後不需要設定權限，使用者可以存取其目前使用者憑證存放區位置中的所有憑證。
 
 #### <a name="using-powershell"></a>使用 PowerShell
-使用 [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) 和 [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) Cmdlet 匯入及匯出憑證。
+使用 [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) 和 [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) Cmdlet 匯入及匯出憑證。
 
 #### <a name="using-microsoft-management-console"></a>使用 Microsoft Management Console 
 
@@ -207,7 +207,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 永遠加密的資料行主要金鑰可以儲存在實作密碼編譯 API (CAPI) 的金鑰存放區中。 一般而言，這類型的存放區是硬體安全性模組 (HSM)，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。 HSM 傳統上為插入卡或直接連接到電腦 (本機 HSM) 或網路伺服器的外部裝置形式。
 
-若要讓 HSM 可供指定電腦上的應用程式使用，實作 CAPI 的密碼編譯服務提供者 (CSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 CSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。 注意：CAPI 是已被取代的舊版 API。 如果 KSP 可用於您的 HSM，您應該使用它，而不要使用 CSP/CAPI。
+若要讓 HSM 可供指定電腦上的應用程式使用，實作 CAPI 的密碼編譯服務提供者 (CSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 CSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。 注意:CAPI 是已被取代的舊版 API。 如果 KSP 可用於您的 HSM，您應該使用它，而不要使用 CSP/CAPI。
 
 CSP 必須支援 RSA 演算法才能搭配永遠加密。
 

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f98df357ab7e7dabf48a6f0e5975e8513de99f1
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: df39a9a3992fb424bf0f50b2d60548ce0e55ade7
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417200"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477663"
 ---
 # <a name="extended-events-overview"></a>擴充事件概觀
 

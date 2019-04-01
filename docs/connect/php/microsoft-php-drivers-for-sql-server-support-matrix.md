@@ -1,33 +1,35 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 支援對照表 |Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daveng
+ms.author: genemi
 manager: ''
-ms.openlocfilehash: ec5a151d79d9a66bfd65342336ad7aa3afcf567d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744398"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645500"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支援對照表
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-  此頁面包含 Microsoft PHP Drivers for SQL Server 的支援對照表與支援週期原則。
+此頁面包含 Microsoft PHP Drivers for SQL Server 的支援對照表與支援週期原則。
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Microsoft PHP 驅動程式支援生命週期對照表及原則
- Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 PHP 驅動程式 3.x、4.x 和 5.x 版自驅動程式發行日期起提供五年的主要支援。 主要支援會在 [Microsoft 支援週期網站](https://support.microsoft.com/lifecycle)上定義。
 
- Microsoft PHP Driver 不提供延長支援與自訂支援選項。
+Microsoft 支援週期 (MSL) 原則為 Microsoft 產品的支援生命週期提供透明而可預測的資訊。 PHP 驅動程式 3.x、4.x 和 5.x 版自驅動程式發行日期起提供五年的主要支援。 主要支援會在 [Microsoft 支援週期網站](https://support.microsoft.com/lifecycle)上定義。
 
- 下列 Microsoft PHP Driver 的支援期限到指定的結束支援日期為止。
+Microsoft PHP Driver 不提供延長支援與自訂支援選項。
+
+下列 Microsoft PHP Driver 的支援期限到指定的結束支援日期為止。
 
 |驅動程式名稱|驅動程式套件版本|結束主要支援|
 |-|:-:|-|
@@ -38,14 +40,16 @@ ms.locfileid: "56744398"
 |Microsoft PHP Driver 4.0 for SQL Server|4.0|2021 年 7 月 11 日|
 |Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 年 3 月 9日日|
 |Microsoft PHP Drivers 3.1 for SQL Server|3.1|2019 年 12 月 12 日|
+| &nbsp; | &nbsp; | &nbsp; |
 
- 下列是不再支援的 Microsoft PHP Driver。
+下列是不再支援的 Microsoft PHP Driver。
 
 |驅動程式名稱|驅動程式套件版本|結束主要支援|
 |-|:-:|-|
 |Microsoft PHP Drivers 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
 |Microsoft PHP Drivers 2.0 for SQL Server|2.0|2015 年 8 月 10日日|
 |Microsoft PHP Driver 1.0 for SQL Server|1.0|2014 年 4 月 28 日|
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>認證的相容性的 SQL Server 版本
  下列矩陣列出測試和認證，與對應的驅動程式版本相容的 SQL Server 版本。 我們致力於維持回溯相容性與舊的驅動程式版本，但僅最新支援的驅動程式測試和認證使用新的 SQL Server 版本的 SQL Server 是發行。
@@ -60,9 +64,11 @@ ms.locfileid: "56744398"
 |SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|Y| |
 |SQL Server 2008 R2      |Y|Y|Y|Y|Y|Y|Y|Y|Y|
 |SQL Server 2008         | | | | |Y|Y|Y|Y|Y|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="php-version-support"></a>PHP 版本支援
- 支援下列版本的 PHP 的 Microsoft PHP Drivers 列出的版本：
+
+支援下列版本的 PHP 的 Microsoft PHP Drivers 列出的版本：
 
 |PHP for SQL Server 驅動程式版本&#8594;<br />&#8595; PHP 版本|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |:---:|---|---|---|---|---|---|---|---|---|
@@ -75,11 +81,13 @@ ms.locfileid: "56744398"
 |5.4|                |                |                |       |       |5.4.32  |5.4.32  |5.4.32  |        |
 |5.3|                |                |                |       |       |        |        |5.3.0   |5.3.0   |
 |5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 1. 7.2.1 版本和更新版本才支援在 Windows，而版本 7.2.0 和更新版本才支援在 Linux 和 macOS 上。
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
- 下列 Windows 作業系統版本支援的 Microsoft PHP Drivers 列出的版本：
+
+下列 Windows 作業系統版本支援的 Microsoft PHP Drivers 列出的版本：
 
 |PHP for SQL Server 驅動程式版本&#8594;<br />&#8595; 作業系統|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -97,8 +105,9 @@ ms.locfileid: "56744398"
 |Windows 7 SP1                       |   |   |   |   |Y  |Y  |Y  |Y  |   |
 |Windows Vista SP2                   |   |   |   |   |Y  |Y  |Y  |Y  |Y  |
 |Windows XP SP3                      |   |   |   |   |   |   |   |   |Y  |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
- Microsoft PHP drivers 列出的版本支援下列 Linux 和 Mac 作業系統版本 （限 64 位元）：
+Microsoft PHP drivers 列出的版本支援下列 Linux 和 Mac 作業系統版本 （限 64 位元）：
 
 |PHP for SQL Server 驅動程式版本&#8594;<br />&#8595; 作業系統|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -117,9 +126,11 @@ ms.locfileid: "56744398"
 |macOS High Sierra （64 位元）          |Y  |Y  |   |   |   |   |   |   |   |
 |macOS Sierra （64 位元）               |Y  |Y  |Y  |Y  |   |   |   |   |   |
 |macOS El Capitan （64 位元）           |   |Y  |Y  |Y  |   |   |   |   |   |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>另請參閱  
-[版本資訊](../../connect/php/release-notes-for-the-php-sql-driver.md)
+## <a name="see-also"></a>另請參閱
+
+[版本資訊](../../connect/php/release-notes-php-sql-driver.md)
 
 [支援資源](../../connect/php/support-resources-for-the-php-sql-driver.md)
 

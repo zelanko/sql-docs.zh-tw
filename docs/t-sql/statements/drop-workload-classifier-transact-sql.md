@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 44ebb822a6596d4c1436f5c7bf36d032a987069c
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: 915d689b90bf5103d276ee711e34102e05f49330
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988784"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513085"
 ---
 # <a name="drop-workload-classifier-transact-sql-preview"></a>DROP WORKLOAD 分類器 (Transact-SQL) (預覽)
 
@@ -38,7 +38,7 @@ ms.locfileid: "57988784"
   
 ## <a name="syntax"></a>語法  
 
-```sql
+```
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 

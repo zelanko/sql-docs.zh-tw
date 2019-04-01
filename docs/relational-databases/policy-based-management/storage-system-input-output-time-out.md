@@ -13,12 +13,12 @@ ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 41ec2e47e14085e7e008777b863fba09f95be13c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 11459254a41228e4666ddaafd89b1b3cf1db4fbd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667688"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657962"
 ---
 # <a name="storage-system-input-output-time-out"></a>儲存體系統輸入輸出逾時
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,6 +32,6 @@ ms.locfileid: "51667688"
 -   [Microsoft 知識庫文件 154690](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>詳細資訊  
- [SQL Server I/O 基本概念，第 2 章](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O 基本概念，第 2 章](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

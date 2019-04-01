@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 概觀 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a879746757f7c5c1f9692d0341ddc5bedb4e5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682376"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645480"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 概觀
 
@@ -31,16 +31,19 @@ ms.locfileid: "47682376"
 |主題|Description|  
 |---------|---------------|  
 | ![下載-向下箭號-圈選起來](../../ssdt/media/download.png)[若要下載 PHP for SQL Server 驅動程式](download-drivers-php-sql-server.md) | 下載 Microsoft Drivers for PHP for SQL Server 的連結。 |
-|[Microsoft Drivers for PHP for SQL Server 的版本資訊](../../connect/php/release-notes-for-the-php-sql-driver.md)|列出 4.0、3.2、3.1、3.0 和 2.0 版已新增的功能。|  
+|[Microsoft Drivers for PHP for SQL Server 的版本資訊](../../connect/php/release-notes-php-sql-driver.md)|列出 4.0、3.2、3.1、3.0 和 2.0 版已新增的功能。|  
 |[Microsoft Drivers for PHP for SQL Server 的支援資源](../../connect/php/support-resources-for-the-php-sql-driver.md)|提供可在您開發使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的應用程式時提供協助的資源連結。|  
 |[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)|提供可在您執行此文件中的程式碼範例時很有幫助的資訊。|  
-  
-## <a name="reference"></a>參考  
+| &nbsp; | &nbsp; |
+
+## <a name="reference"></a>參考
+
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV 驅動程式參考](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-  
-## <a name="see-also"></a>另請參閱  
+
+## <a name="see-also"></a>另請參閱
+
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)

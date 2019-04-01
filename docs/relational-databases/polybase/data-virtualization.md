@@ -3,18 +3,19 @@ title: 虛擬化 SQL Server 2019 CTP 2.0 中的外部資料 | Microsoft Docs
 description: 此頁面詳述針對關聯式資料來源使用 [建立外部資料表精靈] 的步驟
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596669"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510975"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>搭配使用外部資料表精靈與關聯式資料來源
 

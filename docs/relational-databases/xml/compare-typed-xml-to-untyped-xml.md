@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a8113ba4f9df20fcf11a7f4662abb1f2a24b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841278"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510915"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,14 +69,14 @@ ms.locfileid: "47841278"
   
  在下列範例中，會使用兩段式命名慣例來指定 XML 結構描述集合名稱。 第一個部分是結構描述名稱，而第二個部分是 XML 結構描述集合名稱。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>範例：將結構描述集合與 xml 類型變數產生關聯  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>範例將結構描述集合與 xml 類型變數產生關聯  
  下列範例會建立一個 **xml** 類型變數，並將結構描述集合與此變數產生關聯。 範例中指定的結構描述集合已經匯入 **AdventureWorks** 資料庫。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>範例：指定 xml 類型資料行的結構描述  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>範例指定 xml 類型資料行的結構描述  
  下列範例會建立具有 **XML** 類型資料行的資料表，並為此資料行指定結構描述：  
   
 ```  
@@ -85,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>範例：將 xml 類型的參數傳遞給預存程序  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>範例將 xml 類型的參數傳遞給預存程序  
  下列範例會將 **XML** 類型的參數傳遞給預存程序，並為此變數指定結構描述：  
   
 ```  
@@ -107,7 +107,7 @@ AS
   
  在資料類型階層中， **XML** 資料類型會出現在 **sql_variant** 和使用者定義類型的下面，但會出現在任何內建類型的上面。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例：指定 Facet 來約束 xml 類型的資料行  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例指定 Facet 來約束具類型的 xml 資料行  
  對於具類型的 **XML** 資料行而言，您可以約束資料行，讓儲存在其中的每個執行個體只能有單一的最上層元素。 作法是，在建立資料表時指定選擇性的 `DOCUMENT` Facet，如下列範例所示：  
   
 ```  

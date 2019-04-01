@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04e14297fe4eb7cdad254bc888cf0657d4a80298
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 898125f2143f3470b340a565c3d72e021c19a721
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669227"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657223"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,8 +71,8 @@ ms.locfileid: "51669227"
 |||  
 |-|-|  
 |工具|目的|  
-|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|建立憑證。|  
-|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|為對稱金鑰建立強式名稱。|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|建立憑證。|  
+|[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|為對稱金鑰建立強式名稱。|  
   
 ## <a name="related-tasks"></a>相關工作  
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  

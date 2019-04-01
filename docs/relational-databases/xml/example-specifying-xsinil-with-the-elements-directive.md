@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00d8cf6e8d7da94761415659e0ffd68b48562c92
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b708e9ff71bd7f7599339ae2eebc0377b0c5fb1f
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512915"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例使用 ELEMENTS 指示詞來指定 XSINIL
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>範例使用 ELEMENTS 指示詞指定 XSINIL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下列查詢會指定 `ELEMENTS` 指示詞，從查詢結果產生元素中心的 XML。  
   

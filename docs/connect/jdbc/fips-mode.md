@@ -1,7 +1,7 @@
 ---
 title: 在 JDBC 的 FIPS 模式 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/12/2018
+ms.date: 03/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: craigg
@@ -10,48 +10,39 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601868"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618275"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server 支援*FIPS 140 相容模式*。 適用於 Oracle / Sun JVM，請參閱[SunJSSE 的 FIPS 140 相容模式](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html)啟用 JVM 設定 FIPS Oracle 所提供的區段。 
+Microsoft JDBC Driver for SQL Server 支援在執行中設定的 Jvm *FIPS 140 相容*。
 
 #### <a name="prerequisites"></a>Prerequisites
 
 - FIPS 設定 JVM
-- 適當的 SSL 憑證。
-- 適當的原則檔案。 
-- 適當的組態參數。 
-
+- 適當的 SSL 憑證
+- 適當的原則檔案
+- 適當的組態參數
 
 ## <a name="fips-configured-jvm"></a>FIPS 設定 JVM
 
-若要查看 FIPS 設定的已核准的模組，請參閱[驗證的 FIPS 140-1 及 FIPS 140-2 密碼模組](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)。 
+一般而言，應用程式可以設定`java.security`使用 FIPS 相容的密碼編譯提供者的檔案。 請參閱您的 JVM，如何設定 FIPS 140 合規性的專屬文件。
+
+若要查看 FIPS 設定的已核准的模組，請參閱[密碼編譯模組驗證程式中的驗證模組](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules)。
 
 供應商可能有一些額外步驟以設定 fips 的 JVM。
 
-### <a name="ensure-your-jvm-is-in-fips-mode"></a>請確定您的 JVM 處於啟用 FIPS 模式
-若要確保您的 JVM FIPS 已啟用，請執行下列程式碼片段： 
-
-```java
-public boolean isFIPS() throws Exception {
-    Provider jsse = Security.getProvider("SunJSSE");
-    return jsse != null && jsse.getInfo().contains("FIPS");
-}
-```
-
 ## <a name="appropriate-ssl-certificate"></a>適當的 SSL 憑證
-若要連接 SQL Server 在 FIPS 模式中，有效的 SSL 憑證是必要的。 安裝或將它匯入 Java 金鑰存放區用戶端機器 (JVM) 上都啟用 FIPS。
+若要連接到 SQL Server 在 FIPS 模式中，有效的 SSL 憑證則是必要項目。 安裝或匯入它 Java 金鑰存放區用戶端機器 (JVM) 上都啟用 FIPS。
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>匯入 Java 金鑰存放區中的 SSL 憑證
-Fips，很可能是您要匯入憑證 (.cert) 至任一 PKCS 或提供者專屬格式。 使用下列程式碼片段匯入 SSL 憑證，並將其儲存在工作目錄中具有適當的金鑰存放區格式。 _信任\_存放區\_密碼_Java 金鑰存放區是您的密碼。 
-
+Fips，很可能是您要匯入憑證 (.cert) PKCS 或提供者專屬格式。
+使用下列程式碼片段匯入 SSL 憑證，並將其儲存在工作目錄中具有適當的金鑰存放區格式。 _信任\_存放區\_密碼_Java 金鑰存放區是您的密碼。
 
 ```java
 public void saveGenericKeyStore(
@@ -81,7 +72,6 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-
 下列範例會匯入與 BouncyCastle 提供者 PKCS12 格式中的 Azure 」 的 SSL 憑證。 在名為的工作目錄匯入憑證_MyTrustStore\_PKCS12_使用下列程式碼片段：
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
@@ -104,4 +94,3 @@ private Certificate getCertificate(String pathName)
 |fipsProvider|String|null|FIPS 的 JVM 設定提供者。 例如，BCFIPS 或 SunPKCS11 NSS |6.1.2 中新增 (穩定版本 6.2.2)，在 6.4.0-已被取代，請參閱詳細資料[此處](https://github.com/Microsoft/mssql-jdbc/pull/460)。|
 |trustStoreType|String|JKS|FIPS 模式設定的信任存放區類型 PKCS12 或型別定義 FIPS 提供者 |6.1.2 中新增 (穩定版本 6.2.2)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-

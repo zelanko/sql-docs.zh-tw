@@ -11,15 +11,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9abf5eac7b884106c56d960025a8c15303f9b097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd769a496bd5f9057c6cedfefcf3db371f829760
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851116"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511185"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47851116"
   
  在包含 XML 結構描述類型 **xs:date** 或 **xs:dateTime** (或是這些類型的任何子類型) 值 (該值的年份小於 1) 的 XML 資料類型資料行上建立或重新建立主要 XML 索引時， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中的索引建立會失敗。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 允許這些值，所以在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中產生之資料庫內建立索引時，可能會發生這個問題。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
-### <a name="example-creating-a-primary-xml-index"></a>範例：建立主要 XML 索引  
+### <a name="example-creating-a-primary-xml-index"></a>範例建立主要 XML 索引  
  在大部分的範例中，都是使用資料表 T (pk INT PRIMARY KEY, xCol XML) 和不具類型的 XML 資料行。 這些都可以用一種直接的方法來擴充成具類型的 XML。 為求簡單明瞭，我們針對 XML 資料執行個體來說明查詢，如下所示：  
   
 ```  
@@ -101,7 +101,7 @@ FROM    sys.xml_indexes;
   
  在 **secondary_type_desc** 資料行中傳回的值可以是 NULL、PATH、VALUE 或 PROPERTY。 對於主要 XML 索引而言，傳回的值是 NULL。  
   
-### <a name="example-creating-secondary-xml-indexes"></a>範例：建立次要 XML 索引  
+### <a name="example-creating-secondary-xml-indexes"></a>範例建立次要 XML 索引  
  下列範例說明如何建立次要 XML 索引。 此範例也會顯示您已建立之 XML 索引的相關資訊。  
   
 ```  

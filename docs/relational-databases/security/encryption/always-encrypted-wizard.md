@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805714"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657643"
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54805714"
  
    - **將主要金鑰儲存在 Azure 金鑰保存庫** ：如需詳細資訊，請參閱 [開始使用 Azure 金鑰保存庫](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)。  
  
- - 若要在 Azure 金鑰保存庫中產生資料行主要金鑰，使用者必須擁有金鑰保存庫的 **WrapKey**、 **UnwrapKey**、 **Verify**以及 **Sign** 權限。 使用者可能也需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**以及 **Restore** 權限。 如需詳細資訊，請參閱[什麼是 Azure Key Vault？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)和 [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)。  
+ - 若要在 Azure 金鑰保存庫中產生資料行主要金鑰，使用者必須擁有金鑰保存庫的 **WrapKey**、 **UnwrapKey**、 **Verify**以及 **Sign** 權限。 使用者可能也需要 **Get**、 **List**、 **Create**、 **Delete**、 **Update**、 **Import**、 **Backup**以及 **Restore** 權限。 如需詳細資訊，請參閱[什麼是 Azure Key Vault？](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)和 [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)。  
  
  - 精靈只支援兩種選項。 您必須使用 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 來設定硬體安全模組和用戶端儲存庫。  
  
