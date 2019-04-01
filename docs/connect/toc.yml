@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: 使用基本資料類型
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: 使用 SQL_variant 資料類型
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: 使用空間資料類型
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: 了解交易
@@ -2617,10 +2619,13 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: 搭配預存程序使用陳述式
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Azure Key Vault 範例版本 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Azure Key Vault 範例版本 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Azure Key Vault 範例 (適用於 7.0 等)
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Azure Key Vault 範例版本 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault 範例版本 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Node.js Driver for SQL Server
@@ -5248,7 +5253,7 @@ items:
             href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
           - name: 從結果集擷取資料列
             href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-        - name: Filestream
+        - name: 檔案資料流
           href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
           items:
           - name: 使用 IBCPSession 將 FILESTREAM 資料行讀取到檔案中
@@ -5340,7 +5345,7 @@ items:
     - name: PHP Linux 及 Mac 驅動程式安裝教學課程
       href: ../connect/php/installation-tutorial-linux-mac.md
     - name: 版本資訊
-      href: ../connect/php/release-notes-for-the-php-sql-driver.md
+      href: ../connect/php/release-notes-php-sql-driver.md
     - name: 支援資源
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: 關於程式碼範例
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 詞彙
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ac6634fdea120f7c047f7b4ef8f532865e9e59c4
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478303"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645600"

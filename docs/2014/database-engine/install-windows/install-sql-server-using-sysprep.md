@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371050"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658334"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 及 完成備妥的 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)＞。  
@@ -48,9 +48,9 @@ ms.locfileid: "53371050"
   
 -   [從備妥的 SQL Server 執行個體中移除功能](#RemoveFeatures)  
   
--   [解除安裝備妥的執行個體](install-sql-server-using-sysprep.md#uninstall)  
+-   [解除安裝備妥的執行個體](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [修改或解除安裝已完成的 SQL Server 執行個體。](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [修改或解除安裝已完成的 SQL Server 執行個體。](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 叢集支援  
  從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]開始，SysPrep 支援以命令列安裝叢集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱＜ [何謂 Sysprep](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)＞。  
@@ -325,5 +325,3 @@ ms.locfileid: "53371050"
 ## <a name="see-also"></a>另請參閱  
  [什麼是 Sysprep？](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Windows SysPrep 的運作方式](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  
