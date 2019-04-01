@@ -31,7 +31,7 @@ ms.locfileid: "57973487"
   
  下列各範例示範語意搜尋的功能。 同時，這些範例示範用來查詢語意索引並以結構化資料形式擷取結果的三個 Transact-SQL 資料列集函式。  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> 文件中尋找主要片語  
  下列查詢會取得範例文件中已識別的主要片語。 它會依照排列每個主要片語之統計重要性次序的分數，以遞減順序呈現結果。
  
  此查詢會呼叫 [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 函式。  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> 尋找讓文件相似或相關的主要片語  
  下列查詢會取得讓兩份範例文件相似或相關的主要片語。 它會依照排列每個主要片語之加權次序的分數，以遞減順序呈現結果。
  
  此查詢會呼叫 [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 函式。  

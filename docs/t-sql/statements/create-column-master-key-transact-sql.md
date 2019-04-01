@@ -96,7 +96,7 @@ key_path
   
 -   **提供者名稱：** MSSQL_CERTIFICATE_STORE  
   
-    **金鑰路徑格式：***CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
+    **金鑰路徑格式：** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
      其中：  
   
@@ -119,7 +119,7 @@ key_path
   
 -   **提供者名稱：** MSSQL_CSP_PROVIDER  
   
-    **金鑰路徑格式：***ProviderName*/*KeyIdentifier*  
+    **金鑰路徑格式：** *ProviderName*/*KeyIdentifier*  
   
     其中：  
   
@@ -137,7 +137,7 @@ key_path
   
 -   **提供者名稱：** MSSQL_CNG_STORE  
   
-    **金鑰路徑格式：***ProviderName*/*KeyIdentifier*  
+    **金鑰路徑格式：** *ProviderName*/*KeyIdentifier*  
   
     其中：  
   
@@ -155,7 +155,7 @@ key_path
 
 -   **提供者名稱：** AZURE_KEY_STORE  
   
-    **金鑰路徑格式：***KeyUrl*  
+    **金鑰路徑格式：** *KeyUrl*  
   
     其中：  
   

@@ -334,7 +334,7 @@ RETURNS return_data_type
   
  在內嵌 TVF 中，TABLE 傳回值是透過單一 SELECT 陳述式定義。 內嵌函數沒有相關聯的傳回變數。  
   
- <a name="mstvf"></a> 在 MSTVF 中，@*return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值傳回的資料列。您只能針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式指定  @ *return_variable*，不能針對 CLR 函式指定。  
+ <a name="mstvf"></a> 在 MSTVF 中，@ *return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值傳回的資料列。您只能針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式指定  @ *return_variable*，不能針對 CLR 函式指定。  
   
  *select_stmt*  
  這是單一 SELECT 陳述式，可定義內嵌資料表值函式 (TVF) 的傳回值。  
@@ -367,7 +367,7 @@ RETURNS return_data_type
 > [!NOTE]  
 > 自主資料庫無法使用這個選項。  
   
- *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。 資料表一律放在主要檔案群組中。  
+ *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。 資料表一律放在主要檔案群組中。  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
  **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([某些區域為預覽版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
