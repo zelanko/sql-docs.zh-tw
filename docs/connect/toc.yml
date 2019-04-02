@@ -2679,7 +2679,7 @@ items:
     - name: Microsoft ODBC Driver for SQL Server on Windows 的功能
       href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
     - name: 版本資訊
-      href: ../connect/odbc/windows/release-notes.md
+      href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
     - name: 系統需求、安裝和驅動程式檔案
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
     - name: 功能指南
@@ -7649,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 詞彙
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: ac6634fdea120f7c047f7b4ef8f532865e9e59c4
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: f00c4725c76ec2f3ee46d2cfa0333d6fa913faeb
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645600"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788135"
