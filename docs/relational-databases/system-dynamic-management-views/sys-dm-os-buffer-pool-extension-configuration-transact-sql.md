@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 09/09/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,28 +19,30 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef0eea139b491c565b8635daf69cefff61492688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755836"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788055"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中緩衝集區延伸模組的組態資訊。 針對每個緩衝集區延伸模組檔案，各傳回一個資料列。  
   
 
   
-|資料行名稱|資料類型|描述|  
-|-----------------|---------------|-----------------|  
+| 資料行名稱 | 資料類型 | 描述 |
+| :---------- | :-------- | :---------- |
 |路徑|**nvarchar**(256)|緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
 |file_id|**int**|緩衝集區延伸模組檔案的識別碼。 不可為 Null。|  
 |state|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供日後使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
-|state_description|**nvarchar**(60)|描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 1 = BUFFER POOL EXTENSION ENABLED|  
-|current_size_in_kb|**bigint**|緩衝集區延伸模組檔案的目前大小。 不可為 Null。|  
-  
+|state_description|**nvarchar**(60)|描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 已啟用緩衝集區延伸模組|
+|current_size_in_kb|**bigint**|緩衝集區延伸模組檔案的目前大小。 不可為 Null。|
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  
   
