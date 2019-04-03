@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974117"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872069"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析 Data Migration Assistant 有了 Power BI 所建立的彙總的評估報告
 
@@ -34,23 +34,23 @@ ms.locfileid: "57974117"
 
 包含下列報告︰ 
 
-- [儀表板](#dashboard--details)
+- [儀表板](#dashboard-report)
 
   包含快照集的統計資料和向下鑽研報表。
 
-- [在內部部署環境更新整備小幫手](#on-premises-upgrade-readiness--details)
+- [在內部部署環境更新整備小幫手](#on-premises-upgrade-readiness-report)
 
   資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示您經過評定的資料庫百分比升級成功。
 
-- [在內部部署功能同位檢查](#on-premise-feature-parity--details)
+- [在內部部署功能同位檢查](#on-premises-feature-parity-report)
 
   顯示目標 SQL Server 版本的功能建議。
 
-- [Azure SQL DB 更新整備小幫手](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB 更新整備小幫手](#azure-sql-db-upgrade-readiness-report)
 
   資料來源是 UpgradeSuccessRanking 檢視 DMAReporting 資料庫中。  此報告會顯示適用於 Azure SQL DB 移轉評估的資料庫百分比升級成功。
 
-- [Azure SQL DB 不支援的功能](#azure-sql-db-unsupported-features--details)
+- [Azure SQL DB 不支援的功能](#azure-sql-db-unsupported-features-report)
 
   在您現有的資料庫不支援的 Azure SQL DB (V12) 中顯示功能。
 

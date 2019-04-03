@@ -1,6 +1,6 @@
 ---
 title: 設定 HDFS 的階層處理
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 這篇文章說明如何設定外部 Azure 資料湖儲存區檔案系統掛接到 HDFS，在 SQL Server 2019 巨量資料叢集 （預覽） 上的階層處理的 HDFS。
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493771"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859640"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>設定 SQL Server 2019 巨量資料叢集上的階層處理的 HDFS
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>設定 SQL Server 的巨量資料叢集上的階層處理的 HDFS
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 HDFS 分層讓您能夠裝載外部，HDFS 中的 HDFS 相容檔案系統。 這篇文章說明如何設定 SQL Server 2019 巨量資料叢集 （預覽） 的階層處理的 HDFS。 此時，CTP 2.4 只支援連接到 Azure Data Lake 儲存體 Gen2，也就是本文的重點。
 

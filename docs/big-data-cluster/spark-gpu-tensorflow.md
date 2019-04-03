@@ -1,6 +1,6 @@
 ---
 title: GPU 支援與 TensorFlow
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 部署具有 GPU 支援的巨量資料叢集，並在 Azure 資料 Studio Notebook 中使用 TensorFlow。
 author: lgongmsft
 ms.author: shivprashant
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0336c39a4afc235e29111dd78db128495a8b6e64
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494110"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860459"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 這篇文章會示範如何部署巨量資料叢集在 Azure Kubernetes Service (AKS) 支援已啟用 GPU 的節點集區的計算密集型工作負載。 然後，您會執行範例 notebook 中執行 TensorFlow 映像分類適用於 GPU 的 Azure Data Studio。
 
@@ -142,7 +144,7 @@ ms.locfileid: "58494110"
       SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
+      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
@@ -170,7 +172,7 @@ ms.locfileid: "58494110"
       export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
+      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"

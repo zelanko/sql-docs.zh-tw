@@ -1,6 +1,6 @@
 ---
 title: 何謂存放集區？
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集存放集區。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: b0775ac479b45dcb0fc0df23460b0fda0b783545
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477923"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860569"
 ---
-# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>何謂存放集區 （SQL Server 2019 巨量資料叢集）
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>何謂存放集區 （SQL Server 的巨量資料叢集）
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明所扮演的角色*SQL Server 儲存體集區*在 SQL Server 2019 巨量資料叢集 （預覽） 中。 下列各節描述的架構和功能的 SQL 儲存體集區。
 

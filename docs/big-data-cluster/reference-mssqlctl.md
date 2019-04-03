@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 參考
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 命令的參考文件。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d15b4149fe336b173452030ec67fb7f229e6ae3d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860350"
 ---
 # <a name="mssqlctl"></a>mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 下列文章提供的參考**mssqlctl**工具[SQL Server 2019 巨量資料叢集 （預覽）](big-data-cluster-overview.md)。 如需有關如何安裝**mssqlctl**工具，請參閱[安裝來管理 SQL Server 2019 巨量資料叢集 mssqlctl](deploy-install-mssqlctl.md)。
 
@@ -25,10 +27,10 @@ ms.locfileid: "57527281"
 |||
 |---|---|
 | [app](reference-mssqlctl-app.md) | 建立、 刪除、 執行和管理應用程式。 |
-| [cluster](reference-mssqlctl-cluster.md) | 選取、 管理和操作叢集。 |
+| [群集](reference-mssqlctl-cluster.md) | 選取、 管理和操作叢集。 |
 | [login](#login) | 叢集登入。 |
-| [logout](#logout) | 記錄移出叢集。 |
-| [storage](reference-mssqlctl-storage.md) | 管理叢集存放裝置。 |
+| [登出](#logout) | 記錄移出叢集。 |
+| [儲存](reference-mssqlctl-storage.md) | 管理叢集存放裝置。 |
 
 ## <a id="login"></a> mssqlctl login
 

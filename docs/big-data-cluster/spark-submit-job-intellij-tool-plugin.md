@@ -1,22 +1,26 @@
 ---
-title: SQL Server 巨量資料叢集上適用於 IntelliJ 執行 Spark 作業中的 Azure 工具組
-titleSuffix: SQL Server Big Data Clusters
-description: 將 SQL Server 巨量資料叢集上的 Azure 工具組中的 Spark 作業提交適用於 IntelliJ。
+title: SQL Server 的巨量資料叢集上適用於 IntelliJ 執行 Spark 作業中的 Azure 工具組
+titleSuffix: SQL Server big data clusters
+description: 提交適用於 IntelliJ 的 Azure 工具組中的 SQL Server 巨量資料叢集上的 Spark 作業。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683618"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860320"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>將 SQL Server 巨量資料叢集上在 IntelliJ 中的 Spark 作業提交
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>將 SQL Server 在 IntelliJ 中的巨量資料叢集上的 Spark 作業提交
 
-SQL Server 巨量資料叢集的重要案例之一是能夠提交 Spark 作業。 Spark 作業提交功能可讓您提交參考 SQL Server 巨量資料叢集的 Jar 或 Py 本機檔案。 它也可讓您執行 Jar 或 Py 檔案，其中已經位於 HDFS 檔案系統。 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+SQL Server 的巨量資料叢集的重要案例之一是能夠提交 Spark 作業。 Spark 作業提交功能可讓您提交參考 SQL Server 的巨量資料叢集的 Jar 或 Py 本機檔案。 它也可讓您執行 Jar 或 Py 檔案，其中已經位於 HDFS 檔案系統。 
 
 ## <a name="prerequisites"></a>先決條件
 
@@ -25,21 +29,21 @@ SQL Server 巨量資料叢集的重要案例之一是能夠提交 Spark 作業�
 - IntelliJ IDEA。 您可以安裝從[JetBrains 網站](https://www.jetbrains.com/idea/download/)。
 - 適用於 IntelliJ 的延伸模組的 azure 工具組。 如需安裝指示，請參閱[安裝 Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)。
 
-## <a name="link-sql-server-big-data-cluster"></a>連結的 SQL Server 巨量資料叢集
+## <a name="link-sql-server-big-data-cluster"></a>連結 SQL Server 的巨量資料叢集
 1. 開啟 IntelliJ IDEA 工具。
 
 2. 如果您使用自我簽署的憑證，停用 SSL 憑證驗證，從**工具**功能表上，選取**Azure**，**驗證 Spark 叢集 SSL 憑證**，然後**停用**。
 
-    ![SQL Server 巨量資料叢集連結-停用 SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![SQL Server 的巨量資料叢集連結-停用 SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. 開啟從 Azure Explorer**檢視**功能表上，選取**工具 Windows**，然後選取**Azure 總管**。
-4. 以滑鼠右鍵按一下**SQL Server 巨量資料叢集**，選取**連結的 SQL Server 巨量資料叢集**。 輸入**伺服器**，**使用者名稱**，並**密碼**，然後按一下**確定**。
+4. 以滑鼠右鍵按一下**巨量資料的 SQL Server 叢集**，選取**連結的 SQL Server 的巨量資料叢集**。 輸入**伺服器**，**使用者名稱**，並**密碼**，然後按一下**確定**。
 
     ![巨量資料叢集-連結對話方塊](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 5. 不受信任的伺服器憑證 對話方塊出現時，按一下**接受**。 您可以稍後管理的憑證，請參閱[伺服器憑證](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html)。
 
-6. 底下列出的連結的叢集**SQL Server 巨量資料叢集**。 您可以藉由開啟 spark 歷程記錄 UI 和 Yarn UI 來監視 spark 作業，您可能也取消連結，以滑鼠右鍵按一下叢集上。
+6. 底下列出的連結的叢集**巨量資料的 SQL Server 叢集**。 您可以藉由開啟 spark 歷程記錄 UI 和 Yarn UI 來監視 spark 作業，您可能也取消連結，以滑鼠右鍵按一下叢集上。
 
     ![巨量資料叢集-快顯功能表連結](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
@@ -87,8 +91,8 @@ SQL Server 巨量資料叢集的重要案例之一是能夠提交 Spark 作業�
       ![在對話方塊中的構件資訊](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## <a name="submit-application-to-sql-server-big-data-cluster"></a>應用程式提交給 SQL Server 巨量資料叢集
-連結 SQL Server 巨量資料叢集之後, 您可以提交給它的應用程式。
+## <a name="submit-application-to-sql-server-big-data-cluster"></a>應用程式提交給 SQL Server 的巨量資料叢集
+在連結的 SQL Server 的巨量資料叢集之後, 您可以提交給它的應用程式。
 
 1. 設定中的組態**執行/偵錯組態**] 視窗中，按一下 [+]-> [**SQL Server 上的 Apache Spark**，選取索引標籤**從遠端在叢集中執行**，設定做為參數然後按一下 [確定]。
 
@@ -129,7 +133,7 @@ SQL Server 巨量資料叢集的重要案例之一是能夠提交 Spark 作業�
 
 1. 從功能表列中，瀏覽至**執行** > **編輯組態...**.
 
-2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**SQL Server 巨量資料叢集上的 Apache Spark** > **[在 SQL 上的 Spark] myApp**。
+2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**巨量資料的 SQL Server 叢集上的 Apache Spark** > **[在 SQL 上的 Spark] myApp**。
 
 3. 從主視窗中，選取**在本機執行** 索引標籤。
 
@@ -163,7 +167,7 @@ IntelliJ 2018.2 和 2018.3 只支援 Spark Livy 互動式工作階段 Console(Sc
 
 1. 從功能表列中，瀏覽至**執行** > **編輯組態...**.
 
-2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**SQL Server 巨量資料叢集上的 Apache Spark** > **[在 SQL 上的 Spark] myApp**。
+2. 從**執行/偵錯組態**視窗中的，在左窗格中，瀏覽至**巨量資料的 SQL Server 叢集上的 Apache Spark** > **[在 SQL 上的 Spark] myApp**。
 
 3. 從主視窗中，選取**從遠端在叢集中執行** 索引標籤。
 

@@ -1,6 +1,6 @@
 ---
 title: 設定 minikube
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署 minikube 在單一電腦上。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017744"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860689"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>設定適用於 SQL Server 2019 巨量資料叢集部署的 minikube
+# <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 minikube
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 這篇文章說明如何設定**minikube**適用於 SQL Server 2019 巨量資料叢集 （預覽） 部署在單一電腦上。 Minikube 是一種工具，輕鬆地執行類似的桌上型或膝上型電腦在單一機器上的 Kubernetes。 Minikube 會執行使用者想要試用 Kubernetes，或使用它進行開發的膝上型電腦上每日的 VM 內的單一節點 Kubernetes 叢集。 
 

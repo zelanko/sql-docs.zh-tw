@@ -1,6 +1,6 @@
 ---
 title: 連接到 master 和 HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何連接到 SQL Server 的主要執行個體和 SQL Server 2019 巨量資料叢集 （預覽） 的 HDFS/Spark 閘道。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017704"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860169"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明如何從 Azure Data Studio 連接到 SQL Server 2019 巨量資料叢集 （預覽）。 有兩個用來與巨量資料叢集互動的主要端點：
 
@@ -67,7 +69,7 @@ Azure Data Studio 2019 年 2 月版本中，連接到 SQL Server 的主要執行
 
 - [物件總管] 現在包含新**Data Services**節點，以滑鼠右鍵按一下支援巨量資料叢集工作，例如建立新的 notebook 或提交 spark 作業。 
 - **Data Services**  節點也包含**HDFS** HDFS 探勘和 Notebook 中執行動作，例如 Create External Table 或分析的資料夾。
-- **Server 儀表板**連線也會包含索引標籤**SQL Server 巨量資料叢集**並**SQL Server 2019 （預覽）** 安裝擴充功能時。
+- **Server 儀表板**連線也會包含索引標籤**巨量資料的 SQL Server 叢集**並**SQL Server 2019 （預覽）** 安裝擴充功能時。
 
    ![Azure Data Studio 資料服務 節點](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

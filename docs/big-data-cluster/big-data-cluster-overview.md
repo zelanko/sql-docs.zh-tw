@@ -1,6 +1,6 @@
 ---
 title: 什麼是巨量資料叢集？
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 深入了解 SQL Server 2019 巨量資料叢集 （預覽），以在 Kubernetes 上執行，並提供關聯式的向外延展選項和 HDFS 的資料。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477643"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860250"
 ---
-# <a name="what-are-sql-server-2019-big-data-clusters"></a>什麼是 SQL Server 2019 巨量資料叢集？
+# <a name="what-are-sql-server-big-data-clusters"></a>什麼是 SQL Server 巨量資料叢集？
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 從開始[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]，SQL Server 的巨量資料叢集可讓您部署的 SQL Server、 Spark 和 HDFS 的容器，在 Kubernetes 上執行的可調整叢集。 這些元件會並存執行，可讓您讀取、 寫入，並處理從 TRANSACT-SQL 或 Spark 的巨量資料、 讓您輕鬆地結合和分析龐大的巨量資料與您寶貴的關聯式資料。
 
@@ -76,7 +78,7 @@ Kubernetes 是開放原始碼容器協調者，可以調整容器部署根據的
 
 |||
 |:--|:--|
-| **Cluster** | Kubernetes 叢集是一組機器，又稱為節點。 控制叢集一個節點，並指定在主要節點剩餘的節點是背景工作節點。 Kubernetes 主機負責散發工作的背景工作角色，以及監視叢集的健康情況。 |
+| **叢集** | Kubernetes 叢集是一組機器，又稱為節點。 控制叢集一個節點，並指定在主要節點剩餘的節點是背景工作節點。 Kubernetes 主機負責散發工作的背景工作角色，以及監視叢集的健康情況。 |
 | **節點** | 節點會執行容器化應用程式。 它可以是實體機器或虛擬機器。 Kubernetes 叢集可以包含實體機器和虛擬機器節點的混合。 |
 | **Pod** | 在 pod 已 Kubernetes 的不可部分完成的部署單位。 在 pod 已一或多個容器的邏輯群組-和相關聯的資源所需執行的應用程式。 每個 pod 節點上執行;節點可以執行一或多個 pod。 Kubernetes 主機會將 pod 自動指派給叢集中的節點。 |
 | &nbsp; ||

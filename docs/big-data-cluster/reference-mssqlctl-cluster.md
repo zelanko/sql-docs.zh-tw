@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 叢集參考
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 叢集命令的參考文件。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 130d3019d49deb7851696f6a1db2f77040734b31
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527211"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860469"
 ---
-# <a name="mssqlctl-cluster"></a>mssqlctl 叢集
+# <a name="mssqlctl-cluster"></a>mssqlctl cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 下列文章提供的參考**叢集**中的命令**mssqlctl**工具。 如需其他詳細資訊**mssqlctl**命令，請參閱[mssqlctl 參考](reference-mssqlctl.md)。
 
@@ -24,8 +26,8 @@ ms.locfileid: "57527211"
 
 |||
 |---|---|
-| [create](#create) | 建立叢集。 |
-| [delete](#delete) | 刪除叢集。 |
+| [建立](#create) | 建立叢集。 |
+| [刪除](#delete) | 刪除叢集。 |
 | [config](reference-mssqlctl-cluster-config.md) | 叢集組態命令。 |
 | [debug](reference-mssqlctl-cluster-debug.md) | 偵錯命令。 |
 

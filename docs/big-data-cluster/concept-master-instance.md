@@ -1,6 +1,6 @@
 ---
 title: 主要執行個體是什麼？
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 中的 SQL Server 主要執行個體。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477944"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860679"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>什麼是中的 SQL Server 2019 巨量資料叢集的主要執行個體？
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>什麼是中的 SQL Server 的巨量資料叢集的主要執行個體？
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明所扮演的角色*SQL Server 的主要執行個體*中 SQL Server 2019 巨量資料叢集。 主要執行個體是在 SQL Server 的巨量資料叢集中執行的 SQL Server 執行個體[控制平面](big-data-cluster-overview.md#controlplane)。
 

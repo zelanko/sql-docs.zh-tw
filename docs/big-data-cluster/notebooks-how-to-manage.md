@@ -1,6 +1,6 @@
 ---
 title: 管理 Azure Data Studio 中的 notebook
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何管理 Azure Data Studio 中的 notebook。 這包括開啟 notebook 儲存，且變更您的巨量資料叢集連線。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241919"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860509"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>如何管理 Azure Data Studio 中的 notebook
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 這篇文章會示範如何開啟及儲存在 Azure 資料 Studio 中的 notebook 檔案，使用 SQL Server 2019 預覽。 它也會示範如何將您的連線變更為您 SQL Server 的巨量資料叢集。
 

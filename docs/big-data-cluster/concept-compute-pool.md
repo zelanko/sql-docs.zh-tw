@@ -1,6 +1,6 @@
 ---
 title: 計算集區有哪些？
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文說明在 SQL Server 2019 巨量資料叢集 （預覽） 中的計算集區。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d9189c6533563a44b597dddc99e263d78750aa6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: d7965ff1f29310f39fb5b8b5994b3967b928ecde
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477863"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860240"
 ---
-# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>在 SQL Server 2019 巨量資料叢集的計算集區有哪些？
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>在 SQL Server 的巨量資料叢集的計算集區有哪些？
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明所扮演的角色*SQL Server 計算集區*中 SQL Server 2019 預覽巨量資料叢集。 計算集區提供的巨量資料叢集相應放大計算資源。 下列各節描述的架構和計算集區的功能。
 

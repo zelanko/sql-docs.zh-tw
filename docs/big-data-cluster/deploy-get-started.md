@@ -1,6 +1,6 @@
 ---
 title: 開始使用
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解的步驟和部署 SQL Server 2019 巨量資料叢集 （預覽） 的資源。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567644"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860429"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>開始使用 SQL Server 2019 巨量資料叢集
+# <a name="get-started-with-sql-server-big-data-clusters"></a>開始使用 SQL Server 的巨量資料叢集
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 這篇文章提供如何部署概觀[SQL Server 2019 巨量資料叢集 （預覽）](big-data-cluster-overview.md)。 它是要您熟悉的概念，並了解其他部署文件這一節中提供的架構。 在用戶端和伺服器平台選擇特定的部署步驟有所不同。
 

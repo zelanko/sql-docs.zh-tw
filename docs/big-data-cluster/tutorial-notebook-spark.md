@@ -1,6 +1,6 @@
 ---
 title: 執行範例 notebook |Microsoft Docs
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範您可以載入的方式執行的 SQL Server 2019 巨量資料叢集 （預覽） 上的 Spark notebook 範例。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 45845efe34c94f0c8f21c7e154dde673b0bfb889
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241840"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860179"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>教學課程：SQL Server 2019 巨量資料叢集上執行 notebook 範例
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>教學課程：SQL Server 的巨量資料叢集上執行 notebook 範例
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本教學課程會示範如何載入及執行 Azure Data Studio 中的 notebook，在 SQL Server 2019 巨量資料叢集 （預覽） 上。 這可讓資料科學家和資料工程師對叢集執行 Python、 R 或 Scala 程式碼。
 

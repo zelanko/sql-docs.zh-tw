@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201957"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872198"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>設定 SQL Server Always On 可用性群組在 Linux 上的高可用性
 
@@ -132,6 +132,7 @@ ms.locfileid: "53201957"
    >[!IMPORTANT]
    >執行上述指令碼來建立具有三個同步複本的 AG 之後，無法執行下列指令碼：
 
+<a name="configOnly"></a>
 - 建立具有兩個同步複本和設定複本的 AG:
 
    >[!IMPORTANT]

@@ -1,22 +1,25 @@
 ---
 title: 應用程式部署擴充功能
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式。
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222022"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860409"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>如何使用 VS Code 來部署應用程式到 SQL Server 的巨量資料叢集
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明如何使用 Visual Studio Code 部署應用程式擴充功能的 SQL Server 巨量資料叢集來部署應用程式。 CTP 2.3 中引進了這項功能。 
 
@@ -29,11 +32,11 @@ ms.locfileid: "58222022"
 
 此延伸模組會在 Visual Studio Code 支援下列工作：
 
-- 使用 SQL Server 的巨量資料叢集進行驗證。
+- 使用巨量資料的 SQL Server 叢集進行驗證。
 - 擷取支援的執行階段的部署的 GitHub 存放庫中的應用程式範本。
 - 管理使用者的工作區中目前開啟的應用程式範本。
 - 部署應用程式透過 YAML 格式的規格。
-- 管理 SQL Server 巨量資料叢集內的已部署應用程式。
+- 管理 SQL Server 的巨量資料叢集內的已部署應用程式。
 - 檢視所有已部署的應用程式中的其他資訊的側邊列。
 - 產生使用應用程式，或從叢集刪除應用程式是執行的規格。
 - 使用已部署的應用程式，透過執行規格 YAML。

@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 叢集組態參考
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 叢集命令的參考文件。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 26e93151a1150bbbbd1798b38486ca5b01aaab1d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527201"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860019"
 ---
-# <a name="mssqlctl-cluster-config"></a>mssqlctl 叢集組態
+# <a name="mssqlctl-cluster-config"></a>mssqlctl cluster config
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 下列文章提供的參考**叢集組態**中的命令**mssqlctl**工具。 如需其他詳細資訊**mssqlctl**命令，請參閱[mssqlctl 參考](reference-mssqlctl.md)。
 

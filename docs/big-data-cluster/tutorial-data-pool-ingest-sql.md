@@ -1,6 +1,6 @@
 ---
 title: 將資料內嵌到 SQL Server 資料集區
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本教學課程會示範如何將資料內嵌至 SQL Server 2019 巨量資料叢集 （預覽） 的資料集區。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 497dd1856a8847bbba9b05d3abc11836841f6e7c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509935"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860340"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本教學課程示範如何使用 TRANSACT-SQL，將資料載入[資料集區](concept-data-pool.md)的 SQL Server 2019 巨量資料叢集 （預覽）。 使用 SQL Server 的巨量資料叢集，從各種來源的資料可以擷取並分散到資料集區執行個體。
 

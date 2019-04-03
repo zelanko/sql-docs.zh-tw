@@ -1,23 +1,26 @@
 ---
 title: 安全性概念
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 本文說明 SQL Server 2019 巨量資料叢集 （預覽） 的安全性概念。 這包括描述叢集端點和叢集驗證。
 author: nelgson
 ms.author: negust
+ms.reviewer: jroth
 manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477983"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860109"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 的巨量資料叢集的安全性概念
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 安全的巨量資料叢集表示一致且協調的支援，驗證和授權的情況下，跨 SQL Server 與 HDFS/Spark。 驗證是確認使用者或服務的身分識別，並確保他們所自稱 」 為人的程序。 授權是指授與或拒絕特定的資源提出要求的使用者身分識別為基礎的存取權。 使用者識別透過驗證之後，會執行此步驟。
 

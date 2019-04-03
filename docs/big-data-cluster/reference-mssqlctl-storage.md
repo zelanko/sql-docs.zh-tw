@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 儲存體參考
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 儲存體命令的參考文件。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3d0eadd1d110b5a1b6c4f7a9b7a0321409999295
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527191"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860612"
 ---
-# <a name="mssqlctl-storage"></a>mssqlctl 儲存體
+# <a name="mssqlctl-storage"></a>mssqlctl storage
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 下列文章提供的參考**儲存體**中的命令**mssqlctl**工具。 如需其他詳細資訊**mssqlctl**命令，請參閱[mssqlctl 參考](reference-mssqlctl.md)。
 

@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 應用程式參考
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 應用程式命令的參考文件。
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa2b43c352fbab39cd00112b9646a87a2b752f5b
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527251"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860649"
 ---
-# <a name="mssqlctl-app"></a>mssqlctl 應用程式
+# <a name="mssqlctl-app"></a>mssqlctl app
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 下列文章提供的參考**應用程式**中的命令**mssqlctl**工具。 如需其他詳細資訊**mssqlctl**命令，請參閱[mssqlctl 參考](reference-mssqlctl.md)。
 
@@ -24,14 +26,14 @@ ms.locfileid: "57527251"
 
 |||
 |---|---|
-| [create](#create) | 建立應用程式。 |
-| [delete](#delete) | 刪除應用程式。 |
-| [describe](#describe) | 說明應用程式。 |
-| [init](#init) | 新應用程式基本架構著手進行。 |
-| [list](#list) | 列出應用程式。 |
+| [建立](#create) | 建立應用程式。 |
+| [刪除](#delete) | 刪除應用程式。 |
+| [描述](#describe) | 說明應用程式。 |
+| [Init](#init) | 新應用程式基本架構著手進行。 |
+| [清單](#list) | 列出應用程式。 |
 | [run](#run) | 執行應用程式。 |
 | [update](#update) | 更新應用程式。 |
-| [template](reference-mssqlctl-app-template.md) | 範本的命令。 |
+| [範本](reference-mssqlctl-app-template.md) | 範本的命令。 |
 
 ## <a id="create"></a> mssqlctl 應用程式建立
 

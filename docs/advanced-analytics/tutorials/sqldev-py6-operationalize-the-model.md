@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513065"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860579"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>執行預測使用內嵌在預存程序中的 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ GO
 
 在本節中，您將了解如何建立單一預測，藉由呼叫兩個預存程序：
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy)專為單一資料列評分使用 sscikit-learn-了解模型。
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy)專為單一資料列評分使用 revoscalepy 模型。
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy)專為單一資料列評分使用 sscikit-learn-了解模型。
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy)專為單一資料列評分使用 revoscalepy 模型。
 + 如果您還沒有尚未定型的模型，回到[步驟 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)！
 
 這兩個模型會採用做為輸入一系列的單一值，例如乘客計數、 車程距離等等。 資料表值函式， `fnEngineerFeatures`，用來從一項新功能的輸入轉換緯度和經度值、 的直線距離。 [第 4 課](sqldev-py4-create-data-features-using-t-sql.md)包含這個資料表值函式的描述。

@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241649"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860079"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>使用文字程式碼加速器 data Wrangling
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 PROSE 程式碼加速器會產生可讀取的 Python 程式碼，以您的資料有爭議的工作。 在 Azure Data Studio 中的 notebook 中工作時，您可以無縫式的方式混合搭配您手動撰寫的程式碼產生的程式碼。 本文將概述如何使用程式碼的加速器。
 
@@ -117,8 +119,8 @@ builder.learn().code()
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
-| 3 |Viachaslau Gordan Hilario |22-Apr 67      |
-| 4 |Maya de Villiers          |19-3 月-60      |
+| 3 |Viachaslau Gordan Hilario |22-Apr-67      |
+| 4 |Maya de Villiers          |19-Mar-60      |
 
 根據磁碟區和資料的多樣性，撰寫資料行中的不同模式的規則運算式可能會相當耗時的工作。 `FindPatternsBuilder`是功能強大的程式碼加速的一項工具，可解決上述問題，藉由產生的字串的規則運算式的清單。
 

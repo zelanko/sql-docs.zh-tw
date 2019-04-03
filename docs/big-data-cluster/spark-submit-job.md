@@ -1,6 +1,6 @@
 ---
 title: 在 Azure Data Studio 中執行 Spark 作業
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 提交 Azure Data Studio 中的 SQL Server 巨量資料叢集上的 Spark 作業。
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578238"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860449"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>將 SQL Server 在 Azure 資料 Studio 中的巨量資料叢集上的 Spark 作業提交
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 巨量資料叢集的重要案例之一是提交 Spark 作業的 SQL Server 2019 預覽的功能。 Spark 作業提交功能可讓您提交參考 SQL Server 2019 巨量資料叢集的 Jar 或 Py 本機檔案。 它也可讓您執行 Jar 或 Py 檔案，其中已經位於 HDFS 檔案系統。 
 

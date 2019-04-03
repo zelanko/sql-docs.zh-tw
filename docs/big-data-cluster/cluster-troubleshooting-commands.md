@@ -1,6 +1,6 @@
 ---
 title: 使用 kubectl 來監視/疑難排解
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 這篇文章會提供有用的 kubectl 命令，來監視和疑難排解 SQL Server 2019 巨量資料叢集 （預覽）。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8b9be0566725822e0241c65c7f8324b153cca072
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017904"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860369"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>監視和疑難排解 SQL Server 的巨量資料叢集的 Kubectl 命令
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文會說明數個實用的 Kubernetes 命令可用來監視和疑難排解 SQL Server 2019 巨量資料叢集 （預覽）。 本文章涵蓋一般工作，例如將檔案複製或從執行的其中一個 SQL Server 的巨量資料叢集服務的容器。 它也會顯示如何檢視 pod 或其他位於巨量資料叢集的 Kubernetes 成品的詳細資料。
 

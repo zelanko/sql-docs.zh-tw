@@ -1,23 +1,26 @@
 ---
 title: 使用 mssqlctl 部署應用程式
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 將 Python 或 R 指令碼部署為 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式。
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492800"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58871998"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>如何部署 SQL Server 2019 巨量資料叢集 （預覽） 上的應用程式
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>如何部署 SQL Server 的巨量資料叢集 （預覽） 上的應用程式
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文說明如何部署和管理 R 和 Python 指令碼中的 SQL Server 2019 巨量資料叢集 （預覽） 的應用程式。
 
@@ -63,9 +66,9 @@ mssqlctl app create --help
 
 下列各節說明這些命令的更多詳細資料。
 
-## <a name="log-in"></a>登入
+## <a name="sign-in"></a>登入
 
-在您部署或應用程式互動之前，先到巨量資料叢集與 SQL Server 登入`mssqlctl login`命令。 指定的外部 IP 位址`endpoint-service-proxy`服務 (例如： `https://ip-address:30777`) 以及使用者名稱和密碼，在叢集中。
+您部署或應用程式互動之前，先登入您的 SQL Server 使用巨量資料叢集`mssqlctl login`命令。 指定的外部 IP 位址`endpoint-service-proxy`服務 (例如： `https://ip-address:30777`) 以及使用者名稱和密碼，在叢集中。
 
 ```bash
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
@@ -95,51 +98,49 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 在巨量資料叢集中建立新的應用程式中使用下列語法：
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
+mssqlctl app create --spec <directory containing spec file>
 ```
 
 下列命令會顯示此命令可能如下所示的範例：
-
-這是假設您有稱為檔案`spec.yaml`內`addpy`資料夾。
-`addpy`資料夾包含`add.py`並`spec.yaml``spec.yaml`規格檔案`add.py`應用程式。
-
-
-`add.py` 會建立下列的 python 應用程式：
-
-```py
-#add.py
-def add(x,y):
-        result = x+y
-        return result
-result=add(x,y)
-```
-
-下列指令碼是範例的目錄`spec.yaml`:
-
-```yaml
-#spec.yaml
-name: add-app #name of your python script
-version: v1  #version of the app
-runtime: Python #the language this app uses (R or Python)
-src: ./add.py #full path to the location of the app
-entrypoint: add #the function that will be called upon execution
-replicas: 1  #number of replicas needed
-poolsize: 1  #the pool size that you need your app to scale
-inputs:  #input parameters that the app expects and the type
-  x: int
-  y: int
-output: #output parameter the app expects and the type
-  result: int
-```
-
-若要這麼做，將以上幾行程式碼複製到目錄中的兩個檔案`addpy`作為`add.py`和`spec.yaml`並執行下列命令：
 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
 
-> [!NOTE]
-> `spec.yaml`檔同時指定`poolsize`和一些`replicas`。 數目`replicas`指定需要部署的服務複本數目。 `poolsize`指定您想要為每個複本建立的集區數目。 這些設定會影響部署可以平行處理的要求量。 一個給定時間的要求數目上限等於`replicas`時間`poolsize`，也就是 如果您有 5 個複本和 2 個集區，每個複本部署可以處理以平行方式的 10 名要求。 請參閱下圖的圖形化表示法`replicas`和`poolsize`:![Poolsize 和複本](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+這是假設您有儲存在您的應用程式`addpy`資料夾。 此資料夾也應包含的應用程式中，然後再呼叫被呼叫的規格檔`spec.yaml`。 請參閱[應用程式部署頁面](concept-application-deployment.md)如需有關`spec.yaml`檔案。
+
+若要部署此應用程式範例應用程式，請在呼叫的目錄中建立下列檔案`addpy`:
+
+- `add.py`. 將下列 Python 程式碼複製到這個檔案：
+   ```py
+   #add.py
+   def add(x,y):
+        result = x+y
+        return result
+    result=add(x,y)
+   ```
+- `spec.yaml`. 將下列程式碼複製到這個檔案：
+   ```yaml
+   #spec.yaml
+   name: add-app #name of your python script
+   version: v1  #version of the app
+   runtime: Python #the language this app uses (R or Python)
+   src: ./add.py #full path to the location of the app
+   entrypoint: add #the function that will be called upon execution
+   replicas: 1  #number of replicas needed
+   poolsize: 1  #the pool size that you need your app to scale
+   inputs:  #input parameters that the app expects and the type
+     x: int
+     y: int
+   output: #output parameter the app expects and the type
+     result: int
+   ```
+
+然後，執行下列命令：
+
+```bash
+mssqlctl app create --spec ./addpy
+```
 
 您可以檢查應用程式會使用 list 命令來部署：
 

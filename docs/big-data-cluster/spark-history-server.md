@@ -1,6 +1,6 @@
 ---
 title: 偵錯/診斷的 Spark 應用程式
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 若要偵錯和診斷在 SQL Server 2019 巨量資料叢集上執行的 Spark 應用程式中使用 Spark 歷程記錄伺服器。
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241784"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860330"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>偵錯和診斷在 SQL Server 在 Spark 歷程記錄伺服器中的巨量資料叢集上的 Spark 應用程式
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文章提供有關如何使用擴充的 Spark 歷程記錄伺服器偵錯和診斷中的 SQL Server 2019 （預覽） 的巨量資料叢集的 Spark 應用程式的指引。 這些偵錯和診斷功能會內建於 Spark 歷程記錄伺服器，並由 Microsoft 所提供。 擴充功能包括資料 索引標籤和 graph 索引標籤和診斷 索引標籤。在 資料 索引標籤中，使用者可以檢查的輸入和輸出資料的 Spark 作業。 圖表索引標籤中，使用者可以檢查資料流，並重新執行工作圖形。 在 [診斷] 索引標籤中，使用者可以參考資料扭曲 」、 「 時間偏差和 「 執行程式使用情況分析。
 
