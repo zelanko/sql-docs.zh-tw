@@ -1,5 +1,5 @@
 ---
-title: 範例：指定 XMLTEXT 指示詞 | Microsoft Docs
+title: 範例指定 XMLTEXT 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c20ecd2ea4df8ea3e3a22138473ec1de48fc7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806801"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511935"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
+# <a name="example-specifying-the-xmltext-directive"></a>範例指定 XMLTEXT 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此範例說明如何在使用 EXPLICIT 模式的 **陳述式中，使用** XMLTEXT `SELECT` 指示詞將溢位資料行中的資料定址。  
   

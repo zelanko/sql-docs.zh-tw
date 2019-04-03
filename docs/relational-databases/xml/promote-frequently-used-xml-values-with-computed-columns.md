@@ -11,15 +11,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665567"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510545"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51665567"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>以 xml 資料類型為基礎的計算的資料行  
  您可以使用叫用 **xml** 資料類型方法的使用者定義函數，進而建立計算資料行。 計算資料行的類型可以是任何 SQL 類型，包括 XML。 下列範例會加以說明。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例：以 xml 資料類型方法為基礎的計算的資料行  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例以 xml 資料類型方法為基礎的計算資料行  
  針對書籍的 ISBN 號碼來建立使用者自訂函數：  
   
 ```  
@@ -52,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  可以用一般的方式來檢索計算的資料行。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例：查詢以 xml 資料類型方法為基礎的計算的資料行  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>範例查詢以 xml 資料類型方法為基礎的計算資料行  
  若要取得 ISBN 為 0-7356-1588-2 的 <`book`>，請：  
   
 ```  
@@ -86,14 +86,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   撰寫查詢來讓 SQL 存取屬性資料表，並讓 XML 存取基底資料表中的 XML 資料表，再使用其主索引鍵來聯結這二個資料表。  
   
-### <a name="example-create-a-property-table"></a>範例：建立屬性資料表  
+### <a name="example-create-a-property-table"></a>範例建立屬性資料表  
  舉例來說，假設您要升級作者的名字。 書籍的作者可能不只一個，所以名字是多重值的屬性。 每個名字都是儲存在屬性資料表的不同資料列中。 在屬性資料表中會複製基底資料表的主索引鍵，以供向後聯結。  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例：建立使用者自訂函數，以從 XML 執行個體產生資料列集。  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>範例建立使用者自訂函數，以從 XML 執行個體產生資料列集  
  下列資料表值函式 udf_XML2Table 可接受主索引鍵值和 XML 執行個體。 它會擷取 <`book`> 元素中所有作者的名字，並傳回主索引鍵的資料列集 (名字配對)。  
   
 ```  
@@ -109,7 +109,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>範例：建立觸發程序來擴展屬性資料表  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>範例建立觸發程序以填入屬性資料表  
  插入觸發程序會在屬性資料表中插入資料列：  
   
 ```  
@@ -156,7 +156,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>範例：尋找作者名字相同的 XML 執行個體  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>範例尋找作者名字相同的 XML 執行個體  
  查詢可以在 XML 資料行上形成。 或者，可以在屬性資料表中搜尋 "David" 這個名字，然後執行向後聯結基底資料表，以傳回 XML 執行個體。 例如：  
   
 ```  
@@ -165,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>範例：使用 CLR 資料流資料表值函式的解決方案  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>範例使用 CLR 資料流資料表值函式的解決方案  
  這個解決方案包含下列步驟：  
   
 1.  定義 CLR 類別 SqlReaderBase，在 XML 執行個體上套用路徑運算式，以實作 ISqlReader 並產生資料流資料表值的輸出。  

@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3798a2d1a9fa87cb9370f24a822dc4ce7dfb09f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 860d6d2d5f84f41d006cb10972b63ec6b93210f3
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794236"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658192"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47794236"
   
 -   只複製記錄備份 (僅完整復原模式和大量記錄復原模式)  
   
-     只複製記錄備份會保留現有的記錄封存點，因此不會影響一般記錄備份的順序。 只複製記錄備份通常是沒有必要的。 您反倒可以建立新的例行記錄備份 (使用 WITH NORECOVERY)，且一併使用此備份與還原順序所需之任何先前的記錄備份。 但是，只複製記錄備份有時相當利於進行線上還原。 如需這類範例，請參閱[範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
+     只複製記錄備份會保留現有的記錄封存點，因此不會影響一般記錄備份的順序。 只複製記錄備份通常是沒有必要的。 您反倒可以建立新的例行記錄備份 (使用 WITH NORECOVERY)，且一併使用此備份與還原順序所需之任何先前的記錄備份。 但是，只複製記錄備份有時相當利於進行線上還原。 如需這類範例，請參閱[範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)。  
   
      交易記錄永遠不會在只複製備份之後截斷。  
   
@@ -104,6 +104,6 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
  [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
+[Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
   

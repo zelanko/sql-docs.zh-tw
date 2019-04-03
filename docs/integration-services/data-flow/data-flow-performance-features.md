@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275496"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657882"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -175,7 +175,7 @@ ms.locfileid: "58275496"
   
 -   technet.microsoft.com 上的技術文章 [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900) (英文)  
   
--   sqlcat.com 上的技術文件： [將同步轉換分割為多個工作來增加管線的輸送量](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
+-   _BI 和分析的 SQLCAT 指南_中的技術文件：[將同步轉換分割為多個工作來增加管線的輸送量](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
 -   msdn.microsoft.com 上的技術文章： [資料載入效能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   

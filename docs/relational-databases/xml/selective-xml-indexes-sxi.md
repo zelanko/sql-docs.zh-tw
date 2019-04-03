@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 328772e1bad2a93bba60ecdd215567ba65dd8076
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3858371c92965db9c84ec70d7d86969b0d9311ba
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673186"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513340"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ FOR
   
 -   索引包含二進位 XS 類型的節點：例如 base64Binary 和 hexBinary。  
   
--   使用結尾包含萬用字元 `*` 的 XPath 運算式指定要索引的節點：例如  `/a/b/c/*`、 `/a//b/*`或 `/a/b/*:c`。  
+-   使用結尾包含萬用字元 `*` 的 XPath 運算式指定要編製索引的節點：例如 `/a/b/c/*`、`/a//b/*` 或 `/a/b/*:c`。  
   
 -   索引子系、屬性或下階以外的任何座標軸。 `//<step>` 案例可做為特殊案例。  
   

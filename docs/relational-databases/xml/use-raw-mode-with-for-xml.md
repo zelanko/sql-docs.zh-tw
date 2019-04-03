@@ -16,15 +16,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 249bee21bdddacc369a99efe8c31be511e2d305a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837956"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510175"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>搭配 FOR XML 使用 RAW 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "47837956"
 ## <a name="in-this-section"></a>本節內容  
  本節包含下列範例：  
   
--   [範例：將產品型號資訊當做 XML 來擷取](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [範例：以 XML 的形式擷取產品型號資訊](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
 -   [範例：使用 ELEMENTS 指示詞指定 XSINIL](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述的結果](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [範例：擷取二進位資料](../../relational-databases/xml/example-retrieving-binary-data.md)  
   

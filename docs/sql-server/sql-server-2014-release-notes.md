@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503488"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658272"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ SQL Server 2014 SP2 包含適用於 SQL Server 2014 SP1 CU7 的已發行 Hotfix 
 |支援複寫的 DROP DDL|可讓您從資料庫和發行集卸除資料表 (其是以發行項的形式隨附於異動複寫發行集中)。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |SQL 服務帳戶的 IFI 權限|判斷立即檔案初始化 (IFI) 是否在 SQL Server 服務啟動時生效。|[資料庫檔案初始化](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |記憶體授與 - 處理問題|透過限定記憶體授與以防止記憶體競爭的做法，您即可在執行查詢同時利用診斷提示。|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|每個運算子的查詢執行輕量型分析 |可最佳化每個運算子的查詢執行統計資料收集情況，例如資料列的實際數目等。|[開發人員選擇：查詢進度 - 隨時隨地](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|每個運算子的查詢執行輕量型分析 |可最佳化每個運算子的查詢執行統計資料收集情況，例如資料列的實際數目等。|[Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)
 |查詢執行的診斷|現在，查詢執行計畫中會回報實際讀取的資料列，以協助改善查詢效能的疑難排解。|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |針對 tempdb 溢出的查詢執行診斷|現在，Hash Warning 和 Sort Warnings 已具備可追蹤實體 I/O 統計資料、已使用的記憶體，以及受影響的資料列等其他資料行。 |[改善 temptdb 溢出診斷](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |temptdb 可支援性 |您可以使用新的 tempdb 檔案數 Errorlog 訊息，而且 tempdb 資料檔案會在伺服器啟動時變更。|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -83,7 +83,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
 
 - [下載 Microsoft SQL Server 2014 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=46694)
 - [SQL Server 2014 Service Pack 1 已發行 - 已更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
-- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
@@ -95,7 +95,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
 2.  不支援並存安裝 SQL Server 2014 CTP 1 與 SQL Server 2014 RTM。  
 3.  不支援將 SQL Server 2014 CTP 1 資料庫附加或還原到 SQL Server 2014 RTM。  
 
-**因應措施** ：無。
+**因應措施：** 無。
 
 #### <a name="upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm"></a>從 SQL Server 2014 CTP 2 升級至 SQL Server RTM
 完全支援升級。 具體而言，您可以：
@@ -109,18 +109,18 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>從 SQL Server 2014 RTM 降級至 SQL Server 2014 CTP 2  
 不支援這個動作。  
   
-**因應措施** ：沒有降級的因應措施。 建議您先備份資料庫，再升級至 SQL Server 2014 RTM。  
+**因應措施：** 沒有降級的因應措施。 建議您先備份資料庫，再升級至 SQL Server 2014 RTM。  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 媒體/ISO/CAB 上出現錯誤版本的 StreamInsight 用戶端  
 版本錯誤的 StreamInsight.msi 和 StreamInsightClient.msi 位於下列 SQL Server 媒體/ISO/CAB 的路徑中 (StreamInsight\\\<結構\>\\\<語言識別碼\>)。  
   
-**因應措施：** 從 [SQL Server 2014 功能套件下載頁面](https://go.microsoft.com/fwlink/?LinkID=306709)下載並安裝正確版本。  
+**因應措施：** 從 [SQL Server 2014 功能套件下載頁面](https://go.microsoft.com/fwlink/?LinkID=306709)下載並安裝正確的版本。  
   
 ### <a name="ProdDoc"></a>產品文件 RTM
   
 報表產生器和 PowerPivit 的內容不提供某些語言版本。 
 
-**問題**：報表產生器的內容不提供以下語言版本：  
+**問題：** 報表產生器的內容不提供以下這些語言版本：  
   
 -   希臘文 (el-GR)  
 -   挪威文 (巴克摩) (nb-NO)  
@@ -129,9 +129,9 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
   
 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，此內容可從隨附於產品的 CHM 檔案中取得，並且提供這些語言版本。 CHM 檔案不再隨附於產品，而報表產生器內容也只提供在 MSDN 上。 但 MSDN 不支援這些語言。 報表產生器也已從 TechNet 移除，無法再用於那些支援的語言。  
   
-**因應措施** ：無。  
+**因應措施：** 無。  
   
-**問題**：Power Pivot 的內容不提供以下語言版本：
+**問題：** 不提供下列語言版本的 Power Pivot 內容：
   
 -   希臘文 (el-GR)  
 -   挪威文 (巴克摩) (nb-NO)  
@@ -147,7 +147,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 到 (含) CU 5 中所提供的�
   
 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中，TechNet 與這些語言版本曾經提供此內容。 此內容已從 TechNet 移除，無法再用於這些支援的語言。  
   
-**因應措施** ：無。  
+**因應措施：** 無。  
   
 ### <a name="DBEngine"></a>資料庫引擎 (RTM)
   
@@ -158,9 +158,9 @@ SQL Server 2014 Standard 版的變更如下：
 -   最大記憶體已經從 64 GB 增加至 128 GB。  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>記憶體最佳化 Advisor 會對預設條件約束標示不相容的旗標  
-**問題** ：SQL Server Management Studio 中的 Memory Optimized Advisor 旗標全都將預設條件約束設定為不相容。 並非所有預設條件約束在記憶體最佳化資料表中都有受到支援，此 Advisor 不會區分支援與未支援類型的預設條件約束。 支援的預設條件約束包括：在原生編譯之預存程序內受支援的所有常數、運算式和內建函式。 若要查看以原生方式編譯之預存程序內所支援的函數清單，請參閱 [原生編譯的預存程序中支援的建構](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)。  
+**問題：** SQL Server Management Studio 中的 Memory Optimized Advisor，會將所有預設條件約束標示為不相容。 並非所有預設條件約束在記憶體最佳化資料表中都有受到支援，此 Advisor 不會區分支援與未支援類型的預設條件約束。 支援的預設條件約束包括：在原生編譯之預存程序內受支援的所有常數、運算式和內建函式。 若要查看以原生方式編譯之預存程序內所支援的函數清單，請參閱 [原生編譯的預存程序中支援的建構](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)。  
   
-**因應措施**：如果您要使用這個 Advisor 來識別封鎖程式，請忽略相容的預設條件約束。 若要使用 Memory Optimization Advisor 來移轉具有相容預設條件約束的資料表，但沒有其他封鎖器，請遵循下列步驟進行：  
+**因應措施：** 如果您要使用這個 Advisor 來識別封鎖程式，請忽略相容的預設條件約束。 若要使用 Memory Optimization Advisor 來移轉具有相容預設條件約束的資料表，但沒有其他封鎖器，請遵循下列步驟進行：  
   
 1.  從資料表定義中移除預設條件約束。    
 2.  使用此 Advisor 針對資料表產生移轉指令碼。    
@@ -168,7 +168,7 @@ SQL Server 2014 Standard 版的變更如下：
 4.  執行移轉指令碼。  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>「檔案存取遭拒」參考訊息誤報為 SQL Server 2014 錯誤記錄檔中的錯誤  
-**問題** ：當重新啟動的伺服器擁有包含記憶體最佳化資料表的資料庫時，您可能會在 SQL Server 2014 錯誤記錄檔中看到以下類型的錯誤訊息：  
+**問題：** 當重新啟動的伺服器擁有包含記憶體最佳化資料表的資料庫時，可能會在 SQL Server 2014 錯誤記錄檔中看到以下類型的錯誤訊息：  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -177,22 +177,22 @@ memory-optimized table DLLs.
 ```  
 此訊息實際上僅供參考，使用者不必採取任何動作。  
   
-**因應措施** ：無。 這是參考訊息。  
+**因應措施：** 無。 這是參考訊息。  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>遺漏索引詳細資料誤報了經記憶體最佳化資料表所含的資料行  
-**問題** ：如果 SQL Server 2014 偵測到記憶體最佳化資料表上的查詢有遺漏索引，它將會在 SHOWPLAN_XML 中報告遺漏索引，以及在類似 sys.dm_db_missing_index_details 的遺漏索引 DMV 中報告遺漏索引。 在某些情況下，遺漏索引詳細資料將會包含內含的資料行。 當所有資料行都隱含地隨附記憶體最佳化資料表上的所有索引時，不允許明確指定包含記憶體最佳化索引的內含資料行。  
+**問題：** 如果 SQL Server 2014 偵測到記憶體最佳化資料表上的查詢有遺漏索引，它將會在 SHOWPLAN_XML 中回報索引遺漏，以及在 sys.dm_db_missing_index_details 之類的遺漏索引 DMV 中回報遺漏索引。 在某些情況下，遺漏索引詳細資料將會包含內含的資料行。 當所有資料行都隱含地隨附記憶體最佳化資料表上的所有索引時，不允許明確指定包含記憶體最佳化索引的內含資料行。  
   
-**因應措施** ：請勿使用記憶體最佳化資料表上的索引指定 INCLUDE 子句。  
+**因應措施：** 請勿使用記憶體最佳化資料表上的索引，指定 INCLUDE 子句。  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>當雜湊索引存在但不適用於查詢時，遺漏索引詳細資料會省略遺漏的索引  
-**問題** ：如果您在查詢中參考之記憶體最佳化資料表的資料行上擁有 HASH 索引，但是此索引無法用於查詢，則 SQL Server 2014 不一定會在 SHOWPLAN_XML 和 DMV sys.dm_db_missing_index_details 中報告遺漏索引。  
+**問題：** 如果您在查詢中參考之記憶體最佳化資料表的資料行上擁有 HASH 索引，但是此索引無法用於查詢，則 SQL Server 2014 不一定會在 SHOWPLAN_XML 和 DMV sys.dm_db_missing_index_details 中回報遺漏索引。  
   
 特別是，如果查詢包含的等號比較述詞牽涉到索引鍵資料行的子集或是查詢包含的不等號比較述詞牽涉到索引鍵資料行，則 HASH 索引無法以其現狀使用，而且需要不同的索引才能有效率地執行查詢。  
   
-**因應措施** ：如果您使用雜湊索引，請檢查查詢和查詢計劃，以判斷查詢在索引鍵的子集或不等號比較述詞上是否可以從索引搜尋作業獲益。 如果您需要進行索引鍵子集的搜尋，請使用 NONCLUSTERED 索引，或是在您正好需要搜尋的資料行上使用 HASH 索引。 如果您需要進行不等號比較述詞的搜尋，請使用 NONCLUSTERED 索引而不是 HASH 索引。  
+**因應措施：** 如果您使用雜湊索引，請查看查詢和查詢計劃，以判斷查詢在索引鍵的子集或不等號比較述詞上是否可以從索引搜尋作業獲益。 如果您需要進行索引鍵子集的搜尋，請使用 NONCLUSTERED 索引，或是在您正好需要搜尋的資料行上使用 HASH 索引。 如果您需要進行不等號比較述詞的搜尋，請使用 NONCLUSTERED 索引而不是 HASH 索引。  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>在相同查詢中使用經記憶體最佳化資料表和經記憶體最佳化資料表變數時，如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON 則會發生失敗  
-**問題** ：如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，而且您可在使用者交易內容外面的相同陳述式中存取記憶體最佳化資料表和記憶體最佳化資料表變數，您可能會收到下列錯誤訊息：  
+**問題：** 如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，且您在使用者交易內容外的相同陳述式中存取記憶體最佳化資料表及記憶體最佳化資料表變數，可能會收到下列錯誤訊息：  
   
 ```  
 Msg 41359  
@@ -202,7 +202,7 @@ READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level
 for the memory optimized table using a table hint, such as WITH (SNAPSHOT).  
 ```  
   
-**因應措施** ：請搭配資料表變數使用資料表提示 WITH (SNAPSHOT)，或是使用以下陳述式將資料庫選項 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設定為 ON：  
+**因應措施：** 請搭配資料表變數使用資料表提示 WITH (SNAPSHOT)，或是使用以下陳述式將資料庫選項 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設定為 ON：  
   
 ```  
 ALTER DATABASE CURRENT   
@@ -210,12 +210,12 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>原生編譯預存程序的程序和查詢執行統計資料，會將工作者時間記錄為 1000 的倍數  
-**問題** ：在使用 sp_xtp_control_proc_exec_stats 或 sp_xtp_control_query_exec_stats 針對原生方式編譯的預存程序啟用程序或查詢執行統計資料的收集之後，您將會看到 DMV sys.dm_exec_procedure_stats 和 sys.dm_exec_query_stats 中報告的 *_worker_time 為 1000 的倍數。 工作者時間少於 500 微秒的查詢執行會將 worker_time 報告為 0。  
+**問題：** 在使用 sp_xtp_control_proc_exec_stats 或 sp_xtp_control_query_exec_stats 為原生方式編譯的預存程序，啟用程序或查詢執行統計資料的收集之後，將會看到 DMV sys.dm_exec_procedure_stats 和 sys.dm_exec_query_stats 中回報的 *_worker_time 為 1000 的倍數。 工作者時間少於 500 微秒的查詢執行會將 worker_time 報告為 0。  
   
-**因應措施** ：無。 若要在以原生方式編譯的預存程序中執行短期的查詢，請勿依賴執行統計資料 DMV 中所報告的 worker_time。  
+**因應措施：** 無。 若要在以原生方式編譯的預存程序中執行短期的查詢，請勿依賴執行統計資料 DMV 中所報告的 worker_time。  
   
 #### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>如果原生編譯的預存程序包含長的運算式，則 SHOWPLAN_XML 會發生錯誤  
-**問題** ：如果以原生方式編譯的預存程序包含長的運算式，為此程序取得 SHOWPLAN_XML，則使用 T-SQL 選項 SET SHOWPLAN_XML ON 或是在 Management Studio 中使用 [顯示估計執行計畫] 選項可能會產生下列錯誤：  
+**問題：** 如果以原生方式編譯的預存程序包含很長的運算式，取得此程序的 SHOWPLAN_XML 時，使用 T-SQL 選項 SET SHOWPLAN_XML ON 或是使用 Management Studio 中的 [顯示估計執行計畫] 選項，就可能會產生下列錯誤：  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -224,7 +224,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**因應措施** ：有兩種建議的因應措施：  
+**因應措施：** 有兩種建議的因應措施：  
   
 1.  為運算式加上括號，如以下範例所示：  
   
@@ -253,9 +253,9 @@ optimized table or natively compiled stored procedure with object ID
     ```  
   
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>在原生編譯的預存程序中，搭配 DATEPART 和相關函式使用字串參數或變數時，會產生錯誤  
-**問題**：在原生編譯的預存程序中，搭配字串參數或變數使用內建函式 DATEPART、DAY、MONTH 和 YEAR 時，會出現錯誤訊息顯示原生編譯的預存程序不支援 datetimeoffset。  
+**問題：** 在原生編譯的預存程序中，搭配字串參數或變數使用內建函式 DATEPART、DAY、MONTH 和 YEAR 時，會出現錯誤訊息顯示原生編譯的預存程序不支援 datetimeoffset。  
   
-**因應措施** ：將字串參數或變數指派給 datetime2 類型的新變數，然後在函數 DATEPART、DAY、MONTH 或 YEAR 中使用該變數。 例如：  
+**因應措施：** 將字串參數或變數指派給 datetime2 類型的新變數，然後在函數 DATEPART、DAY、MONTH 或 YEAR 中使用該變數。 例如：  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -263,14 +263,14 @@ DATEPART(weekday, @d)
 ```  
   
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>原生編譯 Advisor 會對 DELETE FROM 子句標示錯誤的旗標  
-**問題：** 原生編譯 Advisor 將預存程序內的 DELETE FROM 子句誤標為不相容。  
+**問題：** 原生編譯 Advisor 會將預存程序內的 DELETE FROM 子句，誤標為不相容。  
   
-**因應措施** ：無。  
+**因應措施：** 無。  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>透過 SSMS 註冊時，系統會加入含不相符執行個體識別碼的 DAC 中繼資料  
-**問題** ：當透過 SQL Server Management Studio 註冊或刪除資料層應用程式封裝 (.dacpac) 時，系統未正確更新 sysdac* 資料表來讓使用者查詢資料庫的 dacpac 記錄。  sysdac_history_internal 和 sysdac_instances_internal 的 instance_id 不符合，無法允許聯結。  
+**問題：** 透過 SQL Server Management Studio 註冊或刪除資料層應用程式封裝 (.dacpac) 時，系統未正確更新 sysdac* 資料表來讓使用者查詢資料庫的 dacpac 記錄。  sysdac_history_internal 和 sysdac_instances_internal 的 instance_id 不符合，無法允許聯結。  
   
-**因應措施** ：修正此問題的方法為重新發佈 [資料層應用程式架構](https://www.microsoft.com/download/details.aspx?id=42295)的功能套件。  套用更新之後，所有新的記錄項目將使用 sysdac_instances_internal 資料表中針對 instance_id 所列的值。  
+**因應措施：** 修正此問題的方法為重新發佈 [資料層應用程式架構](https://www.microsoft.com/download/details.aspx?id=42295)的功能套件。  套用更新之後，所有新的記錄項目將使用 sysdac_instances_internal 資料表中針對 instance_id 所列的值。  
   
 如果您已遇到不相符的 instance_id 值這項問題，更正不相符之值的唯一方法是以權限使用者身分連接到伺服器，進而寫入 MSDB 資料庫並更新 instance_id 值來使其相符。  如果相同資料庫出現多個註冊和取消註冊的事件，您可能需查看日期/時間，以找出哪個記錄與目前的 instance_id 值相符。  
   
@@ -294,7 +294,7 @@ DATEPART(weekday, @d)
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services 原生模式報表伺服器無法與 SQL Server 2014 Reporting Services SharePoint 元件並存執行  
 **問題：** 如果在相同的伺服器上安裝 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 元件，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式 Windows 服務 'SQL Server Reporting Services' (ReportingServicesService.exe) 便無法啟動。  
   
-**因應措施** ：解除安裝 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 元件，並重新啟動 Microsoft SQL Server 2012 Reporting Services Windows 服務。  
+**因應措施：** 解除安裝 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 元件，並重新啟動 Microsoft SQL Server 2012 Reporting Services Windows 服務。  
   
 **詳細資訊：**  
   
@@ -326,9 +326,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 如需詳細資訊，請參閱＜ [SQL Server 2014 Reporting Services 提示、秘訣和疑難排解](https://go.microsoft.com/fwlink/?LinkID=391254)＞。  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>多節點 SharePoint 伺服器陣列升級至 SQL Server 2014 Reporting Services 的必要順序  
-**問題** ：如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共用服務的執行個體在所有適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集執行個體之前升級，則多節點伺服器陣列中的報表轉譯會失敗。  
+**問題：** 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共用服務的執行個體，在所有適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集執行個體之前升級，多節點伺服器陣列中的報表轉譯會失敗。  
   
-**因應措施** ：在多節點 SharePoint 伺服器陣列中：  
+**因應措施：** 多節點 SharePoint 伺服器陣列中：  
   
 1.  請先升級適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集的所有執行個體。    
 2.  然後升級 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共用服務的所有執行個體。  
@@ -338,7 +338,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="AzureVM"></a>Windows Azure 虛擬機器上的 SQL Server 2014 RTM  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>在 Windows Azure 中設定可用性群組接聽程式時，[新增 Azure 複本精靈] 傳回錯誤  
-**問題** ：如果可用性群組有接聽程式，加入 Azure 複本精靈嘗試在 Windows Azure 中設定接聽程式時將會傳回錯誤。  
+**問題：** 如果可用性群組有接聽程式，嘗試在 Windows Azure 中設定接聽程式時，[加入 Azure 複本精靈] 將會傳回錯誤。  
   
 這個問題會發生是因為可用性群組接聽程式需要在每一個主控可用性群組複本的子網路 (包括 Azure 子網路) 中指派一個 IP 位址。  
   
@@ -398,23 +398,23 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 ### <a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>Master Data Services 中的 Data Quality Services 沒有跨版本支援  
-**問題** ：以下案例不受支援：  
+**問題：** 不支援下列狀況：  
   
 -   在已安裝 Data Quality Services 2012 的 SQL Server 2012 中，於 SQL Server Database Engine 資料庫中裝載 Master Data Services 2014。  
   
 -   在已安裝 Data Quality Services 2014 的 SQL Server 2014 中，於 SQL Server Database Engine 資料庫中裝載 Master Data Services 2012。  
   
-**因應措施** ：使用與 Database Engine 資料庫和 Data Quality Services 相同版本的 Master Data Services。  
+**因應措施：** 使用與 Database Engine 資料庫和 Data Quality Services 相同版本的 Master Data Services。  
   
 ### <a name="UA"></a>升級建議程式問題 (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 升級建議程式會回報與 SQL Server Reporting Services 無關的升級問題  
-**問題** ：隨附於 SQL Server 2014 媒體的 SQL Server Upgrade Advisor (SSUA) 在分析 SQL Server Reporting Services 伺服器時誤報有多個錯誤。  
+**問題：** 隨附於 SQL Server 2014 媒體的 SQL Server Upgrade Advisor (SSUA)，在分析 SQL Server Reporting Services 伺服器時誤報多項錯誤。  
   
-**因應措施** ： [適用於 SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中所提供的 SQL Server Upgrade Advisor 已修正此問題。  
+**因應措施：**[SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server Upgrade Advisor 已修正此問題。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 升級建議程式在分析 SQL Server Integration Services 伺服器時回報錯誤  
-**問題** ：隨附於 SQL Server 2014 媒體的 SQL Server Upgrade Advisor (SSUA) 在分析 SQL Server Integration Services 伺服器時回報錯誤。  顯示給使用者看的錯誤如下：  
+**問題：** 隨附於 SQL Server 2014 媒體的 SQL Server Upgrade Advisor (SSUA) 在分析 SQL Server Integration Services 伺服器時回報錯誤。  顯示給使用者看的錯誤如下：  
   
 ```  
 The installed version of Integration Services does not support Upgrade Advisor.   
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**因應措施** ： [適用於 SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中所提供的 SQL Server Upgrade Advisor 已修正此問題。  
+**因應措施：**[SSUA 的 SQL Server 2014 功能套件](https://go.microsoft.com/fwlink/?LinkID=306709)中提供的 SQL Server Upgrade Advisor 已修正此問題。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

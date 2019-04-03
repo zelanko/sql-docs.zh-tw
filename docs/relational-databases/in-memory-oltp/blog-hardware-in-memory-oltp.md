@@ -1,7 +1,7 @@
 ---
 title: SQL In-Memory OLTP 的硬體 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087588"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645440"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>SQL Server 2014 中 In-Memory OLTP 的硬體考量
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server 中記憶體內部 OLTP 的硬體考量
 
 In-Memory OLTP 會以不同於傳統磁碟資料表的方式，使用記憶體和磁碟。 您將會看到使用 In-Memory OLTP 提升的效能取決於您所使用的硬體。 在此部落格文章中，我們會討論一些一般硬體考量，並針對搭配 In-Memory OLTP 使用的硬體，提供常用的指導方針。
 
 > [!NOTE]
-> 本文已在 2013 年 8 月 1 日，由 Microsoft SQL Server 2014 小組發佈在部落格上。 此部落格網頁已遭到淘汰，本文是粗略的部落格文字擷取。 用來連結至部落格的文件文章現在連結本文。 本文並未進行維護。 本文可能會從目錄排除。
-> 
+> 本文已在 2013 年 8 月 1 日，由 Microsoft SQL Server 2014 小組發佈在部落格上。 即將淘汰的部落格網頁。
+>
 > [SQL Server In-Memory-OLTP](index.md)
 
 <!--
@@ -32,7 +32,7 @@ In-Memory OLTP 會以不同於傳統磁碟資料表的方式，使用記憶體�
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>CPU
 
@@ -47,7 +47,7 @@ In-Memory OLTP 不需要高階的伺服器，就可以支援高輸送量的 OLTP
 若要判斷指定的記憶體最佳化資料表所使用的記憶體數量，請執行下列查詢：
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 結果將會顯示用於記憶體最佳化資料表及其索引的記憶體。 資料表資料包括使用者資料，以及執行交易仍然需要，或者系統尚未清除的所有舊版資料列。 雜湊索引所使用的記憶體為常數，而且不取決於資料表中的資料列數目。
@@ -74,3 +74,6 @@ select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
 
 磁碟容量方面，我們建議具備 2 到 3 倍的可用記憶體最佳化資料表大小。
 
+## <a name="see-also"></a>另請參閱
+
+[記憶體內部 OLTP 的範例資料庫](sample-database-for-in-memory-oltp.md)

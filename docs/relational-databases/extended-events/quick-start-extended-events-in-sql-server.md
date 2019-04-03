@@ -1,25 +1,26 @@
 ---
-title: 快速入門︰SQL Server 中的擴充事件 | Microsoft Docs
+title: 快速入門：SQL Server 中的擴充事件 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658347"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478233"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件
+# <a name="quickstart-extended-events-in-sql-server"></a>快速入門：SQL Server 中的延伸事件
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -485,7 +486,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="sql-trace-event-classes-with-extended-events"></a>SQL 追蹤事件類別與擴充事件
 
 
-如需搭配 SQL 追蹤事件類別和資料行使用擴充事件的說明，請參閱︰ [檢視同等於 SQL 追蹤事件類別的擴充事件項目](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
+如需搭配 SQL 追蹤事件類別和資料行使用擴充事件的說明，請參閱︰[檢視同等於 SQL 追蹤事件類別的擴充事件](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
 ### <a name="powershell-provider-for-extended-events"></a>擴充事件的 PowerShell 提供者
 
 
-您可以使用 SQL Server PowerShell 提供者來管理 SQL Server 擴充事件。 詳情請參閱： [針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
+您可以使用 SQL Server PowerShell 提供者來管理 SQL Server 擴充事件。 詳情請參閱：[針對擴充事件使用 PowerShell 提供者](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>擴充事件的系統檢視表
@@ -554,7 +555,7 @@ SQL Server 中已建立一些擴充事件。 所有事件都已設定為在啟�
 
 
 <a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>附錄︰使用 SELECT 事先確認權限擁有者
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>附錄：使用 SELECT 事先確認權限擁有者
 
 
 本文中提到的權限包括：
@@ -648,8 +649,8 @@ SELECT HAS_PERMS_BY_NAME(
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 伺服器權限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
-- [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)(特別針對 Azure SQL Database)
-- 部落格︰ [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)(有效的 Database Engine 權限)
+-  [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)(特別針對 Azure SQL Database)
+- 部落格：[有效的資料庫引擎權限](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - 可縮放的 PDF 格式 [海報](https://aka.ms/sql-permissions-poster)，顯示所有 SQL Server 權限的階層。
 
 

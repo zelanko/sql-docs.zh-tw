@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771344"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535850"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ ms.locfileid: "55771344"
   
 1.  在所有同步認可複本上移除自動容錯移轉  
   
-2.  升級執行非同步認可次要複本的所有遠端伺服器複本執行個體  
+2.  升級所有非同步認可次要複本執行個體。 
   
-3.  升級目前未執行主要複本的所有本機複本次要執行個體  
+3.  升級所有遠端同步認可次要複本執行個體。 
+
+4.  升級所有本機同步認可次要複本執行個體。 
   
-4.  手動將 AG 容錯移轉至本機同步認可的次要複本  
+4.  手動將 AG 容錯移轉至 (新升級的) 本機同步認可次要複本。  
   
-5.  升級或更新先前裝載主要複本的本機複本執行個體  
+5.  升級或更新先前裝載主要複本的本機複本執行個體。  
   
-6.  視需要設定自動容錯移轉夥伴  
+6.  視需要設定自動容錯移轉夥伴。
   
  必要時，您可以執行額外的手動容錯移轉，讓 AG 回到原始的設定。  
+ 
+   > [!NOTE]
+   > - 升級同步認可複本並使其離線，並不會延遲主要複本的交易。 在次要複本中斷連線後，交易會直接在主要複本上認可，而不會等候記錄強行寫入至次要複本。 
+   > - 如果 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 設為 `1` 或 `2`，則在更新程序期間有相對數量的同步次要複本無法使用時，主要複本可能無法供讀取/寫入。 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>具有一個遠端次要複本的 AG  
  如果您部署 AG 只是為了災害復原，您可能必須將 AG 容錯移轉至非同步認可的次要複本。 下圖說明這類組態：  

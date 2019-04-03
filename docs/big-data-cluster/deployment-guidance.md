@@ -1,6 +1,6 @@
 ---
 title: 如何部署
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 了解如何部署在 Kubernetes 上的 SQL Server 2019 巨量資料叢集 （預覽）。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493730"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860590"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server 的巨量資料叢集可以部署為 docker 容器的 Kubernetes 叢集。 這是安裝和設定步驟的概觀：
 
@@ -42,9 +44,9 @@ SQL Server 的巨量資料叢集至少需要的最小的 Kubernetes 版本 v1.10
 
 | 部署 Kubernetes 上： | 描述 | 連結 |
 |---|---|---|
-| **Minikube** | 在 VM 中單一節點 Kubernetes 叢集。 | [指示](deploy-on-minikube.md) |
-| **Azure Kubernetes 服務 (AKS)** | 在 Azure 中受控的 Kubernetes 容器服務。 | [指示](deploy-on-aks.md) |
-| **多部電腦** | 部署實體或虛擬機器上的 Kubernetes 叢集**kubeadm** | [指示](deploy-with-kubeadm.md) |
+| **Minikube** | 在 VM 中單一節點 Kubernetes 叢集。 | [Instructions](deploy-on-minikube.md) |
+| **Azure Kubernetes 服務 (AKS)** | 在 Azure 中受控的 Kubernetes 容器服務。 | [Instructions](deploy-on-aks.md) |
+| **多部電腦** | 部署實體或虛擬機器上的 Kubernetes 叢集**kubeadm** | [Instructions](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > 部署 AKS 和 SQL Server 的巨量資料叢集的範例 python 指令碼，請參閱[部署巨量資料叢集的 Azure Kubernetes Service (AKS) 上的 SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。

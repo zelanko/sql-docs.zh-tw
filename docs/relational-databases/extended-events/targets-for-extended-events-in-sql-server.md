@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6f5eeb47852da17222c8c749bf7c83c1435ccf5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680256"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478133"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -38,7 +39,7 @@ ms.locfileid: "47680256"
 ### <a name="prerequisites"></a>Prerequisites
 
 
-- 請熟悉擴充事件基本概念 (如 [快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)中所述)。
+- 請熟悉擴充事件的基本概念 (相關說明請見[快速入門︰SQL Server 中的延伸事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)。
 
 
 - 已安裝最新版本的經常更新公用程式 SQL Server Management Studio (SSMS.exe)。 如需詳細資料，請參閱：

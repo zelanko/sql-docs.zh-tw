@@ -1,7 +1,7 @@
 ---
 title: SQL Server 使用意見收集的本機稽核 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2017
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fb5810e787456673d67322823a28df4d79208d1e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601675"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493880"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 使用意見收集的本機稽核
 
@@ -201,11 +201,11 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 |clientVersion | SQL Server 執行個體版本 | 13.0.2161.3 ((SQL16_RTM_QFE-CU).160907-1223) 
 |operatingSystem | 安裝 SQL Server 執行個體的作業系統版本 | Microsoft Windows Server 2012 R2 Datacenter 
 |querySetVersion | 一組查詢定義的版本 | 1.0.0.0 
-|traceName | 追蹤的類別：(SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
+|traceName | 追蹤的類別：(SQLServerXeQueries、SQLServerPeriodicQueries、SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | 查詢的識別碼 | SQLServerProperties.002 
-|data   | 所收集到 queryIdentifier 相關資訊的輸出，它作為 T-SQL 查詢、XE 工作階段或應用程式的輸出 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|data   | 所收集到 queryIdentifier 相關資訊的輸出，它作為 T-SQL 查詢、XE 工作階段或應用程式的輸出 |  [{"Collation":"SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled":"0" "SqlIntSec":"1","IsSingleUser":"0","SqlFilestreamMode":"0","SqlPbInstalled":"0","SqlPbNodeRole": "","SqlVersionMajor":"13","SqlVersionMinor":"0","SqlVersionBuild":"2161","ProductBuildType": "","ProductLevel":"RTM","ProductUpdateLevel":"CU2","ProductUpdateReference":"KB3182270","ProductRevision":"3","SQLEditionId": "-1534726760","IsClustered":"0","IsHadrEnabled":"0","SqlAdvAInstalled":"0","PacketReceived":"1210","Version":"Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |查詢| 如果適用的話，此為與產生資料之 queryIdentifier 相關的 T-SQL 查詢定義。        此元件不會由 SQL Server CEIP 服務上傳。 它包含在本機稽核中，僅供客戶參考之用。| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | 具有下列追蹤類別的查詢執行所需的持續時間：(SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|queryTimeInTicks | 具有下列追蹤類別的查詢執行所需的持續時間：(SQLServerXeQueries、SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>追蹤類別 
 目前，我們會收集下列追蹤類別︰ 

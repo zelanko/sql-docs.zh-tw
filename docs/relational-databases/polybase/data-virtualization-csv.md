@@ -3,22 +3,39 @@ title: 虛擬化 SQL Server 2019 CTP 2.0 中的外部資料 | Microsoft Docs
 description: 此頁面詳述針對 CSV 檔案使用 [建立外部資料表精靈] 的步驟
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405670"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512955"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>搭配使用外部資料表精靈與 CSV 檔案
 
 SQL Server 2019 也可讓您虛擬化 HDFS 中 CSV 檔案的資料。  此程序允許將資料保留在其原始位置，但您可以在 SQL Server 執行個體中**虛擬化**資料，以在該處查詢它，如同 SQL Server 中的任何其他資料表。 這項功能會將 ETL 程序的需求降到最低。 這只要使用 Polybase 連接器就能做到。 如需資料虛擬化的詳細資訊，請參閱[開始使用 PolyBase](polybase-guide.md) 文件。
+
+## <a name="prerequisite"></a>必要條件
+
+從 CTP 2.4 開始，依預設已不會在巨量資料叢集中建立資料集區和存放集區外部資料來源。 使用精靈之前，請使用下列 Transact-SQL 查詢在您的目標資料庫中建立預設的 **SqlStoragePool** 外部資料來源。 請務必先將查詢的內容變更為您的目標資料庫。
+
+```sql
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+  BEGIN
+    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+  END
+```
 
 ## <a name="launch-the-external-table-wizard"></a>啟動 [外部資料表精靈]
 

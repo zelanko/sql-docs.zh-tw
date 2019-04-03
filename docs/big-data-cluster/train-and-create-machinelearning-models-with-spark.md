@@ -1,6 +1,6 @@
 ---
 title: 使用 Spark 的訓練/建立 ML 模型
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 使用 PySpark 來訓練及 SQL Server 的巨量資料叢集 （預覽） 上建立 Spark 機器學習服務模型。
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: b9217b56da2e00ba50288f1643df809f482c2517
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578108"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860559"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>訓練及建立 Spark 機器學習服務模型
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 在巨量資料的 SQL Server 叢集的 Spark 可讓人工智慧和機器學習服務。 此範例會示範如何訓練機器學習模型使用 Python 中使用資料的 Spark (PySpark) 儲存在 HDFS。 
 

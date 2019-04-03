@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417240"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538660"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -624,7 +624,15 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. 將單一資料庫更新為服務層 S0 (標準版，效能等級 0)
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. 強制容錯移轉至異地複寫次要端 (可能遺失資料)
+
+在伺服器 `secondaryserver` 上執行時，如果主要伺服器變得無法使用，則強制讓伺服器 `secondaryserver` 上的次要資料庫 db1 成為新的主要資料庫。 此選項可能會造成資料遺失。 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. 將單一資料庫更新為服務層 S0 (標準版，效能等級 0)
 將單一資料庫更新為效能等級為 S0 且大小上限為 250 GB 的標準版 (服務層)。
 
 ```sql

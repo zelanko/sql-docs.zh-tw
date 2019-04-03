@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5d0e1d1528d9ba2f85867aa09b7314f4030dfcd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357657"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860709"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   防火牆系統有助於預防未經授權存取電腦資源。 如果防火牆已開啟，但是設定不正確，則嘗試連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的行為可能會被封鎖。  
@@ -44,7 +44,7 @@ ms.locfileid: "53357657"
   
 -   [設定 Windows 防火牆以允許 Analysis Services 存取](../../../2014/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+-   [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 
   
@@ -121,7 +121,7 @@ ms.locfileid: "53357657"
   
     -   [如何使用 Netsh.exe 工具和命令列參數](https://support.microsoft.com/kb/242468)  
   
-    -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](https://support.microsoft.com/kb/947709) (如何使用 "netsh advfirewall firewall" 內容而非 "netsh firewall" 內容來控制 Windows Server 2008 和 Windows Vista 的 Windows 防火牆行為)  
+    -   [如何使用"netsh advfirewall firewall"內容而非"netsh firewall"內容來控制 Windows Server 2008 和 Windows Vista 的 Windows 防火牆行為](https://support.microsoft.com/kb/947709)  
   
     -   [搭配 "profile=all" 參數使用的 "netsh firewall" 命令不會在 Windows Vista 架構的電腦上設定公用設定檔](https://support.microsoft.com/kb/947213)  
   
@@ -140,10 +140,10 @@ ms.locfileid: "53357657"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務|UDP 通訊埠 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務會接聽具名執行個體的內送連接，並且將對應至該具名執行個體的 TCP 通訊埠編號提供給用戶端。 每當使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的具名執行個體時，通常就會啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser 服務。 如果用戶端設定成連接至具名執行個體的特定通訊埠，就不需要啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|可以在建立 HTTP 端點時指定。 預設值為 TCP 通訊埠 80 (用於 CLEAR_PORT 傳輸) 和 443 (用於 SSL_PORT 傳輸)。|用於透過 URL 進行 HTTP 連接。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體|TCP 通訊埠 443|用於透過 URL 進行 HTTPS 連接。 HTTPS 是使用安全通訊端層 (SSL) 的 HTTP 連接。|  
-|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 通訊埠 4022。 若要確認使用的通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]沒有預設連接埠，但這是線上叢書範例中的傳統組態。|  
+|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP 通訊埠 4022。 若要確認使用的通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)] 沒有預設連接埠，但這是線上叢書範例中的傳統組態。|  
 |資料庫鏡像|管理員所選擇的通訊埠。 若要判斷此通訊埠，請執行下列查詢：<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|雖然資料庫鏡像沒有預設通訊埠，不過線上叢書範例會使用 TCP 通訊埠 7022。 請務必避免中斷使用中的鏡像端點，尤其是在具有自動容錯移轉的高安全性模式中。 您的防火牆組態必須避免中斷仲裁。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。|  
 |複寫|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的複寫連接會使用一般的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通訊埠 (例如，預設執行個體的 TCP 通訊埠 1433)。<br /><br /> 複寫快照集的 Web 同步處理和 FTP/UNC 存取需要在防火牆上開啟其他通訊埠。 為了將初始資料和結構描述從某個位置傳送至另一個位置，複寫可能會使用 FTP (TCP 通訊埠 21)、透過 HTTP 同步處理 (TCP 通訊埠 80) 或檔案共用。 檔案共用會使用 UDP 通訊埠 137 和 138，以及 TCP 通訊埠 139 (如果使用 NetBIOS)。 檔案共用使用 TCP 通訊埠 445。|若為透過 HTTP 同步處理，複寫會使用 IIS 端點 (其通訊埠可設定，但預設為通訊埠 80)，不過 IIS 處理序會透過預設執行個體的標準通訊埠 (1433) 連接至後端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。<br /><br /> 在使用 FTP 進行 Web 同步處理期間，FTP 傳送是介於 IIS 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者之間，而非介於訂閱者與 IIS 之間。|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」<br /><br /> 可能也需要「 [IPsec](#BKMK_IPsec) 」例外。|如果您正在使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，也必須在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主機電腦上，將 **Devenv.exe** 加入至「例外」清單並開啟 TCP 通訊埠 135。<br /><br /> 如果您正在使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，也必須在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主機電腦上，將 **ssms.exe** 加入至「例外」清單並開啟 如需詳細資訊，請參閱 < [TRANSACT-SQL 偵錯工具設定](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具|TCP 通訊埠 135<br /><br /> 請參閱「 [通訊埠 135 的特殊考量](#BKMK_port_135)」<br /><br /> 可能也需要「 [IPsec](#BKMK_additional_ports) 」例外。|如果您正在使用 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，也必須在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 主機電腦上，將 **Devenv.exe** 加入至「例外」清單並開啟 TCP 通訊埠 135。<br /><br /> 如果您正在使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，也必須在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 主機電腦上，將 **ssms.exe** 加入至「例外」清單並開啟 如需詳細資訊，請參閱 < [TRANSACT-SQL 偵錯工具設定](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)。|  
   
  如需為 [!INCLUDE[ssDE](../../includes/ssde-md.md)]設定 Windows 防火牆的逐步解說指示，請參閱 [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)。  
   
@@ -324,5 +324,3 @@ ms.locfileid: "53357657"
   
 ## <a name="see-also"></a>另請參閱  
  [Windows Server 系統的服務概觀和網路通訊埠需求 (機器翻譯)](https://support.microsoft.com/kb/832017)  
-  
-  

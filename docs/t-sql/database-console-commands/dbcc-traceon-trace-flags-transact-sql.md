@@ -1,7 +1,7 @@
 ---
 title: 追蹤旗標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/10/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: c6a6d5e92c6aa5ab2a88606e829acba3c765276f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736840"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494200"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "57736840"
 |**205**|當統計資料相依預存程序因自動更新統計資料而重新編譯時，回報至錯誤記錄檔。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/195565)。<br /><br />**範圍**：只限全域|
 |**260**|列印擴充預存程序動態連結程式庫 (DLL) 的版本控制相關資訊。 如需 **GetXpVersion()** 的詳細資訊，請參閱[建立擴充預存程序](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)。<br /><br />**範圍：** 全域或工作階段|
 |**272**|當伺服器意外重新啟動或容錯移轉至次要伺服器時，停用識別預先配置以避免識別欄位的值不連貫。 請注意，識別快取可用來改善含有識別欄位之資料表上的 INSERT 效能。<br /><br />**注意：** 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 開始，若要在資料庫層級完成這項作業，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 IDENTITY_CACHE 選項。<br /><br />**範圍**：只限全域|
-|**460**|將資料截斷訊息識別碼 [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) 取代成訊息識別碼 [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4468101) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 和更新版本的組建。<br /><br />**範圍**：全域或工作階段|
+|**460**|將資料截斷訊息識別碼 [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) 取代成訊息識別碼 [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/4468101) \(機器翻譯\)。<br /><br />從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 開始，若要在資料庫層級完成此作業，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 VERBOSE_TRUNCATION_WARNINGS 選項。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 和更新版本的組建。<br /><br />**注意：** 從資料庫相容性層級 150 開始，訊息識別碼 2628 是預設值，且此追蹤旗標沒有任何作用。<br /><br />**範圍**：全域或工作階段|
 |**610**|控制以最低限度方式插入索引資料表的行為。 從 SQL Server 2016 開始不需要此追蹤旗標，因為預設會針對索引資料表開啟最低限度記錄功能。 在 SQL Server 2016 中，當大量載入作業導致系統配置新的頁面時，如果符合最低限度記錄的其他所有先決條件，則依序填滿新頁面的所有資料列會以最低限度方式記錄。 插入到現有頁面 (未配置新頁面) 以維持索引順序的資料列仍會完整記錄，這些是載入期間因頁面分割而移除的資料列。 此外也必須開啟索引的 ALLOW_PAGE_LOCKS (預設為「開啟」) 以啟用最低限度記錄作業，因為配置期間需要頁面鎖定，也因此只會記錄頁面或範圍配置。如需詳細資訊，請參閱[資料載入效能指南](https://msdn.microsoft.com/library/dd425070.aspx) \(英文\)。<br /><br />**範圍**：全域或工作階段|
 |**634**|停用背景資料行存放區壓縮工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對含有未壓縮資料的資料行存放區索引資料列群組，定期執行 Tuple Mover 背景工作，一次壓縮一個資料列群組。<br /><br />壓縮資料行存放區可提升查詢效能，但同時也會耗用系統資源。 您可以手動控制資料行存放區的壓縮時間，方法是在您選擇的時間，停用追蹤旗標為 634 的背景壓縮工作，然後明確地叫用 ALTER INDEX...REORGANIZE 或 ALTER INDEX...REBUILD。<br /><br />**範圍：** 只限全域|
 |**652**|停用頁面預先提取掃描。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段|
@@ -81,6 +81,7 @@ ms.locfileid: "57736840"
 |**2390**|針對遞增或不明值啟用自動產生的快速統計資料 (長條圖修正)。 如果設定追蹤旗標 2390，且前置統計資料資料行標示為遞增或不明，則在查詢編譯時將調整用來預估基數的長條圖。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2801413) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**注意：** 此追蹤旗標不適用於 CE 120 版或更新版本。 請改用追蹤旗標 4139。<br /><br />**範圍**：全域或工作階段或查詢|
 |**2422**|超過 Resource Governor REQUEST_MAX_CPU_TIME_SEC 設定所設定的時間上限時，啟用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以中止要求。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4038419) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 和更新版本的組建。<br /><br />**範圍**：全域|
 |**2430**|啟用其他鎖定類別清除作業。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2754301) \(英文\)。<br /><br />**範圍**：只限全域| 
+|**2451**|啟用 sys.dm_exec_query_plan_stats 中最後一個實際執行計畫的對等項目。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 和更新版本的組建。<br /><br />**範圍**：只限全域|  
 |**2453**|變更足夠數目的資料列時，允許資料表變數觸發重新編譯。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2952444) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢|
 |**2467**|根據哪個節點有最新的已配置執行緒而定，啟用替代的平行背景工作執行緒配置原則。 如需詳細資訊，請參閱[平行查詢處理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 請參閱[設定最大工作者執行緒伺服器設定選項](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)，以取得有關如何設定最大工作者執行緒伺服器選項的詳細資訊。<br /><br />**注意：** 查詢平行處理原則程度 (DOP) 必須容納到單一節點中，才能使用此替代原則，否則會改為使用預設執行緒配置原則。 使用此追蹤旗標時，建議不要執行所指定 DOP 超過單一節點中排程器數目的查詢，因為這會干擾所指定 DOP 小於或等於單一節點中排程器數目的查詢。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：只限全域|
 |**2469**|在 `INSERT INTO ... SELECT` 和磁碟分割資料行存放區索引之間啟用其他交換。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3204769) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段或查詢|

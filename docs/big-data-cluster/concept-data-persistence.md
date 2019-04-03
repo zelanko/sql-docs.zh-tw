@@ -1,6 +1,6 @@
 ---
 title: 在 Kubernetes 上的資料持續性
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 深入了解資料持續性中的 SQL Server 2019 巨量資料叢集的運作方式。
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f8cddaeca6c6bcc7eb32c28fa852566bb7dcf331
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494160"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860274"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>在 Kubernetes 上的 SQL Server 巨量資料叢集使用的資料持續性
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [永續性磁碟區](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)提供外掛程式模型，在其中儲存體提供的方式的 Kubernetes 中的儲存體便完成取自的使用方式。 因此，您可以將高度可用的儲存體，並插入 SQL Server 的巨量資料叢集叢集。 這可讓您完整控制的儲存體、 可用性和效能，您需要的類型。 Kubernetes 支援多種不同的儲存體解決方案，包括 Azure 的磁碟檔案、 NFS、 本機儲存體，和更多功能。
 

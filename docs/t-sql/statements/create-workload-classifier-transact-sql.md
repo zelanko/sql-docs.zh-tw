@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 276ec101595da24dff7ee805a414455936595398
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: b925917c7d8ef55d687372e0854b136d365de0ac
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988747"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538210"
 ---
 # <a name="create-workload-classifier-transact-sql-preview"></a>CREATE WORKLOAD 分類器 (Transact-SQL) (預覽)
 
@@ -38,12 +38,12 @@ ms.locfileid: "57988747"
   
 ## <a name="syntax"></a>語法
 
-```sql
+```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
     ( WORKLOAD_GROUP = 'name'  
      ,MEMBERNAME = 'security_account'
- [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }])
+ [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL (default) | ABOVE_NORMAL | HIGH }])
 [;]
 ```
 
@@ -79,6 +79,8 @@ IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } 指定要求�
 
 重要性會影響所排定要求的順序，進而授與資源和鎖定的優先存取權。
 
+如果使用者是多個角色的成員，且被指派了不同的資源類別或在多個分類器中相符，該使用者將獲得最高的資源類別指派。 如需詳細資訊，請參閱[工作負載分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
+
 ## <a name="permissions"></a>權限
 
  需要 CONTROL DATABASE 權限。  
@@ -96,6 +98,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## <a name="see-also"></a>另請參閱
 
-[DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)  
-目錄檢視 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) 目錄檢視 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
+[DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
+目錄檢視 [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)</br>
+目錄檢視 [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
 [SQL 資料倉儲分類](/azure/sql-data-warehouse/classification)

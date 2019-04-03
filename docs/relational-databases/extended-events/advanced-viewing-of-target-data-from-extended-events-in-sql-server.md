@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658877"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478163"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>進階檢視 SQL Server 中擴充事件的目標資料
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -36,7 +37,7 @@ ms.locfileid: "51658877"
 
 現有的文章假設您已經知道如何建立和啟動事件工作階段。 下文提早示範如何建立事件工作階段的指示︰
 
-[快速入門︰SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+[快速入門：SQL Server 中的擴充事件](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
 
 
 本文也假設您已安裝最新每月發行的 SSMS。 安裝說明位於：
@@ -101,17 +102,17 @@ ms.locfileid: "51658877"
 
 SSMS 可以顯示任何目標的資料。 但是，各種目標的顯示畫面會不同︰
 
-- *event_file* ：會充分顯示 event_file 目標的資料，並提供豐富的功能。
+- *event_file：* 會充分顯示 event_file 目標的資料，並提供豐富的功能。
 
 
-- *ring_buffer* ：信號緩衝區目標的資料顯示為原始 XML。
+- *ring_buffer：* 通道緩衝區目標的資料顯示會為原始 XML。
 
 
 - 對於其他目標，顯示的功能是介於 event_file 與 ring_buffer 之間。
   - 這類其他目標包括 event_counter、histogram 和 pair_matching。
 
 
-- *etw_classic_sync_target* ：SSMS 無法顯示目標類型 etw_classic_sync_target 的資料。
+- *etw_classic_sync_target：* SSMS 無法顯示目標類型 etw_classic_sync_target 的資料。
 
 
 
@@ -258,9 +259,9 @@ SSMS UI 提供數種方式來操作資料，但只是檢視資料。
 
 在擴充事件的區域中，您可以指定兩種主要類型的篩選︰
 
-- *預先目標篩選* ：減少事件引擎傳送至目標之資料量的篩選。
+- *預先目標篩選：* 可讓事件引擎傳送至目標的資料量減少的篩選。
 
-- *後置目標篩選* ：您可以在 SSMS UI 中選取以排除顯示中之部分目標記錄的篩選。
+- *後置目標篩選：* 您可以在 SSMS UI 中選取以排除部分目標記錄而不顯示的篩選。
 
 
 SSMS 顯示篩選如下︰

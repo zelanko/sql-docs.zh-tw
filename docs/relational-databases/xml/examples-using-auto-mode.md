@@ -1,5 +1,5 @@
 ---
-title: 範例：使用 AUTO 模式 | Microsoft Docs
+title: 範例:使用 AUTO 模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e246624301cdc20fab58f8a59d72a2f8416bae1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698486"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510614"
 ---
-# <a name="examples-using-auto-mode"></a>範例：使用 AUTO 模式
+# <a name="examples-using-auto-mode"></a>範例:使用 AUTO 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   下列範例說明 AUTO 模式的用法。 這些查詢中有許多是針對自行車製造說明的 XML 文件來指定的，而這些文件儲存在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中 ProductModel 資料表的 Instructions 資料行中。  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>範例：擷取客戶、訂單及訂單詳細資訊  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>範例擷取客戶、訂單及訂單詳細資訊  
  此查詢會擷取特定客戶的客戶、訂單及訂單詳細資訊。  
   
 ```  
@@ -95,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>範例：指定 GROUP BY 及彙總函式  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>範例指定 GROUP BY 及彙總函式  
  下列查詢會傳回個別的客戶識別碼，以及客戶所要求的訂單數量。  
   
 ```  
@@ -115,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>範例：在 AUTO 模式中指定計算資料行  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>範例在 AUTO 模式中指定計算資料行  
  此查詢會傳回串連的個別客戶名稱及訂單資訊。 因為計算資料行指派給此時所發現的最內層 (在此範例中為 <`SOH`> 元素)， 因此在結果中，串連的客戶名稱會被當成 <`SOH`> 元素的屬性來加入。  
   
 ```  
@@ -168,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>範例：傳回二進位資料  
+## <a name="example-returning-binary-data"></a>範例傳回二進位資料  
  此查詢會從 `ProductPhoto` 資料表傳回產品相片。 `ThumbNailPhoto` 是 **資料表中的** varbinary(max) `ProductPhoto` 資料行。 依預設， `AUTO` 模式會傳回二進位資料的參考，此為執行查詢所在之資料庫虛擬根目錄的相對 URL。 您必須指定 `ProductPhotoID` 索引鍵屬性來識別影像。 如同此範例所說明，在擷取影像參考時，也必須在 `SELECT` 子句中指定資料表的主索引鍵，以識別具唯一性的資料列。  
   
 ```  
@@ -224,7 +224,7 @@ FOR XML AUTO;
   
  這可能會是一個問題，尤其是在針對區分大小寫的資料庫執行 dbobject 查詢時。 為了避免發生這個問題，查詢中指定之資料表或資料行名稱的大小寫，應該要與資料庫中資料表或資料行名稱的大小寫相符。  
   
-## <a name="example-understanding-the-encoding"></a>範例：了解編碼方式  
+## <a name="example-understanding-the-encoding"></a>範例了解編碼方式  
  此範例顯示結果中所出現的各種編碼方式。  
   
  建立下述資料表：  

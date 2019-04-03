@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889979"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645560"
 ---
 # <a name="query-profiling-infrastructure"></a>查詢分析基礎結構
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 包含最新修訂的輕量型分析版本，可收集所有執行的資料列計數資訊。 輕量型分析預設會在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 上啟用，而追蹤旗標 7412 不會有任何作用。
 
+現已導入新的 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)，它在大多數的查詢中，會傳回最後一個已知實際執行計畫的對等項目。 不同於使用標準分析的 *query_post_execution_showplan*，新的 *query_post_execution_plan_profile* 擴充事件會根據輕量型分析收集實際執行計畫的對等項目。 
+
+使用 *query_post_execution_plan_profile* 擴充事件的範例工作階段可依照下列範例進行設定：
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 從輕量型分析 v2 及其低額外負荷開始，尚未受限於 CPU 的任何伺服器都可**持續**執行輕量型分析，並讓資料庫專業人員可隨時點選任何執行中的執行 (例如，使用活動監視器，或直接查詢 `sys.dm_exec_query_profiles`)，並取得含執行階段統計資料的查詢計畫。
 
-如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章 [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)。 
+如需查詢分析的效能額外負荷詳細資訊，請參閱部落格文章 [Developers Choice:Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (開發人員選擇：查詢進度 - 隨時隨地)。 
+
+> [!NOTE]
+> 如果已啟用標準分析基礎結構，採用輕量型分析的擴充事件將會使用標準分析中的資訊。 例如，假設在使用 `query_post_execution_showplan` 的擴充事件工作階段執行時，啟動了另一個使用 `query_post_execution_plan_profile` 的工作階段。 第二個工作階段仍會使用標準分析中的資訊。
 
 ## <a name="see-also"></a>另請參閱  
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ WITH (MAX_MEMORY=4096 KB,
  [執行程序邏輯和實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [實際執行計畫](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice:Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (開發人員選擇：查詢進度 - 隨時隨地)
+ [Developers Choice:Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (開發人員選擇：查詢進度 - 隨時隨地)

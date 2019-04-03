@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699431"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657982"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -30,12 +30,12 @@ ms.locfileid: "51699431"
 
 此頁面會提供摘要資訊，以及能針對每個 SQL Server 元件提供詳細資料的 SQL Server 2016 新功能資訊連結。 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **立即試用 SQL Server！** 
 - 下載「免費的」[**SQL Server 2016 Developer Edition！**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
 - 下載最新版的 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
-- 有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
+- 有 Azure 帳戶嗎？ 啟動[已安裝 SQL Server 2016 的虛擬機器](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)。
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 Database Engine
 - 您現在可以在 SQL Server 安裝及設定期間，設定「多個 TempDB」資料庫檔案。
@@ -50,7 +50,7 @@ ms.locfileid: "51699431"
     - 具備針對排序的資料行存放區索引增強功能，以及 Always On 可用性群組支援。
 - 新的安全性功能：
     - **Always Encrypted：** 啟用時，只有具備加密金鑰的應用程式才能存取 SQL Server 2016 資料庫中加密的敏感性資料。 金鑰一律不會傳遞至 SQL Server。
-    - **動態資料遮罩：** 如果有在資料表定義中指定，則受遮罩的資料會對大部分的使用者隱藏，且只有具有 UNMASK 權限的使用者可查看完整資料。
+    - **動態資料遮罩：** 如果已在資料表定義中指定，則受遮罩的資料會對大部分的使用者隱藏，且只有具有 UNMASK 權限的使用者可查看完整資料。
     - **資料列層級安全性：** 資料存取可限制於資料庫引擎層級，來讓使用者只能看見與他們相關的項目。 
 
 請參閱[資料庫引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。

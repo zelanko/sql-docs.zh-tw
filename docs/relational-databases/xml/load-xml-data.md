@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca351da87aaead7fb4a7829b0cc28d16babb373
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaf25e09c5f7c8706c685875ebc7eb39bce95fcf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538375"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511035"
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52538375"
 ## <a name="bulk-loading-xml-data"></a>大量載入 XML 資料  
  您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的大量載入功能 (例如 bcp) 來將 XML 資料大量載入伺服器中。 OPENROWSET 可讓您將資料從檔案載入至 XML 資料行中。 下列範例將說明這一點。  
   
-##### <a name="example-loading-xml-from-files"></a>範例：從檔案載入 XML  
+##### <a name="example-loading-xml-from-files"></a>範例從檔案載入 XML  
  此範例顯示如何在資料表 T 中插入資料列。XML 資料行的值從檔案 C:\MyFile\xmlfile.xml 載入成 CLOB，並且在整數資料行中提供值 10。  
   
 ```  
@@ -54,7 +54,7 @@ FROM    (SELECT *
   
 -   若要使用明確的編碼，請使用 **varbinary()** 類型 (與字碼頁沒有互動) 或使用適當字碼頁的字串類型。 然後再將資料指派給 XML 資料行、變數或參數。  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>範例：明確地指定編碼方式  
+### <a name="example-explicitly-specifying-an-encoding"></a>範例明確地指定編碼方式  
  假設您將 XML 文件 vcdoc 儲存成沒有明確 XML 宣告的 **varchar(max)** 。 下列陳述式會加入具有編碼 "iso8859-1" 的 XML 宣告、串連 XML 文件、將結果轉換成 **varbinary(max)** ，位元組表示法因而保存下來，最後再轉換成 XML。 這樣可以讓 XML 處理器依據所指定的編碼 "iso8859-1" 來剖析資料，並針對字串值來產生對應的 UTF-16 表示法。  
   
 ```  

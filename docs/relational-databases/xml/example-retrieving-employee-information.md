@@ -1,5 +1,5 @@
 ---
-title: 範例：擷取員工資訊 | Microsoft Docs
+title: 範例擷取員工資訊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699082"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510325"
 ---
-# <a name="example-retrieving-employee-information"></a>範例：擷取員工資訊
+# <a name="example-retrieving-employee-information"></a>範例擷取員工資訊
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此範例會擷取每個員工的員工識別碼及員工名稱。 在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中，employeeID 可以從 Employee 資料表中的 BusinessEntityID 資料行取得。 員工名稱可以從 Person 資料表取得。 BusinessEntityID 資料行可用於聯結資料表。  
   
@@ -87,41 +87,29 @@ FOR XML EXPLICIT;
   
  以下是部份結果：  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  第一個 `SELECT` 會指定產生之資料列集中的資料行名稱。 這些名稱會形成兩個資料行群組。 資料行名稱中有 `Tag` 值 `1` 的群組，可將 `Employee` 識別為元素，並將 `EmpID` 識別為屬性。 其他資料行群組在資料行中有 `Tag` 值 `2`，而且可將 <`Name`> 識別為元素，並將 `FName` 及 `LName` 識別為屬性。  
   
  下表會顯示此查詢產生的部分資料列集：  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+標記 | 父系 | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Sánchez 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Duffy 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Roberto | Tamburello 
+... | ... | ... | ... | ...
   
  以下是如何處理通用資料表的資料列，以產生結果 XML 樹狀結構：  
   

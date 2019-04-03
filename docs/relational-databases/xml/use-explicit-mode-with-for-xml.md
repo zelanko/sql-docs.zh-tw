@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23c2911c656087fe3d4c0f5a81ea037ff02d6706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36a775666da4905d4ccc9f11083470872b714804
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650326"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511595"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>搭配 FOR XML 使用 EXPLICIT 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,9 +157,9 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [範例：使用 EXPLICIT 模式建構同層級](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [範例：指定 ID 和 IDREF 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [範例：指定識別碼和 IDREF 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [範例：指定 ID 和 IDREFS 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [範例：指定識別碼和 IDREFS 指示詞](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
 -   [範例：指定 HIDE 指示詞](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   

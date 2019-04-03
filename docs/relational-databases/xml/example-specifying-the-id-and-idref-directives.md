@@ -1,5 +1,5 @@
 ---
-title: 範例：指定 ID 和 IDREF 指示詞 | Microsoft Docs
+title: 範例指定 ID 和 IDREF 指示詞 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20f5301d07d054800775b6cf624e30447950867d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b69385e2481d772da2777dfffde4907c8d18d3b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726086"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511165"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>範例：指定 ID 和 IDREF 指示詞
+# <a name="example-specifying-the-id-and-idref-directives"></a>範例指定 ID 和 IDREF 指示詞
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   此範例幾乎與＜ [指定 ELEMENTXSINIL 指示詞](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) ＞範例相同。 唯一的差異在於查詢會指定 **ID** 和 **IDREF** 指示詞。 這些指示詞會覆寫 <`OrderHeader`> 和 <`OrderDetail`> 元素中的 **SalesPersonID** 屬性類型。 這會形成內部文件連結。 您需要結構描述，才能查看被覆寫的類型。 因此，查詢會在 FOR XML 子句中指定 **XMLDATA** 選項，以擷取結構描述。  
   

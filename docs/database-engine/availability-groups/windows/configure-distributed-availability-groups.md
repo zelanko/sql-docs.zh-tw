@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215364"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566557"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>設定分散式 Always On 可用性群組  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-若要建立分散式的可用性群組，您必須在每個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組與接聽程式。 隨後您再將這些可用性群組合併成分散式的可用性群組。 下列步驟提供 TRANSACT-SQL 中的基本範例。 本範例未涵蓋關於建立可用性群組與接聽程式的所有詳細資料，而僅著重探討與其相關的重要需求。 
+若要建立分散式可用性群組，您必須建立兩個各有其專用接聽程式的可用性群組。 隨後您再將這些可用性群組合併成分散式的可用性群組。 下列步驟提供 TRANSACT-SQL 中的基本範例。 本範例未涵蓋關於建立可用性群組與接聽程式的所有詳細資料，而僅著重探討與其相關的重要需求。
 
-如需分散式可用性群組的技術概觀，請參閱[分散式可用性群組](distributed-availability-groups.md)。   
+如需分散式可用性群組的技術概觀，請參閱[分散式可用性群組](distributed-availability-groups.md)。
 
 ## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>設定端點接聽程式來接聽所有 IP 位址
 
-請確定端點可以在分散式可用性群組的不同可用性群組之間進行通訊。 如果一個可用性群組設定為端點上的特定網路，分散式的可用性群組不會正常運作。 在分散式可用性群組中裝載複本的每部伺服器上，將接聽程式設定為 `LISTENER_IP = ALL`。 
+請確定端點可以在分散式可用性群組的不同可用性群組之間進行通訊。 如果一個可用性群組設定為端點上的特定網路，分散式的可用性群組不會正常運作。 在裝載分散式可用性群組中某個複本的每部伺服器上，請設定用來接聽所有 IP 位址的接聽程式 (`LISTENER_IP = ALL`)。
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>建立接聽所有 IP 位址的接聽程式
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>建立第一個可用性群組
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一個叢集上建立主要可用性群組  
-在第一個 WSFC 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」。 Server1 在此範例中是全域主要。        
+在第一個 Windows Server 容錯移轉叢集 (WSFC) 上建立可用性群組。   在此範例中，會針對資料庫 `ag1` 將可用性群組命名為 `db1`。 主要可用性群組的主要複本在分散式可用性群組中稱為「全域主要」。 Server1 在此範例中是全域主要。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -205,15 +205,23 @@ GO
 ```  
 
 ## <a name="failover"></a> 聯結第二個可用性群組次要複本上的資料庫
-在第二個可用性群組次要複本上的資料庫處於還原狀態之後，您必須手動將它聯結到可用性群組。
+在第二個可用性群組的次要複本上的資料庫處於還原中狀態後，您必須手動將它聯結至可用性群組。
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> 容錯移轉至次要可用性群組  
-目前僅支援手動容錯移轉。 下列 Transact-SQL 陳述式會容錯移轉名為 `distributedag` 的分散式可用性群組：  
 
+目前僅支援手動容錯移轉。 若要手動容錯移轉分散式可用性群組：
+
+1. 若要確保不會遺失任何資料，請將分散式可用性群組設為同步認可。
+1. 等候分散式可用性群組完成同步處理。
+1. 在全域主要複本上，將分散式可用性群組角色設為 `SECONDARY`。
+1. 測試容錯移轉整備。
+1. 容錯移轉主要可用性群組。
+
+下列 Transact-SQL 範例說明對名為 `distributedag` 的分散式可用性群組進行容錯移轉的詳細步驟：
 
 1. 透過同時在全域主要與轉寄站上執行下列程式碼，以將分散式可用性群組設定為同步認可。   
     
@@ -242,8 +250,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
       ```  
    >[!NOTE]
-   >與一般可用性群組相似，分散式可用性群組中兩個可用性群組複本的同步處理狀態會取決於這兩個複本的可用性模式。 例如，若要讓同步認可發生，目前的主要可用性群組與次要可用性群組都必須設定成同步認可可用性模式。  
-
+   >在分散式可用性群組中，兩個可用性群組之間的同步處理狀態會取決於這兩個複本的可用性模式。 使用同步認可模式時，目前的主要可用性群組與目前的次要可用性群組都必須具有 `SYNCHRONOUS_COMMIT` 可用性模式。 因此，您必須同時對全域主要複本和轉寄站執行上述指令碼。
 
 1. 等到分散式可用性群組的狀態變更為 `SYNCHRONIZED`。 在裝載主要可用性群組之主要複本的全域主要上，執行下列查詢。 
     

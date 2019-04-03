@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974387"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493777"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -43,11 +43,12 @@ ms.locfileid: "57974387"
 - 在資料庫層級啟用或停用識別快取。
 - 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。
 - 啟用或停用原生編譯 T-SQL 模組的執行統計資料收集。
-- 為支援 ONLINE= syntax 的 DDL 陳述式啟用或停用預設為連線的選項。
-- 為支援 RESUMABLE= syntax 的 DDL 陳述式啟用或停用預設可繼續的選項。
-- 啟用或停用全域暫存資料表的自動卸除功能。 
+- 為支援 `ONLINE =` 語法的 DDL 陳述式啟用或停用預設為線上的選項。
+- 為支援 `RESUMABLE =` 語法的 DDL 陳述式啟用或停用預設為可繼續的選項。
+- 啟用或停用全域暫存資料表的自動卸除功能。
 - 啟用或停用[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能。
 - 啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。
+- 啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。
 
 ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -83,6 +84,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -185,11 +187,11 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (功能目前為公開預覽版)
 
-可讓您在資料庫範圍啟用或停用 T-SQL 純量 UDF 內嵌，同時仍保有 150 (含) 以上的資料庫相容性層級。 T-SQL 純量 UDF 內嵌是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的其中一項功能。
+可讓您在資料庫範圍啟用或停用 T-SQL 純量 UDF 內嵌，同時仍保有 150 (含) 以上的資料庫相容性層級。 T-SQL 純量 UDF 內嵌是[智慧查詢處理](../../relational-databases/performance/intelligent-query-processing.md)功能系列的一部分。
 
-> [!NOTE] 
+> [!NOTE]
 > 針對資料庫相容性層級 140 (含) 以下，這個資料庫範圍設定沒有任何作用。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -292,7 +294,21 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 可讓您啟用或停用[輕量型查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。 輕量型查詢分析基礎結構 (LWP) 提供比標準分析機制更具效率的查詢效能資料，預設會予以啟用。
 
-## <a name="Permissions"></a> Permissions
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+
+**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+可讓您啟用或停用新的 `String or binary data would be truncated` 錯誤訊息。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 針對此案例引進了更加特定的新錯誤訊息 (2628)：  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+在資料庫相容性層級 150 下設為 ON 時，截斷錯誤會引發新的錯誤訊息 2628 以提供更多內容，並簡化疑難排解程序。
+
+在資料庫相容性層級 150 下設為 OFF 時，截斷錯誤會引發先前的錯誤訊息 8152。
+
+在資料庫相容性層級 140 或更低層級下，錯誤訊息 2628 會保有必須啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 的選擇加入錯誤訊息，且此資料庫範圍的組態沒有任何作用。
+
+## <a name="Permissions"></a> 權限
 
 資料庫上需要 `ALTER ANY DATABASE SCOPE CONFIGURATION`。 可由在資料庫上具有 CONTROL 權限的使用者來授與此權限。
 

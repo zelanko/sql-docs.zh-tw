@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9252d2161fcca10b3ccd686d7f33de525cfe239
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: be1c2f24083d86ee03156617acaa8c18b903fed0
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670460"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510715"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -155,25 +155,25 @@ ms.locfileid: "51670460"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 文件 MyDataIsle 的用戶端處理  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales：** 1500000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue：** 150000  
   
--   **BankName:** Primary International  
+-   **BankName：** Primary International  
   
--   **BusinessType:** OS  
+-   **BusinessType：** OS  
   
--   **YearOpened:** 1974  
+-   **YearOpened：** 1974  
   
--   **Specialty:** Road  
+-   **Specialty：** Road  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet：** 38000  
   
--   **Brands:** 3  
+-   **Brands：** 3  
   
--   **Internet:** DSL  
+-   **Internet：** DSL  
   
--   **NumberEmployees:** 40  
+-   **NumberEmployees：** 40  
   
  VBScript 訊息方塊會顯示下列由 FOR XML 查詢結果所傳回之原始而未篩選過的 XML 資料島內容。  
   

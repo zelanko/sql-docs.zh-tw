@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動微調、加密、查詢存放區
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fabf89ea24461953089a3f7eb928878e600f3d6
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356521"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494430"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -149,7 +149,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -455,11 +455,13 @@ OFF 不維護相互關聯統計資料。
 
 控制資料庫加密狀態。
 
-ENCRYPTION {ON | OFF} 設定資料庫要加密 (ON) 或是不要加密 (OFF)。 如需資料庫加密的詳細資訊，請參閱[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md) 和 [Azure SQL Database 的透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
+ENCRYPTION {ON | OFF | SUSPEND | RESUME} 會設定資料庫要加密 (ON) 或是不要加密 (OFF)。 如需資料庫加密的詳細資訊，請參閱[透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption.md) 和 [Azure SQL Database 的透明資料加密](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)。
+
+在 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 和更新版本中，SUSPEND 和 RESUME 選項可在 TDE 已啟用或停用之後，或是加密金鑰已變更之後，用來暫停和繼續加密掃描。
 
 在資料庫層級啟用加密時，所有的檔案群組都會加密。 任何新的檔案群組都會繼承加密的屬性。 如果資料庫內有任何檔案群組設定為 **READ ONLY**，則資料庫加密作業將會失敗。
 
-您可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視來查看資料庫的加密狀態。
+您可以使用 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動態管理檢視來查看資料庫的加密狀態，以及加密掃描的狀態。
 
 **\<db_state_option> ::=**
 

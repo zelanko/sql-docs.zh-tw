@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 129aafce2e270f85506d056d5d083d34176aa8a0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 86609c0cb3e66397c4c8c8f3a09fba64b14089e4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018014"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492820"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "57018014"
 刪除現有的套件程式庫。 支援的外部執行階段 (例如 R、Python 或 Java) 會使用套件程式庫。
 
 > [!NOTE]
-> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 2.3 中，支援 R、Python 和 Windows 平台上的 Java。 預計在稍後的版本中將會支援 Linux。
+> 在 SQL Server 2017 中，支援 R 語言和 Windows 平台。 在 SQL Server 2019 CTP 2.4 中，支援 Windows 和 Linux 平台上的 R、Python 和 Java。 
 
 ## <a name="syntax"></a>語法
 
@@ -53,7 +53,7 @@ DROP EXTERNAL LIBRARY library_name
 
 資料庫擁有者可以刪除其他使用者建立的程式庫。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 若要刪除程式庫，需要 ALTER ANY EXTERNAL LIBRARY 權限。 根據預設，任何資料庫擁有者或物件的擁有者，也可刪除外部程式庫。
 
