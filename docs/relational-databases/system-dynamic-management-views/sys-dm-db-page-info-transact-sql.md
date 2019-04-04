@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_page_info (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,39 +20,34 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732075"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899714"
 ---
-# <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 在資料庫中傳回頁面的相關資訊。  此函數會傳回一個資料列包含標頭資訊 頁面上，從包括`object_id`， `index_id`，和`partition_id`。  在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。
 
-## <a name="syntax"></a>語法  
-  
+## <a name="syntax"></a>語法   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## <a name="arguments"></a>引數  
- *DatabaseId* |NULL |預設值  
-
- 資料庫的識別碼。 *DatabaseId*已**smallint**。 有效的輸入是資料庫的識別碼。 預設值是 NULL，但是傳送 NULL 值，這個參數會導致錯誤。
+*DatabaseId* |NULL |預設值     
+資料庫的識別碼。 *DatabaseId*已**smallint**。 有效的輸入是資料庫的識別碼。 預設值是 NULL，但是傳送 NULL 值，這個參數會導致錯誤。
  
-*FileId* |NULL |預設值
-
+*FileId* |NULL |預設值   
 檔案的識別碼。 *FileId*已**int**。有效的輸入是所指定的資料庫中的檔案的 ID 編號*DatabaseId*。 預設值是 NULL，但是傳送 NULL 值，這個參數會導致錯誤。
 
-*採用*|NULL |預設值
-
+*採用*|NULL |預設值   
 是頁面的識別碼。  *PageId*已**int**。有效的輸入是所指定的檔案中的頁面識別碼*FileId*。 預設值是 NULL，但是傳送 NULL 值，這個參數會導致錯誤。
 
-*模式*|NULL |預設值
-
+*模式*|NULL |預設值   
 判斷輸出中的函式的詳細程度。 '限制' 會傳回 NULL 值的所有描述資料行中，'詳細' 將會填入描述資料行。  預設值是 '限制'。
 
 ## <a name="table-returned"></a>傳回的資料表  
@@ -63,11 +58,11 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |file_id |ssNoversion |檔案識別碼 |
 |page_id |ssNoversion |頁面識別碼 |
 |page_type |ssNoversion |頁面類型 |
-|page_type_desc |Nvarchar(64) |頁面類型的描述 |
-|page_flag_bits |Nvarchar(64) |頁面標頭中的旗標位元 |
+|page_type_desc |nvarchar(64) |頁面類型的描述 |
+|page_flag_bits |nvarchar(64) |頁面標頭中的旗標位元 |
 |page_flag_bits_desc |nvarchar(256) |頁面標頭中的旗標位元描述 |
-|page_type_flag_bits |Nvarchar(64) |頁面標頭中的型別旗標位元 |
-|page_type_flag_bits_desc |Nvarchar(64) |頁面標頭中的型別旗標位元描述 |
+|page_type_flag_bits |nvarchar(64) |頁面標頭中的型別旗標位元 |
+|page_type_flag_bits_desc |nvarchar(64) |頁面標頭中的型別旗標位元描述 |
 |object_id |ssNoversion |擁有分頁的物件識別碼 |
 |index_id |ssNoversion |索引 (堆積資料頁的 0) 的識別碼 |
 |partition_id |BIGINT |資料分割識別碼 |
@@ -81,35 +76,35 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |pfs_file_id |SMALLINT |對應的 PFS 頁面檔案識別碼 |
 |pfs_page_id |ssNoversion |對應的 PFS 頁面的頁面識別碼 |
 |pfs_alloc_percent |ssNoversion |PFS 位元組所指定的配置百分比 |
-|pfs_status |Nvarchar(64) |PFS 位元組 |
-|pfs_status_desc |Nvarchar(64) |PFS 位元組的描述 |
+|pfs_status |nvarchar(64) |PFS 位元組 |
+|pfs_status_desc |nvarchar(64) |PFS 位元組的描述 |
 |gam_file_id |SMALLINT |對應的 GAM 頁面檔案識別碼 |
 |gam_page_id |ssNoversion |對應的 GAM 頁面的頁面識別碼 |
 |gam_status |bit |位元來指示是否配置在 GAM |
-|gam_status_desc |Nvarchar(64) |GAM 葒鷑糔磢的描述 |
+|gam_status_desc |nvarchar(64) |GAM 葒鷑糔磢的描述 |
 |sgam_file_id |SMALLINT |對應的 SGAM 頁面的檔案識別碼 |
 |sgam_page_id |ssNoversion |對應的 SGAM 頁面的頁面識別碼 |
 |sgam_status |bit |位元來指示是否配置 SGAM 中 |
-|sgam_status_desc |Nvarchar(64) |SGAM 葒鷑糔磢的描述 |
+|sgam_status_desc |nvarchar(64) |SGAM 葒鷑糔磢的描述 |
 |diff_map_file_id |SMALLINT |對應的差異點陣圖頁面檔案識別碼 |
 |diff_map_page_id |ssNoversion |對應的差異點陣圖頁面的頁面識別碼 |
 |diff_status |bit |表示如果差異狀態已變更位元 |
-|diff_status_desc |Nvarchar(64) |Diff 葒鷑糔磢的描述 |
+|diff_status_desc |nvarchar(64) |Diff 葒鷑糔磢的描述 |
 |ml_file_id |SMALLINT |對應的最低限度記錄的點陣圖頁面檔案識別碼 |
 |ml_page_id |ssNoversion |對應的最低限度記錄的點陣圖頁面的頁面識別碼 |
 |ml_status |bit |指出頁面是否會進行最低限度記錄的位元 |
-|ml_status_desc |Nvarchar(64) |位元的最低限度記錄狀態的描述 |
+|ml_status_desc |nvarchar(64) |位元的最低限度記錄狀態的描述 |
 |free_bytes |SMALLINT |在頁面上的可用位元組數 |
 |free_data_offset |ssNoversion |在資料區域的結尾的可用空間位移 |
 |reserved_bytes |SMALLINT |所有交易所保留的可用位元組數目 (如果堆積) <br> 準刪除列 （如果索引分葉） 數 |
 |reserved_xdes_id |SMALLINT |M_reservedCnt 的 m_xdesID 所提供的空間 <br> 偵錯之用 |
-|xdes_id |Nvarchar(64) |M_reserved 所提供的最新交易 <br> 偵錯之用 |
+|xdes_id |nvarchar(64) |M_reserved 所提供的最新交易 <br> 偵錯之用 |
 |prev_page_file_id |SMALLINT |先前的頁面檔案識別碼 |
 |prev_page_page_id |ssNoversion |前一個頁面的頁面識別碼 |
 |next_page_file_id |SMALLINT |下一個頁面檔案識別碼 |
 |next_page_page_id |ssNoversion |下一步 頁面的頁面識別碼 |
 |min_len |SMALLINT |固定的大小的資料列的長度 |
-|lsn |Nvarchar(64) |記錄序號 / 時間戳記 |
+|lsn |nvarchar(64) |記錄序號 / 時間戳記 |
 |header_version |ssNoversion |頁面標頭版本 |
 
 ## <a name="remarks"></a>備註
@@ -149,6 +144,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## <a name="see-also"></a>另請參閱  
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 
