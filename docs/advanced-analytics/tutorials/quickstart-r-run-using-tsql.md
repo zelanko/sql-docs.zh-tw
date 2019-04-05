@@ -3,17 +3,17 @@ title: "\"Hello World\"基本 R 程式碼執行 T-SQL-SQL Server Machine Learnin
 description: SQL Server 中的 R 指令碼的快速入門。 了解呼叫 R 指令碼在 hello world 練習使用 sp_execute_external_script 的系統預存程序的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046812"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042273"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門：SQL Server 中的"Hello world"R 指令碼 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,8 @@ ms.locfileid: "54046812"
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. 假設您有正確的正確結果所設定的所有項目會計算，以及 R`print`函式會傳回結果**訊息**視窗。

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e84fc2a6032e5886c4d82d630dc36a5bde338ed1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044504"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042357"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>操作容錯移轉叢集執行個體 - Linux 上的 SQL Server
 
@@ -31,8 +31,8 @@ Fci 的容錯移轉是類似於 Windows Server 容錯移轉叢集 (WSFC)。 如�
 
 容錯移轉的方式需視 Linux 散發套件而定。 遵循您 linux 散發套件的指示。
 
-- [RHEL 或 Ubuntu](#rhelFailover)
-- [SLES](#slesFailover)
+- [RHEL 或 Ubuntu](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
 ## <a name = "#rhelFailover"></a> 手動容錯移轉 （RHEL 或 Ubuntu）
 

@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518096"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042427"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>將記錄傳送升級至 SQL Server 2014 (Transact-SQL)
   當您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，可保留記錄傳送組態。 本主題描述升級記錄傳送組態的替代案例和最佳做法。  
@@ -79,7 +79,7 @@ ms.locfileid: "52518096"
   
  升級伺服器之後，資料庫就會自動回到線上，以便進行升級。 在升級資料庫之後，記錄傳送作業就會繼續。  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>案例 2:升級主要伺服器執行個體具有容錯移轉  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>案例 2：升級主要伺服器執行個體具有容錯移轉  
  此案例會讓可用性提升到最高，並讓停機時間減至最少。 此案例使用一種受到控制的方式來容錯移轉至次要伺服器執行個體，在升級原始主要伺服器執行個體期間維持資料庫的可用性。 停機時間限制為容錯移轉所需的相對簡短時間，而非升級主要伺服器執行個體所需的時間。  
   
  在使用容錯移轉來升級主要伺服器執行個體時，會牽涉到三個一般程序：執行受到控制的方式來容錯移轉到次要伺服器、將原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，並在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 主要伺服器執行個體上設定記錄傳送。 本章節會描述這些程序。  
@@ -130,7 +130,7 @@ ms.locfileid: "52518096"
   
     5.  請注意，當資料庫在線上時，次要資料庫的交易記錄並不會填滿。 若要避免交易記錄被填滿，您可能需要加以備份。 如果是這種情況，我們建議您將它備份到共用位置 ( *「備份共用」*(Backup Share))，讓備份可在其他伺服器執行個體上用來還原。  
   
-#####  <a name="Procedure2 "></a> 程序 2:原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> 程序 2:原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  在您將原始主要伺服器執行個體升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之後，資料庫仍然會在離線狀態而且採用格式。  
   
 #####  <a name="Procedure3"></a> 程序 3:設定記錄傳送 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518096"
 > [!IMPORTANT]  
 >  在升級主要伺服器之前，請務必先升級所有次要伺服器執行個體。  
   
- **若要升級使用容錯移轉，然後再切換回原始主要伺服器**  
+ **若要使用容錯移轉升級然後切換回原始的主要伺服器**  
   
 1.  升級所有必要的伺服器執行個體 (伺服器 B 和 C)。  
   
@@ -224,6 +224,4 @@ ms.locfileid: "52518096"
 ## <a name="see-also"></a>另請參閱  
  [交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [記錄傳送資料表與預存程序](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
