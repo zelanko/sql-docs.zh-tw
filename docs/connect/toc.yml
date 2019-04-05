@@ -2667,7 +2667,7 @@ items:
       - name: 使用整合式驗證
         href: ../connect/odbc/linux-mac/using-integrated-authentication.md
     - name: 版本資訊
-      href: ../connect/odbc/linux-mac/release-notes.md
+      href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
     - name: 已知問題
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: ODBC Linux 和 macOS 的常見問題集 (FAQ)
@@ -7649,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 詞彙
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: f00c4725c76ec2f3ee46d2cfa0333d6fa913faeb
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.openlocfilehash: 64df9e9029736ab2c777f493146ec5005567e2c5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788135"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042467"
