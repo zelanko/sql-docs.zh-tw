@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055621"
+---
 本文提供 SQL Server 中有關業務持續性解決方案之高可用性和災害復原的概觀。 
 
 大眾部署 SQL Server 時都必須考量的一項工作，是確定所有任務關鍵性 SQL Server 執行個體及其內部資料庫，在企業和使用者需要它們時都能夠使用，無論是上班時間或全天候。 目標是維持企業運轉不中斷或將影響降至最低。 這個概念就是所謂的企業持續營運。
@@ -128,9 +136,7 @@ FCI 未遺失任何資料，但基礎的共用儲存體是單一失敗點，因�
 * FCI 在 Linux 中使用的通用名稱是在 DNS 中定義，應該與為 FCI 建立的資源同名。
 
 #### <a name="log-shipping"></a>記錄傳送
-如果復原點和復原時間目標更具彈性，或者資料庫不被視為高任務關鍵性，則記錄傳送是 SQL Server 中另一個經過驗證的可用性功能。 根據 SQL Server 原生備份，記錄傳送程序會自動產生交易記錄備份，將其複製到一或多個稱為暖待命的執行個體，並自動將交易記錄備份套用至該待命。 記錄傳送使用 SQL Server Agent 作業，自動化備份、複製和套用交易記錄備份的程序。 
-> [!IMPORTANT] 
-> 在 Linux 上，SQL Server Agent 作業不屬於 SQL Server 安裝本身。 可是從封裝 mssql-server-Agent 作業中取得，後者也必須安裝才能使用記錄傳送。
+如果復原點和復原時間目標更具彈性，或者資料庫不被視為高任務關鍵性，則記錄傳送是 SQL Server 中另一個經過驗證的可用性功能。 根據 SQL Server 原生備份，記錄傳送程序會自動產生交易記錄備份，將其複製到一或多個稱為暖待命的執行個體，並自動將交易記錄備份套用至該待命。 記錄傳送使用 SQL Server Agent 作業，自動化備份、複製和套用交易記錄備份的程序。
 
 ![記錄傳送](media/sql-server-ha-story/image5.png)
  

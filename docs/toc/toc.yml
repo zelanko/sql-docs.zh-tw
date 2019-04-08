@@ -8663,9 +8663,9 @@ items:
     - name: 下載 SSMS
       href: ../ssms/download-sql-server-management-studio-ssms.md
       items:
-      - name: SSMS 變更記錄和先前的版本
-        href: ../ssms/sql-server-management-studio-changelog-ssms.md
-      - name: 版本資訊
+      - name: SSMS 版本資訊和先前版本
+        href: ../ssms/release-notes-ssms.md
+      - name: 下載相關的版本資訊
         href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
       - name: 安裝非英文版 SSMS
         href: ../ssms/install-other-languages.md
@@ -17273,9 +17273,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 處理 XQuery 中的命名空間
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 7d3621712c6714eaeb2dbdb6a339088ac2fc7179
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872348"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042487"
