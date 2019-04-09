@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241956"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>判斷雜湊索引的正確值區計數
   您必須在建立記憶體最佳化資料表時，指定 `BUCKET_COUNT` 參數的值。 本主題將針對判斷適合 `BUCKET_COUNT` 參數的值提出建議。 如果您無法判斷正確的值區計數，請改用非叢集索引。  不正確的 `BUCKET_COUNT` 值 (尤其是過低的值) 可能會對工作負載的效能以及資料庫的復原時間造成嚴重影響。 最好是高估值區計數。  
@@ -26,7 +26,7 @@ ms.locfileid: "58536690"
   
  針對記憶體最佳化的資料表上的每個雜湊索引配置一個雜湊表。 所指定的索引配置的雜湊表的大小`BUCKET_COUNT`中的參數[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). 值區計數會於內部四捨五入進位至下一個二的乘冪。 例如，指定值區計數 300,000 將產生實際值區計數 524,288。  
   
- 如需有關貯體計數的文章和視訊的連結，請參閱 [如何判斷雜湊索引的正確貯體計數 (記憶體內 OLTP)](https://go.microsoft.com/fwlink/p/?LinkId=525853)。  
+ 如需有關貯體計數的文章和視訊的連結，請參閱 [如何判斷雜湊索引的正確貯體計數 (記憶體內 OLTP)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)。  
   
 ## <a name="recommendations"></a>建議  
  在大部分情況下，值區計數應該介於索引鍵中相異值數目的 1 到 2 倍之間。 如果索引鍵包含許多重複的值，平均每個索引鍵值都有超過 10 個資料列，則改用非叢集索引  
