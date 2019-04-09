@@ -19,15 +19,15 @@ ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 878b3a349f033464da07104d55e472b44324e941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241826"
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統所提供的語言和定序。 `Language` 和 `Collation` 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統所提供的語言和定序。 `Language` 和`Collation`屬性會在安裝期間，一開始設定執行個體層級，但之後可進行變更的物件階層架構的不同層級。  
   
  在多維度模型 （僅限），您可以在資料庫或 cube 上設定這些屬性-您也可以設定它們在您建立用於 cube 內物件的翻譯。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53372460"
   
  此外，您可以設定`Language`，單獨使用時，在**翻譯**物件。  
   
- 您將翻譯加入 Cube 或維度時，會建立翻譯物件。 `Language` 是翻譯定義的一部分。 相反地，`Collation` 會在 Cube 或更高層級設定，並供所有翻譯共用。 這在含有翻譯之 Cube 的 XMLA 中會很明顯，其中您會看到多個語言屬性 (每個翻譯一個屬性)，但只會看到一個定序。 請注意，維度屬性翻譯是例外；在這種情況下，您可以覆寫 Cube 定序，來指定符合來源資料行的屬性定序 (資料庫引擎支援在個別資料行上設定定序，並且通常可設定個別翻譯，從不同的來源資料行取得成員資料)。 否則，對於其他所有翻譯而言，會使用 `Language` 本身，而不會使用 `Collation`。 如需詳細資訊，請參閱[翻譯 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
+ 您將翻譯加入 Cube 或維度時，會建立翻譯物件。 `Language` 是翻譯定義的一部分。 `Collation`相反地，是設定在 cube 或更高版本，並供所有翻譯共用。 這在含有翻譯之 Cube 的 XMLA 中會很明顯，其中您會看到多個語言屬性 (每個翻譯一個屬性)，但只會看到一個定序。 請注意，維度屬性翻譯是例外；在這種情況下，您可以覆寫 Cube 定序，來指定符合來源資料行的屬性定序 (資料庫引擎支援在個別資料行上設定定序，並且通常可設定個別翻譯，從不同的來源資料行取得成員資料)。 否則，對於其他所有翻譯而言，會使用 `Language` 本身，而不會使用 `Collation`。 如需詳細資訊，請參閱[翻譯 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
   
 ##  <a name="bkmk_lang"></a> Analysis Services 中的語言支援  
  `Language` 屬性會設定物件的地區設定，可用於處理和查詢期間，以及搭配 `Captions` 和 `Translations` 支援多語系案例。 地區設定是以語言識別碼 (例如英文) 和領域 (例如美國或澳洲) 為基礎，並進一步精簡日期和時間表示法。  
@@ -94,7 +94,7 @@ ms.locfileid: "53372460"
   
 -   0x0416 或 1046，代表 [葡萄牙文 (巴西)] 。  
   
- 若要檢視較長的清單，請參閱 [Microsoft 指派的地區設定識別碼](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 如需更多背景，請參閱 [編碼方式和字碼頁](https://msdn.microsoft.com/goglobal/bb688114.aspx)。  
+ 若要檢視較長的清單，請參閱 [Microsoft 指派的地區設定識別碼](https://msdn.microsoft.com/goglobal/bb964664.aspx)。 如需詳細背景，請參閱 <<c0> [ 字碼頁](/windows/desktop/Intl/code-pages)。  
   
 > [!NOTE]  
 >  `Language` 屬性不會決定用於傳回系統訊息的語言，也不會決定要在使用者介面中顯示的字串。 錯誤、警告和訊息會當地語系化成 Office 和 Office 365 中支援的所有語言，並且會在用戶端連接指定其中一個支援的地區設定時自動使用。  

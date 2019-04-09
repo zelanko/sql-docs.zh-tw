@@ -15,12 +15,12 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214659"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860439"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>將資料庫新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "53214659"
   
 -   **開始之前：**  
   
-     [必要條件和限制](#Prerequisites)    
-     [Permissions](#Permissions)    
+     [必要條件和限制](#prerequisites-and-restrictions)    
+     [權限](#Permissions)    
 -   **若要使用下列項目，將資料庫加入至可用性群組：**  
   
      [SQL Server Management Studio](#SSMSProcedure)    
@@ -45,7 +45,7 @@ ms.locfileid: "53214659"
   
 ##  <a name="Security"></a> 安全性  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -142,7 +142,5 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [使用 Always On 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
-  

@@ -12,12 +12,12 @@ ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 906bc6f3426913adfbff94b8f8b76d641c4a04a4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1c24de94f948282772f6f08d8a4a6c62e1c952ad
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241207"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>連接到伺服器 (登入頁面) Database Engine
   使用此索引標籤來檢視或指定連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 時的選項。  
@@ -27,21 +27,21 @@ ms.locfileid: "53362220"
   
 ## <a name="options"></a>選項。  
  **伺服器類型**  
- 從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型： [!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../../includes/ssde-md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
+ 從 [物件總管] 註冊伺服器時，選取要連接的伺服器類型：[!INCLUDE[ssDE](../../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 對話方塊的其他部分僅會顯示適用於所選取伺服器類型的選項。 從 [已註冊的伺服器] 註冊伺服器時，[伺服器類型] 方塊是唯讀的，且會與 [已註冊的伺服器] 元件中所顯示的伺服器類型相符。 若要註冊不同類型的伺服器，請先從 [已註冊的伺服器] 工具列中選取 [[!INCLUDE[ssDE](../../includes/ssde-md.md)]]、[Analysis Services]、[Reporting Services] 或 [Integration Services]，再開始註冊新的伺服器。  
   
  當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
- 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](/azure/sql-database/sql-database-technical-overview)。  
   
  **伺服器名稱**  
  選取要連接的伺服器執行個體。 預設會顯示上次連接的伺服器執行個體。  
   
  **驗證**  
- 當連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體時，有兩種可用的驗證模式。  
+ 當連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體時，有兩種可用的驗證模式。  
   
  當您透過 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
- 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](/azure/sql-database/sql-database-technical-overview)。  
   
  **Windows 驗證模式 (Windows 驗證)**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證模式允許使用者透過 Windows 使用者帳戶連接。  
@@ -52,19 +52,19 @@ ms.locfileid: "53362220"
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。  
   
- **使用者名稱**  
+ **[使用者名稱]**  
  輸入要用來連接的使用者名稱。 只有在您選取使用 Windows 驗證連接時，才能使用此選項。  
   
  **登入**  
  輸入要用來連接的登入。 這個選項只有在您選取了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接時才可以使用。  
   
- **密碼**  
+ **[密碼]**  
  輸入登入的密碼。 只有在您選取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接時，才能編輯此選項。  
   
  **記住密碼**  
  按一下即可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 儲存您輸入的密碼。 只有在您選取使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接時，才能顯示此選項。  
   
- **連接**  
+ **連線**  
  按一下即可連接到上列所選的伺服器。  
   
  **選項。**  

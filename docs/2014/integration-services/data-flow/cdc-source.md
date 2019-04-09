@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241786"
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
@@ -45,11 +45,11 @@ ms.locfileid: "58382724"
 ## <a name="error-handling"></a>錯誤處理  
  CDC 來源有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**:這個值一律是-1。  
+-   **錯誤碼**：此值一律為 -1。  
   
--   **錯誤資料行**:造成錯誤 （用於轉換錯誤） 的來源資料行。  
+-   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   
--   **錯誤資料列資料行**:造成錯誤的記錄資料。  
+-   **錯誤資料列資料行**：造成錯誤的記錄資料。  
   
  根據錯誤行為設定，CDC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 [CDC 來源編輯器 &#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)。  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server 錯誤訊息  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可能會傳回下列訊息：  
   
- **提供給程序或函式 cdc.fn_cdc_get_net_changes_\<..>** 的引數數量不足。  
+ **提供給程序或函數 cdc.fn_cdc_get_net_changes_ 的引數數量不足\<...>。**  
   
  此錯誤並不表示缺少引數。 它表示 CDC 狀態變數中的開始或結束 LSN 值無效。  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>相關內容  
   
--   mattmasson.com 上的部落格文章：[Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541)。  
+-   mattmasson.com 上的部落格文章：[Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)。  
   
   

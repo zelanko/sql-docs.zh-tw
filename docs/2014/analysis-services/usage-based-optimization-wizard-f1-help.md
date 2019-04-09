@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240396"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基於使用方式的最佳化精靈 F1 說明
   基於使用方式的最佳化精靈，在輸出方面類似於彙總設計精靈，並可用於設計資料分割的彙總。 然而，基於使用方式的最佳化精靈會依據查詢的特定使用模式來設計彙總，而這些使用模式是記錄於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的查詢記錄檔中。 彙總允許 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接從 Cube 儲存區擷取預先計算的總計，而不必針對每個查詢從基礎資料來源重新計算資料，藉此改善效能。  
@@ -44,28 +44,28 @@ ms.locfileid: "53365260"
  通常這兩種精靈都會搭配使用，以改善部署之初以及經過一段時間之後的效能。 在最初部署資料分割 (或包含資料分割的 Cube 或量值群組) 時，應先使用彙總設計精靈，才能提供整體效能上的益處。 在查詢記錄檔中記錄了商務使用者針對資料分割的查詢一段時間之後，您就可以使用基於使用方式的最佳化精靈，進一步改善彙總設計，將重點放在滿足商務使用者對於效能及查詢的需求上。  
   
 > [!NOTE]  
->  如需設定查詢記錄的相關資訊，請參閱 [設定 Analysis Services 查詢記錄](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx)。  
+>  如需設定查詢記錄的相關資訊，請參閱 [設定 Analysis Services 查詢記錄](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [選取要修改資料分割&#40;基於使用方式的最佳化精靈&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [選取要修改的資料分割 &#40;基於使用方式的最佳化精靈&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [指定查詢準則&#40;基於使用方式的最佳化精靈&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [指定查詢準則 &#40;基於使用方式的最佳化精靈&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [檢閱要最佳化的查詢&#40;基於使用方式的最佳化精靈&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [檢閱要最佳化的查詢 &#40;基於使用方式的最佳化精靈&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [檢閱彙總使用方式&#40;基於 Optimiation 精靈&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [檢閱彙總使用方式 &#40;基於使用方式的最佳化精靈&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [指定物件計數&#40;基於使用方式的最佳化精靈&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [指定物件計數 &#40;基於使用方式的最佳化精靈&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [設定彙總選項&#40;基於使用方式的最佳化精靈&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [設定彙總選項 &#40;基於使用方式的最佳化精靈&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [完成精靈&#40;基於使用方式的最佳化精靈&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [正在完成精靈 &#40;基於使用方式的最佳化精靈&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [彙總及彙總設計](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [彙總和彙總設計](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [彙總設計精靈 F1 說明](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services 精靈 &#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

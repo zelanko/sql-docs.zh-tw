@@ -1,5 +1,5 @@
 ---
-title: 第 6 課：加入群組和總計 (Reporting Services) |Microsoft Docs
+title: 第 6 課：新增群組和總計 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,29 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241736"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：加入群組和總計 (Reporting Services)
   將群組和總計加入至報表以組織和摘要資料。  
   
- 如需有關在報表中加入計算加總的資訊，請參閱 curah.microsoft.com 的這篇歸納整理：[將總計加入到 Reporting Services (SSRS) 報表](https://go.microsoft.com/fwlink/p/?LinkId=403698)。  
+ 如需中加入報表的資訊，請參閱：[將總計加入到 Reporting Services (SSRS) 報表](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)。  
   
  **本主題內容：**  
   
--   [在報表中的群組資料](#bkmk_groupdata)  
+-   [將報表中的資料分組](#bkmk_groupdata)  
   
--   [若要在報表中加入總計](#bkmk_addtotals)  
+-   [在報表中加入總計](#bkmk_addtotals)  
   
--   [若要加入報表中的每日總計](#bkmk_adddailytotal)  
+-   [在報表中加入每日總計](#bkmk_adddailytotal)  
   
--   [將總計加入到報表](#bkmk_addgrandtotal)  
+-   [在報表中加入總計](#bkmk_addgrandtotal)  
   
--   [將報表發行至報表伺服器 （選擇性）](#bkmk_publishreport)  
+-   [若要將報表發行至報表伺服器 (選擇性)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> 在報表中的群組資料  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56296896"
   
 6.  在 **[格式]** 功能表上，依序按一下 **[背景色彩]**、 **[淺灰]** 和 **[確定]**。  
   
-     ![設計檢視：具有訂單總計的基本資料表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "設計檢視：具有訂單總計的基本資料表")  
+     ![設計檢視：包含訂單總計的基本資料表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "設計檢視：包含訂單總計的基本資料表")  
   
 ##  <a name="bkmk_adddailytotal"></a> 若要加入報表中的每日總計  
   
@@ -113,7 +113,7 @@ ms.locfileid: "56296896"
   
      最後一頁碼看起來可能如下：  
   
-     ![預覽：具有總計的基本資料表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "預覽：具有總計的基本資料表")  
+     ![預覽：包含總計的基本資料表](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "預覽：包含總計的基本資料表")  
   
 ##  <a name="bkmk_publishreport"></a> 將報表發行至報表伺服器 （選擇性）  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56296896"
   
      如果您在輸出視窗中看見類似下面的訊息，就表示部署成功。  
   
-    > ------ 已經開始建立:專案： tutorial，組態：偵錯 ------ 正在略過 'Sales Orders.rdl'。 項目為最新狀態。建立完成 -- 0 個錯誤，0 個警告 ------ 已經開始部署:專案： tutorial，組態：偵錯---部署至 http://\<伺服器名稱 > / 正在回報 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置：1 個成功或為最新狀態，0 個失敗，0 個略過 ==================== 部署:1 個成功，0 個失敗，0 個略過 ==========  
+    > ------ 已經開始建立:專案：教學課程，設定：偵錯 ------ 正在略過 'Sales Orders.rdl'。 項目為最新狀態。建立完成 -- 0 個錯誤，0 個警告 ------ 已經開始部署:專案：教學課程，設定：偵錯---部署至 http://\<伺服器名稱 > / 正在回報 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置：1 個成功或為最新狀態，0 個失敗，0 個略過 ==================== 部署:1 個成功，0 個失敗，0 個略過 ==========  
   
      如果您看見類似下面的錯誤訊息，請確認自己擁有報表伺服器的權限，而且已經以系統管理員權限啟動 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dac049477fad134aa3cf8776c8ffa13f33e111ee
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478143"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788025"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 
@@ -252,7 +252,7 @@ SELECT
         s.name              AS [Session-Name],
         '3_EVENT_ACTION'    AS [Clause-Type],
 
-        e.package + '.' + a.name
+        a.package + '.' + a.name
                             AS [Parameter-Name],
 
         '(Not_Applicable)'  AS [Parameter-Value]

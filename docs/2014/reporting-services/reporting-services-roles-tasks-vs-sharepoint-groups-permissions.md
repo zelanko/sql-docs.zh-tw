@@ -19,12 +19,12 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241556"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較
   本主題會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式中的角色和工作型授權功能與 SharePoint 產品的安全性功能。 本主題會比較有關角色、工作、SharePoint 群組、權限等級和權限的詞彙與特性。  
@@ -54,7 +54,7 @@ ms.locfileid: "56036639"
 |---|**權限等級群組：** 例如 [檢視者] 群組的 [僅檢視]。|  
 |**工作：** 例如「管理報表」。|**權限：** 例如，在 [僅檢視] 群組中有檢視項目、檢視版本和檢視應用程式頁面的清單相關權限。|  
   
- 如需有關 SharePoint 權限的詳細資訊，請參閱＜ [權限等級和權限](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) ＞和＜ [在 SharePoint 2013 中決定權限層級及群組](https://technet.microsoft.com/library/cc262690.aspx)＞。  
+ 如需有關 SharePoint 權限的詳細資訊，請參閱 <<c0> [ 使用者權限和 SharePoint Server 中的權限層級](/sharepoint/sites/user-permissions-and-permission-levels)並[判斷權限等級和 SharePoint 2013 中的群組](https://technet.microsoft.com/library/cc262690.aspx)。  
   
 ##  <a name="bkmk_compare_roles_groups"></a> 比較原生模式角色和 SharePoint 群組  
  下表會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式中的預先定義角色定義與標準 SharePoint 群組。 如果 SharePoint 群組不符合您所需要的特定角色，您可以在 SharePoint 中建立自訂群組，並指派權限等級。  
@@ -105,9 +105,9 @@ ms.locfileid: "56036639"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 SharePoint 網站上報表伺服器項目的權限 &#40;SharePoint 整合模式的 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [設定 SharePoint Web 應用程式中報表伺服器作業的權限](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [在 SharePoint Web 應用程式中設定報表伺服器作業的權限](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [角色定義](security/role-definitions.md)   
- [預先定義的角色](security/role-definitions-predefined-roles.md)  
+ [Predefined Roles](security/role-definitions-predefined-roles.md)  
   
   

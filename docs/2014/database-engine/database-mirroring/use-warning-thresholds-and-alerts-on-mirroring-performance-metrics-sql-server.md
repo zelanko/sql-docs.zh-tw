@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242216"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
   此主題包含可針對資料庫鏡像設定和管理警告臨界值之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的相關資訊。 您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**及 **sp_dbmmonitordropalert** 預存程序。 此主題也包含設定資料庫鏡像事件之警示的相關資訊。  
@@ -45,7 +45,7 @@ ms.locfileid: "53354737"
 |效能標準|警告臨界值|資料庫鏡像監視器標籤|  
 |------------------------|-----------------------|--------------------------------------|  
 |未傳送的記錄|指定會在主體伺服器執行個體上產生警告之未傳送記錄的 KB 數。 這個警告有助於從 KB 方面測量資料遺失的可能性，而且尤其與高效能模式相關。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|**如果未傳送的記錄超過臨界值，即發出警告**|  
-|未還原的記錄|指定會在鏡像伺服器執行個體上產生警告之未還原記錄的 KB 數。 這個警告有助於測量容錯移轉時間。 *容錯移轉時間* 主要包含先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄所需的時間，再加上一段很短的額外時間。<br /><br /> 注意：如果是自動容錯移轉，則系統發現錯誤的時間與容錯移轉時間無關。<br /><br /> 如需詳細資訊，請參閱 [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)的程序交換。|**如果未還原的記錄超過臨界值，即發出警告**|  
+|未還原的記錄|指定會在鏡像伺服器執行個體上產生警告之未還原記錄的 KB 數。 這個警告有助於測量容錯移轉時間。 *容錯移轉時間* 主要包含先前的鏡像伺服器向前復原其重做佇列中剩餘之所有記錄所需的時間，再加上一段很短的額外時間。<br /><br /> 注意:如果是自動容錯移轉，則系統發現錯誤的時間與容錯移轉時間無關。<br /><br /> 如需詳細資訊，請參閱 [預估角色切換期間的服務中斷時間 &#40;資料庫鏡像&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)的程序交換。|**如果未還原的記錄超過臨界值，即發出警告**|  
 |最舊尚未傳送的交易|指定在主體伺服器執行個體上產生警告之前，傳送佇列中可以累積的交易分鐘數。 這個警告有助於從時間方面測量資料遺失的可能性，而且尤其與高效能模式相關。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|**如果最舊未傳送交易的時間超過臨界值，即發出警告**|  
 |鏡像認可負擔|指定在主體伺服器上產生警告之前所容許之每項交易的平均延遲毫秒數。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。 只有在高安全性模式中才會顯出這個值的重要性。|**如果鏡像認可負擔超過臨界值，即發出警告**|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "53354737"
   
  定義資料庫鏡像事件的警示後，我們建議您在兩個夥伴伺服器執行個體上都定義警告臨界值和警示。 雖然個別事件會在主體伺服器或鏡像伺服器上產生，不過每一個夥伴都可以隨時執行任何一個角色。 若要確保在容錯移轉之後警示會繼續運作，您必須在兩個夥伴上都定義該警示。  
   
- 如需詳細資訊，請參閱此 [SQL Server 網站](https://go.microsoft.com/fwlink/?linkid=62373)上關於資料庫鏡像事件之警示的白皮書。 這份白皮書包含如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、資料庫鏡像 WMI 事件及範例指令碼來設定警示的詳細資訊。  
+ 如需詳細資訊，請參閱此 [SQL Server 網站](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)上關於資料庫鏡像事件之警示的白皮書。 這份白皮書包含如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、資料庫鏡像 WMI 事件及範例指令碼來設定警示的詳細資訊。  
   
 > [!IMPORTANT]  
 >  我們強烈建議您針對所有鏡像工作階段，將資料庫設定為傳送任何狀態變更事件的警示。 除非狀態變更預期為手動組態變更的結果，否則就表示發生了可能會危害資料的事件。 若要有效保護資料，請識別並修正非預期狀態變更的原因。  

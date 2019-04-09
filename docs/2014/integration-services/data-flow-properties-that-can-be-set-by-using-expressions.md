@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240416"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用運算式設定的資料流程屬性
   可使用「資料流程」工作容器上提供的屬性運算式，以指定資料流程物件的某些屬性值。  
@@ -76,10 +76,10 @@ ms.locfileid: "58378596"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [新增或變更屬性運算式](expressions/add-or-change-a-property-expression.md)  
+-   [加入或變更屬性運算式](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>相關內容  
- pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](http://pragmaticworks.com/cheatsheet/)  
+ pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
 ## <a name="see-also"></a>另請參閱  
  [在封裝中使用屬性運算式](expressions/use-property-expressions-in-packages.md)   

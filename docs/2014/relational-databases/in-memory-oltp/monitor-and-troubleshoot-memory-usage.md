@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93743c90cafd83509ba4bbbd6c0f38369355be3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240436"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  
@@ -196,7 +196,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
   
- 如需詳細資訊，請參閱 [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql)。  
+ 如需詳細資訊，請參閱 [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)。  
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>存取記憶體最佳化資料表時的執行階段記憶體耗用量  
  您可以使用下列查詢判斷執行階段結構 (例如程序快取) 所耗用的記憶體：執行此查詢可取得執行階段結構 (例如程序快取) 所使用的記憶體。 所有執行階段結構都會加上 XTP 標記。  

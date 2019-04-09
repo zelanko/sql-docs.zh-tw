@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242166"
 ---
 # <a name="implementation-of-child-packages"></a>子封裝的實作
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]實作負載平衡時，其他伺服器上會安裝子封裝，以充分利用可用的 CPU 或伺服器時間。 建立及執行子封裝需要下列步驟：  
@@ -68,8 +68,8 @@ ms.locfileid: "58386761"
   
 ## <a name="related-content"></a>相關內容  
   
--   部落格文章[SSIS:存取父封裝中的變數](https://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS:存取父封裝中的變數](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)，andyleonard.blog 上。  
   
--   部落格文章[SSIS:您應該執行子封裝的處理序或跨處理序嗎？](https://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   文件：[執行封裝工作](../integration-services/control-flow/execute-package-task.md)。  
   
   

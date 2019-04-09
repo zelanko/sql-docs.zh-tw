@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242476"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
   本主題說明 Analysis Services 中的多對多維度，包括何時使用這些維度以及如何建立這些維度。  
@@ -61,7 +61,7 @@ ms.locfileid: "53354017"
   
  為了說明用來建立多對多關聯性的步驟，這個程序會在 Adventure Works 範例 Cube 中重新建立其中一個多對多關聯性。 如果您已經將來源資料 (也就是 Adventure Works 範例資料倉儲) 安裝在關聯式資料庫引擎執行個體上，您可以依照以下步驟進行。  
   
-#### <a name="step-1-verify-dsv-relationships"></a>步驟 1：確認 DSV 關聯性  
+#### <a name="step-1-verify-dsv-relationships"></a>步驟 1:確認 DSV 關聯性  
   
 1.  在 SQL Server Data Tools 的多維度專案中，建立 Adventure Works DW 2012 關聯式資料倉儲的資料來源 (裝載於 SQL Server Database Engine 執行個體上)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53354017"
   
      ![顯示相關的資料表的 DSV](../media/ssas-m2m-dsvpkeys.PNG "顯示相關的資料表的 DSV")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>步驟 2：建立維度和量值群組  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>步驟 2:建立維度和量值群組  
   
 1.  在 SQL Server Data Tools 的多維度專案中，以滑鼠右鍵按一下 [維度]，然後選取 [新增維度]。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "53354017"
 ##  <a name="bkmk_Learn"></a> Learn more  
  使用以下連結來取得可幫助您掌握各個概念的其他資訊。  
   
- [如何在 Analysis Services 中定義多對多維度](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [我要如何在 Analysis Services 中定義多對多維度](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [多對多革命 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

@@ -15,12 +15,12 @@ ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ba4b259bcb39dcf6a3a52696e4f781cda84d6c7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241336"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比較指令碼工作和指令碼元件
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師之 [控制流程] 視窗所提供的指令碼工作與 [資料流程] 視窗所提供的指令碼元件，其用途大不相同。 該工作是一般目的之控制流程工具，而該元件則是做為資料流程中的來源、轉換或是目的地。 不過，儘管其目的不同，指令碼工作與指令碼元件在所使用的程式碼編寫工具以及提供給開發人員的封裝中之物件方面，有一些相似之處。 了解其相似性與差異性可協助您更有效率地使用工作與元件。  
@@ -43,7 +43,7 @@ ms.locfileid: "58389368"
 |控制流程 / 資料流程|指令碼工作是在設計工具的 [控制流程] 索引標籤上設定，並在封裝的資料流程之外執行。|指令碼元件是在設計工具的 [資料流程] 頁面上設定，並代表資料流程工作中的來源、轉換或是目的地。|  
 |用途|指令碼工作幾乎可以完成任何一般目的之工作。|您必須指定是否要以指令碼元件建立來源、轉換或是目的地。|  
 |執行|指令碼工作會在封裝工作流程中的某個點執行自訂程式碼。 除非您將它放在迴圈容器或是事件處理常式中，否則它只會執行一次。|指令碼元件也只會執行一次，但是它通常會為資料流程中的每個資料列，執行一次其主要的處理常式。|  
-|編輯器|**指令碼工作編輯器**有三個頁面：**一般**，**指令碼**，以及**運算式**。 只有`ReadOnlyVariables`並`ReadWriteVariables`，並**ScriptLanguage**屬性會直接影響您可以撰寫的程式碼。|**指令碼轉換編輯器**最多達四頁：**輸入資料行**，**輸入和輸出**，**指令碼**，和**連接管理員**。 在這些頁面上設定的中繼資料與屬性，會決定自動產生的基底類別成員，以供您在撰寫程式碼時使用。|  
+|編輯器|[指令碼工作編輯器] 有三個頁面：[一般]、[指令碼] 和 [運算式]。 只有`ReadOnlyVariables`並`ReadWriteVariables`，並**ScriptLanguage**屬性會直接影響您可以撰寫的程式碼。|[指令碼轉換編輯器] 最多可達四個頁面：[輸入資料行]、[輸入及輸出]、[指令碼] 和 [連線管理員]。 在這些頁面上設定的中繼資料與屬性，會決定自動產生的基底類別成員，以供您在撰寫程式碼時使用。|  
 |與封裝之間的互動|在針對指令碼工作所撰寫的程式碼中，使用 `Dts` 屬性以存取封裝的其他功能。 `Dts` 屬性是 `ScriptMain` 類別的成員。|在指令碼元件程式碼中，您使用具有類型的存取子屬性，存取如變數與連接管理員等某些封裝功能。<br /><br /> `PreExecute` 方法只能存取唯讀變數。 `PostExecute` 方法可以存取唯讀和讀/寫變數。<br /><br /> 如需這些方法的詳細資訊，請參閱 [程式碼撰寫和偵錯指令碼元件] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。|  
 |使用變數|指令碼工作會使用<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>的屬性`Dts`要存取的變數，可透過工作的物件<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>和<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A>屬性。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myVar as String myVar = Dts.Variables("MyStringVariable").Value.ToString`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myVar; myVar = Dts.Variables["MyStringVariable"].Value.ToString();`|指令碼元件使用自動產生基底類別之具類型的存取子屬性，從元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 屬性中建立。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myVar as String myVar = Me.Variables.MyStringVariable`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myVar; myVar = this.Variables.MyStringVariable;`|  
 |使用連接|指令碼工作使用 `Dts` 物件的 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 屬性，存取在封裝中定義的連接管理員。 例如：<br /><br /> **[VB]**<br /><br /> `Dim myFlatFileConnection As String myFlatFileConnection = _     DirectCast(Dts.Connections("Test Flat File Connection").AcquireConnection(Dts.Transaction), _     String)`<br /><br /> <br /><br /> **[C#]**<br /><br /> `string myFlatFileConnection; myFlatFileConnection = (Dts.Connections["Test Flat File Connection"].AcquireConnection(Dts.Transaction) as String);`|指令碼元件使用自動產生的基底類別之具有類型的存取子屬性，從編輯器的 [連接管理員] 頁面上之使用者所輸入的連接管理員清單中建立。 例如：<br /><br /> **[VB]**<br /><br /> `Dim connMgr As IDTSConnectionManager100 connMgr = Me.Connections.MyADONETConnection`<br /><br /> <br /><br /> **[C#]**<br /><br /> `IDTSConnectionManager100 connMgr; connMgr = this.Connections.MyADONETConnection;`|  
@@ -52,8 +52,8 @@ ms.locfileid: "58389368"
 |傳回結果|指令碼工作會使用這兩者<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>屬性和選用<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>屬性`Dts`以通知執行階段其結果的物件。|指令碼元件以資料流程工作的一部分執行，而且不會使用這些屬性的任何一個來報告結果。|  
   
 ## <a name="see-also"></a>另請參閱  
- [以指令碼工作擴充套件](task/extending-the-package-with-the-script-task.md)   
- [使用指令碼元件擴充資料流程](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [SSIS 中透過指令碼 (Curated Answer) 中使用 Web 服務](https://go.microsoft.com/fwlink/?LinkId=321996)  
+ [以指令碼工作擴充封裝](task/extending-the-package-with-the-script-task.md)   
+ [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+ [使用 SQL Server Integration Services SSIS 中的指令碼工作連接到 Web 服務](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   
   

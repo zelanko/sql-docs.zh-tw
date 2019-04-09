@@ -12,12 +12,12 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0774c99f1610f87abc08b69e6ef5333c97bec95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241546"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
   連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
@@ -28,7 +28,7 @@ ms.locfileid: "53350127"
   
  當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   
- 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](https://go.microsoft.com/fwlink/?LinkId=163948)。  
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會連接到 **master**。 如果您指定使用者資料庫，您只會在物件總管中看到該資料庫與其物件。 如果您連接到 **master**，您將能夠看到所有資料庫。 如需詳細資訊，請參閱 [Windows Azure SQL Database 概觀](/azure/sql-database/sql-database-technical-overview)。  
   
  **網路通訊協定**  
  從清單中選取通訊協定。 可用的用戶端通訊協定就是您在 [電腦管理] 中使用 [用戶端網路組態] 所設定的通訊協定。  
@@ -57,7 +57,7 @@ ms.locfileid: "53350127"
  **全部重設**  
  將所有手動輸入的連接屬性值取代成預設值。  
   
- **[連接]**  
+ **連線**  
  使用列出的值嘗試進行連接。  
   
  **選項。**  

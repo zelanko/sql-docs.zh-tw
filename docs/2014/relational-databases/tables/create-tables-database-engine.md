@@ -12,28 +12,28 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241666"
 ---
 # <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立新資料表、為資料表命名，並將它加入至現有資料庫。  
   
 > [!NOTE]  
->  如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](https://go.microsoft.com/fwlink/?LinkId=163948)＞。  
+>  如果您連接到 SQL Azure 資料庫，新的資料表選項將會啟動建立資料表範本指令碼。 請編輯參數，然後執行指令碼來建立新的資料表。 如需詳細資訊，請參閱＜ [SQL Azure 概觀](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx)＞。  
   
  **本主題內容**  
   
 -   **開始之前：**  
   
-     [Security](#Security)  
+     [安全性](#Security)  
   
--   **若要建立的資料表，請使用：**  
+-   **若要使用下列項目來建立資料表：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53377430"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     CREATE TABLE dbo.PurchaseOrderDetail  

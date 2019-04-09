@@ -19,12 +19,12 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aab23efecc139e4aaf4a4c3d6d0075cf02a7e7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241897"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>針對 SSIS 服務的存取設定 Windows 防火牆
     
@@ -36,7 +36,7 @@ ms.locfileid: "58387456"
 > [!IMPORTANT]  
 >  若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務執行個體， 而是要編輯 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](configuring-the-integration-services-service-ssis-service.md)回溯相容。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需有關 DCOM 通訊協定如何穿越防火牆運作的詳細資訊，請參閱 MSDN Library 中的[搭配防火牆使用分散式 COM](https://go.microsoft.com/fwlink/?LinkId=12490)文件。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需有關 DCOM 通訊協定如何穿越防火牆運作的詳細資訊，請參閱文章中，「[搭配防火牆使用 COM](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)"。  
   
  有許多防火牆系統可用。 如果您是執行 Windows 防火牆以外的其他防火牆，請參閱該防火牆的文件以獲取您正在使用之系統的特定資訊。  
   

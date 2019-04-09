@@ -18,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a00b9cdd386a433fa25742d575751b051d77c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240993"
 ---
 # <a name="derived-column-transformation"></a>衍生的資料行轉換
   「衍生的資料行」轉換會將運算式套用至轉換輸入資料行，藉此建立新的資料行值。 運算式可包含來自轉換輸入之變數、函數、運算子和資料行的任意組合。 結果可加入做為新的資料行，或插入現有資料行做為取代值。 「衍生的資料行」轉換可定義多個衍生的資料行，且任何變數或輸入資料行都可在多個運算式中出現。  
@@ -77,6 +77,6 @@ ms.locfileid: "58377662"
 ## <a name="related-content"></a>相關內容  
  social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
- curatedviews.cloudapp.net 上的 Curated Answer 文章： [如何使用 SSIS 分割資料行資料](https://go.microsoft.com/fwlink/?LinkId=321995)。  
+ 部落格[如何使用 SSIS 分割資料行資料](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 建立導出的成員 |Microsoft 文件
+title: 建立導出的成員 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241463"
 ---
 # <a name="create-calculated-members"></a>建立導出成員
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   您可以結合 Cube 資料、算術運算子、數字和函數，來建立自訂的量值或維度成員，稱為導出成員。 例如，您可以建立一個名為 Euros 的導出成員，藉由將現有的美金量值乘以轉換比率，來將美金轉換為歐元。 然後可以在另一個資料列或資料行中，向一般使用者顯示歐元。  
   
- 導出成員定義將會被儲存，但是它們的值只存在於記憶體中。 在前述的範例中，會對一般使用者顯示歐元值但不會儲存為 Cube 資料。  
+ 導出成員定義將會被儲存，但是它們的值只存在於記憶體中。 在上述範例中，以歐元顯示的值會顯示給使用者，但不是會儲存為 cube 資料。  
   
  您在 Cube 中建立導出成員。 若要建立導出成員，請在 Cube 設計師的 [計算] 索引標籤上，按一下工具列上的 [新增導出成員] 圖示。 此命令會顯示一個表單，以指定導出成員的下列選項：  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34023175"
   
 -   數字  
   
--   函數  
+-   函式  
   
  您可以從 [計算工具] 窗格的 [中繼資料] 索引標籤中，拖曳或複製 Cube 元件，以快速將這些元件加入至運算式。  
   

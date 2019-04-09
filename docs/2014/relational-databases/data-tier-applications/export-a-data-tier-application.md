@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ecf3d032aaece172f7b3c456a9eef6c6cf1b30
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242296"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
   匯出已部署的資料層應用程式 (DAC) 或資料庫，會建立匯出檔，而此檔案包含資料庫中物件的定義以及資料表中所含的所有資料。 接著，匯出檔可以匯入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的另一個執行個體或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC、建立邏輯備份或建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中所部署資料庫的內部部署複本。  
@@ -43,7 +43,7 @@ ms.locfileid: "58618135"
   
  匯出程序會將 DAC 版本設定為 1.0.0.0，而將匯出檔中的 DAC 描述設定為空字串。 如果已從 DAC 部署資料庫，則匯出檔中的 DAC 定義會包含指定給原始 DAC 的名稱，否則，DAC 名稱會設定為資料庫名稱。  
   
- 
+
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 或資料庫只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中匯出。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "58618135"
 ##  <a name="UsingDeployDACWizard"></a> 使用匯出資料層應用程式精靈  
  **若要使用精靈匯出 DAC**  
   
-1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
+1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中)。  
   
 2.  在物件總管 中，展開您要匯出 DAC 的執行個體來源節點。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "58618135"
   
  **選項。**  
   
- **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
+ **不要再顯示此頁面** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
  **下一步** - 繼續進行 [Select DAC Package (選取 DAC 封裝)] 頁面。  
   

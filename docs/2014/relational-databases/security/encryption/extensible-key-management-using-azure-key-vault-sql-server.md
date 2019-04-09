@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242200"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 進行可延伸金鑰管理 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault 可讓[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]加密可以利用 Azure Key Vault 服務的身分[Extensible Key Management &#40;EKM&#41; ](extensible-key-management-ekm.md)提供者來保護其加密金鑰。  
@@ -30,17 +30,17 @@ ms.locfileid: "53372760"
   
 -   [EKM 的使用方式](#Uses)  
   
--   [步驟 1:設定金鑰保存庫，以供 SQL Server](#Step1)  
+-   [步驟 1:設定金鑰保存庫以供 SQL Server 使用](#Step1)  
   
 -   [步驟 2:安裝 SQL Server Connector](#Step2)  
   
--   [步驟 3:設定 SQL Server 對金鑰保存庫使用 EKM 提供者](#Step3)  
+-   [步驟 3：設定 SQL Server 對金鑰保存庫使用 EKM 提供者](#Step3)  
   
--   [範例 a:使用金鑰保存庫的非對稱金鑰的透明資料加密](#ExampleA)  
+-   [範例 A：使用金鑰保存庫中的非對稱金鑰進行透明資料加密](#ExampleA)  
   
--   [範例 b:使用金鑰保存庫的非對稱金鑰備份加密](#ExampleB)  
+-   [範例 B：使用金鑰保存庫中的非對稱金鑰進行備份加密](#ExampleB)  
   
--   [範例 c:使用金鑰保存庫的非對稱金鑰的資料行層級加密](#ExampleC)  
+-   [範例 C：使用金鑰保存庫中的非對稱金鑰進行資料行層級加密](#ExampleC)  
   
 ##  <a name="Uses"></a> EKM 的使用方式  
  組織可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密來保護機密資料。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密包含[透明資料加密&#40;TDE&#41;](transparent-data-encryption.md)，[資料行層級加密](/sql/t-sql/functions/cryptographic-functions-transact-sql)(CLE) 和[備份加密](../../backup-restore/backup-encryption.md)。 在上述所有情況下，資料會使用對稱資料加密金鑰來加密。 對稱資料加密金鑰會以儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的金鑰階層加密，受到更進一步的保護。 或者，EKM 提供者架構可讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之外部密碼編譯提供者中的非對稱金鑰，來保護資料加密金鑰。 使用 EKM 提供者架構會多增加一層安全性，讓組織得以分開管理金鑰和資料。  
@@ -51,8 +51,8 @@ ms.locfileid: "53372760"
   
  ![使用 Azure Key Vault 的 SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "使用 Azure Key Vault 的 SQL Server EKM")  
   
-##  <a name="Step1"></a> 步驟 1:設定金鑰保存庫以供 SQL Server 使用  
- 下列步驟可用來設定金鑰保存庫，以搭配 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 提供加密金鑰保護。 組織中可能已使用保存庫。 當保存庫不存在時，可由組織中指定來管理加密金鑰的 Azure 系統管理員建立保存庫、在保存庫中產生非對稱金鑰，然後再授權 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用金鑰。 透過檢閱 [開始使用 Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)及 PowerShell [Azure Key Vault Cmdlet](https://go.microsoft.com/fwlink/?LinkId=521403) 參考，讓自己熟悉如何使用金鑰保存庫服務。  
+##  <a name="Step1"></a> 步驟 1：設定金鑰保存庫以供 SQL Server 使用  
+ 下列步驟可用來設定金鑰保存庫，以搭配 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 提供加密金鑰保護。 組織中可能已使用保存庫。 當保存庫不存在時，可由組織中指定來管理加密金鑰的 Azure 系統管理員建立保存庫、在保存庫中產生非對稱金鑰，然後再授權 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用金鑰。 透過檢閱 [開始使用 Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)及 PowerShell [Azure Key Vault Cmdlet](/powershell/module/azurerm.keyvault/) 參考，讓自己熟悉如何使用金鑰保存庫服務。  
   
 > [!IMPORTANT]  
 >  如果您有多個 Azure 訂用帳戶，則必須使用包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的訂用帳戶。  
@@ -100,7 +100,7 @@ ms.locfileid: "53372760"
   
     -   PowerShell [Azure 金鑰保存庫 Cmdlet](https://go.microsoft.com/fwlink/?LinkId=521403) 參考  
   
-##  <a name="Step2"></a> 步驟 2:安裝 SQL Server Connector  
+##  <a name="Step2"></a> 步驟 2：安裝 SQL Server Connector  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector 是由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 電腦的系統管理員所下載及安裝。 您可以從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下載中心 [下載](https://go.microsoft.com/fwlink/p/?LinkId=521700)Connector。  搜尋 **SQL Server Connector for Microsoft Azure Key Vault**，檢閱詳細資料、系統需求和安裝指示，然後選擇下載連接器並使用 [執行] 開始安裝。 檢閱授權，然後接受授權並繼續。  
   
  按照預設在 **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**安裝連接器。 這個位置可以在安裝期間變更。 (如果變更，請調整下列指令碼)。  
@@ -113,7 +113,7 @@ ms.locfileid: "53372760"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector 安裝也可讓您選擇性地下載 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密的範例指令碼。  
   
-##  <a name="Step3"></a> 步驟 3:設定 SQL Server 對金鑰保存庫使用 EKM 提供者  
+##  <a name="Step3"></a> 步驟 3：設定 SQL Server 對金鑰保存庫使用 EKM 提供者  
   
 ###  <a name="Permissions"></a> 權限  
  若要完成這整個程序，需要 CONTROL SERVER 權限或 **sysadmin** 固定伺服器角色中的成員資格。 特定動作需要下列權限：  
@@ -196,7 +196,7 @@ ms.locfileid: "53372760"
     ```  
   
 > [!TIP]  
->  使用者收到錯誤**無法從提供者匯出公開金鑰。提供者錯誤碼：2053。** 應該檢查其金鑰保存庫中的 **get**、 **list**、 **wrapKey**、 and **unwrapKey** 權限。  
+>  使用者收到錯誤**無法從提供者匯出公開金鑰。提供者錯誤碼：2053.** 應該檢查其金鑰保存庫中的 **get**、 **list**、 **wrapKey**、 and **unwrapKey** 權限。  
   
  如需詳細資訊，請參閱下列內容：  
   

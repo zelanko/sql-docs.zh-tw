@@ -20,12 +20,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04217451f1a330b3a9b4e4a7ff91e6c6d35574eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242336"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  
@@ -121,6 +121,6 @@ ms.locfileid: "58380700"
 ```  
   
 ## <a name="related-content"></a>相關內容  
- pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=217683)  
+ pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
   

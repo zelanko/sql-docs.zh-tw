@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241356"
 ---
 # <a name="data-flow"></a>資料流程
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, 提供三種不同類型的資料流程元件：來源、轉換與目的地。n來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。l轉換會修改、摘要並清除資料。s目的地則將資料載入資料存放區或建立記憶體中資料集。  
   
 > [!NOTE]  
 >  使用自訂提供者時，您需要使用中繼資料資料行值更新 ProviderDescriptors.xml 檔。  
@@ -100,7 +100,7 @@ ms.locfileid: "58394396"
 |原始程式檔|描述|  
 |------------|-----------------|  
 |Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
-|SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
+|SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)＞。|  
 |Teradata 來源|Teradata 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
   
  如需如何利用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 獲致效能提升的示範，請參閱 [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 視影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
@@ -211,13 +211,13 @@ ms.locfileid: "58394396"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [在資料流程中新增或刪除元件](add-or-delete-a-component-in-a-data-flow.md)  
+-   [在資料流程中加入或刪除元件](add-or-delete-a-component-in-a-data-flow.md)  
   
 -   [連接資料流程中的元件](connect-components-in-a-data-flow.md)  
   
 ## <a name="related-content"></a>相關內容  
  technet.microsoft.com 上的影片： [Microsoft Connector for Oracle by Attunity 的效能 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkID=210369)。  
   
- curatedviews.cloudapp.net 上的 Curated Answer 文章： [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994)(如何在 SSIS 中建立動態連接字串)。  
+ Curated Answer[如何在 SSIS 中建立的動態連接字串](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html)。  
   
   

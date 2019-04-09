@@ -25,12 +25,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241626"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   本主題概略說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器，這是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝的主要元件。 其中包含一組處理引擎，加上一組可處理驗證、資料處理、轉譯和傳遞作業的特殊用途延伸模組。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器會在兩種部署模式的其中一個模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#bkmk_featuresupport) 一節中的功能比較。  
@@ -51,11 +51,11 @@ ms.locfileid: "56019089"
   
 -   [報表伺服器模式概觀](#bkmk_overview)  
   
--   [SharePoint 和原生模式的功能比較](#bkmk_featuresupport)  
+-   [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport)  
   
--   [Native Mode](#bkmk_nativemode)  
+-   [原生模式](#bkmk_nativemode)  
   
--   [SharePoint Web 組件的原生模式](#bkmk_nativewithwebparts)  
+-   [附隨 SharePoint Web 組件的原生模式](#bkmk_nativewithwebparts)  
   
 -   [SharePoint 模式](#bkmk_sharepointmode)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56019089"
   
 -   [報表伺服器資料庫](#bkmk_reportdatabase)  
   
--   [驗證、 轉譯、 資料和傳遞延伸模組](#bkmk_authentication)  
+-   [驗證、轉譯、資料和傳遞延伸模組](#bkmk_authentication)  
   
 -   [相關工作](#bkmk_relatedtasks)  
   
@@ -183,6 +183,6 @@ ms.locfileid: "56019089"
  [實作安全性延伸模組](extensions/security-extension/implementing-a-security-extension.md)   
  [實作資料處理延伸模組](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services &#40;SSRS&#41; 支援的資料來源](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [如何使用 PowerShell (Curated Answer) 管理 SSRS](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [如何使用 PowerShell 管理 SSRS](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

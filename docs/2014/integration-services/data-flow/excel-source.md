@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb7800a18e8df28848d775746bab6d90f75d7439
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242256"
 ---
 # <a name="excel-source"></a>Excel 來源
   Excel 來源會從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍擷取資料。  
@@ -90,7 +90,7 @@ ms.locfileid: "58390929"
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之所有屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Common Properties](../common-properties.md)  
+-   [通用屬性](../common-properties.md)  
   
 -   [Excel 自訂屬性](excel-custom-properties.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "58390929"
   
 -   [排序合併和合併聯結轉換的資料](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
--   [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../control-flow/foreach-loop-container.md)  
+-   [使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表](../control-flow/foreach-loop-container.md)  
   
 ## <a name="related-content"></a>相關內容  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58390929"
   
 -   部落格文章[Integration Services 中的 Excel、 3 第 3 部分：問題與替代方案](https://go.microsoft.com/fwlink/?LinkId=217676)，dougbert.com 上。  
   
--   部落格文章[在 SSIS 中的使用 XLSX 檔案](https://go.microsoft.com/fwlink/?LinkId=233704)，sqlservergeeks.com 上。  
+-   部落格文章[連接到 Excel (XLSX) 在 SSIS 中](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html)。  
   
   

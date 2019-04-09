@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中建立量值和量值群組 |Microsoft 文件
+title: 多維度模型中建立量值和量值群組 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde4dd3ac818935319f0331448e552163a6e148f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241966"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多維度模型中建立量值和量值群組
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34026495"
 |-|-|  
 |Cube 精靈|在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中執行 [Cube 精靈]，以建立 Cube。<br /><br /> 在方案總管中，以滑鼠右鍵按一下 [Cube]，然後選擇 [新增 Cube]。 如需這些步驟的說明，請參閱[多維度模型化 &#40;Adventure Works 教學課程&#41;](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)。<br /><br /> 當您以現有之資料倉儲的資料表為基礎建立 Cube 時，量值和量值群組會在建立 Cube 時具體化。 您會在精靈中選擇事實及事實資料表，以用為 Cube 中之量值及量值群組物件的基礎。|  
 |[新增量值] 對話方塊|假設 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中已有此 Cube，在 [方案總管] 中按兩下此 Cube 的名稱，即可在 Cube 設計師中開啟此 Cube。 在 [量值] 窗格中，於最上層節點上按一下滑鼠右鍵，以建立新的量值群組，或指定來源資料表、資料行及彙總類型，以建立新的量值。 使用這種方法必須從預先建置的函數固定清單中選擇彙總方法。 如需更常用之彙總方法的討論，請參閱＜ [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) ＞。|  
-|「導出成員」|因為您可以控制導出成員的建立時機及方式，所以導出成員可為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 增加彈性及分析功能。 有時候您可能只是暫時需要量值，在使用者工作階段或調查期間的 Management Studio 階段中使用。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [計算] 索引標籤，以建立新的導出成員。<br /><br /> 當基礎為 MDX 運算式中的量值時，請選擇此方法。 如需詳細資訊，請參閱下列主題︰[Building Measures in MDX](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md) (在 MDX 中建立量值)、[計算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)、[Calculations in Multidimensional Models](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) (多維度模型中的計算) 和 [MDX Scripting Fundamentals &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md) (MDX 指令碼基礎觀念 (Analysis Services))。|  
+|「導出成員」|因為您可以控制導出成員的建立時機及方式，所以導出成員可為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 Cube 增加彈性及分析功能。 有時候您可能只是暫時需要量值，在使用者工作階段或調查期間的 Management Studio 階段中使用。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開啟 [計算] 索引標籤，以建立新的導出成員。<br /><br /> 當基礎為 MDX 運算式中的量值時，請選擇此方法。 如需詳細資訊，請參閱下列主題：[建置在 MDX 中的量值](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)，[計算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)，[多維度模型中的計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)並[MDX 指令碼基礎觀念&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX 或 XMLA|在 SQL Server Management Studio 中，您可以執行 MDX 或 XMLA 來更改資料庫，以加入新的導出量值。 這種方法可在解決方案部署到伺服器之後，於特定的資料測試時使用。 請參閱 [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)。|  
   
 ##  <a name="bkmk_comps"></a> 量值的元件  
@@ -58,7 +58,7 @@ ms.locfileid: "34026495"
   
  下圖代表 **FactSalesQuota** 事實資料表和相關的兩個維度資料表 ( **DimTime** 和 **DimEmployee**)。 在 Adventure Works 範例 Cube 中，這些資料表會作為「銷售配額」量值群組與「時間」及「員工」維度的根據。  
   
- ![與兩個維度資料表的 FactSalesQuota 資料表](../../analysis-services/multidimensional-models/media/factsalesquota.gif "具有兩個維度資料表的 FactSalesQuota 資料表")  
+ ![具有兩個維度資料表的 FactSalesQuota 資料表](../../analysis-services/multidimensional-models/media/factsalesquota.gif "具有兩個維度資料表的 FactSalesQuota 資料表")  
   
  事實資料表包含兩個基本類型的資料行：屬性資料行和量值資料行。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34026495"
   
 -   量值資料行定義量值群組包含的量值。  
   
- 當您執行 [Cube 精靈] 時，外部索引鍵會被篩選掉。在剩餘可選之資料行的清單中，除了會顯示量值資料行之外，還會顯示未對應外部索引鍵的屬性資料行。 在 **FactSalesQuote** 範例中，精靈不只會提供除了 **SalesAmountQuota** ，還會提供 **CalendarYear** 及 **CalendarQuarter**。 只有 **SalesAmountQuota** 量值資料行會產生可供您多維度模型使用的量值。 其他日期資料行的用途，只在限定每個配額量。 您應從 [Cube 精靈] 的量值清單中，排除其他資料行 **CalendarYear** 和 **CalendarQuarter**(或稍後透過設計工具從從量值群組中移除)。  
+ 當您執行 [Cube 精靈] 時，外部索引鍵會被篩選掉。在剩餘可選之資料行的清單中，除了會顯示量值資料行之外，還會顯示未對應外部索引鍵的屬性資料行。 在  **FactSalesQuota**範例中，精靈會提供**CalendarYear**並**CalendarQuarter**除了**SalesAmountQuota**。 只有 **SalesAmountQuota** 量值資料行會產生可供您多維度模型使用的量值。 其他日期資料行的用途，只在限定每個配額量。 您應從 [Cube 精靈] 的量值清單中，排除其他資料行 **CalendarYear** 和 **CalendarQuarter**(或稍後透過設計工具從從量值群組中移除)。  
   
  這個討論所要強調的重點是，並非精靈所提供的所有資料行都可用為量值。 這取決於您決定要用為量值的資料行時，對於資料的了解及其之後的用法。 請注意，您可以在資料來源檢視中的資料表上按一下滑鼠右鍵來探索資料，以協助您了解哪些資料行可以用為量值。 如需詳細資訊，請參閱 [Explore Data in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md) (在資料來源檢視中瀏覽資料 (Analysis Services))。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34026495"
  您可以使用 Cube 設計師的 **[維度使用方式]** 索引標籤，來指定與特定維度相關之量值群組的資料粒度。 如需有關維度關聯性的詳細資訊，請參閱＜ [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [量值和量值群組](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   
