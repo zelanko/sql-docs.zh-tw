@@ -10,18 +10,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241796"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 課：建立專案和基本封裝
   在這一課，您將建立一個從單個一般檔案來源擷取資料的簡易 ETL 封裝，使用兩個查閱轉換元件來轉換資料、將該資料寫入至 **AdventureWorksDW2012** 中的 **FactCurrency**事實資料表。 在這一課，您會學到如何建立新封裝，加入和設定資料來源和目的地連接，以及使用新控制流程和資料流程元件。  
   
 > [!IMPORTANT]  
->  這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需有關安裝和部署 **AdventureWorksDW2012**的資訊，請參閱 [CodePlex 上的 Reporting Services 產品範例](https://go.microsoft.com/fwlink/p/?LinkID=52691)。  
+>  這個教學課程需要 **AdventureWorksDW2012** 範例資料庫。 如需有關安裝和部署**AdventureWorksDW2012**，請參閱[Microsoft SQL Server Product Samples:Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples)。  
   
 ## <a name="understanding-the-package-requirements"></a>了解封裝需求  
  這個教學課程需要 Microsoft SQL Server Data Tools。  
@@ -80,25 +80,25 @@ ms.locfileid: "58390146"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1：建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [步驟 1:建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [步驟 2：新增和設定一般檔案連線管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [步驟 2:加入和設定一般檔案連接管理員](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [步驟 3：加入和設定 OLE DB 連接管理員](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [步驟 4：將資料流程工作加入封裝](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [步驟 4：將資料流程工作加入至封裝中](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [步驟 5：新增和設定一般檔案來源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [步驟 5：加入和設定一般檔案來源](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 -   [步驟 6：加入及設定查閱轉換](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 -   [步驟 7：加入和設定 OLE DB 目的地](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [步驟 8：使第 1 課封裝更容易了解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [步驟 8：使第 1 課的封裝更容易了解](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [步驟 9：測試第 1 課的教學課程封裝](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1：建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [步驟 1:建立新的 Integration Services 專案](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

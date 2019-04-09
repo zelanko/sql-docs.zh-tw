@@ -14,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240807"
 ---
 # <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  
@@ -64,11 +64,11 @@ ms.locfileid: "58377306"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Web 服務工作編輯器 &#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Web 服務工作編輯器 &#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Web 服務工作編輯器 &#40;[輸入] 頁面&#41;](../web-service-task-editor-input-page.md)  
+-   [Web 服務工作編輯器 &#40;輸入頁面&#41;](../web-service-task-editor-input-page.md)  
   
--   [Web 服務工作編輯器 &#40;[輸出] 頁面&#41;](../web-service-task-editor-output-page.md)  
+-   [Web 服務工作編輯器 &#40;輸出頁面&#41;](../web-service-task-editor-output-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   
@@ -82,8 +82,8 @@ ms.locfileid: "58377306"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>相關內容  
- 影片，[如何：使用 Web 服務工作 （SQL Server 影片） 來呼叫 Web 服務](https://go.microsoft.com/fwlink/?LinkId=259642)，technet.microsoft.com 上的。  
+ 影片，[如何：technet.microsoft.com 上的影片：使用 Web 服務工作呼叫 Web 服務) (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=259642) \(英文\)。  
   
- curatedviews.cloudapp.net 上的 Curated Answer 文章： [Consume Web Services in SSIS using Scripts](https://go.microsoft.com/fwlink/?LinkId=321996)(在 SSIS 中透過指令碼取用 Web 服務)。  
+ [如何使用 Web 服務，透過 SSIS 套件](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/)。  
   
   

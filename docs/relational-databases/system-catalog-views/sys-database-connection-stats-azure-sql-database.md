@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d9e6f23d9e73295f34f23777c76253d27671ed8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242326"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -38,11 +38,11 @@ ms.locfileid: "56012359"
 |**database_name**|**sysname**|資料庫的名稱。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time**一律為剛好 5 分鐘晚於相對應**start_time**相同的資料列中。|  
-|**success_count**|**int**|成功連接的數目。|  
-|**total_failure_count**|**int**|連接失敗的總數。 這是總和**connection_failure_count**， **terminated_connection_count**，並**throttled_connection_count**，而且不包含死結事件。|  
-|**connection_failure_count**|**int**|登入失敗的數目。|  
-|**terminated_connection_count**|**int**|**_僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 終止的連接數目。|  
-|**throttled_connection_count**|**int**|**_僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 節流的連接數目。|  
+|**success_count**|**ssNoversion**|成功連接的數目。|  
+|**total_failure_count**|**ssNoversion**|連接失敗的總數。 這是總和**connection_failure_count**， **terminated_connection_count**，並**throttled_connection_count**，而且不包含死結事件。|  
+|**connection_failure_count**|**ssNoversion**|登入失敗的數目。|  
+|**terminated_connection_count**|**ssNoversion**|**_僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 終止的連接數目。|  
+|**throttled_connection_count**|**ssNoversion**|**_僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。_**<br /><br /> 節流的連接數目。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -101,6 +101,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>另請參閱
 
- [疑難排解 Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [針對 Azure SQL Database 連線問題進行疑難排解](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

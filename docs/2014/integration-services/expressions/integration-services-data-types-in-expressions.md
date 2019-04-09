@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241028"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
   運算式評估工具使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 當資料初次進入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝中的資料流程時，資料流程引擎會將所有資料行的資料轉換成 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型，而運算式所使用的資料行資料已為 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 「條件式分割」和「衍生的資料行」轉換中使用的運算式可參考資料行，因為它們是包含資料行資料的資料流程中的一部分。  
@@ -55,7 +55,7 @@ ms.locfileid: "58378266"
   
 -   [== &#40;等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](unequal-ssis-expression.md)  
+-   [!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58378266"
   
 -   傳遞至數學函數的引數評估結果必須為數值資料類型。 根據函數或運算而定，可能會需要特定的數值資料類型。 例如，HEX 函數需要帶正負號或不帶正負號的整數。  
   
--   傳遞至字串函式的引數必須評估為字元資料類型：DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字串函數 (例如 SUBSTRING) 的起始位置和字串長度需要額外的整數引數。  
+-   傳遞至字串函數的引數評估結果必須為字元資料類型︰DT_STR 或 DT_WSTR。 例如，UPPER("flower")。 某些字串函數 (例如 SUBSTRING) 的起始位置和字串長度需要額外的整數引數。  
   
 -   傳遞至日期和時間函數的引數評估結果必須為有效的日期。 例如，DAY(GETDATE())。 某些函數 (例如 DATEADD) 針對其加入至日期的日數，需要額外的整數引數。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378266"
   
 ## <a name="related-content"></a>相關內容  
   
--   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=217683)  
+-   pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3)  
   
 -   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](https://go.microsoft.com/fwlink/?LinkId=220761)  
   

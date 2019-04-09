@@ -12,12 +12,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aec88e77e5306736e89d353b3299bb04441f4b1c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241884"
 ---
 # <a name="expression-task"></a>運算式工作
   運算式工作會使用運算式產生器，建立及評估在執行階段設定變數值的運算式。 當您編輯工作時，會啟動 [Expression Builder](../expressions/expression-builder.md) 。  
@@ -33,6 +33,6 @@ ms.locfileid: "58379265"
  [在資料流程元件中使用運算式](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>相關內容  
- pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://go.microsoft.com/fwlink/?LinkId=217683)  
+ pragmaticworks.com 上的技術文件： [SSIS 運算式小抄](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
   

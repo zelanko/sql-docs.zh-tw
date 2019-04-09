@@ -12,12 +12,12 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 859a2b99a62b0ed33f3c6773fe2df3dcbdb91a87
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240676"
 ---
 # <a name="mssqlserver5512"></a>MSSQLSERVER_5512
     
@@ -36,6 +36,6 @@ ms.locfileid: "53366820"
  截斷作業失敗。  
   
 ## <a name="user-action"></a>使用者動作  
- 若要取得錯誤的原因，請參閱特定的 Windows 狀態碼。 如需有關此狀態碼的詳細資訊，請參閱 <<c0> [ 事件和錯誤訊息中心](https://go.microsoft.com/fwlink/?linkid=47660)。  
+ 若要取得錯誤的原因，請參閱特定的 Windows 狀態碼。 如需有關此狀態碼的詳細資訊，請參閱 <<c0> [ 事件和錯誤訊息，透過 Microsoft 支援](https://support.microsoft.com/search?query=events%20and%20error%20messages)。  
   
   

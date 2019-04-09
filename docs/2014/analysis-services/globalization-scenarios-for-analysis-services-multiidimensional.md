@@ -19,15 +19,15 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241891"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多維度的全球化案例
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 儲存及操作多國語言資料和表格式和多維度資料模型中的中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可儲存及操作表格式和多維度資料模型中的多語系資料和中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
   
  Unicode 支援是指 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可使用 Windows 用戶端和伺服器作業系統支援的任何語言來儲存資料，並可讀取、寫入、排序及比較 Windows 電腦上所使用之任何字元集中的資料。 使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料的 BI 用戶端應用程式可以使用者選擇的語言來表示資料 (假設該語言的資料存在於模型中)。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "53357868"
 |[語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的預設語言和 Windows 定序。 您的選擇會影響 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所管理的資料和中繼資料。|  
 |[翻譯&#40;Analysis Services&#41;](translations-analysis-services.md)|定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫和資料庫所包含之物件的翻譯。 本主題說明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 如何解析來自用戶端應用程式的翻譯資料和中繼資料要求。|  
 |[貨幣轉換&#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|使用 [商業智慧精靈] 定義貨幣轉換。|  
-|[全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
+|[全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows 應用程式的國際化](/windows/desktop/Intl/international-support)   
- [Go Global 開發人員中心](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Microsoft 全球化文件](/globalization/)   
  [使用以地區設定為基礎的自動調整設計撰寫 Windows 市集應用程式](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [使用 C# 和 XAML 開發通用 Windows 應用程式](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

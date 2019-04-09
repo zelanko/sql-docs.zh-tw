@@ -11,17 +11,17 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95785ceee0db65aef6f61281cb5e6079c76bc1f9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee2c99e0e5a58bda4b3bc7cb090e3705b7d9cc5c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241676"
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
   本主題將說明您可能會在某個設計工具或管理工具中設定的連接字串屬性，或是在連接到 Analysis Services 以查詢資料的用戶端應用程式所建立的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
   
- 開發人員若要透過撰寫應用程式的程式碼以建立自訂連接字串，應該檢閱適用於 ADOMD.NET 用戶端的 API 文件以檢視更詳細的清單： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
+ 建置應用程式程式碼中的自訂連接字串的開發人員應檢閱 ADOMD.NET 用戶端若要檢視更詳細的清單的 API 文件： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
  本主題描述的是 Analysis Services 用戶端程式庫 (即 ADOMD.NET、AMO 及 OLE DB Provider for Analysis Services) 所使用的屬性。 大部分的連接字串屬性均可搭配所有三套用戶端程式庫使用。 例外狀況將於描述中提出。  
   
@@ -51,8 +51,8 @@ ms.locfileid: "53377600"
   
 |屬性|描述|範例|  
 |--------------|-----------------|-------------|  
-|`Data Source` 或 `DataSource`|指定伺服器執行個體。 此屬性是所有連接的必要項。 有效值包括伺服器的網路名稱或 IP 位址、本機連接的 local 或 localhost 值、設定為 HTTP 或 HTTPS 存取之伺服器的 URL，或是本機 Cube (.cub) 檔案的名稱。|`Data source=AW-SRV01` 代表預設執行個體及通訊埠 (TCP 2383)。<br /><br /> `Data source=AW-SRV01$Finance:8081` 代表具名執行個體 ($Finance) 及固定連接埠。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` 代表完整網域名稱，假設是預設執行個體及通訊埠。<br /><br /> `Data source=172.16.254.1` 代表伺服器的 IP 位址，略過 DNS 伺服器查閱，對於疑難排解連接問題相當實用。|  
-|`Initial Catalog` 或 `Catalog`|指定要連接的 Analysis Services 資料庫的名稱。 資料庫必須部署在 Analysis Services 上，而且您必須具有連接到該資料庫的權限。 此屬性對於 AMO 連接而言為選擇項，但卻是 ADOMD.NET 的必要項。|`Initial catalog=AdventureWorks2012`|  
+|`Data Source` 中的多個 `DataSource`|指定伺服器執行個體。 此屬性是所有連接的必要項。 有效值包括伺服器的網路名稱或 IP 位址、本機連接的 local 或 localhost 值、設定為 HTTP 或 HTTPS 存取之伺服器的 URL，或是本機 Cube (.cub) 檔案的名稱。|`Data source=AW-SRV01` 代表預設執行個體及連接埠 (TCP 2383)。<br /><br /> `Data source=AW-SRV01$Finance:8081` 代表具名執行個體 ($Finance) 及固定連接埠。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` 代表完整網域名稱，假設是預設執行個體及通訊埠。<br /><br /> `Data source=172.16.254.1` 代表伺服器的 IP 位址，略過 DNS 伺服器查閱，對於疑難排解連接問題相當實用。|  
+|`Initial Catalog` 中的多個 `Catalog`|指定要連接的 Analysis Services 資料庫的名稱。 資料庫必須部署在 Analysis Services 上，而且您必須具有連接到該資料庫的權限。 此屬性對於 AMO 連接而言為選擇項，但卻是 ADOMD.NET 的必要項。|`Initial catalog=AdventureWorks2012`|  
 |`Provider`|有效值包括 MSOLAP 或 MSOLAP。\<版本 >，其中\<版本 > 為 3、 4 或 5。 在檔案系統上，資料提供者名稱是 msolap110.dll (SQL Server 2012 版)、msolap100.dll (SQL Server 2008 和 2008 R2) 以及 msolap90.dll (SQL Server 2005)。<br /><br /> 目前的版本為 MSOLAP.5。 此屬性是選擇項。 依預設，用戶端程式庫會從登錄讀取目前版本的 OLE DB 提供者。 當您需要特定版本的資料提供者，例如連接到 SQL Server 2008 執行個體時，才需要設定此屬性。<br /><br /> 資料提供者對應至 SQL Server 的版本。 如果您的組織使用目前版本和舊版的 Analysis Services，則您很可能必須以手動建立的連接字串指定要使用的提供者。 若電腦上沒有您所需要的特定版本資料提供者，您可能也必須下載並安裝該版本。 您可以從下載中心的 SQL Server 功能套件網頁下載 OLE DB 提供者。 請移至 [Microsoft SQL Server 2012 功能套件](https://go.microsoft.com/fwlink/?LinkId=296473) ，下載 Analysis Services OLE DB Provider for SQL Server 2012。<br /><br /> MSOLAP.4 是隨 SQL Server 2008 及 SQL Server 2008 R2 發行。 2008 R2 版支援 PowerPivot 活頁簿，有時候 SharePoint 伺服器必須手動安裝此版本。 若要區別這些版本，您必須檢查提供者檔案內容中的組建編號：移至 Program files\Microsoft Analysis Services\AS OLEDB\10。 以滑鼠右鍵按一下 msolap110.dll，然後選取 **[內容]**。 按一下 **[詳細資料]**。 檢視檔案版本資訊。 此版本應該包含 10.50.<buildnumber>。\<組建編號 > 適用於 SQL Server 2008 R2。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 和 [用於 Analysis Services 連接的資料提供者](data-providers-used-for-analysis-services-connections.md)。<br /><br /> MSOLAP.3 是在 SQL Server 2005 發行。<br /><br /> MSOLAP.4 是在 SQL Server 2008 和一次的 SQL Server 2008 R2 發行<br /><br /> MSOLAP.5 是在 SQL Server 2012 發行|`Provider=MSOLAP.3` 的適用對象是需要 SQL Server 2005 版 OLE DB Provider for Analysis Services 的連接。|  
 |`Cube`|Cube 名稱或檢視方塊名稱。 資料庫可能包含多個 Cube 和檢視方塊。 如果可能會有多重目標，請在連接字串中加入 Cube 或檢視方塊的名稱。|`Cube=SalesPerspective` 表示您可以使用 Cube 連接字串屬性指定 Cube 的名稱或檢視方塊的名稱。|  
   
@@ -63,8 +63,8 @@ ms.locfileid: "53377600"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|`EffectiveUserName`|當伺服器上必須模擬使用者識別時使用。 以「網域\使用者」的格式指定帳戶。 若要使用此屬性，呼叫端必須具有 Analysis Services 的系統管理權限。 如需有關從 SharePoint 的 Excel 活頁簿中使用此屬性的資訊，請參閱＜ [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](https://go.microsoft.com/fwlink/?LinkId=311905)＞。 如需有關如何搭配 Reporting Services 使用此屬性的說明，請參閱 [使用 EffectiveUserName 在 SSAS 中模擬](https://go.microsoft.com/fwlink/?LinkId=301385)。<br /><br /> `EffectiveUserName` 在 PowerPivot for SharePoint 安裝中是用於擷取使用方式資訊。 使用者識別會提供給伺服器，從而可將包含使用者識別的事件或錯誤記錄於記錄檔。 就 PowerPivot 而言，此屬性並非做為授權用途。|  
-|**加密密碼**|指定是否使用本機密碼加密本機 Cube。 有效值為 True 或 False。 預設值是 False。|  
+|`EffectiveUserName`|當伺服器上必須模擬使用者識別時使用。 以「網域\使用者」的格式指定帳戶。 若要使用此屬性，呼叫端必須具有 Analysis Services 的系統管理權限。 如需有關從 SharePoint 的 Excel 活頁簿中使用此屬性的資訊，請參閱＜ [在 SharePoint Server 2013 中使用 Analysis Services EffectiveUserName](https://go.microsoft.com/fwlink/?LinkId=311905)＞。 如需有關如何搭配 Reporting Services 使用此屬性的說明，請參閱 [使用 EffectiveUserName 在 SSAS 中模擬](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas)。<br /><br /> `EffectiveUserName` 是 PowerPivot for SharePoint 安裝中用來擷取使用方式資訊。 使用者識別會提供給伺服器，從而可將包含使用者識別的事件或錯誤記錄於記錄檔。 就 PowerPivot 而言，此屬性並非做為授權用途。|  
+|**Encrypt Password**|指定是否使用本機密碼加密本機 Cube。 有效值為 True 或 False。 預設值是 False。|  
 |`Encryption Password`|用於將已加密的本機 Cube 解密的密碼。 預設值為空白。 使用者必須明確設定此值。|  
 |`Impersonation Level`|指出伺服器模擬用戶端時，允許伺服器使用的模擬層級。 有效值包括：<br /><br /> **匿名**:用戶端對伺服器而言是匿名。 伺服器處理序無法取得有關用戶端的資訊，也無法模擬用戶端。<br /><br /> **識別**:伺服器處理序可以取得用戶端識別。 伺服器能夠基於授權目的模擬用戶端識別，但無法以用戶端的身分存取系統物件。<br /><br /> **模擬**:這是預設值。 只有在建立連接時才可以模擬用戶端識別，而非每一次呼叫都能模擬。<br /><br /> **委派**:伺服器處理序可在代表用戶端時模擬用戶端安全性內容。 伺服器處理序也可以在代表用戶端期間對其他伺服器發出連出呼叫。|  
 |`Integrated Security`|使用呼叫端的 Windows 識別連接到 Analysis Services。 有效值為空白、SSPI 和 BASIC。<br /><br /> `Integrated Security`=`SSPI` 是 TCP 連接，可讓 NTLM、 Kerberos 或匿名驗證的預設值。 空白是 HTTP 連接的預設值。<br /><br /> 使用 `SSPI` 時，`ProtectionLevel` 必須設定為下列其中一項：`Connect`、`PktIntegrity`、`PktPrivacy`。|  
@@ -74,7 +74,7 @@ ms.locfileid: "53377600"
 |`Roles`|指定預先定義的角色以逗號分隔的清單，以便使用該角色所傳達的權限連接到伺服器或資料庫。 如果省略此屬性，則會使用所有角色，而且有效權限將是所有角色權限的組合。 將屬性設定為空值 (例如，角色 =' ') 用戶端連線的任何角色成員資格。<br /><br /> 系統管理員使用此屬性連接時將使用其角色所傳達的權限。 如果角色未提供足夠的權限，某些命令可能會失敗。|  
 |`SSPI`|當 `Integrated Security` 設定為 `SSPI` 時，明確指定哪一種安全性封裝用於用戶端驗證。 SSPI 支援多種封裝，但是您可以使用這個屬性來指定特定封裝。 有效的值為：交涉、Kerberos、NTLM 和匿名使用者。 如果未設定此屬性，所有封裝都將可供連接使用。|  
 |`Use Encryption for Data`|將資料傳輸加密。 有效值為 True 和 False。|  
-|`User ID`=...; `Password`=|`User ID` 是與 `Password` 搭配使用。 Analysis Services 會模擬透過這些認證所指定的使用者識別。 只有當伺服器設定為 HTTP 存取，而且您針對 IIS 虛擬目錄指定了基本驗證而非整合式安全性時，才會使用透過命令列為 Analysis Services 連接提供認證的方式。<br /><br /> 使用者名稱與密碼必須是 Windows 識別 (本機或網域使用者帳戶) 的認證。 請注意 `User ID` 有內嵌的空格。 此屬性的其他別名包括 `UserName` (不含空格) 和 `UID`。 `Password` 的別名則是 `PWD`。|  
+|`User ID`=...; `Password`=|`User ID` 和`Password`一起使用。 Analysis Services 會模擬透過這些認證所指定的使用者識別。 只有當伺服器設定為 HTTP 存取，而且您針對 IIS 虛擬目錄指定了基本驗證而非整合式安全性時，才會使用透過命令列為 Analysis Services 連接提供認證的方式。<br /><br /> 使用者名稱與密碼必須是 Windows 識別 (本機或網域使用者帳戶) 的認證。 請注意 `User ID` 有內嵌的空格。 此屬性的其他別名包括 `UserName` (不含空格) 和 `UID`。 `Password` 的別名則是 `PWD`。|  
   
 ##  <a name="bkmk_special"></a> 特殊用途的參數  
  本節描述其餘的連接字串參數。 這些參數是用於確保應用程式所需的特定連接行為。  
@@ -98,7 +98,7 @@ ms.locfileid: "53377600"
 |`Safety Options`|設定使用者定義函數和動作的安全性層級。 有效值為 0、1、2。 在 Excel 連接中，此屬性是 Safety Options=2。 這個選項的詳細資訊可在 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。|  
 |`SQLQueryMode`|指定 SQL 查詢是否包含計算。 有效值為 Data、Calculated 和 IncludeEmpty。 Data 表示不允許計算。 Calculated 則允許計算。 IncludeEmpty 允許查詢結果傳回計算和空的資料列。|  
 |`Timeout`|指定用戶端程式庫在產生錯誤之前等候命令完成的時間 (以毫秒為單位)。|  
-|`Transport Compression`|當透過 `Protocol Format` 屬性指定壓縮時，定義用戶端與伺服器通訊的壓縮方式。 有效值為 Default、None、Compressed 和 `gzip`。 Default 表示對 TCP 不壓縮，或對 HTTP 進行 `gzip` 壓縮。 None 表示不使用壓縮。 Compressed 會使用 XPRESS 壓縮 (SQL Server 2008 及更新版本)。 `gzip` 僅適用於 HTTP 連接，將致使 HTTP 要求包含 Accept-Encoding=gzip。|  
+|`Transport Compression`|當透過 `Protocol Format` 屬性指定壓縮時，定義用戶端與伺服器通訊的壓縮方式。 有效值為 Default、None、Compressed 和 `gzip`。 Default 表示對 TCP 不壓縮，或對 HTTP 進行 `gzip` 壓縮。 None 表示不使用壓縮。 Compressed 會使用 XPRESS 壓縮 (SQL Server 2008 及更新版本)。 `gzip` 僅適用於 HTTP 連接，其中 HTTP 要求包含 Accept-encoding = gzip。|  
 |`UseExistingFile`|連接到本機 Cube 時使用。 此屬性指定是否要覆寫本機 Cube。 有效值為 True 或 False。 如果設定為 True，則 Cube 檔案必須已存在。 現有的檔案將是連接的目標。 如果設定為 False，便會覆寫 Cube 檔案。|  
 |`VisualMode`|設定此屬性可控制在套用維度安全性的情況下彙總成員的方式。<br /><br /> 如果是允許每個人查看的 Cube 資料，彙總所有成員就有意義，因為分攤總計的所有值全都可見。 不過，若您根據使用者識別對維度進行篩選或限制，則顯示以所有成員為準的總計 (將限制和允許的值併入單一總計) 可能會造成混淆或顯示本不應揭露的資訊。<br /><br /> 若要指定在套用維度安全性的情況下彙總成員的方式，您可以將此屬性設定為 True 讓彙總只使用允許的值，或設定為 False 讓總計排除限制的值。<br /><br /> 透過連接字串設定時，此值將套用至 Cube 或檢視方塊層級。 而在模型內，您可以控制更細微層級的視覺化總計。<br /><br /> 有效值為 0、1 和 2。<br /><br /> 0 是預設值。 目前，預設的行為相當於 2，也就是彙總包含了對使用者隱藏的值。<br /><br /> 1 會從總計排除隱藏的值。 此為 Excel 的預設值。<br /><br /> 2 會將隱藏的值納入總計。 這是伺服器上的預設值。<br /><br /> <br /><br /> 此屬性的別名包括 `Visual Total` 或是 `Default MDX Visual Mode`。|  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53377600"
   
  `Data Source=<URL>`，其中 URL 是包含 msmdpump.dll 之虛擬 IIS 資料夾的 HTTP 或 HTTPS 位址。 如需詳細資訊，請參閱 [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)(Microsoft BI 驗證及識別委派)。  
   
- **Http （s） 連接至 PowerPivot 活頁簿 （.xlsx、.xlsb 或.xlsm 檔案）**  
+ **PowerPivot 活頁簿 (.xlsx、.xlsb 或 .xlsm 檔) 的 Http(s) 連接**  
   
  `Data Source=<URL>`，其中 URL 是已發行至 SharePoint 文件庫之 PowerPivot 活頁簿的 SharePoint 路徑。 比方說，「 資料來源 =<http://localhost/Shared> documents/Sales.xlsx"。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "53377600"
   
  **內嵌的 PowerPivot 連接**  
   
- `Data Source=$Embedded$`，其中 $embedded$ 是參考活頁簿內部內嵌之 PowerPivot 資料模型的 Moniker。 此連接字串是在內部建立並管理。 請勿修改該字串。 內嵌的連接字串是由用戶端工作站上的 PowerPivot for Excel 增益集，或 SharePoint 伺服器陣列中的 PowerPivot for SharePoint 執行個體所解析。  
+ `Data Source=$Embedded$` ，其中 $embedded$ 是參考活頁簿內部內嵌之 PowerPivot 資料模型的 Moniker。 此連接字串是在內部建立並管理。 請勿修改該字串。 內嵌的連接字串是由用戶端工作站上的 PowerPivot for Excel 增益集，或 SharePoint 伺服器陣列中的 PowerPivot for SharePoint 執行個體所解析。  
   
  **Analysis Services 預存程序中的本機伺服器內容**  
   
@@ -184,7 +184,7 @@ ms.locfileid: "53377600"
 ##  <a name="bkmk_encrypt"></a> 加密連接字串  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會加密和儲存用來連接到每一個資料來源的連接字串。 如果資料來源的連接需要使用者名稱和密碼，您可以選擇讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在連接字串中儲存名稱和密碼，或每次需要連接資料來源時提示您輸入名稱和密碼。 讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提示您輸入使用者資訊，表示此資訊不必儲存和加密。 不過，如果您在連接字串中儲存此資訊，則此資訊需要加密和保護。  
   
- 若要加密並保護連接字串資訊安全， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用資料保護 API。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用個別的加密金鑰來加密每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的連接字串資訊。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會建立此金鑰，並依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 啟動帳戶來加密連接字串資訊。 當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 啟動時，會讀取、解密並儲存每個資料庫的加密金鑰。 之後，當[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要連接到資料來源時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用適當的解密金鑰來解密資料來源連接字串資訊。  
+ 若要加密並保護連接字串資訊安全， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用資料保護 API。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用個別的加密金鑰來加密每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的連接字串資訊。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會建立此金鑰，並依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 啟動帳戶來加密連接字串資訊。 當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 啟動時，會讀取、解密並儲存每個資料庫的加密金鑰。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要連接到資料來源時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用適當的解密金鑰來解密資料來源連接字串資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)   

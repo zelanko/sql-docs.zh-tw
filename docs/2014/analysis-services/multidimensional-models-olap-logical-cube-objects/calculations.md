@@ -18,22 +18,22 @@ ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be0252b31deb78762844711c7dda8779bb6e5c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ce999e5a301fc6c6a9fd50f241e6863e0ad2cca9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241776"
 ---
 # <a name="calculations"></a>[新增命名集]
-  計算是多維度運算式 (MDX) 運算式或指令碼，用來定義 cube 中的導出的成員、 命名的集或範圍的指派[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需有關指令碼計算的詳細資訊，請參閱[Introduction to Microsoft SQL Server 2005 中 MDX 指令碼](https://go.microsoft.com/fwlink/?LinkId=81892)。 如需 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](https://go.microsoft.com/fwlink/?LinkId=81621)。  
+  計算是多維度運算式 (MDX) 運算式或指令碼，用來定義 cube 中的導出的成員、 命名的集或範圍的指派[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需有關指令碼計算的詳細資訊，請參閱[Introduction to Microsoft SQL Server 2005 中 MDX 指令碼](https://go.microsoft.com/fwlink/?LinkId=81892)。 如需 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
   
 ## <a name="calculated-members"></a>導出成員  
  導出成員是使用您在定義導出成員時指定的多維度運算式 (MDX) 運算式，以在執行階段計算出其值的成員。 與其他任何成員一樣，商業智慧應用程式也可以使用導出成員。 因為在 Cube 中只會儲存定義，所以導出成員並不會增加 Cube 的大小；需要回答查詢時才會在記憶體中計算出值。  
   
  可以針對任何維度定義導出成員，包括量值維度。 在量值維度上建立的導出成員，稱為導出量值。  
   
- 雖然導出成員通常是根據 Cube 中的現有資料，但是您也可以將資料與算術運算子、數字和函數組合來建立複雜的運算式。 您也可使用 MDX 函數 (如 LookupCube) 來存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中其他 Cube 內的資料； [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含標準化的 Visual Studio 函數程式庫，而且您可使用預存程序從目前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫以外的來源中擷取資料。 如需有關預存程序的詳細資訊，請參閱 <<c0> [ 定義的預存程序](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
+ 雖然導出成員通常是根據 Cube 中的現有資料，但是您也可以將資料與算術運算子、數字和函數組合來建立複雜的運算式。 您也可使用 MDX 函數 (如 LookupCube) 來存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中其他 Cube 內的資料； [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含標準化的 Visual Studio 函數程式庫，而且您可以使用預存程序來擷取目前以外的來源資料[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如需有關預存程序的詳細資訊，請參閱 <<c0> [ 定義的預存程序](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)。  
   
  例如，假設一運輸公司的管理者想要根據每一容量單位的利潤，來決定運送哪一種貨物類型的利潤較高。 他們使用包含貨物、船隊與時間維度，以及 Price_to_Ship、Cost_to_Ship、及 Volume_in_Cubic_Meters 量值的運貨 Cube；但是，該 Cube 沒有包含獲利率的量值。 您可以在下列運算式中合併現有的量值，以在 Cube 中建立一個導出成員作為量值 (名為 Profit_per_Cubic_Meter)：  
   
@@ -57,6 +57,6 @@ ms.locfileid: "53367376"
  例如，您可以使用指令碼命令，依據之前時間週期的銷售的加權值，將銷售配額配置給跨越時間和銷售地區的員工。  
   
 ## <a name="see-also"></a>另請參閱  
- [Calculations in Multidimensional Models](../multidimensional-models/calculations-in-multidimensional-models.md)  
+ [多維度模型中的計算](../multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

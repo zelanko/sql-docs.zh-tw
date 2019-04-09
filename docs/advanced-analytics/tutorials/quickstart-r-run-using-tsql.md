@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240166"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門：SQL Server 中的"Hello world"R 指令碼 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "59042273"
     b <- 2
     c <- a/b
     d <- a*b
-    print(c(c, d))'
+    print(c(c, d))
     '
     ```
 

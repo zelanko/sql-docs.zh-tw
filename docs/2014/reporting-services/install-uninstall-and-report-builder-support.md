@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241716"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安裝、解除安裝和報表產生器支援
   報表產生器是一項報表撰寫工具，可用來建立、更新和共用報表、報表組件和共用資料集。 報表產生器有提供兩個版本：單機版和 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]。 單機版是由您或系統管理員安裝在電腦上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本是隨 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 自動安裝，而且從報表管理員或與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的 SharePoint 網站下載到電腦。  
@@ -59,7 +59,7 @@ ms.locfileid: "56298316"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>在電腦上安裝報表產生器的 ClickOnce 版本  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的報表產生器會隨著 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]一起安裝。 這會由 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]的原生和 SharePoint 整合安裝進行安裝。  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是一種 Microsoft 技術，用於部署 Windows 應用程式。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可讓使用者按一下網頁上的連結，即可安裝及執行 Windows 應用程式，例如報表產生器。 如需有關部署 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 應用程式、套用 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 應用程式安全性或在網際網路區域中執行 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 應用程式的詳細資訊，請參閱 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network 網站 ( [www.microsoft.com/msdn](https://www.microsoft.com/msdn)) 上的＜Windows Form 應用程式的 ClickOnce 部署＞、＜Windows Form 中的安全性概觀＞或＜受信任的應用程式部署概觀＞文件。  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 是一種 Microsoft 技術，用於部署 Windows 應用程式。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 可讓使用者按一下網頁上的連結，即可安裝及執行 Windows 應用程式，例如報表產生器。 如需有關部署[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]應用程式、 套用[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]應用程式的安全性或執行[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)][網際網路] 區域中的應用程式，請參閱 [ClickOnce 部署的 Windows Forms 應用程式] 中的 < 安全性Windows Forms 概觀 > 或 「 受信任的應用程式部署概觀 > 文章[!INCLUDE[msCoName](../includes/msconame-md.md)]開發人員網路網站，網址[ https://developer.microsoft.com/ ](https://developer.microsoft.com/)。  
   
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 版本的報表產生器位於報表伺服器上，當您按一下報表管理員中的 **[報表產生器]** 按鈕，或是在 SharePoint 文件庫中按一下 **[新增文件]** 功能表上的 **[報表產生器報表]** 選項時，就會安裝在您的電腦上。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298316"
 |1030|丹麥文|da-DK|  
 |1031|德文|de-DE|  
 |1032|希臘文|el-GR|  
-|1033|英文|en-US|  
+|1033|英文|zh-TW|  
 |1035|芬蘭文|fi-FI|  
 |1036|法文|fr-FR|  
 |1038|匈牙利文|hu-HU|  

@@ -3,7 +3,7 @@ title: Linux 上的 SQL Server 的 active Directory 驗證
 titleSuffix: SQL Server
 description: 這篇文章會提供在 Linux 上的 SQL Server 中的 Active Directory 驗證的概觀。
 author: rothja
-ms.date: 02/23/2018
+ms.date: 04/01/2019
 ms.author: jroth
 manager: craigg
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241018"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 驗證
 
@@ -42,9 +42,11 @@ AD 驗證透過具有下列優點[!INCLUDE[ssNoVersion](../includes/ssnoversion-
 
 如何設定 AD 驗證的詳細資料中的教學課程中，提供[教學課程：Linux 上的 SQL Server 使用 Active Directory 驗證](sql-server-linux-active-directory-authentication.md)。 下列清單提供摘要，以包含每個區段的連結，在本教學課程：
 
-1. [加入 Active Directory 網域的 SQL Server 主機](sql-server-linux-active-directory-authentication.md#join)。
+1. [加入 Active Directory 網域的 SQL Server 主機](sql-server-linux-active-directory-join-domain.md)。
 1. [適用於 SQL Server 中建立 AD 使用者和設定 ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser)。
 1. [設定 SQL Server 服務 keytab](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [安全 keytab 檔案](sql-server-linux-active-directory-authentication.md#securekeytab)。
+1. [設定 SQL Server 以使用 keytab 檔案進行 Kerberos 驗證](sql-server-linux-active-directory-authentication.md#keytabkerberos)。
 1. [在 TRANSACT-SQL 中建立 AD 為基礎的 SQL Server 登入](sql-server-linux-active-directory-authentication.md#createsqllogins)。
 1. [連接到 SQL Server 使用 AD 驗證](sql-server-linux-active-directory-authentication.md#connect)。
 

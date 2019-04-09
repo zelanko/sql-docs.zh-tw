@@ -11,12 +11,12 @@ ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241686"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比較不同 Microsoft 環境中的商業智慧功能
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 商業智慧可以部署在許多不同的環境，包括搭配 SharePoint Server、SharePoint Online 及 Power BI for Office 365 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 本主題會比較每個環境所支援的元件及功能。  
@@ -25,13 +25,13 @@ ms.locfileid: "56018160"
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>撰寫及管理 BI 報表及儀表板  
   
-||SQL Server 2014 與 SharePoint Server 2013|SharePoint Online 方案 2|Power BI for Office 365|  
+||SQL Server 2014 & SharePoint Server 2013|SharePoint Online 方案 2|Power BI for Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |BI 網站|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 組件庫|否|Power BI 網站|  
 |資料監管中心及查詢共用與管理|否|否|是 **<sup>1</sup>**|  
 |Master Data Services (MDS) 與 Data Quality Services (DQS) 整合|是|否|否|  
 |排程資料重新整理。|是，但並不支援包含 Power Query 資料的活頁簿。|否|是|  
-|自然語言查詢 (問與答)|否|否|是 **<sup>2</sup>**|  
+|自然語言查詢 （問與答）|否|否|是 **<sup>2</sup>**|  
 |預測預估|否|否|是 **<sup>3</sup>**|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 整合|是|否|否|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 整合 (多維度與表格式)|是|否|否|  
@@ -48,7 +48,7 @@ ms.locfileid: "56018160"
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>檢視及瀏覽 BI 資料、報表與儀表板  
   
-||SQL Server 2014 與 SharePoint Server 2013|SharePoint Online 方案 2|Power BI for Office 365|  
+||SQL Server 2014 & SharePoint Server 2013|SharePoint Online 方案 2|Power BI for Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |在瀏覽器中檢視 Microsoft Excel 活頁簿|是，但活頁簿大小必須小於 2 GB|是，但活頁簿大小必須小於 10 GB|是，但活頁簿大小必須小於 250 GB|  
 |在瀏覽器中探索 HTML5 的資料|否|否|是|  
@@ -64,9 +64,9 @@ ms.locfileid: "56018160"
   
 ## <a name="more-information"></a>詳細資訊  
   
--   [Excel、SharePoint Online 和 Power BI for Office 365 中的商務智慧功能](https://technet.microsoft.com/en-us/library/dn198235.aspx)。  
+-   [Excel 和 Office 365 中的 BI 功能](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743)。  
   
--   如需使用同義字之需求的詳細資訊，請參閱 [新增同義字至 Power Pivot Excel 資料模型](https://support.office.com/Article/Add-synonyms-to-a-Power-Pivot-Excel-data-model-345f4f5b-5ec2-4998-bc46-a26bdc0810b6?ui=en-US&rs=en-US&ad=US)。  
+-   如需使用同義字之需求的詳細資訊，請參閱[最佳化的 Power BI 問與答的同義字片語與](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling)pragmaticworks.com 在。  
   
 -   [Office Online，挑選您公司的社交網路：Yammer 或新聞摘要？](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "56018160"
   
 -   [比較 BI 中心網站與 Power BI for Office 365 網站](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx)。  
   
--   [介紹 Microsoft BI 報告和分析工具](https://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [使用 Microsoft 商業智慧 (BI) 工具進行分析和報告](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
 ## <a name="community-content"></a>社群內容  
  [比較內部部署與雲端上的 Microsoft 自助 BI](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/)。  
