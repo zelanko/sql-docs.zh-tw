@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241236"
 ---
 # <a name="define-attribute-relationships"></a>定義屬性關聯性
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，屬性是維度的基礎建置組塊。 維度包含一組根據屬性關聯性所組織的屬性。  
@@ -35,7 +35,7 @@ ms.locfileid: "53360430"
 -   假設已沿著關聯性路徑定義使用者自訂階層，則按照彙總設計演算法選取彙總時更有效率。  
   
     > [!NOTE]  
-    >  如需有關之重要性與含意的定義和設定屬性關聯性的詳細資訊，請參閱區段、 < 強化查詢效能 」 中[SQL Server 2005 Analysis Services 效能指南](https://go.microsoft.com/fwlink/?LinkId=81621)。  
+    >  如需有關之重要性與含意的定義和設定屬性關聯性的詳細資訊，請參閱區段、 < 強化查詢效能 」 中[SQL Server 2005 Analysis Services 效能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  
   
 ## <a name="attribute-relationship-considerations"></a>屬性關聯性考量  
  當基礎資料支援屬性關聯性時，您也應該定義屬性之間的唯一屬性關聯性。 若要定義唯一屬性關聯性，使用 [維度設計師] 的 [屬性關聯性] 索引標籤。  

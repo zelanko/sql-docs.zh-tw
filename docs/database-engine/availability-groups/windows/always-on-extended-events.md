@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207567"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860629"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Alwayson_health 工作階段](always-on-extended-events.md#BKMK_alwayson_health)  
   
- [偵錯的擴充事件](always-on-extended-events.md#BKMK_Debugging)  
+ [用於偵錯的擴充事件](always-on-extended-events.md#BKMK_Debugging)  
   
  [Always On 可用性群組擴充事件參考](always-on-extended-events.md#BKMK_Reference)  
   
@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [error_reported (1480)：資料庫複本角色變更](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  在可用性複本的狀態變更時發生。 建立可用性群組或加入可用性複本會觸發此事件。 它對於診斷失敗的自動容錯移轉很好用。 它也可以用來追蹤容錯移轉步驟。  
   
 #### <a name="event-information"></a>事件資訊  
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>後續步驟  
  [檢視事件工作階段資料](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  
