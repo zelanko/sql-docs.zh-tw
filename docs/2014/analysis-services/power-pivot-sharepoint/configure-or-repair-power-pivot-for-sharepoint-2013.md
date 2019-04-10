@@ -11,12 +11,12 @@ ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa6db168e9bcaf6fa16def53a35fc2626d6a24fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241806"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2013 (PowerPivot 組態工具)
   若要設定或修復 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安裝，請使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具，以及適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 本主題描述適用於 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。</c0>  
@@ -27,13 +27,13 @@ ms.locfileid: "53363910"
   
  [開始之前](#bkmk_before)  
   
- [若要使用 PowerPivot for SharePoint 2013 組態工具](#bkmk_using)  
+ [使用 PowerPivot for SharePoint 2013 組態工具](#bkmk_using)  
   
  [組態步驟](#bkmk_steps)  
   
  [用於設定伺服器的輸入值](#bkmk_input)  
   
- [後續的步驟](#bkmk_nextsteps)  
+ [後續步驟](#bkmk_nextsteps)  
   
 ##  <a name="bkmk_before"></a> 開始之前  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具會掃描程式檔案、登錄設定和可用的通訊埠。 若要充分利用這些工具，請檢閱下列各項。  
@@ -116,7 +116,7 @@ ms.locfileid: "53363910"
 ||SharePoint 管理中心通訊埠|預設值 (如果需要)|如果未設定伺服器陣列，則此工具會提供用於建立伺服器陣列的選項，包括建立指向管理中心的 HTTP 端點。 它會選取一個隨機產生、未使用中的通訊埠編號。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([伺服器名稱]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|使用者輸入|Excel Services 需要 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器才能啟用核心的 PowerPivot 功能。 您在此頁面上輸入的伺服器名稱也會加入至 **[設定 PowerPivot 伺服器]** 頁面上的清單。|  
 |**設定新伺服器陣列**|資料庫伺服器<br /><br /> 伺服器陣列帳戶<br /><br /> 複雜密碼<br /><br /> SharePoint 管理中心通訊埠|預設值 (如果需要)|設定會預設為您在主頁面中輸入的內容。|  
-|**建立 PowerPivot 服務應用程式**|服務應用程式名稱|預設|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式名稱的預設名稱為**預設 PowerPivot 服務應用程式**。 您可以在工具中取代為不同的值。|  
+|**建立 PowerPivot 服務應用程式**|服務應用程式名稱|預設|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式名稱：預設名稱為 **[預設的 PowerPivot 服務應用程式]**。 您可以在工具中取代為不同的值。|  
 ||資料庫伺服器|預設|裝載 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫的資料庫伺服器。 預設伺服器名稱就是用於伺服器陣列的資料庫伺服器。 您可以用不同的值來取代預設伺服器名稱。|  
 ||資料庫名稱|預設|要針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫建立的資料庫名稱。 預設資料庫名稱以服務應用程式名稱為基礎，後面跟著 GUID，以確保名稱是唯一的。 您可以在工具中取代為不同的值。|  
 |**建立預設 Web 應用程式**|Web 應用程式名稱|預設值 (如果需要)|如果沒有任何 Web 應用程式存在，此工具會建立一個。 Web 應用程式會設定為傳統模式驗證，並且接聽通訊埠 80。 上傳檔案大小上限設為 2047，這是 SharePoint 所允許的最大值。 較大的上傳檔案大小是為了容納將上傳至伺服器的大型 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 檔案。|  
@@ -192,10 +192,10 @@ ms.locfileid: "53363910"
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>建置 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿  
  當您在伺服器陣列中安裝了伺服器元件之後，就可以建立使用內嵌 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的第一份 Excel 2013 活頁簿，然後將它發行到 SharePoint 文件庫。 或者，您可以上傳或發行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿範例以確認 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。 如需詳細資訊，請參閱下列內容：  
+
+-   [在 Excel 2013 中的 PowerPivot 中最新消息](https://www.microsoft.com/microsoft-365/blog/2012/12/13/introduction-to-powerpivot-in-excel-2013/)。  
   
--   [在 Excel 2013 中的 PowerPivot 中最新消息](http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1)(http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1)。  
-  
--   [在 Excel 2013 增益集啟動 PowerPivot](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)。  
+-   [在 Excel 2013 增益集啟動 PowerPivot](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)。  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>加入其他 SharePoint 模式的 Analysis Services 伺服器  
  一段時間之後，如果您決定需要額外的資料儲存和處理功能，可以將其他以 SharePoint 模式執行 Analysis Services 的伺服器加入至伺服器陣列。 若為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013，您可以使用 SharePoint 模式安裝新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，然後設定 Excel Services。 如需詳細資訊，請參閱的 < 超過單一伺服器安裝 > 一節[PowerPivot for SharePoint 2013 安裝](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
@@ -205,7 +205,7 @@ ms.locfileid: "53363910"
   
 ## <a name="see-also"></a>另請參閱  
  [安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [PowerPivot 組態工具](power-pivot-configuration-tools.md)   
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)   
  [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   

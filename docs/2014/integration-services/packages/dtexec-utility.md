@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12fdd6e68b2e6d823ec32f88334804443a79555
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241883"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
   `dtexec`命令提示字元公用程式用來設定及執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。 `dtexec` 公用程式可存取所有封裝組態及執行功能，例如參數、連接、屬性、變數、記錄與進度指標。 `dtexec`公用程式可讓您從這些來源載入封裝：[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器、.ispac 專案檔案， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝存放區和檔案系統。  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安裝的 **xp_cmdshell** 選項預設為停用。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，新安裝的 **xp_cmdshell** 選項預設為停用。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
 ##  <a name="syntax"></a> 語法  
   
@@ -311,13 +311,13 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所解碼的字元：  
   
         -   ProgID：DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所解碼的字元：  
   
         -   ProgID：DTS.LogProviderSQLServer.1  
   
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> 範例  
  下列範例示範如何使用`dtexec`若要設定及執行的命令提示字元公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。  
   
- **[Running Packages]**  
+ **執行封裝**  
   
  若要利用 Windows 驗證來執行儲存至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝，請使用下列程式碼：  
   
@@ -669,6 +669,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  [在 SQL Server Data Tools 中執行套件](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>相關內容  
- www.mattmasson.com 上的部落格文章： [結束碼、DTEXEC 和 SSIS 目錄](https://go.microsoft.com/fwlink/?LinkId=251523)。  
+ www.mattmasson.com 上的部落格文章： [結束碼、DTEXEC 和 SSIS 目錄](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)。  
   
   

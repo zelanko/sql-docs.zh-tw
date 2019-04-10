@@ -11,12 +11,12 @@ ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 250e6c0a6c7bf1f5ddeb0bb5978ca70ab3545f8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241936"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 中的 PowerPivot 資料重新整理
   在 SharePoint 2013 中， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型重新整理的設計會利用 Excel Services 做為主要元件，在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上載入並重新整理資料模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器會在 SharePoint 伺服器陣列外部執行。  
@@ -27,17 +27,17 @@ ms.locfileid: "53352711"
   
  **本主題內容：**  
   
--   [Interactive Data Refresh](#bkmk_interactive_refresh)  
+-   [互動式資料重新整理](#bkmk_interactive_refresh)  
   
 -   [Windows 驗證與活頁簿資料連接以及互動式資料重新整理](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
+-   [排定的資料重新整理](#bkmk_scheduled_refresh)  
   
 -   [SharePoint 2013 中排程的資料重新整理架構](#bkmk_refresh_architecture)  
   
 -   [其他驗證考量](#datarefresh_additional_authentication)  
   
--   [其他資訊](#bkmk_moreinformation)  
+-   [[詳細資訊]](#bkmk_moreinformation)  
   
 ## <a name="background"></a>背景  
  SharePoint Server 2013 Excel Services 會管理 Excel 2013 活頁簿的資料重新整理，並且在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上觸發資料模型處理。 若為 Excel 2010 活頁簿，Excel Services 也會管理活頁簿與資料模型的載入和儲存。 不過，Excel Services 會仰賴 PowerPivot 系統服務，將處理命令傳送給資料模型。 下表將摘要說明根據活頁簿的版本傳送資料重新整理命令的元件。 假設的環境是 SharePoint 2013 伺服器陣列，並且設定為使用以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server。  
@@ -127,7 +127,7 @@ ms.locfileid: "53352711"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 如需詳細資訊，請參閱 <<c0> [ 做為作業系統的一部分](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(https://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
+ 如需詳細資訊，請參閱 <<c0> [ 做為作業系統的一部分](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **排程的資料重新整理關鍵重點：**  
@@ -233,10 +233,10 @@ ms.locfileid: "53352711"
 ##  <a name="bkmk_moreinformation"></a> 其他資訊  
  [PowerPivot 資料重新整理疑難排解](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
- [SharePoint 2013 中的 excel Services](https://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<https://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>))。  
+ [SharePoint 2013 中的 excel Services](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)。 
   
 ## <a name="see-also"></a>另請參閱  
- [升級活頁簿和排程的資料重新整理&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [PowerPivot for SharePoint 2013 安裝](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   
