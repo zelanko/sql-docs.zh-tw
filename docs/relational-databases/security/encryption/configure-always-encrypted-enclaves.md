@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327884"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872148"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>設定具有安全記憶體保護區的 Always Encrypted
 
@@ -144,7 +144,7 @@ NuGet 套件要用於 Visual Studio 專案，以使用具有安全記憶體保�
 - 設定資料庫資料行主要金鑰中繼資料中的 **ENCLAVE_COMPUTATIONS** 屬性。
 - 資料行主要金鑰屬性值 (包含 **ENCLAVE_COMPUTATIONS** 設定) 經數位簽署。 此工具會將使用實際資料行主要金鑰所產生的簽章新增至中繼資料。 簽章的目的是要防止惡意 DBA 和電腦管理員竄改 **ENCLAVE_COMPUTATIONS** 設定。 SQL 用戶端驅動程式會先驗證簽章，才允許使用記憶體保護區。 這可讓安全性系統管理員控制在記憶體保護區內計算哪些資料行資料。
 
-資料行主要金鑰的 **ENCLAVE_COMPUTATIONS** 屬性是不變的；金鑰在佈建之後就無法變更。 不過，您可以透過稱為[資料行主要金鑰輪替](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key)的程序，將資料行主要金鑰取代為其 **ENCLAVE_COMPUTATIONS** 屬性值與原始金鑰不同的新金鑰。 如需 **ENCLAVE_COMPUTATIONS** 屬性的詳細資訊，請參閱 [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md)。
+資料行主要金鑰的 **ENCLAVE_COMPUTATIONS** 屬性是不變的；金鑰在佈建之後就無法變更。 不過，您可以透過稱為[資料行主要金鑰輪替](#make-columns-enclave-enabled-by-rotating-their-column-master-key)的程序，將資料行主要金鑰取代為其 **ENCLAVE_COMPUTATIONS** 屬性值與原始金鑰不同的新金鑰。 如需 **ENCLAVE_COMPUTATIONS** 屬性的詳細資訊，請參閱 [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md)。
 
 若要佈建已啟用記憶體保護區的資料行加密金鑰，您需要確定加密資料行加密金鑰的資料行主要金鑰已啟用記憶體保護區。
 
@@ -152,7 +152,7 @@ NuGet 套件要用於 Visual Studio 專案，以使用具有安全記憶體保�
 
 - 已啟用記憶體保護區的**資料行主要金鑰必須儲存至 Windows 憑證存放區或 Azure Key Vault**。 目前不支援將已啟用記憶體保護區的資料行主要金鑰儲存至其他類型金鑰存放區 (硬體安全性模組或自訂金鑰存放區)。
 
-### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**使用 SQL Server Management Studio (SSMS) 佈建已啟用記憶體保護區的金鑰**
+### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>使用 SQL Server Management Studio (SSMS) 佈建已啟用記憶體保護區的金鑰**
 
 下列步驟會建立已啟用記憶體保護區的金鑰 (需要 SSMS 18.0 或更新版本)：
 
@@ -177,7 +177,7 @@ NuGet 套件要用於 Visual Studio 專案，以使用具有安全記憶體保�
     3. 在 [資料行主要金鑰] 下拉式清單中，選取您在先前步驟中建立的資料行主要金鑰。
     4. 按一下 [確定] 。
 
-### <a name="provision-enclave-enabled-keys-using-powershell"></a>**使用 PowerShell 佈建已啟用記憶體保護區的金鑰**
+### **<a name="provision-enclave-enabled-keys-using-powershell"></a>使用 PowerShell 佈建已啟用記憶體保護區的金鑰**
 
 下列各節提供範例 PowerShell 指令碼，以佈建已啟用記憶體保護區的金鑰。 會醒目提示具有安全記憶體保護區的 Always Encrypted 特定 (全新) 步驟。 如需使用 PowerShell 佈建金鑰的詳細資訊 (非具有安全記憶體保護區的 Always Encrypted 特定資訊)，請參閱[使用 PowerShell 設定 Always Encrypted 金鑰](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell)。
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 在用戶端/開發電腦上，開啟 Windows PowerShell ISE，並執行下列指令碼。
 
-**步驟 1：佈建 Azure Key Vault 中的資料行主要金鑰**
+**步驟 1:佈建 Azure Key Vault 中的資料行主要金鑰**
 
 這也可以使用 Azure 入口網站完成。 如需詳細資料，請參閱[從 Azure 入口網站管理金鑰保存庫](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)。
 
@@ -250,7 +250,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**步驟 2：在資料庫中建立資料行主要金鑰中繼資料、建立資料行加密金鑰，以及在資料庫中建立資料行加密金鑰中繼資料**
+**步驟 2:在資料庫中建立資料行主要金鑰中繼資料、建立資料行加密金鑰，以及在資料庫中建立資料行加密金鑰中繼資料**
 
 
 ```powershell
@@ -441,7 +441,7 @@ ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
 
 若要使用未啟用記憶體保護區的金鑰來加密資料行，您需要使用用戶端工具，例如 SSMS 中的 Always Encrypted 精靈，或 SqlServer PowerShell 模組中的 Set-SqlColumnEncryption Cmdlet。 如需詳細資料，請參閱：
 
-- [Always Encrypted 精靈](always-encrypted-wizard.md)
+- [永遠加密精靈](always-encrypted-wizard.md)
 - [使用 PowerShell 設定資料行加密](configure-column-encryption-using-powershell.md)
 
 
@@ -536,9 +536,9 @@ GO
   - 包含資料行的資料表整個內容需要移至資料庫外部才能重新加密，因此僅建議用於小型資料表。 
 
 如需詳細資訊，請參閱以下章節：
-  - [輪替資料行主要金鑰以將資料行設為啟用記憶體保護區](#make-columns-enclave-enabled-by-rotating-their-column-master-key)
+  - [輪替資料行主要金鑰以將資料行設為已啟用記憶體保護區](#make-columns-enclave-enabled-by-rotating-their-column-master-key)
   - [就地重新加密資料行](#re-encrypt-columns-in-place)
-  - [重新加密用戶端上的資料行](#re-encrypt-columns-on-the-client-side)
+  - [在用戶端上重新加密資料行](#re-encrypt-columns-on-the-client-side)
 
 ### <a name="make-columns-enclave-enabled-by-rotating-their-column-master-key"></a>輪替資料行主要金鑰以將資料行設為啟用記憶體保護區
 
@@ -742,7 +742,7 @@ GO
 
 對已啟用記憶體保護區之資料行嘗試豐富查詢的最快方式，是從已啟用 Always Encrypted 參數化的 SSMS 查詢視窗。 如需 SSMS 中此有用功能的詳細資料，請參閱：
 
-- [Always Encrypted 的參數化 - 使用 SSMS 插入、更新並依加密資料行篩選](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) \(英文\)
+- [Always Encrypted 的參數化 - 使用 SSMS 插入、更新並依加密資料行篩選](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
 - [查詢加密資料行](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 

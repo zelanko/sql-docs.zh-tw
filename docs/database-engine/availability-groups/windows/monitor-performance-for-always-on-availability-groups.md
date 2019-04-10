@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203347"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872318"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203347"
   
  其中涵蓋下列主題：  
   
--   [資料同步處理程序](#BKMK_DATA_SYNC_PROCESS)  
+-   [資料同步處理程序](#data-synchronization-process)  
   
--   [流程控制閘道](#BKMK_FLOW_CONTROL_GATES)  
+-   [流程控制閘道](#flow-control-gates)  
   
--   [預估容錯移轉時間 (RTO)](#BKMK_RTO)  
+-   [預估容錯移轉時間 (RTO)](#estimating-failover-time-rto)  
   
--   [預估潛在資料遺失 (RPO)](#BKMK_RPO)  
+-   [預估潛在資料遺失 (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [監視 RTO 和 RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [監視 RTO 和 RPO](#monitoring-for-rto-and-rpo)  
   
 -   [效能疑難排解案例](#BKMK_SCENARIOS)  
   
@@ -60,9 +60,9 @@ ms.locfileid: "53203347"
   
 |||||  
 |-|-|-|-|  
-|**Level**|**閘道數目**|**訊息數目**|**實用的計量**|  
+|**層級**|**閘道數目**|**訊息數目**|**實用的計量**|  
 |傳輸|每個可用性複本 1 個|8192|擴充事件 **database_transport_flow_control_action**|  
-|[資料庫]|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
+|[資料庫]|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND ](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
   
  一旦達到其中一個閘道的訊息閾值，記錄檔訊息便不會再傳送至特定複本，或是針對特定資料庫傳送。 一旦收到傳送訊息的訊息收條，就可以傳送訊息，讓傳送訊息數目低於閾值。  
   
@@ -329,9 +329,9 @@ ms.locfileid: "53203347"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>監視 RTO 和 RPO  
- 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似 [Always On 健全狀況模型，第 2 部分：擴充健全狀況模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)中提供的 GUI 教學課程。  
+ 本節示範如何監視 RTO 和 RPO 計量的可用性群組。 此示範類似下列文章中提供的 GUI 教學課程：[Always On 健康情況模型，第 2 部分：Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (Always On 健全狀況模型第 2 部分：擴充健全狀況模型)。  
   
- [預估容錯移轉時間 (RTO)](#BKMK_RTO) 和[預估潛在資料遺失 (RPO)](#BKMK_RPO) 中容錯移轉時間和潛在資料遺失的元素，會提供為原則管理 Facet **資料庫複本狀態**中便利的效能計量 (請參閱[檢閱 SQL Server 物件的原則式管理 Facet](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md))。 您可以依排程監視這兩個計量，並在計量分別超過您的 RTO 和 RPO 時收到警示。  
+ [預估容錯移轉時間 (RTO)](#estimating-failover-time-rto) 和[預估潛在資料遺失 (RPO)](#estimating-potential-data-loss-rpo) 中容錯移轉時間和潛在資料遺失的元素，會提供為原則管理 Facet **資料庫複本狀態**中便利的效能計量 (請參閱[檢閱 SQL Server 物件的原則式管理 Facet](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md))。 您可以依排程監視這兩個計量，並在計量分別超過您的 RTO 和 RPO 時收到警示。  
   
  示範指令碼會建立依照其個別排程執行的兩個系統原則，具有下列特性：  
   
@@ -357,43 +357,43 @@ ms.locfileid: "53203347"
   
 4.  使用下列規格建立[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**：`RTO`  
+    -   **名稱**： `RTO`  
   
     -   **Facet**：**資料庫複本狀態**  
   
-    -   **欄位**：`Add(@EstimatedRecoveryTime, 60)`  
+    -   **欄位**： `Add(@EstimatedRecoveryTime, 60)`  
   
     -   **運算子**：**<=**  
   
-    -   **值**：`600`  
+    -   **值**： `600`  
   
      當潛在容錯移轉時間超過 10 分鐘 (包括失敗偵測和容錯移轉的 60 秒額外負荷)，此條件會失敗。  
   
 5.  使用下列規格建立第二個[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**：`RPO`  
+    -   **名稱**： `RPO`  
   
     -   **Facet**：**資料庫複本狀態**  
   
-    -   **欄位**：`@EstimatedDataLoss`  
+    -   **欄位**： `@EstimatedDataLoss`  
   
     -   **運算子**：**<=**  
   
-    -   **值**：`3600`  
+    -   **值**： `3600`  
   
      當潛在資料遺失超過 1 小時時，此條件會失敗。  
   
 6.  使用下列規格建立第三個[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**：`IsPrimaryReplica`  
+    -   **名稱**： `IsPrimaryReplica`  
   
     -   **Facet**：**可用性群組**  
   
-    -   **欄位**：`@LocalReplicaRole`  
+    -   **欄位**： `@LocalReplicaRole`  
   
     -   **運算子**：**=**  
   
-    -   **值**：`Primary`  
+    -   **值**： `Primary`  
   
      此條件會檢查給定可用性群組的本機可用性複本是否為主要複本。  
   
@@ -401,9 +401,9 @@ ms.locfileid: "53203347"
   
     -   [一般] 頁面：  
   
-        -   **名稱**：`CustomSecondaryDatabaseRTO`  
+        -   **名稱**： `CustomSecondaryDatabaseRTO`  
   
-        -   **檢查條件**：`RTO`  
+        -   **檢查條件**： `RTO`  
   
         -   **針對目標**：**IsPrimaryReplica AvailabilityGroup** 中的**每個 DatabaseReplicaState**  
   
@@ -429,9 +429,9 @@ ms.locfileid: "53203347"
   
     -   [一般] 頁面：  
   
-        -   **名稱**：`CustomAvailabilityDatabaseRPO`  
+        -   **名稱**： `CustomAvailabilityDatabaseRPO`  
   
-        -   **檢查條件**：`RPO`  
+        -   **檢查條件**： `RPO`  
   
         -   **針對目標**：**IsPrimaryReplica AvailabilityGroup** 中的**每個 DatabaseReplicaState**  
   
@@ -474,5 +474,3 @@ ms.locfileid: "53203347"
 |hadr_dump_primary_progress|`alwayson`|偵錯|Primary|  
 |hadr_dump_log_progress|`alwayson`|偵錯|Primary|  
 |hadr_undo_of_redo_log_scan|`alwayson`|分析|次要|  
-  
-  

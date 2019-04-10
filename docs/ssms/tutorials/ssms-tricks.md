@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: 教學課程：使用 SQL Server Management Studio 的其他祕訣和訣竅
 description: '涵蓋 SSMS 使用上之一些其他祕訣與訣竅的教學課程。 '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663104"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872218"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
 本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
@@ -216,7 +216,7 @@ ms.locfileid: "56663104"
 您有一些選項可用來在連線到 SQL Server 之前和之後尋找您的 SQL Server 名稱。  
 
 ### <a name="before-you-connect-to-sql-server"></a>連線到 SQL Server 之前
-1. 請遵循下列步驟找出[磁碟上的 SQL Server 錯誤記錄檔](#finding-your-error-log-if-you-cannot-connect-to-sql)。 您的路徑可能與下圖中的路徑不同。
+1. 請遵循下列步驟找出[磁碟上的 SQL Server 錯誤記錄檔](#find-the-error-log-location-if-you-cant-connect-to-sql-server)。 您的路徑可能與下圖中的路徑不同。
 2. 在 [記事本] 中開啟 errorlog.log 檔案。  
 3. 搜尋文字「伺服器名稱是」。
     
@@ -253,5 +253,3 @@ ms.locfileid: "56663104"
 4. 檢視查詢結果以識別您連線的 SQL Server 執行個體名稱： 
     
     ![查詢 SQL 伺服器名稱](media/ssms-tricks/queryservername.png)
-
-

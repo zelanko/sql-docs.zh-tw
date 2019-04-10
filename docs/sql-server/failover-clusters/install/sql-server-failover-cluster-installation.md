@@ -10,12 +10,12 @@ ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa0b798027bbd5eb5d310e31d97378a7375d4d60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
+ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632106"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58913303"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,12 @@ ms.locfileid: "47632106"
     -   容錯移轉叢集中的所有節點必須為相同平台 (即 32 位元或 64 位元)，而且必須在相同的作業系統版本上執行。 此外，您必須將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 64 位元版本安裝在執行 Windows 64 位元版本作業系統的 64 位元硬體上。 這一版沒有容錯移轉叢集的 WOW64 支援。  
   
 3.  為每個容錯移轉叢集執行個體指定多個 IP 位址。 您可以為每個子網路指定多個 IP 位址。 若在相同的子網路上有多重 IP 位址， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 AND。 若正跨多重子網路進行節點的叢集作業， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式會將相依性設定為 OR。  
-  
+
+4.  SQL Server 容錯移轉叢集執行個體 (FCI) 需要已加入網域的叢集節點。 **不支援**下列設定：
+    - 工作群組叢集上的 SQL FCI。 
+    - 多網域叢集上的 SQL FCI。   
+    - 網域 + 工作群組叢集上的 SQL FCI。 
+
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝選項  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>選項 1：整合式安裝與加入節點  
@@ -67,7 +72,7 @@ ms.locfileid: "47632106"
 #### <a name="ip-address-configuration-during-setup"></a>安裝期間的 IP 位址組態  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式可在執行下列動作時，設定或變更 IP 資源的相依性設定：  
   
--   整合式安裝 - [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   整合式安裝 - [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   CompleteFailoverCluster (進階安裝) - [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   

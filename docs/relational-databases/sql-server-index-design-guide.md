@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880541"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872328"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -277,7 +277,7 @@ ON Purchasing.PurchaseOrderDetail
     例如，員工識別碼可唯一識別員工。 在 `EmployeeID` 資料行上的叢集索引或 [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) 條件約束，將改善查詢的效能，可根據員工識別碼來搜尋員工資訊。 此外，也可以在 `LastName`、 `FirstName`、 `MiddleName` 上面建立叢集索引，因為員工記錄經常以此方式來群組和查詢，而這些資料行的組合仍可提供高度的差異性。 
 
     > [!TIP]
-    > 如未特別指定，建立[主索引鍵](../relational-databases/tables/create-primary-keys.md)條件約束時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會建立[叢集索引](#clustered_index)以支援該條件約束。
+    > 如未特別指定，建立[主索引鍵](../relational-databases/tables/create-primary-keys.md)條件約束時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會建立[叢集索引](#Clustered)以支援該條件約束。
     > 雖然 *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* 可以用來將唯一性強制執行為主索引鍵，但它不是有效的叢集索引鍵。
     > 如果使用 *uniqueidentifier* 作為主索引鍵，建議您將其建立為非叢集索引，並使用另一個資料行，例如 `IDENTITY` 來建立叢集索引。   
   
@@ -584,7 +584,7 @@ WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;
   
  在某些情況下，篩選索引會涵蓋查詢，而不需將資料行以篩選索引定義中的索引鍵或內含資料行方式包含在篩選索引運算式中。 下列指導方針說明篩選索引運算式中的資料行何時應該是篩選索引定義中的索引鍵或內含資料行。 其中的範例會參考先前所建立的篩選索引 `FIBillOfMaterialsWithEndDate` 。  
   
- 如果篩選索引運算式相等於查詢述詞，且查詢並未以篩選索引運算式中的資料行傳回查詢結果，則篩選索引運算式中的資料行不需要是篩選索引定義中的索引鍵或內含資料行。 例如， `FIBillOfMaterialsWithEndDate` 包含下列查詢，因為查詢述詞相當於篩選運算式，且查詢結果未傳回 `EndDate` 。 `FIBillOfMaterialsWithEndDate` 不需要在篩選的索引定義中以 `EndDate` 作為索引鍵或內含資料行。  
+ 如果篩選索引運算式相等於查詢述詞，且查詢並未以篩選索引運算式中的資料行傳回查詢結果，則篩選索引運算式中的資料行不需要是篩選索引定義中的索引鍵或內含資料行。 例如，`FIBillOfMaterialsWithEndDate` 包含下列查詢，因為查詢述詞相當於篩選運算式，且查詢結果未傳回 `EndDate`。 `FIBillOfMaterialsWithEndDate` 不需要在篩選的索引定義中以 `EndDate` 作為索引鍵或內含資料行。  
   
 ```sql  
 SELECT ComponentID, StartDate FROM Production.BillOfMaterials  
@@ -897,7 +897,7 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [資料行存放區索引概觀](../relational-databases/indexes/columnstore-indexes-overview.md)  
 [為記憶體最佳化資料表的雜湊索引進行疑難排解](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
-[記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
+[經記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)   
 [索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      

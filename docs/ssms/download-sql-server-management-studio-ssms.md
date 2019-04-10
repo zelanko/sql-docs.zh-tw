@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: ff8380e286c40f479bbc9afaea48b12feeab1694
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566537"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042025"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ SSMS 是免費的！
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 是目前正式運作 (GA) 版本的 SSMS
 
-[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![d下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9.1 升級套件 (從 17.x 升級到 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![d下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.9.1 升級套件 (從 17.x 升級到 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **版本資訊**
 
@@ -61,7 +61,7 @@ SSMS 是免費的！
 
 [簡體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [繁體中文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-如需 SSMS 17.9.1 的其他資訊，請參閱 [SSMS 17.9.1 變更記錄](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release)。
+如需 SSMS 17.9.1 的其他資訊，請參閱 [SSMS 17.9.1 變更記錄](release-notes-ssms.md#1791-latest-ga-release)。
 
 ## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>SSMS 安裝祕訣與問題 (SSMS 17.9.1)
 
@@ -76,9 +76,9 @@ SSMS 是免費的！
 
 ## <a name="ssms-180-rc1"></a>SSMS 18.0 (RC1)
 
-**SSMS 18.0 候選版 1 (RC1) 現在已可供使用，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援！**
+**SSMS 18.0 候選版 1 (RC1) 現已可供使用，它是最新一代的 *SQL Server Management Studio*，可提供 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的支援！**
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![download](../ssdt/media/download.png) 下載 SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1* 是 SSMS 18.0 的最新公開預覽版。 如果您先前已安裝 SSMS 18.0 預覽版，請將它解除安裝，再安裝 SSMS 18.0 RC1。
 
@@ -111,7 +111,7 @@ SQL Server Management Studio 18.0 升級套件 (升級到 18.0)：<br>
 
 SSMS 18.0 (RC1) 是 SQL Server Management Studio 的最新版本。 18.x 世代的 SSMS 幾乎支援 SQL Server 2008 到 SQL Server 2019 預覽版的所有功能範圍。
 
-如需此版本中新增功能的詳細資料，請參閱 [SSMS 變更記錄](sql-server-management-studio-changelog-ssms.md)。
+如需此版本中最新功能的詳細資料，請參閱 [SSMS 版本資訊](release-notes-ssms.md)。
 
 ## <a name="supported-sql-offerings-ssms-180-rc1"></a>支援的 SQL 供應項目 (SSMS 18.0 RC1)
 
@@ -140,7 +140,7 @@ SSMS 18.0 (RC1) 是 SQL Server Management Studio 的最新版本。 18.x 世代�
 
 ## <a name="previous-releases"></a>舊版
 
-[先前 SQL Server Management Studio 版本](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
+[先前 SQL Server Management Studio 版本](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## <a name="feedback"></a>意見反應
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7534e39be1973861ab827e7f5e2dab6adf941e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016999"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872248"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)]、[!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] 和 [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] 防止 Windows Server 容錯移轉叢集執行就地作業系統升級，並具有叢集允許的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。 叢集在升級為至少 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 之後即可保持最新狀態。
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)]、[!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] 和 [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] 會防止 Windows Server 容錯移轉叢集就地執行作業系統升級，從而限定叢集允許的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。 叢集在升級為至少 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 之後即可保持最新狀態。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -46,9 +46,9 @@ ms.locfileid: "56016999"
 
 |                                   | 需要所有伺服器物件和 VNNS | 需要所有伺服器物件和 VNNS | 不需要伺服器物件/VNNS\* | 不需要伺服器物件/VNNS\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_可用性群組？(是/否)_**                  | **_是_**                              | **_否_**                                                            | **_是_**    | **_否_**    |
-| **叢集只會使用 SQL FCI**         | [案例 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [案例 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [案例 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [案例 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
-| **叢集使用獨立執行個體** | [案例 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [案例 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [案例 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+| **_可用性群組？ (是/否)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
+| **叢集只會使用 SQL FCI**         | [案例 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [案例 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [實例 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [案例 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **叢集使用獨立執行個體** | [案例 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [案例 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [實例 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [案例 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* 排除可用性群組接聽程式名稱
 
@@ -123,7 +123,7 @@ ms.locfileid: "56016999"
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>案例 3：有 SQL FCI 和 SQL Server 可用性群組的 Windows 叢集
 
-如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式未使用任何獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (只有包含在至少一個可用性群組中的 SQL FCI)，則可以使用與「無可用性群組、無獨立執行個體」案例類似的方法將此項目移轉至新叢集。 將系統資料表複製至目標 FCI 共用磁碟之前，您必須卸除原始環境中的所有可用性群組。 所有資料庫都移轉至目標電腦之後，您將會重新建立具有相同結構描述和接聽程式名稱的可用性群組。 如此一來，Windows Server 容錯移轉叢集資源的格式會正確，並在目標叢集上進行管理。 **移轉之前，必須在目標環境之每部電腦的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 中啟用 AlwaysOn。**
+如果 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式未使用任何獨立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (只有包含在至少一個可用性群組中的 SQL FCI)，則可以使用與「無可用性群組、無獨立執行個體」案例類似的方法將此項目移轉至新叢集。 將系統資料表複製至目標 FCI 共用磁碟之前，您必須卸除原始環境中的所有可用性群組。 所有資料庫都移轉至目標電腦之後，您將會重新建立具有相同結構描述和接聽程式名稱的可用性群組。 如此一來，Windows Server 容錯移轉叢集資源的格式會正確，並在目標叢集上進行管理。 **移轉之前，必須在目標環境內每部電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager 中啟用 Always On。**
 
 ### <a name="to-perform-the-upgrade"></a>執行升級
 
@@ -197,7 +197,7 @@ ms.locfileid: "56016999"
 
 ## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>案例 5：有獨立 SQL Server 執行個體和可用性群組的 Windows 叢集
 
-移轉使用具有獨立複本之可用性群組的叢集，與使用可用性群組移轉具有 FCI 之叢集的程序類似。 您仍然必須刪除原始可用性群組，並在目標叢集上重新予以建構；不過，會因移轉獨立執行個體的額外成本而造成額外的停機時間。 **移轉之前，必須在目標環境的每個 FCI 上啟用 AlwaysOn。**
+移轉使用具有獨立複本之可用性群組的叢集，與使用可用性群組移轉具有 FCI 之叢集的程序類似。 您仍然必須刪除原始可用性群組，並在目標叢集上重新予以建構；不過，會因移轉獨立執行個體的額外成本而造成額外的停機時間。 **移轉之前，必須在目標環境的每個 FCI 上啟用 Always On。**
 
 ###  <a name="to-perform-the-upgrade"></a>執行升級
 
@@ -285,7 +285,7 @@ ms.locfileid: "56016999"
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
--   **作業**
+-   **中稱為**
 
     將適當地移轉作業與系統資料庫。 任何執行 SQL Agent 作業或 SQL Agent 本身的使用者都會有必要條件中所指定目標電腦的相同權限。
 
@@ -313,7 +313,7 @@ ms.locfileid: "56016999"
 
     SSIS 專案會與 SSIS 資料庫一起移轉。 移動 SSIS 資料庫之後，會在移動任何系統資料表之前立即執行套件。
 
--   **檔案資料來源**
+-   **檔案型資料來源**
 
     必須可以在 SSIS 套件所指定的相同位置存取一般檔案、Excel 檔案、XML 來源和其他項目。
 
@@ -323,4 +323,4 @@ ms.locfileid: "56016999"
 - [善用新的 SQL Server 2016 功能](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
 - [升級 SQL Server 容錯移轉叢集執行個體](upgrade-a-sql-server-failover-cluster-instance.md)
 - [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-- [將功能新增至 SQL Server 2016 的執行個體 (安裝程式)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+- [將功能加入至 SQL Server 2016 的執行個體 (安裝程式)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

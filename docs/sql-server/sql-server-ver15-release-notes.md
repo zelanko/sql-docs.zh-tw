@@ -10,23 +10,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492850"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860059"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文描述 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) 版本的限制和已知問題。 如需相關資訊，請參閱：
-- [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [SQL Server 2019 中的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預覽版本可供您體驗即將推出版本的功能。 它們不支援或授權用於生產環境。 明確不支援下列情節：
 >
-> - 與其他版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並存安裝
+> - 與其他版本並存安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - 從任何版本升級 SQL Server 的現有執行個體
 
 **請試用 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]！**
@@ -37,7 +37,7 @@ ms.locfileid: "58492850"
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 是 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 的最新公開版本。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 僅提供評估版。 沒有其他可用版本。 CTP 版本的支援說明於安裝媒體隨附的 `license_Eval.rtf` 中。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 僅提供評估版。 沒有其他可用版本。 CTP 版本的支援說明於安裝媒體隨附的 `license_Eval.rtf` 中。
 
 在下列其中一個位置可以找到有限支援：
 
@@ -45,7 +45,7 @@ ms.locfileid: "58492850"
   - [SQL Server 意見反應](https://aka.ms/sqlfeedback)
   - [SQL Server 使用者入門](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [SQL Server 文件](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+  - [SQL Server 文件集](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
 - 或具有 [#sqlhelp](https://twitter.com/search?q=%23sqlhelp) 的推文 [@SQLServer](https://twitter.com/SQLServer)
 

@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617058"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899724"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,21 +49,21 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>傳回值  
-在發生錯誤的預存程序 CATCH 區塊中呼叫時，`ERROR_PROCEDURE` 會傳回該預存程序的名稱。  
+在 CATCH 區塊中呼叫時，`ERROR_PROCEDURE` 會傳回發生錯誤之預存程序或觸發程序的名稱。
   
-如果未在預存程序或觸發程序內發生錯誤，則 `ERROR_PROCEDURE` 會傳回 NULL。  
+`ERROR_PROCEDURE` 如果錯誤不是發生於預存程序或觸發程序內，則會傳回 NULL。  
   
-在 CATCH 區塊範圍之外呼叫時，`ERROR_PROCEDURE` 會傳回 NULL。  
+`ERROR_PROCEDURE` 在 CATCH 區塊範圍之外呼叫時，會傳回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
 `ERROR_PROCEDURE` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
-不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_PROCEDURE` 都會傳回預存程序或觸發程序的名稱。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
+`ERROR_PROCEDURE` 不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，都會傳回發生錯誤之預存程序或觸發程序的名稱。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_PROCEDURE  
-此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_PROCEDURE` 會傳回發生錯誤之預存程序的名稱。  
+此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_PROCEDURE` 傳回發生錯誤之預存程序的名稱。  
   
 ```  
 -- Verify that the stored procedure does not already exist.  

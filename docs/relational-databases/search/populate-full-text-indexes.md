@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973647"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042267"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      根據預設，或者如果您指定 `CHANGE_TRACKING AUTO`，全文檢索引擎就會針對全文檢索索引使用自動母體擴展。 初始完整母體擴展完成之後，系統就會追蹤變更，因為基底資料表中的資料已修改，而且追蹤的變更會自動傳播。 不過，全文檢索索引會在背景更新，所以傳播的變更可能不會立即反映在索引中。  
   
-     **使用自動母體擴展來設定追蹤變更**  
+     **使用自動母體擴展開始追蹤變更**  
   
     -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ...WITH CHANGE_TRACKING AUTO  
   
@@ -161,7 +161,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  累加母體擴展的執行要件是，索引資料表必須包含 **timestamp** 資料類型資料行。 少了 **timestamp** 資料行，就無法執行累加母體擴展。   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 **timestamp** 資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 母體擴展結束時，全文檢索引擎會記錄新的 **timestamp** 值。 這個值就是「SQL 收集程式」所找到的最大 **timestamp** 值。 此值會在下次累加母體擴展啟動時使用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用  資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 母體擴展結束時，全文檢索引擎會記錄新的 **timestamp** 值。 這個值就是「SQL 收集程式」所找到的最大 **timestamp** 值。 此值會在下次累加母體擴展啟動時使用。  
  
 在某些情況下，累加母體擴展要求會導致完整母體擴展。
 -   對不含 **timestamp** 資料行的資料表提出累加母體擴展要求的話，會導致執行完整母體擴展作業。
@@ -217,8 +217,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 以下是編目記錄檔名稱的變動部分。
--   <**DatabaseID**> - 資料庫的識別碼。 <**dbid**> 是開頭為零的五位數數字。  
--   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 <**catid**> 是開頭為零的五位數數字。  
+-   <**DatabaseID**> - 資料庫的識別碼。 \<**dbid**> 是開頭為零的五位數數字。  
+-   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 \<**catid**> 是開頭為零的五位數數字。  
 -   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄檔數目。  
   
  例如，`SQLFT0000500008.2` 是指資料庫識別碼 = 5 而且全文檢索目錄識別碼 = 8 之資料庫的編目記錄檔。 位於檔案名稱結尾的 2 表示此資料庫/目錄組有兩個搜耙記錄檔。  

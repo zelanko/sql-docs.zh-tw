@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557835"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872018"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
 
@@ -41,7 +41,7 @@ ms.locfileid: "51557835"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **後續操作：**[重新命名資料庫之後](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > 若要重新命名 Azure SQL 資料倉儲或平行處理資料倉儲中的資料庫，請使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 陳述式。
@@ -57,7 +57,7 @@ ms.locfileid: "51557835"
   
 ### <a name="security"></a>Security  
   
-#### <a name="permissions"></a>[權限]
+#### <a name="permissions"></a>權限
 
 需要資料庫的 ALTER 權限。  
   

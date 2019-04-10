@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53381029"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860739"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53381029"
 
 分散式可用性群組是跨兩個不同可用性群組之特殊類型的可用性群組。 參與分散式可用性群組的可用性群組不需要位於相同的位置中。 群組可以實體、虛擬、內部部署形式，存在於公用雲端或任何支援可用性群組部署的位置。 這包括跨網域，甚至跨平台，例如介於一個裝載於 Linux、一個裝載於 Windows 的可用性群組之間。 只要兩個可用性群組可以通訊，您就可以設定包含它們的分散式可用性群組。
 
-傳統可用性群組具有 WSFC 叢集中所設定的資源。 分散式可用性群組不會在 WSFC 叢集中設定任何項目。 在 SQL Server 內維護它的所有相關項目。 若要了解如何檢視分散式可用性群組的資訊，請參閱[檢視分散式可用性群組資訊](#viewing-distributed-availability-group-information)。 
+傳統可用性群組具有 WSFC 叢集中所設定的資源。 分散式可用性群組不會在 WSFC 叢集中設定任何項目。 在 SQL Server 內維護它的所有相關項目。 若要了解如何檢視分散式可用性群組的資訊，請參閱[檢視分散式可用性群組資訊](#monitor-distributed-availability-group-health)。 
 
 分散式可用性群組需要基礎可用性群組具有接聽程式。 當您建立分散式可用性群組時，可以使用 ENDPOINT_URL 參數指定它的已設定接聽程式，而不是像使用傳統可用性群組一樣地提供獨立執行個體的基礎伺服器名稱 (或者，如果是 SQL Server 容錯移轉叢集執行個體 [FCI]，則是與網路名稱資源建立關聯的值)。 雖然分散式可用性群組的每個基礎可用性群組都具有接聽程式，但是分散式可用性群組沒有接聽程式。
 
@@ -76,7 +76,7 @@ SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同�
 
 ### <a name="windows-server-versions-and-distributed-availability-groups"></a>Windows Server 版本和分散式可用性群組
 
-分散式可用性群組跨多個可用性群組，且各在其專屬基礎 WSFC 叢集上，而且分散式可用性群組是僅限 SQL Server 建構。  這表示裝載個別可用性群組的 WSFC 叢集可以有不同的 Windows Server 主要版本。 SQL Server 的主要版本必須相同，如上節所討論。 與[初始圖](#fig1)類似，下圖顯示參與分散式可用性群組的 AG 1 和 AG 2，但每個 WSFC 叢集都是不同版本的 Windows Server。
+分散式可用性群組跨多個可用性群組，且各在其專屬基礎 WSFC 叢集上，而且分散式可用性群組是僅限 SQL Server 建構。  這表示裝載個別可用性群組的 WSFC 叢集可以有不同的 Windows Server 主要版本。 SQL Server 的主要版本必須相同，如上節所討論。 與初始圖非常類似，下圖顯示參與分散式可用性群組的 AG 1 和 AG 2，但每個 WSFC 叢集都是不同版本的 Windows Server。
 
 
 ![具有不同 Windows Server 版本之 WSFC 叢集的分散式可用性群組](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
@@ -96,9 +96,9 @@ SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同�
 
 以下是分散式可用性群組的三個主要使用案例： 
 
-* [災害復原和更輕鬆的多網站組態](#disaster-recovery-and-multi-site-scenarios)
-* [移轉至新硬體或組態，可能包括使用新硬體或變更基礎作業系統](#migration-using-a-distributed-availability-group)
-* [跨多個可用性群組以在單一可用性群組中增加八個以上的可讀取複本數目](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+* [災害復原和更輕鬆的多站台設定](#disaster-recovery-and-multi-site-scenarios)
+* [移轉至新硬體或設定，可能包括使用新硬體或變更基礎作業系統](#migrate-by-using-a-distributed-availability-group)
+* [藉由跨越多個可用性群組，在單一可用性群組中增加八個以上可讀取的複本數目](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>災害復原和多網站案例
 
@@ -178,7 +178,7 @@ SQL Server 2017 或更新版本中的分散式可用性群組可以混合相同�
 
 分散式可用性群組是僅限 SQL Server 建構，而且在基礎 WSFC 叢集中看不到它。 下圖顯示兩個不同的 WSFC 叢集 (CLUSTER_A 和 CLUSTER_B)，且各有其專屬可用性群組。 這裡只討論 CLUSTER_A 中的 AG1 以及 CLUSTER_B 中的 AG2。 
 
-[透過 PowerShell Get-ClusterGroup 命令取得兩個 WSFC 叢集，其中包含多個可用性群組](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+[透過 PowerShell Get-ClusterGroup 命令，取得兩個包含多個可用性群組的 WSFC 叢集](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
 
 
 ```
@@ -212,7 +212,7 @@ Cluster Group                   JC                    Online
 
 ![動作沒有可用的選項](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
-如下圖所示，次要複本在 SQL Server Management Studio 中不顯示與分散式可用性群組相關的任何資訊。 這些可用性群組名稱對應至上一個 [CLUSTER_A WSFC 叢集](#fig7)映像中所示的角色。
+如下圖所示，次要複本在 SQL Server Management Studio 中不顯示與分散式可用性群組相關的任何資訊。 這些可用性群組名稱會對應至上一個 CLUSTER_A WSFC 叢集映像中所示的角色。
 
 ![在 SQL Server Management Studio 中檢視次要複本](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
 
@@ -412,5 +412,3 @@ GO
 * [使用新增可用性群組對話方塊 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [使用 Transact-SQL 建立可用性群組](create-an-availability-group-transact-sql.md)
-
- 

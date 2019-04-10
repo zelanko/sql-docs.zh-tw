@@ -30,12 +30,12 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7e8d9952c99ed78e98be6664e091cc744445f5d5
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685825"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872268"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ FILESTREAM 檔案群組容器不支援此選項。
 如果已指定，DBCC SHRINKFILE 會嘗試將檔案壓縮成 *target_size*。 檔案所要釋出區域中所使用頁面會移至檔案保留區域中的可用空間。 例如，有 10 MB 的資料檔案時，*target_size* 為 8 的 DBCC SHRINKFILE 作業會將檔案最後 2 MB 中所有已使用頁面移入檔案前 8 MB 中任何未配置的頁面。 DBCC SHRINKFILE 不會將檔案壓縮成超過所需的預存資料大小。 例如，如果使用了 10 MB 資料檔案中的 7 MB，將 *target_size* 設為 6 的 DBCC SHRINKFILE 陳述式，只會將檔案壓縮成 7 MB，而不是 6 MB。
   
 EMPTYFILE  
-將指定檔案中的所有資料移轉到「相同檔案群組」的其他檔案中。 換言之，EMPTYFILE 會將指定檔案中資料移轉至同一檔案群組中的其他檔案。 儘管這不是唯讀檔案，ENPTYFILE 可確保沒有任何新資料將新增至檔案。 您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來移除檔案。 如果您使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來變更檔案大小，則唯讀旗標會重設，且可以新增資料。
+將指定檔案中的所有資料移轉到「相同檔案群組」的其他檔案中。 換言之，EMPTYFILE 會將指定檔案中資料移轉至同一檔案群組中的其他檔案。 儘管這不是唯讀檔案，但 EMPTYFILE 可確保不會將任何新資料新增至檔案。 您可以使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來移除檔案。 如果您使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來變更檔案大小，則唯讀旗標會重設，且可以新增資料。
 
 對於 FILESTREAM 檔案群組容器來說，在 FILESTREAM 記憶體回收行程已執行並刪除所有由 EMPTYFILE 複製至其他容器且已不需要的檔案群組容器檔案之前，您無法使用 ALTER DATABASE 來移除檔案。 如需詳細資訊，請參閱 [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
@@ -169,7 +169,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   結束壓縮作業。 如果壓縮作業結束，則所有已完成的工作都會保留下來。  
 -   不執行任何動作，並允許壓縮作業等到封鎖交易完成。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  

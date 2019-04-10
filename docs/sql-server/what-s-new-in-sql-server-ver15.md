@@ -9,18 +9,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cfb679bdec74536d62b3f332ff644d80435907c0
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618265"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042417"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 是以舊版本為基礎，可讓 SQL Server 成長為平台，以供您選擇開發語言、資料類型、內部部署或雲端以及作業系統。 本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能。 第一節介紹最新預覽版本中新增的功能。 本文的其他章節會詳盡說明為此 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 最新發行的所有功能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以舊版為基礎，可使 SQL Server 發展為平台，讓您可以選擇開發語言、資料類型、內部部署或雲端，以及作業系統。 本文摘要說明 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 的新功能。 第一節介紹最新預覽版本中新增的功能。 本文的其他章節會詳盡說明為此 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 最新發行的所有功能。
 
 如需詳細資訊和已知問題，請參閱 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
@@ -39,8 +39,8 @@ Community Technical Preview (CTP) 2.4 是 [!INCLUDE[sql-server-2019](../includes
 - [巨量資料叢集](#bigdatacluster)
   - 說明在 Spark 中透過 TensorFlow 執行深度學習時的 GPU 支援。
   - 將 Spark 執行階段升級至 Spark 2.4。
-  - 資料集區的 `INSERT INTO SELECT` 支援。
-  - 使用於外部資料表查詢的 `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項子句。
+  - `INSERT INTO SELECT` 支援資料集區。
+  - `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項子句適用於外部資料表查詢。
 
 - [資料庫引擎](#databaseengine)
   - 截斷錯誤訊息預設為包含資料表和資料行名稱，以及被截斷的值。 請參閱[截斷](#truncation)。
@@ -55,12 +55,12 @@ Community Technical Preview (CTP) 2.4 是 [!INCLUDE[sql-server-2019](../includes
 
 ## <a id="bigdatacluster"></a>巨量資料叢集
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)會啟用新的案例，包括下列：
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [巨量資料叢集](../big-data-cluster/big-data-cluster-overview.md)會啟用新的案例，包括下列案例：
 
 - [在 Spark 中透過 TensorFlow 執行深度學習時的 GPU 支援](../big-data-cluster/spark-gpu-tensorflow.md)。 (CTP 2.4)
 - 將 Spark 執行階段升級至 Spark 2.4。 (CTP 2.4)
-- 資料集區的 `INSERT INTO SELECT` 支援。
-- 使用於外部資料表查詢的 `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項子句。
+- `INSERT INTO SELECT` 支援資料集區。
+- `FORCE SCALEOUTEXECUTION` 和 `DISABLE SCALEOUTEXECUTION` 選項子句適用於外部資料表查詢。
 - [在 IntelliJ 中提交 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 巨量資料叢集的 Spark 作業](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)。 (CTP 2.3)
 - [各種資料相關應用程式的應用程式部署及管理體驗](../big-data-cluster/big-data-cluster-create-apps.md)，包括使用 R 和 Python 來運作機器學習模型、執行 SQL Server Integration Services (SSIS) 作業等。 (CTP 2.3)
 - [在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 巨量資料叢集中使用 Sparklyr](../big-data-cluster/sparklyr-from-RStudio.md)。 (CTP 2.3)
@@ -77,7 +77,7 @@ Community Technical Preview (CTP) 2.4 是 [!INCLUDE[sql-server-2019](../includes
 
 ## <a id="databaseengine"></a> 資料庫引擎
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 針對 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 推出或強化了下列新功能。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 針對 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 引進或強化了下列新功能。
 
 ### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>新的 query_post_execution_plan_profile 擴充事件 (CTP 2.4)
 
@@ -171,7 +171,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>改善的間接檢查點延展性 (CTP 2.3)
 
-在先前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，使用者可能會在資料庫產生大量中途分頁 (例如 tempdb) 時遇到無產量的排程錯誤。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進改善的間接檢查點延展性，其有助於避免在具備大量 UPDATE/INSERT 工作負載的資料庫上發生這類錯誤。
+在先前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，使用者可能會在資料庫產生大量中途分頁 (例如 tempdb) 時遇到無產量的排程錯誤。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進改善的間接檢查點延展性，有助於避免在具備大量 UPDATE/INSERT 工作負載的資料庫上發生這類錯誤。
 
 ### <a name="utf-8-support-ctp-23"></a>UTF-8 支援 (CTP 2.3)
 
@@ -210,7 +210,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>改善統計資料封鎖的診斷資料 (CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 能針對等候同步統計資料更新作業的長時間執行查詢，提供改善的診斷資料。 動態管理檢視 `sys.dm_exec_requests` 資料行 `command` 會在 `SELECT` 正在等候同步統計資料更新作業完成以繼續查詢執行的情況下，顯示 `SELECT (STATMAN)`。 此外，新的等候類型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 會顯示在 `sys.dm_os_wait_stats` 動態管理檢視中。 它會顯示花費在同步統計資料重新整理作業上的累積執行個體層級時間。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 針對等候同步統計資料更新作業的長時間執行查詢，提供改善的診斷資料。 動態管理檢視 `sys.dm_exec_requests` 資料行 `command` 會在 `SELECT` 正在等候同步統計資料更新作業完成以繼續查詢執行的情況下，顯示 `SELECT (STATMAN)`。 此外，新的等候類型 `WAIT_ON_SYNC_STATISTICS_REFRESH` 會顯示在 `sys.dm_os_wait_stats` 動態管理檢視中。 它會顯示花費在同步統計資料重新整理作業上的累積執行個體層級時間。
 
 ### <a name="hybrid-buffer-pool-ctp-21"></a>混合式緩衝集區 (CTP 2.1)
 
@@ -295,7 +295,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
    - 存取最少數百萬個資料列的資料集。
    - 彙總一或多個具有大量不同值的資料行。
    - 回應比絕對精確更為重要。
-      - `APPROX_COUNT_DISTINCT` 會傳回通常位於 2% 準確答案內的結果。
+      - `APPROX_COUNT_DISTINCT` 傳回通常位於 2% 準確答案內的結果。
       - 而且它會在準確答案所需的一小段時間傳回概略答案。
 
 - **資料列存放區上的批次模式**不再需要資料行存放區索引以批次模式處理查詢。 批次模式可讓查詢運算子作用於一組資料列，而不是一次只有一個資料列。 根據預設，資料庫相容性層級 150 會啟用此功能。 下列所有條件都成立時，批次模式可改善存取資料列存放區資料表的查詢速度：
@@ -330,9 +330,9 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 - 使用 `ELEVATE_ONLINE` 和 `ELEVATE_RESUMABLE` 資料庫範圍設定選項，設定這些預設值。 這兩個選項都會讓引擎自動將支援的作業提升為索引線上或可繼續執行。 您可以使用這些選項來啟用下列行為：
 
-  - `FAIL_UNSUPPORTED` 選項允許線上或可繼續所有索引作業，並讓不支援線上或可繼續的索引作業失敗。
-  - `WHEN_SUPPPORTED` 選項允許線上或可繼續支援的作業，並離線或不可繼續執行索引的不受支援作業。
-  - 除非 DDL 陳述式中明確指定，否則 `OFF` 選項允許離線和不可繼續執行所有索引作業的目前行為。
+  - `FAIL_UNSUPPORTED` 選項允許所有索引作業上線或可繼續，並使不支援上線或可繼續的索引作業失敗。
+  - `WHEN_SUPPPORTED` 選項允許支援的作業上線或可繼續，並以離線或不可繼續的方式執行不支援索引的作業。
+  - `OFF` 選項允許目前以離線和不可繼續的方式執行所有索引作業的行為，除非 DDL 陳述式中明確指定。
 
 若要覆寫預設設定，請在索引建立和重建命令中包含 `ONLINE` 或 `RESUMABLE` 選項。 
 
@@ -368,7 +368,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>持續性記憶體裝置的擴充支援 (CTP 2.0)
 
-任何放在持續性記憶體裝置上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案現在可在「已啟用」模式中操作。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會直接存取裝置，並使用有效率的 memcpy 作業來略過作業系統的儲存體堆疊。 此模式會改善效能，因為它允許這類裝置的低延遲輸入/輸出。
+任何放在持續性記憶體裝置上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案現在可在「已啟用」模式中操作。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 直接存取裝置，使用有效率的 memcpy 作業來略過作業系統的儲存體堆疊。 此模式會改善效能，因為它允許這類裝置的低延遲輸入/輸出。
     - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 檔案範例包含：
         - 資料庫檔案
         - 交易記錄檔
@@ -377,15 +377,15 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
     - 在一些非 Microsoft 網站上，持續性記憶體偶而會非正式地稱為 *pmem*。
 
 > [!NOTE]
-> 在此預覽版本中，只有在 Linux 上才能在持續性記憶體裝置上啟用檔案。 自 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始，Windows 上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援持續性記憶體裝置。
+> 在此預覽版本中，只有在 Linux 上才能在持續性記憶體裝置上啟用檔案。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (在 Windows 上) 支援持續性記憶體裝置 (自 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 開始)。
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>DBCC CLONEDATABASE 中資料行存放區統計資料的支援 (CTP 2.0)
 
-`DBCC CLONEDATABASE` 會建立資料庫的僅限結構描述複本，其中包含為查詢效能問題進行疑難排解所需的所有項目，而不需要複製資料。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，此命令不會複製準確疑難排解資料行存放區索引查詢所需的統計資料，而且需要手動步驟才能擷取這項資訊。 現在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，`DBCC CLONEDATABASE` 會自動擷取資料行存放區索引的統計資料 blob，因此不需要任何手動步驟。
+`DBCC CLONEDATABASE` 建立資料庫的僅限結構描述複本，其中包含為查詢效能問題進行疑難排解所需的所有元素，而不需複製資料。 在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，此命令不會複製準確疑難排解資料行存放區索引查詢所需的統計資料，而且需要手動步驟才能擷取這項資訊。 現在，在 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 中，`DBCC CLONEDATABASE` 會自動擷取資料行存放區索引的統計資料 blob，因此不需要任何手動步驟。
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>新增至 sp_estimate_data_compression_savings 的新選項 (CTP 2.0)
 
-`sp_estimate_data_compression_savings` 傳回所要求物件的目前大小，並針對所要求的壓縮狀態預估物件大小。 此程序目前支援三個選項：`NONE`、`ROW` 和 `PAGE`。 `COLUMNSTORE_ARCHIVE` 推出了兩個新選項：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 `COLUMNSTORE`。 如果在使用標準或封存資料行存放區壓縮的資料表上建立資料行存放區索引，則這些新選項可讓您估計節省的空間。
+`sp_estimate_data_compression_savings` 傳回所要求物件目前的大小，並針對要求的壓縮狀態預估物件大小。 此程序目前支援三個選項：`NONE`、`ROW` 和 `PAGE`。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 引進了兩個新選項：`COLUMNSTORE` 和 `COLUMNSTORE_ARCHIVE`。 如果在使用標準或封存資料行存放區壓縮的資料表上建立資料行存放區索引，則這些新選項可讓您估計節省的空間。
 
 ### <a id="ml"></a> SQL Server 機器學習服務容錯移轉叢集和磁碟分割型模型 (CTP 2.0)
 
@@ -409,7 +409,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>新的 sys.dm_db_page_info 系統函數會傳回頁面資訊 (CTP 2.0)
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` 傳回資料庫中頁面的資訊。 此函式會傳回包含頁面中標頭資訊的資料列，包含 `object_id`、`index_id` 和 `partition_id`。 在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。 
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` 傳回資料庫中頁面的相關資訊。 此函式會傳回包含頁面中標頭資訊的資料列，包含 `object_id`、`index_id` 和 `partition_id`。 在大部分情況下，有此函式就不需要使用 `DBCC PAGE`。 
 
 為了簡化頁面相關等候的疑難排解，也已將稱為 page_resource 的新資料行新增至 `sys.dm_exec_requests` 和 `sys.sysprocesses`。 這個新的資料行可讓您透過另一個新的系統函數 `sys.fn_PageResCracker` 將 `sys.dm_db_page_info` 加入這些檢視表。 請參閱下列指令碼作為範例：
 
@@ -427,8 +427,8 @@ FROM sys.dm_exec_requests AS d
 
 - **新容器登錄 (CTP 2.1)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 和 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 的所有容器映像現在都位於 Microsoft 容器登錄中。 Microsoft 容器登錄是散發 Microsoft 產品容器的官方容器登錄。 此外，現在已發佈認證的 RHEL 型映像。
 
-  - Microsoft 容器登錄：`mcr.microsoft.com/mssql/server:vNext-CTP2.0`
-  - 認證的 RHEL 型容器映像：`mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
+  - Microsoft 容器登錄： `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
+  - 認證的 RHEL 型容器映像： `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
 - **複寫支援 (CTP 2.0)**：[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 支援 Linux 上的 SQL Server 複寫。 具有 SQL Agent 的 Linux 虛擬機器可以是發行者、散發者或訂閱者。 
 
@@ -490,7 +490,7 @@ FROM sys.dm_exec_requests AS d
   - 具有安全記憶體保護區的 Always Encrypted 支援。 (CTP 2.0)
   - 較小的下載大小。 (CTP 2.0)
   - 現在根據 Visual Studio 2017 Isolated Shell。 (CTP 2.0)
-  - 如需完整清單，請參閱 [SSMS 變更記錄](../ssms/sql-server-management-studio-changelog-ssms.md)。 (CTP 2.0)
+  - 如需完整清單，請參閱 [SSMS 變更記錄](../ssms/release-notes-ssms.md)。 (CTP 2.0)
 
 - [**SQL Server PowerShell 模組**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080)：SqlServer PowerShell 模組允許 SQL Server 開發人員、管理員及 BI 專業人員自動化資料庫部署及伺服器管理。
 
@@ -528,7 +528,7 @@ FROM sys.dm_exec_requests AS d
 
 - `SELECTEDMEASURENAME()` - 傳回包含目前處於內容中量值名稱的字串。  
 
-- `ISSELECTEDMEASURE(M1, M2, …)` - 傳回布林值，指出目前處於內容中之量值是否是其中一個指定為引數的項目。
+- `ISSELECTEDMEASURE(M1, M2, …)` - 傳回布林值，指出目前處於內容中的量值是否是其中一個指定為引數的項目。
 
 除了新的 DAX 函式外，還引進了兩個新的動態管理檢視：
 
@@ -562,6 +562,6 @@ FROM sys.dm_exec_requests AS d
 
 - [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 版本資訊](sql-server-ver15-release-notes.md)。
 
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]：Technical white paper](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />在 2018 年 9 月發佈。 適用於 Windows、Linux 及 Docker 容器的 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0。
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]：技術白皮書](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />在 2018 年 9 月發佈。 適用於 Windows、Linux 及 Docker 容器的 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
