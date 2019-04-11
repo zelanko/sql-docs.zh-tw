@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685426"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476714"
 ---
 # <a name="analyze-in-excel"></a>在 Excel 中分析
 
@@ -33,7 +33,7 @@ ms.locfileid: "57685426"
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>使用預設和網際網路銷售檢視方塊瀏覽  
 
-在這些首要工作中，您瀏覽您的模型使用這兩個預設檢視方塊，其中包含所有模型物件，以及使用 網際網路銷售檢視方塊您稍早。 網際網路銷售檢視方塊不包括 Customer 資料表物件。  
+在這些首要工作中，您使用這兩個預設檢視方塊，其中包含所有模型物件，依序瀏覽模型，也使用 網際網路銷售檢視方塊您稍早建立。 網際網路銷售檢視方塊不包括 Customer 資料表物件。  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>若要使用預設檢視方塊瀏覽  
   

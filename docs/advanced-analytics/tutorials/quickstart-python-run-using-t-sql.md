@@ -3,17 +3,17 @@ title: 快速入門中的"Hello World"基本的 Python 程式碼在 T-SQL-SQL Se
 description: 適用於 SQL Server 中的 Python 指令碼的快速入門。 了解呼叫 Python 指令碼在 hello world 練習使用 sp_execute_external_script 的系統預存程序的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/04/2019
+ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042217"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476633"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>快速入門：SQL Server 中的"Hello world"Python 指令碼 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "59042217"
     b = 2
     c = a/b
     d = a*b
-    print(c(c, d))
+    print(c, d)
     '
     ```
 
