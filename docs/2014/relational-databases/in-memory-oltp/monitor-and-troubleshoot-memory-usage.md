@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
+ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240436"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480274"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>監視與疑難排解記憶體使用量
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 耗用記憶體的模式與磁碟資料表不同。 您可以使用針對記憶體和記憶體回收子系統提供的 DMV 或效能計數器，監視資料庫中記憶體最佳化資料表和索引所配置和使用的記憶體數量。  如此就能讓您同時深入查看系統和資料庫層級，並且讓您防止因記憶體耗盡而發生問題。  
@@ -157,7 +157,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 如需詳細資訊，請參閱 [sys.dm_db_xtp_table_memory_stats](https://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)。  
+ 如需詳細資訊，請參閱 < [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)。  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>內部系統結構的記憶體耗用量  
  系統物件也會耗用記憶體，這些系統物件包括交易式結構、資料和差異檔案的緩衝區、記憶體回收結構等。 您可以藉由查詢 `sys.dm_xtp_system_memory_consumers` 找到這些系統物件所使用的記憶體，如此處所示。  
@@ -195,8 +195,9 @@ PGPOOL:256K               768                  768                  3
 PGPOOL: 64K               0                    0                    0  
 PGPOOL:  4K               0                    0                    0  
 ```  
-  
+
  如需詳細資訊，請參閱 [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)。  
+
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>存取記憶體最佳化資料表時的執行階段記憶體耗用量  
  您可以使用下列查詢判斷執行階段結構 (例如程序快取) 所耗用的記憶體：執行此查詢可取得執行階段結構 (例如程序快取) 所使用的記憶體。 所有執行階段結構都會加上 XTP 標記。  
@@ -229,7 +230,7 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- 如需詳細資訊，請參閱 [sys.dm_os_memory_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sys.dm_os_memory_objects (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)。  
   
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎跨執行個體所耗用的記憶體  
  管理配置給 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎和記憶體最佳化物件之記憶體的方式，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中其他任何記憶體取用者的管理方式相同。 MEMORYCLERK_XTP 類型的 Clerk 會考量所有配置給 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎的記憶體。 使用下列查詢可找出 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 引擎所使用的所有記憶體。  
@@ -255,7 +256,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- 如需詳細資訊，請參閱 [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sys.dm_os_memory_clerks (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)。  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>管理記憶體最佳化物件耗用的記憶體  
  您可以藉由將記憶體最佳化資料表繫結至具名資源集區的方式，控制資料表耗用的總記憶體，如 [將包含記憶體最佳化資料表的資料庫繫結至資源集區](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)主題中所述。  
@@ -267,7 +268,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  判斷記憶體耗用量增加的情況，以及您所剩的預留空間。 透過定期監視記憶體耗用量，就可以得知記憶體使用量成長的情況。 例如，如果您已將資料庫對應至具名資源集區，就可以監視效能計數器 Used Memory (KB)，查看記憶體使用量成長的情況。  
   
-3.  採取動作消除可能發生的記憶體問題。 如需詳細資訊，請參閱 [解決記憶體不足問題](resolve-out-of-memory-issues.md)。  
+3.  採取動作消除可能發生的記憶體問題。 如需詳細資訊，請參閱 <<c0> [ 解決記憶體不足問題](resolve-out-of-memory-issues.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將包含記憶體最佳化資料表的資料庫繫結至資源集區](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
