@@ -2,7 +2,6 @@ items:
 - name: 歡迎使用
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 概觀
-  href: ../toc/redirectfrom-overview-10.md
   items:
   - name: SQL Server 的新功能
     items:
@@ -42,7 +41,6 @@ items:
     - name: SQL Server 2008 R2 SP2
       href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: 巨量資料叢集
-  href: ../toc/redirectfrom-big-data-cluster.md
   items:
   - name: 概觀
     items:
@@ -195,12 +193,10 @@ items:
         - name: mssqlctl storage mount
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: 商務持續性
-  href: redirectfrom-business-continuity-10.md
   items:
   - name: 概觀
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: 備份與還原
-    href: ../toc/redirectfrom-backup-restore-10.md
     items:
     - name: 概觀
       items:
@@ -1008,7 +1004,6 @@ items:
         - name: 設定警告臨界值
           href: ../database-engine/database-mirroring/set-warning-thresholds.md
   - name: 記錄傳送
-    href: ../toc/redirectfrom-log-shipping.md
     items:
     - name: 概觀
       href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
@@ -1047,7 +1042,6 @@ items:
       - name: 記錄傳送監視器設定
         href: ../relational-databases/databases/log-shipping-monitor-settings.md
 - name: 資料庫設計
-  href: ../toc/redirectfrom-database-design.md
   items:
   - name: 階層式資料
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -1067,7 +1061,6 @@ items:
     - name: 設定工作階段語言
       href: ../relational-databases/collations/set-a-session-language.md
   - name: 資料庫
-    href: ../toc/redirectfrom-databases.md
     items:
     - name: 概觀
       href: ../relational-databases/databases/databases.md
@@ -1929,7 +1922,6 @@ items:
       - name: 在 OPENXML 中使用 value () 與 nodes () 方法
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 部署
-  href: redirectfrom-development-10.md
   items:
   - name: 程式設計互動 ++
     displayName: Connectivity, Connect, Connection
@@ -3972,7 +3964,6 @@ items:
   - name: 記憶體管理架構
     href: ../relational-databases/memory-management-architecture-guide.md
 - name: 安裝
-  href: redirectfrom-installation-10.md
   items:
   - name: 概觀
     items:
@@ -4417,7 +4408,6 @@ items:
       - name: 進階頁面
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: 移轉與載入資料
-  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -4585,7 +4575,6 @@ items:
     - name: DQS 安全性
       href: ../data-quality-services/dqs-security.md
   - name: 複寫
-    href: ../toc/redirectfrom-replication.md
     items:
     - name: 概觀
       href: ../relational-databases/replication/sql-server-replication.md
@@ -7236,7 +7225,6 @@ items:
   - name: 子查詢
     href: ../relational-databases/performance/subqueries.md
   - name: 資料虛擬化 (Polybase)
-    href: ../toc/redirectfrom-polybase.md
     items:
     - name: 概觀
       items:
@@ -10304,7 +10292,6 @@ items:
   - name: 使用 Help Viewer 的本機內容
     href: ../sql-server/sql-server-help-installation.md
 - name: 參考
-  href: ../toc/redirectfrom-reference-10.md
   items:
   - name: SQL 文件包含檔案
     href: ../sql-server/applies-to-includes.md
@@ -10312,7 +10299,6 @@ items:
     displayName: 2005, 2008, 2008 r2, 2012
     href: https://docs.microsoft.com/previous-versions/sql/
   - name: 資料庫範例
-    href: ../toc/redirectfrom-database-samples.md
     items:
     - name: 範例概觀
       href: ../samples/sql-samples-where-are.md
@@ -10323,12 +10309,10 @@ items:
       - name: 安裝與設定
         href: ../samples/adventureworks-install-configure.md
     - name: Wide World Importers
-      href: ../toc/redirectfrom-wide-world-importers.md
       items:
       - name: 概觀
         href: ../samples/wide-world-importers-what-is.md
       - name: OLTP
-        href: ../toc/redirectfrom-oltp-10.md
         items:
         - name: 資料庫目錄
           href: ../samples/wide-world-importers-oltp-database-catalog.md
@@ -10337,7 +10321,6 @@ items:
         - name: SQL Server 功能
           href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
       - name: 資料倉儲 (data warehouse)
-        href: ../toc/redirectfrom-data-warehouse-10.md
         items:
         - name: 資料庫目錄
           href: ../samples/wide-world-importers-dw-database-catalog.md
@@ -17277,9 +17260,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 處理 XQuery 中的命名空間
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: cae1885d4cadd788449b3f14bbd626ce06d9745d
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.openlocfilehash: bcc3ca478ec16c7a7fc1ff0213b67e29c8a28e78
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367256"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506575"
