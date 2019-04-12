@@ -848,7 +848,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* ) **適用於**：[!INCLUDE[ssNoVer
 - 若要針對資料表停用 Stretch，並將資料表的遠端資料從 Azure複製回 SQL Server，請執行下列命令。 無法取消此命令。
 
     ```sql
-    ALTER TABLE \<table name>
+    ALTER TABLE <table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
@@ -859,7 +859,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* ) **適用於**：[!INCLUDE[ssNoVer
 - 若要針對資料表停用 Stretch 並放棄遠端資料，請執行下列命令。
 
     ```sql
-    ALTER TABLE \<table_name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
