@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973677"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542208"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973677"
 ## <a name="syntax"></a>語法  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- **@dbname** = *database_name*表示要執行記憶體回收行程之資料庫的名稱。  
+ `[ @dbname = ]  'database_name'`  
+ 表示要執行記憶體回收行程之資料庫的名稱。  
   
 > [!NOTE]  
->  *dbname*已**sysname**。 如果未指定，則假設目前的資料庫。  
+> `@dbname` 已**sysname**。 如果未指定，則假設目前的資料庫。  
   
- **@filename** = *logical_file_name*  
- 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 **@filename** 是選擇性的。 如果未不指定任何邏輯的檔名，則記憶體回收行程會清除指定之資料庫中的所有 FILESTREAM 容器。  
+ `[ @filename = ] 'logical_file_name'`  
+ 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 `@filename` 是選擇性的。 如果未不指定任何邏輯的檔名，則記憶體回收行程會清除指定之資料庫中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
   

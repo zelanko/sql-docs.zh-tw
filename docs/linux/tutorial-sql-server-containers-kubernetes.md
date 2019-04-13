@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626318"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516604"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 Kubernetes 使用 Azure Kubernetes Service (AKS) 中的 SQL Server 容器
 
@@ -155,7 +155,7 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](https://kubernetes.io/docs
 
 在此範例中，裝載 SQL Server 執行個體的容器會描述為 Kubernetes 部署物件。 部署會建立在複本集。 複本集所建立的 pod。 
 
-在此步驟中，會建立資訊清單，以描述 SQL Server 為基礎的容器[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 資訊清單參考`mssql-server`永續性磁碟區宣告，而`mssql`已經套用到 Kubernetes 叢集的密碼。 資訊清單也會說明[服務](https://kubernetes.io/docs/concepts/services-networking/service/)。 此服務是負載平衡器。 負載平衡器可保證在復原 SQL Server 執行個體之後，仍然存在的 IP 位址。 
+在此步驟中，會建立資訊清單，以描述 SQL Server 為基礎的容器[mssql server linux](https://hub.docker.com/_/microsoft-mssql-server) Docker 映像。 資訊清單參考`mssql-server`永續性磁碟區宣告，而`mssql`已經套用到 Kubernetes 叢集的密碼。 資訊清單也會說明[服務](https://kubernetes.io/docs/concepts/services-networking/service/)。 此服務是負載平衡器。 負載平衡器可保證在復原 SQL Server 執行個體之後，仍然存在的 IP 位址。 
 
 1. 建立要描述的部署資訊清單 （YAML 檔案）。 下列範例說明的部署，包括 SQL Server 容器映像為基礎的容器。
 
@@ -253,7 +253,7 @@ Kubernetes 1.6 和更新版本可支援[儲存類別](https://kubernetes.io/docs
    在上述影像中，pod 的狀態已`Running`。 此狀態指出容器已就緒。 這可能需要幾分鐘的時間。
 
    >[!NOTE]
-   >建立部署之後，可能需要幾分鐘的時間之前是可見的 pod。 延遲是因為叢集會提取[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)從 Docker hub 映像。 第一次它提取映像之後，後續的部署可能會比較快，如果部署至已有映像快取於其中的節點。 
+   >建立部署之後，可能需要幾分鐘的時間之前是可見的 pod。 延遲是因為叢集會提取[mssql server linux](https://hub.docker.com/_/microsoft-mssql-server)從 Docker hub 映像。 第一次它提取映像之後，後續的部署可能會比較快，如果部署至已有映像快取於其中的節點。 
 
 1. 確認服務正在執行。 執行下列命令：
 
