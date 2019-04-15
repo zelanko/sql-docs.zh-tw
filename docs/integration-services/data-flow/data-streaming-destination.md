@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242496"
 ---
 # <a name="data-streaming-destination"></a>資料流目的地
   **資料流目的地** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目的地元件，可讓 **OLE DB Provider for SSIS** 取用 SSIS 封裝的輸出做為表格式結果集。 您可以建立連結的伺服器來使用 OLE DB Provider for SSIS，然後在連結的伺服器上執行 SQL 查詢來顯示 SSIS 封裝所傳回的資料。  
@@ -48,18 +48,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 > [!IMPORTANT]  
 >  如需詳細步驟，請參閱[逐步解說：將 SSIS 套件發佈為 SQL 檢視](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)。  
-  
-## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>使用 Power BI 系統管理中心公開 SSIS 封裝的輸出資料做為 OData 摘要  
- 藉由使用 Power BI 系統管理中心，IT 系統管理員可以將內部部署資料來源的資料當作 OData 摘要公開給使用者。 根據預設，Power BI 系統管理中心可讓您僅註冊 SQL Server 資料來源。 不過，您可以透過入口網站，藉由使用 **資料流目的地** 和 **Microsoft OLE DB Provider for SQL Server Integration Services (SSISOLEDB)** ，註冊 SSIS 封裝作為資料來源 ，並將 SSIS 封裝的結果資料當作 OData 摘要公開給使用者。  
-  
- 系統管理中心可讓您在 SQL Server 資料庫中發行檢視。 如此一來，您可以使用 SSIS 封裝發行精靈，來發行 SSIS 封裝做為 SQL 檢視。 接著，可在 Power BI 系統管理中心選取要包含於 OData 摘要中的檢視。 資料負責人可以使用適用於 Excel 的 Power Query 增益集，從 SSIS 封裝取用摘要。  
-  
- 如需詳細的逐步解說，請參閱 [發行 SSIS 封裝做為 OData 摘要來源](https://go.microsoft.com/fwlink/?LinkID=317367)。  
-  
-## <a name="in-this-section"></a>本節內容  
-  
--   [逐步解說：將 SSIS 套件發佈為 SQL 檢視](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
-  
+
 ## <a name="configure-data-streaming-destination"></a>設定資料流目的地
   您可以使用 [Advanced Editor for Data Streaming Destination (資料流目的地進階編輯器)] 對話方塊來設定資料流目的地。 若要開啟此對話方塊，請按兩下元件，或在資料流程設計師中，以滑鼠右鍵按一下元件，然後按一下 [編輯]。  
   
@@ -78,9 +67,4 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  在此索引標籤的上方窗格中，您會看到所有可用輸入資料行。 選取您想要在此元件輸出中包含的資料行。 在下方窗格中的清單，會顯示所選資料行。 您可以藉由在清單中輸入 [輸出別名]欄位的新名稱，變更輸出資料行的名稱。  
   
 ## <a name="input-output-properties-tab"></a>輸入與輸出屬性索引標籤  
- 類似於 [輸入資料行] 索引標籤，您可以變更此索引標籤中的輸出資料行名稱。在左側樹狀檢視中，依序展開 [Data Streaming Destination 輸入] 和 [輸入資料行]。 按一下輸入資料行名稱，在右窗格中的輸出資料行名稱中變更名稱。  
-  
-## <a name="see-also"></a>另請參閱  
- [發行 SSIS 封裝做為 OData 摘要來源](https://go.microsoft.com/fwlink/?LinkID=317367)  
-  
-  
+ 類似於 [輸入資料行] 索引標籤，您可以變更此索引標籤中的輸出資料行名稱。在左側樹狀檢視中，依序展開 [Data Streaming Destination 輸入] 和 [輸入資料行]。 按一下輸入資料行名稱，在右窗格中的輸出資料行名稱中變更名稱。

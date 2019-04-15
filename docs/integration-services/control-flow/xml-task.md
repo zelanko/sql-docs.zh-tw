@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290564"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291548"
 ---
 # <a name="xml-task"></a>XML 工作
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
@@ -121,7 +121,7 @@ ms.locfileid: "58290564"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [以 XML 工作驗證 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [運算式頁面](../../integration-services/expressions/expressions-page.md)  
   
@@ -164,7 +164,7 @@ ms.locfileid: "58290564"
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
   
- **Source**  
+ **來源**  
  如果 [Source] 設定為 [直接輸入]，請提供 XML 程式碼，或按一下省略符號按鈕 ([...])，然後使用 [文件來源編輯器] 對話方塊來提供 XML。  
   
  如果 [來源] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
@@ -428,11 +428,11 @@ ms.locfileid: "58290564"
 |**IgnoreXMLDeclaration**|指定是否比較 XML 宣告。|  
 |**IgnoreDTD**|指定是否忽略文件類型定義 (DTD)。|  
 |**IgnoreWhite Spaces**|指定在比較文件時是否忽略空白數量的差異。|  
-|**IgnoreNamespaces**|指定是否比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱。<br /><br /> 注意：如果此選項設定為 **True**，則會將擁有相同本機名稱但命名空間不同的兩個元素視為相同。|  
+|**IgnoreNamespaces**|指定是否比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱。<br /><br /> 注意:如果此選項設定為 **True**，則會將擁有相同本機名稱但命名空間不同的兩個元素視為相同。|  
 |**IgnoreProcessingInstructions**|指定是否比較處理指示。|  
-|**IgnoreOrderOf ChildElements**|指定是否比較子元素的順序。<br /><br /> 注意：如果此選項設定為 **True**，則會將只是在同層級清單中位置不同的子元素視為相同。|  
+|**IgnoreOrderOf ChildElements**|指定是否比較子元素的順序。<br /><br /> 注意:如果此選項設定為 **True**，則會將只是在同層級清單中位置不同的子元素視為相同。|  
 |**IgnoreComments**|指定是否比較註解節點。|  
-|**IgnorePrefixes**|指定是否比較元素與屬性名稱的前置詞。<br /><br /> 注意：如果此選項設定為 **True**，則會將擁有相同本機名稱但命名空間 URI 與前置詞不同的兩個元素視為相同。|  
+|**IgnorePrefixes**|指定是否比較元素與屬性名稱的前置詞。<br /><br /> 注意:如果此選項設定為 **True**，則會將擁有相同本機名稱但命名空間 URI 與前置詞不同的兩個元素視為相同。|  
   
  **FailOnDifference**  
  指定 Diff 作業失敗時工作是否失敗。  
@@ -530,9 +530,7 @@ ms.locfileid: "58290564"
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)、[新增變數](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相關內容  
-  
--   agilebi.com 上的部落格文章： [XML 目的地指令碼元件](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
-  
+
 -   www.codeplex.com 上的 CodePlex 範例： [處理 XML 資料封裝範例](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)   
   
   

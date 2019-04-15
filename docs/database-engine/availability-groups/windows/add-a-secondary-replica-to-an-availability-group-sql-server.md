@@ -2,7 +2,7 @@
 title: 將次要複本新增至可用性群組
 description: 了解如何使用 Transact-SQL (T-SQL)、PowerShell 或 SQL Server Management Studio (SSMS) 中的 [可用性群組精靈]，將次要複本新增至 Always On 可用性群組。
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 423d9370285d3b5e7df89ee8cecb6d539b16eb47
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241856"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>將次要複本新增至 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +31,14 @@ ms.locfileid: "53213007"
 -   您必須連接到裝載主要複本的伺服器執行個體。  
   
  如需詳細資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
-  
+
 ##  <a name="Security"></a> 安全性  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 權限  
  需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
-  
+
+[!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **加入複本**  
   
@@ -77,7 +79,7 @@ ms.locfileid: "53213007"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **加入複本**  
   
-1.  變更目錄 (**cd**) 為裝載主要複本的伺服器執行個體。  
+1.  將目錄 (**cd**) 變更為裝載主要複本的伺服器執行個體。  
   
 2.  使用 **New-SqlAvailabilityReplica** Cmdlet。  
   
@@ -123,7 +125,7 @@ ms.locfileid: "53213007"
   
 -   [將次要複本從可用性群組移除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [設定可用性複本的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
 -   [變更可用性複本的可用性模式 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
@@ -134,10 +136,10 @@ ms.locfileid: "53213007"
 -   [變更可用性複本的工作階段逾時期限 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [BACKUP_PRIORITY](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用 AlwaysOn 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [使用 Always On 儀表板 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [監視可用性群組 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

@@ -13,13 +13,13 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15838ca2bb994aba32cd4aa83d7e8e23c78743f9
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760101"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542238"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e64827ba35236f120f296baaaff7d01833ed6f5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c29a6baa8948168f4fa8bc8a8099941e8b91503
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291558"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服務 (SSIS 服務)
   本節中的主題討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務 (用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務)。 若要建立、儲存及執行 Integration Services 封裝，則不需要這項服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。  
@@ -381,7 +381,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 > [!IMPORTANT]  
 >  若要管理儲存在遠端伺服器上的封裝，您不必連接到該遠端伺服器上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務執行個體， 而是要編輯 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔，好讓 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 顯示儲存在遠端伺服器上的封裝。
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。 如需有關 DCOM 通訊協定如何穿越防火牆運作的詳細資訊，請參閱 MSDN Library 中的[搭配防火牆使用分散式 COM](https://go.microsoft.com/fwlink/?LinkId=12490)文件。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務使用 DCOM 通訊協定。
   
  有許多防火牆系統可用。 如果您正在執行 Windows 防火牆以外的防火牆，請參閱防火牆文件以獲取您正在使用之系統所特定的資訊。  
   

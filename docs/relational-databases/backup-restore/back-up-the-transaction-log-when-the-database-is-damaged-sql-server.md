@@ -1,7 +1,7 @@
 ---
 title: 資料庫損毀時備份交易記錄 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbeb8a002a0b269a70039757338ecf7be82895ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be62f7dfe7cce25d6b4cd63767bdea211dacd1a5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242176"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>資料庫損毀時備份交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47699846"
   
 -   **若要使用下列項目，在資料庫損毀時備份交易記錄**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -62,7 +62,9 @@ ms.locfileid: "47699846"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>若要備份交易記錄的結尾  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]**，然後視資料庫而定，選取使用者資料庫，或者展開 **[系統資料庫]** 並選取一個系統資料庫。  
@@ -132,7 +134,7 @@ ms.locfileid: "47699846"
   
 15. 如果是備份至磁帶機 (在 [一般] 頁面的 [目的地] 區段中指定)，[備份後卸載磁帶] 選項會啟用供選擇。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
   
-16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]** 壓縮備份，而且可以透過核取 **[不要壓縮備份]** 防止壓縮。  
+16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 備份壓縮與否預設是取決於 **backup-compression default** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]** 壓縮備份，而且可以透過核取 **[不要壓縮備份]** 防止壓縮。  
   
      **檢視目前的 backup compression default**  
   

@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407858"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516584"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407858"
 ##  <a name="VisualElement"></a> SQL Server 多重子網路容錯移轉叢集 (兩個節點、兩個子網路)  
  下圖代表兩個節點、兩個子網路的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]容錯移轉叢集執行個體 (FCI)。  
   
- ![具有 MultiSubnetFailover 的多重子網路架構](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "具有 MultiSubnetFailover 的多重子網路架構")  
+ ![具有 MultiSubnetFailover 的多重子網路架構](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "具有 MultiSubnetFailover 的多重子網路架構")  
   
   
 ##  <a name="Configurations"></a> 多重子網路容錯移轉叢集執行個體組態  
@@ -45,12 +45,12 @@ ms.locfileid: "52407858"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 包含 Node1 和 Node2。 Node1 會連接到 Subnet1 和 Subnet2。 Node2 也會連接到 Subnet1 和 Subnet2。 **安裝程式會將 IP 位址資源相依性設為** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 。  
   
-    > **注意** ：由於叢集的節點位於相同的子網路集，這個組態不會視為多重子網路容錯移轉叢集組態。  
+    > **注意：** 由於叢集的節點位於相同的子網路集，這個組態不會視為多重子網路容錯移轉叢集組態。  
   
 ##  <a name="ComponentsAndConcepts"></a> IP 位址資源考量  
  在多重子網路容錯移轉叢集組態中，IP 位址不會由容錯移轉叢集中的所有節點擁有，可能也不會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 啟動期間全數都在線上。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您可以將 IP 位址資源相依性設為 **OR**。 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以繫結到至少一個有效的 IP 位址時，這可讓它位於線上。  
   
-> **注意** ：在版本早於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本中，多重子站台叢集組態中使用了延展 V-LAN 技術來公開跨越站台之容錯移轉的單一 IP 位址。 利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨越不同子網路叢集節點的新功能，現在您可以在不需要實作延展 V-LAN 技術的情況下，設定跨越多個站台的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
+> **注意：** 在版本早於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版本中，多重子站台叢集組態中使用了延展 V-LAN 技術來公開跨越站台之容錯移轉的單一 IP 位址。 利用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 跨越不同子網路叢集節點的新功能，現在您可以在不需要實作延展 V-LAN 技術的情況下，設定跨越多個站台的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 位址資源 OR 相依性考量  
  若您將 IP 位址資源相依性設為 **OR**，可能需要考量下列容錯移轉行為：  

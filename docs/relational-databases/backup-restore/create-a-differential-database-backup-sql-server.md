@@ -1,7 +1,7 @@
 ---
 title: 建立差異資料庫備份 (SQL Server) | Microsoft 文件
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,16 +16,16 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7272df471f734d0813258897bb1e1a187efdfe6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 279047e483720f5d089325f9d9ed17467ea96804
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241408"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>建立差異資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立差異資料庫備份。  
+  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立差異資料庫備份。  
   
  **本主題的章節**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47849888"
   
      [限制事項](#Restrictions)  
   
-     [必要條件](#Prerequisites)  
+     [Prerequisites](#Prerequisites)  
   
      [建議](#Recommendations)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47849888"
   
 -   **若要使用下列項目建立差異資料庫備份：**  
   
-     [Transact-SQL](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -69,7 +69,9 @@ ms.locfileid: "47849888"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>建立差異資料庫備份  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 1.  連接到適當的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體之後，在 [物件總管] 中按一下伺服器名稱展開伺服器樹狀目錄。  
   
 2.  展開 **[資料庫]**，根據資料庫選取使用者資料庫或展開 **[系統資料庫]** ，然後選取一個系統資料庫。  
@@ -128,7 +130,7 @@ ms.locfileid: "47849888"
     > [!NOTE]  
     >  除非您備份的是交易記錄檔 (依 [一般] 頁面的 [備份類型] 區段中的指定)，否則 [交易記錄檔] 區段中的選項為非使用中。  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]** 壓縮備份，而且可以透過核取 **[不要壓縮備份]** 防止壓縮。  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 備份壓縮與否預設是取決於 **backup-compression default** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]** 壓縮備份，而且可以透過核取 **[不要壓縮備份]** 防止壓縮。  
   
      **檢視目前的 backup compression default**  
   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191048"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533346"
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52191048"
 > <sup>1</sup> 例如 UPDATE、DELETE 或 INSERT 作業。   
   
 ###  <a name="Restrictions"></a> 需要索引檢視表的 SET 選項  
-如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 `CONCAT_NULL_YIELDS_NULL` 設為 ON 之後，運算式 `'abc' + NULL` 會傳回 `NULL` 值。 不過，將 `CONCAT_NULL_YIEDS_NULL` 設為 OFF 之後，相同的運算式則會產生 `'abc'`。  
+如果在查詢執行時有不同的使用中 SET 選項，則評估相同的運算式可能會在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中產生不同的結果。 例如，將 SET 選項 `CONCAT_NULL_YIELDS_NULL` 設為 ON 之後，運算式 `'abc' + NULL` 會傳回 `NULL` 值。 不過，將 `CONCAT_NULL_YIELDS_NULL` 設為 OFF 之後，相同的運算式則會產生 `'abc'`。  
   
 若要確定檢視表可以正確地維護並傳回一致的結果，索引檢視表需要數個 SET 選項的固定值。 發生下列狀況時，必須將下表中的 SET 選項設為 [必要值] 欄中所顯示的值：  
   
@@ -160,7 +160,7 @@ ms.locfileid: "52191048"
 
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  至少必須具備資料庫的 **CREATE VIEW** 權限，以及要在其中建立檢視表之結構描述的 **ALTER** 權限。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
