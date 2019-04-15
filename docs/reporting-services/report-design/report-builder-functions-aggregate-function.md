@@ -1,6 +1,6 @@
 ---
 title: Aggregate 函式 (報表產生器及 SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24aba85806b6f13fac47371fc98d952afd0e177b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: a24554d0317c17edf9c532611c588ea7c38d1926
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367226"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>報表產生器函式 - Aggregate 函式
   傳回指定之運算式的自訂彙總，由資料提供者定義。  
@@ -33,7 +33,7 @@ Aggregate(expression, scope)
  要在其上執行彙總的運算式。 此運算式必須為簡單欄位參考。  
   
  *範圍 (scope)*  
- (**字串**) 包含要套用彙總函式之報表項目的資料集、群組或資料區的名稱。 *Scope* 必須是字串常數，而且不得為運算式。 如果未指定 *scope* ，則使用目前的範圍。  
+ (**String**) 包含要套用彙總函式之報表項目的資料集、群組或資料區的名稱。 *Scope* 必須是字串常數，而且不得為運算式。 如果未指定 *scope* ，則使用目前的範圍。  
   
 ## <a name="return-type"></a>傳回類型  
  傳回類型是由資料提供者決定。 如果資料提供者不支援此函數或無法使用資料，則傳回 **Nothing** 。  
