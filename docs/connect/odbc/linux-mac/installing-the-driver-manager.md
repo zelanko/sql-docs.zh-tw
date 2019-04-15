@@ -1,7 +1,7 @@
 ---
 title: Installing the Driver Manager (ODBC Driver for SQL Server) |Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305806"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041917"
 ---
 # <a name="installing-the-driver-manager"></a>安裝驅動程式管理員
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "58305806"
   
 5.  當您準備好要安裝，而且您的電腦可透過 FTP 存取外部網站時，請執行下列命令：**./build_dm.sh**。
 
-如果您的電腦無法透過 FTP 存取外部網站，請取得 `unixODBC-2.3.0.tar.gz`。 您可以取得`unixODBC-2.3.0.tar.gz`從[ http://www.unixodbc.org ](http://www.unixodbc.org/)。按一下頁面左側的 [下載] 連結，以移至下載頁面。 然後，按一下適當的連結，以下載 unixODBC-2.3.0 (不是 unixODBC-2.3.1)。 此版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支援 UnixODBC-2.3.1。 執行下列命令以開始進行 unixODBC 驅動程式管理員安裝： **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**。  
+如果您的電腦無法透過 FTP 存取外部網站，請取得 `unixODBC-2.3.0.tar.gz`。 您可以從 [http://www.unixodbc.org](http://www.unixodbc.org/) 取得 `unixODBC-2.3.0.tar.gz`。按一下頁面左側的 [下載] 連結，以移至下載頁面。 然後，按一下適當的連結，以下載 unixODBC-2.3.0 (不是 unixODBC-2.3.1)。 此版本的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不支援 UnixODBC-2.3.1。 執行下列命令以開始進行 unixODBC 驅動程式管理員安裝： **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**。  
 
 6.  鍵入 **YES**，繼續將檔案解壓縮。 這部分的處理序最多需要 5 分鐘才能完成。  
 
@@ -85,8 +85,8 @@ ms.locfileid: "58305806"
 您現在已可開始安裝驅動程式。 如需詳細資訊，請參閱 <<c0> [ 安裝 Microsoft ODBC Driver for Linux 和 macOS 上的 SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱
-[在 Linux 和 macOS 上安裝 Microsoft ODBC Driver for SQL Server](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS (在 Linux 及 macOS 上安裝 Microsoft ODBC Driver for SQL Server)](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [此驅動程式版本的已知問題](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[版本資訊](../../../connect/odbc/linux-mac/release-notes.md)
+[版本資訊](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

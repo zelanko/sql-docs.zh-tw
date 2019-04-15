@@ -11,17 +11,17 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9edff1e2afead8dcec3a23fa2d89c4eb8c6a1ef2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 059c949b11c0cd571fdf3c6ff2575476c477ef04
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602848"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788075"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC Drivers for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]是獨立的 ODBC 驅動程式提供給 Microsoft 的標準 ODBC 介面的實作應用程式開發介面 (API) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
+Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 是獨立的 ODBC 驅動程式，可提供應用程式開發介面 (API) 以實作 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的標準 ODBC 介面。
 
 Microsoft ODBC Driver for SQL Server 可用來建立新的應用程式。 您也可以升級目前使用較舊 ODBC 驅動程式的舊版應用程式。 ODBC Driver for SQL Server 支援連線至 Azure SQL Database、Azure SQL 資料倉儲、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 和 SQL Server 2005。  
 
@@ -29,16 +29,16 @@ Microsoft ODBC Driver for SQL Server 可用來建立新的應用程式。 您也
 
 | Version       | 支援的功能      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 17 for SQL Server | <ul><li>Always Encrypted 支援適用於 BCP API</li><li>新的連接字串屬性 UseFMTONLY 會導致驅動程式需要暫存資料表的特殊案例中使用舊版的中繼資料</li>
-| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>永遠加密</li><li>Azure AD 驗證</li><li>AlwaysOn 可用性群組 (AG)</li></ul>   | 
+| Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API 的 Always Encrypted 支援</li><li>新連接字串屬性 UseFMTONLY 會導致驅動程式在需要暫存資料表的特殊案例中使用舊版中繼資料</li>
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD 驗證</li><li>AlwaysOn 可用性群組 (AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>國際化網域名稱 (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>可感知驅動程式的連接共用</li><li>連接恢復功能</li><li>非同步執行 (輪詢方法)</li></ul> |    
 
 ## <a name="documentation"></a>文件集  
 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的文件包括：  
   
--   [版本資訊](../../../connect/odbc/windows/release-notes.md)  
--   [Microsoft ODBC Driver for SQL Server on Windows 的功能](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
+-   [ODBC to SQL Server on Windows 版本資訊](../../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md)  
+-   [Windows 上 Microsoft ODBC Driver for SQL Server 的功能](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
 -   [系統需求、安裝和驅動程式檔案](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
 -   [ODBC Driver for SQL Server 中可感知驅動程式的連接共用](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
 -   [非同步執行 &#40;通知方法&#41; 範例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  

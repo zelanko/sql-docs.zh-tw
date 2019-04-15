@@ -1,7 +1,7 @@
 ---
 title: Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/05/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600098"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042377"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原的支援
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-如需 Linux 和 macOS 的支援的 ODBC 驅動程式[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]的相關資訊，請參閱：  
+Linux 和 macOS 的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]的相關資訊，請參閱：  
   
--   [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
 -   [建立及設定可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
@@ -33,16 +33,16 @@ ms.locfileid: "51600098"
   
 您可以在連接字串中指定給定可用性群組的可用性群組接聽程式。 如果在 Linux 或 macOS 上，ODBC 應用程式連線到可用性群組中發生容錯移轉的資料庫，則原始連線會中斷，而且應用程式必須在容錯移轉後開啟新連線，才能繼續工作。
 
-在 Linux 和 macOS 上的 ODBC 驅動程式以循序方式逐一查看與 DNS 主機名稱相關聯，如果您未連接到可用性群組接聽程式，但多個 IP 位址與主機名稱相關聯的所有 IP 位址。
+如果您未連線到可用性群組接聽程式，而且多個 IP 位址與主機名稱建立關聯，則 Linux 和 macOS 上的 ODBC 驅動程式會循序逐一查看與 DNS 主機名稱建立關聯的所有 IP 位址。
 
-如果 DNS 伺服器的第一個傳回的 IP 位址不是可連接，這些反覆運算可能會很耗時。 在連線到可用性群組接聽程式時，驅動程式會嘗試平行建立對所有 IP 位址的連線。 如果連接嘗試成功，驅動程式就會捨棄任何暫止的連接嘗試。
+如果無法連線到 DNS 伺服器第一個傳回的 IP 位址，這些反覆運算可能會很費時。 在連線到可用性群組接聽程式時，驅動程式會嘗試平行建立對所有 IP 位址的連線。 如果連接嘗試成功，驅動程式就會捨棄任何暫止的連接嘗試。
 
 > [!NOTE]  
 > 連線可能會由於可用性群組容錯移轉而失敗，因此請實作連線重試邏輯，並重試失敗的連線，直到重新連線為止。 增加連接逾時並實作連接重試邏輯，可提高連接到可用性群組的機率。
 
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 進行連接
 
-在連線到**可用性群組接聽程式或**容錯移轉叢集執行個體時，請一律指定 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]MultiSubnetFailover=Yes[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 **MultiSubnetFailover** 可讓 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的所有可用性群組和容錯移轉叢集執行個體更快速地容錯移轉。 **MultiSubnetFailover** 也會大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會嘗試平行連接。 子網路容錯移轉期間，驅動程式會積極重試 TCP 連接。
+在連線到**可用性群組接聽程式或**容錯移轉叢集執行個體時，請一律指定 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]MultiSubnetFailover=Yes[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 **MultiSubnetFailover** 可讓 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中的所有可用性群組和容錯移轉叢集執行個體更快速地容錯移轉。 **MultiSubnetFailover** 也會大幅縮短單一和多重子網路 AlwaysOn 拓撲的容錯移轉時間。 在多重子網路容錯移轉期間，用戶端會嘗試平行連接。 在子網路容錯移轉期間，驅動程式會積極重試 TCP 連接。
 
 **MultiSubnetFailover** 連接屬性表示應用程式正在可用性群組或容錯移轉叢集執行個體中部署。 驅動程式會嘗試連線到所有 IP 位址，以嘗試連線到主要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上的資料庫。 透過 **MultiSubnetFailover=Yes** 進行連線時，用戶端重試 TCP 連線之速度會比作業系統的預設 TCP 重新傳輸間隔快。 **MultiSubnetFailover=Yes** 可在容錯移轉 AlwaysOn 可用性群組或 AlwaysOn 容錯移轉叢集執行個體之後更快速地重新連接。 **MultiSubnetFailover=Yes** 適用於單一和多重子網路可用性群組與容錯移轉叢集執行個體。  
 
@@ -50,13 +50,13 @@ ms.locfileid: "51600098"
 
 連線到可用性群組或容錯移轉叢集執行個體中的伺服器時，請注意下列：
   
--   指定**MultiSubnetFailover = Yes**來連接到單一子網路或多重子網路可用性群組時，改善效能。
+-   連線到單一子網路或多重子網路可用性群組時，指定 **MultiSubnetFailover=Yes** 提高效能。
 
--   指定可用性群組的可用性群組接聽程式為您的連接字串中的伺服器。
+-   在連接字串中指定可用性群組的可用性群組接聽程式作為伺服器。
   
 -   您無法連線到設定了超過 64 個 IP 位址的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。
 
--   兩者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]驗證或 Kerberos 驗證可以搭配**MultiSubnetFailover = Yes**而不會影響應用程式的行為。
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證或 Kerberos 驗證都可以搭配 **MultiSubnetFailover=Yes** 使用，而不會影響應用程式的行為。
 
 -   您可以增加 **loginTimeout** 的值，以容納容錯移轉時間並減少應用程式連接重試次數。
 
@@ -84,7 +84,7 @@ ms.locfileid: "51600098"
   
 如需 ODBC 連接字串關鍵字的詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
   
-相同的連接屬性包括：
+同等的連接屬性如下：
   
 -   **SQL_COPT_SS_APPLICATION_INTENT**  
   
@@ -96,8 +96,8 @@ ms.locfileid: "51600098"
   
 |函數|Description|  
 |------------|---------------|  
-|[SQLConnect 函式](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|  
-|[SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** 可透過 DSN、連接字串或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|
+|[SQLConnect 函數](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|  
+|[SQLDriverConnect 函數](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** 可透過 DSN、連接字串或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|
   
 ## <a name="see-also"></a>另請參閱  
 
@@ -105,4 +105,4 @@ ms.locfileid: "51600098"
 
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[版本資訊](../../../connect/odbc/linux-mac/release-notes.md)  
+[版本資訊](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

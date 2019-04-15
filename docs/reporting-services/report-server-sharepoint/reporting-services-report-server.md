@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400581"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872228"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 報表伺服器
 
@@ -25,7 +25,7 @@ ms.locfileid: "52400581"
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
-Reporting Services 報表伺服器會在兩種部署模式的其中一種模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#bkmk_featuresupport) 一節中的功能比較。  
+Reporting Services 報表伺服器會在兩種部署模式的其中一種模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#feature-comparison-of-sharepoint-and-native-mode) 一節中的功能比較。  
   
  **安裝：** 如需 Reporting Services 安裝的資訊，請參閱[安裝 Reporting Services](../install-windows/install-reporting-services.md)。
 
@@ -43,7 +43,7 @@ Reporting Services 報表伺服器會在兩種部署模式的其中一種模式�
   
 -   **SharePoint 模式**：在該模式下，報表伺服器會安裝為 SharePoint 伺服器陣列的一部分。  您可以使用 PowerShell 命令或 SharePoint 內容管理頁面來部署和設定 SharePoint 模式。  
   
- 在 SQL Server Reporting Services 中，您無法將報表伺服器從一種模式切換為另一種模式。 如果您要變更環境使用的報表伺服器類型，則必須安裝所需的報表伺服器模式，然後將報表項目或報表伺服器資料庫從舊版報表伺服器複製或移動到新的報表伺服器。 這種程序通常稱為「移轉」。 移轉所需的步驟，取決於您要移轉到哪個模式以及您要從哪個版本移轉。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞  
+ 在 SQL Server Reporting Services 中，您無法將報表伺服器從一種模式切換為另一種模式。 如果您要變更環境使用的報表伺服器類型，則必須安裝所需的報表伺服器模式，然後將報表項目或報表伺服器資料庫從舊版報表伺服器複製或移動到新的報表伺服器。 這項處理序通常稱為「移轉」。 移轉所需的步驟，取決於您要移轉到哪個模式以及您要從哪個版本移轉。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)＞  
   
 ## <a name="feature-comparison-of-sharepoint-and-native-mode"></a>SharePoint 和原生模式的功能比較
   
@@ -153,6 +153,6 @@ Reporting Services 報表伺服器會在兩種部署模式的其中一種模式�
 [報表伺服器資料庫 &#40;SSRS 原生模式&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [實作安全性延伸模組](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [實作資料處理延伸模組](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
-[Reporting Services 支援的資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+[Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: 資料來源名稱和連接字串關鍵字的 ODBC 驅動程式-SQL Server |Microsoft Docs
+title: ODBC 驅動程式的 DSN 和連接字串關鍵字 - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 manager: craigg
-ms.openlocfilehash: e2db3b8df9ea63c16e0e96af9df42b7c22adaf80
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: e371a896a617a09bb2bf5df4202d63f7047cd67d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662872"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860699"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和連接字串關鍵字和屬性
 
-此頁面會列出 SQLSetConnectAttr 和 SQLGetConnectAttr，ODBC Driver for SQL Server 中可用的連接字串和名稱 （dsn）、 關鍵字和連接屬性。
+此頁面會列出連接字串和 DSN 的關鍵字，以及 ODBC Driver for SQL Server 中可用的 SQLSetConnectAttr 和 SQLGetConnectAttr 連接屬性。
 
-## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支援/的 DSN 連接字串關鍵字和連接屬性
+## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>支援的 DSN/連接字串關鍵字和連接屬性
 
-下表列出可用的關鍵字與每個平台 (l: Linux; 屬性M: Mac;W: Windows)。 按一下關鍵字或屬性，如需詳細資訊。
+下表列出每個平台可用的關鍵字和屬性 (L: Linux；M: Mac；W: Windows)。 按一下關鍵字或屬性，以查看詳細資料。
 
 | DSN/連接字串關鍵字 | 連線屬性 | 平台 |
 |-|-|-|
@@ -33,13 +33,13 @@ ms.locfileid: "56662872"
 | [APP](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ApplicationIntent](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_APPLICATION_INTENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssapplicationintent) | LMW |
 | [AttachDBFileName](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ATTACHDBFILENAME](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssattachdbfilename) | LMW |
-| [驗證](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sqlcoptssauthentication) | [SQL_COPT_SS_AUTHENTICATION](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sqlcoptssauthentication) | LMW |
+| [驗證](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | [SQL_COPT_SS_AUTHENTICATION](../../connect/odbc/dsn-connection-string-attribute.md#authentication---sql_copt_ss_authentication) | LMW |
 | [AutoTranslate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRANSLATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstranslate) | LMW |
-| [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sqlcoptsscolumnencryption) | LMW |
+| [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [[資料庫備份]](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
-| [說明](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
+| [[資料庫]](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
+| [Description](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
 | [驅動程式](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Encrypt](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ENCRYPT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssencrypt) | LMW |
@@ -61,11 +61,11 @@ ms.locfileid: "56662872"
 | [QuotedId](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_QUOTED_IDENT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssquotedident) | LMW |
 | [Regional](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [SaveFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [Server](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
+| [[伺服器]](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [ServerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_SERVER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | [StatsLog_On](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdata) | W |
 | [StatsLogFile](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_PERF_DATA_LOG](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalog) | W |
-| [TransparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sqlcoptsstnir) | LMW |
+| [TransparentNetworkIPResolution](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sql_copt_ss_tnir) | [SQL_COPT_SS_TNIR](../../connect/odbc/dsn-connection-string-attribute.md#transparentnetworkipresolution---sql_copt_ss_tnir) | LMW |
 | [Trusted_Connection](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_INTEGRATED_SECURITY](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssintegratedsecurity) | LMW |
 | [TrustServerCertificate](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_TRUST_SERVER_CERTIFICATE](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstrustservercertificate) | LMW |
 | [UID](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -93,20 +93,20 @@ ms.locfileid: "56662872"
 | | [SQL_ATTR_TRANSLATE_LIB](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TRANSLATE_DLL) | LMW |
 | | [SQL_ATTR_TRANSLATE_OPTION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TRANSLATE_OPTION) | LMW |
 | | [SQL_ATTR_TXN_ISOLATION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TXN_ISOLATION) | LMW |
-| | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sqlcoptssaccesstoken) | LMW |
-| | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sqlcoptssansioem)| W |
+| | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sql_copt_ss_access_token) | LMW |
+| | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| W |
 | | [SQL_COPT_SS_BCP](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbcp) | LMW |
 | | [SQL_COPT_SS_BROWSE_CACHE_DATA](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) | LMW |
 | | [SQL_COPT_SS_BROWSE_CONNECT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseconnect) | LMW |
 | | [SQL_COPT_SS_BROWSE_SERVER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseserver) | LMW |
-| | [SQL_COPT_SS_CEKEYSTOREDATA](dsn-connection-string-attribute.md#sqlcoptsscekeystoredata) | LMW |
-| | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sqlcoptsscekeystoreprovider) | LMW |
+| | [SQL_COPT_SS_CEKEYSTOREDATA](dsn-connection-string-attribute.md#sql_copt_ss_cekeystoredata) | LMW |
+| | [SQL_COPT_SS_CEKEYSTOREPROVIDER](dsn-connection-string-attribute.md#sql_copt_ss_cekeystoreprovider) | LMW |
 | | [SQL_COPT_SS_CLIENT_CONNECTION_ID](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) | LMW |
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
 | | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
-| | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | LMW |
+| | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sql_copt_ss_fallback_connect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
@@ -117,119 +117,119 @@ ms.locfileid: "56662872"
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
 
 
-以下是一些連接字串關鍵字和連接屬性中所未記載[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)， [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)並[SQLSetConnectAttr 函數](../../odbc/reference/syntax/sqlsetconnectattr-function.md)。
+以下是[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)、[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 和 [SQLSetConnectAttr 函式](../../odbc/reference/syntax/sqlsetconnectattr-function.md)中所未記載的一些連接字串關鍵字和連接屬性。
 
-### <a name="description"></a>描述
+### <a name="description"></a>Description
 
-用來描述資料來源。
+用於描述資料來源。
 
 ### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
 
-控制 ANSI 至 OEM 轉換的資料。 
+控制 ANSI 至 OEM 的資料轉換。 
 
-| 屬性值 | 描述 |
+| 屬性值 | Description |
 |-|-|
-| SQL_AO_OFF | （預設值）不會執行轉譯。 |
-| SQL_AO_ON | 會執行轉譯。 |
+| SQL_AO_OFF | (預設) 不執行轉譯。 |
+| SQL_AO_ON | 執行轉譯。 |
 
 ### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
-控制 SQL Server 後援連線使用。 不再支援這一個。
+控制 SQL Server 後援連線的使用。 這一項已不再支援。
 
-| 屬性值 | 描述 |
+| 屬性值 | Description |
 |-|-|
-| SQL_FB_OFF | （預設值）後援的連線已停用。 |
-| SQL_FB_ON | 會啟用後援的連接。 |
+| SQL_FB_OFF | (預設) 已停用後援連線。 |
+| SQL_FB_ON | 已啟用後援連線。 |
 
 
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>新的連接字串關鍵字和連接屬性
 
-###  <a name="authentication---sqlcoptssauthentication"></a>驗證-SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sqlcoptssauthentication"></a>驗證 - SQL_COPT_SS_AUTHENTICATION
 
-設定要連接到 SQL Server 時使用的驗證模式。 請參閱[使用 Azure Active Directory](using-azure-active-directory.md)如需詳細資訊。
+設定連線到 SQL Server 時要使用的驗證模式。 如需詳細資訊，請參閱[使用 Azure Active Directory](using-azure-active-directory.md)。
 
-| 關鍵字的值 | 屬性值 | 描述 |
+| 關鍵字值 | 屬性值 | Description |
 |-|-|-|
-| |SQL_AU_NONE|（預設值）未設定。 其他屬性的組合，決定驗證模式。|
+| |SQL_AU_NONE|(預設) 未設定。 其他屬性的組合會決定驗證模式。|
 |SqlPassword|SQL_AU_PASSWORD|SQL Server 驗證 (使用使用者名稱和密碼)。|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 整合式驗證。|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 密碼驗證。|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 互動式驗證。|
-|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 受控服務身分識別驗證。 指派給使用者的身分識別，UID 設的使用者身分識別的物件識別碼。 |
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 受控服務識別驗證。 針對使用者指派的識別，UID 設成使用者身分識別的物件識別碼。 |
 | |SQL_AU_RESET|未設定。 覆寫任何 DSN 或連接字串設定。|
 
 > [!NOTE]
-> 使用時`Authentication`關鍵字或屬性，明確指定`Encrypt`設定連接字串中所要的值 / DSN / 連接屬性。 請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)如需詳細資訊。
+> 使用 `Authentication` 關鍵字或屬性時，明確地將 `Encrypt` 設定指定為連接字串/DSN/連接屬性中所要的值。 如需詳細資訊，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
-控制透明的資料行加密 （永遠加密）。 請參閱[使用一律加密 (ODBC)](using-always-encrypted-with-the-odbc-driver.md)如需詳細資訊。
+控制透明的資料行加密 (Always Encrypted)。 如需詳細資訊，請參閱[使用 Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md)。
 
-| 關鍵字的值 | 屬性值 | 描述 |
+| 關鍵字值 | 屬性值 | Description |
 |-|-|-|
 |已啟用|SQL_CE_ENABLED|啟用 Always Encrypted。|
-|已停用|SQL_CE_DISABLED|（預設值）停用 Always Encrypted。|
-| |SQL_CE_RESULTSETONLY|可讓解密只 （結果和傳回值）。|
+|已停用|SQL_CE_DISABLED|(預設) 停用 Always Encrypted。|
+| |SQL_CE_RESULTSETONLY|只啟用解密 (結果和傳回值)。|
 
 ### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
-控制項的透明網路 IP 解析功能互動 MultiSubnetFailover 以允許更快重新連線嘗試。 請參閱[使用透明網路 IP 解析](using-transparent-network-ip-resolution.md)如需詳細資訊。
+控制透明網路 IP 解析功能，它會與 MultiSubnetFailover 互動，以允許更快的重新連線嘗試。 如需詳細資訊，請參閱[使用透明網路 IP 解析](using-transparent-network-ip-resolution.md)。
 
-| 關鍵字的值 | 屬性值| 描述 |
+| 關鍵字值 | 屬性值| Description |
 |-|-|-|
 |是|SQL_IS_ON|(預設) 啟用透明網路 IP 解析。|
 |否|SQL_IS_OFF|停用透明網路 IP 解析。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
-控制使用 SET FMTONLY 中繼資料時連線到 SQL Server 2012 及更新版本。
+控制在連線到 SQL Server 2012 及更新版本時，對中繼資料使用 SET FMTONLY。
 
-| 關鍵字的值 | 描述 |
+| 關鍵字值 | Description |
 |-|-|
-|否|（預設值）如果有的話，請使用 sp_describe_first_result_set 中繼資料。 |
-|是| 使用 SET FMTONLY 中繼資料。 |
+|否|(預設) 如果有的話，對中繼資料使用 sp_describe_first_result_set。 |
+|是| 對中繼資料使用 SET FMTONLY。 |
 
 ### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-允許使用 Azure Active Directory 存取權杖進行驗證。 請參閱[使用 Azure Active Directory](using-azure-active-directory.md)如需詳細資訊。
+允許使用 Azure Active Directory 存取權杖進行驗證。 如需詳細資訊，請參閱[使用 Azure Active Directory](using-azure-active-directory.md)。
 
-| 屬性值 | 描述 |
+| 屬性值 | Description |
 |-|-|
-| NULL | （預設值）會不提供任何存取權杖。 |
-| ACCESSTOKEN* | 存取語彙基元指標。 |
+| NULL | (預設) 不提供任何存取權杖。 |
+| ACCESSTOKEN* | 存取權杖的指標。 |
 
 ### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
-載入的金鑰儲存區提供者程式庫與通訊。 請參閱控制項透明的資料行加密 （永遠加密）。 此屬性有沒有預設值。 請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)如需詳細資訊。
+與載入的金鑰儲存區提供者程式庫通訊。 請參閱＜控制透明的資料行加密 (Always Encrypted)＞。 此屬性沒有預設值。 如需詳細資訊，請參閱[自訂金鑰儲存區提供者](custom-keystore-providers.md)。
 
-| 屬性值 | 描述 |
+| 屬性值 | Description |
 |-|-|
-| CEKEYSTOREDATA * | 通訊金鑰儲存區提供者程式庫的資料結構 |
+| CEKEYSTOREDATA * | 金鑰儲存區提供者程式庫的通訊資料結構 |
 
 ### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
-Always encrypted 載入金鑰儲存區提供者程式庫，或擷取已載入的金鑰儲存區提供者程式庫名稱。 請參閱[自訂金鑰存放區提供者](custom-keystore-providers.md)如需詳細資訊。 此屬性有沒有預設值。
+載入 Always Encrypted 的金鑰儲存區提供者程式庫，或擷取載入的金鑰儲存區提供者程式庫名稱。 如需詳細資訊，請參閱[自訂金鑰儲存區提供者](custom-keystore-providers.md)。 此屬性沒有預設值。
 
-| 屬性值 | 描述 |
+| 屬性值 | Description |
 |-|-|
 | char * | 金鑰儲存區提供者程式庫路徑 |
 
 ### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-若要啟用 XA 交易 XA 相容的交易處理器 (TP) 使用，應用程式需要呼叫**SQLSetConnectAttr** SQL_COPT_SS_ENLIST_IN_XA 與指標`XACALLPARAM`物件。 這個選項可在 Windows、 （17.3 和更新版本） 的 Linux 和 mac。
+若要啟用與 XA 相容交易處理器 (TP) 的 XA 交易，應用程式需要呼叫 **SQLSetConnectAttr**，且使用 SQL_COPT_SS_ENLIST_IN_XA 與 `XACALLPARAM` 物件的指標。 這個選項在 Windows、(17.3 和更新版本) Linux 和 Mac 上受到支援。
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
- 若要將 XA 交易與 ODBC 連接只產生關聯，提供 TRUE 或 FALSE SQL_COPT_SS_ENLIST_IN_XA 而不是指標呼叫時**SQLSetConnectAttr**。 這在 Windows 上才有效，並且不能指定透過用戶端應用程式的 XA 作業。 
+ 若要將 XA 交易只與 ODBC 連接建立關聯，呼叫 **SQLSetConnectAttr** 時請使用 SQL_COPT_SS_ENLIST_IN_XA 而不是指標來提供 TRUE 或 FALSE。 這只在 Windows 上有效，不能用來透過用戶端應用程式指定 XA 作業。 
  ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|ReplTest1|描述|平台|  
+|ReplTest1|Description|平台|  
 |-----------|-----------------|-----------------|  
-|XACALLPARAM 物件 *|指向 `XACALLPARAM` 物件的指標。|Windows、 Linux 和 Mac|
-|TRUE|將 XA 交易與 ODBC 連接產生關聯。 所有相關的資料庫活動都將在 XA 交易的保護底下進行。|Windows|  
-|FALSE|取消關聯的交易與 ODBC 連接。|Windows|
+|XACALLPARAM 物件*|指向 `XACALLPARAM` 物件的指標。|Windows、Linux 和 Mac|
+|TRUE|建立 XA 交易與 ODBC 連接的關聯。 所有相關的資料庫活動都將在 XA 交易的保護底下進行。|Windows|  
+|FALSE|取消 XA 交易與 ODBC 連接的關聯。|Windows|
 
- 請參閱[使用 XA 交易](../../connect/odbc/use-xa-with-dtc.md)的 XA 交易的詳細資訊。
+ 如需 XA 交易的詳細資訊，請參閱[使用 XA 交易](../../connect/odbc/use-xa-with-dtc.md)。

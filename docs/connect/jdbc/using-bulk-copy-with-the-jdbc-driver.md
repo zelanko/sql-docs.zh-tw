@@ -11,12 +11,12 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4d7fabdf0f3de8c413a4621e6adb646cb1122e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b81937878a4c9e733b6a7c23a6156221c356e512
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534695"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860639"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用大量複製
 
@@ -118,7 +118,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 > [!NOTE]  
 > 當錯誤發生時，如果您需要復原全部或部分大量複製，您可以使用 SQLServerBulkCopy 受管理的交易，或執行現有交易中的大量複製作業。  
-> 如需詳細資訊，請參閱[異動和大量複製作業](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TransactionBulk)  
+> 如需詳細資訊，請參閱[交易和大量複製作業](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations)  
   
  執行大量複製作業的一般步驟如下：  
   
@@ -144,7 +144,7 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 下列應用程式示範如何使用 SQLServerBulkCopy 類別載入資料。 在此範例中，將使用一個結果集將資料從 SQL Server AdventureWorks 資料庫的 Production.Product 資料表複製到相同資料庫中的類似資料表。  
   
 > [!IMPORTANT]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -238,7 +238,7 @@ try (Connection con = DriverManager.getConnection(connectionUrl);
 如果您使用相同的 SQLServerBulkCopy 物件執行數項大量複製作業時，並無限制來源或目標資訊在每項作業中是否相等或不同。 不過，當您每次寫入到伺服器時，必須確定資料行關聯資訊已正確設定。  
   
 > [!IMPORTANT]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -367,7 +367,7 @@ public class BulkCopyMultiple {
 此大量複製作業執行時的 **BatchSize** 屬性設定為 10。 當此作業遇到無效的資料列時，就會擲回例外狀況。 在第一個範例中，大量複製作業會為非交易作業。 發生錯誤前複製的所有批次均已認可；包含重複索引鍵的批次已回復，而且大量複製作業會在處理任何其他批次之前暫止。  
   
 > [!NOTE]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -460,7 +460,7 @@ public class BulkCopyNonTransacted {
 > [!NOTE]  
 > 由於不同的批次在不同交易中執行，如果大量複製作業期間發生錯誤時，目前的批次中的所有資料列將會回復，但是先前批次的資料列將保留在資料庫中。  
   
-當您指定**UseInternalTransaction**選項**BulkCopyNonTransacted**，大量複製作業包含在較大的外部交易。 當發生主要索引鍵違規錯誤時，整個交易便會回復，並且沒有任何資料列會加入目的地資料表。
+當您在 **BulkCopyNonTransacted**中指定 **UseInternalTransaction** 選項時，大量複製作業會包含在較大的外部交易中。 當發生主要索引鍵違規錯誤時，整個交易便會回復，並且沒有任何資料列會加入目的地資料表。
 
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -476,7 +476,7 @@ copyOptions.setUseInternalTransaction(true);
 下列應用程式與 **BulkCopyNonTransacted** 類似，但有一個例外：在此範例中，大量複製作業包含在較大的外部交易中。 當發生主要索引鍵違規錯誤時，整個交易便會回復，並且沒有任何資料列會加入目的地資料表。
 
 > [!NOTE]  
-> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
+> 除非您已如[資料表設定](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) 中所述建立工作資料表，否則此範例不會執行。 本程式碼只是提供用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT ...SELECT 陳述式來複製資料會更方便且更快速。  
 
 ```java
 import java.sql.Connection;
@@ -653,20 +653,20 @@ public class BulkCopyCSV {
 }
 ```  
 
-### <a name="bulk-copy-with-always-encrypted-columns"></a>使用 Always Encrypted 資料行的大量複製  
+### <a name="bulk-copy-with-always-encrypted-columns"></a>Always Encrypted 資料行的大量複製  
 
-從 Microsoft JDBC Driver 6.0 for SQL Server，大量複製支援 Always Encrypted 資料行。  
+自 Microsoft JDBC Driver 6.0 for SQL Server 6.0 起，Always Encrypted 資料行支援大量複製。  
   
-根據大量複製選項，以及加密 JDBC 驅動程式可能會以透明的方式解密和加密的資料，或它的來源和目的地資料表的型別可能會傳送加密的資料現狀。 比方說，當大量資料複製到未加密的資料行的加密資料行，驅動程式以透明的方式解密資料傳送到 SQL Server 之前。 同樣地複製大量資料時未加密的資料行 （或從 CSV 檔案） 來加密資料行，驅動程式以透明方式加密資料傳送到 SQL Server 之前。 如果同時在來源和目的地會加密，然後視**allowEncryptedValueModifications**大量複製選項，為是或會解密資料，然後將它加密再傳送到 SQL Server 驅動程式會傳送資料。  
+根據大量複製選項，以及來源和目的地資料表的加密類型，JDBC 驅動程式可能會以透明的方式解密然後加密資料，或是它可能會依現狀傳送加密的資料。 例如，當從加密資料行將資料大量複製到未加密的資料行時，驅動程式會先以透明的方式解密資料，然後才傳送到 SQL Server。 同樣地，當從未加密資料行 (或從 CSV 檔案) 將資料大量複製到加密資料行時，驅動程式會先以透明的方式加密資料，然後才傳送到 SQL Server。 如果來源和目的地都已加密，則視 **allowEncryptedValueModifications** 大量複製選項而定，驅動程式會依現狀傳送資料，或是先解密資料再將它加密，然後才傳送到 SQL Server。  
   
-如需詳細資訊，請參閱 < **allowEncryptedValueModifications**大量複製選項，以及[JDBC 驅動程式搭配使用 Always Encrypted](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。  
+如需詳細資訊，請參閱底下的 **allowEncryptedValueModifications** 大量複製選項，以及[搭配使用 Always Encrypted 與 JDBC 驅動程式](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。  
   
 > [!IMPORTANT]  
-> Microsoft JDBC Driver 6.0 for SQL Server 大量複製資料從 CSV 檔案，來加密資料行時的限制：  
+> Microsoft JDBC Driver 6.0 for SQL Server 在從 CSV 檔案大量複製資料到加密資料行時的限制：  
 >
-> 日期和時間類型支援只有 TRANSACT-SQL 預設字串常值格式  
+> 針對日期和時間類型，只支援 Transact-SQL 預設字串常值格式  
 >
-> DATETIME 和 SMALLDATETIME 資料型別不支援  
+> 不支援 DATETIME 和 SMALLDATETIME 資料類型  
   
 ## <a name="bulk-copy-api-for-jdbc-driver"></a>適用於 JDBC 驅動程式的大量複製 API  
   
@@ -681,21 +681,21 @@ SQLServerBulkCopy 類別只可以用來將資料寫入 SQL Server 資料表。 �
 | 建構函式                             | Description                                                                                                                                                                                                                    |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SQLServerBulkCopy(Connection)           | 使用指定的 SQLServerConnection 開啟執行個體，以初始化 SQLServerBulkCopy 類別的新執行個體。 如果此連接已啟用交易，將會在該交易內執行複製作業。 |
-| SQLServerBulkCopy (字串 connectionURL) | 初始化並根據提供的 connectionURL 開啟 SQLServerConnection 的新執行個體。 此建構函式會使用 SQLServerConnection 初始化 SQLServerBulkCopy 類別的新執行個體。                     |
+| SQLServerBulkCopy(String connectionURL) | 初始化並根據提供的 connectionURL 開啟 SQLServerConnection 的新執行個體。 此建構函式會使用 SQLServerConnection 初始化 SQLServerBulkCopy 類別的新執行個體。                     |
   
 | 屬性                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 字串 DestinationTableName | 該伺服器的目的地資料表名稱。<br /><br /> 如果呼叫 writeToServer 時尚未設定 DestinationTableName，便會擲回 SQLServerException。<br /><br /> DestinationTableName 名稱有三個部分 (\<資料庫>.\<主控結構描述 >.\<名稱>)。 如果您要加以選擇，則可以用該資料表的資料庫和主控結構描述來限定該資料表名稱。 不過，如果該資料表名稱使用底線 ("_") 或任何其他特殊字元，您就必須使用括起來的括號逸出該名稱。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜識別碼＞。 |
+| String DestinationTableName | 該伺服器的目的地資料表名稱。<br /><br /> 如果呼叫 writeToServer 時尚未設定 DestinationTableName，便會擲回 SQLServerException。<br /><br /> DestinationTableName 名稱有三個部分 (\<資料庫>.\<主控結構描述 >.\<名稱>)。 如果您要加以選擇，則可以用該資料表的資料庫和主控結構描述來限定該資料表名稱。 不過，如果該資料表名稱使用底線 ("_") 或任何其他特殊字元，您就必須使用括起來的括號逸出該名稱。 如需詳細資訊，請參閱《SQL Server 線上叢書》中的＜識別碼＞。 |
 | ColumnMappings              | 在資料來源的資料行和目的地的資料行之間，資料行對應可定義其關聯性。<br /><br /> 如果未定義對應，則該資料行會根據位置順序隱含地對應。 若要執行這項操作，則來源和目標結構描述必須相符。 如果不相符，將會擲回例外狀況。<br /><br /> 如果此對應不是空的，就不必指定存在於該資料來源的每個資料行。 會忽略未對應的部分。<br /><br /> 您可以依名稱或序數找到來源和目標資料行。               |
   
 | 方法                                                                | Description                                                                                                                                                                |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Void addColumnMapping （int sourceColumn (int destinationColumn）       | 加入新的資料行對應，用來指定來源和目的地資料行的序數。                                                                                  |
-| Void addColumnMapping （int sourceColumn (字串 destinationColumn）   | 加入新的資料行對應，方法是使用來源資料行的序數和目的地資料行的資料行名稱。                                                            |
-| Void addColumnMapping （字串 sourceColumn (int destinationColumn）   | 加入新的資料行對應，方法是使用資料行名稱來描述來源資料行與序數，以指定此目的地資料行。                                             |
-| Void addColumnMapping （字串 sourceColumn，字串 destinationColumn） | 加入新的資料行對應，方法是使用資料行名稱來指定來源和目的地資料行。                                                                              |
+| Void addColumnMapping((int sourceColumn, int destinationColumn)       | 加入新的資料行對應，用來指定來源和目的地資料行的序數。                                                                                  |
+| Void addColumnMapping ((int sourceColumn, String destinationColumn)   | 加入新的資料行對應，方法是使用來源資料行的序數和目的地資料行的資料行名稱。                                                            |
+| Void addColumnMapping ((String sourceColumn, int destinationColumn)   | 加入新的資料行對應，方法是使用資料行名稱來描述來源資料行與序數，以指定此目的地資料行。                                             |
+| Void addColumnMapping (String sourceColumn, String destinationColumn) | 加入新的資料行對應，方法是使用資料行名稱來指定來源和目的地資料行。                                                                              |
 | Void clearColumnMappings()                                            | 清除此資料行對應的內容。                                                                                                                                |
-| Void 的 close （)                                                          | 關閉 SQLServerBulkCopy 執行個體。                                                                                                                                     |
+| Void close()                                                          | 關閉 SQLServerBulkCopy 執行個體。                                                                                                                                     |
 | SQLServerBulkCopyOptions getBulkCopyOptions()                         | 擷取 SQLServerBulkCopyOptions 的目前集合。                                                                                                                     |
 | String getDestinationTableName()                                      | 擷取目的地資料表的目前名稱。                                                                                                                               |
 | Void setBulkCopyOptions(SQLServerBulkCopyOptions copyOptions)         | 根據提供的選項，更新 SQLServerBulkCopy 執行個體的行為。                                                                                  |
@@ -716,38 +716,38 @@ SQLServerBulkCopy 類別只可以用來將資料寫入 SQL Server 資料表。 �
   
 | 選項                                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 預設                                                              |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 布林 CheckConstraints                 | 在插入資料時檢查條件約束。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | False-不檢查條件約束                                   |
-| 布林 FireTriggers                     | 若已指定，則會導致此伺服器對於正在插入至此資料庫的資料列，引發插入觸發程序。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | False - 不引發任何觸發程序。                                        |
-| 布林 KeepIdentity                     | 保留來源識別值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | False - 由目的地指派的識別值。              |
-| 布林 KeepNulls                        | 不論預設值的設定為何，均保留目的地資料表中的 null 值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | False - 在適用的情況下，以預設值取代 null 值。 |
-| 布林 TableLock                        | 在大量複製作業期間，取得大量更新鎖定。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | False - 使用資料列鎖定。                                          |
-| 布林 UseInternalTransaction           | 若已指定，則大量複製作業的每個批次將在交易內發生。 如果 SQLServerBulkCopy 使用現有的連接 (如建構函式所指定)，將會發生 SQLServerException。  如果 SQLServerBulkCopy 建立了專用的連接，將會啟用交易。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - 無交易                                               |
+| Boolean CheckConstraints                 | 在插入資料時檢查條件約束。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | False - 不會檢查條件約束                                   |
+| Boolean FireTriggers                     | 若已指定，則會導致此伺服器對於正在插入至此資料庫的資料列，引發插入觸發程序。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | False - 不引發任何觸發程序。                                        |
+| Boolean KeepIdentity                     | 保留來源識別值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | False - 由目的地指派的識別值。              |
+| Boolean KeepNulls                        | 不論預設值的設定為何，均保留目的地資料表中的 null 值。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | False - 在適用的情況下，以預設值取代 null 值。 |
+| Boolean TableLock                        | 在大量複製作業期間，取得大量更新鎖定。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | False - 使用資料列鎖定。                                          |
+| Boolean UseInternalTransaction           | 若已指定，則大量複製作業的每個批次將在交易內發生。 如果 SQLServerBulkCopy 使用現有的連接 (如建構函式所指定)，將會發生 SQLServerException。  如果 SQLServerBulkCopy 建立了專用的連接，將會啟用交易。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - 無交易                                               |
 | Int BatchSize                            | 每個批次中的資料列數。 在每個批次的結尾，會將該批次中的資料列傳送到伺服器。<br /><br /> 當 BatchSize 資料列都已處理，或沒有更多資料列要傳送至目的地資料來源時，就會完成批次。  如果 SQLServerBulkCopy 執行個體在 UseInternalTransaction 選項未作用中的狀態下即已宣告，則資料列會一次傳送至該伺服器 BatchSize 資料列，但不採取任何交易相關的動作。 如果 UseInternalTransaction 處於作用中時，則每個資料列批次都是以個別的交易插入。                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - 表示每個 writeToServer 作業是單一批次。    |
 | Int BulkCopyTimeout                      | 該作業要在此秒數之前完成，之後即逾時。值為 0 表示沒有限制；大量複製則會無限期等候。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 秒。                                                          |
-| 布林 allowEncryptedValueModifications | 此選項是使用 Microsoft JDBC Driver 6.0 （或更高版本） for SQL Server。<br /><br /> 指定時， **allowEncryptedValueModifications**可讓您無須解密資料大量複製的資料表或資料庫之間的加密資料。 一般而言，應用程式會選取從加密資料行從一個資料表的資料而不需解密 （應用程式會連接到資料庫資料行加密設定關鍵字設定為停用） 的資料，並接著會使用這個選項來大量插入資料，這仍屬於加密。 如需詳細資訊，請參閱[搭配使用 Always Encrypted 與 JDBC 驅動程式](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 **allowEncryptedValueModifications** 時請小心，這可能會導致資料庫損毀，因為驅動程式不會檢查資料是否確實加密，或是否使用與目標資料行相同的加密類型、演算法和金鑰正確加密。 |
+| Boolean allowEncryptedValueModifications | 此選項是 Microsoft JDBC Driver 6.0 for SQL Server (或更高版本) 的功能。<br /><br /> 指定時，**allowEncryptedValueModifications** 可讓您無須解密資料即可在資料表或資料庫之間大量複製加密資料。 一般而言，應用程式會從一個資料表的加密資料行選取資料而不會解密資料 (應用程式會連線到資料庫，並將資料行加密設定關鍵字設定為停用)，接著會使用這個選項來大量插入資料，資料仍然加密。 如需詳細資訊，請參閱[搭配使用 Always Encrypted 與 JDBC 驅動程式](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)。<br /><br /> 指定 **allowEncryptedValueModifications** 時請小心，這可能會導致資料庫損毀，因為驅動程式不會檢查資料是否確實加密，或是否使用與目標資料行相同的加密類型、演算法和金鑰正確加密。 |
   
- Getter 和 setter:  
+ Getter 和 setter：  
   
 | 方法                                                                            | Description                                                                                                                                                                               |
 | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 布林 isCheckConstraints()                                                       | 指出是否要檢查在插入資料時的條件約束。                                                                                                      |
-| Void setCheckConstraints(Boolean checkConstraints)                                 | 設定條件約束是否要檢查在插入資料時。                                                                                                           |
-| 布林 isFireTriggers()                                                           | 指出伺服器是否應該引發要插入至資料庫的資料列的 insert 觸發程序。                                                                                    |
-| Void setFireTriggers(Boolean fireTriggers)                                         | 設定是否應該設定引發觸發程序的資料列插入資料庫的伺服器。                                                                                     |
-| 布林 isKeepIdentity()                                                           | 指出要保留的任何來源識別值。                                                                                                                          |
-| Void setKeepIdentity(Boolean keepIdentity)                                         | 設定要保留識別值。                                                                                                                                          |
-| 布林 isKeepNulls()                                                              | 指出是否要保留的設定預設值，不論與目的地資料表中的 null 值，或如果他們應該取代的預設值 （如果適用的話）。 |
-| Void setKeepNulls(Boolean keepNulls)                                               | 設定是否要保留的設定預設值，不論與目的地資料表中的 null 值，或如果他們應該取代的預設值 （如果適用的話）。      |
-| 布林 isTableLock()                                                              | 指出 SQLServerBulkCopy 是否應該在大量複製作業期間取得大量更新鎖定。                                                                         |
-| Void setTableLock(Boolean tableLock)                                               | 設定是否使用 SQLServerBulkCopy 應該在大量複製作業期間取得大量更新鎖定。                                                                              |
-| 布林 isUseInternalTransaction()                                                 | 表示大量複製作業的每個批次是否將在交易內發生。                                                                                                  |
+| Boolean isCheckConstraints()                                                       | 指出在插入資料時是否要檢查條件約束。                                                                                                      |
+| Void setCheckConstraints(Boolean checkConstraints)                                 | 設定在插入資料時是否要檢查條件約束。                                                                                                           |
+| Boolean isFireTriggers()                                                           | 指出伺服器對於正在插入至此資料庫的資料列，是否應該引發插入觸發程序。                                                                                    |
+| Void setFireTriggers(Boolean fireTriggers)                                         | 設定伺服器對於正在插入至此資料庫的資料列，是否應該設定為引發觸發程序。                                                                                     |
+| Boolean isKeepIdentity()                                                           | 指出是否保留任何來源識別值。                                                                                                                          |
+| Void setKeepIdentity(Boolean keepIdentity)                                         | 設定是否保留識別值。                                                                                                                                          |
+| Boolean isKeepNulls()                                                              | 指出是否保留目的地資料表中的 null 值，而不管預設值的設定為何，或是否應該取代為預設值 (如果適用的話)。 |
+| Void setKeepNulls(Boolean keepNulls)                                               | 設定是否保留目的地資料表中的 null 值，而不管預設值的設定為何，或是否應該取代為預設值 (如果適用的話)。      |
+| Boolean isTableLock()                                                              | 指出在大量複製作業期間，SQLServerBulkCopy 是否應該取得大量更新鎖定。                                                                         |
+| Void setTableLock(Boolean tableLock)                                               | 設定在大量複製作業期間，SQLServerBulkCopy 是否應該取得大量更新鎖定。                                                                              |
+| Boolean isUseInternalTransaction()                                                 | 表示大量複製作業的每個批次是否將在交易內發生。                                                                                                  |
 | Void setUseInternalTranscation(Boolean useInternalTransaction)                     | 設定大量複製作業的每個批次是否將在交易內發生。                                                                                               |
 | Int getBatchSize()                                                                 | 取得每個批次的資料列數目。 在每個批次的結尾，會將該批次中的資料列傳送至伺服器                                                                             |
 | Void setBatchSize(int batchSize)                                                   | 取得每個批次的資料列數目。 在每個批次的結尾，會將該批次中的資料列傳送到伺服器。                                                                            |
 | Int getBulkCopyTimeout()                                                           | 取得該作業要在逾時之前完成的秒數。                                                                                                             |
-| Void setBulkCopyTimeout(int timeout)                                              | 設定該作業要在逾時之前完成的秒數。                                                                                                             |
-| 布林 isAllowEncryptedValueModifications()                                       | 指出 allowEncryptedValueModifications 設定是否要啟用或停用。                                                                                                        |
-| void setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications) | 設定 allowEncryptedValueModifications 用於使用 Always Encrypted 資料行的大量複製。                                                                         |
+| Void  setBulkCopyTimeout(int timeout)                                              | 設定該作業要在逾時之前完成的秒數。                                                                                                             |
+| boolean isAllowEncryptedValueModifications()                                       | 指出 allowEncryptedValueModifications 設定是啟用還是停用。                                                                                                        |
+| void setAllowEncryptedValueModifications(boolean allowEncryptedValueModifications) | 設定用於 Always Encrypted 資料行大量複製的 allowEncryptedValueModifications 設定。                                                                         |
   
 ### <a name="isqlserverbulkrecord"></a>ISQLServerBulkRecord  
 
@@ -755,14 +755,14 @@ SQLServerBulkCopy 類別只可以用來將資料寫入 SQL Server 資料表。 �
   
 | 介面方法                   | Description                                                                                                                                                                                                                                                                                            |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 設定\<整數 > getColumnOrdinals()   | 取得此資料記錄中呈現的每個資料行序數。                                                                                                                                                                                                                              |
-| 字串 getColumnName(int column)    | 取得指定資料行的名稱。                                                                                                                                                                                                                                                                      |
-| Int getColumnType （int 資料行）       | 取得指定資料行的 JDBC 資料類型。                                                                                                                                                                                                                                                            |
-| Int getPrecision （int 資料行）        | 取得指定資料行的有效位數。                                                                                                                                                                                                                                                                |
-| 物件 [] getRowData()               | 取得目前資料列的資料當做物件的陣列。<br /><br /> 每個物件都必須符合 Java 語言類型，其用來表示指定資料行的指定 JDBC 資料類型。  如需詳細資訊，請參閱適當對應的《了解 JDBC Driver 資料類型》。 |
-| Int getScale （int 資料行）            | 取得指定資料行的小數位數。                                                                                                                                                                                                                                                                    |
-| 布林 isAutoIncrement （int 資料行） | 指出該資料行是否代表識別欄位。                                                                                                                                                                                                                                            |
-| 布林值的 next （)                      | 前移到下一個資料列。                                                                                                                                                                                                                                                                         |
+| Set\<Integer> getColumnOrdinals()   | 取得此資料記錄中呈現的每個資料行序數。                                                                                                                                                                                                                              |
+| String getColumnName(int column)    | 取得指定資料行的名稱。                                                                                                                                                                                                                                                                      |
+| Int getColumnType(int column)       | 取得指定資料行的 JDBC 資料類型。                                                                                                                                                                                                                                                            |
+| Int getPrecision(int column)        | 取得指定資料行的有效位數。                                                                                                                                                                                                                                                                |
+| Object[] getRowData()               | 取得目前資料列的資料當做物件的陣列。<br /><br /> 每個物件都必須符合 Java 語言類型，其用來表示指定資料行的指定 JDBC 資料類型。  如需詳細資訊，請參閱適當對應的《了解 JDBC Driver 資料類型》。 |
+| Int getScale(int column)            | 取得指定資料行的小數位數。                                                                                                                                                                                                                                                                    |
+| Boolean isAutoIncrement(int column) | 指出該資料行是否代表識別欄位。                                                                                                                                                                                                                                            |
+| Boolean next()                      | 前移到下一個資料列。                                                                                                                                                                                                                                                                         |
   
 ### <a name="sqlserverbulkcsvfilerecord"></a>SQLServerBulkCSVFileRecord  
 
@@ -782,20 +782,19 @@ ISQLServerBulkRecord 介面的簡單實作，可用於從分隔的檔案中讀�
   
 | 建構函式                                                                                                                                                                 | Description                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SQLServerBulkCSVFileRecord （字串 fileToParse，字串編碼，字串分隔符號，則為 True firstLineIsColumnNamesSQLServerBulkCSVFileRecord （字串、 字串、 字串、 布林值） | 初始化 SQLServerBulkCSVFileRecord 類別的新執行個體，這會以提供的分隔符號和編碼，剖析 fileToParse 的每一行。 如果 firstLineIsColumnNames 設為 True 時，檔案中的第一行會剖析為資料行名稱。  如果編碼為 NULL，將會使用預設編碼方式。            |
-| SQLServerBulkCSVFileRecord (字串 fileToParse，字串編碼，則為 True firstLineIsColumnNamesSQLServerBulkCSVFileRecord (String，String，boolean)                           | 初始化 SQLServerBulkCSVFileRecord 類別的新執行個體，這會以逗點做為分隔符號和以提供的編碼，剖析 fileToParse 的每一行。 如果 firstLineIsColumnNames 設為 True 時，檔案中的第一行會剖析為資料行名稱。  如果編碼為 NULL，將會使用預設編碼方式。 |
-| SQLServerBulkCSVFileRecord (字串 fileToParse，布林 firstLineIsColumnNamesSQLServerBulkCSVFileRecord （字串、 布林值）                                                    | 初始化 SQLServerBulkCSVFileRecord 類別的新執行個體，這會以逗點做為分隔符號和以預設的編碼，剖析 fileToParse 的每一行。 如果 firstLineIsColumnNames 設為 True 時，檔案中的第一行會剖析為資料行名稱。                                                           |
+| SQLServerBulkCSVFileRecord(String fileToParse, String encoding, String delimiter, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, String, boolean) | 初始化 SQLServerBulkCSVFileRecord 類別的新執行個體，這會以提供的分隔符號和編碼，剖析 fileToParse 的每一行。 如果 firstLineIsColumnNames 設為 True 時，檔案中的第一行會剖析為資料行名稱。  如果編碼為 NULL，將會使用預設編碼方式。            |
+| SQLServerBulkCSVFileRecord(String fileToParse, String encoding, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, boolean)                           | 初始化 SQLServerBulkCSVFileRecord 類別的新執行個體，這會以逗點做為分隔符號和以提供的編碼，剖析 fileToParse 的每一行。 如果 firstLineIsColumnNames 設為 True 時，檔案中的第一行會剖析為資料行名稱。  如果編碼為 NULL，將會使用預設編碼方式。 |
+| SQLServerBulkCSVFileRecord(String fileToParse, Boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, boolean)                                                    | 初始化 SQLServerBulkCSVFileRecord 類別的新執行個體，這會以逗點做為分隔符號和以預設的編碼，剖析 fileToParse 的每一行。 如果 firstLineIsColumnNames 設為 True 時，檔案中的第一行會剖析為資料行名稱。                                                           |
   
 | 方法                                                                                                 | Description                                                                                         |
 | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
-| Void addColumnMetadata （int positionInFile、 字串 columnName、 int jdbcType、 int 有效位數、 int 小數位數）  | 在該檔案中加入指定資料行的中繼資料。                                                     |
-| Void 的 close （)                                                                                           | 釋放與檔案讀取器相關聯的任何資源。                                             |
-| Void setTimestampWithTimezoneFormat (DateTim eFormatter dateTimeFormatter                               | 設定將時間戳記資料從檔案剖析為 java.sql.Types.TIMESTAMP_WITH_TIMEZONE 的格式。 |
+| Void addColumnMetadata(int positionInFile, String columnName, int jdbcType, int precision, int scale)  | 在該檔案中加入指定資料行的中繼資料。                                                     |
+| Void close()                                                                                           | 釋放與檔案讀取器相關聯的任何資源。                                             |
+| Void setTimestampWithTimezoneFormat(DateTim eFormatter dateTimeFormatter                               | 設定將時間戳記資料從檔案剖析為 java.sql.Types.TIMESTAMP_WITH_TIMEZONE 的格式。 |
 | Void setTimestampWithTimezoneFormat(String dateTimeFormat)setTimeWithTimezoneFormat(DateTimeFormatter) | 設定將時間資料從檔案剖析為 java.sql.Types.TIME_WITH_TIMEZONE 的格式。           |
-| Void setTimeWithTimezoneFormat (DateTimeForm 散佈 dateTimeFormatter)                                   | 設定將時間資料從檔案剖析為 java.sql.Types.TIME_WITH_TIMEZONE 的格式。           |
+| Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | 設定將時間資料從檔案剖析為 java.sql.Types.TIME_WITH_TIMEZONE 的格式。           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | 設定將時間資料從檔案剖析為 java.sql.Types.TIME_WITH_TIMEZONE 的格式。           |
   
 ## <a name="see-also"></a>另請參閱  
 
 [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
