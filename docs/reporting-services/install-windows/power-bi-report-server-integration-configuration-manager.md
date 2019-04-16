@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556240"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506555"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 報表伺服器整合 (組態管理員)
 
@@ -34,21 +34,21 @@ ms.locfileid: "57556240"
 
 - 您想要從中釘選的報表必須使用預存的認證。 這不是 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合本身的需求，而是已釘選項目重新整理程序的需求。  釘選報表項目這項動作會建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱來管理 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]中磚的重新整理排程。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱需要預存的認證。 若報表不會使用預存的認證，使用者還是可以釘選報表項目，但當相關聯的訂閱嘗試將資料重新整理至 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]時，您會在 [我的訂閱]  頁面看到類似下列的錯誤訊息。
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    Power BI 傳遞錯誤︰儀表板︰IT 花費分析範例，視覺效果：Chart2，錯誤︰無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 任一使用者資料來源認證。
 
 如需如何儲存認證的詳細資訊，請參閱[在 Reporting Services 資料來源中儲存認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)中的＜為報表特定的資料來源設定預存認證＞一節。
 
 系統管理員可以檢閱  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔以取得詳細資訊。  其會看到與下列文字類似的訊息。 將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Power Query 用於檔案是檢閱及監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 記錄檔的好方法。  如需詳細資訊和短片，請參閱 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)。
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI 傳遞錯誤︰儀表板︰IT 花費分析範例，視覺效果：Chart2，錯誤︰無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 使用者資料來源認證未儲存在報表伺服器資料庫中，或使用者資料來源設定為不需要認證，但未指定自動的執行帳戶。
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI 傳遞錯誤︰儀表板︰IT 花費分析範例，視覺效果：Chart2，錯誤︰無法完成目前的動作。 使用者資料來源認證不符合需求，無法執行這份報表或執行共用資料集。 使用者資料來源認證未儲存在報表伺服器資料庫中，或使用者資料來源設定為不需要認證，但未指定自動的執行帳戶。
 
 ## <a name="bkmk_steps2integrate"></a> 整合並註冊報表伺服器
 
 從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員完成下列步驟。 如需詳細資訊，請參閱 [Reporting Services 組態管理員](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)。
 
-1. 選取 [ [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合] 頁面。
+1. 選取 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 整合頁面。
 
 2. 選取 [向 Power BI 註冊]。
 
@@ -149,12 +149,12 @@ ms.locfileid: "57556240"
 
 ## <a name="considerations-and-limitations"></a>考量與限制
 
-* 不支援病毒式和 government 租用戶。
+* 不支援網路和政府機關租用戶。
 
 ## <a name="next-steps"></a>後續步驟
 
-[Power BI 整合的我的設定](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[釘選到 Power BI 儀表板的 Reporting Services 項目](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[Power BI 儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Power BI 整合的 [我的設定]](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[將 Reporting Services 項目釘選到 Power BI 儀表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
+[Power BI 中的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
+更多問題嗎？ [嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
