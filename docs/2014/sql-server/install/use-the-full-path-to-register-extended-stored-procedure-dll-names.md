@@ -16,12 +16,12 @@ ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c171389f5d2df4ae4b6ba34abe56a9b07431dbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ecdf37d4c7c97e8c474f5e7f08e3e6fef040723
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185268"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582641"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>使用完整路徑，註冊擴充預存程序 DLL 名稱
   先前未使用完整路徑註冊 DLL 名稱的擴充預存程序，可能無法在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中運作。  
@@ -41,6 +41,6 @@ ms.locfileid: "48185268"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

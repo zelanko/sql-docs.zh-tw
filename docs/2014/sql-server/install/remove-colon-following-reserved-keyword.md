@@ -13,12 +13,12 @@ ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb9f8956108b07fdc6561c5ef8582e7510240434
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f68a641caf21e6cc1dfdefbcb31ff78a1fd8aa6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226981"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583031"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>移除保留關鍵字後面的冒號
   Upgrade Advisor 偵測到指令碼中的保留關鍵字後面有冒號 (:)。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，會忽略此語法且成功地執行該陳述式。 現在，當資料庫相容性模式設定為 100 或之後時，此語法會導致陳述式失敗。  
@@ -33,6 +33,6 @@ ms.locfileid: "48226981"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

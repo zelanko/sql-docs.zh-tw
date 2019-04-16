@@ -14,12 +14,12 @@ ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c656f11c212b703f6a9a71a1392b5d0685b4c179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c2c25120191b88abcf177723749aa5c46ba44ff
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158278"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582551"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>移除未記載之系統資料表的參考
   在舊版本中未記載的許多系統資料表都已變更或不存在，因此，在升級之後，使用這些資料表可能導致錯誤發生。 因為 Upgrade Advisor 會尋找系統資料表名稱的參考，所以它會報告與系統資料表有相同名稱的任何使用者資料表的參考。  
@@ -91,6 +91,6 @@ ms.locfileid: "48158278"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

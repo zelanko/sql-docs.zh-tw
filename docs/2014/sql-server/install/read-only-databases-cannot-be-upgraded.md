@@ -13,12 +13,12 @@ ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3757183f61a3f70097d5abb7a0d01d6381a1d10e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3f751f4058d29c6ce27a5a1d608f3fb076cc300
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134088"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583251"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>無法升級唯讀資料庫
   Upgrade Advisor 已確定此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的某些資料庫無法升級。  
@@ -44,6 +44,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

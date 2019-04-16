@@ -1,27 +1,27 @@
 ---
 title: 尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/16/2015
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/16/2015
+ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041029"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582531"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
-  適用於 SharePoint 產品與技術 (rsSharePoint.msi) 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 增益集是一種 Web 下載，它提供將報表伺服器與 SharePoint 部署相整合的功能。  
+
+適用於 SharePoint 產品與技術 (rsSharePoint.msi) 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 增益集是一種 Web 下載，它提供將報表伺服器與 SharePoint 部署相整合的功能。  
   
 > [!IMPORTANT]  
 >  如需支援的組合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集、 報表伺服器和 SharePoint，請參閱如需詳細資訊，請參閱[組合支援的 SharePoint 和 Reporting Services 伺服器與增益集&#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56041029"
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services 增益集適用 SharePoint 2007 產品與技術  
  適用 Microsoft SharePoint 技術的 Microsoft SQL Server 2008 Reporting Services 增益集提供在 Windows SharePoint Services 3.0 或 Microsoft Office SharePoint Server 2007 部署內執行報表伺服器的功能。  
   
- 您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用 Microsoft SharePoint 技術的 Microsoft SQL Server 2008 Reporting Services 增益集](https://go.microsoft.com/fwlink/?LinkID=204813)線上取得這個檔案的最新版本。  
+ 您可以從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 下載中心的 [適用 Microsoft SharePoint 技術的 Microsoft SQL Server 2008 Reporting Services 增益集](https://www.microsoft.com/download/details.aspx?id=622)線上取得這個檔案的最新版本。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝或解除安裝 Reporting Services 增益集，適用於 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   

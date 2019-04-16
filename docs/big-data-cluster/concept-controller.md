@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3677a2a68799ab1cfa7b6101893fe2b799b5b04a
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860069"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583401"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>什麼是 SQL Server 的巨量資料叢集上的控制站？
 

@@ -13,15 +13,15 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ecac95d4cad190133d54e73862d607a719ac9c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042197"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582361"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>使用 Windows Synchronization Manager 同步處理訂閱 (Windows Synchronization Manager)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Synchronization Manager 在相同的電腦上執行，則 Synchronization Manager 只能用於同步處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的訂閱 (它也可以用於同步處理離線檔案和網頁)。 若要使用 Synchronization Manager：  
+  如果 Microsoft[!INCLUDE[msCoName](../../includes/msconame-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Synchronization Manager 在相同的電腦上執行，則 Synchronization Manager 只能用於同步處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的訂閱 (它也可以用於同步處理離線檔案和網頁)。 若要使用 Synchronization Manager：  
   
 1.  使用 Windows Synchronization Manager 在 [訂閱屬性 - \<訂閱者>:\<訂閱資料庫>] 對話方塊中，啟用提取訂閱的同步處理。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59042197"
   
 ### <a name="to-use-the-interactive-resolver"></a>若要使用互動解決器  
   
-1.  啟用發行項和訂閱以使用互動式解決方案。 如需詳細資訊，請參閱[指定合併發行項的互動式衝突解決方法](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution)。  
+1.  啟用發行項和訂閱以使用互動式解決方案。 如需詳細資訊，請參閱[指定合併發行項的互動式衝突解決方法](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution)。
   
 2.  在 Synchronization Manager 中開始同步處理訂閱之後，如果啟用了互動式衝突解決方案，且一個或多個發行項有衝突，則「互動解決器」會自動啟動。 「互動解決器」每次顯示一個衝突，並為每個衝突提供一個建議的解決方案 (視建立發行集和訂閱時指定的解決器而定)。  
   
@@ -117,4 +117,5 @@ ms.locfileid: "59042197"
 >  僅當編輯為針對解決方案所選取之資料列的一部分時，才會被套用。 例如，如果您在 **[發行者]** 下進行了編輯，然後按一下 **[接受訂閱者]**，則編輯會被捨棄。  
   
 ## <a name="see-also"></a>另請參閱  
- [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [互動式衝突解決方法](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+  

@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 31cf50a29e9dfcc0952df7132dcbed1690aeb831
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353606"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582785"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>整合管理功能區域 (主資料管理員)
   在 [整合管理] 功能區域中，管理員可以從暫存資料表匯入資料，並建立要用於訂閱系統的訂閱檢視。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
@@ -23,7 +23,7 @@ ms.locfileid: "53353606"
 ## <a name="import-data"></a>匯入資料  
  [資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [載入或更新 Master Data Services 中的成員，使用暫存處理序](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [載入或更新 Master Data Services 中的成員，使用暫存處理序](add-update-and-delete-data-master-data-services.md)  
   
  [使用暫存處理序移動明確階層成員&#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
   

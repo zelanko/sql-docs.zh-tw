@@ -14,12 +14,12 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc0dbcc5296ad9ef0e8df6e94b1978fe10792c4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f87cb9160925ccc813ee62737662f85f430f28b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183351"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582861"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>移除已被取代之系統預存程序的參考
   Upgrade Advisor 偵測到陳述式參考了未記載的系統預存程序和擴充預存程序，而這些預存程序在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中已無法使用。 參考這些物件的陳述式會失敗。 請勿使用未記載的系統物件或 API，因為這些功能在未來的版本中會變更或移除，而不另行通知。  
@@ -104,6 +104,6 @@ ms.locfileid: "48183351"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

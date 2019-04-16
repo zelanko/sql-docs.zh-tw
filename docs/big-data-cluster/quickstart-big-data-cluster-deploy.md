@@ -5,17 +5,17 @@ description: 逐步解說部署的 SQL Server 2019 巨量資料叢集 （預覽�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860521"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582912"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -83,7 +83,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **機器大小** | [機器大小](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)用於 AKS 叢集中的節點 (預設**Standard_L8s**)。 |
    | **背景工作角色節點** | 在 AKS 叢集中的背景工作節點數目 (預設值**1**)。 |
    | **叢集名稱** | AKS 叢集與巨量資料叢集的名稱。 只有大小寫英數字元，而且沒有空格，必須是叢集的名稱。 (預設值**sqlbigdata**)。 |
-   | **[密碼]** | 控制器、 HDFS/Spark 閘道和主要執行個體的密碼 (預設值**MySQLBigData2019**)。 |
+   | **密碼** | 控制器、 HDFS/Spark 閘道和主要執行個體的密碼 (預設值**MySQLBigData2019**)。 |
    | **控制器的使用者** | 控制器的使用者的使用者名稱 (預設值： **admin**)。 |
 
    > [!IMPORTANT]

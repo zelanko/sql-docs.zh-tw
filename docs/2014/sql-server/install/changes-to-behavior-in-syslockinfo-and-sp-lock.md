@@ -14,12 +14,12 @@ ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6dfe3901cb23cff65dd96fa084232310ef91ede
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e2fa557efb6f09eae78180390c733f35bdc4a17
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104568"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582274"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>syslockinfo 與 sp_lock 中之行為的變更
   **syslockinfo**並**sp_lock**可能會傳回非預期的值。 它們可能也會傳回額外的資料列，而先前的版本**syslockinfo**並**sp_lock**傳回每個鎖定資源的兩個資料列的最大值。  
@@ -39,6 +39,6 @@ ms.locfileid: "48104568"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

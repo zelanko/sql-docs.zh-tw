@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046751"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582681"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>快速入門：處理輸入及輸出在 SQL Server 中使用 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ SELECT * FROM RTestData
     ```
 
     請注意，R 區分大小寫，所以案例中的輸入和輸出變數`@input_data_1_name`並`@output_data_1_name`一定要相符的項目中的 R 程式碼中`@script`。 
-
-    此外，參數的順序很重要的。 若要使用選擇性的參數 *@input_data_1_name* 和 *@output_data_1_name*，您必須先指定必要的參數 *@input_data_1*和 *@output_data_1*。
 
     只有一個輸入資料集可以當作參數傳遞，您只能傳回一個資料集。 不過，您可以從 R 程式碼內部呼叫其他資料集，而且除了資料集之外，您還可以傳回其他類型的輸出。 您也可以將 OUTPUT 關鍵字新增至任何參數，讓它傳回結果。 
 

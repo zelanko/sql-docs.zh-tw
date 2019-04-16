@@ -13,15 +13,15 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cf8109d1faa9bcd75a6150aea3959f37b79f1cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136348"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582691"
 ---
 # <a name="specify-merge-replication-properties"></a>指定合併式複寫屬性
-本主題說明如何指定合併式複寫的各種屬性。 
+本主題說明如何為合併式複寫指定各種屬性。 
 
 
 ## <a name="download-only"></a>僅限下載
@@ -72,7 +72,7 @@ ms.locfileid: "54136348"
         > [!NOTE]  
         >  如果發行項的來源資料表已在另一個發行集中發行，則兩個發行項的僅限下載行為必須相同。  
  
-## <a name="interactive-conflict-resolution"></a>互動式衝突解決方法
+## <a name="interactive-conflict-resolution">互動式衝突解決方法</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫提供互動式解決器，可讓您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 中於需要同步處理期間手動解決衝突。 在啟用互動式解決方案之後，在同步處理期間會使用「互動解決器」以互動方式解決衝突。 互動解決器可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Synchronization Manager 使用。 如需詳細資訊，請參閱[使用 Windows Synchronization Manager 同步處理訂閱 &#40;Windows Synchronization Manager&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md)。  
   
     
@@ -82,7 +82,7 @@ ms.locfileid: "54136348"
   
 ###  <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
   
-#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>啟用發行項的互動式衝突解決  
+#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>為發行項啟用互動式衝突解決  
   
 1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](view-and-modify-publication-properties.md)。    
 2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]**。    
@@ -93,13 +93,13 @@ ms.locfileid: "54136348"
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>若要指定訂閱應使用互動式衝突解決方案  
   
-1.  在 **訂用帳戶屬性-\<訂閱者 >:\<訂閱資料庫 >** 對話方塊方塊中，指定的值 **，則為 True**如**互動方式解決衝突**選項。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)＞。 
+1.  在 [訂閱屬性 - \<訂閱者>：\<訂閱資料庫>] 對話方塊中，將 [以互動方式解決衝突] 選項的值指定為 **True**。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) ＞與＜ [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)＞。 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>使用 Transact-SQL  
  您可以透過程式設計方式指定在建立合併式發行集的提取訂閱時，訂閱者將使用此圖形化介面來解決發行項衝突。 只有支援此選項之發行項中的衝突才會顯示在互動式解決器中。  
   
-#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>建立會使用 「 互動解析程式的合併式提取訂閱  
+#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>建立使用互動解析程式的合併提取訂閱  
   
 1.  在發行集資料庫的發行者上執行 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)，指定 **@publication**中針對合併發行項指定互動式衝突解決方法。 請記下結果集中每一個發行項的 **allow_interactive_resolver** 值 (互動式解決器將針對它來使用)。    
     -   如果這個值是 **1**，將會使用互動式解決器。    
@@ -113,7 +113,7 @@ ms.locfileid: "54136348"
     -   合併代理程式所需的安全性帳戶資訊。 如需詳細資訊，請參閱 [Create a Pull Subscription](../create-a-pull-subscription.md)。    
 4.  在發行集資料庫的發行者上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)。  
   
-#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>定義發行項，支援互動式解決器  
+#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>定義支援互動解析程式的發行項  
   
 在發行集資料庫的發行者上，執行 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 針對 **@publication**指定發行項所屬的發行集名稱、針對 **@article**指定發行項名稱、針對 **@source_object**的值及針對 **true** 指定 **@allow_interactive_resolver**中針對合併發行項指定互動式衝突解決方法。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
 
@@ -130,11 +130,11 @@ ms.locfileid: "54136348"
 ###  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  在 [發行項屬性] 對話方塊的 [屬性] 索引標籤上，指定合併發行項的資料列層級追蹤或資料行層級追蹤，[新增發行集精靈] 和 [發行集屬性 - \<發行集>] 對話方塊皆提供此對話方塊。 如需使用精靈及存取對話方塊的詳細資訊，請參閱[建立發行集](create-a-publication.md)和[檢視及修改發行集屬性](../publish/view-and-modify-publication-properties.md)。  
   
-#### <a name="specify-row--or-column-level-tracking"></a>指定資料列或資料行層級追蹤  
+#### <a name="specify-row--or-column-level-tracking"></a>指定資料列層級或資料行層級的追蹤  
   
 1.  在 [新增發行集精靈] 的 [發行項] 頁面上，或是在 [發行集屬性 - \<發行集>] 對話方塊中，選取一個資料表。    
 2.  按一下 **[發行項屬性]**，然後按一下 **[設定反白顯示資料表發行項的屬性]** 或 **[設定所有資料表發行項的屬性]**。   
-3.  在上**屬性**索引標籤**發行項屬性\<發行項 >** 對話方塊中，選取下列其中一個值**追蹤層級**屬性：**資料列層級追蹤**或是**資料行層級追蹤**。    
+3.  在 [發行項屬性 \<發行項>] 對話方塊的 [屬性] 索引標籤上，針對 [追蹤層級] 屬性選取下列其中一個值：[資料列層級追蹤] 或 [資料行層級追蹤]。    
 4.  如果您在 [發行集屬性 - \<發行集>] 對話方塊中，請按一下 [確定] 以儲存並關閉對話方塊。  
   
 ###  <a name="using-transact-sql"></a>使用 Transact-SQL  
@@ -146,7 +146,7 @@ ms.locfileid: "54136348"
     -   **true** - 針對發行項使用資料行層級追蹤。    
     -   **false** - 使用資料列層級追蹤，這是預設值。  
   
-#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>變更追蹤選項，為合併發行項的衝突  
+#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>為合併發行項變更衝突追蹤選項  
   
 1.  若要為合併發行項判斷衝突追蹤選項，請執行 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)。 請注意結果集中發行項的 **column_tracking** 選項值。 **1** 的值表示使用資料行層級追蹤， **0** 的值表示使用資料列層級追蹤。    
 2.  在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 為 **column_tracking** 指定 **@property** 的值，並為 **@value**指定下列其中一個值：
@@ -165,14 +165,14 @@ ms.locfileid: "54136348"
 > [!IMPORTANT]  
 >  啟用這項功能將會導致非聚合的情況，這表示訂閱者上的資料將不會正確反映發行者上的資料。 您必須實作自己的機制，以手動移除刪除的資料列。  
   
-### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>指定新的合併發行項要忽略刪除  
+### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>指定針對新的合併發行項忽略刪除  
   
 1.  在發行集資料庫的發行者端，執行 [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)。 指定的值為`false`for **@delete_tracking**。 如需詳細資訊，請參閱 [定義發行項](../publish/define-an-article.md)。  
   
     > [!NOTE]  
     >  如果發行項的來源資料表已在另一個發行集中發行，則兩個發行項的 **delete_tracking** 值必須相同。  
   
-### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>指定現有的合併發行項要忽略刪除  
+### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>指定針對現有的合併發行項忽略刪除  
   
 1.  若要判斷是否已針對發行項啟用錯誤補償，請執行 [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)，並記下結果集中的 **delete_tracking** 值。 如果這個值是 **0**，就表示已經忽略刪除。    
 2.  如果步驟 1 的值是 **1**，請在發行集資料庫的發行者端執行 [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值為**delete_tracking** for **@property**，而值為`false`如**@value**。  
@@ -181,7 +181,7 @@ ms.locfileid: "54136348"
     >  如果發行項的來源資料表已在另一個發行集中發行，則兩個發行項的 **delete_tracking** 值必須相同。  
   
 ## <a name="processing-order"></a>處理順序
-  合併式複寫可讓您指定在同步處理期間，合併代理程式處理發行項的順序。 當您使用複寫預存程序建立發行項時，可以透過程式設計方式對每一個發行項指派順序。 發行項會依照從最低值到最高值的順序來處理。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱 <<c0> [ 指定合併式複寫屬性](../publish/specify-merge-replication-properties.md)。  
+  合併式複寫可讓您指定在同步處理期間，合併代理程式處理發行項的順序。 當您使用複寫預存程序建立發行項時，可以透過程式設計方式對每一個發行項指派順序。 發行項會依照從最低值到最高值的順序來處理。 如果兩個發行項有相同的值，就會同時處理它們。 如需詳細資訊，請參閱[指定合併式複寫屬性](../publish/specify-merge-replication-properties.md)。  
 
   從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，可以覆寫合併式發行集之發行項處理的預設順序。 這非常有用，例如，如果您透過觸發程序定義參考完整性，並且那些觸發程序必須以特定順序引發。 
 
@@ -201,7 +201,7 @@ ms.locfileid: "54136348"
     > [!NOTE]  
     >  當建立排序的發行項時，您應該在發行項順序值之間留一些間距。 這樣可讓您在將來更容易設定新的值。 例如，如果您有三個發行項需要指定固定的處理順序，請分別將 **@processing_order** 的值設定為 10、20 和 30，而不是 1、2 和 3。  
   
-### <a name="existing-article"></a>現有的發行項
+### <a name="existing-article"></a>現有發行項
   
 1.  若要決定發行項的處理順序，請執行 [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)，並記下結果集中的 **processing_order** 值。  
   

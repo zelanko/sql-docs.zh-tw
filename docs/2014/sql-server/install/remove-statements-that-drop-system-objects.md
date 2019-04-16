@@ -13,12 +13,12 @@ ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1f355b9e13bb85f1bc91d9626e27d6ee3fafa15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68e5000e924c438a4611e2fa8c134f0dd822f930
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153712"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581542"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>移除卸除系統物件的陳述式
   Upgrade Advisor 偵測到卸除系統物件的陳述式。 系統物件，包含擴充預存程序，部署在唯讀**資源**資料庫 (mssqlsystemresource) 中且無法卸除。 請修改您的應用程式，以便撤銷或拒絕系統物件的 EXECUTE 權限。  
@@ -34,6 +34,6 @@ ms.locfileid: "48153712"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

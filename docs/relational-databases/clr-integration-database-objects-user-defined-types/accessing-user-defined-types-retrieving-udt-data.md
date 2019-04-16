@@ -22,12 +22,12 @@ ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aa7a16d3a5caad1ddb742e45ffe2e1534944e118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6b70a61173de35d441208dc5f2794e5d5b341ed
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802446"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582961"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>存取使用者定義型別 - 擷取 UDT 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -402,7 +402,11 @@ Module Module1
       cmd.CommandText = "INSERT INTO dbo.Points (Pnt) VALUES (@Point)"  
       cmd.CommandType = CommandType.Text  
   
-      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      param.UdtTypeName = "TestPoint.dbo.Point"      param.Direction = ParameterDirection.Input      param.Value = New Point(5, 6)      cmd.Parameters.Add(param)  
+      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      
+      param.UdtTypeName = "TestPoint.dbo.Point"      
+      param.Direction = ParameterDirection.Input      
+      param.Value = New Point(5, 6)      
+      cmd.Parameters.Add(param)  
   
       cnn.Open()  
       cmd.ExecuteNonQuery()  

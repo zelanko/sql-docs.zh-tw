@@ -31,12 +31,12 @@ ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ade57dedae8d97cf4ab951c347e3a9ab84431017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125308"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582238"
 ---
 # <a name="resolving-upgrade-issues"></a>解決升級問題
   本節中的主題描述可以偵測以及無法偵測但會影響升級或升級後續經驗的升級問題。 這些問題會依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件組織。  
@@ -70,6 +70,6 @@ ms.locfileid: "48125308"
 -   [使用 sp_rename 為重複的索引名稱重新命名](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](sql-server-2014-upgrade-advisor.md)  
   
   
