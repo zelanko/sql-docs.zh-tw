@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493777"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506545"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -59,7 +59,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
      {  [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE
+| CLEAR PROCEDURE_CACHE  [plan_handle]
 | SET < set_options >
 [;]
 
@@ -94,9 +94,14 @@ FOR SECONDARY
 
 指定次要資料庫的設定 (所有次要資料庫都必須具有相同的值)。
 
-CLEAR PROCEDURE_CACHE    
+CLEAR PROCEDURE_CACHE [plan_handle]
 
 清除資料庫的程序 (計劃) 快取，並且可在主要端和次要端上執行。  
+
+指定查詢計劃控制代碼來將單一查詢計劃從計畫快取清除。
+
+> [!NOTE]
+> 指定查詢的計畫控制代碼適用於 Azure SQL Database 和 SQL Server 2019 或更高版本。
 
 MAXDOP **=** {\<值> | PRIMARY } **\<值>**
 
@@ -230,13 +235,13 @@ WHEN_SUPPORTED
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
-**適用於**：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**適用於**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
 
 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。 預設值為 OFF。 針對資料庫啟用 OPTIMIZE_FOR_AD_HOC_WORKLOADS 資料庫範圍組態之後，在第一次編譯批次時，就會將已編譯的計劃虛設常式儲存在快取中。 與完整的已編譯計劃大小相比，計劃虛設常式的記憶體耗用量較少。 如果再次編譯或執行某個批次，就會移除已編譯的計劃虛設常式，並以完整的已編譯計劃取代。
 
 XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**適用於**： [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 在目前的資料庫上啟用或停用原生編譯 T-SQL 模組的模組層級執行統計資料收集。 預設值為 OFF。 執行統計資料會反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)。
 
@@ -244,7 +249,7 @@ XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**適用於**： [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
 
 在目前的資料庫上啟用或停用原生編譯 T-SQL 模組的陳述式層級執行統計資料收集。 預設值為 OFF。 執行統計資料會反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查詢存放區](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。
 
@@ -406,7 +411,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-此範例會在異地複寫案例中，將主要資料庫的 PARAMETER_SNIFFING 設定為 OFF。
+此範例會在異地複寫案例中，將次要資料庫的 PARAMETER_SNIFFING 設定為 OFF。
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
@@ -442,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
 ### <a name="h-set-optimizeforadhocworkloads"></a>H. 設定 OPTIMIZE_FOR_AD_HOC_WORKLOADS
-**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**適用於**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 此範例會允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。
 
@@ -468,22 +473,29 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. 從計畫快取清除查詢計劃
+此範例會將特定計劃從程序快取清除 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
 ## <a name="additional-resources"></a>其他資源
 
 ### <a name="maxdop-resources"></a>MAXDOP 資源
 
 - [平行處理原則的程度](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [SQL Server 的 "max degree of parallelism" 組態選項的建議和指導方針](https://support.microsoft.com/kb/2806535)
+- [SQL Server 中 "max degree of parallelism" 設定選項的建議和指導方針](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 資源
 
 - [基數估計 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃)
+- [使用 SQL Server 2014 基數估算程式最佳化您的查詢計劃](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 資源
 
 - [參數探測](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- [參數的運用](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) \(英文\)
+- [參數的運用](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 資源
 
@@ -503,7 +515,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 - [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
 - [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
 - [資料庫和檔案目錄檢視](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [伺服器設定選項](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+- [伺服器組態選項](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
 - [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)
 - [線上執行索引作業](../../relational-databases/indexes/perform-index-operations-online.md)
 - [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: 資料行存放區索引 - 資料載入指導 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 12/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f41165b33bba2a04e3b8f4751377ae63b92309
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668927"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506495"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>資料行存放區索引 - 資料載入指導
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 這些選項和建議可透過使用標準 SQL 大量載入與緩慢插入方法，將資料載入資料行存放區索引。 將資料載入至資料行存放區索引是任何資料倉儲程序中不可或缺的一部分，因為它會將資料移至索引，以準備進行分析。
@@ -33,11 +34,11 @@ ms.locfileid: "51668927"
 
 ![載入至叢集資料行存放區索引](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "載入至叢集資料行存放區索引")  
   
- 如圖所示，大量載入︰  
+如圖表所示，大量載入︰
   
-* 不會預先排序資料。 資料會以收到的順序插入資料列群組。
-* 如果批次大小 > = 102400，資料列會直接進入壓縮的資料列群組。 建議選擇批次大小 >=102400 進行有效率的大量匯入，因為在由背景執行緒、Tuple Mover (TM) 最終將資料列移至壓縮的資料列群組之前，可避免資料移到差異資料列群組中。
-* 如果批次大小 < 102,400 或剩餘的資料列 < 102,400，資料列就會載入差異資料列群組。
+- 不會預先排序資料。 資料會以收到的順序插入資料列群組。
+- 如果批次大小 > = 102400，資料列會直接進入壓縮的資料列群組。 建議選擇批次大小 >=102400 進行有效率的大量匯入，因為在由背景執行緒、Tuple Mover (TM) 最終將資料列移至壓縮的資料列群組之前，可避免資料移到差異資料列群組中。
+- 如果批次大小 < 102,400 或剩餘的資料列 < 102,400，資料列就會載入差異資料列群組。
 
 > [!NOTE]
 > 在具有非叢集資料行存放區索引資料的資料列存放區資料表上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會一律將資料插入基底資料表。 資料絶對不會直接插入資料行存放區索引。  
@@ -45,7 +46,7 @@ ms.locfileid: "51668927"
 大量載入具有下列內建的效能最佳化方式：
 -   **平行載入：** 您可以執行多個並行大量載入 (bcp 或大量插入)，其中每個載入作業都會載入不同的資料檔案。 與資料列存放區大量載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不同的是，您不需要指定 `TABLOCK`，這是因為每個大量匯入執行緒都會專門將資料載入不同的資料列群組 (壓縮或差異資料列群組)，且對其具有獨占鎖定。 使用 `TABLOCK` 會在資料表上強制進行獨佔鎖定，而您無法以平行方式匯入資料。  
 -   **最低限度記錄：** 大量載入會對直接進入壓縮資料列群組的資料使用最低限度記錄。 進入差異資料列群組的所有資料則會完整記錄。 這包括任何少於 102,400 個資料列的批次大小。 不過，大量載入的目標是要讓大部分的資料略過差異資料列群組。  
--   **鎖定最佳化︰** 載入壓縮資料列群組時，會取得 資料列群組的 X 鎖定。 然而，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
+-   **鎖定最佳化：** 載入壓縮資料列群組時，會取得資料列群組的 X 鎖定。 然而，當大量載入差異資料列群組時，已取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定「頁/範圍」的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
 如果您在資料行存放區索引上有一個非叢集 B 型樹狀結構索引，對於索引本身而言，沒有任何鎖定或記錄最佳化，但仍然會有如上所述的叢集資料行存放區索引最佳化。  
   
@@ -59,7 +60,8 @@ ms.locfileid: "51668927"
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 資料列群組大小：145,000|0|  
 |1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576。|1|  
-|2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576、1,048,576、155,000|0|  
+|2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576、1,048,576、155,000。|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  下列範例顯示將 1,048,577 個資料列載入資料表的結果。 結果顯示，資料行存放區中有一個 COMPRESSED 資料列群組 (壓縮的資料行區段)，而差異存放區中有 1 個資料列。  
   
@@ -90,7 +92,7 @@ SELECT <list of columns> FROM <Staging Table>
   
  從暫存表格載入叢集資料行存放區索引時，提供下列最佳化方式：
 -   **記錄最佳化︰** 將資料載入壓縮的資料列群組時，會記錄最少的內容。 當資料載入差異資料列群組時，沒有記錄的最低限制。  
--   **鎖定最佳化︰** 載入壓縮資料列群組時，會取得 資料列群組的 X 鎖定。 然而，有了差異資料列群組時，會取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定 PAGE/EXTENT 的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
+-   **鎖定最佳化：** 載入壓縮資料列群組時，會取得資料列群組的 X 鎖定。 然而，有了差異資料列群組時，會取得資料列群組的 X 鎖定，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仍會鎖定 PAGE/EXTENT 的鎖定，這是因為 X 資料列群組鎖定不是鎖定階層的一部分。  
   
  如果您有一或多個非叢集索引，對於索引本身而言，沒有任何鎖定或記錄最佳化，但仍然會有如上所述的叢集資料行存放區索引最佳化。  
   
@@ -120,5 +122,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>載入至資料分割資料表的運作方式  
  對於分割資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會先將每個資料列指派至一個分割區，然後在分割區內對資料執行資料行存放區作業。 每個分割區都有自己的資料列群組以及至少一個差異資料列群組。  
   
- ## <a name="next-steps"></a>後續步驟
- 如需載入的進一步討論，請參閱此[部落格文章](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx)。  
+## <a name="next-steps"></a>後續步驟
+
+部落格文章現在託管在 _techcommunity_ 上，撰寫於 2015-03-11：[叢集資料行存放區索引的資料載入效能考量](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223) \(英文\)。

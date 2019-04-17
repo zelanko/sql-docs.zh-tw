@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241458"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -43,7 +43,7 @@ ms.locfileid: "57578328"
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 在 Scale Out Master 憑證的 CN 中包含 Scale Out Master 服務的 DNS 主機名稱
 
-此主機名稱用於 Scale Out Master 端點中。 (請務必提供 DNS 主機名稱而非伺服器名稱。)
+此主機名稱是 Scale Out Master 端點，這會建立為容錯移轉叢集中的泛型服務叢集，在 (請參閱步驟 7)。   (請務必提供 DNS 主機名稱而非伺服器名稱。)
 
 ![HA 主要設定](media/ha-master-config.PNG)
 
@@ -112,5 +112,5 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 
 ## <a name="next-steps"></a>後續步驟
 如需詳細資訊，請參閱下列文章：
--   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
--   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)
+-   [Integration Services (SSIS) 相應放大主機](integration-services-ssis-scale-out-master.md)
+-   [Integration Services (SSIS) 相應放大背景工作](integration-services-ssis-scale-out-worker.md)

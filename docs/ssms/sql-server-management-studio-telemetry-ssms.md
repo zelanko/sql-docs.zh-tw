@@ -11,16 +11,17 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70c044c6b674ef7b64368edfbee069cf6c6a6332
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240386"
 ---
-# <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 使用意見收集的本機稽核
+# <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 使用方式和診斷資料收集的本機稽核
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集　貴用戶的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [SQL Server 隱私權聲明](https://go.microsoft.com/fwlink/?LinkID=868444)。
+
+SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功能，可收集匿名的功能使用方式和診斷資料並傳送給 Microsoft。 SSMS 可能會收集標準的電腦資訊以及關於使用方式和效能的資訊，這些資訊可能會傳送給 Microsoft，並基於改善 SSMS 的品質、安全性和可靠性的目的加以分析。 我們不會收集　貴用戶的姓名、地址或是其他連絡資訊等資料。 如需詳細資訊，請參閱 [Microsoft 隱私權聲明](https://privacy.microsoft.com/privacystatement)和 [SQL Server 隱私權補充](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a name="audit-feature-usage-data"></a>稽核功能的使用方式資料
 
@@ -33,8 +34,34 @@ SQL Server Management Studio (SSMS) 包含使用已連線到網際網路的功�
 
 ## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>啟用或停用 SSMS 中的使用意見收集
 
-若要選擇參與或退出 SSMS 的使用方式資料收集，請參閱︰[如何設定 SQL Server 2016 以傳送意見給 Microsoft](https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft)。
+選擇加入或選擇退出 SSMS 的使用方式資料收集：
+
+- 針對 SQL Server Management Studio 17：
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
+
+  RegEntry name = `UserFeedbackOptIn`
+
+  項目類型 `DWORD`:`0` 為退出；`1` 為選擇加入
+
+  此外，SSMS 17.x 是以 Visual Studio 2015 Shell 為基礎，而 Visual Studio 安裝預設會啟用客戶回函。  
+
+  若要在個別電腦上設定 Visual Studio 停用客戶意見反應，請將下列登錄子機碼值變更為字串 `0`： `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
+
+  例如，將此子機碼變更如下：  
+  `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
+
+  SQL Server 2017 使用方式和診斷資料收集會接受這些登錄子機碼上以登錄為基礎的群組原則。
+
+- 針對 SQL Server Management Studio 18：
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell`
+
+  RegEntry name = `UserFeedbackOptIn`
+
+  項目類型 `DWORD`:`0` 為退出；`1` 為選擇加入
 
 ## <a name="see-also"></a>另請參閱
 
-[SQL Server 使用意見收集的本機稽核](https://msdn.microsoft.com/library/mt743085.aspx)
+- [設定 SQL Server 的使用方式和診斷資料收集](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [SQL Server 使用方式和診斷資料收集的本機稽核](http://msdn.microsoft.com/library/mt743085.aspx)

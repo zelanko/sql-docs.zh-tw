@@ -1,7 +1,7 @@
 ---
 title: 套用異動記錄備份 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2016
+ms.date: 08/14/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240588"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +61,12 @@ ms.locfileid: "54242169"
 |下午 8:00|備份交易記錄。|  
 |下午 9:45|發生故障。|  
   
-> **注意：** 如需這個備份順序範例的說明，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
+> 如需這個備份順序範例的說明，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要將資料庫還原至下午 9:45 的狀態 (失敗點)，您可以使用下列任何一個替代程序：  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **替代程序 1：使用最新的完整資料庫備份來還原資料庫**  
   
 1.  將目前使用者中交易記錄的結尾記錄備份建立為失敗點。  
@@ -73,7 +75,7 @@ ms.locfileid: "54242169"
   
  **替代程序 2：使用較早的完整資料庫備份來還原資料庫**  
   
-> **注意：** 如果發生問題，讓您無法使用下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。 比起從下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。  
+> 如果發生問題，讓您無法使用下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。 比起從下午 6:00 的 完整資料庫備份進行還原，這個程序需要更多的時間。  
   
 1.  將目前使用者中交易記錄的結尾記錄備份建立為失敗點。  
   
@@ -81,7 +83,7 @@ ms.locfileid: "54242169"
   
      這個替代程序指出維護一系列完整資料庫備份的交易記錄備份鏈結可以提供的額外安全性。  
   
-> **注意：** 在某些情況下，您也可以使用交易記錄，將資料庫還原到特定時間點。 如需詳細資訊，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+> 在某些情況下，您也可以使用交易記錄，將資料庫還原到特定時間點。 如需詳細資訊，請參閱 [將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
 ##  <a name="RelatedTasks"></a> Related tasks  
  **套用交易記錄備份**  

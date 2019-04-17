@@ -1,7 +1,7 @@
 ---
 title: 在 SQL Server Agent 中執行 Windows PowerShell 步驟 | Microsoft 文件
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,37 +10,39 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ea20fbf0eb09686075c4fceeee2f3091bc244c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9034e88276192c14eb8d7008ced10b7041e40c9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241197"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>在 SQL Server Agent 中執行 Windows PowerShell 步驟
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 使用 SQL Server Agent 在排定的時間執行 SQL Server PowerShell 指令碼。  
   
-**若要從 SQL Server Agent 執行 PowerShell，請使用：**  [PowerShell 作業步驟](#PShellJob)、 [命令提示字元作業步驟](#CmdExecJob)  
+**若要從 SQL Server Agent 執行 PowerShell，請使用：**[PowerShell 作業步驟](#PShellJob)、[命令提示字元作業步驟](#CmdExecJob)  
   
-> [!NOTE]
+> [!IMPORTANT]
 > 有兩個 SQL Server PowerShell 模組：**SqlServer** 和 **SQLPS**。 **SQLPS** 模組隨附於 SQL Server 安裝 (基於回溯相容性)，但不再更新。 最新版 PowerShell 模組是 **SqlServer** 模組。 **SqlServer** 模組包含 **SQLPS** 中 Cmdlet 的更新版本，此外還加入新的 Cmdlet 以支援最新版 SQL 功能。  
 > 舊版 **SqlServer** 模組隨附於 SQL Server Management Studio (SSMS)，但僅限 SSMS 16.x 版。 若要搭配 SSMS 17.0 和更新版本使用 PowerShell，則必須從 PowerShell 資源庫安裝 **SqlServer** 模組。
 > 若要安裝 **SqlServer** 模組，請參閱[安裝 SQL Server PowerShell](download-sql-server-ps-module.md)。
 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟有幾種類型。 每一種類型都與實作特定環境的子系統相關，例如複寫代理程式或命令提示字元環境。 您可以編寫 Windows PowerShell 指令碼，然後使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 在排程時間執行的作業內包含這些指令碼，或是用來回應 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 事件。 Windows PowerShell 指令碼可透過使用命令提示字元作業步驟或 PowerShell 作業步驟加以執行。  
-  
-1.  使用 PowerShell 作業步驟讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理程式子系統執行 **sqlps** 公用程式，此公用程式會啟動 PowerShell 並匯入 **sqlps** 模組。  
-  
-2.  使用命令提示字元作業步驟執行 PowerShell.exe，並指定匯入 **sqlps** 模組的指令碼。  
-  
-###  <a name="LimitationsRestrictions"></a> 限制事項  
-  
-> [!CAUTION]  
->  搭配 **sqlps** 模組執行 PowerShell 的每項 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟，都會啟動大約耗用 20 MB 記憶體的處理序。 執行大量的並行 Windows PowerShell 作業步驟可能會對效能造成負面影響。  
-  
+
+- 使用 PowerShell 作業步驟讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理程式子系統執行 **sqlps** 公用程式，此公用程式會啟動 PowerShell 並匯入 **sqlps** 模組。
+
+- 使用命令提示字元作業步驟執行 PowerShell.exe，並指定匯入 **sqlps** 模組的指令碼。
+
+### <a name="LimitationsRestrictions"></a> 請注意記憶體耗用量
+
+搭配 **sqlps** 模組執行 PowerShell 的每個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟，都會啟動大約耗用 **20 MB** 記憶體的處理序。 執行大量的並行 Windows PowerShell 作業步驟可能會對效能造成負面影響。  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="PShellJob"></a> 建立 PowerShell 作業步驟  
  **建立 PowerShell 作業步驟**  
   

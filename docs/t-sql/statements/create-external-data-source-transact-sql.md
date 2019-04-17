@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421195"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516524"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -302,7 +302,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
   
 -   參考外部資料來源和外部檔案格式的外部資料表。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限  
  在 SQL DW、SQL Server、APS 2016 和 SQL DB 中，需要有對資料庫的 CONTROL 權限。
 
 > [!IMPORTANT]  
@@ -325,6 +325,10 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
  在相同 Hadoop 叢集位置上定義的所有資料來源都必須為 RESOURCE_MANAGER_LOCATION 或 JOB_TRACKER_LOCATION 使用相同的設定。 如果有不一致的情形，將會發生執行階段錯誤。  
   
  如果 Hadoop 叢集是使用名稱設定的，而且外部資料來源使用 IP 位址作為叢集位置，則在使用資料來源時，PolyBase 必須仍然可以解析叢集名稱。 若要解析名稱，您必須啟用 DNS 轉寄站。  
+ 
+目前不支援型別為 `hadoop` 的 SAS 權杖，僅支援儲存體帳戶存取金鑰。 嘗試使用型別 `hadoop` 及使用 SAS 認證來建立外部資料來源，可能會失敗並發生錯誤：
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>鎖定  
  在 EXTERNAL DATA SOURCE 物件上取得共用鎖定。  

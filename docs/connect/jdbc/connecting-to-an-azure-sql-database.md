@@ -81,7 +81,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>使用加密需要設定 hostNameInCertificate
 
-7.2 版之前[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該指定**hostNameInCertificate**如果您指定**加密 = true** （如果在連接中的伺服器名稱字串是*shortName*。*domainName*，將**hostNameInCertificate**屬性設\*。*domainName*。)。 這是選擇性屬性 7.2 版驅動程式。
+7.2 版之前[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，當連接到[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]，您應該指定**hostNameInCertificate**如果您指定 **encrypt=true** （如果在連接中的伺服器名稱字串是*shortName*。*domainName*，將**hostNameInCertificate**屬性設\*。*domainName*。)。 這是選擇性屬性 7.2 版驅動程式。
 
 例如：
 

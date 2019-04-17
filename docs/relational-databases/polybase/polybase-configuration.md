@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241836"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop 的 PolyBase 設定和安全性
 
@@ -33,6 +33,8 @@ hadoop 叢集中保護通訊的常見方式，是將 hadoop.rpc.protection 組�
      <value></value>
    </property> 
 ```
+
+SQL Server 必須至少是 SQL Server 2016 SP1 CU7、SQL Server 2016 SP2 或 SQL Server 2017 CU3，才能使用 hadoop.rpc.protection 的「私人」或「完整性」。
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>CDH 5.X 叢集的範例 XML 檔案
 

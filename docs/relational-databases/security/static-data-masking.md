@@ -1,27 +1,27 @@
 ---
 title: 靜態資料遮罩 | Microsoft Docs
-ms.date: 11/05/2018
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-author: egranet
+author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980454"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516464"
 ---
 # <a name="static-data-masking"></a>靜態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-靜態資料遮罩是 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 Preview 5 和更新版本的元件。 您可以在[這裡](../../ssms/download-sql-server-management-studio-ssms.md)下載 SQL Server Management Studio 的最新預覽版。 
+靜態資料遮罩推出為 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 Preview 5 和更新版本的元件。 我們已決定我們目前的原型不符合我們客戶的期望。 因此我們將來不再提供此功能。 如果有替代候選項目，我們將會通知您我們的計劃。
 
 ![靜態資料遮罩](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

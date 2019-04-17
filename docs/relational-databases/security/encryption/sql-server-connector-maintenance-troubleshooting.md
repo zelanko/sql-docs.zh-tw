@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241376"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "54327839"
  
 1. 從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 下載中心 [安裝最新版的](https://www.microsoft.com/download/details.aspx?id=45344)連接器。 在安裝程式精靈中，將新的 DLL 檔案儲存在和原始 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器 DLL 檔案路徑不同的檔案路徑。 例如，新的檔案路徑可能是︰ `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中，執行下列 Transact-SQL 命令，將您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體指向新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器︰
+2. 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中，執行下列 Transact-SQL 命令，將您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體指向新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器︰
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -139,7 +139,7 @@ ms.locfileid: "54327839"
 8.  驗證更新運作之後，即可刪除舊 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 連接器資料夾 (如果您選擇將它重新命名，而不是在步驟 3 中解除安裝)。  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>復原 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務主體  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中所建立的服務主體作為存取金鑰保存庫的認證。  服務主體擁有用戶端識別碼和驗證金鑰。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證是使用 **VaultName**、 **用戶端識別碼**和 **驗證金鑰**進行設定。  **驗證金鑰** 將於一段時間內有效 (1 或 2 年)。   在時間間隔到期之前，必須在 Azure AD 中為服務主體產生新的金鑰。  然後必須在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中變更認證。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會在目前的工作階段中為認證維持一份快取，因此認證變更時，應該重新啟動 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 Azure Active Directory 中所建立的服務主體作為存取金鑰保存庫的認證。  服務主體擁有用戶端識別碼和驗證金鑰。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認證是使用 **VaultName**、 **用戶端識別碼**和 **驗證金鑰**進行設定。  **驗證金鑰** 將於一段時間內有效 (1 或 2 年)。   在時間間隔到期之前，必須在 Azure AD 中為服務主體產生新的金鑰。  然後必須在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中變更認證。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 會在目前的工作階段中為認證維持一份快取，因此認證變更時，應該重新啟動 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]。  
   
 ### <a name="key-backup-and-recovery"></a>金鑰備份和復原  
 金鑰保存庫應該要定期備份。 如果遺失保存庫中的非對稱金鑰，便可以從備份還原它。 必須使用與以前相同的名稱來還原金鑰，作用與 [還原 PowerShell] 命令相同 (請參閱下面的步驟)。  
@@ -170,7 +170,7 @@ ms.locfileid: "54327839"
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
-**什麼是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中每個組態步驟所需的最低權限等級？**  
+**什麼是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中每個組態步驟所需的最低權限等級？**  
  雖然您能以 sysadmin 固定伺服器角色的成員身分執行所有設定步驟，但是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 鼓勵您將自己所使用的權限降至最低。 下列清單定義每個動作的最小權限層級。  
   
 -   若要建立密碼編譯提供者，需要 `CONTROL SERVER` 權限或 **sysadmin** 固定伺服器角色中的成員資格。  
@@ -291,7 +291,7 @@ SQL Server 版本  |可轉散發套件的安裝連結
   
 -   [開始使用 Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   PowerShell [Azure 金鑰保存庫 Cmdlet](https://msdn.microsoft.com/library/dn868052.aspx) 參考  
+-   PowerShell [Azure 金鑰保存庫 Cmdlet](/powershell/module/azurerm.keyvault/) 參考  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Azure Key Vault 進行可延伸金鑰管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [搭配使用 SQL Server 連接器與 SQL 加密功能](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   

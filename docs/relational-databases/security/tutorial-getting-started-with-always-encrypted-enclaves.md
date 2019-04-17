@@ -1,7 +1,7 @@
 ---
 title: 教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241536"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教學課程：使用 SSMS，開始使用具有安全記憶體保護區的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,6 +46,7 @@ ms.locfileid: "59042127"
    - 在 Hyper-V 2016 或更新版本上，在 VM 處理器上[啟用巢狀虛擬化擴充功能](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) \(部分機器翻譯\)。
    - 在 Azure 中，確定您正在執行支援巢狀虛擬化的 VM 大小，例如 Dv3 和 Ev3 系列的 VM。 請參閱[建立可使用巢狀功能的 Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) \(部分機器翻譯\)。
    - 在 VMWare vSphere 6.7 或更新版本上，針對 VM 啟用虛擬化型安全性支援，如 [VMware 文件](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) \(英文\) 所述。
+   - 其他 Hypervisor 和公用雲端可能支援在 VM 中使用具有安全記憶體保護區的 Always Encrypted，前提是已對 VM 公開虛擬化擴充 (又稱巢狀虛擬化)。 如需相容性和設定指示，請參閱您虛擬化解決方案的文件。
 - [SQL Server Management Studio (SSMS) 18.0 或更新版本](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 或者，您也可以在另一部電腦上安裝 SSMS。

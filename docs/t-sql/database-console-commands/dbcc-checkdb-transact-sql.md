@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ec8ac971776b9b069fa9fb74bea2ee6bc9a22be3
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429364"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 選項是支援的功能，但不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項無法取代從已知良好的備份還原方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，作為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項無法取代從已知良好的備份還原方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
 >     
 > 某些只能透過 REPAIR_ALLOW_DATA_LOSS 選項修復的錯誤，可能需要取消配置資料列、頁面或一系列頁面，才能清除錯誤。 使用者將無法再存取或復原任何已取消配置的資料，也無法判斷其確切內容。 因此，取消配置任何資料列或頁面之後，參考完整性可能會不正確，因為在這項修復作業期間不會檢查或維護外部索引鍵條件約束。 使用者在使用 REPAIR_ALLOW_DATA_LOSS 選項之後，必須檢查其資料庫的參考完整性 (使用 DBCC CHECKCONSTRAINTS)。    
 >     
@@ -174,20 +174,20 @@ DBCC CHECKDB 不會檢查停用的索引。 如需詳細資訊，請參閱[停�
 
 如果使用者定義型別標示為按位元組排序，該使用者定義型別只能有一個序列。 按位元組排序之使用者定義型別如果沒有一致的序列，DBCC CHECKDB 執行期間將會發生錯誤 2537。 如需詳細資訊，請參閱[使用者定義類型需求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)。    
 
-因為[資源資料庫](../../relational-databases/databases/resource-database.md)只能在單一使用者模式中進行修改，因此無法直接對其執行 DBCC CHECKDB 命令。 然而，針對 [master 資料庫](../../relational-databases/databases/master-database.md)執行 DBCC CHECKDB 時，在內部也會對 Resource 資料庫執行第二個 CHECKDB。 這表示 DBCC CHECKDB 可能會傳回額外的結果。 這個命令在未設定選項或僅設定 PHYSICAL_ONLY 或 ESTIMATEONLY 選項其中之一時，會傳回額外的結果集。    
+因為[資源資料庫](../../relational-databases/databases/resource-database.md)只能在單一使用者模式中進行修改，因此無法直接對其執行 DBCC CHECKDB 命令。 然而，針對 [master 資料庫](../../relational-databases/databases/master-database.md)執行 DBCC CHECKDB 時，在內部也會對 Resource 資料庫執行第二個 CHECKDB。 這表示 DBCC CHECKDB 可能會傳回額外的結果。 這個命令在未設定選項或僅設定 `PHYSICAL_ONLY` 或 `ESTIMATEONLY` 選項其中之一時，會傳回額外的結果集。    
 
 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 開始，執行 DBCC CHECKDB **不會再**清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 之前，執行 DBCC CHECKDB 會清除計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>對索引執行邏輯一致性檢查    
 對索引進行的邏輯一致性檢查會根據資料庫的相容性層級而異，如下所示：
 -   如果相容性層級為 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高：    
--   除非指定了 NOINDEX，否則 DBCC CHECKDB 會針對單一資料表及它的所有非叢集索引進行實體和邏輯一致性檢查。 但是根據預設，XML 索引、空間索引和索引檢視表只會進行實體一致性檢查。
--   如果指定了 WITH EXTENDED_LOGICAL_CHECKS，將會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯檢查。 根據預設，實體一致性檢查會在邏輯一致性檢查之前執行。 如果也指定了 NOINDEX，則只會執行邏輯檢查。
+-   除非指定了 `NOINDEX`，否則 DBCC CHECKDB 會針對單一資料表及它的所有非叢集索引進行實體和邏輯一致性檢查。 但是根據預設，XML 索引、空間索引和索引檢視表只會進行實體一致性檢查。
+-   如果指定了 `WITH EXTENDED_LOGICAL_CHECKS`，將會針對索引檢視表、XML 索引和空間索引 (如果有的話) 執行邏輯檢查。 根據預設，實體一致性檢查會在邏輯一致性檢查之前執行。 如果也指定了 `NOINDEX`，則只會執行邏輯檢查。
     
-這些邏輯一致性檢查會交叉檢查索引物件的內部索引資料表 (其中包含它所參考的使用者資料表)。 若要尋找外圍的資料列，則會建構內部查詢來執行內部和使用者資料表的完整交集。 執行這個查詢對於效能會有極大的影響，而且無法追蹤其進度。 因此，只有當您懷疑發生了與實體損毀無關的索引問題，或是頁面層級總和檢查碼已經關閉，而且您懷疑發生了資料行層級的硬體損毀時，才建議您指定 WITH EXTENDED_LOGICAL_CHECKS。
+這些邏輯一致性檢查會交叉檢查索引物件的內部索引資料表 (其中包含它所參考的使用者資料表)。 若要尋找外圍的資料列，則會建構內部查詢來執行內部和使用者資料表的完整交集。 執行這個查詢對於效能會有極大的影響，而且無法追蹤其進度。 因此，只有當您懷疑發生了與實體損毀無關的索引問題，或是頁面層級總和檢查碼已經關閉，而且您懷疑發生了資料行層級的硬體損毀時，才建議您指定 `WITH EXTENDED_LOGICAL_CHECKS`。
 -   如果此索引為已篩選的索引，DBCC CHECKDB 會執行一致性檢查，以確認索引項目可滿足篩選述詞。
--   如果相容性層級為 90 以下，則除非指定了 NOINDEX，否則 DBCC CHECKDB 會針對單一資料表或索引檢視表及它的所有非叢集索引和 XML 索引進行實體和邏輯一致性檢查。 不支援空間索引。  
-- 從 SQL Server 2016 開始，預設不會針對保存的計算資料行、UDT 資料行和篩選的索引上執行額外檢查，以避免需耗費大量資源的運算式評估作業。 這項變更可大幅減少對包含這些物件的資料庫執行 CHECKDB 的持續時間。 不過，系統一律會完成這些物件的實體一致性檢查。 只有在指定 EXTENDED_LOGICAL_CHECKS 選項時，才會執行運算式評估，以及執行 EXTENDED_LOGICAL_CHECKS 選項中已存在的邏輯性檢查 (索引檢視表、XML 索引及空間索引)。   
+-   如果相容性層級為 90 以下，則除非指定了 `NOINDEX`，否則 DBCC CHECKDB 會針對單一資料表或索引檢視表及它的所有非叢集索引和 XML 索引進行實體和邏輯一致性檢查。 不支援空間索引。  
+- 從 SQL Server 2016 開始，預設不會針對保存的計算資料行、UDT 資料行和篩選的索引上執行額外檢查，以避免需耗費大量資源的運算式評估作業。 這項變更可大幅減少對包含這些物件的資料庫執行 CHECKDB 的持續時間。 不過，系統一律會完成這些物件的實體一致性檢查。 只有在指定 `EXTENDED_LOGICAL_CHECKS` 選項時，才會執行運算式評估，以及執行 `EXTENDED_LOGICAL_CHECKS` 選項中已存在的邏輯性檢查 (索引檢視表、XML 索引及空間索引)。   
     
 **了解資料庫的相容性層級**
 -   [檢視或變更資料庫的相容性層級](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -203,7 +203,7 @@ DBCC CHECKDB 使用內部資料庫快照集來維護執行這些檢查時所需�
 例如，如果資料表包含使用 FILESTREAM 屬性的 **varbinary(max)** 資料行，DBCC CHECKDB 將會檢查檔案系統目錄和檔案與資料表資料列、資料行和資料行值之間是否有一對一的對應。 如果您指定 REPAIR_ALLOW_DATA_LOSS 選項，則 DBCC CHECKDB 可以修復損毀。 為了修復 FILESTREAM 損毀，DBCC 將刪除遺失檔案系統資料的任何資料表資料列。
     
 ## <a name="best-practices"></a>最佳作法    
-我們建議您在實際執行系統上，使用 PHYSICAL_ONLY 選項做為常用的選項。 使用 PHYSICAL_ONLY 可以大幅縮減在大型資料庫上執行 DBCC CHECKDB 所需的時間。 我們也建議您不搭配使用任何選項，定期執行 DBCC CHECKDB。 執行這些作業的頻率是依個別公司及其實際執行環境而定。
+我們建議您在生產環境系統上，使用 `PHYSICAL_ONLY` 選項作為常用的選項。 使用 PHYSICAL_ONLY 可以大幅縮減在大型資料庫上執行 DBCC CHECKDB 所需的時間。 我們也建議您不搭配使用任何選項，定期執行 DBCC CHECKDB。 執行這些作業的頻率是依個別公司及其實際執行環境而定。
     
 ## <a name="checking-objects-in-parallel"></a>平行檢查物件    
 依預設，DBCC CHECKDB 會執行物件的平行檢查。 查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 若要限制 DBCC 檢查所能使用的最大處理器數目，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。 您可以利用追蹤旗標 2528 來停用平行檢查。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。
@@ -246,7 +246,7 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 -   如果資料庫復原因交易記錄損毀而無法成功，就會重建交易記錄。 重建交易記錄可能會導致無法維持交易一致性。    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的功能。 不過，這個選項不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項**不是**從已知良好備份進行還原的替代方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
+> REPAIR_ALLOW_DATA_LOSS 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的功能。 不過，這個選項不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，作為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項**不是**從已知良好備份進行還原的替代方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
 >     
 >  重建記錄檔之後，不保證會有完整的 ACID。    
 >     
@@ -365,7 +365,7 @@ DBCC CHECKDB 會傳回下列結果集。 這些值可能會不同，除非指定
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>[權限]    
+## <a name="permissions"></a>權限    
 需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。
     
 ## <a name="examples"></a>範例    

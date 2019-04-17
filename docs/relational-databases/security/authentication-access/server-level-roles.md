@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429354"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53213707"
   
  固定伺服器角色是為了方便和回溯相容性所提供。 請盡可能指派更特定的權限。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九種固定伺服器角色。 您無法變更授與固定伺服器角色 (除了 **public** 外) 的權限。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您就可以建立使用者定義伺服器角色，並將伺服器層級權限加入至使用者定義伺服器角色。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了九種固定伺服器角色。 權限一旦授與給固定伺服器角色 (除 **public** 角色外)，即無法變更。 從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]開始，您就可以建立使用者定義伺服器角色，並將伺服器層級權限加入至使用者定義伺服器角色。  
   
  您可以將伺服器層級主體 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入、Windows 帳戶和 Windows 群組) 新增至伺服器層級角色。 固定伺服器角色的每個成員可以對相同的角色增加其他登入。 使用者定義伺服器角色的成員無法將其他伺服器主體加入至此角色。  
 > [!NOTE]
@@ -64,7 +64,7 @@ ms.locfileid: "53213707"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 權限與 **系統管理員** 固定伺服器角色類似但不完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， **CONTROL SERVER** 不代表**系統管理員**固定伺服器角色的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 **DBCC** 命令與許多系統程序都需要**系統管理員**固定伺服器角色的成員資格。 如需需要 **系統管理員** 成員資格的 171 個系統預存程序清單，請參閱 Andreas Wolter 的下列部落格文章： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  **CONTROL SERVER** 權限與 **系統管理員** 固定伺服器角色類似但不完全相同。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， **CONTROL SERVER** 不代表**系統管理員**固定伺服器角色的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 **DBCC** 命令與許多系統程序都需要**系統管理員**固定伺服器角色的成員資格。 如需需要 **系統管理員** 成員資格的 171 個系統預存程序清單，請參閱 Andreas Wolter 的下列部落格文章： [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)。  
   
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  
@@ -86,7 +86,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|中繼資料|指出 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入是否為指定之伺服器層級角色的成員。|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|中繼資料|針對每個伺服器層級角色的每個成員，各傳回一個資料列。|  
 |[sp_addsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|命令|加入一個登入，做為伺服器層級角色的成員。 已被取代。 請改用 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 。|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|命令|從伺服器層級角色移除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入或是 Windows 使用者或群組。 已被取代。 請改用 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 。|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|命令|從伺服器層級角色移除 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入或是 Windows 使用者或群組。 已被取代。 請改用 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md)。|  
 |[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|命令|建立使用者定義伺服器角色。|  
 |[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|命令|變更伺服器角色的成員資格或變更使用者定義伺服器角色的名稱。|  
 |[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|命令|移除使用者定義伺服器角色。|  

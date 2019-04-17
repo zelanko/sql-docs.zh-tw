@@ -1,7 +1,7 @@
 ---
 title: CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c9e95ee5fd9b337c9efddf6a3708373ef061f32
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d8cfcce92fc2eea73aa872720e8c758a7c26c097
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980494"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542218"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,24 +39,22 @@ ms.locfileid: "53980494"
   
 ## <a name="syntax"></a>語法  
   
-```  
--- SQL Server Syntax  
-  
-CREATE SPATIAL INDEX index_name   
+```sql
+CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  
        <geometry_tessellation> | <geography_tessellation>  
-    }   
+    }
   [ ON { filegroup_name | "default" } ]  
-[;]   
+[;]
   
 <object> ::=  
     [ database_name. [ schema_name ] . | schema_name. ]  table_name  
   
 <geometry_tessellation> ::=  
-{   
-  <geometry_automatic_grid_tessellation>   
-| <geometry_manual_grid_tessellation>   
+{
+  <geometry_automatic_grid_tessellation>
+| <geometry_manual_grid_tessellation>
 }  
   
 <geometry_automatic_grid_tessellation> ::=  
@@ -78,7 +76,7 @@ CREATE SPATIAL INDEX index_name
                         [ [,]<tessellation_cells_per_object> [ ,...n] ]  
                         [ [,]<spatial_index_option> [ ,...n] ]  
    )  
-}   
+}
   
 <geography_tessellation> ::=  
 {  
@@ -107,29 +105,29 @@ CREATE SPATIAL INDEX index_name
 <bounding_box> ::=  
 {  
       BOUNDING_BOX = ( {  
-       xmin, ymin, xmax, ymax   
-       | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>   
+       xmin, ymin, xmax, ymax
+       | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>
   } )  
 }  
   
 <named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
   
 <tessellation_grid> ::=  
-{   
-    GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }   
+{
+    GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }
         )  
 }  
 <tessellation_cells_per_object> ::=  
-{   
-   CELLS_PER_OBJECT = n   
+{
+   CELLS_PER_OBJECT = n
 }  
   
 <grid_level> ::=  
 {  
-     LEVEL_1 = <grid_size>   
-  |  LEVEL_2 = <grid_size>   
-  |  LEVEL_3 = <grid_size>   
-  |  LEVEL_4 = <grid_size>   
+     LEVEL_1 = <grid_size>
+  |  LEVEL_2 = <grid_size>
+  |  LEVEL_3 = <grid_size>
+  |  LEVEL_4 = <grid_size>
 }  
   
 <grid_size> ::= { LOW | MEDIUM | HIGH }  
@@ -151,70 +149,8 @@ CREATE SPATIAL INDEX index_name
   
 ```  
   
-```  
--- Windows Azure SQL Database Syntax   
-  
-CREATE SPATIAL INDEX index_name   
-    ON <object> ( spatial_column_name )   
-    {   
-      [ USING <geometry_grid_tessellation> ]   
-          WITH ( <bounding_box>   
-                [ [,] <tesselation_parameters> [,... n ] ]   
-                [ [,] <spatial_index_option> [,... n ] ] )   
-     | [ USING <geography_grid_tessellation> ]   
-          [ WITH ( [ <tesselation_parameters> [,... n ] ]   
-                   [ [,] <spatial_index_option> [,... n ] ] ) ]   
-    }  
-  
-[ ; ]  
-  
-<object> ::=  
-{  
-    [database_name. [schema_name ] . | schema_name. ]   
-                table_name   
-}  
-  
-<geometry_grid_tessellation> ::=   
-{ GEOMETRY_GRID }  
-  
-<bounding_box> ::=   
-BOUNDING_BOX = ( {  
-        xmin, ymin, xmax, ymax   
-   | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>   
-  } )  
-  
-<named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
-  
-<tesselation_parameters> ::=   
-{   
-    GRIDS = ( { <grid_density> [ ,... n ] | <density>, <density>, <density>, <density>  } )   
-  | CELLS_PER_OBJECT = n   
-}  
-  
-<grid_density> ::=   
-{  
-     LEVEL_1 = <density>   
-  |  LEVEL_2 = <density>   
-  |  LEVEL_3 = <density>   
-  |  LEVEL_4 = <density>   
-}  
-  
-<density> ::= { LOW | MEDIUM | HIGH }  
-  
-<geography_grid_tessellation> ::=   
-{ GEOGRAPHY_GRID }  
-  
-<spatial_index_option> ::=   
-{  
-    IGNORE_DUP_KEY = OFF  
-  | STATISTICS_NORECOMPUTE = { ON | OFF }  
-  | DROP_EXISTING = { ON | OFF }  
-  | ONLINE = OFF   
-}  
-  
-```  
-  
 ## <a name="arguments"></a>引數  
+
  *index_name*  
  這是索引的名稱。 索引名稱在資料表中必須是唯一的，但是在資料庫中不需要是唯一的。 索引名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
   
@@ -230,10 +166,10 @@ BOUNDING_BOX = ( {
 |-------------------------|-------------------------|  
 |**幾何**|GEOMETRY_GRID|  
 |**幾何**|GEOMETRY_AUTO_GRID|  
-|**地理位置**|GEOGRAPY_GRID|  
+|**地理位置**|GEOGRAPHY_GRID|  
 |**地理位置**|GEOGRAPHY_AUTO_GRID|  
   
- 空間索引只能建立在 **geometry** 或 **geography**類型的資料行上。 否則，就會引發錯誤。 此外，如果針對給定的類型傳遞了無效的參數，也會引發錯誤。  
+ 空間索引只能建立在 **geometry** 或 **geography** 型別的資料行上，否則會引發錯誤。 如果傳遞特定型別的無效參數，會引發錯誤。  
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何實作鑲嵌的資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
@@ -249,7 +185,7 @@ BOUNDING_BOX = ( {
   
  在這個內容中，default 這個字不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 ON "default" 或 ON [default]。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
- **\<object>::=**  
+ **\<object>::=**
   
  這是要建立索引的完整或非完整物件。  
   
@@ -264,7 +200,8 @@ BOUNDING_BOX = ( {
   
  當 database_name 是目前的資料庫或 database_name 是 tempdb，而且 object_name 開頭為 # 時，Windows Azure SQL Database 支援三部分名稱格式 database_name.[schema_name].object_name。  
   
-### <a name="using-options"></a>使用選項  
+### <a name="using-options"></a>USING 選項
+
  GEOMETRY_GRID  
  指定您所使用的 **geometry** 方格鑲嵌式配置。 GEOMETRY_GRID 只能在 **geometry** 資料類型的資料行上指定。  GEOMETRY_GRID 允許手動調整鑲嵌式配置。  
   
@@ -281,7 +218,8 @@ BOUNDING_BOX = ( {
   
  只能在 geography 資料類型的資料行上指定。  這是此資料類型的預設值，而且不需要加以指定。  
   
-### <a name="with-options"></a>WITH 選項  
+### <a name="with-options"></a>WITH 選項
+
 BOUNDING_BOX  
 指定定義週框方塊之四個座標的四個數值 Tuple：左下角的 x-min 和 y-min 座標及右上角的 x-max 和 y-max 座標。  
   
@@ -313,16 +251,16 @@ BOUNDING_BOX
  > 週框方塊座標只適用於 USING GEOMETRY_GRID 子句內。  
  >
  > *xmax* 必須大於 *xmin*，而 *ymax* 必須大於 *ymin*。 您可以指定任何有效的[float](../../t-sql/data-types/float-and-real-transact-sql.md) 值表示法，前提如下：*xmax* > *xmin* 且 *ymax* > *ymin*。 否則會引發適當的錯誤。  
- > 
+ >
  > 沒有預設值。  
  >
  > 週框方塊屬性名稱不區分大小寫，不論資料庫定序為何。  
   
  若要指定屬性名稱，您必須一次指定一個，而且只能指定一次。 您可以依照任何順序來指定它們。 例如，下列子句是相等的：  
   
--   BOUNDING_BOX =( XMIN =*xmin*, YMIN =*ymin*, XMAX =*xmax*, YMAX =*ymax* )  
+- BOUNDING_BOX =( XMIN =*xmin*, YMIN =*ymin*, XMAX =*xmax*, YMAX =*ymax* )  
   
--   BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
+- BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
 GRIDS  
 定義鑲嵌式配置之每一個層級上的方格密度。 已選取 GEOMETRY_AUTO_GRID 和 GEOGRAPHY_AUTO_GRID 時，會停用這個選項。  
@@ -352,10 +290,10 @@ GRIDS
  HIGH  
  針對給定層級的方格指定可能的最高密度。 HIGH 等於 256 個資料格 (16x16 方格)。  
   
-> [!NOTE] 
+> [!NOTE]
 > 使用層級名稱可讓您依照任何順序指定層級以及省略層級。 如果您使用任何層級的名稱，您就必須使用您指定之任何其他層級的名稱。 如果您省略層級，它的密度預設為 MEDIUM。  
-  
-> [!WARNING] 
+
+> [!WARNING]
 > 如果指定了無效的密度，將會引發錯誤。  
   
 CELLS_PER_OBJECT =*n*  
@@ -393,7 +331,7 @@ FILLFACTOR =*fillfactor*
  指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *fillfactor* 必須是 1 到 100 之間的整數值。 預設值是 0。 如果 *fillfactor* 是 100 或 0， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用已填滿容量的分葉頁面來建立索引。  
   
 > [!NOTE]  
->  填滿因數值 0 和 100 在各方面都是一樣的。  
+> 填滿因數值 0 和 100 在各方面都是一樣的。
   
  只有在建立或重建索引時才會套用 FILLFACTOR 設定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會動態保留頁面中空白空間的指定百分比。 若要檢視填滿因數設定，請使用 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 目錄檢視表。  
   
@@ -513,7 +451,8 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE  
  索引會將頁面壓縮用於資料上。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  每一個 CREATE SPATIAL INDEX 陳述式只能指定每一個選項一次。 指定重複的任何選項都會引發錯誤。  
   
  在資料表的每一個空間資料行上最多可以建立 249 個空間索引。 例如，要針對單一資料行中的不同鑲嵌式參數建立索引時，在特定空間資料行上建立一個以上的空間索引可能會很有用處。  
@@ -523,22 +462,26 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
   
  索引建立無法利用可用的處理序平行處理原則。  
   
-## <a name="methods-supported-on-spatial-indexes"></a>空間索引上支援的方法  
+## <a name="methods-supported-on-spatial-indexes"></a>空間索引上支援的方法
+
  在某些條件下，空間索引可支援一些集合導向的幾何方法。 如需詳細資訊，請參閱[空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
-## <a name="spatial-indexes-and-partitioning"></a>空間索引和資料分割  
+## <a name="spatial-indexes-and-partitioning"></a>空間索引和資料分割
+
  根據預設，如果空間索引在資料分割資料表上建立，則會根據資料表的分割區配置來分割索引。 這會確保索引資料和相關的資料列會儲存在相同的分割區中。  
   
  在此情況下，若要更改基底資料表的分割區配置，您必須先卸除此空間索引，然後才可以重新分割此基底資料表。 為了避免這項限制，當您正在建立空間索引時，可以指定 "ON filegroup" 選項。 如需詳細資訊，請參閱本主題稍後的「空間索引和檔案群組」。  
   
-## <a name="spatial-indexes-and-filegroups"></a>空間索引和檔案群組  
+## <a name="spatial-indexes-and-filegroups"></a>空間索引和檔案群組
+
  根據預設，空間索引會分割到與指定索引的資料表相同的檔案群組。 可以藉由檔案群組的指定來覆寫此選項：  
   
  [ ON { *filegroup_name* | "default" } ]  
   
  如果您針對空間索引指定檔案群組，此索引會放在該檔案群組中，不論資料表的分割區配置為何。  
   
-## <a name="catalog-views-for-spatial-indexes"></a>空間索引的目錄檢視  
+## <a name="catalog-views-for-spatial-indexes"></a>空間索引的目錄檢視
+
  下列目錄檢視是空間索引所特有：  
   
  [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
@@ -547,25 +490,29 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  表示有關鑲嵌式配置和每一個空間索引之參數的資訊。  
   
-## <a name="additional-remarks-about-creating-indexes"></a>有關建立索引的其他備註  
+## <a name="additional-remarks-about-creating-indexes"></a>有關建立索引的其他備註
+
  如需索引建立的詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) 中的＜備註＞一節。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>權限
+
  使用者必須具有資料表或檢視表的 ALTER 權限，或必須是系統管理員 (sysadmin) 固定伺服器角色的成員，或是 db_ddladmin 和 db_owner 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. 在幾何資料行上建立空間索引  
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. 在幾何資料行上建立空間索引
+
  下列範例會建立包含 **geometry** 類型資料行 `geometry_col` 且名稱為 `SpatialTable` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geometry_col1` 上建立空間索引 `geometry_col`。 此範例會使用預設鑲嵌式配置，並指定週框方塊。  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
-CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
+CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
    ON SpatialTable(geometry_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ) );  
 ```  
   
-### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. 在幾何資料行上建立空間索引  
+### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. 在幾何資料行上建立空間索引
+
  下列範例會在 `SIndx_SpatialTable_geometry_col2` 資料表的 `geometry_col` 上建立第二個空間索引 `SpatialTable`。 此範例會指定 `GEOMETRY_GRID` 做為鑲嵌式配置。 此範例也會指定週框方塊、不同方格層級上的不同密度，以及每一物件 64 個資料格。 此範例也會將索引填補設定為 `ON`。  
   
 ```sql  
@@ -579,7 +526,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
     PAD_INDEX  = ON );  
 ```  
   
-### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. 在幾何資料行上建立空間索引  
+### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. 在幾何資料行上建立空間索引
+
  下列範例會在 `SIndx_SpatialTable_geometry_col3` 資料表的 `geometry_col` 中建立第三個空間索引 `SpatialTable`。 此範例會使用預設鑲嵌式配置。 此範例會指定週框方塊，並在第三和第四層上使用不同的資料格密度，同時使用每一物件的預設資料格數目。  
   
 ```sql  
@@ -590,7 +538,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
     GRIDS = ( LEVEL_4 = HIGH, LEVEL_3 = MEDIUM ) );  
 ```  
   
-### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. 變更空間索引所特有的選項  
+### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. 變更空間索引所特有的選項
+
  下列範例會使用 DROP_EXISTING = ON 來指定新的 `SIndx_SpatialTable_geography_col3` 密度，藉以重建上述範例中所建立的空間索引 `LEVEL_3`。  
   
 ```sql  
@@ -601,19 +550,21 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
         DROP_EXISTING = ON );  
 ```  
   
-### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. 在地理資料行上建立空間索引  
+### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. 在地理資料行上建立空間索引
+
  下列範例會建立包含 **geography** 類型資料行 `geography_col` 且名稱為 `SpatialTable2` 的資料表。 然後，此範例會在 `SIndx_SpatialTable_geography_col1` 上建立空間索引 `geography_col`。 此範例會使用 GEOGRAPHY_AUTO_GRID 鑲嵌式配置的預設參數值。  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
-CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
+CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
    ON SpatialTable2(object);  
 ```  
   
 > [!NOTE]  
->  如果是地理方格索引，將無法指定週框方塊。  
+> 如果是地理方格索引，將無法指定週框方塊。
   
-### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. 在地理資料行上建立空間索引  
+### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. 在地理資料行上建立空間索引
+
  下列範例會在 `SIndx_SpatialTable_geography_col2` 資料表的 `geography_col` 上建立第二個空間索引 `SpatialTable2`。 此範例會指定 `GEOGRAPHY_GRID` 做為鑲嵌式配置。 此範例也會在不同層級上指定不同方格密度，並指定每一物件 64 個資料格。 此範例也會將索引填補設定為 `ON`。  
   
 ```sql  
@@ -626,7 +577,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
     PAD_INDEX  = ON );  
 ```  
   
-### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. 在地理資料行上建立空間索引  
+### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. 在地理資料行上建立空間索引
+
  然後此範例會在 `SIndx_SpatialTable_geography_col3` 資料表的 `geography_col` 中建立第三個空間索引 `SpatialTable2`。 此範例會使用預設鑲嵌式配置 GEOGRAPHY_GRID 及預設 CELLS_PER_OBJECT 值 (16)。  
   
 ```sql  
@@ -635,21 +587,20 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)
+- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+- [CREATE STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+- [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
+- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
+- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)
+- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)
+- [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)  
