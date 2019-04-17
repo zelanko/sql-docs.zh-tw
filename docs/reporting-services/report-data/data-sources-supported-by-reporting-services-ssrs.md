@@ -19,10 +19,10 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59242276"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
@@ -73,7 +73,7 @@ ms.locfileid: "59242276"
  關於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源的平台考量，則會分別針對報表撰寫用戶端與報表伺服器。  
   
 ### <a name="on-the-report-authoring-client"></a>在報表撰寫用戶端上  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../是 32 位元應用程式。 is not supported on an Itanium-based platform. On 以 Itanium 為基礎的平台不支援。n若要在 x64 平台上，編輯和預覽報表設計師中的報表，您必須將 32 位元的資料提供者安裝在 (x86) 的平台目錄中。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 是 32 位元應用程式。 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 以 Itanium 為基礎的平台不支援。 若要在 x64 平台上，編輯和預覽報表設計師中的報表，您必須將 32 位元的資料提供者安裝在 (x86) 的平台目錄中。  
   
 ### <a name="on-the-report-server"></a>在報表伺服器上  
  當您將報表部署至 64 位元的報表伺服器時，報表伺服器上必須已經安裝以 64 位元原生編譯的資料提供者。 不支援在 64 位元介面中包裝 32 位元的資料提供者。 如需詳細資訊，請查詢資料提供者的文件。  
@@ -83,7 +83,7 @@ ms.locfileid: "59242276"
   
 -   報表資料來源：所存取之資料類型；例如，關聯式資料庫、多維度資料庫、一般檔案或 XML。 此欄為「 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以用於報表的資料類型為何？」這個問題的答案。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型：當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中定義資料來源時，您可以在下拉式清單中看到的其中一種資料來源類型。 此清單會從已安裝並註冊的 DPE 和資料提供者擴展。 此欄為「當我建立報表資料來源時，可以從下拉式清單中選取哪種資料來源類型？」這個問題的答案。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型：當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中定義資料來源時，您可以在下拉式清單中看到的其中一種資料來源類型。 此清單會從已安裝並註冊的 DPE 和資料提供者擴展。 此欄為「當我建立報表資料來源時，可以從下拉式清單中選取哪種資料來源類型？」這個問題的答案。  
   
 -   資料處理延伸模組/資料提供者的名稱：對應選取之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組或其他資料提供者。 此欄為「當我選取資料來源類型時，要使用哪個對應的資料處理延伸模組或資料提供者？」這個問題的答案。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "59242276"
   
  在 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]中，與此資料延伸模組相關聯的圖形化查詢設計工具是關聯式查詢設計工具，不是與 **Microsoft SQL Server** 資料來源類型搭配使用的 Visual Database Tools 設計工具。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 會自動區分 **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 和 **Microsoft SQL Server** 資料來源類型，並開啟與資料來源類型相關聯的圖形化查詢設計工具。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]會自動區分 **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 和 **Microsoft SQL Server** 資料來源類型，並開啟與資料來源類型相關聯的圖形化查詢設計工具。  
   
  如果您在圖形化模式下使用查詢設計工具，則會分析查詢，而且可能會重寫查詢。 以文字為基礎的查詢設計工具也可用來編寫查詢。 當您想要控制用於查詢的確切 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法時，請使用以文字為基礎的查詢設計工具。   
   
@@ -311,7 +311,7 @@ ms.locfileid: "59242276"
  [返回資料來源資料表](#DataSourcesTable)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料連接、資料來源及連接字串 &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [報表資料集 &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  更多問題嗎？ [試試 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)
   
