@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582411"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671374"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>如何部署 SQL Server 在 Kubernetes 上的巨量資料叢集
 
@@ -120,6 +120,29 @@ kubectl config view
 >1. 請確定您將包裝密碼雙引號括住，如果它包含任何特殊字元。 您可以設定 MSSQL_SA_PASSWORD 為任何您喜歡，但請確定它們已夠複雜，而且不使用`!`，`&`或`'`字元。 請注意，雙引號括住分隔符號僅適用於 bash 命令。
 >1. 您名稱必須是叢集的只有大小寫英數字元，不含空格。 所有 Kubernetes 成品容器、 pod，具狀態設定 （服務） 叢集將會都建立與叢集名稱相同的命名空間中指定的名稱。
 >1. **SA**帳戶是在安裝期間建立的 SQL Server Master 執行個體上的系統管理員。 建立您的 SQL Server 容器，您所指定的 MSSQL_SA_PASSWORD 環境變數設定為可探索執行後回應在容器中的 $MSSQL_SA_PASSWORD。 基於安全考量，變更您的 SA 密碼，根據所述的最佳作法[此處](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
+
+YARN 組態選項在下列章節詳細說明。 注意：這些是專家的層級組態。 使用者不需要指定任何這些值，預設值在此情況下才會生效。 Yarn 是適用於 Spark 的 Resource Manager。 在儲存體的 pod 中執行的 Spark 和，可透過 CLUSTER_STORAGE_POOL_REPLICAS 控制。
+
+| Yarn 環境變數 | 必要項 | 預設值 | 描述 |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | 否 | 2048  | HDFS 名稱和資料節點的處理序的堆積大小 |
+| **YARN_HEAPSIZE**   | 否 | 2048  | Yarn RM 和 NM 程序的堆積大小 |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | 否 | 18432  | 最大的記憶體總計每個 K8 容器，可以使用 Yarn  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | 否 | 6  | 最大的虛擬核心的節點上，可以使用 Yarn  |
+| **YARN_SCHEDULER_MAX_MEMORY** | 否 | 18432  | Yarn 容器可使用的節點上的最大記憶體  |
+| **YARN_SCHEDULER_MAX_VCORES** | 否 | 6  | Yarn 容器可使用 nod 上最大記憶體  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | 否 | 0.3  | 應用程式主機可以使用的記憶體總數的比率   |
+
+本節會詳述在 Spark 組態選項。 注意：這些是專家的層級組態。 使用者不需要指定任何這些值，預設值在此情況下才會生效。 在執行階段使用者可以透過針對每個應用程式設定 %%設定中的 spark notebook。
+
+| Spark 環境變數 | 必要項 | 預設值 | 描述 |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | 否 | 2048  | 使用 Spark 驅動程式的記憶體  |
+| **SPARK_DRIVER_CORES** | 否 | 1  | Spark 驅動程式所使用的核心數目  |
+| **SPARK_EXECUTOR_INSTANCES** | 否 | 3  | 使用 Spark 驅動程式的記憶體  |
+| **SPARK_EXECUTOR_MEMORY** | 否 | 1536  | 使用 Spark 執行程式的記憶體 |
+| **SPARK_EXECUTOR_CORES** | 否 | 1  | Spark 執行程式所使用的核心數目  |
+
 
 設定部署巨量資料叢集所需的環境變數，端視您是否使用 Windows 或 Linux 用戶端而有所不同。  選擇執行下列步驟根據哪一個作業系統使用。
 

@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206617"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671284"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
@@ -57,7 +57,7 @@ ms.locfileid: "53206617"
 
 有三個值可以設給`required_synchronized_secondaries_to_commit`:0、 1 或 2。 控制行為的複本變成無法使用時，會發生什麼事。 數字對應必須與主要同步的次要複本的數目。 行為會低於 Linux，如下所示：
 
--   0-沒有自動容錯移轉是可能這是因為沒有次要複本需要同步處理。 隨時都可在主要資料庫。
+-   0-在同步處理的狀態，與主要不需要次要複本。 不過如果次要複本未同步處理，會有任何自動容錯移轉。 
 -   1-一個次要複本必須位於與主要; 已同步處理狀態可以自動容錯移轉。 主要資料庫是無法使用，直到次要同步複本為止。
 -   2-中的三個或多個節點 AG 組態兩個次要複本必須與主要; 同步處理可以自動容錯移轉。
 
@@ -95,7 +95,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 新功能[!INCLUDE[sssql17-md](../includes/sssql17-md.md)]CU1 是僅設定的複本。 Pacemaker 是 WSFC 的不同，因為仲裁，並需要 STONITH，尤其擁有只是兩個節點組態不能說到 AG。 針對 FCI，Pacemaker 所提供的仲裁機制可能沒問題，因為所有的 FCI 容錯移轉仲裁會在叢集層。 在 Linux 的仲裁會在 ag 中， [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]、 儲存的所有中繼資料。 這是僅設定的複本會發揮作用。
 
-沒有任何其他項目，第三個節點和至少一個同步處理的複本會是必要。 這不可行的[!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]，因為它只能有兩個參與 AG 的複本。 僅設定的複本會儲存在 master 資料庫中，相同的 AG 組態中的其他複本 AG 組態。 僅設定的複本並沒有在 AG 中參與的使用者資料庫。 設定資料會從主要以同步方式傳送。 這項組態資料則會使用在容錯移轉期間，無論是自動或手動。
+沒有任何其他項目，第三個節點和至少一個同步處理的複本會是必要。 僅設定的複本會儲存在 master 資料庫中，相同的 AG 組態中的其他複本 AG 組態。 僅設定的複本並沒有在 AG 中參與的使用者資料庫。 設定資料會從主要以同步方式傳送。 這項組態資料則會使用在容錯移轉期間，無論是自動或手動。
 
 為了維持仲裁，並啟用自動容錯移轉的外部叢集類型 AG，它是必須：
 

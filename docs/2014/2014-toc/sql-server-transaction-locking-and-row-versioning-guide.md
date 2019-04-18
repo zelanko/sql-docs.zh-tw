@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c39fdb8cdb811efecbf84d41ce8778f022001a
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880561"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671424"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 交易鎖定與資料列版本設定指南
 
@@ -152,7 +152,7 @@ CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
 INSERT INTO TestBatch VALUES (2, 'bbb');  
-INSERT INTO TestBatch VALUES (3, 'ccc');  -- Syntax error.  
+INSERT INTO TestBatch VALUSE (3, 'ccc');  -- Syntax error.  
 GO  
 SELECT * FROM TestBatch;  -- Returns no rows.  
 GO  
@@ -310,14 +310,14 @@ GO
 |讀取未認可|最低隔離等級，隔離交易僅能確保不會讀取已實體損毀的資料。 這種等級下允許中途讀取，所以任何交易可能看得到其他交易所做的尚未認可變更。|  
 |讀取認可|允許交易對另一筆交易先前讀取 (未修改) 的資料進行讀取，而不必等待前一筆交易完成。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持寫入鎖定 (取自於選取的資料) 直到交易結束，但讀取鎖定會在 SELECT 作業一經執行時即釋放。 這是 [!INCLUDE[ssDE](../includes/ssde-md.md)] 預設等級。|  
 |可重複讀取|[!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 直到交易結束。 不過由於範圍鎖定未受管理，便有可能發生虛設項目讀取。|  
-|可序列化|最高的等級，使交易完全與其他交易隔離。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 至交易結束予以釋放為止。 當 SELECT 作業使用界定範圍的 WHERE 子句時，就會取得範圍鎖定以特意避免虛設項目讀取。<br /><br /> **注意：** 當您要求可序列化隔離等級時，複寫資料表上的 DDL 作業和交易可能會失敗。 這是因為複寫查詢所使用的提示可能與可序列化隔離等級不相容。|  
+|可序列化|最高的等級，使交易完全與其他交易隔離。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 將維持讀取及寫入鎖定 (取自於選取的資料) 至交易結束予以釋放為止。 當 SELECT 作業使用界定範圍的 WHERE 子句時，就會取得範圍鎖定以特意避免虛設項目讀取。<br /><br /> **注意：** DDL 作業和複寫的資料表上的交易可能會要求可序列化隔離等級時失敗。 這是因為複寫查詢所使用的提示可能與可序列化隔離等級不相容。|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 也支援另外兩種使用資料列版本設定的交易隔離等級。 其一是讀取認可隔離的實作，而另一種交易隔離等級則是快照。  
   
 |資料列版本設定隔離等級|定義|  
 |------------------------------------|----------------|  
 |讀取認可快照|當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 ON 時，讀取認可隔離會使用資料列版本設定以提供陳述式層級的讀取一致性。 讀取作業只需要 SCH-S 資料表層級的鎖定，並不需要頁面或資料列的鎖定。 也就是說，Database Engine 會利用資料列版本設定，依照資料在陳述式開始時存在的狀態，為每個陳述式提供該資料具有交易一致性的快照。 鎖定的使用目的不是為了防止其他交易更新資料。 使用者定義的函數可傳回在包含 UDF 的陳述式開始之後所認可的資料。<br /><br /> 當 READ_COMMITTED_SNAPSHOT 資料庫選項設為 OFF (預設值) 時，讀取認可隔離會在目前交易正執行讀取作業期間，利用共用鎖定來防止其他交易修改資料列。 共用鎖定也會封鎖陳述式，使它們在其他交易完成之前，無法讀取其他交易所修改的資料列。 這兩種實作都符合讀取認可隔離的 ISO 定義。|  
-|快照式|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 ALLOW_SNAPSHOT_ISOLATION 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 快照隔離之下的 BEGIN TRANSACTION 陳述式之後不允許有下列 DDL 陳述式：ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME 或是任何 Common Language Runtime (CLR) DDL 陳述式。 當您在隱含交易內使用快照隔離時，便允許這些陳述式。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961：「資料庫 '%.*ls' 中的快照集隔離交易失敗，因為這個交易啟動之後，另一個並行交易的 DDL 陳述式修改了此陳述式存取的物件。 這是不允許的，因為中繼資料並未建立版本。 如果在快照集隔離下並行更新中繼資料，將會造成不一致的問題。」|  
+|快照式|快照隔離等級使用資料列版本設定來提供交易層級的讀取一致性。 讀取作業並不需要頁面或資料列的鎖定，只需要 SCH-S 資料表鎖定。 當讀取其他交易所修改的資料列時，它們會擷取在啟動交易時就已經存在的資料列版本。 只有當 ALLOW_SNAPSHOT_ISOLATION 資料庫選項設定為 ON 時，您才能針對資料庫使用快照集隔離。 根據預設，使用者資料庫的此選項為 OFF。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援中繼資料版本設定。 因此，哪些 DDL 作業可以在快照隔離之下執行的明確交易中執行會有一些限制。 下列 DDL 陳述式不允許快照隔離之下的 BEGIN TRANSACTION 陳述式之後：ALTER TABLE、 CREATE INDEX、 CREATE XML INDEX、 ALTER INDEX、 DROP INDEX、 DBCC REINDEX、 ALTER PARTITION FUNCTION、 ALTER PARTITION SCHEME 或任何 common language runtime (CLR) DDL 陳述式。 當您在隱含交易內使用快照隔離時，便允許這些陳述式。 就定義而言，隱含交易是一種單一陳述式，可強制使用快照隔離的語意 (即使是 DDL 陳述式)。 違反這個原則可能會造成錯誤 3961:「 快照集隔離交易無法在資料庫 ' %.* ls' 陳述式存取的物件，因為已修改另一個並行交易啟動之後的這筆交易的 DDL 陳述式。 這是不允許的，因為中繼資料並未建立版本。 如果在快照集隔離下並行更新中繼資料，將會造成不一致的問題。」|  
   
  下表顯示不同隔離等級所啟用的並行副作用。  
   
@@ -561,7 +561,7 @@ GO
   
 -   交易隔離等級必須設為 SERIALIZABLE。  
   
--   查詢處理器必須使用索引來實作範圍篩選述詞。 例如，SELECT 陳述式中的 WHERE 子句可利用以下述詞建立一個範圍的條件：ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**。 如果 **ColumnX** 涵蓋在索引鍵中，才會取得索引鍵範圍鎖定。  
+-   查詢處理器必須使用索引來實作範圍篩選述詞。 例如，SELECT 陳述式中的 WHERE 子句可能會建立一個範圍條件含有此述詞：ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**。 如果 **ColumnX** 涵蓋在索引鍵中，才會取得索引鍵範圍鎖定。  
   
 #### <a name="examples"></a>範例  
 
@@ -649,7 +649,7 @@ INSERT mytable VALUES ('Dan');
   
 -   交易 B 現在要求資料列 1 的獨佔鎖定，但會被封鎖直到交易 A 完成並釋出對資料列 1 的共用鎖定為止。  
   
- 等到交易 B 完成後，交易 A 才能完成，但交易 B 被交易 A 封鎖了。這個狀況也稱為「循環相依性」：交易 A 相依於交易 B，且交易 B 因為相依於交易 A 而形成封閉式循環。  
+ 等到交易 B 完成，但交易 B 被交易 a 封鎖了交易 A 才能完成這種情況也稱之為循環相依性：交易 A 相依於交易 B，且交易 B 因為相依於交易 a 封閉式  
   
  在死結中的這兩個交易會一直等下去，除非由外部處理序解除此死結。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 死結監視器會定期檢查死結中的工作。 如果監視器偵測到循環相依性，它會選擇其中一個工作作為犧牲者，以錯誤來結束其交易。 這樣另一個工作便可以完成其交易。 因為錯誤而結束交易的應用程式可以重試交易，通常在另一個死結交易完成之後便會完成。  
   

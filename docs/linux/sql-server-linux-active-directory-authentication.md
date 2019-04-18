@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240776"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671294"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程：使用 Linux 上的 SQL Server 的 Active Directory 驗證
 
@@ -315,11 +315,11 @@ systemctl restart mssql-server
 如果您的網域控制站支援 LDAPS，您可以強制從 SQL Server 的所有連線到網域控制站，要透過 LDAPS。 若要檢查您的用戶端可以連絡網域控制站，透過 ldaps，執行下列 bash 命令， `ldapsearch -H ldaps://contoso.com:3269`。 若要設定 SQL Server，僅使用 LDAPS，執行下列命令：
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-這將會透過 SSSD 使用 LDAPS，如果在加入 AD 網域主機已透過 SSSD 封裝及**disablesssd**未設定為 true。 如果**disablesssd**設為 true，連同**forceldaps**設為 true，則它將在 SQL Server 所做的 openldap 程式庫呼叫上使用 LDAPS 通訊協定。
+這將會透過 SSSD 使用 LDAPS，如果在加入 AD 網域主機已透過 SSSD 封裝及**disablesssd**未設定為 true。 如果**disablesssd**設為 true，連同**forcesecureldap**設為 true，則它將在 SQL Server 所做的 openldap 程式庫呼叫上使用 LDAPS 通訊協定。
 
 ### <a name="post-sql-server-2017-cu14"></a>將 SQL Server 2017 CU14 張貼
 

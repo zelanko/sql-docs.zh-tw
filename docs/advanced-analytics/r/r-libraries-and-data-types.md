@@ -3,19 +3,19 @@ title: R-SQL 資料類型轉換為 SQL Server Machine Learning 服務
 description: 檢閱隱含與明確的資料型別 converstions R 與 SQL Server 之間的資料科學和機器學習服務解決方案中。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511535"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671114"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>資料類型對應 betweenR 和 SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>R 與 SQL Server 之間的資料類型對應
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在 SQL Server Machine Learning 服務中的 R 整合功能上執行的 R 解決方案，請檢閱清單不支援的資料類型和資料類型轉換的 R 程式庫與 SQL Server 之間傳遞資料時可能會隱含地執行。
