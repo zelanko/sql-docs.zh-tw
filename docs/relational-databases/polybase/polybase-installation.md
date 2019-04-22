@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872298"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安裝 PolyBase
@@ -106,7 +106,7 @@ ms.locfileid: "58872298"
 |SQL Server 元件|參數和值|Description|  
 |--------------------------|--------------------------|-----------------|  
 |SQL Server 安裝程式控制|**必要項**<br /><br /> /FEATURES=PolyBase|選取 PolyBase 功能。|  
-|SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
+|SQL Server PolyBase 引擎|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  
 |SQL Server PolyBase 資料移動 |**選擇性**<br /><br /> /PBDMSSVCACCOUNT|指定資料移動服務的帳戶。 預設是 **NT Authority\NETWORK SERVICE**。|  
@@ -121,7 +121,7 @@ ms.locfileid: "58872298"
 
 |SQL Server 元件|參數和值|Description|  
 |--------------------------|--------------------------|-----------------|  
-|SQL Server 安裝程式控制|**必要項**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 會安裝所有 PolyBase 功能的支援，除了 Hadoop 連線能力以外。 PolyBaseJava 可啟用 Hadoop 連線能力。 PolyBase 兩種都會安裝。 |  
+|SQL Server 安裝程式控制|**必要**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore 會安裝所有 PolyBase 功能的支援，除了 Hadoop 連線能力以外。 PolyBaseJava 可啟用 Hadoop 連線能力。 PolyBase 兩種都會安裝。 |  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCACCOUNT|指定引擎服務的帳戶。 預設值是 **NT Authority\NETWORK SERVICE**。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCPASSWORD|指定引擎服務帳戶的密碼。|  
 |SQL Server PolyBase Engine|**選擇性**<br /><br /> /PBENGSVCSTARTUPTYPE|指定 PolyBase 引擎的啟動模式：Automatic (自動，預設)、Disabled (停用) 以及 Manual (手動)。|  

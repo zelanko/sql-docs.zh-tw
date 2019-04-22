@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a120fe3802235ff0d5548693d9bf7f4638ef5e42
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506485"
 ---
 # <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
@@ -38,10 +38,10 @@ ms.locfileid: "59506485"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**principal_id**|**ssNoversion**|主體的識別碼。 該值在資料庫中是唯一的。|  
+|**principal_id**|**int**|主體的識別碼。 該值在資料庫中是唯一的。|  
 |**sid**|**varbinary(85)**|如果主體是定義在資料庫外部，則為該主體的安全性識別碼。 例如，它可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入、Windows 登入、Windows 群組登入或是對應到憑證的登入，否則這個值為 NULL。|  
-|**NAME**|**nvarchar (128)**|主體的名稱。 該值在資料庫中是唯一的。|  
-|**型別**|**nvarchar (128)**|主體類型的描述。 所有的類型會對應至**sid**。 這個值可以是下列值之一：<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**name**|**nvarchar (128)**|主體的名稱。 該值在資料庫中是唯一的。|  
+|**type**|**nvarchar (128)**|主體類型的描述。 所有的類型會對應至**sid**。 這個值可以是下列值之一：<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**usage**|**nvarchar (128)**|指出主體參與了 GRANT 或 DENY 權限的評估，或者作為驗證器使用。<br /><br /> 這個值可以是下列其中一個值：<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>另請參閱  

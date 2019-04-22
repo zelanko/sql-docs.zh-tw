@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860522"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>版本資訊適用於 SQL Server 上的巨量資料叢集
@@ -33,12 +33,12 @@ ms.locfileid: "58860522"
 
 | 新功能或更新 | 詳細資料 |
 |:---|:---|
-| 支援執行深度學習 TensorFlow 在 Spark 中使用 GPU 的指引。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md)。 |
+| 說明在 Spark 中透過 TensorFlow 執行深度學習時的 GPU 支援。 | [部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow](spark-gpu-tensorflow.md)。 |
 | **SqlDataPool**並**SqlStoragePool**預設不會再建立資料來源。 | 視需要手動建立這些。 請參閱[已知問題](#externaltablesctp24)。 |
-| `INSERT INTO SELECT` 支援的資料集區。 | 如需範例，請參閱[教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)。 |
+| 資料集區的 `INSERT INTO SELECT` 支援。 | 如需範例，請參閱[教學課程：將資料內嵌到 SQL Server 資料集區使用 TRANSACT-SQL](tutorial-data-pool-ingest-sql.md)。 |
 | `FORCE SCALEOUTEXECUTION` 和`DISABLE SCALEOUTEXECUTION`選項。 | 強制或停用外部資料表上的查詢集區的計算使用。 例如， `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` 。 |
 | 已更新的 AKS 部署建議。 | 在 AKS 上的巨量資料叢集時，我們現在建議使用單一節點的大小**Standard_L8s**。 |
-| Spark 2.4 的 Spark 執行階段升級。 | |
+| 將 Spark 執行階段升級至 Spark 2.4。 | |
 
 ### <a name="known-issues"></a>已知問題
 
@@ -176,7 +176,7 @@ make: *** [deploy-clean] Error 2
 | VS Code 延伸模組，巨量資料叢集來部署應用程式。 | [如何使用 VS Code 來部署應用程式到 SQL Server 的巨量資料叢集](app-deployment-extension.md) |
 | 若要變更**mssqlctl**工具命令使用方式。 | 如需詳細資訊，請參閱[mssqlctl 的已知問題](#mssqlctlctp23)。 |
 | Sparklyr 用於巨量資料叢集 | [在 SQL Server 2019 巨量資料叢集中使用 Sparklyr](sparklyr-from-RStudio.md) |
-| 使用巨量資料叢集裝載外部的 HDFS 相容儲存體**HDFS 分層**。 | 請參閱[HDFS 分層](hdfs-tiering.md)。 |
+| 將外部 HDFS 相容儲存體裝載至具備 **HDFS 階層處理**的巨量資料叢集。 | 請參閱[HDFS 分層](hdfs-tiering.md)。 |
 | SQL Server 的主要執行個體與 HDFS/Spark 閘道的新統一的連線體驗。 | 請參閱[SQL Server 的主要執行個體和 HDFS/Spark 閘道](connect-to-big-data-cluster.md)。 |
 | 刪除與叢集**mssqlctl 叢集刪除**現在會刪除只物件命名空間中的巨量資料叢集的一部分。 | 命名空間不會刪除。 不過，在舊版中此命令並未刪除整個命名空間。 |
 | _安全性_端點名稱已變更和彙總。 | **服務-安全性-lb**並**服務-安全性-nodeport**已合併到**端點安全性**端點。 |
@@ -382,7 +382,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="admin-portal"></a>系統管理員入口網站
 
-- 當您[建立應用程式使用 msqlctl ctp 命令](big-data-cluster-create-apps.md)並將其部署巨量資料叢集，叢集系統管理員入口網站顯示 pod 已部署應用程式為 「 不明 」 的 Admin 部分的 [控制器] 區段中的 SQL Server 上。
+- 當您[建立應用程式使用 msqlctl ctp 命令](big-data-cluster-create-apps.md)並將其部署巨量資料叢集，叢集系統管理員入口網站顯示 pod 已部署應用程式為 「 不明 」 的 Admin] 部分的 [控制器] 區段中的 SQL Server 上。
 
 #### <a name="external-tables"></a>外部資料表
 

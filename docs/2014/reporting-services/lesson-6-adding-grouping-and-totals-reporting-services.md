@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241736"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：加入群組和總計 (Reporting Services)
@@ -25,15 +25,15 @@ ms.locfileid: "59241736"
   
  **本主題內容：**  
   
--   [將報表中的資料分組](#bkmk_groupdata)  
+-   [在報表中的群組資料](#bkmk_groupdata)  
   
--   [在報表中加入總計](#bkmk_addtotals)  
+-   [若要在報表中加入總計](#bkmk_addtotals)  
   
--   [在報表中加入每日總計](#bkmk_adddailytotal)  
+-   [若要加入報表中的每日總計](#bkmk_adddailytotal)  
   
--   [在報表中加入總計](#bkmk_addgrandtotal)  
+-   [將總計加入到報表](#bkmk_addgrandtotal)  
   
--   [若要將報表發行至報表伺服器 (選擇性)](#bkmk_publishreport)  
+-   [將報表發行至報表伺服器 （選擇性）](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> 在報表中的群組資料  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241736"
   
      如果您在輸出視窗中看見類似下面的訊息，就表示部署成功。  
   
-    > ------ 已經開始建立:專案：教學課程，設定：偵錯 ------ 正在略過 'Sales Orders.rdl'。 項目為最新狀態。建立完成 -- 0 個錯誤，0 個警告 ------ 已經開始部署:專案：教學課程，設定：偵錯---部署至 http://\<伺服器名稱 > / 正在回報 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置：1 個成功或為最新狀態，0 個失敗，0 個略過 ==================== 部署:1 個成功，0 個失敗，0 個略過 ==========  
+    > ---已經開始建立：專案：教學課程，設定：偵錯---正在略過 'Sales Orders.rdl'。 項目是最新狀態。建置完成--0 個錯誤，0 警告---部署開始：專案：教學課程，設定：偵錯---部署至 http://\<伺服器名稱 > / 正在回報 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置：成功或最新的 1、 0 失敗、 0 略過 === 部署：1 個成功，0 失敗、 0 略過 ===  
   
      如果您看見類似下面的錯誤訊息，請確認自己擁有報表伺服器的權限，而且已經以系統管理員權限啟動 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   

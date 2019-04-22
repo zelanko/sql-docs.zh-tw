@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241666"
 ---
 # <a name="create-tables-database-engine"></a>建立資料表 (Database Engine)
@@ -29,11 +29,11 @@ ms.locfileid: "59241666"
   
 -   **開始之前：**  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
--   **若要使用下列項目來建立資料表：**  
+-   **若要建立的資料表，請使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

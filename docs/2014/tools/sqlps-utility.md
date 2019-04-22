@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241508"
 ---
 # <a name="sqlps-utility"></a>sqlps 公用程式
   `sqlps` 公用程式會啟動 Windows PowerShell 2.0 工作階段並且載入和註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者與指令程式。 您可以輸入 PowerShell 命令或指令碼，以便使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 元件來處理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體及其物件。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 使用`sqlps`PowerShell 模組改。 如需詳細資訊`sqlps`模組，請參閱 <<c2> [ 匯入 SQLPS 模組](../database-engine/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]請改用 `sqlps` PowerShell 模組。 如需詳細資訊`sqlps`模組，請參閱 <<c2> [ 匯入 SQLPS 模組](../database-engine/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -100,19 +100,19 @@ ms.locfileid: "59241508"
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中的 `sqlps` 公用程式版本實作為 Windows PowerShell 1.0 迷你 shell。 迷你 Shell 有一些限制，例如不允許使用者載入迷你 Shell 所載入之嵌入式管理單元以外的嵌入式管理單元。 這些限制不適用於 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 及更高版本的公用程式，這些版本已經變更為使用 `sqlps` 模組。  
   
 ## <a name="examples"></a>範例  
- **A. 在不顯示著作權橫幅的預設互動模式中執行 sqlps 公用程式**  
+ **A.在不顯示著作權橫幅的預設互動模式中執行 sqlps 公用程式**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B. 從命令提示字元處執行 SQL Server PowerShell 指令碼**  
+ **B.從命令提示字元處執行 SQL Server PowerShell 指令碼**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. 從命令提示字元處執行 SQL Server PowerShell 指令碼，並在指令碼完成之後維持執行狀態**  
+ **C.從命令提示字元處執行 SQL Server PowerShell 指令碼，並在指令碼完成之後維持執行狀態**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

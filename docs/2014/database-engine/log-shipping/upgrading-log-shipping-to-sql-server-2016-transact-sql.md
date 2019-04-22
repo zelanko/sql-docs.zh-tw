@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042427"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>將記錄傳送升級至 SQL Server 2014 (Transact-SQL)
@@ -193,7 +193,7 @@ ms.locfileid: "59042427"
 > [!IMPORTANT]  
 >  在升級主要伺服器之前，請務必先升級所有次要伺服器執行個體。  
   
- **若要使用容錯移轉升級然後切換回原始的主要伺服器**  
+ **若要升級使用容錯移轉，然後再切換回原始主要伺服器**  
   
 1.  升級所有必要的伺服器執行個體 (伺服器 B 和 C)。  
   
@@ -224,4 +224,4 @@ ms.locfileid: "59042427"
 ## <a name="see-also"></a>另請參閱  
  [交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [套用交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [記錄傳送資料表與預存程序](log-shipping-tables-and-stored-procedures.md)  

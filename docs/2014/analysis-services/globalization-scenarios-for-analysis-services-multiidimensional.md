@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241891"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多維度的全球化案例
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可儲存及操作表格式和多維度資料模型中的多語系資料和中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 儲存及操作多國語言資料和表格式和多維度資料模型中的中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
   
  Unicode 支援是指 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可使用 Windows 用戶端和伺服器作業系統支援的任何語言來儲存資料，並可讀取、寫入、排序及比較 Windows 電腦上所使用之任何字元集中的資料。 使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料的 BI 用戶端應用程式可以使用者選擇的語言來表示資料 (假設該語言的資料存在於模型中)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59241891"
   
 -   記錄檔會包含英文和當地語系化訊息的混合 (假設您在 Analysis Services 執行所在的 Windows Server 上已安裝語言套件)。  
   
--   文件和工具 (例如 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]) 已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文和西班牙文。 若要使用特定語言版本的工具，請安裝特定語言版本的 SQL Server (例如，安裝德文版 SQL Server 以取得德文版 Management Studio)，或執行目標語言之 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]的獨立安裝程式。  
+-   文件和工具，例如[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]和[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]，翻譯成下列語言：簡體中文、 繁體中文、 法文、 德文、 義大利文、 日文、 韓文、 葡萄牙文 （巴西）、 俄文和西班牙文。 若要使用特定語言版本的工具，請安裝特定語言版本的 SQL Server (例如，安裝德文版 SQL Server 以取得德文版 Management Studio)，或執行目標語言之 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]的獨立安裝程式。  
   
  Analysis Services 可讓您在整個物件階層中獨立設定語言、定序和翻譯。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59241891"
 |[語言和定序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的預設語言和 Windows 定序。 您的選擇會影響 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所管理的資料和中繼資料。|  
 |[翻譯&#40;Analysis Services&#41;](translations-analysis-services.md)|定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫和資料庫所包含之物件的翻譯。 本主題說明 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 如何解析來自用戶端應用程式的翻譯資料和中繼資料要求。|  
 |[貨幣轉換&#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|使用 [商業智慧精靈] 定義貨幣轉換。|  
-|[全球化秘訣和最佳作法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
+|[全球化秘訣和最佳做法 &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Windows 應用程式的國際化](/windows/desktop/Intl/international-support)   

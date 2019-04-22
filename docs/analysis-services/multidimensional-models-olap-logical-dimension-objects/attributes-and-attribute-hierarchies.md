@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b858af0f4f3e86e480099a16e2b8db607b8882c3
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042407"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>屬性和屬性階層
@@ -37,6 +37,6 @@ ms.locfileid: "59042407"
 ## <a name="see-also"></a>另請參閱  
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [定義屬性關聯性](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
- [維度屬性 (attribute) 屬性 (property) 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

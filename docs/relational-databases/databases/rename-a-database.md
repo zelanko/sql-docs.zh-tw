@@ -16,10 +16,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872018"
 ---
 # <a name="rename-a-database"></a>重新命名資料庫
@@ -33,11 +33,11 @@ ms.locfileid: "58872018"
   
      [限制事項](#limitations-and-restrictions)  
   
-     [Security](#security)  
+     [安全性](#security)  
   
 - 使用下列方法重新命名資料庫：  
   
-     [SQL Server Management Studio](#rename-a-database-using-sql-server-management-studio)  
+     [Transact-SQL](#rename-a-database-using-sql-server-management-studio)  
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   

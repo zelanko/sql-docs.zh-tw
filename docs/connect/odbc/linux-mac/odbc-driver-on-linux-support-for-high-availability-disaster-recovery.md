@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042377"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驅動程式 - 高可用性和災害復原的支援
@@ -23,7 +23,7 @@ ms.locfileid: "59042377"
 
 Linux 和 macOS 的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]的相關資訊，請參閱：  
   
--   [可用性群組接聽程式、用戶端連接及應用程式容錯移轉 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
 -   [建立及設定可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
@@ -96,8 +96,8 @@ Linux 和 macOS 的 ODBC 驅動程式支援 [!INCLUDE[ssHADR](../../../includes/
   
 |函數|Description|  
 |------------|---------------|  
-|[SQLConnect 函數](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|  
-|[SQLDriverConnect 函數](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** 可透過 DSN、連接字串或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|
+|[SQLConnect 函式](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|  
+|[SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** 可透過 DSN、連接字串或連線屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover**。|
   
 ## <a name="see-also"></a>另請參閱  
 

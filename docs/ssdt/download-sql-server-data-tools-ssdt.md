@@ -15,10 +15,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243502"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
@@ -66,7 +66,7 @@ ms.locfileid: "59243502"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (獨立安裝程式)
 
-[![d下載](../ssdt/media/download.png) 下載適用於 Visual Studio 2017 的 SSDT (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - 如果已安裝「Analysis Services 專案」和「Reporting Services 專案」延伸模組，請先解除安裝，並關閉所有 VS 執行個體，然後再安裝 SSDT for Visual Studio 2017 (15.9.0)。
@@ -87,8 +87,8 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：
 
-- [中文 (簡體)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
-- [中文 (繁體)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
+- [簡體中文]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
+- [繁體中文]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
 - [英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
 - [法文]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
 - [德文]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)
@@ -120,7 +120,7 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 1. 執行 `vs_setup.exe --NoWeb`，以安裝 VS2017 Shell 及 SQL Server 資料專案。
 2. 從配置資料夾執行 `SSDT-Setup-ENU.exe /install`，並選取 SSIS/SSRS/SSAS。
 
-   - 若要自動安裝，請執行 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+   - 若要自動安裝，請執行或 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
 
 若要查看可用的選項，請執行 `SSDT-Setup-ENU.exe /help`
 

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242476"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
@@ -180,7 +180,7 @@ ms.locfileid: "59242476"
 ##  <a name="bkmk_Learn"></a> Learn more  
  使用以下連結來取得可幫助您掌握各個概念的其他資訊。  
   
- [我要如何在 Analysis Services 中定義多對多維度](../lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [如何在 Analysis Services 中定義多對多維度](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [多對多革命 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

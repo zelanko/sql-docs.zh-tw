@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/09/2018
 ms.author: janinez
-author: douglaslMS
-manager: craigg-msft
-ms.openlocfilehash: f4f47e3a0faf448a131dceaa9a8f511684ea21a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+author: janinezhang
+manager: craigg
+ms.openlocfilehash: 9ba9dde07be2e879dc44f6d3fd105d0b315f5f98
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271377"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671194"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲
 
