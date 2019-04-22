@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241936"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 中的 PowerPivot 資料重新整理
@@ -27,17 +27,17 @@ ms.locfileid: "59241936"
   
  **本主題內容：**  
   
--   [互動式資料重新整理](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [Windows 驗證與活頁簿資料連接以及互動式資料重新整理](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [排定的資料重新整理](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [SharePoint 2013 中排程的資料重新整理架構](#bkmk_refresh_architecture)  
   
 -   [其他驗證考量](#datarefresh_additional_authentication)  
   
--   [[詳細資訊]](#bkmk_moreinformation)  
+-   [其他資訊](#bkmk_moreinformation)  
   
 ## <a name="background"></a>背景  
  SharePoint Server 2013 Excel Services 會管理 Excel 2013 活頁簿的資料重新整理，並且在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器上觸發資料模型處理。 若為 Excel 2010 活頁簿，Excel Services 也會管理活頁簿與資料模型的載入和儲存。 不過，Excel Services 會仰賴 PowerPivot 系統服務，將處理命令傳送給資料模型。 下表將摘要說明根據活頁簿的版本傳送資料重新整理命令的元件。 假設的環境是 SharePoint 2013 伺服器陣列，並且設定為使用以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server。  
@@ -72,9 +72,9 @@ ms.locfileid: "59241936"
   
 -   互動式資料重新整理只會重新整理目前使用者工作階段中的資料。 資料不會自動儲存回 SharePoint 內容資料庫中的活頁簿項目。  
   
--   **認證：** 互動式資料重新整理可以使用目前登入之使用者的識別做為認證或預存認證來連接到資料來源。 使用的認證會取決於針對外部資料來源之活頁簿連接所定義的 Excel Services 驗證設定。  
+-   **認證：** 互動式資料重新整理可以使用目前登入使用者的身分識別做為認證或預存的認證來連接到資料來源。 使用的認證會取決於針對外部資料來源之活頁簿連接所定義的 Excel Services 驗證設定。  
   
--   **支援的活頁簿：** 以 Excel 2013 建立的活頁簿。  
+-   **支援的活頁簿：** 在 Excel 2013 中建立的活頁簿。  
   
  **若要重新整理資料：**  
   
@@ -95,21 +95,21 @@ ms.locfileid: "59241936"
   
  一般使用者經驗：當客戶在包含 PowerPivot 模型的 Excel 2013 活頁簿中選取 [重新整理所有連線] 時，他們會看到類似下面的錯誤訊息：  
   
--   **外部資料重新整理失敗：** 在活頁簿中處理資料模型時發生錯誤。 請再試一次。 無法重新整理此活頁簿中的一個或多個資料連線。  
+-   **外部資料重新整理失敗：** 使用活頁簿中的資料模型時發生錯誤。 請再試一次。 無法重新整理此活頁簿中的一個或多個資料連線。  
   
  根據您所使用的資料提供者，您會在 ULS 記錄中看見類似以下的訊息。  
   
  **使用 SQL Native Client：**  
   
--   無法建立外部連線或執行查詢。 提供者訊息：參考至識別碼 '20102481-39c8-4d21-bf63-68f583ad22bb' 的非正規物件 'DataSource' 已指定，但尚未使用。  OLE DB 或 ODBC 錯誤：建立 SQL Server 的連接時發生網路相關或執行個體特定錯誤。 找不到伺服器或是無法存取。 檢查執行個體名稱是否正確以及 SQL Server 執行個體是否設定為允許遠端連接。 如需詳細資訊，請參閱《SQL Server 線上叢書》。08001。＜SSL 提供者：要求的安全性封裝不存在。08001。用戶端無法建立連線。08001。用戶端上不支援加密。08001。  連線名稱：ThisWorkbookDataModel，活頁簿：book1.xlsx。  
+-   無法建立外部連線或執行查詢。 提供者訊息：非正規物件 'DataSource'，參考至識別碼 ' 20102481-39 c 8 4d 21-bf63-68f583ad22bb'，已指定，但尚未使用。  OLE DB 或 ODBC 錯誤：建立 SQL Server 的連接時發生網路相關或執行個體特有的錯誤。 找不到伺服器或是無法存取。 檢查執行個體名稱是否正確以及 SQL Server 執行個體是否設定為允許遠端連接。 如需詳細資訊請參閱 SQL Server 線上叢書 》。;08001;SSL 提供者：要求的安全性封裝不存在;08001;用戶端無法建立連線;08001;不支援在用戶端上加密。;08001。  連線名稱：ThisWorkbookDataModel，活頁簿： book1.xlsx。  
   
  **使用 Microsoft OLE DB Provider for SQL Server：**  
   
--   無法建立外部連線或執行查詢。 提供者訊息：參考至識別碼 '6e711bfa-b62f-4879-a177-c5dd61d9c242' 的非正規物件 'DataSource' 已指定，但尚未使用。 OLE DB 或 ODBC 錯誤。 連線名稱：ThisWorkbookDataModel，活頁簿：OLEDB Provider.xlsx。  
+-   無法建立外部連線或執行查詢。 提供者訊息：非正規物件 'DataSource'，參考至識別碼 ' 6e711bfa-b62f-4879-a177-c5dd61d9c242'，已指定，但尚未使用。 OLE DB 或 ODBC 錯誤。 連線名稱：ThisWorkbookDataModel，活頁簿：OLEDB Provider.xlsx。  
   
  **使用 .NET Framework Data Provider for SQL Server：**  
   
--   無法建立外部連線或執行查詢。 提供者訊息：參考至識別碼 'f5fb916c-3eac-4d07-a542-531524c0d44a' 的非正規物件 'DataSource' 已指定，但尚未使用。  高層級關聯式引擎有錯誤。 使用 Managed IDbCommand 介面時，發生下列例外狀況: 無法載入檔案或組件 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 或其相依性的其中之一。 未提供所要求的模擬層，或所提供的模擬層不正確。 (發生例外狀況於 HRESULT：0x80070542)。  連線名稱：ThisWorkbookDataModel，活頁簿：NETProvider.xlsx。  
+-   無法建立外部連線或執行查詢。 提供者訊息：非正規物件 'DataSource'，參考至識別碼 ' f5fb916c-3eac-4d 07-a542-531524c0d44a'，已指定，但尚未使用。  高層級關聯式引擎有錯誤。 Managed 的 IDbConnection 介面時，就會發生下列例外狀況：無法載入檔案或組件 'System.Transactions，version=4.0.0.0，Culture = neutral，publickeytoken=b77a5c561934e089' 或其中一個相依性。 未提供所要求的模擬層，或所提供的模擬層不正確。 (來自 HRESULT 的例外狀況：0x80070542)。  連線名稱：ThisWorkbookDataModel，活頁簿：NETProvider.xlsx。  
   
  **組態設定步驟的摘要** ：若要在本機伺服器上設定 **[當成作業系統的一部分]** 權限：  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59241936"
   
 -   **認證：** 使用預存認證。 不使用目前使用者的識別。  
   
--   **支援的活頁簿：** 使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot for Excel 2010 增益集或 Excel 2013 所建立的活頁簿。 不支援在 Excel 2010 中使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 增益集所建立的活頁簿。 請將活頁簿至少升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 格式。 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+-   **支援的活頁簿：** 使用所建立的活頁簿[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 增益集適用於 Excel 2010 或 Excel 2013。 不支援在 Excel 2010 中使用 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 增益集所建立的活頁簿。 請將活頁簿至少升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 格式。 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  若要顯示 **[管理資料重新整理]** 頁面：  
   
@@ -210,9 +210,9 @@ ms.locfileid: "59241936"
 ##  <a name="datarefresh_additional_authentication"></a> 其他驗證考量  
  在 Excel 2013 中， **[Excel Services 驗證設定]** 對話方塊的設定會決定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於資料重新整理的 Windows 識別。  
   
--   **使用已驗證的使用者帳戶**:Excel Services 會以目前登入之使用者的身分執行資料重新整理。  
+-   **使用已驗證的使用者帳戶**:Excel Services 會執行資料重新整理目前登入使用者的身分識別之下。  
   
--   **使用預存的帳戶**:使用 SharePoint Secure Store Service 應用程式識別碼，讓 Excel Services 用以擷取驗證資料重新整理所需的使用者名稱及密碼。  
+-   **使用預存的帳戶**:採用 SharePoint Secure Store Service 應用程式識別碼，Excel Services 用來擷取使用者名稱和密碼來驗證資料重新整理。  
   
 -   **無**：Excel Services**無人看管的服務帳戶**用。 此服務帳戶與 Secure Store Proxy 相關聯。 您可以在 **[Excel Services 應用程式設定]** 頁面的 **[外部資料]** 區段中進行設定。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "59241936"
  [SharePoint 2013 中的 excel Services](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)。 
   
 ## <a name="see-also"></a>另請參閱  
- [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [升級活頁簿和排程的資料重新整理&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [PowerPivot for SharePoint 2013 安裝](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

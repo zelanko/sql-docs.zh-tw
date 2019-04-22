@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860629"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>設定 Always On 可用性群組的延伸事件
@@ -28,7 +28,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Alwayson_health 工作階段](always-on-extended-events.md#BKMK_alwayson_health)  
   
- [用於偵錯的擴充事件](always-on-extended-events.md#BKMK_Debugging)  
+ [偵錯的擴充事件](always-on-extended-events.md#BKMK_Debugging)  
   
  [Always On 可用性群組擴充事件參考](always-on-extended-events.md#BKMK_Reference)  
   

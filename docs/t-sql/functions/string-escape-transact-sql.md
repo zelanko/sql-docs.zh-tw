@@ -18,16 +18,17 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 932d1a8be595bedf9ccdbddae854a17c4578e64a
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342942"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670834"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   逸出文字中的特殊字元並傳回逸出之字元的文字。 **STRING_ESCAPE** 是決定性函數。  
   
@@ -35,18 +36,20 @@ ms.locfileid: "58342942"
   
 ## <a name="syntax"></a>語法  
   
-```  
+```sql
 STRING_ESCAPE( text , type )  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>引數
+
  *text*  
  這是代表應該逸出之物件的 **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) 運算式。  
   
  *type*  
  將套用的逸出規則。 目前支援的值是 `'json'`。  
   
-## <a name="return-types"></a>傳回類型  
+## <a name="return-types"></a>傳回類型
+
  帶有逸出的特殊與控制字元的 **nvarchar(max)** 文字。 目前，**STRING_ESCAPE** 只能逸出下表中顯示的 JSON 特殊字元。  
   
 |特殊字元|編碼的序列|  
@@ -71,31 +74,34 @@ STRING_ESCAPE( text , type )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  根據 JSON 格式化規則逸出文字  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  根據 JSON 格式化規則逸出文字
+
  下列查詢會使用 JSON 規則逸出特殊字元並傳回逸出的文字。  
   
-```  
+```sql
 SELECT STRING_ESCAPE('\   /  
 \\    "     ', 'json') AS escapedText;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```
 escapedText  
 -------------------------------------------------------------  
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. 格式化 JSON 物件  
+### <a name="b-format-json-object"></a>B. 格式化 JSON 物件
+
  下列查詢會從數字和字串變數建立 JSON 文字，並逸出變數中的任何特殊 JSON 字元。  
   
-```  
-SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
+```
+SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -105,6 +111,4 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [字串函數 &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

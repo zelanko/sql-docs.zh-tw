@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241149"
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
@@ -82,7 +82,7 @@ ms.locfileid: "59241149"
 |**CLR 類型**|**對應的資料類型**|  
 |-----------------------|---------------------------------|  
 |布林|Boolean|  
-|DateTime、DateTimeOffset|DateTime|  
+|DateTime、DateTimeOffset|Datetime|  
 |Int16、Int32、UInt16、Byte、SByte|Integer|  
 |Single、Double|float|  
 |String、Char、GUID、Timespan|String|  

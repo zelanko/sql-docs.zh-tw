@@ -4140,8 +4140,8 @@ items:
       href: ../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md
     - name: 資料庫管理員的診斷連接
       href: ../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md
-    - name: SQL Server 2016 Express LocalDB
-      href: ../database-engine/configure-windows/sql-server-2016-express-localdb.md
+    - name: SQL Server Express LocalDB
+      href: ../database-engine/configure-windows/sql-server-express-localdb.md
     - name: 遠端伺服器
       href: ../database-engine/configure-windows/remote-servers.md
     - name: SQL Server 監視器概觀
@@ -17266,9 +17266,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: 處理 XQuery 中的命名空間
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: db4bc5b476660691c89b814614b82919320733f7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e52ddca93abcc372355dc86e24d809e5aef4e2d3
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583461"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774633"

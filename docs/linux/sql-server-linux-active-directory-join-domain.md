@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243582"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>加入 Active Directory 網域的 Linux 主機上的 SQL Server
@@ -127,8 +127,8 @@ ping contoso.com
 
 在基本組態和網域控制站的連線通過驗證之後，有兩個聯結與 Active Directory 網域控制站的 SQL Server Linux 主機電腦的選項：
 
-- [選項 1：使用 SSSD 封裝](#option1)
-- [選項 2：使用第三方 openldap 提供者公用程式](#option2)
+- [選項 1:使用 SSSD 封裝](#option1)
+- [選項 2:使用第三方 openldap 提供者公用程式](#option2)
 
 ### <a id="option1"></a> 選項 1:若要加入 AD 網域使用 SSSD 封裝
 

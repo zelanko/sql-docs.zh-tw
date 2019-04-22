@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242296"
 ---
 # <a name="export-a-data-tier-application"></a>匯出資料層應用程式
@@ -55,7 +55,7 @@ ms.locfileid: "59242296"
 ##  <a name="UsingDeployDACWizard"></a> 使用匯出資料層應用程式精靈  
  **若要使用精靈匯出 DAC**  
   
-1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中)。  
+1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
   
 2.  在物件總管 中，展開您要匯出 DAC 的執行個體來源節點。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59242296"
   
  **選項。**  
   
- **不要再顯示此頁面** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
+ **不要再顯示此頁面。** - 按一下此核取方塊，之後就不會再顯示 [簡介] 頁面。  
   
  **下一步** - 繼續進行 [Select DAC Package (選取 DAC 封裝)] 頁面。  
   

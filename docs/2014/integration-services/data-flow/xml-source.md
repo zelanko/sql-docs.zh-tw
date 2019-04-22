@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240376"
 ---
 # <a name="xml-source"></a>XML 來源
@@ -69,21 +69,21 @@ ms.locfileid: "59240376"
   
  XML 來源支援多項規則輸出和多項錯誤輸出。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring 包括用來設定 XML 來源的 [XML 來源編輯器] 對話方塊。s[[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括用來設定 XML 來源的 [XML 來源編輯器] 對話方塊。 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師] 中即提供此對話方塊。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 如需 [XML 來源編輯器]  對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
+ 如需 [XML 來源編輯器] 對話方塊中可設定屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [XML 來源編輯器 &#40;連線管理員頁面&#41;](../xml-source-editor-connection-manager-page.md)  
+-   [XML 來源編輯器 &#40;[連線管理員] 頁面&#41;](../xml-source-editor-connection-manager-page.md)  
   
--   [XML 來源編輯器 &#40;資料行頁面&#41;](../xml-source-editor-columns-page.md)  
+-   [XML 來源編輯器 &#40;[資料行] 頁面&#41;](../xml-source-editor-columns-page.md)  
   
--   [XML 來源編輯器 &#40;錯誤輸出頁面&#41;](../xml-source-editor-error-output-page.md)  
+-   [XML 來源編輯器 &#40;[錯誤輸出] 頁面&#41;](../xml-source-editor-error-output-page.md)  
   
  **[進階編輯器]** 對話方塊會反映能以程式設計的方式設定之屬性。 如需有關可以在 **[進階編輯器]** 對話方塊中或以程式設計方式設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [通用屬性](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [XML 來源自訂屬性](xml-source-custom-properties.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "59240376"
 -   [設定資料流程元件的屬性](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>相關工作  
- [使用 XML 來源來擷取資料](xml-source.md)  
+ [使用 XML 來源擷取資料](xml-source.md)  
   
 ## <a name="related-content"></a>相關內容  
  技術文件：[若要設定 SSIS 封裝中使用 XML 檔](https://www.sqlshack.com/using-xml-file-configure-ssis-package/)。  

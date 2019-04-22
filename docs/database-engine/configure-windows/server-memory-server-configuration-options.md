@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042187"
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
@@ -41,7 +41,7 @@ ms.locfileid: "59042187"
 > [!IMPORTANT]  
 > 將 [最大伺服器記憶體] 的值設得太高，可能會導致裝載於相同主機上的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體爭用記憶體。 但若將此值設得太低，可能也會引起高度的記憶體壓力與效能問題。 將 [最大伺服器記憶體] 設為最小值甚至可能會讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法啟動。 如果您變更此選項後無法啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請使用 **_-f_** 啟動選項予以啟動，並將 [最大伺服器記憶體] 重設為先前的值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
     
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可動態使用記憶體；但您可以手動設定記憶體選項，並限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可存取的記憶體數量。 在您設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的記憶體數量之前，要先決定適當的記憶體設定，方法是將實體記憶體總數減去 OS、不受 max_server_memory 設定所控制的記憶體配置，以及任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (以及當電腦不專用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，其他的系統用途) 所需要的記憶體。 此差額即為可指派給目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記憶體數量上限。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可動態使用記憶體。但您可手動設定記憶體選項，並限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可存取的記憶體數量。 在您設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的記憶體數量之前，要先決定適當的記憶體設定，方法是將實體記憶體總數減去 OS、不受 max_server_memory 設定所控制的記憶體配置，以及任何其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (以及當電腦不專用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，其他的系統用途) 所需要的記憶體。 此差額即為可指派給目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記憶體數量上限。  
  
 ## <a name="setting-the-memory-options-manually"></a>手動設定記憶體選項  
 您可以將伺服器選項 [最小伺服器記憶體] 與 [最大伺服器記憶體] 設定成跨某範圍的記憶體值。 這樣的做法有助於讓系統或資料庫管理員，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體配合同一部電腦上執行的其他應用程式或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的記憶體需求，一併設定。
@@ -49,7 +49,7 @@ ms.locfileid: "59042187"
 > [!NOTE]
 > [最小伺服器記憶體] 和 [最大伺服器記憶體] 選項屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更這些設定，只有當 **show advanced options** 設為 1 時，才能變更它們。 這些設定會立即生效，不需要重新啟動伺服器。  
   
-<a name="min_server_memory"></a> 您可使用 **min_server_memory** 確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員，能有最少的記憶體數量可用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時不會立即配置 [最小伺服器記憶體] 中指定的記憶體數量。 不過，由於用戶端負載使記憶體使用量達到這個值後，除非降低 [最小伺服器記憶體] 的值，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法釋出記憶體。 例如，當多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可以同時存在於相同的主機上時，設定 min_server_memory 參數而非 max_server_memory 可為執行個體保留記憶體。 此外，也需要設定虛擬環境中的 min_server_memory 值，以確保基礎主機的記憶體壓力不會為了得到可接受的效能，而嘗試從客體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬機器 (VM) 的緩衝集區，解除超過所需的記憶體。
+<a name="min_server_memory"></a> 您可使用 **min_server_memory** 確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員，能有最少的記憶體數量可用。 啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會立即配置 [最小伺服器記憶體] 中指定的記憶體數量。 不過，由於用戶端負載使記憶體使用量達到這個值後，除非降低 [最小伺服器記憶體] 的值，否則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法釋出記憶體。 例如，當多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體可以同時存在於相同的主機上時，設定 min_server_memory 參數而非 max_server_memory 可為執行個體保留記憶體。 此外，也需要設定虛擬環境中的 min_server_memory 值，以確保基礎主機的記憶體壓力不會為了得到可接受的效能，而嘗試從客體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虛擬機器 (VM) 的緩衝集區，解除超過所需的記憶體。
  
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不保證能夠配置 [最小伺服器記憶體] 中指定的記憶體數量。 如果伺服器的負載從不需要配置 [最小伺服器記憶體] 中指定的記憶體大小，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會以較少的記憶體執行。  
@@ -86,8 +86,7 @@ ms.locfileid: "59042187"
 設定此選項並不會影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [動態記憶體管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)，使其可應其他記憶體 Clerk 的要求擴張或縮減。 使用 [在記憶體中鎖定分頁] 使用者權利時，建議設定[如上詳述](#max_server_memory)的 [最大伺服器記憶體] 上限。
 
 > [!IMPORTANT]
-> 請只有必要的情況下才設定此選項，例如出現 sqlservr 程序移出分頁的跡象。在此情況下，錯誤記錄中將回報錯誤 17890，類似下列範例：
-> `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> 請只有必要的情況下才設定此選項，例如出現 sqlservr 程序移出分頁的跡象。在此情況下，錯誤記錄檔中會回報錯誤 17890，類似下列範例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 > 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，Standard Edition 不需要[追蹤旗標 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 即可使用已鎖定頁面。 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>啟用在記憶體中鎖定分頁  
@@ -175,7 +174,7 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Database Engine 服務啟動選項](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
- [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
- [SQL Server 2017 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
- [Linux 上 SQL Server 2017 的版本及支援功能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
+ [SQL Server 2016 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
+ [SQL Server 2017 的版本與支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
+ [Linux 上的 SQL Server 2017 版本與支援的功能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
  [Windows 與 Windows Server 版本的記憶體限制](/windows/desktop/Memory/memory-limits-for-windows-releases)

@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533336"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671324"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -232,7 +232,7 @@ ms.locfileid: "59533336"
   
   8.    按一下 [確定] 。
 
-    **D3.共用存取簽章不存在**
+   **D3.共用存取簽章不存在**
   5.    按一下 [新增容器] 按鈕，[連接至 Microsoft 訂用帳戶] 對話方塊隨即開啟。  
   
   6.    完成 [連接至 Microsoft 訂用帳戶] 對話方塊，然後按一下 [確定] 回到 [選取備份目的地] 對話方塊。  如需其他資訊，請參閱[連接到 Microsoft Azure 訂用帳戶](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)。

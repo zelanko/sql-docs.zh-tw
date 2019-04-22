@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241458"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
@@ -112,5 +112,5 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 
 ## <a name="next-steps"></a>後續步驟
 如需詳細資訊，請參閱下列文章：
--   [Integration Services (SSIS) 相應放大主機](integration-services-ssis-scale-out-master.md)
--   [Integration Services (SSIS) 相應放大背景工作](integration-services-ssis-scale-out-worker.md)
+-   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
+-   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

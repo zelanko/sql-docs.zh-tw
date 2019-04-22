@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042247"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
@@ -81,9 +81,9 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   使用者登入用戶端電腦，並向應用程式伺服器進行驗證。  
   
--   應用程式伺服器驗證為不同的資料庫，並連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   應用程式伺服器驗證為不同的資料庫，並連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 向另一個資料庫 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 驗證為資料庫使用者。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會向另一個資料庫驗證為資料庫使用者 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 在設定整合式驗證之後，認證將會傳遞至連結的伺服器。  
   
@@ -105,7 +105,7 @@ SPN 在連接字串或連線屬性中使用的語法如下：
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>使用 Active Directory 驗證 Linux 或 macOS 電腦
 
-若要設定 Kerberos，請輸入資料到 `krb5.conf` 檔案。 `krb5.conf` 在 `/etc/` 中，但是您可以使用語法範例 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` 參考另一個檔案。 下列為 `krb5.conf` 檔案範例：  
+若要設定 Kerberos，請輸入資料到 `krb5.conf` 檔案。 `krb5.conf` 位於 `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf` 中，但是您可以使用語法範例 `/etc/` 參考另一個檔案。 下列為 `krb5.conf` 檔案範例：  
   
 ```  
 [libdefaults]  

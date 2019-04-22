@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240666"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>互通性與共存性 (Integration Services)
@@ -28,7 +28,7 @@ ms.locfileid: "59240666"
   
 |功能|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|開發環境|[舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[Visual Studio 2010 的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|開發環境|[舊版的 SQL Server Data Tools （SSDT 和 SSDT-BI）](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools-Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools for Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |管理環境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |msdb 中用來儲存封裝的主要系統資料表|sysssispackages|sysssispackages|sysssispackages|  
 |用來執行封裝的主要命令提示字元公用程式|**dtexec** (dtexec.exe)，2014 版|**dtexec** (dtexec.exe)，2012 版|**dtexec** (dtexec.exe)，2008 版|  
@@ -40,7 +40,7 @@ ms.locfileid: "59240666"
   
 -   **在 SQL Server 資料工具中設計封裝**： 您將使用下列工具開發及維護以相對應之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本為基礎的封裝。  
   
-    -   使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版的 Business Intelligence Development Studio，開發與維護以 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
+    -   使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版的 Business Intelligence Development Studio，開發與維護以 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 為基礎的封裝。  
   
     -   使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，開發與維護以 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]為基礎的封裝。  
   

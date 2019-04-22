@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240396"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基於使用方式的最佳化精靈 F1 說明
@@ -48,24 +48,24 @@ ms.locfileid: "59240396"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [選取要修改的資料分割 &#40;基於使用方式的最佳化精靈&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [選取要修改資料分割&#40;基於使用方式的最佳化精靈&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [指定查詢準則 &#40;基於使用方式的最佳化精靈&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [指定查詢準則&#40;基於使用方式的最佳化精靈&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [檢閱要最佳化的查詢 &#40;基於使用方式的最佳化精靈&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [檢閱要最佳化的查詢&#40;基於使用方式的最佳化精靈&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [檢閱彙總使用方式 &#40;基於使用方式的最佳化精靈&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [檢閱彙總使用方式&#40;基於 Optimiation 精靈&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [指定物件計數 &#40;基於使用方式的最佳化精靈&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [指定物件計數&#40;基於使用方式的最佳化精靈&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [設定彙總選項 &#40;基於使用方式的最佳化精靈&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [設定彙總選項&#40;基於使用方式的最佳化精靈&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [正在完成精靈 &#40;基於使用方式的最佳化精靈&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [完成精靈&#40;基於使用方式的最佳化精靈&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [彙總和彙總設計](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [彙總及彙總設計](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [彙總設計精靈 F1 說明](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 精靈 &#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241883"
 ---
 # <a name="dtexec-utility"></a>dtexec 公用程式
@@ -84,11 +84,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> 執行階段  
  這個公用程式有四個執行階段。 執行階段如下所示：  
   
-1.  命令來源階段：命令提示字元讀取已經指定的選項及引數清單。 如果遇到了 **/?** 或 **/HELP** 選項，則會略過所有後續的階段。  
+1.  命令來源階段：命令提示字元讀取選項和指定的引數的清單。 如果遇到了 **/?** 或 **/HELP** 選項，則會略過所有後續的階段。  
   
 2.  封裝載入階段：所指定的封裝`/SQL`， **/file**，或`/DTS`載入選項。  
   
-3.  設定階段：選項會依下列順序處理：  
+3.  設定階段：選項會依此順序處理：  
   
     -   設定封裝旗標、變數和屬性的選項。  
   
@@ -96,7 +96,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
     -   設定公用程式之執行階段行為的選項，例如報告。  
   
-4.  驗證及執行階段：執行套件，如有指定 **/VALIDATE** 選項，則只會驗證套件而不會執行套件。  
+4.  驗證和執行階段：執行套件，如有指定 **/VALIDATE** 選項，則只會驗證套件而不會執行套件。  
   
 ##  <a name="exit"></a> 傳回的結束碼  
  **從 dtexec 公用程式傳回的結束碼**  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，新安裝的 **xp_cmdshell** 選項預設為停用。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，新安裝的 **xp_cmdshell** 選項預設為停用。 您可以執行 **sp_configure** 系統預存程序以啟用此選項。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
   
 ##  <a name="syntax"></a> 語法  
   
@@ -307,31 +307,31 @@ dtexec /option [value] [/option [value]]...
   
     -   文字檔：  
   
-        -   ProgID：DTS.LogProviderTextFile.1  
+        -   ProgID:DTS.LogProviderTextFile.1  
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]所解碼的字元：  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
-        -   ProgID：DTS.LogProviderSQLProfiler.1  
+        -   ProgID:DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所解碼的字元：  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-        -   ProgID：DTS.LogProviderSQLServer.1  
+        -   ProgID:DTS.LogProviderSQLServer.1  
   
         -   ClassID: {6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
     -   Windows 事件記錄：  
   
-        -   ProgID：DTS.LogProviderEventLog.1  
+        -   ProgID:DTS.LogProviderEventLog.1  
   
         -   ClassID: {97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
     -   XML 檔案：  
   
-        -   ProgID：DTS.LogProviderXMLFile.1  
+        -   ProgID:DTS.LogProviderXMLFile.1  
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> 範例  
  下列範例示範如何使用`dtexec`若要設定及執行的命令提示字元公用程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝。  
   
- **執行封裝**  
+ **[Running Packages]**  
   
  若要利用 Windows 驗證來執行儲存至 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝，請使用下列程式碼：  
   

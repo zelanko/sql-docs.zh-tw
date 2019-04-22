@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
 ms.author: janinez
-author: douglaslMS
-manager: craigg-msft
-ms.openlocfilehash: cc1ab9280843aee163054bace5463e39bd35990d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+author: janinezhang
+manager: craigg
+ms.openlocfilehash: dcbd6f7c70bebd84b7435d4371b38ee9cc8ef3d6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290474"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671264"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 SQL Server 或 Azure SQL Database
 

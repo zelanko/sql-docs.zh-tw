@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860649"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl app
@@ -26,14 +26,14 @@ ms.locfileid: "58860649"
 
 |||
 |---|---|
-| [建立](#create) | 建立應用程式。 |
-| [刪除](#delete) | 刪除應用程式。 |
-| [描述](#describe) | 說明應用程式。 |
-| [Init](#init) | 新應用程式基本架構著手進行。 |
-| [清單](#list) | 列出應用程式。 |
+| [create](#create) | 建立應用程式。 |
+| [delete](#delete) | 刪除應用程式。 |
+| [describe](#describe) | 說明應用程式。 |
+| [init](#init) | 新應用程式基本架構著手進行。 |
+| [list](#list) | 列出應用程式。 |
 | [run](#run) | 執行應用程式。 |
 | [update](#update) | 更新應用程式。 |
-| [範本](reference-mssqlctl-app-template.md) | 範本的命令。 |
+| [template](reference-mssqlctl-app-template.md) | 範本的命令。 |
 
 ## <a id="create"></a> mssqlctl 應用程式建立
 

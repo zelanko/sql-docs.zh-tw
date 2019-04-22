@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e95dff588932bc7885d2501e3d24cc643ae10272
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241159"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>定義指派和其他指令碼命令
@@ -35,6 +35,6 @@ ms.locfileid: "59241159"
 >  當使用 [計算運算式] 窗格來撰寫包含多個陳述式的運算式時，請確定 MDX 指令碼的所有列 (除了最後一列之外) 都用分號 (;) 結束。 計算會串連成單一 MDX 指令碼，且每個指令碼都附加一個分號，以確定會正確編譯 MDX 指令碼。 如果您將分號加入 [計算運算式] 窗格中指令碼的最後一列，Cube 就會正確地建立及部署，但您將無法針對它執行查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的計算](calculations-in-multidimensional-models.md)  
+ [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)  
   
   

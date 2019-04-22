@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241806"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2013 (PowerPivot 組態工具)
@@ -27,13 +27,13 @@ ms.locfileid: "59241806"
   
  [開始之前](#bkmk_before)  
   
- [使用 PowerPivot for SharePoint 2013 組態工具](#bkmk_using)  
+ [若要使用 PowerPivot for SharePoint 2013 組態工具](#bkmk_using)  
   
  [組態步驟](#bkmk_steps)  
   
  [用於設定伺服器的輸入值](#bkmk_input)  
   
- [後續步驟](#bkmk_nextsteps)  
+ [後續的步驟](#bkmk_nextsteps)  
   
 ##  <a name="bkmk_before"></a> 開始之前  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態工具會掃描程式檔案、登錄設定和可用的通訊埠。 若要充分利用這些工具，請檢閱下列各項。  
@@ -81,7 +81,7 @@ ms.locfileid: "59241806"
   
      **複雜密碼** ：輸入複雜密碼。 如果 SharePoint 伺服器陣列是新的，每當新的伺服器或應用程式加入至 SharePoint 伺服器陣列時，就會使用此複雜密碼。 如果伺服器陣列已存在，請輸入可讓您將伺服器應用程式加入至該伺服器陣列的複雜密碼。  
   
-5.  **連接埠：** 選擇性地輸入連接至管理中心 Web 應用程式的通訊埠編號，或是使用提供的隨機產生編號。 組態工具會先檢查這個編號是否可以使用，然後再提供它當做選項。  
+5.  **連接埠：** 選擇性地輸入連接埠號碼連線至管理中心 web 應用程式，或使用提供的隨機產生的編號。 組態工具會先檢查這個編號是否可以使用，然後再提供它當做選項。  
   
 6.  在主要頁面上，輸入以 SharePoint 模式執行之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器的名稱。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "59241806"
   
  下表說明用於設定伺服器的值。  
   
-|頁面|輸入值|原始程式檔|描述|  
+|頁面|輸入值|Source|描述|  
 |----------|-----------------|------------|-----------------|  
 |**設定或修復 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint**|預設帳戶|目前使用者|預設帳戶是用於在伺服器陣列中佈建共用服務的網域 Windows 使用者帳戶。 它可用來佈建下列項目：<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式<br />Secure Store Service<br />Excel Services<br />Web 應用程式集區識別<br />網站集合管理員<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動資料重新整理帳戶。<br /><br /> 根據預設，它使用目前使用者的網域帳戶。 除非您是針對評估和非實際執行目的設定伺服器，否則建議您取代預設值。 您稍後可以使用管理中心變更服務識別。 (選擇性) 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具中，為下列項目指定專用帳戶：<br /><br /> Web 應用程式，使用 **[建立預設 Web 應用程式]** 頁面 (假設此工具正在為伺服器陣列建立 Web 應用程式)。<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動資料重新整理帳戶，使用此工具中的 **[建立無人看管的資料重新整理帳戶]** 頁面。|  
 ||資料庫伺服器|本機 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體 (如果有的話)|如果資料庫引擎執行個體安裝為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 具名執行個體，此工具會將這個執行個體名稱填入資料庫伺服器欄位。 如果您沒有安裝資料庫引擎，此欄位是空的。<br /><br /> **[資料庫伺服器]**  是必要參數。 此執行個體可以是 SharePoint 伺服器陣列所支援的任何 SQL Server 版本或版別。|  
@@ -116,7 +116,7 @@ ms.locfileid: "59241806"
 ||SharePoint 管理中心通訊埠|預設值 (如果需要)|如果未設定伺服器陣列，則此工具會提供用於建立伺服器陣列的選項，包括建立指向管理中心的 HTTP 端點。 它會選取一個隨機產生、未使用中的通訊埠編號。|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([伺服器名稱]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|使用者輸入|Excel Services 需要 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器才能啟用核心的 PowerPivot 功能。 您在此頁面上輸入的伺服器名稱也會加入至 **[設定 PowerPivot 伺服器]** 頁面上的清單。|  
 |**設定新伺服器陣列**|資料庫伺服器<br /><br /> 伺服器陣列帳戶<br /><br /> 複雜密碼<br /><br /> SharePoint 管理中心通訊埠|預設值 (如果需要)|設定會預設為您在主頁面中輸入的內容。|  
-|**建立 PowerPivot 服務應用程式**|服務應用程式名稱|預設|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式名稱：預設名稱為 **[預設的 PowerPivot 服務應用程式]**。 您可以在工具中取代為不同的值。|  
+|**建立 PowerPivot 服務應用程式**|服務應用程式名稱|預設|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式名稱的預設名稱為**預設 PowerPivot 服務應用程式**。 您可以在工具中取代為不同的值。|  
 ||資料庫伺服器|預設|裝載 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫的資料庫伺服器。 預設伺服器名稱就是用於伺服器陣列的資料庫伺服器。 您可以用不同的值來取代預設伺服器名稱。|  
 ||資料庫名稱|預設|要針對 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫建立的資料庫名稱。 預設資料庫名稱以服務應用程式名稱為基礎，後面跟著 GUID，以確保名稱是唯一的。 您可以在工具中取代為不同的值。|  
 |**建立預設 Web 應用程式**|Web 應用程式名稱|預設值 (如果需要)|如果沒有任何 Web 應用程式存在，此工具會建立一個。 Web 應用程式會設定為傳統模式驗證，並且接聽通訊埠 80。 上傳檔案大小上限設為 2047，這是 SharePoint 所允許的最大值。 較大的上傳檔案大小是為了容納將上傳至伺服器的大型 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 檔案。|  
@@ -205,7 +205,7 @@ ms.locfileid: "59241806"
   
 ## <a name="see-also"></a>另請參閱  
  [安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)   
+ [PowerPivot 組態工具](power-pivot-configuration-tools.md)   
  [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   

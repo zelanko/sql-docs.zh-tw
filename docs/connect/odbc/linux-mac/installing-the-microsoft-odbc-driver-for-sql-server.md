@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042327"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS (在 Linux 及 macOS 上安裝 Microsoft ODBC Driver for SQL Server)
@@ -371,8 +371,8 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ### <a name="offline-installation"></a>離線安裝
 如果您希望/需要在沒有網際網路連線的電腦上安裝 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13，您必須手動解析套件相依性。 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 有下列直接相依性：
 - Ubuntu: libc6 (>= 2.21), libstdc++6 (>= 4.9), libkrb5-3, libcurl3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1-1)
-- Red Hat： ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
-- SuSE： ```glibc, libuuid1, krb5, openssl, unixODBC```
+- Red Hat：```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
+- SuSE：```glibc, libuuid1, krb5, openssl, unixODBC```
 
 這些每個套件都有自己的相依性，而這些不一定會存在於系統上。 如需此問題的一般解決方案，請參閱散發套件的套件管理員文件：[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) 和 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
@@ -513,7 +513,7 @@ ODBC Driver on Linux and MacOS 是由下列元件所組成：
 |元件|Description|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X 或 libmsodbcsql-13.X.so.X.X|共用物件 (`so`) 動態程式庫檔案，其中包含驅動程式的所有功能。 針對 Driver 17，這個檔案會安裝在 `/opt/microsoft/msodbcsql17/lib64/`，針對 Driver 13 則在 `/opt/microsoft/msodbcsql/lib64/`。|  
-|`msodbcsqlr17.rll` 中的多個 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 這個檔案會安裝在 `[driver .so directory]../share/resources/en_US/`| 
+|`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 這個檔案會安裝在 `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> 針對 Driver 17，msodbcsql.h 會安裝在 `/opt/microsoft/msodbcsql17/include/`，針對 Driver 13 則在 `/opt/microsoft/msodbcsql/include/`。 |
 |LICENSE.txt|文字檔案，其中包含授權條款。 針對 Driver 17，這個檔案會放在 `/usr/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/share/doc/msodbcsql/`。|
 |RELEASE_NOTES|文字檔案，其中包含版本資訊。 針對 Driver 17，這個檔案會放在 `/usr/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/share/doc/msodbcsql/`。|
@@ -524,7 +524,7 @@ ODBC Driver on Linux and MacOS 是由下列元件所組成：
 |元件|Description|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib 或 libmsodbcsql.13.dylib|動態連結程式庫 (`dylib`) 檔案，其中包含驅動程式的所有功能。 這個檔案會安裝在 `/usr/local/lib/`。|  
-|`msodbcsqlr17.rll` 中的多個 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 針對 Driver 17，這個檔案會安裝在 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/`，針對 Driver 13 則在 `[driver .dylib directory]../share/msodbcsql/resources/en_US/`。 | 
+|`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|隨附驅動程式程式庫的資源檔。 針對 Driver 17，這個檔案會安裝在 `[driver .dylib directory]../share/msodbcsql17/resources/en_US/`，針對 Driver 13 則在 `[driver .dylib directory]../share/msodbcsql/resources/en_US/`。 | 
 |msodbcsql.h|標頭檔，其中包含使用驅動程式所需的所有新定義。<br /><br /> **注意**  ：您無法在相同的程式中參考 msodbcsql.h 和 odbcss.h。<br /><br /> 針對 Driver 17，msodbcsql.h 會安裝在 `/usr/local/include/msodbcsql17/`，針對 Driver 13 則在 `/usr/local/include/msodbcsql/`。 |
 |LICENSE.txt|文字檔案，其中包含授權條款。 針對 Driver 17，這個檔案會放在 `/usr/local/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/local/share/doc/msodbcsql/`。 |
 |RELEASE_NOTES|文字檔案，其中包含版本資訊。 針對 Driver 17，這個檔案會放在 `/usr/local/share/doc/msodbcsql17/`，針對 Driver 13 則在 `/usr/local/share/doc/msodbcsql/`。 |
@@ -533,9 +533,9 @@ ODBC Driver on Linux and MacOS 是由下列元件所組成：
 
 驅動程式需要載入資源檔，才能運作。 這個檔案稱為 `msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`，視驅動程式版本而定。 `.rll` 檔案的位置是相對於驅動程式本身 (`so` 或 `dylib`) 的位置，如上表所述。 到 17.1 版為止，驅動程式也會嘗試從預設目錄載入 `.rll`，如果從相對路徑載入失敗的話。 預設資源檔路徑為：
 
-Linux： `/opt/microsoft/msodbcsql17/share/resources/en_US/`
+Linux：`/opt/microsoft/msodbcsql17/share/resources/en_US/`
 
-MacOS： `/usr/local/share/msodbcsql17/resources/en_US/`
+MacOS：`/usr/local/share/msodbcsql17/resources/en_US/`
 
 
   

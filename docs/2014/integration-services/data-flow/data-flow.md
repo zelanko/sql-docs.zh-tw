@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241356"
 ---
 # <a name="data-flow"></a>資料流程
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, 提供三種不同類型的資料流程元件：來源、轉換與目的地。n來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。l轉換會修改、摘要並清除資料。s目的地則將資料載入資料存放區或建立記憶體中資料集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供三種不同類型的資料流程元件：來源、轉換與目的地。 來源從關聯式資料庫、檔案和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料表和檢視等資料存放區擷取資料。 轉換會修改、摘要並清除資料。 目的地則將資料載入資料存放區或建立記憶體中資料集。  
   
 > [!NOTE]  
 >  使用自訂提供者時，您需要使用中繼資料資料行值更新 ProviderDescriptors.xml 檔。  
@@ -97,7 +97,7 @@ ms.locfileid: "59241356"
 ### <a name="sources-available-for-download"></a>可下載的來源  
  下表列出您可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站下載的其他來源。  
   
-|原始程式檔|描述|  
+|Source|描述|  
 |------------|-----------------|  
 |Oracle 來源|Oracle 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
 |SAP BI 來源|SAP BI 來源是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的來源元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和目的地。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)＞。|  
@@ -158,7 +158,7 @@ ms.locfileid: "59241356"
 ### <a name="destinations-available-for-download"></a>可下載的目的地  
  下表列出您可以從 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站下載的其他目的地。  
   
-|原始程式檔|描述|  
+|Source|描述|  
 |------------|-----------------|  
 |Oracle 目的地|Oracle 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面上的 [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)。|  
 |SAP BI 目的地|SAP BI 目的地是 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 的目的地元件。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI 也包含連接管理員和來源。 如需詳細資訊，請參閱下載頁面的＜ [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393)＞。|  
@@ -211,7 +211,7 @@ ms.locfileid: "59241356"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [在資料流程中加入或刪除元件](add-or-delete-a-component-in-a-data-flow.md)  
+-   [在資料流程中新增或刪除元件](add-or-delete-a-component-in-a-data-flow.md)  
   
 -   [連接資料流程中的元件](connect-components-in-a-data-flow.md)  
   

@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042367"
 ---
 # <a name="programming-guidelines"></a>程式設計指導方針
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-macOS 和 Linux 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式設計功能以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的 ODBC 為基礎。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 則以 Windows Data Access Components 中的 ODBC 為基礎 ([ODBC 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkID=45250))。  
+macOS 和 Linux 上 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的程式設計功能以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 的 ODBC 為基礎。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 以 Windows Data Access Components ([ODBC 程式設計人員的參考](https://go.microsoft.com/fwlink/?LinkID=45250)) 中的 ODBC 為基礎。  
 
 ODBC 應用程式可在納入 unixODBC 標頭 (`sql.h`、`sqlext.h`、`sqltypes.h` 和 `sqlucode.h`) 之後納入 `/usr/local/include/msodbcsql.h`，藉以使用 Multiple Active Result Sets (MARS) 和其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定功能。 接著，請針對您要在 Windows ODBC 應用程式中使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬項目，使用相同的符號名稱。
 
@@ -29,9 +29,9 @@ ODBC 應用程式可在納入 unixODBC 標頭 (`sql.h`、`sqlext.h`、`sqltypes.
 在 macOS 和 Linux 上使用 ODBC 驅動程序時，您可參考 ODBC 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 文件 ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) 內的下列章節：  
 
 -   [與 SQL Server 進行通訊 (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
--   [連接和查詢逾時支援](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+-   [連線和查詢逾時支援](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [資料指標](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [ODBC 日期/時間的改善 (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
+-   [日期/時間改善 (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
 -   [執行查詢 (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
 -   [處理錯誤與訊息](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Kerberos 驗證](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
@@ -43,7 +43,7 @@ ODBC 應用程式可在納入 unixODBC 標頭 (`sql.h`、`sqlext.h`、`sqltypes.
 -   [SSL 加密](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [資料表值參數](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [命令和資料 API 的 UTF-8 和 UTF-16](https://msdn.microsoft.com/library/ff878241.aspx)
--   [使用目錄函數](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
+-   [使用目錄函式](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>不支援的功能
 

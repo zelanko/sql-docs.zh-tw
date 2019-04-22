@@ -27,15 +27,15 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7cd77a10ee161cd118b168ce2a9aaacf1bb0cc8d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 3fc30986de5a7629771b05b7fd6df8dc12ea158b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334635"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582981"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在您目前所連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中產生手動檢查點。  
   
@@ -62,7 +62,7 @@ CHECKPOINT [ checkpoint_duration ]
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>[權限]  
+### <a name="permissions"></a>權限  
  CHECKPOINT 權限預設會授與 **sysadmin** 固定伺服器角色及 **db_owner** 與 **db_backupoperator** 固定資料庫角色的成員，且無法轉讓。  
   
 ## <a name="see-also"></a>另請參閱  

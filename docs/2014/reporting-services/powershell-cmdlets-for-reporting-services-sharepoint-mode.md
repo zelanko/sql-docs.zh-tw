@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241576"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
@@ -43,17 +43,17 @@ ms.locfileid: "59241576"
   
 -   [基本範例](#bkmk_basic_samples)  
   
--   [詳細範例](#bkmk_detailedsamples)  
+-   [詳細的範例](#bkmk_detailedsamples)  
   
-    -   [建立 Reporting Services 服務應用程式和 Proxy](#bkmk_example_create_service_application)  
+    -   [建立 Reporting Services 服務應用程式和 proxy](#bkmk_example_create_service_application)  
   
     -   [檢閱及更新 Reporting Services 傳遞延伸模組](#bkmk_example_delivery_extension)  
   
-    -   [取得並設定 Reporting Services 應用程式資料庫的屬性，例如資料庫逾時](#bkmk_example_db_properties)  
+    -   [取得及設定 Reporting Services 應用程式資料庫，例如資料庫逾時的屬性](#bkmk_example_db_properties)  
   
     -   [列出 reporting services 資料延伸模組-SharePoint 模式](#bkmk_example_list_data_extensions)  
   
-    -   [變更並列出訂閱擁有者](#bkmk_change_subscription_owner)  
+    -   [變更並列出訂用帳戶擁有者](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> 指令程式摘要  
 
@@ -62,7 +62,7 @@ ms.locfileid: "59241576"
   
  當您輸入 PowerShell 範例時，將會看到類似下面的錯誤訊息：  
   
--   Install-SPRSService :無法辨識 'Install-SPRSService' 詞彙是否為  
+-   Install-sprsservice:'Install-sprsservice' 詞彙無法辨識為  
     Cmdlet、函數、指令檔或可執行程式的名稱。 檢查名稱拼字是否正確，如果包含路徑的話，請確認路徑是否正確，然後重試一次。  
   
  發生以下其中一個問題：  
@@ -94,7 +94,7 @@ ms.locfileid: "59241576"
   
 |指令程式|描述|  
 |------------|-----------------|  
-|Install-SPRSService|安裝及註冊或是解除安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共用服務。 只有在安裝了 SharePoint 模式之 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的電腦上才可以執行這項作業。 針對安裝會進行兩項作業：<br /><br /> 1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務會安裝在伺服器陣列。<br /><br /> 2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務執行個體安裝到目前的電腦。<br /><br /> 針對解除安裝會進行兩項作業：<br />1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務會從目前的電腦解除安裝。<br />2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務會從伺服器陣列解除安裝。<br /><br /> <br /><br /> 附註：如果伺服器陣列中有任何其他電腦已安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務，或者伺服器陣列中仍有執行中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式，則會顯示警告訊息。|  
+|Install-SPRSService|安裝及註冊或是解除安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共用服務。 只有在安裝了 SharePoint 模式之 SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的電腦上才可以執行這項作業。 針對安裝會進行兩項作業：<br /><br /> 1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務會安裝在伺服器陣列。<br /><br /> 2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務執行個體安裝到目前的電腦。<br /><br /> 針對解除安裝會進行兩項作業：<br />1)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務會從目前的電腦解除安裝。<br />2)[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務會從伺服器陣列解除安裝。<br /><br /> <br /><br /> 附註：如果有任何其他電腦伺服陣列中的具有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]已安裝服務，或如果仍然有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]伺服陣列中執行的服務應用程式，會顯示警告訊息。|  
 |Install-SPRSServiceProxy|在 SharePoint 伺服器陣列中安裝及註冊或是解除安裝 Reporting Services 服務 Proxy。|  
 |Get-SPRSProxyUrl|取得存取 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務的 URL。|  
 |Get-SPRSServiceApplicationServers|在包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共用服務安裝的本機 SharePoint 伺服器陣列中取得所有伺服器。 這個指令程式對於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 升級很有用，可判斷哪些伺服器執行共用服務因此需要升級。|  
@@ -105,7 +105,7 @@ ms.locfileid: "59241576"
 |指令程式|描述|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|取得一或多個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式物件。|  
-|New-SPRSServiceApplication|建立新的 Reporting Services 服務應用程式與相關聯的資料庫。<br /><br /> LogonType 參數：指定報表伺服器會使用 SSRS 應用程式集區帳戶或是 SQL Server 登入來存取報表伺服器資料庫。 可以是下列其中一項：<br /><br /> 0 Windows 驗證<br /><br /> 1 SQL Server<br /><br /> 2 應用程式集區帳戶 (預設)|  
+|New-SPRSServiceApplication|建立新的 Reporting Services 服務應用程式與相關聯的資料庫。<br /><br /> LogonType 參數：指定報表伺服器會使用 SSRS 應用程式集區帳戶或 SQL Server 登入來存取報表伺服器資料庫。 可以是下列其中一項：<br /><br /> 0 Windows 驗證<br /><br /> 1 SQL Server<br /><br /> 2 應用程式集區帳戶 (預設)|  
 |Remove-SPRSServiceApplication|移除指定的 Reporting Services 服務應用程式。 這項操作也會移除相關聯的資料庫。|  
 |Set-SPRSServiceApplication|編輯現有 Reporting Services 服務應用程式的屬性。|  
 |New-SPRSServiceApplicationProxy|建立新的 Reporting Services 服務應用程式 Proxy。|  
@@ -131,7 +131,7 @@ ms.locfileid: "59241576"
 |New-SPRSExtension|向 Reporting Services 服務應用程式註冊新的延伸模組。|  
 |Set-SPRSExtension|設定現有 Reporting Services 延伸模組的屬性。|  
 |Remove-SPRSExtension|從 Reporting Services 服務應用程式中移除延伸模組。|  
-|Get-SPRSExtension|獲取一個或多個用於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 延伸模組。<br /><br /> 有效值為：<br /><br /> **傳遞**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **資料**<br /><br /> **安全性**<br /><br /> **驗證**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **設計師**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|獲取一個或多個用於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 延伸模組。<br /><br /> 有效值為：<br /><br /> **傳遞**<br /><br /> **DeliveryUI**<br /><br /> **轉譯**<br /><br /> **資料**<br /><br /> **Security**<br /><br /> **驗證**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **設計工具**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|根據是否啟用 "ReportingService" 功能取得 SharePoint 網站。 根據預設，將會傳回啟用 "ReportingService" 功能的網站。|  
   
 ##  <a name="bkmk_basic_samples"></a> 基本範例  
@@ -303,7 +303,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
  請參閱 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂閱](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [CodePlex SharePoint Management PowerShell 指令碼](http://sharepointpsscripts.codeplex.com/)   
  [如何使用 PowerShell 管理 SSRS](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  

@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860350"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -27,10 +27,10 @@ ms.locfileid: "58860350"
 |||
 |---|---|
 | [app](reference-mssqlctl-app.md) | 建立、 刪除、 執行和管理應用程式。 |
-| [群集](reference-mssqlctl-cluster.md) | 選取、 管理和操作叢集。 |
+| [cluster](reference-mssqlctl-cluster.md) | 選取、 管理和操作叢集。 |
 | [login](#login) | 叢集登入。 |
-| [登出](#logout) | 記錄移出叢集。 |
-| [儲存](reference-mssqlctl-storage.md) | 管理叢集存放裝置。 |
+| [logout](#logout) | 記錄移出叢集。 |
+| [storage](reference-mssqlctl-storage.md) | 管理叢集存放裝置。 |
 
 ## <a id="login"></a> mssqlctl login
 

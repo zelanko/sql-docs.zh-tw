@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240716"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>開啟資料表設計工具 (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "59240716"
      [資料表設計工具] 功能表會新增至主功能表中，而且會在設計工具窗格中開啟資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [設計資料表 &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [設計資料表&#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [資料表](../relational-databases/tables/tables.md)  
   
   

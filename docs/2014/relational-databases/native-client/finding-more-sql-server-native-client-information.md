@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241288"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>尋找其他 SQL Server Native Client 資訊
@@ -29,7 +29,7 @@ ms.locfileid: "59241288"
  [Data Access 部落格](https://go.microsoft.com/fwlink/?LinkId=48617)  
  這個部落格網站提供了資料存取技術的相關資訊，可讓您直接與產品小組的成員互動。  
   
- [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows Data Access Component](https://go.microsoft.com/fwlink/?LinkId=107907)  
  這個網站包含最新的 Windows Data Access Components (Windows DAC) SDK 文件集。 Windows DAC 是 Windows Vista 和 Windows Server 2008 隨附的資料存取元件版本 (在舊版稱為 MDAC)。  
   
  Window DAC SDK 包含 ActiveX Data Objects (ADO)、OLE DB 和開放式資料庫連接 (Open Database Connectivity，ODBC) 的文件集。  

@@ -55,10 +55,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240727"
 ---
 # <a name="log-properties"></a>記錄屬性
@@ -88,7 +88,7 @@ ms.locfileid: "59240727"
  **ErrorLog\KeyErrorAction**  
  指定伺服器在 錯誤發生時所採取的動作`KeyNotFound`。 此錯誤的有效回應包括：  
   
--   `ConvertToUnknown` 告知伺服器應將錯誤索引鍵值配置給未知的成員。  
+-   `ConvertToUnknown` 會要求伺服器將錯誤索引鍵值配置給未知的成員。  
   
 -   `DiscardRecord` 會要求伺服器排除這個記錄。  
   
@@ -103,14 +103,14 @@ ms.locfileid: "59240727"
   
 -   `StopProcessing` 告知伺服器應於達到錯誤限制時停止處理。  
   
--   `StopLogging` 告知伺服器應於達到錯誤限制，但讓處理作業能夠繼續時停止記錄錯誤。  
+-   `StopLogging` 告知伺服器應於達到錯誤限制時停止記錄錯誤，但仍讓處理作業繼續進行。  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  指定伺服器在 錯誤發生時所採取的動作`KeyNotFound`。 此錯誤的有效回應包括：  
   
 -   `IgnoreError` 會要求伺服器繼續處理，但不記錄錯誤或將其計入索引鍵錯誤限制。 如果忽略錯誤，您僅允許繼續處理，而不將錯誤加入錯誤計數，或將其記錄至畫面或記錄檔。 有問題的記錄發生資料完整性問題，無法加入資料庫。 依據 `KeyErrorAction` 屬性的判斷，該記錄將會被捨棄或彙總至未知的成員。  
   
--   `ReportAndContinue` 告知伺服器應記錄錯誤，其計數算入索引鍵錯誤限制，並繼續處理。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
+-   `ReportAndContinue` 告知伺服器應記錄錯誤並將其計數算入索引鍵錯誤限制，接著繼續處理。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
 -   `ReportAndStop` 告知伺服器應記錄錯誤並立即停止處理，而無視於索引鍵錯誤限制。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "59240727"
  此屬性的預設值是空白，因而會預設為 FlightRecorderTraceDef.xml。  
   
 ## <a name="query-log"></a>查詢記錄  
- **適用於：** 僅限於多維度伺服器模式  
+ **適用於：** 僅限多維度伺服器模式  
   
  **QueryLog\QueryLogFileName**  
  此為字串屬性，指定查詢記錄檔的名稱。 這個屬性只適用於當記錄會儲存到磁碟檔案，而非資料庫資料表時 (預設行為)。  
@@ -233,7 +233,7 @@ ms.locfileid: "59240727"
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
+ [Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

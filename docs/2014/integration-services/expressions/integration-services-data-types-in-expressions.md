@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241028"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
@@ -55,7 +55,7 @@ ms.locfileid: "59241028"
   
 -   [== &#40;等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)  
   
--   [!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](unequal-ssis-expression.md)  
+-   [\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)  
   

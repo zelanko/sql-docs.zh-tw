@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899704"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
@@ -52,9 +52,9 @@ sys.fn_PageResCracker ( page_resource )
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|db_id|**ssNoversion**|資料庫識別碼|  
-|file_id|**ssNoversion**|檔案識別碼|  
-|page_id|**ssNoversion**|頁面識別碼|  
+|db_id|**int**|資料庫識別碼|  
+|file_id|**int**|檔案識別碼|  
+|page_id|**int**|頁面識別碼|  
   
 ## <a name="remarks"></a>備註  
 `sys.fn_PageResCracker` 用來將資料庫頁面的 8 位數十六進位表示法轉換成資料列集，其中包含資料庫識別碼，檔案識別碼和頁面的頁面識別碼。   

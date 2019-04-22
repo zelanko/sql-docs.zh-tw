@@ -36,10 +36,10 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429364"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -101,7 +101,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 選項是支援的功能，但不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，作為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項無法取代從已知良好的備份還原方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項無法取代從已知良好的備份還原方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
 >     
 > 某些只能透過 REPAIR_ALLOW_DATA_LOSS 選項修復的錯誤，可能需要取消配置資料列、頁面或一系列頁面，才能清除錯誤。 使用者將無法再存取或復原任何已取消配置的資料，也無法判斷其確切內容。 因此，取消配置任何資料列或頁面之後，參考完整性可能會不正確，因為在這項修復作業期間不會檢查或維護外部索引鍵條件約束。 使用者在使用 REPAIR_ALLOW_DATA_LOSS 選項之後，必須檢查其資料庫的參考完整性 (使用 DBCC CHECKCONSTRAINTS)。    
 >     
@@ -246,7 +246,7 @@ DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ss
 -   如果資料庫復原因交易記錄損毀而無法成功，就會重建交易記錄。 重建交易記錄可能會導致無法維持交易一致性。    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的功能。 不過，這個選項不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，作為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項**不是**從已知良好備份進行還原的替代方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
+> REPAIR_ALLOW_DATA_LOSS 選項是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的功能。 不過，這個選項不一定是讓資料庫處於實體一致狀態的最佳選項。 如果成功的話，REPAIR_ALLOW_DATA_LOSS 選項可能會導致部分資料遺失。 事實上，這個選項遺失的資料，可能會比使用者從上次已知良好備份還原資料庫所遺失的資料多。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一律建議使用者從上次已知良好的備份還原，做為修復 DBCC CHECKDB 所報告之錯誤的主要方法。 REPAIR_ALLOW_DATA_LOSS 選項**不是**從已知良好備份進行還原的替代方法。 只有在不可能從備份還原時，才建議使用這個「上次還原」緊急選項。    
 >     
 >  重建記錄檔之後，不保證會有完整的 ACID。    
 >     

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240646"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
@@ -53,7 +53,7 @@ ms.locfileid: "59240646"
  報表大小唯一的硬限制只會發生在轉譯成 Excel 格式時， 因為工作表不能超過 65536 個資料列或 256 個資料行。 其他轉譯格式沒有這些限制，因此檔案大小僅受限於伺服器的資源數量。 如需有關 Excel 檔案限制的詳細資訊，請參閱 <<c0> [ 將報表匯出為其他檔案類型&#40;報表產生器及 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
->  報表處理及轉譯是在記憶體中處理， 因此，如果您有大型的報表或大量的使用者，請務必先做好容量計劃，以確保您的報表伺服器部署執行方式可以滿足使用者。 如需有關工具和指導方針的詳細資訊，請參閱下列 MSDN 發行集：[使用 Reporting Services 規劃延展性和效能](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)並[到 SQL Server 2005 Reporting Services 報表伺服器上執行負載測試中使用 Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=77519)。  
+>  報表處理及轉譯是在記憶體中處理， 因此，如果您有大型的報表或大量的使用者，請務必先做好容量計劃，以確保您的報表伺服器部署執行方式可以滿足使用者。 如需有關工具和指導方針的詳細資訊，請參閱 MSDN 上的下列發行集：[使用 Reporting Services 規劃延展性和效能](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/)並[到 SQL Server 2005 Reporting Services 報表伺服器上執行負載測試中使用 Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkID=77519)。  
   
 ## <a name="measuring-snapshot-storage"></a>測量快照集儲存區  
  任何給定之快照集的大小，會與報表中的資料數量呈現直接正比， 因此會遠大於儲存在報表伺服器上的其他項目。 快照集大小一般會介於數 MB 到數十 MB 之間， 如果您的報表非常大，則可以預期會看到更大的快照集。 根據您使用快照集的頻率以及設定報表記錄的方式，可能在短時間內，報表伺服器資料庫所需的磁碟空間數量就會快速增加。  

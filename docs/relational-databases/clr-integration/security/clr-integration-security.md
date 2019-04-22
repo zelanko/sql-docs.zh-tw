@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476654"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
@@ -37,7 +37,7 @@ ms.locfileid: "59476654"
   
 -   使用者定義程式碼不應該透過在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序中執行，取得系統資源的未經授權存取權。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 現在已整合的使用者為基礎的安全性模型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR 的程式碼存取安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 現在會整合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以使用者為基礎的安全性模型與 CLR 以程式碼存取權為基礎的安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
   
  下表列出本節的主題。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "59476654"
  [允許部分信任的呼叫端](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
   
- [應用程式網域和 CLR 整合安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
+ [應用程式定義域和 CLR 整合安全性](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  描述如何將組件載入應用程式網域中。  
   
 ## <a name="see-also"></a>另請參閱  

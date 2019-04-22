@@ -15,10 +15,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242456"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
@@ -40,7 +40,7 @@ ms.locfileid: "59242456"
  有關如何以透明方式加密資料的一般資訊。  
   
  [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
- 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 本節將說明如何實作及管理加密金鑰。  
+ 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，加密金鑰包括用於保護機密資料的公開、私密和對稱金鑰的組合。 本節將說明如何實作及管理加密金鑰。  
   
 ## <a name="related-content"></a>相關內容  
  [保護 SQL Server 的安全](../securing-sql-server.md)  
