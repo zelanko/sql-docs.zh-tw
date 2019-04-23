@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - regular attributes [Analysis Services]
@@ -24,12 +22,12 @@ ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a42447bb508fee0510dc1d4543828475f584ed76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165868"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157264"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>屬性和屬性階層
   維度是屬性的集合，這些屬性會繫結至資料來源檢視中資料表或檢視內的一或多個資料行。  

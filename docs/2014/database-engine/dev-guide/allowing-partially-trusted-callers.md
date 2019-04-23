@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - AllowPartiallyTrustedCallers attribute
@@ -17,12 +15,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368100"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154634"
 ---
 # <a name="allowing-partially-trusted-callers"></a>允許部分信任的呼叫端
   共用程式碼程式庫是 Common Language Runtime (CLR) 整合的一個常見狀況，其中包含使用者定義型別、預存程序、使用者定義函數、使用者定義彙總、觸發程序或公用程式類別的組件通常會由另一個組件或應用程式所存取。 要由多個應用程式所共用的程式碼程式庫必須使用強式名稱來簽署。  

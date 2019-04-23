@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - providers [SQLXML], SQLXMLOLEDB Provider
@@ -18,12 +16,12 @@ ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 16b6e0b4408902a2c68d043629883df40cd3b089
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120647"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154314"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 提供者 (SQLXML 4.0)
   SQLXMLOLEDB 提供者是一種 OLE DB 提供者，可透過 ADO 來公開 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 功能。  

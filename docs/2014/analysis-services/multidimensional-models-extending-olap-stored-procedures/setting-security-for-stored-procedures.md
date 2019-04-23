@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [Analysis Services], security
@@ -15,12 +13,12 @@ ms.assetid: 6364b125-7d72-4312-9677-56c62e22461e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c37bc9e89f2d38d48d47a3abc22dcd70a3fd466
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88c4fedbce9dea4bbf50aadf4a9e91de362998ab
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200818"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154484"
 ---
 # <a name="setting-security-for-stored-procedures"></a>設定預存程序的安全性
   預存程序的安全性設定`PermissionSet`執行個體的預存程序的屬性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]（伺服器層級），[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫，或有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。  

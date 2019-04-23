@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
@@ -26,12 +24,12 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531415"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156686"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 慣例
   Analysis Services 指令碼語言 (ASSL) 將物件階層以一組元素類型來表示，每個元素類型都定義了它們可以包含的子系元素。  
@@ -160,7 +158,7 @@ ms.locfileid: "52531415"
 ### <a name="inherited-defaults"></a>繼承的預設值  
  物件上指定的某些屬性會針對子物件或下階物件上的相同屬性提供預設值。 例如，`Cube.StorageMode` 會針對 `Partition.StorageMode` 提供預設值。 Analysis Services 套用於繼承預設值的規則如下所示：  
   
--   當子物件的屬性在 XML 中為 Null 時，其值就會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 Null 值。  
+-   當子物件的屬性在 XML 中為 Null 時，其值就會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 null 值。  
   
 -   您無法以程式設計方式判斷出子物件的屬性是直接在子物件上設定的，還是繼承而來。  
   

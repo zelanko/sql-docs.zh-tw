@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90c3cc0d95183dbab7df03c62d5be6a0f8dcc2fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a671f33fa26829e96cb53e1a040eb042406bc4eb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131498"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154886"
 ---
 # <a name="calculated-column-representation-tabular"></a>導出資料行表示法 (表格式)
   導出資料行是在資料表中建立新資料行並將其取得的值儲存於資料表的 DAX 運算式。 每次處理資料表時都將評估導出資料行運算式。  

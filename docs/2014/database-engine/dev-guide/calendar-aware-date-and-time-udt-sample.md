@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96cac25e91c369b5069e4b91c72b99911f3e4d44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361320"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156957"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>日曆感知日期和時間的 UDT 範例
   將日期儲存為字串可能會產生混淆，因為如果不了解正在使用的日曆系統為何，日期便沒有意義。`CADatetime` 範例會定義兩種使用者定義資料類型 (`CADatetime` 和 `CADate`)，可提供日期和時間的日曆感知處理。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - calculations [Analysis Services]
@@ -18,12 +16,12 @@ ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce999e5a301fc6c6a9fd50f241e6863e0ad2cca9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241776"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158305"
 ---
 # <a name="calculations"></a>[新增命名集]
   計算是多維度運算式 (MDX) 運算式或指令碼，用來定義 cube 中的導出的成員、 命名的集或範圍的指派[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 計算可讓您加入的物件不是由 Cube 之資料所定義，而是由參考 Cube 之其他部分、其他 Cube 甚至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫外部之資訊的運算式所定義。 計算可讓您擴充 Cube 的功能，以在商業智慧應用程式中加入彈性和強大功能。 如需有關指令碼計算的詳細資訊，請參閱[Introduction to Microsoft SQL Server 2005 中 MDX 指令碼](https://go.microsoft.com/fwlink/?LinkId=81892)。 如需 MDX 查詢和計算相關效能問題的詳細資訊，請參閱[SQL Server 2005 Analysis Services 效能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  

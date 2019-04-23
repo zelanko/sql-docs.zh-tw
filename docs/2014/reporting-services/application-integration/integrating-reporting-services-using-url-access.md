@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c87cd3d902f80b73475dd68726df091971ef0dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035996"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155404"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>使用 URL 存取整合 Reporting Services
   使用 URL 存取，即可透過報表伺服器 URL 來存取報表。 URL 要求可讓您存取特定的報表伺服器，以及在報表伺服器資料庫中的報表、資源和其他項目。 您也可以自訂使用者的報表檢視和導覽經驗。 URL 的查詢字串包含裝置資訊設定，以及以報表和所選轉譯輸出為目標的報表參數。 報表伺服器處理 URL 要求的方法須視透過 URL 存取的參數、參數前置詞以及項目類型而定。  

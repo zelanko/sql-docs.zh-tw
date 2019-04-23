@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], examples
@@ -15,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416489"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157119"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
   Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**指的是安裝為 PowerPivot for SharePoint，用於載入和查詢 Excel 或 PowerPivot 活頁簿內的資料模型的 Analysis Services 的執行個體。  
@@ -56,7 +54,7 @@ ms.locfileid: "52416489"
   
  物件上指定的某些屬性會針對子物件或下階物件上的相同屬性提供預設值。 例如，`Cube.StorageMode` 會針對 `Partition.StorageMode` 提供預設值。 若是繼承的預設值，ASSL 會針對繼承的預設值套用這些規則：  
   
--   當子物件的屬性在 XML 中為 null 持，此屬性的值會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 Null 值。  
+-   當子物件的屬性在 XML 中為 null 持，此屬性的值會預設為繼承的值。 但是，如果您從伺服器查詢此值，伺服器會傳回 XML 元素的 null 值。  
   
 -   您無法以程式設計方式判斷出子物件的屬性是直接在子物件上設定的，還是繼承而來。  
   

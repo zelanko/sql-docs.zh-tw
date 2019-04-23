@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372660"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154244"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)
 Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格式模型中的量值和其他自訂公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 活頁簿中的資料模型和 Power BI Desktop 資料模型。 在大部分的方面，您在這些環境中建立的模型相同，且您可以使用相同的量值、 關聯性和 Kpi 等等。不過，如果您撰寫的 Analysis Services 表格式模型，並將它部署在 DirectQuery 模式中，有一些限制，您可以使用的公式。 本主題概述這些差異，列出在相容性層級 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式中，不支援的函式並列出支援的函式但可能傳回不同的結果。  
@@ -133,7 +131,7 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 如此一
   
 `EXAMPLE: LOG(blank())`  
   
-相同的限制也適用於其他對數函數：LOG10 和 LN。  
+相同的限制適用於其他對數函數：LOG10 和 ln。  
   
 如需 DAX 中 **blank** 資料類型的詳細資訊，請參閱 [DAX 語法參考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -165,9 +163,9 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 如此一
   
 一般而言，因為 Excel 和 SQL Server 所接受的日期範圍不同，所以只有當日期位於共通日期範圍 (包括下列日期) 內時，才能保證結果相符：  
   
--   最早日期：1990 年 3 月 1 日  
+-   最早日期：1990 年 3 月 1日日  
   
--   最晚日期：9999 年 12 月 31 日  
+-   最晚日期：到 9999 年 12 月 31 日  
   
 如果公式中使用的任何日期超過這個範圍，則公式會產生錯誤，或者結果不符。  
   
@@ -226,7 +224,7 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
   
 -   最小值：-922337203685477.5808  
   
--   最高：922337203685477.5807  
+-   最大值：922337203685477.5807  
   
 **結合 Currency 與 REAL 資料類型**  
 範例： `Currency sample 1`  

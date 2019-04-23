@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -22,12 +20,12 @@ ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09231b03e784c142ab8b99ed31c2c4c88f6e72d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051910"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154714"
 ---
 # <a name="remote-partitions"></a>遠端資料分割
   遠端資料分割的資料會儲存在 Microsoft 的不同執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]超過包含的資料分割，及其父 cube 之定義 （中繼資料） 的執行個體。 遠端資料分割是在與定義資料分割和其父 Cube 的相同 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上進行管理。  
@@ -45,7 +43,7 @@ ms.locfileid: "48051910"
   
 |||  
 |-|-|  
-|儲存類型|data|  
+|儲存類型|資料|  
 |MOLAP|資料分割的彙總，以及資料分割之來源資料的副本。|  
 |HOLAP|資料分割的彙總|  
 |ROLAP|無資料分割資料|  
@@ -59,7 +57,7 @@ ms.locfileid: "48051910"
  封存或還原用來儲存遠端資料分割的資料庫時，可封存或還原遠端資料分割中的資料。 如果您還原資料庫，而未還原遠端資料分割，則必須先處理遠端資料分割後，才可使用該資料分割中的資料。 如需有關封存與還原資料庫的詳細資訊，請參閱 <<c0> [ 備份與還原的 Analysis Services 資料庫](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立和管理遠端資料分割&#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [建立及管理遠端資料分割 &#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [處理 Analysis Services 物件](../multidimensional-models/processing-analysis-services-objects.md)  
   
   

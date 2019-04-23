@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7872bf8b0e9b6b40ff8668053a3c5d4818a44c1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225828"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155034"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>使用 SQLXML Managed 類別
   本節提供範例應用程式，示範如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML Managed 類別。  
