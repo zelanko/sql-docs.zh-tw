@@ -1,5 +1,5 @@
 ---
-title: 第 3 課：定義資料表報表 (Reporting Services) 的資料集 |Microsoft Docs
+title: 第 3 課：定義資料表報表的資料集 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294336"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932484"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 課：定義資料表報表 (Reporting Services) 的資料集
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>第 3 課：定義資料表報表的資料集 (Reporting Services)
   當您定義資料來源之後，就需要定義資料集。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中，報表所用的資料是包含在「資料集」中。 資料集含有指向資料來源的指標和報表要用的查詢，以及計算的欄位和變數。  
   
  您可以使用報表設計師中的查詢設計工具來設計查詢。 本教學課程中，您將建立可擷取銷售訂單資訊的查詢[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008年**資料庫。  
@@ -69,7 +69,7 @@ ms.locfileid: "56294336"
      您的 **AdventureWorksDataset** 資料集和欄位會顯示在 [報表資料] 窗格中。  
   
 ## <a name="next-task"></a>下一項工作  
- 您已順利指定一項擷取報表資料的查詢。 之後，您要建立報表配置。 請參閱[第 4 課：將資料表加入至報表&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
+ 您已順利指定一項擷取報表資料的查詢。 之後，您要建立報表配置。 查看[第 4 課：將資料表新增至報表 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢設計工具，在報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
