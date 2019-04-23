@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 740c172ebc3248aabf4841fc2dd92c39531fd545
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a8c41479b46a2020f0c460313ffc427eabded53e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021619"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962964"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出報表伺服器執行個體是否已初始化。 唯讀。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 394bd37e587a0e42316a402aaec2e33691897244
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 32bd106320c8969813dbae107a7569af8560aba4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296926"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956064"
 ---
 # <a name="specify-credentials-in-report-builder"></a>在報表產生器中指定認證
   認證會驗證嘗試從資料來源擷取資料的使用者。 資料來源的擁有者可決定必須使用的認證類型。 例如，資料庫管理員可能會指定使用者必須提供 Windows 使用者名稱和密碼。  

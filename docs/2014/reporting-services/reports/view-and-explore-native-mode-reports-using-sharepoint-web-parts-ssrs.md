@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010652"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964954"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供數種 Web 組件，可與特定版本的報表伺服器，以及在特定的部署模式下搭配使用。  
   
--   **原生模式：** 如果您想要從原生模式報表伺服器存取 SharePoint 網站上的報表伺服器內容，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附的 SharePoint 2.0 Web 組件報表總管和報表檢視器。 在本主題中有提供關於安裝與使用 2.0 Web 組件的指示。  
+-   **原生模式：** 如果您想要從原生模式報表伺服器存取 SharePoint 網站上的報表伺服器內容，請使用 SharePoint 2.0 Web 組件報表總管和報表檢視器隨附[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 在本主題中有提供關於安裝與使用 2.0 Web 組件的指示。  
   
--   **SharePoint 模式：** 如果您想要存取以 SharePoint 模式執行的報表伺服器，請使用適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件。 如需增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **SharePoint 模式：** 如果您想要存取以 SharePoint 模式執行的報表伺服器，使用 web 組件會安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集適用於 SharePoint 產品。 如需增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
 -   > [!NOTE]  
     >  原生模式的報表檢視器 Web 組件 (SPViewer.dwp) 與適用於 SharePoint 產品之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集所安裝的 Web 組件 (ReportViewer.dwp) 有所不同。 這些 Web 組件具有不同的結構描述和實作，但是它們可以安裝在相同的 SharePoint 伺服器陣列上。 視覺上，您可以透過下列特性區分這兩個 Web 組件：透過增益集安裝之報表檢視器 Web 組件的工具列具有 [動作] 功能表。  

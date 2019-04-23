@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - IsWebServiceEnabled property
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68875a9d3f93fc952d0f1d384e526a65e1f20fab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 099af3115af33301277ca2cac153578978af8a37
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022029"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970914"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWebServiceEnabled 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出報表伺服器 Web 服務是否已啟用。 唯讀。  

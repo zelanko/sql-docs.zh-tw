@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009682"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967744"
 ---
 # <a name="move-items-page-report-manager"></a>移動項目頁面 (報表管理員)
   您可以使用 [移動項目] 頁面，將報表、資料夾或其他項目移至報表伺服器上的新位置。 您可以輸入新位置的路徑，或使用樹狀檢視以導覽到報表伺服器命名空間中的新位置。 您只能移動您有權移動並儲存在目前報表伺服器上的項目。  

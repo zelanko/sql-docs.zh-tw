@@ -6,18 +6,18 @@ ms.technology:
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d566f711c177cb62b79099c71c716d66eb214203
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582531"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964115"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 706abc555b65f028244991b85e465636a0ccbf2d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 90ee103d7f176ea4a61703450cc250dd517f7481
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296176"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955854"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>共用資料來源屬性對話方塊、認證
   選取 **[共用資料來源屬性]** 對話方塊上的 **[認證]** ，來顯示和修改要連接到報表中共用資料來源的認證。 您所提供的認證會用來存取資料來源，並快取資料副本，以預覽報表。 如需如何快取預覽資料的詳細資訊，請參閱 [預覽報表](reports/previewing-reports.md)。 如需認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  

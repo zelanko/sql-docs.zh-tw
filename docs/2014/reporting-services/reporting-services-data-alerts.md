@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 15323e5ea5f2762e0cef9b4e275e8131d43c591a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e3e317659f4c0efb964b996de7afd46663538eed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017269"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958709"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 資料警示
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示是資料驅動的警示解決方案，可協助您得知報表中您有興趣或對您很重要的某個相關時間點的資料。 透過使用資料警示，您就不必再搜尋資訊，而會自動收到資訊。  
@@ -128,7 +128,7 @@ ms.locfileid: "56017269"
   
  下表列出資料警示的組態項目、其預設值、描述和位置。  
   
-|設定|預設值|描述|位置|  
+|設定|預設值|描述|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|兩次清除循環開始之間的分鐘數。|報表伺服器組態檔|  
 |AlertingExecutionLogCleanupMinutes|10080|保留執行記錄項目的分鐘數。|報表伺服器組態檔|  

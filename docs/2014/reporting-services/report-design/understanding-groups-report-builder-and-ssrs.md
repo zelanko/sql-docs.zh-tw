@@ -11,15 +11,15 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 97f61325c563c1c8ff22ff3e4177c74726f775cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286536"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961584"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>了解群組 (報表產生器及 SSRS)
   在報表產生器中，群組是一組來自繫結至資料區域之報表資料集的具名資料。 基本上，一個群組會組織一個報表資料集的檢視。 資料區域中的所有群組會指定相同報表資料集的不同檢視。  
@@ -37,7 +37,7 @@ ms.locfileid: "56286536"
  一個群組擁有一個您指定的名稱以及一組群組運算式。 這組群組運算式可以是單一的資料集欄位參考，也可以是多個運算式的組合。 在執行階段，群組運算式會結合 (如果群組具有多個運算式的話)，並且套用至群組中的資料。 例如，您所擁有的群組會使用日期欄位來組織資料區域中的資料。 在執行階段，資料會先依日期組織，然後顯示並加總每個日期的其他資料集值。  
   
 ## <a name="when-do-i-create-groups"></a>何時建立群組？  
- 在大部分情況下，報表產生器和報表設計師會在您設計資料區域時，自動為您建立一個群組。 若是資料表、矩陣或清單，當您將欄位放到 [群組] 窗格時，就會建立群組。 若是圖表，則當您將欄位放在圖表放置區時，建立群組。 若是量測計，您必須使用量測計屬性對話方塊。 若是資料表、矩陣或清單，您也可以手動建立群組。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 如需如何建立報表時加入群組的範例，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)或是[建立基本資料表報表&#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
+ 在大部分情況下，報表產生器和報表設計師會在您設計資料區域時，自動為您建立一個群組。 若是資料表、矩陣或清單，當您將欄位放到 [群組] 窗格時，就會建立群組。 若是圖表，則當您將欄位放在圖表放置區時，建立群組。 若是量測計，您必須使用量測計屬性對話方塊。 若是資料表、矩陣或清單，您也可以手動建立群組。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。 如需如何在建立報表時新增群組的範例，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 或[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md)。  
   
 ## <a name="how-can-i-modify-a-group"></a>如何修改群組？  
  建立群組之後，您可以設定資料區域專屬的屬性 (例如，篩選和排序運算式、分頁符號與群組變數) 來保存範圍專屬的資料。 如需詳細資訊，請參閱 [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)(將互動式排序加入資料表或矩陣 (報表產生器及 SSRS))。  
@@ -64,7 +64,7 @@ ms.locfileid: "56286536"
 > [!NOTE]  
 >  雖然群組在不同的資料區域中有不同的名稱，但是建立與使用群組之方式背後的原則是相同的。 當您針對資料區域建立群組時，會指定一種方式，從連結到資料區域的資料集組織詳細資料。 每個資料區域都支援一個用於顯示群組資料的群組結構。  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>在 Tablix 資料區中的群組：詳細資料，資料列和資料行群組  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Tablix 資料區中的群組：詳細資料、資料列和資料行群組  
  如本主題稍早所述，Tablix 資料區域可讓您依資料列或資料行，將資料組織到群組中。 不過，資料列和資料行群組不是 Tablix 資料區域中提供的唯一群組。 此資料區域可能有下列類型的群組：  
   
 -   **詳細資料群組** ：[詳細資料] 群組包含報表產生器或報表設計師套用資料集與資料區域篩選後，來自報表資料集的所有資料。 因此，詳細資料群組是唯一沒有群組運算式的群組。  

@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetUnattendedExecutionAccount method
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4bc1620e5f3bd625eb0b68e51183ce869673747f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e3c0402d8ae19850c213355cb69cf452e5a3cc0f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021761"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960184"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>SetUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting)
   指定用來自動執行報表的帳戶。  

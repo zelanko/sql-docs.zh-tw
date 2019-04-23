@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceID property
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2e83bf191eb16fa2e96782f4781bbd142bc04ee7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ba2dd0979fd1bd82fc8bd7821fe039f721a6f84
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033729"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962504"
 ---
 # <a name="instanceid-property-wmi-msreportserverinstance"></a>InstanceID 屬性 (WMI MSReportServer_Instance)
   此物件支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基礎結構，而且不能直接從程式碼使用。  

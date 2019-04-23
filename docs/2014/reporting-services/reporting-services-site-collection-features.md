@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b9915a1071fa8b3ea0485c6a10790b2efd0a1e33
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034391"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964784"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式提供了三個 SharePoint 網站集合功能。 這些功能支援一般 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式報表環境、適用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]Enterprise Edition 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集功能 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] ，以及 SharePoint 管理中心內 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的管理作業。  

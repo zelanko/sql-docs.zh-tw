@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe09fad05cc445b99ded7a35dc1e6b04b07f6450
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296856"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956524"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>安裝單機版報表產生器 (報表產生器)
   您可以安裝報表產生器，從[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在功能套件[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472)或 ReportBuilder3_x86.msi，報表產生器中，Windows Installer 套件有公用資料夾位置已下載。  

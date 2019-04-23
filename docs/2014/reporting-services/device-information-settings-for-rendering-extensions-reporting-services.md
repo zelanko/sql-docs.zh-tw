@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd9eaf6c8fc7bc29ddf6ba84745fed69fe6cc569
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 336eae5accaf5fabed542012bbb4e5b6145a02c5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013119"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958814"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>轉譯延伸模組的裝置資訊設定 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 每一個轉譯延伸模組都會接受一組特定的設定。  

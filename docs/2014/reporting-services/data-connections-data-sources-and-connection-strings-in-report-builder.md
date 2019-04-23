@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13edc28a739af6a40ab47766c1909be3a8105ee5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288866"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962124"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>報表產生器中的資料連接、資料來源及連接字串
   若要在報表中包含資料，請建立資料連接和資料集。 資料連接包括如何存取外部資料來源的相關資訊。 資料集包括查詢命令，其中指定要使用資料連接包含哪些資料。  

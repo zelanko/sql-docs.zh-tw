@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: af8fd934206361e0abb43a84a9a036772e90fc52
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658335"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965995"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 已[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]與商業智慧方案專用增強功能的環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 隨附於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -170,7 +170,7 @@ ms.locfileid: "58658335"
   
 -   **報表屬性** ：選取即可開啟 **[報表屬性]** 對話方塊。 在這個對話方塊中，您可以指派一般報表屬性，例如作者名稱和方格間距，以及指定報表配置的屬性，例如資料行數和頁面大小。 您也可以包括自訂程式碼、組件和類別的參考、資料輸出元素的名稱、資料轉換和資料結構描述。  
   
--   **檢視**：在兩個報表設計師索引標籤之間切換：[設計] 和 [預覽]。  
+-   **檢視**：在兩個報表設計師索引標籤之間切換：設計和預覽。  
   
 -   **頁首** ：在報表中加入或刪除頁首。 當您刪除頁首時，就會刪除頁首中的所有項目。  
   

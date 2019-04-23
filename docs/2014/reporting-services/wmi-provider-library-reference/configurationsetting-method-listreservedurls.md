@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ListReservedURLs method
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d86fc709f3cc322c17514309906355cc4489876e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2cf4ea295f450db5536751fc4d9d58ec4bd0febc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012349"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961557"
 ---
 # <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting)
   列出針對報表伺服器上所有應用程式保留的 URL。  

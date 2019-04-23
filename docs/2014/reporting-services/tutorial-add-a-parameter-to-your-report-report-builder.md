@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將參數加入至報表 （報表產生器） |Microsoft Docs
+title: 教學課程：將參數新增至報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298656"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966514"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 （報表產生器）
   將參數加入至報表可讓使用者從資料來源或報表中篩選報表資料。 系統會針對您包含在資料集查詢中的每個查詢參數，自動建立報表參數。 參數資料類型會決定該類型會如何在報表檢視器工具列上顯示。  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,9 +55,9 @@ ms.locfileid: "56298656"
 10. [儲存報表](#Save)  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器的逐步指示，選擇資料來源，並建立資料集，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併為一個程序。 如需如何瀏覽至報表伺服器、選擇資料來源以及建立資料集的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 完成本教學課程的估計時間：25 分鐘。  
+ 估計的時間才能完成本教學課程：25 分鐘一次。  
   
 ## <a name="requirements"></a>需求  
  如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -327,7 +327,7 @@ ms.locfileid: "56298656"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     儲存資料行標題包含複雜運算式的顯示文字：**<\<Expr >>**。  
+     商店的資料行標題包含複雜運算式的顯示文字：**<\<Expr >>**。  
   
 8.  預覽報表。  
   
@@ -422,7 +422,7 @@ ms.locfileid: "56298656"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. 在您剛剛建立之運算式前面的文字方塊上按一下，然後輸入下列：選取的參數值：  
+15. 在您剛剛建立之運算式前面的文字方塊上按一下，然後輸入下列：選取的參數值:。  
   
 16. 預覽報表。  
   

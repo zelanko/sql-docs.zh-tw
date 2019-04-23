@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], architecture
@@ -15,12 +13,12 @@ ms.assetid: 05e4b872-3d21-46de-b4d5-739b5f2a0cf9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c361cb95f8da933b108591c5524f032750362f8d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: febf7ccdc4a57f92a14048e3ddeea2d00bd9b32d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183629"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158824"
 ---
 # <a name="architecture-of-clr-integration"></a>CLR 整合的架構
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 .NET Framework Common Language Runtime (CLR) 整合可讓資料庫程式設計人員使用 Visual C#、Visual Basic .NET 和 Visual C++ 等語言。 程式設計人員可以使用這些語言所撰寫的商務邏輯種類包括函數、預存程序、觸發程序、資料類型和彙總。  

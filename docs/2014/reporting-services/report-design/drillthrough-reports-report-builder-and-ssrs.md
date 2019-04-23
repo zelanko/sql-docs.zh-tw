@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a53b1340891d539ca9aef224c7bdbbdcba9bf45d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298140"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959836"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>鑽研報表 (報表產生器及 SSRS)
   鑽研報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 例如，在此圖中，銷售摘要報表會列出銷售訂單和總計。 當使用者按一下摘要清單中的訂單號碼時，會開啟另一份含有訂單詳細資料的報表。  
@@ -28,7 +28,7 @@ ms.locfileid: "56298140"
 > [!NOTE]  
 >  當您在報表產生器中工作時，必須連接至報表伺服器，才能檢視按一下主報表中的鑽研連結時，所開啟的鑽研報表。  
   
- 若要快速開始使用鑽研報表，請參閱[教學課程：建立鑽研及主報表&#40;報表產生器&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 在兩個商業智慧方案也配備了鑽研報表[BI 報表：報表和訂閱案例](https://technet.microsoft.com/bi/ff769487.aspx)和[企業儀表板：銷售解決方案](https://technet.microsoft.com/bi/ff643005.aspx)  
+ 若要快速地開始使用鑽研報表，請參閱[教學課程：建立鑽研及主報表 &#40;報表產生器&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)。 在兩個商業智慧方案也配備了鑽研報表[BI 報表：報表和訂閱案例](https://technet.microsoft.com/bi/ff769487.aspx)和[企業儀表板：銷售解決方案](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

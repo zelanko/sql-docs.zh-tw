@@ -15,15 +15,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b5b63ddc613135015027eb549212a8cafb35f7c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037029"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963164"
 ---
 # <a name="report-model-query-designer-user-interface"></a>報表模型查詢設計工具使用者介面
   報表設計師提供了兩個查詢設計工具，可協助您指定想要將「報表伺服器模型」資料來源中的哪些資料用於報表中。 圖形化查詢設計工具可用來瀏覽和選擇模型實體與實體欄位。 使用以文字為基礎的查詢設計工具可直接處理 XML 格式的語意模型定義語言 (SMDL) 規格。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040400"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964876"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>一般屬性頁面、共用資料來源 (報表管理員)
   使用 [一般] 屬性頁面，即可檢視或修改共用資料來源項目的屬性。 按一下 **[套用]** 時，您對屬性所做的任何變更，將在參考該項目的所有報表上生效。  
@@ -87,7 +87,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需有關此帳戶的詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。</c0>  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
  **刪除**  

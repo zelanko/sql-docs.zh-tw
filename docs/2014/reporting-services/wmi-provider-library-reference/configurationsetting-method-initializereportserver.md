@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f6df892b16c7c384291e50640434ce9df15f662
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4e01f1a0e6ab49939e3c8ad8339402a7d2b8431
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029219"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961085"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
   初始化指定的報表服務執行個體。  

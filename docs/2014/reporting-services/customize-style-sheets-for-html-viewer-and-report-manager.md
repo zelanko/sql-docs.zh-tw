@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 45b7973dd7711f09b6bf187f7c2798e44e91c375
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017950"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969524"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>自訂 HTML 檢視器及報表管理員的樣式表
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供預設的階層式樣式表 (.css) 檔案會定義樣式**報表**工具列在 HTML 檢視器和報表管理員。 如果您是 Web 開發者，或您有建立階層式樣式表的專業知識，您可以修改預設樣式 (自行負責風險)，來變更工具列或報表管理員的色彩、字型和配置。 此版本未收錄預設樣式表或樣式表的修改指示。  
@@ -46,12 +46,12 @@ ms.locfileid: "56017950"
   
  若要在執行階段使用 HTML 檢視器的自訂樣式表，您可以從下列方式選擇：  
   
--   將 <`HTMLViewerStyleSheet`> 設定加入至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 組態檔中。  
+-   加入 <`HTMLViewerStyleSheet`> 設定為[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]組態檔。  
   
 -   在報表 URL 上指定樣式表。  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>修改 RSReportServer.config 檔  
- 您可以修改 RSReportServer.config 檔來指定 HTML 檢視器的自訂樣式表。 依預設，<`HTMLViewerStyleSheet`> 設定不會包含在該檔案中。 您必須將它輸入 RSReportServer.config 檔的 <`Configuration`> 選取項目中，然後指定您要使用的樣式表。 指定樣式表時，請不要包含 .css 檔延伸模組。  
+ 您可以修改 RSReportServer.config 檔來指定 HTML 檢視器的自訂樣式表。 <`HTMLViewerStyleSheet`> 設定為預設不包含檔案中。 您也必須將它輸入 <`Configuration`> 選取的 RSReportServer.config 檔案，然後再指定您想要使用的樣式表。 指定樣式表時，請不要包含 .css 檔延伸模組。  
   
  下列範例說明如何指定樣式表：  
   

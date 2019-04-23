@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5d2460e4a7aca8c413858df00c4d6c4d08859e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 40e3bdb096f6e755d65c64d99774cbc0bc606c94
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297826"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958514"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>報表屬性對話方塊、程式碼 (報表產生器)
   選取 **[報表屬性]** 對話方塊上的 **[程式碼]** ，即可定義報表內之運算式要使用的自訂程式碼。  

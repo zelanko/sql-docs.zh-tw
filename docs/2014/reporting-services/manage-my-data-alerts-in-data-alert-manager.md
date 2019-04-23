@@ -11,15 +11,15 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37ca741b57be38108407b52ed5e626f80466aea6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027099"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971844"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在資料警示管理員中管理我的資料警示
   SharePoint 使用者可以檢視自己所建立資料警示的清單，以及警示的相關資訊。 使用者還可以在 [資料警示設計工具] 中刪除自己的警示、開啟警示定義進行編輯，以及執行自己的警示。 下圖說明 [資料警示管理員] 中可供使用者使用的功能。  

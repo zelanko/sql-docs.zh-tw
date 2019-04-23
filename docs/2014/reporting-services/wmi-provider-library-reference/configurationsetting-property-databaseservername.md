@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseServerName property
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54a93f0d33927652bd8efe0f1ffa9369fc398038
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbeef4b02c787baa9d29b16fe862af146033584d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042549"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960954"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>DatabaseServerName 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定安裝報表伺服器資料庫之伺服器的名稱。 讀取/寫入  

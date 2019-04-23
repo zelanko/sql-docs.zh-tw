@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019319"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967954"
 ---
 # <a name="report-manager-f1-help"></a>報表管理員 F1 說明
   下列主題將提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員的頁面層級說明。 應用程式中的每一個頁面，都會有一個主題。 並非所有頁面都是可用的。 安全性設定會決定您可以存取的頁面。 若要從報表管理員中存取這些主題，請按一下主要工具列上的 **[說明]** 。  

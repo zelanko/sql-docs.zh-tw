@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 358a82555a2f0b3df8a7635cb3ff39a7b09f2e50
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6874f54f70e038cd7cafbb0c82a463513d9ed10d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290396"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969939"
 ---
 # <a name="query-builder-report-wizard"></a>查詢產生器 (報表精靈)
   使用查詢產生器，即可指定查詢以擷取使用於報表中的結果集。 您可以在兩種查詢產生器之間進行選擇：  

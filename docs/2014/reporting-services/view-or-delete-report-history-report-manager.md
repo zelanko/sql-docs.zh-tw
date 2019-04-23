@@ -23,15 +23,15 @@ helpviewer_keywords:
 - displaying report snapshots
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1a3e69ab9b96cde350551e3f7dec7f47bfb46a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 492835539e36611a56e3896a29d06ed75c17f4b4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290906"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959154"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>檢視或刪除報表記錄 (報表管理員)
   報表記錄會與基礎報表一起保存。 任何有權檢視報表的使用者都可以檢視其記錄。  

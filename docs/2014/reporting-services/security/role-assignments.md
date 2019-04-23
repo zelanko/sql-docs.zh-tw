@@ -14,15 +14,15 @@ helpviewer_keywords:
 - groups [Reporting Services]
 - security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: faf66ef9c84c5a2b93a7b7ec42bd3a0ccf6f2e8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3b9875628e8868e38ed471b15b411eab86bbd1cb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043157"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969034"
 ---
 # <a name="role-assignments"></a>角色指派
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中，「角色指派」會決定預存項目以及報表伺服器本身的存取權。 角色指派包含下列部份：  

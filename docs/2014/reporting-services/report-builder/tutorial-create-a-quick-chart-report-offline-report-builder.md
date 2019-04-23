@@ -1,5 +1,5 @@
 ---
-title: 教學課程：建立快速圖表報表離線 （報表產生器） |Microsoft Docs
+title: 教學課程：離線建立快速圖表報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c817f68fce5fcf561e7aac46f3d809d2213aad7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291266"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956834"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：建立快速圖表報表離線 （報表產生器）
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
   在此教學課程中，您將使用精靈來建立圓形圖，然後稍微進行修改，以便了解可行的作業。 您可以採用兩種不同的方式進行此教學課程。 這兩種方法有相同結果的圓形圖如下圖所示：  
   
  ![「 我第一個圓形圖 」 回合中檢視](../media/rs-my1stpierunview.gif "執行檢視中的我第一個圓形圖")  

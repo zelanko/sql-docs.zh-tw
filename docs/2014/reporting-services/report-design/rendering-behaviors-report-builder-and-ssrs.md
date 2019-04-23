@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 068a1338f03e44a8e98759d6e3651904f0d3d643
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298366"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967426"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>轉譯行為 (報表產生器及 SSRS)
   根據所選取的轉譯器，當轉譯報表時，系統會將某些規則套用到報表主體及其內容。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  

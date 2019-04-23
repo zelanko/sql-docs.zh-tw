@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033829"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971894"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
   本主題描述如何使用 SharePoint 管理中心或 PowerShell 備份和還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。 本主題包含：  
@@ -74,7 +74,7 @@ ms.locfileid: "56033829"
  [備份服務應用程式 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>驗證執行帳戶和資料庫驗證  
- **執行帳戶：** 若要確認您的服務應用程式是否使用執行帳戶：  
+ **執行帳戶：** 若要確認服務應用程式是否使用執行帳戶：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "56033829"
   
 4.  如果設定了執行帳戶，則在還原服務應用程式備份時需要知道認證。 如果不知道正確的認證，請不要進行備份和還原程序。  
   
- **資料庫驗證：** 若要確認您的服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
+ **資料庫驗證：** 若要確認服務應用程式是否使用 Windows 驗證進行資料庫驗證：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56033829"
  如需還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 加密金鑰的資訊，請參閱[管理 Reporting Services SharePoint 服務應用程式](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)的＜加密金鑰＞一節。  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>設定執行帳戶和資料庫驗證  
- **執行帳戶：** 如果您的服務應用程式使用執行帳戶，請完成下列步驟設定該帳戶：  
+ **執行帳戶：** 如果您的服務應用程式使用執行帳戶，請完成下列步驟來設定它：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "56033829"
   
 5.  按一下 [確定] 。  
   
- **資料庫驗證：** 如果您的服務應用程式使用 Windows 驗證進行資料庫驗證，請完成下列步驟：  
+ **資料庫驗證：** 如果您的服務應用程式使用 Windows 驗證進行資料庫驗證完成下列步驟：  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 群組中，按一下 **[管理服務應用程式]** 。  
   

@@ -11,15 +11,15 @@ f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78b17e2efee1c88f442218ece9d53382db17ceff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286316"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956604"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>加入子報表和參數 (報表產生器及 SSRS)
   當您想要建立主報表，而該主報表為多個相關報表的容器時，請在報表中加入子報表。 子報表是另一個報表的參考。 若要透過資料值讓報表產生關聯 (例如，讓多個報表都顯示同一位客戶的資料)，您必須設計參數化報表 (例如，顯示特定客戶之詳細資料的報表) 當做子報表。 當您將子報表加入到主報表時，可以指定要傳遞給子報表的參數。  

@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d68eab56f2ce55c1e562795a9e48c099a27a8fd2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3306160d1badb4abb1f173071f07bde514f5fc1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031249"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957954"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>尋找報表定義結構描述版本 (SSRS)
   報表定義檔案會針對用來驗證 rdl 檔的報表定義結構描述版本指定 RDL 命名空間。 當您在報表撰寫環境 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的報表設計師或報表產生器) 中開啟 .rdl 檔案時，如果此報表是針對先前的命名空間所建立，系統就會自動建立備份檔案，而且此報表會升級為目前的命名空間。 如果您儲存了升級的報表定義，就會儲存轉換的 .rdl 檔。 這是升級報表定義的唯一方式。 報表定義本身不會在報表伺服器上升級。 不過，已編譯的報表會在報表伺服器上升級。 如需詳細資訊，請參閱 [Upgrade Reports](../install-windows/upgrade-reports.md)。  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>如何：識別報表的 RDL 結構描述版本  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>HOW TO：識別報表的 RDL 結構描述版本  
   
 1.  在可以檢視 xml 的應用程式 (例如 [記事本] 或 XML Notepad 2007) 中開啟 .rdl 檔案。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56031249"
   
      報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`。  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何：識別報表設計師的 RDL 結構描述版本  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>HOW TO：識別報表設計師的 RDL 結構描述版本  
   
 1.  開啟新的專案。 您所選擇的專案版本會決定 RDL 結構描述的版本。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中支援多個結構描述版本。 如需詳細資訊，請參閱 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "56031249"
   
      報表定義命名空間是由下列 URL 指定： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>如何：識別報表伺服器的 RDL 結構描述版本  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>HOW TO：識別報表伺服器的 RDL 結構描述版本  
   
 -   在報表管理員中，輸入報表伺服器的 URL。 例如，下列 URL 會指定本機電腦上的報表伺服器。  
   

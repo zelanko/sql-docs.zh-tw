@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.fill.f1
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 083915c4a915faebb19027932a19930a6f836f5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c8feeb496948b34abd3bd4205e52854211cde5d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296036"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960264"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>填滿對話方塊 (報表產生器及 SSRS)
   在 [填滿] 索引標籤上，您可以指定資料區或文字方塊內，單一資料格或多個資料格的背景選項。  

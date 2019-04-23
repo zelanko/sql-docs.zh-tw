@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963974"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
   您可在 [資料警示設計工具] 中建立資料警示定義。 儲存警示定義之後，可以在 [資料警示設計工具] 中再次開啟、編輯，然後再次儲存警示定義。 如需編輯警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md) 和 [在警示設計工具中編輯資料警示](edit-a-data-alert-in-alert-designer.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "56012129"
   
      根據所選取資料行的資料類型而定，會列出不同的比較運算子。 如果資料行的資料類型為日期，則規則的臨界值旁邊會顯示一個行事曆圖示。 您可以藉由按一下行事曆中的日期或輸入日期的方式來輸入資料。  
   
-     資料警示設計工具提供兩種比較模式：**值輸入模式**並**欄位選取模式**。 預設模式為 [值輸入模式]。 只有在處於 [值輸入模式] 且使用 [is] 比較時，才可以新增 OR 子句。  
+     資料警示設計工具提供兩種比較模式：[值輸入模式] 和 [欄位選取模式]。 預設模式為 [值輸入模式]。 只有在處於 [值輸入模式] 且使用 [is] 比較時，才可以新增 OR 子句。  
   
 9. 若要新增 OR 子句，請按一下向下箭頭，然後按一下 [值輸入模式]。  
   

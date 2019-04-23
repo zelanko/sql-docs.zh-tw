@@ -4,25 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802652"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158004"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各版本所支援的功能
 
@@ -31,7 +24,7 @@ ms.locfileid: "56802652"
 
  > **注意︰** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中都會提供評估版於 180 天試用期內。 如需詳細資訊，請參閱 < [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用軟體網站](https://go.microsoft.com/fwlink/?LinkId=190955)。  
 > 
-> **注意：** 如需 Evaluation 和 Developer Edition 所支援的功能，請參閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 功能集。  
+> **注意：** 如 Evaluation 和 Developer edition 所支援的功能，請參閱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise 功能集。  
   
  若要導覽至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術的資料表，請按一下其連結：  
   
@@ -384,7 +377,7 @@ ms.locfileid: "56802652"
 |時間序列：ARTXP 和 ARIMA 方法之間的自訂混合|是|是||||||  
 |時間序列：使用新資料預測|是|是||||||  
 |無限制的並行 DM 查詢|是|是||||||  
-|資料採礦演算法的進階組態與微調選項|是|是||||||  
+|進階的組態與微調資料採礦演算法的選項|是|是||||||  
 |支援外掛程式演算法|是|是||||||  
 |平行模型處理|是|是||||||  
 |時間序列：跨序列預測|是|是||||||  

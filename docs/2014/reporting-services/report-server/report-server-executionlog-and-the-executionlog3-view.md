@@ -11,15 +11,15 @@ helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011250"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962544"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -118,13 +118,13 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|可能的值如下：<br />**Interactive**<br />**訂閱**<br /><br /> <br /><br /> 分析依 RequestType=Subscription 所篩選並且依 TimeStart 所排序的記錄資料可能會顯現訂閱使用量龐大的週期，而且您可能會想要將某些報表訂閱修改成不同的時間。|  
 |格式|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
-|ItemAction|可能的值如下：<br /><br /> **轉譯**<br /><br /> **排序**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
+|ItemAction|可能的值如下：<br /><br /> **轉譯**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **執行**<br /><br /> **RenderEdit**|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料所花費的毫秒數。|  
 |TimeProcessing|處理報表所花費的毫秒數。|  
 |TimeRendering|轉譯報表所花費的毫秒數。|  
-|原始程式檔|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示根據鑽研報表且動態產生的報表模型，或者在使用報表伺服器處理與轉譯的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立之工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
+|Source|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**:表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**:表示動態產生的報表基礎的模型鑽研報表，或者使用 處理與轉譯的報表伺服器的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**:表示已經建立的工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**:表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -317,13 +317,13 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RequestType|要求類型 (使用者或系統)。|  
 |格式|轉譯格式。|  
 |參數|報表執行所使用的參數值。|  
-|ReportAction|可能的值如下：Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring|  
+|ReportAction|可能的值如下：轉譯，排序、 BookMarkNavigation、 DocumentNavigation、 GetDocumentMap、 Findstring|  
 |TimeStart|指出報表處理持續期間的開始與結束時間。|  
 |TimeEnd||  
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|原始程式檔|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
+|Source|報表執行的來源 (1= 即時、2= 快取、3= 快照集、4= 記錄)。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -353,7 +353,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|擷取資料、處理報表和轉譯報表所花費的毫秒數。|  
 |TimeProcessing||  
 |TimeRendering||  
-|原始程式檔|報表執行的來源。 可能的值如下：(1= 即時、2= 快取、3= 快照集、4= 記錄、5= 特定、6= 工作階段、7= RDCE)。|  
+|Source|報表執行的來源。 可能的值如下：(1 = 即時、 2 = 快取、 3 = 快照集、 4 = 記錄、 5 = 特定、 6 = 工作階段、 7 = RDCE)。|  
 |[狀態]|可能的值如下：rsSuccess、rsProcessingAborted 或錯誤碼。 如果發生多個錯誤，只會記錄第一個錯誤。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  

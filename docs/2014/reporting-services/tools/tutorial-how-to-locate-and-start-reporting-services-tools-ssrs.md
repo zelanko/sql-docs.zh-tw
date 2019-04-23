@@ -19,15 +19,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 60d8938b8fd74a5a62ac9b122c897dc0008d4f9f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290736"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958454"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
   此教學課程介紹用來設定報表伺服器、管理報表伺服器內容和作業，以及建立並發行報表的工具。 此教學課程的目的是協助新手使用者了解：如何尋找和開啟各項工具。 如果您已經熟悉這些工具，可以移至其他教學課程，協助您了解使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]的重要技巧。 如需有關其他教學課程的詳細資訊，請參閱 < [Reporting Services 教學課程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  

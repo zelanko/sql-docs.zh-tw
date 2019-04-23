@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - IsSharePointIntegrated property
 ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 692cd915c893b9f2f0d2d7d83ce17e41f20d070a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e7052284e69c374d4c46fa4fe78d68bf870662e8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029159"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957964"
 ---
 # <a name="issharepointintegrated-property-wmi-msreportserverinstance"></a>IsSharePointIntegrated 屬性 (WMI MSReportServer_Instance)
   指定報表伺服器是否處於 SharePoint 整合模式。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，此屬性一律傳回 `False`，因為在 SharePoint 模式中，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體是 SharePoint 共用服務且不受 WMI 提供者控制。  

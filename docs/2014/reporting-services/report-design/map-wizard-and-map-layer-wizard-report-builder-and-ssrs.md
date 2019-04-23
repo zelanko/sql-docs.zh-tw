@@ -12,15 +12,15 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f005ac1a727b375d7c0796a9f30bfed388dccfbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290756"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962984"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
   地圖精靈與地圖圖層精靈會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -53,7 +53,7 @@ ms.locfileid: "56290756"
   
  針對對應的說明內容，按一下精靈頁面的標題。 您看到的頁面會根據您選擇的地圖類型、空間資料來源及分析資料來源而有所不同。  
   
-1.  [選擇空間資料的來源](#SpatialDataSource)。 空間資料可能來自地圖庫、環境系統研究協會 (Environmental Systems Research Institute, Inc.，ESRI) 形狀檔，或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 關聯式資料庫中的空間資料。  
+1.  [選擇空間資料的來源](#SpatialDataSource)。 空間資料可能來自地圖庫、 Environmental Systems Research Institute，Inc.或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 關聯式資料庫中的空間資料。  
   
     -   [何謂空間資料？](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56290756"
   
  在您加入地圖或地圖圖層並預覽報表之後，可以變更您在精靈中設定的地圖和地圖圖層選項。 如需詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 若要將地圖加入至報表的逐步指示，請參閱[教學課程：地圖報表&#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
+ 如需地圖的詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 如需將地圖新增至報表的逐步指示，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "56290756"
  地圖庫包含的地圖來自報表撰寫環境之地圖庫資料夾中的報表。 地圖庫中的地圖可讓您快速開始將地圖加入至報表中。 地圖庫中預先定義的地圖是由地圖提供者所提供。  
   
 > [!NOTE]  
->  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是由美國人口普查局所免費提供。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 和 TIGER/Line 是美國人口普查局的註冊商標。  
+>  這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地圖功能會使用美國人口普查局 ([http://www.census.gov/](http://www.census.gov/)) 提供的 TIGER/Line Shapefiles 資料。 TIGER/Line 形狀檔是 Census MAF/TIGER 資料庫中選定地理和製圖資訊的擷取內容。 TIGER/Line 形狀檔是可從位於美國的免費使用美國人口普查局。 如需有關 TIGER/Line Shapefile 的詳細資訊，請參閱 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) \(英文\)。 TIGER/Line 形狀檔中的界限資訊只能當做統計資料收集和表格製作的用途，其統計用途的描述和指定並不構成司法權或擁有權利的判定，也不屬於法律上的土地描述。 Census TIGER 和 TIGER/Line 是美國的註冊的商標人口普查局的註冊商標。  
   
  若要擴充地圖庫，您可以從地圖庫目錄加入或移除報表，也可以加入資料夾來組織地圖。 如需詳細資訊，請參閱 [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "56290756"
   
  如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](https://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](https://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](https://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱[報表疑難排解：將報表對應&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)及 < 規劃地圖 」 中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。  
+ 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱[針對報表進行疑難排解：將報表對應&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)及 < 規劃地圖 」 中[Reporting Services 文件](https://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中。  
   
  如需自訂圖格圖層之其他方式的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

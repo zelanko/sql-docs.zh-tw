@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], Web Parts
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 566ae0a91dd36d71ab6690e8910f1dd1cfe50043
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030689"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963494"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>將報表檢視器 Web 組件加入至網頁 (SharePoint 整合模式的 Reporting Services)
   您可以使用報表檢視器 Web 組件來檢視在設定為以 SharePoint 整合模式執行之報表伺服器上執行的報表。 您可以使用 Web 組件顯示在報表產生器或報表設計師中建立，並且上傳至文件庫的報表定義 (.rdl) 檔案。  

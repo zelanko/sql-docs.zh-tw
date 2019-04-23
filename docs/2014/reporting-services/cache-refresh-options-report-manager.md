@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011500"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964194"
 ---
 # <a name="cache-refresh-options-report-manager"></a>快取重新整理選項 (報表管理員)
   使用 [快取重新整理] 選項頁面來建立排程，以供預先載入含報表或共用資料集資料暫存副本的快取。 重新整理計劃包括排程和選項，可指定或覆寫參數的值。 您不能針對共用資料集，覆寫標示為唯讀的參數值。 您可以建立並使用多個重新整理計劃做為重新整理選項頁面的一部分。  

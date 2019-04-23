@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 50ff2626108c26ca5cee3845da437b27dbfcade0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 74fdfc58d2988ec9d07343e2ebe1651479514e6f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030849"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966554"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式中的 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
@@ -117,7 +117,7 @@ ms.locfileid: "56030849"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
   
-1.  開啟要啟用多個內容類型的文件庫。 您應會在文件庫功能表列上，看見下列功能表：**新**，**上傳**，**動作**，和**設定**。 如果您看不到 **[設定]**，表示您沒有加入內容類型的權限。  
+1.  開啟要啟用多個內容類型的文件庫。 在文件庫功能表列中，您應該會看到下列功能表：**新**，**上傳**，**動作**，和**設定**。 如果您看不到 **[設定]**，表示您沒有加入內容類型的權限。  
   
 2.  在 **[文件庫工具]** 功能區中，按一下 **[文件庫]**。  
   

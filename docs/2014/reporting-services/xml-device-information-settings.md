@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7aa0f6e28dae59d7559dbb009ce4441dd4a2119d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 404ab37f00cd738e619286a3133b906acbbcd06d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013139"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970495"
 ---
 # <a name="xml-device-information-settings"></a>XML 裝置資訊設定
   下表列出以 XML 格式轉譯的裝置資訊設定。  

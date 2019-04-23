@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
@@ -21,12 +19,12 @@ ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83728b33a4cbf0ce76eea3c577302c7d7ffaf25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082848"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157744"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 物件和物件特性
   Analysis Services 指令碼語言 (ASSL) 中的物件會遵循有關物件群組、繼承、命名、擴展和處理的特定指導方針。  

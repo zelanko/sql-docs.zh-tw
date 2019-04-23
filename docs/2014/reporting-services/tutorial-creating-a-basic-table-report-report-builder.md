@@ -1,5 +1,5 @@
 ---
-title: 教學課程：建立基本資料表報表 （報表產生器） |Microsoft Docs
+title: 教學課程：建立基本資料表報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295366"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959544"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 （報表產生器）
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
   本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,12 +50,12 @@ ms.locfileid: "56295366"
   
 7.  [將報表匯出](#Export)  
   
- 完成本教學課程的估計時間：20 分鐘。  
+ 估計的時間才能完成本教學課程：20 分鐘的時間。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
   
-##  <a name="CreateTable"></a> 1.從使用者入門建立新報表  
+##  <a name="CreateTable"></a> 1.從快速入門中建立新的報表  
  建立資料表報表從**開始使用** 對話方塊。 模式有兩種：報表設計和共用資料集設計。 在報表設計模式中，您可以在 [報表資料] 窗格中指定資料，並且在設計介面上指定報表配置。 在共用資料集設計模式中，您可以建立資料集查詢，以便與其他人共用。 在本教學課程中，您將使用報表設計模式。  
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
@@ -229,7 +229,7 @@ ms.locfileid: "56295366"
   
 3.  按一下 **[完成]**。  
   
- 資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 資料列群組 窗格會顯示三個資料列群組：Salesdate、 子類別目錄和詳細資料。 詳細資料是資料集查詢擷取的所有資料。  
+ 資料表會加入至設計介面。 這個資料表有 5 個資料行和 5 個資料列。 [資料列群組] 窗格會顯示三個資料列群組：SalesDate、Subcategory 和 Details。 詳細資料是資料集查詢擷取的所有資料。  
   
 ##  <a name="FormatCurrency"></a> 2.將資料格式化為貨幣  
  根據預設，[Sales] 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。 切換 [預留位置樣式]，將格式化的文字方塊和預留位置文字顯示為範例值。  

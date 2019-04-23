@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015599"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958434"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RsReportServer.config** 檔會儲存報表管理員、報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -176,7 +176,7 @@ ms.locfileid: "56015599"
 |`RSWindowsKerberos`|伺服器接受 Kerberos 安全性 Token。<br /><br /> 當您在限制委派驗證配置中使用 Kerberos 驗證時，請使用此設定或 RSWindowsNegotiate。|N|  
 |`RSWindowsBasic`|不使用認證建立連線時，伺服器會接受基本認證並發出挑戰/回應。<br /><br /> 基本驗證會以清楚的文字，將認證傳入 HTTP 要求中。 如果您使用基本驗證，請使用 SSL 加密進出報表伺服器的網路流量。 若要檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本驗證的範例組態語法，請參閱 [使用報表伺服器驗證](../security/authentication-with-the-report-server.md)。|N|  
 |`Custom`|如果您在報表伺服器電腦上部署了自訂安全性延伸模組，請指定這個值。 如需詳細資訊，請參閱＜ [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)＞。|N|  
-|**LogonMethod**|這個值會指定的登入類型`RSWindowsBasic`。 如果您指定`RSWindowsBasic`，這是必要值。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> `2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|N|  
+|**LogonMethod**|這個值會指定的登入類型`RSWindowsBasic`。 如果您指定`RSWindowsBasic`，這是必要值。 有效值為 2 或 3，其中每個值代表下列項目：<br /><br /> `2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。<br /><br /> 注意:中不支援值 0 （用於互動式登入） 和 1 （用於批次登入） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|N|  
 |**Realm**|這個值用於`RSWindowsBasic`。 它會指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|N|  
 |**DefaultDomain**|這個值用於`RSWindowsBasic`。 它可用於決定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|N|  
 |**RSWindowsExtendedProtectionLevel**|預設值是 **off**。 如需詳細資訊，請參閱＜ [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)＞|N|  
@@ -293,7 +293,7 @@ ms.locfileid: "56015599"
 |**EmbeddedRenderFormats、RenderingExtension**|指定用於將報表封裝在電子郵件訊息之主體中的轉譯格式。 報表中的影像會後續內嵌在報表中。 有效值為 MHTML 和 HTML4.0。|  
 |**PrivilegedUserRenderFormats**|指定透過「管理所有訂閱」工作啟用訂閱時，使用者可以從報表訂閱選取的轉譯格式。 如果未設定此值，就可以使用所有未刻意排除的轉譯格式。|  
 |**ExcludedRenderFormats、RenderingExtension**|刻意排除與給定傳遞延伸模組配合不良的格式。 您無法排除同一個轉譯延伸模組的多個執行個體， 如果您排除多個執行個體，就會在報表伺服器讀取組態檔時產生錯誤。 預設會排除用於電子郵件傳遞的下列延伸模組：<br /><br /> **HTMLOWC**<br /><br /> **Null**<br /><br /> **RGDI**|  
-|**SendEmailToUserAlias**|此值使用 **DefaultHostName**。<br /><br /> 當**SendEmailToUserAlias**設定為`True`，定義個別的訂用帳戶的使用者會自動指定為報表的收件者。 **[收件者]** 欄位是隱藏的。 如果這個值是`False`，則**至**欄位會顯示。 如果您希望充分控制報表散發，請將此值設定為 `True`。 有效值包括下列各項：<br /><br /> `True`= 用於建立訂用帳戶的使用者電子郵件地址。 這是預設值。<br /><br /> `False`=可以指定任何電子郵件地址。|  
+|**SendEmailToUserAlias**|此值使用 **DefaultHostName**。<br /><br /> 當**SendEmailToUserAlias**設定為`True`，定義個別的訂用帳戶的使用者會自動指定為報表的收件者。 **[收件者]** 欄位是隱藏的。 如果這個值是`False`，則**至**欄位會顯示。 如果您希望充分控制報表散發，請將此值設定為 `True`。 有效值包括以下的值：<br /><br /> `True`= 用於建立訂用帳戶的使用者電子郵件地址。 這是預設值。<br /><br /> `False`=可以指定任何電子郵件地址。|  
 |**DefaultHostName**|此值使用 **SendEmailToUserAlias**。<br /><br /> 指定當 **SendEmailToUserAlias** 設定為 true 時，表示附加到使用者別名之主機名稱的字串值。 此值可以是網域名稱系統 (DNS) 名稱或 IP 位址。|  
 |**PermittedHosts**|藉由明確地指定哪些主機可以接收電子郵件傳遞，來限制報表散發。 **PermittedHosts**中，將每個主機指定為一個 **HostName** 元素，其值為 IP 位址或 DNS 名稱。<br /><br /> 只有主機所定義的電子郵件帳戶為有效收件者。 如果您指定 **DefaultHostName**，務必要將該主機包含為 **PermittedHosts** 的 **HostName**元素。 此值必須是一或多個 DNS 名稱或 IP 位址。 依預設，未設定此值。 如果未設定此值，便不限制誰可以接收電子郵件報表。|  
   

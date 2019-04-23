@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020499"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158014"
 ---
 # <a name="report-server-item-properties"></a>報表伺服器項目屬性
   項目屬性是報表伺服器資料庫中項目特有的屬性。 這類型的項目包括報表、連結報表、資料夾、資源、模型以及資料來源。  
@@ -60,7 +58,7 @@ ms.locfileid: "56020499"
 |屬性|描述|  
 |--------------|-----------------|  
 |**語言**|報表中使用的語言。 這個值是網際網路工程任務推動小組 (IETF) RFC1766 規格中定義的語言代碼。 第一部分是由基本語言的兩個字元所指定。 第二個部分是由連字號分隔，並指定語言的變化或是方言。 如果在與報表定義中的 `Style` 元素相關聯的 `Body` 元素中未指定值，預設值是報表伺服器的語言。|  
-|`ReportProcessingTimeout`|個別報表的逾時 (以秒為單位)。 如果已設定此值，當指定時間已經過時，報表伺服器會嘗試停止處理報表。 有效值是從 `-1` 到 `2`、`147`、`483`、`647`。 如果此值為 `-1`，報表就不會在處理期間逾時。 如果此值為 `null`，系統屬性 `ReportProcessingTimeout` 的值會用於報表處理逾時。預設值是 `null` 秒。 如需詳細資訊，請參閱[報表伺服器系統屬性](reporting-services-properties-report-server-system-properties.md)。|  
+|`ReportProcessingTimeout`|個別報表的逾時 (以秒為單位)。 如果已設定此值，當指定時間已經過時，報表伺服器會嘗試停止處理報表。 有效值是從 `-1` 到 `2`、`147`、`483`、`647`。 如果此值為 `-1`，報表就不會在處理期間逾時。 如果值為`null`，系統屬性的值`ReportProcessingTimeout`用於報表處理逾時。預設值是 `null`。 如需詳細資訊，請參閱[報表伺服器系統屬性](reporting-services-properties-report-server-system-properties.md)。|  
 |**ExecutionDate**|上次為報表建立報表快照集的日期和時間。|  
 |**CanRunUnattended**|指出是否可依照排程自動執行報表的值。 如果將此屬性設定為 `true`，就會定義報表參數的預設值並將資料來源認證會與報表儲存在一起，或者會將認證擷取選項設定為 `None`。 如果此屬性設定為 `false`，便不符合自動執行報表的必要條件。 如需詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 組態管理員&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。|  
 |**HasParameterDefaultValues**|這個值會指出報表是否具有為所有報表參數設定的有效預設值。 如果報表沒有報表參數，這個值也會是 `true`。 如果此屬性設定為 `false`，則表示一個或多個報表參數沒有有效的預設值。|  

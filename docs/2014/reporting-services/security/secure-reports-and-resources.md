@@ -14,15 +14,15 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a12d538f034f4a3d96726ced32b74f02ec6e73c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 20d800cc906a3953fe2f5143e980fd2e869ec318
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023519"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964414"
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
   您可以設定個別報表以及資源的安全性，來控制使用者必須對這些項目擁有的存取權程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以執行報表、檢視資源、修改屬性及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，好讓他們存取報表或資源。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72bd3d617fa14e785b29b9c89e3d53d7d5dd3da4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ed5b54ea07249a69e6f599e53658e8aba10d656
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032749"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969616"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>一般屬性頁面、共用資料集 (報表管理員)
   使用 [共用資料集] 頁面，即可檢視及管理共用資料集項目的屬性。  
@@ -49,7 +49,7 @@ ms.locfileid: "56032749"
  **查詢執行逾時**  
  輸入查詢逾時之前的秒數。如果是 0，則查詢不會逾時。  
   
- **套用**  
+ **Apply**  
  儲存變更。  
   
  **刪除**  

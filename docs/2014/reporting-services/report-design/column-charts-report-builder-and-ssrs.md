@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c706bceb09d8637874bc82a5c23a1afa8380034
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0a71b4311dacf9ea08f12daff8b7610d8f6c49b5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964154"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 直條圖適合顯示一段時間的資料變更，或圖解項目之間的比較。 一般直條圖與橫條圖相當有關聯，後者會將數列顯示為一組水平橫條，而範圍直條圖則會將數列顯示為一組垂直線，其中包含各種起點與終點。 如需詳細資訊，請參閱 [橫條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md) 和 [範圍圖表 &#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "56292964"
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [橫條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [範圍圖表 &#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)   
- [教學課程：橫條圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
+ [教學課程：將橫條圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

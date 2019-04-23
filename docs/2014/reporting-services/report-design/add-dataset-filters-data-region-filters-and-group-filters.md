@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1d8d52b8b725666b69cf596848ec6626f22814a1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290936"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970124"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>新增資料集篩選、資料區篩選和群組篩選 (報表產生器及 SSRS)
   在報表中，篩選屬於資料集、資料區域或資料區域群組的一部分，您可以篩選來限制報表中所要使用的資料。 如果您無法變更資料集查詢，那麼篩選便是協助您控制報表資料的好辦法，例如，如果您正在使用共用的資料集。  

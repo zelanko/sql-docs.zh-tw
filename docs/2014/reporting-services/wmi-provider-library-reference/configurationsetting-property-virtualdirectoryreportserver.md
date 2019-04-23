@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 42366a4163fd1a231f6a2a6db3ae092fb3dc20d2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb25607dc929e8309ba908f02fd973395add1b63
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020390"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969984"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回報表伺服器應用程式的虛擬目錄。 唯讀。  

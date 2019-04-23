@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7bffe55c89f597ee47b9b7117df67da40e6c400
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 78a9aa951b96354f628a8aa6fd180fbc01b186a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287346"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961534"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Max 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的最大值 (在給定範圍的內容中)。  

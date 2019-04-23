@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 27aaffc85ee01f2645b9bb590aa7816d2fa01f71
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 181670ab62d31fbb7b6815518129dd5b4e8a1b1d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292896"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966544"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 函數 (報表產生器及 SSRS)
   傳回指定範圍中資料列數的執行計數。  

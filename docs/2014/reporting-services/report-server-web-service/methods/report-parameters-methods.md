@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - methods [Reporting Services], report parameters
 - parameters [Reporting Services], methods
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f6735c80707fc3a03e4e7c61d0c06b63f5b3181
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 567888d7dae14108e595c76f45f0ab7b95619cca
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030519"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158744"
 ---
 # <a name="report-parameters-methods"></a>報表參數方法
   您可以使用這些方法來設定和擷取報表的參數。  

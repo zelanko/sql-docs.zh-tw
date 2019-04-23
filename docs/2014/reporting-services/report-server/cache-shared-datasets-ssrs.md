@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e7f3faff05a318c302f12ded3a6ec4c864b7054
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ad73f9ac85bcc770b9337b5f84282fc7fc3018a3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012369"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959584"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>快取共用資料集 (SSRS)
   共用資料集的查詢結果可以複製到快取，以便為多個報表提供一致的資料，並改善資料集查詢的回應時間。 跟報表一樣，您可以設定共用資料集在第一次使用時或指定排程進行快取。  

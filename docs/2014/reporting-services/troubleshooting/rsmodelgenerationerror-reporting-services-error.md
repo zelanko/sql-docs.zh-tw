@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsModelGenerationError
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a64511c7c44a4fed583c8276b2b4abaff01ee51
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 248187189db1270439e16b21139c40e9440b2ba3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021929"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962644"
 ---
 # <a name="rsmodelgenerationerror---reporting-services-error"></a>rsModelGenerationError - Reporting Services 錯誤
     

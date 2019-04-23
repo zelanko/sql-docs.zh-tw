@@ -16,15 +16,15 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5ec2030e94abbc568e2ea030c781e904a4ce459d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010879"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956054"
 ---
 # <a name="tasks-and-permissions"></a>工作和權限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「工作」(Task) 是使用者或管理員可以執行的動作。 工作是預先定義的。 您無法建立自訂工作或修改以程式設計的方式或透過工具而提供的工作。 總共有 25 種工作。 這些工作構成以角色為基礎之安全性中，可以使用的整個作業集。 工作的範例包括「檢視報表」、「管理報表」以及「管理報表伺服器屬性」。  
@@ -39,7 +39,7 @@ ms.locfileid: "56010879"
 ## <a name="system-and-item-level-tasks"></a>系統和項目層級工作  
  工作分成兩個類別目錄：系統層級和項目層級。 角色可以包括僅來自單一類別目錄的工作。 下表描述每一種類別目錄的工作。  
   
-|類別目錄|描述|  
+|Category|描述|  
 |--------------|-----------------|  
 |[項目層級工作](tasks-and-permissions-item-level-tasks.md)|在資料夾、報表、報表模型和資源等受到報表伺服器管理之項目上執行的動作。<br /><br /> 項目層級工作的範圍為報表伺服器資料夾命名空間。 您透過報表伺服器上的資料夾，或者透過 URL 存取的所有項目，都受到包含項目層級工作之角色指派的保護。|  
 |[系統層級工作](tasks-and-permissions-system-level-tasks.md)|在系統層級執行的動作，例如管理作業或可以用於許多項目的共用排程。 系統層級工作的範圍是在報表伺服器資料夾命名空間以外。|  

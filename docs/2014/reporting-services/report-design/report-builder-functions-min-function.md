@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c620c8cc4f3ddaaa0cddd261cf5c42f111763ed1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 89fc6d86437583503b2fd962bf86c1c9ff6d75f5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287666"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971254"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Min 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的最小值 (在給定範圍的內容中)。  

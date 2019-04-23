@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa5b18503831fea7c2ea0e9836e8a76cfa940c2e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294306"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968186"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>將邊框加入至圖表 (報表產生器及 SSRS)
   若要為圖表提供一個更吸引人的外觀，請考慮在圖表的周圍使用邊框。 您可以使用 **[圖表屬性]** 對話方塊或 [屬性] 窗格來選取邊框。 圖表邊框無法套用到其他任何資料區。  

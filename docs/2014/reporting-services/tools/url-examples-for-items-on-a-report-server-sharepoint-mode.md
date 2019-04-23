@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026529"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957154"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 模式 (SSRS) 在報表伺服器上已發行報表項目的 URL 範例
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  

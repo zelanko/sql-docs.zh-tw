@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceID property
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 20fa6a79f2ee56ad39af3da31af7d3a3a5f63b34
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca6afd1c3bc916c5a8ce6667c7a765901d0881b5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019589"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963794"
 ---
 # <a name="installationid-property-wmi-msreportserverconfigurationsetting"></a>InstallationID 屬性 (WMI MSReportServer_ConfigurationSetting)
   這個屬性會傳回特定報表伺服器執行個體的唯一識別碼。  

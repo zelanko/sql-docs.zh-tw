@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298006"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968227"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>資料集屬性對話方塊、參數 (報表產生器)
   選取 **參數**上**資料集屬性**對話方塊，即可加入、 變更與刪除查詢參數。  
@@ -80,7 +80,7 @@ ms.locfileid: "56298006"
  [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [資料集屬性對話方塊、 查詢&#40;報表產生器&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [教學課程：將參數加入至報表&#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [查詢設計工具 &#40;報表產生器&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

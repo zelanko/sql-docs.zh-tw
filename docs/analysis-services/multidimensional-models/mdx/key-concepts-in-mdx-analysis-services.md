@@ -1,6 +1,6 @@
 ---
 title: 重要的概念在 MDX (Analysis Services) |Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527817"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962164"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527817"
   
  ![與所呼叫的所有成員的樞紐分析表](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "標註的所有成員的樞紐分析表")  
   
- 展開階層，最後您會來到最底層。 這稱為 **分葉成員**。 分葉成員是階層中沒有子系的成員。@@@ 在此範例中，Australia 為分葉成員。  
+ 展開階層，最後您會來到最底層。 這稱為 **分葉成員**。 分葉成員是階層中沒有子系的成員。@@@ 在此範例中，西南是分葉成員。  
   
  ![樞紐分析表與標註-成員分葉](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "具有標註-成員分葉樞紐分析表")  
   
- 而其上層的所有項目均稱為 **父成員**。 Pacific 是 Australia 的父系。  
+ 而其上層的所有項目均稱為 **父成員**。 United States 則是 southwest （西南） 的父代。  
   
  **屬性階層的元件**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527817"
 ## <a name="key-attributes"></a>索引鍵屬性  
  模型是相關物件的集合，且這些相關物件是依賴索引鍵和索引來建立關聯。 Analysis Services 模型也一樣。 每個維度 (請記得它相當於關聯式模型中的資料表) 都有一個索引鍵屬性。 **索引鍵屬性** 用於事實資料表 (量值群組) 的外部索引鍵關聯性。 維度中所有非索引鍵屬性均會連結至 (直接或間接) 索引鍵屬性。  
   
- 一般而言 (但不一定)，索引鍵屬性也是 **資料粒度屬性**。 資料粒度是資料中的詳細資料層級或有效位數層級。 同樣地，我們要使用常見範例作為說明的最快途徑。 請思考日期值：若為每日銷售額，您必須為日期使用特定日期值；若為配額，使用每季可能便已足夠，但您的分析資料若包含體育活動的競賽結果，則資料粒度就很可能要使用毫秒。 您資料中的有效位數層級就是資料粒度。  
+ 一般而言 (但不一定)，索引鍵屬性也是 **資料粒度屬性**。 資料粒度是資料中的詳細資料層級或有效位數層級。 同樣地，我們要使用常見範例作為說明的最快途徑。 請思考日期值：每日銷售額，您需要日期天; 指定的值如需配額，每季可能便已足夠，但您分析資料若包含體育活動的競賽結果，則資料粒度可能會很好要使用毫秒。 您資料中的有效位數層級就是資料粒度。  
   
  是另一個範例是貨幣： 財務應用程式可能會追蹤金額至小數位數，但您當地學校的資金募集者可能只需要最接近之美元的值。 若您想要避免儲存不必要的資料，就很需要了解資料粒度。 刪減時間戳記的毫秒，或是刪減銷售額金額中的幾分美金，都可以在詳細資料層級與您的分析無關時，節省儲存空間和處理時間。  
   

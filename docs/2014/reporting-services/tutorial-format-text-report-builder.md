@@ -1,5 +1,5 @@
 ---
-title: 教學課程：格式化文字 （報表產生器） |Microsoft Docs
+title: 教學課程：將文字格式化 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297282"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961334"
 ---
-# <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 （報表產生器）
+# <a name="tutorial-format-text-report-builder"></a>教學課程：將文字格式化 (報表產生器)
   在本教學課程中，您將能練習以各種不同的方式格式化文字。 使用資料來源和資料集設定空白報表之後，您可以挑選想要探索的步驟來進行。  
   
  下圖顯示報表，與您將要建立的報表相似。  
@@ -49,7 +49,7 @@ ms.locfileid: "56297282"
   
  [儲存報表](#Save)  
   
- 完成本教學課程的估計時間：20 分鐘。  
+ 估計的時間才能完成本教學課程：20 分鐘的時間。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  

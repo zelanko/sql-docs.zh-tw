@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013179"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956984"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
   RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器之單一 Web 伺服陣列的環境中，讓您偵測及限制個別租用戶使用特定資源類型的情形。 這種情形的一個範例是裝載服務案例，在此案例中，您可能要為由多個可能分屬不同公司的租用戶所使用的報表伺服器，維護單一 Web 伺服器陣列。 您身為報表伺服器管理員，可以啟用此功能來幫助您達成下列目標：  
@@ -35,10 +35,10 @@ ms.locfileid: "56013179"
   
 -   運算式中的指名參數。  
   
- 這個主題描述 RSReportServer.Config 檔中 <`RDLSandboxing`> 元素內的每一個元素。 如需如何編輯此檔案的詳細資訊，請參閱[Modify a Reporting Services Configuration File (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。 伺服器追蹤記錄會記錄與 RDL 沙箱功能有關的活動。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)。  
+ 本主題說明中的每個項目 <`RDLSandboxing`> RSReportServer.Config 檔案中的項目。 如需如何編輯此檔案的詳細資訊，請參閱[Modify a Reporting Services Configuration File (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。 伺服器追蹤記錄會記錄與 RDL 沙箱功能有關的活動。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>範例組態  
- 下列範例會示範 RSReportServer.Config 檔中 <`RDLSandboxing`> 元素的設定和範例值。  
+ 下列範例示範設定和範例值 <`RDLSandboxing`> RSReportServer.Config 檔案中的項目。  
   
 ```  
 <RDLSandboxing>  
@@ -69,10 +69,10 @@ ms.locfileid: "56013179"
 |**類型**|RDL 運算式中允許的成員清單。|  
 |**Allow**|RDL 運算式中允許的類型或類型集合。|  
 |**Namespace**|**Allow** 的屬性，這是包含一或多個套用至 Value 之類型的命名空間。 這個屬性不區分大小寫。|  
-|`AllowNew`|**Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 注意：當`RDLSandboxing`啟用時，無法建立新的陣列，在 RDL 運算式中，不論設定為何`AllowNew`。|  
+|`AllowNew`|**Allow** 的布林屬性，可控制 RDL 運算式或 RDL **\<Class>** 項目中是否允許建立此類型的新執行個體。<br /><br /> 注意:當`RDLSandboxing`啟用時，無法建立新的陣列，在 RDL 運算式中，不論設定為何`AllowNew`。|  
 |**值**|**Allow** 的值，這是 RDL 運算式中允許之類型的名稱。 **\*** 值表示允許命名空間中的所有類型。 這個屬性不區分大小寫。|  
 |**成員**|如果是 **\<Types>** 項目中所包含的類型清單，則為 RDL 運算式中不允許的成員名稱清單。|  
-|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意：為成員指定 **Deny** 時，將不會允許所有類型中具有這個名稱的所有成員。|  
+|**拒絕**|RDL 運算式中不允許的成員名稱。 這個屬性不區分大小寫。<br /><br /> 注意:為成員指定 **Deny** 時，將不會允許所有類型中具有這個名稱的所有成員。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>在啟用 RDL 沙箱功能時使用運算式  
  您可以修改 RDL 沙箱功能，透過下列方式幫助管理運算式所使用的資源：  

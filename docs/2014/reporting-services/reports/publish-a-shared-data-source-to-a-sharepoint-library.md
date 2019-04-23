@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4dbe708d18cf7b8c3fa02ebd3da174d76a9683ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3159e4b64f19410222c6f2adbbce1a1d2c8782e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031119"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961194"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
   若要將共用資料來源發行到以 SharePoint 整合模式執行的報表伺服器，您必須在報表設計師中設定報表專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。  

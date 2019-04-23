@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c481a170-dc94-424f-a37c-d16003171d29
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c76fe2c4def2ad63a886c72a251e39a44838c40a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5eb6bf852e021c050f218abdae0ebff1943fe7e0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288216"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969974"
 ---
 # <a name="map-f1-help"></a>地圖 F1 說明
   本節中的主題提供有關地圖報表項目可設定選項的詳細資訊。  

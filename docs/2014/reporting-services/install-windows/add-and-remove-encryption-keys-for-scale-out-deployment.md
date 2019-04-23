@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3e26f43f0a146466e32b51ab43a2935f898e1a0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 52ecac095d34882d8f65cdafaa83784aef86e2fc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036381"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967904"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>加入和移除向外延展部署的加密金鑰 (SSRS 組態管理員)
   您可以設定多部報表伺服器來使用共用報表伺服器資料庫，以便在向外延展部署模型中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 向外延展部署的成員資格，會依報表伺服器是否在報表伺服器資料庫中儲存加密金鑰而定。 您可以加入和移除特定報表伺服器執行個體的加密金鑰，來控制向外延展部署成員資格。 如果您要從部署中移除節點，您可以依照任何順序來移除它們。 如果您要將節點加入部署中，您必須從已屬於部署的報表伺服器聯結任何新的執行個體。  

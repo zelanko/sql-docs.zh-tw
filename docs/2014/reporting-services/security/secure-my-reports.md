@@ -14,15 +14,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: de90bbfad9bdd204e4eaf4c7c9afe96e6f8519f0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035169"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966796"
 ---
 # <a name="secure-my-reports"></a>保護我的報表
   [我的報表] 功能會提供用於報表之使用者管理的工作空間。 為達成其目的，[我的報表] 資料夾的權限，應較一般用途的其他資料夾為寬鬆。 使用者如果只有檢視及執行其他資料夾中之報表的權限，則需要一組擴充的權限來管理其 [我的報表] 資料夾和擁有的內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供此用途的特殊角色指派及角色定義。  

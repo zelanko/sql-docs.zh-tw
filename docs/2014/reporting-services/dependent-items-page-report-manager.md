@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030069"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963736"
 ---
 # <a name="dependent-items-page-report-manager"></a>相依項目頁面 (報表管理員)
   您可以使用 [相依項目] 頁面來檢視參考共用資料來源的報表和模型清單。 每一個項目類型的圖示表示該項目是報表或模型。 檢視這個頁面可以使用清單檢視或詳細資料檢視。 使用詳細資料檢視來顯示有關每一個項目的詳細資訊。 詳細資料檢視有其他頁面選項可用。 為了協助您管理共用資料來源，這個頁面提供了使用資料來源之報表和模型的連結、有關上次執行或修改報表或模型之時間的標準，以及 [刪除] 和 [移動] 按鈕，以便您可以輕易地移除不再使用的報表和模型，或在您判斷是否仍然需要它們時，將它們移至不同的位置。  

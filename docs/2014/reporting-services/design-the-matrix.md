@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 82e6ab018b367459c9f75a54e863a49243f36acd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e2046dc87627aded9415d537c37c6cf21880c8e1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297816"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963394"
 ---
 # <a name="design-the-matrix"></a>設計矩陣
   使用報表精靈的這個頁面，即可選取報表的欄位。  

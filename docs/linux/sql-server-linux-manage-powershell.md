@@ -10,22 +10,22 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 18b0fec36a572893cb5150ef75973df674cf875d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903d2d89ca0d551cbb78cfb69dd305f852f62313
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685826"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158764"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows 上使用 PowerShell 來管理 SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這篇文章介紹[SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)並逐步指導您有幾個範例有關如何使用 Linux 上的 SQL Server。 PowerShell 支援的 SQL Server 上目前已 Windows，因此您可以使用它時可以連線到 Linux 上的遠端 SQL Server 執行個體的 Windows 電腦。
+這篇文章介紹[SQL Server PowerShell](../powershell/sql-server-powershell.md)並逐步指導您有幾個範例有關如何使用 Linux 上的 SQL Server。 PowerShell 支援的 SQL Server 上目前已 Windows，因此您可以使用它時可以連線到 Linux 上的遠端 SQL Server 執行個體的 Windows 電腦。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows 上安裝最新版的 SQL PowerShell
 
-[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)在 Windows 上是隨附[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。 當使用 SQL Server，您應該一律使用最新版的 SSMS 和 SQL PowerShell。 最新版的 SSMS 會持續更新並最佳化和目前適用於 Linux 上的 SQL Server。 若要下載並安裝最新版本，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 若要保持最新狀態，最新版的 SSMS 會提示您有新的版本可供下載時。
+[SQL PowerShell](../powershell/download-sql-server-ps-module.md)在 Windows 上維護 PowerShell Gallery 中。 當使用 SQL Server，您應該一律使用 SqlServer PowerShell 模組的最新版本。
 
 ## <a name="before-you-begin"></a>開始之前
 
@@ -58,8 +58,7 @@ PowerShell 應該會顯示類似下列輸出的資訊：
 ```
 ModuleType Version    Name          ExportedCommands
 ---------- -------    ----          ----------------
-Script     0.0        SqlServer
-Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
+Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>連接到 SQL Server，並取得伺服器資訊
@@ -68,7 +67,6 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 複製並貼上下列命令在 PowerShell 提示字元。 當您執行這些命令時，PowerShell 將會：
 - 顯示*Windows PowerShell 認證要求*會提示您輸入認證的對話方塊 (*SQL 使用者名稱*並*SQL 密碼*) 連接到您的 SQL Server在 Linux 上的執行個體
-- 載入 SQL Server 管理物件 (SMO) 組件
 - 建立的執行個體[Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx)物件
 - 連接到**Server**並顯示幾個屬性
 
@@ -79,26 +77,17 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 $serverInstance = "<your_server_instance>"
 $credential = Get-Credential
 
-# Load the SMO assembly and create a Server object
-[System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SMO') | out-null
-$server = New-Object ('Microsoft.SqlServer.Management.Smo.Server') $serverInstance
-
-# Set credentials
-$server.ConnectionContext.LoginSecure=$false
-$server.ConnectionContext.set_Login($credential.UserName)
-$server.ConnectionContext.set_SecurePassword($credential.Password)
-
 # Connect to the Server and get a few properties
-$server.Information | Select-Object Edition, HostPlatform, HostDistribution | Format-List
+Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
 PowerShell 應該會顯示類似下列輸出的資訊：
 
 ```
-Edition          : Developer Edition (64-bit)
-HostPlatform     : Linux
-HostDistribution : Ubuntu
+Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution                
+-------------                   -------    ------------ -----------  ------------ ----------------                
+your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu 
 ```
 > [!NOTE]
 > 不會顯示這些值，如果目標 SQL Server 執行個體的連線很可能會失敗。 請確定您可以從 SQL Server Management Studio 連線使用相同的連接資訊。 然後檢閱[連線疑難排解建議](sql-server-linux-troubleshooting-guide.md#connection)。

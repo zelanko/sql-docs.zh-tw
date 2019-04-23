@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327932f82ddee445c7e15f53f02edd39ba0b28bf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288619"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957584"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
   報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 許多報表項目屬性都可以設定為運算式。 運算式可協助您控制報表的內容、設計與互動性。 運算式會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]撰寫、儲存在報表定義中，然後在您執行報表時由報表處理器評估。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - XML Web service [Reporting Services], delivery extension settings
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0bd8ee198a2627d9caaba340c4357bb0de0f30aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014799"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157890"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞提供一個透過電子郵件傳送報表給個別使用者或群組的方法。 檔案共用傳遞可讓您將轉譯的報表自動傳送給網路上的共用。 您可以使用其中一個支援的傳遞延伸模組搭配標準訂閱或資料驅動訂閱來傳送。 每當您呼叫 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 和 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 方法時，會傳遞特屬傳遞延伸模組類型的傳遞設定。 若要以程式設計的方式擷取傳遞設定清單，請使用 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法。  
@@ -43,7 +41,7 @@ ms.locfileid: "56014799"
 |設定|值|  
 |-------------|-----------|  
 |**收件人**|出現在電子郵件訊息的 `To` 之電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
-|**副本**|出現在電子郵件訊息的 `Cc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
+|**CC**|出現在電子郵件訊息的 `Cc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**密件副本**|出現在電子郵件訊息的 `Bcc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
 |**ReplyTo**|出現在電子郵件訊息的 `Reply-To` 標頭之電子郵件地址。 值必須是單一電子郵件地址。 選擇性。|  
 |`IncludeReport`|指出在電子郵件傳遞中是否包括報表的值。 `true` 的值指出在電子郵件訊息的本文中所傳遞的報表。|  

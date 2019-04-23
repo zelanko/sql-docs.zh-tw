@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6b816af806e419cab0f6eb0997c6ec7f08bc7b93
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017880"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968744"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>快取頁面、共用資料集 (報表管理員)
   使用 [快取屬性] 頁面，即可設定共用資料集的快取選項。  
@@ -53,7 +53,7 @@ ms.locfileid: "56017880"
  **共用的排程**  
  指定報表、訂閱及其他共用資料集所共用的排程。  
   
- **套用**  
+ **Apply**  
  儲存變更。  
   
 ## <a name="see-also"></a>另請參閱  

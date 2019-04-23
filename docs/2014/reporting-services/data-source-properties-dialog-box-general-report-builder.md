@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a7f5aa4efa9170e9b51e583aedada909d756edeb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285716"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955744"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>資料來源屬性對話方塊、一般 (報表產生器)
   選取 **[資料來源屬性]** 對話方塊上的 **[一般]** ，即可從報表伺服器中選取共用資料來源，或針對報表中內嵌的資料來源建立或修改連接資訊。  

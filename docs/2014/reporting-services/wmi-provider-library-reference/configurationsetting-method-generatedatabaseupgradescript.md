@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - GenerateDatabaseUpgradeScript method
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5309932735310bc0e794d10766312b650b6eb934
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c7ca120e4af3d004732d1e2217743f9ce3acff53
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018969"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962784"
 ---
 # <a name="generatedatabaseupgradescript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseUpgradeScript 方法 (WMI MSReportServer_ConfigurationSetting)
   產生可用來將報表伺服器資料庫升級至 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 結構描述的指令碼。  

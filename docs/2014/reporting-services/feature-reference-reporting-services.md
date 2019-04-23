@@ -13,15 +13,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ca90cb195ca7627dfc28808a2281293a0a2e278
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c6314eb5a81d2384763b69dbc44296913f1ba49d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014539"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965374"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036119"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965474"
 ---
 # <a name="choose-link-page-report-manager"></a>選擇連結頁面 (報表管理員)
   使用 [選擇連結] 頁面來選擇不同的報表，作為目前已選取連結報表的基礎。 連結報表以已經發行至報表伺服器的其他報表為基礎。 連結報表會使用基底報表的配置和資料，但是具有個別的屬性頁面，可讓您自訂參數屬性、安全性設定、名稱、描述和位置。  

@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98ac0b972d9833a72345df2603452de5b39abbf0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c51ae5de2755711fa6721e874b4d621b66dd3532
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027659"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969834"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出是否已啟用報表伺服器 Windows 服務。 唯讀。  

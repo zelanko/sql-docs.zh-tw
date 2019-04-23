@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services OLE DB Provider
@@ -14,12 +12,12 @@ ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11af0242985db0f969a68cfeb7ff3f383f90cc53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164418"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157105"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Analysis Services OLE DB 提供者 (Analysis Services - 多維度資料)
   Analysis Services OLE DB 提供者是應用程式互動的介面[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 此介面會用於建立與多維度資料互動的用戶端應用程式。 這個提供者也提供方法，可針對多維度資料和關聯式資料進行線上和離線的資料採礦分析，而且會包含為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的一部分， 並且可由協力廠商用戶端應用程式轉散發。  

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a610ef918bc0a4ef76a6be2fa0b9ae132621ddb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f16faf950954c0c642971c81061f347a03716267
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292176"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964944"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>地圖檢視區屬性對話方塊、一般
   選取 **[地圖檢視區屬性]** 對話方塊上的 **[一般]** 來變更座標系統、投射以及界限選項。  

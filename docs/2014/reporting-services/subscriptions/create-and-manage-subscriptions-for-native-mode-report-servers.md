@@ -11,15 +11,15 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 770cfbd68a2126bed6bbe024c93e1c5ae623bc59
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bd1404868213820d3ba3fc6d2715f7a8ae1c6716
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041039"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59972114"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
   標準訂閱是希望能透過電子郵件傳遞報表，或傳遞到共用資料夾之個別使用者所建立的訂閱。 標準訂閱一律是透過它所依據的報表定義。  
@@ -27,7 +27,7 @@ ms.locfileid: "56041039"
  建立訂閱的使用者便擁有該訂閱。 每一個使用者都可以修改或刪除自己所擁有的訂閱。  
   
 > [!NOTE]  
->  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 開始，您可以用程式設計的方式傳送訂閱的擁有權。 沒有任何使用者介面可以用來傳送訂閱的擁有權。 如需相關資訊，請參閱<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+>  從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 開始，您可以用程式設計的方式傳送訂閱的擁有權。 沒有任何使用者介面可以用來傳送訂閱的擁有權。 如需詳細資訊，請參閱＜<xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>＞  
   
  取決於**RSReportServer.config**組態檔設定，使用者可能可以將更多使用者新增至訂用帳戶 (例如，管理員會加入他的電子郵件地址或直屬員工，讓他們每個收到的複本報表）。 是否支援此功能取決於在定義個別訂閱時，[收件者:] 欄位是否為可見的。 如需詳細資訊，請參閱 <<c0> [ 電子郵件傳遞設定報表伺服器&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)。</c0>  
   

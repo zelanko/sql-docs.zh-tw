@@ -15,15 +15,15 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a412f39db5b86deca61297a97d49bea6aa89f720
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f8bfc14257fcab8dd6c140f823ca34831c541c9f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035789"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957744"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數
   您可以在 RSReportServer 組態檔中指定轉譯延伸模組參數，以便覆寫在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上執行之報表的預設報表轉譯行為。 您可以修改轉譯延伸模組參數來達成下列目標：  

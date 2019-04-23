@@ -1,5 +1,5 @@
 ---
-title: 教學課程：建立鑽研及主報表 （報表產生器） |Microsoft Docs
+title: 教學課程：建立鑽研及主報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289866"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961234"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 （報表產生器）
   本教學課程將教導您如何建立兩種報表：鑽研報表與主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 下圖顯示您將建立的報表。  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -80,7 +80,7 @@ ms.locfileid: "56289866"
   
 8.  [執行主報表和鑽研報表](#MRunReports)  
   
- 完成本教學課程的估計時間：30 分鐘。  
+ 估計的時間才能完成本教學課程：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
  這個教學課程需要能夠存取 Contoso Sales Cube。 這個需求同時適用於鑽研報表和主報表。 如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -168,7 +168,7 @@ ms.locfileid: "56289866"
   
 5.  在篩選運算式清單中，展開 **[所有通道]**，然後依序按一下 **[線上]**、 **[轉售商]** 和 **[確定]**。  
   
-     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
+     查詢現在會包含一個僅內含下列通道的篩選：線上和轉售商。  
   
 6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳至 [階層] 資料行 (在 **Channel Name** 底下)。  
   
@@ -390,7 +390,7 @@ ms.locfileid: "56289866"
   
 7.  按一下 [儲存] 。  
   
-##  <a name="MMatrixAndDataset"></a> 1.從資料表或矩陣精靈建立新報表  
+##  <a name="MMatrixAndDataset"></a> 1.從資料表或矩陣精靈建立新的報表  
  從 **[使用者入門]** 對話方塊中，使用 **[資料表或矩陣精靈]** 建立矩陣報表。  
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
@@ -462,7 +462,7 @@ ms.locfileid: "56289866"
   
 5.  在篩選運算式清單中，展開 **[所有通道]**，然後依序按一下 **[線上]** 、 **[轉售商]** 和 **[確定]**。  
   
-     此查詢現在包含一個僅內含下列通道的篩選：線上和轉售商。  
+     查詢現在會包含一個僅內含下列通道的篩選：線上和轉售商。  
   
 6.  展開 Sales Territory 維度，然後將 Sales Territory Group 拖曳至 [階層] 資料行 (在 **Channel Name** 底下)。  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289866"
   
 1.  在 **[選擇配置]** 頁面的 **[選項]** 下方，確定已選取 **[顯示小計和總計]** 。  
   
-     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組，第二個資料列都包含資料行標題，第三個資料列都包含產品類別資料 (`[Sum(Net_ QTY)]` 和 `[Sum(Net_Sales)]`)，第四個資料列包含總計。  
+     精靈的 [預覽] 窗格會顯示含有四個資料列的矩陣。  當您執行報表時，每個資料列都會以下列方式顯示：第一個資料列是資料行群組，第二個資料列包含資料行標題，第三個資料列都包含產品類別目錄資料 (`[Sum(Net_ QTY)]`和`[Sum(Net_Sales)]`，和第四個資料列包含總計。  
   
 2.  按一下 [下一步] 。  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289866"
   
 1.  在設計介面上，按一下 **[按一下以加入標題]**。  
   
-2.  型別**2009 Product Category Sales:Online and Reseller Category:**。  
+2.  鍵入 **2009 年產品類別銷售額：線上及轉銷商類別：**。  
   
 3.  選取您輸入的文字。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a4123ea79502821026b80254db4fba7a61e5f565
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041579"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960774"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
   您可以使用這個頁面來設定報表伺服器的系統屬性。 有許多方式可設定系統屬性。 這項工具提供了圖形化使用者介面，如此您不需要撰寫程式碼就可以設定屬性。  
@@ -60,7 +60,7 @@ ms.locfileid: "56041579"
  指出報表伺服器與用戶端瀏覽器通訊時是否應該使用工作階段 Cookie。 預設值是 `true`。  
   
  **ExternalImagesTimeout**  
- 決定在連接逾時之前必須擷取外部影像檔的時間長度。預設值為 `600` 秒。  
+ 決定在連接逾時之前必須擷取外部影像檔的時間長度。預設值是`600`秒。  
   
  **SnapshotCompression**  
  定義快照集的壓縮方式。 預設值是 `SQL`。 有效值如下：  

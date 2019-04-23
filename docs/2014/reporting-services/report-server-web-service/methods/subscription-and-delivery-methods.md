@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - reports [Reporting Services], delivering
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8d3b16e33ff38107706a506803300d0499bfd3fc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c6ae92a6abd5c25b9ab1236a2b5b11429d210cba
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027959"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157404"
 ---
 # <a name="subscription-and-delivery-methods"></a>訂閱與傳遞方法
   您可以使用這些方法來建立及管理目錄項目的訂閱與傳遞。  

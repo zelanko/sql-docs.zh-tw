@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 694afd46c2b04a09bffc951cba82af91edf9b6a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290726"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956104"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  
@@ -34,7 +34,7 @@ ms.locfileid: "56290726"
 |String|預設：String<br /><br /> Chart、GUID、Timespan|  
 |布林|預設：布林|  
 |Integer|預設：Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
-|DateTime|預設：DateTime<br /><br /> DateTimeOffset|  
+|Datetime|預設：Datetime<br /><br /> DateTimeOffset|  
 |float|預設：Double<br /><br /> Single、Decimal|  
 |二進位|預設：Byte[]|  
 |變數|除了 Byte[] 之外，以上任何一種|  
@@ -69,7 +69,7 @@ ms.locfileid: "56290726"
 -   檢查您所使用的資料處理延伸模組是否包含擷取預先格式化資料的中繼資料。 例如， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 查詢會針對處理 Cube 時已經格式化的 Cube 值包含 FORMATTED_VALUE 擴充屬性。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   
 ## <a name="understanding-parameter-data-types"></a>了解參數資料類型  
- 報表參數必須是其中一種具有五個資料類型：布林值、 DateTime、 整數、 浮點數或文字 （也稱為字串）。 當資料集查詢包含查詢參數時，系統就會自動建立報表參數並將它們連結至查詢參數。 報表參數的預設資料類型為 String。 若要變更報表參數的預設資料類型，請在 [報表參數屬性] 對話方塊的 [一般] 頁面上，從 [資料類型] 下拉式清單中選取正確的值。  
+ 報表參數必須是下列五種資料類型其中之一：Boolean、DateTime、Integer、Float 或 Text (也稱為 String)。 當資料集查詢包含查詢參數時，系統就會自動建立報表參數並將它們連結至查詢參數。 報表參數的預設資料類型為 String。 若要變更報表參數的預設資料類型，請在 [報表參數屬性] 對話方塊的 [一般] 頁面上，從 [資料類型] 下拉式清單中選取正確的值。  
   
 > [!NOTE]  
 >  屬於 DateTime 資料類型的報表參數不支援毫秒。 雖然您可以根據包含毫秒的值建立參數，但是無法從包含毫秒之日期或時間值的可用值下拉式清單中選取值。  
@@ -117,7 +117,7 @@ ms.locfileid: "56290726"
   
     -   下列運算式會將字串轉換成日期和時間值： `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         如果 `MyDateTime.Value` 字串具有 UTC 時差， `DateTime.Parse` 函數會先針對 UTC 時差調整 (上午 7 點 - [`+08:00`] 調整成前一晚 11 點的 UTC 時間)。 然後， `DateTime.Parse` 函數會套用本機報表伺服器 UTC 時差，並在必要時，再次針對日光節約時間調整時間。 例如，在華盛頓州的雷德蒙市，針對日光節約時間調整的本地時間時差是 `[-07:00]`，或下午 11 點之前的 7 個小時。 結果就是下列`DateTime`值：`2007-07-06 04:07:07 PM` (7 月 6日 2007 日下午 4:07)。  
+         如果 `MyDateTime.Value` 字串具有 UTC 時差， `DateTime.Parse` 函數會先針對 UTC 時差調整 (上午 7 點 - [`+08:00`] 調整成前一晚 11 點的 UTC 時間)。 然後， `DateTime.Parse` 函數會套用本機報表伺服器 UTC 時差，並在必要時，再次針對日光節約時間調整時間。 例如，在華盛頓州的雷德蒙市，針對日光節約時間調整的本地時間時差是 `[-07:00]`，或下午 11 點之前的 7 個小時。 結果就是下列`DateTime`值：`2007-07-06 04:07:07 PM` (2007 年 7 月 6 日下午 4:07)。  
   
  如需有關將字串轉換成`DateTime`資料類型，請參閱[剖析的日期和時間字串](https://go.microsoft.com/fwlink/?LinkId=89703)，[格式的日期和時間的特定文化特性](https://go.microsoft.com/fwlink/?LinkId=89704)，和[選擇在 DateTime、 DateTimeOffset 和 TimeZoneInfo 之間](https://go.microsoft.com/fwlink/?linkid=110652)MSDN 上。  
   

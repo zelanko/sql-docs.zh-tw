@@ -1,5 +1,5 @@
 ---
-title: 教學課程：建立矩陣報表 （報表產生器） |Microsoft Docs
+title: 教學課程：建立矩陣報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288408"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965694"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 （報表產生器）
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>教學課程：建立矩陣報表 (報表產生器)
   本教學課程將教導您如何根據範例銷售資料建立基本矩陣報表。 矩陣具有巢狀資料列和資料行群組，以及一個相鄰資料行群組。 此外，您還將學習如何格式化資料行和旋轉文字。 下圖顯示報表，與您將要建立的報表相似。  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -48,7 +48,7 @@ ms.locfileid: "56288408"
   
 1.  [將文字方塊旋轉 270 度](#RotateTextBox)  
   
- 完成本教學課程的估計時間：20 分鐘。  
+ 估計的時間才能完成本教學課程：20 分鐘的時間。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "56288408"
   
 5.  按一下 [下一步] 。  
   
-6.  在 **選擇資料來源的連接**頁面，選取現有的資料來源或瀏覽至報表伺服器，然後再選取 資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌的資料來源的詳細資訊，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在 **選擇資料來源的連接**頁面，選取現有的資料來源或瀏覽至報表伺服器，然後再選取 資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需建立內嵌的資料來源的詳細資訊，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  按一下 [下一步] 。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "56288408"
   
 10. 按一下 [下一步] 。  
   
-##  <a name="Groups"></a> 2.從新增資料表或矩陣精靈組織資料、選擇配置和樣式  
+##  <a name="Groups"></a> 2.組織資料、 選擇配置和樣式，從新的資料表或矩陣精靈  
  使用精靈提供起始設計來顯示資料。 精靈中的預覽窗格可協助您在完成矩陣設計之前，先視覺化群組資料的結果。  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>若要將資料組織成群組，並選擇配置和樣式  
@@ -160,7 +160,7 @@ ms.locfileid: "56288408"
   
 13. 按一下 **[完成]**。  
   
-     矩陣會加入至設計介面。 資料列群組 窗格會顯示兩個資料列群組：Territory 和 SalesDate。 資料行群組 窗格會顯示兩個資料行群組：子類別目錄和產品。 詳細資料是資料集查詢擷取的所有資料。  
+     矩陣會加入至設計介面。 [資料列群組] 窗格會顯示兩個資料列群組：Territory 和 SalesDate。 [資料行群組] 窗格會顯示兩個資料行群組：Subcategory 和 Product。 詳細資料是資料集查詢擷取的所有資料。  
   
 14. 按一下 **[執行]** 預覽報表。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EditionID property
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65d4248fcabe0d1350c44246940582b247c4cca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b64e568e9d087069654e4e8dca37fc281f599a8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016689"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971224"
 ---
 # <a name="editionid-property-wmi-msreportserverinstance"></a>EditionID 屬性 (WMI MSReportServer_Instance)
   傳回報表伺服器的版本。 唯讀。  

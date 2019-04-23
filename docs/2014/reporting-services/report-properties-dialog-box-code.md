@@ -11,15 +11,15 @@ f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eae136b7627a079356baeb4d723d2201e7d7c05e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8c751702b49846d80faa0295c5e245594c897efd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289566"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956044"
 ---
 # <a name="report-properties-dialog-box-code"></a>報表屬性對話方塊、程式碼
   選取 **程式碼**上**報表屬性**對話方塊，即可定義報表內運算式要使用的自訂程式碼。  

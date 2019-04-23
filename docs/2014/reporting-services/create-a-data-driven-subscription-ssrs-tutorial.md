@@ -12,15 +12,15 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017910"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964104"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了資料驅動訂閱，讓您可以依據動態訂閱者資料來自訂報表的散發。 資料驅動訂閱適用於下列狀況：  
