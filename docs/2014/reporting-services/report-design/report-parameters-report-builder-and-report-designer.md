@@ -15,15 +15,15 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: c62b34985ccd967ec21e88e01c146851b9c18df9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241816"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932614"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
   本主題說明 SSRS 報表參數的一般用法、您可以設定的屬性，以及有關參數的詳細資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。  

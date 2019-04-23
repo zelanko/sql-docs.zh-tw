@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - WMI provider [Reporting Services], library
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 302e7f1b58fdb2a63af9f2a1b4e9dad3127c6d57
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c46a83909a5d8526cfaa8cfc8c530007091e7cba
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034509"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944124"
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Reporting Services WMI 提供者程式庫參考 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者支援 WMI 作業，可讓您寫入指令碼和程式碼，以便修改報表伺服器和報表管理員的設定。  

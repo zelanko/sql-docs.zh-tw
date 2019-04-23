@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b1c8e61d66dbbf2eeeaf6f23f031f27f46e5069
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ceba0cdab54d825cfc28e1c156ca33767dfb8b8f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295657"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946644"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將報表轉譯成 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 的原生格式。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  

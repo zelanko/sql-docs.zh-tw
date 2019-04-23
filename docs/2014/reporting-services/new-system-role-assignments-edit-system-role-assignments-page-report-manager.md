@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032389"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951534"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新增系統角色指派：編輯系統角色指派頁面 （報表管理員）
   使用 [新增系統角色指派] 或 [編輯系統角色指派] 頁面來定義報表伺服器的安全性。 所有的安全性都透過角色指派來定義，角色指派會對應特定使用者或群組至其可執行的工作。 以您在進行角色指派時選取的角色定義來表示工作清單。  

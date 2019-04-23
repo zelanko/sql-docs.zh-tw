@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 9ef488e088a9101e46b3c203ef6f3ca519dc3aec
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240646"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946454"
 ---
 # <a name="report-and-snapshot-size-limits"></a>報表和快照集的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理員可以透過此主題中的資訊來了解，當報表發行至報表伺服器、在執行階段進行轉譯以及儲存至檔案系統時，報表大小的限制。 此主題也提供有關如何測量報表伺服器資料庫大小的實作指南，並且描述快照集大小對伺服器效能的影響。  

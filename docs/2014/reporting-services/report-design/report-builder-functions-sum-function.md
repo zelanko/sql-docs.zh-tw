@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f12ede17d4724194ca59cf32c1ceeff26948d868
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 814f5349e8afc9deb3e7c364f99d796f5c2665d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293746"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945324"
 ---
 # <a name="sum-function-report-builder-and-ssrs"></a>Sum 函數 (報表產生器及 SSRS)
   傳回運算式指定之所有非 Null 數值的總和 (在給定範圍中評估)。  

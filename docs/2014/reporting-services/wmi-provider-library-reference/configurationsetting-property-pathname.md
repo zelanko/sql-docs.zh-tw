@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - PathName property
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1746649fb0cecea4a6861d1e28e4e12b49e2f92f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 677edade776d0c8f845c2d9d31070d27a777c11c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022069"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950824"
 ---
 # <a name="pathname-property-wmi-msreportserverconfigurationsetting"></a>PathName 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定報表伺服器執行個體的安裝路徑。 唯讀。  

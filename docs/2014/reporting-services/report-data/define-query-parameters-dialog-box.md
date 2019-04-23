@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.definequeryparameters.f1
 - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9f9f1dd070ecfd2f680ce68460e2adc5c9727097
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e26e26bbf923a960f8da878ec46662860d157a00
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041669"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954994"
 ---
 # <a name="define-query-parameters-dialog-box"></a>定義查詢參數對話方塊
   使用 **[定義查詢參數]** 對話方塊，即可在設計階段在查詢設計工具中執行查詢以查看範例資料時，指定參數值。 查詢參數會篩選資料來源的資料，並且協助限制報表所處理的資料量。 這些值不會儲存在報表定義中。  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: f2b49a645866f310a7a0ff006b47cce2ff32f3c3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658114"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954154"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   若要在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表中包括資料，您必須先建立「資料來源」  與「資料集」 。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
@@ -77,7 +77,7 @@ ms.locfileid: "58658114"
   
 -   ODBC  
   
--   Power View 的 Microsoft 商業智慧語意模型：在已設定 PowerPivot 圖庫與 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 的 SharePoint 網站上，有提供此資料來源類型。 此資料來源類型僅用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 簡報。 如需詳細資訊，請參閱 [建立 Power View 的完整 BI 語意表格式模型](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
+-   Power View 的 Microsoft BI 語意模型：已針對 PowerPivot 圖庫的 SharePoint 網站上和[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]，此資料來源類型為可用。 此資料來源類型僅用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 簡報。 如需詳細資訊，請參閱 [建立 Power View 的完整 BI 語意表格式模型](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
   
  如需 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援之資料來源與版本的完整清單，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   

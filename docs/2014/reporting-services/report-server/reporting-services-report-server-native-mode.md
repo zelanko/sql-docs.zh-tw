@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52d0771d07efddd949961761d90f241f146c0af4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df1d06a3d68485576673d8d793385be97dadac55
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025829"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943584"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   針對原生模式設定的報表伺服器會當做應用程式伺服器執行，並透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件專門提供所有處理和管理能力。  

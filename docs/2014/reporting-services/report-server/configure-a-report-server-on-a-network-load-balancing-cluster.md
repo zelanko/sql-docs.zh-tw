@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], network load balancing
 ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0b2a24a0db089262512094b5cb33c2eda695094
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4587f4e496e5542e53df40741c1dcdf6e9abc6ce
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042803"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941844"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在網路負載平衡叢集上設定報表伺服器
   如果您要將報表伺服器向外延展設定為在網路負載平衡 (NLB) 叢集上執行，就必須進行下列動作：  
@@ -59,13 +59,13 @@ ms.locfileid: "56042803"
     <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
   
-2.  開啟報表管理員的 Web.config 檔案，並在 <`system.web`> 區段中貼上您產生的 <`machineKey`> 元素。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config。  
+2.  開啟 Web.config 檔案，報表管理員，並在 <`system.web`> 區段中貼上 <`machineKey`> 您產生的項目。 根據預設，報表管理員的 Web.config 檔案位於 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager\Web.config。  
   
 3.  儲存檔案。  
   
 4.  針對向外延展部署中的每個報表伺服器重複以上步驟。  
   
-5.  確認 \Reporting Services\Report Manager 資料夾中的所有 Web.Config 檔案在 <`system.web`> 區段中包含相同的 <`machineKey`> 元素。  
+5.  確認 \Reporting Services\Report Manager 資料夾中的所有 Web.Config 檔案都包含相同 <`machineKey`> 元素中的 <`system.web`> 一節。  
   
 ##  <a name="SpecifyingVirtualServerName"></a> 如何設定 Hostname 和 UrlRoot  
  若要在 NLB 叢集上設定報表伺服器向外延展部署，您必須定義單一虛擬伺服器名稱，以便提供伺服器叢集的單一存取點。 然後向您所在環境中的網域名稱伺服器 (DNS) 註冊這個虛擬伺服器名稱。  
@@ -108,9 +108,9 @@ ms.locfileid: "56042803"
   
 1.  在文字編輯器中開啟 RSReportServer.config 檔。  
   
-2.  尋找 <`Hostname`>、<`ReportServerUrl`> 和 <`UrlRoot`>，並檢查每個設定的主機名稱。 如果此值不是您所預期的主機名稱，請將它取代成正確的主機名稱。  
+2.  尋找 <`Hostname`>，<`ReportServerUrl`>，並 <`UrlRoot`>，並檢查每個設定的主機名稱。 如果此值不是您所預期的主機名稱，請將它取代成正確的主機名稱。  
   
- 如果您於變更後再啟動 Reporting Services 組態工具，則該工具可能會將 <`ReportServerUrl`> 設定變更成預設值。 一律保存組態檔的備份副本，以防您需要將它們取代成內含欲使用之設定的版本。  
+ 如果您進行這些變更之後啟動 Reporting Services 組態工具，此工具可能會變更 <`ReportServerUrl`> 設定為預設值。 一律保存組態檔的備份副本，以防您需要將它們取代成內含欲使用之設定的版本。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

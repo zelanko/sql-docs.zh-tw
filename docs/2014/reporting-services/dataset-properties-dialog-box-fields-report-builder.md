@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f79a72033039babf117d69330e452ffc47d75b1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a5c8e5f256ae762989d6112cb09f846febecc4dd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298081"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936526"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>資料集屬性對話方塊、欄位 (報表產生器)
   選取 **[資料集屬性]** 對話方塊上的 **[欄位]** ，即可變更報表資料集的欄位集合。 欄位清單會自動擴展，但您可以使用 **[欄位]** 來加入、編輯和刪除查詢與導出欄位。  

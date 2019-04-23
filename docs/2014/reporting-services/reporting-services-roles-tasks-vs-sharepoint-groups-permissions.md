@@ -16,15 +16,15 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d845122010c549114b4487d2fca72a28bc226b6e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241556"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954524"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較
   本主題會比較 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式中的角色和工作型授權功能與 SharePoint 產品的安全性功能。 本主題會比較有關角色、工作、SharePoint 群組、權限等級和權限的詞彙與特性。  

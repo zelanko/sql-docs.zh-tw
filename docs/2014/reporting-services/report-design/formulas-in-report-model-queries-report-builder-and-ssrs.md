@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ab736ee801afcb14332b8719a7168c38757ee35
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 18390c8cb1df552b746f16c5eb569f08063e7763
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287786"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934414"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>報表模型查詢中的公式 (報表產生器及 SSRS)
   公式是針對使用報表模型做為資料來源之報表中的值來執行的計算。 公式可以包含函數、運算子、常數和對欄位或實體的參考。 公式可讓您結合、彙總、篩選以及評估數值和文字資料。 您可以建立公式，並將它們另存為新的欄位，或者，您可以修改現有欄位的公式。  
@@ -72,7 +72,7 @@ ms.locfileid: "56287786"
 |條件式函數|`IF`, `IN`, `SWITCH`|  
 |轉換函數|`INT`, `DECIMAL`, `FLOAT`, `TEXT`|  
 |日期和時間函數|`DATE`, `DATEADD`, `DATEDIFF`, `DATETIME`, `DATEONLY`, `DAY`, `DAYOFWEEK`, `DAYOFYEAR`, `HOUR`, `MINUTE`, `MONTH`, `NOW`, `QUARTER`, `SECOND`, `TIMEONLY`, `TODAY`, `WEEK`, `YEAR`|  
-|資訊函數|`GETUSERCULTURE`, `GETUSERID`|  
+|資訊函數|`GETUSERCULTURE`、 `GETUSERID`|  
 |邏輯函數|`AND`, `NOT`, `OR`|  
 |數學函數|`MOD`, `ROUND`, `TRUNC`|  
 |操作員|加 (+)、除 (/)、等於 (=)、乘冪 (^)、大於 (>)、大於或等於 (>=)、小於 (<)、小於或等於 (<=)、乘 (*)、負 (-)、不等於 (<>)、減 (-)|  

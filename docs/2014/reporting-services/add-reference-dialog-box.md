@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72c14cba8580e926eff05dbb5b7644d64e517913
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009482"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948074"
 ---
 # <a name="add-reference-dialog-box"></a>加入參考對話方塊
   使用 **[加入參考]** 對話方塊，即可將自訂組件或 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 元件的參考加入報表中。 在您加入組件參考之後，您可以撰寫運算式或內嵌自訂程式碼，其中包含此組件或元件內之類別或方法的完整參考。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) 或[將組件參考加入至報表 &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md)。  

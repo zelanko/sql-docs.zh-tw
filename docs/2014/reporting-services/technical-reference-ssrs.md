@@ -14,15 +14,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 455eaec943cb649023ecea1b9ee4964a23961191
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 24e88abe61ef373cb93449d44d40c47742f95898
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037739"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936684"
 ---
 # <a name="technical-reference-ssrs"></a>技術參考 (SSRS)
   尋找工具及 PowerShell 參考文件以使用或管理 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00dbe62d042618fdf61ef07f2ace5ba2acb2e11e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b84e669f1a3621671bb476f8bc96fa68e36f7ae6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013040"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946864"
 ---
 # <a name="system-level-tasks"></a>系統層級工作
   系統層級工作是權限的集合，而這些權限與套用至報表伺服器站台整體的作業相關。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 亦包含套用至特定項目的項目層級工作。 如需詳細資訊，請參閱 [項目層級工作](tasks-and-permissions-item-level-tasks.md)。 如需工作和權限的一般詳細資訊，請參閱 [工作和權限](tasks-and-permissions.md)。  

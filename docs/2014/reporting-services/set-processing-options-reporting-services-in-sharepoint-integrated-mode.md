@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: acf439342cb1f24a8356e51a1a0c3f339a3a36ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb3edf70f1823017b1c155c085044a2432f332b3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042979"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955614"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
   您可以對 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表設定處理選項，以指定資料開始處理的時間。 您還可以設定報表處理的逾時值，以及決定是否要啟用目前報表之報表記錄的選項。  

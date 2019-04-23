@@ -17,15 +17,15 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 637b434a50aaa49c7d0f3ba87e8505368620d596
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2c8330266babdb260f80843213ddb892021eb8c8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015039"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954224"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   報表定義 (.rdl) 檔案會藉由下列方式自動升級：  

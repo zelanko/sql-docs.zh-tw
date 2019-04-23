@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e02d4074b731de6b6800bc9858d9aa6e5c766bf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4419a025e36170b16ebd77e3b020a5080d682ac8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014989"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951361"
 ---
 # <a name="instancename-property-wmi-msreportserverinstance"></a>InstanceName 屬性 (WMI MSReportServer_Instance)
   在特定電腦上傳回報表伺服器執行個體的名稱。 唯讀。  

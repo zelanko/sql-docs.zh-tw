@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ac7ab80-9adf-4f65-abfa-fedf53b082b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e614c2f6cadf6633a5129a61e22cead353a5153
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 67a43ee9150f68a55a9999eae5bc6e8d8fc970b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013219"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941804"
 ---
 # <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserverconfigurationsetting"></a>RSWindowsExtendedProtectionScenario 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回字串值，表示報表伺服器設定為允許的擴充保護案例。  

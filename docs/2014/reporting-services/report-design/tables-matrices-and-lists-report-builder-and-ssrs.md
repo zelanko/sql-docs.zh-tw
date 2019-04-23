@@ -33,15 +33,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6625e159d7992a8bb8a3f6b28c9f4e5dd0ac567b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287126"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948634"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>資料表、矩陣和清單 (報表產生器及 SSRS)
   資料表、矩陣和清單都是資料區，這些資料區會將報表資料顯示在分為資料列與資料行的資料格中。 資料格通常包含文字資料 (例如文字、日期和數字)，但也可以包含量測計、圖表或報表項目 (例如影像)。 資料表、矩陣和清單經常統稱為 Tablix 資料區。  
@@ -56,7 +56,7 @@ ms.locfileid: "56287126"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- 若要快速地開始使用資料表、 矩陣和清單，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)，[教學課程：建立矩陣報表&#40;報表產生器&#41;](../tutorial-creating-a-matrix-report-report-builder.md)，並[教學課程：建立自由格式報表&#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速開始使用資料表、矩陣和清單，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)、[教學課程：建立矩陣報表 &#40;報表產生器&#41;](../tutorial-creating-a-matrix-report-report-builder.md)，以及[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將資料表、矩陣和清單當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "56287126"
   
  ![從工具箱新增選取的新矩陣](../media/rs-matrixtemplatenewselected.gif "從工具箱新增選取的新矩陣")  
   
- 您可以依資料列和資料行群組中的多個欄位或運算式群組資料。 當報表資料和資料區在執行階段結合時，如果為資料行群組加入資料行，並為資料列群組加入資料列，則矩陣會在頁面上以水平和垂直方式成長。 矩陣資料格會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。 例如，如果您的矩陣有一個資料列群組 (Category) 和兩個資料行群組 (Territory 和 Year) 顯示銷售量的總和，報表會針對 Category 群組中的每個值，顯示包含銷售量總和的兩個資料格。 資料格範圍是兩個交集是：類別目錄和國家/地區和類別目錄和年份。 矩陣可以包含巢狀群組與相鄰的群組。 巢狀群組擁有父子式關聯性，而相鄰的群組則擁有對等關聯性。 您可以針對矩陣內的任何和所有層級的巢狀資料列和資料行群組加入小計。  
+ 您可以依資料列和資料行群組中的多個欄位或運算式群組資料。 當報表資料和資料區在執行階段結合時，如果為資料行群組加入資料行，並為資料列群組加入資料列，則矩陣會在頁面上以水平和垂直方式成長。 矩陣資料格會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。 例如，如果您的矩陣有一個資料列群組 (Category) 和兩個資料行群組 (Territory 和 Year) 顯示銷售量的總和，報表會針對 Category 群組中的每個值，顯示包含銷售量總和的兩個資料格。 資料格的範圍是兩個交集，它們是：類別目錄和領域以及類別目錄和年份。 矩陣可以包含巢狀群組與相鄰的群組。 巢狀群組擁有父子式關聯性，而相鄰的群組則擁有對等關聯性。 您可以針對矩陣內的任何和所有層級的巢狀資料列和資料行群組加入小計。  
   
  若要讓矩陣資料更容易讀取，並反白顯示您想要強調的資料，您可以合併資料格，或以水平和垂直方式分割，然後將格式套用至資料和群組標題。  
   

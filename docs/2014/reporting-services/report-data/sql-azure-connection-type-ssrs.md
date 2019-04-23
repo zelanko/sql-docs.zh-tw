@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a527e84535f62f9b0ef949a47001b85e71cbd2d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: be11683abe087942f5008760a5cbe83c1b27328c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242237"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937325"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 連接類型 (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 是運用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 技術所建立的雲端式主控關聯式資料庫。 若要在報表中包含來自 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的資料，您必須具有以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]類型之報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料延伸模組為基礎。 使用此資料來源類型可連接至 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]並從中擷取資料。  

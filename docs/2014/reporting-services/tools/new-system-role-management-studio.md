@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44d0318882b619f4f6206f59ba47656f35c38636
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 33cf72fa9f82b4bf6fdbd8b1b5b2b73757706206
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043359"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939184"
 ---
 # <a name="new-system-role-management-studio"></a>新增系統角色 (Management Studio)
   使用此頁面，即可建立系統層級角色定義。 系統角色定義會指定一組整個套用至報表伺服器的系統層級工作。  

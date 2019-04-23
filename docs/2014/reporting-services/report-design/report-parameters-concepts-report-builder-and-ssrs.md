@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2b7eec3230c4bd08eb866d31b20cdeecc50d6cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7e60f6a56f63840ae49880fb1ba8b1530e04c701
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288176"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934754"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>報表參數概念 (報表產生器及 SSRS)
   您可以將參數加入至報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。  

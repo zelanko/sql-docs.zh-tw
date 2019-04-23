@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dcb6feb0accb9c8033ea6f7d58a645aae31bc25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc3faf212a1777938194927b364c29750113196d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017741"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953374"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 應用程式中設定報表伺服器作業的權限
   針對以 SharePoint 整合模式執行的報表伺服器，在 SharePoint 網站上定義的安全性設定可以決定您檢視與管理報表、報表模型與共用資料來源的方式。 如果您使用預設的 SharePoint 群組、權限等級以及權限指派，則可以使用目前的安全性設定處理報表和其他文件。  
@@ -52,7 +52,7 @@ ms.locfileid: "56017741"
   
  如果您要使用預先定義的權限等級，則不需要進行任何動作，因為上述權限已經包括在完整控制、設計、參與、讀取和限制存取中。 但是，如果您要使用自訂權限等級或編輯權限指派給特定使用者或群組，則必須手動加入權限。  
   
- 「瀏覽使用者資訊」權限可讓報表伺服器傳回項目建立者以及項目最後修改者的相關資訊。 沒有這個權限，報表伺服器將會傳回下列錯誤。 若為瀏覽作業，錯誤就是：「 報表伺服器發生 SharePoint 錯誤。 ---> System.UnauthorizedAccessException:存取遭到拒絕。 」 若是發行作業，錯誤為：「 授與使用者的權限 '\<網域 >\\< 使用者\>' 不足，無法執行此作業。 」  
+ 「瀏覽使用者資訊」權限可讓報表伺服器傳回項目建立者以及項目最後修改者的相關資訊。 沒有這個權限，報表伺服器將會傳回下列錯誤。 瀏覽作業，錯誤為：「 報表伺服器發生 SharePoint 錯誤。 ---> System.UnauthorizedAccessException:存取遭到拒絕。 」 若是發行作業，錯誤為：「 授與使用者的權限 '\<網域 >\\< 使用者\>' 不足，無法執行此作業。 」  
   
 ##  <a name="permissionReports"></a> 檢視和管理報表的權限  
  報表定義權限是透過包含報表的文件庫上的「清單」權限定義，不過，如果您要限制存取，可以在個別報表上設定權限。 下表提供工作以及支援各項工作之權限的清單。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 638447614c5d33520c77ff63124afd2a016667fa
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7534c317f2e690e0766299961f4f21d35a674702
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285087"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950544"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>報表、報表組件和報表定義 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用各種詞彙來描述不同狀態的報表，這些狀態包括初始定義、已發行的報表以及使用者檢視的報表。  

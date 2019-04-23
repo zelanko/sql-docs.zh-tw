@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 692cb15e699a7c4403e2590bb119350cac74e5e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289519"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932854"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>報表產生器選項對話方塊、設定 (報表產生器)
   按一下 **報表產生器**按鈕，然後按一下**選項**設定選項，以顯示最近使用的檔案和連線。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  

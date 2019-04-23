@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bd5ce45952b88c21b9f5aa1a2f2f46de00428b68
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b86cf307bddcd384369cae429569f39315787635
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011780"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952114"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>在 SharePoint 中啟用報表伺服器和 Power View 整合功能
   在安裝適用於 SharePoint 產品的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]增益集後，預設通常會啟用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 網站集合功能。 在某些情況下，您必須手動啟用這些功能。  

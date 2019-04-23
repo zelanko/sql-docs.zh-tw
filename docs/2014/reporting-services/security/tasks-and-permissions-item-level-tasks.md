@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a22c255712aa3e5e6c93cd04a37f5c66d25ac140
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 62009c07a7b643a3a9d0a202588f64bded967acb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018110"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934254"
 ---
 # <a name="item-level-tasks"></a>項目層級工作
   項目層級工作是與報表、資料夾、報表模型、資源或共用資料來源關聯的權限集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也包括套用至整個報表伺服器網站的系統層級工作。 如需詳細資訊，請參閱 [系統層級工作](tasks-and-permissions-system-level-tasks.md)。 如需一般工作和權限的詳細資訊，請參閱 [工作和權限](tasks-and-permissions.md)。  

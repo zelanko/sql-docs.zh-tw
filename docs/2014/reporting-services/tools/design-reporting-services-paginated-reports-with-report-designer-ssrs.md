@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c2f2fcb146be8e90a8b279920ea70cdcdc04300
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292055"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935794"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用報表設計師設計報表 (SSRS)
   使用報表設計師建立完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和報表方案。 報表設計師提供一個圖形介面，您可以在此介面中定義資料來源、資料集與查詢、資料區域與欄位的報表配置位置，以及定義互動式功能，例如搭配使用的參數和報表集。  

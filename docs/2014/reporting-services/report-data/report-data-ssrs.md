@@ -1,7 +1,7 @@
 ---
 title: 報表資料
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 56da8c0b57955735d1e796ad3de7ecb9817a9b99
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 8c0a6ef25f33b5396ecea36edfd57ac3c42e8f5b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553020"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951794"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中的報表資料
 

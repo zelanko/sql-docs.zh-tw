@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc0ea771c0767638a4ebd774023c1cab09a230b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 29ea08478089982f9652154fa0a167d122b2cd34
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020699"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949274"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
   資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。 範例包括銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像、空間資料及電子郵件地址。 在設計介面上，欄位會以報表項目 (如文字方塊、資料表和圖表) 中的運算式形式出現。  

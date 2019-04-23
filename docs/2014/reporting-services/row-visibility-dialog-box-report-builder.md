@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10126"
 ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf4ff717d5f772b8ef3d78c3cd307b9d923fea79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7a18291f26e348851621a9f4321106a7793ab904
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291507"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953964"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>資料列可見性對話方塊 (報表產生器)
   使用 **[資料列可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料列，或使用其他報表項目來切換資料列的可見性。  

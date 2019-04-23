@@ -11,15 +11,15 @@ helpviewer_keywords:
 - files-only installation [Reporting Services]
 - installation options [Reporting Services]
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 451141a1fdc5560faec3e82fedd10b772e79872f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c76e3e4f1f2e427d8f56c0b832475a22aee6648d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029617"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941925"
 ---
 # <a name="files-only-installation-reporting-services"></a>僅限檔案安裝 (Reporting Services)
   「僅限檔案安裝」是指安裝程式會建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程式檔案的資料夾結構、將檔案複製到磁碟、在本機電腦上註冊報表伺服器服務、設定服務帳戶、授與檔案權限給此服務帳戶，並註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝。  

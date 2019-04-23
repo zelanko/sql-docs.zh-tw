@@ -15,15 +15,15 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 70eb61bf1b479bb8021c09058628f25b1594b977
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287386"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933204"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>格式化文字和預留位置 (報表產生器及 SSRS)
   文字方塊可以是資料區內包含文字的報表項目或個別資料格、導出欄位、資料庫中欄位的指標，或是所有這三個項目的組合。 您可以混合字型和色彩、加入粗體和斜體樣式，以及使用對齊和首行縮排等段落樣式。 您可以格式化整個文字方塊，也可以格式化文字方塊內的特定文字、數字、運算式或欄位。  

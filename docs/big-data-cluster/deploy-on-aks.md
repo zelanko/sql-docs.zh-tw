@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b70b5672bff38c8c82dd9bfd837e267328bf6aa9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ddf14cf97fc72acb4a7c44bbc123f171e31c20a2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860159"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935225"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 Azure Kubernetes 服務
 
@@ -86,7 +86,7 @@ Azure 資源群組是在哪一項 Azure 資源部署與管理的邏輯群組。 
     --generate-ssh-keys \
     --node-vm-size Standard_L8s \
     --node-count 1 \
-    --kubernetes-version 1.10.9
+    --kubernetes-version 1.12.6
     ```
 
    您可以增加或減少的 Kubernetes 代理程式節點數目，藉由變更`--node-count <n>`其中`<n>`是您想要使用的代理程式節點數目。 這不包括 master 的 Kubernetes 節點，其在幕後受 AKS。 先前的範例只會使用針對評估用途的單一節點。

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54a32a3961336f22fed462cd955027f3387a1e70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 87cc2d927bc3a0786e935e2cd20c669a8bfac87a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032699"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955534"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services (SSRS) 支援的資料來源
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會透過使用資料處理延伸模組的模組化與可延伸資料層，擷取資料來源中的報表資料。 若要擷取資料來源中的報表資料，您必須選取資料處理延伸模組，其同時支援資料來源的類型 (也就是在資料來源上執行的軟體版本) 與資料來源平台 (32 位元或 64 位元 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])。  
@@ -88,23 +88,23 @@ ms.locfileid: "56032699"
 ## <a name="supported-data-sources"></a>支援的資料來源  
  下表列出您可以用來擷取報表資料集與報表模型之資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 資料處理延伸模組和資料提供者。 如需有關延伸模組或資料提供者的詳細資訊，請按一下第二欄中的連結。 相關的資料表資料行描述如下：  
   
--   報表資料來源：所存取之資料類型；例如，關聯式資料庫、多維度資料庫、一般檔案或 XML。 此欄為「[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以用於報表的資料類型為何？」這個問題的答案。  
+-   報表資料來源：正在存取的資料類型例如，關聯式資料庫、 多維度資料庫、 一般檔案或 XML。 此資料行是這個問題的答案：「 資料類型的可[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用於報表嗎？ 」  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型：當您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中定義資料來源時，可在下拉式清單中看到的其中一種資料來源類型。 此清單會從已安裝並註冊的 DPE 和資料提供者擴展。 此欄為「當我建立報表資料來源時，可以從下拉式清單中選取哪種資料來源類型？」這個問題的答案。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型：當您定義中的資料來源下拉式清單中看到的資料來源類型的其中一個[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 此清單會從已安裝並註冊的 DPE 和資料提供者擴展。 此資料行是這個問題的答案：「 哪種資料來源類型，可以從選取下拉式清單時建立報表資料來源？ 」  
   
--   資料處理延伸模組/資料提供者的名稱：對應所選 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料來源類型的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組或其他資料提供者。 此欄為「當我選取資料來源類型時，要使用哪個對應的資料處理延伸模組或資料提供者？」這個問題的答案。  
+-   資料處理延伸模組/資料提供者的名稱：[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]資料處理延伸模組或對應至其他資料提供者[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]資料來源選取的類型。 此資料行是這個問題的答案：「 當我選取資料來源類型時，哪個對應的資料處理延伸模組或資料提供者會使用？ 」  
   
--   基礎資料提供者版本 (選擇性)：某些資料來源類型支援一種以上的資料提供者。 這些可能是相同提供者的不同版本，或是依協力廠商針對資料提供者類型的不同實作。 提供者名稱通常會在已設定資料來源之後，出現在連接字串中。 此欄為「選取資料來源類型後，我可以在 [連接屬性] 對話方塊中選取哪個資料提供者？」這個問題的答案。  
+-   基礎資料提供者版本 （選擇性）：某些資料來源類型支援多個資料提供者。 這些可能是相同提供者的不同版本，或是依協力廠商針對資料提供者類型的不同實作。 提供者名稱通常會在已設定資料來源之後，出現在連接字串中。 此資料行是這個問題的答案：「選取資料來源類型後，我可以在 [連接屬性] 對話方塊中選取哪個資料提供者？」這個問題的答案。  
   
--   資料來源 \<平台>：目標資料來源的資料處理延伸模組或資料提供者，所支援的資料來源平台。 此欄為「這個資料處理延伸模組或資料提供者，可以從此類型平台的資料來源擷取資料嗎？」這個問題的答案。  
+-   資料來源 \<平台>：目標資料來源的資料處理延伸模組或資料提供者所支援的資料來源平台。 此資料行是這個問題的答案：「 可以此資料處理延伸模組或資料提供者擷取資料從此類型平台的資料來源？ 」  
   
--   資料來源的版本：DPE 或資料提供者支援的目標資料來源版本。 此欄為「這個資料處理延伸模組或資料提供者，可以從此版本的資料來源擷取資料嗎？」這個問題的答案。  
+-   資料來源的版本：DPE 或資料提供者支援的目標資料來源版本。 此資料行是這個問題的答案：「 可以此資料處理延伸模組或資料提供者擷取資料從資料來源的這個版本嗎？ 」  
   
--   RS \<平台>：報表伺服器與報表撰寫用戶端的平台，您可以於該處安裝自訂的 DPE 或資料提供者。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝所包含的內建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]資料處理延伸模組。 自訂的資料處理延伸模組或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者必須原始就針對特定平台編譯。 此欄為「這個資料處理延伸模組或資料提供者，可以安裝在此類型的平台上嗎？」這個問題的答案。  
+-   RS \<平台>：報表伺服器與報表撰寫用戶端，您可以在其中安裝自訂的 DPE 或資料提供者的平台。 任何 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝所包含的內建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]資料處理延伸模組。 自訂的資料處理延伸模組或 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者必須原始就針對特定平台編譯。 此資料行是這個問題的答案：「 這個資料處理延伸模組或資料提供者，可以安裝在這種類型的平台上嗎？ 」  
   
 ###  <a name="DataSourcesTable"></a> 資料來源的類型  
   
-|來源<br /><br /> 報表資料|Reporting Services 資料來源類型|資料處理延伸模組/資料提供者的名稱|基礎資料提供者版本<br /><br /> (選擇性)|資料<br /><br /> 原始程式檔<br /><br /> x86 平台|資料<br /><br /> 原始程式檔<br /><br /> x64 平台|資料來源的版本|RS<br /><br /> x86 平台|RS<br /><br /> x64 平台|  
+|來源<br /><br /> 報表資料|Reporting Services 資料來源類型|資料處理延伸模組/資料提供者的名稱|基礎資料提供者版本<br /><br /> (選擇性)|資料<br /><br /> Source<br /><br /> x86 平台|資料<br /><br /> Source<br /><br /> x64 平台|資料來源的版本|RS<br /><br /> x86 平台|RS<br /><br /> x64 平台|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫|[Microsoft SQL Server](#MicrosoftSQLServer)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.SqlClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本。|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫|[OLEDB](#OLEDBSQL)|內建的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組|擴充 System.Data.OledbClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及更新版本。|Y|Y|  
@@ -219,7 +219,7 @@ ms.locfileid: "56032699"
  [返回資料來源資料表](#DataSourcesTable)  
   
 ####  <a name="OracleOLEDB"></a> OLE DB for Oracle  
- 資料處理延伸模組 OLE DB for Oracle 不支援下列 Oracle 資料類型：BLOB、CLOB、NCLOB、BFILE、UROWID。  
+ 資料處理延伸模組 OLE DB for Oracle 不支援下列 Oracle 資料類型：BLOB、 CLOB、 NCLOB、 BFILE、 UROWID。  
   
  支援與位置有關的未指名參數。 此延伸模組不支援具名參數。 若要使用具名參數，請使用 [Oracle](#OracleClient) 資料處理延伸模組。  
   

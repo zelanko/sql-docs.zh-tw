@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ddbb228cf4f5d71df60dd1de73ab0d1484925f70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 45c66f4092304d804f5e5401aceba1fcefc135e9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040789"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940464"
 ---
 # <a name="use-my-subscriptions"></a>使用我的訂閱
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表管理員包括**我的訂用帳戶**頁面，將組織所有您的訂用帳戶，在一個地方。 您可以使用 [我的訂閱] 來檢視、修改和刪除現有的訂閱。 然而，無法用它來建立訂閱。  

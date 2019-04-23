@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61a3e4f7632c5251eb0404a2e4c8a4c0820c1f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 082188276dbc91f52be5813dda5b752c4699e9bf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017249"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945234"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新增共用排程 (Management Studio)
   您可以使用這個頁面來建立共用排程，以便執行已發行的報表和訂閱。 共用排程可以用來取代報表特定或訂閱特定的排程。 集中式排程資訊以及暫停和繼續排程作業的能力是區別共用排程與項目特有排程的兩個重要功能。  

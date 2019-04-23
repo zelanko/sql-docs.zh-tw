@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016029"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939844"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 工具
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一組圖形和指令碼工具，支援在受管理的環境中開發與使用豐富的報表功能。 此工具集包含開發工具、組態與管理工具，以及報表檢視工具。 本主題提供 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中各個工具與其存取方式的簡短概觀。  
@@ -39,7 +39,7 @@ ms.locfileid: "56016029"
   
 |工具|描述|如何存取|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|互動式的資料探索和視覺呈現體驗設計為可讓您建立以及與依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型的報表進行互動。<br /><br /> 注意：需要 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。|Sliverlight 瀏覽器|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|互動式的資料探索和視覺呈現體驗設計為可讓您建立以及與依據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格式模型的報表進行互動。<br /><br /> 注意:需要[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以 SharePoint 模式。|Sliverlight 瀏覽器|  
 |報表設計師|使用此工具設計報表並部署至原生模式或 SharePoint 報表伺服器。<br /><br /> 裝載於 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 報表資料窗格可組織用於報表的資料<br /><br /> 互動式報表設計之 [設計] 和 [預覽] 的索引標籤式檢視<br /><br /> 查詢設計工具可協助您指定要從資料來源擷取的資料，且此資料來源與 [RSReportDesigner 組態檔](../report-server/rsreportdesigner-configuration-file.md)中資料來源類型相關聯。<br /><br /> 使用智慧感知的運算式編輯器可建立自訂報表內容和外觀的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 運算式<br /><br /> 支援自訂報表項目和自訂查詢設計工具<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](reporting-services-in-sql-server-data-tools-ssdt.md)。|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |報表產生器|使用此工具設計報表並部署至原生模式或 SharePoint 報表伺服器。<br /><br /> 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 相似的撰寫環境<br /><br /> 將報表項目儲存為報表組件的能力<br /><br /> 建立地圖精靈<br /><br /> 彙總的彙總<br /><br /> 增強的運算式支援<br /><br /> 查詢設計工具可協助您指定要從內建資料來源類型擷取的資料<br /><br /> <br /><br /> 如需詳細資訊，請參閱 <<c0> [ 報表產生器&#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)。</c0>|下載 MSI 或從報表管理員/SharePoint 開啟|  
   

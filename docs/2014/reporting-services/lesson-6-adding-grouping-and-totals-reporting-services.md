@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241736"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944004"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>第 6 課：加入群組和總計 (Reporting Services)
   將群組和總計加入至報表以組織和摘要資料。  

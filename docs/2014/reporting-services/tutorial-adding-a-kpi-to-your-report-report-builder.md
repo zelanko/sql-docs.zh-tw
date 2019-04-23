@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將 KPI 加入至報表 （報表產生器） |Microsoft Docs
+title: 教學課程：將 KPI 新增至報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296446"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946016"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 加入至報表 （報表產生器）
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 新增至報表 (報表產生器)
   關鍵效能指標 (KPI) 是具有商務重要性的可測量值。 本教學課程將說明如何將 KPI 加入至報表。 在這個案例中，依產品子類別排列的銷售摘要便是 KPI。 KPI 的目前狀態會使用色彩、量測計和指標顯示。  
   
  下圖顯示您將建立的報表。  
@@ -45,9 +45,9 @@ ms.locfileid: "56296446"
 7.  [儲存報表](#Save)  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器的逐步指示，選擇資料來源、 建立資料集，以及執行精靈，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集，以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 完成本教學課程的估計時間：15 分鐘。  
+ 估計的時間才能完成本教學課程：15 分鐘。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "56296446"
   
 5.  按一下 [下一步] 。  
   
-6.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需詳細資訊，請參閱[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+6.  在 [選擇與資料來源的連線] 頁面上，選取現有的資料來源，或瀏覽至報表伺服器並選取資料來源。 如果沒有資料來源可用，或無法存取報表伺服器，您可以改用內嵌資料來源。 如需詳細資訊，請參閱[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
 7.  按一下 [下一步] 。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "56296446"
   
 12. 按一下 **[完成]**。  
   
-     資料表會加入至設計介面。 這個資料表具有五個資料行和五個資料列。 資料列群組 窗格會顯示三個資料列群組：Salesdate、 子類別目錄和詳細資料。 詳細資料是資料集查詢擷取的所有資料。  
+     資料表會加入至設計介面。 這個資料表具有五個資料行和五個資料列。 [資料列群組] 窗格會顯示三個資料列群組：SalesDate、Subcategory 和 Details。 詳細資料是資料集查詢擷取的所有資料。  
   
 13. 按一下 **[執行]** 預覽報表。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "56296446"
   
 1.  在資料表中，以滑鼠右鍵按一下兩個資料格往下從`[Sum(Sales)]`儲存格 （的小計資料列會顯示子類別銷售額），然後再按一下**文字方塊內容**。  
   
-2.  在 **填滿**，按一下**fx**旁邊**填滿色彩**選項，然後輸入下列運算式中的**設定運算式對象：BackgroundColor**欄位：  
+2.  在 **填滿**，按一下**fx**旁邊**填滿色彩**選項，然後輸入下列運算式中的**設定運算式對象：** 欄位中輸入下列運算式：  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

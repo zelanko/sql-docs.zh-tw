@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reports [Reporting Services], properties
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 603505052f95f442f6f4c140d49245b9811ac39d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 00980c22fc5a5d0b1c3f05352383953d69ae9f74
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291875"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936494"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>設定報表的一般屬性 (報表管理員)
     

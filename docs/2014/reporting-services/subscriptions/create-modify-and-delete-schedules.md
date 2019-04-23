@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 231fbf5211654d126f09ceb048501c7b2eacf0c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 177450ed6cbe934406fc596606e0bb13ee51f7eb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039579"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933024"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除排程。  

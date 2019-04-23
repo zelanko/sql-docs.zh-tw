@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4edd99567611754f8208ac3271951b9e566e5613
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2a72e9b868807c391e3ccc96ba74df7c8db8e2e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040379"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933654"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
   查詢設計工具可協助您針對報表資料集，指定要從外部資料來源擷取的資料。 當您在精靈中建置查詢或建立資料集查詢時，就會使用查詢設計工具。  

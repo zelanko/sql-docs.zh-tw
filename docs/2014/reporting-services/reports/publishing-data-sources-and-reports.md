@@ -12,15 +12,15 @@ helpviewer_keywords:
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ef2839bd49e48615ed77ab917a90169ac20bca3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034079"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932574"
 ---
 # <a name="publishing-data-sources-and-reports"></a>發行資料來源與報表
   發行報表前，您應該預覽報表以查看報表執行時的外觀。 您可以持續精簡設計，直到您滿意其結果為止。  

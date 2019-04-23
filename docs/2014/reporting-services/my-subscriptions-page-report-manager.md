@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026899"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943914"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>我的訂閱頁面 (報表管理員)
   使用 [我的訂閱] 頁面來檢視某個位置的所有訂閱。 從這個頁面中，您可以存取與修改或刪除擁有的任何訂閱。 您只擁有您所建立的訂閱。 您不可以存取其他使用者的訂閱，也不可以存取您有權使用但並未擁有的訂閱 (例如，如果您的名稱已經加入另一位使用者所定義的現有訂閱中)。 您不可以在此頁面建立訂閱。 如需建立訂用帳戶的詳細資訊，請參閱 <<c0> [ 新的訂用帳戶或編輯訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。</c0>  

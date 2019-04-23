@@ -19,15 +19,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 189605c6de3115d873ce6411d3d64da605126e7e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 371cedc8217cbce4eef4c476fd93605d8582f7dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037969"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936916"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Subscriptions and Delivery (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 訂閱是在特定時間，或是為了回應某個事件時，以您指定的檔案格式所傳遞之報表組態。 例如，在每個星期三將 MonthlySales.rdl 報表以 Microsoft Word 文件儲存至檔案共用。 訂閱可用於排程及自動化報表的傳遞，並可搭配一組特定的報表參數值。  

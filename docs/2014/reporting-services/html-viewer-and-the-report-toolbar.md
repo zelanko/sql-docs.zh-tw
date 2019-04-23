@@ -11,15 +11,15 @@ helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86ac5b6da861477bfd5b8e92feac97068ca5adc9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015978"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934054"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  

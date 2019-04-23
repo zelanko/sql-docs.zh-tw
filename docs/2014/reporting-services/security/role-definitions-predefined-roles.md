@@ -12,15 +12,15 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d4f02a2b393cbc4b67ef36a2730a5f1eea162109
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945105"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  

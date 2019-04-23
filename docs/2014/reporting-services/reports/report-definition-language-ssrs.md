@@ -17,15 +17,15 @@ helpviewer_keywords:
 - RDL [Reporting Services]
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7b7c63e4850d17009992f8749c35d86534c0ee83
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241149"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955146"
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
   報表定義語言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義的 XML 表示法。 報表定義包含報表的資料擷取和配置資訊。 RDL 是由符合針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立之 XML 文法的 XML 元素所組成。 您可以加入自訂函數，藉由存取報表定義檔案中的程式碼組件來控制報表項目值、樣式和格式。  

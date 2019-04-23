@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a88f06bec5a488ffde925cdcb32e0e7078da165a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8aa1315ca0f4a69e234d627a415ba088bd45742b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294436"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943927"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>資料行可見性對話方塊 (報表產生器)
   使用 **[資料行可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料行，或使用其他報表項目來切換資料行的可見性。  

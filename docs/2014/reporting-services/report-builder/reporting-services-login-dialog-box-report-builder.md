@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030419"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949635"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 登入對話方塊 (報表產生器)
   使用 **[Reporting Services 登入]** 對話方塊，即可提供發行報表至報表伺服器的認證。 如需這些認證的說明，請連絡報表伺服器管理員。  

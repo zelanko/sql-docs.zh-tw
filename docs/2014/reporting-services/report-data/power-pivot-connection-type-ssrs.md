@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9b06b7e74a444e1d2dd29e7f86da852f0a5c0de2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b391c7e76ab5feeeb6e355924349a578c446c882
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030449"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942994"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint PowerPivot 圖庫中發行的 PowerPivot 活頁簿中擷取資料。  

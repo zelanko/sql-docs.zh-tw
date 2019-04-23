@@ -1,5 +1,5 @@
 ---
-title: 教學課程：將走勢圖加入至報表 （報表產生器） |Microsoft Docs
+title: 教學課程：將走勢圖新增至報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294726"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951234"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 （報表產生器）
   在本教學課程中，您要根據範例銷售資料建立基本資料表報表，然後將走勢圖加入至資料表中的儲存格。  
   
  本教學課程所建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需有關下載這個範例報表和其他人的詳細資訊，請參閱[報表產生器範例報表](https://go.microsoft.com/fwlink/?LinkId=184851)。 下圖顯示與您將要建立的報表相似的範例報表。  
@@ -49,7 +49,7 @@ ms.locfileid: "56294726"
   
  9. [儲存報表](#Save)  
   
- 完成本教學課程的估計時間：30 分鐘。  
+ 估計的時間才能完成本教學課程：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -183,7 +183,7 @@ ms.locfileid: "56294726"
   
 14. 資料表會加入至設計介面。 該資料表具有三個資料行和三個資料列。  
   
-     請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 [資料列群組] 窗格會顯示一個資料列群組：**產品**。 [資料行群組] 窗格會顯示一個資料行群組：**SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
+     請查看 [群組] 窗格。 如果未顯示 [群組] 窗格，請按一下 [檢視] 功能表上的 [群組]。 資料列群組 窗格會顯示一個資料列群組：**Product**。 資料行群組 窗格會顯示一個資料行群組：**SalesDate**。 詳細資料是資料集查詢擷取的所有資料。  
   
 15. 按一下 **[執行]** 預覽報表。  
   
@@ -244,7 +244,7 @@ ms.locfileid: "56294726"
   
  請注意，所有橫條現在已與其他列內的橫條對齊。  
   
-##  <a name="FormatCurrency"></a> 5.(選擇性) 將資料格式化為貨幣  
+##  <a name="FormatCurrency"></a> 5.（選擇性）將資料格式化為貨幣  
  根據預設， **Sales** 欄位的摘要資料會顯示一般數字。 格式化該欄位，將數字顯示為貨幣。 切換 [預留位置樣式]，將格式化的文字方塊和預留位置文字顯示為範例值。  
   
 #### <a name="to-format-a-currency-field"></a>格式化貨幣欄位  

@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - ConnectionPoolSize property
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 589069aebe2275fd06e58385fd85cffaaa3c1222
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fbb896569a75b3fb2e7fee079efb1e56dfb3c65f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945364"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>ConnectionPoolSize 屬性 (WMI MSReportServer_ConfigurationSetting)
   報表伺服器用來與主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體進行通訊的連接集區大小。 唯讀。  

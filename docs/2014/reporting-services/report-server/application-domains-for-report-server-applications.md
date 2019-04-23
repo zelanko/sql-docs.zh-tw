@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef807249672d02ca06d1ac1e41392eef6ebbd912
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012669"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933575"
 ---
 # <a name="application-domains-for-report-server-applications"></a>報表伺服器應用程式的應用程式網域
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表伺服器會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員和背景處理應用程式。 每個應用程式都會在單一報表伺服器處理序內部的應用程式網域中執行。 在大部分情況下，應用程式網域是在內部建立、設定和管理的。 不過，如果您要調查效能或記憶體問題或者疑難排解服務中斷，了解報表伺服器應用程式網域的回收作業如何發生可能會很有用。  
@@ -39,7 +39,7 @@ ms.locfileid: "56012669"
   
  下表將摘要列出為了回應這些事件所發生的應用程式網域回收行為：  
   
-|事件|事件描述|適用於|可設定|回收作業描述|  
+|Event - 事件|事件描述|適用於|可設定|回收作業描述|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |以預先定義間隔發生的排程回收作業|根據預設，應用程式網域每隔 12 小時會回收一次。<br /><br /> 排程回收作業是提升整體處理序健全狀況之 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式的常見作法。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|是的。 RSReportServer.config 檔中的 `RecycleTime` 組態設定會決定回收間隔。<br /><br /> `MaxAppDomainUnloadTime` 會設定允許背景處理完成的等候時間。|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 會管理 Web 服務和報表管理員的回收作業。<br /><br /> 若為背景處理應用程式，報表伺服器會針對從排程起始的新作業建立新的應用程式網域。 系統會允許已經在進行中的作業在目前的應用程式網域中完成，直到等候時間過期為止。|  
 |報表伺服器的組態變更|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 將回收應用程式網域，以便回應 RSReportServer.config 檔中的變更。|報表伺服器 Web 服務<br /><br /> 報表管理員<br /><br /> 背景處理應用程式|資料分割|您無法阻止回收作業發生。 不過，為了回應組態變更所發生之回收作業的處理方式與排程回收作業相同。 當目前的要求和作業在目前的應用程式網域中完成時，系統會針對新的要求建立新的應用程式網域。|  
@@ -72,7 +72,7 @@ ms.locfileid: "56012669"
   
  下表將描述這些元素。  
   
-|元素|適用於|定義|  
+|項目|適用於|定義|  
 |-------------|----------------|----------------|  
 |`RecycleTime`|這三個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式網域|指定回收應用程式網域的頻率。 預設回收排程符合通常在 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 應用程式網域回收中所遵循的 12 小時制模式。 在排程的時間，所有新要求都會轉送至應用程式網域的新執行個體。 目前正在原始執行個體進行中的要求可以繼續執行到完成。 等到所有處理序都完成後，系統會刪除原始執行個體，而新執行個體將成為唯一使用中的應用程式網域執行個體。<br /><br /> 預設值為 720 分鐘。|  
 |`MaxAppDomainUnloadTime`|只有背景處理應用程式網域|根據預設，報表伺服器會配置 30 分鐘的等候時間，在這段時間內，允許在回收作業過程中關閉應用程式網域。 如果目前進行中的作業無法在指定的時間內完成 (或者作業所花的時間比等候時間所允許的還要久)，系統就會立即重新啟動應用程式網域執行個體。 所有未完成的作業都會結束。<br /><br /> 如需如何檢視或取消在報表伺服器上執行之作業的詳細資訊，請參閱[取消報表伺服器作業 &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)。|  

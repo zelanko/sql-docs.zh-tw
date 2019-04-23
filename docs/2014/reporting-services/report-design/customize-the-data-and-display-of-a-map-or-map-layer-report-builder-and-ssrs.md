@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289546"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954984"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  
@@ -130,7 +130,7 @@ ms.locfileid: "56289546"
   
  群組運算式會指定與空間資料具有關聯性的分析資料如何針對圖層上的每個地圖元素進行彙總。 根據預設，群組運算式是針對空間資料與分析資料之間的關聯性指定的一組符合欄位組。 例如，對於顯示國家或地區之城市位置和人口數多寡的泡泡地圖，符合欄位包含城市名稱 [City] 和地區名稱 [Region]，因為可能會有多個城市擁有相同的名稱。 對應的群組運算式包含兩個欄位：[City] 和 [Region]。  
   
- 如需詳細資訊，請參閱[地圖提示：如何將形狀檔匯入 SQL Server 和彙總空間資料](https://go.microsoft.com/fwlink/?LinkID=214991)。  
+ 如需詳細資訊，請參閱 [Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991) (地圖提示：如何將形狀檔匯入 SQL Server 及彙總空間資料中)。  
   
  
   

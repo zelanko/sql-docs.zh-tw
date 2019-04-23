@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031980"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941634"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>資料來源屬性頁面 (報表管理員)
   使用 [資料來源] 屬性頁，即可定義目前的報表如何連接到外部資料來源。 您可以覆寫原先隨同報表發行的資料來源連線資訊。 如果報表使用多重資料來源，則每一個資料來源在屬性頁中各有它自己的區段。 資料來源依其報表中定義的排序來列示。  
@@ -91,7 +91,7 @@ ms.locfileid: "56031980"
   
  若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。  如需有關此帳戶的詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。</c0>  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  

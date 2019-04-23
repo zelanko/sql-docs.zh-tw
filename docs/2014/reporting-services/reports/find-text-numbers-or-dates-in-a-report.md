@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: faed31664fda3f83abc57caf5c30a8c71f699bd5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294816"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938464"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>在報表中尋找文字、數字或日期 (SharePoint 整合模式的 Reporting Services)
   您可以透過輸入想要尋找的單字或片語 (搜尋詞彙的最大值為 256 個字元)，搜尋報表中的內容。 搜尋是一項導覽技術，可尋找報表中相符的值並將焦點放在包含該值的報表內容上。  

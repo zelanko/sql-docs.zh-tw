@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860134"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947794"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>將資料載入 HDFS，在 SQL Server 的巨量資料叢集上使用 curl
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c6854194122dbc4ab5e1781ea62de119f7a09e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5e8ad172dae04aa8b1092d1ddde3bb523d40aa79
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029049"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947856"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses 方法 (WMI MSReportServer_ConfigurationSetting)
   列出報表伺服器電腦的 IP 位址。  

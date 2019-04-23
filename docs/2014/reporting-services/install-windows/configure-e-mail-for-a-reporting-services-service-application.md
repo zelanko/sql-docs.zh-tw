@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 106045d6899534bea31e6db264033f79dcb76a96
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 16affe9578baa42ec66e909a9a23222a64bd483b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010426"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943114"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application-sharepoint-2010-and-sharepoint-2013"></a>設定 Reporting Services 服務應用程式的電子郵件 (SharePoint 2010 和 SharePoint 2013)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料警示以電子郵件訊息傳送警示。 若要傳送電子郵件，您可能需要設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，以及修改服務應用程式的電子郵件傳遞延伸模組。 如果您計劃針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱功能使用電子郵件傳遞延伸模組，也需要電子郵件設定。  

@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297386"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954254"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
   量測計資料區是一維的資料區，可顯示資料集中的單一值。 個別量測計一定會放在量測計面板內，您可在其中加入子量測計或相鄰的量測計。 您可以使用量測計面板在單一量測計面板內建立多個量測計，這些量測計會共用篩選、群組或排序等通用功能。  
@@ -181,7 +181,7 @@ ms.locfileid: "56297386"
   
  ![量測計項目圖](../media/gauge-elements-diagram.gif "量測計項目圖")  
   
- 如需使用量測計做為 Kpi 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表&#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 如需使用量測計作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將量測計當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "56297386"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 星形量測計選項：星形、 星形附迷你量測計、 雙標尺、 右上 90 度、 左上 90 度、 左下 90 度、 右下 90 度、 上方 180 度、 下方 180 度、 180 度 West180 度和計量。  
+ 星形量測計選項：星形、星形附迷你量測計、雙標尺、右上 90 度、左上 90 度、左下 90 度、右下 90 度、上方 180 度、下方 180 度、左方 180 度、右方 180 度以及計量。  
   
  **線性量測計**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 線性量測計選項：水平、 垂直、 多橫條指標、 雙標尺、 三色範圍、 對數、 溫度計、 溫度計華氏/攝氏溫度計和項目符號圖表。  
+ 線性量測計選項：水平、垂直、多橫條指標、雙標尺、三色範圍、對數、溫度計、華氏/攝氏溫度計以及子彈圖。  
   
   
 ##  <a name="AddingData"></a> 將資料加入至量測計  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4272c50784f3e445a936bc1b39b267424d639563
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b93ba187e20f4e8c0c8d9574383f91cfd887a9ac
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018210"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944184"
 ---
 # <a name="report-model-connection-ssrs"></a>報表模型連接 (SSRS)
   若要包含來自報表模型的資料，您必須擁有以報表模型為基礎的資料集做為資料來源。 與其他報表資料來源不同的是，報表模型沒有資料延伸模組。 在報表產生器中，您會直接從報表伺服器瀏覽並選取模型。 在報表設計師中，您會指定報表模型的 URL。  

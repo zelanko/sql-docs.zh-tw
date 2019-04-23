@@ -15,15 +15,15 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 38547a2d48ecbe1887702d7be9b45b3166d75243
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012460"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952434"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  

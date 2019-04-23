@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], embedded
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bc8c9b65c70fef86887ed80a8049b4e930188ffe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa7cc2560e5f22d6da60c3784361ad50f85bfbef
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038389"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952125"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>將資料來源從內嵌轉換成共用 (報表產生器及 SSRS)
   [報表資料] 窗格中的每個資料來源都是報表內嵌且專用的項目，或共用的項目。 在報表產生器中，共用資料來源會指向報表伺服器或 SharePoint 網站上的已發行共用資料來源。 在報表設計師中，共用資料來源會指向 [方案總管] 中 **[共用資料來源]** 資料夾的共用資料來源。  

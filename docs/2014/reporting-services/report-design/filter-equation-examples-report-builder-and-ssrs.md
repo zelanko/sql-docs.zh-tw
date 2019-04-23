@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - filtering data [Reporting Services], filter equation examples
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6302cc01b86d67d02f128d72f717cfebb97b46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 601b3e1252f9221fe2760fe0dae19d2d750c61f0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292416"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955204"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>篩選方程式範例 (報表產生器及 SSRS)
   若要建立篩選，您必須指定一個或多個篩選方程式。 篩選方程式包含運算式、資料類型、運算子和值。 本主題提供常用的篩選範例。  

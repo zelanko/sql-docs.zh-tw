@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1273eed3bc53b5f23bd51430f1fd2fbe2b712d5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 123afc28db147118d10a66199364ca8b73afb34c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018999"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951644"
 ---
 # <a name="csv-device-information-settings"></a>CSV 裝置資訊設定
   CSV 轉譯延伸模組的裝置資訊設定，允許變更分隔符號與限定詞，以及指定分行符號處理。 您也可以提交檔案的延伸模組，以及在輸出中編碼和包括標頭資料列。 因為分隔符號有可能是特殊的字元，所以如果設定是以 XML 來撰寫，您應該在 CDATA 區段中編碼它們。  

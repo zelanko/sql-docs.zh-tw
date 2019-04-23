@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a1b926b148874573c8c1106be2982dd0e929c50d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aed96c2288c7720f1f4995c9b0caf3d877ebe98e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032200"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939754"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityActual 屬性 (WMI MSReportServer_ConfigurationSetting)
   執行報表伺服器 Windows 服務所使用的識別。 唯讀。  

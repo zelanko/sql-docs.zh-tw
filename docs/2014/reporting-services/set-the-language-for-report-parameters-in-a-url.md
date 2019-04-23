@@ -15,15 +15,15 @@ helpviewer_keywords:
 - international considerations [Reporting Services]
 - global considerations [Reporting Services]
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c6150d3060861d2e485ea8e3cd5ad2a0eecc6e38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 46b00567781ac2a87bb2d5ff48eaa9d7cd04058f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031399"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945514"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>設定 URL 中報表參數的語言
   *rs:ParameterLanguage* URL 存取參數會緩和問題，其中區分文化特性的報表參數 (例如、日期、時間、貨幣和數字) 會使用瀏覽器語言進行解譯。 透過 *rs:ParameterLanguage*，現在可以獨立於瀏覽器之外解譯 URL。 例如，如果將報表伺服器設定為德文的區域設定，但是使用者是透過使用設定為英文 (美國) 的瀏覽器之 URL 來存取報表，則傳遞到報表伺服器的參數值將會被誤解。  

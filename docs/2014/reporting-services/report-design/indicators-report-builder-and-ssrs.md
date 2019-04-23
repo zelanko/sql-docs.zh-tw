@@ -15,15 +15,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 301ed0986cdb9971e2b03bd1af76ab3d2a71d86f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293877"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948584"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
   指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 圖示即使很小，但在視覺上也能有效代表指標及其狀態。  
@@ -44,7 +44,7 @@ ms.locfileid: "56293877"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供以原狀使用的內建指標集合與指標圖示，但是您也可以自訂個別的指標圖示與指標集合以符合您的需求。  
   
- 如需使用指標作為 Kpi 的詳細資訊，請參閱[教學課程：將 KPI 加入至報表&#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
+ 如需使用指標作為 KPI 的詳細資訊，請參閱[教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)。  
   
 > [!NOTE]  
 >  您可以將指標當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

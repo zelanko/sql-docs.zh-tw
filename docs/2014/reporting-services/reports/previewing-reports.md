@@ -1,7 +1,7 @@
 ---
 title: 預覽報表
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553230"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946944"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中預覽報表
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>在 SQL Server Reporting Services (SSRS) 中預覽報表
 
   設計報表時，在尚未發行至實際環境之前，您可能會想要先檢視該報表。 您可以利用數種方式進行檢視：在報表設計師中切換到 [預覽] 模式、使用報表設計師中的預覽視窗，以及在測試環境中將報表發行至報表伺服器。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53553230"
   
  您可以切換到預覽列印模式，以變更檢視來顯示列印的報表。 按一下預覽工具列上的 **[預覽列印]** 按鈕。 所顯示的報表就如同在實際頁面上所看到的。 這個檢視與影像和 PDF 轉譯延伸模組所產生的輸出類似。 預覽列印並不是影像或 PDF 檔案，不過報表的配置及分頁與這些格式的輸出相似。  
   
-## <a name="publish-to-a-test-server"></a>發行至測試伺服器
+## <a name="publish-to-a-test-server"></a>發佈至測試伺服器
 
  您也可以將報表發行至測試伺服器來測試報表。 將報表發行至測試伺服器與發行至實際伺服器相同。 如需發行報表的詳細資訊，請參閱 [將報表發行至報表伺服器](publishing-reports-to-a-report-server.md)。  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025789"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955544"
 ---
 # <a name="model-item-security-page-report-manager"></a>模型項目安全性頁面 (報表管理員)
   您可以使用這個頁面，透過授與或撤銷特定項目的唯讀權限，保護模型的各部分。 模型項目安全性會影響執行階段的特定資料瀏覽，以及在報表產生器中建立報表時使用已發行模型之各部分的能力。 若要使用這項功能，您必須擁有「內容管理員」權限。  

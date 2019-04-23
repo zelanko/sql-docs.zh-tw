@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c7369ac2da7dd8b7f93ec02ef240d78e76967d92
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 46fdd38274cb1400742d0bcda8654ebb7fd77b6c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032999"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944055"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>安裝或解除安裝 SharePoint 的 Reporting Services 增益集 (SharePoint 2010 和 SharePoint 2013)
   在 SharePoint 伺服器上執行適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集安裝套件 (rsSharePoint.msi)，以在 SharePoint 部署中啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能。 功能包含 Power View、報表檢視器 Web 組件、URL Proxy 端點、內容類型以及應用程式頁面，讓您可以建立、檢視及管理報表、報表模型、資料來源以及在 SharePoint 網站上的其他報表伺服器內容。 適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集是以 SharePoint 模式執行之報表伺服器的必要元件。 增益集可以從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝精靈安裝，或是從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 功能套件下載 rsSharePoint.msi。 如需增益集版本和下載頁面的清單，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
@@ -92,7 +92,7 @@ ms.locfileid: "56032999"
   
 -   **安裝精靈：** ![注意](../../../2014/reporting-services/media/rs-fyinote.png "注意")的新[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，增益集可以安裝由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈。 在精靈的 [功能選擇] 頁面上，選擇 [適用於 SharePoint 產品的 Reporting Services 增益集]。  
   
--   **rsSharepoint.msi:** 該增益集可以直接從安裝媒體安裝，或下載後安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   **rsSharepoint.msi:** 增益集可以直接從安裝媒體安裝或下載並安裝。 rsSharepoint.msi 同時支援圖形化使用者介面和命令列安裝。 您必須以系統管理員權限執行 .msi，方式是先開啟提高權限的命令提示字元，然後從命令列執行 rsSharepoint.msi。 如需下載此增益集的詳細資訊，請參閱 [尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
     > [!NOTE]  
     >  如果您使用 **/q** 參數進行無訊息命令列安裝，將不會顯示使用者授權合約。 不論安裝方式為何，使用此軟體皆受到授權合約的限制，同時您有責任遵從授權合約的規定。  

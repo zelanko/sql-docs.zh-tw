@@ -25,15 +25,15 @@ f1_keywords:
 - "10527"
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f174d2ba00211459d8ef7d7c0d61a0affa0b38ae
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 35860cfd893342d76074b6d49d0417484672030c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657691"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936654"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  

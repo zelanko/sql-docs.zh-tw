@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 271c97f635db61c0e66b7a22608272fde145387c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023539"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944104"
 ---
 # <a name="upload-file-page-report-manager"></a>上傳檔案頁面 (報表管理員)
   您可以使用 [上傳檔案] 頁面，將檔案從檔案系統發行至報表伺服器資料庫。 在報表伺服器資料夾階層中，上傳的檔案會以項目來表示。  

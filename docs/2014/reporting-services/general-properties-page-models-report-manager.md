@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018240"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947544"
 ---
 # <a name="general-properties-page-models-report-manager"></a>一般屬性頁面，模型 (報表管理員)
   您可以使用報表模型的 [一般屬性] 頁面來重新命名、刪除、移動或取代模型定義 (.smdl) 檔案。 有關模型建立者與修改者及變更日期的詳細資料都會顯示在頁面頂端。  
@@ -46,7 +46,7 @@ ms.locfileid: "56018240"
  **在清單檢視中隱藏**  
  選取此核取方塊即可在清單檢視中設定資料夾時，隱藏項目。 清單檢視是檢視資料夾內容的一種模式，報表管理員中支援這種檢視模式。 您可以在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中設定這個選項，以便定義在報表管理員中檢視這個項目的方式。 如需有關在報表管理員中的檢視模式的詳細資訊，請參閱 <<c0> [ 內容 頁面&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)。</c0>  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
  **刪除**  

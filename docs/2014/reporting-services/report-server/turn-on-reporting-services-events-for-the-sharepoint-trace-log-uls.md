@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025139"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954965"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 伺服器可以將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 事件寫入 SharePoint 統一記錄服務 (ULS) 追蹤記錄。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定類別目錄。  
@@ -40,7 +40,7 @@ ms.locfileid: "56025139"
 ##  <a name="bkmk_general"></a> 一般 ULS 記錄建議  
  下表將針對監視 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 環境，列出建議的事件類別目錄和層級。 記錄事件時，每個項目都會包含記錄事件的時間、處理序名稱，以及執行緒識別碼。  
   
-|類別目錄|層級|描述|  
+|Category|層級|描述|  
 |--------------|-----------|-----------------|  
 |[資料庫]|「詳細資訊」|記錄涉及資料庫存取權的事件。|  
 |一般|「詳細資訊」|記錄涉及下列項目之存取權的事件：<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 網頁<br /><br /> 報表檢視器 HTTP 處理常式<br /><br /> 報表存取 (.rdl 檔)<br /><br /> 資料來源 (.rsds 檔)<br /><br /> SharePoint 網站的 URL (.smdl 檔)|  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |報表伺服器提供者||  
 |報表伺服器轉譯||  
 |報表伺服器報表預覽||  
-|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU：Evaluation<br /><br /> MediumEvaluation 複本：剩下 180 天|  
+|報表伺服器資源公用程式|範例項目：<br /><br /> MediumReporting Services 啟動 SKU:Evaluation<br /><br /> MediumEvaluation 複本：剩下 180 天|  
 |報表伺服器執行工作||  
 |報表伺服器執行要求||  
 |報表伺服器排程||  

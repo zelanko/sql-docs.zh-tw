@@ -11,15 +11,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
 - MHTML [Reporting Services]
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 014a08a2ce19192835117d1fca44bcd0e67f4eef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 196afebcabea54fda1b315b1c2f17c0029842f07
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011941"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949794"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 裝置資訊設定
   下表列出以 Web 封存 (MHTML) 格式轉譯報表的裝置資訊設定。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 38b71bc3f92a8cb6d3c514c4115395cb3bd619ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb2c717ca9d88d9c1ff1fe4f02fb89c46fe8f0e1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020479"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940364"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
   從外部資料來源擷取資料後，將篩選加入至資料集來限制報表中的資料。 當您將篩選加入至資料集時，所有報表組件或資料區都只會使用符合篩選條件的資料。  

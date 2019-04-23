@@ -11,15 +11,15 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e27a9a73c966e1058ec273415f17b80142a582ae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291626"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945334"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>報表撰寫概念 (報表產生器及 SSRS)
   本節將簡要定義報表產生器和報表設計師文件集中使用的重要概念。 如需特定字詞或詞彙的定義，請參閱[詞彙 &#40;報表產生器&#41;](../report-builder/glossary-report-builder.md)。  

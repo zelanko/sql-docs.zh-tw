@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.history.f1
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2e6fb7ad7c50395aa40b31a98e9bd6bd8743875
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10649c3dbe873464bcc52ca5bc54e5b948d547a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042729"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951274"
 ---
 # <a name="server-properties-history-page"></a>伺服器多個屬性 (記錄頁面)
   使用此頁面，即可設定要保留之報表記錄副本數目的預設值。 預設值會提供建立所有報表之報表記錄限制的初始設定。 您可以針對個別報表更改這些設定。  

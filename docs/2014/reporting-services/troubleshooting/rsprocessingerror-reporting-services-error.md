@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7c364708f3d574f5096210a94fc33174b3eb2c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3f9826e22c617bbcae2630121ce1be23b2511a35
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021546"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932684"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 錯誤
     
@@ -56,7 +56,7 @@ ms.locfileid: "56021546"
   
 -   可為 Null 的屬性設定為參數`False`參數中偵測到 null 值。  
   
--   資料區域之 Hidden 屬性的運算式含有錯誤：物件參考未設定為物件的執行個體。  
+-   資料區域之 Hidden 屬性的運算式含有錯誤：物件參考未設定物件的執行個體。  
   
 -   運算式包含無效的函數呼叫或語法錯誤。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56021546"
  多重值參數不可以是 Null。 如需詳細資訊，請參閱 MSDN 上的 [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)類型之報表資料來源為基礎的資料集。  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>無法處理含有子報表的主報表  
- 含有子報表的主報表必須由相同的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表處理器版本處理。 將報表升級至目前版本的報表定義結構描述時，主報表和子報表不一定會同時更新。 如果報表與子報表之間的版本不相容，就會顯示下列訊息：「無法處理子報表」。  
+ 含有子報表的主報表必須由相同的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表處理器版本處理。 將報表升級至目前版本的報表定義結構描述時，主報表和子報表不一定會同時更新。 如果版本不相容的報表與子報表之間，會顯示下列訊息：「 子報表無法處理。 」  
   
  您必須變更主報表或子報表，如此所有報表才能由相同的報表處理器版本處理。 如需為何報表無法升級的資訊，請參閱 [升級報表](../install-windows/upgrade-reports.md)。  
   

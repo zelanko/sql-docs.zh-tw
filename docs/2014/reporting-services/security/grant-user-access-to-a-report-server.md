@@ -14,20 +14,20 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024849"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935854"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>將報表伺服器的存取權授與使用者 (報表管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用角色型安全性將報表伺服器的存取權授與使用者。 在新的報表伺服器安裝上，只有屬於本機管理員群組的成員擁有報表伺服器內容和作業的權限。 若要讓報表伺服器供其他使用者使用，您必須建立角色指派，以便將使用者或群組帳戶對應至指定工作集合的預先定義角色。  
   
- **SharePoint 模式報表伺服器：** 若為針對 SharePoint 整合模式所設定的報表伺服器，您可以設定使用 SharePoint 權限從 SharePoint 網站存取的方式。 SharePoint 網站的權限等級會決定報表伺服器內容和作業的存取權。 您必須是網站管理員，才能授與 SharePoint 網站的權限。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
+ **SharePoint 模式報表伺服器：** 已針對 SharePoint 整合模式報表伺服器，您可以設定從 SharePoint 網站，使用 SharePoint 權限的存取權。 SharePoint 網站的權限等級會決定報表伺服器內容和作業的存取權。 您必須是網站管理員，才能授與 SharePoint 網站的權限。 如需詳細資訊，請參閱 [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)。  
   
  **原生模式報表伺服器：** 本主題著重於報表伺服器設定為原生模式和使用報表管理員將使用者指派給角色。 目前有兩種角色類型：  
   

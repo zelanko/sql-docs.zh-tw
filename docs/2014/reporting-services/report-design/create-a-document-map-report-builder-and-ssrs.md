@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e898f33545364b5ad44d4c0cbf281555638ab2e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286222"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941444"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
   文件引導模式提供了與轉譯報表中之報表項目連結的一組導覽連結。 您檢視包含文件引導模式的報表時，報表旁邊會出現另一個側窗格。 使用者按一下文件引導模式中的連結，即可跳到顯示該項目的報表頁面。 報表區段與群組會以連結的階層排列。 按一下文件引導模式中的項目，會重新整理報表並顯示文件引導模式中之項目所對應的報表區域。  

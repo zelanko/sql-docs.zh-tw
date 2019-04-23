@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsAccessDenied error
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2904623aa84a6bc6b50cf1a01458bbc52649feaf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3928d77d79a59dbda6b203c59e626f157d670803
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042359"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937534"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied - Reporting Services 錯誤
   當使用者沒有執行動作的權限時，會發生 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 錯誤 **rsAccessedDenied** 。 例如，他們並未擁有允許他們開啟報表的角色指派，或者他們沒有使用必要的權限開啟瀏覽器。  

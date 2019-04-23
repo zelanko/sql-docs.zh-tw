@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: df5f3be98f88e3966ccda0226e0f2f1353b1d64d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286176"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949764"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>插入或刪除資料行 (報表產生器及 SSRS)
   您可以在 Tablix 資料區中加入或刪除資料行。 Tablix 資料區可以是資料表、矩陣或清單。 下列程序不適用於圖表和量測計資料區域。  

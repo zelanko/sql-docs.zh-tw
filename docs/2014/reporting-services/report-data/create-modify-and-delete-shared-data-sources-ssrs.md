@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ead1d37c40a1d0cd2d6ee668bb99d595554006a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 26bc12ce8c685c4aeb119f43ab594d920a6cef9f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041479"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934744"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。 共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  

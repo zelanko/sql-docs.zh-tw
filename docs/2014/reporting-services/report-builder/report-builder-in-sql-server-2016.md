@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290436"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948264"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的報表產生器
   報表產生器是一個報表撰寫環境，適合喜歡在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 環境中工作的商務使用者使用。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在報表產生器中預覽報表，也可以將報表發行至報表伺服器或處於 SharePoint 整合模式的報表伺服器，讓其他人執行報表。  
@@ -38,7 +38,7 @@ ms.locfileid: "56290436"
   
 -   **從資料表、矩陣或圖表精靈開始**。 您可以選擇資料來源連接、拖放欄位以建立資料集查詢、選取配置和樣式，以及自訂報表。  
   
--   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以加入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 地圖底圖背景。  
+-   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能來自空間資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢或 Environmental Systems Research Institute，Inc.(ESRI) 形狀檔。 您也可以加入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 地圖底圖背景。  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "56290436"
  [SQL Server 2014 報表產生器的新功能](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  描述此版本報表產生器的新功能，包括地圖。  
   
- [教學課程：建立快速圖表報表離線](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [教學課程：離線建立快速圖表報表](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  介紹報表產生器以及可協助您建立報表的精靈。 此教學課程會提供一組資料供您使用，所以您不需要連接至資料來源以便開始作業。  
   
  [規劃報表 &#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md)  

@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286798"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951244"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 （報表產生器）
   本教學課程將教導您如何建立類似套印信件的 SSRS 自由格式報表。 您可以排列報表項目，以建立具有文字方塊、影像和其他資料區域的表單。  
   
  您在本教學課程中建立的報表，是以教學課程中所包含的範例銷售資料為基礎。 此報表會依領域將資訊分組，並顯示各領域的銷售經理姓名以及詳細和摘要銷售資訊。 您將使用清單資料區做為自由格式報表的基礎，然後加入含有影像的裝飾面板、插入資料的靜態文字、顯示詳細資訊的資料表，以及 (選擇性) 顯示摘要資訊的圓形圖和直條圖。  
@@ -46,7 +46,7 @@ ms.locfileid: "56286798"
   
 -   [加入摘要資料視覺效果](#Visualization)  
   
- 完成本教學課程的估計時間：20 分鐘。  
+ 估計的時間才能完成本教學課程：20 分鐘的時間。  
   
 ## <a name="requirements"></a>需求  
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
@@ -224,7 +224,7 @@ ms.locfileid: "56286798"
   
 2.  在在功能區的 [插入]  索引標籤上，按一下 [文字方塊] ，然後拖曳一個文字方塊到清單的左上角，放在您剛加入的矩形內。 將文字方塊調整成高約 3 英吋且寬約 5 英吋。  
   
-3.  將滑鼠游標置於文字方塊的上半部，然後輸入：**Newsletter for**。  
+3.  滑鼠游標置於文字方塊的上半部，然後輸入：**Newsletter for**。  
   
      ![新增新聞稿標題文字](../../2014/tutorials/media/tutorial-newsletterfor.png "新增新聞稿標題文字")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "56286798"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 將滑鼠游標置於您在步驟 3 輸入的文字下方，然後輸入：**Hello** 。  
+9. 將游標放在您輸入在步驟 3 和型別中的文字下方：**Hello** 。  
   
     > [!NOTE]  
     >  記得在單字 "Hello" 後面多加一個空格。 此空格會將本段文字和下一個步驟要加入的欄位區隔開來。  
@@ -279,7 +279,7 @@ ms.locfileid: "56286798"
   
      ![新增新聞稿文字](../../2014/tutorials/media/tutorial-newslettertext.png "新增新聞稿文字")  
   
-20. 將滑鼠游標置於您在步驟 15 貼入的文字下方，然後輸入：**恭喜您總銷售額的**。  
+20. 將游標放在您在步驟 15 貼入的文字下方，然後輸入：**恭喜您總銷售額的**。  
   
     > [!NOTE]  
     >  記得在單字 "of" 後面多加一個空格。 此空格會將本段文字和下一個步驟要加入的欄位區隔開來。  
@@ -431,7 +431,7 @@ ms.locfileid: "56286798"
   
      ![報表中加入一行](../../2014/tutorials/media/tutorial-reportwithline.png "新增報表行")  
   
-##  <a name="Visualization"></a> 9.(選擇性) 加入摘要資料視覺效果  
+##  <a name="Visualization"></a> 9.（選擇性）加入摘要資料視覺效果  
  矩形可以協助您控制報表的轉譯方式。 將圓形圖和直條圖放到矩形內，以確保報表轉譯為您希望的外觀。  
   
 #### <a name="to-add-a-rectangle"></a>若要加入矩形  

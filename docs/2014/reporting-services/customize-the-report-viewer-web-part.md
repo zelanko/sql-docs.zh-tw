@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017960"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947754"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
   您可以使用報表檢視器 Web 組件來檢視在設定為 SharePoint 整合之報表伺服器上執行的報表。 可顯示的報表包括報表定義 (.rdl) 檔案和報表產生器報表。 報表會自動在新網頁中於報表檢視器 Web 組件中開啟，但如果您希望特定報表總是顯示在某現有網頁或網站上，您也可以將報表檢視器 Web 組件加入至該網頁上。  

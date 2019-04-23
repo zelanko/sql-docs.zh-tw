@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Rows dialog box
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3c2d45905f74c0a3e28f1d143e258dbe2cef4df
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3b3c7d20d92b56de299f25665701a295e54fce89
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292366"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947504"
 ---
 # <a name="delete-rows-dialog-box"></a>刪除資料列對話方塊
   使用 **[刪除資料列]** 對話方塊，即可從資料表、矩陣或清單資料區中刪除資料列。 如果是與群組相關聯的資料列，您也可以刪除群組定義。  

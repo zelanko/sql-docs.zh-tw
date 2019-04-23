@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242186"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949994"
 ---
 # <a name="literals-ssis"></a>常值 (SSIS)
   運算式可以包含數值、字串及布林常值。 運算式評估工具支援各種不同的數值常值，例如整數、小數以及浮點常數。 運算式評估工具亦支援長尾碼和浮點尾碼，其指定運算式評估工具處理值的方式，以及數值常值中的科學記號。  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fcda429cced68aa0868fae88ee022b59b097a8e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298255"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935624"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 函數 (報表產生器及 SSRS)
   傳回運算式所指定之所有非 Null 數值的聯集 (在給定範圍中評估)。  

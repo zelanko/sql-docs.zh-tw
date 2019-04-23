@@ -13,15 +13,15 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8519b6dbb6c7d1fb1e72afa3f6dfcc70521df84a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 13454c9f73b54da7977dd52bbbdc7c1d2cddb28c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025649"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947984"
 ---
 # <a name="manage-report-data-sources"></a>管理報表資料來源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表、報表模型和資料驅動訂閱都會從外部資料來源擷取資料。 為了連接到外部資料來源，報表伺服器會使用在報表、模型或訂閱中定義，或者從其中參考的資料來源連接資訊。 資料來源連接屬性一定會在建立報表或模型時，使用報表或模型來定義，但是當報表或模型發行到報表伺服器之後，可以獨立管理這些屬性。  

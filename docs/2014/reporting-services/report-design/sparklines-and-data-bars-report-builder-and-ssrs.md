@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98e98c3908735d53777ed425b26c2f229c830f92
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 9c89de031408d222caa030900cececb97d8aa2db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658042"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941644"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
   走勢圖和資料橫條是簡單的小圖表，在極小空間中傳達大量資訊，通常內嵌於文字。 走勢圖和資料橫條經常用於資料表和矩陣中。 其效用在於同時檢視多個走勢圖，能夠一個跟上一個快速地進行比較，而不是單獨檢視各個圖表。 可輕鬆查看極端值，也就是執行時跟其他資料列不相同的資料列。 圖雖然很小，通常每個走勢圖都代表一段時間的多個資料點。 資料橫條可以代表多個資料點，但通常只顯示一個。 每個走勢圖通常都會呈現單一數列。 您不能將走勢圖加入資料表的詳細資料群組中。 因為走勢圖會顯示彙總的資料，必須放在與群組相關聯的儲存格中。 走勢圖和資料橫條有相同的基本圖表元素：類別、數列和值，但是沒有圖例、座標軸線、標籤或刻度標記。  
@@ -37,15 +37,15 @@ ms.locfileid: "58658042"
 ##  <a name="KindsofSparklines"></a> 走勢圖的類型  
  您幾乎可以建立與一般圖表一樣多的走勢圖類型。 一般而言，您無法建立 3D 走勢圖。 您可以建立這些完整圖表的走勢圖版本：  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的直條圖。  
+-   [直條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)：基本、 堆疊與 100%堆疊直條圖。  
   
--   [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)：3D 折線圖以外的所有圖表。  
+-   [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)：3D 折線圖以外所有圖表。  
   
--   [區域圖 &#40;報表產生器及 SSRS&#41;](area-charts-report-builder-and-ssrs.md)：3D 區域圖以外的所有圖表。  
+-   [區域圖 &#40;報表產生器及 SSRS&#41;](area-charts-report-builder-and-ssrs.md)：3D 區域圖以外所有圖表  
   
--   [圓形圖 &#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)：以及環圈圖 (平面和立體)，但不是漏斗圖和金字塔圖之類的其他形狀。  
+-   [圓形圖 &#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)：以及環圈圖，一般和 3D，但不是其他形狀漏斗圖和金字塔圖之類。  
   
--   [範圍圖 &#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)：股票圖、K 線圖、誤差線與盒狀圖。  
+-   [範圍圖 &#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)：股票圖、 k 線圖、 誤差線和盒狀圖。  
   
 ##  <a name="DataBars"></a> 資料橫條  
  資料橫條通常代表單一資料點，不過也可以代表多個資料點，就像一般的橫條圖一樣。 資料橫條通常都包含多個沒有類別的數列或數列群組。  
@@ -56,9 +56,9 @@ ms.locfileid: "58658042"
   
  您可以建立這些完整圖表的資料橫條版本：  
   
--   [橫條圖 &#40;報表產生器及 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的橫條圖。  
+-   [橫條圖 &#40;報表產生器及 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)：基本、 堆疊與 100%堆疊橫條圖。  
   
--   [直條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)：基本、堆疊與 100% 堆疊的直條圖。 直條圖可以是走勢圖或資料橫條。  
+-   [直條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)：基本、 堆疊與 100%堆疊直條圖。 直條圖可以是走勢圖或資料橫條。  
 
 ##  <a name="AlignDatainTableMatrix"></a> 在資料表或矩陣中對齊走勢圖資料  
  當您將走勢圖插入資料表或矩陣時，每個走勢圖中的資料點通常最好對齊該直條圖中其他走勢圖的資料點。 否則，很難比較不同資料列中的資料。 例如，當您依月份比較公司中不同銷售人員的銷售資料時，您會希望月份能夠對齊。 如果員工四月份外出，該員工就沒有該月份的資料。 您希望看到該月份的間距，並且看到後續月份的資料對齊其他員工的資料。 您可以對齊水平軸達到這個目的。 如需詳細資訊，請參閱[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md) 中關於走勢圖的章節，並參閱[在資料表或矩陣的圖表上對齊資料 &#40;報表產生器及 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)。  

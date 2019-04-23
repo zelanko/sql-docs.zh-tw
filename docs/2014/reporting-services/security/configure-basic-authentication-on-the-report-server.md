@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019329"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942734"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
   根據預設，Reporting Services 會接受可指定交涉式驗證或 NTLM 驗證的要求。 如果您的部署包含了使用基本驗證的用戶端應用程式或瀏覽器，您必須將基本驗證加入支援的類型清單中。 此外，如果您要使用報表產生器，必須啟用對報表產生器檔案的匿名存取。  
@@ -66,7 +66,7 @@ ms.locfileid: "56019329"
           </AuthenticationTypes>  
     ```  
   
-4.  將它貼到 <`Authentication`> 的現有項目上。  
+4.  貼上現有的項目，如 <`Authentication`>。  
   
      如果您使用多個驗證類型，請只加入 `RSWindowsBasic` 元素，而不要刪除 `RSWindowsNegotiate`、`RSWindowsNTLM` 或 `RSWindowsKerberos` 的項目。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56019329"
   
      請注意，您無法搭配其他驗證類型使用 `Custom`。  
   
-5.  使用對環境有效的值來取代 <`Realm`> 或 <`DefaultDomain`> 的空白值。  
+5.  取代空白值 <`Realm`> 或 <`DefaultDomain`> 適用於您環境的值。  
   
 6.  儲存檔案。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "56019329"
   
 |元素|必要項|有效的值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意：[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
+|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可將登入認證保存在隨著每個 HTTP 要求傳送的驗證封裝中，以便在連接至網路中的其他伺服器時，允許伺服器模擬使用者。 (預設值)<br /><br /> 注意:中不支援值 0 （用於互動式登入） 和 1 （用於批次登入） [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]。|  
 |Realm|選擇性|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
 |DefaultDomain|選擇性|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
   

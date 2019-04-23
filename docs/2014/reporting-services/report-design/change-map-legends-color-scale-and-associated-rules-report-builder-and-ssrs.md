@@ -31,15 +31,15 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3deeceee2baae356dee30cc4eea29e0366c9f952
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287051"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951004"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>變更地圖圖例、色階與相關的規則 (報表產生器及 SSRS)
   地圖可包含地圖圖例、色階和距離標尺。 這些地圖組件可協助使用者解譯地圖上的資料視覺化。  

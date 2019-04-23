@@ -11,15 +11,15 @@ helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 589f1d42936d243bff9aa77740cefce14ab8856e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80238e8edb5b84bc353eca63d63491a8ee74c8ad
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014599"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936874"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 存取匯出報表
   您可以選擇性地指定用於轉譯報表所使用的格式*rs: Format*參數。 例如，直接從原生模式報表伺服器取得報表的 PDF 副本。  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MSSQLServer 107 error
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5351b052a26b2a4f5b9bc9d91f93aa2e4cdc5357
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ad8ff3e2a6d87c680c34ae3f2926799e28c3268e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020280"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946585"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>報表伺服器 Windows 服務 (MSSQLServer) 107
     

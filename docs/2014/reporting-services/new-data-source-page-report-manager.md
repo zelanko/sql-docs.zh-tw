@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029099"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947085"
 ---
 # <a name="new-data-source-page-report-manager"></a>新增資料來源頁面 (報表管理員)
   使用 [新增資料來源] 頁面來建立共用資料來源項目。 共用資料來源定義外部資料來源的連接。 您可以利用共用資料來源來建立和維護資料來源連接的設定，與使用該資料來源的報表、模型和資料驅動訂閱分開處理。  

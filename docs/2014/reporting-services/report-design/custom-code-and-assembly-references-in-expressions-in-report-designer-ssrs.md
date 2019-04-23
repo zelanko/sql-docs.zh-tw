@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: beec46edc483bee002f8fc2605c22b59a63d7048
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea0a963781d4f0864f6aa02d8276bab1386a979d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041199"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947843"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
   您可以加入內嵌於報表之自訂程式碼的參考，或是建置並儲存至電腦以及部署至報表伺服器之自訂組件的參考。 請將內嵌程式碼用在自訂常數、複雜函數或在單一報表內重複使用的函數上。 請使用自訂程式碼組件，將程式碼維護在單一位置並共用程式碼，讓多份報表使用。 自訂程式碼可能會包含新的自訂常數、變數、函數或副程式。 您可以包含內建集合 (例如 Parameters 集合) 的唯讀參考， 但是不能將報表資料值集傳遞至自訂函數 (尤其是不支援自訂彙總)。  
@@ -51,7 +51,7 @@ ms.locfileid: "56041199"
 2.  在本機模式中預覽含有自訂組件之參考的報表。  
   
 ##  <a name="Common"></a> 包含常用函數的參考  
- **[運算式]** 對話方塊可用來檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一般內建函數的分類清單。 當您展開 **[一般函數]** 並按一下類別目錄時， **[項目]** 窗格就會顯示您包含在運算式中的函數清單。 一般函數包含 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空間的類別以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函數。 為了方便起見，您可以檢視中最常使用的函式**運算式**對話方塊，其中列出依類別目錄：文字、日期和時間、數學、檢閱、程式流程、彙總、財務、轉換和其他。 較不常用的函數則不會顯示在清單中，但仍可用於運算式。  
+ **[運算式]** 對話方塊可用來檢視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一般內建函數的分類清單。 當您展開 **[一般函數]** 並按一下類別目錄時， **[項目]** 窗格就會顯示您包含在運算式中的函數清單。 一般函數包含 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 和 <xref:System.Convert> 命名空間的類別以及 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 執行階段程式庫函數。 為了方便起見，您可以檢視中最常使用的函式**運算式**對話方塊，其中列出依類別目錄：文字、 日期和時間、 數學、 檢閱、 程式流程、 彙總、 財務、 轉換和其他。 較不常用的函數則不會顯示在清單中，但仍可用於運算式。  
   
  若要使用內建函數，請在 [項目] 窗格中的函數名稱上按兩下。 函數的描述會顯示在 [描述] 窗格中，函數呼叫的範例則顯示在 [範例] 窗格中。 當您在程式碼窗格中輸入函數名稱，且其後接著左括號 **(** 時，IntelliSense 會協助顯示該函數呼叫的每個有效語法。 例如，若要計算資料表中名為 `Quantity` 欄位的最大值，請將簡單運算式 `=Max(` 加入至 [程式碼] 窗格，然後使用智慧標籤來檢視該函數呼叫的所有有效語法。 若要完成此範例，請輸入 `=Max(Fields!Quantity.Value)`。  
   

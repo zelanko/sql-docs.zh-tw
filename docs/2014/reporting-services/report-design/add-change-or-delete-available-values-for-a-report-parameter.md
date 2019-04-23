@@ -12,15 +12,15 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 804673fd5b2fa9f8ed6b08b4f7609adbb5fdf157
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296226"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938774"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>為報表參數加入、變更或刪除可用的值 (報表產生器及 SSRS)
   當您建立報表參數之後，可以指定要對使用者顯示的可用值清單。 可用值清單會將使用者可以做的選擇限制為參數的有效值。  
@@ -82,7 +82,7 @@ ms.locfileid: "56296226"
  [將串聯參數加入至報表 &#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [為報表參數加入、變更或刪除預設值 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

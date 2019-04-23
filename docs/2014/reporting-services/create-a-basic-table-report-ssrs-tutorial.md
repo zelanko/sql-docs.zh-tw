@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83046be3fc713768d4dffd8dc2ef22f37496858e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286676"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944904"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
   本教學課程旨在協助您建立基本資料表報表根據[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫使用報表設計師。 您也可以使用報表產生器或報表精靈來建立報表。 在這個教學課程中，您將建立報表專案、設定連接資訊、定義查詢、加入資料表資料區域、群組與加總某些欄位，以及預覽報表。  

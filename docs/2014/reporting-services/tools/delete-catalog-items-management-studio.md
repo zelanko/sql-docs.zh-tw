@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 089bd1fbfeaf86c2f5a96e2cfcf790a90431a452
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c951e24c2d16de2fb3d5fbb6ba63fee8f143bcfd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036529"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953804"
 ---
 # <a name="delete-catalog-items-management-studio"></a>刪除目錄項目 (Management Studio)
   您可以使用這個頁面刪除共用排程和角色定義。  

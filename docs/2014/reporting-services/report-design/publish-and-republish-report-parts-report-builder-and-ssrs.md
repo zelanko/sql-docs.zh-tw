@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7390aa556898f4842850b66684c74a347caba94b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293116"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936474"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>發行與重新發行報表組件 (報表產生器及 SSRS)
   您可以使用預設值在預設位置發行報表組件，或者您可以編輯報表組件中繼資料 (例如名稱和描述)，並將其儲存在報表伺服器的其他位置。 如果您有正確的權限，也可以將其儲存到與報表伺服器整合的 SharePoint 網站。  
@@ -35,7 +35,7 @@ ms.locfileid: "56293116"
   
      否則，按一下 [發行前檢閱並修改報表組件]。  
   
-3.  編輯報表組件名稱和描述：按兩下名稱，即可加以編輯，然後按一下**描述**欄位來新增描述。  
+3.  編輯報表組件的名稱和描述：按兩下名稱可編輯名稱，而在 [描述] 欄位中按一下則可新增描述。  
   
     > [!NOTE]  
     >  最好提供報表組件名稱和描述，以協助使用者在搜尋時識別它。 若是完整路徑，報表組件名稱的最大長度為 260 個字元，包括伺服器上的資料夾名稱，後面接著報表組件的實際名稱。  

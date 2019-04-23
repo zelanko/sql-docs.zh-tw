@@ -11,15 +11,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f08d3842f5c77a46611fce8de7c2a2780ed87379
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f05aaedf8e3b8bb15d5d15d47823752832e659a5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040749"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944134"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>在 URL 內傳遞報表參數
   您可以在報表 URL 中包括報表參數，以便將它們傳遞給報表。 這些 URL 參數不會加上前置詞，因為它們會直接傳遞給報表處理引擎。  

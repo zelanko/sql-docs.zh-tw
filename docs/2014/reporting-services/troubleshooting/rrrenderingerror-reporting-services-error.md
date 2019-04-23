@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03c6f9954834527e90bf43c17febbf95e52ff728
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48a9f4428dfc2457e06dc667837d3bde09c7380d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020330"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933665"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤
     

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b902cfcb12a38ae15a175502884c1720a5a9c90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285427"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935584"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>運算式參考 (報表產生器及 SSRS)
   報表運算式支援各種內建函數與內建集合的參考。 運算式必須具有有效的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 語法，然後系統才能發行或處理報表。  

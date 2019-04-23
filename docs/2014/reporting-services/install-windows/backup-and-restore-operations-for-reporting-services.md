@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Reporting Services], restoring
 - files [Reporting Services], backing up
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa16c9f5520bd135e7ea2fc3ef13809c04eb05c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a11b10ae1403911c7593e9f6cccd21d1fdb8fd16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030139"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934344"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
   此主題提供所有用於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中資料檔案的概觀，並說明備份這些檔案的時機與方法。 復原策略中最重要的部分，就是訂定報表伺服器資料庫檔案的備份與還原計劃。 但是，更加完整的復原策略應該要包括加密金鑰、自訂組件或延伸模組、組態檔以及報表和模型之來源檔案的備份。  

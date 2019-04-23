@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7511a4b6a441d00ca51eb29daed29cef616e6473
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297406"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938834"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  
@@ -90,7 +90,7 @@ ms.locfileid: "56297406"
  [量測計 &#40;報表產生器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器和 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [教學課程：將 KPI 加入至報表&#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

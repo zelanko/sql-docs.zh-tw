@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2296933a6cced349dac17ead5a78cf0f999e23f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9781519c0ea8f13a1cad7987f3e451f6d55f86c5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039029"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942494"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI 裝置資訊設定
   下表列出以 RGDI 格式轉譯的裝置資訊設定。  

@@ -11,15 +11,15 @@ f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb37b9da0e0bd51d6fed187abfe870b26603f8e3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287076"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938884"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>影像屬性對話方塊、大小 (報表產生器及 SSRS)
   選取 **[影像屬性]** 對話方塊上的 **[大小]** 來格式化欄位或設計區域中顯示之影像的大小，或變更資料格或文字方塊邊緣和資料格或文字方塊內包含之圖片或值之間的額外空間量。  

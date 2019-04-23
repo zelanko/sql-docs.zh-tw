@@ -1,5 +1,5 @@
 ---
-title: 教學課程：地圖報表 （報表產生器） |Microsoft Docs
+title: 教學課程：地圖報表 (報表產生器) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5522f24dbb7b930b69b2656f7c2c5b53954f16ca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290916"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946934"
 ---
-# <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
+# <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 （報表產生器）
   本教學課程的設計在於協助您了解，可對照地理背景顯示報告資料的地圖功能。  
   
  地圖是以空間資料為基礎，通常由點、線條和多邊形所組成。 例如，多邊行可表示某一縣的輪廓，線條可表示一條路，點則可表示城市的位置。 每一種空間資料會在不同的地圖圖層上顯示為一組地圖元素。  
@@ -63,9 +63,9 @@ ms.locfileid: "56290916"
 10. [儲存報表](#Save)  
   
 > [!NOTE]  
->  在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器的逐步指示，選擇資料來源、 建立資料集，以及執行精靈，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表&#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
+>  在本教學課程中，精靈的步驟會合併成兩個程序：一個程序用來建立資料集，另一個程序用來建立資料表。 如需如何瀏覽至報表伺服器、選擇資料來源、建立資料集，以及執行精靈的逐步指示，請參閱本系列的第一個教學課程：[教學課程：建立基本資料表報表 &#40;報表產生器&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)。  
   
- 完成本教學課程的估計時間：30 分鐘。  
+ 估計的時間才能完成本教學課程：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
  如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  

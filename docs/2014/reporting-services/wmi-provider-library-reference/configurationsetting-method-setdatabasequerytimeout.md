@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetDatabaseQueryTimeout method
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f1bc1b1bc8ca4c2f07aa7f4924ed738d705df7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bcd76bb3ff07cc9091fe37440f38a6138d1ab4a4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027209"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938574"
 ---
 # <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseQueryTimeout 方法 (WMI MSReportServer_ConfigurationSetting)
   指定報表伺服器資料庫查詢的預設逾時值。  

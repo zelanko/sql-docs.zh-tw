@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6a9b3f472d05c8d50a351323a0af794595c83f46
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033259"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954634"
 ---
 # <a name="preview-view"></a>預覽檢視
   使用 **[預覽]** 檢視可顯示轉譯報表。 在預覽報表時，報表設計師會在本機執行報表，然後顯示在 [預覽] 檢視中。 在預覽模式中，會完整處理報表。 如果報表中有複雜的查詢或大量的資料，則在第一次進行檢視時，可能需要幾分鐘才能完成預覽。 若要查看只會影響報表格式的後續變更，則預覽會使用快取的資料。  

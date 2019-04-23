@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: abd61e19-dba3-423c-a26c-e8bc43197d3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41280d4021dae3c52ebd0e2d888108104ca7b01c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3127bf127cf7fd25286b499ac6ea805183f9c374
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289166"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948250"
 ---
 # <a name="change-the-order-of-a-report-parameter-report-builder-and-ssrs"></a>變更報表參數的順序 (報表產生器及 SSRS)
   當您的相依參數列在它所相依的參數之前時，請變更報表參數的順序。 當您具有串聯參數，或是當您想要為使用者顯示一個參數的預設值，然後使用者才可選擇其他參數值時，參數順序會很重要。 相依報表參數包含了查詢參數的參考 (在它的預設值查詢或是有效值查詢中)，該查詢參數會指向 [報表資料] 窗格中參數清單內列在它後面的報表參數。  
@@ -38,7 +38,7 @@ ms.locfileid: "56289166"
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)   
  [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [將串聯參數加入至報表 &#40;報表產生器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [教學課程：將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   

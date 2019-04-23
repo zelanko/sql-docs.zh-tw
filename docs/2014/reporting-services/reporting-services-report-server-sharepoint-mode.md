@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 246b0be389857e002e5c9e30cb899826234a58b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582204"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939484"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 
@@ -81,7 +81,7 @@ ms.locfileid: "59582204"
   
 -   *本機模式*:本機模式可讓您從 SharePoint 文件庫本機轉譯報表，而不需要與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器整合。 需要 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集，但不需要 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器。 增益集可以利用幾種不同的方式安裝，包括 SharePoint 2010 產品準備工具。 如需本機模式的詳細資訊，請參閱[本機模式與連線模式報表 [報表檢視器] &#40;Reporting Services SharePoint 模式&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)並[哪裡可以找到的 Reporting Services 增益集適用於 SharePoint 產品](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   *連接模式*:連接模式的支援方式是使用 SharePoint 管理中心，將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器整合至 SharePoint 伺服陣列中。 與報表伺服器整合可啟用完整的端對端報告，並提供 SharePoint 2010 的共同作業功能以及報表伺服器的伺服器架構功能，包括：訂閱、快照集和伺服器架構處理。  
+-   *連接模式*:連接的模式的支援藉由整合[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]至 SharePoint 伺服器陣列中使用 SharePoint 管理中心內的報表伺服器。 與報表伺服器整合可讓您完整端對端報表，並提供 SharePoint 2010 的共同作業功能以及報表伺服器，包括伺服器架構功能：訂用帳戶、 快照及伺服器架構處理。  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> 不支援的 SharePoint 功能
 

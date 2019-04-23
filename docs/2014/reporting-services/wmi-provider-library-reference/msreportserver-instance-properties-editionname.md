@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EditionName property
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f3e86324f580968df31b15ee12895072895e587
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b48ae5874146d31552bc940dc3e15eaf80e11883
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040689"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950644"
 ---
 # <a name="editionname-property-wmi-msreportserverinstance"></a>EditionName 屬性 (WMI MSReportServer_Instance)
   傳回報表伺服器版本之人們可讀取的名稱。 唯讀。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Viewer [Reporting Services]
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bedfa3c06a760baccd460915f313bb1bc6dcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293126"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947965"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>在 Microsoft Surface 裝置及 Apple iOS 裝置上檢視 Reporting Services 報表
   本文將描述支援 Microsoft Surface 裝置以及具有 Apple iOS 6 與 Apple Safari 之裝置 (例如 iPad) 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能和工作流程。  
@@ -49,16 +49,16 @@ ms.locfileid: "56293126"
   
 2.  執行下列其中一項動作來開啟報表。  
   
-    -   **從電子郵件啟動：** 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱所建立的電子郵件中，點選報表的 URL。 報表將在瀏覽器中開啟。  
+    -   **從電子郵件啟動：** 所建立的電子郵件[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]訂用帳戶，請點選報表的 URL。 報表將在瀏覽器中開啟。  
   
-    -   **從報表伺服器開始：** 瀏覽 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上的目錄，然後點選報表名稱來開啟報表。  
+    -   **從報表伺服器開始：** 在瀏覽目錄[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器，，，然後點選報表名稱開啟報表。  
   
-    -   **從 SharePoint 文件庫開始：** 瀏覽至包含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表的 SharePoint 文件庫，然後點選報表名稱。 您就可以檢視報表並進行互動。  
+    -   **從 SharePoint 文件庫開始：** 瀏覽至 SharePoint 文件庫，其中包含[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表，然後點選 報表名稱。 您就可以檢視報表並進行互動。  
   
         > [!IMPORTANT]  
         >  如果是 iPad，請確定 Safari 的 **[私密瀏覽]** 屬性已關閉。  
   
-    -   **SharePoint web 組件：** 如果 Web 組件已加入 SharePoint 頁面，即可檢視 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表。  
+    -   **SharePoint web 組件：** 如果已將 web 組件加入至 SharePoint 頁面中，您可以檢視[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表。  
   
 3.  您也可以在您的 Microsoft Surface 裝置上，使用報表管理員來開啟報表。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員中瀏覽目錄，然後點選報表名稱開啟報表。  
   

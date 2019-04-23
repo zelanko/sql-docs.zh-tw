@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Hyperion Essbase [Reporting Services], query designer
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 36577210d6279b859cd88423b436567951aef1b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53e262980046e01ccf7e366cdf8135c815fea1fe
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035359"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955134"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase 查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供圖形化查詢設計工具，可用以建立 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，而且您可以透過這個窗格，從資料來源上定義的 Cube 中拖曳成員，以便建立可在處理報表時擷取資料的 MDX 查詢。  

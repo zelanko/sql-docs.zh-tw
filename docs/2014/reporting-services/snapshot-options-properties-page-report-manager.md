@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4a18e523c8d839cc6ec9e0c64c94ad648b1c1d0c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042349"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954344"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>快照集選項屬性頁面 (報表管理員)
   使用 [快照集選項] 屬性頁面可以排程要加入至報表記錄的報表快照集，以及設定報表記錄中儲存之報表快照集的數目限制。  
@@ -58,7 +58,7 @@ ms.locfileid: "56042349"
   
  報表記錄會儲存在報表伺服器資料庫中。 如果您有想要保留記錄的大型報表或許多報表，請考慮限制報表記錄的數量，以便協助管理報表伺服器資料庫的磁碟空間需求。  
   
- **套用**  
+ **Apply**  
  按一下即可儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  

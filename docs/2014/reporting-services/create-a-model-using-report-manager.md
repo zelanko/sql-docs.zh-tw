@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010438"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955150"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用報表管理員建立模型
   您可以使用報表管理員，從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫或 Oracle 資料庫產生模型。 報表模型是從在報表伺服器上發行的共用資料來源產生的。 如果您還沒有共用資料來源，則必須建立一個。  
@@ -47,9 +47,9 @@ ms.locfileid: "56010438"
   
 8.  選取報表產生器使用者需要用來連接到資料庫的連接方法。  
   
-    -   Windows 驗證：如果您要作業系統驗證 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者，請選取此選項。 此選項允許 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 Windows 安全性功能 (例如密碼加密)，來驗證使用者。 強烈建議您選取此選項。  
+    -   Windows 驗證：選取此選項，當您想要驗證的作業系統時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用者。 此選項允許 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 Windows 安全性功能 (例如密碼加密)，來驗證使用者。 強烈建議您選取此選項。  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證：如果要使用者使用您建立的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入帳戶，請選取此選項。 使用者必須提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入名稱和密碼。  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證：選取此選項，當您想要使用的使用者時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]您所建立的登入帳戶。 使用者必須提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入名稱和密碼。  
   
         > [!CAUTION]  
         >  可能的話，請使用 Windows 驗證。  

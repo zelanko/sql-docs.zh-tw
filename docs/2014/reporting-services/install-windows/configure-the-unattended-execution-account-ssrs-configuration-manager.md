@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012069"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946924"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
@@ -36,7 +36,7 @@ ms.locfileid: "56012069"
  自動報表處理是指由事件觸發 (不論是排程驅動事件或資料重新整理事件)，而非由使用者要求觸發的任何報表執行處理。 報表伺服器使用自動報表處理帳戶，來登入主控外部資料來源的電腦。 因為報表伺服器服務帳戶的認證絕不會用來連接到其他電腦，所以需要此帳戶。  
   
 > [!IMPORTANT]  
->  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 特別是，如果您讓密碼過期或者 Active Directory 中的帳戶資訊變更，則下次在處理報表時，您將遇到下列的錯誤訊息：「登入失敗 (rsLogonFailed) 登入失敗：未知的使用者名稱或密碼錯誤。」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
+>  設定此帳戶是選擇性的。 不過，如果沒有加以設定，您就可能無法連接到某些資料來源，而且可能無法從遠端電腦擷取影像檔。 如果您真的設定帳戶，就必須讓它保持最新狀態。 具體來說，如果您讓密碼過期或者 Active Directory 中變更帳戶資訊，就會發生下列錯誤的下次在處理報表：「 登入失敗 (rsLogonFailed) 登入失敗： 未知的使用者名稱或密碼不正確。 」 正確維護自動報表處理帳戶是很重要的，即使您從未擷取外部影像或傳送對外部電腦的連接要求也是如此。 如果在設定帳戶之後發現並未使用該帳戶，可以將其刪除，這樣就不需經常進行帳戶維護工作。  
   
 ## <a name="how-to-configure-the-account"></a>如何設定帳戶  
  您必須使用網域使用者帳戶。 為了提供原先預期的用途，此帳戶應該與用來執行報表伺服器服務的帳戶不同。 請務必使用符合下列條件的帳戶：擁有最小權限 (具有網路連接的唯讀存取權限就足夠)，而且僅擁有提供資料來源和資源給報表伺服器之電腦的有限存取權。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)。  

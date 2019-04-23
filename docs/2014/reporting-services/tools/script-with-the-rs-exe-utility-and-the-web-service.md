@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9469f3b28c6821f5829e84d96dab2617f85670c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cc585670b2f91253e85159b1a7715c2a7a603f16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040869"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946854"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>利用 rs.exe 公用程式與 Web 服務編寫指令碼
   開發人員與報表伺服器管理員可以在報表伺服器上，透過使用 **rs** 公用程式 (RS.exe) 來執行作業。 利用這個公用程式，您可以使用以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]撰寫的指令碼，透過程式設計方式管理報表伺服器。  

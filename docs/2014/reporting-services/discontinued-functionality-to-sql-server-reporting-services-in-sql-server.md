@@ -1,7 +1,7 @@
 ---
 title: 已停止的功能
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services-2014, sql-server-2014
 ms.reviewer: ''
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f36a55baee21f81305857ba766879d69c73bbdb5
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 3a5472859c582e026fc0c5aafac21abccdc93044
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552970"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949964"
 ---
-# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>已停止的功能，在 SQL Server Reporting Services (SSRS)
+# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中已中止的功能
 
   本主題描述 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 其中不包含有關停止支援特定版本之作業系統或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS) 的宣告。 如需有關系統必要條件的詳細資訊，請參閱 <<c0> [ 硬體和軟體需求，安裝 SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   

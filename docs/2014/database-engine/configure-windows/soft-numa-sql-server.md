@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356132"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953824"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>設定 SQL Server 使用軟體 NUMA (SQL Server)
 現代處理器在每個插槽有許多核心。 每個插槽通常代表單一 NUMA 節點。 SQL Server 資料庫引擎資料分割將每個 NUMA 節點分為內部結構和資料分割服務執行緒。 處理器包含 10 個或多個核心，每個通訊端，使用軟體 NUMA (軟體 NUMA) 將硬體 NUMA 節點通常會增加延展性和效能。   
@@ -27,7 +27,6 @@ ms.locfileid: "53356132"
 > 軟體 NUMA 不支援熱新增處理器。
   
 ## <a name="automatic-soft-numa"></a>自動軟體 NUMA
-
 從 SQL Server 2014 Service Pack 2，每當資料庫引擎伺服器偵測到 8 個以上的實體處理器，在啟動時，軟體 NUMA 節點會自動建立如果啟用追蹤旗標 8079 作為啟動參數。 計算實體處理器時，超執行緒處理器核心不會計算的。 當偵測到的實體處理器的數目超過 8 個每個通訊端時，database engine 服務會建立在理想情況下包含 8 個核心，但可以減少至每個節點 5 個最多 9 個邏輯處理器的 NUMA 節點。 硬體節點的大小可由 CPU 關連遮罩限制。 NUMA 節點數目將永遠不會超過支援的 NUMA 節點數目上限。
 
 不追蹤旗標預設會停用 NUMA。 您可以讓 NUMA 使用追蹤旗標 8079。 變更此設定值需要重新啟動資料庫引擎才會生效。
@@ -36,9 +35,12 @@ ms.locfileid: "53356132"
 
 ![ssNoVersion](./media/soft-numa-sql-server/soft-numa.PNG)
 
+> [!NOTE]
+> 此行為由引擎和追蹤旗標 8079 控制 SQL Server 2016 開始，沒有任何作用。
+
 ## <a name="manual-soft-numa"></a>手動軟體 NUMA
   
-若要設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要以手動方式使用軟體 NUMA，您必須編輯登錄來加入節點組態親和性遮罩。 軟體 NUMA 遮罩可陳述為二進位、DWORD (十六進位或十進位) 或 QWORD (十六進位或十進位) 登錄項目。 若要設定超過前 32 個 CPU，請使用 QWORD 或 BINARY 登錄值 (在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前的版本不能使用 QWORD 值。)您必須重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 來設定軟體 NUMA。  
+若要設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要以手動方式使用軟體 NUMA，您必須編輯登錄來加入節點組態親和性遮罩。 軟體 NUMA 遮罩可陳述為二進位、DWORD (十六進位或十進位) 或 QWORD (十六進位或十進位) 登錄項目。 若要設定超過前 32 個 CPU，請使用 QWORD 或 BINARY 登錄值 (在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前的版本不能使用 QWORD 值。)您必須重新啟動[!INCLUDE[ssDE](../../includes/ssde-md.md)]設定軟體 NUMA。  
   
 > [!TIP]  
 >  CPU 編號從 0 開始。  
@@ -55,7 +57,7 @@ ms.locfileid: "53356132"
   
  發生大量 I/O 的執行個體 A，現在有兩個 I/O 執行緒和一個延遲寫入器執行緒，而執行處理器密集作業的執行個體 B，只有一個 I/O 執行緒和一個延遲寫入器執行緒。 不同記憶體數量可指派給執行個體，但與硬體 NUMA 不同，它們都是從相同作業系統記憶體區塊接收記憶體，而沒有記憶體對處理器的相似性。  
   
- 延遲寫入器執行緒會繫結至實體 NUMA 記憶體節點的 SQL OS 檢視。 因此，呈現為實體 NUMA 節點的任何硬體都將等於建立的延遲寫入器執行緒數目。 如需詳細資訊，請參閱[運作方式：軟體式 NUMA、 I/O 完成執行緒、 延遲寫入器工作者和記憶體節點](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
+ 延遲寫入器執行緒會繫結至實體 NUMA 記憶體節點的 SQL OS 檢視。 因此，呈現為實體 NUMA 節點的任何硬體都將等於建立的延遲寫入器執行緒數目。 如需詳細資訊，請參閱 [How It Works:軟體式 NUMA、 I/O 完成執行緒、 延遲寫入器工作者和記憶體節點](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)。  
   
 > [!NOTE]  
 >  當您升級 **執行個體時，不會複製** 軟體 NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登錄機碼。  

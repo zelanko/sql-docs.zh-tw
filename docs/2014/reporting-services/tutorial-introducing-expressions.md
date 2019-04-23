@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579598"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938324"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
   運算式可協助您建立強大而靈活的報表。 本教學課程將教您建立和實作使用一般函數和運算子的運算式。 您將使用**運算式**對話方塊，即可撰寫運算式以串連名稱值、 查閱值在不同的資料集中，顯示不同的圖片，根據欄位的值，並依此類推。  
@@ -54,7 +54,7 @@ ms.locfileid: "57579598"
   
 -   [儲存報表](#Save)  
   
- 完成本教學課程的估計時間：30 分鐘。  
+ 估計的時間才能完成本教學課程：30 分鐘。  
   
 ## <a name="requirements"></a>需求  
  如需需求的資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  

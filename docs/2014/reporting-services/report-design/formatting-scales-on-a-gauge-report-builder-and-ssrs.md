@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 48c26787d53f6ecb1ce1082a9d570c565d02e66d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 36074fe67459cb47f6becfe914fe868baf5d4940
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290666"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932864"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的標尺 (報表產生器及 SSRS)
   量測計標尺是顯示在量測計上，受限於最小值與最大值的數字範圍。 量測計標尺通常包含量測計標籤與刻度，以便正確讀取量測計指標所顯示的數目。 量測計標尺通常與一或多個量測計指標相關聯。 在相同的量測計上可以有一個以上的標尺。  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289009"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940664"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>報表管理員 (SSRS 原生模式)
   「報表管理員」是 Web 架構的報表存取與管理工具，用來從遠端位置透過 HTTP 連線管理單一報表伺服器執行個體。 您也可以使用報表管理員的報表檢視器和導覽功能。 本主題內容：  

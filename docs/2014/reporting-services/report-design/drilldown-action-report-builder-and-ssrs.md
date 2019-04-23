@@ -38,15 +38,15 @@ f1_keywords:
 - "10062"
 - "10053"
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f04eaab455f27c0450d9d6c3d9f4b9f1c39ec0f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297306"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935354"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>向下鑽研動作 (報表產生器及 SSRS)
   透過在文字方塊上提供加號和減號圖示，您就可以讓使用者以互動方式隱藏和顯示項目。 這稱為 *「向下鑽研」* (Drilldown) 動作。 對於資料表或矩陣，您可以顯示或隱藏靜態資料列和資料行，或者顯示或隱藏與群組相關聯的資料列和資料行。  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - security [Reporting Services]
 - Reporting Services, security
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 872a1796bf27483ae424c2b4c026bc0e439ccac8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca88c252e37362f2a5b64bb8d41ebac27f0e24dd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017359"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943134"
 ---
 # <a name="reporting-services-security-and-protection"></a>Reporting Services 安全性與保護
   您可以使用本節的資訊，了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 本節也將說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所支援的授權模型和驗證提供者。  

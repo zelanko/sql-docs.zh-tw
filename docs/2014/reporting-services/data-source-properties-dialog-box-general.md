@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c8dc6e3ca883e5d27358733df7c6f83ee8c4eab
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7db7aa857e695e35dee5125cdfed1effe3dd1852
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295556"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949424"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>資料來源屬性對話方塊、一般
   選取 **[資料來源屬性]** 對話方塊上的 **[一般]** ，即可在報表中顯示和修改資料來源的連接資訊。  

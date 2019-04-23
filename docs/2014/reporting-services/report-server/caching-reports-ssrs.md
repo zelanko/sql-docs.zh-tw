@@ -20,15 +20,15 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0e063b662d83655eb9c8a99b8ec1317dfffa263
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029699"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935544"
 ---
 # <a name="caching-reports-ssrs"></a>快取多個報表 (SSRS)
   報表伺服器可以快取已處理報表的副本，並在使用者開啟報表時還原該副本。 對使用者而言，能夠指出報表是快取副本的唯一證據是報表執行的日期和時間。 如果日期或時間不是目前的日期和時間，且報表不是快照集，則報表是從快取擷取而來。  

@@ -1,7 +1,7 @@
 ---
 title: 延伸模組
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 13c3ac54ba2c9713789c131a2bc1cee4ebe4c809
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553100"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938414"
 ---
-# <a name="extensions-for-sql-server-reporting-services-ssrs"></a>適用於 SQL Server Reporting Services (SSRS)
+# <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 的延伸模組
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的報表伺服器會使用延伸模組，以模塊化其接受用於驗證、資料處理、報表轉譯及報表傳遞的輸入或輸出類型。 這可讓現有的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝輕鬆地利用產業中的新軟體標準，例如新驗證結構，或是自訂資料來源類型。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 報表伺服器至少需要一個驗證延伸模組、資料處理延伸模組和轉譯延伸模組。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "53553100"
   
 ## <a name="rendering-extensions"></a>轉譯延伸模組
 
- 轉譯延伸模組會將報表處理器的資料與配置資訊轉換成裝置特定格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
+ 轉譯延伸模組會將報表處理器的資料與配置資訊轉換成裝置特定格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、 Excel、 CSV、 XML、 Image、 PDF、 和[!INCLUDE[msCoName](../includes/msconame-md.md)]Word。  
   
 - **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱 <<c0> [ 轉譯為 HTML&#40;報表產生器及 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)並[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).</c0>  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53553100"
   
 - **XML 轉譯延伸模組** ：XML 轉譯延伸模組將報表轉譯成 XML 檔案。 然後，這些 XML 檔案就可以供其他程式儲存或讀取。 您也可以使用 XSLT 轉換，將報表變成可供其他應用程式使用的另一種 XML 結構描述。 由 XML 轉譯延伸模組所產生的 XML 是以 UTF-8 編碼。 如需詳細資訊，請參閱 [匯出至 XML &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md)中使用這項資料。  
   
--   **影像轉譯延伸模組** ：影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 這個延伸模組可將報表轉譯成下列格式：BMP、EMF、GIF、JPEG、PNG、TIFF 和 WMF。 依預設，影像會轉譯成 TIFF 格式，可使用作業系統預設的影像檢視器來顯示 (例如，Windows 圖片和傳真檢視器)。 您可以從檢視器將影像傳送到印表機。 使用影像轉譯延伸模組來轉譯報表，以確保報表在每一個用戶端看起來皆一致。 (當使用者以 HTML 格式檢視報表時，報表的外觀會因使用者所用的瀏覽器版本、使用者的瀏覽器設定，以及可使用的字型而有所不同)。影像轉譯延伸模組會在伺服器上轉譯報表，因此所有的使用者皆會看到相同的影像。 因為報表是在伺服器上轉譯，報表中所使用的所有字型都必須安裝在伺服器上。 如需詳細資訊，請參閱 [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中使用這項資料。  
+-   **影像轉譯延伸模組** ：影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 擴充功能可以轉譯報表，以下列格式：BMP、 EMF、 GIF、 JPEG、 PNG、 TIFF 和 WMF。 依預設，影像會轉譯成 TIFF 格式，可使用作業系統預設的影像檢視器來顯示 (例如，Windows 圖片和傳真檢視器)。 您可以從檢視器將影像傳送到印表機。 使用影像轉譯延伸模組來轉譯報表，以確保報表在每一個用戶端看起來皆一致。 （當使用者在 HTML 檢視報表時，根據使用者的瀏覽器、 使用者的瀏覽器設定，以及字型所提供的版本即可以不同，報表的外觀）。影像轉譯延伸模組會在伺服器上轉譯報表，因此所有的使用者皆會看到相同的影像。 因為報表是在伺服器上轉譯，報表中所使用的所有字型都必須安裝在伺服器上。 如需詳細資訊，請參閱 [匯出至影像檔 &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)中使用這項資料。  
   
 - **PDF 轉譯延伸模組** ：PDF 轉譯延伸模組會將報表轉譯成可在 Adobe Acrobat 6.0 或更新版本中開啟和檢視的 PDF 檔案。 如需詳細資訊，請參閱 [匯出至 PDF 檔案 &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)中使用這項資料。  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac879ad519b08ae272c8ac30dd37021123570cca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038109"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950844"
 ---
 # <a name="role-definitions"></a>角色定義
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，*角色**定義*是一個具名的工作集合，這些工作會定義可在報表伺服器上執行的作業。 角色定義會提供報表伺服器用來強制執行安全性的規則。 當使用者嘗試執行工作 (例如發行報表) 時，報表伺服器就會檢查使用者的角色指派，以便判斷工作是否包含在其角色定義中。 如果工作包括在角色定義中，便會提交要求。  

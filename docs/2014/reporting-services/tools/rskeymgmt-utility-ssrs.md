@@ -19,15 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4135236979beb320c201f635ad353cbe83a261bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038259"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941194"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
   擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
@@ -148,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  報表伺服器向外延展部署是指多個報表伺服器執行個體共用相同報表伺服器資料庫的部署模型。 對稱金鑰儲存在報表伺服器資料庫中的任何報表伺服器執行個體，都可以使用報表伺服器資料庫。 例如，如果報表伺服器資料庫包含三個報表伺服器執行個體的金鑰資訊，這三個執行個體都會被視為相同向外延展部署的成員。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>在相同電腦上聯結報表伺服器執行個體  
- 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 `-u` 和 `-v` 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 `-u` 和 `-v` 引數。 如果您指定這些引數，將會出現下列錯誤：「使用者認證無法用於本機連接。」  
+ 您可以從安裝在相同電腦上的多個報表伺服器執行個體中建立向外延展部署。 如果您要聯結的報表伺服器執行個體是安裝在本機，請不要設定 `-u` 和 `-v` 引數。 只有當您從遠端電腦聯結執行個體時，才要使用 `-u` 和 `-v` 引數。 如果您指定的引數時，您會收到下列錯誤：「 使用者認證無法用於本機連接。 」  
   
- 下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在這個範例中，<`initializedinstance`> 是已初始化為使用報表伺服器資料庫的執行個體名稱，而 <`newinstance`> 是您要加入部署的執行個體名稱。  
+ 下列範例說明使用多個本機執行個體建立向外延展部署的語法。 在此範例中，<`initializedinstance`> 是已初始化為使用報表伺服器資料庫中，執行個體的名稱和 <`newinstance`> 是您想要新增至部署的執行個體名稱：  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

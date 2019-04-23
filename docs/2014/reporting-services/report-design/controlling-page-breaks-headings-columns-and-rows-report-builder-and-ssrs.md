@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc969fe0b0851ddfaa84e103b1683f42d09e0334
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291666"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949704"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分頁符號、標題、資料行和資料列 (報表產生器及 SSRS)
   分頁符號可以將報表分割成不同的頁面進行檢視和列印。 當您預覽報表或將它匯出成不同的檔案格式時，分頁符號會決定內容如何納入報表頁面，以便進行最佳檢視。  

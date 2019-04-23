@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296876"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940704"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的資料點 (報表產生器及 SSRS)
   資料點是圖表上最小的個別實體。 在非形狀圖上，資料點的表示取決於其圖表類型。 例如，線條數列由一個或多個已連接的資料點所組成。 在形狀圖上，資料點會以加入到整個圖表的個別配量或區段表示。 例如，在圓形圖上，每一塊都是一個資料點。 如需詳細資訊，請參閱 [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "56296876"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>在圖表上放置資料點標籤  
  針對所有圖表類型，當您以滑鼠右鍵按一下圖表，然後選取 **[顯示資料標籤]** 時，可以顯示資料點標籤。 資料點標籤的位置會根據圖表類型而指定：  
   
--   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 有四個可能的位置：Outside、 Left、 Center 與 Right。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
+-   在橫條圖上，您可以使用 **BarLabelStyle** 自訂屬性重新放置資料點標籤的位置。 有四個可能位置：外側、左側、中間與右側。 當橫條標籤樣式設定為 Outside 時，只要圖表區域能夠容納，標籤就會放置在橫條外部。 如果無法將標籤放置在橫條外部與圖表區域內部，標籤就會放在橫條內部。  
   
 -   在圓形圖上，您可以使用 **PieLabelStyle** 自訂屬性重新放置資料點標籤的位置。 在圓形圖周圍放置資料點標籤時有許多考量，包括圓形圖的大小、圓形圖及其對應圖例間的可用空間以及標籤的大小。 如需詳細資訊，請參閱 [在圓形圖外部顯示資料點標籤 &#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "56296876"
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [教學課程：將圓形圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [教學課程：將圓形圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

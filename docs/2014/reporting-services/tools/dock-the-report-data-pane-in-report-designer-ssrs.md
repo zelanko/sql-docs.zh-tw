@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7892e0699c9815cdf16b3f40e553f95d38ac51df
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036609"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946634"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的報表設計師中，[報表資料] 窗格會顯示您可用於報表之資料物件的階層式檢視，包括資料來源、資料集、欄位、參數和影像。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  

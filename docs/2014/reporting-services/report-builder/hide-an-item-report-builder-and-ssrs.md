@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b0cd9fc3c7a2621aef6d2b77bf0cd80d6ca73916
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291336"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941624"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隱藏項目 (報表產生器及 SSRS)
   當您想要有條件地根據報表參數或是您所指定的某些其他運算式來隱藏項目時，請設定報表項目的可見性。  

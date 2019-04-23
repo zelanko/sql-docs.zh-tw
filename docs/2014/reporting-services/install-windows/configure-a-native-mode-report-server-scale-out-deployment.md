@@ -12,15 +12,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68951c637d0c0db1fc86bab6405868e73770aca2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ccf18bd73c36717385f77e1adbe14bcc1535634
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395231"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947814"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>設定原生模式報表伺服器向外延展部署 (SSRS 組態管理員)
 
@@ -92,7 +92,7 @@ ms.locfileid: "52395231"
   
     6.  在 [**報表伺服器資料庫**，選取您的第一個報表伺服器時，所建立的資料庫，然後按一下**下一步]**。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
   
-    7.  在 [認證] 頁面中，選取報表伺服器將用來連接到報表伺服器資料庫的帳戶類型和認證。 您可以使用與第一個報表伺服器執行個體相同的認證，或是不同的認證。 按 [下一步] 。  
+    7.  在 [認證] 頁面中，選取報表伺服器將用來連接到報表伺服器資料庫的帳戶類型和認證。 您可以使用與第一個報表伺服器執行個體相同的認證，或是不同的認證。 按一下 [下一步] 。  
   
     8.  按一下 **摘要**，然後按一下**完成**。  
   

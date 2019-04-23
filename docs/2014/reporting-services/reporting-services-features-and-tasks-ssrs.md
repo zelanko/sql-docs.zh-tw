@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 601f4ca75b9126d1f3d5e4b534159245e3785a0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d20fc0c1257d467f2115095b19c4d1b05c37cebb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041779"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950554"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 功能及工作 (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 基礎內容是依報表和報表功能、報表伺服器功能以及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 產品功能進行組織。  

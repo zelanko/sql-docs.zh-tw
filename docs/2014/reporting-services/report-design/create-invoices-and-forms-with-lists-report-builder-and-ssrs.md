@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290386"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950457"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>清單 (報表產生器及 SSRS)
   清單資料區域會隨報表資料集中的每一個群組或資料列重複。 清單可以用於建立自由形式的報表或表單 (如發票)，也可以與其他資料區域一起使用。 您可以定義包含任何數目之報表項目的清單。 清單可以巢狀放在另一份清單內，以提供多個資料群組。  
@@ -24,7 +24,7 @@ ms.locfileid: "56290386"
 > [!NOTE]  
 >  您可以將清單當做報表組件，與報表分開發行。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 若要快速開始使用清單，請參閱[教學課程：建立自由格式報表&#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
+ 若要快速開始使用清單，請參閱[教學課程：建立自由格式報表 &#40;報表產生器&#41;](../tutorial-creating-a-free-form-report-report-builder.md)。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 範例報表包含一份使用清單的報表。 您可以在報表產生器或報表設計師中瀏覽範例報表的報表定義，或在報表產生器或報表設計師中預覽轉譯的報表，藉以了解清單。 如需有關下載範例報表的詳細資訊，請參閱＜ [(SSRS) Reporting Services 範例](https://go.microsoft.com/fwlink/?LinkID=198283)＞。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56290386"
 ##  <a name="DisplayingLayout"></a> 以自由形式的配置顯示資料  
  若要以自由形式配置而非方格組織報表資料，您可以將清單加入到設計介面中。 將欄位從 [報表資料] 窗格拖曳至資料格。 根據預設，資料格包含當做容器使用的矩形。 在容器中移動每個欄位，直到擁有所需的設計為止。 當您在矩形容器中拖曳文字方塊時使用對齊線可協助您以垂直和水平方式對齊邊緣。 調整資料格的大小來移除不想要的空白字元。 如需詳細資訊，請參閱[變更資料列高度或資料行寬度 &#40;報表產生器及 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)。  
   
- 下圖顯示的順序，包括這些欄位的相關資訊的清單：日期、 訂單、 Qty、 產品、 LineTotal 和影像。  
+ 下圖中的清單會顯示訂單的相關資訊，包括以下欄位：Date、Order、Qty、Product、LineTota 和影像。  
   
  ![設計檢視中的清單、4 個欄位及映像](../media/rs-basiclistformdesign.gif "設計檢視中的清單、4 個欄位及映像")  
   

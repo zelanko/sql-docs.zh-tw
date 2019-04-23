@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c8f74713a07969ba724ccf2679d7f7bf17fb7ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 931820d46eefe696e256a2fbd586b14bdb1a3313
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024360"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942014"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 成員
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

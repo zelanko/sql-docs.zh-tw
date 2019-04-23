@@ -17,15 +17,15 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d726e3982636b89819afed3a8500a581eebffc13
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2e9abd4e72182bb649eb608a2f7a7e2bef7044f9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019619"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936935"
 ---
 # <a name="msreportserverconfigurationsetting-methods"></a>MSReportServer_ConfigurationSetting 方法
   報表伺服器 WMI 提供者的 MSReportServer_ConfigurationSetting 類別會提供下列公用方法。  
