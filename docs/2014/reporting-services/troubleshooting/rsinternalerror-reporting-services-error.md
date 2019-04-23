@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsInternalError
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c7aa0e00646c8fb85f75581286d080dd722f6436
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fbdb1c9e8df7ec3223dc4050f9dd6f83c56152d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029439"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971314"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 錯誤
     

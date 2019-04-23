@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c697a0bcf7c7b338169100aeac0d65b341c86f5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146353"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155604"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的資料類型
   針對所有<xref:Microsoft.AnalysisServices.DataItem>物件[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援的下列子集`System.Data.OleDb.OleDbType`。 若要設定或讀取的資料類型，請使用[DataItem 資料類型&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)。  
@@ -49,7 +47,7 @@ ms.locfileid: "50146353"
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|二進位以外的所有資料類型|  
 ||NameColumn|僅 WChar|  
-||SkippedLevelsColumn|僅限整數類型：BigInt、整數、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+||SkippedLevelsColumn|僅限整數類型：BigInt、 整數、 SmallInt、 TinyInt、 UnsignedBigInt、 UnsignedInt、 UnsignedSmallInt、 UnsignedTinyInt|  
 ||CustomRollupColumn|僅 WChar|  
 ||CustomRollupPropertiesColumn|僅 WChar|  
 ||UnaryOperatorColumn|僅 WChar|  
@@ -59,6 +57,6 @@ ms.locfileid: "50146353"
 ||NameColumn|僅 WChar|  
 |TableMiningStructureColumn|ForeignKeyColumns|二進位以外的所有資料類型|  
 |MeasureGroupAttribute|KeyColumns|二進位以外的所有資料類型|  
-|相異計數量值|來源|BigInt、貨幣、Double、整數、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+|相異計數量值|Source|BigInt、貨幣、Double、整數、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
   
   

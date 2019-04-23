@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618175"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159004"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
@@ -71,18 +71,22 @@ ms.locfileid: "58618175"
 - SQL Server 資料表
 
 ### <a name="if-using-a-csv-file"></a>如果使用 CSV 檔案
+
 > [!IMPORTANT]
->
 > 請確定清查檔案會儲存為逗號分隔 (CSV) 檔案。
 >
 > 針對預設執行個體，設定執行個體名稱為 MSSQLServer。
->
+
 
 當使用 csv 檔案匯入資料，請確定只有兩個資料行的資料-**執行個體名稱**並**資料庫名稱**，且資料行沒有標頭資料列。
  
  ![csv 檔案內容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>如果使用 SQL Server 資料表
+### <a name="if-using-a-sql-server-table"></a>如果使用 SQL Server 資料表
+
+> [!IMPORTANT]
+> 針對預設執行個體，設定執行個體名稱為 MSSQLServer。
+
 建立名為的資料庫**EstateInventory**和名**DatabaseInventory**。 包含這個清查資料的資料表可以有任意數目的資料行，只要有下列四個資料行：
 - ServerName
 - InstanceName
@@ -161,8 +165,8 @@ DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting �
 
 1. 在 Power BI Desktop 中開啟 DMA 報表 Power BI 的範本。
 2. 輸入伺服器的詳細資料，以指向您**DMAWarehouse**資料庫，然後按**負載**。
-   
-      ![載入的 DMA 報表 Power BI 範本](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![載入的 DMA 報表 Power BI 範本](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    已重新整理報表中的資料之後**DMAWarehouse**資料庫中，將會看到類似下列的報表。
 

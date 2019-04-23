@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - management endpoints [Reporting Services]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009702"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153847"
 ---
 # <a name="report-server-web-service-endpoints"></a>報表伺服器 Web 服務端點
   報表伺服器 Web 服務提供幾個端點來管理報表伺服器以及執行和導覽報表。  
@@ -67,7 +65,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |Proxy 端點|描述|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|提供 API 以管理設定為 SharePoint 整合模式的報表伺服器。 **注意：** 此端點在 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 中已被取代。|  
+|<xref:ReportService2006>|提供 API 以管理設定為 SharePoint 整合模式的報表伺服器。 **注意：** 此端點中已過時[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。|  
 |<xref:ReportService2010>|提供 API 以管理設定為原生模式或 SharePoint 整合模式的報表伺服器。|  
 |<xref:ReportExecution2005>|提供 API 來執行及導覽報表。|  
 |<xref:ReportServiceAuthentication>|提供 API，在 SharePoint Web 應用程式有設定表單驗證時，針對報表伺服器來驗證使用者。|  

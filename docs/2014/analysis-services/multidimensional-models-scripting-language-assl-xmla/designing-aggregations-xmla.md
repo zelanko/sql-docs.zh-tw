@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - statistical information [XML for Analysis]
@@ -20,12 +18,12 @@ ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1128fccb209c38f4b33009b3045f0f3ad2aebb1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148153"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156134"
 ---
 # <a name="designing-aggregations-xmla"></a>設計彙總 (XMLA)
   彙總設計會與特定量值群組的資料分割關聯，以確保資料分割在儲存彙總時會使用相同的結構。 資料分割使用相同的儲存體結構可讓您輕鬆地定義 合併資料分割可以稍後使用[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令。 如需有關彙總設計的詳細資訊，請參閱[彙總及彙總設計](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
@@ -108,7 +106,7 @@ ms.locfileid: "50148153"
 |步驟|Integer|在將控制權還給用戶端應用程式之前，命令所使用的步驟數目。|  
 |Time|長整數|在將控制權還給用戶端應用程式之前，命令所花費的毫秒數目。|  
 |Optimization|Double|在將控制權還給用戶端應用程式之前，命令所達成的效能改善估計百分比。|  
-|Storage|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
+|儲存體|長整數|在將控制權還給用戶端應用程式之前，命令所使用的位元組估計數目。|  
 |Aggregations|長整數|在將控制權還給用戶端應用程式之前，命令所定義的彙總數目。|  
 |LastStep|布林|指出在資料列集中的資料是否代表設計程序中的最後一個步驟。 如果命令的 `Materialize` 屬性設定為 True，就會將這個資料行值設定為 True。|  
   

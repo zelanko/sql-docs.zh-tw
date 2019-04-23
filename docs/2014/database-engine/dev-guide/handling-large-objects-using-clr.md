@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350272"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155664"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 處理大型物件
   SQL Server 的 `HandlingLOBUsingCLR` 範例會示範如何使用 Common Language Runtime (CLR) 預存程序，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與伺服器可用的檔案系統之間傳送大型物件 (LOB)。 此範例示範如何在伺服器端程式碼中存取檔案，並從以 CLR 為基礎的預存程序同時叫用動態查詢和預存程序。 它也示範如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來註冊和取消註冊 CLR 方法及組件。  
