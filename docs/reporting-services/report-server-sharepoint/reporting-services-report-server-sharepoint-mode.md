@@ -7,13 +7,14 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05964630691537411c54bcd74b040a5d27301134
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529744"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583351"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529744"
   
  將報表伺服器設定為在 SharePoint 產品的部署內執行時，可能會看到多種語言。 使用者介面、文件和訊息可能會以下列語言顯示：  
   
--   所有源自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式頁面、工具、錯誤、警告和訊息，都會由 Reporting Services 執行個體所使用的語言以其中一種 Reporting Services 語言來顯示。  
+- 所有源自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的應用程式頁面、工具、錯誤、警告和訊息，都會由 Reporting Services 執行個體所使用的語言以其中一種 Reporting Services 語言來顯示。  
   
--   您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](https://msdn.microsoft.com/sql/downloads/)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
+- 您在 SharePoint 網站、報表檢視器 Web 組件與報表產生器上開啟的應用程式頁面將會以 Reporting Services 增益集的其中一種支援語言來顯示。 若要檢視支援語言的清單，請移至 [SQL Server 下載區](https://msdn.microsoft.com/sql/downloads/)，然後尋找 SQL Server 2016 Reporting Services 增益集的下載頁面。  
   
--   SharePoint 網站、SharePoint 管理中心、線上說明和訊息會以 Office Server 產品所支援的語言提供。  
+- SharePoint 網站、SharePoint 管理中心、線上說明和訊息會以 Office Server 產品所支援的語言提供。  
   
  如果 SharePoint 產品或技術的語言與報表伺服器語言不同，則 Reporting Services 會嘗試使用相同語系中最接近的語言。 如果找不到接近的替代語言，報表伺服器就會使用英文。  
   
@@ -136,8 +137,7 @@ ms.locfileid: "52529744"
 
 ## <a name="next-steps"></a>後續步驟
 
-[安裝或解除安裝 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[測驗：為 SharePoint 整合設定 SSRS 2012](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[安裝或解除安裝適用於 SharePoint 的 Reporting Services 增益集](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[SharePoint 網站上的報表檢視器 Web 組件](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
 title: 下載 Microsoft JDBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,28 +11,28 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27ff741558f45b775a517fbab960163dfe20bbf8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: ea9eade200b31b532d3970b19a21477ee7d66d65
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802474"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670986"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下載 Microsoft JDBC Driver for SQL Server
 
 
-## <a name="using-the-jdbc-driver-with-maven-central"></a>使用 Maven 中心的 JDBC 驅動程式
-可以將它新增為相依性，在 POM.xml 檔案中以下列程式碼，將 JDBC 驅動程式新增至 Maven 專案：
+## <a name="using-the-jdbc-driver-with-maven-central"></a>將 JDBC Driver 與 Maven 中心搭配使用
+您可以使用下列程式碼來將 JDBC Driver 新增為 POM.xml 檔案中的相依性，藉以將該驅動程式新增至 Maven 專案：
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
 </dependency>
 ```  
 
-## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>JDBC driver for SQL Server 的可用下載
+## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>JDBC Driver for SQL Server 的可用下載
  * [Microsoft JDBC Driver 7.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2063159)
  * [Microsoft JDBC Driver 7.0 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2005972) 
  * [Microsoft JDBC Driver 6.4 for SQL Server](https://go.microsoft.com/fwlink/?linkid=868290) 

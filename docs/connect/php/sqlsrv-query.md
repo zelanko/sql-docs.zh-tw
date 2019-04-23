@@ -1,7 +1,7 @@
 ---
-title: sqlsrv_query |Microsoft Docs
+title: sqlsrv_query | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19d7f4d6562f64061f01bf0ff7a73fcd03a4f63c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a4c504228d94fb8642bb024128f4a8079d64a610
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606248"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582821"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,17 +59,11 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |元素|Description|  
     |-----------|---------------|  
     |*$value*|常值、PHP 變數或 PHP by-reference 變數。|  
-    |*$direction*[選用]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$phpType*[選用]|**SQLSRV_PHPTYPE_\*** 常數，可指定傳回值的 PHP 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
-    |*$sqlType*[選用]|**SQLSRV_SQLTYPE_\*** 常數，可指定輸入值的 SQL Server 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$direction*[OPTIONAL]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$phpType*[OPTIONAL]|**SQLSRV_PHPTYPE_\*** 常數，指定傳回值的 PHP 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$sqlType*[OPTIONAL]|**SQLSRV_SQLTYPE_\*** 常數，指定輸入值的 SQL Server 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
   
-*$options* [選用]：設定查詢屬性的關聯陣列。 支援的索引鍵如下所示：  
-  
-|索引鍵|支援的值|Description|  
-|-------|--------------------|---------------|  
-|QueryTimeout|正整數值。|設定查詢逾時 (以秒為單位)。 根據預設，驅動程式會無限期等候結果。|  
-|SendStreamParamsAtExec|**[True]** 或 **[False]**<br /><br />預設值為 **true**。|設定驅動程式在執行時傳送所有資料流資料 (**true**)，或是以區塊傳送資料流資料 (**false**)。 依預設，此值設定為 **true**。 如需詳細資訊，請參閱 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
-|可捲動|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|  
+*$options* [選用]：設定查詢屬性的關聯陣列。 它與 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties) 也支援的索引鍵清單相同。
   
 ## <a name="return-value"></a>傳回值  
 陳述式資源。 如果無法建立且 (或) 無法執行陳述式，將會傳回 **false**。  
@@ -163,10 +157,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](https://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建議在將值繫結至 [decimal 或 numeric 資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)時使用字串作為輸入，以確保精確度與正確性，因為 PHP 所具備的[浮點數](https://php.net/manual/en/language.types.float.php) \(英文\) 精確度有限。 這同樣適用於 bigint 資料行，尤其當值不在某個[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)的範圍內時。
 
 ## <a name="example"></a>範例  
-此程式碼範例示範如何繫結十進位值做為輸入參數。  
+此程式碼範例示範如何繫結十進位值作為輸入參數。  
 
 ```
 <?php
@@ -190,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>範例
-此程式碼範例示範如何建立資料表[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)類型，並擷取插入的資料。
+此程式碼範例示範如何建立 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 類型的資料表，並擷取插入的資料。
 
 ```
 <?php

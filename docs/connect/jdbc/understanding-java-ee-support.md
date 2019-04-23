@@ -1,7 +1,7 @@
 ---
-title: 了解 Java EE 支援 |Microsoft Docs
+title: 了解 Java EE 支援 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154613"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671224"
 ---
 # <a name="understanding-java-ee-support"></a>了解 Java EE 支援
 
@@ -30,19 +30,19 @@ ms.locfileid: "56154613"
 
 驅動程式類別名稱為 **com.microsoft.sqlserver.jdbc.SQLServerDriver**。 針對 JDBC Drivers 4.1、4.2 和 6.0，驅動程式包含在 **sqljdbc.jar**、**sqljdbc4.jar**、**sqljdbc41.jar** 或 **sqljdbc42.ja**r 檔案中。
 
-若是 JDBC Driver 6.2，驅動程式會包含在**mssql-6.2.2.jre7.jar**或是**mssql-6.2.2.jre8.jar**。
+若是 JDBC Driver 6.2，驅動程式包含於 **mssql-6.2.2.jre7.jar** 或 **mssql-6.2.2.jre8.jar**。
 
-若是 JDBC Driver 6.4，驅動程式會包含在**mssql-jdbc-6.4.0.jre7.jar**， **mssql-jdbc-6.4.0.jre8.jar**，或**mssql-jdbc-6.4.0.jre9.jar**。
+若是 JDBC Driver 6.4，驅動程式包含於 **mssql-jdbc-6.4.0.jre7.jar**、**mssql-jdbc-6.4.0.jre8.jar** 或 **mssql-jdbc-6.4.0.jre9.jar**。
 
-JDBC 驅動程式 7.0 版的驅動程式包含在**mssql-jdbc-7.0.0.jre8.jar**，或**mssql-jdbc-7.0.0.jre10.jar**。
+若是 JDBC Driver 7.0，驅動程式包含於 **mssql-jdbc-7.0.0.jre8.jar** 或 **mssql-jdbc-7.0.0.jre10.jar**。
 
-若是 JDBC 驅動程式 7.2，驅動程式會包含在**mssql-jdbc-7.2.1.jre8.jar**，或**mssql-jdbc-7.2.1.jre11.jar**。
+若是 JDBC Driver 7.2，驅動程式包含於 **mssql-jdbc-7.2.2.jre8.jar** 或 **mssql-jdbc-7.2.2.jre11.jar**。
   
 每當您載入具有 JDBC DriverManager 類別的驅動程式時，便會使用此類別名稱。 每當您必須在任何驅動程式設定中指定驅動程式的類別名稱時，也會使用此類別名稱。 例如，在 Java EE 應用程式伺服器中設定資料來源可能需要您輸入驅動程式類別名稱。  
   
 ## <a name="data-sources"></a>資料來源
 
-JDBC Driver 會提供 Java EE / JDBC 3.0 資料來源的支援。 JDBC driver [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md)類別實作`com.microsoft.sqlserver.jdbc.SQLServerXADataSource`。  
+JDBC Driver 會提供 Java EE / JDBC 3.0 資料來源的支援。 JDBC 驅動程式 [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 類別會透過 `com.microsoft.sqlserver.jdbc.SQLServerXADataSource` 來實作。  
   
 ### <a name="datasource-names"></a>Datasource 名稱
 
@@ -73,7 +73,7 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-如需詳細的資料來源屬性的詳細資訊，請參閱[設定的資料來源屬性](../../connect/jdbc/setting-the-data-source-properties.md)。  
+如需有關資料來源屬性的詳細資訊，請參閱[設定資料來源屬性](../../connect/jdbc/setting-the-data-source-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
