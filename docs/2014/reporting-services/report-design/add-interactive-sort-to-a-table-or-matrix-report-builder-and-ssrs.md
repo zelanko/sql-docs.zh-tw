@@ -11,15 +11,15 @@ f1_keywords:
 - "10121"
 - sql12.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb01b4a01222fd9c445f99ac2c80253c652737ae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1e33b0c3e957e13ea6178a3d7e65279a3be84794
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294957"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960294"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>將互動式排序加入至資料表或矩陣 (報表產生器及 SSRS)
   加入互動式排序按鈕，讓使用者變更資料表和矩陣中資料列和資料行的排序次序。 系統僅能以支援使用者互動的轉譯格式支援此功能，例如 HTML。  

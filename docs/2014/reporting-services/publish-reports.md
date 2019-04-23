@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reports [Reporting Services], publishing
 - publishing reports [Reporting Services]
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a19db72ae854ae3ffaf4b56587642ddb37e22e0d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032399"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942674"
 ---
 # <a name="publish-reports"></a>發行報表
   您可以從[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]部署專案，將報表伺服器專案中的所有報表與共用資料來源發行至報表伺服器，或者發行單一報表。 在可以發行報表之前，您必須指定目標報表伺服器的 URL。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)。  

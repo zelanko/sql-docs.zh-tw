@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 590b8f44e1d3ba064176bf8944c4011fbf52ab53
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297966"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937696"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>指定外部項目的路徑 (報表產生器及 SSRS)
   您可以在報表項目屬性中指定路徑，以便參考位於報表定義檔案外部且儲存在報表伺服器上的項目，例如鑽研報表、子報表和影像檔。  
@@ -40,9 +40,9 @@ ms.locfileid: "56297966"
   
 -   **項目的完整路徑。**  
   
-    -   **在報表伺服器：** 路徑的開頭**/**，主資料夾 資料夾。 例如 /Reports/AllSubreports/Subreport1。  
+    -   **在報表伺服器上：** 路徑會從 **/** 開始，即主資料夾。 例如 /Reports/AllSubreports/Subreport1。  
   
-    -   **在 SharePoint 網站：** 在運算式中，項目和副檔名.rdl 的完整 url，您必須指定報表名稱。 例如， `="http://server/site/library/folder/Report1.rdl"` 。  
+    -   **在 SharePoint 網站上：** 您必須在運算式中指定報表名稱，以及項目的完整 URL 和副檔名 .rdl。 例如， `="http://server/site/library/folder/Report1.rdl"` 。  
   
 ## <a name="see-also"></a>另請參閱  
  [加入外部影像 &#40;報表產生器及 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
