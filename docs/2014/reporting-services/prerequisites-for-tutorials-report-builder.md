@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78976d3fa150fb64f3b0fe7c81a8e7591f34ad46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 5c964a2cfe70eafd08bbd1ba73373a9d7acee34e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289008"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942179"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教學課程的必要條件 (報表產生器)
   報表產生器教學課程希望您能夠在報表伺服器或與報表伺服器整合的 SharePoint 網站上檢視和儲存報表。 針對資料，所有教學課程都使用必須由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]處理的常值查詢。  
   
- 如果您沒有報表伺服器或網站或是資料來源的存取權，可以透過建立離線報表來了解報表產生器。 請參閱[教學課程：建立快速圖表報表離線&#40;報表產生器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
+ 如果您沒有報表伺服器或網站或是資料來源的存取權，可以透過建立離線報表來了解報表產生器。 請參閱[教學課程：離線建立快速圖表報表 &#40;報表產生器&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)。  
   
 ## <a name="requirements"></a>需求  
  您必須擁有下列必要元件，才能完成報表產生器教學課程：  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6b6c414804a6e95f4d310a86e2573ba17bb8f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 8e5f34ac12dd76de22e53be72e04d51d0cef8be1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019579"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946724"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
   下表列出以 HTML 格式轉譯的裝置資訊設定。  
