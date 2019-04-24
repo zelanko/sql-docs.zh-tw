@@ -21,14 +21,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 915d689b90bf5103d276ee711e34102e05f49330
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a9ef53323d77f1439df5daf0fedc669fe380cb3f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513085"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581512"
 ---
 # <a name="drop-workload-classifier-transact-sql-preview"></a>DROP WORKLOAD 分類器 (Transact-SQL) (預覽)
+
+> [!Note]
+> 工作負載分類可在 SQL Data Warehouse Gen2 上以預覽形式取得。 「工作負載管理分類與重要性」預覽適用於發行日期為 2019 年 4 月 9 日或之後的組建。  使用者應避免使用早於此日期之前的組建進行工作負載管理測試。  若要判斷您的組建是否能使用工作負載管理，請在連線至您的 SQL 資料倉儲執行個體時，執行 select @ @version。
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -71,4 +74,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## <a name="see-also"></a>另請參閱
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[SQL 資料倉儲工作負載分類](/azure/sql-data-warehouse/classification)
+[SQL 資料倉儲工作負載分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

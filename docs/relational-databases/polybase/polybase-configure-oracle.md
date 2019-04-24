@@ -11,10 +11,10 @@ ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4a7484acf7a63b5c2a6804e1f3f7914cabaf8524
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476643"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>設定 PolyBase 存取 Oracle 中的外部資料
@@ -33,7 +33,7 @@ ms.locfileid: "59476643"
  
 本節中使用下列 Transact-SQL 命令：
 
-- [CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md) 
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)

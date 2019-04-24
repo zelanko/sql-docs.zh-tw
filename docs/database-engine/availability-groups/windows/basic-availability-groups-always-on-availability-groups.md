@@ -11,12 +11,12 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95ef944f0ff4712a117b8c76f83116276aae184
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 25ca94913d3d59754e941d883baa9502c9b700ce
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210707"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671204"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>單一資料庫的基本 Always On 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53210707"
 ## <a name="limitations"></a>限制  
  基本可用性群組使用相較於 SQL Server 2016 Enterprise Edition 上進階可用性群組的一小部分功能。 基本可用性群組包含下列限制︰  
   
-- 兩個複本 (主要和次要) 的限制。  
+- 兩個複本 (主要和次要) 的限制。 Linux 上的 SQL Server 2017 基本可用性群組支援僅額外設定的複本。
   
 - 次要複本上沒有讀取權限。  
   

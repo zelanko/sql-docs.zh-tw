@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 版本資訊 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,23 +10,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860059"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582872"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 預覽版版本資訊
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 本文描述 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) 版本的限制和已知問題。 如需相關資訊，請參閱：
-- [SQL Server 2019 中的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [SQL Server 2019 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預覽版本可供您體驗即將推出版本的功能。 它們不支援或授權用於生產環境。 明確不支援下列情節：
 >
-> - 與其他版本並存安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+> - 與其他版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 並存安裝
 > - 從任何版本升級 SQL Server 的現有執行個體
 
 **請試用 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]！**
@@ -45,7 +45,7 @@ ms.locfileid: "58860059"
   - [SQL Server 意見反應](https://aka.ms/sqlfeedback)
   - [SQL Server 使用者入門](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [SQL Server 文件集](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+  - [SQL Server 文件](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
 - 或具有 [#sqlhelp](https://twitter.com/search?q=%23sqlhelp) 的推文 [@SQLServer](https://twitter.com/SQLServer)
 

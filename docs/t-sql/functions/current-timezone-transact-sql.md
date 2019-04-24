@@ -26,10 +26,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: dcdae3ff107ad1e1e3a7bc58fde4248bb5330223
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59367384"
 ---
 # <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
@@ -72,4 +72,4 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>另請參閱
 
-[SQL Database 受控執行個體時區](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Database 受控執行個體時區](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone) \(機器翻譯\)

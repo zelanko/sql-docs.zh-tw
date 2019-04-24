@@ -19,10 +19,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bf464198a795a2ada5a6cb273754a2fb1945978
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476694"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
@@ -120,7 +120,7 @@ RLS 可支援兩種類型的安全性述詞。
   
  如果以 `SCHEMABINDING = OFF`來建立安全性原則，則為了查詢目標資料表，使用者必須對述詞函數和述詞函數內使用的任何其他資料表、檢視或函數具有  **SELECT** 或 **EXECUTE** 權限。 如果以 `SCHEMABINDING = ON` (預設值) 來建立安全性原則，則當使用者查詢目標資料表時，會略過這些權限檢查。  
   
-## <a name="Best"></a> 最佳作法  
+## <a name="Best"></a> 最佳做法  
   
 - 強烈建議為 RLS 物件、述詞函式和安全性原則建立另一個結構描述。  
   
@@ -522,4 +522,4 @@ DROP SCHEMA Security;
  [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)</br>
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)</br>
  [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)</br>
- [建立使用者定義函數 &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)
+ [建立使用者定義函式 &#40;資料庫引擎&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)

@@ -21,14 +21,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b925917c7d8ef55d687372e0854b136d365de0ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd10a628e5a60487ceaf11a6dd39f781fbc41596
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538210"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581212"
 ---
 # <a name="create-workload-classifier-transact-sql-preview"></a>CREATE WORKLOAD 分類器 (Transact-SQL) (預覽)
+
+> [!Note]
+> 工作負載分類可在 SQL Data Warehouse Gen2 上以預覽形式取得。 「工作負載管理分類與重要性」預覽適用於發行日期為 2019 年 4 月 9 日或之後的組建。  使用者應避免使用早於此日期之前的組建進行工作負載管理測試。  若要判斷您的組建是否能使用工作負載管理，請在連線至您的 SQL 資料倉儲執行個體時，執行 select @ @version。
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -69,7 +72,7 @@ WORKLOAD_GROUP 應該對應至現有的資源類別：
 
 MEMBERNAME = *'security_account'* 這是要新增至角色的安全性帳戶。  Security_account 是一種 sysname，沒有預設值。 Security_account 可以是資料庫使用者、資料庫角色、Azure Active Directory 登入或 Azure Active Directory 群組。
 
-IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } 指定要求的相對重要性。  重要性為下列其中一項：
+IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } 指定要求的相對重要性。  重要性為下列其中一個：
 
 - LOW
 - BELOW_NORMAL

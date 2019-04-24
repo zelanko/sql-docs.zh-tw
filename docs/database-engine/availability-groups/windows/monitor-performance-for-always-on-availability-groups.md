@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872318"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>監視 Always On 可用性群組的效能
@@ -60,9 +60,9 @@ ms.locfileid: "58872318"
   
 |||||  
 |-|-|-|-|  
-|**層級**|**閘道數目**|**訊息數目**|**實用的計量**|  
+|**Level**|**閘道數目**|**訊息數目**|**實用的計量**|  
 |傳輸|每個可用性複本 1 個|8192|擴充事件 **database_transport_flow_control_action**|  
-|[資料庫]|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND ](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
+|[資料庫]|每個可用性資料庫 1 個|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> 擴充事件 **hadron_database_flow_control_action**|  
   
  一旦達到其中一個閘道的訊息閾值，記錄檔訊息便不會再傳送至特定複本，或是針對特定資料庫傳送。 一旦收到傳送訊息的訊息收條，就可以傳送訊息，讓傳送訊息數目低於閾值。  
   
@@ -357,43 +357,43 @@ ms.locfileid: "58872318"
   
 4.  使用下列規格建立[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**： `RTO`  
+    -   **名稱**：`RTO`  
   
     -   **Facet**：**資料庫複本狀態**  
   
-    -   **欄位**： `Add(@EstimatedRecoveryTime, 60)`  
+    -   **欄位**：`Add(@EstimatedRecoveryTime, 60)`  
   
     -   **運算子**：**<=**  
   
-    -   **值**： `600`  
+    -   **值**：`600`  
   
      當潛在容錯移轉時間超過 10 分鐘 (包括失敗偵測和容錯移轉的 60 秒額外負荷)，此條件會失敗。  
   
 5.  使用下列規格建立第二個[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**： `RPO`  
+    -   **名稱**：`RPO`  
   
     -   **Facet**：**資料庫複本狀態**  
   
-    -   **欄位**： `@EstimatedDataLoss`  
+    -   **欄位**：`@EstimatedDataLoss`  
   
     -   **運算子**：**<=**  
   
-    -   **值**： `3600`  
+    -   **值**：`3600`  
   
      當潛在資料遺失超過 1 小時時，此條件會失敗。  
   
 6.  使用下列規格建立第三個[以原則為基礎的管理條件](~/relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)：  
   
-    -   **名稱**： `IsPrimaryReplica`  
+    -   **名稱**：`IsPrimaryReplica`  
   
     -   **Facet**：**可用性群組**  
   
-    -   **欄位**： `@LocalReplicaRole`  
+    -   **欄位**：`@LocalReplicaRole`  
   
     -   **運算子**：**=**  
   
-    -   **值**： `Primary`  
+    -   **值**：`Primary`  
   
      此條件會檢查給定可用性群組的本機可用性複本是否為主要複本。  
   
@@ -401,9 +401,9 @@ ms.locfileid: "58872318"
   
     -   [一般] 頁面：  
   
-        -   **名稱**： `CustomSecondaryDatabaseRTO`  
+        -   **名稱**：`CustomSecondaryDatabaseRTO`  
   
-        -   **檢查條件**： `RTO`  
+        -   **檢查條件**：`RTO`  
   
         -   **針對目標**：**IsPrimaryReplica AvailabilityGroup** 中的**每個 DatabaseReplicaState**  
   
@@ -429,9 +429,9 @@ ms.locfileid: "58872318"
   
     -   [一般] 頁面：  
   
-        -   **名稱**： `CustomAvailabilityDatabaseRPO`  
+        -   **名稱**：`CustomAvailabilityDatabaseRPO`  
   
-        -   **檢查條件**： `RPO`  
+        -   **檢查條件**：`RPO`  
   
         -   **針對目標**：**IsPrimaryReplica AvailabilityGroup** 中的**每個 DatabaseReplicaState**  
   
@@ -456,7 +456,7 @@ ms.locfileid: "58872318"
 ##  <a name="BKMK_SCENARIOS"></a> 效能疑難排解案例  
  下表列出常見的效能相關疑難排解案例。  
   
-|狀況|Description|  
+|狀況|描述|  
 |--------------|-----------------|  
 |[疑難排解：可用性群組已超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|在自動容錯移轉或規劃的手動容錯移轉之後若未遺失資料，容錯移轉時間會超過您的 RTO。 或者，當您評估同步認可次要複本 (例如自動容錯移轉夥伴) 的容錯移轉時間時，發現它超過您的 RTO。|  
 |[疑難排解：可用性群組已超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|在您執行強制手動容錯移轉之後，遺失的資料超過您的 RPO。 或者，當您計算非同步認可次要複本的潛在資料遺失時，發現它超過您的 RPO。|  

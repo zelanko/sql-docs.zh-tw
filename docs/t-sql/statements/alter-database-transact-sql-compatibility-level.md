@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828078"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583371"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 
@@ -176,6 +176,14 @@ SELECT name, compatibility_level FROM sys.databases;
 
 適用於 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 的資料庫相容性層級 150，目前在公開預覽階段。 此資料庫相容性層級將會與下一帶的查詢處理改善相關聯，超在越資料庫相容性層級 140 中導入的功能。
 
+|相容性層級設定為 140 或更低|相容性層級設定為 150|
+|--------------------------------------------------|-----------------------------------------|
+|關聯式資料倉儲和分析工作負載可能無法利用資料行存放區索引，因為 OLTP 額外負荷、缺少廠商支援或其他限制。  若沒有資料行存放區索引，這些工作負載就無法從批次執行模式中獲益。|分析工作負載現在可使用批次執行模式，而不需要資料行存放區索引。 如需詳細資訊，請參閱[資料列存放區上的批次模式](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore)。|
+|要求不足的記憶體授權大小導致溢出到磁碟的資料列模式查詢，可能會在連續執行時繼續發生問題。|要求不足的記憶體授權大小導致溢出到磁碟的資料列模式查詢，可能已改進在連續執行時的效能。 如需詳細資訊，請參閱[資料列模式記憶體授與回饋](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)。|
+|要求過多的記憶體授權大小導致發生並行問題的資料列模式查詢，可能會在連續執行時繼續發生問題。|要求過多的記憶體授權大小導致發生並行問題的資料列模式查詢，可能已改進在連續執行時的並行。 如需詳細資訊，請參閱[資料列模式記憶體授與回饋](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)。|
+|參考 T-SQL 純量 UDF 的查詢會使用反覆引動、缺少成本，以及強制序列執行。 |T-SQL 純量會轉換成「內嵌」在呼叫查詢中的對等關聯運算式，而這通常可讓效能大幅提升。 如需詳細資訊，請參閱 [T-SQL 純量內嵌](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining)。|
+|資料表變數針對基數估計值使用固定猜測。  如果實際的資料列數目遠高於猜測的值，下游作業的效能可能會受到負面影響。 |新方案會使用在第一次編譯時遇到的資料表值函式實際基數，而不是定點猜測。 如需詳細資訊，請參閱[資料表變數延遲編譯](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)。|
+
 如需資料庫相容性層級 150 所提供的查詢處理功能詳細資訊，請參閱 [SQL Server 2019 中的新功能](../../sql-server/what-s-new-in-sql-server-ver15.md)及 [SQL 資料庫中的智慧查詢處理](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)。
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>相容性層級 130 和 140 之間的差異
@@ -205,7 +213,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |已導入 SQL 2014 基數估計工具 **CardinalityEstimationModelVersion="120"**|進一步的基數估計 ( CE) 改進與可從查詢計畫中看到的基數估計模型 130。 **CardinalityEstimationModelVersion="130"**|
 |批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的資料表上執行的排序會以資料列模式執行 <li>視窗型函式彙總會以資料列模式 (例如 `LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以資料列模式運作 <li>在 MAXDOP 1 之下執行，或以資料列模式執行的序列計畫</li></ul>| 批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的表格上進行的排序現在會以批次模式運作 <li>視窗型彙總現在會以批次模式 (例如`LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以批次模式運作 <li>在 MAXDOP 1 下執行的查詢，或以批次模式執行序列計畫</li></ul>|
 |統計資料可以自動更新。 | 自動更新統計資料的邏輯在大型資料表上會更積極。 在實務上，這應該會減少客戶已經看到在查詢上發生效能問題的案例，其中的問題在於新插入的資料列會受到頻繁查詢，但統計資料卻尚未更新以包含那些值。 |
-|追蹤 2371 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中預設為「關閉」。 | [追蹤 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中預設為「開啟」。 追蹤旗標 2371 會告知自動統計資料更新程式，在擁有很多資料列的資料表中，以較小但更聰明的資料列子集方式進行取樣。 <br/> <br/> 其中一項改進是在樣本中包含更多最近插入的資料列。 <br/> <br/> 另一項改進是讓查詢在更新統計資料程序執行時執行，而不是封鎖查詢。 |
+|追蹤 2371 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中預設為「關閉」。 | [追蹤 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中預設為「開啟」。 追蹤旗標 2371 會告知自動統計資料更新程式，在擁有很多資料列的資料表中，以較小但更聰明的資料列子集方式進行取樣。 <br/> <br/> 其中一個改進是在樣本中包含更多最近插入的資料列。 <br/> <br/> 另一個改進是讓查詢在更新統計資料程序執行時執行，而不是封鎖查詢。 |
 |對於層級 120，統計資料會由*單一*執行緒程序進行取樣。|對於層級 130，統計資料則會由*多*執行緒程序進行取樣。 |
 |其限制為 253 個傳入外部索引鍵。| 指定資料表最多可由 10,000 個傳入外部索引鍵或類似參考進行參考。 相關限制，請參閱 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |
 |允許使用已被取代的 MD2、MD4、MD5、SHA 和 SHA1 雜湊演算法。|只允許使用 SHA2_256 和 SHA2_512 雜湊演算法。|
@@ -291,7 +299,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 如需詳細資訊，請參閱[保留關鍵字](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。
 
-## <a name="permissions"></a>[權限]
+## <a name="permissions"></a>權限
 
 需要資料庫的 ALTER 權限。
 

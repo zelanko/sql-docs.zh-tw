@@ -1,7 +1,7 @@
 ---
 title: SQL Server 使用方式和診斷資料收集的本機稽核 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7ccb6e362bdf602c4df650d96ca22eac269c46f1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243542"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582762"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>SQL Server 使用方式和診斷資料收集的本機稽核
 
@@ -190,7 +190,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 
 下面所列的資料行代表本機稽核檔案輸出的順序。 使用 SHA 256 的單向雜湊用於底下許多資料行的匿名值。  
 
-| [屬性] | Description | 範例值
+| [屬性] | 描述 | 範例值
 |-------|--------| ----------|
 |instanceUniqueID| 匿名的執行個體識別碼 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP 結構描述版本 |  3 
@@ -305,7 +305,7 @@ Microsoft SQL Server 包含一些啟用網際網路的功能，而這些功能�
 **DBA 如何讀取本機稽核記錄檔？**
 這些記錄檔是以 JSON 格式撰寫。 每一行都是一個 JSON 物件，代表一段上傳至 Microsoft 的使用方式 / 診斷資料。 欄位名稱應該一目了然。
 
-**DBA 停用使用方式和診斷資料收集的話會有何影響？**
+**DBA 若停用使用狀況與診斷資料收集會有何影響？**
 將不會寫入本機稽核檔案。
 
 **防火牆後面沒有網際網路連線/電腦的話會有何影響？**
@@ -369,4 +369,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
 ## <a name="see-also"></a>另請參閱
-[SSMS 使用方式和診斷資料收集的本機稽核](../ssms/sql-server-management-studio-telemetry-ssms.md)
+[SSMS 使用狀況和診斷資料收集的本機稽核](../ssms/sql-server-management-studio-telemetry-ssms.md)

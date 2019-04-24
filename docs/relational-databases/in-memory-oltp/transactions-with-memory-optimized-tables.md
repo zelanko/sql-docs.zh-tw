@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872288"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>記憶體最佳化資料表的交易
@@ -99,7 +99,7 @@ ALTER DATABASE CURRENT
   
 下表列出可能的交易隔離等級，順序從隔離程度最低到最高。 如需會發生的衝突以及處理這些衝突之重試邏輯的詳細資訊，請參閱 [衝突偵測和重試邏輯](#conflict-detection-and-retry-logic)。 
   
-| 隔離等級 | Description |   
+| 隔離等級 | 描述 |   
 | :-- | :-- |   
 | READ UNCOMMITTED | 無法使用：READ UNCOMMITTED 隔離下無法存取記憶體最佳化資料表。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ UNCOMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。 | 
 | READ COMMITTED | 只有在自動認可模式作用時，才受記憶體最佳化資料表支援。 如果工作階段層級的 TRANSACTION ISOLATION LEVEL 設為 READ COMMITTED，使用 WITH (SNAPSHOT) 資料表提示或將資料庫設定 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 設為 ON，仍有可能存取 SNAPSHOT 隔離下的記憶體最佳化資料表。<br/><br/>如果資料庫選項 READ_COMMITTED_SNAPSHOT 設為 ON，不允許存取相同陳述式中 READ COMMITTED 隔離下的記憶體最佳化和磁碟資料表。 |  
@@ -140,10 +140,10 @@ ALTER DATABASE CURRENT
 
 以下是當交易存取記憶體最佳化資料表時，會導致交易失敗的錯誤狀況。
 
-| 錯誤碼 | Description | 原因 |
+| 錯誤碼 | 描述 | 原因 |
 | :-- | :-- | :-- |
 | **41302** | 嘗試更新目前交易開始後，已在其他交易中更新的資料列。 | 如果兩筆並行交易同時嘗試更新或刪除相同的資料列，就會發生這個錯誤狀況。 其中一筆交易會收到這個錯誤訊息，且必須重試。 <br/><br/>  | 
-| **41305**| 可重複的讀取驗證失敗。 這筆交易完成認可前，從記憶體最佳化資料表讀取的資料列已為另一筆認可的交易更新。 | 使用 REPEATABLE READ 或 SERIALIZABLE 隔離時，如果並行交易的動作又造成 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/>這種外部索引鍵條件約束的並行違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，如果和 FOREIGN KEY 條件約束有關的資料行沒有索引，也會發生此錯誤。 因此，指引是一律在記憶體最佳化資料表中，建立外部索引鍵資料行的索引的上。 <br/><br/> 如需外部索引鍵違規所致驗證失敗的詳細考量，請參閱 SQL Server 客戶諮詢小組的[部落格文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/)。 |  
+| **41305**| 可重複的讀取驗證失敗。 這筆交易完成認可前，從記憶體最佳化資料表讀取的資料列已為另一筆認可的交易更新。 | 使用 REPEATABLE READ 或 SERIALIZABLE 隔離時，如果並行交易的動作又造成 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/>這種外部索引鍵條件約束的並行違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，如果和 FOREIGN KEY 條件約束有關的資料行沒有索引，也會發生此錯誤。 因此，指引是一律在記憶體最佳化資料表中，建立外部索引鍵資料行的索引的上。 <br/><br/> 如需外部索引鍵違規所致驗證失敗的詳細考量，請參閱 SQL Server 客戶諮詢小組的 [部落格文章](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 。 |  
 | **41325** | 可序列化的驗證失敗。 目前交易稍早掃描的範圍中插入了新的資料列。 我們將這種資料列稱為虛設項目列。 | 使用 SERIALIZABLE 隔離時，如果並行交易的動作又造成 PRIMARY KEY、UNIQUE 或 FOREIGN KEY 條件約束違規，就會發生此錯誤。 <br/><br/> 這種並行條件約束違規很少見，通常是應用程式邏輯或資料項目的問題。 不過，與可重複讀取驗證失敗相似，如果相關資料行的 FOREIGN KEY 條件約束不含任何索引，也會發生此錯誤。 |  
 | **41301** | 相依性失敗︰相依性建立在稍後無法認可的另一個交易上。 | 這筆交易 (Tx1) 藉由讀取 Tx2 寫入的資料相依於另一筆交易 (Tx2)，而後者 (Tx2) 當時處於其驗證或認可處理階段。 接下來 Tx2 認可失敗。 Tx2 認可失敗最常見的原因是可重複讀取 (41305) 和可序列化 (41325) 驗證失敗，較不常見的原因則是記錄 IO 失敗。 |
 | **41823** 和 **41840** | 已達到使用者資料在經記憶體最佳化的資料表和資料表變數中的配額。 | 錯誤 41823 適用於 SQL Server Express/Web/Standard Edition，以及 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的單一資料庫。 錯誤 41840 適用於 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 中的彈性集區。 <br/><br/> 在大部分情況下，這些錯誤會指出已達到最大使用者資料大小，而解決此錯誤的方法是從經記憶體最佳化的資料表刪除資料。 不過，在少數情況下，這是暫時性錯誤。 因此，我們建議您在第一次發生這些錯誤時重試。<br/><br/> 與此清單中的其他錯誤一樣，錯誤 41823 和 41840 會造成使用中交易中止。 |

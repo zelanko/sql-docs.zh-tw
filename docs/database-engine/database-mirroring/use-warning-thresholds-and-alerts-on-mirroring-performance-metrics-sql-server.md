@@ -19,17 +19,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e4272345c1da08b79ffd1d76438a88baa9ea581a
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58788035"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用鏡像效能標準的警告臨界值與警示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題包含可針對資料庫鏡像設定和管理警告臨界值之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的相關資訊。 您可以使用「資料庫鏡像監視器」或 **sp_dbmmonitorchangealert**、 **sp_dbmmonitorhelpalert**及 **sp_dbmmonitordropalert** 預存程序。 此主題也包含設定資料庫鏡像事件之警示的相關資訊。  
   
- 建立鏡像資料庫的監視作業後，系統管理員就可以設定許多項關鍵效能標準的警告臨界值。 此外，管理員還可以設定這些和其他資料庫鏡像事件的警示。  
+ 建立鏡像資料庫的監視作業後，系統管理員就可以設定許多關鍵效能標準的警告臨界值。 此外，管理員還可以設定這些和其他資料庫鏡像事件的警示。  
   
  **本主題內容：**  
   
@@ -51,12 +51,12 @@ ms.locfileid: "58788035"
 |最舊尚未傳送的交易|指定在主體伺服器執行個體上產生警告之前，傳送佇列中可以累積的交易分鐘數。 這個警告有助於從時間方面測量資料遺失的可能性，而且尤其與高效能模式相關。 但是，當鏡像因為夥伴中斷連接而暫停或暫止時，這個警告也會與高安全性模式有關。|**如果最舊未傳送交易的時間超過臨界值，即發出警告**|  
 |鏡像認可負擔|指定在主體伺服器上產生警告之前所容許之每項交易的平均延遲毫秒數。 這項延遲是當主體伺服器執行個體等待鏡像伺服器執行個體將交易記錄寫入重做佇列中時所產生的負擔量。 只有在高安全性模式中才會顯出這個值的重要性。|**如果鏡像認可負擔超過臨界值，即發出警告**|  
   
- 系統管理員可以針對其中一項效能標準，在鏡像資料庫上指定臨界值。 如需詳細資訊，請參閱本主題後面的 [設定和管理警告臨界值](#SetUpManageWarningThresholds)。  
+ 系統管理員可以針對其中一個效能標準，在鏡像資料庫上指定臨界值。 如需詳細資訊，請參閱本主題後面的 [設定和管理警告臨界值](#SetUpManageWarningThresholds)。  
   
 ##  <a name="SetUpManageWarningThresholds"></a> 設定和管理警告臨界值  
  系統管理員可以設定關鍵鏡像效能標準的一或多個警告臨界值。 我們建議您在兩個夥伴上設定指定警告的臨界值，以便確保資料庫在容錯移轉時，警告仍會保持不變。 每個夥伴上的適當臨界值會根據該夥伴系統的效能功能而定。  
   
- 您可以使用下列任何一項方式來設定並管理警告臨界值：  
+ 您可以使用下列任何一個方式來設定並管理警告臨界值：  
   
 -   資料庫鏡像監視器  
   
@@ -68,7 +68,7 @@ ms.locfileid: "58788035"
   
      下列系統預存程序集可讓管理員一次設定並管理一個夥伴之鏡像資料庫的警告臨界值。  
   
-    |程序|Description|  
+    |程序|描述|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)|加入或變更指定之鏡像效能標準的警告臨界值。|  
     |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|傳回有關其中一個或所有關鍵資料庫鏡像監視器效能標準之警告臨界值的資訊。|  

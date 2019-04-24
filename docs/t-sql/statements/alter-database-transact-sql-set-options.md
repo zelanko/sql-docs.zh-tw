@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動微調、加密、查詢存放區
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494430"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583381"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL)
 
@@ -298,7 +298,7 @@ OFF 在最後一個使用者結束之後，資料庫仍保持開啟狀態。
 >
 > 資料庫鏡像需要 AUTO_CLOSE OFF。
 
-當資料庫設為 AUTOCLOSE = ON 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中，針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
+當資料庫設定為 AUTOCLOSE = ON 時，起始自動資料庫關閉的作業會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 和更新版本中，針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列資訊訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF } ON 查詢最佳化工具會視需要針對查詢述詞中的單一資料行建立統計資料，以便改善查詢計畫和查詢效能。 這些單一資料行統計資料是在查詢最佳化工具編譯查詢時所建立的。 它只會針對尚未成為現有統計資料物件之第一個資料行的資料行建立單一資料行統計資料。
 
@@ -508,7 +508,7 @@ SINGLE_USER **適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 
 資料庫會保留在 SINGLE_USER 模式中，即使當設定選項的使用者已登出也一樣。此時其他使用者可以連接到這個資料庫，但只能有一位。
 
-將資料庫設為 SINGLE_USER 之前，請先確定 AUTO_UPDATE_STATISTICS_ASYNC 選項是否設為 OFF。 當設為 ON 時，更新統計資料的背景執行緒會取得資料庫連接，而您就無法以單一使用者模式存取資料庫。 若要檢視這個選項的狀態，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 is_auto_update_stats_async_on 資料行。 如果選項設為 ON，請執行下列工作：
+將資料庫設為 SINGLE_USER 之前，請先確定 AUTO_UPDATE_STATISTICS_ASYNC 選項是否設為 OFF。 當設定為 ON 時，更新統計資料的背景執行緒會取得資料庫連線，而您就無法以單一使用者模式存取資料庫。 若要檢視這個選項的狀態，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 is_auto_update_stats_async_on 資料行。 如果選項設為 ON，請執行下列工作：
 
 1. 將 AUTO_UPDATE_STATISTICS_ASYNC 設為 OFF。
 
@@ -705,9 +705,9 @@ CHECKSUM 計算整個頁面內容的總和檢查碼，當頁面寫入磁碟時�
 
 TORN_PAGE_DETECTION 將每個 512 位元組磁區的 2 位元模式儲存在 8 KB 資料庫頁面上，當頁面寫入磁碟時，便將它儲存在資料庫頁首。 當從磁碟中讀取頁面時，會比較頁首中所儲存的損毀位元和實際的頁面磁區資訊。
 
-值不符合表示該頁面只有一部分寫入磁碟中。 在這個狀況下，會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 Windows 事件記錄檔中，報告錯誤訊息 824 (表示發生損毀頁的錯誤)。 如果真的是頁面寫入不完整，通常會由資料庫復原作業來偵測出損毀頁。 不過，其他 I/O 路徑失敗也可能隨時造成損毀頁。
+值不符合表示該頁面只有一部分寫入磁碟中。 在此狀況下，系統會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔和 Windows 事件記錄檔中回報錯誤訊息 824 (表示發生損毀頁的錯誤)。 如果真的是頁面寫入不完整，通常會由資料庫復原作業來偵測出損毀頁。 不過，其他 I/O 路徑失敗也可能隨時造成損毀頁。
 
-NONE 資料庫頁面寫入不會產生 CHECKSUM 或 TORN_PAGE_DETECTION 值。 在讀取期間，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使頁首包含 CHECKSUM 或 TORN_PAGE_DETECTION 值，亦不會驗證總和檢查碼或損毀頁。
+NONE 資料庫頁面寫入不會產生 CHECKSUM 或 TORN_PAGE_DETECTION 值。 即使頁首包含 CHECKSUM 或 TORN_PAGE_DETECTION 值，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也不會在讀取期間驗證總和檢查碼或損毀頁。
 
 當您使用 PAGE_VERIFY 選項時，請考慮下列要點：
 
@@ -925,7 +925,7 @@ OFF 識別碼不能放在引號中，且必須遵循所有 [!INCLUDE[tsql](../..
 
   您可以檢查 sys.databases 目錄檢視中 is_quoted_identifier_on 資料行來判斷這個選項的狀態。 您也可以檢查 DATABASEPROPERTYEX 函式的 IsQuotedIdentifiersEnabled 屬性來判斷狀態。
 
-NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一項錯誤。
+NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一個錯誤。
 
 OFF 遺失有效位數並不會產生錯誤訊息，且結果會四捨五入到儲存結果的資料行或變數有效位數。
 
@@ -1141,7 +1141,7 @@ SET QUERY_STORE = ON
 - [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [使用查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
@@ -1659,7 +1659,7 @@ OFF 識別碼不能放在引號中，且必須遵循所有 [!INCLUDE[tsql](../..
 
   您可以檢查 sys.databases 目錄檢視中 is_quoted_identifier_on 資料行來判斷這個選項的狀態。 您也可以檢查 DATABASEPROPERTYEX 函式的 IsQuotedIdentifiersEnabled 屬性來判斷狀態。
 
-NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一項錯誤。
+NUMERIC_ROUNDABORT { ON | OFF } ON 當運算式中遺失有效位數時，就會產生一個錯誤。
 
 OFF 遺失有效位數並不會產生錯誤訊息，且結果會四捨五入到儲存結果的資料行或變數有效位數。
 
@@ -1827,7 +1827,7 @@ SET QUERY_STORE = ON
 - [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [使用查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -2439,6 +2439,6 @@ SET QUERY_STORE = ON
 - [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
-- [使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md)
+- [使用查詢存放區的最佳做法](../../relational-databases/performance/best-practice-with-the-query-store.md)
 
 ::: moniker-end

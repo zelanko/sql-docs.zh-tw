@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb422177cc0908a8cf5d274dc0b0d0332dcbc95
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042497"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 版本資訊
@@ -191,7 +191,7 @@ GeneMi. 2019/04/02.
   - [Preview 5 的新功能] 新增「查詢等候統計資料」報表。
 
 - **資料遮罩**
-  - [Preview 5 的新功能] 新增靜態資料遮罩。 靜態資料遮罩是一項資料保護工具，可讓使用者建立其 SQL 資料庫的複本，並對複本上的敏感性資料進行遮罩。 這項功能經證實對於要與開發/測試小組或分析小組等非生產使用者共用其生產資料庫的人員很有用。 如需詳細資訊，請參閱 [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/) (適用於 Azure SQL Database 和 SQL Server 的靜態資料遮罩)。
+  - [Preview 5 的新功能] 新增靜態資料遮罩。 靜態資料遮罩是一個資料保護工具，可讓使用者建立其 SQL 資料庫的複本，並對複本上的敏感性資料進行遮罩。 這項功能經證實對於要與開發/測試小組或分析小組等非生產使用者共用其生產資料庫的人員很有用。 如需詳細資訊，請參閱 [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/) (適用於 Azure SQL Database 和 SQL Server 的靜態資料遮罩)。
   - [Preview 7 的新功能] 現已支援 JSON 設定檔
   - [Preview 7 的新功能] 變更 XML 設定檔格式，使其在向前邁進的過程中更具彈性。  現有的設定檔將需要重新建立。
   - [Preview 7 的新功能] 包含記憶體最佳化及暫存資料表的資料庫現在可以進行遮罩。  有些限制仍會套用到記憶體最佳化及暫存資料表本身。
@@ -222,12 +222,12 @@ GeneMi. 2019/04/02.
   - [Preview 7 的新功能] 將新功能「資料分類」新增至 SMO。 資料行物件公開了新的屬性：SensitivityLabelName、SensitivityLabelId、SensitivityInformationTypeName、SensitivityInformationTypeId，及 IsClassified (唯讀)。 如需詳細資訊，請參閱： https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current 
   - [Preview 7 的新功能] 將 [分類報告] 功能表項目新增至 [資料分類] 飛出視窗。
 
-- **弱點評量**
+- **弱點評定**
   - [Preview 5 的新功能] 啟用 Azure SQL DW 上的 [弱點評定] 工作功能表。
   - [Preview 7 的新功能] 變更在 Azure SQL Database 受控執行個體伺服器上執行的弱點評定規則，使「弱點評定」的掃描結果與 Azure SQL DB 中的內容一致。 
   - [Preview 7 的新功能] 「弱點評定」現在支援 Azure SQL DW。
 
-- **Always Encrypted**
+- **永遠加密**
   - [連線至伺服器] 對話方塊之新 [Always Encrypted] 索引標籤中的 [啟用 Always Encrypted] 核取方塊現在提供簡單的方法來啟用/停用資料庫連線的 Always Encrypted。 
 
 - [**具有安全記憶體保護區的 Always Encrypted**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
@@ -253,7 +253,7 @@ GeneMi. 2019/04/02.
 
 ### <a name="bug-fixes"></a>錯誤修正
 
-- **當機 / 停止回應**
+- **當機/停止回應**
   - 修正與 GDI 物件相關的常見 SSMS 當機來源
   - 修正選取「撰寫指令碼為 Create/Update/Drop」(已移除 SMO 物件的不必要提取) 時停止回應且效能不佳的常見來源
   - 修正啟用 ADAL 追蹤時，使用 MFA 連線至 Azure SQL DB 後造成的停止回應
@@ -368,7 +368,7 @@ GeneMi. 2019/04/02.
   - [Preview 7 的新功能] 修正匯入精靈無法處理負小數值的問題。
   - [Preview 7 的新功能] 修正精靈無法從單一資料行 CSV 檔案匯入的問題。
 
-- **HADR / AG**
+- **HADR/AG**
   - [Preview 5 的新功能] 修正 [容錯移轉可用性群組精靈] 中的角色一律顯示為 [解析中] 的問題 
   - [Preview 5 的新功能] 修正 SSMS 在 [AG 儀表板] 中顯示截斷警告的問題。
 
@@ -430,7 +430,7 @@ GeneMi. 2019/04/02.
 - **XEvent 檢視器**
   - [Preview 5 的新功能] 修正嘗試使用「延伸事件工具列選項」群組事件時，XEvent 檢視器將當機的問題
 
-- **弱點評量**
+- **弱點評定**
   - [Preview 5 的新功能] 修正掃描結果未正確載入的問題。
 
 - **複製資料庫精靈**
@@ -438,7 +438,7 @@ GeneMi. 2019/04/02.
   - [Preview 6 的新功能] SQL 2017 和 SQL 2019 上已中斷 [傳輸資料庫工作/複製資料庫精靈]
   - [Preview 6 的新功能] 在建立相關聯的外部資料來源之前，須建立 [產生指令碼/傳輸/複製資料庫精靈] 指令碼資料表
 
-- **Profiler**
+- **分析工具**
   - [Preview 6 的新功能] 將「彙總資料表重寫查詢」事件新增至分析工具事件。
   - [RC1 的新功能] 已修正導致 SQL Profiler 無法在 Windows 7 SP1 上啟動的問題。
 
@@ -592,7 +592,7 @@ Microsoft Azure 整合：
 按一下下列各節中的標題連結，以下載舊版 SSMS：
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![下載](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
-*在 17.8 中發現了一個與佈建 SQL 資料庫有關的錯誤 (bug)，因此會以 SSMS 17.8.1 取代 17.8。*
+17.8 中發現一個與佈建 SQL 資料庫有關的 BUG，因此以 SSMS 17.8.1 取代 17.8。
 
 組建編號：14.0.17277.0<br>
 發行日期：2018 年 6 月 26 日
@@ -651,7 +651,7 @@ Always Encrypted：
 
 ### <a name="known-issues"></a>已知問題
 
-- 在 [特性] 視窗中修改任何檔案群組特性之後按一下 [指令碼] 按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一項錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
+- 在 [特性] 視窗中修改任何檔案群組特性之後按一下 [指令碼] 按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一個錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
 - 使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
 - 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql) 中的已知問題。 請考慮升級到 NetFx 4.7.2。
 
@@ -1266,7 +1266,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - SQL Server 的圖形延伸模組：適用於圖形節點和邊緣資料表的新圖示、圖形節點和邊緣資料表將顯示在圖形資料表資料夾之下、用來建立圖形節點和邊緣資料表的範本
 - 簡報模式 3 個可透過快速啟動 (Ctr-Q) 使用的新工作 PresentOn - 開啟簡報模式 PresentEdit - 編輯簡報模式的簡報字型大小。  查詢編輯器的「文字編輯器字型」。  其他組件的「環境字型」。
 RestoreDefaultFonts - 還原至預設設定。
-*注意：目前沒有 PresentOff 命令。  請使用 RestoreDefaultFonts 來關閉簡報模式*
+*注意：目前沒有 PresentOff 命令。請使用 RestoreDefaultFonts 來關閉簡報模式*
 
 ### <a name="bug-fixes"></a>錯誤修正
 
@@ -1308,7 +1308,7 @@ RestoreDefaultFonts - 還原至預設設定。
 - 修正在 SSMS 無法匯入註冊的伺服器時造成損毀的問題。
 - 修正如果使用者有資料庫的特定權限，會造成 SSMS 當機的問題。
 - SSMS - 在檢閱檢視時，資料表會從設計介面消失。 [Connect 項目](https://connect.microsoft.com/SQLServer/feedback/details/2946125/ssms-tables-disappears-from-design-surface-while-reviewing-views) 
-- 資料表捲軸不允許使用者捲動資料表內容，只有向上/下箭號允許這個動作。 也有可能在嘗試使用捲軸捲動後，捲動資料表內容，而這是一項 Bug。 [Connect 項目](
+- 資料表捲軸不允許使用者捲動資料表內容，只有向上/下箭號允許這個動作。 也有可能在嘗試使用捲軸捲動後，捲動資料表內容，而這是一個錯誤 (Bug)。 [Connect 項目](
 https://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manager-2016-bug-in-design-view) 
 - 註冊的伺服器在重新整理根節點後未顯示圖示。
 - Azure v12 伺服器上 [建立資料庫] 的指令碼按鈕會執行指令碼，然後顯示訊息「沒有要編寫指令碼的動作」。

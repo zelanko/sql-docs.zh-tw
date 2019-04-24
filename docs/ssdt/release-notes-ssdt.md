@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241882"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的版本資訊
@@ -51,7 +51,7 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 
 發行日期：&nbsp; 2019 年 1 月 28 日  
 組建編號：&nbsp; 14.0.16186.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -61,7 +61,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 | :------- | :------ |
 | 在 ADF 2017 中新增適用於 SSIS 的 Power Query 來源 (預覽)。 | &nbsp; |
 | 再次新增對 SQL Server 2012 的支援。 | &nbsp; |
-| 新增 SQL Server 2019 的 Oracle 來源和目的地。 | 目標為 SQL Server 2019 的 Oracle 來源和目的地已由 SSDT 安裝。<br/><br/>若要設計目標伺服器版本為 2017 或更低版本的套件，請從 Microsoft 下載網站下載相對應的 Oracle 連接器版本，並在 SSDT 機器上安裝它。 <br/>[Microsoft 連接器 5.0 版適用於 Oracle 由Attunity 提供目標為 SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Microsoft 連接器 4.0 版適用於 Oracle 由Attunity 提供目標為 SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Microsoft 連接器 3.0 版適用於 Oracle 由Attunity 提供目標為 SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Microsoft 連接器 2.0 版適用於 Oracle 由Attunity 提供目標為 SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
+| 新增 SQL Server 2019 的 Oracle 來源和目的地。 | 目標為 SQL Server 2019 的 Oracle 來源和目的地已由 SSDT 安裝。<br/><br/>若要設計目標伺服器版本為 2017 或更低版本的套件，請從 Microsoft 下載網站下載相對應的 Oracle 連接器版本，並在 SSDT 機器上安裝它。 <br/>[目標為 SQL Server 2017 由 Attunity 提供適用於 Oracle 的 Microsoft 連接器 5.0 版](https://www.microsoft.com/en-us/download/details.aspx?id=55179) \(英文\)<br/>[目標為 SQL Server 2016 由 Attunity 提供適用於 Oracle 的 Microsoft 連接器 4.0 版](https://www.microsoft.com/en-us/download/details.aspx?id=52950) \(英文\)<br/>[目標為 SQL Server 2014 由 Attunity 提供適用於 Oracle 的 Microsoft 連接器 3.0 版](https://www.microsoft.com/en-us/download/details.aspx?id=44582) \(英文\)<br/>[目標為 SQL Server 2012 由 Attunity 提供適用於 Oracle 的 Microsoft 連接器 2.0 版](https://www.microsoft.com/en-us/download/details.aspx?id=29283) \(英文\)|
 | 修正從舊版 SSIS 移轉時無法載入指令碼工作/元件的問題。 | &nbsp; |
 | 修正資料檢視器在 Windows 7 SP1 和 Windows 8.1 上無法運作的問題。 | &nbsp; |
 | 修正在某些情況下，儲存套件會導致 Visual Studio 損毀的問題。 | &nbsp; |
@@ -85,7 +85,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 
 發行日期：&nbsp; 2018 年 11 月 5 日  
 組建編號：&nbsp; 14.0.16182.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 **SSIS：**
@@ -101,7 +101,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 
 發行日期：&nbsp; 2018 年 9 月 27 日  
 組建編號：&nbsp; 14.0.16179.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -121,7 +121,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 
 發行日期：&nbsp; 2018 年 9 月 5 日  
 組建編號：&nbsp; 14.0.16174.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -144,7 +144,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 
 發行日期：&nbsp; 2018 年 7 月 2 日  
 組建編號：&nbsp; 14.0.16167.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -167,7 +167,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 
 發行日期：&nbsp; 2018 年 6 月 4 日  
 組建編號：&nbsp; 14.0.16165.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -192,7 +192,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 
 發行日期：&nbsp; 2018 年 4 月 10 日  
 組建編號：&nbsp; 14.0.16162.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -220,7 +220,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 ## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2，&nbsp;適用於 VS 2017 的 SSDT
 
 組建編號：&nbsp; 14.0.16156.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -243,7 +243,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 ## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1，&nbsp;適用於 VS 2017 的 SSDT
 
 組建編號：&nbsp; 14.0.16148.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -257,7 +257,7 @@ Visual Studio 2017 (15.5.1) 是與 15.5.0 版相同的版本，但安裝程式�
 ## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0,&nbsp; 適用於 VS 2017 的 SSDT
 
 組建編號：&nbsp; 14.0.16146.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -284,7 +284,7 @@ ExecuteOutOfProcess 設定為 True 時，**Integration Services (IS)** SSIS 執�
 ## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3，&nbsp;適用於 VS 2015 的 SSDT
 
 組建編號：&nbsp; 14.0.61712.050  
-_適用於 Visual Studio 2015 的 SSDT。_
+適用於 Visual Studio 2015 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -333,7 +333,7 @@ _適用於 Visual Studio 2015 的 SSDT。_
 ## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0 (預覽)，&nbsp;適用於 VS 2017 的 SSDT
 
 組建編號：&nbsp; 14.0.16134.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
   
 ### <a name="whats-new"></a>新功能
 
@@ -366,7 +366,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 ## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30，&nbsp;適用於 VS 2015 的 SSDT
 
 組建編號：&nbsp; 14.0.61709.290  
-_適用於 Visual Studio 2015 的 SSDT。_
+適用於 Visual Studio 2015 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -391,13 +391,13 @@ _適用於 Visual Studio 2015 的 SSDT。_
 
 - 新的報表專案格式不會保留原始檔控制繫結，而且會引發類似下列訊息的錯誤：
 
-   *專案檔 C:\path 並未繫結至原始檔控制，但方案中卻含有該專案檔的原始檔控制繫結資訊。*
+   「專案檔 C:\path 並未繫結至原始檔控制，但方案中卻含有該專案檔的原始檔控制繫結資訊」。
  
    若要解決此問題，請在每次開啟方案時，按一下 [使用方案繫結]。
 
 - 將您的專案升級至新的 MSBuild 格式之後，儲存可能會失敗並顯示類似如下的訊息：
 
-   *「參數 "unevaluatedValue" 不可為 null」。*
+   「參數 "unevaluatedValue" 不可為 null」。
 
    若要解決此問題，請更新您的 [專案設定] 並填入 [平台] 屬性。
 
@@ -459,7 +459,7 @@ _適用於 Visual Studio 2015 的 SSDT。_
 ## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0 (預覽)，&nbsp;適用於 VS 2017 的 SSDT
 
 組建編號：&nbsp; 14.0.16121.0  
-_適用於 Visual Studio 2017 的 SSDT。_
+適用於 Visual Studio 2017 的 SSDT。
   
 ### <a name="whats-new"></a>新功能
 
@@ -477,7 +477,7 @@ _適用於 Visual Studio 2017 的 SSDT。_
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2，&nbsp;適用於 VS 2015 的 SSDT
 
 組建編號：&nbsp; 14.0.61707.300  
-_適用於 Visual Studio 2015 的 SSDT。_
+適用於 Visual Studio 2015 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 
@@ -526,7 +526,7 @@ _適用於 Visual Studio 2015 的 SSDT。_
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10，&nbsp;適用於 VS 2015 的 SSDT
 
 組建編號：&nbsp; 14.0.61705.170  
-_適用於 Visual Studio 2015 的 SSDT。_
+適用於 Visual Studio 2015 的 SSDT。
 
 ### <a name="whats-new"></a>新功能
 **AS 專案：**
@@ -560,8 +560,8 @@ _適用於 Visual Studio 2015 的 SSDT。_
 ## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0，&nbsp;適用於 VS 2015 的 SSDT
 
 組建編號：&nbsp; 14.0.61704.140  
-_適用於 Visual Studio 2015 的 SSDT。_  
-_最多支援 SQL Server 2017。_
+適用於 Visual Studio 2015 的 SSDT。  
+最多支援 SQL Server 2017。
 
 ### <a name="whats-new"></a>新功能
 **資料庫專案：**
@@ -597,7 +597,7 @@ _最多支援 SQL Server 2017。_
     - DAX 部析器\Intellisense 的增強功能
 
 
-**RS 專案：**
+**RS 專案︰**
 - 可內嵌的 RVC Control 現在可支援 SSRS 2016
 
 ### <a name="bug-fixes"></a>錯誤修正
@@ -638,7 +638,7 @@ _最多支援 SQL Server 2017。_
 - 修正在 VS2017 中使用 AS 連線預覽報表失敗的問題
  
 
-**RS 專案：**
+**RS 專案︰**
 - 修正在 SSDT 中設計報表時，參數、資料來源及資料集的樹狀檢視會在做出大多數變更時折疊的問題 
 - 修正 [儲存] 應儲存 RDL 版本而非最新版本的問題。
 - 修正 SSDT RS 在備份關閉時仍備份檔案的問題，及其他數個問題。
@@ -665,8 +665,8 @@ _最多支援 SQL Server 2017。_
 
 發行日期：&nbsp; 2016 年 10 月 20 日  
 組建編號：&nbsp; 14.0.61021.0  
-_適用於 Visual Studio 2015 的 SSDT。_  
-_最多支援 SQL Server 2016。_
+適用於 Visual Studio 2015 的 SSDT。  
+最多支援 SQL Server 2016。
 
 **新功能**
 
@@ -758,7 +758,7 @@ Console.WriteLine(result.DeploymentReport);
 
 發行日期：&nbsp; 2016 年 9 月 20 日  
 組建編號：&nbsp; 14.0.60918  
-_適用於 SQL Server 2016。_
+適用於 SQL Server 2016。
 
 **新功能**
 
@@ -797,7 +797,7 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
 發行日期：&nbsp; 2016 年 8 月 15 日  
 組建編號：&nbsp; 14.0.60812.0  
-_適用於 SQL Server 2016。_
+適用於 SQL Server 2016。
 
 **新功能**
 
@@ -835,7 +835,7 @@ _適用於 SQL Server 2016。_
 
 發行日期：&nbsp; 2016 年 6 月 30 日  
 組建編號：&nbsp; 14.0.60629.0  
-_適用於 SQL Server 2016。_
+適用於 SQL Server 2016。
 
 **新功能**  
 - **Always Encrypted 支援：** 對於包含 Always Encrypted 資料行的資料庫，此版本透過我們的核心 API 和命令列工具 (SqlPackage.exe) 新增 Always Encrypted 的完整支援。 您可以利用所有完整支援的 Always Encrypted 功能，建置及發行資料庫專案。  
@@ -879,14 +879,14 @@ _適用於 SQL Server 2016。_
 
 發行日期：&nbsp; 2016 年 6 月 1 日  
 組建編號：&nbsp; 14.0.60525.0  
-_適用於 SQL Server 2016。_
+適用於 SQL Server 2016。
 
 SSDT 公開上市 (GA) 現在已發行。 2016 年 6 月的 SSDT GA 更新加入 SQL Server 2016 RTM 之最新更新的支援，和各種錯誤 (bug) 修正。 如需詳細資訊，請參閱 [2016 年 6 月的 SQL Server Data Tools GA 更新 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)。
 
 ## <a name="additional-resources"></a>其他資源
   
 [下載 SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
-[舊版 SQL Server Data Tools &#40;SSDT 和 SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
+[舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [Database Engine 的新功能](https://msdn.microsoft.com/library/bb510411.aspx)  
 [Analysis Services 的新功能](../analysis-services/what-s-new-in-analysis-services.md)  
 [Integration Services 的新功能](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  

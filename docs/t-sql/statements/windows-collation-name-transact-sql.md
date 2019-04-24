@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974347"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671384"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
 
@@ -37,7 +37,6 @@ ms.locfileid: "57974347"
 ## <a name="syntax"></a>語法
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>引數
 
-*CollationDesignator* 指定 Windows 定序所用的基底定序規則。 基底定序規則涵蓋下列項目：
+*CollationDesignator*   
+指定 Windows 定序所用的基底定序規則。 基底定序規則涵蓋下列項目：
 
 - 在指定了字典排序時，會套用的排序與比較規則。 排序規則根據字母或語言而定。
 - 用於儲存 **varchar** 資料的字碼頁。
@@ -67,20 +67,20 @@ CollationDesignator_<ComparisonStyle>
 **AI** 指定不區分腔調字，**AS** 指定區分腔調字。
 
 *KanatypeSensitive*  
-**Omitted** 指定不區分假名，**KS** 指定區分假名。
+省略此選項指定不區分假名，**KS** 指定區分假名。
 
 *WidthSensitivity*  
-**Omitted** 指定不區分全半形，**WS** 指定區分全半形。
+省略此選項指定不區分全半形，**WS** 指定區分全半形。
 
 *VariationSelectorSensitivity*  
-**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 開始 
+- **適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 開始 
 
-[省略] 會指定不區分變化選取器，[VSS] 則指定區分變化選取器。
+- 省略此選項指定不區分變化選取器，**VSS** 則指定區分變化選取器。
 
 **UTF8**  
-**適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始   
+- **適用於**：從 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 開始   
 
-指定要用於合格資料類型的 UTF-8 編碼。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
+- 指定要用於合格資料類型的 UTF-8 編碼。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。
 
 **BIN**  
 指定要用的回溯相容性二進位排序次序。
@@ -197,10 +197,10 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |蓋楚瓦文 (秘魯)|Latin1_General_100_|無法使用|
 |羅曼斯文 (瑞士)|Romansh_100_|無法使用|
 |沙米文 (伊納立，芬蘭)|Sami_Sweden_Finland_100_|無法使用|
-|沙米文 (盧勒，挪威)|Sami_Norway_100_|無法使用|
+|薩米文 (魯勒，挪威)|Sami_Norway_100_|無法使用|
 |沙米文 (盧勒，瑞典)|Sami_Sweden_Finland_100_|無法使用|
 |沙米文 (北，芬蘭)|Sami_Sweden_Finland_100_|無法使用|
-|沙米文 (北，挪威)|Sami_Norway_100_|無法使用|
+|薩米文 (北，挪威)|Sami_Norway_100_|無法使用|
 |沙米文 (北，瑞典)|Sami_Sweden_Finland_100_|無法使用|
 |沙米文 (斯科特，芬蘭)|Sami_Sweden_Finland_100_|無法使用|
 |沙米文 (南，挪威)|Sami_Norway_100_|無法使用|

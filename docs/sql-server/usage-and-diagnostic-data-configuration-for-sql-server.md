@@ -4,17 +4,17 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 21ad8b2f4b8c43e568b86d73dc1d75363f05ee4e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: b616c8f3a41d960ecd04ac1407014aa2bfa3ce29
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243552"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582711"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server"></a>設定 SQL Server 的使用方式和診斷資料收集
 
@@ -139,10 +139,10 @@ SSMS 不會收集自己的損毀傾印。 與 SSMS 相關的任何損毀傾印�
  
 - Windows Server 2016 與 Windows 10
 
-    [在您的組織中設定 Windows 診斷資料](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [在組織中設定 Windows 診斷資料](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 與 Windows 7
 
-    [WER 設定](/windows/desktop/wer/wer-settings)
+    [WER 設定](/windows/desktop/wer/wer-settings) \(英文\)
  
 ## <a name="feedback-for-analysis-services"></a>針對 Analysis Services 的意見反應
 

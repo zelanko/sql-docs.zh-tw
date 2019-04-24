@@ -16,47 +16,43 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2017||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff2d9980e4036acae9f2b11a41582847b1a686b
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7734ce09ca33c1db8b0ab650509edeabe9e80a08
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342930"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670854"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 將第二個引數中指定的部分字元轉譯為第三個變數中指定的一組目的地字元之後，傳回提供作為第一個引數的字串。
 
 ## <a name="syntax"></a>語法
 
+```sql
+TRANSLATE ( inputString, characters, translations)
 ```
-TRANSLATE ( inputString, characters, translations) 
-```
 
-## <a name="arguments"></a>引數   
+## <a name="arguments"></a>引數
 
- *inputString*   
- 這是要搜尋的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *inputString* 可以是任何字元資料類型 (nvarchar、varchar、nchar、char)。
+ *inputString* 是要搜尋的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *inputString* 可以是任何字元資料類型 (nvarchar、varchar、nchar、char)。
 
- *characters*   
- 包含應取代之字元的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *characters* 可以是任何字元資料類型。
+ *characters* 是包含應取代之字元的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *characters* 可以是任何字元資料類型。
 
-*translations*   
- 為包含取代字元的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *translations* 必須與 *characters* 是一樣的資料類型和長度。
+*translations* 是包含取代字元的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *translations* 必須與 *characters* 是一樣的資料類型和長度。
 
 ## <a name="return-types"></a>傳回類型
 
 傳回資料類型與 `inputString` 相同的字元運算式，其中第二個引數中的字元會取代為第三個引數中相符的字元。
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Remarks
 
 如果 *characters* 和 *translations* 運算式的長度不同，則 `TRANSLATE` 函數會傳回錯誤。 如果任何引數是 NULL，`TRANSLATE` 會傳回 NULL。  
 
 `TRANSLATE` 函式的行為類似於使用多個 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 函式。 不過，`TRANSLATE` 不會多次取代字元。 這與多個 `REPLACE` 函式不同，因為每次使用時都會取代相關的所有字元。 
-
 
 `TRANSLATE` 永遠是 SC 定序感知。
 
@@ -105,7 +101,7 @@ REPLACE
 );
 ```
 
-###  <a name="b-convert-geojson-points-into-wkt"></a>B. 將 GeoJSON 點轉換成 WKT
+### <a name="b-convert-geojson-points-into-wkt"></a>B. 將 GeoJSON 點轉換成 WKT
 
 GeoJSON 是一種格式，可針對各種不同的地理資料結構編碼。 開發人員可以利用 `TRANSLATE` 函數，輕鬆地將 GeoJSON 點轉換為 WKT 格式，反之亦然。 下列查詢會將輸入中的方括號和大括號取代為一般括號：
 
@@ -114,7 +110,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
 |點  |座標 |  
 |---------|--------- |

@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58797038"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
@@ -86,7 +86,7 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 登入有四種類型：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
 ASSWORD **=**'*password*' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 
@@ -695,7 +695,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>引數
 
-*login_name* 指定建立的登入名稱。 登入有四種類型：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
+*login_name* 指定建立的登入名稱。 有四種登入：SQL Server 登入、Windows 登入、憑證對應登入和非對稱金鑰對應登入。 當您建立從 Windows 網域帳戶對應的登入時，對於 Windows 2000 之前版本的使用者登入名稱，您必須使用 [\<domainName>\\<login_name>] 格式。 您無法使用 login_name@DomainName 格式的 UPN。 如需範例，請參閱本文稍後的範例 D。 驗證登入屬於 **sysname** 類型、必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，而且不得包含 '**\\**'。 Windows 登入可以包含 '**\\**'。 以 Active Directory 使用者為基礎的登入，其名稱僅限 21 個字元以內。
 
 ASSWORD **='**_password_' 僅適用於 SQL Server 登入。 指定要建立的登入密碼。 請使用增強式密碼。 如需詳細資訊，請參閱[強式密碼](../../relational-databases/security/strong-passwords.md)和[密碼原則](../../relational-databases/security/password-policy.md)。 從 SQL Server 2012 (11.x) 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。
 

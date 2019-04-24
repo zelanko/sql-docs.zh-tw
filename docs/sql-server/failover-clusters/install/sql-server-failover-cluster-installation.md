@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
-ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58913303"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 容錯移轉叢集安裝
@@ -72,7 +72,7 @@ ms.locfileid: "58913303"
 #### <a name="ip-address-configuration-during-setup"></a>安裝期間的 IP 位址組態  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式可在執行下列動作時，設定或變更 IP 資源的相依性設定：  
   
--   整合式安裝 - [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   整合式安裝 - [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   CompleteFailoverCluster (進階安裝) - [建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   

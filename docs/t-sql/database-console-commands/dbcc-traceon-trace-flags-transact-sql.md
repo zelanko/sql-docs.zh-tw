@@ -1,7 +1,7 @@
 ---
 title: 追蹤旗標 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c6a6d5e92c6aa5ab2a88606e829acba3c765276f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9e204faee33deba95a53906f473bf909e182785e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494200"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583441"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "58494200"
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，不一定支援追蹤旗標行為。 
   
-|追蹤旗標|Description|  
+|追蹤旗標|描述|  
 |---|---|
 |**139**| 在相容性層級較低的資料庫上分析針對特定資料類型導入之相容性層級 130 所改善的精確度和轉換邏輯時，於 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 和 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) 等 DBCC 檢查命令範圍中強制正確的轉換語意。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/help/4010261) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本的組建。<br /><br />**警告：** 追蹤旗標 139 不應在生產環境中持續啟用，其唯一的用途是執行資料庫驗證檢查，如 [Microsoft 支援服務文章](https://support.microsoft.com/help/4010261)中所述。 在完成驗證檢查後，應立即將它停用。<br /><br />**範圍**：只限全域|
 |**174**|將 64 位元系統上的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 計畫快取貯體計數從 40,009 增加至 160,001。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3026083) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**範圍**：只限全域|
@@ -106,7 +106,7 @@ ms.locfileid: "58494200"
 |**4139**|不論索引鍵資料行狀態為何，啟用自動產生的快速統計資料 (長條圖修正)。 如果設定追蹤旗標 4139，則不論前置統計資料資料行狀態為何 (遞增、遞增或固定)，在查詢編譯時將調整用來預估基數的長條圖。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/2952101) \(機器翻譯\)。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS' [查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**注意：** 請確定您已徹底測試此選項後，再將其部署到生產環境。<br /><br />**注意：** 此追蹤旗標不適用於 CE 70 版。 請改用追蹤旗標 2389 和 2390。<br /><br />**範圍**：全域或工作階段或查詢|
 |**4199**|<a name="4199"></a>啟用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累積更新和 Service Pack 中發行的查詢最佳化工具 (QO) 修正。<br /><br />根據指定產品版本中最新的資料庫[相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)，預設會啟用對舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所做的 QO 變更，而不啟用追蹤旗標 4199。<br /><br />下表摘要說明使用特定資料庫相容性層級和追蹤旗標 4199 時的行為。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/974006) \(機器翻譯\)。<br /><br /><table border="1" frame="void" width="550"><tr valign="middle" align="center"><td>**資料庫相容性層級** </td><td>**TF 4199**</td><td>**先前的資料庫相容性層級中的 QO 變更**</td><td>**目前版本 RTM 後的 QO 變更**</td></tr><tr valign="middle" align="center"><td rowspan="2">**100 至 120**</td><td>關閉</td><td>已停用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr><tr valign="middle" align="center"><td rowspan="2">**130**</td><td>關閉</td><td>已啟用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr><tr valign="middle" align="center"><td rowspan="2">**140**</td><td>關閉</td><td>已啟用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr><tr valign="middle" align="center"><td rowspan="2">**150**</td><td>關閉</td><td>已啟用</td><td>已停用</td></tr><tr valign="middle" align="center"><td>開啟</td><td>已啟用</td><td>已啟用</td></tr></table><br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，若要在資料庫層級完成此作業，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 QUERY_OPTIMIZER_HOTFIXES 選項。<br /><br />從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 開始，若要在查詢層級完成此操作，請新增 USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'[查詢提示](../../t-sql/queries/hints-transact-sql-query.md)，而不要使用此追蹤旗標。<br /><br />**範圍**：全域或工作階段或查詢|
 |**4610**|將儲存快取項目之雜湊表的大小增加 8 倍。 與追蹤旗標 4618 一起使用時，TokenAndPermUserStore 快取存放區中的項目數會增加至 8,192。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/959823) \(機器翻譯\)。<br /><br />**範圍：** 只限全域|
-|**4616**|讓應用程式角色可以看見伺服器層級的中繼資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，應用程式角色不能存取本身資料庫之外的中繼資料，因為應用程式角色與伺服器層級主體沒有關聯。 這是和舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不同的一項行為變更。 設定這個全域旗標可停用新限制，使應用程式角色可以存取伺服器層級的中繼資料。<br /><br />**範圍**：只限全域|
+|**4616**|讓應用程式角色可以看見伺服器層級的中繼資料。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，應用程式角色不能存取本身資料庫之外的中繼資料，因為應用程式角色與伺服器層級主體沒有關聯。 這是和舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不同的一個行為變更。 設定這個全域旗標可停用新限制，使應用程式角色可以存取伺服器層級的中繼資料。<br /><br />**範圍**：只限全域|
 |**4618**|將 TokenAndPermUserStore 快取存放區中的項目數限制為 1,024。 與追蹤旗標 4610 一起使用時，TokenAndPermUserStore 快取存放區中的項目數會增加至 8,192。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/959823) \(機器翻譯\)。<br /><br />**範圍：** 只限全域|
 |**5004**|暫停 TDE 加密掃描，並導致加密掃描背景工作結束，而不執行任何工作。 資料庫會繼續處於加密狀態 (加密進行中)。 若要繼續重新加密掃描，請停用追蹤旗標 5004 並執行 ALTER DATABASE <database_name> SET ENCRYPTION ON。 <br /><br />**範圍：** 只限全域|
 |**6498**|在沒有足夠記憶體可用時啟用多個大型查詢編譯，以獲得大型閘道的存取權。 它是以 SQL Server 目標記憶體的百分之 80 為基礎，且每 25 GB 的記憶體允許一個大型查詢編譯。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](https://support.microsoft.com/kb/3024815) \(機器翻譯\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，追蹤旗標 6498 沒有任何作用。<br /><br />**範圍**：只限全域|

@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef47b518c5c2d1595458d652b1fcde7065400b79
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434509"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582831"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "58434509"
  **Azure 快照集：** 在某個時點間取得的 Azure Blob 快照集。 如需詳細資訊，請參閱 [建立 Blob 的快照集](https://msdn.microsoft.com/library/azure/hh488361.aspx)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份現在支援儲存在 Microsoft Azure Blob 儲存體服務中的資料庫檔案 Azure 快照集備份。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL：** URL 會指定唯一備份檔案的統一資源識別碼 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 "WITH FORMAT" 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
+ **URL：** URL 會指定唯一備份檔案的統一資源識別項 (URI)。 此 URL 是用來提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份檔案的位置和名稱。 此 URL 必須指向實際的 Blob，而非只有容器。 如果 Blob 不存在，就會建立 Blob。 如果指定了現有的 Blob，除非同時指定 "WITH FORMAT" 選項覆寫 Blob 中現有的備份檔，否則 BACKUP 會失敗。  
   
  以下是 URL 值範例：http[s]://ACCOUNTNAME.blob.core.windows.net/\<容器>/\<.bak>。 HTTPS 不是必要項目，但是建議使用。  
   
@@ -323,15 +323,15 @@ New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroup
 $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
+$storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
-$container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+$container = New-AzStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
-$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
+$policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
 
 
 # Gets the Shared Access Signature for the policy  
@@ -349,7 +349,7 @@ Write-Host $tSql
 成功執行指令碼之後，請將 `CREATE CREDENTIAL` 命令複製到查詢工具，再連線到 SQL Server 執行個體，然後執行命令以建立含共用存取簽章的認證。 
 
 ###  <a name="credential"></a> 建立認證  
- 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，以向 Microsoft Azure Blob 儲存體服務驗證。 執行下列其中一項動作。 
+ 下列範例會建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證，以向 Microsoft Azure Blob 儲存體服務驗證。 執行下列其中一個動作。 
   
 1.  **使用共用存取簽章**  
 

@@ -1,5 +1,5 @@
 ---
-title: 範例：分次還原資料庫 (完整復原模式) | Microsoft Docs
+title: 範例分次還原資料庫 (完整復原模式) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fa12f31f534d4a25c290ab4f000e2cbb2e3ce48e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bf9130dadbc0b7a851856d70d78403b6f0008e1
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675046"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581843"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例：分次還原資料庫 (完整復原模式)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例分次還原資料庫 (完整復原模式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   分次還原順序會在檔案群組層級，分階段地還原與復原資料庫，從主要檔案群組開始，然後才是所有可讀寫的次要檔案群組。  
@@ -50,9 +50,9 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
        WITH PARTIAL, NORECOVERY  
     RESTORE DATABASE adb FILEGROUP='A' FROM backup2   
        WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup4 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup5 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup4 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup5 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
@@ -66,9 +66,9 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
     ```  
     RESTORE DATABASE adb FILEGROUP='C' FROM backup2a WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup4 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup5 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup4 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup5 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
@@ -94,7 +94,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
