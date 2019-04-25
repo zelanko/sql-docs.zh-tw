@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471173"
 ---
 # <a name="insert---sql-command"></a>INSERT - SQL 命令
 將記錄附加至資料表，其中包含指定的欄位值的結尾。  
@@ -41,10 +41,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  如果您指定的資料表開啟時，INSERT 會將新記錄附加至資料表。 如果資料表是在工作區中開啟的除了目前的工作區，未選取附加記錄; 之後目前的工作區仍為選取狀態。  
   
- [( *fname1*[， *fname2*[，...]])]  
+ [( *fname1*[, *fname2*[, ...]])]  
  指定新記錄中欄位的名稱到所插入的值。  
   
- 值 ( *eExpression1*[， *eExpression2*[，...]])  
+ VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
  指定插入新資料錄的欄位值。 如果您省略的欄位名稱，您必須指定欄位值的資料表結構所定義的順序。  
   
 ## <a name="remarks"></a>備註  

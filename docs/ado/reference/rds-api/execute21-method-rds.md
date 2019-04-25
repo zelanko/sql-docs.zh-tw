@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1b4608dde67f31067ed34f7c552ba866a2095ed
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469320"
 ---
 # <a name="execute21-method-rds"></a>Execute21 方法 (RDS)
 執行要求，並在 ADO 2.1 中建立用於 ADO 資料錄集。  

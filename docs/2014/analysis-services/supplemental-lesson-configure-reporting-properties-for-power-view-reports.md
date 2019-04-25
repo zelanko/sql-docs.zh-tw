@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757969"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>設定 Power View 報表的報表屬性
   在此補充課程中，我們將會針對 Adventure Works Internet Sales Model 專案設定報表屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。  
@@ -25,7 +25,7 @@ ms.locfileid: "53363460"
   
  本課將不會描述如何建立及使用 Power View 報表。 本課的目的是要針對表格式模型作者提供將影響模型資料顯示於 Power View 中之方式的屬性和設定簡介。 若要深入了解建立 Power View 報表，請參閱[教學課程：在 Power View 中建立範例報表](https://go.microsoft.com/fwlink/?LinkId=221204)。  
   
- 完成本課程的估計時間：**30 分鐘**  
+ 估計的時間才能完成這一課：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
  這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
@@ -161,7 +161,7 @@ ms.locfileid: "53363460"
      **日期**  
   
     > [!NOTE]  
-    >  因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會被當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱《SQL Server 線上叢書》中的[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
+    >  因為 [Date] 資料表選取為模型日期資料表，藉由使用 [標記為日期資料表] 設定，在第 7 課：標記為日期資料表，並在 Date 資料表中的資料行的日期資料行來當做唯一識別碼，也就是日期資料行的資料列識別碼屬性將會自動設定為 True，並無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱《SQL Server 線上叢書》中的[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
     |「資料行」|屬性|值|  
     |------------|--------------|-----------|  

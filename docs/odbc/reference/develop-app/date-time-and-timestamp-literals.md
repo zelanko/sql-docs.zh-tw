@@ -14,24 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641031"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、時間和時間戳記常值
 日期、 時間和時間戳記常值的逸出序列是  
   
- **{**_-型別_ **'** _值_ **'}**  
+ **{**  _-type_ **'** _value_ **'}**  
   
  何處*常值型別*其中一個值會列在下表。  
   
-|*常值型別*|意義|格式化的*值*|  
+|*literal-type*|意義|格式化的*值*|  
 |---------------------|-------------|-----------------------|  
 |**d**|date|*yyyy*-*mm*-*dd*|  
-|**t**|時間 *|*hh*:*公釐*:*ss*[1]|  
-|**ts**|時間戳記|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...*] [1]|  
+|**t**|時間 *|*hh*:*mm*:*ss*[1]|  
+|**ts**|時間戳記|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*][1]|  
   
  [SQL_DESC_PRECISION 描述項欄位中包含 1] 的時間戳記常值包含秒數元件間隔中右側位數的數目是小數點的秒數有效位數而定。 (如需詳細資訊，請參閱 < [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   

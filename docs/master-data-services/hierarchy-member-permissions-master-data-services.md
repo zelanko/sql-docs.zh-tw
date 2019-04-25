@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516506"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
 
@@ -38,9 +38,9 @@ ms.locfileid: "52817913"
   
  階層成員權限會套用到您指派的模型版本以及該版本的任何將來複本。 它們不會套用到早於您所指派的版本。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
-|**讀取**|顯示成員。<br /><br /> <br /><br /> 注意：如果您僅指派 [讀取] 權限給 [根]，[根] 底下的成員為唯讀。但是在明確階層和集合中，使用者可以將成員移到 [根] 且可以將新成員新增至 [根]。|  
+|**讀取**|顯示成員。<br /><br /> <br /><br /> 注意:如果您僅指派 [讀取] 權限給 [根]，[根] 底下的成員為唯讀。但是在明確階層和集合中，使用者可以將成員移到 [根] 且可以將新成員新增至 [根]。|  
 |**建立**|階層成員的權限不足以建立權限。|  
 |**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**刪除**|顯示成員，而且使用者可加以刪除。|  

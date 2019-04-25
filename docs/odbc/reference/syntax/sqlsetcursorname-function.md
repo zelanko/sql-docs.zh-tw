@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742244"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 函式
 **合規性**  
@@ -48,7 +48,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Current*  
+ *CursorName*  
  [輸入]資料指標名稱。 有效的處理，資料指標名稱不得包含任何開頭或尾端空格的資料指標名稱，以及如果資料指標名稱包含分隔的識別碼，應為資料指標名稱的第一個字元位於分隔符號。  
   
  *NameLength*  

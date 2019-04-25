@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518631"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52420659"
 5.  SQL Server MDS 工作流程整合服務會將資料路由傳送至您的工作流程處理常式組件。  
   
 > [!NOTE]  
->  注意：SQL Server MDS 工作流程整合服務是要觸發單一處理序。 如果您的自訂程式碼需要複雜處理，請在個別的執行緒中，或在工作流程處理序外部，完成您的處理。  
+>  注意:SQL Server MDS 工作流程整合服務是用來觸發單一處理序。 如果您的自訂程式碼需要複雜處理，請在個別的執行緒中，或在工作流程處理序外部，完成您的處理。  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>設定自訂工作流程的 Master Data Services  
  建立自訂工作流程需要撰寫特定的自訂程式碼，並設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 將工作流程資料傳遞至您的工作流程處理常式。 遵循以下步驟啟用自訂工作流程處理：  
@@ -64,7 +64,7 @@ ms.locfileid: "52420659"
   
 3.  將 'using Microsoft.MasterDataServices.Core.Workflow;' 新增至您的 C# 程式碼檔案。  
   
-4.  從類別宣告中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 繼承。 類別宣告應該類似：'public class WorkflowTester : IWorkflowTypeExtender'。  
+4.  從類別宣告中的 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 繼承。 在類別宣告應該類似於: ' public class WorkflowTester:IWorkflowTypeExtender'。  
   
 5.  實作 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 介面。 SQL Server MDS 工作流程整合服務會呼叫 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> 方法來啟動您的工作流程。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "52420659"
   
 1.  使用服務嵌入式管理單元停止服務。  
   
-2.  開啟命令提示字元、導覽到服務的位置，然後在主控台模式下輸入 Microsoft.MasterDataServices.Workflow.exe -console 來執行服務。  
+2.  開啟命令提示字元，瀏覽至服務的位置，並在主控台模式下執行服務，方式是輸入：Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，更新您的成員，然後再次套用商務規則。 詳細的記錄顯示在主控台視窗中。  
   

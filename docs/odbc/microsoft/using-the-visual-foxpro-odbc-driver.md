@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7c433de56ff5e171a817e8a25b9d850c0ecefa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447656"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>使用 Visual FoxPro ODBC Driver
 在本節中，下列主題會討論如何使用 Microsoft® Visual FoxPro® ODBC 驅動程式：  
@@ -36,6 +36,6 @@ ms.locfileid: "47825676"
   
 -   [使用 Visual FoxPro ODBC Driver 與 Visual Basic 應用程式](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
   
--   [使用 Visual FoxPro ODBC Driver 與 C 或 c + + 應用程式](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
+-   [使用 Visual FoxPro ODBC Driver，使用您的 c# 或C++應用程式](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [從 Microsoft Office 存取 Visual FoxPro 資料](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc09c5306d5c4fb9e63b1cba9b859f9633fcccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745838"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>標準檢視 (彙總索引標籤，Cube 設計師)
   使用彙總設計師的 **[標準檢視]** 來檢視彙總。 您也可以在這個檢視中，使用 **[彙總設計精靈]** 或 **[基於使用方式的最佳化精靈]** 來建立和修改彙總設計。  

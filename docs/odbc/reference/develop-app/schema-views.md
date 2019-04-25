@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 782dec08b76a9e5a97719d6af39e2c30c0f92d19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468615"
 ---
 # <a name="schema-views"></a>結構描述檢視
 應用程式在呼叫 ODBC 目錄函數，或使用 INFORMATION_SCHEMA 檢視，可以從 DBMS 擷取中繼資料資訊。 ANSI SQL-92 標準所定義的檢視。  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643302"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>分析關鍵影響因數 (適用於 Excel 的資料表分析工具)
   ![功能區中的 [分析關鍵影響因數] 按鈕](media/tat-aki.gif "功能區中的 [分析關鍵影響因數] 按鈕")  
@@ -75,7 +75,7 @@ ms.locfileid: "52415555"
   
  此垂直線的長度表示此因數造成結果發生的機率；因此，當陰影垂直線越長，就表示關聯性越強。  
   
- **喜好**  
+ **Favors**  
  在第二個報表中，您比較的目標值會列在兩個資料行中，其中相關因素會依照信心的遞減順序列出。  
   
 -   **藍色**垂直線顯示影響結果，「 否 」 的屬性 (= 未購買)。  

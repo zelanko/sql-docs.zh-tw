@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633130"
 ---
 # <a name="update-statement-limitations"></a>UPDATE 陳述式限制
 Paradox 驅動程式更新的資料表，資料表必須有唯一的索引 （Paradox 主索引鍵）。 當您使用 Paradox 驅動程式，而不需要實作 Borland 資料庫引擎時，它不可以更新 Paradox 資料表。  

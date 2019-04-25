@@ -49,11 +49,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635499"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>演算法參數 (SQL Server 資料採礦增益集)
   當您使用適用於 Excel 的資料表分析工具來執行資料採礦時，您不需要設定資料採礦演算法或參數；每一個工具都會分析資料，並自動選取最佳參數。 但是，如果您想要修改模型或是從頭開始建立採礦模型，適用於 Excel 的資料採礦用戶端提供了幾個選項供您自訂。  
@@ -77,15 +77,15 @@ ms.locfileid: "52409175"
 |CLUSTER_COUNT|Microsoft 群集演算法<br /><br /> Microsoft 時序叢集演算法|指定演算法要建立的大約群集數目。 如果無法從資料建立大約群集數目，則演算法會盡可能建立最多的群集。 將 CLUSTER_COUNT 設定為 0 會造成演算法使用啟發式決定，對於建立的群集數做出最好的決定。<br /><br /> 預設值是 10。|  
 |CLUSTER_SEED|Microsoft 群集演算法|指定在模型建立的初始階段，用於隨機產生群集的種子號碼。<br /><br /> 預設值是 0。|  
 |CLUSTERING_METHOD|Microsoft 群集演算法|指定演算法要使用的群集方法。 可用的群集方法有：可擴充的 EM (1)、不可擴充的 EM (2)、可擴充的 K-means (3) 和不可擴充的 K-means (4)。<br /><br /> 預設值是 1。|  
-|COMPLEXITY_PENALTY|Microsoft 決策樹演算法<br /><br /> Microsoft 時間序列演算法|控制決策樹的成長。 低值會增加分岔數目，而高值會減少分岔數目。 預設值是依據特定模型的屬性數目，如下列清單所述：<br /><br /> 1 到 9 個屬性，預設值為 0.5。<br /><br /> 10 到 99 個屬性，預設值為 0.9。<br /><br /> 100 個以上的屬性，預設值為 0.99。<br /><br /> 注意：在時間序列模型中，這個參數只適用於使用 ARTxp 演算法或混合模型所建立的模型。|  
-|FORCED_REGRESSOR|Microsoft 決策樹演算法<br /><br /> Microsoft 線性迴歸演算法|強制演算法使用指定的資料行作為迴歸輸入變數，不考慮演算法計算出來之資料行的重要性。<br /><br /> 注意：此參數只用於預測連續屬性的決策樹。 根據定義，線性迴歸模型是一種特殊案例的決策樹，可預測持續的屬性。 但是，任何決策樹模型都可以包含一個代表線性迴歸公式的節點。|  
+|COMPLEXITY_PENALTY|Microsoft 決策樹演算法<br /><br /> Microsoft 時間序列演算法|控制決策樹的成長。 低值會增加分岔數目，而高值會減少分岔數目。 預設值是依據特定模型的屬性數目，如下列清單所述：<br /><br /> 1 到 9 個屬性，預設值為 0.5。<br /><br /> 10 到 99 個屬性，預設值為 0.9。<br /><br /> 100 個以上的屬性，預設值為 0.99。<br /><br /> 注意:在時間序列模型，此參數僅適用於使用 ARTxp 演算法建立模型或混合模型。|  
+|FORCED_REGRESSOR|Microsoft 決策樹演算法<br /><br /> Microsoft 線性迴歸演算法|強制演算法使用指定的資料行作為迴歸輸入變數，不考慮演算法計算出來之資料行的重要性。<br /><br /> 注意:此參數只用於預測連續屬性的決策樹。 根據定義，線性迴歸模型是一種特殊案例的決策樹，可預測持續的屬性。 但是，任何決策樹模型都可以包含一個代表線性迴歸公式的節點。|  
 |FORECAST_METHOD|Microsoft 時間序列演算法|指示是否應該使用 ARTxp 演算法、ARIMA 演算法或這兩者的組合來進行預測。<br /><br /> 預設值為 MIXED。|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|指定隱藏神經與輸入和輸出神經的比例。 下列公式決定隱藏層中的初始神經數目：<br /><br /> HIDDEN_NODE_RATIO * SQRT(總輸入神經 \* 總輸出神經)<br /><br /> 預設值為 4.0。|  
 |HISTORIC_MODEL_COUNT|Microsoft 時間序列演算法|指定要建立的記錄模型數目。<br /><br /> 預設值是 1。|  
 |HISTORICAL_MODEL_GAP|Microsoft 時間序列演算法|指定兩個連續記錄模型之間的時間延遲。 例如，將此值設定為 g，會造成要建立記錄模型的資料，依 g、2\*g、3\*g 等等的間隔而遭到時間配量截斷。<br /><br /> 預設值是 10。|  
-|HOLDOUT_PERCENTAGE|Microsoft 羅吉斯迴歸演算法<br /><br /> Microsoft Neural Network Algorithm|指定用來計算鑑效組錯誤之定型資料內的案例百分比，這可作為定型採礦模型時停止準則的一部分。<br /><br /> 預設值是 30。<br /><br /> 注意：這個參數與套用到採礦結構的鑑效組百分比值不同。|  
-|HOLDOUT_SEED|Microsoft 羅吉斯迴歸演算法<br /><br /> Microsoft Neural Network Algorithm|在演算法隨機決定鑑效組資料時，指定用來植入虛擬隨機產生器的數字。 如果此參數設定為 0，此演算法會依據採礦模型的名稱產生種子，以保證在重新處理期間，模型內容保持不變。<br /><br /> 預設值為 0。<br /><br /> 注意：這個參數與套用到採礦結構的鑑效組種子值不同。|  
-|INSTABILITY_SENSITIVITY|Microsoft 時間序列演算法|控制預測變異數超過某個臨界值且 ARTxp 演算法隱藏預測的那個點。 預設值為 1。<br /><br /> 注意：這個參數只會套用到使用 ARTxp 演算法的混合模型。|  
+|HOLDOUT_PERCENTAGE|Microsoft 羅吉斯迴歸演算法<br /><br /> Microsoft Neural Network Algorithm|指定用來計算鑑效組錯誤之定型資料內的案例百分比，這可作為定型採礦模型時停止準則的一部分。<br /><br /> 預設值是 30。<br /><br /> 注意:此參數會套用到採礦結構鑑效組百分比值不同。|  
+|HOLDOUT_SEED|Microsoft 羅吉斯迴歸演算法<br /><br /> Microsoft Neural Network Algorithm|在演算法隨機決定鑑效組資料時，指定用來植入虛擬隨機產生器的數字。 如果此參數設定為 0，此演算法會依據採礦模型的名稱產生種子，以保證在重新處理期間，模型內容保持不變。<br /><br /> 預設值為 0。<br /><br /> 注意:此參數會套用到採礦結構鑑效組種子值不同。|  
+|INSTABILITY_SENSITIVITY|Microsoft 時間序列演算法|控制預測變異數超過某個臨界值且 ARTxp 演算法隱藏預測的那個點。 預設值為 1。<br /><br /> 注意:此參數僅適用於混合式的模型或模型使用 ARTxp 演算法。|  
 |MAXIMUM_INPUT_ATTRIBUTES|Microsoft 群集演算法<br /><br /> Microsoft 決策樹演算法<br /><br /> Microsoft 線性迴歸演算法<br /><br /> Microsoft 貝氏機率分類演算法<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft 羅吉斯迴歸演算法|定義演算法在叫用特徵選取之前，可以處理的輸入屬性數目。 將此值設定為 0 可關閉特徵選取。<br /><br /> 預設值是 255。|  
 |MAXIMUM_ITEMSET_COUNT|Microsoft Association Algorithm|指定要產生的最大項目集數目。 如果沒有指定數目，演算法會產生所有可能的項目集。<br /><br /> 預設值是 200000。|  
 |MAXIMUM_ITEMSET_SIZE|Microsoft Association Algorithm|指定項目集內所允許的最大項目數。 將此值設定為 0，即代表項目集沒有大小限制。<br /><br /> 預設值是 3。|  

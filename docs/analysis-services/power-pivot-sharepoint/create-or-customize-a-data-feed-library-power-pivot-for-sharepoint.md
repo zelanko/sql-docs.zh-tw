@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7586527bcd2f79b6a9a54725fcbd376bd2720096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472323"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>建立或自訂資料摘要庫 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52519102"
   
  您必須為要建立或編輯資料摘要註冊文件的每個文件庫重複執行下列步驟。  
   
-#### <a name="step-1-enable-content-type-management"></a>步驟 1：啟用內容類型管理  
+#### <a name="step-1-enable-content-type-management"></a>步驟 1:啟用內容類型管理  
   
 1.  開啟要啟用多個內容類型的文件庫。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52519102"
   
 7.  按一下 [確定] 。  
   
-#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2：加入資料服務文件的內容類型  
+#### <a name="step-2-add-the-data-service-document-content-type"></a>步驟 2:加入資料服務文件的內容類型  
   
 1.  在 [內容類型] 區段中，按一下 **[從現有的網站內容類型新增]**。 如果您看不到此頁面，請回到網站中，按一下文件庫工具中的 **[文件庫]** ，然後按一下 **[文件庫設定]**。  
   

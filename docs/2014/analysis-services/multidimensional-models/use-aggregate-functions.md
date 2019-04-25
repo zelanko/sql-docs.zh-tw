@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740728"
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
   當維度用於配量量值時，量值會與該維度所含的階層一起彙總。 而總和行為則視指定給量值的彙總函式而定 對於大多數包含數值資料的量值而言，彙總函式是 `Sum`。 量值的值會依據所使用的階層層級而加總為不同的數量。  
   
  在 Analysis Services 中，您建立的每個量值都有一個彙總函數可以決定量值的作業。 預先定義的彙總類型包括`Sum`， `Min`， `Max`， `Count`，**相異計數量**，及其他更特殊的函數。 或者，您如需透過複雜或自訂的公式執行彙總，可以建置 MDX 計算，而不使用預先建置的彙總函數。 例如，若您要定義百分比值的量值，可以在 MDX 中使用導出量值。 請參閱 [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)。  
   
- 由 [Cube 精靈] 建立的量值，會在定義量值時，為其指派彙總類型。 彙總類型一律為`Sum`，來源資料行包含數值資料。 `Sum` 無論來源資料行的資料類型指派。 例如，若是使用 [Cube 精靈] 建立量值，並將其從事實資料表提取到所有資料行，則即使來源為日期時間資料行，所得量值的彙總類型都會是 `Sum`。 對於精靈所建立的量值，請務必檢查預先指派的彙總方法，以確認彙總函數的適用性。  
+ 由 [Cube 精靈] 建立的量值，會在定義量值時，為其指派彙總類型。 若來源資料行包含數值資料，彙總類型一律為 `Sum`。 無論來源資料行的資料類型為何，一律會指派 `Sum`。 例如，若是使用 [Cube 精靈] 建立量值，並將其從事實資料表提取到所有資料行，則即使來源為日期時間資料行，所得量值的彙總類型都會是 `Sum`。 對於精靈所建立的量值，請務必檢查預先指派的彙總方法，以確認彙總函數的適用性。  
   
  您可以使用 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 或 MDX 指派或變更任一個 Cube 定義的彙總方法。 如需進一步指示，請參閱[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)或 [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48199574"
 |`Max`|局部加總|擷取所有子成員的最高值。|  
 |`DistinctCount`|非加法|擷取所有唯一子成員的計數。 如需詳細資訊，請參閱下一節中的 [About Distinct Count measure](use-aggregate-functions.md#bkmk_distinct) (關於相異計數量值)。|  
 |`None`|非加法|不執行彙總，而且針對包含該量值的量值群組，直接從事實資料表提供維度中分葉與非分葉成員的所有值。 如果無法從成員的事實資料表讀取任何值，該成員的值就會設定為 Null。|  
-|`ByAccount`|局部加總|針對帳戶維度中的成員，依據指派給帳戶類型的彙總函式來計算彙總。 如果量值群組中沒有的帳戶類型維度，則視為`None`彙總函式。<br /><br /> 如需帳戶維度的詳細資訊，請參閱 [建立父子式類型維度的財務帳戶](database-dimensions-finance-account-of-parent-child-type.md)。|  
+|`ByAccount`|局部加總|針對帳戶維度中的成員，依據指派給帳戶類型的彙總函式來計算彙總。 如果量值群組中沒有帳戶類型維度，則視為 `None` 彙總函式。<br /><br /> 如需帳戶維度的詳細資訊，請參閱 [建立父子式類型維度的財務帳戶](database-dimensions-finance-account-of-parent-child-type.md)。|  
 |`AverageOfChildren`|局部加總|針對所有非空白的子成員，計算值的平均。|  
 |`FirstChild`|局部加總|擷取第一個子成員的值。|  
 |`LastChild`|局部加總|擷取最後一個子成員的值。|  
@@ -69,7 +69,7 @@ ms.locfileid: "48199574"
   
 ## <a name="see-also"></a>另請參閱  
  [量值和量值群組](measures-and-measure-groups.md)   
- [MDX 函數參考&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [定義局部加總行為](define-semiadditive-behavior.md)  
   
   

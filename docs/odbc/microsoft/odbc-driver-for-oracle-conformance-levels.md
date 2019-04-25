@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc9b570621fc083232f75a96751dfa0f0e4b4a30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468818"
 ---
 # <a name="odbc-driver-for-oracle-conformance-levels"></a>ODBC Driver for Oracle 一致性層級
 > [!IMPORTANT]  

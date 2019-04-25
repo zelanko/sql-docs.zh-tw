@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636220"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>在 ODBC 驅動程式中開發連線集區覺察
 本主題討論開發 ODBC 驅動程式，其中包含此驅動程式應該如何提供連線共用服務的相關資訊的詳細資料。  
@@ -87,7 +87,7 @@ ms.locfileid: "52417369"
   
  因為連接資訊可以來自多個來源 （連接字串、 連接屬性和資料來源名稱），驅動程式可能需要剖析連接字串和解析這些來源中每個以上的函式呼叫之間的衝突。  
   
- 因此，已導入新的 ODBC 控制代碼：SQL_HANDLE_DBC_INFO_TOKEN。 使用 SQL_HANDLE_DBC_INFO_TOKEN，驅動程式不需要剖析連接字串，並以上一次解決連接資訊中的衝突。 由於這是一種驅動程式專屬資料結構時，驅動程式可以儲存資料，例如連接資訊或集區識別碼。  
+ 因此，已導入新的 ODBC 控制代碼：SQL_HANDLE_DBC_INFO_TOKEN. 使用 SQL_HANDLE_DBC_INFO_TOKEN，驅動程式不需要剖析連接字串，並以上一次解決連接資訊中的衝突。 由於這是一種驅動程式專屬資料結構時，驅動程式可以儲存資料，例如連接資訊或集區識別碼。  
   
  這個控制代碼只當做驅動程式管理員與驅動程式之間的介面。 應用程式無法直接配置這個控制代碼。  
   

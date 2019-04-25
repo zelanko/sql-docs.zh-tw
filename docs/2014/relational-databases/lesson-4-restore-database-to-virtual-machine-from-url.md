@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743304"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>第 5 課 (選擇性) 使用 TDE 加密資料庫
   您可以選擇加密新建立的資料庫。 透明資料加密 (TDE) 會執行資料和記錄檔的即時 I/O 加密和解密。 這類加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 如需詳細資訊，請參閱 <<c0> [ 透明資料加密&#40;TDE&#41; ](security/encryption/transparent-data-encryption.md)並[將 TDE 保護的資料庫移至另一個 SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)。</c0>  
@@ -92,6 +92,6 @@ GO
   
  **下一課：**  
   
- [第 6 課：在 Windows Azure 中將資料庫從內部部署來源電腦移轉至目的地電腦](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [第 6 課：將資料庫移轉來源機器內部部署至 Windows Azure 中的目的地電腦](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

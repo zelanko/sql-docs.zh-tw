@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757366"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 模式 (SSAS 表格式)
   Analysis Services 可讓您擷取資料，並從表格式模型中建立報表，藉由擷取資料和彙總，直接從關聯式資料庫系統，使用*DirectQuery 模式*。 此主題介紹僅存在於記憶體中的標準表格式模型和可查詢關聯式資料來源的表格式模型之間的差異，並且說明如何撰寫和部署要在 DirectQuery 模式下使用的模型。  
@@ -75,13 +75,13 @@ ms.locfileid: "58657972"
   
 -   **導出資料行的支援：** DirectQuery 模型不支援導出資料行。 但是，您可以建立量值和 KPI，以操作資料集。 請參閱 〈[驗證](#bkmk_Validation)如需詳細資訊。  
   
--   **DAX 函數的有限的使用：** 某些 DAX 函數不能在 DirectQuery 模式下使用，因此，您必須以其他函數取代它們，或是使用資料來源中的衍生資料行來建立值。 當您所建立的公式與 DirectQuery 模式不相容時，模型設計師會針對任何引發的錯誤提供設計階段驗證。 如需詳細資訊，請參閱以下章節：[驗證](#bkmk_Validation)。  
+-   **DAX 函數的有限的使用：** 某些 DAX 函數不能在 DirectQuery 模式中，因此您必須以其他函數中，取代它們，或建立資料來源中使用衍生的資料行的值。 當您所建立的公式與 DirectQuery 模式不相容時，模型設計師會針對任何引發的錯誤提供設計階段驗證。 請參閱下列各節，如需詳細資訊：[驗證](#bkmk_Validation)。  
   
--   **公式相容性：** 在某些已知情況下，相較於只使用關聯式資料存放區的 DirectQuery 模型，相同公式可能在快取模型或混合模型下傳回不同的結果。 這些差異是由於 xVelocity 記憶體中分析引擎 (VertiPaq) 和 SQL Server 之間的語意差異所導致。 如需有關這些差異的詳細資訊，請參閱此章節：[公式相容性](#bkmk_FormulaCompat)。  
+-   **公式相容性：** 在某些已知情況下，相較於只使用關聯式資料存放區的 DirectQuery 模型，相同公式可能在快取模型或混合模型下傳回不同的結果。 這些差異是由於 xVelocity 記憶體中分析引擎 (VertiPaq) 和 SQL Server 之間的語意差異所導致。 如需有關這些差異的詳細資訊，請參閱本章節：[公式相容性](#bkmk_FormulaCompat)。  
   
--   **安全性：** 根據部署模型的方式，您可以使用不同的方法確保模型的安全。 表格式模型的快取資料是使用 Analysis Services 執行個體的安全性模型來確保安全。 您可以使用角色確保 DirectQuery 模型的安全，但是也可以使用關聯式資料存放區中定義的安全性。 您可以設定模型，好讓開啟以僅限 DirectQuery 模型為基礎之報表的使用者只能看到他們在 SQL Server 中的權限下允許看到的資料。 如需詳細資訊，請參閱此章節：[安全性](#bkmk_Security)。  
+-   **安全性：** 您可以使用不同的方法來保護模型根據部署的方式。 表格式模型的快取資料是使用 Analysis Services 執行個體的安全性模型來確保安全。 您可以使用角色確保 DirectQuery 模型的安全，但是也可以使用關聯式資料存放區中定義的安全性。 您可以設定模型，好讓開啟以僅限 DirectQuery 模型為基礎之報表的使用者只能看到他們在 SQL Server 中的權限下允許看到的資料。 請參閱此節的詳細資訊：[安全性](#bkmk_Security)。  
   
--   **用戶端限制：** 當模型處於 DirectQuery 模式時，只能使用 DAX 加以查詢。 不能使用 MDX 來建立查詢。 這表示您不能使用 Excel Pivot Client，因為 Excel 會使用 MDX。  
+-   **用戶端限制：** 當模型處於 DirectQuery 模式時，只能使用 DAX 查詢它。 不能使用 MDX 來建立查詢。 這表示您不能使用 Excel Pivot Client，因為 Excel 會使用 MDX。  
   
      不過，您可以建立針對 DirectQuery 模型中的查詢[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]如果您使用 DAX 資料表查詢當做 XMLA Execute 陳述式一部分如需詳細資訊，請參閱[DAX 查詢語法參考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "58657972"
 |-------------------|-----------------|  
 |**DirectQueryMode 屬性**|此屬性會在模型設計師中啟用 DirectQuery 模式。 您必須將此屬性設定為 `On`，才能變更任何其他 DirectQuery 屬性。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 啟用 DirectQuery 設計模式&#40;SSAS 表格式&#41;](enable-directquery-mode-in-ssdt.md)。</c0>|  
 |**QueryMode 屬性**|此屬性指定 DirectQuery 模型的預設查詢方法。當您部署模型時，在模型設計師中設定此屬性，但稍後可以覆寫該屬性。 此屬性有下列值：<br /><br /> **DirectQuery** -此設定可讓您指定模型的所有查詢都應該都使用關聯式資料來源。<br /><br /> **搭配使用 DirectQuery 和 InMemory** ：根據預設，此設定會指定應該透過關聯式來源來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> **InMemory** ：此設定會指定僅透過快取來回應查詢。<br /><br /> **搭配使用 InMemory 和 DirectQuery** ：根據預設，此設定會指定 應該透過快取來回應查詢，除非在用戶端的連接字串中指定其他項目。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
-|**DirectQueryMode 屬性**|在部署模型之後，您可以透過在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更此屬性，變更 DirectQuery 模型的慣用查詢資料來源。<br /><br /> 與上一個屬性相似，此屬性指定模型的預設資料來源，而且有下列值：<br /><br /> **InMemory**:查詢只能使用快取。<br /><br /> **DirectQuerywithInMemory**:查詢預設使用關聯式資料來源，除非在用戶端的連接字串中指定其他項目。<br /><br /> **InMemorywithDirectQuery**:查詢預設使用快取，除非在用戶端的連接字串中指定其他項目。<br /><br /> (**DirectQuery**:查詢只使用關聯式資料來源。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
+|**DirectQueryMode 屬性**|在部署模型之後，您可以透過在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中變更此屬性，變更 DirectQuery 模型的慣用查詢資料來源。<br /><br /> 與上一個屬性相似，此屬性指定模型的預設資料來源，而且有下列值：<br /><br /> **InMemory**:查詢可以使用快取。<br /><br /> **DirectQuerywithInMemory**:查詢預設使用關聯式資料來源，除非在用戶端的連接字串中指定其他項目。<br /><br /> **InMemorywithDirectQuery**:查詢預設使用快取，除非在用戶端的連接字串中指定其他項目。<br /><br /> (**DirectQuery**:查詢只使用關聯式資料來源。<br /><br /> <br /><br /> 如需詳細資訊，請參閱 [設定或變更 DirectQuery 的慣用連接方法](../set-or-change-the-preferred-connection-method-for-directquery.md)。|  
 |**模擬設定屬性**|此屬性定義在查詢時連接至 SQL Server 資料來源所用的認證。 您可以在模型設計師中設定此屬性，並且可以稍後在部署模型後變更值。<br /><br /> 請注意，這些認證只用於回應對關聯式資料存放區的查詢；它們不同於處理混合模型快取所用的認證。<br /><br /> 當模型只用於記憶體中時，不能使用模擬。 `ImpersonateCurrentUser` 設定無效，除非模型正在使用 DirectQuery 模式。|  
   
  此外，如果您的模型包含資料分割，您必須選擇一個資料分割做為 DirectQuery 模式查詢的來源。 如需詳細資訊，請參閱 <<c0> [ 資料分割和 DirectQuery 模式&#40;SSAS 表格式&#41;](define-partitions-in-directquery-models-ssas-tabular.md)。</c0>  

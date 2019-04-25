@@ -1,5 +1,5 @@
 ---
-title: 自動分組屬性成員 |Microsoft 文件
+title: 自動分組屬性成員 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737718"
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>課程 4-3-自動分組屬性成員
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34017715"
   
     下圖顯示 [年收入] 的已修改屬性。  
   
-    ![修改屬性 Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "修改 Yearly Income 屬性")  
+    ![修改屬性的 Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "修改 Yearly Income 屬性")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>將 [員工] 維度中的屬性階層成員分組  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34017715"
   
     下圖顯示按員工病假時數建立維度的銷售。  
   
-    ![依員工病假時建立維度的銷售額保留小時](../analysis-services/media/l4-discretizationmethod-2.gif "依員工病假時建立維度的銷售額保留小時")  
+    ![依員工病假時數建立維度的銷售保留小時](../analysis-services/media/l4-discretizationmethod-2.gif "依員工病假時數建立維度的銷售保留時數")  
   
 10. 從 [資料] 窗格的資料行區域中移除 [病假時數] 屬性階層。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "34017715"
   
     1.  將 [轉售商銷售 - 銷售量] 拖曳至 [值]  
   
-    2.  將 [假期時數] \(在 [員工組織] 資料夾中) 拖曳至 [資料行]  
+    2.  將 [假期時數] (在 [員工組織] 資料夾中) 拖曳至 [資料行]  
   
     3.  將 [產品型號線] 拖曳至 [資料列]  
   
@@ -127,7 +127,7 @@ ms.locfileid: "34017715"
 [隱藏及停用屬性階層](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[成員群組屬性 & #40; 離散化 & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[群組屬性成員 &#40;分隔&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

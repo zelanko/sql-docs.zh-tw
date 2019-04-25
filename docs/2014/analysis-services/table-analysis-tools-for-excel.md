@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757917"
 ---
 # <a name="table-analysis-tools-for-excel"></a>適用於 Excel 的資料表分析工具
   中的資料採礦工具**分析**工具列是最簡單的方式，若要開始使用資料採礦。 每個工具都會自動分析資料的散發和類型，並設定參數以確保結果是有效的。 您不需選取演算法或設定複雜參數。  

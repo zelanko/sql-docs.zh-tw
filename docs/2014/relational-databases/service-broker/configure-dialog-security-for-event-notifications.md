@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630716"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>設定事件通知的對話安全性
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話方塊安全性必須根據 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話方塊完整安全性模型來手動設定。 完整安全性模型使傳送到遠端伺服器和自遠端伺服器傳送的訊息得以加密和解密。 雖然事件通知是以單一方向傳送，但也會以相反方向傳回其他訊息 (例如錯誤)。  
@@ -28,11 +28,11 @@ ms.locfileid: "53359520"
 > [!IMPORTANT]  
 >  您必須以有效起始日和到期日建立所有憑證。  
   
- **步驟 1:建立 TCP 通訊埠編號和目標服務名稱。**  
+ **步驟 1：建立 TCP 通訊埠編號和目標服務名稱。**  
   
  建立來源伺服器和目標伺服器將接收訊息的 TCP 通訊埠。 您也必須決定目標服務的名稱。  
   
- **步驟 2:設定加密和憑證共用的資料庫層級驗證。**  
+ **步驟 2：設定加密和憑證共用的資料庫層級驗證。**  
   
  在來源和目標伺服器上完成下列動作。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "53359520"
 |[備份憑證](/sql/t-sql/statements/backup-certificate-transact-sql) 到可供目標伺服器存取的檔案。|備份憑證到可供來源伺服器存取的檔案。|  
 |[建立使用者](/sql/t-sql/statements/create-user-transact-sql)時，指定目標資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的目標資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的目標資料庫憑證。|建立使用者時，指定來源資料庫的使用者和 WITHOUT LOGIN。 此使用者將擁有要從備份檔案建立的來源資料庫憑證。 使用者不必對應到登入，因為此使用者唯一的目的是要擁有接下來的步驟 3 所建立的來源資料庫憑證。|  
   
- **步驟 3:共用憑證和授與資料庫層級驗證的權限。**  
+ **步驟 3：共用憑證和授與資料庫層級驗證的權限。**  
   
  在來源和目標伺服器上完成下列動作。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "53359520"
 ||在目標服務上[授與 SEND 權限](/sql/t-sql/statements/grant-transact-sql) 給來源資料庫使用者。|  
 |提供來源資料庫的 Service Broker 識別碼給目標伺服器。 此識別碼可利用查詢 **sys.databases** 目錄檢視的 [service_broker_guid](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 資料行取得。 若為伺服器層級事件通知，請使用 **msdb**的 Service Broker 識別碼。|提供目標資料庫的 Service Broker 識別碼給來源伺服器。|  
   
- **步驟 4:建立路由並設定伺服器層級驗證。**  
+ **步驟 4：建立路由並設定伺服器層級驗證。**  
   
  在來源和目標伺服器上完成下列動作。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53359520"
 |在端點[授與 CONNECT 權限](/sql/t-sql/statements/grant-transact-sql) 給目標驗證器登入。|在端點授與 CONNECT 權限給來源驗證器登入。|  
 |[建立使用者](/sql/t-sql/statements/create-user-transact-sql)，並指定目標驗證器登入。|建立使用者，並指定來源驗證器登入。|  
   
- **步驟 5:共用伺服器層級驗證的憑證，並建立事件通知。**  
+ **步驟 5：共用伺服器層級驗證的憑證，並建立事件通知。**  
   
  在來源和目標伺服器上完成下列動作。  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e3996aafa0e4f5b389e4f46d5df3b22632daad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628763"
 ---
 # <a name="drivers"></a>驅動程式
 *驅動程式*ODBC API 中實作的函式的程式庫。 每一個都是特定 dbms 所特有;例如，Oracle 的驅動程式無法直接存取中的 Informix DBMS 的資料。 驅動程式會公開基礎 Dbms; 的功能它們不需要實作不支援的 DBMS 的功能。 例如，如果基礎 DBMS 不支援外部聯結中，則不應該驅動程式。 僅重大例外狀況是針對 Dbms 沒有獨立的資料庫引擎、 Xbase，例如驅動程式必須實作至少支援最少量的 SQL 資料庫引擎。  

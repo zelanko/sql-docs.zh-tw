@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 59ade343f282933e05619996b119bc08e2dfb2ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445910"
 ---
 # <a name="setting-up-the-cursor"></a>設定資料指標
 應用程式之前執行的陳述式，建立結果集，可以指定資料指標類型。 它會使用 SQL_ATTR_CURSOR_TYPE 陳述式屬性。 如果應用程式未明確指定類型，就會使用順向資料指標。 若要取得混合式資料指標，指定索引鍵集驅動資料指標的應用程式，但宣告索引鍵集大小小於結果集大小。  

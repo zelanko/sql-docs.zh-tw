@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49145808ae875b6c4fa66a52c4972a8f7a392a7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637082"
 ---
 # <a name="business-rules-extension-master-data-services"></a>商務規則延伸模組 (Master Data Services)
 
@@ -71,7 +71,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取系統管理功能區域的權限。  
@@ -104,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  將值指派給每個參數  
   
-    5.  按一下 **[儲存]**。  
+    5.  按一下 [儲存] 。  
   
 8.  依下列方式來採用使用者定義指令碼作為動作。  
   
@@ -112,7 +112,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  從 [運算子] 下拉式清單中，選取 [使用者定義的指令碼] 下的使用者定義函數。  
   
-    3.  按一下 **[儲存]**。  
+    3.  按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [商務規則 &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

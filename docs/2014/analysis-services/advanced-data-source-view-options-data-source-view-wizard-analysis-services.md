@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635594"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>進階資料來源檢視選項對話方塊 (資料來源檢視精靈) (Analysis Services)
   **[進階資料來源檢視選項]** 對話方塊會提供其他控制項，讓您控制資料來源檢視如何從資料來源提取結構描述和關聯性以建立檢視。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58675993b909c439b402a64ba77b8511466eaa68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502026"
 ---
 # <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt; （不等於）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,6 +38,6 @@ DMX_Expression <> DMX_Expression
 ## <a name="see-also"></a>另請參閱  
  [比較運算子&#40;DMX&#41;](../dmx/operators-comparison.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

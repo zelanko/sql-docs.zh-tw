@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740738"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>使用結構描述產生精靈 (Analysis Services)
   結構描述產生精靈在產生階段，需要不多的資訊。 [結構描述產生精靈] 產生關聯式結構描述所需的大部分資訊，都是從您在專案中已建立的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 和維度中擷取。 此外，您可以自訂產生主題領域資料庫結構描述的方式，以及為結構描述中之物件命名的方式。  
@@ -33,7 +33,7 @@ ms.locfileid: "48210168"
   
 -   按一下精靈最後一頁上的 [立即產生結構描述] 核取方塊，從 [維度精靈] 內啟動精靈。  
   
-## <a name="step-1-specify-targets"></a>步驟 1：指定目標  
+## <a name="step-1-specify-targets"></a>步驟 1:指定目標  
  您必須指定您希望 [結構描述產生精靈] 在其中產生主題領域資料庫之結構描述的資料來源檢視 (DSV)。 雖然您可以選取現有的 DSV，不過通常是會根據資料來源建立新的 DSV。 您可以根據現有的或新的連接，或是根據另一個物件，來建立資料來源。 [結構描述產生精靈] 會在資料來源及資料來源檢視所參考的資料庫中，為主題領域資料庫產生結構描述。 [結構描述產生精靈] 不會建立主題領域資料庫本身，而是會建立關聯式結構描述來支援您所指定之現有資料庫中的 Cube 和維度。  
   
  [結構描述產生精靈] 產生基礎物件時，會使用來源檢視樣式繫結，將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度和 Cube 繫結到產生的資料表與資料行。  
@@ -41,7 +41,7 @@ ms.locfileid: "48210168"
 > [!NOTE]  
 >  若要解除 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度和 Cube 與先前產生之物件之間的繫結，請刪除 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 和維度所繫結的資料來源檢視，然後使用 [結構描述產生精靈]，為 Cube 和維度定義新的資料來源檢視。  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>步驟 3：指定主題領域資料庫的結構描述選項  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>步驟 3：指定主題領域資料庫結構描述選項  
  [結構描述產生精靈] 提供許多選項，可以定義為主題領域資料庫產生的結構描述。 您可以在精靈的 [主題領域資料庫結構描述選項] 頁面上，指定這些選項。  
   
 ### <a name="specifying-the-schema-owner"></a>指定結構描述擁有者  

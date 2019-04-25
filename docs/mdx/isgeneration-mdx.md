@@ -1,5 +1,5 @@
 ---
-title: IsGeneration (MDX) |Microsoft 文件
+title: IsGeneration (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a726470f89f2d3ea1677259e849735a09909a42d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629408"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
 
@@ -36,7 +36,7 @@ IsGeneration(Member_Expression, Generation_Number)
  指定用來評估指定成員之生成集的有效數值運算式。  
   
 ## <a name="remarks"></a>備註  
- **IsGeneration**函式會傳回**true**指定的成員是否在指定層代數目。 否則，函數會傳回**false**。 也，如果指定的成員評估為空成員， **IsGeneration**函式會傳回**false**。  
+ **IsGeneration**函式會傳回 **，則為 true**指定的成員是否在指定層代數目。 否則，函數會傳回**false**。 也，如果指定的成員評估為空的成員**IsGeneration**函式會傳回**false**。  
   
  為了生成集索引用途，分葉成員是生成集索引 0。 如果是非分葉成員，首先從指定成員之所有子成員的聯集，取得最高生成集索引，然後在該索引加 1，決定其生成集索引。 因為已決定非分葉成員的生成集索引，所以特定非分葉成員能夠屬於一個以上的生成集。  
   
@@ -54,6 +54,6 @@ IsGeneration(Member_Expression, Generation_Number)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

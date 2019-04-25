@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760825"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出 Access 清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以匯出專案中的所有存取資料庫的詳細目錄。 您可以檢閱，然後查詢庫存中繼資料，以判斷哪一個資料庫和那些要移轉的資料庫內的物件。 此清查可讓您快速尋找解答，如下所示：  
@@ -91,7 +91,7 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
     您可以使用**全選**並**全部清除**来選取或清除所有資料庫的清單頂端的按鈕。 您也可以按住 CTRL 鍵以選取多個資料列，或按住 SHIFT 鍵，向下選取的資料列範圍。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 確認 頁面中，按一下 **完成**。  
   
@@ -107,7 +107,7 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
     -   如果您要連接到另一部電腦上的預設執行個體，請輸入電腦的名稱。  
   
-    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如： MyServer\MyInstance。  
+    -   如果您要連接到具名執行個體，請輸入電腦名稱、 反斜線和執行個體名稱。 例如：MyServer\MyInstance。  
   
 3.  在 **資料庫**方塊中，輸入匯出的中繼資料的目標資料庫的名稱。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743638"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集表單編輯器 (計算索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師中使用 **[計算]** 索引標籤的 **[命名集表單編輯器]** 窗格，即可建立或修改命名集。  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470826"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47745080"
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|提供資料列自然插入順序的識別欄位。|  
 |**source_server**|**sysname**|來源伺服器的名稱。|  
-|**operation_code**|**tinyint**|作業的作業碼：<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = 開始時間<br /><br /> **5** = 停駐點|  
+|**operation_code**|**tinyint**|作業的作業碼：<br /><br /> **1** = INS (INSERT)<br /><br /> **2** = UPD （更新）<br /><br /> **3** = DEL (DELETE)<br /><br /> **4** = 開始時間<br /><br /> **5** = STOP|  
 |**object_type**|**tinyint**|物件類型碼。|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|物件識別碼。|  
 |**target_server**|**sysname**|目標伺服器的名稱。|  

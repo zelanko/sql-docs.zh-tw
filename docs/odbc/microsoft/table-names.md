@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d72d7868d0e19719ea7992bdb8ccd1f61f3718d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633160"
 ---
 # <a name="table-names"></a>資料表名稱
 DBASE、 Microsoft Excel、 Paradox，或使用驅動程式的文字、 資料表名稱中所發生的 SELECT 或 DELETE FROM 子句之後在 INSERT INTO 子句，並更新之後，CREATE TABLE 和 DROP TABLE 可包含有效的路徑、 主要名稱和檔案名稱時延伸模組.  

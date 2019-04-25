@@ -23,11 +23,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e822f034ff4af30fc2d8c6992544b65aaea865e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632301"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47672586"
 |NAME|**sysname**|物件名稱|  
 |id|**int**|物件識別碼。|  
 |xtype|**char(2)**|物件類型。 可以是下列其中一種物件類型：<br /><br /> AF = 彙總函式 (CLR)<br /><br /> C = CHECK 條件約束<br /><br /> D = 預設值或 DEFAULT 條件約束<br /><br /> F = FOREIGN KEY 條件約束<br /><br /> L = 記錄<br /><br /> FN = 純量函數<br /><br /> FS = 組件 (CLR) 純量函數<br /><br /> FT = 組件 (CLR) 資料表值函式<br /><br /> IF = 內嵌資料表函數<br /><br /> IT = 內部資料表<br /><br /> P = 預存程序<br /><br /> PC = 組件 (CLR) 預存程序<br /><br /> PK = PRIMARY KEY 條件約束 (類型是 K)<br /><br /> RF = 複寫篩選預存程序<br /><br /> S = 系統資料表<br /><br /> SN = 同義字<br /><br /> SQ = 服務佇列<br /><br /> TA = 組件 (CLR) DML 觸發程序<br /><br /> TF = 資料表函數<br /><br /> TR = SQL DML 觸發程序<br /><br /> TT = 資料表類型<br /><br /> U = 使用者資料表<br /><br /> UQ = UNIQUE 條件約束 (類型是 K)<br /><br /> V = 檢視<br /><br /> X = 擴充預存程序|  
-|uid|**smallint**|物件擁有者的結構描述識別碼。 如果是從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級而來的資料庫，結構描述識別碼會等於擁有者的使用者識別碼。 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。<br /><br /> **\*\* 重要\* \*** 如果您使用下列任一項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL 陳述式中，您必須使用[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視，而不要使用 sys.sysobjects。<br /><br /> 建立&AMP;#124;ALTER &AMP;#124; DROP USER<br /><br /> 建立&AMP;#124;ALTER&AMP;#124;卸除角色<br /><br /> 建立&AMP;#124;ALTER&AMP;#124;卸除應用程式角色<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|物件擁有者的結構描述識別碼。 如果是從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級而來的資料庫，結構描述識別碼會等於擁有者的使用者識別碼。 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。<br /><br /> **\*\* 重要\* \*** 如果您使用下列任一項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL 陳述式中，您必須使用[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視，而不要使用 sys.sysobjects。<br /><br /> CREATE &#124; ALTER &#124; DROP USER<br /><br /> CREATE &#124; ALTER &#124; DROP ROLE<br /><br /> CREATE &#124; ALTER &#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

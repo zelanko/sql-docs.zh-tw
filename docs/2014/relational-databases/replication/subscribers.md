@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629392"
 ---
 # <a name="subscribers"></a>訂閱者
   指定會接收對選取之發行集進行訂閱的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。  
@@ -50,7 +50,7 @@ ms.locfileid: "52806200"
   
 -   選取之發行集的發行者是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新的版本。  
   
- 按一下 **加入訂閱者**顯示包含兩個選項的功能表：**加入 SQL Server 訂閱者**並**加入非 SQL Server 訂閱者**。 按一下 **[加入非 SQL Server 訂閱者]** ，即可加入 Oracle 或 IBM DB2 訂閱者。  
+ 按一下 [新增訂閱者] 就會顯示具有兩個選項的功能表：[新增 SQL Server 訂閱者] 和 [新增非 SQL Server 訂閱者]。 按一下 **[加入非 SQL Server 訂閱者]** ，即可加入 Oracle 或 IBM DB2 訂閱者。  
   
  **[加入 SQL Server 訂閱者]**  
  將伺服器加入可以啟用為訂閱者的伺服器清單中。 當一或多個下列條件為 True 時，會顯示此按鈕：  
@@ -68,7 +68,7 @@ ms.locfileid: "52806200"
     -   發行集允許匿名訂閱。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [建立提取訂閱](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [訂閱發行集](subscribe-to-publications.md)  

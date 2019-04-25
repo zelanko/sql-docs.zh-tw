@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757315"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>資料分割和 DirectQuery 模式 (SSAS 表格式)
-  本節說明如何在 DirectQuery 模型中使用資料分割。 如需表格式模型中之資料分割的更一般資訊，請參閱[資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)。  
+  本節說明如何在 DirectQuery 模型中使用資料分割。 如需表格式模型中之資料分割的更一般資訊，請參閱 [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)。  
   
  如需有關如何變更使用時，資料分割或檢視資料分割的相關資訊，請參閱[變更 DirectQuery 資料分割&#40;SSAS 表格式&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48054041"
 |搭配使用 InMemory 和 DirectQuery|允許處理資料分割|如果模型使用混合模式，您應該針對記憶體中查詢和 DirectQuery 資料來源的查詢使用相同資料分割。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)  
+ [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)  
   
   

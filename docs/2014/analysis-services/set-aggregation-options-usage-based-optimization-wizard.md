@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: becc1bb290d37eec7e717d9400dc0f694188eeeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746640"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>設定彙總選項 (基於使用方式的最佳化精靈)
   使用 [設定彙總選項] 頁面來啟動彙總設計處理，並為 [基於使用方式的最佳化精靈] 產生的彙總指定儲存或效能限制。  

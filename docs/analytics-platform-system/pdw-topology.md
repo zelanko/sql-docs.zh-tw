@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0c0c16f331c81dd34fc5b7256805efc231a1c97c
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639794"
 ---
 # <a name="pdw-topology"></a>PDW 拓撲
 顯示 SQL Server PDW 元件的名稱和網路資訊。 使用**設備拓撲網路設定**頁面，以變更網路的 IP 位址。  

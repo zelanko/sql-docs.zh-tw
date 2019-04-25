@@ -1,5 +1,5 @@
 ---
-title: 階層 (MDX) |Microsoft 文件
+title: 階層 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0699ce1d66c420061091436ebf879c9b32b3ca7c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629108"
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
 
@@ -40,7 +40,7 @@ Level_Expression.Hierarchy
  傳回層級的有效多維度運算式 (MDX) 運算式。  
   
 ### <a name="examples"></a>範例  
- 下列範例會傳回 AdventureWorks cube 中 Date 維度中 Calendar 階層的名稱。  
+ 下列範例會傳回 adventure Works cube 中 Date 維度之 Calendar 階層的名稱。  
   
  `WITH`  
   
@@ -55,6 +55,6 @@ Level_Expression.Hierarchy
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

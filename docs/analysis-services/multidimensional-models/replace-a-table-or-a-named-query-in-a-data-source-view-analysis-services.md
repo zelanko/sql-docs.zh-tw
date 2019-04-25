@@ -1,5 +1,5 @@
 ---
-title: 取代的資料表或具名的查詢中的資料來源檢視 (Analysis Services) |Microsoft 文件
+title: 取代的資料表或具名的查詢中的資料來源檢視 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a171eafc35446f588d64c74457792912dcebe75a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641113"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>取代資料來源檢視中的資料表或具名查詢 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34020805"
   
 ##  <a name="bkmk_nq"></a> 以具名查詢取代資料表  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟含有您想在其中取代資料表或具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟含有您想在其中取代資料表或具名查詢之資料來源檢視的專案，或連接到包含此資料來源檢視的資料庫。  
   
 2.  在方案總管中，展開 [資料來源檢視] 資料夾，然後按兩下資料來源檢視。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34020805"
   
     2.  選取您想要用來取代資料表或具名查詢的資料表。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
 6.  儲存已修改的資料來源檢視。  
   

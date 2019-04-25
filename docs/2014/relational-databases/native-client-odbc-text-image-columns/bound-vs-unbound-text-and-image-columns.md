@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf8ac0cf868394d9aa8063220939feee69ac2f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626581"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>繫結與未繫結的 Text 和 Image 資料行
   使用伺服器資料指標，當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式已最佳化，不傳送未繫結資料**文字**， **ntext**，或**映像**於資料行時間**SQLFetch**會執行。 **文字**， **ntext**，或**映像**不會實際擷取資料從伺服器應用程式問題直到[SQLGetData](../native-client-odbc-api/sqlgetdata.md)的資料行。  

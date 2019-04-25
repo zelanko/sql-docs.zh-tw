@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472601"
 ---
 # <a name="current-record-and-size-of-recordset"></a>目前的記錄和資料錄集的大小
 本章節描述如何在此範例中找出目前的游標位置**Recordset**中[JScript 程式碼範例，以傳回資料錄集](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)。  

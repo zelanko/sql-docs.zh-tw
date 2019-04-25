@@ -1,5 +1,5 @@
 ---
-title: 第 7 課： 建立關鍵效能指標 |Microsoft Docs
+title: 第 7 課：建立關鍵效能指標 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42790099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523364"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>第 7 課：建立關鍵效能指標
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將建立關鍵效能指標 (KPI)。 KPI 會對照量值或絕對值所定義的「目標」值，量測由「基底」量值所定義之值的效能。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 若要進一步了解，請參閱[Kpi](../analysis-services/tabular-models/kpis-ssas-tabular.md)。  
   
-完成本課程的估計時間： **15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 6 課： 建立量值](../analysis-services/lesson-6-create-measures.md)。   
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 6 課：建立量值](../analysis-services/lesson-6-create-measures.md)。   
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
   
@@ -50,7 +50,7 @@ ms.locfileid: "42790099"
   
 8.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。
   
-    ![做為表格式-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
+    ![as-tabular-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > 請注意可擴充**描述**可用圖示樣式下方的標籤。 使用此輸入各種 KPI 元素，使其更容易在用戶端應用程式中的描述。  
@@ -78,6 +78,6 @@ ms.locfileid: "42790099"
 6.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型，然後按一下 [確定]。  
   
 ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 8 課： 建立檢視方塊](../analysis-services/lesson-8-create-perspectives.md)。
+請移至下一課：[第 8 課：建立檢視方塊](../analysis-services/lesson-8-create-perspectives.md)。
   
   

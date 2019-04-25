@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625788"
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果這兩個平台上相同的結果，測試成功。 Oracle 之間的物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -44,32 +44,32 @@ SSMA 軟體測試人員會檢查是否符合所有必要條件，以測試執行
 ||||  
 |-|-|-|  
 |名稱|類型|描述|  
-|USER_TABLE$ Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
-|USER_TABLE$ 澳幣|資料表|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AUDID|資料表|儲存新的和變更的資料列的資料表。|  
+|USER_TABLE$Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
+|USER_TABLE$AUD|資料表|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$AUDID|資料表|儲存新的和變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
-|新 USER_TABLE $|檢視|簡化的插入與覆寫的資料列表示。|  
-|USER_TABLE$ NEW_ID|檢視|識別已插入和已變更的資料列。|  
-|USER_TABLE$ 舊|檢視|簡化的已刪除和覆寫的資料列表示。|  
+|USER_TABLE$NEW|檢視|簡化的插入與覆寫的資料列表示。|  
+|USER_TABLE$NEW_ID|檢視|識別已插入和已變更的資料列。|  
+|USER_TABLE$OLD|檢視|簡化的已刪除和覆寫的資料列表示。|  
   
 在已驗證的資料表結構描述中建立下列物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ||||  
 |-|-|-|  
 |名稱|類型|描述|  
-|USER_TABLE$ Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
+|USER_TABLE$Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
   
 下列物件會在建立和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb 資料庫中。  
   
 ||||  
 |-|-|-|  
 |名稱|類型|描述|  
-|USER_TABLE$ 澳幣|資料表|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AudID|資料表|儲存新的和變更的資料列的資料表。|  
+|USER_TABLE$Aud|資料表|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$AudID|資料表|儲存新的和變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
-|新的 USER_TABLE $|檢視|簡化的插入與覆寫的資料列表示。|  
-|USER_TABLE$ new_id|檢視|識別已插入和已變更的資料列。|  
-|USER_TABLE $ 舊|檢視|簡化的已刪除和覆寫的資料列表示。|  
+|USER_TABLE$new|檢視|簡化的插入與覆寫的資料列表示。|  
+|USER_TABLE$new_id|檢視|識別已插入和已變更的資料列。|  
+|USER_TABLE$old|檢視|簡化的已刪除和覆寫的資料列表示。|  
   
 ### <a name="test-object-calls"></a>測試物件呼叫  
 在此步驟中，SSMA 軟體測試人員會叫用所選測試每個物件，比較結果，並顯示報表。  

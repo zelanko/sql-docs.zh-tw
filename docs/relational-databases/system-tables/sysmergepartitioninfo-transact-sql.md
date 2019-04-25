@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cea1f26a93627d2a3719ad362d2bd62ee1e3ba1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470518"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52802770"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid&lt**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
+|**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
 |**pubid**|**uniqueidentifier**|這個發行集的唯一識別碼；在加入發行集時產生。|  
 |**partition_view_id**|**int**|這份資料表的資料分割檢視識別碼。 這份檢視顯示發行項中的每個資料列到它所屬的不同資料分割識別碼的對應。|  
 |**repl_view_id**|**int**|即將加入。|  

@@ -16,11 +16,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512546"
 ---
 # <a name="use-the-systemhealth-session"></a>使用 system_health 工作階段
   system_health 工作階段是預設隨附於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的擴充事件工作階段。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 啟動時，這個工作階段就會自動啟動，並且在不造成任何明顯效能影響的情況下執行。 此工作階段會收集系統資料，讓您能夠用來協助疑難排解 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的效能問題。 因此，我們建議您不要停止或刪除此工作階段。  
@@ -70,7 +70,7 @@ WHERE xe.name = 'system_health'
 ## <a name="restoring-the-systemhealth-session"></a>還原 system_health 工作階段  
  如果您刪除了 system_health 工作階段，可以在 [查詢編輯器] 中執行 **u_tables.sql** 檔案，藉以還原此工作階段。 這個檔案位於下列資料夾，其中 C: 代表您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式檔案的磁碟機：  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12。\< *instanceid*> \MSSQL\Install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12.\<*instanceid*>\MSSQL\Install  
   
  請注意，當您還原此工作階段之後，必須使用 ALTER EVENT SESSION 陳述式或 [物件總管] 中的 **[擴充事件]** 節點來啟動此工作階段。 否則，此工作階段會在您下一次重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務時自動啟動。  
   

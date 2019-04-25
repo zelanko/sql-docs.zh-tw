@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641035"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>以 DBMS 為基礎的驅動程式診斷範例
 以 DBMS 為基礎的驅動程式將要求傳送至 DBMS，並傳回至應用程式透過驅動程式管理員的資訊。 因為驅動程式介面驅動程式管理員使用的元件，其格式，並傳回引數**SQLGetDiagRec**。  

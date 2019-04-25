@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472862"
 ---
 # <a name="anticipating-errors"></a>預期的錯誤
 錯誤預防是至少和錯誤處理一樣重要。 最後一節中包含一份您的應用程式可以為了讓比較不可能出現的錯誤所採取的預防措施。  

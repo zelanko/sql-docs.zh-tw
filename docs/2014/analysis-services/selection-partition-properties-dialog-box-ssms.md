@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747090"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>選取範圍 (資料分割屬性對話方塊) (SSMS)
   在 SQL Server Management Studio 中，使用 **[資料分割屬性]** 對話方塊的 **[選取範圍]** 頁面，即可從量值群組中選取資料分割，然後在 **[一般]**、 **[主動式快取]** 或 **[錯誤組態]** 窗格中檢視或修改屬性。  
   
 ## <a name="options"></a>選項。  
- **方格**  
+ **格線**  
  顯示包含所選取資料分割之量值群組的資料分割。  
   
  選取要在 **[一般]**、 **[主動式快取]** 或 **[錯誤組態]** 頁面中檢視其屬性的資料分割。  

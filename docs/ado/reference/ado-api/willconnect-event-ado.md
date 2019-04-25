@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642527"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 事件 (ADO)
 **WillConnect**連線開始前，會呼叫事件。  
   
- **適用於：** [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **適用於：**[Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,13 +40,13 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  A**字串**，其中包含暫止連接的連接資訊。  
   
- *使用者識別碼*  
+ *UserID*  
  A**字串**，其中包含暫止連線的使用者名稱。  
   
  *密碼*  
  A**字串**，其中包含暫止連線的密碼。  
   
- *選項*  
+ *選項。*  
  A**長**值，指出提供者應該如何評估*ConnectionString*。 您只能選擇**adAsyncOpen**。  
   
  *adStatus*  

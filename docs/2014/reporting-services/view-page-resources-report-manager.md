@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647041"
 ---
 # <a name="view-page-resources-report-manager"></a>檢視頁面，資源 (報表管理員)
   使用資源的 [檢視] 頁面來檢視資源。 資源是在報表伺服器上儲存和管理，但是不在報表伺服器上處理的項目 (報表伺服器只處理報表和模型)。 當您想要儲存伺服器不處理的任意文件、影像或其他檔案時，就可以使用資源。 可以在「報表管理員」的 [檢視] 頁面中檢視多數的影像檔 (例如 JPG、GIF 和 PNG 檔案)。 其他資源則在個別的應用程式視窗中開啟。  

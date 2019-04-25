@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759699"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 清查結構描述 (AccessToSQL)
 下列各節描述資料表所建立的 SSMA 中，當您匯出要存取結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -55,7 +55,7 @@ ms.locfileid: "47653712"
 |**DatabaseId**|**uniqueidentifier**|可唯一識別每個資料庫的 GUID。 此資料行也是資料表的主索引鍵。|  
 |**DatabaseName**|**nvarchar(4000)**|存取資料庫的名稱。|  
 |**ExportTime**|**datetime**|日期和時間的 SSMA 建立此中繼資料。|  
-|**檔案路徑**|**nvarchar(4000)**|存取資料庫的完整路徑和檔案名稱。|  
+|**FilePath**|**nvarchar(4000)**|存取資料庫的完整路徑和檔案名稱。|  
 |**FileSize**|**bigint**|存取資料庫，以 kb 為單位的大小。|  
 |**FileOwner**|**nvarchar(4000)**|Windows 帳戶指定為存取資料庫的擁有者。|  
 |**DateCreated**|**datetime**|日期和時間所建立的 Access 資料庫中。|  
@@ -81,7 +81,7 @@ ms.locfileid: "47653712"
 |**TableId**|**uniqueidentifier**|唯一識別資料表的 GUID。 此資料行也是資料表的主索引鍵。|  
 |**TableName**|**nvarchar(4000)**|資料表的名稱。|  
 |**RowsCount**|**int**|資料表中的資料列數。|  
-|**驗證規則**|**nvarchar(4000)**|定義有效的輸入資料表的規則。 如果不有任何驗證規則，該欄位將包含空字串。|  
+|**ValidationRule**|**nvarchar(4000)**|定義有效的輸入資料表的規則。 如果不有任何驗證規則，該欄位將包含空字串。|  
 |**LinkedTable**|**nvarchar(4000)**|另一個資料表，如果有的話，連結的資料表。 連結資料表可允許新增、 刪除及更新至另一個資料表使用此資料表。|  
 |**ExternalSource**|**nvarchar(4000)**|資料來源，如果有的話，是與資料表相關聯。 如果連結資料表，它會有此欄位中指定的外部資料來源。|  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47653712"
 |**IsAutoIncrement**|**bit**|指定是否資料行就會自動遞增的整數值。 如果值為 1，會自動遞增的整數。|  
 |**Ordinal**|**smallint**|在資料表中，從零開始的資料行的順序。|  
 |**DefaultValue**|**nvarchar(4000)**|資料行的預設值。|  
-|**驗證規則**|**nvarchar(4000)**|在資料行中更新或加入的規則，用來驗證資料。|  
+|**ValidationRule**|**nvarchar(4000)**|在資料行中更新或加入的規則，用來驗證資料。|  
   
 ## <a name="indexes"></a>索引  
 索引中繼資料匯出至**SSMA_Access_InventoryIndexes**資料表。 此資料表包含下列資料行：  
@@ -150,7 +150,7 @@ ms.locfileid: "47653712"
 |資料行名稱|資料類型|描述|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此表單的資料庫。|  
-|**表單識別碼**|**int**|遞增整數，識別的表單。 此資料行是資料表的主索引鍵。|  
+|**FormId**|**int**|遞增整數，識別的表單。 此資料行是資料表的主索引鍵。|  
 |**FormName**|**nvarchar(4000)**|表格的名稱。|  
   
 ## <a name="macros"></a>巨集  
@@ -178,7 +178,7 @@ ms.locfileid: "47653712"
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|識別包含此模組的資料庫。|  
 |**ModuleId**|**int**|遞增整數，可識別的模組。 此資料行是資料表的主索引鍵。|  
-|**模組名稱**|**nvarchar(4000)**|模組的名稱。|  
+|**ModuleName**|**nvarchar(4000)**|模組的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
 [匯出 Access 清查](exporting-an-access-inventory-accesstosql.md)  

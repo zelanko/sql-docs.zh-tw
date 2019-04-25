@@ -1,5 +1,5 @@
 ---
-title: 採礦結構工作和使用說明 |Microsoft 文件
+title: 採礦結構工作和使用說明 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509855"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>採礦結構工作和使用說明
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "34015785"
   
 -   [建立新的 OLAP 採礦結構](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   
--   [資料行加入採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
+-   [將資料行新增至採礦結構](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
--   [從採礦結構移除資料行](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
+-   [從採礦結構中移除資料行](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
   
--   [加入巢狀的資料表至採礦結構](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
+-   [將巢狀資料表新增至採礦結構](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
 -   [變更採礦結構的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   

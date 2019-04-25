@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7444b02140bb102753cbc25026b990fb92f19d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634549"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>支援的選項 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

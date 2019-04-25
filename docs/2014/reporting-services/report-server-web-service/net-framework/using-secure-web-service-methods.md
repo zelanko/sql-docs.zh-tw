@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e88a164602f9bbe6ad42c3897285a484cac94466
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518658"
 ---
 # <a name="using-secure-web-service-methods"></a>使用安全的 Web 服務方法
   某些報表伺服器 Web 服務方法在叫用時，可能需要安全的連接。 需要安全連接的方法是由 RSReportServer.config 檔案中的 `SecureConnectionLevel` 設定所決定。 設定值有效範圍為 0 及以上的整數值。 下表描述這些值。  

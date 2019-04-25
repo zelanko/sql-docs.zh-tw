@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 099af3115af33301277ca2cac153578978af8a37
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646136"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWebServiceEnabled 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出報表伺服器 Web 服務是否已啟用。 唯讀。  

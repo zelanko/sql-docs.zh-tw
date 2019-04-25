@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640433"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51674267"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|這個索引所屬物件的識別碼。|  
-|xtp_object_id|**bigint**|對應至物件的目前版本的內部識別碼。<br /><br /> 注意： 適用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
+|xtp_object_id|**bigint**|對應至物件的目前版本的內部識別碼。<br /><br /> 注意:適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
 |index_id|**bigint**|索引的識別碼。 index_id 只在物件內才是唯一的。|  
 |scans_started|**bigint**|已執行之記憶體中 OLTP 索引掃描的數目。 每個選取、插入、更新或刪除都需要索引掃描。|  
 |scans_retries|**bigint**|必須重試的索引掃描數目。|  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630894"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>專案設定 (載入系統物件) (OracleToSQL)
 正在載入系統物件的頁數**專案設定** 對話方塊可讓您指定哪些 Oracle 系統物件 SSMA 會將轉換和載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

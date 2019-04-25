@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67faee86f0b5a333e406ccc2fead8b002b525e36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740088"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member 物件屬性、方法和事件
 ## <a name="propertiescollections"></a>屬性/集合  
  [Caption 屬性](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
   
- [ChildCount 屬性](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
+ [ChildCount Property](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
   
  [Children 屬性](../../../ado/reference/ado-md-api/children-property-ado-md.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47688056"
   
  [父屬性](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
- [ParentSameAsPrev 屬性](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [ParentSameAsPrev Property](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
  [屬性集合](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
