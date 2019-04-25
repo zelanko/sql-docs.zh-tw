@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757632"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>相容性層級 (SSAS 表格式 SP1)
   您可以指定*相容性層級*建立新的表格式模型專案、 升級現有的表格式模型專案、 升級部署的表格式模型資料庫，或匯入 PowerPivot 活頁簿時。  

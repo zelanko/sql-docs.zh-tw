@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: abc0228063e62447c34b0236009977a33bddb176
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768494"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>以指令碼工作尋找安裝的印表機
   由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝轉換的資料通常有列印的報表，做為其最終的目的地。 `System.Drawing.Printing`中的命名空間[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]提供使用印表機的類別。  

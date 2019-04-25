@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745479"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>使用 sql:max-depth 來指定遞迴關聯性的深度
   在關聯式資料庫中，當某份資料表與本身具有關聯性時，它就稱為遞迴關聯性。 例如，在監督者-被監督者的關聯性中，儲存員工記錄的資料表會與本身具有關聯。 在此情況下，員工資料表在關聯性的一端扮演監督者的角色，而同一份資料表在另一端則扮演被監督者的角色。  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  由於此關聯性是遞迴的，所以您需要某種方式來指定結構描述中的遞迴深度。 否則，結果將是無止盡的遞迴 (員工向員工報告，依此類推)。 `sql:max-depth` 註解可讓您指定遞迴的深度。 在這個範例中，若要指定 `sql:max-depth` 的值，您必須知道公司中管理階層的深度。  
   
 > [!NOTE]  
->  此結構描述會指定 `sql:limit-field` 註解，但是不會指定 `sql:limit-value` 註解。 這會將產生之階層中的最上層節點限制為不向任何人報告的員工  (ReportsTo 為 NULL)。指定 `sql:limit-field` 而不指定 `sql:limit-value` (預設為 NULL) 註解即可完成此目標。 如果您想讓產生的 XML 包含每個可能的報告樹狀結構 (資料表中每位員工的報告樹狀結構)，請從結構描述中移除 `sql:limit-field` 註解。  
+>  此結構描述會指定 `sql:limit-field` 註解，但是不會指定 `sql:limit-value` 註解。 這會將產生之階層中的最上層節點限制為不向任何人報告的員工  （ReportsTo 為 NULL）。指定`sql:limit-field`而不指定`sql:limit-value`（預設為 NULL） 註釋可完成此作業。 如果您想讓產生的 XML 包含每個可能的報告樹狀結構 (資料表中每位員工的報告樹狀結構)，請從結構描述中移除 `sql:limit-field` 註解。  
   
 > [!NOTE]  
 >  下列程序會使用 tempdb 資料庫。  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  您可以在結構描述中使用 `sql:max-depth` 註解，以便指定結構描述所描述之遞迴關聯性的遞迴深度。 值`sql:max-depth`註釋是正整數 （1 到 50 個），表示遞迴的數目：值為 1，停止遞迴`sql:max-depth`註解會指定; 值為 2 的停止處的項目從上一層樓遞迴`sql:max-depth`指定; 等等。  
   
 > [!NOTE]  
->  在基礎實作中，針對對應結構描述所指定的 XPath 查詢會轉換成 SELECT ...FOR XML EXPLICIT 查詢。 這個查詢會要求您指定有限的遞迴深度。 您針對 `sql:max-depth` 指定的值越高，產生的 FOR XML EXPLICIT 查詢就越大。 這可能會降低擷取速度。  
+>  在基礎實作中，針對對應結構描述指定 XPath 查詢會轉換成 SELECT...FOR XML EXPLICIT 查詢。 這個查詢會要求您指定有限的遞迴深度。 您針對 `sql:max-depth` 指定的值越高，產生的 FOR XML EXPLICIT 查詢就越大。 這可能會降低擷取速度。  
   
 > [!NOTE]  
 >  Updategram 和 XML 大量載入會忽略 max-depth 註解。 這表示，不論您針對 max-depth 指定的值為何，都會進行遞迴更新或插入。  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767040"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>封裝與專案保護等級對話方塊
   使用 **[封裝保護等級]** 對話方塊，即可更新封裝的保護等級。 保護等級會決定保護方法、密碼或使用者金鑰，以及封裝保護的範圍。 保護可包括所有資料或只包括機密資料。  

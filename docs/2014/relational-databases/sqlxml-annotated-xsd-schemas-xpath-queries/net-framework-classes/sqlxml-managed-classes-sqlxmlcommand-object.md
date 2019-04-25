@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740511"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 物件 (SQLXML Managed 類別)
   這是 SqlXmlCommand 物件的建構函式：  
@@ -53,7 +53,7 @@ public SqlXmlCommand(string cnString)
 ## <a name="methods"></a>方法  
  TheSqlXmlCommand 物件支援數種方法，包括下列方法來執行命令：  
   
- void executenonquery （)  
+ void ExecuteNonQuery()  
  執行命令，但不會傳回任何東西。 如果您要執行非查詢命令 (也就是不會傳回任何東西的命令)，此方法相當實用。 例如，執行更新記錄但不會傳回任何東西的 Updategram 或 DiffGram。  
   
  Stream executestream （)  
@@ -67,10 +67,10 @@ public SqlXmlCommand(string cnString)
   
  TheSqlXmlCommand 物件也支援這些額外的方法：  
   
- SqlXmlParameter createparameter （)  
+ SqlXmlParameter CreateParameter()  
  建立 SqlXmlParameter 物件。 您可以設定的值*名稱*並*值*這個物件的參數。 如果您要將參數傳遞到命令，這個方法相當實用。 如需實用範例，請參閱 <<c0> [ 執行 SQL 查詢&#40;SQLXML Managed 類別&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。</c0>  
   
- void clearparameters （)  
+ void ClearParameters()  
  清除針對給定命令物件建立的參數。 如果您要在相同的命令物件上執行多個查詢，這個方法相當實用。  
   
 ## <a name="properties"></a>屬性  

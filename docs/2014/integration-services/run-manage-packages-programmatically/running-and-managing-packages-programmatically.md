@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766823"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以程式設計方式執行及管理封裝
   如果您需要在開發環境以外的地方管理和執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，可以使用程式設計方式操作封裝。 在這種方法中，您有許多的選擇：  

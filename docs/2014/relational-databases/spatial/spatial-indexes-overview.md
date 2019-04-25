@@ -12,11 +12,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524254"
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援空間資料和空間索引。 *「空間索引」* (Spatial Index) 是一種類型的擴充索引，可讓您建立空間資料行的索引。 空間資料行是包含空間資料類型資料的資料表資料行，例如 `geometry` 或 `geography`。  
@@ -106,7 +106,7 @@ ms.locfileid: "54100883"
 #### <a name="deepest-cell-rule"></a>最深的資料格規則  
  最深的資料格規則利用了每一個較低層資料格都屬於其上方之資料格的事實：層級 4 資料格屬於層級 3 資料格、層級 3 資料格屬於層級 2 資料格，而層級 2 資料格則屬於層級 1 資料格。 例如，屬於資料格 1.1.1.1 的物件也屬於資料格 1.1.1、資料格 1.1 和資料格 1。 這類資料格階層關聯性的知識會內建在查詢處理器中。 因此，只有最深層的資料格才需要記錄在索引中，讓索引需要儲存的資訊減至最少。  
   
- 下圖中會鑲嵌相對較小的鑽石形多邊形。 此索引會使用每個物件的資料格預設限制 16，這個小型物件未達到這個限制。 因此，鑲嵌會繼續往下到層級 4。 此多邊形位於下列層級 1 到層級 3 的資料格內：4、4.4、4.4.10 和 4.4.14。 但是使用了最深的資料格規則時，鑲嵌只會計算十二個層級 4 資料格：4.4.10.13-15 及 4.4.14.1-3、4.4.14.5-7 和 4.4.14.9-11。  
+ 下圖中會鑲嵌相對較小的鑽石形多邊形。 此索引會使用每個物件的資料格預設限制 16，這個小型物件未達到這個限制。 因此，鑲嵌會繼續往下到層級 4。 此多邊形位於下列層級 1 到層級 3 資料格：4、 4.4 及 4.4.10 和 4.4.14。 不過，使用最深的資料格規則時，鑲嵌會計算只十二個層級 4 資料格：4.4.10.13-15 及 4.4.14.1-3、 4.4.14.5-7 和 4.4.14.9-11。  
   
  ![最深的資料格最佳化](../../database-engine/media/spndx-opt-deepest-cell.gif "最深的資料格最佳化")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "54100883"
 >  空間索引的 **tessellation_scheme** 設定可以在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目錄檢視中看到。  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>幾何方格鑲嵌式配置  
- GEOMETRY_AUTO_GRID 鑲嵌是 `geometry` 和更新版本之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型的預設鑲嵌式配置。  GEOMETRY_GRID 鑲嵌是唯一適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 geometry 資料類型的鑲嵌式配置。 本章節討論與處理空間索引相關之幾何方格鑲嵌的層面：支援的方法及週框方塊。  
+ GEOMETRY_AUTO_GRID 鑲嵌是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更新版本之 `geometry` 資料類型的預設鑲嵌式配置。  GEOMETRY_GRID 鑲嵌是唯一適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 geometry 資料類型的鑲嵌式配置。 本章節討論與處理空間索引相關之幾何方格鑲嵌的層面：支援的方法及週框方塊。  
   
 > [!NOTE]  
 >  您可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句來明確指定這個鑲嵌式配置。  
@@ -179,7 +179,7 @@ ms.locfileid: "54100883"
 ##  <a name="methods"></a> 空間索引支援的方法  
   
 ###  <a name="geometry"></a> 空間索引支援的幾何方法  
- 在某些條件下，空間索引可支援下列集合導向的幾何方法：Stcontains （）、 stdistance （）、 stequals （）、 stintersects （）、 stoverlaps （）、 sttouches （） 和 stwithin （）。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 或 JOIN ON 子句中使用，而且必須在下列一般形式的述詞內發生：  
+ 空間索引支援下列集合導向的幾何方法在某些情況下：Stcontains （）、 stdistance （）、 stequals （）、 stintersects （）、 stoverlaps （）、 sttouches （） 和 stwithin （）。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 或 JOIN ON 子句中使用，而且必須在下列一般形式的述詞內發生：  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "54100883"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> 空間索引支援的地理位置方法  
- 在某些條件下，空間索引可支援下列集合導向的地理位置方法：STIntersects(),STEquals() 和 stdistance （）。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 子句中使用，而且必須在下列一般形式的述詞內發生：  
+ 某些狀況下，空間索引可支援下列集合導向的地理位置方法：STIntersects(),STEquals() 和 stdistance （）。 為了獲得空間索引的支援，這些方法必須在查詢的 WHERE 子句中使用，而且必須在下列一般形式的述詞內發生：  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

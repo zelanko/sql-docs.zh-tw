@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 139bda733610f7f4ac54b2d438ba73b29831427c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764594"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在新增資料之前，比較新資料與已在 MDS 中受控的資料，有助於確保不會新增重複或不精準的資料。  

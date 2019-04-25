@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72ac098f34438d35de4b0c1ac0ebef0ffc30a043
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469649"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>開啟、解除鎖定、重新命名和刪除資料品質專案
 
@@ -48,7 +48,7 @@ ms.locfileid: "56039019"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能管理資料品質專案。  
   
 ##  <a name="Open"></a> 開啟資料品質專案  
@@ -94,6 +94,6 @@ ms.locfileid: "56039019"
   
 3.  在 **[開啟專案]** 畫面中，以滑鼠右鍵按一下您所建立且解除鎖定的資料品質專案，然後按一下快速鍵功能表中的 **[刪除]** 。  
   
-4.  隨即出現確認訊息。 按一下 **[是]**。  
+4.  隨即出現確認訊息。 按一下 [ **是**]。  
   
   

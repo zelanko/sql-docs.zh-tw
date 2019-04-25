@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770844"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 目的地編輯器 (連接管理員頁面)
   使用 **[SAP BW 目的地編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 目的地將使用的 SAP BW 連接管理員。 在這個頁面上，您也可以選取將資料載入 SAP Netweaver BW 系統中所用的參數。  

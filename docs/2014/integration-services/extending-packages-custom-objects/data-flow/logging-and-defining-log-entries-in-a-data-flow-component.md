@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4b328e1e39646f9b47e66bd313940de768ea73c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768644"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>在資料流程元件中記錄和定義記錄項目
   自訂資料流程元件可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，將訊息公佈到現有的記錄項目中。 它們也可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法或是類似方法，將資訊呈現給使用者。 但是，這個方法會產生引發及處理其他事件的額外負擔，並強制使用者詳查詳細的參考用訊息，以找出他們可能感興趣的訊息。 您可以使用自訂記錄項目，如底下所述，將清楚標示的自訂記錄資訊提供給元件的使用者。  
@@ -59,11 +59,11 @@ End Sub
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> 列舉會將有關此事件將要記錄之頻率的提示提供給執行階段：  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>:每次執行時，不只有在某些時候，會記錄事件。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>:有時記錄事件，而不是每次執行時都記錄。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>:事件會記錄在每次執行期間固定次數。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>:每次執行時，事件都會記錄固定次數。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>:會記錄事件的次數與完成的工作數量成正比。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>:事件記錄的次數與完成的工作量成比例。  
   
  以上範例使用 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>，因為此元件預期每次執行都會記錄項目一次。  
   

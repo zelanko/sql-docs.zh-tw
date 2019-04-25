@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741360"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
   通常在很多情況下，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要變更表格式或多維度資料庫的讀取/寫入模式。 這些情況通常是由商務需求所驅使，例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器集區之間共用資料庫，以便改善使用者經驗。  

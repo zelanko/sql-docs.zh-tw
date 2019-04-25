@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768654"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>開發 Integration Services 的自訂物件
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的控制流程與資料流程物件無法完全滿足您的需求時，您可以自行開發許多類型的自訂物件，包括：  
@@ -59,7 +59,7 @@ ms.locfileid: "58385576"
 ## <a name="base-classes-attributes-and-important-methods"></a>基底類別、屬性和重要的方法  
  這個資料表針對您可以開發的各種類型自訂物件，提供 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型中最重要元素的便利參考。  
   
-|自訂物件|基底類別|attribute|重要的方法|  
+|自訂物件|基底類別|屬性|重要的方法|  
 |-------------------|----------------|---------------|-----------------------|  
 |工作|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |[ODBC 來源編輯器]|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>、 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  

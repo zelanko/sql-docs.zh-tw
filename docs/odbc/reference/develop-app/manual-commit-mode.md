@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628909"
 ---
 # <a name="manual-commit-mode"></a>手動認可模式
 *在手動認可模式中，* 應用程式必須明確完成的交易，藉由呼叫**SQLEndTran**進行認可或回復它們。 這是大部分的關聯式資料庫的正常的交易模式。  

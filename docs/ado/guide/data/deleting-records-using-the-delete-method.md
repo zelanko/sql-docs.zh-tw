@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472380"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>使用 Delete 方法刪除記錄
 使用**刪除**群組中的記錄或目前的記錄方法會將標記**資料錄集**為要刪除的物件。 如果**資料錄集**物件不允許刪除記錄，則會發生錯誤。 如果您是在立即更新模式中，刪除資料庫中會立即發生。 記錄如果記錄無法成功地刪除 （因為資料庫完整性違規，例如），將會保留在編輯模式下呼叫之後**更新。** 這表示您必須取消更新使用[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)再移離目前的記錄 (例如，使用[關閉](../../../ado/reference/ado-api/close-method-ado.md)，[移動](../../../ado/reference/ado-api/move-method-ado.md)，或[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md))。  

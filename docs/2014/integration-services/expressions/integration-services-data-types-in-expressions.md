@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769100"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
   運算式評估工具使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 當資料初次進入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝中的資料流程時，資料流程引擎會將所有資料行的資料轉換成 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型，而運算式所使用的資料行資料已為 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 「條件式分割」和「衍生的資料行」轉換中使用的運算式可參考資料行，因為它們是包含資料行資料的資料流程中的一部分。  

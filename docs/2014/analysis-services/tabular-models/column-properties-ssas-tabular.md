@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bb076297af4e666513a0c5b86d6783b7c245c00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757611"
 ---
 # <a name="column-properties-ssas-tabular"></a>資料行屬性 (SSAS 表格式)
   本主題描述表格式模型資料行屬性。  
@@ -38,7 +38,7 @@ ms.locfileid: "48072418"
 |**資料格式**|匯入期間自動決定。|指定要用於此資料行中之資料的顯示格式。 當您設定資料格式後，可以設定每一個格式特有的屬性。 例如，如果您選擇 **[貨幣]** 格式，則可以設定可見小數位數，然後依次選擇千位分隔符號和貨幣符號。 此屬性具有以下選項：<br /><br /> **一般**<br /><br /> **十進位數字**<br /><br /> **整數**<br /><br /> **貨幣**<br /><br /> **百分比**<br /><br /> **科學記號**<br /><br /> 如果資料行的值包含影像，請參考 **[代表影像]**。|  
 |**資料類型**|匯入期間自動決定。|針對資料行中的所有值指定資料類型。|  
 |**說明**||資料行的文字描述。<br /><br /> 在某些報告用戶端中，如果使用者將游標置於欄位清單內這個資料行的上方，將以工具提示的形式顯示說明。|  
-|**Hidden**|False|指定是否在報告用戶端欄位清單中隱藏資料行。<br /><br /> 將此屬性設為 **[True]** 可在顯示中隱藏這個資料行。 例如，包含識別碼或索引鍵的資料行通常對使用者沒有用處。<br /><br /> 如果您在報告用戶端中隱藏資料行，則模型資料中不會隱藏此欄位。 如果您針對模型建立查詢，還是可以看到此欄位。 隱藏的資料行依然可以用於分組或排序。<br /><br /> **[隱藏]** 屬性不提供任何形式的資料安全性。 若要保護資料安全，請在角色中使用資料列篩選。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)。|  
+|**Hidden**|False|指定是否在報告用戶端欄位清單中隱藏資料行。<br /><br /> 將此屬性設為 **[True]** 可在顯示中隱藏這個資料行。 例如，包含識別碼或索引鍵的資料行通常對使用者沒有用處。<br /><br /> 如果您在報告用戶端中隱藏資料行，則模型資料中不會隱藏此欄位。 如果您針對模型建立查詢，還是可以看到此欄位。 隱藏的資料行依然可以用於分組或排序。<br /><br /> **[隱藏]** 屬性不提供任何形式的資料安全性。 若要保護資料安全，請在角色中使用資料列篩選。 如需詳細資訊，請參閱 [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)中撰寫的表格式模型專案。|  
 |**依資料行排序**||指定另一個資料行來排序這個資料行中的值。 兩個資料行之間必須有關聯性存在。<br /><br /> 這個值必須是現有資料行的名稱。 您不能指定公式或量值。|  
   
  **報表屬性**  
@@ -62,8 +62,8 @@ ms.locfileid: "48072418"
 2.  在 **[屬性]** 視窗中按一下屬性，然後輸入值，或按一下向下箭頭來選取設定選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [Power 檢視報告的屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
- [隱藏或凍結資料行&#40;SSAS 表格式&#41;](hide-or-freeze-columns-ssas-tabular.md)   
- [將資料行加入至資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)  
+ [Power View 報表屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
+ [隱藏或凍結資料行 &#40;SSAS 表格式&#41;](hide-or-freeze-columns-ssas-tabular.md)   
+ [將資料行加入至資料表 &#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)  
   
   

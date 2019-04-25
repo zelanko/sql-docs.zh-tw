@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d42fe629fec13c941dc358f58f797b32df7ef09
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770094"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Deploy Packages by Using the Deployment Utility
   當已建立部署公用程式，以從建立部署公用程式之電腦以外電腦上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案安裝封裝時，必須首先將部署資料夾複製到目的地電腦。  

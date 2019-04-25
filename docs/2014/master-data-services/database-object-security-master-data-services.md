@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765761"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，資料儲存在多個資料庫資料表並且顯示在檢視表中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中受到保護的資訊，對具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫存取權的使用者是可見的。  
@@ -46,11 +46,11 @@ ms.locfileid: "52822232"
   
 |動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
-|將分葉成員及其屬性載入至暫存資料表。|stg.name_Leaf|必要：Insert<br /><br /> 選擇性:選取並更新|  
+|將分葉成員及其屬性載入至暫存資料表。|stg.name_Leaf|必要：Insert<br /><br /> 選擇性：SELECT 和 UPDATE|  
 |將資料從 [分葉] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Leaf|執行 CREATE 陳述式之前，請先執行|  
-|將合併成員及其屬性載入至暫存資料表。|stg.name_Consolidated|必要：Insert<br /><br /> 選擇性:選取並更新|  
+|將合併成員及其屬性載入至暫存資料表。|stg.name_Consolidated|必要：Insert<br /><br /> 選擇性：SELECT 和 UPDATE|  
 |將資料從 [合併] 暫存資料表載入至適當的 MDS 資料庫資料表。|stg.udp_name_Consolidated|執行 CREATE 陳述式之前，請先執行|  
-|載入暫存資料表的分葉成員和彼此在明確階層中的合併的成員的關聯性。|stg.name_Relationship|必要：Insert<br /><br /> 選擇性:選取並更新|  
+|載入暫存資料表的分葉成員和彼此在明確階層中的合併的成員的關聯性。|stg.name_Relationship|必要：Insert<br /><br /> 選擇性：SELECT 和 UPDATE|  
 |將資料從 [關聯性] 暫存資料表載入至適當的 MDS 資料表。|stg.udp_name_Relationship|執行 CREATE 陳述式之前，請先執行|  
 |檢視將資料從暫存資料表插入至 MDS 資料庫資料表時發生的錯誤。|stg.udp_name_Relationship|SELECT|  
   

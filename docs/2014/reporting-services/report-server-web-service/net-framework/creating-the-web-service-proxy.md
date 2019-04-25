@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520373"
 ---
 # <a name="creating-the-web-service-proxy"></a>建立 Web 服務 Proxy
   用戶端與 Web 服務可以使用 SOAP 訊息來進行通訊，這會以 XML 來封裝輸入與輸出參數。 Proxy 類別會將參數對應至 XML 元素，然後透過網路傳送 SOAP 訊息。 以此方式，Proxy 類別可讓您免於在 SOAP 層級與 Web 服務通訊，並可讓您在任何支援 SOAP 與 Web 服務 Proxy 的開發環境中，叫用 Web 服務方法。  

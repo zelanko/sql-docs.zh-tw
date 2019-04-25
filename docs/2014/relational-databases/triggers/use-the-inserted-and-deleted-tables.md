@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524374"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>使用插入或刪除的資料表
   DML 觸發程序陳述式使用兩個特殊的資料表：已刪除的資料表和已插入的資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存、常駐記憶體的資料表來測試某些資料修改的效果，以及設定 DML 觸發程序動作的條件。 您無法直接修改這些資料表的資料，或是在這些資料表上執行資料定義語言 (DDL) 作業，例如 CREATE INDEX。  

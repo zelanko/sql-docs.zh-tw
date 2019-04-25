@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638103"
 ---
 # <a name="drop-xml-indexes"></a>卸除 XML 索引
   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可用以卸除現有的主要或次要 XML 及非 XML 索引。 不過，DROP INDEX 沒有任何選項會套用至 XML 索引。 如果您卸除主要 XML 索引，也會刪除任何存在的次要索引。  

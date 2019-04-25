@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767430"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>步驟 3：修改一般檔案連接管理員
   在這項工作中，您將會修改您在第 1 課建立及設定的一般檔案連接管理員。 一開始建立時，已設定一般檔案連接管理員來以靜態方式載入單一檔案。 若要讓一般檔案連線管理員反覆載入檔案，您必須修改連線管理員的 ConnectionString 屬性來接受使用者定義變數 `User:varFileName`，這個變數包含在執行階段要載入的檔案路徑。  

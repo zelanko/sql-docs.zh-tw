@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26981ad1cc1cfbf9b3a69cca49f9529c0b590b61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760820"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>使用階層方法查詢階層式資料表
   既然 HumanResources.EmployeeOrg 資料表會完全擴展，此工作將會顯示如何使用某些階層式方法查詢階層。  

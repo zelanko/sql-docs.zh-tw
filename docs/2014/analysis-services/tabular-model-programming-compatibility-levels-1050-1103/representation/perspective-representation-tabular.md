@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757746"
 ---
 # <a name="perspective-representation-tabular"></a>檢視方塊表示法 (表格式)
   檢視方塊是一種針對用戶端應用程式簡化或聚焦至模型之較小部分的機制。  

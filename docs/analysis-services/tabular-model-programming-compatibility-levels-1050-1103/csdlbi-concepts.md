@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 486bbe240656bb2719ad4ce8f1ec51b226bec30b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466895"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -131,13 +131,13 @@ ms.locfileid: "50146263"
   
  **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱 < [DISCOVER_CSDL_METADATA 資料列集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)。  
   
- **階層：** 支援且以 CSDLBI 表示為一組層級的階層。  
+ **階層：** 階層所支援，並以 CSDLBI 表示為一組層級。  
   
- **成員：** 的支援已新增的預設成員，預設值會自動加入 CSDLBI 輸出。  
+ **成員：** 已新增支援的預設成員，預設值會自動加入 CSDLBI 輸出。  
   
- **導出成員：** 多維度模型支援導出的成員之子系**所有**含單一真實成員。  
+ **導出的成員：** 多維度模型支援導出的成員之子系**所有**含單一真實成員。  
   
- **維度屬性：** CSDLBI 輸出中，維度屬性都支援，而且會自動標示為非彙總。  
+ **維度屬性：** 在 CSDLBI 輸出中，維度屬性都支援，而且會自動標示為非彙總。  
   
  **Kpi:** CSDLBI 1.1 版中支援 Kpi，但表示法已變更。 KPI 之前是量值的屬性。 在 1.1 版中，KPI 元素可以加入至量值  
   

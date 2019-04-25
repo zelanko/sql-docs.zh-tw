@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: bff48432749d6886f58c985adc9cb779303edb17
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626749"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>專案設定 (轉換) (OracleToSQL)
 [轉換] 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換 Oracle 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法。  
@@ -46,7 +46,7 @@ ms.locfileid: "52410305"
 |**FORALL 陳述式轉換 WHILE 陳述式**|定義如何 SSMA 會將 FORALL 迴圈 PL/SQL 集合項目上。<br /><br />如果您選取**是**，SSMA 會建立集合的項目所在位置，擷取的一個接著一個 WHILE 迴圈。<br /><br />如果您選取**No**，SSMA 使用節點 （） 方法，從集合中產生資料列集，並且將它視為單一資料表。 這會更有效率，但可讓輸出程式碼更不容易閱讀。<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式模式：** 否<br /><br />**完整模式：** 是|  
 |**轉換的外部索引鍵資料行上的 SET NULL 參考動作 NOT NULL**|Oracle 可讓您建立 foreign key 條件約束，其中 SET NULL 不執行動作，可能是因為參考的資料行中不允許 null 值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不允許這類外部索引鍵的組態。<br /><br />如果您選取 **[是]**，SSMA 會產生參考的動作，如 Oracle，但您必須手動變更條件約束，以在載入之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，您可以選擇 NO ACTION，而不是設定為 NULL。<br /><br />如果您選取**No**，條件約束將會標示為錯誤。<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式/Full 模式：** 否|  
 |**轉換程序呼叫的函式呼叫**|某些 Oracle 函式定義為獨立的交易，或包含不是有效的陳述式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 在這些情況下，SSMA 會建立的程序和程序的包裝函式的函式。 已轉換的函式呼叫的實作程序。<br /><br />SSMA 可以轉換的程序呼叫的包裝函式的呼叫。 這會建立更容易閱讀的程式碼，並可改善效能。 不過，內容不一定允許使用它;例如，您無法將選取清單中的函式呼叫取代程序呼叫。 SSMA 會有幾個選項，以涵蓋常見的案例：<br /><br />如果您選取**永遠**，SSMA 嘗試轉換程序呼叫的包裝函式的函式呼叫。 如果目前的內容不允許這項轉換，則會產生一則錯誤訊息。 如此一來，任何函式呼叫會不留在產生的程式碼。<br /><br />如果您選取**盡可能**，SSMA 能讓移至程序呼叫的函式具有輸出參數時，才。 不可能移動時，會移除參數的輸出屬性。 在所有其他情況下 SSMA 會離開函式呼叫。<br /><br />如果您選取**永不**，SSMA 會將所有函式呼叫的函式呼叫。 有時候這項選擇可能是無法接受效能的原因。<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式/Full 模式：** 如果可能的話|  
-|**轉換鎖定 TABLE 陳述式**|SSMA 都可以將許多鎖定資料表陳述式轉換資料表提示。 SSMA 無法轉換包含資料分割，SUBPARTITION，任何鎖定 TABLE 陳述式@dblink，和 NOWAIT 子句，並將標示這類陳述式，並轉換的錯誤訊息。<br /><br />如果您選取**是**，SSMA 會將支援的鎖定 TABLE 陳述式轉換成資料表提示。<br /><br />如果您選取**No**，SSMA 會將標示為使用轉換的錯誤訊息的所有鎖定 TABLE 陳述式。<br /><br />下表顯示如何 SSMA 轉換 Oracle 鎖定模式：<br /><br />**Oracle 的鎖定模式**<br /><br />資料列共用<br /><br />獨佔的資料列<br /><br />SHARE UPDATE = 資料列共用<br /><br />共用<br /><br />共用<br /><br />獨佔<br /><br />**SQL Server 資料表提示**<br /><br />ROWLOCK HOLDLOCK<br /><br />ROWLOCK、 XLOCK，HOLDLOCK<br /><br />ROWLOCK HOLDLOCK<br /><br />TABLOCK HOLDLOCK<br /><br />TABLOCK、 XLOCK，HOLDLOCK<br /><br />TABLOCKX HOLDLOCK<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式/Full 模式：** 是|  
+|**轉換鎖定 TABLE 陳述式**|SSMA 都可以將許多鎖定資料表陳述式轉換資料表提示。 SSMA 無法轉換包含資料分割，SUBPARTITION，任何鎖定 TABLE 陳述式@dblink，和 NOWAIT 子句，並將標示這類陳述式，並轉換的錯誤訊息。<br /><br />如果您選取**是**，SSMA 會將支援的鎖定 TABLE 陳述式轉換成資料表提示。<br /><br />如果您選取**No**，SSMA 會將標示為使用轉換的錯誤訊息的所有鎖定 TABLE 陳述式。<br /><br />下表顯示如何 SSMA 轉換 Oracle 鎖定模式：<br /><br />**Oracle 的鎖定模式**<br /><br />資料列共用<br /><br />獨佔的資料列<br /><br />SHARE UPDATE = 資料列共用<br /><br />共用<br /><br />共用<br /><br />EXCLUSIVE<br /><br />**SQL Server 資料表提示**<br /><br />ROWLOCK HOLDLOCK<br /><br />ROWLOCK、 XLOCK，HOLDLOCK<br /><br />ROWLOCK HOLDLOCK<br /><br />TABLOCK HOLDLOCK<br /><br />TABLOCK、 XLOCK，HOLDLOCK<br /><br />TABLOCKX HOLDLOCK<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式/Full 模式：** 是|  
 |**轉換開啟 FOR 陳述式中的 REF CURSOR OUT 參數**|在 Oracle 中，開啟 FOR 陳述式可用來傳回結果集，子程式的 OUT 參數的型別 REF CURSOR。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，預存程序會直接傳回 SELECT 陳述式的結果。<br /><br />SSMA 可以將許多開放 FOR 陳述式轉換成 SELECT 陳述式。<br /><br />如果您選取**是**，SSMA 會將開啟 FOR 陳述式轉換成 SELECT 陳述式，結果集傳回給用戶端。<br /><br />如果您選取**No**，SSMA 中轉換的程式碼和輸出窗格中，將會產生一則錯誤訊息。<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式/Full 模式：** 是|  
 |**將記錄轉換為分隔變數的清單**|SSMA 可轉換 Oracle 記錄，為分隔的變數，並為具有特定結構的 XML 變數。<br /><br />如果您選取**是**，SSMA 轉換成一份分隔變數時可能的記錄。<br /><br />如果您選取**No**，SSMA 會將記錄轉換成具有特定結構的 XML 變數。<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式/Full 模式：** 是|  
 |**轉換 SUBSTR 函式呼叫子函式呼叫**|SSMA 可以將轉換函式呼叫 Oracle SUBSTR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **子字串**函式呼叫，根據參數數目。 如果 SSMA 無法轉換 SUBSTR 函式呼叫，或不支援的參數數目，SSMA 會將 SUBSTR 函式呼叫轉換成自訂的 SSMA 函式呼叫。<br /><br />如果您選取 **[是]**，SSMA 會將使用到的三個參數的 SUBSTR 函式呼叫轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **substring**。 其他 SUBSTR 函式會轉換成呼叫自訂的 SSMA 函式。<br /><br />如果您選取**No**，SSMA 會將 SUBSTR 函式呼叫轉換成自訂的 SSMA 函式呼叫。<br /><br />當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：<br /><br />**預設/開放式模式：** 是<br /><br />**完整模式：** 否|  

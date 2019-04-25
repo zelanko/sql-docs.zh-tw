@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743577"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>資料分割屬性對話方塊 (SSMS)
   使用 SQL Server Management Studio 中的 [資料分割屬性] 對話方塊，即可針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的 Cube 來設定資料分割的屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "48113198"
 |**錯誤組態**|使用 [錯誤組態] 頁面，即可顯示及修改用於處理 [選取範圍] 頁面中所選取資料分割的錯誤組態設定。 如需此頁面的詳細資訊，請參閱[設定 Cube、分割區和維度處理 &#40;SSAS - 多維度&#41; 時發生錯誤](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [遠端資料分割](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

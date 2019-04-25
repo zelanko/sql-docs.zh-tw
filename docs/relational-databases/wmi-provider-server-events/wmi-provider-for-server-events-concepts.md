@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c466a2e928afb5239c738463a39e6fee8a1991fa
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62514558"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51215028"
  [範例：使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  提供使用 WMI 提供者傳回在其上建立 SQL Server Agent 警示之追蹤事件資訊的範例。  
   
- [範例： 使用.NET Framework 使用 WMI 事件提供者](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [範例：使用.NET Framework 使用 WMI 事件提供者](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  提供使用 WMI 提供者傳回 C# 應用程式中之事件資料的範例。  
   
  [伺服器事件類別和屬性的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)  

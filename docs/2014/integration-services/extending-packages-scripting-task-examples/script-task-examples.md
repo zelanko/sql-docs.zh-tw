@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d47fa22b8207facc5b4bc22a4077b8bd81837ec2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768474"
 ---
 # <a name="script-task-examples"></a>指令碼工作範例
   指令碼工作是多用途的工具，可用於封裝中以滿足 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的工作無法達成的幾乎任何需求。 本主題列出指令碼工作程式碼範例，以示範某些可用的功能。  

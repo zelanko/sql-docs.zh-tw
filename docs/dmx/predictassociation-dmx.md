@@ -1,5 +1,5 @@
 ---
-title: PredictAssociation (DMX) |Microsoft Docs
+title: PredictAssociation (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501834"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

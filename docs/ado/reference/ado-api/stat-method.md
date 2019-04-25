@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740338"
 ---
 # <a name="stat-method"></a>Stat 方法
 擷取有關的資訊[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

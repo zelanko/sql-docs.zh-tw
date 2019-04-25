@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673fa5941785f332893af3ea8f3630579d8a5741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761998"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role 事件類別
   當登入加入到資料庫角色或從其中移除時，就會發生 **Audit Add Member to DB Role** 事件類別。 這個事件類別是與 **sp_addrolemember**、 **sp_changegroup**及 **sp_droprolemember** 預存程序搭配使用。  

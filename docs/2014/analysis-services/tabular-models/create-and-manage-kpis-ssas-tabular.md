@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757394"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>建立及管理 KPI (SSAS 表格式)
   本主題描述如何建立、編輯或刪除表格式模型中的 KPI (關鍵效能指標)。 若要建立 KPI，您可以選取的量值會評估為 KPI 基底值。 然後使用 [關鍵效能指標] 對話方塊選取判斷為目標值的第二個量值或絕對值。 接著您可以定義測量基底和目標量值之間效能的狀態臨界值。  

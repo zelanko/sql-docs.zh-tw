@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ecce9ecca3d0b234be9aec5c00718cc7c3f69272
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632499"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,9 +75,9 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支援**時間**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**位元組**) 指定的小數位數*tTime2Val*值。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支援**datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**位元組**) 指定的小數位數*tsDataTimeVal*值。|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|支援**datetimeoffset** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**位元組**) 指定的小數位數*tsoDateTimeOffsetVal*值。|  
-|NCharVal|沒有對應的 OLE DB 類型指標。|**結構 _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|支援**nchar**並**nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之字串的實際長度*pwchNCharVal*點。 不包括結尾的零。<br /><br /> *sMaxLength* (**簡短**) 指定之字串的最大長度*pwchNCharVal*點。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 字串的指標。<br /><br /> 未使用的成員： *rgbReserved*， *dwReserved*，並*pwchReserved*。|  
+|NCharVal|沒有對應的 OLE DB 類型指標。|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|支援**nchar**並**nvarchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之字串的實際長度*pwchNCharVal*點。 不包括結尾的零。<br /><br /> *sMaxLength* (**簡短**) 指定之字串的最大長度*pwchNCharVal*點。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 字串的指標。<br /><br /> 未使用的成員： *rgbReserved*， *dwReserved*，並*pwchReserved*。|  
 |CharVal|沒有對應的 OLE DB 類型指標。|**結構 _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|支援**char**並**varchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之字串的實際長度*pchCharVal*點。 不包括結尾的零。<br /><br /> *sMaxLength* (**簡短**) 指定之字串的最大長度*pchCharVal*點。<br /><br /> *pchCharVal* (**CHAR** \*) 字串的指標。<br /><br /> 未使用的成員：<br /><br /> *rgbReserved*， *dwReserved*，以及*pwchReserved*。|  
-|BinaryVal|沒有對應的 OLE DB 類型指標。|**結構 _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支援**二進位**並**varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之資料的實際長度*prgbBinaryVal*點。<br /><br /> *sMaxLength* (**簡短**) 指定之資料的最大長度*prgbBinaryVal*點。<br /><br /> *prgbBinaryVal* (**位元組** \*) 的二進位資料的指標。<br /><br /> 未使用的成員： *dwReserved*。|  
+|BinaryVal|沒有對應的 OLE DB 類型指標。|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|支援**二進位**並**varbinary** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *sActualLength* (**簡短**) 指定之資料的實際長度*prgbBinaryVal*點。<br /><br /> *sMaxLength* (**簡短**) 指定之資料的最大長度*prgbBinaryVal*點。<br /><br /> *prgbBinaryVal* (**位元組** \*) 的二進位資料的指標。<br /><br /> 未使用的成員： *dwReserved*。|  
 |UnknownType|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  
   

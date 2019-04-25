@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 685a11411e3583daad1e720115ebbd39663d9b6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637098"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>變更實體交易記錄類型 (Master Data Services)
 
@@ -24,13 +24,13 @@ ms.locfileid: "52774070"
 
   您可以將實體交易記錄類型變更成屬性、成員或無。  
   
-|交易記錄類型|Description|  
+|交易記錄類型|描述|  
 |--------------------------|-----------------|  
-|attribute|實體變更記錄儲存在屬性等級。<br /><br /> 交易記錄會如 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]一樣存檔。|  
+|屬性|實體變更記錄儲存在屬性等級。<br /><br /> 交易記錄會如 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]一樣存檔。|  
 |成員|實體變更記錄儲存在資料列等級。<br /><br /> 任何屬性變更都會觸發新的資料列修訂。<br /><br /> 使用資料列交易記錄類型時，實體會儲存為緩時變維度類型 4。 支援類型 2 訂閱檢視和類型 4 (記錄) 訂閱檢視。 如需詳細資訊，請參閱[訂閱檢視格式 &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)。<br /><br /> 提供更佳的效能。|  
 |None|不儲存變更記錄。<br /><br /> 提供最佳效能。|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 功能區域的權限。如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
@@ -49,6 +49,6 @@ ms.locfileid: "52774070"
   
 4.  選擇下拉式清單中的交易記錄類型。  
   
-5.  按一下 **[儲存]**。  
+5.  按一下 [儲存] 。  
   
   

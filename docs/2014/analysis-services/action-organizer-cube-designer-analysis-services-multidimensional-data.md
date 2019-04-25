@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9833eb23936b41f63facb4ea4c018f23d8182377
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512229"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>動作組合管理 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[動作]** 索引標籤的 **[動作組合管理]** 窗格，即可存取所指定 Cube 中包含的動作。  

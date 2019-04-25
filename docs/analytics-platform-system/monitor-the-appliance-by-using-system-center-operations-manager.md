@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639834"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>監視與 System Center Operations Manager-Analytics Platform System
 使用 System Center Operations Manager (SCOM)，以監視 Analytics Platform System (APS) 設備。
@@ -44,12 +44,12 @@ ms.locfileid: "52417559"
 ### <a name="alerts"></a>警示  
 警示是您可以在哪裡找到目前的警示管理。  
   
-![警示](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>應用裝置  
 設備是您將在其中找到您的環境中目前已探索和監視 SQL Server PDW 應用裝置。 如果設備未這裡顯示，而且您已建立的 ODBC 連接，則可能會有 PDWWatcher 帳戶發生錯誤。 如果它們會顯示為 「 未受監視 」，可能有 PDWMonitor 帳戶發生錯誤。 因為 SCOM 不會變更，但會定期檢查新的設備，若要監視的耐心等候，定期將查詢傳送到設備的監視。  
   
-![設備](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>應用裝置圖表  
 應用裝置圖表頁面是設備的您可以在其中取得了解您，樹狀結構檢視的健全狀況：  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760855"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>使用階層式方法擴展階層式資料表
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 行銷部門有 8 名員工。 員工層級如下：  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509900"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 發行等概觀
 Microsoft OLE DB Provider for Internet Publishing 會將 ADO 可以存取由 Microsoft FrontPage 或 Microsoft Internet Information Server 的資源。 資源包括 web 來源檔案，例如 HTML 檔案或 Windows 2000 web 資料夾。

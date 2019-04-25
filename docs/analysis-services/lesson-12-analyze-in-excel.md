@@ -1,5 +1,5 @@
 ---
-title: 第 12 課： 在 Excel 中進行分析 |Microsoft Docs
+title: 第 12 課：在 Excel 中進行分析 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468424"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>第 12 課：在 Excel 中進行分析
+# <a name="lesson-12-analyze-in-excel"></a>第 12 課：在 Excel 中分析
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將使用 SSDT 中的 Excel 功能中進行分析 來開啟 Microsoft Excel、 自動建立資料來源連接至模型工作區中，以及自動將樞紐分析表加入工作表。 [在 Excel 中進行分析] 功能的目的在於提供快速簡便的方法，讓您在部署模型之前測試模型設計的效率。 在本課中，您將不會執行任何資料分析。 本課程的目的在於讓您 (也就是模型作者) 熟悉可以用來測試模型設計的工具。 不同於使用中進行分析，在 Excel 功能，可供模型作者，使用者將使用用戶端報表應用程式，例如 Excel 或 Power BI 來連線及瀏覽已部署的模型資料。  
   
 若要完成這一課，Excel 必須安裝在與 SSDT 相同的電腦上。 如需詳細資訊，請參閱 [[在 Excel 中進行分析]](../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)所在電腦上安裝 Excel。  
   
-完成本課程的估計時間： **20 分鐘**  
+估計的時間才能完成這一課：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 11 課： 建立角色](../analysis-services/lesson-11-create-roles.md)。  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 11 課：建立角色](../analysis-services/lesson-11-create-roles.md)。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>使用預設和網際網路銷售檢視方塊瀏覽  
 在這些首要工作中，您會瀏覽您的模型使用這兩個預設檢視方塊，其中包含所有模型物件，以及使用 網際網路銷售檢視方塊您稍早。 網際網路銷售檢視方塊不包括 Customer 資料表物件。  
@@ -49,11 +49,11 @@ ms.locfileid: "42795647"
   
 2.  於 [在 Excel 中進行分析] 對話方塊中，將 [目前的 Windows 使用者] 維持在選取狀態，並在 [檢視方塊] 下拉式清單方塊中，選取 [網際網路銷售]，然後按一下 [確定]。 
     
-    ![做為表格式-lesson12-檢視方塊](../analysis-services/media/as-tabular-lesson12-perspective.png)
+    ![as-tabular-lesson12-perspective](../analysis-services/media/as-tabular-lesson12-perspective.png)
     
 3.  在 Excel 中，在**樞紐分析表欄位**，注意 DimCustomer 資料表已從欄位清單中排除。  
     
-    ![為表格式-lesson12-欄位](../analysis-services/media/as-tabular-lesson12-fields.png)
+    ![as-tabular-lesson12-fields](../analysis-services/media/as-tabular-lesson12-fields.png)
     
 4.  關閉 Excel 而不儲存活頁簿。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "42795647"
 3.  關閉 Excel 而不儲存活頁簿。  
   
 ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 13 課： 部署](../analysis-services/lesson-13-deploy.md)。
+請移至下一課：[第 13 課：部署](../analysis-services/lesson-13-deploy.md)。
 
   
   

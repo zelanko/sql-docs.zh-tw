@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: faf998f4d9d3cbd3c45de4c1a0b214ba1de2152e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646826"
 ---
 # <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>ReencryptSecureInformation 方法 (WMI MSReportServer_ConfigurationSetting)
   產生新的加密金鑰，並且使用這個新的金鑰來重新加密目錄中的所有安全資訊。  

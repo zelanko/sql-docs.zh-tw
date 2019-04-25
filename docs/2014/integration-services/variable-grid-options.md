@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766051"
 ---
 # <a name="variable-grid-options"></a>變數方格選項
   使用 **[變數方格選項]** 對話方塊選擇將顯示在 **[變數]** 視窗中的資料行，並選取要套用到此變數清單的篩選。 如需所對應之變數屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。  

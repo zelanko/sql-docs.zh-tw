@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 506ed2c0f672d769d5ffb739b1f5109f7a19cf51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766501"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 目的地編輯器 (連接管理員頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  

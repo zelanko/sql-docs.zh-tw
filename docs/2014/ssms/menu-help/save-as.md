@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510317"
 ---
 # <a name="save-as"></a>另存新檔
   使用此對話方塊，即可以指定的檔案格式將目前項目的執行個體儲存在指定的位置。 若要顯示此對話方塊中，按一下**儲存** *\<檔案 >* **作為**上**檔案**功能表 (其中 *\<檔案 >* 是目前項目的名稱)，或按 ALT + F，A 在程式碼編輯器。  

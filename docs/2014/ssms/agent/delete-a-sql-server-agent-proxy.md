@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9222253c884fdf3cfa52d283f250580a02a9f7ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523754"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>刪除 SQL Server Agent Proxy
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中刪除 [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent Proxy 帳戶。  
@@ -81,7 +81,7 @@ ms.locfileid: "52787990"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- deletes the proxy "Catalog application proxy"  

@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766860"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server Agent 排程封裝
   下列程序會使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 作業步驟執行封裝，藉此提供自動化封裝執行的步驟。  
@@ -56,7 +56,7 @@ ms.locfileid: "58388096"
     |--------------------|-----------------|  
     |**SSIS 目錄**|儲存在 SSISDB 資料庫中的封裝。 封裝會包含在部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中。|  
     |**SQL Server**|儲存在 MSDB 資料庫中的封裝。 您會使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務管理這些封裝。|  
-    |**SSIS 封裝存放區**|儲存在您電腦上預設資料夾中的封裝。 預設資料夾為 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 您會使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務管理這些封裝。<br /><br /> 注意：您可以指定不同的資料夾，或指定檔案系統中 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務要管理的其他資料夾，方法是修改 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的組態檔。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。|  
+    |**SSIS 封裝存放區**|儲存在您電腦上預設資料夾中的封裝。 預設資料夾為 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 您會使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務管理這些封裝。<br /><br /> 注意:您可以指定不同的資料夾，或指定為受檔案系統中的其他資料夾[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服務，藉由修改的組態檔[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [設定 Integration Services 服務 &#40;SSIS 服務&#41;](service/integration-services-service-ssis-service.md)回溯相容。|  
     |**[File System]**|儲存在您本機電腦上任何資料夾中的封裝。|  
   
      **下表描述根據您選取的封裝來源，可供作業步驟使用的組態選項。**  
@@ -77,7 +77,7 @@ ms.locfileid: "58388096"
     ||**在錯誤時傾印**:指定在封裝執行期間發生任何錯誤時，是否產生偵錯傾印檔案。<br /><br /> 這些檔案會包含有關封裝執行的資訊，可幫助您針對問題進行疑難排解。<br /><br /> 當您選取此選項，而在執行期間發生錯誤時， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會建立 .mdmp 檔 (二進位檔) 和 .tmp 檔 (文字檔)。 根據預設，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會將檔案儲存在 \<磁碟機>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 資料夾中。|  
     ||**32 位元執行階段**指出是否要在 64 位元版本的 64 位元電腦上使用 32 位元版本的 dtexec 公用程式執行封裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝代理程式。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
   
-     **套件來源**：SQL Server、SSIS 封裝存放區或檔案系統  
+     **套件來源**：SQL Server、 SSIS 封裝存放區或檔案系統  
   
      您可以針對儲存在 SQL Server、SSIS 封裝存放區或檔案系統中的封裝設定的多數選項，都會對應 `dtexec` 命令提示字元公用程式的命令列選項。 如需公用程式和命令列選項的詳細資訊，請參閱 [dtexec 公用程式](packages/dtexec-utility.md)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "58388096"
     |**記錄**|讓記錄提供者與執行封裝產生關聯。<br /><br /> **文字檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 ASCII 文字檔中<br /><br /> **SQL Server 的 SSIS 記錄提供者**<br /> 將記錄項目寫入 MSDB 資料庫中的 sysssislog 資料表。<br /><br /> **SQL Server Profiler 的 SSIS 記錄提供者**<br /> 寫入您可以使用 SQL Server Profiler 檢視的追蹤檔。<br /><br /> **Windows 事件記錄檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 Windows 事件記錄檔中的應用程式記錄檔。<br /><br /> **XML 檔案的 SSIS 記錄提供者**<br /> 將記錄檔寫入 XML 檔案。<br /><br /> 對於文字檔、XML 檔案和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler 記錄提供者，請選取包含在封裝中的檔案連接管理員。 對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記錄提供者，請選取包含在封裝中的 OLE DB 連線管理員。<br /><br /> 此選項對應 `/Logger` 的 `dtexec` 選項。|  
     |**設定值**|覆寫封裝屬性設定。 在 [屬性] 方塊的 [屬性路徑] 和 [值] 資料行中輸入值。 在您輸入某個屬性的值之後，[屬性] 對話方塊中就會出現一個空白資料列，讓您輸入其他屬性的值。<br /><br /> 若要從 [屬性] 方塊中移除屬性，請按一下資料列，然後按一下 [移除]。<br /><br /> 您可以執行下列其中一個動作來尋找屬性路徑。<br /><br /> 從 XML 組態檔中複製屬性路徑 (\*.dtsconfig) 檔案。 路徑會在檔案的 [組態] 區段中列出，做為 [路徑] 屬性的值。 以下是 MaximumErrorCount 屬性的路徑範例。<br /><br /> \Package.Properties[MaximumErrorCount]<br /><br /> 執行**封裝組態精靈**，並從最後一個複製屬性路徑**完成精靈**頁面。 然後您就可以取消精靈。|  
     |**驗證**|**只執行簽署的封裝**<br /> 指出是否已檢查封裝簽章。 如果此封裝未簽署或是簽章無效，此封裝就會失敗。 此選項對應 `/VerifySigned` 的 `dtexec` 選項。<br /><br /> **確認封裝組建**<br /> 指出是否已對照此選項旁的 [組建] 方塊中所輸入的組建編號，驗證封裝的組建編號。 如果發生不符的情形，將不會執行封裝。 此選項對應 `/VerifyBuild` 的 `dtexec` 選項。<br /><br /> **確認封裝識別碼**<br /> 指出是否已驗證封裝的 GUID，方法是將它與此選項旁的 [封裝識別碼] 方塊中所輸入的封裝識別碼相比較。 此選項對應 `/VerifyPackageID` 的 `dtexec` 選項。<br /><br /> **確認版本識別碼**<br /> 指出是否已驗證封裝的版本 GUID，方法是將它與此選項旁的 [版本識別碼] 方塊中所輸入的版本識別碼相比較。 此選項對應 `/VerifyVersionID` 的 `dtexec` 選項。|  
-    |**命令列**|修改 dtexec 的命令列選項。 如需選項的詳細資訊，請參閱 [dtexec 公用程式](packages/dtexec-utility.md)。<br /><br /> 提示：您可以將命令列複製到 [命令提示字元] 視窗中，加入 `dtexec`，並且從命令列執行封裝。 這是產生命令列文字的簡單方式。<br /><br /> **還原原始選項**<br /> 使用您在 [Job Set Properties (作業集屬性)] 對話方塊的 [封裝]、[組態]、[命令檔]、[資料來源]、[執行選項]、[記錄]、[設定值] 和 [驗證] 索引標籤中設定的命令列選項。<br /><br /> **手動編輯命令**<br /> 在 [命令列] 方塊中輸入其他命令列選項。<br /><br /> 在您按一下 [確定] 儲存作業步驟的變更之前，可以先按一下 [還原原始選項] 來移除您在 [命令列] 方塊中鍵入的所有其他選項。|  
+    |**命令列**|修改 dtexec 的命令列選項。 如需選項的詳細資訊，請參閱 [dtexec 公用程式](packages/dtexec-utility.md)。<br /><br /> 提示：您可以將命令列複製到 [命令提示字元] 視窗中，加入`dtexec`，然後從命令列執行封裝。 這是產生命令列文字的簡單方式。<br /><br /> **還原原始選項**<br /> 使用您在 [Job Set Properties (作業集屬性)] 對話方塊的 [封裝]、[組態]、[命令檔]、[資料來源]、[執行選項]、[記錄]、[設定值] 和 [驗證] 索引標籤中設定的命令列選項。<br /><br /> **手動編輯命令**<br /> 在 [命令列] 方塊中輸入其他命令列選項。<br /><br /> 在您按一下 [確定] 儲存作業步驟的變更之前，可以先按一下 [還原原始選項] 來移除您在 [命令列] 方塊中鍵入的所有其他選項。|  
   
 9. 按一下 [確定]，儲存設定並關閉 [新增作業步驟] 對話方塊。  
   

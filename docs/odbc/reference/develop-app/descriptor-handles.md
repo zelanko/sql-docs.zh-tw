@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760773"
 ---
 # <a name="descriptor-handles"></a>描述項控制代碼
 A*描述元*是描述 SQL 陳述式的參數或結果集的資料行的中繼資料的集合，所看到的應用程式或驅動程式 (也稱為*實作*)。 因此，可以填入任何四個角色描述元：  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470597"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "47846406"
  只有成員**sysadmin**固定的伺服器角色可以存取**sysproxies**資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysproxylogin &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
- [dbo.sysproxysubsystem &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.syssubsystems &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
+ [dbo.sysproxylogin &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
+ [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo.syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
   
   

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89447c98f8f74e68cd8ef563cbf049b4dcea7d4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468205"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
   此範例會示範如何使用列舉值物件來列出可用的資料來源。  

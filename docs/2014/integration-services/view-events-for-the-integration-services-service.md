@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766061"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>檢視 Integration Services 服務的事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的事件：  

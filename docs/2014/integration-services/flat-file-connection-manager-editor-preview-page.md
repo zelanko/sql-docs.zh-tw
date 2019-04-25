@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768304"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>一般檔案連接管理員編輯器 (預覽頁面)
   使用 [一般檔案連線管理員編輯器] 對話方塊的 [預覽] 節點，即可以表格式格式來檢視來源檔案的內容。  

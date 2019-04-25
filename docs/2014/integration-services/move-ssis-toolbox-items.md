@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536aeb35d871fa2dd13e343cc589649dda45e984
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767210"
 ---
 # <a name="move-ssis-toolbox-items"></a>移動 SSIS 工具箱項目
   新的 SSIS 工具箱包含新的類別目錄，並可依據您的喜好設定組織項目。 工具箱底部的資訊視窗會提供選定工具箱項目的描述以及指向《線上叢書》主題的連結。  

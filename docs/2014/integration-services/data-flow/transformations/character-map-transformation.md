@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770414"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  

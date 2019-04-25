@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4464b0ca035bc19695b37aea01385f737549fec1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768394"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>連接至指令碼工作中的資料來源
   連接管理員會提供已在封裝中設定的資料來源存取權。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../connection-manager/integration-services-ssis-connections.md)。  

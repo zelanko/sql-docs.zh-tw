@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eca4263dae38ad561d62cdf0419523c1400e7dcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765351"
 ---
 # <a name="validation-master-data-services"></a>驗證 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，會驗證資料以確保其正確性。 其中一部分驗證會自動發生，而另外一部分驗證則會根據管理員建立的商務規則。  

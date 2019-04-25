@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d58ce5236a2d74e1749e88f0bffa9ca86f974733
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740048"
 ---
 # <a name="scrolling-and-fetching-rows---bookmarking-rows-in-odbc"></a>捲動和擷取資料列 - ODBC 中的書籤資料列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

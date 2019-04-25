@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770214"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>教學課程：使用 OData 來源 [SSIS]
   本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (http://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768284"
 ---
 # <a name="general-page"></a>一般頁面
   在 [選項] 對話方塊上使用 [Integration Services 設計師] 頁面上的 [一般] 頁面，指定用來載入、顯示及升級封裝的選項。  

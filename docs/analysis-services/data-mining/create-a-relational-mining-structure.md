@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a808cfe9e5cd48ba689eac0bc4cb63123c4ef13a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740124"
 ---
 # <a name="create-a-relational-mining-structure"></a>建立關聯式採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

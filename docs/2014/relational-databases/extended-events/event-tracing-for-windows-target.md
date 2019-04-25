@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519302"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
   使用 Windows 事件追蹤 (ETW) 當做目標之前，我們建議您最好具備 ETW 的實用知識。 ETW 追蹤會搭配擴充事件一起使用，或是當做擴充事件的事件取用者使用。 下列外部連結提供取得有關 ETW 之背景資訊的起點：  

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 24e1c1fea5404d984f05391624fd244960c0eec3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765281"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>反轉交易 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，系統管理員可以在需要復原動作時，反轉交易。 交易的範例包括屬性值變更、階層移動或成員刪除。  

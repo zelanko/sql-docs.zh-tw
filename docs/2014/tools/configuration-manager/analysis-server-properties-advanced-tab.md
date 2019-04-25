@@ -1,23 +1,26 @@
 ---
 title: Analysis Server 屬性 (進階索引標籤) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 92485676ba8340163c9fc1251be45f89336acf93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761020"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Analysis Server 屬性 (進階索引標籤)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   這個服務是 Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 如果定義了自訂屬性，屬性與其值會在這個索引標籤上顯示。  
   
 ## <a name="options"></a>選項。  

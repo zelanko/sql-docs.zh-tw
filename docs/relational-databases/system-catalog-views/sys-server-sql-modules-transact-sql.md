@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95583de206841bb3ed3ccff42809c028443c63ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743950"
 ---
 # <a name="sysserversqlmodules-transact-sql"></a>sys.server_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47737546"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|這是對定義這個模組的伺服器層級觸發程序的 FOREIGN KEY 參考。|  
-|**定義**|**nvarchar(max)**|定義這個模組的 SQL 文字。<br /><br /> NULL = 已加密。|  
+|**definition**|**nvarchar(max)**|定義這個模組的 SQL 文字。<br /><br /> NULL = 已加密。|  
 |**uses_ansi_nulls**|**bit**|建立模組時，是將 ANSI NULLS 設定選項設為 ON。|  
 |**uses_quoted_identifier**|**bit**|建立模組時，是將 QUOTED IDENTIFIER 設定選項設為 ON。|  
 |**execute_as_principal_id**|**int**|EXECUTE AS 伺服器主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 指定的主體 if 的識別碼執行 AS SELF EXECUTE AS 主體-2 = EXECUTE AS OWNER。|  

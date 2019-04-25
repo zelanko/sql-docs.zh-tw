@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746780"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>時序叢集的叢集圖表索引標籤 (採礦模型檢視器)
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集圖表]** 索引標籤會提供時序叢集模型所包含之所有叢集的圖形檢視。  
   
  可以使用此時序叢集模型檢視，從每個叢集鑽研至支援案例 (如果已啟用鑽研)。 還可以為叢集指派描述性名稱，以及變更陰影變數，讓值分佈一目了然。  
   
- **如需詳細資訊，請參閱** [Microsoft 時序叢集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 時序叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
+ **如需詳細資訊：**[Microsoft 時序群集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 時序叢集檢視器](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -34,7 +34,7 @@ ms.locfileid: "48174198"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **Viewer**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用自訂檢視器，或 **[Microsoft 一般內容樹狀檢視器]**。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  
@@ -70,15 +70,15 @@ ms.locfileid: "48174198"
  **陰影變數**  
  從採礦模型中選取用於設定叢集圖表陰影的屬性。  
   
- **State**  
+ **狀態**  
  選取對應於 [陰影變數] 的狀態。 例如，如果您要檢視包含特定產品的時序，您會選取 [Product] 資料行做為 [陰影變數] 的屬性，並選取特定產品名稱做為 [狀態] 的值。  
   
- **連結**  
+ **Links**  
  圖表中的線條表示時序叢集之間的關聯。 您可以調整叢集右邊的滑動軸，來調整檢視器顯示的連結數目。 降低滑桿只顯示最強的連結。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

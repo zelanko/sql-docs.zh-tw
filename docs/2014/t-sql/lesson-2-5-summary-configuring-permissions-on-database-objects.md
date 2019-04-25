@@ -1,5 +1,5 @@
 ---
-title: 摘要：設定資料庫物件的權限 | Microsoft Docs
+title: 摘要：資料庫物件上設定權限 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642708"
 ---
-# <a name="summary-configuring-permissions-on-database-objects"></a>摘要：設定資料庫物件的權限
+# <a name="summary-configuring-permissions-on-database-objects"></a>摘要：資料庫物件上設定權限
   登入可讓使用者有權連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 使用者就是可以存取特定資料庫的登入身分。 使用 GRANT 陳述式可授與使用者讀取資料以及存取和變更資料的權限。  
   
  檢視是單一的 SELECT 陳述式，對使用者來說就像是資料表； 而預存程序則是以批次方式執行的一個或多個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。  
   
 ## <a name="next-lesson-in-tutorial"></a>教學課程的下一課  
- [課程 3：刪除資料庫物件](lesson-3-1-deleting-database-objects.md)  
+ [第 3 課：刪除資料庫物件](lesson-3-1-deleting-database-objects.md)  
   
   

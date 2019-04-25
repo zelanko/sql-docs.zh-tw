@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524012"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>使多個目標伺服器脫離主要伺服器
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的多伺服器管理組態中脫離多個目標伺服器。 從主要伺服器執行這個程序。  

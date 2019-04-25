@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642470"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
 **WillMove**暫止的作業變更的目前位置之前，會呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **MoveComplete**事件中的目前位置之後，呼叫**資料錄集**變更。  
@@ -60,7 +60,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  A[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **資料錄集**如發生此事件。  
   
 ## <a name="remarks"></a>備註  
- A **WillMove**或是**MoveComplete**因為下列原因可能會發生事件**資料錄集**作業：[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)，[移動](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)，並[Requery](../../../ado/reference/ado-api/requery-method.md)。 這些事件可能發生因為下列屬性：[篩選器](../../../ado/reference/ado-api/filter-property.md)， [Index](../../../ado/reference/ado-api/index-property.md)，[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，及[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)。 如果子系，也會發生這些事件**資料錄集**已**資料錄集**連線的事件和父代**資料錄集**移動。  
+ A **WillMove**或是**MoveComplete**因為下列原因可能會發生事件**資料錄集**作業：[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)，[移動](../../../ado/reference/ado-api/move-method-ado.md)， [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)， [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)，[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)，並[Requery](../../../ado/reference/ado-api/requery-method.md)。 這些事件可能會發生因為下列屬性：[篩選條件](../../../ado/reference/ado-api/filter-property.md)， [Index](../../../ado/reference/ado-api/index-property.md)，[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)， [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)，並[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)。 如果子系，也會發生這些事件**資料錄集**已**資料錄集**連線的事件和父代**資料錄集**移動。  
   
  您必須設定*adStatus*參數來**adStatusUnwantedEvent**每個可能*adReason*才能完全停止的任何事件的事件通知的值，包含*adReason*參數。  
   

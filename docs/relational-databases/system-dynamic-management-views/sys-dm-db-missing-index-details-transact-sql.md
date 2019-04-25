@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_details (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_missing_index_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1fc72e290bf1aa495493eb09d5e0db8cf305202e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62508237"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "52406655"
 
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [sys.dm_db_missing_index_group_stats &#40;-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

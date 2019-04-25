@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c77d60ea3ef1412e66c8bf40937b45647e776e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639560"
 ---
 # <a name="processing-batches-of-sql-statements"></a>批次處理 SQL 陳述式
 > [!IMPORTANT]  

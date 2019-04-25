@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b28eb8d2455584bae77d8a7b62707b8888da27cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765781"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>資料庫組態頁面 (Master Data Services 組態管理員)
   使用 **[資料庫組態]** 頁面，即可編輯 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的系統設定。 系統設定會影響與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫相關聯的所有 Web 應用程式和 Web 服務。 您必須先選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，才可啟用及使用系統設定進行組態設定。  

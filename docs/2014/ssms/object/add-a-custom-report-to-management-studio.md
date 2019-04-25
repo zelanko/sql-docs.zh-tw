@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510385"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>將自訂報表加入 Management Studio
   本主題描述如何建立儲存為 .rdl 檔案的簡單 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表，然後將該 rdl 檔案加入至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 做為自訂報表。 [!INCLUDE[ssRS](../../includes/ssrs.md)] 可以建立多種精密報表。 若要使用本主題來建立報表，您必須先在電腦上安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。 您不需要在 [!INCLUDE[ssRS](../../includes/ssrs.md)] 上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]執行自訂報表。  

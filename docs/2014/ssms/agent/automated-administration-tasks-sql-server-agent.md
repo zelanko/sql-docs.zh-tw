@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 790dd7e9199f511f434585c6b6741d0e09ab7d59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472952"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>自動化管理工作 (SQL Server Agent)
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您自動化管理工作。 若要將管理自動化，您必須定義可預測的管理工作，然後指定各項工作的發生條件。 使用自動化管理來處理例行性工作與事件，可讓您有更多時間執行其他管理功能。  

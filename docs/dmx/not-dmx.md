@@ -1,5 +1,5 @@
 ---
-title: 不 (DMX) |Microsoft Docs
+title: NOT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 053eb905edb1379bfdc40ec010dc6d4efadcba26
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503848"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,6 +46,6 @@ NOT Expression1
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [邏輯運算子&#40;DMX&#41;](../dmx/operators-logical.md)   
- [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

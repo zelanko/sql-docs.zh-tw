@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625912"
 ---
 # <a name="setting-project-options-oracletosql"></a>設定專案選項 (OracleToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，確認組態選項都適用於專案。  
@@ -53,11 +53,11 @@ SSMA 會有五種專案設定：
   
 -   [專案設定&#40;轉換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
--   [專案設定&#40;移轉&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
+-   [Project Settings &#40;Migration&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-migration-oracletosql.md)  
   
 -   [專案設定&#40;同步處理&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)  
   
--   [專案設定&#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
+-   [Project Settings &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)  
   
 -   [專案設定&#40;類型對應&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)  
   

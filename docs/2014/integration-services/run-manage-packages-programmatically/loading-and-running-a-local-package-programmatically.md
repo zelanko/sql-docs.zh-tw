@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766890"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>以程式設計的方式載入和執行本機封裝
   您可以使用[執行套件](../packages/run-integration-services-ssis-packages.md)中所述的方法，視需要或是依預定的次數執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件。 然而，只需要幾行的程式碼，您就可以從 Windows Form 應用程式、主控台應用程式、ASP.NET Web 表單或 Web 服務，或是 Windows 服務等自訂應用程式執行封裝。  

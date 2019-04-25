@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cac1e775d5cccaccca90b03104de4132e651284e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467842"
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>還原資料庫並將其繫結至資源集區
   即使您有足夠的記憶體來還原含有記憶體最佳化資料表的資料庫，建議您還是依照最佳做法，將資料庫繫結至具名資源集區。 因為資料庫必須先存在，然後您才能將它繫結至集區，而且還原資料庫是一項具有多重步驟的程序。 本主題會逐步引導您完成該程序。  

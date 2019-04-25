@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640176"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>瀏覽資料來源檢視對話方塊 (Analysis Services - 多維度資料)
   [瀏覽資料來源檢視] 對話方塊會顯示選取之資料來源檢視的簡單圖表。 此外，資料來源檢視的名稱會顯示為對話方塊的標題。  

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765401"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Web 組態頁面 (Master Data Services 組態管理員)
   使用 **[Web 組態]** 頁面建立新的網站或 Web 應用程式。 當您選取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式後，可以指定應用程式的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，並啟用 Data Quality Services。  

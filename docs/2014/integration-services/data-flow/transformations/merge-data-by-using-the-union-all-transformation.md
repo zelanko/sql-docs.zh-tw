@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770335"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>使用聯集全部轉換來合併資料
   若要加入及設定「聯集全部」轉換，封裝必須已包括至少一個「資料流程」工作與兩個資料來源。  

@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 177450ed6cbe934406fc596606e0bb13ee51f7eb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511017"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除排程。  

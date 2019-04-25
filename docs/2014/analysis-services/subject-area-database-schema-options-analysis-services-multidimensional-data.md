@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e608f6ca210f1d86a58b469145a9840f7c25ba2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758493"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>主題領域資料庫結構描述選項 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[主題領域資料庫結構描述選項]** 頁面來控制如何產生結構描述，以及定義如何保留資料。  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524586"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
   空間索引可以更有效率地執行特定作業的資料行上`geometry`或是`geography`資料類型 (*空間資料行*)。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  

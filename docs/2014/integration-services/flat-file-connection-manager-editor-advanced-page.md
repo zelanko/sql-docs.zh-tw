@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 067bb5a2da9a93bc29e93a3844a29e1a4028c7d0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768344"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>一般檔案連接管理員編輯器 (進階頁面)
   您可以使用 [一般檔案連線管理員編輯器] 對話方塊的 [進階] 頁面設定屬性，以指定 Integration Services 讀取及寫入一般檔案的方式。 您可以變更一般檔案中的資料行名稱，並設定屬性以包含檔案中每個資料行的資料類型和分隔符號。  
@@ -42,9 +42,9 @@ ms.locfileid: "58380466"
 |屬性|描述|  
 |--------------|-----------------|  
 |**ColumnType**|代表資料行是否為分隔的、固定寬度或不齊右。 此屬性是唯讀的。 不齊右檔案就是除了最後一個資料行之外，其他所有資料行都有固定寬度的檔案。 它是以資料列分隔符號分隔。|  
-|**OutputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值將對應至字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。<br /><br /> 注意：在物件模型中，這個屬性的名稱為 MaximumWidth。|  
+|**OutputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值將對應至字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。<br /><br /> 注意:在物件模型中，這個屬性的名稱為 MaximumWidth。|  
 |**DataType**|從可用的資料類型清單中選取。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
-|**TextQualified**|指出文字資料是否會圍繞著文字限定詞字元，例如引號字元。 有效值為：<br /><br /> **True**:一般檔案中的文字資料是限定的。<br /><br /> **False**:一般檔案中的文字資料是非限定的。|  
+|**TextQualified**|指出文字資料是否會圍繞著文字限定詞字元，例如引號字元。 有效值為：<br /><br /> **True**：一般檔案中的文字資料被限定的。<br /><br /> **False**：一般檔案中的文字資料是非限定的。|  
 |**名稱**|提供描述性資料行名稱。 如果未輸入名稱， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 會自動以 Column 0、Column 1 等等的格式建立名稱。|  
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。|  
 |**ColumnDelimiter**|從可用的資料行分隔符號清單中選取。 請選擇不太可能會在文字中出現的分隔符號。 固定寬度資料行將忽略這個值。<br /><br /> **{CR}{LF}**： 資料行是以歸位字元和換行字元的組合分隔。<br /><br /> **{CR}**： 資料行是以歸位字元分隔。<br /><br /> **{LF}**： 資料行是以換行字元分隔。<br /><br /> **分號 {;}**： 資料行是以分號分隔。<br /><br /> **冒號 {:}**： 資料行是以冒號分隔。<br /><br /> **逗號 {,}**. 資料行是以逗號分隔。<br /><br /> **定位字元 {t}**： 資料行是以定位字元分隔。<br /><br /> **分隔號 {&#124;}**： 資料行是以分隔號分隔。|  

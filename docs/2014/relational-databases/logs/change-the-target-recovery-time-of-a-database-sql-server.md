@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743214"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>變更資料庫的目標復原時間 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中設定或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料庫的目標復原時間。 根據預設，目標復原時間為 0，而且資料庫會使用 *「自動檢查點」* (Automatic Checkpoint) (由 **recovery interval** 伺服器選項控制)。 如果將目標復原時間設定為大於 0，就會導致資料庫使用 *「間接檢查點」* (Indirect-Checkpoint) 並且建立這個資料庫的復原時間上限。  
@@ -23,9 +23,9 @@ ms.locfileid: "54131448"
 > [!NOTE]  
 >  如果長時間執行的交易造成過多的復原次數，可能會超過目標復原時間設定針對給定資料庫所指定的上限。  
   
--   **開始之前：**[限制事項](#Restrictions)，[安全性](#Security)  
+-   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
   
--   **若要變更目標復原時間，使用：**[SQL Server Management Studio](#SSMSProcedure)或[Transact SQL](#TsqlProcedure)  
+-   **使用以下方式變更目標復原時間：**[SQL Server Management Studio](#SSMSProcedure) 或 [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

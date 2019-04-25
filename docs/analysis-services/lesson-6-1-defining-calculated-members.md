@@ -1,5 +1,5 @@
 ---
-title: 定義導出成員 |Microsoft 文件
+title: 定義導出成員 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523662"
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>課程 6-1-定義導出成員
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34018785"
   
     下圖顯示 Cube 設計師的 [計算] 索引標籤。  
   
-    ![計算索引標籤，Cube 設計工具的](../analysis-services/media/l6-calculatedmembers-1.gif "計算索引標籤，Cube 設計工具")  
+    ![計算索引標籤，Cube 設計師](../analysis-services/media/l6-calculatedmembers-1.gif "計算索引標籤，Cube 設計師 的")  
   
 2.  在 [計算] 索引標籤的工具列上，按一下 [新增導出成員]。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34018785"
     您可以將中繼資料元素，從 [計算工具] 窗格拖曳到 [運算式] 方塊中，再加上運算子和其他元素，來建立多維度運算式 (MDX) 運算式。 或者，您也可以在 [運算式] 方塊中，直接輸入 MDX 運算式。  
   
     > [!NOTE]  
-    > 如果您無法在 [計算工具] 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。  
+    > 如果您無法在 [計算工具] 窗格中檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的執行個體。  
   
 5.  從 [計算工具] 窗格的 [中繼資料] 索引標籤，將 [網際網路銷售 - 銷售量] 拖曳到 [計算運算式] 窗格中的 [運算式] 方塊。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34018785"
   
     下圖顯示此時在教學課程中應該顯示在 [計算運算式] 窗格的計算指令碼。  
   
-    ![計算運算式窗格中的指令碼](../analysis-services/media/l6-calculatedmembers-04.gif "計算運算式窗格中的指令碼")  
+    ![在 [計算運算式] 窗格中的指令碼](../analysis-services/media/l6-calculatedmembers-04.gif "計算運算式窗格中的指令碼")  
   
 12. 在 [計算] 索引標籤的工具列上，按一下 [表單檢視]，確認 [指令碼組合管理] 窗格中是否已選取 [總銷售量]，然後再按一下 [新增導出成員]。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "34018785"
   
     下圖顯示含有三個新計算值的 [運算式] 窗格。  
   
-    ![計算運算式窗格中的新計算](../analysis-services/media/l6-calculatedmembers-05.gif "計算運算式窗格中的新計算")  
+    ![在 [計算運算式] 窗格中的新計算](../analysis-services/media/l6-calculatedmembers-05.gif "計算運算式窗格中的新計算")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>定義總計算值的百分比  
   
@@ -247,7 +247,7 @@ ms.locfileid: "34018785"
   
 ## <a name="browsing-the-new-calculated-members"></a>瀏覽新的導出成員  
   
-1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services 教學課程)]。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 2.  順利完成部署之後，切換到 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   
@@ -273,7 +273,7 @@ ms.locfileid: "34018785"
   
     請注意，轉售商銷售的毛利率遠低於透過網際網路的銷售，如下圖所示。  
   
-    ![顯示轉售商銷售的資料 窗格](../analysis-services/media/l6-calculatedmembers-7b.gif "資料 窗格中顯示的轉售商銷售額")  
+    ![顯示轉售商銷售的 [資料] 窗格](../analysis-services/media/l6-calculatedmembers-7b.gif "顯示轉售商銷售的 [資料] 窗格")  
   
 9. 將 [總銷售與所有產品的比率]、[網際網路銷售與所有產品的比率] 以及 [轉售商銷售與所有產品的比率] 量值新增至 [值] 區域中。  
   

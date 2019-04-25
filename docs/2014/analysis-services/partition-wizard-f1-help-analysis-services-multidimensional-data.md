@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743594"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>資料分割精靈 F1 說明 (Analysis Services - 多維度資料)
   您可以使用資料分割精靈來定義 Cube 中之量值群組的資料分割。 依預設，會為 Cube 中的每一個量值群組定義單一資料分割。 但是，大型的資料分割會使存取和處理效能降低。 藉由建立多個分割區，每一個分割區包含量值群組的一部份資料，這樣可以增進該量值群組的存取和處理效能。  
@@ -49,6 +49,6 @@ ms.locfileid: "48198528"
 -   [瀏覽遠端資料夾 對話方塊中的&#40;Analysis Services-多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

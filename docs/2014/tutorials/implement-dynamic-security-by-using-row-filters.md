@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740378"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>使用資料列篩選器實作動態安全性
   在這個補充課程中，您將建立實作動態安全性的其他角色。 動態安全性提供以使用者目前登入的使用者名稱或登入識別碼為主的資料列層級安全性。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "56041049"
   
  您將要完成一系列工作，才能完成這個補充課程。 例如此 Adventure Works 表格式模型案例專屬的工作就是這類工作，但不一定適用於真實案例。 每一項工作都包含描述工作目的的其他資訊。  
   
- 完成本課程的估計時間：**30 分鐘**  
+ 估計的時間才能完成這一課：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
  這個補充課程主題是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  

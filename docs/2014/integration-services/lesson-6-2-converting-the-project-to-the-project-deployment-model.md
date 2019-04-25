@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：將專案轉換為專案部署模型 |Microsoft Docs
+title: 步驟 2:將專案轉換為專案部署模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767350"
 ---
-# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步驟 2：將專案轉換成專案部署模型
+# <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步驟 2:將專案轉換成專案部署模型
   在這個工作中，您將使用 Integration Services 專案轉換精靈，將專案轉換為專案部署模型。  
   
 ### <a name="converting-the-project-to-the-project-deployment-model"></a>將專案轉換成專案部署模型  

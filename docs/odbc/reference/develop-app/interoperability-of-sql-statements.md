@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4ead7cf96ada6d6055bc676ecf4610f2cf4c8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446658"
 ---
 # <a name="interoperability-of-sql-statements"></a>SQL 陳述式的互通性
 應用程式的其餘部分，例如 SQL 陳述式可以互通或 DBMS 專屬。 和應用程式的其餘部分，例如選擇的方式可互通的 SQL 陳述式必須為應用程式類型而定。 自訂的應用程式是較不容易使用互通的 SQL 陳述式，因為它們通常設計來利用一或兩個可能的 Dbms 的功能。 泛型應用程式會使用可互通的 SQL 陳述式，因為它們設計來處理各種不同的 Dbms。 和垂直應用程式通常落在位置之間，需要某種程度的功能，但其他方式使用互通的 SQL 陳述式。  

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770314"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
   「詞彙查閱」轉換會比對從轉換輸入資料行的文字中擷取的詞彙，以及參考資料表中的詞彙。 然後，它會計算查閱資料表中的詞彙在輸入資料集中出現的次數，並將計數與參考資料表的詞彙一起寫入轉換輸出中的資料行。 此轉換包括單字頻率統計資料，對基於輸入文字建立自訂單字清單很有用處。  

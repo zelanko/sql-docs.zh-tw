@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736079"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -211,10 +211,10 @@ ms.locfileid: "52508537"
 |6|Existing|表示此屬性具有連續數值，而且資料中已經提供值 (遺漏或推斷的值)。|  
 |7|Coefficient|表示代表著係數的數值。<br /><br /> 係數是計算相依變數的值時所套用的值。 例如，如果您的模型建立一個迴歸公式來根據年齡預測收入，則讓年齡與收入產生關聯的公式中會使用係數。|  
 |8|Score gain|表示代表著屬性之得分的數值。|  
-|9|Statistics|表示代表著迴歸輸入變數之統計資料的數值。|  
+|9|統計資料|表示代表著迴歸輸入變數之統計資料的數值。|  
 |10|Node unique name|表示此值不應該處理為數值或字串，而是要處理為模型內另一個內容節點的唯一識別碼。<br /><br /> 例如在類神經網路模型中，識別碼會提供從輸出層內之節點指向隱藏層內節點的指標，並提供從隱藏層內之節點指向輸入層內之節點的指標。|  
 |11|Intercept|表示代表著迴歸公式內之攔截的數值。|  
-|12|Periodicity|表示代表模型內之週期性結構的值。<br /><br /> 僅適用於包含 ARIMA 模型的時間序列模型。<br /><br /> 注意：Microsoft 時間序列演算法會自動根據定型資料來偵測週期性結構。 因此，最終模型內的週期性可能包含當您建立模型時未當做參數提供的週期性值。|  
+|12|Periodicity|表示代表模型內之週期性結構的值。<br /><br /> 僅適用於包含 ARIMA 模型的時間序列模型。<br /><br /> 注意:Microsoft 時間序列演算法會自動偵測週期性結構的定型資料。 因此，最終模型內的週期性可能包含當您建立模型時未當做參數提供的週期性值。|  
 |13|Autoregressive order|表示代表著自動迴歸數列數目的值。<br /><br /> 適用於使用 ARIMA 演算法的時間序列模型。|  
 |14|Moving average order|表示代表著數列中移動平均數目的值。<br /><br /> 適用於使用 ARIMA 演算法的時間序列模型。|  
 |15|Difference order|表示代表著數列差異化之次數的值。<br /><br /> 適用於使用 ARIMA 演算法的時間序列模型。|  

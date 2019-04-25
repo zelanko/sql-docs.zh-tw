@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471077"
 ---
-# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;結構描述&gt;_&lt;資料表&gt;& Amp;#40;transact-SQL&AMP;#41;
+# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Conflict_\<結構描述 > _\<資料表 > 資料表包含對等項目-複寫中衝突資料列的相關資訊。 發行集中每個複寫的資料表都有衝突資料表，衝突資料表的名稱是附加在結構描述和發行項名稱後面。 發行項特定的衝突資料表會存在於每一個發行集資料庫內。  
@@ -37,12 +37,12 @@ ms.locfileid: "52808900"
 |__$originator_id|**int**|引發衝突變更之節點的識別碼。 如需識別碼的清單，請執行[sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)。|  
 |__$origin_datasource|**int**|引發衝突變更的節點。|  
 |__$tranid|**nvarchar (40)**|衝突變更的記錄序號 (LSN) (當套用到 __$origin_datasource 時)。|  
-|__$conflict_type|**int**|衝突的類型，它可以是下列其中一個值：<br /><br /> 1：更新失敗，因為本機資料列已由另一個的更新或變更已刪除，並重新插入。<br /><br /> 2：更新失敗，因為本機資料列已被刪除。<br /><br /> 3：刪除失敗，因為本機資料列已由另一個的更新或變更已刪除，並重新插入。<br /><br /> 4：刪除失敗，因為本機資料列已被刪除。<br /><br /> 5：插入失敗，因為本機資料列已經插入，或是已經插入後再更新。|  
+|__$conflict_type|**int**|衝突的類型，它可以是下列其中一個值：<br /><br /> 1:更新失敗，因為本機資料列已由另一個的更新或變更已刪除，並重新插入。<br /><br /> 2:更新失敗，因為本機資料列已被刪除。<br /><br /> 3:刪除失敗，因為本機資料列已由另一個的更新或變更已刪除，並重新插入。<br /><br /> 4:刪除失敗，因為本機資料列已被刪除。<br /><br /> 5:插入失敗，因為本機資料列已經插入，或是已經插入後再更新。|  
 |__$is_winner|**bit**|指出此資料表中的資料列是否為衝突的贏家，這表示它已套用到本機節點。|  
 |__$pre_version|**varbinary (32)**|引發衝突變更的資料庫版本。|  
 |__$reason_code|**int**|此衝突的解決程式碼。 可為下列其中一個值：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 如需詳細資訊，請參閱 < **__ reason_text**。|  
 |__$reason_text|**nvarchar (720)**|此衝突的解決方法。 可為下列其中一個值：<br /><br /> 已解決 (1)<br /><br /> 未解決 (2)<br /><br /> 未知 (0)|  
-|__$update_bitmap|**varbinary (** *n* **)**。 大小會視內容而有所不同。|指出當發生更新與更新之間的衝突時，已更新哪一個資料行的點陣圖。|  
+|__$update_bitmap|**varbinary(** *n* **)**. 大小會視內容而有所不同。|指出當發生更新與更新之間的衝突時，已更新哪一個資料行的點陣圖。|  
 |__$inserted_date|**datetime**|衝突資料列插入此資料表的日期和時間。|  
 |__$row_id|**timestamp**|與產生衝突之資料列有關聯的資料列版本。|  
 |__$change_id|**二進位檔 (8)**|如果是本機資料列，這個值會等於與此本機資料列衝突之傳入資料列的 __$row_id。 如果是傳入資料列，這個值會是 NULL。|  

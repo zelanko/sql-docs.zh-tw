@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2ce91292f7c904abfb1e802b4f4600c0e3d1c149
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765671"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>刪除明確階層 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除不再需要的明確階層。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743474"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>資料分割 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
   在 **中，使用** [還原資料庫] **對話方塊的** [資料分割] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 頁面，即可指定本機資料分割的還原位置和是否還原遠端資料分割，以及指定還原遠端資料分割時所使用的遠端備份檔案。  

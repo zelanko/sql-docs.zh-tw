@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468641"
 ---
 # <a name="lesson-10-create-partitions"></a>第 10 課：建立資料分割
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將建立資料分割來將 FactInternetSales 資料表分割成較小的邏輯部分，可以處理 （重新整理） 其他資料分割。 根據預設，您加入模型中每個資料表會有一個分割區會包含所有資料表的資料行和資料列。 FactInternetSales 資料表中，我們想要將資料依年度;針對每個資料表的五年的一個資料分割。 接著，每個資料分割就可以單獨處理。 若要進一步了解，請參閱[分割區](../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
-完成本課程的估計時間：**15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 9 課：建立階層](../analysis-services/lesson-9-create-hierarchies.md)。  
@@ -135,13 +135,13 @@ ms.locfileid: "52416393"
   
 4.  在 [處理] 資料行中選取您所建立的五個資料分割各自的核取方塊，然後按一下 [確定]。  
 
-    ![為表格式-lesson10-程序-分割](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
+    ![as-tabular-lesson10-process-partitions](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
     如果系統提示您輸入模擬認證時，輸入 Windows 使用者名稱和您在第 2 課中指定的密碼。  
   
     [資料處理] 對話方塊隨即出現，並顯示每個資料分割的處理詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 這是因為每個資料分割只包含 SQL 陳述式中的 WHERE 子句所指定年度的資料列。 處理完成時，請繼續並關閉 [資料處理] 對話方塊。  
   
-    ![為表格式-lesson10-程序-完成](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![as-tabular-lesson10-process-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>下一步
 請移至下一課：[第 11 課：建立角色](../analysis-services/lesson-11-create-roles.md)。 

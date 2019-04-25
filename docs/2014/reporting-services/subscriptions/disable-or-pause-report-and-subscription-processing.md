@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510625"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暫停報表與訂閱處理
   您無法直接暫停報表或訂閱。 但是，您可以在處理開始之前，或在進行資料來源連接時，中斷報表與訂閱處理。 您也可以不讓使用者存取報表或訂閱，以禁止處理報表或訂閱。  

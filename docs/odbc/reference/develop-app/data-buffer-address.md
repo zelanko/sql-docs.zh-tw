@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f07f835361fcf29143376fe468a55f0bf26e31e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471127"
 ---
 # <a name="data-buffer-address"></a>資料緩衝區位址
 應用程式會將資料緩衝區的位址傳遞至驅動程式的引數，通常名為*ValuePtr*或其他類似的名稱。 例如，在下列呼叫來**SQLBindCol**，應用程式指定的地址*日期*變數：  

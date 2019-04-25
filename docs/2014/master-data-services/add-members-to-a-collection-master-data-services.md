@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5daf66aeb2eba3fd30302ef9e3e806c490f46e72
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766011"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>將成員加入至集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以將分葉成員和合併成員加入至集合中。  

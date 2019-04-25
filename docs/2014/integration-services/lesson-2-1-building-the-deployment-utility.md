@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：建置部署公用程式 |Microsoft Docs
+title: 步驟 1:建置部署公用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767580"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>步驟 1：建置部署公用程式
+# <a name="step-1-building-the-deployment-utility"></a>步驟 1:建置部署公用程式
   在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
   
  您必須先修改「部署教學課程」專案的屬性，才能建立部署公用程式。 您將使用 [Deployment Tutorial Property Pages (部署教學課程屬性頁)] 對話方塊來設定這些屬性。 在這個對話方塊中，您必須啟用能夠在部署期間更新組態的能力，而且指定建立期間產生部署公用程式。 在設定完屬性後，您將建立專案。  
@@ -48,7 +48,7 @@ ms.locfileid: "58381196"
   
 4.  在 [輸出] 視窗中，確認以下資訊：  
   
-     組建已啟動：SQL Integration Services 專案：累加式...  
+     建置已開始:SQL Integration Services 專案:累加 ...  
   
      正在建立部署公用程式...  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58381196"
   
      建立已完成 -- 0 個錯誤，0 個警告  
   
-     ========== 建置：0 成功、 0 失敗、 1 最新狀態，0 個略過 ===  
+     ========== 建置：0 成功、0 失敗、1 最新、0 略過 ==========  
   
 5.  在 **[檔案]** 功能表上按一下 **[結束]**。 如果出現對 [Deployment Tutorial (部署教學課程)] 項目儲存變更的提示，請按一下 [是]。  
   

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473142"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
   將多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
@@ -84,16 +84,16 @@ ms.locfileid: "53210177"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Database Engine 回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [註冊伺服器](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
- [sp_delete_targetserver 來&#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
- [sp_delete_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
- [sp_help_downloadlist &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
- [sp_help_jobserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
- [sp_help_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
- [sp_resync_targetserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
- [sp_update_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;Transact SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [sp_add_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [sp_delete_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [sp_delete_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [sp_help_downloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [sp_help_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [sp_resync_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [sp_update_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [dbo.sysjobservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [dbo.systargetservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

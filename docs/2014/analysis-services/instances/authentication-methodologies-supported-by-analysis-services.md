@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730271"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
   從用戶端應用程式到 Analysis Services 執行個體的連接需要 Windows 驗證 (整合式)。 您可以使用下列任何一種方法來提供 Windows 使用者識別：  

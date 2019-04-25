@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96e4cf621a1c0f7f701012ed479797fc450d1533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743265"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>設定檔案上傳的大小上限 (PowerPivot for SharePoint)
   PowerPivot 活頁簿經常包含大量的資料，這些資料產生的檔案會超出 SharePoint 上傳所允許的檔案大小上限。 當您嘗試上傳的檔案超出上限時，您將會得到以下 SharePoint 錯誤：  

@@ -1,5 +1,5 @@
 ---
-title: 採礦結構資料行 |Microsoft 文件
+title: 採礦結構資料行 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509970"
 ---
 # <a name="mining-structure-columns"></a>採礦結構資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,19 +27,19 @@ ms.locfileid: "34015155"
   
  採礦結構資料行的定義必須包含下列資訊：  
   
--   **識別碼**：資料行的唯一名稱，通常與名稱相同。 在您建立採礦結構之後無法變更識別碼，但是可以變更名稱。  
+-   **識別碼**：資料行，通常與名稱相同的唯一名稱。 在您建立採礦結構之後無法變更識別碼，但是可以變更名稱。  
   
--   **名稱**：資料行的名稱或別名。  
+-   **名稱**：名稱或別名資料行中。  
   
--   **內容**：描述資料為離散或連續的列舉。  
+-   **內容**:描述資料為離散或連續的列舉。  
   
--   **類型**：表示一般資料類型的列舉。  
+-   **類型**：列舉型別，表示一般資料類型。  
   
--   **分佈**：描述預期之值分佈的列舉。 如果資料行是連續的，便包括分佈。  
+-   **發佈**:列舉型別描述預期的值分佈。 如果資料行是連續的，便包括分佈。  
   
--   **模型旗標**：表示如何處理遺失值等項目的列舉。 也可以在採礦模型上定義模型旗標，但是這些模型旗標與結構資料行上使用的旗標不一樣。  
+-   **模型旗標**:列舉，指出如何處理遺失值等。 也可以在採礦模型上定義模型旗標，但是這些模型旗標與結構資料行上使用的旗標不一樣。  
   
--   **繫結**：指定來源資料的屬性。  
+-   **繫結**:指定來源資料的屬性。  
   
  協力廠商演算法也可以包括可在採礦結構資料行上定義的自訂屬性。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34015155"
 |學習加入及修改採礦結構資料行。|[採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

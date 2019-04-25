@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641661"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>SQL Server Machine Learning 服務的權限授與使用者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

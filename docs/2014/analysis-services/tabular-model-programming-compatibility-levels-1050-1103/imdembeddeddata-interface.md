@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757781"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 介面
   IMDEmbedded 介面是用來管理內嵌 PowerPivot 資料庫或表格式模型資料庫的公用介面。 此介面繼承自 `IPersistStream` 介面， 允許下列作業：  

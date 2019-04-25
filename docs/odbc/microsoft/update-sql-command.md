@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632555"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 命令
 使用新值更新資料表中的記錄。  
@@ -36,12 +36,12 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>引數  
- 更新 [ *DatabaseName1 ！*]*TableName1*  
+ UPDATE [ *DatabaseName1!*] *TableName1*  
  指定的新值更新記錄的資料表。  
   
- *DatabaseName1 ！* 指定包含資料表的資料來源所指定的資料庫以外的資料庫名稱。 您必須包括包含的資料表，如果資料庫不是目前資料庫的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
+ *DatabaseName1!* 指定包含資料表的資料來源所指定的資料庫以外的資料庫名稱。 您必須包括包含的資料表，如果資料庫不是目前資料庫的名稱。 之後的資料庫名稱和資料表名稱之前，請包含驚嘆號 （！） 分隔符號。  
   
- 設定*Column_Name1*= *eExpression1*[， *Column_Name2*= *eExpression2*  
+ SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  指定更新的資料行和其新的值。 如果您省略 WHERE 子句，資料行中的每個資料列會更新以相同的值。  
   
  何處*FilterCondition1*[AND&#124;或者*FilterCondition2*...]  

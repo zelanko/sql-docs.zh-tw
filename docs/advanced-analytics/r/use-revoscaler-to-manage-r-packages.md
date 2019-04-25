@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642335"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>如何使用 RevoScaleR 函數來尋找或 SQL Server 上的安裝 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

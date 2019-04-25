@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aa5b08a35a2eaf0d82b79145ecacde9d50579ee
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767300"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>查閱轉換編輯器 (一般頁面)
   使用 [查閱轉換編輯器] 對話方塊的 **[一般]** 頁面來選取快取模式、選取連接類型，及指定如何處理無相符項目的資料列。  

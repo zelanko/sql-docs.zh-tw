@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_7915 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 7915 (Database Engine error)
 ms.assetid: 63338587-7dd3-40e6-b70e-d8ae18fff47b
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb60bfa05e75c06b7da04042aa1abfbd42b756c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761900"
 ---
 # <a name="mssqlserver7915"></a>MSSQLSERVER_7915
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -30,12 +31,11 @@ ms.locfileid: "48109028"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_REPAIR_IAM_CHAIN_REBUILT|  
-|訊息文字|修復: 物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE) 的 IAM 鏈已在頁面 P_ID 之前截斷，將會重建。|  
+|訊息文字|修復:物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE） 的 IAM 鏈已在頁面 P_ID 之前截斷，將會重建。|  
   
 ## <a name="explanation"></a>說明  
- 這是由 REPAIR 傳送的參考用資訊，指出已經修補指定的索引配置對應 (IAM) 鏈結，因此可以重建該鏈結。 這項修補動作可能已經要求配置 IAM 鏈結的新標頭，或是從鏈結中移除錯誤的頁面。  
+這是由 REPAIR 傳送的參考用資訊，指出已經修補指定的索引配置對應 (IAM) 鏈結，因此可以重建該鏈結。 這項修補動作可能已經要求配置 IAM 鏈結的新標頭，或是從鏈結中移除錯誤的頁面。  
   
 ## <a name="user-action"></a>使用者動作  
- None  
-  
+None  
   

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9d2417c844998547480a2f03f6dcf9409ff7656
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767290"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>查閱轉換編輯器 (錯誤輸出頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，來指定錯誤處理選項。  

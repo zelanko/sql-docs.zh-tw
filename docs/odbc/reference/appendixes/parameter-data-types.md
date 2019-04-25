@@ -16,11 +16,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632411"
 ---
 # <a name="parameter-data-types"></a>參數資料類型
 即使每個參數指定了**SQLBindParameter**會定義使用 SQL 資料類型，SQL 陳述式中的參數有沒有內建資料型別。 因此，參數標記可以包含在 SQL 陳述式才可以從陳述式中的另一個運算元推斷其資料類型。 例如，在這類的算術運算式嗎？ + COLUMN1，參數的資料型別可以從具名資料行 COLUMN1 所代表的資料型別推斷而來。 應用程式無法使用的參數標記，如果無法判別資料型別。  

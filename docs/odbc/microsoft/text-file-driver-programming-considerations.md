@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3a7db9667f24e11fe6a75f73e0dd7e79522db13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632993"
 ---
 # <a name="text-file-driver-programming-considerations"></a>文字檔驅動程式的程式設計考量
 本節包含下列主題：  

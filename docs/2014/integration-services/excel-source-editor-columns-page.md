@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a46cdfd73b7339f40cf92555e45c07d8d5dc482
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769724"
 ---
 # <a name="excel-source-editor-columns-page"></a>Excel 來源編輯器 (資料行頁面)
   使用 [Excel 來源編輯器] 對話方塊的 [資料行] 頁面，將輸出資料行對應至每個外部 (來源) 資料行。  

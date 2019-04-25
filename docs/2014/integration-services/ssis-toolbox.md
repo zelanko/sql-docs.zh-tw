@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766341"
 ---
 # <a name="ssis-toolbox"></a>SSIS 工具箱
   安裝在本機電腦上的所有元件 (包括針對 SQL Server 2008 和 2008 R2 建立的協力廠商元件)，現在都會自動出現在新的 [SSIS 工具箱] 中。 當您安裝其他元件時，在此工具箱內按一下滑鼠右鍵，然後按一下 [重新整理工具箱] 即可加入元件。  

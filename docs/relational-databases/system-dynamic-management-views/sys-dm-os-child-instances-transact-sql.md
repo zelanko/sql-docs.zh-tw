@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62504967"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53203447"
   
  從傳回的資訊**sys.dm_os_child_instances**可用來判斷每個使用者執行個體 (heart_beat) 的狀態，以及取得可用來建立連線到使用者的管道名稱 (instance_pipe_name)執行個體使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQLCmd。 您只能連接到已由外部處理序 (例如，用戶端應用程式) 啟動的使用者執行個體。 SQL 管理工具無法啟動使用者執行個體。  
   
-> **注意：** 使用者執行個體只是 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 的功能。  
+> **注意：** 使用者執行個體特有的[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]只。  
 > 
 > **附註**呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_child_instances**。  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472843"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>預測關聯 (中繼資料採礦教學課程)
   當模型經過處理之後，您可以使用與模型中儲存的關聯有關的資訊來建立預測。 在本課程的最後一個工作中，您將會學習如何針對您所建立的關聯模型來建立預測查詢。 此課程假設您已熟悉如何使用預測查詢產生器，而且想要學習如何針對關聯模型來建立預測查詢。 如需如何使用預測查詢產生器，請參閱[資料採礦查詢介面](../../2014/analysis-services/data-mining/data-mining-query-tools.md)。  

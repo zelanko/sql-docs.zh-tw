@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770591"
 ---
 # <a name="balanced-data-distributor-transformation"></a>平衡資料分佈器轉換
   平衡資料分佈器 (BDD) 轉換利用新型 CPU 的並行處理能力。 它會將傳入資料列的緩衝區一致地分佈到個別執行緒上的輸出。 透過針對每個輸出路徑使用個別執行緒，BDD 元件可提升 SSIS 封裝在多核心或多處理器機器上的效能。 BDD 元件是 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 功能套件的一部分。 下載並安裝從[此處](https://go.microsoft.com/fwlink/p/?LinkId=391999)。  

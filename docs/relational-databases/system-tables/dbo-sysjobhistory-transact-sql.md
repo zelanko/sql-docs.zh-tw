@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470846"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行排程作業的相關資訊。 這份資料表儲存在**msdb**資料庫。  
   
-> **注意：** 在 jobstep 完成後，只更新資料。  
+> **注意：** 只有在 jobstep 完成之後，就會更新資料。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768824"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
   傳回所要求資料類型的 Null 值。  
@@ -52,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) 將值轉換為 DT_TEXT 資料類型，使用 1252 字碼頁。|  
   
 ## <a name="expression-examples"></a>運算式範例  
- 這些範例會傳回 null 值的資料類型：DT_STR、 DT_DATE 和 DT_BOOL。  
+ 這些範例會傳回下列資料類型的 Null 值：DT_STR、DT_DATE 和 DT_BOOL。  
   
 ```  
 NULL(DT_STR,10,1252)  

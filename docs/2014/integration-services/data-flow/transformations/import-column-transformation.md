@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 13deb9b423ce20fd77e0853cba9d0f205905ca44
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770404"
 ---
 # <a name="import-column-transformation"></a>匯入資料行轉換
   「匯入資料行」轉換會從檔案讀取資料，並將資料加入至資料流程中的資料行。 封裝可使用此轉換將其他檔案中儲存的文字和影像加入至資料流程。 例如，將資料載入儲存產品資訊之資料表中的資料流程，即可加入「匯入資料行」轉換，以便從檔案匯入客戶對每項產品的檢閱，然後將檢閱加入至資料流程。  

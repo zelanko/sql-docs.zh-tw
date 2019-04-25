@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626522"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取及設定受影響的物件 (OracleToSQL)
 在此頁面中，您可以選取資料表和 SSMA 確認在上一個步驟中選擇之物件的執行結果時，所要比較的外部索引鍵，在其中變更。 此外，您可以自訂的驗證參數。  

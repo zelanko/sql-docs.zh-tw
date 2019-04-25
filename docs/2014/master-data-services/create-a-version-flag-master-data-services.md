@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60fdd3e60cd7f9015950a16d02a3f4a9ff2f7fcf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765813"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>建立版本旗標 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立要指派給版本的版本旗標。 此旗標可以指出使用者或訂閱系統應該使用的版本。  

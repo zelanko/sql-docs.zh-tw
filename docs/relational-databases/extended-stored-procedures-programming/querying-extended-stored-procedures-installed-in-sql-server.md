@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f2d5584d70b32764fd9c7e11a53131626e9df444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742224"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>查詢 SQL Server 中安裝的擴充預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ sp_helpextendedproc 'xp_hello'
 >  只會針對已登入之使用者所擁有或擁有權限的那些擴充預存程序傳回資訊。 只有成員**sysadmin**固定的伺服器角色和**db_owner**， **db_securityadmin**，而**db_ddladmin**固定的資料庫角色可以檢視所有擴充預存程序的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_helpextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
- [sp_addextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c2f29259028ad15605f3f71e1eba87f353e795b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512510"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>動作 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[動作]** 索引標籤來檢視和編輯動作，包含選取之 Cube 的鑽研動作和報表動作。  
@@ -44,7 +44,7 @@ ms.locfileid: "48067571"
   
 ## <a name="see-also"></a>另請參閱  
  [動作&#40;Analysis Services-多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [MDX 指令碼基礎觀念&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [工具列&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [動作組合管理&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算工具&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   

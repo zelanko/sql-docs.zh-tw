@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770634"
 ---
 # <a name="aggregate-transformation"></a>彙總轉換
   「彙總」轉換會將彙總函式 (例如 Average) 套用至資料行值，並將結果複製到轉換輸出。 除了彙總函式外，該轉換還提供 GROUP BY 子句，讓您用來指定要彙總的群組。  
@@ -100,7 +100,7 @@ ms.locfileid: "58384862"
   
  「彙總」轉換是非同步的，這表示它不會以逐列的方式取用和發行資料， 而是會取用整個資料列集、執行其群組和彙總，然後發行結果。  
   
- 這個轉換不會通過任何資料行，但是會在資料流程中為其所發行的資料建立新的資料行。 只有套用彙總函式的輸入資料行，或是轉換用於群組的輸入資料行，才會複製到轉換輸出。 比方說，「 彙總 」 轉換輸入可能有三個資料行：**CountryRegion**，**城市**，以及**母體擴展**。 轉換會依 **CountryRegion** 資料行來分組，並將 Sum 函數套用至 **Population** 資料行。 因此，輸出不會包含 **City** 資料行。  
+ 這個轉換不會通過任何資料行，但是會在資料流程中為其所發行的資料建立新的資料行。 只有套用彙總函式的輸入資料行，或是轉換用於群組的輸入資料行，才會複製到轉換輸出。 例如，「彙總」轉換輸入可能有三個資料行：**CountryRegion**、**City** 和 **Population**。 轉換會依 **CountryRegion** 資料行來分組，並將 Sum 函數套用至 **Population** 資料行。 因此，輸出不會包含 **City** 資料行。  
   
  您也可以將多個輸出加入「彙總」轉換，並將每個彙總導向不同的輸出。 例如，如果「彙總」轉換套用 Sum 和 Average 函數，則每個彙總可以導向至不同的輸出。  
   

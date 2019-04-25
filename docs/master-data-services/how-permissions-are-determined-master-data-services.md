@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a940035172195b86499262bef52ca319ebefd137
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516801"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何決定權限 (Master Data Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "52747440"
   
  ![mds_conc_security_no_overlap](../master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>步驟 1：決定有效屬性權限。  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>步驟 1:決定有效屬性權限。  
  下列清單描述的是如何決定有效屬性權限：  
   
 -   指派給模型物件的權限會決定使用者可存取的屬性。  
@@ -54,7 +54,7 @@ ms.locfileid: "52747440"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>步驟 2：如果已指派階層成員權限，就會決定有效成員權限。  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>步驟 2:如果已指派階層成員權限，就會決定有效成員權限。  
  下列清單描述的是如何決定有效階層成員權限：  
   
 -   指派給階層節點的權限會決定使用者可存取的成員。  

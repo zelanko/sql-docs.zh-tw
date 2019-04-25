@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727076"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 針對所有這些情況下，也更`Attach`並`Detach`命令可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來讓資料庫離線，並使它的 dba 輕鬆重新上線。  
@@ -47,7 +47,7 @@ ms.locfileid: "50144913"
   
 |卸離讀取/寫入資料庫|卸離唯讀資料庫|  
 |--------------------------------------|-------------------------------------|  
-|1) 伺服器發出在資料庫上執行 CommitExclusive 鎖定的要求<br />2) 伺服器等候直到所有進行中的交易都已認可或回復為止<br />3) 伺服器建立卸離資料庫所需的所有中繼資料<br />4) 資料庫標示為已刪除<br />5) 伺服器認可交易|1) 資料庫標示為已刪除<br />2) 伺服器認可交易<br /><br /> <br /><br /> 注意：您無法針對唯讀資料庫變更卸離密碼。 如果您針對已經包含密碼的卸離資料庫提供密碼參數，就會引發錯誤。|  
+|1) 伺服器發出在資料庫上執行 CommitExclusive 鎖定的要求<br />2) 伺服器等候直到所有進行中的交易都已認可或回復為止<br />3) 伺服器建立卸離資料庫所需的所有中繼資料<br />4) 資料庫標示為已刪除<br />5) 伺服器認可交易|1) 資料庫標示為已刪除<br />2) 伺服器認可交易<br /><br /> <br /><br /> 注意:無法針對唯讀資料庫變更卸離密碼。 如果您針對已經包含密碼的卸離資料庫提供密碼參數，就會引發錯誤。|  
   
  `Attach` 和 `Detach` 命令必須當做單一作業執行。 它們無法在同一個交易中與其他作業結合。 此外，`Attach`和`Detach`命令是不可部分完成的交易式命令。 這表示此作業不是成功，就是失敗。 沒有任何資料庫會處於未完成的狀態。  
   

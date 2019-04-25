@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1ed0aa7fad822748bfab2426ef22071a72ba1774
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637125"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52823247"
   
 ## <a name="business-rule-conditions"></a>商務規則條件  
   
-|條件名稱|Description|  
+|條件名稱|描述|  
 |--------------------|-----------------|  
 |**等於**|選取的屬性 **等於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  
 |**不等於**|選取的屬性 **不等於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此條件適用於文字、數字、日期及連結值。|  

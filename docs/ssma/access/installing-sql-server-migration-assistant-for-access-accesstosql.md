@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740937"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取使用精靈來安裝 Windows Installer 為基礎。 本主題提供有關安裝必要條件的資訊 SSMA，最新版本的連結和安裝、 授權、 解除安裝和升級 SSMA 的指示。  

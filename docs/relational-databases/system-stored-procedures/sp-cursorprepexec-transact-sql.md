@@ -1,5 +1,5 @@
 ---
-title: sp_cursorprepexec (TRANSACT-SQL) |Microsoft Docs
+title: sp_cursorprepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507342"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
  如同*scrollpt*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以指派不同的值與要求。  
   
- *資料列計數*  
+ *rowcount*  
  這是選擇性參數，表示要搭配 AUTO_FETCH 使用的提取緩衝區資料列數目。 預設為 20 個資料列。 *資料列計數*時指派輸入值與傳回值為不同的行為。  
   
 |當做輸入值|當做傳回值|  
@@ -118,10 +118,10 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  如果*params*傳回 NULL 值，則陳述式未參數化。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursoropen &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorexecute &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursorprepare &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
- [sp_cursorfetch &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

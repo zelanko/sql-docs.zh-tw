@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6b8deec4f9049d7d677ff809e900e4d5f9d4fa61
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768294"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>一般檔案目的地編輯器 (連接管理員頁面)
   使用 [一般檔案目的地編輯器] 對話方塊的 [連線管理員] 頁面，來選取目的地的一般檔案連接，以及指定是否要覆寫或附加至現有的目的地檔案。 一般檔案目的地會將資料寫入文字檔。 此文字檔的格式可以是分隔、固定寬度、固定寬度且具有資料列分隔符號或不齊右格式。  

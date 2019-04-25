@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633398"
 ---
 # <a name="supported-odbc-api-functions"></a>支援的 ODBC API 函式
 調節的目的是通知應用程式所提供功能給它的驅動程式。 Microsoft ODBC 桌面資料庫驅動程式支援所有的核心和層級 1 的函式。  
@@ -58,7 +58,7 @@ ms.locfileid: "47715206"
   
 -   [SQLGetData (桌面資料庫驅動程式)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
--   [SQLGetStmtOption （桌面資料庫驅動程式）](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
+-   [SQLGetStmtOption(Desktop Database Drivers)](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
 -   [SQLMoreResults (桌面資料庫驅動程式)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   

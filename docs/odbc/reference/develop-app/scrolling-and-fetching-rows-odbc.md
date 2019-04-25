@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445976"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>捲動與擷取資料列 (ODBC)
 應用程式時使用可捲動資料指標，呼叫**SQLFetchScroll**來定位資料指標與提取資料列。 **SQLFetchScroll**支援相對捲動 (下一步，之前，而相對*n*資料列)，絕對的捲動 (first、 last、 和資料列*n*)，和依書籤的位置。 *Sqlfetchscroll*並*FetchOffset*中的引數**SQLFetchScroll**指定擷取，資料列集下, 圖所示。  
@@ -41,4 +41,4 @@ ms.locfileid: "47642746"
  在擷取資料列集之後，應用程式可以呼叫**SQLSetPos**放置在資料列集中的資料列集或重新整理資料列中的特定資料列。 如需有關使用**SQLSetPos**，請參閱[更新的資料，使用 SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)。  
   
 > [!NOTE]  
->  支援 ODBC 2 中的捲動。*x*驅動程式，請**SQLExtendedFetch**。 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)附錄 g： 驅動程式指導方針，為了與舊版相容。
+>  支援 ODBC 2 中的捲動。*x*驅動程式，請**SQLExtendedFetch**。 如需詳細資訊，請參閱 <<c0> [ 區塊資料指標、 可捲動的資料指標和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)在 < 附錄 g:為了與舊版相容的驅動程式指導方針。

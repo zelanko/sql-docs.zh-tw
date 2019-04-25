@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757636"
 ---
 # <a name="tabular-model-programming"></a>表格式模型程式設計
   表格式模型使用關聯式建構，將分析和報表應用程式所使用的 Analysis Services 資料模型化。 這些模型在設定為表格式模式的 Analysis Service 執行個體上執行，對儲存體使用記憶體中分析引擎，以及在要求資料時執行彙總和計算資料的快速資料表掃描。  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639969"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>監視載入平行處理資料倉儲
 監視作用中和最近[dwloader](dwloader.md)使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 載入[系統檢視表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 

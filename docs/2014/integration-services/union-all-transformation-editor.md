@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: def728a5b32970553d8bf639f58d4cfba96fc31e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766081"
 ---
 # <a name="union-all-transformation-editor"></a>聯集全部轉換編輯器
   使用 **[聯集全部轉換編輯器]** 對話方塊，即可將數個輸入資料列集合併至單一輸出資料列集。 藉由在資料流程中包含聯集全部轉換，您可以合併多個資料流程中的資料、藉由巢狀聯集全部轉換來建立複雜資料集、以及更正資料中的錯誤之後重新合併資料列。  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740899"
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
   在初始結構描述產生之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來變更 Cube 和維度定義，然後重新執行 [結構描述產生精靈]。 此精靈會更新主題領域資料庫和相關資料來源檢視中的結構描述，以便能夠反映變更，同時盡量保留目前存在於要重新產生之資料表中的資料。 如果您在初始產生之後變更了資料表，結構描述產生精靈會使用下列規則，盡量保留那些變更：  
@@ -85,7 +85,7 @@ ms.locfileid: "48049288"
  相反地，如果您將資料來源連接字串，變更為與前一次產生不同的資料庫，則不會產生錯誤。 這時會使用新資料庫，且先前的資料庫不會產生任何變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理資料來源檢視和資料來源的變更](manage-changes-to-data-source-views-and-data-sources.md)   
+ [管理對資料來源檢視及資料來源所做的變更](manage-changes-to-data-source-views-and-data-sources.md)   
  [結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

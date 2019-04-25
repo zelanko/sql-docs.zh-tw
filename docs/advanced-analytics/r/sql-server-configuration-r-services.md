@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641953"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>搭配 R 的 SQL Server 組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

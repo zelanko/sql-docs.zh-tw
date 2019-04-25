@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465954"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 函數
 **合規性**  

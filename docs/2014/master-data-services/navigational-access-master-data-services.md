@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74e29a2e266dd525893e5b2fe54ba82414e046c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763848"
 ---
 # <a name="navigational-access-master-data-services"></a>導覽存取權 (Master Data Services)
   導覽存取權會套用至模型物件安全性 (在 **[模型]** 索引標籤上指派)。  

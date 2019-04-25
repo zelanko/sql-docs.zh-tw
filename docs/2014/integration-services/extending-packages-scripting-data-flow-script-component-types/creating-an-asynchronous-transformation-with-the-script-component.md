@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1940405c6bde86364024e10694f9aaf1da24b06d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768614"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用指令碼元件建立非同步轉換
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用轉換元件，以修改及分析從來源傳遞到目的地的資料。 具有同步輸出的轉換會處理通過該元件的每個輸入資料列。 具有非同步輸出的轉換可能會等候完成其處理作業，直到轉換作業收到所有輸入資料列為止，或者轉換作業可能會在收到所有輸入資料列以前先輸出某些資料列。 本主題將討論非同步轉換。 如果您的處理需要同步轉換，請參閱[使用指令碼元件建立同步轉換](../data-flow/transformations/script-component.md)。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../understanding-synchronous-and-asynchronous-transformations.md)。  

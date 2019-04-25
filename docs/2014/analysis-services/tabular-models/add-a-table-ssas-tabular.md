@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757652"
 ---
 # <a name="add-a-table-ssas-tabular"></a>加入資料表 (SSAS 表格式)
   本主題描述如何從您先前將資料匯入模型的資料來源加入資料表。 若要從相同的資料來源加入資料表，您可以使用現有的資料來源連接。 從單一資料來源匯入任何數目的資料表時，建議您一律使用單一連接。  
@@ -40,7 +40,7 @@ ms.locfileid: "48146508"
 >  同時從單一資料來源匯入多個資料表時，系統將自動在模型中建立這些位於來源之資料表之間的任何關聯性。 不過，之後加入資料表時，您可能必須在模型中手動建立新加入資料表與先前匯入資料表之間的關聯性。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入資料&#40;SSAS 表格式&#41;](../import-data-ssas-tabular.md)   
- [刪除資料表&#40;SSAS 表格式&#41;](delete-a-table-ssas-tabular.md)  
+ [匯入資料 (SSAS 表格式)](../import-data-ssas-tabular.md)   
+ [刪除資料表 (SSAS 表格式)](delete-a-table-ssas-tabular.md)  
   
   

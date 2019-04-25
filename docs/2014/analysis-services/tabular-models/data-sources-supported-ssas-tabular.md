@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757425"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   此主題描述可以搭配表格式模型使用之資料來源的類型。  
@@ -34,7 +34,7 @@ ms.locfileid: "53371310"
   
 |||||  
 |-|-|-|-|  
-|原始程式檔|版本|檔案類型|提供者<sup>1</sup>|  
+|Source|版本|檔案類型|提供者<sup>1</sup>|  
 |Access 資料庫|Microsoft Access 2003、 2007、 2010 年。|.accdb 或 .mdb|ACE 14 OLE DB 提供者|  
 |SQL Server 關聯式資料庫|Microsoft SQL server 2005、 2008、 2008 R2SQL Server 2012，Microsoft SQL Azure 資料庫<sup>2</sup>|(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 10.0 Client OLE DB 提供者<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(不適用)|OLE DB Provider for SQL Server PDW|  

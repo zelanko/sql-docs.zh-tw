@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743284"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>第 9 課： 從 Windows Azure 儲存體還原資料庫
   在這一課，您將學習如何從 Windows Azure 儲存體將資料庫備份檔案還原到位於內部部署或 Windows Azure 中虛擬機器上的資料庫。 進行這一課並不需要完成第 4、5、6、7 和 8 課。  

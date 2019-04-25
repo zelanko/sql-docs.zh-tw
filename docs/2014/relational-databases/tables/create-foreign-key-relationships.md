@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761619"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。  
@@ -101,7 +101,7 @@ ms.locfileid: "52794770"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立資料表並在 `TempID` 資料行上定義外部索引鍵條件約束，而此資料行會參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。 ON DELETE CASCADE 和 ON UPDATE CASCADE 子句用來確定對 `Sales.SalesReason` 資料表所做的變更會自動傳播至 `Sales.TempSalesReason` 資料表。  
   
     ```  
     USE AdventureWorks2012;  
@@ -122,7 +122,7 @@ ms.locfileid: "52794770"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會在 `TempID` 資料行上建立外部索引鍵，並參考 `SalesReasonID` 資料表中的 `Sales.SalesReason` 資料行。  
   
     ```  
     USE AdventureWorks2012;  

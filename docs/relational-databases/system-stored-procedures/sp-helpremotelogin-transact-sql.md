@@ -1,5 +1,5 @@
 ---
-title: sp_helpremotelogin (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636158"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,10 +85,10 @@ EXEC sp_helpremotelogin;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addremotelogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

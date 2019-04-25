@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b1649b95e751a3ea3a93285f480b0ec9b2b04075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765907"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>指派功能區域權限 (Master Data Services)
   指派功能區域權限，授予使用者或群組 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]功能區域的存取權。  

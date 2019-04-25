@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472987"
 ---
 # <a name="automatically-delete-a-job"></a>自動刪除作業
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 在作業成功、失敗或完成時自動予以刪除。  

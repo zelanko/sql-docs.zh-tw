@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 06342291cc73951043c14c6f29539eaf9f1be689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745509"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 中斷點
   中斷點指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具要在特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行，然後您就可以在該點檢視程式碼元素的狀態。  

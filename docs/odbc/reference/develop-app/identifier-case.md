@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447820"
 ---
 # <a name="identifier-case"></a>識別碼大小寫
 在 SQL 陳述式和類別目錄函式引數，識別項和引號識別項可以是區分大小寫或不是，應用程式可以呼叫來判斷**SQLGetInfo** SQL_QUOTED_ SQL_IDENTIFIER_CASE 與IDENTIFIER_CASE 選項。  

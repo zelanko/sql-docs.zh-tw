@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 808c63575b93f9e4fa3b6459d2111637021218c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472717"
 ---
 # <a name="command-object-overview"></a>Command 物件概觀
 具有**命令**物件時，您可以執行下列動作：  

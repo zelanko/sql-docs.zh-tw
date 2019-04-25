@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631841"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)
   在資料驅動訂閱中，動態訂閱資料是由從外部資料來源擷取資料的查詢或命令所提供。 訂閱資料可以從任何支援的資料來源 (符合資料驅動訂閱處理的需求) 中擷取。 查詢或命令語法必須對安裝在您報表伺服器上的資料處理延伸模組有效。  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639873"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>平行資料倉儲元件-Analytics Platform System
 這篇文章說明裝置軟體和 Analytics Platform System 的非應用裝置的軟體元件。  

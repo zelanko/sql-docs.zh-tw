@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769124"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
   運算式語言包含一組可在運算式中使用的函數。 運算式可使用單一函數，但通常運算式會結合函數與運算子，並使用多個函數。  

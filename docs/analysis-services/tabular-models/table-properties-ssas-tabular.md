@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5104eacafe60ab3fd1ea1ff29cc64b8453e4ff7
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471965"
 ---
 # <a name="table-properties"></a>資料表屬性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

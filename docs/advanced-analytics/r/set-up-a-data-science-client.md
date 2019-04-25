@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641889"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>設定 SQL Server 上的 R 開發工具的資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51c616882d3655e1c7b16411c6de8d5bb2fcf94c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511941"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、 CommitTrans 和 RollbackTrans 方法範例 (VB)
 這個範例會變更活頁簿的類型中的所有的心理書籍***標題***資料庫資料表。 之後[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會啟動交易，隔離所做的所有變更***標題***資料表[CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法會將儲存所做的變更。 您可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法，以使用儲存的變更復原[更新](../../../ado/reference/ado-api/update-method.md)方法。  

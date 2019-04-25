@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472409"
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,10 +91,10 @@ ms.locfileid: "40393165"
 2.  最後一個步驟是將作業修改成依照您所義的排程執行，並新增管理作業所需的警示或通知。 您也可能想要精簡處理指令碼，或在作業中建立多個步驟來單獨處理物件。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 元件](../../ssms/agent/sql-server-agent.md)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md)   
  [使用 SQL Server Agent 排程 SSAS 管理工作](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批次方式處理&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [批次處理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [處理物件&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [處理物件 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

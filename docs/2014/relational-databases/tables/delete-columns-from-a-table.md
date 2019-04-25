@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 718aeca12c90435b68fd6cedde150dfbdeb3c063
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761659"
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除資料表資料行。  
@@ -82,7 +82,7 @@ ms.locfileid: "52811220"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     USE AdventureWorks2012;  

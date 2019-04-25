@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766101"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>在子封裝中使用變數和參數的值
   此程序描述如何建立使用父變數組態類型的封裝組態。 此組態類型可讓從父封裝執行的子封裝存取父變數。  

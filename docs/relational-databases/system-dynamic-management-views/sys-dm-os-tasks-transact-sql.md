@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627909"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47785336"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|物件的記憶體位址。|  
-|**task_state**|**nvarchar(60)**|工作的狀態。 這可以是下列項目之一：<br /><br /> PENDING；等待工作者執行緒。<br /><br /> RUNNABLE：可執行的，但等待接收配量。<br /><br /> RUNNING：目前在排程器上執行。<br /><br /> SUSPENDED：有工作者，但等待事件。<br /><br /> DONE：已完成。<br /><br /> SPINLOOP：卡在微調鎖定中。|  
+|**task_state**|**nvarchar(60)**|工作的狀態。 這可以是下列項目之一：<br /><br /> 擱置中：等待工作者執行緒。<br /><br /> 可執行：可執行的但在等待接收配量。<br /><br /> 執行：目前在排程器上執行。<br /><br /> 停用：有工作者，但等待事件。<br /><br /> 完成：已完成。<br /><br /> SPINLOOP:卡在微調鎖定。|  
 |**context_switches_count**|**int**|這項工作已完成的排程器內容切換數目。|  
 |**pending_io_count**|**int**|這項工作執行的實體 I/O 數目。|  
 |**pending_io_byte_count**|**bigint**|這項工作執行之 I/O 的總位元組計數。|  

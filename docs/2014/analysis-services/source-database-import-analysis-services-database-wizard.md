@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d753fa58ce7b710ae406d4fc23a5745edafcec4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746572"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>來源資料庫 (匯入 Analysis Services 資料庫精靈)
   使用 **[來源資料庫]** 頁面，即可選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和要建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的資料庫。  

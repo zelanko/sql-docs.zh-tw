@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768454"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>連接到指令碼元件中的資料來源
   連接管理員只是一種便利的單位，用以封裝和儲存連接至特定類型的資料來源所需的資訊。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](../../connection-manager/integration-services-ssis-connections.md)。  

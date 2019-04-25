@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510808"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>建立及管理 SharePoint 模式報表伺服器的訂閱
   您可以建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱，傳遞以 SharePoint 模式報表伺服器整合的 SharePoint Web 應用程式報表。 訂閱可以將報表傳遞至文件庫、檔案資料夾，或以電子郵件傳送。 本主題摘要說明建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱的需求與步驟。  

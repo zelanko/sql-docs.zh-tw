@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767030"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以從失敗點重新啟動失敗的封裝，而無需重新執行整個封裝。 如果封裝設定為使用檢查點，則封裝執行的相關資訊會寫入檢查點檔案。 當失敗的封裝重新執行時，檢查點檔案會用於從失敗點重新啟動封裝。 如果封裝順利執行，則會刪除檢查點檔案，然後在下次封裝執行時重新建立檢查點檔案。  

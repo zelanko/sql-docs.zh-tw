@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770661"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
   若要加入及設定「衍生的資料行」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  

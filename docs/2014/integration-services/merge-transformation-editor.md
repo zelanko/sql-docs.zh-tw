@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c8de19a7497a1caa8322f25632e22b875e4cbad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767220"
 ---
 # <a name="merge-transformation-editor"></a>合併轉換編輯器
   使用 [合併轉換編輯器]，即可指定來自兩個已排序資料集的資料行，以進行合併。  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aaf49a9894e5b2f3f35687b8575c35b5f19ebe81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767175"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>ODBC 來源編輯器 (連接管理員頁面)
   使用 **[ODBC 來源編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可選取來源的 ODBC 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -46,7 +46,7 @@ ms.locfileid: "58378586"
 |選項|描述|  
 |------------|-----------------|  
 |資料表名稱|從 ODBC 資料來源中的資料表或檢視表擷取資料。 當您選取此選項時，請從清單中選取下列項目的值：|  
-||**資料表或檢視表的名稱**:從清單中選取可用的資料表或檢視，或是輸入可識別資料表的規則運算式。|  
+||**資料表或檢視表的名稱**：從清單中選取可用的資料表或檢視表，或是輸入可識別資料表的規則運算式。|  
 ||此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。|  
 |SQL (命令)|使用 SQL 查詢從 ODBC 資料來源中擷取資料。 您應該以目前所使用之來源資料庫的語法撰寫查詢。 當您選取此選項時，請用下列其中一種方式輸入查詢：|  
 ||在 **[SQL 命令文字]** 欄位中輸入 SQL 查詢的文字。|  

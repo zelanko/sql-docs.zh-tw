@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761779"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 函式
 **合規性**  
@@ -51,7 +51,7 @@ SQLRETURN SQLAllocHandle(
  *HandleType*  
  [輸入]所配置的控制代碼的型別**SQLAllocHandle**。 必須是下列值之一：  
   
--   利用 SQL_HANDLE_DBC  
+-   SQL_HANDLE_DBC  
   
 -   SQL_HANDLE_DBC_INFO_TOKEN  
   
@@ -59,7 +59,7 @@ SQLRETURN SQLAllocHandle(
   
 -   SQL_HANDLE_ENV  
   
--   利用 SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT  
   
  只在驅動程式管理員和驅動程式會使用 SQL_HANDLE_DBC_INFO_TOKEN 控制代碼。 應用程式不應使用此控制代碼型別。 如需 SQL_HANDLE_DBC_INFO_TOKEN 的詳細資訊，請參閱[ODBC 驅動程式中開發連接集區覺察](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)。  
   

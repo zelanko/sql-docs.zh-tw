@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32c17834b6250a8f0f560570565d7f5d17b9c2a4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646294"
 ---
 # <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonTimeout 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定嘗試登入報表伺服器資料庫失敗之前等候的秒數。 值為 **0** 表示無限的等候時間。 唯讀。  

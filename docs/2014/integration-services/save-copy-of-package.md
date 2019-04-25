@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e28fec1fb562c5ba6ed28ad615f40ada5fc2db9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766790"
 ---
 # <a name="save-copy-of-package"></a>儲存封裝的副本
   使用 **[儲存封裝的副本]** 對話方塊 (可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中使用)，即可將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的副本從 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 儲存到另一個位置，然後選擇性的修改封裝的保護等級。  

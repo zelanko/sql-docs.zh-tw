@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80eb3fe73754a53d5a947c565ae945029d1cdff6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625942"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>使用 ODBC 資料表值參數
   本主題將討論搭配 ODBC 使用資料表值參數的主要使用者案例：  

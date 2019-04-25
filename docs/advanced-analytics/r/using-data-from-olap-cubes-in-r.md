@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e55093c83e9a306a06235d6bb613dac78d4677ce
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642311"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>在 R 中使用 OLAP cube 的資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

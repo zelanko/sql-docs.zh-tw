@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765194"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 應用程式需求 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是由 Internet Information Services (IIS) 裝載的 Web 應用程式。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 僅適用於 Internet Explorer (IE) 7 或更新版本。 不支援 IE 7 及更新版本、Microsoft Edge 和 Chrome。  
@@ -57,7 +57,7 @@ ms.locfileid: "53361284"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [附註：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
+|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理主控台<br /><br /> World Wide Web 服務<br /><br /> 應用程式開發<br /><br /> .NET 擴充性 3.5<br /><br /> .NET 擴充性 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 擴充功能<br /><br /> ISAPI 篩選器<br /><br /> 一般 HTTP 功能<br /><br /> 預設文件<br /><br /> 瀏覽目錄<br /><br /> HTTP 錯誤<br /><br /> 靜態內容<br /><br /> [注意：請勿安裝 WebDAV 發行]<br /><br /> 健康情況及診斷<br /><br /> HTTP 記錄<br /><br /> 要求監視器<br /><br /> 效能<br /><br /> 靜態內容壓縮<br /><br /> 安全性<br /><br /> 要求篩選<br /><br /> Windows 驗證|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>功能 (Windows Server 2008 或 Windows Server 2008 R2、Windows 7 作業系統)  
  在 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 或 Windows Server 2008 R2 上，您可以使用 **[伺服器管理員]** 來安裝下列必要的功能。  
@@ -77,7 +77,7 @@ ms.locfileid: "53361284"
   
 ||  
 |-|  
-|.NET Framework 3.5 (包括 .NET 2.0 和 3.0)<br /><br /> .NET Framework 4.5 進階服務<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 啟用 [注意：這是必要的。]<br /><br /> TCP 連接埠共用<br /><br /> Windows 處理序啟用服務<br /><br /> 處理序模型<br /><br /> .NET 環境<br /><br /> 設定 API|  
+|.NET Framework 3.5 (包括 .NET 2.0 和 3.0)<br /><br /> .NET Framework 4.5 進階服務<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 啟用 [注意：這是必要。]<br /><br /> TCP 連接埠共用<br /><br /> Windows 處理序啟用服務<br /><br /> 處理序模型<br /><br /> .NET 環境<br /><br /> 設定 API|  
   
 ### <a name="accounts-and-permissions"></a>帳戶和權限  
   

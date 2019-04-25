@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740594"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
   若要安裝或升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在容錯移轉叢集的每個節點上執行安裝程式。 若要將節點加入至現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在要加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 請勿在使用中節點上執行安裝程式來管理其他節點。  
@@ -234,7 +234,7 @@ ms.locfileid: "53359380"
   
 ##  <a name="prepare"></a> 準備  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>進階/企業型容錯移轉叢集安裝步驟 1：準備  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>進階/企業型容錯移轉叢集安裝步驟 1:準備  
   
 1.  插入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝媒體，然後在根資料夾中，按兩下 Setup.exe。 若要從網路共用區進行安裝，請瀏覽到共用區上的根資料夾，然後按兩下 Setup.exe。 如需有關如何安裝必要元件的詳細資訊，請參閱＜ [Before Installing Failover Clustering](before-installing-failover-clustering.md)＞。 如果您之前未安裝必要元件，系統可能會要求您安裝。  
   
@@ -328,7 +328,7 @@ ms.locfileid: "53359380"
   
 ## <a name="complete"></a>[完成]  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>進階/企業型容錯移轉叢集安裝步驟 2：[完成]  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>進階/企業型容錯移轉叢集安裝步驟 2:[完成]  
   
 1.  在依照 [準備步驟](#prepare)中所述的內容來準備所有節點之後，請在其中一個備妥的節點上執行安裝程式，最好是在擁有共用磁碟的節點上執行。 在  安裝中心的 [進階] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 頁面上，按一下 **[進階叢集完成]**。  
   

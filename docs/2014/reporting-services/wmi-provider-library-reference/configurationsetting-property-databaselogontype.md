@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfe28e2cf9c47f3eebaddbcaa013ad492d715748
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648980"
 ---
 # <a name="databaselogontype-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonType 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定報表伺服器會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服務帳戶、Windows 使用者帳戶或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入來存取報表伺服器資料庫。 唯讀。  

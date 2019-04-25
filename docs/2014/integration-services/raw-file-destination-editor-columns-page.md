@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9bd9b370dbe030a745eb36c475f806316a5ef270
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766970"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>原始檔案目的地編輯器 (資料行頁面)
   使用原始檔案目的地編輯器設定原始檔案目的地將，以便將原始資料寫入至檔案。  
