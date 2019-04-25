@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ea069983515564225d0cf6b74e3660f6ef0829e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768939"
 ---
 # <a name="developing-a-custom-source-component"></a>開發自訂來源元件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供開發人員撰寫來源元件的能力，這些元件可以連線至自訂資料來源，並將那些來源的資料提供給資料流程工作中的其他元件。 當您必須連接至無法使用其中一個現有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源存取的資料來源時，能夠建立自訂來源的能力是很重要的。  

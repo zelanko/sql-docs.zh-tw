@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445950"
 ---
 # <a name="setting-parameter-values"></a>設定參數值
 若要設定參數的值，應用程式只會設定變數繫結至參數的值。 它並不重要設定此值時，只要執行陳述式之前，它會設定。 應用程式可以設定的值之前或之後繫結變數，而且可以變更它想要的次數的值。 當執行陳述式時，驅動程式就只會擷取變數的目前值。 備妥的陳述式執行一次以上; 時，這會特別有用應用程式設定新值的部分或所有變數的每次執行陳述式時。 這個範例，請參閱[已備妥執行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)稍早的這一節。  
@@ -27,21 +27,21 @@ ms.locfileid: "47729156"
   
 -   繫結變數中的資料位元組長度。 驅動程式的變數是字元或二進位時，才會檢查這個長度 (*ValueType*為 SQL_C_CHAR 或 SQL_C_BINARY)。  
   
--   SQL_NTS。 資料是以 null 結束的字串。  
+-   SQL_NTS. 資料是以 null 結束的字串。  
   
--   SQL_NULL_DATA。 資料值是 NULL，以及驅動程式會忽略的繫結的變數值。  
+-   SQL_NULL_DATA. 資料值是 NULL，以及驅動程式會忽略的繫結的變數值。  
   
 -   SQL_DATA_AT_EXEC 或 SQL_LEN_DATA_AT_EXEC 巨集的結果。 參數的值是與傳送**SQLPutData**。 如需詳細資訊，請參閱 <<c0> [ 傳送長資料](../../../odbc/reference/develop-app/sending-long-data.md)稍後這一節。  
   
  下表顯示繫結的變數和應用程式會設定各種不同的參數值之長度/指標緩衝區的值。  
   
-|參數<br /><br /> value|參數<br /><br /> (SQL)<br /><br /> 資料類型|Variable (C)<br /><br /> 資料類型|中的值<br /><br /> 繫結<br /><br /> 變數|中的值<br /><br /> 長度/指標<br /><br /> 緩衝區 [d]|  
+|參數<br /><br /> value|參數<br /><br /> (SQL)<br /><br /> 資料類型|Variable (C)<br /><br /> 資料類型|中的值<br /><br /> 繫結<br /><br /> 變數|中的值<br /><br /> 長度/指標<br /><br /> buffer[d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
-|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS 或 3|  
+|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS 或 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
-|10|SQL_INTEGER|SQL_C_CHAR|[a] 10\0|SQL_NTS 或 2|  
-|下午 1 點|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
-|下午 1 點|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a]、 [c]|SQL_NTS 或 14|  
+|10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS 或 2|  
+|1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
+|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS 或 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a]"\0 」 表示 null 結束字元。 長度/指標緩衝區中的值是 sql_nts; 時，才需要 null 結束字元。  

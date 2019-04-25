@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3731fbb15abe51d010ed2d20a705f5a13c2878d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643226"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>指派彙總設計對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [指派彙總設計] 對話方塊，即可將彙總設計指派給一個或多個目的地資料分割。 您可以在**物件總管**中以滑鼠右鍵按一下資料分割或彙總設計，然後選取 [指派彙總設計]，藉以顯示 [指派彙總設計] 對話方塊。  
@@ -28,7 +28,7 @@ ms.locfileid: "48160527"
 |詞彙|定義|  
 |----------|----------------|  
 |**彙總設計**|選取要指派給一個或多個目的地資料分割的彙總設計。|  
-|**目的地資料分割**|選取要指派彙總設計的目的地資料分割。 下列方格用來指定目的地資料分割：<br /><br /> \<核取方塊 >： 選取或清除資料行標頭，以包含或排除所有列出的資料分割作為目的地資料分割中的核取方塊。 選取或清除資料分割旁的核取方塊，即可包含或排除該資料分割當做目的地資料分割。<br /><br /> **資料分割**： 顯示分割區的名稱。<br /><br /> **來源**： 顯示來源資料表或資料分割的查詢。<br /><br /> **彙總設計**： 顯示現有的彙總設計資料分割的名稱。|  
+|**目的地資料分割**|選取要指派彙總設計的目的地資料分割。 下列方格用來指定目的地資料分割：<br /><br /> \<核取方塊 >:選取或清除資料行標頭，以包含或排除所有列出的資料分割作為目的地資料分割中的核取方塊。 選取或清除資料分割旁的核取方塊，即可包含或排除該資料分割當做目的地資料分割。<br /><br /> **資料分割**：顯示分割區的名稱。<br /><br /> **來源**：顯示資料分割的來源資料表或查詢。<br /><br /> **彙總設計**：顯示資料分割之現有彙總設計的名稱。|  
 |**隱藏具有彙總設計的資料分割**|選取此選項，即可單獨顯示沒有被指派彙總設計的資料分割。|  
   
 ## <a name="see-also"></a>另請參閱  

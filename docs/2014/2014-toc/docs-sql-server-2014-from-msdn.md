@@ -10,11 +10,11 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473636"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>SQL Server 2014 的文件即將移往 Docs
 

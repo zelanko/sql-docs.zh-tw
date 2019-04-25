@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639525"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System 中的平行資料倉儲防火牆組態
 **防火牆**頁面的 SQL Server PDW 組態管理員可讓您啟用或停用防火牆規則來允許或防止 Analytics Platform System appliance 的特定通訊埠存取。  
@@ -34,7 +34,7 @@ ms.locfileid: "37909838"
 ## <a name="external-ports"></a>外部連接埠  
 下列的連接埠已開啟用於來自 PDW 之外的用戶端連線。  
   
-|目的|連接埠的 #|節點|  
+|用途|連接埠的 #|節點|  
 |-----------|-----------|---------|  
 |SQL 用戶端存取 PDW (TDS)|17001|CTL|  
 |載入器用戶端存取 （dwloader 和 SSIS）|8001|CTL|  
@@ -43,13 +43,13 @@ ms.locfileid: "37909838"
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
 |SSL 加密連線 （適用於內部通訊，來存取系統管理員主控台）|443|所有節點|  
 |SQL Server PDW 負載控制流程 Windows 認證|8002|CTL|  
-|Kerberos （_k)|88|AD01 和 ad02 移，|  
+|_Kerberos|88|AD01 和 ad02 移，|  
 |_ldap|389|AD01 和 ad02 移|  
   
 ## <a name="internal-ports"></a>內部連接埠  
 下列連接埠 pdw 用於內部通訊，但不是會開啟來自外部 PDW 應用裝置的連線。  
   
-|目的|連接埠的 #|節點|  
+|用途|連接埠的 #|節點|  
 |-----------|-----------|---------|  
 |DMS 控制通道流量|16450|CMP 的 CTL|  
 |DMS 資料通道流量|16550|CMP 的 CTL|  

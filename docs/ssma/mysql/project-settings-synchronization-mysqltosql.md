@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473904"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>專案設定 (同步處理) (MySQLToSQL)
 同步處理**專案設定**可讓您設定 MySQL 資料庫物件如何同步處理使用 SQL Server 資料庫物件。  

@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767716"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  
@@ -71,7 +71,7 @@ ms.locfileid: "58384886"
 ## <a name="run-time-events"></a>執行階段事件  
  下表列出 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的事件處理常式，並描述引發事件處理常式執行的執行階段事件。  
   
-|事件處理常式|事件|  
+|事件處理常式|Event - 事件|  
 |-------------------|-----------|  
 |`OnError`|事件處理常式，如`OnError`事件。 當發生錯誤時，可執行檔會引發此事件。|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** 事件的事件處理常式。 當可執行檔的執行狀態變更時，它會引發此事件。|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629053"
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面資料庫驅動程式架構
 這些驅動程式專為使用在 Microsoft Windows 95 或更新版本，或 Windows NT 4.0 和 Windows 2000。 支援在 Windows 95 或更新版本; 僅限 32 位元應用程式Windows NT 4.0 和 Windows 2000 支援 16 位元和 32 位元應用程式。  

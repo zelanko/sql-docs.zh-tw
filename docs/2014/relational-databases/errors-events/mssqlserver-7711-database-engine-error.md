@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_7711 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 7711 (Database Engine error)
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec3bd035f1d8c3998189c819b9fdcf9fa98b1037
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762659"
 ---
 # <a name="mssqlserver7711"></a>MSSQLSERVER_7711
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -33,7 +34,7 @@ ms.locfileid: "48169268"
 |訊息文字|資料表或索引或是它的其中一個資料分割已指定 DATA_COMPRESSION 選項一次以上。|  
   
 ## <a name="explanation"></a>說明  
- 下列其中一個陳述式中的 DATA_COMPRESSION 選項發生錯誤：  
+下列其中一個陳述式中的 DATA_COMPRESSION 選項發生錯誤：  
   
 -   CREATE TABLE  
   
@@ -43,9 +44,8 @@ ms.locfileid: "48169268"
   
 -   ALTER INDEX  
   
- 如果分割了引用的資料表或索引，則表示其中至少一個分割區已列出 DATA_COMPRESSION 選項一次以上。 如果此資料表或索引未分割，則表示 DATA_COMPRESSION 選項已經引用一次以上。  
+如果分割了引用的資料表或索引，則表示其中至少一個分割區已列出 DATA_COMPRESSION 選項一次以上。 如果此資料表或索引未分割，則表示 DATA_COMPRESSION 選項已經引用一次以上。  
   
 ## <a name="user-action"></a>使用者動作  
- 如果是已分割的資料表或索引，請確定每一個分割區只指定 DATA_COMPRESSION 選項一次。 如果是未分割的資料表或索引，只能在陳述式中使用 DATA_COMPRESSION 選項一次。  
-  
+如果是已分割的資料表或索引，請確定每一個分割區只指定 DATA_COMPRESSION 選項一次。 如果是未分割的資料表或索引，只能在陳述式中使用 DATA_COMPRESSION 選項一次。  
   

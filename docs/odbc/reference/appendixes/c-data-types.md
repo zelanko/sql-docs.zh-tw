@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447537"
 ---
 # <a name="c-data-types"></a>C 資料類型
 ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的資料類型。  
@@ -36,19 +36,19 @@ ODBC C 資料類型表示用來將資料儲存在應用程式的 C 緩衝區的�
 |-----------------------|--------------------|------------|  
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|不帶正負號的 short int|  
-|SQL_C_SLONG [j]|SQLINTEGER|long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|不帶正負號的 long int|  
+|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT[j]|SQLUSMALLINT|不帶正負號的 short int|  
+|SQL_C_SLONG[j]|SQLINTEGER|long int|  
+|SQL_C_ULONG[j]|SQLUINTEGER|不帶正負號的 long int|  
 |SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|不帶正負號的 char|  
-|SQL_C_STINYINT [j]|SQLSCHAR|帶正負號的 char|  
-|SQL_C_UTINYINT [j]|SQLCHAR|不帶正負號的 char|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
+|SQL_C_STINYINT[j]|SQLSCHAR|帶正負號的 char|  
+|SQL_C_UTINYINT[j]|SQLCHAR|不帶正負號的 char|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|不帶正負號的 _int64 [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|書籤|不帶正負號的 long int [d]|  
+|SQL_C_BOOKMARK[i]|書籤|不帶正負號的 long int [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |所有 C 間隔資料類型|SQL_INTERVAL_STRUCT|請參閱[C 間隔結構](../../../odbc/reference/appendixes/c-interval-structure.md)區段中的，稍後在本附錄中。|  
   

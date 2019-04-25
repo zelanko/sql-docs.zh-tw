@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6fd010dbf16468343b15eb383a5308d94b255da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512622"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>在使用者定義階層的屬性之間指定屬性關聯性
   如同您在這個教學課程中已學到的，您可以將屬性階層組織成使用者階層內的層級，在 Cube 中為使用者提供導覽路徑。 使用者階層可代表自然階層，例如縣 (市)、省份和國家 (地區)，或只代表導覽路徑，例如員工姓名、職稱和部門名稱。 對於導覽階層的使用者而言，這兩種類型的使用者階層是一樣的。  

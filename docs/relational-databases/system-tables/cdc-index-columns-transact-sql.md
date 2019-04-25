@@ -1,5 +1,5 @@
 ---
-title: cdc.index_columns (TRANSACT-SQL) |Microsoft Docs
+title: cdc.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d47de7882a6eeeca72ad0da8521ab298c7ea8364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471206"
 ---
 # <a name="cdcindexcolumns-transact-sql"></a>cdc.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "47704872"
 |**column_id**|**int**|來源資料表中資料行的識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [cdc.change_tables &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [cdc.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

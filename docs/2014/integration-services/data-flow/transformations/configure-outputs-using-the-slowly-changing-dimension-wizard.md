@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770606"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用緩時變維度精靈來設定輸出
   「緩時變維度精靈」做為「緩時變維度」轉換的編輯器使用。 為緩時變維度資料建立並設定資料流程會是一個複雜的工作。 「緩時變維度精靈」可引導您執行對應資料行、選取商務索引鍵資料行、設定資料行變更屬性，以及設定對推斷之維度成員的支援等步驟，為「緩時變維度」轉換輸出提供建立資料流程的最簡單方法。  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638849"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>什麼&#39;SQL Server Native Client 的新功能
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 會安裝 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client。 沒有 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client。  

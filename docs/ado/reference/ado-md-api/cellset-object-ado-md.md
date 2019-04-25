@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57b570b93d4e8a6cf10d879659f0886e1c6f0c8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469293"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 物件 (ADO MD)
 表示多維度查詢的結果。 它是從 cube 或其他資料格集中選取的儲存格的集合。  

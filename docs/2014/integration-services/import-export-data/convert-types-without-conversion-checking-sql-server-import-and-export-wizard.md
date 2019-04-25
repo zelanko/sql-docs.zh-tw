@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768050"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>轉換類型但不檢查轉換 (SQL Server 匯入和匯出精靈)
   使用**轉換類型但不檢查轉換**頁面，即可檢閱此精靈會執行當精靈找不到一或多個對應[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]資料類型轉換和對應檔案。 這個頁面含有一些資訊，可協助您識別遺失的檔案。  

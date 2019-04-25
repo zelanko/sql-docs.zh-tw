@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d78afd9c3206a5b2b8cd04482ac891f9aae87f0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466826"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
 

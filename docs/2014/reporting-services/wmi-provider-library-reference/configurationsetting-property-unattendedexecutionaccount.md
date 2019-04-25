@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b8e3cab3ae78b43a5a37432e230c9bef6a8a383c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646126"
 ---
 # <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>UnattendedExecutionAccount 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回自動執行報表時，報表伺服器模擬的使用者帳戶。 唯讀。  

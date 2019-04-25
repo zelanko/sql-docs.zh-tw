@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83a3ee256e49b23cf7a58f5127db7dec7242555e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471216"
 ---
 # <a name="index-name-limitations"></a>索引名稱限制
 使用 Paradox 驅動程式時，主要的索引必須在其定義的資料表名稱相同。 其他唯一或非唯一索引必須在其定義的資料表名稱相同。

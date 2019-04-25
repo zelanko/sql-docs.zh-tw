@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524197"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   `MultiPolygon` 執行個體是零或多個 `Polygon` 執行個體的集合。  

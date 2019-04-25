@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768994"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
   當您升級的執行個體[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，現有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]封裝並不會自動升級成目前版本的封裝格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會使用。 您必須選取升級方法並手動升級您的封裝。  
@@ -98,7 +98,7 @@ ms.locfileid: "53351458"
   
 |元件或功能|升級結果|  
 |--------------------------|---------------------|  
-|連接字串|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> -使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件升級精靈] 來升級套件，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟套件並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意：當連接字串儲存在組態檔或資料來源檔案中，或者運算式設定 `ConnectionString` 屬性時，您無法使用先前的程序更新連接字串。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱[資料來源](../connection-manager/data-sources.md)。|  
+|連接字串|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> -使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件升級精靈] 來升級套件，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟套件並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意:您無法使用先前的程序更新連接字串，當連接字串儲存在組態檔或資料來源檔案，或當運算式設定`ConnectionString`屬性。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱[資料來源](../connection-manager/data-sources.md)。|  
 |查閱轉換|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，升級程序會自動將查閱轉換升級為目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本。 但目前版本中的此元件另有一些功能可以供您使用。<br /><br /> 如需相關資訊，請參閱 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
 |指令碼工作和指令碼元件|針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，升級程序會自動將指令碼工作和指令碼元件中的指令碼，從 VSA 移轉到 VSTA。<br /><br /> 如需您可能必須在移轉之前對指令碼進行的變更以及指令碼轉換失敗的詳細資訊，請參閱[將指令碼移轉到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。|  
   

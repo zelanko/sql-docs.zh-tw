@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467987"
 ---
 # <a name="create-a-tabular-model-project"></a>建立表格式模型專案
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685215"
 
 在這一課，您使用 Visual Studio 與 SQL Server Data Tools (SSDT) 或 Visual Studio 2017 與 Microsoft Analysis Services 專案 VSIX 1400 相容性層級建立新的表格式模型專案。 一旦建立新的專案時，就可以開始加入資料，並撰寫您的模型。 這一課也可讓您的表格式模型撰寫環境，在 Visual Studio 中的簡介。  
   
-完成本課程的估計時間：**10 分鐘**  
+估計的時間才能完成這一課：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件
 

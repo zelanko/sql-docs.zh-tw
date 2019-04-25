@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8480066485cf22c48cebbba738b2c604a50b23c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767700"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services 專案轉換精靈
   [Integration Services 專案轉換精靈] 會將專案轉換為專案部署模型。  

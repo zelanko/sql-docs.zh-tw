@@ -1,5 +1,5 @@
 ---
-title: 查詢用於建立採礦模型的參數 |Microsoft 文件
+title: 查詢用於建立採礦模型的參數 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df2eb8317f90a96b35fc886e2158000e0f57d09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469480"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查詢用於建立採礦模型的參數
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   採礦模型的構成不僅受到定型案例的影響，還會受到在建立模型時所設定參數的影響。 因此，擷取現有模型的參數設定以更加了解模型行為，可能會很有用。 擷取參數在記錄該模型的特定版本時也很有用。  
   
- 若要尋找建立模型時所用的參數，您可針對其中一個採礦模型結構描述資料列集建立查詢。 這些結構描述資料列會公開為一組系統檢視表，您可以輕鬆地使用查詢的 TRANSACT-SQL 語法。 這項程序描述如何建立查詢，以傳回用來建立指定採礦模型的參數。  
+ 若要尋找建立模型時所用的參數，您可針對其中一個採礦模型結構描述資料列集建立查詢。 這些結構描述資料列集公開為一組系統檢視，您可以輕鬆地查詢使用 TRANSACT-SQL 語法。 這項程序描述如何建立查詢，以傳回用來建立指定採礦模型的參數。  
   
 ### <a name="to-open-a-query-window-for-a-schema-rowset-query"></a>開啟結構描述資料列集查詢的查詢視窗  
   

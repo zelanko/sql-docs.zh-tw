@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766660"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色 (SSIS 服務)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含三個固定的資料庫層級角色中， `db_ssisadmin`， **db_ssisltduser**，以及**db_ssisoperator**，用於控制封裝的存取權。 只能在儲存至封裝上實作角色`msdb`資料庫中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]將角色指派給封裝。 角色指派會儲存到`msdb`資料庫。  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：新增和設定 Foreach 迴圈容器 | Microsoft Docs
+title: 步驟 2:新增和設定 Foreach 迴圈容器 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767520"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2：加入和設定 Foreach 迴圈容器
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>步驟 2:加入和設定 Foreach 迴圈容器
   在這項工作中，您將加入功能，於一般檔案的資料夾中形成迴圈，並對每個一般檔案套用在第 1 課使用的相同資料流程轉換。 您的作法是在控制流程中加入和設定 Foreach 迴圈容器。  
   
  您加入的 Foreach 迴圈容器必須能夠連接到資料夾的每個一般檔案。 由於資料夾的所有檔案都具有相同格式，所以 Foreach 迴圈容器可以使用相同的一般檔案連接管理員來連接每一個檔案。 容器要使用的一般檔案連接管理員與您在第 1 課建立的一般檔案連接管理員相同。  

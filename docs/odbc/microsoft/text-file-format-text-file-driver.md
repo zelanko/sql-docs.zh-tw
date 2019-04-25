@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633013"
 ---
 # <a name="text-file-format-text-file-driver"></a>文字檔格式 (文字檔驅動程式)
 ODBC 文字驅動程式支援這兩個分隔和固定寬度文字檔案。 文字檔案是由選擇性標頭行，零或多個文字行所組成。  
@@ -38,11 +38,11 @@ ODBC 文字驅動程式支援這兩個分隔和固定寬度文字檔案。 文�
   
  下列文法中，撰寫適用於程式設計人員，會定義 ODBC 文字驅動程式可以讀取文字檔案的格式：  
   
-|[格式]|表示法|  
+|格式|表示法|  
 |------------|--------------------|  
 |非斜體|必須輸入所顯示的字元|  
-|*斜體*|在文法中其他地方定義的引數|  
-|括號 ([])|選擇性項目|  
+|*italics*|在文法中其他地方定義的引數|  
+|brackets ([])|選擇性項目|  
 |大括號 ({})|互斥的選項清單|  
 |分隔號 (&#124;)|不同的是互斥的選項|  
 |省略符號 （...）|可以重複一次以上的項目|  

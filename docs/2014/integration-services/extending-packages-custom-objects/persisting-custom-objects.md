@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768524"
 ---
 # <a name="persisting-custom-objects"></a>保存自訂物件
   只要您建立的自訂物件其屬性只有使用簡單的資料類型，例如 `integer` 與 `string`，就不需要為這些自訂物件實作自訂持續性。 預設的持續性實作可以儲存物件的中繼資料，及其所有屬性值。  

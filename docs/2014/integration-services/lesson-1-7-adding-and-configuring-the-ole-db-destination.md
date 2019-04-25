@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767557"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>步驟 7：加入和設定 OLE DB 目的地
   現在，封裝可以從一般檔案來源中擷取資料，再將資料轉換成與目的地相容的格式。 下一項工作是要把已轉換的資料實際載入到目的地。 若要載入資料，您必須將 OLE DB 目的地加入資料流程中。 OLE DB 目的地可使用資料庫資料表、檢視或 SQL 命令，將資料載入到各種 OLE DB 相容資料庫中。  

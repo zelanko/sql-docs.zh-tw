@@ -1,5 +1,5 @@
 ---
-title: 從採礦結構刪除採礦模型 |Microsoft 文件
+title: 從採礦結構刪除採礦模型 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b17489213e0f057d8f291095f01b65f97a977ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468841"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>從採礦結構刪除採礦模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  您可以使用資料採礦設計師、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 DMX 陳述式來刪除採礦模型。  
+  您可以使用資料採礦設計師、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 DMX 陳述式來刪除採礦模型。  
   
 ### <a name="delete-a-mining-model-using-sql-server-data-tools"></a>使用 SQL Server 資料工具刪除採礦模型  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34019315"
   
      [刪除物件] 對話方塊就會開啟。  
   
-3.  按一下 **[確定]**。  
+3.  按一下 [確定] 。  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 刪除採礦模型  
   
@@ -42,9 +42,9 @@ ms.locfileid: "34019315"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>使用 DMX 刪除採礦模型  
   
--   [卸除採礦模型 & #40; DMX & #41;](../../dmx/drop-mining-model-dmx.md)  
+-   [DROP MINING MODEL &#40;DMX&#41;](../../dmx/drop-mining-model-dmx.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

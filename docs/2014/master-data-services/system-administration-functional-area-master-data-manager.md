@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4f85a74b91a74b58847a24d04053e2b8848234d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763384"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>系統管理功能區域 (主資料管理員)
   在 [系統管理] 功能區域中，管理員可以建立模型及其所有物件， 也可以建立商務規則，並建立及部署模型封裝。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767370"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步驟 4：加入一般檔案目的地
   [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
@@ -46,7 +46,7 @@ ms.locfileid: "58384816"
   
 11. 在 [選項] 窗格中，按一下 **[資料行]**。  
   
-     請注意，除了來源資料檔的資料行之外，還出現三個新的資料行：ErrorCode、ErrorColumn 和 ErrorDescription。 這些資料行是由 [查閱貨幣索引鍵] 轉換的錯誤輸出和 [取得錯誤描述] 轉換中的指令碼產生，而且可用來找出失敗資料列的原因並加以解決。  
+     請注意，除了來源資料檔中的資料行，有三個新的資料行：ErrorCode、 ErrorColumn 和 ErrorDescription。 這些資料行是由 [查閱貨幣索引鍵] 轉換的錯誤輸出和 [取得錯誤描述] 轉換中的指令碼產生，而且可用來找出失敗資料列的原因並加以解決。  
   
 12. 按一下 [確定] 。  
   

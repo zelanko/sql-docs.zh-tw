@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5951ff4222ba87af1a405b739d823e7702dda4da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640799"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合併成員暫存資料表 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52806920"
 ##  <a name="TableColumns"></a> 資料表資料行  
  下列資料表說明合併暫存資料表中各欄位的用途。  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**ID**|自動指派的識別碼。 請勿在此欄位中輸入值。 如果尚未處理批次，這個欄位是空白。|  
 |**ImportType**<br /><br /> 必要項|決定在暫存資料符合 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中既存的資料時，該怎麼做。<br /><br /> **0**:建立新成員。 將現有的 MDS 資料取代為暫存資料，但唯有在暫存資料不是 NULL 的情況下。 系統會忽略 NULL 值。 若要將屬性值變更為 NULL，請使用 **~NULL~**。<br /><br /> **1**:只建立新成員。 對現有 MDS 資料的任何更新都將失敗。<br /><br /> **2**:建立新成員。 將現有的 MDS 資料取代為暫存資料。 如果您匯入 NULL 值，它們會覆寫現有的 MDS 值。<br /><br /> **3**:依據 Code 值停用成員。 將會維護所有屬性、階層和集合成員資格，以及交易，但已無法在使用者介面中使用。 如果成員當做另一個成員的網域屬性值使用，則停用將會失敗。<br /><br /> **4**：依據 Code 值永久刪除成員。 將會永久刪除所有屬性、階層和集合成員資格，以及交易。 如果成員當做另一個成員的網域屬性值使用，則刪除將會失敗。|  
@@ -42,7 +42,7 @@ ms.locfileid: "52806920"
 |**[字碼]**<br /><br /> 必要項，除非程式碼自動為 **ImportType1** 或 **2** 產生。如需詳細資訊，請參閱[自動建立代碼 &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)。|成員的唯一代碼。|  
 |**名稱**<br /><br /> 選擇性|成員的名稱。|  
 |**NewCode**|唯有在您要變更成員代碼時才使用。|  
-|\<屬性名稱>|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType** **0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 針對連結屬性，URL 開頭必須是 **https://**。<br /><br /> <br /><br /> 注意：您無法暫存檔案屬性。|  
+|\<屬性名稱>|實體中的每個屬性都有一個資料行存在。 將其搭配 **ImportType** **0** 或 **2**使用。 對於自由格式屬性，指定屬性的新文字或字串值。 對於網域屬性，指定將成為屬性之成員的代碼。 針對連結屬性，URL 開頭必須是 **https://**。<br /><br /> <br /><br /> 注意:您無法暫存檔案屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
  [概觀：從資料表匯入資料 &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   

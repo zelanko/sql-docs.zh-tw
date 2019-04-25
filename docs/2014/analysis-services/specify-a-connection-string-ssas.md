@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe778141f128a05c00d6a51a66394ed5c70fdb0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746683"
 ---
 # <a name="specify-a-connection-string-ssas"></a>指定連接字串 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您指定連接字串以連接至 OLE DB 或 ODBC 資料來源。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

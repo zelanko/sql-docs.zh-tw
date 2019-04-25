@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9672408d1a63729f21395184644ca6a92d091e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640510"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>瀏覽器 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師的 **[瀏覽器]** 索引標籤，即可瀏覽維度資料與維度的中繼資料。 如果目前選取的維度有啟用維度回寫，請使用此檢視來變更維度的成員資料。  

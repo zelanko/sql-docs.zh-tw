@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746122"
 ---
 # <a name="specify-source-information-partition-wizard"></a>指定來源資訊 (資料分割精靈)
   使用 [指定來源資訊] 頁面，即可選取要在其中建立資料分割 (以及該資料分割的資料來源檢視和篩選資料表) 的量值群組。  
@@ -50,6 +50,6 @@ ms.locfileid: "48120555"
 >  如果選取一個以上的資料表，就無法顯示 [限制資料列] 頁面，而且無法限制從所選資料表建立之資料分割的資料列。 若要限制每個資料分割的資料列，請為要建立資料分割的每個資料表執行一次資料分割精靈。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

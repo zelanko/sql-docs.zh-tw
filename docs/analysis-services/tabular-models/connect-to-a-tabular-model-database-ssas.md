@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469476"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>連線到表格式模型資料庫  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "53072415"
   
      您必須針對獨立的表格式部署設定伺服器執行個體，而且伺服器執行個體必須有允許存取的輸入規則。 如需詳細資訊，請參閱[判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)和[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]。 否則，請選擇 [使用下列的使用者名稱和密碼]，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按 [下一步] 。  
+4.  對於登入認證，如果您有資料庫的讀取權限，請選擇 [使用 Windows 驗證]。 否則，請選擇 [使用下列的使用者名稱和密碼]，然後輸入具有資料庫權限之 Windows 帳戶的使用者名稱和密碼。 按一下 [下一步] 。  
   
 5.  選取資料庫。 有效的選項將會針對資料庫顯示一個 [模型] Cube。 按一下 [下一步]，然後按一下 [完成]。  
   
@@ -91,11 +91,11 @@ ms.locfileid: "53072415"
   
  當匯入資料，當您嘗試使用精靈來連線到遠端 Analysis Services 伺服器上的表格式模型資料庫，且您沒有足夠的權限時，就會發生這個 Microsoft Excel 錯誤。 若要解決這個錯誤，您必須擁有資料庫的使用者存取權限。 如需授與使用者對資料的存取權，請參閱本主題稍早所提供的指示。  
   
- **嘗試建立與外部資料來源之間的連接時，發生錯誤。下列連接無法重新整理：\<模型名稱 > 沙箱**  
+ **嘗試連接到外部資料來源時，發生錯誤。下列連接無法重新整理：\<模型名稱 > 沙箱**  
   
  在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤的發生，是因為您在遠端 Analysis Services 伺服器上沒有足夠的權限。 若要解決這個錯誤，您必須擁有資料庫的使用者存取權限。 如需授與使用者對資料的存取權，請參閱本主題稍早所提供的指示。  
   
- **嘗試執行此作業時發生錯誤。重新載入活頁簿，並嘗試再次執行此作業。**  
+ **嘗試執行這項作業時發生錯誤。重新載入活頁簿，並嘗試再次執行此作業。**  
   
  在 SharePoint 上，當您嘗試使用模型資料之樞紐分析表中的資料互動 (如篩選資料) 時，就會發生這個 Microsoft Excel 錯誤。 此錯誤發生的原因，是因為部署模型資料所在的 Analysis Services 執行個體不信任 Excel Services。 若要解決這個錯誤，請在 Analysis Services 執行個體上，授與 Excel Services 管理權限。 如需授與系統管理員權限，請參閱本主題稍早所提供的指示。 如果錯誤仍然存在，請回收 Excel Services 應用程式集區。  
   

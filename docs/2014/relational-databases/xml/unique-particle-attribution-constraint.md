@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467414"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一物件屬性條件約束
   在 XSD 中，會以唯一物件屬性 (UPA) 條件約束規則來限制複雜的內容模型。 此規則要求執行個體文件中的每個元素，都要明確地對應至其父系內容模型中的一個 `<xsd:element>` 或 `<xsd:any>` 物件。 若有任何結構描述，其包含的類型可能含有模稜兩可的內容模型，都會被拒絕。  
@@ -80,11 +80,11 @@ ms.locfileid: "58538516"
 ## <a name="finding-more-information"></a>尋找詳細資訊  
  下列文件是由全球資訊網協會 (W3C) 所發行，其中包含唯一物件屬性條件約束的技術說明：  
   
- 「 XML 結構描述第 1 部分：結構第二版，W3C 建議的編輯建議」：  
+ 「 XML 結構描述第 1 部分：結構第二版，W3C 提出的編輯的建議 」:  
   
--   3.8.6 節：模型群組結構描述元件條件約束  
+-   Section 3.8.6:模型群組結構描述元件條件約束  
   
--   附錄 H：不重複物件屬性條件約束的分析 (非基準)  
+-   附錄 h:分析的唯一物件屬性條件約束 （非基準）  
   
  若要查看文件，請瀏覽 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   

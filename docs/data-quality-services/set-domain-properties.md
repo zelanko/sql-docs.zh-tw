@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469343"
 ---
 # <a name="set-domain-properties"></a>設定定義域屬性
 
@@ -33,7 +33,7 @@ ms.locfileid: "56029979"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能設定定義域的屬性。  
   
 ##  <a name="Set"></a> 設定定義域屬性  
@@ -53,7 +53,7 @@ ms.locfileid: "56029979"
  建立定義域之後，可以變更定義域名稱或描述。 定義域名稱在知識庫中必須是唯一的。 描述最多可以有 256 個字元。  
   
 ###  <a name="Type"></a> 資料類型  
- 當您建立定義域時，請針對定義域中的值選取下列其中一個資料類型：**字串** (預設值)、**日期**、**整數**或**十進位**。 在您建立定義域之後，可以檢視資料類型，但是無法變更資料類型。 針對定義域所選取的資料類型會定義可對應至該定義域的來源資料類型。 如需 DQS 中四種定義域資料類型分別支援之資料類型的資訊，請參閱 [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+ 當您建立定義域時，請選取下列資料類型之值的其中一個網域中：**字串** (預設值)、**日期**、**整數**或**十進位**。 在您建立定義域之後，可以檢視資料類型，但是無法變更資料類型。 針對定義域所選取的資料類型會定義可對應至該定義域的來源資料類型。 如需 DQS 中四種定義域資料類型分別支援之資料類型的資訊，請參閱 [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 ###  <a name="Leading"></a> 使用前置值  
  選取這個核取方塊，指定一組同義字中的前置值將會是輸出，而不是與其同義的值。 取消選取 **[使用前置值]** ，指定每一個同義字值都是正確或更正形式的輸出，而且不會由其群組的前置值加以取代。  

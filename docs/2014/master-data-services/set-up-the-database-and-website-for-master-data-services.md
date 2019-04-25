@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d2d2d034424ac4564a66b40b1479acb7dc683d7c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766544"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>設定 Master Data Services 的資料庫與網站
   使用 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 設定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 的資料庫與網站  

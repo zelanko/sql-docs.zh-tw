@@ -1,5 +1,5 @@
 ---
-title: 資料採礦方案部署 |Microsoft 文件
+title: 資料採礦方案的部署 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b42d01b097483d9088bd76257cd30ac37158f889
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467404"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>部署資料採礦方案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34015215"
 ## <a name="in-this-section"></a>本節內容  
  [將資料採礦方案部署到舊版的 SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
- [匯出和匯入資料採礦物件](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [匯出及匯入資料採礦物件](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
 ##  <a name="bkmk_Reqs"></a> 部署資料採礦方案的需求  
  部署解決方案的目標 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體必須在支援多維度物件和資料採礦物件的模式下執行；也就是說，您不能將資料採礦物件部署到裝載表格式模型或 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的執行個體。  
@@ -78,6 +78,6 @@ ms.locfileid: "34015215"
 ## <a name="see-also"></a>另請參閱  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [處理需求及考量 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [處理需求和考量 (資料採礦)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

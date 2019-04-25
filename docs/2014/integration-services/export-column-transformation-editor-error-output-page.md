@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 292d872d294f81c6dac19e64af9d6a08710230b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769564"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>匯出資料行轉換編輯器 (錯誤輸出頁面)
   使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可指定如何處理錯誤。  

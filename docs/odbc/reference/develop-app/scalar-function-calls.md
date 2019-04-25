@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468795"
 ---
 # <a name="scalar-function-calls"></a>純量函式呼叫
 純量函數會傳回每個資料列的值。 比方說，絕對值的純量函式會採用數值的資料行，做為引數，並傳回資料行中的每個值的絕對值。 呼叫純量函式逸出序列是  
   
- **{fn**_純量函數_ **}**  
+ **{fn**  _scalar-function_ **}**  
   
  何處*純量函數*是其中一個函式中所列[附錄 e:純量函數](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)。 如需純量函式逸出序列的詳細資訊，請參閱[純量函式逸出序列](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)附錄 c:SQL 文法。  
   
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  應用程式應該使用的最大的互通性**轉換**純量函式，並確認純量函式的輸出所需的類型。 **轉換**函式將資料從一個 SQL 資料類型轉換成指定的 SQL 資料型別。 語法**轉換**函式  
   
- **轉換 (** _value_exp_ **，** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_**)**  
   
  其中*value_exp*資料行名稱，另一個純量函式或常值，結果並*data_type*符合關鍵字 **#define**所使用的名稱SQL 資料類型識別項中定義[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。 例如，下列 SQL 陳述式會使用**轉換**並確定函式的輸出**CURDATE**函式是日期類型，而不是時間戳記或字元資料：  
   

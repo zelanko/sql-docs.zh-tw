@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771024"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
@@ -29,16 +29,16 @@ ms.locfileid: "58379230"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 載入選項  
  ODBC 目的地可以使用兩種存取載入模組其中之一。 您會在 [ODBC 來源編輯器 &#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md) 設定模式。 兩種模式為：  
   
--   **批次**:在此模式中將 ODBC 目的地會嘗試使用最有效率的插入方法，根據所見的 ODBC 提供者功能。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
+-   **批次**：在此模式中，ODBC 目的地會根據所見的 ODBC 提供者功能，嘗試使用最有效率的插入方法。 對於最新的 ODBC 提供者，這表示準備含有參數的 INSERT 陳述式，然後使用資料列取向的陣列參數繫結 (陣列大小是由 **BatchSize** 屬性所控制)。 如果您選取 [批次]，而提供者不支援此方法，ODBC 目的地會自動切換為**逐列**模式。  
   
--   **逐列**:在此模式中，ODBC 目的地會準備具有參數，並使用 INSERT 陳述式**SQL Execute**一次插入一個資料列。  
+-   **逐列**：在此模式中，ODBC 目的地會準備含有參數的 INSERT 陳述式，然後使用 **SQL Execute**，一次插入一個資料列。  
   
 ## <a name="error-handling"></a>錯誤處理  
  ODBC 目的地有錯誤輸出。 此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**:對應至目前錯誤的編號。 如需錯誤清單，請參閱來源資料庫的文件集。 如需 SSIS 錯誤碼清單，請參閱＜SSIS 錯誤碼和訊息參考＞。  
+-   **錯誤碼**：對應至目前錯誤的編號。 如需錯誤清單，請參閱來源資料庫的文件集。 如需 SSIS 錯誤碼清單，請參閱＜SSIS 錯誤碼和訊息參考＞。  
   
--   **錯誤資料行**:造成錯誤 （用於轉換錯誤） 的來源資料行。  
+-   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   
 -   標準輸出資料行。  
   

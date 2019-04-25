@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766511"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>部署專案之後設定參數值
   部署精靈可讓您在將專案部署到目錄時，設定伺服器預設參數值。 專案在目錄中之後，您可以使用 SQL Server Management Studio (SSMS) 物件總管或 Transact-SQL 來設定伺服器預設值。  
@@ -29,7 +29,7 @@ ms.locfileid: "58379926"
   
 3.  按一下 **[選取頁面]** 底下的 **[參數]**，以開啟參數頁面。  
   
-4.  在 **[參數]** 清單選取所需的參數。 注意：**容器**資料行有助於區分專案參數與封裝參數。  
+4.  在 **[參數]** 清單選取所需的參數。 注意:[容器] 資料行有助於區分專案參數與封裝參數。  
   
 5.  在 **[值]** 資料行中，指定所需的伺服器預設參數值。  
   

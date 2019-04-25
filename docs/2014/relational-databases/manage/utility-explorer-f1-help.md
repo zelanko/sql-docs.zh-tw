@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467852"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
   下列主題說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的功能和關聯的作業。  

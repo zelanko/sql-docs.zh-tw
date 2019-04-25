@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468347"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -41,7 +41,7 @@ ms.locfileid: "58527890"
   
     > [!IMPORTANT]  
     >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 設成與 MAX_MEMORY_PERCENT 相同的值。   
-    > 請參閱主題[最佳作法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+    > 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
   
     ```sql  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58527890"
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
-> 請參閱主題[最佳作法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+> 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
   
 ```sql  
   
@@ -132,7 +132,7 @@ GO
   
 > [!IMPORTANT]  
 >  如果伺服器是在 VM 上執行，而且不是專用的，請將 MIN_MEMORY_PERCENT 與 MAX_MEMORY_PERCENT 設為相同值。   
-> 請參閱主題[最佳作法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
+> 請參閱主題[最佳做法：在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)如需詳細資訊。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>解決有足夠的記憶體可用但卻記憶體不足所造成的頁面配置失敗  
  如果您收到錯誤訊息: 「 不允許頁面配置，資料庫 '*\<databaseName >*'因為資源集區中的記憶體不足'*\<名稱 >*'. 請參閱 '<https://go.microsoft.com/fwlink/?LinkId=330673>' 如需詳細資訊。 」 在錯誤記錄檔中，可用的實體記憶體已足夠配置頁面時，它可能是因為已停用的資源管理員。 若資源管理員已停用，MEMORYBROKER_FOR_RESERVE 會誘發不實的記憶體壓力。  

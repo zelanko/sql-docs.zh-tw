@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1f80374c24ee4db772e30eee389124feafcc79b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766700"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>選取封裝管理選項 (SSIS 封裝升級精靈)
   使用 [選取封裝管理選項] 頁面，指定用來升級封裝的選項。  

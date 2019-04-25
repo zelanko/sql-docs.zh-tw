@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f484a8a405616d10f14ab223b36efe1ec253d8aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466533"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>讓使用者看到屬性群組 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52794800"
   
  當您建立屬性群組時，它會自動隱藏起來不讓所有使用者看到，除了建立它的使用者以外。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "52794800"
   
 7.  按一下 [可用] 方塊中的使用者或群組，然後按一下 [加入] 箭號。 若要全部加入，請按一下 [全部加入] 箭號。  
   
-8.  按一下 **[儲存]**。  
+8.  按一下 [儲存] 。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性群組 &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   

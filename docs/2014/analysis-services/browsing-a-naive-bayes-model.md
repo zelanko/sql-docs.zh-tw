@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466158"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>瀏覽貝式機率分類模型
   當您開啟使用貝氏機率分類模型**瀏覽**，具有四個不同窗格的互動式檢視器中會顯示此模型。 您可以使用此檢視器來探索相互關聯，以及取得有關模型和基礎資料的資訊。  

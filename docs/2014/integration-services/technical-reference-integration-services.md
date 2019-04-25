@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7134ae3080a4130a626ff79eb3c2df54745be4d7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766371"
 ---
 # <a name="technical-reference-integration-services"></a>技術參考 (Integration Services)
   尋找工具、 語言和程式設計參考文件，如[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。  

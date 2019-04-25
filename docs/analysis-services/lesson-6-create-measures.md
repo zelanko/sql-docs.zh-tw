@@ -1,5 +1,5 @@
 ---
-title: 第 6 課： 建立量值 |Microsoft Docs
+title: 第 6 課：建立量值 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469801"
 ---
-# <a name="lesson-6-create-measures"></a>第 6 課： 建立量值
+# <a name="lesson-6-create-measures"></a>第 6 課：建立量值
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將建立要包含在模型中的量值。 類似於您在上一課中建立的導出資料行，量值是使用 DAX 公式所建立的計算。 不過，與導出資料行不同的是，量值是根據使用者選取的「篩選」進行評估；例如，加入樞紐分析表之 [資料列標籤] 欄位中的特殊資料行或交叉分析篩選器。 然後套用的量值就會計算篩選中每個資料格的值。 量值是功能強大又靈活的計算，您會想要包含在幾乎所有表格式模型中，對數值資料執行動態計算。 若要進一步了解，請參閱[量值](../analysis-services/tabular-models/measures-ssas-tabular.md)。  
@@ -27,10 +27,10 @@ ms.locfileid: "42795617"
   
 在這一課，您將藉由在公式列中輸入 DAX 公式以及使用 [自動加總] 功能這兩種方式建立量值。  
   
-完成本課程的估計時間：**30 分鐘**  
+估計的時間才能完成這一課：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 5 課： 建立導出資料行](../analysis-services/lesson-5-create-calculated-columns.md)。  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 5 課：建立計算結果的欄](../analysis-services/lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
   
@@ -48,7 +48,7 @@ ms.locfileid: "42795617"
   
     請注意左上方資料格現在包含量值名稱**DaysCurrentQuarterToDate**，後面接著結果**92**。
     
-      ![做為表格式-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
+      ![as-tabular-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
     不同於導出資料行，量值公式與您可以輸入量值名稱，後面接著逗號，後面接著公式運算式。
 
@@ -75,7 +75,7 @@ ms.locfileid: "42795617"
   
     [自動加總] 功能會使用 DistinctCount 標準彙總公式，自動為選取的資料行建立量值。  
     
-       ![做為表格式-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
+       ![as-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
   
 4.  在量值方格中，按一下 [新增量值，然後在**屬性**] 視窗，請在**量值名稱**，重新命名的量值**InternetDistinctCountSalesOrder**。 
  
@@ -87,13 +87,13 @@ ms.locfileid: "42795617"
     |[量值名稱]|「資料行」|自動加總 (∑)|公式|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
   
 2.  按一下空白儲存格在量值方格中，並使用公式列中，建立並命名下列量值的順序：  
   
@@ -124,6 +124,6 @@ ms.locfileid: "42795617"
 建立 FactInternetSales 資料表的量值可用來分析重要財務資料，例如銷售額、 成本和獲利率的使用者選取的篩選條件所定義的項目。  
   
 ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 7 課： 建立關鍵效能指標](../analysis-services/lesson-7-create-key-performance-indicators.md)。  
+請移至下一課：[第 7 課：建立關鍵效能指標](../analysis-services/lesson-7-create-key-performance-indicators.md)。  
 
   

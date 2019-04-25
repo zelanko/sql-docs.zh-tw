@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 163dbfecd4605c6c9624d94c047b1c7e893d8fcd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768874"
 ---
 # <a name="modulo-ssis-expression"></a>(模數) (SSIS 運算式)
   提供第一個數值運算式除以第二個數值運算式之後的整數餘數。  

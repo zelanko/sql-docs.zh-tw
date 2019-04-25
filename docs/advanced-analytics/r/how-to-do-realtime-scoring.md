@@ -9,18 +9,18 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503773"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>如何產生預測與使用 SQL Server 中的機器學習服務模型的預測
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 使用現有的模型來預測或預測新的資料輸入的結果是在 machine learning 中的核心工作。 這篇文章會列舉 SQL Server 中產生預測的方法。 在方法之間高速的預測，其中速度為基礎的累加式簡化的內部處理方法執行階段相依性。 較少的相依性表示更快得到預測。
 
-使用內部處理基礎結構 （即時或原生評分） 隨附的程式庫需求。 函式必須是從 Microsoft 程式庫。 CLR 或 c + + 延伸模組不支援呼叫開放原始碼或協力廠商的函式中的 R 或 Python 程式碼。
+使用內部處理基礎結構 （即時或原生評分） 隨附的程式庫需求。 函式必須是從 Microsoft 程式庫。 CLR 不支援 R 或 Python 程式碼呼叫開放原始碼或協力廠商的函式或C++擴充功能。
 
 下表摘要說明預測和預測評分的架構。 
 
@@ -28,13 +28,13 @@ ms.locfileid: "58510085"
 |-----------------------|-------------------|----------------------|----------------------|
 | Extensibility Framework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 無。 模型可以根據任何 R 或 Python 函式 | 數百毫秒。 <br/>載入執行階段環境都有固定的成本之前的任何新資料計分,，平均三到六個 100 毫秒。 |
 | [即時評分的 CLR 延伸模組](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)上序列化的模型 | :RevoScaleR, MicrosoftML <br/>Python: revoscalepy microsoftml | 數以萬計的平均 （毫秒）。 |
-| [原生評分的 c + + 延伸模組](../sql-native-scoring.md) | [預測 T-SQL 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化的模型 | :RevoScaleR <br/>Python: revoscalepy | 小於 20 毫秒，平均。 | 
+| [原生計分C++擴充功能](../sql-native-scoring.md) | [預測 T-SQL 函數](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)上序列化的模型 | :RevoScaleR <br/>Python: revoscalepy | 小於 20 毫秒，平均。 | 
 
 處理速度和不獨特是輸出的差異的功能。 假設相同的功能和輸入，經過評分的輸出應該不會隨著您使用的方法上。
 
 必須使用支援的函式中，建立模型，然後序列化為未經處理的位元組資料流儲存到磁碟，或儲存在資料庫中的二進位格式。 您可以使用預存程序或 T-SQL，載入和使用 R 或 Python 語言執行平台，不必二進位模型而能更快完成時產生新的輸入上的預測分數。
 
-CLR 和 c + + 的擴充功能的重要性是鄰近的資料庫引擎本身。 Database engine 的原生語言是 c + +，這表示在執行較少的相依性的 c + + 撰寫延伸模組。 相反地，CLR 的擴充功能會相依於.NET Core。 
+CLR 的重要性和C++延伸模組是鄰近的資料庫引擎本身。 Database engine 的原生語言是C++，這表示撰寫延伸模組C++執行具有較少的相依性。 相反地，CLR 的擴充功能會相依於.NET Core。 
 
 如您所料，平台支援將會受到這些執行的階段環境。 原生資料庫引擎延伸模組在關聯式資料庫支援的任何地方執行：Windows，Linux，Azure 中。 CLR 與.NET Core 需求的延伸模組目前為 Windows 只。
 
@@ -58,11 +58,11 @@ _評分_是兩個步驟的程序。 首先，您可以指定已定型的模型�
 
 擴充性架構支援以 R 或 Python，範圍從簡單的函數到訓練複雜機器學習服務模型，您可能會執行任何作業。 不過，雙同處理序架構需要叫用每個呼叫，不論作業的複雜度外部 R 或 Python 處理序。 當工作負載需要從資料表載入預先定型的模型，並針對它評分已在 SQL Server 中的資料時，呼叫外部處理序的額外工作將可以在某些情況下無法接受的延遲。 例如，詐騙偵測需要快速評分相關性。
 
-若要增加評分的速度，像是詐騙偵測案例，SQL Server 會將內建生計分庫成為消除的 R 和 Python 的啟動程序的額外負荷的 c + + 和 CLR 的延伸模組。
+若要增加評分的速度，像是詐騙偵測的情況下，SQL Server 加入內建的評分程式庫做為C++和 CLR 延伸模組，可排除 R 和 Python 的啟動程序的額外負荷。
 
 [**即時計分**](../real-time-scoring.md)是高效能評分的第一個解決方案。 舊版的 SQL Server 2017 和更新版本的更新中，導入 SQL Server 2016，即時評分依賴內就能對 R 和 Python 處理而不受 Microsoft 管制 RevoScaleR、 MicrosoftML (R)、 revoscalepy 中的函式的 CLR 程式庫和microsoftml (Python)。 CLR 程式庫會使用叫用**sp_rxPredict**預存程序從任何支援的模型型別，產生分數，而不需要呼叫 R 或 Python 執行階段。
 
-[**原生評分**](../sql-native-scoring.md)是 SQL Server 2017 功能，實為原生的 c + + 程式庫，但僅適用於 RevoScaleR 與 revoscalepy 模式。 它是最快且更安全的方式，但是支援較少的相對於其他方法的函式。
+[**原生評分**](../sql-native-scoring.md)是 SQL Server 2017 功能，實作為原生C++程式庫，但僅適用於 RevoScaleR 與 revoscalepy 模式。 它是最快且更安全的方式，但是支援較少的相對於其他方法的函式。
 
 ## <a name="choose-a-scoring-method"></a>選擇計分方法
 

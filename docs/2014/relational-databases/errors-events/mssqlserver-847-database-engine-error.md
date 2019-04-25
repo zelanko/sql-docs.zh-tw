@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bd85b72fc786d4aa807d73e57a69193b515067d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762797"
 ---
 # <a name="mssqlserver847"></a>MSSQLSERVER_847
     
@@ -29,7 +29,7 @@ ms.locfileid: "48135918"
 |事件識別碼|847|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
-|符號名稱|不適用|  
+|符號名稱|N/A|  
 |訊息文字|等候閂鎖時發生逾時: 類別 '%ls'，識別碼 %p，類型 %d，工作 0x%p : %d，等候時間 %d，旗標 0x%I64x，主控工作 0x%p。 繼續等候。|  
   
 ## <a name="explanation"></a>說明  

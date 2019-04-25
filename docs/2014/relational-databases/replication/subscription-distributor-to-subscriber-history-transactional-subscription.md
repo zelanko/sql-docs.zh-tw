@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630552"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>訂閱，散發者到訂閱者記錄 (交易式訂閱)
   **[散發者到訂閱者記錄]** 索引標籤會顯示散發代理程式的詳細資訊，包括狀態、記錄、參考訊息和錯誤訊息。  
@@ -62,7 +62,7 @@ ms.locfileid: "54133510"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](monitor/start-the-replication-monitor.md)   
- [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用複寫監視器來檢視資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [監視複寫](monitoring-replication.md)   
  [複寫代理程式概觀](agents/replication-agents-overview.md)  
   

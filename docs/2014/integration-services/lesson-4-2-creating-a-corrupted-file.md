@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：建立損毀的檔案 |Microsoft Docs
+title: 步驟 2:建立損毀的檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767380"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀的檔案
+# <a name="step-2-creating-a-corrupted-file"></a>步驟 2:建立損毀的檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
   
  在這項工作中，您會建立現有的範例一般檔案的副本。 然後您會在記事本開啟檔案及編輯 [CurrencyID] 資料行，以確定在轉換查閱期間，它無法產生相符者。 在處理新檔案時，查閱失敗會造成 [貨幣索引鍵查閱] 轉換失敗，因而使得其餘的封裝也失敗。 在您建立損毀範例檔案之後，將執行封裝來檢視封裝失敗。  

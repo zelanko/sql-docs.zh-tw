@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d82fa90f5dca5d9aee85ef3630b9d3a66d3c14e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633193"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>支援的純量函式 (Visual FoxPro ODBC Driver)
 Visual FoxPro ODBC 驅動程式支援三種類型的純量函式，ODBC SQL 文法中所定義： 字串、 數值與日期和時間函式。  

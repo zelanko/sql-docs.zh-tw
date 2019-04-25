@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13ea15a23bbf6de6c50b494f709f65cae2f7c48b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509833"
 ---
 # <a name="analysis-services-powershell-reference"></a>Analysis Services PowerShell 參考
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,18 +31,18 @@ ms.locfileid: "37992900"
   
 |指令程式|描述|對等 AMO 方法|  
 |------------|-----------------|----------------------------|  
-|[Add-RoleMember cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/Add-RoleMember)|將成員加入至資料庫角色。|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
-|[Backup-ASDatabase cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/backup-asdatabase)|備份 Analysis Services 資料庫。|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
+|[Add-RoleMember 指令程式](https://docs.microsoft.com/powershell/module/sqlserver/Add-RoleMember)|將成員加入至資料庫角色。|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
+|[Backup-ASDatabase 指令程式](https://docs.microsoft.com/powershell/module/sqlserver/backup-asdatabase)|備份 Analysis Services 資料庫。|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
 |[Invoke-ASCmd cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-ascmd)|執行 XMLA 或 TSML (JSON) 格式的查詢或指令碼。|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
 |[Invoke-ProcessASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processasdatabase)|處理資料庫。|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessCube cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processcube)|處理 Cube。|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessDimension cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processdimension)|處理維度。|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Invoke-ProcessPartition cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|處理資料分割。|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Invoke-ProcessPartition 指令程式](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|處理資料分割。|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessTable cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processtable)|處理表格式模型中，1200年或更高的相容性模型中的資料表。|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Merge-Partition cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/merge-partition)|合併資料分割。|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
 |[New-RestoreFolder cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/new-restorefolder)|建立要包含資料庫備份的資料夾。|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
-|[New-RestoreLocation cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/new-restorelocation)|指定一個或多個要還原資料庫的遠端伺服器。|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
-|[Remove-RoleMember cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/remove-rolemember)|從資料庫角色中移除成員。|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
+|[New-RestoreLocation 指令程式](https://docs.microsoft.com/powershell/module/sqlserver/new-restorelocation)|指定一個或多個要還原資料庫的遠端伺服器。|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
+|[Remove-RoleMember 指令程式](https://docs.microsoft.com/powershell/module/sqlserver/remove-rolemember)|從資料庫角色中移除成員。|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
 |[Restore-ASDatabase cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/restore-asdatabase)|在伺服器執行個體上還原資料庫。|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
   
 

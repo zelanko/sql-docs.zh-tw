@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471137"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>資料層應用程式資料表 - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "47810382"
 |**sequence_id**|**int**|識別動作中的步驟。|  
 |**instance_id**|**uniqueidentifier**|DAC 執行個體的識別碼。 可以聯結此資料行**instance_id**中的資料行[dbo.sysdac_instances &#40;-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)。|  
 |**action_type**|**tinyint**|動作類型的識別碼：<br /><br /> **0** = 部署<br /><br /> **1** = 建立<br /><br /> **2** = 重新命名<br /><br /> **3** = 卸離<br /><br /> **4** = 刪除|  
-|**action_type_name**|**varchar(19)**|動作類型的名稱：<br /><br /> **部署**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
+|**action_type_name**|**varchar(19)**|動作類型的名稱：<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|受到動作影響之物件類型的識別碼：<br /><br /> **0** = dacpac<br /><br /> **1** = 登入<br /><br /> **2** = 資料庫|  
 |**dac_object_type_name**|**varchar(8)**|受到動作影響之物件類型的名稱：<br /><br /> **dacpac** = DAC 執行個體<br /><br /> **login**<br /><br /> **資料庫**|  
 |**action_status**|**tinyint**|識別動作目前狀態的代碼：<br /><br /> **0** = 暫止<br /><br /> **1** = 成功<br /><br /> **2** = 失敗|  
-|**action_status_name**|**varchar(11)**|動作的目前狀態：<br /><br /> **暫止**<br /><br /> **success**<br /><br /> **失敗**|  
+|**action_status_name**|**varchar(11)**|動作的目前狀態：<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
 |**必要**|**bit**|在回復 DAC 作業時，由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用。|  
 |**dac_object_name_pretran**|**sysname**|認可包含動作之交易前的物件名稱。 僅用於資料庫與登入。|  
 |**dac_object_name_posttran**|**sysname**|認可包含動作之交易後的物件名稱。 僅用於資料庫與登入。|  
 |**sqlscript**|**nvarchar(max)**|在資料庫或登入上實作動作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。|  
-|**承載**|**varbinary(max)**|儲存在二進位編碼字串中的 DAC 封裝定義。|  
+|**payload**|**varbinary(max)**|儲存在二進位編碼字串中的 DAC 封裝定義。|  
 |**註解**|**varchar(max)**|記錄 DAC 升級中接受潛在資料流失之使用者的登入。|  
 |**error_string**|**nvarchar(max)**|動作發生錯誤時所產生的錯誤訊息。|  
 |**created_by**|**sysname**|啟動建立此項目之動作的登入。|  
@@ -82,7 +82,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

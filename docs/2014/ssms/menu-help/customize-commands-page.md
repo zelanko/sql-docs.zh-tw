@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470015"
 ---
 # <a name="customize-commands-page"></a>自訂 (命令頁面)
   此對話方塊讓您能夠在工具列和功能表上加入與移除命令，以及變更用作工具列按鈕或功能表命令的影像。 您可以按一下 [工具] 功能表上的 [自訂]，然後按一下 [命令] 來存取 [命令] 頁面。  

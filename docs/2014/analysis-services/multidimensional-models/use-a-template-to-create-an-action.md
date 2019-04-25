@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740788"
 ---
 # <a name="use-a-template-to-create-an-action"></a>使用範本建立動作
   Cube 設計師的 [動作] 檢視包含可用來建立一般動作的一些範本。 您可從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取 Cube 設計師。  
@@ -33,6 +33,6 @@ ms.locfileid: "48154486"
 -   填入必要資訊，以完成建置以範本為基礎的動作。  
   
 ## <a name="see-also"></a>另請參閱  
- [動作&#40;Analysis Services-多維度資料&#41;](actions-analysis-services-multidimensional-data.md)  
+ [動作 &#40;Analysis Services - 多維度資料&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

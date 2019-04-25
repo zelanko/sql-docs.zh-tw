@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766531"
 ---
 # <a name="select-variables"></a>選取變數
   使用 [選取變數] 對話方塊，即可指定在訊息佇列工作中用於傳送訊息作業的變數。 [可用的變數] 清單包含在訊息佇列工作或其父容器之範圍中的系統和使用者自訂變數。 此工作使用 [選取的變數] 清單中的變數。  

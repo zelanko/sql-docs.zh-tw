@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769494"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (位元 Not) (SSIS 運算式)
   執行整數的位元否定運算。 此運算子可套用至帶正負號及不帶正負號的整數資料類型。  

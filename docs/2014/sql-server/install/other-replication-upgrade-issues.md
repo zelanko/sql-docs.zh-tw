@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473179"
 ---
 # <a name="other-replication-upgrade-issues"></a>其他複寫升級問題
   本主題涵蓋 Upgrade Advisor 未報告的一些升級問題。  
@@ -50,7 +50,7 @@ ms.locfileid: "48200728"
   
 -   所有 ActiveX 控制項在撰寫指令碼和初始化時都標示為不安全。  
   
--   快照集 ActiveX 控制項已經卸除。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或透過複寫預存程序來以程式設計的方式建立及管理快照集。 如需詳細資訊，請參閱《[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 線上叢書》中的＜如何：建立和套用初始快照集 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])＞和＜如何：建立初始快照集 (複寫 Transact-SQL 程式設計)＞主題。  
+-   快照集 ActiveX 控制項已經卸除。 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或透過複寫預存程序來以程式設計的方式建立及管理快照集。 如需詳細資訊，請參閱主題"How to:建立和套用初始快照集 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 」 和 「 如何：建立初始快照集 （複寫 TRANSACT-SQL 程式設計） 」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 -   散發 ActiveX 控制項和合併 ActiveX 控制項已被取代。 將會使用 Replication Management Objects (RMO) 來針對 Managed 程式碼應用程式提供類似的功能。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜同步處理訂閱 (RMO 程式設計)＞。  
   

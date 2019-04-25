@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743364"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
   本主題提供 SharePoint 伺服器陣列中 PowerPivot 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
@@ -64,7 +64,7 @@ ms.locfileid: "48147518"
 |最大管理連接集區大小|200|-1、0 或 1 到 10000。<br /><br /> -1 指定無限數目的閒置連接。|在所有管理連接集區中，針對 PowerPivot 服務應用程式與 Analysis Services 伺服器執行個體之連接所建立的閒置伺服器連接數上限。 伺服器連接是用於載入資料庫的要求，並將變更存回 SharePoint 資料庫。|  
   
 ##  <a name="AllocationScheme"></a> 負載平衡  
- PowerPivot 服務執行的其中一項功能是，判斷在可用 PowerPivot 服務執行個體中，Analysis Services 資料將載入的位置。 `AllocationMethod`設定會指定針對選取的服務執行個體的準則。  
+ PowerPivot 服務執行的其中一項功能是，判斷在可用 PowerPivot 服務執行個體中，Analysis Services 資料將載入的位置。 `AllocationMethod` 設定會指定選取服務執行個體的準則。  
   
 |名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
@@ -78,8 +78,8 @@ ms.locfileid: "48147518"
 |開始時間|上午 04:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的下限。|  
 |結束時間|下午 08:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的上限。|  
 |PowerPivot 自動資料重新整理帳戶|None|目標應用程式識別碼|此帳戶用來代表排程擁有者執行資料重新整理作業。<br /><br /> 自動資料重新整理必須事先加以定義，才能在服務應用程式組態頁面參考。 如需詳細資訊，請參閱 <<c0> [ 設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。</c0>|  
-|允許使用者輸入自訂的 Windows 認證|已啟用|布林|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱 < [PowerPivot 資料重新整理設定的預存認證&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
-|最大處理記錄長度|365|1 到 5000 天|決定資料重新整理記錄要保留在 PowerPivot 服務應用程式資料庫中的時間長度。 如需詳細資訊，請參閱 < [PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。|  
+|允許使用者輸入自訂的 Windows 認證|Enabled|布林|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱 < [PowerPivot 資料重新整理設定的預存認證&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
+|最大處理記錄長度|365|1 到 5000 天|決定資料重新整理記錄要保留在 PowerPivot 服務應用程式資料庫中的時間長度。 如需詳細資訊，請參閱 [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)。|  
   
 ##  <a name="UsageData"></a> 使用量資料收集  
  出現在 PowerPivot 管理儀表板中的使用方式報表可以提供有關如何使用啟用 PowerPivot 功能之活頁簿的重要資訊用。 下列組態設定會控制 (呈現於後續使用方式或活動報表中) PowerPivot 伺服器事件的使用量資料收集層面。  

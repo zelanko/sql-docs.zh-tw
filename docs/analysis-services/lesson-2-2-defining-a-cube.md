@@ -1,5 +1,5 @@
 ---
-title: 定義 Cube |Microsoft 文件
+title: 定義 Cube |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 80c877341fc4ad9a952d94081d99f5a9c121fb1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467364"
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>課程 2-2-定義 Cube
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34016895"
   
     此精靈會檢查這些資料表並建議使用 [InternetSales] 當作量值群組資料表。 量值群組資料表 (也稱為事實資料表) 包含您感興趣的量值，例如銷售的單位數。  
   
-6.  按一下 **[下一步]**。  
+6.  按一下 [下一步] 。  
   
 7.  在 [選取量值] 頁面上，檢閱 [網際網路銷售] 量值群組中的所選取量值，再清除下列量值的核取方塊：  
   
@@ -49,13 +49,13 @@ ms.locfileid: "34016895"
   
     根據預設，此精靈會選取事實資料表中所有未連結到維度的數值資料行當做量值。 不過，這 4 個資料行不是實際量值。 前 3 個是連結事實資料表與維度資料表的索引鍵值，它們不使用於這個 Cube 的初始版本。  
   
-8.  按一下 **[下一步]**。  
+8.  按一下 [下一步] 。  
   
 9. 在 [選取現有維度] 頁面上，確定已選取您先前建立的 [Date] 維度，然後按一下 [下一步]。  
   
 10. 在 [選取新維度] 頁面上，選取要建立的新維度。 若要執行這項操作，請確認已選取 [Customer]、[Geography] 和 [Product] 核取方塊，然後清除 [InternetSales] 核取方塊。  
   
-11. 按一下 **[下一步]**。  
+11. 按一下 [下一步] 。  
   
 12. 在 [正在完成精靈] 頁面上，將 Cube 名稱變更為 [Analysis Services 教學課程]。 在 [預覽] 窗格中，您可以看見 [InternetSales] 量值群組及其量值。 此外，您也可以看見 [Date]、[Customer] 和 [Product] 維度。  
   

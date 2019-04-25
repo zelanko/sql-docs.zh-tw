@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633746"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系統需求 (Visual FoxPro ODBC Driver)
 安裝的系統需求提供的最小作業系統 」 和 「 已成功安裝驅動程式所需的磁碟空間。 您已安裝驅動程式之後，您可以選取您要用來存取 Visual FoxPro 資料的特定應用程式軟體。  
@@ -43,7 +43,7 @@ ms.locfileid: "51664092"
   
     -   Microsoft Office 應用程式，例如 Microsoft Excel 或 Microsoft Word  
   
-    -   C 或 c + + 語言的 ODBC 應用程式  
+    -   C 或C++語言 ODBC 應用程式  
   
     -   Microsoft Visual Basic ODBC 應用程式  
   

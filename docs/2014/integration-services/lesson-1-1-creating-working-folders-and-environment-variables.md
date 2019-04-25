@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：建立工作資料夾與環境變數 | Microsoft Docs
+title: 步驟 1:建立工作資料夾與環境變數 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767650"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>步驟 1：建立工作資料夾和環境變數
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>步驟 1:建立工作資料夾和環境變數
   在這項工作中，您將建立工作資料夾 (C:\DeploymentTutorial) 和新的系統環境變數 (`DataTransfer` 與 `LoadXMLData`)，並稍後在教學課程工作中使用。  
   
  工作資料夾位於 C 磁碟的根目錄。 如果必須使用其他磁碟或位置，這是可行的。 不過必須記下這個位置，只要教學課程提到 DeploymentTutorial 工作資料夾時就會用到這個位置。  

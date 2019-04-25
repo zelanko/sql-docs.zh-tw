@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472207"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>適用於網際網路發佈的 OLE DB 提供者
 ADO[記錄](../../../ado/reference/ado-api/record-object-ado.md)並[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件可用 Microsoft OLE DB provider for Internet Publishing （網際網路發行的提供者） 來存取及管理資源，例如 Web 資料夾或檔案由 Microsoft FrontPage。 ADO 中，您可以指定的來源**記錄**， **Stream**，或[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)是 URL。 您可以接著上傳、 下載、 移動、 複製和刪除資源，或直接管理資源的屬性。  
@@ -55,4 +55,4 @@ ADO[記錄](../../../ado/reference/ado-api/record-object-ado.md)並[Stream](../.
 > [!NOTE]
 >  如果 Msdaipp.dso 明確指定的提供者，不論是使用值為*提供者*連接字串關鍵字或**提供者**屬性，您無法使用"URL ="連接字串中。 如果您這樣做，會發生錯誤。 相反地，只要指定 URL 稍早所示。  
   
- 更具體的網際網路發行提供者的詳細資訊，請參閱[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或提供者文件，與來源應用程式提供 OLE DB Provider for已安裝 Internet Publishing: Windows 2000、windows Office 2000 或 Internet Explorer 5.0。
+ 更具體的網際網路發行提供者的詳細資訊，請參閱[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)，或提供者文件，與來源應用程式提供 OLE DB Provider for已安裝 Internet Publishing:Windows 2000、 Office 2000 或 Internet Explorer 5.0。

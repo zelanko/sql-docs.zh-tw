@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 046058aa9c00cafb9a5ab9aac61b14d1d78668fc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766474"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
   

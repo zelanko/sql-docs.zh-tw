@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469127"
 ---
 # <a name="lesson-11-create-roles"></a>第 11 課：建立角色
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52512933"
   
 由於組織中的 Windows 使用者和群組帳戶是唯一的，因此您可以將帳戶從特定組織加入至成員。 不過，針對此教學課程，您也可以將成員留空。 您仍然可以稍後在第 12 課中測試每個角色的效果：在 Excel 中進行分析。  
   
-完成本課程的估計時間：**15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 10 課：建立分割區](../analysis-services/lesson-10-create-partitions.md)。  
@@ -51,9 +51,9 @@ ms.locfileid: "52512933"
   
 4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。 
 
-    ![為表格式-lesson11-新的角色](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
-5.  選擇性:按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+5.  選擇性：按一下 **成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>若要建立 Sales Analyst US 使用者角色  
   
@@ -70,9 +70,9 @@ ms.locfileid: "52512933"
     ```
     
     資料列篩選公式必須解析布林 (TRUE/FALSE) 值。 使用此公式，就指定的資料列的 Country Region Code 值為"US"會顯示給使用者。  
-    ![為表格式-lesson11-角色-篩選](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
-6.  選擇性:按一下 [成員] 索引標籤，然後按一下 [新增]。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+6.  選擇性：按一下 [成員] 索引標籤，然後按一下 [新增]。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
 #### <a name="to-create-an-administrator-user-role"></a>若要建立的系統管理員使用者角色  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52512933"
   
 3.  授與此角色**系統管理員**權限。  
   
-4.  選擇性:按一下 [成員] 索引標籤，然後按一下 [新增]。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。 
+4.  選擇性：按一下 [成員] 索引標籤，然後按一下 [新增]。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。 
   
   
 ## <a name="whats-next"></a>下一步

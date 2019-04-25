@@ -1,5 +1,5 @@
 ---
-title: '? 所解碼的字元：（條件）（SSIS 運算式） |Microsoft Docs'
+title: '? 所解碼的字元：(條件) (SSIS 運算式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769395"
 ---
 # <a name="--conditional-ssis-expression"></a>? 所解碼的字元：(條件) (SSIS 運算式)
   依據布林運算式的評估傳回兩個運算式的其中一個。 如果布林運算式的評估結果為 TRUE，則會評估第一個運算式，且結果為運算式的結果。 如果布林運算式的評估結果為 FALSE，則會評估第二個運算式，且其結果為運算式的結果。  
@@ -57,9 +57,9 @@ boolean_expression?expression1:expression2
   
 -   **數值** — *expression1* 與 *expression2* 都必須是數值資料類型。 資料類型的交集必須是運算式評估工具執行之隱含數值轉換規則中所指定的數值資料類型。 兩個數值資料類型的交集不能是 Null。 如需相關資訊，請參閱 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
--   **字串**兩者*expression1*並*expression2*必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
+-   **字串** *expression1* 和 *expression2* 都必須是字串資料類型：DT_STR 或 DT_WSTR。 兩個運算式可以評估為不同的字串資料類型。 結果的資料類型為 DT_WSTR，且長度為較長引數的長度。  
   
--   **日期、 時間或日期/時間**兩者*expression1*並*expression2*必須評估為下列資料類型的其中一個：DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
+-   **日期、時間或日期/時間** *expression1* 和 *expression2* 都必須評估為下列其中一個資料類型：DT_DBDATE、 DT_DATE、 DT_DBTIME、 DT_DBTIME2、 DT_DBTIMESTAMP、 DT_DBTIMESTAMP2、 DT_DBTIMESTAPMOFFSET 或 DT_FILETIME。  
   
     > [!NOTE]  
     >  系統不支援評估為時間資料類型之運算式與評估為日期或日期/時間資料類型之運算式之間的比較。 系統會產生錯誤。  

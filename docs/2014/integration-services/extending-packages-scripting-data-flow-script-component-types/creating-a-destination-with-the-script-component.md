@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768954"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
   您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用目的地元件，以便將從上游來源和轉換收到的資料儲存至資料來源。 通常，目的地元件會透過現有的連接管理員連接到資料來源。  
@@ -119,7 +119,7 @@ ms.locfileid: "58375236"
   
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，其中包含至少**AddressID**並**縣 （市)** 資料行。  
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  （您可以將來源直接連接到不需要任何轉換的目的地。）此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，其中包含至少**AddressID**並**縣 （市)** 資料行。  
   
 5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 輸入資料行。  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，而且應該包含至少**AddressID**並**縣 （市)** 資料行。  
+3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  （您可以將來源直接連接到不需要任何轉換的目的地。）此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，而且應該包含至少**AddressID**並**縣 （市)** 資料行。  
   
 4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 資料行。  
   

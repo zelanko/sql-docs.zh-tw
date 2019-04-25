@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446685"
 ---
 # <a name="interface-conformance-levels"></a>介面一致性層級
 調節的目的是通知應用程式所提供功能給它的驅動程式。 函式為基礎的層級配置夠無法達到此目標。 在 ODBC 3。*x*，驅動程式就會歸類在根據他們擁有的功能。 支援的功能，才能包含支援此函式;它也可以包含支援所傳回的資訊類型的描述項欄位、 陳述式屬性、"Y"值**SQLGetInfo**，依此類推。  

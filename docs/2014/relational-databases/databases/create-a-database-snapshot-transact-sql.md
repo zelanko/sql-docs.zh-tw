@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762339"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
@@ -28,7 +28,7 @@ ms.locfileid: "52768330"
   
      [Security](#Security)  
   
-     [最佳作法：命名資料庫快照集](#Naming)  
+     [最佳做法：命名資料庫快照集](#Naming)  
   
 -   **若要建立資料庫快照集，使用：**[Transact-SQL](#TsqlProcedure)  
   
@@ -51,13 +51,13 @@ ms.locfileid: "52768330"
 ###  <a name="Recommendations"></a> 建議  
  本節討論下列最佳作法：  
   
--   [最佳作法：命名資料庫快照集](#Naming)  
+-   [最佳做法：命名資料庫快照集](#Naming)  
   
--   [最佳作法：限制資料庫快照集數目](#Limiting_Number)  
+-   [最佳做法：限制資料庫快照集的數目](#Limiting_Number)  
   
--   [最佳作法：用戶端連線到資料庫快照集](#Client_Connections)  
+-   [最佳做法：用戶端連線到資料庫快照集](#Client_Connections)  
   
-####  <a name="Naming"></a> 最佳作法：命名資料庫快照集  
+####  <a name="Naming"></a> 最佳做法：命名資料庫快照集  
  建立快照集之前，務必先考慮如何命名快照集。 每個資料庫快照集都需要一個唯一的資料庫名稱。 為了方便管理，快照集的名稱可加入用於識別資料庫的資訊，例如：  
   
 -   來源資料庫的名稱。  
@@ -82,13 +82,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> 最佳作法：限制資料庫快照集的數目  
+####  <a name="Limiting_Number"></a> 最佳做法：限制資料庫快照集數目  
  隨時間建立一系列的快照集，可擷取來源資料庫的循序快照集。 每個快照集都會一直保存到確實卸除該快照集為止。 因為每個快照集都會隨著原始頁面更新而不斷成長，所以您可能想要在建立新快照集之後，刪除較早的快照集，以節省磁碟空間。  
   
 > [!NOTE]  
 >  若要還原為資料庫快照集，您需要刪除該資訊庫中的任何其他快照集。  
   
-####  <a name="Client_Connections"></a> 最佳作法：用戶端連接到資料庫快照集  
+####  <a name="Client_Connections"></a> 最佳做法：用戶端連線到資料庫快照集  
  若要使用資料庫快照集，用戶端需要知道去哪裡尋找。 正在建立或刪除某個資料庫快照集時，使用者仍可讀取其他快照集。 但是，當您以新的快照集取代現有的快照集時，必須將用戶端重新導向至新的快照集。 使用者可以利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，手動連接到資料庫快照集。 但是，若要支援實際執行環境，您應該建立程式設計方案，將撰寫報表的用戶端明確導向至資料庫最新的資料庫快照集。  
   
 ###  <a name="Security"></a> 安全性  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467278"
 ---
 # <a name="atomic-blocks"></a>不可部分完成的區塊
   `BEGIN ATOMIC` 是 ANSI SQL 標準的一部分。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 只有在最上層原生編譯預存程序才支援不可部分完成的區塊。  
@@ -123,7 +123,7 @@ ORDER BY c1
 GO  
 ```  
   
- 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果它們發生在不可部分完成的區塊範圍內，將造成交易中止：10772、41301、41302、41305、41325、41332 及 41333。  
+ 記憶體最佳化資料表特有的以下錯誤訊息會毀滅交易。 如果發生在不可部分完成的區塊的範圍，將會造成交易中止：10772、 41301、 41302、 41305、 41325、 41332 和 41333。  
   
 ## <a name="session-settings"></a>工作階段設定  
  當編譯預存程序時，將會修復不可部分完成的區塊內的工作階段設定。 某些設定可以使用 `BEGIN ATOMIC` 來指定，而其他設定則一律固定為相同的值。  

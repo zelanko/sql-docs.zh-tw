@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68c00133fde8c15fb028c013032c316658c056a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466829"
 ---
 # <a name="manage-changesets-master-data-services"></a>管理變更集 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52777410"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 內可以管理所有模型和版本的變更。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。 如需詳細資訊，請參閱[功能區域權限 &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 使用彙總函式 |Microsoft 文件
+title: 使用彙總函式 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743084"
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34026035"
 |彙總函式|加總性|傳回值|  
 |--------------------------|----------------|--------------------|  
 |**Sum**|加法|針對所有子成員，計算值的總和。 這是預設的彙總函式。|  
-|**Count**|加法|擷取所有子成員的計數。|  
+|**計數**|加法|擷取所有子成員的計數。|  
 |**Min**|局部加總|擷取所有子成員的最低值。|  
 |**Max**|局部加總|擷取所有子成員的最高值。|  
 |**DistinctCount**|非加法|擷取所有唯一子成員的計數。 如需詳細資訊，請參閱下一節中的 [About Distinct Count measure](../../analysis-services/multidimensional-models/use-aggregate-functions.md#bkmk_distinct) (關於相異計數量值)。|  
@@ -66,7 +66,7 @@ ms.locfileid: "34026035"
   
 ## <a name="see-also"></a>另請參閱  
  [量值和量值群組](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 函數參考 & #40;MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
  [定義局部加總行為](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

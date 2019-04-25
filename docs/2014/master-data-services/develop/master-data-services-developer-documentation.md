@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765431"
 ---
 # <a name="developer39s-guide-master-data-services"></a>開發人員&#39;指南 (Master Data Services)
   尋找有關如何撰寫程式碼以自訂您和您的使用者與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 互動之方式的資訊。 了解如何：  

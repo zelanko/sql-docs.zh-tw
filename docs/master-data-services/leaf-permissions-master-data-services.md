@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467819"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52817800"
   
 -   系統不會強制使用指派給 **Name** 和 **Code** 屬性的權限。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取分葉成員、屬性。|  
 |**建立**|使用者可以建立分葉成員，並在建立期間指派屬性值。|  
@@ -51,21 +51,21 @@ ms.locfileid: "52817800"
 ## <a name="attribute-permissions"></a>屬性權限  
  屬性權限適用於特定實體的屬性值。 只有屬性權限的使用者無法加入或移除成員。  
   
-|權限|Description|  
+|權限|描述|  
 |----------------|-----------------|  
 |**讀取**|使用者可以讀取屬性。|  
 |**建立**|使用者可以在建立成員時指派值。|  
 |**Update**|使用者可以更新屬性。|  
 |**刪除**|沒有影響。|  
-|**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
+|**拒絕**|不顯示屬性。<br /><br /> 注意:您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ### <a name="example"></a>範例  
  如果是 Product 實體，請將 [更新] 權限指派給 Subcategory 屬性。 拒絕其他所有屬性的權限。  
   
-|[屬性]|程式碼|Subcategory (更新)|  
+|名稱|程式碼|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} 登山車|  
+|Mountain-100|BK-M201|{5} 登山車|  
   
  在總管中，您可以更新 Subcategory 資料行中的任何屬性值。 如果您沒有屬性的權限，就不會顯示該屬性。  
   

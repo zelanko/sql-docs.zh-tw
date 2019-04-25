@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468720"
 ---
 # <a name="browsing-a-decision-trees-model"></a>瀏覽決策樹模型
   當您開啟分類模型，使用**瀏覽**，此模型會顯示互動式決策樹檢視器，類似於[!INCLUDE[msCoName](../includes/msconame-md.md)]決策樹檢視器中的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 此檢視器會將分類的結果顯示成圖形，而這個圖形是設計來反白顯示區分不同資料群組的準則。 您也可以向下鑽研個別的樹狀結構子集，並且擷取基礎資料。  

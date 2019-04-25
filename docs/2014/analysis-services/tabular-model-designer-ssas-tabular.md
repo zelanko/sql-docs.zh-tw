@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758551"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>表格式模型設計師 (SSAS 表格式)
   表格式模型設計師屬於[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]與 Microsoft 整合式[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010年或更新版本，具有特別用來開發專業表格式模型方案的額外專案類型範本。  
@@ -31,7 +31,7 @@ ms.locfileid: "53364270"
   
 -   [Windows 和功能表](#bkmk_wind_men)  
   
--   [Visual Studio 整合](#bkmk_vsint)  
+-   [Visual Studio Integration](#bkmk_vsint)  
   
 ##  <a name="bkmk_benefits"></a> 優點  
  當您安裝 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]時，用來建立表格式模型的專案範本會加入至可用的專案類型中。 在使用其中一個範本建立新的表格式模型專案之後，您可以使用表格式模型設計師工具和精靈開始撰寫模型。  

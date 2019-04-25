@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746132"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>指定物件計數 (基於使用方式的最佳化精靈)
   使用 **[指定物件計數]** 頁面，即可自動計算 Cube 中的物件計數，或者手動輸入估計的計數。 「基於使用方式的最佳化精靈」會使用物件計數來估計儲存需求。  
@@ -33,7 +33,7 @@ ms.locfileid: "48154058"
  **資料分割計數**  
  (選擇性) 輸入量值群組中估計的資料列數目以及資料分割中估計的屬性成員計數。  
   
- **Count**  
+ **計數**  
  針對所有空白欄位，計算並重新填入 [估計計數] 資料行的值。 已經顯示計數的欄位不會更新。  
   
 ## <a name="see-also"></a>另請參閱  

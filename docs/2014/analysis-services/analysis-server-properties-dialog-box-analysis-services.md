@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636777"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Analysis Server 屬性對話方塊 (Analysis Services)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [Analysis Server 屬性] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的一般、語言/定序和安全性設定。 以滑鼠右鍵按一下**物件總管**中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，然後從操作功能表選取 [屬性]，即可顯示 [Analysis Server 屬性] 對話方塊。 **[Analysis Server 屬性]** 對話方塊包含以下屬性。  
@@ -84,7 +84,7 @@ ms.locfileid: "50145093"
   
      如果未選取此選項， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將有腔調與無腔調的字母視為相同。  
   
--   [區分假名] 是用來根據為關聯之語言或字母提供的字典規則來排序和比較資料，以及區別兩種日文假名字元：平假名和片假名。  
+-   **區分假名**是用來和比較提供的相關聯的語言或字母，且區分兩類日文的假名字元的字典規則為基礎的資料：平假名與片假名。  
   
      如果未選取此選項， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將平假名與片假名字元視為相同。  
   

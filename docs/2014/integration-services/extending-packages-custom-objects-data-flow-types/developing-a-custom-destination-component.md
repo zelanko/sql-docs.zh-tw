@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f090cd6dbfaa0194bc02af581fc4765fca9eac0b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768974"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 讓開發人員能夠撰寫可連線至任何自訂資料來源並在其中儲存資料的自訂目的地元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
