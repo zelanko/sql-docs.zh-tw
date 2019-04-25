@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ec8ac0bbb56282474bde4e399eaf1d32b0e1996
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767340"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>查閱轉換編輯器 (進階頁面)
   使用 [查閱轉換編輯器] 對話方塊的 [進階] 頁面，即可設定部分快取並修改查閱轉換的 SQL 陳述式。  

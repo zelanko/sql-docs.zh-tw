@@ -1,5 +1,5 @@
 ---
-title: 定義和瀏覽 Kpi |Microsoft 文件
+title: 定義和瀏覽的 Kpi |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51df180342f48ea9d8f620bb1abe61edb4dfa6a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469665"
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>課程 7-1-定義和瀏覽 Kpi
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34019275"
   
     下圖顯示 [Cube 設計師] 的 [KPI] 索引標籤。  
   
-    ![Kpi 索引標籤，Cube 設計工具的](../analysis-services/media/l7-kpi-1.gif "Kpi 索引標籤，Cube 設計工具")  
+    ![Kpi 索引標籤，Cube 設計師](../analysis-services/media/l7-kpi-1.gif "Kpi 索引標籤，Cube 設計師 的")  
   
 2.  在 [KPI] 索引標籤的工具列上，按一下 [新增 KPI] 按鈕。  
   
@@ -269,5 +269,5 @@ ms.locfileid: "34019275"
     北美地區轉售商 Q3 CY 2007 自行車銷售的毛利率隨即出現。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 8 課： 定義動作](../analysis-services/lesson-8-defining-actions.md)  
+[第 8 課：定義動作](../analysis-services/lesson-8-defining-actions.md)  
   

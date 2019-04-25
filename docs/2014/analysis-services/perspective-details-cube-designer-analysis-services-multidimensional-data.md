@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743454"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>檢視方塊詳細資料 (檢視方塊索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中 **[檢視方塊]** 索引標籤上的 **[檢視方塊詳細資料]** 窗格，即可管理查詢所選檢視方塊之使用者可用的中繼資料。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95b7d538c2ace45b42c947b56ca5a5bd5f981ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744274"
 ---
 # <a name="data-truncation-detection-enabled-using-extendedansisql"></a>使用 ExtendedAnsiSQL 啟用的資料截斷偵測
 當 ExtendedAnsiSQL 旗標開啟應用程式會將資料插入 char 或 binary 資料行且資料會被截斷時，就會偵測到截斷。 ExtendedAnsiSQL 旗標為關閉時，會將資料截斷而不發出警告，因為它是在舊版的 ODBC 桌面資料庫驅動程式。

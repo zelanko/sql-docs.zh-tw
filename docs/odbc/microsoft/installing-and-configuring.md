@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d190dec4220a7ddb4bde5cc4a730396a14a8add9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471236"
 ---
 # <a name="installing-and-configuring"></a>安裝和設定
 若要下載 Visual FoxPro ODBC Driver，請參閱[Visual FoxPro ODBC Driver 下載網站](https://go.microsoft.com/fwlink/?LinkId=121318)。  

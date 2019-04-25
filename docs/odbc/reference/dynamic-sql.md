@@ -1,5 +1,5 @@
 ---
-title: 動態 SQL |Microsoft Docs
+title: Dynamic SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628694"
 ---
 # <a name="dynamic-sql"></a>動態 SQL
 雖然靜態 SQL 也適用於多種情況，還有無法事先判斷資料存取的應用程式類別。 例如，假設試算表，讓使用者能夠輸入的查詢，試算表然後傳送到 DBMS 以擷取資料。 此查詢的內容很明顯地無法得知程式設計人員寫入試算表程式時。  

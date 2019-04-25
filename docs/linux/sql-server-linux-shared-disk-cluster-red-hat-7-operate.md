@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635584"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>操作 SQL server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -144,7 +144,7 @@ sudo crm_mon
    > [!NOTE]
    > 如果您使用其他防火牆沒有內建的高可用性組態，下列連接埠必須開啟 pacemaker 才能與叢集中其他節點通訊
    >
-   > * TCP：連接埠 2224，3121 21064
+   > * TCP:連接埠 2224，3121 21064
    > * UDP:連接埠 5405
 
 1. 新的節點上安裝 Pacemaker 套件。
@@ -261,7 +261,7 @@ pacemaker: active/enabled
 
     下列連接埠必須開啟 pacemaker 才能才能夠進行通訊的所有節點上。
     
-    - * * TCP:2224，3121、 21064
+    - * * TCP:2224, 3121, 21064
 
 - **Pacemaker 或執行 Corosync 服務**
 

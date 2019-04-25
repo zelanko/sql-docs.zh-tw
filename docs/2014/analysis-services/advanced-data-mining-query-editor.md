@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635630"
 ---
 # <a name="advanced-data-mining-query-editor"></a>進階資料採礦查詢編輯器
   **資料採礦進階查詢編輯器**是工具，可協助您建立自訂模型和查詢。  

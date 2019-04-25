@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c542edcd14da08ab58770d7706139762c9735902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757337"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>從 SQL Server Data Tools 部署 (SSAS 表格式)
   使用本主題的工作，透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [部署] 命令來部署表格式模型方案。  
@@ -32,7 +32,7 @@ ms.locfileid: "48054138"
 -   [部署狀態](#bkmk_deploy_status)  
   
 ##  <a name="bkmk_deploy"></a> 設定部署選項與部署伺服器屬性  
- 在您部署表格式模型方案之前，必須先指定 [部署選項] 與 [部署伺服器] 屬性。 如需有關部署屬性和設定的詳細資訊，請參閱[表格式模型方案部署&#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)。  
+ 在您部署表格式模型方案之前，必須先指定 [部署選項] 與 [部署伺服器] 屬性。 如需部署屬性和設定的詳細資訊，請參閱 [表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)中的 [部署] 命令來部署表格式模型方案。  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>若要設定部署選項與部署伺服器屬性  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48054138"
 3.  在 [部署伺服器] 中，指定 [伺服器] (名稱)、[版本]、[資料庫] (名稱) 及 [Cube 名稱] 屬性設定 (如果與預設設定不同)，然後按一下 [確定]。  
   
 > [!NOTE]  
->  您也可以指定 [預設部署伺服器] 屬性設定，自動將您建立的任何新專案部署至指定的伺服器。 如需詳細資訊，請參閱[設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)。  
+>  您也可以指定 [預設部署伺服器] 屬性設定，自動將您建立的任何新專案部署至指定的伺服器。 如需詳細資訊，請參閱 [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)中的 [部署] 命令來部署表格式模型方案。  
   
 ##  <a name="bkmk_deploy_proc"></a> 部署表格式模型方案  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48054138"
  按一下可停止部署作業。 如果部署作業耗費時間過長，或者如果有太多錯誤，這個選項會很有用。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型方案部署&#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)  
+ [表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)  
   
   

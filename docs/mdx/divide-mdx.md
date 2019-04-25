@@ -1,5 +1,5 @@
 ---
-title: 除 (MDX) |Microsoft 文件
+title: 除 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86b4d8c97996733396e3062e134b2e31d2819ec0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471309"
 ---
 # <a name="divide-mdx"></a>除 (MDX)
 
@@ -29,10 +29,10 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ```  
   
 ## <a name="arguments"></a>引數  
- *分子*  
+ *numerator*  
  被除數或要除以的數字。  
   
- *分母*  
+ *denominator*  
  除數或要除的數字。  
   
  *alternateresult*  
@@ -42,6 +42,6 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
  除以 0 的替代結果必須是常數。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

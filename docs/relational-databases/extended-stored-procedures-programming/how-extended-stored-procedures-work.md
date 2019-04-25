@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ab0864e8eb320c63bd757d4c6edab384c6c821b8
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742234"
 ---
 # <a name="how-extended-stored-procedures-work"></a>擴充預存程序運作方式
 

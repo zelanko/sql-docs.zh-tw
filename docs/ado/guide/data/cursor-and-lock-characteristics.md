@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8507be55ae84a3a03fd75871106bc39e0631d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472611"
 ---
 # <a name="cursor-and-lock-characteristics"></a>資料指標與鎖定的特性
 資料指標的特性，取決於提供者的能力，雖然下列優點和缺點通常適用於各種類型的資料指標和鎖定。  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79e359fb941ed847d1dadbf2ae499e06b9e2e29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767110"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 連接管理員 UI 參考
   使用 **[設定 ODBC 連接管理員]** 對話方塊，將連接加入 ODBC 資料來源。  

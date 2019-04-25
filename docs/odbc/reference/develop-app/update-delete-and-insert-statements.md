@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632476"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE 以及 INSERT 陳述式
 以 SQL 為基礎的應用程式對資料表進行變更，藉由執行**更新**，**刪除**，並**插入**陳述式。 這些陳述式屬於 Minimum SQL 文法的一致性層級，而且必須支援的所有驅動程式和資料來源。  

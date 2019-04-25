@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634720"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-NFS-Linux 上的 SQL Server
 
@@ -36,7 +36,7 @@ NFS 或網路檔案系統，是共用磁碟，在 Linux 領域，但沒有 Windo
 
 請確定您的安全性標準會強制執行存取。 當設定的資料夾，請確定只有 FCI 中參與的伺服器應該會看到 NFS 資料夾。 修改過的 /etc/exports 上以 Linux 為基礎的 NFS 解決方案的範例如下所示其中資料夾是限制為 FCIN1 及 FCIN2。
 
-![05 nfsacl][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 

@@ -1,5 +1,5 @@
 ---
-title: 定義維度 |Microsoft 文件
+title: 定義維度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467922"
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>課程 2-1-定義維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34016475"
   
 5.  在 [主資料表] 清單中，選取 [日期]。  
   
-6.  按一下 **[下一步]**。  
+6.  按一下 [下一步] 。  
   
 7.  在 [選取維度屬性] 頁面上，選取下列屬性旁的核取方塊：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34016475"
   
     -   **Calendar Semester**  
   
-8.  將 [完整日期替代索引鍵] 屬性之 [屬性類型] 資料行的設定，從 [一般] 變更為 [日期]。 若要這樣做，請在 [屬性類型] 資料行中按一下 [一般]。 然後，按一下箭號，以便展開選項。 接著，按一下 [日期] > [日曆] > [日期]。 按一下 **[確定]**。 重複這些步驟，即可變更屬性的屬性類型，如下所示：  
+8.  將 [完整日期替代索引鍵] 屬性之 [屬性類型] 資料行的設定，從 [一般] 變更為 [日期]。 若要這樣做，請在 [屬性類型] 資料行中按一下 [一般]。 然後，按一下箭號，以便展開選項。 接著，按一下 [日期] > [日曆] > [日期]。 按一下 [確定] 。 重複這些步驟，即可變更屬性的屬性類型，如下所示：  
   
     -   [英文月份名稱] 變更為 [月]  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34016475"
   
     -   [日曆半年度] 變更為 [半年]  
   
-9. 按一下 **[下一步]**。  
+9. 按一下 [下一步] 。  
   
 10. 在 [正在完成精靈] 頁面上，您可以在 [預覽] 窗格中看見 [日期] 維度及其屬性。  
   

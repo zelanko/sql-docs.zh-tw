@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740529"
 ---
 # <a name="source-property-example-vb"></a>Source 屬性範例 (VB)
 此範例示範[來源](../../../ado/reference/ado-api/source-property-ado-recordset.md)藉由開啟三個屬性[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)不同的資料來源為基礎的物件。  

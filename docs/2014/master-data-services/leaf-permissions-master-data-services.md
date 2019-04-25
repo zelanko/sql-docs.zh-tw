@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764879"
 ---
 # <a name="leaf-permissions-master-data-services"></a>分葉權限 (Master Data Services)
   分葉權限適用於某個實體所有分葉成員的屬性值。  
@@ -47,15 +47,15 @@ ms.locfileid: "52812100"
 |----------------|-----------------|  
 |**唯讀**|顯示屬性，但使用者無法變更屬性值。|  
 |**Update**|顯示屬性，而且使用者可以變更屬性值。|  
-|**拒絕**|不顯示屬性。<br /><br /> 注意：您無法明確拒絕存取 Name 和 Code 屬性。|  
+|**拒絕**|不顯示屬性。<br /><br /> 注意:您無法明確拒絕存取 Name 和 Code 屬性。|  
   
 ### <a name="example"></a>範例  
  如果是 Product 實體，請將 [更新] 權限指派給 Subcategory 屬性。 拒絕其他所有屬性的權限。  
   
 |名稱|程式碼|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} 登山車|  
+|Mountain-100|BK-M201|{5} 登山車|  
   
  在總管中，您可以更新 Subcategory 資料行中的任何屬性值。 如果您沒有屬性的權限，就不會顯示該屬性。  
   

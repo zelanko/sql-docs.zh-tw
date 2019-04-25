@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626203"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選取及設定要測試的受影響物件 (OracleToSQL)
 在此步驟中，您選取測試，並設定為比較程序的函式的輸出參數，以及函式的傳回值的物件。  

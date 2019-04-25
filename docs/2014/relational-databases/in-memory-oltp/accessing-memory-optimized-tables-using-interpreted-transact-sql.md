@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468605"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
   您可以使用任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或 DML 作業 (SELECT、INSERT、UPDATE 或 DELETE)、特定批次以及 SQL 模組 (例如預存程序、資料表值函數、觸發程序和檢視表) 來存取記憶體最佳化的資料表，僅有一些例外狀況。  
@@ -42,7 +42,7 @@ ms.locfileid: "48124018"
 |跨資料庫|跨資料庫查詢<br /><br /> 跨資料庫交易<br /><br /> 連結的伺服器|  
   
 ## <a name="table-hints"></a>資料表提示  
- 如需有關資料表提示的詳細資訊，請參閱。 [資料表提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)。 新增支援 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的快 SNAPSHOT 隔離。  
+ 如需有關資料表提示的詳細資訊，請參閱。 [資料表提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)。 新增支援 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的快 SNAPSHOT 隔離。  
   
  使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)]存取記憶體最佳化的資料表時，不支援下列資料表提示。  
   

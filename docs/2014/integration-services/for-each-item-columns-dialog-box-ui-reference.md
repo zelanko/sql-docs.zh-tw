@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d6e1b3a7b0be7e158ff2594a9d629cd82aaff95e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768213"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>For Each 項目資料行對話方塊 UI 參考
   使用 [For Each 項目資料行] 對話方塊，即可定義項目中 Foreach 項目列舉值會列舉的資料行。  

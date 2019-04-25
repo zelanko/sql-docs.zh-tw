@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743604"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>新增採礦模型對話方塊 (採礦結構檢視)
   使用 [新增採礦模型] 對話方塊，即可將新的採礦模型加入至採礦結構。  

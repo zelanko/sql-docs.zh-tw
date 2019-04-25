@@ -1,5 +1,5 @@
 ---
-title: bcp_batch |Microsoft Docs
+title: bcp_batch | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631382"
 ---
 # <a name="bcpbatch"></a>bcp_batch
   認可所有資料列先前大量複製從程式變數，並且傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所[bcp_sendrow](bcp-sendrow.md)。  

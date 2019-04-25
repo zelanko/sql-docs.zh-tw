@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468334"
 ---
 # <a name="application-level-partitioning"></a>應用程式層級資料分割
   這個範例會示範應用程式層級資料分割資料儲存在記憶體最佳化的資料表或根據順序是否落在特定日期之前或之後磁碟基礎的資料表中的位置。 所有的訂單更新或等於 *hotDate* 用於記憶體最佳化的資料表和之前的所有訂單的 *hotDate* 以磁碟為基礎的資料表中。 假設有一個具有許多並行交易的極端 OLTP 工作負載。 即使有數項並行交易嘗試變更 *hotDate*，仍必須強制執行此商務規則 (記憶體最佳化資料表中最近的訂單)。  

@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631949"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>開始使用 SSMA for Sybase 主控台 (SybaseToSQL)
 本章節描述的程序啟動並開始使用 SSMA for Sybase 主控台應用程式。 也列出本文件所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -57,11 +57,11 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 下表中，會出現色彩-解譯的主控台輸出：  
   
-|Color|描述|  
+|色彩|描述|  
 |---------|---------------|  
 |紅色|在執行期間的嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
-|白色|指令碼檔案的命令、 訊息類型|  
+|白皮書|指令碼檔案的命令、 訊息類型|  
 |黃色|警告|  
 |綠色|提示使用者輸入|  
 |11：青色|開始時間、 完成時間和作業的結果。|  

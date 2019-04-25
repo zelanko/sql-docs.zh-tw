@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465450"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>瀏覽器 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[瀏覽器]** 索引標籤，瀏覽 Cube 中的維度、量值和 KPIS。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 瀏覽器已與 MDX 查詢設計工具整合，並提供一個圖形使用者介面來協助您建立 MDX 查詢、篩選與配量 Cube，以及向下鑽研到階層。  
   
- **[瀏覽器]** 索引標籤有兩種模式： **設計模式** 和 **查詢模式**。 在任一種模式下，您都可以使用 **[中繼資料]** 窗格中的物件瀏覽 Cube，或者您可以將成員從 **[中繼資料]** 窗格拖曳到查詢區域中，以建立可擷取您要使用之資料的 MDX 查詢。  
+ **瀏覽器** 索引標籤有兩種模式：**設計模式**並**查詢模式**。 在任一種模式下，您都可以使用 **[中繼資料]** 窗格中的物件瀏覽 Cube，或者您可以將成員從 **[中繼資料]** 窗格拖曳到查詢區域中，以建立可擷取您要使用之資料的 MDX 查詢。  
   
  **瀏覽及查詢使用圖形設計模式**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48093166"
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

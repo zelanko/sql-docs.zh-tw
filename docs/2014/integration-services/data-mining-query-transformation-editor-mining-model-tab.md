@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 313c56f6f5a9b5bfd2ecf5662b5862ee7b1265c1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770025"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>資料採礦查詢轉換編輯器 (採礦模型索引標籤)
   使用 **[資料採礦查詢轉換編輯器]** 對話方塊的 **[採礦模型]** 索引標籤，來選取資料採礦結構及其採礦模型。  

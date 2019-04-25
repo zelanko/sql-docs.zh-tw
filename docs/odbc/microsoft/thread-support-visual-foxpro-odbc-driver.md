@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77187802bb57a832263ec2070564754e87f21345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632921"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>執行緒支援 (Visual FoxPro ODBC Driver)
 Visual FoxPro ODBC Driver 是安全執行緒。 存取權的環境控制代碼 (*h*)，連接控制代碼 (*hdbc*)，以及陳述式控制代碼 (*hstmt*) 包裝在適當的號誌，以防止其他處理序從存取，而可能變更驅動程式的內部資料結構。  

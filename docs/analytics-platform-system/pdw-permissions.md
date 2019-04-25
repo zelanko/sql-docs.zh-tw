@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639512"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>在平行處理資料倉儲中管理權限
 這篇文章描述的需求和選項，以管理 SQL Server PDW 的資料庫權限。  
@@ -86,7 +86,7 @@ ms.locfileid: "52523586"
 -   PUBLIC 伺服器角色無法繼承隱含權限。 必須明確授與給 PUBLIC 角色的任何權限。  
   
 ## <a name="BackupProc"></a>判斷權限  
-登入有權執行特定動作取決於授與或拒絕登入、 使用者和使用者為成員的角色的權限。 伺服器層級權限 (例如**CREATE LOGIN**並**VIEW SERVER STATE**) 可用於伺服器層級主體 （登入）。 資料庫層級權限 (例如**選取**從資料表或**EXECUTE**程序) 可用於資料庫層級主體 （使用者和資料庫角色）。  
+登入有權執行特定動作取決於授與或拒絕登入、 使用者和使用者為成員的角色的權限。 伺服器層級權限 (例如**CREATE LOGIN**並**VIEW SERVER STATE**) 可用於伺服器層級主體 （登入）。 資料庫層級權限 (例如**選取 **從資料表或**EXECUTE**程序) 可用於資料庫層級主體 （使用者和資料庫角色）。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隱含和明確權限  
 「明確權限」 是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。 資料庫層級權限詳列於[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)檢視。 伺服器層級權限詳列於[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)檢視。  

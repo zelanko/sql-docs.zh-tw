@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637616"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>比較具類型的 XML 與不具類型的 XML
   您可以建立 `xml` 類型的變數、參數和資料行。 此外，也可以選擇性地將 XML 結構描述的集合與 `xml` 類型的變數、參數和資料行建立關聯。 在此情況下，`xml`資料類型執行個體則稱為*型別*。 非此種情況下的 XML 執行個體則稱為「不具類型」。  
@@ -83,7 +83,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>範例將 xml 類型的參數傳遞給預存程序  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>範例將 xml 類型的參數傳遞至預存程序  
  下列範例會將 `xml` 類型的參數傳送給預存程序，並為此變數指定結構描述：  
   
 ```  
@@ -105,7 +105,7 @@ AS
   
  在資料類型的階層中，`xml` 資料類型會出現在 `sql_variant` 和使用者定義類型的下面，但是會在任何內建類型的上面。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例指定 Facet 來約束具類型的 xml 資料行  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>範例指定 Facet 來約束 xml 類型資料行  
  對於具類型的 `xml` 資料行而言，您可以約束資料行，讓儲存在其中的每個執行個體只能有單一的最上層元素。 作法是，在建立資料表時指定選擇性的 `DOCUMENT` Facet，如下列範例所示：  
   
 ```  

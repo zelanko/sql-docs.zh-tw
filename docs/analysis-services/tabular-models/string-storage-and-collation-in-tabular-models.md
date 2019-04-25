@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471982"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格式模型中的字串儲存和定序
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53071805"
   
  這篇文章描述的壓縮和儲存，字串的機制，並提供的定序和語言如何影響表格式模型中文字公式的結果範例。  
   
-## <a name="storage"></a>Storage  
+## <a name="storage"></a>儲存體  
  在表格式模型中，所有資料都是高度壓縮，以更好地放入記憶體中。 因此，可視為語彙相等的所有字串只儲存一次。 該字串的第一個執行個體做為標準表示，並將此後每個相等字串編制索引為與第一次出現字串相同的壓縮值。  
   
  關鍵問題是：語彙相等字串的構成要素為何？ 如果兩個字串可視為相同字組，它們就是視為語彙相等。 例如，在英語中，當您在字典中搜尋 **violin** 一字時，根據字典的編輯原則，可能會找到項目 **Violin** 或 **violin**，但通常您會認為這兩個字是相等的，並且忽略大小寫的差異。 在表格式模型中，決定兩個字串是否語彙相等的因素不是編輯原則或甚至是使用者喜好設定，而是指派給資料行的地區設定和定序順序。  
