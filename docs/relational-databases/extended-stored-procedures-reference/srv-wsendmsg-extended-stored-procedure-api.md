@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c49d9e3ac3ba60ded98c7bdba55465b914bf1b28
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704481"
 ---
 # <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ msglen
 -   當透過網路傳送錯誤訊息時發生錯誤。  
   
 > [!IMPORTANT]  
->  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)。  
+>  您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另請參閱  
  [srv_sendmsg &#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md)  

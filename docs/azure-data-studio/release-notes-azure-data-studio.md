@@ -3,7 +3,7 @@ title: 版本資訊
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 版本資訊
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
-ms.translationtype: MT
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381586"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963784"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio 的版本資訊
 
 **[下載並安裝最新版的 ！](download.md)**
+
+## <a name="april-2019"></a>2019 年 4 月
+
+2019 年 4 月 18 日&nbsp;  /  &nbsp;版本：1.6.0 
+
+&nbsp;
+
+| 變更 | 詳細資料 |
+| :----- | :------ |
+| 重新命名**伺服器**tab 鍵移至**連線** | |
+| 為 [連線] 底下 Azure viewlet 移動 Azure 資源總管 | 使用者現在可以在 [連線] 檢視中檢視 Azure viewlet 透過其 Azure SQL 執行個體，並展開以檢視每個伺服器或資料庫底下的物件。|
+| SQL Notebook 增強功能 | &bull; &nbsp; 新增的工具列按鈕以清除所有儲存格的輸出 <br/>&bull; &nbsp; 若要執行的所有儲存格的工具列上加入的按鈕 <br/>&bull; &nbsp; 固定的連接名稱，而非伺服器名稱 (如果設定) 在 附加至下拉式清單中 <br/>&bull; &nbsp; 修正未呈現時使用相對映像路徑的 markdown 中的映像 <br/>&bull; &nbsp; 改良的功能，藉由新增 notebook 方格中連按兩下 自動調整大小資料行大小，以及改善的滑鼠滾輪支援 <br/>&bull; &nbsp; 安裝 python 透過 notebook 時，改善錯誤處理和 python 安裝恢復功能 <br/>&bull; &nbsp; [請選取所有的項目] 功能選取筆記本資料格時的增強功能 <br/>&bull; &nbsp; Notebook 連接，以防止關閉 notebook 和影響的物件總管 中連接的增強功能 <br/>&bull; &nbsp; 改善的 notebook 體驗 notebook 中斷連線，且需要連接到執行資料格時，向使用者顯示一則訊息<br/>&bull; &nbsp; 未儲存的 notebook，以再次啟動廣告時，在廣告解除凍結的改進的支援 |
+| 已解決的 bug 和問題。 | 請參閱[Bug 和問題，請在 GitHub 上的](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>年 3 月 2019 (Hotfix)
 
@@ -220,7 +234,7 @@ _0.32.8 包含幾個 0.32.7 中找到的迴歸修正 ([# 1971年](https://github
 ### <a name="bug-fixes-august-2018"></a>Bug 修正，2018 年 8 月
 
 - 剖析 SQL 查詢編輯器 視窗中的，使用`Parse Syntax`命令。
-- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的]。
+- 修正[發出 #143](https://github.com/Microsoft/azuredatastudio/issues/143):按兩下 [未選取變數名稱中的 []。
 - 修正[問題 #387](https://github.com/Microsoft/azuredatastudio/issues/387):SQL 索引標籤 DB 圖示為紅色。
 - 修正[發出 #825](https://github.com/Microsoft/azuredatastudio/issues/825):要求：自動連接到目前的伺服器，做為指令碼之後... 
 - 修正[問題 1278](https://github.com/Microsoft/azuredatastudio/issues/1278): sqlops.desktop [桌面項目]-名稱和註解的備援值。

@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745787"
 ---
 # <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (擴充預存程序 API)
     

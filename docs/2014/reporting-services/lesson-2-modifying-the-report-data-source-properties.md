@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026419"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964794"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>第 2 課：修改報表資料來源屬性
   在這一課，您將使用報表管理員來選取傳遞給收件者的報表。 您將定義的資料驅動訂閱將散發 **建立基本資料表報表 &#40;SSRS 教學課程&#41;** 教學課程中建立的 [建立基本資料表報表 &amp;#40;SSRS 教學課程&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)報表。 在下面的步驟中，您將修改報表用來取得資料的資料來源連接資訊。 只有使用 **預存認證** 來存取報表資料來源的報表可以透過資料驅動訂閱散發。 自動報表處理需要預存認證。  
@@ -39,7 +39,7 @@ ms.locfileid: "56026419"
   
 2.  瀏覽到包含 **Sales Orders** 報表的資料夾，然後在報表的內容功能表中，按一下 **[管理]**。  
   
-     ![開啟 [報表] 內容功能表，然後選取 [管理]](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "開啟報表 內容功能表，然後選取 [管理]")  
+     ![開啟 [報表] 內容功能表，然後選取 [管理]](../../2014/tutorials/media/ssrs-tutorial-datadriven-manage-report.gif "開啟報表] 內容功能表，然後選取 [管理]")  
   
 3.  按一下 [資料來源] 索引標籤。  
   
@@ -114,11 +114,11 @@ ms.locfileid: "56026419"
   
          ![具有可見參數區域的報表檢視器](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "具有可見參數區域的報表檢視器")  
   
-8.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關用於資料表教學課程中的專案屬性的詳細資訊，請參閱 ' 若要將報表發行至報表伺服器 （選擇性）' 區段的[第 6 課：加入群組和總計&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+8.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關用於資料表教學課程中的專案屬性的詳細資訊，請參閱 ' 若要將報表發行至報表伺服器 （選擇性）' 區段的[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ##  <a name="bkmk_redeploy"></a> 若要重新部署報表  
   
-1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關用於資料表教學課程中的專案屬性的詳細資訊，請參閱 ' 若要將報表發行至報表伺服器 （選擇性）' 區段的[第 6 課：加入群組和總計&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
+1.  請重新部署報表，讓下一課的訂閱組態能夠運用您在這一課所做的變更。 如需有關用於資料表教學課程中的專案屬性的詳細資訊，請參閱 ' 若要將報表發行至報表伺服器 （選擇性）' 區段的[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 2.  在工具列上，按一下 **[建置]** ，然後按一下 **[部署教學課程]**。  
   
