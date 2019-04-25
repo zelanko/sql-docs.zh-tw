@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d14b1bf3200802e9fab359ba3ede9fa295911fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760930"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>修復 Distributed Replay 安裝
   修復 Distributed Replay 元件 (控制器或用戶端) 會執行下列動作：  
