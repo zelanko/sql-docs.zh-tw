@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: 在具有疏鬆資料行的資料表上呼叫 SQLColumns
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 如何：將資料列插入至 Geography 資料行 (ODBC)
+    - name: 如何：將資料列插入 Geography 資料行 (ODBC)
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: 取得相互 Kerberos 驗證
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: release-landing
 ms.date: 12/15/2018
 ms.openlocfilehash: 2cafca919cc7592b9b7c6998b1f20910e9be7d4e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206645"
 ---
 <div id="main" class="v2">
     <div class="container">

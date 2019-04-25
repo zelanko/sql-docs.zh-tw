@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: f1b88c2a82866c171601d5184a90fd0d6362a435
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213565"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -116,7 +116,7 @@ ms.locfileid: "56319119"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>永遠加密</h3>
+                                                    <h3>Always Encrypted</h3>
                                                     <p>可讓用戶端將用戶端應用程式內的敏感性資料加密，且絕對不會向資料庫引擎透露金鑰。 </p>
                                                 </div>
                                             </div>
@@ -154,7 +154,7 @@ ms.locfileid: "56319119"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>[權限]</h3>
+                                                    <h3>權限</h3>
                                                     <p>決定哪些人具有存取 SQL Server 內容的權限。 </p>
                                                 </div>
                                             </div>
