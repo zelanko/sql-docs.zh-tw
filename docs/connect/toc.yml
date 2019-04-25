@@ -1,5 +1,5 @@
 - name: SQL Server ++
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 與 SQL Server 互動的程式設計
   href: ../connect/homepage-sql-connection-programming.md
 - name: SQL Server 驅動程式
