@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0d0cfd668ae945cd54df11fe6110ce59d088980
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746211"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>指定資料行對應對話方塊 (採礦精確度圖表)
   使用 [指定資料行對應] 索引標籤可從外部資料來源選取資料表，並且將資料行對應至資料採礦模型。 接著您就可以使用該外部資料來測試採礦模型的精確度，並將結果顯示在精確度圖表中。  
   
- **如需詳細資訊，請參閱**[測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)。  
+ **如需詳細資訊：＜＞**[測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>選項。  
  **採礦結構**  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_column_store_row_group_physical_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
+title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742044"
 ---
-# <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats & Amp;#40;transact-SQL&AMP;#41;
+# <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   提供有關所有目前資料庫中的資料行存放區索引的目前資料列群組層級資訊。  
@@ -47,12 +47,12 @@ ms.locfileid: "52510846"
 |**total_rows**|**bigint**|資料列數目實體儲存在資料列群組。 壓縮的資料列群組，這包括標示為刪除的資料列。|  
 |**deleted_rows**|**bigint**|實際儲存在壓縮的資料列群組資料列標示為刪除的數目。<br /><br /> 差異存放區中的資料列群組為 0。|  
 |**size_in_bytes**|**bigint**|合併的大小，以位元組為單位，此資料列群組中的所有頁面。 這個大小不包括所需儲存中繼資料或共用的字典的大小。|  
-|**trim_reason**|**tinyint**|觸發 COMPRESSED 資料列群組擁有的原因小於資料列數目上限。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-大量載入<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-溢出|  
+|**trim_reason**|**tinyint**|觸發 COMPRESSED 資料列群組擁有的原因小於資料列數目上限。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-大量載入<br /><br /> 3-REORG<br /><br /> 4 - DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6 - RESIDUAL_ROW_GROUP<br /><br /> 7  -  STATS_MISMATCH<br /><br /> 8 - SPILLOVER|  
 |**trim_reason_desc**|**nvarchar(60)**|Popis *trim_reason*。<br /><br /> 0-UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION:從舊版升級時，發生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 1-NO_TRIM:已不會修剪資料列群組。 資料列群組壓縮的 1,048,476 的資料列的最大值。  如果關閉差異資料列群組後，已刪除的資料列的 subsset，資料列數目可能會小於<br /><br /> 2-大量載入：大量載入批次大小限制資料列的數目。<br /><br /> 3-REORG:強制壓縮 REORG 命令的一部分。<br /><br /> 4-DICTIONARY_SIZE:字典大小成長過大而無法壓縮所有資料列在一起。<br /><br /> 5-MEMORY_LIMITATION:沒有足夠的記憶體可壓縮所有資料列在一起。<br /><br /> 6-RESIDUAL_ROW_GROUP:關閉的最後一個資料列群組一部分的資料列 < 1 百萬個索引建立作業期間<br /><br /> STATS_MISMATCH:只會針對資料行存放區的記憶體中資料表上。 如果統計資料不正確地指定 > = 1 百萬個結尾中的合格資料列，但我們發現較少，壓縮的資料列群組會有 < 1 百萬個資料列<br /><br /> 溢出：只會針對資料行存放區的記憶體中資料表上。 如果結尾具有 > 1 百萬個合格的資料列，將最後一個批次的其餘資料列，壓縮如果計數為 1 百萬個 100 k 之間|  
-|**transition_to_compressed_state**|TINYINT|示範如何這個資料列群組已移動從差異存放區中的資料行存放區的壓縮狀態。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-大量載入<br /><br /> 7-合併|  
+|**transition_to_compressed_state**|TINYINT|示範如何這個資料列群組已移動從差異存放區中的資料行存放區的壓縮狀態。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2 - INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-大量載入<br /><br /> 7-合併|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE-作業不適用於差異存放區。 或者，您也可以在升級至之前壓縮資料列群組[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]不在此情況下會保留歷程記錄。<br /><br /> INDEX_BUILD-索引建立或重建索引會壓縮資料列群組。<br /><br /> TUPLE_MOVER-在背景執行 tuple mover 壓縮資料列群組。 會發生這種情況後資料列群組從 已開啟狀態變更為 已關閉。<br /><br /> REORG_NORMAL-重組作業，ALTER INDEX...REORG，從差異存放區的 CLOSED 資料列群組移到資料行存放區。 此 tuple mover 已開始移動資料列群組之前發生。<br /><br /> REORG_FORCED-此資料列群組已在差異存放區中開啟，並已強制到資料行存放區中，它具有完整的數字的資料列之前。<br /><br /> BULKLOAD-大量載入作業不直接使用差異存放區壓縮資料列群組。<br /><br /> 合併-合併作業會合併到此資料列群組的一或多個資料列群組，並接著執行 資料行存放區壓縮。|  
 |**has_vertipaq_optimization**|bit|Vertipaq 最佳化會改善重新排列資料列群組中的資料列才能達到更高的壓縮的資料行存放區壓縮。 在大部分情況下，此最佳化會自動進行。 有兩種情況下，不使用 Vertipaq 最佳化：<br/>  a. 當差異資料列群組移到資料行存放區，並有一或多個非叢集索引的資料行存放區索引-在此情況下 Vertipaq 最佳化會略過以對應索引的變更降至最低<br/> b. 記憶體最佳化資料表上的資料行存放區索引。 <br /><br /> 0 = 否<br /><br /> 1 = 是|  
-|**產生**|BIGINT|此資料列群組相關聯的資料列群組產生。|  
+|**generation**|BIGINT|此資料列群組相關聯的資料列群組產生。|  
 |**created_time**|datetime2|建立此資料列群組時的時鐘時間。<br /><br /> NULL-資料行存放區索引在記憶體中的資料表。|  
 |**closed_time**|datetime2|關閉這個資料列群組時的時鐘時間。<br /><br /> NULL-資料行存放區索引在記憶體中的資料表。|  
   
@@ -94,8 +94,8 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)   
- [sys.column_store_dictionaries &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
+ [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
