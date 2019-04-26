@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 26bf69a399621713f19ae89617766e84f9f817be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936515"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,13 +62,13 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL：** 1<br /><br /> **ZERO：** 1<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
-|**BIGVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255:** 255<br /><br /> **<255：** 實際 *len*|  
-|**BIGCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGBINARY**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGVARBINARY**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255:** 255<br /><br /> **<255：** 實際 *len*|  
-|**NCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**NVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255:** 255<br /><br /> **<255：** 實際 *len*|  
+|**BITN**|**NULL：** 1<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 不適用<br /><br /> **<255：** 不適用|  
+|**BIGVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
+|**BIGCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|**BIGBINARY**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|**BIGVARBINARY**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
+|**NCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255：** 255<br /><br /> **<255：** 255|  
+|**NVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255：** 255<br /><br /> **<255：** 實際 *len*|  
 |**NTEXT**|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
  \*   實際 *len* = 多位元組字元字串 (cch) 的長度  

@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8740e97d1c12cc0fc9198048ea58c12e01e6771c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998277"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,14 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|BITN|**NULL：** VP、NULL<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|BITN|**NULL：** VP、NULL<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** 不適用<br /><br /> **<255：** 不適用|  
 |BIGVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
 |BIGCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|BIGBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 0x00<br /><br /> **>=255：** VP、255 個位元組<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
-|BIGVARBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、0x00<br /><br /> **>=255：** VP、255 個位元組<br /><br /> **<255：** VP、實際資料|  
+|BIGBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP，255 0x00<br /><br /> **>=255：** VP，255 個位元組<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
+|BIGVARBINARY|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP，0x00<br /><br /> **>=255：** VP，255 個位元組<br /><br /> **<255：** VP、實際資料|  
 |NCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、255 個空格<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料 + 填補 (最多 255)|  
 |NVARCHAR|**NULL：** NULL、N/A<br /><br /> **ZERO：** VP、NULL<br /><br /> **>=255：** VP、255 個字元<br /><br /> **<255：** VP、實際資料|  
-|NTEXT|**NULL：** N/A<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **\<255：** N/A|  
+|NTEXT|**NULL：** 不適用<br /><br /> **ZERO：** 不適用<br /><br /> **>=255：** 不適用<br /><br /> **\<255：** 不適用|  
   
  \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
   
