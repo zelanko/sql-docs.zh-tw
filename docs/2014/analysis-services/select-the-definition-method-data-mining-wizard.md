@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747142"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>選取定義方法 (資料採礦精靈)
   使用 **[選取定義方法]** 頁面，即可選取建立新採礦模型的來源。 視選取項目而定，透過精靈進行的路徑會有所不同。因為以 Cube 為基礎的採礦結構與以關聯式資料來源為基礎的採礦結構，需要不同的建構步驟。  
   
- **如需詳細資訊，請參閱**︰[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)、[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **如需詳細資訊：**[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)，[資料採礦精靈] &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="options"></a>選項。  
  **從現有的關聯式資料庫或資料倉儲**  
