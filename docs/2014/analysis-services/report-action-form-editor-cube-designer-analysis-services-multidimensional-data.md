@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748380"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>報表動作表單編輯器 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 中 [動作] 索引標籤的 [報表動作表單編輯器] 窗格，即可修改 [動作組合管理] 中選取的報表動作。  
@@ -35,9 +35,9 @@ ms.locfileid: "48196588"
   
 |值|選取的物件|  
 |-----------|---------------------|  
-|屬性成員|依據 [目標物件] 中的屬性，從層級選取成員。<br /><br /> 注意：使用所選屬性的其他使用者階層，會繼承此報表動作。|  
+|屬性成員|依據 [目標物件] 中的屬性，從層級選取成員。<br /><br /> 注意:使用所選的屬性的其他使用者階層繼承此報表動作。|  
 |資料格|選取了 [目標物件] 中的命名集。 選取 [所有資料格] 即可選取 Cube 中所有的資料格。|  
-|Cube|選取了 [目標物件] 中的 Cube。 選取 CURRENTCUBE 即可使用目前的 Cube。<br /><br /> 注意：在 Cube 可能會被重新命名或動作被複製到其他 Cube 的情況下，使用 CURRENTCUBE 可以提供更大彈性。 建議您使用 CURRENTCUBE 來代表目前的 Cube。|  
+|Cube|選取了 [目標物件] 中的 Cube。 選取 CURRENTCUBE 即可使用目前的 Cube。<br /><br /> 注意:使用 CURRENTCUBE 可以提供額外的可攜性，在 cube 可能會被重新命名或動作被複製到其他 cube 的情況下。 建議您使用 CURRENTCUBE 來代表目前的 Cube。|  
 |維度成員|選取了 [目標物件] 中之維度的成員。|  
 |階層|選取了 [目標物件] 中的階層。|  
 |階層成員|選取了 [目標物件] 中之階層內的成員。|  
@@ -107,7 +107,7 @@ ms.locfileid: "48196588"
  **說明**  
  鍵入動作的選擇性描述。  
   
- **Caption**  
+ **標題**  
  如果 [標題是 MDX] 設為 [False]，則請鍵入要顯示在用戶端應用程式中的動作標題。  
   
  如果 [標題是 MDX] 設為 [True]，請鍵入會傳回標題字串的 MDX 運算式。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756117"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>檢視詳細資料對話方塊 (Analysis Services - 多維度資料)
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [檢視詳細資料] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可檢視有關 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中之訊息或作業的其他詳細資料。 您可依下列方式顯示 **[檢視詳細資料]** 對話方塊  

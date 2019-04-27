@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33e64636e195a9f7048b21f2fd5ad7d37e03f9db
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752977"
 ---
 # <a name="exception-message-box-reference"></a>例外狀況訊息方塊參考
   例外狀況訊息方塊是由 Microsoft.ExceptionMessageBox.dll 組件中的 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別所實作。 這個組件的預設安裝資料夾是 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]。 例外狀況訊息方塊記載於 <xref:Microsoft.SqlServer.MessageBox> 命名空間參考文件集內。 下列範例會在例外狀況處理期間使用 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 物件。  

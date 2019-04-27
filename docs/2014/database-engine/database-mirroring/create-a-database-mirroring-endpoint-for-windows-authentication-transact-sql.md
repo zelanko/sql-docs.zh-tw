@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755296"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>建立 Windows 驗證的資料庫鏡像端點 (Transact-SQL)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立使用 Windows 驗證的資料庫鏡像端點。 若要支援資料庫鏡像或 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個執行個體都需要一個資料庫鏡像端點。 伺服器執行個體只可有一個資料庫鏡像端點，而這個端點具有單一通訊埠。 建立資料庫鏡像端點後，該資料庫鏡像端點即可使用本機系統上的任何可用通訊埠。 伺服器執行個體上的所有資料庫鏡像工作階段都會接聽該通訊埠，且資料庫鏡像的所有內送連接也都會使用該通訊埠。  
@@ -31,9 +31,9 @@ ms.locfileid: "48213888"
   
  **本主題內容**  
   
--   **開始之前**  [安全性](#Security)  
+-   **開始之前：**[安全性](#Security)  
   
--   **使用下列項目，建立資料庫鏡像端點**  [Transact-SQL](#TsqlProcedure)  
+-   **使用下列項目建立資料庫鏡像端點：**[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48213888"
 >  RC4 演算法已被取代。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 我們建議您改用 AES。  
   
 ####  <a name="Permissions"></a> 權限  
- 需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限和 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
+ 需要 CREATE ENDPOINT 權限或系統管理員 (sysadmin) 固定伺服器角色的成員資格。 如需詳細資訊，請參閱 [GRANT 端點權限 &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48213888"
         > [!IMPORTANT]  
         >  每個伺服器執行個體都需要一個且唯一的接聽程式通訊埠。  
   
-    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 \<授權方法> 將用來驗證連線的方法指定為下列其中一項：NTLM、KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
+    -   若為 Windows 驗證，除非您想要端點只使用 NTLM 或 Kerberos 來驗證連接，否則 AUTHENTICATION 是選擇性選項。 *\<授權方法 >* 指定用來驗證連線，為下列其中一種方法：NTLM、 KERBEROS 或 NEGOTIATE。 預設值 NEGOTIATE，將導致端點使用 Windows 交涉通訊協定來選擇 NTLM 或 Kerberos。 視相對端點的驗證層級而定，交涉可讓連接需要或不需要驗證。  
   
     -   依預設，ENCRYPTION 是設定為 REQUIRED。 這表示此端點的所有連接都必須使用加密。 不過，您可以停用加密或使其在端點上為選擇性的。 替代方案如下所示：  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48213888"
   
          如果端點需要加密，其他的端點必須將 ENCRYPTION 設定為 SUPPORTED 或 REQUIRED。  
   
-    -   \<演算法> 提供用於指定端點加密標準的選項。 \<演算法> 的值可為下列任一演算法或演算法組合：RC4、AES、AES RC4 或 RC4 AES。  
+    -   \<演算法> 提供用於指定端點加密標準的選項。 值*\<演算法 >* 可以是下列演算法組合：RC4、 AES、 AES RC4 或 RC4 AES。  
   
          AES RC4 指定此端點將交涉加密演算法，將優先權指定給 AES 演算法。 RC4 AES 指定此端點將交涉加密演算法，將優先權指定給 RC4 演算法。 如果這兩個端點都指定了這兩種演算法 (但指定順序不同)，則以接受連接的端點為準。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48213888"
     > [!NOTE]  
     >  若要變更現有的端點，請使用 [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)中建立使用 Windows 驗證的資料庫鏡像端點。  
   
-###  <a name="TsqlExample"></a> 範例：建立端點以支援資料庫鏡像 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例：建立端點以支援資料庫鏡像 & Amp;#40;transact-SQL&AMP;#41  
  下列範例會在三部不同的電腦系統上建立預設伺服器執行個體的資料庫鏡像端點：  
   
 |伺服器執行個體的角色|主機電腦的名稱|  
@@ -201,7 +201,7 @@ GO
  [選擇加密演算法](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [指定伺服器網路位址 &#40;資料庫鏡像&#41;](specify-a-server-network-address-database-mirroring.md)   
- [範例：使用 Windows 驗證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [範例：設定資料庫鏡像使用 Windows 驗證&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [資料庫鏡像端點 &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

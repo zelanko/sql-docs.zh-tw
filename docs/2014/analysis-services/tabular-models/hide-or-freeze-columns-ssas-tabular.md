@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f16095d7473d098745f16943a60f50c104c94cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757106"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>隱藏或凍結資料行 (SSAS 表格式)
   在模型設計師中，如果資料表中有您不想要顯示的資料行，可以暫時隱藏起來。 隱藏資料行會讓您在螢幕上有更多的空間，以加入新的資料行或是只處理相關的資料行。 您可以從模型設計師的 [資料行] 功能表，以及從每個資料行標頭所提供的右鍵功能表，來隱藏及取消隱藏資料行。 若要在捲動到模型其他區域時，讓某個模型區域保持可見，您可以執行凍結操作，將特定的資料行鎖定於一個區域之中。  
   
 > [!IMPORTANT]  
->  隱藏資料行的功能並不是要用來提供資料安全性，而只是要在模型設計師或報表中簡化及縮短可見資料行清單。 您可以定義安全性角色，以保護資料的安全性。 角色可以限制只有角色中定義的物件，才可以檢視中繼資料和資料。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)。  
+>  隱藏資料行的功能並不是要用來提供資料安全性，而只是要在模型設計師或報表中簡化及縮短可見資料行清單。 您可以定義安全性角色，以保護資料的安全性。 角色可以限制只有角色中定義的物件，才可以檢視中繼資料和資料。 如需詳細資訊，請參閱 [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)中撰寫的表格式模型專案。  
   
  隱藏資料行時，可以選擇只有在模型設計師或報表中作業時才隱藏資料行。 如果隱藏所有資料行，整個資料表在模型設計師中就會顯示為空白。  
   
@@ -59,8 +59,8 @@ ms.locfileid: "48055138"
     >  凍結資料行時，該資料行會移至設計師之資料表的左方 (或上方)。 取消凍結資料行不會將資料行移回其原始位置。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表和資料行&#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
- [檢視方塊&#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
- [角色&#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
+ [資料表與資料行 &#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
+ [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
   
   

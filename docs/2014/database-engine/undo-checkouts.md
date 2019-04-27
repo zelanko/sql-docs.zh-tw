@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773394"
 ---
 # <a name="undo-checkouts"></a>復原簽出
   您可以使用**恢復簽出**命令來取消現有的簽出。 當您修改且儲存了某個檔案之後，又需要回復這些變更時，這尤其有用。  
@@ -48,7 +48,7 @@ ms.locfileid: "48078316"
      **選項。**  
      按一下按鈕右邊的箭頭之後，就會顯示原始檔控制外掛程式特定的恢復簽出選項。  
   
-     **排序**  
+     **Sort**  
      排序顯示資料行的順序。  
   
      **樹狀檢視**  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773820"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - 重新執行組態 (基本重新執行選項)
   在 **[重新執行組態]** 對話方塊中，使用 **[基本重新執行選項]** 頁面來指定如何重新執行追蹤檔案或資料表。  
@@ -35,7 +35,7 @@ ms.locfileid: "48088298"
  啟動 [連接到伺服器] 對話方塊，以連接到另一部伺服器。  
   
  **儲存至檔案**  
- 將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 顯示標準檔案對話方塊中，您可以在其中指定要儲存檔案的位置。  
+ 將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示標準檔案對話方塊，您可以在此指定檔案的儲存位置。  
   
  **儲存至資料表**  
  將重新執行結果儲存至資料表。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 會顯示資料表選取項目對話方塊，您可以在此指定資料表的儲存位置。  
@@ -50,10 +50,10 @@ ms.locfileid: "48088298"
  並行重新執行事件。 此選項比循序重新執行事件還快，但是會停用偵錯。 事件會依其系統處理序識別碼 (SPID) 來排序。  
   
  **顯示重新執行結果**  
- 在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中顯示重新執行結果。  
+ 在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]中顯示重新執行結果。  
   
 ## <a name="see-also"></a>另請參閱  
- [重新執行追蹤資料表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [重新執行追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重新執行追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [重新執行追蹤](../tools/sql-server-profiler/replay-traces.md)  
   

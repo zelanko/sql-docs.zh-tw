@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 162c878c5d39356f08f01c4eb51a0f88e3ed2d45
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753255"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>部署例外狀況訊息方塊應用程式
   例外狀況訊息方塊會安裝[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和支援以使用您自訂的 Windows 應用程式，以改善例外狀況處理。 因為例外狀況訊息方塊由所有版本的安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除了[!INCLUDE[ssEW](../../includes/ssew-md.md)]，您可以使用其他任何設定的任何電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端元件，包括 SDK、 已安裝。  

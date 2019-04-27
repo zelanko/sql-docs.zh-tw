@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747511"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>選取成員 (商業智慧精靈)
   使用 **[選取成員]** 頁面，即可決定商業智慧精靈應該對哪些成員套用 **[設定貨幣轉換選項]** 頁面所指定的貨幣轉換功能。  
@@ -48,7 +48,7 @@ ms.locfileid: "48105140"
 |**量值**|從比率量值群組中選取量值，此群組包含 **[帳戶成員]** 中所選取成員之量值在轉換時使用的匯率。|  
   
  **類型為基礎的帳戶階層**  
- 選取即可套用貨幣轉換功能的所有成員屬性之帳戶階層中其`Type`屬性設定為指定的帳戶類型。  
+ 選取即可套用貨幣轉換功能至帳戶階層中、`Type` 屬性設定為指定之帳戶類型的所有屬性成員。  
   
  若選取，方格會顯示下表列出的選項。  
   

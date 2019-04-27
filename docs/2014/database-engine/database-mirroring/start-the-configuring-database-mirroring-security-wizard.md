@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754438"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>啟動設定資料庫鏡像安全性精靈 (SQL Server Management Studio)
   「設定資料庫鏡像安全性精靈」可用來對涉及鏡像的所有或部分伺服器執行個體，設定初始安全性設定。 這個精靈會與 **[資料庫屬性]** 對話方塊的 **[鏡像]** 頁面一起運作。  

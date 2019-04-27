@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832773"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 上傳工作
   Azure Blob 上傳工作可讓 SSIS 封裝將檔案上傳至 Azure blob 儲存體。   

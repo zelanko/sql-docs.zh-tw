@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748400"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>查詢和篩選 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   Cube 設計師中的 [瀏覽器] 索引標籤區域包含查詢和篩選區域，以協助您從 Cube 選擇用於瀏覽或查詢的資料。 您可以加入所需的 Cube 物件數，然後在資料區域中檢視結果，或者使用 [在 Excel 中進行分析] 將結果匯出至報表，以視覺化使用者檢使用者使用者檢視資料的方式。  
@@ -40,7 +40,7 @@ ms.locfileid: "48074898"
   
 |值|描述|  
 |-----------|-----------------|  
-|**等於**|結果會限制為 **[篩選運算式]** 中定義的集合。|  
+|**Equal**|結果會限制為 **[篩選運算式]** 中定義的集合。|  
 |**不等於**|結果會限制為 **[篩選運算式]** 中定義之集合所排除的成員。|  
 |**In**|結果會限制為 **[篩選運算式]** 中選擇的命名集。|  
 |**不在**|結果會限制為 **[篩選運算式]** 中選擇之命名集所排除的成員。|  

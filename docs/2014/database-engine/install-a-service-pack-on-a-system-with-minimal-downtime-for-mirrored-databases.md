@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779592"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
   此主題描述如何在您安裝 Service Pack 和 Hotfix 時，將鏡像資料庫的停機時間減至最少。 這個程序牽涉到循序升級參與資料庫鏡像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 這種形式的更新，這就所謂*輪流更新*，停機時間減少至只有單一容錯移轉。 請注意，高效能模式工作階段中的鏡像伺服器與主體伺服器地理位置遙遠，輪流更新可能不適合。  
@@ -34,7 +34,7 @@ ms.locfileid: "52520378"
 -   如果工作階段包含見證，建議您最好移除該見證。 否則，當更新鏡像伺服器執行個體時，資料庫可用性會相依於仍然連接至主體伺服器執行個體的見證。 當您移除見證之後，您可以在輪流更新期間的任何時候將它更新，避免發生資料庫停機的風險。  
   
     > [!NOTE]  
-    >  如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 -   如果工作階段是在高效能模式中執行，請將作業模式變更為高安全性模式。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "52520378"
   
 1.  如果鏡像工作階段是在高效能模式下執行，請在執行輪流更新之前，將作業模式變更為高安全性模式，而沒有自動容錯移轉。 請使用下列其中一個方法：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：變更**作業模式**選項設定為**不具有自動容錯移轉 （同步） 的高安全性**利用[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性** 對話方塊。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:變更**作業模式**選項設定為**不具有自動容錯移轉 （同步） 的高安全性**利用[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性**] 對話方塊。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)。  
   
-    -   在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中：將交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
+    -   在  [!INCLUDE[tsql](../includes/tsql-md.md)]:交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)。  
   
 ### <a name="to-perform-the-rolling-update"></a>若要執行輪流更新  
   
-1.  若要讓停機時間減至最少，我們建議您採取以下作法：藉由更新是在所有鏡像工作階段中目前的鏡像伺服器的任何鏡像夥伴開始輪流更新。 您在此時可能必須更新多個伺服器執行個體。  
+1.  為了減少停機時間，我們建議下列各項：藉由更新是在所有鏡像工作階段中目前的鏡像伺服器的任何鏡像夥伴開始輪流更新。 您在此時可能必須更新多個伺服器執行個體。  
   
     > [!NOTE]  
     >  您可以在輪流更新程序的任何時間更新見證。 例如，如果伺服器執行個體在工作階段 1 為鏡像伺服器，而在工作階段 2 為見證，您可以立刻更新此伺服器執行個體。  
@@ -123,9 +123,9 @@ ms.locfileid: "52520378"
   
 1.  您可以選擇使用下列其中一個方法來回到高效能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：變更**作業模式**選項設定為**高效能 （非同步）** 利用[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性** 對話方塊。  
+    -   在 [ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:變更**作業模式**選項設定為**高效能 （非同步）** 利用[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性**] 對話方塊。  
   
-    -   在 [!INCLUDE[tsql](../includes/tsql-md.md)] 中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
+    -   在  [!INCLUDE[tsql](../includes/tsql-md.md)]:使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>讓見證回到鏡像工作階段  
   

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771226"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何編輯 CDC 執行個體屬性
   此程序描述如何使用 CDC 設計工具主控台來編輯 CDC 執行個體的組態屬性。  
@@ -34,15 +34,15 @@ ms.locfileid: "58390846"
   
 5.  在屬性編輯器中，於下列索引標籤上編輯屬性：  
   
-    -   **Oracle**:使用**Oracle**在屬性編輯器中變更您的新執行個體精靈中的 建立 CDC 資料庫 頁面中提供的描述，以及變更 Oracle 記錄採礦資料庫連接資訊 索引標籤。  
+    -   **Oracle**：在屬性編輯器中使用 [Oracle] 索引標籤，以變更您在新增執行個體精靈中 [建立 CDC 資料庫] 頁面上提供的描述，以及變更 Oracle 記錄採礦資料庫連線資訊。  
   
          如需有關您可以在此索引標籤上編輯之內容的詳細資訊，請參閱＜ [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)＞。  
   
-    -   **資料表**:使用 **[資料表]** 索引標籤，以變更您從 Oracle 來源資料庫選取的資料表和資料行。  
+    -   **資料表**：使用 **[資料表]** 索引標籤，以變更您從 Oracle 來源資料庫選取的資料表和資料行。  
   
          如需有關您可以在此索引標籤上編輯之內容的詳細資訊，請參閱＜ [Edit Tables](edit-tables.md)＞。  
   
-    -   **指令碼**:使用**指令碼**執行或重新執行即將設定補充記錄的 Oracle 來源資料庫上的 [指令碼] 索引標籤。  
+    -   **指令碼**：使用 [指令碼] 索引標籤可在即將設定補充記錄的 Oracle 來源資料庫上執行或重新執行指令碼。  
   
          如需有關您可以在此索引標籤上執行之作業的詳細資訊，請參閱＜ [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)＞。  
   

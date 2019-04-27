@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067f76f0f48c11b3946476e6386788dd7b812760
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747450"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>選取採礦結構對話方塊 (採礦精確度圖表檢視)
   使用 **[選取採礦結構]** 對話方塊，即可選取採礦結構，其中包含您想要為其比較或測試精確度的採礦模型。  
@@ -33,6 +33,6 @@ ms.locfileid: "48158998"
 ## <a name="see-also"></a>另請參閱  
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

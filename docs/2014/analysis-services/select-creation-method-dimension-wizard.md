@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1450762e09481d4b8bfa5883c5c752d01216f29e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748110"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>選取建立方法 (維度精靈)
   使用 **[選取建立方法]** 頁面，即可選取建立維度的方式。  

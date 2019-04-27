@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756271"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>疑難排解處理資料 (SSAS 表格式)
   本主題提供有關使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]製作模型時，處理 (重新整理) 模型資料的詳細資訊。 本主題不會提供有關處理模型中已部署至 Analysis Services 伺服器執行個體之資料的詳細資訊。 如需在部署的模型中處理資料的詳細資訊，請參閱 [在 Analysis Services 中編寫管理工作的指令碼](script-administrative-tasks-in-analysis-services.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "48174698"
   
  因此，在您變更資料來源或處理取自資料來源的資料之前，永遠都該注意潛在的影響，並考慮這些潛在的結果：  
   
--   模型資料的某些部分可能會因為資料來源中的變更而中斷。 如果並非所有的資料行都可從資料來源擷取 (例如它們已經遭到刪除或是變更)，處理便會失敗，而您就必須更新在來源資料與模型資料之間的對應。 如需詳細資訊，請參閱 <<c0> [ 編輯現有的資料來源連接&#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)。</c0>  
+-   模型資料的某些部分可能會因為資料來源中的變更而中斷。 如果並非所有的資料行都可從資料來源擷取 (例如它們已經遭到刪除或是變更)，處理便會失敗，而您就必須更新在來源資料與模型資料之間的對應。 如需詳細資訊，請參閱 [編輯現有的資料來源連接 &#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)製作模型時，處理 (重新整理) 模型資料的詳細資訊。  
   
 -   處理後，某些資料行可能會標示為包含錯誤。 這種錯誤發生的原因，可能是資料行中的 DAX 公式使用當處理時就無法使用的資料、資料行的資料類型變更，或是將無效的值加入外部資料。 若要解決這個問題，您可以編輯公式，或者，如果該公式是以無法再使用的資料為基礎，您可以刪除資料行。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48174698"
 -   您無法在不同的資料表中複選資料行，並變更這些資料行的內容。 您一次只能使用一個資料表或檢視表。  
   
 ## <a name="see-also"></a>另請參閱  
- [手動處理資料&#40;SSAS 表格式&#41;](manually-process-data-ssas-tabular.md)   
- [編輯現有的資料來源連接&#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [手動處理資料 &#40;SSAS 表格式&#41;](manually-process-data-ssas-tabular.md)   
+ [編輯現有的資料來源連接 &#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

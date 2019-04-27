@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756332"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
   在 [維度設計師] 的 **[翻譯]** 索引標籤中使用 **[翻譯詳細資料]** 窗格，即可定義和管理目前所選取維度的翻譯。  
@@ -38,31 +38,31 @@ ms.locfileid: "48179018"
   
 -   維度  
   
-     `Caption` 和`AttributeAllMember`屬性  
+     `Caption` 和 `AttributeAllMember` 屬性  
   
--   attribute  
+-   屬性  
   
-     `Caption``AttributeHierarchyDisplayFolder`，和`NamingTemplate`屬性  
+     `Caption`、`AttributeHierarchyDisplayFolder` 和 `NamingTemplate` 屬性  
   
     > [!NOTE]  
     >  `NamingTemplate` 屬性 (Property) 僅適用於父屬性 (Attribute)。  
   
 -   階層  
   
-     `Caption` 和`AllMemberName`屬性  
+     `Caption` 和 `AllMemberName` 屬性  
   
 -   層級  
   
      `Caption` 屬性  
   
- **\<語言 >**  
+ **\<Language>**  
  以選取的語言鍵入或選取維度物件的屬性值。 按一下省略符號按鈕 (**...**) 會依據所編輯的屬性開啟其他對話方塊：  
   
 -   `NamingTemplate` 屬性  
   
      顯示 [[層級命名範本] 對話方塊 &#40;Analysis Services - 多維度資料&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md)。  
   
--   `Caption` 屬性 （屬性）  
+-   `Caption` 屬性 (Property) (適用於屬性 (Attribute))  
   
      顯示 [[屬性資料翻譯] 對話方塊 &#40;Analysis Services - 多維度資料&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)。  
   

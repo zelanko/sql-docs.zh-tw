@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748680"
 ---
 # <a name="prediction-query-builder-data-mining"></a>預測查詢產生器 (資料採礦)
   使用 **[採礦模型預測]** 檢視，即可根據採礦結構包含的採礦模型建立預測。  
@@ -25,7 +25,7 @@ ms.locfileid: "48095048"
   
 -   [基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [建立及查詢使用 DMX 資料採礦模型： 教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [建立及查詢使用 DMX 資料採礦模型：教學課程&#40;Analysis Services-資料採礦&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [資料採礦查詢](data-mining/data-mining-queries.md)  
   

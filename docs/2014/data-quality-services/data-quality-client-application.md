@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755812"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client 應用程式
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式可讓您使用獨立的工具執行資料品質作業。 此應用程式可讓您建立知識庫、建立並執行資料品質專案，以及執行管理工作。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748010"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>規則索引標籤 (採礦模型檢視器)
   在關聯模型中使用 [規則] 窗格，即可檢視演算法從資料擷取的規則。 規則描述各項目之間相互關聯的方式，可用於建立建議。  
@@ -28,7 +28,7 @@ ms.locfileid: "48059598"
 > [!WARNING]  
 >  根據預設，檢視器只顯示高於 [最小機率] 中定義之機率臨界值的規則。 無法使用檢視器減小此值，因為規則輸出的機率臨界值是在建立模型時決定的。 如需詳細資訊，請參閱 [Microsoft 關聯分析演算法技術參考](data-mining/microsoft-association-algorithm-technical-reference.md)。  
   
- **如需詳細資訊，請參閱：**[Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 關聯規則檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **如需詳細資訊：**[Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)，[瀏覽模型，使用 Microsoft 關聯規則檢視器](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -37,7 +37,7 @@ ms.locfileid: "48059598"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **Viewer**  
  選擇用來檢視選取之採礦模型的檢視器。 可以使用每個採礦模型的自訂檢視器，或 [Microsoft 一般內容樹狀檢視器]。 還可以使用外掛程式檢視器 (如果有)。  
   
  **最小機率**  
@@ -88,8 +88,8 @@ ms.locfileid: "48059598"
  您可以按一下資料行標題，依規則文字來排序。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

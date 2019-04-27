@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746610"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>設定或變更 DirectQuery 的慣用連接方法
   當您建立要用於 DirectQuery 模式的模型時，必須先將設計環境設定為支援使用 DirectQuery。 若要這樣做，請參閱[啟用 DirectQuery 設計模式&#40;SSAS 表格式&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)。  
@@ -33,23 +33,23 @@ ms.locfileid: "48186688"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>若要為 DirectQuery 模型設定慣用連接方法  
   
-1.  在  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，開啟 DirectQuery 模型的方案檔。  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟 DirectQuery 模型的方案檔。  
   
 2.  在 Visual Studio 中，選取 **[專案]** 功能表中的 **[屬性]**。  
   
 3.  在 **[屬性]** 窗格中，將屬性 **DirectQueryMode**變更為支援 DirectQuery 使用的下列其中一個值：  
   
-    -   **InMemoryWithDirectQuery**：如果您使用此選項，則會部署模型，但是您必須先處理快取，然後才能對模型執行查詢。  
+    -   **Inmemorywithdirectquery**:如果您使用此選項時，將模型部署，但您可以對模型執行查詢之前，您必須處理快取。  
   
-    -   **DirectQueryWithInMemory**：如果您使用此選項，則快取在已處理時可供用戶端使用。 如果以此設定來部署模型但未處理快取，則某些用戶端在嘗試連接至模型時勢必會收到錯誤訊息。  
+    -   **搭配使用 DirectQuery 和 InMemory**:如果您使用此選項時，快取可供使用的用戶端已處理。 如果以此設定來部署模型但未處理快取，則某些用戶端在嘗試連接至模型時勢必會收到錯誤訊息。  
   
-    -   **DirectQueryOnly**：如果您使用此選項，則會部署中繼資料，但模型中沒有任何資料。 嘗試使用記憶體中模式進行連接的用戶端將會收到錯誤訊息，指出模型不存在或尚未處理。  
+    -   **僅限 DirectQuery**:如果您使用此選項時，會部署中繼資料，但模型中沒有任何資料。 嘗試使用記憶體中模式進行連接的用戶端將會收到錯誤訊息，指出模型不存在或尚未處理。  
   
 4.  如果發生錯誤，請在 Visual Studio 中開啟 **[錯誤清單]** ，並且解決阻礙模型以 DirectQuery 模式部署的任何問題。  
   
 ### <a name="to-verify-or-change-the-preferred-connection-method-for-a-directquery-model"></a>若要為 DirectQuery 模型驗證或變更慣用連接方法  
   
-1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，連接至部署了 DirectQuery 模型的執行個體。  
+1.  在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，連接至部署了 DirectQuery 模型的執行個體。  
   
 2.  以滑鼠右鍵按一下模型資料庫，然後選取 **[屬性]**。  
   

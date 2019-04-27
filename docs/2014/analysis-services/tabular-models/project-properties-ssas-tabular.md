@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31a335797ad7a40fda7002b910127bb139af3f1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756786"
 ---
 # <a name="project-properties-ssas-tabular"></a>專案屬性 (SSAS 表格式)
   本主題描述模型專案屬性。 每個表格式模型專案都含有部署選項與部署伺服器選項，可指定專案及模型的部署方式。 例如，模型要部署至的伺服器及部署的模型資料庫名稱。 這些設定不同於模型屬性，後者會影響模型工作空間資料庫。 此處所述的專案屬性位於強制回應屬性對話方塊中，與用於顯示其他屬性類型的屬性視窗不同。 若要在顯示強制回應專案屬性，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 方案總管 中，以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
@@ -43,7 +43,7 @@ ms.locfileid: "48226558"
   
 |屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
-|**Server**|**localhost**|指定 Analysis Services 的執行個體。 依預設，模型將會部署到本機電腦上的預設 Analysis Services 執行個體。 您可以變更這項設定，以便在本機電腦上或是您有權建立 Analysis Services 物件之任何遠端電腦上的任何執行個體上指定具名執行個體。 這通常是管理員的權限。<br /><br /> 您可以在 [部署] 頁面之 [工具\選項] 對話方塊的 [Analysis Server 設定] 中，使用 [預設部署伺服器] 屬性變更此屬性的預設值。 如需詳細資訊，請參閱[設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)。|  
+|**Server**|**localhost**|指定 Analysis Services 的執行個體。 依預設，模型將會部署到本機電腦上的預設 Analysis Services 執行個體。 您可以變更這項設定，以便在本機電腦上或是您有權建立 Analysis Services 物件之任何遠端電腦上的任何執行個體上指定具名執行個體。 這通常是管理員的權限。<br /><br /> 您可以在 [部署] 頁面之 [工具\選項] 對話方塊的 [Analysis Server 設定] 中，使用 [預設部署伺服器] 屬性變更此屬性的預設值。 如需詳細資訊，請參閱 [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)。|  
 |**版本**|**開發人員**|會指定要將模型部署到哪一個版本的 Analysis Services 伺服器。 這些伺服器版本會定義可以納入專案中的多種功能。|  
 |**[資料庫備份]**|**模型**|指定一旦部署之後，模型物件會立刻具現化所在的 Analysis Services 資料庫名稱。 此名稱將會在資料連接或 .rsds 資料連接檔案中指定。 建議名稱要能反映將使用模型執行之分析的類型，例如 AdventureWorksSalesModel。<br /><br /> **\*\* 重要\* \*** 若要避免已部署模型的名稱重複，您應該變更**資料庫**屬性名稱設定，以反映模型用途。 當使用者連接至做為資料來源的模型時，這是他們會看到的名稱。|  
 |**Cube 名稱**|**型號**|指定報告用戶端資料連接中顯示的資料庫 Cube 名稱。|  
@@ -62,8 +62,8 @@ ms.locfileid: "48226558"
 2.  在 **[屬性]** 視窗中，按一下屬性，然後輸入值，或按一下向下鍵選取設定選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定預設的資料模型和部署屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
- [模型屬性的&#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)   
- [表格式模型方案部署&#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [設定預設的資料模型和部署屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
+ [模型屬性 &#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)   
+ [表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

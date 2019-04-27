@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748902"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 管理儀表板和使用量資料
   PowerPivot 管理儀表板是 SharePoint 管理中心內預先定義之報表和網頁組件的集合，可讓您管理 SQL Server PowerPivot for SharePoint 部署。 管理儀表板會提供伺服器健全狀況、活頁簿活動和資料重新整理的相關資訊。 儀表板會使用 SharePoint 使用量資料收集的資料。  
@@ -82,7 +82,7 @@ ms.locfileid: "55087709"
   
 -   [設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- 若要擷取 PowerPivot 伺服器系統的相關資料，請確認已針對每個 PowerPivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意：** 如果關閉事件或使用量記錄，綜合報表會不完整或錯誤。  
+ 若要擷取 PowerPivot 伺服器系統的相關資料，請確認已針對每個 PowerPivot 服務應用程式啟用事件訊息、資料重新整理記錄和其他使用量記錄。 一般伺服器作業期間所蒐集的伺服器與使用量資料就是來源資料，最後會送入內部資料模型中。 **注意：** 如果您關閉事件或使用量記錄，綜合報表會不完整或發生錯誤。  
   
 ##  <a name="edit"></a> 編輯 PowerPivot 儀表板  
  如果您擁有開發或自訂儀表板的專業技術，可以編輯儀表板以包含新的網頁組件。 您也可以編輯包含於儀表板中的網頁組件屬性。  
@@ -93,7 +93,7 @@ ms.locfileid: "55087709"
  為了協助您開始使用自訂報表，PowerPivot 管理儀表板會提供 Office 資料連線 (.odc) 檔案以連線到來源活頁簿。 例如，您可以在 Excel 中使用 .odc 檔案來建立其他報表。  
   
 > [!NOTE]  
->  當您嘗試在 Excel 中使用 .odc 檔案時，請編輯該檔案以防止下列錯誤：「初始化資料來源失敗」。 自動產生的 .odc 檔案包含 MSOLAP OLE DB 提供者不支援的參數。 下列指示提供移除參數的因應措施。  
+>  編輯該檔案以防止下列錯誤，當您嘗試使用在 Excel 中的.odc 檔案時：「 初始化資料來源失敗 」。 自動產生的 .odc 檔案包含 MSOLAP OLE DB 提供者不支援的參數。 下列指示提供移除參數的因應措施。  
   
  您必須是伺服陣列或服務管理員，才能根據管理中心的 PowerPivot 活頁簿建立報表。  
   

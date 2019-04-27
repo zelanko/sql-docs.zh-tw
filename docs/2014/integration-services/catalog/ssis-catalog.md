@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771574"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   `SSISDB`目錄是使用的中央點[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 專案，您已部署至[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]伺服器。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器作業。  

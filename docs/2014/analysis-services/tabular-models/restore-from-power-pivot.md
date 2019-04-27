@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756567"
 ---
 # <a name="restore-from-powerpivot"></a>從 PowerPivot 還原
   您可以在 SQL Server Management Studio 中使用 [從 PowerPivot 還原] 功能，於 Analysis Services 執行個體上建立新的表格式模型資料庫 (以表格式模式執行)，或是從 PowerPivot 活頁簿 (.xlsx) 還原到現有的資料庫。  
@@ -49,7 +49,7 @@ ms.locfileid: "48146648"
 5.  在 [選項] 中，保持核取 [包含安全性資訊]。 從 PowerPivot 活頁簿還原時，這項設定並不適用。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型資料庫&#40;SSAS 表格式&#41;](tabular-model-databases-ssas-tabular.md)   
+ [表格式模型資料庫 &#40;SSAS 表格式&#41;](tabular-model-databases-ssas-tabular.md)   
  [從 PowerPivot 匯入&#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

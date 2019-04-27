@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780285"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 提供者 (SQLXML 4.0)
   SQLXMLOLEDB 提供者是一種 OLE DB 提供者，可透過 ADO 來公開 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 功能。  

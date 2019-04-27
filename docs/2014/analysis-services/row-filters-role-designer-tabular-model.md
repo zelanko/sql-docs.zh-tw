@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748180"
 ---
 # <a name="row-filters-role-designertabular-model"></a>資料列篩選 (角色設計師)(表格式模型)
   使用角色設計師的 [資料列篩選] 頁面可以定義相關聯角色的資料列層級篩選。 只有具有「讀取」及「讀取和處理」權限的角色，才可以定義資料列篩選。  
@@ -38,6 +38,6 @@ ms.locfileid: "48061218"
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型角色&#40;SSAS 表格式&#41;](tabular-models/roles-ssas-tabular.md)   
- [使用 SSMS 管理角色&#40;SSAS 表格式&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [使用 SSMS 管理角色 &#40;SSAS 表格式&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

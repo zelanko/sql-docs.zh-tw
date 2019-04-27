@@ -1,5 +1,5 @@
 ---
-title: 從用戶端應用程式 (Analysis Services) 連接 |Microsoft 文件
+title: 連接用戶端應用程式 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748640"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>從用戶端應用程式連接 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019585"
   
 -   [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授權的存取權的物件和作業 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 連接  
  您可以使用 SSMS 連接至 Analysis Services，以互動方式管理伺服器執行個體和資料庫。 您也可以執行 XMLA 或 MDX 查詢，以執行管理工作或擷取資料。 相較於在傳送查詢時只會載入資料庫的其他工具和應用程式，SSMS 會在您連接到伺服器時載入所有資料庫，前提是您有權檢視資料庫。 這表示，如果您在伺服器上擁有許多表格式資料庫，當您使用 SSMS 連接時，所有資料庫都會載入系統記憶體中。  
@@ -82,7 +82,7 @@ ms.locfileid: "34019585"
   
      如果是部署在負載平衡叢集中的伺服器，請使用指派給叢集的虛擬伺服器名稱。  
   
-2.  當您在 Excel 中設定連接時，您可以在資料連線精靈的最後一頁上指定 Excel Services 的驗證設定。 這些設定是用來設定活頁簿上的屬性，前提是您將活頁簿上傳到擁有 Excel Services 的 SharePoint 伺服器。 這些設定會用於資料重新整理作業。 選項包括 [Windows 驗證]、[Secure Store Service] \(SSS) 和 [無]。  
+2.  當您在 Excel 中設定連接時，您可以在資料連線精靈的最後一頁上指定 Excel Services 的驗證設定。 這些設定是用來設定活頁簿上的屬性，前提是您將活頁簿上傳到擁有 Excel Services 的 SharePoint 伺服器。 這些設定會用於資料重新整理作業。 選項包括 [Windows 驗證]、[Secure Store Service] (SSS) 和 [無]。  
   
      請避免使用 [無]。 Analysis Services 無法讓您指定連接字串上的使用者名稱和密碼，除非您連接到已經有設定 HTTP 存取的伺服器。 同樣地，除非您已經知道 SSS 目標應用程式識別碼會對應到擁有 Analysis Services 資料庫之使用者存取權的一組 Windows 使用者認證，否則請勿使用 SSS。 在大部分情況下，使用 Windows 驗證的預設選項是來自 Excel 之 Analysis Services 連接的最佳選擇。  
   
@@ -131,6 +131,6 @@ ms.locfileid: "34019585"
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [模擬](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [建立資料來源 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

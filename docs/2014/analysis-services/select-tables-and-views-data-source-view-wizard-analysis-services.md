@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747121"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>選取資料表和檢視 (資料來源檢視精靈) (Analysis Services)
   使用 [選取資料表和檢視] 頁面，從您想要包含在資料來源檢視裡的資料來源中，選取資料表或檢視。  

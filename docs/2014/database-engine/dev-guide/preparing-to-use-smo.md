@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780829"
 ---
 # <a name="preparing-to-use-smo"></a>準備使用 SMO
   此章節包含開始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 的相關資訊。 下列清單將協助您找出文件集中語法樣式的相關資訊、在 SMO 中進行程式設計的系統需求、檔案和版本號碼、SMO 新增功能的描述，以及安裝指南。  

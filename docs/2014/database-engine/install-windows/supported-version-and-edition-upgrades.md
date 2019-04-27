@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775216"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支援的版本與版本升級
-  您可以從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升級。 本主題列出這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的支援升級路徑，以及可以升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的支援版本。  
+  您可以從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]升級。 本主題列出這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的支援升級路徑，以及可以升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]的支援版本。  
   
 ## <a name="pre-upgrade-checklist"></a>升級前檢查清單  
   
@@ -59,7 +59,7 @@ ms.locfileid: "51018583"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位元版本只能升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 位元伺服器。  
   
 > [!NOTE]  
->  當您從舊版 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Edition 升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請選擇 [Enterprise Edition：核心授權] 或 [Enterprise Edition]。 這些 Enterprise edition 只有在授權模式及支援的核心數目上限方面有差異。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+>  當您升級至[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]從舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition 中，選擇 Enterprise Edition:核心為基礎的授權和 Enterprise Edition。 這些 Enterprise edition 只有在授權模式及支援的核心數目上限方面有差異。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支援從下列版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行升級：  
   
@@ -113,7 +113,7 @@ ms.locfileid: "51018583"
   
 -   將 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 封裝升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 執行封裝並包含自動就地升級。  
   
--   藉由執行 [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] 安裝程式將 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。  
+-   藉由執行 [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] 安裝程式將 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 。  
   
 -   備份 [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] Cube 並在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]上還原。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018583"
   
 -   使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]2014 連接到 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 。  
   
- 當 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 時，資料庫的相容性層級將會從 90 變更為 100。 (在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，資料庫相容性層級的有效值為 100、110 與 120。)[ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 中有討論相容性層級變更如何影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的情形。  
+ 當 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 時，資料庫的相容性層級將會從 90 變更為 100。 (在[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，資料庫相容性層級的有效值為 100、 110 和 120。)[ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 中有討論相容性層級變更如何影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的情形。  
   
  未在上面清單中指定的任何情況都不受支援，包含但不限於以下項目：  
   

@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773307"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>將使用者定義資料庫的定序設定為 master 和 model 資料庫的定序
   此規則會使用與 master 或 model 定序相同的資料庫定序來定義使用者定義資料庫。  
@@ -50,7 +50,7 @@ ms.locfileid: "53371080"
   
  [Microsoft 知識庫文章 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [操作說明：從命令提示字元安裝 SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [如何：從命令提示字元安裝 SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>另請參閱  
  [使用原則式管理來監視和強制最佳做法](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

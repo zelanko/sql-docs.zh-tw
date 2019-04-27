@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779753"
 ---
 # <a name="feature-reference-database-engine"></a>功能參考 (Database Engine)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含可用來建立、管理以及檢視資料庫物件與資料的數個工具和應用程式。 此外，還有您可以用來監視並疑難排解伺服器和資料庫效能，以及啟用和停用功能、服務與網路通訊協定的工具。 本節提供描述這些工具和應用程式之對話方塊的特定主題。  

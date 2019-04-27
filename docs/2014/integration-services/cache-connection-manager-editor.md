@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771719"
 ---
 # <a name="cache-connection-manager-editor"></a>快取連接管理員編輯器
   快取連接管理員會從快取轉換或快取檔案 (.caw) 中讀取參考資料集，而且可以將資料儲存至快取檔案。 資料永遠會儲存在記憶體中。  

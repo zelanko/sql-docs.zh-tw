@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac4ccf95fb193f029fadc8e7d937bae8b85ffaeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747170"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>選取新維度 (Cube 精靈)
   使用 **[選取新維度]** 頁面，即可選取要建立的新維度。  
@@ -32,6 +32,6 @@ ms.locfileid: "48134278"
  若要重新命名維度，請按一下維度名稱，然後輸入新名稱。 您無法重新命名資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

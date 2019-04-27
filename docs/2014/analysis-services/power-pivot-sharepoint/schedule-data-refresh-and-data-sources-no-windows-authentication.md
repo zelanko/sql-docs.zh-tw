@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749063"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>排程資料重新整理與不支援 Windows 驗證的資料來源 (PowerPivot for SharePoint)
   本主題描述 PowerPivot for SharePoint 排程資料重新整理的工作流程，而且這項作業可以使用**不**支援 Windows 驗證的資料來源。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
@@ -29,9 +29,9 @@ ms.locfileid: "53374860"
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **（1) PowerPivotDatarefresh:** 使用 Windows 驗證所設定的安全存放目標應用程式識別碼。  
+-   **（1) PowerPivotDatarefresh:** 安全存放目標應用程式識別碼是使用 windows 驗證設定。  
   
--   **（2) OracleAuthentication:** 使用 Oracle 認證所設定的安全存放目標應用程式識別碼。  
+-   **（2) OracleAuthentication:** 安全存放目標應用程式識別碼使用 Oracle 認證所設定。  
   
 -   **(3)** PowerPivot 服務應用程式是設定為目標應用程式"PowerPivotDataRefresh"**無人看管資料重新整理帳戶**。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "53374860"
   
 4.  在 [建立新的 Secure Store 目標應用程式]  頁面上，設定下列值：  
   
-    -   **目標應用程式識別碼：** PowerPivotDataRefresh。  
+    -   **目標應用程式識別碼：** PowerPivotDataRefresh.  
   
-    -   **顯示名稱：** PowerPivotDataRefresh。  
+    -   **顯示名稱：** PowerPivotDataRefresh.  
   
     -   **連絡人電子郵件：** ？  
   
@@ -65,11 +65,11 @@ ms.locfileid: "53374860"
   
     -   **目標應用程式頁面 URL:** 無。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  在 [認證] 頁面上，保留 [Windows 使用者名稱]  和 [Windows 密碼] 的兩個預設欄位名稱和欄位類型。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 [成員資格設定]  頁面上，至少加入一個 **目標應用程式管理員** ，然後加入需要存取目標應用程式的成員。  
   
@@ -99,13 +99,13 @@ ms.locfileid: "53374860"
   
     -   **目標應用程式頁面 URL:** 無。  
   
-5.  按 [下一步] 。  
+5.  按一下 [下一步] 。  
   
 6.  上**認證**頁面上，將第一個欄位名稱變更為`Oracle User ID`並將變更**的欄位型別**至`User Name`。  
   
      將第二個欄位名稱變更為`Oracle Password`而**的欄位型別**至`Password`。  
   
-7.  按 [下一步] 。  
+7.  按一下 [下一步] 。  
   
 8.  在 [成員資格設定]  頁面上，至少加入一個 **目標應用程式管理員** ，然後加入需要存取目標應用程式的成員。  
   

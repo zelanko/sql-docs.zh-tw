@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755226"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>連接到伺服器 (連接屬性頁面) Analysis Services
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssAS](../includes/ssas-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssAS](../includes/ssas-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  

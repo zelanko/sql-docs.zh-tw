@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753780"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>日曆感知日期和時間的 UDT 範例
   將日期儲存為字串可能會產生混淆，因為如果不了解正在使用的日曆系統為何，日期便沒有意義。`CADatetime` 範例會定義兩種使用者定義資料類型 (`CADatetime` 和 `CADate`)，可提供日期和時間的日曆感知處理。  

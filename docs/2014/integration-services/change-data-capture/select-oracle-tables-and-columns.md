@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771054"
 ---
 # <a name="select-oracle-tables-and-columns"></a>選取 Oracle 資料表和資料行
   使用 [選取 Oracle 資料表和資料行] 頁面，從擷取變更的 Oracle 來源資料庫選取資料表。 此頁面具有以下元素：  
@@ -26,15 +26,15 @@ ms.locfileid: "58384756"
  **資料表清單**  
  此資料表清單具有三個資料行：  
   
--   **Oracle 資料表名稱**:資料表，其中包括資料表結構描述的名稱。  
+-   **Oracle 資料表名稱**：資料表的名稱，包括資料表結構描述。  
   
--   **擷取執行個體**:用來命名執行個體特有異動資料擷取物件之擷取執行個體名稱。 擷取執行個體不得為 NULL。  
+-   **擷取執行個體**：用來命名執行個體特有之異動資料擷取物件的擷取執行個體名稱。 擷取執行個體不得為 NULL。  
   
      如果沒有指定，就會採用 `<schema-name>_<table-name>`格式，從來源結構描述名稱加上來源資料表名稱衍生此名稱。 擷取執行個體名稱不得超過 100 個字元，而且在資料庫中必須是唯一的。  
   
      您可以在此資料行中按一下任何資料格，手動編輯 **capture_instance**。  
   
--   **安全性角色**:控制用來控制變更資料的存取權的角色的資料庫名稱。  
+-   **安全性角色**：用來控制變更資料之存取權的資料庫控制角色名稱。  
   
      您可以在此資料行中按一下任何資料格，手動編輯 **security_role**。  
   

@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780793"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>處理結果使用說明主題 (ODBC)
   ODBC 應用程式中處理結果牽涉到先決定結果集的特性，然後將資料擷取到程式變數，使用其中一種[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或是[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  

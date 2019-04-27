@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754448"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>設定資料庫鏡像 (SQL Server)
   本節描述的是設定資料庫鏡像的必要條件、建議事項及步驟。 如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "48065988"
   
 1.  主體伺服器、鏡像伺服器和見證 (如果有的話) 必須是由位於個別主機系統上的個別伺服器執行個體所裝載。 每一個伺服器執行個體都需要資料庫鏡像端點。 如果您需要建立資料庫鏡像端點，請確定其他伺服器執行個體能夠存取它。  
   
-     伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性，資料庫鏡像和 AlwaysOn 可用性群組&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。</c0>  
+     伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 有兩種傳輸安全性可用於資料庫鏡像：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性，資料庫鏡像和 AlwaysOn 可用性群組&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。</c0>  
   
      網路存取的需求與驗證形式相關，如下所示：  
   
@@ -93,9 +93,9 @@ ms.locfileid: "48065988"
         >  在高效能模式中，WITNESS 需要設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 > [!NOTE]  
->  如需使用 Microsoft Windows 驗證來透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定資料庫鏡像的範例，請參閱[範例：使用 Windows 驗證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
+>  如需使用的範例[!INCLUDE[tsql](../../includes/tsql-md.md)]若要設定資料庫鏡像使用 Microsoft Windows 驗證，請參閱[範例：使用 Windows 驗證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  
 >   
->  如需使用 Microsoft Windows 驗證來透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 設定資料庫鏡像的範例，請參閱 [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
+>  如需使用的範例[!INCLUDE[tsql](../../includes/tsql-md.md)]若要設定資料庫鏡像使用憑證型安全性，請參閱[範例：設定資料庫鏡像使用憑證&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)。  
   
  
   
@@ -112,10 +112,10 @@ ms.locfileid: "48065988"
  [使用 Windows 驗證建立資料庫鏡像工作階段 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
  描述設定資料庫鏡像的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟。  
   
- [範例：使用 Windows 驗證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [範例：設定資料庫鏡像使用 Windows 驗證&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  包含一則範例，內容說明使用 Windows 驗證建立具有見證之資料庫鏡像工作階段的所有必要階段。  
   
- [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [範例：設定資料庫鏡像使用憑證&#40;Transact SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  包含一則範例，內容說明使用以憑證為基礎的驗證建立具有見證之資料庫鏡像工作階段的所有必要階段。  
   
  [設定登入帳戶，資料庫鏡像或 AlwaysOn 可用性群組&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
@@ -150,7 +150,7 @@ ms.locfileid: "48065988"
   
 -   [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
--   [為資料庫鏡像組態疑難排解 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
+-   [疑難排解資料庫鏡像組態 &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
  
   

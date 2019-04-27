@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 712c89918af1b66bb4c3e50c0ec08ef44d1222d7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771418"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle Change Data Capture (CDC) 服務使用說明指南
   本章節描述如何在 CDC 服務組態主控台中執行工作。  

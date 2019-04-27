@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933a0e9c2eaca4fe55748938737fc8f30d965c5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749404"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>刪除 PowerPivot 資料摘要庫
   您必須是網站擁有者，才能刪除資料摘要庫。 如果摘要庫中包含項目，就會連同摘要庫一起刪除。  

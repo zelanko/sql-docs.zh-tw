@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780839"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server 驅動程式延伸模組
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會實作驅動程式特有的函數，以便允許 ODBC 應用程式存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  

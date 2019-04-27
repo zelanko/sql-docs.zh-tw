@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e422bbc6d14c70da299c55ec5af2aa6d824f099
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749385"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>錯誤和事件參考 (PowerPivot for SharePoint)
   本節提供有關 PowerPivot for SharePoint 錯誤和事件的資訊。 本節中的錯誤是由出現在記錄檔或錯誤視窗中的錯誤訊息文字所識別。  

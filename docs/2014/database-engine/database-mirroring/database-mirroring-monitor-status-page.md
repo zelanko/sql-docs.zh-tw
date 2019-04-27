@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754703"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>資料庫鏡像監視器 (狀態頁面)
   這個唯讀頁面會針對目前在導覽樹狀目錄中選取的資料庫，顯示其主體和鏡像伺服器執行個體的最新鏡像狀態。 如果有關某個執行個體的資訊目前無法使用，則 [狀態] 方格中與該執行個體對應的某些資料格就會呈現灰色並顯示 [未知]。  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781398"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>開啟 ODBC 資料來源管理員
   此主題描述如何開啟 ODBC 資料來源管理員。 「ODBC 資料來源管理員」是 Windows 元件。 使用「ODBC 資料來源管理員」來建立及管理 ODBC 資料來源。  

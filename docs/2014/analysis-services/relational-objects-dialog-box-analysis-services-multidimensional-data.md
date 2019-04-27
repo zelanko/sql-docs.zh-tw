@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748360"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>關聯式物件對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [關聯式物件] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可從您要設定主動式快取的資料來源選取資料表、檢視或其他物件。 在 [儲存選項] 對話方塊的 [通知] 索引標籤上，按一下 [指定追蹤資料表] 選項中的省略符號按鈕 (**...**)，即可在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示此對話方塊。  

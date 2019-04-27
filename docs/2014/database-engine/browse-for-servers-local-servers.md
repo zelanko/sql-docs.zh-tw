@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787865"
 ---
 # <a name="browse-for-servers-local-servers"></a>瀏覽伺服器 (本機伺服器)
   當您連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件時，若不知道 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的確實名稱，可在 [伺服器名稱] 中按一下 [瀏覽其他]，以開啟 [瀏覽伺服器] 對話方塊。  

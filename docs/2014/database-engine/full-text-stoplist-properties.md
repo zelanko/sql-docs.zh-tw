@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779405"
 ---
 # <a name="full-text-stoplist-properties"></a>全文檢索停用字詞表屬性
   使用此對話方塊可加入或刪除個別停用字詞、刪除特定語言的所有停用字詞，或是清除目前的停用字詞表。 停用字詞是停用字詞表內所包含的常用字。 使用某停用字詞表之資料表的全文檢索索引中會省略該停用字詞表內的停用字詞。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "48072518"
  **清除停用字詞表**  
  刪除所有語言的所有停用字詞來清除停用字詞表。  
   
- **停用字詞**  
+ **Stopword**  
  如果您已選取 **[加入停用字詞]** 或 **[刪除停用字詞]**，請在 **[停用字詞]** 欄位中輸入停用字詞。 新的停用字詞必須是唯一的，亦即，尚未存在您所選取之語言的這個停用字詞表中。  
   
  **全文檢索語言**  

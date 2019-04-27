@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748020"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>另存新檔對話方塊 (Analysis Services - 多維度資料)
   **[另存新檔]** 對話方塊會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體所定義之記錄與資料的資料夾內可用的檔案清單。 您可以選取一個列出的檔案，或者必要時可以指定其他的資料夾與檔案。 請執行下列動作來顯示 **[另存新檔]** 對話方塊：  

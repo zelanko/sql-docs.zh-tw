@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753950"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>在 SQL Server 2014 中已被取代的管理工具功能
   本主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中仍然可用之已被取代的管理工具功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  

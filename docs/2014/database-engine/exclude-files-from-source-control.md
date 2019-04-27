@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779898"
 ---
 # <a name="exclude-files-from-source-control"></a>從原始檔控制中排除檔案
   如果您正在使用的方案包含不需要原始檔控制服務的檔案，您可以使用**從原始檔控制中排除**命令，從原始檔控制中排除檔案。 當您執行這個動作時，檔案會保留在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 資料庫中，但不會再隨著專案而簽入或簽出。  

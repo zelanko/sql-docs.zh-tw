@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749831"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>設定 PowerPivot 服務帳戶
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services (PowerPivot)** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 PowerPivot 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
@@ -151,7 +151,7 @@ ms.locfileid: "52526665"
   
 11. 輸入用於 PowerPivot 服務應用程式集區之帳戶的名稱，然後按一下 **[確定]**。  
   
-##  <a name="expired"></a> 疑難排解：解決因為管理中心或 SharePoint Foundation Web 應用程式服務密碼過期而造成的 HTTP 503 錯誤  
+##  <a name="expired"></a> 疑難排解：解決 HTTP 503 錯誤，因為密碼過期管理中心或 SharePoint Foundation Web 應用程式服務  
  如果管理中心服務或 SharePoint Foundation Web 應用程式服務因為帳戶重設或密碼過期而停止運作，當您嘗試開啟 SharePoint 管理中心或 SharePoint 網站時，將會出現 HTTP 503「服務無法使用」錯誤訊息。 請遵循這些步驟，讓您的伺服器重新回復到線上狀態。 一旦可以使用管理中心之後，您就可以繼續更新過期的帳戶資訊。  
   
 1.  在 [系統管理工具] 中，按一下 **[Internet Information Services Manager]**。  

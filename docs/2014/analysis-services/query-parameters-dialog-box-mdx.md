@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a1d9e03f71f1dbcf2f00cce5185ec0e2b237b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748502"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>查詢參數對話方塊 (MDX)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [查詢參數] 對話方塊即可將參數加入至用於定義集合、維度和 Subcube 的 MDX 查詢。 您可以在 [MDX 查詢產生器] 對話方塊中按一下 [參數] 圖示，藉以顯示 [查詢參數] 對話方塊。  

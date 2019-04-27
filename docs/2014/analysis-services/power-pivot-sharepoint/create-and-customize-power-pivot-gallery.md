@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749614"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>建立及自訂 PowerPivot 圖庫
   PowerPivot 圖庫是一種特殊類型的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
@@ -137,7 +137,7 @@ ms.locfileid: "53358900"
 |----------|-----------------|  
 |圖庫檢視 (預設值)|圖庫是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的預設檢視。 預覽會顯示在左邊。 預覽旁邊會顯示每個工作表的小型縮圖，由左至右循序排列。|  
 |所有文件|這是文件庫的標準版面配置。 您可以選擇此檢視來管理個別的文件，或以清單格式來檢視文件庫內容。<br /><br /> 使用此檢視來編輯屬性、刪除或移動個別的文件。<br /><br /> 如果您啟用版本控制，必須使用此檢視來檢查文件庫內外的文件。|  
-|劇場檢視和浮動切換檢視|如果您展示少數相關文件，這些都是效果最佳的特殊檢視。 完整的縮圖輪替包括文件庫中所有文件中的所有頁面。 如果您有大量的文件，這些檢視對想要尋找或開啟特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的使用者來說，可能就不太實用。<br /><br /> 劇場檢視：預覽區域會置中。 每個工作表的小型縮圖都會顯示頁面兩側下角。<br /><br /> 浮動切換檢視：預覽區域會置中。 緊接在目前縮圖前後的縮圖與預覽區域相鄰。|  
+|劇場檢視和浮動切換檢視|如果您展示少數相關文件，這些都是效果最佳的特殊檢視。 完整的縮圖輪替包括文件庫中所有文件中的所有頁面。 如果您有大量的文件，這些檢視對想要尋找或開啟特定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的使用者來說，可能就不太實用。<br /><br /> 劇場檢視：[預覽] 區域會置中。 每個工作表的小型縮圖都會顯示頁面兩側下角。<br /><br /> 浮動切換檢視：[預覽] 區域會置中。 緊接在目前縮圖前後的縮圖與預覽區域相鄰。|  
   
 ### <a name="switch-to-a-different-view"></a>切換到不同的檢視  
   

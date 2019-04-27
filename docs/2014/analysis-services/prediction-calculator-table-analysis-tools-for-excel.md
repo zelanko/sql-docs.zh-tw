@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748870"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>預測計算器 (適用於 Excel 的資料表分析工具)
   ![預測計算器工具](media/tat-predcal.gif "預測計算器 工具")  
@@ -98,7 +98,7 @@ ms.locfileid: "48060018"
   
  中的值**相對影響**資料行是以百分比表示的機率。 加上陰影的資料格則是以視覺方式表示這個值對於結果的影響。  
   
-|attribute|值|相對影響|  
+|屬性|值|相對影響|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
@@ -128,11 +128,11 @@ ms.locfileid: "48060018"
   
  例如，如果報表包含下列值，您可能會將 [Cars] 的值減少為 1，然後再減少為 0，就可以查看該值如何影響客戶的購買行為。 當您變更的值**汽車**為 0，底部預測會變更為 TRUE。  
   
-|attribute|值|相對影響|  
+|屬性|值|相對影響|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Gender|Male|0|  
-|Income|39050-71062|117|  
+|Income|39050 - 71062|117|  
 |Children|0|157|  
 |Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
@@ -140,7 +140,7 @@ ms.locfileid: "48060018"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37-46|5|  
+|Age|37 - 46|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   

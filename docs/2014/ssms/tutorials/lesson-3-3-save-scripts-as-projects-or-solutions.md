@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753037"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>將指令碼儲存成專案或方案
   熟悉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的開發人員會欣然接受 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管]。 支援您商務的指令碼可以分組成不同的指令碼專案，而且這些指令碼專案可以當作一個方案來一起管理。 當您將指令碼放在指令碼專案和方案中時，您可以將它們當作一個群組來一起開啟，也可以將它們一起儲存在 Visual SourceSafe 之類的原始檔控制產品中。 指令碼專案包括適當執行指令碼所需要的連接資訊，且可以包括支援文字檔之類的非指令碼檔案。  
@@ -28,7 +28,7 @@ ms.locfileid: "54134828"
   
 1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，再利用 [物件總管] 來連接伺服器。  
   
-2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。 此時會開啟 [新增專案] 對話方塊。  
+2.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。 此時會開啟 [新增專案] 對話方塊。  
   
 3.  在 [名稱] 文字方塊中，輸入 **StatusCheck**，並在 [範本] 中按一下 [SQL Server 指令碼]，然後按一下 [確定] 來開啟新的方案和指令碼專案。  
   

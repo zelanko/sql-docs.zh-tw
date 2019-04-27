@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752998"
 ---
 # <a name="task-5-adding-data-flow-task"></a>工作 5:加入資料流程工作
   在這項工作中，您會將資料流程工作加入至 SSIS 封裝的控制流程中。  

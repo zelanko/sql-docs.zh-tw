@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1434ae3750a76ecffc029d618ce32acea982b035
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748330"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>重新命名執行個體對話方塊 (Analysis Services)
   使用 **[重新命名執行個體]** 對話方塊，即可將 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的現有執行個體重新命名。 您可以從 C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE 啟動 [執行個體重新命名] 工具 (asinstancerename.exe)，來顯示 [重新命名執行個體] 對話方塊。  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753280"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>執行 Upgrade Advisor (命令提示字元)
   使用**UpgradeAdvisorWizardCmd**公用程式來從命令提示字元執行 Upgrade Advisor。 您可以選擇以 XML 格式或含有逗號分隔值的檔案來接收結果。  
@@ -43,15 +43,15 @@ where <server_info> is any combination of the following:
  **-?**  
  顯示命令語法。  
   
- **-ConfigFile** _檔名_  
+ **-ConfigFile** _filename_  
  路徑名稱和檔案名稱的 XML 檔案，其中包含要在執行時使用的設定**UpgradeAdvisorWizardCmd**公用程式。  
   
- *< server_info >*  
+ *<server_info>*  
  指定要分析的電腦和執行個體。 如果您不要使用組態檔，請使用這些選項。  
   
  *< server_info >* 可以是下列四個引數的任何組合：  
   
- **-Server** __ n a_  
+ **-Server** _server_name_  
  指定要分析之電腦的名稱。 這可以是本機電腦 (預設值) 或遠端電腦。  
   
  **-執行個體** _執行個體名稱_  
@@ -66,10 +66,10 @@ where <server_info> is any combination of the following:
  **-SqlUser** _login_id_  
  如果您要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，這個值就是 Upgrade Advisor 將用來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果您沒有指定登入，就會使用 Windows 驗證來連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- **-SqlPassword** _密碼_  
+ **-SqlPassword** _password_  
  如果您使用 **-SqlUser**引數，使用這個引數指定的密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
   
- **CSV**  
+ **-CSV**  
  指定除了標準 XML 結果以外，還要將結果當做逗號分隔值提供至 .csv 檔案。 結果會寫入我的文件\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports 資料夾。  
   
 ## <a name="return-values"></a>傳回值  

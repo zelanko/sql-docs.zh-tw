@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771444"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>建立及編輯 Oracle CDC 服務
   您會從 CDC 服務組態主控台來建立和編輯新的 Oracle CDC Windows 服務。  
@@ -56,14 +56,14 @@ ms.locfileid: "58379370"
   
      您可以針對此服務帳戶使用本機或網域 Windows 帳戶。 在此情況下，您必須針對該帳戶輸入 **[密碼]** 。 此帳戶可適用於本機主機或網域帳戶。 在 Windows [控制台] 中使用本機服務變更密碼時，請務必更新密碼。  
   
- **伺服器名稱**:選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接到的執行個體 (例如 **\\ \\< 電腦名稱 >\\< instance_name >**)。 預設會顯示上次連接的伺服器執行個體。  
+ **伺服器名稱**︰選取要連接的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (例如，**\\\\<電腦名稱>\\<執行個體名稱>**)。 預設會顯示上次連接的伺服器執行個體。  
   
  **驗證**  
  選取下列其中一項：  
   
--   **Windows 驗證**：如果您選取此選項時，Oracle CDC 服務會連接到目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用的服務帳戶身分識別。 如果正在另一部電腦上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須搭配網域帳戶使用 Windows 驗證。  
+-   **Windows 驗證**：如果您選取這個選項，Oracle CDC 服務會使用服務帳戶識別連接到目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如果正在另一部電腦上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，必須搭配網域帳戶使用 Windows 驗證。  
   
--   **SQL Server 驗證**:如果您選取此選項時，您必須輸入**使用者名**並**密碼**如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您想要使用的登入。 Oracle CDC 服務會在連接到目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時使用這些認證。  
+-   **SQL Server 驗證**：如果您選取這個選項，您必須針對您要使用的 **登入來輸入**使用者名稱**和**密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 Oracle CDC 服務會在連接到目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時使用這些認證。  
   
  Oracle CDC 服務所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入只要求它必須是公用固定伺服器角色的成員，不需要其他權限。 一旦加入新的 Oracle CDC 執行個體之後，該登入會取得關聯 **CDC 資料庫的** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "58379370"
  **選項。**  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  
   
--   **連接逾時**:輸入 Oracle CDC 服務在逾時之前等候連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的時間 (以秒數為單位)。預設值為 **15**。  
+-   **連接逾時**：輸入 Oracle CDC 服務在逾時之前等候連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的時間 (以秒數為單位)。預設值為 **15**。  
   
--   **執行逾時**:輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
+-   **執行逾時**：輸入 Oracle CDC Windows 服務在逾時之前，等候執行命令的時間 (以秒數為單位)。預設值是 **30**。  
   
--   **加密連接**:選取 **加密連接**Oracle CDC 服務與目標之間的通訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體使用加密的連線。  
+-   **加密連接**：針對 Oracle CDC 服務與使用加密連線之目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間的通訊選取 [加密連線]。  
   
--   **進階**：如有必要，請輸入任何其他連接屬性。  
+-   **進階**：必要時輸入其他任何連接屬性。  
   
  **主要密碼**  
  輸入 Oracle CDC Windows 服務為了保護 Oracle 記錄採礦認證所使用的密碼。  

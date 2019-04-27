@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774912"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>新增或編輯伺服器註冊 (一般索引標籤) (Analysis Services - 多維度資料)
   當您註冊 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體時，請使用此索引標籤來指定選項。  

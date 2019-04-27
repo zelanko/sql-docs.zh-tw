@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f23574c99ba05cd5e53d18cde799b2e415daaf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747127"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>選取要修改的資料分割 (彙總設計精靈)
   使用 **[選取要修改的資料分割]** 頁面，即可選取您要設計彙總的資料分割。  
   
 ## <a name="options"></a>選項。  
- **（選取）**  
+ **(Select)**  
  選取資料行標題中的核取方塊，以便針對量值群組中的所有資料分割設計彙總。  
   
  選取資料分割的核取方塊，以便只針對選取的資料分割設計彙總。  

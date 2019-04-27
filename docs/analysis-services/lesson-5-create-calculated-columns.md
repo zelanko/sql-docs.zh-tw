@@ -1,5 +1,5 @@
 ---
-title: 第 5 課： 建立計算結果的欄 |Microsoft Docs
+title: 第 5 課：建立計算結果的欄 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752491"
 ---
-# <a name="lesson-5-create-calculated-columns"></a>第 5 課： 建立導出資料行
+# <a name="lesson-5-create-calculated-columns"></a>第 5 課：建立導出資料行
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將藉由加入導出資料行的方式在模型中建立新資料。 導出資料行是以已存在模型中的資料為基礎。 若要進一步了解，請參閱[導出資料行](../analysis-services/tabular-models/ssas-calculated-columns.md)。  
   
 您將在三個不同的資料表中建立五個新的導出資料行。 各項工作的步驟稍有不同。 這樣做的目的在於說明，您可以透過數種方式建立新的資料行、重新命名資料行，以及將它們放到資料表中的不同位置。  
   
-完成本課程的估計時間：**15 分鐘**  
+估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 4 課： 建立關聯性](../analysis-services/lesson-4-create-relationships.md)。 
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 4 課：建立關聯性](../analysis-services/lesson-4-create-relationships.md)。 
   
 ## <a name="create-calculated-columns"></a>建立導出資料行  
   
@@ -52,7 +52,7 @@ ms.locfileid: "42792179"
   
 5.  重新命名此資料行**MonthCalendar**。 
 
-    ![做為表格式-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
+    ![as-tabular-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
 MonthCalendar 計算結果欄提供可排序的月份名稱。  
   
@@ -122,12 +122,12 @@ ProductCategoryName 導出資料行用來建立階層，其中包括 [englishpro
   
 5.  資料行之間拖曳**SalesAmount**資料行和有**TaxAmt**資料行。 
  
-      ![做為表格式-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![as-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
     Margin 計算結果的欄用來分析每個銷售的利率。  
   
 ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 6 課： 建立量值](../analysis-services/lesson-6-create-measures.md)。
+請移至下一課：[第 6 課：建立量值](../analysis-services/lesson-6-create-measures.md)。
   
   
   

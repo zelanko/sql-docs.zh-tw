@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753890"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>從 CLR UDF 存取機器碼
   這個範例會示範如何從資料庫內組件中的使用者定義函數來叫用原生 (Unmanaged) C++ 程式碼的函數。  

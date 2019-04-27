@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749474"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
   使用量資料收集是伺服陣列層級的 SharePoint 功能。 PowerPivot for SharePoint 會使用並擴充此系統來支援 PowerPivot 管理儀表板中的報表，以便顯示 PowerPivot 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服陣列管理員必須啟用使用量記錄，以建立會顯示在 PowerPivot 管理儀表板中的使用量資料。  
@@ -129,7 +129,7 @@ ms.locfileid: "52411275"
  如需有關如何收集和儲存使用量資料的詳細資訊，請參閱 < [PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。  
   
 ##  <a name="qrh"></a> 針對報告目的而定義快速、中等及緩慢的查詢回應類別目錄  
- 查詢處理效能是針對預先定義的類別目錄來計算，這些類別目錄會按照完成的時間長度來定義要求-回應循環。 預先定義的類別目錄包括：「簡單式」、「快速」、「預期」、「長時間執行」及「已超過」。 PowerPivot 伺服器的每個要求都會根據完成的時間歸類到其中一個類別目錄。  
+ 查詢處理效能是針對預先定義的類別目錄來計算，這些類別目錄會按照完成的時間長度來定義要求-回應循環。 預先定義的類別包括：重要、 快速、 預期、 長時間執行，而且超過閾值。 PowerPivot 伺服器的每個要求都會根據完成的時間歸類到其中一個類別目錄。  
   
  查詢回應資訊是用於活動報表。 在報表中，每個類別目錄都會以不同的方式來使用，以便能更妥善地顯示 PowerPivot 系統的效能趨勢。 例如，會完全排除簡單式要求，因為這樣做，可移除資料中的雜訊，並且可使用其餘的類別來顯示更有意義的趨勢。 相反地，「長時間執行」或「已超過」要求統計資料會在報表中特別突出，以利系統管理員或活頁簿擁有者可以立即採取更正動作。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "52411275"
   
 |設定|預設值|類型|有效範圍|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<啟用 >|布林|啟用或停用這些值。|  
+|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<enabled>|布林|啟用或停用這些值。|  
 |**查詢報告間隔**|300 (以秒為單位)|Integer|1 到任何正整數。 預設值是 5 分鐘。|  
 |**Usage data history**|365 (以天為單位)|Integer|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
 |簡單式回應時間上限|500 (以毫秒為單位)|Integer|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773424"
 ---
 # <a name="view-a-list-of-modified-files"></a>檢視修改檔案清單
   您可以使用**暫止簽入**視窗完全顯示在目前的方案中，已簽出檔案的清單以及簽入這些檔案，利用單一按鈕按一下。  
@@ -32,7 +32,7 @@ ms.locfileid: "48225043"
   
 2.  若要檢查選取的檔案中，按一下**簽入**。 或者，您可以停駐**暫止簽入**視窗的右側[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]環境，因此當您完成時，您可以檢查檔案中使用。  
   
-     **簽入**  
+     **Check In**  
      簽入方案。  
   
      **註解**  
@@ -45,7 +45,7 @@ ms.locfileid: "48225043"
   
          指定您的變更應該寫入原始檔控制提供者，但檔案應保持簽出。  
   
-     **排序**  
+     **Sort**  
      指定項目清單中所顯示資料行的排序順序。  
   
      **資料行**  

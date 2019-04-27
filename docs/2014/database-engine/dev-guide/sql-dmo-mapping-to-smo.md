@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780678"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>對 SMO 的 SQL-DMO 對應
   SQL Distributed Management Objects (SQL-DMO) 不再包含在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，SQL-DMO 應用程式應該轉換成使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)。 SMO 物件模型與 SQL-DMO 相似，因此大部分 SQL-DMO 物件都是以相同名稱對應到 SMO 中的物件。 不過，部分 SQL-DMO 物件已在轉移至 SMO 的過程中變更或是捨棄。 此表列出建議對未直接轉換成 SMO 的 SQL-DMO 物件採取的動作。  

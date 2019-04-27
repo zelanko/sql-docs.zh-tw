@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754136"
 ---
 # <a name="set-warning-thresholds"></a>設定警告臨界值
   使用這個對話方塊可針對 **[資料庫鏡像監視器]** 對話方塊內導覽樹狀目錄中選取的資料庫，啟用並設定一或多個警告臨界值。  

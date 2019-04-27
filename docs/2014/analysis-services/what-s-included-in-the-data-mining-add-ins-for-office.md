@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755920"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什麼&#39;中的資料採礦 Office 增益集所包含
   當您安裝適用於 Office 2013 的資料採礦增益集時，選取所有的安裝選項就會加入以下的工具列和範本：  
@@ -47,7 +47,7 @@ ms.locfileid: "52519092"
   
      知道該使用哪些資料及如何據以準備，是資料分析的重要關鍵。 本主題提供您有關如何準備資料以使模型盡可能趨於完善的秘訣。  
   
-     如果您還不熟悉資料採礦，而只是想要試驗各種工具，建議您使用連同增益集一併安裝的範例資料活頁簿。藉著查看該份資料，您也能夠經由範例略知如何準備資料供時間序列模型或關聯模型使用。  
+     如果您不熟悉資料採礦，而且只想要使用工具進行實驗，我們建議您使用與增益集一起安裝的範例資料活頁簿。來看看這項資料也可以查看如何準備資料進行時間序列模型或關聯模型的範例。  
   
      **範例資料**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52519092"
   
     -   \<磁碟機 >: \Program Files\Microsoft SQL Server 2014 DM 增益集  
   
-    -   \<磁碟機 >: \Program 檔案 (x86) \Microsoft SQL Server 2014 DM 增益集  
+    -   \<drive>:\Program Files(x86)\Microsoft SQL Server 2014 DM add-ins  
   
 ## <a name="see-also"></a>另請參閱  
  [開始使用資料採礦&#40;資料採礦適用於 Excel 的增益集&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

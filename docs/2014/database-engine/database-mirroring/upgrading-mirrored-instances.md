@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754274"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少
   升級伺服器執行個體時[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您也可以執行的循序升級，只有單一手動容錯移轉來減少每個鏡像資料庫的停機時間稱為*輪流升級*。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當做鏡像伺服器的伺服器執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體伺服器，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之伺服器執行個體上執行的鏡像工作階段數目和配置而定。  
@@ -69,22 +69,22 @@ ms.locfileid: "52509423"
     > [!IMPORTANT]  
     >  如果鏡像伺服器與主體伺服器之間的地理位置遙遠，輪流升級可能不適合。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：變更**作業模式**選項設定為**不具有自動容錯移轉 （同步） 的高安全性**利用[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性** 對話方塊。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)。  
+    -   在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:變更**作業模式**選項設定為**不具有自動容錯移轉 （同步） 的高安全性**利用[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性**] 對話方塊。 如需如何存取此頁面的資訊，請參閱[啟動設定資料庫鏡像安全性精靈 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)。  
   
-    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：將交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   在  [!INCLUDE[tsql](../../includes/tsql-md.md)]:交易安全性設定為 FULL。 如需詳細資訊，請參閱[在資料庫鏡像工作階段中變更交易安全性 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>從工作階段中移除見證  
   
 1.  如果鏡像工作階段牽涉到見證，我們建議您在執行輪流升級之前，最好先移除該見證。 否則，當升級鏡像伺服器執行個體時，資料庫可用性會相依於仍然連接至主體伺服器執行個體的見證。 當您移除見證之後，您可以在輪流升級期間的任何時候將它升級，避免發生資料庫停機的風險。  
   
     > [!NOTE]  
-    >  如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性&#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+    >  如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
     -   [從資料庫鏡像工作階段移除見證 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>執行輪流升級  
   
-1.  若要讓停機時間減至最少，我們建議您採取以下作法：在所有鏡像工作階段中更新目前為鏡像伺服器的任何鏡像夥伴伺服器，以開始輪流升級。 您在此時可能必須更新多個伺服器執行個體。  
+1.  為了減少停機時間，我們建議下列各項：藉由更新是在所有鏡像工作階段中目前的鏡像伺服器的任何鏡像夥伴開始輪流升級。 您在此時可能必須更新多個伺服器執行個體。  
   
     > [!NOTE]  
     >  您可以在輪流升級程序的任何時間升級見證。 例如，如果伺服器執行個體在工作階段 1 為鏡像伺服器，而在工作階段 2 為見證，您可以立刻升級此伺服器執行個體。  
@@ -126,9 +126,9 @@ ms.locfileid: "52509423"
   
 1.  您可以選擇使用下列其中一個方法來回到高效能模式：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中：變更**作業模式**選項設定為**高效能 （非同步）** 利用[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性** 對話方塊。  
+    -   在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:變更**作業模式**選項設定為**高效能 （非同步）** 利用[鏡像頁面](../../relational-databases/databases/database-properties-mirroring-page.md)的**資料庫屬性**] 對話方塊。  
   
-    -   在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中：使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
+    -   在  [!INCLUDE[tsql](../../includes/tsql-md.md)]:使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>若要將見證加回鏡像工作階段  
   

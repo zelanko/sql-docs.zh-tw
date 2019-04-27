@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774773"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>從原始檔控制中開啟方案和專案
   您可以使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]直接從原始檔控制開啟方案或專案。 當您從原始檔控制中開啟方案時，[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境會自動擷取方案的最後版本，將它複製到您指定的位置中。  

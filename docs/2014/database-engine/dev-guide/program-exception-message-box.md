@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780691"
 ---
 # <a name="program-exception-message-box"></a>程式例外狀況訊息方塊
   您可以在應用程式中使用例外狀況訊息方塊，此訊息方塊對訊息經驗所提供的控制要比 <xref:System.Windows.Forms.MessageBox> 類別所提供的高出許多。 如需詳細資訊，請參閱 <<c0> [ 例外狀況訊息方塊程式設計](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)。 如需有關如何取得及部署例外狀況訊息方塊 .dll 的詳細資訊，請參閱＜ [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)＞。  

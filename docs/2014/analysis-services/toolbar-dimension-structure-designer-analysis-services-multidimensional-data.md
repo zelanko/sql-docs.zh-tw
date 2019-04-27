@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756401"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此工具列，即可在 **[維度設計師]** 的 **[維度結構]** 頁面內執行一般作業。  
@@ -39,7 +39,7 @@ ms.locfileid: "48146435"
   
      顯示目前維度之屬性的樹狀檢視，其中給定屬性的成員屬性會顯示為該屬性的從屬附註。  
   
--   方格  
+-   Grid  
   
      顯示屬性的詳細清單，包含 [名稱]、[使用方式] 和 [類型] 屬性、索引鍵資料行的資料類型 (如果適用的話)，以及針對目前維度，名稱資料行是否符合索引鍵資料行。  
   

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773656"
 ---
 # <a name="query-options-results-text-page"></a>查詢選項結果 (文字頁面)
   使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 選取 **[將結果存檔]** 時，此頁面上的設定也適用。  

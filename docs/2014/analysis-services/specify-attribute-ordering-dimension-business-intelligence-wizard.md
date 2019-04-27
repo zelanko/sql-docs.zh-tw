@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58b35c6bf321dec4f6e190eed14b4aa00acbec8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746330"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>指定屬性排序方式 (維度) (商業智慧精靈)
   使用 **[指定屬性排列方式]** 頁面即可選取維度，讓商業智慧精靈定義此維度的排序屬性和排序準則，並利用這些屬性和準則來排序該維度所包含之每一個屬性中的成員。  

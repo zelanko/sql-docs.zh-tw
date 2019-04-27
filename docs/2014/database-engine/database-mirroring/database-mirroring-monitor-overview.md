@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755024"
 ---
 # <a name="database-mirroring-monitor-overview"></a>資料庫鏡像監視器概觀
   如果您擁有正確的權限，就可以使用「資料庫鏡像監視器」來監視伺服器執行個體上的任何鏡像資料庫子集。 監視可以讓您確認資料庫鏡像工作階段中的資料是否有流動，以及資料流動是否順暢。 「資料庫鏡像監視器」對於疑難排解資料流動減緩的原因也很有用。  

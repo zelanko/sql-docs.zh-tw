@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773537"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server Managed Backup to Windows Azure - 保留和儲存體設定
   本主題說明設定資料庫之 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 及設定執行個體之預設設定的基本步驟。 本主題也描述為執行個體暫停及繼續 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 服務的必要步驟。  
@@ -55,7 +55,7 @@ ms.locfileid: "52534477"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>正在資料庫層級啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  如果資料庫有特定的備份需求與保留週期 (復原能力 SLA)，並且和執行個體上的其他資料庫不同，請在資料庫層級為此資料庫設定 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 。 資料庫層級設定會覆寫執行個體層級的組態設定。 但相同的執行個體可以並用這兩個選項。 下列清單列有在資料庫層級上啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的優點及注意事項。  
   
--   更為精細：分隔每個資料庫的組態設定。 可以針對不同的資料庫支援不同的保留週期。  
+-   更細微：每個資料庫的個別的組態設定。 可以針對不同的資料庫支援不同的保留週期。  
   
 -   覆寫資料庫的執行個體層級設定。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52534477"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>使用預設設定在執行個體層級啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  如果大部分執行個體上的資料庫都有相同的備份和保留原則需求，或者如果您想要新的資料庫執行個體在建立時自動備份，請使用此設定。 一些未套用原則的資料庫仍可個別加以設定。 在執行個體層級上啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 時，以下為優點和考量清單。  
   
--   執行個體層級的自動化：之後對新加入的資料庫自動套用的一般設定。  
+-   執行個體層級的自動化：自動套用至之後加入的新資料庫的一般設定。  
   
 -   新資料庫於執行個體上建立後，它們很快就會自動備份  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52534477"
     ```  
   
 ##  <a name="InstanceConfigure"></a> 啟用及設定預設[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]執行個體設定  
- 您可以利用兩種方式在執行個體層級啟用和設定預設的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 設定：使用系統預存程序`smart_backup.set_instance_backup`或是**SQL Server Management Studio**。 這兩種方法說明如下：  
+ 您可以啟用和設定預設[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定執行個體層級有兩種：使用系統預存程序`smart_backup.set_instance_backup`或是**SQL Server Management Studio**。 這兩種方法說明如下：  
   
  **smart_backup.set_instance_backup**： 透過指定的值**1** for *@enable_backup*參數，您可以啟用備份和設定預設組態。 套用在執行個體層級之後，這些預設設定值會套用至加入此執行個體的所有新資料庫。  第一次啟用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 時，除了啟用執行個體的 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 之外，還必須提供下列資訊︰  
   

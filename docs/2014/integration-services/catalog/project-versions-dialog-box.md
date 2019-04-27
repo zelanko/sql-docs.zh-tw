@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771537"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
   使用 **[專案版本]** 對話方塊檢視專案版本，以及還原舊版。  

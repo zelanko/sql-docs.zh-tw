@@ -27,11 +27,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774435"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   下列章節包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件的回溯相容性資訊。 這個內容包含關於已被取代的功能、已停止的功能、重大變更和行為變更等資訊。  

@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778949"
 ---
 # <a name="full-text-search-f1-help"></a>全文檢索搜尋 F1 說明
-  本節提供有關的主題[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的全文檢索搜尋對話方塊[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 若要存取某個使用者介面主題，請按 F1 或在對話方塊為開啟時按一下 **[說明]** 。  
+  此章節提供有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]全文檢索搜尋對話方塊的主題。 若要存取某個使用者介面主題，請按 F1 或在對話方塊為開啟時按一下 **[說明]** 。  
   
 |||  
 |-|-|  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780175"
 ---
 # <a name="unused-assembly-cleanup"></a>未使用的組件清除
   這個 `AssemblyCleanup` 範例包含一個 .NET 預存程序，該預存程序會查詢中繼資料目錄，藉以在目前的資料庫中清除未使用的組件。 其唯一的參數 `visible_assemblies` 用於指定是否應該卸除未使用的可見組件。 'false' 這個值表示預設只會卸除未使用的不可見組件，否則，將會卸除所有未使用的組件。 未使用組件的集合就是尚未定義任何進入點 (常式/類型和彙總)，而且沒有已使用的組件直接或間接參考它們的組件。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a698ddb598c4de51d4c30dde717176027f67e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757185"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>從 Analysis Services 匯入 (SSAS 表格式)
   本主題描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [從伺服器匯入] 專案範本，從現有的表格式模型匯入中繼資料，以建立新的表格式模型專案。  
@@ -37,6 +37,6 @@ ms.locfileid: "48130499"
 5.  在 **[資料庫名稱]** 中，選取包含您要匯入之模型中繼資料的表格式模型資料庫，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [專案屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)  
+ [專案屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)  
   
   

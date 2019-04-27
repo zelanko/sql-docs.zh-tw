@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746940"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
@@ -251,11 +251,11 @@ ms.locfileid: "55087897"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- 請注意，設定 **MinThread** 和 **MaxThread** 的演算法會合併系統組態，特別是處理器數目。 下列部落格文章深入探討值的計算方式：[Analysis Services 2012 組態設定 （Wordpress 部落格）](https://go.microsoft.com/fwlink/?LinkId=330387)。 請注意，後續版本可能會調整這些設定和行為。  
+ 請注意，設定 **MinThread** 和 **MaxThread** 的演算法會合併系統組態，特別是處理器數目。 下列部落格文章提供深入了解如何計算值：[Analysis Services 2012 組態設定 （Wordpress 部落格）](https://go.microsoft.com/fwlink/?LinkId=330387)。 請注意，後續版本可能會調整這些設定和行為。  
   
  下列清單會針對不同處理器組合顯示其他相似性遮罩設定的範例：  
   
--   8 核心系統上處理器 3-2-1-0 的相似性會產生此位元遮罩：00001111 和十六進位值：0xF  
+-   8 核心系統上的處理器 3-2-1-0 的相似性會產生這個位元遮罩：00001111 和十六進位值：0xF  
   
 -   8 核心系統上的處理器 7-6-5-4 的相似性會產生這個位元遮罩：11110000 和十六進位值：0xF0  
   

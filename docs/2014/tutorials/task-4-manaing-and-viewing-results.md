@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745629"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>工作 4:管理和檢視結果
   在這項工作中，您會檢閱電腦輔助清理的結果，同時針對供應商資料執行互動式清理。 請參閱[互動式清理階段](https://msdn.microsoft.com/library/hh213061.aspx#Interactive)如需詳細資訊。  

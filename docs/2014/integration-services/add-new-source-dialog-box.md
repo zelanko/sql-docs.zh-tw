@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b084f04d403d139c25b44ef0d3c543af933f118d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772004"
 ---
 # <a name="add-new-source-dialog-box"></a>加入新來源對話方塊
   下表列出可以在 [加入新來源] 對話方塊中使用的選項。  

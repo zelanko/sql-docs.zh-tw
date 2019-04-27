@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755601"
 ---
 # <a name="connect-to-server-analysis-services"></a>連接到伺服器 (Analysis Services)
-  使用此對話方塊可在連線到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 時檢視或指定選項。  
+  連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]時，使用此對話方塊來檢視或指定選項。  
   
 ## <a name="options"></a>選項。  
  **伺服器類型**  
@@ -30,7 +30,7 @@ ms.locfileid: "48140150"
  選取要連接的伺服器執行個體。 預設會顯示上次連接的伺服器執行個體。  
   
  **驗證**  
- 當連接到 Analysis Services 的執行個體時，支援下列驗證模式： [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。  
+ 連接到 Analysis services 執行個體時，支援下列驗證模式：[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。  
   
  **Windows 驗證模式 (Windows 驗證)**  
  **Windows 驗證** 模式允許使用者透過 Windows 使用者帳戶連接。  

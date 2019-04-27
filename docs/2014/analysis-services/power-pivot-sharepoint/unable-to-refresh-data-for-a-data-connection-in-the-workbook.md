@@ -1,5 +1,5 @@
 ---
-title: 無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理：PowerPivot 資料 |Microsoft Docs
+title: 無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理：PowerPivot Data | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749119"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在提交連接要求至 PowerPivot 伺服器而且該要求失敗時，傳回這個錯誤。  
@@ -33,7 +33,7 @@ ms.locfileid: "53371000"
 ## <a name="explanation-and-resolution"></a>說明與解決方法  
  Excel Services 無法連接或載入 PowerPivot 資料。 發生此錯誤的條件包括：  
   
- **案例 1：服務未啟動**  
+ **案例 1:服務未啟動**  
   
  未啟動 SQL Server Analysis Services (PowerPivot) 執行個體。 過期的密碼使伺服器停止執行。 如需變更密碼的詳細資訊，請參閱[設定 PowerPivot 服務帳戶](configure-power-pivot-service-accounts.md)並[啟動或停止 PowerPivot for SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53371000"
   
  您嘗試開啟的活頁簿可能是在 SQL Server 2008 R2 版的 PowerPivot for Excel 中建立。 最有可能是因為資料連接字串中指定的 Analysis Services 資料提供者不存在於處理要求的電腦上。  
   
- 在此情況下，ULS 記錄檔中會出現此訊息：「 重新整理活頁簿中失敗的 'PowerPivot 資料' '\<活頁簿 URL >' 」，後面接著 「 無法取得連接 」。  
+ 如果發生這種情況，您會在 ULS 記錄檔中找到此訊息：「 重新整理活頁簿中失敗的 'PowerPivot 資料' '\<活頁簿 URL >' 」，後面接著 「 無法取得連接 」。  
   
  若要判斷活頁簿的版本，您可以在 Excel 開啟它並檢查連接字串中指定的資料提供者。 SQL Server 2008 R2 活頁簿使用 MSOLAP.4 做為其資料提供者。  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756824"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中使用 [工具列] 內的功能執行常見的作業，同時設計或瀏覽 Cube 或其物件，或者建立 MDX 查詢。 設計階段與查詢檢視通用的作業包括設定使用者內容、處理物件，以及設定預設語言。  
@@ -29,7 +29,7 @@ ms.locfileid: "48126468"
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
 |![變更為 MDX 查詢檢視](media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|  
 |![重新整理結果資料](media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
-|![新增導出的成員](media/rsqdicon-addcalculatedmember.gif "新增導出的成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|顯示 **[導出成員產生器]** 對話方塊。|  
 |![切換以顯示空的資料格](media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  
@@ -44,7 +44,7 @@ ms.locfileid: "48126468"
   
 -   **當成文字編輯**  
   
--   **加入導出成員**(![加入導出的成員](media/rsqdicon-addcalculatedmember.gif "加入導出的成員"))  
+-   **加入導出成員** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **顯示空的資料格** (![切換以顯示空的資料格](media/rsqdicon-showemptycells.gif "切換以顯示空的資料格"))  
   
@@ -61,15 +61,15 @@ ms.locfileid: "48126468"
 |**重新連線**|如果 [瀏覽器] 索引標籤的工作階段因連接遺失或逾時而中斷連接，按一下即可將 [計算] 索引標籤重新連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體和包含 Cube 的資料庫。|  
 |**[重新整理]**|按一下即可重新整理 [中繼資料] 和 [報表] 窗格。|  
 |**遞增排序**|按一下即可依 [語言] 中所指定語言的遞增順序，來排序 [報表] 窗格中選取之資料列的同層級。<br /><br /> **注意**：只有選取 [報表] 窗格中的資料格時，才會啟用此選項。|  
-|**遞減排序**|按一下即可依 [語言] 中所指定語言的遞減順序，來排序 [報表] 窗格中選取之資料列的同層級。<br /><br /> 注意：只有選取 [報表] 窗格中的資料格時，才會啟用此選項。|  
+|**遞減排序**|按一下即可依 [語言] 中所指定語言的遞減順序，來排序 [報表] 窗格中選取之資料列的同層級。<br /><br /> 注意:此選項才會啟用中的資料格**報表**窗格已選取。|  
 |**自動篩選**|按一下即可自動篩選 [結果] 窗格中的結果。|  
 |**只顯示最上方/最下層**|選取一個值或百分比，以根據選取的量值，在 [報表] 窗格中只顯示最上層或最下層的資料格數目或資料格的百分比。<br /><br /> 如需這個選項的詳細資訊，請參閱 [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)、[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)、[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) 和 [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)。|  
-|**小計**|按一下即可顯示小計。|  
+|**Subtotal**|按一下即可顯示小計。|  
 |**所有項目的總計**|按一下即可顯示 [報表] 窗格中之所有成員的總計。|  
 |**顯示空白資料格**|按一下即可顯示 [報表] 窗格中之空的資料格。|  
 |**清除結果**|按一下即可清除 [報表] 窗格中的結果。|  
 |**命令與選項**|按一下即可顯示 [命令與選項] 對話方塊，並編輯 [報表] 窗格中之 Microsoft Office 11.0 樞紐分析表控制項的進階屬性。 如需 [命令與選項] 對話方塊的詳細資訊，請參閱 Microsoft Office 文件。|  
-|**檢視方塊**|選取用來檢視 [中繼資料] 和 [報表] 窗格中之資料與中繼資料的檢視方塊。<br /><br /> 若要檢視 Cube 而不使用檢視方塊，請選取 Cube 名稱。|  
+|**Perspective**|選取用來檢視 [中繼資料] 和 [報表] 窗格中之資料與中繼資料的檢視方塊。<br /><br /> 若要檢視 Cube 而不使用檢視方塊，請選取 Cube 名稱。|  
 |**語言**|選取用來檢視 [中繼資料] 和 [報表] 窗格中之資料與中繼資料的語言。<br /><br /> 若要使用預設語言檢視 Cube，請選取 [預設值]。|  
   
   

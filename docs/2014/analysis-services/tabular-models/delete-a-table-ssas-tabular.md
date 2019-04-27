@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 142a775415da489e67bc00b048651209a2a30179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757235"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>刪除資料表 (SSAS 表格式)
   在模型設計師中，您可以刪除模型工作空間資料庫中不再需要的資料表。 刪除資料表並不會影響原始來源資料，只會影響您匯入並在其中處理的資料。 您無法恢復資料表的刪除作業。  
@@ -34,6 +34,6 @@ ms.locfileid: "48224758"
 -   如果您使用該資料表建立任何導出資料行，該資料表中的資料行也會遭到刪除；其他資料表中使用已刪除資料表之資料行的所有導出資料行則會顯示錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表和資料行&#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)  
+ [資料表與資料行 &#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)  
   
   

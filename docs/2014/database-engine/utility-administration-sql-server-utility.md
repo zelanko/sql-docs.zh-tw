@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773750"
 ---
 # <a name="utility-administration-sql-server-utility"></a>公用程式管理 (SQL Server 公用程式)
   您可以使用 [公用程式管理] 索引標籤來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式的原則、安全性和資料倉儲設定。 如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式概念的詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
@@ -89,11 +89,11 @@ ms.locfileid: "48128838"
  公用程式資料倉儲組態資訊  
  這一版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]無法設定下列組態設定：  
   
--   UMDW 名稱：Sysutility_mdw_\<GUID>_DATA。  
+-   UMDW 名稱：Sysutility_mdw_<guid\<GUID > （_d)。  
   
 -   收集組上傳頻率：每隔 15 分鐘。  
   
- UMDW 目錄是可以設定的：\<系統磁碟機>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\，其中 \<系統磁碟機> 通常是 C:\ 磁碟機。 記錄檔 UMDW_\<GUID>_LOG 位於相同的目錄中。  
+ UMDW 目錄是可設定：\<系統磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL10_50.< 也就是 > \MSSQL\Data\\，其中\<系統磁碟機 > 通常是 C:\磁碟機。 記錄檔 UMDW_\<GUID>_LOG 位於相同的目錄中。  
   
 > [!NOTE]  
 >  可以使用卸離/附加或 ALTER DATABASE 來變更 UMDW (sysutility_mdw) 檔案的位置。 我們建議使用 ALTER DATABASE。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  

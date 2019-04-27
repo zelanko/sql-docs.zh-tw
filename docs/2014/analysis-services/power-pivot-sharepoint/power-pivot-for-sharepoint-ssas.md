@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749258"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint 是以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 PowerPivot for SharePoint 提供將 PowerPivot 資料裝載於 SharePoint 伺服器陣列的功能。 PowerPivot 資料是您使用下列其中一個項目建立的分析資料模型：  
@@ -25,7 +25,7 @@ ms.locfileid: "53365820"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010年  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
   
  這些資料的伺服器裝載需要 SharePoint、Excel Services 和 PowerPivot for SharePoint 安裝。 資料載入到 PowerPivot for SharePoint 執行個體上，在此處可透過伺服器為 Excel 2010 活頁簿提供的 PowerPivot 資料重新整理功能或是為 Excel 2013 活頁簿提供的 SharePoint 2013 Excel Services，依排程間隔重新整理資料。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "53365820"
   
  [PowerPivot 管理儀表板和使用量資料](power-pivot-management-dashboard-and-usage-data.md)  
   
- [PowerPivot 圖庫](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
   
  [PowerPivot 資料存取](power-pivot-data-access.md)  
   

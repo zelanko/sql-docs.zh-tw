@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756756"
 ---
 # <a name="relationships-ssas-tabular"></a>關聯性 (SSAS 表格式)
   在表格式模型中，關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
@@ -77,7 +77,7 @@ ms.locfileid: "48191738"
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- 如果從相同資料庫匯入這些資料表，[資料表匯入精靈] 即可根據 [方括號] 中的資料行來偵測資料表之間的關聯性，而且可以在模型設計師中重現這些關聯性。 如需詳細資訊，請參閱本主題中的 [關聯性的自動偵測和推斷](#detection) 。 如果您匯入多個來源的資料表，您可以手動建立關聯性中所述[建立關聯性之間兩個資料表的&#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
+ 如果從相同資料庫匯入這些資料表，[資料表匯入精靈] 即可根據 [方括號] 中的資料行來偵測資料表之間的關聯性，而且可以在模型設計師中重現這些關聯性。 如需詳細資訊，請參閱本主題中的 [關聯性的自動偵測和推斷](#detection) 。 如果從多個來源匯入資料表，則可依照 [建立兩個資料表之間的關聯性 &#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)(Relational databases) 中使用的方法。  
   
 ### <a name="columns-and-keys"></a>資料行與索引鍵  
  關聯性是以包含相同資料的每個資料表中的資料行為基礎。 例如，「客戶」和「訂單」資料表可以彼此相關，因為兩者都包含儲存客戶 ID 的資料行。 在此範例中，資料行名稱相同，但這點並不是需求。 一個資料行可以是 CustomerID，另一個資料行則可是 CustomerNumber，只要「訂單」資料表中所有包含 ID 的資料列也都有儲存在「客戶」資料表中即可。  
@@ -111,9 +111,9 @@ ms.locfileid: "48191738"
  模型設計師在建立關聯性時，具有多項必須遵循的需求：  
   
 ### <a name="single-active-relationship-between-tables"></a>資料表之間的單一使用中關聯性  
- 多個關聯性可能會在資料表之間造成模稜兩可的相依性。 若要建立精確的計算，您需要從一個資料表到下一個資料表的單一路徑。 因此，每一對資料表之間只能有一個使用中的關聯性。 例如，在 AdventureWorks DW 2012 中，資料表 DimDate 包含一個資料行 DateKey，這個資料行與資料表 FactInternetSales 中的三個不同資料行相關：OrderDate、DueDate 與 ShipDate。 如果您嘗試匯入這些資料表，會成功建立第一個關聯性，但是對於包含相同資料行的後續關聯性，則會收到下列錯誤：  
+ 多個關聯性可能會在資料表之間造成模稜兩可的相依性。 若要建立精確的計算，您需要從一個資料表到下一個資料表的單一路徑。 因此，每一對資料表之間只能有一個使用中的關聯性。 例如，在 AdventureWorks DW 2012 中，資料表 DimDate 包含的資料行 DateKey，這個資料表 FactInternetSales 中的三個不同資料行相關：OrderDate、 DueDate 與 ShipDate。 如果您嘗試匯入這些資料表，會成功建立第一個關聯性，但是對於包含相同資料行的後續關聯性，則會收到下列錯誤：  
   
- \* 關聯性： table [column 1]-> table [column 2]-狀態： 錯誤-原因： 無法在資料表之間建立關聯性\<資料表 1 > 和\<表 2 >。 兩個資料表之間只能有一個直接或間接關聯性。  
+ \* 關聯性： table [column 1]-> table [column 2]-狀態： 錯誤-原因：無法在資料表之間建立關聯性\<資料表 1 > 和\<表 2 >。 兩個資料表之間只能有一個直接或間接關聯性。  
   
  如果您有兩個資料表，而且在這兩個資料表之間有多個關聯性，則您需要匯入包含查閱資料行之資料表的多個複本，然後在每對資料表之間建立一個關聯性。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48191738"
   
  如果您的模型包含來自多個資料來源的資料，則可能需要手動建立關聯性。 例如，您可以從關聯式資料來源匯入 Customers、CustomerDiscounts 和 Orders 資料表。 來源中這些資料表之間的現有關聯式會在模型中自動建立。 然後，您可以從不同來源新增其他資料表，例如，從 Microsoft Excel 活頁簿中的 Geography 資料表匯入地區資料。 接著手動建立 Customers 資料表中的資料行和 Geography 資料表中的資料行之間的關聯性。  
   
- 若要在表格式模型中手動建立關聯性，您可以使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 此圖表檢視以圖形格式顯示資料表，以及資料表之間的關聯性。 您可以按一下一個資料表中的資料行，將游標拖曳到另一個資料表中，輕鬆地在兩個資料表之間以正確順序建立關聯性。 [管理關聯性] 對話方塊以簡單的表格格式顯示資料表之間的關聯性。 若要了解如何手動建立關聯性，請參閱[建立關聯性之間兩個資料表的&#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
+ 若要在表格式模型中手動建立關聯性，您可以使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 此圖表檢視以圖形格式顯示資料表，以及資料表之間的關聯性。 您可以按一下一個資料表中的資料行，將游標拖曳到另一個資料表中，輕鬆地在兩個資料表之間以正確順序建立關聯性。 [管理關聯性] 對話方塊以簡單的表格格式顯示資料表之間的關聯性。 若要了解如何手動建立關聯性，請參閱 [建立兩個資料表之間的關聯性 &#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)(Relational databases) 中使用的方法。  
   
 ##  <a name="bkmk_dupl_errors"></a> 重複值及其他錯誤  
  如果您選擇不能用於關聯性的資料行，資料行旁邊就會出現紅色的 X。 您可以將游標暫停在錯誤圖示上方，以檢視訊息，其中提供有關此問題的詳細資訊。 以下列出的問題，可能會使得所選資料行之間無法建立關聯性：  
@@ -187,11 +187,11 @@ ms.locfileid: "48191738"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[建立兩個資料表之間的關聯性&#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|描述如何手動建立兩個資料表之間的關聯性。|  
-|[刪除關聯性&#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)|描述如何刪除關聯性和刪除關聯性的後果。|  
+|[建立兩個資料表之間的關聯性 &#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|描述如何手動建立兩個資料表之間的關聯性。|  
+|[刪除關聯性 &#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)|描述如何刪除關聯性和刪除關聯性的後果。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表和資料行&#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
- [匯入資料&#40;SSAS 表格式&#41;](../import-data-ssas-tabular.md)  
+ [資料表與資料行 &#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
+ [匯入資料 (SSAS 表格式)](../import-data-ssas-tabular.md)  
   
   

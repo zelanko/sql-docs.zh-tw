@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753183"
 ---
 # <a name="task-4-setting-domain-rules"></a>工作 4:設定定義域規則
   在這個工作中，您建立的規則**Contact Email**網域來驗證是否電子郵件地址結尾**@adventure-works.com**。 請參閱[建立定義域規則](https://msdn.microsoft.com/library/hh510397.aspx)如需詳細資料頁面上的主題。  

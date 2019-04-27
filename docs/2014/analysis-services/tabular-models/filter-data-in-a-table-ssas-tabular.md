@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757213"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>篩選資料表中的資料 (SSAS 表格式)
   您可以在匯入資料時套用篩選，以控制要載入資料表的資料列。 匯入資料之後，您就無法刪除個別的資料列。 但是，您可以套用自訂篩選來控制資料列的顯示方式。 不符合篩選準則的資料列則會隱藏起來。 您可以依一個或多個資料行進行篩選。 篩選會加總，也就是說，每一個額外的篩選都會以目前的篩選為基礎，並進一步減少資料子集。  
@@ -53,8 +53,8 @@ ms.locfileid: "48079698"
 2.  按一下 **[資料行]** 功能表，然後按一下 **[清除所有篩選]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選和排序資料&#40;SSAS 表格式&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [檢視方塊&#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
- [角色&#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
+ [篩選與排序資料 &#40;SSAS 表格式&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
   
   

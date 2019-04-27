@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771434"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
   完成執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程後，下一個工作是建立可擷取變更資料的資料表值函式。 第一次累加式載入前，您僅需要建立一次這個函數。  
@@ -132,7 +132,7 @@ deallocate #hfunctions
   
 -   異動資料的所有要求資料行。  
   
--   名稱為 __CDC_OPERATION 的資料行使用一或兩個字元欄位來識別與資料列關聯的作業。 此欄位的有效值如下所示：'I' 用於插入、 組件快取 '用於刪除、 'UO' 用於更新舊值，而' UN ' 用於更新新值。  
+-   名稱為 __CDC_OPERATION 的資料行使用一或兩個字元欄位來識別與資料列關聯的作業。 此欄位的有效值如下：'I' 用於插入、'D' 用於刪除、'UO'’ 用於更新舊值，而 'UN' 用於更新新值。  
   
 -   當您要求旗標時，更新顯示為作業碼後之位元資料行的旗標，並以 *@update_flag_list* 參數中指定的順序顯示。 這些資料行的命名方式是將 '_uflag' 附加到相關聯的資料行名稱。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746310"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>指定屬性排序方式 (商業智慧精靈)
   使用 [指定屬性排序方式] 頁面，即可為所選取維度中的屬性，指定排列屬性與排列準則的方式。  

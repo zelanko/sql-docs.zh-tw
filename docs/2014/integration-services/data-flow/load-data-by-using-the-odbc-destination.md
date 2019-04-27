@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771064"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
   此程序說明如何透過使用 ODBC 目的地載入資料。 若要加入及設定 ODBC 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -34,9 +34,9 @@ ms.locfileid: "58383111"
   
 6.  選取資料存取方法。  
   
-    -   **資料表名稱-批次**:若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以設定 **[批次大小]**。  
+    -   **資料表名稱 - 批次**：若要將 ODBC 目的地設定成以批次模式運作，請選取此選項。 當您選取此選項時，可以設定 **[批次大小]**。  
   
-    -   **資料表名稱-逐列**:若要將 ODBC 目的地設定成插入每個資料列至目的地資料表 (一次一個)，請選取此選項。 當您選取此選項時，資料會以一次一個資料列的方式載入到資料表。  
+    -   **資料表名稱 - 逐列**：若要將 ODBC 目的地設定成插入每個資料列至目的地資料表 (一次一個)，請選取此選項。 當您選取此選項時，資料會以一次一個資料列的方式載入到資料表。  
   
 7.  在 **[資料表或檢視表的名稱]** 欄位中，從清單中選取資料庫中可用的資料表或檢視表，或是輸入可識別資料表的規則運算式。此清單只包含前 1000 個資料表。 如果您的資料庫包含超過 1000 個資料表，您可以輸入資料表名稱的開頭或使用 (*) 萬用字元來輸入名稱的任何部分，以便顯示您想要使用的資料表。  
   

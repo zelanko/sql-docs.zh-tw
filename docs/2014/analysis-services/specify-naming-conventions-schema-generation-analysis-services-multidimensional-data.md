@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746271"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定命名慣例 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[指定命名慣例]** 頁面，即可定義結構描述產生精靈建立結構描述物件時使用的命名慣例。  
@@ -29,7 +29,7 @@ ms.locfileid: "48226248"
   
 |選項|描述|  
 |------------|-----------------|  
-|**分隔符號**|指定字元，用來分隔物件名稱中的單字。 在 **[值]** 資料行中，選取 **[底線]**、 **[空格]** 或 **[無]**。 預設值是 **[底線]**。|  
+|**Separator**|指定字元，用來分隔物件名稱中的單字。 在 **[值]** 資料行中，選取 **[底線]**、 **[空格]** 或 **[無]**。 預設值是 **[底線]**。|  
 |**主索引鍵資料行前置詞**|指定字串，作為每一個主索引鍵資料行的名稱前置詞。 預設值是 **PK**。|  
 |**外部索引鍵資料行前置詞**|指定字串，作為每一個外部索引鍵資料行的名稱前置詞。 預設值是 **FK**。|  
 |**屬性名稱後置詞**|指定字串，用於附加至每一個屬性資料行的名稱後面。 預設值是 **Name**。|  

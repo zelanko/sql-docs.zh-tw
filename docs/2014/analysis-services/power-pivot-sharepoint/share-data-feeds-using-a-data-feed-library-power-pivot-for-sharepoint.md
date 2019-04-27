@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749215"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用資料摘要庫共用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從以 Atom 電傳格式公開資料之服務或應用程式產生的 XML 資料流， 現在越來越常用在應用程式之間傳輸資料，以及傳輸資料至用戶端檢視器。 在 PowerPivot for SharePoint 部署中，資料摘要用來填入[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]具有以 Atom 感知應用程式或服務的資料來源。  
@@ -35,7 +35,7 @@ ms.locfileid: "48178548"
   
  [修改資料服務文件](#modifydsdoc)  
   
- [下一步：使用資料服務文件](#usedsdoc)  
+ [下一個步驟：使用資料服務文件](#usedsdoc)  
   
 > [!NOTE]  
 >  雖然資料摘要是用來將 Web 資料加入您在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中建立的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]資料來源，但是任何可讀取 Atom 摘要的用戶端應用程式都可以處理資料服務文件。  
@@ -110,7 +110,7 @@ ms.locfileid: "48178548"
 > [!IMPORTANT]  
 >  雖然資料服務文件只讀取一次，但提供實際資料的資料服務可以定期進行存取，以取得更新的摘要。 如需如何重新整理資料的詳細資訊，請參閱[PowerPivot 資料重新整理](power-pivot-data-refresh.md)。  
   
-##  <a name="usedsdoc"></a> 下一步：使用資料服務文件  
+##  <a name="usedsdoc"></a> 下一個步驟：使用資料服務文件  
  若要使用您在 SharePoint 文件庫中建立資料服務文件，您使用**從資料摘要**匯入 PowerPivot 資料來源中的選項。 如需相關指示，請參閱 <<c0> [ 使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  

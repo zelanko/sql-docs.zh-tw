@@ -1,5 +1,5 @@
 ---
-title: 教學課程：SQL Server Management Studio | Microsoft Docs
+title: 教學課程：SQL Server Management Studio |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753430"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>教學課程：SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 教學課程將為您介紹用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供設定、監視和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的圖形介面。 也讓您部署、監視以及升級應用程式所使用的資料層元件，例如資料庫和資料倉儲。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 也提供用於編輯和偵錯指令碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 和 XML 語言編輯器。  
@@ -42,10 +42,10 @@ ms.locfileid: "48167308"
  [第 1 課：SQL Server Management Studio 中的基本導覽](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  在這一課，您將學習如何使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的元件、如何重新設定環境配置，以及如何還原預設配置。  
   
- [課程 2 - 撰寫 Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [第 2 課：撰寫 TRANSACT-SQL](lesson-2-writing-transact-sql.md)  
  在這個課程中，您將學習如何開啟查詢編輯器、如何管理程式碼，以及如何使用查詢編輯器的其他新功能。  
   
- [第 3 課：使用範本、方案和指令碼專案](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [第 3 課：使用範本、 方案和指令碼專案](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  在這一課，您將學習如何使用範本，並將指令碼組織到方案和專案中。  
   
 ## <a name="requirements"></a>需求  

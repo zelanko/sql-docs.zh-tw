@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748210"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>結果窗格 (採礦模型預測檢視)
   [結果] 窗格會顯示在預測查詢產生器的 [設計] 檢視中，所設計之資料採礦預測查詢的結果。 您可以將方格的選取範圍或整個結果方格複製到剪貼簿。  
@@ -37,7 +37,7 @@ ms.locfileid: "48071178"
  重新處理預測查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [預測查詢產生器&#40;資料採礦&#41;](prediction-query-builder-data-mining.md)   
+ [預測查詢產生器 &#40;資料採礦&#41;](prediction-query-builder-data-mining.md)   
  [資料採礦查詢介面](data-mining/data-mining-query-tools.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](/sql/dmx/data-mining-extensions-dmx-statements)  
   

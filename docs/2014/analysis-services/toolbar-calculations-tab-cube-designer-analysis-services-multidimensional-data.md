@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756484"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[工具列]** 窗格，即可執行 Cube 設計師中之 **[計算]** 索引標籤上的通用作業。  
@@ -37,7 +37,7 @@ ms.locfileid: "48090858"
 |**表單檢視**|選取即可在表單檢視中使用 **[計算]** 索引標籤。|  
 |**指令碼檢視**|選取即可在指令碼檢視中使用 **[計算]** 索引標籤。|  
 |**請檢查語法**|按一下即可檢查 Cube 指令碼中的語法。|  
-|**字型**|按一下即可顯示 [字型] 對話方塊，並在 Cube 指令碼中的選取點插入與字型相關之資料格屬性值的有效集合。 此選項只會在指令碼檢視中啟用。|  
+|**Font**|按一下即可顯示 [字型] 對話方塊，並在 Cube 指令碼中的選取點插入與字型相關之資料格屬性值的有效集合。 此選項只會在指令碼檢視中啟用。|  
 |**Color**|按一下即可顯示 [色彩] 對話方塊，並在 Cube 指令碼的選擇點插入有效的 RGB (紅色-綠色-藍色) 值。 此選項只會在指令碼檢視中啟用。|  
 |**計算屬性**|按一下即可顯示 **[計算屬性]** 對話方塊，並在 Cube 指令碼中編輯計算的計算屬性值。|  
 |**變更使用者**|按一下即可顯示 **[安全性內容]** 對話方塊，並變更用於 **[計算]** 索引標籤中的使用者和角色。|  

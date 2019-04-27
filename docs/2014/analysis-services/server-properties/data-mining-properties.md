@@ -59,16 +59,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80e7a793973ddbe0e55862d2e68f23e6c7e31dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746830"
 ---
 # <a name="data-mining-properties"></a>資料採礦屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的資料採礦伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
- **適用於** ：僅限於多維度伺服器模式  
+ **適用於：** 僅限多維度伺服器模式  
   
 ## <a name="non-specific-category"></a>非特定類別目錄  
  `AllowSessionMiningModels`  
@@ -119,7 +119,7 @@ ms.locfileid: "48224388"
 >  除了定義伺服器上可用之資料採礦服務的屬性以外，還有其他資料採礦屬性可定義特定演算法的行為。 當您建立個別資料採礦模型時 (不在伺服器層級上)，可以設定這些屬性。 如需詳細資訊，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [實體架構&#40;Analysis Services-資料採礦&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [實體架構 &#40;Analysis Services – 資料採礦&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Analysis Services 中設定伺服器屬性](server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

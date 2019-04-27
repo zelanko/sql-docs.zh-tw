@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743969"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  如果重新啟動資料表，且沒有重新擴展索引，任何其餘啟用全文檢索的非新增資料行的查詢，仍可以使用舊索引。 在指定全部全文檢索資料行搜尋的查詢中，會符合已刪除的資料行之資料。  
   
- 在定義全文檢索索引的資料表之後，將全文檢索唯一索引鍵資料行的資料類型切換成另一個資料類型，不論是藉由變更這個資料行的資料類型，或藉著將全文檢索唯一索引鍵的資料行變更為另一個資料行，只要沒有完整重新擴展，都可能使後續查詢失敗並傳回下列錯誤訊息：「 轉換為類型*data_type*無法用於全文檢索搜尋索引鍵值*key_value*。 」 若要避免這個問題，卸除此資料表使用全文檢索定義**卸除**動作**sp_fulltext_table**重新定義它使用**sp_fulltext_table**和**sp_fulltext_column**。  
+ 資料表後已定義全文檢索索引時，切換全文檢索唯一索引鍵資料行從一個資料型別到另一個，藉由變更該資料行的資料類型，或從一個資料行的全文檢索唯一索引鍵變更到另一個，而不需要完整重新擴展可能會造成失敗發生在後續的查詢，並傳回錯誤訊息：「 轉換為類型*data_type*無法用於全文檢索搜尋索引鍵值*key_value*。 」 若要避免這個問題，卸除此資料表使用全文檢索定義**卸除**動作**sp_fulltext_table**重新定義它使用**sp_fulltext_table**和**sp_fulltext_column**。  
   
  全文檢索索引鍵資料行必須定義成 900 位元組或以下。 基於效能的考量，建議您索引鍵資料行的大小，愈小愈好。  
   

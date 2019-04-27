@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778820"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文檢索目錄屬性 (母體擴展排程頁面)
   使用此對話方塊即可加入或修改排程，決定何時擴展或重新擴展全文檢索目錄。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747812"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>指令碼組合管理 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師的 [計算] 索引標籤上，使用 [指令碼組合管理] 窗格，即可存取和重新排列包含在指定 Cube 之 Cube 指令碼中的導出成員、命名集以及指令碼命令。  
@@ -27,7 +27,7 @@ ms.locfileid: "48069184"
 >  表單檢視中不會顯示這個窗格。  
   
 ## <a name="options"></a>選項。  
- **步驟**  
+ **Step**  
  顯示 Cube 指令碼中的導出成員、命名集和指令碼命令的執行順序。  
   
  在 [工具列] 窗格或內容功能表中，按一下 [上移] 或 [下移]，即可變更計算的執行順序。  
@@ -48,8 +48,8 @@ ms.locfileid: "48069184"
 |**新的導出的成員**|選取即可顯示 [導出成員表單編輯器]，並建立新的導出成員。 如需詳細資訊**導出成員表單編輯器**，請參閱[導出成員表單編輯器&#40;計算索引標籤，Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**新增命名的集**|選取即可顯示 [命名集表單編輯器]，並建立新的命名集。 如需詳細資訊**命名集表單編輯器**，請參閱[命名集表單編輯器&#40;計算索引標籤，Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**新的指令碼命令**|選取即可顯示 [指令碼編輯器]，並建立新的指令碼命令。 如需詳細資訊**指令碼編輯器**，請參閱[指令碼編輯器&#40;計算索引標籤，Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)。|  
-|**上移**|選取即可將選取的計算向上移動一個位置。<br /><br /> 注意：如果選取的計算無法再移動，此選項會停用。|  
-|**下移**|選取即可將選取的計算向下移動一個位置。<br /><br /> 注意：如果選取的計算無法再移動，此選項會停用。|  
+|**上移**|選取即可將選取的計算向上移動一個位置。<br /><br /> 注意:如果選取的計算無法再移動，則會停用此選項。|  
+|**下移**|選取即可將選取的計算向下移動一個位置。<br /><br /> 注意:如果選取的計算無法再移動，則會停用此選項。|  
 |**刪除**|選取即可刪除選取的計算。|  
   
 ## <a name="see-also"></a>另請參閱  

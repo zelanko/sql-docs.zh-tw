@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749459"
 ---
 # <a name="delete-powerpivot-gallery"></a>刪除 PowerPivot 圖庫
   刪除 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫也會刪除其所有項目，包括為排程的資料重新整理所設定之 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的資料重新整理記錄。  
@@ -51,6 +51,6 @@ ms.locfileid: "48114158"
 5.  在 [權限與管理] 之下，按一下 [刪除此文件庫]。  
   
 ## <a name="see-also"></a>另請參閱  
- [PowerPivot 圖庫](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)  
   
   

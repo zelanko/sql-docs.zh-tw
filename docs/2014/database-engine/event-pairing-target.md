@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780409"
 ---
 # <a name="event-pairing-target"></a>事件配對目標
   事件配對目標會使用每個事件中存在之一個或多個資料行來比對兩個事件。 許多事件都是以成對的形式出現，例如鎖定取得和鎖定釋放。 當事件序列配對之後，會捨棄這兩個事件。 捨棄相符的事件組可讓您輕鬆偵測尚未釋放的鎖定取得。  

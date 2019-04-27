@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3f47ddcfab5df43104d3998822fdaf8bd504946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748782"
 ---
 # <a name="process-data-ssas-tabular"></a>處理資料 (SSAS 表格式)
   當您將資料匯入至快取模式的表格式模型時，您可以擷取該資料在匯入時的快照集。 在某些情況下，該資料可能永遠不會變更，因此不需要在模型中更新。 但是，您匯入的資料很有可能定期變更，因此為了讓模型可以反映資料來源的最新資料，您必須處理 (重新整理) 資料並重新計算導出資料。 若要更新模型中的資料，您可以在所有資料表上、在個別資料表上、透過資料分割或透過資料來源連接，來執行處理動作。  
@@ -27,7 +27,7 @@ ms.locfileid: "48048428"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[手動處理資料&#40;SSAS 表格式&#41;](manually-process-data-ssas-tabular.md)|描述如何手動處理模型工作空間資料。|  
-|[疑難排解處理資料&#40;SSAS 表格式&#41;](troubleshoot-process-data-ssas-tabular.md)|描述如何疑難排解處理作業。|  
+|[手動處理資料 (SSAS 表格式)](manually-process-data-ssas-tabular.md)|描述如何手動處理模型工作空間資料。|  
+|[疑難排解處理資料 (SSAS 表格式)](troubleshoot-process-data-ssas-tabular.md)|描述如何疑難排解處理作業。|  
   
   

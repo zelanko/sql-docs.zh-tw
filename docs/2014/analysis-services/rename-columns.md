@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748240"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 課：重新命名資料行
   在這一課，您將重新命名匯入的每個資料表中的多個資料行。 重新命名可讓資料行更容易識別，且更容易在模型設計師中以及藉由使用者在用戶端應用程式中選取欄位的方式進行導覽。 若要深入了解，請參閱[重新命名資料表或資料行 &#40;SSAS 表格式&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md)。  
@@ -24,7 +24,7 @@ ms.locfileid: "52416689"
 > [!IMPORTANT]  
 >  重新命名資料行不是完成本教學課程的必要工作；不過，在其餘課程 (尤其是包含建立關聯性的課程，以及使用 DAX 公式建立導出資料行和量值的課程) 會參考本課程中所述的資料行易記名稱。 如果您選擇不重新命名資料行，則必須在第 5、6 和 7 課中編輯 DAX 公式，以便使用本課中提供的原始來源資料行名稱。  
   
- 完成本課程的估計時間：**20 分鐘的時間**  
+ 估計的時間才能完成這一課：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 2 課：將資料加入](lesson-2-add-data.md)。  
