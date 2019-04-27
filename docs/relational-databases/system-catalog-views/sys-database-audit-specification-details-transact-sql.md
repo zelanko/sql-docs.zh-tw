@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652476"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "47648946"
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|稽核規格的識別碼。|  
 |**audit_action_id**|**int**|稽核動作的識別碼。|  
-|**audit_action_name**|**sysname**|稽核動作或稽核動作群組的名稱|  
+|**audit_action_name**|**Sysname**|稽核動作或稽核動作群組的名稱|  
 |**類別**|**int**|識別正在稽核之物件的類別。|  
-|**class_ desc**|**nvarchar(60)**|正在稽核之物件類別的描述：<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**class_ desc**|**Nvarchar(60)**|正在稽核之物件類別的描述：<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|正在稽核之物件的主要識別碼，例如資料表稽核動作的資料表識別碼。|  
 |**minor_id**|**整數**|正在稽核之物件的次要識別碼 (將會根據類別來解譯)，例如資料表稽核動作的資料行識別碼。|  
 |**audited_principal_id**|**int**|正在稽核的主體。|  
-|**audited_result**|**nvarchar(60)**|稽核動作結果：<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**Nvarchar(60)**|稽核動作結果：<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|顯示物件是否為群組：<br /><br /> 0 - 不是群組<br /><br /> 1 - 群組|  
   
 ## <a name="permissions"></a>Permissions  

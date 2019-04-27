@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789863"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組的必要條件、限制和建議 (SQL Server)
   此主題描述部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的考量，包括對於主機電腦、Windows Server 容錯移轉叢集 (WSFC) 叢集、伺服器執行個體和可用性群組的必要條件、限制和建議。 它也會指出這些元件的安全性考量和必要權限 (如果有的話)。  
@@ -39,12 +39,12 @@ ms.locfileid: "59242226"
   
 ||相依功能|Hotfix|連結|  
 |------|-----------------------|------------|----------|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 加入了對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347:[可將 AlwaysOn 功能的支援加入.Net 3.5 SP1 的 Hotfix](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|適用於 .Net 3.5 SP1 的 Hotfix 加入了對 AlwaysOn 功能的 SQL 用戶端支援，包括讀取意圖、Readonly 和 Multisubnetfailover。 每一部 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表伺服器上都需要安裝這個 Hotfix。|KB 2654347：[可將 AlwaysOn 功能的支援加入.Net 3.5 SP1 的 Hotfix](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="SystemReqsForAOAG"></a> Windows 系統需求和建議  
   
   
-###  <a name="SystemRequirements"></a> 檢查清單：需求 （Windows 系統）  
+###  <a name="SystemRequirements"></a> 檢查清單：需求 (Windows 系統)  
  若要支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能，請確定要參與一個或多個可用性群組的每部電腦都符合下列基礎需求：  
   
 ||需求|連結|  
@@ -76,7 +76,7 @@ ms.locfileid: "59242226"
   
 -   **可比較的系統：** 對於指定的可用性群組而言，所有可用性複本都應該在可處理相同工作負載的可相比系統上執行。  
   
--   **專用的網路介面卡：** 為了達到最佳效能，請使用專用的網路介面卡 （網路介面卡） 的[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。  
+-   **專用的網路介面卡：** 為達最佳效能，請針對 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 使用專用的網路介面卡 (NIC)。  
   
 -   **足夠的磁碟空間：** 伺服器執行個體裝載可用性複本的每部電腦都必須擁有足夠的磁碟空間，才能容納可用性群組中的所有資料庫。 請牢記，當主要資料庫成長時，其對應的次要資料庫也會成長相同的數量。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "59242226"
   
  
   
-###  <a name="PrerequisitesSI"></a> 檢查清單：必要條件 （伺服器執行個體）  
+###  <a name="PrerequisitesSI"></a> 檢查清單：必要條件 (伺服器執行個體)  
   
 ||必要條件|連結|  
 |-|------------------|-----------|  
@@ -216,7 +216,7 @@ ms.locfileid: "59242226"
   
 -   **變更 FCI 網路名稱：** 如果您需要對裝載可用性複本的 FCI 變更網路名稱，則需要從其可用性群組移除複本，然後將複本重新新增至可用性群組。 您無法移除主要複本，因此如果要對裝載可用性複本的 FCI 重新命名，應該容錯移轉至次要複本，然後移除先前的主要複本並重新加回。 請注意重新命名 FCI 可能改變其資料庫鏡像端點的 URL。 當您加入複本時，請務必指定目前端點的 URL。  
   
-###  <a name="PrerequisitesFCI"></a> 檢查清單：必要條件 (Fci)  
+###  <a name="PrerequisitesFCI"></a> 檢查清單：必要條件 (FCI)  
   
 ||必要條件|連結|  
 |-|------------------|----------|  
@@ -251,7 +251,7 @@ ms.locfileid: "59242226"
   
 -   **可用性複本：** 每個可用性群組都支援一個主要複本和最多八個次要複本。 所有複本都可以在非同步認可模式下執行，或其中多達三個複本可以在同步認可模式下執行 (一個主要複本並且包含兩個同步次要複本)。  
   
--   **每一部電腦之可用性群組和可用性資料庫的最大數量：** 資料庫和可用性群組，您可以放到電腦 （VM 或實體） 的實際數目取決於硬體和工作負載，但沒有強制限制。 Microsoft 對每部實體電腦 10 AG 和 100 DB 進行過廣泛測試。 超載系統的徵狀包括 (但不限於) 工作者執行緒耗盡、AlwaysOn 系統檢視和 DMV 的回應時間緩慢，及/或停止的發送器系統傾印。 請確實透過類似實際執行的工作負載徹底測試您的環境，確保其能夠在應用程式 SLA 範圍內處理尖峰工作負載容量。 在考量 SLA 的情況下，務必考慮失敗情況下的負載，以及預期的回應時間。  
+-   **每一部電腦之可用性群組和可用性資料庫的最大數量：** 您可以放到電腦的資料庫和可用性群組 (VM 或實體) 的實際數量取決於硬體和工作負載，但沒有強制執行的限制。 Microsoft 對每部實體電腦 10 AG 和 100 DB 進行過廣泛測試。 超載系統的徵狀包括 (但不限於) 工作者執行緒耗盡、AlwaysOn 系統檢視和 DMV 的回應時間緩慢，及/或停止的發送器系統傾印。 請確實透過類似實際執行的工作負載徹底測試您的環境，確保其能夠在應用程式 SLA 範圍內處理尖峰工作負載容量。 在考量 SLA 的情況下，務必考慮失敗情況下的負載，以及預期的回應時間。  
   
 -   **不要使用容錯移轉叢集管理員操作可用性群組：**  
   
@@ -306,7 +306,7 @@ ms.locfileid: "59242226"
   
  
   
-###  <a name="RequirementsDb"></a> 檢查清單：需求 （可用性資料庫）  
+###  <a name="RequirementsDb"></a> 檢查清單：需求 (可用性資料庫)  
  資料庫必須擁有下列資格，才能加入至可用性群組：  
   
 ||需求|連結|  
@@ -317,7 +317,7 @@ ms.locfileid: "59242226"
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|必須是多使用者資料庫。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**user_access** = 0)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|不使用 AUTO_CLOSE。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**is_auto_close_on** = 0)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|使用完整復原模式 (也稱為完整復原模式)。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**recovery_model** = 1)|  
-|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|至少擁有一個完整資料庫備份。<br /><br /> 注意:之後將資料庫設為完整復原模式下，完整備份，才能起始完整復原記錄檔鏈結。|[建立完整資料庫備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
+|![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|至少擁有一個完整資料庫備份。<br /><br /> 注意:將資料庫設為完整復原模式之後，需要完整備份以起始完整復原記錄檔鏈結。|[建立完整資料庫備份 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|不屬於任何現有的可用性群組。|[sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) (**group_database_id** = NULL)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|並未設定資料庫鏡像。|[sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) (如果資料庫未參與鏡像，前置詞為 "mirroring_" 的所有資料行都是 NULL)|  
 |![核取方塊](../../media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|將使用 FILESTREAM 的資料庫加入至可用性群組之前，請確定 (將要) 裝載可用性群組之可用性複本的每個伺服器執行個體都啟用了 FILESTREAM。|[啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  

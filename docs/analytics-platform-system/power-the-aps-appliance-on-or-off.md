@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678626"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System 的電源設備開啟或關閉
 本主題描述如何開啟或關閉您的分析平台 Systemappliance 電源的電源在執行平行處理資料倉儲。 使用本主題當 Analytics Platform System appliance 移動時，或電源設備上嚴重的電源中斷後。  

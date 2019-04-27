@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792127"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>新增或移除資料表對話方塊 (Analysis Services-多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [加入/移除資料表] 對話方塊，即可將資料來源中的資料表加入資料來源檢視，或者從資料來源檢視移除資料來源中的資料表。 您可依下列方式顯示 [加入/移除資料表] 對話方塊：  
@@ -54,6 +54,6 @@ ms.locfileid: "48200418"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [資料來源檢視設計工具&#40;Analysis Services-多維度資料&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

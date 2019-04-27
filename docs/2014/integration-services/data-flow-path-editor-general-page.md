@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828362"
 ---
 # <a name="data-flow-path-editor-general-page"></a>資料流程路徑編輯器 (一般頁面)
   使用 **[資料流程路徑編輯器]** 對話方塊，即可設定路徑屬性、檢視資料行中繼資料，以及管理附加至路徑的資料檢視器。  

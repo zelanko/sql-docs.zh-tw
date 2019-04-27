@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b13aeed62a84258fcfbf5820c17dca59f4b5852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660749"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "47731236"
 |**object_id**|**int**|物件的識別碼。|  
 |**parent_class**|**tinyint**|父系的類別。 它一律是：<br /><br /> 100 = 伺服器|  
 |**parent_class_desc**|**nvarchar(60)**|父類別的描述。 它一律是：<br /><br /> SERVER。|  
-|**sys.internal_tables**|**int**|SERVER 上的觸發程序，一律為 0。|  
+|**parent_id**|**int**|SERVER 上的觸發程序，一律為 0。|  
 |**type**|**char(2)**|物件類型：<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序|  
 |**type_desc**|**nvarchar(60)**|物件類型類別的描述。<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|建立觸發程序的日期。|  
 |**modify_date**|**datetime**|上次利用 ALTER 陳述式來修改觸發程序的日期。|  
 |**is_ms_shipped**|**bit**|利用內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件來代表使用者所建立的觸發程序。|  
-|**sys.indexes**|**bit**|1 = 觸發程序已停用。|  
+|**is_disabled**|**bit**|1 = 觸發程序已停用。|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

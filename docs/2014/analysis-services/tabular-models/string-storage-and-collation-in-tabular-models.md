@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794249"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>表格式模型中的字串儲存和定序
   字串 (文字值) 以高度壓縮的格式儲存在表格式模型中；由於此壓縮，您在擷取整個或部分字串時可能會得到意外結果。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  
   
  此主題描述壓縮和儲存字串的機制，並且提供一些範例，說明定序和語言如何影響表格式模型中文字公式的結果。  
   
-## <a name="storage"></a>Storage  
+## <a name="storage"></a>儲存體  
  在表格式模型中，所有資料都是高度壓縮，以更好地放入記憶體中。 因此，可視為語彙相等的所有字串只儲存一次。 該字串的第一個執行個體做為標準表示，並將此後每個相等字串編制索引為與第一次出現字串相同的壓縮值。  
   
  關鍵問題是：語彙相等字串的構成要素為何？ 如果兩個字串可視為相同字組，它們就是視為語彙相等。 例如，在英語中，當您在字典中搜尋 **violin** 一字時，根據字典的編輯原則，可能會找到項目 **Violin** 或 **violin**，但通常您會認為這兩個字是相等的，並且忽略大小寫的差異。 在表格式模型中，決定兩個字串是否語彙相等的因素不是編輯原則或甚至是使用者喜好設定，而是指派給資料行的地區設定和定序順序。  

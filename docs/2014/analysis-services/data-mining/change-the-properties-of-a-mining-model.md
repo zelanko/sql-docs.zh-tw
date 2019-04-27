@@ -15,22 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689048"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
-  有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 屬性可套用至整個模型的範例包括`Drillthrough`屬性，指定是否應該可供查詢案例資料，而`Description`屬性。 套用至資料行的屬性包含 `Usage` 和 `ModelingFlags`，它們控制資料行中的資料在模型內的使用方式。  
+  有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 例如，`Drillthrough` 屬性可套用至整個模型，它指定案例資料是否應該可用於查詢，`Description` 屬性也是這類屬性。 套用至資料行的屬性包含 `Usage` 和 `ModelingFlags`，它們控制資料行中的資料在模型內的使用方式。  
   
  下列模型屬性具有可用於建立運算式或設定複雜模型屬性的進階編輯器。 下列屬性提供：  
   
--   `Filter` 屬性： 開啟[資料集篩選器或模型篩選器對話方塊](../data-set-filter-or-model-filter-dialog-box.md)。  
+-   `Filter` 屬性：會開啟[資料集篩選器或模型篩選器對話方塊](../data-set-filter-or-model-filter-dialog-box.md)。  
   
--   `AlgorithmParameters` 屬性： 開啟[演算法參數對話方塊&#40;採礦模型檢視&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)。  
+-   `AlgorithmParameters` 屬性：會開啟[演算法參數對話方塊&#40;採礦模型檢視&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)。  
   
- 如需如何在採礦模型中設定屬性的資訊，請參閱[採礦模型資料行](mining-model-columns.md)。  
+ 如需如何在採礦模型中設定屬性的資訊，請參閱 [採礦模型資料行](mining-model-columns.md)。  
   
 ### <a name="to-change-the-properties-of-a-mining-model"></a>若要變更採礦模型的屬性  
   

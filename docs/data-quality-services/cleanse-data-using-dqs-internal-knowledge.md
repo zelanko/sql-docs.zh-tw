@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0f4cd86a9c93d07ccf25665f3aff2d11e437d3f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862618"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>使用 DQS (內部) 知識清理資料
 
@@ -43,7 +43,7 @@ ms.locfileid: "56011537"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能執行資料清理。  
   
 ##  <a name="Create"></a> 建立清理資料品質專案  
@@ -107,7 +107,7 @@ ms.locfileid: "56011537"
   
  根據信賴等級，這些值會顯示在下列五個索引標籤之下：  
   
-|索引標籤|Description|  
+|索引標籤|描述|  
 |---------|-----------------|  
 |**建議**|顯示以下情況的定義域值：DQS 找到信賴等級高於 *自動建議臨界值* ，但低於 *自動更正臨界值* 的建議值。<br /><br /> 建議值會針對原始值顯示在 **[更正為]** 資料行中。 您可以在上方方格中，針對某個值按一下 **[核准]** 或 **[拒絕]** 資料行中的選項按鈕，以接受或拒絕該值所有出現地方的建議。 在此情況下，接受的值會移到 **[更正]** 索引標籤，而拒絕的值則會移到 **[無效]** 索引標籤。|  
 |**新增**|顯示以下情況的有效定義域：DQS 沒有足夠的資訊，因此無法對應至其他任何索引標籤。此外，此索引標籤也包含信賴等級低於 *自動建議臨界值* ，但夠高而可以標示為有效的值。<br /><br /> 如果您認為此值是正確的，請按一下 **[核准]** 資料行中的選項按鈕。 否則，請按一下 **[拒絕]** 資料行中的選項按鈕。 接受的值會移到 **[正確]** 索引標籤，而拒絕的值則會移到 **[無效]** 索引標籤。您也可以在 [更正為] 資料行中，針對該值手動輸入正確值來取代原始值，然後按一下 [核准] 資料行中的選項按鈕，以接受變更。 在此情況下，此值會移到 **[更正]** 索引標籤。|  

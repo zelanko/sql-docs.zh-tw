@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbc6e6fe3c45a6395620e017decef285ae9dd51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672519"
 ---
 # <a name="asynchronous-execution"></a>非同步執行
 ODBC 支援陳述式和連接作業的非同步的作業。 有兩種方式可判斷非同步作業何時完成：  

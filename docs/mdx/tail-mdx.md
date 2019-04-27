@@ -1,5 +1,5 @@
 ---
-title: Tail (MDX) |Microsoft 文件
+title: Tail (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4563ec53f3ed12081e91b5010ae00a71b6c2feb3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677342"
 ---
 # <a name="tail-mdx"></a>Tail (MDX)
 
@@ -39,7 +39,7 @@ Tail(Set_Expression [ ,Count ] )
  **結尾**函式會傳回指定的 tuple 數目，從指定集合的結尾。 保留元素的順序。 預設值*計數*為 1。 如果指定的 Tuple 數目小於 1，函數會傳回空集合。 如果指定的 Tuple 數目超過集合中的 Tuple 數目，則函數會傳回原始的集合。  
   
 ## <a name="example"></a>範例  
- 下列範例不考慮階層，而根據 Reseller Gross Profit 傳回前五名產品銷售子類別的 Reseller Sales 量值。 **結尾**函數用來傳回結果中的最後五個集合之後的結果是反向排序使用,**順序**函式。  
+ 下列範例不考慮階層，而根據 Reseller Gross Profit 傳回前五名產品銷售子類別的 Reseller Sales 量值。 **結尾**函數用來傳回結果中的最後五個的集合之後則會反向排序使用,**順序**函式。  
   
 ```  
 SELECT Tail  
@@ -54,6 +54,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 020b692bc97afc4c76447274b3b900a6355d99d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792548"
 ---
 # <a name="grant-dqs-roles-to-users"></a>對使用者授與 DQS 角色
   本主題描述如何根據 Windows 主體建立 SQL 登入，並在 DQS_MAIN 資料庫上授與 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
@@ -38,7 +38,7 @@ ms.locfileid: "56035446"
   
 5.  使用者驗證完成後，按一下左窗格中的 **[使用者對應]** 頁面。  
   
-6.  在右窗格中，選取核取方塊底下**地圖**資料行**DQS_MAIN**資料庫，然後再選取**dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_operator**中的核取方塊**資料庫角色成員資格對象：DQS_MAIN**  窗格中，根據使用者所需的存取層級。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../dqs-security.md)＞。  
+6.  在右窗格中，從 **DQS_MAIN** 資料庫的 [對應] 資料行底下選取該核取方塊，然後選取 **dqs_administrator**、**dqs_kb_editor** 或 **dqs_kb_operator** 核取方塊，這些核取方塊位於 [資料庫角色成員資格對象: DQS_MAIN] 窗格中，且根據使用者所需的存取層級來選取。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../dqs-security.md)＞。  
   
 7.  在 [登入 - 新增] 對話方塊中，按一下 [確定] 套用變更。  
   

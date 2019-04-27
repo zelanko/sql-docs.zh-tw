@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731325"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>篩選對話方塊 (採礦精確度圖表)
   [篩選] 對話方塊會幫助您建立可套用至資料集的條件。 此資料集可以是用於測試的外部資料集，或是用於定型採礦模型的案例資料。 此對話方塊可幫助您建立準則，您可以在 [資料集篩選器] 對話方塊或 [模型篩選器] 對話方塊中，將這些準則儲存為更複雜之篩選準則的一部分。  
@@ -33,7 +33,7 @@ ms.locfileid: "48060166"
   
  如果您將篩選套用至新的資料集，則只會使用現有的資料採礦模型來評估資料集中符合條件的案例。 但是，如果要將篩選套用至採礦模型本身，則只會針對採礦模型中符合這些準則的案例來評估模型的精確度。  
   
- **如需詳細資訊，請參閱：**[測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **如需詳細資訊：＜＞**[測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>選項。  
  **條件**  

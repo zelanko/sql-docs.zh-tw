@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729364"
 ---
 # <a name="modifying-the-customer-dimension"></a>修改 [客戶] 維度
   您有許多不同方式可以增加 Cube 中維度的可用性和功能性。 在這個主題的工作中，您會修改 Customer 維度。  

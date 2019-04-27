@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd78b9b59b69614958abb86febcd2bd290b9f302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680808"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>叢集特性索引標籤 (採礦模型檢視器)
   [叢集特性] 索引標籤可讓您瀏覽叢集模型中某個叢集的特性，或瀏覽該模型中所有案例集合的特性。 圖形會將每個屬性/值組的重要性顯示為定義叢集的特性 (相較於其他叢集)。  
   
- **如需詳細資訊，請參閱：**[Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、[使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊：**[Microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 叢集檢視器](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48141598"
  **採礦模型**  
  在目前採礦結構中選擇採礦模型。 採礦模型會在自訂檢視器中開啟。  
   
- **檢視器**  
+ **Viewer**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用與此模型類型關聯的自訂檢視器，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用任何可用的外掛程式檢視器。  
   
  **Cluster**  
@@ -48,8 +48,8 @@ ms.locfileid: "48141598"
 |**機率**|長條表示屬性/值組做為此叢集的辨別特性的強度。 如果您將滑鼠停留在長條上方，則可查看以百分比表示的機率值。 這表示，在任何特定案例中使用此屬性和值組合時，該案例會屬於此叢集的機率。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693517"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 類別
   [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)代表網路上允許的執行個體通訊的用戶端執行個體安裝的通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過網路。  

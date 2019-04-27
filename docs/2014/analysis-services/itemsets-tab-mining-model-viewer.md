@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730210"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>項目集索引標籤 (採礦模型檢視器)
   您可以使用 [項目集] 窗格，檢視關聯規則採礦模型所包含的常見項目集。 因為關聯模型可包含許多項目集，所以檢視器中提供了一些控制項，協助您篩選在檢視器中顯示的項目集。  
   
- **如需詳細資訊，請參閱** [Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)、 [使用 Microsoft 關聯規則檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **如需詳細資訊：**[Microsoft 關聯分析演算法](data-mining/microsoft-association-algorithm.md)，[瀏覽模型，使用 Microsoft 關聯規則檢視器](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48060338"
  **採礦模型**  
  選擇包含在目前採礦結構中，您要檢視的採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **Viewer**  
  選擇用來檢視選取之採礦模型的檢視器。 可以使用自訂的關聯模型檢視器，或 [ [!INCLUDE[msCoName](../includes/msconame-md.md)] 一般內容樹狀檢視器]。 還可以使用外掛程式檢視器 (如果有)。  
   
  **最小支援**  
@@ -75,12 +75,12 @@ ms.locfileid: "48060338"
  **大小**  
  顯示存在於每個項目集內的項目數目。  
   
- **項目集**  
+ **Itemset**  
  顯示每個項目集的描述。 根據預設，項目集表示為以逗號分隔的屬性及其值清單。 您可以使用 [顯示] 選項來變更其顯示方式。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

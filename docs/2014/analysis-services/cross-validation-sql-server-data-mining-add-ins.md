@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679832"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>交叉驗證 (SQL Server 資料採礦增益集)
   ![交叉驗證 按鈕，資料採礦功能區](media/dmc-xvalid.gif "交叉驗證 按鈕，資料採礦功能區")  
@@ -101,7 +101,7 @@ ms.locfileid: "48171748"
   
  通過/失敗的計算方式是符合下列條件的案例計數：**傳遞**如果具有最高機率的預測的狀態與輸入狀態相同且機率大於您為指定的值**狀態臨界值**，否則**失敗**。  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>分類：真肯定和真否定或誤判和誤否定  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>分類：True 或 False 的肯定和否定  
  此測試用於具有指定之目標的所有分類模型。 量值表示每個案例對於下列問題的回應如何進行分類：模型在預測什麼，以及實際的結果是什麼。  
   
 |[量值]|描述|  

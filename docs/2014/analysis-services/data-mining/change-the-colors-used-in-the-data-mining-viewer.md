@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6152b183e00ca429efb817b9b19cdc0a7a1f77c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689397"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>變更資料採礦檢視器中使用的色彩
   您可以變更資料採礦檢視器中使用的色彩，以顯示資料數列、節點或群集。 您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中設定選項來完成這項處理。 當您變更設定以後，色彩選擇會套用到您使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]所檢視的所有模型中；但是，您必須關閉 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ，然後在檢視器中重新開啟此模型，才能看到新的色彩。  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655389"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>教學課程：在連續連接的伺服器之間複寫資料
   對於在連續連接的伺服器之間移動資料的問題，複寫是一個很好的解決方案。 您可以使用複寫的精靈，輕鬆設定及管理複寫拓撲。 本教學課程告訴您，如何為連續連接的伺服器設定複寫拓撲。  
@@ -48,7 +48,7 @@ ms.locfileid: "52753920"
 > [!NOTE]  
 >  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，您必須使用 **系統管理員 (sysadmin)** 固定伺服器角色成員的登入，連接到發行者和訂閱者。  
   
- **完成這個教學課程的估計時間：30 分鐘。**  
+ **估計的時間才能完成本教學課程：30 分鐘。**  
   
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
   

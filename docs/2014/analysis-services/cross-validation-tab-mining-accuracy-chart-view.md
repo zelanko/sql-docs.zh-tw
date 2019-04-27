@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679746"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>交叉驗證索引標籤 (採礦精確度圖表檢視)
-  交叉驗證可讓您將採礦結構資料分割成交叉區段，並反覆地針對每個交叉區段培訓和測試模型。 您會指定數個將資料分割成的折疊，然後使用每個折疊當做測試資料，而剩餘的資料則用來定型新模型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接著會產生一組標準精確度度量，每個模型。 藉由比較針對每個交叉區段所產生的模型標準，您可以充分了解採礦模型對整個資料集而言有多可靠。  
+  交叉驗證可讓您將採礦結構資料分割成交叉區段，並反覆地針對每個交叉區段培訓和測試模型。 您會指定數個將資料分割成的折疊，然後使用每個折疊當做測試資料，而剩餘的資料則用來定型新模型。 然後 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接著會針對每個模型產生一組標準精確度度量。 藉由比較針對每個交叉區段所產生的模型標準，您可以充分了解採礦模型對整個資料集而言有多可靠。  
   
  如需詳細資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](data-mining/cross-validation-analysis-services-data-mining.md)。  
   
@@ -100,9 +100,9 @@ ms.locfileid: "48188208"
  當**目標****閾值**設定為`null`、 這是預設值、 針對每個案例最可能的預測計為正確。 在剛剛提及的範例中，0.05、0.15 和 0.8 是三個不同案例的預測機率。 雖然機率非常不同，但每項預測都會被視為正確，因為每個案例都只會產生一項預測，而這些都是這些案例的最佳預測。  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)   
- [交叉驗證&#40;Analysis Services-資料採礦&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [交叉驗證 &#40;Analysis Services - 資料採礦&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [交叉驗證報表中的量值](data-mining/measures-in-the-cross-validation-report.md)   
- [資料採礦預存程序&#40;Analysis Services-資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [資料採礦預存程序 &#40;Analysis Services - 資料採礦&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679624"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube 設計師 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [Cube 設計師] 來編輯現有 Cube 的各種屬性，包括量值群組與量值、Cube 維度與維度關聯性、計算、關鍵效能指標 (KPI)、動作、資料分割、檢視方塊以及 Cube 包含的翻譯，還可以瀏覽 Cube 包含的資料。 您可依下列方式顯示 **[Cube 設計師]** 對話方塊：  
@@ -45,7 +45,7 @@ ms.locfileid: "48155418"
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

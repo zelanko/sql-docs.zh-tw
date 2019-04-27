@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806823"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
 

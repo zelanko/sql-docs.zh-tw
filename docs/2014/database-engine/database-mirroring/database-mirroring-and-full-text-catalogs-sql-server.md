@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807292"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>資料庫鏡像和全文檢索目錄 (SQL Server)
   若要建立具有全文檢索目錄之資料庫的鏡像，請如往常使用備份來建立主體資料庫的完整資料庫備份，然後還原備份，以將該資料庫複製到鏡像伺服器。 如需詳細資訊，請參閱 [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)。  
@@ -60,6 +60,6 @@ ms.locfileid: "48063908"
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [備份並還原全文檢索目錄與索引](../../relational-databases/indexes/indexes.md)  
+ [備份並還原全文檢索目錄與索引。](../../relational-databases/indexes/indexes.md)  
   
   

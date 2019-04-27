@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812787"
 ---
 # <a name="change-source-control-connections"></a>變更原始檔控制連接
   您第一次從原始檔控制中加入或開啟方案時，您的原始檔控制提供者會建立本機方案目錄的根資料夾及其對應的伺服器資料夾之間的關聯。  

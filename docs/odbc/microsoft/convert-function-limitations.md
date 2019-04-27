@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7759221f579161424fdc08cc42d1357376efc60b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62687572"
 ---
 # <a name="convert-function-limitations"></a>CONVERT 函式限制
 類型轉換失敗會導致受影響的資料行設為 NULL。  

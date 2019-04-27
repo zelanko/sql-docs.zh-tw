@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807893"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
     
@@ -111,7 +111,7 @@ ms.locfileid: "48154938"
  當鏡像工作階段開始或繼續之後，將主體伺服器上所累積的主體資料庫記錄檔記錄傳送到鏡像伺服器的程序，這個程序會盡快將這些記錄檔記錄寫入磁碟，以便能趕上主體伺服器。  
   
  交易安全性  
- 鏡像特有的資料庫屬性，用來決定資料庫鏡像工作階段是以同步或非同步方式作業。 有兩個安全性層級：FULL 和 OFF。  
+ 鏡像特有的資料庫屬性，用來決定資料庫鏡像工作階段是以同步或非同步方式作業。 有兩個安全性層級：完整和關閉。  
   
  Witness  
  只能搭配高安全性模式使用的一種 SQL Server 選擇性執行個體，可讓鏡像伺服器辨別何時要起始自動容錯移轉。 與兩個容錯移轉夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
@@ -315,7 +315,7 @@ ms.locfileid: "48154938"
   
  **Transact-SQL**  
   
--   [新增或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [加入或取代資料庫鏡像見證 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 -   [手動容錯移轉資料庫鏡像工作階段 &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   

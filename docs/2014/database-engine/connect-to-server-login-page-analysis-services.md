@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808759"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>連接到伺服器 (登入頁面) Analysis Services
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 時，使用此索引標籤來檢視或指定下列選項。  
@@ -30,7 +30,7 @@ ms.locfileid: "48192238"
  選取要連接的伺服器執行個體。 預設會顯示上次連接的伺服器執行個體。  
   
  **驗證**  
- 當連接到 Analysis Services 的執行個體時，支援下列驗證模式： [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。  
+ 連接到 Analysis services 執行個體時，支援下列驗證模式：[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。  
   
  **Windows 驗證模式 (Windows 驗證)**  
  Windows 驗證模式允許使用者透過 Windows 使用者帳戶連接。  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831915"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署封裝的第一步是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的部署公用程式。 部署公用程式是一個資料夾，包含在其他伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中部署封裝所需的檔案。 部署公用程式在儲存 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的電腦上建立。  
@@ -50,7 +50,7 @@ ms.locfileid: "58392857"
   
 4.  若要部署封裝時更新封裝組態，請設定**AllowConfigurationChanges**至`True`。  
   
-5.  將 `CreateDeploymentUtility` 設為 `True`。  
+5.  將 `CreateDeploymentUtility` 設定為 `True`。  
   
 6.  選擇性地修改 `DeploymentOutputPath` 屬性，以更新部署公用程式的位置。  
   

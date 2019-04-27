@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662242"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 事件類別
   Object:Altered 事件類別指出物件已遭到改變，例如被 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 陳述式改變。 這個事件類別可用來判別物件是否已被改變，例如被 ODBC 應用程式改變，此應用程式經常會建立暫存的預存程序。  

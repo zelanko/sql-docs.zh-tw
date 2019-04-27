@@ -33,11 +33,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807360"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>使用精靈建立擴充事件工作階段 (物件總管)
   為了幫助您選取及擷取伺服器上的事件，「擴充事件」包含了 [新增工作階段精靈]，可引導您建立「擴充事件」工作階段的步驟。 [新增工作階段精靈] 會公開大部分的擴充事件功能。 [新增工作階段對話方塊](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)也讓您定義擷取、顯示及分析資料的擴充事件工作階段。 [新增工作階段] 對話方塊會公開所有擴充事件功能。  

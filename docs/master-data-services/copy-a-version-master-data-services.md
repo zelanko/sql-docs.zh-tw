@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8ea81dff0f7c302395e4577d0b336b06f7c5d3fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678565"
 ---
 # <a name="copy-a-version-master-data-services"></a>複製版本 (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52806332"
 
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，複製模型的版本，以建立新版本。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  
@@ -49,7 +49,7 @@ ms.locfileid: "52806332"
   
 4.  在確認對話方塊中按一下 **[確定]**。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
   
 -   [變更版本名稱 &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   

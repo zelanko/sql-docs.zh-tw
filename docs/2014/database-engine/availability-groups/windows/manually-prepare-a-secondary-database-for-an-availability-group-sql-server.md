@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792078"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備次要資料庫 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中準備 AlwaysOn 可用性群組的次要資料庫。 準備次要資料庫需要兩個步驟：（1） 還原主要資料庫的最近資料庫備份和後續記錄備份至裝載次要複本的每個伺服器執行個體、 使用 RESTORE WITH NORECOVERY，以及 （2） 將還原的資料庫加入可用性群組。  
@@ -254,7 +254,7 @@ ms.locfileid: "52525752"
 4.  若要還原每個主要資料庫的資料庫和記錄備份，請使用 `restore-SqlDatabase` 指令程式，並指定 `NoRecovery` 還原參數。 如果在裝載主要複本的電腦和裝載目標次要複本的電腦之間有檔案路徑差異，也要使用 `RelocateFile` 還原參數。  
   
     > [!NOTE]  
-    >  若要檢視指令程式的語法，請在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境中使用 `Get-Help` 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 5.  若要完成次要資料庫的組態設定，您必須將它聯結至可用性群組。 如需詳細資訊，請參閱[將次要資料庫聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)。  
   

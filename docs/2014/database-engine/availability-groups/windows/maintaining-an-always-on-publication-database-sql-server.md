@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791981"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>維護 AlwaysOn 發行集資料庫 (SQL Server)
   本主題將討論使用 AlwaysOn 可用性群組時維護發行集資料庫的特殊考量。  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816991"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52810300"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|散發代理程式的識別碼。|  
-|**建立者**|**sysname**|原始發行者名稱。|  
+|**originator**|**sysname**|原始發行者名稱。|  
 |**originator_db**|**sysname**|原始發行集資料庫的名稱。|  
 |**originator_publication_id**|**int**|識別原始發行集。|  
 |**originator_db_version**|**int**|識別來源資料庫的版本號碼。|  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3775443782b433651af4dd927c60ead1382b004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794528"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (動作索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   使用 [工具列] 窗格，即可在 Cube 設計師的 [動作] 索引標籤上執行一般動作。  
@@ -31,7 +31,7 @@ ms.locfileid: "48206928"
 |**新的動作**|按一下以顯示 [動作表單編輯器] 窗格並建立新的動作。|  
 |**新增鑽研動作**|按一下以顯示 [Drillthrough Action Form Editor (鑽研動作表單編輯器)]，然後建立新的鑽研動作。|  
 |**新增報表動作**|按一下以顯示 [Report Action Form Editor (報表動作表單編輯器)]，然後建立新的報表動作。|  
-|**刪除**|按一下以顯示 [刪除物件] 對話方塊，然後刪除選取的動作。<br /><br /> 注意：唯有選取 [動作組合管理] 窗格時，才會啟用此選項。|  
+|**刪除**|按一下以顯示 [刪除物件] 對話方塊，然後刪除選取的動作。<br /><br /> 注意:唯有選取 [動作組合管理] 窗格時，才會啟用此選項。|  
 |**請檢查語法**|按一下即可檢查 [動作組合管理] 窗格中所選取之動作的語法。|  
   
   

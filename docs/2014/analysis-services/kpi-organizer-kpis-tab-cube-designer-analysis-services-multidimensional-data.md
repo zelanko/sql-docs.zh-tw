@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729660"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 組合管理 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 之 [KPI] 索引標籤上的 [KPI 組合管理] 窗格，即可存取和記錄指定之 Cube 中所含的關鍵效能指標 (KPI)。  
@@ -38,8 +38,8 @@ ms.locfileid: "48136790"
 |選項|定義|  
 |------------|----------------|  
 |**新的 KPI**|選取即可顯示 [KPI 表單編輯器] 並建立新的 KPI。 如需詳細資訊**KPI 表單編輯器**，請參閱[KPI 表單編輯器&#40;Kpi 索引標籤，Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)。|  
-|**上移**|選取即可將 [KPI 組合管理] 中選取的 KPI 上移一個位置，並決定在 [KPI 瀏覽器] 中顯示 KPI 的順序。<br /><br /> 注意：如果選取的 KPI 無法再移動，就會停用此選項。|  
-|**下移**|選取即可將 [KPI 組合管理] 中選取的 KPI 下移一個位置，並決定在 [KPI 瀏覽器] 中顯示 KPI 的順序。<br /><br /> 注意：如果選取的 KPI 無法再移動，就會停用此選項。|  
+|**上移**|選取即可將 [KPI 組合管理] 中選取的 KPI 上移一個位置，並決定在 [KPI 瀏覽器] 中顯示 KPI 的順序。<br /><br /> 注意:如果選取的 KPI 無法再移動，則會停用此選項。|  
+|**下移**|選取即可將 [KPI 組合管理] 中選取的 KPI 下移一個位置，並決定在 [KPI 瀏覽器] 中顯示 KPI 的順序。<br /><br /> 注意:如果選取的 KPI 無法再移動，則會停用此選項。|  
 |**刪除**|選取即可刪除選取的 KPI。|  
   
 ## <a name="see-also"></a>另請參閱  

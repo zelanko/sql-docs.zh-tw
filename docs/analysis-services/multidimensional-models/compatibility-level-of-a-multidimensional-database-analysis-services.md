@@ -1,5 +1,5 @@
 ---
-title: 多維度資料庫 (Analysis Services) 的相容性層級 |Microsoft 文件
+title: 相容性層級的多維度資料庫 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825881"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多維度資料庫的相容性層級 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024225"
   
  對於多維度資料庫， **CompatibilityLevel** 屬性的有效值包括：  
   
-|設定|Description|  
+|設定|描述|  
 |-------------|-----------------|  
 |**1050**|在指令碼或工具中並不會看見這個值，但它對應至在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中所建立的資料庫。 所有未明確設定 **CompatibilityLevel** 的資料庫都是隱含地在 **1050** 層級執行。|  
 |**1100**|這是您在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中建立之新資料庫的預設值。 您也可以針對使用舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料庫指定這個值，以啟用僅在此相容性層級支援的功能 (亦即，維度屬性的增加字串儲存體或包含字串資料的相異計數量值)。<br /><br /> **CompatibilityLevel** 設為 **1100** 的資料庫會有一個額外的屬性 **StringStoresCompatibilityLevel**，這個屬性可讓您選擇資料分割和維度的替代字串儲存體。|  
@@ -39,7 +39,7 @@ ms.locfileid: "34024225"
 > [!WARNING]  
 >  將資料庫相容性設為更高的層級將無法回復。 把相容性層級增加到 **1100**之後，您必須在較新的伺服器上繼續執行資料庫。 您無法回復到 **1050**。 您無法在 **或** 之前的伺服器版本上附加或還原 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 1100 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]資料庫。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>先決條件  
  資料庫相容性層級是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進。 您必須有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更新版本，才能檢視或設定資料庫相容性層級。  
   
  資料庫不可為本機 Cube。 本機 Cube 不支援 **CompatibilityLevel** 屬性。  

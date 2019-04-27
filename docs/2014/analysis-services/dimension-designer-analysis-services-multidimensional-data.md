@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731782"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>維度設計師 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [維度設計師]，即可瀏覽維度所包含的資料，以及修改現有維度的各種屬性 (Property)：屬性 (Attribute)、階層、層級、屬性 (Attribute) 關聯性和翻譯。  

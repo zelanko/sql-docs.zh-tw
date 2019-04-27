@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823795"
 ---
 # <a name="manage-files-with-encoding"></a>利用編碼管理檔案
   為了有助於在特定語言和特定平台中顯示您的程式碼，您可以建立檔案與特定字元編碼的關聯。  

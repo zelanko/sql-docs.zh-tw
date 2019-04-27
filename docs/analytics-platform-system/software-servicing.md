@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678392"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Analytics Platform System 中的軟體維護
 本節摘要說明服務的需求，Analytics Platform System appliance，包括 WSUS 和 Analytics Platform System hotfix 的軟體。  
@@ -26,7 +26,7 @@ ms.locfileid: "51700207"
   
 **更新的範圍：** 套用 Analytics Platform System hotfix 或 service pack 必須讓整個應用裝置離線。  
   
-**SSIS 目的地配接器和用戶端工具：** 套用 hotfix 時，會包括 SSIS 目的地配接器 MSI 的變更，或用戶端工具 MSI，MSI 檔中將會更新**C:\PDWINST\ClientTools**在控制節點上的目錄。 Hotfix 不會自動安裝元件，以從更新的 MSI 檔案。 若要更新這些元件，客戶必須解除安裝舊版本的元件，然後從更新的 MSI 檔案安裝新的版本。 解除安裝 hotfix 時，會包括 SSIS 目的地配接器 MSI 的變更，或用戶端工具 MSI，這些元件的 MSI 檔案，就會還原成先前的版本。 若要還原成先前版本的這些元件，必須先解除安裝現有的 （較新的） 版本的元件，客戶，並將其重新安裝較舊的版本，從已還原的 MSI 檔案中。  
+**SSIS 目的地配接器和用戶端工具：** 套用 hotfix 時，會包括 SSIS 目的地配接器 MSI 的變更，或用戶端工具 MSI，MSI 檔中將會更新**C:\PDWINST\ClientTools**目錄在控制節點上。 Hotfix 不會自動安裝元件，以從更新的 MSI 檔案。 若要更新這些元件，客戶必須解除安裝舊版本的元件，然後從更新的 MSI 檔案安裝新的版本。 解除安裝 hotfix 時，會包括 SSIS 目的地配接器 MSI 的變更，或用戶端工具 MSI，這些元件的 MSI 檔案，就會還原成先前的版本。 若要還原成先前版本的這些元件，必須先解除安裝現有的 （較新的） 版本的元件，客戶，並將其重新安裝較舊的版本，從已還原的 MSI 檔案中。  
   
 ## <a name="software-servicing-topics"></a>軟體服務主題  
 下列主題說明如何管理軟體應用裝置上的服務：  

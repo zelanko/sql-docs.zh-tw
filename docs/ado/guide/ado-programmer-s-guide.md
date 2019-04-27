@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc79564bfd71ae46ef25092294c624f67b51e42c
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670398"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>使用 ADO 物件的 ADO 程式設計人員指南
 這份文件提供如何使用 ADO 物件從各種資料來源的資料搭配使用的概觀。 首先，簡介摘要說明新功能，以及安裝、 使用及轉散發 ADO 元件的需求。 以下章節會討論各種類型的 ADO 物件使用。 最後，附錄中會討論各種 Microsoft 提供的資料和服務提供者，錯誤訊息，以及提示有關如何使用 ADO 多種程式設計語言的詳細資訊，除了範例和詞彙。

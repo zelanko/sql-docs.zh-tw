@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828612"
 ---
 # <a name="data-conversion-transformation-editor"></a>資料轉換編輯器
   使用 [資料轉換編輯器] 對話方塊，即可選取要轉換的資料行、選取資料行要轉換成哪一種資料類型，以及設定轉換屬性。  

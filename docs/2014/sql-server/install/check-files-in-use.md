@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650553"
 ---
 # <a name="check-files-in-use"></a>檢查使用中的檔案
   若要避免在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新之後重新啟動 Windows，請使用 [檢查使用中檔案] 頁面來識別正在鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安裝程式所需之檔案的處理序。  

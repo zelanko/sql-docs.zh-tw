@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807070"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>更新統計資料工作 (維護計畫)
   使用 **[更新統計資料工作]** 對話方塊，更新有關資料表及索引中資料的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資訊。 此工作針對資料庫中使用者資料表所建立的每個索引，重新取樣散發統計資料。 在處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式的期間， [!INCLUDE[tsql](../../includes/tsql-md.md)] 會使用散發統計資料來最佳化資料表的導覽。 若要自動建立散發統計資料， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在每個索引的對應資料表中，定期地取樣資料。 取樣大小會視資料表的資料列數與資料修改的頻率而定。 使用此選項即可使用資料表中指定的資料百分比執行其他取樣。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用此資訊來建立更好的查詢計畫。  

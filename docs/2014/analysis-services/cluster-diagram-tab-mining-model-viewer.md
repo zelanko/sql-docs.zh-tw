@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681026"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>叢集圖表索引標籤 (採礦模型檢視器)
   **[叢集圖表]** 索引標籤會提供叢集模型中，所有叢集的圖形化檢視。  
   
- **如需詳細資訊，請參閱** [Microsoft 叢集演算法](data-mining/microsoft-clustering-algorithm.md)、 [使用 Microsoft 叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **如需詳細資訊：**[Microsoft 群集演算法](data-mining/microsoft-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 叢集檢視器](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -32,7 +32,7 @@ ms.locfileid: "48184194"
  **採礦模型**  
  在目前採礦結構中選擇採礦模型。 採礦模型會在其關聯的檢視器中開啟。  
   
- **檢視器**  
+ **Viewer**  
  選擇檢視器以瀏覽選取的採礦模型。 可以使用其中一個自訂的叢集檢視器，或使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用外掛程式檢視器 (如果有)。  
   
  **放大**  
@@ -64,15 +64,15 @@ ms.locfileid: "48184194"
  **陰影變數**  
  選取要在叢集圖表中表示的屬性。  
   
- **State**  
+ **狀態**  
  選取 [陰影變數] 的單一狀態，以用於叢集圖表中。  
   
- **連結**  
+ **Links**  
  透過上移或下移滑動軸來調整叢集之間顯示的連結數目。 降低滑動軸只會保留叢集之間的最強關聯。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

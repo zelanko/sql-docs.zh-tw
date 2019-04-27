@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650659"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>屬性資料翻譯對話方塊 (Analysis Services - 多維度資料)
   使用 [屬性資料翻譯] 對話方塊，即可設定包含翻譯標題資料的資料行，以及要用於翻譯資料的定序和排序次序。 您可依下列方式顯示 [屬性資料翻譯] 對話方塊：  
@@ -64,7 +64,7 @@ ms.locfileid: "48117364"
  如果未選取， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將有腔調與無腔調的字母視為相同。  
   
  **區分假名**  
- 選取此選項，即可根據為關聯之語言或字母提供的字典規則來排序和比較資料，以及區別兩種日文假名字元：平假名和片假名。  
+ 選取此選項，來排序和比較資料是根據為關聯之的語言或字母提供的字典規則，以及區別兩類日文的假名字元：平假名與片假名。  
   
  如果未選取， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將平假名與片假名字元視為相同。  
   

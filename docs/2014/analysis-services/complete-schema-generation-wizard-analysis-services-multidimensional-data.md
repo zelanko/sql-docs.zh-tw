@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4a4431d3352ec0cd8135e2d7c44ad66cb4a88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680631"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>正在完成精靈 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[正在完成精靈]** 頁面，即可確認您的選擇並建立新的專案和資料來源檢視。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659479"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化秘訣和最佳作法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53202627"
   
      在中國和新加坡，Microsoft 支援通常會以簡體中文顯示，並以拼音做為慣用的排序次序。 建議的定序為 Chinese_PRC (適用於 SQL Server 2000)、Chinese_PRC_90 (適用於 SQL Server 2005) 或 Chinese_Simplified_Pinyin_100 (適用於 SQL Server 2008 及更新版本)。  
   
-     在台灣，則較常看到繁體中文，且建議的排序次序是依據筆劃數：Chinese_Taiwan_Stroke (適用於 SQL Server 2000)、Chinese_Taiwan_Stroke_90 (適用於 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 (適用於 SQL Server 2008 及更新版本)。  
+     在台灣，它是較常看到繁體中文，且建議的排序次序依據筆劃數：Chinese_Taiwan_Stroke （適用於 SQL Server 2000)、 Chinese_Taiwan_Stroke_90 （適用於 SQL Server 2005) 或 Chinese_Traditional_Stroke_Count_100 （適用於 SQL Server 2008 及更新版本）。  
   
      其他地區 (例如香港特別行政區和澳門特別行政區) 也會使用繁體中文。 在香港特別行政區，還很常會看到 Chinese_Hong_Kong_Stroke_90 (在 SQL Server 2005 上) 的定序。 在澳門特別行政區，也經常會使用 Chinese_Traditional_Stroke_Count_100 (在 SQL Server 2008 及更新版本上)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53202627"
   
 |字集|區分大小寫|  
 |---------------------|----------------------|  
-|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**、 54321**ABCDEF**、 54321**AbCdEf**。 Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
+|**基本拉丁字母**|以拉丁文字 (26 個英文大小寫字母的任何幾個字母) 表示的物件識別碼會視為區分大小寫，而不論定序為何。 例如，下列物件識別碼會視為相同：54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Analysis Services 會在內部將字串中的字元視為全部大寫，然後執行與語言無關的簡單全半形比較。<br /><br /> 請注意，只有 26 個字元會受到影響。 如果是西歐語言，但使用斯堪地那維亞字元，其他字元不會使用大寫。|  
 |**斯拉夫文、希臘文、科普特文、亞美尼亞文**|非拉丁文複合字集的物件識別碼 (例如斯拉夫文) 則一律會區分大小寫。 例如，Измерение 和 измерение 的唯一差異是第一個字母的大小寫，即便如此，這兩個字仍會視為兩個相異值。|  
   
  **物件識別碼的區分大小寫含意**  
@@ -122,7 +122,7 @@ ms.locfileid: "53202627"
   
 3.  **針對通用的日期和時間資訊使用 ISO 日期格式**  
   
-     一[Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx)有這項建議：「針對要傳入 SQL 或 MDX 查詢的任何日期字串，我一律會使用 ISO 日期格式 yyyy-mm-dd，這樣做不僅可避免模擬兩可，且不論用戶端或伺服器的地區設定為何都有效。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
+     一[Analysis Services 專家](http://geekswithblogs.net/darrengosbell/Default.aspx)有這項建議：「 我一律使用 ISO 日期格式為 yyyy-mm-dd 的傳入 SQL 或 MDX 查詢因為它是模稜兩可，不管用戶端或伺服器的地區設定的任何日期字串。 我同意當剖析模稜兩可的日期格式時，伺服器應該遵循其地區設定，但我也認為如果您已有一個不開放轉譯的選項時，何不選擇這個選項。」  
   
 4.  **使用 Format 函數在任何地區語言設定下強制套用特定格式**  
   

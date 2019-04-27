@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795295"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>刪除資料行 (SSAS 表格式)
   本主題描述的是如何從表格式模型資料表中刪除資料行。  
@@ -24,7 +24,7 @@ ms.locfileid: "48178478"
 ## <a name="delete-a-model-table-column"></a>刪除模型資料表資料行  
   
 > [!NOTE]  
->  從模型資料表中刪除資料行時，並不會從資料分割查詢定義中刪除該資料行。 如果您要刪除的資料行屬於資料分割的一部分，就必須從資料分割查詢定義中手動刪除該資料行。 如果沒有從資料分割查詢定義中刪除資料行，將會導致系統在處理作業期間查詢該資料行並且傳回資料，但是不會擴展至模型資料表。 如需詳細資訊，請參閱[資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)。  
+>  從模型資料表中刪除資料行時，並不會從資料分割查詢定義中刪除該資料行。 如果您要刪除的資料行屬於資料分割的一部分，就必須從資料分割查詢定義中手動刪除該資料行。 如果沒有從資料分割查詢定義中刪除資料行，將會導致系統在處理作業期間查詢該資料行並且傳回資料，但是不會擴展至模型資料表。 如需詳細資訊，請參閱 [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)。  
   
 #### <a name="to-delete-a-model-table-column"></a>若要刪除模型資料表資料行  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48178478"
 3.  在 [編輯資料表屬性] 對話方塊的 [資料表預覽] 視窗中，取消核取您想要刪除的資料行，然後按一下 [確定]。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料行加入至資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [資料分割&#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)  
+ [將資料行加入至資料表 &#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)  
   
   

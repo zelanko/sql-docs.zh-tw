@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657406"
 ---
 # <a name="troubleshoot-report-builder"></a>疑難排解報表產生器
   報表產生器是一個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表撰寫工具，可用來根據許多不同類型的資料來源建立報表，以及將報表發行至報表伺服器或 SharePoint 網站。 可以在報表產生器，檢視您所建立的報表，在 Web 瀏覽器，或做為一部分[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 應用程式或 SharePoint 網站。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657668"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>處理選項屬性頁面 (報表管理員)
   使用 [處理選項] 屬性頁面可以設定目前選取之報表的報表執行屬性。 這些選項會決定何時進行報表的資料處理。 您可以設定這些選項，以便在離峰時段擷取報表資料。 如果您的報表經常被存取，當多位使用者彼此會在短時間內存取相同的報表時，您就可以暫時快取副本，以避免等待時間。  

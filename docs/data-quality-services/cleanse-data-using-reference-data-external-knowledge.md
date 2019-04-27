@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bec1e9c00c0c97bda29dd1deceac6ca152b6c085
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862679"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用參考資料 (外部) 知識清理資料
 
@@ -53,7 +53,7 @@ ms.locfileid: "56036019"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 或 dqs_kb_operator 角色，才能執行資料清理。  
   
 ##  <a name="Cleanse"></a> 使用參考資料知識清理您的資料  
@@ -61,7 +61,7 @@ ms.locfileid: "56036019"
   
 1.  建立資料品質專案，然後選取 **[清理]** 活動。 請參閱 [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)。  
   
-2.  在 [對應] 頁面上，將下列 4 個定義域對應至來源資料中的適當資料行：[地址行]、[縣/市]、[省/市] 和 [郵遞區號]。 按 [下一步] 。  
+2.  在 [對應] 頁面上，將下列 4 個定義域對應至來源資料中的適當資料行：[地址行]、[縣/市]、[省/市] 和 [郵遞區號]。 按一下 [下一步] 。  
   
     > [!NOTE]  
     >  因為我們已經對應了 **[地址驗證]** 複合定義域中的所有定義域，所以資料清理現在將針對複合定義域層級進行，而非針對個別定義域層級進行。  

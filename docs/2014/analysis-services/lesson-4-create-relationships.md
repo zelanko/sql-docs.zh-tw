@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728584"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 課：建立關聯性
   在這一課，您將驗證匯入資料時自動建立的關聯性，以及在不同資料表之間加入新的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，[產品] 資料表和 [產品子類別目錄] 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 如需詳細資訊，請參閱[關聯性 &#40;SSAS 表格式&#41;](tabular-models/relationships-ssas-tabular.md)。  
   
- 完成本課程的估計時間：**10 分鐘**  
+ 估計的時間才能完成這一課：**10 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 3 課：重新命名資料行](rename-columns.md)。  
@@ -48,11 +48,11 @@ ms.locfileid: "52409055"
   
     |作用中|資料表|相關查閱資料表|  
     |------------|-----------|--------------------------|  
-    |是|**客戶 [地理位置 Id]**|**地理位置 [地理位置 Id]**|  
-    |是|**產品 [產品子類別目錄 Id]**|**產品子類別目錄 [產品子類別目錄 Id]**|  
-    |是|**產品子類別目錄 [產品類別目錄 Id]**|**產品類別目錄 [產品類別目錄 Id]**|  
+    |是|**客戶 [地理位置 Id]**|**Geography [Geography Id]**|  
+    |是|**Product [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
+    |是|**產品子類別目錄 [產品類別目錄 Id]**|**Product Category [Product Category Id]**|  
     |是|**網際網路銷售 [客戶 Id]**|**客戶 [客戶 Id]**|  
-    |是|**網際網路銷售 [產品 Id]**|**產品 [產品 Id]**|  
+    |是|**Internet Sales [Product Id]**|**Product [Product Id]**|  
   
  如果遺漏任何上述表格中的關聯性，請確認您的模型包含下列資料表：客戶、 日期、 地理位置、 產品、 產品類別目錄、 產品子類別目錄和網際網路銷售。 如果在不同時間從相同的資料來源連接匯入資料表，則不會建立這些資料表之間的任何關聯性，必須手動建立。  
   

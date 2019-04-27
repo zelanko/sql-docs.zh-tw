@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854344"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +35,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>引數  
- *結構*  
+ *structure*  
  結構的唯一名稱。  
   
  *資料行定義清單*  
  資料行定義的逗號分隔清單。  
   
- *鑑效組 maxpercent*  
+ *holdout-maxpercent*  
  介於 1 和 100 之間的整數，表示保留給測試之用的資料百分比。  
   
- *鑑效組 maxcases*  
+ *holdout-maxcases*  
  表示用於測試之案例數目上限的整數。  
   
  如果為最大案例數指定的值大於輸入案例的數目，所有輸入案例都會用於測試，並且將會引發警告。  
@@ -60,7 +60,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  如果您需要確認可以重新產生資料分割，您應該指定一個種子。  
   
- 預設值：REPEATABLE(0)  
+ 預設：REPEATABLE （0)  
   
 ## <a name="remarks"></a>備註  
  定義採礦結構的方法是指定資料行的清單、選擇性地指定資料行之間的階層式關聯性，然後選擇性地將採礦結構分割為培訓和測試資料集。  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  如需可用於定義結構資料行之資料類型、內容類型、資料行散發，以及模型旗標的清單，請參閱下列主題：  
   
--   [資料型別&#40;資料採礦&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [資料類型 &#40;資料採礦&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [內容類型&#40;資料採礦&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [內容類型 &#40;資料採礦&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [資料行散發&#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [資料行分佈 &#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [模型旗標&#40;資料採礦&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [模型旗標 &#40;資料採礦&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  您可以為一個資料行定義多個模型旗標值。 不過，對於一個資料行，您僅能擁有一個內容類型和一個資料類型。  
   
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>範例 3：指定鑑效組百分比與最大案例數  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>範例 3︰指定鑑效組百分比與最大案例數  
  下列子句建立的測試集包含 25% 的總輸入案例或 2000 個案例，以較少者為準。 由於 0 已被指定為種子，採礦結構的名稱會用來建立種子，系統會使用這個種子，開始取樣輸入案例。  
   
 ```  

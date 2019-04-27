@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c83ebac20a86cd490fbfdf2dbd099e103d404ced
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650533"
 ---
 # <a name="query-notifications-event-category"></a>查詢通知事件類別目錄
   **查詢通知** 事件類別目錄含有會回報資訊的事件類別，而開發人員和管理員可以使用這項資訊來監視並疑難排解查詢通知。  

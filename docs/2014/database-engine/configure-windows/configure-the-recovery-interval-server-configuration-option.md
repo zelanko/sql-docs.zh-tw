@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787100"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>設定 recovery interval 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **recovery interval** 選項會定義資料庫的復原時間上限。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用此選項的指定值，來決定 [automatic checkpoints](../../relational-databases/logs/database-checkpoints-sql-server.md) 在給定資料庫上發出自動檢查點的大約頻率。  

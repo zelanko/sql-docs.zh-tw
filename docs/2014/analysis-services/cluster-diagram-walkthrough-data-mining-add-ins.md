@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680919"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>叢集圖表逐步解說 (資料採礦增益集)
   您已建立叢集模型之後，您可以匯入它使用 Visio**叢集**圖形，然後繼續自訂並增強配置。 **適用於 Visio 的資料採礦圖形**包含下列用於處理資料採礦圖表的自訂控制項：  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676418"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Upgrade Advisor 的概觀
   此章節會提供升級程序的概觀，以及協助您了解和使用 Upgrade Advisor 分析精靈與 Upgrade Advisor 報表檢視器的資訊。  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831422"
 ---
 # <a name="expression-task"></a>運算式工作
   運算式工作會使用運算式產生器，建立及評估在執行階段設定變數值的運算式。 當您編輯工作時，會啟動 [Expression Builder](../expressions/expression-builder.md) 。  

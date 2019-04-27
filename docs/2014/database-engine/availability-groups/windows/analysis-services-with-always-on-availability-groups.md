@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791875"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
   AlwaysOn 可用性群組是預先定義的 SQL Server 關聯式資料庫集合，會在條件觸發任何一個資料庫的容錯移轉時一起容錯移轉，將要求重新導向至相同可用性群組中其他執行個體上的鏡像資料庫。 如果使用可用性群組做為高可用性解決方案，則可以使用該群組中的資料庫做為 Analysis Services 表格式或多維度解決方案的資料來源。 使用可用性資料庫時，下列所有 Analysis Services 作業都會如預期般運作：處理或匯入資料、直接查詢關聯式資料 (使用 ROLAP 儲存或 DirectQuery 模式)，以及回寫。  
@@ -30,7 +30,7 @@ ms.locfileid: "52414085"
   
  **(適用於唯讀工作負載)**。 您必須設定唯讀連接的次要複本角色，可用性群組必須具有路由清單，且 Analysis Services 資料來源中的連接必須指定可用性群組接聽程式。 本主題將提供指示。  
   
-##  <a name="bkmk_UseSecondary"></a> 檢查清單：針對唯讀作業使用次要複本  
+##  <a name="bkmk_UseSecondary"></a> 檢查清單：僅針對唯讀作業使用次要複本  
  除非 Analysis Services 解決方案包含回寫，否則您可以設定資料來源連接使用可讀取的次要複本。 如果具有快速網路連接，次要複本的資料延遲會很低，因此提供與主要複本幾乎相同的資料。 透過使用次要複本進行 Analysis Services 作業，您可以降低主要複本的讀寫競爭，並更善用可用性群組中的次要複本。  
   
  預設允許與主要複本之間的讀寫和讀取意圖的存取，但是不允許連接次要複本。 次要複本的唯讀用戶端連接需要進行其他組態設定。 這些組態設定需要設定次要複本的屬性，以及執行定義唯讀路由清單的 T-SQL 指令碼。 使用下列程序，以確保您已經執行這兩個步驟。  
@@ -38,7 +38,7 @@ ms.locfileid: "52414085"
 > [!NOTE]  
 >  下列步驟假設存在 AlwaysOn 可用性群組和資料庫。 如果您想設定新群組，請使用 [新增可用性群組精靈] 建立群組並加入資料庫。 這個精靈會檢查先決條件、提供每個步驟的指引，並執行初始同步處理。 如需詳細資訊，請參閱[使用可用性群組精靈 &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)。  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>步驟 1：設定可用性複本上的存取  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>步驟 1:設定可用性複本的存取  
   
 1.  在 [物件總管] 中，連接到裝載主要複本的伺服器執行個體，然後展開伺服器樹狀目錄。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52414085"
   
          規劃的容錯移轉也需要這個屬性。 如果您要執行規劃的手動容錯移轉以進行測試，請將主要與次要複本的 **[可用性模式]** 同時設為 **[同步認可]** 。  
   
-#### <a name="step-2-configure-read-only-routing"></a>步驟 2：設定唯讀路由  
+#### <a name="step-2-configure-read-only-routing"></a>步驟 2:設定唯讀路由  
   
 1.  連接到主要複本。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "52414085"
 ##  <a name="bkmk_test"></a> 測試組態  
  在您設定次要複本並在 Analysis Services 中建立資料來源連接之後，即可確認處理及查詢命令是否已重新導向至次要複本。 您也可以執行規劃的手動容錯移轉，以確認這個案例的復原計劃。  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步驟 1：確認資料來源連接會重新導向至次要複本  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>步驟 1:確認資料來源連線已重新導向至次要複本  
   
 1.  啟動 SQL Server Profiler 並連接至裝載次要複本的 SQL Server 執行個體。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52414085"
   
      在追蹤視窗中，您應該會看到 **Microsoft SQL Server Analysis Services**應用程式中的事件。 您應該會看到 `SELECT` 陳述式從裝載次要複本之伺服器執行個體上的資料庫擷取資料，證明透過接聽程式建立與次要複本的連接。  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>步驟 2：執行規劃的容錯移轉來測試組態  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>步驟 2:執行規劃的容錯移轉以測試組態  
   
 1.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中檢查主要與次要複本，確定已將這兩個複本設定為同步認可模式，且這兩個複本最近已經過同步處理。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52414085"
 ##  <a name="bkmk_whathappens"></a> 容錯移轉之後會發生什麼情況  
  在容錯移轉期間，次要複本會轉換到主要角色，而先前的主要複本會轉換到次要角色。 所有用戶端連線會終止，可用性群組接聽程式的擁有權會隨主要複本角色移至新的 SQL Server 執行個體，且接聽程式端點會繫結到新執行個體的虛擬 IP 位址和 TCP 連接埠。 如需詳細資訊，請參閱本主題稍後的 [關於可用性複本的用戶端連接存取 &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md))。  
   
- 如果在處理期間發生容錯移轉，則會在記錄檔或輸出視窗中的 Analysis Services 中發生下列錯誤：「 OLE DB 錯誤：OLE DB 或 ODBC 錯誤：通訊連結失敗;08S01;TPC 提供者：遠端主機已強制關閉現有的連接。 ; 08S01。」  
+ 如果在處理期間發生容錯移轉，Analysis Services 的記錄檔或輸出視窗中會發生下列錯誤：「OLE DB 錯誤：OLE DB 或 ODBC 錯誤：通訊連結失敗；08S01；TPC 提供者：遠端主機已強制關閉一個現有連線。 ; 08S01。」  
   
  如果您稍候幾分鐘再試一次，應該可以解決這個錯誤。 如果將可用性群組正確設定為可讀取的次要複本，當您重試處理時，會繼續在新的次要複本上處理。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "52414085"
 ##  <a name="bkmk_writeback"></a> 使用 AlwaysOn 可用性資料庫時回寫  
  回寫是 Analysis Services 功能，支援 Excel 的假設分析。 這項功能也常用於自訂應用程式中的預算和預測工作。  
   
- 回寫支援需要 READWRITE 用戶端連接。 在 Excel 中，如果您嘗試在唯讀連接上回寫就會發生下列錯誤：「無法從外部資料來源擷取資料。」 「無法從外部資料來源擷取資料。」  
+ 回寫支援需要 READWRITE 用戶端連接。 在 Excel 中，如果您嘗試在唯讀連線上回寫，會發生下列錯誤：「無法從外部資料來源擷取資料。」 「無法從外部資料來源擷取資料。」  
   
  如果設定連接一律存取可讀取的次要複本，現在就必須設定使用主要複本之 READWRITE 連接的新連接。  
   

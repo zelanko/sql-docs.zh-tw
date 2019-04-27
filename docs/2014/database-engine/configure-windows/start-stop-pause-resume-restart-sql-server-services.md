@@ -41,11 +41,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808738"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務
   本主題描述如何啟動、 停止、 暫停、 繼續或重新啟動[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式，或有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的瀏覽器服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]， **net**在命令提示字元中，命令[!INCLUDE[tsql](../../includes/tsql-md.md)]，或 PowerShell。  

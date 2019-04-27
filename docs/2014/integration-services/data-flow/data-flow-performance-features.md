@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828044"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -143,7 +143,7 @@ ms.locfileid: "58392776"
   
  「緩時變維度」轉換中最緩慢的元件通常是一次針對一個單一資料列執行 UPDATE 的「OLE DB 命令」轉換。 因此，改善「緩時變維度」轉換效能最有效的方式就是取代「OLE DB 命令」轉換。 您可以將這些轉換取代為將要更新的所有資料列儲存到臨時資料表的目的地元件。 然後，您可以同時加入針對所有資料列執行以單一資料列集為基礎之 Transact-SQL UPDATE 的「執行 SQL」工作。  
   
- 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如的討論和範例，這種方法，請參閱區段中中的 「 唯一的維度狀況 」 技術白皮書： [Project REAL:Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602)。  
+ 進階使用者可以針對緩時變維度處理，設計針對大維度進行最佳化的自訂資料流程。 如需取得此方式的討論與範例，請參閱[專案 REAL：Business Intelligence ETL 設計練習](https://go.microsoft.com/fwlink/?LinkId=96602) (英文) 白皮書中的＜獨特的維度狀況＞一節。  
   
 ### <a name="destinations"></a>目的地  
  為達成較佳的目的地效能，請考慮使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地並測試目的地的效能。  
@@ -166,9 +166,9 @@ ms.locfileid: "58392776"
 ## <a name="related-content"></a>相關內容  
  **文件和部落格文章**  
   
--   技術文件： [SQL Server 2005 Integration Services:效能策略](https://go.microsoft.com/fwlink/?LinkId=98899)，technet.microsoft.com 上的  
+-   technet.microsoft.com 上的技術文章 [SQL Server 2005 Integration Services：效能策略](https://go.microsoft.com/fwlink/?LinkId=98899) (英文)  
   
--   技術文件： [Integration Services:效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900)，technet.microsoft.com 上的  
+-   technet.microsoft.com 上的技術文章 [Integration Services：效能微調技術](https://go.microsoft.com/fwlink/?LinkId=98900) (英文)  
   
 -   sqlcat.com 上的技術文件： [將同步轉換分割為多個工作來增加管線的輸送量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   

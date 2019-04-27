@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659930"
 ---
-# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 課：在階層式資料表中建立與管理資料
+# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 課：建立及管理階層式資料表中的資料
   在第 1 課中，您修改了現有的資料表以使用 `hierarchyid` 資料類型，並使用現有資料的表示法來擴展 `hierarchyid` 資料行。 在本課程中，您將從新資料表開始，然後使用階層式方法插入資料。 接著，您將使用階層式方法來查詢與操作資料。  
   
  這個課程包含下列主題：  

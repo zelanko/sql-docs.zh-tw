@@ -1,5 +1,5 @@
 ---
-title: 建置在 MDX 中的量值 |Microsoft 文件
+title: 建置在 MDX 中的量值 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2095d3bde254a59c5b2edbe8ebb117854ab7777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806122"
 ---
 # <a name="mdx-building-measures"></a>MDX 建立量值
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -43,8 +43,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 MEMBER 陳述式 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [MDX 函數參考 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT 陳述式 & #40;MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

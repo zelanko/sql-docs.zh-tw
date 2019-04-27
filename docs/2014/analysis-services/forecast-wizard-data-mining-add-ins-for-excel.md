@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731035"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>預測精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的關聯精靈](media/dmc-forecast.gif "資料採礦功能區中的關聯精靈")  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730404"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>一般 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
   在 **中，使用** [還原資料庫] **對話方塊的** [一般] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 頁面，即可指定在還原 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫時使用的備份檔案和一般設定。  
@@ -75,7 +75,7 @@ ms.locfileid: "48099308"
  如果備份檔案已加密，請鍵入用來加密備份檔案的密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [還原資料庫對話方塊&#40;Analysis Services-多維度資料&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [還原資料庫對話方塊 &#40;Analysis Services - 多維度資料&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [資料分割&#40;還原資料庫對話方塊&#41; &#40;Analysis Services-多維度資料&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [備份與還原 Analysis Services 資料庫](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

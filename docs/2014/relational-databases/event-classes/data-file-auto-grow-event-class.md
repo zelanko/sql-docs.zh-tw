@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d08322000a92c3870f410652b728de0fc844104
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663180"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow 事件類別
   **Data File Auto Grow** 事件類別指出資料檔自動成長。 如果使用 ALTER DATABASE 陳述式讓資料檔明確成長，則不會觸發這個事件。  

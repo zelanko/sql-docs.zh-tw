@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729531"
 ---
 # <a name="granting-process-database-permissions"></a>授與處理資料庫權限
   當您安裝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體之後，該執行個體中 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器管理員角色的所有成員都會具有伺服器範圍權限，可在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體內執行任何工作。 依預設，其他使用者都無權管理或檢視 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體中的任何物件。  
@@ -57,6 +57,6 @@ ms.locfileid: "48171758"
 >  您可以下載並安裝範例，取得完成第 10 課的專案。 如需詳細資訊，請參閱 [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](install-sample-data-and-projects.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [角色和權限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [角色與權限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

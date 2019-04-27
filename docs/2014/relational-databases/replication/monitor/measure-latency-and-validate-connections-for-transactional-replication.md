@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667813"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>針對異動複寫測量延遲及驗證連接
   本主題描述如何使用複寫監視器、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中測量延遲及驗證異動複寫的連接。 異動複寫具有追蹤 Token 功能，該功能會提供便利的方式來計算異動複寫拓撲中的延遲並驗證「發行者」、「散發者」及「訂閱者」之間的連接。 Token (即少量的資料) 會寫入發行集資料庫的交易記錄，會標示為典型的已複寫交易並且會透過系統傳送，它可允許計算：  
@@ -88,7 +88,7 @@ ms.locfileid: "52813900"
   
 3.  按一下 **[插入追蹤]**。  
   
-4.  在下列資料行中檢視追蹤 Token 的經過時間：**發行者到散發者**，**散發者到訂閱者**，**總延遲**。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  檢視下列資料行中之追蹤 token 的經過時間：[發行者到散發者]、[散發者到訂閱者]、[延遲總計]。 **[暫止]** 表示 Token 尚未到達給定點。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>若要檢視先前插入之追蹤 Token 上的訊息  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52813900"
   
 3.  從 **[插入的時間]** 下拉式清單中選取時間。  
   
-4.  在下列資料行中檢視追蹤 Token 的經過時間：**發行者到散發者**，**散發者到訂閱者**，**總延遲**。 **[暫止]** 表示 Token 尚未到達給定點。  
+4.  檢視下列資料行中之追蹤 token 的經過時間：[發行者到散發者]、[散發者到訂閱者]、[延遲總計]。 **[暫止]** 表示 Token 尚未到達給定點。  
   
     > [!NOTE]  
     >  追蹤 Token 資訊與其他記錄資料的保留時間週期相同，這會由散發資料庫的記錄保留期限控制。 如需變更散發資料庫屬性的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](../view-and-modify-distributor-and-publisher-properties.md)。  

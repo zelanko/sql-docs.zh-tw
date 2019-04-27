@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662999"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement 事件類別
   當您使用的功能將從 **未來版本中移除，但不會從下一個主要版本中移除時，就會發生** Deprecation Announcement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件類別。 為了使應用程式的使用壽命達到最久，請避免使用會造成 **Deprecation Announcement** 事件類別或 **Deprecation Final Support** 事件類別的功能。  

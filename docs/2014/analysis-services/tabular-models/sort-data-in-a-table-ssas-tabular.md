@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794367"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>排序資料表中的資料 (SSAS 表格式)
   您可以依一個或多個資料行中的文字 (A 到 Z 或 Z 到 A) 和數字 (最小到最大或最大到最小) 來排序資料。  
@@ -48,8 +48,8 @@ ms.locfileid: "48081848"
     >  如果結果不如預期，資料行可能會包含儲存為文字而非數字的數字。 例如，從某些會計系統匯入的負數，或者以開頭 ' (單引號) 輸入的數字儲存為文字。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選和排序資料&#40;SSAS 表格式&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [檢視方塊&#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
- [角色&#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
+ [篩選與排序資料 &#40;SSAS 表格式&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)  
   
   

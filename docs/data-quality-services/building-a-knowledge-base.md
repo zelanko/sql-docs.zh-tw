@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 45570669c6e1f0d42eb4af8960f84bf70adff891
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862204"
 ---
 # <a name="building-a-knowledge-base"></a>建立知識庫
 

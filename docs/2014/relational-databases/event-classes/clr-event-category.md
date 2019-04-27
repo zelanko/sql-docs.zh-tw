@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663643"
 ---
 # <a name="clr-event-category"></a>CLR 事件類別目錄
   **CLR** 事件類別目錄包含了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 物件時，所產生的事件類別。  

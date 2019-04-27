@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6829f4f5197fca28944e5bc9d2f636f6624c9d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653330"
 ---
 # <a name="odbc-function-summary"></a>ODBC 函式摘要
 下表列出 ODBC 函數，依類型的工作，並包含指定的一致性及每個函式用途的簡短描述。 如需合規性表示法的詳細資訊，請參閱[ODBC 和標準 CLI](../../../odbc/reference/odbc-and-the-standard-cli.md)。 如需語法和語意，每個函式的詳細資訊，請參閱[ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)。  
   
  應用程式可以呼叫**SQLGetInfo**函式來取得驅動程式的合規性資訊。 若要取得支援的驅動程式中的特定函式的相關資訊，應用程式可以呼叫**SQLGetFunctions**。  
   
-|工作|函數名稱|合規性|目的|  
+|工作|函數名稱|合規性|用途|  
 |----------|-------------------|-----------------|-------------|  
 |連接到資料來源|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|取得環境、 連接、 陳述式或描述元控制代碼。|  
 ||[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|ISO 92|連接到特定的驅動程式的資料來源名稱、 使用者識別碼和密碼。|  

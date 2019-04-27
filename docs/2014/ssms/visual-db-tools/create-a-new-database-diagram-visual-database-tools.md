@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666684"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>建立新資料庫圖表 (Visual Database Tools)
   您可以使用 [物件總管] 建立新的資料庫圖表。 資料庫圖表以圖形方式顯示資料庫結構。 使用資料庫圖表可建立及修改資料表、資料行、關聯性和索引鍵。 此外，您可修改索引及條件約束。  

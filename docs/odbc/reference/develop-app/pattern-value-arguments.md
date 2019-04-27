@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861724"
 ---
 # <a name="pattern-value-arguments"></a>模式值引數
 在目錄中的某些引數函式，例如*TableName*中的引數**SQLTables**，接受搜尋模式。 這些引數接受搜尋模式如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_FALSE。也就是如果這個屬性設定為 SQL_TRUE 不接受搜尋模式的識別項引數。  

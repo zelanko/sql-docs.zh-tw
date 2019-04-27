@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794599"
 ---
 # <a name="workspace-database-ssas-tabular"></a>工作空間資料庫 (SSAS 表格式)
   當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中建立新的表格式模型專案時，會建立表格式模型工作空間資料庫 (模型撰寫期間所使用)。 工作空間資料庫存在於以表格式模式執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的記憶體中，通常會與 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 位在相同的電腦上。  

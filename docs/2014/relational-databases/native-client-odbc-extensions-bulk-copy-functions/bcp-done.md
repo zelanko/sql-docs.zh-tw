@@ -1,5 +1,5 @@
 ---
-title: bcp_done |Microsoft Docs
+title: bcp_done | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689081"
 ---
 # <a name="bcpdone"></a>bcp_done
   結束從程式變數大量複製[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]利用[bcp_sendrow](bcp-sendrow.md)。  

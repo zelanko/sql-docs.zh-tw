@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749af9366ef78ef182ad037258eb75603333195f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808203"
 ---
 # <a name="copy-or-export-target-data"></a>複製或匯出目標資料
   您可以複製目標資料，也可以將目標資料匯出到 .CSV 檔。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731755"
 ---
 # <a name="dmx-templates"></a>DMX 範本
   資料採礦範本可幫助您快速建立複雜的查詢。 雖然 DMX 查詢的一般語法已完整記載，但是使用範本可直接按一下並指向引數和資料來源，讓您更容易建立查詢。  

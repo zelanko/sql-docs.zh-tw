@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809002"
 ---
 # <a name="server-properties-security-page"></a>伺服器屬性 (安全性頁面)
   使用此頁面來檢視或修改伺服器安全性選項。  

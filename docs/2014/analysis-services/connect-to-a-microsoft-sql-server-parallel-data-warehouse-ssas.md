@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680093"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>連接到 Microsoft SQL Server Parallel Data Warehouse (SSAS)
   [資料表匯入精靈] 的這個頁面可讓您指定連接到 Microsoft SQL Server 平行處理資料倉儲 (PDW) 的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

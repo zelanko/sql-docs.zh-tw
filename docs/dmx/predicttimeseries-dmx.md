@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659162"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   第三個範例示範如何使用 EXTEND_MODEL_CASES 參數，以全新的資料更新採礦模型。  
   
- 若要深入了解如何使用時間序列模型，請參閱 < 資料採礦教學課程中，[第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)並[時間序列預測 DMX教學課程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 若要深入了解如何使用時間序列模型，請參閱 < 資料採礦教學課程中，[第 2 課：建立預測狀況&#40;中繼資料採礦教學課程&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)並[時間序列預測 DMX 教學課程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 > [!NOTE]  
 >  您可能會從模型中取得不同的結果；提供底下範例的結果只是為了說明結果格式。  
@@ -116,7 +116,7 @@ OR [Model Region] = 'M200 Pacific'
   
  在此範例中，FLATTENED 關鍵字用於讓結果更容易讀取。  如果您沒有使用 FLATTENED 關鍵字，而是傳回階層式資料列集，此查詢會傳回兩個資料行。 第一個資料行包含 [ModelRegion] 的值，而第二個資料行包含具有兩個資料行的巢狀資料表：用於顯示要預測之時間配量的 $TIME 以及包含預測值的 Quantity。  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>範例 2：加入新資料並使用 REPLACE_MODEL_CASES  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>範例 2：加入新的資料，並使用 REPLACE_MODEL_CASES  
  假設您發現特定地區的資料不正確，而且您想要使用模型中的模式，但是要調整預測來符合新的資料。 或者，您可能會尋找具有更可靠之趨勢的另一個地區，而且想要將最可靠的模型套用到另一個地區的資料。  
   
  在這類情況下，您可以使用 REPLACE_MODEL_CASES 參數，並指定新的資料集當做歷程記錄資料使用。 這樣一來，將會根據指定之模型內的模式來做預測，但是將會從新資料點的結尾繼續順利進行。 如需完整的逐步解說此案例中，請參閱 <<c0> [ 進階時間序列預測&#40;中繼資料採礦教學課程&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)。</c0>  
@@ -162,7 +162,7 @@ ON
 |M200 Pacific|2008 年 8 月 25 日上午 12:00:00|89|  
 |M200 Pacific|2008 年 9 月 25 日上午 12:00:00|84|  
   
-### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>範例 3：加入新資料並使用 EXTEND_MODEL_CASES  
+### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>範例 3︰加入新的資料，並使用 EXTEND_MODEL_CASES  
  範例 3 說明如何使用*EXTEND_MODEL_CASES*選項來提供新的資料，會新增至現有的資料數列的結尾。 新的資料會加入到模型上，而不是取代現有的資料點。  
   
  在下列範例中，NATURAL PREDICTION JOIN 後面的 SELECT 陳述式內會提供新的資料。 您可以使用這個語法來提供新輸入的多個資料列，但是輸入的每一個新資料列都必須有唯一的時間戳記：  
@@ -194,11 +194,11 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   根據新擴充的模型，傳回剩餘三個時間配量的新預測。  
   
- 下表列出範例 2 查詢的結果。 請注意，針對 M200 Europe 傳回的前兩個值與您提供的新值一模一樣。 這是預設的行為；如果您想要在新資料的結尾之後開始預測，您必須指定開始和結束時間步驟。 如需如何執行這項操作的範例，請參閱 <<c0> [ 第 5 課： 擴充時間序列模型](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
+ 下表列出範例 2 查詢的結果。 請注意，針對 M200 Europe 傳回的前兩個值與您提供的新值一模一樣。 這是預設的行為；如果您想要在新資料的結尾之後開始預測，您必須指定開始和結束時間步驟。 如需如何執行這項操作的範例，請參閱[第 5 課：擴充時間序列模型](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)。  
   
  也請注意一點，您並未提供太平洋地區的新資料。 因此，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會針對全部五個時間配量傳回新預測。  
   
- Quantity: M200 Europe。 EXTEND_MODEL_CASES:  
+ 數量：M200 Europe。 EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -208,7 +208,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- Quantity: M200 Pacific。 EXTEND_MODEL_CASES:  
+ 數量：M200 Pacific。 EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -218,7 +218,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|42|  
 |11/25/2008 0:00|38|  
   
-## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>範例 4：傳回時間序列預測的統計資料  
+## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>範例 4︰傳回在時間序列預測的統計資料  
  **PredictTimeSeries**函式不支援*INCLUDE_STATISTICS*做為參數。 但是，下列查詢可用於傳回時間序列查詢的預測統計資料。 這個方式也可以搭配具有巢狀資料表資料行的模型使用。  
   
  在這個特定的模型，可預測屬性為 Quantity，因此您必須使用`[Quantity]`為 PredictTimeSeries 函數的第一個引數。 如果您的模型使用不同的可預測屬性，可以替代不同的資料行名稱。  

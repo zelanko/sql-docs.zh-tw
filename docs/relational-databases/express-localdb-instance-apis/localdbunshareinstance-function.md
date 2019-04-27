@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ea300436c0be78936fde95f4fa8437185fa044f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669311"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

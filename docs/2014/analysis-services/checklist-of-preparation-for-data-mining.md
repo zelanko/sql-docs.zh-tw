@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681215"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>資料採礦準備清單
   雖然資料採礦增益集讓模型的建立和試驗工作變得相當簡單有趣，不過當您需要取得可重複、可付諸行動的結果時，就必須預留足夠的時間來擬定基本業務需求，以及取得和準備資料。 本節提供一份檢查清單以協助您規劃調查，並描述常見的問題。  
@@ -71,7 +71,7 @@ ms.locfileid: "52519931"
   
 -   如果您結合了資料集，是否有檢查其中有沒有代表相同資料的多個資料行？  
   
- **我知道來源資料的儲存位置、來自何處，以及處理方式。如有需要就可以輕鬆地重複此程序。**  
+ **我知道來源資料的儲存位置、 來自何處，以及處理方式。如有需要就可以輕鬆地重複此程序。**  
  一次性的資料集很適合用於實驗，但如果您想要將模型移至生產環境，您會想要事先考慮如何將清除程序可以套用到作業資料。 此外，如果您有操作資料，您需要知道如何它可能已發生變更之前沒問題-您必須知道其已捨入，或摘要的方式。  
   
 -   您是否需要能夠重複進行實驗？  

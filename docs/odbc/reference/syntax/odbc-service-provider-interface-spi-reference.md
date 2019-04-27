@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e3d83f0aa27641c9dde164f51319a0e78d456ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653246"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 服務提供者介面 (SPI) 參考
 傳統上，ODBC 會定義應用程式開發介面 (API)。 應用程式可以呼叫 API 中的函式，它們應該實作在驅動程式管理員和驅動程式。  

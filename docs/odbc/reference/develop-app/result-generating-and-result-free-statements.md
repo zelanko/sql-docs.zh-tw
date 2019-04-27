@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861518"
 ---
 # <a name="result-generating-and-result-free-statements"></a>會產生結果和不會產生結果的陳述式
 SQL 陳述式可以鬆散分為下列五個類別：  

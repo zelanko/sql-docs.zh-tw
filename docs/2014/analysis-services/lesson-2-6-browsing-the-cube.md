@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729324"
 ---
 # <a name="browsing-the-cube"></a>瀏覽 Cube
   部署 Cube 之後，您就可以在 [Cube 設計師] 的 [瀏覽器] 索引標籤上檢視 Cube 資料，以及在 [維度設計師] 的 [瀏覽器] 索引標籤上檢視維度資料。 瀏覽 Cube 和維度資料是累加地檢查工作的一種方式。 您可以在物件經處理之後，驗證對屬性、關聯性和其他物件所做的細微變更是否達到期望的效果。 由於 [瀏覽器] 索引標籤用於檢視 Cube 和維度資料，因此該索引標籤會根據您要瀏覽的物件，提供不同的功能。  
@@ -40,7 +40,7 @@ ms.locfileid: "48077508"
      設計師的左窗格會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中的物件。 [瀏覽器] 索引標籤的右側具有兩個窗格：上面的窗格是 [篩選] 窗格，而下面的窗格是 [資料] 窗格。 在後續課程中，您將使用 Cube 瀏覽器來進行分析。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 3 課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [第 3 課：修改量值、 屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  

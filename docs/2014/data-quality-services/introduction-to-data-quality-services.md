@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0cdd72c352246c89983b560e40428c1f9f7fb7b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792482"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 簡介
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的資料品質方案可讓資料管理人或 IT 專業人員維護其資料的品質，並確保資料適合其商業用途。 DQS 是知識驅動方案，可同時提供電腦輔助和互動式方法來管理資料來源的完整性和品質。 DQS 可讓您探索、建立以及管理資料的相關知識。 然後您可以使用該知識執行資料清理、比對和分析。 您也可以在 DQS 資料品質專案中使用參考資料提供者的雲端式服務。  
@@ -44,7 +44,7 @@ ms.locfileid: "56027949"
   
 -   **監控** ：追蹤並判斷資料品質活動的狀態。 監控可讓您確認您的資料品質方案如您設計般運作。 如需詳細資訊，請參閱 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)。  
   
--   **知識庫：** Data Quality Services 是一個知識驅動方案，可根據您使用 DQS 建立的知識分析資料。 這可讓您建立資料品質程序，持續增強您資料的相關知識，並藉以提升資料的品質。  
+-   **知識庫：** Data Quality Services 是一種知識驅動方案，可根據您使用 DQS 建構的知識分析資料。 這可讓您建立資料品質程序，持續增強您資料的相關知識，並藉以提升資料的品質。  
   
  下圖顯示 DQS 程序：  
   

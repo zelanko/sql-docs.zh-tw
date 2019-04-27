@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47e1840318adf5e2b3638dd412de50144f7b2372
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729404"
 ---
 # <a name="defining-a-cube"></a>定義 Cube
   「Cube 精靈」可協助您定義 Cube 的量值群組和維度。 在下列工作中，您將使用「Cube 精靈」來建立 Cube。  
@@ -35,7 +35,7 @@ ms.locfileid: "48117466"
   
      此精靈會檢查這些資料表並建議使用 [InternetSales] 當作量值群組資料表。 量值群組資料表 (也稱為事實資料表) 包含您感興趣的量值，例如銷售的單位數。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
 7.  在 [選取量值] 頁面上，檢閱 [網際網路銷售] 量值群組中的所選取量值，再清除下列量值的核取方塊：  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48117466"
   
      根據預設，此精靈會選取事實資料表中所有未連結到維度的數值資料行當做量值。 不過，這 4 個資料行不是實際量值。 前 3 個是連結事實資料表與維度資料表的索引鍵值，它們不使用於這個 Cube 的初始版本。  
   
-8.  按 [下一步] 。  
+8.  按一下 [下一步] 。  
   
 9. 在 [選取現有維度] 頁面上，確定已選取您先前建立的 [Date] 維度，然後按一下 [下一步]。  
   
 10. 在 [選取新維度] 頁面上，選取要建立的新維度。 若要執行這項操作，請確認已選取 [Customer]、[Geography] 和 [Product] 核取方塊，然後清除 [InternetSales] 核取方塊。  
   
-11. 按 [下一步] 。  
+11. 按一下 [下一步] 。  
   
 12. 在 **完成精靈**頁面上，將 cube 名稱變更`Analysis Services Tutorial`。 在 [預覽] 窗格中，您可以看見 [InternetSales] 量值群組及其量值。 此外，您也可以看見 [Date]、[Customer] 和 [Product] 維度。  
   
@@ -68,10 +68,10 @@ ms.locfileid: "48117466"
 15. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [將屬性新增至維度](lesson-2-3-adding-attributes-to-dimensions.md)  
+ [將屬性加入至維度](lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

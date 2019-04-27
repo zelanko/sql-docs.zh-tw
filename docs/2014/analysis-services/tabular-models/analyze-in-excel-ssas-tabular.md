@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4195e8f17f822bc84bf72bb41420a477ab683017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795475"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>在 Excel 中進行分析 (SSAS 表格式)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [在 Excel 中進行分析] 功能，為表格式模型製作者提供了一個在開發期間可快速分析模型專案的方法。 [在 Excel 中進行分析] 功能可開啟 Microsoft Excel、建立模型工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 工作空間資料庫物件 (資料表、資料行及量值) 會包含在樞紐分析表欄位清單中做為欄位。 接著，即可在有效使用者或角色及檢視方塊的內容中檢視物件及資料。  
@@ -54,11 +54,11 @@ ms.locfileid: "48081728"
   
 |**主題**|**說明**|  
 |---------------|---------------------|  
-|[分析表格式模型在 Excel 中的&#40;SSAS 表格式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|此主題描述如何使用模型設計師的 [在 Excel 中進行分析] 功能來開啟 Excel、建立模型工作空間資料庫的資料來源連接，以及將樞紐分析表加入工作表。|  
+|[在 Excel 中分析表格式模型 &#40;SSAS 表格式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|此主題描述如何使用模型設計師的 [在 Excel 中進行分析] 功能來開啟 Excel、建立模型工作空間資料庫的資料來源連接，以及將樞紐分析表加入工作表。|  
   
 ## <a name="see-also"></a>另請參閱  
- [分析表格式模型在 Excel 中的&#40;SSAS 表格式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [角色&#40;SSAS 表格式&#41;](roles-ssas-tabular.md)   
- [檢視方塊&#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)  
+ [在 Excel 中分析表格式模型 &#40;SSAS 表格式&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [角色 &#40;SSAS 表格式&#41;](roles-ssas-tabular.md)   
+ [檢視方塊 &#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680250"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>連接到來源資料 (適用於 Excel 的資料採礦用戶端)
   本主題將說明如何建立和使用用於儲存資料採礦模型的連接，以及用於存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中儲存之外部資料的連接。  
@@ -29,7 +29,7 @@ ms.locfileid: "48159738"
   
  **外部資料來源的連接。** 您也可以在建立模型或儲存結果時建立外部資料的連接。 例如，您可以在某個伺服器上建立資料採礦模型，然後使用另一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體、Excel 資料表或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 之類的外部資料來源中儲存之資料，對資料採礦模型執行預測查詢。 每次您存取新的資料來源時，系統都會提示您使用對話方塊來建立連接。  
   
-##  <a name="bkmk_prereq2"></a> Prerequisites  
+##  <a name="bkmk_prereq2"></a> 必要條件  
  此版本的增益集需要 SQL Server 2012 的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。 如果您要連接到舊版的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，則可以使用增益集的另一個版本。 目前有其他支援 SQL Server 2005、SQL Server 2008 和 SQL Server 2008 R2 的增益集版本。  
   
  若要連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，您必須擁有存取資料庫伺服器的權限。 而且，資料採礦工作階段必須已啟用，您也必須有伺服器上儲存之資料庫物件的讀取或讀取/寫入權限。  

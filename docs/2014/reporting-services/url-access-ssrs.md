@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42f35641d8a346b5f4574953e4c5786618407620
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647614"
 ---
 # <a name="url-access-ssrs"></a>URL 存取 (SSRS)
   在 SQL Server Reporting Services (SSRS) 中，報表伺服器的 URL 存取權可讓您透過 URL 要求，傳送命令至報表伺服器。 例如，您可在原生模式報表伺服器或 SharePoint 文件庫中自訂報表的轉譯。 您可能已使用特定一組報表參數值來檢視過報表，或報表中您感興趣的特定頁面。 您可以使用預先定義的 URL 存取參數，封裝 URL 中的資訊。 您還可以內嵌轉譯格式或調整報表檢視器外觀的參數，以進一步自訂報表伺服器處理報表的方式。 然後，您可以直接將此 URL 貼入電子郵件或網頁，讓其他人在瀏覽器中用相同方式存取您的報表。  

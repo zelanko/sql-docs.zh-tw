@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;預測 JOIN (DMX) |Microsoft Docs
+title: SELECT FROM &lt;model&gt; PREDICTION JOIN (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658946"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;預測 JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *model*  
  模型識別碼。  
   
- *子選擇*  
+ *sub select*  
  內嵌的 SELECT 陳述式。  
   
  *來源資料查詢*  
@@ -154,7 +154,7 @@ WHERE [BIKE Buyer]
 ORDER BY [LastName] ASC  
 ```  
   
-## <a name="example-3-predicting-associations"></a>範例 3：預測關聯  
+## <a name="example-3-predicting-associations"></a>範例 3︰預測關聯  
  下列範例顯示如何使用從 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯分析演算法建立之模型建立預測。 關聯模型的預測可用於建議相關的產品。 例如，下列查詢會傳回最可能一起購買的三項產品：  
   
 -   Mountain Bottle Cage  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  包含可預測屬性 `[v Assoc Seq Line Items]` 的資料行是資料表資料行，因此，查詢會傳回包含巢狀資料表的單一資料行。 根據預設，巢狀資料表資料行的名稱為 `Expression`。 如果您的提供者不支援階層式資料列集，您可以使用**FLATTENED**關鍵字，讓結果更容易檢視在此範例中所示。  
   
 ## <a name="see-also"></a>另請參閱  
- [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689600"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>資料採礦教學課程 (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可讓您輕鬆建立複雜的資料採礦方案。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中的工具可協助您設計、建立及管理使用關聯式資料或 Cube 資料的資料採礦模型。 您可以管理資料採礦模型的用戶端存取，以及從多個用戶端建立預測查詢。  

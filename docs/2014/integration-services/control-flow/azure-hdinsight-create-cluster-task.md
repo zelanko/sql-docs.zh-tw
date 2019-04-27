@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f41d86d0f757f9ccd0e698ac1bc81423a3118bb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832777"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 建立叢集工作
 [Azure HDInsight 建立叢集工作] 可讓 SSIS 套件在指定的 Azure 訂用帳戶和資源群組中建立 Azure HDInsight 叢集。
@@ -38,7 +38,7 @@ ms.locfileid: "58386526"
 |AzureStorageConnection|選取現有的 Azure 儲存體連線管理員，或建立參考 Azure 儲存體帳戶的新連線管理員，該連線管理員會與 HDInsight 叢集建立關聯。|
 |SubscriptionId|指定 HDInsight 叢集日後建立所在的訂用帳戶識別碼。|
 |ResourceGroup|指定 HDInsight 叢集日後建立所在的 Azure 資源群組。|
-|位置|指定 HDInsight 叢集的位置。 叢集必須建立在和 Azure 儲存體帳戶指定位置相同的位置。|  
+|Location|指定 HDInsight 叢集的位置。 叢集必須建立在和 Azure 儲存體帳戶指定位置相同的位置。|  
 |ClusterName|指定要建立的 HDInsight 叢集名稱。|  
 |ClusterSize|指定要在叢集中建立的節點數目。|  
 |BlobContainer|指定要與 HDInsight 叢集建立關聯的預設儲存體容器名稱。|  

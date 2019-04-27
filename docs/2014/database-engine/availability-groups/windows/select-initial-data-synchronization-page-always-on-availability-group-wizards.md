@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789466"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>選取初始資料同步處理頁面 (AlwaysOn 可用性群組精靈)
   使用 AlwaysOn **[選取初始資料同步處理]** 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用：[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  

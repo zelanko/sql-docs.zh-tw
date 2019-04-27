@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62675667"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>解除安裝 Analytics Platform System hotfix 
 下列步驟說明如何解除安裝先前安裝的 Analytics Platform System hotfix。  

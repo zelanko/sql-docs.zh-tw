@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660175"
 ---
 # <a name="browsing-a-neural-network-model"></a>瀏覽類神經網路模型
   當您使用 [瀏覽] 開啟類神經網路或羅吉斯迴歸模型時，該模型會在類似於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 類神經網路檢視器的互動式檢視器中顯示。 此檢視器可協助您探索相互關聯，以及取得有關模型和基礎資料之模式的資訊。  
@@ -79,7 +79,7 @@ ms.locfileid: "48218578"
   
     -   **增益**會告知您這個特定屬性值配對在促成不同結果方面的有用程度。  
   
-     注意：不論您將滑鼠游標放在哪個資料行上方，工具提示都會包含相同的資訊。  
+     注意:工具提示會包含相同的資訊，無論是否您將滑鼠游標放在一個資料行或其他。  
   
  [回到頁首](#BKMK_Tabs)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48218578"
  [回到頁首](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>進一步了解類神經網路模型  
- 此檢視器中的資訊是使用這個模型類型特有的預存程序，從伺服器中擷取而來：System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores。  
+ 使用此模型類型特有的預存程序，從伺服器擷取檢視器中的資訊：System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  如果您想要使用增益集來建立具有多個可預測屬性的模型，請使用 [進階] 模型選項。  
   

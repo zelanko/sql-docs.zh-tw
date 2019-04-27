@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794359"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>設定資料行的資料類型 (SSAS 表格式)
   當您將資料匯入或貼上模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
@@ -66,9 +66,9 @@ ms.locfileid: "48083209"
   
  如果資料類型受到支援，但是模型設計師卻發現不受新資料類型支援的值，您會接到另一項錯誤，並將需要修正資料值，才能再繼續進行。  
   
- 如需使用商業智慧語意模型中的資料類型的詳細資訊，它們都以隱含方式轉換，和不同資料類型的方式可在公式中，請參閱 <<c0> [ 支援的資料類型&#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md).</c0>  
+ 如需商業智慧語意模型中使用的資料類型、如何以隱含方式轉換這些資料類型，以及如何在公式內使用不同資料類型等的詳細資訊，請參閱 [支援的資料類型 &#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [支援的資料類型&#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)  
+ [支援的資料類型 &#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62818561"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>將轉換的資料庫物件載入 SQL Server (OracleToSQL)
 Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物件載入 SQL Server。 您可以讓 SSMA 建立物件，或者您可以編寫物件指令碼，然後自己執行的指令碼。 此外，SSMA 也可讓您使用 SQL Server 資料庫的實際內容來更新目標中繼資料。  

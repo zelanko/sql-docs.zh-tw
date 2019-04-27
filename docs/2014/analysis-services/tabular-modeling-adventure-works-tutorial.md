@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795511"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格式模型化 (Adventure Works 教學課程)
   本教學課程提供如何使用 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 建立 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services 表格式模型的課程。  
@@ -94,6 +94,6 @@ ms.locfileid: "53373680"
 |[設定 Power View 報表的報表屬性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)設定 Power View 報表的報表屬性|30 分鐘|  
   
 ## <a name="next-step"></a>下一個步驟  
- 若要開始教學課程，請繼續進行第一課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
+ 若要開始本教學課程，請繼續進行第 1 課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
   

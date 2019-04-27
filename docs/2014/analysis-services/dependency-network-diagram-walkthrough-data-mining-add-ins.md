@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732174"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>相依性網路圖表逐步解說 (資料採礦增益集)
   許多不同類型的資料採礦模型都會使用網路圖形做為探索資料關聯性的方式。 您可以匯入這些模型使用 Visio**相依性網路**圖形，然後繼續自訂並增強配置。 **適用於 Visio 的資料採礦圖形**包含下列自訂控制項，用於處理相依性網路圖表：  
@@ -46,7 +46,7 @@ ms.locfileid: "48197928"
   
      \<磁碟機 >: \Program 檔案 (x85) \Microsoft SQL Server 2012 DM Add-ins  
   
-2.  拖曳**相依性網路**圖形放入以啟動精靈頁面。 按 [下一步] 。  
+2.  拖曳**相依性網路**圖形放入以啟動精靈頁面。 按一下 [下一步] 。  
   
 3.  在 歡迎使用 頁面上**相依性網路 Visio 圖形精靈**，按一下**下一步**。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48197928"
      **邊緣強度**  
      切換整個圖形的邊緣強度顯示。 邊緣是節點之間的連接。 您可以使用滑桿控制項來篩選出關聯性不強的連接。  
   
-     **滑桿**  
+     **Slider**  
      **滑桿**能夠協助您控制相依性網路圖表中顯示的關聯性的強度。  
   
      圖形中的每個節點代表一個狀態。 箭頭代表兩個狀態之間的轉換以及與轉換相關聯的機率。 若要減少圖形中的節點數目，請將滑動軸向上移。  

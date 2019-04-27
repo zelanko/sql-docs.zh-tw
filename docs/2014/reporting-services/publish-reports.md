@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657564"
 ---
 # <a name="publish-reports"></a>發行報表
   您可以從[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]部署專案，將報表伺服器專案中的所有報表與共用資料來源發行至報表伺服器，或者發行單一報表。 在可以發行報表之前，您必須指定目標報表伺服器的 URL。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)。  

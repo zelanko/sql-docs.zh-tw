@@ -1,5 +1,5 @@
 ---
-title: 定義域管理：定義域清單 |Microsoft Docs
+title: 定義域管理：定義域清單 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792745"
 ---
-# <a name="domain-management-domain-list"></a>定義域管理：網域清單
+# <a name="domain-management-domain-list"></a>定義域管理：定義域清單
   此主題描述 **(DQS) 中** [定義域管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 頁面上定義域清單中的控制項。 使用此窗格可選取執行管理作業所在的定義域。 相同的窗格會用於 **[定義域管理]** 頁面上的所有索引標籤式頁面。  
   
 ## <a name="options"></a>選項。  

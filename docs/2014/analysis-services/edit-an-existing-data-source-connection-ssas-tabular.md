@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a177971e13a100044ccc40de44b93dbf6816478
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731567"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>編輯現有的資料來源連接 (SSAS 表格式)
   本主題描述如何編輯表格式模型中現有資料來源連接的屬性。  
@@ -79,7 +79,7 @@ ms.locfileid: "48117798"
      當您儲存目前的資料表屬性集時，可能會出現一則訊息，指出您需要處理資料表。 按一下 **[處理]** ，將更新的資料載入模型中。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理資料&#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
+ [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
  [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

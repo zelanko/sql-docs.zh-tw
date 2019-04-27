@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730765"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>從資料摘要匯入 (SSAS 表格式)
   資料摘要是從線上資料來源產生並串流至目的地文件或應用程式的一個或多個 XML 資料流。 您可以使用 [資料表匯入精靈]，將資料從資料摘要匯入模型。  
@@ -45,7 +45,7 @@ ms.locfileid: "48099838"
  **Atom 摘要**  
  摘要必須是 Atom 摘要， 不支援 RSS 摘要。 摘要必須是可公開使用，或者您必須擁有權限可以使用目前登入的 Windows 帳戶連接到該摘要。  
   
- 在匯入期間，資料摘要的資料只會加入模型一次。 若要從摘要取得已更新的資料，您可從模型設計師重新整理資料，或者在將模型部署到 Analysis Services 的實際執行個體之後，為模型設定資料重新整理排程。 如需詳細資訊，請參閱[處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)。  
+ 在匯入期間，資料摘要的資料只會加入模型一次。 若要從摘要取得已更新的資料，您可從模型設計師重新整理資料，或者在將模型部署到 Analysis Services 的實際執行個體之後，為模型設定資料重新整理排程。 如需詳細資訊，請參閱 [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)。  
   
 ##  <a name="azure"></a> 從 Azure DataMarket 資料集匯入資料  
  您可以從 Azure DataMarket 匯入資料做為模型中的資料表。  
@@ -85,7 +85,7 @@ ms.locfileid: "48099838"
   
 3.  在 **[連接到資料摘要]** 頁面中，輸入所要存取之摘要的描述性名稱。 如果您要匯入多個摘要或資料來源，使用連接描述性名稱可有助於記住連接的使用方式。  
   
-4.  在 **[資料摘要 URL]** 中，輸入資料摘要的位址。 有效值包括下列各項：  
+4.  在 **[資料摘要 URL]** 中，輸入資料摘要的位址。 有效值包括以下的值：  
   
     1.  包含 Atom 資料的 XML 文件。 例如，下列 URL 會指向 Open Government Data Initiative 網站上的公用摘要：  
   
@@ -191,10 +191,10 @@ ms.locfileid: "48099838"
 12. 在 **[選取資料表和檢視表]** 頁面中，按一下 **[完成]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [支援的資料來源&#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [支援的資料類型&#40;SSAS 表格式&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [模擬&#40;SSAS 表格式&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [處理資料&#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
- [匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)  
+ [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [支援的資料類型 &#40;SSAS 表格式&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [模擬 &#40;SSAS 表格式&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
+ [匯入資料 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)  
   
   

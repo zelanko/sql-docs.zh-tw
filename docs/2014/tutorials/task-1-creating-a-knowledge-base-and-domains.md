@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822177"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>工作 1:建立知識庫和定義域
   在這個工作中，您會建立**供應商**知識庫，並建立用來清理資料和比對資料以移除重複項的網域。  
@@ -46,7 +46,7 @@ ms.locfileid: "56011099"
   
      ![建立定義域 對話方塊](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "建立定義域 對話方塊")  
   
-9. 重複上述步驟來建立以下包含所有預設值的定義域。 若要簡化本教學課程，您設定**資料型別**做為所有的網域**字串**。 其他允許的資料類型包括：整數、十進位值和日期。 當**使用前置值**選項是選取 （預設值），所有同義字會都取代在輸出中同義字群組的前置值。 設定**將字串標準化**選項 （預設值） 會移除定義域值中的任何特殊字元。 **輸出格式為**選項可讓您選取的網域中的資料值為輸出時所套用的格式。 選取 **啟用拼字檢查**擴展定義域時，針對所有字串值執行拼字檢查 （預設值）。 **語言**設定會指定哪一個語言版本**拼字檢查**您想要套用。 選取 **停用語法錯誤演算法**來擴展定義域，而不檢查字串值的語法錯誤。 請參閱[建立網域](https://msdn.microsoft.com/library/hh510401.aspx)如需詳細資訊的 MSDN library 中的主題。  
+9. 重複上述步驟來建立以下包含所有預設值的定義域。 若要簡化本教學課程，您設定**資料型別**做為所有的網域**字串**。 其他允許的資料類型包括：整數、 小數和日期。 當**使用前置值**選項是選取 （預設值），所有同義字會都取代在輸出中同義字群組的前置值。 設定**將字串標準化**選項 （預設值） 會移除定義域值中的任何特殊字元。 **輸出格式為**選項可讓您選取的網域中的資料值為輸出時所套用的格式。 選取 **啟用拼字檢查**擴展定義域時，針對所有字串值執行拼字檢查 （預設值）。 **語言**設定會指定哪一個語言版本**拼字檢查**您想要套用。 選取 **停用語法錯誤演算法**來擴展定義域，而不檢查字串值的語法錯誤。 請參閱[建立網域](https://msdn.microsoft.com/library/hh510401.aspx)如需詳細資訊的 MSDN library 中的主題。  
   
     -   Supplier Name  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680432"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>設定專用的資料重新整理或僅查詢處理 (PowerPivot for SharePoint)
   在 SharePoint 整合模式中，Analysis Services 伺服器執行個體可以設定為支援特定的處理要求類型，例如資料重新整理或僅查詢處理。 在預設情況下，這兩種類型的載入要求都會啟用。 您可以關閉其中任何一種，以建立專用的查詢引擎或資料重新整理伺服器。  
@@ -62,7 +62,7 @@ ms.locfileid: "48168180"
   
 |設定|有效的值|描述|  
 |-------------|------------------|-----------------|  
-|預設值|根據 RAM 進行計算。|預設值的根據是可用記憶體數量除以 4 GB。 預設值是由公式進行計算，以便依系統的容量調整設定。<br /><br /> 注意： 4 gb 做為除數選取實際的 PowerPivot 資料來源大規模取樣的 RAM 使用量為基礎。 而不是以 PowerPivot 實體或邏輯架構為根據。|  
+|預設值|根據 RAM 進行計算。|預設值的根據是可用記憶體數量除以 4 GB。 預設值是由公式進行計算，以便依系統的容量調整設定。<br /><br /> 注意:已選取 4 gb 做為除數，根據實際的 PowerPivot 資料來源大規模取樣的 RAM 使用量。 而不是以 PowerPivot 實體或邏輯架構為根據。|  
 |最大值|根據 CPU 數進行計算。|您可以指定的最大並行工作數是以電腦上的處理器數目為根據。 例如，在 4 插槽的四核心電腦上，您可以同時執行的作業數目上限是 16。|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>將預設值增加到更高的值  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655673"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>指定交易式發行項變更的傳播方式
   異動複寫可讓您指定資料變更從「發行者」傳播到「訂閱者」的方式。 對於每個發行的資料表，您都可以指定四種方法之一來傳播每個要傳播到「訂閱者」的作業 (INSERT、UPDATE 或 DELETE)：  

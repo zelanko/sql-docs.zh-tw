@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678992"
 ---
 # <a name="advanced-save-options"></a>進階儲存選項
   使用此對話方塊即可選取語言編碼配置，以及指定要在每行行尾插入的字元。 若要存取**進階儲存選項**對話方塊的 **檔案**功能表上，按一下 **儲存**\<查詢名稱 >**做為.sql**至開啟**另存新檔** 對話方塊中，按一下下拉箭頭**儲存**按鈕，然後再按一下**使用編碼方式儲存**。  

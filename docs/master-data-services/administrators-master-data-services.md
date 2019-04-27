@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85ad4589ef25042498b132475af39cb36fd1b2bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817942"
 ---
 # <a name="administrators-master-data-services"></a>管理員 (Master Data Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "52783190"
   
 ## <a name="comparing-administrator-types"></a>比較管理員類型  
   
-|管理員類型|Description|  
+|管理員類型|描述|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 進階使用者|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 中所指派權限不會影響系統管理員的存取。<br /><br /> 根據明確指派之功能區域權限或繼承自群組的權限，使用者可以是進階使用者。<br /><br /> 自動擁有所有模型的所有權限。<br /><br /> 自動擁有所有功能區域的存取權。|  
 |模型管理員|根據明確指派的系統管理員權限或繼承自群組的權限，使用者可以是模型系統管理員。<br /><br /> 只能存取被授與存取權的功能區域。<br /><br /> 自動擁有特定模型中的所有物件和成員的所有權限。|  

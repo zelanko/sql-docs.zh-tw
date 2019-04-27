@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806367"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
   企業可以擁有多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式，每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都可以管理多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和資料層應用程式。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式都只能有一個公用程式控制點 (UCP)。 您必須針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式建立新的 UCP。 每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體和每一個資料層應用程式都只是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的成員，而且是由單一 UCP 所管理。  
@@ -76,7 +76,7 @@ ms.locfileid: "53377660"
   
 -   此程序必須由擁有系統管理員 (sysadmin) 權限的使用者執行，而這些是建立 UCP 所需的相同權限。  
   
--   您必須從 UCP 中移除所有 SQL Server 受管理的執行個體。 請注意，UCP 就是 SQL Server 受管理的執行個體。 如需詳細資訊，請參閱[How to:從 SQL Server 公用程式移除 SQL Server 的執行個體](https://go.microsoft.com/fwlink/?LinkId=169392)。  
+-   您必須從 UCP 中移除所有 SQL Server 受管理的執行個體。 請注意，UCP 就是 SQL Server 受管理的執行個體。 如需詳細資訊，請參閱[如何：從 SQL Server 公用程式移除 SQL Server 的執行個體](https://go.microsoft.com/fwlink/?LinkId=169392)。  
   
  您可以使用這個程序，從 SQL Server 公用程式中移除 SQL Server UCP。 完成此作業之後，您就可以再次於 SQL Server 執行個體上建立 UCP。  
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729798"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
   您可以重新命名現有的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用**重新命名執行個體**對話方塊。  
@@ -68,7 +68,7 @@ ms.locfileid: "52401443"
   
      現在假設您重新命名為"TAB2"的執行個體。 名稱變更之後，您的設定現在看起來如下：  
   
-    1.  執行個體名稱 =\<伺服器 > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  服務名稱 = MSOLAP$TAB2  
   

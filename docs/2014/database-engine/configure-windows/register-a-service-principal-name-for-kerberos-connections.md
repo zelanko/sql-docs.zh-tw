@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781993"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
   若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 驗證，需要符合下列兩個條件：  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |狀況|驗證方法|  
 |--------------|---------------------------|  
-|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意:正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
-|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意:正確表示已註冊之 SPN 對應的帳戶就是執行 SQL Server 服務所使用的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意:已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶的正確表示。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意:已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶的正確表示。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
 |SPN 對應到不正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|驗證失敗。|  
 |SPN 查閱失敗或是未對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶，或者不是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|本機和遠端連接都會使用 NTLM。|  
   

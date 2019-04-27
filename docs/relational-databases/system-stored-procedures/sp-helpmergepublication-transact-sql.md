@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660799"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication **=** ] **'**_發行集_**'**  
+ [ @publication**=** ] **'**_publication_**'**  
  發行集的名稱。 *發行集*已**sysname**，預設值是**%**，傳回目前資料庫中所有合併式發行集的相關資訊。  
   
  [ @found **=** ] **'***找到***'** 輸出  
  這是指示傳回資料列的旗標。 *找到*已**int**和一個 OUTPUT 參數，預設值是 NULL。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
- [ @publication_id **=**] **'***publication_id&lt***'** 輸出  
+ [ @publication_id**=**] **'***publication_id***'** OUTPUT  
  這是發行集識別碼。 *publication_id&lt*已**uniqueidentifier**和一個 OUTPUT 參數，預設值是 NULL。  
   
- [ @reserved **=**] **'***保留***'**  
+ [ @reserved**=**] **'***reserved***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *保留*已**nvarchar(20)**，預設值是 NULL。  
   
- [ @publisher **=** ] **'***發行者***'**  
+ [ @publisher**=** ] **'***publisher***'**  
  發行者的名稱。 *發行者*已**sysname**，預設值是 NULL。  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [@publisher_db**=** ] **'***publisher_db***'**  
  發行集資料庫的名稱。 *publisher_db*已**sysname**，預設值是 NULL。  
   
 ## <a name="result-sets"></a>結果集  
@@ -83,7 +83,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |enabled_for_internet|**int**|判斷是否啟用發行集的網際網路功能。 如果**1**，發行集的同步處理檔案會放入`C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp`目錄。 使用者必須建立檔案傳輸通訊協定 (FTP) 目錄。 如果**0**，發行集未啟用網際網路存取。|  
 |dynamic_filter|**int**|指示是否要使用參數化資料列篩選器。 **0**表示不會使用參數化資料列篩選器。|  
 |has_subscription|**bit**|指示發行集是否有任何訂閱。 **0**表示目前沒有任何訂閱此發行集。|  
-|snapshot_in_default_folder|**bit**|指定是否將快照集檔案儲存在預設資料夾中。<br /><br /> 如果**1**，可以在預設資料夾中找到快照集檔案。<br /><br /> 如果**0**，快照集檔案會儲存在所指定的替代位置**alt_snapshot_folder**。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。<br /><br /> 注意：這個參數可以是 true 中, 仍有位置**alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。|  
+|snapshot_in_default_folder|**bit**|指定是否將快照集檔案儲存在預設資料夾中。<br /><br /> 如果**1**，可以在預設資料夾中找到快照集檔案。<br /><br /> 如果**0**，快照集檔案會儲存在所指定的替代位置**alt_snapshot_folder**。 替代位置可以在另一部伺服器、網路磁碟機或抽取式媒體 (如 CD-ROM 或抽取式磁碟) 中。 另外，您也可以將快照集檔案儲存在 FTP 站台中，供訂閱者以後擷取它們。<br /><br /> 注意:這個參數可以是 true 中, 仍有位置**alt_snapshot_folder**參數。 這個組合會指定將快照集檔案同時儲存在預設位置和替代位置中。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照集替代資料夾的位置。|  
 |pre_snapshot_script|**nvarchar(255)**|指定的指標 **.sql**套用在訂閱者端的快照集時，指令碼檔案，「 合併代理程式會執行任何複寫的物件之前。|  
 |post_snapshot_script|**nvarchar(255)**|指定的指標 **.sql**檔案，執行合併代理程式在所有其他複寫物件指令碼和資料的初始同步處理期間，套用。|  
@@ -93,11 +93,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|指定當利用 FTP 來傳遞快照集時，合併代理程式能夠從中收取快照集檔案的位置。|  
 |ftp_login|**sysname**|這是用於連接到 FTP 服務的使用者名稱。|  
 |conflict_retention|**int**|指定衝突的保留期限 (以天為單位)。 過了指定天數之後，便從衝突資料表中清除衝突資料列。|  
-|keep_partition_changes|**int**|指定這個發行集是否進行最佳化的同步處理。 **keep_partition_changes**具有預設值是**0**。 值為**0**表示同步處理未最佳化，而且資料分割中的資料變更時，會驗證傳送給所有訂閱者資料分割。<br /><br /> **1**表示同步處理最佳化，而且只有擁有已變更的資料分割中的資料列的訂閱者會受到影響。<br /><br /> 注意：依預設，合併式發行集會使用預先計算的資料分割，以取得高於這個選項的最佳化程度。 如需詳細資訊，請參閱 < [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)並[最佳化 Parameterized Filter Performance with Precomputed Partitions&lt](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
+|keep_partition_changes|**int**|指定這個發行集是否進行最佳化的同步處理。 **keep_partition_changes**具有預設值是**0**。 值為**0**表示同步處理未最佳化，而且資料分割中的資料變更時，會驗證傳送給所有訂閱者資料分割。<br /><br /> **1**表示同步處理最佳化，而且只有擁有已變更的資料分割中的資料列的訂閱者會受到影響。<br /><br /> 注意:根據預設，合併式發行集使用預先計算的資料分割，它提供的最佳化程度高於這個選項。 如需詳細資訊，請參閱 < [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)並[最佳化 Parameterized Filter Performance with Precomputed Partitions&lt](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。|  
 |allow_subscription_copy|**int**|指定是否已啟用複製訂閱這個發行集之訂閱資料庫的能力。 值為**0**表示不允許複製。|  
 |allow_synctoalternate|**int**|指定是否允許替代的同步處理夥伴與這個發行者同步。 值為**0**表示不允許同步夥伴。|  
 |validate_subscriber_info|**nvarchar(500)**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。 它可以協助您確認每項合併的資訊分割都一致。|  
-|backward_comp_level|**int**|資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|資料庫相容性層級，它可以是下列項目之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|指定發行集資訊是否發行到 Active Directory。 值為**0**表示發行集資訊不是從 Active Directory。<br /><br /> 這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 Active Directory 中。|  
 |max_concurrent_merge|**int**|並行合併處理序的數目。 如果**0**，在任何給定時間執行的並行合併處理序數目沒有限制。|  
 |max_concurrent_dynamic_snapshots|**int**|可以針對合併式發行集來執行的最大並行已篩選資料快照集工作階段數目。 如果**0**，能夠同時針對的發行集之任何指定時間執行的並行已篩選的資料快照集工作階段最大數目沒有限制。|  
@@ -129,9 +129,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

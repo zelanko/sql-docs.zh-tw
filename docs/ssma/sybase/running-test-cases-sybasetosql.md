@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667718"
 ---
 # <a name="running-test-cases-sybasetosql"></a>執行測試案例 (SybaseToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果這兩個平台上相同的結果，測試成功。 Sybase 之間的物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -47,19 +47,19 @@ SSMA 軟體測試人員將會在此步驟中，建立輔助物件 （資料表�
   
 |名稱|類型|描述|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
-|USER_TABLE$ 澳幣|資料表|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AudID|資料表|儲存新的和變更的資料列的資料表。|  
+|USER_TABLE$Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
+|USER_TABLE$Aud|資料表|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$AudID|資料表|儲存新的和變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
-|新的 USER_TABLE $|檢視|簡化的插入與覆寫的資料列表示。|  
-|USER_TABLE$ new_id|檢視|識別已插入和已變更的資料列。|  
-|USER_TABLE $ 舊|檢視|簡化的已刪除和覆寫的資料列表示。|  
+|USER_TABLE$new|檢視|簡化的插入與覆寫的資料列表示。|  
+|USER_TABLE$new_id|檢視|識別已插入和已變更的資料列。|  
+|USER_TABLE$old|檢視|簡化的已刪除和覆寫的資料列表示。|  
   
 已驗證的資料表，在 Sybase 資料庫中建立下列物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 |名稱|類型|描述|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
+|USER_TABLE$Trg|觸發程序|稽核的變更已驗證的資料表中的觸發程序。|  
   
 ### <a name="test-object-calls"></a>測試物件呼叫  
 在此步驟中，SSMA 軟體測試人員會叫用所選測試每個物件，比較結果，並顯示報表。  

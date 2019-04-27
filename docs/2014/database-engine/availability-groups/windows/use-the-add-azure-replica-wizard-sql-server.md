@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788126"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
   使用 [加入 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Windows Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
@@ -28,7 +28,7 @@ ms.locfileid: "48095638"
   
      [Security](#Security)  
   
--   **使用下列方法加入複本：**  [加入 Azure 複本精靈 (SQL Server Management Studio)](#SSMSProcedure)  
+-   **使用下列方法加入複本：**[加入 Azure 複本精靈 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  如果您從未有任何可用性複本加入可用性群組中，請參閱的 < 伺服器執行個體 > 和 < 可用性群組和複本 > 章節中的[必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
@@ -69,7 +69,7 @@ ms.locfileid: "48095638"
   
 4.  針對將裝載新次要複本的 Windows Azure VM 指定設定：  
   
-     映像  
+     Image  
      要用於 Windows Azure VM 的 SQL Server 映像名稱  
   
      VM 大小  

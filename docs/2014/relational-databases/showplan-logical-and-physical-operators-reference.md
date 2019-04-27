@@ -136,11 +136,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627327"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
   運算子說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何執行查詢或資料操作語言 (DML) 陳述式。 查詢最佳化工具會使用運算子來建立查詢計畫，以便建立查詢所指定的結果，或執行 DML 陳述式所指定的作業。 查詢計畫是由實體運算子所組成的樹狀目錄。 您可使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的圖形執行計畫選項 SET SHOWPLAN 陳述式，以及 SQL Server Profiler Showplan 事件類別，檢視查詢計畫。  
@@ -155,11 +155,11 @@ ms.locfileid: "53361480"
   
  實體運算子可進行初始化、收集資料及關閉。 特別是，實體運算子可回應下列三種方法呼叫：  
   
--   **Init （)**:**Init （)** 方法會使實體運算子自行初始化，並設定任何所需的資料結構。 實體運算子可接收許多 **Init()** 呼叫，但通常實體運算子只會接收一個。  
+-   **Init()**：**Init()** 方法會使實體運算子自行初始化，並設定任何必要的資料結構。 實體運算子可接收許多 **Init()** 呼叫，但通常實體運算子只會接收一個。  
   
--   **Getnext （)**:**Getnext （)** 方法會使實體運算子取得資料的第一次，或後續資料列。 實體運算子可能會接收零個或許多 **GetNext()** 呼叫。  
+-   **GetNext()**：**GetNext()** 方法會使實體運算子取得資料的第一個或下一個資料列。 實體運算子可能會接收零個或許多 **GetNext()** 呼叫。  
   
--   **Close （)**:**Close （)** 方法會使實體運算子執行某些清除作業並自行關閉。 實體運算子只會接收一個 **Close()** 呼叫。  
+-   **Close()**：**Close()** 方法會使實體運算子執行某些清除作業並自行關閉。 實體運算子只會接收一個 **Close()** 呼叫。  
   
  **GetNext()** 方法會傳回一列資料，而它被呼叫的次數會在使用 SET STATISTICS PROFILE ON or SET STATISTICS XML ON 所產生的「執行程序表」輸出中顯示為 **ActualRows**。 如需這些 SET 選項的詳細資訊，請參閱 [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql) 和 [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "53361480"
 |![非叢集索引多工緩衝處理運算子圖示](../../2014/database-engine/media/index-spool-32x.gif "非叢集索引多工緩衝處理運算子圖示")|**索引多工緩衝處理**|**Index Spool**實體的運算子包含 SEEK:() 述詞中`Argument`資料行。 **Index Spool**運算子會掃描其輸入的資料列，將每個資料列的副本放入隱藏的多工緩衝處理檔案 (儲存在`tempdb`資料庫與現有的僅供查詢的存留期)，並對資料列建立非叢集索引。 這讓您可以使用索引的搜尋能力來輸出滿足 SEEK:() 述詞的資料列。 如果倒轉運算子 (例如，藉由`Nested Loops`運算子)，但不重新繫結需要會使用使用 「 多工緩衝處理的資料，而非重新掃描輸入。|  
 |![非叢集索引更新運算子圖示](../../2014/database-engine/media/nonclust-index-update-32x.gif "非叢集索引更新運算子圖示")|`Nonclustered Index Update`|`Nonclustered Index Update`實體運算子會更新從其輸入中指定的非叢集索引中的資料列`Argument`資料行。 如果出現 SET:() 述詞，則每個更新的資料行都會設為這個值。 `Nonclustered Index Update` 是實體運算子。|  
 |![線上索引插入運算子圖示](../../2014/database-engine/media/online-index-32x.gif "線上索引插入運算子圖示")|**線上索引插入**|「線上索引插入」實體運算子指出索引之建立、改變或卸除作業將於線上進行。 也就是說，基礎資料表資料在索引操作期間仍然可供使用者使用。|  
-|None|`Parallelism`|`Parallelism`運算子會執行散發資料流、 蒐集資料流，並重新分割資料流的邏輯作業。 `Argument`資料行可以包含 PARTITION COLUMNS:() 述詞，以及被分割資料行的逗號分隔的清單。 `Argument`資料行也可以包含 ORDER BY:() 述詞，列出的排序次序分割期間要保留的資料行。 `Parallelism` 是實體運算子。<br /><br /> 注意：如果查詢已經編譯為平行查詢，但在執行階段中，它執行以序列查詢，顯示計畫輸出產生由 SET STATISTICS XML 或使用**包括實際執行計畫**選項[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]將不會包含`RunTimeInformation`項目`Parallelism`運算子。 SET STATISTICS PROFILE 輸出中實際的資料列計數和實際數目的執行會顯示為零`Parallelism`運算子。 其中一個條件發生時，這表示`Parallelism`運算子只用於在查詢編譯期間，而不是在執行階段查詢計畫。 請注意，如果伺服器上有大量的並行載入，平行查詢計畫有時會以序列方式執行。|  
+|None|`Parallelism`|`Parallelism`運算子會執行散發資料流、 蒐集資料流，並重新分割資料流的邏輯作業。 `Argument`資料行可以包含 PARTITION COLUMNS:() 述詞，以及被分割資料行的逗號分隔的清單。 `Argument`資料行也可以包含 ORDER BY:() 述詞，列出的排序次序分割期間要保留的資料行。 `Parallelism` 是實體運算子。<br /><br /> 注意:如果查詢已經編譯為平行查詢，但在執行階段中，它執行以序列查詢，顯示計畫輸出產生由 SET STATISTICS XML 或使用**包括實際執行計畫**選項[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]將不會包含`RunTimeInformation`項目`Parallelism`運算子。 SET STATISTICS PROFILE 輸出中實際的資料列計數和實際數目的執行會顯示為零`Parallelism`運算子。 其中一個條件發生時，這表示`Parallelism`運算子只用於在查詢編譯期間，而不是在執行階段查詢計畫。 請注意，如果伺服器上有大量的並行載入，平行查詢計畫有時會以序列方式執行。|  
 |![參數資料表掃描運算子圖示](../../2014/database-engine/media/parameter-table-scan-32x.gif "參數資料表掃描運算子圖示")|`Parameter Table Scan`|`Parameter Table Scan` 運算子會掃描在目前的查詢中當做參數使用的資料表。 一般而言，這是用於預存程序中的 INSERT 查詢。 `Parameter Table Scan` 是邏輯與實體運算子。|  
 |None|**部分彙總**|「部分彙總」用於平行計畫。 它將彙總函式套用至盡可能最多的輸入資料列，因此不需要寫入磁碟 (稱為「溢出」)。 `Hash Match` 是實作資料分割的彙總的只是實體運算子 (iterator)。 **部分彙總** 是邏輯運算子。|  
 |![母體擴展查詢資料指標運算子圖示](../../2014/database-engine/media/poulation-query-32x.gif "母體擴展查詢資料指標運算子圖示")|`Population Query`|`Population Query` 運算子會在開啟資料指標時，擴展資料指標的工作資料表。|  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8cd7aec26338516d397c2b125e586ba1f94601a2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662437"
 ---
 # <a name="exception-event-class"></a>Exception 事件類別
   Exception 事件類別是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中發生了例外狀況。  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680874"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>分類精靈 (適用於 Excel 的資料採礦增益集)
   ![資料採礦功能區中的 「 分類精靈 」](media/dmc-classify.gif "資料採礦功能區中的分類精靈")  

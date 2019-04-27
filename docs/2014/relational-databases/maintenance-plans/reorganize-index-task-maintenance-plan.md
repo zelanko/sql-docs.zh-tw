@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0f354280da857be236049a564a77716e93cd351
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807055"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>重新組織索引工作 (維護計畫)
   使用 [重新組織索引工作] 對話方塊，即可將索引頁面移至更有效率的搜尋順序。 此工作會使用 `ALTER INDEX REORGANIZE` 陳述式搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫。  

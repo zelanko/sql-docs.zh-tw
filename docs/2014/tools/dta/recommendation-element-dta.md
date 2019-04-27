@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659576"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 元素 (DTA)
   包含屬於使用者指定組態之一部份的假設性索引的相關資訊。  

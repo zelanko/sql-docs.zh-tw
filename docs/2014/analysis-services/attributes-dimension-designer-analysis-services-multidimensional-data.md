@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 522bffc53240a7456ee77911b4f3044ffe0f231c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650792"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此窗格即可管理與選取之維度相關聯的屬性。 您可以將屬性從這個窗格拖曳到 **[階層]** 窗格，以便建立階層和層級。 如需詳細資訊，請參閱 <<c0> [ 階層&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)。</c0>  
@@ -59,7 +59,7 @@ ms.locfileid: "48229808"
 |值|描述|  
 |-----------|-----------------|  
 |一般|識別一般屬性。|  
-|索引鍵|識別維度的索引鍵屬性。 這會對應至維度的分葉成員。 每維度只能有一個索引鍵屬性。 若要修改，請在 [屬性] 窗格中按一下 [KeyColumns] 屬性旁的省略符號按鈕 (**...**)。|  
+|Key|識別維度的索引鍵屬性。 這會對應至維度的分葉成員。 每維度只能有一個索引鍵屬性。 若要修改，請在 [屬性] 窗格中按一下 [KeyColumns] 屬性旁的省略符號按鈕 (**...**)。|  
 |父系|代表父子式關聯性的父屬性。 此關聯性中的子屬性必須永遠為索引鍵屬性。|  
 |AccountType|代表帳戶類型屬性。 當量值的彙總函式設定為「依帳戶」時，會由伺服器或引擎使用此屬性。|  
   

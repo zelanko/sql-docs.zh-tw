@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6992d667383539092f13602c277eec4ee2f7c7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680505"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>設定維度屬性 (商業智慧精靈)
   使用 **[設定維度屬性]** 頁面將維度屬性對應到屬性類型， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會使用這些屬性類型來識別帳戶維度的屬性。  
@@ -33,7 +33,7 @@ ms.locfileid: "48133688"
  **維度屬性**  
  顯示可對應到維度中現有維度屬性的有效屬性類型。  
   
- **包含**  
+ **Include**  
  選取核取方塊以包含維度中對應的屬性類型。  
   
  **屬性類型**  

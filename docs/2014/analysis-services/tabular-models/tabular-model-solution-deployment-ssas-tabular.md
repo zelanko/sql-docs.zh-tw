@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794593"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格式模型方案部署 (SSAS 表格式)
   撰寫表格式模型專案之後，您必須部署專案，以便讓使用者可以使用報表用戶端應用程式來瀏覽模型。 此主題描述在您的環境中部署表格式模型方案時可使用的各種屬性和方法。  

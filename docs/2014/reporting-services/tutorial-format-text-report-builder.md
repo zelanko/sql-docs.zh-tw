@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647526"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教學課程：將文字格式化 (報表產生器)
   在本教學課程中，您將能練習以各種不同的方式格式化文字。 使用資料來源和資料集設定空白報表之後，您可以挑選想要探索的步驟來進行。  

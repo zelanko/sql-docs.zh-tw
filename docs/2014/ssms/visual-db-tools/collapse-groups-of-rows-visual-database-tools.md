@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670481"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>摺疊資料列群組 (Visual Database Tools)
   可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。 摺疊資料列時，請注意下列事項：  

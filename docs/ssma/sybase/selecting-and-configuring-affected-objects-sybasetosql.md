@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667505"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>選取並設定受影響的物件 (SybaseToSQL)
 在此頁面中，您可以選取資料表和 SSMA 確認在上一個步驟中選擇之物件的執行結果時，所要比較的外部索引鍵，在其中變更。 此外，您可以自訂的驗證參數。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795355"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>變更資料表、資料行或資料列篩選對應 (SSAS 表格式)
   本主題描述如何在 **中使用** [編輯資料表屬性] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]對話方塊來變更資料表、資料行或資料列篩選對應。  
@@ -45,6 +45,6 @@ ms.locfileid: "48201488"
          如果發生錯誤而需要從頭開始，請按一下 **[清除資料列篩選]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [編輯資料表屬性 對話方塊中&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [編輯資料表屬性對話方塊 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

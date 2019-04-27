@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802933"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 URL
 URL 會指定儲存在本機或網路的電腦上的目標位置。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等 *。*  

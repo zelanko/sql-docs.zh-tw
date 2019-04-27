@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813191"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文檢索搜尋的行為變更
   本主題描述全文檢索搜尋的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
@@ -68,7 +68,7 @@ ms.locfileid: "52508871"
   
 |**詞彙**|**舊版斷詞工具和字幹分析器的結果**|**使用新的斷詞工具和字幹分析器的結果**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿｑℭžl<br /><br /> *（其中詞彙不是有效的英文字元）*|' jěˊÿqℭžl'|je yq zl|  
+|jěˊÿｑℭžl<br /><br /> *（其中詞彙不是有效的英文字元）*|'jěˊÿｑℭžl'|je yq zl|  
 |table's|table's<br /><br /> 資料表|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z (其中 v 和 z 是非搜尋字)|*（無結果）*|v-z|  

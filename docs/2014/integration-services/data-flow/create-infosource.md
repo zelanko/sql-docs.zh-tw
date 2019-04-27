@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827950"
 ---
 # <a name="create-infosource"></a>建立 InfoSource
   使用 [建立 InfoSource] 對話方塊可以建立新的 InfoSource。 若要建立新的 InfoSource，您可以使用 [建立交易資料的 InfoSource] 或 [建立主要資料的 InfoSource] 對話方塊。  

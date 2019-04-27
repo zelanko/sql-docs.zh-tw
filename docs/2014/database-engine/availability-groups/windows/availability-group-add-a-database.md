@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69d148f9ef780e28300a6d3e233f2b680f0d37d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791944"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>將資料庫加入至可用性群組 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，將資料庫加入至 AlwaysOn 可用性群組。  
@@ -99,7 +99,7 @@ ms.locfileid: "48157848"
   
 1.  變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
-2.  使用`Add-SqlAvailabilityDatabase`cmdlet。  
+2.  使用 `Add-SqlAvailabilityDatabase` 指令程式。  
   
      例如，下列命令會將次要資料庫 `MyDd` 加入 `MyAG` 可用性群組中，而其主要複本是由 `PrimaryServer\InstanceName`裝載。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48157848"
     ```  
   
     > [!NOTE]  
-    >  若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要檢視指令程式的語法，請在 `Get-Help` PowerShell 環境中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 3.  將資料庫加入至可用性群組之後，您需要在裝載次要複本的每個伺服器執行個體上設定對應的次要資料庫。 如需詳細資訊，請參閱[於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   

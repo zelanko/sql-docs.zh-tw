@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80ca92d824c6832c42161a00a0b1f59884f26880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729204"
 ---
 # <a name="adding-attributes-to-dimensions"></a>將屬性加入至維度
   既然您已經定義維度，就可以使用代表維度中每個資料元素的屬性擴展它們。 屬性通常是以資料來源檢視中的欄位為基礎。 將屬性加入至維度時，您可以將欄位從任何資料表加入至資料來源檢視中。  
@@ -127,6 +127,6 @@ ms.locfileid: "48075328"
  [檢閱 Cube 和維度屬性](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [維度屬性內容參考](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性 (Attribute) 屬性 (Property) 參考](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

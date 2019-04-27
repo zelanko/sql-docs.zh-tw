@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e499315b2807245a34d3ec4fe7d7616e98b76512
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811352"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>設定 remote access 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] remote access [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **remote access** 選項會控制本機或遠端伺服器 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的執行所在) 上執行的預存程序。 這個選項的預設值是 1。 這會授與權限以從遠端伺服器執行本機預存程序，或從本機伺服器執行遠端預存程序。 若要防止在遠端伺服器上執行本機預存程序，或在本機伺服器上執行遠端預存程序，請將此選項設定為 0。  

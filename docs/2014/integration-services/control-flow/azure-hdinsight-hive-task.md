@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7b61bd02d44639cb3f5ad540d53ebeebcff4da0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832720"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Azure HDInsight Hive 工作
 使用 **Azure HDInsight Hive 工作**，在 Azure HDInsight 叢集上執行 Hive 指令碼。
@@ -37,8 +37,8 @@ ms.locfileid: "58391666"
   
 5.  有兩個方法可以指定要執行的 Hive 指令碼：
   
-    1.  **內嵌指令碼**:指定**指令碼**輸入欄位中內嵌指令碼中執行**輸入指令碼** 對話方塊。
+    1.  **內嵌指令碼**：透過在 [輸入指令碼] 對話方塊中輸入要執行的內嵌指令碼，來指定 [指令碼] 欄位。
   
-    2.  **指令碼檔案**:將指令碼檔案上傳至 Azure Blob 儲存體，並指定**BlobName**欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName] 和 [ExternalBlobContainer] 欄位。 若是外部 blob，請確定它已設定為可公開存取。  
+    2.  **指令檔**：將指令檔上傳至 Azure Blob 儲存體，並指定 **BlobName** 欄位。 如果 blob 不在與 HDInsight 叢集相關聯的預設儲存體帳戶或容器中，則必須指定 [ExternalStorageAccountName] 和 [ExternalBlobContainer] 欄位。 若是外部 blob，請確定它已設定為可公開存取。  
   
      如果指定兩者，則會使用指令檔並忽略內嵌指令碼。

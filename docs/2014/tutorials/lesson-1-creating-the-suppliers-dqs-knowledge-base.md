@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676037"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>第 1 課：建立供應商 DQS 知識庫
   在這一課，您會建立名為 DQS 知識庫**供應商**有關供應商資料的知識 （中繼資料）。 您會使用知識庫，針對輸入供應商資料執行清理和比對活動。 清理活動會識別不正確/無效資料、更正不正確的資料、提出更正/建議、標準化資料，並以更多資訊來充實資料。 比對活動會比較資料及識別資料中類似的記錄 (但有些不同)，以幫助您移除資料的重複項。  

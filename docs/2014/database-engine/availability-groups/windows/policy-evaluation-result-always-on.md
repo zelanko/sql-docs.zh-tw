@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789078"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>原則評估結果 (AlwaysOn)
   使用 AlwaysOn 儀表板的 **[原則評估結果]** 頁面檢視任何目前的原則問題。  

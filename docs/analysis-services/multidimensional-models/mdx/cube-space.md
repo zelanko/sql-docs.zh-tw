@@ -1,5 +1,5 @@
 ---
-title: Cube 空間 |Microsoft 文件
+title: Cube 空間 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58f1a22cbba10eff6c10d2fc70dffcb13632b15d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800202"
 ---
 # <a name="cube-space"></a>Cube 空間
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -129,12 +129,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>計算內容  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [「 自動存在 」](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [使用成員、 Tuple 及集合 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Tuples](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
+ [自動存在](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [使用成員、Tuple 和集合 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [視覺化總計和非視覺化總計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 語言參考 & #40;MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [多維度運算式 & #40;MDX & #41;參考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 語言參考 &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [多維度運算式 &#40;MDX&#41 參考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

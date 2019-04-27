@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666862"
 ---
 # <a name="monitoring-replication"></a>監視 (複寫)
   監控複寫拓撲是部署複寫時很重要的層面。 由於已散發複寫活動，因此必須跨越所有複寫相關的電腦，追蹤活動和狀態 下列工具可用來監視複寫：  
@@ -34,7 +34,7 @@ ms.locfileid: "54134298"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供「複寫監視器」的存取權。 它也可讓您檢視目前的狀態以及下列代理程式所記錄的最後一個訊息，並可讓您啟動和停止每個代理程式：記錄讀取器代理程式、 快照集代理程式、 合併代理程式，以及散發代理程式。 如需相關資訊，請參閱 [Monitor Replication Agents](monitor/monitor-replication-agents.md)。  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 提供「複寫監視器」的存取權。 它也可讓您檢視下列代理程式所記錄的目前狀態和最後訊息，並可讓您啟動和停止每個代理程式：記錄讀取器代理程式、快照集代理程式、合併代理程式，以及散發代理程式。 如需相關資訊，請參閱 [Monitor Replication Agents](monitor/monitor-replication-agents.md)。  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Replication Management Objects (RMO)  
   

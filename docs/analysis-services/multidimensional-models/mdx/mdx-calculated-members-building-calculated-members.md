@@ -1,5 +1,5 @@
 ---
-title: 建置導出的成員的 MDX (MDX) |Microsoft 文件
+title: 建立導出的成員的 MDX (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9235b9e3531e2ca40cabe211d85c077e629dacee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806126"
 ---
-# <a name="mdx-calculated-members---building-calculated-members"></a>MDX 導出成員-建立導出的成員
+# <a name="mdx-calculated-members---building-calculated-members"></a>MDX 導出成員 - 建立導出成員
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   在多維度運算式 (MDX) 中，導出成員是藉由計算 MDX 運算式以傳回一個值而解析出來的成員。 此一定義涵蓋的範圍相當廣泛。 在 MDX 查詢中建構和使用導出成員的能力，提供了許多管理多維度資料的功能。  
   
@@ -33,8 +33,8 @@ ms.locfileid: "34021785"
      如需如何使用 CREATE MEMBER 陳述式來建立工作階段中導出成員的詳細資訊，請參閱[建立工作階段範圍導出成員 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立 MEMBER 陳述式 & #40;MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [MDX 函數參考 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT 陳述式 & #40;MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT 陳述式 &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

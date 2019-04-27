@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681085"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>*計算 (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 [計算] 索引標籤來檢視和編輯計算，包含選取之 Cube 的導出成員、命名集和多維度運算式 (MDX) 指令碼命令。  
@@ -56,7 +56,7 @@ ms.locfileid: "48103908"
 ## <a name="see-also"></a>另請參閱  
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 指令碼基礎觀念&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [建立命名集](multidimensional-models/create-named-sets.md)  
   

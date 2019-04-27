@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657243"
 ---
 # <a name="name-element-for-table-dta"></a>資料表的 Name 元素 (DTA)
   指定要微調的資料表名稱。  

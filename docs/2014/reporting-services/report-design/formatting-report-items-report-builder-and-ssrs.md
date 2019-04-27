@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656438"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>設定報表項目的格式 (報表產生器及 SSRS)
   對報表中的項目進行格式化，使報表更具吸引力並增強其可讀性。 當您在報表設計模式時，可以將文字方塊及文字方塊中的個別項目、影像、運算式和資料格式化。  

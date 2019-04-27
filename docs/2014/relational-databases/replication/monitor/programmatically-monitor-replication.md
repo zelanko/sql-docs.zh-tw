@@ -29,11 +29,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667244"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
   「複寫監視器」是一個允許您監視複寫拓撲之全面健全狀況的圖形化工具。 您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 複寫預存程序或 Replication Management Objects (RMO)，以程式設計的方式存取相同的監視資料。 這些物件可用來設計下列工作：  

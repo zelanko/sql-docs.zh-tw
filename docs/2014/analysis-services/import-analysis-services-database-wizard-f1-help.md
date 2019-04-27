@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9916d7e99275ca30d43e03782d84d29550aab479
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730851"
 ---
 # <a name="import-analysis-services-database-wizard-f1-help"></a>匯入 Analysis Services 資料庫精靈 F1 說明
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用匯入 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 資料庫精靈，即可從現有的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中產生 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案。  

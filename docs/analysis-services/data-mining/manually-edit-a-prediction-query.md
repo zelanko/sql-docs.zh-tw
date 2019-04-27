@@ -1,5 +1,5 @@
 ---
-title: 手動編輯預測查詢 |Microsoft 文件
+title: 手動編輯預測查詢 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aba181ab73ab730869eaa7930591cf21a947d20c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679410"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動編輯預測查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34014835"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
- [預測查詢產生器 & #40; 資料採礦 & #41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
- [第 6 課： 建立和使用預測 & #40;基本資料採礦教學課程 & #41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
+ [預測查詢產生器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
+ [第 6 課：建立及處理預測&#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   

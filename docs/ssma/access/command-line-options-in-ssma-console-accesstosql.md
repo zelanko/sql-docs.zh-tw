@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650762"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 主控台 (AccessToSQL) 中的命令列選項
 Microsoft 為您提供一組強大的命令列選項來執行，並控制 SSMA 活動。 後續的章節會提供其他詳細資料。  

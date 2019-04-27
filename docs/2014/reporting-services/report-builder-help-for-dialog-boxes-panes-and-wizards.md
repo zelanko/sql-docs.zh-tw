@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657363"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>對話方塊、窗格和精靈的報表產生器說明
   本節包含許多報表產生器精靈、檢視、窗格和對話方塊的說明。 或者，您也可以按下 F1 或按一下對話方塊中顯示的 [說明] 按鈕，以開啟說明。  

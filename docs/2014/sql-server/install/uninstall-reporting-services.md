@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5b6c7ff7a5ac2539bc6732d68522bb361d6b1b0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670622"
 ---
 # <a name="uninstall-reporting-services"></a>解除安裝 Reporting Services
   解除安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不會移除您已建立的內容或是您已修改的組態。 不過，如果有解除安裝完成之後需要的內容，建議您先建立內容的複本，然後再開始進行解除安裝程序。  

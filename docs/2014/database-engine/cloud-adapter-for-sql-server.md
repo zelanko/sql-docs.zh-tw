@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812632"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>適用 SQL Server 的雲端配接器
   雲端配接器服務會隨 Windows Azure VM 上佈建的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一併建立。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以 **本機系統** 帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器還會建立 Windows 防火牆規則，允許其內送 TCP 連接使用預設通訊埠 11435。  
@@ -48,23 +48,23 @@ ms.locfileid: "52518262"
   
 -   **設定檔參數** -  
   
-    -   \<設定 >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<新增機碼 ="WebServicePort"value =""/ >  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<新增機碼 ="WebServiceCertificate"value ="GUID"/ >  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<新增機碼 ="ExposeExceptionDetails"value ="true"/ >  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \</configuration >  
+    -   \</configuration>  
   
 -   **憑證詳細資料**-憑證包含下列值：  
   
-    -   主旨-"CN = Cloudadapter<vmname\<VMName >，DC = SQL Server，DC = Microsoft"  
+    -   Subject - "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
   
     -   憑證應只啟用伺服器驗證 EKU。  
   

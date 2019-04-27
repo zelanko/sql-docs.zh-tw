@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679607"
 ---
 # <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
@@ -55,7 +55,7 @@ ms.locfileid: "48190838"
  貨幣維度  
  定義下列設定的資料庫維度：  
   
--   `Type`維度的屬性會設定為 Currency。  
+-   維度的 `Type` 屬性會設定為 Currency。  
   
 -   維度的一個屬性 (Attribute) 的 `Type` 屬性 (Property) 會設定為 CurrencyName。  
   
@@ -69,18 +69,18 @@ ms.locfileid: "48190838"
   
 -   時間維度和比率量值群組之間存在一般維度關聯性。  
   
--   `Type` 屬性也可以設定為 ExchangeRate。 雖然商業智慧精靈會使用貨幣和時間維度的關聯性，識別可能的比率量值群組，設定`Type`為 ExchangeRate 屬性可讓用戶端應用程式，以更輕鬆地識別比率量值群組。  
+-   `Type` 屬性也可以設定為 ExchangeRate。 雖然商業智慧精靈使用貨幣和時間維度之間的關聯性來識別可能的比率量值群組，如果將 `Type` 屬性設定為 ExchangeRate，用戶端應用程式就可以更容易地識別比率量值群組。  
   
 -   一或多個量值，代表比率量值群組所包含的匯率。  
   
  報表貨幣維度  
  在定義貨幣轉換之後，由商業智慧精靈定義的維度，此維度包含該貨幣轉換的報表貨幣。 報表貨幣維度以貨幣維度的維度主資料表中的具名查詢為基礎，此具名查詢是在與比率量值群組相關聯之貨幣維度所依據的資料來源檢視中定義。 定義下列設定的維度：  
   
--   `Type`維度的屬性會設定為 Currency。  
+-   維度的 `Type` 屬性會設定為 Currency。  
   
--   `Type`維度的索引鍵屬性的屬性會設定為 CurrencyName。  
+-   維度的索引鍵屬性 (Attribute) 的 `Type` 屬性 (Property) 會設定為 CurrencyName。  
   
--   `Type`維度內一個屬性的屬性設定為 CurrencyDestination，且繫結至屬性的資料行包含代表貨幣轉換的報表貨幣的貨幣識別碼。  
+-   維度內一個屬性 (Attribute) 的 `Type` 屬性 (Property) 會設定為 CurrencyDestination，且繫結至此屬性 (Attribute) 的資料行包含貨幣識別碼，代表貨幣轉換的報表貨幣。  
   
 ## <a name="defining-currency-conversions"></a>定義貨幣轉換  
  您可以使用商業智慧精靈來定義 Cube 的貨幣轉換功能，或使用 MDX 指令碼來手動定義貨幣轉換。  

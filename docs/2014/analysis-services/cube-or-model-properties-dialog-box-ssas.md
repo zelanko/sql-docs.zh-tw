@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679568"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Cube 或模型屬性對話方塊 (SSAS)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [資料庫屬性] 對話方塊，即可設定 Cube 或模型資料庫的屬性。 您可以在**物件總管**中，以滑鼠右鍵按一下 Cube 或模型，然後選取 [屬性]，藉以顯示此對話方塊。  
@@ -40,10 +40,10 @@ ms.locfileid: "48153498"
 |**說明**|顯示 Cube 或模型的描述。|  
 |**建立時間戳記**|顯示建立 Cube 或模型的日期和時間。|  
 |**上次結構描述更新**|顯示上次更新 Cube 或模型之中繼資料的日期和時間。|  
-|**指令碼快取處理模式**|選取用於 Cube 或模型之指令碼快取的處理模式。 如需此屬性之值的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>。|  
-|**處理模式**|選取用於 Cube 或模型的處理模式。 如需此屬性之值的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>。|  
-|**儲存體位置**|針對與 Cube 或模型相關聯的量值群組和資料分割，輸入要當做預設儲存位置使用的資料夾，或按一下省略符號按鈕 (**...**) 來顯示 [瀏覽遠端資料夾] 對話方塊以選取資料夾。 如需 [瀏覽遠端資料夾] 對話方塊的詳細資訊，請參閱[瀏覽遠端資料夾對話方塊 &#40;Analysis Services - 多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 如需此屬性之值的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>。|  
-|**State**|顯示 Cube 或模型的處理狀態。 如需此屬性之值的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>。|  
+|**指令碼快取處理模式**|選取用於 Cube 或模型之指令碼快取的處理模式。 如需有關此屬性之值的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>＞。|  
+|**處理模式**|選取用於 Cube 或模型的處理模式。 如需有關此屬性之值的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>＞。|  
+|**儲存體位置**|針對與 Cube 或模型相關聯的量值群組和資料分割，輸入要當做預設儲存位置使用的資料夾，或按一下省略符號按鈕 (**...**) 來顯示 [瀏覽遠端資料夾] 對話方塊以選取資料夾。 如需 [瀏覽遠端資料夾] 對話方塊的詳細資訊，請參閱[瀏覽遠端資料夾對話方塊 &#40;Analysis Services - 多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。<br /><br /> 如需有關此屬性之值的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>＞。|  
+|**狀態**|顯示 Cube 或模型的處理狀態。 如需有關此屬性之值的詳細資訊，請參閱＜<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>＞。|  
 |**LastProcessed**|顯示上次處理 Cube 或模型的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  

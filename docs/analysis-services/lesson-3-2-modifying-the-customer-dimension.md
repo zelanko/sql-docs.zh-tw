@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d777d39bed047ac1807ebb2413eec3539d70428
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802846"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>課程 3-2-修改 [客戶] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

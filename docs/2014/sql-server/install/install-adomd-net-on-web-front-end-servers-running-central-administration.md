@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cc17daefbe5e84522fdc46ddf046403260ebf4e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659773"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET
   如果您將 PowerPivot for SharePoint 安裝到具有管理中心拓撲的伺服器陣列中 (沒有 Excel Services 或 PowerPivot for SharePoint)，若要完整存取 PowerPivot 管理儀表板中的內建報表，請下載及安裝 Microsoft ADOMD.NET 用戶端程式庫。 儀表板中的某些報表會使用 ADOMD.NET 來存取內部資料，這些資料會提供關於在伺服陣列中 PowerPivot 查詢處理和伺服器健全狀況的報告資料。  

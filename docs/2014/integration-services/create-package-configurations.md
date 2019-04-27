@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4bf8041fbac675653bb620d3aca7b1abba21a0a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831975"
 ---
 # <a name="create-package-configurations"></a>Create Package Configurations
   使用 [封裝組態組合管理] 對話方塊和「封裝組態精靈」，可以建立封裝組態。 若要存取這些工具，請在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [SSIS] 功能表中，按一下 [封裝組態]。  

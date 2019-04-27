@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688363"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @table_name=] '*table_name*'  
+ [ @table_name= ] '*table_name*'  
  這是用來傳回目錄資訊的資料表。 *table_name*已**nvarchar (** 384 **)**，沒有預設值。 支援萬用字元的模式比對。  
   
- [ @table_owner=] '*table_owner*'  
+ [ @table_owner= ] '*table_owner*'  
  這是用來傳回目錄資訊之資料表的資料表擁有者。 *table_owner*已**nvarchar (** 384 **)**，預設值是 NULL。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
   
  如果目前使用者擁有一份含指定名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定且目前使用者並未擁有指定的資料表*名稱*，此程序會尋找具有指定的資料表*table_name*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的資料行。  
   
- [ @table_qualifier=] '*table_qualifier*'  
+ [ @table_qualifier= ] '*table_qualifier*'  
  這是資料表限定詞的名稱。 *table_qualifier*已**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*qualifier.owner.name*)。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [ @fUsePattern=] '*fUsePattern*'  
+ [ @fUsePattern= ] '*fUsePattern*'  
  判斷是否會將底線 (_)、 百分比 （%） 和括號 （[或]） 字元解譯成萬用字元。 有效值是 0 (關閉模式比對) 和 1 (開啟模式比對)。 *fUsePattern*已**元**，預設值是 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  

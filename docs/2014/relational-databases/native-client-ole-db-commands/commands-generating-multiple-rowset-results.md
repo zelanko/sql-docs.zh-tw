@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657678"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>產生多個資料列集結果的命令
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider 可傳回多個資料列集[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]陳述式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  

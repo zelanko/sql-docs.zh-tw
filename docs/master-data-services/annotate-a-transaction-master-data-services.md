@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bdc60f20e33a63da3819d9f920eea51fef8f1d6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678655"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52754590"
 > [!NOTE]  
 >  您無法刪除註解。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
   
 -   若要為所建立的交易加上註解，您必須擁有存取 [總管] 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
   

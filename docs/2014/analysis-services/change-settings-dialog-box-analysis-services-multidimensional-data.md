@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681165"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>變更設定對話方塊 (Analysis Services - 多維度資料)
   使用 **和** 中的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [變更設定] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可變更 **[處理]** 對話方塊所列出之物件的處理設定。 您可以在 **[處理]** 對話方塊中按一下 **[變更設定]** ，以顯示 **[變更設定]** 對話方塊。  

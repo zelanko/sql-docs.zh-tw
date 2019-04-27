@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661629"
 ---
 # <a name="record-object-ado"></a>Record 物件 (ADO)
 表示從資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或資料提供者或為半結構化的資料提供者，例如檔案或目錄所傳回的物件。  

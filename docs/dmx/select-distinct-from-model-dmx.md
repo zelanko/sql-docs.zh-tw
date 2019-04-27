@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658890"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,13 +129,13 @@ FROM [TM Decision Tree]
   
  例如，如果您使用決策樹檢視器瀏覽模型，然後按一下包含以收入分組之客戶的節點，下列節點屬性就會顯示在工具提示中：  
   
- Age >=69 AND Yearly Income < 39221.41  
+ Age > = 69 和每年的收益 < 39221.41  
   
 > [!NOTE]  
 >  最小值區的最小值與最大值區的最大值剛好分別是最高與最低的觀察值。 系統會假設超出此觀察範圍的任何值都屬於最小和最大值區。  
   
 ## <a name="see-also"></a>另請參閱  
- [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
  [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   

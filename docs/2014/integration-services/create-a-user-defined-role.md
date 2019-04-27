@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 255d805d9fa7a36203f6791da3b01d93174d4268
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828703"
 ---
 # <a name="create-a-user-defined-role"></a>建立使用者定義角色
     

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650411"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template 事件類別
   QN:Template 事件會報告查詢範本的內部使用資訊。 查詢範本是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 用以共用通知查詢定義的機制。 這些範本是與參數資料表一起建立的。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在建立、使用或終結查詢範本時，會建立此類型的事件。  
@@ -34,7 +34,7 @@ ms.locfileid: "53349517"
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類型 = 201。|27|否|  
 |EventSequence|`int`|此事件的序號。|51|否|  
-|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 建立的範本：表示已經在資料庫中建立查詢通知範本。<br /><br /> 比對的範本：表示已重複使用查詢通知範本。<br /><br /> 卸除的範本：表示已從資料庫中移除查詢通知範本。|21|是|  
+|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 建立的範本：表示查詢通知範本已經建立的資料庫中。<br /><br /> 比對的範本：指出當查詢通知範本中重複使用。<br /><br /> 卸除的範本：表示從資料庫移除查詢通知範本時。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  

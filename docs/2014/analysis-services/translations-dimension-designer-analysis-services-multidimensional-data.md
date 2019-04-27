@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 991f5df41294b6d44f083f3da73236eabd125cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794002"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>翻譯 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師中的 **[翻譯]** 索引標籤，即可定義和管理維度的翻譯，以及維度的階層和屬性。  

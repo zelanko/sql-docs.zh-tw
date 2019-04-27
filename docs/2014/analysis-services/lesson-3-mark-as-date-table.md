@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729194"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>第 4 課：標記為日期資料表
   在第 2 課：新增資料，匯入名為 DimDate 的維度資料表。 然後，您重新命名 DimDate 資料表中的，在第 3 課：重新命名資料行，只要，日期。 當模型中的此資料表已命名為 Date 時，也可以稱作「日期資料表」，並會在其中包含日期及時間資料。  
@@ -25,7 +25,7 @@ ms.locfileid: "52417289"
   
  在這一課，您將標記所匯入並重新命名的 Date 資料表為「日期資料表」，而 Date 資料行 (包含在 Date 資料表中) 則會標記為「日期資料行」(唯一識別碼)。 日期可以取得有點令人困惑的名稱，但您的所有使用很快就會都了解這個概念。  
   
- 完成本課程的估計時間：**3 分鐘**  
+ 估計的時間才能完成這一課：**3 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 3 課：重新命名資料行](rename-columns.md)。  

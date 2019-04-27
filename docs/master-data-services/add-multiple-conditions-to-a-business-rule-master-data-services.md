@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34e7a7cb4cfaaa75eca8d51bdb591a7016ba411b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678616"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>將多個條件加入至商務規則 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52777370"
 > [!NOTE]  
 >  如果您建立使用 **OR** 運算子的商務規則，請考慮為每個可獨立評估的條件陳述式建立不同的規則。 然後您可以視需要排除規則，提供更多彈性和輕鬆疑難排解。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -64,7 +64,7 @@ ms.locfileid: "52777370"
   
 12. 完成所有必要的欄位。  
   
-13. 按一下 **[儲存]**。 新的資料列就會新增至 [If] 方格中。  
+13. 按一下 [儲存] 。 新的資料列就會新增至 [If] 方格中。  
   
 14. 或者若要加入更多條件，請完成步驟 8-13。  
   

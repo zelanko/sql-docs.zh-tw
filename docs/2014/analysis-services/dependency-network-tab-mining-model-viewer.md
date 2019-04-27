@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732194"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>相依性網路索引標籤 (採礦模型檢視器)
   [相依性網路] 索引標籤會提供採礦模型所包含之所有屬性的圖形檢視，並顯示這些屬性彼此相關的情況。  
@@ -38,7 +38,7 @@ ms.locfileid: "48226168"
  **採礦模型**  
  在目前採礦結構中選擇要檢視的採礦模型。 採礦模型會在自訂檢視器中開啟。 用於每個模型的自訂檢視器類型是由您用來建立該模型的演算法決定。  
   
- **檢視器**  
+ **Viewer**  
  選擇用來瀏覽選取之採礦模型的檢視器。 可以使用為每個採礦模型提供的自訂檢視器，或 [!INCLUDE[msCoName](../includes/msconame-md.md)] 採礦內容檢視器。 還可以使用外掛程式檢視器 (如果有)。 Microsoft 內容樹狀檢視器可用於所有模型，並在 HTML 資料表中表示模型內容。  
   
  **放大**  
@@ -53,7 +53,7 @@ ms.locfileid: "48226168"
  **複製整個圖表**  
  將整個圖表複製到剪貼簿。  
   
- **連結**  
+ **Links**  
  您可以調整屬性右邊的滑動軸，來調整檢視器顯示的連結 (邊緣) 數目和節點數目。 向下拖曳滑動軸會增大臨界值，以便只顯示最強連結。 對於每種模型類型，都會使用略為不同的值來表示圖形中的連結：  
   
 -   在 **決策樹** 模型中，邊緣表示連接的預測強度 (由分岔分數部分決定)。  
@@ -65,8 +65,8 @@ ms.locfileid: "48226168"
  所有模型類型的一般規則是，連結愈強，兩個屬性之間的預測關聯性也就愈強。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [資料採礦模型檢視器](data-mining/data-mining-model-viewers.md)  
   
   

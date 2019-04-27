@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793660"
 ---
 # <a name="user-interface-reference-analysis-services"></a>使用者介面參考 (Analysis Services)
   本節包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的說明主題。 在使用者介面的環境中按一下 F1 鍵，或在精靈頁面上、設計師和對話方塊中按一下 [說明]，亦可取得這些主題。  

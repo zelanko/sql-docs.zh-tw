@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c24c5f07d18bc8d63ff0d113c762f776dccf9a41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657938"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者
   Microsoft OLE DB Provider for Analysis Services (MSOLAP) 是用戶端應用程式用來與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料互動的介面。 在包含 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]的 SharePoint 環境中，提供者會處理 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料的連接要求。  
@@ -126,7 +126,7 @@ ms.locfileid: "53376640"
 ##  <a name="bkmk_kj"></a> 安裝 SQL Server 2008 R2 OLE DB 提供者來主控舊版的活頁簿  
  請依照下列指示安裝 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的 MSOLAP.4 提供者，並且登錄 Microsoft.AnalysisServices.ChannelTransport.dll 檔。 ChannelTransport 是 Analysis Services OLE DB 提供者的子元件。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版的提供者會在使用 ChannelTransport 建立連接時讀取登錄。 登錄此檔案是一個後續安裝步驟，只需要針對 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 伺服器上 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 提供者處理的連接執行。  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>步驟 1：下載和安裝用戶端文件庫  
+#### <a name="step-1-download-and-install-the-client-library"></a>步驟 1:下載和安裝用戶端文件庫  
   
 1.  在 [SQL Server 2008 R2 功能套件頁面](https://go.microsoft.com/fwlink/?LinkId=159570)上，尋找 Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 R2。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53376640"
   
 4.  如果您的伺服器陣列中有其他只執行 Excel Services 的伺服器，但同一部伺服器上沒有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ，請重複上述步驟，在 Excel Services 電腦上安裝 2008 R2 版的提供者。  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步驟 2：登錄 Microsoft.AnalysisServices.ChannelTransport.dll 檔  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>步驟 2:登錄 Microsoft.AnalysisServices.ChannelTransport.dll 檔  
   
 1.  使用 regasm.exe 公用程式登錄檔案。 如果您未曾執行過 regasm.exe 之前，將其父資料夾 c:\windows\microsoft.net\framework64\v4.0.30319>aspnet_regiis.exe\\，至系統路徑變數。  
   

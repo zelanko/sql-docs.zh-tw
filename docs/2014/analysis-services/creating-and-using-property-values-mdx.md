@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679736"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>建立和使用屬性值 (MDX)
   多維度運算式 (MDX) 支援內建和使用者自訂維度、層級、成員，和資料格的屬性。 內建屬性可提供唯一的名稱、標題，甚至個別資料格的格式和字型大小。 另一方面使用者自訂屬性幾乎可以為成員提供所有的額外屬性。  
@@ -39,6 +39,6 @@ ms.locfileid: "48195998"
  如需資料格屬性及如何使用資料格屬性的詳細資訊，請參閱[使用資料格屬性 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

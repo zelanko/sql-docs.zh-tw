@@ -12,20 +12,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729314"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
   在這一課，您將會使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [資料表匯入精靈] 連接 AdventureWorksDW SQL Database、選取資料、預覽及篩選資料，然後將資料匯入您的模型工作空間。  
   
- 透過使用資料表匯入精靈，您可以從各種關聯式來源匯入資料：Access、SQL、Oracle、Sybase、Informix、DB2、Teradata 以及其他來源。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 此外，您也可以使用預存程序選取資料。  
+ 使用 [資料表匯入精靈]，您可以從各種關聯式來源匯入資料：存取、 SQL、 Oracle、 Sybase、 Informix、 DB2、 Teradata 等等。 從每一個關聯式來源匯入資料的步驟非常類似以下所述內容。 此外，您也可以使用預存程序選取資料。  
   
  若要深入了解匯入資料和可做為匯入來源的各種不同類型資料來源，請參閱[資料來源 &#40;SSAS 表格式&#41;](data-sources-ssas-tabular.md)。  
   
- 完成本課程的估計時間：**20 分鐘的時間**  
+ 估計的時間才能完成這一課：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  

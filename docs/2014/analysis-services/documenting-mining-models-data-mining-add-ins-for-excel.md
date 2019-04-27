@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731728"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>記錄採礦模型 (適用於 Excel 的資料採礦增益集)
   ![文件模型按鈕、 資料採礦功能區](media/dmc-docmodel.gif "文件模型按鈕、 資料採礦功能區")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118062"
   
 3.  在 **選取模型** 對話方塊中，選取報表，在其上的模型，然後按一下**下一步**。 您必須執行**文件模型**分別為每個模型，您想要記載的精靈。  
   
-4.  在 **選取文件詳細資料**對話方塊方塊中，選擇其中一個選項：**填妥資訊**或**摘要資訊**。  
+4.  在 **選取 文件詳細資料**對話方塊方塊中，選擇其中一個選項：**填妥資訊**或是**摘要資訊**。  
   
 5.  按一下 **[完成]**。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48118062"
 ||||  
 |-|-|-|  
 |**中繼資料**|模型中繼資料|演算法參數與值|  
-||資料行中繼資料|資料行名稱<br /><br /> 使用方式<br /><br /> 資料類型<br /><br /> 內容類型<br /><br /> 值 (離散值的清單或值的範圍)|  
+||資料行中繼資料|資料行名稱<br /><br /> 使用量<br /><br /> 資料類型<br /><br /> 內容類型<br /><br /> 值 (離散值的清單或值的範圍)|  
 |**模型統計資料**|連續資料行|平均值<br /><br /> 最小值<br /><br /> 最大值<br /><br /> 均方根誤差<br /><br /> 平均絕對誤差<br /><br /> 對數分數<br /><br /> 迴歸公式 (僅適用於線性迴歸模型)|  
 ||離散資料行|通過的計數<br /><br /> 失敗的計數<br /><br /> 對數分數<br /><br /> 增益|  
   

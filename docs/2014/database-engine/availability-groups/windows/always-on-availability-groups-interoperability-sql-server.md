@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815744"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>AlwaysOn 可用性群組：互通性 (SQL Server)
   本主題記錄 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中其他 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]功能的互通性。  
@@ -36,7 +36,7 @@ ms.locfileid: "53367994"
 |資料庫加密|[加密的資料庫與 AlwaysOn 可用性群組&#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |資料庫快照集|[資料庫快照集與 AlwaysOn 可用性群組&#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
 |FILESTREAM 與 FileTable|[FILESTREAM 和 FileTable 與 AlwaysOn 可用性群組&#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
-|全文檢索搜尋|注意：全文檢索索引與 AlwaysOn 次要資料庫同步。|  
+|全文檢索搜尋|注意:全文檢索索引與 AlwaysOn 次要資料庫同步。|  
 |記錄傳送|[從移轉的必要條件是記錄傳送至 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  
 |遠端 Blob 存放區 (RBS)|[遠端 Blob 存放區&#40;RBS&#41;和 AlwaysOn 可用性群組&#40;SQL Server&#41;](remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|  
 |複寫[設定 AlwaysOn 可用性群組 (SQL Server) 的複寫](configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [維護 AlwaysOn 發行集資料庫&#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [複寫、 變更追蹤、 異動資料擷取和 AlwaysOn 可用性群組&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [複寫訂閱者及 AlwaysOn 可用性群組&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)|  
@@ -58,7 +58,7 @@ ms.locfileid: "53367994"
   
 -   **部落格：**  
   
-     [移轉指南：移轉至 SQL Server 2012 容錯移轉叢集和可用性群組從先前叢集和鏡像部署](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [Migration Guide:移轉至 SQL Server 2012 容錯移轉叢集和可用性群組從先前叢集和鏡像部署](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [SQL Server AlwaysOn 團隊部落格：官方 SQL Server AlwaysOn 團隊部落格](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53367994"
   
 -   **白皮書：**  
   
-     [移轉指南：移轉至 AlwaysOn 可用性群組從先前的部署結合資料庫鏡像與記錄傳送](https://msdn.microsoft.com/library/jj635217)  
+     [Migration Guide:移轉至 AlwaysOn 可用性群組從先前的部署結合資料庫鏡像與記錄傳送](https://msdn.microsoft.com/library/jj635217)  
   
      [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

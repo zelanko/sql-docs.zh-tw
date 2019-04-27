@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667416"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>從複寫監視器加入及移除發行者
   從中啟動「複寫監視器」的伺服器會自動新增至監視器 (如果它是「發行者」)。 其他「發行者」可透過 **[加入發行者]** 對話方塊來新增。 在新增「發行者」之後，它會顯示在監視器左窗格的群組中。 依預設會包括 **[我的發行者]** 群組，但您可以建立新的群組來管理一個或多個複寫拓撲。 如需啟動複寫監視器的詳細資訊，請參閱[啟動複寫監視器](start-the-replication-monitor.md)。  

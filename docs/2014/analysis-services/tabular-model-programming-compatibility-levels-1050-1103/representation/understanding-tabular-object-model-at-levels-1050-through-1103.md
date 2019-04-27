@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795339"
 ---
 # <a name="understanding-the-tabular-object-model"></a>了解表格式物件模型
   表格式模型是資料表、關聯性、階層、檢視方塊、量值和關鍵效能的邏輯表示法。 本節介紹使用 AMO 進行的內部實作。 請參閱[使用分析管理物件開發&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)如果您未曾使用過 AMO。  

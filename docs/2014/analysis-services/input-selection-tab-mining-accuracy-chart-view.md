@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729890"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>輸入選取範圍索引標籤 (採礦精確度圖表檢視)
   使用 [採礦精確度圖表] 設計師的 [輸入選擇] 索引標籤可以指定用於測試模型及建立精確度圖表的資料來源。  
   
- **如需詳細資訊，請參閱**：[測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **如需詳細資訊：＜＞**[測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>選項。  
  **同步處理預測****資料行和值**  
@@ -36,7 +36,7 @@ ms.locfileid: "48120868"
   
 |值|描述|  
 |-----------|-----------------|  
-|**顯示**|在要顯示在圖表中的採礦模型中，選取每個可預測資料行名稱旁的方塊。<br /><br /> 如果圖表過於複雜而無法輕鬆檢視，請清除一或多個資料行旁的方塊以簡化圖表。<br /><br /> 注意︰除非至少選取一個資料行，否則將無法建立精確度圖表。|  
+|**顯示**|在要顯示在圖表中的採礦模型中，選取每個可預測資料行名稱旁的方塊。<br /><br /> 如果圖表過於複雜而無法輕鬆檢視，請清除一或多個資料行旁的方塊以簡化圖表。<br /><br /> 注意:您無法建立精確度圖表，除非已選取至少一個資料行。|  
 |**採礦模型**|列出採礦結構內所包含的採礦模型。|  
 |**可預測資料行名稱**|選取採礦模型內所包含之用來建立增益圖的可預測資料行。|  
 |**預測值**|選取可預測資料行的值。 如果您將此保留空白，增益圖就會針對可預測資料行的所有狀態，預測模型的執行效益。|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120868"
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [將篩選套用至採礦模型](data-mining/apply-a-filter-to-a-mining-model.md)   
- [採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦模型的篩選 &#40;Analysis Services - 資料採礦&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

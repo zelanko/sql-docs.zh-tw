@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827920"
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
   此程序描述如何將資料流程中的元件輸出，連接到同一資料流程中的其他元件。  

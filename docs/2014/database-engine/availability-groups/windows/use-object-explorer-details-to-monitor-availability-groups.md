@@ -17,21 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788321"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>使用物件總管詳細資料監視可用性群組 (SQL Server Management Studio)
   此主題描述如何使用 **的** [物件總管詳細資料] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 窗格來監視及管理現有 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
   
 > [!NOTE]  
->  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱[物件總管詳細資料窗格](../../../ssms/object/object-explorer-details-pane.md)。  
+>  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱 [物件總管詳細資料窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
--   **開始之前：**  [必要條件](#Prerequisites)  
+-   **開始之前：**[必要條件](#Prerequisites)  
   
--   **若要使用下列項目監視可用性群組：**[SQL Server Management Studio](#SSMSProcedure)  
+-   **若要監視可用性群組，使用：**[SQL Server Management Studio](#SSMSProcedure)  
   
 -   **物件總管詳細資料：**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48075128"
 |值|描述|  
 |-----------|-----------------|  
 |**[未同步處理]**|資料庫未同步處理或者尚未聯結至可用性群組。|  
-|**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意：在效能模式中，資料庫永遠不會處於同步處理狀態。|  
+|**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意:在效能模式中，資料庫絕不會處於 Synchronized 狀態。|  
 |**NULL**|未知的狀態。 當本機伺服器執行個體無法與 WSFC 容錯移轉叢集通訊 (亦即，本機節點不屬於 WSFC 仲裁的一部分) 時，就會出現這個值。|  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "48075128"
   
 |值|描述|  
 |-----------|-----------------|  
-|正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意：在非同步認可模式中，同步處理模式一律為 **正在同步處理**。|  
+|正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意:在非同步認可模式中，同步處理狀態一律是**Synchronizing**。|  
   
  **已暫停**  
  指出可用性資料庫目前是否已上線。 可能的值如下：  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814707"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>設定 AlwaysOn 可用性群組的複寫 (SQL Server)
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
@@ -180,7 +180,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  訊息 21899，層級 11，狀態 1，程序 `sp_hadr_verify_subscribers_at_publisher`，行 109  
 >   
->  查詢重新導向的發行者 'MyReplicaHostName' 上用以判斷是否有 sysserver 項目 「 訂閱者 」，將原始發行者 'MyOriginalPublisher' 失敗，發生錯誤 '976'，錯誤訊息 ' 錯誤 976，層級為 14，狀態 1，訊息：目標資料庫 'MyPublishedDB' 正參與可用性群組中而且目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜`ALTER AVAILABILITY GROUP` 陳述式＞」。  
+>  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目的查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息：目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》中的＜`ALTER AVAILABILITY GROUP` 陳述式＞」。  
 >   
 >  複本主機 'MyReplicaHostName' 發生了一個或多個發行者驗證錯誤。  
   
