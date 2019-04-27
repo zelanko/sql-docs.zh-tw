@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2c9c57a69f4ee16d614add0e9bfb92129ce429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773484"
 ---
 # <a name="trace-file-properties-general-tab"></a>追蹤檔案屬性 (一般索引標籤)
   使用 **[追蹤檔案屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視追蹤檔案的屬性。  
@@ -51,7 +51,7 @@ ms.locfileid: "48212418"
   
 ## <a name="see-also"></a>另請參閱  
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
- [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

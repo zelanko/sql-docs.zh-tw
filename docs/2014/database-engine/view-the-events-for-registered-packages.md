@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a57f978f4be3a8e4ec163b7bb5bcef2bb300aa6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773324"
 ---
 # <a name="view-the-events-for-registered-packages"></a>檢視已註冊之封裝的事件
   在您建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 擴充的事件工作階段之前，找出註冊之封裝中可用的事件會非常有用。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)＞。  

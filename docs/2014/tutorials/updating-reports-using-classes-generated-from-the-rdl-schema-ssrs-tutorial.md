@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746112"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>使用 RDL 結構描述產生的類別更新報表 (SSRS 教學課程)
   本教學課程說明如何使用 XML 結構描述定義工具 (Xsd.exe) 來產生類別，可讓您序列化和還原序列化報表定義檔案 （.rdl 和.rdlc） 搭配[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>類別。  

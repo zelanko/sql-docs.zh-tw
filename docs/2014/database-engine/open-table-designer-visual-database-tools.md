@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774181"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>開啟資料表設計工具 (Visual Database Tools)
   資料表設計工具是一項視覺化工具，可讓您設計要連接的資料庫資料表，並將該資料庫資料表視覺化。 您可以使用 [資料表設計工具] 建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性和條件約束。  

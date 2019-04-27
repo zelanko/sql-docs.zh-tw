@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cab25b1e9501cf1081d0885fa2bf81a9b1065012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746471"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>指定巢狀聯結對話方塊 (採礦精確度圖表檢視)
   [指定巢狀聯結] 對話方塊會在巢狀資料表和案例資料表之間建立關聯性。 若要開啟 [指定巢狀聯結] 對話方塊，選取巢狀資料表，然後按一下 [修改聯結]。  

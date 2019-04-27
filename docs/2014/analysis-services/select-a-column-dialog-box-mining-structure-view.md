@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de9045d445142428810679fc5452e7627760145b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747750"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>選取資料行對話方塊 (採礦結構檢視)
   使用 **[選取資料行]** 對話方塊，即可將資料行加入至採礦結構。 此對話方塊包含的選項會因您是使用 OLAP 採礦模型或關聯式採礦模型而不同。  

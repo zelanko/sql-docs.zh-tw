@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8fc2fd14849661a3467bf1c7f401df2b19caf009
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774761"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>選項 （查詢執行-Analysis Server-一般頁面）
   使用此頁面可指定執行 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 查詢的選項。 若要顯示這些設定，請在 **[工具]** 功能表上按一下 **[選項]**。 在 **[查詢執行]** 下，展開 **[Analysis Server]** 資料夾，然後按一下 **[一般]**。  

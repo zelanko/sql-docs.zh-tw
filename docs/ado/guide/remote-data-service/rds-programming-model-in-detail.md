@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752955"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 程式設計模型詳述
 RDS 程式設計模型的重要元素如下：  
@@ -29,7 +29,7 @@ RDS 程式設計模型的重要元素如下：
   
 -   RDS.DataControl  
   
--   事件  
+-   Event - 事件  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -75,7 +75,7 @@ RDS 程式設計模型的重要元素如下：
  [物件的 RDS 程式設計模型](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory 物件 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace 物件 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS 案例](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 教學課程](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [RDS 提供使用方式與安全性](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

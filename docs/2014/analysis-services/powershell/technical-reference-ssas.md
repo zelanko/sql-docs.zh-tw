@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ac8e3de76709f4ae8e4839d79d1f40aae9195ce
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748891"
 ---
 # <a name="technical-reference-ssas"></a>技術參考 (SSAS)
   尋找工具、語言及 PowerShell 參考文件集以使用或管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

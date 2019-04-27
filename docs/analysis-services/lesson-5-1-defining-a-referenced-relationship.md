@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752724"
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>課程 5-1-定義參考關聯性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

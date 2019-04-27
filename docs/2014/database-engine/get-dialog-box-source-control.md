@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779005"
 ---
 # <a name="get-dialog-box-source-control"></a>取得對話方塊 (原始檔控制)
   從原始檔控制資料庫擷取選取項目的唯讀副本，傳送到您的工作資料夾，或者其他指定資料夾。  
@@ -49,7 +49,7 @@ ms.locfileid: "48048788"
  **選項。**  
  點選按鈕右側的箭頭之後，就會顯示來源安全外掛程式特定的取得選項。  
   
- **排序**  
+ **Sort**  
  排序顯示之資料行的順序。  
   
  **樹狀檢視**  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774290"
 ---
 # <a name="manage-checkins"></a>管理簽入
   若要變更其他使用者能夠使用的原始檔控制檔案，您必須簽入檔案。 當您簽入檔案時，您建立的版本會複製到原始檔控制提供者中，且會成為檔案的最新版本，有適當權限的使用者通常都可以使用它。  

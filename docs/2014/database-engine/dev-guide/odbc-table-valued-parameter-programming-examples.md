@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 93a664baaa81a56e45a54aa36c5f4e8e57375124
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780849"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>ODBC 資料表值參數程式設計範例
   本節描述如何使用 ODBC 和資料表值參數來執行一般工作。 如需示範資料表值參數的另一個範例，請參閱 <<c0> [ 使用資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。</c0>  

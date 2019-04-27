@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828877"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中建立的封裝將儲存到檔案系統。 若要將封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或封裝存放區，您必須儲存該封裝的複本。 如需詳細資訊，請參閱 [儲存封裝的複本](../../2014/integration-services/save-a-copy-of-a-package.md)。  

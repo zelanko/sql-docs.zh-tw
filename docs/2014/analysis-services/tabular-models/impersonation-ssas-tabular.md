@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757247"
 ---
 # <a name="impersonation-ssas-tabular"></a>模擬 (SSAS 表格式)
   本主題讓表格式模型作者了解連接到資料來源匯入與處理 (重新整理) 資料時，Analysis Services 如何使用登入認證。  

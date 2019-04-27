@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748482"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>重新整理資料來源檢視對話方塊
   使用 **中的** [重新整理資料來源檢視] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可接受或取消因為重新整理資料來源檢視而造成的變更。 對話方塊會顯示因為基礎資料來源的變更，而將對資料來源檢視所做的變更。 按一下 **[確定]** 接受變更並重新整理資料來源檢視，或按一下 **[取消]** 忽略變更並保留資料來源檢視不變更。 您可以執行下列動作來顯示 **[重新整理資料來源檢視]** 對話方塊：  
@@ -38,6 +38,6 @@ ms.locfileid: "48119618"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [資料來源檢視設計工具&#40;Analysis Services-多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

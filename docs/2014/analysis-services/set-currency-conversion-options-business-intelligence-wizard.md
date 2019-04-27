@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746820"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>設定貨幣轉換選項 (商業智慧精靈)
   使用 **[設定貨幣轉換]** 頁面，即可定義包含匯率之量值群組的貨幣轉換計算。  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754779"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>準備鏡像資料庫以進行鏡像 (SQL Server)
   資料庫擁有者或系統管理員必須確認鏡像資料庫已經建立且做好鏡像的準備，才能啟動資料庫鏡像工作階段。 建立新的鏡像資料庫時，最少需要建立主體資料庫的完整備份，以及一個後續記錄備份，並使用 WITH NORECOVERY 將這兩者同時還原到鏡像伺服器執行個體。  

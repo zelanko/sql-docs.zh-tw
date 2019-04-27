@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756627"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重新命名資料表或資料行 (SSAS 表格式)
   您可以在匯入程序期間，於 **[資料表匯入精靈]** 的 **[選取資料表和檢視表]** 頁面中輸入 **[易記名稱]** 來變更資料表的名稱。 如果在 **[資料表匯入精靈]** 的 **[指定 SQL 查詢]** 頁面上指定查詢來匯入資料，也可以變更資料表和資料行名稱。  
@@ -57,8 +57,8 @@ ms.locfileid: "48085579"
  此外，如果計算使用重新命名之資料表或是使用重新命名之資料表中的資料行，則也必須更新這些計算，而且從這些計算衍生的資料也必須重新整理及重新計算。 根據受到影響之資料表和計算的數目而定，完成這個程序可能需要一點時間。 因此，重新命名資料表的最佳時機是匯入期間，或是在您開始建立複雜關聯性和計算之前。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表和資料行&#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
+ [資料表與資料行 &#40;SSAS 表格式&#41;](tables-and-columns-ssas-tabular.md)   
  [從 PowerPivot 匯入&#40;SSAS 表格式&#41;](import-from-power-pivot-ssas-tabular.md)   
- [從 Analysis Services 匯入&#40;SSAS 表格式&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [從 Analysis Services 匯入 &#40;SSAS 表格式&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

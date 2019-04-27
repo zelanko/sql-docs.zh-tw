@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780406"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Updategram 範例應用程式 (SQLXML 4.0)
   本節提供使用 Updategram 的範例。  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780211"
 ---
 # <a name="udt-utilities"></a>UDT 公用程式
   這個「UDT 公用程式」範例包含數個公用程式函數。 這些函數包括：將組件中繼資料公開至 Transact-SQL 的函數、將組件中的類型以資料表格式傳回的範例資料流資料表值函式，以及傳回使用者定義資料類型中之欄位、方法和屬性的函數。 示範的技術包括資料流資料表值函式、.NET Framework 反映 API，以及 Transact-SQL 之資料表值函式的引動過程。  

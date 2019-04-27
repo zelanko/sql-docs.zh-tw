@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774928"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>合併 Check 和外部索引鍵條件約束
   中不支援 check 和 foreign key 條件約束[!INCLUDE[hek_2](../includes/hek-2-md.md)]在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 這些建構通常用來強制執行結構描述中的邏輯資料完整性，而且可以是重要維護功能的應用程式的正確性。  

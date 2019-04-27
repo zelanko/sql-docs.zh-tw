@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775328"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
   從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，系統資料庫 (Master、Model、MSDB 和 TempDB) 與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 使用者資料庫可以當做儲存選項與伺服器訊息區塊 (SMB) 檔案伺服器一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
@@ -114,7 +114,7 @@ ms.locfileid: "54136048"
   
 -   有些協力廠商 (像是 NetApp 裝置) 未支援所有 SQL Server API 呼叫。 進行這些動作，您可能會看到：   
     2015-06-04 13:14:19.97 spid9s 錯誤：17053，嚴重性：16，狀態：1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult():發生作業系統錯誤 1 （不正確函式。）。  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() :發生作業系統錯誤 1 （不正確函式。）。  
   
      若是 NTFS，此錯誤不會有影響；  但若是 ReFS，則可能導致效能大幅降低。  
   

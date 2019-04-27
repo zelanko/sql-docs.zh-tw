@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774592"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd 指令程式
   **Invoke-Sqlcmd** 是一種執行指令碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdlet，該指令碼包含了 **sqlcmd** 公用程式所支援之語言 ([!INCLUDE[tsql](../includes/tsql-md.md)] 及 XQuery) 與命令的陳述式。  
@@ -118,7 +118,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |停用互動式命令、啟動指令碼和環境變數。|-X|-DisableCommands|  
 |停用變數替代。|-X|-DisableVariables|  
 |報表的最小嚴重性層級。|-v|-SeverityLevel|  
-|報表的最小錯誤層級。|-m|-ErrorLevel|  
+|報表的最小錯誤層級。|-M|-ErrorLevel|  
 |登入逾時間隔。|-l|-ConnectionTimeout|  
 |主機名稱。|-H|-HostName|  
 |變更密碼並結束。|-Z|-NewPassword|  
@@ -132,7 +132,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |執行指定的查詢並維持執行中狀態。|-Q|無參數|  
 |用於輸出資料的字碼頁。|-f|無參數|  
 |變更密碼並維持執行中狀態|-Z|無參數|  
-|封包大小|-a|無參數|  
+|封包大小|-A|無參數|  
 |資料行分隔符號|-s|無參數|  
 |控制項輸出標頭|-h|無參數|  
 |指定控制字元|-k|無參數|  
@@ -142,7 +142,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |啟用引號識別碼|-i|無參數|  
 |移除尾端空白|-w|無參數|  
 |列出執行個體|-l|無參數|  
-|將輸出格式化為 Unicode|-U|無參數|  
+|將輸出格式化為 Unicode|-u|無參數|  
 |列印統計資料|-p|無參數|  
 |命令結束|-c|無參數|  
 |使用 Windows 驗證進行連接|-E|無參數|  

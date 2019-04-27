@@ -1,5 +1,5 @@
 ---
-title: 設定屬性類型 |Microsoft 文件
+title: 設定屬性類型 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745659"
 ---
-# <a name="attribute-properties---configure-attribute-types"></a>屬性內容-設定屬性類型
+# <a name="attribute-properties---configure-attribute-types"></a>屬性內容 - 設定屬性類型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，屬性類型有助於從商務功能上將屬性分類。 屬性類型有很多，而且大部份可供用戶端應用程式用來顯示或支援屬性。 不過，有些屬性類型對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也有特定意義。 例如，有些屬性類型會針對時間維度，識別代表各種日曆之時間週期的屬性。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34025565"
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|屬性類型值|Description|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**位址**|代表地址。|  
 |**AddressBuilding**|代表地址的建築物識別碼。|  
@@ -85,8 +85,8 @@ ms.locfileid: "34025565"
 |**GeoCentroidX**|代表地理區域的 X 軸距心。|  
 |**GeoCentroidY**|代表地理區域的 Y 軸距心。|  
 |**GeoCentroidZ**|代表地理區域的 Z 軸距心。|  
-|**識別碼**|代表識別碼 (ID) 或索引鍵。|  
-|**映像**|代表未定義之圖形格式的影像。|  
+|**ID**|代表識別碼 (ID) 或索引鍵。|  
+|**影像**|代表未定義之圖形格式的影像。|  
 |**ImageBmp**|代表點陣圖圖形格式的影像。|  
 |**ImageGif**|代表圖形交換格式 (GIF) 圖形格式的影像。|  
 |**ImageJpg**|代表 JPEG 圖形格式的影像。|  
@@ -139,7 +139,7 @@ ms.locfileid: "34025565"
 |**ShortCaption**|代表簡短標題。|  
 |**StateOrProvince**|代表省份。|  
 |**公用程式**|代表公用程式。|  
-|**版本**|代表版本。|  
+|**版本(Version)**|代表版本。|  
 |**WebHtml**|代表 HTML 內容。|  
 |**WebMailAlias**|代表電子郵件別名。|  
 |**WebUrl**|代表 URL 位址。|  
@@ -147,7 +147,7 @@ ms.locfileid: "34025565"
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|屬性類型值|Description|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**帳戶**|代表帳戶的父系。 此屬性類型通常會套用至帳戶維度的父系屬性。|  
 |**AccountName**|代表帳戶的名稱。 此屬性類型通常會套用至帳戶維度的索引鍵屬性。|  
@@ -156,7 +156,7 @@ ms.locfileid: "34025565"
   
 ###  <a name="currency_dimension_attribute_types"></a> 貨幣維度屬性類型  
   
-|屬性類型值|Description|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|代表貨幣兌換的目標貨幣。 此屬性類型通常會套用至報表維度的索引鍵屬性，以用於貨幣轉換。 如需貨幣轉換的詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md)。|  
 |**CurrencyIsoCode**|代表貨幣的國際標準組織 (ISO) 代碼。 如需貨幣轉換的詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md)。|  
@@ -165,7 +165,7 @@ ms.locfileid: "34025565"
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> 緩時變維度屬性類型  
   
-|屬性類型值|Description|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|代表緩時變維度中的成員之有效結束日期。|  
 |**ScdOriginalID**|代表緩時變維度中的成員之原始識別碼。|  
@@ -174,7 +174,7 @@ ms.locfileid: "34025565"
   
 ###  <a name="time_dimension_attribute_types"></a> 時間維度屬性類型  
   
-|屬性類型值|Description|  
+|屬性類型值|描述|  
 |--------------------------|-----------------|  
 |**日期**|代表日期。 此屬性類型通常會套用至時間維度或伺服器時間維度的索引鍵屬性。|  
 |**DayOfHalfYear**|代表半年中的日序數。|  
@@ -300,6 +300,6 @@ ms.locfileid: "34025565"
   
 ## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性 (Attribute) 屬性 (Property) 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
