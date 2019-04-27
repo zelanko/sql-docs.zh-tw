@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821439"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF 屬性 (ADO)
 -   **BOF**指出目前的記錄位置位於第一筆記錄之前[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -62,7 +62,7 @@ ms.locfileid: "47748116"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**， **MoveLast**|若要設定 **，則為 True**|若要設定 **，則為 True**|  
-|**移動**0|沒有變更|沒有變更|  
+|**Move** 0|沒有變更|沒有變更|  
 |**MovePrevious**，**移動**< 0|若要設定 **，則為 True**|沒有變更|  
 |**MoveNext**，**移動**> 0|沒有變更|若要設定 **，則為 True**|  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3769eaaa3b07c8f62ba8d558a44fdd16c85c2305
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732104"
 ---
 # <a name="define-new-measures-cube-wizard"></a>定義新的量值 (Cube 精靈)
   使用 [定義新的量值] 頁面，即可為不使用資料來源建立之 Cube 建立新的量值。  
@@ -97,7 +97,7 @@ ms.locfileid: "48055088"
 ## <a name="see-also"></a>另請參閱  
  [Cube 精靈 F1 說明](cube-wizard-f1-help.md)   
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多維度模型中的 Cube](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

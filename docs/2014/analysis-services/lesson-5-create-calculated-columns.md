@@ -1,5 +1,5 @@
 ---
-title: 第 6 課： 建立計算結果的欄 |Microsoft Docs
+title: 第 6 課：建立計算結果的欄 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728636"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 課：建立導出資料行
   在這一課，您將藉由加入導出資料行的方式在模型中建立新資料。 導出資料行是以已存在模型中的資料為基礎。 如需詳細資訊，請參閱[導出資料行 &#40;SSAS 表格式&#41;](tabular-models/ssas-calculated-columns.md)。  
   
  您將在三個不同的資料表中建立五個新的導出資料行。 各項工作的步驟稍有不同。 這樣做的目的在於說明，您可以透過數種方式建立新的資料行、重新命名資料行，以及將它們放到資料表中的不同位置。  
   
- 完成本課程的估計時間：**15 分鐘**  
+ 估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 5 課：建立關聯性](lesson-4-create-relationships.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 5 課：建立關聯性](lesson-4-create-relationships.md)。  
   
 ## <a name="create-calculated-columns"></a>建立導出資料行  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134038"
      接著導出資料行中的所有資料列就會填入值。 如果您向下捲動資料表，將會看到此資料行的資料列可以根據每個資料列中的資料而擁有不同的值。  
   
     > [!NOTE]  
-    >  如果您收到錯誤，請確認公式中的資料行名稱與您在[第 3 課：重新命名資料行](rename-columns.md)中變更的資料行名稱相符。  
+    >  如果您收到錯誤，請確認公式中的資料行名稱符合您在中變更的資料行名稱[第 3 課：重新命名資料行](rename-columns.md)。  
   
 5.  重新命名此資料行`Month Calendar`。  
   
@@ -127,6 +127,6 @@ ms.locfileid: "48134038"
  [Margin] 導出資料行可用來分析每個 (產品) 資料列的利率。  
   
 ## <a name="next-step"></a>下一個步驟  
- 若要繼續進行這一課，請前往下一課：[第 7 課：建立量值](lesson-6-create-measures.md)。  
+ 若要繼續這一課，請移至下一課：[第 7 課：建立量值](lesson-6-create-measures.md)。  
   
   

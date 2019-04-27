@@ -27,11 +27,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 492835539e36611a56e3896a29d06ed75c17f4b4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647432"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>檢視或刪除報表記錄 (報表管理員)
   報表記錄會與基礎報表一起保存。 任何有權檢視報表的使用者都可以檢視其記錄。  

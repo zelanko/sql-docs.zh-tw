@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680123"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>複製及貼上資料 (SSAS 表格式)
   您可以從外部應用程式複製資料表的資料，並將其貼入模型設計師中新的資料表或現有的資料表。 您從 [剪貼簿] 貼入的資料必須是 HTML 格式，例如從 Excel 或 Word 複製的資料。 模型設計師將會自動偵測並套用資料類型至貼上的資料。 您也可以手動修改資料類型或資料行的顯示格式設定。  
@@ -87,8 +87,8 @@ ms.locfileid: "48129298"
  顯示剪貼簿內容的範例。 目的地資料表中的現有資料將會遭到刪除，並將新資料列插入資料表中。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
- [支援的資料來源&#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [設定資料行的資料類型&#40;SSAS 表格式&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [匯入資料 (SSAS 表格式)](import-data-ssas-tabular.md)   
+ [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [設定資料行的資料類型 &#40;SSAS 表格式&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

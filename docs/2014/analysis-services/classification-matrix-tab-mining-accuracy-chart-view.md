@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1879e9ec4f2a6decf4168e7c49a5e81d3a043d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681727"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>分類矩陣索引標籤 (採礦精確度圖表檢視)
   [分類矩陣] 索引標籤會顯示在 [資料行對應] 索引標籤上的模型方格中選取之每個模型的分類矩陣。只有在 [資料行對應] 索引標籤中選取的可預測資料行不是連續的資料行時，才能使用分類矩陣。 如需更詳細的說明**分類矩陣**索引標籤上，請參閱[測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)。  
   
 ## <a name="options"></a>選項。  
- **複製**  
+ **[複製]**  
  將每個分類矩陣的內容複製到剪貼簿。  
   
  **計數\<模型 > 上\<可預測資料行 >**  
@@ -38,6 +38,6 @@ ms.locfileid: "48154704"
 ## <a name="see-also"></a>另請參閱  
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 變更採礦模型的屬性 |Microsoft 文件
+title: 變更採礦模型的屬性 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3650b284e8817c2b7f8aee6a0beca71c275d6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670368"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "34014845"
   
  下列模型屬性具有可用於建立運算式或設定複雜模型屬性的進階編輯器。 下列屬性提供：  
   
--   **Filter**：開啟 [[資料集篩選器] 或 [模型篩選器] 對話方塊](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7)。  
+-   **篩選**屬性：會開啟[資料集篩選器或模型篩選器對話方塊](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7)。  
   
--   **AlgorithmParameters** 屬性︰開啟 [[演算法參數] 對話方塊 &#40;採礦模型檢視&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060)。  
+-   **AlgorithmParameters**屬性：會開啟[演算法參數對話方塊&#40;採礦模型檢視&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060)。  
   
- 如需如何在採礦模型中設定屬性的資訊，請參閱[採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
+ 如需如何在採礦模型中設定屬性的資訊，請參閱 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
   
 ### <a name="to-change-the-properties-of-a-mining-model"></a>若要變更採礦模型的屬性  
   
@@ -48,6 +48,6 @@ ms.locfileid: "34014845"
      您在設計師中選取其他元素時，新值就會生效。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659693"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化案例
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658322"
   
 -   記錄檔會包含英文和當地語系化訊息的混合 (假設您在 Analysis Services 執行所在的 Windows Server 上已安裝語言套件)。  
   
--   文件和工具 (例如 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 和 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]) 已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文和西班牙文。 在安裝期間可指定文化特性 (Culture)。  
+-   文件和工具，例如[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]和[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，翻譯成下列語言：簡體中文、 繁體中文、 法文、 德文、 義大利文、 日文、 韓文、 葡萄牙文 （巴西）、 俄文和西班牙文。 在安裝期間可指定文化特性 (Culture)。  
   
  若為多維度模型，Analysis Services 可讓您在整個物件階層中獨立設定語言、定序和翻譯。  若為表格式模型，您可以只加入翻譯︰語言和定序則繼承自主機作業系統。  
   

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861891"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>提示使用者輸入連線資訊
 如果應用程式使用**SQLConnect** ，且必須提示使用者輸入的任何連接資訊，例如使用者名稱和密碼，它必須這樣做本身。 這可讓應用程式來控制其 「 外觀與風格 」，它可能會強制應用程式中包含的驅動程式專屬的程式碼。 會發生這種情況是當應用程式必須提示使用者輸入驅動程式特有的連接資訊。 這代表不可能的情況，是專為所有的驅動程式，包括不存在時的應用程式撰寫的驅動程式所使用的泛型應用程式。  

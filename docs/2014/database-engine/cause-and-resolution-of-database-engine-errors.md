@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b71d7468e668db88b26e038bc5593d6a83bcc0d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812817"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>導致 Database Engine 錯誤的原因和解決方案
   本主題包含數個與 [!INCLUDE[ssDE](../includes/ssde-md.md)] 相關之錯誤的原因和解決方案資訊。  
@@ -24,7 +24,7 @@ ms.locfileid: "48080268"
 ## <a name="in-this-section"></a>本節內容  
  本節中的錯誤訊息主題提供錯誤訊息的說明、可能的原因，以及您可以採取哪些動作以更正問題。  
   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  [了解資料庫引擎錯誤](../relational-databases/native-client-ole-db-errors/errors.md)  
   
 ## <a name="see-also"></a>另請參閱  

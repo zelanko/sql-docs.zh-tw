@@ -1,5 +1,5 @@
 ---
-title: = （等於） (MDX) |Microsoft 文件
+title: = （等於） (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fac06690d811c3ae3d4b00a82ad9088b2df4aae
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690916"
 ---
 # <a name="-equal-to-mdx"></a>=  (等於) (MDX)
 
@@ -38,11 +38,11 @@ MDX_Expression = MDX_Expression
 ## <a name="return-value"></a>傳回值  
  布林值根據以下條件而定：  
   
--   **true**的第一個參數的值是否等於第二個參數的值。  
+-   **true**第一個參數的值是否等於第二個參數的值。  
   
--   **false**的第一個參數的值是否不等於第二個參數的值。  
+-   **false**第一個參數的值是否不等於第二個參數的值。  
   
--   **true**如果這兩個參數都是 null，或一個參數是 null，且另一個參數為 0。  
+-   **true**如果這兩個參數都是 null，或一個參數為 null，且另一個參數為 0。  
   
 ## <a name="examples"></a>範例  
  下列查詢顯示這些條件的範例：  

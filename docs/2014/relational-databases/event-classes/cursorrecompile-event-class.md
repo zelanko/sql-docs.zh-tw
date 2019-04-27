@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dbf1d34d801696861a1766d1fdca432037c94b11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663226"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 事件類別
   **CursorRecompile** 事件類別描述在應用程式開發介面 (API) 資料指標中發生的資料指標重新編譯事件。 當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 因為結構描述已變更而需重新編譯 Transact-SQL 資料指標時，就會發生資料指標重新編譯事件。  

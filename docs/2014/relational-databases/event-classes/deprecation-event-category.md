@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ba973e51a7d3c86b9f1a15075b0a86ac94502cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662843"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 事件類別目錄
   **Deprecation** 事件類別目錄包含一般取代 (Deprecation) 事件。  

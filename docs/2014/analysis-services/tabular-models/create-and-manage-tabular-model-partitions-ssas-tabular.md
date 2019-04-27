@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a2e06d49f22180ae99bf5f41bb4007fda1e03f84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795371"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>建立及管理表格式模型資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 模型撰寫期間，在已部署的模型中有重複定義的模型資料分割。 部署之後，即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料分割] 對話方塊或指令碼，管理這些資料分割。 此主題提供的工作描述如何為已部署的模型建立及管理資料分割。  
@@ -64,7 +64,7 @@ ms.locfileid: "48113599"
 -   在 [資料分割] 對話方塊的 [資料分割] 清單中，選取您要刪除的資料分割，然後按一下 [刪除] 按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型資料分割&#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)   
- [處理表格式模型資料分割&#40;SSAS 表格式&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [表格式模型資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)   
+ [處理表格式模型資料分割 &#40;SSAS 表格式&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775764"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>在 Server Core 上安裝 SQL Server 2014
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上安裝 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 本主題提供在 Server Core 上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的安裝程式特定詳細資料。  
@@ -44,7 +44,7 @@ ms.locfileid: "53364030"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|否|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|否|  
 |用戶端工具連接性|是|  
-|Integration Services 伺服器<sup>[1]</sup>|是|  
+|Integration Services Server<sup>[1]</sup>|是|  
 |用戶端工具回溯相容性|否|  
 |用戶端工具 SDK|否|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書|否|  

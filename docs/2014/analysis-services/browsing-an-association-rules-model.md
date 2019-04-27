@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664393"
 ---
 # <a name="browsing-an-association-rules-model"></a>瀏覽關聯規則模型
   當您開啟關聯模型使用**瀏覽**，會顯示此模型中的互動式檢視器，類似於在關聯規則檢視器[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  此檢視器可讓您快速查看相互關聯的項目，並顯示可用於預測或提出建議的規則。  
@@ -149,9 +149,9 @@ ms.locfileid: "52537179"
   
  如果您想要設定進階的參數，或最小機率和支援，請使用 alter[關聯精靈&#40;適用於 Excel 的資料採礦用戶端&#41;](associate-wizard-data-mining-client-for-excel.md)精靈，或建置您自己的模型使用[將模型加入結構&#40;適用於 Excel 的資料採礦增益集&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)模型選項。  
   
--   **項目集：** 當您建立模型時，也可以控制由於將值指派到 MINIMUM_PROBABILITY 參數而產生的項目集數目。 此參數適用於 [演算法參數] 對話方塊。  
+-   **項目集：** 當您建立模型時，您也可以控制的值指派到 MINIMUM_PROBABILITY 參數而產生的項目集數目。 此參數適用於 [演算法參數] 對話方塊。  
   
--   **規則：**[!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯規則演算法會使用機率值來限制所產生的規則數目。 您可以設定 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 參數來控制規則數目。  
+-   **規則：**[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯規則演算法會使用機率值來限制所產生的規則數目。 您可以設定 `MINIMUM_PROBABILITY` 或 `MINIMUM _IMPORTANCE` 參數來控制規則數目。  
   
  如需有關如何設定進階的參數的詳細資訊，請參閱 <<c0> [ 資料採礦演算法&#40;SQL Server 資料採礦增益集&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)。</c0>  
   

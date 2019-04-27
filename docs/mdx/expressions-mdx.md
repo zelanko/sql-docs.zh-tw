@@ -1,5 +1,5 @@
 ---
-title: 運算式 (MDX) |Microsoft 文件
+title: 運算式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690837"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
 
 
-  運算式是識別碼、 數值與運算子可以評估以取得結果的組合。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
+  運算式是識別碼、 數值與運算子，可以評估以取得結果的組合。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
   
 ## <a name="simple-and-complex-expressions"></a>簡單及複雜運算式  
  MDX 中的運算式可能很簡單或很複雜：  
@@ -85,7 +85,7 @@ WHERE [Product].[Category].[Bikes]
 |[使用空白值](../mdx/working-with-empty-values.md)|描述什麼是空白值，以及如何處理這類的值。|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 語言參考 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

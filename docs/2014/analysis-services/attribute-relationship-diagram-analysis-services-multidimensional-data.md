@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1255cbcaffe114a47b4c7d251c37e5b3d50d6b2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650599"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性關聯性圖表 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
   在 **[屬性關聯性]** 索引標籤上，使用緊鄰在工具列底下的窗格，即可檢視屬性關聯性圖表，以及建立、修改或刪除屬性關聯性。  

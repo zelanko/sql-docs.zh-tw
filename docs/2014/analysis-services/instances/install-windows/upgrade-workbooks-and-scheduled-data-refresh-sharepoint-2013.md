@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730193"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
   本主題將說明在先前 PowerPivot 環境中建立之活頁簿的使用者體驗，以及如何升級 PowerPivot 活頁簿，以便讓您運用這個版本所導入的新功能。 若要深入了解新功能，請參閱[What's New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917)。  
@@ -53,14 +53,14 @@ ms.locfileid: "53373938"
 |建立於|\<|支援和行為|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot for SharePoint 2010**|**2012 PowerPivot for SharePoint 2010**|**2012 SP1 PowerPivot for SharePoint 2013**|  
-|**2008 R2 PowerPivot for Excel 2010**|所有功能|**體驗：** 使用者可以透過瀏覽器與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。<br /><br /> **升級：** 如果 SharePoint 伺服器陣列中的 PowerPivot 系統服務已啟用自動升級，活頁簿就會在文件庫中自動升級。<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|**體驗：** 使用者可以與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。<br /><br /> **升級：** 無法使用自動升級。 使用者必須手動將其 2008 R2 活頁簿升級為 2012 版本或 Office 2013 版本。<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|  
-|**2012 PowerPivot for Excel**|不支援|所有功能|**體驗：** 使用者可以透過瀏覽器與活頁簿進行互動，而且可以使用它做為其他方案的資料來源。 可以使用排程資料重新整理。<br /><br /> **升級：** 不支援自動升級。 使用者可以手動將其活頁簿升級為 Office 2013 版本。<br /><br /> **排程資料重新整理** ：支援。|  
+|**2008 R2 PowerPivot for Excel 2010**|所有功能|**體驗：** 使用者可以與瀏覽器中的活頁簿進行互動，並使用它做為資料來源，為其他方案。<br /><br /> **升級：** 如果 PowerPivot 系統服務在 SharePoint 伺服陣列中已啟用自動升級，活頁簿就會自動在文件庫的升級<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|**體驗：** 使用者可以與活頁簿進行互動，並使用它做為資料來源，為其他方案。<br /><br /> **升級：** 無法使用自動升級。 使用者必須手動將其 2008 R2 活頁簿升級為 2012 版本或 Office 2013 版本。<br /><br /> **排程資料重新整理：** 不支援。 活頁簿需要升級。|  
+|**2012 PowerPivot for Excel**|不支援|所有功能|**體驗：** 使用者可以與瀏覽器中的活頁簿進行互動，並使用它做為資料來源，為其他方案。 可以使用排程資料重新整理。<br /><br /> **升級：** 不支援自動升級。 使用者可以手動將其活頁簿升級為 Office 2013 版本。<br /><br /> **排程資料重新整理** ：支援。|  
 |**Excel 2013**|不支援|不支援|所有功能|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> 從 2008 R2 活頁簿升級為 SQL Server 2012 Service Pack 1 (SP1) 活頁簿  
  本節將描述如何從 SQL Server 2008 R2 PowerPivot for Excel 2010 活頁簿升級為 SQL Server 2012 SP1 PowerPivot for Excel 2013 活頁簿。  
   
- **行為變更：** 在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用 SQL Server 2008 R2 PowerPivot 活頁簿時，這些活頁簿不會自動升級。 因此，排程的資料重新整理不會針對 SQL Server 2008 R2 PowerPivot 活頁簿運作  
+ **行為變更：** SQL Server 2008 R2 PowerPivot 活頁簿不會自動升級使用中 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 時。 因此，排程的資料重新整理不會針對 SQL Server 2008 R2 PowerPivot 活頁簿運作  
   
  2008 R2 活頁簿將在 PowerPivot for SharePoint 2013 中開啟，但是排程的資料重新整理不會運作。 如果您檢閱重新整理記錄，將會看到類似以下的錯誤訊息：  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53373938"
   
 -   SQL Server 2012 PowerPivot for Excel 2013。  
   
- **如何升級活頁簿：** 在您將活頁簿升級為 2012 活頁簿之前，排程的資料重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：  
+ **如何升級活頁簿：** 之前將活頁簿升級為 2012年活頁簿排程資料重新整理無法運作。 若要升級活頁簿及它所包含的模型，請完成下列其中一項作業：  
   
 -   在已安裝 SQL Server 2012 PowerPivot for Excel 增益集的 Microsoft Excel 2010 中下載並開啟活頁簿。  
   

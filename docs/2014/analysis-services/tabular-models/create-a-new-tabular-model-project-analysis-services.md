@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f89e4b5e6d209efeb3fd37661a5f4b925aaeb63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795405"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>建立新的表格式模型專案 (SSAS 表格式)
   此主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立一個新的空白表格式模型專案。 建立新的模型專案之後，您可以從資料來源匯入資料，以便開始撰寫模型專案。  
@@ -29,10 +29,10 @@ ms.locfileid: "48171538"
   
 3.  在 **[名稱]** 中，輸入專案的名稱，並指定位置和方案名稱，然後按一下 **[確定]**。  
   
- 建立新的專案後，請務必設定專案和模型屬性。 如需詳細資訊，請參閱 <<c0> [ 專案屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)並[模型屬性&#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)。</c0>  
+ 建立新的專案後，請務必設定專案和模型屬性。 如需詳細資訊，請參閱 [專案屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md) (專案屬性 (SSAS 表格式)) 和 [模型屬性 &#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)中建立一個新的空白表格式模型專案。  
   
 ## <a name="see-also"></a>另請參閱  
- [專案屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
- [模型屬性的&#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)  
+ [專案屬性 &#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
+ [模型屬性 &#40;SSAS 表格式&#41;](model-properties-ssas-tabular.md)  
   
   

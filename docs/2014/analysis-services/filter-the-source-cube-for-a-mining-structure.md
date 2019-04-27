@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731340"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>篩選採礦結構的來源 Cube
   當您建立多維度模型 (OLAP cube) 中的資料為基礎的採礦結構時，您可以*配量*採礦結構為基礎的 cube。 配量處理可讓您建立資料子集，當做用來定型採礦模型的一種資料篩選。  

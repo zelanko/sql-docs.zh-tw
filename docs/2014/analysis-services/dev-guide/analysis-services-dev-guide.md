@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8674346aa876cb0e94adfcfefc34569a01005008
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731961"
 ---
 # <a name="analysis-services-developers-guide"></a>Analysis Services 開發人員指南
     

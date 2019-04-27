@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730358"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安裝 Analysis Services 多維度模型化教學課程的範例資料和專案
   使用本主題中提供的指示與連結，安裝 Analysis Services 教學課程中所使用的所有資料和專案檔案。  
   
-## <a name="step-1-install-sql-server-software"></a>步驟 1：安裝 SQL Server 軟體  
+## <a name="step-1-install-sql-server-software"></a>步驟 1:安裝 SQL Server 軟體  
  本教學課程中的課程假設您已安裝下列軟體。 下列所有軟體都是使用 SQL Server 安裝媒體進行安裝。 為簡化部署，您可以在一台電腦上安裝所有功能。 若要安裝這些功能，請執行 SQL Server 安裝程式，並從 [特徵選取] 頁面中選取這些功能。 如需詳細資訊，請參閱 <<c0> [ 從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。</c0>  
   
 -   Database Engine  
@@ -40,7 +40,7 @@ ms.locfileid: "53355068"
   
  或者，您可以使用內建到 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的內建 MDX 查詢設計工具來瀏覽資料。 查詢設計工具會傳回相同的資料，但以一般資料列集呈現的資料除外。  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>步驟 2：下載 SQL Server Data Tools-Business Intelligence for Visual Studio 2012  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>步驟 2:下載 SQL Server Data Tools-Business Intelligence for Visual Studio 2012  
  在此版本中，SQL Server Data Tools 要與其他 SQL Server 功能分開下載及安裝。 現在可以在網路上免費下載用來建立 BI 模型和報表的設計工具和專案範本。  
   
 -   [下載商業智慧版 SQL Server Data Tools ](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 檔案會儲存至 Downloads 資料夾。 執行安裝程式來安裝該工具。  

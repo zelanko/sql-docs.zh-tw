@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808720"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>連線到伺服器 (登入頁面) Reporting Services
   連線到 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，可使用此索引標籤檢視或指定下列選項。  
@@ -63,7 +63,7 @@ ms.locfileid: "48108708"
  顯示其他伺服器連接選項，例如記住密碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [設定報表伺服器資料庫連接 &#40;SSRS 組態管理員&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [連接至 Management Studio 中的報表伺服器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [報表伺服器的驗證](../reporting-services/security/authentication-with-the-report-server.md)  
   

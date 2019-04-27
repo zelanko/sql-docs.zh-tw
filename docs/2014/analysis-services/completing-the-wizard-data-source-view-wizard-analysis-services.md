@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 728643793aa43eb76e5a94a5d35e5e06acec5c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680641"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>正在完成精靈 (資料來源檢視精靈) (Analysis Services)
   使用精靈的 **[正在完成精靈]** 頁面，即可提供資料來源檢視的名稱，並檢閱檢視中包含的資料表和檢視。 按一下 **[完成]** 之後，您可以使用資料來源檢視設計師，在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中變更檢視的屬性。 如需資料來源檢視設計工具的詳細資訊，請參閱[資料來源檢視設計工具 &#40;Analysis Services - 多維度資料&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)。  

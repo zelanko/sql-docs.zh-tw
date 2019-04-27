@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f3d99bf2af18b393275b68e7e56153fa1f49c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729635"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Cube 設計工具) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 [KPI] 索引標籤，檢視及編輯所選取之 Cube 檢視的關鍵效能指標 (KPI)。  
@@ -46,7 +46,7 @@ ms.locfileid: "48089928"
   
 ## <a name="see-also"></a>另請參閱  
  [關鍵效能指標&#40;Kpi&#41;多維度模型中](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [MDX 指令碼基礎觀念&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 指令碼基礎觀念 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

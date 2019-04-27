@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663203"
 ---
 # <a name="cursors-event-category"></a>Cursors 事件類別目錄
   **Cursors** 事件類別目錄包含用來監視資料指標行為的事件類別。  

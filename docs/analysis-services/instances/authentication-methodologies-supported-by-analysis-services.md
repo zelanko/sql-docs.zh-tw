@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 支援的驗證方法 |Microsoft 文件
+title: 支援的 Analysis Services 的驗證方法 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2c4021792c3285165440fc0627aa7eab374882
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659212"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "34019135"
  [使用模擬搭配傳輸安全性](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [設定 Analysis Services 進行 Kerberos 限制委派](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Analysis Services 執行個體的 SPN 註冊](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [為 Analysis Services 執行個體註冊 SPN](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

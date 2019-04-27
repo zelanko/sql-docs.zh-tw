@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28ac0283148f328d75bb341ce7841f5e5da42ee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732326"
 ---
 # <a name="data-sources-ssas-tabular"></a>資料來源 (SSAS 表格式)
   資料來源提供要包含在表格式模型方案中的資料。 您可以從各種來源將資料匯入至模型中，例如關聯式資料庫、資料摘要、Analysis Services Cube 等多維度資料來源，以及 Microsoft Excel 活頁簿等文字檔。 本節中的主題提供下列詳細資訊：您可以匯入的資料來源類型、您可以匯入的各種資料類型，以及描述如何從這些來源匯入資料的工作。  
@@ -26,10 +26,10 @@ ms.locfileid: "48094048"
 |主題|描述|  
 |-----------|-----------------|  
 |[支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|本主題提供有關您可以匯入資料之不同資料來源的詳細資訊。|  
-|[支援的資料類型&#40;SSAS 表格式&#41;](tabular-models/data-types-supported-ssas-tabular.md)|本主題提供有關表格式模型支援之各種資料類型的詳細資訊。|  
-|[模擬&#40;SSAS 表格式&#41;](tabular-models/impersonation-ssas-tabular.md)|本主題提供有關模擬的詳細資訊，模擬提供 Analysis Services 用來連接到資料來源，以匯入及重新整理資料的登入認證。|  
-|[匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)|本節中的工作描述如何從不同的資料來源匯入資料。|  
-|[處理資料&#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)|本節中的工作描述如何處理 (重新整理) 或變更已匯入至模型中的資料。|  
-|[編輯現有的資料來源連接&#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)|描述如何編輯已建立而且用來從來源匯入資料的資料來源連接。|  
+|[支援的資料類型 &#40;SSAS 表格式&#41;](tabular-models/data-types-supported-ssas-tabular.md)|本主題提供有關表格式模型支援之各種資料類型的詳細資訊。|  
+|[模擬 &#40;SSAS 表格式&#41;](tabular-models/impersonation-ssas-tabular.md)|本主題提供有關模擬的詳細資訊，模擬提供 Analysis Services 用來連接到資料來源，以匯入及重新整理資料的登入認證。|  
+|[匯入資料 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)|本節中的工作描述如何從不同的資料來源匯入資料。|  
+|[處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)|本節中的工作描述如何處理 (重新整理) 或變更已匯入至模型中的資料。|  
+|[編輯現有的資料來源連接 &#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)|描述如何編輯已建立而且用來從來源匯入資料的資料來源連接。|  
   
   

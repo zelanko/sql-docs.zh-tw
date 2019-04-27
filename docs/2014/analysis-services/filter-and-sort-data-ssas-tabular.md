@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0987dc64ae4e2fe750073c67cb38b73924708643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731370"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>篩選與排序資料 (SSAS 表格式)
   當您使用表格式模型中的資料表時，可以使用模型設計師中的控制項篩選或排序資料。 您也可以在計算之中建立篩選，以便控制從資料行或資料表中使用的資料。 每種類型的篩選都只能在其個別的視窗中運作。  

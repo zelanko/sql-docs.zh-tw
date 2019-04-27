@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792336"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行資料比對。 比對程序會根據比對原則中的比對規則來識別比對記錄叢集、根據存活規則將每一個叢集中的一筆記錄指定為存活者，然後匯出結果。 DQS 會在電腦輔助的程序中執行比對程序 (也稱為刪除重複作業)，但是您可以互動方式建立比對規則，而且您會從數個選擇中選取存活規則，好讓您控制比對程序。  
@@ -41,7 +41,7 @@ ms.locfileid: "56019689"
 ####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能執行比對專案。  
   
-##  <a name="StartingaMatchingProject"></a> 第一個步驟：啟動比對專案  
+##  <a name="StartingaMatchingProject"></a> 第一步：啟動比對專案  
  您會在於 DQS 用戶端應用程式中建立的資料品質專案內執行比對活動。  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
@@ -107,7 +107,7 @@ ms.locfileid: "56019689"
   
  生存是選擇性的。 您可以匯出結果而不執行生存，此時 DQS 將會使用比對分析中指定的樞紐記錄。 如果叢集中有兩筆或多筆記錄符合存活規則，則生存程序將會在衝突的記錄中選取最低的記錄識別碼，使其成為存活者。 您可以使用不同的存活規則，將存活者匯出到不同的檔案或資料表。  
   
-1.  在 **匯出**頁面上，選取您要在匯出相符的資料目的地**目的型別**:**SQL Server**， **CSV 檔案**，或**Excel 檔案**。  
+1.  在 [匯出] 頁面上，於 [目的地類型] 中選取您要將符合的資料匯出到哪一個目的地：**SQL Server**、**CSV 檔案** 或 **Excel 檔案**。  
   
     > [!IMPORTANT]  
     >  如果您要使用 64 位元版本的 Excel，就無法將符合的資料匯出到 Excel 檔案，只能匯出到 SQL Server 資料庫或 .csv 檔案。  
@@ -164,7 +164,7 @@ ms.locfileid: "56019689"
     > [!NOTE]  
     >  如果您已完成比對專案，然後再次使用它，此專案將會在之前發行它的地方使用知識庫。 它不會使用您在完成專案之後對知識庫所做的任何變更。 若要使用這些變更或是使用新的知識庫，您必須建立新的比對專案。 在另一方面，如果您已經建立但是尚未完成比對專案，而且如果您在專案中執行比對，將會使用您已發行至比對原則的任何變更。  
   
-##  <a name="FollowUp"></a> 後續操作：執行比對專案之後  
+##  <a name="FollowUp"></a> 後續操作：在執行比對專案之後  
  在您執行比對專案之後，您可以變更知識庫中的比對原則，並根據更新的比對原則來建立及執行另一個比對專案。 如需詳細資訊，請參閱 [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="Profiler"></a> 分析工具和結果索引標籤  
@@ -175,27 +175,27 @@ ms.locfileid: "56019689"
   
  來源資料庫統計資料包含下列幾種：  
   
--   **記錄**:資料庫中的記錄總數  
+-   **記錄**：資料庫中的記錄總數  
   
--   **總計值**:在欄位中的值總數  
+-   **總計值**：欄位中的值總數  
   
--   **新的值**:上一次執行，以及其整體的百分比之後所新增的值總數  
+-   **新值**：上次執行之後所新增值的總數，以及這些值佔整體的百分比  
   
--   **唯一值**:在欄位中和其整體的百分比的唯一值總數  
+-   **唯一值**：欄位中唯一值的總數，以及這些值佔整體的百分比  
   
--   **新的唯一值**:位於新欄位，以及其整體的百分比的唯一值的總數  
+-   **新的唯一值**：欄位中所新增唯一值的總數，以及這些值佔整體的百分比  
   
  欄位統計資料包括以下項目：  
   
--   **欄位**:對應中所包含的欄位名稱。  
+-   **欄位**：對應中所包含的欄位名稱。  
   
--   **網域**:已對應至欄位的網域名稱。  
+-   **定義域**：對應至欄位的定義域名稱。  
   
--   **新**:新找到的相符項目的數目以及其總計百分比  
+-   **新增**：找到之新相符項目的數目，以及其總計百分比  
   
--   **唯一**:中的欄位以及其總計百分比的唯一記錄的數目  
+-   **唯一**：欄位中唯一記錄的數目，以及其總計百分比  
   
--   **完整性**:規則執行已完成的百分比。  
+-   **完整性**：規則執行完整的百分比。  
   
 ### <a name="matching-policy-notifications"></a>比對原則通知  
  如果是比對原則活動，以下情況會產生通知：  

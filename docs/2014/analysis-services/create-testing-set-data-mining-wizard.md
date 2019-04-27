@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679865"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>建立測試集 (資料採礦精靈)
   使用 [建立測試集] 頁面來指定用於定型的資料量，以及保留用於測試集的資料量。 在建立採礦結構時將資料分割成定型集和測試集，可以更輕鬆地評估您稍後建立的採礦模型的正確性。  
@@ -35,7 +35,7 @@ ms.locfileid: "48096348"
   
 -   如果想要預測儲存於巢狀資料表中的值，則無法分割資料。  
   
- **如需詳細資訊，請參閱**[測試和驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)、[資料採礦基本教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **如需詳細資訊：**[測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)，[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)，[基本資料採礦教學課程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>選項。  
  **測試資料的百分比**  

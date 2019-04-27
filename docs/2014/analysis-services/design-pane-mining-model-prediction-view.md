@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732124"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>設計窗格 (採礦模型預測檢視)
   **[設計]** 窗格包含預測查詢產生器，可用來建立資料採礦預測。 您可以設計預測查詢來使用資料來源檢視中輸入資料的資料表，以便產生大量預測，或者可以建立單一預測查詢，好讓您提供個別值。  
@@ -30,7 +30,7 @@ ms.locfileid: "48189760"
 > [!NOTE]  
 >  如果您對查詢做了任何手動變更，當您切換回 [設計] 檢視時，您的變更將會遺失。 如果您想要儲存 DMX 查詢，可以將此查詢複製到 Windows 剪貼簿，然後貼到文字檔中。  
   
- **如需詳細資訊，請參閱**[資料採礦查詢](data-mining/data-mining-queries.md)  
+ **如需詳細資訊：**[資料採礦查詢](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>選項。  
  **切換到查詢結果檢視**  

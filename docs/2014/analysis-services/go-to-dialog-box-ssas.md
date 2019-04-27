@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44d2e66f8f1975662d369ece28b51e82a2ecf392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730397"
 ---
 # <a name="go-to-dialog-box-ssas"></a>移至對話方塊 (SSAS)
   **[移至]** 對話方塊可讓您跳到資料表中的特定資料行。  

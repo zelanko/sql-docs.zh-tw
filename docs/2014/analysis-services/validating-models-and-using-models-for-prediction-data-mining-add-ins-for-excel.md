@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a9ae056818b260ed00df9111d8b06b37378285d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793113"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>驗證模型及使用模型進行預測 (適用於 Excel 的資料採礦增益集)
   測試並驗證模型是資料採礦處理中的一個重要步驟。 在將模型部署到實際環境之前，您必須了解採礦模型對實際資料的執行效能有多好。  

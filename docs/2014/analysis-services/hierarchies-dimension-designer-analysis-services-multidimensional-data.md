@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730719"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>階層 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [階層] 窗格，即可管理目前選取之維度的階層和層級。 如需詳細資訊，請參閱[建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)。  

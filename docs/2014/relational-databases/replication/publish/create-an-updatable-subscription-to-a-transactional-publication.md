@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691599"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>建立交易式發行集的可更新訂閱 (Management Studio)
 
@@ -29,7 +29,7 @@ ms.locfileid: "54131608"
 
 在 [新增訂閱精靈] 的 [可更新訂閱] 頁面上設定可更新訂閱。 此頁面僅在為可更新訂閱啟用了交易式發行集之後才可用。 如需啟用可更新訂閱的詳細資訊，請參閱[啟用交易式發行集的可更新訂閱](enable-updating-subscriptions-for-transactional-publications.md)。   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>設定從 「 發行者 」 的可更新訂閱  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>從發行者設定可更新訂閱  
 
 1. 連線到 Microsoft SQL Server Management Studio 中的發行者，然後展開伺服器節點。
 2. 展開 **[複寫]** 資料夾，然後展開 **[本機發行集]** 資料夾。
@@ -52,7 +52,7 @@ ms.locfileid: "54131608"
 
 8. 完成精靈。
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>設定從訂閱者的可更新訂閱
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>從訂閱者設定可更新訂閱
 
 
 1. 連線到 SQL Server Management Studio 中的訂閱者，然後展開伺服器節點。
@@ -200,7 +200,7 @@ ms.locfileid: "54131608"
 1. 在發行者上，執行 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)來確認發行集可支援佇列更新訂閱。 
 
     * 如果結果集中 allow_queued_tran 的值為 1，則表示發行集可支援立即更新訂閱。
-    * 如果結果集中 allow_queued_tran 的值為 0，則表示必須在啟用佇列更新訂閱的情況下重新建立發行集。 如需詳細資訊，請參閱 < 如何：啟用更新訂閱之交易式發行集 （複寫 TRANSACT-SQL 程式設計）。
+    * 如果結果集中 allow_queued_tran 的值為 0，則表示必須在啟用佇列更新訂閱的情況下重新建立發行集。 如需詳細資訊，請參閱＜如何：啟用交易式發行集的可更新訂閱 (複寫 Transact-SQL 程式設計)＞。
 
 2. 在發行者上，執行 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)來確認發行集可支援發送訂閱。 
 

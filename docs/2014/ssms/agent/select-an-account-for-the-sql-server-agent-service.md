@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666795"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
   服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的帳戶：  
@@ -103,7 +103,7 @@ ms.locfileid: "52788458"
   
  您可以忽略此參考訊息。 編列作業應該順利完成。 如需詳細資訊，請參閱 [建立多伺服器環境](create-a-multiserver-environment.md)。  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>限制 3：若為 SQL Server 使用者，則使用網路服務帳戶  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>限制 3:它位於 SQL Server 使用者時，使用網路服務帳戶  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果您是在網路服務帳戶之下執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，而且已明確授與網路服務帳戶存取權限，以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者的身分登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，則 Agent 可能無法啟動。  
   
  若要解決此問題，請將執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦重新開機。 這個動作只需要做一次。  

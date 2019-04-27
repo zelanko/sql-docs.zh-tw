@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731547"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>鑽研對話方塊 (採礦模型檢視器)
   當您使用「資料採礦設計師」的 **[採礦模型檢視器]** 索引標籤檢視採礦模型時，假設該模型已啟用鑽研，您就可以鑽研到案例資料的相關詳細資料。 此外，如果基礎採礦結構已啟用鑽研，您也可以看到採礦結構中的資料行 (即使這些資料行不包含在採礦模型中)。 在資料行清單中，結構資料行的前面會加上 "Structure." 標籤。  
@@ -42,12 +42,12 @@ ms.locfileid: "48066947"
 > [!NOTE]  
 >  您可以以滑鼠右鍵按一下詳細資料方格中的任意位置，然後選取 [全部複製]，以 Tab 分隔的格式，將鑽研資料複製到剪貼簿。 複製的資料僅包含案例資料，而不包含節點定義。  
   
- **播放**  
+ **Play**  
  按一下綠色箭頭按鈕可重新整理資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢&#40;資料採礦&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [鑽研查詢 &#40;資料採礦&#41;](data-mining/drillthrough-queries-data-mining.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [採礦模型檢視器工作和操作說明](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

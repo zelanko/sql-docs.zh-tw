@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672525"
 ---
 # <a name="attribute-conformance"></a>屬性一致性
 下表指出這是妥善定義的每個 ODBC 環境屬性的一致性層級。  
@@ -40,7 +40,7 @@ ms.locfileid: "47818837"
 |函數|一致性層級|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|核心|  
-|SQL_ATTR_ASYNC_ENABLE 設定|層級 1/層級 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|層級 1/層級 2 [1]|  
 |SQL_ATTR_AUTO_IPD|層級 2|  
 |SQL_ATTR_AUTOCOMMIT|層級 1|  
 |SQL_ATTR_CONNECTION_DEAD|層級 1|  
@@ -66,11 +66,11 @@ ms.locfileid: "47818837"
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|核心|  
 |SQL_ATTR_APP_ROW_DESC|核心|  
-|SQL_ATTR_ASYNC_ENABLE 設定|層級 1/層級 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE|層級 1/層級 2 [1]|  
 |SQL_ATTR_CONCURRENCY|層級 1/層級 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|層級 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|層級 2|  
-|SQL_ATTR_CURSOR_TYPE|核心/層級 2 [3]|  
+|SQL_ATTR_CURSOR_TYPE|Core/Level 2[3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|層級 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|層級 2|  
 |SQL_ATTR_IMP_PARAM_DESC|核心|  
@@ -86,14 +86,14 @@ ms.locfileid: "47818837"
 |SQL_ATTR_PARAM_STATUS_PTR|核心|  
 |SQL_ATTR_PARAMS_PROCESSED_PTR|核心|  
 |SQL_ATTR_PARAMSET_SIZE|核心|  
-|SQL_ATTR_QUERY_TIMEOUT 時|層級 2|  
+|SQL_ATTR_QUERY_TIMEOUT|層級 2|  
 |SQL_ATTR_RETRIEVE_DATA|層級 1|  
 |SQL_ATTR_ROW_ARRAY_SIZE|核心|  
 |SQL_ATTR_ROW_BIND_OFFSET_PTR|核心|  
 |SQL_ATTR_ROW_BIND_TYPE|核心|  
 |SQL_ATTR_ROW_NUMBER|層級 1|  
 |SQL_ATTR_ROW_OPERATION_PTR|層級 1|  
-|SQL_ATTR_ROW_STATUS_PTR 設定|核心|  
+|SQL_ATTR_ROW_STATUS_PTR|核心|  
 |SQL_ATTR_ROWS_FETCHED_PTR|核心|  
 |SQL_ATTR_SIMULATE_CURSOR|層級 2|  
 |SQL_ATTR_USE_BOOKMARKS|層級 2|  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731557"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Analysis Services 重複安全性角色對話方塊 (Analysis Services - 多維度資料)
   使用**Analysis Services 重複安全性角色-\<資料庫名稱 >-\<從角色名稱複製 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的現有角色[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料庫。 在物件總管中以滑鼠右鍵按一下角色並選取 [複製]，即可顯示 [複製角色] 對話方塊。  

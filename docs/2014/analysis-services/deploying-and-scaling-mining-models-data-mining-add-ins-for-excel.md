@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732157"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>部署及調整採礦模型 (適用於 Excel 的資料採礦增益集)
   中的工具**模型使用方式**並**管理**群組可協助您管理和瀏覽現有的採礦模型。 您可以使用這些工具，檢視儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上的任何模型，而不單只限使用增益集建立的模型。  

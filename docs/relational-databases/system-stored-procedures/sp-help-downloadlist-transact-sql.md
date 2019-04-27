@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796156"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|指示所影響的物件。|  
 |**object_id**|**uniqueidentifier**|指示所影響之物件的識別碼 (**job_id**的工作物件，或是 0x00 代表伺服器物件) 或特定資料值**operation_code**。|  
 |**target_server**|**nvarchar(30)**|將下載這個指示的目標伺服器。|  
-|**error_message**|**nvarchar(1024)**|當目標伺服器在處理這個指示發生問題時，所發出的錯誤訊息 (如果有的話)。<br /><br /> 注意:任何錯誤訊息都會封鎖目標伺服器所有進一步的下載動作。|  
+|**error_message**|**nvarchar(1024)**|當目標伺服器在處理這個指示發生問題時，所發出的錯誤訊息 (如果有的話)。<br /><br /> 注意:任何錯誤訊息都會封鎖所有進一步的下載動作的目標伺服器。|  
 |**date_posted**|**datetime**|將指示公佈到資料表中的日期。|  
 |**date_downloaded**|**datetime**|目標伺服器下載指示的日期。|  
 |**status**|**tinyint**|作業的狀態：<br /><br /> **0** = 尚未下載<br /><br /> **1** = 下載成功。|  

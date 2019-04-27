@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729372"
 ---
 # <a name="modifying-the-date-dimension"></a>修改 Date 維度
   在這個主題的工作中，您會建立一個使用者定義階層，以及變更針對 [日期]、[月]、[日曆季] 和 [日曆半年] 屬性所顯示的成員名稱。 您也會定義屬性的複合索引鍵、控制維度成員的排序次序，以及定義屬性關聯性。  
@@ -130,7 +130,7 @@ ms.locfileid: "52526112"
 14. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="providing-unique-dimension-member-names"></a>提供唯一的維度成員名稱  
- 在這項工作中，您將建立 [EnglishMonthName]、[CalendarQuarter] 和 [CalendarSemester] 屬性所使用的使用者易記名稱資料行。  
+ 在這項工作中，您將建立 [EnglishMonthName] 、[CalendarQuarter] 和 [CalendarSemester] 屬性所使用的使用者易記名稱資料行。  
   
 #### <a name="to-provide-unique-dimension-member-names"></a>提供唯一的維度成員名稱  
   

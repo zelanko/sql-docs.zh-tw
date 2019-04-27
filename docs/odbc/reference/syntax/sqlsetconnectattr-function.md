@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aad8baf55dc8960c533e1694309083952dece3d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656046"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 函數
 **合規性**  
@@ -98,7 +98,7 @@ SQLRETURN SQLSetConnectAttr(
 |HY010|函數順序錯誤|(DM) 的呼叫以非同步方式執行的函式*StatementHandle*聯*ConnectionHandle*仍執行時和**SQLSetConnectAttr**呼叫。<br /><br /> 以非同步方式執行的函式 （不是此一） 已呼叫 」 (DM) *ConnectionHandle*和仍在呼叫此函式時所執行。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**，或**SQLMoreResults**針對其中一個相關聯的陳述式控制代碼呼叫*ConnectionHandle*且傳回 SQL_PARAM_DATA_AVAILABLE。 資料已擷取所有的資料流參數前呼叫此函式。<br /><br /> (DM) **SQLExecute**， **SQLExecDirect**， **SQLBulkOperations**，或**SQLSetPos**針對呼叫*StatementHandle*相關聯*ConnectionHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前已傳送的所有資料在執行中參數或資料行的資料。<br /><br /> (DM) **SQLBrowseConnect**針對呼叫*ConnectionHandle*並傳回 SQL_NEED_DATA。 此函式呼叫之前**SQLBrowseConnect**傳回 SQL_SUCCESS_WITH_INFO 或 SQL_SUCCESS。|  
 |HY011|現在無法設定屬性|*屬性*引數為 SQL_ATTR_TXN_ISOLATION，並已開啟的交易。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|其中包含 SQLSTATE=HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。 （驅動程式管理員會傳回這個僅適用於連接和陳述式屬性接受一組特定的值，例如 SQL_ATTR_ACCESS_MODE 或 sql_attr_async_enable 設定 SQLSTATE。 對於所有其他連接和陳述式屬性，驅動程式必須確認在指定的值*ValuePtr*。)<br /><br /> *屬性*引數為 SQL_ATTR_TRACEFILE 或 SQL_ATTR_TRANSLATE_LIB，及*ValuePtr*是空字串。|  
+|HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。 （驅動程式管理員會傳回這個僅適用於連接和陳述式屬性接受一組特定的值，例如 SQL_ATTR_ACCESS_MODE 或 sql_attr_async_enable 設定 SQLSTATE。 對於所有其他連接和陳述式屬性，驅動程式必須確認在指定的值*ValuePtr*。)<br /><br /> *屬性*引數為 SQL_ATTR_TRACEFILE 或 SQL_ATTR_TRANSLATE_LIB，及*ValuePtr*是空字串。|  
 |HY090|字串或緩衝區長度無效|*(DM) \*ValuePtr*是字元字串，而*StringLength*引數為小於 0，但不是 sql_nts;。|  
 |HY092|屬性/選項識別碼無效|(DM) 引數指定的值*屬性*ODBC 驅動程式支援的版本無效。<br /><br /> (DM) 引數指定的值*屬性*是唯讀的屬性。|  
 |HY114|驅動程式不支援連接層級非同步函式執行|(DM) 應用程式嘗試啟用 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 與驅動程式不支援非同步連接作業的非同步函式執行。|  
@@ -128,19 +128,19 @@ SQLRETURN SQLSetConnectAttr(
   
  可以設定某些連接屬性，只有之前已建立連線;只有在建立連接之後，才可以設定其他項目。 下表指出之前或之後建立的連接必須設定這些連接屬性。 *任一*表示之前或之後連接，可以設定屬性。  
   
-|attribute|設定之前或之後連線？|  
+|屬性|設定之前或之後連線？|  
 |---------------|-------------------------------------|  
-|SQL_ATTR_ACCESS_MODE|[1]|  
+|SQL_ATTR_ACCESS_MODE|Either[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|之前或之後|  
-|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|其中一個 [4]|  
+|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|Either[4]|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK|之前或之後|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT|之前或之後|  
-|SQL_ATTR_ASYNC_ENABLE 設定|其中一個 [2]|  
+|SQL_ATTR_ASYNC_ENABLE|Either[2]|  
 |SQL_ATTR_AUTO_IPD|之前或之後|  
-|SQL_ATTR_AUTOCOMMIT|其中一個 [5]|  
+|SQL_ATTR_AUTOCOMMIT|Either[5]|  
 |SQL_ATTR_CONNECTION_DEAD|After|  
 |SQL_ATTR_CONNECTION_TIMEOUT|之前或之後|  
-|SQL_ATTR_CURRENT_CATALOG|[1]|  
+|SQL_ATTR_CURRENT_CATALOG|Either[1]|  
 |SQL_ATTR_DBC_INFO_TOKEN|After|  
 |SQL_ATTR_ENLIST_IN_DTC|After|  
 |SQL_ATTR_LOGIN_TIMEOUT|之前|  
@@ -152,7 +152,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_TRACEFILE|之前或之後|  
 |SQL_ATTR_TRANSLATE_LIB|After|  
 |SQL_ATTR_TRANSLATE_OPTION|After|  
-|SQL_ATTR_TXN_ISOLATION|[3]|  
+|SQL_ATTR_TXN_ISOLATION|Either[3]|  
   
  [之前或之後連接，取決於驅動程式，可以設定 1] SQL_ATTR_ACCESS_MODE 和 SQL_ATTR_CURRENT_CATALOG。 不過，互通的應用程式設定，這些連接之前因為有些驅動程式不支援變更這些連接之後。  
   
@@ -185,7 +185,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|SQLPOINTER 值，指定是否要在由 Microsoft 元件服務所協調的分散式交易中使用的 ODBC 驅動程式。<br /><br /> 傳遞 DTC OLE 交易物件，指定要匯出至 SQL Server 或 sql_dtc_done 來結束連接的 DTC 關聯的交易。<br /><br /> 用戶端會呼叫 Microsoft 分散式交易協調器 (MS DTC) OLE itransactiondispenser:: Begintransaction 方法來開始 MS DTC 交易，並建立代表此交易的 MS DTC 交易物件。 接著，應用程式會呼叫 SQLSetConnectAttr SQL_ATTR_ENLIST_IN_DTC 選項與 ODBC 連接產生關聯的交易物件。 所有相關的資料庫活動都將在 MS DTC 交易的保護底下進行。 應用程式會呼叫使用 sql_dtc_done 來 SQLSetConnectAttr 來結束連接的 DTC 關聯。 如需詳細資訊，請參閱 MS DTC 文件集。|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|SQLUINTEGER 值，對應至要等候完成，然後再回到應用程式的登入要求的秒數。 預設會驅動程式而異。 如果*ValuePtr*為 0、 停用逾時和連線嘗試會無限期等候。<br /><br /> 如果指定的逾時超過資料來源中的最大的登入逾時，驅動程式取代該值，並傳回 SQLSTATE 01S02 （選項值已變更）。|  
 |SQL_ATTR_METADATA_ID (ODBC 3.0)|決定如何處理目錄函數的字串引數的 SQLUINTEGER 值。<br /><br /> 如果 SQL_TRUE，目錄函數的字串引數會被視為識別碼。 如此並不重要。 針對了非分隔的字串，驅動程式會移除任何尾端的空格，並為大寫的字串摺疊。 針對分隔的字串，驅動程式會移除任何開頭或尾端空格，且實際上會就分隔符號之間的任何。 如果這些引數的其中一個設定為 null 指標，函式會傳回 SQL_ERROR 並 SQLSTATE HY009 （使用無效的 null 指標）。<br /><br /> 如果 SQL_FALSE，目錄函數的字串引數不會被視為識別碼。 案例很重要。 它們可以包含字串的搜尋模式，根據引數。<br /><br /> 預設值為 SQL_FALSE。<br /><br /> *TableType*引數**SQLTables**，後者會採用值的清單，不會影響這個屬性。<br /><br /> SQL_ATTR_METADATA_ID 也可以設定在陳述式層級上。 （它是唯一的連接屬性，同時也是陳述式屬性）。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 目錄函式中的引數](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)。|  
-|SQL_ATTR_ODBC_CURSORS (連接 ODBC 2.0)|SQLULEN 值，指定驅動程式管理員如何使用 ODBC 資料指標程式庫：<br /><br /> SQL_CUR_USE_IF_NEEDED = 驅動程式管理員會使用 ODBC 資料指標程式庫，才需要它。 如果驅動程式支援 SQL_FETCH_PRIOR 選項**SQLFetchScroll**，驅動程式管理員使用的驅動程式的捲動功能。 否則，它會使用 ODBC 資料指標程式庫。<br /><br /> SQL_CUR_USE_ODBC = 驅動程式管理員會使用 ODBC 資料指標程式庫。<br /><br /> SQL_CUR_USE_DRIVER = 驅動程式管理員使用的驅動程式的捲動功能。 這是預設值。<br /><br /> 如需有關 ODBC 資料指標程式庫的詳細資訊，請參閱[附錄 f:ODBC 資料指標程式庫](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。 **警告：** Windows 的未來版本將移除資料指標程式庫。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。|  
+|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|SQLULEN 值，指定驅動程式管理員如何使用 ODBC 資料指標程式庫：<br /><br /> SQL_CUR_USE_IF_NEEDED = 驅動程式管理員會使用 ODBC 資料指標程式庫，才需要它。 如果驅動程式支援 SQL_FETCH_PRIOR 選項**SQLFetchScroll**，驅動程式管理員使用的驅動程式的捲動功能。 否則，它會使用 ODBC 資料指標程式庫。<br /><br /> SQL_CUR_USE_ODBC = 驅動程式管理員會使用 ODBC 資料指標程式庫。<br /><br /> SQL_CUR_USE_DRIVER = 驅動程式管理員使用的驅動程式的捲動功能。 這是預設值。<br /><br /> 如需有關 ODBC 資料指標程式庫的詳細資訊，請參閱[附錄 f:ODBC 資料指標程式庫](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。 **警告：** Windows 的未來版本將移除資料指標程式庫。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 Microsoft 建議使用驅動程式的資料指標功能。|  
 |SQL_ATTR_PACKET_SIZE (ODBC 2.0)|SQLUINTEGER 值，指定網路封包大小 （位元組）。 **注意：** 許多資料來源可能是不支援此選項，或只傳回，但不是設定 network packet size。 <br /><br /> 如果指定的大小超過最大的封包大小，或小於最小的封包大小，此驅動程式取代該值，並傳回 SQLSTATE 01S02 （選項值已變更）。<br /><br /> 如果已建立連線之後，應用程式會設定封包大小，此驅動程式會傳回 SQLSTATE HY011 （屬性現在無法設定）。|  
 |SQL_ATTR_QUIET_MODE (ODBC 2.0)|視窗控制代碼 (HWND)。<br /><br /> 如果是 null 指標的視窗控制代碼，驅動程式不會顯示任何對話方塊。<br /><br /> 如果視窗控制代碼不是 null 指標，它應該是應用程式的父視窗控制代碼。 這是預設值。 驅動程式會使用此控制代碼，來顯示對話方塊。 **注意：** SQL_ATTR_QUIET_MODE 連接屬性不適用於所顯示的對話方塊**SQLDriverConnect**。|  
 |SQL_ATTR_TRACE (ODBC 1.0)|告知驅動程式管理員執行追蹤 SQLUINTEGER 值：<br /><br /> SQL_OPT_TRACE_OFF = off （預設值） 的追蹤<br /><br /> SQL_OPT_TRACE_ON = on 的追蹤<br /><br /> 開啟追蹤時，驅動程式管理員會寫入追蹤檔的每個 ODBC 函式呼叫。 **注意：** 開啟追蹤時，驅動程式管理員可以傳回 SQLSTATE IM013 （追蹤檔案時發生錯誤） 從任何函式。 <br /><br /> 應用程式使用 SQL_ATTR_TRACEFILE 選項，指定追蹤檔案。 如果檔案已經存在，則驅動程式管理員會附加到檔案。 否則，它會建立該檔案。 如果追蹤已開啟且已指定任何追蹤檔案，驅動程式管理員就會寫入 SQL 檔案。登入的根目錄。<br /><br /> 應用程式可設定變數**ODBCSharedTraceFlag**表示啟用動態追蹤。 然後啟用所有目前執行的 ODBC 應用程式的追蹤。 如果應用程式將會關閉追蹤，它會關閉僅對該應用程式。<br /><br /> 如果**追蹤**應用程式呼叫時，將會設定為 1 的系統資訊 中的關鍵字**SQLAllocHandle**具有*HandleType* SQL_HANDLE_ENV 的所有啟用追蹤控制代碼。 它只能針對呼叫應用程式已啟用**SQLAllocHandle**。<br /><br /> 呼叫**SQLSetConnectAttr**具有*屬性*SQL_ATTR_TRACE 的不需要*ConnectionHandle*引數是有效而且如果，則不會傳回 SQL_ERROR*ConnectionHandle*是 NULL。 此屬性套用至所有連線。|  

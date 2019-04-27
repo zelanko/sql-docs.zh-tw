@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828235"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
   CDC 分隔器會將 CDC 來源資料流程中變更資料列的單一流程分割為插入、更新和刪除作業的不同資料流程。 資料流程是根據 `__$operation` 變更資料表中的必要資料行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及其標準值分割的。  
@@ -40,11 +40,11 @@ ms.locfileid: "58387739"
   
  此元件的錯誤輸出包含下列輸出資料行：  
   
--   **錯誤碼**:設定為 1。  
+-   **錯誤碼**：設定為 1。  
   
--   **錯誤資料行**:造成錯誤 （用於轉換錯誤） 的來源資料行。  
+-   **錯誤資料行**：造成錯誤 (用於轉換錯誤) 的來源資料行。  
   
--   **錯誤資料列資料行**:造成錯誤之資料列的輸入資料行。  
+-   **錯誤資料列資料行**：造成錯誤之資料列的輸入資料行。  
   
 ## <a name="configuring-the-cdc-splitter"></a>設定 CDC 分隔器  
  CDC 分隔器沒有可設定的屬性。  

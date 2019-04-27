@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678666"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概觀
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，可讓 ADO 存取 Microsoft SQL Server。
@@ -121,7 +121,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   多個資料類型強制型轉會導致不相符的類型。 例如，將強制轉型**sql_variant**使用的子型別**GUID**來**DBTYPE_VARIANT**的子類型會導致**safearray**（位元組）. 將此型別轉換回到**sql_variant**的新子類型會導致**陣列**（位元組）。
 
--   **資料錄集**包含的欄位**sql_variant**資料可以是遠端 （封送處理） 或持續性的才**sql_variant**包含特定的子類型。 嘗試遠端或取代下列項目不支援保存的資料子型別會造成執行階段錯誤 （不支援的轉換），從 Microsoft 持續性提供者 (MSPersist): **VT_VARIANT**， **VT_RECORD**， **VT_ILLEGAL**， **VT_UNKNOWN**， **VT_BSTR**，以及**VT_DISPATCH。**
+-   **資料錄集**包含的欄位**sql_variant**資料可以是遠端 （封送處理） 或持續性的才**sql_variant**包含特定的子類型。 嘗試遠端或取代下列項目不支援保存的資料子型別會造成執行階段錯誤 （不支援的轉換），從 Microsoft 持續性提供者 (MSPersist):**VT_VARIANT**， **VT_RECORD**， **VT_ILLEGAL**， **VT_UNKNOWN**， **VT_BSTR**，以及**VT_DISPATCH。**
 
 -   OLE DB Provider for SQL Server 在 MDAC 2.7、 MDAC 2.8 和 Windows DAC 6.0 具有名為的動態屬性**允許原生變數**，如名稱所示，可讓開發人員存取**sql_variant**中相對於其原生形式**DBTYPE_VARIANT**。 如果這個屬性設定，且**資料錄集**開啟與用戶端游標引擎 (**adUseClient**)，則**Recordset.Open**呼叫將會失敗。 如果這個屬性設定，且**資料錄集**開啟伺服器資料指標 (**adUseServer**)，則**Recordset.Open**呼叫會成功，但存取類型的資料行**sql_variant**都會產生錯誤。
 
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>動態屬性
  Microsoft OLE DB Provider for SQL Server 會插入到數個動態屬性**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。
 
- 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙 「 描述 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或請參閱[附錄 c: OLE DB 屬性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
+ 下表是 cross-index 的 ADO 和 OLE DB 的名稱，為每個動態屬性。 OLE DB 程式設計人員參考是參考的 ADO 屬性名稱的詞彙 「 描述 」。 您可以在 OLE DB 程式設計人員參考中找到這些屬性的詳細資訊。 搜尋索引中的 OLE DB 屬性名稱，或參閱[附錄 c:OLE DB 屬性](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)。
 
 ## <a name="connection-dynamic-properties"></a>連接的動態屬性
  下列屬性會新增至**屬性**的集合**連線**物件。

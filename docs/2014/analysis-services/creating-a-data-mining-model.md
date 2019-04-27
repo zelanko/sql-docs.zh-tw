@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679693"
 ---
 # <a name="creating-a-data-mining-model"></a>建立資料採礦模型
   資料模型化是資料採礦的步驟，藉由套用建立模式和趨勢*演算法*資料。 之後就可以使用這些模式進行分析，或進行預測。  

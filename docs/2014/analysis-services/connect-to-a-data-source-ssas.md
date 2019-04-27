@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 764884f73cb554794edfb998f2c8d7b8f8d7d1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680412"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>連接到資料來源 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您建立與各種資料來源之間的新資料來源連接，例如關聯式資料庫、資料摘要和檔案等資料來源。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  若要連接至資料來源，您必須先在機器上安裝適當的提供者。 您必須將適當的提供者安裝在工作空間資料庫伺服器上。 若是 32 位元 (x86) 伺服器，必須安裝 32 位元提供者。 若是 64 位元 (x64) 伺服器，必須安裝 64 位元提供者。  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 一律以 32 位元處理序執行，不管架構為何。 在 64 位元機器上執行 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 時，如果要安裝資料提供者，您應該注意下列事項：  
+ 不管架構為何，[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 一律在 32 位元處理序下執行。 在 64 位元機器上執行 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 時，如果要安裝資料提供者，您應該注意下列事項：  
   
 -   針對支援並行安裝 32 位元和 64 位元提供者的提供者，您必須同時安裝兩個提供者。  
   

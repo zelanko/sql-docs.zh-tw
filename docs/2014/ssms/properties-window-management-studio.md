@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823785"
 ---
 # <a name="properties-window-management-studio"></a>屬性視窗 (Management Studio)
   請利用這個視窗來檢視所選元素的屬性。 您也可以利用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
@@ -29,7 +29,7 @@ ms.locfileid: "52760640"
   
 ## <a name="options"></a>選項。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |**物件名稱**|列出目前選取的物件。 只有來自使用中編輯器或設計師的物件才可見。|  
 |**類別目錄**|依類別目錄列出已選取物件的全部屬性和屬性值。 您可以摺疊類別目錄，以減少可見屬性的數目。 當您展開或摺疊類別目錄時，類別目錄名稱左側會出現加號 (+) 或減號 (-)。 類別目錄依字母順序來排列。|  

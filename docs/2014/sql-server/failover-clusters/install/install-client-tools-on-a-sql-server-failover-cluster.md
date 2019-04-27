@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657477"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 容錯移轉叢集上安裝用戶端工具
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 之類的用戶端工具是在相同機器上所有執行個體通用的共用功能。 這些功能與可以並排安裝的支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本回溯相容。 在一個節點上一次只能存在一個版本的用戶端工具。  
@@ -43,7 +43,7 @@ ms.locfileid: "52800480"
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>在命令提示字元安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具  
   
-1.  若要安裝[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端工具和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]線上叢書 》，執行下列命令：Setup.exe/q/Action=Install /Features = Tools  
+1.  若要安裝[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端工具和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]線上叢書 》，執行下列命令：Setup.exe/q/Action=Install /Features=Tools  
   
 2.  若要安裝僅基本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理工具執行下列命令：Setup.exe/q/Action=Install 功能 = SSMS。 這會針對 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]、sqlcmd 公用程式，以及 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]Powershell 提供者，安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援。  
   

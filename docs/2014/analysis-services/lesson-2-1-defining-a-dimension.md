@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7976ba0779553824e78856d212933272b3cd452e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729550"
 ---
 # <a name="defining-a-dimension"></a>定義維度
   在下列工作中，您將使用「維度精靈」來建立「日期」維度。  
@@ -36,7 +36,7 @@ ms.locfileid: "48168028"
   
 5.  在 [主資料表] 清單中，選取 [日期]。  
   
-6.  按 [下一步] 。  
+6.  按一下 [下一步] 。  
   
 7.  在 [選取維度屬性] 頁面上，選取下列屬性旁的核取方塊：  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48168028"
   
     -   [日曆半年度] 變更為 [半年]  
   
-9. 按 [下一步] 。  
+9. 按一下 [下一步] 。  
   
 10. 在 [正在完成精靈] 頁面上，您可以在 [預覽] 窗格中看見 [日期] 維度及其屬性。  
   

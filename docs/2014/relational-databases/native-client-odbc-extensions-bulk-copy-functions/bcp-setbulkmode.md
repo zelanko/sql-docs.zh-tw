@@ -1,5 +1,5 @@
 ---
-title: bcp_setbulkmode |Microsoft Docs
+title: bcp_setbulkmode | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688789"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode 可讓您指定在大量複製作業中，設定單一函式呼叫中的所有資料行屬性的資料行格式。  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823128"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>加入預測用的資料來源檢視 (中繼資料採礦教學課程)
   在這項工作中，您將新增資料來源檢視，以便用於預測狀況。 預測模型的資料，必須包含可用來識別時間序列步驟的資料行。 如果您計畫分析多個資料序列，所有序列必須在同一個日期或時間步驟結束。  

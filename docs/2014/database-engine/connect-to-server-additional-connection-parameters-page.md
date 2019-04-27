@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808669"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>連接到伺服器 (其他連接參數頁面)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的 [連接到] 對話方塊會將最常用的連接字串值呈現為選項。 使用 [其他連接參數] 頁面可將更多連接參數新增到連接字串。  
@@ -45,14 +45,14 @@ ms.locfileid: "48087948"
   
 ## <a name="examples"></a>範例  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>範例 A：連接到 Database Engine  
+### <a name="example-a-connecting-to-the-database-engine"></a>範例 a:連線到資料庫引擎  
  若要連接到 ACCOUNTING 伺服器上的 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 資料庫，請在 [其他連接參數] 頁面內輸入以下程式碼：  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>範例 B：連接到 Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>範例 b:連接到 Analysis Services  
  若要連接到 Analysis Servers 並使得接聽通知的所有資料分割都得以即時查詢 (略過快取)，同時將回寫逾時值設定為 5，請在 [其他連接參數] 頁面內輸入以下程式碼：  
   
 ```  

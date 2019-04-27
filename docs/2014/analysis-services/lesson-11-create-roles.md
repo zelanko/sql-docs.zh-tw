@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729621"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 課：建立角色
   在這一課，您將建立角色。 角色會藉由僅限身為角色成員的 Windows 使用者存取的方式，提供模型資料庫物件和資料安全性。 每個角色定義單一權限：無、 讀取、 讀取和處理程序、 處理序或系統管理員。 您可以使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的 [角色管理員] 對話方塊，在模型撰寫期間定義角色。 部署模型之後，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](tabular-models/roles-ssas-tabular.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "52506768"
   
  由於組織中的 Windows 使用者和群組帳戶是唯一的，因此您可以將帳戶從特定組織加入至成員。 不過，針對此教學課程，您也可以將成員留空。 您仍然可以稍後在第 12 課中測試每個角色的效果：在 Excel 中進行分析。  
   
- 完成本課程的估計時間：**15 分鐘**  
+ 估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 11 課：建立分割區](lesson-10-create-partitions.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "52506768"
   
 4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。  
   
-5.  選擇性:按一下 [成員] 索引標籤，然後按一下 [新增]。  
+5.  選擇性：按一下 [成員] 索引標籤，然後按一下 [新增]。  
   
 6.  在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52506768"
   
      完成建立公式時，按 ENTER。  
   
-6.  選擇性:按一下 [成員] 索引標籤，然後按一下 [新增]。  
+6.  選擇性：按一下 [成員] 索引標籤，然後按一下 [新增]。  
   
 7.  在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52506768"
   
 4.  按一下 [成員] 索引標籤，然後按一下 [新增]。  
   
-5.  選擇性:在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
+5.  選擇性：在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   
 6.  確認您的選取，然後按一下 [確定]。  
   

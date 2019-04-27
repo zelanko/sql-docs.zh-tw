@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: df7698d222c2c2f0f68138eaa5f6289106b97659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799872"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47799476"
 |**row_count**|**int**|資料列群組中的列數。|  
 |**has_nulls**|**int**|如果資料行區段具有 Null 值，則為 1。|  
 |**base_id**|**bigint**|如果正在使用編碼類型 1 的基底值識別碼。  如果未使用編碼類型 1，base_id 會設定為-1。|  
-|**大小**|**float**|如果正在使用編碼類型 1 的範圍。  如果未使用編碼類型 1，會將範圍設為-1。|  
+|**magnitude**|**float**|如果正在使用編碼類型 1 的範圍。  如果未使用編碼類型 1，會將範圍設為-1。|  
 |**primary_dictionary_id**|**int**|值為 0 表示通用的字典。 -1 值表示沒有為此資料行建立全域字典。|  
 |**secondary_dictionary_id**|**int**|為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 值表示沒有本機的字典，此區段。|  
 |**min_data_id**|**bigint**|資料行區段中的最小資料識別碼。|  
@@ -77,8 +77,8 @@ GO
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

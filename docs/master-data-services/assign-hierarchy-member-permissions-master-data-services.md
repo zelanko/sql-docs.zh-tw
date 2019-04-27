@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bbf04fb23dc780b0f30c5e5b276b8666c974bc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817485"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>指派階層成員權限 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52777220"
   
  階層成員權限為選擇性。 它們為必要的模型物件權限提供更細微的控制。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -58,7 +58,7 @@ ms.locfileid: "52777220"
   
 10. 從功能表中，選取 [建立]、[讀取]、[更新] 和 [刪除] 的組合，或是 [拒絕] 權限。  
   
-11. 按一下 **[儲存]**。  
+11. 按一下 [儲存] 。  
   
     > [!NOTE]  
     >  階層成員權限不會立即生效。 如需詳細資訊，請參閱[立即套用成員權限 &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)。  

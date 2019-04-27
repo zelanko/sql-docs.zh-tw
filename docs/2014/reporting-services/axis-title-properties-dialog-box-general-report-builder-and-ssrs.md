@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f6f6f0f1140b4cd46ecdea496ecb593bea7a0eb9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666848"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>軸標題屬性對話方塊、一般 (報表產生器及 SSRS)
   選取 [軸標題屬性] 對話方塊上的 [一般] 來定義軸標題。 軸標題會顯示在 X 軸之下，或 Y 軸旁邊。  

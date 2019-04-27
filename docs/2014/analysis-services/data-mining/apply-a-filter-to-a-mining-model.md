@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692094"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>將篩選套用至採礦模型
   如果採礦結構包含巢狀資料表，則篩選可以套用至案例資料表、巢狀資料表或兩者。  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  按一下 [值] 文字方塊，然後在方塊中輸入值。  
   
-     例如，選取 `Income` 為資料行，然後選取大於運算子 (>)，再輸入 `30000`。  
+     例如，選取`Income`做為資料行，然後選取大於運算子 (>)、，然後輸入`30000`。  
   
 9. 在方格中，按下一個資料列。  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 選取運算子並輸入值，如步驟 7 和 8 所述。  
   
-     例如，再次選取 `Income` 為資料行，然後選取小於運算子 (<)，再輸入 `40000`。  
+     例如，選取`Income`一次的資料行，請選取小於運算子 (<)、，然後輸入`40000`。  
   
 12. 在方格中，按下一個資料列。  
   

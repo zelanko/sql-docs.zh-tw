@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794279"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師之 [翻譯] 索引標籤上的 [翻譯詳細資料] 窗格，即可定義和管理目前選取之 Cube 的翻譯。  
@@ -36,7 +36,7 @@ ms.locfileid: "48118748"
   
 -   [量值]  
   
-     `Caption` 和`DisplayFolder`屬性  
+     `Caption` 和 `DisplayFolder` 屬性  
   
 -   維度  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48118748"
   
 -   關鍵效能指標 (KPI)  
   
-     `Caption``Description`，和`DisplayFolder`屬性  
+     `Caption`、`Description` 和 `DisplayFolder` 屬性  
   
 -   動作  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48118748"
   
      `Caption` 屬性  
   
- **\<語言 >**  
+ **\<Language>**  
  鍵入所選語言中 Cube 物件的屬性值。  
   
 ## <a name="context-menu"></a>操作功能表  

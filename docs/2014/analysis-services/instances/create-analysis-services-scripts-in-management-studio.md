@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730209"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中建立 Analysis Services 指令碼
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含指令碼產生功能、範本和編輯器，您可以使用它們來編寫 Analysis Services 物件和工作的指令碼。  
@@ -36,7 +36,7 @@ ms.locfileid: "48067184"
   
 2.  以滑鼠右鍵按一下資料庫，然後按一下 [備份]。 這會開啟 [備份資料庫] 對話方塊。 指定備份檔案的名稱，並選擇要用於此備份的選項。  
   
-3.  按一下對話方塊頂端的 [指令碼]。 指令碼功能是 Management Studio 中所有以工作為基礎的對話方塊的一部分。 它有下列選項：[編寫動作的指令碼至新增查詢視窗] 可開啟查詢編輯器視窗、[編寫動作的指令碼至檔案] 可將 XMLA 指令碼儲存至檔案，或 [編寫動作的指令碼至剪貼簿] 可將 XMLA 指令碼儲存至剪貼簿。  
+3.  按一下對話方塊頂端的 [指令碼]。 指令碼功能是 Management Studio 中所有以工作為基礎的對話方塊的一部分。 它有下列選項：**指令碼至新增查詢視窗的動作**以開啟 查詢編輯器 視窗中，**檔案的指令碼動作**將 XMLA 指令碼儲存至檔案中，或**指令碼動作以 剪貼簿**儲存 XMLA 指令碼剪貼簿。  
   
      請注意，Analysis Services 指令碼不支援 Management Studio 中列為指令碼選項的 [編寫動作的指令碼至作業] 選項。  
   
@@ -60,13 +60,13 @@ ms.locfileid: "48067184"
   
 2.  尋找您要建立指令碼的物件，來建立、改變或刪除物件。  
   
-3.  以滑鼠右鍵按一下物件，指向 [編寫 Cube 的指令碼為]，然後指向 [CREATE 至]、[ALTER 至] 或 [DELETE 至]，再按下列其中一個選項：[新增查詢編輯器視窗] 可開啟查詢編輯器視窗、[檔案] 可將 XMLA 指令碼儲存至檔案，或 [剪貼簿] 可將 XMLA 指令碼儲存至剪貼簿。  
+3.  以滑鼠右鍵按一下物件，指向**指令碼的 Cube 做**，指向**CREATE 至**， **ALTER 至**，或**Delete 至**，然後按一下其中一個下列選項：**新的 [查詢編輯器] 視窗**以開啟 [查詢編輯器] 視窗中，**檔案**XMLA 指令碼儲存至檔案，或**剪貼簿**儲存 XMLA 指令碼至剪貼簿。  
   
     > [!NOTE]  
     >  一般而言，如果您要建立檔案的多個不同版本，請選取 [檔案]。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中編寫管理工作](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [在 Analysis Services 中編寫管理工作的指令碼](../script-administrative-tasks-in-analysis-services.md)   
+ [XMLA 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

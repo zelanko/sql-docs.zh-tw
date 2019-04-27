@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731580"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>根據範例填滿 (適用於 Excel 的資料表分析工具)
   ![資料表分析工具中的 [根據範例填滿] 按鈕](media/tat-fillex.gif "資料表分析工具中的 [根據範例填滿] 按鈕")  
@@ -62,7 +62,7 @@ ms.locfileid: "48160898"
   
 |「資料行」|值|喜好|相對影響|  
 |------------|-----------|------------|---------------------|  
-|StateProvinceCode|AB|>500 公里|80%|  
+|StateProvinceCode|AB|> gt;500 公里|80%|  
   
  這表示中的值 AB **StateProvinceCode**強烈預測資料行的運輸距離 > gt;500 公里。  
   

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667181"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器會顯示發行集和訂閱的狀態資訊。 依預設，複寫監視器只針對未初始化的訂閱顯示警告，但您可以啟用於其他條件下發出警告。 建議您啟用拓撲警告，這樣您才能收到即時的狀態和效能資訊。  
@@ -61,7 +61,7 @@ ms.locfileid: "52781190"
   
 2.  按一下 **[警告]** 索引標籤。若要檢視此索引標籤上選項的詳細資訊，請按一下功能表列上的 **[說明]** 。  
   
-3.  透過選取適當的核取方塊啟用警告：**若訂閱將過期的臨界值內，即發出警告**或是**若延遲超過臨界值，即發出警告**。  
+3.  透過選取適當的核取方塊啟用警告：[若訂閱將在臨界值內過期，就發出警告] 或 [若延遲超過臨界值，就發出警告]。  
   
 4.  在 **[臨界值]** 資料行中設定警告的臨界值。 例如，如果您在步驟 3 選取 **[若延遲超過臨界值，就發出警告]** ，便可以在 **[臨界值]** 資料行中選取 **[60 秒]** 的延遲。  
   

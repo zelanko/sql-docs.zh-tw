@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c169795ceb4c16d7928a9cc55b9f9bc9b9917dda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730135"
 ---
 # <a name="connect-to-analysis-services"></a>連接到 Analysis Services
   請使用本節中的資訊，來了解連接字串屬性，用於連接的用戶端程式庫，Analysis Services 支援的驗證方法，以及如何設定或清除連接再讓伺服器離線。  
@@ -32,18 +32,18 @@ ms.locfileid: "48195244"
   
 |連結|工作描述|  
 |----------|----------------------|  
-|[從用戶端應用程式連接&#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|如果您還不熟悉 Analysis Services，請閱讀本主題，了解最常搭配 Analysis Services 使用的工具和應用程式。|  
-|[連接字串屬性&#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services 包括許多伺服器和資料庫屬性，可讓您為特定應用程式自訂連接，不必考慮執行個體或資料庫的設定方式。|  
-|[支援的 Analysis Services 的驗證方法](authentication-methodologies-supported-by-analysis-services.md)|本主題會簡短介紹 Analysis Services 所使用的驗證方法。|  
+|[從用戶端應用程式連接 &#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|如果您還不熟悉 Analysis Services，請閱讀本主題，了解最常搭配 Analysis Services 使用的工具和應用程式。|  
+|[連接字串屬性 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services 包括許多伺服器和資料庫屬性，可讓您為特定應用程式自訂連接，不必考慮執行個體或資料庫的設定方式。|  
+|[Analysis Services 支援的驗證方法](authentication-methodologies-supported-by-analysis-services.md)|本主題會簡短介紹 Analysis Services 所使用的驗證方法。|  
 |[設定 Analysis Services 進行 Kerberos 限制委派](configure-analysis-services-for-kerberos-constrained-delegation.md)|許多商業智慧方案都需要進行模擬，確保只會將經過授權的資料傳回給每個使用者。 在本主題中，您將了解模擬的使用需求， 以及為 Kerberos 限制委派設定 Analysis Services 的步驟。|  
-|[Analysis Services 執行個體註冊 SPN](spn-registration-for-an-analysis-services-instance.md)|如果是在多伺服器解決方案中模擬或委派使用者識別的服務，Kerberos 驗證就需要有效的服務主要名稱 (SPN)。 請透過本主題中的資訊了解 SPN 的建構以及為 Analysis Services 註冊 SPN 的步驟。|  
-|[設定 Internet Information Services 上的 HTTP 存取 Analysis Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|在設定可透過 HTTP 存取 Analysis Services 時，基本驗證或跨網域界限是兩個很重要的因素。|  
+|[為 Analysis Services 執行個體註冊 SPN](spn-registration-for-an-analysis-services-instance.md)|如果是在多伺服器解決方案中模擬或委派使用者識別的服務，Kerberos 驗證就需要有效的服務主要名稱 (SPN)。 請透過本主題中的資訊了解 SPN 的建構以及為 Analysis Services 註冊 SPN 的步驟。|  
+|[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)|在設定可透過 HTTP 存取 Analysis Services 時，基本驗證或跨網域界限是兩個很重要的因素。|  
 |[用於 Analysis Services 連接的資料提供者](data-providers-used-for-analysis-services-connections.md)|Analysis Services 提供三套用於存取伺服器作業或 Analysis Services 資料的用戶端程式庫。 本主題簡單介紹 ADOMD.NET、Analysis Services 管理物件 (AMO) 和 Analysis Services OLE DB 提供者 (MSOLAP)。|  
-|[使用者和 Analysis Services 伺服器上的工作階段中斷連線](disconnect-users-and-sessions-on-analysis-services-server.md)|讓伺服器離線或執行基準效能測試之前，請清除現有的連接和工作階段。|  
+|[中斷 Analysis Services 伺服器上的使用者和工作階段連接](disconnect-users-and-sessions-on-analysis-services-server.md)|讓伺服器離線或執行基準效能測試之前，請清除現有的連接和工作階段。|  
   
 ## <a name="see-also"></a>另請參閱  
- [後續安裝組態&#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
+ [後續安裝組態 &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)   
  [Analysis Services 中設定伺服器屬性](../server-properties/server-properties-in-analysis-services.md)   
- [Analysis Services 中編寫管理工作](../script-administrative-tasks-in-analysis-services.md)  
+ [在 Analysis Services 中編寫管理工作的指令碼](../script-administrative-tasks-in-analysis-services.md)  
   
   

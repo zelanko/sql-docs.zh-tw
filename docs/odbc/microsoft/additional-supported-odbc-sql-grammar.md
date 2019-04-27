@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658252"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>其他支援的 ODBC SQL 文法
 ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句，核心和擴充 ODBC 2.5 文法中。 會顯示其他資訊，請跳至[ALTER TABLE 陳述式](../../odbc/microsoft/alter-table-statement.md)，[相互關聯名稱](../../odbc/microsoft/correlation-names.md)，並[程序引動過程](../../odbc/microsoft/procedure-invocation.md)主題。  
@@ -40,7 +40,7 @@ ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句，核�
   
 -   [日期算術](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet：日期、時間和時間戳記常值](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet:日期、 時間和時間戳記常值](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX 陳述式](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -56,7 +56,7 @@ ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句，核�
   
 -   IN (*valuelist*) （核心）  
   
--   [Jet： 外部聯結](../../odbc/microsoft/jet-outer-joins.md)（擴充）  
+-   [Jet:外部聯結](../../odbc/microsoft/jet-outer-joins.md)（擴充）  
   
 -   SELECT 陳述式 （擴充） （包括 GROUP BY、 HAVING 和 UNION 子句）  
   

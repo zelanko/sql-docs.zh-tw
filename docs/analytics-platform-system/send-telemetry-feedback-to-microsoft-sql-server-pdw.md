@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678382"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>將遙測意見反應傳送給 Microsoft 分析平台系統
 Analytics Platform System 有一項選擇性的遙測功能，管理主控台資料傳送給 Microsoft。 
@@ -42,7 +42,7 @@ Analytics Platform System 有一項選擇性的遙測功能，管理主控台資
     > [!NOTE]  
     > 若要匯入您必須使用兩個句點命令中。  
   
-    **範例：**  
+    **範例:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ Analytics Platform System 有一項選擇性的遙測功能，管理主控台資
     > [!NOTE]  
     > 若要匯入您必須使用兩個句點命令中。  
   
-    **範例：**  
+    **範例:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Analytics Platform System 有一項選擇性的遙測功能，管理主控台資
   
 4.  叫用`Disable-RemoteMonitoring`命令不加任何參數。 此命令會停止傳送意見反應。 （這不會影響本機監視。）不過，命令將會不停用 DNS 轉寄站及/或停用任何網際網路連線。 這都必須已成功停用的意見反應之後以手動方式完成。  
   
-    **範例：**  
+    **範例:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

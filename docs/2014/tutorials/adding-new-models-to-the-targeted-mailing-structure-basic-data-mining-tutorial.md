@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822629"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>將新模型加入至目標郵寄結構 (基本資料採礦教學課程)
   在這個工作中，您將定義另外兩個模型，使用**採礦模型**資料採礦設計師 索引標籤。 您將會使用 Microsoft 群集和 Microsoft 貝氏機率分類演算法來建立模型。 之所以選擇這兩種演算法，是因為它們可以預測離散值 (例如自行車購買)。 如需有關這些演算法的詳細資訊，請參閱 < [Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)和[Microsoft 貝氏機率分類演算法](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676176"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>第 1 課：建立 Windows Azure 儲存體帳戶和容器
   在您開始將 SQL Server 資料檔案儲存在 Windows Azure 儲存體之前，必須先建立 Windows Azure 儲存體帳戶和 Blob 容器以及共用存取簽章。 第 1 課會逐步引導您完成登入 Windows Azure 管理入口網站，以及建立儲存體帳戶、Blob 容器和共用存取簽章的步驟。  

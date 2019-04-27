@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc34ca4eb6e73233fc5302c154f5397bf44a81d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680591"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>正在完成精靈 (彙總設計精靈)
   使用 **[正在完成精靈]** 頁面，即可將彙總設計儲存至選取的資料分割。 在彙總設計精靈完成設計並儲存彙總之後，您也可以選擇性地部署和處理選取的資料分割。  

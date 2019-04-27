@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665340"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox 驅動程式)
 > [!NOTE]  
@@ -34,8 +34,8 @@ ms.locfileid: "47694588"
 |DEFAULTDIR|目錄的路徑規格。|  
 |DESCRIPTION|資料來源中資料的說明。<br /><br /> 這會設定為相同的選項**描述**在安裝程式 對話方塊中。|  
 |DRIVER|驅動程式 DLL 的路徑規格。|  
-|DRIVERID|驅動程式的整數識別碼。<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
-|獨佔|判斷資料庫是否將會開啟以獨佔模式 （存取只有一位使用者一次），或共用 （存取多個使用者一次） 的模式。 可以是 true （獨佔模式） 或 false （共用模式）。<br /><br /> 這會設定為相同的選項**獨佔**在安裝程式 對話方塊中。|  
+|DRIVERID|驅動程式的整數識別碼。<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
+|EXCLUSIVE|判斷資料庫是否將會開啟以獨佔模式 （存取只有一位使用者一次），或共用 （存取多個使用者一次） 的模式。 可以是 true （獨佔模式） 或 false （共用模式）。<br /><br /> 這會設定為相同的選項**獨佔**在安裝程式 對話方塊中。|  
 |FIL|檔案類型 Paradox 3.x，Paradox 4.x 或 Paradox 5.x|  
 |檔案類型|文字驅動程式 （文字） 的檔案類型。|  
 |PAGETIMEOUT|指定的時間，以第二個方法，移除前頁面 （如果未使用） 會保留在緩衝區中的十分之一。 預設值為 600 的十分之一秒 （60 秒）。 請注意，此選項適用於使用 ODBC 驅動程式的所有資料來源。<br /><br /> 這會設定為相同的選項**頁面上的逾時**在安裝程式 對話方塊中。|  

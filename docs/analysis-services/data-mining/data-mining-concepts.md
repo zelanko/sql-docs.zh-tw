@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650002"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,15 +26,15 @@ ms.locfileid: "54185134"
   
  這些模式和趨勢可收集在一起，並定義為 *「資料採礦模型」*(Data mining model)。 採礦模型可套用至特定案例，例如：  
   
--   **預測**:估計銷售、預測伺服器負載或伺服器停機時間  
+-   **預測**:估計銷售、 預測伺服器負載或伺服器停機時間  
   
--   **風險和機率**:選擇目標郵件的最佳客戶、為風險案例決定可能的損益平衡點、指派診斷或其他結果的機率  
+-   **風險和機率**:選擇最佳客戶為目標的郵寄，判斷為風險案例可能的損益平衡點、 指派診斷或其他結果的機率  
   
--   **建議**:決定可能一起銷售的產品、產生建議  
+-   **建議**:判斷哪些產品可能一起銷售產生建議  
   
--   **尋找順序**:分析客戶在購物車中的選擇、預測下一個可能的事件  
+-   **尋找順序**:分析客戶在購物籃、 預測下一個可能的事件中的選擇  
   
--   **群組**:將客戶或事件分成相關項目的叢集、分析及預測相似性  
+-   **群組**:將客戶或事件分成相關項目、 分析及預測相似性的叢集  
   
  建立採礦模型是較大型程序的一部分，它包括從詢問資料相關問題與建立模型回答這些問題，到部署該模型到工作環境中的一切細節。 可以使用下列 6 個基本步驟來定義這個程序：  
   

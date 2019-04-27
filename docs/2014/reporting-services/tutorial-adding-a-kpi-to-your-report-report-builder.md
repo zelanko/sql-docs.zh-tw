@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648225"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教學課程：將 KPI 新增至報表 (報表產生器)
   關鍵效能指標 (KPI) 是具有商務重要性的可測量值。 本教學課程將說明如何將 KPI 加入至報表。 在這個案例中，依產品子類別排列的銷售摘要便是 KPI。 KPI 的目前狀態會使用色彩、量測計和指標顯示。  

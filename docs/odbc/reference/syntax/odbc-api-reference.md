@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653395"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 參考
 在本節中的主題描述依字母順序的每個 ODBC 函式。 每個函式定義為 C 程式設計語言函式。 描述包含下列各項：  

@@ -1,5 +1,5 @@
 ---
-title: 步驟 2： 叫用伺服器程式 （RDS 教學課程） |Microsoft Docs
+title: 步驟 2:叫用伺服器程式 （RDS 教學課程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62675818"
 ---
-# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步驟 2：叫用伺服器程式 (RDS 教學課程)
+# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>步驟 2:叫用伺服器程式 (RDS 教學課程)
 當您叫用方法，以在用戶端*proxy*，實際的程式，在伺服器上執行的方法。 在此步驟中，您會在伺服器上執行查詢。  
   
 > [!IMPORTANT]
@@ -65,5 +65,5 @@ Sub RDSTutorial2B()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟 3： 伺服器取得資料錄集 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+ [步驟 3：伺服器會取得資料錄集 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6cfe1f291bd6a045bea635ea4501e76854d32e47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794548"
 ---
 # <a name="process-database-table-or-partition"></a>處理資料庫、資料表或資料分割
   本主題中的工作描述如何使用手動處理表格式模型資料庫、 資料表或資料分割**程序\<物件 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
@@ -33,7 +33,7 @@ ms.locfileid: "48067718"
   
 2.  在 **[處理資料庫]** 對話方塊的 **[模式]** 清單方塊中，選取下列其中一個處理模式：  
   
-    |[模式]|描述|  
+    |模式|描述|  
     |----------|-----------------|  
     |**處理預設**|偵測資料庫物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立 (重新計算) 階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料庫及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。 此選項需要最多資源。|  
@@ -48,7 +48,7 @@ ms.locfileid: "48067718"
   
 2.  在 **[處理資料表]** 對話方塊的 **[模式]** 清單方塊中，選取下列其中一個處理模式：  
   
-    |[模式]|描述|  
+    |模式|描述|  
     |----------|-----------------|  
     |**處理預設**|偵測資料表物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立 (重新計算) 階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料表物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。 此選項需要最多資源。|  
@@ -66,7 +66,7 @@ ms.locfileid: "48067718"
   
 3.  在 **[處理資料分割]** 對話方塊的 **[模式]** 清單方塊中，選取下列其中一個處理模式：  
   
-    |[模式]|描述|  
+    |模式|描述|  
     |----------|-----------------|  
     |**處理預設**|偵測資料分割物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的資料分割物件傳遞為完整處理的狀態。 載入空白資料表和資料分割的資料；建立或重新建立 (重新計算) 階層、導出資料行及關聯性。|  
     |**完整處理**|處理資料分割物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件已進行過任何結構性變更時，就需要這種處理。|  
@@ -77,7 +77,7 @@ ms.locfileid: "48067718"
 4.  在 **[處理]** 核取方塊資料行中，選取您想透過選取的模式處理的資料分割，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型資料分割&#40;SSAS 表格式&#41;](tabular-model-partitions-ssas-tabular.md)   
- [建立及管理表格式模型資料分割&#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [表格式模型資料分割 &#40;SSAS 表格式&#41;](tabular-model-partitions-ssas-tabular.md)   
+ [建立及管理表格式模型資料分割 &#40;SSAS 表格式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

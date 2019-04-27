@@ -1,5 +1,5 @@
 ---
-title: 實體架構 (Analysis Services-資料採礦) |Microsoft 文件
+title: 實體架構 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99e2cf7386bdf395ac82f05cc0b94f3e2b5e3123
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668508"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>實體架構 (Analysis Services – 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會使用伺服器和用戶端元件提供商業智慧應用程式的資料採礦功能：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：  
   
 -   伺服器元件是以 Microsoft Windows 服務的形式實作。 同一部電腦上可以有多個執行個體，每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體都實作為個別的 Windows 服務執行個體。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "34015745"
 ## <a name="server-configuration"></a>伺服器組態  
  一個伺服器執行個體可以支援多個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，而且每個資料庫都有自己的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務執行個體，可回應用戶端要求並處理物件。  
   
- 如果您想要處理表格式模型和資料採礦及/或多維度模型，則必須安裝個別的執行個體。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援並存安裝表格式模式下所執行的執行個體 (該執行個體會使用 xVelocity 記憶體中分析引擎 (VertiPaq) 儲存引擎) 以及使用其中一個傳統 OLAP、MOLAP 或 ROLAP 組態所執行的執行個體。 如需詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+ 如果您想要處理表格式模型和資料採礦及/或多維度模型，則必須安裝個別的執行個體。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援並存安裝表格式模式下所執行的執行個體 (該執行個體會使用 xVelocity 記憶體內部分析引擎 (VertiPaq) 儲存引擎) 以及使用其中一個傳統 OLAP、MOLAP 或 ROLAP 組態所執行的執行個體。 如需詳細資訊，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  用戶端與 Analysis Services 伺服器之間的所有通訊都會使用 XMLA，這是一種與平台和語言無關的通訊協定。 從用戶端收到要求時，Analysis Services 就會判斷此要求是否與 OLAP 或資料採礦有關，然後適當地路由傳送此要求。 如需詳細資訊，請參閱 [OLAP 引擎伺服器元件](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [邏輯架構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

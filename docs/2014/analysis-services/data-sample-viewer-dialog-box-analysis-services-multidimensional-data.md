@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccd8ad508cf0f1bc56997a4d88927bff85065023
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732849"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>資料範例檢視器對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [資料範例檢視器] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可檢視事實資料表的前 1000 筆記錄，其中將提供量值給新的 Cube 。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662212"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 事件類別
   **Log File Auto Shrink** 事件類別指出記錄檔會自動壓縮。 如果記錄檔是因為明確的 ALTER DATABASE 陳述式而壓縮，則不會觸發這個事件。  

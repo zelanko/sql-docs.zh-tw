@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662989"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件類別
   **Database Suspect Data Page** 事件類別指出何時要將頁面加入 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 中的 [suspect_pages](../databases/msdb-database.md)資料表。 請在監視可疑頁面出現的追蹤中包含此事件類別。  

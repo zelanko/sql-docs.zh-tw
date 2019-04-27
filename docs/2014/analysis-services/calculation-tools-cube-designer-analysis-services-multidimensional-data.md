@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61aed2ac785c628d7a67df39af13aaf0a7c74914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681108"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算工具 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師之 **[計算]** 索引標籤上的 **[計算工具]** 窗格，即可瀏覽可在計算中使用的中繼資料、函數以及範本。  
@@ -45,7 +45,7 @@ ms.locfileid: "48104900"
 ## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [計算工具] 窗格中的元素，即可顯示提供下列選項的內容功能表：  
   
- **複製**  
+ **[複製]**  
  選取即可將 **[中繼資料]** 或 **[函數]** 中選取的元素複製到剪貼簿。  
   
 > [!NOTE]  

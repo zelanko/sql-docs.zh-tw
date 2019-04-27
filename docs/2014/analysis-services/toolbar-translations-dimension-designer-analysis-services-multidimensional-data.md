@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a40ad5418038aec31b64400932173117f17bef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794183"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用工具列按鈕，即可執行 **[維度設計師]** 之 **[翻譯]** 檢視中的一般作業。  

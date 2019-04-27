@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660054"
 ---
 # <a name="browsing-a-clustering-model"></a>瀏覽群集模型
   當您開啟叢集模型使用**瀏覽**，會顯示此模型中的互動式檢視器中的群集檢視器類似[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 此檢視器可協助您探索已建立的叢集，並且了解叢集特性。 您也可以將個別的區段與其他區段或母體進行比較與對照。  

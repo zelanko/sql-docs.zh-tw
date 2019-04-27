@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f7c22eea63e00126eb674532736071ed39aa9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861659"
 ---
 # <a name="programming-considerations"></a>程式設計考量
 本節將簡短討論幾個撰寫 ODBC 應用程式和驅動程式相關的主題。  

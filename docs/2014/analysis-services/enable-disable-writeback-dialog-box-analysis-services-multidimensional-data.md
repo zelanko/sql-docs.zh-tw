@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6682d8ced6b80e12aea783857da548498641ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731500"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>啟用或停用回寫對話方塊 (Analysis Services-多維度資料)
   [啟用/停用回寫] 對話方塊會啟用或停用 Cube 中之量值群組的回寫。 啟用量值群組的回寫會為該量值群組定義一個回寫資料分割，並建立一個回寫資料表。 停用量值群組的回寫會移除回寫資料分割，但是不會刪除回寫資料表，以避免非預期的資料遺失。 執行下列動作即可顯示 [啟用/停用回寫] 對話方塊：  

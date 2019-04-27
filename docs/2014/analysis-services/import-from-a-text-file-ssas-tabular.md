@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730418"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>從文字檔匯入 (SSAS 表格式)
   您可以使用 [資料表匯入精靈]，從 Microsoft Excel 檔案和文字檔匯入資料。  
@@ -32,7 +32,7 @@ ms.locfileid: "48055766"
 3.  請遵循 [資料表匯入精靈] 中的步驟來進行。 在後續頁面中，您將可以選取特定的資料表，並使用 **[選取資料表和檢視表]** 頁面以套用篩選。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
+ [匯入資料 &#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)   
  [支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

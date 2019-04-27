@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730618"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 瀏覽器 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 [KPI] 索引標籤的 [KPI 瀏覽器] 窗格，即可檢視和測試關鍵效能指標 (KPI) 的結果。 瀏覽之前，KPI 必須先部署至 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。  
@@ -41,7 +41,7 @@ ms.locfileid: "48174598"
   
 |值|描述|  
 |-----------|-----------------|  
-|**等於**|結果會限制為 **[篩選運算式]** 中定義的集合。|  
+|**Equal**|結果會限制為 **[篩選運算式]** 中定義的集合。|  
 |**不等於**|結果會限制為 **[篩選運算式]** 中定義之集合所排除的成員。|  
 |**In**|結果會限制為 **[篩選運算式]** 中選擇的命名集。|  
 |**不在**|結果會限制為 **[篩選運算式]** 中選擇之命名集所排除的成員。|  
