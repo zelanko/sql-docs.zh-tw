@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ad9106bb9cde64953643e86bf81e72684858bd65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817114"
 ---
 # <a name="msdbmsmap-transact-sql"></a>MSdbms_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52811310"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**msdbms_datatype_mapping**|**int**|唯一識別資料類型對應。|  
+|**map_id**|**int**|唯一識別資料類型對應。|  
 |**src_dbms_id**|**int**|識別來源 DBMS 藉由指定其**msdbms**中[MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md)資料表。|  
 |**dest_dbms_id**|**int**|識別目的地 DBMS 藉由指定其**msdbms**中[MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md)資料表。|  
 |**src_datatype_id**|**int**|識別**msdbms_datatype**從[MSdbms_datatype](../../relational-databases/system-tables/msdbms-datatype-transact-sql.md)來源資料類型的資料表。|  

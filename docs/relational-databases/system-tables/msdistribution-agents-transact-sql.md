@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817129"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52785750"
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
-|**發行集**|**sysname**|發行集的名稱。|  
+|**publication**|**sysname**|發行集的名稱。|  
 |**subscriber_id**|**smallint**|訂閱者的識別碼，只供眾所周知的代理程式使用。 如果是匿名代理程式，便會保留這個資料行。|  
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 發送。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
@@ -50,7 +50,7 @@ ms.locfileid: "52785750"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|散發或合併代理程式的建立日期時間。|  
-|**queue_id**|**sysname**|用來尋找佇列更新訂閱之佇列的識別碼。 如果是非佇列訂閱，這個值就是 NULL。 如果是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 為基礎的訂閱，這個值是一個 GUID，用來唯一識別訂閱要用的佇列。 對於 SQL Server 為基礎的佇列發行集，資料行包含值**SQL**。<br /><br /> 注意：[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 已被取代，不再受到支援。|  
+|**queue_id**|**sysname**|用來尋找佇列更新訂閱之佇列的識別碼。 如果是非佇列訂閱，這個值就是 NULL。 如果是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing 為基礎的訂閱，這個值是一個 GUID，用來唯一識別訂閱要用的佇列。 對於 SQL Server 為基礎的佇列發行集，資料行包含值**SQL**。<br /><br /> 注意:使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing 已被取代，不再支援。|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|指出是否能從遠端啟動代理程式。<br /><br /> **0**指定不能從遠端啟動代理程式。<br /><br /> **1**指定代理程式會在遠端電腦上，並指定在遠端電腦上啟動*offload_server*屬性。|  
 |**offload_server**|**sysname**|將用來啟用遠端代理程式之伺服器的網路名稱。|  
