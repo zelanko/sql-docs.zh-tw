@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724213"
 ---
 # <a name="hard-coded-sql-statements"></a>硬式編碼的 SQL 陳述式
 通常執行固定的工作的應用程式包含硬式編碼的 SQL 陳述式。 例如，訂單輸入系統可能會使用下列呼叫來清單開啟的銷售訂單：  
@@ -29,7 +29,7 @@ ms.locfileid: "47746236"
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- 有數個優點硬式編碼的 SQL 陳述式： 它們可以寫入應用程式時，測試它們是容易實作比在執行階段; 建構的陳述式而且它們會簡化應用程式。  
+ 有數個優點硬式編碼的 SQL 陳述式：它們可以寫入應用程式時，測試它們是容易實作比在執行階段; 建構的陳述式而且它們會簡化應用程式。  
   
  使用陳述式參數，並準備陳述式提供更好的方式使用硬式編碼的 SQL 陳述式。 例如，假設組件資料表包含 PartID、 描述和價格資料行。 將新的資料列插入此資料表的一個方法是建構及執行**插入**陳述式：  
   

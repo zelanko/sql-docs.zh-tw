@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a132395bbd95997832e2a1df6948179cb2ffe8aa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726942"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多維度模型中的計算
   使用 [Cube 設計師] 的 [計算] 索引標籤來建立導出成員、命名集，和其他多維度運算式 (MDX) 計算。  

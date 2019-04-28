@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721142"
 ---
 # <a name="initialize-subscriptions"></a>初始化訂閱
   訂閱者必須先初始化，才能開始接收複寫的資料。 不需要有初始資料集，但訂閱者至少必須有每個複寫物件的結構描述，以及複寫所需的任何中繼資料表和程序。  
@@ -32,7 +32,7 @@ ms.locfileid: "52794470"
 >  精靈可能會提示散發者的連接，以便為散發者代理程式或合併代理程式啟動適當的作業。  
   
 ## <a name="see-also"></a>另請參閱  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [建立提取訂閱](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [初始化訂閱](initialize-a-subscription.md)   
  [訂閱發行集](subscribe-to-publications.md)  

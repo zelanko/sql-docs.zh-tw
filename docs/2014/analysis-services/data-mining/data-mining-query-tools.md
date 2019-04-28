@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722908"
 ---
 # <a name="data-mining-query-interfaces"></a>資料採礦查詢介面
   資料採礦查詢是以資料採礦延伸模組 (DMX) 語言為基礎。 您可以針對所有預測和模型工作使用 DMX，包括分類、風險分析、產生建議及線性迴歸。 您也可以擷取處理模型時所產生的模式和統計資料。  

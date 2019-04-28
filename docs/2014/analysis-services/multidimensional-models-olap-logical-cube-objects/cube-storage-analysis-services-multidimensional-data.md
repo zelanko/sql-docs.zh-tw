@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727656"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Cube 儲存體 (Analysis Services - 多維度資料)
   儲存體可以只包含 Cube 中繼資料，或是包含事實資料表的所有來源資料，以及與量值群組相關之維度所定義的彙總。 儲存的資料量取決於選取的儲存模式和彙總數目。 直接儲存的資料數量會影響查詢效能； [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用 cube 資料和彙總的儲存體所需的空間減到最少的數個技術：  

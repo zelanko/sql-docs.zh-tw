@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e266d398debd65a8a03f73d7f8726899c97b7e13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711131"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>聯結對話方塊 (Visual Database Tools)
   使用此對話方塊可指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計] 窗格中選取聯結線 (Join Line)。 然後，在 [屬性] 視窗中按一下 [聯結條件及類型]，並按一下顯示在屬性右邊的省略符號 **(...)**。  

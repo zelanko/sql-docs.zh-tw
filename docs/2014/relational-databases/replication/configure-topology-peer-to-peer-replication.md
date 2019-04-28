@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721609"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
   您可以使用 **[設定拓撲]** 頁面來執行一些常見的組態設定工作，例如加入新的節點、刪除節點，以及在現有節點之間加入新連接。 您在此精靈之 **[發行集]** 頁面上選取的節點會顯示在設計介面上。 若要指定組態選項，請以滑鼠右鍵按一下節點、連接或設計介面。  

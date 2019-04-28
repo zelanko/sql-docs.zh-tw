@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 181e2a367f6196d50f90aee77ca9590f55ba0ce4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733060"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>處理需求和考量 (資料採礦)
   此主題描述在處理資料採礦物件時要記住的一些技術考量。 如需什麼是處理以及如何將處理套用至資料採礦的一般說明，請參閱 [處理資料採礦物件](processing-data-mining-objects.md)。  

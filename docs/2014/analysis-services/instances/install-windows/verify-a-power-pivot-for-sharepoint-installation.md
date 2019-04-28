@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703329"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>確認 PowerPivot for SharePoint 安裝
   您在 SharePoint 伺服器陣列中安裝的 PowerPivot for SharePoint 執行個體是透過 SharePoint 管理中心來進行管理。 您至少可以檢查管理中心和 SharePoint 網站上的頁面，以確認 PowerPivot 伺服器元件和功能是可用的。 但是，為了完整確認安裝作業，您必須擁有可以發行到 SharePoint 並從文件庫存取的 PowerPivot 活頁簿。 為了測試用途，您可以發行已經包含 PowerPivot 資料的範例活頁簿，並用它來確認 SharePoint 整合已正確設定。  

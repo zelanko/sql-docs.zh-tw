@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712775"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>使用 bcp 指定相容性的資料格式 (SQL Server)
   本主題描述資料格式屬性、 欄位特定提示，並儲存欄位的欄位資料的非 xml 格式檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`bcp`命令。 大量匯出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料以大量匯入至另一個程式 (例如另一個資料庫程式) 時，了解這些資訊十分有用。 在來源資料表中的預設資料格式 (原生、字元或 Unicode) 可能和另一個程式所預期的資料配置不相容。如果匯出資料時發生了不相容的狀況，您就必須描述資料配置的方式。  
@@ -44,7 +44,7 @@ ms.locfileid: "48214768"
   
 -   檔案儲存類型  
   
-     *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以匯出到資料檔案做為其資料庫資料表類型 （原生格式）、 依其字元表示 （字元格式），或做為支援隱含轉換的位置; 任何資料類型例如，複製`smallint`做為`int`。 使用者自訂資料類型會依其基底類型匯出。 如需詳細資訊，請參閱 [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)。  
+     *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以依其資料庫資料表類型 (原生格式)、依其字元表示 (字元格式)，或者依支援隱含轉換的任何資料類型匯出至資料檔；例如，將 `smallint` 複製為 `int`。 使用者自訂資料類型會依其基底類型匯出。 如需詳細資訊，請參閱 [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)。  
   
 -   前置長度  
   
@@ -59,12 +59,12 @@ ms.locfileid: "48214768"
      針對字元資料欄位，選擇性的結束字元讓您可以標示資料檔中每個欄位的結尾 (使用「欄位結束字元」)，以及每個資料列的結尾 (使用「資料列結束字元」)。 結束字元可讓讀取資料檔的程式知道某個欄位或資料列在何處結束，另一個在何處開始。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。  
   
 ##  <a name="FieldSpecificPrompts"></a> 欄位專用提示字元的概觀  
- 如果互動式`bcp`命令包含**中**或是**出**選項，但也不會包含格式檔案參數 (**a-f**) 或資料格式參數 （**-n**， **-c**， **-w**，或 **-N**)，來源或目標資料表中的每個資料行，此命令會針對每個先前的提示在開啟的屬性。 在每個提示字元中，`bcp`命令提供的預設值，根據[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表資料行資料類型。 接受所有提示字元的預設值，會和在命令行上指定原生格式 (**-n**) 產生相同結果。 每個提示都會將預設值顯示於方括號中：[*預設值*]。 按下 ENTER 即可接受顯示的預設值。 若要指定預設以外的值，請在提示字元中輸入新值。  
+ 如果互動式`bcp`命令包含**中**或是**出**選項，但也不會包含格式檔案參數 (**a-f**) 或資料格式參數 （**-n**， **-c**， **-w**，或 **-N**)，來源或目標資料表中的每個資料行，此命令會針對每個先前的提示在開啟的屬性。 在每個提示字元中，`bcp` 命令是根據資料表資料行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型來提供預設值。 接受所有提示字元的預設值，會和在命令行上指定原生格式 (**-n**) 產生相同結果。 每個提示都會將預設值顯示於方括號中：[*預設值*]。 按下 ENTER 即可接受顯示的預設值。 若要指定預設以外的值，請在提示字元中輸入新值。  
   
 ### <a name="example"></a>範例  
- 下列範例會使用`bcp`命令，以大量匯出資料，從`HumanResources.myTeam`資料表以互動方式為`myTeam.txt`檔案。 您必須先建立此資料表，才能執行範例。 如需此資料表及建立方式的相關資訊，請參閱 [HumanResources.myTeam 範例資料表 &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)。  
+ 下列範例使用 `bcp` 命令，將資料以互動方式從 `HumanResources.myTeam` 資料表大量匯出至 `myTeam.txt` 檔案。 您必須先建立此資料表，才能執行範例。 如需此資料表及建立方式的相關資訊，請參閱 [HumanResources.myTeam 範例資料表 &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)。  
   
- 此命令會指定格式檔案和資料類型，都不造成`bcp`出現提示詢問資料格式資訊。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  
+ 該命令不會指定格式檔案，也不會指定資料類型，因此會導致 `bcp` 出現提示詢問資料格式資訊。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -93,7 +93,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  相等的提示字元 (視需要而定) 會依序顯示在每個資料表資料行中。  
   
 ##  <a name="FieldByFieldNonXmlFF"></a> 將逐欄資料儲存至非 XML 格式檔案中  
- 在所有資料表的指定資料行，`bcp`命令會提示您選擇性地產生非 XML 格式檔案，其中儲存欄位的資訊只提供 （請參閱上述範例中）。 如果您選擇產生格式檔案，則可以隨時匯出該資料表的資料，或將類結構化資料匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 指定所有的資料表資料行之後，`bcp` 命令會提示您選擇性地產生非 XML 格式檔案，該檔案儲存剛剛提供的逐欄資訊 (請參閱先前範例)。 如果您選擇產生格式檔案，則可以隨時匯出該資料表的資料，或將類結構化資料匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
 >  您可以使用格式檔案，從資料檔中將資料大量匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或從資料表中大量匯出資料，而不需重新指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)＞。  
@@ -111,7 +111,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   
--   [使用 bcp 指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 -   [使用 bcp 時指定資料檔案的前置長度 &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733633"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線性迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -46,9 +46,9 @@ ms.locfileid: "49120035"
  模型的名稱。  
   
  ATTRIBUTE_NAME  
- **根節點** ：空白  
+ **根節點：** 空白  
   
- **迴歸節點** ：可預測屬性的名稱。  
+ **迴歸節點：** 可預測屬性的名稱。  
   
  NODE_NAME  
  永遠與 NODE_UNIQUE_NAME 相同。  
@@ -66,16 +66,16 @@ ms.locfileid: "49120035"
  NODE_CAPTION  
  與節點關聯的標籤或標題。 這個屬性主要是供顯示之用。  
   
- **根節點** ：空白  
+ **根節點：** 空白  
   
- **迴歸節點** ：全部。  
+ **迴歸節點：** 全部。  
   
  CHILDREN_CARDINALITY  
  節點所擁有子系數目的估計。  
   
- **根節點** ：指出迴歸節點的數目。 在模型中，每個可預測的屬性都會建立一個迴歸節點。  
+ **根節點：** 指出迴歸節點的數目。 在模型中，每個可預測的屬性都會建立一個迴歸節點。  
   
- **迴歸節點** ：一律為 0。  
+ **迴歸節點：** 一律是 0。  
   
  PARENT_UNIQUE_NAME  
  節點之父系的唯一名稱。 任何根層級的節點都會傳回 NULL。  
@@ -83,9 +83,9 @@ ms.locfileid: "49120035"
  NODE_DESCRIPTION  
  節點的描述。  
   
- **根節點** ：空白  
+ **根節點：** 空白  
   
- **迴歸節點** ：全部。  
+ **迴歸節點：** 全部。  
   
  NODE_RULE  
  未用於線性迴歸模型。  
@@ -96,23 +96,23 @@ ms.locfileid: "49120035"
  NODE_PROBABILITY  
  與此節點關聯的機率。  
   
- **根節點** ：0  
+ **根節點：** 0  
   
- **迴歸節點** ：1  
+ **迴歸節點：** 1  
   
  MARGINAL_PROBABILITY  
  從父節點到達節點的機率。  
   
- **根節點** ：0  
+ **根節點：** 0  
   
- **迴歸節點** ：1  
+ **迴歸節點：** 1  
   
  NODE_DISTRIBUTION  
  提供節點中關於值之統計資料的巢狀資料表。  
   
- **根節點** ：0  
+ **根節點：** 0  
   
- **迴歸節點** ：包含建立迴歸公式所使用之元素的資料表。 迴歸節點包含下列值類型：  
+ **迴歸節點：** 資料表，其中包含建立迴歸公式所使用的項目。 迴歸節點包含下列值類型：  
   
 |VALUETYPE|  
 |---------------|  
@@ -126,9 +126,9 @@ ms.locfileid: "49120035"
  NODE_SUPPORT  
  支援這個節點的案例數目。  
   
- **根節點** ：0  
+ **根節點：** 0  
   
- **迴歸節點** ：定型案例的計數。  
+ **迴歸節點：** 定型案例的計數。  
   
  MSOLAP_MODEL_COLUMN  
  可預測屬性的名稱。  
@@ -175,7 +175,7 @@ ms.locfileid: "49120035"
 #### <a name="score-gain"></a>得分  
  每個迴歸輸入變數的得分 (VALUETYPE = 8) 都代表屬性的有趣性分數。 您可以使用這個值估計多個迴歸輸入變數的實用性。  
   
-#### <a name="statistics"></a>Statistics  
+#### <a name="statistics"></a>統計資料  
  迴歸輸入變數統計資料 (VALUETYPE = 9) 是擁有值之案例的屬性平均值。 ATTRIBUTE_VALUE 資料行包含平均值本身，而 VARIANCE 資料行包含平均值偏差的總和。  
   
 #### <a name="intercept"></a>Intercept  

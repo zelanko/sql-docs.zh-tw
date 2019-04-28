@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725382"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的資料類型
   針對所有<xref:Microsoft.AnalysisServices.DataItem>物件[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援的下列子集`System.Data.OleDb.OleDbType`。 若要設定或讀取的資料類型，請使用[DataItem 資料類型&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)。  

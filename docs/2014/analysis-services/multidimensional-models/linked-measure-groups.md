@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7695f971504744d42056d0067217e102ef3d990
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700289"
 ---
 # <a name="linked-measure-groups"></a>連結量值群組
   連結的量值群組會以相同資料庫或不同的 Analysis Services 資料庫中不同之 Cube 中的另一個量值群組為基礎。 如果您想要重複使用多個 Cube 中的一組量值及對應的資料值，您可使用連結量值群組。  

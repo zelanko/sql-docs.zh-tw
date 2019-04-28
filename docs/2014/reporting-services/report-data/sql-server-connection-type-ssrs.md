@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab64006b1454e63a7ed750476ff107dd1fe992
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720544"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 連接類型 (SSRS)
   若要在報表中包含來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料，您必須具有以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]類型的報表資料來源為基礎的資料集。 此內建資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料延伸模組為基礎。 使用此資料來源類型可連接至目前版本和舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並從中擷取資料。  

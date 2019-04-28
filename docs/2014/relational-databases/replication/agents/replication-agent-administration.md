@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721802"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
   複寫代理程式可執行許多有關複寫的工作，包含建立結構描述和資料的副本、偵測「發行者」或「訂閱者」端的更新，以及在伺服器之間傳播變更。 依預設，複寫代理程式在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業步驟之下執行。 此代理程式只不過是可執行檔，所以也可以從命令列和批次指令碼直接呼叫。 每個複寫代理程式都支援一組用於控制其執行方式的執行時期參數；這些參數在代理程式設定檔或命令列中指定。  
@@ -49,7 +49,7 @@ ms.locfileid: "54130448"
   
  **若要執行代理程式和維護作業**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和複寫監視器：[啟動和停止複寫代理程式&#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和「複寫監視器」：[啟動和停止複寫代理程式&#40;SQL Server Management Studio&#41;](start-and-stop-a-replication-agent-sql-server-management-studio.md)。  
   
 -   複寫程式設計：[Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "54130448"
   
     -   佇列讀取器代理程式  
   
-     透過 **[代理程式]** 索引標籤，存取與這些代理程式相關聯的資訊和工作。如需詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     透過 **[代理程式]** 索引標籤，存取與這些代理程式相關聯的資訊和工作。如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 -   下列代理程式與複寫監視器中的訂閱相關聯：  
   
@@ -77,7 +77,7 @@ ms.locfileid: "54130448"
   
     -   [合併代理程式]  
   
-     透過下列索引標籤，可存取與這些代理程式相關聯的資訊和工作：**訂閱監看清單**（適用於每個 「 發行者 」） 或**所有訂用帳戶**（適用於每個發行集） 索引標籤。 如需詳細資訊，請參閱 < [View Information and Perform Tasks 使用 「 複寫監視器](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
+     存取資訊以及與這些代理程式，透過下列索引標籤相關聯的工作：[訂閱監看清單] (適用於每個「發行者」) 或 [所有訂閱] 索引標籤 (適用於每個發行集)。 如需詳細資訊，請參閱[使用複寫監視器來檢視資訊及執行工作](../monitor/view-information-and-perform-tasks-replication-monitor.md)。  
   
 ## <a name="independent-and-shared-agents"></a>獨立與共用的代理程式  
  獨立代理程式即服務一個訂閱的代理程式。 共用的代理程式會服務多個訂閱；如果使用相同共用代理程式的多個訂閱需要同步，依預設，它們會在佇列中等候，該共用代理程式會一次服務其中之一。 使用獨立代理程式會降低延遲，因為代理程式會在訂閱需要同步時就緒。 合併式複寫通常使用獨立代理程式，依預設，異動複寫會使用在「新增發行集精靈」中建立的發行集之獨立代理程式 (在舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，依預設，異動複寫則使用共用代理程式)。  
@@ -87,8 +87,8 @@ ms.locfileid: "54130448"
   
 |清除作業|描述|預設排程|  
 |------------------|-----------------|----------------------|  
-|代理程式記錄清除：Distribution|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
-|散發清除：Distribution|從散發資料庫移除複寫的交易。 停用在最長散發保留期限內未同步的訂閱。|每 10 分鐘執行|  
+|清除代理程式記錄：Distribution|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
+|清除散發：Distribution|從散發資料庫移除複寫的交易。 停用在最長散發保留期限內未同步的訂閱。|每 10 分鐘執行|  
 |到期的訂閱清除|偵測並移除散發資料庫中到期的訂閱。|每天早上 1:00 執行|  
 |重新初始化資料驗證失敗的訂閱|偵測使資料驗證失敗的所有訂閱，並將其標示為重新初始化。 下次「合併代理程式」或「散發代理程式」執行時，將在「訂閱者」端套用新的快照集。|沒有預設排程 (依預設值未啟動)|  
 |複寫代理程式檢查|偵測並未動態記錄歷程的複寫代理程式。 如果作業步驟失敗，則其會寫入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件記錄檔。|每十分鐘執行一次。|  

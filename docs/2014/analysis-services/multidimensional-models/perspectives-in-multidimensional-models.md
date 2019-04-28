@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb1d01e8ba6e6fa55af9e1f63d6d5fb9da29cde0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736895"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多維度模型中的檢視方塊
   檢視方塊是針對特定應用程式或使用者的群組所建立之 Cube 的子集。 Cube 本身是預設檢視方塊。 檢視方塊會以 Cube 的形式向用戶端公開。 檢視方塊在使用者檢視時，會顯示成另一個 Cube 的樣子。 透過在檢視方塊中回寫，對 Cube 資料所做的任何變更，都是對原始 Cube 的變更。 如需 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中之檢視的詳細資訊，請參閱[檢視方塊](../multidimensional-models-olap-logical-cube-objects/perspectives.md)。  
@@ -63,6 +63,6 @@ ms.locfileid: "48104818"
  若要檢視任何物件，請展開 [Cube 物件] 之下，任何物件類型的類別目錄 ([量值群組]、[維度]、[KPI]、[計算] 或 [動作])。 若要檢視維度中的階層或屬性，請先展開維度，然後展開 [階層] 或 [屬性] 資料列。 若要檢視量值群組中的量值，請展開量值群組。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
+ [多維度模型中的 Cube](cubes-in-multidimensional-models.md)  
   
   

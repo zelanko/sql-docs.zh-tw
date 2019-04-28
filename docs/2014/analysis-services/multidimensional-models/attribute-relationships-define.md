@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701392"
 ---
 # <a name="define-attribute-relationships"></a>定義屬性關聯性
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，屬性是維度的基礎建置組塊。 維度包含一組根據屬性關聯性所組織的屬性。  

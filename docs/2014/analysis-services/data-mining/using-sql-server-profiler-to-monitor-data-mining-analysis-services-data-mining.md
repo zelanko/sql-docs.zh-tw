@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf4e335f3b6d700fd47e1073e4f9432cc81cd29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732568"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server Profiler 監視資料採礦 (Analysis Services - 資料採礦)
   如果您有必要的權限，可以使用 SQL Server Profiler 來監視資料採礦活動，這些活動會當做傳送給 SQL Server Analysis Services 執行個體的要求來發行。 資料採礦活動可包括模型或結構的處理、預測查詢或內容查詢，或是新模型或結構的建立。  
   
- 使用 SQL Server Profiler`trace`監視從多個用戶端，包括傳送要求[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，SQL Server Management Studio、 Web 服務或資料採礦增益集的 Excel，只要這些活動全都使用相同的執行個體的 SQL ServerAnalysis Services。 您必須針對您想要監視的每一個 SQL Server Analysis Services 執行個體建立個別的追蹤。 如需追蹤及如何使用 SQL Server Profiler 的一般資訊，請參閱[使用 SQL Server Profiler 監視 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
+ SQL Server Profiler 會使用 `trace` 監視從多個用戶端傳送的要求，包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、SQL Server Management Studio、Web 服務或是適用於 Excel 的資料採礦增益集，只要這些活動全都使用相同的 SQL Server Analysis Services 執行個體即可。 您必須針對您想要監視的每一個 SQL Server Analysis Services 執行個體建立個別的追蹤。 如需追蹤及如何使用 SQL Server Profiler 的一般資訊，請參閱[使用 SQL Server Profiler 監視 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
  如需擷取事件類型的特定指引，請參閱[建立 Profiler 追蹤以重新執行 &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md)。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48139903"
  您也可以藉由檢視追蹤記錄內的命令陳述式，查看用戶端傳送給 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器之複雜陳述式的語法，包括系統預存程序的呼叫。 此資訊對於偵錯很有幫助，或者您也可以使用有效的陳述式當做範本來建立新的預測查詢或模型。 如需您可以透過追蹤擷取之預存程序呼叫的一些範例，請參閱 [叢集模型查詢範例](clustering-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視 Analysis Services 執行個體](../instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)   
  [使用 SQL Server 擴充事件&#40;XEvents&#41;若要監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

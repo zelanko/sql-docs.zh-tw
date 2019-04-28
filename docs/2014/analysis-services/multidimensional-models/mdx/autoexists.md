@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700528"
 ---
 # <a name="autoexists"></a>自動存在
   「自動存在」的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  

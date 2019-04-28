@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40cf44e416a7507693b44cc691a89ad3a5ac95af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726442"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯關聯性 (Analysis Services)
   [資料來源檢視精靈] 和資料來源檢視設計工具會根據基礎資料庫關聯性，或是根據您所指定的名稱比對準則，自動定義加入到資料來源檢視 (DSV) 之資料表之間的關聯性。  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711822"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立 **Audit Database Mirroring Login** 事件來報告與資料庫鏡像傳輸安全性有關的稽核訊息。  
@@ -50,7 +50,7 @@ ms.locfileid: "52776480"
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**int**|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
-|**TargetUserName**|**nvarchar**|登入狀態。 它是下列項目之一：<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> 注意：ISC = 起始安全性內容。 ASC = 接受安全性內容。|39|否|  
+|**TargetUserName**|**nvarchar**|登入狀態。 它是下列項目之一：<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> 注意:ISC = 起始安全性內容。 ASC = 接受安全性內容。|39|否|  
 |**TransactionID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
  下表列出此事件類別的子類別值。  

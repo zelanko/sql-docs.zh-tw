@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990707"
 ---
 # <a name="extended-events"></a>擴充事件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 擴充事件具有可高度擴充及可高度設定的基礎結構，可以讓使用者視需要收集許多或部分的資訊來排除或識別效能問題。  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1cd0b6d1af8d6a059742a257071a78f7b5002c6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726482"
 ---
 # <a name="database-readwritemodes"></a>資料庫 ReadWriteMode
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要將讀取/寫入資料庫變更為唯讀資料庫，反之亦然。 這些情況通常是由商務需求所驅使，例如在許多伺服器之間共用相同的資料庫資料夾，以便向外延展方案並改善效能。 這些情況下，`ReadWriteMode`資料庫屬性可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 輕易地變更資料庫作業模式。  
@@ -31,9 +31,9 @@ ms.locfileid: "50146893"
   
 |ReadOnly 模式|限制的作業|  
 |-------------------|---------------------------|  
-|XML/A 命令<br /><br /> <br /><br /> 注意：當您執行其中一個命令時，就會引發錯誤。|`Create`<br /><br /> `Alter`<br /><br /> `Delete`<br /><br /> `Process`<br /><br /> `MergePartitions`<br /><br /> `DesignAggregations`<br /><br /> `CommitTransaction`<br /><br /> `Restore`<br /><br /> `Synchronize`<br /><br /> `Insert`<br /><br /> `Update`<br /><br /> `Drop`<br /><br /> <br /><br /> 注意：允許在設定為唯讀的資料庫中進行資料格回寫作業，但是無法認可變更。|  
-|MDX 陳述式<br /><br /> <br /><br /> 注意：當您執行其中一個陳述式時，就會引發錯誤。|`COMMIT TRAN`<br /><br /> `CREATE SESSION CUBE`<br /><br /> `ALTER CUBE`<br /><br /> `ALTER DIMENSION`<br /><br /> `CREATE DIMENSION MEMBER`<br /><br /> `DROP DIMENSION MEMBER`<br /><br /> `ALTER DIMENSION`<br /><br /> <br /><br /> 注意：Excel 使用者無法在樞紐資料表中使用群組功能，因為該項功能是使用 `CREATE SESSION CUBE` 命令在內部實作的。|  
-|DMX 陳述式<br /><br /> <br /><br /> 注意：當您執行其中一個陳述式時，就會引發錯誤。|`CREATE [SESSION] MINING STRUCTURE`<br /><br /> `ALTER MINING STRUCTURE`<br /><br /> `DROP MINING STRUCTURE`<br /><br /> `CREATE [SESSION] MINING MODEL`<br /><br /> `DROP MINING MODEL`<br /><br /> `IMPORT`<br /><br /> `SELECT INTO`<br /><br /> `INSERT`<br /><br /> `UPDATE`<br /><br /> `DELETE`|  
+|XML/A 命令<br /><br /> <br /><br /> 注意:當您執行這些命令的任何一個時，會引發錯誤。|`Create`<br /><br /> `Alter`<br /><br /> `Delete`<br /><br /> `Process`<br /><br /> `MergePartitions`<br /><br /> `DesignAggregations`<br /><br /> `CommitTransaction`<br /><br /> `Restore`<br /><br /> `Synchronize`<br /><br /> `Insert`<br /><br /> `Update`<br /><br /> `Drop`<br /><br /> <br /><br /> 注意:設為唯讀; 資料庫中不允許的資料格回寫不過，無法認可的變更。|  
+|MDX 陳述式<br /><br /> <br /><br /> 注意:當您執行這些陳述式的任何一個時，會引發錯誤。|`COMMIT TRAN`<br /><br /> `CREATE SESSION CUBE`<br /><br /> `ALTER CUBE`<br /><br /> `ALTER DIMENSION`<br /><br /> `CREATE DIMENSION MEMBER`<br /><br /> `DROP DIMENSION MEMBER`<br /><br /> `ALTER DIMENSION`<br /><br /> <br /><br /> 注意:Excel 使用者無法使用群組功能在樞紐分析表中的，因為該功能在內部實作使用`CREATE SESSION CUBE`命令。|  
+|DMX 陳述式<br /><br /> <br /><br /> 注意:當您執行這些陳述式的任何一個時，會引發錯誤。|`CREATE [SESSION] MINING STRUCTURE`<br /><br /> `ALTER MINING STRUCTURE`<br /><br /> `DROP MINING STRUCTURE`<br /><br /> `CREATE [SESSION] MINING MODEL`<br /><br /> `DROP MINING MODEL`<br /><br /> `IMPORT`<br /><br /> `SELECT INTO`<br /><br /> `INSERT`<br /><br /> `UPDATE`<br /><br /> `DELETE`|  
 |背景作業|任何修改資料庫的背景作業都會被停用。 這包括延遲處理以及主動式快取。|  
   
 ## <a name="readwritemode-usage"></a>ReadWriteMode 使用方式  

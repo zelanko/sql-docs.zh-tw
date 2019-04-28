@@ -1,5 +1,5 @@
 ---
-title: 合併資料分割中 Analysis Services (SSAS-多維度) |Microsoft 文件
+title: 合併 Analysis Services (SSAS-多維度) 中的資料分割 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988621"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合併分割區 (SSAS - 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "34025395"
   
 1.  在物件總管中，展開包含您要合併的資料分割之 Cube 的 [量值群組] 節點，然後展開 [資料分割]，再以滑鼠右鍵按一下合併作業的目標或目的地資料分割。 例如，如果您要將季度事實資料移至儲存年度事實資料的分割區，請選取包含年度事實資料的分割區。  
   
-2.  按一下**合併資料分割**開啟**合併分割區\<分割區名稱 >**  對話方塊。  
+2.  按一下 [**合併資料分割**以開啟**合併資料分割\<分割區名稱 >** ] 對話方塊。  
   
 3.  在 [來源資料分割] 下，選取要與目標資料分割合併之每個來源資料分割旁的核取方塊，然後按一下 [確定]。  
   
@@ -130,11 +130,11 @@ ms.locfileid: "34025395"
   
 ## <a name="see-also"></a>另請參閱  
  [處理 Analysis Services 物件](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [分割區 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [建立及管理本機分割區 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [建立及管理遠端分割區 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [建立及管理遠端資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [設定分割區回寫](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
- [寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [設定維度和分割區的字串儲存體](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [可寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [設定維度及分割區的字串存放區](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

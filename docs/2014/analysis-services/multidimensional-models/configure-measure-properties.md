@@ -43,11 +43,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f54906f8fbaa363495619318a5197957c96e1250
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726922"
 ---
 # <a name="configure-measure-properties"></a>設定量值屬性
   量值有一些屬性可讓您定義量值的運作方式以及控制量值讓使用者看到的樣子。  

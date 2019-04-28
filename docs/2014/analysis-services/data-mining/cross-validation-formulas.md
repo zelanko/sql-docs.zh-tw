@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722630"
 ---
 # <a name="cross-validation-formulas"></a>交叉驗證公式
   當您產生交叉驗證報表時，報表會根據採礦模型類型包含每一個模型的精確度量值 (也就是之前用來建立模型的演算法)、可預測屬性的資料類型，以及可預測的屬性值 (如果有的話)。  
@@ -28,7 +28,7 @@ ms.locfileid: "48223178"
 ## <a name="formulas-used-for-cross-validation-measures"></a>交叉驗證量值所使用的公式  
   
 > [!NOTE]  
->  **重要事項** ：這些精確度量值是針對每一個目標屬性計算而得。 您可以針對每一個屬性指定或省略目標值。 如果資料集內的案例沒有任何目標屬性值，此案例會視為擁有特殊值，稱為 *「遺漏值」*(Missing Value)。 計算特定目標屬性的精確度量值時，不會計算有遺漏值的資料列。 請注意，由於分數是分別針對每一個屬性計算而得，因此如果目標屬性的值存在，而其他屬性有遺漏值，這樣並不會影響目標屬性的分數。  
+>  **重要：** 每一個目標屬性計算這些精確度量值。 您可以針對每一個屬性指定或省略目標值。 如果資料集內的案例沒有任何目標屬性值，此案例會視為擁有特殊值，稱為 *「遺漏值」*(Missing Value)。 計算特定目標屬性的精確度量值時，不會計算有遺漏值的資料列。 請注意，由於分數是分別針對每一個屬性計算而得，因此如果目標屬性的值存在，而其他屬性有遺漏值，這樣並不會影響目標屬性的分數。  
   
 |[量值]|適用於|實作|  
 |-------------|----------------|--------------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "48223178"
 |**均方根誤差**|離散屬性，沒有指定的目標。|機率分數補數平方之平均數的平方根，除以資料分割中的案例數目，不包括目標屬性擁有遺漏值的案例。|  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)   
- [交叉驗證&#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)  
+ [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)   
+ [交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

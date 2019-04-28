@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cb98e29f320a64518c968f3bbc35b590c96a891
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722550"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
   當您建立採礦模型的篩選時，您可以在資料來源檢視中的資料子集上建立模型。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  

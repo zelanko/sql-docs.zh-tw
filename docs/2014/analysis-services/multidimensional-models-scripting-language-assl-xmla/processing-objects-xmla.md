@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727594"
 ---
 # <a name="processing-objects-xmla"></a>處理物件 (XMLA)
   在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 處理是在步驟或一系列的步驟轉換資料成供商務分析的資訊。 處理會因物件類型而異，但是處理永遠都是將資料轉換為資訊的一部分。  

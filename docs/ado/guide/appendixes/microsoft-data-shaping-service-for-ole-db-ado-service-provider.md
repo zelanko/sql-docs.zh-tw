@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719749"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 資料成形 Service for OLE DB 概觀
 > [!IMPORTANT]
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  如需資料成形的詳細資訊，請參閱[資料成形](../../../ado/guide/data/data-shaping-overview.md)。
 
 ## <a name="see-also"></a>另請參閱
- [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

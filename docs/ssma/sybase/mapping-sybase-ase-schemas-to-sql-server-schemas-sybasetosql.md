@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705933"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>將 Sybase ASE 結構描述對應到 SQL Server 結構描述 (SybaseToSQL)
 在 Sybase Adaptive Server Enterprise (ASE)，每個資料庫有一或多個結構描述。 根據預設，SSMA，請移轉到相同的資料庫和結構描述中的資料庫和結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 不過，您可以自訂 ASE 之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫和結構描述。  

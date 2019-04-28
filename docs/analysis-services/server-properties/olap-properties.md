@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714585"
 ---
 # <a name="olap-properties"></a>OLAP 屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 OLAP 伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
- **適用於：** 僅限於多維度伺服器模式  
+ **適用於：** 僅限多維度伺服器模式  
   
 ## <a name="memory"></a>記憶體  
  **DefaultPageSizeForData**  

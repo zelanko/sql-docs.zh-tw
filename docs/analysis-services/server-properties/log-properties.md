@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db79a57c3e63cf09f36cd1b9af2d529811b67ea0
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714645"
 ---
 # <a name="log-properties"></a>記錄屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "53071925"
  此屬性的預設值是空白，因而會預設為 FlightRecorderTraceDef.xml。  
   
 ## <a name="query-log"></a>查詢記錄  
- **適用於：** 僅限於多維度伺服器模式  
+ **適用於：** 僅限多維度伺服器模式  
   
  **QueryLog\QueryLogFileName**  
  此為字串屬性，指定查詢記錄檔的名稱。 這個屬性只適用於當記錄會儲存到磁碟檔案，而非資料庫資料表時 (預設行為)。  

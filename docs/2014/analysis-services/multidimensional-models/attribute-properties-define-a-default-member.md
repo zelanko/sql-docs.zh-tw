@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49120d810eac622d75a8d3691654b65b78d0d570
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703780"
 ---
 # <a name="define-a-default-member"></a>定義預設成員
   當查詢中並未包含屬性階層時，會使用屬性階層的預設成員來評估運算式。 只要查詢包含屬性階層，或是使用者階層包含做為屬性階層來源的屬性，就會忽略預設成員。 這是因為使用查詢中指定的成員。  

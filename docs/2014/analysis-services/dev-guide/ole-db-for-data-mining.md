@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732033"
 ---
 # <a name="ole-db-for-data-mining"></a>OLE DB for Data Mining
   中的資料採礦功能[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]遵守[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB for Data Mining 1.0 規格在 2000 年六月份發行。  

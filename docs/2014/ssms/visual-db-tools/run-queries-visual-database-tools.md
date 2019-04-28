@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710803"
 ---
 # <a name="run-queries-visual-database-tools"></a>執行查詢 (Visual Database Tools)
   在完成設計查詢之後，您可以執行查詢。  

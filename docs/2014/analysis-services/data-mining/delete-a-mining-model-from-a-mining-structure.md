@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09560d26d201ced8160bf171a92dbb618a1c94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722570"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>從採礦結構刪除採礦模型
   您可以使用資料採礦設計師、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 DMX 陳述式來刪除採礦模型。  
@@ -48,7 +48,7 @@ ms.locfileid: "48180368"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>使用 DMX 刪除採礦模型  
   
--   [卸除採礦模型&AMP;#40;DMX&AMP;#41;](/sql/dmx/drop-mining-model-dmx)  
+-   [DROP MINING MODEL &#40;DMX&#41;](/sql/dmx/drop-mining-model-dmx)  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型工作和操作說明](mining-model-tasks-and-how-tos.md)  

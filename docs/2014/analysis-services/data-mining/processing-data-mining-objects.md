@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa4a536a142ae63dd2b028d983f083609ea2e717
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732925"
 ---
 # <a name="processing-data-mining-objects"></a>處理資料採礦物件
   資料採礦物件在處理之前只是一個空容器。 *「處理」* (Processing) 資料採礦模型也稱為 *「定型」*(Training)。  
   
- **處理採礦結構** ：採礦結構會從外部資料來源取得資料 (依資料行繫結和使用方式中繼資料的定義)，並讀取資料。 系統會完整地讀取這項資料，再加以分析以擷取各種統計資料。 Analysis Services 會在本機快取中儲存資料的壓縮表示 (適合以資料採礦演算法進行分析)。 您可在模型經過處理後保存此快取或加以刪除。 依預設會儲存此快取。 如需詳細資訊，請參閱 [處理採礦結構](process-a-mining-structure.md)。  
+ **處理採礦結構：** 採礦結構所定義的資料行繫結和使用方式中繼資料，取得外部資料來源的資料，並讀取資料。 系統會完整地讀取這項資料，再加以分析以擷取各種統計資料。 Analysis Services 會在本機快取中儲存資料的壓縮表示 (適合以資料採礦演算法進行分析)。 您可在模型經過處理後保存此快取或加以刪除。 依預設會儲存此快取。 如需詳細資訊，請參閱 [處理採礦結構](process-a-mining-structure.md)。  
   
- **處理採礦模型** ：採礦模型在處理之前是空的，只包含定義。 若要處理採礦模型，則該模型所依據的採礦結構必須已經過處理。 採礦模型在從採礦結構快取取得資料之後，會套用已在模型上建立的任何篩選，然後再透過演算法傳遞資料集來偵測模式。 採礦模型在經過處理之後，只會儲存處理的結果，而非資料本身。 如需詳細資訊，請參閱 [Process a Mining Model](process-a-mining-model.md)(處理採礦模型)。  
+ **處理採礦模型：** 採礦模型是空的只包含定義在處理之前。 若要處理採礦模型，則該模型所依據的採礦結構必須已經過處理。 採礦模型在從採礦結構快取取得資料之後，會套用已在模型上建立的任何篩選，然後再透過演算法傳遞資料集來偵測模式。 採礦模型在經過處理之後，只會儲存處理的結果，而非資料本身。 如需詳細資訊，請參閱 [Process a Mining Model](process-a-mining-model.md)(處理採礦模型)。  
   
  下列圖表說明在處理採礦結構和資料模型時的資料流程。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "48060328"
  如需詳細資訊，請參閱 [Processing Requirements and Considerations &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md) (處理需求和考量 (資料採礦))。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢&#40;資料採礦&#41;](drillthrough-queries-data-mining.md)   
- [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
- [採礦模型&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
- [邏輯架構&#40;Analysis Services-資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
+ [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

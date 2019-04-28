@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727162"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和卸除成員 (XMLA)
   您可以使用[插入](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)，[更新](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)，並[卸除](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)命令在 XML for Analysis (XMLA) 分別插入、 更新或刪除成員，從可寫入的維度。 如需有關可寫入維度的詳細資訊，請參閱[Write-Enabled 維度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  

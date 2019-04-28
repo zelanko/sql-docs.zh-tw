@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703496"
 ---
 # <a name="performance-counters-ssas"></a>效能計數器 (SSAS)
   使用效能監視器可以透過效能計數器來監視 Microsoft SQL Server Analysis Services (SSAS) 執行個體的效能。  

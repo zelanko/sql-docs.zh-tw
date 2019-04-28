@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c628f8c853879a4c601e1c9529f97fd7877551df
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720669"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server Parallel Data Warehouse 連接類型 (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 是可擴充的資料倉儲應用裝置，透過大量平行處理提供效能和擴充性。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 資料庫來進行分散式處理和資料存放。  

@@ -1,26 +1,23 @@
 ---
 title: 使用 Cube 精靈建立 Cube |Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-helpviewer_keywords:
-- cubes [Analysis Services], creating
-ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 7545bc1e1ad37ff395f3e4c3f65b1cb4614e533e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726892"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>使用 Cube 精靈來建立 Cube
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [Cube 精靈] 來建立新的 Cube。  
   
 ### <a name="to-create-a-new-cube"></a>建立新的 Cube  
@@ -38,7 +35,7 @@ ms.locfileid: "48087030"
   
     2.  在 [量值群組資料表] 清單中，選取將用來建立量值群組的資料表。  
   
-    3.  按 [下一步] 。  
+    3.  按一下 [下一步] 。  
   
 4.  在 [選取量值] 頁面上，選取您要包含在 Cube 中的量值，然後按一下 [下一步]。  
   

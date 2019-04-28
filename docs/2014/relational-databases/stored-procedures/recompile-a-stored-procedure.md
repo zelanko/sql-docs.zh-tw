@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721043"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 若要這樣做的三種方式：`WITH RECOMPILE`選項中的程序定義，或呼叫程序時，`RECOMPILE`查詢提示，在個別的陳述式，或使用`sp_recompile`系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  

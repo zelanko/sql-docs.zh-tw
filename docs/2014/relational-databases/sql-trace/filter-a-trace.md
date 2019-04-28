@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714715"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
   篩選可限制追蹤中收集的事件。 如果沒有設定篩選條件，選定事件類別的所有事件都會傳回到追蹤輸出。 例如，限制追蹤裡的 Windows 使用者名稱為特定使用者，可將輸出資料縮小為只有這些使用者。  

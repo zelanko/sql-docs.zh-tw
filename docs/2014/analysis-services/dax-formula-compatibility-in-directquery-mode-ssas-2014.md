@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732470"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式中的 DAX 公式相容性 (SSAS 2014)
 Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格式模型中的量值和其他自訂公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 活頁簿中的資料模型和 Power BI Desktop 資料模型。 在大部分的方面，您在這些環境中建立的模型相同，且您可以使用相同的量值、 關聯性和 Kpi 等等。不過，如果您撰寫的 Analysis Services 表格式模型，並將它部署在 DirectQuery 模式中，有一些限制，您可以使用的公式。 本主題概述這些差異，列出在相容性層級 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式中，不支援的函式並列出支援的函式但可能傳回不同的結果。  

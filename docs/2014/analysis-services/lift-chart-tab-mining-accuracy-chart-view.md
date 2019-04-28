@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728084"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>增益圖索引標籤 (採礦精確度圖表檢視)
   使用 [增益圖] 窗格可檢視比較選取的採礦結構中所有選取的採礦模型的圖表。  
@@ -40,12 +40,12 @@ ms.locfileid: "48168128"
   
  如果在 [資料行對應] 索引標籤中選取連續的可預測資料行，就無法使用收益圖。  
   
- **複製**  
+ **[複製]**  
  將圖表複製到剪貼簿。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [測試及驗證工作與操作方法&#40;資料採礦&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

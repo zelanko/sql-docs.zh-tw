@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699585"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>建立工作階段範圍命名集 (MDX)
   若要建立可在整個多維度運算式 (MDX) 工作階段取得的命名集，您可以使用 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) 陳述式。 使用 CREATE SET 陳述式建立的命名集，直到 MDX 工作階段結束後才會移除。  
@@ -54,6 +54,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [建立查詢範圍命名集&#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [建立查詢範圍命名集 &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

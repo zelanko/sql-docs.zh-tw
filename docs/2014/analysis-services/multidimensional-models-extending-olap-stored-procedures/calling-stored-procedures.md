@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727754"
 ---
 # <a name="calling-stored-procedures"></a>呼叫預存程序
   可以在伺服器上，或從用戶端應用程式呼叫預存程序。 在這兩種情況下，預存程序永遠會在伺服器上執行，不論是伺服器或資料庫的內容。 執行預存程序並不需要特殊的權限。 組件將預存程序加入到伺服器或資料庫內容後，任何使用者都可以執行預存程序，只要使用者的角色允許該預存程序執行的動作。  

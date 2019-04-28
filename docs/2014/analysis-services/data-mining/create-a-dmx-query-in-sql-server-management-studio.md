@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715345"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中建立 DMX 查詢
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組功能，可幫助您針對採礦模型和採礦結構建立預測查詢、內容查詢和資料定義查詢。  
@@ -87,6 +87,6 @@ ms.locfileid: "48101408"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢介面](data-mining-query-tools.md)   
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

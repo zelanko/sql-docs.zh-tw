@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f1a0afbd256b26a3743d85f2e8e5d09bba428fff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726859"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>建立多個 Analysis Services 專案 (SSDT)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的方式就像是在 Visual Studio 中建立任何程式設計專案。 當您建立此專案時，會在輸出目錄中建立一組 XML 檔案， 這些 XML 檔案會使用 Analysis Services 指令碼語言 (ASSL)，這種語言是用戶端應用程式 (包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ) 為了建立或修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件而與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體溝通所用的 XML 用語； 這些 XML 檔案是用來將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件定義部署到指定的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  

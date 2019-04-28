@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722276"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
   A**增益圖**以圖形表示與隨機猜測，採礦模型提供相較之下的改進，並測量的變更*提起*分數。 藉由比較您的資料集的各部分與不同模型的增益分數，您可以判斷哪一個模型是最佳方法，並在資料集中的案例百分比受益於套用模型的預測。  

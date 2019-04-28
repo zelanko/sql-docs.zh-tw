@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733945"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  

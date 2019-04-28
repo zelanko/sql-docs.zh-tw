@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721105"
 ---
 # <a name="lesson-3-configuring-distribution"></a>第 3 課：設定散發
   在這一課，您將在「發行集」端設定散發，並在發行集和散發資料庫上設定所需權限。 如果您已經設定「散發者」，則必須先停用發行和散發，再開始進行本課。 如果您必須保留現有的複寫拓撲，請勿執行上述動作。  
@@ -37,7 +37,7 @@ ms.locfileid: "54126668"
   
 3.  在上**散發者**頁面上，選取 **'**_\<伺服器名稱 >_**' 將扮演本身的散發者;SQL Server 將建立散發資料庫和記錄**，然後按一下**下一步**。  
   
-4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動] 頁面上選取 [是]，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。 按 [下一步] 。  
+4.  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動] 頁面上選取 [是]，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動。 按一下 [下一步] 。  
   
 5.  在 [快照集資料夾] 文字方塊中，輸入 **\\\\**\<_電腦名稱>_**\repldata**，其中 \<*電腦名稱>* 是「發行者」的名稱，然後按一下 [下一步]。  
   

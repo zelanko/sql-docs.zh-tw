@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a67270205e6c6977e01c274f0f864dc77ce8b13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726422"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商業智慧精靈定義時間智慧計算
   時間智慧增強功能是一種 Cube 增強功能，用於將時間計算 (時間檢視) 加入至選取的階層。 此增強功能支援下列計算類別目錄：  
@@ -42,14 +42,14 @@ ms.locfileid: "48059523"
   
 -   平行期間比較。  
   
- 您將時間智慧套用到具有時間維度的 Cube。 (時間維度是 `Type` 屬性設成 `Time` 的維度)。 另外，該維度時間屬性的， `Type` 屬性，也必須有適當的設定 (例如，年份或月份)。 `Type`如果您使用 「 維度精靈 」 來建立時間維度的維度和其屬性的屬性也會正確設定。  
+ 您將時間智慧套用到具有時間維度的 Cube。 (時間維度是 `Type` 屬性設成 `Time` 的維度)。 另外，該維度時間屬性的， `Type` 屬性，也必須有適當的設定 (例如，年份或月份)。 如果您使用維度精靈來建立時間維度，維度及其屬性的 `Type` 屬性都會正確地設定。  
   
  若要將時間智慧加入 Cube，您可使用 [商業智慧精靈]，並於 [選擇增強功能] 頁面上選取 [定義時間智慧] 選項。 然後，此精靈會引導您逐步完成選取要加入時間智慧的階層，並在將會套用時間智慧的階層內指定成員。 在精靈的最後一頁，您可以查看加入選取的時間智慧後，將會對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫進行的變更。  
   
 ## <a name="selecting-a-time-hierarchy"></a>選取時間階層  
  在 [選擇目標階層與計算] 頁面上，您可以選取時間增強功能套用的時間階層。 每一次執行商業智慧精靈時，您只可以套用時間增強功能到一個時間階層。 如果您要套用增強功能到多個時間階層，就要再次執行精靈。  
   
- 選取時間階層後，在 [可用的時間計算] 清單中，您可選取套用至階層的計算。 列出計算取決於層級在階層中，與`Type`用於每個層級之屬性的屬性設定。 例如，年度階層支援年初至今與年的成長，但是季階層則否。  
+ 選取時間階層後，在 [可用的時間計算] 清單中，您可選取套用至階層的計算。 根據階層中的層級與針對每個層級之屬性的 `Type` 屬性設定，決定列出的計算。 例如，年度階層支援年初至今與年的成長，但是季階層則否。  
   
 > [!NOTE]  
 >  Timeintelligence.xml 範本檔案定義 [可用的時間計算] 中列出的時間計算。 如果列出的計算不符合您的需求，您可以變更現有的計算，或將新的計算加入 Timeintelligence.xml 檔案中。  

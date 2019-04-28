@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99aabef0bd8e7ba293c0e66428607fe7fb4642e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721714"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選建立合併式發行集的快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用參數化篩選建立合併式發行集的快照集。  

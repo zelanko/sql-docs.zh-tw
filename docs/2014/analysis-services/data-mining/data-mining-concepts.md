@@ -26,26 +26,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722971"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
   資料採礦是從大型資料集探索可付諸行動之資訊的過程。 資料採礦使用數學分析衍生存在於資料中的模式和趨勢。 傳統資料瀏覽一般無法探索這些模式，因為這些關聯性太複雜或因為沒有太多資料。  
   
  這些模式和趨勢可收集在一起，並定義為 *「資料採礦模型」*(Data mining model)。 採礦模型可套用至特定案例，例如：  
   
--   **預測**：估計銷售、預測伺服器負載或伺服器停機時間  
+-   **預測**:估計銷售、 預測伺服器負載或伺服器停機時間  
   
--   **風險和機率**：選擇目標郵件的最佳客戶、為風險案例決定可能的損益平衡點、指派診斷或其他結果的機率  
+-   **風險和機率**:選擇最佳客戶為目標的郵寄，判斷為風險案例可能的損益平衡點、 指派診斷或其他結果的機率  
   
--   **建議**：決定可能一起銷售的產品、產生建議  
+-   **建議**:判斷哪些產品可能一起銷售產生建議  
   
--   **尋找順序**：分析客戶在購物車中的選擇、預測下一個可能的事件  
+-   **尋找順序**:分析客戶在購物籃、 預測下一個可能的事件中的選擇  
   
--   **群組**：將客戶或事件分成相關項目的叢集、分析及預測相似性  
+-   **群組**:將客戶或事件分成相關項目、 分析及預測相似性的叢集  
   
  建立採礦模型是較大型程序的一部分，它包括從詢問資料相關問題與建立模型回答這些問題，到部署該模型到工作環境中的一切細節。 可以使用下列 6 個基本步驟來定義這個程序：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48067678"
   
  Microsoft SQL Server 資料採礦提供一個用於建立和使用資料採礦模型的整合式環境。 此環境包含 SQL Server Development Studio 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，前者含有資料採礦演算法和查詢工具，可讓您輕鬆建立各種專案的完整方案，後者含有用於瀏覽模型及管理資料採礦物件的工具。 如需詳細資訊，請參閱[使用 SQL Server 資料工具建立多維度模型 &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)。  
   
- 如需如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具套用到商務案例的範例，請參閱[資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)。  
+ 如需如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具套用到商務案例的範例，請參閱 [資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)。  
   
 ##  <a name="DefiningTheProblem"></a> 定義問題  
  資料採礦程序中的第一個步驟 (在下圖中以反白顯示) 是要明確定義問題，並考慮利用資料以提供問題解答的方式。  
@@ -122,7 +122,7 @@ ms.locfileid: "48067678"
   
  您可以使用 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 等工具審查可用的資料來源，並決定其是否可用於資料採礦。 您可以使用 [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)]等工具，或 Integration Services 資料分析工具，分析資料的分佈並修復資料錯誤或遺失等問題。  
   
- 定義來源之後，請使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的資料來源檢視設計工具，將來源合併到資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../multidimensional-models/data-source-views-in-multidimensional-models.md)(多維度模型中的資料來源檢視)。 此設計師也包含數個工具，您可以用來瀏覽資料及確認資料可用於建立模型。 如需詳細資訊，請參閱[在資料來源檢視中瀏覽資料 &#40;Analysis Services&#41;](../multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)。  
+ 定義來源之後，請使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的資料來源檢視設計工具，將來源合併到資料來源檢視。 如需詳細資訊，請參閱 [多維度模型中的資料來源檢視](../multidimensional-models/data-source-views-in-multidimensional-models.md)。 此設計師也包含數個工具，您可以用來瀏覽資料及確認資料可用於建立模型。 如需詳細資訊，請參閱[在資料來源檢視中瀏覽資料 &#40;Analysis Services&#41;](../multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)。  
   
  請注意，當您建立模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動建立包含在模型中之資料的統計摘要，讓您可以進行查詢以便用於報表或進一步的分析。 如需詳細資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。  
   
@@ -148,9 +148,9 @@ ms.locfileid: "48067678"
   
  在您將模型部署到實際執行環境之前，您會想要先測試模型的執行效能。 同時，當您建立模型時，通常會建立包含不同組態的多個模型，然後測試所有模型以查看哪個模型會針對您的問題和資料產生最佳的效果。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可協助您將資料分割為訓練資料集與測試資料集，讓您可以針對相同的資料，正確評估所有模型的效能。 您會使用訓練資料集來建立模型，並建立預測查詢，使用測試資料集來測試模型的精確度。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，這個資料分割可以在建立採礦結構時自動完成。 如需詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可協助您將資料分割為訓練資料集與測試資料集，讓您可以針對相同的資料，正確評估所有模型的效能。 您會使用訓練資料集來建立模型，並建立預測查詢，使用測試資料集來測試模型的精確度。 在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中，這個資料分割可以在建立採礦結構時自動完成。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
   
- 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為 *「交叉驗證」*(Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
+ 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為 *「交叉驗證」*(Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](testing-and-validation-data-mining.md)。  
   
  如果您在 [建立模型](#BuildingModels) 步驟中所建立的模型沒有一個有好的執行效能，您可能必須要回到程序的上一個步驟，並重新定義問題或重新調查原始資料集內的資料。  
   
@@ -177,6 +177,6 @@ ms.locfileid: "48067678"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦方案](data-mining-solutions.md)   
- [資料採礦工具](data-mining-tools.md)  
+ [資料採礦工具。](data-mining-tools.md)  
   
   

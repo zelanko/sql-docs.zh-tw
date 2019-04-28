@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723120"
 ---
 # <a name="data-definition-queries-data-mining"></a>資料定義查詢 (資料採礦)
   如果是資料採礦， *「資料定義查詢」* (Data Definition Query) 類別目錄表示執行以下作業的 DMX 陳述式或 XMLA 命令：  

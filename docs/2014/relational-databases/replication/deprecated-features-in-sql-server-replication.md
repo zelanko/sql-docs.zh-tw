@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721485"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 複寫中已被取代的功能
   本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中仍然可用之已被取代的複寫功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  

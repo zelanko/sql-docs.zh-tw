@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c898401e97bbc993fa0d913a46c4e264def40a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725872"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>授與資料採礦結構和模型的權限 (Analysis Services)
   根據預設，只有 Analysis Services 伺服器管理員擁有檢視資料庫中資料採礦結構或採礦模型的權限。 請依照下列指示，授與權限給非管理員的使用者。  
@@ -69,8 +69,8 @@ ms.locfileid: "48051208"
   
 ## <a name="see-also"></a>另請參閱  
  [授與伺服器系統管理員權限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授與對維度資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與對資料格資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [授與維度資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

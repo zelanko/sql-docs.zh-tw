@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b38ae218dbe1f5f2cc1f0f1090ed2d82e52a96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715365"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>建立新的關聯式採礦結構
   使用 [資料採礦精靈] 建立新的採礦結構 (利用關聯式資料庫或其他來源中的資料)，然後將此結構和任何相關模型儲存到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。  
@@ -49,14 +49,14 @@ ms.locfileid: "48133088"
   
      在選取可預測資料行之後，您可以按一下 [建議] 按鈕來開啟 [建議相關資料行] 對話方塊。 您可以按一下此對話方塊中的 [確定] 來接受建議的資料行，在採礦結構中包含選取的資料行，或先在 [輸入] 資料行中變更選擇，然後按一下 [確定]。 若要忽略建議，請按一下 [取消]。  
   
-8.  按 [下一步] 。  
+8.  按一下 [下一步] 。  
   
 9. 在 [指定資料行的內容和資料類型] 頁面上，在 [採礦模型結構] 之下，您可以調整每一個資料行的內容類型和資料類型。  
   
     > [!NOTE]  
     >  您可以按一下 [偵測]，來自動偵測資料行是包含連續或分隔資料。 按一下此按鈕之後，資料行內容和資料類型將在 [內容類型] 和 [資料類型] 資料行中更新。 如需內容類型及資料類型的詳細資訊，請參閱[內容類型 &#40;資料採礦&#41;](content-types-data-mining.md) 和[資料類型 &#40;資料採礦&#41;](data-types-data-mining.md)。  
   
-10. 按 [下一步] 。  
+10. 按一下 [下一步] 。  
   
 11. 在 [正在完成精靈] 頁面上，提供採礦結構的名稱和要建立的相關初始採礦模型，然後按一下 [完成]。  
   

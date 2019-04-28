@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722663"
 ---
 # <a name="customize-mining-models-and-structure"></a>自訂採礦模型和結構
   當您選取符合商務需求的演算法之後，可以使用下列方式來自訂採礦模型，以便能夠得到更好的結果。  
@@ -107,8 +107,8 @@ ms.locfileid: "52407864"
 |HIDDEN_NODE_RATIO|[Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
 |HISTORICAL_MODEL_GAP|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：這個參數與套用到採礦結構的鑑效組百分比值不同。|  
-|HOLDOUT_SEED|[Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意：這個參數與套用到採礦結構的鑑效組種子值不同。|  
+|HOLDOUT_PERCENTAGE|[Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意:此參數會套用到採礦結構鑑效組百分比值不同。|  
+|HOLDOUT_SEED|[Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 注意:此參數會套用到採礦結構鑑效組種子值不同。|  
 |INSTABILITY_SENSITIVITY|[Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 貝氏機率分類演算法技術參考](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 類神經網路演算法技術參考](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Microsoft 關聯分析演算法技術參考](microsoft-association-algorithm-technical-reference.md)|  

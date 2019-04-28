@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c55a596461e03ce91a822e4578f7de56fe27f8f1
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702198"
 ---
 # <a name="level-properties"></a>層級屬性 
   下表列出並描述使用者自訂階層中的層級屬性。  

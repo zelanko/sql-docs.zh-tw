@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc91e50c96018e14066f6e6cc0ad4625c128b639
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697503"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>建立共用資料集或內嵌資料集 (報表產生器及 SSRS)
   您可以建立內嵌資料集供單一報表使用，或建立要儲存到報表伺服器的共用資料集，以供多個報表使用。 若要建立資料集，您必須已經定義內嵌或共用資料來源。  

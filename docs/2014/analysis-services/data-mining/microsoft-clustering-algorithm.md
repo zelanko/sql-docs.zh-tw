@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721956"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft 群集演算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]群集演算法是所提供的分割演算法[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 此演算法使用反覆技巧，將資料集內的案例分成包含類似特性的群集。 這些群集對於瀏覽資料、識別資料的異常及建立預測很有幫助。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供的分割演算法。 此演算法使用反覆技巧，將資料集內的案例分成包含類似特性的群集。 這些群集對於瀏覽資料、識別資料的異常及建立預測很有幫助。  
   
  群集模型會識別資料集內，無法透過偶然的邏輯觀察而衍生之關聯性。 例如，您可以從邏輯上看出騎腳踏車上班的人通常不會住在離工作地點很遠的地方。 不過，此演算法可以尋找關於腳踏車通勤者之其他較不明顯的特性。 在下列圖表中，群集 A 代表可能要開車上班的人之資料，而群集 B 代表可能要騎腳踏車上班的人之資料。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195098"
   
 -   **輸入資料行** ：每個模型都至少包含一個輸入資料行，內含用來建置群集的值。 您可以依需求擁有任何數量的輸入資料行，但根據每個資料行中的值數目，加入額外的資料行可能會增加培訓模型所需的時間。  
   
--   **選擇性的可預測資料行** ：演算法不需要使用可預測資料行來建置模型，但您可以加入幾乎任何資料類型的可預測資料行。 可預測資料行的值可用來當做叢集模型的輸入，或者也可以指定只將其用於預測。 例如，如果您想要根據地區或年齡等人口統計資料進行群集而預測客戶收入，您可以將收入指定為`PredictOnly`並新增所有其他資料行，例如地區或年齡，做為輸入。  
+-   **選擇性的可預測資料行** ：演算法不需要使用可預測資料行來建置模型，但您可以加入幾乎任何資料類型的可預測資料行。 可預測資料行的值可用來當做叢集模型的輸入，或者也可以指定只將其用於預測。 例如，如果想要根據地區或年齡等人口統計資料進行群集而預測客戶收入，您可以將收入指定為 `PredictOnly`，然後加入所有其他的資料行 (例如地區或年齡) 做為輸入。  
   
  如需叢集模型所支援內容類型和資料類型的詳細資訊，請參閱 [Microsoft 叢集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)的＜需求＞一節。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "48195098"
 -   支援 OLAP 採礦模型的使用和資料採礦維度的建立。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 群集演算法技術參考](microsoft-clustering-algorithm-technical-reference.md)   
- [叢集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
- [群集模型查詢範例](clustering-model-query-examples.md)  
+ [叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [叢集模型查詢範例](clustering-model-query-examples.md)  
   
   

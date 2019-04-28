@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c358b0b4285a6512b2c0ac5db101bd7eed0f2ba5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705724"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 資料移轉到 SQL Server-Azure SQL DB (SybaseToSQL)
 已成功載入到 Sybase Adaptive Server Enterprise (ASE) 資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 中，您可以從 ASE 移轉資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bf8de8ea4c33a20a6159c5702db0b7eaee9eed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735044"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>以二進位形式傳輸資料
 應用程式可以安全地在使用相同的 DBMS 和硬體平台的兩個資料來源之間傳輸資料 （在使用指定的 DBMS 內部形式）。 給定的資料片段，SQL 資料類型必須是相同的來源和目標資料來源。 SQL_C_BINARY C 資料類型。  

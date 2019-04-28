@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728155"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>層級和成員 (瀏覽器索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此頁面來瀏覽目前選取之階段和語言的成員。 若要選取要瀏覽的階層或語言，請使用 **[工具列]** 窗格上的 **[階層]** 和 **[語言]** 選項。 如需有關工具列窗格的詳細資訊，請參閱[工具列&#40;瀏覽器索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="writeback-mode"></a>回寫模式  
- 如果啟用回寫模式，此窗格的功能就會變更。 選取的維度必須是可寫入 (亦即`WriteEnabled`維度的屬性必須設定為 true)，必須將維度部署至[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體，以啟用回寫模式。  
+ 如果啟用回寫模式，此窗格的功能就會變更。 選取的維度必須是可寫入的 (換言之，維度的 `WriteEnabled` 屬性必須設定為 True)，而且必須將維度部署至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體才能啟用回寫模式。  
   
  若要啟用回寫模式，您可以從 [工具列] 窗格中選取 [回寫]，或以滑鼠右鍵按一下 [層級和成員] 窗格，然後從內容功能表中選取 [回寫]。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48209700"
 > [!NOTE]  
 >  只有啟用回寫模式時才會顯示此選項。  
   
- **剪下**  
+ **Cut**  
  將選取的成員複製至剪貼簿，並將它們從階層中移除。  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "48209700"
  **摺疊成員**  
  摺疊 [樹狀] 中選取的成員。  
   
- **回寫**  
+ **Writeback**  
  選取即可啟用回寫模式。  
   
 ## <a name="see-also"></a>另請參閱  

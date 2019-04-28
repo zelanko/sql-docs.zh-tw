@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702138"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用現有的資料表建立維度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」，從現有的資料表建立維度。 方法是，選取精靈之 [選取建立方法] 頁面的 [使用現有的資料表] 選項。 如果您選取此選項，精靈會以維度資料表、其資料行，以及在現有資料來源檢視中之資料行間的任何關聯性為基礎， 並以來源資料表和相關資料表中的資料為範例。 它會使用此資料，定義以維度資料表中資料行為基礎的屬性資料行，並定義屬性的階層 (稱為「使用者定義的」階層)。 使用「維度精靈」建立維度之後，您可以使用 [維度設計師] 在維度中加入、移除和設定屬性與階層。  
@@ -59,7 +59,7 @@ ms.locfileid: "48226618"
 > [!NOTE]  
 >  如果建立維度時，尚未設定維度類型和標準屬性類型，請在建立維度後，使用「商業智慧精靈」設定這些值。 如需詳細資訊，請參閱 [將維度智慧加入至維度中](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 或 [將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)(適用於帳戶類型維度)。  
   
- 精靈會根據指定的屬性類型，自動設定維度類型。 指定精靈組中的屬性類型`Type`屬性的屬性。 維度及其屬性的 `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，這些`Type`屬性設定只提供用戶端應用程式的指引，以及是選擇性的。 在其他情況下，例如帳戶、 時間 或 貨幣維度，這些`Type`屬性設定會決定特定的伺服器型行為，且可能需要實作某些 cube 行為。  
+ 精靈會根據指定的屬性類型，自動設定維度類型。 在精靈中指定的屬性類型會針對屬性 (Attribute) 設定 `Type` 屬性 (Property)。 維度及其屬性的 `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，這些 `Type` 屬性設定只會提供用戶端應用程式的指導，而且是選擇性的。 在其他情況下 (例如 [帳戶]、[時間] 或 [貨幣] 維度)，這些 `Type` 屬性設定會決定特定的伺服器型行為，且在實作某些 Cube 行為時可能會需要用到。  
   
  如需維度和屬性類型的詳細資訊，請參閱 [維度類型](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)、 [設定屬性類型](attribute-properties-configure-attribute-types.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48226618"
 -   [內建帳戶類型] 資料行會列出伺服器所支援的對應標準帳戶類型。 如果來源資料使用標準名稱，精靈會將來源類型自動對應到伺服器類型，然後使用此資訊填入 [內建帳戶類型] 資料行。 如果伺服器沒有對應帳戶類型，或者您想要變更對應，請從 [內建帳戶類型] 資料行的清單中選取不同的類型。  
   
 > [!NOTE]  
->  如果在精靈建立 [帳戶] 維度時，尚未對應帳戶類型，請在建立維度後，使用「商業智慧精靈」設定這些對應。 如需詳細資訊，請參閱[將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
+>  如果在精靈建立 [帳戶] 維度時，尚未對應帳戶類型，請在建立維度後，使用「商業智慧精靈」設定這些對應。 如需詳細資訊，請參閱 [將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
 ## <a name="completing-the-wizard"></a>正在完成精靈  
  精靈會掃描維度資料表，以偵測關聯性。 精靈將會在雪花維度中，自動建立索引鍵屬性間的屬性關聯性。  
@@ -87,10 +87,10 @@ ms.locfileid: "48226618"
  在 [正在完成精靈] 頁面上，輸入新維度的名稱，然後檢閱維度的結構，即可完成精靈。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源中產生非時間資料表來建立維度](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [產生時間資料表來建立時間維度](create-a-time-dimension-by-generating-a-time-table.md)   
- [維度屬性 （Property） 參考](dimension-attribute-properties-reference.md)   
- [產生時間資料表來建立時間維度](create-a-time-dimension-by-generating-a-time-table.md)   
+ [在資料來源中產生非時間資料表來建立維度](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
+ [維度屬性 (attribute) 屬性 (property) 參考](dimension-attribute-properties-reference.md)   
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
  [在資料來源中產生非時間資料表來建立維度](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704769"
 ---
 # <a name="monitor-job-activity"></a>監視作業活動
   您可以使用「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業活動監視器」，監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上所有已定義作業的目前活動。  
@@ -62,8 +62,8 @@ ms.locfileid: "52797758"
   
 ## <a name="see-also"></a>另請參閱  
  [檢視作業活動](view-job-activity.md)   
- [dbo.sysjobactivity &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [dbo.syssessions &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
- [sp_help_jobactivity &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
+ [dbo.sysjobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo.syssessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [sp_help_jobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715095"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>根據範本建立單一預測查詢
   當您有一種模型，您想要用於預測，但不想要將它對應至外部輸入資料集，或進行大量預測時，單一查詢便很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  

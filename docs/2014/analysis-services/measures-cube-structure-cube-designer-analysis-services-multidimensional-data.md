@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727974"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>量值 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[量值]** 窗格，即可操作 Cube 設計師中之 **[Cube 結構]** 索引標籤上的量值群組和成員。  
@@ -32,7 +32,7 @@ ms.locfileid: "48090309"
   
  展開量值群組以檢視量值。 按一下選取的量值群組或量值，即可分別重新命名量值群組或量值。  
   
- 方格  
+ Grid  
  顯示量值的方格及其最常存取的屬性。 按一下 **[加入新的量值]** ，即可顯示 **[新增量值]** 對話方塊，並將新的量值加入至方格。  
   
  方格包含下列資料行：  
@@ -64,7 +64,7 @@ ms.locfileid: "48090309"
 |選項|定義|  
 |------------|----------------|  
 |**樹狀結構**|在樹狀檢視中顯示量值群組與量值。|  
-|**方格**|在方格中顯示量值群組與量值。|  
+|**格線**|在方格中顯示量值群組與量值。|  
   
  **重新命名**  
  選取即可重新命名選取的量值群組或量值。  

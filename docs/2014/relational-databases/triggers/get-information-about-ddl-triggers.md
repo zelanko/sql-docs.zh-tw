@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8d5e59264036380f6c8b5c9e73df5a6700c4b1ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698210"
 ---
 # <a name="get-information-about-ddl-triggers"></a>取得 DDL 觸發程序的詳細資訊
   本章節所列的目錄檢視可用來取得 DDL 觸發程序的相關資訊。  

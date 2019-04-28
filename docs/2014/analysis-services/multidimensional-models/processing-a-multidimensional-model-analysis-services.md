@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736915"
 ---
 # <a name="multidimensional-model-object-processing"></a>多維度模型物件處理
   處理是一個步驟或是一連串的步驟，Analysis Services 會在這些步驟中將關聯式資料來源中的資料載入多維度模型中。 如果是使用 MOLAP 儲存的物件，資料會儲存至磁碟的資料庫檔案資料夾中。 對於 ROLAP 儲存，視需要發生處理，以回應物件的 MDX 查詢。 如果是使用 ROLAP 儲存的物件，處理是指在傳回查詢結果之前更新快取。  
@@ -80,7 +80,7 @@ ms.locfileid: "48173318"
  當您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中處理物件時，您可以選取處理選項，或啟用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 來決定適當的處理類型。 可用的處理方法會因不同物件而異，並會以物件類型為基礎。 另外，可用的方法也會依據物件上次處理之後所發生的變更而定。 如果您讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取處理方法，它將使用的方法是能夠使物件在最短時間內回到完整處理狀態。 如需詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [邏輯架構&#40;Analysis Services-多維度資料&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件&#40;Analysis Services-多維度資料&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [邏輯架構 &#40;Analysis Services - 多維度資料&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

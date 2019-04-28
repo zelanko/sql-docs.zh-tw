@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726088"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>編輯或刪除分割區 (Analysis Services - 多維度)
   若要修改 Cube 資料分割，可以在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中使用 Cube 設計師的 [資料分割] 索引標籤。 [資料分割] 索引標籤會列出 Cube 中所有量值群組的資料分割。 它也會列出已啟用回寫功能的回寫分割區。  
@@ -48,8 +48,8 @@ ms.locfileid: "48104904"
  可以針對 Cube 中之每一個量值群組的每一個分割區進行個別設定儲存。 您也可以針對 Cube 或量值群組進行預設儲存設定。 儲存是在 Cube 精靈的 [資料分割] 索引標籤上設定。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及管理本機資料分割&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [設計彙總&#40;Analysis Services-多維度&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Analysis Services 中合併資料分割&#40;SSAS-多維度&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [建立及管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [設計彙總 &#40;Analysis Services - 多維度&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [在 Analysis Services 中合併資料分割 &#40;SSAS - 多維度&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

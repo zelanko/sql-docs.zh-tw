@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722650"
 ---
 # <a name="data-mining-architecture"></a>資料採礦架構
   本節描述在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體內裝載的資料採礦方案架構。 本節的主題描述可支援資料採礦之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的邏輯和實體架構，也提供有關用戶端、提供者和通訊協定的資訊，該通訊協定可用來與資料採礦伺服器通訊以及在本機或遠端搭配資料採礦物件使用。  
@@ -29,20 +29,20 @@ ms.locfileid: "48121048"
   
  [資料庫儲存位置](../multidimensional-models/database-storage-location.md)  
   
- [切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  如需有關如何在商務智慧方案中實作資料採礦的詳細資訊，請參閱 MSDN Library 的＜方案指南＞章節。  
   
 ## <a name="in-this-section"></a>本節內容  
- [邏輯架構&#40;Analysis Services-資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [實體架構&#40;Analysis Services-資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [實體架構 &#40;Analysis Services – 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [資料採礦服務與資料來源](data-mining-services-and-data-sources.md)  
   
  [資料採礦方案與物件的管理](management-of-data-mining-solutions-and-objects.md)  
   
- [安全性概觀&#40;資料採礦&#41;](security-overview-data-mining.md)  
+ [安全性概觀 &#40;資料採礦&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型程式設計](../multidimensional-models/multidimensional-model-programming.md)   

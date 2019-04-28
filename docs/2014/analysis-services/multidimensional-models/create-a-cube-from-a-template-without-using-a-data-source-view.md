@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700317"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>從範本建立 Cube，而不使用資料來源檢視
   在 [Cube 精靈] 的第一頁上，選取 [Build the cube without using a data source (不使用資料來源而建立 Cube)] 建立 Cube，而不使用資料來源檢視。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)。  

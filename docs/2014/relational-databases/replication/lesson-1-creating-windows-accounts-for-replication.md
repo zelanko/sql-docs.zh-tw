@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721156"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 課：建立 Windows 帳戶的複寫
   在這一課，您將建立 Windows 帳戶，以執行複寫代理程式。 您將在本機伺服器上，另外為下列代理程式建立 Windows 帳戶：  
   
-|Agent|位置|帳戶名稱|  
+|Agent|Location|帳戶名稱|  
 |-----------|--------------|------------------|  
 |快照集代理程式|發行者|\<*電腦名稱*>\repl_snapshot|  
 |記錄讀取器代理程式|發行者|\<*電腦名稱*>\repl_logreader|  

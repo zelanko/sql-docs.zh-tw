@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a66aabc9388c85e8d7d1e3df26bc02388347b6a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736649"
 ---
 # <a name="restore-options"></a>還原選項
   有許多方法可以還原 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，所有的方法都需要您具備伺服器電腦和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的管理員權限。 若要還原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟 [還原資料庫] 對話方塊，選取適當的選項組態，然後從對話方塊執行還原。 或者，您可以使用檔案中已經指定的設定來建立指令碼；然後儲存指令碼並視需要執行。 如此即可使用 XMLA 來完成還原，如下節中的描述。  

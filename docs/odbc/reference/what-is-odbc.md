@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714090"
 ---
 # <a name="what-is-odbc"></a>什麼是 ODBC？
 ODBC 的許多誤解存在於運算的世界。 給使用者，它是 Microsoft® Windows® 控制台 中的圖示。 應用程式的程式設計人員，它是包含資料存取常式的程式庫。 若要多人就曾經假設所有資料庫的存取問題的答案。  

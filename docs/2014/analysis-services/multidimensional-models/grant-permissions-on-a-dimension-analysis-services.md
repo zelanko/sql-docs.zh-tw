@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725862"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授與維度的權限 (Analysis Services)
   維度安全性是用來設定維度物件的權限，而不是設定它的資料。 通常，允許或拒絕存取處理作業是在設定維度權限時的主要目標。  

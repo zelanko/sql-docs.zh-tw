@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3413f4da8443df07732e1c6acca5ed6112cb59dd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725342"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>利用查詢與 Slicer 軸限制查詢 (MDX)
   在以公式表示多維度運算式 (MDX) SELECT 陳述式時，應用程式一般會檢查 Cube，並將階層集合分割成兩個子集：  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732826"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定義本地貨幣參考 (商業智慧精靈)
   使用 [定義本地貨幣參考] 頁面，即可定義貨幣轉換功能的本地貨幣，這會涵蓋 [選取轉換類型] 頁面上指定的多對多或多對一轉換類型。 本地貨幣為 **[選取量值]** 頁面中，選取之量值用於儲存交易的貨幣。  

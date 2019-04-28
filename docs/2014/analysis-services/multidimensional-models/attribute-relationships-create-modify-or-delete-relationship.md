@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701288"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>建立、修改或刪除屬性關聯性
   您可以在 **中，使用 [維度設計師] 的** [屬性關聯性] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤，建立、修改或刪除維度中各屬性之間的屬性關聯性。  
@@ -61,6 +61,6 @@ ms.locfileid: "48202788"
 3.  在 **[刪除物件]** 對話方塊中，按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性關聯性](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [中，使用 [維度設計師] 的](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

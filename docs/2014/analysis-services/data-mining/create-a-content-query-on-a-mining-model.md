@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715235"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>建立採礦模型內容查詢
   雖然您可以使用 AMO 或 XML/A，以程式設計方式查詢採礦模型內容，但是使用 DMX 來建立查詢是比較簡單的方式。 您也可以針對資料採礦結構描述資料列集建立查詢，方法是建立與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接，然後使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的 DMV 建立查詢。  
@@ -76,7 +76,7 @@ ms.locfileid: "50148033"
      [結果] 窗格就會顯示模型的內容。  
   
     > [!NOTE]  
-    >  若要檢視您可以針對目前執行個體查詢之所有結構描述資料列集的清單，請使用這個查詢： `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，如需資料採礦特有之結構描述資料列集的清單，請參閱 [資料採礦結構描述資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)。  
+    >  若要檢視目前的執行個體上的所有結構描述資料列集，您可以查詢的清單，使用下列查詢：`SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，如需資料採礦特有之結構描述資料列集的清單，請參閱 [資料採礦結構描述資料列集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 290da32b7ca9c1ab61f84371152c7b72f8168a10
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697525"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>將查詢參數與報表參數產生關聯 (報表產生器及 SSRS)
   當您定義包含查詢變數的資料集查詢時，就會剖析查詢命令。 系統會針對每個查詢變數建立對應的資料集參數和報表參數。 資料集參數會指向報表參數。 如此可讓使用者輸入一個值來直接傳遞給查詢。 每次您編輯查詢命令時，系統都會進行相同的程序。  

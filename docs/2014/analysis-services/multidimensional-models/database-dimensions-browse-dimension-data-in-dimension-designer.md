@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2823f88c31fe69c6d39713580ee176d1e3190093
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726742"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>在維度設計師中瀏覽維度資料
   您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取維度設計師，並使用其中的 [瀏覽器] 檢視來瀏覽維度中的資料。  
@@ -38,7 +38,7 @@ ms.locfileid: "48114180"
     >  針對選取的語言，維度中必須已定義翻譯。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度的簡介&#40;Analysis Services-多維度資料&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [維度簡介 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多維度模型中的維度](dimensions-in-multidimensional-models.md)  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715055"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在資料採礦設計師中建立單一查詢
   如果您想要針對單一案例建立預測，單一查詢便很有用。 如需單一查詢的詳細資訊，請參閱[資料採礦查詢](data-mining-queries.md)。  
@@ -81,6 +81,6 @@ AS [t]
      這時會開啟新的畫面，以顯示查詢的結果。 若要檢視您剛建立的 DMX 陳述式，請按一下 [SQL]。  
   
 ## <a name="see-also"></a>另請參閱  
- [預測查詢&#40;資料採礦&#41;](prediction-queries-data-mining.md)  
+ [預測查詢 &#40;資料採礦&#41;](prediction-queries-data-mining.md)  
   
   

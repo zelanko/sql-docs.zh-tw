@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721489"
 ---
 # <a name="distribution-agent-security"></a>散發代理程式安全性
   **[散發代理程式安全性]** 對話方塊，可以讓您指定散發代理程式執行用的 Windows 帳戶。 若為發送訂閱，散發代理程式會在散發者端執行；若為提取訂閱，則散發代理程式會在訂閱者端執行。 此 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶亦稱為 *處理帳戶*，因為代理程式處理序會以此帳戶執行。 對話方塊中其他可用的選項會視您存取的方式而定：  
   
 -   如果是從新增訂閱精靈中存取對話方塊，它還可以讓您指定散發代理程式連接到訂閱者 (適用於發送訂閱) 或散發者 (適用於提取訂閱) 所用的內容。 此連接可以藉由模擬 Windows 帳戶，或是用您指定之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶的內容來進行。  
   
--   如果是從 **[訂閱屬性]** 對話方塊中存取對話方塊，請按一下 **[訂閱者連接]** 中的屬性按鈕 ( **...** )，或該對話方塊的 **[散發者連接]** 資料列，即可指定散發代理程式進行連接所用的內容。 如需有關存取**訂用帳戶屬性** 對話方塊中，請參閱[檢視和 Modify Push Subscription Properties](view-and-modify-push-subscription-properties.md) ，以及如何：[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
+-   如果是從 **[訂閱屬性]** 對話方塊中存取對話方塊，請按一下 **[訂閱者連接]** 中的屬性按鈕 ( **...** )，或該對話方塊的 **[散發者連接]** 資料列，即可指定散發代理程式進行連接所用的內容。 如需有關存取 [訂閱屬性] 對話方塊的詳細資訊，請參閱[檢視及修改發送訂閱屬性](view-and-modify-push-subscription-properties.md)，以及如何：[檢視及修改提取訂閱屬性](view-and-modify-pull-subscription-properties.md)。  
   
  所有帳戶都必須有效，並且每個帳戶皆有指定正確的密碼。 等到代理程式執行時，才會驗證帳戶與密碼。  
   

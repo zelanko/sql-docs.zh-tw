@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f216d5406a649862ff35cd64508f93b97e31b310
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982234"
 ---
 # <a name="sqlsetparam-function"></a>SQLSetParam 函式
 **合規性**  
- 版本導入： ODBC 1.0 標準相容性： 已被取代  
+ 導入的版本：ODBC 1.0 標準的合規性：已被取代  
   
  **摘要**  
  在 ODBC 2.0 中，ODBC 1.0 函式**SQLSetParam**已被取代**SQLBindParameter**。 如需詳細資訊，請參閱 < [SQLBindParameter 函式](../../../odbc/reference/syntax/sqlbindparameter-function.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 內容類型 （資料採礦） |Microsoft 文件
+title: 內容類型 （資料採礦） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725182"
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34015735"
   
  當資料行包含連續數值資料，而且您知道應該要如何散發資料時，您可以指定預期的值分佈來提升分析的精確度。 您會在採礦結構的層級上指定資料行散發。 因此，此設定會套用到根據此結構的所有模型上。如需詳細資訊，請參閱[資料行散發 &#40;資料採礦&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)。  
   
- **Continuous** 內容類型受到下列資料類型的支援： **Date**、 **Double**和 **Long**。  
+ **連續**內容類型受到下列資料類型：**日期**， **Double**，以及**長**。  
   
 ## <a name="discretized"></a>Discretized  
  *「離散化」* (Discretization) 是將連續資料集的值放入值區內的程序，以產生有限數目的可能值。 您只能離散化數值資料。  
@@ -49,9 +49,9 @@ ms.locfileid: "34015735"
   
  您可以手動離散化資料，以確保您能取得所要的值區，或者可以使用在 SQL Server Analysis Services 中提供的離散化方法。 某些演算法會自動執行離散化。 如需詳細資訊，請參閱 [變更採礦模型中的資料行分隔](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)。  
   
- **Discretized** 內容類型受到下列資料類型的支援： **Date**、 **Double**、 **Long**和 **Text**。  
+ **Discretized**內容類型受到下列資料類型：**日期**， **Double**， **Long**，和**文字**。  
   
-## <a name="key"></a>索引鍵  
+## <a name="key"></a>Key  
  *key* 內容類型表示資料行會唯一識別資料列。 在案例資料表中，索引鍵資料行通常是數值的或文字的識別碼。 您可以將內容類型設定為 **key** ，以代表資料行只可以用於追蹤記錄，而不能用於分析。  
   
  巢狀資料表也具有索引鍵，但巢狀資料表索引鍵的用法稍有不同。 如果資料行是您想要分析的屬性，請在巢狀資料表中將內容類型設定為 **key** 。 每個案例的巢狀資料表索引鍵值都必須是唯一的，但在整個案例集合中可能會有重複的值。  
@@ -61,19 +61,19 @@ ms.locfileid: "34015735"
 > [!NOTE]  
 >  只有在從已定義為 Analysis Services 資料來源檢視的外部資料來源使用資料時，才可以使用巢狀資料表。  
   
- 這個內容類型受到下列資料類型所支援： **Date**、 **Double**、 **Long**和 **Text**。  
+ 此內容類型受到下列資料類型：**日期**， **Double**， **Long**，和**文字**。  
   
 ## <a name="key-sequence"></a>Key Sequence  
  *key sequence* 內容類型只能用於時序群集模型。 將內容類型設定為 **key sequence**時，代表資料行包含代表事件序列的值。 其值已排序，但不必為等距。  
   
- 這個內容類型受到下列資料類型所支援： **Double**、 **Long**、 **Text**和 **Date**。  
+ 此內容類型受到下列資料類型：**雙精度浮點**，**長**，**文字**，和**日期**。  
   
 ## <a name="key-time"></a>Key Time  
  *key time* 內容類型只能用於時間序列模型。 將內容類型設定為 **key time**時，代表值已排序且代表時段。  
   
- 這個內容類型受到下列資料類型所支援： **Double**、 **Long**和 **Date**。  
+ 此內容類型受到下列資料類型：**雙精度浮點**，**長**，以及**日期**。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>資料表  
  *table* 內容類型表示資料行包含另一個資料表，資料表內有一個或多個資料行及一個或多個資料列。 對於案例資料表中的任何特定資料列，這個資料行也可以包含多個全與父案例記錄相關的值。 例如，如果主要案例資料表包含客戶清單，則您可以擁有數個包含巢狀資料表的資料行，例如 **ProductsPurchased** 資料行 (其中巢狀資料表會列出此客戶過去購買的產品) 及 **Hobbies** 資料行 (列出客戶興趣)。  
   
  此資料行的資料類型一定是 **Table**。  
@@ -96,9 +96,9 @@ ms.locfileid: "34015735"
  除了前述常用於所有模型的內容類型之外，您可以使用分類資料行來定義某些資料類型的內容類型。 如需分類資料行的詳細資訊，請參閱[分類資料行 &#40;資料採礦&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型 & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [資料類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [資料類型 & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [內容類型 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [資料類型 &#40;資料採礦&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [資料類型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [變更採礦結構的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715205"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 建立資料採礦查詢
   您可以使用 AMO、DMX 或 XML/A 來針對資料採礦物件建立各種查詢。  
@@ -75,7 +75,7 @@ ms.locfileid: "50148083"
   
      成為下列這行：  
   
-     **\<RequestType > DMSCHEMA_MINING_MODEL_CONTENT\</RequestType >**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  將新的條件加入到限制清單中，以便將限制清單變更為依名稱指定採礦模型。  
   

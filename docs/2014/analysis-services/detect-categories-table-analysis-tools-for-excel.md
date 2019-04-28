@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732222"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>偵測類別目錄 (適用於 Excel 的資料表分析工具)
   ![功能區中的偵測類別目錄按鈕](media/tat-detectcat.gif "功能區中的 [偵測類別目錄] 按鈕")  

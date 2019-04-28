@@ -1,5 +1,5 @@
 ---
-title: 將維度智慧加入維度 |Microsoft 文件
+title: 將維度智慧加入維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad714bfefa8010664a8105eebf1f45d63799847c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717335"
 ---
-# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 精靈-將維度智慧加入維度中
+# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 精靈 - 將維度智慧新增至維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   將維度智慧增強功能加入至 Cube 或維度，以指定維度的標準商務類型。 此增強功能同時也會指定維度屬性的對應類型。 用戶端應用程式在分析資料時可以使用這些類型規格。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "34027205"
  在精靈的第一個 [設定維度智慧選項] 頁面上，指定要套用維度智慧的維度。 加入到此選取維度的維度智慧增強功能，會產生維度的變更。 包含選取之維度的所有 Cube，都會繼承這些變更。  
   
 > [!NOTE]  
->  如果選取 [帳戶] 作為維度，您將會指定維度的帳戶智慧。 如需詳細資訊，請參閱[將帳戶智慧加入至維度中](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)。  
+>  如果選取 [帳戶] 作為維度，您將會指定維度的帳戶智慧。 如需詳細資訊，請參閱 [將帳戶智慧加入至維度中](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
 ## <a name="specifying-dimension-attributes"></a>指定維度屬性  
  在 [定義維度智慧] 頁面的 [維度類型] 清單中，您的選取項目會設定維度的 **Type** 屬性。 **Type** 屬性設定會將維度內容的相關資訊提供給伺服器和用戶端應用程式。 部份設定只為用戶端應用程式提供指導；這些設定是選擇性的。 其他設定 (例如帳戶或時間) 決定特定的行為，並可能對實作特殊商業智慧增強功能是必要的。 例如，SQL Server Management Studio 使用維度類型來識別貨幣維度，以及設定適當的貨幣轉換規則。 [維度類型] 的預設值為 [一般]，不會對維度內容做任何假設。  
@@ -36,6 +36,6 @@ ms.locfileid: "34027205"
  例如，您要將維度智慧加入至帳戶維度。 在 [維度屬性] 中，選取 [帳戶]。 然後，如果維度有 [帳戶類型] 和 [帳戶描述] 屬性，請在 [包含] 資料行中，選取 [帳戶名稱] 和 [帳戶類型] 帳戶類型的核取方塊。 在 [維度屬性] 資料行中，將這些帳戶類型分別與維度內的 [帳戶描述] 和 [帳戶類型] 屬性產生關聯。  
   
 ## <a name="see-also"></a>另請參閱  
- [定義時間智慧計算使用商業智慧精靈](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [使用商業智慧精靈定義時間智慧計算](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

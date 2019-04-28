@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725892"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授與物件中繼資料的讀取定義權限 (Analysis Services)
   讀取所選物件上的物件定義或中繼資料的權限，可讓管理員授與檢視物件資訊的權限，而不必同時授與修改物件定義、修改物件結構或檢視物件實際資料的權限。 `Read Definition` 在資料庫、 資料來源、 維度、 採礦結構和採礦模型層級，可以授與權限。 如果您需要`Read Definition`cube 的權限，您必須啟用`Read Definition`資料庫。請記住，權限是加總。 例如，某個角色會授與讀取 Cube 之中繼資料的權限，而第二個角色則會授與讀取維度之中繼資料的相同使用者權限。 兩個不同角色的權限結合之後，使用者就會同時擁有讀取該資料庫內 Cube 之中繼資料和維度之中繼資料的權限。  

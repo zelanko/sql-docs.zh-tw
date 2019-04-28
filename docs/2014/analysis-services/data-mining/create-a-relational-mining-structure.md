@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e77a72246854ef990e0aea9bde80bbc33ce5994
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715115"
 ---
 # <a name="create-a-relational-mining-structure"></a>建立關聯式採礦結構
   大多數的資料採礦模型都是根據關聯式資料來源。 建立關聯式資料採礦模型的優點如下：您可以組合隨選資料及定型和更新模型，而不需要經歷建立 Cube 的複雜程序。  

@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddbb675214f537054e608e10854cedf74e0f39be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719875"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Internet Explorer 錯誤碼，遠端資料服務
 下表列出遠端資料服務使用量的相關的 Microsoft® Internet Explorer 錯誤碼。 低的兩個位元組的十進位正轉譯，會顯示完整的錯誤程式碼和十六進位值的負值的十進位轉譯。
 
 |Internet Explorer (Wininet) 錯誤|Number|描述|
 |------------------------------------------|------------|-----------------|
-|**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|網際網路用戶端錯誤： 無法連線到伺服器。|
-|**IDS_WinInet_ ConnectionReset**|12031-2146816257 0x800A2EFF|網際網路用戶端錯誤： 連接重設。|
+|**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|網際網路用戶端錯誤：無法連線到伺服器。|
+|**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|網際網路用戶端錯誤：連接重設。|
 |**IDS_WinInet_Error**|8193 -2146820095 0x800A2001|網際網路用戶端時發生錯誤。|
-|**IDS_WinInet_ InvalidServerResponse**|8430-2146819858 0x800A20EE|網際網路用戶端錯誤： 無效的伺服器回應。|
-|**IDS_WinInet_ SSLPostLimitation**|8196 -2146820092 0x800A2004|網際網路用戶端錯誤： SSL 錯誤 （可能是 32 K 資料上傳限制）。|
-|**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|網際網路用戶端錯誤： 要求逾時。|
+|**IDS_WinInet_ InvalidServerResponse**|8430 -2146819858 0x800A20EE|網際網路用戶端錯誤：無效的伺服器回應。|
+|**IDS_WinInet_ SSLPostLimitation**|8196 -2146820092 0x800A2004|網際網路用戶端錯誤：SSL 錯誤 （可能是 32 K 資料上傳限制）。|
+|**IDS_WinInet_Timeout**|8194 -2146820094 0x800A2002|網際網路用戶端錯誤：要求逾時。|

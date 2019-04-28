@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cc1a94e0677f0c9356f4fba43b7b6230759c9458
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696292"
 ---
 # <a name="import-statuses-master-data-services"></a>匯入狀態 (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52819280"
 
   在 **[整合管理]** 功能區域的 **[暫存批次]** 頁面上，可能會出現下列狀態。  
   
-|[狀態]|Description|Status_ID|  
+|[狀態]|描述|Status_ID|  
 |------------|-----------------|----------------|  
 |已排入執行佇列|批次尚未開始處理。|1|  
 |執行中|批次正進行處理。|2|  

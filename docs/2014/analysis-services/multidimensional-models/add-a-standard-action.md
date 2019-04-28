@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727402"
 ---
 # <a name="add-a-standard-action"></a>加入標準動作
   您可以使用 Cube 設計師的 [動作] 檢視將動作加入資料庫。 該檢視可透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取。 在建立動作之後，您必須先重新處理相關的 Cube，使用者才能使用動作。 如需相關資訊，請參閱 [Processing Analysis Services Objects](processing-analysis-services-objects.md)。  

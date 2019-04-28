@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703272"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>監視 Analysis Services 執行個體
   您可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或效能監視器 (此應用程式有時稱為 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **) 來監視**的效能。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 可讓您建立和管理追蹤，並分析和重新執行追蹤結果。 效能監視器會報告伺服器狀態 (透過某些計數器來建立索引)，這些將在下節中討論。  

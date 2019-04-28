@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724043"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @cursor_return=] *cursor_variable_name*輸出  
+ [ @cursor_return= ] *cursor_variable_name*OUTPUT  
  這是宣告資料指標變數的名稱。 *cursor_variable_name*已**游標**，沒有預設值。 資料指標是一個可捲動的動態唯讀資料指標。  
   
- [ @cursor_scope=] *cursor_scope&lt*  
+ [ @cursor_scope= ] *cursor_scope*  
  指定要報告的資料指標層級。 *cursor_scope&lt*已**int**，沒有預設值，它可以是下列值之一。  
   
 |值|描述|  
