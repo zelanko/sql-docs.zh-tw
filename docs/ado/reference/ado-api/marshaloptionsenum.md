@@ -1,5 +1,5 @@
 ---
-title: MarshalOptionsEnum |Microsoft Docs
+title: MarshalOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1a89759d6943dc6ccae2a6bfbe65bd96927f87c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863940"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 指定哪些記錄應該傳回至伺服器。  

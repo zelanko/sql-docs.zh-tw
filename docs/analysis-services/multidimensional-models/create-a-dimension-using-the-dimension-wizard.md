@@ -1,5 +1,5 @@
 ---
-title: 使用 「 維度精靈 」 建立維度 |Microsoft 文件
+title: 使用 「 維度精靈 」 建立維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866873"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用維度精靈建立維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈] 來建立新的維度。  
+  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [維度精靈] 來建立新的維度。  
   
 ### <a name="to-create-a-new-dimension"></a>建立新維度  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34023265"
   
          如果 [索引鍵資料行] 清單包含多個索引鍵資料行，您必須可針對索引鍵屬性提供成員值的名稱資料行。 若要這樣做，您可以在資料來源檢視中，建立具名計算，並將其當做名稱資料行使用。  
   
-    5.  按一下 **[下一步]**。  
+    5.  按一下 [下一步] 。  
   
 4.  在 [選取相關資料表] 頁面上，選取您要包含在維度中的相關資料表，然後按一下 [下一步]。  
   

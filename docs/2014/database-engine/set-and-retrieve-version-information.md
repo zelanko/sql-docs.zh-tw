@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843479"
 ---
 # <a name="set-and-retrieve-version-information"></a>設定及擷取版本資訊
   版本資訊包括原始檔控制檔案的記錄和目前狀態。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 會維護每個原始檔控制檔案的完整歷程，供您追蹤一或多個檔案在時間中的進展。 您也可以利用這項資訊來擷取檔案任何版本的本機副本，或比較任意兩個檔案版本。  

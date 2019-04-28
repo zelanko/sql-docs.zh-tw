@@ -15,11 +15,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b06f5248152f8a11bf3e46d222df457f5442b6b4
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837779"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 快速入門安裝
     

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872976"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 壓縮實作
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Standard Compression Scheme for Unicode (SCSU) 演算法的實作來壓縮儲存在資料列或頁面壓縮物件中的 Unicode 值。 對於這些壓縮的物件而言，系統會自動針對 `nchar(n)` 和 `nvarchar(n)` 資料行進行 Unicode 壓縮。 不論地區設定為何， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都會將 Unicode 資料儲存成 2 位元組。 這稱為 UCS-2 編碼。 對於某些地區設定而言，SQL Server 中的 SCSU 壓縮實作最多可以節省 50% 的儲存空間。  

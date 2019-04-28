@@ -15,11 +15,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843120"
 ---
 # <a name="about-the-sql-server-license-terms"></a>關於 SQL Server 授權條款
   在安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 軟體授權條款會複製到本機電腦。 如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。 這些檔案會寫入至: %programfiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ 或 %programfiles(x86)%\[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 條款\\。  

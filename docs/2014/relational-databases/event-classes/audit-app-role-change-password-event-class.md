@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c715711953f8913630a96aae7697adb00bfc0e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867176"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password 事件類別
   每當應用程式角色的密碼有所變更時，就會發生 **Audit App Role Change Password** 事件類別。  

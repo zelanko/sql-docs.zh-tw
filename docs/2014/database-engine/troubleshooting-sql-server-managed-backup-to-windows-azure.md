@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842575"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>針對 SQL Server Managed Backup 到 Windows Azure 進行疑難排解
   本主題說明[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]作業期間，針對其中可能發生的錯誤所使用的工作和工具進行疑難排解。  
@@ -86,9 +86,9 @@ ms.locfileid: "52522538"
   
          *「 可能會發生與 SQL Server 的連線問題。正在略過目前的反覆項目中的資料庫。 」*  
   
-         *「 查詢失敗的記錄檔使用量資訊。失敗可能為暫時性。正在略過目前的反覆項目中的資料庫。 」*  
+         *「 查詢失敗的記錄檔使用量資訊。失敗可能是暫時性的。正在略過目前的反覆項目中的資料庫。 」*  
   
-         *「 載入 SSMBackup2WA 代理程式的中繼資料時發生 SQL 例外狀況。失敗可能為暫時性。作業將會重試。 」*  
+         *「 載入 SSMBackup2WA 代理程式的中繼資料時發生 SQL 例外狀況。失敗可能是暫時性的。作業將會重試。 」*  
   
          *「 SSMBackup2WA 遇到 SQL 例外狀況時..."*  
   

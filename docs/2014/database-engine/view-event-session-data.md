@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842882"
 ---
 # <a name="view-event-session-data"></a>檢視事件工作階段資料
   本主題描述如何使用顯示使用者介面來查看並分析擴充事件資料：  
@@ -45,7 +45,7 @@ ms.locfileid: "49120295"
   
 -   若為 event_file 目標，請使用下列其中一種方法來檢視檔案目標資料 (.XEL 檔案)：  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用 [檔案] -> [開啟]。  
+    -   使用中的檔案]-> [開啟位置[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
     -   將檔案拖放至 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中。  
   

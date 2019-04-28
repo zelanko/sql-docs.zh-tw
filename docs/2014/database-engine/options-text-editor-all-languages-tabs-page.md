@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844189"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>選項 (文字編輯器 - 所有語言 - 定位點頁面)
   使用這個對話方塊可設定在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的全部五個編輯器中按下 Tab 鍵的移動行為。 若要顯示這些選項，請按一下 [工具] 功能表上的 [選項]。 選取 [文字編輯器] 資料夾，展開 [所有語言] 資料夾，然後按一下 [索引標籤]。  
@@ -33,10 +33,10 @@ ms.locfileid: "51030136"
  **無**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
- **區塊**  
+ **Block**  
  如果選取此選項，當您按下 ENTER 鍵時所建立的新行就會自動縮排與上一行縮排相同的距離。  
   
- **智慧**  
+ **Smart**  
  如果選取此選項，當您按下 ENTER 時所建立之新行的位置，就會根據內容而定。  
   
 ## <a name="tabs"></a>定位點  

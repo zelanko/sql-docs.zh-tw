@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2dea61640bd155e58cef2d7c8261b2ca7733bd4d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836257"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 連線管理員
 **Azure HDInsight 連線管理員**可讓 SSIS 套件連線到 Azure HDInsight 叢集。

@@ -16,19 +16,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856508"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>檢視預存程序的定義
     
 ##  <a name="Top"></a> 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中使用 [物件總管] 功能表選項，或在查詢編輯器中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]，檢視預存程序的定義。 本主題描述如何在 [物件總管] 中，以及透過系統預存程序、系統函數和查詢編輯器中的物件目錄檢視，來檢視程序的定義。  
   
--   **開始之前**  [安全性](#Security)  
+-   **開始之前：**[安全性](#Security)  
   
--   **To view the definition of a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **若要檢視的程序中，定義使用：**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -36,10 +36,10 @@ ms.locfileid: "48063848"
   
 ####  <a name="Permissions"></a> 權限  
  系統預存程序：`sp_helptext`  
- 需要 **public** 角色的成員資格。 系統物件定義是公開顯示的。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。  
+ 需要 **public** 角色的成員資格。 系統物件定義是公開顯示的。 使用者物件的定義是可見的物件擁有者或擁有下列權限的被授與者：ALTER、 CONTROL、 TAKE OWNERSHIP 或 VIEW DEFINITION。  
   
  系統函數：`OBJECT_DEFINITION`  
- 系統物件定義是公開顯示的。 凡具有 ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION 任一權限的物件擁有者或被授與者，都看得到使用者物件的定義。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
+ 系統物件定義是公開顯示的。 使用者物件的定義是可見的物件擁有者或擁有下列權限的被授與者：ALTER、 CONTROL、 TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定資料庫角色的成員隱含地擁有這些權限。  
   
  物件目錄檢視：`sys.sql_modules`  
  目錄檢視內中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)。  
@@ -56,9 +56,9 @@ ms.locfileid: "48063848"
   
 1.  在物件總管中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
-2.  依序展開 [資料庫] 、程序所屬的資料庫，以及 [可程式性] 。  
+2.  依序展開 **[資料庫]**、程序所屬的資料庫，以及 **[可程式性]**。  
   
-3.  展開 **[預存程序]**，以滑鼠右鍵按一下程序，然後按一下 **[產生預存程序的指令碼為]**，再按一下下列其中一個選項： **[CREATE 至]**、 **[ALTER 至]** 或 **[DROP 並 CREATE 至]**。  
+3.  依序展開**預存程序**，以滑鼠右鍵按一下程序，然後按一下**指令碼預存程序為**，然後按一下下列其中之一：**若要建立**，**變更為**，或**卸除並建立至**。  
   
 4.  選取 **[新增查詢編輯器視窗]**。 這會顯示程序定義。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063848"
   
 2.  在工具列上，按一下 **[新增查詢]**。  
   
-3.  在 [查詢] 視窗中，輸入下列陳述式使用`sp_helptext`系統預存程序。 請變更資料庫名稱和預存程序名稱，使其參考您需要的資料庫和預存程序。  
+3.  在查詢視窗中，輸入下列使用 `sp_helptext` 系統預存程序的陳述式。 請變更資料庫名稱和預存程序名稱，使其參考您需要的資料庫和預存程序。  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063848"
   
 2.  在工具列上，按一下 **[新增查詢]**。  
   
-3.  在 [查詢] 視窗中，輸入下列陳述式使用`sys.sql_modules`目錄檢視。 請變更資料庫名稱和預存程序名稱，使其參考您需要的資料庫和預存程序。  
+3.  在查詢視窗中，輸入下列使用 `sys.sql_modules` 目錄檢視的陳述式。 請變更資料庫名稱和預存程序名稱，使其參考您需要的資料庫和預存程序。  
   
     ```  
     USE AdventureWorks2012;  
