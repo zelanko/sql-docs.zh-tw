@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779947"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
     
@@ -539,13 +539,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> 為執行緩慢的測試疑難排解  
  測試結果通常會隨硬體而有所不同，也會隨測試執行中使用並行的程度而有所不同。 如果結果不如預期，可注意下列幾點：  
   
--   並行交易數目：在單一執行緒上執行工作負載時，透過 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 提升的效能可能不到兩倍。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
+-   並行交易數目：當在單一執行緒上執行的工作負載，使用提升的效能[!INCLUDE[hek_2](../includes/hek-2-md.md)]可能會小於 2 X。 只有在高度並行的情況下，閂鎖競爭才會成為嚴重的問題。  
   
--   可用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的核心數目很低：這表示系統中的並行程度不高，因為同時執行的交易數目必須與 SQL 可用的核心數目相同。  
+-   低至可用的核心數目[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:這表示在系統中，會有低層級的並行存取，只可以有多個同時執行的交易 SQL 可用的核心數目相同。  
   
     -   徵兆：執行磁碟資料表上的工作負載時，如果 CPU 使用率很高，並不是指競爭很多，而是指缺少並行。  
   
--   記錄磁碟機的速度：如果記錄磁碟機跟不上系統中的交易輸送量層級，工作負載會在記錄 IO 上成為瓶頸。 雖然 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
+-   記錄磁碟機的速度：如果記錄磁碟機無法跟上的交易輸送量層級系統中，工作負載會變成瓶頸在記錄 IO 上。 雖然 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的記錄效率較高，一旦記錄 IO 成為瓶頸，將會限制可能提升的效能。  
   
     -   徵兆：執行記憶體最佳化資料表上的工作負載時，如果 CPU 使用率離 100% 有段距離或急起急落，可能會發生記錄 IO 瓶頸。 您可以開啟資源監視器並查看記錄磁碟機的佇列長度，以確認是否發生此瓶頸。  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- 如您所見，這些資料表相當小：SalesOrderHeader_inmem 的大小約為 7MB，而 SalesOrderDetail_inmem 的大小約為 15MB。  
+ 如您所見的資料表是相當小：Salesorderheader_inmem 的大小約為 7MB，而 SalesOrderDetail_inmem 的大小約 15 MB。  
   
  此處值得注意的是，與資料表資料大小相較下，配置給索引的記憶體大小。 這是因為範例中的雜湊索引會預留大小以容納較大的資料。 請注意，雜湊索引有固定的大小，因此其大小不會隨資料表中的資料大小增加。  
   

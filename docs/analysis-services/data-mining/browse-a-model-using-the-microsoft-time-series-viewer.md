@@ -1,5 +1,5 @@
 ---
-title: 瀏覽模型，使用 Microsoft 時間序列檢視器 |Microsoft 文件
+title: 瀏覽模型，使用 Microsoft 時間序列檢視器 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd57ae140adee0909c0f00647a334bd62f26c170
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671336"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>使用 Microsoft 時間序列檢視器瀏覽模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法是一種迴歸演算法，在預測狀況下用來建立資料採礦模型，以預測連續的資料行，例如產品銷售。 這些時間序列模型可依照不同的演算法而包含資訊：  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時間序列檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法是一種迴歸演算法，在預測狀況下用來建立資料採礦模型，以預測連續的資料行，例如產品銷售。 這些時間序列模型可依照不同的演算法而包含資訊：  
   
 -   ARTxp 演算法 (已針對短期預測而最佳化)。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34015435"
   
 -   [圖表](#BKMK_Charts)  
   
- **注意** ：模型內容以及採礦圖例中所顯示的資訊，會依模型所使用的演算法而異。 不過，不論使用了哪些演算法，[模型] 和 [圖表] 索引標籤都相同。  
+ **注意**：模型內容以及採礦圖例中所顯示的資訊，會依模型所使用的演算法而異。 不過，不論使用了哪些演算法，[模型] 和 [圖表] 索引標籤都相同。  
   
 ###  <a name="BKMK_Tree"></a> 模型  
  在建立時間序列模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將完成的模型顯示為樹狀結構。 如果資料包含多個案例序列， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個序列建立個別的樹狀結構。 例如，假設您要針對太平洋、北美及歐洲地區預測銷售量， 每一個地區的預測都是案例數列。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會針對每個數列建立個別的樹狀結構。 若要檢視特定的序列，請從 [樹狀結構] 清單選取序列。  
@@ -80,7 +80,7 @@ ms.locfileid: "34015435"
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和使用說明](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
