@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731862"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>預測 (適用於 Excel 的資料表分析工具)
   ![預測的按鈕，在 資料表分析工具功能區](media/tat-forecast.gif "預測資料表分析工具功能區中的按鈕")  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724363"
 ---
 # <a name="header-files"></a>標頭檔
 Sql.h 標頭檔包含原型的函式和核心 ODBC 介面一致性層級中的功能。 Sqlext.h 標頭檔包含原型的函式和中的層級 1 和層級 2 API 一致性層級的功能。 Sqltypes.h 標頭檔包含類型定義與 SQL 資料類型的指標。  

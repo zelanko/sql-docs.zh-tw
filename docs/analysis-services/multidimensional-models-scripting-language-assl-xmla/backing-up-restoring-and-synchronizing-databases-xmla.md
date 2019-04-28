@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d311a07eb11f1c5119a3c20d7536b5a2986b49
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719895"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>備份、還原和同步處理資料庫 (XMLA)
   在 XML for Analysis 中，有三個命令分別可用來備份、還原和同步處理資料庫：  
@@ -54,7 +54,7 @@ ms.locfileid: "50145933"
   
 |值|描述|  
 |-----------|-----------------|  
-|*skipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
+|*SkipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在備份檔案中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從備份檔案排除安全性定義。|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "50145933"
   
 |值|描述|  
 |-----------|-----------------|  
-|*skipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*SkipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從資料庫排除安全性定義。|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "50145933"
   
 |值|描述|  
 |-----------|-----------------|  
-|*skipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*SkipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在目的地資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從目的地資料庫排除安全性定義。|  
   

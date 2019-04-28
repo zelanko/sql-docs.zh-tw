@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982372"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函數
 **合規性**  
@@ -179,12 +179,12 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_SCHEM (ODBC 1.0)|6|Varchar|外部索引鍵的資料表結構描述名稱;如果不適用於資料來源，則為 NULL。 如果驅動程式支援結構描述對於某些資料表，但不適用於其他項目，例如當驅動程式會擷取不同 Dbms 中的資料，它會傳回空字串 ("") 並沒有結構描述這些資料表。|  
 |FKTABLE_NAME (ODBC 1.0)|7|非 NULL Varchar|外部索引鍵資料表名稱。|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|非 NULL Varchar|外部索引鍵資料行名稱。 驅動程式會傳回沒有名稱的資料行的空字串。|  
-|KEY_SEQ 來排序 (ODBC 1.0)|9|Smallint 非 NULL|（從 1 開始） 的索引鍵資料行順序編號。|  
+|KEY_SEQ (ODBC 1.0)|9|Smallint 非 NULL|（從 1 開始） 的索引鍵資料行順序編號。|  
 |UPDATE_RULE (ODBC 1.0)|10|Smallint|當 SQL 作業是套用至外部索引鍵的動作**更新**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考的資料表會具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION:當更新所參考之資料表的主索引鍵時，也會更新參考資料表的外部索引鍵。<br /><br /> SQL_NO_ACTION:如果所參考之資料表的主索引鍵更新會導致參考資料表中的 < 懸吊參考 > （也就是參考資料表中的資料列會有任何對應項目中參考的資料表），就會拒絕更新。 如果參考資料表的外部索引鍵更新會導入值做為參考資料表的主索引鍵的值不存在，則會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL:對應至已變更元件的主索引鍵的外部索引鍵參考資料表中的元件時參考的資料表中的一或多個資料列會更新的方式，會變更的主索引鍵的一或多個元件，都會在所有設為 NULL參考資料表的相符的資料列。<br /><br /> SQL_SET_DEFAULT:當參考資料表中的一或多個資料列會更新的方式，會變更的主索引鍵的一或多個元件時，對應至已變更元件的主索引鍵的外部索引鍵參考資料表中的元件會設定為 applicable 參考資料表的所有相符的資料列中的預設值。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
 |DELETE_RULE (ODBC 1.0)|11|Smallint|當 SQL 作業是套用至外部索引鍵的動作**刪除**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考的資料表會具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION:刪除參考的資料表中的資料列時，會一併刪除參考的資料表中的所有相符資料列。<br /><br /> SQL_NO_ACTION:如果參考的資料表中的資料列刪除會導致 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有任何對應項目中參考的資料表），就會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL:參考的資料表中的一或多個資料列已刪除時，參考資料表的外部索引鍵的每個元件設為 NULL 參考資料表的所有相符的資料列中。<br /><br /> SQL_SET_DEFAULT:刪除參考的資料表中的一或多個資料列，每個元件的參考資料表的外部索引鍵設為適用的預設值，在參考資料表的所有相符的資料列。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
 |FK_NAME (ODBC 2.0)|12|Varchar|外部索引鍵的名稱。 如果不適用於資料來源，則為 NULL。|  
 |PK_NAME (ODBC 2.0)|13|Varchar|主索引鍵的名稱。 如果不適用於資料來源，則為 NULL。|  
-|延遲性 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED，SQL_INITIALLY_IMMEDIATE，SQL_NOT_DEFERRABLE。|  
+|延遲性 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE.|  
   
 ## <a name="code-example"></a>程式碼範例  
  下表所示，此範例會使用名為訂單、 線條和客戶的三個資料表。  

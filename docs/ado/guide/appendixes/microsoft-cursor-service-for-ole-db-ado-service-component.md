@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719830"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 概觀的 Microsoft 資料指標服務
 OLE DB 的 Microsoft 資料指標服務來補充資料提供者的資料指標支援函式。 如此一來，使用者察覺到相當一致的功能，從所有資料提供者。
@@ -59,7 +59,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 
 |屬性名稱|描述|
 |-------------------|-----------------|
-|自動重新計算 (DBPROP_ADC_AUTORECALC)|資料錄集，這個值表示頻率建立具有 Data Shaping Service 系統會計算導出和彙總資料行。 預設值 (值 = 1) 是每當 Data Shaping Service 可讓您決定的值有變更時重新整理。 如果值為 0，一開始建立階層時，會僅會計算導出或彙總的資料行。|
+|Auto Recalc (DBPROP_ADC_AUTORECALC)|資料錄集，這個值表示頻率建立具有 Data Shaping Service 系統會計算導出和彙總資料行。 預設值 (值 = 1) 是每當 Data Shaping Service 可讓您決定的值有變更時重新整理。 如果值為 0，一開始建立階層時，會僅會計算導出或彙總的資料行。|
 |批次大小 (DBPROP_ADC_BATCHSIZE)|指出可以進行批次處理，再傳送至資料存放區的 update 陳述式數目。 批次中的多個陳述式，較少的來回行程，對資料存放區。|
 |快取子資料列 (DBPROP_ADC_CACHECHILDROWS)|代表建立具有 Data Shaping Service 的資料錄集，這個值會表示子資料錄集是否會儲存在快取中供稍後使用。|
 |資料指標引擎版本 (DBPROP_ADC_CEVER)|指出資料指標服務所使用的版本。|
@@ -71,7 +71,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |[唯一的結構描述](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|表示所參考的資料表擁有者的名稱**唯一資料表**屬性。|
 |[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|指示中的一個資料表名稱**資料錄集**建立多個資料表，就可以修改的插入、 更新或刪除。|
 |更新條件 (DBPROP_ADC_UPDATECRITERIA)|中的哪些欄位會指出**其中**子句用來處理在更新期間發生的衝突。|
-|[更新重新同步處理](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)(DBPROP_ADC_UPDATERESYNC)|指出是否**重新同步處理**方法會隱含地叫用後[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法 （和其行為），當**唯一資料表**屬性就會生效。|
+|[Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|指出是否**重新同步處理**方法會隱含地叫用後[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法 （和其行為），當**唯一資料表**屬性就會生效。|
 
  您也可以設定，或藉由指定其名稱為索引中擷取動態屬性**屬性**集合。 比方說，取得並列印目前的值[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)動態屬性，然後將新的值，如下所示：
 
@@ -87,7 +87,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|補充的一種可供資料指標**資料錄集**。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|補充適用於鎖定的類型**資料錄集**。 啟用批次更新。|
-|[排序](../../../ado/reference/ado-api/sort-property.md)|指定一或多個欄位名稱**資料錄集**排序，以及每個欄位以遞增或遞減順序排序。|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|指定一或多個欄位名稱**資料錄集**排序，以及每個欄位以遞增或遞減順序排序。|
 
 ## <a name="method-behavior"></a>方法的行為
  OLE DB 資料指標服務啟用，或會影響的行為[欄位](../../../ado/reference/ado-api/field-object.md)物件的[附加](../../../ado/reference/ado-api/append-method-ado.md)方法，而**資料錄集**物件的[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)， [resync](../../../ado/reference/ado-api/resync-method.md)， [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)，和[儲存](../../../ado/reference/ado-api/save-method.md)方法。

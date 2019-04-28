@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1adcc97430db480628b4b139ba12506766fe59fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732435"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>定義帳戶智慧 (維度) (商業智慧精靈)
   使用此頁面來選取帳戶智慧的維度，包含維度和屬性類型設定、局部加總量值的定義和其他要套用的功能。  

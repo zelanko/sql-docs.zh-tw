@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733918"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
@@ -61,7 +61,7 @@ ms.locfileid: "52518048"
   
  Μ = p-（狀態的優先機率）  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  值會出現：   (1-μ)/σ / / (1 減平均值) 除以標準差)  
   
@@ -85,7 +85,7 @@ WHERE NODE_TYPE = 23
   
  針對每個輸出值，此查詢會傳回係數以及指回相關輸入節點的識別碼。 它也會傳回包含輸出值與截距的資料列。 每個輸入 X 都有自己的係數 (Ci)，但巢狀的資料表也包含 「 可用 」 係數 (Co)，根據下列公式計算：  
   
- F （x) = X1 * C1 + X2\*C2 + Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Activation: exp(F(X)) / (1 + exp(F(X)) )  
   

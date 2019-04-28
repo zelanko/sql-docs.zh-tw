@@ -1,5 +1,5 @@
 ---
-title: 選擇和對應輸入的資料的預測查詢 |Microsoft 文件
+title: 選擇和對應輸入的資料的預測查詢 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724856"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>為預測查詢選擇和對應輸入資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34015055"
   
 3.  在 [資料表/檢視名稱] 之下，選取包含您要用來測試模型之資料的資料表。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
      採礦結構中的資料行，會自動對應到輸入資料表中之名稱相同的資料行。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34015055"
   
 4.  從外部資料來源的可用資料行清單中，選取新的資料行。 選取清單中的空白項目來刪除資料行對應。  
   
-5.  按一下 **[確定]**。  
+5.  按一下 [確定] 。  
   
      新的資料行對應會在設計師中顯示。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34015055"
   
 3.  按一下 **[移除關聯性]**。  
   
-4.  按一下 **[確定]**。  
+4.  按一下 [確定] 。  
   
      即移除案例資料表和巢狀資料表之間的關聯性。  
   
@@ -115,6 +115,6 @@ ms.locfileid: "34015055"
      如果關聯性已經存在，採礦模型中的資料行就會自動對應到輸入資料表中的同名資料行。 您可以按一下 **[修改聯結]**，這會開啟 **[建立關聯性]** 對話方塊，在其中修改巢狀資料表和案例資料表之間的關聯性。  
   
 ## <a name="see-also"></a>另請參閱  
- [預測查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [預測查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

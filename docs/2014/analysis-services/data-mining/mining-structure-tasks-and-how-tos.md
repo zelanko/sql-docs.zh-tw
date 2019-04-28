@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 118e4eee68f3c88bd2d09f1d0c366d1c5d9e65df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733318"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>採礦結構工作和使用說明
   **中之資料採礦設計師的** [採礦結構] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 索引標籤包含您可用來建立、編輯和處理採礦結構的工具。  

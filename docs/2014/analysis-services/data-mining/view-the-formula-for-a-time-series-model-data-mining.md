@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733677"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>檢視時間序列模型的公式 (資料採礦)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列檢視器 inData 採礦設計師提供最簡單的方式，來檢視時間序列模型中使用之迴歸方程式的詳細資料。  
@@ -80,7 +80,7 @@ ms.locfileid: "48163998"
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
- [瀏覽模型，使用 Microsoft 時間序列檢視器](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [使用 Microsoft 時間序列檢視器瀏覽模型](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [時間序列模型查詢範例](time-series-model-query-examples.md)  
   
   

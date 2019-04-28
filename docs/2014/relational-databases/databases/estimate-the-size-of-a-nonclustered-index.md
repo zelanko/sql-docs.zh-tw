@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871407"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
   請遵循下列步驟來估計儲存非叢集索引所需的空間量：  
@@ -118,7 +118,7 @@ ms.locfileid: "48146738"
     >  除了索引鍵資料行之外，包含非索引鍵資料行將可擴充非叢集索引。 這些額外的資料行只會儲存在非叢集索引的分葉層級。 如需詳細資訊，請參閱 [建立內含資料行的索引](../indexes/create-indexes-with-included-columns.md)。  
   
     > [!NOTE]  
-    >  您可以結合`varchar`， `nvarchar`， `varbinary`，或`sql_variant`使定義的資料表總寬度超過 8,060 個位元組的資料行。 這些資料行的每個長度必須仍然在 `varchar`、`varbinary` 或 `sql_variant` 資料行的 8,000 個位元組限制內，以及 `nvarchar` 資料行的 4,000 個位元組限制。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。 這也適用於已包含資料行的非叢集索引分葉資料列。  
+    >  您可以結合使定義的資料表總寬度超過 8,060 個位元組的 `varchar`、`nvarchar`、`varbinary` 或 `sql_variant` 資料行。 這些資料行的每個長度必須仍然在 `varchar`、`varbinary` 或 `sql_variant` 資料行的 8,000 個位元組限制內，以及 `nvarchar` 資料行的 4,000 個位元組限制。 然而，結合的寬度可能超過資料表中 8,060 位元組的限制。 這也適用於已包含資料行的非叢集索引分葉資料列。  
   
      如果非叢集索引沒有任何內含的資料行，請使用步驟 1 的值，包含步驟 1、3 中所決定的任何修改：  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146738"
   
 -   大型物件 (LOB) 值  
   
-     若要判斷確切使用多少空間來儲存 LOB 資料類型的演算法`varchar(max)`， `varbinary(max)`， `nvarchar(max)`， `text`， `ntext`， `xml`，和`image`值很複雜。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上非叢集索引總大小，這就足夠。  
+     決定到底要使用多少空間來儲存 LOB 資料類型 `varchar(max)`、`varbinary(max)`、`nvarchar(max)`、`text`、`ntext`、`xml` 以及 `image` 值的演算法是很複雜的。 只要加上預期的 LOB 值平均大小，乘以 ***Num_Rows***，再將此值加上非叢集索引總大小，這就足夠。  
   
 -   壓縮  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722480"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>篩選關聯規則模型中的規則
   您可以在關聯模型中使用篩選，將結果限制為您所感興趣的關聯。 例如，您可以篩選規則，只顯示包含特定產品的規則。  
@@ -44,7 +44,7 @@ ms.locfileid: "48118628"
   
 5.  在 **[最低重要性]** 中，增加重要性的值來查看更少的規則，或是降低此值來查看更多的規則。  
   
-6.  在 **[顯示]** 中，選取下列其中一個選項： **[顯示屬性名稱和值]**、 **[只顯示屬性名稱]** 或 **[只顯示屬性值]**。  
+6.  針對**顯示**，選取下列選項之一：**顯示屬性名稱和值**，**只顯示屬性名稱**，或**只顯示屬性值**。  
   
 7.  在 **[最大資料列數]** 中，增加這個值來提高符合指定之條件的總規則數，或是降低這個值來限制傳回的規則數。 規則會依據機率來排序，所以您可能會為了機率或重要性而移除符合指定之條件的其他規則。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48118628"
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
- [瀏覽模型，使用 Microsoft 關聯規則檢視器](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [使用 Microsoft 關聯規則檢視器瀏覽模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [第 3 課：建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

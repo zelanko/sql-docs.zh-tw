@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733348"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>遺漏值 (Analysis Services - 資料採礦)
   正確地處理  *「遺漏值」* (Missing value) 是有效模型中很重要的一部分。 本節描述何謂遺漏值，以及您在建立資料採礦結構及採礦模型時，可用來處理遺漏值的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 功能。  
@@ -43,7 +43,7 @@ ms.locfileid: "48164333"
 ## <a name="calculation-of-the-missing-state"></a>遺漏狀態計算  
  對資料採礦演算法而言，遺漏值也具有資訊價值。 在案例資料表中，`Missing` 與其他狀態一樣是有效的狀態； 此外，資料採礦模型也可以使用其他值來預測是否遺漏了值。 換句話說，遺漏值這件事並不等於錯誤。  
   
- 當您建立採礦模型，`Missing`狀態會自動加入模型以供所有離散資料行。 例如，若 [性別] 輸入資料行含有兩個可能的值，男性和女性，第三個值會自動加入以代表`Missing`值和資料行一定會包含的計數會顯示所有值的分佈的長條圖使用案例`Missing`值。 如果「性別」資料行未遺漏任何值，則長條圖會顯示在 0 個案例中找到「遺漏」狀態。  
+ 當您建立採礦模型時，`Missing` 狀態會自動加入模型以供所有離散資料行使用。 例如，若 [性別] 輸入資料行含有「男」和「女」兩種可能值，則第三個值會自動加入以代表 `Missing` 值，而顯示資料行所有值散發的長條圖一定會包含具有 `Missing` 值的案例計數。 如果「性別」資料行未遺漏任何值，則長條圖會顯示在 0 個案例中找到「遺漏」狀態。  
   
  預設包含 `Missing` 狀態是合乎常理的，因為資料可能並不具備所有可能值的範例，而且您也不想只因為資料中沒有範例而讓模型排除可能的值。 例如，如果某個店家的銷售資料顯示已購買特定產品的所有客戶剛好都是女性，您不會想建立一個模型來預測只有女性可能會購買該產品。 相反地，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]針對額外未知的值加入預留位置呼叫`Missing`，這種可能的配合其他狀態。  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48164333"
   
  此散發顯示大約一半的客戶已購買腳踏車，另一半則沒有。 這個特定資料集非常清楚，因此每個案例在 [Bike Buyer] 資料行中都有一個值，而 `Missing` 值為 0。 不過，如果任何案例在 [Bike Buyer] 欄位中，有一個 null[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會將該資料列計為具有的案例`Missing`值。  
   
- 如果輸入是連續的資料行，則模型會將屬性的兩個可能狀態製為表格：`Existing` 和 `Missing`。 換言之，資料行會包含某個數值類型的值或不包含任何值。 對於擁有值的案例，模型會計算平均標準差以及其他有用的統計資料。 對於沒有值的情況下，模型可讓計數`Missing`值並據此調整預測。 調整預測的方法會根據演算法而異，相關說明請見下一章節。  
+ 如果輸入是連續的資料行，則模型會將屬性的兩個可能狀態製為表格：`Existing` 和 `Missing`。 換言之，資料行會包含某個數值類型的值或不包含任何值。 對於擁有值的案例，模型會計算平均標準差以及其他有用的統計資料。 對於沒有值的案例，模型則會提供 `Missing` 值的計數並據此調整預測。 調整預測的方法會根據演算法而異，相關說明請見下一章節。  
   
 > [!NOTE]  
 >  對於巢狀資料表中的屬性而言，遺漏值沒有很高的資訊價值。 例如，如果客戶尚未購買產品，則巢狀的 **Products** 資料表就不會有對應該產品的資料列，採礦模型也不會為遺漏的產品建立屬性。 不過，如果您對尚未購買特定產品的客戶感興趣，可以藉由在模型篩選中使用 NOT EXISTS 陳述式，建立會針對巢狀資料表中不存在的產品進行篩選的模型。 如需詳細資訊，請參閱 [將篩選套用至採礦模型](apply-a-filter-to-a-mining-model.md)。  
   
 ## <a name="adjusting-probability-for-missing-states"></a>調整遺漏狀態的機率  
- 除了計算值以外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以計算整個資料集中任何值的機率。 這也適用於`Missing`值。 例如，下列資料表顯示前述範例中案例的機率：  
+ 除了計算值以外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也可以計算整個資料集中任何值的機率。 `Missing` 值的情況也是如此。 例如，下列資料表顯示前述範例中案例的機率：  
   
 |值|案例|機率|  
 |-----------|-----------|-----------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "48164333"
 |1|9098|49.42%|  
 |Missing|0|0.03%|  
   
- 它可能會看起來很奇怪的機率`Missing`的案例數目為 0 時，將會計算為 0.03%的值。 事實上，這個行為是經過設計的，代表可讓模型正常處理未知值的調整。  
+ 當案例數為 0 時，`Missing` 值的機率計算為 0.03% 可能看起來很奇怪。 事實上，這個行為是經過設計的，代表可讓模型正常處理未知值的調整。  
   
  一般而言，機率是由理想案例除以所有可能案例來計算。 在此案例中，演算法會計算符合特定條件 ([Bike Buyer] = 1 或 [Bike Buyer] = 0) 的案例總和，然後將該數目除以資料列的總計。 不過，為了計算 `Missing` 案例，所以會在所有可能案例數中加入 1。 結果是未知案例的機率不再為零，但為很小的數目，代表狀態僅為不太可能，而非不可能。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48164333"
 >  每種演算法 (包括您從協力廠商外掛程式取得的自訂演算法) 在處理遺漏值的方式上也各不相同。  
   
 ### <a name="special-handling-of-missing-values-in-decision-tree-models"></a>在決策樹模型中對遺漏值的特別處理  
- Microsoft 決策樹演算法計算遺漏值機率的方法與其他演算法不同。 針對調整而不是只在案例總數中加 1，決策樹演算法`Missing`狀態使用稍有不同的公式。  
+ Microsoft 決策樹演算法計算遺漏值機率的方法與其他演算法不同。 決策樹演算法不是只會在案例總數上加 1，而是會使用有些許不同的公式來調整 `Missing` 狀態。  
   
  在決策樹模型中，`Missing` 狀態的機率計算方式如下：  
   
@@ -109,13 +109,13 @@ ms.locfileid: "48164333"
   
 |工作|連結|  
 |-----------|-----------|  
-|將旗標加入個別模型資料行，以控制遺漏值的處理|[檢視或變更模型旗標&#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
+|將旗標加入個別模型資料行，以控制遺漏值的處理|[檢視或變更模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)|  
 |設定採礦模型的屬性以控制遺漏值的處理|[變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)|  
-|了解如何在 DMX 中指定模型旗標|[模型旗標&#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|了解如何在 DMX 中指定模型旗標|[模型旗標 &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |改變採礦結構處理遺漏值的方式|[變更採礦結構的屬性](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
- [模型旗標&#40;資料採礦&#41;](modeling-flags-data-mining.md)  
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)  
   
   

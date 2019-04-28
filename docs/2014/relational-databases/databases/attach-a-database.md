@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872247"
 ---
 # <a name="attach-a-database"></a>附加資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中附加資料庫。 您可以使用此功能來複製、移動或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  
@@ -146,7 +146,7 @@ ms.locfileid: "53354978"
   
 3.  使用[CREATE DATABASE](/sql/t-sql/statements/create-database-sql-server-transact-sql)陳述式搭配`FOR ATTACH`關閉。  
   
-     將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 這個範例會附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的檔案，並將資料庫重新命名為 `MyAdventureWorks`。  
+     複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 這個範例會附加 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫的檔案，並將資料庫重新命名為 `MyAdventureWorks`。  
   
     ```sql  
     CREATE DATABASE MyAdventureWorks   

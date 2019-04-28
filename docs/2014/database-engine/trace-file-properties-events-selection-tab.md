@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 956316eb83291f71932c0ee70460274090b7069d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842447"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>追蹤檔案屬性 (事件選取範圍索引標籤)
   使用 **[追蹤檔案範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，以檢視追蹤的資料行屬性，或者從追蹤移除資料行。  
@@ -49,11 +49,11 @@ ms.locfileid: "48193368"
  選取要追蹤的 [事件] 和資料行之後，按一下 [組織資料行] 即可強制方格重新排序追蹤結果視窗中的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定事件及資料行追蹤檔案的&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [指定追蹤檔案的事件及資料行 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [篩選追蹤中的事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [檢視篩選資訊 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [修改篩選&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

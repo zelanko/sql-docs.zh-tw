@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731953"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>一般 (資料分割屬性對話方塊) (SSMS)
   在 SQL Server Management Studio 中，使用 [資料分割屬性] 對話方塊的 [一般] 頁面，即可針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中的 Cube，設定量值群組中之資料分割的一般屬性。  
@@ -30,7 +30,7 @@ ms.locfileid: "48211098"
 |**彙總設計識別碼**|顯示資料分割所使用之彙總設計的識別碼。|  
 |**彙總前置詞**|顯示資料分割所包含之彙總執行個體的預設前置詞。|  
 |**建立時間戳記**|顯示建立資料分割的日期和時間。|  
-|**目前儲存模式**|顯示資料分割的目前儲存模式。<br /><br /> 注意：此模式可能會依據資料分割的主動式快取設定而改變。 如需主動式快取的詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。|  
+|**目前儲存模式**|顯示資料分割的目前儲存模式。<br /><br /> 注意:此模式可能有所不同的磁碟分割的主動式快取設定。 如需主動式快取的詳細資訊，請參閱[主動式快取 &#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。|  
 |**說明**|鍵入即可變更資料分割的描述。|  
 |**估計的資料列**|鍵入資料分割代表之基礎資料來源中所估計的資料列數目。 此值會於處理期間使用，以估計處理資料分割所需的時間和儲存體。|  
 |**估計的大小**|顯示資料分割的估計大小。|  
@@ -39,15 +39,15 @@ ms.locfileid: "48211098"
 |**上次結構描述更新**|顯示上次更新資料分割之中繼資料的日期和時間。|  
 |**名稱**|顯示分割區的名稱。|  
 |**處理模式**|選取資料分割的處理模式。 如需處理模式的詳細資訊[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]物件，請參閱[多維度模型物件處理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。|  
-|**遠端資料來源識別碼**|顯示從其中擷取資料分割之來源資料的遠端資料來源識別碼。<br /><br /> 注意：此屬性包含僅適用於遠端資料分割的值。|  
-|**配量**|顯示識別資料分割所代表之資料配量的運算式。|  
+|**遠端資料來源識別碼**|顯示從其中擷取資料分割之來源資料的遠端資料來源識別碼。<br /><br /> 注意:此屬性包含遠端資料分割僅的值。|  
+|**Slice**|顯示識別資料分割所代表之資料配量的運算式。|  
 |**Source**|顯示提供資料分割之來源資料的資料表或查詢。|  
-|**State**|顯示資料分割目前的處理狀態。|  
-|**儲存體位置**|顯示儲存資料分割之資料的資料夾。<br /><br /> 注意：唯有指定了 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的預設儲存位置之外的儲存位置之後，此屬性才會包含值。|  
+|**狀態**|顯示資料分割目前的處理狀態。|  
+|**儲存體位置**|顯示儲存資料分割之資料的資料夾。<br /><br /> 注意:此屬性包含值，只有當儲存位置以外的預設儲存體位置[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]指定執行個體。|  
 |**型別**|顯示資料分割的類型。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [遠端資料分割](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [資料分割屬性 對話方塊中&#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [選取&#40;資料分割屬性對話方塊&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   

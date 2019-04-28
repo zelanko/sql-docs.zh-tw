@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736937"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>父子式維度中的一元運算子
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以於包含父子式關聯性的維度內指定一元 (或自訂積存) 運算子資料行，以決定父屬性之所有非導出成員的自訂積存。 只要評估父成員的值時，就會將一元運算子套用至成員。 父屬性 ( **Usage** =Parent) 上的**UnaryOperatorColumn**，會在包含一元運算子的資料來源檢視中指定資料表的資料行。 儲存在此資料行之自訂積存運算子的值，會套用到屬性的每個成員。  

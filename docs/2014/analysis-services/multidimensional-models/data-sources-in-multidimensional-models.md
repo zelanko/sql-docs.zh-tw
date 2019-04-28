@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 930137c05cdf7465ba6f68aa3396d092fa6a926f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726765"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多維度模型中的資料來源
   您匯入或載入多維度模型的所有資料都源自於外部資料來源。 一般來說，來源資料來自於針對報表用途所設計的資料倉儲，但是也可能來自於透過中繼者直接或間接存取的任何關聯式資料庫，例如 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝。  
@@ -56,15 +56,15 @@ ms.locfileid: "48113298"
 |主題|描述|  
 |-----------|-----------------|  
 |[支援的資料來源&#40;SSAS 多維度&#41;](supported-data-sources-ssas-multidimensional.md)|描述可在多維度模型中使用的資料來源類型。|  
-|[建立資料來源&#40;SSAS 多維度&#41;](create-a-data-source-ssas-multidimensional.md)|說明如何將資料來源物件加入至多維度模型。|  
-|[刪除資料來源，在 [方案總管] &#40;SSAS 多維度&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此程序從多維度模型中刪除資料來源物件。|  
-|[設定資料來源屬性&#40;SSAS 多維度&#41;](set-data-source-properties-ssas-multidimensional.md)|描述每個屬性，並說明如何設定每個屬性。|  
-|[設定模擬選項&#40;SSAS-多維度&#41;](set-impersonation-options-ssas-multidimensional.md)|說明如何設定 [模擬資訊] 對話方塊中的選項。|  
+|[建立資料來源 &#40;SSAS 多維度&#41;](create-a-data-source-ssas-multidimensional.md)|說明如何將資料來源物件加入至多維度模型。|  
+|[在方案總管中刪除資料來源 &#40;SSAS 多維度&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此程序從多維度模型中刪除資料來源物件。|  
+|[設定資料來源屬性 &#40;SSAS 多維度&#41;](set-data-source-properties-ssas-multidimensional.md)|描述每個屬性，並說明如何設定每個屬性。|  
+|[設定模擬選項 &#40;SSAS - 多維度&#41;](set-impersonation-options-ssas-multidimensional.md)|說明如何設定 [模擬資訊] 對話方塊中的選項。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫物件&#40;Analysis Services-多維度資料&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [邏輯架構&#40;Analysis Services-多維度資料&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 &#40;Analysis Services - 多維度資料&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [邏輯架構 &#40;Analysis Services - 多維度資料&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
- [資料來源和繫結&#40;SSAS 多維度&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
+ [資料來源和繫結 &#40;SSAS 多維度&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

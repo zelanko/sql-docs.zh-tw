@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998009"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47629516"
   
  **執行緒集區資源擁有者：**  
   
--   執行緒集區識別碼 = 排程器\<十六進位位址 >  
+-   threadpool id=scheduler\<hex-address>  
   
  **平行查詢資源擁有者：**  
   
--   exchangeEvent id = {連接埠 |管道}\<十六進位位址 > Sysprocesses =\<exchange 等候類型 > nodeId =\<exchange 節點識別碼 >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
  **Exchange 等候類型：**  
   
@@ -79,17 +79,17 @@ ms.locfileid: "47629516"
   
  **鎖定資源擁有者：**  
   
--   \<型別特定描述 > 識別碼 = 鎖定\<鎖定十六進位位址 > 模式 =\<模式 > associatedObjectId =\<相關聯 obj 識別碼 >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<型別特定描述 > 可以是：**  
   
-    -   針對 DATABASE: Databaselock subresource =\<databaselock subresource > dbid =\<資料庫識別碼 >  
+    -   For DATABASE: databaselock subresource=\<databaselock-subresource> dbid=\<db-id>  
   
     -   檔案： Filelock fileid =\<檔案識別碼 > subresource =\<filelock subresource > dbid =\<資料庫識別碼 >  
   
-    -   針對物件： Objectlock lockPartition =\<鎖定資料分割識別碼 > objid =\<obj-i d > subresource =\<l s > dbid =\<資料庫識別碼 >  
+    -   For OBJECT: objectlock lockPartition=\<lock-partition-id> objid=\<obj-id> subresource=\<objectlock-subresource> dbid=\<db-id>  
   
-    -   對於 PAGE: Pagelock fileid =\<檔案識別碼 > pageid =\<的頁面識別碼 > dbid =\<db-i d > subresource =\<pagelock 子資源 >  
+    -   For PAGE: pagelock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id> subresource=\<pagelock-subresource>  
   
     -   對於 Key: Keylock hobtid =\<hobt 識別碼 > dbid =\<資料庫識別碼 >  
   
@@ -111,11 +111,11 @@ ms.locfileid: "47629516"
   
  **外部資源擁有者：**  
   
--   外部 ExternalResource =\<等候類型 >  
+-   External ExternalResource=\<wait-type>  
   
  **一般資源擁有者：**  
   
--   工作區中 TransactionInfo TransactionMutex =\<-i d >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -129,11 +129,11 @@ ms.locfileid: "47629516"
   
  **閂鎖資源擁有者：**  
   
--   \<db-i d >:\<檔案識別碼 >:\<分頁中檔案 >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID &GT;  
+-   \<GUID>  
   
--   \<閂鎖類別 > (\<閂鎖位址 >)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Permissions
 

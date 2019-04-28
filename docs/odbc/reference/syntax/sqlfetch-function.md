@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982302"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 函式
 **合規性**  
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |開始之前|1|  
-|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|後端|  
+|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|後端|  
 |後端|後端|  
   
  [1] 如果之間擷取變更資料列集大小，這是曾經與前一個擷取的資料列集大小。  
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|資料列已成功擷取，而且尚未變更，因為它一次擷取此結果集。 不過，資料列相關的已傳回警告。|  
 |SQL_ROW_ERROR|提取資料列時發生錯誤。|  
 |SQL_ROW_UPDATED [1]，[2]，和 [3]|資料列已順利擷取和已變更，因為它一次擷取此結果集。 如果從這個結果集一次提取或重新整理的資料列**SQLSetPos**，狀態會變更為資料列的新狀態。|  
-|SQL_ROW_DELETED [3]|資料列已經刪除，因為它一次擷取此結果集。|  
-|SQL_ROW_ADDED [4]|已插入資料列**SQLBulkOperations**。 如果從這個結果集一次提取或重新整理的資料列**SQLSetPos**，其狀態會是 SQL_ROW_SUCCESS。|  
+|SQL_ROW_DELETED[3]|資料列已經刪除，因為它一次擷取此結果集。|  
+|SQL_ROW_ADDED[4]|已插入資料列**SQLBulkOperations**。 如果從這個結果集一次提取或重新整理的資料列**SQLSetPos**，其狀態會是 SQL_ROW_SUCCESS。|  
 |SQL_ROW_NOROW|重疊的資料列集結果集的結尾，並傳回任何資料列，對應至資料列狀態陣列的這個項目。|  
   
  [1] 的索引鍵集，混合式和動態資料指標，如果更新金鑰的值時，資料的資料列會被視為已被刪除，並加入新的資料列。  
@@ -232,10 +232,10 @@ SQLRETURN SQLFetch(
   
 |描述項欄位|Desc。|中的欄位|透過設定|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|標頭|SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性|  
+|SQL_DESC_ARRAY_SIZE|ARD|標頭|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|標頭|Sql_attr_row_status_ptr 設定陳述式屬性|  
-|SQL_DESC_BIND_OFFSET_PTR|ARD|標頭|SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性|  
-|SQL_DESC_BIND_TYPE|ARD|標頭|SQL_ATTR_ROW_BIND_TYPE 陳述式屬性|  
+|SQL_DESC_BIND_OFFSET_PTR|ARD|標頭|SQL_ATTR_ROW_BIND_OFFSET_PTR statement attribute|  
+|SQL_DESC_BIND_TYPE|ARD|標頭|SQL_ATTR_ROW_BIND_TYPE statement attribute|  
 |SQL_DESC_COUNT|ARD|標頭|*ColumnNumber*引數**SQLBindCol**|  
 |SQL_DESC_DATA_PTR|ARD|記錄|*TargetValuePtr*引數**SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|ARD|記錄|*StrLen_or_IndPtr*中的引數**SQLBindCol**|  

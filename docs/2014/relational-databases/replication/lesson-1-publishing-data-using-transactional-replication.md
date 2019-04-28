@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721089"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 課：使用異動複寫發行資料
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立交易式發行集，以發行 **範例資料庫中** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的篩選子集。 此外，您也會將散發代理程式所使用的 SQL Server 登入加入至發行集存取清單 (PAL)。 開始進行此教學課程之前，必須先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "54125968"
   
 4.  在 [發行集類型] 頁面上，選取 [交易式發行集]，然後按一下 [下一步]。  
   
-5.  在 [發行項] 頁面上，展開 [Tables] 節點，選取 [Product] 核取方塊，然後展開 [Product]，再清除 [ListPrice] 和 [StandardCost] 核取方塊。 按 [下一步] 。  
+5.  在 [發行項] 頁面上，展開 [Tables] 節點，選取 [Product] 核取方塊，然後展開 [Product]，再清除 [ListPrice] 和 [StandardCost] 核取方塊。 按一下 [下一步] 。  
   
 6.  在 [篩選資料表的資料列] 頁面上，按一下 [新增]。  
   

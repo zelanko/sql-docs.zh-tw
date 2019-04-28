@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725372"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>建立查詢範圍命名集 (MDX)
   如果單一多維度運算式 (MDX) 查詢只需要有命名集，您可以使用 WITH 關鍵字來定義命名集。 查詢完成執行之後，使用 WITH 關鍵字建立的命名集就不再存在。  
@@ -94,7 +94,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [建立工作階段範圍命名集&#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [SELECT 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [建立工作階段範圍命名集 &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733229"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>實體架構 (Analysis Services – 資料採礦)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用伺服器和用戶端元件，為商業智慧應用程式提供資料採礦功能：  
@@ -52,6 +52,6 @@ ms.locfileid: "48094148"
  用戶端與 Analysis Services 伺服器之間的所有通訊都會使用 XMLA，這是一種與平台和語言無關的通訊協定。 從用戶端收到要求時，Analysis Services 就會判斷此要求是否與 OLAP 或資料採礦有關，然後適當地路由傳送此要求。 如需詳細資訊，請參閱 [OLAP 引擎伺服器元件](../multidimensional-models/olap-physical/olap-engine-server-components.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [邏輯架構&#40;Analysis Services-資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [邏輯架構 &#40;Analysis Services - 資料採礦&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

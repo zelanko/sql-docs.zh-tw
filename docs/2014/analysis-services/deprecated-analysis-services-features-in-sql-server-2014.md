@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732214"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 Analysis Services 功能
   本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -29,7 +29,7 @@ ms.locfileid: "48067708"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>下一版的 SQL Server 不支援的功能  
  下一版的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。  
   
-|類別目錄|已被取代的功能|取代|  
+|Category|已被取代的功能|取代|  
 |--------------|------------------------|-----------------|  
 |MDX 函數|CalculationPassValue 函數|無。 OLAP 引擎會管理計算行程。 不再需要這個函數。|  
 |MDX 函數|CalculationCurrentPass 函數|無。 OLAP 引擎會管理計算行程。 不再需要這個函數。|  
@@ -40,16 +40,16 @@ ms.locfileid: "48067708"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本不支援的功能  
  下一版的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 可支援下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能，但會在更新的版本中移除。 確實的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本尚未決定。  
   
-|類別目錄|已被取代的功能|取代|  
+|Category|已被取代的功能|取代|  
 |--------------|------------------------|-----------------|  
 |多維度模型|遠端分割區|無。 請改用本機分割區。 請參閱[建立及管理本機分割區&#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)如需詳細資訊。|  
-|多維度模型|遠端連結量值群組|遠端連結量值群組是使用遠端伺服器上資料來源的連結量值群組。 現已排定要取代連結量值群組可使用遠端資料來源這項功能。<br /><br /> 此功能尚無替代項目。 建議您改用本機連結量值群組。 請參閱[Linked Measure Groups](multidimensional-models/linked-measure-groups.md)如需詳細資訊。|  
+|多維度模型|遠端連結量值群組|遠端連結量值群組是使用遠端伺服器上資料來源的連結量值群組。 現已排定要取代連結量值群組可使用遠端資料來源這項功能。<br /><br /> 此功能尚無替代項目。 建議您改用本機連結量值群組。 如需相關資訊，請參閱 [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) 。|  
 |多維度模型|維度回寫|無。 如果您需要回寫功能，請使用分割區回寫。 請參閱[Set Partition Writeback](multidimensional-models/set-partition-writeback.md)如需詳細資訊。|  
 |多維度模型|連結維度|無。 請考慮將維度複製到其他模型，而不要連結到位於另一個模型的維度。|  
 |MDX|Non_Empty_Behavior 屬性|無。 建立導出成員時若此屬性的設定不正確，可能會增加傳回不正確結果的機率。 在 OLAP 引擎最近的最佳化中，已改善對疏鬆資料集的作業，降低此屬性的相關性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 回溯相容性](analysis-services-backward-compatibility.md)   
+ [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)   
  [SQL Server 2014 中已停止的 Analysis Services 功能](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
   
   

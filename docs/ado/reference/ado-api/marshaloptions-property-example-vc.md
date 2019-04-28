@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863999"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 屬性範例 (VC++)
 這個範例會使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)屬性來指定哪些資料列會傳送至伺服器的所有資料列或僅修改資料列。  

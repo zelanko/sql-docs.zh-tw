@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720306"
 ---
 # <a name="translation-dll-function-summary"></a>轉譯 DLL 函式摘要
 下表描述轉譯 DLL 函式。 如需語法和語意，每個函式的詳細資訊，請參閱[轉譯 DLL 函式參考](../../../odbc/reference/syntax/translation-dll-api-reference.md)。  
   
-|工作|函數名稱|目的|  
+|工作|函數名稱|用途|  
 |----------|-------------------|-------------|  
 |轉譯資料|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|會轉譯從資料來源流動到驅動程式的所有資料。|  
 ||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|會轉譯從驅動程式傳輸到資料來源的所有資料。|

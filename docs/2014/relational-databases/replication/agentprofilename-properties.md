@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721839"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;代理程式設定檔名稱&gt; 屬性
   請使用 **[代理程式設定檔屬性]** 對話方塊，即可檢視設定檔中、每一個代理程式參數所指定的值，以及修改使用者自訂設定檔的值。  

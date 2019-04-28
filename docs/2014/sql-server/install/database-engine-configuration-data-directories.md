@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b223c3ef9c6b4a8085c6575f827ae5e9e276ad9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992320"
 ---
 # <a name="database-engine-configuration---data-directories"></a>Database Engine 組態 - 資料目錄
   請使用此頁面來指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]程式和資料檔案的安裝位置。 根據安裝類型，支援的儲存體可能包括本機磁碟、共用儲存體或 SMB 檔案伺服器。  
@@ -44,12 +44,12 @@ ms.locfileid: "53365510"
   
 |描述|支援的儲存類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|資料根目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機：>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 提示：如果上選取共用的磁碟**叢集磁碟選取**頁面上，預設值是第一個共用的磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。|  
-|使用者資料庫目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機： > 程式檔案\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果上選取共用的磁碟**叢集磁碟選取**頁面上，預設值是第一個共用的磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
-|使用者資料庫記錄檔目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果上選取共用的磁碟**叢集磁碟選取**頁面上，預設值是第一個共用的磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定記錄檔目錄具有足夠的空間。|  
-|暫存資料庫目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果上選取共用的磁碟**叢集磁碟選取**頁面上，預設值是第一個共用的磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。|  
-|暫存資料庫記錄檔目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果上選取共用的磁碟**叢集磁碟選取**頁面上，預設值是第一個共用的磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。|  
-|備份目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Backup<br /><br /> 提示：如果上選取共用的磁碟**叢集磁碟選取**頁面上，預設值是第一個共用的磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請設定適當的權限來防止資料遺失，並且確定 SQL Server 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
+|資料根目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機：>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 提示：如果在 [叢集磁碟選取] 頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。|  
+|使用者資料庫目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機： > 程式檔案\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果在 [叢集磁碟選取] 頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
+|使用者資料庫記錄檔目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果在 [叢集磁碟選取] 頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定記錄檔目錄具有足夠的空間。|  
+|暫存資料庫目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果在 [叢集磁碟選取] 頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。|  
+|暫存資料庫記錄檔目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Data<br /><br /> 提示：如果在 [叢集磁碟選取] 頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。|  
+|備份目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機： > \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \MSSQL\Backup<br /><br /> 提示：如果在 [叢集磁碟選取] 頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請設定適當的權限來防止資料遺失，並且確定 SQL Server 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
   
 ## <a name="security-considerations"></a>安全性考量  
  進行組態設定時，安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。  

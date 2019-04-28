@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c18ffdaa50c6ee48896f2d2e6e65db46c8fe3349
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727904"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>合併資料分割對話方塊 (Analysis Services - 多維度資料)
   在 **SQL Server Management Studio** 中，使用 **[合併資料分割]** 對話方塊，即可為 Cube 中的量值群組合併資料分割。 在物件總管中，以滑鼠右鍵按一下 [資料分割] 資料夾或資料分割，然後從操作功能表選取 [合併資料分割]，即可顯示 [合併資料分割] 對話方塊。  
@@ -48,7 +48,7 @@ ms.locfileid: "48117420"
 |**上次處理**|顯示上次處理來源資料分割的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分割&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Analysis Services 中合併資料分割&#40;SSAS-多維度&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [在 Analysis Services 中合併分割區 &#40;SSAS - 多維度&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

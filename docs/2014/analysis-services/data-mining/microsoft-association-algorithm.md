@@ -32,14 +32,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722096"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供的關聯分析演算法，對於建議引擎很有用。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議產品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。 如需購物籃分析的範例，請參閱 <<c0> [ 第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)在資料採礦教學課程。</c0>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所提供的關聯分析演算法，對於建議引擎很有用。 建議引擎會依據客戶已購買或感興趣的項目向客戶建議產品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯分析演算法對於購物籃分析也很有用。 如需購物籃分析的範例，請參閱[第 3 課：建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)在資料採礦教學課程。  
   
  關聯模型是建立在包含個別案例和案例所含項目之識別碼的資料集上。 案例中的項目群組稱為 *「項目集」*(itemset)。 關聯模型是由一系列項目集和規則所組成，這些規則描述那些項目在案例內如何分組。 演算法識別的規則可依據客戶購物車已有的項目，來預測客戶未來可能購買的項目。 下列圖表顯示項目集內的一系列規則。  
   

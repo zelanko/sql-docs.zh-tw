@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735135"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 對應
 **SQLTransact**現在已由取代**SQLEndTran**。 兩個函式的主要差異在於**SQLEndTran**包含引數*HandleType*，以指定的工作完成的範圍。 *HandleType*引數可以指定的環境或連接控制代碼。 下列呼叫來**SQLTransact**:  

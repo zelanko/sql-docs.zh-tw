@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727944"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>中繼資料 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中之 [瀏覽器] 索引標籤的 [中繼資料] 窗格瀏覽 Cube 的結構，以查看相關的量值，並檢視與建立維度。 您可以向下鑽研階層、檢視可用量值與 KPI 的清單，以及複製物件的完整名稱。  
@@ -39,7 +39,7 @@ ms.locfileid: "48171148"
   
  當使用表格式模型時，函數清單包含 MDX 函數和 DAX 函數。 否則，該清單只包含 MDX。 即使 DAX 運算式可能是物件定義的一部分，多維度模型也無法直接使用 DAX 函數。  
   
- 提示：包含 DAX 函數的資料夾會以全部大寫字母列出。 其他所有資料夾則包含 MDX 函數。 例如，有兩個統計函數的資料夾： **STATISTICAL** 包含相關的 DAX 函數。  
+ 提示：包含 DAX 函數的資料夾會列出以全部大寫的字母。 其他所有資料夾則包含 MDX 函數。 比方說，有個統計函數的兩個資料夾：**統計**包含相關的 DAX 函數。  
   
 ## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [中繼資料] 窗格所顯示的元素，即可顯示提供下列選項的操作功能表：  
@@ -47,8 +47,8 @@ ms.locfileid: "48171148"
 |選項|描述|  
 |------------|-----------------|  
 |**加入查詢**|按一下可將選取的物件加入至查詢建立區域的下方窗格中。|  
-|**加入篩選器**|按一下可將選取的維度、屬性、階層或層級加入 [瀏覽器] 的篩選區域。<br /><br /> 注意：只有選取維度、屬性、階層或層級時，才會啟用此選項。|  
-|**複製**|按一下即可將選取的項目加入至剪貼簿。<br /><br /> 注意：此選項會複製物件的完整名稱。|  
+|**加入篩選器**|按一下可將選取的維度、屬性、階層或層級加入 [瀏覽器] 的篩選區域。<br /><br /> 注意:只有當維度、 屬性、 階層時，才會啟用此選項，或選取層級。|  
+|**[複製]**|按一下即可將選取的項目加入至剪貼簿。<br /><br /> 注意:此選項會複製物件的完整的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
  [工具列&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

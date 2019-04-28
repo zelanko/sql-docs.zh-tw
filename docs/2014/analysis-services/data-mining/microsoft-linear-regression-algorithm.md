@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734127"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式，可幫助您計算相依與獨立變數之間的線性關聯性，然後使用該關聯性進行預測。  
@@ -58,7 +58,7 @@ ms.locfileid: "48180408"
   
  如果您想要知道此方程式的詳細資料，也可以使用 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)來檢視係數和其他詳細資料。  
   
- 如果是線性迴歸模型，此模型內容包含中繼資料、迴歸公式及有關輸入值分佈的統計資料。 如需詳細資訊，請參閱 < [Mining Model Content for Linear Regression Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 如果是線性迴歸模型，此模型內容包含中繼資料、迴歸公式及有關輸入值分佈的統計資料。 如需詳細資訊，請參閱 [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)的＜需求＞一節。  
   
 ## <a name="creating-predictions"></a>建立預測  
  當此模型已處理完之後，結果會儲存成一組統計資料，連同線性迴歸公式 (這些公式可用來計算未來趨勢)。 如需搭配線性迴歸模型使用之查詢的範例，請參閱 [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)。  
@@ -78,9 +78,9 @@ ms.locfileid: "48180408"
 -   支援 OLAP 採礦模型的使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 線性迴歸演算法技術參考](microsoft-linear-regression-algorithm-technical-reference.md)   
  [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)   
- [線性迴歸模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

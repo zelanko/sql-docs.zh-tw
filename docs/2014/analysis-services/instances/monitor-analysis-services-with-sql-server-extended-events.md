@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 546ee0df900f25395314adffde19cea01abb481b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703238"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>使用 SQL Server 擴充事件 (XEvents) 監視 Analysis Services
   Analysis Services 會提供追蹤功能，透過使用[擴充事件](../../relational-databases/extended-events/extended-events.md)。  

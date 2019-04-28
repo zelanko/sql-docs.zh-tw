@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842843"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server Database Engine 回溯相容性
   「回溯相容性」一節中的主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本之間行為上的變更。  

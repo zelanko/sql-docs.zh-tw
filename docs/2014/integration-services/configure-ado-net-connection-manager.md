@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 75408785e3aad3a535b418983e2fbcd16df40429
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834485"
 ---
 # <a name="configure-adonet-connection-manager"></a>設定 ADO.NET 連接管理員
   使用 [設定 ADO.NET 連線管理員] 對話方塊加入資料來源的連接，可使用 .NET Framework 資料提供者 (例如 SqlClient 提供者) 來存取此資料來源。 連接管理員可以使用現有的連接，或者您也可以建立新的連接。  

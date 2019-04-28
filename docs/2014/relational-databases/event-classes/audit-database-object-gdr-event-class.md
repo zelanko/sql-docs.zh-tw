@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26c5b80fe5932906324d7131e967760a6a918aaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698921"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR 事件類別
   **Audit Server Object GDR** 事件類別會在對組件和結構描述等資料庫物件發出 GRANT、REVOKE 或 DENY 時發生。  

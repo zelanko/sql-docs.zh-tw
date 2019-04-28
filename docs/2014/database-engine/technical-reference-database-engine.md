@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843072"
 ---
 # <a name="technical-reference-database-engine"></a>技術參考 (Database Engine)
   在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中，尋找 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的工具、語言以及管理程式設計參考文件集。  

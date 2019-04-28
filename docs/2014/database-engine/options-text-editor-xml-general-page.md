@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843802"
 ---
 # <a name="options-text-editor---xml---general-page"></a>選項 (文字編輯器 - XML - 一般頁面)
   使用這個對話方塊可以變更 XML 編輯器的一般編輯行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請在 **[工具]** 功能表上按一下 **[選項]** ，展開 **[XML]** 子資料夾，然後按一下 **[一般]**。  

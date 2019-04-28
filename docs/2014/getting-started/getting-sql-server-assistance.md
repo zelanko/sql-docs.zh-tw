@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838001"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  
@@ -78,7 +78,7 @@ ms.locfileid: "53355108"
   
  下表描述這些資源及其預期使用者。  
   
-|資源|適用對象|  
+|Resource|適用對象|  
 |--------------|--------------|  
 |[SQL Server 開發人員中心](https://msdn.microsoft.com/sqlserver/)|正在建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、報表系統和商業智慧方案的開發人員，以及啟用其應用程式和網站以使用這些系統的開發人員。|  
 |[XML 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=42458)|使用 XML 執行資料儲存和操作之站台和應用程式的網站建立者和應用程式開發人員。|  
@@ -87,7 +87,7 @@ ms.locfileid: "53355108"
 ## <a name="additional-online-information"></a>其他線上資訊  
  可以從這些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 網站取得其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 資訊。  
   
-|資源|描述|  
+|Resource|描述|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|提供有關將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 評估為資料儲存和商業智慧工具的售前資訊。|  
 |[Microsoft 知識庫](https://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術支援所撰寫之 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文件的可搜尋儲存機制。|    

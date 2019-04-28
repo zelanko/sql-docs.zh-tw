@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877127"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>SQL Server Managed Backup 到 Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]管理並將 SQL Server 備份至 Windows Azure Blob 儲存體服務的程序自動化。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 所使用的備份策略會以資料庫的保留週期與交易工作負載為依據。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支援指定保留時間週期的時間點還原。   
@@ -72,18 +72,18 @@ ms.locfileid: "52416389"
 |-|-|  
 |系統物件|描述|  
 |**MSDB**|儲存 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立之所有備份的中繼資料與備份記錄。|  
-|[smart_admin.set_db_backup &#40;-SQL&AMP;#41;&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|針對資料庫啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系統預存程序。|  
-|[smart_admin.set_instance_backup &#40;-SQL&AMP;#41;&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|系統預存程序，進而啟用及設定預設設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server 執行個體。|  
-|[smart_admin.sp_ backup_master_switch &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|暫停及繼續[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系統預存程序。|  
-|[smart_admin.sp_set_parameter &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]監視的系統預存程序。 例如：啟用擴充事件、通知的郵件設定。|  
-|[smart_admin.sp_backup_on_demand &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|系統預存程序，用來啟用要使用的資料庫執行臨機操作備份[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]而不會中斷記錄鏈結。|  
-|[smart_admin.fn_backup_db_config &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|傳回目前的系統函數[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]資料庫，或執行個體上的所有資料庫的狀態和組態值。|  
-|[smart_admin.fn_is_master_switch_on &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|傳回主切換狀態的系統函數。|  
-|[smart_admin.sp_get_backup_diagnostics &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|用於傳回擴充事件記錄之事件的系統預存程序。|  
-|[smart_admin.fn_get_parameter &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)|傳回備份系統設定 (例如監視以及警示郵件設定) 之目前值的系統函數。|  
-|[smart_admin.fn_available_backups &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)|此預存程序可用於擷取指定資料庫或執行個體中所有資料庫的可用備份。|  
-|[smart_admin.fn_get_current_xevent_settings &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)|傳回目前擴充事件設定的系統函數。|  
-|[smart_admin.fn_get_health_status &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql)|此系統函數可傳回擴充事件對指定期間所記錄的錯誤彙總計算。|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|針對資料庫啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系統預存程序。|  
+|[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|系統預存程序，進而啟用及設定預設設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server 執行個體。|  
+|[smart_admin.sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|暫停及繼續[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系統預存程序。|  
+|[smart_admin.sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|啟用及設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]監視的系統預存程序。 例如：啟用擴充事件、通知的郵件設定。|  
+|[smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|系統預存程序，用來啟用要使用的資料庫執行臨機操作備份[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]而不會中斷記錄鏈結。|  
+|[smart_admin.fn_backup_db_config &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|傳回目前的系統函數[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]資料庫，或執行個體上的所有資料庫的狀態和組態值。|  
+|[smart_admin.fn_is_master_switch_on &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|傳回主切換狀態的系統函數。|  
+|[smart_admin.sp_get_backup_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|用於傳回擴充事件記錄之事件的系統預存程序。|  
+|[smart_admin.fn_get_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)|傳回備份系統設定 (例如監視以及警示郵件設定) 之目前值的系統函數。|  
+|[smart_admin.fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)|此預存程序可用於擷取指定資料庫或執行個體中所有資料庫的可用備份。|  
+|[smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)|傳回目前擴充事件設定的系統函數。|  
+|[smart_admin.fn_get_health_status &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql)|此系統函數可傳回擴充事件對指定期間所記錄的錯誤彙總計算。|  
 |[監視 SQL Server Managed Backup 到 Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)|監視擴充事件、發送錯誤與警告的電子郵件通知，以及使用 SQL Server 原則管理[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
   
 #### <a name="backup-strategy"></a>備份策略  
@@ -95,7 +95,7 @@ ms.locfileid: "52416389"
   
  對於可用性資料庫之外的所有資料庫，[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]會使用 SQL Server 執行個體名稱命名 Windows Azure 儲存體容器。  對於可用性資料庫，則會使用可用性群組 GUID 來命名 Windows Azure 儲存體容器。  
   
- 非可用性資料庫的備份檔案是使用以下慣例命名：使用資料庫名稱、 資料庫 GUID 的前 40 個字元來建立名稱不含 '-'，與時間戳記。 區段之間會插入底線字元做為分隔符號。 完整備份會使用副檔名 **.bak** ，記錄備份則會使用 **.log** 。 對於可用性群組資料庫而言，除了上面所述的檔案命名慣例以外，可用性群組資料庫 GUID 會加在資料庫名稱的 40 個字元之後。 可用性群組資料庫 GUID 值是 sys.databases 中的 group_database_id 值。  
+ 非可用性資料庫的備份檔案會使用下列慣例來命名：使用資料庫名稱、 資料庫 GUID 的前 40 個字元來建立名稱不含 '-'，與時間戳記。 區段之間會插入底線字元做為分隔符號。 完整備份會使用副檔名 **.bak** ，記錄備份則會使用 **.log** 。 對於可用性群組資料庫而言，除了上面所述的檔案命名慣例以外，可用性群組資料庫 GUID 會加在資料庫名稱的 40 個字元之後。 可用性群組資料庫 GUID 值是 sys.databases 中的 group_database_id 值。  
   
  **完整資料庫備份：** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]代理程式排程完整資料庫備份，如果下列任一項為 true。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52416389"
 -   交易紀錄備份一律會在完整資料庫備份之後執行。 其目的在保留完整備份之前的記錄檔鏈結。  
   
 #### <a name="retention-period-settings"></a>保留週期設定  
- 啟用備份時，您必須設定保留期限，以天為單位：最少是 1 天，最多是 30 天。  
+ 啟用備份時您必須設定以天為單位的保留期限：最小值是 1 天，且最大值為 30 天。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會根據保留週期設定，評估能否在指定的時間內，復原到某個時間點，從而決定所要保留的備份檔案，以及指定所要刪除的備份檔案。 備份的 backup_finish_date 會用於指定及比對保留週期設定所指定的時間。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "52416389"
 ###  <a name="support_limits"></a> 支援限制  
  以下是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 特有的一些限制：  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]代理程式僅支援資料庫備份：完整與記錄備份。  不支援檔案備份自動化。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 代理程式僅支援資料庫備份：完整和記錄備份。  不支援檔案備份自動化。  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]作業目前可以支援 Transact-SQL。 使用擴充事件可完成監視和疑難排解。 PowerShell 和 SMO 支援只可用於設定 SQL Server 執行個體的儲存體和保留週期預設設定，以及依照 SQL Server 原則式管理原則監視備份狀態和整體健康狀況。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52416389"
   
 -   目前 Windows Azure 儲存體允許的分頁 Blob 檔案大小上限是 1 TB。 大於 1 TB 的備份檔案將會失敗。 為避免此情況，建議大型資料庫先行壓縮，然後在設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]之前測試備份檔案大小。 測試方法有兩種：一是藉由備份到本機磁碟，一是利用 `BACKUP TO URL` Transact-SQL 陳述式手動備份到 Windows Azure 儲存體。 如需詳細資訊，請參閱 [SQL Server Backup to URL](sql-server-backup-to-url.md)。  
   
--   復原模式：僅支援設定為完整或大量記錄模式的資料庫。  不支援設定為簡單復原模式的資料庫。  
+-   復原模式：支援只設定為完整或大量記錄模式的資料庫。  不支援設定為簡單復原模式的資料庫。  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 時，可能會有一些限制。 如需詳細資訊，請參閱[SQL Server Managed Backup to Windows Azure:互通性與共存性](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)。  
   
@@ -152,8 +152,8 @@ ms.locfileid: "52416389"
 |-|-|  
 |**由於工作描述**|**主題**|  
 |基本工作，例如為資料庫設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，或在執行個體層級進行預設設定、在執行個體或資料庫層級停用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]、暫停及重新啟動[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|[SQL Server Managed Backup 到 Windows Azure - 保留和儲存體設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**教學課程：** 設定與監視 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的逐步指示。|[設定 SQL Server Managed Backup 到 Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**教學課程：** 設定與監視可用性群組中資料庫之 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的逐步指示。|[針對可用性群組設定 SQL Server Managed Backup 到 Windows Azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**教學課程：** 若要設定與監視的逐步指示[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|[設定 SQL Server Managed Backup 到 Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**教學課程：** 若要設定與監視的逐步指示[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]可用性群組中的資料庫。|[針對可用性群組設定 SQL Server Managed Backup 到 Windows Azure](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |監視[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的相關工具、概念和工作。|[監視 SQL Server Managed Backup 到 Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
 |疑難排解[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的工具和步驟。|[針對 SQL Server Managed Backup 到 Windows Azure 進行疑難排解](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   

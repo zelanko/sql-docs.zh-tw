@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871694"
 ---
 # <a name="database-states"></a>資料庫狀態
   資料庫永遠都在特定的狀態。 例如，這些狀態包括 ONLINE、OFFLINE 或 SUSPECT。 若要驗證資料庫目前的狀態，請選取 **sys.databases** 目錄檢視中的 [state_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 資料行或是在 **DATABASEPROPERTYEX** 函數中的 [Status](/sql/t-sql/functions/databasepropertyex-transact-sql) 屬性。  

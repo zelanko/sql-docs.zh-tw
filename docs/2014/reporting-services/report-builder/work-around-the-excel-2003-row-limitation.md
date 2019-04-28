@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d78406155e9d2fb808664ce1377d0aba9d52dc84
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698057"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>解決 Excel 資料列限制
   本主題說明如何在您將報表匯出至 Excel 時解決 Excel 2003 的資料列限制。 此因應措施適用於只包含資料表的報表。  

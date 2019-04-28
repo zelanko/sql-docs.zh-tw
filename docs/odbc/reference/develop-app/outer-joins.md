@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998937"
 ---
 # <a name="outer-joins"></a>外部聯結
 ODBC 支援 SQL-92 左、 右方和完整外部聯結語法。 外部聯結的逸出序列是  
   
- **{oj** _外部聯結_**}**  
+ **{oj** _outer-join_**}**  
   
  何處*外部聯結*是  
   

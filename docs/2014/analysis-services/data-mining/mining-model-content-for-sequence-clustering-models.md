@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733425"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>時序群集模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 Microsoft 時序群集演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  若要找出如何藉由查詢模型內容取得觀察之路徑的清單，以及如何在時序叢集模型上查看查詢的其他範例，請參閱 [時序叢集模型查詢範例](clustering-model-query-examples.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft 時序群集演算法](microsoft-sequence-clustering-algorithm.md)   
- [時序群集模型查詢範例](clustering-model-query-examples.md)  
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft 時序叢集演算法](microsoft-sequence-clustering-algorithm.md)   
+ [時序叢集模型查詢範例](clustering-model-query-examples.md)  
   
   

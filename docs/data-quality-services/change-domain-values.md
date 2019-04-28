@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 30624ce9283c9604af12497ffbd8d3e17979be8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862603"
 ---
 # <a name="change-domain-values"></a>變更定義域值
 
@@ -43,7 +43,7 @@ ms.locfileid: "56011899"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能變更定義域值。  
   
 ##  <a name="Change"></a> 變更定義域值  
@@ -76,7 +76,7 @@ ms.locfileid: "56011899"
   
     -   **將選取的定義域值設為無效**：若要將值的狀態從更正或錯誤變更為無效，請選取值，然後從圖示列的向下箭號或是從 [類型] 下拉式清單按一下**將選取的定義域值設為無效** (三角形) 圖示。 您可以在 **[更正為]** 資料行中輸入更正，或是將它保留空白。  
   
-    -   **更正為**：將值設定為錯誤或無效之後，請在 **[更正為]** 資料行中輸入新的值。 DQS 將會為取代值新增資料列、將它指定為正確的值，然後將兩個值群組在一起。 新的值將會顯示為前置值，前置值會以粗體顯示，而錯誤或無效的值則縮排。  
+    -   **更正為**：將值設定為錯誤或無效之後，請在 [更正為] 資料行中輸入新的值。 DQS 將會為取代值新增資料列、將它指定為正確的值，然後將兩個值群組在一起。 新的值將會顯示為前置值，前置值會以粗體顯示，而錯誤或無效的值則縮排。  
   
 6.  若要將值指定為一組同義字，請選取多個正確值，然後依照以下方式繼續進行：  
   

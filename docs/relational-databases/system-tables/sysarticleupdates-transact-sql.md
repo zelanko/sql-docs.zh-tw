@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714161"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52796380"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid&lt**|**int**|提供發行項唯一識別碼的識別欄位。|  
+|**artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**pubid**|**int**|發行項所屬發行集的識別碼。|  
 |**sync_ins_proc**|**int**|處理「插入同步交易」之預存程序的識別碼。|  
 |**sync_upd_proc**|**int**|處理「更新同步交易」之預存程序的識別碼。|  

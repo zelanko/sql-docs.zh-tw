@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721940"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，系統預存程序可提供複寫拓撲中所有使用者可設定的功能之程式存取權。 雖然使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或是 sqlcmd 命令列公用程式，可以個別執行預存程序，但是撰寫 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼檔案對於執行一連串的邏輯複寫工作非常有幫助。  

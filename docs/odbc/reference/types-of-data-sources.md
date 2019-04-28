@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c0e4ccc55ce8fe35dc129c6dded889e2923b4f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851390"
 ---
 # <a name="types-of-data-sources"></a>資料來源的類型
 有兩種類型的資料來源： 機器的資料來源和檔案資料來源。 雖然兩者都包含資料的來源相關的類似資訊，但在這項資訊的儲存的方式不同。 由於這些差異，使用在稍有不同的方式。  

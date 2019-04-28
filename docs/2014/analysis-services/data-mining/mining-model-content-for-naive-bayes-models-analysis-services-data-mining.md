@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733603"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
-  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>了解貝式機率分類模型的結構  
  貝式機率分類模型擁有代表模型及其中繼資料的單一父節點，而且在該父節點下，則擁有代表所選取之可預測屬性的所有獨立樹狀結構。 除了屬性的樹狀結構，每個模型都包含一個臨界統計資料節點 (NODE_TYPE = 26)，該節點會提供該組定型案例的描述性統計資料。 如需詳細資訊，請參閱 [臨界統計資料節點中的資訊](#bkmk_margstats)。  
@@ -190,9 +190,9 @@ ms.locfileid: "48197328"
 |---------------|----------------------------|  
 |模型根 (1)|：一律為 0。|  
 |臨界統計資料節點 (26)|任意的識別碼值。|  
-|可預測的屬性 (9)|開頭為 10000000 的十六進位數字<br /><br /> 例如，100000001、10000000b|  
-|輸入屬性 (10)|兩部分的十六進位數字，其中第一部分永遠為 20000000，而第二部分開頭為相關可預測屬性的十六進位識別碼。<br /><br /> 例如：20000000b00000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
-|輸入屬性狀態 (11)|三部分的十六進位數字，其中第一部分永遠為 30000000，第二部分開頭為相關可預測屬性的十六進位識別碼，而第三部分代表值的識別碼。<br /><br /> 例如：30000000b00000000200000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
+|可預測的屬性 (9)|開頭為 10000000 的十六進位數字<br /><br /> 範例100000001 10000000b|  
+|輸入屬性 (10)|兩部分的十六進位數字，其中第一部分永遠為 20000000，而第二部分開頭為相關可預測屬性的十六進位識別碼。<br /><br /> 範例20000000b00000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
+|輸入屬性狀態 (11)|三部分的十六進位數字，其中第一部分永遠為 30000000，第二部分開頭為相關可預測屬性的十六進位識別碼，而第三部分代表值的識別碼。<br /><br /> 範例30000000b00000000200000000<br /><br /> 在此情況下，相關的可預測屬性為 10000000b。|  
   
  您可以使用識別碼將輸入屬性和狀態與可預測的屬性產生關聯。 例如，下列查詢會針對代表模型 `TM_NaiveBayes`之輸入屬性與可預測屬性可能組合的節點，傳回名稱和標題。  
   
@@ -264,7 +264,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- 在這些結果中，SUPPORT 資料行的值會顯示購買自行車之客戶的計數，以及指定的婚姻狀況。 PROBABILITY 資料行包含每個屬性值的機率 (僅針對此節點計算)。 如需 NODE_DISTRIBUTION 資料表所用詞彙的一般定義，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
+ 在這些結果中，SUPPORT 資料行的值會顯示購買自行車之客戶的計數，以及指定的婚姻狀況。 PROBABILITY 資料行包含每個屬性值的機率 (僅針對此節點計算)。 如需 NODE_DISTRIBUTION 資料表所用詞彙的一般定義，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_margstats"></a> 臨界統計資料節點中的資訊  
  在貝式機率分類模型中，臨界統計資料節點的巢狀資料表包含整組定型資料的值分佈。 例如，下表包含模型 `TM_NaiveBayes`的巢狀 NODE_DISTRIBUTION 資料表中，統計資料的部分清單：  
@@ -286,10 +286,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  在貝式機率分類模型中，可能沒有連續屬性，因此，所有數值資料都會以離散 (VALUE_TYPE = 4) 或離散化 (VALUE_TYPE = 5) 代表。  
   
- A`Missing`值 (VALUE_TYPE = 1) 會加入到每個輸入和輸出的屬性，以代表原本不在定型資料中的可能值。 您必須仔細區別 「 遺失 」 字串和預設`Missing`值。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ `Missing` 值 (VALUE_TYPE = 1) 會加入到每個輸入和輸出屬性，以代表不在定型資料中的可能值。 您必須仔細區別字串「遺失」和預設 `Missing` 值「遺失」。 如需詳細資訊，請參閱 [遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)預先定義的模型旗標外，協力廠商外掛程式也可能擁有其他的模型旗標。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](data-mining-model-viewers.md)   
  [資料採礦查詢](data-mining-queries.md)   
  [Microsoft 貝氏機率分類演算法](microsoft-naive-bayes-algorithm.md)  

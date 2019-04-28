@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733455"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>叢集模型的採礦模型內容 (Analysis Services - 資料採礦)
-  本主題說明使用 Microsoft 叢集演算法的模型專用的採礦模型內容。 所有模型類型採礦模型內容的一般說明，請參閱 <<c0> [ 採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。</c0>  
+  本主題說明使用 Microsoft 叢集演算法的模型專用的採礦模型內容。 如需適用於所有模型類型的一般採礦模型內容說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>了解叢集模型的結構  
  叢集模型有簡單的結構。 每個模型都擁有代表模型及其中繼資料的單一父節點，而每個父節點則擁有群集的一般清單 (NODE_TYPE = 5)。 下列影像顯示這個組織。  
@@ -51,12 +51,12 @@ ms.locfileid: "48190278"
 > [!NOTE]  
 >  變異數代表叢集的總變異數。 當變異數的值很小時，代表資料行中大多數的值都相當接近平均值。 若要取得標準差，請計算變異數的平方根。  
   
- 請注意，每個屬性`Missing`值類型，告訴您有多少案例沒有該屬性的資料。 遺漏的資料可能很多，而且視資料類型而會對計算造成不同的影響。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ 請注意，每個屬性都有一個 `Missing` 值類型，告訴您該屬性有多少沒有資料的案例。 遺漏的資料可能很多，而且視資料類型而會對計算造成不同的影響。 如需詳細資訊，請參閱 [遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)預先定義的模型旗標外，協力廠商外掛程式也可能擁有其他的模型旗標。  
   
 ## <a name="model-content-for-a-clustering-model"></a>叢集模型的模型內容  
  本章節僅針對採礦模型內容中與叢集模型相關的資料行，提供詳細資料和範例。  
   
- 如需結構描述資料列集 (例如，MODEL_CATALOG 和 MODEL_NAME) 中之一般用途資料行的詳細資訊，請參閱 [Mining Model Content (Analysis Services - Data Mining)](mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+ 如需結構描述資料列集 (例如，MODEL_CATALOG 和 MODEL_NAME) 中之一般用途資料行的資訊，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -149,9 +149,9 @@ ms.locfileid: "48190278"
  MSOLAP_NODE_SHORT_CAPTION  
  主要用於顯示用途。 您無法變更此標題。  
   
- **父節點** ：模型的類型：叢集模型  
+ **父節點**的模型類型：叢集模型  
   
- **叢集節點** ：叢集的名稱。 範例：群集 1。  
+ **叢集節點** ：叢集的名稱。 範例叢集 1。  
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種建立叢集模型的方法。 如果您不知道所使用的模型是用什麼方法建立的，可以用程式設計的方式、使用 ADOMD 用戶端或 AMO 或者查詢資料採礦結構描述的資料列集，來擷取模型的中繼資料。 如需詳細資訊，請參閱 [查詢用於建立採礦模型的參數](query-the-parameters-used-to-create-a-mining-model.md)。  
@@ -160,7 +160,7 @@ ms.locfileid: "48190278"
 >  不論您使用的叢集方法或參數為何，模型的結構和內容都會保持相同。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](data-mining-model-viewers.md)   
  [Microsoft 群集演算法](microsoft-clustering-algorithm.md)   
  [資料採礦查詢](data-mining-queries.md)  

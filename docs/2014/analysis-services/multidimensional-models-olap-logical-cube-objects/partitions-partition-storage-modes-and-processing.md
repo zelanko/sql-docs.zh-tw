@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727574"
 ---
 # <a name="partition-storage-modes-and-processing"></a>資料分割儲存模式及處理
   資料分割的儲存模式會影響查詢及處理效能、儲存需求，以及此資料分割的儲存位置及其父量值群組和 Cube。 儲存模式的選擇也會影響處理選擇。  

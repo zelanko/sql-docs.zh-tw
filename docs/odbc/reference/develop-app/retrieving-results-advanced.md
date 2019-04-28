@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5199fb82cbc6b2a9da644554db12dc525cc0be40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998896"
 ---
 # <a name="retrieving-results-advanced"></a>擷取結果 (進階)
 應用程式可以指定的位移會新增至繫結資料的緩衝區位址和對應的長度/指標緩衝區位址何時**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**呼叫。 這些新增內容的結果判斷這些作業中使用的位址。  

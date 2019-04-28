@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721199"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>為合併發行項實作商務邏輯處理常式
   本主題描述如何使用複寫程式設計或 Replication Management Objects (RMO)，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中實作合併發行項的商務邏輯處理常式。  
@@ -58,7 +58,7 @@ ms.locfileid: "52816890"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|位置|  
+    |組件參考|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  
@@ -131,7 +131,7 @@ ms.locfileid: "52816890"
   
 2.  針對下列命名空間加入此專案的參考。  
   
-    |組件參考|位置|  
+    |組件參考|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (預設安裝)|  
     |<xref:System.Data>|GAC (.NET Framework 的元件)|  

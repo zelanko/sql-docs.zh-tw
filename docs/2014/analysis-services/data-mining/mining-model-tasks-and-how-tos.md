@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b555d929bb343de1d651b158335673bd2e0573f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733376"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>採礦模型工作和使用說明
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，[資料採礦設計師] 的 [採礦模型] 索引標籤，即可管理及處理採礦結構中的採礦模型。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [將採礦模型新增至現有的採礦結構](add-a-mining-model-to-an-existing-mining-structure.md)  
+-   [將採礦模型加入至現有的採礦結構](add-a-mining-model-to-an-existing-mining-structure.md)  
   
 -   [從採礦結構中刪除採礦模型](delete-a-mining-model-from-a-mining-structure.md)  
   
@@ -34,9 +34,9 @@ ms.locfileid: "48196058"
   
 -   [建立模型資料行的別名](create-an-alias-for-a-model-column.md)  
   
--   [變更採礦模型中的資料行分隔](change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [變更採礦模型中的資料行離散化](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [檢視或變更模型旗標&#40;資料採礦&#41;](modeling-flags-data-mining.md)  
+-   [檢視或變更模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)  
   
 -   [在模型中指定當做迴歸輸入變數使用的資料行](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48196058"
   
 ## <a name="see-also"></a>另請參閱  
  [採礦結構工作和使用說明](mining-structure-tasks-and-how-tos.md)   
- [採礦模型&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
+ [採礦模型 &#40;Analysis Services - 資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
  [資料採礦概念](data-mining-concepts.md)  
   
   

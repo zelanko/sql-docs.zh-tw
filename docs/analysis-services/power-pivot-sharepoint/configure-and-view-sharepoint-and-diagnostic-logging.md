@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988644"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>設定及檢視 SharePoint 與診斷記錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "52410415"
 #### <a name="entries-for-power-pivot-services"></a>Power Pivot 服務的項目  
  下表描述很可能在 SharePoint 記錄檔中找到之 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 伺服器作業的項目。  
   
-|處理|區域|類別目錄|層級|訊息|詳細資料|  
+|處理|區域|Category|層級|訊息|詳細資料|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|使用量|「詳細資訊」|目前沒有要求統計資料，沒有要記錄的項目。|服務報表會在預先定義的間隔查詢回應統計資料，做為使用量資料集合系統的使用量事件。 此訊息表示沒有要報告的查詢統計資料。|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務|Web 前端|「詳細資訊」|開始尋找資料來源的應用程式伺服器 =\<*路徑*>|當它收到連接要求時， [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 服務會識別可用的 [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] 來處理要求。 如果伺服陣列中只有一個伺服器，在所有情況下本機伺服器都會接受要求。|  

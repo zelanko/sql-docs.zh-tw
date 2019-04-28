@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726812"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>多維度模型中的資料來源檢視
   資料來源檢視 (DSV) 是關聯式資料來源的摘要，其會成為您在多維度專案中建立之 Cube 與維度的根據。 DSV 的用途是可讓您控制專案所用的資料結構，以及與基礎資料來源分開運作 (例如，重新命名或串連資料行而不需要直接修改原始資料來源的能力)。  
@@ -32,29 +32,29 @@ ms.locfileid: "48126108"
  您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中針對一個或多個資料來源建立多個資料來源檢視，並建構每一個資料來源檢視，使其滿足不同方案的需求。  
   
 ## <a name="related-tasks"></a>相關工作  
- [定義資料來源檢視&#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
+ [定義資料來源檢視 &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [新增或移除資料表或檢視表中的資料來源檢視&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [變更資料來源檢視中的屬性&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [變更資料來源檢視的屬性 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
- [資料來源檢視中定義邏輯關聯性&#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義邏輯關聯性 &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
- [在 資料來源檢視中定義邏輯主索引鍵&#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義邏輯主索引鍵 &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
   
- [在資料來源檢視中定義具名的計算&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名計算 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
- [在 資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中定義具名查詢 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [取代的資料表或具名的查詢的資料來源檢視中&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [取代資料來源檢視中的資料表或具名查詢 &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [在 資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [瀏覽資料來源檢視中的資料&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中瀏覽資料 &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [刪除資料來源檢視&#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
+ [刪除資料來源檢視 &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
- [重新整理資料來源檢視中的結構描述&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視中重新整理結構描述 &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   

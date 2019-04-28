@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1627a0058336be654dbd18c52e27cdbae614c686
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722530"
 ---
 # <a name="decision-trees-model-query-examples"></a>決策樹模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，決策樹模型的內容查詢可能會提供有關每一樹狀結構層上之案例數的統計資料，或是區分案例的規則。 或者，預測查詢會將此模型對應到新的資料，以便產生建議、分類等等。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -44,9 +44,9 @@ ms.locfileid: "48206148"
  [從決策樹模型擷取迴歸公式](#bkmk_Query6)  
   
 ##  <a name="bkmk_top2"></a> 尋找有關決策樹模型的資訊  
- 若要在決策樹模型的內容上建立有意義的查詢，您應該了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊。 如需詳細資訊，請參閱[決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
+ 若要在決策樹模型的內容上建立有意義的查詢，您應該了解模型內容的結構，以及哪一種節點類型會儲存那一種資訊。 如需詳細資訊，請參閱 [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
-###  <a name="bkmk_Query1"></a> 範例查詢 1：從資料採礦結構描述資料列集擷取模型參數  
+###  <a name="bkmk_Query1"></a> 範例查詢 1:從資料採礦結構描述資料列集擷取模型參數  
  您可以藉由查詢資料採礦結構描述資料列集來尋找有關此模型的中繼資料，例如此模型建立的時間、上次處理此模型的時間、此模型所根據的採礦結構名稱，以及用來當做可預測屬性的資料行名稱。 您也可以傳回初次建立此模型時所使用的參數。  
   
 ```  
@@ -61,13 +61,13 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a> 範例查詢 2：使用 DMX 傳回有關模型內容的詳細資料  
+###  <a name="bkmk_Query2"></a> 範例查詢 2:使用 DMX 傳回有關模型內容的詳細資料  
  下列查詢會傳回您在 [資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)中建立模型時所建立之決策樹模型的一些基本資訊。 每個樹狀結構都會儲存在它自己的節點中。 由於此模型只包含單一可預測屬性，因此只有一個樹狀節點。 但是，如果您使用決策樹演算法來建立關聯模型，可能會有好幾百個樹狀結構，每一個產品都有一個。  
   
  此查詢會傳回類型 2 的所有節點，這些節點是代表特定可預測屬性之樹狀結構的最上層節點。  
   
 > [!NOTE]  
->  資料行， `CHILDREN_CARDINALITY`，必須加上方括號，以便與同名的 MDX 保留關鍵字區分。  
+>  `CHILDREN_CARDINALITY` 資料行必須括在括號中，以便與同名的 MDX 保留關鍵字區分。  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -84,10 +84,10 @@ WHERE NODE_TYPE = 2
   
  這些結果代表什麼意思？ 在決策樹模型中，特定節點的基數會告訴您該節點擁有多少下層子節點。 這個節點的基數是 5，表示此模型已將潛在自行車買主的目標母體分成 5 個子群組。  
   
- 下列相關查詢會傳回這五個子群組的子節點，連同這些子節點中屬性和值的分佈。 例如支援、 機率和變異數的統計資料會儲存在巢狀資料表中，因為`NODE_DISTRIBUTION`，此範例會使用`FLATTENED`關鍵字來輸出巢狀的資料表資料行。  
+ 下列相關查詢會傳回這五個子群組的子節點，連同這些子節點中屬性和值的分佈。 由於統計資料 (如支援、機率和變異數) 會儲存在巢狀資料表 `NODE_DISTRIBUTION` 中，所以這個範例會使用 `FLATTENED` 關鍵字來輸出巢狀資料表資料行。  
   
 > [!NOTE]  
->  巢狀的資料表資料行中， `SUPPORT`，必須加上方括號，以便與同名的保留關鍵字區分。  
+>  巢狀資料表資料行 `SUPPORT` 必須括在括號中，以便與同名的保留關鍵字區分。  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -108,9 +108,9 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- 從這些結果中，您所見的客戶購買自行車 (`[Bike Buyer]` = 1)，有 1067 位客戶擁有 0 輛汽車 473 客戶擁有 3 輛汽車。  
+ 從這些結果中，您可以得知在購買自行車的客戶 (`[Bike Buyer]` = 1) 中，有 1067 位客戶擁有 0 輛汽車，而有 473 位客戶擁有 3 輛汽車。  
   
-###  <a name="bkmk_Query3"></a> 範例查詢 3：從模型擷取子樹  
+###  <a name="bkmk_Query3"></a> 範例查詢 3:從模型擷取子樹  
  假設您想要進一步探索哪些客戶購買自行車的詳細資料。 您可以在查詢中使用 [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) 函數 (如下列範例所示)，檢視任何子樹的其他詳細資料。 此查詢會傳回自行車買主的人數，其方式是從包含 42 歲以上之客戶的樹狀結構中擷取分葉節點 (NODE_TYPE = 4)。 此查詢會將巢狀資料表的資料列限制為 Bike Buyer = 1 的資料列。  
   
 ```  
@@ -140,7 +140,7 @@ AND NODE_TYPE = 4
   
 -   當輸入和輸出之間的關係為線性時，針對決策樹的一部分擷取迴歸公式。  
   
-###  <a name="bkmk_Query4"></a> 範例查詢 4：傳回包含機率的預測  
+###  <a name="bkmk_Query4"></a> 範例查詢 4:傳回包含機率的預測  
  下列範例查詢會使用您在 [資料採礦基本教學課程](../../tutorials/basic-data-mining-tutorial.md)中建立的決策樹模型。 此查詢會從 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW 的 dbo.ProspectiveBuyers 資料表傳入一組新的取樣資料，以便預測新資料集中的哪些客戶將購買自行車。  
   
  此查詢使用預測函數 [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)，它會傳回一個巢狀資料表，其中包含此模型所探索之機率的有用資訊。 此查詢的最終 WHERE 子句會篩選結果，以便只傳回預測為可能購買自行車之機率大於 0% 的客戶。  
@@ -192,8 +192,8 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  如果提供者不支援階層式資料列集 (例如這裡顯示的內容)，您可以在查詢中使用 FLATTENED 關鍵字，以資料表的形式傳回結果，此資料表包含了用來取代重複資料行值的 Null。 如需詳細資訊，請參閱[巢狀資料表 &#40;Analysis Services - 資料採礦&#41;](nested-tables-analysis-services-data-mining.md) 或[了解 DMX Select 陳述式](/sql/dmx/understanding-the-dmx-select-statement)。  
   
-###  <a name="bkmk_Query5"></a> 範例查詢 5：從決策樹模型預測關聯  
- 下列範例查詢是以關聯採礦結構為基礎。 若要依照此範例進行，您可以將新的模型加入至此採礦結構，然後選取 Microsoft 決策樹做為演算法。 如需如何建立關聯採礦模型的詳細資訊，請參閱[第 3 課︰建立購物籃狀況 &#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)。  
+###  <a name="bkmk_Query5"></a> 範例查詢 5:從決策樹模型預測關聯  
+ 下列範例查詢是以關聯採礦結構為基礎。 若要依照此範例進行，您可以將新的模型加入至此採礦結構，然後選取 Microsoft 決策樹做為演算法。 如需有關如何建立關聯採礦結構的詳細資訊，請參閱[第 3 課：建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)。  
   
  下列範例查詢為單一查詢，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中輕鬆地建立此查詢，其方式是選擇欄位，然後從下拉式清單中選取這些欄位的值。  
   
@@ -232,7 +232,7 @@ NATURAL PREDICTION JOIN
 |Mountain-400-W|  
 |Classic Vest|  
   
-###  <a name="bkmk_Query6"></a> 範例查詢 6：從決策樹模型擷取迴歸公式  
+###  <a name="bkmk_Query6"></a> 範例查詢 6:從決策樹模型擷取迴歸公式  
  當您建立的決策樹模型在連續屬性上包含迴歸時，您可以使用迴歸公式來進行預測，或是可以擷取有關此迴歸公式的資訊。 如需迴歸模型上之查詢的詳細資訊，請參閱 [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)。  
   
  如果決策樹模型包含迴歸節點及分散於離散屬性或範圍上之節點的混合，您只能建立傳回迴歸節點的查詢。 NODE_DISTRIBUTION 資料表包含迴歸公式的詳細資料。 在此範例中，資料行會扁平化，而且會設定 NODE_DISTRIBUTION 資料表的別名來方便檢視。 但是在此模型中，未找到任何迴歸輸入變數可以將 Income 與其他連續屬性產生關聯。 在這類情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回此屬性的平均值以及模型中該屬性的總變異數。  
@@ -258,14 +258,14 @@ WHERE NODE_TYPE = 25
   
 |||  
 |-|-|  
-|預測函數|使用方式|  
+|預測函數|使用量|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
-|[[Predictassociation] &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回與目前預測值相關之值的資料表。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
-|[[Predictprobability] &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回指定之資料行的預測標準差。|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  
@@ -276,6 +276,6 @@ WHERE NODE_TYPE = 25
  [資料採礦查詢](data-mining-queries.md)   
  [Microsoft 決策樹演算法](microsoft-decision-trees-algorithm.md)   
  [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)   
- [決策樹模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [決策樹模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735064"
 ---
 # <a name="transfer-octet-length"></a>傳輸八位元長度
 傳輸八位元長度的資料行是資料傳輸至其預設 C 資料類型時，應用程式傳回的位元組數目上限。 若是字元資料，傳輸八位元長度不包括 null 結束字元的空間。 傳輸八位元資料行的長度可能是不同的資料儲存在資料來源上所需的位元組數目。  
@@ -35,7 +35,7 @@ ms.locfileid: "47601326"
 |SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
-|SQL_BIGINT|保留字元表示法，此資料的字元集為 ANSI，如果所需的位元組數目，兩次此數字的字元集會是 UNICODE，因為此資料類型預設會傳回字元字串。 代表的字元是由 20 個字元所組成： 數字和符號，如果登入，或 20 位數，如果不帶正負號的 19。 因此，長度為 20。|  
+|SQL_BIGINT|保留字元表示法，此資料的字元集為 ANSI，如果所需的位元組數目，兩次此數字的字元集會是 UNICODE，因為此資料類型預設會傳回字元字串。 代表的字元是由 20 個字元所組成：19 的數字和符號，如果登入或如果不帶正負號的 20 位數。 因此，長度為 20。|  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  

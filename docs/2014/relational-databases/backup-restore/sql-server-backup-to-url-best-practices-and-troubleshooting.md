@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877090"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
   本主題包含從 SQL Server 備份及還原至 Windows Azure Blob 服務的最佳作法和疑難排解提示。  
@@ -98,7 +98,7 @@ ms.locfileid: "53349995"
   
          若要解決此錯誤，請重新發出指定 `BACKUP` 的 `BLOCKSIZE = 65536` 陳述式。  
   
--   因為有作用中租用的 blob 的備份期間發生錯誤：失敗的備份活動可能會導致使用中租用的 blob。  
+-   含有使用中租用的 Blob 導致備份期間發生錯誤：失敗的備份活動可能會產生含有使用中租用的 Blob。  
   
      如果重新嘗試執行 Backup 陳述式，備份作業可能會失敗並出現類似以下的錯誤：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53349995"
   
  Proxy 伺服器可能有限制每分鐘連接數目的設定。 備份至 URL 處理序是一個多執行緒處理序，因此可能會超出此限制。 如果發生這種情況，Proxy 伺服器會清除該連接。 若要解決這個問題，請變更 Proxy 設定，讓 SQL Server 不使用 Proxy。   以下是您可能在錯誤記錄檔中看到的類型或錯誤訊息的部分範例：  
   
--   寫入"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失敗：備份至 URL 收到遠端端點的例外狀況。 例外狀況訊息：無法從傳輸連線讀取資料：此連接已經關閉。  
+-   寫入"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"失敗：備份至 URL 收到遠端端點的例外狀況。 例外狀況訊息：無法從傳輸連線讀取資料：連線已關閉。  
   
 -   檔案 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" 上發生無法復原的 I/O 錯誤。無法從遠端端點收集錯誤。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "53349995"
   
      備份資料庫正在異常結束。  
   
--   Backupiorequest: reportioerror： 備份裝置 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息：無法從傳輸連線讀取資料：此連接已經關閉。  
+-   Backupiorequest: reportioerror： 備份裝置 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息：無法從傳輸連線讀取資料：連線已關閉。  
   
  如果您使用追蹤旗標 3051 開啟詳細資訊記錄，可能也會在記錄檔中看到下列資訊：  
   

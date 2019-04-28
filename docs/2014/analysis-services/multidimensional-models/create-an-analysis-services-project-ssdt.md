@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702245"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>建立 Analysis Services 專案 (SSDT)
   您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案範本，或使用 [匯入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫精靈] 讀取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的內容，來定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 如果目前在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中未載入任何方案，則建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案會自動建立新的方案； 否則會將新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案加入至現有的方案。 方案開發的最佳作法需要為不同類型的應用程式資料建立個別的專案，並在專案相關時使用單一方案。 例如，您可以擁有一個方案，其中包含 Integration Services 封裝、Analysis Services 資料庫及 Reporting Services 報表的不同專案，以供相同的商務應用程式使用。  
@@ -151,7 +151,7 @@ ms.locfileid: "52529636"
   
  [加入新項目] 對話方塊的 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案項目] 類別目錄中會提供下表所列的項目範本。  
   
-|類別目錄|項目範本|描述|  
+|Category|項目範本|描述|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案項目|Cube|啟動 [Cube 精靈]，將新的 Cube 加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
 ||資料來源|啟動 [資料來源精靈]，將新的資料來源加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  

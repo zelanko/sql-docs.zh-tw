@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df27afe4e28d08098849d5265a34bc601955979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842589"
 ---
 # <a name="behavior-changes-to-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中 SQL Server 功能的行為變更
   本主題描述從舊版 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 升級至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 時可能看見的行為變更。 行為變更會影響 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中功能的運作或互動方式 (相較於舊版的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  

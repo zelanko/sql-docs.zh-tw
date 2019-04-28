@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733328"
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
   採礦模型具有以下種類的屬性：  
@@ -61,10 +61,10 @@ ms.locfileid: "48171378"
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型資料行](mining-model-columns.md)   
- [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
  [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
  [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)   
- [資料採礦工具](data-mining-tools.md)   
+ [資料採礦工具。](data-mining-tools.md)   
  [建立關聯式採礦結構](create-a-relational-mining-structure.md)   
  [建立模型資料行的別名](create-an-alias-for-a-model-column.md)  
   

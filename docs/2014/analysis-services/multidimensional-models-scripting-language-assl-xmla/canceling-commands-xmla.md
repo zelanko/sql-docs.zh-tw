@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727462"
 ---
 # <a name="canceling-commands-xmla"></a>取消命令 (XMLA)
   視發出命令之使用者的系統管理權限而定[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令在 XML for Analysis (XMLA) 可以取消工作階段、 工作階段、 連接、 伺服器處理序或相關聯的工作階段上的命令或連接。  

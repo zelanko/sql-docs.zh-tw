@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722390"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
   *特徵選取*指的是常用於資料採礦，以描述的工具和技術可供輸入降低至可管理的大小，用於處理和分析。 特徵選取隱含不僅*基數減少*，這表示強加任意或預先定義的截止，可以在建立模型，但也屬性，這表示的選擇時考量的屬性數目分析師或模型化工具主動選取或捨棄屬性根據對分析的實用性。  

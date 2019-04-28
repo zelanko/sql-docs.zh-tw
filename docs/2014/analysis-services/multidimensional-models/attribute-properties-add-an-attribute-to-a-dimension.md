@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c45184e5be13193dc8b77924bc05debdc1911361
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701923"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>將屬性加入維度中
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以手動或自動將屬性加入至維度中。  
@@ -34,6 +34,6 @@ ms.locfileid: "48189659"
  如需詳細資訊，請參閱 [自動定義新屬性](attribute-properties-define-a-new-attribute-automatically.md)、 [手動定義新屬性](../define-a-new-attribute-manually.md)、 [繫結屬性與名稱資料行](attribute-properties-bind-an-attribute-to-a-name-column.md)及 [修改屬性 (attribute) 的 KeyColumn 屬性 (property)](attribute-properties-modify-the-keycolumn-property.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度屬性內容參考](dimension-attribute-properties-reference.md)  
+ [維度屬性 (Attribute) 屬性 (Property) 參考](dimension-attribute-properties-reference.md)  
   
   

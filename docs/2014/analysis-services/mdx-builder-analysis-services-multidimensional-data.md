@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728024"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 產生器 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 或 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [MDX 產生器] 對話方塊，即可建立多維度運算式 (MDX) 運算式。 您可以顯示**MDX 產生器**對話方塊中，依序按一下**編輯 MDX**省略符號按鈕 (**...**) 的**允許讀取 cube 內容**選項，**允許讀取資料格內容的資料格安全性而定**選項，或**允許讀取和寫入 cube 內容**選項**資料格資料**頁面**角色設計工具**。  

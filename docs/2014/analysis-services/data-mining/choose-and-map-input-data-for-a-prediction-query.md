@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7741d2acf1e26e4e5a424c823a435fb37ff1d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705771"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>為預測查詢選擇和對應輸入資料
   從採礦模型建立預測時，通常是透過饋送新資料至模型  (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../multidimensional-models/data-source-views-in-multidimensional-models.md)(多維度模型中的資料來源檢視)。  
@@ -119,6 +119,6 @@ ms.locfileid: "48119058"
      如果關聯性已經存在，採礦模型中的資料行就會自動對應到輸入資料表中的同名資料行。 您可以按一下 **[修改聯結]**，這會開啟 **[建立關聯性]** 對話方塊，在其中修改巢狀資料表和案例資料表之間的關聯性。  
   
 ## <a name="see-also"></a>另請參閱  
- [預測查詢&#40;資料採礦&#41;](prediction-queries-data-mining.md)  
+ [預測查詢 &#40;資料採礦&#41;](prediction-queries-data-mining.md)  
   
   

@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f25cf5a2466cc7ec8ae00b55591279e66ea7ce57
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844179"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>選項 (文字編輯器 - 所有語言 - 一般頁面)
   使用這個對話方塊可設定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，全部五個編輯器的一般編輯選項。 若要顯示這些選項，請按一下 [工具] 功能表上的 [選項]。 選取 [文字編輯器] 資料夾，展開 [所有語言] 資料夾，然後按一下 [一般]。  

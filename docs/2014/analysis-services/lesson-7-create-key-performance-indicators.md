@@ -1,5 +1,5 @@
 ---
-title: 第 8 課： 建立關鍵效能指標 |Microsoft Docs
+title: 第 8 課：建立關鍵效能指標 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62b4102ba7a8b1ff2d5c833001b90dd74707fdc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728134"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 課：建立關鍵效能指標
   在這一課，您將建立關鍵效能指標 (KPI)。 KPI 會對照量值或絕對值所定義的「目標」值，量測由「基底」量值所定義之值的效能。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 如需詳細資訊，請參閱 [KPI &#40;SSAS 表格式&#41;](tabular-models/kpis-ssas-tabular.md)。  
   
- 完成本課程的估計時間： **15 分鐘**  
+ 估計的時間才能完成這一課：**15 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 7 課：建立量值](lesson-6-create-measures.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 7 課：建立量值](lesson-6-create-measures.md)。  
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
   
@@ -82,6 +82,6 @@ ms.locfileid: "48120665"
 7.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型，然後按一下 [確定]。  
   
 ## <a name="next-step"></a>下一個步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)。  
+ 若要繼續本教學課程，請移至下一課：[第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)。  
   
   

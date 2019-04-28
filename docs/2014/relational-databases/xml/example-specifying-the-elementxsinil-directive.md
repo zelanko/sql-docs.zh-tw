@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704814"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>範例指定 ELEMENTXSINIL 指示詞
   當您指定 ELEMENT 指示詞來擷取元素中心的 XML 時，如果資料行有 NULL 值，EXPLICIT 模式就不會產生與其對應的元素。 您可以在 `xsi:nil` 屬性設為值 TRUE 之處，選擇性地指定 ELEMENTXSINIL 指示詞，要求產生 NULL 值的元素。  

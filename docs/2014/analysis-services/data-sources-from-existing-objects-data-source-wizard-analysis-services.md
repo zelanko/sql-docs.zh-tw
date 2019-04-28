@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732773"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>從現有物件建立資料來源 (資料來源精靈) (Analysis Services)
   使用 **[從現有物件中建立資料來源]** 頁面，即可指定新資料來源將依據的現有資料來源或專案。  

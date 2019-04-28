@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724025"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  如同*scrollopt*，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以覆寫要求*ccopt*值。  
   
- *資料列計數*  
+ *rowcount*  
  要搭配 AUTO_FETCH 使用的提取緩衝區資料列數目。 預設為 20 個資料列。 *資料列計數*時指派輸入值與傳回值為不同的行為。  
   
 |當做輸入值|當做傳回值|  
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  已經自動關閉向前快轉的資料指標。  
   
 > [!NOTE]  
->  如果 sp_cursoropen 程序執行成功，RPC 會傳回參數和結果集，而且會傳送 TDS 資料行格式資訊 (0xa0 & 0xa1 訊息)。 如果不成功，則會傳送一個或多個 TDS 錯誤訊息。 在任一情況下，會傳回任何資料列資料並*完成*訊息計數將會是零。 如果您正在使用早於 7.0 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，則會傳回 0xa0、0xa1 (SELECT 陳述式的標準) 連同 0xa5 和 0xa4 Token 資料流。 如果您正在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，則會傳回 0x81 (SELECT 陳述式的標準) 連同 0xa5 和 0xa4 Token 資料流。  
+>  如果 sp_cursoropen 程序執行成功，RPC 會傳回參數和結果集 TDS 資料行格式資訊 (0xa0 & 0xa1 訊息) 傳送。 如果不成功，則會傳送一個或多個 TDS 錯誤訊息。 在任一情況下，會傳回任何資料列資料並*完成*訊息計數將會是零。 如果您正在使用早於 7.0 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，則會傳回 0xa0、0xa1 (SELECT 陳述式的標準) 連同 0xa5 和 0xa4 Token 資料流。 如果您正在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，則會傳回 0x81 (SELECT 陳述式的標準) 連同 0xa5 和 0xa4 Token 資料流。  
   
 ## <a name="remarks"></a>備註  
   
@@ -207,12 +207,12 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>bound_param 參數  
  第五個之後的任何參數都會當做輸入參數傳遞給陳述式計畫。 第一個參數必須是以下格式的字串：  
   
- *{區域變數名稱資料類型}[，...n]。*  
+ *{ local variable name data type } [,...n]*  
   
  後續的參數用來傳遞的值來取代*區域變數名稱*陳述式中。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursorfetch &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

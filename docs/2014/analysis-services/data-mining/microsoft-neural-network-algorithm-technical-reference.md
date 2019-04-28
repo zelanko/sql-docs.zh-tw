@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733795"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路使用「多層認知」(Multilayer Perceptron) 網路，亦稱為「倒傳播差異規則」(Back-Propagated Delta Rule) 網路，它包含最多 3 層神經 (Neuron) 或「認知器」(Perceptron)。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
@@ -105,13 +105,13 @@ ms.locfileid: "52521125"
   
  Μ = p-狀態的優先機率  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  **連續值**  
   
  目前的值 = 1-μ/σ  
   
- 無現有值 =-μ/σ  
+ No existing value= -μ/σ  
   
  這些值經過編碼之後，輸入會以網路邊緣當做加權，進行加權總和。  
   

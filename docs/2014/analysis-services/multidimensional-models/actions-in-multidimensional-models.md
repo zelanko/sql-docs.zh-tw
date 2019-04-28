@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701941"
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
   動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](actions-analysis-services-multidimensional-data.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "50146423"
 |**引動過程**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> 批次<br /><br /> 互動式<br /><br /> 開啟時|  
 |**應用程式**|描述動作的應用程式。|  
 |**說明**|描述動作。|  
-|**Caption**|提供為動作顯示的標題。 如果標題是 MDX，指定`True`for**標題是 MDX**。|  
+|**標題**|提供為動作顯示的標題。 如果標題是 MDX，指定`True`for**標題是 MDX**。|  
 |**標題是 MDX**|如果標題是 MDX，請指定 `True`；如果不是 MDX，則指定 `False`。|  
   
 > [!NOTE]  

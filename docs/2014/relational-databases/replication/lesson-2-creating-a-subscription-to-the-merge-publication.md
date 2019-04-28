@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721035"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 課：建立合併式發行集的訂閱
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立訂閱。 接著，您將在訂閱資料庫上設定權限，並手動為新訂閱產生已篩選資料快照集。 本課程需要您已完成上一課，[第 1 課：使用合併式複寫發行資料](lesson-1-publishing-data-using-merge-replication.md)。  
@@ -74,8 +74,8 @@ ms.locfileid: "54127538"
  您已順利建立合併式發行集的訂閱，並為新訂閱的資料分割產生已篩選快照集，因此在訂閱初始化時，即可使用此快照集。 下一步，您將授與權限給訂閱資料庫上的合併代理程式，並執行合併代理程式以啟動同步處理並初始化訂閱。 請參閱[第 3 課：同步處理合併式發行集的訂閱](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Subscribe to Publications](subscribe-to-publications.md)   
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [訂閱發行集](subscribe-to-publications.md)   
+ [建立提取訂閱](create-a-pull-subscription.md)   
  [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

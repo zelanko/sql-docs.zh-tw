@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877192"
 ---
 # <a name="business-rule-actions-master-data-services"></a>商務規則動作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則動作是商務規則條件評估的結果。 如果條件為 true，就會起始動作。  
@@ -50,7 +50,7 @@ ms.locfileid: "53357724"
 |**需要**|選取的屬性 **為需要的**，表示不能為 null 或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**無效**|選取的屬性 **無效**。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**必須包含模式**|選取的屬性 **必須包含指定的模式** 。 使用 .NET Framework 規則運算式來指定模式。<br /><br /> 如需有關規則運算式的詳細資訊，請參閱 MSDN Library 中的 [規則運算式語言項目](https://go.microsoft.com/fwlink/?LinkId=164401) 。<br /><br /> 此動作適用於文字及連結值。|  
-|**必須是唯一的**|選取的屬性 **必須獨立或與定義的屬性結合時是唯一的** 。<br /><br /> **最佳作法：** 結合此動作與強制性的條件，以確保訂閱系統中的索引欄位的有效性。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
+|**必須是唯一的**|選取的屬性 **必須獨立或與定義的屬性結合時是唯一的** 。<br /><br /> **最佳做法：** 結合此動作與強制性條件，以確保訂閱系統中索引欄位的有效性。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  
 |**必須具有下列其中一個值**|選取的屬性 **必須具有清單中指定的其中一個值** 。<br /><br /> 此動作適用於文字值。|  
 |**必須大於**|選取的屬性 **必須大於** 特定的屬性、特定的屬性值或空白。<br /><br /> 此動作適用於文字、數字及日期值。|  
 |**必須等於**|選取的屬性 **必須等於** 已定義的屬性值、另一個屬性或空白。<br /><br /> 此動作僅適用於文字、數字、日期及連結值。|  

@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736957"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>處理選項和設定 (Analysis Services)
   當您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中處理物件時，您可以選取處理選項來控制每個物件發生的處理類型。 每一個物件可用的處理類型各不相同，且會依據因上次處理之後物件所發生的變更來決定。 如果您讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 自動選取處理方法，它將使用的方法是能夠使物件在最短時間內回到完整處理狀態。  
@@ -40,13 +40,13 @@ ms.locfileid: "48049498"
 ## <a name="processing-options"></a>處理選項  
  下表描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中可用的處理方法，並識別支援每一個方法的物件。  
   
-|[模式]|適用於|描述|  
+|模式|適用於|描述|  
 |----------|----------------|-----------------|  
 |**處理預設**|Cube、資料庫、維度、量值群組、採礦模型、採礦結構和分割區。|偵測資料庫物件的處理狀態，並且執行必要的處理，以便將尚未處理或部分處理的物件傳遞為完整處理的狀態。 如果您變更資料繫結，[處理預設] 將針對受影響的物件執行 [完整處理]。|  
 |**完整處理**|Cube、資料庫、維度、量值群組、採礦模型、採礦結構和分割區。|處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件及其包含的所有物件。 對已處理過的物件執行完整處理時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會先卸除該物件中的所有資料，然後再處理該物件。 當物件有結構變更時，例如加入、刪除或重新命名了屬性階層，就需要這種處理。|  
 |**處理清除**|Cube、資料庫、維度、量值群組、採礦模型、採礦結構和分割區。|卸除所指定之物件中的資料和任何較低層級的構成物件。 卸除資料之後，不會重新載入它。|  
 |**處理資料**|維度、Cube、量值群組和分割區。|只處理資料而不建立彙總或索引。 如果資料分割中有資料，將先卸除後再用來源資料重新填入資料分割。|  
-|**處理加入**|維度、量值群組和分割區<br /><br /> 注意： 處理加入不適用於中的維度處理[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，但是您可以撰寫 XMLA 指令碼來執行這個動作。|針對維度，加入新的成員，並更新維度屬性標題與描述。<br /><br /> 針對量值群組和分割區，加入新的、可用的事實資料，且只處理相關的分割區。|  
+|**處理加入**|維度、量值群組和分割區<br /><br /> 注意:處理加入不適用於中的維度處理[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，但是您可以撰寫 XMLA 指令碼來執行這個動作。|針對維度，加入新的成員，並更新維度屬性標題與描述。<br /><br /> 針對量值群組和分割區，加入新的、可用的事實資料，且只處理相關的分割區。|  
 |**處理更新**|維度|強制重新讀取資料和更新維度屬性。 相關資料分割上的彈性彙總和索引將被卸除。|  
 |**處理索引**|Cube、維度、量值群組和分割區|為所有已處理的分割區建立或重建索引和彙總。 若是尚未處理的物件，此選項會產生錯誤。<br /><br /> 如果您關閉 [延遲處理]，則需要使用此選項處理。|  
 |**處理結構**|Cube 和採礦結構|如果 Cube 已取消處理， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將視需要來處理 Cube 的所有維度。 然後， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只會建立 Cube 定義。 如果將這個選項套用到採礦結構，它會用來源資料擴展採礦結構。 這個選項和完整處理選項的差異在於，這個選項不會向下反覆處理採礦模型自身。|  

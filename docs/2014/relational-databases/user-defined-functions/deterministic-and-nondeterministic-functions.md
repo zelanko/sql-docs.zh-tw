@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714725"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
   假設資料庫狀態相同，任何時候以特定的輸入值集來呼叫決定性函數時，一律會傳回相同的結果。 即使所存取的資料庫維持在相同的狀態，每次以特定的輸入值集來呼叫非決定性函數時，都會傳回不同的結果。 例如，在上述限定情況下，AVG 函數一律傳回相同的結果，而傳回目前日期時間值的 GETDATE 函數則一律傳回不同的結果。  
@@ -57,7 +57,7 @@ ms.locfileid: "48214708"
 |--------------|--------------|  
 |所有彙總函式|除非為 OVER 與 ORDER BY 子句所指定，否則所有彙總函式都具有決定性。 如需這些函數的清單，請參閱[彙總函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)。|  
 |CAST|除非搭配 `datetime`、`smalldatetime` 或 `sql_variant` 使用，否則為決定性函數。|  
-|CONVERT|除非存在這些條件之一，否則為具決定性函數：<br /><br /> 來源類型為 `sql_variant`。<br /><br /> 目標型別是`sql_variant`和其來源類型不具決定性。<br /><br /> 來源或目標類型為 `datetime` 或 `smalldatetime`；其他來源或目標類型為字元字串，而且指定了非決定性的樣式。 若要具有決定性，樣式參數必須是常數。 此外，小於或等於 100 的樣式不具決定性，但樣式 20 和 21 除外。 大於 100 的樣式具決定性，但樣式 106、107、109 和 113 除外。|  
+|CONVERT|除非存在這些條件之一，否則為具決定性函數：<br /><br /> 來源類型為 `sql_variant`。<br /><br /> 目標類型為 `sql_variant`，且其來源類型為非決定性函數。<br /><br /> 來源或目標類型為 `datetime` 或 `smalldatetime`；其他來源或目標類型為字元字串，而且指定了非決定性的樣式。 若要具有決定性，樣式參數必須是常數。 此外，小於或等於 100 的樣式不具決定性，但樣式 20 和 21 除外。 大於 100 的樣式具決定性，但樣式 106、107、109 和 113 除外。|  
 |CHECKSUM|具決定性，但 CHECKSUM(*) 除外。|  
 |ISDATE|若與 CONVERT 函數一併使用，只有在指定 CONVERT 樣式參數，且樣式不等於 0、100、9 或 109 時，才是具決定性的。|  
 |RAND|RAND 只有在指定 *seed* 參數時才是具決定性的。|  

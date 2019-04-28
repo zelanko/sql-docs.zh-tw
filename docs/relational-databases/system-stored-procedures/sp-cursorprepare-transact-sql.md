@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724123"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,17 +114,17 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失敗|  
-|1FF6|無法傳回中繼資料。<br /><br /> 注意：這是因為陳述式不會產生結果集，例如 INSERT 或 DDL 陳述式。|  
+|1FF6|無法傳回中繼資料。<br /><br /> 注意:這是因為該陳述式不會產生結果集;比方說，它是在 INSERT 或 DDL 陳述式。|  
   
 ## <a name="examples"></a>範例  
  當*stmt*已參數化而*scrollopt* PARAMETERIZED_STMT 值是 ON，字串的格式如下所示：  
   
- { *\<本機變數名稱 > * *\<資料類型 >* } [，...*n* ]  
+ { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursorexecute &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+ [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

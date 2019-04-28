@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724566"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_cursorfetch cursor
 |-----------|----------|-----------------|  
 |0x0001|FIRST|擷取的第一個緩衝區*nrows*資料列。 如果*nrows*等於 0，資料指標位於結果集之前，而且會傳回任何資料列。|  
 |0x0002|NEXT|擷取下一個緩衝區*nrows*資料列。|  
-|0x0004|PREV|擷取上一個緩衝區*nrows*資料列。<br /><br /> 注意：將 PREV 用於 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
-|0x0008|LAST|擷取最後一個緩衝區*nrows*資料列。 如果*nrows*等於 0，將游標放在結果集，並會傳回任何資料列之後。<br /><br /> 注意：將 LAST 用於 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
-|0x10|ABSOLUTE|提取的緩衝區*nrows*開頭的資料列*rownum*資料列。<br /><br /> 注意：將 ABSOLUTE 用於 DYNAMIC 或 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
-|0x20|RELATIVE|擷取的緩衝區*nrows*指定為資料列開始的資料列*rownum*目前區塊中的第一個資料列中的資料列的值。 在此情況下*rownum*可以是負數。<br /><br /> 注意：將 RELATIVE 用於 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
+|0x0004|PREV|擷取上一個緩衝區*nrows*資料列。<br /><br /> 注意:將 PREV 用於 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
+|0x0008|LAST|擷取最後一個緩衝區*nrows*資料列。 如果*nrows*等於 0，將游標放在結果集，並會傳回任何資料列之後。<br /><br /> 注意:將 LAST 用於 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
+|0x10|ABSOLUTE|提取的緩衝區*nrows*開頭的資料列*rownum*資料列。<br /><br /> 注意:將 ABSOLUTE 用於 DYNAMIC 資料指標或 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
+|0x20|RELATIVE|擷取的緩衝區*nrows*指定為資料列開始的資料列*rownum*目前區塊中的第一個資料列中的資料列的值。 在此情況下*rownum*可以是負數。<br /><br /> 注意:將 RELATIVE 用於 FORWARD_ONLY 資料指標會傳回錯誤訊息，因為 FORWARD_ONLY 只支援一個方向的捲動。|  
 |0x80|REFRESH|從基礎資料表中重新填滿緩衝區。|  
 |0x100|INFO|擷取有關資料指標的資訊。 這項資訊由使用*rownum*並*nrows*參數。 因此，當指定 INFO 時， *rownum*並*nrows*會成為輸出參數。|  
 |0x200|PREV_NOADJUST|它的用途與 PREV 類似。 但是，如果過早遇到結果集的開頭，結果可能會有所不同。|  
@@ -82,16 +82,16 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  所解碼的字元： 如果未不傳回任何資料列，緩衝區內容會維持原狀。  
   
-|*\<rownum >*|設定為|  
+|*\<rownum>*|設定為|  
 |------------------|------------|  
 |如果未開啟|0|  
 |如果位於結果集的前面|0|  
 |如果位於結果集的後面|-1|  
 |如果是 KEYSET 和 STATIC 資料指標|結果集中目前位置的絕對資料列號碼|  
 |如果是 DYNAMIC 資料指標|1|  
-|如果是 ABSOLUTE|-1 會傳回結果集中的最後一個資料列。<br /><br /> -2 會傳回結果集中的最後第二個資料列，依此類推。<br /><br /> 注意：如果在此情況下要求提取一個以上的資料列，則會傳回結果集的最後兩個資料列。|  
+|如果是 ABSOLUTE|-1 會傳回結果集中的最後一個資料列。<br /><br /> -2 會傳回結果集中的最後第二個資料列，依此類推。<br /><br /> 注意:如果要在此情況下提取要求多個資料列，則會傳回結果集的最後兩個資料列。|  
   
-|*\<nrows >*|設定為|  
+|*\<nrows>*|設定為|  
 |-----------------|------------|  
 |如果未開啟|0|  
 |如果是 KEYSET 和 STATIC 資料指標|通常是目前的索引鍵集大小。<br /><br /> **-m**非同步建立與資料指標是否*m*到這個點為止找到的資料列。|  
@@ -193,7 +193,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_cursoropen &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

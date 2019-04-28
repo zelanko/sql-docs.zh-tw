@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730026"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
   一定要通過穩固的驗證測試來確認您的服務和資料可運作， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安裝或復原作業才會是完整的。 在本文中，我們會示範如何使用 Windows PowerShell 執行這些步驟。 我們將每個步驟放在各自的章節中，好讓您可以直接前往特定工作。 例如，請執行本主題＜ [資料庫](#bkmk_databases) ＞一節中的指令碼來驗證服務應用程式和內容資料庫的名稱，以便排程這些應用程式或資料庫進行維護或備份。  
@@ -29,7 +29,7 @@ ms.locfileid: "55087787"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **本主題中**:以下目錄中的字母項目對應到圖表的區域。 此圖表將說明  
+ **本主題中**:字母項目在下列目錄對應區域的圖表。 此圖表將說明  
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ ms.locfileid: "55087787"
   
  使用 **系統管理權限**開啟 PowerShell 視窗或 PowerShell ISE (整合式指令碼環境)。 如果當您執行命令時沒有系統管理權限，您將會看到類似下面的錯誤訊息：  
   
- Get-SPLogEvent：您必須擁有電腦**系統管理員權限**執行此指令程式。  
+ Get-SPLogEvent :您必須擁有電腦**系統管理員權限**執行此指令程式。  
   
  **SharePoint 和 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]** 模組  
   

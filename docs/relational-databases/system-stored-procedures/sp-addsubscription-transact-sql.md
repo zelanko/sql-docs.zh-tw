@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998313"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +76,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication=] '*發行集*'  
+ [ @publication=] '*publication*'  
  這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
- [ @article=] '*文章*'  
+ [ @article=] '*article*'  
  這是發行集訂閱的發行項。 *發行項*已**sysname**，所有的預設值。 如果是 all，就會將訂閱加入該發行集的所有發行項中。 只有 all 或 NULL 值支援 Oracle 發行者。  
   
- [ @subscriber=] '*訂閱者*'  
+ [ @subscriber=] '*subscriber*'  
  這是訂閱者的名稱。 *訂閱者*已**sysname**，預設值是 NULL。  
   
  [ @destination_db=] '*destination_db*'  
@@ -93,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |值|描述|  
 |-----------|-----------------|  
-|無|訂閱者已有發行資料表的結構描述和初始資料。<br /><br /> 注意：這個選項已被取代。 請改用 replication support only。|  
+|無|訂閱者已有發行資料表的結構描述和初始資料。<br /><br /> 注意:此選項已被取代。 請改用 replication support only。|  
 |automatic (預設值)|先將發行資料表的結構描述和初始資料傳送給訂閱者。|  
 |replication support only|提供在訂閱者自動產生支援更新訂閱之發行項自訂預存程序和觸發程序的功能 (如果適用)。 假設訂閱者已有發行資料表的結構描述和初始資料。 當設定點對點異動複寫拓撲時，請確定拓撲中所有節點的資料都相同。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。<br /><br /> *不支援非 SQL Server 發行集的訂閱。*|  
 |initialize with backup|從發行集資料庫的備份中，取得發行資料表的結構描述和初始資料。 假設訂閱者有權存取發行集資料庫的備份。 備份的備份和媒體類型的位置由*backupdevicename*並*backupdevicetype&lt*。 當使用這個選項時，不需要在設定組態期間，默認點對點異動複寫拓撲。<br /><br /> *不支援非 SQL Server 發行集的訂閱。*|  
@@ -102,7 +102,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  一律會傳送系統資料表和資料。  
   
- [ @status=] '*狀態*'  
+ [ @status=] '*status*'  
  這是訂閱狀態。 *狀態*已**sysname**，預設值是 NULL。 如果未明確設定這個參數，複寫會自動將它設定為這些值之一。  
   
 |值|描述|  
@@ -199,7 +199,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  這是要執行的選擇性命令提示字元。 *optional_command_line*已**nvarchar(4000)**，預設值是 NULL。  
   
- [ @reserved=] '*保留*'  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -261,7 +261,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @fileidhint= ] *fileidhint*  
  識別要還原之備份組的序數值。 *fileidhint*已**int**，預設值是 NULL。  
   
- [ @unload=]*卸載*  
+ [ @unload= ] *unload*  
  指定在從備份初始化完成之後，是否應該卸載磁帶備份裝置。 *卸載*已**元**，預設值為 1。 1 指定應該卸載磁帶。 *卸載*時，才使用*backupdevicetype&lt*的磁帶。  
   
  [ @subscriptionlsn= ] *subscriptionlsn*  
@@ -319,11 +319,11 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>另請參閱  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [為非 SQL Server 訂閱者建立訂閱](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

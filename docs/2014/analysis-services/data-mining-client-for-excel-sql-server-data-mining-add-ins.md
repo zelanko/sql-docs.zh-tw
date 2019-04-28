@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692012"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>適用於 Excel 的資料採礦用戶端 (SQL Server 資料採礦增益集)
   適用於 Excel 的資料採礦用戶端是可讓您執行一般資料採礦工作 (從資料清理到模型建立與預測查詢) 的一組工具。 您可以使用 Excel 資料表或範圍中的資料，或是存取外部資料來源。  
@@ -77,12 +77,12 @@ ms.locfileid: "48063553"
  [分類精靈&#40;資料採礦適用於 Excel 的增益集&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  **分類**精靈可協助您建立分類模型，根據 Excel 資料表、 Excel 範圍或外部資料來源中的現有資料。 分類模型會擷取可指示資料相似性的模式，並協助您根據值的分組來做出預測。 例如，分類模型可能會用來根據收入或花費模式預測風險。  
   
- **分類**精靈支援使用以下這些 Microsoft 資料採礦演算法： 決策樹演算法、 羅吉斯迴歸、 貝氏機率分類、 類神經網路。  
+ **分類**精靈支援使用以下這些 Microsoft 資料採礦演算法：決策樹演算法、 羅吉斯迴歸、 貝氏機率分類、 類神經網路。  
   
  [估計精靈&#40;資料採礦適用於 Excel 的增益集&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  **估計**精靈可協助您建立估計模型。 估計模型會從資料擷取模式，並使用該模式來預測數值結果，例如貨幣、銷售量、日期或時間。  
   
- **估計**精靈會使用這些 Microsoft 資料採礦演算法： 決策樹、 線性迴歸、 羅吉斯迴歸和類神經網路。  
+ **估計**精靈會使用這些 Microsoft 資料採礦演算法：決策樹、 線性迴歸、 羅吉斯迴歸和類神經網路。  
   
  [分析關鍵影響因數&#40;適用於 Excel 的資料表分析工具&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  叢集精靈可協助您建立叢集模型。 群集模型會偵測共用類似特性的資料列群組。 這個精靈對於瀏覽所有資料類型中的模式很有協助。  

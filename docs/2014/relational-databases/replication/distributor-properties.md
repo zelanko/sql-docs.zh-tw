@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721402"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server 複寫散發者屬性
 本主題將討論上找到的屬性**一般**，**發行者**，並**散發資料庫**頁面內**散發者屬性**視窗。 

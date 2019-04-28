@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725852"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授與資料來源物件的權限 (Analysis Services)
   通常，大部分的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用者都不需要存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的基礎資料來源。 使用者通常只會查詢 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料。 不過，在資料採礦的內容中，例如要執行以採礦模型為基礎的預測時，使用者就必須聯結採礦模型的所獲得 (Learned) 資料與使用者提供的資料。 若要連接到包含使用者所提供資料的資料來源，使用者要使用包含 [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) 和 [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset) 子句的資料採礦延伸模組 (DMX) 查詢。  
@@ -56,10 +56,10 @@ ms.locfileid: "48126258"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源](data-sources-in-multidimensional-models.md)   
- [連接字串屬性&#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
- [支援的 Analysis Services 的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授與對維度資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授與對資料格資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [連接字串屬性 &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [Analysis Services 支援的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [授與維度資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

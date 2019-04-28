@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9167f4ec0f62c34ddf6bae5838b36dcf4bdb6967
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010722"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>使用參數查詢 (Visual Database Tools)
   在許多情況下，建立可以在應用程式中重複使用多次，而每次輸入都不相同的查詢，是有幫助的。 在此章節中，您能夠獲得關於如何針對這些一般用途建立參數查詢的詳細資訊。  

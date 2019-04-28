@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836447"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 處理工作編輯器 (Analysis Services 頁面)
   使用 [Analysis Services 處理工作編輯器] 對話方塊的 [Analysis Services] 頁面，即可指定 Analysis Services 連接管理員、選取要處理的分析物件，以及設定處理與錯誤處理選項。  
@@ -44,7 +44,7 @@ ms.locfileid: "58380896"
  **新增**  
  建立新的 Analysis Services 連接管理員。  
   
- **相關主題：**[Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)，[加入 Analysis Services 連接管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **相關主題：**[Analysis Services 連線管理員](connection-manager/analysis-services-connection-manager.md)、[加入 Analysis Services 連線管理員對話方塊 UI 參考](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **物件清單**  
  |屬性|描述|  
@@ -63,7 +63,7 @@ ms.locfileid: "58380896"
  **影響分析**  
  執行選取之物件的影響分析。  
   
- **相關主題：**[影響分析對話方塊&#40;Analysis Services-多維度資料&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **相關主題：**[影響分析對話方塊 &#40;Analysis Services - 多維度資料&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **批次設定摘要**  
  |屬性|描述|  
@@ -77,7 +77,7 @@ ms.locfileid: "58380896"
  **變更設定**  
  變更維度索引鍵中的處理選項和錯誤處理。  
   
- **相關主題：**[變更設定 對話方塊中&#40;Analysis Services-多維度資料&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **相關主題：**[變更設定對話方塊 &#40;Analysis Services - 多維度資料&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

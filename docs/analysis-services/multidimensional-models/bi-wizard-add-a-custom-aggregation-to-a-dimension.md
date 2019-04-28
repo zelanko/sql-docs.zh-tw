@@ -1,5 +1,5 @@
 ---
-title: 將自訂彙總加入維度 |Microsoft 文件
+title: 將自訂彙總加入維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717375"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 精靈-將自訂彙總加入維度中
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 精靈 - 將自訂彙總新增至維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   將自訂彙總增強功能加入至 Cube 或維度中，以不同的一元運算子取代與維度成員相關聯的預設彙總。 此增強功能指定維度資料表中的一元運算子資料行，它定義父子式階層中的成員積存。 一元運算子是在父子式階層的父屬性上作用。  
   

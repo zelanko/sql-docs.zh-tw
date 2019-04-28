@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736726"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 部署的需求和考量
   方案的效能和可用性取決於許多因素，包括基礎硬體的功能、伺服器部署的拓撲、方案的特性 (例如，具有跨多部伺服器分散的資料分割，或使用需要直接存取關聯式引擎的 ROLAP 儲存)、伺服器等級協定，以及資料模型的複雜性。  

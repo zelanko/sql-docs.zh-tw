@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 584412e37754a9cf66a783c490931e351c6cf831
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733022"
 ---
 # <a name="process-a-mining-model"></a>處理採礦模型
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料採礦設計師的 [採礦模型] 索引標籤中，您可以處理與採礦結構相關聯的特定採礦模型，或處理與結構相關聯的所有模型。  
@@ -37,7 +37,7 @@ ms.locfileid: "48093888"
   
 2.  在 [採礦模型] 功能表上，選取 [處理模型]。  
   
-     如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 **[是]**。  
+     如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 [ **是**]。  
   
 3.  在 **處理採礦模型-\<模型 >**  對話方塊中，按一下 **執行**。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48093888"
   
 1.  在 [資料採礦設計師] 的 [採礦模型] 索引標籤上，從 [採礦模型] 功能表中選取 [處理採礦結構和所有模型]。  
   
-2.  如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 **[是]**。  
+2.  如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 [ **是**]。  
   
 3.  在 **處理採礦結構 –\<結構 >**  對話方塊中，按一下 **執行**。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731707"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>鑽研動作表單編輯器 (動作索引標籤，設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[動作]** 索引標籤的 **[鑽研動作表單編輯器]** 窗格，即可修改 **[動作組合管理]** 窗格中選取的鑽研動作。 如需鑽研動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -93,7 +93,7 @@ ms.locfileid: "48213228"
  **說明**  
  鍵入動作的選擇性描述。  
   
- **Caption**  
+ **標題**  
  如果 [標題是 MDX] 設為 [False]，則請鍵入要顯示在用戶端應用程式中的動作標題。  
   
  如果 [標題是 MDX] 設定為 [True]，則請鍵入會傳回標題字串的多維度運算式 (MDX) 運算式。  
@@ -104,7 +104,7 @@ ms.locfileid: "48213228"
  選取 **[True]** 以指出 **[標題]** 包含一個會傳回字串的 MDX 運算式，字串代表要顯示在用戶端應用程式中的動作標題。 在動作傳回至用戶端應用程式之前，必須先解析 MDX 運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度運算式&#40;MDX&#41;參考](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [多維度運算式 &#40;MDX&#41 參考](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [動作&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [動作組合管理&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

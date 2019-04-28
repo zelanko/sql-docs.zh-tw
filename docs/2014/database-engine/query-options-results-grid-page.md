@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843686"
 ---
 # <a name="query-options-results-grid-page"></a>查詢選項結果 (方格頁面)
   使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。  

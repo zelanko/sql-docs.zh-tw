@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722020"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動編輯預測查詢
   在使用預測查詢產生器設計查詢之後，您可以切換到資料採礦設計師的 [採礦模型預測] 索引標籤上的 [查詢文字] 檢視來修改查詢。 文字編輯器會出現在畫面底端，以顯示查詢產生器建立的查詢。  
@@ -45,7 +45,7 @@ ms.locfileid: "48065534"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢](data-mining-queries.md)   
- [預測查詢產生器&#40;資料採礦&#41;](../prediction-query-builder-data-mining.md)   
- [第 6 課： 建立及處理預測&#40;基本資料採礦教學課程&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [預測查詢產生器 &#40;資料採礦&#41;](../prediction-query-builder-data-mining.md)   
+ [第 6 課：建立及處理預測&#40;基本資料採礦教學課程&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

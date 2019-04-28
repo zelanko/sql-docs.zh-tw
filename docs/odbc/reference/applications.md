@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734994"
 ---
 # <a name="applications"></a>應用程式
 *應用程式*是呼叫 ODBC API 來存取資料的程式。 雖然可能會有許多種應用程式，大部分會分成三個類別，做為本指南的範例。  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004703"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47735776"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**< 繼承的資料行 >**||繼承資料行從[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**站台**|**nvarchar(128)**|依照 SITE = 選項所指定的網站主機電腦名稱。|  
+|**site**|**nvarchar(128)**|依照 SITE = 選項所指定的網站主機電腦名稱。|  
 |**url_path**|**nvarchar(4000)**|依照 PATH= 選項所指定，這個 HTTP 端點的 URL 只有路徑的部份。|  
 |**is_clear_port_enabled**|**bit**|1 = 利用 PORT = CLEAR 選項來啟用清除通訊埠|  
 |**clear_port**|**int**|CLEAR PORT = 選項所指定的通訊埠編號。<br /><br /> NULL = 未指定。|  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833556"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure 儲存體連線管理員
   Azure 儲存體連線管理員可讓 SSIS 封裝連線到 Azure 儲存體帳戶所使用的屬性所指定的值：儲存體帳戶名稱和帳戶金鑰。  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733563"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>關聯模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題說明使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱[Mining Model Content (Analysis Services - Data Mining)](mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
@@ -102,12 +102,12 @@ ms.locfileid: "48135058"
 |RULE_COUNT|模型中所有規則的計數。|  
 |MIN_SUPPORT|任何單一項目集可用的最小支援。<br /><br /> **注意** 此值可能與您為 *MINIMUM _SUPPORT* 參數設定的值不同。|  
 |MAX_SUPPORT|任何單一項目集可用的最大支援。<br /><br /> **注意** 此值可能與您為 *MAXIMUM_SUPPORT* 參數設定的值不同。|  
-|MIN_ITEMSET_SIZE|最小項目集的大小，由項目計數表示。<br /><br /> 值為 0 表示`Missing`狀態視為獨立項目。<br /><br /> **注意** *MINIMUM_ITEMSET_SIZE* 參數的預設值為 1。|  
+|MIN_ITEMSET_SIZE|最小項目集的大小，由項目計數表示。<br /><br /> 0 值表示會將 `Missing` 狀態視為獨立項目。<br /><br /> **注意** *MINIMUM_ITEMSET_SIZE* 參數的預設值為 1。|  
 |MAX_ITEMSET_SIZE|指出找到的最大項目集大小。<br /><br /> **注意** 此值受限於您在建立模型時所設定的 *MAX_ITEMSET_SIZE* 參數值。 此值絕不能超出該值，但可以比該值小。 預設值是 3。|  
-|MIN_PROBABILITY|針對模型中任何單一項目集或規則所偵測到的最小機率。<br /><br /> 範例：0.400390625<br /><br /> **注意** 對項目集而言，此值一定會比您在建立模型時所設定的 *MINIMUM_PROBABILITY* 參數值大。|  
-|MAX_PROBABILITY|針對模型中任何單一項目集或規則所偵測到的最大機率。<br /><br /> 範例：1<br /><br /> **注意** 沒有參數可以限制項目集的最大機率。 如果想要排除太常出現的項目，請改用 *MAXIMUM_SUPPORT* 參數。|  
-|MIN_LIFT|模型針對任何項目集所提供的最小增益量。<br /><br /> 範例：0.14309369632511<br /><br /> 注意：了解最小增益量有助於判斷任何項目集的增益是否重要。|  
-|MAX_LIFT|模型針對任何項目集所提供的最大增益量。<br /><br /> 範例：1.95758227647523 **注意** 了解最大增益量有助於判斷任何項目集的增益是否重要。|  
+|MIN_PROBABILITY|針對模型中任何單一項目集或規則所偵測到的最小機率。<br /><br /> 範例0.400390625<br /><br /> **注意** 對項目集而言，此值一定會比您在建立模型時所設定的 *MINIMUM_PROBABILITY* 參數值大。|  
+|MAX_PROBABILITY|針對模型中任何單一項目集或規則所偵測到的最大機率。<br /><br /> 範例1<br /><br /> **注意** 沒有參數可以限制項目集的最大機率。 如果想要排除太常出現的項目，請改用 *MAXIMUM_SUPPORT* 參數。|  
+|MIN_LIFT|模型針對任何項目集所提供的最小增益量。<br /><br /> 範例0.14309369632511<br /><br /> 注意:了解最小增益量有助於判斷任何項目集的增益是否重要。|  
+|MAX_LIFT|模型針對任何項目集所提供的最大增益量。<br /><br /> 範例1.95758227647523**注意**了解最大增益量有助於判斷任何項目集的增益是否重要。|  
   
  **項目集節點** 項目集節點包含顯示為逗號分隔文字字串的項目清單。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48135058"
  空白。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 關聯分析演算法](microsoft-association-algorithm.md)   
  [關聯模型查詢範例](association-model-query-examples.md)  
   

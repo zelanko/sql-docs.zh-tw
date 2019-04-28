@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2c99e0e5a58bda4b3bc7cb090e3705b7d9cc5c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703784"
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
   本主題將說明您可能會在某個設計工具或管理工具中設定的連接字串屬性，或是在連接到 Analysis Services 以查詢資料的用戶端應用程式所建立的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  

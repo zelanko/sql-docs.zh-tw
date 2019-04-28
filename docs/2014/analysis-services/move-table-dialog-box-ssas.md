@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff10d4c1c2c70049549d848dd31736dbd898fb28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702736"
 ---
 # <a name="move-table-dialog-box-ssas"></a>移動資料表對話方塊 (SSAS)
   [移動資料表] 對話方塊讓您能夠變更資料表在模型設計工具中出現的順序。 若要存取此對話方塊，請以滑鼠右鍵按一下要移動之資料表底部的索引標籤，然後選取 [移動]。  

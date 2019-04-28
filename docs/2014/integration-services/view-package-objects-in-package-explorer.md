@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a557fd57062bc6af301decffada45ffd5d38933
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877825"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>在封裝總管中檢視封裝物件
   此程序描述如何使用 [封裝總管] 檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中的物件。  

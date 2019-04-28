@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835184"
 ---
 # <a name="conditional-split-transformation-editor"></a>條件式分割轉換編輯器
   使用 **[條件式分割轉換編輯器]** 對話方塊，即可建立運算式、設定評估運算式的順序，以及命名條件式分割的輸出。 此對話方塊包含可用來建立運算式的數學、字串，以及日期/時間函數與運算子。 評估為 True 的第一個條件會決定資料列的輸出導向。  
@@ -42,7 +42,7 @@ ms.locfileid: "58392958"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;運算式](expressions/integration-services-ssis-expressions.md)，[運算子&#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)，和[函式&#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
   
  **預設輸出名稱**  
  輸入預設輸出的名稱，或使用預設值。  

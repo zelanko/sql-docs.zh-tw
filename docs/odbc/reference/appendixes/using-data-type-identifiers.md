@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735127"
 ---
 # <a name="using-data-type-identifiers"></a>使用資料類型識別碼
 應用程式會將資料型別識別項用於兩種方式： 來描述驅動程式，其緩衝區，以及擷取的結果集從驅動程式，好讓它們可以判斷要用來儲存資料緩衝處理的 C 類型相關的中繼資料。 應用程式呼叫下列函式，執行下列工作：  
