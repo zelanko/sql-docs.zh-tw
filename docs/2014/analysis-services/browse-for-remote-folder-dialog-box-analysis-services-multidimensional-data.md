@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658063"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>瀏覽遠端資料夾對話方塊 (Analysis Services - 多維度資料)
-  **[瀏覽遠端資料夾]** 對話方塊會顯示為 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體定義之可用記錄和資料的資料夾清單。 您可以選取列出的資料夾，或視需要指定不同的資料夾。 執行下列其中一個步驟，即可顯示 **[瀏覽遠端資料夾]** 對話方塊：  
+   **[瀏覽遠端資料夾]** 對話方塊會顯示為 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體定義之可用記錄和資料的資料夾清單。 您可以選取列出的資料夾，或視需要指定不同的資料夾。 執行下列其中一個步驟，即可顯示 **[瀏覽遠端資料夾]** 對話方塊：  
   
 -   在 [資料分割精靈] 中，按一下 [處理與儲存位置] 頁面上的省略符號按鈕 (**...**)。  
   

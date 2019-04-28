@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779858"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDE](../includes/ssde-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
@@ -46,17 +46,17 @@ ms.locfileid: "54132610"
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中移除的功能。  
   
-|類別目錄|已停止的功能|取代|  
+|Category|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
 |相容性層級|90 相容性層級|資料庫至少必須設定為相容性層級 100。 當相容性層級低於 100 的資料庫升級為 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]時，資料庫的相容性層級會在升級作業期間設定為 100。|  
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  下表列出已在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中移除的功能。  
   
-|類別目錄|已停止的功能|取代|  
+|Category|已停止的功能|取代|  
 |--------------|--------------------------|-----------------|  
 |備份與還原|**備份 {資料庫&#124;LOG} WITH PASSWORD**並**備份 {資料庫&#124;LOG} WITH MEDIAPASSWORD**已停用。 **RESTORE {DATABASE&#124;記錄檔} 與 [MEDIA] PASSWORD**繼續被取代。|None|  
-|備份與還原|**RESTORE {DATABASE&AMP;#124;記錄檔}...WITH DBO_ONLY**|**RESTORE {DATABASE&AMP;#124;記錄檔}......WITH RESTRICTED_USER**|  
+|備份與還原|**RESTORE { DATABASE &#124; LOG } ...WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ...WITH RESTRICTED_USER**|  
 |相容性層級|80 相容性層級|資料庫至少必須設定為相容性層級 90。|  
 |組態選項|`sp_configure 'user instance timeout'` 和 `'user instances enabled'`|使用本機資料庫功能。 如需詳細資訊，請參閱[SqlLocalDB 公用程式](../tools/sqllocaldb-utility.md)|  
 |連接通訊協定|VIA 通訊協定支援已停用。|請改用 TCP。|  

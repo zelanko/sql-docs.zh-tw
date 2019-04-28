@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689444"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>使用 Microsoft 類神經網路檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 類神經網路檢視器，會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)＞。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 類神經網路檢視器，會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)＞。  
   
  在您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器瀏覽模型時，通常會選擇某個目標屬性和狀態，然後使用該檢視器來查看輸入屬性是如何影響結果。  
   
@@ -70,17 +70,17 @@ ms.locfileid: "48117858"
  [回到頁首](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> 變數  
- [變數] 索引標籤中的方格包含下列資料行：[屬性]、[值]、[喜好 [值 1]] 和 [喜好 [值 2]]。 依預設，資料行是依 [喜好 [值 1]] 的程度來排序。 按一下資料行標題會將排序順序變更為選取的資料行。  
+ 中的方格**變數** 索引標籤包含下列資料行：**屬性**，**值**，**喜好 [值 1]**，和**喜好 [值 2]**。 依預設，資料行是依 [喜好 [值 1]] 的程度來排序。 按一下資料行標題會將排序順序變更為選取的資料行。  
   
  屬性右邊的列會顯示指定的輸入屬性狀態所喜好的輸出屬性狀態。 此橫條的大小會顯示輸出狀態喜好輸入狀態的強烈程度。  
   
  [回到頁首](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>另請參閱  
- [Microsoft 類神經網路演算法](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
  [採礦模型檢視器工作和使用說明](mining-model-viewer-tasks-and-how-tos.md)   
- [資料採礦工具](data-mining-tools.md)   
+ [資料採礦工具。](data-mining-tools.md)   
  [資料採礦模型檢視器](data-mining-model-viewers.md)  
   
   

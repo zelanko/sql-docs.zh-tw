@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730269"
 ---
 # <a name="creating-an-analysis-services-project"></a>建立 Analysis Services 專案
   在下列工作中，您可以使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]來建立新[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案，命名為`Analysis Services Tutorial`根據[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]專案範本。 *「專案」* (Project) 是相關物件的集合。 專案存在於方案內，方案包括一或多個專案。 如需詳細資訊，請參閱[建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)。  
@@ -25,7 +25,7 @@ ms.locfileid: "48066944"
   
 1.  按一下 **[開始]**、依序指向 **[所有程式]** 和 **[Microsoft SQL Server 2012]**，然後按一下 **[SQL Server 資料工具]**。  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開發環境隨即開啟。  
+      [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開發環境隨即開啟。  
   
 2.  在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]的起始頁面上，按一下 **[新增專案]**。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48066944"
  [定義資料來源](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [建立多維度模型使用 SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [建立 Analysis Services 專案&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [使用 SQL Server 資料工具 &#40;SSDT&#41; 建立多維度模型](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [建立 Analysis Services 專案 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
