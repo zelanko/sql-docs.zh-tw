@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58b0ea08b09e62881de6cef073ae931ecb598978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701216"
 ---
 # <a name="batch-processing-analysis-services"></a>批次處理 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用 [批次] 命令，以單一要求將多個處理命令傳送至伺服器。 批次處理讓您可以控制要處理的物件和處理順序。 此外，批次可以當做一系列獨立的作業來執行，或是做為交易執行，其中若有一個處理序失敗，就會造成整個批次全部回復。  

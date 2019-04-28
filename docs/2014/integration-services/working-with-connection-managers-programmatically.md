@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877699"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以程式設計方式使用連接管理員
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，當您在受控碼使用連線管理員時，最常呼叫的方法是相關聯之連線管理員類別的 AcquireConnection 方法。 當您撰寫受控碼時，必須呼叫 AcquireConnection 方法才能使用連線管理員的功能。 不論是在指令碼工作、指令碼元件、自訂物件或是自訂應用程式中撰寫 Managed 程式碼，都必須呼叫這個方法。  

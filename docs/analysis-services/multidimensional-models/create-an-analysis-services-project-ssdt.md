@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866986"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>建立 Analysis Services 專案 (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "52503387"
   
  [加入新項目] 對話方塊的 [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案項目] 類別目錄中會提供下表所列的項目範本。  
   
-|類別目錄|項目範本|描述|  
+|Category|項目範本|描述|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案項目|Cube|啟動 [Cube 精靈]，將新的 Cube 加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  
 ||資料來源|啟動 [資料來源精靈]，將新的資料來源加入到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中。|  

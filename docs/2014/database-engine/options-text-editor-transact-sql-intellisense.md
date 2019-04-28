@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5472e7d0c910c03f49425c263293fd721320eba9
-ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55484627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844347"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>選項 (文字編輯器-Transact-SQL-IntelliSense)
   **[選項]** 對話方塊可讓您變更 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的 IntelliSense 設定。 在 [工具] 功能表上，按一下 [選項]，依序展開 [文字編輯器] 資料夾和 [Transact-SQL] 資料夾，然後按一下 [進階]，即可使用這些設定。  

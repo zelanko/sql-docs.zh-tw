@@ -1,5 +1,5 @@
 ---
-title: 分類矩陣 (Analysis Services-資料採礦) |Microsoft 文件
+title: 分類矩陣 (Analysis Services-資料採礦) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1b6e9f3ccb71c0b3a45101cd1da660e6bc1af133
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724783"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類矩陣 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34016085"
 ## <a name="understanding-the-classification-matrix"></a>了解分類矩陣  
  將您建立的模型視為資料採礦基本教學課程的一部分。 [TM_DecisionTree] 模型可用來協助建立目標郵寄促銷活動，並可用來預測哪些客戶最有可能購買自行車。 若要測試此模型的預期效用，您可以使用內含已知 [Bike Buyer] 結果屬性值的資料集。 一般來說，您會使用當您建立用於定型此模型的採礦結構時所擱置在一旁的測試資料集。  
   
- 只有兩種可能的結果：[是] \(客戶可能購買自行車) 及 [否] \(客戶可能不購買自行車)。 因此，產生的分類矩陣是比較簡單的。  
+ 只有兩種可能的結果：[是] (客戶可能購買自行車) 及 [否] (客戶可能不購買自行車)。 因此，產生的分類矩陣是比較簡單的。  
   
 ## <a name="interpreting-the-results"></a>解譯結果  
  下表顯示 TM_DecisionTree 模型的分類矩陣。 請記住，此可預測的屬性若為 0，則表示 [否]；若為 1，則表示 [是]。  
@@ -70,12 +70,12 @@ ms.locfileid: "34016085"
   
 |主題|連結|  
 |------------|-----------|  
-|提供如何為此目標郵寄模型建立增益圖的逐步解說。|[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [使用增益圖 &#40;測試精確度基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|提供如何為此目標郵寄模型建立增益圖的逐步解說。|[資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [使用增益圖測試精確度 &#40;基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|描述建立增益圖及其他精確度圖表的步驟。|[測試和驗證工作及操作方式 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|描述建立增益圖及其他精確度圖表的步驟。|[測試及驗證工作與操作方法 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

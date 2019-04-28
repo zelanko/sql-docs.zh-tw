@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843438"
 ---
 # <a name="what39s-new-database-engine"></a>什麼&#39;s 新 (Database Engine)
   這個最新版本的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 導入了一些新功能和增強功能，可提升設計、開發和維護資料儲存系統之架構設計師、開發人員和管理員的能力和生產力。 以下是 [!INCLUDE[ssDE](../includes/ssde-md.md)] 已增強的範圍。  
@@ -94,13 +94,13 @@ ms.locfileid: "53371550"
   
      使用叢集資料行存放區索引，可提高主要執行大量載入和唯讀查詢的資料倉儲工作負載的資料壓縮和查詢效能。 因為叢集資料行存放區索引可更新，工作負載可以執行許多插入、更新和刪除作業。 如需詳細資訊，請參閱 < [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)並[Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)。  
   
--   **執行程序表**  
+-   **SHOWPLAN**  
   
      SHOWPLAN 會顯示有關資料行存放區索引的資訊。 **EstimatedExecutionMode**並**ActualExecutionMode**屬性有兩個可能的值：**批次**或是**資料列**。  **儲存體**屬性有兩個可能的值：**資料列存放區**並**資料行存放區**。  
   
 -   **封存資料壓縮**  
   
-     ALTER INDEX ...REBUILD 擁有新的 COLUMNSTORE_ARCHIVE 資料壓縮選項，可進一步壓縮資料行存放區索引的指定分割區。 使用此選項進行封存，或是在其他需要較小資料儲存大小且允許較長儲存和擷取時間的情況下使用。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+     ALTER INDEX ...REBUILD 擁有新的 COLUMNSTORE_ARCHIVE 資料壓縮選項可進一步壓縮資料行存放區索引之指定分割區。 使用此選項進行封存，或是在其他需要較小資料儲存大小且允許較長儲存和擷取時間的情況下使用。 如需詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
    
   
 ###  <a name="Buffer"></a> 緩衝集區延伸模組  
@@ -108,7 +108,7 @@ ms.locfileid: "53371550"
    
   
 ###  <a name="Stats"></a> 累加統計資料  
- CREATE STATISTICS 和相關統計陳述式現在可以使用累加選項，建立每個分割區的統計資料。 相關陳述式允許或回報累加統計資料。 受影響的語法包括 UPDATE STATISTICS、sp_createstats、CREATE INDEX、ALTER INDEX、ALTER DATABASE SET options、DATABASEPROPERTYEX、sys.databases 和 sys.stats。如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
+ CREATE STATISTICS 和相關統計陳述式現在可以使用累加選項，建立每個分割區的統計資料。 相關陳述式允許或回報累加統計資料。 受影響的語法包括 UPDATE STATISTICS、 sp_createstats、 CREATE INDEX、 ALTER INDEX、 ALTER DATABASE SET 選項、 DATABASEPROPERTYEX、 sys.databases 和 sys.stats。如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
   
 ###  <a name="RG"></a> 實體 IO 控制的資源管理員增強功能  

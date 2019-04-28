@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700088"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
   Cube、維度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都可繫結至資料來源。 資料來源可為下列其中一個物件：  
@@ -67,7 +67,7 @@ ms.locfileid: "52510541"
 |Integer|32 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int32 資料類型和 OLE DB 內部的 DBTYPE_I4 資料類型。|  
 |Single|在 -3.40E +38 到 3.40E +38 範圍中的單精確度浮點數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Single 資料類型和 OLE DB 內部的 DBTYPE_R4 資料類型。|  
 |SmallInt|16 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 Int16 資料類型和 OLE DB 內部的 DBTYPE_I2 資料類型。|  
-|TinyInt|8 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 SByte 資料類型和 OLE DB 內部的 DBTYPE_I1 資料類型。<br /><br /> 注意：如果資料來源包含屬於 Tinyint 資料類型的欄位，且 AutoIncrement 屬性設為 True，則它們會在資料來源檢視中轉換為整數。|  
+|TinyInt|8 位元帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 SByte 資料類型和 OLE DB 內部的 DBTYPE_I1 資料類型。<br /><br /> 注意:如果資料來源包含屬於 tinyint 資料類型欄位，且 AutoIncrement 屬性設為 True，則它們會轉換為資料來源檢視中的整數。|  
 |UnsignedBigInt|64 位元不帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 UInt64 資料類型和 OLE DB 內部的 DBTYPE_UI8 資料類型。|  
 |UnsignedInt|32 位元不帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 UInt32 資料類型和 OLE DB 內部的 DBTYPE_UI4 資料類型。|  
 |UnsignedSmallInt|16 位元不帶正負號的整數。 這個資料類型會對應至 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 內部的 UInt16 資料類型和 OLE DB 內部的 DBTYPE_UI2 資料類型。|  

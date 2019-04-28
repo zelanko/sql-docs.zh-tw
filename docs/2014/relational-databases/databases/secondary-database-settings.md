@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871208"
 ---
 # <a name="secondary-database-settings"></a>次要資料庫設定
   您可以使用此對話方塊，來設定和修改記錄傳送組態中，次要資料庫的屬性。  

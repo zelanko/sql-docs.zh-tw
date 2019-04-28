@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733583"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>時間序列模型的採礦模型內容 (Analysis Services - 資料採礦)
   所有採礦模型都會使用相同的結構來儲存其內容。 這個結構是根據資料採礦內容結構描述資料列集所定義。 不過，在該標準結構內，包含資訊的節點會以不同的方式排列，以便代表各種樹狀結構。 本主題描述如何針對以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法為基礎的採礦模型組織節點，以及每個節點的意義。  
@@ -312,7 +312,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> 了解 ARIMA 樹狀結構  
  ARIMA 模型中的每個結構都會對應至「週期性」或「週期結構」。 週期結構是在整個資料序列中重複的資料模式。 在統計限制內，允許此模式產生某些次要變化。 週期性是根據培訓資料內使用的預設時間單位所測量。 例如，如果培訓資料提供每天的銷售資料，預設時間單位就是一天，而且所有週期結構都會定義成指定的天數。  
   
- 此演算法所偵測的每個期間都會取得自己的結構節點。 例如，如果您要分析每日銷售資料，此模型可能會偵測代表週的週期結構。 在此情況下，演算法將會在完成的模型中建立兩個週期結構：一個代表預設每日期間，表示成 {1}，而另一個則代表週，由 {7} 指定。  
+ 此演算法所偵測的每個期間都會取得自己的結構節點。 例如，如果您要分析每日銷售資料，此模型可能會偵測代表週的週期結構。 在此情況下，演算法時，將會完成的模型中建立兩個週期結構： 一個代表預設每日週期，表示為{1}，和一週，由{7}。  
   
  例如，下列查詢會從採礦模型中傳回所有 ARIMA 結構。  
   
@@ -336,7 +336,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
+|Forecasting|T1'000 太平洋： 數量 |TA0000000b | 27 |ARIMA (1,0,3)|  
   
  根據這些結果 (您也可以使用 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) 來瀏覽)，您可以立即判斷出哪些數列是完全線性、哪些具有多個週期結構，以及發現的週期性為何。  
   
@@ -412,7 +412,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** 巢狀資料表，您可以查詢以取得特定詞彙中顯示方程式的詞彙。 節點分佈資料表會與 XML 規則遵循相同的階層式結構。 也就是說，ARIMA 序列 (NODE_TYPE = 27) 的根節點包含完整方程式的攔截值和週期性，而且此方程式可能包括多個週期性，而子節點僅包含特定週期結構或該週期結構之子節點特有的資訊。  
   
-|節點類型|attribute|值類型|  
+|節點類型|屬性|值類型|  
 |---------------|---------------|----------------|  
 |27 (ARIMA 根)|Intercept<br /><br /> Periodicity|11|  
 |28 (ARIMA 週期結構)|Periodicity<br /><br /> 自動迴歸順序<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  

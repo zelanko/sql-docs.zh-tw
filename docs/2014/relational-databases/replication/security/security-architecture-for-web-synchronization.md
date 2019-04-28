@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959746"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Web 同步處理的安全性架構
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 透過 Web 同步處理安全性的組態來啟用精確控制項。 本主題提供一份完整清單，其中列有可併入 Web 同步處理組態中的所有元件，並提供有關元件之間所建立的連接資訊。 [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  

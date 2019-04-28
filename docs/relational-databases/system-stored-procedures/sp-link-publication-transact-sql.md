@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960168"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |值|描述|  
 |-----------|-----------------|  
-|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意:在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個選項用來指定動態遠端程序呼叫 (RPC)。|  
-|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意:這個帳戶也必須存在於發行者端，且具有足夠的權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
+|**0**|會使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]做為此預存程序中指定的登入的驗證*登入*並*密碼*。<br /><br /> 注意:在舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此選項用來指定動態遠端程序呼叫 (RPC)。|  
+|**1**|使用在訂閱者端進行變更之使用者的安全性內容 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證或 Windows 驗證)。<br /><br /> 注意:此帳戶也必須存在於發行者端具有足夠權限。 當使用 Windows 驗證時，必須支援安全性帳戶的委派。|  
 |**2**|使用現有使用者定義連結的伺服器登入以建立**sp_link_publication**。|  
   
 `[ @login = ] 'login'` 是登入。 *login* 是預設值為 NULL 的 **sysname**。 這個參數必須是指定何時*security_mode*是**0**。  

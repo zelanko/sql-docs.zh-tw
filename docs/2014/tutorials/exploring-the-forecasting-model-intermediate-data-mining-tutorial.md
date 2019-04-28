@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992255"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>探索預測模型 (中繼資料採礦教學課程)
   既然您已建立預測的採礦模型，您可以使用來探索結果**採礦模型檢視器**資料採礦設計師 索引標籤。 [!INCLUDE[msCoName](../includes/msconame-md.md)]時間序列檢視器包含兩個索引標籤：**圖表**並**模型**。  
@@ -81,7 +81,7 @@ ms.locfileid: "56040029"
   
 3.  請注意 X 軸的小數位數。 歷程記錄和預測資料的變更永遠是以百分比表示，但實際值會自動調整，以便將所有值放在圖形上。 因此，在比較模型時需要特別小心，不要只依賴視覺項目。 若要取得實際值或百分比增量和值的預測，將滑鼠暫時放在點線或實線，或按一下線條以檢視中的值**採礦圖例**。  
   
-     **提示**:如果**採礦圖例**不是可見的切換至**模型**檢視，以滑鼠右鍵按一下任何節點，然後選取**顯示圖例**。  
+     **提示**：如果**採礦圖例**不是可見的切換至**模型**檢視，以滑鼠右鍵按一下任何節點，然後選取**顯示圖例**。  
   
  檢視這些趨勢後，您關切某些序列缺少資料，想知道是否可根據模型或地區計算平均銷售量，取得更可靠的預測。 稍後在本教學課程中將探索此方法。  
   

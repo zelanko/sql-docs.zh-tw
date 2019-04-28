@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 09f0b1ece44841cb608469cf2087041d20a9bf39
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837270"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>加入、刪除、變更封裝中使用者定義變數的範圍
   這些程序描述如何使用 [變數] 視窗，在封裝中加入、刪除及變更使用者定義變數的範圍。  

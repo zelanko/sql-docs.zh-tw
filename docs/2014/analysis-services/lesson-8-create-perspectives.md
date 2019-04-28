@@ -1,5 +1,5 @@
 ---
-title: 第 9 課： 建立檢視方塊 |Microsoft Docs
+title: 第 9 課：建立檢視方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83d9b10af87926a26b2a671ff162163d3c8fa62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728074"
 ---
 # <a name="lesson-9-create-perspectives"></a>第 9 課：建立檢視方塊
   在這一課，您將建立一個 [網際網路銷售] 檢視方塊。 檢視方塊會定義可檢視之模型的子集，而這類子集會提供有焦點的商務特有或應用程式特有視點。 使用者使用檢視方塊連接到模型時，只會將那些模型物件 (資料表、資料行、量值、階層和 KPI) 視為該檢視方塊中定義的欄位。  
@@ -27,10 +27,10 @@ ms.locfileid: "48163608"
   
  如需詳細資訊，請參閱[檢視方塊 &#40;SSAS 表格式&#41;](tabular-models/perspectives-ssas-tabular.md)。  
   
- 完成本課程的估計時間： **5 分鐘**  
+ 估計的時間才能完成這一課：**5 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>建立檢視方塊  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48163608"
 5.  驗證您所做的選擇，確定未核取 [Customer] 資料表，然後按一下 [確定]  
   
 ## <a name="next-steps"></a>後續步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
+ 若要繼續本教學課程，請移至下一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
   
   

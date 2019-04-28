@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 598d0512593c737f1138577f36dfd5f8232d1c91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864474"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>為 DQS 記錄檔設定嚴重性層級
 
@@ -48,11 +48,11 @@ ms.locfileid: "56010988"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_administrator 角色，才能設定記錄嚴重性設定。  
   
 ##  <a name="ConfigureActivity"></a> 在活動層級設定嚴重性層級  
- 您可以在 DQS 中設定以下活動的記錄嚴重性設定：定義域管理、知識探索、比對原則、資料清理、資料比對和參考資料服務。 若要這樣做：  
+ 您可以在 DQS 中設定以下活動的記錄嚴重性設定：定義域管理、知識探索、比對原則、資料清理、資料比對和參考資料服務。 方法如下：  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [執行 Data Quality Client 應用程式](../data-quality-services/run-the-data-quality-client-application.md)。  
   

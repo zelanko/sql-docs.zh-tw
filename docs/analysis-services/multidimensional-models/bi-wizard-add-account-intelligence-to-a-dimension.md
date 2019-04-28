@@ -1,5 +1,5 @@
 ---
-title: 將帳戶智慧加入維度 |Microsoft 文件
+title: 將帳戶智慧加入維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5021d10832028f46d1d0b1a8f33dc01a75df5985
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717535"
 ---
-# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 精靈-將帳戶智慧加入維度中
+# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 精靈 - 將帳戶智慧新增至維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可使用彙總科目分類經過一段時間。  
+  將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可使用分類隨時間彙總科目。  
   
 > [!NOTE]  
 >  只有以現有的資料來源為基礎的維度才可使用帳戶智慧。 對於沒有使用資料來源建立的維度，在加入帳戶智慧之前，您必須執行結構描述產生精靈來建立資料來源檢視。  
@@ -40,7 +40,7 @@ ms.locfileid: "34023465"
   
 -   **[伺服器帳戶類型]** 資料行會識別 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的對應帳戶類型。 下表列出 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所辨識的帳戶類型，以及每一個這些類型的預設彙總。 如果維度資料表使用的帳戶類型名稱與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用的一樣，則會自動選取。  
   
-    |伺服器帳戶類型|彙總|說明|  
+    |伺服器帳戶類型|彙總|描述|  
     |-------------------------|-----------------|-----------------|  
     |**統計**|**無**|某項目的計算比率，或者經過一段時間無法彙總之項目的計數。 此帳戶類型不使用轉換規則來轉換貨幣。|  
     |**負債**|**LastNonEmpty**|在特定時間虧欠之事物的金額或價值。 此帳戶類型經過一段時間不會累積，因此經過一段時間不會自然彙總。 例如，Year 數量是有資料的上一個月的值。 這種類型的帳戶會以 End of Period 匯率轉換貨幣。|  

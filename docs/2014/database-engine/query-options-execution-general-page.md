@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844770"
 ---
 # <a name="query-options-execution-general-page"></a>查詢選項執行 (一般頁面)
   使用此頁面來指定執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢的選項。 若要存取此對話方塊，請以滑鼠右鍵按一下查詢編輯器視窗的主體，然後按一下 [查詢選項]。  

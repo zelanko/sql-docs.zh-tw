@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aadcdb901c39af148b22640413b921aae288f016
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711729"
 ---
 # <a name="post-install-configuration-analysis-services"></a>後續安裝組態 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md))。  
   
- 之後，如果您的資料庫已就緒可供部署，就必須執行額外的工作。 也就是說，您必須為資料庫設定角色成員資格讓使用者能存取資料、設計資料庫備份和復原策略，以及判斷是否需要排程處理工作負載來定期重新整理資料。 如需有關資料庫部署和管理的詳細資訊，請參閱下列連結：[多維度模型資料庫](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)並[表格式模型資料庫](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
+ 之後，如果您的資料庫已就緒可供部署，就必須執行額外的工作。 也就是說，您必須為資料庫設定角色成員資格讓使用者能存取資料、設計資料庫備份和復原策略，以及判斷是否需要排程處理工作負載來定期重新整理資料。 資料庫部署和管理的詳細資訊可在下列連結：[多維度模型資料庫](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)並[表格式模型資料庫](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
   
 ## <a name="instance-configuration"></a>執行個體組態  
  Analysis Services 是可複寫的服務，表示您可以在單一伺服器上安裝多個服務執行個體。 每一個額外執行個體都是以具名執行個體的形式使用 SQL Server 安裝程式個別安裝，然後個別加以設定以支援原先預期的用途。 例如，開發伺服器可能會執行飛行記錄器或使用預設值進行資料儲存，但是在支援實際執行工作負載的伺服器上，您可能會變更這些設定。 此外，在其他服務所共用的硬體上安裝 Analysis Services 執行個體也是另一個需要調整系統組態的範例。 在同一個硬體上主控多個資料密集的應用程式時，您可能想設定伺服器屬性降低記憶體臨界值，以便最佳化所有應用程式之間的可用資源。  

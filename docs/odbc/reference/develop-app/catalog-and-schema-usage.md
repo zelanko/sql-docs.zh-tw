@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007886"
 ---
 # <a name="catalog-and-schema-usage"></a>目錄和結構描述的使用方式
-資料來源不一定支援目錄與結構描述名稱做為所有的 SQL 陳述式中的物件名稱識別項。 資料來源可能支援一或多個下列 SQL 陳述式的類別中的類別目錄和結構描述名稱： 資料操作語言 (DML) 陳述式、 程序呼叫中，資料表定義陳述式、 索引定義陳述式和權限定義陳述式。 若要判斷哪一個類別目錄和結構描述中可以使用名稱的 SQL 陳述式的類別，應用程式會呼叫**SQLGetInfo**使用 SQL_CATALOG_USAGE 和 SQL_SCHEMA_USAGE 選項。
+資料來源不一定支援目錄與結構描述名稱做為所有的 SQL 陳述式中的物件名稱識別項。 資料來源可能支援類別目錄和結構描述名稱，在一或多個 SQL 陳述式的下列類別：資料操作語言 (DML) 陳述式、 程序呼叫中，資料表定義陳述式、 索引定義陳述式和權限定義陳述式。 若要判斷哪一個類別目錄和結構描述中可以使用名稱的 SQL 陳述式的類別，應用程式會呼叫**SQLGetInfo**使用 SQL_CATALOG_USAGE 和 SQL_SCHEMA_USAGE 選項。

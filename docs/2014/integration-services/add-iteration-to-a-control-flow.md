@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837247"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>將反覆運算加入控制流程
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括 For 迴圈容器，該容器為控制流程項目，可簡化在套件中包括有條件地重複控制流程的迴圈。 如需詳細資訊，請參閱 [For 迴圈容器](control-flow/for-loop-container.md)為止。  

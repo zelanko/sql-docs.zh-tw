@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_5233 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 5233 (Database Engine error)
 ms.assetid: 7a855afa-2d3b-49b7-adef-197b99fc98b1
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a54c45746ec786461135fb3f2a50f4753dbe2df5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867902"
 ---
 # <a name="mssqlserver5233"></a>MSSQLSERVER_5233
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -33,19 +34,18 @@ ms.locfileid: "48186781"
 |訊息文字|資料表錯誤: 配置單位識別碼 A_ID，頁面 P_ID。 測試 (TEST) 失敗。 值為 VAL1 和 VAL2。|  
   
 ## <a name="explanation"></a>說明  
- 頁面 *P_ID* 的稽核失敗，因為其頁首損毀。 TEST 中的字串提供了失敗的實際測試。  
+頁面 *P_ID* 的稽核失敗，因為其頁首損毀。 TEST 中的字串提供了失敗的實際測試。  
   
 ### <a name="look-for-hardware-failure"></a>尋找硬體故障  
- 請執行硬體診斷並更正所有問題， 同時檢查 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 系統和應用程式記錄檔以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔，以查看錯誤發生的原因是否為硬體故障。 請修正前述記錄檔中所包含的任何硬體相關問題。  
+請執行硬體診斷並更正所有問題， 同時檢查 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 系統和應用程式記錄檔以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔，以查看錯誤發生的原因是否為硬體故障。 請修正前述記錄檔中所包含的任何硬體相關問題。  
   
- 若有持續發生的資料損毀問題，請嘗試抽換不同的硬體元件以隔離問題。 請檢查以確認系統並未啟用磁碟控制器上的寫入快取功能。 如果您懷疑寫入快取就是問題所在，請與您的硬體廠商連絡。  
+若有持續發生的資料損毀問題，請嘗試抽換不同的硬體元件以隔離問題。 請檢查以確認系統並未啟用磁碟控制器上的寫入快取功能。 如果您懷疑寫入快取就是問題所在，請與您的硬體廠商連絡。  
   
- 最後，切換到新的硬體系統可能也會有幫助。 此切換作業可能包括重新格式化磁碟機以及重新安裝作業系統。  
+最後，切換到新的硬體系統可能也會有幫助。 此切換作業可能包括重新格式化磁碟機以及重新安裝作業系統。  
   
 ### <a name="restore-from-backup"></a>還原備份  
- 如果問題與硬體無關，而且確定有未受影響的備份可以使用，請利用該備份來還原資料庫。  
+如果問題與硬體無關，而且確定有未受影響的備份可以使用，請利用該備份來還原資料庫。  
   
 ### <a name="run-dbcc-checkdb"></a>執行 DBCC CHECKDB  
- 不適用。 此錯誤無法修復。 如果無法從備份還原資料庫，請連絡 Microsoft 客戶服務及支援中心 (CSS)。  
-  
+不適用。 此錯誤無法修復。 如果無法從備份還原資料庫，請連絡 Microsoft 客戶服務及支援中心 (CSS)。  
   

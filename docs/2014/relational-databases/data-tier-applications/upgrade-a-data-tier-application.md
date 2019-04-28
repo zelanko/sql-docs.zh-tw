@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872654"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
   您可以使用升級資料層應用程式精靈或 Windows PowerShell 指令碼，將目前部署之資料層應用程式 (DAC) 的結構描述和屬性變更為符合新版 DAC 中所定義的結構描述和屬性。  
   
--   **開始之前：**[選擇 DAC 升級選項](#ChoseDACUpgOptions)，[限制事項](#LimitationsRestrictions)，[必要條件](#Prerequisites)，[安全性](#Security)，[權限](#Permissions)  
+-   **開始之前：**[選擇 DAC 升級選項](#ChoseDACUpgOptions)、[限制事項](#LimitationsRestrictions)、[必要條件](#Prerequisites)、[安全性](#Security)、[權限](#Permissions)  
   
--   **若要升級 DAC，使用：**[升級資料層應用程式精靈](#UsingDACUpgradeWizard)， [PowerShell](#UpgradeDACPowerShell)  
+-   **若要升級 DAC，請使用下列方式：**[升級資料層應用程式精靈](#UsingDACUpgradeWizard)、[PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  DAC 升級是一種就地升級程序，可改變現有資料庫的結構描述，以符合新版 DAC 中所定義的結構描述。 在 DAC 封裝檔案中，會套用新版 DAC。 如需建立 DAC 封裝的詳細資訊，請參閱 [資料層應用程式](data-tier-applications.md)。  

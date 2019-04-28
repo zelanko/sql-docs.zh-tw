@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a208cdc973cf4e54bb0a68020182d41eb798f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733039"
 ---
 # <a name="security-overview-data-mining"></a>安全性概觀 (資料採礦)
   保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之安全的程序發生在多個層級上。 您必須保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體及其資料來源的安全，以確定只有獲得授權的使用者對於選取的維度、採礦模型和資料來源，具有讀取或讀取/寫入權限。 您也必須保護基礎資料來源的安全，以防止未經授權的使用者惡意破壞機密商業資訊。 下列主題描述保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之安全的程序。  
@@ -26,13 +26,13 @@ ms.locfileid: "48149618"
 ##  <a name="bkmk_Architecture"></a> 安全性架構  
  請參閱以下資源，以了解 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的基本安全性架構，包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如何使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證來驗證使用者存取權。  
   
--   [安全性角色 &#40;Analysis Services-多維度資料 &#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [安全性角色 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [安全性屬性](../server-properties/security-properties.md)  
   
--   [設定服務帳戶&#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
+-   [設定服務帳戶 &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   
--   [授與物件和作業存取權&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [物件和作業的存取權授權 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> 設定 Analysis Services 的登入帳戶  
  您必須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 選取適當的登入帳戶，並指定此帳戶的權限。 您必須確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登入帳戶只具有執行必要工作所必須的權限，包括基礎資料來源的適當權限。  
@@ -57,6 +57,6 @@ ms.locfileid: "48149618"
  如果您使用 Integration Services 封裝清除資料、更新採礦模型或進行預測，您必須確保 Integration Services 服務具備儲存模型所在之資料庫的適當權限，以及來源資料的適當權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [角色和權限&#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [角色與權限 &#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

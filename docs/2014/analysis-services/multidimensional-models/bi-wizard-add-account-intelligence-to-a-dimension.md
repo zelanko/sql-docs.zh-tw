@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701380"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>將帳戶智慧加入至維度中
   將帳戶智慧增強功能加入至 Cube 或維度中，以便將標準會計科目分類 (例如收益與費用) 指派給帳戶屬性的成員。 此增強功能也會識別科目類型 (例如資產和負債)，並對每一個科目類型指派適當的彙總。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可使用分類隨時間彙總科目。  
@@ -51,7 +51,7 @@ ms.locfileid: "48183438"
     |**負債**|`LastNonEmpty`|在特定時間虧欠之事物的金額或價值。 此帳戶類型經過一段時間不會累積，因此經過一段時間不會自然彙總。 例如，Year 數量是有資料的上一個月的值。 這種類型的帳戶會以 End of Period 匯率轉換貨幣。|  
     |**資產**|`LastNonEmpty`|在特定時間持有之事物的金額或價值。 此帳戶類型經過一段時間會累積，因此不會隨著時間自然彙總。 例如，Year 數量是有資料的上一個月的值。 這種類型的帳戶會以 End of Period 匯率轉換貨幣。|  
     |**結餘**|`LastNonEmpty`|某項目在指定之時間的計數。 此帳戶類型會累積，但不會隨著時間自然彙總。 例如，Year 數量是有資料的上一個月的值。|  
-    |**流量**|`Sum`|某項目的累加計數。 此帳戶類型的彙總為`Sum`經過一段時間，但不會以貨幣轉換規則轉換。|  
+    |**流量**|`Sum`|某項目的累加計數。 此帳戶類型經過一段時間會彙總成為 `Sum`，但不會以貨幣轉換規則轉換。|  
     |**費用**|`Sum`|所花費之事物的金額或價值。 這種帳戶類型會隨時間彙總為 `Sum`，並以平均匯率轉換貨幣。|  
     |**Income**|`Sum`|所收到之事物的金額或價值。 這種帳戶類型會隨時間彙總為 `Sum`，並以平均匯率轉換貨幣。|  
   

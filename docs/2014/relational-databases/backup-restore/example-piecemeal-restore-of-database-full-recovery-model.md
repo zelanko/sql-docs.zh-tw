@@ -1,5 +1,5 @@
 ---
-title: 範例：分次還原資料庫 (完整復原模式) | Microsoft Docs
+title: 範例分次還原資料庫 (完整復原模式) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 157541fe3792ba082d9b1ec84c3ab45ca0617060
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875820"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例：分次還原資料庫 (完整復原模式)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>範例分次還原資料庫 (完整復原模式)
   分次還原順序會在檔案群組層級，分階段地還原與復原資料庫，從主要檔案群組開始，然後才是所有可讀寫的次要檔案群組。  
   
  在此範例中，資料庫 `adb` 是在損毀之後還原至新的電腦。 資料庫使用完整復原模式，因此開始還原之前，必須對資料庫進行結尾記錄備份。 在損毀之前，所有檔案群組都在線上。 檔案群組 `B` 是唯讀的。 所有的次要檔案群組都必須還原，但是會依照重要性的高低順序來進行： `A` (最高)、 `C`，最後是 `B`。 這個範例有四個記錄備份，包括結尾記錄備份。  
@@ -91,7 +91,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [範例：僅限於部分檔案群組的分次還原 &#40;完整復原模式&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [範例：線上還原讀寫檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [範例：線上還原讀取/寫入檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
 -   [範例：線上還原唯讀檔案 &#40;完整復原模式&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   

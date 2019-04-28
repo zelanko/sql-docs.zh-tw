@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 61fe8cbe7335584feb925879572cddcc368b33d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002624"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>建立模型 (適用於 Excel 的 MDS 增益集)
 

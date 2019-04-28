@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701062"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>設定多維度資料庫的相容性層級 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料庫相容性層級屬性會決定資料庫的功能層級。 每個模型類型都有唯一的相容性層級。 例如，相容性層級`1100`的意義會根據資料庫是否為多維度或表格式。  

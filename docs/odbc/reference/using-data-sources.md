@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c898cb5cd8c9998d9126ec468a2b43587e2e279a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714116"
 ---
 # <a name="using-data-sources"></a>使用資料來源
 建立資料來源通常是由使用者或技術人員的程式稱為*ODBC 管理員*。 ODBC 管理員會提示使用者輸入驅動程式來使用，然後再撥打該驅動程式。 驅動程式會顯示一個對話方塊，要求它需要連接到資料來源的資訊。 使用者輸入的資訊之後，驅動程式會將它儲存在系統上。  

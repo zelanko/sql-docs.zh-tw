@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842749"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>行動不便人士的協助工具
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 致力於提供每一個人都能夠方便使用的產品與服務。 本主題提供有關下列功能、產品及服務的資訊，讓行動不便人士更容易使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 家族的產品。  

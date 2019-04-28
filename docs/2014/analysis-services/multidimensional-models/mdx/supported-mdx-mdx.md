@@ -15,50 +15,50 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3ab7c0ebe10537e3c84bd532f83791a6d193b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725442"
 ---
 # <a name="supported-mdx-mdx"></a>支援的 MDX (MDX)
   多維度運算式 (MDX) 指令碼內支援下列陳述式及函數：  
   
  [&#40;註解&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [-&#40;註解&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [-- &#40;註解&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [註解&#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [註解 &#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [ALTER CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
+ [ALTER CUBE 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
   
 > [!NOTE]  
 >  MDX 指令碼中只支援改變預設成員。  
   
- [CALCULATE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
+ [CALCULATE 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
   
- [CASE 陳述式&#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
+ [CASE 陳述式 &#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
   
- [CREATE CELL CALCULATION 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
- [CREATE MEMBER 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
- [CREATE SET 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
- [EXISTING 關鍵字&#40;MDX&#41;](mdx-query-existing-keyword.md)  
+ [EXISTING 關鍵字 &#40;MDX&#41;](mdx-query-existing-keyword.md)  
   
- [FREEZE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
+ [FREEZE 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
   
- [如果陳述式&#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
+ [IF 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
   
- [這個&#40;MDX&#41;](/sql/mdx/this-mdx)  
+ [此 &#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
 >  MDX 支援對以下資料格屬性進行指派：`BACK_COLOR`、`FORE_COLOR`、`FORMAT_STRING`、`FONT_FLAGS`、`FONT_NAME` 與 `FONT_SIZE`。 如需詳細資訊，請參閱[使用資料格屬性 &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)。 MDX 也支援指派給`NON_EMPTY_BEHAVIOR`的屬性[CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)陳述式。  
   
- [SCOPE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
+ [SCOPE 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   
 ## <a name="see-also"></a>另請參閱  
- [基本 MDX 指令碼&#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
+ [基本 MDX 指令碼 &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4fa53595d304dc8200805a98491a824cf52a1bbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735074"
 ---
 # <a name="what-the-driver-manager-does"></a>驅動程式管理員的用途
 下表摘要說明如何 ODBC 3 *.x*驅動程式管理員將呼叫對應至 ODBC 2。*x*而 ODBC 3 *.x*驅動程式。  
@@ -29,7 +29,7 @@ ms.locfileid: "47639126"
 |函式或<br /><br /> 陳述式屬性|註解|  
 |-----------------------------------------|--------------|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|指向要使用的書籤**SQLFetchScroll**。 以下是實作詳細資料：<br /><br /> -當應用程式的 ODBC 2 中有設定這個。*x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會快取它。 它會取值指標，並將值傳遞至 ODBC 2。*x*中的驅動程式*FetchOffset*引數**SQLExtendedFetch**當**SQLFetchScroll**應用程式更新版本呼叫。<br />-當應用程式在 ODBC 3 設定這 *.x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會將傳遞至驅動程式呼叫。|  
-|SQL_ATTR_ROW_STATUS_PTR 設定|指向資料列狀態陣列以填滿**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，以及**SQLSetPos**。 以下是實作詳細資料：<br /><br /> -當應用程式的 ODBC 2 中有設定這個。*x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會快取其值。 將此值傳遞至 ODBC 2。*x*中的驅動程式*RowStatusArray*引數**SQLExtendedFetch**當**SQLFetchScroll**或**SQLFetch**呼叫。<br />-當應用程式在 ODBC 3 設定這 *.x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會將傳遞至驅動程式呼叫。<br />-處於 S6，如果應用程式設定 sql_attr_row_status_ptr 設定，然後呼叫**SQLBulkOperations** (使用*作業*SQL_ADD 的) 或**SQLSetPos**但是未先呼叫**SQLFetch**或是**SQLFetchScroll**，SQLSTATE HY011 （屬性現在無法設定） 會傳回。|  
+|SQL_ATTR_ROW_STATUS_PTR|指向資料列狀態陣列以填滿**SQLFetch**， **SQLFetchScroll**， **SQLBulkOperations**，以及**SQLSetPos**。 以下是實作詳細資料：<br /><br /> -當應用程式的 ODBC 2 中有設定這個。*x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會快取其值。 將此值傳遞至 ODBC 2。*x*中的驅動程式*RowStatusArray*引數**SQLExtendedFetch**當**SQLFetchScroll**或**SQLFetch**呼叫。<br />-當應用程式在 ODBC 3 設定這 *.x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會將傳遞至驅動程式呼叫。<br />-處於 S6，如果應用程式設定 sql_attr_row_status_ptr 設定，然後呼叫**SQLBulkOperations** (使用*作業*SQL_ADD 的) 或**SQLSetPos**但是未先呼叫**SQLFetch**或是**SQLFetchScroll**，SQLSTATE HY011 （屬性現在無法設定） 會傳回。|  
 |SQL_ATTR_ROWS_FETCHED_PTR|指向的緩衝區**SQLFetch**並**SQLFetchScroll**傳回提取的資料列數目。 以下是實作詳細資料：<br /><br /> -當應用程式的 ODBC 2 中有設定這個。*x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會快取其值。 將此值傳遞至 ODBC 2。*x*中的驅動程式*RowCountPtr*引數**SQLExtendedFetch**當**SQLFetch**或**SQLFetchScroll**會呼叫應用程式。<br />-當應用程式在 ODBC 3 設定這 *.x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會將傳遞至驅動程式呼叫。|  
 |SQL_ATTR_ROW_ARRAY_SIZE|設定資料列集大小。 以下是實作詳細資料：<br /><br /> -當應用程式的 ODBC 2 中有設定這個。*x*驅動程式，而 ODBC 3 *.x*驅動程式管理員將它對應至 SQL_ROWSET_SIZE 陳述式屬性。<br />-當應用程式在 ODBC 3 設定這 *.x*驅動程式，而 ODBC 3 *.x*驅動程式管理員會將傳遞至驅動程式呼叫。<br />-當應用程式使用 ODBC 3 *.x*驅動程式呼叫**SQLSetScrollOptions**，SQL_ROWSET_SIZE 設定中的值為*RowsetSize*引數如果基礎驅動程式不支援**SQLSetScrollOptions**。|  
 |SQL_ROWSET_SIZE|設定所使用的資料列集大小**SQLExtendedFetch**當**SQLExtendedFetch**呼叫 ODBC 2 *.x*應用程式。 以下是實作詳細資料：<br /><br /> -當應用程式設定，ODBC 3 *.x*驅動程式管理員會傳遞至驅動程式時，驅動程式版本不限的呼叫。<br />-當應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLSetScrollOptions**，SQL_ROWSET_SIZE 設定中的值為**RowsetSize**引數。|  

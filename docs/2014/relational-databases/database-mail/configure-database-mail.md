@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872214"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
@@ -90,7 +90,7 @@ ms.locfileid: "54131488"
  使用 [選取組態工作] 頁面可指出您每次使用精靈時，會完成哪個工作。 如果您在完成精靈之前變更了主意，請使用 [上一步] 按鈕回到此頁面，然後選取不同的工作。  
   
 > [!NOTE]  
->  如果尚未啟用 Database Mail，您會收到訊息：**無法使用 Database Mail 功能。您要啟用此功能嗎?** 回應 [是] 就相當於使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)來啟用 Database Mail。  
+>  如果尚未啟用 Database Mail，您就會收到下列訊息：**無法使用 Database Mail 功能。您要啟用此功能嗎?** 回應 [是] 就相當於使用 **sp_configure** 系統預存程序的 [Database Mail XP 選項](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)來啟用 Database Mail。  
   
  **執行下列工作來設定 Database Mail**  
  執行第一次設定 Database Mail 所需的所有工作。 此選項包含所有其他三個選項。  

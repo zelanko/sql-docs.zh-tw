@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 30b704d26d2b6ac080f32034bb78fddcee446bdb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736124"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 方法 (ServerSettings 類別)
   取得目前的安全性憑證。  

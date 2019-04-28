@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2585452ee31c911ea6e288effc3e5e91fff88a64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721275"
 ---
 # <a name="generate-sql-script-replication-objects"></a>產生 SQL 指令碼 (複寫物件)
   複寫指令碼包含要實作已編寫複寫元件之指令碼所必要的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 系統預存程序，例如發行集或訂閱。 拓撲中的所有複寫元件都應作為損毀復原計畫的一部份來編寫指令碼，而指令碼也可以用於自動執行重複性工作。 複寫提供編寫複寫物件之指令碼的兩個對話方塊：  

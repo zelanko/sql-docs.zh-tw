@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726252"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>指定方案部署的組態設定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 讀取的資料分割和角色部署選項，您在部署指令碼中，從\<*專案名稱*>.configsettings 檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會在您建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時建立此檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 若要建立會使用目前專案的組態設定\<*專案名稱*>.configsettings 檔案。  

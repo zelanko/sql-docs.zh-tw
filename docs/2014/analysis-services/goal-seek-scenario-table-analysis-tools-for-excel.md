@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731996"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>搜尋目標狀況 (適用於 Excel 的資料表分析工具)
   ![目標資料表分析工具中的搜尋按鈕](media/tat-goalseek.gif "資料表分析工具中的 搜尋目標按鈕")  

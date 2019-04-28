@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721680"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立及套用初始快照集。 使用參數化篩選的合併式發行集需要一個兩段式快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "53358190"
   
 #### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>建立及執行快照集代理程式作業以產生初始快照集  
   
-1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱 [Create a Publication](publish/create-a-publication.md)。  
+1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱[建立發行集](publish/create-a-publication.md)。  
   
 2.  執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)。 指定 **@publication** 及下列參數：  
   
@@ -97,7 +97,7 @@ ms.locfileid: "53358190"
   
 #### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>執行快照集代理程式來產生初始快照集  
   
-1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱 [Create a Publication](publish/create-a-publication.md)。  
+1.  建立快照式、交易式或合併式發行集。 如需詳細資訊，請參閱[建立發行集](publish/create-a-publication.md)。  
   
 2.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](publish/define-an-article.md)。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "53358190"
   
 ## <a name="see-also"></a>另請參閱  
  [Create a Publication](publish/create-a-publication.md)   
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [建立提取訂閱](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
  [建立並套用快照集](create-and-apply-the-snapshot.md)   

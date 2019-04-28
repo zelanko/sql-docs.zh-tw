@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8939bd266085dc34222184c624d3115d02c320d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836778"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 目的地編輯器 (錯誤輸出頁面)
   使用 **[ADO NET 目的地編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可指定錯誤處理選項。  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877057"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
   使用 **[備份資料庫]** 對話方塊上的 **[一般]** 頁面，檢視或修改資料庫備份作業設定。  
@@ -88,7 +88,7 @@ ms.locfileid: "48050073"
 |||  
 |-|-|  
 |**磁碟**|備份至磁碟。 這可能是針對資料庫所建立的系統檔案，或以磁碟為基礎的邏輯備份裝置。 目前選取的磁碟會出現在 **[備份至]** 清單中。 您最多可以為備份作業選取 64 個磁碟裝置。|  
-|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**磁帶**|備份至磁帶。 這可能是針對資料庫所建立的本機磁帶機，或以磁帶為基礎的邏輯備份裝置。 目前選取的磁帶會出現在 **[備份至]** 清單中。 最大數目是 64。 如果伺服器上沒有附加磁帶裝置，則會停用此選項。 您選取的磁帶會列在 **[備份至]** 清單中。<br /><br /> 注意:未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |**URL**|備份到 Windows Azure Blob 儲存體。|  
   
  所顯示的下一組選項取決於選取的目的地類型。 如果選取 [磁碟] 或 [磁帶]，則會顯示下列選項。  

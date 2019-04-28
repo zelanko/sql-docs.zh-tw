@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702295"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>建立和改變物件 (XMLA)
   主要物件可以獨立建立、改變和刪除。 主要物件包括下列物件：  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875604"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>還原資料庫至標示的異動 (SQL Server Management Studio)
   當資料庫處於還原中狀態時，您可以利用 [還原交易記錄] 對話方塊，將資料庫還原成可用記錄備份中標示的交易。  
@@ -49,7 +49,7 @@ ms.locfileid: "48050428"
     |------------|-----------|  
     |\<空白>|顯示選取標示的核取方塊。|  
     |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
-    |**Date**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
+    |**日期**|認可交易的日期和時間。 交易日期和時間是依照 **msdbgmarkhistory** 資料表中記錄的顯示，而非依照用戶端電腦的日期和時間。|  
     |**說明**|在認可交易時，由使用者所指定之標示交易的描述 (如果有的話)。|  
     |**LSN**|標示之交易的記錄序號。|  
     |**[資料庫備份]**|認可標示的交易之資料庫的名稱。|  

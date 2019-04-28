@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855494"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 概觀
 Microsoft Jet OLE DB 提供者可讓 ADO 可以存取 Microsoft Jet 資料庫。
@@ -62,9 +62,9 @@ Microsoft.Jet.OLEDB.4.0
 |---------------|-----------------|
 |Jet OLEDB:Compact 回收的空間量 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|表示的空間，以位元組為單位，可以回收壓縮的資料庫時的估計值。 建立資料庫連接之後，這個值才有效。|
 |Jet OLEDB:Connection 控制項 (DBPROP_JETOLEDB_CONNECTIONCONTROL)|指出使用者是否可以連接到資料庫。|
-|Jet OLEDB： 建立系統資料庫 (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|表示建立新的資料來源時，是否應該建立一個系統資料庫。|
+|Jet OLEDB:Create System Database (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|表示建立新的資料來源時，是否應該建立一個系統資料庫。|
 |Jet oledb: database 鎖定模式 (DBPROP_JETOLEDB_DATABASELOCKMODE)|指出這個資料庫的鎖定模式。 開啟資料庫的第一個使用者會決定資料庫在開啟時所用的模式。|
-|Jet oledb: database 密碼 (DBPROP_JETOLEDB_DATABASEPASSWORD)|指出資料庫密碼。|
+|Jet OLEDB:Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|指出資料庫密碼。|
 |Jet OLEDB： 不複製光碟 (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE) 上的地區設定|表示 Jet 是否應該壓縮的資料庫複製的地區設定資訊。|
 |Jet OLEDB： 加密的資料庫 (DBPROP_JETOLEDB_ENCRYPTDATABASE)|指出是否應該加密已壓縮的資料庫。 如果未設定這個屬性，如果原始資料庫也已加密，將會加密已壓縮的資料庫。|
 |Jet OLEDB:Engine 型別 (DBPROP_JETOLEDB_ENGINE)|表示用來存取目前的資料存放區的儲存體引擎。|
@@ -147,7 +147,7 @@ Microsoft.Jet.OLEDB.4.0
 |資料列大小上限|DBPROP_MAXROWSIZE|
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |在選取的最大資料表|DBPROP_MAXTABLESINSELECT|
-|[模式]|DBPROP_INIT_MODE|
+|模式|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存體物件|DBPROP_MULTIPLESTORAGEOBJECTS|

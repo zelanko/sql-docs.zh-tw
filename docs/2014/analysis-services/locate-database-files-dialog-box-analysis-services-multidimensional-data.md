@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728165"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>尋找資料庫檔案對話方塊 (Analysis Services - 多維度資料)
   **[尋找資料庫檔案]** 對話方塊，會顯示針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體定義之記錄與資料的資料夾內之可用檔案清單。 您可以選取一個列出的檔案，或者必要時可以指定其他的資料夾與檔案。 請執行下列動作來顯示 **[尋找資料庫檔案]** 對話方塊：  

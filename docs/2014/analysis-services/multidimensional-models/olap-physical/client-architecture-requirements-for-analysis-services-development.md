@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699425"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 開發的用戶端架構需求
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援精簡型用戶端架構。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]計算引擎是整個伺服器為基礎，因此所有的查詢會在伺服器上解析。 所以，每一個查詢只需要用戶端和伺服器之間單次往返，使得查詢越來越複雜時可擴充效能。  

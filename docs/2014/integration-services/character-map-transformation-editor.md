@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 847b05d76559cec2632b519a3b1cd3e0fbdb23ff
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835131"
 ---
 # <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
   使用 [字元對應表轉換編輯器] 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  

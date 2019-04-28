@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690249"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "47709166"
 |**status**|**int**|系統狀態資訊。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**first**|**binary(6)**|指向第一個頁面或根頁面的指標。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
 |**indid**|**smallint**|索引的識別碼：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> > 1 = 非叢集索引|  
-|**根目錄**|**binary(6)**|針對**indid** > = 1，**根**根頁面的指標。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
+|**root**|**binary(6)**|針對**indid** > = 1，**根**根頁面的指標。<br /><br /> 未使用的 when **indid** = 0。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
 |**minlen**|**smallint**|資料列的大小下限。|  
 |**keycnt**|**smallint**|索引鍵數目。|  
 |**groupid**|**smallint**|建立物件的檔案群組識別碼。<br /><br /> NULL = 索引當資料分割**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
 |**dpages**|**int**|針對**indid** = 0 或**indid** = 1， **dpages**是所使用的資料頁計數。<br /><br /> 針對**indid** > 1， **dpages**是索引所使用的頁面計數。<br /><br /> 0 = 索引當資料分割**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
-|**保留**|**int**|針對**indid** = 0 或**indid** = 1，**保留**是所有索引和資料表資料所都配置的頁面計數。<br /><br /> 針對**indid** > 1，**保留**是索引所配置的頁面計數。<br /><br /> 0 = 索引當資料分割**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
+|**reserved**|**int**|針對**indid** = 0 或**indid** = 1，**保留**是所有索引和資料表資料所都配置的頁面計數。<br /><br /> 針對**indid** > 1，**保留**是索引所配置的頁面計數。<br /><br /> 0 = 索引當資料分割**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**used**|**int**|針對**indid** = 0 或**indid** = 1，**用**是用於所有的索引和資料表資料的總頁數的計數。<br /><br /> 針對**indid** > 1，**使用**是索引所使用的頁面計數。<br /><br /> 0 = 索引當資料分割**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**rowcnt**|**bigint**|基礎資料層級資料列計數**indid** = 0 並**indid** = 1。<br /><br /> 0 = 索引當資料分割**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。|  
 |**rowmodctr**|**int**|計算前次更新資料表的統計資料之後，插入、刪除或更新資料列的總數。<br /><br /> 0 = 索引當資料分割**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本中， **rowmodctr**並不完全與舊版相容。 如需詳細資訊，請參閱＜備註＞。|  
@@ -62,7 +62,7 @@ ms.locfileid: "47709166"
 |**impid**|**smallint**|索引實作旗標。<br /><br /> 傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|用來約束所考量的索引鎖定資料粒度。 例如，若要將鎖定成本降到最低，您可以將基本上是唯讀的參考表設為只執行資料表層級的鎖定。|  
 |**pgmodctr**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**索引鍵**|**varbinary(816)**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示的索引鍵資料行，請使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
+|**keys**|**varbinary(816)**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示的索引鍵資料行，請使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
 |**name**|**sysname**|索引或統計資料的名稱。 傳回 NULL **indid** = 0。 請修改您的應用程式來查閱 NULL 堆積名稱。|  
 |**statblob**|**image**|統計資料二進位大型物件 (BLOB)。<br /><br /> 傳回 NULL。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

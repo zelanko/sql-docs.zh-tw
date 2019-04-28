@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e95dff588932bc7885d2501e3d24cc643ae10272
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699927"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>定義指派和其他指令碼命令
   在 [Cube 設計師] 的 [計算] 索引標籤上，按一下工具列上的**新增指令碼命令**圖示，來建立空的指令碼。 當您建立新的指令碼時，[計算] 索引標籤的 [指令碼組合管理] 窗格中，一開始會顯示空白的標題。您在 [計算運算式] 窗格中輸入的字元，會在 [指令碼組合管理] 中顯示為項目的名稱。 所以您可能想要在第一列輸入註解的名稱，以便更輕易地識別 [指令碼組合管理] 窗格中的指令碼。 如需詳細資訊，請參閱 [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892) (Microsoft SQL Server 2005 的 MDX 指令碼簡介)。 如需有關 MDX 查詢和計算相關效能問題的詳細資訊，請參閱 < 撰寫有效率的 MDX > 一節中[SQL Server 2005 Analysis Services 效能指南](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)。  

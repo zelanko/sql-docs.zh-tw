@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340080271318073983b29abebeab85122993b489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715215"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>選擇用於測試採礦模型的資料行
   在您可以衡量採礦模型的精確度之前，您必須決定您想要評估哪一種結果。 大多數的資料採礦模型都會要求您至少選擇一個資料行，以便在您建立模型時當做可預測的屬性使用。 因此，當您測試模型的精確度時，您通常必須選取該屬性進行測試。  

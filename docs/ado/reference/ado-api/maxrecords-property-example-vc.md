@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863695"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 屬性範例 (VC++)
 這個範例會使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)屬性可開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)包含在 10 個最昂貴的書籍***標題***資料表。  
@@ -168,13 +168,13 @@ void PrintComError(_com_error &e) {
   
  **前十個標題，依價格：**  
 **但它是使用者易記嗎？---22.95**  
-**電腦 Phobic 且非恐懼症個人： 行為變化---21.59**  
-**Onions、 Leeks 和大蒜： 烹飪地中海---20.95 的祕密**  
+**電腦 Phobic 且非恐懼症個人：行為變化---21.59**  
+**Onions、 Leeks 和大蒜：烹飪地中海---20.95 的祕密**  
 **矽谷---20.00 的祕密**  
 **忙碌的經理資料庫指南---19.99**  
 **電腦---19.99 的相關討論**  
 **矽谷 Gastronomic 視為---19.99**  
-**長時間的資料 Deprivation： 的四個案例研究---而 19.99**  
+**長時間的資料 Deprivation:四個案例研究---19.99**  
 **壽司，任何人？---14.99**  
 **Buckingham Palace 這些---11.95 五十個年份**   
 ## <a name="see-also"></a>另請參閱  

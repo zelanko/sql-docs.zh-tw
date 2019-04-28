@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b985d915d3d7bb6b3130ccb63a400f314fa05a38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860905"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47646482"
 |**object_id**|**int**|物件識別碼。 內是唯一**主要**資料庫。|  
 |**parent_class**|**tinyint**|父系的類別。 它一律是 100 = 伺服器。|  
 |**parent_class_desc**|**nvarchar(60)**|父類別的描述。 它一律是 SERVER。|  
-|**sys.internal_tables**|**int**|它一律是 0。|  
+|**parent_id**|**int**|它一律是 0。|  
 |**create_date**|**datetime**|建立日期。|  
 |**modify_date**|**datetime**|上次利用 ALTER 陳述式來修改物件的日期。|  
 |**service_name**|**nvarchar(256)**|通知所送往之目標服務的名稱。|  

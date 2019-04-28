@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a67b2331959dbc3087f6282be05de90b42443c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843564"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>針對可用性群組設定 SQL Server Managed Backup 到 Windows Azure
   本主題是設定參與 AlwaysOn 可用性群組之資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]之教學課程。  
@@ -25,7 +25,7 @@ ms.locfileid: "52416829"
   
 -   記錄備份頻率：記錄備份的頻率會隨著時間和記錄而增加。 例如，系統會每隔兩個小時取得一次記錄備份，除非在這兩個小時內使用的記錄空間為 5 MB 或更多。 這適用於所有實作，不論是內部部署、雲端還是混合式。  
   
--   網路頻寬：這適用於複本位於不同實體位置的實作，例如混合式雲端或是在僅限雲端的組態中橫跨不同 Windows Azure 區域的實作。 網路頻寬可能會影響次要複本的延遲，而且如果次要複本設定為同步複寫，這可能會導致主要複本上的記錄增加。 如果次要複本設定為同步複寫，次要複本可能會因為網路延遲的緣故而跟不上同步，萬一容錯移轉到次要複本就可能會發生資料遺失。  
+-   網路頻寬：這適用於複本的位置在不同的實體位置，例如混合式雲端中或跨雲端的唯一組態中的不同 Windows Azure 區域的實作。 網路頻寬可能會影響次要複本的延遲，而且如果次要複本設定為同步複寫，這可能會導致主要複本上的記錄增加。 如果次要複本設定為同步複寫，次要複本可能會因為網路延遲的緣故而跟不上同步，萬一容錯移轉到次要複本就可能會發生資料遺失。  
   
 ### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]。  
  **權限：**  
@@ -65,20 +65,20 @@ ms.locfileid: "52416829"
   
 -   當使用加密時，請針對所有複本使用相同的憑證。 這樣萬一容錯移轉或還原到不同的複本時，有助於進行持續和不中斷的備份作業。  
   
-#### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]啟用及設定可用性資料庫的  
+#### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>啟用及設定可用性資料庫的[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  此教學課程說明為電腦 Node1 和 Node2 上資料庫 (AGTestDB) 啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的步驟，後面接著啟用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]健康情況之監視功能的步驟。  
   
-1.  **建立 Windows Azure 儲存體帳戶：** 備份會儲存在 Windows Azure Blob 儲存體服務中。 如果您目前沒有 Windows Azure 儲存體帳戶，您必須先建立一個帳戶。 如需詳細資訊，請參閱 <<c0> [ 建立 Windows Azure 儲存體帳戶](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 記下儲存體帳戶的儲存體帳戶名稱、存取金鑰和 URL。 儲存體帳戶名稱和存取金鑰資訊可用來建立 SQL 認證。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會在備份作業期間使用 SQL 認證來驗證儲存體帳戶。  
+1.  **建立 Windows Azure 儲存體帳戶：** 備份會儲存在 Windows Azure Blob 儲存體服務。 如果您目前沒有 Windows Azure 儲存體帳戶，您必須先建立一個帳戶。 如需詳細資訊，請參閱 <<c0> [ 建立 Windows Azure 儲存體帳戶](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)。 記下儲存體帳戶的儲存體帳戶名稱、存取金鑰和 URL。 儲存體帳戶名稱和存取金鑰資訊可用來建立 SQL 認證。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]會在備份作業期間使用 SQL 認證來驗證儲存體帳戶。  
   
-2.  **建立 SQL 認證：** 建立 SQL 認證，方法是使用儲存體帳戶的名稱做為識別，並使用儲存體存取金鑰做為密碼。  
+2.  **建立 SQL 認證：** 建立 SQL 認證，使用做為身分識別和儲存體存取金鑰的儲存體帳戶的名稱，做為密碼。  
   
-3.  **請確定 SQL Server Agent 服務已啟動且在執行：** 如果目前未執行，請啟動 SQL Server Agent。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要在執行個體上執行 SQL Server Agent，才能執行備份作業。  您可能需要將 SQL Agent 設定為自動執行，以確保能定期執行備份作業。  
+3.  **確認 SQL Server Agent 服務已啟動且在執行中：** 如果目前尚未執行 SQL Server Agent，請加以啟動。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 需要在執行個體上執行 SQL Server Agent，才能執行備份作業。  您可能需要將 SQL Agent 設定為自動執行，以確保能定期執行備份作業。  
   
-4.  **指定保留週期：** 決定您想要的備份檔案保留週期。 保留週期的指定單位為天，範圍從 1 到 30。 保留週期可決定資料庫的復原能力時間範圍。  
+4.  **決定保留期限：** 決定您想要備份檔案的保留期限。 保留週期的指定單位為天，範圍從 1 到 30。 保留週期可決定資料庫的復原能力時間範圍。  
   
 5.  **建立要用於備份期間加密憑證或非對稱金鑰：** 上的第一個節點 Node1，建立憑證，然後將它匯出至檔案，使用[BACKUP CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... 在 Node2 上，使用從 Node1 匯出的檔案建立憑證。 如需有關如何從檔案建立憑證的詳細資訊，請參閱中的範例[CREATE CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)。  
   
-6.  **啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]Node1 上的 AGTestDB 的：** 啟動 SQL Server Management Studio，並連接到 Node1 上已安裝可用性資料庫的執行個體。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
+6.  **啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]Node1 上的 AGTestDB 的：** 啟動 SQL Server Management Studio 並連接到 Node1 安裝可用性資料庫上的執行個體。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
   
     ```  
     Use msdb;  
@@ -97,7 +97,7 @@ ms.locfileid: "52416829"
   
      如需有關建立憑證以進行加密的詳細資訊，請參閱 <<c0>  **建立備份憑證**中的步驟[Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md)。  
   
-7.  **啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]Node2 上的 AGTestDB:** 啟動 SQL Server Management Studio，並連接到 Node2 上已安裝可用性資料庫的執行個體。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
+7.  **啟用及設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]Node2 上的 AGTestDB:** 啟動 SQL Server Management Studio 並連接到 Node2 上安裝可用性資料庫的執行個體。 在您根據需求修改資料庫名稱、儲存體 URL、SQL 認證和保留週期的值之後，從查詢視窗執行下列陳述式：  
   
     ```  
     Use msdb;  
@@ -116,7 +116,7 @@ ms.locfileid: "52416829"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 已在您指定的資料庫上啟用。 資料庫上的備份作業可能需要 15 分鐘才會開始執行。 此備份會在慣用的備份複本上進行。  
   
-8.  **檢閱擴充的事件預設組態：** 在複本上執行下列 TRANSACT-SQL 陳述式，以檢閱擴充事件組態[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]用來排程備份。 這通常是資料庫所屬之可用性群組的慣用備份複本設定。  
+8.  **檢閱延伸事件預設設定：** 在複本上執行下列 TRANSACT-SQL 陳述式，以檢閱擴充事件組態[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]用來排程備份。 這通常是資料庫所屬之可用性群組的慣用備份複本設定。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -130,7 +130,7 @@ ms.locfileid: "52416829"
   
     2.  設定 SQL Server Agent 通知使用 Database Mail。 如需詳細資訊，請參閱 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)。  
   
-    3.  **啟用電子郵件通知接收備份錯誤及警告：** 從 [查詢] 視窗中，執行下列 Transact-SQL 陳述式：  
+    3.  **啟用電子郵件通知接收備份錯誤和警告：** 從 [查詢] 視窗中，執行下列 TRANSACT-SQL 陳述式：  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -143,7 +143,7 @@ ms.locfileid: "52416829"
   
 10. **檢視 Windows Azure 儲存體帳戶中的備份檔案：** 從 SQL Server Management Studio 或 Azure 管理入口網站連接到儲存體帳戶。 您會看到裝載設定為使用 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的資料庫之 SQL Server 執行個體的容器。 您也會在啟用資料庫之 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 的 15 分鐘內，看到資料庫和記錄備份。  
   
-11. **監視健全狀況狀態：** 您可以透過您先前設定的電子郵件通知，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
+11. **監視健康狀態：** 您可以透過先前設定的電子郵件通知進行監視，或主動監視記錄的事件。 以下是用於檢視事件的一些 Transact-SQL 陳述式範例：  
   
     ```  
     --  view all admin events  

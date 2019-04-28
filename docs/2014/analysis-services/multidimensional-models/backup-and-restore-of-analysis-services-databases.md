@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701778"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>備份與還原 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括備份與還原，讓您可以從特定時間點復原資料庫及其物件。 備份與還原也是一種有效的技術，可將資料庫移轉到升級的伺服器、在伺服器之間移動資料庫，或是將資料庫部署到實際伺服器。 如果您還沒有備份計畫，但是您有很重要的資料，就應該盡快設計及實作計畫，以供資料復原之用。  

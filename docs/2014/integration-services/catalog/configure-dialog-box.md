@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836106"
 ---
 # <a name="configure-dialog-box"></a>設定對話方塊
   使用 **[設定]** 對話方塊來針對封裝和專案設定參數、連接管理員及環境的參考。  

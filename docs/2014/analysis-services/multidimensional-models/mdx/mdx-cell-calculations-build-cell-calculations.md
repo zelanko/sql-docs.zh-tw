@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f817a74d71d12e02d4cb742a0d5423b9a8ac7807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725462"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>在 MDX 中建立資料格計算 (MDX)
   多維度運算式 (MDX) 為您提供許多產生導出值的工具，如導出成員、自訂積存與自訂成員。 但是，就此而言光使用這些功能，很難影響一組特定的資料格或單一個資料格。  
@@ -35,18 +35,18 @@ ms.locfileid: "48226018"
   
  就建立的範圍而言，導出資料格類似於其中的命名集與導出成員，可以做為 Cube 的一部份供全域使用，也可以在工作階段或單一查詢的存留期間暫時建立。  
   
--   **查詢範圍** ：若要建立一個導出資料格，把它定義為 MDX 查詢的一部份，而且範圍限制在查詢內，請使用 WITH 關鍵字。 然後您就可以在 MDX SELECT 陳述式內使用導出資料格。 使用這個方法，建立使用的導出資料格`WITH`關鍵字可以變更不會干擾 SELECT 陳述式。  
+-   **查詢範圍** ：若要建立一個導出資料格，把它定義為 MDX 查詢的一部份，而且範圍限制在查詢內，請使用 WITH 關鍵字。 然後您就可以在 MDX SELECT 陳述式內使用導出資料格。 使用這種方式，可以變更利用 `WITH` 關鍵字建立的導出資料格，而不會影響到 SELECT 陳述式。  
   
-     如需如何使用 WITH 關鍵字建立導出成員的詳細資訊，請參閱[建立查詢範圍資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)。  
+     如需如何使用 WITH 關鍵字建立導出成員的詳細資訊，請參閱 [建立查詢範圍資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)。  
   
 -   **工作階段範圍** ：若要建立一個範圍超出查詢內容的導出成員，也就是說它的範圍是 MDX 工作階段的存留期間，您可以使用 CREATE CELL CALCULATION 或 ALTER CUBE 陳述式。  
   
      如需如何使用 CREATE CELL CALCULATION 或 ALTER CUBE 陳述式建立工作階段中的導出資料格的詳細資訊，請參閱 [建立工作階段範圍導出資料格](mdx-cell-calculations-session-scoped-calculated-cells.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [ALTER CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
- [CREATE CELL CALCULATION 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
- [建立查詢範圍資料格計算&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [ALTER CUBE 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
+ [CREATE CELL CALCULATION 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
+ [建立查詢範圍資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

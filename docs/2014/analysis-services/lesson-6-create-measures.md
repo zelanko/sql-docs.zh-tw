@@ -1,5 +1,5 @@
 ---
-title: 第 7 課： 建立量值 |Microsoft Docs
+title: 第 7 課：建立量值 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728104"
 ---
 # <a name="lesson-7-create-measures"></a>第 7 課：建立量值
   在這一課，您將建立要包含在模型中的量值。 量值與您在上一課建立的導出資料行相似，基本上是使用 DAX 公式建立的計算。 不過，與導出資料行不同的是，量值是根據使用者選取的「篩選」進行評估；例如，加入樞紐分析表之 [資料列標籤] 欄位中的特殊資料行或交叉分析篩選器。   然後套用的量值就會計算篩選中每個資料格的值。 量值是功能強大且彈性的計算，您會希望將它包含在幾乎所有表格式模型中，以便在數值資料上執行動態計算。 如需詳細資訊，請參閱[量值 &#40;SSAS 表格式&#41;](tabular-models/measures-ssas-tabular.md)。  
@@ -27,10 +27,10 @@ ms.locfileid: "48213238"
   
  在這一課，您將藉由在公式列中輸入 DAX 公式以及使用 [自動加總] 功能這兩種方式建立量值。  
   
- 完成本課程的估計時間：**30 分鐘**  
+ 估計的時間才能完成這一課：**30 分鐘**  
   
 ## <a name="prerequisites"></a>先決條件  
- 本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 6 課：建立導出資料行](lesson-5-create-calculated-columns.md)。  
+ 本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 6 課：建立計算結果的欄](lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48213238"
     |[量值名稱]|「資料行」|自動加總 (∑)|公式|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
-    |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
-    |Internet Total Discount Amount|Discount Amount|SUM|=SUM([Discount Amount])|  
-    |Internet Total Product Cost|Total Product Cost|SUM|=SUM([Total Product Cost])|  
-    |Internet Total Sales|銷售量|SUM|=SUM([Sales Amount])|  
-    |Internet Total Margin|Margin|SUM|=SUM([Margin])|  
-    |Internet Total Tax Amt|Tax Amt|SUM|=SUM([Tax Amt])|  
-    |Internet Total Freight|Freight|SUM|=SUM([Freight])|  
+    |Internet Total Units|Order Quantity|Sum|=SUM([Order Quantity])|  
+    |Internet Total Discount Amount|Discount Amount|Sum|=SUM([Discount Amount])|  
+    |Internet Total Product Cost|Total Product Cost|Sum|=SUM([Total Product Cost])|  
+    |Internet Total Sales|銷售量|Sum|=SUM([Sales Amount])|  
+    |Internet Total Margin|Margin|Sum|=SUM([Margin])|  
+    |Internet Total Tax Amt|Tax Amt|Sum|=SUM([Tax Amt])|  
+    |Internet Total Freight|Freight|Sum|=SUM([Freight])|  
   
 2.  藉由按一下量值方格中的空白資料格，以及使用公式列，建立並命名下列量值：  
   
@@ -117,6 +117,6 @@ ms.locfileid: "48213238"
  針對 [Internet Sales] 資料表建立的量值可用來分析關鍵的財務資料，例如使用者選取的篩選所定義的項目銷售額、成本和利率。  
   
 ## <a name="next-step"></a>下一個步驟  
- 若要繼續進行本教學課程，請前往下一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
+ 若要繼續本教學課程，請移至下一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
   
   

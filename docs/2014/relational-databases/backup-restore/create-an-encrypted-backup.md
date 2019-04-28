@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876506"
 ---
 # <a name="create-an-encrypted-backup"></a>建立加密的備份
   本主題說明使用 Transact-SQL 建立加密備份所需的步驟。  
@@ -41,7 +41,7 @@ ms.locfileid: "52531854"
   
     ```  
   
-2.  **建立備份憑證：** 在 master 資料庫中建立備份憑證。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**  
+2.  **建立備份憑證：** Master 資料庫中建立備份憑證。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**  
   
     ```  
     Use Master  
@@ -52,7 +52,7 @@ ms.locfileid: "52531854"
   
     ```  
   
-3.  **備份資料庫：** 指定要使用的加密演算法與憑證。 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  **備份資料庫：** 指定的加密演算法與憑證使用。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -100,7 +100,7 @@ ms.locfileid: "52531854"
   
     ```  
   
-3.  **建立備份憑證：** 在 master 資料庫中建立備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]。  
+3.  **建立備份憑證：** Master 資料庫中建立備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]。  
   
     ```  
     USE Master;  
@@ -111,7 +111,7 @@ ms.locfileid: "52531854"
   
     ```  
   
-4.  **備份資料庫：** 指定要使用的加密演算法與憑證。 將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+4.  **備份資料庫：** 指定加密演算法以及要使用的憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

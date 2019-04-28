@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700616"
 ---
 # <a name="using-cell-properties-mdx"></a>使用資料格屬性 (MDX)
   多維度運算式 (MDX) 的資料格屬性包含有關多維度資料來源 (如 Cube) 中資料格的內容及格式的資訊。  
@@ -50,7 +50,7 @@ SELECT [<axis_specification>
   
 |屬性|描述|  
 |--------------|-----------------|  
-|`ACTION_TYPE`|代表存在於資料格上動作類型的位元遮罩。 此屬性可以有下列其中一個值：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：包含 where 子句中之集合的查詢，不包括鑽研動作。|  
+|`ACTION_TYPE`|代表存在於資料格上動作類型的位元遮罩。 此屬性可以有下列其中一個值：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意:鑽研動作不會包含在其中包含一組查詢子句。|  
 |**BACK_COLOR**|用以顯示 `VALUE` 或`FORMATTED_VALUE` 屬性的背景色彩。 如需詳細資訊，請參閱 [FORE_COLOR 及 BACK_COLOR 內容 &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
 |`CELL_ORDINAL`|資料集中資料格的序數。|  
 |**FONT_FLAGS**|影響字型的位元遮罩詳細資料。 例如，值 5 代表結合了粗體 (`MDFF_BOLD`) 及斜線 (`MDFF_UNDERLINE`) 字型效果。 該值是以下其中一或多個常數的位元 OR 運算結果。<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  

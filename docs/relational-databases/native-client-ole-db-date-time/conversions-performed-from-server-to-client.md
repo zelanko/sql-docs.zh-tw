@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704472"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>從伺服器到用戶端執行的轉換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "52399121"
 ## <a name="conversions"></a>轉換  
  下表描述傳回用戶端之類行與繫結中之類型之間的轉換。 對於輸出參數，如果已呼叫 icommandwithparameters:: Setparameterinfo，並在指定的型別*pwszDataSourceType*不的符合伺服器將會執行實際的型別，在伺服器上，隱含的轉換並傳回給用戶端的類型會比對 icommandwithparameters:: Setparameterinfo 透過指定的型別。 這可能會導致非預期的轉換結果時伺服器的轉換規則會不同於本主題中所述。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非 1899-12-30。  
   
-|目標 -><br /><br /> 來源|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|到-><br /><br /> 來源|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |date|1,7|[確定]|-|-|1|1,3|1,7|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
 |Time|5,6,7|-|9|[確定]|6|3,6|5,6|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
 |Smalldatetime|7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
-|DATETIME|5,7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
+|Datetime|5,7|8|9,10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|[確定]|5,7,11|-|[確定] \(VT_BSTR)|[確定]|[確定]|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|N/A|N/A|N/A|N/A|N/A|N/A|  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715145"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用預測查詢產生器來建立預測查詢
   您可以建立預測查詢，方法是當您在 BI Development Studio 中建立資料採礦方案時，或是在 SQL Server Management Studio 中以滑鼠右鍵按一下現有的採礦模型，然後選擇 [建立預測查詢] 選項。  
@@ -92,7 +92,7 @@ ms.locfileid: "48189684"
 8.  按一下 **[採礦模型預測]** 索引標籤之工具列上的第一個按鈕，然後選取 **[結果]** 來執行查詢。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 資料採礦設計師中建立單一查詢](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [在資料採礦設計師中建立單一查詢](create-a-singleton-query-in-the-data-mining-designer.md)   
  [資料採礦查詢](data-mining-queries.md)  
   
   

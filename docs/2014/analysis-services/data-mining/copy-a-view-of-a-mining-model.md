@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62d699d068832e1b3e264a9346d03553b9a05d80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715265"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>複製採礦模型的檢視
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，資料採礦設計師的 [採礦模型檢視器] 索引標籤，對每一種類型的採礦模型都會使用個別的檢視器。 有幾個檢視器含有一些元件，您可將其內容複製至剪貼簿，再將剪貼簿內容複製到文件或影像操作軟體。 下列元件可以使用此功能：  

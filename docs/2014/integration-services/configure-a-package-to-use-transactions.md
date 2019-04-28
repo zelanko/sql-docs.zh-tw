@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcbe13bd63284cdeeba219eb0a0cbcdc4084d4b1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835212"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>設定封裝來使用交易
   將封裝設定成使用交易時，您有兩個選項：  

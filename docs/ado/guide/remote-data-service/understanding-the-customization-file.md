@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955800"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔案
 在自訂檔案中的每個區段標頭包含方括號 (**[]**) 包含型別和參數。 四個區段類型會以常值字串**連接**， **sql**， **userlist**，或**記錄**。 參數是常值字串、 預設值、 使用者指定的識別項，或執行任何動作。  

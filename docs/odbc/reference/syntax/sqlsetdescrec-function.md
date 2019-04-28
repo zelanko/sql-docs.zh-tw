@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982171"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函式
 **合規性**  
- 版本導入： ODBC 3.0 版的標準符合性： ISO 92  
+ 導入的版本：ODBC 3.0 版的標準合規性：ISO 92  
   
  **摘要**  
  **SQLSetDescRec**函式會將多個會影響資料類型的描述項欄位，而且緩衝區的繫結至資料行或參數資料。  
@@ -61,7 +61,7 @@ SQLRETURN SQLSetDescRec(
  *型別*  
  [輸入]要用來設定描述項記錄的 SQL_DESC_TYPE 欄位的值。  
   
- *子類型*  
+ *SubType*  
  [輸入]型別是 SQL_DATETIME 或 SQL_INTERVAL 的記錄，這是要用來設定 SQL_DESC_DATETIME_INTERVAL_CODE 欄位的值。  
   
  *長度*  

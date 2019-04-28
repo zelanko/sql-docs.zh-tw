@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b0c8d2eec40078e58b80170b37c4885b72ad2b8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62888871"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>設定優先順序條件約束的屬性
   若要設定優先順序條件約束的屬性，您可以使用下列其中一項工具：  

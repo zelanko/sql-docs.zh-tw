@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721900"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線性迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 Microsoft 決策樹演算法的特殊版本，適用於連續屬性的模型配對。 本主題說明演算法的實作、描述如何自訂演算法的行為，以及提供查詢模型其他資訊的連結。  
@@ -60,7 +60,7 @@ ms.locfileid: "48106068"
 |模型旗標|描述|  
 |-------------------|-----------------|  
 |NOT NULL|表示資料行不能包含 Null 值。 如果 Analysis Services 在模型定型期間遇到 Null 值，將會產生錯誤。<br /><br /> 適用於採礦結構資料行。|  
-|REGRESSOR|表示資料行包含分析時應視為潛在獨立變數的連續數值。<br /><br /> 注意：為資料行加上旗標做為迴歸輸入變數無法確保將該資料行當做最終模型中的迴歸輸入變數使用。<br /><br /> 適用於採礦模型資料行。|  
+|REGRESSOR|表示資料行包含分析時應視為潛在獨立變數的連續數值。<br /><br /> 注意:加上旗標的資料行作為迴歸輸入變數無法確保資料行做為最終模型中的迴歸輸入變數。<br /><br /> 適用於採礦模型資料行。|  
   
 ### <a name="regressors-in-linear-regression-models"></a>線性迴歸模型中的迴歸輸入變數  
  線性迴歸模型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法為基礎。 不過，即使您不使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法，任何決策樹模型仍可能包含代表連續屬性迴歸的樹狀結構或節點。  
@@ -83,11 +83,11 @@ ms.locfileid: "48106068"
 |可預測屬性|Continuous、Cyclical 和 Ordered|  
   
 > [!NOTE]  
->  `Cyclical` 和`Ordered`支援內容類型，但是演算法將它們視為離散值，並不會執行特殊處理。  
+>  系統支援 `Cyclical` 和 `Ordered` 內容類型，但是演算法將它們視為離散值，因此不會執行特殊處理。  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 線性迴歸演算法](microsoft-linear-regression-algorithm.md)   
  [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)   
- [線性迴歸模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

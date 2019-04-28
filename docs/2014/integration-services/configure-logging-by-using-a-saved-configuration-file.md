@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 605e9f2635ceef0546f4c8e37f74a04a2d27ece0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834482"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>使用已儲存的組態檔來設定記錄
   此程序描述如何透過載入先前儲存的記錄組態檔，為封裝中的新容器設定記錄。  

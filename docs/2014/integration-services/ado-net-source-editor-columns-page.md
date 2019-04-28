@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836991"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 來源編輯器 (資料行頁面)
   使用 [ADO NET 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  

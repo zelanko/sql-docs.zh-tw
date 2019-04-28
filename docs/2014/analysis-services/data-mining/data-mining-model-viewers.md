@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adbed9b575be07354cfe1d1a3bf5f2c0526f458c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722834"
 ---
 # <a name="data-mining-model-viewers"></a>資料採礦模型檢視器
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中定型資料採礦模型之後，您可以瀏覽該模型來尋找值得參考的趨勢。 因為採礦模型的結果很複雜，而且其原始格式不易了解，所以用視覺化方式調查資料通常是了解演算法在資料內探索的規則和關聯性的最簡單方式。  
@@ -53,7 +53,7 @@ ms.locfileid: "48068858"
   
  雖然自訂檢視器的設計目的是要了瀏覽及了解模型，但是當您已經了解此模型而且想要從特定節點擷取統計資料或規則時，一般檢視器會更為實用。 例如，當您想要檢視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在分析期間擷取之有關模式與統計資料的詳細資訊 (例如節點的機率或迴歸公式) 時，您會使用一般檢視器。  
   
- 您也可以使用 DMX 撰寫 *「內容查詢」* (Content Query)，以取得在此檢視器中呈現的所有資訊。 如需詳細資訊，請參閱[內容查詢 &#40;資料採礦&#41;](content-queries-data-mining.md)。  
+ 您也可以使用 DMX 撰寫 *「內容查詢」* (Content Query)，以取得在此檢視器中呈現的所有資訊。 如需詳細資訊，請參閱 [內容查詢 &#40;資料採礦&#41;](content-queries-data-mining.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  下列主題會更詳細描述每一個檢視器以及如何解譯其中的資訊。  
@@ -83,7 +83,7 @@ ms.locfileid: "48068858"
  描述一般檢視器中可用於所有資料採礦模型的詳細資訊，並提供範例說明如何解譯每種演算法的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [資料採礦設計師](data-mining-designer.md)  
   
   

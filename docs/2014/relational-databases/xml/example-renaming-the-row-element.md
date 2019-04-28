@@ -1,5 +1,5 @@
 ---
-title: 範例重新命名&lt;資料列&gt;項目 |Microsoft Docs
+title: 範例重新命名 &lt;row&gt; 元素 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704907"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>範例重新命名&lt;資料列&gt;項目
+# <a name="example-renaming-the-ltrowgt-element"></a>範例重新命名 &lt;row&gt; 元素
   如果是結果集中的每一個資料列，RAW 模式會產生一個 `<row>`元素。 您可以將一個選擇性引數指定給 RAW 模式，選擇性地為此元素指定另一個名稱，如下列查詢所示。 此查詢會針對資料列集的每一個資料列，各傳回一個 <`ProductModel`> 元素。  
   
 ## <a name="example"></a>範例  

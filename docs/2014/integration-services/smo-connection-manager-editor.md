@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a9fca0d602f54d6bab7f21c57838a50212dfd5a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878218"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 連接管理員編輯器
   使用 [SMO 連線管理員編輯器] 來設定傳送 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的各種工作所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 連接。  

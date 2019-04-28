@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a98d750a42692c10a083a1a953e81f274fca7dd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710396"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 屬性範例 (VB)
 下列程式碼示範如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)屬性來存取提供者特有的屬性，再附加到類別目錄的資料表。 屬性是**AutoIncrement**，Microsoft Jet 資料庫中建立自動遞增欄位。  

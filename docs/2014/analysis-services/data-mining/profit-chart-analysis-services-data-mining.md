@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732919"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>收益圖 (Analysis Services - 資料採礦)
   收益圖會顯示與使用採礦模型有關聯的預估獲利率。 例如，假設您的模型來預測在商務案例中連絡哪些客戶公司，應該。 在此情況下，您的收益圖就要加入與執行目標郵寄促銷活動的成本有關的資訊。 然後，您便能在完成的圖表中看到正確鎖定目標客戶相較於隨機連絡客戶的預估收益。  

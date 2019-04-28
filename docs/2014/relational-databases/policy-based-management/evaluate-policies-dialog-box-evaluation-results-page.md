@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705135"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>評估原則對話方塊，評估結果頁面
   使用此對話方塊可檢視原則評估結果，然後將以原則為基礎的管理原則套用到不符合原則的目標集。  
@@ -29,10 +29,10 @@ ms.locfileid: "52798320"
  **結果：訊息**  
  發生錯誤時的資訊連結。  
   
- **目標詳細資料：伺服器**  
+ **目標詳細資料：Server**  
  評估原則所針對的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- **目標詳細資料：目標**  
+ **目標詳細資料：Target**  
  評估原則所針對的目標。  
   
  **目標詳細資料：詳細資料**  

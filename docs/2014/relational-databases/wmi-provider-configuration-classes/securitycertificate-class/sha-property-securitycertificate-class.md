@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: af3ecc685ab9b6bc9e608d9d9ecec4aefb5d53d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714466"
 ---
 # <a name="sha-property-securitycertificate-class"></a>SHA 屬性 (SecurityCertificate 類別)
   取得安全性憑證的 SHA 指模屬性。  

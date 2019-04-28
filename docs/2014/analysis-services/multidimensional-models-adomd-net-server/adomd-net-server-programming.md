@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6feff1bdcd1e53aeb6af45be3edea9c80d50c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703033"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 伺服器程式設計
   ADOMD.NET 的 ADOMD.NET 伺服器元件是位在 `Microsoft.AnalysisServices.AdomdServer` 命名空間中 (在 msmgdsrv.dll 中)。 建立自訂多維度運算式 (MDX) 函數，以及執行個體執行的預存程序的情況下，您在使用這些伺服器元件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 伺服器物件提供查詢 Cube 與採礦模型的功能，以及在指定內容中評估運算式的功能。 建立自訂函數與預存程序的優點包括快速的執行、集中的部署以及改善的可維護性。  

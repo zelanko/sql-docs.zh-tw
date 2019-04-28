@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d8719a91fada156d74003231abea67f2ae55f35c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844294"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>選項 (查詢結果-SQL Server-以結果格線頁）
   使用這個頁面即可指定選項，使查詢結果集以方格的格式顯示。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。 在 [查詢選項] 對話方塊的左窗格中，於 [結果] 之下，按一下 [方格]。  

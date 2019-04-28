@@ -22,11 +22,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690802"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -224,7 +224,7 @@ GO
 |EXTERNAL_SCRIPT_NETWORK_IO |TBD <br /> **適用於**:[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]到目前。| 
 |EXTERNAL_SCRIPT_PREPARE_SERVICE |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |EXTERNAL_SCRIPT_SHUTDOWN |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|EXTERNAL_WAIT_ON_LAUNCHER， |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|EXTERNAL_WAIT_ON_LAUNCHER, |TBD <br /> **適用於**： [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_HADR_TRANSPORT_CONNECTION |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_REPLICA_CONTROLLER_LIST |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |FABRIC_REPLICA_CONTROLLER_STATE_AND_CONFIG |TBD <br /> **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -331,7 +331,7 @@ GO
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |背景工作正在等候處理 Windows Server 容錯移轉叢集通知的背景工作啟動完成。 僅供內部使用。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |背景工作正在等候處理 Windows Server 容錯移轉叢集通知的背景工作終止。 僅供內部使用。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_PARTNER_SYNC |協力廠商清單上的並行控制等候。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
-|HADR_READ_ALL_NETWORKS |等候取得 WSFC 網路清單的讀取或寫入存取權。 僅供內部使用。 注意：引擎會保留一份 WSFC 網路使用動態管理檢視 （例如 sys.dm_hadr_cluster_networks) 中，或驗證一律在 TRANSACT-SQL 陳述式參考 WSFC 網路資訊。 這份清單會更新在引擎啟動時，WSFC 相關通知，以及內部 Alwayson 重新啟動 （例如遺失及以重新取得 WSFC 仲裁）。 當該清單的更新正在進行時，通常會封鎖工作。 、 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
+|HADR_READ_ALL_NETWORKS |等候取得 WSFC 網路清單的讀取或寫入存取權。 僅供內部使用。 注意:引擎會保留一份 WSFC 網路使用動態管理檢視 （例如 sys.dm_hadr_cluster_networks) 中，或驗證一律在 TRANSACT-SQL 陳述式參考 WSFC 網路資訊。 這份清單會更新在引擎啟動時，WSFC 相關通知，以及內部 Alwayson 重新啟動 （例如遺失及以重新取得 WSFC 仲裁）。 當該清單的更新正在進行時，通常會封鎖工作。 、 <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |等候次要資料庫在執行復原之前連接到主要資料庫。 這是預期的等候，可能會延長慢而無法建立連線到主要複本是否。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |資料庫復原正在等候次要資料庫完成還原和初始化階段，以便讓它返回與主要資料庫相同的記錄點。 在容錯移轉之後，這可以是預期的等候。復原可以透過 Windows 系統監視器 (perfmon.exe) 和動態管理檢視中追蹤進度。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |HADR_REPLICAINFO_SYNC |若要更新目前複本狀態的並行控制等候。， <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -1024,7 +1024,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
     
  [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_session_wait_stats &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

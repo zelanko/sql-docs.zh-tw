@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999300"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>選項 （SQL Server 物件總管-命令）
   當您以滑鼠右鍵按一下 [物件總管] 中的資料表或檢視時，即會出現可用來顯示資料表資料列的以下兩個選項：  

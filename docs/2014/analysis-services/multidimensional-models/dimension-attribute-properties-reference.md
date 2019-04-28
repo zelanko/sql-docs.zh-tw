@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c763eba5a1908e2ee55844dc137af7ddf675e8f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726124"
 ---
 # <a name="dimension-attribute-properties-reference"></a>維度屬性 (attribute) 屬性 (property) 參考
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，有許多屬性 (property) 可用來決定維度和維度屬性 (attribute) 如何運作。 下表列出與描述每一項屬性 (Attribute) 的屬性 (Property)。  

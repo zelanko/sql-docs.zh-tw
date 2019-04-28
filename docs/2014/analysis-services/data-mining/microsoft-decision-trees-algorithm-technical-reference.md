@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722000"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種混合式演算法，其中併入建立樹狀結構的不同方法，並支援多種分析工作，包括迴歸、分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
@@ -61,7 +61,7 @@ ms.locfileid: "53365400"
  如需有關如何搭配使用的詳細說明[!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法如何與分隔可預測資料行，請參閱[學習 Bayesian 網路：知識與統計資料的組合](https://go.microsoft.com/fwlink/?LinkId=45963)。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何與連續可預測資料行一起運作的詳細資訊，請參閱 [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)(時間序列分析的自動迴歸樹狀模型) 的附錄。  
   
 ### <a name="scoring-methods-and-feature-selection"></a>計分方法與特徵選取  
- Microsoft 決策樹演算法提供三個計算資訊的公式：Shannon 的 Entropy、Bayesian network with K2 prior 以及具有 prior 的統一狄氏分配 Bayesian 網路。 三種方法全都堅實的建立在資料採礦欄位中。 建議您試驗不同的參數與計分方法來判斷哪個公式會提供最佳的結果。 如需有關這些計分方法的詳細資訊，請參閱＜ [Feature Selection](../../sql-server/install/feature-selection.md)＞。  
+ Microsoft 決策樹演算法提供三個資訊改善的公式：Shannon 的 entropy、 Bayesian 網路 K2 prior 和統一狄氏分配 Bayesian 網路。 三種方法全都堅實的建立在資料採礦欄位中。 建議您試驗不同的參數與計分方法來判斷哪個公式會提供最佳的結果。 如需有關這些計分方法的詳細資訊，請參閱＜ [Feature Selection](../../sql-server/install/feature-selection.md)＞。  
   
  所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 特徵選取所使用的方法取決於建立模型所使用的演算法。 針對決策樹模型控制特徵選取的演算法參數為 MAXIMUM_INPUT_ATTRIBUTES 和 MAXIMUM_OUTPUT。  
   

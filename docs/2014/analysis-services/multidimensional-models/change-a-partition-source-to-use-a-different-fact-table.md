@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f81cca9c4f7be1e0a94b9947432d1e7534994e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726842"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>變更分割區來源以使用不同的事實資料表
   當您建立 Cube 的分割區時，您可以選擇要使用不同的事實資料表。 不同資料表可能來自單一資料來源檢視、來自不同資料來源檢視或來自不同資料來源。 資料來源檢視也可能包含來自一個以上之資料來源的不同資料表。  
@@ -33,6 +33,6 @@ ms.locfileid: "48153788"
  您可以 (但不建議) 使用包含重複資料的不同事實資料表。 在此情況下，您必須在資料分割中使用篩選來確保某資料分割使用的資料不會被另一個資料分割使用。 如需詳細資訊，請參閱[建立及管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及管理本機資料分割&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+ [建立及管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

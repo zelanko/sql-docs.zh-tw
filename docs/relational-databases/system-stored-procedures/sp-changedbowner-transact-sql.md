@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1a38be84e5f1980b680d674e1c04c2ba95d1a537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994240"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @loginame=] '*登入*'  
+ [ @loginame= ] '*login*'  
  這是目前資料庫新擁有者的登入識別碼。 *登入*已**sysname**，沒有預設值。 *登入*必須是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者。 *登入*不能成為目前資料庫的擁有者，如果它已經透過資料庫中現有的使用者安全性帳戶資料庫的存取權。 若要防止這種情況，請先卸除目前資料庫的使用者。  
   
- [ @map=] *remap_alias_flag*  
+ [ @map= ] *remap_alias_flag*  
  *Remap_alias_flag*參數已被取代，因為登入別名已移除了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用*remap_alias_flag*參數不會產生錯誤，但是沒有任何作用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -77,10 +77,10 @@ EXEC sp_changedbowner 'Albert';
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sp_dropalias &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+ [sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helpdb &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helplogins &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

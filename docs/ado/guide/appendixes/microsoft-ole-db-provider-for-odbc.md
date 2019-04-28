@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Provider for ODBC |Microsoft Docs
+title: Microsoft OLE DB Provider for ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853325"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然有更多資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，大部分的 DBMS 系統目前使用中可以透過 ODBC 存取。
@@ -101,7 +101,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |驅動程式名稱 (KAGPROP_DRIVERNAME)|指出 ODBC 驅動程式的檔案名稱。|
 |驅動程式的 ODBC 版本 (KAGPROP_DRIVERODBCVER)|指出此驅動程式支援的 ODBC 版本。|
 |檔案使用情況 (KAGPROP_FILEUSAGE)|指出如何驅動程式會將資料來源; 中的檔案為資料表，或為類別目錄。|
-|Like 逸出子句 (KAGPROP_LIKEESCAPECLAUSE)|表示 LIKE 述詞的 WHERE 子句中的驅動程式是否支援定義和逸出字元使用百分比字元 （%） 和底線字元 (_)。|
+|Like 逸出子句 (KAGPROP_LIKEESCAPECLAUSE)|指出是否此驅動程式支援的定義和逸出字元使用百分比字元 （%）與 LIKE 述詞的 WHERE 子句加上底線字元 (_)。|
 |在 群組依據 (KAGPROP_MAXCOLUMNSINGROUPBY) 的最大資料行|表示可以在 SELECT 陳述式的 GROUP BY 子句中列出的資料行的數目上限。|
 |索引 (KAGPROP_MAXCOLUMNSININDEX) 中的最大資料行|指出索引中所包含的資料行的數目上限。|
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY) 中的最大資料行|表示可以在 SELECT 陳述式的 ORDER BY 子句中列出的資料行的數目上限。|
@@ -179,7 +179,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|唯讀|唯讀|唯讀|
-|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|無法使用|無法使用|讀取/寫入|讀取/寫入|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|讀取/寫入|讀取/寫入|讀取/寫入|讀取/寫入|
@@ -256,7 +256,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |隔離等級|DBPROP_SUPPORTEDTXNISOLEVELS|
 |隔離保留功能|DBPROP_SUPPORTEDTXNISORETAIN|
 |地區設定識別碼|DBPROP_INIT_LCID|
-|位置|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |索引大小上限|DBPROP_MAXINDEXSIZE|
 |資料列大小上限|DBPROP_MAXROWSIZE|
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|

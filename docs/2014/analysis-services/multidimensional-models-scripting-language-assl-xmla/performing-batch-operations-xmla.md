@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702067"
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
   您可以使用[批次](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)XML for Analysis (XMLA) 使用來執行多個 XMLA 命令的單一 XMLA 命令[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法。 您可以用單一交易或每個命令的個別交易，以序列或平行方式執行 `Batch` 命令中包含的多個命令。 您也可以指定程式碼外部繫結和其他屬性`Batch`命令，以處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  

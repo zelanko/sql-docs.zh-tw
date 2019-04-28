@@ -1,5 +1,5 @@
 ---
-title: UPDATE MEMBER 陳述式 (MDX) |Microsoft 文件
+title: UPDATE MEMBER 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694828"
 ---
-# <a name="mdx-data-definition---update-member"></a>MDX 資料定義更新成員
+# <a name="mdx-data-definition---update-member"></a>MDX 資料定義 - UPDATE MEMBER
 
 
   更新現有導出成員。  
@@ -61,16 +61,16 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |屬性識別碼|意義|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Office 樣式格式字串，用戶端應用程式可用來顯示資料格值。|  
-|VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 可見的導出成員可以加入至一組與[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函式。 非零的值代表可以看見導出成員。 這個屬性的預設值是*看得見*。<br /><br /> 不可見的導出成員一般會在較為複雜的導出成員中做為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
+|FORMAT_STRING|Office 樣式格式字串，用戶端應用程式可用來顯示資料格的值。|  
+|VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 可見的導出成員可以加入至一組[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函式。 非零的值代表可以看見導出成員。 這個屬性的預設值是*Visible*。<br /><br /> 不可見的導出成員一般會在較為複雜的導出成員中做為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
 |NON_EMPTY_BEHAVIOR|解析空白資料格時，MDX 用以決定導出成員行為的量值或集合。|  
 |CAPTION|指定用戶端應用程式用於顯示成員之標題的字串值。|  
-|DISPLAY_FOLDER|指定用戶端應用程式顯示之成員所在顯示資料夾路徑的字串值。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和用戶端所提供的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜線 (\\) 做為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
+|DISPLAY_FOLDER|指定用戶端應用程式顯示之成員所在顯示資料夾路徑的字串值。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和所提供的用戶端[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要針對已定義的成員提供多個顯示資料夾，請使用分號 (;) 來分隔資料夾。|  
 |ASSOCIATED_MEASURE_GROUP|與此成員建立關聯之量值群組的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
  [DROP MEMBER 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [CREATE MEMBER 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
+ [CREATE MEMBER 陳述式 &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
  [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

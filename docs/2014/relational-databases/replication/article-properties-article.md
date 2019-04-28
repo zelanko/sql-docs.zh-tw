@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721780"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
   從新增發行集精靈和 **[發行集屬性]** 對話方塊中，可以使用 **[發行項屬性]** 對話方塊。 它可讓您檢視和設定所有類型之發行項的屬性。 某些屬性只有在建立發行集時才能設定，而其他的則只有在發行集沒有使用中的訂閱時才能設定。 無法設定的屬性會以唯讀顯示。  
@@ -88,7 +88,7 @@ ms.locfileid: "54124988"
  此選項僅適用於儲存程序。 它決定是否要複寫預存程序 (CREATE PROCEDURE 陳述式) 或其執行的定義。 如果您複寫程序的執行，程序定義會在初始化訂閱之後複寫到訂閱者端；在發行者端執行程序時，複寫會在訂閱者端執行對應的程序。 這可在執行大量批次作業時大幅提升效能。 如需詳細資訊，請參閱＜ [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)＞。  
   
 ## <a name="options-for-merge-publications"></a>合併式發行集的選項  
- **發行項屬性**合併式發行集 對話方塊中有兩個索引標籤：**屬性**並**解析程式**。  
+ 合併式發行集的 [發行項屬性] 對話方塊有兩個索引標籤：[屬性] 和 [解析程式]。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **同步處理方向**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124988"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 提供的所有以 COM 為基礎的解析程式都已簽署。 選取此選項即可驗證同步處理時解析程式是有效的。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 發行集的選項  
- **發行項屬性**Oracle 發行集的對話方塊有兩個索引標籤：**屬性**並**資料對應**。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
+ Oracle 發行集的 [發行項屬性] 對話方塊有兩個索引標籤：[屬性] 和 [資料對應]。 Oracle 發行集並不支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集支援的所有屬性。 如需詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞。  
   
 ### <a name="properties-tab"></a>屬性索引標籤  
  **複製 INSERT、UPDATE 和 DELETE 預存程序**  

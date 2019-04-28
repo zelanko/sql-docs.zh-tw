@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845932"
 ---
 # <a name="modify-the-trace-results-view"></a>修改追蹤結果檢視
   本主題描述如何透過執行下列工作，在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中修改擴充事件工作階段的追蹤結果檢視。  
@@ -149,7 +149,7 @@ ms.locfileid: "49120377"
 ##  <a name="AggregateResults"></a> 彙總結果  
  擴充事件支援五個彙總函式：  
   
--   SUM  
+-   Sum  
   
 -   Min  
   

@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715835"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "56012379"
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY 是 OFF。|一律是 0。|  
 |is_primary_key|**bit**|1 = 索引是 PRIMARY KEY 條件約束的一部分。|一律是 0。|  
 |is_unique_constraint|**bit**|1 = 索引是 UNIQUE 條件約束的一部分。|一律是 0。|  
-|fill_factor|**tinyint**|> 0 = 當建立或重建索引時，所用的 FILLFACTOR 百分比。<br /><br /> 0 = 預設值|一律是 0。|  
+|fill_factor|**tinyint**|> 0 = 當建立或重建索引時使用的 FILLFACTOR 百分比。<br /><br /> 0 = 預設值|一律是 0。|  
 |is_padded|**bit**|0 = PADINDEX 是 OFF。|一律是 0。|  
 |is_disabled|**bit**|1 = 索引已停用。<br /><br /> 0 = 索引未停用。||  
 |is_hypothetical|**bit**|0 = 索引不是假設的。|一律是 0。|  

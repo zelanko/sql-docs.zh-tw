@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732906"
 ---
 # <a name="testing-and-validation-data-mining"></a>測試和驗證 (資料採礦)
   驗證是評估採礦模型對實際資料的執行效能有多好的處理程序。 在部署採礦模型至生產環境之前，先了解其品質和特性以驗證採礦模型是很重要的。  
@@ -87,13 +87,13 @@ ms.locfileid: "48077748"
 |主題|連結|  
 |------------|-----------|  
 |了解如何使用精靈或 DMX 命令來設定測試資料集|[定型和測試資料集](training-and-testing-data-sets.md)|  
-|了解如何測試採礦結構中資料的散發及代表意義|[交叉驗證&#40;Analysis Services-資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
-|了解 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中提供的精確度圖表類型。|[增益圖&#40;Analysis Services-資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖&#40;Analysis Services-資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖&#40;Analysis Services-資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|了解如何建立分類矩陣 (也稱為混淆矩陣) 以評估真肯定、誤判、真否定、誤否定的數量。|[分類矩陣&#40;Analysis Services-資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|了解如何測試採礦結構中資料的散發及代表意義|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](cross-validation-analysis-services-data-mining.md)|  
+|了解 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]中提供的精確度圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services - 資料採礦&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|了解如何建立分類矩陣 (也稱為混淆矩陣) 以評估真肯定、誤判、真否定、誤否定的數量。|[分類矩陣 &#40;Analysis Services - 資料採礦&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦工具](data-mining-tools.md)   
+ [資料採礦工具。](data-mining-tools.md)   
  [資料採礦方案](data-mining-solutions.md)   
- [測試及驗證工作與操作方法&#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [測試及驗證工作與操作方法 &#40;資料採礦&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

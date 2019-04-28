@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8dd06c632a20278f88403a0ec21d9a8b672c8b3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961073"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management 事件類別
   從資料庫建立、改變或卸除主體 (例如使用者) 時，就會發生 **Audit Database Principal Management** 事件類別。  

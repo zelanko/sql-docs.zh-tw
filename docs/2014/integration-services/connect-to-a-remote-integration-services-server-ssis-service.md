@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2d2e64744ea39296d16fbe88ad20993e8909988d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834030"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>連接到遠端 Integration Services 伺服器 (SSIS 服務)
     

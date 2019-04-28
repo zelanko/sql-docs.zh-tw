@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64f3d3474ac812f07645cd3064c270ba10ad76c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729910"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>將 PowerPivot 移轉至 SharePoint 2013
   
@@ -107,7 +107,7 @@ ms.locfileid: "53368370"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>疑難排解嘗試掛接資料庫時所發生的問題  
  本節將摘要說明掛接資料庫時可能會遇到的問題。  
   
-1.  **驗證錯誤：** 如果您看見與驗證有關的錯誤，請檢閱來源 Web 應用程式所使用的驗證模式。 此錯誤可能是由於 SharePoint 2013 Web 應用程式與 SharePoint 2010 Web 應用程式之間的驗證不符所造成。 如需詳細資訊，請參閱＜ [1) 準備 SharePoint 2013 伺服器陣列](#bkmk_prepare_sharepoint2013) ＞。  
+1.  **驗證錯誤：** 如果您看到與驗證相關的錯誤，請檢閱來源 web 應用程式所使用的驗證模式。 此錯誤可能是由於 SharePoint 2013 Web 應用程式與 SharePoint 2010 Web 應用程式之間的驗證不符所造成。 如需詳細資訊，請參閱＜ [1) 準備 SharePoint 2013 伺服器陣列](#bkmk_prepare_sharepoint2013) ＞。  
   
 2.  **遺漏 PowerPivot.Files:** 如果您看見與遺漏 PowerPivot.dll 有關的錯誤**spPowerPivot.msi**尚未安裝或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]尚未使用組態工具來設定 PowerPivot。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "53368370"
   
     5.  按一下 **[確定]**。 重新整理記錄現在會顯示在重新整理頁面中，而且排程會在一般時間引發。  
   
- **SQL Server 2008 R2 PowerPivot 活頁簿**  
+ **SQL Server 2008 R2 PowerPivot workbooks**  
   
 -   在 SQL Server 2012 SP1 PowerPivot for SharePoint 2013 中使用 SQL Server 2008 R2 PowerPivot 活頁簿時，這些活頁簿不會自動升級。 當您移轉包含 2008 R2 活頁簿的內容資料庫之後，就可以使用這些活頁簿，但是排程不會升級。  
   

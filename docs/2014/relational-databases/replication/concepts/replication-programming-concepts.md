@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721803"
 ---
 # <a name="replication-programming-concepts"></a>複寫程式設計概念
   在開發使用複寫功能的應用程式之前，您應該遵循下列一般規劃步驟：  

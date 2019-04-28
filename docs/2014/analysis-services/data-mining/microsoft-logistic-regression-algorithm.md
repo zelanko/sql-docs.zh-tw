@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733746"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 羅吉斯迴歸演算法
   羅吉斯迴歸演算法是知名的統計技術，可用來模型化二進位結果。  
@@ -80,7 +80,7 @@ ms.locfileid: "48179388"
 -   不支援使用預測模型標記語言 (PMML) 來建立採礦模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [羅吉斯迴歸模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722350"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>使用 Analysis Services 匯入精靈匯入資料採礦專案
   本主題描述如何在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中使用 [從伺服器匯入 (多維度和資料採礦)] 範本，從另一部伺服器上的現有資料採礦專案匯入中繼資料來建立新的資料採礦專案。  
@@ -53,7 +53,7 @@ ms.locfileid: "52524192"
     > [!WARNING]  
     >  您不能指定您想要匯入的物件；當您選擇現有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，所有多維度和資料採礦物件都會匯入。  
   
-     按 [下一步] 。  
+     按一下 [下一步] 。  
   
 5.  **[正在完成精靈]** 頁面會顯示匯入作業的進度。 您不能取消此作業或是變更正在匯入的物件。 完成時按一下 **[完成]** 。  
   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2c0c2154ce6c16e76c96f0aa9655d0a64bb2bf8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999886"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>在物件總管中隱藏系統物件
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 [物件總管] 中隱藏系統物件。 物件總管的 [資料庫] 節點包含諸如系統資料庫的系統物件。 使用 [工具]/[選項] 頁面，隱藏系統物件。 某些系統物件 (如系統函數和系統資料類型) 不受這個設定所影響。  

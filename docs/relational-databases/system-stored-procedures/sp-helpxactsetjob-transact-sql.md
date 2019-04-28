@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959608"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publisher** =] **'***發行者***'**  
+ [**@publisher** = ] **'***publisher***'**  
  名稱非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作業所屬的發行者。 *發行者*已**sysname**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
@@ -49,11 +49,11 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|上次作業執行的日期。|  
 |**thisdate**|**varchar(22)**|變更的時間|  
 |**nextdate**|**varchar(22)**|下次作業執行的日期。|  
-|**中斷**|**varchar(1)**|指出作業是否中斷的旗標。|  
-|**間隔**|**varchar(200)**|作業的間隔時間。|  
-|**失敗**|**int**|作業的失敗次數。|  
+|**broken**|**varchar(1)**|指出作業是否中斷的旗標。|  
+|**interval**|**varchar(200)**|作業的間隔時間。|  
+|**failures**|**int**|作業的失敗次數。|  
 |**xactsetjobwhat**|**varchar(200)**|作業所執行的程序名稱。|  
-|**propertyname**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -作業已啟用。<br /><br /> **0** -作業已停用。|  
+|**xactsetjob**|**varchar(1)**|作業的狀態，它可以是下列項目之一：<br /><br /> **1** -作業已啟用。<br /><br /> **0** -作業已停用。|  
 |**xactsetlonginterval**|**int**|作業的長間隔時間。|  
 |**xactsetlongthreshold**|**int**|作業的長臨界值。|  
 |**xactsetshortinterval**|**int**|作業的短間隔時間。|  
@@ -72,6 +72,6 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者的交易集作業 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

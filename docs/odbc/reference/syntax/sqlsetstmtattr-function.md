@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22051ca07dbdb732cfcda2f8200b7375f593463
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982156"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函數
 **合規性**  
@@ -108,7 +108,7 @@ SQLRETURN SQLSetStmtAttr(
 |HY011|現在無法設定屬性|*屬性*SQL_ATTR_CONCURRENCY、 SQL_ ATTR_CURSOR_TYPE、 SQL_ ATTR_SIMULATE_CURSOR 或 SQL_ ATTR_USE_BOOKMARKS 和已備妥的陳述式。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
 |HY017|使用自動配置描述項控制代碼無效|(DM)*屬性*引數為 SQL_ATTR_IMP_ROW_DESC 或 SQL_ATTR_IMP_PARAM_DESC。<br /><br /> (DM)*屬性*引數為 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC，並在值*ValuePtr*原本是控制代碼以外的隱含配置描述項控制代碼配置 ARD 或 APD。|  
-|其中包含 SQLSTATE=HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。 （驅動程式管理員會傳回這個僅適用於連接和陳述式屬性接受一組特定的值，例如 SQL_ATTR_ACCESS_MODE 或 SQL_ ATTR_ASYNC_ENABLE 的 SQLSTATE。 對於所有其他連接和陳述式屬性，驅動程式必須確認在指定的值*ValuePtr*。)<br /><br /> *屬性*引數為 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC，及*ValuePtr*已不在相同的連線，做為明確配置描述項控制代碼*StatementHandle*引數。|  
+|HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。 （驅動程式管理員會傳回這個僅適用於連接和陳述式屬性接受一組特定的值，例如 SQL_ATTR_ACCESS_MODE 或 SQL_ ATTR_ASYNC_ENABLE 的 SQLSTATE。 對於所有其他連接和陳述式屬性，驅動程式必須確認在指定的值*ValuePtr*。)<br /><br /> *屬性*引數為 SQL_ATTR_APP_ROW_DESC 或 SQL_ATTR_APP_PARAM_DESC，及*ValuePtr*已不在相同的連線，做為明確配置描述項控制代碼*StatementHandle*引數。|  
 |HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，而*StringLength*引數為小於 0，但不是 sql_nts;。|  
 |HY092|屬性/選項識別碼無效|(DM) 引數指定的值*屬性*ODBC 驅動程式支援的版本無效。<br /><br /> (DM) 引數指定的值*屬性*是唯讀的屬性。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
@@ -154,13 +154,13 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_ROW_BIND_OFFSET_PTR|SQL_DESC_BIND_OFFSET_PTR|ARD|  
 |SQL_ATTR_ROW_BIND_TYPE|SQL_DESC_BIND_TYPE|ARD|  
 |SQL_ATTR_ROW_OPERATION_PTR|SQL_DESC_ARRAY_STATUS_PTR|ARD|  
-|SQL_ATTR_ROW_STATUS_PTR 設定|SQL_DESC_ARRAY_STATUS_PTR|IRD|  
+|SQL_ATTR_ROW_STATUS_PTR|SQL_DESC_ARRAY_STATUS_PTR|IRD|  
 |SQL_ATTR_ROWS_FETCHED_PTR|SQL_DESC_ROWS_PROCESSED_PTR|IRD|  
   
 ## <a name="statement-attributes"></a>陳述式屬性  
  下列表格中，顯示目前定義的屬性，並在其中引進的 ODBC 版本我們預期更多的屬性將會定義驅動程式，以善用不同的資料來源。 ODBC; 保留範圍的屬性驅動程式開發人員必須保留供自己從 Open Group 的驅動程式專屬使用的值。 如需詳細資訊，請參閱 <<c0> [ 驅動程式專屬資料型別、 描述項類型、 資訊類型、 診斷類型和屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
-|attribute|*ValuePtr*內容|  
+|屬性|*ValuePtr*內容|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|APD 中的後續呼叫的控制代碼**SQLExecute**並**SQLExecDirect**陳述式控制代碼。 這個屬性的初始值是一開始配置陳述式時，隱含配置描述項。 如果此屬性的值設定為 SQL_NULL_DESC 或原先配置描述項控制代碼，先前的陳述式控制代碼關聯的明確配置的 APD 控制代碼從它中斷與的關聯，且陳述式控制代碼會還原為隱含配置 APD 控制代碼。<br /><br /> 無法將設定這個屬性，另一個陳述式已隱含配置描述項控制代碼或隱含地設定相同的陳述式; 的另一個描述項控制代碼隱含配置描述項控制代碼不能與多個陳述式或描述項控制代碼相關聯。|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|針對後續陳述式控制代碼上的提取 ARD 控制代碼。 這個屬性的初始值是一開始配置陳述式時，隱含配置描述項。 如果此屬性的值設定為 SQL_NULL_DESC 或原先配置描述項控制代碼，先前的陳述式控制代碼關聯的明確配置的 ARD 控制代碼從它中斷與的關聯，且陳述式控制代碼會還原為隱含配置 ARD 控制代碼。<br /><br /> 無法將設定這個屬性，另一個陳述式已隱含配置描述項控制代碼或隱含地設定相同的陳述式; 的另一個描述項控制代碼隱含配置描述項控制代碼不能與多個陳述式或描述項控制代碼相關聯。|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ed02b621b79ebf46dbb0dc6e66a2e5366610a19d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864402"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 方法 (ADO)
 將現有檔案的內容載入[Stream](../../../ado/reference/ado-api/stream-object-ado.md)。  

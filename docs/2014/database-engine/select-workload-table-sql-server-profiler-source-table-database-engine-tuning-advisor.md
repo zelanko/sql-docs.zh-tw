@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2e277313ac2da5c8a92d69985344d3cc646dbf7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843574"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-來源資料表-Database Engine Tuning Advisor-選取工作負載資料表
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor 使用此對話方塊來選取資料表。  
@@ -44,7 +44,7 @@ ms.locfileid: "48161684"
  指定從中讀取追蹤的追蹤資料表名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [將追蹤結果儲存至資料表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [將追蹤結果儲存到資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   

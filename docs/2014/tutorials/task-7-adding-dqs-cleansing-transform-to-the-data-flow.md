@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866361"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>工作 7:將 DQS 清理轉換加入至資料流程
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>工作 7:將 DQS 清理轉換加入資料流程
   在這項工作中，您將使用 DQS 將 DQS 清理轉換加入至資料流程來清理輸入供應商資料。 請參閱 **[DQS 清理轉換](https://msdn.microsoft.com/library/ee677619.aspx)** 如需有關轉換的詳細資訊。  
   
 1.  以滑鼠右鍵按一下**DQS 清理**中**資料流程**索引標籤，然後按一下**重新命名**。 型別**清理供應商資料**，然後按**ENTER**。  

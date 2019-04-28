@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835141"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>在資料流程元件中設定錯誤輸出
   許多資料流程元件都支援錯誤輸出，因元件的不同，[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師會以不同的方式設定錯誤輸出。 除了設定錯誤輸出以外，您也可以設定錯誤輸出的資料行。 其中包括設定此元件所加入的 **ErrorCode** 和 **ErrorColumn** 資料行。  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832212"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
   您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
@@ -52,8 +52,8 @@ ms.locfileid: "58385347"
   
 |值|描述|  
 |-----------|-----------------|  
-|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意：指定檔案連接管理員中使用**目的地**選項。|  
-|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意：指定將用於在封裝變數**目的地**選項。|  
+|**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意:您可以在 [目的地] 選項中指定要使用的檔案連線管理員。|  
+|**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意:您可以在 [目的地] 選項中指定要使用的封裝變數。|  
   
  **目的地**  
  指定哪一個檔案連線管理員或封裝變數包含資料設定檔輸出：  

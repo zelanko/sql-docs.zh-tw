@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 015548ce55df25d3e0751b697fe046783d084ec5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695641"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>輸入資料來源認證對話方塊 (報表產生器)
   使用 [輸入資料來源認證] 對話方塊，即可提供認證，讓您可以從資料來源擷取資料。  

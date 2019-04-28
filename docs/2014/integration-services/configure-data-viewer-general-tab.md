@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834350"
 ---
 # <a name="configure-data-viewer-general-tab"></a>設定資料檢視器 (一般索引標籤)
   在封裝執行期間，當資料移動通過連接兩個資料流程元件的路徑時，資料檢視器會顯示該資料。  

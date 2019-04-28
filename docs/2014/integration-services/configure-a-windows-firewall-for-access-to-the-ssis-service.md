@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835273"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>針對 SSIS 服務的存取設定 Windows 防火牆
     

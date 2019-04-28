@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719763"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 物件錯誤代碼
 下表列出[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件錯誤代碼。 低的兩個位元組的十進位正轉譯，會顯示完整的錯誤程式碼和十六進位值的負值的十進位轉譯。
@@ -29,7 +29,7 @@ ms.locfileid: "52514378"
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|暫止非同步作業時，無法執行作業。|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|不正確的內嵌 tablegram。|
 |**IDS_CantConnect**|4099 -2146824189 0x800A1003|無法連線到伺服器。|
-|**IDS_CantCreateObject**|4100-2146824188 0x800A1004|無法建立商務物件。|
+|**IDS_CantCreateObject**|4100 -2146824188 0x800A1004|無法建立商務物件。|
 |**IDS_CantFindDataspace**|4102 -2146824186 0x800A1006|資料空間屬性無效。|
 |**IDS_CantInvokeMethod**|4101 -2146824187 0x800A1005|無法在商務物件上叫用方法。|
 |**IDS_CrossDomainWarning**|4112 -2146824170 0x800A1016|此頁面會存取另一個網域上的資料。 若要允許此嗎？ 若要避免這個訊息在 Internet Explorer 中的，您可以加入安全的網站信任的網站區域上**安全性**索引標籤**網際網路選項** 對話方塊。|

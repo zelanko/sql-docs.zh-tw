@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703122"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>多維度模型化 (Adventure Works 教學課程)
   歡迎使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程。 這個教學課程描述如何使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 來開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案，所有範例都使用虛構公司 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 。  
@@ -51,13 +51,13 @@ ms.locfileid: "48049419"
   
 |課程|估計完成時間|  
 |------------|--------------------------------|  
-|[第 1 課：在 Analysis Services 專案內定義資料來源檢視](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分鐘|  
+|[第 1 課：定義資料來源檢視中的 Analysis Services 專案](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 分鐘|  
 |[第 2 課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)|30 分鐘|  
-|[第 3 課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分鐘|  
-|[第 4 課：定義進階屬性和維度屬性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分鐘|  
+|[第 3 課：修改量值、 屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 分鐘|  
+|[第 4 課：定義進階的屬性和維度屬性](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 分鐘|  
 |[第 5 課：定義維度和量值群組之間的關聯性](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 分鐘|  
 |[第 6 課：定義計算](lesson-6-defining-calculations.md)|45 分鐘|  
-|[第 7 課： 定義關鍵效能指標&#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分鐘|  
+|[第 7 課：定義關鍵效能指標&#40;Kpi&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 分鐘|  
 |[第 8 課：定義動作](lesson-8-defining-actions.md)|30 分鐘|  
 |[第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)|30 分鐘|  
 |[第 10 課：定義系統管理角色](lesson-10-defining-administrative-roles.md)|15 分鐘|  
@@ -66,6 +66,6 @@ ms.locfileid: "48049419"
 >  您將在此教學課程中建立的 Cube 資料庫是簡化的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型專案版本，此專案是 Adventure Works 範例資料庫的一部分，可在 codeplex 網站下載。 Adventure Works 多維度資料庫的教學課程版本經過簡化，更著重在您想要立即熟練的特定技巧上。 完成此教學課程之後，請考慮自行瀏覽多維度模型專案，以更了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度模型。  
   
 ## <a name="next-step"></a>下一個步驟  
- 若要開始本教學課程，請繼續進行第一課： [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
+ 若要開始本教學課程，請繼續進行第 1 課：[第 1 課：定義資料來源檢視中的 Analysis Services 專案](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
   
   

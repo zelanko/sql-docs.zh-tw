@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0136631904a9f4bf8a0cdb7c22e7c9241ba3aff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726264"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈」使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案產生的 XML 輸出檔做為輸入檔。 這些輸入檔很容易進行修改，以自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
@@ -43,7 +43,7 @@ ms.locfileid: "48087648"
 ## <a name="see-also"></a>另請參閱  
  [使用 XMLA 部署模型方案](deploy-model-solutions-using-xmla.md)   
  [同步處理 Analysis Services 資料庫](synchronize-analysis-services-databases.md)   
- [了解用來建立部署指令碼的輸入的檔](deployment-script-files-input-used-to-create-deployment-script.md)   
- [使用部署公用程式部署模型方案](deploy-model-solutions-with-the-deployment-utility.md)  
+ [了解用來建立部署指令碼的輸入檔](deployment-script-files-input-used-to-create-deployment-script.md)   
+ [使用部署公用程式的部署模型方案](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726599"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授與處理權限 (Analysis Services)
   身為管理員，您可以建立專用於 Analysis Services 處理作業的角色，讓您能夠將該特殊工作委派給其他使用者，或委派給用於自動排程處理的應用程式。 處理權限可在資料庫、Cube、維度和採礦結構層級上授與。 除非您正在使用一個非常大的 Cube 或表格式資料庫，否則建議在資料層級授與處理權限，內含所有物件，包含彼此間具有相依性的物件。  
@@ -27,9 +27,9 @@ ms.locfileid: "48181261"
  權限是透過將物件與權限和 Windows 使用者或群組帳戶關聯的角色來授與。 請記住，權限是加總的。 如果某個角色會授與處理 Cube 的權限，第二個角色則提供處理維度的相同使用者權限時，在兩個不同角色的權限結合之後，使用者即擁有處理 Cube 及處理該資料庫內之指定維度的權限。  
   
 > [!IMPORTANT]  
->  角色僅擁有 [處理] 權限的使用者將無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及處理物件。 這些工具需要`Read Definition`存取物件中繼資料的權限。 如果無法使用這些工具，就必須使用 XMLA 指令碼來執行處理作業。  
+>  角色僅擁有 [處理] 權限的使用者將無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及處理物件。 這些工具需要有 `Read Definition` 權限來存取物件中繼資料。 如果無法使用這些工具，就必須使用 XMLA 指令碼來執行處理作業。  
 >   
->  我們建議您也授與`Read Definition`基於測試目的的權限。 擁有使用者`Read Definition`並`Process Database`權限可以處理中的物件[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 以互動方式。 如需詳細資訊，請參閱 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
+>  建議您基於測試目的同時授與 `Read Definition` 權限。 擁有 `Read Definition` 和 `Process Database` 權限的使用者可以透過互動方式處理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的物件。 如需詳細資訊，請參閱 [授與物件中繼資料的讀取定義權限 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>設定資料庫層級的處理權限  
  本節說明如何針對資料庫中的所有 Cube、維度、採礦結構及採礦模型，由非管理員的使用者來啟用處理。  
@@ -93,7 +93,7 @@ ms.locfileid: "48181261"
 ## <a name="see-also"></a>另請參閱  
  [處理資料庫、 資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)   
- [授與資料庫權限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [授與讀取權限定義物件中繼資料&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [授與資料庫權限 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [授與物件中繼資料的讀取定義權限 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

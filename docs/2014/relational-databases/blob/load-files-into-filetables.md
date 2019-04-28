@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874745"
 ---
 # <a name="load-files-into-filetables"></a>載入檔案至 FileTable
   描述如何載入或移轉檔案至 FileTable 中。  
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ...含 IGNORE_CONSTRAINTS 子句的 SELECT * FROM OPENROWSET(BULK …)。  
   
-###  <a name="HowToBulkLoad"></a> 操作說明：將檔案大量載入 FileTable  
+###  <a name="HowToBulkLoad"></a> 操作說明：大量載入檔案至 FileTable 中  
  您可以使用各種方法將檔案大量載入 FileTable：  
   
 -   **bcp**  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  如需停用 FileTable 條件約束的詳細資訊，請參閱 [管理 FileTables](manage-filetables.md)。  
   
-###  <a name="disabling"></a> 操作說明：為大量載入停用 FileTable 條件約束  
+###  <a name="disabling"></a> 操作說明：針對大量載入停用 FileTable 條件約束  
  若不希望大量載入檔案至 FileTable 時發生強制啟動系統定義之條件約束負擔，您可暫時停用該條件約束。 如需詳細資訊，請參閱 [管理作業步驟](manage-filetables.md)。  
   
 ## <a name="see-also"></a>另請參閱  

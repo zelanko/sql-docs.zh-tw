@@ -1,5 +1,5 @@
 ---
-title: 定義多對多關聯性及多對多關聯性屬性 |Microsoft 文件
+title: 定義多對多關聯性及多對多關聯性屬性 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53b20b10aea985722f9c498079a3267a5ddb6969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825683"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "34026895"
   
  就視覺上而言，Cube 圖表中不會指示多對多維度關聯性。 請改用 [維度使用方式] 索引標籤來快速識別模型中的任何多對多關聯性。 以下圖示會指示多對多關聯性。  
   
- ![維度使用方式中的多對多圖示](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
+ ![在 維度使用方式的多對多圖示](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
   
  請按一下此按鈕來開啟 [定義關聯性] 對話方塊，以確認關聯性類型為多對多並且檢視關聯性中會使用哪一個中繼量值群組。  
   
- ![定義關聯性中維度使用方式 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
+ ![定義維度使用方式中的關聯性 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
   
  在後續的章節中，您將會學習如何設定多對多維度及測試模型的行為。 如果您想要先檢閱其他資訊或是先嘗試教學課程，請參閱本文結尾的 **深入了解** 。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34026895"
   
  為了說明用來建立多對多關聯性的步驟，這個程序會在 Adventure Works 範例 Cube 中重新建立其中一個多對多關聯性。 如果您已經將來源資料 (也就是 Adventure Works 範例資料倉儲) 安裝在關聯式資料庫引擎執行個體上，您可以依照以下步驟進行。  
   
-#### <a name="step-1-verify-dsv-relationships"></a>步驟 1：確認 DSV 關聯性  
+#### <a name="step-1-verify-dsv-relationships"></a>步驟 1:確認 DSV 關聯性  
   
 1.  在 SQL Server Data Tools 的多維度專案中，建立 Adventure Works DW 2012 關聯式資料倉儲的資料來源 (裝載於 SQL Server Database Engine 執行個體上)。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34026895"
   
      ![顯示相關的資料表的 DSV](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.PNG "顯示相關的資料表的 DSV")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>步驟 2：建立維度和量值群組  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>步驟 2:建立維度和量值群組  
   
 1.  在 SQL Server Data Tools 的多維度專案中，以滑鼠右鍵按一下 [維度]，然後選取 [新增維度]。  
   
@@ -87,19 +87,19 @@ ms.locfileid: "34026895"
   
      針對屬性選取全部的值。  
   
-     ![新維度中的屬性清單](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "新維度中的屬性清單")  
+     ![在 新維度的屬性清單](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesreason.PNG "新維度中的屬性清單")  
   
 3.  根據現有的資料表 [事實網際網路銷售] 建立第二個維度。 雖然這是事實資料表，但是它包含了銷售訂單資訊。 我們將會使用它來建立「銷售訂單」維度。  
   
 4.  在 [指定來源資訊] 中，您將會看到一則警告指出必須指定名稱資料行。 選擇 **SalesOrderNumber** 作為名稱。  
   
-     ![顯示 [名稱] 欄的銷售訂單維度](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesordersource.PNG "顯示 [名稱] 欄的銷售訂單維度")  
+     ![顯示名稱 資料行的銷售訂單維度](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesordersource.PNG "顯示名稱 資料行的銷售訂單維度")  
   
 5.  在精靈的下一頁選擇屬性。 在此範例中，您可以只選取 **SalesOrderNumber**。  
   
-     ![銷售訂單維度顯示屬性清單](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "銷售訂單維度的顯示屬性清單")  
+     ![銷售訂單維度顯示屬性清單](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "銷售訂單維度顯示屬性清單")  
   
-6.  將維度重新命名為**維度銷售訂單**，好讓您擁有一致的維度命名慣例。  
+6.  將維度重新命名為 **維度銷售訂單**，好讓您擁有一致的維度命名慣例。  
   
      ![顯示維度重新命名的精靈頁面](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorders.PNG "顯示維度重新命名的精靈頁面")  
   
@@ -123,13 +123,13 @@ ms.locfileid: "34026895"
   
 1.  在 Cube 設計師中，按一下 [維度使用方式] 索引標籤。請注意，[維度銷售原因] 和 [事實網際網路銷售] 之間已經有多對多關聯性。 記得以下圖示表示多對多關聯性。  
   
-     ![維度使用方式中的多對多圖示](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
+     ![在 維度使用方式的多對多圖示](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
   
 2.  按一下 [維度銷售原因] 和 [事實網際網路銷售] 之間的交集資料格，然後按一下此按鈕來開啟 [定義關聯性] 對話方塊。  
   
      您可以看到這個對話方塊是用來指定多對多關聯性。 如果您改為新增具有一般關聯性的維度，您會使用這個對話方塊將它變更為多對多關聯性。  
   
-     ![定義關聯性中維度使用方式 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
+     ![定義維度使用方式中的關聯性 按鈕](../../analysis-services/multidimensional-models/media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
   
 3.  將專案部署到 Analysis Services 多維度執行個體。 在下一個步驟，您將會瀏覽 Excel 中的 Cube 來驗證其行為。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "34026895"
   
      在往下捲動的過程中，您可以發現訂單號碼 **SO5382**的銷售量和銷售原因。 這個特別訂單的總計為 **539.99**，而歸因於此訂單的購買原因包括促銷、其他和價格。  
   
-     ![Excel 工作表顯示多對多彙總](../../analysis-services/multidimensional-models/media/ssas-m2m-excel.png "Excel 工作表顯示多對多彙總")  
+     ![顯示多對多彙總的 Excel 工作表](../../analysis-services/multidimensional-models/media/ssas-m2m-excel.png "顯示多對多彙總的 Excel 工作表")  
   
      請注意，已經為訂單正確算出銷售量，整筆訂單為 **539.99** 。 雖然每個原因都指出 **539.99** ，但是該值並不是所有三個原因的總和，因而錯誤地誇大了總計。  
   
@@ -179,12 +179,12 @@ ms.locfileid: "34026895"
   
  [多對多革命 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [教學課程：SQL Server Analysis Services 的多對多維度範例](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [教學課程：SQL Server Analysis services 多對多維度範例](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>另請參閱  
  [維度關聯性](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [安裝 Analysis services 多維度模型化教學課程的範例資料和專案](../../analysis-services/install-sample-data-and-projects.md)   
- [部署 Analysis Services 專案 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [安裝 Analysis Services 多維度模型化教學課程的範例資料和專案](../../analysis-services/install-sample-data-and-projects.md)   
+ [部署 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多維度模型中的檢視方塊](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

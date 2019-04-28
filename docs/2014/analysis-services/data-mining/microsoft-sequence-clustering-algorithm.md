@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733690"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序叢集演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]時序群集演算法是時序分析演算法所提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 您可以使用此演算法來瀏覽包含事件可透過遵循路徑連結的資料或*序列*。 此演算法會透過分組或群集相同的時序來尋找最常見的時序。 以下是包含可能用於資料採礦之時序的一些資料範例，讓您得以深入了解常見問題或商務案例：  
@@ -62,7 +62,7 @@ ms.locfileid: "48190778"
 ## <a name="viewing-a-sequence-clustering-model"></a>檢視時序叢集模型  
  此演算法所建立的採礦模型會包含資料中最常見時序的描述。 若要瀏覽此模型，您可以使用 **[Microsoft 時序群集檢視器]**。 當您檢視時序叢集模型時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會顯示包含多項轉換的叢集。 您也可以檢視相關的統計資料。 如需詳細資訊，請參閱 [使用 Microsoft 時序叢集檢視器瀏覽模型](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
- 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個節點中所有值的分佈、每個群集的機率，以及有關轉換的詳細資料。 如需詳細資訊，請參閱[時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)。  
+ 如果您想要知道更多詳細資訊，您可以在 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)中瀏覽此模型。 針對此模型所儲存的內容包括每個節點中所有值的分佈、每個群集的機率，以及有關轉換的詳細資料。 如需詳細資訊，請參閱 [時序叢集模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-sequence-clustering-models.md)。  
   
 ## <a name="creating-predictions"></a>建立預測  
  在此模型已定型之後，結果會儲存成一組模式。 您可以使用資料中最常見時序的描述來預測新時序的下一個可能步驟。 不過，因為此演算法包含其他資料行，所以您可以使用產生的模型來識別時序資料與非循序輸入之間的關聯性。 例如，如果您將人口統計資料加入至模型，就可以針對特定客戶群組進行預測。 您可以自訂預測查詢，以便傳回變動數目的預測或傳回描述性統計資料。  
@@ -78,8 +78,8 @@ ms.locfileid: "48190778"
 -   支援 OLAP 採礦模型的使用和資料採礦維度的建立。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft 時序群集演算法技術參考](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [時序叢集模型查詢範例](clustering-model-query-examples.md)   
  [使用 Microsoft 時序叢集檢視器瀏覽模型](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   

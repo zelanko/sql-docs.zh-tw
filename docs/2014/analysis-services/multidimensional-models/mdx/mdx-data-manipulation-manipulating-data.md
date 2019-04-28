@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0db6ba98ec318cfc9780984f54ff04a3cedd20cf
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699770"
 ---
 # <a name="manipulating-data-mdx"></a>操作資料 (MDX)
 

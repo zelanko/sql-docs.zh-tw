@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703179"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>採礦精確度圖表設計師 (資料採礦)
   使用 **[採礦精確度圖表]** 檢視，即可比較所包含的所選採礦結構上建立之採礦模型的效能。  
@@ -35,9 +35,9 @@ ms.locfileid: "48171968"
   
 -   [分類矩陣索引標籤&#40;採礦精確度圖表檢視&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     在 [選取模型，顯示分類矩陣`Input Selection`] 索引標籤。  
+     針對在 `Input Selection` 索引標籤上選取的模型，顯示分類矩陣。  
   
--   [交叉驗證索引標籤&#40;採礦精確度圖表檢視&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [交叉驗證索引標籤 &#40;採礦精確度圖表檢視&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      針對選取的採礦結構設定選項，並產生交叉驗證結果。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48171968"
 ## <a name="see-also"></a>另請參閱  
  [採礦結構 檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)   
  [採礦模型檢視&#40;資料採礦模型設計工具&#41;](mining-models-view-data-mining-model-designer.md)   
- [採礦模型檢視器&#40;資料採礦模型設計工具&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [採礦模型檢視器 &#40;資料採礦模型設計師&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [預測查詢產生器&#40;資料採礦&#41;](prediction-query-builder-data-mining.md)  
   
   

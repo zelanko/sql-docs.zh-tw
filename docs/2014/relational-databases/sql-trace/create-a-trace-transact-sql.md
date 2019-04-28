@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ebd2a138451f3ebb7da267284f110790f2db058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714781"
 ---
 # <a name="create-a-trace-transact-sql"></a>建立追蹤 (Transact-SQL)
   此主題描述如何使用預存程序來建立追蹤。  
@@ -34,7 +34,7 @@ ms.locfileid: "54132098"
      **sp_trace_setevent** 和 **sp_trace_setfilter** 只能在已停止的現有追蹤上執行。  
   
     > [!IMPORTANT]  
-    >  不同於一般的預存程序參數的所有 SQL Server Profiler 預存程序 (<strong>sp_trace_*xx*</strong>) 都有強制類型，而且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+    >  與一般的預存程序不同，所有 SQL Server Profiler 預存程序 (<strong>sp_trace_*xx*</strong>) 的參數均嚴格區分類型，且不支援自動資料類型轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
 ## <a name="example"></a>範例  
  下列程式碼將示範如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立追蹤。 這個程式碼含有三個區段：建立追蹤、擴展追蹤檔案以及停止追蹤。 您可以透過加入想要追蹤的事件，自訂追蹤。 如需事件和資料行的清單，請參閱 [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)來建立追蹤。  

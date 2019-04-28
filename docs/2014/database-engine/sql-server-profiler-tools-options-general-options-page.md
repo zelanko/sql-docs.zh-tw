@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844925"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-工具選項 （一般選項頁面）
   使用 [一般選項] 對話方塊來檢視或指定下列選項。  
@@ -51,7 +51,7 @@ ms.locfileid: "48113058"
  建立連接後立即使用預設範本開始追蹤。  
   
  **提供者版本變更時，更新追蹤定義**  
- 更新提供者時，將最新追蹤定義套用至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 依預設，不會核取此項目。 這會強制 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 查詢伺服器的追蹤定義並在磁碟上重新建立 (如果已存在) 檔案。  
+ 更新提供者時，將最新追蹤定義套用至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 依預設，不會核取此項目。 這會強制 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 查詢伺服器的追蹤定義並在磁碟上重新建立 (如果已存在) 檔案。  
   
 ### <a name="file-rollover-options"></a>檔案換用選項  
  **依序載入所有換用檔案，不另外提示**  
@@ -61,7 +61,7 @@ ms.locfileid: "48113058"
  在開啟追蹤檔案時，讓 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 在加入換用檔案之前給您提示。  
   
  **永不載入後續的換用檔案**  
- 開啟追蹤檔案時，[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 永不載入後續的換用檔案。  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 開啟追蹤檔案時，永不載入後續的換用檔案。  
   
 ### <a name="replay-options"></a>重新執行選項  
  **預設重新執行執行緒數目**  
@@ -74,9 +74,9 @@ ms.locfileid: "48113058"
  指定重新執行期間健全狀況監視器輪詢間隔秒數。 預設值為 60 秒。 此值可以讓使用者設定健全狀況監視器輪詢是否有應結束之候選者的頻率。  
   
 ## <a name="see-also"></a>另請參閱  
- [連接到伺服器之後，自動啟動追蹤&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [設定追蹤顯示預設值&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [重新執行追蹤資料表&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [在連接伺服器之後自動啟動追蹤 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [設定追蹤顯示預設值 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [重新執行追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [重新執行追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [重新執行追蹤](../tools/sql-server-profiler/replay-traces.md)   
  [設定全域追蹤選項&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   

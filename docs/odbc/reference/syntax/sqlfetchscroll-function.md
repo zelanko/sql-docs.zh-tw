@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982172"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 函數
 **合規性**  
@@ -50,7 +50,7 @@ SQLRETURN SQLFetchScroll(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Sqlfetchscroll*  
+ *FetchOrientation*  
  [輸入]  
   
  擷取的型別：  
@@ -65,9 +65,9 @@ SQLRETURN SQLFetchScroll(
   
  SQL_FETCH_ABSOLUTE  
   
- SQL_FETCH_RELATIVE 但  
+ SQL_FETCH_RELATIVE  
   
- 要使用 SQL_FETCH_BOOKMARK  
+ SQL_FETCH_BOOKMARK  
   
  如需詳細資訊，請參閱 「 定位游標 」 「 註解 」 一節。  
   
@@ -129,15 +129,15 @@ SQLRETURN SQLFetchScroll(
 ## <a name="positioning-the-cursor"></a>遊標定位在  
  建立結果集時，資料指標位於結果集的開頭之前。 **SQLFetchScroll**放置區塊資料指標的值為基礎*Sqlfetchscroll*並*FetchOffset*引數下表所示。 下一節顯示的確切規則來判斷新的資料列集的開頭。  
   
-|Sqlfetchscroll|意義|  
+|FetchOrientation|意義|  
 |----------------------|-------------|  
 |SQL_FETCH_NEXT|傳回下一個資料列集。 這就相當於呼叫**SQLFetch**。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
 |SQL_FETCH_PRIOR|傳回先前的資料列集。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
-|SQL_FETCH_RELATIVE 但|傳回資料列集*FetchOffset*從目前的資料列集的開頭。|  
+|SQL_FETCH_RELATIVE|傳回資料列集*FetchOffset*從目前的資料列集的開頭。|  
 |SQL_FETCH_ABSOLUTE|傳回資料列集資料列開始*FetchOffset*。|  
 |SQL_FETCH_FIRST|在結果集中傳回的第一個資料列集。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
 |SQL_FETCH_LAST|在結果集中傳回最後一個完整的資料列集。<br /><br /> **SQLFetchScroll**的值會略過*FetchOffset*。|  
-|要使用 SQL_FETCH_BOOKMARK|傳回資料列集 FetchOffset 的資料列從 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性所指定的書籤。|  
+|SQL_FETCH_BOOKMARK|傳回資料列集 FetchOffset 的資料列從 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性所指定的書籤。|  
   
  驅動程式不需要支援所有 fetch 方向;應用程式呼叫**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1 （取決於資料指標類型） 的資訊類型來判斷哪一個 fetch驅動程式支援的方向。 應用程式應該看看這些資訊類型在 SQL_CA1_NEXT、 SQL_CA1_RELATIVE、 SQL_CA1_ABSOLUTE 和 WQL_CA1_BOOKMARK 位元遮罩。 此外，如果資料指標是順向的而不 SQL_FETCH_NEXT，Sqlfetchscroll。 **SQLFetchScroll**傳回 SQLSTATE HY106 （擷取類型超出範圍）。  
   
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |*開始之前*|1|  
-|*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*後端*|  
 |*後端*|*後端*|  
   
@@ -177,8 +177,8 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*開始之前*|*開始之前*|  
 |*CurrRowsetStart = 1*|*開始之前*|  
-|*1 < CurrRowsetStart < = RowsetSize* <sup>[2]。</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart-RowsetSize* <sup>[2]</sup>|  
+|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*後端和 LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*後端和 LastResultRow > = RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2]。</sup>|  
   
@@ -186,7 +186,7 @@ SQLRETURN SQLFetchScroll(
   
  [2] 如果自前一個呼叫來擷取資料列之後已變更的資料列集大小，這會是新的資料列集大小。  
   
-## <a name="sqlfetchrelative"></a>SQL_FETCH_RELATIVE 但  
+## <a name="sqlfetchrelative"></a>SQL_FETCH_RELATIVE  
  適用下列規則。  
   
 |條件|新的資料列集的第一個資料列|  
@@ -195,7 +195,7 @@ SQLRETURN SQLFetchScroll(
 |*BeforeStart 和 FetchOffset < = 0*|*開始之前*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*開始之前*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*開始之前*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*後端*|  
 |*後端和 FetchOffset > = 0*|*後端*|  
@@ -212,8 +212,8 @@ SQLRETURN SQLFetchScroll(
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
 |*FetchOffset < 0 與&#124;FetchOffset &#124; < = LastResultRow*|*LastResultRow FetchOffset + 1*|  
-|*FetchOffset < 0 與&#124;FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*開始之前*|  
-|*FetchOffset < 0 與&#124;FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*開始之前*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*開始之前*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*後端*|  
@@ -229,19 +229,19 @@ SQLRETURN SQLFetchScroll(
   
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
-|*任何*|*1*|  
+|*Any*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  適用下列規則。  
   
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow-RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 如果自前一個呼叫來擷取資料列之後已變更的資料列集大小，這會是新的資料列集大小。  
   
-## <a name="sqlfetchbookmark"></a>要使用 SQL_FETCH_BOOKMARK  
+## <a name="sqlfetchbookmark"></a>SQL_FETCH_BOOKMARK  
  適用下列規則。  
   
 |條件|新的資料列集的第一個資料列|  
@@ -335,7 +335,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |SQLExtendedFetch 引數|值|  
 |-------------------------------|-----------|  
 |StatementHandle|在 StatementHandle **SQLFetchScroll**。|  
-|Sqlfetchscroll|中的 Sqlfetchscroll **SQLFetchScroll**。|  
+|FetchOrientation|中的 Sqlfetchscroll **SQLFetchScroll**。|  
 |FetchOffset|Sqlfetchscroll 是否不是要使用 SQL_FETCH_BOOKMARK FetchOffset 引數中的值**SQLFetchScroll**用。<br /><br /> 如果要使用 SQL_FETCH_BOOKMARK Sqlfetchscroll 即會使用 SQL_ATTR_FETCH_BOOKMARK_PTR 陳述式屬性所指定的位址儲存的值。|  
 |RowCountPtr|SQL_ATTR_ROWS_FETCHED_PTR 陳述式屬性所指定的位址。|  
 |RowStatusArray|Sql_attr_row_status_ptr 設定陳述式屬性所指定的位址。|  

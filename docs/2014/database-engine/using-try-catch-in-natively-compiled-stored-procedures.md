@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842476"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>在原生編譯預存程序中使用 Try..Catch
   您可以在原生編譯預存程序內使用 try..catch 區塊。 以下為支援的結構：  

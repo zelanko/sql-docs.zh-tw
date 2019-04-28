@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bbfd748bcb649e5f7d103683d20413764a62a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842496"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - 尋找對話方塊
   使用 [尋找] 對話方塊，即可針對追蹤搜尋特定字元或文字。 若要取消進行中的搜尋，請按下 ESC 鍵。  
@@ -48,7 +48,7 @@ ms.locfileid: "48078925"
   
 ## <a name="see-also"></a>另請參閱  
  [尋找值或在追蹤時的資料行&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
- [建立追蹤&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [建立追蹤 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

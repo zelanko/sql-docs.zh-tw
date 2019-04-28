@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724889"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 時序群集演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "52418379"
  適用於採礦結構資料行。  
   
  MODEL_EXISTENCE_ONLY  
- 表示資料行將被視為擁有兩個可能狀態： **遺漏**並**現有**。 Null 值會被視為 **Missing** 值。  
+ 表示資料行都會被視為擁有兩個可能狀態：**遺漏**並**現有**。 Null 值會被視為 **Missing** 值。  
   
  適用於採礦模型資料行。  
   

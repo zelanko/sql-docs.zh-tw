@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855848"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
 Microsoft OLE DB Provider for Microsoft 索引服務提供程式設計的唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
@@ -76,7 +76,7 @@ MSIDXS
 |[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)*|讀取/寫入|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|一律**adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|一律**adOpenStatic**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|一律**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|
 |[篩選](../../../ado/reference/ado-api/filter-property.md)|讀取/寫入|
@@ -87,7 +87,7 @@ MSIDXS
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|讀取/寫入|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|唯讀|
 |[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|讀取/寫入|
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|
+|[狀態](../../../ado/reference/ado-api/state-property-ado.md)|唯讀|
 |[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|唯讀|
 
  \*為了讓這項功能提供者存在於上必須啟用書籤**資料錄集**。

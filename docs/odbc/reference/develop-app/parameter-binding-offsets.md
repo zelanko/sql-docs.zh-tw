@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998924"
 ---
 # <a name="parameter-binding-offsets"></a>參數繫結位移
 應用程式可以指定的位移會新增至繫結參數緩衝區的位址和對應的長度/指標緩衝區位址何時**SQLExecDirect**或是**SQLExecute**呼叫。 這些新增內容的結果判斷這些作業中使用的位址。  

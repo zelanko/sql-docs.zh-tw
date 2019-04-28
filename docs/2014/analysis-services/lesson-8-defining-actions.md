@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728175"
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 課：定義動作
   在這一課，您將學會定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中的動作。 動作只是一個儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的多維度運算式 (MDX) 陳述式，可以併入用戶端應用程式中，由使用者啟動。  

@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837495"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>備份、 還原和移動的 SSIS 目錄
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 包括 SSISDB 資料庫。 您可以查詢 SSISDB 資料庫中的檢視，以檢查物件、設定以及儲存在 [SSISDB] 目錄中的作業資料。 本主題提供備份與還原資料庫的指示。  

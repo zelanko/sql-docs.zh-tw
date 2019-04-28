@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843685"
 ---
 # <a name="options-text-editorxmltabs-page"></a>選項 (文字編輯器：XML：定位點頁面)
   這個對話方塊可以讓您變更在 XML 編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來編輯 XML 文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]** 資料夾，展開 **[XML]** 子資料夾，然後按一下 **[定位點]**。  
@@ -30,10 +30,10 @@ ms.locfileid: "48050148"
  **無**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
- **區塊**  
+ **Block**  
  如果選取此選項，當您按下 ENTER 鍵時所建立的新行就會自動縮排與上一行相同的距離。  
   
- **智慧**  
+ **Smart**  
  如果選取此選項，當您按下 ENTER 時所建立之新行的位置，就會根據內容而定。 例如，在左大括號 ({) 之後，其中的行會自動增加一個定位點的縮排距離。 對應的右大括號 (}) 則與左大括號重新對齊。  
   
 ## <a name="tabs"></a>定位點  

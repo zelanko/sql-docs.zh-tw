@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720052"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>指定資料類型和內容類型 (基本資料採礦教學課程)
   現在您已經選取用來建立結構及定型模型的資料行，請針對精靈所設定的預設資料類型和內容類型進行任何必要的變更。  

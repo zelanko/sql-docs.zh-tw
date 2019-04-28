@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874924"
 ---
 # <a name="designing-assemblies"></a>設計組件
   此主題描述以下在設計組件時應該考慮的因數：  
@@ -39,7 +39,7 @@ ms.locfileid: "48196238"
 -   如果有段 Managed 程式碼需要更高的權限，最好將那個程式碼跟不需要較高權限的程式碼分隔，放在個別的組件。  
   
 ## <a name="managing-assembly-security"></a>管理組件安全性  
- 您可以控制在執行 Managed 程式碼時，可存取受到「.NET 程式碼存取安全性」保護之資源的組件多寡。 建立或修改組件時，指定三種權限集之一，就可以完成此動作：SAFE、EXTERNAL_ACCESS 或 UNSAFE。  
+ 您可以控制在執行 Managed 程式碼時，可存取受到「.NET 程式碼存取安全性」保護之資源的組件多寡。 您這麼做，當您建立或修改組件指定三個權限集合的其中一個：SAFE、 EXTERNAL_ACCESS 或 UNSAFE。  
   
 ### <a name="safe"></a>SAFE  
  SAFE 是預設的權限集，而且其限制最為嚴格。 由具有 SAFE 權限的組件執行的程式碼，無法存取外部系統資源，例如，檔案、網路、環境變數或登錄。 SAFE 程式碼可以存取本機 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的資料，或是執行不會存取本機資料庫以外資源的計算及商務邏輯。  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701991"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理連接與工作階段 (XMLA)
   *Statefulness*是期間伺服器保留之識別與用戶端方法呼叫之間的內容。 *Statelessness*是期間伺服器不會記住之識別與內容的用戶端方法呼叫完成後的條件。  

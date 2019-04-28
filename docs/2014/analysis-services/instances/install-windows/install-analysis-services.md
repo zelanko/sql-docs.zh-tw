@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8690c252ddb1b91cd939044ee4f0ccc3a6f4a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703634"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>以表格模式安裝 Analysis Services
   如果您安裝 Analysis Services 以使用新表格式模型功能，則必須在支援該模型類型的伺服器模式下安裝 Analysis Services。 此伺服器模式為表格式，並會在安裝期間設定。  
@@ -56,7 +56,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |值|描述|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|這是預設值。 如果您未設定`ASSERVERMODE`，伺服器會安裝在多維度伺服器模式。|  
+|MULTIDIMENSIONAL|這是預設值。 如果您未設定 `ASSERVERMODE`，伺服器會以多維度伺服器模式安裝。|  
 |POWERPIVOT|此為選擇性的值。 實際上，如果您設定 `ROLE` 參數，即會自動將伺服器模式設為 1，使得 `ASSERVERMODE` 成為 PowerPivot for SharePoint 安裝的選用參數。 如需詳細資訊，請參閱 <<c0> [ 從命令提示字元安裝的 PowerPivot](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)。|  
 |TABULAR|如果您使用命令列安裝程式，在表格模式下安裝 Analysis Services，則需要此值。|  
   

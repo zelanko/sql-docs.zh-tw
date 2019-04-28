@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_1101 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 1101 (Database Engine error)
 ms.assetid: d63b67d5-59f5-4f77-904e-5ba67f2dd850
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4468e85f8170ecb6b23abf5af8ee3a114a6bef3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870164"
 ---
 # <a name="mssqlserver1101"></a>MSSQLSERVER_1101
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -33,15 +34,14 @@ ms.locfileid: "48152158"
 |訊息文字|檔案群組中的磁碟空間不足，無法為資料庫 '%.*ls' 配置新的頁面，檔案群組：'%.\*ls'。 請卸除檔案群組中的物件、將其他檔案加入檔案群組，或將檔案群組中現有檔案設定為自動成長，以產生必要的空間。|  
   
 ## <a name="explanation"></a>說明  
- 檔案群組中沒有可用的磁碟空間。  
+檔案群組中沒有可用的磁碟空間。  
   
 ## <a name="user-action"></a>使用者動作  
- 下列動作可以在檔案群組中提供可用的空間。  
+下列動作可以在檔案群組中提供可用的空間。  
   
 -   開啟自動成長功能。  
   
 -   加入更多檔案到檔案中。  
   
 -   卸除檔案群組中不需要的索引或資料表，以釋出磁碟空間。  
-  
   

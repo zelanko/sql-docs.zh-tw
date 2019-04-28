@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6a27cfbbe4a499f6ac2c598e80f30409a37ba2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728204"
 ---
-# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>第 7 課：定義關鍵效能指標 (Kpi)
+# <a name="lesson-7-defining-key-performance-indicators-kpis"></a>第 7 課：定義關鍵效能指標 (KPI)
   在這一課，您將學會定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中的關鍵效能指標 (KPI)。 KPI 會提供一個架構，讓您定義伺服器端的計算以度量您的生意，另外，它們也會將結果資訊的顯示方式標準化。 KPI 可以透過資料存取 API 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] 工具以及協力廠商工具，顯示在報表、入口網站以及儀表板上。 KPI 大約屬於一般量值和其他多維度運算式 (MDX) 運算式的中繼資料包裝函式。 如需詳細資訊，請參閱[多維度模型中的關鍵效能指標 &#40;KPI&#41;](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)。  
   
 > [!NOTE]  

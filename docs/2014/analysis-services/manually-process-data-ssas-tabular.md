@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728334"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>手動處理資料 (SSAS 表格式)
   此主題描述如何手動處理 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的工作空間資料。  
@@ -74,7 +74,7 @@ ms.locfileid: "48189763"
  按一下可暫停處理作業。 如果作業耗費時間過長，或者如果有太多錯誤，這個選項會很有用。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理資料&#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
- [疑難排解處理資料&#40;SSAS 表格式&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [處理資料 &#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
+ [疑難排解處理資料 &#40;SSAS 表格式&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d396ac9bfd8f04a211e01c8e8384e62f0808d42b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725524"
 ---
 # <a name="calculation-context"></a>計算內容
   計算內容是 Cube 中評估運算式以及所有座標為明確已知或可衍生自運算式的已知子空間。  
@@ -39,7 +39,7 @@ ms.locfileid: "48081478"
   
 5.  每個座標軸上的 Cube 或 Subcube 資料格，刪除座標軸上的空 Tuple 並且套用 HAVING 子句。  
   
-6.  如需詳細資訊，請參閱 <<c0> [ 建立查詢中的 Cube 內容&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)。</c0>  
+6.  如需詳細資訊，請參閱 [建立查詢中的 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)。  
   
  在下列查詢中，資料列軸的計算內容受到 WHERE 子句中指定之 Country 屬性成員和 Calendar Year 屬性成員限制。  
   
@@ -71,8 +71,8 @@ WHERE (Customer.Country.France,
 >  為了提高查詢效能，您應在解析程序中盡早刪除成員和 Tuple。 如此一來，最終一個成員集合上的複雜查詢階段計算便會在最少資料格上運作。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立查詢中的 Cube 內容&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [建立查詢中的 Cube 內容 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

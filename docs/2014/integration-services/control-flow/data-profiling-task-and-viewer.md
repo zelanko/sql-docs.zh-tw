@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832574"
 ---
 # <a name="data-profiling-task-and-viewer"></a>資料分析工作和檢視器
   「資料分析」工作提供擷取、轉換和載入資料之處理內部的資料分析功能。 您可以使用「資料分析」工作來獲得下列好處：  

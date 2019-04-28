@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855350"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>建立方案與資料來源 (中繼資料採礦教學課程)
   若要使用資料採礦，您必須先在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 **[Analysis Services 多維度和資料採礦專案]** 範本建立專案。 當您開啟範本時，它會自動將您進行資料採礦可能需要的所有結構描述載入設計師中：資料來源、採礦結構和資料模型，甚至是 Cube (如果您的採礦結構使用多維度資料)。  

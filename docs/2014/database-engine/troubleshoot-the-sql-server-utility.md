@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842524"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>疑難排解 SQL Server 公用程式
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式問題的疑難排解可能包括解決 SQL Server 執行個體向 UCP 註冊作業失敗的問題、解決因無法收集資料而導致 UCP 上 Managed 執行個體清單檢視變為灰色圖示的問題、改善效能瓶頸或是解決資源健全狀況的問題。 如需有關所識別的資源健全狀況問題的緩和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]UCP，請參閱 <<c2> [ 疑難排解的 SQL Server 資源健全狀況&#40;SQL Server 公用程式&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。</c2>  
@@ -48,9 +48,9 @@ ms.locfileid: "53371060"
   
  簡化的錯誤訊息如下：  
   
- 命令執行已停止因為 Shell 變數 "ErrorActionPreference" 已設定為 停止:拒絕存取。  
+ 命令執行已停止因為 shell 變數"ErrorActionPreference"已設定為 停止：拒絕存取。  
   
- 錯誤：\<日期-時間 （MM/DD/YYYY hh: mm:） >:收集 CPU 屬性時攔截到例外狀況。  WMI 查詢可能已經失敗。  警告。  
+ 錯誤：\<日期-時間 （MM/DD/YYYY hh: mm:） >:收集 cpu 屬性時攔截的例外狀況。  WMI 查詢可能已經失敗。  警告。  
   
  若要解決這個問題，請確認下列組態設定：  
   

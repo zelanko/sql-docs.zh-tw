@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726597"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授與維度資料的自訂存取權 (Analysis Services)
   啟用 Cube 的讀取權限後，您可以設定額外的權限以明確允許或拒絕維度成員 (包括 Measures 維度中的量值，其中含有 Cube 中使用的所有量值) 的存取。 例如，假設指定了多個轉售商類別，您可能想要設定權限以排除特定商業類型的資料。 下圖為拒絕存取 Reseller 維度中之 Warehouse 商業類型之前與之後的效果。  
@@ -51,7 +51,7 @@ ms.locfileid: "48091730"
   
 2.  搜尋 `DefaultMeasure`。 您應該會在 Cube 中發現一個，在每個檢視方塊中各發現一個。 當您定義維度安全性時，請避免限制對預設量值的存取。  
   
-3.  接下來，搜尋`MeasureExpression`。 量值運算式是依據某項計算的量值，而計算通常還包含其他量值。 確認您要限制的量值並未使用於運算式中。 或者，當您限制存取的同時，務必也在整個 Cube 中一併排除對該量值的所有參考。  
+3.  接著搜尋 `MeasureExpression`。 量值運算式是依據某項計算的量值，而計算通常還包含其他量值。 確認您要限制的量值並未使用於運算式中。 或者，當您限制存取的同時，務必也在整個 Cube 中一併排除對該量值的所有參考。  
   
 4.  最後，搜尋 `DefaultMember`。 記下做為屬性預設成員的所有屬性。 設定維度安全性時，請避免對那些屬性設定限制。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48091730"
   
 -   如果資料庫角色沒有定義屬性的預設成員， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會使用該屬性本身定義的預設成員。 除非您另外指定，否則屬性的預設成員就是 `All` 成員 (除非該屬性定義為非彙總)。  
   
- 例如，假設資料庫角色指定`Male`的預設成員為`Gender`屬性。 除非查詢明確包含 `Gender` 屬性並為此屬性指定不同成員，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會傳回只包含男性客戶的資料集。 如需設定預設成員的詳細資訊，請參閱 [定義預設成員](attribute-properties-define-a-default-member.md)。  
+ 例如，假設資料庫角色指定 `Male` 做為 `Gender` 屬性的預設成員。 除非查詢明確包含 `Gender` 屬性並為此屬性指定不同成員，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會傳回只包含男性客戶的資料集。 如需設定預設成員的詳細資訊，請參閱 [定義預設成員](attribute-properties-define-a-default-member.md)。  
   
  **啟用視覺化總計**  
  VisualTotals 屬性會指出所顯示彙總資料格的值，是根據所有資料格值來計算，還是只根據資料庫角色所看見資料格的值來計算。  
@@ -127,9 +127,9 @@ ms.locfileid: "48091730"
  按一下即可測試此頁面定義的 MDX 語法。  
   
 ## <a name="see-also"></a>另請參閱  
- [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授與對資料格資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [資料採礦結構和模型的權限授與&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [在 資料來源物件上的權限授與&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授與資料來源物件的權限 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

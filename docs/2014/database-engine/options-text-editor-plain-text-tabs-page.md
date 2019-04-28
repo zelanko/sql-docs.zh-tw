@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844284"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>選項 (文字編輯器 - 純文字 - 定位點頁面)
   使用這個對話方塊可變更文字編輯器中按 Tab 鍵移動的行為，這個文字編輯器是用來編輯與特定開發語言沒有關聯的文件。 若要顯示這些設定，請按一下 [工具] 功能表上的 [選項]，展開 [文字編輯器]，展開 [純文字]，然後按一下 [定位點]。  
@@ -30,10 +30,10 @@ ms.locfileid: "48074761"
  **無**  
  按下 ENTER 後，請勿縮排新建立的行。 資料指標會放在新行的第一個資料行上。  
   
- **區塊**  
+ **Block**  
  按下 ENTER 後，將新建立的行縮排至與前一行相同的縮排距離。  
   
- **智慧**  
+ **Smart**  
  純文字編輯器不支援此格式類型。  
   
 ## <a name="tabs"></a>定位點  

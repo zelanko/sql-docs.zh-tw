@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856309"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>建立類神經網路結構和模型 (中繼資料採礦教學課程)
   若要建立資料採礦模型，您必須先使用「資料採礦精靈」，根據新的資料來源檢視建立新的採礦結構。 在這項工作中，您將利用這個精靈來建立採礦結構，並同時根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 類神經網路演算法來建立關聯的採礦模型。  
@@ -96,15 +96,15 @@ ms.locfileid: "56037719"
     |AutomaticResponses|Continuous|長整數|  
     |AverageTimePerIssue|Continuous|長整數|  
     |Calls|Continuous|長整數|  
-    |DayOfWeek|Discrete|文字|  
+    |DayOfWeek|Discrete|Text|  
     |FactCallCenterID|Key|長整數|  
     |IssuesRaised|Continuous|長整數|  
     |LevelOneOperators|Continuous|長整數|  
     |LevelTwoOperators|Continuous|長整數|  
     |Orders|Continuous|長整數|  
     |ServiceGrade|Continuous|Double|  
-    |Shift|Discrete|文字|  
-    |WageType|Discrete|文字|  
+    |Shift|Discrete|Text|  
+    |WageType|Discrete|Text|  
   
 13. 在 **建立測試設定**頁面上，清除該選項的文字方塊**測試資料的百分比**。 按一下 [下一步] 。  
   

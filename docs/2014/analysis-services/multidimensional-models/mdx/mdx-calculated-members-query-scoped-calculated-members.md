@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725542"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>建立查詢範圍導出成員 (MDX)
   如果單一多維度運算式 (MDX) 查詢只需要有導出成員，您可以使用 WITH 關鍵字來定義導出成員。 查詢完成執行之後，使用 WITH 關鍵字建立的導出成員就不再存在。  
@@ -92,8 +92,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [建立工作階段範圍導出成員&#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [建立工作階段範圍導出成員 &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

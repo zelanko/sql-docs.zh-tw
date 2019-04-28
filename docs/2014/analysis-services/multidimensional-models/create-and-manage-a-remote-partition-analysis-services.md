@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700579"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
   分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
@@ -67,7 +67,7 @@ ms.locfileid: "53356644"
   
 2.  在從屬伺服器：在 [方案總管] 中，建立新的資料來源，指向 cube 資料庫 db master。 使用提供者 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**。  
   
-3.  在從屬伺服器：部署該方案。  
+3.  在從屬伺服器：部署方案。  
   
 #### <a name="enable-features-in-ssms"></a>啟用功能 (在 SSMS 中)  
   

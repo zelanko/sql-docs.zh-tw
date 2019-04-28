@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871677"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
   使用 **[將 SQL Server 資料庫部署到 Windows Azure VM]** 精靈，將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體中的資料庫部署到 Windows Azure 虛擬機器 (VM) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 此精靈會利用完整的資料庫備份作業，因此它一定會從 SQL Server 使用者資料庫複製完整的資料庫結構描述和資料。 此精靈也會為您執行所有的 Azure VM 組態設定，因此不需要進行 VM 的預先組態設定。  
@@ -91,7 +91,7 @@ ms.locfileid: "53357894"
   
 -   關閉增強式安全性設定：使用 [伺服器管理員 > 本機伺服器]，Internet Explorer 增強式安全性設定 (ESC) 設為**OFF**。  
   
--   啟用 JavaScript：[Internet Explorer] > [網際網路選項] > [安全性] > [自訂等級] > [指令碼處理] > [Active Scripting]：**啟用**。  
+-   啟用 JavaScript:Internet Explorer > 網際網路選項 > 安全性 > 客戶層級 > 指令碼 > 作用中的指令碼：**啟用**。  
   
 ###  <a name="limitations"></a> 限制事項  
  此作業的資料庫大小限制為 1 TB。  

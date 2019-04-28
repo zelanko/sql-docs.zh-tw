@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873551"
 ---
 # <a name="data-compression"></a>資料壓縮
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援資料列存放區之資料表和索引的資料列和頁面壓縮，並且支援資料行存放區之資料表和索引的資料行存放區和資料行存放區封存壓縮。  

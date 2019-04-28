@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d779e6362cc3e2842003b82a092ce48ce4933e8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011375"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>使用修改的資料庫協調資料庫圖表 (Visual Database Tools)
   當您準備開始更新資料庫以便與圖表相符時，您可以儲存資料庫圖表。 但是，在您開啟圖表之後，如果其他使用者更新資料庫，他們所做的變更可能會影響您的圖表，反之亦然。  

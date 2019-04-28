@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 775f3788946767b0a46ab4efd490cf2670d7ff76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695372"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多語言及全域部署 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "47612306"
 ## <a name="how-languages-are-used"></a>如何使用語言  
  下表描述 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 元件和工具的語言支援。  
   
-|元件或工具|Description|  
+|元件或工具|描述|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝程式|當您希望 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式所提供及支援的語言與安裝程式語言不同時，請選取英文安裝程式。 如需詳細資訊，請參閱底下的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 描述。|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|安裝程式語言會決定 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 語言。 例如，如果您選擇德文當做安裝程式語言，該電腦上就會提供德文的 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 。|  

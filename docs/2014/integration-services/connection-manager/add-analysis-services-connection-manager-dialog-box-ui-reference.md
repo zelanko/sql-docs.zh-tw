@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833751"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>加入 Analysis Services 連接管理員對話方塊 UI 參考
   使用 **[加入 Analysis Services 連接管理員]** 對話方塊來建立執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之伺服器的連接，或編輯連接屬性。  

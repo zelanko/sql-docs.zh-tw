@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13b7f6a2e34d7819b930d919e9fd773e2c993d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010667"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>協調多位使用者所做的變更 (Visual Database Tools)
   在多位使用者環境中，可以同時讓多位使用者修改相同的物件。 這樣的情況會發生在當您使用資料表或資料庫圖表設計工具設計物件的結構時，或是發生在 [查詢和檢視設計師] 的 [結果] 窗格中的值。 這樣會產生您需要解決的衝突。  

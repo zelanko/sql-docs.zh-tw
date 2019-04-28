@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833675"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>使用快取連線管理員以完整快取模式實作查閱轉換
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -61,7 +61,7 @@ ms.locfileid: "58384276"
   
 -   [時序容器](../control-flow/sequence-container.md)  
   
- 如需示範如何在完整快取模式中使用快取連接管理員實作查閱轉換的影片，請參閱[How to:在完整快取模式 （SQL Server 影片） 中實作查閱轉換](https://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 如需示範如何使用快取連接管理員在完整快取模式下實作查閱轉換的視訊，請參閱[如何：在完整快取模式中實作查閱轉換 (SQL Server 影片)](https://go.microsoft.com/fwlink/?LinkId=131031)。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>若要使用快取連接管理員和資料流程中的資料來源在單一封裝中以完整快取模式實作查閱轉換  
   

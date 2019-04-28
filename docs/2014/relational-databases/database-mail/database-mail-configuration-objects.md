@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872429"
 ---
 # <a name="database-mail-configuration-objects"></a>Database Mail 組態物件
   Database Mail 包含兩個組態物件：資料庫組態物件提供讓您設定的 Database mail 應該使用從您的資料庫應用程式傳送電子郵件時或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  

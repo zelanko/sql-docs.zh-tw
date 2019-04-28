@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987100"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>鍵盤快速鍵 (報表產生器)
   當您在「報表產生器」中工作時，可以存取 Windows 環境所提供之所有用於導覽的快速鍵。 您可以從許多標準鍵盤對應配置中選取。  

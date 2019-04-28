@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61b83ee255e580c557bfae9923d67735c63c3912
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982197"
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr 函數
 **合規性**  
@@ -75,7 +75,7 @@ SQLRETURN SQLSetEnvAttr(
 |HY009|使用無效的 null 指標|屬性引數識別環境屬性需要字串值，而*ValuePtr*引數是 null 指標。|  
 |HY010|函數順序錯誤|(DM) 上已配置連接控制代碼*EnvironmentHandle*。<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION**尚未設定具有**SQLSetEnvAttr**並*屬性*是否不等於**SQL_ATTR_ODBC_VERSION**。 您不需要設定**SQL_ATTR_ODBC_VERSION**如果您使用，明確**SQLAllocHandleStd**。|  
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足情況。|  
-|其中包含 SQLSTATE=HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。|  
+|HY024|屬性值無效|提供給指定的*屬性*值，指定了無效的值中*ValuePtr*。|  
 |HY090|字串或緩衝區長度無效|*StringLength*引數為小於 0，但不是 sql_nts;。|  
 |HY092|屬性/選項識別碼無效|(DM) 引數指定的值*屬性*ODBC 驅動程式支援的版本無效。|  
 |HY117|連接已因為未知的交易狀態暫止。 只中斷連線，並允許唯讀的函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函式](../../../odbc/reference/syntax/sqlendtran-function.md)。|  

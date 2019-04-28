@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869686"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -59,7 +59,7 @@ ms.locfileid: "53359310"
   
 -   當您選擇唯一索引或條件約束的資料行時，請選取已定義為 NOT NULL 的資料行。 這樣做可以排除多個資料列的索引鍵值包含 NULL 而導致違反唯一性的可能。  
   
--   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需在資料表中移除重複的資料列的資訊，請參閱知識庫文件 139444:[如何從 SQL Server 中的資料表中移除重複的資料列](https://support.microsoft.com/kb/139444)。  
+-   若重複值是因資料輸入錯誤所造成，請手動更正資料，然後再建立索引或約束條件。 如需有關移除資料表中重複資料列的資訊，請參閱知識庫文件 139444：[如何在 SQL Server 中移除資料表中的重複資料列](https://support.microsoft.com/kb/139444) \(英文\)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

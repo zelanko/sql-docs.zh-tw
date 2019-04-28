@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844159"
 ---
 # <a name="options-text-editor---file-extension-page"></a>選項 (文字編輯器 - 副檔名頁面)
   使用 [選項] 對話方塊，以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何處理具有特定副檔名的所有檔案。 針對您輸入的每個副檔名，都可以選取一個編輯器。 因此，您可以選擇要用來開啟特定文件類型的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器。 若要開啟副檔名選項，請按一下 [工具] 功能表上的 [選項]，並展開 [文字編輯器]，然後按一下 [副檔名]。  

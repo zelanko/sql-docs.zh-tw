@@ -1,25 +1,27 @@
 ---
 title: 裝置未就緒錯誤 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2801eb44acca5241ad051904747c370f5ef2b24b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705262"
 ---
 # <a name="device-not-ready-error"></a>裝置未就緒錯誤
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   這個規則會檢查系統事件記錄檔中是否有 EventId 15。 這個錯誤是因為 SCSI 主機配接器組態問題或是相關問題所造成。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

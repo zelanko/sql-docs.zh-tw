@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878201"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>設定使用者定義變數的屬性
   若要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中設定使用者定義變數的屬性，您可以使用下列其中一項功能：  
   
 -   [變數] 視窗。  
   
--   [屬性] 視窗。 **屬性** 視窗會列出屬性設定中未提供的變數**變數**視窗：描述、 EvaluateAsExpression、 Expression、 ReadOnly、 ValueType 和 IncludeInDebugDump。  
+-   [屬性] 視窗。 [屬性] 視窗會列出屬性，以供您設定 [變數] 視窗中無法使用的變數：Description、EvaluateAsExpression、Expression、ReadOnly、ValueType 和 IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供一組無法更新屬性的系統變數，但屬性 RaiseChangedEvent 除外。  

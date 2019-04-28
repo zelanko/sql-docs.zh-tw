@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699219"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
   Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**指的是安裝為 PowerPivot for SharePoint，用於載入和查詢 Excel 或 PowerPivot 活頁簿內的資料模型的 Analysis Services 的執行個體。  

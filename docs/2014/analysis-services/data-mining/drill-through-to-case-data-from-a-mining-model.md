@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ed7750ac0f09fd90ffd846fa4257eb5aae25546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722510"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
   如果採礦模型已經設定為讓您鑽研模型案例，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 此外，如果基礎採礦結構已經設定為允許鑽研結構案例，而且您擁有適當的權限，就可以從採礦結構傳回資訊。 這可能包括沒有包含在採礦模型中的資料行。  
@@ -58,6 +58,6 @@ ms.locfileid: "48062619"
 6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢&#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  
+ [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)  
   
   

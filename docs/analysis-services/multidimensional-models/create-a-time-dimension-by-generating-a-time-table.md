@@ -1,5 +1,5 @@
 ---
-title: 產生時間資料表來建立時間維度 |Microsoft 文件
+title: 產生時間資料表來建立時間維度 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d35cf55f64b977e952b57416a31c35cd669fc468
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867052"
 ---
-# <a name="create-a-time-dimension-by-generating-a-time-table"></a>產生時間資料表來建立時間維度
+# <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，當來源資料庫中沒有任何可用的時間資料表時，您就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」來建立時間維度。 您可以透過在 **[選取建立方法]** 頁面上選取下列其中一個選項，完成此作業：  
   
@@ -50,6 +50,6 @@ ms.locfileid: "34022045"
  [建立日期類型維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [資料庫維度屬性](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [維度關聯性](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [資料來源中產生非時間資料表來建立維度](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [在資料來源中產生非時間資料表來建立維度](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

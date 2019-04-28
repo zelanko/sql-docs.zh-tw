@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866226"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>工作 9:設定參考資料服務
   在這項工作中，您會設定 DQS 使用 Windows Azure Marketplace 上的參考資料服務。 在下一個工作中，您會設定**地址驗證**網域以使用這項服務。 在執行階段，清理活動期間，DQS 會將值傳遞中的網域**地址驗證**網域服務以進行清理。 請參閱[設定 DQS 使用參考資料](https://msdn.microsoft.com/library/hh213070.aspx)如需詳細資訊。  

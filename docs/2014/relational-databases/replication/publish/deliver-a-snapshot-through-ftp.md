@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960062"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>透過 FTP 傳遞快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中透過 FTP 傳遞快照集。  
@@ -45,7 +45,7 @@ ms.locfileid: "54130268"
 #### <a name="to-specify-ftp-information"></a>若要指定 FTP 資訊  
   
 1.  從以下頁面之一的 [發行集屬性 - \<發行集>]  對話方塊中，選取 [允許訂閱者使用 FTP 下載快照集檔案]：   
-    -    **[FTP 快照集]** 頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的「發行者」所用的合併式發行集。    
+    -   **[FTP 快照集]** 頁面，適用於快照式和交易式發行集，以及執行 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]之前版本的「發行者」所用的合併式發行集。    
     -   **[FTP 快照集和網際網路]** 頁面，適用於執行 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本「發行者」的合併式發行集。    
 2.  指定 **[FTP 伺服器名稱]**、 **[通訊埠編號]**、 **[FTP 根資料夾的路徑]**、 **[登入]** 以及 **[密碼]** 的值。    
      例如，如果 FTP 伺服器根目錄為 \\\ftpserver\home，而您想將快照集儲存在 \\\ftpserver\home\snapshots 中，請將 [FTP 根資料夾的路徑] 屬性指定為 \snapshots\ftp (複寫會在建立快照集檔案時，在快照集資料夾路徑後加上 'ftp')。    
@@ -68,7 +68,7 @@ ms.locfileid: "54130268"
     -   (選擇性) **@ftp_login** - 連接到 FTP 伺服器時所使用的登入帳戶。    
     -   (選擇性) **@ftp_password** - FTP 登入的密碼。  
   
-     這會建立使用 FTP 的發行集。 如需詳細資訊，請參閱 [Create a Publication](create-a-publication.md)。  
+     這會建立使用 FTP 的發行集。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>針對合併式發行集啟用 FTP 快照集傳遞  
   
@@ -80,7 +80,7 @@ ms.locfileid: "54130268"
     -   (選擇性) **@ftp_login** - 連接到 FTP 伺服器時所使用的登入帳戶。    
     -   (選擇性) **@ftp_password** - FTP 登入的密碼。  
   
-     這會建立使用 FTP 的發行集。 如需詳細資訊，請參閱 [Create a Publication](create-a-publication.md)。  
+     這會建立使用 FTP 的發行集。 如需詳細資訊，請參閱[建立發行集](create-a-publication.md)。  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>針對使用 FTP 快照集傳遞的快照式或交易式發行集建立提取訂閱  
   

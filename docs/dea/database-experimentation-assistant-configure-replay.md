@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 76516c02b03443ca6c7642f75c16cf53b07b3e8a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706787"
 ---
 # <a name="configure-replay-in-database-experimentation-assistant"></a>設定重新執行在資料庫測試助理
 

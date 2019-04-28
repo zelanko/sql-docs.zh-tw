@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871105"
 ---
 # <a name="resource-database"></a>Resource 資料庫
   Resource 資料庫是一個唯讀的資料庫，其中包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擁有的所有系統物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統物件 (例如 sys.objects) 實際上會保存在 Resource 資料庫中，但邏輯上會出現在每個資料庫的 sys 結構描述中。 Resource 資料庫不包含使用者資料或使用者中繼資料。  

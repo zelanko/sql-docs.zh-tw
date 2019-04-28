@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80226e3e82dec9e3c163ed96106d1b24846fca0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700217"
 ---
 # <a name="create-calculated-members"></a>建立導出成員
   您可以結合 Cube 資料、算術運算子、數字和函數，來建立自訂的量值或維度成員，稱為導出成員。 例如，您可以建立一個名為 Euros 的導出成員，藉由將現有的美金量值乘以轉換比率，來將美金轉換為歐元。 然後可以在另一個資料列或資料行中，向一般使用者顯示歐元。  
@@ -82,6 +82,6 @@ ms.locfileid: "48077678"
 -   如果導出成員是建立在量值維度中，則導出成員可以在該維度中定址。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的計算](calculations-in-multidimensional-models.md)  
+ [Calculations in Multidimensional Models](calculations-in-multidimensional-models.md)  
   
   

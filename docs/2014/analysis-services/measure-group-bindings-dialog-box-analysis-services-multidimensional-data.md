@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c803d434fac98c6f2397465738599bac5fa1d8ad
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727965"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>量值群組繫結對話方塊 (Analysis Services - 多維度資料)
   使用 [量值群組繫結] 對話方塊，即可針對一般維度關聯性，建立及修改 Cube 維度中之非資料粒度屬性，與量值群組中之資料行之間的直接關聯性；以及從 [定義關聯性] 對話方塊中，指定 Cube 維度中之任何屬性的 Null 處理選項。  

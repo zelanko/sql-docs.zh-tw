@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 602ac6de5a2b623e33b1b85b46a9f8cf31e0b225
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871715"
 ---
 # <a name="move-user-databases"></a>移動使用者資料庫
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，您可以在 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式的 FILENAME 子句中指定新的檔案位置，以便將使用者資料庫的資料、記錄和全文檢索目錄檔案移到新位置。 這種方法適用於在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體內移動資料庫檔案。 若要將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或移到另一個伺服器，請使用 [備份和還原](../backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [卸離和附加作業](move-a-database-using-detach-and-attach-transact-sql.md)。  

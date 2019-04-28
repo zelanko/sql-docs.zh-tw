@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714185"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52779790"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid&lt**|**int**|識別發行項。|  
+|**artid**|**int**|識別發行項。|  
 |**colid**|**smallint**|識別發行項中的資料行。|  
 |**is_udt**|**bit**|指出資料行是否為使用者自訂資料類型 (UDT) 資料行。 值為**1**表示 UDT 資料行。|  
 |**is_xml**|**bit**|指出資料行是否**xml**資料行。 值為**1**表示的 xml 資料行。|  

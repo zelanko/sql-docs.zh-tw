@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aad4088e8a102ea3afbf2cd8e75e3fe605c268cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864153"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions 屬性範例 (VB)
 這個範例會使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)屬性來指定哪些資料列會傳送至伺服器的所有資料列或僅修改資料列。  

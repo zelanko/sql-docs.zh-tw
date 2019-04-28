@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709866"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和 Unique 屬性範例 (VB)
 此範例示範[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)並[Unique](../../../ado/reference/adox-api/unique-property-adox.md)的屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的資料表，兩個資料行。 **PrimaryKey**並**Unique**屬性用來讓一個資料行不允許重複的值是主索引鍵。  

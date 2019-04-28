@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2e5dcfe771e1f2ff00dbdb1fb1efd5cd4f8b984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705266"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Facet 屬性對話方塊，相依條件頁面
   使用此對話方塊可顯示目前參考這個以原則為基礎之管理 Facet 的條件清單。  

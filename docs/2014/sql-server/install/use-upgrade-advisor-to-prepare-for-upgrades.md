@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992373"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用 Upgrade Advisor 來準備升級
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 可以協助您完成升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的相關準備工作。 Upgrade Advisor 會分析已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版元件，然後產生報告，以指出在您升級之前或之後要修正的問題。  

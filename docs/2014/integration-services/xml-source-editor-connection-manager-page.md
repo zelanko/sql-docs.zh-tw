@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877414"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 來源編輯器 (連接管理員頁面)
   使用 **[XML 來源編輯器]** 的 **[連接管理員]** 頁面，來指定 XML 檔案和轉換 XML 資料的 XSD。  
@@ -34,7 +34,7 @@ ms.locfileid: "58393886"
 |值|描述|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
-|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關的資訊**:[在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
+|來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊**：[在套件中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  
 |來自變數的 XML 資料|從變數中擷取 XML 資料。|  
   
  **使用內嵌結構描述**  

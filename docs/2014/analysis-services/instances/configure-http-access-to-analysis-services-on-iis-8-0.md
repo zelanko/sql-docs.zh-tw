@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730599"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>設定 Internet Information Services (IIS) 8.0 上 Analysis Services 的 HTTP 存取
   本文說明如何設定 HTTP 端點來存取 Analysis Services 執行個體。 您可以設定 MSMDPUMP.dll (這是在 Internet Information Services (IIS) 中執行的一個 ISAPI 擴充程式，可以在用戶端應用程式與 Analysis Services 伺服器之間來回提取資料) 來啟用 HTTP 存取。 此方法會在您的 BI 方案需要下列功能時，提供連接至 Analysis Services 的替代方式。  
@@ -108,12 +108,12 @@ ms.locfileid: "53363720"
 > [!NOTE]  
 >  請記得解除封鎖 Windows 防火牆中的連接埠，以允許用戶端與 Analysis Services 遠端伺服器的連接。 如需詳細資訊，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
-##  <a name="bkmk_copy"></a> 步驟 1:將 MSMDPUMP 檔案複製到 Web 伺服器上的資料夾  
+##  <a name="bkmk_copy"></a> 步驟 1：將 MSMDPUMP 檔案複製到 Web 伺服器上的資料夾  
  您建立的每個 HTTP 端點都必須有一組自己的 MSMDPUMP 檔案。 在此步驟中，您要將 MSMDPUMP 可執行檔、組態檔以及資源資料夾從 Analysis Services 程式資料夾，複製到您將在執行 IIS 所在電腦的檔案系統上建立的新虛擬目錄資料夾。  
   
  磁碟機必須格式化為 NTFS 檔案系統。 您所建立之資料夾的路徑不得包含任何空格。  
   
-1.  將下列檔案複製，請參閱\<磁碟機 >: SQL Server \Program Files\Microsoft\\< 執行個體\>\OLAP\bin\isapi:MSMDPUMP.DLL、MSMDPUMP.INI 及 Resources 資料夾。  
+1.  將下列檔案複製，請參閱\<磁碟機 >: SQL Server \Program Files\Microsoft\\< 執行個體\>\OLAP\bin\isapi:MSMDPUMP。DLL，MSMDPUMP。INI，以及 Resources 資料夾。  
   
      ![檔案總管 顯示的檔案複製](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "檔案總管 顯示檔案，以複製")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "53363720"
   
 3.  將您先前複製的檔案貼入此新資料夾中。  
   
-4.  確認 Web 伺服器上的 \inetpub\wwwroot\OLAP 資料夾包含下列項目：MSMDPUMP.DLL、MSMDPUMP.INI 及 Resources 資料夾。 您的資料夾結構看起來應該像這樣：  
+4.  確認您的 web 伺服器上的 \inetpub\wwwroot\OLAP 資料夾包含下列：MSMDPUMP。DLL，MSMDPUMP。INI，以及 Resources 資料夾。 您的資料夾結構看起來應該像這樣：  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -129,7 +129,7 @@ ms.locfileid: "53363720"
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> 步驟 2:在 IIS 中建立應用程式集區與虛擬目錄  
+##  <a name="bkmk_appPool"></a> 步驟 2：在 IIS 中建立應用程式集區與虛擬目錄  
  接下來，為幫浦建立應用程式集區和端點。  
   
 #### <a name="create-an-application-pool"></a>建立應用程式集區  
@@ -165,7 +165,7 @@ ms.locfileid: "53363720"
 > [!NOTE]  
 >  舊版的這些指示包含建立虛擬目錄的步驟。 現已不再需要該步驟。  
   
-##  <a name="bkmk_auth"></a> 步驟 3:設定 IIS 驗證並加入延伸模組  
+##  <a name="bkmk_auth"></a> 步驟 3：設定 IIS 驗證並加入延伸模組  
  在此步驟中，您會進一步設定您剛建立的 SSAS 虛擬目錄。 您將會指定驗證方法，然後加入指令碼對應。 經由 HTTP 的 Analysis Services 所支援的驗證方法包括：  
   
 -   Windows 驗證 (Kerberos 或 NTLM)  
@@ -182,7 +182,7 @@ ms.locfileid: "53363720"
   
  **匿名驗證** 經常在初始測試期間使用，因為它容易設定，可協助您快速驗證 Analysis Services 的 HTTP 連線。 只要執行幾個步驟，您就可以指派唯一的使用者帳戶做為識別、授與該帳戶 Analysis Services 中的權限、使用帳戶確認用戶端應用程式中的資料存取，然後在測試完成時停用匿名驗證。  
   
- 如果使用者沒有 Windows 使用者帳戶，也可以在實際執行環境中使用匿名驗證，但請遵循最佳作法，鎖住主機系統上的權限，如本文中所呼叫：[啟用匿名驗證 (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 務必在虛擬目錄上設定驗證，而不是在父網站上，以便進一步降低帳戶存取層級。  
+ 您也可以使用在生產環境中匿名驗證，如果您的使用者沒有 Windows 使用者帳戶，但最佳作法鎖定主機系統上的權限所提出的這篇文章：[啟用匿名驗證 (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)。 務必在虛擬目錄上設定驗證，而不是在父網站上，以便進一步降低帳戶存取層級。  
   
  啟用匿名時，可透過匿名使用者身分進行任何對 HTTP 端點的使用者連接。 您將無法稽核個別使用者連接，也無法使用的使用者識別從模型選取資料。 如您所見，使用匿名的影響範圍包含從模型設計到資料重新整理和存取的一切。 不過，如果使用者沒有 Windows 使用者登入，則使用匿名帳戶可能是您唯一的選項。  
   

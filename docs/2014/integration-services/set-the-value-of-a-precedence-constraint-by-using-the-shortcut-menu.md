@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bb07b6cc317e4d522e178751fe228fce69457fb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878231"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>使用快速鍵功能表來設定優先順序條件約束的值
   此程序描述如何使用快速鍵功能表設定優先順序條件約束的值。  

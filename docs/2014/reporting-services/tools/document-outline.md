@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c57b2bfad47baba01e54d7b60030ceba0351f678
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711189"
 ---
 # <a name="document-outline"></a>文件大綱
   使用 [文件大綱] 視窗檢視報表中報表項目的階層。 Tablix 資料區域會顯示 Tablix 資料格中所包含的所有文字方塊及其他報表項目。 當您在設計介面上選取報表項目時，會在 [文件大綱] 視窗中選取對應的報表項目。 使用這個檢視，在設計介面上尋找報表項目。 例如，當您預覽包含運算式錯誤的報表時，[輸出] 視窗會針對每個錯誤顯示一個訊息。 訊息包含運算式錯誤之文字方塊的名稱。 您可以在 [文件大綱] 視窗中按一下文字方塊的名稱、在設計介面上顯示為已選取，然後檢視包含錯誤的運算式。  

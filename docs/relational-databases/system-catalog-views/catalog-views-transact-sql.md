@@ -25,13 +25,13 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4679c8dbc853f0bc902a59cb653330a638b2f685
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959995"
 ---
-# <a name="system-catalog-views-transact-sql"></a>系統目錄檢視 (transact-SQL&AMP;#41
+# <a name="system-catalog-views-transact-sql"></a>系統目錄檢視 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   目錄檢視會傳回 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所用的資訊。 建議您使用目錄檢視，因為它們是目錄中繼資料最一般性的介面，提供了取得、轉換和呈現這項資訊之自訂形式的最有效方法。 所有使用者能夠使用的目錄中繼資料都是利用目錄檢視公開的。  

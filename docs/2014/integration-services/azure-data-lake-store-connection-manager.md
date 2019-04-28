@@ -15,11 +15,11 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc1918bec6dc8f0cfa242341b59fefd477854887
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836888"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 連線管理員
   **Azure Data Lake Store 連線管理員**可讓 SSIS 套件連線到 Azure Data Lake Store 服務透過兩種驗證類型：Azure AD 使用者身分識別與 Azure AD 服務識別。  

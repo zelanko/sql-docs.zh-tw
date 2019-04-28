@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733194"
 ---
 # <a name="prediction-queries-data-mining"></a>預測查詢 (資料採礦)
   典型資料採礦專案的目標是要使用採礦模型來進行預測。 例如，您可以預測特定伺服器叢集的預期停機時間，或產生分數以指出特定客戶是否可能回應廣告宣傳活動。 若要執行所有這些作業，您需要建立預測查詢。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711255"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的報表設計師中，[報表資料] 窗格會顯示您可用於報表之資料物件的階層式檢視，包括資料來源、資料集、欄位、參數和影像。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  

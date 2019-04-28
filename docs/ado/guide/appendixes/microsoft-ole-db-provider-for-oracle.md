@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Provider for Oracle |Microsoft Docs
+title: Microsoft OLE DB Provider for Oracle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853415"
 ---
-# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
+# <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]
 >  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用 Oracle OLE DB 提供者。
 
@@ -68,7 +68,7 @@ MSDAORA
 |**視窗控制代碼**|表示將提示您輸入其他資訊的視窗控制代碼。|
 |**地區設定識別碼**|表示唯一 32 位元指定的數字 （例如，1033年） 的相關使用者的語言喜好設定。 這些喜好設定會指出如何格式化日期和時間，依字母順序排序項目，字串比較時，依此類推。|
 |**OLE DB 服務**|表示位元遮罩，指定啟用或停用的 OLE DB 服務。|
-|**提示**|指出是否要建立連接時提示使用者。|
+|**Prompt**|指出是否要建立連接時提示使用者。|
 |**擴充的屬性**|字串，包含提供者特定、 擴充連接資訊。 這個屬性僅適用於無法透過屬性機制中所述的提供者特有的連接資訊。|
 
 ## <a name="see-also"></a>另請參閱

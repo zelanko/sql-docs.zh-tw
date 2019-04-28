@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: acb755f8cc1e425e38714013511948f7b5b4c580
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836858"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>連接到 SQL Server 進行刪除
   如果登入沒有包含 MSXDBCDC 資料庫之寫入權限的資料庫角色 (例如 **db_owner** 角色)，則當此登入嘗試刪除 Oracle CDC 執行個體時，便會顯示 [連接到 SQL Server] 對話方塊。  
@@ -32,16 +32,16 @@ ms.locfileid: "58392936"
   
 -   **Windows 驗證**  
   
--   **SQL Server 驗證**:如果您選取此選項時，您必須輸入**登入**並**密碼**中的使用者[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您要連接到。  
+-   **SQL Server 驗證**：如果您選取這個選項，必須針對您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的使用者輸入**登入**和**密碼**。  
   
  **選項。**  
  按一下箭頭即可檢視要設定的可用選項。 您可以選擇保留這些選項的預設值。 可用的選項如下：  
   
--   **連接逾時**:輸入的時間 （以秒為單位） 的程式等候的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生逾時錯誤之前建立的連線。 預設值為 **15**。  
+-   **連接逾時**：輸入此程式在產生逾時錯誤之前，等候連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的時間 (以秒數為單位)。 預設值為 **15**。  
   
--   **執行逾時**:輸入此程式會等候執行 SQL 命令產生逾時錯誤之前的時間 （以秒為單位）。 預設值是 **30**。  
+-   **執行逾時**：輸入此程式在產生逾時錯誤之前，等候執行 SQL 命令的時間 (以秒數為單位)。 預設值是 **30**。  
   
--   **加密連接**:選取 **加密連接**以確保[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在建立連接已加密來保障隱私權。  
+-   **加密連接**：選取 [加密連接]，以確保正在建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接已加密來保障隱私權。  
   
 -   **進階**：按一下 [進階]，並在必要時，於 [進階連接屬性] 對話方塊中輸入其他任何連接屬性。  
   

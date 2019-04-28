@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98633674559feead48a5b1c3cbe997863ad0f18a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985788"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>在升級過程中，確認所有檔案群組都是可寫入的
   Upgrade Advisor 偵測到具有一或多個唯讀檔案群組的資料庫。 在升級之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的所有資料庫都必須將檔案群組設為 READ_WRITE。  

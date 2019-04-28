@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723130"
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以同時定義採礦結構中資料行的實體資料類型，以及用於模型內之資料行的邏輯內容類型。  
@@ -50,14 +50,14 @@ ms.locfileid: "48190088"
   
  離散屬性資料行中的值不代表順序，即使值為數值。 此外，即使用於離散資料行的值為數值，也無法計算小數值。 電話區碼是數字分隔資料的理想範例。  
   
- `Discrete`內容類型受到所有資料採礦資料類型。  
+ `Discrete` 內容類型受所有資料採礦資料類型的支援。  
   
 ## <a name="continuous"></a>Continuous  
  *Continuous* 表示此資料行包含的值代表小數位數允許過渡值的數值資料。 與代表有限可計算資料的離散資料行不同，連續資料行代表可擴充的度量，其資料可能包含無限個小數值。 溫度資料行就是連續屬性資料行的一個範例。  
   
  當資料行包含連續數值資料，而且您知道應該要如何散發資料時，您可以指定預期的值分佈來提升分析的精確度。 您會在採礦結構的層級上指定資料行散發。 因此，此設定會套用到根據此結構的所有模型上。如需詳細資訊，請參閱[資料行散發 &#40;資料採礦&#41;](column-distributions-data-mining.md)。  
   
- `Continuous`內容類型受到下列資料類型： `Date`， `Double`，和`Long`。  
+ `Continuous` 內容類型受到下列資料類型的支援：`Date`、`Double` 和 `Long`。  
   
 ## <a name="discretized"></a>Discretized  
  *「離散化」* (Discretization) 是將連續資料集的值放入值區內的程序，以產生有限數目的可能值。 您只能離散化數值資料。  
@@ -68,22 +68,22 @@ ms.locfileid: "48190088"
   
  `Discretized` 內容類型受到下列資料類型的支援：`Date`、`Double`、`Long` 和 `Text`。  
   
-## <a name="key"></a>索引鍵  
- *key* 內容類型表示資料行會唯一識別資料列。 在案例資料表中，索引鍵資料行通常是數值的或文字的識別碼。 您將內容類型設定為`key`表示資料行不應該使用的分析，只能用於追蹤記錄。  
+## <a name="key"></a>Key  
+ *key* 內容類型表示資料行會唯一識別資料列。 在案例資料表中，索引鍵資料行通常是數值的或文字的識別碼。 您可以將內容類型設定為 `key`，以代表資料行只可以用於追蹤記錄，而不能用於分析。  
   
- 巢狀資料表也具有索引鍵，但巢狀資料表索引鍵的用法稍有不同。 您將內容類型設定為`key`中巢狀資料表資料行是否為您想要分析的屬性。 每個案例的巢狀資料表索引鍵值都必須是唯一的，但在整個案例集合中可能會有重複的值。  
+ 巢狀資料表也具有索引鍵，但巢狀資料表索引鍵的用法稍有不同。 如果資料行是您想要分析的屬性，請在巢狀資料表中將內容類型設定為 `key`。 每個案例的巢狀資料表索引鍵值都必須是唯一的，但在整個案例集合中可能會有重複的值。  
   
  例如，如果要分析客戶購買的產品，則可以將內容類型設定為案例資料表中 **CustomerID** 資料行的索引鍵，然後再次將內容類型設定為巢狀資料表中 **PurchasedProducts** 資料行的索引鍵。  
   
 > [!NOTE]  
 >  只有在從已定義為 Analysis Services 資料來源檢視的外部資料來源使用資料時，才可以使用巢狀資料表。  
   
- 此內容類型受到下列資料類型： `Date`， `Double`， `Long`，和`Text`。  
+ 這個內容類型受到下列資料類型所支援：`Date`、`Double`、`Long` 和 `Text`。  
   
 ## <a name="key-sequence"></a>Key Sequence  
  *key sequence* 內容類型只能用於時序群集模型。 將內容類型設定為 `key sequence` 時，代表資料行包含代表事件序列的值。 其值已排序，但不必為等距。  
   
- 此內容類型受到下列資料類型： `Double`， `Long`， `Text`，和`Date`。  
+ 這個內容類型受到下列資料類型所支援：`Double`、`Long`、`Text` 和 `Date`。  
   
 ## <a name="key-time"></a>Key Time  
  *key time* 內容類型只能用於時間序列模型。 將內容類型設定為 `key time` 時，代表值已排序且代表時段。  
@@ -113,9 +113,9 @@ ms.locfileid: "48190088"
  除了前述常用於所有模型的內容類型之外，您可以使用分類資料行來定義某些資料類型的內容類型。 如需分類資料行的詳細資訊，請參閱[分類資料行 &#40;資料採礦&#41;](classified-columns-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型&#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [資料型別&#40;資料採礦&#41;](data-types-data-mining.md)   
- [資料型別&#40;DMX&#41;](/sql/dmx/data-types-dmx)   
+ [內容類型 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [資料類型 &#40;資料採礦&#41;](data-types-data-mining.md)   
+ [資料類型 &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [變更採礦結構的屬性](change-the-properties-of-a-mining-structure.md)   
  [採礦結構資料行](mining-structure-columns.md)  
   

@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7dd6e11704497bd37fa4eb78948376587ece1119
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844752"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>選項 （文字編輯器 Transact SQL-定位點頁面）
   使用這個對話方塊可以變更在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器中按下 Tab 鍵的移動行為，這個編輯器會用來撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請按一下 [工具] 功能表上的 [選項]，並展開 [文字編輯器] 資料夾，再展開 [Transact-SQL] 子資料夾，然後按一下 [定位點]。  
@@ -32,10 +32,10 @@ ms.locfileid: "48157468"
  **無**  
  如果選取此選項，當您按下 ENTER 時所建立的新行就不會縮排。 資料指標會放在新行的第一個資料行上。  
   
- **區塊**  
+ **Block**  
  如果選取此選項，當您按下 ENTER 鍵時所建立的新行就會自動縮排與上一行相同的距離。  
   
- **智慧**  
+ **Smart**  
  此選項無法使用。  
   
 ## <a name="tabs"></a>定位點  

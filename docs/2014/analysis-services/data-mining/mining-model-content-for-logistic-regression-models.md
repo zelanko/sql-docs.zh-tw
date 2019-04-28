@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733506"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>羅吉斯迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 Microsoft 羅吉斯迴歸演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "48164508"
 ## <a name="model-content-for-a-logistic-regression-model"></a>羅吉斯迴歸模型的模型內容  
  本節僅針對採礦模型內容中與羅吉斯迴歸具有特定相關的資料行，提供詳細資料和範例。 此模型內容與類神經網路模型的內容幾乎相同，但是為了方便，適用於類神經網路模型的描述在此資料表中可能會重複。  
   
- 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
+ 如需結構描述資料列集 (例如 MODEL_CATALOG 和 MODEL_NAME) 中一般用途資料行的詳細資訊 (此處沒有說明)，或採礦模型術語的說明，請參閱 [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -58,7 +58,7 @@ ms.locfileid: "48164508"
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|隱藏層|空白|  
+|hidden layer|空白|  
 |輸出層|空白|  
 |輸出節點|輸出屬性名稱|  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48164508"
 |臨界統計資料|空白|  
 |輸入層|空白|  
 |輸入節點|輸入屬性名稱|  
-|隱藏層|空白|  
+|hidden layer|空白|  
 |輸出層|空白|  
 |輸出節點|如果輸出屬性是連續的，則包含輸出屬性的名稱。<br /><br /> 如果輸出屬性是離散或離散化的，則包含輸出屬性的名稱和值。|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "48164508"
  從父節點到達節點的機率。 若是羅吉斯迴歸模型，永遠為 0。  
   
  NODE_DISTRIBUTION  
- 包含節點之統計資訊的巢狀資料表。 每個節點類型這個資料表的內容的相關詳細資訊，請參閱區段中，了解 NODE_DISTRIBUTION 資料表，在[Mining Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41; ](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ 包含節點之統計資訊的巢狀資料表。 如需每個節點類型之這個資料表內容的詳細資訊，請參閱 [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
   
  NODE_SUPPORT  
  若是羅吉斯迴歸模型，永遠為 0。  
@@ -186,7 +186,7 @@ ms.locfileid: "48164508"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 羅吉斯迴歸演算法](microsoft-logistic-regression-algorithm.md)   
- [類神經網路模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [類神經網路模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [羅吉斯迴歸模型查詢範例](logistic-regression-model-query-examples.md)   
  [Microsoft 羅吉斯迴歸演算法技術參考](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

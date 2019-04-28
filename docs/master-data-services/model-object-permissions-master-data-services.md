@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e672b7227ba24a37ec4b1a385c1d8fd58589f04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691601"
 ---
 # <a name="model-object-permissions-master-data-services"></a>模型物件權限 (Master Data Services)
 

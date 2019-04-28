@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4abd066dd2fc971528468fb7104cb0c11e088150
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53348781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843028"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 SQL Server 功能
   此主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中仍然可用之已被取代的功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -24,9 +24,9 @@ ms.locfileid: "53348781"
 ## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>下一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的功能  
  下一版的 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 將不再支援以下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。 請勿在新的開發工作中使用這些功能，並且儘速修改使用這些功能的應用程式。 「功能名稱」欄會出現在追蹤事件中當做 ObjectName，並在效能計數器和 sys.dm_os_performance_counters 中當做 instance_name。 「功能識別碼」會出現在追蹤事件中當做 ObjectId。  
   
-|類別目錄|已被取代的功能|取代|功能名稱|功能識別碼|  
+|Category|已被取代的功能|取代|功能名稱|功能識別碼|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|資料可程式性|[sys.soap_endpoints &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|原生 XML Web Service|22|  
+|資料可程式性|[sys.soap_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-soap-endpoints-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|原生 XML Web Service|22|  
 |資料可程式性|[sys.endpoint_webmethods &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql)|Windows Communications Foundation (WCF) 或 ASP.NET|原生 XML Web Service|23|  
   
 ### <a name="slipstream-functionality"></a>匯集功能  

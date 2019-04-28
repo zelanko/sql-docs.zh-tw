@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712795"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
   針對字元資料欄位，選擇性結束字元可讓您使用「欄位結束字元」標示資料檔案中每個欄位的結尾，並使用「資料列結束字元」標示每個資料列的結尾。 結束字元是指示程式從欄位或資料列結束與開始的交接處讀取資料檔的一種方法。  
@@ -167,7 +167,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. 使用 BULK INSERT 以互動方式指定結束字元  
  下列範例會使用 `Department-c-t.txt` 陳述式 (其中使用下表所示的限定詞)，大量匯入 `BULK INSERT` 資料檔。  
   
-|選項|attribute|  
+|選項|屬性|  
 |------------|---------------|  
 |DATAFILETYPE **='`char`'**|指定以字元資料載入資料欄位。|  
 |FIELDTERMINATOR **='**`,`**'**|指定逗號 (`,`) 作為欄位結束字元。|  

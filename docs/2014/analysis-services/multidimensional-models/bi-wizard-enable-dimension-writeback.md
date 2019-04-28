@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9236bfbd945386aa249291b490ad41680a3ff5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700954"
 ---
 # <a name="enable-dimension-writeback"></a>[啟用維度回寫]
   加入維度回寫增強功能至 Cube 或維度，以允許使用者手動修改維度結構和成員。 可寫入維度的更新會直接記錄在維度資料表中。 這項增強功能會變更維度的 `WriteEnabled` 屬性設定。  
@@ -39,10 +39,10 @@ ms.locfileid: "48171648"
  在精靈的第一個 [啟用維度回寫] 頁面上，您會指定要套用維度回寫的維度。 加入到此選取維度的維度回寫增強功能會產生維度的變更。 包含選取之維度的所有 Cube，都會繼承這些變更。  
   
 ## <a name="setting-dimension-writeback-capability"></a>設定維度回寫功能  
- 在精靈的第二個 [啟用維度回寫] 頁面上，您可實際設定 [在維度中啟用回寫] 選項。 選取此選項會自動設定`WriteEnabled`屬性的維度`True`。 清除此選項會自動將屬性設定為`False`。  
+ 在精靈的第二個 [啟用維度回寫] 頁面上，您可實際設定 [在維度中啟用回寫] 選項。 選取此選項會自動將維度的 `WriteEnabled` 屬性設定為 `True`。 而清除此選項則會自動將屬性設定為 `False`。  
   
 ## <a name="remarks"></a>備註  
- 建立新的成員時，您必須包含維度中的每個屬性。 您不能插入成員時不指定維度之索引鍵屬性的值。 因此，建立成員時要受到維度資料表上之已定義的任何條件約束 (例如非 Null 索引鍵值)。 您也應該考慮以維度屬性選擇性指定的資料行，例如資料行中指定`CustomRollupColumn`，`CustomRollupPropertiesColumn`或`UnaryOperatorColumn`維度屬性。  
+ 建立新的成員時，您必須包含維度中的每個屬性。 您不能插入成員時不指定維度之索引鍵屬性的值。 因此，建立成員時要受到維度資料表上之已定義的任何條件約束 (例如非 Null 索引鍵值)。 您也應該考慮以維度屬性選擇性指定的資料行，例如在 `CustomRollupColumn`、`CustomRollupPropertiesColumn` 或 `UnaryOperatorColumn` 維度屬性中指定的資料行。  
   
 > [!WARNING]  
 >  如果您使用 SQL Azure 做為執行回寫至 Analysis Services 資料庫中的資料來源，作業會失敗。 這是設計所限，因為預設不會開啟可啟用 Multiple Active Result Sets (MARS) 的提供者選項。  

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35aa267c22d5320ab7f7d912d091e72d00e9e48c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726852"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，當來源資料庫中沒有任何可用的時間資料表時，您就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」來建立時間維度。 您可以透過在 **[選取建立方法]** 頁面上選取下列其中一個選項，完成此作業：  
@@ -36,13 +36,13 @@ ms.locfileid: "48131588"
  當您建立時間維度時，可以指定時間週期以及此維度的開始和結束日期。 精靈會使用指定的時間週期，來建立時間屬性。 當您處理維度時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會產生和儲存支援指定之日期與週期所需的資料。 此精靈會使用針對時間維度所建立的屬性來建議此維度的階層。 階層會反映不同時間週期之間的關聯性，並且會考慮不同的日曆。 例如，在標準日曆階層中，週層級會在年層級之下顯示，而非在月層級之下顯示，因為週數可以完整地分配到年當中，但無法完整地分配到月當中。 相對地，在製造日曆或報表日曆階層中，週數可以完整地分配到月當中，因此週層級會在月層級之下顯示。  
   
 ## <a name="define-time-periods"></a>定義時間週期  
- 您可以使用精靈的 **[定義時間週期]** 頁面，指定您要包含在維度中的日期範圍。 例如，您可以選取資料當中，從最早年度 1 月 1 日開始，並在目前年度的一或二年後結束的範圍 (以允許未來的交易)。 超出範圍的交易不是出現，或根據在維度中，未知的成員出現`UnknownMemberVisible`維度的屬性設定。 您也可以變更資料所使用的每週第一天 (預設為星期日)。  
+ 您可以使用精靈的 **[定義時間週期]** 頁面，指定您要包含在維度中的日期範圍。 例如，您可以選取資料當中，從最早年度 1 月 1 日開始，並在目前年度的一或二年後結束的範圍 (以允許未來的交易)。 在此範圍之外的交易不會出現，或以維度的未知成員出現，視維度的 `UnknownMemberVisible` 屬性設定而定。 您也可以變更資料所使用的每週第一天 (預設為星期日)。  
   
  選取當精靈建立套用至資料的階層時要使用的時間週期，例如年、半年、季、每四個月、月、十天、週或日期。 您至少一定要選取日期時間週期。 Date 屬性是維度的索引鍵屬性，因此維度沒有它就無法作用。  
   
  在 **[時間成員名稱的語言]** 旁，選取要用來標示維度之成員的語言。  
   
- 您建立以日期範圍為基礎的時間維度之後，可以使用維度設計師來加入或移除時間屬性。 由於 Date 屬性是維度的索引鍵屬性，因此不能從維度中移除該屬性。 若要隱藏來自使用者的 [日期] 屬性，您可以變更`AttributeHierarchyVisible`屬性的屬性，以`False`。  
+ 您建立以日期範圍為基礎的時間維度之後，可以使用維度設計師來加入或移除時間屬性。 由於 Date 屬性是維度的索引鍵屬性，因此不能從維度中移除該屬性。 若要對使用者隱藏 Date 屬性 (Attribute)，您可以將該屬性 (Attribute) 的 `AttributeHierarchyVisible` 屬性 (Property) 變更為 `False`。  
   
 ## <a name="select-calendars"></a>選取日曆  
  您建立時間維度時，一律會包含標準 (西曆) 12 個月日曆，從 1 月 1 日開始，到 12 月 31 日結束。 在精靈的 **[選取日曆]** 頁面上，可以指定此維度中之階層做為基礎的其他日曆。 如需日曆類型的描述，請參閱 [建立日期類型維度](database-dimensions-create-a-date-type-dimension.md)。  

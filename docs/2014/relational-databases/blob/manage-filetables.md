@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874792"
 ---
 # <a name="manage-filetables"></a>管理 FileTable
   描述用於管理 FileTable 的常見管理工作。  
   
-##  <a name="HowToEnumerate"></a> 操作說明：取得 FileTable 和相關物件的清單  
+##  <a name="HowToEnumerate"></a> 操作說明：取得 Filetable 和相關的物件的清單  
  若要取得 FileTable 的清單，請查詢下列其中一個目錄檢視：  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable 目錄及其所含的檔案及目錄會在檔案系統中顯示，而且可用於進行檔案 I/O 存取。  
   
-###  <a name="HowToEnableNS"></a> 操作說明：停用並重新啟用資料表層級的 FileTable 命名空間  
+###  <a name="HowToEnableNS"></a> 操作說明：停用再重新啟用資料表層級的 FileTable 命名空間  
  您可以使用 **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 選項來呼叫 ALTER TABLE 陳述式。  
   
  **停用 FileTable 命名空間**  

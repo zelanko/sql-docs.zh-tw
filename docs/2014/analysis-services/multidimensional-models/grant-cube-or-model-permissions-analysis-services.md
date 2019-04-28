@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725962"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授與 Cube 或模型權限 (Analysis Services)
   Cube 或表格式模型是 Analysis Services 資料模型中的主要查詢物件。 從 Excel 連線到多維度或表格式資料以進行特定資料瀏覽時，使用者一開始通常會選取特定 Cube 或表格式模型做為樞紐分析報表物件後面的資料結構。 這個主題說明如何授與存取 Cube 或表格式資料的必要權限。  
@@ -37,7 +37,7 @@ ms.locfileid: "48149708"
 > [!NOTE]  
 >  只有伺服器管理員或擁有完整控制權限的資料庫管理員可以將 Cube 從來源檔案部署到伺服器，或者建立角色並指派成員。 請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)並[授與資料庫權限&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)如需這些權限的詳細資訊層級。  
   
-#### <a name="step-1-create-the-role"></a>步驟 1：建置角色  
+#### <a name="step-1-create-the-role"></a>步驟 1:建立角色  
   
 1.  在 SSMS 中，連線到 Analysis Services。 如果您需要這個步驟的說明，請參閱[從用戶端應用程式連接 &#40;Analysis Services&#41;](../instances/connect-from-client-applications-analysis-services.md)。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48149708"
   
 5.  輸入名稱和選擇性描述之後，請繼續下一個步驟。  
   
-#### <a name="step-2-assign-membership"></a>步驟 2：指派成員資格  
+#### <a name="step-2-assign-membership"></a>步驟 2:指派成員資格  
   
 1.  在 [成員資格] 窗格中，按一下 [新增]，以輸入將使用這個角色存取 Cube 的 Windows 使用者或群組帳戶。 Analysis Services 僅支援 Windows 安全性識別。 請注意，您不會在這個步驟中建立資料庫登入。 在 Analysis Services 中，使用者是透過 Windows 帳戶連線。  
   
 2.  繼續下一個步驟，設定 Cube 權限。  
   
-     請注意，我們正略過 [資料來源] 窗格。 大部分 Analysis Services 資料的一般取用者不需具備資料來源物件的權限。 如需這些權限層級的詳細資訊，請參閱 [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) 。  
+     請注意，我們正略過 [資料來源] 窗格。 大部分 Analysis Services 資料的一般取用者不需具備資料來源物件的權限。 如需這些權限層級的詳細資訊，請參閱 [授與資料來源物件的權限 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) 。  
   
 #### <a name="step-3-set-cube-permissions"></a>步驟 3：設定 Cube 權限  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48149708"
   
      最後，這個窗格可讓您授與 Cube 的 [處理資料庫] 權限，讓這個角色的所有成員都能夠處理這個 Cube 的資料。 因為處理通常是受限制的作業，所以建議您將這個工作留給管理員，或者特別針對該工作定義個別角色。 如需處理權限最佳做法的詳細資訊，請參閱[授與處理權限 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)。  
   
-#### <a name="step-4-test"></a>步驟 4︰測試  
+#### <a name="step-4-test"></a>步驟 4：測試  
   
 1.  使用 Excel 測試 Cube 存取權限。 您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，後面接著以下所述的相同技術 - 以非管理員的使用者身分執行應用程式。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48149708"
   
      如果您在連線時發生錯誤，請檢查適用於 Analysis Services 的連接埠設定，並確認伺服器接受遠端連線。 如需連接埠設定，請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 。  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>步驟 5︰指令碼角色定義與指派  
+#### <a name="step-5-script-role-definition-and-assignments"></a>步驟 5：指令碼角色定義和指派  
   
 1.  在最後一個步驟中，您應該產生指令碼，來擷取您剛剛建立的角色定義。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "48149708"
  您可以精簡 Cube 權限來將存取權限制在資料格或維度資料。 如需詳細資訊，請參閱[授與維度資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 和[授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [支援的 Analysis Services 的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [資料採礦結構和模型的權限授與&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [在 資料來源物件上的權限授與&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Analysis Services 支援的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授與資料來源物件的權限 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722691"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>使用 DMX 建立鑽研查詢
   對於支援鑽研的所有模型，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或支援 DMX 的任何其他用戶端中建立 DMX 查詢，藉以擷取案例資料和結構資料。  
@@ -45,7 +45,7 @@ WHERE [Model Region] = 'M200 Pacific'
  請注意，在這則範例中，別名已用來重新命名結構資料行。 如果您沒有指派別名給結構資料行，就會傳回名為 'Expression' 的資料行。 這是所有未命名資料行的預設行為。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢&#40;資料採礦&#41;](drillthrough-queries-data-mining.md)   
+ [鑽研查詢 &#40;資料採礦&#41;](drillthrough-queries-data-mining.md)   
  [採礦結構的鑽研](drillthrough-on-mining-structures.md)  
   
   

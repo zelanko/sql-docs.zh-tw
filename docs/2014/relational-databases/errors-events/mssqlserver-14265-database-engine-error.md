@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba6f533f2f975a69d0b78d6458a01f64a10595f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870068"
 ---
 # <a name="mssqlserver14265"></a>MSSQLSERVER_14265
     

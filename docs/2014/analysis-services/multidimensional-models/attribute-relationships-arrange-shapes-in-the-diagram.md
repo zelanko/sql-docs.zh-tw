@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 459afedd5d9e9e417410961d010c6b650eb0a01e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701386"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>在屬性關聯性圖表中排列形狀
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中維度設計師之 [維度結構] 檢視的 [屬性關聯性] 索引標籤中，變更形狀的配置。  
@@ -32,7 +32,7 @@ ms.locfileid: "48090528"
      此外，您也可以按一下 [排列形狀]，以便根據維度設計師所使用的配置演算法來自動排列所有形狀。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性關聯性](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [中，使用 [維度設計師] 的](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [定義屬性關聯性](attribute-relationships-define.md)  
   
   

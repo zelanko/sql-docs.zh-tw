@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700094"
 ---
 # <a name="database-storage-location"></a>資料庫儲存位置
   通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓特定資料庫放置於伺服器資料夾外部。 這些情況通常是由商務需求所驅使，例如改善效能或展開儲存體。 這些情況下，`DbStorageLocation`資料庫屬性可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 在本機的磁碟或網路裝置中指定資料庫位置。  

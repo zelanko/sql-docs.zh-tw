@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705954"
 ---
 # <a name="choose-and-map-model-testing-data"></a>選擇和對應模型測試資料
   若要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立精確度圖表，您必須選擇將用來測試模型的資料，並將資料對應至模型。  

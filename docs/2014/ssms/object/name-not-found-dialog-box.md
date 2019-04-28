@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999546"
 ---
 # <a name="name-not-found-dialog-box"></a>找不到名稱對話方塊
   在對話方塊中找不到一或多個物件名稱。 選取一個選項以繼續進行。  

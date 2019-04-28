@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aca78d68921b2f90cde68d52eff06df7044a4c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832890"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 控制工作自訂屬性
   下表描述 CDC 控制工作的自訂屬性。 所有屬性都是可讀寫的。  

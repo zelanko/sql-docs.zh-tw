@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832378"
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
   設計窗格包含資料採礦預測查詢產生器，您可以使用該產生器來建立資料採礦預測查詢。 您可以依據輸入資料表來設計預測查詢，或設計單一預測查詢。 切換到結果檢視以執行查詢並檢視結果。 查詢檢視會顯示預測查詢產生器所建立的資料採礦延伸模組 (DMX) 查詢。  

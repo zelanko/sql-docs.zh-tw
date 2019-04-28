@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721315"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>在散發者端啟用遠端發行者 (SQL Server Management Studio)
   在 **[發行者]** 頁面中讓「發行者」使用遠端「散發者」。 在 [設定散發精靈] 與 [散發者屬性 - \<散發者>] 對話方塊中可取得這個頁面。 如需使用精靈以及存取對話方塊的詳細資訊，請參閱[設定發行和散發](configure-publishing-and-distribution.md)和[檢視和修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)。  

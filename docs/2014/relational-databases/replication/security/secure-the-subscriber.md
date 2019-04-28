@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960813"
 ---
 # <a name="secure-the-subscriber"></a>保護訂閱者
   「合併代理程式」與「散發代理程式」會連接到「訂閱者」。 這些連接會在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入或 Windows 登入的內容下進行。 為遵循授與所需最小權限的原則，並同時保護所有密碼的儲存，有必要為這些代理程式提供適當的登入。 如需有關各代理程式需要的權限資訊，請參閱＜ [Replication Agent Security Model](replication-agent-security-model.md)＞。  
@@ -71,7 +71,7 @@ ms.locfileid: "54125422"
     > [!IMPORTANT]  
     >  使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」以連接到「訂閱者」，然後為每個「訂閱者」的連接指定不同帳戶。 如果使用提取訂閱，複寫會永遠將連接設定為使用「Windows 驗證」(對於提取訂閱來說，複寫無法存取使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」所需的「訂閱者」端中繼資料)。 在此情況下，請在設定訂閱後，將連接變更為使用「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證」。  
   
-     如需詳細資訊，請參閱 < 如何：建立可更新的訂閱，to a Transactional Publication (SQL Server Management Studio) 並[檢視及修改複寫安全性設定](view-and-modify-replication-security-settings.md)。  
+     如需詳細資訊，請參閱＜如何：建立交易式發行集的可更新訂閱 (SQL Server Management Studio)＞和[檢視及修改複寫安全性設定](view-and-modify-replication-security-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

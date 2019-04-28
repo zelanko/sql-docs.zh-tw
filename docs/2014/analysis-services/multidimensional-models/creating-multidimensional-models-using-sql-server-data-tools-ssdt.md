@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41ddab5d08673ea71cefb7cf44169e8da6777292
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727210"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>使用 SQL Server 資料工具 (SSDT) 建立多維度模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供兩個不同環境來建立、部署及管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案： [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 這兩個環境都會實作專案系統。 如需有關 Visual Studio 專案的詳細資訊，請參閱 MSDN Library 中的 [以專案做為容器](https://go.microsoft.com/fwlink/?LinkId=63960) 。  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856646"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作業活動監視器 (篩選設定)
   使用此頁面來減少可以在作業活動監視器看到的資料列數目。 在一或數個可用的方塊中輸入準則，只顯示符合指定值的資料列。 有些方塊 (例如 [狀態] 或 [封鎖類型]) 提供有限數目的可能值，經由下拉式清單提供。 其他的方塊 (例如 [應用程式]) 則允許您以逗號分隔的清單，輸入任何值以及隨您想要之數量的值。 工具列圖示允許您依類別或字母順序排序可用的方塊。 按一下準則以顯示每個準則的簡短描述。  

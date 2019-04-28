@@ -1,5 +1,5 @@
 ---
-title: 附錄 a： 提供者 |Microsoft Docs
+title: 附錄 A：提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,13 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719915"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>附錄 a： 資料和服務提供者
+# <a name="appendix-a-data-and-service-providers"></a>附錄 A：資料和服務提供者
 本節說明三種類型的提供者： 資料提供者、 服務提供者，以及服務元件。 提供者分為兩類： 提供與資料提供服務。 A*資料提供者*擁有它自己的資料，且會公開在表格式的格式，您的應用程式。 A*服務提供者*封裝所產生和取用資料，擴充功能，ADO 應用程式中的服務。 服務提供者可能也會進一步定義成*服務元件*，這必須與其他服務提供者或元件搭配運作。
 
 ## <a name="data-providers"></a>資料提供者
@@ -45,11 +45,11 @@ ms.locfileid: "51291524"
 |ODBC 資料庫|[Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Microsoft 索引服務|[Microsoft OLE DB Provider for Microsoft 索引服務](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Active Directory 服務|[Microsoft Active Directory 服務的 Microsoft OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
-|Microsoft Jet 資料庫|[Microsoft Jet OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
+|Microsoft Jet 資料庫|[OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle 資料庫|[Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |網際網路發佈|[適用於網際網路發佈的 Microsoft OLE DB 提供者](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
-|簡單的資料來源|[Microsoft OLE DB 簡單提供者](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
+|簡單的資料來源|[Microsoft OLE DB Simple Provider](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
 ## <a name="provider-specific-dynamic-properties"></a>提供者特有的動態屬性
  [屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，以及[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件包含特定的動態屬性提供者。 這些屬性會提供給超出 ADO 支援的內建屬性提供者特定功能的相關資訊。

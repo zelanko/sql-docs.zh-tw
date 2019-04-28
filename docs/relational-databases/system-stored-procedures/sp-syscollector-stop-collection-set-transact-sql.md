@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001526"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_syscollector_stop_collection_set
  [ @collection_set_id = ] *collection_set_id*  
  這是收集組的唯一本機識別碼。 *collection_set_id&lt*已**int**預設值是 NULL。 *collection_set_id&lt*必須有值，如果*名稱*是 NULL。  
   
- [ @name =] '*名稱*'  
+ [ @name = ] '*name*'  
  這是收集組的名稱。 *名稱*已**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_set_id&lt*是 NULL。  
   
  [ @stop_collection_job = ] *stop_collection_job*  

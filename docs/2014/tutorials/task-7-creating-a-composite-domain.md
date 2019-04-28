@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866275"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>工作 7:建立複合定義域
   在這個工作中，您建立複合定義域**地址驗證**，其中包括**地址行**，**縣 （市)**，**狀態**，以及**Zip**網域。 複合定義域可讓您定義在規則中涉及多個定義域的跨定義域規則。 複合定義域還有其他優點，例如能夠將欄位值剖析成多個定義域。  例如，[完整名稱] 欄位的值可以剖析成個別的名字、中間名和姓氏等定義域。 在本教學課程中，您只會定義跨定義域規則。 請參閱[管理複合定義域](https://msdn.microsoft.com/library/hh510399.aspx)如需詳細資訊。  

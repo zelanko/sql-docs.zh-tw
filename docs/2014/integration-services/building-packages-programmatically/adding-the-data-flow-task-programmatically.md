@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b72669c44e3cf95076473c207c50cbcabf54b1ee
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836911"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>以程式設計方式加入資料流程工作
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包括稱為「資料流程」工作的一項工作，該工作是由物件模型中的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> 命名空間所表示。 「資料流程」工作是一項特殊且高效能的工作，專門用來在封裝執行期間轉換及移動資料。 就像其他工作一樣，「資料流程」工作是由 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 物件所包裝，而且從執行階段引擎的觀點來看，這項工作只是封裝內的另一項工作。 但是，此資料流程包含了其他稱為資料流程元件的物件。 這些元件是讓資料從來源移到目的地的元件，有時是透過轉換。 這些元件會定義移動的方向及轉換資料的方式。 設定「資料流程」工作牽涉到在此工作中加入元件，然後連接這些元件來建立資料流程，並達成所要的轉換。  
   
- 有三種類型的資料流程工作內的元件：**資料流程來源**，**資料流程轉換**，以及**資料流程目的地**，依此順序中所示[!INCLUDE[ssIS](../../includes/ssis-md.md)]設計師工具箱。 這些類型也可以更簡單地稱為來源、轉換或目的地。 如同名稱所指示，資料會從來源流向轉換，然後再流向目的地。 這是過於簡單的資料流程描述，目的是要說明此概念，但是「資料流程」工作更具彈性而且功能非常強大，足以處理多個來源，並將傳送輸出給多個目的地的許多轉換連接在一起。  
+ 「資料流程」工作內有三種類型的元件：[資料流程來源]、[資料流程轉換] 和 [資料流程目的地]，這些元件會依照這個順序顯示在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師工具箱內。 這些類型也可以更簡單地稱為來源、轉換或目的地。 如同名稱所指示，資料會從來源流向轉換，然後再流向目的地。 這是過於簡單的資料流程描述，目的是要說明此概念，但是「資料流程」工作更具彈性而且功能非常強大，足以處理多個來源，並將傳送輸出給多個目的地的許多轉換連接在一起。  
   
  「資料流程」工作會加入到封裝中，其方式就像是加入其他工作一樣。 當加入此工作之後，會進行設定，其方式是將元件加入到資料流程工作中，然後在此工作中設定及連接元件。  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725402"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>建立工作階段範圍導出資料格
     
@@ -76,7 +76,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  `String_Expression` 值包含正交、一維的 MDX 集合運算式的清單，其中的每一項都必須解析成下表列出集合的其中一個類別目錄  
   
-|類別目錄|描述|  
+|Category|描述|  
 |--------------|-----------------|  
 |空集合|解析成空集合的 MDX 命名集運算式。 在此情況下，導出資料格的範圍是整個 Cube。|  
 |單一成員集合|解析成單一成員集合的 MDX 命名集運算式。|  
@@ -84,6 +84,6 @@ FOR String_Expression AS 'MDX_Expression'
 |下階集合|解析為指定成員之下階的 MDX 集合運算式。 舉例來說，這`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [建置在 MDX 中的資料格計算&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [在 MDX 中建立資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

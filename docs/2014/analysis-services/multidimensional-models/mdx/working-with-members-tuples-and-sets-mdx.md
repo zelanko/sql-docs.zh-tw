@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699129"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成員、Tuple 和集合 (MDX)
   MDX 提供許多會傳回一或多個成員、Tuple 或集合的函數，或作用於成員、Tuple 或集合的函數。  
@@ -49,7 +49,7 @@ FROM [Adventure Works]
   
 ```  
   
- 您也可以使用`FirstChild`函式來傳回相同的成員，如下列範例所示。  
+ 您也可以使用 `FirstChild` 函數來傳回相同的成員，如下列範例所示。  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -127,8 +127,8 @@ FROM [Adventure Works]
  字串函數會作用在 MDX 運算式以傳回字串。 例如，[UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) 函數會傳回包含維度、階層、層級或成員唯一名稱的字串值。 如需字串函數的詳細資訊，請參閱 [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [MDX 查詢基礎觀念&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 函數參考&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX 的關鍵概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

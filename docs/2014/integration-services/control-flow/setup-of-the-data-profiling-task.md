@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830202"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>資料分析工作的設定
   在您可以檢閱來源資料的設定檔前，第一個步驟是設定並執行「資料分析」工作。 您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝內部建立這個工作。 若要設定「資料分析」工作，您可以使用「資料分析工作編輯器」。 此編輯器可讓您選取要輸出設定檔的位置以及要計算的設定檔。 設定工作後，您可以執行封裝以計算資料設定檔。  
@@ -56,7 +56,7 @@ ms.locfileid: "58389126"
 |選取之資料行中所有不同的字串值長度，以及該資料表中每個長度所代表之資料列的百分比。|**無效的字串值** - 例如，您分析了應該使用兩個字元之美國州名代碼的資料行，但發現長度大於兩個字元的值。|**資料行長度散發-** 適用於使用其中一種資料類型資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
 |一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。<br /><br /> 同時可尋找未來可用於驗證新值的規則運算式|**無效或格式錯誤的字串值** - 例如，[郵遞區號] 資料行的模式設定檔可能會產生規則運算式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果輸出包含其他規則運算式，表示資料包含無效或格式錯誤的值。|**資料行模式設定檔-** 適用於使用其中一種資料類型資料行：<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`|  
 |選取之資料行中 Null 值的百分比。|**某個資料行中 Null 值的比例過高** - 例如，您分析了應該包含美國郵遞區號的資料行，但發現遺漏郵遞區號的比例過高。|**資料行 Null 比例-** 適用於具有下列資料類型資料行：<br /><br /> 任何資料類型。 這包括 `image`、`text`、`xml`、使用者定義型別和 Variant 類型。|  
-|數值資料行的最小值、最大值、平均和標準差，以及 `datetime` 資料行的最小值和最大值等統計資料。|**無效的數值和日期** - 例如，您分析了過去日期的資料行，但發現屬於未來的最大日期。|**資料行統計資料設定檔-** 適用於使用其中一種資料類型資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`<br />注意：若為具有日期和時間資料類型的資料行，此設定檔就只會計算最小值和最大值。|  
+|數值資料行的最小值、最大值、平均和標準差，以及 `datetime` 資料行的最小值和最大值等統計資料。|**無效的數值和日期** - 例如，您分析了過去日期的資料行，但發現屬於未來的最大日期。|**資料行統計資料設定檔-** 適用於使用其中一種資料類型資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`<br />注意:對於具有日期和時間資料類型資料行，設定檔只會計算最小和最大值。|  
 |選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 或者，代表超過資料表中指定之資料列百分比的值。|**某個資料行中相異值的數目不正確** - 例如，您分析了包含美國州名的資料行，但發現超過 50 個相異值。|**資料行值散發-** 適用於使用其中一種資料類型資料行：<br /><br /> 數值資料類型：整數類型 (`bit` 除外)、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
 |資料行或資料行集合為選取之資料表的索引鍵或近似索引鍵。|**潛在索引鍵資料行中重複的值** - 例如，您在 Customers 資料表中分析了 Name 和 Address 資料行，但發現名稱和地址組合應該是唯一的重複值。|**候選索引鍵** - 多個資料行設定檔，其中會報告資料行或資料行集合是否適合當做選取之資料表的索引鍵。 適用於具有下列其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  
 |某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。|**不適用於相依資料行中的值** - 例如，您分析了包含「美國郵遞區號」之資料行與「美國州名」之資料行之間的相依性。 相同的郵遞區號應該永遠具有相同的州名。 不過，此設定檔發現了這個相依性的違規。|**功能相依性-** 適用於使用其中一種資料類型的資料行：<br /><br /> 整數資料類型：`bit`、`tinyint`、`smallint`、`int` 和 `bigint`<br /><br /> 字元資料類型：`char`、`nchar`、`varchar` 和 `nvarchar`<br /><br /> 日期和時間資料類型：`datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2` 和 `datetimeoffset`|  

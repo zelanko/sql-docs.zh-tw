@@ -15,25 +15,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722363"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
   本主題中的程序，會構成設定合併式複寫之 Web 同步處理時所採取的第二個步驟。 請在啟用 Web 同步處理的發行集之後執行這個步驟。 如需組態處理序的概觀，請參閱＜ [[設定 Web 同步處理]](configure-web-synchronization.md)＞。 完成本主題中的程序之後，請繼續執行第三個步驟，即設定訂閱來使用 Web 同步處理。 第三個步驟在下列主題中描述：  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[操作說明：設定訂閱使用 Web 同步處理\(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[如何：設定訂閱使用 Web 同步處理\(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   複寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計：[操作說明：設定訂閱使用 Web 同步處理 （複寫 TRANSACT-SQL 程式設計）](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   複寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式設計：[如何：設定訂閱使用 Web 同步處理 （複寫 TRANSACT-SQL 程式設計）](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO：[操作說明：設定訂閱使用 Web 同步處理 （RMO 程式設計）](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO:[如何：設定訂閱使用 Web 同步處理 （RMO 程式設計）](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同步處理利用執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的電腦，來同步處理合併式發行集的提取訂閱。 支援 IIS 5.0 版、IIS 6.0 版和 IIS 7.0 版。 但是，IIS 7.0 版不支援「設定 Web 同步處理精靈」。  
   
 > [!IMPORTANT]  
->  確定您的應用程式只使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更新版本，而且 IIS 伺服器上未安裝較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。 較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能導致錯誤。 這些選項包括：「Web 同步處理期間，訊息的格式無效。 請確認已在 Web 伺服器正確地設定複寫元件」。  
+>  確定您的應用程式只使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更新版本，而且 IIS 伺服器上未安裝較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。 較早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能導致錯誤。 這些選項包括：「 Web 同步處理期間，訊息的格式無效。 請確認已在 Web 伺服器正確地設定複寫元件」。  
   
 > [!CAUTION]  
 >  請勿同時使用 WebSync 和替代快照集資料夾位置。  
@@ -155,7 +155,7 @@ ms.locfileid: "53372750"
   
     1.  在 **[別名]** 方塊中輸入虛擬目錄的別名。  
   
-    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您輸入`websync1`中**別名**方塊中，輸入`C:\Inetpub\wwwroot\websync1`中**路徑** 方塊中。 按 [下一步] 。  
+    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您輸入`websync1`中**別名**方塊中，輸入`C:\Inetpub\wwwroot\websync1`中**路徑** 方塊中。 按一下 [下一步] 。  
   
     3.  在兩個對話方塊中，按一下 **[是]**。 這會指定您要建立新資料夾，並指定您要複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 .  
   
@@ -217,7 +217,7 @@ ms.locfileid: "53372750"
   
 #### <a name="to-configure-iis-authentication"></a>若要設定 IIS 驗證  
   
--   當訂閱者連接到 IIS 時，訂閱者必須經過 IIS 驗證才能存取資源和處理序。 IIS 提供三種類型的驗證：匿名、基本和整合式。 驗證可套用至整個網站或您建立的虛擬目錄。  
+-   當訂閱者連接到 IIS 時，訂閱者必須經過 IIS 驗證才能存取資源和處理序。 IIS 提供三種類型的驗證：匿名、 基本和整合。 驗證可套用至整個網站或您建立的虛擬目錄。  
   
      我們建議您搭配 SSL 使用基本驗證。 不論採用哪一種驗證類型，都需要 SSL。 如需有關如何設定驗證的詳細資訊，請參閱 IIS 文件集。  
   

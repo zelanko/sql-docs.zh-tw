@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874464"
 ---
 # <a name="implementing-assemblies"></a>實作組件
   本主題提供下列部分的資訊，協助您實作和使用資料庫中的組件：  

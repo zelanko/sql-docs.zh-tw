@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02ab48e21ff7c0f881cb0d0b830ce03207666c7c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833880"
 ---
 # <a name="connect-to-integration-services"></a>連接到 Integration Services
   連接至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務之前，管理員必須授與您該服務的存取權。 如需詳細資訊，請參閱 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)。  

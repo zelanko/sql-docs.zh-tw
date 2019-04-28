@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982381"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函數
 **合規性**  
@@ -93,7 +93,7 @@ SQLRETURN SQLSpecialColumns(
  *範圍*  
  [輸入]Rowid 的最小必要的範圍。 傳回的 rowid 可能更大範圍。 必須是下列其中之一：  
   
- 針對 SQL_SCOPE_CURROW:保證 rowid 只有在位於這個資料列時，才有效。 如果資料列已更新或刪除另一項交易，後來再利用 rowid 可能不會傳回一個資料列。  
+ SQL_SCOPE_CURROW:保證 rowid 只有在位於這個資料列時，才有效。 如果資料列已更新或刪除另一項交易，後來再利用 rowid 可能不會傳回一個資料列。  
   
  SQL_SCOPE_TRANSACTION:Rowid 保證為有效的目前交易的持續時間。  
   

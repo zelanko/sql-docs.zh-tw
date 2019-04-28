@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5471788d3e730c9694ea6394b7e3d1fc659eda96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855252"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>移除 UDT&#39;s 名為保留的日期和時間資料類型
   Upgrade Advisor 偵測到依據針對 `date` 或 `time` 資料類型保留之詞彙所命名的使用者定義型別 (UDT)。  

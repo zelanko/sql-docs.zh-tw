@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 341ada76e65676050f9034df65f7a5f28284a3a0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878288"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>設定工作或容器的屬性
   您可以使用 [屬性] 視窗來設定工作和容器的大部分屬性。 例外的是工作集合的屬性，以及因太複雜而無法使用 [屬性] 視窗設定的屬性。 例如，您無法在 [屬性] 視窗中設定「Foreach 迴圈」容器所使用的列舉值。 您必須使用工作或容器編輯器來設定這些複雜屬性。 大部分工作和容器編輯器都具有多個節點，而且每個節點都包含相關的屬性。 節點的名稱表示此節點所包含之屬性的主旨。  

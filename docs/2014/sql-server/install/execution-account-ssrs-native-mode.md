@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989028"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>執行帳戶 (SSRS 原生模式)
   使用此頁面，即可設定自動處理所使用的帳戶。 當其他認證來源無法使用的特殊情況下，請使用此帳戶：  

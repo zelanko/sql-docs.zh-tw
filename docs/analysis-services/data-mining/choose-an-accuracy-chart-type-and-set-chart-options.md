@@ -1,5 +1,5 @@
 ---
-title: 選擇精確度圖表類型及設定圖表選項 |Microsoft 文件
+title: 選擇精確度圖表類型及設定圖表選項 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a2ab960740e15091868103113bcdaed0ef8833c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724912"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>選擇精確度圖表類型及設定圖表選項
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供多種方法來判斷採礦模型的有效性。 您可以為每一個模型或結構建立之精確度圖表的類型取決於以下因素：  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種方法來判斷採礦模型的有效性。 您可以為每一個模型或結構建立之精確度圖表的類型取決於以下因素：  
   
 -   建立模型時所使用的演算法類型  
   

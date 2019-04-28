@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693917"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47796577"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫的識別碼。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體內，這是唯一的。|  
-|**mirroring_guid**|**uniqueidentifier**|鏡像合作關係的識別碼。<br /><br /> NULL = 資料庫無法存取或未鏡像。<br /><br /> 注意： 如果資料庫未參與鏡像，前置詞為"mirroring_"的所有資料行都是 NULL。|  
+|**mirroring_guid**|**uniqueidentifier**|鏡像合作關係的識別碼。<br /><br /> NULL = 資料庫無法存取或未鏡像。<br /><br /> 注意:如果資料庫未參與鏡像，前置詞為"mirroring_"的所有資料行都是 NULL。|  
 |**mirroring_state**|**tinyint**|鏡像資料庫或資料庫鏡像工作階段的狀態。<br /><br /> 0 = 已暫停<br /><br /> 1 = 與其他夥伴中斷連接<br /><br /> 2 = 正在同步處理<br /><br /> 3 = 暫止容錯移轉<br /><br /> 4 = 已同步處理<br /><br /> 5 = 夥伴不同步。 現在不可能進行容錯移轉。<br /><br /> 6 = 夥伴已同步。 現在可能可以進行容錯移轉。 如需容錯移轉，請參閱需求的詳細資訊[Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。<br /><br /> NULL= 資料庫無法存取或未鏡像。|  
 |**mirroring_state_desc**|**nvarchar(60)**|這是鏡像資料庫或資料庫鏡像工作階段之狀態的描述，它有下列幾種：<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> 如需詳細資訊，請參閱[鏡像狀態 &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)。|  
 |**mirroring_role**|**tinyint**|本機資料庫在資料庫鏡像工作階段中目前所扮演的角色。<br /><br /> 1 = 主體<br /><br /> 2 = 鏡像<br /><br /> NULL= 資料庫無法存取或未鏡像。|  

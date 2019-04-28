@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69885ad9affb87ea160231fa6f6d42d0fef7ea6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987925"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Database Engine 組態 - 帳戶提供
   您可以使用此頁面來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性模式，以及加入 Windows 使用者或群組做為 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的管理員。  

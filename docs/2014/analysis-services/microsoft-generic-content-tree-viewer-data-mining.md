@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5df092bc94bcab3dcfd2909807eb650e696e9be0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727917"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 一般內容樹狀檢視器 (資料採礦)
   **[Microsoft 一般內容樹狀檢視器]** 會以標準 HTML 資料表格式來顯示資料採礦模式內容的詳細資訊。 此檢視很有用，因為它會公開模型的基礎結構，以及有關係數、值分佈等項目的詳細資料。  

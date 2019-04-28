@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834373"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>設定資料檢視器 (直條圖索引標籤)
   使用 **[設定資料檢視器]** 對話方塊的 **[直條圖]** 索引標籤，即可指定要在圖表中顯示為直條的資料行。 直條的數目會顯示資料行中不連續資料的數目，而直條的高度會顯示每個值的發生次數。 圖表只會反映一個緩衝區的內容。  

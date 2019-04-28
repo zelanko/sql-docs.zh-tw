@@ -1,5 +1,5 @@
 ---
-title: 建立及管理本機資料分割 (Analysis Services) |Microsoft 文件
+title: 建立及管理本機資料分割 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866674"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>建立及管理本機分割區 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34024695"
 |使用 SQL 查詢來分割事實資料|分割區可以來自 SQL 查詢。 在處理期間，SQL 查詢的目的是要擷取資料。 該查詢的 WHERE 子句會針對每個分割區，提供分割資料的篩選。 Analysis Services 會為您產生查詢，但是您必須完整填寫 WHERE 子句，才能正確地分割資料。<br /><br /> 您可以輕易地分割來自單一來源資料表的資料是這個方法的主要優點。 如果所有來源資料皆來自大型事實資料表，您可以建立查詢，將該資料篩選至不同分割區中，而不需要在資料來源檢視 (DSV) 中建立額外的資料結構。<br /><br /> 但有一個缺點，就是使用查詢會中斷分割區與 DSV 之間的繫結。 如果您之後要更新 Analysis Services 專案中的 DSV (例如新增資料行至事實資料表)，則必須手動編輯每個分割區的查詢，以包含新的資料行。 接下來要討論的第二種方法，則沒有這個缺點。|  
 |使用 DSV 中的資料表以分割事實資料|您可以將分割區繫結至 DSV 中的資料表、具名查詢或檢視。 這三個都是分割區的基礎，且功能皆相同。 整個資料表、具名查詢或檢視會提供所有資料給單一分割區。<br /><br /> 使用資料表、檢視或具名查詢會將所有資料選取邏輯放在 DSV 中，隨著時間會愈來愈容易管理及維護。 這個方法的重要優點是會保留資料表繫結。 如果您之後更新來源資料表，並不需要修改使用它的分割區。 其次，所有資料表，具名查詢和檢視都存在於一個共同的工作空間，這讓更新更為方便，且不需要個別開啟和編輯分割區查詢。|  
   
-## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>選項 1：篩選多個分割區的事實資料表  
+## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>選項 1：篩選多個資料分割的事實資料表  
  若要建立多個分割區，請於一開始先修改預設分割區的 **Source** 屬性。 根據預設，量值群組是使用繫結至 DSV 中之單一資料表的單一分割區來建立的。 您必須先修改原始分割區，使其只包含一部分的事實資料之後，才能加入更多分割區。 然後您可以繼續建立其他分割區，以儲存資料的其餘部分。  
   
  建構您的篩選，使分割區之間的資料不要重複。 分割區的篩選會指定分割區使用事實資料表中的哪些資料。 在同一個 Cube 中之所有分割區的篩選，都必須從事實資料表擷取互斥的資料集，這點非常重要。 如果相同的事實資料出現在多個分割區中，可能會重複計算。  
@@ -80,7 +80,7 @@ ms.locfileid: "34024695"
 > [!NOTE]  
 >  除了在分割區中篩選資料，您可以使用相同的查詢在 DSV 中建立具名查詢，然後以具名查詢做為分割區的基礎。  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>選項 2：使用資料表、檢視或具名查詢  
+## <a name="option-2-use-tables-views-or-named-queries"></a>選項 2：使用資料表、 檢視或具名的查詢  
  如果 DSV 已經將事實組織成個別資料表 (例如，依年份或季)，您可以根據個別資料表來建立分割區，而每個分割區都要有自己的資料來源資料表。 基本上，這是分割量值群組的預設方式，但是如果有多個分割區，則要將原始分割區分成多個分割區，並將每個新的分割區對應至提供資料的資料來源資料表。  
   
  檢視和具名查詢的功能相當於資料表，因為這三個物件都定義在 DSV 中，並且是使用 [分割區來源] 對話方塊中的 [資料表繫結] 選項繫結至分割區。 您可以建立檢視或具名查詢以產生每個分割區所需的資料區段。 如需詳細資訊，請參閱[在資料來源檢視中定義具名查詢 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)。  
@@ -118,8 +118,8 @@ ms.locfileid: "34024695"
  在最後一個步驟中，您通常會想要移除以資料表本身為基礎的預設分割區 (如果還存在的話)，否則以查詢為基礎的分割區會和以完整資料表為基礎的查詢重疊。  
   
 ## <a name="see-also"></a>另請參閱  
- [分割區 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [遠端資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [合併資料分割中 Analysis Services & #40;SSAS-多維度 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [在 Analysis Services 中合併分割區 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

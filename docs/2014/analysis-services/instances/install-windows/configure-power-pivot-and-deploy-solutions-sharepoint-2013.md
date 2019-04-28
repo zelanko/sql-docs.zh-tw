@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b7798dcacc69b1de233b330b053b2d9a2bd776
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703543"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>設定 PowerPivot 及部署方案 (SharePoint 2013)
   本主題將描述如何部署和設定 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] 中 PowerPivot 功能的中介層增強功能，包括 PowerPivot 圖庫、排程資料重新整理、管理儀表板和資料提供者。 請執行 **PowerPivot for SharePoint 2013 組態** 工具以完成下列作業：  
@@ -38,7 +38,7 @@ ms.locfileid: "53370080"
  [疑難排解問題](#bkmk_troubleshoot_issues)  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 執行 PowerPivot for SharePoint 2013 組態  
- **注意：**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安裝精靈會安裝兩個不同的組態工具[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 它們各支援不同的 SharePoint 版本。  
+ **注意：** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]安裝精靈會安裝兩個不同的組態工具[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]。 它們各支援不同的 SharePoint 版本。  
   
 |名稱|描述|  
 |----------|-----------------|  

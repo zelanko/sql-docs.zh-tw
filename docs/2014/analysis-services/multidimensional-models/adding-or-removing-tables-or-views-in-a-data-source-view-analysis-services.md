@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc78ad1f8a1f49d1a42c5b2ded45a913cdd7e669
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701869"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>在資料來源檢視中加入或移除資料表或檢視 (Analysis Services)
   在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立資料來源檢視 (DSV) 之後，即可在資料來源檢視設計工具中，透過加入或移除資料表和資料行 (包括其他資料來源中的資料表和資料行) 來進行修改。  
@@ -36,17 +36,17 @@ ms.locfileid: "48117949"
 >  移除資料表時請格外小心。 移除資料表會從 DSV 中刪除所有相關聯的資料行和關聯性，並使繫結至該資料表的所有物件失效。  
   
 ## <a name="selecting-tables-or-views-to-add-or-remove"></a>選取要加入或移除的資料表或檢視表  
- 您可以使用 [加入/移除資料表] 對話方塊，在 [可用的物件] 和 [包含的物件] 清單之間移動資料表或檢視表。 [可用的物件] 清單一開始會包含主要資料來源中尚未出現在資料來源檢視中的任何資料表或檢視表。 如果主要資料來源支援`OPENROWSET`函式，您也可以從其他專案或資料庫中的資料來源新增資料表或檢視表。  
+ 您可以使用 [加入/移除資料表] 對話方塊，在 [可用的物件] 和 [包含的物件] 清單之間移動資料表或檢視表。 [可用的物件] 清單一開始會包含主要資料來源中尚未出現在資料來源檢視中的任何資料表或檢視表。 如果主要資料來源支援 `OPENROWSET` 函數，您也可以在專案或資料庫中加入來自其他資料來源的資料表或檢視表。  
   
- 在 DSV 中加入或移除資料表，也會在 DSV 中目前所選取的圖表內加入或移除資料表。 如需有關圖表的詳細資訊，請參閱 <<c0> [ 在資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)。</c0>  
+ 在 DSV 中加入或移除資料表，也會在 DSV 中目前所選取的圖表內加入或移除資料表。 如需圖表的詳細資訊，請參閱 [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)。  
   
- 將資料表移到 [加入/移除資料表] 對話方塊中的 [包含的物件] 清單之後，您還可以加入所有相關資料表。 此作業會根據資料來源中的外部索引鍵條件約束來加入資料表 (如果有這樣的條件約束存在的話)。 如果 foreign key 條件約束不存在，您可以使用`NameMatchingCriteria`屬性來決定關聯性，藉由指定的準則相符的資料行名稱來產生可能的關聯性的資料表中的資料來源檢視。 如果`NameMatchingCriteria`屬性指定的資料來源檢視中，按一下 **加入相關資料表**將資料表從資料來源中有相符之資料行名稱。 如需設定的詳細資訊`NameMatchingCriteria`屬性，請參閱 <<c2> [ 多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)。  
+ 將資料表移到 [加入/移除資料表] 對話方塊中的 [包含的物件] 清單之後，您還可以加入所有相關資料表。 此作業會根據資料來源中的外部索引鍵條件約束來加入資料表 (如果有這樣的條件約束存在的話)。 如果外部索引鍵條件約束不存在，您可以使用資料來源檢視的 `NameMatchingCriteria` 屬性來決定關聯性，做法是指定用來比對資料表中之資料行名稱的準則來產生可能的關聯性。 如果`NameMatchingCriteria`屬性指定的資料來源檢視中，按一下 **加入相關資料表**將資料表從資料來源中有相符之資料行名稱。 如需設定的詳細資訊`NameMatchingCriteria`屬性，請參閱 <<c2> [ 多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)。  
   
 > [!NOTE]  
 >  在資料來源檢視中加入或移除物件不會影響基礎資料來源。  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
- [在 資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在資料來源檢視設計工具中使用圖表 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

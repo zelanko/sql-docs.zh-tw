@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956293"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>適用於 SQL Server 2014 的教學課程
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 引進了許多新技術和新功能。  
