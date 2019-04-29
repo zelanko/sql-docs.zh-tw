@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725468"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>了解行程順序與解決順序 (MDX)
   當 Cube 做為 MDX 指令碼的計算結果時，Cube 會根據所使用的各種計算相關功能來進行多個計算階段。 每個階段都稱為一個計算行程。  

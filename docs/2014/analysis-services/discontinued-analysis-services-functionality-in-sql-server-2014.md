@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dbeb94f9d6b4fea97a99544ed4a0bf358851acf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731618"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Analysis Services 功能
   本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中不再可用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-|類別目錄|已被取代的功能|取代|  
+|Category|已被取代的功能|取代|  
 |--------------|------------------------|-----------------|  
 |本機 Cube|InsertInto 連接字串屬性|填入本機 Cube 的原始連接字串語法已被 Create Global Cube 陳述式取代。 如需詳細資訊，請參閱 <<c0> [ 建立 GLOBAL CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。</c0>|  
 |本機 Cube|CreateCube 連接字串屬性|填入本機 Cube 的原始連接字串語法已被 Create Global Cube 陳述式取代。 如需詳細資訊，請參閱 <<c0> [ 建立 GLOBAL CUBE 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)。</c0>|  
@@ -42,6 +42,6 @@ ms.locfileid: "48117968"
  此外，也已不再使用決策支援物件 (DSO) 程式庫 (可提供與 SQL Server 2000 Analysis Services 的相容性)，並且此部分從 SQL Server 中剔除。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 回溯相容性](analysis-services-backward-compatibility.md)  
+ [Analysis Services Backward Compatibility](analysis-services-backward-compatibility.md)  
   
   

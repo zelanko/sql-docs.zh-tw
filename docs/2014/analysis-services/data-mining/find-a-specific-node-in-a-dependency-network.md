@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dffcb63d5f8b89f4d777f7bdb07bc972cf5bff58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722490"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在相依性網路中尋找特定節點
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 採礦模型中的相依性網路可包含許多節點，因此難以找到您感興趣的資料。 若要解決此問題，您可以使用資料採礦設計師之 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊，來搜尋特定節點。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 採礦模型中的相依性網路可包含許多節點，因此難以找到您感興趣的資料。 若要解決此問題，您可以使用資料採礦設計師之 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊，來搜尋特定節點。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>若要在相依性網路中尋找特定節點  
   

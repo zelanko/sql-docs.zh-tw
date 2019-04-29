@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18889a1dfded5f8653446c02a637502a75efd659
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733667"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>檢視或變更演算法參數
   您可以變更演算法所提供的參數，您會使用該演算法來建立資料採礦模型，以自訂模型的結果。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所提供的演算法參數所變更的項目不只是模型上的屬性而已，還可用來從根本上改變資料處理、群組和顯示的方式。 例如，您可以使用演算法參數來執行下列動作：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所提供的演算法參數所變更的項目不只是模型上的屬性而已，還可用來從根本上改變資料處理、群組和顯示的方式。 例如，您可以使用演算法參數來執行下列動作：  
   
 -   變更分析的方法，例如叢集方法。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48226984"
   
 -   指定模型建立所使用之內部鑑效組集合的初始值或大小。  
   
- 為每個演算法提供的參數會有很大的差異；如需您可以為每個演算法設定的參數清單，請參閱本節中的技術參考主題：[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。  
+ 提供給每個演算法的參數會有很大;如需您可以針對每個演算法設定參數的清單，請參閱這一節的技術參考主題：[資料採礦演算法&#40;Analysis Services-資料採礦&#41;](data-mining-algorithms-analysis-services-data-mining.md)。  
   
 ### <a name="change-an-algorithm-parameter"></a>變更演算法參數  
   

@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25fa0df8f0e3575b8767020721b56b4a19ac529d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691914"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 關聯規則檢視器瀏覽模型
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 關聯規則檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](microsoft-association-algorithm.md)＞。  

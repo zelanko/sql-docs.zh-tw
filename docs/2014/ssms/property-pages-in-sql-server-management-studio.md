@@ -13,18 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720144"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio 中的屬性頁
    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的所有 [屬性] 頁面對話方塊，都會隨著類別目錄的展開和摺疊，利用共用格式來顯示資訊。 顯示的欄位會隨著特定內容而不同。 以灰色顯示的屬性是唯讀屬性。 [分類] 和 [字母] 按鈕在每個屬性頁的頂端附近。  
   
  下表說明 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 屬性頁對話方塊的一般元素。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |**類別目錄**|依類別目錄排序來列出所選物件的所有屬性和屬性值。 在類別目錄檢視中，您可以摺疊類別目錄來縮減可見屬性的數目。 當您展開或摺疊類別目錄時，類別目錄名稱左側會出現加號 (+) 或減號 (-)。 類別目錄依字母順序來排列。|  
 |**字母順序**|依字母順序排序來列出所選物件的所有屬性和屬性值。|  

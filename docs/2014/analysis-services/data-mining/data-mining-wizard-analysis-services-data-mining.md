@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722746"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>資料採礦精靈 (Analysis Services - 資料採礦)
   每次將新的採礦結構加入至資料採礦專案時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈就會啟動。 此精靈可幫助您選擇資料來源及設定資料來源檢視來定義用於分析的資料，然後幫助您建立初始模型。  

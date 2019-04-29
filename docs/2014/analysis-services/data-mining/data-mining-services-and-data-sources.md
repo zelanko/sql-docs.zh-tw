@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722891"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
   資料採礦會要求建立與 SQL Server Analysis Services 執行個體的連接。 資料採礦不需要 Cube 中的資料，而且建議您使用關聯式來源；但是資料採礦會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎所提供的元件。  

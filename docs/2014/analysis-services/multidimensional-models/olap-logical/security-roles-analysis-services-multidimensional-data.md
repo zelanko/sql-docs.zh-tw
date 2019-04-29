@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725252"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>安全性角色 (Analysis Services - 多維度資料)
   在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，使用角色來管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件和資料的安全性。 基本上，角色會與特定的 Microsoft Windows 使用者和群組的安全性識別碼 (SID) 相關聯，這些使用者和群組擁有針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體所管理物件定義的特定存取權限和權限。 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中提供兩種角色類型：  

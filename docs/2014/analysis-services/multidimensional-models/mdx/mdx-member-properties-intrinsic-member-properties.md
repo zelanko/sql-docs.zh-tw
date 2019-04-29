@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5359d5e40737a9989925e952ce674fe6d14114c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699835"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>內建成員屬性 (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會公開維度成員的內建屬性，您可以將它們納入查詢中，以便傳回用於自訂應用程式的其他資料或中繼資料，或協助模型調查或建構。 如果您使用 SQL Server 用戶端工具，您可以在 SQL Server Management Studio (SSMS) 中檢視內建屬性。  
@@ -102,7 +102,7 @@ ms.locfileid: "53370460"
 |`IS_DATAMEMBER`|指出成員是否為資料成員的布林值。|  
 |`IS_PLACEHOLDERMEMBER`|表示成員是否為預留位置的布林值。|  
 |`KEYx`|成員的索引鍵，其中 x 是索引鍵以零為基底的序數。 KEY0 可用於複合和非複合索引鍵。<br /><br /> 如果索引鍵為非複合鍵，則 KEY0 相當於 `Key`。<br /><br /> 關於複合索引鍵，KEY0、KEY1、KEY2 等等，共同形成複合索引鍵。 您可以在查詢中單獨參考每一項，藉以傳回複合索引鍵的該部分。 例如，指定 KEY0 可傳回複合索引鍵的第一個部分，指定 KEY1 傳回複合索引鍵的下一部分，依此類推。<br /><br /> 請注意，`KEYx` 可用於內容中，也可以在沒有內容的情況下使用。 因此，兩個清單上都有它。<br /><br /> 如需如何使用此成員屬性的範例，請參閱[簡單的 MDX 小知識：Key0、 Key1、 Key2](https://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|`LCID` *X*|以地區設定識別碼十六進位值翻譯的成員標題，其中 *x* 是地區設定識別碼十進位值 (例如，代表加拿大英文的 LCID1009)。 只有當翻譯的標題資料行繫結至資料來源時，才適用此功能。|  
+|`LCID` *x*|以地區設定識別碼十六進位值翻譯的成員標題，其中 *x* 是地區設定識別碼十進位值 (例如，代表加拿大英文的 LCID1009)。 只有當翻譯的標題資料行繫結至資料來源時，才適用此功能。|  
 |`LEVEL_NUMBER`|成員距根階層的距離。 根層級為零。|  
 |`LEVEL_UNIQUE_NAME`|成員所屬層級的唯一名稱。 對於會依識別資格產生唯一名稱的提供者，此名稱的每個元件會使用分隔符號。|  
 |`MEMBER_CAPTION`|與該成員關聯的標籤或標題。 標題主要是供顯示之用。 如果標題不存在，查詢就會傳回 `MEMBER_NAME`。|  
@@ -134,7 +134,7 @@ ms.locfileid: "53370460"
 ### <a name="example"></a>範例  
  下列範例顯示傳回內建屬性的 MDX 查詢。  
   
- **範例 1:在查詢中使用受內容影響的內建屬性**  
+ **範例 1：在查詢中使用受內容影響的內建屬性**  
   
  下列範例會傳回父系識別碼、索引鍵和每項產品類別的名稱。 請注意屬性如何公開為量值。 在您執行查詢時，這可讓您在資料格集中檢視屬性，而非 SSMS 的 [成員屬性] 對話方塊。 您可以執行類似此項目的查詢，以便從已部署的 Cube 擷取成員中繼資料。  
   
@@ -152,7 +152,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **範例 2:不受內容影響的內建屬性**  
+ **範例 2：不受內容影響的內建屬性**  
   
  下列範例是不受內容影響的內建屬性完整清單。 在 SSMS 執行查詢後，請按一下個別成員，檢視 [成員屬性] 對話方塊中的屬性。  
   
