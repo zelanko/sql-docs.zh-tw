@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 68cf4eb253505f6ade040eb0bf0f877f4fb91d94
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032392"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 事件類別
   在執行分散式查詢時，就會發生 **OLEDB Provider Information** 事件類別，且會收集對應於提供者連接的資訊。  

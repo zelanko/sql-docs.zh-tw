@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22de08e60bb8305337d0c251d59e8ddf2850715
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889253"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>選取封裝 (SSIS 封裝升級精靈)
   使用 **[選取封裝]** 頁面，選取要升級的封裝。 這個頁面會列出精靈的 **[選取來源位置]** 頁面上指定之位置內所儲存的封裝。  

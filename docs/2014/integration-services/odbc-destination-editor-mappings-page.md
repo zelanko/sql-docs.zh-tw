@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4237a49fe6c49078bf2ee8f1f1558092f9747ea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890460"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 目的地編輯器 (對應頁面)
   使用 [ODBC 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  

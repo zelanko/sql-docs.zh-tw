@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892294"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services 回溯相容性
   本章節描述版本之間的變更[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 它涵蓋不能再使用或已排程在未來版本中移除的功能。 此外，也將描述產品的變更，已知這些變更會中斷或變更包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能之現有應用程式的行為。  

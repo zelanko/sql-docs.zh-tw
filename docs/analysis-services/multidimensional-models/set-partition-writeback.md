@@ -1,5 +1,5 @@
 ---
-title: 設定分割區回寫 |Microsoft 文件
+title: 設定分割區回寫 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 844aad81d49f16718cb795f443c3d8101e2ff771
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020099"
 ---
 # <a name="set-partition-writeback"></a>設定分割區回寫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "34027015"
  您可以將分割區之回寫資料表中的資料轉換為分割區。 此程序會讓回寫資料表變成新分割區的事實資料表。  
   
 > [!CAUTION]  
->  不正確地使用分割區會造成不正確的 Cube 資料。 如需詳細資訊，請參閱[建立及管理本機資料分割 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
+>  不正確地使用分割區會造成不正確的 Cube 資料。 如需詳細資訊，請參閱 [建立及管理本機分割區 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)。  
   
  將回寫資料表轉換為分割區也會造成禁止寫入分割區。 分割區之資料格的所有未限制讀取/寫入原則和讀取/寫入權限會停用，且使用者將無法變更已顯示的 Cube 資料。 (已停用未限制讀取/寫入原則或已停用讀取/寫入權限的使用者仍然可以瀏覽 Cube)。讀取和意外讀取權限不受影響。  
   
  若要將回寫資料轉換為資料分割，請使用 [轉換為資料分割] 對話方塊，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下可寫入資料分割的回寫資料表，即可存取此對話方塊。 您可以指定分割區的名稱，以及是否要在建立分割區的同時或稍後設計分割區的彙總。 若要在您選擇分割區的同時建立彙總，您必須選擇從現有的分割區複製彙總設計。 這通常 (但並非一定) 是目前的回寫分割區。 您也可以選擇在建立分割區的同時處理分割區。  
   
 ## <a name="see-also"></a>另請參閱  
- [寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
+ [可寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [在 Excel 2010 的資料格層級啟用 OLAP Cube 的回寫功能](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [啟用 Analysis Services 回寫並透過回寫保護資料輸入](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   

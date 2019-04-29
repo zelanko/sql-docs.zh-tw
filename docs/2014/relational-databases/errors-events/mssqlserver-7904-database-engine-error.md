@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913735"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
     
@@ -30,7 +30,7 @@ ms.locfileid: "48115048"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_FS_MISSING_FILE|  
-|訊息文字|資料表錯誤: 在物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 中找不到資料行識別碼 C_ID，ROWGUID RG_ID 的 filestream 檔案。|  
+|訊息文字|資料表錯誤：Filestream 資料行識別碼 C_ID，ROWGUID RG_ID 中物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID 是找不到檔案。|  
   
 ## <a name="explanation"></a>說明  
  分割區的資料行值在對應的 FILESTREAM 資料行目錄中沒有相符的 FILESTREAM 檔案。  

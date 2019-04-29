@@ -1,5 +1,5 @@
 ---
-title: 層級 (MDX) |Microsoft 文件
+title: 層級 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8406d02e167258901c3a6ce9ed3a1d7de935df54
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048512"
 ---
 # <a name="level-mdx"></a>Level (MDX)
 
@@ -41,7 +41,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- 下列範例會使用**層級**函數傳回的 All-Purpose Bike Stand Adventure Works cube 中 Model Name 屬性階層中的層級的名稱。  
+ 下列範例會使用**層級**函式傳回的 All-Purpose Bike Stand Adventure Works cube 中 Model Name 屬性階層中的層級的名稱。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

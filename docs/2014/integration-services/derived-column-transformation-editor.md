@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898356"
 ---
 # <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
   使用 [衍生的資料行轉換編輯器] 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  
@@ -45,7 +45,7 @@ ms.locfileid: "58386676"
   
  此屬性的值可以使用屬性運算式指定。  
   
- **相關主題**:[Integration Services &#40;SSIS&#41;運算式](expressions/integration-services-ssis-expressions.md)，[運算子&#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)，和[函式&#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
+ **相關主題**：[Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[運算子 &#40;SSIS 運算式&#41;](expressions/operators-ssis-expression.md)和[函數 &#40;SSIS 運算式&#41;](expressions/functions-ssis-expression.md)  
   
  **資料類型**  
  如果將資料加入新的資料行，[衍生的資料行轉換編輯器] 對話方塊就會自動評估運算式，並且適當設定資料類型。 這個資料行的值是唯讀的。 如需詳細資訊，請參閱 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  

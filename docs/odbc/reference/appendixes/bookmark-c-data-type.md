@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026954"
 ---
 # <a name="bookmark-c-data-type"></a>書籤 C 資料類型
 書籤 C 資料類型可讓應用程式擷取書籤。 書籤 C 類型僅用於擷取書籤值可以是可變長度;它們不應該轉換成其他資料型別。 應用程式會擷取從資料行 0 的結果集的書籤**SQLBulkOperations** （與 SQL_ADD 的作業）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 如需詳細資訊，請參閱 <<c0> [ 書籤](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  

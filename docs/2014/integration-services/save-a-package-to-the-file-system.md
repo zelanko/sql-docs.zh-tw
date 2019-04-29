@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aabe302817a8d71a5a92058004b6e92dd95b2c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889254"
 ---
 # <a name="save-a-package-to-the-file-system"></a>將封裝儲存至檔案系統
   此程序描述如何將現有封裝儲存為檔案系統中的 .dtsx 檔案。  

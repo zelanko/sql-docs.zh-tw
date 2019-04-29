@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043755"
 ---
 # <a name="core-interface-conformance"></a>核心介面一致性
 所有的 ODBC 驅動程式必須提供至少核心層級介面一致性。 中大部分的泛型具互通性的應用程式所需的核心層級的功能，因為驅動程式可以使用這類應用程式。 ISO CLI 規格中定義的功能，並開啟群組 CLI 規格中定義的 nonoptional 功能，也對應中的核心層級的功能。 核心層級介面符合標準的 ODBC 驅動程式可讓應用程式執行下列各項：  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e386aa60489fe3edb2caac3cb49ebad263ffdfac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026616"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>行為變更和 ODBC 3.x 驅動程式
 環境屬性 SQL_ATTR_ODBC_VERSION 會指出驅動程式是否能夠呈現 ODBC 2。*x*行為或 ODBC 3 *.x*行為。 SQL_ATTR_ODBC_VERSION 環境屬性的設定方式，取決於應用程式。 ODBC 3 *.x*應用程式必須呼叫**SQLSetEnvAttr**來設定這個屬性，在呼叫之後**SQLAllocHandle**配置環境控制代碼，並在呼叫之前**SQLAllocHandle**配置連接控制代碼。 如果電腦無法執行這項操作，驅動程式管理員會傳回 SQLSTATE HY010 （函數順序錯誤） 在第二個呼叫**SQLAllocHandle**。  

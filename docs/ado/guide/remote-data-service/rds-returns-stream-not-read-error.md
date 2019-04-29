@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65067452553f3a0c44259e12b294bc795baa9d12
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931402"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 傳回&quot;Stream Not Read&quot;錯誤
 "Stream 物件無法讀取，因為它是空的或目前位置是在 Stream 結尾。 對於非空白的資料流，設定 Position 屬性與目前的位置。 若要判斷 Stream 是否為空，檢查 [大小] 屬性。 」  

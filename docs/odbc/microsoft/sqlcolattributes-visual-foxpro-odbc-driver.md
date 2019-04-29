@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928167"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Visual FoxPro ODBC Driver)
 > [!NOTE]  
 >  本主題包含 Visual FoxPro ODBC 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 支援： 完整  
+ 支援：完整  
   
- ODBC API 一致性： 核心層級  
+ ODBC API 相容性：核心層級  
   
  在結果集中傳回的資料行的描述項資訊。 為字元字串、 32 位元描述元相依值或整數值，會傳回描述元資訊。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47820053"
   
 |*fDescType*|註解|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|傳回 FALSE: Visual FoxPro 有任何計數器欄位。|  
+|SQL_COLUMN_AUTO_INCREMENT|會傳回 FALSE:Visual FoxPro 有任何計數器欄位。|  
 |SQL_COLUMN_CASE_SENSITIVE|如果資料行類型是字元，一律會傳回 TRUE。|  
 |SQL_COLUMN_LABEL|傳回的資料行名稱，它也會傳回 SQL_COLUMN_NAME。|  
 |SQL_COLUMN_MONEY|為 true，則會傳回資料行的類型如果是貨幣 （由 Visual FoxPro 語言中的"Y"）。|  

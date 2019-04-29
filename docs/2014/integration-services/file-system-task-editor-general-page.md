@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894519"
 ---
 # <a name="file-system-task-editor-general-page"></a>檔案系統工作編輯器 (一般頁面)
   使用 [檔案系統工作編輯器] 對話方塊的 [一般] 頁面，即可設定工作執行的檔案系統作業。  
@@ -70,8 +70,8 @@ ms.locfileid: "58377276"
 |**刪除目錄內容**|刪除目錄的內容。 選取此值會顯示來源的動態選項。|  
 |**刪除檔案**|刪除檔案。 選取此值會顯示來源的動態選項。|  
 |**移動目錄**|移動目錄。 選取此值會顯示來源與目的地的動態選項。|  
-|**移動檔案**|移動檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意：當移動檔案時，請勿在您提供當做目的地的目錄路徑內包含檔案名稱。|  
-|**重新命名檔案**|重新命名檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意：當重新命名檔案時，請在您提供當做目的地的目錄路徑內包含新的檔案名稱。|  
+|**移動檔案**|移動檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意:當移動檔案時，請勿在您提供當做目的地的目錄路徑內包含檔案名稱。|  
+|**重新命名檔案**|重新命名檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意:當重新命名檔案時，請在您提供當做目的地的目錄路徑內包含新的檔案名稱。|  
 |**設定屬性**|設定檔案或目錄的屬性。 選取此值會顯示來源與作業的動態選項。|  
   
  `IsSourcePathVariable`  
@@ -88,13 +88,13 @@ ms.locfileid: "58377276"
  **DestinationVariable**  
  在清單中選取變數名稱，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
  在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 動態選項  
   
@@ -102,13 +102,13 @@ ms.locfileid: "58377276"
  **SourceVariable**  
  在清單中選取變數名稱，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
  在清單中選取檔案連線管理員，或按一下 [\<新增連線...>]，即可建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>作業動態選項  
   

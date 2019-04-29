@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045950"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面資料庫驅動程式
 ODBC 是做為資料庫存取語言會使用結構化查詢語言 (SQL) API。 您可以使用相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼，來存取各種不同的資料庫管理系統 (Dbms)。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，請查詢，啟用 ODBC 的應用程式的使用者，並將其更新透過 ODBC 介面的桌面資料庫中。  
@@ -38,7 +38,7 @@ ODBC 是做為資料庫存取語言會使用結構化查詢語言 (SQL) API。 �
   
 -   dBASE  
   
--   文字  
+-   Text  
   
  請參閱[Visual FoxPro ODBC Driver](../../odbc/microsoft/visual-foxpro-odbc-driver.md) for Microsoft Visual FoxPro® ODBC 驅動程式的相關詳細文件。  
   

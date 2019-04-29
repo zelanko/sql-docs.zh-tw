@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e3692410379c6ef87ec2da4b40f09b0d498a187
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028055"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法範例 (VC++)
 此範例示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  

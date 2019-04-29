@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040824"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得並設定備份伺服器來進行平行處理資料倉儲
 本文說明如何設定非應用裝置的 Windows 系統做為備份伺服器與 Analytics Platform System (APS) 和 Parallel Data Warehouse (PDW) 的備份和還原功能搭配使用。  
@@ -35,12 +35,12 @@ ms.locfileid: "51696947"
   
 -   裝載備份的檔案共用，也就是使用伺服器訊息區塊 (SMB) 的應用程式層級的網路通訊協定的 Windows 檔案共用。 備份的檔案共用權限授與 Windows 網域使用者 （通常這是專用的備份使用者） 能夠執行備份和還原共用上的作業。 Windows 網域使用者的使用者名稱和密碼的認證會儲存在 PDW 中，使 PDW 可以執行備份和還原備份的檔案共用上的作業。  
   
-## <a name="Step1"></a>步驟 1︰ 決定容量需求  
+## <a name="Step1"></a>步驟 1:決定容量需求  
 備份伺服器的系統需求幾乎完全取決於您自己的工作負載。 購買或佈建到備份伺服器之前，您需要找出您的容量需求。 備份伺服器並沒有是專門用來備份，只，只要它會處理您的工作負載的效能和儲存體需求。 您也可以有多個備份的伺服器，才能備份和還原至其中一個多部伺服器的每個資料庫。  
   
 使用[備份伺服器容量規劃工作表](backup-capacity-planning-worksheet.md)來協助判斷您的容量需求。  
   
-## <a name="Step2"></a>步驟 2： 取得備份的伺服器  
+## <a name="Step2"></a>步驟 2:取得備份的伺服器  
 既然您進一步了解您的容量需求，您可以規劃伺服器和您將需要購買或佈建的網路元件。 下列清單中的需求併入您的購買方案，然後購買您的伺服器，或佈建現有的伺服器。  
   
 ### <a name="software-requirements"></a>軟體需求  
@@ -61,7 +61,7 @@ ms.locfileid: "51696947"
   
 3.  購買的雙連接埠卡片的 2 個 FDR InfiniBand 纜線或單一連接埠卡 1 FDR InfiniBand 纜線。 FDR InfiniBand 纜線會連接到設備的 InfiniBand 網路的載入伺服器。 根據您的環境，載入伺服器與設備 InfiniBand 交換器之間的距離取決纜線長度。  
   
-## <a name="Step3"></a>步驟 3： 將伺服器連線到 InfiniBand 網路  
+## <a name="Step3"></a>步驟 3:將伺服器連線到 InfiniBand 網路  
 使用下列步驟來載入伺服器連線到 InfiniBand 網路。 如果伺服器不使用 InfiniBand 網路，請略過此步驟。  
   
 1.  機架伺服器夠靠近應用裝置，讓您可以將它連接到設備的 InfiniBand 網路。  
@@ -76,7 +76,7 @@ ms.locfileid: "51696947"
   
 5.  設定網路介面卡的 InfiniBand 和 DNS 設定。 組態指示，請參閱[設定的 InfiniBand 網路介面卡](configure-infiniband-network-adapters.md)。  
   
-## <a name="Step4"></a>步驟 4： 設定備份的檔案共用  
+## <a name="Step4"></a>步驟 4:設定備份的檔案共用  
 PDW 會透過 UNC 檔案共用來存取備份伺服器。 若要設定檔案共用：  
   
 1.  建立資料夾來儲存您的備份在備份伺服器上。  
@@ -101,7 +101,7 @@ PDW 會透過 UNC 檔案共用來存取備份伺服器。 若要設定檔案共�
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>步驟 5： 可讓您開始備份您的資料  
+## <a name="Step5"></a>步驟 5:開始備份您的資料  
 您現在已準備好開始備份到備份伺服器的資料。  
   
 若要備份的資料，請查詢用戶端用以連線到 SQL Server PDW，然後提交備份或還原資料庫的命令。 使用磁碟 = 子句來指定備份伺服器以及備份位置。  
@@ -122,7 +122,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 -   [備份資料庫](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [還原資料庫](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>安全性注意事項  
 備份伺服器未加入設備的私人網域。 它是在網路上和您自己的網域和私人的設備網域之間沒有信任關係。  
@@ -147,7 +147,7 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
 載入伺服器上的作業可以使用從受信任的內部網路之外的提取資料的 UNC 路徑。 攻擊者在網路上或影響名稱解析的能力可以攔截或修改資料傳送至 PDW。 這代表竄改和資訊洩漏風險。 若要降低竄改的風險：
 
 - 需要登入連線。 
-- 在載入伺服器上，設定下列群組原則選項中 Security Settings\Local Policies\Security Options: Microsoft 網路用戶端： 數位簽章通訊 （自動）： 已啟用。  
+- 在載入伺服器上，請在 Security Settings\Local Policies\Security Options 中設定下列群組原則選項：Microsoft 網路用戶端：數位簽署通訊 （自動）：已啟用。  
   
 ## <a name="see-also"></a>另請參閱  
 [備份與還原](backup-and-restore-overview.md)  

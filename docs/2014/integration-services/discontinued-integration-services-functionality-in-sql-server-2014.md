@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1179ba9642a46e7142494dcefc876f074a4b7476
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898916"
 ---
 # <a name="discontinued-integration-services-functionality-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Integration Services 功能
   本主題描述[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]功能的目前版本中已不再[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff82109bc54fb1360df0f9280a196c547e53039b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020200"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Version 屬性 (WMI MSReportServer_Instance)
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  

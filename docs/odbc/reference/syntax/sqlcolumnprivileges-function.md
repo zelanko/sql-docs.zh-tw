@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018397"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 函數
 **合規性**  

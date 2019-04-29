@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79911ddc901575571d791d2b31a7287ab1b2b915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018383"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 函式和資料指標程式庫
 > [!IMPORTANT]  

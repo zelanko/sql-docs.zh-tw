@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042754"
 ---
 # <a name="copying-descriptors"></a>複製描述項
 **SQLCopyDesc**呼叫函式可將有一個描述項欄位複製到另一個描述元。 只有應用程式描述項或 IPD，但不是屬於 IRD，可以複製欄位。 欄位可以從任何類型的描述元複製。 只有在來源和目標的描述項所定義的欄位都會複製。 **SQLCopyDesc**不會複製 SQL_DESC_ALLOC_TYPE 欄位中，因為無法變更的描述元的配置類型。 複製的欄位覆寫現有的欄位。  

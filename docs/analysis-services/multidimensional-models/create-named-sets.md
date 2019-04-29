@@ -1,5 +1,5 @@
 ---
-title: 建立命名的集 |Microsoft 文件
+title: 建立命名的集 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020067"
 ---
 # <a name="create-named-sets"></a>建立命名集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "34021575"
  您可以從 **[計算工具]** 窗格的 **[中繼資料]** 索引標籤中，將 Cube 元件複製或拖曳至 **[命名集表單編輯器]** 窗格的 **[運算式]** 方塊中。 您可以從 **[計算工具]** 窗格的 **[函數]** 索引標籤中，將函數複製或拖曳至 **[命名集表單編輯器]** 窗格的 **[運算式]** 方塊中。  
   
 > [!IMPORTANT]  
->  如果您藉由明確命名的集合中的成員建立的集合運算式，將成員清單括在括號 ({})。  
+>  如果您藉由明確命名的集合中的成員建立的集合運算式，可將成員清單括在一對括號 ({})。  
   
 ## <a name="see-also"></a>另請參閱  
- [多維度模型中的計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
+ [Calculations in Multidimensional Models](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

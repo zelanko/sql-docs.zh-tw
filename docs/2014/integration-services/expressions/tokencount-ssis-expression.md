@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896695"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 運算式)
   傳回包含以分隔符號分隔之 Token 的字串中的 Token 數。  
@@ -50,7 +50,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   您可以使用變數和資料行做為此運算式的引數。  
   
 ## <a name="expression-examples"></a>運算式範例  
- 在下列範例中，TOKENCOUNT 函數會傳回 3，因為此字串包含三個權杖："01", "12", "2011".  
+ 在下列範例中，TOKENCOUNT 函式傳回 3 是因為字串包含三個權杖："01"、"12"、"2011"。  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bd954af100273e3a8a8d91a72daae71b995ddab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028185"
 ---
 # <a name="find-method-example-jscript"></a>Find 方法範例 (JScript)
 這個範例會使用[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法，找出並顯示在公司***Northwind***資料庫名稱開頭為字母 G.剪下並貼上下列程式碼，以 [記事本] 或其他文字編輯器，並將它儲存成**FindJS.asp**。  

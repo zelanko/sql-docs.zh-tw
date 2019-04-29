@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016335"
 ---
 # <a name="upgrade-advisor-progress"></a>Upgrade Advisor 進度
   Upgrade Advisor 分析會以專用分析器開始，以便針對您所選取每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件執行分析。 分析元件時，會回報進度**進度** 對話方塊。  
@@ -47,8 +47,8 @@ ms.locfileid: "48160358"
 >  每次您分析伺服器時，系統會儲存先前的報表。 這些報表使用時間戳記做為檔案名稱進行儲存。 報表檢視器會顯示最近儲存的五個報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何： 啟動 Upgrade Advisor](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [如何： 執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [如何：啟動 Upgrade Advisor](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [如何：執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [SQL Server 元件](../../../2014/sql-server/install/sql-server-components.md)   
  [Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

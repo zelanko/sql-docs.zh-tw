@@ -17,24 +17,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032925"
 ---
 # <a name="rules-for-conversions"></a>轉換規則
 在本節中的規則適用於包含數值常值轉換。 基於這些規則的目的，定義下列詞彙：  
   
--   *儲存 指派：* 時將資料傳送到資料庫中的資料表資料行。 這會發生在呼叫**SQLExecute**， **SQLExecDirect**，並**SQLSetPos**。 在存放區指派 「 目標 」 是指資料庫資料行並 「 來源 」 是指應用程式緩衝區中的資料。  
+-   *儲存 指派：* 當傳送資料到資料表資料行在資料庫中。 這會發生在呼叫**SQLExecute**， **SQLExecDirect**，並**SQLSetPos**。 在存放區指派 「 目標 」 是指資料庫資料行並 「 來源 」 是指應用程式緩衝區中的資料。  
   
--   *擷取指派：* 時從資料庫擷取資料到應用程式的緩衝區。 這會發生在呼叫**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，以及**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區而 「 來源 」 是指資料庫資料行。  
+-   *擷取指派：* 當資料庫中的資料擷取到應用程式緩衝區中。 這會發生在呼叫**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，以及**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區而 「 來源 」 是指資料庫資料行。  
   
--   *CS:* 字元來源中的值。  
+-   *CS:* 中字元來源的值。  
   
 -   *NT:* 數值目標中的值。  
   
--   *NS:* 數值來源中的值。  
+-   *NS:* 數字的來源中的值。  
   
 -   *CT:* 字元目標中的值。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47706096"
   
     -   如果 NS 小於 0，然後讓 Y 是結果：  
   
-         '-' &AMP;#124; &AMP;#124; YP  
+         '-' &#124;&#124; YP  
   
          位置 '&#124;&#124;' 是字串串連運算子。  
   

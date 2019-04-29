@@ -1,5 +1,5 @@
 ---
-title: 步驟 3：加入封裝和其他檔案 |Microsoft Docs
+title: 步驟 3：加入套件和其他檔案 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892076"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>步驟 3：加入封裝和其他檔案
   在這項工作中，您會將現有的封裝、支援個別封裝的輔助檔案以及讀我檔案，加入至前一項工作所建立的「部署教學課程」專案中。 例如，您將會加入包含封裝資料的 XML 資料檔，還會加入一個文字檔，以提供有關專案中所有封裝的讀我資訊。  
@@ -68,7 +68,7 @@ ms.locfileid: "58384226"
 4.  按一下 [檔案] 功能表上的 [全部儲存]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 4：加入封裝組態](../integration-services/lesson-1-4-adding-package-configurations.md)  
+ [步驟 4：新增套件設定](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
 ![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   

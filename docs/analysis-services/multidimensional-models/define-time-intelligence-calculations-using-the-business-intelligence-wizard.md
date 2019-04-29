@@ -1,5 +1,5 @@
 ---
-title: 定義時間智慧計算使用商業智慧精靈 |Microsoft 文件
+title: 定義時間智慧計算使用商業智慧精靈 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043119"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>使用商業智慧精靈定義時間智慧計算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "34026915"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>檢視時間智慧增強功能  
  在 [商業智慧精靈] 的最後一頁，您可以檢視將會對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫進行的變更。 針對時間智慧增強功能，精靈會變更選取的時間維度、關聯的資料來源檢視以及關聯的 Cube，如下表所述。  
   
-|物件|變更|  
+|Object|變更|  
 |------------|------------|  
 |時間維度|針對每個計算 (或檢視) 加入屬性。|  
 |資料來源檢視|針對時間維度中的每個新屬性，在時間資料表內加入導出資料行。|  
 |Cube|加入定義多維度運算式 (MDX) 程式碼的導出成員以執行計算。|  
   
 ## <a name="see-also"></a>另請參閱  
- [建立導出的成員](../../analysis-services/multidimensional-models/create-calculated-members.md)  
+ [建立導出成員](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

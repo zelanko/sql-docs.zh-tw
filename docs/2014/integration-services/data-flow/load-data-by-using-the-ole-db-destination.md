@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902232"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>使用 OLE DB 目的地來載入資料
   若要加入及設定 OLE DB 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -42,7 +42,7 @@ ms.locfileid: "58376716"
   
     -   **資料表或檢視** ：在資料庫中選取包含資料的資料表或檢視。  
   
-    -   **資料表或檢視-快速載入**選取包含資料的資料庫中的資料表或檢視表，然後將 快速載入選項：**保留識別**，**保持 null**， **Table lock**，**檢查條件約束**，**每個批次的資料列**，或**最大值插入認可大小**。  
+    -   **資料表或檢視表 - 快速載入**：在資料庫中選取包含資料的資料表或檢視，然後設定快速載入選項：[保留識別]、[保留 Null]、[資料表鎖定]、[檢查條件約束]、[每批次的資料列] 或 [插入認可大小上限]。  
   
     -   **資料表名稱或檢視名稱變數** ：選取使用者自訂變數，該變數包含資料庫中資料表或檢視的名稱。  
   

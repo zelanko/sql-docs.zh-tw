@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042184"
 ---
 # <a name="considering-database-features-to-use"></a>考慮要使用的資料庫功能
-已知的互通性的基本層級之後，必須考量應用程式所使用的資料庫功能。 比方說，哪些 SQL 陳述式將應用程式執行？ 將應用程式會使用可捲動資料指標？ 交易？ 程序？ Long 資料？ 針對所有 Dbms 可能不都支援哪些功能的想法，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，並[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函式描述，以及[附錄 C:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 應用程式所需的功能可能消除某些 Dbms 從目標 Dbms 的清單。 它們也可能會顯示應用程式很容易下手有許多 Dbms。  
+已知的互通性的基本層級之後，必須考量應用程式所使用的資料庫功能。 比方說，哪些 SQL 陳述式將應用程式執行？ 將應用程式會使用可捲動資料指標？ 交易？ 程序？ Long 資料？ 針對所有 Dbms 可能不都支援哪些功能的想法，請參閱[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，並[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)函式描述，以及[附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)。 應用程式所需的功能可能消除某些 Dbms 從目標 Dbms 的清單。 它們也可能會顯示應用程式很容易下手有許多 Dbms。  
   
- 比方說，如果所需的功能很簡單，他們可以通常用來實作較高程度的互通性。 執行簡單的應用程式**選取**順向資料指標的陳述式並擷取結果很可能是由於其簡易性高度互通： 幾乎所有的驅動程式和 Dbms 支援的功能它需求。  
+ 比方說，如果所需的功能很簡單，他們可以通常用來實作較高程度的互通性。 執行簡單的應用程式**選取**順向資料指標的陳述式並擷取結果很可能是由於其簡易性高度互通：幾乎所有的驅動程式和 Dbms 支援它需要的功能。  
   
  不過，如果所需的功能更為複雜，例如可捲動資料指標、 定位的 update 和 delete 陳述式，以及程序，取捨必須有通常的進行。 有數種可能性：  
   

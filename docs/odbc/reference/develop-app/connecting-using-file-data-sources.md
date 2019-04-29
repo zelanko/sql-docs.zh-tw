@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043883"
 ---
 # <a name="connecting-using-file-data-sources"></a>使用檔案資料來源進行連線
 檔案資料來源的連接資訊儲存在.dsn 檔案。 如此一來，連接字串可以是一位使用者重複使用或有適當的驅動程式安裝數個使用者共用。 檔案包含驅動程式名稱 （或在自檔案資料來源的情況下的另一個資料來源名稱） 和 （選擇性） 連接字串，可供**SQLDriverConnect**。 驅動程式管理員建置呼叫的連接字串**SQLDriverConnect**從.dsn 檔案中的關鍵字。  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892239"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) 參數
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 參數可讓您在封裝執行時，將值指派給封裝內的屬性。 您可以在專案層級建立 *「專案參數」* (Project Parameter)，並在封裝層級建立 *「封裝參數」* (Package Parameter)。 專案參數可用於向專案中的一個或多個封裝提供專案接收的任何外部輸入。 封裝參數可讓您修改封裝執行，而不需要編輯和重新部署封裝。  
@@ -102,6 +102,6 @@ ms.locfileid: "58377975"
  [部署專案之後設定參數值](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>相關內容  
- 部落格文章[SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)，mattmasson.com 上。  
+ mattmasson.com 上的部落格文章：[SSIS 快速提示：必要參數](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045519"
 ---
 # <a name="other-driver-architectures"></a>其他驅動程式架構
 有些 ODBC 驅動程式不完全符合先前所述的架構。 這可能是因為驅動程式執行傳統的 ODBC 驅動程式以外的職責，或不是一般意義的驅動程式。  

@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919172"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>一般和內容連接的限制
   本主題討論中執行的程式碼的相關限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
@@ -47,7 +47,7 @@ ms.locfileid: "48163318"
 ## <a name="restrictions-on-regular-connections"></a>一般連接的限制  
  開發應用程式時，請考慮下列適用於一般連接的限制：  
   
--   不支援針對內部伺服器執行非同步命令。 如果您在命令的連接字串中包含 "async=true"，然後執行此命令，就會導致系統擲回 `System.NotSupportedException`。 此訊息會顯示：「在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序內部執行時，不支援非同步處理」。  
+-   不支援針對內部伺服器執行非同步命令。 如果您在命令的連接字串中包含 "async=true"，然後執行此命令，就會導致系統擲回 `System.NotSupportedException`。 此時會出現此訊息：「 在執行時不支援非同步處理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]程序。 」  
   
 -   不支援 `SqlDependency` 物件。  
   

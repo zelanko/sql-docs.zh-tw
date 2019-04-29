@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022480"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>內建的全域和使用者參考 (報表產生器及 SSRS)
   內建欄位集合包含 `Globals` 和 `User` 集合，代表在處理報表時 Reporting Services 所提供的全域值。 `Globals` 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 `User` 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  

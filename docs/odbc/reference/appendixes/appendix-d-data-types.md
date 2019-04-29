@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026767"
 ---
 # <a name="appendix-d-data-types"></a>附錄 D：資料型別
 ODBC 定義資料類型的兩個的集合：SQL 資料類型和 C 資料類型。 SQL 資料類型表示的資料類型儲存在資料來源的資料。 C 資料類型表示資料儲存在應用程式緩衝區中的資料類型。  

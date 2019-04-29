@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08926758b2d217bde6f858405ebde1c2b38b4d66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026736"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52796170"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|識別點對點 LSN。|  
 |**last_updated**|**datetime**|**Datetime**在進行最後一個資料列更新。|  
-|**建立者**|**sysname**|交易的來源發行者名稱。|  
+|**originator**|**sysname**|交易的來源發行者名稱。|  
 |**originator_db**|**sysname**|交易的來源資料庫名稱。|  
 |**originator_publication**|**sysname**|交易的來源發行集名稱。|  
 |**originator_publication_id**|**int**|交易的來源發行集識別碼。|  

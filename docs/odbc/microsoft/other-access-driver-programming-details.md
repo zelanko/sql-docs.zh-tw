@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97a37c894e2f571418b9169fb44ab12abafd3290
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024239"
 ---
 # <a name="other-access-driver-programming-details"></a>其他 Access 驅動程式的程式設計詳細資料
 > [!NOTE]  

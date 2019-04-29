@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f5752602de4848b35298fb4c4a6a1efdf6519dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042484"
 ---
 # <a name="cstring-class"></a>CString 類別
 因為物件**CString**簽署 Microsoft® C++® 中的類別和 ODBC 函式中的字串引數是不帶正負號，應用程式會通過**CString** ODBC 函數，而不需要的物件將它們轉型將會收到編譯器警告。

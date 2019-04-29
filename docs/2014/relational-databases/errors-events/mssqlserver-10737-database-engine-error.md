@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_10737 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 10737 (Database Engine error)
 ms.assetid: 208af6ed-b271-4ab8-803e-7666025385c8
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7d89c05ebd0b181b63f66fa0e0e0db99d54b952
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916142"
 ---
 # <a name="mssqlserver10737"></a>MSSQLSERVER_10737
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -33,6 +34,5 @@ ms.locfileid: "48115268"
 |訊息文字|在 ALTER TABLE REBUILD 或 ALTER INDEX REBUILD 陳述式中，如果在 DATA_COMPRESSION 子句中指定了分割區，就必須指定 PARTITION=ALL。 PARTITION=ALL 子句是用來強調即將重建資料表或索引的所有分割區，即使 DATA_COMPRESSION 子句中只有指定子集也一樣。|  
   
 ## <a name="user-action"></a>使用者動作  
- 將 PARTITION=ALL 子句加入至 ALTER TABLE 或 ALTER INDEX 陳述式。 或者，若要重建特定資料分割，請使用 REBUILD PARTITION = \<分割區編號運算式> WITH (DATA_COMPRESSION={ON | OFF})。  
-  
+將 PARTITION=ALL 子句加入至 ALTER TABLE 或 ALTER INDEX 陳述式。 或者，若要重建特定資料分割，請使用 REBUILD PARTITION = \<分割區編號運算式> WITH (DATA_COMPRESSION={ON | OFF})。  
   

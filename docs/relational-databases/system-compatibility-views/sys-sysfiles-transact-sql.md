@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c2c139a914b511ab7ee80a0fdd180bab5654205a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047139"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "47721499"
 |**fileid**|**smallint**|每個資料庫的唯一檔案識別碼。|  
 |**groupid**|**smallint**|檔案群組識別碼。|  
 |**size**|**int**|檔案大小 (以 8KB 頁面為單位)。|  
-|**大小上限**|**int**|最大檔案大小 (以 8 KB 頁面為單位)。<br /><br /> 0 = 不成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意： 不受限的記錄檔大小會升級的資料庫將會報告記錄檔的大小上限為-1。|  
-|**成長**|**int**|資料庫的成長大小。 可以是頁數或檔案的大小，根據值的百分比**狀態**。<br /><br /> 0 = 不成長。|  
+|**maxsize**|**int**|最大檔案大小 (以 8 KB 頁面為單位)。<br /><br /> 0 = 不成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意:升級不受限的記錄檔大小的資料庫將會報告記錄檔的大小上限為-1。|  
+|**growth**|**int**|資料庫的成長大小。 可以是頁數或檔案的大小，根據值的百分比**狀態**。<br /><br /> 0 = 不成長。|  
 |**status**|**int**|狀態位元**成長**mb 或 kb 為單位 (KB) 中的值。<br /><br /> 0x2 = 磁碟檔。<br /><br /> 0x40 = 記錄檔。<br /><br /> 0x100000 = 成長。 這個值是一個百分比，不是頁數。|  
 |**perf**|**int**|已保留。|  
 |**name**|**sysname**|檔案的邏輯名稱。|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034915"
 ---
 # <a name="diagnostic-messages"></a>診斷訊息
 診斷訊息會傳回每個的 SQLSTATE。 一些不同的訊息通常會傳回相同的 SQLSTATE。 比方說，會傳回 SQLSTATE 42000 （語法錯誤或存取違規），發生 SQL 語法的大部分錯誤。 不過，每個語法錯誤很可能由不同的訊息描述。  
@@ -33,21 +33,21 @@ ms.locfileid: "47767626"
   
  如果錯誤或警告的來源元件本身，診斷訊息必須說明此點。 因此，訊息的文字有兩種不同的格式。 錯誤和警告不會發生在資料來源中，診斷訊息必須使用此格式：  
   
- **[** *廠商識別碼* **] [** *ODBC 元件識別碼* **]** *元件提供文字*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
   
  錯誤和警告發生在資料來源中，診斷訊息必須使用此格式：  
   
- **[** *廠商識別碼* **] [** *ODBC 元件識別碼* **] [** *資料來源識別碼* **]** *資料來源-提供-文字*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
   
  下表顯示每個元素的意義。  
   
-|元素|意義|  
+|項目|意義|  
 |-------------|-------------|  
-|*廠商識別碼*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告之元件的廠商。|  
-|*ODBC 元件識別碼*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告的元件。|  
-|*資料來源識別碼*|識別資料來源。 對於檔案為基礎的驅動程式，這通常是一種檔案格式，例如 Xbase [1] 的 DBMS 為基礎的驅動程式中，這是 DBMS 的產品。|  
-|*元件提供文字*|ODBC 元件所產生。|  
-|*資料來源-提供-文字*|產生的資料來源。|  
+|*vendor-identifier*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告之元件的廠商。|  
+|*ODBC-component-identifier*|識別發生錯誤或警告，或直接從資料來源收到的錯誤或警告的元件。|  
+|*data-source-identifier*|識別資料來源。 對於檔案為基礎的驅動程式，這通常是一種檔案格式，例如 Xbase [1] 的 DBMS 為基礎的驅動程式中，這是 DBMS 的產品。|  
+|*component-supplied-text*|ODBC 元件所產生。|  
+|*data-source-supplied-text*|產生的資料來源。|  
   
  [1] 在此情況下，驅動程式做為驅動程式和資料來源。  
   

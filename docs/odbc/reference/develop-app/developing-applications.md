@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85cb08e40ddd98d01216707b954d46b924053fc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034885"
 ---
 # <a name="developing-applications"></a>開發應用程式
 本節包含有關開發使用 ODBC 介面和實作它的驅動程式應用程式的資訊。  
@@ -47,7 +47,7 @@ ms.locfileid: "47758896"
   
 -   [描述項](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [交易](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [診斷](../../../odbc/reference/develop-app/diagnostics.md)  
   

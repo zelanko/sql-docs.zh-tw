@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022230"
 ---
 # <a name="oracle-subscribers"></a>Oracle 訂閱者
   從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會透過由 Oracle 提供的 Oracle OLE DB 提供者支援 Oracle 的發送訂閱。  

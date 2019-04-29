@@ -28,7 +28,7 @@ ms.locfileid: "47656526"
   
 -   使用預設 Data Quality Services 知識庫。  
   
--   建立您自己的自訂 DQS 知識庫和比對原則。 如需相關資訊，請參閱 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)。  
+-   建立您自己的自訂 DQS 知識庫和比對原則。 如需相關資訊，請參閱 [建立訂閱](../../data-quality-services/create-a-matching-policy.md)。  
   
 ## <a name="prerequisites"></a>Prerequisites  
   

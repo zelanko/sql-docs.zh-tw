@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034945"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>判斷目標 DBMS 和驅動程式
 考慮下一個問題是，什麼是應用程式的目標 Dbms 哪些驅動程式是否可用，以及支援這些 Dbms？ 一般應用程式通常為高度互通，因為目標 Dbms 的問題是最適用於自訂和垂直應用程式。 不過，目標驅動程式問題適用於所有應用程式，因為驅動程式所帶來的速度、 品質、 功能的支援，和可用性。 此外，如果驅動程式與應用程式轉散發，成本和可用性的授權計劃需要考量。  

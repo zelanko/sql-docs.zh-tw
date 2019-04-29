@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026561"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52817300"
 |-----------------|---------------|-----------------|  
 |**eventtime**|**datetime**|發生事件的日期時間。|  
 |**pubid**|**uniqueidentifier**|給定發行集的唯一識別碼。|  
-|**artid&lt**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
+|**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
 |**eventtype**|**tinyint**|指定所記錄之事件的類型，它可以是下列項目之一：<br /><br /> **1** -初始發行集層級的屬性設定。<br /><br /> **2** -發行集屬性中的變更。<br /><br /> **101** -初始發行項屬性設定。<br /><br /> **102** -發行項屬性中的變更。|  
 |**propertyname**|**sysname**|設定或變更的屬性名稱|  
 |**previousvalue**|**sysname**|如果變更了屬性，便是先前的屬性值。|  

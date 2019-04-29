@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63031932"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>選項 （SQL Server 物件總管編寫指令碼頁面）
   使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  
@@ -56,7 +56,7 @@ ms.locfileid: "52764400"
  **編寫全文檢索目錄的指令碼**  
  加入全文檢索目錄的指令碼。 預設值是 False。 如需詳細資訊，請參閱 < [CREATE FULLTEXT CATALOG &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)。  
   
- **指令碼使用\<資料庫 >**  
+ **Script USE \<database>**  
  將 USE DATABASE 陳述式新增到指令碼中，可在目前的 **物件總管** 資料庫內容中建立資料庫物件。 如果預期指令碼會用於不同的資料庫，請選取 False 省略。 預設值是 True。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
   
 ### <a name="object-scripting-options"></a>物件指令碼選項  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c693a110994b457468d1cb620e95158b39f58ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911430"
 ---
 # <a name="sql-server-servicing-installation"></a>SQL Server 服務安裝
   本節內容將討論如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服務更新，將更新套用至任何已安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件  

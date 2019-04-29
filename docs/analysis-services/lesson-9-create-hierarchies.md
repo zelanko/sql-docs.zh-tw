@@ -1,5 +1,5 @@
 ---
-title: 第 9 課： 建立階層 |Microsoft Docs
+title: 第 9 課：建立階層 |Microsoft Docs
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017274"
 ---
-# <a name="lesson-9-create-hierarchies"></a>第 9 課： 建立階層
+# <a name="lesson-9-create-hierarchies"></a>第 9 課：建立階層
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課，您將建立階層。 階層是以層級排列的資料行群組；例如，[地理位置] 階層可能有 [國家/地區]、[州省]、[縣市]、[縣 (市)] 的子層級。 在報表用戶端應用程式欄位清單中，階層可以與其他資料行分開顯示，讓用戶端使用者更易於導覽及包含在報表中。 若要進一步了解，請參閱[階層](../analysis-services/tabular-models/hierarchies-ssas-tabular.md)。  
   
 若要建立階層，您將使用中的模型設計師*圖表檢視*。 建立及管理階層不支援在資料檢視中。  
   
-完成本課程的估計時間： **20 分鐘**  
+估計的時間才能完成這一課：**20 分鐘的時間**  
   
 ## <a name="prerequisites"></a>先決條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 8 課： 建立檢視方塊](../analysis-services/lesson-8-create-perspectives.md)。  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 8 課：建立檢視方塊](../analysis-services/lesson-8-create-perspectives.md)。  
   
 ## <a name="create-hierarchies"></a>建立階層  
   
@@ -45,7 +45,7 @@ ms.locfileid: "42791695"
   
 5.  以滑鼠右鍵按一下**ModelName**資料行 >**新增至階層**，然後選取**分類**。 執行相同的動作**EnglishProductName**。 重新命名階層中的這些資料行**模型**並**產品**。  
 
-    ![為表格式-lesson9-類別](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>若要在 DimDate 資料表中建立階層  
   
@@ -73,6 +73,6 @@ ms.locfileid: "42791695"
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>下一步
-移至下一個課程︰[第 10 課： 建立資料分割](../analysis-services/lesson-10-create-partitions.md)。 
+請移至下一課：[第 10 課：建立分割區](../analysis-services/lesson-10-create-partitions.md)。 
   
   

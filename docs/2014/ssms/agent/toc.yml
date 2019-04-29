@@ -215,7 +215,7 @@
           href: change-steps-of-a-sql-server-agent-master-job.md
         - name: Remove Steps from a SQL Server Agent Master Job
           href: remove-steps-from-a-sql-server-agent-master-job.md
-        - name: Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+        - name: 修改與 SQL Server Agent 主要作業相關聯的目標伺服器
           href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
         - name: 為多伺服器環境選擇適當的 SQL Server Agent 服務帳戶
           href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md

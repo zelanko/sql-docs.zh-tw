@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 059bb0e945875d36582d08f8018bad485475639d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027979"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile 屬性
 表示說明檔和相關聯的主題[錯誤](../../../ado/reference/ado-api/error-object.md)物件。  

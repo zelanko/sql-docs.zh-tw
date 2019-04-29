@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 774894c374edf4e57d1c297f981d423a7fabd4ee
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020090"
 ---
 # <a name="using-try-and-catch-blocks"></a>使用 Try 和 Catch 區塊
   在您將條件陳述式加入程式碼，以限制對報表伺服器的無效要求之後，應該透過使用 Try/Catch 區塊，來提供適當的例外狀況處理。 這個技術可以針對無效的要求提供另一層的保護。 如果對報表伺服器的要求是包含在 Try 區塊中，而且該要求造成報表伺服器擲回例外狀況，則在 Catch 區塊中會抓住例外狀況，因此可防止應用程式非預期地結束。 一旦捕捉到例外狀況，您可以使用例外狀況來指示使用者執行不一樣的動作，或只是以適當的方式讓使用者知道已發生錯誤。 接著您可以使用 Finally 區塊來清除任何資源。 理想上，您應該產生一般的例外狀況處理計劃，來避免 Try/Catch 區塊不必要的複製。  

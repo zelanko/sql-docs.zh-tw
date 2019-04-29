@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900198"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩時變維度轉換
   「緩時變維度」轉換可在資料倉儲維度資料表中協調記錄的更新與插入。 例如，您可利用此轉換來設定轉換輸出，該轉換輸出會使用 AdventureWorks OLTP 資料庫中 Production.Products 資料表的資料，在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 資料庫的 DimProduct 資料表內插入和更新記錄。  
@@ -46,7 +46,7 @@ ms.locfileid: "58388238"
   
 -   變更屬性變更會覆寫現有記錄。 此種變更相當於「類型 1」變更。 「緩時變維度」轉換會將這些資料列導向稱為 [變更屬性更新輸出] 的輸出。  
   
--   記錄屬性變更會新建記錄，而不是更新現有記錄。 現有記錄中唯一允許的變更，是更新指示記錄為目前記錄還是過期記錄的資料行。 此種變更相當於「類型 2」變更。 「 緩時變維度 」 轉換會將導向至兩個輸出這些資料列：**歷程記錄屬性插入輸出**並**新輸出**。  
+-   記錄屬性變更會新建記錄，而不是更新現有記錄。 現有記錄中唯一允許的變更，是更新指示記錄為目前記錄還是過期記錄的資料行。 此種變更相當於「類型 2」變更。 「緩時變維度」轉換會將這些資料列導向至兩個輸出：[記錄屬性插入輸出] 及 [新輸出]。  
   
 -   固定屬性變更指示資料行的值不得變更。 「緩時變維度」轉換會偵測變更，並可將具有變更的資料列導向稱為 [固定屬性輸出] 的輸出。  
   

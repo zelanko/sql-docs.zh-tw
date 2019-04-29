@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b48ae5874146d31552bc940dc3e15eaf80e11883
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022375"
 ---
 # <a name="editionname-property-wmi-msreportserverinstance"></a>EditionName 屬性 (WMI MSReportServer_Instance)
   傳回報表伺服器版本之人們可讀取的名稱。 唯讀。  

@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025696"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署檢查清單：將 PowerPivot 伺服器加入至 SharePoint 2010 伺服器陣列，藉以向外延展
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署檢查清單：向外延展至 SharePoint 2010 伺服器陣列加入 PowerPivot 伺服器
   如果您預期 SharePoint 伺服器陣列中 PowerPivot 查詢處理有大量的要求，您可以加入額外的 PowerPivot for SharePoint 執行個體，以順暢地新增查詢和資料處理支援。  
   
  安裝新執行個體之後，即會有額外的容量可查詢 PowerPivot 資料或處理 PowerPivot 資料重新整理工作。 或者，您可以選擇設定每部伺服器處理一種要求類型：查詢或資料重新整理。  

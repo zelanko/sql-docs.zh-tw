@@ -1,5 +1,5 @@
 ---
-title: SQLGetTypeInfo （Access 驅動程式） |Microsoft Docs
+title: SQLGetTypeInfo (Access Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a7c87c0dc81035d59e17db02a6e95c3b573523a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028690"
 ---
 # <a name="sqlgettypeinfo-access-driver"></a>SQLGetTypeInfo (Access 驅動程式)
 > [!NOTE]  

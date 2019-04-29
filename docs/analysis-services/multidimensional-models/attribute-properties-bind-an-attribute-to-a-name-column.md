@@ -1,5 +1,5 @@
 ---
-title: 將屬性繫結至名稱資料行 |Microsoft 文件
+title: 將屬性繫結至名稱資料行 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020436"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>屬性內容-屬性繫結至名稱資料行
+# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>屬性內容 - 將屬性繫結至名稱資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   此程序描述如何使用維度設計師中的 **[屬性]** 窗格，及使用 **[物件繫結]** 對話方塊，手動繫結屬性與名稱資料行。  
   

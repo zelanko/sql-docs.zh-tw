@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027535"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>監視與系統管理員主控台-Analytics Platform System appliance
 系統管理員主控台是呈現應用裝置狀態、 健全狀況和效能資訊的 SQL Server PDW web 應用程式。 使用者連線到透過 Internet Explorer 的系統管理員主控台。  
@@ -22,7 +22,7 @@ ms.locfileid: "37909848"
 ## <a name="About"></a>關於系統管理員主控台  
 ![應用裝置主控台首頁](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**應用裝置**  
+**Appliance**  
 主資料夾  
 提供設備狀態的快速摘要。  
   
@@ -58,7 +58,7 @@ Backups/Restores
 資源  
 會顯示一份 PDW 資源鎖定和其目前的狀態。  
   
-Storage  
+儲存體  
 摘要說明的 PDW 儲存體使用率。  
   
 效能監視  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9f59953dee77453bb8b453a40a36d17e865a1fe5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034925"
 ---
 # <a name="diagnostic-handling-rules"></a>診斷處理規則
 下列規則可管理中的診斷處理**SQLGetDiagRec**並**SQLGetDiagField**。  

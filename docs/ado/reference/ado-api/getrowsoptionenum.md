@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20c2f0027d82f55d1a8fc9bc58cf3331b92da116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028005"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 指定要擷取記錄數[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
