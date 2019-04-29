@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 063e78a15a4bd365c4eb061cc54454fb6e6637c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731608"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>DMX 查詢編輯器 (Analysis Services - 資料採礦)
   使用 [DMX 查詢編輯器] 即可設計和執行以資料採礦延伸模組 (DMX) 語言撰寫的陳述式。  
@@ -54,7 +54,7 @@ ms.locfileid: "48153235"
   
 |詞彙|定義|  
 |----------|----------------|  
-|**查詢編輯器視窗**|鍵入要由 DMX 查詢編輯器執行的 DMX 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪下**： 將目前的選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br /><br /> **複製**：將目前選取範圍複製到剪貼簿。<br /><br /> **貼上**： 將目前的選取範圍至剪貼簿的內容貼上。<br /><br /> **連接**：開啟 [連接到伺服器] 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **中斷**： 中斷目前查詢編輯器與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br /><br /> **中斷連接所有查詢**： 中斷連接所有開啟的查詢編輯器。<br /><br /> **變更連接**： 會開啟**連接到伺服器**對話方塊，以連接到不同[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br /><br /> **在 [物件總管] 中開啟伺服器**： 會開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前查詢編輯器中連接執行個體**物件總管 中**。<br /><br /> **執行**： 執行選取的程式碼，或如果未選取，則在目前的查詢編輯器中執行所有的程式碼。<br /><br /> **屬性視窗**： 顯示**屬性** 視窗中的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]目前查詢視窗。<br /><br /> **查詢選項**： 顯示**查詢選項** 對話方塊。|  
+|**查詢編輯器視窗**|鍵入要由 DMX 查詢編輯器執行的 DMX 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪下**：將目前選取範圍複製到剪貼簿，並從查詢編輯器視窗中移除選取範圍。<br /><br /> **複製**：將目前選取範圍複製到剪貼簿。<br /><br /> **貼上**：將剪貼簿內容貼到目前選取範圍。<br /><br /> **連接**：開啟 [連接到伺服器] 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **中斷連接**：中斷目前查詢編輯器與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **中斷連接所有查詢**：中斷連接所有開啟的查詢編輯器。<br /><br /> **變更連接**：開啟 **[連接到伺服器]** 對話方塊，以建立另一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **在物件總管中開啟伺服器**：在物件總管中，開啟目前查詢編輯器所連接的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體。<br /><br /> **執行**：執行選取的程式碼，如果未選取程式碼，則執行目前查詢編輯器中的所有程式碼。<br /><br /> **屬性視窗**：在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，顯示目前查詢視窗的 [屬性] 視窗。<br /><br /> **查詢選項**：顯示 [查詢選項] 對話方塊。|  
 |**中繼資料 視窗**|顯示目前連接之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的中繼資料。|  
 |**Cube**|選取目前連接之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫內的 Cube，即可在 **[中繼資料]** 索引標籤中顯示與 Cube 相關聯的中繼資料。|  
 |**中繼資料**|顯示在 **[Cube]** 中選取之 Cube 的中繼資料，包括量值群組與量值、關鍵效能指標、維度、階層、層級、成員及成員屬性。 若要擷取物件的完整索引鍵，請：<br /><br /> 從 **[中繼資料]** 索引標籤，將物件拖曳至查詢窗格。<br /><br /> 或：<br /><br /> 以滑鼠右鍵按一下物件，然後選取 **[複製]**，再以滑鼠右鍵按一下查詢窗格，然後選取 **[貼上]**。|  
@@ -64,7 +64,7 @@ ms.locfileid: "48153235"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)   
  [MDX 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [XMLA 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](xmla-query-editor-analysis-services-multidimensional-data.md)   
  [查詢與文字編輯器&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   

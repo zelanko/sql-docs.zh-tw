@@ -1,8 +1,8 @@
 ---
-title: LOCALDB_ERROR_UNKNOWN_INSTANCE |Microsoft Docs
+title: LOCALDB_ERROR_UNKNOWN_INSTANCE | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: sql
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: reference
@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b28e3870fa5b9d3bbd62d3c4e4f4ea576c6b729f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033384"
 ---
 # <a name="localdberrorunknowninstance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>詳細資料  
   

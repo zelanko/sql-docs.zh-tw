@@ -10,18 +10,18 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317117"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330609"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>如何掛接 S3 層的巨量資料叢集的 HDFS 的
 
 下列各節提供如何設定 HDFS 階層處理的 S3 儲存體資料來源的範例。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - [已部署的巨量資料叢集](deployment-guidance.md)
 - [巨量資料工具](deploy-big-data-tools.md)
@@ -42,7 +42,7 @@ ms.locfileid: "63317117"
    ```
 
    > [!TIP]
-   > 如需有關如何建立 S3 存取金鑰 (`<s3-access-key>`)，請參閱 < [S3 便捷鍵](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)。
+   > 如需有關如何建立 S3 存取金鑰的詳細資訊，請參閱 < [S3 便捷鍵](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)。
 
 ## <a id="mount"></a> 掛接遠端 HDFS 儲存體
 

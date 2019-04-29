@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921034"
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在  中還原頁面。 分頁還原的目標是還原一個或多個受損頁面而毋需還原整個資料庫。 一般而言，選定要還原的頁面會標示為「有疑問」，因為存取該頁面時發生問題。 有疑問的頁面是在 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料庫的 **suspect_pages** 資料表中識別。  
@@ -62,7 +62,7 @@ ms.locfileid: "58536390"
   
     -   交易記錄  
   
-    -   配置頁面：全域配置對應 (Global Allocation Map，GAM) 頁面、共用全域配置對應 (Shared Global Allocation Map，SGAM) 頁面，以及頁面可用空間 (Page Free Space，PFS) 頁面。  
+    -   配置頁面：全域配置對應 (GAM) 頁面、 共用全域配置對應 (SGAM) 頁面，以及頁面可用空間 (PFS) 頁面。  
   
     -   所有資料檔案的頁面 0 (檔案啟動頁面)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "58536390"
     |標頭|值|  
     |------------|------------|  
     |**名稱**|備份組的名稱。|  
-    |**元件**|備份的元件：[資料庫]、[檔案] 或 [\<空白>] (適用於交易記錄)。|  
+    |**元件**|備份元件：[資料庫]、[檔案] 或 [\<空白>] (適用於交易記錄)。|  
     |**型別**|執行的備份類型：[完整]、[差異] 或 [交易記錄]。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  

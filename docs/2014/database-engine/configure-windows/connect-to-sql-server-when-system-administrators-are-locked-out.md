@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782381"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>當系統管理員遭到鎖定時連接到 SQL Server
   本主題描述如何以系統管理員的身分，重新取得 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的存取權。 系統管理員可能因為下列其中一個原因而失去 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的存取權：  
@@ -61,7 +61,7 @@ ms.locfileid: "52641559"
 5.  在 **啟動參數**索引標籤中，於**指定啟動參數**方塊中，輸入`-m`，然後按一下  `Add`。 (這是虛線，然後接著小寫字母 m)。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階]** 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新的參數 `;-m`，然後按一下 [`OK`]  (這是分號，然後接著虛線和小寫字母 m)。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 請小心不要變更任何現有參數。 在結尾處，加上新的參數 `;-m`，然後按一下 [`OK`]  (這是分號，然後接著虛線和小寫字母 m)。  
   
 6.  按一下  `OK`，並在之後重新啟動的訊息，以滑鼠右鍵按一下您的伺服器名稱，然後按**重新啟動**。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52641559"
 11. 在 **啟動參數**索引標籤**現有參數**方塊中，選取`-m`，然後按一下  `Remove`。  
   
     > [!NOTE]  
-    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階]** 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 移除`;-m`這是您稍早，新增，然後按一下`OK`。  
+    >  如果是某些舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則沒有 [啟動參數] 索引標籤。在該情況下，請在 [進階] 索引標籤上，按兩下 [啟動參數]。 這些參數就會在非常小的視窗中開啟。 移除`;-m`這是您稍早，新增，然後按一下`OK`。  
   
 12. 以滑鼠右鍵按一下您的伺服器名稱，然後按一下 [重新啟動]。  
   

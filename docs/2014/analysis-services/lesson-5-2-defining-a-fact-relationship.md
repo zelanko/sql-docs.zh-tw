@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b66614a40176a0c6ee0ac4b0b9283fc0415ecc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728657"
 ---
 # <a name="defining-a-fact-relationship"></a>定義事實關聯性
   使用者有時候想要按事實資料表中的資料項目建立量值維度，或查詢事實資料表中的其他特定相關資訊，例如與特定銷售事實相關的發票號碼或訂單號碼。 當您依據這樣的事實資料表項目來定義維度時，這種維度稱為「事實維度」。 事實維度也稱為變質維度。 事實維度對於將相關事實資料表資料列 (例如，與特定發票號碼相關的所有資料列) 分組很有幫助。 雖然您可以將這項資訊放在關聯式資料庫的個別維度資料表中，但為這項資訊建立個別的維度資料表並無好處，因為維度資料表與事實資料表的成長速率一樣，只會建立重複資料和產生不必要的複雜性而已。  
@@ -52,7 +52,7 @@ ms.locfileid: "52530672"
   
 7.  在 [名稱資料行] 清單中，選取 [SalesOrderLineNumber]。  
   
-8.  按 [下一步] 。  
+8.  按一下 [下一步] 。  
   
 9. 在 [選取相關資料表] 頁面上，清除所有資料表旁的核取方塊，然後按一下 [下一步]。  
   

@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045990"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 錯誤資料表
   報表伺服器會根據在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中發生的錯誤，在 SOAP 例外狀況中產生錯誤與錯誤訊息。 下表顯示透過報表伺服器 Web 服務中的 **SoapException**，可從方法存取的錯誤。 這張表格是依照擲回例外狀況的方法加以組織。  

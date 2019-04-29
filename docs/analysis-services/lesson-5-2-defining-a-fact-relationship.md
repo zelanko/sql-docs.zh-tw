@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752681"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>課程 5-2-定義事實關聯性
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52518839"
   
 7.  在 [名稱資料行] 清單中，選取 [SalesOrderLineNumber]。  
   
-8.  按 [下一步] 。  
+8.  按一下 [下一步] 。  
   
 9. 在 [選取相關資料表] 頁面上，清除所有資料表旁的核取方塊，然後按一下 [下一步]。  
   
