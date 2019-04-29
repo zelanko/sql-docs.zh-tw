@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 283e623b045e635ef3165b51270c2a257d7856fd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929900"
 ---
 # <a name="registering-a-custom-business-object"></a>註冊自訂商務物件
 若要成功地透過 Web 伺服器啟動 （.dll 或.exe） 的自訂商務物件，商務物件的 ProgID 必須輸入登錄到此程序中所述。 此 RDS 功能會執行獲批准的可執行檔用來保護您的 Web 伺服器的安全性。  

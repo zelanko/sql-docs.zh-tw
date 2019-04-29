@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926820"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
   使用 [詞彙擷取轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  
@@ -41,7 +41,7 @@ ms.locfileid: "58385036"
  指定分數是詞彙的頻率。  
   
  **TFIDF**  
- 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是詞彙頻率 」 和 「 反向文件頻率，定義為乘積：詞彙 T 的 TFIDF = （T 的頻率） * log ((輸入中的 #rows) / （#rows T）)  
+ 指定分數是詞彙的 TFIDF 值。 TFIDF 分數是「詞彙頻率」和「反向文件頻率」的乘積，定義為：詞彙 T 的 TFIDF = (T 的頻率) * log( (輸入中的資料列數目) / (有 T 的資料列數目) )  
   
  **頻率臨界值**  
  指定擷取單字或片語前，該單字或片語必須出現的次數。 預設值為 2。  

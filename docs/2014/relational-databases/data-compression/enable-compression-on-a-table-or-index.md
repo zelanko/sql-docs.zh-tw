@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918274"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>啟用資料表或索引的壓縮
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中啟用資料表或索引的壓縮。  
@@ -142,7 +142,7 @@ ms.locfileid: "52542687"
   
                 -   如果您選取 **[天]**，請輸入執行作業排程的當月日期以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的 15 日執行一次作業排程，請選取 [日]，然後在第一個方塊中輸入 "15"，並在第二個方塊中輸入 "2"。 請注意，在第二個方塊中允許的最大數目是 "99"。  
   
-                -   如果您選取 **[於]**，請選取執行作業排程的當月一週中特定的星期幾，以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的最後一個工作日執行一次作業排程，請選取 [日]，然後從第一個清單中選取 [最後一個]，並從第二個清單中選取 [工作日]，然後在最後一個方塊中輸入 "2"。 您也可以選取**第一**，**第二個**，**第三個**，或**第四個**，以及特定工作日 (例如：星期日或星期三） 的前兩個清單。 請注意，在最後一個方塊中允許的最大數目是 "99"。  
+                -   如果您選取 **[於]**，請選取執行作業排程的當月一週中特定的星期幾，以及幾個月重複一次作業排程的頻率。 例如，若要在每兩個月的最後一個工作日執行一次作業排程，請選取 [日]，然後從第一個清單中選取 [最後一個]，並從第二個清單中選取 [工作日]，然後在最後一個方塊中輸入 "2"。 您也可以在前兩個清單中選取 [第一個]、[第二個]、[第三個] 或 [第四個]，以及特定工作日 (例如：星期日或星期三)。 請注意，在最後一個方塊中允許的最大數目是 "99"。  
   
         2.  在 **[每日頻率]** 底下，指定在執行作業排程當天重複作業排程的頻率：  
   
@@ -205,7 +205,7 @@ ms.locfileid: "52542687"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會先執行 `sp_estimate_data_compression_savings` 預存程序以傳回物件的估計大小 (如果要使用 ROW 壓縮設定的話)。 然後，此範例會針對指定資料表中的所有資料分割啟用 ROW 壓縮。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會先執行 `sp_estimate_data_compression_savings` 預存程序以傳回物件的估計大小 (如果要使用 ROW 壓縮設定的話)。 然後，此範例會針對指定資料表中的所有資料分割啟用 ROW 壓縮。  
   
     ```  
     USE AdventureWorks2012;  
@@ -223,7 +223,7 @@ ms.locfileid: "52542687"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會先查詢 `sys.indexes` 目錄檢視以傳回 `index_id` 資料表上每個索引的名稱和 `Production.TransactionHistory` 。 然後，它會執行 `sp_estimate_data_compression_savings` 預存程序以傳回指定索引識別碼的估計大小 (若要使用 PAGE 壓縮設定)。 最後，此範例會重建索引識別碼 2 (`IX_TransactionHistory_ProductID`)，並指定 PAGE 壓縮。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會先查詢 `sys.indexes` 目錄檢視以傳回 `index_id` 資料表上每個索引的名稱和 `Production.TransactionHistory` 。 然後，它會執行 `sp_estimate_data_compression_savings` 預存程序以傳回指定索引識別碼的估計大小 (若要使用 PAGE 壓縮設定)。 最後，此範例會重建索引識別碼 2 (`IX_TransactionHistory_ProductID`)，並指定 PAGE 壓縮。  
   
     ```  
     USE AdventureWorks2012;   

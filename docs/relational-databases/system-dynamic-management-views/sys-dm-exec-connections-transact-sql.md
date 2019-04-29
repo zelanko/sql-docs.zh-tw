@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013507"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47774226"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|識別這項連接的相關工作階段。 可為 Null。|  
-|most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 (SOAP 連接可由其他工作階段重複使用)可為 Null。|  
+|most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 （SOAP 連線可以重複使用另一個工作階段。）可為 Null。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|net_transport|**nvarchar(40)**|一律會傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：** 說明這項連接所用的實體傳輸通訊協定。 不可為 Null。|  
+|net_transport|**nvarchar(40)**|一律會傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：** 描述這個連接所用的實體傳輸通訊協定。 不可為 Null。|  
 |protocol_type|**nvarchar(40)**|指定裝載的通訊協定類型。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  
 |protocol_version|**int**|這項連接的相關資料存取通訊協定的版本。 可為 Null。|  
 |endpoint_id|**int**|描述其為何種連接類型的識別碼。 這個 endpoint_id 可用來查詢 sys.endpoints 檢視。 可為 Null。|  
@@ -53,7 +53,7 @@ ms.locfileid: "47774226"
 |last_read|**datetime**|這項連接期間最後一次讀取的時間戳記。 可為 Null。|  
 |last_write|**datetime**|這項連接期間最後一次寫入的時間戳記。 不可設為 Null。|  
 |net_packet_size|**int**|用來傳送資訊和資料的網路封包大小。 可為 Null。|  
-|client_net_address|**varchar(48)**|連接到這部伺服器之用戶端的主機位址。 可為 Null。<br /><br /> 在 V12 之前的版本[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
+|client_net_address|**varchar(48)**|連接到這部伺服器之用戶端的主機位址。 可為 Null。<br /><br /> 在 V12 之前的 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，此資料行一律會傳回 NULL。|  
 |client_tcp_port|**int**|與這項連接相關聯的用戶端電腦上的通訊埠編號。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
 |local_net_address|**varchar(48)**|代表這項連接的目標伺服器的 IP 位址。 只適用於使用 TCP 傳輸提供者的連接。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  
 |local_tcp_port|**int**|當這項連接是使用 TCP 傳輸的連接時，代表這項連接的目標伺服器 TCP 埠。 可為 Null。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，這個資料行一律會傳回 NULL。|  

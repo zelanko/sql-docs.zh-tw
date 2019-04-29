@@ -1,5 +1,5 @@
 ---
-title: 將屬性加入至維度 |Microsoft 文件
+title: 將屬性加入至維度 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046000"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>課程 2-3-加入至維度的屬性
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>課程 2-3-將屬性新增至維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 既然您已經定義維度，就可以使用代表維度中每個資料元素的屬性擴展它們。 屬性通常是以資料來源檢視中的欄位為基礎。 將屬性加入至維度時，您可以將欄位從任何資料表加入至資料來源檢視中。  
@@ -127,7 +127,7 @@ ms.locfileid: "34017465"
 [檢閱 Cube 和維度屬性](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[維度屬性 （Property） 參考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[維度屬性 (Attribute) 屬性 (Property) 參考](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

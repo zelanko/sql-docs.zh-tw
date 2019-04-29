@@ -21,11 +21,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9b0e16279615bf102c916793439d440211939839
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025406"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "56013759"
 |time|**datetime**|以每小時增加的時間 (UTC)。|  
 |database_name|**nvarchar**|使用者資料庫的名稱。|  
 |sku|**nvarchar**|SKU 的名稱。 以下是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> [基本]<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 注意：本專欄 v11 已被取代，並不適用於 V12。 **值一律是設定為 0。**|  
+|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 注意:本專欄 v11 已被取代，並不適用於 V12。 **值一律是設定為 0。**|  
 |storage_in_megabytes|**decimal**|某一小時的最大儲存體大小，包括資料庫資料、索引、預存程序和中繼資料。|  
   
 ## <a name="permissions"></a>Permissions  

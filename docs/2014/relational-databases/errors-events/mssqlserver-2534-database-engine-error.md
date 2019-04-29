@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914654"
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141104"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|訊息文字|資料表錯誤: 頁面 P_ID (其標頭顯示是配置給物件識別碼 O_ID)，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)，是由其他物件所配置。|  
+|訊息文字|資料表錯誤：頁面 P_ID，其標頭顯示被配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE），會配置另一個物件。|  
   
 ## <a name="explanation"></a>說明  
  頁面標頭包含配置單位識別碼 (*A_ID*)，但是該配置單位中並無配置此頁面的索引配置對應 (IAM) 頁面。 因此，頁面的標頭包含錯誤的配置單位識別碼，並且頁面上將會顯示相符的 MSSQLServer_2533 錯誤，而該錯誤會對應到此頁面實際配置的配置單位識別碼。  

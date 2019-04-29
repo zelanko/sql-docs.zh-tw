@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011312"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」*(Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」金鑰)，並使用另一個密碼來解密資料 (稱為「私密」金鑰)。  
@@ -31,9 +31,9 @@ ms.locfileid: "48160698"
   
  資料庫主要金鑰是一個用來保護資料庫中憑證之私密金鑰和非對稱金鑰的對稱金鑰。 它也可以用來加密資料，但是有長度上的限制，因此與對稱金鑰相較之下，它用於資料時比較不實用。  
   
- 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密主要金鑰。 若要啟用主要金鑰的自動解密，就要使用 SMK 來加密此金鑰的複本。 使用之處，並在中，這兩個資料庫中預存`master`系統資料庫。  
+ 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密主要金鑰。 若要啟用主要金鑰的自動解密，就要使用 SMK 來加密此金鑰的複本。 這個複本會同時存放在使用它的資料庫和 `master` 系統資料庫中。  
   
- 的 DMK 複本儲存在`master`每當 DMK 變更時，系統資料庫會以無訊息模式更新。 不過，藉由變更這個預設值`DROP ENCRYPTION BY SERVICE MASTER KEY`選擇`ALTER MASTER KEY`陳述式。 未以服務主要金鑰加密的 DMK 必須使用 `OPEN MASTER KEY` 陳述式和密碼來開啟。  
+ 每當 DMK 變更時，也會以無訊息模式更新儲存於 `master` 系統資料庫中的 DMK 複本。 但是，此預設值可以使用 `DROP ENCRYPTION BY SERVICE MASTER KEY` 陳述式的 `ALTER MASTER KEY` 選項來加以變更。 未以服務主要金鑰加密的 DMK 必須使用 `OPEN MASTER KEY` 陳述式和密碼來開啟。  
   
 ## <a name="managing-sql-server-and-database-keys"></a>管理 SQL Server 和資料庫金鑰  
  加密金鑰的管理包括建立新的資料庫金鑰、建立伺服器和資料庫金鑰的備份，以及了解還原、刪除或變更金鑰的時機和方法。  

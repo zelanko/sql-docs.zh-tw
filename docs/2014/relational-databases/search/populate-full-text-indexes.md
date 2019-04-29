@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046150"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
   建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> 針對全文檢索母體擴展 （搜耙） 中的錯誤進行疑難排解  
  搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 根據預設指定執行個體的搜耙記錄檔，在此情況下，第一個執行個體，位於 %ProgramFiles%\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\LOG 資料夾中。 搜耙記錄檔會遵循下列命名結構：  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >。記錄 [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  資料庫的識別碼。 <`dbid`> 是的五位數數字加上前置零。  

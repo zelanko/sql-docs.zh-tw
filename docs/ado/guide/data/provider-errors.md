@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911367"
 ---
 # <a name="provider-errors"></a>提供者錯誤
 發生提供者錯誤時，會傳回-2147467259 的執行階段錯誤。 當您收到此錯誤時，請檢查**錯誤**作用中的集合**連線**物件，其中會包含描述所發生的一或多個錯誤。  

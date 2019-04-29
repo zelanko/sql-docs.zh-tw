@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917080"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
   使用此頁面來檢視或修改選取之資料庫的選項。 在此頁面上的可用選項的相關資訊，請參閱[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
@@ -27,7 +27,7 @@ ms.locfileid: "52774420"
  從清單中選取以指定資料庫的定序。 如需詳細資訊，請參閱 [設定或變更資料庫定序](../collations/set-or-change-the-database-collation.md)。  
   
  **復原模式**  
- 指定下列模型來進行資料庫復原到其中一項：**完整**， **Bulk-logged**，或**簡單**。 如需復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
+ 指定下列其中一個復原資料庫模式：[完整]、[大量記錄] 或 [簡單]。 如需復原模式的詳細資訊，請參閱[復原模式 &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)。  
   
  **相容性層級**  
  指定資料庫所支援的最新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可能的值為  **SQL Server 2014 (120)**、  **SQL Server 2012 (110)** 和 **SQL Server 2008 (100)**。 當 SQL Server 2005 資料庫升級到 SQL Server 2014 時，該資料庫的相容性層級會從 90 變更為 100。  SQL Server 2014 不支援 90 相容性層級。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)。  
@@ -93,7 +93,7 @@ ms.locfileid: "52774420"
  針對與選定資料庫相關的 FILESTREAM 資料指定目錄名稱。  
   
  **FILESTREAM 非交易存取**  
- 指定下列選項，可從檔案系統到 Filetable 中儲存之 FILESTREAM 資料的非交易式存取的其中一個：**關閉**， **READ_ONLY**，或**完整**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)。  
+ 指定下列其中一個選項，可進行透過檔案系統到 FileTable 中所儲存 FILESTREAM 資料的非交易存取：**OFF**、**READ_ONLY** 或 **FULL**。 如果伺服器上未啟用 FILESTREAM，這個值會設定為 OFF 而且會停用。 如需詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)。  
   
 ## <a name="miscellaneous"></a>其他  
  **ANSI NULL 預設值**  

@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916872"
 ---
 # <a name="estimate-the-size-of-a-table"></a>估計資料表的大小
   您可以使用下列步驟來估計將資料儲存於資料表中所需的空間量：  

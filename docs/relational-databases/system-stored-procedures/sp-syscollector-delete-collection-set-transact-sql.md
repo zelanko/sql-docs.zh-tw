@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1636a081aee571297aa4c9e3cbe09cd30c8feca5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004134"
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  [ @collection_set_id = ] *collection_set_id*  
  這是收集組的唯一識別碼。 *collection_set_id&lt*已**int**而且必須具有值，如果*名稱*是 NULL。  
   
- [ @name =] '*名稱*'  
+ [ @name = ] '*name*'  
  這是收集組的名稱。 *名稱*已**sysname**而且必須具有值，如果*collection_set_id&lt*是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  

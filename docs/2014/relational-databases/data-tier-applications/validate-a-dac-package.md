@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917863"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
   
 1.  **開始之前：**[必要條件](#Prerequisites)  
   
-2.  **若要升級 DAC，使用：**[檢視 DAC 內容](#ViewDACContents)，[檢視資料庫變更](#ViewDBChanges)，[檢視升級動作](#ViewUpgradeActions)，[比較 Dac](#CompareDACs)  
+2.  **若要升級 DAC，請使用下列方式：**[檢視 DAC 內容](#ViewDACContents)、[檢視資料庫變更](#ViewDBChanges)、[檢視升級動作](#ViewUpgradeActions)、[比較 DAC](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 必要條件  
  建議您不要部署來源不明或來源不受信任的 DAC 封裝。 這類 DAC 可能包含惡意程式碼，因此可能會執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述而造成錯誤。 使用來源不明或來源不受信任的 DAC 之前，請先將它部署到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的隔離測試執行個體，並在資料庫上執行 [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)，然後檢查資料庫中的程式碼，例如預存程序或其他使用者定義的程式碼。  

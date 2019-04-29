@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920681"
 ---
 # <a name="transaction-log-backups-sql-server"></a>交易記錄備份 (SQL Server)
   本主題只與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。 本主題討論 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的交易記錄備份。  
@@ -40,7 +40,7 @@ ms.locfileid: "48168638"
 ##  <a name="LogBackupSequence"></a> 記錄備份順序的運作方式  
  交易記錄備份 *「記錄檔鏈結」* (Log chain) 的順序與資料備份無關。 例如，假設發生以下一連串事件：  
   
-|Time|事件|  
+|Time|Event - 事件|  
 |----------|-----------|  
 |上午 8:00|備份資料庫。|  
 |中午|備份交易記錄。|  

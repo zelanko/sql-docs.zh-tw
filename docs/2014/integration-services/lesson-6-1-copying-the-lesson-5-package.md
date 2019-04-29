@@ -1,5 +1,5 @@
 ---
-title: 步驟 1：複製第 5 課套件 |Microsoft Docs
+title: 步驟 1:複製第 5 課套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890754"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的套件
+# <a name="step-1-copying-the-lesson-5-package"></a>步驟 1:複製第 5 課的套件
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>若要複製第 5 課的封裝  

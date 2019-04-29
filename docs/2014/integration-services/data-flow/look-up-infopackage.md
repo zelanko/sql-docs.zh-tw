@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901772"
 ---
 # <a name="look-up-infopackage"></a>查閱 InfoPackage
   使用 [查閱 InfoPackage] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoPackage。 出現 InfoPackage 的清單時，請選取您要的 InfoPackage，然後目的地就會將必要的值填入相關聯的選項。  

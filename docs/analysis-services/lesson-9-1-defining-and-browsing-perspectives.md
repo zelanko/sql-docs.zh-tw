@@ -1,5 +1,5 @@
 ---
-title: 定義和瀏覽檢視方塊 |Microsoft 文件
+title: 定義和瀏覽檢視方塊 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017337"
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>課程 9-1-定義和瀏覽檢視方塊
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "34018025"
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>透過每一個檢視方塊來瀏覽  
   
-1.  在 [建立] 功能表上，按一下 [Deploy Analysis Services Tutorial (部署 Analysis Services Tutorial)]。  
+1.  在 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 2.  順利完成部署之後，請切換至 [瀏覽器] 索引標籤，然後按一下 [重新連接] 按鈕。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "34018025"
   
     請注意，每一個量值群組只會出現一個量值，如下圖所示。  
   
-    ![網際網路銷售 」 和 「 轉售商銷售的量值](../analysis-services/media/l9-perspectives-4.gif "網際網路銷售 」 和 「 轉售商銷售的量值")  
+    ![網際網路銷售 和 轉售商銷售的量值](../analysis-services/media/l9-perspectives-4.gif "網際網路銷售 和 轉售商銷售的量值")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
 [定義和瀏覽翻譯](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  

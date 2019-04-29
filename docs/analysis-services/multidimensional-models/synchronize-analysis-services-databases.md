@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020005"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步處理 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50145913"
  如果您在來源伺服器上使用，請關閉延遲彙總處理。 在背景處理的彙總可能會干擾資料庫同步處理。 如需設定這個伺服器屬性的詳細資訊，請參閱 [OLAP 屬性](../../analysis-services/server-properties/olap-properties.md)。  
   
 > [!NOTE]  
->  資料庫大小是判斷同步處理是否為適當方法的一個因素。 我們沒有硬性的規定，但如果同步處理速度太慢，請考慮以平行方式同步處理多部伺服器，如這篇技術文章所述： [Analysis Services 同步處理最佳作法](http://go.microsoft.com/fwlink/?LinkID=253136)。  
+>  資料庫大小是判斷同步處理是否為適當方法的一個因素。 我們沒有硬性的規定，但如果同步處理速度太慢，請考慮進行同步處理多部伺服器，以平行方式，這篇技術文章所述：[Analysis Services 同步處理最佳作法](http://go.microsoft.com/fwlink/?LinkID=253136)。  
   
 ## <a name="synchronize-database-wizard"></a>同步處理資料庫精靈  
  使用同步處理資料庫精靈可執行從來源到目的地資料庫的單向同步處理，或是產生指令碼來指定資料庫同步處理作業。 您可以在同步處理過程中同步處理本機和遠端分割區，並選擇是否要包含角色。  

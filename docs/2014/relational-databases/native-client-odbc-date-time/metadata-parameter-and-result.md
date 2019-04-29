@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032327"
 ---
 # <a name="parameter-and-result-metadata"></a>參數和結果中繼資料
   本主題將描述在日期和時間資料類型之實作參數描述項 (IPD) 與實作資料列描述項 (IRD) 欄位中傳回的資訊。  
@@ -25,7 +25,7 @@ ms.locfileid: "52410035"
 ## <a name="information-returned-in-ipd-fields"></a>在 IPD 欄位中傳回的資訊  
  下列資訊會在 IPD 欄位中傳回：  
   
-|參數類型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|參數類型|日期|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -71,7 +71,7 @@ ms.locfileid: "52410035"
 ## <a name="information-returned-in-ird-fields"></a>在 IRD 欄位中傳回的資訊  
  下列資訊會在 IRD 欄位中傳回：  
   
-|資料行類型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|資料行型別|日期|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
@@ -93,6 +93,6 @@ ms.locfileid: "52410035"
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
 ## <a name="see-also"></a>另請參閱  
- [中繼資料&#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
+ [Metadata &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
   
   

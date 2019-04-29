@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017755"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**長度**|**smallint**|資料類型的實際長度 (以位元組為單位)。|  
     |**Prec**|**int**|有效位數 (總位數)。|  
     |**小數位數**|**int**|小數點右側的位數。|  
-    |**可為 Null**|**varchar(** 35 **)**|指出是否允許 NULL 值：[是] 或 [否]。|  
+    |**可為 Null**|**varchar(** 35 **)**|指出是否允許 NULL 值：Yes 或 no。|  
     |**Default_name**|**nvarchar(** 128 **)**|與這個類型繫結的預設值名稱。<br /><br /> NULL = 未繫結預設值。|  
     |**Rule_name**|**nvarchar(** 128 **)**|與這個類型繫結的規則名稱。<br /><br /> NULL = 未繫結預設值。|  
     |**定序**|**sysname**|資料類型的定序。 非字元資料類型是 NULL。|  
@@ -92,11 +92,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|資料行名稱。|  
         |**型別**|**nvarchar(** 128 **)**|資料行資料類型。|  
-        |**計算**|**varchar(** 35 **)**|指出是否計算資料行中的值：[是] 或 [否]。|  
+        |**計算**|**varchar(** 35 **)**|指出是否計算資料行的值：Yes 或 no。|  
         |**長度**|**int**|資料行長度 (以位元組為單位)。<br /><br /> 注意:如果資料行資料類型是大數值類型 (**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**)，將值顯示為-1。|  
         |**Prec**|**char(** 5 **)**|資料行有效位數。|  
         |**小數位數**|**char(** 5 **)**|資料行小數位數。|  
-        |**可為 Null**|**varchar(** 35 **)**|指出資料行中是否允許 NULL 值：[是] 或 [否]。|  
+        |**可為 Null**|**varchar(** 35 **)**|指出資料行是否允許 NULL 值：Yes 或 no。|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|修剪尾端空白。 傳回 [是] 或 [否]。|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|只是為了與舊版相容。|  
         |**定序**|**sysname**|資料行的定序。 非字元資料類型是 NULL。|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |資料行名稱|資料類型|描述|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|資料所在的檔案群組：「主要」、「次要」或「交易記錄」。|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|資料位於檔案群組：主要、 次要 」 或 「 交易記錄檔。|  
   
     -   在索引上傳回的其他結果集：  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|條件約束的類型。|  
         |**constraint_name**|**nvarchar(** 128 **)**|條件約束的名稱。|  
-        |**delete_action**|**nvarchar(** 9 **)**|指出 DELETE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
-        |**update_action**|**nvarchar(** 9 **)**|指出 UPDATE 動作是：NO_ACTION、CASCADE、SET_NULL、SET_DEFAULT 或 N/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
-        |**status_enabled**|**varchar(** 8 **)**|指出是否啟用條件約束：已啟用、已停用或 N/A。<br /><br /> 只適用於 CHECK 和 FOREIGN KEY 條件約束。|  
+        |**delete_action**|**nvarchar(** 9 **)**|指出 DELETE 動作是：NO_ACTION、 CASCADE、 SET_NULL、 SET_DEFAULT 或 n/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
+        |**update_action**|**nvarchar(** 9 **)**|指出 UPDATE 動作是：NO_ACTION、 CASCADE、 SET_NULL、 SET_DEFAULT 或 n/A。<br /><br /> 只適用於 FOREIGN KEY 條件約束。|  
+        |**status_enabled**|**varchar(** 8 **)**|指出是否已啟用條件約束：啟用已停用或 n/A。<br /><br /> 只適用於 CHECK 和 FOREIGN KEY 條件約束。|  
         |**status_for_replication**|**varchar(** 19 **)**|指出條件約束是否針對複寫。<br /><br /> 只適用於 CHECK 和 FOREIGN KEY 條件約束。|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|組成條件約束的資料行名稱，如果是預設值和規則，便是定義預設值或規則的文字。|  
   

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013063"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47643486"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|節點的識別碼。|  
-|node_state_desc|**nvarchar(256)**|節點狀態的描述。 系統會先顯示互斥的值，然後再顯示可結合的值。 例如：<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />有四個互斥的 node_state_desc 值。 它們會列出以下及其描述。<br /><ul><li>節點已連線的連線：<li>離線： 節點已離線<li>閒置： 節點沒有任何暫止的工作要求，而且已進入閒置狀態。<li>IDLE_READY： 節點沒有任何暫止工作要求，並已準備好進入閒置狀態。</li></ul><br />有三個可結合的 node_state_desc 值，如下所示及其描述。<br /><ul><li>DAC： 此節點保留供[專用管理連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<li>THREAD_RESOURCES_LOW： 任何新的執行緒上不建立此節點由於記憶體不足的狀況。<li>熱新增： 表示已加入節點，以回應 hot add CPU 事件。</li></ul>|  
+|node_state_desc|**nvarchar(256)**|節點狀態的描述。 系統會先顯示互斥的值，然後再顯示可結合的值。 例如：<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />有四個互斥的 node_state_desc 值。 它們會列出以下及其描述。<br /><ul><li>ONLINE：節點已上線<li>OFFLINE：節點已離線<li>IDLE：節點沒有任何暫止的工作要求，而且已進入閒置狀態。<li>IDLE_READY:節點沒有任何暫止工作要求，並已準備好進入閒置狀態。</li></ul><br />有三個可結合的 node_state_desc 值，如下所示及其描述。<br /><ul><li>DAC:此節點保留供[專用管理連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。<li>THREAD_RESOURCES_LOW:因為記憶體不足的狀況，可以在這個節點上不建立任何新的執行緒。<li>熱新增：表示已加入節點，以回應 hot add CPU 事件。</li></ul>|  
 |memory_object_address|**varbinary(8)**|與這個節點相關聯之記憶體物件的位址。 一對一關聯性[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address。|  
 |memory_clerk_address|**varbinary(8)**|與這個節點相關聯之記憶體 Clerk 的位址。 一對一關聯性[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address。|  
 |io_completion_worker_address|**varbinary(8)**|指派給這個節點之 IO 完成的工作者位址。 一對一關聯性[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address。|  

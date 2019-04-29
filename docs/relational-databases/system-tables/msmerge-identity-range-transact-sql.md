@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27906e593020d45a9fb5e79be6ac53bc0e7fafcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62904748"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "52791550"
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|給定訂閱的唯一識別碼。|  
-|**artid&lt**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
-|**: range_begin**|**numeric(38)**|在目前範圍開頭的識別值。|  
+|**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
+|**range_begin**|**numeric(38)**|在目前範圍開頭的識別值。|  
 |**range_end**|**numeric(38)**|在目前範圍結尾的識別值。|  
 |**next_range_begin**|**numeric(38)**|在下一個要指派之範圍開頭的識別值。|  
 |**next_range_end**|**numeric(38)**|在下一個要指派之範圍結尾的識別值。|  

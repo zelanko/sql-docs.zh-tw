@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07fa6e1b9523026af31138efc6f0e71ee0895936
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926638"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>詞彙擷取轉換編輯器 (詞彙擷取索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[詞彙擷取]** 索引標籤，可指定包含要擷取之文字的文字資料行。  

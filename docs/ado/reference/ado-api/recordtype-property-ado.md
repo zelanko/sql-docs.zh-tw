@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb43252689893d875701d747dff1640eb0862651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033420"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 屬性 (ADO)
 表示的型別[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。  

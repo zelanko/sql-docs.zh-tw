@@ -11,20 +11,20 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931428"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 課：使用供應商知識庫清理供應商資料
   您可以在這一課中，清理 Excel 檔案中的供應商資料來使用**供應商**您在第 1 課中建立的知識庫。 DQS 中的資料清理包含**電腦輔助的程序**，以分析資料符合知識庫中的知識，以及**互動式處理序**，可讓您檢閱並修改電腦輔助的程序的結果。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 請參閱[資料清理](https://msdn.microsoft.com/library/gg524800.aspx)如需詳細資訊。  
   
  電腦輔助程序會使用以下的臨界值，您可以在 DQS 用戶端主頁面上使用 [組態] 選項設定此值。  
   
--   **建議的最低分數：** DQS 為了建議替換某個值而使用的最低分數或信賴等級。  
+-   **建議的最低分數：** 最低分數或信賴等級，可由 DQS 為了建議替換某個值。  
   
--   **自動更正的最低分數：** DQS 為了自動更正某個值而使用的最低分數或信賴等級。  
+-   **自動更正的最低分數：** 最低分數或信賴等級，可由 DQS 來自動更正某個值。  
   
  請參閱[設定清理和比對的臨界值](https://msdn.microsoft.com/library/hh510415.aspx)如需有關如何設定這些設定。  
   

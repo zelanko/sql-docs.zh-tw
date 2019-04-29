@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013357"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56041629"
   
  當您在範本中指定 XPath 查詢時，請注意下列行為：  
   
--   XPath 可以包含在 XML 中具有特殊意義的 < 或 & 等字元 (而且範本是 XML 文件)。 您必須使用 XML & 編碼來逸出這些字元，或在 URL 中指定 XPath。  
+-   XPath 可以包含字元，例如 < 或 & XML 中具有特殊意義 （和範本是 XML 文件）。 您必須逸出這些字元使用 XML （& s)-編碼，或在 URL 中指定的 XPath。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 SQLXML 4.0 中使用 XPath 查詢](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

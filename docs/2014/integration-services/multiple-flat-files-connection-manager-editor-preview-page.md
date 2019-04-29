@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890553"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>多個一般檔案連接管理員編輯器 (預覽頁面)
   使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [預覽] 頁面，即可根據您定義的資料行分隔，來檢視第一個所選取來源檔的內容。  

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921951"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
   本主題描述如何使用 **或** 管理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]資料表。 **suspect_pages** 資料表用於維護可疑頁面的相關資訊，有助於決定是否有必要進行還原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料表位於 [msdb 資料庫](../databases/msdb-database.md)中。  
@@ -166,7 +166,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [還原頁面 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [suspect_pages &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

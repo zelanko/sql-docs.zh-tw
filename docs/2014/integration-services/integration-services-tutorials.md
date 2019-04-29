@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 81985b3a16d5ac271a22f0ae62d73b3a518bae94
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891853"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 教學課程
   本章節包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教學課程。  

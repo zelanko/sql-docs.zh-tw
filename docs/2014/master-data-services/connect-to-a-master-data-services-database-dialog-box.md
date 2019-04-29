@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c5214722aea9ea3fb1d04519d414b4c86ebb33de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925538"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>連接到 Master Data Services 資料庫對話方塊
   使用 [連接到 Master Data Services 資料庫] 對話方塊來選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
@@ -34,7 +34,7 @@ ms.locfileid: "52810110"
 |控制項名稱|描述|  
 |------------------|-----------------|  
 |**SQL Server 執行個體**|指定您想要主控 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 資料庫的 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 執行個體名稱。 這可以是本機或遠端電腦上的預設或具名執行個體。 輸入以下項目來指定資訊：<br /><br /> 句點 (.)，可連接到您本機電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，可連接到指定之本機或遠端電腦上的預設執行個體。<br /><br /> 伺服器名稱或 IP 位址，以及連接到指定之本機或遠端電腦上具名執行個體的執行個體名稱。 使用以下格式指定這項資訊： *server_name*\\*instance_name*。|  
-|**驗證類型**|選取連接到指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時所要使用的驗證類型。 您用來連接的認證會決定顯示在 [Master Data Services 資料庫] 下拉式清單中的資料庫。 驗證類型包括：<br /><br /> **目前的使用者-整合式安全性**:使用目前的 Windows 使用者帳戶的認證來連接使用整合式 Windows 驗證。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 會使用登入電腦及開啟應用程式之使用者的 Windows 認證。 您不能在應用程式中指定不同的 Windows 認證。 如果您想要使用不同的 Windows 認證來連接，您必須以該使用者的身分登入電腦，然後開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。<br /><br /> **SQL Server 帳戶**:您可以使用 SQL Server 帳戶來連接。 當您選取這個選項時，將會啟用 [使用者名稱] 和 [密碼] 欄位，而且您必須為指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  
+|**驗證類型**|選取連接到指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時所要使用的驗證類型。 您用來連接的認證會決定顯示在 [Master Data Services 資料庫] 下拉式清單中的資料庫。 驗證類型包括：<br /><br /> **目前使用者 - 整合式安全性**：使用 [整合式 Windows 驗證]，透過目前 Windows 使用者帳戶的認證來連線。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 會使用登入電腦及開啟應用程式之使用者的 Windows 認證。 您不能在應用程式中指定不同的 Windows 認證。 如果您想要使用不同的 Windows 認證來連接，您必須以該使用者的身分登入電腦，然後開啟 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]。<br /><br /> **SQL Server 帳戶**：使用 SQL Server 帳戶來連線。 當您選取這個選項時，將會啟用 [使用者名稱] 和 [密碼] 欄位，而且您必須為指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  
 |**使用者名稱**|指定將要用來連接指定之 SQL Server 執行個體的使用者帳戶名稱。 此帳戶必須屬於指定之 **執行個體上** 系統管理員 (sysadmin) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 角色的一部分：<br /><br /> 當 [驗證類型] 為 [目前使用者 - 整合式安全性]，[使用者名稱] 方塊會是唯讀的，而且它會顯示登入電腦的 Windows 使用者帳戶名稱。<br /><br /> [驗證類型] 為 [SQL Server 帳戶] 時，將會啟用 [使用者名稱] 方塊，而且您必須針對指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 帳戶指定認證。|  
 |**密碼**|指定已與使用者帳戶建立關聯的密碼：<br /><br /> 當 [驗證類型] 為 [目前使用者 - 整合式安全性]，[密碼] 方塊會是唯讀的，而且將會使用指定的 Windows 使用者帳戶認證來連接。<br /><br /> [驗證類型] 為 [SQL Server 帳戶] 時，將會啟用 [密碼] 方塊，而且您必須指定與指定的使用者帳戶有關聯的密碼。|  
 |**[連接]**|使用指定的認證連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。|  

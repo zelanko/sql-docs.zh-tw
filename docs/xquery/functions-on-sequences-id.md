@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62933685"
 ---
 # <a name="functions-on-sequences---id"></a>序列的相關函式 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:id($arg as xs:IDREF*) as element()*
  本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 根據 IDREF 屬性值擷取元素  
- 下列範例是根據 IDREF 經理屬性來使用 fn:id 以擷取 <`employee`> 元素。 在此範例中，經理屬性是 IDREF 類型屬性，而且 eid 屬性是 ID 類型屬性。  
+ 下列範例會使用 fn: id 來擷取 <`employee`> 項目，根據 IDREF 經理屬性。 在此範例中，經理屬性是 IDREF 類型屬性，而且 eid 屬性是 ID 類型屬性。  
   
  對於特定的經理屬性值， **id （)** 函數會尋找 <`employee`> 元素，其 ID 類型屬性值符合輸入的 IDEF 值。 換句話說，針對特定的員工而言**id （)** 函式會傳回員工主管。  
   
@@ -99,7 +99,7 @@ Go
  該查詢所傳回的值為 "Dave"。 這表示 Dave 是 Joe 的經理。  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 根據 OrderList IDREFS 屬性值擷取元素  
- 在下列範例中，<`Customer`> 元素的 OrderList 屬性是 IDREFS 類型屬性。 它列出特定客戶的 id 順序。 對於每個 id 順序，在 <`Customer`> 之下有一個 <`Order`> 元素子系以提供順序值。  
+ 在下列範例中的 OrderList 屬性 <`Customer`> 項目為 IDREFS 類型屬性。 它列出特定客戶的 id 順序。 對於每個訂單 id、 <`Order`> 項目底下的子系 <`Customer`> 提供順序值。  
   
  查詢運算式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 會從第一個客戶的 IDRES 清單擷取第一個值。 此值接著會傳遞給**id （)** 函式。 函數接著會尋找 <`Order`> 元素的 OrderID 屬性值符合的輸入**id （)** 函式。  
   

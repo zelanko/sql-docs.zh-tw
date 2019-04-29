@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 427223e6c11d47091741e032dc79b0ecafef1d00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913487"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130208"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|訊息文字|修復: 頁面 P_ID 已經配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID (類型 TYPE)。|  
+|訊息文字|修復:頁面 P_ID 已經配置給物件識別碼 O_ID，索引識別碼 I_ID，分割區識別碼 PN_ID，配置單位識別碼 A_ID （類型 TYPE）。|  
   
 ## <a name="explanation"></a>說明  
  這是 REPAIR 傳回的參考用訊息，說明頁面已經配置給索引配置對應 (IAM) 頁面的單頁位置陣列。  

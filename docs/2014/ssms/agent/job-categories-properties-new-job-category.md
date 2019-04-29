@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936986"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>作業類別目錄屬性及新增作業類別目錄
   列出一項作業類別目錄或所有作業類別目錄中的作業，並讓您能夠加入新的作業類別目錄。  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931502"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>第 2 課：建立目標的郵寄結構 （基本資料採礦教學課程）
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的行銷部門想要鎖定郵寄活動的特定客戶來增加銷售量。 公司的資料庫包含一份原有客戶的清單，以及一份潛在的新客戶清單。 調查原有客戶的屬性，該公司希望探索它們以便套用至潛在客戶的模式。 比方說，它們可能會使用過去的趨勢來預測哪些潛在客戶最有可能購買自行車，以從[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，或建立未來的行銷活動的客戶區隔。  

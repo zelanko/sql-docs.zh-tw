@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035660"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 屬性 (SqlServerAlias 別名)
   取得伺服器連接別名的名稱。  

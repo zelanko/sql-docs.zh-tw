@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035677"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 事件類別
   QN:Dynamics 事件類別會報告 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 為了支援查詢通知所執行之背景活動的相關資訊 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]內，背景執行緒會監視訂閱逾時、暫止要引發的訂閱以及參數資料表解構。  
@@ -34,7 +34,7 @@ ms.locfileid: "53365870"
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類型 = 202|27|否|  
 |EventSequence|`int`|此事件的序號。|51|否|  
-|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 執行開始的時鐘：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中排程要清除過期參數資料表的背景執行緒已啟動。<br /><br /> 執行完成的時鐘：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中排程要清除過期參數資料表的背景執行緒已完成。<br /><br /> 啟動主要的清除工作：表示移除過期查詢通知訂閱資料的清除作業 (記憶體回收) 已啟動。<br /><br /> 主要的清除工作已完成：表示移除過期查詢通知訂閱資料的清除作業 (記憶體回收) 已完成。<br /><br /> 略過主要的清除工作：表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 並未執行清除作業 (記憶體回收) 來移除過期查詢通知訂閱資料。|21|是|  
+|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 執行開始的時鐘：表示在背景執行緒[!INCLUDE[ssDE](../../includes/ssde-md.md)]排程過期參數資料表，清除已啟動。<br /><br /> 執行完成的時鐘：表示在背景執行緒[!INCLUDE[ssDE](../../includes/ssde-md.md)]排程過期參數資料表，清除已完成。<br /><br /> 啟動主要的清除工作：表示移除過期的查詢通知訂閱資料的清除作業 （記憶體回收） 啟動。<br /><br /> 主要的清除工作已完成：表示移除過期的查詢通知訂閱資料的清除作業 （記憶體回收） 完成。<br /><br /> 略過主要的清除工作：表示[!INCLUDE[ssDE](../../includes/ssde-md.md)]並未執行清除作業 （記憶體回收） 來移除過期的查詢通知訂閱資料。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  

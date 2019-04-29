@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923819"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選] 對話方塊。  
@@ -31,7 +31,7 @@ ms.locfileid: "52784590"
 |明確階層|如果您選擇 [合併] 屬性類型，請選擇這些合併成員所屬的階層。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md)。|  
 |屬性群組|屬性群組是將屬性子集分組的方式。 如果您想要顯示可用屬性的子集，請選擇屬性群組。 如需屬性群組的詳細資訊，請參閱[屬性群組 &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)。|  
 |全選|按一下即可選取清單中顯示的所有屬性。|  
-|全部清除|按一下即可清除清單中顯示的選取屬性。<br /><br /> 注意：您無法清除 **Name** 和 **Code**。|  
+|全部清除|按一下即可清除清單中顯示的選取屬性。<br /><br /> 注意:您無法清除 **Name** 和 **Code**。|  
 |向上箭號|按一下即可將選取的屬性在清單中向上移動。 由上至下順序會對應至資料行在工作表中顯示的由左至右順序。|  
 |向下箭號|按一下即可將選取的屬性在清單中向下移動。 由上至下順序會對應至資料行在工作表中顯示的由左至右順序。|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "52784590"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|attribute|顯示您想要據以篩選的屬性。 如果沒有列出任何屬性，這是因為尚未新增屬性。<br /><br /> 注意：您可以篩選由您不想要顯示工作表中的屬性。|  
+|屬性|顯示您想要據以篩選的屬性。 如果沒有列出任何屬性，這是因為尚未新增屬性。<br /><br /> 注意:您可以篩選由您不想要顯示工作表中的屬性。|  
 |運算子|顯示對應至已選取之屬性類型的運算子。 如需詳細資訊，請參閱[篩選運算子 &#40;Master Data Services&#41;](../filter-operators-master-data-services.md)。|  
 |準則|您想要據以篩選的準則。|  
 |更新摘要|使用大型資料集時，按一下即可使用即將載入之資料量的詳細資料來更新 [摘要] 區段。|  

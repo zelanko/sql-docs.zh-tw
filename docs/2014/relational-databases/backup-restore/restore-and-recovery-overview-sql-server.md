@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921013"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>還原和復原概觀 (SQL Server)
   若要從失敗復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，資料庫管理員必須依邏輯正確和有意義的還原順序來還原一組 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原及復原，可從一整個資料庫、單一資料檔或資料頁面的備份還原資料，如下所示：  
@@ -145,13 +145,13 @@ ms.locfileid: "53370190"
   
 -   **還原計畫演算法：** 用來建構還原計畫的演算法已經大幅改善，特別是針對複雜的還原狀況。 相較於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言，可更有效率地處理許多邊緣案例 (包括時間點還原的分岔案例)。  
   
--   **時間點還原：** Database Recovery Advisor 大幅簡化資料庫還原到指定的點的時間。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
+-   **時間點還原：** Database Recovery Advisor 大幅簡化了將資料庫還原到特定時間點的作業。 視覺備份時間表大幅增強時間點還原的支援。 這個視覺化時間表可讓您識別當做還原資料庫之目標復原點的可行時間點。 時間表可加快周遊分岔復原路徑 (跨多個復原分岔之路徑)。 特定時間點還原計畫會自動包含與還原至目標時間點 (日期和時間) 有關的備份。 如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
  如需有關 Database Recovery Advisor 的詳細資訊，請參閱下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理能力部落格：  
   
--   [Recovery Advisor:簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor：簡介](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx) \(英文\)  
   
--   [Recovery Advisor:使用 SSMS 建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor：使用 SSMS 來建立/還原分割備份](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx) \(英文\)  
   
 ##  <a name="RelatedContent"></a> 相關內容  
  無。  

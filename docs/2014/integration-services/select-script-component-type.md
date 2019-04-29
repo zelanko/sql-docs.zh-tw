@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfff87c2b1e37b238d2f5a46581f3da8ceb2f3e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889231"
 ---
 # <a name="select-script-component-type"></a>選取指令碼元件類型
   使用 **[選取指令碼元件類型]** 對話方塊，即可指定是否建立指令碼轉換，而這類轉換必須預先設定以作為來源、轉換或目的地。  

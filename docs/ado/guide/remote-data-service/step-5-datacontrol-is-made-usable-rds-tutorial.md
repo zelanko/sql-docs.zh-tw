@@ -1,5 +1,5 @@
 ---
-title: '步驟 5: DataControl 設為可用 （RDS 教學課程） |Microsoft Docs'
+title: 步驟 5：DataControl 設為可用 （RDS 教學課程） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b7a1b7829ace46cac7be21d33d9837845db9a7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955768"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5：將 DataControl 設為可用 (RDS 教學課程)
-傳回**資料錄集**物件是可供使用。 您可以檢查、 瀏覽，或進行編輯，就像其他任何**資料錄集**。 您可以執行與**資料錄集**取決於您的環境。 Visual Basic 和 Visual c + + 有可用的視覺控制項**資料錄集**直接或間接與啟用的資料控制項的協助。  
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5：DataControl 會設為可用 (RDS 教學課程)
+傳回**資料錄集**物件是可供使用。 您可以檢查、 瀏覽，或進行編輯，就像其他任何**資料錄集**。 您可以執行與**資料錄集**取決於您的環境。 Visual Basic 和 VisualC++有可用的視覺控制項**資料錄集**直接或間接與啟用的資料控制項的協助。  
   
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件不會再包含在 Windows 作業系統中 (請參閱 Windows 8 和[Windows Server 2012 相容性操作手冊](https://www.microsoft.com/download/details.aspx?id=27416)如需詳細資訊)。 RDS 用戶端元件將會在 Windows 的未來版本中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉至[WCF 資料服務](https://go.microsoft.com/fwlink/?LinkId=199565)。  
@@ -45,5 +45,5 @@ Sub RDSTutorial5()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [步驟 6： 變更傳送到伺服器 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [步驟 6：變更傳送到伺服器 （RDS 教學課程）](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [RDS 教學課程 (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

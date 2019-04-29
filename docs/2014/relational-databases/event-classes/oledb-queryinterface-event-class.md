@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032421"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface 事件類別
   **OLEDB QueryInterface** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對分散式查詢和遠端預存程序發出 OLE DB **QueryInterface** 呼叫時發生。 將這個事件類別納入追蹤，追蹤會監視與分散式查詢和遠端預存程序相關聯的問題。  

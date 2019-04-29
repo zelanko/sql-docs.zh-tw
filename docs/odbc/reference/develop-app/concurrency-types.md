@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12891d7ee674167157bcb02300d2e4181ef51734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012119"
 ---
 # <a name="concurrency-types"></a>並行類型
 若要解決資料指標中的並行性降低的問題，ODBC 會公開資料指標並行的四種不同的類型：  
@@ -31,6 +31,6 @@ ms.locfileid: "47656451"
   
 -   **鎖定**資料指標使用鎖定以確定它可以更新或刪除資料列在結果集中所需的最低層級。 這通常會導致非常低的並行存取等級，尤其是在 Repeatable Read 和 Serializable 交易隔離等級。  
   
--   **使用資料列版本的開放式並行存取和使用值的開放式並行存取**資料指標使用開放式並行存取： 更新或刪除資料列，只有當他們以來未變更上次讀取。 若要偵測的變更，它會比較資料列版本或值。 則無法保證資料指標可以更新或刪除資料列，但並行是遠高於時使用鎖定。 如需詳細資訊，請參閱下一節[開放式並行存取](../../../odbc/reference/develop-app/optimistic-concurrency.md)。  
+-   **使用資料列版本的開放式並行存取和使用值的開放式並行存取**資料指標使用開放式並行存取：它會更新，或它們沒有任何變更自上次讀取後，才會刪除資料列。 若要偵測的變更，它會比較資料列版本或值。 則無法保證資料指標可以更新或刪除資料列，但並行是遠高於時使用鎖定。 如需詳細資訊，請參閱下一節[開放式並行存取](../../../odbc/reference/develop-app/optimistic-concurrency.md)。  
   
  應用程式指定它想要的游標 SQL_ATTR_CONCURRENCY 陳述式屬性搭配使用何種類型的並行存取。 若要判斷支援哪些類型，它會呼叫**SQLGetInfo** SQL_SCROLL_CONCURRENCY 選項。

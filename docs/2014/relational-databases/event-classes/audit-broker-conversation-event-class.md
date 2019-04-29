@@ -1,27 +1,27 @@
 ---
 title: Audit Broker Conversation 事件類別 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
-topic_type:
-- apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912192"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker 交談事件類別
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Broker Conversation** 事件，以報告與 Service Broker 對話安全性相關的稽核訊息。  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker 交談事件類別的資料行  
@@ -48,7 +48,7 @@ ms.locfileid: "52795183"
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**int**|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
-|**TextData**|**ntext**|對於錯誤，包含描述失敗原因的訊息。 為下列其中一個值：<br /><br /> **找不到憑證**。 為對話方塊通訊協定安全性所指定的使用者沒有憑證。<br /><br /> **不在有效的時間週期內**。 為對話通訊協定安全性所指定的使用者擁有憑證，但是憑證已過期。<br /><br /> **憑證太大無法進行記憶體配置**。 為對話通訊協定安全性所指定的使用者擁有憑證，但是憑證太大。 Service Broker 支援的憑證大小上限為 32,768 位元組。<br /><br /> **找不到私密金鑰**。 為對話通訊協定安全性所指定的使用者擁有憑證，但是沒有與該憑證關聯的私密金鑰。<br /><br /> **憑證的私密金鑰大小與密碼編譯提供者不相容**。 憑證的私密金鑰大小太大而無法成功處理。 私密金鑰大小必須是 64 位元組的倍數。<br /><br /> **憑證的公開金鑰大小與密碼編譯提供者不相容**。 憑證的公開金鑰大小太大而無法成功處理。 公開金鑰大小必須是 64 位元組的倍數。<br /><br /> **憑證的私密金鑰大小與加密金鑰交換金鑰不相容**。 在金鑰交換金鑰中所指定的金鑰大小與憑證的私密金鑰大小不相符。 這通常表示在遠端電腦上的憑證與資料庫中的憑證不相符。<br /><br /> **憑證的公開金鑰大小與安全性標頭的簽章不相容**。 安全性標頭包含無法使用憑證的公開金鑰進行驗證的簽章。 這通常表示在遠端電腦上的憑證與資料庫中的憑證不相符。|1|是|  
+|**TextData**|**ntext**|對於錯誤，包含描述失敗原因的訊息。 為下列其中一個值：<br /><br /> <br /><br /> **找不到憑證**。 為對話方塊通訊協定安全性所指定的使用者沒有憑證。<br /><br /> **不在有效的時間週期內**。 為對話通訊協定安全性所指定的使用者擁有憑證，但是憑證已過期。<br /><br /> **憑證太大無法進行記憶體配置**。 為對話通訊協定安全性所指定的使用者擁有憑證，但是憑證太大。 Service Broker 支援的憑證大小上限為 32,768 位元組。<br /><br /> **找不到私密金鑰**。 為對話通訊協定安全性所指定的使用者擁有憑證，但是沒有與該憑證關聯的私密金鑰。<br /><br /> **憑證的私密金鑰大小與密碼編譯提供者不相容**。 憑證的私密金鑰大小太大而無法成功處理。 私密金鑰大小必須是 64 位元組的倍數。<br /><br /> **憑證的公開金鑰大小與密碼編譯提供者不相容**。 憑證的公開金鑰大小太大而無法成功處理。 公開金鑰大小必須是 64 位元組的倍數。<br /><br /> **憑證的私密金鑰大小與加密金鑰交換金鑰不相容**。 在金鑰交換金鑰中所指定的金鑰大小與憑證的私密金鑰大小不相符。 這通常表示在遠端電腦上的憑證與資料庫中的憑證不相符。<br /><br /> **憑證的公開金鑰大小與安全性標頭的簽章不相容**。 安全性標頭包含無法使用憑證的公開金鑰進行驗證的簽章。 這通常表示在遠端電腦上的憑證與資料庫中的憑證不相符。|1|是|  
   
  下表列出此事件類別的子類別值。  
   

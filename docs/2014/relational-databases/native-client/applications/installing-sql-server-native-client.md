@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71438a61dcaec201d0b3ae21eb7e27d979029204
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046353"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 會在您安裝 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 時安裝。 沒有 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client。 如需詳細資訊，請參閱 < [What's New in SQL Server Native Client](../sql-server-native-client.md)。 您也可以從 SQL Server 2012 功能套件網頁取得 sqlncli.msi。 若要下載最新版本的 SQL Server Native Client，請移至[Microsoft??SQL Server??2012 SP2 功能套件](https://www.microsoft.com/en-us/download/details.aspx?id=43339)。 如果電腦上也安裝了早於 SQL Server 2012 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，則 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 會與舊版本並存安裝。  

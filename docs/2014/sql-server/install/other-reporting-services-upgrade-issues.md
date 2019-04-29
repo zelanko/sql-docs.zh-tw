@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: af30ed5d0e275353691e506dd49eeaebcea10d3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011622"
 ---
 # <a name="other-reporting-services-upgrade-issues"></a>其他 Reporting Services 升級問題
   本主題描述升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能時可能遇到的已知問題。 **Upgrade Advisor 不會偵測這些問題。** 如需詳細資訊，請參閱[SQL Server 2014 版本資訊](https://go.microsoft.com/fwlink/?LinkID=296445)  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e26930db786b986fd1f4ba633e2cc5953f3df3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910443"
 ---
 # <a name="records-and-streams"></a>記錄和資料流
 目前提供 ADO[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件做為存取資料來源，例如關聯式資料庫中的資訊的主要方法。 不過，某些提供者支援[記錄](../../../ado/reference/ado-api/record-object-ado.md)並[Stream](../../../ado/reference/ado-api/stream-object-ado.md)做為替代或互補的物件與提供者的資料都可以操作的物件。 如需詳細資訊**記錄**行為，請參閱您的提供者文件。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43a83d0b20bbcdb0b95dd727a51d59353f7675bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023424"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件類別
   Missing Column Statistics 事件類別指出無法取得原本對最佳化工具非常有用的資料行統計資料。  

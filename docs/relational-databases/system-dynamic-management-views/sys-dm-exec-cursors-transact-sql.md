@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013425"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|保留這個資料指標的工作階段識別碼。|  
 |**cursor_id**|**int**|資料指標物件的識別碼。|  
 |**name**|**nvarchar(256)**|由使用者自訂的資料指標名稱。|  
-|**屬性**|**nvarchar(256)**|指定資料指標的屬性。 下列屬性的值會串連來形成這個資料行的值：<br />宣告介面<br />資料指標類型 <br />資料指標並行<br />資料指標範圍<br />資料指標巢狀層級<br /><br /> 比方說，這個資料行中傳回的值可能是"TSQL&#124;動態&#124;開放式&#124;Global (0)"。|  
+|**properties**|**nvarchar(256)**|指定資料指標的屬性。 下列屬性的值會串連來形成這個資料行的值：<br />宣告介面<br />資料指標類型 <br />資料指標並行<br />資料指標範圍<br />資料指標巢狀層級<br /><br /> 比方說，這個資料行中傳回的值可能是"TSQL&#124;動態&#124;開放式&#124;Global (0)"。|  
 |**sql_handle**|**varbinary(64)**|宣告資料指標的批次文字控制代碼。|  
 |**statement_start_offset**|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即從該處開始。 可以搭配**sql_handle**，則**statement_end_offset**，而[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動態管理函數來擷取目前執行要求的陳述式。|  
 |**statement_end_offset**|**int**|目前執行的批次或預存程序中的字元數，目前執行的陳述式即在該處結束。 可以搭配**sql_handle**，則**statement_start_offset**，而**sys.dm_exec_sql_text**動態管理函數來擷取目前執行要求的陳述式。|  
@@ -65,8 +65,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|如果是 FAST_FORWARD 和 DYNAMIC 資料指標，如果該資料指標未開啟，或是位於第一個資料列前面，它會傳回 0。 否則，它會傳回 -1。<br /><br /> 如果是 STATIC 和 KEYSET 資料指標，如果該資料指標未開啟，它會傳回 0，如果資料指標位於最後一個資料列後面，它會傳回 -1。<br /><br /> 否則，它會傳回其所在位置的資料列號碼。|  
 |**ansi_position**|**int**|提取緩衝區內的資料指標位置。|  
 |**worker_time**|**bigint**|執行這個資料指標之工作者所花的時間 (以百萬分之一秒為單位)。|  
-|**讀取**|**bigint**|資料指標執行的讀取次數。|  
-|**寫入**|**bigint**|資料指標執行的寫入次數。|  
+|**reads**|**bigint**|資料指標執行的讀取次數。|  
+|**writes**|**bigint**|資料指標執行的寫入次數。|  
 |**dormant_duration**|**bigint**|自從這個資料指標上的最後一個查詢 (開啟或提取) 啟動以來的毫秒數。|  
   
 ## <a name="permissions"></a>Permissions  

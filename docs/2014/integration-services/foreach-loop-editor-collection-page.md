@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894529"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 迴圈編輯器 (集合頁面)
   使用 [Foreach 迴圈編輯器] 對話方塊的 [集合] 頁面，即可指定列舉值類型和設定列舉值。  
@@ -44,7 +44,7 @@ ms.locfileid: "58380266"
  **運算式**  
  按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以新增列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;運算式](expressions/integration-services-ssis-expressions.md)，[屬性運算式編輯器](expressions/property-expressions-editor.md)，[運算式產生器](expressions/expression-builder.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)、[屬性運算式編輯器](expressions/property-expressions-editor.md)、[運算式產生器](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>列舉值動態選項  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58380266"
 > [!NOTE]  
 >  變數必須為物件資料類型，否則會發生錯誤。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
  **第一個資料表的資料列**  
  選取此選項即可只列舉第一個資料表的資料列。  
@@ -141,7 +141,7 @@ ms.locfileid: "58380266"
 > [!IMPORTANT]  
 >  ADO.NET 連接管理員必須使用 OLE DB 的 .NET 提供者。 如果連接到 SQL Server，則建議使用的提供者是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client，會列在 **[連接管理員]** 對話方塊的 **[OleDb 的 .Net 提供者]** 區段中。  
   
- **相關主題：**[ADO 連線管理員](connection-manager/ado-connection-manager.md)，[設定 ADO.NET 連接管理員](configure-ado-net-connection-manager.md)  
+ **相關主題：**[ADO 連線管理員](connection-manager/ado-connection-manager.md)、[設定 ADO.NET 連線管理員](configure-ado-net-connection-manager.md)  
   
  **結構描述**  
  選取要列舉的結構描述。  
@@ -157,7 +157,7 @@ ms.locfileid: "58380266"
  **變數**  
  在清單中選取變數，或按一下 [\<新增變數...>] 建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>列舉值 = Foreach NodeList 列舉值  
  Foreach Nodelist 列舉值可用來列舉因為將 XPath 運算式套用至 XML 檔案而產生的 XML 節點集合。 例如，如果 Foreach 迴圈包括指令碼工作，則您可使用 Foreach NodeList 列舉值將符合 XPath 運算式條件的值從 XML 檔案傳送給該指令碼工作。  
@@ -180,11 +180,11 @@ ms.locfileid: "58380266"
   
  如果 [DocumentSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [DocumentSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)。  
   
  **EnumerationType**  
  從清單中選取列舉類型。 這個屬性具有下表中所列的選項。  
@@ -210,11 +210,11 @@ ms.locfileid: "58380266"
   
  如果 [OuterXPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [OuterXPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)。  
   
  **InnerElementType**  
  如果**EnumerationType**設定為`ElementCollection`，在清單中選取內部元素的類型。  
@@ -233,11 +233,11 @@ ms.locfileid: "58380266"
   
  如果 [InnerXPathStringSourceType] 設定為 [檔案連線]，請選取檔案連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
  如果 [InnerXPathStringSourceType] 設定為 [變數]，請選取現有的變數，或按一下 [\<新增變數...>]，以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[將變數加入](../../2014/integration-services/add-variable.md)。  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)。  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>列舉值 = Foreach SMO 列舉值  
  Foreach SMO 列舉值可用來列舉 SQL Server 管理物件 (SMO) 物件。 例如，如果 Foreach 迴圈包括「執行 SQL」工作，您可以使用 Foreach SMO 列舉值來列舉 **AdventureWorks** 資料庫中的資料表，並執行用來計算每個資料表中資料列數目的查詢。  
@@ -245,7 +245,7 @@ ms.locfileid: "58380266"
  **[連接]**  
  選取現有的 ADO.NET 連線管理員，或按一下 [\<新增連線...>]，以建立新的連線管理員。  
   
- 相關主題：[ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)，[設定 ADO.NET 連接管理員](configure-ado-net-connection-manager.md)  
+ 相關的主題：[ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)、[設定 ADO.NET 連線管理員](configure-ado-net-connection-manager.md)  
   
  **列舉**  
  指定要列舉的 SMO 物件。  
@@ -261,7 +261,7 @@ ms.locfileid: "58380266"
  **Azure 儲存體連線管理員**  
  選取現有的 Azure 儲存體連接管理員，或建立參考 Azure 儲存體帳戶的新連接管理員。  
   
- 相關主題：[Azure 儲存體連線管理員](connection-manager/azure-storage-connection-manager.md)。  
+ 相關的主題：[Azure 儲存體連線管理員](connection-manager/azure-storage-connection-manager.md)。  
   
  **Blob 容器名稱**  
  指定包含要列舉之 Blob 檔案的 Blob 容器之名稱。  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924720"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>建立自訂工作流程 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用商務規則建立基本工作流程解決方案，以便根據您所指定的條件，自動更新與驗證資料，並傳送電子郵件通知。 當您需要做的處理比內建工作流程動作所提供的處理還要複雜時，請使用自訂工作流程。 自訂工作流程是您所建立的 .NET 組件。 呼叫您的工作流程組件時，程式碼會採取您的情況所需的任何動作。 例如，如果您的工作流程需要自訂的事件處理 (例如多層審核或複雜決策樹)，可以設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 啟動一個自訂工作流程，這個工作流程會分析資料並決定將該資料傳送至何處以待審核。  
@@ -34,7 +34,7 @@ ms.locfileid: "52750940"
 5.  SQL Server MDS 工作流程整合服務會將資料路由傳送至您的工作流程處理常式組件。  
   
 > [!NOTE]  
->  注意：SQL Server MDS 工作流程整合服務是用來觸發單一處理序。 如果您的自訂程式碼需要複雜處理，請在個別的執行緒中，或在工作流程處理序外部，完成您的處理。  
+>  注意:SQL Server MDS 工作流程整合服務是用來觸發單一處理序。 如果您的自訂程式碼需要複雜處理，請在個別的執行緒中，或在工作流程處理序外部，完成您的處理。  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>設定自訂工作流程的 Master Data Services  
  建立自訂工作流程需要撰寫特定的自訂程式碼，並設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 將工作流程資料傳遞至您的工作流程處理常式。 遵循以下步驟啟用自訂工作流程處理：  
@@ -141,7 +141,7 @@ ms.locfileid: "52750940"
   
 1.  使用服務嵌入式管理單元停止服務。  
   
-2.  開啟命令提示字元，瀏覽至服務的位置，並在主控台模式下執行服務，方式是輸入：Microsoft.MasterDataServices.Workflow.exe-console。  
+2.  開啟命令提示字元，瀏覽至服務的位置，並在主控台模式下執行服務，方式是輸入：Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中，更新您的成員，然後再次套用商務規則。 詳細的記錄顯示在主控台視窗中。  
   

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013227"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>引數  
  *plan_handle*  
- 用來唯一識別批次的查詢計劃，該批次已經執行且其計畫在計畫快取中。 *plan_handle*已**varbinary(64)**。 計畫控制代碼可從此[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)動態管理檢視。  
+  用來唯一識別批次的查詢計畫，該批次已經執行且其計畫在計畫快取中。 *plan_handle*已**varbinary(64)**。 計畫控制代碼可從此[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)動態管理檢視。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -53,7 +53,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 從上述資料表中，**屬性**可以有下列值：
 
-|attribute|資料類型|描述|  
+|屬性|資料類型|描述|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|指出編譯計畫所用的選項值。|  
 |objectid|**int**|用來查閱快取中物件的主要索引鍵之一。 這是的物件識別碼儲存在[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)資料庫物件 （程序、 檢視、 觸發程序等等）。 若計畫屬於「特定」或「準備」類型，這是批次文字的內部雜湊。|  
@@ -66,7 +66,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |status|**int**|屬於快取查閱索引鍵一部分的內部狀態位元。|  
 |required_cursor_options|**int**|使用者指定的資料指標選項，例如資料指標類型。|  
 |acceptable_cursor_options|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會隱含轉換的目標資料指標選項，以支援執行陳述式。 例如，使用者可能指定動態資料指標，但查詢最佳化工具可以將這種資料指標類型轉換成靜態資料指標。|  
-|inuse_exec_context|**int**|目前正在執行使用查詢計劃的批次數目。|  
+|inuse_exec_context|**int**|目前正在執行使用查詢計畫的批次數目。|  
 |free_exec_context|**int**|目前未使用的查詢計劃快取執行內容數目。|  
 |hits_exec_context|**int**|從計畫快取取得並重複使用執行內容的次數，這可減少重新編譯 SQL 陳述式的負擔。 這是到目前為止所有批次執行的總值。|  
 |misses_exec_context|**int**|在計畫快取中找不到執行內容的次數，這時就必須建立新執行內容以執行批次。|  
@@ -118,7 +118,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
  非使用中的資料指標會快取在編譯的計畫中，讓用來儲存資料指標的記憶體可供資料指標的並行使用者重複使用。 例如，假設有個批次宣告並使用資料指標，但沒有取消配置。 如果有兩個使用者執行相同的批次，會有兩個使用中的資料指標。 一旦資料指標取消配置 (可能在不同的批次中)，用來儲存資料指標的記憶體就會快取，而不會釋出。 非使用中資料指標的清單會保留在編譯的計畫中。 等到下次使用者執行批次時，會重複使用快取的資料指標記憶體，並適當地初始化為使用中資料指標。  
   
 ### <a name="evaluating-cursor-options"></a>評估資料指標選項  
- 要翻譯中傳回的值**required_cursor_options**並**acceptable_cursor_options**編譯計畫所用的選項，減去這些值的資料行值，開頭為最大可能的值，直到您到達 0。 每個減掉的值即為查詢計劃中使用的資料指標選項。  
+ 要翻譯中傳回的值**required_cursor_options**並**acceptable_cursor_options**編譯計畫所用的選項，減去這些值的資料行值，開頭為最大可能的值，直到您到達 0。 每個減掉的值即為查詢計畫中使用的資料指標選項。  
   
 |選項|值|  
 |------------|-----------|  

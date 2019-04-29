@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe529ac655bb9b5f0f4810ed7d0e1582693f1108
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020884"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>將空白點加入圖表中 (報表產生器及 SSRS)
   Null 值會顯示在圖表上，當做數列內資料點之間的空格或間距。 空點是指可以插入由 Null 值所建立之空格內的資料點。  

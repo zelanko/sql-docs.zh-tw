@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022510"
 ---
 # <a name="create-a-publication"></a>建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
@@ -45,7 +45,7 @@ ms.locfileid: "53365963"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   發行集與發行項名稱不能包含下列任何字元：%、\*、[、]、|、:、"、? '、 \、 /、 \< ，>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於 [發行項屬性 - \<發行項>] 對話方塊中之物件名稱的發行項名稱，您可以從精靈的 [發行項] 頁面存取此對話方塊。  
+-   發行集與發行項名稱不能包含下列任何字元：%、\*、[、]、|、:、"、? , ' , \ , / , \< , >. 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於 [發行項屬性 - \<發行項>] 對話方塊中之物件名稱的發行項名稱，您可以從精靈的 [發行項] 頁面存取此對話方塊。  
   
 ###  <a name="Security"></a> 安全性  
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  
@@ -144,7 +144,7 @@ ms.locfileid: "53365963"
   
 4.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](define-an-article.md)。  
   
-5.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)。  
+5.  啟動快照集代理程式作業來產生此發行集的初始快照集。 如需詳細資訊，請參閱 [建立和套用初始快照集](../create-and-apply-the-initial-snapshot.md)。  
   
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會建立交易式發行集。 指令碼變數是用來傳遞建立快照集代理程式作業和記錄讀取器代理程式作業所需的 Windows 認證。  

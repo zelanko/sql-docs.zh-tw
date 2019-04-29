@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916956"
 ---
 # <a name="database-properties-general-page"></a>資料庫屬性 (一般頁面)
   使用此頁面來檢視或修改選取之資料庫的屬性。  

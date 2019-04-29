@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90eaa75179bddd107db46aa197afb5c929097151
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900797"
 ---
 # <a name="source-assistant"></a>Source Assistant
   來源小幫手元件有助於建立來源元件和連線管理員。 該元件位於 SSIS 工具箱的 **[我的最愛]** 區段中。  

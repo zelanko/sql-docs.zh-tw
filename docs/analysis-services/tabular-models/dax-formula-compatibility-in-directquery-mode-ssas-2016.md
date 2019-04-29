@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019225"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 公式相容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -158,7 +158,7 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 如此一
   
 `EXAMPLE: LOG(blank())`  
   
-相同的限制也適用於其他對數函數：LOG10 和 LN。  
+相同的限制適用於其他對數函數：LOG10 和 ln。  
   
 如需 DAX 中 **blank** 資料類型的詳細資訊，請參閱 [DAX 語法參考](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
@@ -190,9 +190,9 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 如此一
   
 一般而言，因為 Excel 和 SQL Server 所接受的日期範圍不同，所以只有當日期位於共通日期範圍 (包括下列日期) 內時，才能保證結果相符：  
   
--   最早日期：1990 年 3 月 1 日  
+-   最早日期：1990 年 3 月 1日日  
   
--   最晚日期：9999 年 12 月 31 日  
+-   最晚日期：到 9999 年 12 月 31 日  
   
 如果公式中使用的任何日期超過這個範圍，則公式會產生錯誤，或者結果不符。  
   
@@ -251,7 +251,7 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
   
 -   最小值：-922337203685477.5808  
   
--   最高：922337203685477.5807  
+-   最大值：922337203685477.5807  
   
 **結合 Currency 與 REAL 資料類型**  
 範例： `Currency sample 1`  

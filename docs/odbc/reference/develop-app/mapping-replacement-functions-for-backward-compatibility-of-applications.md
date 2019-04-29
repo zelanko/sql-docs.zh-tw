@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032830"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>應用程式回溯相容性的取代函式對應
 ODBC 3 *.x*應用程式使用 ODBC 3 透過 *.x*驅動程式管理員能針對 ODBC 2。*x*只要使用任何新功能的驅動程式。 同時複製功能和行為的變更，不過，會影響的方式，ODBC 3。*x*應用程式適用於 ODBC 2。*x*驅動程式。 使用時的 ODBC 2。*x*驅動程式，則驅動程式管理員會對應下列 ODBC 3。*x*函式，已取代一個或多個 ODBC 2。*x*函式，到對應的 ODBC 2。*x*函式。  
@@ -442,7 +442,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_TABLE_NAME|"" (空字串)|  
 |SQL_DESC_TYPE|SQL_BINARY|  
 |SQL_DESC_TYPE_NAME|"" (空字串)|  
-|SQL_DESC_UNNAMED|SQL_UNNAMED 時|  
+|SQL_DESC_UNNAMED|SQL_UNNAMED|  
 |SQL_DESC_UNSIGNED|SQL_FALSE|  
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
@@ -452,11 +452,11 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |緩衝區|值|  
 |------------|-----------|  
 |ColumnName|"" (空字串)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式會進行下列呼叫來**SQLGetData**擷取書籤：  

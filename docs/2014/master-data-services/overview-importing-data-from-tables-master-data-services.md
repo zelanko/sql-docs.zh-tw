@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923273"
 ---
 # <a name="data-import-master-data-services"></a>資料匯入 (Master Data Services)
   為 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的資料建立模型之後，即可開始加入資料，並對 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的資料進行變更。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  

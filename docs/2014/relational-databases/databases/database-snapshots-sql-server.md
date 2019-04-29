@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917117"
 ---
 # <a name="database-snapshots-sql-server"></a>資料庫快照集 (SQL Server)
   資料庫快照集是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫 (「來源資料庫」) 的唯讀、靜態檢視。 資料庫快照集會與快照集建立時的來源資料庫維持交易的一致性。 資料庫快照集一律會與其來源資料庫位於相同的伺服器執行個體上。 當來源資料庫更新時，資料庫快照集也會更新。 因此，資料庫快照集存在越久，就越有可能用光其可用的磁碟空間。  

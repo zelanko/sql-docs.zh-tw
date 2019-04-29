@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921232"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>還原資料庫備份 (SQL Server Management Studio)
   本主題說明如何還原完整資料庫備份。  
@@ -32,7 +32,7 @@ ms.locfileid: "48112007"
 > [!IMPORTANT]  
 >  在完整或大量記錄復原模式下，您必須先備份使用中的交易記錄檔 (也稱為記錄檔的結尾)，才能在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中還原資料庫。 如需詳細資訊，請參閱 [備份交易記錄 &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)資料庫還原至新位置，並選擇性地重新命名資料庫。 若要還原加密的資料庫，您必須能夠存取之前用來加密資料庫的憑證或非對稱金鑰。 如果沒有該憑證或非對稱金鑰，就無法還原資料庫。 因此，只要需要備份，就必須保留用來加密資料庫加密金鑰的憑證。 如需詳細資訊，請參閱 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)。  
   
- 請注意，如果您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項] 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入] 或 [重建]，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需檢視或變更 [全文檢索升級選項] 屬性設定的資訊，請參閱[管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+ 請注意，如果您將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本的資料庫還原成 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，資料庫會自動升級。 通常，資料庫立即變為可用。 不過，如果 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫具有全文檢索索引，升級程序就會根據 [全文檢索升級選項] 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 [匯入] 或 [重建]，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。 如需有關檢視或變更 **全文檢索目錄升級選項** 屬性設定的詳細資訊，請參閱＜ [管理及監視伺服器執行個體的全文檢索搜尋](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)＞。  
   
 ### <a name="to-restore-a-full-database-backup"></a>還原完整資料庫備份  
   
@@ -57,13 +57,13 @@ ms.locfileid: "48112007"
   
          將您要的裝置加入 **[備份媒體]** 清單方塊後，按一下 **[確定]** 即可回到 **[一般]** 頁面。  
   
-         在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
+         在 **[來源：裝置：資料庫]** 清單方塊中，選取應該還原的資料庫名稱。  
   
         > [!NOTE]  
         >  這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
   
          **備份媒體**  
-         選取還原作業的媒體：**檔案**，**磁帶**， **URL**或是**Backup Device**。 只有在電腦上有掛載磁帶機時才會出現 **[磁帶]** 選項，而只有在至少有一個備份裝置時才會出現 **[備份裝置]** 選項。  
+         選取還原作業的媒體：**檔案**，**磁帶**， **URL**或是**備份裝置**。 只有在電腦上有掛載磁帶機時才會出現 **[磁帶]** 選項，而只有在至少有一個備份裝置時才會出現 **[備份裝置]** 選項。  
   
          **備份位置**  
          檢視、加入或移除還原作業的媒體。 清單最多可以包含 64 個檔案、磁帶或備份裝置。  
@@ -96,7 +96,7 @@ ms.locfileid: "48112007"
   
 9. 若要檢視或選取進階選項，在 **[選項]** 頁面的 **[還原選項]** 面板中，您可以選取下列任何選項 (如果情況適用)：  
   
-    1.  `WITH` 選項 （非必要）：  
+    1.  `WITH` 選項 (非必要)：  
   
         -   **覆寫現有的資料庫 (WITH REPLACE)**  
   

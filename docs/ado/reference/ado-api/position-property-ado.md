@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 333b06ef76ae6407ca8a5605f1917dc0bb609aca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027825"
 ---
 # <a name="position-property-ado"></a>Position 屬性 (ADO)
 指出目前的位置內[Stream](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

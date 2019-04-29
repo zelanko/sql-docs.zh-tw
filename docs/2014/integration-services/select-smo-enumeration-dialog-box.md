@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889289"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>選取 SMO 列舉對話方塊
   使用 [選取 SMO 列舉] 對話方塊，即可在指定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體上指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件 (SMO) 物件，以列舉和選取列舉類型。  

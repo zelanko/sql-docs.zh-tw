@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955750"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>搭配 ODBC 連線集區使用 RDS
 如果您使用 ODBC 資料來源，您可以使用連接共用選項在網際網路資訊服務 (IIS)，以達到高效能處理的用戶端負載。 連接共用是資源管理員的連接，維護常用的連接上的 [開啟] 狀態。  

@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917662"
 ---
 # <a name="database-features"></a>資料庫功能
   本節包含與資料庫相關聯的功能和工作、資料庫物件、資料類型及用於處理或管理資料的機制。  

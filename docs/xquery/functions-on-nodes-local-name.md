@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936439"
 ---
 # <a name="functions-on-nodes---local-name"></a>節點的相關函式 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 使用述詞中沒有引數的本機名稱  
- 下列查詢針對具類型的 Instructions 資料行指定**xml** ProductModel 資料表的資料行。 運算式會傳回 QName 本機名稱部份為 "Location" 的 <`root`> 元素之所有的元素子系。 **Local-name （)** 函式是述詞中的指定，且其內容節點由函式沒有引數。  
+ 下列查詢針對具類型的 Instructions 資料行指定**xml** ProductModel 資料表的資料行。 運算式會傳回所有元素子系 <`root`> 項目之 qname 之本機名稱部分為 「 位置 」。 **Local-name （)** 函式是述詞中的指定，且其內容節點由函式沒有引數。  
   
 ```  
 SELECT Instructions.query('  
@@ -82,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 查詢會傳回 <`root`> 元素的所有 <`Location`> 元素子系。  
+ 此查詢會傳回所有 <`Location`> 元素子系 <`root`> 項目。  
   
 ## <a name="see-also"></a>另請參閱  
  [在節點上的函式](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

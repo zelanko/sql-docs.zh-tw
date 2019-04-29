@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_17887 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 17887 (Database Engine error)
 ms.assetid: ad0806e6-3296-4c32-b103-fccf0f8a8d3d
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3de0d505f99fd1f8f7da968bde13eb56fe50efc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915205"
 ---
 # <a name="mssqlserver17887"></a>MSSQLSERVER_17887
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細資料  
   
 |||  
@@ -33,9 +34,8 @@ ms.locfileid: "48228378"
 |訊息文字|IO Completion Listener (0x%lx) 工作者 0x%p 在節點 %ld 上似乎沒有產量。 已使用的約略 CPU: 核心 %I64d ms，使用者 %I64d ms，間隔: %I64d。|  
   
 ## <a name="explanation"></a>說明  
- 表示針對網路讀取/寫入事件執行 I/O 完成常式時，指定之節點上的 I/O 完成通訊埠 (Completion Port) 接聽程式可能發生問題。 當 I/O 完成通訊埠接聽程式從執行 I/O 完成常式返回時，這個錯誤就會消失。  
+表示針對網路讀取/寫入事件執行 I/O 完成常式時，指定之節點上的 I/O 完成通訊埠 (Completion Port) 接聽程式可能發生問題。 當 I/O 完成通訊埠接聽程式從執行 I/O 完成常式返回時，這個錯誤就會消失。  
   
 ## <a name="user-action"></a>使用者動作  
- 請連絡 Microsoft 客戶支援服務 (CSS)。  
-  
+請連絡 Microsoft 客戶支援服務 (CSS)。  
   

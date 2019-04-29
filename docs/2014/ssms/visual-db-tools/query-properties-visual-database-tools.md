@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011482"
 ---
 # <a name="query-properties-visual-database-tools"></a>查詢屬性 (Visual Database Tools)
   在 [查詢和檢視設計師] 中開啟查詢時，這些屬性會顯示在 [屬性] 視窗中。 除非另有註明，否則您可以在 [屬性] 視窗中編輯這些屬性。  

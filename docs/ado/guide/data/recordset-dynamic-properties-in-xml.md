@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50841931d26847ba339d64634d3eff4d7a7efc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910885"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML 中的資料錄集動態屬性
 下列的資料錄集提供者特定屬性 （從用戶端資料指標引擎） 目前會保存為 XML 格式：  
   
 -   更新重新同步處理  
   
--   唯一資料表  
+-   Unique Table  
   
 -   唯一的結構描述  
   

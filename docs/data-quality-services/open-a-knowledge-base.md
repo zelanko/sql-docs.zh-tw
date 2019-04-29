@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 937e7258777e1ce4f3a147e099252d95de23997d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019270"
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
 
@@ -33,7 +33,7 @@ ms.locfileid: "56027169"
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  您必須擁有 DQS_MAIN 資料庫的 dqs_kb_editor 角色或 dqs_administrator 角色，才能開啟知識庫。  
   
 ##  <a name="Open"></a> Open a knowledge base  
@@ -87,11 +87,11 @@ ms.locfileid: "56027169"
   
 -   **定義域管理**：已輸入知識庫的定義域資料，但尚未發佈知識庫，且工作仍在 [定義域管理] 活動中。 知識探索活動無法使用。 當您在 **[定義域管理]** 畫面中按一下 **[關閉]** 時，就會發生這種狀況。  
   
--   **探索 - 對應**：已在 [知識庫管理: 對應] 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [定義域管理] 和 [比對] 活動。  
+-   **探索 - 對應**：在 已關閉知識庫**知識庫管理：對應**頁面。 知識庫已鎖定，無法使用 [定義域管理] 和 [比對] 活動。  
   
--   **探索 - 探索**：已在 [知識庫管理:分析]** ** 頁面上關閉知識庫。知識庫已鎖定，[定義域管理] 活動無法使用。  
+-   **探索 - 探索**：在 已關閉知識庫**知識庫管理：分析**頁面。 知識庫已鎖定，[定義域管理] 活動無法使用。  
   
--   **探索 - 值管理**：已在 [知識庫管理:管理定義域詞彙]** ** 頁面上關閉知識庫。知識庫已鎖定，[定義域管理] 活動無法使用。  
+-   **探索 - 值管理**：在 已關閉知識庫**知識庫管理：管理定義域詞彙**頁面。 知識庫已鎖定，[定義域管理] 活動無法使用。  
   
 -   **比對原則 - 比對原則**：已在 [比對原則 - 比對原則] 頁面上關閉知識庫。 知識庫已鎖定，無法使用 [知識探索] 和 [定義域管理] 活動。  
   

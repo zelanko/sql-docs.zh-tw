@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920675"
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
   本主題僅與使用完整或大量記錄復原模式備份和還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
@@ -50,7 +50,7 @@ ms.locfileid: "52507374"
 |BACKUP LOG 選項|註解|  
 |-----------------------|--------------|  
 |NORECOVERY|每當您打算在資料庫上繼續還原作業時，請使用 NORECOVERY。 NORECOVERY 會讓資料庫進入還原狀態。 這樣可以保證資料庫不會在結尾記錄備份之後變更。  除非也指定了 NO_TRUNCATE 選項或 COPY_ONLY 選項，否則會截斷記錄。<br /><br /> **\*\* 重要\* \*** 我們建議您避免使用 NO_TRUNCATE，但資料庫已損毀。|  
-|CONTINUE_AFTER_ERROR|只有在您要備份受損資料庫的結尾時，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 注意：當您在受損資料庫上使用結尾記錄備份時，一般可在記錄備份中擷取到的某些中繼資料可能無法使用。 如需詳細資訊，請參閱本節稍後的[具有不完整備份中繼資料的結尾記錄備份](#IncompleteMetadata)。|  
+|CONTINUE_AFTER_ERROR|只有在您要備份受損資料庫的結尾時，才使用 CONTINUE_AFTER_ERROR。<br /><br /> 注意:當您在受損資料庫上使用結尾記錄備份時，一般可在記錄備份中擷取到的某些中繼資料可能無法使用。 如需詳細資訊，請參閱本節稍後的[具有不完整備份中繼資料的結尾記錄備份](#IncompleteMetadata)。|  
   
 ##  <a name="IncompleteMetadata"></a> 具有不完整備份中繼資料的結尾記錄備份  
  即使資料庫離線、損毀或遺漏資料檔案，結尾記錄備份還是會擷取記錄檔的結尾。 這可能會導致還原資訊命令和 **msdb**產生不完整的中繼資料。 不過，只有中繼資料不完整，所擷取的記錄仍然完整可用。  

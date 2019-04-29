@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898836"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [一般] 頁面，即可設定「執行 SQL」工作和提供該工作執行的 SQL 陳述式。  
@@ -55,7 +55,7 @@ ms.locfileid: "58382270"
  **ConnectionType**  
  選擇用來連接到資料來源的連接管理員類型。 可用的連接類型包括 **OLE DB**、 **ODBC**、 **ADO**、 **ADO.NET** 和 **SQLMOBILE**。  
   
- **相關主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)， [ODBC 連接管理員](connection-manager/odbc-connection-manager.md)， [ADO 連接管理員](connection-manager/ado-connection-manager.md)， [ADO.NET 連接管理員](connection-manager/ado-net-connection-manager.md)， [SQL ServerCompact Edition 連接管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **相關主題：**[OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)、[ODBC 連線管理員](connection-manager/odbc-connection-manager.md)、[ADO 連線管理員](connection-manager/ado-connection-manager.md)、[ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 連線管理員](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **[連接]**  
  從已定義的連接管理員清單中選擇連接。 若要建立新的連線，請選取 [\<新增連線...>]。  
@@ -104,13 +104,13 @@ ms.locfileid: "58382270"
  **FileConnection**  
  選取現有的檔案連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)，[檔案連接管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
+ **相關主題：**[檔案連線管理員](connection-manager/file-connection-manager.md)、[檔案連線管理員編輯器](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 變數  
  **SourceVariable**  
  選取現有的變數，或按一下 [\<新增變數...>] 以建立新的變數。  
   
- **相關主題：**[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)，[加入變數](../../2014/integration-services/add-variable.md)  
+ **相關主題：**[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[新增變數](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

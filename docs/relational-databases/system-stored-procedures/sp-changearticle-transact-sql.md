@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997945"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|複寫資料行層級定序。|  
 ||**0x2000**|複寫與已發行之發行項來源物件相關聯的擴充屬性。|  
 ||**0x4000**|如果資料表發行項上定義了唯一索引鍵，便複寫唯一索引鍵。|  
-||**0x8000**|複寫資料表發行項的主索引鍵和唯一索引鍵，來做為使用 ALTER TABLE 陳述式的條件約束。<br /><br /> 注意:這個選項已被取代。 使用**0x80**並**0x4000**改。|  
+||**0x8000**|複寫資料表發行項的主索引鍵和唯一索引鍵，來做為使用 ALTER TABLE 陳述式的條件約束。<br /><br /> 注意:此選項已被取代。 使用**0x80**並**0x4000**改。|  
 ||**0x10000**|將 CHECK 條件約束複寫成 NOT FOR REPLICATION，以免在同步處理期間強制執行條件約束。|  
 ||**0x20000**|將 FOREIGN KEY 條件約束複寫成 NOT FOR REPLICATION，以免在同步處理期間強制執行條件約束。|  
 ||**0x40000**|複寫資料分割資料表或索引的相關聯檔案群組。|  

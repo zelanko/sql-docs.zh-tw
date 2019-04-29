@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919595"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
   純量值函式 (SVF) 傳回單一值，如字串、整數或位元值。您可以使用任何 .NET Framework 程式語言，以 Managed 程式碼建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 CLR 整合，以及 managed 程式碼之間進行選擇的優勢的相關資訊並[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱 < [CLR 整合的概觀](../clr-integration/clr-integration-overview.md)。  
@@ -153,7 +153,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [CLR 整合自訂屬性的概觀](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
- [使用者定義函式](../user-defined-functions/user-defined-functions.md)   
+ [使用者定義的函式](../user-defined-functions/user-defined-functions.md)   
  [從 CLR 資料庫物件進行資料存取](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

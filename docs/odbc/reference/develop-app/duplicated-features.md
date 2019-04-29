@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84752b7e23c5394757764bf5ade57cb54004b01a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943144"
 ---
 # <a name="duplicated-features"></a>重複的功能
 下列的 ODBC 2。*x*函式有重複的 ODBC 3。*x*函式。 如此一來，ODBC 2。*x* ODBC 3 中的函式已被取代。*x*。 ODBC 3。*x*函式稱為取代函式。  
@@ -43,7 +43,7 @@ ms.locfileid: "53208307"
 |**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
-|**SQLParamOptions**|**SQLSetStmtAttr**， **SQLGetStmtAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**, **SQLGetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**|**SQLBindParameter**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  

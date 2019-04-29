@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923491"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>升級資料庫精靈 (Master Data Services 組態管理員)
   使用 [升級資料庫精靈] 升級 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  

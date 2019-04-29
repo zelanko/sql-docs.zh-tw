@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_optimizer_info (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013209"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47718636"
 |名稱|資料類型|描述|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|最佳化工具統計資料事件的名稱。|  
-|**相符項目**|**bigint**|這個計數器最佳化事件的出現次數。|  
+|**occurrence**|**bigint**|這個計數器最佳化事件的出現次數。|  
 |**value**|**float**|每一事件發生的平均屬性值。|  
 |**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47718636"
 |包含子查詢|包含至少一個子查詢之查詢的最佳化數目。|不適用|  
 |UNNEST 失敗|僅供內部使用|僅供內部使用|  
 |資料表|最佳化的總數。|每一最佳化查詢所參考資料表的平均數。|  
-|提示|指定某個提示的次數。 計數的提示包括：JOIN、GROUP、UNION 和 FORCE ORDER 查詢提示、FORCE PLAN 設定選項，以及聯結提示。|不適用|  
+|提示|指定某個提示的次數。 計數的提示包括：聯結、 群組、 UNION 和 FORCE ORDER 查詢提示、 FORCE PLAN 設定選項，以及聯結提示。|不適用|  
 |ORDER 提示|指定 FORCE ORDER 提示的次數。|不適用|  
 |聯結提示|聯結提示強制執行聯結演算法的次數。|不適用|  
 |檢視參考|檢視在查詢中被參考的次數。|不適用|  

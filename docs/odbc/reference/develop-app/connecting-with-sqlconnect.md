@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042738"
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 進行連線
 **SQLConnect**是最簡單的連線函式。 它需要資料來源名稱，並接受選擇性的使用者識別碼和密碼。 它適用於應用程式的硬式編碼的資料來源名稱，不需要使用者識別碼或密碼。 也可以運作良好的應用程式想要控制自己 「 外觀與風格 」 或，都沒有使用者介面。 這類應用程式可以建立一份使用資料來源**SQLDataSources**會提示使用者輸入資料來源、 使用者識別碼和密碼，然後呼叫**SQLConnect**。  

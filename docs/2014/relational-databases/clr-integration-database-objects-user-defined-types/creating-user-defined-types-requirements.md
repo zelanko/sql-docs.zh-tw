@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919665"
 ---
 # <a name="user-defined-type-requirements"></a>使用者定義型別需求
   建立使用者定義型別 (UDT)，在安裝時，您必須做數個重要的設計決策[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 對於大部分的 UDT 而言，雖然將 UDT 當做類別來建立也是一種選擇，但是建議將 UDT 當做結構來建立。 UDT 定義必須符合建立 UDT 的規格，才能讓它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊。  
@@ -112,7 +112,7 @@ ms.locfileid: "49120095"
  表示此 UDT 的所有執行個體是否為相同長度。  
   
  `MaxByteSize`  
- 執行個體的大小最大值 (位元組)。 您必須使用 `MaxByteSize` 序列化格式指定 `UserDefined`。 如果 UDT 已指定使用者定義的序列化，對此 UDT 而言，`MaxByteSize` 是指 UDT 在其序列化形式 (由使用者所定義) 的總大小。 `MaxByteSize` 的值必須在 1 到 8000 的範圍內，或設定為 -1，表示 UDT 大於 8000 個位元組 (總大小不得超過 LOB 大小的上限)。 以一個具有 10 個字元字串之屬性的 UDT (`System.Char`) 為例。 當 UDT 使用 BinaryWriter 序列化時，序列化字串的總大小是 UDT 個位元組：每個 Unicode 2-16 字元兩個位元組，乘以字元的最大數目，再加上序列化二進位資料流所造成的兩個控制位元組負擔。 因此，在決定 `MaxByteSize` 的值時，必須考慮序列化 UDT 的總大小：以二進位形式序列化資料的大小，加上序列化所耗用的位元組。  
+ 執行個體的大小最大值 (位元組)。 您必須使用 `MaxByteSize` 序列化格式指定 `UserDefined`。 如果 UDT 已指定使用者定義的序列化，對此 UDT 而言，`MaxByteSize` 是指 UDT 在其序列化形式 (由使用者所定義) 的總大小。 `MaxByteSize` 的值必須在 1 到 8000 的範圍內，或設定為 -1，表示 UDT 大於 8000 個位元組 (總大小不得超過 LOB 大小的上限)。 以一個具有 10 個字元字串之屬性的 UDT (`System.Char`) 為例。 當 UDT 使用 BinaryWriter 序列化時，序列化字串的大小總計會是 22 個位元組：2 個位元組，每個 Unicode utf-16 字元，乘以字元，加上 2 個控制項的數目上限個位元組的序列化二進位資料流所造成的負擔。 因此，在決定 `MaxByteSize` 的值時，必須考慮序列化 UDT 的總大小：以二進位形式序列化資料的大小，加上序列化所耗用的位元組。  
   
  `ValidationMethodName`  
  用於驗證 UDT 執行個體之方法的名稱。  
@@ -140,9 +140,9 @@ ms.locfileid: "49120095"
   
 -   小於 (\<)  
   
--   大於或等於 (>=)  
+-   大於或等於 (> =)  
   
--   小於或等於 (<=)  
+-   小於或等於 (< =)  
   
 ### <a name="implementing-nullability"></a>實作 Null 屬性  
  除了必須正確地指定組件的屬性外，您的類別還必須能夠支援 Null 屬性。 載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 UDT 可辨識 Null，但是為了讓 UDT 能夠辨識 Null 值，此類別必須實作 `INullable` 介面。 如需詳細資訊和如何在 UDT 中實作 null 屬性的範例，請參閱[< 類型](creating-user-defined-types-coding.md)。  

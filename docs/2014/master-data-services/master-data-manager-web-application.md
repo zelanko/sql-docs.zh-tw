@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20783b06559eab97cec56b527c5c8ab0f13518e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923879"
 ---
 # <a name="master-data-manager-web-application"></a>主資料管理員 Web 應用程式
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式主要是供管理員執行管理工作使用。 例如，只有管理員才能建立模型、商務規則或資料的版本。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  

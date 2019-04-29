@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918435"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
   資料層應用程式 (DAC) 支援最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 物件。  
@@ -38,19 +38,19 @@ ms.locfileid: "53361910"
   
 |||  
 |-|-|  
-|DATABASE ROLE|函式：內嵌資料表值|  
-|函式：多重陳述式資料表值|函式：純量|  
-|索引：叢集|索引：非叢集|  
-|索引：空間|索引：唯一|  
+|DATABASE ROLE|FUNCTION：內嵌資料表值|  
+|FUNCTION：多重陳述式資料表值|FUNCTION：純量|  
+|INDEX：叢集|INDEX：非叢集|  
+|INDEX：空間|INDEX：唯一|  
 |登入|Permissions|  
 |角色成員資格|SCHEMA|  
-|Statistics|預存程序：Transact-SQL|  
-|同義字|資料表：檢查條件約束|  
-|資料表：定序|資料表：資料行，包括計算資料行|  
-|資料表：條件約束，預設值|資料表：條件約束，外部索引鍵|  
-|資料表：條件約束索引|資料表：條件約束，主索引鍵|  
-|資料表：條件約束唯一|觸發程序：DML|  
-|類型：HIERARCHYID、 GEOMETRY、 GEOGRAPHY|類型：使用者定義資料類型|  
+|統計資料|STORED PROCEDURE：Transact-SQL|  
+|同義字|TABLE：檢查條件約束|  
+|TABLE：定序|TABLE：資料行，包括計算資料行|  
+|TABLE：條件約束，預設|TABLE：條件約束，外部索引鍵|  
+|TABLE：條件約束，索引|TABLE：條件約束，主索引鍵|  
+|TABLE：條件約束，唯一|TRIGGER：DML|  
+|類型：HIERARCHYID、GEOMETRY、GEOGRAPHY|類型：使用者定義資料類型|  
 |類型：使用者定義資料表類型|使用者|  
 |VIEW||  
   
@@ -82,32 +82,32 @@ ms.locfileid: "53361910"
 ##  <a name="DeploymentLimitations"></a> 資料部署限制  
  請注意在 SQL Server 2012 SP1 中 DAC Framework 資料部署引擎內的這些精確度限制。 這些限制適用於下列 DAC Framework 動作：部署或發行 .dacpac 檔案，以及匯入 .bacpac 檔案。  
   
-1.  在某些情況下遺失中繼資料及 sql_variant 資料行內的基底類型。 在受影響的情況下，您會看到一個警告，並出現下列訊息：**當由 DAC Framework 部署時，不會保留 sql_variant 資料行內使用特定資料類型的某些屬性。**  
+1.  在某些情況下遺失中繼資料及 sql_variant 資料行內的基底類型。 在受影響的案例中，您將會看見包含下列訊息的警告：**由 DAC Framework 部署時，不會保留 sql_variant 資料行內所使用之特定資料類型的特定屬性。**  
   
-    -   MONEY、 SMALLMONEY、 NUMERIC、 DECIMAL 基底類型：不會保留有效位數。  
+    -   MONEY、SMALLMONEY、NUMERIC、DECIMAL 基底類型：不會保留有效位數。  
   
         -   DECIMAL/NUMERIC 基底類型的有效位數為 38："TotalBytes" sql_variant 中繼資料一定會設定為 21。  
   
-    -   所有文字基底類型：資料庫預設定序會套用所有的文字。  
+    -   所有文字基底類型：所有文字都會套用資料庫的預設定序。  
   
     -   BINARY 基底類型：不會保留最大長度屬性。  
   
-    -   TIME、 DATETIMEOFFSET 基底類型：有效位數一律會設定為 7。  
+    -   TIME、DATETIMEOFFSET 基底類型：有效位數一律設定為 7。  
   
-2.  在 sql_variant 資料行內遺失資料。 在受影響的情況下，您會看到一個警告，並出現下列訊息：**當由 DAC Framework 部署小數位數大於 3 之 sql_variant DATETIME2 資料行中的值時，則將會遺失資料。DATETIME2 值在部署期間限制為小數位數等於 3。**  
+2.  在 sql_variant 資料行內遺失資料。 在受影響的案例中，您將會看見包含下列訊息的警告：**當 sql_variant DATETIME2 資料行中小數位數大於 3 的值是由 DAC Framework 所部署時，將會發生資料遺失。DATETIME2 值在部署期間限制為小數位數等於 3。**  
   
     -   小數位數大於 3 的 DATETIME2 基底類型：小數位數限制為等於 3。  
   
-3.  部署作業會因為 sql_variant 資料行內的以下情況而失敗。 在受影響的情況下，您會看到一個對話方塊，並出現下列訊息：**由於 DAC Framework 中的資料限制作業失敗。**  
+3.  部署作業會因為 sql_variant 資料行內的以下情況而失敗。 在受影響的案例中，您將會看見包含下列訊息的對話方塊：**由於 DAC Framework 中的資料限制，所以作業失敗。**  
   
-    -   DATETIME2 DATETIME2、SMALLDATETIME 和 DATE 基底類型：如果值超出 DATETIME 範圍-例如，年份是小於 1753年。  
+    -   DATETIME2、SMALLDATETIME 和 DATE 基底類型：如果此值超出 DATETIME 範圍，例如年份小於 1753。  
   
     -   DECIMAL、NUMERIC 基底類型：如果值的有效位數大於 28。  
   
 ##  <a name="Considerations"></a> 部署動作的其他考量  
  請注意，DAC Framework 資料部署動作有下列考量：  
   
--   **擷取/匯出** - 使用 DAC Framework 從資料庫建立套件的動作 (例如擷取 .dacpac 檔案、匯出 .bacpac 檔案)，這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會看到以下摘要訊息記錄檔中：**這些限制不會影響 DAC Framework; 所建立之 DAC 封裝中儲存的值與資料類型的精確度它們只適用於資料類型與 DAC 封裝部署到資料庫所產生的值。如需有關受影響的資料，以及如何解決這項限制的詳細資訊，請參閱**[本主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  
+-   **擷取/匯出** - 使用 DAC Framework 從資料庫建立套件的動作 (例如擷取 .dacpac 檔案、匯出 .bacpac 檔案)，這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到下列摘要訊息：**這些限制不會影響由 DAC Framework 建立之 DAC 套件中所儲存資料類型和值的精確度，而只適用於將 DAC 套件部署到資料庫所產生的資料類型和值。如需有關受影響的資料，以及如何解決這項限制的詳細資訊，請參閱**[本主題](https://go.microsoft.com/fwlink/?LinkId=267086)。  
   
 -   **部署/發行/匯入** - 使用 DAC Framework 將封裝部署到資料庫的動作，例如部署或發行 .dacpac 檔案以及匯入 .bacpac 檔案，這些限制都適用。 目標資料庫中產生的資料可能不包含封裝中資料的不失真表示法。 部署/匯入記錄將會在每個執行個體遇到問題時包含一則訊息 (如上所述)。 錯誤將封鎖此作業 (請參閱上面的類別目錄 3)，但在其他警告的情況下將會繼續。  
   

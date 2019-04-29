@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026585"
 ---
 # <a name="c-interval-structure"></a>C 間隔結構
 每個 C 間隔資料類型中所列[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)區段以包含間隔的資料使用相同的結構。 當**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是呼叫，此驅動程式到 SQL_INTERVAL_STRUCT 結構會傳回資料，會使用所指定的值應用程式的 C 資料類型 (在呼叫**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 來解譯 SQL_INTERVAL_STRUCT 的內容並於其中填入*interval_type*結構欄位*enum* C 類型的對應值。 請注意，驅動程式不會讀取*interval_type*欄位來決定間隔的類型; 它們擷取 SQL_DESC_CONCISE_TYPE 描述項欄位的值。 參數資料的使用結構時，驅動程式會使用 APD SQL_DESC_CONCISE_TYPE 欄位中的應用程式所指定的值解譯內容 SQL_INTERVAL_STRUCT，即使應用程式設定的值*interval_type*欄位設為不同的值。  

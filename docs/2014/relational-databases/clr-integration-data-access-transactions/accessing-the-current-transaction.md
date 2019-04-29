@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920012"
 ---
 # <a name="accessing-the-current-transaction"></a>存取目前交易
   如果某個交易在輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行的 Common Language Runtime (CLR) 程式碼時處於作用中狀態，系統就會透過 `System.Transactions.Transaction` 類別公開此交易。 `Transaction.Current` 屬性可用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 若為資料庫連接，ADO.NET 會在呼叫 `Transaction.Current` 方法時自動檢查 `Connection.Open`，而且以透明方式在該交易中編列連接 (除非連接字串中的 `Enlist` 關鍵字設定為 false)。  

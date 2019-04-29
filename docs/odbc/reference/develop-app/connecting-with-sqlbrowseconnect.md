@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1cd42e6704bc5168b1eb20841100fc279a66ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042764"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>使用 SQLDriverConnect 進行連線
 **SQLBrowseConnect**，例如**SQLDriverConnect**，會使用連接字串。 不過，藉由使用**SQLBrowseConnect**，應用程式可以在執行階段建構完整的連接字串。 這可以讓應用程式執行兩個動作：  

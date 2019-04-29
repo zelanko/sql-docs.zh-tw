@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903305"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52775420"
 |**validation_level**|**int**|在訂閱執行的類型驗證。 指定的驗證層級可以是下列值之一：<br /><br /> **0** = 沒有驗證。<br /><br /> **1** = 僅限資料列計數驗證。<br /><br /> **2** = 資料列計數與總和檢查碼驗證。<br /><br /> **3** = 資料列計數及二進位總和檢查碼驗證。|  
 |**resync_gen**|**bigint**|用於重新同步訂閱的層代 (Generation) 號碼。 值為 **-1**指出訂用帳戶未標示為要重新同步處理。|  
 |**login_name**|**sysname**|建立訂閱的使用者名稱。|  
-|**主機名稱**|**sysname**|在產生訂閱用的資料分割時，參數化資料列篩選器所用的值。|  
+|**hostname**|**sysname**|在產生訂閱用的資料分割時，參數化資料列篩選器所用的值。|  
 |**merge_jobid**|**binary(16)**|這個訂閱的合併作業識別碼。|  
 |**sync_info**|**int**|僅供內部使用。|  
   

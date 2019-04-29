@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98c8e18432bfd386555863a917824b18b2d11885
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902816"
 ---
 # <a name="connection-string-format-and-attributes"></a>連接字串格式和屬性
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ ms.locfileid: "52542783"
   
  連接字串的屬性如下所示：  
   
-|attribute|描述|預設值|  
+|屬性|描述|預設值|  
 |---------------|-----------------|-------------------|  
 |DSN|資料來源名稱列在 驅動程式 索引標籤**ODBC 資料來源管理員** 對話方塊。|""|  
 |PWD|您想要存取的 Oracle 伺服器的密碼。 此驅動程式支援 Oracle 置於密碼的限制。|""|  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 838c48ec4c15d1e89a571e5cb84cf1add613a045
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011484"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>啟用和停用 Reporting Services 的用戶端列印功能
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項**RSClientPrint**，提供在瀏覽器中檢視報表的用戶端列印。 此控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能。 這些功能包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向。 雖然依預設會啟用用戶端列印，但如果您不想提供此功能，也可以停用它。  

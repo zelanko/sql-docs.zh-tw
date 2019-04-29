@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042784"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>第 3 課：建立購物籃狀況 （中繼資料採礦教學課程）
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的行銷部門想改進公司網站，採行交叉銷售 (Cross-selling) 的策略進行促銷。 在更新網站時，他們想要能夠根據客戶線上購物籃中的其他產品來預測客戶可能會想購買的產品。 行銷部門也想要更了解客戶的購買行為，讓他們可以設計網站，將客戶想要同時購買的項目放在一起。 他們了解到資料採礦對於此種類型的 *「購物籃分析」* (Market Basket Analysis) 特別實用，要求您開發資料採礦模型。  

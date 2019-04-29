@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942971"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC 中的逸出序列
 語言功能，例如外部聯結和純量函式呼叫的數目通常是由 Dbms 實作。 不過，這些功能的語法通常 DBMS 而異，即使是標準的語法由各種不同的標準內文。 因為這個緣故，ODBC 會定義包含下列語言功能的標準語法的逸出序列：  

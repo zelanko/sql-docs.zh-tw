@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931523"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>第 2 課：建立預測案例 （中繼資料採礦教學課程）
   您是 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]的銷售分析師，奉命預測下一年度產品的銷售狀況。 您特別奉命比較不同區域和產品線的預測狀況。 另外，您也受要求判斷不同產品的銷售情況是否會隨著年度時段而有所不同。  

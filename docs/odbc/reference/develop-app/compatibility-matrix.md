@@ -20,26 +20,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026572"
 ---
 # <a name="compatibility-matrix"></a>相容性矩陣
 下表描述的相容性應用程式和驅動程式先前在這一節中定義的類型。  
   
-|應用程式類型<br /><br /> 和版本|32 位元 ODBC<br /><br /> 2.*x*驅動程式|ODBC 3。*x*<br /><br /> 驅動程式|ODBC 3.8 驅動程式|ISO 和規範開啟群組的驅動程式|  
+|應用程式類型<br /><br /> 和版本|32 位元 ODBC<br /><br /> 2.*x*驅動程式|ODBC 3.*x*<br /><br /> 驅動程式|ODBC 3.8 驅動程式|ISO 和規範開啟群組的驅動程式|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |16 位元應用程式，任何版本|相容|相容|相容|相容|  
-|純 2。*x*應用程式|相容|相容|相容|不相容 [3]|  
-|純 2。*x*重新編譯應用程式|相容|相容性 [1]|相容性 [1]|不相容 [3]|  
-|純 2。*x* Unicode 應用程式|相容|相容性 [1]|相容性 [1]|不相容 [3]|  
-|純的 Open Group 和 ISO 相容的應用程式|不相容|相容性 [2]|相容性 [2]|相容性 [2]|  
-|純 3.0 的應用程式|不相容|相容|相容|不相容 [4]|  
-|純 3.5 的應用程式|不相容|相容|相容|不相容 [4]|  
+|純 2。*x*應用程式|相容|相容|相容|Not compatible[3]|  
+|純 2。*x*重新編譯應用程式|相容|Compatible[1]|Compatible[1]|Not compatible[3]|  
+|純 2。*x* Unicode 應用程式|相容|Compatible[1]|Compatible[1]|Not Compatible[3]|  
+|純的 Open Group 和 ISO 相容的應用程式|不相容|Compatible[2]|Compatible[2]|Compatible[2]|  
+|純 3.0 的應用程式|不相容|相容|相容|Not compatible[4]|  
+|純 3.5 的應用程式|不相容|相容|相容|Not compatible[4]|  
 |純 3.8 （或更新版本） 的應用程式|不相容 [5]|不相容 [5]|相容|不相容 [4]|  
-|已取代的應用程式|相容|相容|相容|不相容 [3]|  
+|已取代的應用程式|相容|相容|相容|Not compatible[3]|  
   
  [1] 的應用程式必須重新編譯 ODBC 3.5 （或更新版本） 的標頭使用 UNICODE 選項 （如果它是在 Unicode 應用程式），必須將 ODBCVER 設 0x0250。  
   

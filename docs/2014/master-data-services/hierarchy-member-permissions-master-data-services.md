@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924383"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員] 索引標籤上指派權限，則使用者的權限完全是根據 [模型] 索引標籤上指派的權限。  
@@ -36,7 +36,7 @@ ms.locfileid: "52797038"
   
 |權限|描述|  
 |----------------|-----------------|  
-|**唯讀**|顯示成員，但是使用者無法變更成員。 使用者也無法在任何明確階層或成員所屬的集合中移動成員。<br /><br /> 注意：如果您指派**唯讀**權限**根**，底下的成員**根**是唯讀的; 不過，在明確階層和集合中，使用者可以將成員移到**根**，可以將新成員加入**根**。|  
+|**唯讀**|顯示成員，但是使用者無法變更成員。 使用者也無法在任何明確階層或成員所屬的集合中移動成員。<br /><br /> 注意:如果您指派**唯讀**權限**根**，底下的成員**根**是唯讀的; 不過，在明確階層和集合中，使用者可以將成員移到**根**，可以將新成員加入**根**。|  
 |**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**拒絕**|不顯示成員。|  
   

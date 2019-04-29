@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022492"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
   全文檢索引擎會使用全文檢索索引中的資訊來編譯全文檢索查詢，以便快速地在資料表中搜尋特定字詞或字詞組合。 全文檢索索引會儲存重要單字及這些單字在資料庫資料表之一或多個資料行內位置的相關資訊。 全文檢索索引是一種特殊類型的 Token 式功能索引，由 Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立與維護。 建立全文檢索索引的程序與建立其他索引類型的程序大不相同。 全文檢索引擎會根據個別 Token 從索引中的文字建立反向、堆疊以及壓縮的索引結構，而不是根據特定資料列中所儲存的值來建構 B 型樹狀結構。  全文檢索索引的大小只受限於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的可用記憶體資源。  
@@ -27,7 +27,7 @@ ms.locfileid: "48054730"
 > [!NOTE]  
 >  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新的版本中，全文檢索引擎位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中，而非個別的服務中。 將全文檢索引擎整合到 Database Engine 可以改善全文檢索管理能力、混合式查詢的最佳化，以及整體效能。  
   
- 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 基礎類型的資料行的全文檢索索引`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，以及`varbinary(max)`可以建立索引全文檢索搜尋。 其資料的資料行建立全文檢索索引的類型是`varbinary`， `varbinary(max)`， `image`，或`xml`會要求您指定的型別資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
+ 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以針對 `char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary` 和 `varbinary(max)` 類型的資料行建立全文檢索索引，並且建立全文檢索搜尋的索引。 針對資料類型為 `varbinary`、`varbinary(max)`、`image` 或 `xml` 的資料行建立全文檢索索引會要求您指定類型資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
   
  建立與維護全文檢索索引的程序稱為「母體擴展」，也稱為「搜耙」。 全文檢索索引母體擴展有三種類型：完整母體擴展、以變更追蹤為基礎的母體擴展，以及以時間戳記為基礎的累加母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](populate-full-text-indexes.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48054730"
   
  就本例而言，我們會假設已經在 **Title** 資料行中建立了全文檢索索引。  
   
-|DocumentID|Title|  
+|DocumentID|標題|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -95,7 +95,7 @@ ms.locfileid: "48054730"
 ##  <a name="fragments"></a> 全文檢索索引片段  
  邏輯全文檢索索引通常會在多份內部資料表之間分割。 每份內部資料表會稱為全文檢索索引片段。 其中某些片段可能包含比其他片段更新的資料。 例如，如果使用者更新 DocId 為 3 的下列資料列，而且資料表已進行自動變更追蹤，就會建立新的片段。  
   
-|DocumentID|Title|  
+|DocumentID|標題|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938570"
 ---
 # <a name="mssqleng020575"></a>MSSQL_ENG020575
     

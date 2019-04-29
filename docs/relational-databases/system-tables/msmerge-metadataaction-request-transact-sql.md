@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a46570a30254341fede1fb96fd368e94a09e58ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910290"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52791660"
 |**tablenick**|**int**|已發行資料表的暱稱。|  
 |**rowguid**|**uniqueidentifier**|給定資料列的資料列識別碼。|  
 |**action**|**tinyint**|識別必要的補償動作。|  
-|**產生**|**bigint**|必須進行補償動作的產生值。|  
+|**generation**|**bigint**|必須進行補償動作的產生值。|  
 |**變更**|**int**|僅供內部使用。|  
   
 ## <a name="see-also"></a>另請參閱  

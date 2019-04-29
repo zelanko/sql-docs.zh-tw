@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5169e030246b8f5a834e6a2526232907a7e22526
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914427"
 ---
 # <a name="mssqlserver2570"></a>MSSQLSERVER_2570
     

@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：加入和設定記錄 |Microsoft Docs
+title: 步驟 2:加入和設定記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892433"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>步驟 2：加入和設定記錄
+# <a name="step-2-adding-and-configuring-logging"></a>步驟 2:加入和設定記錄
   在這項工作中，您將針對 Lesson 3.dtsx 封裝的資料流程啟用記錄。 然後，您會設定文字檔案記錄提供者來記錄 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 文字檔案記錄提供者會建立容易檢視及容易傳輸的記錄。 這些記錄檔的簡單性，使它們在封裝的基本測試階段特別有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [記錄事件] 視窗中檢視記錄項目。  
   
 ### <a name="to-add-logging-to-the-package"></a>若要將記錄加入封裝中  

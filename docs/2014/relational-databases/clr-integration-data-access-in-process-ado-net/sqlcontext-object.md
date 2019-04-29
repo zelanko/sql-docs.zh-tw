@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920048"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 物件
   當您呼叫程序或函數、在 Common Language Runtime (CLR) 使用者定義型別上呼叫方法，或您的動作引發以任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 語言定義的觸發程序時，會在伺服器中叫用 Managed 程式碼。 因為要求執行此程式碼做為使用者連接的一部分，所以需要從伺服器上執行的程式碼，存取呼叫端的內容。 此外，特定資料存取作業只有在呼叫端的內容下執行才會有效。 例如，對在觸發程序作業中使用之插入及刪除虛擬資料表的存取，只有在呼叫端的內容下才有效。  
@@ -28,13 +28,13 @@ ms.locfileid: "48062940"
   
  `SqlContext` 會提供下列元件的存取：  
   
--   `SqlPipe`：`SqlPipe` 物件表示結果藉以流向用戶端的「管道」。 如需詳細資訊`SqlPipe`物件，請參閱 < [SqlPipe 物件](sqlpipe-object.md)。  
+-   `SqlPipe`:`SqlPipe`物件都代表 「 管道 」 透過結果藉以流向用戶端。 如需詳細資訊`SqlPipe`物件，請參閱 < [SqlPipe 物件](sqlpipe-object.md)。  
   
--   `SqlTriggerContext`：`SqlTriggerContext` 物件只能在 CLR 觸發程序內擷取。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需詳細資訊`SqlTriggerContext`物件，請參閱 < [SqlTriggerContext 物件](sqltriggercontext-object.md)。  
+-   `SqlTriggerContext`:`SqlTriggerContext`物件只可從擷取 CLR 觸發程序內。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需詳細資訊`SqlTriggerContext`物件，請參閱 < [SqlTriggerContext 物件](sqltriggercontext-object.md)。  
   
--   `IsAvailable`：`IsAvailable` 屬性用於判斷內容可用性。  
+-   `IsAvailable`:`IsAvailable`屬性用來判斷內容可用性。  
   
--   `WindowsIdentity`：`WindowsIdentity` 屬性用於擷取呼叫端的 Windows 識別。  
+-   `WindowsIdentity`:`WindowsIdentity`屬性用來擷取呼叫端的 Windows 識別。  
   
 ## <a name="determining-context-availability"></a>決定內容可用性  
  查詢 `SqlContext` 類別，以查看目前執行的程式碼是否同處理序執行。 若要這樣做，請檢查 `IsAvailable` 物件的 `SqlContext` 屬性。 如果呼叫程式碼在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內執行，且可存取其他 `IsAvailable` 成員，則 `True` 屬性是唯讀的，並會傳回 `SqlContext`。 如果 `IsAvailable` 屬性傳回 `False`，則使用的其他所有 `SqlContext` 成員會擲回 `InvalidOperationException`。 如果 `IsAvailable` 傳回 `False`，則開啟連接字串中包括 "context connection=true" 之連接物件的任何嘗試都會失敗。  

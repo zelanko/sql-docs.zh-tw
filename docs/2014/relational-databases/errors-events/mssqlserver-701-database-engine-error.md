@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52c1d38e115e4064e106175bb49d0a3ecb4318d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913778"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
     
@@ -46,7 +46,7 @@ ms.locfileid: "48186808"
   
 1.  確認是否有其他應用程式或服務正在耗用此伺服器的記憶體。 重新設定比較不重要的應用程式或服務，以降低其記憶體耗用量。  
   
-2.  開始收集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager** 和 **SQL Server: Memory Manager** 的效能監視器計數器。  
+2.  開始收集效能監視器計數器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:緩衝區管理員**， **SQL Server:記憶體管理員**。  
   
 3.  檢查下列 SQL Server 記憶體組態參數：  
   

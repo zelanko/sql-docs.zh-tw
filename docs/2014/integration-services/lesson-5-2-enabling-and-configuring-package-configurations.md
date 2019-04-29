@@ -1,5 +1,5 @@
 ---
-title: 步驟 2：啟用和設定封裝組態 |Microsoft Docs
+title: 步驟 2:啟用和設定封裝組態 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891054"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>步驟 2：啟用和設定封裝組態
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>步驟 2:啟用和設定封裝組態
   在此工作中，您會將專案轉換成封裝部署模型，並使用封裝組態精靈來啟用封裝組態。 您將利用這個精靈來產生 XML 組態檔，它包含 Foreach 迴圈容器的 `Directory` 屬性的組態設定。 Directory 屬性的值是由新的封裝層級變數提供，您可以在執行階段更新它。 另外，您還會擴展一個要在測試期間使用的新範例資料夾。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>若要建立一個對應至 Directory 屬性的新封裝層級變數  
