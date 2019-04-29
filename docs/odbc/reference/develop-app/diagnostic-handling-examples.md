@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da271ace5dd8a55e6d5c444de7cff334ed60b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034895"
 ---
 # <a name="diagnostic-handling-examples"></a>診斷處理範例
 下列範例顯示的 ODBC 連接中的各種元件可能會產生診斷訊息和不同的驅動程式可能會傳回與應用程式診斷**SQLGetDiagRec**。  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917700"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>將資料或記錄檔加入資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將資料或記錄檔加入至資料庫。  
@@ -109,7 +109,7 @@ ms.locfileid: "52778320"
   
 2.  在標準列中，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。 此範例會將含有兩個檔案的檔案群組加入資料庫中。 此範例會在  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中建立 `Test1FG1` 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會將含有兩個檔案的檔案群組加入資料庫中。 此範例會在  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫中建立 `Test1FG1` 檔案群組，且會將兩個 5 MB 的檔案加入檔案群組中。  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase2)]  
   

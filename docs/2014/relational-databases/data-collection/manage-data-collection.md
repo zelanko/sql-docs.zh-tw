@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918570"
 ---
 # <a name="manage-data-collection"></a>管理資料收集
   您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序和函數來管理不同層面的資料收集，例如啟用或停用資料收集、 變更收集組的組態，或是檢視管理資料倉儲中的資料.  

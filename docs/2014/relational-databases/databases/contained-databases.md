@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917567"
 ---
 # <a name="contained-databases"></a>自主資料庫
   *「自主資料庫」* (Contained Database) 是與其他資料庫和裝載資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體隔離的資料庫。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以四種方式協助使用者將其資料庫與執行個體隔離。  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 284c02898bb0ba51b7e99a2ba259f06d4092a23f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010962"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 安裝程式文件集的概觀
   您可以在安裝媒體上取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的文件集，也可以透過線上方式取得。  

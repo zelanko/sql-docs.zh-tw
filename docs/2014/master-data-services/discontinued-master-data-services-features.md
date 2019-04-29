@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1466883d27fb87aeae1e4b51f5826696abc3abb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924858"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中已停止的 Master Data Services 功能
   本主題描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中不再可用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]功能。  

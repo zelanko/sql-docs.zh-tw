@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 256e964e556421db62dc8f52fdc6bc759c3a200a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018357"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (文字檔驅動程式)
 > [!NOTE]  
@@ -39,10 +39,10 @@ ms.locfileid: "52536857"
   
 |ISAM|版本|版本號碼的格式|  
 |----------|-------------|-------------------------------|  
-|文字|1.0|01.00.0000|  
+|Text|1.0|01.00.0000|  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
- SQL_QU_DML_STATEMENTS &AMP;#124; SQL_QU_TABLE_DEFINITION  
+ SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
  SQL_FN_TD_CURDATE &AMP;#124; SQL_FN_TD_CURTIME &AMP;#124; SQL_FN_TD_DAYOFMONTH &AMP;#124; SQL_FN_TD_DAYOFWEEK &AMP;#124; SQL_FN_TD_DAYOFYEAR &AMP;#124; SQL_FN_TD_HOUR &AMP;#124; SQL_FN_TD_MINUTE &AMP;#124; SQL_FN_TD_MONTH &AMP;#124; SQL_FN_TD_NOW&AMP;#124; SQL_FN_TD_SECOND &AMP;#124; SQL_FN_TD_WEEK &AMP;#124; SQL_FN_TD_YEAR

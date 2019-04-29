@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896184"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用指令碼元件建立 ODBC 目的地
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常會使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC，將資料儲存到 ODBC 目的地。 不過，您也可以建立在單一封裝中要使用的特定 ODBC 目的地。 若要建立這個特定的 ODBC 目的地，可以使用如下列範例所示的指令碼元件。  
@@ -52,7 +52,7 @@ ms.locfileid: "58375036"
   
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。為了確保這個範例可運作，上游元件的輸出必須至少包含 **AdventureWorks** 範例資料庫中 **Person.Address** 資料表的 **AddressID** 和 **City** 資料行。  
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  （您可以將來源直接連接到不需要任何轉換的目的地。）為了確保這個範例可運作，上游元件的輸出必須至少包含 **AdventureWorks** 範例資料庫中 **Person.Address** 資料表的 **AddressID** 和 **City** 資料行。  
   
 5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 [AddressID] 與 [City] 資料行。  
   

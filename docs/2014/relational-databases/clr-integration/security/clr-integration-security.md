@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918993"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
   安全性模型[!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]通用語言執行平台 (CLR) 管理及保護不同類型 CLR 及非 CLR 物件內執行的存取權[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]陳述式或另一部伺服器上執行的 CLR 物件。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  

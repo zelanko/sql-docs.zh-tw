@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f39b4295aceadc7c738ade04379d85d39377d9b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011564"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>設定報表伺服器來進行遠端管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以在本機或遠端設定報表伺服器執行個體。 若要設定遠端報表伺服器執行個體，您可以使用 Reporting Services 組態工具，或是撰寫使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者的自訂程式碼。 Reporting Services 組態工具提供了 WMI 提供者的圖形介面，好讓您不需要撰寫程式碼就可以設定報表伺服器。 當您啟動這個工具時，可以指定要連接的遠端伺服器。  

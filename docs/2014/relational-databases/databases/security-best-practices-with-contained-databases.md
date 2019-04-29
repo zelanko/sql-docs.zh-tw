@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916756"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>自主資料庫的安全性最佳做法
   自主資料庫具有一些 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 系統管理員應該了解並降低的獨特威脅。 其中大部分威脅都與 `USER WITH PASSWORD` 驗證處理序相關，而這個處理序會將驗證界限從 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 層級移至資料庫層級。  

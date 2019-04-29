@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028408"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
   這個對話方塊可讓您建立全文檢索索引，以便在資料庫資料表的文字資料行上進行全文檢索搜尋。 全文檢索索引必須藉助一般索引，因此您必須先建立一般索引。 您必須在單一、非 Null 的資料行上建立一般索引，而且最好選擇值較小的資料行，而不要選擇包含大數值的資料行。  
@@ -63,7 +63,7 @@ ms.locfileid: "52822742"
  指示是否能夠使用這個全文檢索索引執行全文檢索搜尋。  
   
  **變更追蹤設定**  
- 描述這個索引的變更追蹤的狀態：手動、 自動或關閉。  
+ 描述這個索引的變更追蹤狀態：[手動]、[自動] 或 [關閉]。  
   
  **搜耙已完成**  
  顯示最近的搜耙是否已經完成。 如果這個屬性的值為 [否]，表示搜耙目前正在進行。  
@@ -87,7 +87,7 @@ ms.locfileid: "52822742"
  顯示下一個搜耙將會開始的日期和時間。  
   
  **目前或上一個搜耙的類型**  
- 顯示目前或最近搜耙的類型：完整、 累加、 Update 或自動傳播。  
+ 顯示目前或最近搜耙的類型：[完整]、[累加]、[更新] 或 [自動傳播]。  
   
  **唯一索引名稱**  
  顯示這個資料庫中擁有唯一單一資料行索引的所有資料行名稱的清單。 這些資料行可用來建立全文檢索索引。  

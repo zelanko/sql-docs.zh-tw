@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890414"
 ---
 # <a name="message-queue-task-editor-general-page"></a>訊息佇列工作編輯器 (一般頁面)
   使用 **[訊息佇列工作編輯器]** 對話方塊的 **[一般頁面]** ，即可命名和描述訊息佇列工作、指定訊息格式以及指出工作是否傳送或接收訊息。  
@@ -43,7 +43,7 @@ ms.locfileid: "58375856"
  **MSMQConnection**  
  選取現有的 MSMQ 連線管理員，或按一下 [\<新增連線...>] 建立新的連線管理員。  
   
- **相關主題**：[MSMQ 連線管理員](connection-manager/msmq-connection-manager.md)， [MSMQ 連線管理員編輯器](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **相關主題**：[MSMQ 連線管理員](connection-manager/msmq-connection-manager.md)、[MSMQ 連線管理員編輯器](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Message**  
  指定訊息佇列工作是否傳送或接收訊息。 如果選取 **[傳送訊息]**，對話方塊的左窗格會列出 [傳送] 頁面，如果選取 **[接收訊息]**，則會列出 [接收] 頁面。 依預設，此值設定為 **[傳送訊息]**。  

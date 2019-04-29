@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936962"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>定序對話方塊 (Visual Database Tools)
   這個對話方塊讓您指定資料行的定序序列 (Collation Sequence)。 在將資料行的值與另一個資料行的值或常數值進行比較的任何作業中，會使用資料行的定序序列。 它也會影響某些字串函數的行為，例如 SUBSTRING 和 CHARINDEX。 如需資料行定序設定作用的完整清單，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件。  

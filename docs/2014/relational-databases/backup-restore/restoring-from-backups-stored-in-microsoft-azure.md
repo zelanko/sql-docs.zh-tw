@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 549efcd796d9cef721995b48fc5e7b3cc02403a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920648"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>從儲存在 Windows Azure 的備份還原
   本主題概要說明使用儲存在 Windows Azure Blob 儲存體服務中的備份還原資料庫時，所應注意的事項。 本文適用於使用 SQL Server 備份至 URL 備份或 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立的備份。  
@@ -40,7 +40,7 @@ ms.locfileid: "53354418"
   
  若要減少還原時間，建議您使用壓縮的備份。  如果備份大小超過 25 GB，請使用 [AzCopy 公用程式](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) 下載到本機磁碟機，然後執行還原。 如需其他備份最佳做法與建議，請參閱 [SQL Server 備份至 URL 的最佳做法和疑難排解](sql-server-backup-to-url-best-practices-and-troubleshooting.md)。  
   
- 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔位於記錄目錄中，並且使用下列格式命名：Backuptourl-<instname>-<dbname>-action-<pid>.log\<執行個體名稱 >-\<dbname > 動作-\<PID >。 記錄檔。 此記錄檔包含每次往返 Windows Azure 儲存體的相關資訊 (包括時間點)，有助於診斷問題。  
+ 當您執行還原時，也可以開啟追蹤旗標 3051，以產生詳細的記錄檔。 此記錄檔會置於記錄檔目錄中，並使用下列格式命名：Backuptourl-<instname>-<dbname>-action-<pid>.log\<執行個體名稱 >-\<dbname > 動作-\<PID >。 記錄檔。 此記錄檔包含每次往返 Windows Azure 儲存體的相關資訊 (包括時間點)，有助於診斷問題。  
   
 ### <a name="topics-on-performing-restore-operations"></a>關於執行還原作業的主題  
   

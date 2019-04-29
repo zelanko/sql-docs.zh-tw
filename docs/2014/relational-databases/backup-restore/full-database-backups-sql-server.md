@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922042"
 ---
 # <a name="full-database-backups-sql-server"></a>完整資料庫備份 (SQL Server)
   完整資料庫備份會備份整個資料庫。 這包括交易記錄的部分，讓完整資料庫得以在還原完整資料庫備份之後復原。 完整資料庫備份代表備份完成時的資料庫。  
@@ -50,7 +50,7 @@ ms.locfileid: "53205377"
   
  ![顯示資料庫備份之間的工作損失風險](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "顯示資料庫備份之間的工作損失風險")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  如需如何建立記錄備份的相關資訊，請參閱[交易記錄備份 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)。  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>範例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  下列範例顯示如何使用 WITH FORMAT 來覆寫任何現有備份並建立新的媒體集，以建立完整資料庫備份。 然後，此範例會接著備份交易記錄。 在實際的情況下，您必須執行一連串的定期記錄備份。 就此範例而言， [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫會設定為使用完整復原模式。  
   
 ```  

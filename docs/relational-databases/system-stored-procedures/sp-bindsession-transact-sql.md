@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62996610"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>引數  
  **'** *bind_token* **'**  
- 語彙基元，可識別交易原先取得使用**sp_getbindtoken**或 Open Data Services **srv_getbindtoken**函式。 *bind_token*已**varchar(255)**。  
+ 語彙基元，可識別交易原先取得使用**sp_getbindtoken**或 Open Data Services **srv_getbindtoken**函式。 *bind_token*is **varchar(255)**.  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

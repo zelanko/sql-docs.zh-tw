@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79c3cf157bccf99aa732b7de60fe4ce8277aa07c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010856"
 ---
 # <a name="installation-how-to-topics"></a>安裝的使用說明主題
   使用下列主題來安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

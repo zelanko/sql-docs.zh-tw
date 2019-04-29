@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919953"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>使用 SQL Server 中的使用者定義型別
   您可以存取中的使用者定義型別 (UDT) 功能[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從[!INCLUDE[tsql](../../includes/tsql-md.md)]語言中的，透過使用標準查詢語法。 在資料庫物件定義中，UDT 可當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、函數及預存程序中的變數，以及函數及預存程序中的引數使用。  

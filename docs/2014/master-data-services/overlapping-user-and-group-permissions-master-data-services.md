@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923133"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重疊的使用者和群組的權限 (Master Data Services)
   使用者的權限是根據以下條件：  
@@ -50,7 +50,7 @@ ms.locfileid: "52799260"
   
  群組 2 擁有**唯讀**Product 實體的權限。  
   
- 結果：使用者的有效權限是**更新**Product 實體。  
+ 結果：使用者之有效權限為 Product 實體的 [更新] 權限。  
   
 ## <a name="example-2"></a>範例 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "52799260"
   
  群組 2 擁有 Product 實體的 **拒絕** 權限。  
   
- 結果：使用者的有效權限是**拒絕**Product 實體。  
+ 結果：使用者之有效權限為 Product 實體的 [拒絕] 權限。  
   
 ## <a name="example-3"></a>範例 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,7 +76,7 @@ ms.locfileid: "52799260"
   
  群組 2 擁有**唯讀**階層節點內成員群組的權限。  
   
- 結果：使用者的有效權限是**更新**的成員。  
+ 結果：使用者之有效權限為成員的 [更新] 權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何決定權限 &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   

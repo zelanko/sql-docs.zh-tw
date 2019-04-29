@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011636"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服務安裝概觀
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服務更新，將更新套用至任何已安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件。 如果現有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的版本層級比更新版本層級還新，則安裝程式會將其排除在更新作業外。 如需有關套用服務更新，請參閱[安裝 SQL Server 2014 服務更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "53369060"
 ## <a name="requirements-and-known-issues"></a>需求和已知問題  
  建議的磁碟空間需求大約是用於安裝、下載及擷取封裝之封裝大小的 2.5 倍。 安裝 Service Pack 之後，您可以移除下載的封裝。 任何暫存檔都會自動移除。  
   
- **檢閱已知的問題：** 如需有關目前版本已知問題的詳細資訊，請參閱這裡的對應版本資訊：[SQL Server 版本資訊](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)。  
+ **檢閱已知的問題：** 如需目前版本的已知問題的詳細資訊，請參閱對應版本資訊的說明主題：[SQL Server 版本資訊](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)。  
   
 ## <a name="installation-overview"></a>安裝概觀  
  本節將討論累計更新和 Service Pack 的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝，包括如何執行下列作業：  
@@ -88,15 +88,15 @@ ms.locfileid: "53369060"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  若要安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新，請執行自動解壓縮封裝檔案。  
   
- 累計更新封裝 (CU):\<SQLServer2014 >-KBxxxxxx-*PPP*.exe  
+ 累計更新封裝 (CU):\<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- Service pack 封裝 (PCU):\<SQLServer2014 >\<SPx >-KBxxxxxx-PPP-LLL.exe  
+ Service pack 封裝 (PCU):\<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x 表示 Service Pack 號碼  
   
 -   PPP 表示特定的平台  
   
--   LLL 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言的字元縮寫，例如：英文的 LLL 為 ENU。  
+-   LLL 表示的字元縮寫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語言，例如：適用於英文的 LLL 為 ENU。  
   
  若要將更新套用至屬於容錯移轉叢集一部分的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件，請參閱容錯移轉叢集安裝的章節。 如需如何以自動模式中執行更新安裝的詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   

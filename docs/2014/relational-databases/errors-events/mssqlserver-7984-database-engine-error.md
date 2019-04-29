@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9df56209254696a538cf8640685c5675af3b9858
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913303"
 ---
 # <a name="mssqlserver7984"></a>MSSQLSERVER_7984
     
@@ -30,7 +30,7 @@ ms.locfileid: "48161708"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|訊息文字|統資料表預先檢查: 物件識別碼 O_ID。 頁面 P_ID 有非預期的頁面類型 PAGETYPE。 由於無法修復的錯誤，檢查陳述式已經結束。|  
+|訊息文字|系統資料表預先檢查:物件識別碼 O_ID。 頁面 P_ID 有非預期的頁面類型 PAGETYPE。 由於無法修復的錯誤，檢查陳述式已經結束。|  
   
 ## <a name="explanation"></a>說明  
  在指定物件的資料層級中找到 DATA_PAGE 以外的頁面類型。 這是在 DBCC CHECKDB 命令檢查的第一階段所引發的錯誤。 在這個階段，DBCC CHECKDB 會針對關鍵的系統基底資料表，執行資料頁的基本檢查。  

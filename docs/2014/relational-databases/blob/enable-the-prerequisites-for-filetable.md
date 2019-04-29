@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920650"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
   描述如何啟用建立和使用 FileTable 的必要元件。  
@@ -54,7 +54,7 @@ ms.locfileid: "58538140"
 ##  <a name="BasicsNTAccess"></a> 在資料庫層級啟用非交易式存取  
  FileTable 可讓 Windows 應用程式取得 FILESTREAM 資料的 Windows 檔案控制代碼，而不需要使用交易。 若要允許對儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的檔案進行這種非交易式存取，您必須針對將包含 FileTable 的每個資料庫，指定在資料庫層級啟用非交易式存取的所需層級。  
   
-###  <a name="HowToCheckAccess"></a> 操作說明：檢查是否已在資料庫上啟用非交易式存取  
+###  <a name="HowToCheckAccess"></a> 操作說明：檢查是否在資料庫上啟用非交易式存取  
  查詢 [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) 目錄檢視，並檢查 **non_transacted_access** 和 **non_transacted_access_desc** 資料行。  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```  
   
-###  <a name="HowToNTAccess"></a> 操作說明：在資料庫層級啟用非交易式存取  
+###  <a name="HowToNTAccess"></a> 操作說明：啟用資料庫層級的非交易式存取  
  非交易式存取的可用層級是 FULL、READ_ONLY 和 OFF。  
   
  **使用 Transact-SQL 指定非交易式存取的層級**  
@@ -89,7 +89,7 @@ GO
   
  在 FileTable 資料夾階層中，這個資料庫層級目錄會成為在執行個體層級中針對 FILESTREAM 指定之共用名稱的子系，以及在資料庫中建立之 FileTable 的父系。 如需詳細資訊，請參閱 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)。  
   
-###  <a name="HowToDirectory"></a> 操作說明：在資料庫層級指定 FileTable 的目錄  
+###  <a name="HowToDirectory"></a> 操作說明：指定資料庫層級的 Filetable 目錄  
  跨資料庫層級目錄的執行個體中，指定的名稱必須是唯一的。  
   
  **使用 Transact-SQL 指定 FileTable 的目錄**  

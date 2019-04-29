@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012059"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 `master` 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
@@ -103,7 +103,7 @@ ms.locfileid: "54134998"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Create a database master key and a certificate in the master database.  
@@ -184,14 +184,14 @@ ms.locfileid: "54134998"
      依預設，卸離作業會保留與該資料庫關聯的所有全文檢索目錄。 若要移除這些全文檢索目錄，請清除 **[保留全文檢索目錄]** 核取方塊。 只有當您從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]升級資料庫時，才會出現這個選項。  
   
      **狀態**  
-     會顯示下列狀態其中之一：**準備好**或是**未就緒**。  
+     顯示下列狀態其中之一：[就緒] 或 [未就緒]。  
   
      **Message**  
      **[訊息]** 資料行可以顯示有關資料庫的資訊，如下所示：  
   
     -   當資料庫涉及複寫時， **[狀態]** 為 **[尚未備妥]** 且 **[訊息]** 資料行會顯示 **[資料庫已複寫]**。  
   
-    -   當資料庫有一或多個作用中連線**狀態**是**未就緒**並**訊息**資料行會顯示 _< 使用中連接數目>_**使用**-例如：**1 個作用中的連接**。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
+    -   當資料庫有一或多個作用中連線**狀態**是**未就緒**並**訊息**資料行會顯示 _< 使用中連接數目>_**使用**-例如：[1 個使用中的連線]。 您必須選取 **[卸除連接]** 中斷任何使用中的連接之後，才能卸離資料庫。  
   
      若要取得有關訊息的詳細資訊，請按一下超連結文字，以開啟活動監視器。  
   
@@ -276,7 +276,7 @@ ms.locfileid: "54134998"
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 [執行] 。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Detach the TDE protected database from the source server.   

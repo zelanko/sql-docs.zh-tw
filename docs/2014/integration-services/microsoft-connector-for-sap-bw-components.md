@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f1656121328c2c2f9ac81420207cbdd53a3f585
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890650"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-components"></a>Microsoft Connector 1.1 for SAP BW 元件
   本節包含描述 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 之三個元件的主題：  

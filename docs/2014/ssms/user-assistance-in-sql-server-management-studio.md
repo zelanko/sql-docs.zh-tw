@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016180"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
   您可以利用 [說明] 功能表和《[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 線上叢書》，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  

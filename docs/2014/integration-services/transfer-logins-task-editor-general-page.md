@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559347a0e092797732a4f3bffe424aac7dfe360f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926487"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>傳送登入工作編輯器 (一般頁面)
   使用 **[傳送登入工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送登入工作。 如需這項工作的詳細資訊，請參閱 [傳送登入工作](control-flow/transfer-logins-task.md)。  

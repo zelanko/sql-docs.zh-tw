@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042505"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>第 3 課：從報表伺服器載入報表定義
   在您建立專案並從 RDL 結構描述產生類別之後，就可以開始從報表伺服器載入報表定義。  
@@ -97,7 +97,7 @@ ms.locfileid: "56025639"
     ```  
   
 ## <a name="next-lesson"></a>下一課  
- 在下一課，您將撰寫程式碼，更新從報表伺服器載入的報表定義。 請參閱[第 4 課：以程式設計方式更新報表定義](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)。  
+ 在下一課，您將撰寫程式碼，更新從報表伺服器載入的報表定義。 查看[第 4 課：以程式設計方式更新報表定義](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

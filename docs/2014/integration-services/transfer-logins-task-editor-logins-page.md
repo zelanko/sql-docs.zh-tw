@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 131c74b2637fb0181e55838b1430fb0b33a14d3f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926811"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>傳送登入工作編輯器 (登入頁面)
   使用 [傳送登入工作編輯器] 對話方塊的 [登入] 頁面，即可指定屬性將一個或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個執行個體。 如需這項工作的詳細資訊，請參閱[傳送登入工作](control-flow/transfer-logins-task.md)。  

@@ -11,27 +11,27 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c52c5a160148b914874d5b237ecfae7edf8518c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924145"
 ---
 # <a name="install-master-data-services"></a>安裝 Master Data Services
   下列工作流程提供如何安裝及設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]的概觀。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 安裝程序包含三個部分：  
   
--   [安裝前工作](#preinstall):確認系統需求，然後再安裝[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
+-   [安裝前工作](#preinstall)：確認系統需求，然後再安裝[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]。  
   
 -   [安裝作業](#install):安裝[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式或命令提示字元。  
   
--   [後續安裝工作](#postinstall):開啟[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]才能完成安裝後作業。 建立並設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務，然後部署範例模型。  
+-   [安裝後工作](#postinstall)：開啟[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]才能完成安裝後作業。 建立並設定 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務，然後部署範例模型。  
   
 ##  <a name="preinstall"></a> 安裝前工作  
   
 |動作|詳細資料|相關主題|  
 |------------|-------------|--------------------|  
 |確認安裝需求|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的電腦，必須符合以下項目的基本需求：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式和 Web 服務。<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫，如果您在與 Web 應用程序相同的電腦中裝載資料庫。<br /><br /> 您可以只在 web 伺服器電腦上執行安裝程式，並建立分隔 web 伺服器電腦和資料庫伺服器電腦的附註[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]，以執行支援的版本和版本的遠端電腦上的資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|[SQL Server 2014 各版本所支援的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)<br /><br /> [資料庫需求 &#40;Master Data Services&#41;](database-requirements-master-data-services.md)|  
-|設定必要角色、角色服務和功能|執行安裝程式之前，使用必要 Windows 角色、角色服務和功能來設定電腦。<br /><br /> 注意：雖然您可以在稍後的工作流程中執行此步驟，但在執行安裝程式之前先設定此內容，有助於在安裝之後立即執行 Web 設定工作。|[Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
+|設定必要角色、角色服務和功能|執行安裝程式之前，使用必要 Windows 角色、角色服務和功能來設定電腦。<br /><br /> 注意:雖然您可以稍後在工作流程來執行此步驟中，最好先進行此設定，以便您可以執行 web 組態工作，在安裝之後立即執行安裝程式之前。|[Web 應用程式需求 &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
 |檢閱語言支援考量|決定您要安裝及執行 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 的語言。|[多語言及全域部署 &#40;Master Data Services&#41;](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> 安裝作業  
