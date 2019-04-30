@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191273"
 ---
 # <a name="views"></a>檢視
   檢視表是一種虛擬資料表，是由查詢定義其內容。 與資料表類似，檢視表是由一組具名資料行和資料列所組成。 除了索引檢視以外，檢視在資料庫中並沒有儲存的資料值集。 資料的資料列與資料行是從定義檢視的查詢所參考的資料表而來，而且在參考檢視時不會動態產生。  

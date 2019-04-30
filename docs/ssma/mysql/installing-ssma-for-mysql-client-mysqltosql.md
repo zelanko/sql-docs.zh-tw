@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187195"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安裝 SSMA for MySQL 用戶端 (MySqlToSql)
 SSMA for MySQL 用戶端是由執行下列工作的程式檔案所組成：  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 147528e9400d6befe9d5cb3c5d3cc3f882e48ad0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181132"
 ---
 # <a name="editmode-property"></a>EditMode 屬性
 指出目前記錄的編輯狀態。  

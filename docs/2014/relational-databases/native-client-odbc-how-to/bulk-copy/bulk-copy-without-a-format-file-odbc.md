@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5ff1d19e6ead1cb24ebe666a7bab2187ddaa13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126163"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>不使用格式檔案進行大量複製 (ODBC)
   此範例會示範如何在沒有格式檔案的情況下，使用大量複製函數來建立原生模式資料檔案。 此範例是針對 ODBC 3.0 版或更新版本所開發。  

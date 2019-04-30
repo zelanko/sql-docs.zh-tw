@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfe582a3d3e6d07883235b3dc447e4d823e29d87
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185542"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>常用的篩選 (報表產生器及 SSRS)
   若要建立篩選，您必須指定一個或多個篩選方程式。 篩選方程式包含運算式、資料類型、運算子和值。 本主題提供常用的篩選範例。  

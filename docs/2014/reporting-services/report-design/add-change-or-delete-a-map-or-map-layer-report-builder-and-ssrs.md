@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35860cfd893342d76074b6d49d0417484672030c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186160"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  

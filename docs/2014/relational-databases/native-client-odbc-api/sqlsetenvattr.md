@@ -1,5 +1,5 @@
 ---
-title: SQLSetEnvAttr |Microsoft Docs
+title: SQLSetEnvAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47b0d30ac70ff3b7974f7d0530b9fb50494ac424
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188750"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
   [ODBC 程式設計人員參考](https://go.microsoft.com/fwlink/?LinkId=45250)定義如何解譯 ODBC 驅動程式應該**SQLSetEnvAttr**屬性從撰寫 ODBC 2 的應用程式的規格。*x*或 ODBC 3。*x* API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式符合這些規則。  

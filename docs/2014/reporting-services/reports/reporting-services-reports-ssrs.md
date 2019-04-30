@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189243"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 報表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表是一種以 XML 為基礎的報表定義，其中包括報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 報表是由 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供之伺服器架構報表平台的一部分。  

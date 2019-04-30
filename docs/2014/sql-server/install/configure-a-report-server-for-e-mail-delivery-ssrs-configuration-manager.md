@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190224"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)
 
@@ -108,7 +108,7 @@ ms.locfileid: "56802444"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 設定郵件至：欄位的組態選項  
+##  <a name="bkmk_setting_TO_field"></a> 設定郵件至：在訊息中的欄位  
  如果依據 **[管理個別訂閱]** 工作所授與的權限建立使用者自訂訂閱，這些訂閱中便會包含以網域使用者帳戶為基礎的預設使用者名稱。 當使用者建立訂閱時，系統就會利用建立訂閱之使用者的網域使用者帳戶，自行處理 **[收件者:]** 欄位中的收件者名稱。  
   
  如果使用 SMTP 伺服器或轉送器，而伺服器或轉送器所使用的電子郵件帳戶與網域使用者帳戶不同時，則 SMTP 伺服器嘗試將報表傳遞給該使用者時便會失敗。  
@@ -180,15 +180,15 @@ ms.locfileid: "56802444"
   
 2.  在文字編輯器中開啟 RSReportServer.config 檔。  
   
-3.  確認 <`UrlRoot`> 設為報表伺服器的 URL 位址。 此值是在您設定報表伺服器時設定的，所以它應該已被填入。 如果未設定此值，請輸入報表伺服器的 URL 位址。  
+3.  確認 <`UrlRoot`> 設為報表伺服器 URL 位址。 此值是在您設定報表伺服器時設定的，所以它應該已被填入。 如果未設定此值，請輸入報表伺服器的 URL 位址。  
   
 4.  在 [傳遞] 區段中，尋找 <`ReportServerEmail`>。  
   
-5.  在 <`SMTPServer`> 提供 SMTP 伺服器的名稱。 此值可以是 IP 位址、您公司內部網路之電腦的 UNC 名稱，或是完整的網域名稱。  
+5.  在 <`SMTPServer`>，輸入 SMTP 伺服器的名稱。 此值可以是 IP 位址、您公司內部網路之電腦的 UNC 名稱，或是完整的網域名稱。  
   
-6.  確認 <`SendUsing`> 設為 2。 如果將它設定為其他值，報表伺服器就不會設定為使用遠端 SMTP 服務。  
+6.  確認 <`SendUsing`> 設定為 2。 如果將它設定為其他值，報表伺服器就不會設定為使用遠端 SMTP 服務。  
   
-7.  在 <`From`> 中，輸入擁有從 SMTP 伺服器傳送電子郵件之權限的帳戶名稱。  
+7.  在 <`From`>，輸入擁有從 SMTP 伺服器傳送電子郵件的權限的帳戶名稱。  
   
 8.  儲存檔案。  
   

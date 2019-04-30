@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191710"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>使用公用程式總管來管理 SQL Server 公用程式
   公用程式總管是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的元件，它會連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，以便在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內提供所有物件的樹狀檢視。 [公用程式總管] 內容窗格會提供幾個方法來檢視摘要與詳細資料，並提供與 SQL Server 受管理的執行個體健全狀態相關的資料。 [公用程式總管] 也會提供用於檢視及管理原則定義的使用者介面。 公用程式總管的功能會因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內的物件而有些微的不同，但是一般來說都會包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式所管理的物件、資料和原則。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。  

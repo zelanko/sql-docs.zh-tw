@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188412"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新增系統角色指派：編輯系統角色指派頁面 （報表管理員）
   使用 [新增系統角色指派] 或 [編輯系統角色指派] 頁面來定義報表伺服器的安全性。 所有的安全性都透過角色指派來定義，角色指派會對應特定使用者或群組至其可執行的工作。 以您在進行角色指派時選取的角色定義來表示工作清單。  

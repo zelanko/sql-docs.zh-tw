@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea4000b6d02965d7e050704889e9cf449db9f684
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185887"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>在資料表或矩陣的圖表上對齊資料 (報表產生器及 SSRS)
   走勢圖和資料橫條很小，也就是以少量的外來細節傳達許多資訊的簡易圖表。 當您核取這個選項時，走勢圖和資料橫條中的值將會跨資料表或矩陣中的不同資料格對齊，即使它們在其依據的資料中有遺漏值也是一樣。  

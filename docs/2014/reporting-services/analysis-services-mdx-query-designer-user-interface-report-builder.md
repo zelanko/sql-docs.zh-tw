@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bca4cac495ab8076c46d1dc2b7da411e46eae5db
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193092"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services MDX 查詢設計工具使用者介面 (報表產生器)
   Report Builder 提供了圖形化查詢設計工具，可用來建立適用於 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源的多維度運算式 (MDX) 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，在處理報表時擷取資料。  

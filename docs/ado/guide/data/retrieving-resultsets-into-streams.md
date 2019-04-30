@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188113"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>將結果集擷取為資料流
 而不是接收結果中的典型**資料錄集**物件時，ADO 可以改為擷取成資料流的查詢結果。 ADO **Stream**物件 (或其他物件，支援 COM **IStream**介面，例如 ASP**要求**並**回應**物件) 可以用來包含這些結果。 這項功能的其中一種用法是擷取 XML 格式的結果。 使用 SQL Server，比方說，XML 結果可以傳回以多種方式，例如使用 SQL SELECT 查詢中使用 FOR XML 子句，或使用 XPath 查詢。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e72adbe0fe4ee33c6354db975cd917050d6ff392
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164695"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>資料集屬性對話方塊、篩選 (報表產生器)
   選取 **[資料集屬性]** 對話方塊上的 **[篩選]** ，即可建立資料集的篩選。  

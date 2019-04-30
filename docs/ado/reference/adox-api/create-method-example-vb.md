@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ecc581d8aaa3822a571d93f6c134e19a8a7b510
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183861"
 ---
 # <a name="create-method-example-vb"></a>Create 方法範例 (VB)
 下列程式碼示範如何建立新的 Microsoft Jet 資料庫與[建立](../../../ado/reference/adox-api/create-method-adox.md)方法。  

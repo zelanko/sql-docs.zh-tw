@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectOption 對應 |Microsoft Docs
+title: SQLGetConnectOption Mapping | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8504709cb2cedb36c62bb9be74ffc8d12a4c811d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188785"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 對應
 當應用程式呼叫**SQLGetConnectOption**透過 ODBC 3 *.x*驅動程式，會呼叫  

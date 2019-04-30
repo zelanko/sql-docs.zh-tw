@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4409e62761018263b9ce78471661ae70afda1887
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190808"
 ---
 # <a name="user-role-properties-management-studio"></a>使用者角色屬性 (Management Studio)
   您可以使用這個頁面來檢視項目層級角色定義中包含的工作。 您也可以使用這個頁面來變更工作清單或修改角色描述。  

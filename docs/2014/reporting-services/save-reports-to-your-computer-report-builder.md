@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190214"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>將報表儲存到您的電腦 (報表產生器)
   在報表產生器中，您可以將報表定義儲存到電腦。 但是，當您將報表定義儲存到電腦時，其他使用者將無法檢視參考共用資料來源的報表，或者外部存放區報表項目 (如影像和子報表) 可能無法執行。 建議您最好將報表儲存到報表伺服器或 SharePoint 網站。  

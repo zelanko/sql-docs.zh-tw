@@ -12,25 +12,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181298"
 ---
 # <a name="odbc-appendixes"></a>ODBC 附錄
 在下列附錄中包含的 Microsoft ODBC 介面與相關的技術詳細資料：  
   
--   [附錄 A：ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [附錄 a:ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [附錄 B：ODBC 狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [附錄 C：SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [附錄 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [附錄 D：資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [附錄 d:資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
--   [附錄 E：純量函式](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
+-   [附錄 e:純量函式](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   
--   [附錄 F：ODBC 資料指標程式庫](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
+-   [附錄 f:ODBC 資料指標程式庫](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
--   [附錄 G：回溯相容性的驅動程式方針](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+-   [附錄 g:為了與舊版相容的驅動程式指導方針](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)

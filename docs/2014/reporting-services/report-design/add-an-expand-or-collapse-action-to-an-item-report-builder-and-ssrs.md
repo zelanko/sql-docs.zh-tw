@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186090"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
   您可以讓使用者以互動方式展開或摺疊報表項目，或者針對資料表或矩陣，展開或摺疊與群組關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  

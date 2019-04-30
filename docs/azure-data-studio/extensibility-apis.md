@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180208"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 擴充性 Api
 
@@ -65,7 +65,7 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>最上層函式
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得對應至給定的連接和路徑的物件總管 節點。 如果未不指定任何路徑，則它會傳回所指定連接的最上層節點。 如果並沒有節點在指定的路徑，它會傳回`undefined`。 注意：`nodePath`物件由 SQL 工具服務後端所產生，而且很難以手動方式建構。 未來的 API 增強功能可讓您能夠根據您提供相關的節點，例如名稱、 類型和結構描述的中繼資料的節點。
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得對應至給定的連接和路徑的物件總管 節點。 如果未不指定任何路徑，則它會傳回所指定連接的最上層節點。 如果並沒有節點在指定的路徑，它會傳回`undefined`。 注意:`nodePath`物件由 SQL 工具服務後端所產生，而且很難以手動方式建構。 未來的 API 增強功能可讓您能夠根據您提供相關的節點，例如名稱、 類型和結構描述的中繼資料的節點。
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 取得所有作用中的物件總管 連接節點。
 

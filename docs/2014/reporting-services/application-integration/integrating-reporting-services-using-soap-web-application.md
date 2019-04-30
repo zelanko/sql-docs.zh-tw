@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a90135c634e45f3fb4e3ff9c780347caaea24f9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126252"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>在 Web 應用程式中使用 SOAP API
   您可以透過 Reporting Services SOAP API 存取報表伺服器的完整功能。 因為它是一種 Web 服務，所以可以輕易地存取 SOAP API，以提供企業報表功能給自訂商務應用程式。 您可以從 Web 應用程式存取報表伺服器 Web 服務，這與從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式存取 SOAP API 非常類似。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，您就可以產生公開報表伺服器 Web 服務的屬性與方法之 Proxy 類別，而且可讓您使用熟悉的基礎結構與工具，建置以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技術為基礎的商務應用程式。  

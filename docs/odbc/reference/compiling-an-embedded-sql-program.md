@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186337"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>編譯內嵌 SQL 程式
 內嵌的 SQL 程式包含 SQL 和主機語言陳述式混用，因為它不能直接提交給主機語言的編譯器。 相反地，它會編譯透過多步驟程序。 雖然此程序不同產品，但步驟都大致上相同的所有產品。  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184414"
 ---
 # <a name="sequence-numbers"></a>序號
   序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。 與識別欄位不同的是，順序不會與資料表產生關聯。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者應用程式可以參考順序物件，並協調跨越多個資料列和資料表的值索引鍵。  

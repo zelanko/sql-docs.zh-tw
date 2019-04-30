@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 建立 Windows Azure 儲存體中的資料庫 |Microsoft Docs
+title: 第 4 課：在 Windows Azure 儲存體中建立資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182020"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>第 4 課：在 Windows Azure 儲存體中建立資料庫
   在這一課，您將學習如何使用 Windows Azure 功能中的 SQL Server 資料檔案建立資料庫。 請注意，開始進行這一課之前，您必須先完成第 1、2 和 3 課。 第 3 課是非常重要的步驟，因為您需要在第 4 課之前，將有關 Windows Azure 儲存體容器及其相關原則名稱和 SAS 金鑰的資訊儲存到 SQL Server 認證存放區中。  
@@ -86,7 +86,7 @@ ms.locfileid: "48063008"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **注意：** 如果容器中有任何作用中的資料檔案參考，則任何嘗試刪除相關聯 SQL Server 認證的動作都會失敗。 同樣地，如果 Blob 中特定資料庫檔案上已有租用，而您想要將它刪除，則必須先中斷 Blob 上的租用。 若要中斷租用，您可以使用 [租用 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
+ **注意：** 如果有任何作用中參考指向容器中的資料檔案，任何嘗試刪除相關聯的 SQL Server 認證將會失敗。 同樣地，如果 Blob 中特定資料庫檔案上已有租用，而您想要將它刪除，則必須先中斷 Blob 上的租用。 若要中斷租用，您可以使用 [租用 Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)。  
   
  使用這項新功能就可以設定 SQL Server，讓所有 CREATE DATABASE 陳述式都預設為具備雲端能力的資料庫。 換句話說，您可以在 SQL Server Management Studio Server 執行個體屬性中設定預設資料和記錄位置，如此每次您建立資料庫時，所有資料庫檔案 (.mdf、.ldf) 都會建立為 Windows Azure 儲存體中的分頁 Blob。  
   

@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136247"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>使用 sqlcmd 執行 Transact-SQL 指令碼檔案
-  您可以使用 `sqlcmd` 來執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案。 A[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼檔案是文字檔案可以包含多種[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，`sqlcmd`命令和指令碼變數。  
+  您可以使用 `sqlcmd` 來執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案是一個文字檔，可以包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、`sqlcmd` 命令和指令碼變數的組合。  
   
  若要使用「記事本」建立簡單的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案，請遵循下列步驟：  
   
 1.  按一下 [開始]，依序指向 [所有程式] 和 [附屬應用程式]，然後按一下 [記事本]。  
   
-2.  複製並貼上下列[!INCLUDE[tsql](../../includes/tsql-md.md)]到 [記事本] 的程式碼：  
+2.  將下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼複製並貼到 [記事本] 中：  
   
     ```  
     USE AdventureWorks2012;  
@@ -50,7 +50,7 @@ ms.locfileid: "48085369"
   
 1.  開啟 [命令提示字元] 視窗。  
   
-2.  在 [命令提示字元] 視窗中，輸入： `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  在 [命令提示字元] 視窗中輸入：`sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
 3.  按 ENTER 鍵。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48085369"
   
 1.  開啟 [命令提示字元] 視窗。  
   
-2.  在 [命令提示字元] 視窗中，輸入： `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  在 [命令提示字元] 視窗中輸入：`sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
 3.  按 ENTER 鍵。  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48085369"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動 sqlcmd 公用程式](sqlcmd-start-the-utility.md)   
- [sqlcmd 工用程式](../../tools/sqlcmd-utility.md)  
+ [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)  
   
   

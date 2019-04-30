@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187617"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 資料操作 - UPDATE CUBE
 
 
-  UPDATE CUBE 陳述式可用來將資料寫回 Cube 中的任何資料格，再使用 SUM 彙總將其彙總至其父系。 如需詳細說明和範例，請參閱 < 了解配置 」 在此部落格文章：[建置回寫應用程式與 Analysis Services （部落格）](https://go.microsoft.com/fwlink/?LinkId=394977)。  
+  UPDATE CUBE 陳述式可用來將資料寫回 Cube 中的任何資料格，再使用 SUM 彙總將其彙總至其父系。 如需詳細說明和範例，請參閱此部落格文章中的 < 了解配置":[建立回寫應用程式與 Analysis Services （部落格）](https://go.microsoft.com/fwlink/?LinkId=394977)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ UPDATE [ CUBE ] Cube_Name
   
  以下是配置方法的描述。  
   
- **USE_EQUAL_ALLOCATION:** 提供給更新資料格每個分葉資料格會指派下列運算式為基礎的相等值。  
+ **USE_EQUAL_ALLOCATION:** 每個分葉資料格，提供給更新資料格將會指派為下列運算式為基礎的相等值。  
   
 ```  
 <leaf cell value> =   
@@ -75,13 +75,13 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** 相等的值，取決於下列運算式會指派每個分葉資料格，提供給更新資料格。  
+ **USE_WEIGHTED_ALLOCATION:** 每個分葉資料格，提供給更新資料格將會指派為下列運算式為基礎的相等值。  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:** 會根據以下運算式變更每個分葉資料格，提供給更新資料格。  
+ **USE_WEIGHTED_INCREMENT:** 每個分葉資料格，提供給更新資料格將會根據以下運算式變更。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   

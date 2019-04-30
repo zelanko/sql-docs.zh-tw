@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 90f76ef4d52fd5a1b7ed04d268954d0fed756324
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183074"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>資料移轉設定 (MySQLToSQL)
   
@@ -40,7 +40,7 @@ ms.locfileid: "51681146"
     -   如果未選取此文字方塊中，已移轉的資料將會新增到目標資料庫的現有資料。  
   
 2.  **選取 使用自訂：**  
-     此選項可讓使用者修改**選取** 存在的陳述式 (**選取** 陳述式可讓使用者選取要顯示在目標資料庫的資料)。  
+     此選項可讓使用者修改 **選取** 存在的陳述式 (**選取**陳述式可讓使用者選取要顯示在目標資料庫的資料)。  
   
     1.  根據預設，這個文字方塊未核取。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "51681146"
   
 有兩個按鈕出現的閱聽。:  
   
--   **套用：** 按一下 **套用**套用已變更的設定。  
+-   **適用於：** 按一下 **套用**套用已變更的設定。  
   
 -   **取消：** 按一下 **取消**還原出現設定進行變更之前。  
   

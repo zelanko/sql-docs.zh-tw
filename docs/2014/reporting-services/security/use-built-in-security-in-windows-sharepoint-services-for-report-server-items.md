@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7d912f7f71a642fbcdad0aa4fdd5ed60305f14d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191872"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性
   SharePoint 提供內建安全性功能，可用來存取 SharePoint 網站和文件庫中的報表伺服器項目。 如果您已經指定網站和清單權限給使用者，則在設定 SharePoint 和報表伺服器之間的整合設定之後，那些相同的使用者就能立即存取報表伺服器項目和作業。  

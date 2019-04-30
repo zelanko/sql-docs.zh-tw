@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0d571210c44026fc34ab43cb07e18bbd8526ed5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188423"
 ---
 # <a name="new-model-page-report-manager"></a>新增模型頁面 (報表管理員)
   您可以使用這個頁面，從共用資料來源產生預設報表模型。 您只能從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度資料來源、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料來源和 Oracle 關聯式資料來源產生報表模型。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c85692c3ae50df88c59d2622fc1ca06925413ba2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185579"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集圓形圖上的小配量 (報表產生器及 SSRS)
   當圓形圖顯示太多資料點時，看起來會很雜亂。 若要解決這個問題，您可以將落在特定值以下的所有資料顯示為圓形圖上的一個扇區。  

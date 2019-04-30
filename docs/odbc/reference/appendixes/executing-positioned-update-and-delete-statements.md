@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189023"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>執行定點更新和刪除陳述式
 > [!IMPORTANT]  
@@ -33,11 +33,11 @@ ms.locfileid: "47772046"
   
 2.  建構定位的 update 或 delete 陳述式，使用下列語法：  
   
-     **更新***資料表名稱*  
+     **更新** *資料表名稱*  
   
-     **設定***資料行識別碼* **=** {*運算式* &#124; **NULL**}  
+     **設定** *資料行識別碼*  **=** {*運算式* &#124; **NULL**}  
   
-     [**，** *資料行識別碼* **=** {*運算式* &#124; **NULL**}]  
+     [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *資料指標名稱*  
   

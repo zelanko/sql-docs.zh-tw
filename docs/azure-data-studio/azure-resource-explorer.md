@@ -11,11 +11,11 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180867"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>瀏覽和管理 Azure SQL 資源使用 Azure 資源總管
 

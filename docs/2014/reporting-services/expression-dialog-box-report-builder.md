@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 119ed4044fa3613e0544f0c9ee60189342bd0a63
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164387"
 ---
 # <a name="expression-dialog-box-report-builder"></a>運算式對話方塊 (報表產生器)
   使用**運算式**對話方塊，即可撰寫[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]運算式的報表項目屬性。 您可以使用運算式來設定許多屬性，包含色彩、字型和框線等。 在執行階段，報表處理器會評估運算式並取代屬性值的結果。  

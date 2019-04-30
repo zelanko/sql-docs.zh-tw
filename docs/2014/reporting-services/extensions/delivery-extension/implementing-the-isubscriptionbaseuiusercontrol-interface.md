@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2664d71243d98e9b8152c5c5c7ce241a4f3669f8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164360"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>實作傳遞延伸模組的 ISubscriptionBaseUIUserControl 介面
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 傳遞延伸模組可以包含訂閱使用者介面 (UI) 的實作，以收集報表管理員中延伸模組的特定資訊。 當使用者建立新訂閱或是修改現有的訂閱時，會叫用 UI。 當建立新訂閱時，UI 會顯示適當的預設值，並允許使用者與傳遞提供者互動。 當修改訂閱時，會使用目前訂閱中的資訊來預先擴展 UI。  

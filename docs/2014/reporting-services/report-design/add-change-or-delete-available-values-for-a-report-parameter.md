@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185938"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>為報表參數加入、變更或刪除可用的值 (報表產生器及 SSRS)
   當您建立報表參數之後，可以指定要對使用者顯示的可用值清單。 可用值清單會將使用者可以做的選擇限制為參數的有效值。  

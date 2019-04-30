@@ -31,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139014"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 Access 資料庫物件 (AccessToSQL)
 在您加入 Access 資料庫並連接到後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure、 SSMA 顯示中繼資料存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件。 您可以現在選取 存取的資料庫物件，然後將轉換將結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 結構描述。  

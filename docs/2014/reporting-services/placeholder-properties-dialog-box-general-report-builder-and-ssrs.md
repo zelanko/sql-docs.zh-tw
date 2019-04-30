@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188194"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>預留位置屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[預留位置屬性]** 對話方塊可變更文字方塊內某個預留位置的值、工具提示和標記選項。  

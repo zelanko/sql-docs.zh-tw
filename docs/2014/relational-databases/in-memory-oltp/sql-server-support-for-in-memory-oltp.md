@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 470b3edf0435099b2a9fd17b14ac299299274a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181239"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>記憶體中 OLTP 的 SQL Server 支援
   本節內容主要在討論支援記憶體最佳化資料表的全新更新語法和功能。  

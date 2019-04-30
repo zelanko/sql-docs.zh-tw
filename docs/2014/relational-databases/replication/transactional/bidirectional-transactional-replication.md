@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2cf5fbf215338b273be0924e6930906c8698aff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188600"
 ---
 # <a name="bidirectional-transactional-replication"></a>雙向異動複寫
   雙向異動複寫是一種特殊的異動複寫拓撲，它可讓兩台伺服器彼此之間交換變更：每台伺服器都會發行資料，然後向發行集訂閱另一台伺服器上相同的資料。 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 的 **@loopback_detection** 參數已設定為 TRUE，以確定變更僅傳送到「訂閱者」，而不會將變更傳回給「發行者」。  

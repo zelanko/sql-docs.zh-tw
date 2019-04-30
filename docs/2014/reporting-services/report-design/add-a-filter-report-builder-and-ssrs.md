@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca43df4b6dc42e15257ce7e3c31b2b91ec0a7b73
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59972064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206943"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>加入篩選 (報表產生器及 SSRS)
   當您想要針對計算或顯示包含或排除特定值時，請將篩選加入至資料集、資料區或群組。 篩選會在執行階段先套用至資料集、套用至資料區，然後套用至群組 (按照群組階層的由上而下順序)。 在資料表、矩陣或清單中，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表中，系統會針對類別目錄群組和數列群組獨立套用篩選。  

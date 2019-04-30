@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64e8ae49b9912579d6b3b483b7cb63bcfcb8662e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191137"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>報表伺服器資料庫 (SSRS 原生模式)
   報表伺服器是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存中繼資料和物件定義的無狀態伺服器。 原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會使用兩個資料庫來分隔永續性資料儲存與暫時儲存需求。 兩個資料庫會一起建立，並依名稱繫結。 根據預設，資料庫名稱分別為 **ReportServer** 和 **ReportServerTempdb**。  

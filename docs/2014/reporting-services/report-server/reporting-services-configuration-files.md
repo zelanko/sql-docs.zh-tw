@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63d2dff214ed1125450ec319dff4ad7f7dc36990
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190902"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 組態檔
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將元件資訊儲存在登錄以及安裝過程中複製到檔案系統的組態檔內。 組態檔包含僅供內部使用和使用者自訂值的組合。 使用者自訂值會透過安裝程式、組態工具、命令列公用程式，以及手動編輯組態檔等方式指定。  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fbd293c156f373de0cdad53b4419633ded15af8a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164139"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 Connection 類別
   **Connection** 物件代表資料庫連結或是類似的資源，而且是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之使用者的起點。 它代表資料庫伺服器的連接，不過任何具有類似行為的實體都可以公開成 **Connection**。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a5c8e5f256ae762989d6112cb09f846febecc4dd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164711"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>資料集屬性對話方塊、欄位 (報表產生器)
   選取 **[資料集屬性]** 對話方塊上的 **[欄位]** ，即可變更報表資料集的欄位集合。 欄位清單會自動擴展，但您可以使用 **[欄位]** 來加入、編輯和刪除查詢與導出欄位。  

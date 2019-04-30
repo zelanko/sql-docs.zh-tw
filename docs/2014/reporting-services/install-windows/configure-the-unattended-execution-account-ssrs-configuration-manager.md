@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182956"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  

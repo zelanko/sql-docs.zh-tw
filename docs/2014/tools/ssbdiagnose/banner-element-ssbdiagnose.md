@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186874"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 元素 (ssbdiagnose)
   識別產生 **ssbdiagnose** 輸出 XML 檔的公用程式。  
@@ -36,7 +36,7 @@ ms.locfileid: "52803360"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |`title`|識別產生 **ssbdiagnose** XML 輸出檔的公用程式。|  
 |`product`|識別產生 **ssbdiagnose** XML 輸出檔的產品。|  

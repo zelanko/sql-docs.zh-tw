@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f8970e77cf6ab77dc5dd4cc0544237d6a1269db2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185832"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>區域圖 (報表產生器及 SSRS)
   區域圖會將數列顯示成一組用線條連接的點，線條下會有一個全部填滿的區域。 如需如何將資料加入區域圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  

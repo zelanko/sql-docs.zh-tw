@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185647"
 ---
 # <a name="market-basket-dmx-tutorial"></a>購物籃 DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、定型和探索採礦模型。 您將使用這些採礦模型來建立預測，說明哪些產品有可能同時被購買。  

@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e10b121ffc1afae83b767bcfdfe8e6765f990f4
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180681"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>透過建立與使用程式碼片段，在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 內快速地建立 TRANSACT-SQL (T-SQL) 指令碼
 

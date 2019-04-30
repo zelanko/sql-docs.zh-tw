@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b1c7cf9bed76a5fef2e9fda837a6df3f75687acd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192648"
 ---
 # <a name="cinstance-class"></a>CInstance 類別
   [CInstance 類別](cinstance-class.md)代表的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端。  

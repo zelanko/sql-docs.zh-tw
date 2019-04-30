@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164079"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>HOW TO：將資料處理延伸模組部署到報表伺服器
   報表伺服器使用資料處理延伸模組來擷取和處理轉譯報表中的資料。 您應該將資料處理延伸模組組件部署到報表伺服器做為私人組件， 也需要在報表伺服器組態檔 RSReportServer.config 中建立項目。  

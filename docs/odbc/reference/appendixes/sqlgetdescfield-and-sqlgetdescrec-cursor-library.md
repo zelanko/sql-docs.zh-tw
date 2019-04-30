@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66361572427c3264a1b25fe1c851685a07b2e029
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188763"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField 和 SQLGetDescRec (資料指標程式庫)
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "47765016"
   
  資料指標程式庫執行**SQLGetDescRec**傳回書籤資料行的中繼資料。 資料指標程式庫執行**SQLGetDescField**傳回所傳回的相同欄位**SQLGetDescRec**，這是與 SQL_DESC_NAME、 SQL_DESC_TYPE、 SQL_DESC_DATETIME_INTERVAL_CODE、 SQL_DESC_OCTET_長度、 SQL_DESC_PRECISION、 SQL_DESC_SCALE 和 SQL_DESC_NULLABLE。 為求一致， **SQLGetDescField**也會將 SQL_DESC_UNNAMED 傳回。  
   
- 資料指標程式庫執行**SQLGetDescField**時呼叫它來傳回下列值欄位，已為書籤資料行繫結： SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR SQL_DESC_OCTET_LENGTH_PTR，及SQL_DESC_LENGTH。  
+ 資料指標程式庫執行**SQLGetDescField**時呼叫它來傳回下列值欄位，已為書籤資料行繫結：SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR、 SQL_DESC_OCTET_LENGTH_PTR 和 SQL_DESC_LENGTH。  
   
  資料指標程式庫執行**SQLGetDescField**時呼叫它來傳回 SQL_DESC_BIND_OFFSET_PTR、 SQL_DESC_BIND_TYPE、 SQL_DESC_ROW_ARRAY_SIZE，還是 SQL_DESC_ROW_STATUS_PTR 欄位的值。 這些欄位可能傳回的任何資料列，而不只是書籤資料列。  
   

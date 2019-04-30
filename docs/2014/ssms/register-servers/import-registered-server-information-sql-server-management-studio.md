@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0106bc32724bbe4e2e2faed4ead5750440508d7d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191893"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>匯入已註冊的伺服器資訊 (SQL Server Management Studio)
   本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中匯入儲存的已註冊伺服器資訊。 先匯出然後再匯入已註冊的伺服器檔案，可以讓您輕鬆地在 [已註冊的伺服器] 中，使用相同的伺服器設定數部電腦。 從各地的電腦管理大量的伺服器時，或要為較沒有經驗的使用者設定基本連接設定時，這個作法非常有用。  

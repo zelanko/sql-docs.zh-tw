@@ -1,5 +1,5 @@
 ---
-title: C 到 SQL： 數值 |Microsoft Docs
+title: C 轉換為 SQL：Numeric | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 816394bb8469148504c1b2b416e77fec814bef8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191743"
 ---
-# <a name="c-to-sql-numeric"></a>C 到 SQL：數值
+# <a name="c-to-sql-numeric"></a>C 轉換為 SQL：Numeric
 針對數值的 ODBC C 資料類型的識別項是：  
   
  SQL_C_STINYINT  
@@ -59,10 +59,10 @@ ms.locfileid: "47786666"
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|數字數目 < = 資料行的位元組長度<br /><br /> 數字 > 資料行的位元組長度|n/a<br /><br /> 22001|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|字元數目 < = 資料行的字元長度<br /><br /> 字元數 > 資料行的字元長度|n/a<br /><br /> 22001|  
-|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|資料轉換而不會截斷或截斷的小數位數<br /><br /> 轉換後的整個的位數截斷的資料|n/a<br /><br /> 22003|  
+|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]|資料轉換而不會截斷或截斷的小數位數<br /><br /> 轉換後的整個的位數截斷的資料|n/a<br /><br /> 22003|  
 |SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|資料是數值轉換的資料類型的範圍內<br /><br /> 資料超出範圍的數值轉換的資料類型|n/a<br /><br /> 22003|  
 |SQL_BIT|資料是 0 或 1<br /><br /> 資料是大於 0，小於 2，且不等於 1<br /><br /> 小於 0 或大於或等於 2，資料是|n/a<br /><br /> 22001<br /><br /> 22003|  
-|[A] SQL_INTERVAL_YEAR<br /><br /> [A] SQL_INTERVAL_MONTH<br /><br /> [A] SQL_INTERVAL_DAY<br /><br /> [A] SQL_INTERVAL_HOUR<br /><br /> [A] SQL_INTERVAL_MINUTE<br /><br /> [A] SQL_INTERVAL_SECOND|不會被截斷的資料。<br /><br /> 資料被截斷。|n/a<br /><br /> 22015|  
+|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY[a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|不會被截斷的資料。<br /><br /> 資料被截斷。|n/a<br /><br /> 22015|  
   
  [a] 的精確數值資料類型 （SQL_C_STINYINT、 SQL_C_UTINYINT、 SQL_C_SSHORT、 SQL_C_USHORT、 SQL_C_SLONG、 SQL_C_ULONG、 或 SQL_C_NUMERIC） 才支援這些轉換。 它們不支援 （SQL_C_FLOAT 或 SQL_C_DOUBLE） 的近似數值資料類型。 精確數值的 C 資料類型無法轉換成 SQL 類型，其間隔有效位數不是單一欄位間隔。  
   

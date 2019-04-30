@@ -1,5 +1,5 @@
 ---
-title: 建立及查詢使用 DMX 資料採礦模型：教學課程 (Analysis Services-資料採礦) |Microsoft Docs
+title: 使用 DMX 建立並查詢資料採礦模型：教學課程 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180544"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>建立及查詢使用 DMX 資料採礦模型：教學課程 (Analysis Services-資料採礦)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 建立並查詢資料採礦模型：教學課程 (Analysis Services-資料採礦)
   您已使用，以建立資料採礦方案之後[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，您可以建立查詢，針對資料採礦模型來預測趨勢、 擷取資料中的模式以及測量採礦模型的精確度。  
   
  下列清單中的逐步教學課程將協助您了解如何建置和執行資料採礦查詢使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，讓您可以充分運用您的資料。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a71b4311dacf9ea08f12daff8b7610d8f6c49b5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185601"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   直條圖是依據類別目錄群組，將數列顯示為一組垂直線。 直條圖適合顯示一段時間的資料變更，或圖解項目之間的比較。 一般直條圖與橫條圖相當有關聯，後者會將數列顯示為一組水平橫條，而範圍直條圖則會將數列顯示為一組垂直線，其中包含各種起點與終點。 如需詳細資訊，請參閱 [橫條圖 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md) 和 [範圍圖表 &#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)。  

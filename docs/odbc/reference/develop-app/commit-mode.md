@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d0c5380a0006de82c39f532f1d87d6b7f33dd6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125544"
 ---
 # <a name="commit-mode"></a>認可模式
 ODBC 中的交易可以處於兩種模式之一： 自動認可模式或手動認可模式。  

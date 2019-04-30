@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf9b9bfd500c5ddb9e10fb1e2320bf0287114808
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164814"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>內嵌和共用資料連接或資料來源 (報表產生器及 SSRS)
   查詢執行或處理報表時，報表會使用資料連接擷取報表的資料。 您可以從內建的資料連接類型清單，選擇連接到關聯式資料庫、多維度資料庫、Web 服務或其他資料來源的類型。 下列項目可在描述資料連接時使用。  

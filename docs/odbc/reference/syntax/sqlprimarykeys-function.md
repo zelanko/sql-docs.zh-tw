@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186218"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 函數
 **合規性**  
@@ -127,7 +127,7 @@ SQLRETURN SQLPrimaryKeys(
 |再依據 TABLE_SCHEM 排列 (ODBC 1.0)|2|Varchar|主索引鍵資料表的結構描述名稱;如果不適用於資料來源，則為 NULL。 如果驅動程式支援結構描述對於某些資料表，但不適用於其他項目，例如當驅動程式會擷取不同 Dbms 中的資料，它會傳回空字串 ("") 並沒有結構描述這些資料表。|  
 |TABLE_NAME (ODBC 1.0)|3|非 NULL Varchar|主索引鍵資料表名稱。|  
 |COLUMN_NAME (ODBC 1.0)|4|非 NULL Varchar|主索引鍵資料行名稱。 驅動程式會傳回沒有名稱的資料行的空字串。|  
-|KEY_SEQ 來排序 (ODBC 1.0)|5|Smallint 非 NULL|（從 1 開始） 的索引鍵資料行順序編號。|  
+|KEY_SEQ (ODBC 1.0)|5|Smallint 非 NULL|（從 1 開始） 的索引鍵資料行順序編號。|  
 |PK_NAME (ODBC 2.0)|6|Varchar|主索引鍵的名稱。 如果不適用於資料來源，則為 NULL。|  
   
 ## <a name="code-example"></a>程式碼範例  

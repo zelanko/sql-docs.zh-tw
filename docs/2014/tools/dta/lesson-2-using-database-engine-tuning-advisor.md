@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a765e7b856d79392fa9349f0f27dae89e9253248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188583"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>第 2 課：使用 Database Engine Tuning Advisor
   您可以利用 Database Engine Tuning Advisor 來微調資料庫、管理微調工作階段，以及檢視微調建議。 非常了解實體設計結構的進階使用者可以利用這套工具來執行探勘資料庫微調分析。 資料庫微調新手也可以利用這套工具來尋找他們所微調之工作負載的實體設計結構的最佳組態。 這個課程提供基本練習來協助不熟悉 Database Engine Tuning Advisor 圖形化使用者介面的資料庫管理員，以及不太了解實體設計結構的系統管理員。  

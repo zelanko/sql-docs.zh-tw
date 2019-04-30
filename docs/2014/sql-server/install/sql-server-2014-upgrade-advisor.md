@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137614"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor 會分析已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的組態，然後產生問題的報表，其中列出您必須解決才能確保升級成功的問題。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5547090443e2f22a135234853b76480fb8295e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184209"
 ---
 # <a name="catalog-object-adox"></a>Catalog 物件 (ADOX)
 包含集合 ([資料表](../../../ado/reference/adox-api/tables-collection-adox.md)，[檢視](../../../ado/reference/adox-api/views-collection-adox.md)，[使用者](../../../ado/reference/adox-api/users-collection-adox.md)，[群組](../../../ado/reference/adox-api/groups-collection-adox.md)，以及[程序](../../../ado/reference/adox-api/procedures-collection-adox.md))，說明資料來源的結構描述目錄。  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184920"
 ---
 # <a name="using-pages"></a>使用頁面
 使用**PageCount**屬性來判斷多少頁的資料是在**資料錄集**物件。 *頁面*是一組的記錄，其大小等於**PageSize**屬性設定。 即使最後一頁是不完整，因為有較少的記錄，比**PageSize**的值，它會計算為中的其他頁面**PageCount**值。 如果**Recordset**物件不支援這個屬性， **PageCount**會是-1 表示**PageCount**不確定。  

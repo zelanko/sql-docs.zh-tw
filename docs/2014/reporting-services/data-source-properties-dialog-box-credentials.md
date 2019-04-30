@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6423c2caca256a257f660eabb8ce5eaf2d81c55f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165303"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>資料來源屬性對話方塊、認證
   選取 **[資料來源屬性]** 對話方塊上的 **[認證]** ，來顯示和修改要連接到報表中資料來源的認證。 您所提供的認證會用來存取資料來源，並快取資料副本，以預覽報表。 如需如何快取預覽資料的詳細資訊，請參閱 [預覽報表](reports/previewing-reports.md)。 如需認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  

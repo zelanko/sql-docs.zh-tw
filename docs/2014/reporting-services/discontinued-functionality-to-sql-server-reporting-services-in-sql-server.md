@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 3a5472859c582e026fc0c5aafac21abccdc93044
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165356"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) 中已中止的功能
 

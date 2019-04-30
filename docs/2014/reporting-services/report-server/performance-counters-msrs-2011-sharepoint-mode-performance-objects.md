@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77ce77a2c42944a881942d4ee953183a68f5bbd6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191198"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件的效能計數器 (SharePoint 模式)
   本主題描述屬於 `MSRS 2014 Web Service SharePoint Mode` SharePoint 模式部署一部分之 `MSRS 2014 Windows Service SharePoint Mode` 和 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 效能物件的效能計數器。  

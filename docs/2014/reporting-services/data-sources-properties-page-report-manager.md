@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165369"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>資料來源屬性頁面 (報表管理員)
   使用 [資料來源] 屬性頁，即可定義目前的報表如何連接到外部資料來源。 您可以覆寫原先隨同報表發行的資料來源連線資訊。 如果報表使用多重資料來源，則每一個資料來源在屬性頁中各有它自己的區段。 資料來源依其報表中定義的排序來列示。  

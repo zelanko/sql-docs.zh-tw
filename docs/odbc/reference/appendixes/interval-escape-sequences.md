@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81481db74d973da0e54bc6bf9e70550fa3cc0c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188893"
 ---
 # <a name="interval-escape-sequences"></a>間隔逸出序列
 ODBC 會將逸出序列用於間隔常值。 此逸出序列的語法如下所示：  
   
- {*間隔常值*}  
+ {*interval-literal*}  
   
  Backus-naur form，BNF 語法*間隔 string-literal*，請參閱[間隔常值語法](../../../odbc/reference/appendixes/interval-literal-syntax.md)稍後本附錄一節。  
   

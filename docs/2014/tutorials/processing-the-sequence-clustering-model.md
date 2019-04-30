@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188136"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>處理時序群集模型
   在您建立了新的採礦結構以後，您必須建部署您對資料採礦方案進行的變更，然後處理結構。 處理完新結構和採礦模型兩者後，您就可以瀏覽採礦模型。  

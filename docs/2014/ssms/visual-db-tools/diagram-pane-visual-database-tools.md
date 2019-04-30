@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126444"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>圖表窗格 (Visual Database Tools)
   [圖表] 窗格會以圖形顯示您從資料連接所選取的資料表或資料表值物件。 同時還會顯示資料表或物件之間的任何聯結關聯性。  

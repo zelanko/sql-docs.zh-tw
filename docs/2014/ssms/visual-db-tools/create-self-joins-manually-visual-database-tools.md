@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184232"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手動建立自我聯結 (Visual Database Tools)
   即使資料表沒有資料庫中的自反關聯性，也可以將資料表聯結至它本身。 例如，可以使用自我聯結 (Self-Join) 來找出住在同一城市的作者。  

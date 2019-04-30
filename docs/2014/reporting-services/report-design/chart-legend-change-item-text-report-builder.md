@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185632"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>變更圖例項目的文字 (報表產生器及 SSRS)
   將欄位放在圖表的 [值] 區域中時，系統會自動產生包含此欄位名稱的圖例項目。 每個圖例項目都會連接到報表上的個別數列，但是形狀圖例外 (其圖例會連接到個別資料點而非個別數列)。  

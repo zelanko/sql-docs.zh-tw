@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184273"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在圖表上建立資料表之間的關聯性 (Visual Database Tools)
   在圖表設計工具中，您可以在資料表之間拖曳資料行，以建立不同資料表資料行之間的關聯性。  
@@ -28,7 +28,7 @@ ms.locfileid: "52781620"
   
 2.  將選取的資料行拖曳到關聯的資料表。  
   
-3.  出現兩個對話方塊：**外部索引鍵關聯性**並**資料表和資料行**，而後者會顯示在前景中。  
+3.  會出現兩個對話方塊：[外部索引鍵關聯性] 和 [資料表與資料行]，而後者會顯示在前景中。  
   
 4.  [關聯性名稱] 具有系統提供的名稱，其格式為 FK_*localtable*_*foreigntable*。 您可以變更這個值。  
   

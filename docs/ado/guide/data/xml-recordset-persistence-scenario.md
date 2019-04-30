@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184833"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 資料錄集保存案例
 在此案例中，您將建立 Active Server Pages (ASP) 應用程式，直接將資料錄集物件的內容將 ASP 回應物件。  
@@ -38,10 +38,10 @@ ms.locfileid: "51600238"
   
 -   接收並顯示資料  
   
-## <a name="step-1-set-up-the-application"></a>步驟 1： 設定應用程式  
+## <a name="step-1-set-up-the-application"></a>步驟 1:設定應用程式  
  建立名為"XMLPersist 」 指令碼的權限的 IIS 虛擬目錄。 虛擬目錄指向，一個具名"XMLResponse.asp，「 其他具名"Default.htm。 」 的資料夾中建立兩個新的文字檔案  
   
-## <a name="step-2-get-the-data"></a>步驟 2： 取得資料  
+## <a name="step-2-get-the-data"></a>步驟 2:取得資料  
  在此步驟中，您將撰寫程式碼以開啟 ADO 資料錄集，並準備將它傳送至用戶端。 開啟檔案 XMLResponse.asp 使用文字編輯器，例如 [記事本]，並插入下列程式碼。  
   
 ```  
@@ -70,7 +70,7 @@ ms.locfileid: "51600238"
   
  開啟，請移至下一個步驟，請保留的檔案。  
   
-## <a name="step-3-send-the-data"></a>步驟 3： 將資料傳送  
+## <a name="step-3-send-the-data"></a>步驟 3：將資料傳送  
  有了資料錄集之後，您必須用戶端傳送以 xml 格式儲存的 ASP 回應物件。 將下列程式碼新增至 XMLResponse.asp 底部。  
   
 ```  
@@ -89,7 +89,7 @@ ms.locfileid: "51600238"
   
  儲存並關閉 XMLResponse.asp 再移至下一個步驟。 也將 adovbs.inc 檔案從預設的 ADO 程式庫安裝資料夾複製到您儲存 XMLResponse.asp 檔案相同的資料夾。  
   
-## <a name="step-4-receive-and-display-the-data"></a>步驟 4： 接收及顯示資料  
+## <a name="step-4-receive-and-display-the-data"></a>步驟 4：接收並顯示資料  
  您將在此步驟中建立 HTML 檔案與內嵌[DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) XMLResponse.asp 檔案，以取得資料錄集所指向的物件。 使用文字編輯器，例如 [記事本]，開啟 default.htm，並新增下列程式碼。 在 URL 中的"sqlserver"取代為您伺服器的名稱。  
   
 ```  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186032"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函式
 **合規性**  
@@ -81,13 +81,13 @@ BOOL SQLRemoveDriverManager(
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32。DLL|  
-|ODBCCR32。DLL|ODBC16GT。DLL|  
-|ODBCCU32。DLL|ODBC32GT。DLL|  
-|ODBCINT。DLL|DS16GT。DLL|  
-|ODBCTRAC。DLL|DS32GT。DLL|  
-|MSVCRT40。DLL|ODBCAD32。EXE|  
-|ODBCCP32。CPL||  
+|ODBC32DLL|ODBCCP32.DLL|  
+|ODBCCR32.DLL|ODBC16GT.DLL|  
+|ODBCCU32.DLL|ODBC32GT.DLL|  
+|ODBCINT.DLL|DS16GT.DLL|  
+|ODBCTRAC.DLL|DS32GT.DLL|  
+|MSVCRT40.DLL|ODBCAD32.EXE|  
+|ODBCCP32.CPL||  
   
  **SQLRemoveDriverManager**也稱為升級的程序的一部分。 如果應用程式偵測到它必須執行升級，而且它先前已安裝驅動程式，應該移除，然後重新安裝驅動程式。  
   

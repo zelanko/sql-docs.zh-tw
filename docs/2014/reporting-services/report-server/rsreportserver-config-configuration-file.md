@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190875"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RsReportServer.config** 檔會儲存報表管理員、報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  

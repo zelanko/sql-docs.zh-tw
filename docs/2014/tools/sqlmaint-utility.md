@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187002"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
   如果**sqlmaint** 公用程式會在一或多個資料庫上，執行一組指定的維護作業。 利用 **sqlmaint** 來執行 DBCC 檢查、備份資料庫及其交易記錄、更新統計資料，以及重建索引。 所有資料庫維護活動都會產生一份可傳給指定文字檔、HTML 檔或電子郵件帳戶的報表。 **sqlmaint** 會執行舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]所建立的資料庫維護計畫。 若要從命令提示字元執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 維護計畫，請使用 [dtexec 公用程式](../integration-services/packages/dtexec-utility.md)。  
@@ -120,7 +120,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  當 *sqlmaint* 存取遠端伺服器時，需要 **text_file** 的完整通用命名慣例 (UNC) 檔案名稱。  
   
- **-至** _operator_name_  
+ **-To** _operator_name_  
  指定將接收 SQL Mail 所產生之報表的操作員。  
   
  **-HtmlRpt** _html_file_  

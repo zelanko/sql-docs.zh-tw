@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184861"
 ---
 # <a name="what-is-a-lock"></a>什麼是鎖定？
 鎖定是 DBMS 會存取限制多使用者環境中的資料列的程序。 資料列或資料行以獨佔方式鎖定時，不允許其他使用者存取已鎖定的資料，直到釋放鎖定為止。 這可確保兩位使用者無法同時更新相同資料列中的資料行。  

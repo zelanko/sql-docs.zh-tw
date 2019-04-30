@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180491"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下載並安裝 Azure Data Studio
 

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2076f53b428320f8635de98f7993232e65c2e29c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185683"
 ---
 # <a name="add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs"></a>將斜面、浮凸與紋理樣式加入至圖表 (報表產生器及 SSRS)
   使用某些圖表類型時，您可以指定繪製效果來增加圖表的視覺效果。 這些繪製效果僅適用於圖表的數列。 它們對於其他任何圖表元素沒有影響。  

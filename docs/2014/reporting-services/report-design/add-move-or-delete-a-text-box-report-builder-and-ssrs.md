@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185899"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)
   文字方塊是報表中最常使用的報表項目。 您可以將文字方塊加入至報表主體，以便顯示標題、參數選擇、內建欄位和日期等資訊。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07f87bf0f231419e4f1345369211ba6ceebf1d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199178"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>管理大量複製批次大小
   大量複製作業中批次的主要用途是定義交易的範圍。 如果沒有設定批次大小，則大量複製函數會將整個大量複製作業視為一筆交易。 如果有設定批次大小，則每一個批次都構成一筆在批次完成時認可的交易。  

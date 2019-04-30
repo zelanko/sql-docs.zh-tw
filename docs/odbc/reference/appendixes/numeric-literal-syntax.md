@@ -16,39 +16,39 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181286"
 ---
 # <a name="numeric-literal-syntax"></a>數值常值語法
 ODBC 中的數值常值會使用下列語法：  
   
- *數值常值*:: =*帶正負號數值常值&#124;不帶正負號數值常值*  
+ *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
   
- *帶正負號數值常值*:: = [*號*]*不帶正負號數值常值*  
+ *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
   
- *不帶正負號數值常值*:: =*確切的數值常值&#124;近似數值常值*  
+ *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
   
- *確切的數值常值*:: =*不帶正負號整數*[*期間*[*不帶正負號整數*]] *&#124;期間的不帶正負號整數*  
+ *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
- *登*:: =*加號&#124;負號*  
+ *sign* ::= *plus-sign &#124; minus-sign*  
   
- *近似數值常值*:: =*尾數 E 的指數*  
+ *approximate-numeric-literal* ::= *mantissa E exponent*  
   
- *尾數*:: =*確切的數值常值*  
+ *mantissa* ::= *exact-numeric-literal*  
   
- *指數*:: =*帶正負號整數*  
+ *exponent* ::= *signed-integer*  
   
- *帶正負號整數*:: = [*號*]*不帶正負號整數*  
+ *signed-integer* ::= [*sign*] *unsigned-integer*  
   
- *不帶正負號整數*:: =*數字...*  
+ *unsigned-integer* ::= *digit...*  
   
- *加號*:: = *+*  
+ *plus-sign* ::= *+*  
   
- *負號*:: =-  
+ *minus-sign* ::= -  
   
- *數字*:: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
  *期間*:: =。

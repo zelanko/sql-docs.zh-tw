@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e56eff5064cf797e4acdfff10f346a43ee4210de
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195076"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>升級之後，不會執行記錄傳送
   Upgrade Advisor 偵測到您正在使用記錄傳送。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 記錄傳送與 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的記錄傳送不相容，也不能直接升級。 請在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或預存程序重新設定記錄傳送。  

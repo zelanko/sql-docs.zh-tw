@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b7c63e4850d17009992f8749c35d86534c0ee83
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188337"
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
   報表定義語言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義的 XML 表示法。 報表定義包含報表的資料擷取和配置資訊。 RDL 是由符合針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立之 XML 文法的 XML 元素所組成。 您可以加入自訂函數，藉由存取報表定義檔案中的程式碼組件來控制報表項目值、樣式和格式。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188488"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>規劃報表設計與報表部署 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了數種撰寫與部署報表。 您可以使用本主題來協助針對一起運作的報表撰寫環境和報表伺服器進行規劃。 本主題為 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件支援之報表定義的概觀。 報表定義是以報表定義語言 (RDL) 或用戶端報表定義語言 (RDLC) 撰寫的 XML 檔案。 每個報表定義都符合列於檔案開頭的特定結構描述版本。  
