@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240273"
 ---
 # <a name="determining-installed-oracle-components"></a>判斷已安裝的 Oracle 元件
 > [!IMPORTANT]  
 >  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用所提供的 ODBC 驅動程式。  
   
- 若要判斷您的系統 （和其版本） 上安裝的 Oracle 元件，請瀏覽 Oracle 主目錄下的 \Orainst 目錄。 開啟下列文字檔的其中一個： Nt.rgs、 Win95.rgs 或 Win98.rgs。  
+ 若要判斷您的系統 （和其版本） 上安裝的 Oracle 元件，請瀏覽 Oracle 主目錄下的 \Orainst 目錄。 開啟下列文字檔的其中一個：Nt.rgs、 Win95.rgs 或 Win98.rgs。  
   
  檔案格式會類似於下列各項：  
   

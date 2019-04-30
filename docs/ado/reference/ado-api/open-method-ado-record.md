@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241091"
 ---
 # <a name="open-method-ado-record"></a>Open 方法 (ADO Record)
 開啟現有[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件，或建立新的項目所代表**記錄**，例如檔案或目錄。  
@@ -47,7 +47,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *CreateOptions*  
  選擇性。 A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)值，指定是否應該開啟現有的檔案或目錄，或應該建立新的檔案或目錄。 預設值是**adFailIfNotExists**。 如果設為預設值，存取模式取自[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性。 會忽略這個參數時*來源*參數不包含 URL。  
   
- *選項*  
+ *選項。*  
  選擇性。 A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)值，指定開啟選項**記錄**。 預設值是**adOpenRecordUnspecified**。 可以結合這些值。  
   
  *UserName*  

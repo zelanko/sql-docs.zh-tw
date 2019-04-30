@@ -2,20 +2,20 @@
 title: GPU 支援與 TensorFlow
 titleSuffix: SQL Server big data clusters
 description: 部署具有 GPU 支援的巨量資料叢集，並在 Azure 資料 Studio Notebook 中使用 TensorFlow。
-author: lgongmsft
-ms.author: shivprashant
+author: inchiosa
+ms.author: marinch
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 682e68ede0646b9455bd9b4b759b4e3d760223d9
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
-ms.translationtype: MT
+ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670880"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473311"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>部署具有 GPU 支援的巨量資料叢集並執行 TensorFlow
 

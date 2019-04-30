@@ -1,5 +1,5 @@
 ---
-title: 計數 (Tuple) (MDX) |Microsoft 文件
+title: 計數 (Tuple) (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3775af63181489b982778d40ddd69ebc12872271
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285040"
 ---
 # <a name="count-tuple-mdx"></a>Count (Tuple) (MDX)
 
@@ -48,7 +48,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>另請參閱  
  [計數&#40;維度&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [計數&#40;階層層級&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [計數&#40;設定&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count &#40;集合&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

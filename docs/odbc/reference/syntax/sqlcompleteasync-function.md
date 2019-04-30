@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259360"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 函式
 **合規性**  
- 版本導入： ODBC 3.8  
+ 導入的版本：ODBC 3.8  
   
- 標準相容性： 無  
+ 標準的合規性：None  
   
  **摘要**  
  **SQLCompleteAsync**可用來判斷何時非同步函式已完成使用任一個通知或輪詢為基礎的處理。 如需有關非同步作業的詳細資訊，請參閱 <<c0> [ 非同步執行](../../../odbc/reference/develop-app/asynchronous-execution.md)。  
@@ -67,11 +67,11 @@ SQLRETURN SQLCompleteAsync(
   
  **SQLCompleteAsync**傳回 SQL_SUCCESS，表示以外的程式碼**SQLCompleteAsync**不會正確地進行呼叫。 **SQLCompleteAsync**在此情況下將會公佈任何診斷記錄。 可能的傳回碼如下：  
   
--   SQL_INVALID_HANDLE： 所指定的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
+-   SQL_INVALID_HANDLE:所表示的控制代碼*HandleType*並*處理*不是有效的控制代碼。  
   
--   SQL_ERROR: *AsyncRetCodePtr*是 NULL，或控制代碼上未啟用非同步處理。  
+-   SQL_ERROR:*AsyncRetCodePtr*是 NULL，或控制代碼上未啟用非同步處理。  
   
--   SQL_NO_DATA： 通知模式中非同步作業不在進行中或驅動程式管理員未收到通知的應用程式。 在輪詢模式中，非同步作業不是進行中。  
+-   SQL_NO_DATA 為止：在通知模式的非同步作業不在進行中或驅動程式管理員未收到通知的應用程式。 在輪詢模式中，非同步作業不是進行中。  
   
 ## <a name="comments"></a>註解  
  在輪詢基礎的非同步處理模式中， *AsyncRetCodePtr*可能是 SQL_STILL_EXECUTING 時**SQLCompleteAsync**都會傳回 SQL_SUCCESS。 應用程式應該繼續輪詢直到*AsyncRetCodePtr*不 SQL_STILL_EXECUTING。 在通知基礎的非同步處理模式中， *AsyncRetCodePtr*絕對不會 SQL_STILL_EXECUTING。  

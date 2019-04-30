@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251474"
 ---
 # <a name="serializability"></a>可序列化能力
 在理想情況下，交易應該*序列化*。 交易可以說是可序列化，如果同時執行交易的結果相同，則為循序-執行它們的結果也就是一個接著一個。 它並不重要交易第一次，執行僅，結果不會反映任何混合的交易。  

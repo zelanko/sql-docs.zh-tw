@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313846"
 ---
 # <a name="enterprise-information-management-tutorials"></a>企業資訊管理教學課程
   本章節包含的教學課程是有關使用 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中所包含的企業資訊管理 (EIM) 技術來管理企業中的資訊。 企業資訊管理 (EIM) 提供一套解決方案組合，可讓組織信任其資料的可信度和一致性，以便他們做出重要的商業決策。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 具有以下技術，可協助您在企業中實作 EIM 解決方案。  

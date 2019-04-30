@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 383a7b2bbd6e8ebaab5f1e66b10a10c9584800ee
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309233"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 延伸模組 （預覽）
+# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 延伸模組 (預覽)
 
 **資料層應用程式精靈**提供簡單易用的經驗，部署和擷取.dacpac 檔案以及匯入和匯出.bacpac 檔案。
 

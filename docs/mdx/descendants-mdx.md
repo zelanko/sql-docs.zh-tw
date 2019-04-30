@@ -1,5 +1,5 @@
 ---
-title: 下階 (MDX) |Microsoft 文件
+title: 下階 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 013b7a7a2124788f3f1bcaa6d09b8ef7b10562e4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248111"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -56,13 +56,13 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  指定描述旗標的有效字串運算式，以區分可能的下階集合。  
   
 ## <a name="remarks"></a>備註  
- 如果指定層級，則**下階**函式會傳回一個集合，包含指定的成員或指定的集合，在指定層級，選擇性地在指定的旗標加以修改成員的下階*Desc_Flag*。  
+ 如果指定層級，則**子代**函式會傳回一個集合，包含指定的成員或指定的集合，在指定的層級，選擇性地在指定的旗標加以修改成員的下階*Desc_Flag*。  
   
- 如果*距離*指定，則**下階**函式會傳回一個集合，包含指定的成員或離開中指定的成員，並選擇性地在指定的旗標加以修改之階層的層級指定的數字指定的集合成員的下階*Desc_Flag*。 一般說來，您可以使用這個函數搭配 Distance 引數，來處理不完全階層。 如果指定的距離是零 (0)，此函數會傳回只由指定成員或指定集合所組成的集合。  
+ 如果*距離*指定，則**子代**函式會傳回包含指定的成員或離開層級中指定的數目指定的集合成員的下階的集合指定的成員，選擇性地在指定的旗標加以修改階層*Desc_Flag*。 一般說來，您可以使用這個函數搭配 Distance 引數，來處理不完全階層。 如果指定的距離是零 (0)，此函數會傳回只由指定成員或指定集合所組成的集合。  
   
- 如果指定了集合運算式，**下階**函式已個別解決每個成員的集合，並重新建立集合。 換句話說，所使用的語法**下階**函式在功能上等於 MDX[產生](../mdx/generate-mdx.md)函式。  
+ 如果指定了集合運算式，則**子系**函式是個別解析集中，每個成員且重新建立集合。 換句話說，所使用的語法**子代**函式相當於 MDX[產生](../mdx/generate-mdx.md)函式。  
   
- 如果指定了任何層級或距離，函式所用的層級的預設值取決於呼叫[層級](../mdx/level-mdx.md)函式 (<\<成員 >>。層級） 的指定成員 （如果指定成員），或藉由呼叫**層級**（如果指定了一組），指定集合的每個成員函式。 如果沒有指定層級運算式、距離或旗標，函數執行方式就如同使用下列語法一樣：  
+ 如果指定任何層級或距離，函式所用的層級的預設值取決於呼叫[層級](../mdx/level-mdx.md)函式 (<\<成員 >>。層級） 指定的成員 （如果已指定成員），或藉由呼叫**層級**（如果已指定一組），指定集合的每個成員函式。 如果沒有指定層級運算式、距離或旗標，函數執行方式就如同使用下列語法一樣：  
   
  `Descendants`  
   
@@ -124,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- 下列範例會傳回每日平均`Measures.[Gross Profit Margin]`量值，從計算中 2003年會計年度的每個月的每一日**Adventure Works** cube。 **下階**函式會傳回一組天數的目前成員為根據的`[Date].[Fiscal]`階層。  
+ 下列範例會傳回每日平均`Measures.[Gross Profit Margin]`量值，計算出的 2003年會計年度，每個月的天數**Adventure Works** cube。 **子代**函式會傳回一組天次從目前的成員來決定`[Date].[Fiscal]`階層。  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  
@@ -141,7 +141,7 @@ FROM [Adventure Works]
 WHERE ([Date].[Fiscal Year].&[2003])  
 ```  
   
- 下列範例使用層級運算式，並且會傳回 Australia 每個 State-Province 的 Internet Sales Amount，及傳回每個 State-Province 佔 Australia 之 Internet Sales Amount 總計的百分比。 這個範例使用 Item 函數所傳回的集合中擷取第一個 （且唯一） tuple**祖系**函式。  
+ 下列範例使用層級運算式，並且會傳回 Australia 每個 State-Province 的 Internet Sales Amount，及傳回每個 State-Province 佔 Australia 之 Internet Sales Amount 總計的百分比。 此範例使用 Item 函數來擷取所傳回的集合中的第一個 （且唯一） tuple**祖系**函式。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -163,6 +163,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbefab0f02f3229d8b4c0a62a568634ec222290b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305673"
 ---
 # <a name="type-identifiers"></a>類型識別碼
 若要描述 SQL 和 C 資料類型，ODBC 會定義兩組*型別識別項*。 型別識別項描述 SQL 資料行或 C 的緩衝區的類型。 很 **#define**值，而為通常做為函式引數傳遞或傳回中繼資料中。  

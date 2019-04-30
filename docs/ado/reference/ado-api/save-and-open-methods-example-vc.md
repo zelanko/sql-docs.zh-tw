@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314819"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save 和 Open 方法範例 （VC + +）
 這三個範例示範如何[儲存](../../../ado/reference/ado-api/save-method.md)並**開啟**方法可以一起使用。  

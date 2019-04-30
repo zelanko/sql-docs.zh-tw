@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280622"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455092"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安裝指引
 
@@ -109,7 +109,7 @@ SQL Server 2017 都有適用於 Linux 的系統需求如下：
 
 若要回復至上一版的 SQL Server 降級，使用下列步驟：
 
-1. 找出您想要降級至 SQL Server 套件的版本號碼。 如需封裝的數字的清單，請參閱 <<c0> [ 版本資訊](sql-server-linux-release-notes.md)。
+1. 找出您想要降級至 SQL Server 套件的版本號碼。 如需封裝的數字的清單，請參閱 <<c0> [ 版本資訊](../linux/sql-server-linux-release-notes.md)。
 
 1. 降級至舊版的 SQL Server。 在下列命令中，取代`<version_number>`您在第一個步驟中識別的 SQL Server 版本號碼。
 
@@ -178,7 +178,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 > [!TIP]
 > 如果您已成功安裝快速入門中的步驟，您不需要下載或以手動方式安裝 SQL Server 封裝。 本節是僅供離線案例。
 
-1. **下載您的平台的資料庫引擎套件**。 封裝詳細資料區段中找到套件的下載連結[版本資訊](sql-server-linux-release-notes.md)。
+1. **下載您的平台的資料庫引擎套件**。 封裝詳細資料區段中找到套件的下載連結[版本資訊](../linux/sql-server-linux-release-notes.md)。
 
 1. **將下載的封裝移至您的 Linux 機器**。 如果您使用不同的電腦下載的套件時，將封裝移到您的 Linux 機器的一個方法是使用**scp**命令。
 

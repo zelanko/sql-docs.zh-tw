@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298859"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>開始使用 SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for DB2 可讓您快速轉換至 DB2 資料庫結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]結構描述上傳到產生的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 DB2，以便移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -45,7 +45,7 @@ ms.locfileid: "47737346"
 ### <a name="metadata-explorers"></a>中繼資料瀏覽器  
 SSMA 包含兩個中繼資料瀏覽器，瀏覽，並在 DB2 上執行動作和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
   
-#### <a name="db2-metadata-explorer"></a>DB2 中繼資料總管  
+#### <a name="db2-metadata-explorer"></a>DB2 Metadata Explorer  
 DB2 中繼資料總管 會顯示 DB2 結構描述的相關資訊。 藉由使用 DB2 中繼資料總管，您可以執行下列工作：  
   
 -   瀏覽每個結構描述中的物件。  
@@ -54,13 +54,13 @@ DB2 中繼資料總管 會顯示 DB2 結構描述的相關資訊。 藉由使用
   
 -   選取資料表資料移轉，然後從這些資料表，以進行移轉資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 將 DB2 資料庫移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)。</c0>  
   
-#### <a name="sql-server-metadata-explorer"></a>SQL Server 中繼資料總管  
+#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中繼資料總管 會顯示相關的執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 當您連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SSMA 擷取該執行個體相關的中繼資料，並將它儲存在專案檔中。  
   
 您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管，選取已轉換的 DB2 資料庫物件，並與執行個體，然後同步處理這些物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ### <a name="metadata"></a>中繼資料  
-右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在 DB2 中繼資料總管 中選取資料表，會出現六個索引標籤：**表格**， **SQL**，**類型對應、 報告**，**屬性**，並**資料**。 **報表** 索引標籤包含的資訊，建立報表之後，就會包含選取的物件。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會顯示：**表格**， **SQL**，和**資料**。  
+右邊的每個中繼資料總管 會描述所選的物件的索引標籤。 例如，如果您在 DB2 中繼資料總管 中選取資料表，就會出現六個索引標籤：**表格**， **SQL**，**輸入對應時，報表**，**屬性**，並**資料**。 **報表** 索引標籤包含的資訊，建立報表之後，就會包含選取的物件。 如果您選取的資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管 中，三個索引標籤會出現：**表格**， **SQL**，以及**資料**。  
   
 大部分的中繼資料設定是唯讀的。 不過，您可以變更下列中繼資料：  
   

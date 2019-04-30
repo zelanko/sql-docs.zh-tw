@@ -1,5 +1,5 @@
 ---
-title: SeekEnum |Microsoft Docs
+title: SeekEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772726"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459340"
 ---
 # <a name="seekenum"></a>SeekEnum
 指定的型別[搜尋](../../../ado/reference/ado-api/seek-method.md)來執行。  

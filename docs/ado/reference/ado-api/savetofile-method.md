@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6afe36c7b3923c9ebf33fd615a1c21e34955e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315214"
 ---
 # <a name="savetofile-method"></a>SaveToFile 方法
 將儲存的二進位內容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)至檔案。  

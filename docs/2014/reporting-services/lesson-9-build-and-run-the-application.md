@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b87a8b4ba546c53dfd4e4e1819b3b01b4f5cf3bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278960"
 ---
 # <a name="lesson-9-build-and-run-the-application"></a>第 9 課：建置及執行應用程式
   建立資料表的資料篩選後，下一步是要建置和執行網站應用程式。  

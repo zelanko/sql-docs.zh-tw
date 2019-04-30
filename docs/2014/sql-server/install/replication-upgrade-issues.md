@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282230"
 ---
 # <a name="replication-upgrade-issues"></a>複寫升級問題
   下列主題描述的是可能會影響升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的複寫問題。 這些主題會描述一些可讓您採取的動作，以便減少這些變更對環境的影響。  

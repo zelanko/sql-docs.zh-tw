@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5aefd37b70df88ada887e173dc1cc1f7d8ec4d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298003"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 屬性 (ADOX)
 表示刪除主索引鍵時，執行此動作。  

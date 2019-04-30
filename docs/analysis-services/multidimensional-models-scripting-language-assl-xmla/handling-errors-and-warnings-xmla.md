@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261700"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>處理錯誤和警告 (XMLA)
   當 XML for Analysis (XMLA) 時，就需要錯誤處理[Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)或是[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法呼叫未執行、 成功執行但產生錯誤或是警告，或成功執行但傳回的結果包含錯誤。  

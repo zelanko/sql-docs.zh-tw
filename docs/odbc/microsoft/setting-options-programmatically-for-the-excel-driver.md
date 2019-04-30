@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285014"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>以程式設計方式設定 Excel 驅動程式的選項
 

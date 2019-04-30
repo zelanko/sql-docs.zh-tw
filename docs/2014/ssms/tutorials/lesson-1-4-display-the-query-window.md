@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281990"
 ---
 # <a name="display-the-query-window"></a>顯示查詢視窗
   當您開啟多個查詢視窗時，它們會顯示為索引標籤式文件視窗。  

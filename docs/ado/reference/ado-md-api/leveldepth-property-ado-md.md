@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9313c8ea70fdb7de07efe27b520de41b13c33b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294342"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth 屬性 (ADO MD)
 表示之間階層的根層級數目並[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  

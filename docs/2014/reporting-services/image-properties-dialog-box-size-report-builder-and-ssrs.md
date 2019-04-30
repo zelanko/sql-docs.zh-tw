@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260651"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>影像屬性對話方塊、大小 (報表產生器及 SSRS)
   選取 **[影像屬性]** 對話方塊上的 **[大小]** 來格式化欄位或設計區域中顯示之影像的大小，或變更資料格或文字方塊邊緣和資料格或文字方塊內包含之圖片或值之間的額外空間量。  

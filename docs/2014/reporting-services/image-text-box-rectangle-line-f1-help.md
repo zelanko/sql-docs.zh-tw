@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa841b0fc86fd7c6525187d08b1fbe143b8e3ee4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260725"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>圖像、文字方塊、矩形、線條的 F1 説明
   本節中的主題提供有關選項的詳細資訊，您可在報表設計師中，從對話方塊的影像、文字方塊、矩形和線條上設定這些選項。  

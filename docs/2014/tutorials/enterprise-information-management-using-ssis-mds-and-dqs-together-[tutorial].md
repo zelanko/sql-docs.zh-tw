@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313855"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>使用 SSIS、MDS 和 DQS 一起管理企業資訊 [教學課程]
   管理企業的資訊通常牽涉到整合整個企業及外部的資料、清理資料、比對資料來移除任何重複項、標準化資料、充實資料，使資料符合法律和規範要求，然後將資料儲存在集中位置，並具有所有必要的安全性設定。  
@@ -83,6 +83,6 @@ ms.locfileid: "56035399"
 |[第 5 課：自動化清理和比對使用 SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|在這一課，您會使用 DQS 來建立可清理輸入資料的 SSIS 解決方案、比對已清理的資料來移除重複項，並以自動化方式將已清理和比對的資料儲存在 MDS 上。|75|  
   
 ## <a name="next-steps"></a>後續步驟  
- 若要開始教學課程，請繼續進行第一課：[第 1 課：建立供應商 DQS 知識庫](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)。  
+ 若要開始本教學課程，請繼續進行第 1 課：[第 1 課：建立供應商 DQS 知識庫](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)。  
   
   

@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 8f6eabe706197e8ab2bfb882510b6063bf4e884c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287685"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>建立伺服器連線檔案 (OracleToSQL)
 伺服器一節的指令碼檔案或不同的伺服器連線檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果存在於指令碼檔案與伺服器連線檔案相同的伺服器識別碼，則會視為在指令碼檔案中的伺服器定義。  
@@ -66,7 +66,7 @@ ms.locfileid: "47839346"
   
 </sql-server>  
 ```  
-**範例： 2**  
+**範例：2**  
   
 ```  
 <!--Sample of server connection file commands -->  

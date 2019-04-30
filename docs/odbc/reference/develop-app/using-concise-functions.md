@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312474"
 ---
 # <a name="using-concise-functions"></a>使用精簡函式
 有些 ODBC 函式隱含存取描述元。 應用程式撰寫者可能會發現它們比呼叫更方便**SQLSetDescField**或是**SQLGetDescField**。 這些函式會呼叫*精簡*函式，因為它們執行數項功能，包括設定或取得描述項欄位。 某些精簡函式可讓應用程式設定或擷取單一函式呼叫中的數個相關的描述項欄位。  

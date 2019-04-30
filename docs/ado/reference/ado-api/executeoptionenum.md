@@ -1,5 +1,5 @@
 ---
-title: 執行方式 |Microsoft Docs
+title: ExecuteOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301286"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 指定提供者執行命令的方式。  

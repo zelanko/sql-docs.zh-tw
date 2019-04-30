@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266143"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>點選連結報表頁面 (報表管理員)
   當您按一下報表中包含的互動式資料時，點選連結報表就會顯示相關資料的資料表。 這些報表是報表伺服器根據您用來建立報表之模型中包含的資訊所產生的。 如果您不想要使用報表伺服器所產生的點選連結報表，可以建立自訂報表，以便將它們發行至報表伺服器並對應至模型中定義的互動式資料點。 您必須根據相同的模型在報表產生器中建立這些自訂報表，然後將它們發行至報表伺服器。 若要將自訂報表對應至模型中的項目，請使用報表管理員中的 [點選連結報表] 頁面。  

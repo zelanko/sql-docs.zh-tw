@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270503"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最小文法
 本節描述 ODBC 驅動程式必須支援的最小 SQL 語法。 在本節中所述的語法是以 SQL-92 的項目層級語法子集。  
@@ -29,7 +29,7 @@ ms.locfileid: "47818898"
  僅適用於唯讀資料來源的驅動程式可能不支援這一節包含文法的處理變更資料的這些組件。 應用程式可以判斷資料來源是否唯讀藉由呼叫**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 資訊類型。  
   
 ## <a name="statement"></a>引數  
- *建立資料表陳述式*:: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE*基底資料表名稱*  
   
@@ -38,49 +38,49 @@ ms.locfileid: "47818898"
 > [!IMPORTANT]  
 >  作為*資料型別*中*建立資料表陳述式*，應用程式必須使用來自 TYPE_NAME 資料行所傳回的結果集的資料型別**SQLGetTypeInfo**。  
   
- *delete 陳述式搜尋*:: =  
+ *delete-statement-searched* ::=  
   
- DELETE FROM*資料表名稱*[所在*搜尋條件*]  
+ DELETE FROM *table-name* [WHERE *search-condition*]  
   
- *drop table 陳述式*:: =  
+ *drop-table-statement* ::=  
   
  DROP TABLE*基底資料表名稱*  
   
- *insert 陳述式*:: =  
+ *insert-statement* ::=  
   
- INSERT INTO*資料表名稱*[(*資料行識別碼*[，*資料行識別碼*]...)]     值 (*插入值*[，*插入值*]...)  
+ INSERT INTO *table-name* [( *column-identifier* [, *column-identifier*]...)]      VALUES (*insert-value*[, *insert-value*]... )  
   
- *select 陳述式*:: =  
+ *select-statement* ::=  
   
- 選取 [所有&#124;DISTINCT] *select 清單*  
+ SELECT [ALL &#124; DISTINCT] *select-list*  
   
  從*資料表參考清單*  
   
- [所在*搜尋條件*]  
+ [WHERE *search-condition*]  
   
- [*order by 子句*]  
+ [*order-by-clause*]  
   
- *陳述式*:: =*建立資料表陳述式*  
+ *statement* ::= *create-table-statement*  
   
- &#124;*delete 陳述式搜尋*  
+ &#124; *delete-statement-searched*  
   
- &#124;*drop table 陳述式*  
+ &#124; *drop-table-statement*  
   
- &#124;*insert 陳述式*  
+ &#124; *insert-statement*  
   
- &#124;*select 陳述式*  
+ &#124; *select-statement*  
   
- &#124;*update 陳述式搜尋*  
+ &#124; *update-statement-searched*  
   
- *update 陳述式搜尋*  
+ *update-statement-searched*  
   
  更新*資料表名稱*  
   
- 設定*資料行識別碼*= {*運算式* &#124; NULL}  
+ SET *column-identifier* = {*expression* &#124; NULL }  
   
  [，*資料行識別碼*= {*運算式* &#124; NULL}]...  
   
- [所在*搜尋條件*]  
+ [WHERE *search-condition*]  
   
  此章節包含下列主題。  
   

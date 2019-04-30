@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6060d9f2dfecb82e425fc78f3b8cf05c000ad4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311845"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition 中的 ADO MD 程式碼範例
 下列範例會要求 Microsoft 網際網路資訊伺服器 4.0 的 Microsoft Active Server Pages (ASP)。  

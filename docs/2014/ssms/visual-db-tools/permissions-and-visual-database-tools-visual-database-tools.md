@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268496"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>權限和 Visual Database Tools (Visual Database Tools)
   允許使用者存取資料來源物件之使用權限，是在資料來源而非在 Visual Database Tools 中授與。 資料來源物件上所授與的存取使用權限，是由您安裝的安全性原則控制。 如果沒有存取某些資料庫物件的權限，您應該連絡資料庫管理員。  

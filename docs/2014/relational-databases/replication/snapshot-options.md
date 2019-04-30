@@ -1,5 +1,5 @@
 ---
-title: 修改 SQL 複寫快照集初始化選項 |Microsoft Docs
+title: 修改 SQL 複寫的快照集初始化選項 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270247"
 ---
-# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 複寫快照集初始化選項
+# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>修改 SQL 複寫的快照集初始化選項
 
 這篇文章討論如何修改一些選項的時機[使用快照集初始化訂閱](initialize-a-subscription-with-a-snapshot.md)。
 

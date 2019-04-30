@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314699"
 ---
 # <a name="seek-method"></a>Seek 方法
 搜尋的索引[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來快速尋找符合指定的值，並變更該資料列目前的資料列位置的資料列。  
@@ -35,7 +35,7 @@ recordset.Seek KeyValues, SeekOption
 ```  
   
 #### <a name="parameters"></a>參數  
- *Parentkeyvalue*  
+ *KeyValues*  
  陣列**Variant**值。 索引是由一或多個資料行所組成，陣列會包含要比較每個對應的資料行的值。  
   
  *SeekOption*  

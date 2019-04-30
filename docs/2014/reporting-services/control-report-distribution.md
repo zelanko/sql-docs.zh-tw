@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72f9d943a883a70c7dcf0476b92c6cb5b678f21
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265990"
 ---
 # <a name="control-report-distribution"></a>控制報表散發
   您可以設定報表伺服器，以減少與電子郵件和檔案共用散發相關聯的安全性風險。  

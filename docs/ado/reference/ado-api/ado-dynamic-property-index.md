@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249560"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動態屬性索引
-資料提供者、 服務提供者，以及服務元件可以動態將屬性新增至**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)並[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這些物件開啟時，指定提供者可能也會插入額外的屬性。 其中部分屬性所述[ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)一節。 多個列中的特定提供者在[附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)一節。  
+資料提供者、 服務提供者，以及服務元件可以動態將屬性新增至**屬性**未開啟的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)並[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這些物件開啟時，指定提供者可能也會插入額外的屬性。 其中部分屬性所述[ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)一節。 多個列中的特定提供者在[附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)一節。  
   
  下表是 cross-indexes ADO 和 OLE DB 名稱的每個標準 OLE DB 提供者動態屬性。 您的提供者可以新增其他屬性，但是列出這裡。 如需提供者特有的動態屬性的特定資訊，請參閱您的提供者文件。  
   
@@ -52,12 +52,12 @@ ms.locfileid: "47684726"
 |隔離等級|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |隔離保留功能|DBPROP_SUPPORTEDTXNISORETAIN|  
 |地區設定識別碼|DBPROP_INIT_LCID|  
-|位置|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |索引大小上限|DBPROP_MAXINDEXSIZE|  
 |資料列大小上限|DBPROP_MAXROWSIZE|  
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |在選取的最大資料表|DBPROP_MAXTABLESINSELECT|  
-|[模式]|DBPROP_INIT_MODE|  
+|模式|DBPROP_INIT_MODE|  
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|  
 |多個結果|DBPROP_MULTIPLERESULTS|  
 |多個儲存體物件|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -196,7 +196,7 @@ ms.locfileid: "47684726"
 |唯一的目錄|DBPROP_ADC_UNIQUECATALOG|  
 |唯一資料列|DBPROP_UNIQUEROWS|  
 |唯一的結構描述|DBPROP_ADC_UNIQUESCHEMA|  
-|唯一資料表|DBPROP_ADC_UNIQUETABLE|  
+|Unique Table|DBPROP_ADC_UNIQUETABLE|  
 |可更新性|DBPROP_UPDATABILITY|  
 |更新準則|DBPROP_ADC_UPDATECRITERIA|  
 |更新重新同步處理|DBPROP_ADC_UPDATERESYNC|  

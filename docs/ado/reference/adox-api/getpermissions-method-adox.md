@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313266"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
 傳回的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或是[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件或物件容器上。  
@@ -33,14 +33,14 @@ ms.locfileid: "47648988"
   
 ```  
   
-ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
+ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
 ```  
   
 ## <a name="return-value"></a>傳回值  
  傳回**長**值，指定包含使用者或群組具有物件的權限的位元遮罩。 這個值可以是一種或多種[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常數。  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  A **Variant**值，指定要設定權限的物件名稱。 設定*名稱*為 null 的值，如果您想要取得的物件容器的權限。  
   
  *ObjectType*  

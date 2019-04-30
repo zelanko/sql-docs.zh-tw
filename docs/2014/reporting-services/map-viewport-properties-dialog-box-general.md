@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16faf950954c0c642971c81061f347a03716267
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278550"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>地圖檢視區屬性對話方塊、一般
   選取 **[地圖檢視區屬性]** 對話方塊上的 **[一般]** 來變更座標系統、投射以及界限選項。  

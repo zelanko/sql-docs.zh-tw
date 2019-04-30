@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 789dc265513c4d0068c721e8cdefb07d7a3d5331
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297913"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>連接至已註冊的伺服器 (SQL Server Management Studio)
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 連接到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中已註冊的伺服器。 若伺服器不在執行中，或在網路中找不到該伺服器，「已註冊的伺服器」就會顯示錯誤。  

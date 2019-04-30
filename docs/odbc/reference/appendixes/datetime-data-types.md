@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241008"
 ---
 # <a name="datetime-data-types"></a>日期時間資料類型
 在 ODBC 3 *.x*識別碼的日期、 時間和時間戳記 SQL 資料類型已從 SQL_DATE、 SQL_TIME、 和 SQL_TIMESTAMP (的執行個體 **#define** 9、 10 和 11 的標頭檔中) 至 SQL_TYPE_DATE、 SQL_TYPE_TIME 和 SQL_TYPE_TIMESTAMP (的執行個體 **#define** 91、 92，和 93 標頭檔)，分別。 識別碼已從 SQL_C_DATE、 SQL_C_TIME 和 SQL_C_TIMESTAMP SQL_C_TYPE_DATE、 SQL_C_TYPE_TIME，和 SQL_C_TYPE_TIMESTAMP，分別對應的 C 類型和執行個體 **#define**已變更據此。  
   
- 在 ODBC 3 SQL datetime 資料類型傳回的資料行大小和小數位數 *.x*是相同的有效位數和小數位數為其傳回的 ODBC 2。*x*。 這些值是中的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 描述項欄位的值不同。 (如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d： 資料型別中。)  
+ 在 ODBC 3 SQL datetime 資料類型傳回的資料行大小和小數位數 *.x*是相同的有效位數和小數位數為其傳回的 ODBC 2。*x*。 這些值是中的 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 描述項欄位的值不同。 (如需詳細資訊，請參閱 <<c0> [ 資料行大小、 小數位數、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)附錄 d:資料型別。）  
   
  這些變更會影響**SQLDescribeCol**， **SQLDescribeParam**，並**SQLColAttributes**;**SQLBindCol**， **SQLBindParameter**，並**SQLGetData**; 以及**SQLColumns**， **SQLGetTypeInfo**， **SQLProcedureColumns**， **SQLStatistics**，和**SQLSpecialColumns**。  
   

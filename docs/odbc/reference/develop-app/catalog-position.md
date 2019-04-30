@@ -16,24 +16,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237923"
 ---
 # <a name="catalog-position"></a>目錄位置
 目錄名稱識別項和如何分隔識別碼的其餘部分中的位置到資料來源不同資料來源。 比方說，Xbase 資料來源中的目錄名稱是一個目錄，在 Microsoft® Windows®，為分開的資料表名稱 （這是檔案名稱） 反斜線 (\\)。 下圖示範這種情況。  
   
- ![目錄位置： Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
+ ![目錄位置：Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
  在 SQL Server 資料來源中，目錄是資料庫，並以句號 （.） 隔開的結構描述和資料表名稱。  
   
- ![目錄位置： SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
+ ![目錄位置：SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
  Oracle 資料來源，在類別目錄也是資料庫，但會遵循資料表名稱和分開的結構描述和資料表名稱的 @ 記號 (@)。  
   
- ![目錄位置： Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
+ ![目錄位置：Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
   
  若要判斷目錄分隔符號，以及目錄名稱的位置，應用程式會呼叫**SQLGetInfo**使用 SQL_CATALOG_NAME_SEPARATOR 和 SQL_CATALOG_LOCATION 選項。 互通的應用程式應該建構根據這些值的識別碼。  
   

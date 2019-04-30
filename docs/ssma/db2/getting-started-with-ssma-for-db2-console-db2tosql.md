@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668297"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453322"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>開始使用 SSMA for DB2 主控台 (DB2ToSQL)
 本章節描述的程序啟動並開始使用 DB2 主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -53,11 +53,11 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|描述|  
+|色彩|描述|  
 |---------|---------------|  
 |紅色|在執行期間的嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
-|白色|指令碼檔案的命令、 訊息類型|  
+|白皮書|指令碼檔案的命令、 訊息類型|  
 |黃色|警告|  
 |綠色|提示使用者輸入|  
 |11：青色|開始]、 [完成] 和 [作業的結果。|  

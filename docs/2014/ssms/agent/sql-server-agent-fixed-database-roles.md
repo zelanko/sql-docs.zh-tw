@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245987"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server Agent 固定資料庫角色
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有下列 **msdb** 資料庫固定資料庫角色，讓管理員在存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式時具有更細微的控制權。 以下列出這些角色 (存取權限由少至多排列)：  
@@ -56,7 +56,7 @@ ms.locfileid: "52773770"
 |檢視屬性|否|是|是|否|  
 |執行/停止/啟動|不適用|是|不適用|不適用|  
 |檢視作業記錄|不適用|是|不適用|不適用|  
-|刪除作業記錄|不適用|否<sup>4</sup>|不適用|不適用|  
+|刪除作業記錄|不適用|否 <sup>4</sup>|不適用|不適用|  
 |附加/卸離|不適用|不適用|是|不適用|  
   
  <sup>1</sup>無法變更作業擁有權。  
@@ -84,7 +84,7 @@ ms.locfileid: "52773770"
 |編輯屬性|否|是 (僅擁有的作業)|否|是 (僅擁有的排程)|否|  
 |執行/停止/啟動|不適用|是 (僅擁有的作業)|否|不適用|不適用|  
 |檢視作業記錄|不適用|是|是|不適用|不適用|  
-|刪除作業記錄|不適用|否<sup>4</sup>|否|不適用|不適用|  
+|刪除作業記錄|不適用|否 <sup>4</sup>|否|不適用|不適用|  
 |附加/卸離|不適用|不適用|不適用|是 (僅擁有的排程)|不適用|  
   
  <sup>1</sup>無法變更作業擁有權。  
@@ -132,9 +132,9 @@ ms.locfileid: "52773770"
   
 ## <a name="see-also"></a>另請參閱  
  [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)   
- [sp_update_job &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
- [sp_update_schedule &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
- [sp_notify_operator &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
- [sp_purge_jobhistory &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
+ [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
+ [sp_update_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
+ [sp_notify_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
   
   

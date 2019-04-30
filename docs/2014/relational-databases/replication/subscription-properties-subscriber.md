@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250264"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 複寫訂閱屬性 
 此章節提供的資訊**訂用帳戶屬性** 對話方塊。 
@@ -52,7 +52,7 @@ ms.locfileid: "54134978"
   
 ### <a name="options-for-merge-subscriptions"></a>合併訂閱的選項  
  **資料分割定義 (HOST_NAME)**  
- 對於使用參數化的篩選的發行集，合併式複寫會評估兩個系統函式 （或兩者如果篩選參考兩個函式） 的其中一個來判斷訂閱者應接收的資料同步處理期間：**SUSER_SNAME**或是**host_name （)**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
+ 針對使用參數化篩選的發行集，合併式複寫會在同步處理時，評估兩個系統函數其中之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定「訂閱者」應接收的資料：**SUSER_SNAME()** 或 **HOST_NAME()**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **[訂閱類型]** 和 **[優先權]**  
  顯示訂閱是客訂閱或主訂閱 (建立了訂閱之後就無法再變更)。 主訂閱可以將資料重新發行至其他訂閱者，並且可以指派衝突解決的優先權。  
@@ -110,7 +110,7 @@ ms.locfileid: "54134978"
   
 ### <a name="options-for-merge-subscriptions"></a>合併訂閱的選項  
  **資料分割定義 (HOST_NAME)**  
- 對於使用參數化的篩選的發行集，合併式複寫會評估兩個系統函式 （或兩者如果篩選參考兩個函式） 的其中一個來判斷訂閱者應接收的資料同步處理期間：**SUSER_SNAME**或是**host_name （)**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
+ 針對使用參數化篩選的發行集，合併式複寫會在同步處理時，評估兩個系統函數其中之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定「訂閱者」應接收的資料：**SUSER_SNAME()** 或 **HOST_NAME()**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **[訂閱類型]** 和 **[優先權]**  
  顯示訂閱是客訂閱或主訂閱 (建立了訂閱之後就無法再變更)。 主訂閱可以將資料重新發行至其他訂閱者，並且可以指派衝突解決的優先權。  

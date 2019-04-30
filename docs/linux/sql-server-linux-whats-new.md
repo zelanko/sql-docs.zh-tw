@@ -4,18 +4,18 @@ description: 這篇文章強調有關 Linux 上的 SQL Server 2017 的新功能�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/21/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160526"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456728"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的最新消息
 
@@ -23,7 +23,7 @@ ms.locfileid: "53160526"
 
 這篇文章描述在 Linux 上執行的 SQL Server 2017 的主要功能和可用的服務。
 
-SQL Server 2019 預覽已發行。 這篇文章並未涵蓋 SQL Server 2019 預覽版本。 若要深入了解 SQL Server 2019 預覽，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
+SQL Server 2019 預覽已發行。 這篇文章並未涵蓋 SQL Server 2019 預覽版本。 若要深入了解 SQL Server 2019 預覽，請參閱[什麼是適用於 Linux 的 SQL Server 2019 preview 的新功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)。
 
 > [!NOTE]
 > 除了這篇文章中的這些功能，累計更新會定期發行後 GA 版本。 這些累積更新提供許多改善和修正程式。 如需最新 CU 版本資訊，請參閱[ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu)。 下載套件及已知的問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。

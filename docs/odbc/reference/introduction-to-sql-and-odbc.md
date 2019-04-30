@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4cb5d88243b604d7ca0fe40ee8b7f9a040380150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274404"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 和 ODBC 簡介
 ODBC 已建立以提供一致的方法不同，或您可以採用異質資料庫管理系統 (Dbms) 的存取權。 本簡介會討論 ODBC 的開發相關的概念。  

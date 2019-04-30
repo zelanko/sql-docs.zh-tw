@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297548"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>升級之後，全文檢索搜尋將不允許 OUTPUT INTO 運算式中使用述詞
   當資料庫相容性層級設定為 100 或以上時，OUTPUT 子句中不允許使用全文檢索述詞。  

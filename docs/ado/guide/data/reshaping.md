@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280398"
 ---
 # <a name="reshaping"></a>重新成形
 A **Recordset**建立命令可能會指派圖案的子句*別名*名稱 （通常是使用 AS 關鍵字）。 形狀的別名**資料錄集**可以完全不同的命令中參考。 也就是說，您可以重複使用，或*重塑*，先前形狀**資料錄集**在新的圖形命令。 若要支援這項功能，ADO 會提供屬性[調整形狀名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608935"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453427"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>評定 DB2 結構描述的轉換 (DB2ToSQL)
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您應判斷移轉將會複雜程度，以及多少時間移轉。 SSMA 可以建立顯示的會成功轉換的物件百分比的評定報告。 SSMA 也可讓您檢視導致轉換失敗的特定問題。  
@@ -35,7 +35,7 @@ ms.locfileid: "47608935"
   
     SSMA 會顯示在視窗底部的 [狀態] 列中的進度。 如果 [輸出] 窗格為可見，您也會看到 [輸出] 窗格中的訊息。  
   
-    當評估完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2： 評定報告視窗會出現。  
+    當評估完成時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2:評估 [報告] 視窗會出現。  
   
 ## <a name="using-assessment-reports"></a>使用評估報告  
 評定報告視窗包含三個窗格：  

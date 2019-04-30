@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313481"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供的 ODBC 驅動程式
 *驅動程式*ODBC API 中實作的函式的程式庫。 每個驅動程式是針對特定的資料庫管理系統 (DBMS)。 在大部分情況下，驅動程式會公開基礎 DBMS; 的功能它們不需要實作不支援的 DBMS 的功能。 驅動程式執行特定工作，並可以分為兩種類別： 檔案為基礎和以 DBMS 為基礎。 如需有關驅動程式和驅動程式架構的詳細資訊，請參閱 <<c0> [ 驅動程式](../../odbc/reference/drivers.md)。  

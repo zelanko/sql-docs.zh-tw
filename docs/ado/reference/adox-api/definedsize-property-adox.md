@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54b2607a2754e8e1663cce15eea19274fdd7b4e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803066"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63464991"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 屬性 (ADOX)
 指出資料行指定最大大小。  

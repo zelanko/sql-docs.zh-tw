@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d4023c513ffda04a3cf499110185d3746ca40d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299192"
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr (資料指標程式庫)
 > [!IMPORTANT]  

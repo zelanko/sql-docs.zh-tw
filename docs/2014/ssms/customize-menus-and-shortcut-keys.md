@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245787"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
-  鍵盤對應鍵可讓您選取功能表命令或按鈕，按 ALT +*\<單一字母 >*。 例如，若要開啟 [編輯] 功能表，請按下 ALT+E。 您可以利用 [自訂] 對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
+  鍵盤快速鍵可讓您按 ALT+*\<單一字母>* 來選取功能表命令或按鈕。 例如，若要開啟 [編輯] 功能表，請按下 ALT+E。 您可以利用 [自訂] 對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
   
  您可以從 [工具/選項] 對話方塊的 [鍵盤] 頁面上，建立使用 Ctrl 鍵的預存程序鍵盤對應鍵。  
   

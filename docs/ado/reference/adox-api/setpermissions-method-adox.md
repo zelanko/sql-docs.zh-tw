@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281903"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 方法 (ADOX)
 指定的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或是[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件上。  
@@ -37,7 +37,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  A**字串**值，指定要設定權限的物件名稱。  
   
  *ObjectType*  
@@ -49,7 +49,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *權限*  
  A**長**可以是位元遮罩值的一或多個[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常數，表示要設定的權限。  
   
- *繼承*  
+ *Inherit*  
  選擇性。 A**長**可以是其中一值的[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)常數，指定如何物件會繼承這些權限。 預設值是**adInheritNone**。  
   
  *ObjectTypeId*  

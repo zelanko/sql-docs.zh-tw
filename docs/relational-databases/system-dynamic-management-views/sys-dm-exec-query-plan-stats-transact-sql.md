@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582087"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63474274"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 會傳回相當於先前快取的查詢計劃的最後一個已知的實際執行計畫。 
 
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>備註
 這個系統函數可從[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4。
 
-這是選擇加入的功能，需要啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。   
+這是選擇加入的功能，需要啟用[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451。 開頭[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5 然後在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，以在資料庫層級完成這項作業，請參閱中的 LAST_QUERY_PLAN_STATS 選項[ALTER DATABASE SCOPED CONFIGURATION &#40;-&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。
 
 這個系統函數運作**輕量級**查詢分析基礎結構的執行統計資料。 如需詳細資訊，請參閱[查詢分析基礎結構](../../relational-databases/performance/query-profiling-infrastructure.md)。  
 
@@ -80,7 +80,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
     **AND**    
 -   查詢相當簡單，通常分類為 OLTP 工作負載的一部分。
 
-<sup>1</sup>這是指 Showplan 只包含根節點運算子 （選取）。 針對[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.4 只這是指做為可透過 sys.dm_exec_cached_plans 快取的計畫。
+<sup>1</sup>開頭[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]CTP 2.5，這是指 Showplan 只包含根節點運算子 （選取）。 針對[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]這是指做為可透過快取計畫的 CTP 2.4 `sys.dm_exec_cached_plans`。
 
 在下列情況中，**會傳回任何輸出**從**sys.dm_exec_query_plan_stats**:
 
@@ -131,6 +131,16 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps
 WHERE st.text LIKE 'SELECT * FROM Person.Person%';  
 GO  
 ```   
+
+### <a name="d-look-at-cached-events-for-trigger"></a>D. 查看觸發程序快取事件
+
+```sql
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 ## <a name="see-also"></a>另請參閱
   [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  

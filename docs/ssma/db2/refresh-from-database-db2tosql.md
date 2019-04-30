@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ef7778854248f194c01254b9cd6f833f67e9cefc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270002"
 ---
 # <a name="refresh-from-database-db2tosql"></a>從資料庫 (DB2ToSQL) 重新整理
 **從資料庫重新整理**對話方塊可讓您選取要從 DB2 資料庫重新整理的物件。 在對話方塊中的資料列的色彩標示根據中繼資料的狀態：  

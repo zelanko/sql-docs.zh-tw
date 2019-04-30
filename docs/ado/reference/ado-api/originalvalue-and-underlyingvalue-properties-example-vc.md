@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239940"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 和 UnderlyingValue 屬性範例 （VC + +）
 此範例示範[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)並[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)藉由顯示一則訊息，如果記錄的基礎資料的屬性已變更期間[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)批次更新。  
@@ -196,27 +196,27 @@ void PrintComError(_com_error &e) {
 ```  
   
  **資料已經變更 ！**  
-**標題識別碼： PS1372**  
+**標題的識別碼：PS1372**  
 **目前的值： self_help**   
 **原始值： 心理學**   
 **第一個值： 社會**   
 **資料已經變更 ！**  
-**標題識別碼： PS2091**  
+**標題的識別碼：PS2091**  
 **目前的值： self_help**   
 **原始值： 心理學**   
 **第一個值： 社會**   
 **資料已經變更 ！**  
-**標題識別碼： PS2106**  
+**標題的識別碼：PS2106**  
 **目前的值： self_help**   
 **原始值： 心理學**   
 **第一個值： 社會**   
 **資料已經變更 ！**  
-**標題識別碼： PS3333**  
+**標題的識別碼：PS3333**  
 **目前的值： self_help**   
 **原始值： 心理學**   
 **第一個值： 社會**   
 **資料已經變更 ！**  
-**標題識別碼： PS7777**  
+**標題的識別碼：PS7777**  
 **目前的值： self_help**   
 **原始值： 心理學**   
 **第一個值： 社會**    

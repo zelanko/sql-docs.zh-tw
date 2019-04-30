@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42f22cc0214929f283209fa12542e9620dbdcc08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314233"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>與桌面資料庫驅動程式搭配使用的檔案
 ODBC 桌面資料庫驅動程式可搭配 Microsoft Jet 資料庫引擎、 可安裝 ISAM 檔案，以及 Microsoft ODBC 檔。 並非所有需要重新發佈的產品，而不是所有核心元件。  

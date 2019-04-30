@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281735"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
   提供一組視覺化工具，以搭配 XML 結構描述、ADO.NET 資料集以及 XML 文件使用。 XML 設計工具支援全球資訊網協會 (WC3) 定義的 XML 結構描述定義 (XSD) 語言。 設計師不支援 DTD (文件類型定義) 或其他 XML 結構描述語言，例如 XDR (XML-Data Reduced)。  
@@ -82,10 +82,10 @@ ms.locfileid: "48166288"
 ## <a name="data-view"></a>資料檢視  
  資料檢視提供資料方格，可以用來修改 .xml 檔案。 只有 XML 檔案中的內容 (但不包含標記和結構) 可以在資料檢視中編輯。  
   
- 資料檢視中有兩個不同的區域： **[資料表]** 與 **[資料]**。 [資料表] 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
+ 資料檢視中有兩個不同的區域：**資料的資料表**並**資料**。 [資料表] 區域是 XML 檔案中定義的關聯清單，以巢狀結構為順序 (從最外層到最內層)。 **[資料]** 區域是資料方格，會根據資料表區域的選擇顯示資料。  
   
 > [!NOTE]  
->  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 即使 XML 格式正確，但如果不是結構化資料卻嘗試切換到資料檢視，則會產生下列訊息：「雖然這份文件格式正確，但其中包含資料檢視無法顯示的結構。」  
+>  新建立的 XML 檔案中不包含資料，因此無法在資料檢視中顯示。 此外還有部份 XML文件的執行個體，其資料檢視完全無法叫用。 雖然 XML 就會被視為格式正確，如果不是結構化的資料，但嘗試切換至 資料檢視會產生下列訊息：「 雖然這份文件格式正確，它包含無法顯示資料檢視的結構。 」  
   
  在資料檢視中，您可以：  
   

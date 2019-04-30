@@ -1,5 +1,5 @@
 ---
-title: DROP SET 陳述式 (MDX) |Microsoft 文件
+title: DROP SET 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284971"
 ---
-# <a name="mdx-data-definition---drop-set"></a>MDX 資料定義拖放組
+# <a name="mdx-data-definition---drop-set"></a>MDX 資料定義 - DROP SET
 
 
   移除命名集。  

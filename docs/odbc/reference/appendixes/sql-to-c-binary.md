@@ -1,5 +1,5 @@
 ---
-title: SQL 到 c： 二進位 |Microsoft Docs
+title: SQL 轉換為 C：二進位 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16112ca3b66e0218efd54d3bf385e04cb654e3e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270954"
 ---
-# <a name="sql-to-c-binary"></a>SQL 到 C：二進位
+# <a name="sql-to-c-binary"></a>SQL 轉換為 C：二進位
 二進位的 ODBC SQL 資料類型的識別項是：  
   
  SQL_BINARY  
@@ -36,9 +36,9 @@ ms.locfileid: "47622586"
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|（資料中的位元組長度）\* 2 < *Columnsize*<br /><br /> （資料中的位元組長度）\* 2 > = *Columnsize*|data<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
-|SQL_C_WCHAR|（字元長度的資料）\* 2 < *Columnsize*<br /><br /> （字元長度的資料）\* 2 > = *Columnsize*|data<br /><br /> 截斷的資料|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度|n/a<br /><br /> 01004|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|data<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_CHAR|（資料中的位元組長度）\* 2 < *Columnsize*<br /><br /> （資料中的位元組長度）\* 2 > = *Columnsize*|資料<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_WCHAR|（字元長度的資料）\* 2 < *Columnsize*<br /><br /> （字元長度的資料）\* 2 > = *Columnsize*|資料<br /><br /> 截斷的資料|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
   
  當 SQL 的二進位資料轉換成字元 C 資料時，來源資料的每個位元組 （8 位元） 被以兩個 ASCII 字元。 這些字元是十六進位格式的數字的 ASCII 字元表示。 例如，二進位 00000001 會轉換成"01"，而二進位 11111111 會轉換成"FF"。  
   

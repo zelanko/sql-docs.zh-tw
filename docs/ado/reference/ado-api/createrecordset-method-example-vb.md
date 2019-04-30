@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308706"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 方法範例 (VB)
 您可以建立[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，並指定資料行資訊。 然後，您可以將資料插入**資料錄集**物件，基礎的資料列集緩衝區插入。  

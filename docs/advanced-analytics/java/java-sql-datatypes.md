@@ -1,20 +1,20 @@
 ---
-title: 支援的 SQL Server 2019-SQL Server Machine Learning 服務的 Java 資料類型
+title: 支援的 SQL Server 2019 SQL 伺服器語言擴充功能的 Java 資料類型
 description: 對應的資料類型從 Java 到 SQL Server 針對輸入和輸出資料結構，以及在 sp_execute_external_script 的輸入參數。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c0f691b8bb389c2da2001d19f0684b7f928f707
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: 14a2bc5594b16610dfb8278ab82a9e7b8b22fea6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017814"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473599"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java 和 SQL Server 支援的資料類型
 
@@ -24,25 +24,26 @@ ms.locfileid: "57017814"
 
 對於輸入和輸出資料集目前支援下列的 SQL 和 Java 資料類型。
 
+
 | SQL 資料類型        | Java 資料類型 | 註解 | |
-| ------------- |-------------|-|
-| bit      | boolean | |
-| Tinyint      | short      | |
-| Smallint | short      | |
-| int | ssNoversion      | |
-| Real | FLOAT      | |
-| Bigint | long      | |
-| FLOAT | double      | |
-| nchar(n) | String      | |
-| nvarchar(n) | String  | |
-| binary(n) | byte[]      | |
-| varbinary(n) | byte[]      | |
-| nvarchar(max) | String | |
-| varbinary(max) | byte[] | |
-| UNIQUEIDENTIFIER | String | |
-| char(n) | String | 只支援 UTF8 字串 |
-| varchar(n) | String | 只支援 UTF8 字串 |
-| varchar(max) | String | 只支援 UTF8 字串 |
+| ------------- |-------------|-|-|
+| bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| int | ssNoversion      | | |
+| Real | FLOAT      | | |
+| Bigint | long      | | |
+| FLOAT | double      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
+| binary(n) | byte[]      | | |
+| varbinary(n) | byte[]      | | |
+| nvarchar(max) | String      | | |
+| varbinary(max) | byte[]      | | |
+| UNIQUEIDENTIFIER | String | | |
+| char(n) | String | 只支援 UTF8 字串 | |
+| varchar(n) | String | 只支援 UTF8 字串 | |
+| varchar(max) | String | 只支援 UTF8 字串 | |
 
 ## <a name="data-types-for-input-parameters"></a>輸入參數的資料類型
 
@@ -68,7 +69,7 @@ ms.locfileid: "57017814"
 | varchar(n) | String | 只支援 UTF8 字串 | |
 | varchar(max) | String | 只支援 UTF8 字串 | |
 
-## <a name="see-also"></a>另請參閱
+## <a name="next-steps"></a>後續步驟
 
 + [如何在 SQL Server 呼叫 Java](howto-call-java-from-sql.md)
 + [SQL Server 中的 Java 範例](java-first-sample.md)

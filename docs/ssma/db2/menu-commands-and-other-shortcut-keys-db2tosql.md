@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280325"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>功能表命令和其他快速鍵 (DB2ToSQL)
 下列各節說明的鍵盤快速鍵，來存取功能表命令和其他快速鍵，在各個對話方塊中的 SSMA 用於 DB2 的應用程式。  
@@ -67,10 +67,10 @@ ms.locfileid: "47614508"
 |顯示錯誤清單 窗格。|ALT + V + E 或 CTRL + E|  
 |顯示 [輸出] 窗格。|ALT + V + O 或 CTRL + O|  
 |存取版面配置 子功能表。|ALT + V 鍵 + L|  
-|新增目前的版面配置。|ALT + V 鍵 + L + A|  
+|新增目前的版面配置。|ALT + V + L + A|  
 |選取預設的版面配置。|ALT + V 鍵 + L + D 或 CTRL + ALT + 1|  
 |選取此選項，而總管版面配置。|ALT + V 鍵 + L + W 或 CTRL + ALT + 2|  
-|顯示 [管理配置] 對話方塊。|ALT + V 鍵 + L + M|  
+|顯示 [管理配置] 對話方塊。|ALT + V + L + M|  
   
 ## <a name="tools-menu-commands"></a>工具功能表命令  
 若要存取 工具 功能表，使用鍵盤快速鍵為 ALT + t。下表描述的鍵盤快速鍵來存取工具 功能表底下的功能表項目。  

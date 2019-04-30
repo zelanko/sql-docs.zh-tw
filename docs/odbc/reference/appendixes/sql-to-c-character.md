@@ -1,5 +1,5 @@
 ---
-title: SQL 到 c:字元 |Microsoft Docs
+title: SQL 轉換為 C：字元 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3a0a7036d67716a3d90bd8953a3c7ba2c575c92
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259505"
 ---
-# <a name="sql-to-c-character"></a>SQL 到 c:字元
+# <a name="sql-to-c-character"></a>SQL 轉換為 C：字元
 
 字元的 ODBC SQL 資料類型的識別碼，如下所示：
 

@@ -1,5 +1,5 @@
 ---
-title: 如何： 啟動 Upgrade Advisor |Microsoft Docs
+title: HOW TO：啟動 Upgrade Advisor |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295116"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>如何：啟動 Upgrade Advisor
+# <a name="how-to-launch-upgrade-advisor"></a>HOW TO：啟動 Upgrade Advisor
   Upgrade Advisor 提供可用於啟動「Upgrade Advisor Analysis 精靈」和「Upgrade Advisor 報表檢視器」的中央主控台。 本主題說明如何啟動 Upgrade Advisor。  
   
 ### <a name="to-launch-upgrade-advisor"></a>啟動 Upgrade Advisor  

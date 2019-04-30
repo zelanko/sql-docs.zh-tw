@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280381"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>資料分割資料行清單對話方塊 (Visual Database Tools)
   如果資料表有相關資料分割配置，您可以使用此對話方塊選擇資料分割函數要套用到哪個或哪些資料行。 為了讓資料函數運作，您所切換的資料行資料類型必須與在資料分割函數中定義的資料行資料類型相同。  

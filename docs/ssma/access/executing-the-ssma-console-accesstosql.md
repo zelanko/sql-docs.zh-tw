@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408315"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473524"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>執行 SSMA 主控台 (AccessToSQL)
 Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項來執行，並控制 SSMA 活動。 後續章節將詳細說明相同。  
@@ -51,7 +51,7 @@ Microsoft 為您提供一組強大的指令碼檔案的命令和命令列選項�
   
     預設值為"sql-server-2008"。  
   
-**範例：**  
+**範例:**  
   
 ```xml  
 <create-new-project  
@@ -218,7 +218,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-連線目標資料庫  
+connect-target-database  
   
 -   連接到目標 SQL Server 或 SQL Azure 資料庫，並完全載入目標資料庫的高等級的中繼資料，但不是的中繼資料。  
   
@@ -394,7 +394,7 @@ convert-schema
 ```  
 **Command**  
   
-移轉資料  
+migrate-data  
   
 1.  將來源資料移轉至目標。  
   
@@ -531,7 +531,7 @@ convert-schema
   
 **Command**  
   
-同步處理目標  
+synchronize-target  
   
 1.  會使用目標資料庫，同步處理的目標物件。  
   
@@ -547,11 +547,11 @@ convert-schema
   
 3.  `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
-    -   失敗指令碼  
+    -   fail-script  
   
 4.  `report-errors-to:` 同步處理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**TargetSynchronizationReport.XML**建立。  
   
@@ -596,7 +596,7 @@ convert-schema
 ```  
 **Command**  
   
-從資料庫重新整理  
+refresh-from-database  
   
 -   重新整理資料庫的來源物件。  
   
@@ -612,11 +612,11 @@ convert-schema
   
 3.  `on-error:` 指定是否要指定重新整理錯誤視為警告或錯誤。 錯誤的可用選項：  
   
-    -   報表-總計-為-警告  
+    -   report-total-as-warning  
   
-    -   報表-每個-為-警告  
+    -   report-each-as-warning  
   
-    -   失敗指令碼  
+    -   fail-script  
   
 4.  `report-errors-to:` 重新整理作業 （也就是選擇性屬性） 如果只指定資料夾路徑，然後檔案儲存依名稱指定的錯誤報表的位置**SourceDBRefreshReport.XML**建立。  
   

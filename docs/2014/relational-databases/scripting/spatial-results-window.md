@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278706"
 ---
 # <a name="spatial-results-window"></a>空間結果視窗
   [空間結果] 視窗會提供檢視空間資料的視覺化對應工具。 若要檢視空間結果，您的查詢結果必須包含一個具有幾何或地理位置資料的空間資料行。  
@@ -34,7 +34,7 @@ ms.locfileid: "48092868"
  當查詢只有傳回 Point 執行個體時，就無法使用這個選項。  
   
  **選取投射**  
- 以四種投射的其中一種來顯示地理位置資料：Equirectangular、Mercator、Robinson 或 Bonne。  
+ 顯示四種投射的其中一個地理位置資料：Equirectangular、 Mercator、 Robinson 或 Bonne。  
   
  幾何資料無法使用此選項。  
   

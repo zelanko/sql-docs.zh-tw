@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267687"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>宣告應用程式&#39;s 的 ODBC 版本
 應用程式配置連接之前，它必須設定 SQL_ATTR_ODBC_VERSION 環境屬性。 這個屬性會指出應用程式遵循 ODBC 2。*x*或 ODBC 3。*x*規格，使用下列項目時：  
@@ -32,7 +32,7 @@ ms.locfileid: "53591542"
   
 -   **日期、 時間和時間戳記類型識別碼**。 下表顯示日期、 時間和 ODBC 2 中的時間戳記資料的型別識別項。*x*和 ODBC 3。*x*。  
   
-    |ODBC 2。*x*|ODBC 3。*x*|  
+    |ODBC 2.*x*|ODBC 3.*x*|  
     |----------------|----------------|  
     |**SQL 類型識別碼**||  
     |SQL_DATE|SQL_TYPE_DATE|  

@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238307"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -99,7 +99,7 @@ ms.locfileid: "59933617"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|Date|處理|區域|Category|層級|Correlation|訊息|  
+|date|處理|區域|Category|層級|Correlation|訊息|  
 |5/21/2014 14:34:06:15|應用程式集區：a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|報表伺服器電子郵件延伸模組|未預期|(空的)|**Error sending email.** 例外狀況：System.Net.Mail.SmtpException:信箱無法使用。 伺服器回應為：5.7.1 用戶端沒有傳送於 System.Net.Mail.DataStopCommand.CheckResponse （SmtpStatusCode statusCode，String serverResponse） 以此寄件者的權限於 System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) 於System.Net.Mail.SmtpClient.Send (MailMessage message) 於 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> 使用 PowerShell 監視訂閱  

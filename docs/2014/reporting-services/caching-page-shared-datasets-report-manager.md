@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b816af806e419cab0f6eb0997c6ec7f08bc7b93
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266341"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>快取頁面、共用資料集 (報表管理員)
   使用 [快取屬性] 頁面，即可設定共用資料集的快取選項。  

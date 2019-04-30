@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258827"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 函數
 **合規性**  
@@ -49,7 +49,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Current*  
+ *CursorName*  
  [輸出]在其中傳回資料指標名稱之緩衝區的指標。  
   
  如果*Current*為 NULL，就*NameLengthPtr*仍會傳回 （不含字元資料的 null 終止字元） 的字元總數可用來傳回中所指向的緩衝區*Current*。  

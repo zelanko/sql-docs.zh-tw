@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73d316eaedaaa8eab1b68fba6edd04772d935e4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606428"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63458636"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript 中的 RDS 程式碼範例
 > [!IMPORTANT]

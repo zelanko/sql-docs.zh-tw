@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273740"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：新增及變更資料庫圖表
   這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
   
 ## <a name="prerequisites"></a>先決條件  
@@ -130,7 +130,7 @@ ms.locfileid: "52822622"
   
 2.  將 `T2col1` 拖曳到 `T1col1`。  
   
-     出現兩個對話方塊：**外部索引鍵關聯性**在背景中並**資料表和資料行**在前景中。  
+     會出現兩個對話方塊：**外部索引鍵關聯性**在背景中並**資料表和資料行**在前景中。  
   
 3.  按一下 [確定] 以儲存新的關聯性。  
   

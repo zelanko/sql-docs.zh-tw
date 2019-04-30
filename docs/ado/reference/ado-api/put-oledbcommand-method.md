@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc19da014bc0909e44180ff4176adf1902694b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278946"
 ---
 # <a name="putoledbcommand-method"></a>put_OLEDBCommand 方法
 這個方法會執行任何作業，而且一律會傳回 S_OK。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298347"
 ---
 # <a name="database-element-for-configuration-dta"></a>組態的 Database 元素 (DTA)
   指定 Database Engine Tuning Advisor 評估假設性組態 (`Configuration` 元素所指定) 時所針對的資料庫。  

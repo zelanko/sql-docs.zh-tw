@@ -5,17 +5,17 @@ description: 本教學課程會示範如何將範例資料載入 SQL Server 的�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859989"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473522"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>教學課程：將範例資料載入 SQL Server 的巨量資料叢集
 
@@ -71,7 +71,7 @@ ms.locfileid: "58859989"
    | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**端點主要集區**) 和 Knox (**端點安全性**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。
 
 1. 執行啟動程序的指令碼。
 
@@ -107,7 +107,7 @@ ms.locfileid: "58859989"
    | <KNOX_PASSWORD> | HDFS/Spark 閘道的密碼。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**端點主要集區**) 和 Knox (**端點安全性**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md)來尋找 IP 位址的 SQL Server 的主要執行個體和 Knox。 執行`kubectl get svc -n <your-cluster-name>`並查看主要執行個體的外部 IP 位址 (**主要 svc 外部**) 和 Knox (**閘道 svc 外部**)。
 
 1. 執行啟動程序的指令碼。
 

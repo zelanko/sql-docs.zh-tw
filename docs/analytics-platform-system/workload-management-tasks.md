@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243788"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理工作
 Analytics Platform System 中的工作負載管理工作。
@@ -47,7 +47,7 @@ WHERE
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>變更配置給要求的系統資源
 描述如何找出哪一個資源的 SQL Server PDW 要求在其下執行的類別以及如何變更該要求的系統資源。 變更資源要求需要變更提交要求時，所使用的登入的資源類別成員資格[ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>步驟 1：判斷執行要求的登入的資源類別。  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>步驟 1:判斷執行要求的登入的資源類別。  
 此查詢會顯示的資源類別伺服器角色成員資格的成員登入。 有三個資源類別： **mediumrc**， **largerc**，並**xlargerc**。  
   
 > [!IMPORTANT]  
@@ -72,7 +72,7 @@ GO
   
 如需每個資源類別的資源配置的清單，請參閱 <<c0> [ 工作負載管理](workload-management.md)。  
   
-### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>步驟 2：執行下登入要求具有不同的資源類別的成員資格  
+### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>步驟 2:執行下登入要求具有不同的資源類別的成員資格  
 有兩種方式可使用其中一個較大或較小的系統資源來執行要求：  
   
 -   這是大型或小型資源類別的成員執行在不同的登入要求。  

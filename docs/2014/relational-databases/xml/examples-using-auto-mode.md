@@ -1,5 +1,5 @@
 ---
-title: 範例:使用 AUTO 模式 |Microsoft Docs
+title: 範例:使用 AUTO 模式 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287813"
 ---
 # <a name="examples-using-auto-mode"></a>範例:使用 AUTO 模式
   下列範例說明 AUTO 模式的用法。 這些查詢中有許多是針對自行車製造說明的 XML 文件來指定的，而這些文件儲存在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫中 ProductModel 資料表的 Instructions 資料行中。  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>範例擷取客戶、訂單及訂單詳細資訊  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>範例擷取客戶、 訂單及訂單詳細資訊  
  此查詢會擷取特定客戶的客戶、訂單及訂單詳細資訊。  
   
 ```  
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  這可能會是一個問題，尤其是在針對區分大小寫的資料庫執行 dbobject 查詢時。 為了避免發生這個問題，查詢中指定之資料表或資料行名稱的大小寫，應該要與資料庫中資料表或資料行名稱的大小寫相符。  
   
-## <a name="example-understanding-the-encoding"></a>範例了解編碼方式  
+## <a name="example-understanding-the-encoding"></a>範例了解的編碼方式  
  此範例顯示結果中所出現的各種編碼方式。  
   
  建立下述資料表：  

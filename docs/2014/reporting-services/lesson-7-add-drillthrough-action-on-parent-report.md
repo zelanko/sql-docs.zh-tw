@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b61e20eb3c79680cacbcfe25136ddd1208c985f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63279043"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上新增鑽研動作
   將 ReportViewer 控制項加入至網站應用程式後，下一步是要在父報表上加入鑽研動作。  

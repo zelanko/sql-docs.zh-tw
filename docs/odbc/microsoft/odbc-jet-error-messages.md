@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244622"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 錯誤訊息
 資料來源中發生的錯誤，ODBC 驅動程式會傳回錯誤訊息傳回給它 ODBC 檔案程式庫。 對於 ODBC 驅動程式或驅動程式管理員中發生的錯誤，驅動程式會傳回錯誤訊息會根據文字相關聯的 SQLSTATE。  
@@ -36,4 +36,4 @@ ms.locfileid: "47620276"
 |錯誤訊息|錯誤的位置|  
 |-------------------|--------------------|  
 |[Microsoft][ODBC 驅動程式管理員]*訊息文字*|驅動程式管理員 (Odbc32.dll)|  
-|[Microsoft][ODBC*驅動程式名稱*]*訊息文字*|驅動程式 ISAM （請參閱驅動程式 ISAMs）|
+|[Microsoft][ODBC *driver-name*]*message-text*|驅動程式 ISAM （請參閱驅動程式 ISAMs）|

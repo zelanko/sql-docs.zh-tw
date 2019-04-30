@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312365"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>對應 MySQL 和 SQL Server 字元集 (MySQLToSQL)
 可以針對 MySQL 字元資料型別、 運算式和常值中指定字元集 （字元集）。  
@@ -56,7 +56,7 @@ ms.locfileid: "47789026"
 >   
 > 其中包括：  
 >   
-> 1.  **適用於：** 套用字元集對應的編輯與尚未儲存時，才啟用的使用者所做的變更。  
+> 1.  **適用於：** 適用於編輯字元集對應且尚未儲存時，才啟用的使用者所做的變更。  
 > 2.  **取消：** 取消使用者所做的變更。 字元集對應編輯，但不是會儲存時，取得啟用 按鈕。  
 > 3.  **重設預設值：** 所有對應重設都為預設值。  
   
@@ -88,17 +88,17 @@ ms.locfileid: "47789026"
     |拉丁文 1|cp1252 西方語系|CHAR/VARCHAR （預設值）|  
     |latin2|ISO 8859-2 中歐語系|CHAR/VARCHAR （預設值）|  
     |swe7|7 位元瑞典文|CHAR/VARCHAR （預設值）|  
-    |Ascii|US ASCII|CHAR/VARCHAR （預設值）|  
+    |ascii|US ASCII|CHAR/VARCHAR （預設值）|  
     |ujis|EUC-JP 日文|NCHAR/NVARCHAR （預設值）|  
     |sjis|日文 (SHIFT-JIS)|NCHAR/NVARCHAR （預設值）|  
     |希伯來文|ISO 8859-8 希伯來文|CHAR/VARCHAR （預設值）|  
     |tis620|TIS620 泰文|CHAR/VARCHAR （預設值）|  
     |euckr|韓文 EUC-KR|NCHAR/NVARCHAR （預設值）|  
     |koi8u|KOI8-U 烏克蘭文|CHAR/VARCHAR （預設值）|  
-    |gb2312|GB2312 簡體中文|NCHAR/NVARCHAR （預設值）|  
+    |gb2312|GB2312 Simplified Chinese|NCHAR/NVARCHAR （預設值）|  
     |希臘文|ISO 8859-7 希臘文|CHAR/VARCHAR （預設值）|  
     |cp 1250|Windows 中歐語系|CHAR/VARCHAR （預設值）|  
-    |（gbk)|GBK 簡體中文。|NCHAR/NVARCHAR （預設值）|  
+    |gbk|GBK Simplified Chinese|NCHAR/NVARCHAR （預設值）|  
     |latin5|ISO 8859-9 土耳其文|CHAR/VARCHAR （預設值）|  
     |armscii8|ARMSCII 8 亞美尼亞文|CHAR/VARCHAR （預設值）|  
     |utf8|Utf-8 Unicode|NCHAR/NVARCHAR （預設值）|  
@@ -108,16 +108,16 @@ ms.locfileid: "47789026"
     |macce|Mac 中歐語系|CHAR/VARCHAR （預設值）|  
     |macroman|Mac 西方語系|CHAR/VARCHAR （預設值）|  
     |cp852|DOS 中部語系|CHAR/VARCHAR （預設值）|  
-    |latin7|ISO 8859-13 波羅的海文|CHAR/VARCHAR （預設值）|  
-    |cp 1251|Windows 斯拉夫文|CHAR/VARCHAR （預設值）|  
-    |cp 1256|Windows 阿拉伯文|CHAR/VARCHAR （預設值）|  
-    |cp 1257|Windows 波羅的海文|CHAR/VARCHAR （預設值）|  
+    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR （預設值）|  
+    |cp 1251|Windows Cyrillic|CHAR/VARCHAR （預設值）|  
+    |cp 1256|Windows Arabic|CHAR/VARCHAR （預設值）|  
+    |cp 1257|Windows Baltic|CHAR/VARCHAR （預設值）|  
     |BINARY|二進位虛擬字元集|CHAR/VARCHAR （預設值）|  
     |geostd8|GEOSTD8 喬治亞文|CHAR/VARCHAR （預設值）|  
     |cp932|對於 Windows 日文 SJIS|NCHAR/NVARCHAR （預設值）|  
     |eucjpms|對於 Windows 日文 UJIS|NCHAR/NVARCHAR （預設值）|  
   
-2.  **在資料庫、 類別或物件節點層級：** 資料庫、 類別或物件節點層級中，字元集對應方格包含根中繼資料節點層級上相同的資料列上來。:  
+2.  **資料庫、 類別或物件節點層級：** 資料庫、 類別或物件節點層級中，字元集對應方格包含根中繼資料節點層級上相同的資料列上來。:  
   
     1.  方格標題的第一個資料行**字元設定名稱**包含字元集名稱。  
   

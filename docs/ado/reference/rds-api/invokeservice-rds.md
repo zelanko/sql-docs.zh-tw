@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efcb67792eed98caebd541ab7dab3a3fef4cd626
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308766"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 傳回要求的介面指標上能力更強的版本的物件。  

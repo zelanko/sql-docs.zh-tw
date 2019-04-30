@@ -3,224 +3,237 @@ title: Java 範例和教學課程中的 SQL Server 2019-SQL Server Machine Learn
 description: 若要了解 SQL Server 資料搭配使用的 Java 語言擴充功能的步驟執行的 SQL Server 2019 上執行 Java 範例程式碼。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: nelgson
+ms.author: negust
+ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25deba880827cc7396082dac9a2c86cc4dd66cd8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 000318716b07f58e94bd5c482d9c349e5d4e5481
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582571"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473757"
 ---
-# <a name="sql-server-java-sample-walkthrough"></a>SQL Server 的 Java 範例逐步解說
+# <a name="sql-server-regex-java-sample"></a>SQL Server 的 Regex Java 範例
 
-此範例示範 Java 類別，以接收從 SQL Server 的兩個資料行 （「 識別碼 」 和 「 文字 」），並回到 SQL Server （識別碼與 ngram） 會傳回兩個資料行。 如需指定的 ID 和字串的組合，程式碼會產生排列的方式 ngrams （子字串），傳回這些排列以及原始識別碼。 Ngram 的長度是由傳送至 Java 類別的參數定義。
+此範例示範 Java 類別，以接收從 SQL Server 的兩個資料行 （「 識別碼 」 和 「 文字 」），並也會做為輸入參數的規則運算式。 類別會傳回兩個資料行 （「 識別碼 」 和 「 文字 」） 的 SQL Server。
+
+針對傳送至 Java 類別的文字資料行中指定的文字，程式碼會檢查是否指定的規則運算式的履行，並傳回該文字，以及原始識別碼。 
+
+此特定範例會使用規則運算式，以檢查如果文字包含 [Java] 或 [java] 的文字。
+
+## <a name="microsoft-extensibility-sdk-for-java-for-microsoft-sql-server"></a>Microsoft 擴充性適用於 Microsoft SQL server 的 Java SDK
+
+ 在 CTP 2.5 中，我們會變更您實作使用的 Java 語言擴充功能與 SQL Server 通訊的 Java 程式碼的方式。 與 Java 的 SQL Server 互動時，這會提供更好的開發人員體驗。
+
+您應該考慮的 SDK，為協助程式介面，可讓您更輕鬆地實作 SQL Server 上執行的 Java 程式碼。
+
+> [!NOTE]
+> SDK 的簡介是舊版 ctp 很大的變更。 任何先前的範例，您有工作需要更新，才能使用 SDK。
+
+如需詳細資訊，請參閱 < [SDK 文件](java-sdk.md)。
 
 ## <a name="prerequisites"></a>先決條件
 
 + SQL Server 2019 Database Engine 執行個體的擴充性架構和程式設計延伸模組的 Java[在 Windows 上](../install/sql-machine-learning-services-windows-install.md)或[on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)。 如需有關系統組態的詳細資訊，請參閱[Java 語言擴充功能在 SQL Server 2019](extension-java.md)。 如需有關如何撰寫程式碼需求的詳細資訊，請參閱[如何在 SQL Server 呼叫 Java](howto-call-java-from-sql.md)。
 
-+ SQL Server Management Studio 或其他工具來執行 T-SQL。
++ SQL Server Management Studio 或 Azure Data Studio，來執行 T-SQL。
 
-+ Java SE Development Kit (JDK) 8 在 Windows 或 Linux。
++ Java SE Development Kit (JDK) 8 或 JRE 8 上的 Windows 或 Linux。
 
-使用命令列編譯**javac**是本教學課程。 
++ [Microsoft SQL server 的 Microsoft Java 擴充性 SDK](http://aka.ms/mssql-java-lang-extension) mssql java-lang extension.jar。
 
-## <a name="1---load-sample-data"></a>1-載入範例資料
+使用命令列編譯**javac**是本教學課程。
 
-首先，建立並填入*檢閱*資料表**識別碼**並**文字**資料行。 連接到 SQL Server，然後執行下列指令碼來建立資料表：
+## <a name="1---create-sample-data-in-a-sql-server-table"></a>1-在 SQL Server 資料表中建立範例資料
+
+首先，建立並填入*testdata*資料表**識別碼**並**文字**資料行。 連接到 SQL Server，然後執行下列指令碼來建立資料表：
 
 ```sql
-DROP TABLE IF exists reviews;
+CREATE DATABASE javatest
 GO
-CREATE TABLE reviews(
-    id int NOT NULL,
-    "text" nvarchar(30) NOT NULL)
+USE javatest
+GO
 
-INSERT INTO reviews(id, "text") VALUES (1, 'AAA BBB CCC DDD EEE FFF')
-INSERT INTO reviews(id, "text") VALUES (2, 'GGG HHH III JJJ KKK LLL')
-INSERT INTO reviews(id, "text") VALUES (3, 'MMM NNN OOO PPP QQQ RRR')
+-- Create table for test data
+DROP TABLE IF exists testdata;
 GO
+
+CREATE TABLE testdata(
+id int NOT NULL,
+"text" nvarchar(100) NOT NULL)
+GO
+
+TRUNCATE TABLE testdata
+GO
+
+-- Insert data into test table
+INSERT INTO testdata(id, "text") VALUES (1, 'This sentence contains java')
+INSERT INTO testdata(id, "text") VALUES (2, 'This sentence does not')
+INSERT INTO testdata(id, "text") VALUES (3, 'I love Java!')
+GO
+Select * FROM testdata
 ```
 
-## <a name="2---class-ngramjava"></a>2-類別 Ngram.java
+## <a name="2---class-regexsamplejava"></a>2-類別 RegexSample.java
 
-開始建立的主要類別。 這是三個類別中的第一個。
+開始建立的主要類別。
 
-在此步驟中，建立類別，稱為**Ngram.java**並將下列 Java 程式碼複製到該檔案。 
+在此步驟中，建立類別，稱為**RegexSample.java**並將下列 Java 程式碼複製到該檔案。
 
+這個主要的類別會匯入的 SDK，也就是說，在步驟 1 中下載的 jar 檔案必須可從這個類別。
+
+> [!NOTE]
+> 請注意，此類別會匯入 Java 延伸模組 SDK 套件。
+請參閱的文章[適用於 Java 的 Microsoft SQL Server 的 Microsoft 擴充性 SDK](java-sdk.md)如需詳細資訊。
 
 ```java
-//We will package our classes in a package called pkg
-//Packages are option in Java-SQL, but required for this sample.
 package pkg;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import com.microsoft.sqlserver.javalangextension.PrimitiveDataset;
+import com.microsoft.sqlserver.javalangextension.AbstractSqlServerExtensionExecutor;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.regex.*;
 
-public class Ngram {
+public class RegexSample extends AbstractSqlServerExtensionExecutor {
+    private Pattern expr;
 
-    //Required: This is only required if you are passing data in @input_data_1
-    //from SQL Server in sp_execute_external_script
-    public static int[] inputDataCol1 = new int[1];
-    public static String[] inputDataCol2 = new String[1];
+    public RegexSample() {
+        // Setup the expected extension version, and class to use for input and output dataset
+        executorExtensionVersion = SQLSERVER_JAVA_LANG_EXTENSION_V1;
+        executorInputDatasetClassName = PrimitiveDataset.class.getName();
+        executorOutputDatasetClassName = PrimitiveDataset.class.getName();
+    }
+    
+    public PrimitiveDataset execute(PrimitiveDataset input, LinkedHashMap<String, Object> params) {
+        // Validate the input parameters and input column schema
+        validateInput(input, params);
 
-    //Required: Input null map. Size just needs to be set to "1"
-    public static boolean[][] inputNullMap = new boolean[1][1];
+        int[] inIds = input.getIntColumn(0);
+        String[] inValues = input.getStringColumn(1);
+        int rowCount = inValues.length;
 
-    //Required: Output data columns returned back to SQL Server
-    public static int[] outputDataCol1;
-    public static String[] outputDataCol2;
+        String regexExpr = (String)params.get("regexExpr");
+        expr = Pattern.compile(regexExpr);
 
-    //Required: Output null map. Is populated with true or false values 
-    //to indicate nulls
-    public static boolean[][] outputNullMap;
+        System.out.println("regex expression: " + regexExpr);
 
-    //Optional: This is only required if parameters are passed with @params
-    // from SQL Server in sp_execute_external_script
-    // n is giving us the size of ngram substrings
-    public static int param1;
+        // Lists to store the output data
+        LinkedList<Integer> outIds = new LinkedList<Integer>();
+        LinkedList<String> outValues = new LinkedList<String>();
 
-    //Optional: The number of rows we will be returning
-    public static int numberOfRows;
-
-    //Required: Number of output columns returned
-    public static short numberOfOutputCols;
-
-    /*Java main method - Only for testing purposes outside of SQL Server
-    public static void main(String... args) {
-        //getNGrams();
-    }*/
-
-    //This is the method we will be calling from SQL Server
-    public static void getNGrams() {
-
-        System.out.println("inputDataCol1.length= "+ inputDataCol1.length);
-        if (inputDataCol1.length == 0 ) {
-            // TODO: Set empty return
-            return;
+        // Evaluate each row
+        for(int i = 0; i < rowCount; i++) {
+            if (check(inValues[i])) {
+                outIds.add(inIds[i]);
+                outValues.add(inValues[i]);
+            }
         }
-        //Using a stream to "loop" over the input data inputDataCol1.length. You can also use a for loop for this.
-        final List<InputRow> inputDataSet = IntStream.range(0, inputDataCol1.length)
-                .mapToObj(i -> new InputRow(inputDataCol1[i], inputDataCol2[i]))
-                .collect(Collectors.toList());
 
+        int outputRowCount = outValues.size();
 
-        //Again, we are using a stream to loop over data
-        final List<OutputRow> outputDataSet = inputDataSet.stream()
-                // Generate ngrams of size n for each incoming string
-                // Each invocation of ngrams returns a list. flatMap flattens
-                // the resulting list-of-lists to a flat list.
-                .flatMap(inputRow -> ngrams(param1, inputRow.text).stream().map(s -> new OutputRow(inputRow.id, s)))
-                .collect(Collectors.toList());
+        int[] idOutputCol = new int[outputRowCount];
+        String[] valueOutputCol = new String[outputRowCount];
 
-        //Print the outputDataSet
-        System.out.println(outputDataSet);
+        // Convert the list of output columns to arrays
+        outValues.toArray(valueOutputCol);
 
-        //Set the number of rows and columns we will be returning
-        numberOfOutputCols = 2;
-        numberOfRows = outputDataSet.size();
-        outputDataCol1 = new int[numberOfRows]; // ID column
-        outputDataCol2 = new String[numberOfRows]; //The ngram column
-        outputNullMap = new boolean[2][numberOfRows];// output null map
+        ListIterator<Integer> it = outIds.listIterator(0);
+        int rowId = 0;
 
-        //Since we don't have any null values, we will populate all values in the outputNullMap to false
-        IntStream.range(0, numberOfRows).forEach(i -> {
-            final OutputRow outputRow = outputDataSet.get(i);
-            outputDataCol1[i] = outputRow.id;
-            outputDataCol2[i] = outputRow.ngram;
-            outputNullMap[0][i] = false;
-            outputNullMap[1][i] = false;
-        });
+        System.out.println("Output data:");
+        while (it.hasNext()) {
+            idOutputCol[rowId] = it.next().intValue();
+
+            System.out.println("ID: " + idOutputCol[rowId] + " Value: " + valueOutputCol[rowId]);
+            rowId++;
+        }
+
+        // Construct the output dataset
+        PrimitiveDataset output = new PrimitiveDataset();
+
+        output.addColumnMetadata(0, "ID", java.sql.Types.INTEGER, 0, 0);
+        output.addColumnMetadata(1, "Text", java.sql.Types.NVARCHAR, 0, 0);
+
+        output.addIntColumn(0, idOutputCol, null);
+        output.addStringColumn(1, valueOutputCol);
+
+        return output;
     }
 
-    // Example: ngrams(3, "abcde") = ["abc", "bcd", "cde"].
-    private static List<String> ngrams(int n, String text) {
-        return IntStream.range(0, text.length() - n + 1)
-                .mapToObj(i -> text.substring(i, i + n))
-                .collect(Collectors.toList());
+    private void validateInput(PrimitiveDataset input, LinkedHashMap<String, Object> params) {
+        // Check for the regex expression input parameter
+        if (params.get("regexExpr") == null) {
+            throw new IllegalArgumentException("Input parameter 'regexExpr' is not found");
+        }
+
+        // The expected input schema should be at least 2 columns, (INTEGER, STRING)
+        if (input.getColumnCount() < 2) {
+            throw new IllegalArgumentException("Unexpected input schema, schema should be an (INTEGER, NVARCHAR or VARCHAR)");
+        }
+
+        // Check that the input column types are expected
+        if (input.getColumnType(0) != java.sql.Types.INTEGER &&
+                (input.getColumnType(1) != java.sql.Types.VARCHAR && input.getColumnType(1) == java.sql.Types.NVARCHAR )) {
+            throw new IllegalArgumentException("Unexpected input schema, schema should be an (INTEGER, NVARCHAR or VARCHAR)");
+        }
     }
-}
-```
 
-## <a name="3---class-inputrowjava"></a>3 - Class InputRow.java
+    private boolean check(String text) {
+        Matcher m = expr.matcher(text);
 
-建立第二個類別，稱為**InputRow.java**、 組成下列程式碼，並儲存到相同的位置**Ngram.java**。
-
-```java
-package pkg;
-
-//This object represents one input row
-public class InputRow {
-    public final int id;
-    public final String text;
-
-    public InputRow(final int id, final String text) {
-        this.id = id;
-        this.text = text;
+        return m.find();
     }
 }
 ```
 
-## <a name="4---class-outputrowjava"></a>4-類別 OutputRow.java
+## <a name="3-compile-and-create-jar-file"></a>3 編譯，並建立.jar 檔案
 
-第三個也是最後一個類別即稱為**OutputRow.java**。 複製程式碼，並將儲存為 OutputRow.java 與其他相同的位置。
+我們建議您封裝您的類別和.jar 檔案相依性。 當您建置/編譯專案時，大部分的 Java Ide，例如支援 Eclipse 或 IntelliJ 產生 jar 檔案。 在此範例中，我們必須有具名的 jar 檔案**regex.jar**。
 
-```java
-package pkg;
+如果您要以手動方式建立.jar 檔案，您可以遵循的步驟，請參閱[如何建立的 jar 檔案](extension-java.md#create-jar)。
 
-//This object represents one output row
-public class OutputRow {
-    public final int id;
-    public final String ngram;
+> [!NOTE]
+> 此範例會使用封裝，這表示套件 「 套件 」 類別的頂端提供可確保已編譯的程式碼會儲存在名為 「 套件 」 的子資料夾。 這會自動處理如果您使用 IDE，但如果您以手動方式編譯使用的類別**javac**，您必須以手動方式將已編譯的程式碼置於 pkg 子資料夾。
 
-    public OutputRow(final int id, final String ngram) {
-        this.id = id;
-        this.ngram = ngram;
-    }
+## <a name="4---create-external-libraries"></a>4-建立外部程式庫
 
-    @Override
-    public String toString() { return id + ":" + ngram; }
-}
-```
+藉由建立外部程式庫，SQL Server 會自動具有存取 jar 檔案且您不需要任何特殊權限設 classpath。
 
-## <a name="5---compile"></a>5-編譯
+在此範例中，您必須建立兩個外部程式庫。 其中一個 sdk，另一個用於 Regex Java 範例。
 
-一旦就緒，您的類別執行 javac 將它們編譯成 「.class 」 檔案 (`javac Ngram.java InputRow.java OutputRow.java`)。 您應該取得 （Ngram.class InputRow.class 和 OutputRow.class），此範例的三個.class 檔案。
+1.  下載[適用於 Java 的 Microsoft SQL Server 的 Microsoft 擴充性 SDK](http://aka.ms/mssql-java-lang-extension) mssql java-lang extension.jar。
 
-放在 classpath 位置稱為 「 套件 」 的子資料夾中的已編譯的程式碼。 如果您正在開發工作站上，此步驟中會是您將檔案複製到 SQL Server 電腦。
+1. 建立 sdk 的外部程式庫
 
-Classpath 是編譯的程式碼的位置。 比方說，在 Linux 上，如果 classpath 是 '/ home/myclasspath /'，則應該在 '/ home/myclasspath/pkg'.class 檔案。 在步驟 7 中的範例指令碼，在 sp_execute_external_script 中提供的類別路徑是 ' / home/myclasspath /' （假設 Linux）。 
-
-在 Windows 中，我們建議使用相對較淺的資料夾結構、 一個或兩個層級，深度，以簡化權限。 比方說，您的 classpath 可能看起來像 'C:\myJavaCode' 呼叫 '\pkg' 包含已編譯的類別的子資料夾。 
-
-如需有關 classpath 的詳細資訊，請參閱[設定 CLASSPATH](howto-call-java-from-sql.md#set-classpath)。 
-
-### <a name="using-jar-files"></a>使用.jar 檔案
-
-如果您計劃來封裝您的類別和.jar 檔案相依性，提供在 sp_execute_external_script CLASSPATH 參數中的.jar 檔案的完整路徑。 比方說，如果 jar 檔案稱為 'ngram.jar'，將會是 CLASSPATH ' / home/myclasspath/ngram.jar' 在 Linux 上。
-
-## <a name="6---create-external-library"></a>6-建立外部程式庫
-
-藉由建立外部程式庫，SQL Server 會自動獲得 jar，並不需要任何特殊權限設 classpath。
-
-```sql 
-CREATE EXTERNAL LIBRARY ngram
-FROM (CONTENT = '<path>/ngram.jar') 
-WITH (LANGUAGE = 'Java'); 
+```sql
+-- Create external library for the SDK
+CREATE EXTERNAL LIBRARY sdk
+FROM (CONTENT = '<path>/mssql-java-lang-extension.jar')
+WITH (LANGUAGE = 'Java');
 GO
 ```
 
-## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7-設定權限 （如果您執行步驟 6 略過）
+3. 建立外部程式庫的 regex 範例
 
-如果您使用外部程式庫，不需要執行此步驟。 工作的建議的方式是建立外部程式庫，從您的 jar。 
+```sql
+-- Create external library for the regex sample
+CREATE EXTERNAL LIBRARY regex
+FROM (CONTENT = '<path>/regex.jar')
+WITH (LANGUAGE = 'Java');
+GO
+```
 
-如果您不想使用外部程式庫，您必須設定必要的權限。 如果處理序身分識別可以存取您的程式碼，指令碼執行才會成功。 
+## <a name="5---set-permissions-skip-if-you-performed-step-4"></a>5-設定權限 （如果您執行步驟 4 略過）
+
+如果您使用外部程式庫，不需要執行此步驟。 工作的建議的方式是建立外部程式庫，從您的 jar。
+
+如果您不想使用外部程式庫，您必須設定必要的權限。 如果處理序身分識別可以存取您的程式碼，指令碼執行才會成功。 您可以找到有關設定權限的詳細資訊[此處](extension-java.md)。
 
 ### <a name="on-linux"></a>在 Linux 上
 
@@ -245,49 +258,53 @@ GO
 
 <a name="call-method"></a>
 
-## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
+## <a name="2---call-the-java-class"></a>2-呼叫之 Java 類別
 
-若要從 SQL Server 呼叫的程式碼，指定 Java 方法**getNgrams()** sp_execute_external_script 的"script"參數中。 這個方法屬於稱為 「 套件 」 和呼叫的類別檔案的套件**Ngram.java**。
+若要呼叫的 Java 程式碼，從 SQL Server，我們將建立呼叫 sp_execute_external_script 的預存程序。 在 [指令碼] 參數中，我們會定義哪一個 [套件]。[class] 我們想要呼叫。 在此範例中，此類別所屬套件，稱為**pkg**和名為類別檔案**RegexSample.java**。
 
-此範例會傳遞 CLASSPATH 參數提供的 Java 檔案路徑。 它也會將參數傳遞至 Java 類別使用 「 參數 」。 請確定該 classpath 不超過 30 個字元。 若是如此，增加下列指令碼中的值。
-
-+ 在 Linux 上，請在 SQL Server Management Studio 或其他工具，用來執行 TRANSACT-SQL 中執行下列程式碼。 
-
-+ 在 Windows，變更@myClassPathN'C:\myJavaCode 至\'（假設它 \pkg 的上層資料夾） 中 SQL Server Management Studio 或其他工具執行查詢之前。
+> [!NOTE]
+>我們不會定義要呼叫的方法。 根據預設，**執行**會呼叫方法。 這表示您需要遵循 SDK 介面，並在您的 Java 類別中實作的 execute 方法，如果您想要能夠呼叫類別從 SQL Server。
 
 ```sql
-DECLARE @myClassPath nvarchar(50)
-DECLARE @n int 
---This is where you store your classes or jars.
---This is the size of the ngram
-SET @n = 3
+/*
+This stored procedure takes an input query (input dataset) and a regular expression and returns the rows that fulfilled the given regular expression. This sample uses a regular expression that checks if a text contains the word "Java" or "java" ([Jj]ava) 
+*/
+
+CREATE OR ALTER PROCEDURE [dbo].[java_regex] @expr nvarchar(200), @query nvarchar(400)
+AS
+BEGIN
+--Call the Java program by giving the package.className in @script
+--The method invoked in the Java code is always the "execute" method
 EXEC sp_execute_external_script
   @language = N'Java'
-, @script = N'pkg.Ngram.getNGrams'
-, @input_data_1 = N'SELECT id, text FROM reviews'
-, @parallel = 0
-, @params = N'@param1 INT'
-, @param1 = @n
-with result sets ((ID int, ngram varchar(20)))
+, @script = N'pkg.RegexSample'
+, @input_data_1 = @query
+, @params = N'@regexExpr nvarchar(200)'
+, @regexExpr = @expr
+with result sets ((ID int, text nvarchar(100)));
+END
+GO
+
+--Now execute the above stored procedure and provide the regular expression and an input query
+EXECUTE [dbo].[java_regex] N'[Jj]ava', N'SELECT id, text FROM testdata'
 GO
 ```
 
 ### <a name="results"></a>結果
 
-在執行之後呼叫，您應該會看到結果集，顯示兩個資料行：
+在執行之後呼叫，您應該取得結果，具有兩個資料列集。
 
 ![從 Java 範例會產生](../media/java/java-sample-results.png "範例結果")
 
 ### <a name="if-you-get-an-error"></a>如果您收到錯誤
 
-+ 當您編譯您的類別時，「 套件 」 的子資料夾應包含已編譯的程式碼，所有的三個類別。
++ 當您編譯您的類別時，「 套件 」 子資料夾應包含已編譯的程式碼，所有的三個類別。
 
-+ Classpath 的長度不能超過宣告的值 (`DECLARE @myClassPath nvarchar(50)`)。 若是如此，路徑會被截斷成前 50 個字元，並將不會載入編譯的程式碼。 您可以執行`SELECT @myClassPath`來檢查值。 如果沒有足夠的 50 個字元的長度增加。 
++ 最後，如果您不使用外部程式庫，請檢查權限*每個*資料夾中，從 「 套件 」 的子資料夾，以確保執行外部處理序的安全性身分識別具有讀取和執行您的程式碼的權限的根目錄。
 
-+ 最後，檢查權限*每個*資料夾中，從 「 套件 」 的子資料夾，以確保執行外部處理序的安全性識別擁有讀取和執行您的程式碼的權限的根目錄。
+## <a name="next-steps"></a>後續步驟
 
-## <a name="see-also"></a>另請參閱
-
++ [Microsoft 擴充性適用於 Microsoft SQL server 的 Java SDK](java-sdk.md)
 + [如何在 SQL Server 呼叫 Java](howto-call-java-from-sql.md)
 + [SQL Server 中的 Java 延伸模組](extension-java.md)
 + [Java 和 SQL Server 資料類型](java-sql-datatypes.md)

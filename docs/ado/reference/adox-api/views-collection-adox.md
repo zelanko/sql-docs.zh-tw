@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7644a596eed74c400444034fe16303886e1edb19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281304"
 ---
 # <a name="views-collection-adox"></a>Views 集合 (ADOX)
 包含所有[檢視](../../../ado/reference/adox-api/view-object-adox.md)的目錄物件。  

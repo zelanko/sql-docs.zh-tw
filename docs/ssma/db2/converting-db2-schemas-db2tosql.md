@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298973"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>轉換 DB2 結構描述 (DB2ToSQL)
 您已連接至 DB2 後，連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並設定專案和對應的資料選項，您可以將轉換至 DB2 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
@@ -33,7 +33,7 @@ ms.locfileid: "52520672"
   
 |DB2 物件|產生的 SQL Server 物件|  
 |-----------|----------------------------|  
-|資料型別|**SSMA 會對應下列下面所列以外的每個類型：**<br /><br />CLOB:使用這種類型的一些原生函式不支援 (例如 CLOB_EMPTY())<br /><br />BLOB：使用這種類型的一些原生函式不支援 (例如 BLOB_EMPTY())<br /><br />DBLOB:使用這種類型的一些原生函式不支援 (例如 DBLOB_EMPTY())|  
+|資料型別|**SSMA 會對應下列下面所列以外的每個類型：**<br /><br />CLOB:使用這種類型的一些原生函式不支援 (例如 CLOB_EMPTY())<br /><br />BLOB:使用這種類型的一些原生函式不支援 (例如 BLOB_EMPTY())<br /><br />DBLOB:使用這種類型的一些原生函式不支援 (例如 DBLOB_EMPTY())|  
 |使用者定義類型|**SSMA 會將對應下列使用者定義：**<br /><br />不同的型別<br /><br />結構化型別<br /><br />注意 SQL PL 的資料類型：不支援弱式資料指標類型。|  
 |特殊暫存器|**SSMA 只對應下面所列的暫存器：**<br /><br />目前的時間戳記<br /><br />目前的日期<br /><br />目前的時間<br /><br />目前的時區<br /><br />目前的使用者<br /><br />SESSION_USER 和使用者<br /><br />SYSTEM_USER<br /><br />目前的 CLIENT_APPLNAME<br /><br />目前的 CLIENT_WRKSTNNAME<br /><br />目前的鎖定逾時<br /><br />目前的結構描述<br /><br />目前的伺服器<br /><br />目前的隔離<br /><br />其他特殊暫存器不會對應至 SQL server 的語意。|  
 |CREATE TABLE|**SSMA 會將 CREATE TABLE 對應以下情況除外：**<br /><br />多維度的叢集 (MDC) 資料表<br /><br />範圍叢集資料表 」 (RCT)<br /><br />資料分割資料表<br /><br />中斷連結的資料表<br /><br />資料擷取子句<br /><br />IMPLICITLY 隱藏選項<br /><br />變動性的選項|  
@@ -74,7 +74,7 @@ ms.locfileid: "52520672"
 |暱稱|部分的對應。 手動處理是必要的基礎物件|  
 |同義字|會對應。|  
 |在 DB2 中的標準函式|SSMA 會對應 DB2 標準函式，使用 SQL Server 中的對等的函式時：|  
-|授權|未對應。|  
+|Authorization|未對應。|  
 |述詞|會對應。|  
 |SELECT INTO 陳述式|未對應。|  
 |值 INTO 陳述式|未對應。|  

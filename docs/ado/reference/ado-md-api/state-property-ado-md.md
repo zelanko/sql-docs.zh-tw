@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 812863395c2980f341ed2419eee1d9d661f19dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308594"
 ---
 # <a name="state-property-ado-md"></a>State 屬性 (ADO MD)
 表示資料格集的目前狀態。  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a87118acbfa2b4dc38fc8ba50fecc56e8c22b656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240186"
 ---
 # <a name="ready-to-repair"></a>已完成修復準備工作
   [已完成修復準備工作] 頁面會提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式之修復程序的摘要。  

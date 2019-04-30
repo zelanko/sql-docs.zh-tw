@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233611"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 資料定義 - CREATE ACTION
 
@@ -83,13 +83,13 @@ FOR
   
 |動作類型|描述|  
 |-----------------|-----------------|  
-|**URL**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意： 如果此動作不是以開頭`https://`或`https://`，此動作會在瀏覽器無法使用除非**SafetyOptions**設為**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意:如果此動作不是以開頭`https://`或`https://`，此動作會在瀏覽器無法使用除非**SafetyOptions**設定為**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
 |**HTML**|傳回的動作字串是 HTML 指令碼。 應將此字串儲存至檔案，而且應使用網際網路瀏覽器來轉譯此檔案。 在此情況下，可能會將整個指令碼視為已產生 HTML 的一部分執行。|  
 |**陳述式**|傳回的動作字串是需要藉由設定執行的陳述式**ICommand::SetText**方法的字串，並呼叫命令物件**icommand:: Execute**方法。 如果未能成功執行此命令，會傳回錯誤。|  
-|**資料集**|傳回的動作字串是必須藉由設定執行 MDX 陳述式**ICommand::SetText**方法的字串，並呼叫命令物件**icommand:: Execute**方法。 要求的介面識別碼 (IID) 應**IDataset**。 如果已建立資料集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料集。|  
+|**DATASET**|傳回的動作字串是必須藉由設定執行 MDX 陳述式**ICommand::SetText**方法的字串，並呼叫命令物件**icommand:: Execute**方法。 要求的介面識別碼 (IID) 應**IDataset**。 如果已建立資料集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料集。|  
 |**資料列集**|類似於**資料集**，而不是要求的 IID，但**IDataset**，用戶端應用程式應該詢問的 iid **IRowset**。 如果已建立資料列集，此命令就能成功執行。 用戶端應用程式應該允許使用者瀏覽傳回的資料列集。|  
 |**命令列**|用戶端應用程式應執行此動作字串。 此字串是一個命令列。|  
-|**專屬**|除非用戶端應用程式有自訂、非一般的特定動作，否則應用程式不應該顯示，也不該執行此動作。 除非用戶端應用程式明確提出要求上設定適當的限制不專屬動作傳回用戶端應用程式**APPLICATION_NAME**。|  
+|**PROPRIETARY**|除非用戶端應用程式有自訂、非一般的特定動作，否則應用程式不應該顯示，也不該執行此動作。 除非用戶端應用程式明確提出要求上設定適當的限制不專屬動作傳回用戶端應用程式**APPLICATION_NAME**。|  
   
 ## <a name="invocation-types"></a>引動過程類型  
  下表描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中可用的不同引動過程類型。 引動過程類型只由用戶端應用程式使用，可協助判定何時要叫用動作。 引動過程類型實際上不會決定動作的引動過程行為。  
@@ -98,13 +98,13 @@ FOR
 |---------------------|-----------------|  
 |**互動式**|此動作應透過使用者互動，由用戶端應用程式叫用。|  
 |**ON_OPEN**|此動作應在目標物件開啟時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
-|**批次**|此動作應在用戶端應用程式決定要在批次作業中叫用目標物件時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
+|**BATCH**|此動作應在用戶端應用程式決定要在批次作業中叫用目標物件時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
   
 ### <a name="scope"></a>範圍。  
  每個動作是為特定 Cube 而定義，而且在該 Cube 中有唯一的名稱。 一個動作可有下表列出的其中一個範圍。  
   
  Cube 範圍  
- 獨立於特定維度、成員或資料格集的動作；例如：「啟動 AS/400  生產系統的終端機模擬」。  
+ 獨立於特定維度、 成員或儲存格的動作例如：「 啟動終端機模擬 as/400 生產系統 」。  
   
  維度範圍  
  此動作適用於特定維度。 這些動作不相依於層級或成員的特定選取項目。  

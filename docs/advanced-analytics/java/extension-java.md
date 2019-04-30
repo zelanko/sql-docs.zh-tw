@@ -1,26 +1,26 @@
 ---
-title: 在 SQL Server 2019-SQL Server Machine Learning 服務的 Java 語言擴充功能
+title: 在 SQL Server 2019 SQL 伺服器語言擴充功能的 Java 語言擴充功能
 description: 安裝、 設定及驗證的 Java 語言擴充功能於 SQL Server 2019 適用於 Linux 和 Windows 系統。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: db57689227445b0f50d6ff59fbf81e1d84ecacdb
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582083"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473405"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 的 Java 語言擴充功能 
 
-從 Windows 和 Linux 上的 SQL Server 2019 預覽中，您可以自訂的 Java 程式碼中執行[擴充性架構](../concepts/extensibility-framework.md)資料庫引擎執行個體的附加元件。 
+從 Windows 和 Linux 上的 SQL Server 2019 預覽開始，您可以執行自訂 Java 程式碼使用[擴充性架構](../concepts/extensibility-framework.md)資料庫引擎執行個體的附加元件。
 
-擴充性架構是執行外部程式碼的架構：（從 SQL Server 2019，） 的 Java [（從 SQL Server 2017） 的 Python](../concepts/extension-python.md)，並[（從 SQL Server 2016） 的 R](../concepts/extension-r.md)。 執行程式碼是與核心引擎處理序隔離，但與 SQL Server 查詢執行完全整合。 這表示您可以將資料從任何 SQL Server 查詢推送至外部的執行階段，並取用或保存回 SQL Server 中的結果。
+擴充性架構是執行外部程式碼的架構：（從 SQL Server 2019，） 的 Java [（從 SQL Server 2017） 的 Python](../concepts/extension-python.md)，並[（從 SQL Server 2016） 的 R](../concepts/extension-r.md)。 執行程式碼是分開的核心引擎處理程序，但完全整合到 SQL Server 查詢執行。 這表示您可以將資料從任何 SQL Server 查詢推送至外部的執行階段 (Java)，以及取用或保存回 SQL Server 中的結果。
 
 如同任何程式設計語言擴充功能，系統預存程序[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)是執行預先編譯的 Java 程式碼的介面。
 
@@ -28,9 +28,9 @@ ms.locfileid: "59582083"
 
 ## <a name="prerequisites"></a>先決條件
 
-需要 SQL Server 2019 預覽執行個體。 較早版本不需要 Java 整合。
+需要 SQL Server 2019 預覽執行個體。 較早版本不需要的 Java 整合。
 
-支援 Java 8。 Java Runtime Environment (JRE) 是最低需求，但 Jdk 適用於您需要的 Java 編譯器或開發套件。 因為 JDK 是全部 （含），如果您安裝 JDK、 JRE 不是必要的。
+Java 8 目前支援的版本。 較新版本，就像 Java 11，應該使用的語言擴充功能，但目前不支援。 Java Runtime Environment (JRE) 的最低需求，但 JDK 則適用於您需要的 Java 編譯器和開發套件。 因為 JDK 是全部 （含），如果您安裝 JDK、 JRE 不是必要的。
 
 您可以使用您慣用的 Java 8 散發套件。 以下是兩個建議的散發套件：
 
@@ -39,7 +39,7 @@ ms.locfileid: "59582083"
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows 和 Linux | 是 | 是 |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows 和 Linux | 是 | 否 |
 
-在 Linux 上， **mssql 伺服器擴充性-java**套件會自動安裝 JRE 8，如果尚未安裝。 安裝指令碼也會新增至稱為 JRE_HOME 環境變數的 JVM 路徑。
+在 Linux 上，目前**mssql 伺服器擴充性-java**套件會自動安裝 JRE 8，如果尚未安裝。 安裝指令碼也會新增至稱為 JRE_HOME 環境變數的 JVM 路徑。
 
 在 Windows，建議您安裝在預設 JDK`/Program Files/`資料夾的話。 否則，額外的設定，才能授與權限可執行檔。 如需詳細資訊，請參閱 <<c0> [ 授與權限 (Windows)](#perms-nonwindows)這份文件中的一節。
 
@@ -63,7 +63,7 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-當您安裝**mssql 伺服器擴充性-java**，封裝會自動安裝 JRE 8，如果尚未安裝。 另外還會新增至名為 JAVA_HOME 環境變數的 JVM 路徑。
+當您安裝**mssql 伺服器擴充性-java**，封裝會自動安裝 JRE 8，如果尚未安裝。 另外還會新增至名為 JRE_HOME 環境變數的 JVM 路徑。
 
 完成安裝之後下, 一個步驟是[設定外部指令碼執行](#configure-script-execution)。
 
@@ -81,9 +81,8 @@ sudo zypper install mssql-server-extensibility-java
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
+
 您也需要提供 mssql_satellite 權限以讀取/執行 jar 檔案。
-
-
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -105,12 +104,12 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ### <a name="add-the-jrehome-variable"></a>新增 JRE_HOME 變數
 
-JRE_HOME 是環境變數，可指定 Java 解譯器的位置。 在此步驟中，為其在 Windows 上建立系統環境變數。
+JRE_HOME 是系統環境變數，指定 Java 解譯器的位置。 在此步驟中，為其在 Windows 上建立系統環境變數。
 
 1. 尋找並複製 JRE home 路徑 (例如`C:\Program Files\Zulu\zulu-8\jre\`)。
 
-    根據您慣用的 Java 散發套件，您的 JRE 的 JDK 的位置可能不同於上述的範例路徑。 
-    即使您已安裝的 JDK，您通常時間會隨著該安裝的 JRE 子資料夾。 
+    根據您慣用的 Java 散發套件，您的 JRE 的 JDK 的位置可能不同於上述的範例路徑。
+    即使您已安裝的 JDK，您經常時間將該安裝的一部分取得 JRE 子資料夾，因此在此情況下指向 jre 資料夾。
     Java 延伸模組會嘗試從路徑 %jre_home%\bin\server 載入 jvm.dll。
 
 2. 在控制台中，開啟**系統及安全性**，開啟**系統**，然後按一下**進階系統屬性**。
@@ -129,7 +128,7 @@ JRE_HOME 是環境變數，可指定 Java 解譯器的位置。 在此步驟中�
 
 ### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>授與存取非預設 JRE 資料夾 (僅 Windows)
 
-執行**icacls**命令*提升權限*授與存取權的列**SQLRUsergroup**和 SQL Server 服務帳戶 (在**ALL_APPLICATION_封裝**) 來存取的 JRE。 命令會以遞迴方式存取權授與所有檔案和資料夾下的指定的目錄路徑。
+如果您未安裝的 JDK 或 JRE program files 下，您需要執行下列步驟。 執行**icacls**命令*提升權限*授與存取權的列**SQLRUsergroup**和 SQL Server 服務帳戶 (在**ALL_APPLICATION_封裝**) 來存取的 JRE。 命令會以遞迴方式存取權授與所有檔案和資料夾下的指定的目錄路徑。
 
 #### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup 權限
 
@@ -151,7 +150,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="configure-script-execution"></a>設定指令碼執行
 
-此時，就幾乎準備好要在 Linux 或 Windows 上執行 Java 程式碼。 最後一個步驟中，切換至 SQL Server Management Studio 或執行 TRANSACT-SQL 指令碼，以啟用外部指令碼執行的另一種工具。
+此時，就幾乎準備好要在 Linux 或 Windows 上執行 Java 程式碼。 最後一個步驟中，切換至 SQL Server Management Studio、 Azure data studio、 SQL CMD 或另一個工具，可讓您執行 TRANSACT-SQL 指令碼，以啟用外部指令碼執行。
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -161,13 +160,13 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="verify-installation"></a>確認安裝
 
-若要確認安裝是否運作正常，請建立並執行[範例應用程式](java-first-sample.md)使用您剛安裝的 JDK，將這些檔案放在您稍早設定的 classpath 中。
+若要確認安裝是否運作正常，請建立並執行[範例應用程式](java-first-sample.md)使用您剛安裝並新增至 JRE_HOME Java 執行階段。
 
-## <a name="differences-in-ctp-24"></a>CTP 2.4 中的差異
+## <a name="differences-in-ctp-25"></a>在 CTP 2.5 的差異
 
 如果您已熟悉使用機器學習服務，擴充功能的授權和隔離模型已變更在此版本中。 如需詳細資訊，請參閱 < [SQL Server 機器 2019 Learning Services 安裝中的差異](../install/sql-machine-learning-services-ver15.md)。
 
-## <a name="limitations-in-ctp-24"></a>CTP 2.4 中的限制
+## <a name="limitations-in-ctp-25"></a>在 CTP 2.5 的限制
 
 * 輸入和輸出緩衝區中的值數目不能超過`MAX_INT (2^31-1)`因為這是可配置在 Java 中陣列的項目數目上限。
 
@@ -194,4 +193,5 @@ jar -cf <MyJar.jar> *.class
 
 + [如何在 SQL Server 呼叫 Java](howto-call-java-from-sql.md)
 + [SQL Server 中的 Java 範例](java-first-sample.md)
++ [Microsoft 擴充性適用於 Microsoft SQL server 的 Java SDK](java-sdk.md)
 + [Java 和 SQL Server 資料類型](java-sql-datatypes.md)

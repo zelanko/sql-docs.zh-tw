@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af28755fee20c478237edec22936fc694995d554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678506"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459403"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC 語法)
 **ObjectProxy**物件代表伺服器，而且由**createObject**方法[DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)物件。 ObjectProxy 類別有一個方法，**呼叫**，其可叫用伺服器上的方法，並傳回該引動過程所產生的物件。  
   
- **封裝 com.ms.wfc.data**  
+ **package com.ms.wfc.data**  
   
 ## <a name="methods"></a>方法  
   
@@ -49,5 +49,5 @@ public Object ObjectProxy.( String method, Object[] args)
  *方法*  
  字串，包含要叫用伺服器上的方法名稱。  
   
- *引數*  
+ *args*  
  選擇性。 是在伺服器上方法的引數的物件的陣列。 Java 資料類型會自動轉換成適用於在伺服器上使用的資料類型。

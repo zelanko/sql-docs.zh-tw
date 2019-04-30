@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecb486f51caa97c715d54885c34575a60bfdfb83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231839"
 ---
 # <a name="installer-dll-function-summary"></a>安裝程式 DLL 函式摘要
 下表描述在安裝程式 DLL 函式。 如需語法和語意，每個函式的詳細資訊，請參閱[安裝程式 DLL API 參考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  
   
-|工作|函數名稱|目的|  
+|工作|函數名稱|用途|  
 |----------|-------------------|-------------|  
 |安裝 ODBC|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|載入特定驅動程式安裝程式 DLL。|  
 ||[SQLGetInstalledDrivers](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|傳回一份已安裝的驅動程式。|  

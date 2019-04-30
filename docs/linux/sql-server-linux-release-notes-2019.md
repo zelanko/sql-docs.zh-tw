@@ -4,18 +4,18 @@ description: 這篇文章包含版本資訊和支援的功能，在 Linux 上執
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c3ee750afe0af5971f571a2a0352397ed8c4f40
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
-ms.translationtype: MT
+ms.openlocfilehash: 56cb3c4fc617e4b158b974c82bec87401c01fca5
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566567"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455152"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>在 Linux 上的 SQL Server 2019 preview 版本資訊
 
@@ -24,7 +24,7 @@ ms.locfileid: "58566567"
 下列版本資訊適用於在 Linux 上執行的 SQL Server 2019 preview。 這篇文章會分成區段，每個版本。 每個版本具有描述 CU 的變更，以及連結至 Linux 套件下載技術支援文件的連結。
 
 > [!TIP]
-> 若要深入了解 SQL Server 2019 的新 Linux 功能，請參閱[的新功能 SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
+> 若要深入了解 SQL Server 2019 的新 Linux 功能，請參閱[的新功能 SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)。
 
 ## <a name="supported-platforms"></a>支援的平台
 

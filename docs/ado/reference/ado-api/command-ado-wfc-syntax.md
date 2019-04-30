@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6866423ba07ed79992ebd098b7b4f5e5eff91ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302486"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO - WFC 語法)
-## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>建構函式  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308746"
 ---
 # <a name="count-property-example-vb"></a>Count 屬性範例 (VB)
 此範例示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合***員工***資料庫。 屬性會取得每個集合中的物件數目，並設定列舉這些集合的迴圈的上限。 列舉，這些集合而不使用的另一種方式**計數**屬性是使用`For Each...Next`陳述式。  

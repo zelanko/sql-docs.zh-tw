@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261981"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>SQL Server 複寫發行者屬性
   此章節包含散發者和發行者端可用的 「 發行者 」 屬性的資訊。 

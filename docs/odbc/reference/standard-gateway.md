@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232088"
 ---
 # <a name="standard-gateway"></a>標準閘道
 A*閘道*是一種軟體，會導致不同的 DBMS，看起來像是另一個。 也就是閘道可接受的程式設計介面、 SQL 文法，資料流通訊協定的單一 DBMS，並將它轉譯到程式設計介面，也就是 SQL 文法和資料流的隱藏 DBMS 的通訊協定。 例如，若要使用 Microsoft® SQL Server 撰寫的應用程式也可以存取 DB2 資料透過 Micro Decisionware DB2 閘道;這項產品會導致 DB2，以便看起來像 SQL Server。 當使用閘道時，必須為每個目標資料庫撰寫不同的閘道。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240813"
 ---
 # <a name="recordset-object-ado"></a>Recordset 物件 (ADO)
 代表整個記錄集的基底資料表或執行命令的結果。 在任何時候**資料錄集**物件是指單一資料錄和目前的記錄集內。  
@@ -81,4 +81,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Fields 集合 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [屬性集合 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

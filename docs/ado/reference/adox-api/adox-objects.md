@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309191"
 ---
 # <a name="adox-objects"></a>ADOX 物件
 ## <a name="adox-object-summary"></a>ADOX 物件摘要  
@@ -32,7 +32,7 @@ ms.locfileid: "47772294"
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|表示從資料庫資料表的索引。|  
 |[索引鍵](../../../ado/reference/adox-api/key-object-adox.md)|表示從資料庫資料表的主要、 外部索引鍵，或唯一索引鍵欄位。|  
 |[程序](../../../ado/reference/adox-api/procedure-object-adox.md)|代表預存程序。|  
-|[[資料表]](../../../ado/reference/adox-api/table-object-adox.md)|表示資料庫資料表，包括資料行、 索引和索引鍵。|  
+|[Table](../../../ado/reference/adox-api/table-object-adox.md)|表示資料庫資料表，包括資料行、 索引和索引鍵。|  
 |[使用者](../../../ado/reference/adox-api/user-object-adox.md)|代表可受保護的資料庫內的存取權限的使用者帳戶。|  
 |[[檢視]](../../../ado/reference/adox-api/view-object-adox.md)|代表已篩選的一份記錄或一份虛擬資料表。|  
   

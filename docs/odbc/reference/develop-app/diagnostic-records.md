@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928e9ffa4701568aac8c519a23e7e371596a36eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242336"
 ---
 # <a name="diagnostic-records"></a>診斷記錄
 每個環境相關聯，連接、 陳述和描述項控制代碼所*診斷記錄*。 這些記錄包含最後一個呼叫的函式，使用特定的控制代碼相關的診斷資訊。 另一個函式呼叫使用該控制代碼時，才取代記錄。 可以一次儲存的診斷記錄的數目沒有限制。  

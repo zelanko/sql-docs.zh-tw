@@ -10,11 +10,11 @@ ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239461"
 ---
 # <a name="configure-tls-12-in-aps"></a>在 AP 中設定 TLS 1.2
 

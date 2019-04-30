@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273482"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>建立時序群集採礦模型結構 (中繼資料採礦教學課程)
   建立時序群集採礦模型的第一個步驟就是使用資料採礦精靈，根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時序群集演算法來建立新的採礦結構和採礦模型。  
@@ -71,12 +71,12 @@ ms.locfileid: "56039349"
   
     |資料表/資料行|內容類型|資料類型|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|文字|  
-    |OrderNumber|Key|文字|  
-    |Region|Discrete|文字|  
+    |IncomeGroup|Discrete|Text|  
+    |OrderNumber|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|長整數|  
-    |[模型]|Discrete|文字|  
+    |[模型]|Discrete|Text|  
   
 9. 在 [**建立測試集**頁面上，變更**測試資料的百分比**為 20，然後按一下**下一步]**。  
   

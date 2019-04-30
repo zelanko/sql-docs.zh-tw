@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232067"
 ---
 # <a name="standard-programming-interface"></a>標準程式設計介面
 程式設計介面可能是最明顯的候選標準化。 事實上，當開發 ODBC 時，ANSI 和 ISO 已提供標準的內嵌 SQL 和 SQL 模組。 雖然沒有標準存在於資料庫 CLI 中，SQL Access Group-資料庫供應商的產業協會-已考慮是否要建立一個;ODBC 的部分更新版本會成為其工作的基礎。  
