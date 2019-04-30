@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312493"
 ---
 # <a name="positioned-update-and-delete-statements"></a>定點更新和刪除陳述式
 應用程式可以更新或刪除目前的資料列結果集定位的 update 或 delete 陳述式。 定位的 update 和 delete 陳述式都受到某些資料來源，但並非全部。 若要判斷是否位於資料來源支援更新，以及 delete 陳述式，呼叫應用程式**SQLGetInfo**搭配 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1 或 SQL_STATIC_CURSOR_ATTRIBUTES1*資訊類型*（取決於資料指標類型）。 請注意，ODBC 資料指標程式庫會模擬定位的 update 和 delete 陳述式。  

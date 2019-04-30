@@ -1,5 +1,5 @@
 ---
-title: ConnectPromptEnum |Microsoft Docs
+title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309132"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定是否應該顯示對話方塊中開啟資料來源的連接時，遺漏的參數提示。  

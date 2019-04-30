@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245637"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
   請利用 [外部工具] 對話方塊，將 SQLCMD 或 [記事本] 之類的外部工具新增至 [工具] 功能表。 新增外部工具可讓您在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 此外，某些工具的輸出可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊可以透過 [工具] 功能表使用。  

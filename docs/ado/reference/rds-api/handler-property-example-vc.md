@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61403b9a720a456c08b121be4f36cef0d59ced17
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275844"
 ---
 # <a name="handler-property-example-vc"></a>Handler 屬性範例 (VC++)
 > [!IMPORTANT]

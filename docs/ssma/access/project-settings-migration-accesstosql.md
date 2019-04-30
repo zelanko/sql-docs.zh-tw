@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299284"
 ---
 # <a name="project-settings-migration-accesstosql"></a>專案設定 （移轉） (AccessToSQL)
 移轉專案設定可讓您設定如何將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -33,47 +33,47 @@ ms.locfileid: "51659337"
 **檢查條件約束**  
 指定 SSMA 是否應該將資料加入資料表檢查條件約束。  
   
--   **預設模式**: False  
+-   **預設模式**:False  
   
--   **開放式模式**: True  
+-   **開放式模式**:True  
   
--   **完整模式**: False  
+-   **完整模式**:False  
   
 **引發觸發程序**  
 指定 SSMA 是否應該引發插入觸發程序時，它將資料加入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。  
   
--   **預設模式**: False  
+-   **預設模式**:False  
   
--   **開放式模式**: True  
+-   **開放式模式**:True  
   
--   **完整模式**: False  
+-   **完整模式**:False  
   
 **保留識別**  
 指定是否 SSMA 會保留存取身分識別值時，它將資料加入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果此值為 False，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指派身分識別值。  
   
--   **預設模式**: True  
+-   **預設模式**:True  
   
--   **開放式模式**: True  
+-   **開放式模式**:True  
   
--   **完整模式**: False  
+-   **完整模式**:False  
   
 **保留 Null**  
 指定是否 SSMA 會保留來源資料中的 null 值時，它將資料加入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而不論在中指定的預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   **預設模式**: True  
+-   **預設模式**:True  
   
--   **開放式模式**: False  
+-   **開放式模式**:False  
   
--   **完整模式**: True  
+-   **完整模式**:True  
   
 **資料表鎖定**  
 指定時它會將資料加入資料表資料移轉期間 SSMA 是否鎖定資料表。 如果值為 False，SSMA 會使用資料列鎖定。  
   
--   **預設模式**: True  
+-   **預設模式**:True  
   
--   **開放式模式**: True  
+-   **開放式模式**:True  
   
--   **完整模式**: True  
+-   **完整模式**:True  
   
 **取代不支援的日期**  
 指定是否 SSMA 應該更正早於最舊存取日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datetime 的日期 (01 1753 年 1 月)。  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283245"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>硬體組態]-[Analytics Platform System
 Analytics Platform System (APS) 硬體的架構可調整的單位，以便您購買根據業務需求的正確數量的處理和儲存體。 設備調整儲存體的 SQL Server Parallel Data Wareouse (PDW) 從幾 tb 擴充到超過 6 Pb 的資料。  

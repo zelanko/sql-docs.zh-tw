@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237910"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>部署檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝
   這份檢查清單會引導您逐步完成新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]針對至您建置全新的三層式 SharePoint 2010 伺服陣列的 SharePoint。 三層伺服陣列包含資料庫、應用程式和 Web 層。 新增[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]此拓撲會要求您執行 SQL Server 安裝程式安裝[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式層上。 當您部署 web 應用程式方案時，PowerPivot 程式檔案會加入至 web 層，而只會做為後續安裝工作。 即使有部署步驟，但是在您需要執行的 Web 層或資料層並沒有個別的安裝步驟。 正在安裝您需要執行的唯一安裝步驟[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]應用程式伺服器上。  
@@ -103,7 +103,7 @@ ms.locfileid: "53350538"
   
     4.  在 [規則類型] 中按一下**自訂**。  
   
-    5.  按 [下一步] 。  
+    5.  按一下 [下一步] 。  
   
     6.  在程式中，在 [服務] 區段中，按一下**自訂**。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "53350538"
   
     8.  選取  **SQL Server (MSSQLSERVER)** 如果您安裝 SQL Server 的預設執行個體，然後再按一下**確定**。  
   
-    9. 按 [下一步] 。  
+    9. 按一下 [下一步] 。  
   
     10. 在 [通訊協定和連接埠，接受預設設定，然後按一下**下一步]**。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "53350538"
  您可以設定快取到磁碟之 PowerPivot 資料檔案所能使用的磁碟空間上限。 預設值是使用所有可用的磁碟空間。 如需有關如何限制磁碟空間使用量的相關指示，請參閱[設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
   
 ####  <a name="Upload"></a> 增加 SharePoint Web 應用程式的檔案上傳大小上限  
- 因為 PowerPivot 活頁簿可能很龐大，所以您可能會想要增加檔案上傳大小上限。 有兩個檔案大小設定需要設定：Web 應用程式的 [最大上傳大小] 及 Excel Services 的 [最大活頁簿大小]。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需相關指示，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
+ 因為 PowerPivot 活頁簿可能很龐大，所以您可能會想要增加檔案上傳大小上限。 有兩個檔案大小設定，以設定：上傳大小上限的 web 應用程式和在 Excel Services 中的活頁簿大小上限。 檔案大小上限應該在兩個應用程式中設定為相同的值。 如需相關指示，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>將 SharePoint 權限授與活頁簿使用者  
  使用者需要有 SharePoint 權限，才能發行或檢視活頁簿。 請務必授與**檢視**給需要檢視已發行的活頁簿的使用者權限及**參與**發行或管理活頁簿的使用者權限。 您必須是網站集合管理員，才能授與權限。  

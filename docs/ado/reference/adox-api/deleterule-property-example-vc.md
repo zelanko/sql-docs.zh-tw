@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b980b698bd8a6abb9c49fb669e821be07a5aab36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298080"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 屬性範例 (VC++)
 此範例示範[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)屬性[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件。 程式碼會將附加的新[表格](../../../ado/reference/adox-api/table-object-adox.md)，然後定義新的主要金鑰，設定**DeleteRule**來**adRICascade**。  

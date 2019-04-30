@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0200ce01bd8c2218272d56635b15fcf7a41e744e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242693"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 屬性 (ClientSettingsGeneralFlag 類別)
   取得旗標的索引值。  

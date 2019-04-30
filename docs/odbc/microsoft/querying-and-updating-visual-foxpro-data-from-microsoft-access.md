@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1097e03c414d919a606ffd21ae50ffddf51173b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316755"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>從 Microsoft Access 查詢和更新 Visual FoxPro 資料
 您可以查詢與更新使用連結資料表選項在 Visual FoxPro 資料庫從 Microsoft Access 資料庫中儲存的資料。  

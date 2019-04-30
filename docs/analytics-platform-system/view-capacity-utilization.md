@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243822"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Analytics Platform System 中的檢視容量使用率
 本主題說明如何檢視中的 SQL Server PDW 應用裝置容量使用率。  

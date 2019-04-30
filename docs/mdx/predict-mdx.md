@@ -1,5 +1,5 @@
 ---
-title: 預測 (MDX) |Microsoft 文件
+title: 預測 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca47db953df9889cb1d72d0add45f2b0ed681980
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277477"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
 
@@ -42,7 +42,7 @@ Predict(Mining_Model_Name,String_Expression)
  評估為指定採礦模型之有效 DMX 運算式的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- **預測**函式會評估指定的採礦模型的內容中指定的字串運算式。  
+ **Predict**函式會評估指定的採礦模型內容中的指定的字串運算式。  
   
  資料採礦語法及函數的相關文件，記錄於資料採礦運算式 (DMX) 參考中。  
   
@@ -60,6 +60,6 @@ WHERE([Customer].[Customer Geography].[Customer].&[12012])
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

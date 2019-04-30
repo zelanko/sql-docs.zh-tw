@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fe70b1e484039593c9bb02a28788259f9afaf18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242372"
 ---
 # <a name="diagnostic-tools"></a>診斷工具
 兩個功能可以協助診斷問題，ODBC 應用程式中。 兩者都可以使用 從 ODBC 系統管理員和實作由驅動程式管理員。 *追蹤*能記錄到記錄檔的函式呼叫順序。 Visual Studio Analyzer 可讓元件的互動的相關資訊的分析，在分散式環境中。  

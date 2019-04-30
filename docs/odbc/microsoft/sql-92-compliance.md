@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313394"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 相容性
 ODBC 桌面資料庫驅動程式和基礎的 Microsoft Jet 引擎並非 SQL-92 相容。 它們支援 SQL-92 中已定義的許多功能。 驅動程式支援某些功能不支援以 SQL-92。 如需詳細資訊，請參閱 < *Microsoft Jet Database Engine 程式設計人員指南*。 兩者之間的主要差異如下：  

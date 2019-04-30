@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95a8e01b42f8bdc2036457b5c8a9e0e4088c16fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241042"
 ---
 # <a name="cursor-library-cache"></a>資料指標程式庫快取
 > [!IMPORTANT]  

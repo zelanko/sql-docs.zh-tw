@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258971"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 事件 (ADO)
 **FetchProgress**冗長的非同步作業，以報告多個資料列數目目前已擷取到期間定期呼叫事件[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

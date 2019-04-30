@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299116"
 ---
 # <a name="refresh-from-database-accesstosql"></a>從資料庫 (AccessToSQL) 重新整理
 **從資料庫重新整理**對話方塊可讓您選取要從 Access 資料庫重新整理的物件。 在對話方塊中的資料列的色彩標示根據中繼資料的狀態：  

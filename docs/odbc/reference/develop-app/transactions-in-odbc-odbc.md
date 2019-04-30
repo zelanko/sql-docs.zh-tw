@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd96e467ce9f85c3ff62bb42b483f20fbae56204
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305777"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC 中的交易
 ODBC 中的交易完成在連接層級;也就是說，當應用程式完成交易時，它認可或回復透過該連接上的所有陳述式控制代碼的所有工作。  

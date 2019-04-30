@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298128"
 ---
 # <a name="instant-file-initialization-configuration"></a>檔案立即初始化設定
 立即檔案初始化是 SQL Server 功能，可讓資料更快速執行的檔案作業。 核取方塊，若要開啟立即檔案初始化會改善效能的 SQL Server PDW。 不過，如果這有安全性風險，商務，然後核取方塊。  

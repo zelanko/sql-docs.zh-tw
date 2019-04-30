@@ -1,5 +1,5 @@
 ---
-title: 工作 9:建立衍生階層，使用主資料管理員 |Microsoft Docs
+title: 工作 9：建立衍生階層，使用主資料管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262395"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>工作 9:使用主資料管理員建立衍生階層
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>工作 9：使用主資料管理員建立衍生階層
   在這項工作中，您會使用主資料管理員建立衍生階層。 這個衍生的階層衍生自網域屬性關聯性之間**供應商**並**狀態**實體。  
   
 1.  切換至的主頁面**主資料管理員**依序按一下**SQL Server 2012 Master Data Services**頁面的頂端。  

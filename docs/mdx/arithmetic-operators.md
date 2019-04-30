@@ -1,5 +1,5 @@
 ---
-title: 算術運算子 |Microsoft 文件
+title: 算術運算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284505"
 ---
 # <a name="arithmetic-operators"></a>算術運算子
 

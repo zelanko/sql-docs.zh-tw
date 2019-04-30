@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267895"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 的 SQL Server 移轉小幫手 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for DB2 會將 DB2 資料庫移轉至的工具[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 年[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上 Windows 和 Linux （2017年預覽狀態），或 Azure SQL DB。 SSMA for DB2 會將轉換至 DB2 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件，會建立在這些物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後將資料從 DB2，以便移轉和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
@@ -24,7 +24,7 @@ ms.locfileid: "51663887"
   
 ## <a name="contents"></a>目錄  
   
-|章節|描述|  
+|Section|描述|  
 |-----------|---------------|  
 |[SSMA for DB2 的新功能](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|在這個版本的 SSMA for DB2 中最新消息|  
 |[安裝 SSMA for DB2 用戶端&#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|包含的主題會提供先決條件與指示正在執行的電腦上安裝 SSMA for DB2 用戶端和必要的元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  

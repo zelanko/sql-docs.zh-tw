@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250591"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  
@@ -87,7 +87,7 @@ ms.locfileid: "54132278"
  **-70Subscribers**  
  如果有任何訂閱者正在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 版，您就必須使用這個參數。  
   
- **-BcpBatchSize** _bcp_ \_ *批次*\_ *大小*  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
  這是要在大量複製作業中傳送的資料列數目。 執行 **bcp in** 作業時，批次大小就是要在單一交易中傳送至伺服器的資料列數目，而且它也是「散發代理程式」記錄 **bcp** 進度訊息之前必須傳送的資料列數目。 執行 **bcp out** 作業時，系統會使用固定批次大小 1000。 值為 0 表示沒有記錄任何訊息。  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -196,7 +196,7 @@ ms.locfileid: "54132278"
 |**2**|列印所有錯誤訊息和進度報表訊息 (可用於偵錯)。|  
 
  **-PrefetchTables** [ **0**| **1**]  
- 指定是否要預先擷取並快取資料表物件的選擇性參數。  預設行為是根據內部計算，使用 SMO 元件預先擷取特調資料表內容。  這個參數可以是很有幫助，SMO 預先擷取作業所花費相當長再執行。 若未使用此參數，會在執行階段根據已新增為要發佈之發行項的資料表百分比來制訂決策。  
+ 指定是否要預先擷取並快取資料表物件的選擇性參數。  預設行為是根據內部計算，使用 SMO 元件預先擷取特調資料表內容。  此參數在 SMO 預先擷取作業花非常長時間執行的情況下很實用。 若未使用此參數，會在執行階段根據已新增為要發佈之發行項的資料表百分比來制訂決策。  
   
 |OutputVerboseLevel 值|描述|  
 |------------------------------|-----------------|  

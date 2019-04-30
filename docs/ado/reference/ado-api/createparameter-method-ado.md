@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308620"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 方法 (ADO)
 建立新[參數](../../../ado/reference/ado-api/parameter-object.md)具有指定之屬性的物件。  
@@ -38,7 +38,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  傳回**參數**物件。  
   
 #### <a name="parameters"></a>參數  
- *[名稱]*  
+ *名稱*  
  選擇性。 A**字串**值，包含名稱**參數**物件。  
   
  *型別*  

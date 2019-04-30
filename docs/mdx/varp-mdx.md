@@ -1,5 +1,5 @@
 ---
-title: VarP (MDX) |Microsoft 文件
+title: VarP (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc1e6276de9a03af9800b9e242d54130c4241732
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251467"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 
@@ -36,11 +36,11 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  有效的數值運算式，這通常是傳回數字之資料格座標的多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **VarP**函式會傳回指定的數值運算式，評估指定集合的偏誤變異數。  
+ **VarP**函式會傳回指定的數值運算式，指定集合評估後的偏誤變異數。  
   
  **VarP**函數使用偏誤的母體公式，而[Var](../mdx/var-mdx.md)函式會使用非偏誤的母體公式。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

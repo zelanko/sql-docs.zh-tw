@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dff9c41c13b37c223bdbf127eb44b1c83cda88ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298773"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>全域設定 （[輸出] 視窗） (DB2ToSQL)
 使用**全域設定**對話方塊來指定 SSMA 的設定。  

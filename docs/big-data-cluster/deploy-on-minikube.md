@@ -5,17 +5,17 @@ description: 了解如何設定適用於 SQL Server 2019 巨量資料叢集 （�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860689"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473502"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>設定適用於 SQL Server 的巨量資料叢集部署的 minikube
 
@@ -27,7 +27,7 @@ ms.locfileid: "58860689"
 
 - 32 GB 的記憶體 (建議的 64 GB)。
 
-- 如果機器有建議的記憶體最小值，然後設定叢集有 1 個計算集區執行個體、 1 個資料集區執行個體和 1 個儲存體集區執行個體的部署。 這項設定應該只用於評估環境，持久性和可用性的資料不重要。 請參閱[部署文件](deployment-guidance.md#env)如需有關設定來設定資料集區的複本數目的環境變數的詳細資訊，請計算集區和儲存體集區。
+- 如果機器有建議的記憶體最小值，然後設定叢集有 1 個計算集區執行個體、 1 個資料集區執行個體和 1 個儲存體集區執行個體的部署。 這項設定應該只用於評估環境，持久性和可用性的資料不重要。 請參閱[部署文件](deployment-guidance.md#configfile)如需有關設定來設定資料集區的複本數目的環境變數的詳細資訊，請計算集區和儲存體集區。
 
 - 必須在您電腦的 BIOS 中啟用 VT x 或 amd-v 的虛擬化。
 
@@ -44,11 +44,11 @@ ms.locfileid: "58860689"
    - 針對 Linux，安裝[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或是[KVM](https://www.linux-kvm.org/)。
    - 對於 Windows，安裝[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或是[HYPER-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install)。 如果您沒有外部交換器在 hyper-v 中設定，然後建立一個具有 「 外部網路存取權。  請參閱如何[minikube 的 hyper-v 中建立外部交換器](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/)。
 
-## <a name="install-minikube"></a>安裝 Minikube
+## <a name="install-minikube"></a>安裝 minikube
 
-根據的指示安裝 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 使用版本 v0.24.1 和向上，僅適用於 SQL Server 2019 巨量資料叢集 （預覽）。
+安裝的指示根據 minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 使用版本 v0.24.1 和向上，僅適用於 SQL Server 2019 巨量資料叢集 （預覽）。
 
-## <a name="create-a-minikube-cluster"></a>建立 Minikube 叢集
+## <a name="create-a-minikube-cluster"></a>建立 minikube 叢集
 
 下列命令會建立 minikube 叢集，在具有 8 個 Cpu 的 HYPER-V VM、 28 GB 記憶體，而 100 gb 的磁碟大小。 磁碟大小不是保留的空間。  它會隨著該大小在磁碟上所需。  我們建議您不要變更 磁碟空間為小於 100 GB，我們遇到中測試此問題。 這也會指定 hyper-v 交換器的外部存取明確。
 
@@ -58,7 +58,7 @@ ms.locfileid: "58860689"
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-如果您使用 VirtualBox Minikube 命令會如下所示：
+如果您使用 VirtualBox minikube 命令會如下所示：
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
@@ -74,6 +74,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>後續步驟
 
-這篇文章中的步驟設定 Minikube 叢集。 下一個步驟是將 SQL Server 2019 巨量資料叢集部署。 如需指示，請參閱下列文章：
+這篇文章中的步驟設定 minikube 叢集。 下一個步驟是將 SQL Server 2019 巨量資料叢集部署。 如需指示，請參閱下列文章：
 
 [部署在 Kubernetes 上的 SQL Server 2019 巨量資料叢集](deployment-guidance.md#deploy)

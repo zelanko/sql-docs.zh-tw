@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273309"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和標準 CLI
 ODBC 與下列規格和處理使用呼叫層級介面 (CLI) 中的標準。 （ODBC 功能是每個這些標準的超集）。  
   
--   開啟 群組 CAE 規格 「 資料管理： SQL 呼叫層級介面 (CLI) 」  
+-   開啟 群組 CAE 規格 「 資料管理：SQL 呼叫層級介面 (CLI) 」  
   
 -   ISO/IEC 9075-3:1995 (E) 呼叫層級介面 (SQL/CLI)  
   

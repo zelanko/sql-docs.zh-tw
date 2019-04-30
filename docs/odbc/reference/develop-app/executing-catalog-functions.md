@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc53e265ffa25c5ec598187f62505f18436f1c69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248337"
 ---
 # <a name="executing-catalog-functions"></a>執行目錄函式
 因為目錄函式會建立結果集，它就相當於執行任何結果集產生 SQL 陳述式。 事實上，目錄函數通常會實作由執行預先定義的 SQL 陳述式或呼叫預先定義的程序隨附的驅動程式或 DBMS。 幾乎適用於建立結果集的 SQL 陳述式也適用於目錄函數。 比方說，會 SQL_ATTR_MAX_ROWS 陳述式屬性限制目錄函式所傳回的資料列數目，就像它會限制傳回的資料列數目時，才**選取**陳述式。  

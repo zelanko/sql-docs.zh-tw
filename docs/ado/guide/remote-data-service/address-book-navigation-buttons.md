@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d3b2660f3a20883e9b9f2d3b4202526c15a943
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242789"
 ---
 # <a name="address-book-navigation-buttons"></a>通訊錄導覽按鈕
 通訊錄應用程式會顯示在網頁底部的瀏覽按鈕。 第一個或最後一個資料列的資料或目前的選取範圍的相鄰的資料列，您可以使用瀏覽按鈕來選取導覽中的 HTML 方格中顯示的資料。  

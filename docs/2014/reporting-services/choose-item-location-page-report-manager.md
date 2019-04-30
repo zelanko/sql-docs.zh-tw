@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1833989b2dd5fed0616a7587252ac97a09cb75f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266225"
 ---
 # <a name="choose-item-location-page-report-manager"></a>選擇項目位置頁面 (報表管理員)
   您可以使用 [選擇項目位置] 頁面，針對新的連結報表或新的模型選取資料夾。 如果您要建立特定使用者群組的連結報表或模型，可能會想要將該項目放入含有它們使用之其他報表和模型的資料夾中。 您必須選擇已經存在且有權新增內容的資料夾。  

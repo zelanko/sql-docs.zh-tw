@@ -1,5 +1,5 @@
 ---
-title: 運算子 （MDX 語法） |Microsoft 文件
+title: 運算子 （MDX 語法） |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277596"
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 
@@ -47,7 +47,7 @@ ms.locfileid: "34742747"
  使用多個運算子時，MDX 評估運算子的順序很重要。 同樣地，運算子的使用者可能必須將一個資料類型轉換成另一個資料類型，才能評估運算子。  
   
 ## <a name="evaluating-complex-expressions"></a>評估複雜的運算式  
- 您可以使用運算子來結合數個較小的運算式，來建立一個運算式。 在這些複雜的運算式，MDX 評估運算子的順序是根據所使用的運算子優先順序定義[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 MDX 會先執行優先順序較高的運算子，之後才會執行優先順序較低的運算子。  
+ 您可以使用運算子來結合數個較小的運算式，來建立一個運算式。 在這些複雜的運算式中，MDX 評估運算子的順序是根據所使用的運算子優先順序定義[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 MDX 會先執行優先順序較高的運算子，之後才會執行優先順序較低的運算子。  
   
 ### <a name="understanding-operator-precedence"></a>了解運算子優先順序  
  以下清單會顯示運算子優先順序，從最高顯示到最低。 位於同一行的運算子會有相同的優先順序，而且除非利用括號強制執行，否則會由左至右進行評估。  
@@ -78,12 +78,12 @@ ms.locfileid: "34742747"
   
 -   或  
   
- 如需 MDX 運算子的詳細資訊，請參閱[MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)。  
+ 如需 MDX 運算子的詳細資訊，請參閱 < [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
 ### <a name="determining-results"></a>決定結果  
  當您將簡單的運算式組合成複雜的運算式時，結合了資料類型優先順序規則的運算子規則，即可決定結果值的資料類型。  
   
- 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需有關定序的詳細資訊，請參閱[語言和定序&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)。  
+ 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需有關定序的詳細資訊，請參閱 <<c0> [ 語言和定序&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)。</c0>  
   
  另外也有一些規則，根據簡單運算式的有效位數、小數位數與長度，決定結果的有效位數、小數位數與長度。  
   
@@ -95,8 +95,8 @@ ms.locfileid: "34742747"
 |層級|將|\<層級 >.members|  
 |階層|成員|\<階層 >.defaultmember|  
 |成員|Tuple|(\<成員 >)|  
-|Tuple|成員|\<tuple >.item(0)|  
-|Tuple|純量|\<tuple >.value|  
+|Tuple|成員|\<tuple>.item(0)|  
+|Tuple|純量|\<tuple>.value|  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

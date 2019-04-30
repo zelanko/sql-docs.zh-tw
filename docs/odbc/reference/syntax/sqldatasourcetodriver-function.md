@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259401"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 函式
 **SQLDataSourceToDriver** supportstranslations ODBC 驅動程式。 啟用 ODBC 的應用程式; 不會呼叫此函式應用程式會要求透過翻譯**SQLSetConnectAttr**。 驅動程式相關聯*ConnectionHandle*中指定**SQLSetConnectAttr**呼叫指定的 DLL，以執行從資料來源流動到驅動程式的所有資料的翻譯。 ODBC 初始化檔案中，就可以指定的預設轉譯 DLL。  
@@ -48,7 +48,7 @@ BOOL SQLDataSourceToDriver(
 ```  
   
 ## <a name="arguments"></a>引數  
- *Sqlfreestmt*  
+ *fOption*  
  [輸入]選項值。  
   
  *fSqlType*  

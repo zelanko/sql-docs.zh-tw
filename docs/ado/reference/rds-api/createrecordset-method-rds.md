@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298920"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
 建立空的中斷[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant**的定義中的每個資料行的屬性陣列**資料錄集**建立。 每個資料行定義包含四個必要的屬性和一個選擇性屬性的陣列。  
   
-|attribute|描述|  
+|屬性|描述|  
 |---------------|-----------------|  
 |名稱|資料行標頭的名稱。|  
 |類型|資料類型的整數。|  

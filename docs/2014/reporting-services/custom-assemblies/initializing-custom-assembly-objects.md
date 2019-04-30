@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97ee8e554fa246848b64ebafb0961f35d65f15c9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264716"
 ---
 # <a name="initializing-custom-assembly-objects"></a>初始化自訂組件物件
   在某些情況下，您可能需要在初始化自訂組件類別時，初始化其中的屬性與欄位值。 您很可能需要使用報表全域物件集合中可用的值，來初始化自訂類別。 您可以透過覆寫報表之 **Code** 物件的 **OnInit** 方法來完成。 若要存取 **OnInit**，請使用報表定義的 **Code** 項目。 有兩個技術可初始化的屬性或欄位的值，您打算在報表中使用的自訂組件中的類別：您可以宣告並建立您的類別使用的新執行個體**OnInit**，或您可以呼叫公開可用的方法，使用**OnInit**。  

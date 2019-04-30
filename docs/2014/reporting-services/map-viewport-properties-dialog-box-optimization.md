@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278538"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>地圖檢視區屬性對話方塊、最佳化
   選取 **[地圖檢視區屬性]** 對話方塊的 **[最佳化]** 協助控制在報表中檢視地圖的解析度。  

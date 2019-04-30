@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83964bf1e76eef5c7c4ba4121b0c581e8d8a406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288320"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>配置連線控制代碼 ODBC
 應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼，如下所示：  
@@ -41,6 +41,6 @@ ms.locfileid: "47782406"
   
  驅動程式管理員不會呼叫**SQLAllocHandle**此驅動程式中的時間，因為它不知道要呼叫哪一個驅動程式。 它會延遲呼叫**SQLAllocHandle**驅動程式，直到應用程式呼叫的函式，來連接到資料來源中。 如需詳細資訊，請參閱 <<c0> [ 在連線程序中的驅動程式管理員角色](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)稍後這一節。  
   
- 請務必注意，配置連接控制代碼不載入驅動程式相同。 連線函式呼叫之前，不會載入驅動程式。 因此，在配置連接控制代碼之後，並連接到資料來源的驅動程式之前，應用程式可以呼叫具有連接控制代碼的唯一功能是**SQLSetConnectAttr**， **SQLGetConnectAttr**，或**SQLGetInfo** SQL_ODBC_VER 選項。 呼叫其他函式與連接的控制代碼，例如**SQLEndTran**，會傳回 SQLSTATE 08003 （未開啟連接）。 完整的詳細資訊，請參閱[附錄 b: ODBC 狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
+ 請務必注意，配置連接控制代碼不載入驅動程式相同。 連線函式呼叫之前，不會載入驅動程式。 因此，在配置連接控制代碼之後，並連接到資料來源的驅動程式之前，應用程式可以呼叫具有連接控制代碼的唯一功能是**SQLSetConnectAttr**， **SQLGetConnectAttr**，或**SQLGetInfo** SQL_ODBC_VER 選項。 呼叫其他函式與連接的控制代碼，例如**SQLEndTran**，會傳回 SQLSTATE 08003 （未開啟連接）。 完整的詳細資訊，請參閱[附錄 b:狀態轉換資料表](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)。  
   
  如需有關連接控制代碼的詳細資訊，請參閱 <<c0> [ 連接控制代碼](../../../odbc/reference/develop-app/connection-handles.md)。

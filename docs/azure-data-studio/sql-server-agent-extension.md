@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 077a3ae072c8a9f680162de5eb1813c15b1e7199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309290"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server Agent 擴充功能 （預覽）
 

@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272936"
 ---
 # <a name="translator-specification-subkeys"></a>轉譯程式規格子機碼
 ODBC 轉譯程式子機碼中所列每 translator 都有自己的子機碼。 這個子機碼具有相同名稱做為 ODBC 轉譯程式子機碼下對應的值。 這個子機碼底下的值清單轉譯器轉譯程式安裝程式 Dll 並使用計數的完整的路徑。 值的格式是下表所示。  
   
-|名稱|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|轉譯程式|REG_SZ|*轉譯程式 DLL 路徑*|  
-|安裝程式|REG_SZ|*安裝程式 DLL 路徑*|  
+|轉譯程式|REG_SZ|*translator-DLL-path*|  
+|安裝程式|REG_SZ|*setup-DLL-path*|  
 |UsageCount|REG_DWORD|*計數*|  
   
  如需使用方式計數資訊，請參閱[使用量計算](../../../odbc/reference/install/usage-counting.md)稍早在這一節。  

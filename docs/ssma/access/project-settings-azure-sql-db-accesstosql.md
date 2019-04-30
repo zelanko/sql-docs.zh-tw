@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402123"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453465"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>專案設定 (Azure SQL DB) (AccessToSQL)
 SQL Azure 專案設定可讓您設定 新增連線 對話方塊中，也允許 實作活動訊號機制在 SQL Azure 連接的 SQL Azure 資料庫尾碼。  
@@ -40,7 +40,7 @@ SQL Azure 窗格位於**專案設定**並**預設專案設定**對話方塊。
   
 應該指定的值中是： ss 的格式 (例如，' 4:45 '或' 0:50 ')。  
   
-**SQL Azure 伺服器的後置詞**  
+**SQL Azure Server Suffix**  
   
 指定 SQL Azure 伺服器的後置詞  
   

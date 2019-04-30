@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281129"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 驅動程式子機碼
 ODBC 驅動程式子機碼下的值會列出已安裝的驅動程式。 下表顯示這些值的格式。  
   
-|名稱|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|*驅動程式說明*|REG_SZ|**安裝**|  
+|*driver-description*|REG_SZ|**安裝**|  
   
  *驅動程式說明*驅動程式開發人員所定義名稱。 它通常是與驅動程式相關聯的 DBMS 名稱。  
   

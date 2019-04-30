@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238416"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
   您可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函數中使用鄰近字詞 (NEAR)，以便搜尋彼此接近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您也可以依任何順序或是您所指定的順序來搜尋單字或片語。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援舊版[泛型相近詞彙](#Generic_NEAR)，這目前已被取代，而[自訂相近詞彙](#Custom_NEAR)，這是新功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
@@ -51,11 +51,11 @@ ms.locfileid: "52502845"
   
  {  
   
- *search_term* [，...*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [，...*n* ])[，< maximum_distance> > [，< match_order> >]]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -160,7 +160,7 @@ GO
   
  泛型鄰近字詞表示指定的搜尋字詞必須全部都出現在同一份文件中，才會傳回符合項目，而不論搜尋字詞之間的非搜尋字詞數目 (「距離」) 為何。 基本語法如下：  
   
- { *search_term* {NEAR | ~} *search_term* } [，...*n* ]  
+ { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   
  例如，在下列範例中，'fox' 和 'chicken' 這兩個字必須同時出現 (按照任何順序)，才會產生符合項目：  
   

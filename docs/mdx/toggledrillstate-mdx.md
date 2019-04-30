@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228086"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -48,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器提供鑽研函數; 支援的層級請參閱[支援的 XMLA 屬性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)如需詳細資訊。  
   
- 請參閱[資料庫日誌： MDX 設定函數： Toggledrillstate （） 函數](https://go.microsoft.com/fwlink/?LinkId=517759)案例和涉及此函式的範例。  
+ 請參閱[資料庫日誌：MDX 設定函數：Toggledrillstate （） 函數](https://go.microsoft.com/fwlink/?LinkId=517759)案例和涉及此函式的範例。  
   
 ## <a name="example"></a>範例  
  下列範例會在第一個集合的 Australia 成員向下鑽研，並且在第一個集合的 United States 成員向上鑽研。  

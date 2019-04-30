@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261103"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>一般屬性頁面、共用資料來源 (報表管理員)
   使用 [一般] 屬性頁面，即可檢視或修改共用資料來源項目的屬性。 按一下 **[套用]** 時，您對屬性所做的任何變更，將在參考該項目的所有報表上生效。  

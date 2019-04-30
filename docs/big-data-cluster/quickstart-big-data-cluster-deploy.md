@@ -5,17 +5,17 @@ description: 逐步解說部署的 SQL Server 2019 巨量資料叢集 （預覽�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582912"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473475"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入門：部署 Azure Kubernetes Service (AKS) 上的 SQL Server 巨量資料叢集
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>執行部署指令碼
 
-您可以使用下列步驟來執行部署指令碼。 此指令碼會在 Azure 中建立的 AKS 服務，並接著將 SQL Server 2019 巨量資料叢集部署至 AKS。 您也可以修改與其他指令碼[環境變數](deployment-guidance.md#env)來建立自訂的部署。
+您可以使用下列步驟來執行部署指令碼。 此指令碼會在 Azure 中建立的 AKS 服務，並接著將 SQL Server 2019 巨量資料叢集部署至 AKS。 您也可以修改與其他指令碼[環境變數](deployment-guidance.md#configfile)來建立自訂的部署。
 
 1. 執行指令碼使用下列命令：
 
@@ -114,7 +114,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 ```
 
 > [!IMPORTANT]
-> 整個部署可能需要很長的時間，因為下載的巨量資料叢集元件的容器映像所需的時間。 不過，它應該不需要數小時。 如果您遇到部署問題，請參閱[部署疑難排解](deployment-guidance.md#troubleshoot)的部署指引文件的區段。
+> 整個部署可能需要很長的時間，因為下載的巨量資料叢集元件的容器映像所需的時間。 不過，它應該不需要數小時。 如果您遇到部署問題，請參閱[監視和疑難排解 SQL Server 的巨量資料叢集](cluster-troubleshooting-commands.md)。
 
 ## <a name="inspect-the-cluster"></a>檢查叢集
 
@@ -149,20 +149,20 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    ```
 
 > [!TIP]
-> 如需有關如何監視和疑難排解部署的詳細資訊，請參閱 <<c0> [ 部署疑難排解](deployment-guidance.md#troubleshoot)的部署指引文件的區段。
+> 如需有關如何監視和疑難排解部署的詳細資訊，請參閱 <<c0> [ 監視和疑難排解 SQL Server 的巨量資料叢集](cluster-troubleshooting-commands.md)。
 
 ### <a name="use-the-cluster-administration-portal"></a>使用叢集系統管理入口網站
 
-當控制器 pod 執行時，您也可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`endpoint-service-proxy`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 用來登入入口網站的認證比對的值**Controller 使用者**並**密碼**您在部署指令碼中指定。
+當控制器 pod 執行時，您也可以使用叢集系統管理入口網站來監視部署。 您可以存取入口網站中使用的外部 IP 位址和連接埠號碼`mgmtproxy-svc-external`(例如： **https://\<ip 位址\>: 30777/入口網站**)。 用來登入入口網站的認證比對的值**Controller 使用者**並**密碼**您在部署指令碼中指定。
 
-您可以取得的 IP 位址**端點服務 proxy**服務中的 bash 或 cmd 視窗執行下列命令：
+您可以取得的 IP 位址**mgmtproxy svc 外部**服務中的 bash 或 cmd 視窗執行下列命令：
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> 在 CTP 2.4，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。
+> 在 CTP 2.5，您會看到安全性警告時存取網頁，因為巨量資料叢集目前正在使用自動產生的 SSL 憑證。
 
 ## <a name="connect-to-the-cluster"></a>連線到叢集
 

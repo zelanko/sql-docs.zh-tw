@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption （Excel 驅動程式） |Microsoft Docs
+title: SQLSetConnectOption (Excel Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e04623c42df58f920620299d9dce7094039a406
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306046"
 ---
 # <a name="sqlsetconnectoption-excel-driver"></a>SQLSetConnectOption (Excel 驅動程式)
 > [!NOTE]  
 >  本主題提供 Excel 驅動程式特有的資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC API 參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|Sqlfreestmt|註解|  
+|fOption|註解|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以設 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 不過，此驅動程式無法防止更新，如果 SQL_ACCESS_MODE 設 SQL_MODE_READ_ONLY。|  
 |SQL_AUTOCOMMIT|Microsoft Excel 驅動程式僅支援 SQL_AUTOCOMMIT 設為開啟 （預設狀態），因為它們並不支援交易。|  

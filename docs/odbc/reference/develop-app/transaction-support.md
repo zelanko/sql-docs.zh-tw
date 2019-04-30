@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306041"
 ---
 # <a name="transaction-support"></a>交易支援
 交易支援的程度是驅動程式定義。 ODBC 被設計來在單一使用者或桌面的資料庫具有不需要管理多個更新，其資料上實作。 此外，某些支援交易的資料庫進行只能在將的 SQL、 資料操作語言 (DML) 陳述式有限制或特殊的交易語意，有關使用資料定義語言 (DDL) 的使用中交易時。 也就是可能有多個同時更新資料表但未變更的數目和定義的資料表在交易期間的交易支援。  

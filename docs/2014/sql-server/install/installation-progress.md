@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff48c85e24c0f2c21e06fa868ee933e9455e25c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244703"
 ---
 # <a name="installation-progress"></a>安裝進度
   請使用 **安裝精靈的** [安裝進度] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的狀態。  

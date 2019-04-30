@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232287"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 命令
 建立資料表，具有指定的欄位。  
@@ -47,7 +47,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>引數  
- 建立資料表&#124;DBF *TableName1*  
+ CREATE TABLE &#124; DBF *TableName1*  
  指定要建立之資料表的名稱。 資料表 和 DBF 選項都相同。  
   
  名稱*LongTableName*  
@@ -58,7 +58,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  FREE  
  指定的資料表不會加入至開啟的資料庫。 如果資料庫尚未開啟，不需要免費。  
   
- *(FieldName1 FieldType* [( *nFieldWidth* [， *nPrecision*])]  
+ *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
  請指定欄位名稱、 欄位型別、 欄位寬度和欄位的有效位數 （小數位數），分別。  
   
  *FieldType*指出欄位的是單一字母[資料型別](../../odbc/microsoft/visual-foxpro-field-data-types.md)。 某些欄位資料類型會要求您指定*nFieldWidth*或是*nPrecision*或兩者。  
@@ -73,10 +73,10 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  如果您省略 NULL 和 NOT NULL、 SET NULL 目前設定會決定欄位中是否允許 null 值。 不過，如果您省略 NULL 和 NOT NULL，而且包含主索引鍵或唯一的子句，會忽略的目前設定的 SET NULL 和欄位預設為 NOT NULL。  
   
- 檢查*lExpression1*  
+ CHECK *lExpression1*  
  指定欄位的驗證規則。 *lExpression1*可以是使用者定義函式。 每當附加空的記錄，則會檢查驗證規則。 如果驗證規則不允許附加的記錄中的空白欄位值，則會產生錯誤。  
   
- 錯誤*cMessageText1*  
+ ERROR *cMessageText1*  
  指定欄位規則會產生錯誤時，會顯示 Visual FoxPro 的錯誤訊息。 瀏覽 視窗或 編輯 視窗中變更資料時，才會顯示訊息。  
   
  預設*eExpression1*  
@@ -93,7 +93,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  針對主要或候選索引所使用的欄位中不允許 null 值和重複的記錄。 不過，Visual FoxPro 不會產生錯誤，如果您建立主要或候選索引支援 null 值的欄位。 Visual FoxPro 會產生錯誤，如果您嘗試將輸入欄位，用於主要或候選索引中的空值或重複的值。  
   
- 參考*TableName2*[標記*TagName1*]  
+ REFERENCES *TableName2*[TAG *TagName1*]  
  指定要建立持續性的關聯性的父資料表。 如果您省略標記*TagName1*，使用父資料表的主索引鍵建立關聯性。 如果父資料表沒有主索引鍵，則 Visual FoxPro 會產生錯誤。  
   
  包含標記*TagName1*建立根據現有的索引標籤的父資料表的關聯性。 索引標籤名稱可以包含最多 10 個字元。  
@@ -115,23 +115,23 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  資料表只能有一個主要的索引，因為您不能包含這個子句，如果您已經建立主要索引的欄位。 Visual FoxPro 會產生錯誤，如果您在 CREATE TABLE 中包含多個 PRIMARY KEY 子句。  
   
- 唯一*eExpression3*標記*TagName3*  
+ UNIQUE *eExpression3*TAG *TagName3*  
  建立候選項目索引。 *eExpression3*指定資料表中的任何欄位的組合。 不過，如果您已經建立主要索引與其中一個主索引鍵的選項，您不能包含主索引鍵所指定的欄位。 標記*TagName3*指定建立的候選項目索引標籤的標記名稱。 索引標籤名稱可以包含最多 10 個字元。  
   
  資料表可以有多個候選項目索引。  
   
- 外部索引鍵*eExpression4*標記*TagName4*[NODUP]  
+ FOREIGN KEY *eExpression4*TAG *TagName4*[NODUP]  
  建立外部 （非主要） 索引，並建立父資料表之關聯性。 *eExpression4*指定外部索引鍵運算式，並*TagName4*指定名稱之外部索引鍵標記的建立 *。* 索引標籤名稱可以包含最多 10 個字元。 包含 NODUP 建立候選項目外部的索引。  
   
  您可以建立多個外部索引的索引資料表，但外部索引的索引運算式必須指定資料表中的不同欄位。  
   
- 參考*TableName3*[標記*TagName5*]  
+ REFERENCES *TableName3*[TAG *TagName5*]  
  指定要建立持續性的關聯性的父資料表。 包含標記*TagName5*建立父資料表的索引標籤為基礎的關聯性。 索引標籤名稱可以包含最多 10 個字元。 根據預設，如果您省略標記*TagName5，* 使用父資料表的主索引鍵建立關聯性。  
   
- 請檢查*eExpression2*[錯誤*cMessageText2*]  
+ CHECK *eExpression2*[ERROR *cMessageText2*]  
  指定資料表驗證規則。 錯誤*cMessageText2*指定資料表驗證規則執行時，會顯示 Visual FoxPro 的錯誤訊息。 只有當資料瀏覽 視窗中變更或編輯視窗時，會顯示訊息。  
   
- 從陣列*ArrayName*  
+ FROM ARRAY *ArrayName*  
  指定現有的陣列，其內容是名稱、 類型、 有效位數和小數位數資料表中的每個欄位的名稱。 可以使用定義陣列的內容**AFIELDS**（） 函式。  
   
 ## <a name="remarks"></a>備註  
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC 語法|Visual FoxPro 語法|  
 |-----------------|--------------------------|  
-|CREATE TABLE*基底資料表名稱*<br /><br /> (*資料行識別碼資料型別*<br /><br /> [非 NULL]<br /><br /> [，*資料行識別碼資料型別*<br /><br /> [NOT NULL]...)|建立資料表*TableName1* [名稱*LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [， *nPrecision*])]<br /><br /> [不是 NULL])|  
+|CREATE TABLE*基底資料表名稱*<br /><br /> (*資料行識別碼資料型別*<br /><br /> [非 NULL]<br /><br /> [，*資料行識別碼資料型別*<br /><br /> [NOT NULL]...)|CREATE TABLE *TableName1* [NAME *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [不是 NULL])|  
   
  當您建立資料表，使用驅動程式時，驅動程式會以允許其他使用者資料表的存取權的建立後立即關閉資料表。 這不同於 Visual FoxPro，讓資料表保持在開啟以獨佔方式在建立時。 不過，如果您包含 CREATE TABLE 陳述式的資料來源上預存程序執行時，資料表是處於開啟狀態。  
   

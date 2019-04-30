@@ -1,5 +1,5 @@
 ---
-title: 工作 5:匯出清理結果到 Excel 檔案 |Microsoft Docs
+title: 工作 5：匯出清理結果到 Excel 檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276778"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5:將清理結果匯出到 Excel 檔案
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>工作 5：將清理結果匯出到 Excel 檔案
   在這項工作中，您會將清理活動的結果匯出到 Excel 檔案。 請參閱[匯出階段](https://msdn.microsoft.com/library/hh213061.aspx#Export)如需詳細資訊。  
   
 1.  在右窗格中，選取**Excel** for**目的型別**。  

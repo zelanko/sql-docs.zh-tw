@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252711"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連線到 MySQL (MySQLToSQL)
 使用**連接到 MySQL**對話方塊，即可連接至您想要移轉的 MySQL 資料庫。  

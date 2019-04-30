@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae95160a11a965e47845726748c2b9449a819e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284957"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>擷取描述項欄位中的值
 應用程式可以呼叫**SQLGetDescField**取得的單一欄位的描述項記錄。 **SQLGetDescField**在 ODBC 中，定義的所有描述項欄位和驅動程式定義欄位也會提供應用程式存取權。  

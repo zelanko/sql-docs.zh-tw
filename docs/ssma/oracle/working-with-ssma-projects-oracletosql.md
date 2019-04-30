@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283556"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 專案 (OracleToSQL)
 若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
@@ -80,7 +80,7 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure 的 SQL 資料庫  
+    -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>自訂專案設定  
 除了定義套用到所有新的 SSMA 專案的預設專案設定，您可以自訂每個專案的設定。 如需詳細資訊，請參閱 <<c0> [ 設定專案選項&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。</c0>  
@@ -100,7 +100,7 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想儲存中繼資料，但不選取任何核取方塊。  
   
-    2.  按一下 [**儲存**] 按鈕。  
+    2.  按一下 [儲存] 按鈕。  
   
         SSMA 會剖析 Oracle 結構描述，並將中繼資料儲存到專案檔。  
   

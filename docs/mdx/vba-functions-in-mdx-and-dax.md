@@ -1,5 +1,5 @@
 ---
-title: MDX 和 DAX 中的 VBA 函數 |Microsoft 文件
+title: MDX 和 DAX 中的 VBA 函數 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251553"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
 
 
-  本文件包含之所有 VBA 函數中可用的交互的參考[應用程式函式的 Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX 支援; 此外，此清單包含附註和 DAX 語言的功能等價時.  
+  本文件包含中可用的所有 VBA 函數的交互的參考[Visual Basic for Applications 函式](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications)MDX 支援; 此外，此清單包含附註與 DAX 語言的功能是否相等時.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函數參考  
   
@@ -51,8 +51,8 @@ ms.locfileid: "34743887"
 |CurDir|不支援||  
 |CVar|僅限 MDX||  
 |CVErr|不支援||  
-|date|僅限 MDX|**警告**DAX 會實作具有相同的不同函式名稱，用來從指定的引數產生日期類型值的 DATE (Year，Month，Day) 函數|  
-|DateAdd|僅限 MDX|**警告**DAX 會實作具有相同的不同函式名稱，則 DATEADD (\<日期 >，< number_of_intervals >，\<間隔 >) 函數，用來移位給定的日期，由數項給定的間隔|  
+|date|僅限 MDX|**警告**DAX 會實作不同的函式具有相同名稱，用來從指定的引數產生日期類型值的 DATE (Year，Month，Day) 函數|  
+|DateAdd|僅限 MDX|**警告**DAX 會實作不同的函式具有相同名稱： dateadd (\<日期 >，< number_of_intervals >，\<間隔 >) 函數，用來移位給定的日期，由數項給定的間隔|  
 |DateDiff]|僅限 MDX||  
 |DatePart|僅限 MDX||  
 |DateSerial|僅限 MDX||  
@@ -68,7 +68,7 @@ ms.locfileid: "34743887"
 |FileAttr|不支援||  
 |FileDateTime|不支援||  
 |FileLen|不支援||  
-|篩選|不支援|**警告**MDX 會實作具有相同名稱的不同函式; FILTER （Set_Expression，Logical_Expression） 函數會傳回所產生篩選根據搜尋條件，從指定的引數的指定的集合的集合<br /><br /> **警告**DAX 會實作具有相同的不同函式名稱： FILTER (\<資料表 >，\<篩選 >) 函數會傳回代表另一個資料表或從指定的引數運算式的子集的資料表|  
+|篩選|不支援|**警告**MDX 會實作具有相同名稱的不同函式; FILTER （Set_Expression，Logical_Expression） 函數傳回的結果篩選指定的集合，根據給定的引數的搜尋條件的集合<br /><br /> **警告**DAX 會實作不同的函式具有相同名稱; 篩選器 (\<資料表 >，\<篩選 >) 函數會傳回代表另一個資料表或從指定的引數的運算式的子集的資料表|  
 |Fix|僅限 MDX||  
 |Format (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|不支援||  
@@ -83,7 +83,7 @@ ms.locfileid: "34743887"
 |GetSetting|不支援||  
 |Hex|僅限 MDX||  
 |Hour|DAX、MDX||  
-|Iif|僅限 MDX|**警告**DAX 會實作名稱類似的函式： IF (logical_test，value_if_true，value_if_false) 函數。|  
+|Iif|僅限 MDX|**警告**DAX 會實作類似的函式名稱：IF (logical_test，value_if_true，value_if_false) 函數。|  
 |IMEStatus|不支援||  
 |輸入|不支援||  
 |InputBox|不支援||  
@@ -107,7 +107,7 @@ ms.locfileid: "34743887"
 |Len|DAX、MDX||  
 |Loc|不支援||  
 |LOF|不支援||  
-|Log|僅限 MDX|**重要**DAX 會實作具有相同的不同函式名稱，LOG (數字，base) 函數。 依照給定引數所指定的底數，傳回數字的對數。|  
+|Log|僅限 MDX|**重要**DAX 會實作不同的函式具有相同名稱，LOG (number，base) 函數。 依照給定引數所指定的底數，傳回數字的對數。|  
 |LTrim|僅限 MDX||  
 |MacID|不支援||  
 |MacScript|不支援||  

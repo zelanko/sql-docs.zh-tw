@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d664b5f66b742b02404dc35952d02b03b8c7103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232239"
 ---
 # <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>使用 ExtendedAnsiSQL 來建立及置放檢視和程序
 ExtendedAnsiSQL 旗標為開啟時，Jet 4.0 支援建立和卸除檢視和程序透過 SQL 的能力。 這些檢視和程序將不會顯示透過存取的。

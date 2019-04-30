@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273153"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
   全文檢索索引與全文檢索查詢的效能會受硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  
@@ -105,7 +105,7 @@ ms.locfileid: "54128610"
   
  您可以使用下列公式來概略估計篩選背景程式主機所耗用的記憶體數量 (以位元組為單位)：  
   
- *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
   
  上述公式中變數的預設值如下所示：  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54128610"
   
 |平台|估計 fdhost.exe 記憶體需求，在 MB*F*<sup>1</sup>|計算最大伺服器記憶體-公式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _搜耙範圍數目_ **&#42;** 50|_M_ **= 最小值 (** _T_ **，** 2000年 **)-*`F`* -** 500|  
+|x86|_F_ **=** _搜耙範圍數目_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
 |x64|_F_ **=** _搜耙範圍數目_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
  <sup>1</sup>多個完整母體擴展正在進行中，如果計算的 fdhost.exe 記憶體需求，每個分別為*F1*， *F2*，依此類推。 然後將 *M* 計算為 _T_**-** sigma **(**_F_i **)**。  

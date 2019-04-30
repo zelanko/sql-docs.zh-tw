@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283149"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>判斷哪一個叢集節點失敗 Analytics Platform System
 本主題描述如何判斷失敗發生叢集容錯移轉後已發出叢集容錯移轉警示 Analytics Platform System (APS) 節點的名稱。 疑難排解叢集容錯移轉的一部分，您必須判斷連絡 Microsoft，以協助解決此問題之前失敗的節點名稱。  

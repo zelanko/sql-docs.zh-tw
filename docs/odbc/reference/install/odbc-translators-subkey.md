@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280784"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 轉譯程式子機碼
 ODBC 轉譯程式子機碼下的值清單的已安裝的轉譯器。 下表顯示這些值的格式。  
   
-|名稱|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|*translator desc*|REG_SZ|**安裝**|  
+|*translator-desc*|REG_SZ|**安裝**|  
   
  *Translator desc*轉譯程式開發人員所定義名稱。  
   

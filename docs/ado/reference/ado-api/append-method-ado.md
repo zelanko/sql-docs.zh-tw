@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249024"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 將物件附加至集合。 如果集合很[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，新[欄位](../../../ado/reference/ado-api/field-object.md)可以先建立物件，它會附加至集合。  
@@ -38,13 +38,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *collection*  
  集合物件。  
   
- *欄位*  
+ *fields*  
  A**欄位**集合。  
   
  *object*  
  物件變數，表示要附加的物件。  
   
- *[名稱]*  
+ *名稱*  
  A**字串**值，包含新名稱**欄位**物件，而且不可以是相同的名稱中的任何其他物件*欄位*。  
   
  *型別*  

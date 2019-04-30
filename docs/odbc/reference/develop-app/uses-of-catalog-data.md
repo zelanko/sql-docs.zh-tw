@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9b75d59d8fc28e364f5826d95e7fc50cb6afda7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312526"
 ---
 # <a name="uses-of-catalog-data"></a>使用目錄資料
 應用程式會使用目錄資料的各種不同的方式。 以下是一些常見的用法：  

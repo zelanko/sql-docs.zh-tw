@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273023"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>專案設定 （轉換） (DB2ToSQL)
 [轉換] 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換 DB2 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法。  
@@ -170,7 +170,7 @@ SSMA 都可以將許多鎖定資料表陳述式轉換資料表提示。 SSMA 無
 |SHARE UPDATE = 資料列共用|ROWLOCK HOLDLOCK|  
 |共用|TABLOCK HOLDLOCK|  
 |共用資料列獨佔|TABLOCK、 XLOCK，HOLDLOCK|  
-|獨佔|TABLOCKX HOLDLOCK|  
+|EXCLUSIVE|TABLOCKX HOLDLOCK|  
   
 當您選取的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   

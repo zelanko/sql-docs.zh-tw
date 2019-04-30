@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266061"
 ---
 # <a name="choose-link-page-report-manager"></a>選擇連結頁面 (報表管理員)
   使用 [選擇連結] 頁面來選擇不同的報表，作為目前已選取連結報表的基礎。 連結報表以已經發行至報表伺服器的其他報表為基礎。 連結報表會使用基底報表的配置和資料，但是具有個別的屬性頁面，可讓您自訂參數屬性、安全性設定、名稱、描述和位置。  

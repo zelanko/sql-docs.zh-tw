@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13ab95c762573be002782c06615fc6f01317499f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258806"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 

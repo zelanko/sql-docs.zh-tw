@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302473"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>參數化命令與中介 COMPUTE 命令
 一般的參數化的圖形附加命令有一個子句，會建立父代**資料錄集**查詢命令與建立的子系的另一個子句**資料錄集**使用參數化的查詢命令-也就是將包含的參數預留位置的命令 (問號，"？")。 產生的形狀**資料錄集**有父代會佔用較高層級的兩個層級和子系會佔用低層級。  

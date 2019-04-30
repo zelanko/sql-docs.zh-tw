@@ -16,19 +16,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281013"
 ---
 # <a name="odbc-subkey"></a>ODBC 子機碼
 ODBC 子機碼底下的值會指定 ODBC 追蹤選項。 透過 [ODBC 資料來源管理員] 對話方塊，即可顯示 [追蹤] 索引標籤設定這些選項**SQLManageDataSources**。 ODBC 子機碼本身是選擇性的。 這些值的格式會是下表所示。  
   
-|名稱|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
 |追蹤|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*tracefile 路徑*|  
+|TraceFile|REG_SZ|*tracefile-path*|  
   
  的值具有下表中所述的意義。  
   

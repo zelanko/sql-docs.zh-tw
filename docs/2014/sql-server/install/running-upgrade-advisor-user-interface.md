@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245963"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>執行 Upgrade Advisor (使用者介面)
   在升級規劃期間，您可以執行 Upgrade Advisor 來分析本機或遠端元件。 Upgrade Advisor 會針對分析的每個元件和執行個體產生一份報表。  
@@ -48,7 +48,7 @@ ms.locfileid: "48176103"
   
 6.  產生升級問題的報表。  
   
- 如需有關 Upgrade Advisor 分析精靈的詳細資訊，請參閱 <<c0> [ 如何： 執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)。  
+ 如需有關 Upgrade Advisor 分析精靈的詳細資訊，請參閱[How to:執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)。  
   
  所需的每個步驟的特定資訊，請參閱[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "48176103"
   
  如需使用報表檢視器的逐步指示，請參閱下列主題：  
   
--   [如何：檢視升級建議程式報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [如何：檢視 Upgrade Advisor 報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
 -   [如何：篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [如何：匯出報表](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [如何：將報表匯出](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [如何： 執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [如何：執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

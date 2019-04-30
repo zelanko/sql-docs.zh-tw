@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275897"
 ---
 # <a name="error-object"></a>Error 物件
 包含屬於單一作業牽涉到提供者的資料存取錯誤的詳細資料。  
@@ -62,4 +62,4 @@ ms.locfileid: "47802926"
  [描述、 HelpContext、 HelpFile、 NativeError、 數目、 來源和 SQLState 屬性範例 （VC + +）](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors 集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

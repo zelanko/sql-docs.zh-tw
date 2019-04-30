@@ -1,5 +1,5 @@
 ---
-title: bcp_setcolfmt |Microsoft Docs
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226237"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**函數會取代[bcp_colfmt](bcp-colfmt.md)。 在指定資料行定序**bcp_setcolfmt**函式必須使用。 [bcp_setbulkmode](bcp-setbulkmode.md)可用來指定多個資料行格式。  

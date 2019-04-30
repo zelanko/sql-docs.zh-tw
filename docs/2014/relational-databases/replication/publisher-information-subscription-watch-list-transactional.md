@@ -13,25 +13,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55a3be7188905ccebb9f9d09567879b6bca13de5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261750"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional-publication-sql-server-2005-and-later"></a>發行者資訊，訂閱監看清單 (交易式發行集，SQL Server 2005 和更新的版本)
-  執行 SQL Server 2005 和更新版本的散發者可以使用 **[訂閱監看清單]** 索引標籤；它是要用來在選取之發行者端的所有可用發行集上，顯示訂閱的資訊。 您可以篩選訂閱清單以查看錯誤、警告以及任何執行不良的訂閱。 此索引標籤提供系統管理員可以監視發行者端所有複寫活動的單一位置：複寫監視器 」 會顯示需要注意，根據選取的複寫類型和中選擇的選項的所有訂用帳戶**顯示**下拉式清單方塊。 由於此索引標籤上顯示的項目會依據目前的狀態與效能，因此唯有在目前符合 **[顯示]** 清單方塊中之選項的訂閱，才會在這個頁面上顯示。  
+  執行 SQL Server 2005 和更新版本的散發者可以使用 **[訂閱監看清單]** 索引標籤；它是要用來在選取之發行者端的所有可用發行集上，顯示訂閱的資訊。 您可以篩選訂閱清單以查看錯誤、警告以及任何執行不良的訂閱。 此索引標籤為系統管理員提供一個可監視「發行者」端所有複寫活動的單一位置：「複寫監視器」會根據選取的複寫類型，以及在 [顯示] 下拉式清單方塊中選擇的選項，顯示所有需要注意的訂閱。 由於此索引標籤上顯示的項目會依據目前的狀態與效能，因此唯有在目前符合 **[顯示]** 清單方塊中之選項的訂閱，才會在這個頁面上顯示。  
   
 ## <a name="options"></a>選項。  
  如需詳細資訊以及與訂閱相關的工作，請以滑鼠右鍵按一下該訂閱的資料列，然後按一下捷徑功能表上的選項。 若要變更方格顯示資料的方式，請以滑鼠右鍵按一下方格，然後按一下下列其中一個選項：  
   
--   **排序**:中的一或多個資料行的排序**排序資料行** 對話方塊。  
+-   **排序**：在 [排序資料行] 對話方塊中排序一個或多個資料行。  
   
--   **選擇要顯示的欄**:選取要顯示的順序來顯示它們在哪一個資料行 **[選擇資料行**] 對話方塊。  
+-   **選擇要顯示的資料行**：選取要顯示哪些資料行，以及這些資料行在 [選擇資料行] 對話方塊中的顯示順序。  
   
--   **篩選**:篩選依據的資料行值的方格中的資料列**篩選設定** 對話方塊。  
+-   **篩選**：根據 [篩選設定] 對話方塊中的資料行值，篩選方格中的資料列。  
   
--   **清除篩選**:清除方格的所有篩選設定。  
+-   **清除篩選**：清除所有篩選設定方格。  
   
  篩選設定是每個方格特有的設定。 資料行選取和排序會套用至所有相同類型的方格，例如每個發行者的發行集方格。  
   
@@ -67,10 +67,10 @@ ms.locfileid: "54126528"
  唯有設定了臨界值，才會顯示狀態值 **[效能嚴重不足]** 和 **[即將過期/已過期]** 。 如需效能測量和設定閾值的資訊，請參閱[使用複寫監視器監視效能](monitor/monitor-performance-with-replication-monitor.md)和[在複寫監視器中設定閾值和警告](monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
  **訂閱**  
- 每個訂用帳戶，在表單中的名稱：*SubscriberName:SubscriptionDatabaseName*。  
+ 每一個訂閱的名稱，格式為：*SubscriberName:SubscriptionDatabaseName*。  
   
  **發行集**  
- 與訂用帳戶同步處理，在表單中的發行集名稱：*PublicationDatabaseName:發行集名稱*。  
+ 與訂閱同步處理的發行集名稱，格式為：*PublicationDatabaseName:PublicationName*。  
   
  **[效能]**  
  每個訂閱的效能比是以複寫監視器進行的最近測量為基礎，且不會反映記錄效能。 會針對有定義效能臨界值的發行集訂閱，測量其效能；如果發行集沒有定義效能臨界值，此資料行就會顯示 **[未啟用]**。 效能評比是下列其中一個值：  
@@ -95,7 +95,7 @@ ms.locfileid: "54126528"
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](monitor/start-the-replication-monitor.md)   
- [檢視資訊並執行的工作，使用 「 複寫監視器](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [使用複寫監視器來檢視資訊及執行工作](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [監視複寫](monitoring-replication.md)  
   
   

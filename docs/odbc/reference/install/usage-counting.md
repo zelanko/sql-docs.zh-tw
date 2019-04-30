@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273382"
 ---
 # <a name="usage-counting"></a>使用計數
 > [!NOTE]  
@@ -50,19 +50,19 @@ ms.locfileid: "47664626"
 >   
 >  Microsoft  
 >   
->  Windows  
+>  視窗  
 >   
 >  CurrentVersion  
 >   
->  以 Shareddll  
+>  SharedDlls  
   
  它會將這些值的資料設定為 1，並將檔案複製到系統。 一次安裝元件時，安裝程式或安裝程式 DLL 遞增使用方式計數。 當移除該元件時，安裝程式或安裝程式 DLL 遞減的使用次數。 如果任何使用方式計數降至 0，安裝程式或安裝程式 DLL 移除檔案的值，然後如果元件是驅動程式或轉譯器，會刪除檔案。 應該不會刪除驅動程式管理員的檔案。  
   
  下表中顯示檔案的使用方式計數值的格式。  
   
-|名稱|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|*完整路徑*|REG_DWORD|*計數*|  
+|*full-path*|REG_DWORD|*計數*|  
   
  比方說，假設 Informix 的驅動程式會使用 Infrmx32.dll 和 Infrmx32.hlp 檔案，並假設此驅動程式已經安裝了兩次。 Informix 驅動程式以 Shareddll 子機碼下的值應如下所示：  
   

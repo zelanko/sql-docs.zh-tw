@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270076"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>專案 Settings(Synchronization) (DB2ToSQL)
 同步處理頁面**專案設定** 對話方塊中包含自訂 SSMA 載入及重新整理的資料庫物件，例如資料表和預存程序，設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

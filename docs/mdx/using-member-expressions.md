@@ -1,5 +1,5 @@
 ---
-title: 使用成員運算式 |Microsoft 文件
+title: 使用成員運算式 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251450"
 ---
 # <a name="using-member-expressions"></a>使用成員運算式
 
@@ -57,10 +57,10 @@ Dimension_Name
   
 ```  
   
- 存在著許多會傳回成員的 MDX 函數。 如需完整清單，請參閱[MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ 存在著許多會傳回成員的 MDX 函數。 如需完整清單，請參閱 < [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  如需有關成員名稱及成員索引鍵的詳細資訊，請參閱[使用成員、 Tuple 和集合&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。  
+>  如需有關成員名稱及成員索引鍵的詳細資訊，請參閱 <<c0> [ 使用成員、 Tuple 和集合&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

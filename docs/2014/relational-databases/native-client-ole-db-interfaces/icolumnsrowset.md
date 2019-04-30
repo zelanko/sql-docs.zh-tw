@@ -1,5 +1,5 @@
 ---
-title: IColumnsRowset |Microsoft Docs
+title: IColumnsRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c9a854a175abe570ae6357f89c6c3e75e2eff35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241222"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會將 DBCOLUMN_BASETABLEINSTANCE 資料行加入至 IColumnsRowset::GetColumnRowset。 這個資料行會傳回 DBTYPE_I2 並保留給 Microsoft 使用。 在未來的版本中，這個資料行中的資訊可能會變更。  

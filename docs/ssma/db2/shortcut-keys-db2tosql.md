@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7861d38222658edba2c174d0e6a71aa740d08403
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277463"
 ---
 # <a name="shortcut-keys-db2tosql"></a>快速鍵 (DB2ToSQL)
 您可以使用鍵盤快速鍵來巡覽 SSMA 應用程式。 如需詳細資訊，請參閱下列主題。  

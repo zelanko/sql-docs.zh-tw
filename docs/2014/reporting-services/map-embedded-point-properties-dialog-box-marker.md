@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88898800b2d24bcf6af7f421dc3ae6e91f123728
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63279012"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>地圖內嵌點屬性對話方塊、標記
   選取 **[內嵌點屬性]** 對話方塊上的 **[標記]** 來變更下列地圖元素的標記類型和標記大小選項：  

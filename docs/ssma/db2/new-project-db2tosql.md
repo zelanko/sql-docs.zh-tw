@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 05ef20ebb3458e32cda4cc1f0bbe9a924ed8e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281694"
 ---
 # <a name="new-project-db2tosql"></a>新的專案 (DB2ToSQL)
 使用**新的專案**對話方塊，即可建立新的 SSMA 專案。 若要存取**新的專案**對話方塊的 **檔案**功能表上，按一下 **新專案**。  
@@ -36,5 +36,5 @@ ms.locfileid: "47672983"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure 的 SQL 資料庫  
+-   Azure SQL DB  
   

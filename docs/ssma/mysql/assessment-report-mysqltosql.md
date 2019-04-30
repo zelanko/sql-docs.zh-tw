@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 72b6171864c0ab801e89d3eba5a19ff61031a81e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253285"
 ---
 # <a name="assessment-report-mysqltosql"></a>評定報告 (MySQLToSQL)
 評定報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，也可以幫助您評估複雜度和成本的移轉專案。  
@@ -26,7 +26,7 @@ ms.locfileid: "47762716"
   
 |||  
 |-|-|  
-|**詞彙**|**定義**|  
+|**詞彙**|**[定義]**|  
 |**轉換統計資料**|顯示依陳述式類型的轉換統計資料。 這個窗格會顯示當群組物件，例如結構描述，或在左窗格中選取某物件不需要程式碼。|  
 |**依類別分組的物件**|依類別顯示物件的數目。 這個窗格為可見時，才群組物件，例如結構描述，或在左窗格中選取某物件不需要程式碼。|  
 |**統計資料**|顯示所選物件的轉換統計資料。 在左窗格中選取具有程式碼的個別物件時才，此窗格是可見的。 您可能必須展開**統計資料**，其正上方**來源** 窗格中，若要檢視此窗格。|  

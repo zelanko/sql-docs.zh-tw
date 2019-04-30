@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectInfo 函式 |Microsoft Docs
+title: SQLSetConnectInfo Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88af314c1cca5ef2d7cdbdb2b5e555b81d02be01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287304"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 函式
 **合規性**  

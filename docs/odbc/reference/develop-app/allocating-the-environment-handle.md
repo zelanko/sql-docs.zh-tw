@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287671"
 ---
 # <a name="allocating-the-environment-handle"></a>配置環境控制代碼
 ODBC 中的任何應用程式的第一個工作是載入驅動程式管理員;如何做到這點與作業系統相關。 比方說，在電腦上執行 Microsoft® Windows NT® Server/Windows 2000 Server、 Windows NT 工作站/Windows 2000 Professional 或 Microsoft Windows® 95/98，應用程式可能是所連結的驅動程式管理員文件庫或呼叫**LoadLibrary**載入驅動程式管理員的 DLL。  

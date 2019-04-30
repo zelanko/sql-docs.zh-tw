@@ -1,5 +1,5 @@
 ---
-title: BottomSum (MDX) |Microsoft 文件
+title: BottomSum (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306722"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
 
@@ -42,7 +42,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  **BottomSum**函式會計算指定的集合，以遞增順序排序集合上評估指定的量值的總和。 然後，函數會傳回最低值的元素，這些元素之指定數值運算式的總計至少是指定值 (sum)。 這個函數會傳回累計總計至少是指定值之集合的最小子集。 從最小至最大排序傳回的元素。  
   
 > [!IMPORTANT]  
->  **BottomSum**函式，例如[TopSum](../mdx/topsum-mdx.md)函式，必會破壞階層架構。  
+>  **BottomSum**函數跟[TopSum](../mdx/topsum-mdx.md)函式，必會破壞階層架構。  
   
 ## <a name="examples"></a>範例  
  下列範例會針對 Bike 類別目錄傳回 2003 會計年度 Geography 維度內 Geography 階層中 City 層級之成員的最小集合，此集合的累計總計使用 Reseller Sales Amount 量值計算至少 50,000 的總和 (從此集合中最小銷售數的成員開始)：  
@@ -66,6 +66,6 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  `WHERE([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003])`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

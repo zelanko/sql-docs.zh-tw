@@ -5,16 +5,16 @@ description: 了解如何連接到 SQL Server 的主要執行個體和 SQL Serve
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860169"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472274"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>連線到 SQL Server 的巨量資料叢集使用 Azure Data Studio
 
@@ -45,7 +45,7 @@ ms.locfileid: "58860169"
 1. 從命令列中，找出 IP 主要執行個體使用下列命令：
 
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-cluster-name>
    ```
 
 1. 在 Azure Data Studio，按下**F1** > **新連線**。
@@ -83,7 +83,7 @@ Azure Data Studio 2019 年 2 月版本中，連接到 SQL Server 的主要執行
 1. 從命令列中，尋找您的 HDFS/Spark 閘道與其中一個下列的命令的 IP 位址。
 
    ```
-   kubectl get svc endpoint-security -n <your-cluster-name>
+   kubectl get svc gateway-svc-external -n <your-cluster-name>
    ```
  
 1. 在 Azure Data Studio，按下**F1** > **新連線**。

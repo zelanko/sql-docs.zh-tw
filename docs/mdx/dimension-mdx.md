@@ -1,5 +1,5 @@
 ---
-title: 維度 (MDX) |Microsoft 文件
+title: 維度 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248223"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
 
@@ -47,7 +47,7 @@ Member_Expression.Dimension
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ### <a name="examples"></a>範例  
- 下列範例會使用**維度**函數搭配**名稱**函式，以傳回指定成員的階層名稱。  
+ 下列範例會使用**維度**函式，搭配**名稱**函式，傳回指定成員的階層名稱。  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Name  
@@ -63,7 +63,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- 下列範例會使用**維度**函數搭配**成員**和**計數**函數，來傳回含有特定的成員在階層中的成員數目。  
+ 下列範例會使用**維度**函式，搭配**成員**並**計數**函數來傳回階層中的成員數目包含指定的成員。  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -73,9 +73,9 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另請參閱  
  [計數&#40;階層層級&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [計數&#40;設定&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Count &#40;集合&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [層級&#40;MDX&#41;](../mdx/levels-mdx.md)   
  [成員&#40;設定&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

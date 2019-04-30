@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e36192279bfc5730559c795ee076db11394ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313452"
 ---
 # <a name="setting-the-date-format-on-connection"></a>設定連線的日期格式
 > [!IMPORTANT]  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0c816aea527a9cf667d96c323249a572d756b3d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240105"
 ---
 # <a name="conclusion"></a>結論
   在本教學課程中，您已學會如何一起使用 SQL Server Integration Services (SSIS)、Master Data Services (MDS) 和 Data Quality Services (DQS) 來實作範例企業資訊管理 (EIM) 解決方案。 首先，您使用 Data Quality Client 工具來建立包含供應商相關知識的 DQS 知識庫、針對知識庫清理 Excel 檔案中的供應商輸入資料，然後使用知識庫中的比對原則來比對供應商資料，以識別及移除資料中的重複項。 接下來，您使用適用於 Excel 的 MDS 增益集，將已清理和比對的供應商清單儲存在 MDS 中。 最後，您藉由建立 SSIS 解決方案，將接收輸入資料、清理及比對資料並在 MDS 中儲存主要資料的整個過程自動化。  

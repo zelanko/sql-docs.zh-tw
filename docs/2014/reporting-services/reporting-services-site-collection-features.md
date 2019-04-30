@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283584"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式提供了三個 SharePoint 網站集合功能。 這些功能支援一般 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式報表環境、適用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]Enterprise Edition 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集功能 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] ，以及 SharePoint 管理中心內 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的管理作業。  

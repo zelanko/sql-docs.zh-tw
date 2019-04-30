@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d24e05e13827624c7bb1b2d771ed1641c8e9ee13
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306554"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>報表屬性對話方塊、版面設定 (報表產生器)
   選取 **版面**上**報表屬性**，來設定整個報表的分頁選項的對話方塊。  

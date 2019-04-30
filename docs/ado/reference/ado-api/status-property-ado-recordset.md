@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5847300af48b39dc12ccb65f5e03f1fdc6f8e795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275884"
 ---
 # <a name="status-property-ado-recordset"></a>Status 屬性 (ADO Recordset)
 指出相對於批次更新目前的記錄或其他的大量作業的狀態。  

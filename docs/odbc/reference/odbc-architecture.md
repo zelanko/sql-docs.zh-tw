@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83e35d58d180336c349e83c7991d27f7007aca4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273631"
 ---
 # <a name="odbc-architecture"></a>ODBC 架構
 ODBC 架構有四個元件：  

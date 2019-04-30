@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c80535cb6482bb6e339998843a6476813430f40
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288275"
 ---
 # <a name="ado-md-methods"></a>ADO MD 方法
 

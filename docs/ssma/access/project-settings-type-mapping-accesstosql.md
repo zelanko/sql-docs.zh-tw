@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299124"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 （類型對應） (AccessToSQL)
 型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱 <<c0> [ 對應來源和目標資料型別](mapping-source-and-target-data-types-accesstosql.md)。  
@@ -46,20 +46,20 @@ ms.locfileid: "51681246"
 |--------------------|------------------------|  
 |**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**位元組**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**長**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**附註**|**nvarchar(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**備忘錄**-適用於 Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**text[\*..\*]**|**nvarchar[\*]**|  
-|**文字 [\*...\*]** -適用於 Access 97|**varchar[\*]**|  
+|**text[\*..\*]** - for Access 97|**varchar[\*]**|  
   
 **[加入]**  
 按一下以新增的資料類型對應清單。  

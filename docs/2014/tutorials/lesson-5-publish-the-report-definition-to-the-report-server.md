@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272872"
 ---
 # <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>第 5 課：將報表定義發行到報表伺服器
   更新報表定義的最後步驟是將報表定義發行回到報表伺服器。  

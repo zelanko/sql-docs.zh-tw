@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312865"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 動態資料指標
-動態資料指標只是： 動態。 它可以偵測到的成員資格、 順序和值之結果集資料指標開啟後所做的變更。 比方說，假設是動態資料指標擷取兩個資料列，而另一個應用程式然後更新其中一個資料列，並刪除其他。 如果動態資料指標則會嘗試重新提取這些資料列，它不會尋找已刪除的資料列，但會傳回更新的資料列的新值。  
+動態資料指標只是： 動態。 它可以偵測到的成員資格、 順序和值之結果集資料指標開啟後所做的變更。 例如，假設動態資料指標擷取兩個資料列，而其他應用程式接著更新其中一個資料列並刪除另一個資料列。 如果動態資料指標則會嘗試重新提取這些資料列，它不會尋找已刪除的資料列，但會傳回更新的資料列的新值。  
   
  動態資料指標偵測所有的更新、 刪除和插入，這兩其自己和其他人所做的。 （這是交易的受到隔離層級，所設定的 SQL_ATTR_TXN_ISOLATION 連接屬性）。Sql_attr_row_status_ptr 設定陳述式屬性所指定之資料列狀態陣列會反映這些變更，而且可以包含 SQL_ROW_SUCCESS、 SQL_ROW_SUCCESS_WITH_INFO、 SQL_ROW_ERROR、 SQL_ROW_UPDATED 和 SQL_ROW_ADDED。 因為動態資料指標不會傳回已刪除的資料列外資料列集，因此無法再辨識結果集中刪除的資料列或資料列狀態陣列中對應的項目存在，它不能傳回 SQL_ROW_DELETED。 藉由呼叫更新資料列時，才傳回 SQL_ROW_ADDED **SQLSetPos**，不會在它由另一個資料指標更新。  
   

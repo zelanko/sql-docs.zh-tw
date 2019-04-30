@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260822"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>一般屬性頁面，報表 (報表管理員)
   使用報表的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代報表定義。 您也可以使用此頁面來建立連結報表。 在頁面頂端指出有關建立或修改報表的人員，以及發生變更之時間的詳細資料。  

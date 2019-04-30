@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db5077b9df2673593b6eaec9622aafd1d2c77234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270624"
 ---
 # <a name="sql-92-cast-function"></a>SQL-92 CAST 函式
 **CAST**以 SQL-92 定義的函式相當於**轉換**在 ODBC 中定義的函式。 對等的函式的語法如下所示：  

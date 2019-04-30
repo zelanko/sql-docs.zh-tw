@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 397c66d85f326819714c497f7efb81d0f91282f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287265"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>配置及釋放描述項
 描述項會以隱含或明確配置，如下列各節中所述。  

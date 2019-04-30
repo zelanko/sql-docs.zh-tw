@@ -1,5 +1,5 @@
 ---
-title: CREATE SESSION CUBE 陳述式 (MDX) |Microsoft 文件
+title: CREATE SESSION CUBE 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248185"
 ---
-# <a name="mdx-data-definition---create-session-cube"></a>MDX 資料定義-建立工作階段 CUBE
+# <a name="mdx-data-definition---create-session-cube"></a>MDX 資料定義 - CREATE SESSION CUBE
 
 
   根據現有的伺服器 Cube，建立並擴展工作階段 Cube。 工作階段 Cube 只有在目前工作階段中才可見，您無法從其他任何工作階段瀏覽或查詢。 關閉工作階段時就會隱含刪除工作階段 Cube。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302371"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>傳遞參數給具名命令
 就如同命令的結果會當做傳遞*出*具名命令，也就是參數的變數參數化的命令可以針對已傳入作為*中*具名命令的變數。  

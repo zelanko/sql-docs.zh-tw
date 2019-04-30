@@ -1,5 +1,5 @@
 ---
-title: （註解）(MDX) |Microsoft 文件
+title: （註解）(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306334"
 ---
 # <a name="comment-mdx-double-slash"></a>註解 MDX 雙斜線
 

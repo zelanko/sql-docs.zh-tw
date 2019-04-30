@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305623"
 ---
 # <a name="types-of-descriptors"></a>描述項的類型
 描述元用來描述下列其中一項：  
@@ -46,7 +46,7 @@ ms.locfileid: "47797286"
 |**應用程式的緩衝區**|應用程式資料列描述項 (ARD)|應用程式參數描述項 (APD)|  
 |**實作緩衝區**|實作資料列描述項 (IRD)|實作參數描述項 (IPD)|  
   
- 參數或資料列緩衝區中，如果應用程式指定不同的資料類型中對應記錄的實作和應用程式的描述元，驅動程式會執行資料轉換時它會使用描述元。 比方說，它可能會將數值和日期時間值轉換成字元字串格式。 (針對有效的轉換，請參閱[附錄 d： 資料類型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
+ 參數或資料列緩衝區中，如果應用程式指定不同的資料類型中對應記錄的實作和應用程式的描述元，驅動程式會執行資料轉換時它會使用描述元。 比方說，它可能會將數值和日期時間值轉換成字元字串格式。 (針對有效的轉換，請參閱[附錄 d:資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)  
   
  描述元可以執行不同的角色。 不同的陳述式可以共用應用程式明確配置任何描述項。 在單一陳述式的資料列描述項可以做為另一個陳述式中的參數描述項。  
   

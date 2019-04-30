@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d00e2180f1d1e49caf7c5680fe8fa2d87579d85
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968264"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462111"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>地圖平行屬性對話方塊、標籤
   使用**MapParallel 屬性**對話方塊來變更地圖檢視區中水平格線的標籤選項。 根據指定之檢視區的座標系統，平行表示下列值：  

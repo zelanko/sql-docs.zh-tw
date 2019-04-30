@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297427"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>資料移轉設定 (SybaseToSQL)
   
@@ -48,7 +48,7 @@ ms.locfileid: "51658132"
   
 有兩個按鈕出現的閱聽。:  
   
--   **套用：** 按一下 **套用**套用已變更的設定。  
+-   **適用於：** 按一下 **套用**套用已變更的設定。  
   
 -   **取消：** 按一下 **取消**還原出現設定進行變更之前。  
   

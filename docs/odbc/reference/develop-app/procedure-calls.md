@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284581"
 ---
 # <a name="procedure-calls"></a>程序呼叫
 A*程序*是儲存在資料來源上的可執行物件。 通常，它是先行編譯的一或多個 SQL 陳述式。 是逸出序列呼叫程序  
@@ -28,7 +28,7 @@ A*程序*是儲存在資料來源上的可執行物件。 通常，它是先行�
   
  何處*程序名稱*指定名稱的程序並*參數*指定程序參數。  
   
- 如需詳細程序呼叫逸出序列的詳細資訊，請參閱[程序呼叫逸出序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)附錄 c: SQL 文法中。  
+ 如需詳細程序呼叫逸出序列的詳細資訊，請參閱[程序呼叫逸出序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)附錄 c:SQL 文法。  
   
  程序可以有零或多個參數。 它也可以傳回的值，選擇性的參數標記所示 **？ =** 語法的開頭。 如果*參數*是輸入或輸入/輸出參數，它可以是常值或參數標記。 不過，互通的應用程式應該一律會使用參數標記，因為某些資料來源不接受常值的參數值。 如果*參數*是一個 output 參數，它必須是參數標記。 必須與繫結參數標記**SQLBindParameter**陳述式執行之前的程序呼叫。  
   

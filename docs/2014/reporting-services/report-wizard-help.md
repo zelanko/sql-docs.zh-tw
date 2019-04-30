@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255115"
 ---
 # <a name="report-wizard-help"></a>報表精靈說明
   此章節提供報表精靈的 F1 說明。 報表精靈會自動化建立表格式報表和矩陣報表的程序。 下表描述此章節的主題。  

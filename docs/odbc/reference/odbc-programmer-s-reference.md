@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273034"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程式設計人員&#39;參考
 *ODBC 程式設計人員參考*包含下列各節。  
@@ -50,7 +50,7 @@ ms.locfileid: "52520178"
   
 |格式|用於|  
 |------------|--------------|  
-|選取 * 從|大寫字母會指出 SQL 陳述式、 巨集名稱和作業系統命令層級使用的詞彙。|  
+|SELECT * FROM|大寫字母會指出 SQL 陳述式、 巨集名稱和作業系統命令層級使用的詞彙。|  
 |`RETCODE SQLFetch(hdbc)`|等寬字型用於命令列範例和程式碼而定。|  
 |*引數*|斜體的文字表示程式設計的引數，該使用者或應用程式必須提供，或 word 強調的資訊。|  
 |**SQLEndTran**|粗體類型表示語法必須完全如下所示，包括函式名稱來輸入。|  
@@ -98,7 +98,7 @@ ms.locfileid: "52520178"
   
  如需有關交易處理的詳細資訊，請參閱：  
   
--   灰色，J.n。 和 Reuter，Andreas:*交易處理：概念和技術*（Morgan Kaufmann 發行者，1993年）。  
+-   Gray, J. N. 和 Reuter，Andreas:*交易處理：概念和技術*（Morgan Kaufmann 發行者，1993年）。  
   
 -   Hackathorn，Richard D.:*企業資料庫連線能力*(Wiley & 兒子，1993年)。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52520178"
   
 -   詹斯頓、 Tom 和兩本書標示：*ODBC 的開發人員指南*（Howard W.Sams 和公司，1994年）。  
   
--   北美，Ken:*Windows 多 DBMS 程式設計：針對 DBMS 專案中使用 c + +、 Visual Basic、 ODBC、 OLE 2 和工具*(John Wiley & 兒子，Inc.，1995 年)。  
+-   北美，Ken:*Windows 多 DBMS 程式設計：使用C++，Visual Basic、 ODBC、 OLE 2 和適用於 DBMS 專案工具*(John Wiley & 兒子，Inc.，1995 年)。  
   
 -   Stegman、 Michael O.、 Signore、 Robert 和 Creamer，John:*ODBC 解決方案、 開放式資料庫連接，在分散式環境*(Mcgraw-hill 1995 年)。  
   

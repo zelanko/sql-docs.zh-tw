@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bff2f31eb321a24c184580a6b1565f4dbc76bb1d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242532"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>設定報表管理員傳遞自訂驗證 Cookie
   如果您要使用自訂驗證延伸模組，您應配置報表管理員來傳送自訂驗證 Cookie。 否則，報表管理員只能透過報表伺服器特定的 HTTP 要求來傳送 Cookie。 如果您要傳送其他 Cookie，就必須修改 RSReportServer.Config 檔。  

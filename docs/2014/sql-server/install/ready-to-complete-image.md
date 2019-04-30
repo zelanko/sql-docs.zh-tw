@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85d5beff3e3cc3e4621d1833dd942c2624e09b10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276455"
 ---
 # <a name="ready-to-complete-image"></a>準備好要完成映像
   [準備開始完成映像] 頁面會提供套用至備妥執行個體之組態的組態設定摘要。  

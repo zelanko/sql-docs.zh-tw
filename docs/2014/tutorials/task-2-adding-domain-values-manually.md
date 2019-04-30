@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244677"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>工作 2：手動加入定義域值
+# <a name="task-2-adding-domain-values-manually"></a>工作 2：手動新增定義域值
   在這個工作中，您新增值**國家/地區**網域以手動方式。 請參閱[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)主題，如需詳細資訊在此頁面上的欄位。  
   
 1.  按一下 **國家/地區**中的網域**定義域清單**。  

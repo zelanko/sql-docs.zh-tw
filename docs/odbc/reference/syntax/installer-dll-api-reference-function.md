@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14a89c859e98a069106b79c9289187a64c310fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232830"
 ---
 # <a name="installer-dll-api-reference-function"></a>安裝程式 DLL API 參考函式
 本章節描述在安裝程式 DLL API 函數的語法。 安裝程式 DLL API 是由 20 函式所組成。 這些函式，其中三個**SQLGetTranslator**， **SQLRemoveDSNFromIni**，並**SQLWriteDSNToIni**，只能由安裝程式 Dll 會呼叫。 安裝和管理程式會呼叫其他函式。  

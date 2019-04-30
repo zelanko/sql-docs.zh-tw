@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267750"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>資料長度、緩衝區長度和截斷
 *的資料長度*是資料的位元組長度，因為它會儲存在應用程式的資料緩衝區，不如它會儲存在資料來源。 這項區別很重要的因為資料通常儲存在不同的類型，比在資料來源中資料緩衝區中。 針對傳送至資料來源的資料，這是之前轉換成資料來源的類型資料的位元組長度。 從資料來源擷取的資料，這可以是資料的位元組長度轉換成資料緩衝區的型別和任何截斷完成之前後。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294433"
 ---
 # <a name="adding-multiple-fields-and-values"></a>新增多個欄位和值
 有時候，可能會將陣列的欄位和其對應的值，以更有效率**AddNew**方法，而不是設定**值**多次的每個新的欄位。 如果*FieldList*屬於陣列、*值*也必須是陣列具有相同成員數目，否則會發生錯誤。 欄位名稱的順序必須符合每個陣列中的欄位值的順序。 下列程式碼會將陣列的欄位和值的陣列傳遞**AddNew**方法。

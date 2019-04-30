@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf21d0f932708b23978bb36db5c800358a6fa90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311923"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read、 ReadText、 寫入及 WriteText 方法範例 (VB)
 此範例示範如何將文字方塊的內容讀入這兩個文字[Stream](../../../ado/reference/ado-api/stream-object-ado.md)和 二進位**Stream**。 其他屬性和方法，顯示包含[位置](../../../ado/reference/ado-api/position-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)， [Charset](../../../ado/reference/ado-api/charset-property-ado.md)，以及[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  

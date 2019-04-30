@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 46a51a1ead140209145635e422d3ea1033b117e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283415"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>簡單 XML 輸入檔範例 (DTA)
   請複製用來微調工作負載的這個簡單 XML 輸入檔範例，再將它貼到您喜愛的 XML 編輯器或文字編輯器中。 之後，請利用您的特定微調工作階段的各個值來取代指定給 **Server**、 **Database**、 **Schema**、 **Table**、 **Workload**和 **TuningOptions** 等元素的值。 如需可以搭配這些元素來使用的屬性和子元素的詳細資訊，請參閱 [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)。 下列範例只用到部份可用的屬性及子元素選項。  

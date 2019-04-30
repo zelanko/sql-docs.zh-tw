@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298959"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>使用階層式方法重新排列階層式資料表中的資料順序
   重新組織階層是常見的維護工作。 在這項工作中，我們將會使用 UPDATE 陳述式搭配 [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) 方法，先將單一資料列移到階層中的新位置。 然後，我們會將整個子樹移到新位置。  
@@ -124,6 +124,6 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
  若要讓預存程序辨識階層的區段，請參閱 [移動子樹](../hierarchical-data-sql-server.md#BKMK_MovingSubtrees)的＜移動子樹＞一節。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [摘要：在階層式資料表中管理資料](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+ [摘要：管理階層式資料表中的資料](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

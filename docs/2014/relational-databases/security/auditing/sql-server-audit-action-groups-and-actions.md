@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238139"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和個別事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "48222988"
 |DATABASE_CHANGE_GROUP|當建立、改變或卸除資料庫時，就會引發這個事件。 每當建立、改變或卸除任何資料庫時，就會引發這個事件。 等於＜ [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md)＞。|  
 |DATABASE_LOGOUT_GROUP|當自主資料庫使用者登出資料庫時，就會引發這個事件。 等於 Audit Database Logout 事件類別。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|引發這個事件來報告與資料庫鏡像傳輸安全性相關的稽核訊息。 等於＜ [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md)＞。|  
-|DATABASE_OBJECT_ACCESS_GROUP|每當存取類似訊息類型、組件和合約等資料庫物件時，就會引發這個事件。<br /><br /> 任何資料庫中的任何存取都會引發這個事件。 **注意：** 這可能會導致大量的稽核記錄。 <br /><br /> 等於＜ [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)＞。|  
+|DATABASE_OBJECT_ACCESS_GROUP|每當存取類似訊息類型、組件和合約等資料庫物件時，就會引發這個事件。<br /><br /> 任何資料庫中的任何存取都會引發這個事件。 **注意：** 這可能導致大量的稽核記錄。 <br /><br /> 等於＜ [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)＞。|  
 |DATABASE_OBJECT_CHANGE_GROUP|在資料庫物件 (如結構描述) 上執行 CREATE、ALTER 或 DROP 陳述式時，就會引發這個事件。 每當建立、改變或卸除任何資料庫物件時，就會引發這個事件。 **注意：** 這可能會導致非常大量的稽核記錄。 <br /><br /> 等於＜ [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)＞。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|當資料庫範圍內的物件擁有者發生變更時，就會引發這個事件。 伺服器上任何資料庫的任何物件擁有權變更都會引發這個事件。 等於＜ [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md)＞。|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|對組件和結構描述等資料庫物件發出 GRANT、REVOKE 或 DENY 時，就會引發這個事件。 伺服器上任何資料庫的任何物件權限變更都會引發這個事件。 等於＜ [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md)＞。|  
@@ -160,7 +160,7 @@ ms.locfileid: "48222988"
 |SELECT|每當發出 SELECT 時，就會引發這個事件。|  
 |UPDATE|每當發出 UPDATE 時，就會引發這個事件。|  
 |Insert|每當發出 INSERT 時，就會引發這個事件。|  
-|Delete|每當發出 DELETE 時，就會引發這個事件。|  
+|DELETE|每當發出 DELETE 時，就會引發這個事件。|  
 |執行 CREATE 陳述式之前，請先執行|每當發出 EXECUTE 時，就會引發這個事件。|  
 |RECEIVE|每當發出 RECEIVE 時，就會引發這個事件。|  
 |REFERENCES|每當檢查 REFERENCES 權限時，都會引發這個事件。|  
@@ -177,7 +177,7 @@ ms.locfileid: "48222988"
   
 |動作群組名稱|描述|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|每當發出下列其中一個命令時，就會引發這個事件：<br /><br /> -建立伺服器稽核<br />ALTER SERVER AUDIT<br />-卸除伺服器稽核<br />-建立伺服器稽核規格<br />-改變伺服器稽核規格<br />卸除伺服器稽核規格<br />-建立資料庫稽核規格<br />-改變資料庫稽核規格<br />卸除資料庫稽核規格|  
+|AUDIT_ CHANGE_GROUP|每當發出下列其中一個命令時，就會引發這個事件：<br /><br /> -   CREATE SERVER AUDIT<br />-   ALTER SERVER AUDIT<br />-   DROP SERVER AUDIT<br />-   CREATE SERVER AUDIT SPECIFICATION<br />-   ALTER SERVER AUDIT SPECIFICATION<br />-   DROP SERVER AUDIT SPECIFICATION<br />-   CREATE DATABASE AUDIT SPECIFICATION<br />-   ALTER DATABASE AUDIT SPECIFICATION<br />-   DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>相關內容  
  [建立伺服器稽核與伺服器稽核規格](create-a-server-audit-and-server-audit-specification.md)  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8092f220d95847328e1cf37c2ca815f67f539b5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280984"
 ---
 # <a name="odbc-header-files"></a>ODBC 標頭檔
 > [!NOTE]  

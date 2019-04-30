@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273426"
 ---
 # <a name="server-element-dta"></a>Server 元素 (DTA)
   包含您要微調的資料庫所在之伺服器的識別資訊。  

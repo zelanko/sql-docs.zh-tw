@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237890"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函數
 **合規性**  

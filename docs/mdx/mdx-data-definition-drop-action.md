@@ -1,5 +1,5 @@
 ---
-title: DROP ACTION 陳述式 (MDX) |Microsoft 文件
+title: DROP ACTION 陳述式 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f47eaad9a13966abd1d08b0121fdd9c0a64a7438
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285054"
 ---
-# <a name="mdx-data-definition---drop-action"></a>MDX 資料定義卸除動作
+# <a name="mdx-data-definition---drop-action"></a>MDX 資料定義 - DROP ACTION
 
 
   刪除指定 Cube 的指定動作。  

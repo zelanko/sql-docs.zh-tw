@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7369893be3cd42dab0e0c0cd870a52c639083b5
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239393"
 ---
 # <a name="what-is-azure-data-studio"></a>什麼是 Azure Data Studio？
 

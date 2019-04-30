@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d83c2aa530fa0c0f6bff515ce4ed669fcef7dae3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253143"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>非對稱金鑰加密強度
   此規則會檢查非對稱金鑰是否使用 1024 位元或更強的加密所建立。  

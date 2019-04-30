@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281085"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>建構可互通的 SQL 陳述式
 如先前章節中所述，互通的應用程式應該使用 ODBC SQL 文法。 超過使用此文法，不過，許多其他問題所面對互通的應用程式。 例如，應用程式的作用為何想要使用的功能，例如外部聯結中，不支援的所有資料來源？  

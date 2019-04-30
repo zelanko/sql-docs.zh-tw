@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278305"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>覆寫數值資料類型的預設精確度和小數位數
 當 ARD 中的 SQL_DESC_TYPE 欄位設定為 SQL_C_NUMERIC，藉由呼叫**SQLBindCol**或是**SQLSetDescField**，ARD SQL_DESC_SCALE 欄位設定為 0，而 SQL_DESC_PRECISION 欄位會設定以驅動程式定義的預設有效位數。 這也是，則為 true 時 APD 中的 SQL_DESC_TYPE 欄位設定為 SQL_C_NUMERIC，藉由呼叫**SQLBindParameter**或是**SQLSetDescField**。 這是適用於輸入、 輸入/輸出或輸出參數。  

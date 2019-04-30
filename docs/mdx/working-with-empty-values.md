@@ -1,5 +1,5 @@
 ---
-title: 使用空白值 |Microsoft 文件
+title: 使用空白值 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251435"
 ---
 # <a name="working-with-empty-values"></a>使用空白值
 
@@ -46,7 +46,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  以下資訊適用於零值：  
   
--   [IsEmpty](../mdx/isempty-mdx.md)函式會傳回**TRUE**如果且只有在函式中指定的 tuple 所識別的資料格是空的。 否則，函數會傳回**FALSE**。  
+-   [IsEmpty](../mdx/isempty-mdx.md)函式會傳回 **，則為 TRUE**才是空的函式中指定的 tuple 所識別的資料格。 否則，函數會傳回**FALSE**。  
   
     > [!NOTE]  
     >  **IsEmpty**函式無法判斷成員運算式是否會傳回 null 值。 若要判斷是否要從運算式傳回 null 成員，請使用[IS](../mdx/is-mdx.md)運算子。  
@@ -64,7 +64,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>處理 MDX 陳述式及 Cube 中的空白值  
  在多維度運算式 (MDX) 陳述式中，您可以尋找空白值，然後以有效 (也就是說，非空白) 資料在資料格上執行特定計算。 在執行計算時，消除空值非常重要，因為某些特定計算 (例如取平均值) 如果將空白資料格值包含在內，結果可能會不正確。  
   
- 如果空值儲存在基礎事實資料表資料中，預設會在處理 cube 時將這些值轉換成零。 您可以使用**Null 處理**選項來控制量值是否也將 null 事實轉換成 0，轉換成空白的值或甚至會擲回錯誤處理期間。 如果您不希望查詢結果中有空的資料格值出現，您應該建立查詢、導出成員或 MDX 指令碼陳述式來刪除空白值，或是以某個其他值取代空白值。  
+ 如果空值儲存在基礎事實資料表資料中，預設會在處理 cube 時將這些值轉換成零。 您可以使用**Null 處理**選項來控制量值是否為 null 事實轉換為 0，轉換為空值或甚至是擲回錯誤在處理期間。 如果您不希望查詢結果中有空的資料格值出現，您應該建立查詢、導出成員或 MDX 指令碼陳述式來刪除空白值，或是以某個其他值取代空白值。  
   
  若要從查詢中移除空白資料列或資料行，您可以在軸設定定義之前使用 NON EMPTY 陳述式。 例如，下列查詢只會傳回 Product Category Bikes，因為這是在 Calendar Year 2001 唯一賣出的 Category：  
   
@@ -114,7 +114,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 如需詳細資訊，請參閱[NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)。  
+ 如需詳細資訊，請參閱 < [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)。  
   
 ## <a name="empty-values-and-comparison-operators"></a>空白值及比較運算子  
  當資料中有空白值時，邏輯與比較運算子可能會傳回第三種結果 EMPTY，而非只有 TRUE 或 FALSE。 這種三重數值邏輯的需要是造成應用程式錯誤的來源。 下表大致說明導入空白值比較的結果。  
@@ -144,7 +144,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   

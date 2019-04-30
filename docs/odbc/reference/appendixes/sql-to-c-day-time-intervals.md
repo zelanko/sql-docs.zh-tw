@@ -1,5 +1,5 @@
 ---
-title: SQL 到 c:日期時間間隔 |Microsoft Docs
+title: SQL 轉換為 C：日期時間間隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270425"
 ---
-# <a name="sql-to-c-day-time-intervals"></a>SQL 到 c:日期時間間隔
+# <a name="sql-to-c-day-time-intervals"></a>SQL 轉換為 C：日期時間間隔
 
 日期時間間隔的 ODBC SQL 資料類型的識別碼，如下所示：
 

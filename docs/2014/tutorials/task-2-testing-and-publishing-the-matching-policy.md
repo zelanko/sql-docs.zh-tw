@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250275"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>工作 2：測試和發行比對原則
   在這個工作中，您需要測試和發佈**移除重複的供應商**比對原則。  
@@ -24,11 +24,11 @@ ms.locfileid: "56040759"
   
 2.  請在清單方塊中檢閱所有相符記錄及其比對分數。 有一筆記錄**綠色**與其相關聯的圖示是在它之前的樞紐記錄的複本。 以下是幾個範例：  
   
-    1.  **記錄識別碼：1000005**相符的記錄符合**記錄識別碼：1000004**與**分數：100%** 因為兩筆記錄有相同的值**SupplierID （必要條件）**， **Supplier Name**，和**ContactEmailAddress 資料行**。 DQS 會隨機挑選記錄當做叢集的樞紐記錄。  
+    1.  使用記錄**記錄識別碼：1000005**相符的記錄符合**記錄識別碼：1000004**與**分數：100%** 因為兩筆記錄有相同的值**SupplierID （必要條件）**， **Supplier Name**，和**ContactEmailAddress 資料行**。 DQS 會隨機挑選記錄當做叢集的樞紐記錄。  
   
     2.  資料錄**1000023**記錄的相符項目**1000022**比對分數：93%，因為兩筆記錄有相同的值**SupplierID （必要條件）** 並**Supplier Name**資料行，但是不同的值，如**ContactEmailAddress**資料行。  
   
-    3.  捲動到清單底部，以查看記錄識別碼為以下值的兩筆記錄：**1000051**並**1000052**。 資料錄**1000052**會被視為相符項目，其比對分數**91%** 因為兩筆記錄有相同的值**SupplierID**並**ContactEmailAddress**資料行，但是不同的值，如**Supplier Name**資料行。  
+    3.  捲動至底部的清單，以查看兩筆記錄的記錄識別碼：**1000051**並**1000052**。 資料錄**1000052**會被視為相符項目，其比對分數**91%** 因為兩筆記錄有相同的值**SupplierID**並**ContactEmailAddress**資料行，但是不同的值，如**Supplier Name**資料行。  
   
      ![原則定義-原則結果](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "原則定義-原則結果")  
   

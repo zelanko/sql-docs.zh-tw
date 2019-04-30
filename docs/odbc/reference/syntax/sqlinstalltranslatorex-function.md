@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242319"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 函式
 **合規性**  
@@ -56,7 +56,7 @@ BOOL SQLInstallTranslatorEx(
   
  **Translator**並**安裝程式**關鍵字必須包含在*lpszTranslator*字串。 轉譯 DLL 會列出**Translator**關鍵字和轉譯程式安裝程式 DLL 列為**安裝**關鍵字。 每個配對會終止具有 NULL 位元組，並將整個清單結尾的 NULL 位元組。 （也就是兩個 NULL 位元組標記清單的結尾）。格式*lpszTranslator*如下所示：  
   
- \0Translator=*translator-DLL 檔名*\0[Setup=*安裝程式-DLL 檔名*\0]\0  
+ \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
   
  *lpszPathIn*  
  [輸入]轉譯器所要安裝或 null 指標的完整路徑。 如果*lpszPath*為 null 指標，轉譯器將會安裝在系統目錄。  
@@ -70,7 +70,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [輸出]傳回在可用的位元組總數*lpszPathOut*。 傳回可用的位元組數目是否大於或等於*cbPathOutMax*中的輸出路徑*lpszPathOut*會被截斷成*pcbPathOutMax*減號null 結束字元。 *PcbPathOut*引數可以是 null 指標。  
   
- *常見*  
+ *fRequest*  
  [輸入]要求的類型。 *常見*必須包含下列值之一：  
   
  ODBC_INSTALL_INQUIRY:詢問有關轉譯器安裝。  

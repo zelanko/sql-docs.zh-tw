@@ -1,5 +1,5 @@
 ---
-title: 分葉 (MDX) |Microsoft 文件
+title: 分葉 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270453"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
 
-  傳回一組由所有屬性 (選擇性地限定屬於特定維度的屬性) 組成的集合。 對於傳回集合中的每個屬性 x，如果 x 是資料粒度屬性或是與資料粒度屬性直接或間接相關，則會在屬性 x 上設定資料粒度，而不會影響配量。 **離開**函數設計用於 SCOPE 陳述式內或指派的左側。  
+  傳回一組由所有屬性 (選擇性地限定屬於特定維度的屬性) 組成的集合。 對於傳回集合中的每個屬性 x，如果 x 是資料粒度屬性或是與資料粒度屬性直接或間接相關，則會在屬性 x 上設定資料粒度，而不會影響配量。 **離開**函式設計用於 SCOPE 陳述式內或指派的左側。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ Leaves( [ Dimension_expression ] )
 ## <a name="remarks"></a>備註  
  分葉成員是 Tuple，由所有屬性階層之最低層級的交叉聯結所形成。 導出成員被排除在外。  
   
--   如果指定維度名稱，則**離開**函式會傳回包含指定之維度的索引鍵屬性的分葉成員的集合。  
+-   如果指定的維度名稱，則**離開**函式會傳回包含指定之維度的索引鍵屬性的分葉成員的集合。  
   
 -   如果此維度與多個量值群組有關聯，則會使用目前範圍中的其中一個量值。  
   
@@ -48,6 +48,6 @@ Leaves( [ Dimension_expression ] )
     >  如果目前範圍內量值群組上的所有屬性沒有相同的資料粒度，則會產生錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

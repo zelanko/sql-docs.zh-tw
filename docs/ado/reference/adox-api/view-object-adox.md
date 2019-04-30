@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61b3f81a23c3bb35921e0374eea44e58a31dcd4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281287"
 ---
 # <a name="view-object-adox"></a>View 物件 (ADOX)
 代表已篩選的一份記錄或一份虛擬資料表。 當搭配 ADO[命令](../../../ado/reference/ado-api/command-object-ado.md)物件，**檢視**物件可以用於加入、 刪除或修改檢視。  

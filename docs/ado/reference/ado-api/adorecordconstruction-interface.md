@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248835"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
-**ADORecordConstruction**介面用來建構 ADO**記錄**的 OLE DB 物件**列**C/c + + 應用程式中的物件。  
+**ADORecordConstruction**介面用來建構 ADO**記錄**的 OLE DB 物件**列**C 中的物件 /C++應用程式。  
   
  此介面支援下列屬性：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47686866"
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|唯寫。<br />設定 OLE DB 的容器**資料列**物件，此 ado**記錄**物件。|  
-|[資料列](../../../ado/reference/ado-api/row-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列**物件，此 ado 往返**記錄**物件。|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|讀取/寫入。<br />取得/設定 OLE DB**資料列**物件，此 ado 往返**記錄**物件。|  
   
 ## <a name="methods"></a>方法  
  無。  

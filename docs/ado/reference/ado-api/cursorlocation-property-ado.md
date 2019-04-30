@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3860434236f5a0751ddb857c6b8bce1cf54d19ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308684"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 屬性 (ADO)
 指出資料指標服務的位置。  
@@ -49,4 +49,4 @@ ms.locfileid: "47718776"
 |[Connection 物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [附錄 A：提供者](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [附錄 a:提供者](../../../ado/guide/appendixes/appendix-a-providers.md)

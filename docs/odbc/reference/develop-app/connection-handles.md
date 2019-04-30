@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280846"
 ---
 # <a name="connection-handles"></a>連線控制代碼
 A*連線*驅動程式和資料來源所組成。 連接控制代碼識別每個連線。 連接控制代碼會定義要使用哪一個驅動程式不僅要搭配使用該驅動程式與資料來源。 在一段程式碼來實作 ODBC （驅動程式管理員或驅動程式），連接控制代碼會識別結構，其中包含連接資訊，如下所示：  

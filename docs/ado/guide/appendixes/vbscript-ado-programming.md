@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a2b6172fdd35e98d1b4a5f1b3c6ff19293a7f81
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294421"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 程式設計
 ## <a name="creating-an-ado-project"></a>建立 ADO 專案  

@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267483"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>在採礦模型中篩選巢狀資料表 (中繼資料採礦教學課程)
   建立並探索模型之後，您決定要將焦點放在客戶資料子集上。 例如，您可能只要分析包含特定項目的購物籃，或是分析在特定期間未購買任何產品的客戶人口統計。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供了篩選採礦模型資料的功能。 此功能非常有用，因為您不需要設定新的資料來源檢視，以使用不同的資料。 在基本資料採礦教學課程中，您學會了如何對案例資料表套用條件，以篩選來自二維資料表的資料。 在這項工作中，您將建立套用至巢狀資料表的篩選。  
   
-## <a name="filters-on-nested-vs-case-tables"></a>巢狀和案例資料表的篩選  
+## <a name="filters-on-nested-vs-case-tables"></a>巢狀和。案例資料表  
  如果您的資料來源檢視如同用於關聯模型的資料來源檢視，同樣包含一個案例資料表和一個巢狀資料表，您可以篩選來自案例資料表的值、巢狀資料表中存在或不存在的值，或是兩者的一些組合。  
   
  在這項工作中，您要先建立一份關聯模型副本，然後將 IncomeGroup 和 Region 屬性加入新的相關模型中，以便在案例資料表中篩選這些屬性。  

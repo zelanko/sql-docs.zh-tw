@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294512"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>建立分析報告中資料庫測試助理
 
@@ -37,7 +37,7 @@ ms.locfileid: "56987684"
 輸入或選取下列資訊：
 
 - **報表名稱**:輸入報表的名稱。 會使用的報表名稱的 A 和 B 的資料庫。 範例*A （或 B）* + *報表名稱* + *唯一識別項*。 
-- **伺服器名稱**:輸入您想要納入的在伺服器電腦的名稱 B 和分析資料庫。
+- **伺服器名稱**︰輸入您想要納入的在伺服器電腦的名稱 B 和分析資料庫。
 - **SQL Server 執行個體名稱**:輸入要用於報表的 SQL Server 執行個體的名稱。
 - **來源伺服器的追蹤**:輸入 SQL Server (2008 R2) 的第一個追蹤 (.trc) 檔案。
 - **目標伺服器的追蹤**:輸入目標 SQL Server (2014) 第一個.trc 檔案。

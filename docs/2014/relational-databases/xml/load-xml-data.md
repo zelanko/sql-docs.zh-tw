@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241302"
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
   您可以透過幾種方式將 XML 資料傳送到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 例如：  
@@ -52,7 +52,7 @@ FROM    (SELECT *
   
 -   若要使用明確的編碼，請使用 `varbinary()` 類型 (與字碼頁沒有互動) 或使用適當字碼頁的字串類型。 然後再將資料指派給 XML 資料行、變數或參數。  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>範例明確指定的編碼方式  
+### <a name="example-explicitly-specifying-an-encoding"></a>範例明確地指定編碼方式  
  假設您將 XML 文件 vcdoc 儲存成沒有明確 XML 宣告的 `varchar(max)`。 下列陳述式會加入具有編碼 "iso8859-1" 的 XML 宣告、串連 XML 文件、將結果轉換成 `varbinary(max)`，位元組表示法因而保存下來，最後再轉換成 XML。 這樣可以讓 XML 處理器依據所指定的編碼 "iso8859-1" 來剖析資料，並針對字串值來產生對應的 UTF-16 表示法。  
   
 ```  

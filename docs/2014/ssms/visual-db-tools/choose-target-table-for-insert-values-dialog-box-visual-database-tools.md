@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255745"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>選擇插入值的目標資料表對話方塊 (Visual Database Tools)
   這個對話方塊可讓您使用 INSERT VALUES 查詢指定要更新的資料表。 當您將查詢類型變更為 INSERT VALUES 查詢時，若 [圖表窗格] 中顯示了多個資料表，此對話方塊便會出現。  

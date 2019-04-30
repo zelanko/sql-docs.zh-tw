@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240996"
 ---
 # <a name="decimal-digits"></a>小數位數
 *十進位數字*的 decimal 與 numeric 資料類型會定義為小數點右邊或資料的小數位數的數字的數目上限。 近似浮點數的數字資料行或參數，因為不固定的小數點右邊的位數，未定義小數位數。 包含秒元件的日期時間或間隔的資料，小數位數被指資料的秒數元件之小數點右邊的位數。  

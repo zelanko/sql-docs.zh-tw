@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274366"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」*) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
@@ -72,7 +72,7 @@ ms.locfileid: "54127189"
   
  每一處都有資料庫和應用程式伺服器，供支援工程師輸入並更新有關客戶來電的資訊。 此拓撲是依時間分割， 因此更新就只會發生在目前正在營業的節點，隨後更新會流向其他參與資料庫。 此拓撲具有下列優點：  
   
--   獨立而不隔離：每一個分公司都可以獨立插入、更新或刪除資料，而且還可以共用資料，因為資料會複寫到所有其他的參與資料庫。  
+-   獨立而不隔離：每個分公司可以插入、 更新或個別刪除資料但也共用資料，因為它會複寫到所有其他的參與資料庫。  
   
 -   在發生失敗或要允許對一或多個參與資料庫進行維護時，具有更高的可用性。  
   

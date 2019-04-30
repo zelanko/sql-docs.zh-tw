@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ff7916969608889a0c7b3a0e7e93cf65fff5b6af
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278870"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>IssuedTo 屬性 (SecurityCertificate 類別)
   取得安全性憑證發行目標的物件。  

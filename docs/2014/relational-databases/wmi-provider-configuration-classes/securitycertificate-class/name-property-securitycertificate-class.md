@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09886571f98fcb36218c0dcb7a40e06b6b34b34e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270680"
 ---
 # <a name="name-property-securitycertificate-class"></a>Name 屬性 (SecurityCertificate 類別)
   取得安全性憑證的名稱。  

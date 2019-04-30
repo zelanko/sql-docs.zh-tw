@@ -1,5 +1,5 @@
 ---
-title: 維度 (MDX) |Microsoft 文件
+title: 維度 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2703122b67debf0749abcd2ea01114fb6ecaa06
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248137"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 
@@ -40,15 +40,15 @@ Dimensions(Hierarchy_Name)
  指定階層名稱的有效字串運算式。  
   
 ## <a name="remarks"></a>備註  
- 如果指定階層編號，**維度**函式會傳回其以零為起始的位置，在 cube 內階層指定階層編號。  
+ 如果指定階層編號，則**維度**函式會傳回其以零為起始的位置，在 cube 中的階層指定階層編號。  
   
- 如果指定階層名稱，則**維度**函式會傳回指定的階層。 一般而言，您可以使用此字串版本**維度**函式搭配使用者自訂函數。  
+ 如果指定階層名稱，則**維度**函式會傳回指定的階層。 一般而言，您可以使用此字串版本**維度**與使用者定義函式的函式。  
   
 > [!NOTE]  
 >  **量值**維度永遠由`Dimensions(0)`。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用**維度**函數來傳回名稱、 層級計數和指定的階層，使用數值運算式和字串運算式的成員計數。  
+ 下列範例會使用**維度**函數來傳回名稱、 層級計數和計數指定的階層，使用數值運算式和字串運算式的成員。  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  
@@ -80,6 +80,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

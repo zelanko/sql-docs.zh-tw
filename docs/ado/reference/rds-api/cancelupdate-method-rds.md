@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76e4a4efeeb8ca71b4591bdaaa3e06dcab71d144
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281144"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 方法 (RDS)
 取消目前的或新資料列所做的變更[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

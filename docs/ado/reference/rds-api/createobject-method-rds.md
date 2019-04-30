@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281063"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 建立目標商務物件的 proxy，並傳回的指標。 要透過網際網路傳送要求和資料與商務物件通訊的伺服器端 stub proxy 封裝和封送處理資料。 同處理序元件物件會使用任何 proxy，只是物件的指標會提供。  
@@ -30,7 +30,7 @@ ms.locfileid: "54419923"
 ## <a name="syntax"></a>語法  
  遠端資料服務支援下列通訊協定：HTTP、 HTTPS (HTTP 透過安全通訊端層)、 DCOM 和同處理序。  
   
-|通訊協定|語法|  
+|Protocol|語法|  
 |--------------|------------|  
 |HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
